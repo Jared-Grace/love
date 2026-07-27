@@ -124,7 +124,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 
 **`js_statement_replace_code` replaces the *whole* statement**, so aiming it at a `let notes = { … }` of forty entries replaces all forty with whatever you typed. That silently cost forty-five of them once. Adding one entry is the only shape that cannot do this.
 
-**But `js_array_text_add` writes a *word*, and an ordered register of functions holds *references*.** Point it at `qa_gates()` and the entry arrives as the string `"my_gate_run"`, which the auto pass then rewrites to `my_gate_run.name` — a live-looking line that runs nothing, in the one list whose job is to run things. There is no identifier twin yet, so for a register of functions, add the entry with `Edit` and check the line reads as a bare name. Writing `js_array_identifier_add` closes this and is the next atom worth having.
+**But `js_array_text_add` writes a *word*, and an ordered register of functions holds *references*.** Point it at `qa_gates()` and the entry arrives as the string `"my_gate_run"`, which the auto pass then rewrites to `my_gate_run.name` — a live-looking line that runs nothing, in the one list whose job is to run things. **`js_array_identifier_add <name>` is the twin for those**, so the rule is: a reading order takes the word, a register of functions takes the name.
 
 **The atom vocabulary — every address × every verb.** These two lists are the whole seam, and they *multiply*: adding one member to either list adds a row or a column, not a cell. That is the reason to write the next atom rather than the next convenience combination. Anything not on these lists is still a text `Edit`; **the gaps are the work**, so check here before reaching for `Edit`.
 
@@ -159,6 +159,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_block_return_identifier_add <local>` | hand back a local at the end of a selected block |
 | `js_object_shorthand_add <name>` | add one entry to a register (key and value the same word) — never rewrite the whole set |
 | `js_array_text_add <word>` | add one written word to an ordered register |
+| `js_array_identifier_add <name>` | add one **name** to an ordered register of functions — what `qa_gates()` and its kind hold, where a written word would read as live and run nothing |
 | `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes |
 | `js_object_property_text_add <key> <word>` / `_remove <key> <word>` | add / take out one word in a list held **inside** a record — the two-levels-deep pair |
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
