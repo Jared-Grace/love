@@ -141,7 +141,13 @@ export async function app_search_results(context, div_results) {
     return;
   }
   let button_list = null;
-  let expand_all = null;
+  function books_collapsed_set(collapsed) {
+    "open or shut every book card at once - the one place that knows how to reach all of them, so the two buttons and the first draw all say it the same way";
+    function book_set(collapsed_set) {
+      collapsed_set(collapsed);
+    }
+    each(book_collapse_setters, book_set);
+  }
   async function collect_all_texts() {
     async function lambda9(b) {
       let click2 = property_get(b, "click");
@@ -155,23 +161,20 @@ export async function app_search_results(context, div_results) {
   }
   async function expand_all_lambda() {
     "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
-    function book_open(collapsed_set) {
-      collapsed_set(false);
-    }
-    each(book_collapse_setters, book_open);
-    html_remove(expand_all);
+    books_collapsed_set(false);
     await collect_all_texts();
+  }
+  function collapse_all_lambda() {
+    "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
+    books_collapsed_set(true);
   }
   async function copy_all_lambda() {
     "let the reader copy every matching verse in one click, without first expanding them all on screen";
     let squashed = await collect_all_texts();
     await list_join_newline_2_copy(squashed);
   }
-  expand_all = app_shared_button_wide(
-    div_results,
-    "Expand all",
-    expand_all_lambda,
-  );
+  app_shared_button_wide(div_results, "Expand all", expand_all_lambda);
+  app_shared_button_wide(div_results, "Collapse all", collapse_all_lambda);
   let left2 = html_button_copy_text();
   let copy_all_text = text_combine(left2, " all");
   let copy_all = app_shared_button_wide(
@@ -322,10 +325,7 @@ export async function app_search_results(context, div_results) {
   button_list = list_squash(button_lists);
   let scrolls = html_page_scrolls();
   if (scrolls) {
-    function collapse_book(collapsed_set) {
-      collapsed_set(true);
-    }
-    each(book_collapse_setters, collapse_book);
+    books_collapsed_set(true);
   }
   let s = list_size_1(button_list);
   if (s) {
