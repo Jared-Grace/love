@@ -24,8 +24,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let comparison = property_get(params, "comparison");
   let define_render = property_get(params, "define_render");
   function code(a, b) {
-    (fn_name.name,
-      "(a, b) as a code string, the two numbers separated by a comma");
+    "the two-number call as a code string - the function's name, then its two numbers separated by a comma inside parentheses";
     let ta = text_to(a);
     let tb = text_to(b);
     let combined = text_combine_multiple([fn_name, "(", ta, ", ", tb, ")"]);
