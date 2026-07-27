@@ -1,0 +1,85 @@
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_map } from "./list_map.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
+import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_bold } from "./html_bold.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+
+export function app_code_lesson_expression_string_hello() {
+  "practice a string - text written inside quotes, the first value that is not a number. A quoted word evaluates to the text WITHOUT the quotes: the quotes are how you write it, not part of the value; the answer is the text with no quotes.";
+  let quote = '"';
+  function string_code(word) {
+    "the word wrapped in double quotes, as a code string";
+    let combined = text_combine_multiple([quote, word, quote]);
+    return combined;
+  }
+  function words() {
+    "short, familiar, unambiguous words to quote";
+    let list = ["cat", "dog", "sun", "yes", "book", "tree"];
+    return list;
+  }
+  function make(word) {
+    let r = string_code(word);
+    return r;
+  }
+  function refill() {
+    "four questions, each a different quoted word";
+    let picked = list_shuffle_take(words(), 4);
+    let list = list_map(picked, make);
+    return list;
+  }
+  function decoys(question, answer) {
+    "the classic mistake is thinking the quotes are part of the value, so the tailored wrong answer is the same text WITH the quotes still around it";
+    let quoted = text_combine_multiple([quote, answer, quote]);
+    let r2 = [quoted];
+    return r2;
+  }
+  let next_arg = list_iterator_refillable(refill);
+  let name_id = title_name_id();
+  let lesson = app_code_lesson_expression_generic({
+    above,
+    name_id,
+    next_arg,
+    example_count: 2,
+    decoys,
+    forwards_question_label: "Value of the string: ",
+    forwards_answer_label: "value: ",
+    backwards_question_label: "value: ",
+    backwards_answer_label: "What code gives this value? ",
+    unscramble_label: "Build the code that gives this value: ",
+  });
+  return lesson;
+  function title_name_id() {
+    "the home title names the new idea - a string";
+    function title_get(lesson_name, left_upper) {
+      function render(parent) {
+        app_code_lesson_name_id_category(parent, left_upper);
+        html_span_text(parent, "A string is text in quotes");
+      }
+      return render;
+    }
+    let rights = ["string"];
+    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    return built;
+  }
+  function above(root) {
+    "introduce strings: text in quotes is a string, and its value is that text WITHOUT the quotes. Example first, then the one rule; string is bolded once at its definition";
+    let word = list_random_item(["hello", "cat", "sun"]);
+    let code = string_code(word);
+    let define = app_code_container_light_blue(root);
+    let line = html_div(define);
+    html_span_text(line, "Text inside quotes is a ");
+    let term = html_span_text(line, "string");
+    html_bold(term);
+    let example = app_code_container_light_blue(root);
+    html_div_cycle_code(example, ["The value of ", code, " is ", word]);
+    html_div_cycle_code(example, ["The quotes are not part of the value"]);
+  }
+}
