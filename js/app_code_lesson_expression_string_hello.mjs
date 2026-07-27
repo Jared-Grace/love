@@ -6,9 +6,13 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -21,8 +25,8 @@ export function app_code_lesson_expression_string_hello() {
     return combined;
   }
   function words() {
-    "short, familiar, unambiguous words to quote";
-    let list = ["cat", "dog", "sun", "yes", "book", "tree"];
+    "the fruits of the Spirit, quoted as example strings";
+    let list = fruits_of_the_spirit();
     return list;
   }
   function make(word) {
@@ -75,28 +79,33 @@ export function app_code_lesson_expression_string_hello() {
     return built;
   }
   function above(root) {
-    "intro grounded in the familiar: connect to numbers already seen, name text as the other kind of value, relate to English quotes-for-speech, then name the string and show its value drops the quotes. Example after the framing; string is bolded once at its definition";
-    let word = list_random_item(["hello", "cat", "sun"]);
+    "intro: name the string, show that a quote marks both the start and the end, show the shape with a deemphasized ... placeholder (the quotes are real code, the ... is a stand-in for whatever text you want), then a concrete example - a fruit of the Spirit; then show the value drops the quotes. string is bolded once at its definition";
+    let list3 = fruits_of_the_spirit();
+    let word = list_random_item(list3);
     let code = string_code(word);
     let intro = app_code_container_light_blue(root);
-    html_div_text(intro, "You've seen JavaScript use numbers");
-    html_div_text(intro, "Besides numbers, JavaScript can use text");
-    let speech = text_combine_multiple([
-      "In English, quotes can show speech: he said ",
-      quote,
-      "love people.",
-      quote,
-    ]);
-    html_div_text(intro, speech);
-    html_div_text(
-      intro,
-      "JavaScript uses quotes the same way, to mean any text",
-    );
-    let define = app_code_container_light_blue(root);
-    let line = html_div(define);
-    html_span_text(line, "Text inside quotes is a ");
-    let term = html_span_text(line, "string");
+    let name_line = html_div(intro);
+    html_span_text(name_line, "In JavaScript, text is called a ");
+    let term = html_span_text(name_line, "string");
     html_bold(term);
+    let marks = html_div(intro);
+    html_span_text(marks, "A ");
+    html_span_text_code_dark(marks, quote);
+    html_span_text(marks, " marks the start of a string, and the same ");
+    html_span_text_code_dark(marks, quote);
+    html_span_text(marks, " marks the end");
+    let shape_line = html_div(intro);
+    html_span_text(shape_line, "A string looks like this: ");
+    let shape = html_span(shape_line);
+    html_style_code_dark_nowrap(shape);
+    html_span_text(shape, quote);
+    let dots = html_span_text(shape, "...");
+    html_style_opacity(dots, "0.5");
+    html_span_text(shape, quote);
+    let example_line = html_div(intro);
+    html_span_text(example_line, "Here is an example string: ");
+    html_span_text_code_dark(example_line, code);
+    let define = app_code_container_light_blue(root);
     html_div_cycle_code(define, ["The value of ", code, " is ", word]);
     html_div_cycle_code(define, ["The quotes are not part of the value"]);
   }
