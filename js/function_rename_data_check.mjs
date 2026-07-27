@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { examples_folder } from "./examples_folder.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -15,14 +17,25 @@ export async function function_rename_data_check(f_name_before, f_name_after) {
     return n;
   }
   let paths = list_filter(paths_all, examples_not_is);
+  ("What it rewrote is named file by file, with a count beside each. Sweeping a name by the letters cannot tell a reference from an ordinary word that reads the same, and this folder holds lesson prose as well as registers of names, so the one honest thing a sweep can do is say exactly where it went - a rename that quietly rewrote a hundred and seventy-three words of a lesson looks, from the outside, like a rename that worked.");
   async function lambda(f_path) {
-    let changed = await file_identifier_replace(
+    let sites = await file_identifier_replace(
       f_path,
       f_name_before,
       f_name_after,
     );
-    return changed;
+    let change = {
+      f_path,
+      sites,
+    };
+    return change;
   }
-  let changes = await list_map_unordered_async(paths, lambda);
+  let changes_all = await list_map_unordered_async(paths, lambda);
+  function changed_is(change) {
+    let sites = property_get(change, "sites");
+    let any = greater_than(sites, 0);
+    return any;
+  }
+  let changes = list_filter(changes_all, changed_is);
   return changes;
 }
