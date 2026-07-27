@@ -160,7 +160,8 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_object_shorthand_add <name>` | add one entry to a register (key and value the same word) — never rewrite the whole set |
 | `js_array_text_add <word>` | add one written word to an ordered register |
 | `js_array_identifier_add <name>` | add one **name** to an ordered register of functions — what `qa_gates()` and its kind hold, where a written word would read as live and run nothing |
-| `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes |
+| `js_call_callee_set <fn>` | point one call at a different function, keeping its arguments — refuses if the two take different numbers. **Not** a rename: the old function stays and its other callers keep it |
+| `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes. **The sentence must contain no comma or full stop**, or the `_args` splitter tears it into extra arguments |
 | `js_object_property_text_add <key> <word>` / `_remove <key> <word>` | add / take out one word in a list held **inside** a record — the two-levels-deep pair |
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
