@@ -25,11 +25,13 @@ export function examples_groups() {
         "example_declaration_replace_code",
         "example_declaration_delete",
         "example_call_argument_named_set",
+        "example_statement_move_after",
       ],
     },
     {
       name: "Guards",
       examples: [
+        "example_move_refused_binding",
         "example_single_rejects_two",
         "example_slot_set_rejects_statement",
         "example_frozen_app_refused",
