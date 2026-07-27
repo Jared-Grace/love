@@ -24,7 +24,8 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let comparison = property_get(params, "comparison");
   let define_render = property_get(params, "define_render");
   function code(a, b) {
-    "fn_name(a, b) as a code string, the two numbers separated by a comma";
+    (fn_name.name,
+      "(a, b) as a code string, the two numbers separated by a comma");
     let ta = text_to(a);
     let tb = text_to(b);
     let combined = text_combine_multiple([fn_name, "(", ta, ", ", tb, ")"]);
@@ -113,7 +114,12 @@ export function app_code_lesson_expression_min_max_generic(params) {
     let other_text = text_to(other);
     let example_box = app_code_container_light_blue(root);
     let compare_middle = text_combine_multiple([" is ", comparison, " "]);
-    html_div_cycle_code(example_box, ["", chosen_text, compare_middle, other_text]);
+    html_div_cycle_code(example_box, [
+      "",
+      chosen_text,
+      compare_middle,
+      other_text,
+    ]);
     let v = code(chosen, other);
     html_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
     let v2 = code(other, chosen);

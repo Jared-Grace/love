@@ -21,11 +21,10 @@ export function html_code(name, body) {
   let favicon = html_code_favicon_emoji(app_shared_icon_emoji(name));
   let pwa = apps_pwa_is(name);
   let manifest_link = null;
-  let service_worker = null;
   if (pwa) {
     manifest_link = html_code_manifest_link(name);
-    service_worker = html_code_service_worker_register();
   }
+  let service_worker = html_code_service_worker_register(pwa);
   let head_items = list_filter_null_not_is([
     html_code_meta_charset(),
     html_code_meta_viewport(),
