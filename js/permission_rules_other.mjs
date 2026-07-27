@@ -3,6 +3,16 @@ import { qa_gate_run } from "./qa_gate_run.mjs";
 import { examples_gate_run } from "./examples_gate_run.mjs";
 export function permission_rules_other() {
   "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
+  let combined = text_combine_multiple([
+    "Bash(pkill -f ai.mjs ",
+    qa_gate_run.name,
+    ")",
+  ]);
+  let combined2 = text_combine_multiple([
+    "Bash(pkill -f ai.mjs ",
+    examples_gate_run.name,
+    ")",
+  ]);
   let texts = [
     "Bash(find:*)",
     "Bash(grep:*)",
@@ -53,12 +63,8 @@ export function permission_rules_other() {
     "Bash(ffprobe:*)",
     "Bash(node --check:*)",
     "Bash(pkill -f vite --config scripts/vite.config.mjs)",
-    text_combine_multiple(["Bash(pkill -f ai.mjs ", qa_gate_run.name, ")"]),
-    text_combine_multiple([
-      "Bash(pkill -f ai.mjs ",
-      examples_gate_run.name,
-      ")",
-    ]),
+    combined,
+    combined2,
     "mcp__claude-in-chrome__list_connected_browsers",
     "mcp__claude-in-chrome__tabs_context_mcp",
     "mcp__claude-in-chrome__read_page",

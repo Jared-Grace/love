@@ -1,3 +1,4 @@
+import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
 import { example_select_apply_named } from "./example_select_apply_named.mjs";
 import { js_selects_move_after } from "./js_selects_move_after.mjs";
 import { example_select_multiple_apply_lambda } from "./example_select_multiple_apply_lambda.mjs";
@@ -47,6 +48,16 @@ export function example_command_lambda(fn_name, args, e) {
   "address it was written with, so they can show a cell of the multiplication and";
   "never a column — and they would have to grow as the product of the two lists";
   "rather than their sum.";
+  let select_args_multiple = e.select_args_multiple;
+  if (select_args_multiple) {
+    let lambda_multiple = example_select_multiple_apply_named(
+      e.select,
+      select_args_multiple,
+      fn_name,
+      args,
+    );
+    return lambda_multiple;
+  }
   let select_name = e.select;
   if (select_name) {
     let lambda_named = example_select_apply_named(

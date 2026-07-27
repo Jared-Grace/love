@@ -1,7 +1,10 @@
 import { js_statement_wrap_if } from "../../js/js_statement_wrap_if.mjs";
+import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_statement_wrap_if.name,
-  args: ["list_size"],
+  select: js_statement_find_call_named.name,
+  select_args: ["list_size"],
+  args: [],
   kind: "transform",
   title: "Wrap a call in an if, by selecting it first",
   note: [
