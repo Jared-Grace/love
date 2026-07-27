@@ -110,6 +110,8 @@ export function examples_notes() {
       "address a line by its node type — the address left for a line that calls nothing and binds nothing — and the one that refuses as soon as a second node of that type appears",
     example_call_name_includes_address:
       "address a call by a fragment of its name — shorter than the whole name and exact only while one call matches",
+    example_function_node_named_address:
+      "name an inner function and the whole of it answers — the address a let-binding finder looks straight past",
   };
   return notes;
 }

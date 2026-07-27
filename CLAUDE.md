@@ -134,7 +134,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_find_return` | the `return` |
 | `js_type_find <NodeType>` | the one node of that type |
 | `js_find_call_name_includes <part>` | the call whose name contains `<part>` |
-| `js_function_node_find_named <name>` | a named inner function node |
+| `js_function_node_find_named_node <name>` | a named inner function — the whole of it, addressed by its name. **Not** `js_function_node_find_named`, which hands back the walker's record rather than the node, so a verb paired with it cannot find where the node lives |
 | `js_find_string_starting_with <prefix>` | the line a bare-string comment sits on — prose is real nodes here, so it works as a bookmark that says what it means |
 | `js_find_statement_last` | the last line — takes no argument, and is the one end of a block no neighbour can name |
 | `js_find_statement_index <n>` | the *n*-th line, counting from 0 — the address of last resort, and the most fragile (every insert above moves it) |
