@@ -28,6 +28,10 @@ export function examples_notes() {
       "call an existing function beside a selected statement — the call writes its own arguments",
     example_call_add_before_selected:
       "the same gap named from the other neighbour — the sibling verb",
+    example_declaration_replace_code:
+      "address a line by the name it binds, and change it — the third thing that can happen to a line",
+    example_declaration_delete:
+      "the same address, the deleting verb — a function that fit the transform shape before the shape had a name",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
