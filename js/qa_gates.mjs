@@ -1,3 +1,4 @@
+import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { qa_report_gate_run } from "./qa_report_gate_run.mjs";
 import { functions_parallel_marks_gate_run } from "./functions_parallel_marks_gate_run.mjs";
 import { functions_duplicate_keys_gate_run } from "./functions_duplicate_keys_gate_run.mjs";
@@ -106,6 +107,7 @@ export function qa_gates() {
     app_g_day_blocked_check,
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
+    examples_registers_gate_run,
   ];
   return gates;
 }
