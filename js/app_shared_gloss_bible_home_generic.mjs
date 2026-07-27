@@ -1,3 +1,4 @@
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { json_from_try } from "./json_from_try.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
@@ -79,11 +80,13 @@ export async function app_shared_gloss_bible_home_generic(
     html_bold_mild(span);
     html_font_color_set(span, "#b91c1cff");
     let c = html_span_colon_2(div2);
-    html_font_color_set(c, "#aaa");
+    let color = app_shared_color_gray();
+    html_font_color_set(c, color);
     let span2 = html_span_text(div2, gloss);
     html_font_color_set(span2, "#1d4ed8ff");
     let c2 = html_span_colon_2(div2);
-    html_font_color_set(c2, "#aaa");
+    let color2 = app_shared_color_gray();
+    html_font_color_set(c2, color2);
     let span3 = html_span_text(div2, explain);
     html_font_color_set(span3, "#a21cafff");
   }
