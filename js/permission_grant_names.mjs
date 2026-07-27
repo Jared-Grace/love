@@ -284,6 +284,7 @@ export function permission_grant_names() {
   let spelled281 = fn_name("functions_duplicate_keys");
   let spelled282 = fn_name("repo_shapes");
   let spelled283 = fn_name("functions_duplicates_names");
+  let spelled284 = fn_name("functions_parallel_marks_stale");
   let names = [
     spelled,
     spelled2,
@@ -568,6 +569,7 @@ export function permission_grant_names() {
     spelled281,
     spelled282,
     spelled283,
+    spelled284,
   ];
   return names;
 }
