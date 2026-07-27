@@ -21,7 +21,9 @@ export function qa_report_case_check(one) {
   let sections = qa_gate_failed_sections(output);
   let expected = list_join_comma(wanted_names) + " / " + wanted_sections;
   let found = list_join_comma(names) + " / " + list_size(sections);
-  let same_names = equal(list_join_comma(names), list_join_comma(wanted_names));
+  let left = list_join_comma(names);
+  let right = list_join_comma(wanted_names);
+  let same_names = equal(left, right);
   if (not(same_names)) {
     let named_wrong = {
       label,
@@ -32,7 +34,8 @@ export function qa_report_case_check(one) {
     };
     return named_wrong;
   }
-  let same_count = equal(list_size(sections), wanted_sections);
+  let left2 = list_size(sections);
+  let same_count = equal(left2, wanted_sections);
   if (not(same_count)) {
     let counted_wrong = {
       label,
@@ -45,7 +48,8 @@ export function qa_report_case_check(one) {
   }
   let said = list_map_property(sections, "said");
   let whole = list_join_comma(said);
-  let asked_includes = not(text_empty_is(includes));
+  let b = text_empty_is(includes);
+  let asked_includes = not(b);
   if (asked_includes) {
     let carried = text_includes(whole, includes);
     if (not(carried)) {
@@ -54,12 +58,14 @@ export function qa_report_case_check(one) {
         pass: false,
         expected,
         actual: found,
-        note: "what the gate printed above its complaint was dropped: " + includes,
+        note:
+          "what the gate printed above its complaint was dropped: " + includes,
       };
       return missing;
     }
   }
-  let asked_excludes = not(text_empty_is(excludes));
+  let b2 = text_empty_is(excludes);
+  let asked_excludes = not(b2);
   if (asked_excludes) {
     let present = text_includes(whole, excludes);
     if (present) {
