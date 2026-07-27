@@ -106,6 +106,8 @@ export function examples_notes() {
       "write a call from a function name alone — the callee's own parameters become the arguments and a clashing one is renamed rather than silently repointed",
     example_block_call_add:
       "call an existing function at the end of a block - the verb the name-only way of writing rests on",
+    example_type_find_address:
+      "address a line by its node type — the address left for a line that calls nothing and binds nothing — and the one that refuses as soon as a second node of that type appears",
   };
   return notes;
 }
