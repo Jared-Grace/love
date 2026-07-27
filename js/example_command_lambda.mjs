@@ -19,7 +19,7 @@ import { example_select_apply_lambda } from "./example_select_apply_lambda.mjs";
 import { equal } from "./equal.mjs";
 import { function_arguments_assert_each_add } from "./function_arguments_assert_each_add.mjs";
 import { js_node_type_is_new } from "./js_node_type_is_new.mjs";
-import { function_identifier_replace } from "./function_identifier_replace.mjs";
+import { function_identifier_replace_current } from "./function_identifier_replace_current.mjs";
 import { function_identifier_replace_lambda } from "./function_identifier_replace_lambda.mjs";
 import { file_imports_repair } from "./file_imports_repair.mjs";
 import { js_imports_auto_relative } from "./js_imports_auto_relative.mjs";
@@ -74,7 +74,7 @@ export function example_command_lambda(fn_name, args, e) {
     let lambda2 = js_node_type_is_new_lambda(args[0], args[1]);
     return lambda2;
   }
-  if (equal(fn_name, function_identifier_replace.name)) {
+  if (equal(fn_name, function_identifier_replace_current.name)) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }

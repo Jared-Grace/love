@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 import { function_identifier_replace_lambda } from "./function_identifier_replace_lambda.mjs";
 import { function_transform } from "./function_transform.mjs";
-export async function function_identifier_replace(
+export async function function_identifier_replace_current(
   identifier_name,
   replacement,
 ) {
