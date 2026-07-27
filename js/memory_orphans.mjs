@@ -1,3 +1,4 @@
+import { memory_hub_children } from "./memory_hub_children.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read } from "./folder_read.mjs";
 import { file_read } from "./file_read.mjs";
@@ -60,7 +61,8 @@ export async function memory_orphans() {
     }
     let stem = text_suffix_without(name, ".md");
     let is_declared = list_includes(declared, stem);
-    return not(is_declared);
+    let n = not(is_declared);
+    return n;
   }
   let orphans = list_filter(names, is_orphan);
   return orphans;
