@@ -97,15 +97,22 @@ It holds **no selection between commands**, which is the point: the older `funct
 
 **Authoring a whole new function without touching an editor.** This is the point of the vocabulary, and it works today — `js_find_statement_after` and `js_find_body_block` were both written this way, with no `Write` and no `Edit`:
 
+**Write it from names, never from code — then nothing on the path ever prompts.** Every argument below is a *function name* or a *variable name*, and every command is `function_select_apply_args`, which is already granted:
+
 ```
-node scripts/ai.mjs function_new_js find_statement_after                       # the file
-node scripts/ai.mjs function_param_new js_find_statement_after name ""          # a parameter
-node scripts/ai.mjs function_select_apply_code js_find_statement_after js_find_body_block "" js_block_body_add_code "let body = js_flo_body(ast);"
-node scripts/ai.mjs function_select_apply_code js_find_statement_after js_find_body_block "" js_block_body_add_code "return list_get(body, after);"
-node scripts/ai.mjs function_auto js_find_statement_after                       # imports, atomize, asserts
+node scripts/ai.mjs function_new_js nameonly_probe                              # the file
+node scripts/ai.mjs function_param_new js_nameonly_probe wanted ""              # a parameter
+node scripts/ai.mjs function_select_apply_args js_nameonly_probe js_find_body_block "" js_block_call_add js_flo_body
+node scripts/ai.mjs function_select_apply_args js_nameonly_probe js_call_named_find js_flo_body js_call_argument_named_identifier_set ast,ast
+node scripts/ai.mjs function_select_apply_args js_nameonly_probe js_find_body_block "" js_block_return_identifier_add last
+node scripts/ai.mjs function_auto js_nameonly_probe                             # imports, atomize, asserts
 ```
 
-**Use `function_select_apply_code` whenever the last argument is code, never `function_select_apply_args`.** The `_args` form splits its argument list on **commas and dots**, which a list needs and code cannot survive — `f(a, b)` has a comma and `fn.name` has a dot, so nearly every real line was unpassable. The `_code` form hands that last argument over whole and lets the shell's quoting do the separating. `ao` then adds the imports and atomizes nested calls, so write the natural line and let it normalize.
+`js_block_call_add <fn>` **writes the call itself** from the callee's own parameters, so a step costs one function name. The generated call arrives with those parameter names in it, and the uniquifier renames any that collide (`ast` → `ast2`) — `js_call_argument_named_identifier_set <param> <local>` is how those get pointed at what you meant. Identifiers never contain commas or dots, so the `_args` splitter carries them fine.
+
+**Why this shape and not a `code` argument.** A grant names a function and covers **every argument it will ever be handed**, so a parameter holding source text can never be granted — `permission_grant_words_unsafe()` refuses `code`, `command`, `path`, `file` and friends by name, and it is right to. A parameter that must be one bare name says exactly one thing, and `js_identifier_expression` **enforces** that rather than hoping (`danger_call()` is refused). That is what makes the whole path approvable once instead of every time.
+
+**`function_select_apply_code` is the escape hatch, and it prompts every time by design.** Reach for it only when what goes in genuinely has to be worked out — a literal, an operator, a nested expression. It exists because the `_args` splitter breaks on **commas and dots**, so `f(a, b)` and `fn.name` are unpassable there; it hands the last argument over whole. If you find yourself using it to write ordinary steps, the missing thing is a name-only atom, so write that instead.
 
 **Address the body with `js_find_body_block`, not `js_type_find BlockStatement`.** The latter works only while the function has exactly one block, so it starts failing the moment the body contains an `if`, a loop, or an inner function — which is to say, as soon as the function is worth writing.
 
@@ -139,7 +146,9 @@ node scripts/ai.mjs function_auto js_find_statement_after                       
 | `js_statement_wrap_if` / `js_statement_if_return_add` | build a guard clause in two steps |
 | `js_statement_wrap_for_of <name> <list>` | put the line inside a loop over `<list>`, binding each item to `<name>` |
 | `js_selects_unwrap` | take the lines back out of a wrapper — the inverse of both wraps |
-| `js_call_argument_named_set <param> <code>` | change one argument of a call, named as the **callee** knows it — works whether the address stopped at the call or at the line holding it |
+| `js_call_argument_named_identifier_set <param> <local>` | point one argument of a call at a local, both named — **prefer this**, it needs no code and so stays grantable |
+| `js_block_return_identifier_add <local>` | hand back a local at the end of a selected block |
+| `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
 | `js_selects_functionize <new_fn>` | extract first-through-last selection (needs `function_select_multiple_apply_args`) |
