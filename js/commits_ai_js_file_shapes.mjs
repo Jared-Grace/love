@@ -1,3 +1,4 @@
+import { commits_scratch_path_is } from "./commits_scratch_path_is.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { commits_shape_name } from "./commits_shape_name.mjs";
 import { equal } from "./equal.mjs";
@@ -23,6 +24,7 @@ export async function commits_ai_js_file_shapes(count_given) {
   let commits = await commits_ai_js_numstat(count_given);
   let buckets = {};
   let edits = 0;
+  let scratch = 0;
   for (let commit of commits) {
     let subject = property_get(commit, "subject");
     let named = equal(subject, "ai");
@@ -31,6 +33,12 @@ export async function commits_ai_js_file_shapes(count_given) {
     }
     let rows = property_get(commit, "rows");
     for (let row of rows) {
+      let path = property_get(row, "path");
+      let scratch_is = commits_scratch_path_is(path);
+      if (scratch_is) {
+        scratch = scratch + 1;
+        continue;
+      }
       let added = property_get(row, "added");
       let removed = property_get(row, "removed");
       edits = edits + 1;
@@ -54,7 +62,6 @@ export async function commits_ai_js_file_shapes(count_given) {
       let a = list_size(bucket.samples);
       let few = less_than(a, 6);
       if (few) {
-        let path = property_get(row, "path");
         list_add(bucket.samples, path);
       }
     }
@@ -62,6 +69,7 @@ export async function commits_ai_js_file_shapes(count_given) {
   let r = {
     window: count_given,
     hand_edited_file_changes: edits,
+    scratch_file_changes_set_aside: scratch,
     shapes: buckets,
   };
   return r;
