@@ -45,6 +45,7 @@ export function example_transforms() {
     js_call_argument_named_set,
     js_array_identifier_add,
     js_expand_selects,
+    js_call_callee_set,
   };
   return transforms;
 }
