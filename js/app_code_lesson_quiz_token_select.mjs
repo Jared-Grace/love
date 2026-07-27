@@ -1,3 +1,4 @@
+import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -84,7 +85,8 @@ export function app_code_lesson_quiz_token_select(
         list_add(chosen, token);
         variations = variations_new;
         let variation_first = list_first(variations);
-        let code2 = js_tokens_to_code(variation_first);
+        let merged = app_code_quiz_string_tokens_merge(variation_first);
+        let code2 = js_tokens_to_code(merged);
         function lambda5(index, token) {
           let sum = text_index_of_from_start(code2, token, index);
           return sum;
