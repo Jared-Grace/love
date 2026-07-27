@@ -1,3 +1,5 @@
+import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
+import { list_single } from "./list_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
 import { js_declare_init_get } from "./js_declare_init_get.mjs";
@@ -15,7 +17,9 @@ export async function function_local_to_param(f_name, local_name) {
   let source = null;
   function taken(ast) {
     let node = js_find_declaration_named(ast, local_name);
-    let init = js_declare_init_get(node);
+    let declarators = js_declaration_declarators_get(node);
+    let declarator = list_single(declarators);
+    let init = js_declare_init_get(declarator);
     source = js_unparse(init);
     let body = js_flo_body(ast);
     list_remove(body, node);
