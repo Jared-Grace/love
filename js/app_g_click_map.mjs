@@ -1,4 +1,5 @@
 import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
+import { app_g_day_travel_blocked_is } from "./app_g_day_travel_blocked_is.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_click_npc_if } from "./app_g_click_npc_if.mjs";
 import { app_g_player_coordinates_update_move } from "./app_g_player_coordinates_update_move.mjs";
@@ -9,6 +10,9 @@ export async function app_g_click_map(
   player_img_c,
   div_map,
 ) {
+  if (app_g_day_travel_blocked_is(clicked_coordinates)) {
+    return;
+  }
   let npcs = await app_g_npcs_get();
   let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
   let npc_clicked = list_empty_not_is(npcs_matched);
