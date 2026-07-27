@@ -17,12 +17,12 @@ export const example = {
     "point: neither half knows the other.",
   ],
   before: `export function f(ast) {
-  ("Measure how long the walk took");
+  "Measure how long the walk took";
   let sized = list_size(ast);
   return sized;
 }`,
   after: `export function f(ast) {
-  ("Measure how long the walk took");
+  "Measure how long the walk took";
   let now = date_now_milliseconds();
   let sized = list_size(ast);
   return sized;
