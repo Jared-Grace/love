@@ -1,3 +1,7 @@
+import { list_map } from "./list_map.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { equal_curried } from "./equal_curried.mjs";
+import { list_first } from "./list_first.mjs";
 import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -21,10 +25,20 @@ export function js_string_literal_single_find(ast) {
     let string_is = text_is(value);
     return string_is;
   }
-  let values = list_filter(literals, value_string_is);
+  let used = list_filter(literals, value_string_is);
+  let written = list_map(used, js_literal_value_get);
+  let values = list_unique(written);
   let asked = {
-    hint: "a selector names one place, so this function was expected to use exactly one string as a value - would you like to pick a function with one, or say which of several you meant?",
+    hint: "a selector names one thing, so this function was expected to use exactly one string as a value - would you like to pick a function with one, or say which of several you meant?",
   };
-  let only = list_single_message(values, asked);
+  let value = list_single_message(values, asked);
+  let same_value_is = equal_curried(value);
+  function written_value_is(node) {
+    let each_value = js_literal_value_get(node);
+    let same = same_value_is(each_value);
+    return same;
+  }
+  let places = list_filter(used, written_value_is);
+  let only = list_first(places);
   return only;
 }
