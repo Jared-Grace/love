@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
 export function ebible_verses_upload_name(chapter_code, verse_number) {
   function_duplicate_kind_parallel();
