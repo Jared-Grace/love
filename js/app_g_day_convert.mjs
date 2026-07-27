@@ -6,6 +6,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_sky_update } from "./app_g_day_sky_update.mjs";
+import { app_g_day_conversation_slices } from "./app_g_day_conversation_slices.mjs";
 import { add } from "./add.mjs";
 export async function app_g_day_convert(div_map, npc) {
   "STUB conversion for the #day_unbelievers integration test: the real conversation is SKIPPED (it has its own # route) — reaching a discerned person instantly marks them believes+baptized (blue cross) and clears their talkable speech-bubble. this dummy stands in for a whole conversation so the DAY cycle (walking between people, sky / slices) can be exercised without playing every turn. the skipped conversation still COSTS its time: 3 slices (the stubbed part-count, matching the day's budget) are added and the sky advances";
@@ -21,6 +22,6 @@ export async function app_g_day_convert(div_map, npc) {
   g_icon_cross_baptized(div_map, npc);
   let state = app_g_day_state();
   let slices = property_get(state, "slices");
-  property_set(state, "slices", add(slices, 3));
+  property_set(state, "slices", add(slices, app_g_day_conversation_slices()));
   await app_g_day_sky_update();
 }
