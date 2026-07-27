@@ -1,8 +1,9 @@
+import { js_identifier_is } from "./js_identifier_is.mjs";
+import { property_get } from "./property_get.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_params_get } from "./function_params_get.mjs";
 import { function_params_plain } from "./function_params_plain.mjs";
 import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
