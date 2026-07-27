@@ -1,3 +1,5 @@
+import { qa_tree_untouched_is } from "./qa_tree_untouched_is.mjs";
+import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { folder_delete } from "./folder_delete.mjs";
@@ -16,6 +18,7 @@ export async function qa_trees_reap() {
   "A copy is made per asker so that no two of us rewrite files the other is reading, and it is kept for as long as the conversation lasts so the copies stay few. What was missing is the other end: a conversation that finishes leaves its copy behind, and the copies live in memory, so what accumulates is not disk but the machine's own room to work in. Nothing ever took them away, so they only went when the machine did.";
   "Whether a conversation is still going is asked of the conversations themselves rather than of a list kept here. One being written to is one still happening, and that answer survives a crash, which any list written down on the way out would not.";
   "Never your own, whatever the answer says - you are plainly still here, and the copy about to be made is yours.";
+  "Two things must both say a copy is abandoned before it goes. The transcripts are read for one repo while the copies from every repo sit together in this one folder, so a neighbour working elsewhere is alive and cannot be seen here; the copy's own age is what covers that, and it needs to know nothing about who made it.";
   let folder = qa_tree_owners_folder();
   await folder_exists_ensure(folder);
   let owners = await folder_read(folder);
@@ -35,6 +38,10 @@ export async function qa_trees_reap() {
       continue;
     }
     let stale = path_join([folder, owner]);
+    let untouched = await qa_tree_untouched_is(stale);
+    if (not(untouched)) {
+      continue;
+    }
     await folder_delete(stale);
     list_add(reaped, owner);
   }
