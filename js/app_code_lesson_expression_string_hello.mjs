@@ -11,7 +11,6 @@ import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-
 export function app_code_lesson_expression_string_hello() {
   "practice a string - text written inside quotes, the first value that is not a number. A quoted word evaluates to the text WITHOUT the quotes: the quotes are how you write it, not part of the value; the answer is the text with no quotes.";
   let quote = '"';
@@ -31,7 +30,8 @@ export function app_code_lesson_expression_string_hello() {
   }
   function refill() {
     "four questions, each a different quoted word";
-    let picked = list_shuffle_take(words(), 4);
+    let list2 = words();
+    let picked = list_shuffle_take(list2, 4);
     let list = list_map(picked, make);
     return list;
   }
@@ -66,7 +66,11 @@ export function app_code_lesson_expression_string_hello() {
       return render;
     }
     let rights = ["string"];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
   function above(root) {
