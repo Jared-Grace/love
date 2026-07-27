@@ -81,11 +81,19 @@ export async function commits_ai_js_shapes(count_given) {
     hand = hand + 1;
     let key = commits_shape_name(commit);
     let seen = property_exists(buckets, key);
-    let so_far = 0;
-    if (seen) {
-      so_far = property_get(buckets, key);
+    if (not(seen)) {
+      property_set(buckets, key, {
+        count: 0,
+        samples: [],
+      });
     }
-    property_set(buckets, key, so_far + 1);
+    let bucket = property_get(buckets, key);
+    bucket.count = bucket.count + 1;
+    ("A few names are kept alongside each count, because a count says how often a shape happens and only the change itself says what the missing command would have to do");
+    let few = list_size(bucket.samples) < 6;
+    if (few) {
+      list_add(bucket.samples, property_get(commit, "commit"));
+    }
   }
   let r = {
     window: count,
