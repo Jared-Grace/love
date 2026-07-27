@@ -83,6 +83,7 @@ export function app_code_lesson_expression_string_spaces() {
     let code = string_code(phrase);
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, ["A string is text in quotes"]);
+    html_div_cycle_code(intro, ["A string can hold more than one word"]);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is a string with a space: ");
     html_span_text_code_dark(example_line, code);
