@@ -40,6 +40,10 @@ export function examples_notes() {
       "an address that takes no argument — the last line, which no neighbour can name",
     example_statement_after_address:
       "address a line by its neighbour — the first relative address, and the first tool built with no hand editing",
+    example_argument_identifier_set:
+      "point a generated call's argument at a local — two names, no code, so the command can be approved once",
+    example_return_identifier_add:
+      "hand back a local by name — the last piece of writing a whole function from names alone",
     example_prose_address:
       "address a line by the sentence written above it — comments are real nodes here, so they are bookmarks",
     example_wrap_for_of:
