@@ -8,7 +8,7 @@ export function timings_total_ms(timings) {
     let milliseconds = property_get(timing, "milliseconds");
     return milliseconds;
   }
-  let each = list_map(timings, lambda_milliseconds);
-  let total = list_sum(each);
+  let milliseconds_each = list_map(timings, lambda_milliseconds);
+  let total = list_sum(milliseconds_each);
   return total;
 }
