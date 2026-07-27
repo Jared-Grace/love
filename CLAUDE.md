@@ -168,7 +168,8 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
-| `js_selects_functionize <new_fn>` | extract first-through-last selection (needs `function_select_multiple_apply_args`) |
+| `js_selects_functionize <new_fn>` | extract first-through-last selection, then move the new fn into its own file (needs `function_select_multiple_apply_args`) |
+| `js_selects_functionize_local <new_fn>` | the same extraction, left in the file it came from — the half a sandbox can watch, so this is the one under a gate |
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 

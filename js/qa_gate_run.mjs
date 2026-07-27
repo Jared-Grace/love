@@ -1,3 +1,5 @@
+import { list_join_comma } from "./list_join_comma.mjs";
+import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
 import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
@@ -61,7 +63,9 @@ export async function qa_gate_run() {
   if (greater_than(failed.length, 0)) {
     ("Every red is asked once more out here, in the folder as it stands, because the copy was taken while several of us were writing to it and a file caught half-copied answers the same way however many times it is asked in there. What that ask finds is printed and nothing else: the verdict below stays exactly what the frozen copy said, since a gate quiet out here may only be quiet because somebody is mid-edit, and a clean answer from this gate is supposed to mean the code is sound");
     let joined = list_join_comma(failed);
-    console.log("\n=== asking the red gates again, here in the living folder ===");
+    console.log(
+      "\n=== asking the red gates again, here in the living folder ===",
+    );
     await qa_gates_here_failed(joined);
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
