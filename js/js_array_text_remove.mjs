@@ -1,9 +1,6 @@
+import { js_array_element_text_find } from "./js_array_element_text_find.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_array_elements } from "./js_selects_array_elements.mjs";
-import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_find } from "./list_find.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_array_text_remove(ast, selects, text) {
   arguments_assert(arguments, 3);
@@ -17,15 +14,6 @@ export function js_array_text_remove(ast, selects, text) {
   ("It refuses a word the list does not hold rather than doing nothing quietly,");
   ("since the two look identical afterwards and only one of them was meant.");
   let elements = js_selects_array_elements(ast, selects);
-  function same_is(element) {
-    let held = property_get(element, "value");
-    let same = equal(held, text);
-    return same;
-  }
-  let found = list_find(elements, same_is);
-  assert_json(found, {
-    hint: "this list does not hold that word — would you like to check the spelling, or the line it is bound to?",
-    text,
-  });
+  let found = js_array_element_text_find(elements, text);
   list_remove(elements, found);
 }
