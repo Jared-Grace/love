@@ -85,7 +85,9 @@ export function app_code_lesson_expression_larger() {
     let big_text = text_to(big);
     let define = app_code_container_light_blue(root);
     html_div_cycle_code(define, [
-      "This function takes two numbers, separated by a comma ",
+      "",
+      "Math.max",
+      " takes two numbers, separated by a comma ",
       ",",
     ]);
     let example_box = app_code_container_light_blue(root);
