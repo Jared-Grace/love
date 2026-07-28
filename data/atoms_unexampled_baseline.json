@@ -1,7 +1,5 @@
 {
  "known": [
-  "js_call_argument_named_call_set",
-  "js_call_argument_named_property_set",
   "js_selects_functionize"
  ]
 }
