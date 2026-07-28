@@ -1,3 +1,4 @@
+import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -17,6 +18,7 @@ export async function function_transform_imports(f_name, lambda$ast) {
   async function lambda(ast) {
     await lambda$ast(ast);
     await js_imports_missing_add_all(ast);
+    await js_imports_unused_remove(ast2);
   }
   let output = await function_transform(f_name, lambda);
   return output;
