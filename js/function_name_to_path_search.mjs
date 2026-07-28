@@ -11,9 +11,9 @@ import { function_name_to_path_relative } from "./function_name_to_path_relative
 export async function function_name_to_path_search(f_name) {
   let f_path = function_name_to_path_relative(f_name);
   async function lambda(joined) {
-    let exists = await file_exists(joined);
+    let present = await file_exists(joined);
     let v = {
-      exists,
+      exists: present,
       f_path: joined,
     };
     return v;
