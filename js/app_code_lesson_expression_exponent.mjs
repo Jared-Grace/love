@@ -1,4 +1,4 @@
-import { app_code_lesson_chip_font_size } from "./app_code_lesson_chip_font_size.mjs";
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
@@ -163,7 +163,7 @@ export function app_code_lesson_expression_exponent() {
     function final_count(grid, number, color) {
       "the FINAL count as a coloured chip with white text - it IS the exponent, so it echoes the exponent chip in the shorthand and stands out clearly from the quiet running counts";
       let made = app_code_lesson_number_chip(grid, number, color);
-      let value = app_code_lesson_chip_font_size();
+      let value = app_shared_font_size_label();
       html_style_font_size(made, value);
       return made;
     }
