@@ -30,7 +30,7 @@ export async function work_items_measured() {
     duplicates.length,
     "Duplicated constants",
     "A constant with a getter that other files still spell literally has one name and many copies, so changing it changes only some of them.",
-    "Take the widest one and read every site before touching it: the count is of files holding the literal, not of sites meaning the constant. Route the sites that mean what the getter means, leave the ones that only happen to equal it - a margin routed through a border-radius getter follows it the next time somebody changes a corner - and say which were left and why. A site whose nearest getter holds a near-miss value is a question for the human rather than a refactor, since routing it there would change what is drawn.",
+    "Take the widest one and read the means field beside its files before touching anything: it says what each file is using the spelling for - the setting it is given to or the function it is handed to - and the count is of files holding the literal, not of sites meaning the constant. Route the sites that mean what the getter means, leave the ones that only happen to equal it - a margin routed through a border-radius getter follows it the next time somebody changes a corner - and say which were left and why. A site whose nearest getter holds a near-miss value is a question for the human rather than a refactor, since routing it there would change what is drawn.",
   );
   return items;
 }

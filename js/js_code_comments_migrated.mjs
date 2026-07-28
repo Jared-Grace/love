@@ -1,9 +1,9 @@
+import { js_comment_migratable_is } from "./js_comment_migratable_is.mjs";
 import { js_code_spans_replaced } from "./js_code_spans_replaced.mjs";
 import { js_bound_names } from "./js_bound_names.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { js_offset_inside_function_is } from "./js_offset_inside_function_is.mjs";
 import { js_comments_get } from "./js_comments_get.mjs";
-import { js_comment_own_line_is } from "./js_comment_own_line_is.mjs";
 import { js_code_comment_statement_generic } from "./js_code_comment_statement_generic.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,11 +16,12 @@ export function js_code_comments_migrated(code, f_names) {
   let bound = js_bound_names(ast_before);
   let free = list_without_multiple(f_names, bound);
   let comments = js_comments_get(code);
-  function own_is(comment) {
-    let own = js_comment_own_line_is(code, comment);
-    return own;
+  ("having a line to itself is not enough on its own: a statement also has to be allowed where that line is, and between the entries of a written-out record it is not. Rewriting one of those produced a file that no longer parsed, which is the one outcome worse than losing the comment");
+  function migratable_is(comment) {
+    let migratable = js_comment_migratable_is(code, ast_before, comment);
+    return migratable;
   }
-  let own = list_filter(comments, own_is);
+  let own = list_filter(comments, migratable_is);
   function statement_of(comment) {
     let start = property_get(comment, "start");
     let value = property_get(comment, "value");
