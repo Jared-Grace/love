@@ -23,8 +23,13 @@ export function js_offset_statement_position_is(ast, offset) {
       innermost = node;
       return;
     }
+    ("which of two nodes is the inner one is decided by the shorter span, not by the later beginning. Several nodes routinely begin at the very same character - a line, the expression that is all of it, and the call that is all of that - so a beginning alone cannot separate them, and reading it as though it could hands back the outermost of the three. That is the whole of a call's arguments answering as though it were a place a statement may stand.");
     let start_held = property_get(innermost, "start");
-    let deeper = greater_than_equal(start, start_held);
+    let end_held = property_get(innermost, "end");
+    let later = greater_than(start, start_held);
+    let alongside = equal(start, start_held);
+    let tighter = less_than(end, end_held);
+    let deeper = later || (alongside && tighter);
     if (deeper) {
       innermost = node;
     }
