@@ -3,8 +3,8 @@ import { function_path_to_name } from "./function_path_to_name.mjs";
 import { list_to_dictionary_key } from "./list_to_dictionary_key.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
 export async function functions_names_to_paths() {
-  async function lambda(repo_path) {
-    let paths = await folder_read_paths_async(repo_path);
+  async function lambda(repo_folder) {
+    let paths = await folder_read_paths_async(repo_folder);
     let dictionary = list_to_dictionary_key(paths, function_path_to_name);
     return dictionary;
   }
