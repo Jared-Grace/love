@@ -14,6 +14,7 @@
   "js_imports_paths_fix_at",
   "list_count",
   "list_empty",
+  "object_map_async",
   "uplifting_package_upload",
   "uplifting_packages_upload_all"
  ]
