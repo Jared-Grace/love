@@ -1,32 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_block_body_get } from "./js_block_body_get.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { js_statement_call_any_get } from "./js_statement_call_any_get.mjs";
-import { null_is } from "./null_is.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { equal } from "./equal.mjs";
+import { function_marked_is } from "./function_marked_is.mjs";
 export async function function_parallel_marked_is(f_name) {
-  "Whether the named function carries the alike-on-purpose mark as a call in its body, which is the only way the mark is ever written.";
-  "Asking after the names a body reads instead would say yes to the handful of functions that read or place the mark, since they spell it too. Those carry no claim about being alike, and counting them would make the check report its own machinery.";
+  "Whether the named function carries the alike-on-purpose mark, which is the one mark that says two functions share a shape because somebody meant them to.";
+  "The reading itself lives in the general reader beside this one, which now asks for a call rather than for a name the body happens to spell - the distinction this function's own prose has been making since it was written, while the general one got it wrong and the check that matters was built on the general one. Naming the mark is all that is left here.";
   arguments_assert(arguments, 1);
-  let parsed = await function_parse_declaration(f_name);
-  let declaration = property_get(parsed, "declaration");
-  let block = property_get(declaration, "body");
-  let statements = js_block_body_get(block);
   let mark_name = function_duplicate_kind_parallel.name;
-  for (let statement of statements) {
-    let call = js_statement_call_any_get(statement);
-    let missing = null_is(call);
-    if (missing) {
-      continue;
-    }
-    let name = js_call_callee_name_try(call);
-    let marked = equal(name, mark_name);
-    if (marked) {
-      return true;
-    }
-  }
-  return false;
+  let marked = await function_marked_is(f_name, mark_name);
+  return marked;
 }
