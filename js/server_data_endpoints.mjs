@@ -15,17 +15,17 @@ export function server_data_endpoints(app) {
     let p = performance_start(
       text_combine_multiple([
         "data_sequence = data_sequence.then(",
-        data_get.name,
+        data_get_fn.name,
         ")",
       ]),
     );
-    data_sequence = data_sequence.then(data_get);
+    data_sequence = data_sequence.then(data_get_fn);
     performance_next(p, "await data_sequence");
     await data_sequence;
     performance_next(p, "res.json(data)");
     res.json(data);
     let r = performance_end(p, "res.json(data)");
-    async function data_get() {
+    async function data_get_fn() {
       if (null_is(data)) {
         data = {};
         await data_generate(data);
