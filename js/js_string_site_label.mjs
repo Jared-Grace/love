@@ -1,5 +1,5 @@
+import { js_stack_node_above } from "./js_stack_node_above.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
