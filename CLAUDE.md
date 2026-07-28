@@ -151,6 +151,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_find_declaration_named <name>` | the line that binds `<name>` — the only address a line that calls nothing has |
 | `js_statement_find_call_named <fn>` | the whole statement that calls `<fn>` |
 | `js_call_named_find <fn>` | the call expression itself, not its statement |
+| `js_call_named_find_index <fn> <n>` / `js_statement_find_call_named_index <fn> <n>` | **which one you meant**, when `<fn>` is called more than once — the call, or the line holding it. The two above answer exactly one node and so refuse a name called twice, correctly; until these, every verb was unreachable in that file until one of the calls went away. Written order, counting from 0, and as fragile as `js_find_statement_index` for the same reason — prefer a name called once |
 | `js_find_return` | the `return` |
 | `js_type_find <NodeType>` | the one node of that type |
 | `js_find_call_name_includes <part>` | the call whose name contains `<part>` |
@@ -218,7 +219,7 @@ node scripts/ai.mjs function_auto_multiple examples_groups,examples_notes
 
 **Run `ao` after a command edit or the imports are missing.** A command adds the entry; only `ao` adds the `import` the entry now needs. Skipping it fails at run time, not at edit time.
 
-**Known holes:** rename a local within one node rather than the whole fn · address more than one match at a time (every selector answers exactly one node, and says so when it can't) · reach a record by *position* rather than by a word in it.
+**Known holes:** rename a local within one node rather than the whole fn · address more than one match at a time (every selector answers exactly one node, and says so when it can't — *which* one is now answerable for calls, via the `_index` pair above) · reach a record by *position* rather than by a word in it · **inline an inner function back into its call site** (`js_expand_selects` resolves the callee as a repo function *file*, so the one shape that would undo `js_selects_functionize_local` is exactly the one it refuses) · address a module-level function *beside* the exported one (`js_function_node_find_named_node` reaches inner functions but errored on a sibling) · add prose anywhere but the top of a block (`js_block_prose_add` only writes first).
 
 **Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
