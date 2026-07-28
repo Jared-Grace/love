@@ -150,6 +150,7 @@ export function examples_notes() {
       "the line a constant sits on when it sits in no call for the other verb to reach",
     example_object_text_add:
       "adding one labelled sentence without touching the entries beside it",
+    example_block_local_number_add: "the line a tally opens with",
   };
   return notes;
 }
