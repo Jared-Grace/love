@@ -71,6 +71,10 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 **When `s` finds nothing, the first suspect is your vocabulary, not the name.** `functions_name_vocabulary <count>` derives, from the names themselves, what this repo actually calls things — the word a name ends in (`get` 161, `generic` 156, `is` 137, `assert` 104, **`multiple` 102**, `set`, `add`, `run`, `try`, `remove`) and the area it starts in (`app` 1445, `js` 904, `list` 494, `html` 448, `function` 439, `functions` 120). It is derived rather than written down, so it cannot drift from what is there. **Translate your words into these, then search again** — this is one command and it is the cheapest step in the whole discovery path. The measured failure it answers: `permission_grant_add_multiple` was hunted as "batch refusal check" and missed, when `s grant,multiple` returns it and nothing else. The name was perfect; the asker's words were not, and no naming discipline can close a gap that sits in the asker.
 
+**The swaps worth trying, measured against every search ever run:** `contains`→`includes` · `load`/`fetch`→`read` · `save`/`store`→`write` · `create`/`make`→`new` or `add` · `check`/`verify`/`validate`→`assert` or `is` · `count`/`length`→`size` · `doc`/`comment`→`prose` · `batch`/`sweep`/`all`→`multiple` · `find`/`lookup`→`search` · `delete`→`remove`.
+
+**But do not expect this to rescue much, and do not read an empty search as a failure.** Of 959 distinct searches ever run, 226 return nothing today and only a handful are rescued by any word swap — the rest are **correctly** empty. `clamp`, `minimum`, `random,number`, `font,family`, `imports,transitive` all found nothing because none of it is there, which is the true answer and a useful one. Treating empty as a defect is what turns one honest "no" into a hunt; the thing worth checking is your vocabulary **once**, not the repo's completeness forever.
+
 **When that still finds nothing, search by what a function is FOR: `functions_prose_search <substrings>`.** Same shape as `s` — substrings joined by commas, all required — but matched against every line of every function's own account of itself, answering `{name, first line}` so a hit list stays scannable. It exists because `s` can only be used by somebody who already half knows the name, and that failed measurably: of six capabilities looked for and missed on 2026-07-28, the one no name search could ever have reached was `permission_grant_add_multiple`, which answers the question behind repeating the refusal check and shares **not one word** with it. `functions_prose_search batch,approval` finds it and nothing else. About 1.7s over the whole repo, so it is cheap enough to reach for first.
 
 **Reach for it before writing anything.** The repo's measured waste is discoverability, not capability — see the loop reading below — so the cheapest move by a wide margin is asking whether the thing exists, in the two ways that can miss differently: `s` by name, then `functions_prose_search` by meaning. A capability nobody can find gets built twice and neither copy gets the other's fixes.
@@ -286,6 +290,20 @@ Two `ao` gotchas, both worth designing around:
 - **Keep underscore fn-name tokens OUT of string-literal comments.** A bare `js_fold` inside a comment string gets rewritten to `js_fold.name`, mangling the prose into a sequence expression. Say "the fold pass" instead.
 
 `+` is intentionally **not** converted to `add(...)` (ambiguous with string concat).
+
+## Shared constants: merge freely, never revalue
+
+**Two files spelling the same value get one function, and you don't stop to judge whether they mean the same thing by it.** That question can't be answered when you're looking at them — a coincidence and a convergence look identical until something forces them apart, and *the forcing is the answer*. Guessing months early is what produced the "route this one, leave that one" reasoning this section replaces, and re-derived it every time somebody read the report.
+
+**What makes that safe is that a split costs nothing, provided you never change a shared value in place.** When one site needs something different:
+
+1. Rename the shared function if a clearer name helps (optional).
+2. **Write a second function holding the new value** — `function_new_getter <name> <meaning> <value>` does the whole thing in one command.
+3. Move sites to it **one at a time**. Migrating case by case is the point, not a limitation: it asks "does *this* one mean the new thing?" at the only moment the answer exists.
+
+The old function keeps its old value throughout, so nothing already written moves.
+
+**The one exception: a value that has already left this repo.** A localStorage key, an IndexedDB key, a word in a bookmarked URL — the data is on disks you can't reach, so an in-place change makes every future read look for the new word while every past write keeps the old one, and no later split can go back and fix it. Those are named in `literals_frozen_names()`; `literals_frozen_gate_run` (in `q`) reads each one's value off its own source and refuses a change the record doesn't have. **A deliberate change is still allowed** — `literals_frozen_write` regenerates the record, and the changed file standing in the commit is the point. **Add a name to that list whenever you write a new key that escapes**; nothing detects that for you, and a check that guessed which values had escaped would be back to guessing meanings.
 
 ## Conventions
 
