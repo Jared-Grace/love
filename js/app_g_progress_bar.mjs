@@ -1,3 +1,5 @@
+import { html_progress_bar } from "./html_progress_bar.mjs";
+import { app_g_progress_caption_font_size } from "./app_g_progress_caption_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
@@ -11,7 +13,13 @@ import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { add_1 } from "./add_1.mjs";
 export function app_g_progress_bar(root, count, total, name) {
-  "a progress bar styled for g — dark-green fill (app_shared_button_background) on a pale-green track (app_shared_color_green_light), rounded, with a small '<Name> N out of M' caption — shown above study / sermon. mirrors html_progress_bar's structure but with g's greens (that shared bar is used by 3 other apps with their own colors, so this is kept g-local rather than reworking the shared signature)";
+  ("a progress bar styled for g — dark-green fill (",
+    app_shared_button_background.name,
+    ") on a pale-green track (",
+    app_shared_color_green_light.name,
+    "), rounded, with a small '<Name> N out of M' caption — shown above study / sermon. mirrors ",
+    html_progress_bar.name,
+    "'s structure but with g's greens (that shared bar is used by 3 other apps with their own colors, so this is kept g-local rather than reworking the shared signature)");
   let container = html_div(root);
   let track = html_div(container);
   html_style_assign(track, {
@@ -20,17 +28,20 @@ export function app_g_progress_bar(root, count, total, name) {
     overflow: "hidden",
   });
   let fill = html_div(track);
-  let width = text_combine(divide(multiply(100, count), total), "%");
+  let top = multiply(100, count);
+  let left = divide(top, total);
+  let width = text_combine(left, "%");
   html_style_assign(fill, {
     "border-radius": "9999px",
     "background-color": app_shared_button_background(),
     height: "0.55em",
     width,
   });
-  let caption = text_first_upper_to(
-    text_combine_multiple([name, " ", add_1(count), " out of ", total]),
-  );
+  let a = add_1(count);
+  let s = text_combine_multiple([name, " ", a, " out of ", total]);
+  let caption = text_first_upper_to(s);
   let text_div = html_div_text_centered(container, caption);
-  html_style_font_size(text_div, "0.8em");
+  let value = app_g_progress_caption_font_size();
+  html_style_font_size(text_div, value);
   return container;
 }
