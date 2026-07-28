@@ -15,8 +15,8 @@ export function js_list_add_combine(ast) {
   let runs = [];
   function lambda(v) {
     let node = property_get(v, "node");
-    let add = js_list_add_call_try(node);
-    if (null_is(add)) {
+    let add_call = js_list_add_call_try(node);
+    if (null_is(add_call)) {
       return;
     }
     let stack = property_get(v, "stack");
@@ -25,11 +25,11 @@ export function js_list_add_combine(ast) {
     if (not(l)) {
       return;
     }
-    let start = js_list_add_run_start_is(e, node, add);
+    let start = js_list_add_run_start_is(e, node, add_call);
     if (not(start)) {
       return;
     }
-    let list = property_get(add, "list");
+    let list = property_get(add_call, "list");
     let statements = js_list_add_run_gather(e, node, list);
     let m = list_multiple_is(statements);
     if (not(m)) {
