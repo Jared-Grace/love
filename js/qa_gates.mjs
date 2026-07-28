@@ -86,6 +86,7 @@ export function qa_gates() {
     function_imports_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
+    js_comment_migratable_cases_gate_run,
     functions_self_call_gate_run,
     js_operator_targets_leaf_gate_run,
     fn_name_literals_gate_run,
