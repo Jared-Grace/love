@@ -19,16 +19,16 @@ export function app_replace_goals_generic(
 ) {
   let choose_this_next = not(completed) && completed_previous;
   let r = app_shared_button_numbered(root, index, lambda, true);
-  let marker = property_get(r, "marker");
+  let marker_slot = property_get(r, "marker");
   let title = property_get(r, "title");
   let button = property_get(r, "button");
   if (completed) {
     let e = emoji_check();
-    html_span_text(marker, e);
+    html_span_text(marker_slot, e);
   } else {
     if (choose_this_next) {
       let e = emoji_point_right();
-      html_span_text(marker, e);
+      html_span_text(marker_slot, e);
     }
   }
   if (completed) {
