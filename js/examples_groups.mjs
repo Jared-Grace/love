@@ -62,6 +62,7 @@ export function examples_groups() {
         "example_unwrap_for_of",
         "example_nested_record_add",
         "example_object_text_add",
+        "example_object_field_add",
         "example_nested_record_add_after",
         "example_nested_record_add_before",
         "example_nested_record_remove",
