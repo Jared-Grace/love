@@ -35,6 +35,7 @@ export async function literal_duplicates_unambiguous() {
         literal: entry.literal,
         family,
         files,
+        means: entry.means,
       });
     }
   }
