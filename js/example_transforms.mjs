@@ -1,3 +1,8 @@
+import { js_array_text_call_set } from "./js_array_text_call_set.mjs";
+import { js_array_text_move } from "./js_array_text_move.mjs";
+import { js_array_identifier_add_after } from "./js_array_identifier_add_after.mjs";
+import { js_array_identifier_move } from "./js_array_identifier_move.mjs";
+import { js_array_identifier_remove } from "./js_array_identifier_remove.mjs";
 import { js_block_local_record_add } from "./js_block_local_record_add.mjs";
 import { js_block_local_text_add } from "./js_block_local_text_add.mjs";
 import { js_block_local_number_add } from "./js_block_local_number_add.mjs";
@@ -81,6 +86,11 @@ export function example_transforms() {
     js_block_local_number_add,
     js_block_local_text_add,
     js_block_local_record_add,
+    js_array_identifier_remove,
+    js_array_identifier_move,
+    js_array_identifier_add_after,
+    js_array_text_move,
+    js_array_text_call_set,
   };
   return transforms;
 }
