@@ -38,7 +38,7 @@ export function app_code_lesson_expression_string_hello() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "A string is text in quotes ");
+        html_span_text(parent, "Strings ");
         app_code_string_shape(parent, 1);
       }
       return render;
