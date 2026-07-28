@@ -12,7 +12,10 @@ export async function functions_rename_if_starts_ends_with(
     f_name_prefix,
     f_name_suffix_before,
   );
-  await functions_rename_generic(filter, name_change);
+  ("Hands back which names were changed and to what, the same as the sibling");
+  ("that matches on the front alone.");
+  let renamed = await functions_rename_generic(filter, name_change);
+  return renamed;
   function name_change(f_name_before) {
     let together = text_suffix_change(
       f_name_before,
