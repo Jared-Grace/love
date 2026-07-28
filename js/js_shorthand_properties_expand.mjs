@@ -20,7 +20,8 @@ export function js_shorthand_properties_expand(ast, name) {
   ("value alone. Call it AFTER collecting and BEFORE rewriting.");
   ("Answers how many it wrote out, so a caller can say nothing happened.");
   let expanded = 0;
-  function property_visit(node) {
+  function property_visit(visited) {
+    let node = property_get(visited, "node");
     let shorthand = property_get(node, "shorthand");
     if (shorthand) {
       let key = property_get(node, "key");
