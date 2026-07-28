@@ -1,3 +1,6 @@
+import { functions_names } from "./functions_names.mjs";
+import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { functions_prose } from "./functions_prose.mjs";
@@ -28,5 +31,15 @@ export async function functions_prose_search(search) {
     return has;
   }
   let result = search_generic(search, names, purpose_of, include);
-  return result;
+  ("How far this search could see is handed back beside what it saw, because most functions here say nothing about themselves and an empty answer from a quarter of the repo reads exactly like an empty answer from all of it. That is the mistake this whole search was built to stop, so it must not be the mistake the search itself causes: finding nothing here is weak evidence of absence, and the numbers are what let a reader tell how weak.");
+  let all = await functions_names();
+  let searched = list_size(names);
+  let left = list_size(all);
+  let silent = subtract(left, searched);
+  let report = {
+    searched,
+    silent,
+    found: result,
+  };
+  return report;
 }
