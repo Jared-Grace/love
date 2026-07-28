@@ -338,6 +338,7 @@ export function permission_grant_names() {
   let spelled335 = fn_name("functions_unreachable_check_sites");
   let spelled336 = fn_name("functions_name_vocabulary");
   let spelled337 = fn_name("functions_unreachable_check_gate_run");
+  let spelled338 = fn_name("markers_names");
   let names = [
     spelled,
     spelled2,
@@ -676,6 +677,7 @@ export function permission_grant_names() {
     spelled335,
     spelled336,
     spelled337,
+    spelled338,
   ];
   return names;
 }
