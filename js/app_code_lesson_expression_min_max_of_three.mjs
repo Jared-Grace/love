@@ -96,7 +96,7 @@ export function app_code_lesson_expression_min_max_of_three() {
         html_span_text_code_dark(parent, "Math.max");
         html_span_text(parent, ", ");
         html_span_text_code_dark(parent, "Math.min");
-        html_span_text(parent, ", 3 numbers");
+        html_span_text(parent, " 3 numbers");
       }
       return render;
     }
