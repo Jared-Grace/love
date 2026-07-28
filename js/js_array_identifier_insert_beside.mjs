@@ -15,8 +15,10 @@ export function js_array_identifier_insert_beside(
   ("else, so they are one thing here and two names outside.");
   ("Both sides exist because a gap has two neighbours and only one of them may be");
   ("nameable: the first entry of a list has nothing above it to name.");
-  let index = list_index_of(elements, found);
-  let index_at = add(index, delta);
+  ("Building the name is all that is left here. Where it then goes is the same");
+  ("question for a register of names and a register of written words, so the");
+  ("placing is one thing below and this is only the one half the two kinds");
+  ("disagree on.");
   let identifier = js_identifier_expression(identifier_name);
-  list_insert(elements, index_at, identifier);
+  js_array_element_insert_beside(elements, found, identifier, delta);
 }
