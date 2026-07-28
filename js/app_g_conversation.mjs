@@ -63,7 +63,8 @@ export async function app_g_conversation(
 ) {
   let talkable = app_g_day_talkable_is(npc);
   if (not(talkable)) {
-    app_g_npc_says(npc, overlay, g_busy());
+    let npc_says5 = g_busy();
+    app_g_npc_says(npc, overlay, npc_says5);
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
@@ -124,6 +125,25 @@ export async function app_g_conversation(
     let label = property_get(labels, kind);
     return label;
   }
+  async function close_now() {
+    if (converts) {
+      if (prayed.done) {
+        property_set(npc, "christian", true);
+        g_icon_cross(div_map, npc);
+      }
+    }
+    await app_g_sky_snap();
+    overlay_close();
+  }
+  function render_farewell() {
+    ("the player ends an unbeliever conversation before it completes but after engaging at least one gospel point: the seed is planted, so the NPC's parting words REFLECT rather than convert - ",
+      g_response.name,
+      " 'ponder' ('you've given me a lot to think about'), the same warm structured grammar the natural close uses. one more warm goodbye actually closes.");
+    html_clear(overlay);
+    let npc_says4 = g_response("ponder");
+    app_g_npc_says(npc, overlay, npc_says4);
+    app_g_button_conversation_end(overlay, close_now);
+  }
   async function leave() {
     let i = list_size(remaining);
     let openers_remain = positive_is(i);
@@ -137,14 +157,16 @@ export async function app_g_conversation(
         return;
       }
     }
-    if (converts) {
-      if (prayed.done) {
-        property_set(npc, "christian", true);
-        g_icon_cross(div_map, npc);
+    if (openers_remain) {
+      let left4 = list_size(turns);
+      let right3 = list_size(remaining);
+      let done_count = subtract(left4, right3);
+      if (positive_is(done_count)) {
+        render_farewell();
+        return;
       }
     }
-    await app_g_sky_snap();
-    overlay_close();
+    await close_now();
   }
   function run_turn(turn) {
     html_clear(overlay);
