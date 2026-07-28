@@ -14,6 +14,14 @@ export function js_code_getter_literal(code, f_name) {
     return r;
   }
   let body = code.slice(start).split("\n}")[0];
+  ("A word wrapped in the do-not-change marker is the value, wherever in the body it");
+  ("sits. That wrapper is never incidental - it is written by somebody saying this");
+  ("exact text must stay - so unlike a bare string it cannot be a passing mention.");
+  let frozen = body.match(/text_frozen\(\s*("(?:[^"\\]|\\.)*")\s*\)/);
+  if (frozen) {
+    let r1 = JSON.parse(frozen[1]);
+    return r1;
+  }
   let direct = body.match(/return\s+("(?:[^"\\]|\\.)*")\s*;/);
   if (direct) {
     let r2 = JSON.parse(direct[1]);

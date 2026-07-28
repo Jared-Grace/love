@@ -1,4 +1,4 @@
-import { fn_name } from "./fn_name.mjs";
+import { text_frozen } from "./text_frozen.mjs";
 export function app_a_indexeddb_database_name() {
   "The name of the browser database this app keeps its files in.";
   "It is the same word as the app itself and is not the same thing. A database is not";
