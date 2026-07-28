@@ -1,4 +1,4 @@
-import { app_code_lesson_title_font_size } from "./app_code_lesson_title_font_size.mjs";
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   let text = emoji_home();
   app_shared_button(strip, text, go_home);
   let title = html_div(strip);
-  let font_size = app_code_lesson_title_font_size();
+  let font_size = app_shared_font_size_label();
   html_style_assign(title, {
     "text-align": "center",
     "font-size": font_size,
