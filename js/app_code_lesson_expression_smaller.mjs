@@ -25,6 +25,7 @@ export function app_code_lesson_expression_smaller() {
     noun: "smaller",
     noun_upper: "Smaller",
     comparison: "smaller than",
+    short_name: "min",
     define_render,
   });
   return lesson;
