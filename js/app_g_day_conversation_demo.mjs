@@ -4,7 +4,9 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
-import { app_g_sky_phase_write } from "./app_g_sky_phase_write.mjs";
+import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
+import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
+import { property_set } from "./property_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_g_day_conversation_demo(div_map) {
   "the #day_conversation test panel: a stub conversation of 12 HALF-TURNS whose each advance walks the sky one 2-hour step across a full day (midnight → sunrise → noon → sunset → back to midnight), so you can watch the light change PER HALF-TURN — including the fast-dark + long dark plateau of the reshaped night (g_clock_sky_phase). sibling of #day_unbelievers under the 'day' group; proves the conversation→time half-turn mechanic that the real conversation will drive. BESPOKE (DOM / closure) — do NOT auto-canonicalize";
@@ -37,7 +39,9 @@ export async function app_g_day_conversation_demo(div_map) {
   async function refresh() {
     let hour = turn.n / total * 24;
     let phase = g_clock_sky_phase(hour);
-    await app_g_sky_phase_write(phase);
+    let g = await app_g_game_save_get();
+    property_set(g, "sky_phase", phase);
+    await app_g_sky_snap();
     let text = text_combine_multiple([
       "Half-turn ",
       turn.n,
