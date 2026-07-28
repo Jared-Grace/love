@@ -325,6 +325,7 @@ export function permission_grant_names() {
   let spelled322 = fn_name("apps_names_prefixed");
   let spelled323 = fn_name("examples_notes");
   let spelled324 = fn_name("ai_log_loops_frequent");
+  let spelled325 = fn_name("js_array_element_insert_beside");
   let names = [
     spelled,
     spelled2,
@@ -650,6 +651,7 @@ export function permission_grant_names() {
     spelled322,
     spelled323,
     spelled324,
+    spelled325,
   ];
   return names;
 }

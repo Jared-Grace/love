@@ -12,15 +12,21 @@ export function js_array_element_identifier_find(elements, identifier_name) {
   ("It refuses a name the list does not hold rather than handing back nothing, so");
   ("a verb built on it cannot quietly do nothing to a register that looks the same");
   ("either way.");
+  ("An entry is asked for the name it stands for without insisting it is one at");
+  ("all, for the same reason its twin does: a register may hold both kinds at");
+  ("once, and insisting would refuse the whole register rather than the entries");
+  ("that really lack the name.");
   function same_is(element) {
-    let held = property_get(element, "name");
+    let held = property_get_or_null(element, "name");
     let same = equal(held, identifier_name);
     return same;
   }
-  let found = list_find(elements, same_is);
-  assert_json(found, {
-    hint: "this list does not name that function — would you like to check the spelling, or whether it was meant to go at the end instead?",
-    identifier_name,
-  });
+  ("The counting and the refusing are shared with the twin. They were not, and");
+  ("this side asked the find-one helper instead - which refuses first, through the");
+  ("general assert whose words say only that a list was not of size one, so the");
+  ("sentence written here was never once read by anybody it was written for.");
+  let hint =
+    "this list does not name that function — would you like to check the spelling, or whether it was meant to go at the end instead?";
+  let found = js_array_element_single(elements, same_is, hint, identifier_name);
   return found;
 }

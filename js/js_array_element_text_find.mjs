@@ -24,19 +24,12 @@ export function js_array_element_text_find(elements, text) {
     let same = equal(held, text);
     return same;
   }
-  ("It counts the matches itself rather than asking the find-one helper, because");
-  ("that helper refuses through the general single-item assert, whose message says");
-  ("only that a list was not of size one - so the kind sentence below never");
-  ("reached anybody until this. Every verb in the register family refuses through");
-  ("here, so the wording is worth owning.");
-  let matches = list_filter(elements, same_is);
-  let size = list_size(matches);
-  let one = equal(size, 1);
-  assert_json(one, {
-    hint: "this list does not hold that word once — would you like to check the spelling, or the line it is bound to?",
-    text,
-    matches: size,
-  });
-  let found = list_first(matches);
+  ("The counting and the refusing are shared with the twin next door, which asks");
+  ("an entry a different question and wants the same answer shape back. What is");
+  ("left here is the asking, which is the one half the two registers genuinely");
+  ("disagree about.");
+  let hint =
+    "this list does not hold that word once — would you like to check the spelling, or the line it is bound to?";
+  let found = js_array_element_single(elements, same_is, hint, text);
   return found;
 }
