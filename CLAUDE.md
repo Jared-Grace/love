@@ -69,6 +69,10 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 **Find a transform / who-calls-what.** `s <substrings>` (`functions_search`, AND-of-substrings over fn *names* — e.g. `s rename`, `s import`) · `i <name>` (`data_identifiers_search`, find callers of a symbol).
 
+**When you can't guess the name, search by what it is FOR: `functions_prose_search <substrings>`.** Same shape as `s` — substrings joined by commas, all required — but matched against every line of every function's own account of itself, answering `{name, first line}` so a hit list stays scannable. It exists because `s` can only be used by somebody who already half knows the name, and that failed measurably: of six capabilities looked for and missed on 2026-07-28, the one no name search could ever have reached was `permission_grant_add_multiple`, which answers the question behind repeating the refusal check and shares **not one word** with it. `functions_prose_search batch,approval` finds it and nothing else. About 1.7s over the whole repo, so it is cheap enough to reach for first.
+
+**Reach for it before writing anything.** The repo's measured waste is discoverability, not capability — see the loop reading below — so the cheapest move by a wide margin is asking whether the thing exists, in the two ways that can miss differently: `s` by name, then `functions_prose_search` by meaning. A capability nobody can find gets built twice and neither copy gets the other's fixes.
+
 | When you want to… | Use | Full function |
 |---|---|---|
 | Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |
