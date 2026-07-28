@@ -5,8 +5,8 @@ import { range_1 } from "./range_1.mjs";
 export function app_code_lesson_symbols_batch_digits() {
   let digit_counts = range_1(5);
   function lambda(digit_count) {
-    let digits = integer_positive_random_digits_text(digit_count);
-    return digits;
+    let digit_texts = integer_positive_random_digits_text(digit_count);
+    return digit_texts;
   }
   let batch_digits = list_map(digit_counts, lambda);
   list_shuffle(batch_digits);
