@@ -16,11 +16,11 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   let number = html_span_text(button, text);
   html_style_justify_self(number, "end");
   app_shared_text_deemphasized(number);
-  let marker = null;
+  let marker_slot = null;
   let columns = text_combine_multiple([gutter, " 1fr"]);
   if (with_marker) {
-    marker = html_span_text(button, "");
-    html_style_justify_self(marker, "center");
+    marker_slot = html_span_text(button, "");
+    html_style_justify_self(marker_slot, "center");
     columns = text_combine_multiple([gutter, " ", gutter, " 1fr"]);
   }
   let title = html_span_text(button, "");
@@ -35,7 +35,7 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   let result = {
     button,
     number,
-    marker,
+    marker: marker_slot,
     title,
   };
   return result;
