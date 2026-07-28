@@ -30,7 +30,7 @@ export function app_g_gratitude_overlay() {
     list_shuffle(candidates);
     let some = list_take(candidates, 4);
     previous_texts = list_map_property(some, "text");
-    function add(thanks) {
+    function add_thanks(thanks) {
       let emoji = property_get(thanks, "emoji");
       let text = property_get(thanks, "text");
       let label = text_combine_multiple([emoji, " ", text]);
@@ -40,11 +40,16 @@ export function app_g_gratitude_overlay() {
       }
       app_g_button_green(container, label, on_pick);
     }
-    each(some, add);
+    each(some, add_thanks);
     function done() {
       html_remove(overlay);
     }
-    let amen = text_combine_multiple([emoji_pray(), " In the name of ", amen_name, ", Amen"]);
+    let amen = text_combine_multiple([
+      emoji_pray(),
+      " In the name of ",
+      amen_name,
+      ", Amen",
+    ]);
     app_g_button_green(overlay, amen, done);
   }
   render();

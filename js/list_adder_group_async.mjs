@@ -5,7 +5,7 @@ export async function list_adder_group_async(lambda) {
     let group = null;
     await lambda({
       start,
-      add,
+      add: add_item,
       end,
     });
     function end() {
@@ -15,7 +15,7 @@ export async function list_adder_group_async(lambda) {
     function start() {
       group = [];
     }
-    function add(item) {
+    function add_item(item) {
       list_add(group, item);
     }
   }

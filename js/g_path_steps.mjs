@@ -4,10 +4,10 @@ import { list_adder } from "./list_adder.mjs";
 import { each_index } from "./each_index.mjs";
 export function g_path_steps(path) {
   let destinations = list_skip_1(path);
-  function lambda(add) {
+  function lambda(add_step) {
     function each(to, index) {
       let from = list_get(path, index);
-      add({
+      add_step({
         from,
         to,
       });
