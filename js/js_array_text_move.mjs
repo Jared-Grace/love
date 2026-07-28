@@ -1,11 +1,7 @@
+import { js_array_element_move_beside } from "./js_array_element_move_beside.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_array_elements } from "./js_selects_array_elements.mjs";
 import { js_array_element_text_find } from "./js_array_element_text_find.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { js_array_text_insert_beside } from "./js_array_text_insert_beside.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function js_array_text_move(ast, selects, text, after_text) {
   arguments_assert(arguments, 4);
   ("Moves a word already in an ordered register to sit directly after another word");
@@ -22,13 +18,10 @@ export function js_array_text_move(ast, selects, text, after_text) {
   let elements = js_selects_array_elements(ast, selects);
   let moving = js_array_element_text_find(elements, text);
   let neighbour = js_array_element_text_find(elements, after_text);
-  let same = equal(moving, neighbour);
-  let b = not(same);
-  assert_json(b, {
-    hint: "a word cannot be moved to sit after itself — did you mean a different neighbour?",
-    text,
-  });
-  list_remove(elements, moving);
+  ("Nothing is rebuilt: the entry that leaves is the entry that arrives, so the");
+  ("moving itself knows nothing about words and is shared with the twin that moves");
+  ("a name. What is left here is only the finding, which is the one half the two");
+  ("registers genuinely disagree about.");
   let delta = 1;
-  js_array_text_insert_beside(elements, neighbour, text, delta);
+  js_array_element_move_beside(elements, moving, neighbour, delta);
 }
