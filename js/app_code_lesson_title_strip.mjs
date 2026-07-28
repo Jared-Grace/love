@@ -29,9 +29,10 @@ export function app_code_lesson_title_strip(root, context, lesson) {
   let text = emoji_home();
   app_shared_button(strip, text, go_home);
   let title = html_div(strip);
+  let font_size = app_code_lesson_title_font_size();
   html_style_assign(title, {
     "text-align": "center",
-    "font-size": "0.85em",
+    "font-size": font_size,
     opacity: "0.6",
   });
   app_code_lesson_title_render(title, lesson);

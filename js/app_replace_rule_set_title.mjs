@@ -19,7 +19,7 @@ export function app_replace_rule_set_title(context) {
   let p = html_p_text(root, why);
   let value = app_shared_spaced_small_gap();
   html_style_margin_top(p, value);
-  html_style_font_size(p, "0.9em");
+  html_style_font_size(p, app_replace_rule_set_why_font_size());
   let r = {
     rule_set,
     rule_set_name,
