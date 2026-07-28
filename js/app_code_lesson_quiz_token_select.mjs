@@ -96,8 +96,8 @@ export function app_code_lesson_quiz_token_select(
         html_clear(answer_div);
         let span_taken = html_span_text(answer_div, taken);
         function lambda4(variation) {
-          let equal = lists_equal_pair(variation, chosen);
-          return equal;
+          let same = lists_equal_pair(variation, chosen);
+          return same;
         }
         let any = list_any(variations, lambda4);
         if (any) {
