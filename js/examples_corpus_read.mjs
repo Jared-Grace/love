@@ -40,9 +40,9 @@ export async function examples_corpus_read() {
   let examples = await list_map_unordered_async(ordered, to_example);
   let inverted = await function_aliases_inverted();
   function alias_attach(example) {
-    let fn_name = property_get(example, "fn");
-    example.alias = example_alias_derive(fn_name, inverted);
-    example.family = example_tool_family(fn_name);
+    let f_name = property_get(example, "fn");
+    example.alias = example_alias_derive(f_name, inverted);
+    example.family = example_tool_family(f_name);
     return example;
   }
   let with_alias = list_map(examples, alias_attach);
