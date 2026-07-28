@@ -1,3 +1,4 @@
+import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -38,6 +39,19 @@ export async function function_shadowing_function_rename(
   not_assert_json(taken, {
     hint: "the file already reads that name, so the rename would run two different things together under one name — would you like a name nothing here uses?",
     name_after,
+  });
+  ("A file that IMPORTS the word as well is refused. Renaming over the whole");
+  ("function moves every mention of it, and where an import survives beside a");
+  ("local of the same name the file genuinely means two things by the word - so");
+  ("the rename would carry the call that meant the imported one along with it,");
+  ("and the call would then name nothing. The auto pass drops an import that a");
+  ("local stands entirely in front of, so an import that is still here is one");
+  ("something still reads.");
+  let imported = js_imports_local_names(ast);
+  let both_meanings = list_includes(imported, name);
+  not_assert_json(both_meanings, {
+    hint: "this file both imports that name and binds it, so it means two different things by one word — would you like to rename the local by hand, where you can see which mentions are which?",
+    name,
   });
   ("A file that hides the word INSIDE itself as well is refused rather than");
   ("guessed at: renaming over the whole function would move an inner binding the");
