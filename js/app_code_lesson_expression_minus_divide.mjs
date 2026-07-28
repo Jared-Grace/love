@@ -10,9 +10,9 @@ import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_minus_divide() {
   "mixing - and / in one expression: a - b / c and a / b - c; / is stronger than -, so we always do it first, even when it comes later; this pair has BOTH hazards - / must divide evenly and - must not drop below 0; the division operator's left_transform (multiply) builds the divisibility chain a = outer * b, b = inner * c, and choosing outer = c + gap keeps a / b - c at gap (>= 1), while a - b / c stays large and positive";
-  let divide = js_operator_division();
-  let divide_symbol = property_get(divide, "operator");
-  let left_transform = property_get(divide, "left_transform");
+  let divided = js_operator_division();
+  let divide_symbol = property_get(divided, "operator");
+  let left_transform = property_get(divided, "left_transform");
   let minus = js_operator_minus();
   let minus_symbol = property_get(minus, "operator");
   function gap_of(index) {
@@ -38,7 +38,7 @@ export function app_code_lesson_expression_minus_divide() {
     app_code_lesson_cross_precedence_intro({
       root,
       weak: minus,
-      strong: divide,
+      strong: divided,
       inner_left: 6,
       inner_right: 3,
       later_outer: 10,
