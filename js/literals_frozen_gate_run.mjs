@@ -3,7 +3,7 @@ import { literals_frozen_values } from "./literals_frozen_values.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { literals_frozen_write } from "./literals_frozen_write.mjs";
-import { object_keys_union } from "./object_keys_union.mjs";
+import { list_concat_unique } from "./list_concat_unique.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -19,7 +19,9 @@ export async function literals_frozen_gate_run() {
   let now = await literals_frozen_values();
   let path = literals_frozen_path();
   let recorded = await file_read_json(path);
-  let names = object_keys_union(now, recorded);
+  let a = Object.keys(now);
+  let b = Object.keys(recorded);
+  let names = list_concat_unique(a, b);
   let moved = [];
   for (let f_name of names) {
     let was = property_or_null(recorded, f_name);
