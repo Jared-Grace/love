@@ -157,6 +157,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_statement_wrap_for_of <name> <list>` | put the line inside a loop over `<list>`, binding each item to `<name>` |
 | `js_selects_unwrap` | take the lines back out of a wrapper — the inverse of both wraps |
 | `js_call_argument_named_identifier_set <param> <local>` | point one argument of a call at a local, both named — **prefer this**, it needs no code and so stays grantable |
+| `js_call_argument_named_call_set <param> <fn>` | point one argument of a call at a **call to `<fn>`**, written from that function's own parameters — so a zero-argument getter arrives as itself. This is the verb the "Duplicated constants" work item needed: routing a spelled-out constant through its getter used to need a line of source, which is the one shape no standing approval can cover |
 | `js_block_return_identifier_add <local>` | hand back a local at the end of a selected block |
 | `js_object_shorthand_add <name>` / `js_object_shorthand_remove <name>` | add / take out one entry of a register (key and value the same word) — never rewrite the whole set |
 | `js_array_text_add <word>` / `js_array_text_remove <word>` | add / take out one written word in an ordered register — both refuse a word the list doesn't hold rather than doing nothing quietly |
