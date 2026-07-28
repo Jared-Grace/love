@@ -1,11 +1,10 @@
+import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -18,10 +17,9 @@ export function app_code_lesson_expression_remainder() {
   function make(divisor) {
     "dividend % divisor === remainder - dividend = quotient*divisor + remainder with quotient 1..3 and remainder 1..divisor-1, so the three numbers dividend, divisor and remainder are all different; the answer is the remainder, with the dividend and divisor as decoys";
     let quotient = integer_random(1, 3);
-    let max = subtract(divisor, 1);
-    let remainder = integer_random(1, max);
-    let left = multiply(quotient, divisor);
-    let dividend = add(left, remainder);
+    let parts = app_code_uneven_dividend(quotient, divisor);
+    let dividend = property_get(parts, "dividend");
+    let remainder = property_get(parts, "leftover");
     let division = js_code_binary_spaced_nb(dividend, "%", divisor);
     let t = text_to(remainder);
     let question = text_combine_multiple([division, " === ", t]);
