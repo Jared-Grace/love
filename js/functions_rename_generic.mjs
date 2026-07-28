@@ -48,6 +48,13 @@ export async function functions_rename_generic(filter, name_change) {
   }
   ("each rename is committed as it lands rather than the whole batch at the end. A prefix migration touches hundreds of files and runs for minutes, and with many hands editing the same folder somebody else's sweep files most of them under a bare word long before this returns — so the window has to be one rename wide, which is also the only size that leaves a message naming a real command with its real arguments");
   await ai_git_noted();
-  let r = await object_map_async(different, lambda3);
-  return r;
+  await object_map_async(different, lambda3);
+  ("The pairs that were changed, which this has held since before the first one");
+  ("ran. Asking the visiting helper next door for them cannot work - it is named");
+  ("as though it maps and it does not, so what came back was nothing at all and a");
+  ("caller reading this line saw a command that answered while every wrapper");
+  ("above it passed the nothing along.");
+  ("Every rename commits as it lands and any failure throws, so by here these are");
+  ("the ones that went through rather than the ones that were meant to.");
+  return different;
 }
