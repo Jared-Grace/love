@@ -2022,10 +2022,25 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             return False
         if " ".join(words) in safe_exact_commands:
             continue
+        # The sandbox templates are asked about the command with a time limit
+        # taken off the front. `timeout <dur> CMD` and `time CMD` run exactly
+        # CMD with exactly its arguments, so the shape underneath is the shape
+        # that matters - and a throwaway worth time-limiting is precisely the
+        # long-running one. Without this, CLAUDE.md's own sanctioned
+        # prompt-free line stopped being prompt-free the moment it was given
+        # the wrapper this file trusts everywhere else.
+        #
+        # `xargs` is deliberately NOT taken off here, although verb_of does
+        # take it off. It appends arguments read from standard input, so the
+        # words in front of us are not the whole command - an exact-shape
+        # template would be approving a call whose real arguments it cannot
+        # see. That is harmless for a verb judged by its name and wrong for
+        # one judged by its exact form.
+        unwrapped = _strip_timing_wrappers(words)
         if (
             verb_of(words) not in safe_verbs
-            and not is_safe_sandboxed_node_eval(words)
-            and not is_safe_sandboxed_node_script(words)
+            and not is_safe_sandboxed_node_eval(unwrapped)
+            and not is_safe_sandboxed_node_script(unwrapped)
             and not is_safe_sed(words)
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
@@ -2301,6 +2316,31 @@ def is_node_eval_flag(word):
     This is the arbitrary-code surface `node` exposes with no script file -
     see find_raw_node_eval."""
     return word in NODE_EVAL_FLAGS or word.startswith("--eval=") or word.startswith("--print=")
+
+
+def _strip_timing_wrappers(words):
+    """`words` with any leading `timeout <dur>` / `time` / `/usr/bin/time
+    <flags>` removed - the wrappers that run exactly the command they are
+    given, with exactly its arguments, and only bound or measure it.
+
+    The narrow sibling of transparent_wrapper_skip, which also removes
+    `xargs`. That one is right for verb_of, where the question is which name
+    is being run; it is wrong for an exact-shape template, where the question
+    is what the whole command is, because xargs takes further arguments from
+    standard input that no template can see."""
+    while words:
+        if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
+            words = words[2:]
+            continue
+        if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
+            words = words[1:]
+            continue
+        skip = time_wrapper_skip(words)
+        if skip:
+            words = words[skip:]
+            continue
+        break
+    return words
 
 
 def _strip_command_prefixes(words):
