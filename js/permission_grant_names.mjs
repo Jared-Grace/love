@@ -305,6 +305,9 @@ export function permission_grant_names() {
   let spelled302 = fn_name("color_near_miss_gate_run");
   let spelled303 = fn_name("js_comment_migratable_cases_gate_run");
   let spelled304 = fn_name("function_new_getter");
+  let spelled305 = fn_name("functions_shadowing_rename_all");
+  let spelled306 = fn_name("functions_param_new");
+  let spelled307 = fn_name("functions_param_new_multiple");
   let names = [
     spelled,
     spelled2,
@@ -610,6 +613,9 @@ export function permission_grant_names() {
     spelled302,
     spelled303,
     spelled304,
+    spelled305,
+    spelled306,
+    spelled307,
   ];
   return names;
 }
