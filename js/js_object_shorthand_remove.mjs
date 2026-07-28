@@ -17,10 +17,12 @@ export function js_object_shorthand_remove(ast, selects, identifier_name) {
   ("ignores a removal reads afterwards exactly like one that carried it out.");
   let properties = js_selects_object_properties(ast, selects);
   let named_is = js_property_key_named_is_curried_right(identifier_name);
-  let found = list_find(properties, named_is);
-  assert_json(found, {
-    hint: "this set does not hold that name — would you like to check the spelling, or the line it is bound to?",
-    identifier_name,
-  });
+  ("The refusal is handed to the finding rather than written after it. The plain");
+  ("find-one helper throws on its own first, through an assert whose words say");
+  ("only that a list was not of size one, so a sentence written below it is");
+  ("unreachable and reads as though it were doing something.");
+  let hint =
+    "this set does not hold that name — would you like to check the spelling, or the line it is bound to?";
+  let found = list_matching_single(properties, named_is, hint, identifier_name);
   list_remove(properties, found);
 }
