@@ -24,14 +24,14 @@ export async function app_replace_tests_proof_state(page) {
       if (symbols.length === 0) {
         return;
       }
-      function marker(span) {
+      function marker_slot(span) {
         let star = "";
         if (getComputedStyle(span).backgroundColor === green) {
           star = "*";
         }
         return span.textContent + star;
       }
-      rows.push(symbols.map(marker).join(""));
+      rows.push(symbols.map(marker_slot).join(""));
     }
     let children = Array.from(label.parentElement.children);
     children.forEach(each_row);
