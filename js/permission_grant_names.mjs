@@ -335,6 +335,7 @@ export function permission_grant_names() {
   let spelled332 = fn_name("literals_frozen_values");
   let spelled333 = fn_name("literals_frozen_gate_run");
   let spelled334 = fn_name("work_items_measured");
+  let spelled335 = fn_name("functions_unreachable_check_sites");
   let names = [
     spelled,
     spelled2,
@@ -670,6 +671,7 @@ export function permission_grant_names() {
     spelled332,
     spelled333,
     spelled334,
+    spelled335,
   ];
   return names;
 }
