@@ -11,7 +11,7 @@ export function js_string_site_labels(ast, text) {
   ("a report of repeated spellings needs and has never carried: the same spelling");
   ("in two files is evidence of nothing until you know that both are naming the");
   ("same thing.");
-  function lambda_add(add) {
+  function lambda_add(label_add) {
     function lambda(v) {
       let node = property_get(v, "node");
       let held = js_literal_value_get(node);
@@ -19,7 +19,7 @@ export function js_string_site_labels(ast, text) {
       if (same) {
         let stack = property_get(v, "stack");
         let label = js_string_site_label(stack);
-        add(label);
+        label_add(label);
       }
     }
     js_visit_types(ast, ["Literal"], lambda);
