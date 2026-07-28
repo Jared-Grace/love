@@ -1,3 +1,4 @@
+import { property_count_add } from "./property_count_add.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
