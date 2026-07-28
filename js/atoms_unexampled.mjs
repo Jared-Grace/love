@@ -1,3 +1,7 @@
+import { atoms_documented } from "./atoms_documented.mjs";
+import { examples_names_used } from "./examples_names_used.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { list_filter } from "./list_filter.mjs";
 export async function atoms_unexampled() {
   "Every atom the instructions tell a Claude to reach for that no example ever runs";
   "The two tables are where a Claude looks to find out what the seam can do, so a row there is read as a unit that works. Nothing checks that claim: the corpus is the only thing that runs an address or a verb, and a unit the corpus never names has been described to everyone and demonstrated to no one.";
