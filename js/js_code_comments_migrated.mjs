@@ -21,7 +21,7 @@ export function js_code_comments_migrated(code, f_names) {
     let migratable = js_comment_migratable_is(code, ast_before, comment);
     return migratable;
   }
-  let own = list_filter(comments, migratable_is);
+  let migratables = list_filter(comments, migratable_is);
   function statement_of(comment) {
     let start = property_get(comment, "start");
     let value = property_get(comment, "value");
@@ -30,6 +30,6 @@ export function js_code_comments_migrated(code, f_names) {
     let statement = js_code_comment_statement_generic(value, usable);
     return statement;
   }
-  let migrated = js_code_spans_replaced(code, own, statement_of);
+  let migrated = js_code_spans_replaced(code, migratables, statement_of);
   return migrated;
 }
