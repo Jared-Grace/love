@@ -1141,6 +1141,16 @@ def transparent_wrapper_skip(words):
         return 2
     if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
         return 1
+    # `!` inverts the exit status of what follows and nothing else - it runs
+    # exactly the same command, with the same arguments, reading and writing
+    # the same things, and only the number bash reports afterwards differs.
+    # So it is transparent in the strictest sense of this list: there is no
+    # flag form to exclude, because it takes none. Without it `until ! pgrep
+    # -f <name> >/dev/null; do sleep 10; done` prompts while the identical
+    # loop without the `!` is approved - and the negated one is the useful
+    # spelling, since waiting for a process to FINISH is the common case.
+    if words[0] == "!" and len(words) >= 2:
+        return 1
     skip = time_wrapper_skip(words)
     if skip:
         return skip
