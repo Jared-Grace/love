@@ -27,6 +27,7 @@ export function examples_groups() {
         "example_statement_duplicate",
         "example_call_argument_named_set",
         "example_statement_move_after",
+        "example_span_move_after",
         "example_statement_last_address",
         "example_statement_after_address",
         "example_block_call_add",
