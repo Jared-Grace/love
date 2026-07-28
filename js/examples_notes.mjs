@@ -155,6 +155,16 @@ export function examples_notes() {
     example_block_local_record_add: "opening an empty record to gather into",
     example_block_local_list_add:
       "opening an empty list the register verbs can then fill",
+    example_array_identifier_remove:
+      "the missing half that left the list of gates able only to grow",
+    example_array_identifier_move:
+      "reordering a register of functions without it ever being short an entry",
+    example_array_identifier_add_after:
+      "naming the neighbour rather than counting to it",
+    example_array_text_move:
+      "the same move on the word side sharing the moving itself",
+    example_array_text_call_set:
+      "the third thing a register entry can be made of",
   };
   return notes;
 }
