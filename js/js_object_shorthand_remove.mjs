@@ -1,8 +1,7 @@
+import { list_matching_single } from "./list_matching_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_object_properties } from "./js_selects_object_properties.mjs";
 import { js_property_key_named_is_curried_right } from "./js_property_key_named_is_curried_right.mjs";
-import { list_find } from "./list_find.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_object_shorthand_remove(ast, selects, identifier_name) {
   arguments_assert(arguments, 3);
