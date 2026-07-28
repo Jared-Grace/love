@@ -324,6 +324,7 @@ export function permission_grant_names() {
   let spelled321 = fn_name("function_auto_multiple_checked");
   let spelled322 = fn_name("apps_names_prefixed");
   let spelled323 = fn_name("examples_notes");
+  let spelled324 = fn_name("ai_log_loops_frequent");
   let names = [
     spelled,
     spelled2,
@@ -648,6 +649,7 @@ export function permission_grant_names() {
     spelled321,
     spelled322,
     spelled323,
+    spelled324,
   ];
   return names;
 }
