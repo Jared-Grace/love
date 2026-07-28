@@ -5,8 +5,8 @@ export function permission_rule_probe_cases() {
   let cases = [
     {
       rule: "Bash(git status:*)",
-      command: "git status",
-      why: "the shape nearly every rule takes - a prefix plus any arguments, whose shortest claim is the prefix alone",
+      command: "git status probe_argument",
+      why: "the shape nearly every rule takes - a prefix plus any arguments, and the arguments are supplied rather than left off. A trailing star says the rule covers the prefix WITH arguments, so a probe with none asks about a command the rule does not describe; the day a bare call to a function declaring parameters became a refusal of its own, that difference read as 273 grants that could never take effect",
     },
     {
       rule: "Bash(git stash list)",
