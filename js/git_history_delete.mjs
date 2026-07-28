@@ -11,8 +11,8 @@ import { folder_delete } from "./folder_delete.mjs";
 import { command_line_git_current } from "./command_line_git_current.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function git_history_delete(user, repo, f_path, repo_path) {
-  await git_push_folder_now(repo_path);
+export async function git_history_delete(user, repo, f_path, repo_path_used) {
+  await git_push_folder_now(repo_path_used);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
   ("make sure this is ran from the correct directory");
   let url = git_repo_url(user, repo);
