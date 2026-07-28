@@ -17,7 +17,7 @@ export async function js_fn_name_references_to_calls(ast) {
   "into the dependency-free name marker, keeping rename-safety with no import. Run";
   "ao after: it drops the now-unused X import and adds the marker import.";
   let fn_names = await functions_names();
-  function each(v) {
+  function each_item(v) {
     let node = property_get(v, "node");
     let computed = property_get(node, "computed");
     if (computed) {
@@ -46,5 +46,5 @@ export async function js_fn_name_references_to_calls(ast) {
     let expression = js_parse_expression(call_code);
     object_replace(node, expression);
   }
-  js_visit_type(ast, "MemberExpression", each);
+  js_visit_type(ast, "MemberExpression", each_item);
 }
