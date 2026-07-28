@@ -15,6 +15,7 @@ export function function_identifier_replace_lambda(
       hint: "at least one identifier with this name should exist to replace — was the name not found?",
       identifier_name,
     });
+    js_shorthand_properties_expand(ast, identifier_name);
     let from = js_parse_expression(replacement);
     function lambda(i) {
       let v = object_replace(i, from);

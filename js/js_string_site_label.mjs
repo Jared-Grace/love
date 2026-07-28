@@ -13,7 +13,7 @@ export function js_string_site_label(stack) {
   ("different jobs, and the job is written right beside the value every time -");
   ("but only in the file. Reading a list of files that hold a spelling and calling");
   ("them copies of one constant is how a margin gets routed through a corner.");
-  let parent = list_get_end_1(stack);
+  let parent = js_stack_node_above(stack);
   let type = js_node_type(parent);
   let property_is = equal(type, "Property");
   if (property_is) {
