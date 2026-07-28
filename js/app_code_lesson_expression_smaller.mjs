@@ -12,7 +12,7 @@ export function app_code_lesson_expression_smaller() {
     "the FIRST two-number function, so the opening line introduces the idea in general - some functions take two numbers, separated by a comma - with two emphasised";
     let define = app_code_container_light_blue(root);
     let define_line = html_div(define);
-    html_span_text(define_line, "Some functions take ");
+    html_span_text(define_line, "Some functions receive ");
     let term = html_span_text(define_line, "two");
     html_bold(term);
     html_span_text(define_line, " numbers, separated by a comma ");
