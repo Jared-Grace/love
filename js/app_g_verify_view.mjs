@@ -1,7 +1,7 @@
 import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
 import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
 import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
-import { app_g_verify_badge_font_size } from "./app_g_verify_badge_font_size.mjs";
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_verify_note_font_size } from "./app_g_verify_note_font_size.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
@@ -397,7 +397,7 @@ export async function app_g_verify_view(
         }
         let badge = html_p_text(container, text);
         app_shared_text_deemphasized(badge);
-        let value9 = app_g_verify_badge_font_size();
+        let value9 = app_shared_font_size_label();
         html_style_font_size(badge, value9);
         html_style_margin_top(badge, small_gap);
         reviewed_badge = badge;
