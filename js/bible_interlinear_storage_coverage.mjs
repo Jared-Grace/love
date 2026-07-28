@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { equal } from "./equal.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,9 +14,8 @@ export async function bible_interlinear_storage_coverage() {
   });
   function name_of(item) {
     let full = property_get(item, "name");
-    let base = full
-      .replace("bible/original/", "")
-      .replace(json_extension(), "");
+    let ext_j = json_extension();
+    let base = full.replace("bible/original/", "").replace(ext_j, "");
     return base;
   }
   let present = list_map(files, name_of);
