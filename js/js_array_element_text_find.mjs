@@ -1,10 +1,7 @@
+import { js_array_element_single } from "./js_array_element_single.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_first } from "./list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { assert_json } from "./assert_json.mjs";
 export function js_array_element_text_find(elements, text) {
   arguments_assert(arguments, 2);
   ("The one entry of an ordered register holding a given word. Every verb that");
