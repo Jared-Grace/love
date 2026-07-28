@@ -1,3 +1,4 @@
+import { functions_shadowing_function_gate_run } from "./functions_shadowing_function_gate_run.mjs";
 import { functions_unreachable_check_gate_run } from "./functions_unreachable_check_gate_run.mjs";
 import { literals_frozen_gate_run } from "./literals_frozen_gate_run.mjs";
 import { atoms_unexampled_gate_run } from "./atoms_unexampled_gate_run.mjs";
@@ -121,6 +122,7 @@ export function qa_gates() {
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
     functions_shadowing_operator_gate_run,
+    functions_shadowing_function_gate_run,
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
     functions_unreachable_check_gate_run,
