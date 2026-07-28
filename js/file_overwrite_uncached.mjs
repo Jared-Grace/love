@@ -10,7 +10,7 @@ import { list_add } from "./list_add.mjs";
 import { indexeddb_put } from "./indexeddb_put.mjs";
 import { json_decompress } from "./json_decompress.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
+import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -48,7 +48,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       return previous;
     }
     let item = await indexeddb_put(
-      app_a_indexeddb_initialize,
+      browser_files_database_initialize,
       store,
       file_path,
       value_get,

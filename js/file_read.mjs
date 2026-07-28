@@ -5,7 +5,7 @@ import { json_decompress } from "./json_decompress.mjs";
 import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
-import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
+import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { indexeddb_get } from "./indexeddb_get.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -25,7 +25,7 @@ export async function file_read(file_path) {
     file_path = file_path_normalize(file_path);
     let store = browser_files_store();
     let item = await indexeddb_get(
-      app_a_indexeddb_initialize,
+      browser_files_database_initialize,
       store,
       file_path,
     );
