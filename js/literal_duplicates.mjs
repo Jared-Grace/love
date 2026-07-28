@@ -1,3 +1,8 @@
+import { literal_duplicate_means } from "./literal_duplicate_means.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { file_read } from "./file_read.mjs";
@@ -8,16 +13,18 @@ export async function literal_duplicates() {
   let names = await folder_read_files("js");
   let codes = {};
   for (let name of names) {
-    if (!name.endsWith(".mjs")) {
+    let b2 = name.endsWith(".mjs");
+    if (not(b2)) {
       continue;
     }
     let f_name = name.slice(0, -4);
-    codes[f_name] = await file_read(path_join(["js", name]));
+    let file_path = path_join(["js", name]);
+    codes[f_name] = await file_read(file_path);
   }
   let getters = [];
   for (let f_name of Object.keys(codes)) {
     let literal = js_code_getter_literal(codes[f_name], f_name);
-    if (literal !== "" && literal_distinctive_is(literal)) {
+    if (not_equal(literal, "") && literal_distinctive_is(literal)) {
       list_add(getters, {
         f_name,
         literal,
@@ -29,11 +36,11 @@ export async function literal_duplicates() {
     let quoted = JSON.stringify(getter.literal);
     let files = [];
     for (let f_name of Object.keys(codes)) {
-      if (f_name !== getter.f_name && codes[f_name].includes(quoted)) {
+      if (not_equal(f_name, getter.f_name) && codes[f_name].includes(quoted)) {
         list_add(files, f_name);
       }
     }
-    if (files.length > 0) {
+    if (greater_than(files.length, 0)) {
       let means = literal_duplicate_means(codes, files, getter.literal);
       list_add(found, {
         f_name: getter.f_name,
@@ -43,8 +50,10 @@ export async function literal_duplicates() {
       });
     }
   }
-  found.sort(function lambda(a, b) {
-    return b.files.length - a.files.length;
-  });
+  function lambda(a, b) {
+    let difference = subtract(b.files.length, a.files.length);
+    return difference;
+  }
+  found.sort(lambda);
   return found;
 }
