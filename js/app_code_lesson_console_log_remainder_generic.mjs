@@ -53,7 +53,7 @@ export function app_code_lesson_console_log_remainder_generic(
   "a reusable remainder (%) lesson for a fixed divisor; the intro shows the CYCLE table (0..2*divisor, so the repeat is visible) and any divisor-specific insight lines (e.g. even/odd for divisor 2)";
   let operator = js_operator_percent();
   let percent = property_get(operator, "operator");
-  let remainder = property_get(operator, "fn");
+  let modulo = property_get(operator, "fn");
   let divisor_text = text_to(divisor);
   let name_right = text_combine(" remainder by ", divisor_text);
   function code_of(n) {
@@ -220,7 +220,7 @@ export function app_code_lesson_console_log_remainder_generic(
     function legend_part(part, index) {
       (list_to_or_list_generic.name,
         " interleaves item, separator, item, ...; the items land on even indices, so render those as colored chips and the odd separators (', ' and ' or ') as plain text");
-      let item = remainder(index, 2);
+      let item = modulo(index, 2);
       let is_item = equal_0(item);
       if (is_item) {
         let remainder = divide(index, 2);
@@ -236,7 +236,7 @@ export function app_code_lesson_console_log_remainder_generic(
     html_style_padding_y(table, "0");
     function row(n) {
       let expr = code_of(n);
-      let remainder = remainder(n, divisor);
+      let remainder = modulo(n, divisor);
       let line = html_div(table);
       let band = app_code_remainder_color_light(remainder, divisor);
       html_style_background_color_set(line, band);

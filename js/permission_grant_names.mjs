@@ -316,6 +316,9 @@ export function permission_grant_names() {
   let spelled313 = fn_name("functions_duplicate_keys_gate_run");
   let spelled314 = fn_name("js_operator_function_names");
   let spelled315 = fn_name("functions_shadowing_operator_gate_run");
+  let spelled316 = fn_name("functions_select_apply_args");
+  let spelled317 = fn_name("function_select_apply_args_auto");
+  let spelled318 = fn_name("ai_log_pairs_frequent");
   let names = [
     spelled,
     spelled2,
@@ -632,6 +635,9 @@ export function permission_grant_names() {
     spelled313,
     spelled314,
     spelled315,
+    spelled316,
+    spelled317,
+    spelled318,
   ];
   return names;
 }
