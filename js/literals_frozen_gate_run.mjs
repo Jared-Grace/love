@@ -1,3 +1,8 @@
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_remove } from "./list_remove.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { literals_frozen_record_new } from "./literals_frozen_record_new.mjs";
 import { not } from "./not.mjs";
@@ -41,7 +46,8 @@ export async function literals_frozen_gate_run() {
         continue;
       }
       ("A name the code no longer has is the mirror of the one above and just as harmless on its own: the name moved and the value stood still, where the danger is the value moving and the name standing still. Renaming a frozen constant makes BOTH at once - the old name leaves and the new one arrives carrying the same value - and until this the leaving half was read as a value that had vanished, which is the loud branch. So renaming two of them cost the heavy command twice for a change that published nothing new.");
-      let departed = not(property_exists(now, f_name));
+      let b3 = property_exists(now, f_name);
+      let departed = not(b3);
       if (departed) {
         list_add(gone, f_name);
         continue;
@@ -54,15 +60,18 @@ export async function literals_frozen_gate_run() {
     }
   }
   ("What keeps that from becoming a hole: a name may only leave quietly if the value it held has ARRIVED somewhere else in the same breath. Renamed and changed at once - the old name gone, the new one carrying a different value - would otherwise be two harmless-looking halves adding up to exactly the edit this exists to catch, so a departure whose value is nowhere among the arrivals stays loud.");
-  let arrived = list_map(fresh, function lambda(f_name) {
+  function lambda(f_name) {
     let value = property_get(now, f_name);
     return value;
-  });
-  let orphaned = list_filter(gone, function lambda2(f_name) {
+  }
+  let arrived = list_map(fresh, lambda);
+  function lambda2(f_name) {
     let was = property_get(recorded, f_name);
     let carried = list_includes(arrived, was);
-    return not(carried);
-  });
+    let n = not(carried);
+    return n;
+  }
+  let orphaned = list_filter(gone, lambda2);
   for (let f_name of orphaned) {
     list_remove(gone, f_name);
     list_add(moved, {
@@ -71,7 +80,7 @@ export async function literals_frozen_gate_run() {
       is: null,
     });
   }
-  ("Both still fail, because a record missing a name cannot catch that name's value moving later - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names.");
+  ("All three still fail, because a record out of step with the code cannot catch the next value that moves - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names, and only the first of them is a decision.");
   list_empty_is_assert_json(moved, {
     hint: text_combine_multiple([
       "a frozen value is not what the record says - if the change was meant, write the record again with ",
@@ -88,10 +97,19 @@ export async function literals_frozen_gate_run() {
     ]),
     fresh,
   });
+  list_empty_is_assert_json(gone, {
+    hint: text_combine_multiple([
+      "a frozen constant the code no longer has, whose value arrived under another name in the same breath - a rename, so nothing published has changed. Clear the old name with ",
+      literals_frozen_record_new.name,
+      " which drops it only because that value is being recorded under its new name",
+    ]),
+    gone,
+  });
   let r = {
     checked: list_size(names),
     moved,
     fresh,
+    gone,
   };
   return r;
 }
