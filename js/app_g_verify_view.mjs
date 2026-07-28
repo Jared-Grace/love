@@ -1,4 +1,4 @@
-import { promise_later } from "./promise_later.mjs";
+import { call_now_and_later } from "./call_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
