@@ -67,7 +67,8 @@ export function app_code_lesson_expression_remainder() {
       }
       return render;
     }
-    let rights = ["remainder"];
+    ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
+    let rights = ["remainder part"];
     let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
     return built;
   }
