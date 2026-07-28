@@ -36,7 +36,7 @@ export function app_code_lesson_expression_string_spaces() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "A string can hold spaces ");
+        html_span_text(parent, "Strings with spaces ");
         app_code_string_shape(parent, 2);
       }
       return render;
