@@ -1,9 +1,6 @@
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { each_object_generic_async } from "./each_object_generic_async.mjs";
-export async function object_values_map_list_unordered_async(
-  object,
-  lambda$value$key,
-) {
+export async function each_object_unordered_async(object, lambda$value$key) {
   let each_lambda = list_map_unordered_async;
   let r = await each_object_generic_async(
     object,

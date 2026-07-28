@@ -1,4 +1,4 @@
-import { object_values_map_list_unordered_async } from "./object_values_map_list_unordered_async.mjs";
+import { each_object_unordered_async } from "./each_object_unordered_async.mjs";
 export async function each_object_values_generic_async(
   object,
   lambda$value$key,
@@ -8,5 +8,5 @@ export async function each_object_values_generic_async(
     let mapped = await lambda$value$key(value, key);
     oad(key, mapped);
   }
-  await object_values_map_list_unordered_async(object, lambda);
+  await each_object_unordered_async(object, lambda);
 }
