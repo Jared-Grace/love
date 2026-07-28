@@ -1,8 +1,9 @@
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_swap_at } from "./list_swap_at.mjs";
-import { equal } from "./equal.mjs";
+import { js_special_arguments } from "./js_special_arguments.mjs";
+import { list_permutations } from "./list_permutations.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
@@ -14,79 +15,110 @@ import { list_first_remaining } from "./list_first_remaining.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
-import { property_swap } from "./property_swap.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { js_parse } from "./js_parse.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
+  "every accepted token ordering for the unscramble. A commutative operator (+ * === !== || &&) can keep or swap its two sides; a commutative call (Math.min / Math.max) can take its arguments in ANY order - all permutations. The accepted orderings are the cartesian product of every such node's orderings; enumerate them, restoring each node to its original after its own loop so the tree is left unchanged.";
   let expression_is = js_expression_is(code);
-  let ast = js_parse(code);
-  function lambda4(la) {
+  let tree = js_parse(code);
+  function collect(la) {
+    "gather one orderable per commutative node - each carries its list of ordering functions and a restore to its original arrangement";
     let commutatives = js_code_binary_expression_commutative();
-    function lambda2(node) {
+    function on_binary(node) {
       let operator = property_get(node, "operator");
       let includes = list_includes(commutatives, operator);
       if (includes) {
-        function swap() {
-          property_swap(node, "left", "right");
+        let left = property_get(node, "left");
+        let right = property_get(node, "right");
+        function set_sides(a, b) {
+          property_set(node, "left", a);
+          property_set(node, "right", b);
         }
-        la(swap);
+        function keep() {
+          set_sides(left, right);
+        }
+        function swap() {
+          set_sides(right, left);
+        }
+        let orderings = [keep, swap];
+        let orderable = {
+          orderings,
+          restore: keep,
+        };
+        la(orderable);
       }
     }
     let swappable_types = ["BinaryExpression", "LogicalExpression"];
-    function visit_type(type) {
-      js_visit_type_node(ast, type, lambda2);
+    function visit_binary(type) {
+      js_visit_type_node(tree, type, on_binary);
     }
-    each(swappable_types, visit_type);
-    function lambda_call(node) {
-      "Math.min / Math.max are commutative in their two arguments too, so add a swap of those arguments - the learner may build Math.min(4, 8) or Math.min(8, 4) and both are right";
+    each(swappable_types, visit_binary);
+    let commutative_calls = js_code_call_commutative();
+    function on_call(node) {
       let callee = property_get(node, "callee");
       let name = js_unparse(callee);
-      let commutative_calls = js_code_call_commutative();
       let is_commutative = list_includes(commutative_calls, name);
       if (is_commutative) {
         let args = js_call_arguments_get(node);
-        let count = list_size(args);
-        let two = equal(count, 2);
-        if (two) {
-          function swap() {
-            list_swap_at(args, 0, 1);
-          }
-          la(swap);
+        let original = list_copy(args);
+        let perms = list_permutations(original);
+        let key = js_special_arguments();
+        function set_args(perm) {
+          property_set(node, key, perm);
         }
+        function make_ordering(perm) {
+          function ordering() {
+            set_args(perm);
+          }
+          return ordering;
+        }
+        let orderings = list_map(perms, make_ordering);
+        function restore() {
+          set_args(original);
+        }
+        let orderable = {
+          orderings,
+          restore,
+        };
+        la(orderable);
       }
     }
-    js_visit_type_node(ast, "CallExpression", lambda_call);
+    js_visit_type_node(tree, "CallExpression", on_call);
   }
-  let variation_fns = list_adder(lambda4);
-  function lambda5(la) {
-    "every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; the unique adder folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)";
-    function generate(swaps) {
-      let none_left = list_empty_is(swaps);
+  let orderable_nodes = list_adder(collect);
+  function generate_all(la) {
+    "the cartesian product: for each node try every one of its orderings, recursing on the rest, then restore that node - so every combination is emitted and the tree ends as it began";
+    function generate(nodes) {
+      let none_left = list_empty_is(nodes);
       if (none_left) {
-        let code_variation = js_unparse(ast);
+        let code_variation = js_unparse(tree);
         la(code_variation);
       } else {
-        let split = list_first_remaining(swaps);
-        let swap = property_get(split, "first");
+        let split = list_first_remaining(nodes);
+        let first = property_get(split, "first");
         let remaining = property_get(split, "remaining");
-        generate(remaining);
-        swap();
-        generate(remaining);
-        swap();
+        let orderings = property_get(first, "orderings");
+        function try_ordering(ordering) {
+          ordering();
+          generate(remaining);
+        }
+        each(orderings, try_ordering);
+        let restore = property_get(first, "restore");
+        restore();
       }
     }
-    generate(variation_fns);
+    generate(orderable_nodes);
   }
-  let codes = list_adder_unique(lambda5);
+  let codes = list_adder_unique(generate_all);
   let variations = list_map(codes, app_code_quiz_tokens);
   if (expression_is) {
-    function lambda6(item) {
+    function trim_semicolon(item) {
       let expected_last = ";";
       list_remove_last_equal(item, expected_last);
     }
-    each(variations, lambda6);
+    each(variations, trim_semicolon);
   }
   return variations;
 }
