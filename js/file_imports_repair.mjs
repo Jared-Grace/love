@@ -8,9 +8,19 @@ export async function file_imports_repair(f_path) {
   arguments_assert(arguments, 1);
   let dictionary = await functions_names_to_paths();
   let from_dir = import_from_dir_path(f_path);
+  ("What it added is the answer, and nothing was saying it. A repair that found");
+  ("nothing to do and a repair that added nine imports looked identical from");
+  ("outside, so the only way to learn which had happened was to open the file.");
+  let added = [];
   async function lambda(ast) {
     let missing = await js_imports_missing_all_program(ast);
+    list_add_multiple(added, missing);
     await function_imports_add_relative(ast, missing, dictionary, from_dir);
   }
   await file_js_transform(f_path, lambda);
+  let r = {
+    f_path,
+    added,
+  };
+  return r;
 }
