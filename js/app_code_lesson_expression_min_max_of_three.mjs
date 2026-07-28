@@ -1,3 +1,4 @@
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -92,7 +93,10 @@ export function app_code_lesson_expression_min_max_of_three() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "More than two numbers");
+        html_span_text_code_dark(parent, "Math.max");
+        html_span_text(parent, ", ");
+        html_span_text_code_dark(parent, "Math.min");
+        html_span_text(parent, ", 3 numbers");
       }
       return render;
     }
