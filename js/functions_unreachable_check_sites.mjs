@@ -51,18 +51,12 @@ export async function functions_unreachable_check_sites() {
       let node = property_get(v, "node");
       let callee = property_get_or_null(node, "callee");
       let callee_name = property_get_or_null(callee, "name");
-      let checked = list_includes(checkers, callee_name);
-      if (not(checked)) {
-        continue;
-      }
-      let args = property_get(node, "arguments");
-      let first = args[0];
-      let first_name = property_get_or_null(first, "name");
-      let tested = list_includes(bound, first_name);
+      let asked = js_call_absence_tested_name(node, checkers);
+      let tested = list_includes(bound, asked);
       if (tested) {
         list_add(sites, {
           f_name,
-          bound: first_name,
+          bound: asked,
           checker: callee_name,
         });
       }
