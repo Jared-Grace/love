@@ -6,9 +6,9 @@ import { list_get } from "./list_get.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_adder } from "./list_adder.mjs";
 export function list_interleave_halves(list) {
-  let half = list_size_half_ceil(list);
-  let first = list_slice_count(list, 0, half);
-  let second = list_skip(list, half);
+  let half_size = list_size_half_ceil(list);
+  let first = list_slice_count(list, 0, half_size);
+  let second = list_skip(list, half_size);
   let second_size = list_size(second);
   function lambda2(la) {
     function lambda(item, index) {
