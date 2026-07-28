@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { examples_names } from "./examples_names.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
