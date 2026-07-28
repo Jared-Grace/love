@@ -6,7 +6,7 @@ import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
-import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
+import { browser_files_store } from "./browser_files_store.mjs";
 import { indexeddb_get } from "./indexeddb_get.mjs";
 import { browser_is } from "./browser_is.mjs";
 export async function file_read(file_path) {
@@ -23,7 +23,7 @@ export async function file_read(file_path) {
   }
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
-    let store = app_a_file_system_store();
+    let store = browser_files_store();
     let item = await indexeddb_get(
       app_a_indexeddb_initialize,
       store,
