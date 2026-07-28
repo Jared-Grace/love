@@ -1,3 +1,5 @@
+import { js_shadowing_rename } from "./js_shadowing_rename.mjs";
+import { js_shadowing_rename_lambda } from "./js_shadowing_rename_lambda.mjs";
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
 import { example_select_apply_named } from "./example_select_apply_named.mjs";
 import { js_fn_name_references_to_calls } from "./js_fn_name_references_to_calls.mjs";
