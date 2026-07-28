@@ -1,3 +1,5 @@
+import { html_div } from "./html_div.mjs";
+import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";

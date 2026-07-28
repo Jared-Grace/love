@@ -22,6 +22,7 @@ export function app_code_lesson_expression_larger() {
     noun: "larger",
     noun_upper: "Larger",
     comparison: "bigger than",
+    short_name: "max",
     define_render,
   });
   return lesson;
