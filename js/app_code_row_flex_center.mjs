@@ -1,3 +1,4 @@
+import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -11,6 +12,6 @@ export function app_code_row_flex_center(parent) {
   html_align_items_center(row);
   html_style_set(row, "flex-wrap", "wrap");
   let value = app_shared_spaced_tiny_gap();
-  html_style_gap(row, value);
+  html_style_gap(row, app_shared_spaced_large_gap());
   return row;
 }
