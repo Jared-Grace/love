@@ -45,6 +45,8 @@ export function examples_groups() {
         "example_prose_address",
         "example_type_find_address",
         "example_call_name_includes_address",
+        "example_call_named_index_address",
+        "example_statement_call_named_index",
         "example_function_node_named_address",
         "example_wrap_for_of",
         "example_unwrap_for_of",

@@ -138,6 +138,10 @@ export function examples_notes() {
       "the same argument set through the name that holds its value rather than spelled out",
     example_property_getter_set:
       "the same routing one level in - a setting held inside a record",
+    example_call_named_index_address:
+      "the address for one of several calls to the same name",
+    example_statement_call_named_index:
+      "the same numbered address at the line rather than the call",
   };
   return notes;
 }
