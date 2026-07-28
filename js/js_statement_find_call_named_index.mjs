@@ -1,3 +1,5 @@
+import { js_call_named_find_index } from "./js_call_named_find_index.mjs";
+import { js_node_to_block_item } from "./js_node_to_block_item.mjs";
 export async function js_statement_find_call_named_index(
   ast,
   f_name,
