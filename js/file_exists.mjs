@@ -1,6 +1,6 @@
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { indexeddb_exists } from "./indexeddb_exists.mjs";
-import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
+import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { throws_not_async } from "./throws_not_async.mjs";
@@ -12,7 +12,7 @@ export async function file_exists(file_path) {
     file_path = file_path_normalize(file_path);
     let store = browser_files_store();
     let present = await indexeddb_exists(
-      app_a_indexeddb_initialize,
+      browser_files_database_initialize,
       store,
       file_path,
     );

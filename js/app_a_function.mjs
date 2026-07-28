@@ -47,7 +47,7 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { json_decompress } from "./json_decompress.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
-import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
+import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { emoji_up } from "./emoji_up.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
@@ -73,7 +73,7 @@ export async function app_a_function(context) {
   html_clear(root);
   async function upload() {
     let store = browser_files_store();
-    let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
+    let all = await indexeddb_get_all(browser_files_database_initialize, store);
     async function lambda(item) {
       let compressed = property_get(item, "compressed");
       let f = await json_decompress(compressed);
@@ -101,7 +101,7 @@ export async function app_a_function(context) {
   }
   async function download() {
     let store = browser_files_store();
-    await indexeddb_store_clear(app_a_indexeddb_initialize, store);
+    await indexeddb_store_clear(browser_files_database_initialize, store);
     await app_a_file_system_initialize_download();
   }
   if (false) {

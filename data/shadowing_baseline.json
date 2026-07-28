@@ -48,7 +48,7 @@
    "shadows_function": []
   },
   {
-   "name": "app_a_indexeddb_initialize",
+   "name": "browser_files_database_initialize",
    "shadows_outer": [
     "db"
    ],
