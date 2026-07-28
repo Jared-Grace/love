@@ -12,6 +12,7 @@ export async function functions_prose() {
   "What every function in the repo says it is for, gathered into one place - the corpus a search by meaning needs and nothing had yet.";
   "A file that cannot be read is passed over rather than throwing. This runs over every function there is, and ten of these work in the same folder at once, so a file being written at the moment it is read is ordinary rather than exceptional - and losing the whole index to one of them would make the search useless exactly when the repo is busiest.";
   "A function that says nothing about itself is left out entirely, so an empty answer to a search means nobody wrote it down, not that the search was wrong.";
+  "The lines are kept apart rather than run together, because the two things a reader wants from them are different: matching wants all of it, and showing wants the first line only. Joining here would have forced the search to hand back a paragraph per hit, which is the one thing a list you are scanning must not do.";
   let paths = await functions_names_to_paths();
   let names = properties_get(paths);
   let prose = {};
@@ -26,8 +27,7 @@ export async function functions_prose() {
     if (silent) {
       return;
     }
-    let joined = list_join_space(lines);
-    property_set(prose, f_name, joined);
+    property_set(prose, f_name, lines);
   }
   await each_async(names, each_name);
   return prose;
