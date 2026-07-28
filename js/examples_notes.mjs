@@ -132,6 +132,8 @@ export function examples_notes() {
       "extract a span into a function of its own - the verb that needs two addresses at once",
     example_shadowing_rename_shorthand:
       "why ending a hiding keeps the key when a record names its value in shorthand",
+    example_span_move_after:
+      "three addresses through the same seam - the count of names is the count of nodes",
   };
   return notes;
 }

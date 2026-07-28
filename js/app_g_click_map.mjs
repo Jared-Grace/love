@@ -1,4 +1,3 @@
-import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
 import { app_g_day_travel_blocked_is } from "./app_g_day_travel_blocked_is.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_click_npc_if } from "./app_g_click_npc_if.mjs";
@@ -24,6 +23,5 @@ export async function app_g_click_map(
     player_img_c,
     div_map,
   );
-  await app_g_day_guide_show(div_map);
   await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, player_img_c);
 }
