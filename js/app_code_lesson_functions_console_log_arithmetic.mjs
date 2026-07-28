@@ -34,23 +34,23 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
-  let fn_name = property_get(r, "fn_name");
+  let f_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Before, we put a single number inside ", fn_name]);
-    html_div_cycle_code(c, ["We can also use ", fn_name, " like this: "]);
+    html_div_cycle_code(c, ["Before, we put a single number inside ", f_name]);
+    html_div_cycle_code(c, ["We can also use ", f_name, " like this: "]);
     function lambda(o) {
       let e = js_operator_to_expression_only(o, number_next);
-      let call = js_code_call_arg(fn_name, e);
+      let call = js_code_call_arg(f_name, e);
       let s = js_code_statement(call);
       html_div_code(c, s);
     }
     each(operators, lambda);
     app_code_container_light_blue_cycle_code(root, [
       "",
-      fn_name,
+      f_name,
       " will do the math and write out the answer",
     ]);
   }
