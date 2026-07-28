@@ -342,6 +342,10 @@ export function permission_grant_names() {
   let spelled339 = fn_name("functions_shadowing_function_gate_run");
   let spelled340 = fn_name("literals_frozen_record_new");
   let spelled341 = fn_name("app_shared_app_specific_imports");
+  let spelled342 = fn_name("app_shared_imports_baseline_write");
+  let spelled343 = fn_name("permission_grant_names");
+  let spelled344 = fn_name("app_shared_imports_gate_run");
+  let spelled345 = fn_name("claude_md_size_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -684,6 +688,10 @@ export function permission_grant_names() {
     spelled339,
     spelled340,
     spelled341,
+    spelled342,
+    spelled343,
+    spelled344,
+    spelled345,
   ];
   return names;
 }
