@@ -11,12 +11,12 @@ export async function file_exists(file_path) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
     let store = app_a_file_system_store();
-    let exists = await indexeddb_exists(
+    let present = await indexeddb_exists(
       app_a_indexeddb_initialize,
       store,
       file_path,
     );
-    return exists;
+    return present;
   }
   if (promise_is(file_path)) {
     error();
