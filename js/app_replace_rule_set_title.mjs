@@ -1,3 +1,4 @@
+import { app_replace_rule_set_why_font_size } from "./app_replace_rule_set_why_font_size.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
@@ -19,7 +20,8 @@ export function app_replace_rule_set_title(context) {
   let p = html_p_text(root, why);
   let value = app_shared_spaced_small_gap();
   html_style_margin_top(p, value);
-  html_style_font_size(p, app_replace_rule_set_why_font_size());
+  let value2 = app_replace_rule_set_why_font_size();
+  html_style_font_size(p, value2);
   let r = {
     rule_set,
     rule_set_name,
