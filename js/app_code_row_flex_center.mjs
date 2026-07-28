@@ -12,6 +12,6 @@ export function app_code_row_flex_center(parent) {
   html_align_items_center(row);
   html_style_set(row, "flex-wrap", "wrap");
   let value = app_shared_spaced_tiny_gap();
-  html_style_gap(row, app_shared_spaced_large_gap());
+  html_style_gap(row, app_shared_spaced_tiny_gap());
   return row;
 }
