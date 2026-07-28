@@ -38,7 +38,9 @@ export function permission_rule_command_probe(rule) {
       let both = list_join_space([leaf, leaf_second]);
       return both;
     }
-    return prefix;
+    ("a trailing star means the prefix plus any arguments, so the command this rule really claims has some — and a probe with none is not the shortest such command, it is a different one. Probing bare said 273 rules could never take effect on the day a bare call to a function that declares parameters became a refusal of its own: every one of those grants was fine, and only the question was wrong");
+    let supplied = list_join_space([prefix, "probe_argument"]);
+    return supplied;
   }
   return inner;
 }

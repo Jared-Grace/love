@@ -49,6 +49,7 @@ export function permission_rules_other() {
     "Bash(git ls-files:*)",
     "Bash(git ls-remote:*)",
     "Bash(git merge-base:*)",
+    "Bash(git mv:*)",
     "Bash(git rev-parse:*)",
     "Bash(git show:*)",
     "Bash(git status:*)",
