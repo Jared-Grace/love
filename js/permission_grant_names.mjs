@@ -319,6 +319,8 @@ export function permission_grant_names() {
   let spelled316 = fn_name("functions_select_apply_args");
   let spelled317 = fn_name("function_select_apply_args_auto");
   let spelled318 = fn_name("ai_log_pairs_frequent");
+  let spelled319 = fn_name("functions_replace");
+  let spelled320 = fn_name("function_auto_checked");
   let names = [
     spelled,
     spelled2,
@@ -638,6 +640,8 @@ export function permission_grant_names() {
     spelled316,
     spelled317,
     spelled318,
+    spelled319,
+    spelled320,
   ];
   return names;
 }
