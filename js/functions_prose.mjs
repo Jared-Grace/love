@@ -5,7 +5,6 @@ import { file_read_try } from "./file_read_try.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function functions_prose() {
