@@ -1,3 +1,5 @@
+import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_style_helpers } from "./html_style_helpers.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { repo_functions_code } from "./repo_functions_code.mjs";
@@ -22,7 +24,7 @@ export async function html_style_literal_gate_run() {
     }
     let code = property_get(entry, "code");
     let left = js_code_html_style_literals_left(code, helpers);
-    let offends = left > 0;
+    let offends = greater_than(left, 0);
     return offends;
   }
   let offenders = list_filter(entries, offends_is);
