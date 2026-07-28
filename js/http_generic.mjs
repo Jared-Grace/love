@@ -64,12 +64,12 @@ export async function http_generic(url, options) {
     let v = await html_loading(lambda3);
     return v;
   }
-  let sleep = true;
+  let sleep_wanted = true;
   let e = property_exists(options, "sleep");
   if (e) {
-    sleep = property_get(options, "sleep");
+    sleep_wanted = property_get(options, "sleep");
   }
-  if (sleep) {
+  if (sleep_wanted) {
     await http_sleep();
   }
   let swHttps = text_starts_with_https_prefix(url);
