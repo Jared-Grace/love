@@ -29,10 +29,8 @@ export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the whole-part formula Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven";
-    let max = subtract(divisor, 1);
-    let leftover = integer_random(1, max);
-    let left = multiply(quotient, divisor);
-    let dividend = add(left, leftover);
+    let parts = app_code_uneven_dividend(quotient, divisor);
+    let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let t = text_to(divisor);
     let formula = text_combine_multiple(["Math.floor(", division, ") * ", t]);

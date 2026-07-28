@@ -33,10 +33,10 @@ export function app_code_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
   function make(divisor, quotient) {
     "given a / b whose dividend is quotient*divisor + a leftover, the answer is the whole part quotient*divisor";
-    let leftover = integer_random(1, subtract(divisor, 1));
-    let dividend = add(multiply(quotient, divisor), leftover);
+    let parts = app_code_uneven_dividend(quotient, divisor);
+    let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
-    let whole_part = multiply(quotient, divisor);
+    let whole_part = property_get(parts, "whole_part");
     return {
       question: division,
       answer: text_to(whole_part),
