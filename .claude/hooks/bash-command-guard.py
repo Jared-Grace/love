@@ -2187,6 +2187,26 @@ def matched_leading_verb(command, safe_verbs):
     return None
 
 
+VERB_WORD_CONTINUES_RE = re.compile(r"^[A-Za-z0-9_./-]")
+
+
+def verb_matched_mid_word(command, verb):
+    """True iff `verb` matched inside a longer word rather than at a word
+    boundary - e.g. the rule "node scripts/ai.mjs function_new" matching
+    "node scripts/ai.mjs function_new_getter probe".
+
+    matched_leading_verb is deliberately boundary-less (see its docstring),
+    and that has to stay: the native engine's own prefix matching would
+    otherwise allow such a command outright, and this hook's "ask" is what
+    stops it. But the two cases need different words. A boundary match with
+    trailing content is a chain, and splitting it into separate calls is
+    real advice. A mid-word match is a wholly different command that merely
+    shares an opening, so there is nothing to split, and being told to split
+    it costs a turn spent trying. What it needs is a grant of its own name."""
+    rest = command[len(verb):]
+    return bool(VERB_WORD_CONTINUES_RE.match(rest))
+
+
 NODE_EVAL_FLAGS = ("-e", "--eval", "-p", "--print")
 
 
@@ -3288,6 +3308,25 @@ def main():
         return
 
     verb = matched_leading_verb(command, safe_verbs)
+    if verb is not None and verb_matched_mid_word(command, verb):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "ask",
+                "permissionDecisionReason": (
+                    f"The allow rule {verb!r} matches this command only as a "
+                    "text prefix of a longer word, so the thing actually "
+                    "being run has no grant of its own. There is nothing to "
+                    "split here and rewording will not help - this is a "
+                    "different command that shares an opening with a trusted "
+                    "one. If it should run unprompted, grant it by its own "
+                    "full name (`node scripts/ai.mjs permission_grant_add "
+                    "<fn>`); otherwise it is fine to approve once."
+                ),
+            }
+        }))
+        return
+
     if verb is not None:
         print(json.dumps({
             "hookSpecificOutput": {
