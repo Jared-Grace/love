@@ -170,6 +170,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
+| `js_selects_span_move_after` | move a **run** of lines to sit after another line — three addresses, named the same way: where the run starts, where it ends, and what it should follow. The same guard, asked of every line in the run at once; also refuses a destination *inside* the run. Nothing about the seam had to change to reach three — one selector runs once per name, so **the count of names is the count of nodes** |
 | `js_selects_functionize <new_fn>` | extract first-through-last selection, then move the new fn into its own file (needs `function_select_multiple_apply_args`) |
 | `js_selects_functionize_local <new_fn>` | the same extraction, left in the file it came from — the half a sandbox can watch, so this is the one under a gate |
 
