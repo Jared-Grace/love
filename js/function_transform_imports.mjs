@@ -18,7 +18,7 @@ export async function function_transform_imports(f_name, lambda$ast) {
   async function lambda(ast) {
     await lambda$ast(ast);
     await js_imports_missing_add_all(ast);
-    await js_imports_unused_remove(ast2);
+    await js_imports_unused_remove(ast);
   }
   let output = await function_transform(f_name, lambda);
   return output;
