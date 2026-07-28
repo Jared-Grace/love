@@ -12,9 +12,9 @@ export function app_code_lesson_expression_plus_divide() {
   "mixing + and / in one expression: a + b / c and a / b + c; / is stronger than +, so we always do it first, even when it comes later; / needs whole-number answers, so we use the division operator's left_transform (multiply) to build a divisibility chain a = outer * b, b = inner * c - then b / c and a / b are both whole, keeping BOTH arrangements clean";
   let plus = js_operator_plus();
   let plus_symbol = property_get(plus, "operator");
-  let divide = js_operator_division();
-  let divide_symbol = property_get(divide, "operator");
-  let left_transform = property_get(divide, "left_transform");
+  let divided = js_operator_division();
+  let divide_symbol = property_get(divided, "operator");
+  let left_transform = property_get(divided, "left_transform");
   function outer_of(index) {
     "the possible outer answers 2 through 5 (distinct across the four questions, so they never repeat)";
     return add(index, 2);
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_plus_divide() {
     app_code_lesson_cross_precedence_intro({
       root,
       weak: plus,
-      strong: divide,
+      strong: divided,
       inner_left: 6,
       inner_right: 3,
       later_outer: 2,
