@@ -6,10 +6,10 @@ import { list_add } from "./list_add.mjs";
 export async function qa_tests_run(fns, name_get) {
   let errors = [];
   function lambda(item) {
-    function on_error(error) {
+    function on_error(error_caught) {
       list_add(errors, {
         name: name_get(item),
-        error,
+        error: error_caught,
       });
     }
     let i = catch_call_later_async(on_error, item);
