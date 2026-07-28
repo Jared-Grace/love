@@ -6,7 +6,7 @@ import { function_rename } from "./function_rename.mjs";
 import { log } from "./log.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { object_filter } from "./object_filter.mjs";
-import { object_map_async } from "./object_map_async.mjs";
+import { each_object_async } from "./each_object_async.mjs";
 import { property_exists_not_assert_json } from "./property_exists_not_assert_json.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
@@ -48,7 +48,7 @@ export async function functions_rename_generic(filter, name_change) {
   }
   ("each rename is committed as it lands rather than the whole batch at the end. A prefix migration touches hundreds of files and runs for minutes, and with many hands editing the same folder somebody else's sweep files most of them under a bare word long before this returns — so the window has to be one rename wide, which is also the only size that leaves a message naming a real command with its real arguments");
   await ai_git_noted();
-  await object_map_async(different, lambda3);
+  await each_object_async(different, lambda3);
   ("The pairs that were changed, which this has held since before the first one");
   ("ran. Asking the visiting helper next door for them cannot work - it is named");
   ("as though it maps and it does not, so what came back was nothing at all and a");
