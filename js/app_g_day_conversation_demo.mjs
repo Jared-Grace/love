@@ -1,6 +1,7 @@
 import { html_document_body } from "./html_document_body.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
@@ -38,10 +39,6 @@ export async function app_g_day_conversation_demo(div_map) {
   });
   async function refresh() {
     let hour = turn.n / total * 24;
-    let phase = g_clock_sky_phase(hour);
-    let g = await app_g_game_save_get();
-    property_set(g, "sky_phase", phase);
-    await app_g_sky_snap();
     let text = text_combine_multiple([
       "Half-turn ",
       turn.n,
@@ -51,7 +48,11 @@ export async function app_g_day_conversation_demo(div_map) {
       hour,
       ":00",
     ]);
-    label.textContent = text;
+    html_text_set(label, text);
+    let phase = g_clock_sky_phase(hour);
+    let g = await app_g_game_save_get();
+    property_set(g, "sky_phase", phase);
+    await app_g_sky_snap();
   }
   async function next() {
     turn.n = turn.n + 1;
