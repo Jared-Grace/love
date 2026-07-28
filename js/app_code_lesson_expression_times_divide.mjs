@@ -12,7 +12,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_times_divide() {
   "mixing * and / in one expression: a * b / c and a / b * c; * and / are the same strength, so it just works from left to right; each triple is built so a = b * c, which keeps BOTH arrangements whole numbers (a * b / c and a / b * c) - no decimals either way";
   let times = js_operator_asterisk_symbol();
-  let divide = js_operator_division_symbol();
+  let divided = js_operator_division_symbol();
   function first_of(index) {
     "the possible b numbers 2 through 5 (distinct across the four questions, so they never repeat)";
     return add(index, 2);
@@ -31,7 +31,13 @@ export function app_code_lesson_expression_times_divide() {
   }
   function above(root) {
     let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, ["We can mix ", times, " and ", divide, " together"]);
+    html_div_cycle_code(box, [
+      "We can mix ",
+      times,
+      " and ",
+      divided,
+      " together",
+    ]);
     html_div_cycle_code(box, ["Whichever one comes first, we do first"]);
     let example_box = app_code_container_light_blue(root);
     html_div_cycle_code(example_box, [
@@ -42,12 +48,17 @@ export function app_code_lesson_expression_times_divide() {
       " first, which is ",
       "12",
     ]);
-    html_div_cycle_code(example_box, ["Now we have ", "12 / 3", ", which is ", "4"]);
+    html_div_cycle_code(example_box, [
+      "Now we have ",
+      "12 / 3",
+      ", which is ",
+      "4",
+    ]);
     html_div_cycle_code(example_box, ["So ", "6 * 2 / 3", " is ", "4"]);
   }
   let lesson = app_code_lesson_expression_pair_generic({
     symbol1: times,
-    symbol2: divide,
+    symbol2: divided,
     word: " times divide",
     above,
     triples_get,
