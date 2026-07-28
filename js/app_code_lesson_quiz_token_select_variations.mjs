@@ -1,3 +1,8 @@
+import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_swap_at } from "./list_swap_at.mjs";
+import { equal } from "./equal.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
@@ -34,6 +39,25 @@ export function app_code_lesson_quiz_token_select_variations(code) {
       js_visit_type_node(ast, type, lambda2);
     }
     each(swappable_types, visit_type);
+    function lambda_call(node) {
+      "Math.min / Math.max are commutative in their two arguments too, so add a swap of those arguments - the learner may build Math.min(4, 8) or Math.min(8, 4) and both are right";
+      let callee = property_get(node, "callee");
+      let name = js_unparse(callee);
+      let commutative_calls = js_code_call_commutative();
+      let is_commutative = list_includes(commutative_calls, name);
+      if (is_commutative) {
+        let args = js_call_arguments_get(node);
+        let count = list_size(args);
+        let two = equal(count, 2);
+        if (two) {
+          function swap() {
+            list_swap_at(args, 0, 1);
+          }
+          la(swap);
+        }
+      }
+    }
+    js_visit_type_node(ast, "CallExpression", lambda_call);
   }
   let variation_fns = list_adder(lambda4);
   function lambda5(la) {
