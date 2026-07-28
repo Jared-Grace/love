@@ -1,3 +1,4 @@
+import { js_block_local_list_add } from "./js_block_local_list_add.mjs";
 import { js_object_text_add } from "./js_object_text_add.mjs";
 import { js_declaration_call_set } from "./js_declaration_call_set.mjs";
 import { js_block_prose_add } from "./js_block_prose_add.mjs";
@@ -73,6 +74,7 @@ export function example_transforms() {
     js_block_prose_add,
     js_declaration_call_set,
     js_object_text_add,
+    js_block_local_list_add,
   };
   return transforms;
 }
