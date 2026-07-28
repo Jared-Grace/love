@@ -14,8 +14,8 @@ export function js_node_absent_is(node) {
   let identifier = equal(type, "Identifier");
   if (identifier) {
     let name = property_get_or_null(node, "name");
-    let undefined_is = equal(name, "undefined");
-    return undefined_is;
+    let absent_word_is = equal(name, "undefined");
+    return absent_word_is;
   }
   return false;
 }
