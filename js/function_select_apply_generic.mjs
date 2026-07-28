@@ -1,3 +1,4 @@
+import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { function_callee_seam_assert } from "./function_callee_seam_assert.mjs";
 import { js_select_apply } from "./js_select_apply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -24,6 +25,7 @@ export async function function_select_apply_generic(
   let apply_fn = await function_import(apply_fn_name);
   async function lambda(ast) {
     await js_select_apply(ast, select_fn, select_args, apply_fn, apply_args);
+    await js_imports_missing_add_all(ast);
   }
   let output = await function_transform(f_name, lambda);
   return output;
