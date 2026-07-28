@@ -1,3 +1,8 @@
+import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
+import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
+import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
+import { app_g_verify_badge_font_size } from "./app_g_verify_badge_font_size.mjs";
+import { app_g_verify_note_font_size } from "./app_g_verify_note_font_size.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
@@ -135,7 +140,8 @@ export async function app_g_verify_view(
     let l = html_p_text(container, caption);
     let color = app_shared_text_category_color();
     html_font_color_set(l, color);
-    html_style_font_size(l, "0.72em");
+    let value6 = app_g_verify_label_font_size();
+    html_style_font_size(l, value6);
     html_style_set(l, "letter-spacing", "0.11em");
     html_bold_semi(l);
     html_margin_em(l, "0");
@@ -143,7 +149,8 @@ export async function app_g_verify_view(
   }
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
-  html_style_font_size(passage_panel, "1.3em");
+  let value7 = app_g_verify_passage_font_size();
+  html_style_font_size(passage_panel, value7);
   html_style_line_height(passage_panel, "1.95");
   function lambda9(t, i) {
     let span = html_span_text(passage_panel, t);
@@ -291,7 +298,8 @@ export async function app_g_verify_view(
   html_style_set(suggest_area, "box-sizing", "border-box");
   html_style_set(suggest_area, "overflow-y", "hidden");
   html_font_set(suggest_area, serif);
-  html_style_font_size(suggest_area, "1em");
+  let value8 = app_g_verify_suggestion_font_size();
+  html_style_font_size(suggest_area, value8);
   html_style_line_height(suggest_area, "1.5");
   html_style_margin_top(suggest_area, small_gap);
   ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
@@ -389,7 +397,8 @@ export async function app_g_verify_view(
         }
         let badge = html_p_text(container, text);
         app_shared_text_deemphasized(badge);
-        html_style_font_size(badge, "0.85em");
+        let value9 = app_g_verify_badge_font_size();
+        html_style_font_size(badge, value9);
         html_style_margin_top(badge, small_gap);
         reviewed_badge = badge;
       }
@@ -421,7 +430,8 @@ export async function app_g_verify_view(
           let txt = html_p_text(box, t);
           html_style_white_space(txt, "pre-wrap");
           app_shared_text_deemphasized(txt);
-          html_style_font_size(txt, "0.9em");
+          let value10 = app_g_verify_note_font_size();
+          html_style_font_size(txt, value10);
           function load_this() {
             html_value_set(suggest_area, t);
             draft_save();
