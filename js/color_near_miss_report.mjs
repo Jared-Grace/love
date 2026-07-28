@@ -9,7 +9,7 @@ export async function color_near_miss_report() {
     let pair = property_get(finding, "pair");
     let files = property_get(finding, "files");
     let files_other = property_get(finding, "files_other");
-    log(pair, {
+    log(color_near_miss_report.name, {
       files,
       files_other,
     });
