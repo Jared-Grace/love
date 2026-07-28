@@ -1,3 +1,4 @@
+import { function_shadowing_rename_refusal } from "./function_shadowing_rename_refusal.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { function_shadowing_rename } from "./function_shadowing_rename.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
@@ -49,7 +50,21 @@ export async function functions_shadowing_rename_all(name, name_after) {
       let result = await catch_null_async(attempt);
       let refused = equal(result, null);
       if (refused) {
-        list_add(skipped, f_name);
+        ("The reason is asked for again rather than kept from the attempt, because");
+        ("the attempt is the half that commits and it must not be run twice. What");
+        ("a name is skipped FOR is the whole value of a skip - a list of bare");
+        ("names says the sweep did nothing and not one word about why, which is");
+        ("the shape that reads as a clean run.");
+        let why = await function_shadowing_rename_refusal(
+          f_name,
+          name,
+          name_after,
+        );
+        let note = {
+          name: f_name,
+          why,
+        };
+        list_add(skipped, note);
       }
       let done2 = not(refused);
       if (done2) {
