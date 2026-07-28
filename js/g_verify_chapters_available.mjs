@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { g_sermon_write } from "./g_sermon_write.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
@@ -13,7 +14,8 @@ export async function g_verify_chapters_available() {
     return r;
   }
   function lambda(name) {
-    let r2 = name.endsWith(json_extension());
+    let ext_j = json_extension();
+    let r2 = name.endsWith(ext_j);
     return r2;
   }
   function lambda2(name) {
