@@ -73,6 +73,8 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 **Reach for it before writing anything.** The repo's measured waste is discoverability, not capability — see the loop reading below — so the cheapest move by a wide margin is asking whether the thing exists, in the two ways that can miss differently: `s` by name, then `functions_prose_search` by meaning. A capability nobody can find gets built twice and neither copy gets the other's fixes.
 
+**But finding nothing there is weak evidence of absence, and the answer says how weak.** Only about a quarter of the repo's functions say anything about themselves — the search reports `searched` and `silent` beside every result (1679 and 5030 on 2026-07-28), because an empty answer drawn from a quarter of the repo reads exactly like an empty answer drawn from all of it, and that is the very mistake the search exists to stop. **Two searches finding nothing is a reason to look harder, never a licence to conclude it isn't there** — the prose corpus grows only when somebody writes a line about what a function is for, so the honest reading of `silent: 5030` is that the index is young.
+
 | When you want to… | Use | Full function |
 |---|---|---|
 | Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |

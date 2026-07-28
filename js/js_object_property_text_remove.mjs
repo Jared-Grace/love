@@ -23,11 +23,11 @@ export function js_object_property_text_remove(ast, selects, key_name, text) {
     let same = equal(held, text);
     return same;
   }
-  let found = list_find(elements, same_is);
-  assert_json(found, {
-    hint: "this list does not hold that word — would you like to check the spelling, or the record it sits in?",
-    key_name,
-    text,
-  });
+  ("The refusal is handed to the finding rather than written after it, because the");
+  ("plain find-one helper throws first and a sentence written below it is never");
+  ("read by anybody it was written for.");
+  let hint =
+    "this list does not hold that word — would you like to check the spelling, or the record it sits in?";
+  let found = list_matching_single(elements, same_is, hint, text);
   list_remove(elements, found);
 }

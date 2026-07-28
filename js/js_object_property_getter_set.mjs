@@ -26,11 +26,12 @@ export function js_object_property_getter_set(
   ("family.");
   let properties = js_selects_object_properties(ast, selects);
   let named_is = js_property_key_named_is_curried_right(key_name);
-  let found = list_find(properties, named_is);
-  assert_json(found, {
-    hint: "this record holds no setting by that name — would you like to check the spelling, or the record it sits in?",
-    key_name,
-  });
+  ("The refusal is handed to the finding rather than written after it, because the");
+  ("plain find-one helper throws first and a sentence written below it is never");
+  ("read by anybody it was written for.");
+  let hint =
+    "this record holds no setting by that name — would you like to check the spelling, or the record it sits in?";
+  let found = list_matching_single(properties, named_is, hint, key_name);
   let identifier = js_identifier_expression(getter_name);
   let value = js_call_empty(getter_name);
   js_property_value_set(found, value);

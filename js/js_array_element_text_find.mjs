@@ -1,4 +1,4 @@
-import { js_array_element_single } from "./js_array_element_single.mjs";
+import { list_matching_single } from "./list_matching_single.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -27,6 +27,6 @@ export function js_array_element_text_find(elements, text) {
   ("disagree about.");
   let hint =
     "this list does not hold that word once — would you like to check the spelling, or the line it is bound to?";
-  let found = js_array_element_single(elements, same_is, hint, text);
+  let found = list_matching_single(elements, same_is, hint, text);
   return found;
 }

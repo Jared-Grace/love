@@ -1,5 +1,5 @@
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { js_array_element_single } from "./js_array_element_single.mjs";
+import { list_matching_single } from "./list_matching_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 export function js_array_element_identifier_find(elements, identifier_name) {
@@ -26,6 +26,6 @@ export function js_array_element_identifier_find(elements, identifier_name) {
   ("sentence written here was never once read by anybody it was written for.");
   let hint =
     "this list does not name that function — would you like to check the spelling, or whether it was meant to go at the end instead?";
-  let found = js_array_element_single(elements, same_is, hint, identifier_name);
+  let found = list_matching_single(elements, same_is, hint, identifier_name);
   return found;
 }
