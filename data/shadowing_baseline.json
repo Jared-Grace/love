@@ -103,43 +103,28 @@
    "shadows_outer": [
     "row"
    ],
-   "shadows_function": [
-    "modulo"
-   ]
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_exponent",
    "shadows_outer": [
     "chip"
    ],
-   "shadows_function": [
-    "exponent"
-   ]
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_greater_than_equal",
    "shadows_outer": [
     "next_arg"
    ],
-   "shadows_function": [
-    "equal"
-   ]
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_less_than_equal",
    "shadows_outer": [
     "next_arg"
    ],
-   "shadows_function": [
-    "equal"
-   ]
-  },
-  {
-   "name": "app_code_lesson_expression_minus_divide",
-   "shadows_outer": [],
-   "shadows_function": [
-    "divide"
-   ]
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_multiply",
@@ -149,25 +134,11 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_lesson_expression_plus_divide",
-   "shadows_outer": [],
-   "shadows_function": [
-    "divide"
-   ]
-  },
-  {
    "name": "app_code_lesson_expression_remainder_divide",
    "shadows_outer": [
     "percent"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "app_code_lesson_expression_times_divide",
-   "shadows_outer": [],
-   "shadows_function": [
-    "divide"
-   ]
   },
   {
    "name": "app_code_lesson_functions_arithmetic",
@@ -181,9 +152,7 @@
    "shadows_outer": [
     "token"
    ],
-   "shadows_function": [
-    "equal"
-   ]
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_symbols_batch_digits",
@@ -222,25 +191,11 @@
    "shadows_function": []
   },
   {
-   "name": "app_g_gratitude_overlay",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
-  },
-  {
    "name": "app_g_menu",
    "shadows_outer": [
     "text"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "app_g_pray_turn",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
   },
   {
    "name": "app_g_rows_ensure",
@@ -646,25 +601,10 @@
    ]
   },
   {
-   "name": "g_coordinates_neighbors_walkable_get",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
-  },
-  {
    "name": "g_path_steps",
    "shadows_outer": [],
    "shadows_function": [
-    "each",
-    "add"
-   ]
-  },
-  {
-   "name": "g_phase_curve",
-   "shadows_outer": [],
-   "shadows_function": [
-    "identity"
+    "each"
    ]
   },
   {
@@ -867,25 +807,11 @@
    "shadows_function": []
   },
   {
-   "name": "js_list_add_combine",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
-  },
-  {
    "name": "js_list_add_run_apply",
    "shadows_outer": [
     "call"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "js_list_add_run_start_is",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
   },
   {
    "name": "js_module_variable_names",
@@ -909,20 +835,6 @@
     "c"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "list_adder_group_async",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
-  },
-  {
-   "name": "list_adder_group",
-   "shadows_outer": [],
-   "shadows_function": [
-    "add"
-   ]
   },
   {
    "name": "list_chunk",
