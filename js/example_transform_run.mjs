@@ -15,13 +15,13 @@ export async function example_transform_run(e) {
     return r;
   }
   let before = example_transform_before(e.fn, e);
-  async function sandbox(p) {
+  async function in_sandbox(p) {
     await file_overwrite(p, before);
     await file_js_transform(p, lambda);
     let r2 = await file_read(p);
     return r2;
   }
-  let out = await file_temp(sandbox);
+  let out = await file_temp(in_sandbox);
   let got = await js_format_trim(out);
   let want = await js_format_trim(e.after);
   let same_is = equal(got, want);
