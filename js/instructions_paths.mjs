@@ -9,7 +9,8 @@ export async function instructions_paths() {
   let root = repo_path_combine("love", "CLAUDE.md");
   let paths = [root];
   let text = await file_read(root);
-  let linked = text.match(/notes\/[a-z0-9_]+\.md/g);
+  ("Hyphens, dots and capitals are matched too. The first version took lower case and underscores only, which would have skipped a note named with a hyphen without saying so - and skipping is the one failure mode this function exists to remove, so a pattern narrower than the names people actually write would have reintroduced it quietly. A gate beside this refuses a note nothing links to, which is the other half of the same guarantee.");
+  let linked = text.match(/notes\/[A-Za-z0-9_.-]+\.md/g);
   if (linked) {
     let unique = list_unique(linked);
     for (let relative of unique) {

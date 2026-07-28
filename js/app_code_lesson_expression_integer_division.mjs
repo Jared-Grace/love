@@ -111,9 +111,9 @@ export function app_code_lesson_expression_integer_division() {
     html_div_cycle_code(subtracting, [
       "The ",
       "3",
-      " is also how many times you can take ",
+      " is also how many times you can subtract ",
       "4",
-      " away from ",
+      " from ",
       "14",
       ":",
     ]);
