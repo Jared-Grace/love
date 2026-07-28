@@ -4,7 +4,6 @@
   "js_block_local_text_add",
   "js_block_local_record_add",
   "js_block_local_list_add",
-  "js_declaration_call_set",
   "js_call_argument_named_call_set",
   "js_call_argument_named_property_set",
   "js_array_text_move",
@@ -12,7 +11,6 @@
   "js_array_identifier_remove",
   "js_array_identifier_move",
   "js_array_identifier_add_after",
-  "js_object_text_add",
   "js_selects_functionize"
  ]
 }
