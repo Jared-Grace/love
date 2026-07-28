@@ -120,7 +120,7 @@ export function app_code_lesson_expression_remainder_subtract() {
       "20 - 5 - 5",
     ]);
     html_div_cycle_code(setup, [
-      "What if you keep subtracting the same number until you can not take it away again?",
+      "What if you keep subtracting the same number until you can not subtract it again?",
     ]);
     let work = app_code_container_light_blue(root);
     html_div_cycle_code(work, ["", "17 - 5 - 5 - 5", " leaves ", "2"]);
