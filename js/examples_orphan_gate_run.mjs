@@ -33,4 +33,13 @@ export async function examples_orphan_gate_run() {
   list_empty_is_assert_json(missing, {
     hint: "the curriculum groups name these examples but no file in data/examples answers to them, so they are dropped from the reading order without a word — was one renamed or removed, or is the file still to be written?",
   });
+  ("Says how much it looked at, because a gate that answers nothing cannot be");
+  ("told apart from one that did nothing. Both leave the same empty line, and the");
+  ("reader is left inferring a pass from the absence of a complaint.");
+  let r = {
+    files: list_size(mjs),
+    orphans: 0,
+    missing: 0,
+  };
+  return r;
 }
