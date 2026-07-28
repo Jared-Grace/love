@@ -1,3 +1,4 @@
+import { js_call_named_find_index } from "./js_call_named_find_index.mjs";
 import { js_function_node_find_named_node } from "./js_function_node_find_named_node.mjs";
 import { js_find_call_name_includes } from "./js_find_call_name_includes.mjs";
 import { js_type_find } from "./js_type_find.mjs";
@@ -28,6 +29,7 @@ export function example_selectors() {
     js_type_find,
     js_find_call_name_includes,
     js_function_node_find_named_node,
+    js_call_named_find_index,
   };
   return selectors;
 }
