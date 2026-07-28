@@ -9,9 +9,9 @@ import { app_a } from "./app_a.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { lambda_get } from "./lambda_get.mjs";
-import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
+import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
-  let db = await app_a_indexeddb_initialize();
+  let db = await browser_files_database_initialize();
   let db_get = lambda_get(db);
   ("The server runs this one, so its name crosses the wire rather than the function itself.");
   ("Importing it to read a name told the import graph a page could reach git and the shell.");
