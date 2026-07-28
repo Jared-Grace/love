@@ -173,6 +173,8 @@ export function examples_notes() {
       "carrying one more field of a record through into a new one",
     example_call_index_argument_address:
       "reaching a record written straight into a call so that no name addresses it",
+    example_functionize_adds_file:
+      "extracting a span into a function that gets its own file",
   };
   return notes;
 }
