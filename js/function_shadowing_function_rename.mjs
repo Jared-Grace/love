@@ -1,3 +1,4 @@
+import { js_binding_names } from "./js_binding_names.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -38,6 +39,18 @@ export async function function_shadowing_function_rename(
   let taken = list_includes(free, name_after);
   not_assert_json(taken, {
     hint: "the file already reads that name, so the rename would run two different things together under one name — would you like a name nothing here uses?",
+    name_after,
+  });
+  ("Whether the file READS the name is not the question - whether it BINDS it");
+  ("anywhere is. A name bound in some inner scope is not free, so asking only");
+  ("about free names says yes to a word the file already uses for something else,");
+  ("and the rename lands a second binding on top of the first. That happened:");
+  ("renaming to a word an inner scope already bound produced a line declaring a");
+  ("name from a call to that same name, which throws the moment it runs.");
+  let bound = js_binding_names(ast);
+  let occupied = list_includes(bound, name_after);
+  not_assert_json(occupied, {
+    hint: "something in this file already binds that name, so the rename would put two different things under one word and hide one behind the other — would you like a name nothing here binds?",
     name_after,
   });
   ("A file that IMPORTS the word as well is refused. Renaming over the whole");
