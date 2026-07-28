@@ -1,7 +1,7 @@
-import { equal } from "./equal.mjs";
+import { function_name_app_try } from "./function_name_app_try.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { apps_names_prefixed } from "./apps_names_prefixed.mjs";
-import { function_name_family } from "./function_name_family.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
@@ -32,10 +32,9 @@ export async function app_shared_app_specific_imports() {
     }
     let imports = await function_imports(f_name);
     for (let imported of imports) {
-      let family = function_name_family(imported, app_names);
-      let app_is = family.startsWith("app_");
-      let shared_family_is = equal(family, "app_shared_");
-      if (app_is && not(shared_family_is)) {
+      let app = function_name_app_try(imported, app_names);
+      let owned_is = not_equal(app, "");
+      if (owned_is) {
         let pair = text_combine_multiple([f_name, " -> ", imported]);
         list_add(offenders, pair);
       }
