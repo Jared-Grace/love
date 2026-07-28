@@ -1,3 +1,7 @@
+import { list_map } from "./list_map.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { property_delete } from "./property_delete.mjs";
+import { and } from "./and.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -35,10 +39,34 @@ export async function literals_frozen_record_new() {
     property_set(recorded, f_name, value);
     list_add(added, f_name);
   }
-  let none = list_empty_is(added);
+  ("A name the code no longer has is dropped only when the value it held is one of the ones just recorded under a new name. That is what a rename looks like from here, and dropping it then keeps nothing from being watched: the published value still has a live owner in the record.");
+  ("A departure whose value did NOT arrive anywhere is left exactly where it is, so it goes on failing the gate. Renamed-and-changed-at-once is the edit that would otherwise slip through as two innocent halves, and refusing to touch it here is what makes this half unable to hide the thing the loud half exists for.");
+  function lambda(f_name) {
+    let value = property_get(values, f_name);
+    return value;
+  }
+  let arrived = list_map(added, lambda);
+  let dropped = [];
+  let known_names = Object.keys(recorded);
+  for (let f_name of known_names) {
+    let live = property_exists(values, f_name);
+    if (live) {
+      continue;
+    }
+    let was = property_get(recorded, f_name);
+    let carried = list_includes(arrived, was);
+    if (carried) {
+      property_delete(recorded, f_name);
+      list_add(dropped, f_name);
+    }
+  }
+  let nothing_added = list_empty_is(added);
+  let nothing_dropped = list_empty_is(dropped);
+  let none = and(nothing_added, nothing_dropped);
   if (none) {
     let nothing = {
       added,
+      dropped,
       wrote: false,
     };
     return nothing;
@@ -46,6 +74,7 @@ export async function literals_frozen_record_new() {
   await file_overwrite_json(path, recorded);
   let done = {
     added,
+    dropped,
     wrote: true,
   };
   return done;
