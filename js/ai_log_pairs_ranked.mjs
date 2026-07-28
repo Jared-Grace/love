@@ -2,13 +2,12 @@ import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { property_names } from "./property_names.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { negate } from "./negate.mjs";
 export function ai_log_pairs_ranked(entries) {
   "Which step follows which, counted, most often first - the reading that says what to compose next.";
   "One conversation at a time, because that is the difference between a habit and an accident. A dozen of these run at once and their lines interleave in the file, so read straight through, the step after any given one is usually a stranger's.";
@@ -36,7 +35,7 @@ export function ai_log_pairs_ranked(entries) {
     property_set(last, session, step);
   }
   let pairs = [];
-  let keys = property_names(counts);
+  let keys = Object.keys(counts);
   for (let key of keys) {
     let times = property_get(counts, key);
     list_add(pairs, {
@@ -46,7 +45,7 @@ export function ai_log_pairs_ranked(entries) {
   }
   function lambda_rank(record) {
     let times = property_get(record, "times");
-    let ordered = negate(times);
+    let ordered = subtract(0, times);
     return ordered;
   }
   list_sort_number_mapper(pairs, lambda_rank);
