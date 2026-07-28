@@ -1,3 +1,4 @@
+import { instructions_notes_gate_run } from "./instructions_notes_gate_run.mjs";
 import { claude_md_size_gate_run } from "./claude_md_size_gate_run.mjs";
 import { app_shared_imports_gate_run } from "./app_shared_imports_gate_run.mjs";
 import { functions_shadowing_function_gate_run } from "./functions_shadowing_function_gate_run.mjs";
@@ -130,6 +131,7 @@ export function qa_gates() {
     functions_unreachable_check_gate_run,
     app_shared_imports_gate_run,
     claude_md_size_gate_run,
+    instructions_notes_gate_run,
   ];
   return gates;
 }
