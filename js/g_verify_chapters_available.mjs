@@ -13,7 +13,7 @@ export async function g_verify_chapters_available() {
     return r;
   }
   function lambda(name) {
-    let r2 = name.endsWith(".json");
+    let r2 = name.endsWith(json_extension());
     return r2;
   }
   function lambda2(name) {
