@@ -1,3 +1,8 @@
+import { examples_corpus_read } from "./examples_corpus_read.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_concat } from "./list_concat.mjs";
 export async function examples_names_used() {
   "Every unit the corpus actually names — the verb each example runs and the address it runs it at";
   "Two gates ask the same question of this list from opposite sides: whether everything the corpus may reach is reached, and whether everything the instructions promise is reachable at all. The list itself is the same both times, so it is gathered once here.";
