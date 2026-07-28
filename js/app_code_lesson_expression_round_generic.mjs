@@ -27,6 +27,8 @@ export function app_code_lesson_expression_round_generic(params) {
   let ordinary_digits = property_get(params, "ordinary_digits");
   let extreme_digits = property_get(params, "extreme_digits");
   let introduce_whole_number = property_get(params, "introduce_whole_number");
+  let metaphor_render = property_get(params, "metaphor_render");
+  let trap_render = property_get(params, "trap_render");
   let direction = "down";
   let superlative = "smaller";
   let preposition = "below";
@@ -140,6 +142,8 @@ export function app_code_lesson_expression_round_generic(params) {
       chosen_whole = whole_up;
       other_whole = whole_text;
     }
+    let metaphor = app_code_container_light_blue(root);
+    metaphor_render(metaphor);
     let define = app_code_container_light_blue(root);
     html_div_cycle_code(define, ["", decimal, " is a decimal number"]);
     let no_decimal = html_div(define);
@@ -189,6 +193,7 @@ export function app_code_lesson_expression_round_generic(params) {
       called_name,
       gives_suffix,
     ]);
+    trap_render(rounds);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
       "",
