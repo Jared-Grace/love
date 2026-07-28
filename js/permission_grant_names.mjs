@@ -321,6 +321,7 @@ export function permission_grant_names() {
   let spelled318 = fn_name("ai_log_pairs_frequent");
   let spelled319 = fn_name("functions_replace");
   let spelled320 = fn_name("function_auto_checked");
+  let spelled321 = fn_name("function_auto_multiple_checked");
   let names = [
     spelled,
     spelled2,
@@ -642,6 +643,7 @@ export function permission_grant_names() {
     spelled318,
     spelled319,
     spelled320,
+    spelled321,
   ];
   return names;
 }
