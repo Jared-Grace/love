@@ -197,7 +197,7 @@ export async function app_a_function(context) {
       fn: screen_choose(app_a_history),
     },
   ];
-  let e = storage_session_exists(app_a, "app_selected");
+  let e = storage_session_exists(app_a, app_a_app_selected_key());
   if (e) {
     list_add(choices, preview_app);
   }
