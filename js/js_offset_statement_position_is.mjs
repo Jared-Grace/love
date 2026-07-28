@@ -1,3 +1,10 @@
+import { property_get } from "./property_get.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_visit_nodes } from "./js_visit_nodes.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 export function js_offset_statement_position_is(ast, offset) {
   "Whether a statement could stand at a place in the source. Most of a file is not such a place: between the entries of a written-out record, between the items of a list, among the arguments of a call, a statement is not something the language allows at all, and putting one there does not make a worse file - it makes a file that no longer parses.";
   "The innermost thing holding the place is what decides it, so that is what this looks for - the deepest node whose span covers the offset. Only the few kinds that hold a run of statements can take another one: the file itself, a block, the body of a class, an arm of a switch.";

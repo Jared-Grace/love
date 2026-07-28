@@ -1,3 +1,4 @@
+import { js_shorthand_properties_expand } from "./js_shorthand_properties_expand.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not_assert_json } from "./not_assert_json.mjs";
 import { object_replace } from "./object_replace.mjs";
