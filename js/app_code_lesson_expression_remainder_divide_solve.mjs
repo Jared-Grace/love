@@ -22,10 +22,8 @@ export function app_code_lesson_expression_remainder_divide_solve() {
   function make(divisor) {
     "the full remainder formula dividend - Math.floor(dividend / divisor) * divisor for the given divisor; the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division is uneven and the formula works out to that leftover - the remainder";
     let quotient = integer_random(2, 3);
-    let max = subtract(divisor, 1);
-    let leftover = integer_random(1, max);
-    let left = multiply(quotient, divisor);
-    let dividend = add(left, leftover);
+    let parts = app_code_uneven_dividend(quotient, divisor);
+    let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let t = text_to(divisor);
     let whole_part = text_combine_multiple([
