@@ -41,7 +41,7 @@ Two rules keep this from backfiring:
 **One test decides whether to speak: is progress blocked, and can you unblock yourself?** Only when both fail is it the human's.
 
 - **"Progress" means toward the goal, not motion.** Work that isn't valuable isn't progress, so drifting into busywork counts as blocked — even though nothing stopped you.
-- **"Blocked" is not the same as uninformed.** Read the file, run the search, fix the red gate, take the next `work_options` item. A gate you can fix yourself was never the human's business.
+- **"Blocked" is not the same as uninformed.** Read the file, run the search, fix the red gate. A gate you can fix yourself was never the human's business.
 
 That one test absorbs the whole usual list: a decision genuinely theirs, a peer collision you can't reconcile, work you can't do correctly or safely, scope you can't deliver.
 
