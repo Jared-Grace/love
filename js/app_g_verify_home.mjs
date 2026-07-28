@@ -1,3 +1,8 @@
+import { app_g_verify_book_label_font_size } from "./app_g_verify_book_label_font_size.mjs";
+import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
+import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
+import { app_g_verify_banner_font_size } from "./app_g_verify_banner_font_size.mjs";
+import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { api_read } from "./api_read.mjs";
 import { subtract } from "./subtract.mjs";
@@ -170,7 +175,8 @@ export async function app_g_verify_home(context) {
       let text2 = g_verify_book_name(book);
       let book_label = html_p_text(row, text2);
       app_shared_text_deemphasized(book_label);
-      html_style_font_size(book_label, "0.85em");
+      let value6 = app_g_verify_book_label_font_size();
+      html_style_font_size(book_label, value6);
       html_margin_em(book_label, "0");
       function lambda4(code) {
         let v4 = code.slice(3);
@@ -201,7 +207,8 @@ export async function app_g_verify_home(context) {
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     let value2 = app_shared_font_serif();
     html_font_set(title, value2);
-    html_style_font_size(title, "1.5em");
+    let value7 = app_g_verify_title_font_size();
+    html_style_font_size(title, value7);
     html_bold_semi(title);
     html_margin_em(title, "0");
     let hint = html_p_text(
@@ -209,7 +216,8 @@ export async function app_g_verify_home(context) {
       "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
     );
     app_shared_text_deemphasized(hint);
-    html_style_font_size(hint, "0.9em");
+    let value8 = app_g_verify_hint_font_size();
+    html_style_font_size(hint, value8);
     html_margin_em(hint, "0");
     if (busy) {
       let note = property_get(status, "note");
@@ -229,7 +237,8 @@ export async function app_g_verify_home(context) {
       html_margin_em(banner, "0");
       let value3 = app_shared_spaced_small_gap();
       html_style_margin_top(banner, value3);
-      html_style_font_size(banner, "0.95em");
+      let value9 = app_g_verify_banner_font_size();
+      html_style_font_size(banner, value9);
     }
     let view = null;
     let verse_buttons = {};
@@ -268,7 +277,8 @@ export async function app_g_verify_home(context) {
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
       app_shared_text_deemphasized(msg);
-      html_style_font_size(msg, "1.1em");
+      let value10 = app_g_verify_waiting_font_size();
+      html_style_font_size(msg, value10);
       html_style_margin_top(msg, "1em");
     }
     let bar = html_div_centered(wrap);
