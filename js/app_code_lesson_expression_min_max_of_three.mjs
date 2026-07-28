@@ -1,3 +1,5 @@
+import { html_div } from "./html_div.mjs";
+import { html_bold } from "./html_bold.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -116,6 +118,10 @@ export function app_code_lesson_expression_min_max_of_three() {
     let largest = math_max(ab_max, c);
     let smallest_text = text_to(smallest);
     let largest_text = text_to(largest);
+    let ta = text_to(a);
+    let tb = text_to(b);
+    let tc = text_to(c);
+    let nums_text = text_combine_multiple([ta, ", ", tb, ", ", tc]);
     let v_min = code("Math.min", a, b, c);
     let v_max = code("Math.max", a, b, c);
     let define = app_code_container_light_blue(root);
@@ -127,18 +133,22 @@ export function app_code_lesson_expression_min_max_of_three() {
       " can receive more than two numbers",
     ]);
     let min_box = app_code_container_light_blue(root);
-    html_div_cycle_code(min_box, ["", v_min, " is ", smallest_text]);
-    html_div_cycle_code(min_box, [
-      "",
-      smallest_text,
-      " is the smallest of the three",
-    ]);
+    let min_line = html_div(min_box);
+    html_span_text_code_dark(min_line, smallest_text);
+    html_span_text(min_line, " is the smallest (the ");
+    let min_term = html_span_text(min_line, "min");
+    html_bold(min_term);
+    html_span_text(min_line, "imum) of ");
+    html_span_text_code_dark(min_line, nums_text);
+    html_div_cycle_code(min_box, ["So ", v_min, " is ", smallest_text]);
     let max_box = app_code_container_light_blue(root);
-    html_div_cycle_code(max_box, ["", v_max, " is ", largest_text]);
-    html_div_cycle_code(max_box, [
-      "",
-      largest_text,
-      " is the largest of the three",
-    ]);
+    let max_line = html_div(max_box);
+    html_span_text_code_dark(max_line, largest_text);
+    html_span_text(max_line, " is the largest (the ");
+    let max_term = html_span_text(max_line, "max");
+    html_bold(max_term);
+    html_span_text(max_line, "imum) of ");
+    html_span_text_code_dark(max_line, nums_text);
+    html_div_cycle_code(max_box, ["So ", v_max, " is ", largest_text]);
   }
 }
