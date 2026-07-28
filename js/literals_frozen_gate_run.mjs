@@ -27,6 +27,7 @@ export async function literals_frozen_gate_run() {
   let names = list_concat_unique(a, b);
   ("A name the record has never held is told apart from one whose value has moved, because only the second is the thing described above. Counting them together made adding a frozen constant fail as though a published value had changed under it - the case this says in its own words it is not watching - and the repair offered was the heavy command, so a rare and deliberate act was being asked for every time somebody named a new one.");
   let fresh = [];
+  let gone = [];
   let moved = [];
   for (let f_name of names) {
     let was = property_or_null(recorded, f_name);
@@ -39,12 +40,36 @@ export async function literals_frozen_gate_run() {
         list_add(fresh, f_name);
         continue;
       }
+      ("A name the code no longer has is the mirror of the one above and just as harmless on its own: the name moved and the value stood still, where the danger is the value moving and the name standing still. Renaming a frozen constant makes BOTH at once - the old name leaves and the new one arrives carrying the same value - and until this the leaving half was read as a value that had vanished, which is the loud branch. So renaming two of them cost the heavy command twice for a change that published nothing new.");
+      let departed = not(property_exists(now, f_name));
+      if (departed) {
+        list_add(gone, f_name);
+        continue;
+      }
       list_add(moved, {
         f_name,
         was,
         is,
       });
     }
+  }
+  ("What keeps that from becoming a hole: a name may only leave quietly if the value it held has ARRIVED somewhere else in the same breath. Renamed and changed at once - the old name gone, the new one carrying a different value - would otherwise be two harmless-looking halves adding up to exactly the edit this exists to catch, so a departure whose value is nowhere among the arrivals stays loud.");
+  let arrived = list_map(fresh, function lambda(f_name) {
+    let value = property_get(now, f_name);
+    return value;
+  });
+  let orphaned = list_filter(gone, function lambda2(f_name) {
+    let was = property_get(recorded, f_name);
+    let carried = list_includes(arrived, was);
+    return not(carried);
+  });
+  for (let f_name of orphaned) {
+    list_remove(gone, f_name);
+    list_add(moved, {
+      f_name,
+      was: property_get(recorded, f_name),
+      is: null,
+    });
   }
   ("Both still fail, because a record missing a name cannot catch that name's value moving later - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names.");
   list_empty_is_assert_json(moved, {
