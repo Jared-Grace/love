@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { examples_paths } from "./examples_paths.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
@@ -9,4 +10,12 @@ export async function examples_comments_none_gate_run() {
   let paths = await examples_paths();
   let parseds = await list_map_unordered_async(paths, file_js_parse);
   examples_comments_none_assert(parseds);
+  ("Says how much it looked at, because a gate that answers nothing cannot be");
+  ("told apart from one that did nothing. Both leave the same empty line, and the");
+  ("reader is left inferring a pass from the absence of a complaint.");
+  let r = {
+    files: list_size(paths),
+    commented: 0,
+  };
+  return r;
 }
