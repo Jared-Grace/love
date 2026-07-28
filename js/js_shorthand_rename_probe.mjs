@@ -1,9 +1,9 @@
 export function js_shorthand_rename_probe() {
-  "A throwaway used to reproduce the shorthand-key rename bug, deleted once it has.";
-  let mark_name = 1;
+  ("A throwaway used to reproduce the shorthand-key rename bug, deleted once it has.");
+  let marker = 1;
   let reader = 2;
   let out = {
-    mark_name,
+    marker,
     missing: reader,
   };
   return out;
