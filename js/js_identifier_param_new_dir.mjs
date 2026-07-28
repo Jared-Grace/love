@@ -14,12 +14,12 @@ import { list_add } from "./list_add.mjs";
 ("sandbox-testable heart of the repo-wide param-add tool.");
 export async function js_identifier_param_new_dir(
   dir,
-  fn_name,
+  f_name,
   param_name,
   default_value,
 ) {
   let files = await folder_read_files(dir);
-  let def_file = text_combine_multiple([fn_name, ".mjs"]);
+  let def_file = text_combine_multiple([f_name, ".mjs"]);
   async function transform_file(file) {
     let f_path = path_join([dir, file]);
     function edit(ast) {
@@ -30,7 +30,7 @@ export async function js_identifier_param_new_dir(
         let expression = js_parse_expression(default_value);
         list_add(args, expression);
       }
-      js_visit_calls_named(ast, fn_name, on_call);
+      js_visit_calls_named(ast, f_name, on_call);
     }
     await file_js_transform(f_path, edit);
   }
