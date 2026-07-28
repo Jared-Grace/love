@@ -703,6 +703,8 @@ VAR_PREFIX_RE = re.compile(r"^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?(.*)$")
 
 BRACED_VAR_RE = re.compile(r"\{[A-Za-z_][A-Za-z0-9_]*\}")
 
+BRACE_LIST_RE = re.compile(r"\{[A-Za-z0-9_.+/-]*,[A-Za-z0-9_.,+/-]*\}")
+
 
 def _redirect_target_unquoted(path):
     """A redirect target with its surrounding DOUBLE quotes taken off, so
@@ -909,6 +911,28 @@ def tokenize(command, subst_validator=None, outer_vars=None):
             # reads `${VAR}` when resolving a redirect target - the tokenizer
             # was rejecting the word before that resolver ever saw it.
             m = BRACED_VAR_RE.match(command, i)
+            if m:
+                word.append(m.group(0))
+                i = m.end()
+                continue
+        if c == "{":
+            # Brace expansion over a comma list - `js/a_{one,two}.mjs` names
+            # a chosen few out of a family of sibling files. It is the only
+            # way to say that: a glob takes the whole family, and spelling
+            # every path out is the same words with the shared prefix
+            # repeated, which is what the braces exist to stop.
+            #
+            # Accepted only when every character between the braces is
+            # word-safe and at least one comma is present, so what stands
+            # here is provably nothing but text bash will hand back as more
+            # words. That single rule excludes the two shapes that matter:
+            # `{ ls; }` is a GROUP COMMAND and needs whitespace after the
+            # brace and a `;` before the close, neither of which is in the
+            # charset; and `{a,$(cmd)}` would smuggle a substitution past a
+            # tokenizer that swallowed brace contents whole, so `$` and the
+            # backtick are out too. A `..` range carries no comma and stays
+            # refused - inert as well, but nothing here has needed one.
+            m = BRACE_LIST_RE.match(command, i)
             if m:
                 word.append(m.group(0))
                 i = m.end()
