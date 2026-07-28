@@ -1,1 +1,54 @@
-export function function_shadowing_function_rename() {}
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { function_identifier_replace } from "./function_identifier_replace.mjs";
+import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
+import { js_free_names } from "./js_free_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not_assert_json } from "./not_assert_json.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { property_get } from "./property_get.mjs";
+export async function function_shadowing_function_rename(
+  f_name,
+  name,
+  name_after,
+) {
+  arguments_assert(arguments, 3);
+  ("Clear the OTHER kind of hiding: a name bound at the function's own level over");
+  ("a repo function of that name, so that function stops meaning itself anywhere");
+  ("in the file. There is no inner binding to move here - the thing being hidden");
+  ("is not a line above, it is the whole repo - so the rename is over the whole");
+  ("function rather than one scope inside it.");
+  ("The twin beside this one covers the inner kind, and the two are kept apart on");
+  ("purpose: each refuses what the other is for, so neither can quietly do a job");
+  ("it was not written for and report success.");
+  ("The guards are the twin's guards, asked again here because they belong to the");
+  ("edit and not to either implementation of it.");
+  let candidates = await functions_names();
+  let clash = list_includes(candidates, name_after);
+  not_assert_json(clash, {
+    hint: "that name belongs to a repo function, so the file would hide that one instead — would a plainer local name do?",
+    name_after,
+  });
+  let parsed = await function_parse_declaration(f_name);
+  let ast = property_get(parsed, "ast");
+  let free = js_free_names(ast);
+  let taken = list_includes(free, name_after);
+  not_assert_json(taken, {
+    hint: "the file already reads that name, so the rename would run two different things together under one name — would you like a name nothing here uses?",
+    name_after,
+  });
+  ("A file that hides the word INSIDE itself as well is refused rather than");
+  ("guessed at: renaming over the whole function would move an inner binding the");
+  ("caller never named, which is a different edit from the one being asked for.");
+  let scopes = js_scopes_shadowing(ast, name);
+  let none = list_empty_is(scopes);
+  assert_json(none, {
+    hint: "something inside this file hides that word too, so a whole-function rename would move a binding nobody named — would you like the inner rename instead?",
+    name,
+    scopes: scopes.length,
+  });
+  let r = await function_identifier_replace(f_name, name, name_after);
+  return r;
+}
