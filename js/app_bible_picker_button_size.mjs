@@ -1,3 +1,4 @@
+import { app_bible_picker_standard_pad_x } from "./app_bible_picker_standard_pad_x.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 export function app_bible_picker_button_size(count) {
   "choose a tap-target size from how many choices there are: a set small enough to fit on one screen has no scrolling cost, so make every target big and easy to tap; past that cutoff fall back to the standard size so a long list like Psalms' 150 chapters does not force endless scrolling";
@@ -16,7 +17,7 @@ export function app_bible_picker_button_size(count) {
   }
   let standard = {
     font: "1.15em",
-    pad_x: "0.85em",
+    pad_x: app_bible_picker_standard_pad_x(),
     pad_y: "0.4em",
     margin_x: "0.12em",
     margin_y: "0.28em",
