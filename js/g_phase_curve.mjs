@@ -15,9 +15,9 @@ export function g_phase_curve(phase) {
   let night = g_night_curve();
   let last = subtract(list_size(night), 1);
   function point(value, index) {
-    let identity = divide(index, last);
-    let delta = subtract(value, identity);
-    let mixed = add(identity, multiply(delta, darkness));
+    let ramp = divide(index, last);
+    let delta = subtract(value, ramp);
+    let mixed = add(ramp, multiply(delta, darkness));
     return mixed;
   }
   let values = list_map_index(night, point);
