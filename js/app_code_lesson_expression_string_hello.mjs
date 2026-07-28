@@ -80,6 +80,8 @@ export function app_code_lesson_expression_string_hello() {
     let color = app_code_string_value_color_on_light();
     html_font_color_set(value_term, color);
     html_span_text(concept, " is what's between the quotes");
+    html_span_text(concept, " ");
+    app_code_string_value_shape(concept);
     let example = html_div(define);
     html_span_text(example, "For example, the ");
     let value_word = html_span_text(example, "value");
