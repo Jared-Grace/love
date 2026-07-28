@@ -24,7 +24,9 @@ export function app_g_pray_turn(prayer_texts, on_done) {
   let overlay = app_g_prayer_menu_overlay();
   let chosen = petitions_choose(prayer_texts);
   function make_item(petition) {
-    let item = { text: g_prayer_petition(petition) };
+    let item = {
+      text: g_prayer_petition(petition),
+    };
     return item;
   }
   let remaining = list_map(chosen, make_item);
@@ -38,7 +40,7 @@ export function app_g_pray_turn(prayer_texts, on_done) {
     }
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What would you like to pray to God?");
-    function add(item) {
+    function add_item(item) {
       let text = property_get(item, "text");
       let label = text_combine_multiple([emoji_pray(), " ", text]);
       function on_pick() {
@@ -51,7 +53,7 @@ export function app_g_pray_turn(prayer_texts, on_done) {
       }
       app_g_button_green(container, label, on_pick);
     }
-    each(remaining, add);
+    each(remaining, add_item);
   }
   render();
   return overlay;

@@ -9,6 +9,6 @@ export function app_code_row_flex_center(parent) {
   html_display_flex(row);
   html_align_items_center(row);
   html_style_set(row, "flex-wrap", "wrap");
-  html_style_gap(row, "0.25em");
+  html_style_gap(row, app_shared_spaced_tiny_gap());
   return row;
 }
