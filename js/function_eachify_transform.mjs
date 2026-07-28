@@ -14,11 +14,11 @@ import { js_code_await } from "./js_code_await.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 export async function function_eachify_transform(
-  fn_name,
+  f_name,
   each_name_get,
   f_name_multiple_get,
 ) {
-  let u = await function_parse_declaration_unaliased(fn_name);
+  let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
   let arg_names = js_function_declaration_params_names(declaration_call);
