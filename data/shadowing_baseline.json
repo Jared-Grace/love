@@ -667,13 +667,6 @@
    "shadows_function": []
   },
   {
-   "name": "file_exists",
-   "shadows_outer": [
-    "exists"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "folder_read_browser",
    "shadows_outer": [
     "r"
@@ -717,13 +710,6 @@
    ]
   },
   {
-   "name": "function_exists_inner",
-   "shadows_outer": [
-    "exists"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "function_github_url",
    "shadows_outer": [],
    "shadows_function": [
@@ -740,7 +726,6 @@
   {
    "name": "function_name_to_path_search",
    "shadows_outer": [
-    "exists",
     "mapped"
    ],
    "shadows_function": []
@@ -1165,20 +1150,6 @@
    ]
   },
   {
-   "name": "list_replace_all",
-   "shadows_outer": [],
-   "shadows_function": [
-    "list_new"
-   ]
-  },
-  {
-   "name": "lists_equal_pair",
-   "shadows_outer": [],
-   "shadows_function": [
-    "equal"
-   ]
-  },
-  {
    "name": "machine_resumes_past_day",
    "shadows_outer": [
     "stdout",
@@ -1276,13 +1247,6 @@
     "result"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "text_identifier_char_is",
-   "shadows_outer": [],
-   "shadows_function": [
-    "digits"
-   ]
   },
   {
    "name": "text_to_uuid_cache",
