@@ -35,10 +35,13 @@ export function app_code_lesson_expression_remainder_subtract() {
     "the remainder worked out as repeated subtraction - subtract_code(17, 5, 3) is 17 - 5 - 5 - 5: the number, then the divisor taken away count times";
     let minus = js_operator_minus_symbol();
     function divisor_text(index) {
-      return text_to(divisor);
+      let t = text_to(divisor);
+      return t;
     }
-    let subtractions = list_map(range(count), divisor_text);
-    let terms = list_concat_single(text_to(number), subtractions);
+    let list = range(count);
+    let subtractions = list_map(list, divisor_text);
+    let single = text_to(number);
+    let terms = list_concat_single(single, subtractions);
     let separator = text_combine_multiple([" ", minus, " "]);
     let chain = list_join(terms, separator);
     return chain;
@@ -48,8 +51,10 @@ export function app_code_lesson_expression_remainder_subtract() {
     let divisors = list_shuffle_take([3, 4, 5, 6], 4);
     function to_pair(divisor) {
       let count = integer_random(2, 3);
-      let leftover = integer_random(1, subtract(divisor, 1));
-      let number = add(multiply(count, divisor), leftover);
+      let max = subtract(divisor, 1);
+      let leftover = integer_random(1, max);
+      let left = multiply(count, divisor);
+      let number = add(left, leftover);
       let question = js_code_binary_spaced_nb(number, percent, divisor);
       let answer = subtract_code(number, divisor, count);
       let pair = {
@@ -118,25 +123,22 @@ export function app_code_lesson_expression_remainder_subtract() {
       "What if you keep subtracting the same number until you can not take it away again?",
     ]);
     let work = app_code_container_light_blue(root);
+    html_div_cycle_code(work, ["", "17 - 5 - 5 - 5", " leaves ", "2"]);
+    html_div_cycle_code(work, [
+      "Four ",
+      "5",
+      "s would be too many: ",
+      "17 - 5 - 5 - 5 - 5",
+      " is ",
+      "-3",
+    ]);
     html_div_cycle_code(work, [
       "",
-      "17 - 5 - 5 - 5",
-      " leaves ",
-      "2",
-    ]);
-    html_div_cycle_code(work, [
-      "We stop because ",
-      "2",
-      " is smaller than ",
+      "-3",
+      " is below zero, so three ",
       "5",
+      "s is the most we can subtract",
     ]);
-    html_div_cycle_code(work, [
-      "If we subtracted ",
-      "5",
-      " again we would have ",
-      "2 - 5 === -3",
-    ]);
-    html_div_cycle_code(work, ["We do not want to go below zero"]);
     let result = app_code_container_light_blue(root);
     html_div_cycle_code(result, [
       "So ",
