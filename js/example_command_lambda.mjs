@@ -74,6 +74,10 @@ export function example_command_lambda(fn_name, args, e) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }
+  if (equal(fn_name, js_shadowing_rename.name)) {
+    let lambda23 = js_shadowing_rename_lambda(args[0], args[1]);
+    return lambda23;
+  }
   if (equal(fn_name, file_imports_repair.name)) {
     let lambda3 = example_imports_lambda();
     return lambda3;

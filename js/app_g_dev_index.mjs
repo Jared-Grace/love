@@ -61,8 +61,14 @@ export function app_g_dev_index() {
   let all = list_concat(names, ["reset", "index"]);
   let prefixes = app_g_dev_index_prefixes();
   let tree = app_g_dev_index_tree(all, prefixes);
-  function leaf_card(parent, label, hash) {
+  function index_card(parent) {
+    "a search-style blue card, but with the shared 10px margin-y overridden to a TIGHTER 0.15rem so the #index choices sit close together (the search results want the room; a dev directory does not)";
     let card = app_shared_container_blue(parent);
+    html_style_margin_y(card, "0.15rem");
+    return card;
+  }
+  function leaf_card(parent, label, hash) {
+    let card = index_card(parent);
     let href = "#" + hash;
     let link = html_a_href_text(card, href, label);
     html_display_block(link);
@@ -78,7 +84,7 @@ export function app_g_dev_index() {
       leaf_card(parent, label, node.hash);
       return;
     }
-    let card = app_shared_container_blue(parent);
+    let card = index_card(parent);
     let header = html_div_text_bold(card, label + " ›");
     html_cursor_pointer(header);
     let body = html_div(card);

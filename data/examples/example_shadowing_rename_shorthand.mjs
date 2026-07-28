@@ -1,25 +1,22 @@
-import { function_shadowing_rename } from "../../js/function_shadowing_rename.mjs";
+import { js_shadowing_rename } from "../../js/js_shadowing_rename.mjs";
 export const example = {
-  fn: function_shadowing_rename.name,
-  args: ["f", "exists", "present"],
-  kind: "files",
+  fn: js_shadowing_rename.name,
+  args: ["exists", "present"],
+  kind: "transform",
   title: "End a hiding without renaming what a record is called",
   note: [
-    { fn: function_shadowing_rename.name },
+    { fn: js_shadowing_rename.name },
     " gives the inner ",
     { code: "exists" },
-    " a name of its own. The outer one, and every line reading it, stay exactly as they were — that is what makes ending a hiding behaviour-preserving even when the hiding was the bug.",
-    " The case worth pinning is the record: ",
+    " a name of its own. The outer one, and every line reading it, are left exactly as they were — which is what makes ending a hiding behaviour-preserving even when the hiding was the bug.",
+    " The case worth pinning is the record. ",
     { code: "{ exists, item }" },
-    " is one identifier serving as BOTH the key and the value, so a rename that walked straight through it would change the key as well, and a reader elsewhere asking for ",
+    " is a single identifier serving as BOTH the key and the value, so a rename walking straight through it would change the key too, and a reader elsewhere asking for ",
     { code: "exists" },
-    " would quietly get nothing. So the entry is written out in full first and the key is kept.",
-    " It fails silently or not at all, which is why it is a case here rather than a thing to remember.",
+    " would quietly get nothing back. So the entry is written out in full first and the key is kept.",
+    " That failure is silent and the code still runs, which is why it is a case here rather than something to remember.",
   ],
-  before: [
-    {
-      name: "f.mjs",
-      source: `export function f(items) {
+  before: `export function f(items) {
   let exists = false;
   function lambda(item) {
     let exists = true;
@@ -29,27 +26,14 @@ export const example = {
   let both = { exists, items };
   return both;
 }`,
-    },
-  ],
-  after: [
-    {
-      name: "f.mjs",
-      source: `export function f(items) {
+  after: `export function f(items) {
   let exists = false;
   function lambda(item) {
     let present = true;
-    let record = {
-      exists: present,
-      item
-    };
+    let record = { exists: present, item };
     return record;
   }
-  let both = {
-    exists,
-    items
-  };
+  let both = { exists, items };
   return both;
 }`,
-    },
-  ],
 };
