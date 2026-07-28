@@ -1005,13 +1005,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_code_comments_migrated",
-   "shadows_outer": [
-    "own"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_comments_left_count",
    "shadows_outer": [
     "left"
