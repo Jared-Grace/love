@@ -21,9 +21,9 @@ export async function function_dependencies_code_export(f_name) {
         type: "text/javascript",
       });
       let url = URL.createObjectURL(blob);
-      let mod = await import(url);
-      let fn = property_get(mod, f_name);
-      let global = property_get(mod, gn);
+      let module_read = await import(url);
+      let fn = property_get(module_read, f_name);
+      let global = property_get(module_read, gn);
       let v3 = {
         fn,
         global,
