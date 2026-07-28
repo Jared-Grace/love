@@ -1,9 +1,10 @@
+import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -37,14 +38,16 @@ export function app_code_lesson_expression_whole_part_both() {
     let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let whole_part = property_get(parts, "whole_part");
-    return {
+    let r = {
       question: division,
       answer: text_to(whole_part),
     };
+    return r;
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 division (whose whole part is 0)";
-    return app_code_lesson_divisor_quotient_batch(make);
+    let list2 = app_code_lesson_divisor_quotient_batch(make);
+    return list2;
   }
   function decoys(question, answer) {
     "tempting partial answers: the QUOTIENT (Math.floor(a / b) - rounded down but forgot to multiply by the divisor), the REMAINDER (a - whole part), and the raw decimal a / b when it is short and clean (skipped when it repeats, like 2 / 3)";
@@ -52,8 +55,11 @@ export function app_code_lesson_expression_whole_part_both() {
     let dividend = list_get(nums, 0);
     let divisor = list_get(nums, 1);
     let list = [];
-    list_add(list, floor(divide(dividend, divisor)));
-    list_add(list, subtract(dividend, answer));
+    let p = divide(dividend, divisor);
+    let item = floor(p);
+    list_add(list, item);
+    let item2 = subtract(dividend, answer);
+    list_add(list, item2);
     let raw = divide(dividend, divisor);
     let raw_text = text_to(raw);
     let clean = text_regex_match(raw_text, /^[0-9]+(\.[0-9]{1,3})?$/);
@@ -68,13 +74,16 @@ export function app_code_lesson_expression_whole_part_both() {
     let whole_part = list_get(nums, 0);
     let zero = equal(whole_part, 0);
     if (zero) {
-      return [];
+      let r2 = [];
+      return r2;
     }
-    let quotient_dividend = add(multiply(2, whole_part), 1);
+    let left = multiply(2, whole_part);
+    let quotient_dividend = add(left, 1);
     let quotient_trap = js_code_binary_spaced_nb(quotient_dividend, "/", 2);
     let value_dividend = multiply(3, whole_part);
     let value_trap = js_code_binary_spaced_nb(value_dividend, "/", 3);
-    return [quotient_trap, value_trap];
+    let r3 = [quotient_trap, value_trap];
+    return r3;
   }
   let example_answer_label = "Whole part: ";
   let example_question_label = app_code_label_code_question();
@@ -183,6 +192,11 @@ export function app_code_lesson_expression_whole_part_both() {
       " is ",
       "12",
     ]);
-    html_div_cycle_code(steps, ["So the whole part of ", "14 / 4", " is ", "12"]);
+    html_div_cycle_code(steps, [
+      "So the whole part of ",
+      "14 / 4",
+      " is ",
+      "12",
+    ]);
   }
 }
