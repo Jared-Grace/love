@@ -30,4 +30,12 @@ export async function html_style_literal_gate_run() {
   list_empty_is_assert_json(names, {
     hint: functions_html_style_literals_migrate.name,
   });
+  ("Says how much it looked at, because a gate that answers nothing cannot be");
+  ("told apart from one that did nothing. Both leave the same empty line, and the");
+  ("reader is left inferring a pass from the absence of a complaint.");
+  let r = {
+    checked: list_size(entries),
+    offenders: 0,
+  };
+  return r;
 }
