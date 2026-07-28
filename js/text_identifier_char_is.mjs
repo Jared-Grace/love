@@ -5,9 +5,9 @@ import { text_includes } from "./text_includes.mjs";
 export function text_identifier_char_is(character) {
   let lower = text_alphabet_lower();
   let upper = text_alphabet_upper();
-  let digits = "0123456789";
+  let digit_chars = "0123456789";
   let symbols = "_$";
-  let chars = text_combine_multiple([lower, upper, digits, symbols]);
+  let chars = text_combine_multiple([lower, upper, digit_chars, symbols]);
   let i = text_includes(chars, character);
   return i;
 }
