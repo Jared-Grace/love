@@ -1,3 +1,4 @@
+import { app_replace_proof_arrow_font_size } from "./app_replace_proof_arrow_font_size.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { html_div } from "./html_div.mjs";
@@ -32,7 +33,8 @@ export function app_replace_rule_set_proof_connector(
   let text2 = text_arrow_down();
   let arrow = html_span_text(connector, text2);
   html_bold(arrow);
-  html_style_font_size(arrow, app_replace_proof_arrow_font_size());
+  let value = app_replace_proof_arrow_font_size();
+  html_style_font_size(arrow, value);
   let rule_side = html_div(connector);
   html_style_flex(rule_side, "1");
   html_style_set(rule_side, "padding-left", gap);
