@@ -69,10 +69,10 @@ export async function webpack_watch() {
     let a_name = property_get(ad, "a_name");
     return a_name;
   }
-  function affected_get(fn_name) {
+  function affected_get(f_name) {
     function lambda(ad) {
       let deps = property_get(ad, "deps");
-      let match = deps.includes(fn_name);
+      let match = deps.includes(f_name);
       return match;
     }
     let matched = list_filter(app_deps, lambda);
@@ -148,8 +148,8 @@ export async function webpack_watch() {
     property_set(pending, a_name, t);
   }
   function on_change(path) {
-    let fn_name = path_name(path);
-    let affected = affected_get(fn_name);
+    let f_name = path_name(path);
+    let affected = affected_get(f_name);
     list_map(affected, build_schedule);
   }
   watcher.on("change", on_change).on("add", on_change);
