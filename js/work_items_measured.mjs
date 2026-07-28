@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { literals_frozen_names } from "./literals_frozen_names.mjs";
 import { literal_duplicates_unambiguous } from "./literal_duplicates_unambiguous.mjs";
 import { less_than } from "./less_than.mjs";
 import { memory_orphans } from "./memory_orphans.mjs";
@@ -30,7 +32,11 @@ export async function work_items_measured() {
     duplicates.length,
     "Duplicated constants",
     "A constant with a getter that other files still spell literally has one name and many copies, so changing it changes only some of them.",
-    "Take the widest one and read the means field beside its files before touching anything: it says what each file is using the spelling for - the setting it is given to or the function it is handed to - and the count is of files holding the literal, not of sites meaning the constant. Route the sites that mean what the getter means, leave the ones that only happen to equal it - a margin routed through a border-radius getter follows it the next time somebody changes a corner - and say which were left and why. A site whose nearest getter holds a near-miss value is a question for the human rather than a refactor, since routing it there would change what is drawn.",
+    text_combine_multiple([
+      "Merge them, and do not stop first to judge whether the two files mean the same thing by it. That cannot be known yet: two spellings look like a coincidence or a convergence only once something forces them apart, and the forcing is the answer rather than the guess made months before it. The means field beside each file says what the spelling is being used for, which is worth reading to understand the code, not to decide whether to merge. When a site does later need a different value, never change the value in the function it shares: rename that function if a clearer name helps, write a second one holding the new value, and move the sites over one at a time. The old function keeps its old value, so nothing already written moves and the split costs nothing. The single exception is a value that has already left this repo - a key in somebody's browser storage, a word in a bookmarked address - which cannot be split after the fact because the data is on disks nobody here can reach; those are named in ",
+      literals_frozen_names.name,
+      " and a gate refuses an in-place change to one.",
+    ]),
   );
   return items;
 }

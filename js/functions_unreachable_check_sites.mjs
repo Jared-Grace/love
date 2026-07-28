@@ -1,4 +1,5 @@
-import { js_call_of_named } from "./js_call_of_named.mjs";
+import { functions_refusing_finders } from "./functions_refusing_finders.mjs";
+import { js_call_of_any_named } from "./js_call_of_any_named.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_list_type } from "./js_list_type.mjs";
@@ -7,7 +8,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_find } from "./list_find.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -22,6 +22,7 @@ export async function functions_unreachable_check_sites() {
   "twin that carries the caller's words into the finding is what was missing;";
   "with that written, this stays at zero.";
   let checkers = [assert_json.name, null_is.name, not.name];
+  let finders = functions_refusing_finders();
   let f_names = await repo_functions_names("love");
   let sites = [];
   for (let f_name of f_names) {
@@ -32,7 +33,7 @@ export async function functions_unreachable_check_sites() {
     for (let v of declarators) {
       let node = property_get(v, "node");
       let init = property_get_or_null(node, "init");
-      let called = js_call_of_named(init, list_find.name);
+      let called = js_call_of_any_named(init, finders);
       if (called) {
         let id = property_get_or_null(node, "id");
         let name = property_get_or_null(id, "name");
