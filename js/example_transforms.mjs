@@ -1,3 +1,4 @@
+import { js_declaration_call_set } from "./js_declaration_call_set.mjs";
 import { js_block_prose_add } from "./js_block_prose_add.mjs";
 import { js_statement_wrap_guard } from "./js_statement_wrap_guard.mjs";
 import { js_object_property_getter_set } from "./js_object_property_getter_set.mjs";
@@ -69,6 +70,7 @@ export function example_transforms() {
     js_object_property_getter_set,
     js_statement_wrap_guard,
     js_block_prose_add,
+    js_declaration_call_set,
   };
   return transforms;
 }
