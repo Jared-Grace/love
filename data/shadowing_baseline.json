@@ -70,13 +70,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_bible_chapter_change",
-   "shadows_outer": [],
-   "shadows_function": [
-    "list_next_wrap"
-   ]
-  },
-  {
    "name": "app_bible_home_generic",
    "shadows_outer": [
     "r"
@@ -155,13 +148,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_lesson_symbols_batch_digits",
-   "shadows_outer": [],
-   "shadows_function": [
-    "digits"
-   ]
-  },
-  {
    "name": "app_code_quiz",
    "shadows_outer": [
     "refresh"
@@ -221,20 +207,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_message_reply_choices",
-   "shadows_outer": [],
-   "shadows_function": [
-    "visit"
-   ]
-  },
-  {
-   "name": "app_replace_goals_generic",
-   "shadows_outer": [],
-   "shadows_function": [
-    "marker"
-   ]
-  },
-  {
    "name": "app_replace_rule_set_verify_from_try",
    "shadows_outer": [
     "start"
@@ -254,13 +226,6 @@
     "button"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "app_replace_tests_proof_state",
-   "shadows_outer": [],
-   "shadows_function": [
-    "marker"
-   ]
   },
   {
    "name": "app_replace_tests_run_e2e_goal",
@@ -296,20 +261,6 @@
     "query_hash"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "app_shared_bible_share",
-   "shadows_outer": [],
-   "shadows_function": [
-    "range"
-   ]
-  },
-  {
-   "name": "app_shared_button_numbered",
-   "shadows_outer": [],
-   "shadows_function": [
-    "marker"
-   ]
   },
   {
    "name": "app_shared_flow_next",
@@ -397,13 +348,6 @@
    "shadows_function": []
   },
   {
-   "name": "data_generate_get",
-   "shadows_outer": [],
-   "shadows_function": [
-    "data_get"
-   ]
-  },
-  {
    "name": "digits_3_random_next",
    "shadows_outer": [
     "next"
@@ -460,39 +404,14 @@
    "shadows_outer": [
     "threw"
    ],
-   "shadows_function": [
-    "sandbox"
-   ]
+   "shadows_function": []
   },
   {
    "name": "example_files_run",
    "shadows_outer": [
     "got"
    ],
-   "shadows_function": [
-    "sandbox"
-   ]
-  },
-  {
-   "name": "example_slot_expression_set_lambda",
-   "shadows_outer": [],
-   "shadows_function": [
-    "each"
-   ]
-  },
-  {
-   "name": "example_transform_run",
-   "shadows_outer": [],
-   "shadows_function": [
-    "sandbox"
-   ]
-  },
-  {
-   "name": "examples_corpus_read",
-   "shadows_outer": [],
-   "shadows_function": [
-    "mod"
-   ]
+   "shadows_function": []
   },
   {
    "name": "examples_menu_dom",
@@ -524,13 +443,6 @@
    "shadows_function": []
   },
   {
-   "name": "function_dependencies_code_export",
-   "shadows_outer": [],
-   "shadows_function": [
-    "mod"
-   ]
-  },
-  {
    "name": "function_name_to_path_search",
    "shadows_outer": [
     "mapped"
@@ -550,13 +462,6 @@
     "f_name_before"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "function_run_prompt_repo_name_colored",
-   "shadows_outer": [],
-   "shadows_function": [
-    "chalk_color"
-   ]
   },
   {
    "name": "function_string_split_space_change",
@@ -580,32 +485,11 @@
    "shadows_function": []
   },
   {
-   "name": "functions_names_to_paths",
-   "shadows_outer": [],
-   "shadows_function": [
-    "repo_path"
-   ]
-  },
-  {
    "name": "functions_param_new",
    "shadows_outer": [
     "param_name"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "g_chapter_code_next",
-   "shadows_outer": [],
-   "shadows_function": [
-    "digits"
-   ]
-  },
-  {
-   "name": "g_path_steps",
-   "shadows_outer": [],
-   "shadows_function": [
-    "each"
-   ]
   },
   {
    "name": "g_sermon_generate_book_generic_prompts",
@@ -638,13 +522,6 @@
    "shadows_function": []
   },
   {
-   "name": "git_history_delete",
-   "shadows_outer": [],
-   "shadows_function": [
-    "repo_path"
-   ]
-  },
-  {
    "name": "guard_check",
    "shadows_outer": [
     "stdout"
@@ -666,13 +543,6 @@
    "shadows_function": []
   },
   {
-   "name": "html_document_root",
-   "shadows_outer": [],
-   "shadows_function": [
-    "html_element"
-   ]
-  },
-  {
    "name": "html_overlay",
    "shadows_outer": [
     "s"
@@ -692,13 +562,6 @@
     "text"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "http_generic",
-   "shadows_outer": [],
-   "shadows_function": [
-    "sleep"
-   ]
   },
   {
    "name": "image_generate",
@@ -779,13 +642,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_fn_name_references_to_calls",
-   "shadows_outer": [],
-   "shadows_function": [
-    "each"
-   ]
-  },
-  {
    "name": "js_function_declaration_params_names_node",
    "shadows_outer": [
     "type_is"
@@ -844,13 +700,6 @@
    "shadows_function": []
   },
   {
-   "name": "list_interleave_halves",
-   "shadows_outer": [],
-   "shadows_function": [
-    "half"
-   ]
-  },
-  {
    "name": "machine_resumes_past_day",
    "shadows_outer": [
     "stdout",
@@ -878,13 +727,6 @@
     "page"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "qa_tests_run",
-   "shadows_outer": [],
-   "shadows_function": [
-    "error"
-   ]
   },
   {
    "name": "reply_messages_all",
@@ -934,13 +776,6 @@
     "mapped"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "server_data_endpoints",
-   "shadows_outer": [],
-   "shadows_function": [
-    "data_get"
-   ]
   },
   {
    "name": "server",
