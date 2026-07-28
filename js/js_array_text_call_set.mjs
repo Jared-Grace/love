@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_selects_array_elements } from "./js_selects_array_elements.mjs";
+import { js_array_element_text_find } from "./js_array_element_text_find.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { js_call_new_expression } from "./js_call_new_expression.mjs";
+import { list_set } from "./list_set.mjs";
 export async function js_array_text_call_set(ast, selects, word, f_name) {
   arguments_assert(arguments, 4);
   ("Points one written entry of an ordered register at a call to a named function,");
