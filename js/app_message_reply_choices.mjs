@@ -50,7 +50,7 @@ export function app_message_reply_choices() {
     us,
     o_according_to_gods_will,
   ]);
-  let visit = reply_on_match_output_code(s_visit, will_be_done, "todo()");
+  let visit_step = reply_on_match_output_code(s_visit, will_be_done, "todo()");
   let you = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you]);
   let item = app_reply_choices_glory();
@@ -88,7 +88,7 @@ export function app_message_reply_choices() {
     minister,
     from_city_country,
     give,
-    visit,
+    visit_step,
     thanks,
     fn,
     matcher,
