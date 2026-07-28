@@ -1,5 +1,5 @@
-import { app_a_indexeddb_database_name } from "./app_a_indexeddb_database_name.mjs";
-import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
+import { browser_files_database_name } from "./browser_files_database_name.mjs";
+import { browser_files_store } from "./browser_files_store.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
@@ -11,8 +11,8 @@ export async function app_a_indexeddb_initialize() {
   "The database is not called after the app by coincidence and must not follow it. Both names";
   "are frozen, since a browser that already holds a user's files finds them under these two";
   "words and under no others.";
-  let db_name = app_a_indexeddb_database_name();
-  let store_files = app_a_file_system_store();
+  let db_name = browser_files_database_name();
+  let store_files = browser_files_store();
   let version = 1;
   let db = await new Promise(function lambda4(resolve, reject) {
     let req = indexedDB.open(db_name, version);

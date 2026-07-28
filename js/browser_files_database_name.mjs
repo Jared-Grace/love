@@ -1,5 +1,5 @@
 import { text_frozen } from "./text_frozen.mjs";
-export function app_a_indexeddb_database_name() {
+export function browser_files_database_name() {
   "The name of the browser database this app keeps its files in.";
   "It is the same word as the app itself and is not the same thing. A database is not";
   "renamed by renaming code: a browser that already holds somebody's files finds them";

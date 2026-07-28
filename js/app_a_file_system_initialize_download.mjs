@@ -7,7 +7,7 @@ import { indexeddb_put_multiple } from "./indexeddb_put_multiple.mjs";
 import { app_a_file_system_initialize } from "./app_a_file_system_initialize.mjs";
 import { app_a } from "./app_a.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
+import { browser_files_store } from "./browser_files_store.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
@@ -20,7 +20,7 @@ export async function app_a_file_system_initialize_download() {
   });
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
-  let store = app_a_file_system_store();
+  let store = browser_files_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
   let all = await indexeddb_get_all(db_get, store);
