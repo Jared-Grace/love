@@ -1,3 +1,4 @@
+import { app_code_content_cap } from "./app_code_content_cap.mjs";
 import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
 import { app_code_feedback_cell } from "./app_code_feedback_cell.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
