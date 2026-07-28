@@ -36,7 +36,12 @@ export async function literal_duplicates() {
     let quoted = JSON.stringify(getter.literal);
     let files = [];
     for (let f_name of Object.keys(codes)) {
-      if (not_equal(f_name, getter.f_name) && codes[f_name].includes(quoted)) {
+      let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
+      if (
+        not_equal(f_name, getter.f_name) &&
+        not(peer_is) &&
+        codes[f_name].includes(quoted)
+      ) {
         list_add(files, f_name);
       }
     }
