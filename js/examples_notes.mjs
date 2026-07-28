@@ -146,6 +146,10 @@ export function examples_notes() {
       "a pairing so close that running the halves apart leaves a state nobody wants",
     example_block_prose_add:
       "the step that used to force a hand edit at the end of an otherwise command-only path",
+    example_declaration_call_set:
+      "the line a constant sits on when it sits in no call for the other verb to reach",
+    example_object_text_add:
+      "adding one labelled sentence without touching the entries beside it",
   };
   return notes;
 }
