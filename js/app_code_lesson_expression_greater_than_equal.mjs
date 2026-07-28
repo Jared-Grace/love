@@ -96,10 +96,10 @@ export function app_code_lesson_expression_greater_than_equal() {
       return code;
     }
     function refill() {
-      let equal = code_of(equal_pair());
+      let same = code_of(equal_pair());
       let greater = code_of(ordering(false));
       let less = code_of(ordering(true));
-      let list = [equal, greater, less];
+      let list = [same, greater, less];
       return list;
     }
     let next_arg = list_iterator_refillable(refill);
