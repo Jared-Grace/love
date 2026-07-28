@@ -1,3 +1,4 @@
+import { js_call_argument_named_property_set } from "./js_call_argument_named_property_set.mjs";
 import { js_call_argument_named_call_set } from "./js_call_argument_named_call_set.mjs";
 import { js_array_text_call_set } from "./js_array_text_call_set.mjs";
 import { js_array_text_move } from "./js_array_text_move.mjs";
@@ -93,6 +94,7 @@ export function example_transforms() {
     js_array_text_move,
     js_array_text_call_set,
     js_call_argument_named_call_set,
+    js_call_argument_named_property_set,
   };
   return transforms;
 }

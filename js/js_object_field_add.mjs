@@ -4,7 +4,13 @@ import { js_identifier_expression } from "./js_identifier_expression.mjs";
 import { js_property_expression } from "./js_property_expression.mjs";
 import { js_property_key_value } from "./js_property_key_value.mjs";
 import { list_add } from "./list_add.mjs";
-export function js_object_field_add(ast, selects, key_name, object_name, property_name) {
+export function js_object_field_add(
+  ast,
+  selects,
+  key_name,
+  object_name,
+  property_name,
+) {
   arguments_assert(arguments, 5);
   ("Adds one entry to a record holding one field read out of something else in");
   ("scope. Three names and nothing to be worked out.");

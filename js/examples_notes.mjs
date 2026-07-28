@@ -165,6 +165,10 @@ export function examples_notes() {
       "the same move on the word side sharing the moving itself",
     example_array_text_call_set:
       "the third thing a register entry can be made of",
+    example_argument_call_set:
+      "the commonest safe repair in the repo taken off the path that always prompts",
+    example_argument_property_set:
+      "one field of a record in scope which is the shape a loop needs most",
   };
   return notes;
 }
