@@ -34,6 +34,8 @@ export function examples_groups() {
         "example_block_call_add",
         "example_argument_identifier_set",
         "example_argument_getter_set",
+        "example_argument_call_set",
+        "example_argument_property_set",
         "example_declaration_call_set",
         "example_property_getter_set",
         "example_return_identifier_add",
