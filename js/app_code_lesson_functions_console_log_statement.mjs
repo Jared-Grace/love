@@ -17,7 +17,7 @@ export function app_code_lesson_functions_console_log_statement() {
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
-  let fn_name = property_get(r, "fn_name");
+  let f_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
@@ -45,7 +45,7 @@ export function app_code_lesson_functions_console_log_statement() {
       "Therefore, this lesson is the same as the previous, except there is a ",
       ";",
       " at the end of the ",
-      fn_name,
+      f_name,
       " function call",
     ]);
   }
