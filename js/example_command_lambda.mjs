@@ -29,7 +29,7 @@ import { example_fold_auto_lambda } from "./example_fold_auto_lambda.mjs";
 import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
 import { js_block_body_add_code_first } from "./js_block_body_add_code_first.mjs";
 import { example_block_body_add_lambda } from "./example_block_body_add_lambda.mjs";
-export function example_command_lambda(fn_name, args, e) {
+export function example_command_lambda(f_name, args, e) {
   "An example that names its address as well as its verb takes the one branch";
   "that covers every pairing. The branches below each fix a verb to the one";
   "address it was written with, so they can show a cell of the multiplication and";
@@ -40,7 +40,7 @@ export function example_command_lambda(fn_name, args, e) {
     let lambda_multiple = example_select_multiple_apply_named(
       e.select,
       select_args_multiple,
-      fn_name,
+      f_name,
       args,
     );
     return lambda_multiple;
@@ -50,45 +50,45 @@ export function example_command_lambda(fn_name, args, e) {
     let lambda_named = example_select_apply_named(
       select_name,
       e.select_args,
-      fn_name,
+      f_name,
       args,
     );
     return lambda_named;
   }
-  if (equal(fn_name, js_atomize.name)) {
+  if (equal(f_name, js_atomize.name)) {
     return js_atomize;
   }
-  if (equal(fn_name, js_imports_unused_remove.name)) {
+  if (equal(f_name, js_imports_unused_remove.name)) {
     return js_imports_unused_remove;
   }
-  if (equal(fn_name, js_imports_paths_fix.name)) {
+  if (equal(f_name, js_imports_paths_fix.name)) {
     return js_imports_paths_fix;
   }
-  if (equal(fn_name, function_arguments_assert_each_add.name)) {
+  if (equal(f_name, function_arguments_assert_each_add.name)) {
     let lambda = function_arguments_assert_each_add_lambda(args[1]);
     return lambda;
   }
-  if (equal(fn_name, js_node_type_is_new.name)) {
+  if (equal(f_name, js_node_type_is_new.name)) {
     let lambda2 = js_node_type_is_new_lambda(args[0], args[1]);
     return lambda2;
   }
-  if (equal(fn_name, function_identifier_replace_current.name)) {
+  if (equal(f_name, function_identifier_replace_current.name)) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }
-  if (equal(fn_name, js_shadowing_rename.name)) {
+  if (equal(f_name, js_shadowing_rename.name)) {
     let lambda23 = js_shadowing_rename_lambda(args[0], args[1]);
     return lambda23;
   }
-  if (equal(fn_name, file_imports_repair.name)) {
+  if (equal(f_name, file_imports_repair.name)) {
     let lambda3 = example_imports_lambda();
     return lambda3;
   }
-  if (equal(fn_name, js_imports_auto_relative.name)) {
+  if (equal(f_name, js_imports_auto_relative.name)) {
     let lambda4 = example_auto_lambda();
     return lambda4;
   }
-  if (equal(fn_name, js_statement_if_test_set.name)) {
+  if (equal(f_name, js_statement_if_test_set.name)) {
     let lambda5 = example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
@@ -96,7 +96,7 @@ export function example_command_lambda(fn_name, args, e) {
     );
     return lambda5;
   }
-  if (equal(fn_name, js_return_argument_set.name)) {
+  if (equal(f_name, js_return_argument_set.name)) {
     let lambda6 = example_slot_expression_set_lambda(
       "ReturnStatement",
       js_return_argument_set,
@@ -104,15 +104,15 @@ export function example_command_lambda(fn_name, args, e) {
     );
     return lambda6;
   }
-  if (equal(fn_name, js_fold.name)) {
+  if (equal(f_name, js_fold.name)) {
     let lambda7 = example_fold_lambda(args[0]);
     return lambda7;
   }
-  if (equal(fn_name, js_fold_all.name)) {
+  if (equal(f_name, js_fold_all.name)) {
     let lambda8 = example_fold_lambda(args[0]);
     return lambda8;
   }
-  if (equal(fn_name, js_fold_auto.name)) {
+  if (equal(f_name, js_fold_auto.name)) {
     let lambda9 = example_fold_auto_lambda(args);
     return lambda9;
   }
@@ -121,7 +121,7 @@ export function example_command_lambda(fn_name, args, e) {
   ("here is what that generic path cannot yet say: a whole-file pass, which has no");
   ("address at all, and the two block verbs, whose address is a slot inside an if");
   ("rather than anything a register lists.");
-  if (equal(fn_name, js_block_body_add_code.name)) {
+  if (equal(f_name, js_block_body_add_code.name)) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -130,7 +130,7 @@ export function example_command_lambda(fn_name, args, e) {
     );
     return lambda11;
   }
-  if (equal(fn_name, js_block_body_add_code_first.name)) {
+  if (equal(f_name, js_block_body_add_code_first.name)) {
     let lambda12 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -139,7 +139,7 @@ export function example_command_lambda(fn_name, args, e) {
     );
     return lambda12;
   }
-  if (equal(fn_name, js_fn_name_references_to_calls.name)) {
+  if (equal(f_name, js_fn_name_references_to_calls.name)) {
     let lambda13 = example_fn_name_references_lambda();
     return lambda13;
   }
