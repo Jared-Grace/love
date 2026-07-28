@@ -1,4 +1,4 @@
-import { call_now_and_later } from "./call_now_and_later.mjs";
+import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -326,7 +326,7 @@ export async function app_g_verify_view(
   }
   html_on(suggest_area, "input", on_suggest_input);
   ("fit the content now and again after this tick; then once more after the serif font loads, whose metrics change the height");
-  call_now_and_later(autosize);
+  invoke_now_and_later(autosize);
   document.fonts.ready.then(autosize);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
