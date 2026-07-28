@@ -169,6 +169,10 @@ export function examples_notes() {
       "the commonest safe repair in the repo taken off the path that always prompts",
     example_argument_property_set:
       "one field of a record in scope which is the shape a loop needs most",
+    example_object_field_add:
+      "carrying one more field of a record through into a new one",
+    example_call_index_argument_address:
+      "reaching a record written straight into a call so that no name addresses it",
   };
   return notes;
 }
