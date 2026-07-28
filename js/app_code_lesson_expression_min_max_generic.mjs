@@ -23,6 +23,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let noun_upper = property_get(params, "noun_upper");
   let comparison = property_get(params, "comparison");
   let define_render = property_get(params, "define_render");
+  let short_name = property_get(params, "short_name");
   function code(a, b) {
     "the two-number call as a code string - the function's name, then its two numbers separated by a comma inside parentheses";
     let ta = text_to(a);
@@ -123,8 +124,17 @@ export function app_code_lesson_expression_min_max_generic(params) {
     html_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
     let v2 = code(other, chosen);
     html_div_cycle_code(example_box, ["And ", v2, " is also ", chosen_text]);
-    let chooses = text_combine_multiple([" chooses the ", noun, " number"]);
-    html_div_cycle_code(example_box, ["", called_name, chooses]);
+    let chooses = text_combine_multiple([
+      " chooses the ",
+      noun,
+      " number (the ",
+    ]);
+    let chooses_line = html_div(example_box);
+    html_span_text_code_dark(chooses_line, called_name);
+    html_span_text(chooses_line, chooses);
+    let short_term = html_span_text(chooses_line, short_name);
+    html_bold(short_term);
+    html_span_text(chooses_line, "imum)");
     let equal_box = app_code_container_light_blue(root);
     html_div_cycle_code(equal_box, [
       "If both numbers are equal, then there's only one number to choose from, so ",
