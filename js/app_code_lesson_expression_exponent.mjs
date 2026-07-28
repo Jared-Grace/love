@@ -49,14 +49,14 @@ export function app_code_lesson_expression_exponent() {
   "practice a ** b (exponent) by writing it out as repeated multiplication (2 ** 3 becomes 2 * 2 * 2): the quiz matches the ** form with its expansion, because this lesson teaches what ** MEANS - repeated multiplication - not the arithmetic value; base 2..5, exponent 2..3";
   let operator = js_operator_double_asterisk();
   let symbol = property_get(operator, "operator");
-  function product_code(base, exponent) {
+  function product_code(base, power) {
     "the exponent written out as repeated multiplication - product_code(2, 3) is 2 * 2 * 2";
     let star = js_operator_asterisk_symbol();
     function base_text(index) {
       let t = text_to(base);
       return t;
     }
-    let list = range(exponent);
+    let list = range(power);
     let factors = list_map(list, base_text);
     let separator = text_combine_multiple([" ", star, " "]);
     let product = list_join(factors, separator);
@@ -66,9 +66,9 @@ export function app_code_lesson_expression_exponent() {
     "four questions - four distinct bases (so the expansions never collide), each with its own random exponent 2 or 3 so the length of the written-out multiplication varies; the ANSWER is the expansion, not the value";
     let bases = list_shuffle_take([2, 3, 4, 5], 4);
     function to_pair(base) {
-      let exponent = integer_random(2, 3);
-      let question = js_code_binary_spaced_nb(base, symbol, exponent);
-      let answer = product_code(base, exponent);
+      let power = integer_random(2, 3);
+      let question = js_code_binary_spaced_nb(base, symbol, power);
+      let answer = product_code(base, power);
       let pair = {
         question,
         answer,
