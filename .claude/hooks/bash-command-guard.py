@@ -701,6 +701,8 @@ def _literal_var_map(command):
 
 VAR_PREFIX_RE = re.compile(r"^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?(.*)$")
 
+BRACED_VAR_RE = re.compile(r"\{[A-Za-z_][A-Za-z0-9_]*\}")
+
 
 def _redirect_target_unquoted(path):
     """A redirect target with its surrounding DOUBLE quotes taken off, so
