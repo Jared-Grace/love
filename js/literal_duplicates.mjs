@@ -34,10 +34,12 @@ export async function literal_duplicates() {
       }
     }
     if (files.length > 0) {
+      let means = literal_duplicate_means(codes, files, getter.literal);
       list_add(found, {
         f_name: getter.f_name,
         literal: getter.literal,
         files,
+        means,
       });
     }
   }
