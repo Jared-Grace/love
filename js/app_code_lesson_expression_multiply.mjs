@@ -1,3 +1,4 @@
+import { app_code_lesson_chip_font_size } from "./app_code_lesson_chip_font_size.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
@@ -162,7 +163,8 @@ export function app_code_lesson_expression_multiply() {
     function final_count(grid, number, color) {
       "the FINAL count as a coloured chip with white text - it IS the count, so it echoes the second number in the shorthand and stands out clearly from the quiet running counts";
       let made = app_code_lesson_number_chip(grid, number, color);
-      html_style_font_size(made, "0.85em");
+      let value2 = app_code_lesson_chip_font_size();
+      html_style_font_size(made, value2);
       return made;
     }
     function cell_at(node, row, column) {
