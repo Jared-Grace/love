@@ -2,7 +2,7 @@ import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export function entries_by_name(entries) {
-  "the shadowing entries keyed by function name, so a comparison can look one up instead of scanning the whole list once per function";
+  "entries keyed by function name, so a comparison can look one up instead of scanning the whole list once per function";
   let by_name = {};
   function record(entry) {
     let name = property_get(entry, "name");
