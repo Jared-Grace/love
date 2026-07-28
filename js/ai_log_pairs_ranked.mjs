@@ -15,6 +15,14 @@ export function ai_log_pairs_ranked(entries) {
   let last = {};
   let counts = {};
   for (let entry of entries) {
+    ("The earliest lines were written before the conversation was noted on each");
+    ("one. They are passed over rather than pooled together, because pooling them");
+    ("would braid every conversation of those days into one and manufacture");
+    ("pairings nobody ran.");
+    let noted = property_exists(entry, "session");
+    if (not(noted)) {
+      continue;
+    }
     let session = property_get(entry, "session");
     let step = ai_log_step_name(entry);
     let seen = property_exists(last, session);
