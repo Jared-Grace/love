@@ -12,9 +12,9 @@ import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 ("every call site in every file. The index is read once from the definition and reused,");
 ("so callers stay aligned. Hermetic — no global dictionary — so it is the sandbox-testable");
 ("heart of the repo-wide param-delete tool.");
-export async function js_identifier_param_delete_dir(dir, fn_name, param_name) {
+export async function js_identifier_param_delete_dir(dir, f_name, param_name) {
   let files = await folder_read_files(dir);
-  let def_file = text_combine_multiple([fn_name, ".mjs"]);
+  let def_file = text_combine_multiple([f_name, ".mjs"]);
   let def_path = path_join([dir, def_file]);
   let index = null;
   function edit_def(ast) {
@@ -30,7 +30,7 @@ export async function js_identifier_param_delete_dir(dir, fn_name, param_name) {
       function on_call({ args, v }) {
         list_remove_at(args, index);
       }
-      js_visit_calls_named(ast, fn_name, on_call);
+      js_visit_calls_named(ast, f_name, on_call);
     }
     await file_js_transform(f_path, edit);
   }
