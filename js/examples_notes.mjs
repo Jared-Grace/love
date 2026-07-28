@@ -134,6 +134,10 @@ export function examples_notes() {
       "why ending a hiding keeps the key when a record names its value in shorthand",
     example_span_move_after:
       "three addresses through the same seam - the count of names is the count of nodes",
+    example_argument_getter_set:
+      "the same argument set through the name that holds its value rather than spelled out",
+    example_property_getter_set:
+      "the same routing one level in - a setting held inside a record",
   };
   return notes;
 }

@@ -32,6 +32,8 @@ export function examples_groups() {
         "example_statement_after_address",
         "example_block_call_add",
         "example_argument_identifier_set",
+        "example_argument_getter_set",
+        "example_property_getter_set",
         "example_return_identifier_add",
         "example_object_shorthand_add",
         "example_object_shorthand_remove",
