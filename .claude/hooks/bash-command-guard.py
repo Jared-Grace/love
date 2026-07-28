@@ -888,6 +888,29 @@ def tokenize(command, subst_validator=None, outer_vars=None):
                 "unsupported operator '>' (redirection, except >/dev/null, "
                 "fd dup &1/&2, or a path inside this project's scratchpad)"
             )
+        if c == "{" and word and word[-1] == "$":
+            # `${NAME}` - the braced spelling of `$NAME`, and the ONLY
+            # spelling that can carry a suffix: `${f}_baseline` reads the
+            # variable where `$f_baseline` would read a different one. It
+            # expands to exactly what `$NAME` expands to, which the tokenizer
+            # already treats as ordinary word text, so refusing the braces
+            # refused the one form that says what the loop meant - and a loop
+            # over a family of function names has no other way to spell it.
+            #
+            # ONLY the plain name form is accepted. Everything else `${...}`
+            # can do is a different feature wearing the same brackets, and
+            # some of them run commands: `${f:-$(cmd)}` (default value),
+            # `${f@P}` (prompt expansion, which performs substitution),
+            # `${!f}` (indirection), `${f//a/b}` (replacement). None of those
+            # match, so they fall through to the DANGEROUS_CHARS rejection
+            # exactly as before. This mirrors VAR_PREFIX_RE, which already
+            # reads `${VAR}` when resolving a redirect target - the tokenizer
+            # was rejecting the word before that resolver ever saw it.
+            m = BRACED_VAR_RE.match(command, i)
+            if m:
+                word.append(m.group(0))
+                i = m.end()
+                continue
         if c == "{" and i + 1 < n and command[i + 1] == "}":
             # Bare '{}' - find's placeholder for the matched path in
             # -exec/-execdir clauses (see is_safe_find_exec). Safe to
