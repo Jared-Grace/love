@@ -26,7 +26,7 @@ export async function example_files_run(e) {
     let r = await example_files_refuses_run(e, lambda);
     return r;
   }
-  async function sandbox(dir) {
+  async function in_sandbox(dir) {
     await example_files_materialize(dir, e.before);
     await lambda(dir);
     let names = await folder_read_files(dir);
@@ -42,7 +42,7 @@ export async function example_files_run(e) {
     let got = await list_map_unordered_async(names, read);
     return got;
   }
-  let got = await folder_temp(sandbox);
+  let got = await folder_temp(in_sandbox);
   let got_canonical = await example_files_canonical(got);
   let want_canonical = await example_files_canonical(e.after);
   let b = equal(got_canonical, want_canonical);
