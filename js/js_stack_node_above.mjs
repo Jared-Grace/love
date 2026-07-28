@@ -15,6 +15,7 @@ export function js_stack_node_above(stack) {
   let last = subtract(size, 1);
   let earlier = list_slice(stack, 0, last);
   list_reverse(earlier);
-  let above = list_find(earlier, js_node_is);
+  let nodes = list_filter(earlier, js_node_is);
+  let above = list_first(nodes);
   return above;
 }
