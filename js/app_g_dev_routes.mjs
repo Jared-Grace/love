@@ -32,6 +32,7 @@ import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_day_sky_update } from "./app_g_day_sky_update.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
+import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
@@ -144,11 +145,17 @@ export function app_g_dev_routes(div_map) {
     each(three, mark);
     app_g_day_discern_button(div_map);
   }
+  async function day_conversation() {
+    "the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): a stub conversation whose each HALF-TURN advances the sky one step across a full day, so the conversation→time mechanic is easy to see. paints via g_clock_sky_phase, so it also showcases the fast-dark + plateau night curve";
+    await app_g_view_set(null);
+    await app_g_day_conversation_demo(div_map);
+  }
   let routes = {
     study,
     unbeliever,
     hour,
     day_unbelievers,
+    day_conversation,
     gospel_share,
     hru,
     believe,
