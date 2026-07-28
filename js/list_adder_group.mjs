@@ -5,7 +5,7 @@ export function list_adder_group(lambda$g) {
     let group = null;
     lambda$g({
       start,
-      add,
+      add: add_item,
       end,
     });
     function end() {
@@ -15,7 +15,7 @@ export function list_adder_group(lambda$g) {
     function start() {
       group = [];
     }
-    function add(item) {
+    function add_item(item) {
       list_add(group, item);
     }
   }
