@@ -4,7 +4,7 @@ import { example_files_materialize } from "./example_files_materialize.mjs";
 ("expect it to THROW (the tool refusing). Pass iff it threw — the multi-file twin of");
 ("example_rejection_run. No after-comparison: a refusal changes nothing.");
 export async function example_files_refuses_run(e, lambda) {
-  async function sandbox(dir) {
+  async function in_sandbox(dir) {
     await example_files_materialize(dir, e.before);
     let threw = false;
     try {
@@ -14,6 +14,6 @@ export async function example_files_refuses_run(e, lambda) {
     }
     return threw;
   }
-  let threw = await folder_temp(sandbox);
+  let threw = await folder_temp(in_sandbox);
   return threw ? "pass" : "fail";
 }
