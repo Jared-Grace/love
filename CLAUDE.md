@@ -154,7 +154,8 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_block_call_add <fn>` | call an existing fn at the end of a selected block |
 | `js_block_body_add_code <code>` / `_first <code>` | written code at the end / start of a selected block |
 | `js_block_local_number_add <name> <n>` / `js_block_local_text_add <name> <word>` / `js_block_local_record_add <name>` / `js_block_local_list_add <name>` | bind a name to a **starting value** — a count, a word, an empty record, an empty list. The first line of every function that tallies or gathers, and the line whose absence used to push any such function straight onto the prompting `_code` path. All four are one `js_block_local_add_generic` wearing a different starting value, so the written value never reaches a granted command's arguments. Whole numbers only, and one comma-free word only — the `_args` splitter breaks on a full stop and a comma, so nothing else could have arrived here in one piece |
-| `js_statement_wrap_if` / `js_statement_if_return_add` | build a guard clause in two steps |
+| `js_statement_wrap_guard` | turn the chosen line into a guard — *if this, then stop here* — in **one** command. Reach for this; the two halves below are for the rare time only one of them is wanted |
+| `js_statement_wrap_if` / `js_statement_if_return_add` | the two halves, run apart. Between them the file holds a test with an empty body — a line that reads as a decision and decides nothing |
 | `js_statement_wrap_for_of <name> <list>` | put the line inside a loop over `<list>`, binding each item to `<name>` |
 | `js_selects_unwrap` | take the lines back out of a wrapper — the inverse of both wraps |
 | `js_call_argument_named_identifier_set <param> <local>` | point one argument of a call at a local, both named — **prefer this**, it needs no code and so stays grantable |
