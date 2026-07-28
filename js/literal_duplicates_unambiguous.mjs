@@ -22,7 +22,7 @@ export async function literal_duplicates_unambiguous() {
     if (greater_than(claimed, 1)) {
       continue;
     }
-    let family = function_name_family(f_name2, app_names);
+    let family = function_name_family(entry.f_name, prefixed);
     let files = [];
     for (let f_name of entry.files) {
       if (f_name.startsWith(family)) {
