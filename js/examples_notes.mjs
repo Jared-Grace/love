@@ -151,6 +151,7 @@ export function examples_notes() {
     example_object_text_add:
       "adding one labelled sentence without touching the entries beside it",
     example_block_local_number_add: "the line a tally opens with",
+    example_block_local_text_add: "binding a name to one written word",
   };
   return notes;
 }
