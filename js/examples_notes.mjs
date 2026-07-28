@@ -130,6 +130,8 @@ export function examples_notes() {
       "the head of a list two names deep — where a new simplest example keeps arriving",
     example_selects_functionize_local:
       "extract a span into a function of its own - the verb that needs two addresses at once",
+    example_shadowing_rename_shorthand:
+      "why ending a hiding keeps the key when a record names its value in shorthand",
   };
   return notes;
 }
