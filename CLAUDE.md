@@ -76,6 +76,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Replace an identifier with an expression, inside the fn you name | `ir <name> <expr>` | `function_identifier_replace <fn> <name> <expr>` |
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
+| Create a whole named constant — file, meaning line, value — nothing left to finish by hand | (no alias) | `function_new_getter <name> <meaning> <value>` |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
