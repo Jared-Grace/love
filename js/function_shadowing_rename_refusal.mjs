@@ -5,7 +5,6 @@ import { js_free_names } from "./js_free_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function function_shadowing_rename_refusal(
   f_name,
@@ -37,14 +36,13 @@ export async function function_shadowing_rename_refusal(
       "the replacement is already read in this file, so the rename would run two different things together under one name";
     return occupied;
   }
+  ("No inner scope hiding the word is NOT a refusal, and used to be reported as");
+  ("one. It only says which of the two renames applies: none means the word is");
+  ("bound at the function's own level over a repo function, which the");
+  ("whole-function twin does, and exactly one means the inner twin does. Since the");
+  ("sweep now chooses between them by kind, neither count is a reason to skip.");
   let scopes = js_scopes_shadowing(ast, name);
   let count = list_size(scopes);
-  let none = equal(count, 0);
-  if (none) {
-    let flat =
-      "nothing INSIDE this file hides the word - it is bound at the function's own level, over a repo function of that name, which is the other kind of hiding and wants a whole-function rename rather than an inner one";
-    return flat;
-  }
   let several = greater_than(count, 1);
   if (several) {
     let many =
