@@ -30,10 +30,16 @@ export const example = {
   let exists = false;
   function lambda(item) {
     let present = true;
-    let record = { exists: present, item };
+    let record = {
+      exists: present,
+      item,
+    };
     return record;
   }
-  let both = { exists, items };
+  let both = {
+    exists,
+    items,
+  };
   return both;
 }`,
 };
