@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
