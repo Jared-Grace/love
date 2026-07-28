@@ -1,3 +1,4 @@
+import { functions_shadowing_operator_gate_run } from "./functions_shadowing_operator_gate_run.mjs";
 import { js_comment_migratable_cases_gate_run } from "./js_comment_migratable_cases_gate_run.mjs";
 import { color_near_miss_gate_run } from "./color_near_miss_gate_run.mjs";
 import { functions_selects_unsafe_gate_run } from "./functions_selects_unsafe_gate_run.mjs";
@@ -116,6 +117,7 @@ export function qa_gates() {
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
+    functions_shadowing_operator_gate_run,
   ];
   return gates;
 }
