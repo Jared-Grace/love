@@ -75,6 +75,7 @@ export function app_code_lesson_quiz(
   let container_success_message = html_div(feedback_slot);
   app_code_feedback_cell(container_correction);
   app_code_feedback_cell(container_success_message);
+  app_code_content_cap(container_success_message);
   app_shared_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
