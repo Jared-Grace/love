@@ -11,9 +11,9 @@ import { file_exists } from "./file_exists.mjs";
 export async function function_exists_inner(u) {
   let f_path = property_get(u, "f_path");
   async function lambda(joined) {
-    let exists = await file_exists(joined);
+    let present = await file_exists(joined);
     let v = {
-      exists,
+      exists: present,
       f_path: joined,
     };
     return v;
