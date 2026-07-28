@@ -26,7 +26,7 @@ export function app_code_lesson_functions_console_log() {
     forwards_answer_count_override: null,
   });
   let next = property_get(r, "next");
-  let fn_name = property_get(r, "fn_name");
+  let f_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");
   let lesson = property_get(r, "lesson");
   return lesson;
@@ -35,12 +35,12 @@ export function app_code_lesson_functions_console_log() {
     let verb = property_get(o_f, "verb");
     let call = property_get(o_f, "call");
     let c = app_code_container_light_blue(root);
-    let fn_name_call = js_code_call_arg_fn(fn_name, next);
+    let fn_name_call = js_code_call_arg_fn(f_name, next);
     let operators = js_operators_arithmetic();
     let span = html_div_cycle_code_multiple(c, [
       ["Here is an example of a function call: ", call],
       ["", verb, " is a function"],
-      ["And here is a new function: ", fn_name],
+      ["And here is a new function: ", f_name],
     ]);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
@@ -50,11 +50,11 @@ export function app_code_lesson_functions_console_log() {
       "However, ",
       verb,
       " and ",
-      fn_name,
+      f_name,
       " are different",
     ]);
     let first = js_operator_first_code_call_only(next_operator);
-    let v = js_code_call_arg_fn(fn_name, next);
+    let v = js_code_call_arg_fn(f_name, next);
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
       ["", first],
@@ -62,7 +62,7 @@ export function app_code_lesson_functions_console_log() {
     app_code_container_light_blue_cycle_code_multiple(root, [
       [
         "But, for now, we will see ",
-        fn_name,
+        f_name,
         ...list_transform_first_combine(" with only one number ", inside),
         " :",
       ],
@@ -72,7 +72,7 @@ export function app_code_lesson_functions_console_log() {
       "Whatever is inside the ",
       ...parts,
       " of ",
-      fn_name,
+      f_name,
       " will be written out for someone to read",
     ]);
   }
