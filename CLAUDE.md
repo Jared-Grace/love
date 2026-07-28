@@ -160,6 +160,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_find_statement_last` | the last line — takes no argument, and is the one end of a block no neighbour can name |
 | `js_find_statement_index <n>` | the *n*-th line, counting from 0 — the address of last resort, and the most fragile (every insert above moves it) |
 | `js_find_statement_after <name>` | the line *after* the one binding `<name>` — the only relative address, so it reaches lines that are themselves unnameable |
+| `js_find_call_index_argument <fn> <index> <place>` | one thing handed to **one of several** calls to `<fn>` — which call (from 0, written order), then which argument (from 1). `js_find_call_argument <fn> <place>` is the same address where `<fn>` is called exactly once, which is the rarer half: a gathering function is called wherever something is gathered, so an **inline record built into a `list_add`** needs this one |
 | `js_find_body_block` | the function's own body block — use this to append lines, not `js_type_find BlockStatement` |
 | `js_find_object_containing_text <word>` | one record out of a list of them, found by a word written directly in it (a group by its heading) |
 
@@ -192,6 +193,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_array_identifier_add_after <name> <neighbour>` / `_before` | put a **name** at a chosen place rather than at the end — the name-side twin of the word-side pair above, and the one `qa_gates()` wants, since a gate that must run after another one arrived at the end and was then moved by a second command |
 | `js_call_callee_set <fn>` | point one call at a different function, keeping its arguments — refuses if the two take different numbers. **Not** a rename: the old function stays and its other callers keep it |
 | `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes. **The sentence must contain no comma**, or the `_args` splitter tears it into extra arguments — a full stop is fine on Claude's seam |
+| `js_object_field_add <key> <object> <property>` | add a `key: object.property` entry — three names. The family could write an entry holding a word or a name standing on its own; **a record built out of another record** is what neither reaches, and it is what every narrowing report is made of. Carrying one more field through a filter used to need a written line |
 | `js_object_property_text_add <key> <word>` / `_remove <key> <word>` | add / take out one word in a list held **inside** a record — the two-levels-deep pair |
 | `js_object_property_text_add_after <key> <word> <neighbour>` / `_before` | the same, at a **chosen place** — this is the one to reach for on `examples_groups` and any register whose order is its meaning |
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
