@@ -1,9 +1,9 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function js_array_element_text_find(elements, text) {
   arguments_assert(arguments, 2);
@@ -14,8 +14,13 @@ export function js_array_element_text_find(elements, text) {
   ("It refuses a word the list does not hold rather than handing back nothing, so");
   ("a verb built on it cannot quietly do nothing to a register that looks the same");
   ("either way.");
+  ("An entry is asked for the word it holds without insisting it holds one at all,");
+  ("because a register may mix written words with names - the allow rules keep two");
+  ("entries built out of a function's own name beside forty written ones. Insisting");
+  ("threw on the first name it reached, so the whole family refused every register");
+  ("of that shape rather than the ones that really lack the word.");
   function same_is(element) {
-    let held = property_get(element, "value");
+    let held = property_get_or_null(element, "value");
     let same = equal(held, text);
     return same;
   }
