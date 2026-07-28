@@ -70,6 +70,7 @@ export function examples_groups() {
         "example_auto_imports_all_three",
         "example_imports_property_names_are_not_references",
         "example_imports_shorthand_and_computed_are_references",
+        "example_shadowing_rename_shorthand",
         "example_fn_name_reference_strip",
         "example_fold_wrap_index",
         "example_fold_all_two",
