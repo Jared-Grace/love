@@ -1,6 +1,6 @@
+import { literal_duplicates_unambiguous } from "./literal_duplicates_unambiguous.mjs";
 import { less_than } from "./less_than.mjs";
 import { memory_orphans } from "./memory_orphans.mjs";
-import { literal_duplicates } from "./literal_duplicates.mjs";
 import { list_add } from "./list_add.mjs";
 export async function work_items_measured() {
   "Work a read-only check has already proved is there, each entry carrying the count that proves it. A count is evidence offered to the caller's judgement, not a claim to go first: it says the item is real today and has a finish line, which a standing direction never has, and says nothing about whether clearing it is worth the budget.";
@@ -25,7 +25,7 @@ export async function work_items_measured() {
     "A memory file no pointer reaches is never loaded into a session, so the fact in it is written but not remembered.",
     "Add a one-line pointer to the memory index for each orphan, grouped under an existing entry where one fits.",
   );
-  let duplicates = await literal_duplicates();
+  let duplicates = await literal_duplicates_unambiguous();
   found(
     duplicates.length,
     "Duplicated constants",
