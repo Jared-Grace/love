@@ -1,3 +1,4 @@
+import { function_transform_imports } from "./function_transform_imports.mjs";
 import { function_callee_seam_assert } from "./function_callee_seam_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_import } from "./function_import.mjs";
@@ -27,6 +28,6 @@ export async function function_select_multiple_apply_generic(
       apply_args,
     );
   }
-  let output = await function_transform(f_name, lambda);
+  let output = await function_transform_imports(f_name, lambda);
   return output;
 }
