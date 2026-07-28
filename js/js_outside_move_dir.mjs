@@ -12,16 +12,16 @@ import { js_unparse } from "./js_unparse.mjs";
 import { js_format } from "./js_format.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function js_outside_move_dir(ast, dir) {
-  ("Lift every function declared beside the exported one into its own file in a");
-  ("flat folder, one function per file. The hermetic core of the step that");
-  ("publishes files, mirroring it minus the ambient path and registry work.");
-  ("The ambient version asks where the repo is and whether the name is taken");
-  ("anywhere in it, then writes there. Reading the repo is fine in a sandbox and");
-  ("the sibling that leaves the new function in place proves it - a free name that");
-  ("is already a repo function should not become a parameter, wherever it runs.");
-  ("Writing there is the one thing that is not: an example of the publishing half");
-  ("put a real file into the source tree and had to be thrown away, and that is");
-  ("the whole reason the verb went undemonstrated.");
+  "Lift every function declared beside the exported one into its own file in a";
+  "flat folder, one function per file. The hermetic core of the step that";
+  "publishes files, mirroring it minus the ambient path and registry work.";
+  "The ambient version asks where the repo is and whether the name is taken";
+  "anywhere in it, then writes there. Reading the repo is fine in a sandbox and";
+  "the sibling that leaves the new function in place proves it - a free name that";
+  "is already a repo function should not become a parameter, wherever it runs.";
+  "Writing there is the one thing that is not: an example of the publishing half";
+  "put a real file into the source tree and had to be thrown away, and that is";
+  "the whole reason the verb went undemonstrated.";
   let body = property_get(ast, "body");
   let declarations = list_filter_property(body, "type", "FunctionDeclaration");
   ("The refusal runs over the whole list before anything is written, so a file");
@@ -36,7 +36,8 @@ export async function js_outside_move_dir(ast, dir) {
     let code_declaration = js_unparse(declaration);
     let contents = js_code_export(code_declaration);
     let formatted = await js_format(contents);
-    await file_overwrite(path_join([dir, f_file]), formatted);
+    let file_path = path_join([dir, f_file]);
+    await file_overwrite(file_path, formatted);
   }
   await each_async(declarations, lambda_write);
   function lambda_remove(declaration) {
