@@ -348,6 +348,7 @@ export function permission_grant_names() {
   let spelled345 = fn_name("claude_md_size_gate_run");
   let spelled346 = fn_name("claude_md_sections_longest");
   let spelled347 = fn_name("instructions_notes_gate_run");
+  let spelled348 = fn_name("function_open_names_reached");
   let names = [
     spelled,
     spelled2,
@@ -696,6 +697,7 @@ export function permission_grant_names() {
     spelled345,
     spelled346,
     spelled347,
+    spelled348,
   ];
   return names;
 }
