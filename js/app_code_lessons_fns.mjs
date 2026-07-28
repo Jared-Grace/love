@@ -20,6 +20,7 @@ import { app_code_lesson_expression_round_nearest } from "./app_code_lesson_expr
 import { app_code_lesson_expression_absolute_value } from "./app_code_lesson_expression_absolute_value.mjs";
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
+import { app_code_lesson_expression_smallest_of_three } from "./app_code_lesson_expression_smallest_of_three.mjs";
 import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expression_string_hello.mjs";
 import { app_code_lesson_expression_string_spaces } from "./app_code_lesson_expression_string_spaces.mjs";
 import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
@@ -138,6 +139,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_absolute_value,
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
+    app_code_lesson_expression_smallest_of_three,
   ];
   return fns;
 }
