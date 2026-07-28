@@ -1,3 +1,4 @@
+import { app_calendar_facebook_conversation_url } from "./app_calendar_facebook_conversation_url.mjs";
 import { app_calendar_contact_names_normalize } from "./app_calendar_contact_names_normalize.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_calendar_id_properties } from "./app_calendar_id_properties.mjs";
@@ -17,10 +18,8 @@ export function app_calendar_contact_add(data, item) {
   app_calendar_contact_names_normalize(item);
   let id_properties = app_calendar_id_properties();
   let r = app_calendar_facebook_conversation_id();
-  let properties_unique_across_all = list_concat(
-    ["facebook_conversation_url", r],
-    id_properties,
-  );
+  let r2 = app_calendar_facebook_conversation_url();
+  let properties_unique_across_all = list_concat([r2, r], id_properties);
   let picked = object_pick_try(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
   let c = list_find_property_try_or_null_curried(contacts);
