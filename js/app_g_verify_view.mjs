@@ -321,10 +321,11 @@ export async function app_g_verify_view(
   }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
-    "under box-sizing:border-box the CSS height INCLUDES the border, but scrollHeight does NOT — so height=scrollHeight lands one border-width short and a thin scrollbar shows; add the border (offsetHeight-clientHeight, measured while overflow-y is hidden so no scrollbar contaminates it) so the box fits its content exactly";
+    ("suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly");
+    let element = html_component_element_get(suggest_area);
     html_style_set(suggest_area, "height", "auto");
-    let content = suggest_area.scrollHeight;
-    let chrome = subtract(suggest_area.offsetHeight, suggest_area.clientHeight);
+    let content = element.scrollHeight;
+    let chrome = subtract(element.offsetHeight, element.clientHeight);
     let h = content + chrome;
     html_style_set(suggest_area, "height", h + "px");
   }
