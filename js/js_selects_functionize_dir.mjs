@@ -1,7 +1,7 @@
+import { list_map_async } from "./list_map_async.mjs";
 import { path_join } from "./path_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
-import { list_map } from "./list_map.mjs";
 import { file_read } from "./file_read.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { js_parse } from "./js_parse.mjs";
