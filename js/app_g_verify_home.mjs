@@ -1,4 +1,4 @@
-import { app_g_verify_book_label_font_size } from "./app_g_verify_book_label_font_size.mjs";
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
 import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
 import { app_g_verify_banner_font_size } from "./app_g_verify_banner_font_size.mjs";
@@ -175,7 +175,7 @@ export async function app_g_verify_home(context) {
       let text2 = g_verify_book_name(book);
       let book_label = html_p_text(row, text2);
       app_shared_text_deemphasized(book_label);
-      let value6 = app_g_verify_book_label_font_size();
+      let value6 = app_shared_font_size_label();
       html_style_font_size(book_label, value6);
       html_margin_em(book_label, "0");
       function lambda4(code) {
