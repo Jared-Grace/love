@@ -1,7 +1,8 @@
+import { json_from } from "./json_from.mjs";
+import { catch_null } from "./catch_null.mjs";
 import { ai_log_path } from "./ai_log_path.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { json_from_try } from "./json_from_try.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 export async function ai_log_entries() {
@@ -12,7 +13,14 @@ export async function ai_log_entries() {
   let lines = text_split_newline(text);
   let entries = [];
   for (let line of lines) {
-    let entry = json_from_try(line);
+    function lambda_read() {
+      let read = json_from(line);
+      return read;
+    }
+    ("The name ending in try on the reader nearby means something else entirely - it");
+    ("salvages a record out of surrounding prose, and still throws on a torn line.");
+    ("This is the wrapper that actually hands back nothing instead of throwing.");
+    let entry = catch_null(lambda_read);
     let torn = not(entry);
     if (torn) {
       continue;
