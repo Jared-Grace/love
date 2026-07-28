@@ -1,3 +1,4 @@
+import { function_shadowing_function_rename } from "./function_shadowing_function_rename.mjs";
 import { function_shadowing_rename_refusal } from "./function_shadowing_rename_refusal.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { function_shadowing_rename } from "./function_shadowing_rename.mjs";
@@ -39,12 +40,20 @@ export async function functions_shadowing_rename_all(name, name_after) {
     let both = list_concat(outer, over_function);
     let hides = list_includes(both, name);
     if (hides) {
+      ("Two kinds of hiding, two renames, chosen by which list the word came from");
+      ("rather than by trying one and reading what it complained about. A scope");
+      ("inside the file hides an outer binding, and the inner rename moves that one");
+      ("binding; a name bound at the function's own level hides a repo FUNCTION,");
+      ("where there is no inner binding to move and the rename is over the whole");
+      ("function. Each verb refuses what the other is for, so a wrong choice here");
+      ("stops rather than quietly doing the other edit.");
+      let inner_is = list_includes(outer, name);
+      let verb = function_shadowing_function_rename;
+      if (inner_is) {
+        verb = function_shadowing_rename;
+      }
       async function attempt() {
-        let done = await function_call_commit(function_shadowing_rename, [
-          f_name,
-          name,
-          name_after,
-        ]);
+        let done = await function_call_commit(verb, [f_name, name, name_after]);
         return done;
       }
       let result = await catch_null_async(attempt);
