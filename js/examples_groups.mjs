@@ -60,6 +60,7 @@ export function examples_groups() {
         "example_nested_record_remove",
         "example_call_callee_set",
         "example_block_local_number_add",
+        "example_block_local_text_add",
       ],
     },
     {
