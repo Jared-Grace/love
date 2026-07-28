@@ -207,7 +207,22 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 
 **Two readings of the log, and they answer different questions — don't run one and think you asked both.** `ai_log_pairs_frequent` ranks *two different steps* run back to back, which is the case for a **composite**. `ai_log_loops_frequent` ranks *one step* run over and over in a row, which is the case for a **sweep** — the "a loop of invocations is a missing command" rule above, which until 2026-07-28 was the stronger of the two rules and the one with nothing measuring it. The pairs reading drops a step following itself on purpose, so it cannot see a loop at all. Each entry answers `{step, commands_saved, loops, longest}` and is ranked by `commands_saved`, not by `longest`: twice in a row on forty occasions is a habit worth a command, one run of forty is a single afternoon.
 
-**Its first reading was a surprise, and the surprise generalizes: most of the waste is not a missing command, it is an existing sweep nobody reached for.** `function_auto` (452 commands) and `function_auto_check` (334) both already have `_multiple` twins; `function_auto_checked` already composes the pair. So **before writing a sweep, run `functions_search <name>` and check whether its `_multiple` already exists** — for the top of that list it did. What the reading found genuinely missing is thinner: `guard_check` (909) and `permission_grant_refusals` (181) have no batch form, and `function_delete_unused` (55, longest run 15) wants the finds-its-own-set shape rather than a list-taking one. Ignore `g_verify_loop_check_line` at the top — a `longest` of 7995 is a machine loop, not somebody typing, and the `longest` column is there precisely to tell those apart.
+**Its first reading was a surprise, and the surprise is total: not one of the top steps was a missing command. Every one was an existing capability nobody reached for.** Checked one at a time, on 2026-07-28:
+
+| step | commands spent | what already existed |
+|---|---|---|
+| `guard_check` | 929 | `data/guard_cases.json` — the guard's structure, case by case, each with a `why` that reads as the rule |
+| `function_auto` | 452 | `function_auto_multiple` |
+| `function_auto_check` | 336 | `function_auto_check_multiple` |
+| the two back to back | 190 | `function_auto_checked` |
+| `permission_grant_refusals` | 184 | `permission_grant_add_multiple` (runs the refusal check per name) |
+| `function_delete_unused` | 55 | `function_delete_unused_multiple` |
+
+So **the reading is not a list of commands to write** — an earlier version of this paragraph said it was, and was wrong about two of the three it named. Each entry now carries `sweep_exists` beside its number, from `function_sweep_twin`, so the mistake is harder to repeat; that answer is a **guess from name shape** (`_multiple` / `_all` / `_each`, and `function_` turned plural), so an empty list means *look*, not *there is none* — `permission_grant_refusals` shares no stem with its own sweep.
+
+**`guard_check` is the one worth naming twice**, because it is the largest and the least like the others: 1314 calls, of which 581 are the `node scripts/ai.mjs <fn> …` name form and 733 are arbitrary shell. Its runs are somebody discovering the guard's rules by probe — nine in a row on `ls > /dev/null`, `ls >> /dev/null`, `ls 2> /dev/null`, `ls > /etc/passwd`. **Read `data/guard_cases.json` first**; it already answers those, with reasons. Keep `guard_check` for the command you are actually about to run.
+
+Ignore `g_verify_loop_check_line` at the top — a `longest` of 7995 is a machine loop, not somebody typing, and the `longest` column is there precisely to tell those apart.
 
 **Ask which documented atoms nobody has ever run: `atoms_unexampled`.** A row in either table above is a promise made to every Claude at once, and until 2026-07-28 nothing checked it — 16 of the 56 atoms named there had never been executed by anything, so following the instructions was as likely to land on an unexercised unit as on one the corpus proves every run. `atoms_unexampled_gate_run` (in `q`) now ratchets that list against `data/atoms_unexampled_baseline.json`: a newly documented atom with no example fails, and an entry that *has* since been exampled fails too, so writing one is always followed by `atoms_unexampled_baseline_write` shrinking the file. The baseline is also where the one unkeepable promise lives — `js_selects_functionize` publishes a new file into the repo, so it has no hermetic before-and-after and can only ever be documented. **That list is a standing work queue: pick one, write its example, shrink the baseline.**
 
