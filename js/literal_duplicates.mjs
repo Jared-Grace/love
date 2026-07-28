@@ -38,12 +38,16 @@ export async function literal_duplicates() {
     let files = [];
     for (let f_name of Object.keys(codes)) {
       let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
-      if (
-        not_equal(f_name, getter.f_name) &&
-        not(peer_is) &&
-        codes[f_name].includes(quoted)
-      ) {
-        list_add(files, f_name);
+      let holds = codes[f_name].includes(quoted);
+      let candidate = not_equal(f_name, getter.f_name) && not(peer_is) && holds;
+      if (candidate) {
+        let prose_only = js_code_literal_prose_only(
+          codes[f_name],
+          getter.literal,
+        );
+        if (not(prose_only)) {
+          list_add(files, f_name);
+        }
       }
     }
     if (greater_than(files.length, 0)) {
