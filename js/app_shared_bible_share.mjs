@@ -20,10 +20,10 @@ export async function app_shared_bible_share(
   list_sort_number_mapper(sorted, integer_to_try);
   let first = list_first(sorted);
   let last = list_last(sorted);
-  let range = first;
+  let verse_range = first;
   let single = equal(first, last);
   if (not(single)) {
-    range = text_combine_multiple([first, "-", last]);
+    verse_range = text_combine_multiple([first, "-", last]);
   }
   let book_plus = list_join(text_split(book_name, " "), "+");
   let reference = text_combine_multiple([
@@ -31,7 +31,7 @@ export async function app_shared_bible_share(
     "+",
     chapter_name,
     ":",
-    range,
+    verse_range,
   ]);
   let languages = list_join(languages_chosen, "+");
   let base = html_url_without_hash();
