@@ -8,9 +8,8 @@ export async function browser_files_database_initialize() {
   "import of the app itself costs the g bundle 410 KiB, because reading any file reaches here.";
   "A getter holding one word costs nothing, so the database name and the store name are";
   "imported while the app is not.";
-  "The database is not called after the app by coincidence and must not follow it. Both names";
-  "are frozen, since a browser that already holds a user's files finds them under these two";
-  "words and under no others.";
+  "All three words here are frozen, since a browser that already holds a user's files finds";
+  "them under these and under no others.";
   let db_name = browser_files_database_name();
   let store_files = browser_files_store();
   let version = 1;
