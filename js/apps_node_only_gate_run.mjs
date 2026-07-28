@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
 import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
@@ -34,4 +35,12 @@ export async function apps_node_only_gate_run() {
   list_empty_is_assert_json(violations, {
     hint: "an app reaches a function that calls a Node built-in with no browser branch, so that screen blanks at runtime; give the function a browser branch, or swap the caller onto one that already has it",
   });
+  ("Says how much it looked at, because a gate that answers nothing cannot be");
+  ("told apart from one that did nothing. Both leave the same empty line, and the");
+  ("reader is left inferring a pass from the absence of a complaint.");
+  let r = {
+    reachable: list_size(reachable),
+    violations: 0,
+  };
+  return r;
 }
