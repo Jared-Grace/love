@@ -1,3 +1,4 @@
+import { function_name_family } from "./function_name_family.mjs";
 import { apps_names_prefixed } from "./apps_names_prefixed.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -21,7 +22,7 @@ export async function literal_duplicates_unambiguous() {
     if (greater_than(claimed, 1)) {
       continue;
     }
-    let family = entry.f_name.split("_")[0] + "_";
+    let family = function_name_family(f_name2, app_names);
     let files = [];
     for (let f_name of entry.files) {
       if (f_name.startsWith(family)) {
