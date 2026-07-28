@@ -1,3 +1,6 @@
+import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { list_get } from "./list_get.mjs";
 export function js_call_named_find_index(ast, f_name, index_text) {
   "One of several calls to the same name, counting from nothing.";
   "A selector answers exactly one node, so naming a function called twice fails —";
