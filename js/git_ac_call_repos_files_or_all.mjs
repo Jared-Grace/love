@@ -21,10 +21,10 @@ export async function git_ac_call_repos_files_or_all(f_name, args, files) {
     };
     return named;
   }
-  await git_ac_call_repos(f_name, args);
+  let repos = await git_ac_call_repos(f_name, args);
   let all = {
     swept: true,
-    repos: [],
+    repos,
   };
   return all;
 }
