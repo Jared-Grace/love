@@ -13,7 +13,9 @@ export async function bible_interlinear_storage_coverage() {
   });
   function name_of(item) {
     let full = property_get(item, "name");
-    let base = full.replace("bible/original/", "").replace(".json", "");
+    let base = full
+      .replace("bible/original/", "")
+      .replace(json_extension(), "");
     return base;
   }
   let present = list_map(files, name_of);
