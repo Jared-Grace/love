@@ -340,6 +340,7 @@ export function permission_grant_names() {
   let spelled337 = fn_name("functions_unreachable_check_gate_run");
   let spelled338 = fn_name("markers_names");
   let spelled339 = fn_name("functions_shadowing_function_gate_run");
+  let spelled340 = fn_name("literals_frozen_record_new");
   let names = [
     spelled,
     spelled2,
@@ -680,6 +681,7 @@ export function permission_grant_names() {
     spelled337,
     spelled338,
     spelled339,
+    spelled340,
   ];
   return names;
 }
