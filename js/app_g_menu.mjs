@@ -14,6 +14,7 @@ import { html_clear } from "./html_clear.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { g_prayer_conversation } from "./g_prayer_conversation.mjs";
+import { app_g_dev_tools_open } from "./app_g_dev_tools_open.mjs";
 export function app_g_menu(overlay, player) {
   html_clear(overlay);
   async function close() {
@@ -38,4 +39,5 @@ export function app_g_menu(overlay, player) {
   app_g_button_uncolored(overlay, text, lambda7);
   app_g_study(player, overlay, close);
   app_g_new_game(overlay, player);
+  app_g_button_uncolored(overlay, "🛠 Dev Tools", app_g_dev_tools_open);
 }
