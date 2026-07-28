@@ -32,12 +32,7 @@ export function ai_log_pairs_ranked(entries) {
       if (not(repeat)) {
         let arrow = text_combine(before, " then ");
         let key = text_combine(arrow, step);
-        let counted = property_exists(counts, key);
-        if (not(counted)) {
-          property_set(counts, key, 0);
-        }
-        let so_far = property_get(counts, key);
-        property_set(counts, key, so_far + 1);
+        property_count_add(counts, key, 1);
       }
     }
     property_set(last, session, step);
