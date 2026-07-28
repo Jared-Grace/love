@@ -1,20 +1,19 @@
+import { js_node_absent_is } from "./js_node_absent_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { null_is } from "./null_is.mjs";
 export function js_call_absence_tested_name(node, checkers) {
-  ("The name a call is asking about the absence of, or nothing when it is asking");
-  ("something else. Two shapes say the same thing and only one of them was");
-  ("looked for: a checker handed the name, and a comparison of the name against");
-  ("nothing.");
-  ("The comparison is the one a gate cannot afford to miss, because the pass that");
-  ("rewrites operators into calls turns a written triple-equals into exactly it -");
-  ("so the shape arrives in canonical files whether anybody typed it or not, and");
-  ("a gate blind to it would report a clean repo it had only half read.");
+  "The name a call is asking about the absence of, or nothing when it is asking";
+  "something else. Two shapes say the same thing and only one of them was";
+  "looked for: a checker handed the name, and a comparison of the name against";
+  "nothing.";
+  "The comparison is the one a gate cannot afford to miss, because the pass that";
+  "rewrites operators into calls turns a written triple-equals into exactly it -";
+  "so the shape arrives in canonical files whether anybody typed it or not, and";
+  "a gate blind to it would report a clean repo it had only half read.";
   let callee = property_get_or_null(node, "callee");
   let callee_name = property_get_or_null(callee, "name");
   let args = property_get(node, "arguments");
@@ -28,7 +27,8 @@ export function js_call_absence_tested_name(node, checkers) {
   if (not(compared)) {
     return null;
   }
-  let two = equal(list_size(args), 2);
+  let left2 = list_size(args);
+  let two = equal(left2, 2);
   if (not(two)) {
     return null;
   }
@@ -45,22 +45,4 @@ export function js_call_absence_tested_name(node, checkers) {
     return name3;
   }
   return null;
-}
-function js_node_absent_is(node) {
-  ("Whether a value written in the code stands for nothing at all - the word for");
-  ("nothing, and the name a language gives a value never set.");
-  let type = property_get_or_null(node, "type");
-  let literal = equal(type, "Literal");
-  if (literal) {
-    let value = property_get_or_null(node, "value");
-    let none = null_is(value);
-    return none;
-  }
-  let identifier = equal(type, "Identifier");
-  if (identifier) {
-    let name = property_get_or_null(node, "name");
-    let undefined_is = equal(name, "undefined");
-    return undefined_is;
-  }
-  return false;
 }
