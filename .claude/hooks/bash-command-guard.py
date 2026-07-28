@@ -702,6 +702,29 @@ def _literal_var_map(command):
 VAR_PREFIX_RE = re.compile(r"^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?(.*)$")
 
 
+def _redirect_target_unquoted(path):
+    """A redirect target with its surrounding DOUBLE quotes taken off, so
+    `> "$SP/out.txt"` resolves exactly as `> $SP/out.txt` does.
+
+    Quoting a redirect target is the more careful spelling, not the more
+    suspicious one - it is what keeps a path with a space in it from being
+    split - so the guard should not refuse the careful form and approve the
+    careless one. Refusing it was silent, too: a loop writing to a quoted
+    "$SP/f.txt" prompted while the identical loop writing to $SP/f.txt did
+    not, and nothing in the message said which half was the problem.
+
+    Single quotes are deliberately NOT stripped. Bash performs no expansion
+    inside them, so `> '$SP/f.txt'` really does name a file called `$SP/f.txt`
+    - resolving it would be reading it as something it is not. It fails the
+    plain-path charset afterwards and stays refused, which is correct.
+
+    Nothing here widens what is accepted: the result goes through the same
+    variable resolution and the same scratchpad check as before."""
+    if len(path) >= 2 and path[0] == '"' and path[-1] == '"':
+        return path[1:-1]
+    return path
+
+
 def _resolve_leading_var(path, var_map):
     """If `path` starts with `$VAR` or `${VAR}` for a captured literal VAR,
     substitute its value for that prefix; else return path unchanged. The
@@ -855,6 +878,7 @@ def tokenize(command, subst_validator=None, outer_vars=None):
                     while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n"):
                         k += 1
                     path = command[path_start:k]
+                    path = _redirect_target_unquoted(path)
                     path = _resolve_leading_var(path, var_map)
                     if path and is_safe_scratchpad_target(path):
                         word.clear()
@@ -901,6 +925,7 @@ def tokenize(command, subst_validator=None, outer_vars=None):
                 while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n", "<", ">"):
                     k += 1
                 path = command[path_start:k]
+                path = _redirect_target_unquoted(path)
                 path = _resolve_leading_var(path, var_map)
                 if path and SAFE_SCRATCHPAD_PATH_RE.match(path) and not _is_network_pseudo_device(path):
                     word.clear()
