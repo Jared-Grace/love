@@ -1,3 +1,4 @@
+import { apps_names_prefixed } from "./apps_names_prefixed.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -13,6 +14,7 @@ export async function literal_duplicates_unambiguous() {
     let seen = property_get_or(claims, entry.literal, 0);
     claims[entry.literal] = seen + 1;
   }
+  let prefixed = await apps_names_prefixed();
   let safe = [];
   for (let entry of found) {
     let claimed = property_get_or(claims, entry.literal, 0);
