@@ -1,6 +1,6 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function pwa_manifest_object(name) {
-  let start_url = text_combine_multiple(["/", name, ".html"]);
+  let start_url = text_combine_multiple(["/", name, html_extension()]);
   let icon_192 = {
     src: text_combine_multiple(["/", name, "-192.png"]),
     sizes: "192x192",
