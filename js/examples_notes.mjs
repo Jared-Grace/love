@@ -142,6 +142,10 @@ export function examples_notes() {
       "the address for one of several calls to the same name",
     example_statement_call_named_index:
       "the same numbered address at the line rather than the call",
+    example_statement_wrap_guard:
+      "a pairing so close that running the halves apart leaves a state nobody wants",
+    example_block_prose_add:
+      "the step that used to force a hand edit at the end of an otherwise command-only path",
   };
   return notes;
 }
