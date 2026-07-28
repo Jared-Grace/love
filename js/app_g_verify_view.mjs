@@ -1,3 +1,4 @@
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
 import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
 import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
@@ -321,7 +322,7 @@ export async function app_g_verify_view(
   }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
-    ("suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly");
+    "suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly";
     let element = html_component_element_get(suggest_area);
     html_style_set(suggest_area, "height", "auto");
     let content = element.scrollHeight;
