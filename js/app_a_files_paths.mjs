@@ -3,9 +3,9 @@ import { list_map_property } from "./list_map_property.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
-import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
+import { browser_files_store } from "./browser_files_store.mjs";
 export async function app_a_files_paths() {
-  let store = app_a_file_system_store();
+  let store = browser_files_store();
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let filtered = list_filter_property_exclude_if_exists(all, "deleted", true);
   let property_name = app_a_indexeddb_path_key();
