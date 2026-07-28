@@ -301,6 +301,8 @@ export function permission_grant_names() {
   let spelled298 = fn_name("functions_selects_unsafe_params");
   let spelled299 = fn_name("functions_dispatcher_bootstrap");
   let spelled300 = fn_name("functions_selects_unsafe_gate_run");
+  let spelled301 = fn_name("dispatcher_scripts_claude");
+  let spelled302 = fn_name("color_near_miss_baseline_write");
   let names = [
     spelled,
     spelled2,
@@ -602,6 +604,8 @@ export function permission_grant_names() {
     spelled298,
     spelled299,
     spelled300,
+    spelled301,
+    spelled302,
   ];
   return names;
 }
