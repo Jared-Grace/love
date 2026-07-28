@@ -11,14 +11,14 @@ export function g_coordinates_neighbors_walkable_get(g) {
   let index = g_coordinates_walkable_index(coordinates, npcs);
   function neighbors_get(node) {
     let orthogonal = g_coordinates_orthogonal(node);
-    function lambda(add) {
+    function lambda(add_neighbor) {
       for (let candidate of orthogonal) {
         let key = g_coordinates_key(candidate);
         let is_land = property_exists(index, key);
         if (is_land) {
           let tile = property_get(index, key);
           let neighbor = graph_neighbor_dataless(tile);
-          add(neighbor);
+          add_neighbor(neighbor);
         }
       }
     }
