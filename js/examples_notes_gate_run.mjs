@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_size } from "./list_size.mjs";
 import { examples_order } from "./examples_order.mjs";
 import { examples_notes } from "./examples_notes.mjs";
 import { properties_get } from "./properties_get.mjs";
@@ -16,7 +18,10 @@ export function examples_notes_gate_run() {
   }
   let unexplained = list_filter(order, note_missing_is);
   list_empty_is_assert_json(unexplained, {
-    hint: "these examples are in the reading order with no note saying why they are there — add one to examples_notes",
+    hint: text_combine_multiple([
+      "these examples are in the reading order with no note saying why they are there — add one to ",
+      examples_notes.name,
+    ]),
   });
   function example_missing_is(name) {
     let missing = list_includes_not(order, name);
