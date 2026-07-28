@@ -1,0 +1,23 @@
+{
+ "known": [
+  "#1c56d4 ~ #1d4ed8ff",
+  "#3a3a3a ~ rgb(55, 55, 55)",
+  "#8b949e ~ #9aa0a6",
+  "#90ee90 ~ #a0eaa0",
+  "#9aa0a6 ~ #9ca3af",
+  "#9aa0a6 ~ #a8a8a8ff",
+  "#9ca3af ~ #a8a8a8ff",
+  "#9cc5ff ~ rgb(152, 203, 255)",
+  "#D10000 ~ #d90000ff",
+  "#D10000 ~ rgb(197, 0, 0)",
+  "#bcd6ff ~ #bfdbfe",
+  "#bcd6ff ~ rgb(178, 214, 255)",
+  "#bcd6ff ~ rgb(190, 222, 255)",
+  "#bfdbfe ~ rgb(178, 214, 255)",
+  "#bfdbfe ~ rgb(190, 222, 255)",
+  "#e5e7eb ~ #e8e8e8",
+  "#fafafa ~ #ffffff",
+  "#fafafa ~ rgba(255,255,255,1)",
+  "rgb(178, 214, 255) ~ rgb(190, 222, 255)"
+ ]
+}
