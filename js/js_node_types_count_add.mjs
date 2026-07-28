@@ -20,13 +20,7 @@ export function js_node_types_count_add(ast, counts) {
       return;
     }
     let type = property_get(node, "type");
-    let count = property_or_null(counts, type);
-    let first = null_is(count);
-    if (first) {
-      count = 0;
-    }
-    let more = count + 1;
-    property_set(counts, type, more);
+    property_count_add(counts, type, 1);
   }
   js_visit(ast, lambda);
 }
