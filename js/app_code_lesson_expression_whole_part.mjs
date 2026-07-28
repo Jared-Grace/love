@@ -22,10 +22,8 @@ export function app_code_lesson_expression_whole_part() {
   function make(divisor) {
     "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
     let quotient = integer_random(2, 3);
-    let max = subtract(divisor, 1);
-    let leftover = integer_random(1, max);
-    let left = multiply(quotient, divisor);
-    let dividend = add(left, leftover);
+    let parts = app_code_uneven_dividend(quotient, divisor);
+    let dividend = property_get(parts, "dividend");
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let floored = text_combine_multiple(["Math.floor(", division, ")"]);
     let t = text_to(divisor);
