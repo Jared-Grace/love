@@ -1,3 +1,5 @@
+import { js_selects_functionize } from "./js_selects_functionize.mjs";
+import { js_selects_functionize_dir } from "./js_selects_functionize_dir.mjs";
 import { function_wrap } from "./function_wrap.mjs";
 import { equal } from "./equal.mjs";
 import { function_rename } from "./function_rename.mjs";
@@ -68,6 +70,13 @@ export function example_files_command_lambda(f_name, args) {
     async function lambda(dir) {
       let r7 = await js_identifier_param_delete_dir(dir, args[0], args[1]);
       return r7;
+    }
+    return lambda;
+  }
+  if (equal(f_name, js_selects_functionize.name)) {
+    async function lambda(dir) {
+      let r8 = await js_selects_functionize_dir(dir, args[0], args[1], args[2]);
+      return r8;
     }
     return lambda;
   }
