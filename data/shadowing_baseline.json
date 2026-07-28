@@ -177,27 +177,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_lesson_functions_console_log_arithmetic",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "app_code_lesson_functions_console_log_statement",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "app_code_lesson_functions_console_log",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "app_code_lesson_quiz_token_select",
    "shadows_outer": [
     "token"
@@ -400,13 +379,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_shared_screen_set",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "app_supper_folders_get",
    "shadows_outer": [
     "folders"
@@ -470,55 +442,6 @@
    "shadows_function": []
   },
   {
-   "name": "daemon_ensure",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_properties",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_status",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_unit_name",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_unit_path",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_unit_text_current",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "daemon_unit_text",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "data_generate_get",
    "shadows_outer": [],
    "shadows_function": [
@@ -578,27 +501,6 @@
    "shadows_function": []
   },
   {
-   "name": "example_alias_derive",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "example_command_lambda",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "example_files_command_lambda",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "example_files_refuses_run",
    "shadows_outer": [
     "threw"
@@ -617,31 +519,10 @@
    ]
   },
   {
-   "name": "example_function_chip_dom",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "example_note_link_dom",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "example_slot_expression_set_lambda",
    "shadows_outer": [],
    "shadows_function": [
     "each"
-   ]
-  },
-  {
-   "name": "example_transform_before",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
    ]
   },
   {
@@ -655,8 +536,7 @@
    "name": "examples_corpus_read",
    "shadows_outer": [],
    "shadows_function": [
-    "mod",
-    "fn_name"
+    "mod"
    ]
   },
   {
@@ -696,34 +576,6 @@
    ]
   },
   {
-   "name": "function_eachify_transform",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "function_eachify",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "function_github_url",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "function_name_prefix_without",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "function_name_to_path_search",
    "shadows_outer": [
     "mapped"
@@ -743,13 +595,6 @@
     "f_name_before"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "function_run_args_none",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
   },
   {
    "name": "function_run_prompt_repo_name_colored",
@@ -955,34 +800,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_code_call_arg_fn",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "js_code_call_arg",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "js_code_call_args",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "js_code_call",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "js_code_comment_statement_generic",
    "shadows_outer": [
     "known"
@@ -1029,25 +846,11 @@
    ]
   },
   {
-   "name": "js_fold_call_statement",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
    "name": "js_function_declaration_params_names_node",
    "shadows_outer": [
     "type_is"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "js_function_declaration",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
   },
   {
    "name": "js_function_last_asyncify",
@@ -1062,20 +865,6 @@
     "ast"
    ],
    "shadows_function": []
-  },
-  {
-   "name": "js_identifier_param_delete_dir",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
-  },
-  {
-   "name": "js_identifier_param_new_dir",
-   "shadows_outer": [],
-   "shadows_function": [
-    "fn_name"
-   ]
   },
   {
    "name": "js_list_add_combine",
@@ -1267,9 +1056,7 @@
    "shadows_outer": [
     "r"
    ],
-   "shadows_function": [
-    "fn_name"
-   ]
+   "shadows_function": []
   }
  ]
 }
