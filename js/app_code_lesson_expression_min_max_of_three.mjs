@@ -19,13 +19,13 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_min_max_of_three() {
   "Math.min and Math.max are not limited to two numbers - give either one three numbers and it still returns the smallest / largest (Math.min(3, 8, 5) is 3, Math.max(3, 8, 5) is 8). One combined lesson - a min example and a max example - because going from two numbers to three is a small step once Math.min and Math.max are known. Half the questions are Math.min and half Math.max; three different numbers 2..12, the other two stand as decoys.";
-  function code(fn_name, a, b, c) {
+  function code(f_name, a, b, c) {
     "the three-number call as a code string - the function name, then its three numbers separated by commas inside parentheses";
     let ta = text_to(a);
     let tb = text_to(b);
     let tc = text_to(c);
     let combined = text_combine_multiple([
-      fn_name,
+      f_name,
       "(",
       ta,
       ", ",
@@ -48,11 +48,11 @@ export function app_code_lesson_expression_min_max_of_three() {
     let b = list_get(three, 1);
     let c = list_get(three, 2);
     let use_max = integer_even_is(index);
-    let fn_name = "Math.min";
+    let f_name = "Math.min";
     if (use_max) {
-      fn_name = "Math.max";
+      f_name = "Math.max";
     }
-    let r = code(fn_name, a, b, c);
+    let r = code(f_name, a, b, c);
     return r;
   }
   function refill() {
