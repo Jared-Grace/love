@@ -10,5 +10,13 @@ export async function functions_rename_if_starts_with(
     f_name_prefix_before,
     f_name_prefix_after,
   );
-  await functions_rename_generic_starts_with(curried, f_name_prefix_before);
+  ("Hands back which names were changed and to what, which after a prefix");
+  ("migration is the only record of what it did that does not mean reading the");
+  ("log. Each rename commits itself as it lands, so the answer and the history");
+  ("agree name for name.");
+  let renamed = await functions_rename_generic_starts_with(
+    curried,
+    f_name_prefix_before,
+  );
+  return renamed;
 }
