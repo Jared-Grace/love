@@ -11,6 +11,7 @@ import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { html_on_click } from "./html_on_click.mjs";
+import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { app_g_dev_index_prefixes } from "./app_g_dev_index_prefixes.mjs";
@@ -44,7 +45,7 @@ export function app_g_dev_index() {
     "flex-direction": "column",
     "align-items": "stretch",
     "justify-content": "flex-start",
-    gap: "0.5rem",
+    gap: "0",
     "z-index": "1000",
     padding: "1rem",
     "box-sizing": "border-box",
