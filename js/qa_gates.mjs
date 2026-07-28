@@ -112,6 +112,7 @@ export function qa_gates() {
     qa_report_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
+    color_near_miss_gate_run,
   ];
   return gates;
 }
