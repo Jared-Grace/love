@@ -51,7 +51,7 @@ export function html_progress_bar(
   ]);
   let text = text_first_upper_to(combined);
   let div2 = html_div_text_centered(progress_container_text, text);
-  html_style_font_size(div2, "0.8em");
+  html_style_font_size(div2, html_progress_caption_font_size());
   let r = {
     container: progress_container_text,
   };

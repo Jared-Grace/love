@@ -46,7 +46,7 @@ export function app_shared_success_message(parent) {
   html_centered(p);
   let p_emojis = html_div(p);
   html_span_text(p_emojis, joined);
-  html_style_font_size(p_emojis, "1.5em");
+  html_style_font_size(p_emojis, app_shared_success_emoji_font_size());
   let p_encouragement = html_div(p);
   let encouragements_choices = [
     "Congratulations",
