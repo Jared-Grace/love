@@ -331,6 +331,7 @@ export function permission_grant_names() {
   let spelled328 = fn_name("atoms_unexampled_baseline_write");
   let spelled329 = fn_name("function_sweep_twin");
   let spelled330 = fn_name("functions_prose_search");
+  let spelled331 = fn_name("functions_prose");
   let names = [
     spelled,
     spelled2,
@@ -662,6 +663,7 @@ export function permission_grant_names() {
     spelled328,
     spelled329,
     spelled330,
+    spelled331,
   ];
   return names;
 }
