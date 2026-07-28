@@ -124,7 +124,7 @@ export function app_code_lesson_expression_min_max_of_three() {
       "Math.min",
       " and ",
       "Math.max",
-      " can take more than two numbers",
+      " can receive more than two numbers",
     ]);
     let min_box = app_code_container_light_blue(root);
     html_div_cycle_code(min_box, ["", v_min, " is ", smallest_text]);

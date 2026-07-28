@@ -11,7 +11,7 @@ export function app_code_lesson_expression_larger() {
     html_div_cycle_code(define, [
       "",
       "Math.max",
-      " takes two numbers, separated by a comma ",
+      " receives two numbers, separated by a comma ",
       ",",
     ]);
   }
