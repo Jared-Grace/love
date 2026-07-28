@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_visit_nodes } from "./js_visit_nodes.mjs";
