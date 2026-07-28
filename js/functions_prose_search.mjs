@@ -11,12 +11,16 @@ export async function functions_prose_search(search) {
   let prose = await functions_prose();
   let names = properties_get(prose);
   function purpose_of(f_name) {
-    let purpose = property_get(prose, f_name);
-    return purpose;
+    "The first line only, because this is what gets read down a list of hits.";
+    let lines = property_get(prose, f_name);
+    let first = list_first(lines);
+    return first;
   }
   function include(f_name, term) {
-    let purpose = purpose_of(f_name);
-    let lowered = text_lower_to(purpose);
+    "Matched against everything the function says, not only the line shown - a capability is often described where it explains itself rather than where it introduces itself.";
+    let lines = property_get(prose, f_name);
+    let joined = list_join_space(lines);
+    let lowered = text_lower_to(joined);
     let wanted = text_lower_to(term);
     let has = text_includes(lowered, wanted);
     return has;
