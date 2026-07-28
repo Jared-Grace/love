@@ -26,4 +26,13 @@ export function examples_notes_gate_run() {
   list_empty_is_assert_json(stranded, {
     hint: "these notes describe examples that are not in the reading order — was the example renamed or removed?",
   });
+  ("Says how much it looked at, because a gate that answers nothing cannot be");
+  ("told apart from one that did nothing. Both leave the same empty line, and the");
+  ("reader is left inferring a pass from the absence of a complaint.");
+  let r = {
+    ordered: list_size(order),
+    unexplained: 0,
+    stranded: 0,
+  };
+  return r;
 }
