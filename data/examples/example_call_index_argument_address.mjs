@@ -41,7 +41,10 @@ export const example = {
   for (let entry of found) {
     let names = [];
     list_add(names, entry.name);
-    list_add(kept, { name: entry.name, meaning: entry.meaning });
+    list_add(kept, {
+      name: entry.name,
+      meaning: entry.meaning,
+    });
   }
   return kept;
 }`,
