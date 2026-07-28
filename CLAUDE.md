@@ -82,6 +82,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
 | Canonicalize a fn **and say whether it still loads**, in one command | (no alias) | `function_auto_checked <fn>` |
+| The same over a list, answering per name | (no alias) | `function_auto_multiple_checked <a,b,c>` |
 | Ask the log which two steps get run back to back most — what to compose next | (no alias) | `ai_log_pairs_frequent <count>` |
 | Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
 
