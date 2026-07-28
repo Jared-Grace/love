@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { function_prose_lines } from "./function_prose_lines.mjs";
 import { file_read_try } from "./file_read_try.mjs";
@@ -17,7 +18,7 @@ export async function functions_prose() {
   async function each_name(f_name) {
     let path = property_get(paths, f_name);
     let code = await file_read_try(path);
-    if (!code) {
+    if (not(code)) {
       return;
     }
     let lines = function_prose_lines(code);
