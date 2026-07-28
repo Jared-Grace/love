@@ -6,12 +6,12 @@ import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs
 export async function app_bible_chapter_change(
   context,
   chapter_code,
-  list_next_wrap,
+  list_next_wrap_fn,
   verse_number_get,
 ) {
   let e = ebible_folder_english();
   let list = await ebible_chapter_codes_browser(e);
-  let next = list_next_wrap(list, chapter_code);
+  let next = list_next_wrap_fn(list, chapter_code);
   let verses_next = await ebible_verses_browser(e, next);
   let mapped = list_map_property(verses_next, "verse_number");
   let verse_number_next = verse_number_get(mapped);
