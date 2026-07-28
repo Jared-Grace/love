@@ -13,5 +13,5 @@ export function example_note_code_style(code) {
   let border_radius = app_shared_border_radius();
   html_border_radius(code, border_radius);
   html_style_padding(code, "0.05rem 0.3rem");
-  html_style_font_size(code, "0.9em");
+  html_style_font_size(code, example_note_code_font_size());
 }
