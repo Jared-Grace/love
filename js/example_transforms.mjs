@@ -1,3 +1,5 @@
+import { js_block_prose_add } from "./js_block_prose_add.mjs";
+import { js_statement_wrap_guard } from "./js_statement_wrap_guard.mjs";
 import { js_object_property_getter_set } from "./js_object_property_getter_set.mjs";
 import { js_call_argument_named_getter_set } from "./js_call_argument_named_getter_set.mjs";
 import { js_selects_span_move_after } from "./js_selects_span_move_after.mjs";
@@ -65,6 +67,8 @@ export function example_transforms() {
     js_selects_span_move_after,
     js_call_argument_named_getter_set,
     js_object_property_getter_set,
+    js_statement_wrap_guard,
+    js_block_prose_add,
   };
   return transforms;
 }
