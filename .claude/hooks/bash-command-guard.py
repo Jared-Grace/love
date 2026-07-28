@@ -2522,6 +2522,91 @@ def repos_function_names():
     return names
 
 
+FUNCTION_DECLARATION_RE = re.compile(
+    r"^export\s+(?:async\s+)?function\s+(\w+)\s*\(([^)]*)\)", re.MULTILINE
+)
+
+
+def function_declared_parameter_count(name):
+    """How many parameters `<repo>/js/<name>.mjs` declares, or None when that
+    cannot be read or parsed. Same one-function-per-file layout
+    repos_function_names() walks, so no node has to run."""
+    repos_folder = os.path.dirname(REPO_ROOT)
+    try:
+        repo_names = os.listdir(repos_folder)
+    except OSError:
+        return None
+    for repo_name in repo_names:
+        path = os.path.join(repos_folder, repo_name, "js", name + ".mjs")
+        try:
+            with open(path) as handle:
+                source = handle.read()
+        except OSError:
+            continue
+        for match in FUNCTION_DECLARATION_RE.finditer(source):
+            if match.group(1) != name:
+                continue
+            declared = match.group(2).strip()
+            if not declared:
+                return 0
+            return len(declared.split(","))
+        return None
+    return None
+
+
+def find_argumentless_dispatcher_call(command):
+    """If `command` runs `node scripts/ai.mjs <fn>` with no arguments at all
+    for a function that declares some, return (name, count); else None.
+
+    A correctness floor of the same kind as the dead-name one above, and
+    provable for the same reason: this repo has no optional, defaulted or
+    variadic parameters, and `ao` writes an `arguments_assert(arguments, N)`
+    into the body, so a call that supplies none of N can only throw or
+    silently do nothing. Both outcomes read as an answer, which is what makes
+    the shape worth denying rather than prompting - CLAUDE.md warns against
+    calling a transform bare precisely because what comes back looks like a
+    report on the function and is a report on the missing arguments.
+
+    Only the *zero* arguments case fires. A short count is equally doomed but
+    needs the tokenizer's word list to agree with what the shell would pass,
+    and fails open here instead. Redirections are dropped during tokenize, so
+    `node scripts/ai.mjs <fn> 2>&1 | grep ...` still arrives as three words."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if (
+            len(words) == 3
+            and words[0] == "node"
+            and ai_script_is(words[1])
+            and FUNCTION_NAME_TEXT.match(words[2])
+        ):
+            count = function_declared_parameter_count(words[2])
+            if count:
+                return (words[2], count)
+    return None
+
+
+def argumentless_dispatcher_deny_reason(name, count):
+    return (
+        f"`{name}` declares {count} parameter(s) and this call supplies none, "
+        "so it would throw rather than tell you anything about the function - "
+        "and the throw is about the missing arguments, not about it. Nothing "
+        "in this repo takes an optional or defaulted parameter, so there is no "
+        "reading of this that works.\n"
+        f"  - to check it still loads and normalizes: `node scripts/ai.mjs "
+        f"function_auto_check {name}` (allow-listed, writes nothing, answers "
+        "{name, ok, error_message})\n"
+        f"  - to see what it does: read `js/{name}.mjs`\n"
+        "  - to actually run a transform: give it a selector and its arguments "
+        "through `function_select_apply_args <fn> <selector> <selector_args> "
+        f"{name} <args>`.\n"
+        "See CLAUDE.md - 'To sanity-check that a function still loads'."
+    )
+
+
 def alias_full_name(name):
     """The full function name an alias key points at, or None. ai.mjs refuses
     shorthand, so an alias arriving at this seam is a dead name whose fix is
@@ -3165,6 +3250,26 @@ def main():
                 "permissionDecision": "deny",
                 "permissionDecisionReason": dead_dispatcher_deny_reason(
                     dead_fn, repos_function_names()
+                ),
+            }
+        }))
+        return
+
+    # The same correctness floor one step on: the name is live, but the call
+    # gives it none of the arguments it declares, so it throws for a reason
+    # that has nothing to do with the question being asked. Sits beside the
+    # dead-name deny because it is the same kind of certainty - no optional
+    # parameters anywhere in the repo - and a grant must not outrank it either,
+    # since a granted function called wrongly still only produces a wrong
+    # answer, just without the click.
+    argumentless = find_argumentless_dispatcher_call(command)
+    if argumentless:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": argumentless_dispatcher_deny_reason(
+                    argumentless[0], argumentless[1]
                 ),
             }
         }))
