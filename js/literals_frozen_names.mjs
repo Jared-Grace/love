@@ -10,15 +10,6 @@ export function literals_frozen_names() {
   let spelled5 = fn_name("app_search_query_hash_key");
   let spelled6 = fn_name("app_shared_bible_mode_hash_key");
   let spelled7 = fn_name("app_a_file_system_store");
-  let spelled8 = fn_name("app_a_indexeddb_database_name");
-  let names = [
-    spelled,
-    spelled2,
-    spelled4,
-    spelled5,
-    spelled6,
-    spelled7,
-    spelled8,
-  ];
+  let names = [spelled, spelled2, spelled4, spelled5, spelled6, spelled7];
   return names;
 }

@@ -1,3 +1,6 @@
+import { property_exists } from "./property_exists.mjs";
+import { literals_frozen_record_new } from "./literals_frozen_record_new.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
@@ -22,12 +25,20 @@ export async function literals_frozen_gate_run() {
   let a = Object.keys(now);
   let b = Object.keys(recorded);
   let names = list_concat_unique(a, b);
+  ("A name the record has never held is told apart from one whose value has moved, because only the second is the thing described above. Counting them together made adding a frozen constant fail as though a published value had changed under it - the case this says in its own words it is not watching - and the repair offered was the heavy command, so a rare and deliberate act was being asked for every time somebody named a new one.");
+  let fresh = [];
   let moved = [];
   for (let f_name of names) {
     let was = property_or_null(recorded, f_name);
     let is = property_or_null(now, f_name);
     let different = not_equal(was, is);
     if (different) {
+      let b2 = property_exists(recorded, f_name);
+      let unheard = not(b2);
+      if (unheard) {
+        list_add(fresh, f_name);
+        continue;
+      }
       list_add(moved, {
         f_name,
         was,
@@ -35,6 +46,7 @@ export async function literals_frozen_gate_run() {
       });
     }
   }
+  ("Both still fail, because a record missing a name cannot catch that name's value moving later - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names.");
   list_empty_is_assert_json(moved, {
     hint: text_combine_multiple([
       "a frozen value is not what the record says - if the change was meant, write the record again with ",
@@ -43,9 +55,18 @@ export async function literals_frozen_gate_run() {
     ]),
     moved,
   });
+  list_empty_is_assert_json(fresh, {
+    hint: text_combine_multiple([
+      "a frozen constant the record has never held - nothing has moved, so record it with ",
+      literals_frozen_record_new.name,
+      " which only ever adds a name the record is missing and cannot touch a value it already holds",
+    ]),
+    fresh,
+  });
   let r = {
     checked: list_size(names),
     moved,
+    fresh,
   };
   return r;
 }
