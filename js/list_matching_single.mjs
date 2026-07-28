@@ -4,7 +4,7 @@ import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { equal } from "./equal.mjs";
-export function js_array_element_single(elements, same_is, hint, wanted) {
+export function list_matching_single(elements, same_is, hint, wanted) {
   arguments_assert(arguments, 4);
   ("The one entry of an ordered register that answers to what was asked for, or a");
   ("refusal saying so in the words of the register it was asked of. Every verb");
