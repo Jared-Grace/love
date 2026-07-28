@@ -1,8 +1,8 @@
 import { browser_files_database_name } from "./browser_files_database_name.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
-import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
+import { browser_files_path_key } from "./browser_files_path_key.mjs";
 import { not } from "./not.mjs";
-export async function app_a_indexeddb_initialize() {
+export async function browser_files_database_initialize() {
   "Every name here comes from its own getter, and none of them from the app entry point.";
   "That distinction is the whole point rather than a style: measured 2026-07-26, a name-only";
   "import of the app itself costs the g bundle 410 KiB, because reading any file reaches here.";
@@ -21,7 +21,7 @@ export async function app_a_indexeddb_initialize() {
       let b = db.objectStoreNames.contains(store_files);
       if (not(b)) {
         db.createObjectStore(store_files, {
-          keyPath: app_a_indexeddb_path_key(),
+          keyPath: browser_files_path_key(),
         });
       }
     };
