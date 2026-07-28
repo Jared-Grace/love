@@ -1,6 +1,5 @@
-import { app_code_column_cap } from "./app_code_column_cap.mjs";
-import { html_display_none } from "./html_display_none.mjs";
-import { html_display_block } from "./html_display_block.mjs";
+import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
+import { app_code_feedback_cell } from "./app_code_feedback_cell.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_hash_write } from "./app_code_hash_write.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
@@ -21,7 +20,6 @@ import { subtract_1 } from "./subtract_1.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
 import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
@@ -70,10 +68,14 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let parent_container = html_div(parent);
-  let container_correction = html_div(parent_container);
-  let container_success_message = html_div(parent_container);
-  app_code_column_cap(container_success_message);
-  let success = app_shared_success_message(container_success_message);
+  ("one feedback slot holds the success message and the correction overlapped in a single grid cell, so it is always as tall as the taller of the two and nothing shifts when Show me the answer swaps one for the other");
+  let feedback_slot = html_div(parent_container);
+  app_code_feedback_slot_style(feedback_slot);
+  let container_correction = html_div(feedback_slot);
+  let container_success_message = html_div(feedback_slot);
+  app_code_feedback_cell(container_correction);
+  app_code_feedback_cell(container_success_message);
+  app_shared_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_code_lesson_current_number(context);
@@ -140,8 +142,7 @@ export function app_code_lesson_quiz(
     let value3 = app_shared_spaced_gap();
     html_style_margin_top(back_button, value3);
   }
-  let hides = [success];
-  html_visibility_hidden_multiple(hides);
+  html_visibility_hidden(container_success_message);
   on_qa_change();
   function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
@@ -152,13 +153,13 @@ export function app_code_lesson_quiz(
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
   }
   function render_correction() {
-    "render the correction for the current question but keep it out of the layout entirely (display none, not merely invisible) so it leaves NO white band - on a correct answer the correction is never shown, and reserving its height would strand an empty gap above the success message. Show me the answer reveals it (a small one-time downward shift is fine for that deliberate, now-rare action)";
+    "render the correction for the current question but keep it INVISIBLE (visibility hidden, still occupying its grid cell in the feedback slot) so the slot always reserves the taller of correction-or-success and NOTHING shifts when Show me the answer swaps the success message for it";
     html_clear(container_correction);
     correction_render(container_correction, qa);
-    html_display_none(container_correction);
+    html_visibility_hidden(container_correction);
   }
   function show_correction() {
-    html_display_block(container_correction);
+    html_visibility_visible(container_correction);
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
