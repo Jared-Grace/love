@@ -1,3 +1,4 @@
+import { js_object_property_getter_set } from "./js_object_property_getter_set.mjs";
 import { js_call_argument_named_getter_set } from "./js_call_argument_named_getter_set.mjs";
 import { js_selects_span_move_after } from "./js_selects_span_move_after.mjs";
 import { js_selects_functionize_local } from "./js_selects_functionize_local.mjs";
@@ -63,6 +64,7 @@ export function example_transforms() {
     js_selects_functionize_local,
     js_selects_span_move_after,
     js_call_argument_named_getter_set,
+    js_object_property_getter_set,
   };
   return transforms;
 }
