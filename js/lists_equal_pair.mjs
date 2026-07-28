@@ -14,6 +14,6 @@ export function lists_equal_pair(list_a, list_b) {
     }
   }
   each_pair_min(list_a, list_b, lambda);
-  let equal = not(has_difference);
-  return equal;
+  let same = not(has_difference);
+  return same;
 }
