@@ -36,6 +36,7 @@ export function permission_rules_other() {
     "Bash(df:*)",
     "Bash(du:*)",
     "Bash(stat:*)",
+    "Bash(strings:*)",
     "Bash(ps:*)",
     "Bash(pgrep:*)",
     "Bash(uptime:*)",
