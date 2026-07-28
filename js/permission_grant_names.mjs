@@ -308,6 +308,9 @@ export function permission_grant_names() {
   let spelled305 = fn_name("functions_shadowing_rename_all");
   let spelled306 = fn_name("functions_param_new");
   let spelled307 = fn_name("functions_param_new_multiple");
+  let spelled308 = fn_name("commits_command_named_share");
+  let spelled309 = fn_name("function_shadowing_function_rename");
+  let spelled310 = fn_name("function_shadowing_rename_refusal");
   let names = [
     spelled,
     spelled2,
@@ -616,6 +619,9 @@ export function permission_grant_names() {
     spelled305,
     spelled306,
     spelled307,
+    spelled308,
+    spelled309,
+    spelled310,
   ];
   return names;
 }
