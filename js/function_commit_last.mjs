@@ -1,3 +1,4 @@
+import { list_from_index } from "./list_from_index.mjs";
 import { path_join } from "./path_join.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
@@ -10,7 +11,6 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_join } from "./list_join.mjs";
 import { not } from "./not.mjs";
 export async function function_commit_last(f_name) {
@@ -39,7 +39,7 @@ export async function function_commit_last(f_name) {
   let parts = text_split(trimmed, "/");
   let commit = list_first(parts);
   let when = list_get(parts, 1);
-  let said = list_slice(parts, 2);
+  let said = list_from_index(parts, 2);
   let subject = list_join(said, "/");
   let last = {
     f_name,
