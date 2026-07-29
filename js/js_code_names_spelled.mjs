@@ -16,7 +16,7 @@ export function js_code_names_spelled(f_name, note, names) {
     index = add(index, 1);
     let binding = text_combine("spelled", index);
     list_add(bindings, binding);
-    let combined = text_combine_multiple([" = ", fn_name.name, '("']);
+    let combined = text_combine_multiple([" = ", fn_name("fn_name"), '("']);
     let line = text_combine_multiple([
       "  let ",
       binding,
@@ -31,9 +31,9 @@ export function js_code_names_spelled(f_name, note, names) {
   let json = json_to(note);
   let combined2 = text_combine_multiple([
     "import { ",
-    fn_name.name,
+    fn_name("fn_name"),
     ' } from "./',
-    fn_name.name,
+    fn_name("fn_name"),
     '.mjs";\n',
   ]);
   let code = text_combine_multiple([
