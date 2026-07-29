@@ -190,6 +190,25 @@ export async function app_search_results(context, div_results) {
     return key;
   }
   list_sort_text_mapper(results, bible_order_key);
+  function result_verses_count(vk) {
+    let verse_numbers = property_get(vk, "value");
+    let s = list_size(verse_numbers);
+    return s;
+  }
+  function book_verses_count(book_code) {
+    "how many verses a book card is holding, which the card says out loud so the reader can weigh a book before opening it";
+    function belongs(vk) {
+      let chapter_code = property_get(vk, "key");
+      let vk_book_code = ebible_chapter_code_to_book(chapter_code);
+      let e = equal(vk_book_code, book_code);
+      return e;
+    }
+    let mine = list_filter(results, belongs);
+    let sizes = list_map(mine, result_verses_count);
+    let total = list_sum(sizes);
+    return total;
+  }
+  let div_books = html_div_centered(div_results);
   let book_code_shown = null;
   let div_book_body = null;
   let book_chapter_expands = null;
@@ -203,11 +222,22 @@ export async function app_search_results(context, div_results) {
     book_code_shown = book_code;
     let chapter_expands = [];
     book_chapter_expands = chapter_expands;
-    let div_book = app_shared_container_blue(div_results);
+    let div_book = app_shared_container_blue(div_books);
+    html_style_padding_em(div_book, "0.3");
+    html_style_margin_y(div_book, "0.15em");
+    html_text_align_left(div_book);
     let book_name = ebible_book_code_to_name(books, book_code);
-    let header = html_div_text_bold(div_book, book_name);
+    let verses_count = book_verses_count(book_code);
+    let verses_counted = word_count_pluralize(verses_count, "verse");
+    let header_text = text_combine_multiple([
+      book_name,
+      " (",
+      verses_counted,
+      ")",
+    ]);
+    let header = html_div_text_bold(div_book, header_text);
     html_cursor_pointer(header);
-    let div_body = html_div(div_book);
+    let div_body = html_div_centered(div_book);
     div_book_body = div_body;
     let collapsed = false;
     function collapsed_set(value) {

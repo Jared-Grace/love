@@ -15,6 +15,7 @@ export async function app_g_day_conversation_demo() {
   let state = app_g_day_state();
   property_set(state, "slices_total", 1);
   property_set(state, "slices_done", 0);
+  property_set(state, "sky_toast", true);
   let npcs = await app_g_npcs_get();
   let unconverted = list_filter_object_includes(npcs, {
     christian: false,

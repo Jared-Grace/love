@@ -14,9 +14,7 @@ export function app_g_conversation_sky_target(conversation_fraction) {
   let slices_total = property_get(state, "slices_total");
   let in_session = positive_is(slices_total);
   if (in_session) {
-    let slices_done = property_get(state, "slices_done");
-    let within = add(slices_done, conversation_fraction);
-    let day_fraction = divide(within, slices_total);
+    let day_fraction = app_g_conversation_day_fraction(conversation_fraction);
     let phase = g_day_sky_phase(day_fraction);
     return phase;
   }
