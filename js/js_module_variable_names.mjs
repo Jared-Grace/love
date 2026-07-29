@@ -10,8 +10,8 @@ export function js_module_variable_names(ast) {
   let declarations = list_filter_property(body, "type", "VariableDeclaration");
   function lambda(declaration) {
     let declarators = property_get(declaration, "declarations");
-    let names = list_map(declarators, js_function_declaration_name);
-    return names;
+    let names_inner = list_map(declarators, js_function_declaration_name);
+    return names_inner;
   }
   let per_declaration = list_map(declarations, lambda);
   let names = list_concat_multiple(per_declaration);
