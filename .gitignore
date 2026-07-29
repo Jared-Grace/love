@@ -32,3 +32,9 @@ Thumbs.db
 /android/lint/generated/
 
 /scripts/temp/
+
+# A file is written beside its destination and then renamed onto it, so that a
+# reader never sees half of one. The temp is removed when the write fails, but a
+# process killed outright never gets to remove it — and every commit here sweeps
+# the whole tree, so without this one of them lands in the repo. One already did.
+*.tmp.[0-9]*
