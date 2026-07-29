@@ -356,7 +356,8 @@ export async function app_g_verify_home(context) {
     if (not(active)) {
       return false;
     }
-    return equal(active.tagName, "TEXTAREA");
+    let eq = equal(active.tagName, "TEXTAREA");
+    return eq;
   }
   async function refresh() {
     if (document.hidden) {
@@ -394,7 +395,8 @@ export async function app_g_verify_home(context) {
         status: fresh_status,
         chapter_state: fresh_state,
       });
-      if (not_equal(fresh_json, shown_json) && not(editing_now())) {
+      let b4 = editing_now();
+      if (not_equal(fresh_json, shown_json) && not(b4)) {
         render(fresh_chapter, fresh_status, fresh_state);
       }
     } catch (ignore) {
