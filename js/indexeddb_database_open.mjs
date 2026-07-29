@@ -39,8 +39,8 @@ export async function indexeddb_database_open(name, store) {
     let ms = indexeddb_database_open_timeout_ms();
     try {
       async function open_bounded() {
-        let db = await lambda_timeout(open, ms);
-        return db;
+        let bounded = await lambda_timeout(open, ms);
+        return bounded;
       }
       let db = await open_bounded();
       return db;
