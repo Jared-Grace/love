@@ -1,6 +1,6 @@
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_string_pair_words } from "./app_code_string_pair_words.mjs";
+import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -18,12 +18,11 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_string_concat() {
-  "the third string lesson: two strings joined with a plus become one string, and the value is the two texts stuck together with no quotes and no space between them. The learner meets the plus as a joiner of text, not only a number operator; the words are short, wholesome and distinct, and the joined value keeps the first word first so order is felt without naming it.";
+  "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
   function pair() {
-    "two DIFFERENT short words, so the join is always between two distinct texts";
-    let words = app_code_string_pair_words();
+    "two DIFFERENT words from the shared verse, so the join is always between two distinct texts";
+    let words = app_code_verse_words_clean();
     let two = list_shuffle_take(words, 2);
     return two;
   }
@@ -88,7 +87,7 @@ export function app_code_lesson_expression_string_concat() {
     return built;
   }
   function above(root) {
-    "recall that a string is text in quotes, then the new idea: a plus joins two strings into one. A worked example shows the two strings and the joined value in the value colour, then a gentle note that the first string comes first.";
+    "anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.";
     let two = pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
@@ -96,32 +95,63 @@ export function app_code_lesson_expression_string_concat() {
     let code_b = app_code_string_code(b);
     let join_code = text_combine_multiple([code_a, " + ", code_b]);
     let joined_value = text_combine_multiple([a, b]);
-    let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, ["A string is text in quotes"]);
-    let idea = app_code_container_light_blue(root);
-    let idea_line = html_div(idea);
-    html_span_text(idea_line, "We can ");
-    let term = html_span_text(idea_line, "join");
-    html_bold(term);
-    html_span_text(idea_line, " two strings into one with ");
-    html_span_text_code_dark(idea_line, "+");
-    let example_line = html_div(idea);
-    html_span_text(example_line, "For example: ");
-    html_span_text_code_dark(example_line, join_code);
-    let define = app_code_container_light_blue(root);
-    let value_line = html_div(define);
-    html_span_text(value_line, "The value of ");
-    html_span_text_code_dark(value_line, join_code);
-    html_span_text(value_line, " is ");
-    let value_out = html_span_text_code_dark(value_line, joined_value);
+    let joined_code = app_code_string_code(joined_value);
     let color = app_code_string_value_color();
-    html_font_color_set(value_out, color);
-    let name_line = html_div(define);
-    html_span_text(name_line, "Joining strings like this is called ");
+    let concept = app_code_container_light_blue(root);
+    let seen_line = html_div(concept);
+    html_span_text(seen_line, "You've seen that ");
+    html_span_text_code_dark(seen_line, "+");
+    html_span_text(seen_line, " adds two numbers together");
+    let different_line = html_div(concept);
+    html_span_text_code_dark(different_line, "+");
+    html_span_text(different_line, " does something different for strings");
+    let combines_line = html_div(concept);
+    html_span_text_code_dark(combines_line, "+");
+    html_span_text(combines_line, " combines two strings into one");
+    let looks_line = html_div(concept);
+    html_span_text(looks_line, "It looks like this: ");
+    html_span_text_code_dark(looks_line, join_code);
+    let derive = app_code_container_light_blue(root);
+    let same_line = html_div(derive);
+    html_span_text(same_line, "The value of ");
+    html_span_text_code_dark(same_line, join_code);
+    html_span_text(same_line, " is the same as the value of ");
+    html_span_text_code_dark(same_line, joined_code);
+    let remember_line = html_div(derive);
+    html_span_text(remember_line, "Remember, the value of ");
+    html_span_text_code_dark(remember_line, joined_code);
+    html_span_text(remember_line, " is ");
+    let remember_value = html_span_text_code_dark(remember_line, joined_value);
+    html_font_color_set(remember_value, color);
+    let so_line = html_div(derive);
+    html_span_text(so_line, "So the value of ");
+    html_span_text_code_dark(so_line, join_code);
+    html_span_text(so_line, " is ");
+    let so_value = html_span_text_code_dark(so_line, joined_value);
+    html_font_color_set(so_value, color);
+    let name_box = app_code_container_light_blue(root);
+    let name_line = html_div(name_box);
+    html_span_text(
+      name_line,
+      "The proper name for combining two strings like this is ",
+    );
     let name_term = html_span_text(name_line, "concatenation");
     html_bold(name_term);
-    html_div_cycle_code(define, [
-      "The first string comes first, then the second",
-    ]);
+    let order = app_code_container_light_blue(root);
+    let left_line = html_div(order);
+    html_span_text(left_line, "The left string is ");
+    html_span_text_code_dark(left_line, code_a);
+    let right_line = html_div(order);
+    html_span_text(right_line, "The right string is ");
+    html_span_text_code_dark(right_line, code_b);
+    let after_line = html_div(order);
+    html_span_text_code_dark(after_line, "+");
+    html_span_text(
+      after_line,
+      " puts the right string right after the left string",
+    );
+    let space_line = html_div(order);
+    html_span_text(space_line, "There is no space between them: ");
+    html_span_text_code_dark(space_line, joined_code);
   }
 }
