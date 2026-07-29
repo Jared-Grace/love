@@ -3,7 +3,7 @@ import { text_code_spans_blanked } from "./text_code_spans_blanked.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
-import { memory_index_line_ceiling } from "./memory_index_line_ceiling.mjs";
+import { memory_index_line_length_ceiling } from "./memory_index_line_length_ceiling.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
@@ -25,7 +25,7 @@ export async function memory_index_hooks_compress() {
   let path = path_join([folder, name]);
   let text = await file_read(path);
   let lines = text.split("\n");
-  let ceiling = memory_index_line_ceiling();
+  let ceiling = memory_index_line_length_ceiling();
   let opener = "- [";
   let link_open = "[[";
   let dash = "—";
