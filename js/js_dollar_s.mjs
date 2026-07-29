@@ -24,7 +24,7 @@ export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
     ast,
     count,
   });
-  function lambda({ stack_1, next, stack_2, ast, declarations }) {
+  function lambda({ stack_1, next, stack_2, ast: ast_inner, declarations }) {
     "todo handle more than 1";
     let s = list_size_1(declarations);
     assert_message(
