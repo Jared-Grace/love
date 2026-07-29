@@ -165,6 +165,6 @@ export function app_code_lesson_expression_string_concat() {
     );
     let space_line = html_div(order);
     html_span_text(space_line, "There is no space between them: ");
-    html_span_text_code_dark(space_line, joined_code);
+    app_code_string_colored(space_line, joined_value);
   }
 }
