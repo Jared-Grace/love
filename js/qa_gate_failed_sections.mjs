@@ -1,3 +1,4 @@
+import { list_from_index } from "./list_from_index.mjs";
 import { newline } from "./newline.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -7,7 +8,6 @@ import { text_includes } from "./text_includes.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
@@ -60,7 +60,7 @@ export function qa_gate_failed_sections(output) {
     if (not(mine)) {
       continue;
     }
-    let rest = list_slice(halves, 1);
+    let rest = list_from_index(halves, 1);
     let complaint = list_join(rest, ":");
     list_add(said, complaint);
     let whole = list_join(said, separator);
