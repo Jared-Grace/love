@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_await_if_unwrap } from "./js_await_if_unwrap.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -13,7 +14,6 @@ import { list_next_try } from "./list_next_try.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-import { each_async } from "./each_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
@@ -63,7 +63,7 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
-    let r = await js_call_new(each_async.name, ast);
+    let r = await js_call_new(fn_name("each_async"), ast);
     let parsed = property_get(r, "parsed");
     let expression3 = property_get(parsed, "expression");
     if (async_is) {
