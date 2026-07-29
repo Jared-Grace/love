@@ -1,6 +1,5 @@
 {
  "known": [
-  "app_calendar_availability calls week_calendar with 3 of 4",
   "app_calendar_contact calls error with 0 of 1",
   "app_shared_api_cache_global calls app_shared_api_generic with 3 of 1",
   "app_shared_api_cache_indexeddb calls app_shared_api_generic with 3 of 1",
@@ -25,7 +24,6 @@
   "js_let_add_task_simple calls todo with 0 of 1",
   "js_unparse calls error with 0 of 1",
   "not_assert calls error with 0 of 1",
-  "server_data_endpoints calls performance_end with 2 of 1",
   "text_suffix_without calls error with 0 of 1",
   "visit_filter_recursive_async calls error with 0 of 1",
   "visit_filter_recursive calls error with 0 of 1"
