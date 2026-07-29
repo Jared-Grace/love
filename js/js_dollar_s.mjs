@@ -27,7 +27,7 @@ export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
   function lambda({
     stack_1: stack_1_inner,
     next,
-    stack_2,
+    stack_2: stack_2_inner,
     ast: ast_inner,
     declarations,
   }) {
@@ -53,9 +53,9 @@ export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
       let init2 = js_null();
       let assign = js_declare(name, init2);
       object_replace(next, expression);
-      let index_next = list_next_index(stack_2, stack_1_inner);
-      list_insert(stack_2, index_next, assign);
-      list_remove(stack_2, stack_1_inner);
+      let index_next = list_next_index(stack_2_inner, stack_1_inner);
+      list_insert(stack_2_inner, index_next, assign);
+      list_remove(stack_2_inner, stack_1_inner);
       return;
     }
     each(declarations, lambda2);
