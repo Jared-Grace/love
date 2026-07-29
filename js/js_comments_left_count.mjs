@@ -14,7 +14,6 @@ export function js_comments_left_count(code) {
     let left = not(migratable);
     return left;
   }
-  let left = list_filter(comments, left_is);
-  let count = list_size(left);
+  let count = list_filter_size(comments, left_is);
   return count;
 }

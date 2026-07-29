@@ -17,7 +17,6 @@ export function text_identifier_count(text_source, identifier_name) {
     let same_is = equal(piece, identifier_name);
     return same_is;
   }
-  let named = list_filter(segments, named_is);
-  let sites = list_size(named);
+  let sites = list_filter_size(segments, named_is);
   return sites;
 }
