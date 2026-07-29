@@ -3,7 +3,6 @@ import { process_ai_seam_is } from "./process_ai_seam_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-
 export function process_open_wanted_is() {
   "Whether this invocation wants the file it produced put on the human's screen, rather than printed.";
   "Showing a result is one bit that differs between a pair of fns twenty-five times over, which is a dimension wearing a name. A dimension belongs in a value passed in, so it is asked once here and every fn keeps the signature it already had.";
