@@ -62,6 +62,14 @@ export async function app_search_home(context) {
   let left = emoji_search();
   let text = text_combine(left, " Search");
   app_shared_button_wide(content, text, search);
+  function query_clear() {
+    "empty the box and put the writing cursor back in it - on a phone the keyboard only opens for a focused box, so clearing without focusing leaves the reader tapping at an empty box to start typing again";
+    html_value_set(input, "");
+    html_focus(input);
+  }
+  let clear_left = emoji_x_red();
+  let clear_text = text_combine(clear_left, " Clear");
+  app_shared_button_wide(content, clear_text, query_clear);
   html_br_2(content);
   let div_results = html_div(content);
   async function search() {
