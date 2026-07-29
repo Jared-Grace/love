@@ -1,16 +1,15 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { qa_gate_run } from "./qa_gate_run.mjs";
-import { examples_gate_run } from "./examples_gate_run.mjs";
 export function permission_rules_other() {
   "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
   let combined = text_combine_multiple([
     "Bash(pkill -f ai.mjs ",
-    qa_gate_run.name,
+    fn_name("qa_gate_run"),
     ")",
   ]);
   let combined2 = text_combine_multiple([
     "Bash(pkill -f ai.mjs ",
-    examples_gate_run.name,
+    fn_name("examples_gate_run"),
     ")",
   ]);
   let texts = [
