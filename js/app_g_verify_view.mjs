@@ -297,7 +297,13 @@ export async function app_g_verify_view(
   html_width_full(suggest_area);
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
-  html_style_set(suggest_area, "overflow-y", "hidden");
+  ("prefer the browser's NATIVE content-sizing (field-sizing) — it grows the box to fit with zero JS and, crucially, zero FORCED REFLOW per keystroke; the JS height fallback below reads scrollHeight on every input, thrashing layout, which lags typing. Fall back to the JS path only where field-sizing is unsupported");
+  let native_sizing = window.CSS.supports("field-sizing", "content");
+  if (native_sizing) {
+    html_style_set(suggest_area, "field-sizing", "content");
+  } else {
+    html_style_set(suggest_area, "overflow-y", "hidden");
+  }
   html_font_set(suggest_area, serif);
   let value8 = app_g_verify_suggestion_font_size();
   html_style_font_size(suggest_area, value8);
@@ -322,6 +328,9 @@ export async function app_g_verify_view(
   }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
+    if (native_sizing) {
+      return;
+    }
     "suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly";
     let element = html_component_element_get(suggest_area);
     html_style_set(suggest_area, "height", "auto");
