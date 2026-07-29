@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_expression_array } from "./js_expression_array.mjs";
 import { function_cache_name } from "./function_cache_name.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -11,7 +12,6 @@ import { js_call_args_await_maybe_declaration_return_add } from "./js_call_args_
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { function_new_open_transform } from "./function_new_open_transform.mjs";
-import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   let args_none = false;
   let v3 = await function_cache_name(f_name);
@@ -19,7 +19,7 @@ export async function function_cache(f_name) {
   let unaliased = property_get(v3, "unaliased");
   let parsed = property_get(v3, "parsed");
   let declaration_call = property_get(parsed, "declaration");
-  let c = invoke_cache_file.name;
+  let c = fn_name("invoke_cache_file");
   let v4 = await function_parse_declaration(c);
   let declaration_cache = property_get(v4, "declaration");
   async function lambda(ast) {
