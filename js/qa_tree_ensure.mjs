@@ -1,3 +1,7 @@
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { qa_tree_written_since } from "./qa_tree_written_since.mjs";
+import { qa_tree_files_recopy } from "./qa_tree_files_recopy.mjs";
+import { qa_tree_settled_print } from "./qa_tree_settled_print.mjs";
 import { qa_trees_reap } from "./qa_trees_reap.mjs";
 import { qa_tree_repos_folder } from "./qa_tree_repos_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
@@ -12,7 +16,9 @@ export async function qa_tree_ensure() {
   "Freezes the working folder exactly as it stands, in memory, and answers where the frozen copy is";
   "Work nobody has committed is included, because that is what the gate is asked about before committing - which is the one thing a copy taken from a commit cannot show";
   "Being frozen is the whole point. Several of us edit this one folder, so questions put to the living folder are put to a folder that changes while they are being answered: a complaint may be nothing but somebody saving a file, and a clean answer may be about a file that was broken a moment after it was read. Neither belongs to any one state of the code, so neither can be checked by asking again";
-  "The copying is not itself instant, so a file caught half-written is still possible - but the opening shrinks from the length of the whole asking to the length of one copy, and unlike before, asking again settles it";
+  "The copying is not itself instant, so a file saved while it was being read could land in pieces - and a file in pieces does not parse, which is a complaint about nobody's work that looks exactly like a complaint about somebody's. That is closed here rather than left to the reader: the moment before the copy starts is noted, and afterwards every file written since is taken across again on its own";
+  "Doing the whole folder again instead would never settle, because several of us write here without stopping and a folder held to the standard of one instant never reaches it. One file is a standard that is reached at once, and it is the standard that was actually wanted - not that the copy is a single moment, but that no file in it is half of two";
+  "Asking a second time is what makes it a repair rather than a hope. Whatever is still moving after the files were taken across is named out loud, because a copy that could not be settled is worth knowing about and a silent one reads exactly like a clean one";
   let repos = qa_tree_repos_folder();
   let report = await qa_trees_reap();
   await folder_exists_ensure(repos);
@@ -20,7 +26,13 @@ export async function qa_tree_ensure() {
   let here = folder_current_absolute();
   let folder = qa_tree_folder();
   let skipped = qa_tree_names_skipped();
+  let started = date_now_milliseconds();
   await folder_copy_fresh(here, folder, skipped);
+  let moved = await qa_tree_written_since(here, skipped, started);
+  let settling = date_now_milliseconds();
+  await qa_tree_files_recopy(here, folder, moved);
+  let unsettled = await qa_tree_written_since(here, skipped, settling);
+  qa_tree_settled_print(moved, unsettled);
   let live = path_join([here, "node_modules"]);
   let link = path_join([folder, "node_modules"]);
   await qa_snapshot_link(live, link);
