@@ -1,9 +1,6 @@
 {
  "known": [
   "app_calendar_contact calls error with 0 of 1",
-  "app_shared_api_cache_global calls app_shared_api_generic with 3 of 1",
-  "app_shared_api_cache_indexeddb calls app_shared_api_generic with 3 of 1",
-  "app_shared_api_cache_storage_local calls app_shared_api_generic with 3 of 1",
   "assert calls error with 0 of 1",
   "data_watch_set_task_add_return calls todo with 0 of 1",
   "file_exists calls error with 0 of 1",
