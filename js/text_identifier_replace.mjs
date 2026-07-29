@@ -1,8 +1,6 @@
 import { list_map_join_empty } from "./list_map_join_empty.mjs";
 import { text_identifier_segments } from "./text_identifier_segments.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function text_identifier_replace(text_source, name_before, name_after) {
