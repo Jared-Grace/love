@@ -1,7 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { atoms_unexampled } from "./atoms_unexampled.mjs";
 import { atoms_unexampled_baseline_path } from "./atoms_unexampled_baseline_path.mjs";
-import { atoms_unexampled_baseline_write } from "./atoms_unexampled_baseline_write.mjs";
 export async function atoms_unexampled_gate_run() {
   "QA gate: an atom the instructions tell a Claude to reach for is demonstrated by an example";
   "A row in one of the vocabulary tables is a promise made to everyone working here at once, and until now nothing checked it. Sixteen of the fifty-six atoms named there had never been run by anything, so a Claude following the instructions was as likely to meet a unit nobody had exercised as one the corpus proves every run.";
@@ -12,7 +12,7 @@ export async function atoms_unexampled_gate_run() {
     unexampled,
     path,
     "these atoms are documented in the vocabulary tables and no example runs them - write one for each, or take the row out",
-    atoms_unexampled_baseline_write.name,
+    fn_name("atoms_unexampled_baseline_write"),
   );
   return r;
 }
