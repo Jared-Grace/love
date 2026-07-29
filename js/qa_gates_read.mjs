@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { error } from "./error.mjs";
-import { file_imports_repair } from "./file_imports_repair.mjs";
 import { qa_gates } from "./qa_gates.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -17,7 +17,7 @@ export function qa_gates_read() {
       cause,
       text_combine_multiple([
         " - repair it with ",
-        file_imports_repair.name,
+        fn_name("file_imports_repair"),
         " on js/",
         qa_gates.name,
         ".mjs, then run the gate again",
