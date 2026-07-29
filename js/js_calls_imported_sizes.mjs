@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
@@ -27,12 +28,12 @@ export function js_calls_imported_sizes(ast) {
     let node = property_get(v, "node");
     let callee = property_get(node, "callee");
     let plain = js_node_type_is(callee, "Identifier");
-    if (!plain) {
+    if (not(plain)) {
       return;
     }
     let name = property_get(callee, "name");
     let brought_in = list_includes(imported, name);
-    if (!brought_in) {
+    if (not(brought_in)) {
       return;
     }
     let own = list_includes(bound, name);
@@ -44,8 +45,9 @@ export function js_calls_imported_sizes(ast) {
       let s = js_node_type_is(argument, "SpreadElement");
       return s;
     }
-    let none_spread = list_includes_not(args.map(spread_is), true);
-    if (!none_spread) {
+    let list = args.map(spread_is);
+    let none_spread = list_includes_not(list, true);
+    if (not(none_spread)) {
       return;
     }
     let size = list_size(args);
