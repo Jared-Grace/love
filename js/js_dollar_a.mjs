@@ -27,11 +27,11 @@ export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
   function lambda({
     stack_1: stack_1_inner,
     next,
-    stack_2,
+    stack_2: stack_2_inner,
     ast: ast_inner,
     declarations,
   }) {
-    list_remove_multiple(stack_2, [stack_1_inner, next]);
+    list_remove_multiple(stack_2_inner, [stack_1_inner, next]);
     function lambda2(declaration) {
       let init = js_declare_init_get(declaration);
       let id = property_get(declaration, "id");
