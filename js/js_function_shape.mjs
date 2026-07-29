@@ -1,19 +1,14 @@
+import { js_names_blank } from "./js_names_blank.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_function_marker_call_not_is } from "./js_function_marker_call_not_is.mjs";
-import { js_member_key_nodes } from "./js_member_key_nodes.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { js_function_declaration_statements_doing } from "./js_function_declaration_statements_doing.mjs";
-import { js_visit_identifiers_nodes } from "./js_visit_identifiers_nodes.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_get_name } from "./property_get_name.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { property_exists } from "./property_exists.mjs";
 export function js_function_shape(declaration) {
   "What a function does, with everything that only says who wrote it taken away. Two functions doing the same thing land on the same text however differently they were spelled.";
   "Four things are taken away and no more. The name of the function, because that is the very thing being asked about - two names for one job is the answer, not the question. The names it gives its own parameters and workings, because a name a reader never sees from outside carries no meaning to compare. The sentences of prose, because a description differing is not the work differing. And the marks a body carries for a reader, because a mark is something said about the work rather than a part of it.";
