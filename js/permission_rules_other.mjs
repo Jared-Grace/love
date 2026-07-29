@@ -41,6 +41,7 @@ export function permission_rules_other() {
     "Bash(ps:*)",
     "Bash(pgrep:*)",
     "Bash(uptime:*)",
+    "Bash(free:*)",
     "Bash(nproc:*)",
     "Bash(sleep:*)",
     "Bash(git cat-file:*)",
