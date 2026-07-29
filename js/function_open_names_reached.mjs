@@ -1,3 +1,5 @@
+import { function_open_suffix } from "./function_open_suffix.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
 import { less_than } from "./less_than.mjs";
 import { function_open_names } from "./function_open_names.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
@@ -19,7 +21,11 @@ export async function function_open_names_reached() {
   let openers = await function_open_names();
   let expanded = [];
   let rounds = 12;
-  for (let round = 0; less_than(round, rounds); round = round + 1) {
+  for (
+    let round_index = 0;
+    less_than(round_index, rounds);
+    round_index = round_index + 1
+  ) {
     let before = list_size(openers);
     let names = list_copy(openers);
     for (let name of names) {
@@ -35,7 +41,8 @@ export async function function_open_names_reached() {
         if (known) {
           continue;
         }
-        let purpose = text_ends_with(caller, function_open_suffix());
+        let suffix = function_open_suffix();
+        let purpose = text_ends_with(caller, suffix);
         if (not(purpose)) {
           continue;
         }
