@@ -1,4 +1,4 @@
-import { app_replace_rule_apply } from "./app_replace_rule_apply.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
@@ -220,7 +220,7 @@ export async function app_replace_rule_set(context) {
         if (not(b)) {
           let rule_used = list_get(rules_used, index_selected);
           ("index is where the rule's left matched (the position passed to ",
-            app_replace_rule_apply.name,
+            fn_name("app_replace_rule_apply"),
             "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
           list_add(history, {
             state: start,
