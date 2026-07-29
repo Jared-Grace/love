@@ -24,13 +24,13 @@ export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
     ast,
     count,
   });
-  function lambda({ stack_1, next, stack_2, ast, declarations }) {
+  function lambda({ stack_1, next, stack_2, ast: ast_inner, declarations }) {
     list_remove_multiple(stack_2, [stack_1, next]);
     function lambda2(declaration) {
       let init = js_declare_init_get(declaration);
       let id = property_get(declaration, "id");
       let name = property_get(id, "name");
-      let is = js_identifiers_named(ast, name);
+      let is = js_identifiers_named(ast_inner, name);
       function lambda3(item) {
         let replacement = object_copy(init);
         object_replace(item, replacement);
