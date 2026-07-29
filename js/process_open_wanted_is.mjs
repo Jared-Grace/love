@@ -8,10 +8,11 @@ export function process_open_wanted_is() {
   "Showing a result is one bit that differs between a pair of fns twenty-five times over, which is a dimension wearing a name. A dimension belongs in a value passed in, so it is asked once here and every fn keeps the signature it already had.";
   "The seam supplies the default, because the seam already knows the answer: the human at the keyboard asked for this by typing it, and Claude never wants a window opened on somebody else's screen. So nothing changes for the human, and the fn a Claude reaches for stops refusing.";
   "An explicit value wins over the default in either direction, which is what lets a human ask for quiet and keeps the choice from being welded to which dispatcher was run.";
-  let asked = process_env_or_null("love_open_wanted");
+  let asked = process_env_or_null("love_show");
   let explicit = null_not_is(asked);
   if (explicit) {
-    let wanted = equal(asked, "1");
+    let show = argument_unalias(argument_alias_group_show(), asked);
+    let wanted = equal(show, "open");
     return wanted;
   }
   let seam = process_ai_seam_is();
