@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { data_facts_cache_path } from "./data_facts_cache_path.mjs";
-import { data_facts_of_parsed } from "./data_facts_of_parsed.mjs";
+import { function_facts_of_parsed } from "./function_facts_of_parsed.mjs";
 import { file_stamp } from "./file_stamp.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -19,7 +19,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { each } from "./each.mjs";
-export async function data_facts_all() {
+export async function functions_facts_all() {
   arguments_assert(arguments, 0);
   ("What every function file says about itself, reading only the ones that have");
   ("changed since the last time anybody asked.");
@@ -69,7 +69,7 @@ export async function data_facts_all() {
       return entry_before;
     }
     let parsed = await file_js_parse(f_path);
-    let facts = data_facts_of_parsed(parsed);
+    let facts = function_facts_of_parsed(parsed);
     let entry_read = {
       f_path,
       stamp,

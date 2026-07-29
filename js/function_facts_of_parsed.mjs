@@ -8,7 +8,7 @@ import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
-export function data_facts_of_parsed(parsed) {
+export function function_facts_of_parsed(parsed) {
   arguments_assert(arguments, 1);
   ("Everything the index knows about one file, read off that file alone.");
   ("Separated from the merging half because this is the expensive part and the");
