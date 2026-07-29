@@ -1,3 +1,5 @@
+import { add } from "./add.mjs";
+import { multiply } from "./multiply.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
@@ -75,7 +77,8 @@ export async function app_g_conversation(
   }
   let player = await app_g_player_get();
   property_set(player, "conversed", true);
-  property_set(prayer, app_g_conversation_key(), false);
+  let property_name = app_g_conversation_key();
+  property_set(prayer, property_name, false);
   let meet = property_get(npc, "meet");
   if (not(meet)) {
     property_set(npc, "meet", true);
@@ -88,12 +91,15 @@ export async function app_g_conversation(
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
-  let has = property_exists(npc, app_g_conversation_key());
+  let property_name2 = app_g_conversation_key();
+  let has = property_exists(npc, property_name2);
   if (not(has)) {
     let value = g_conversation_generate();
-    property_set(npc, app_g_conversation_key(), value);
+    let property_name3 = app_g_conversation_key();
+    property_set(npc, property_name3, value);
   }
-  let conversation = property_get(npc, app_g_conversation_key());
+  let property_name4 = app_g_conversation_key();
+  let conversation = property_get(npc, property_name4);
   let turns = property_get(conversation, "turns");
   let converts = property_get(conversation, "converts");
   let remaining = list_copy(turns);
@@ -114,7 +120,10 @@ export async function app_g_conversation(
   if (positive_is(some_count)) {
     prayer_parts = some_count;
   }
-  let steps_total = add(add(multiply(2, list_size(turns)), prayer_parts), 2);
+  let right = list_size(turns);
+  let left3 = multiply(2, right);
+  let left6 = add(left3, prayer_parts);
+  let steps_total = add(left6, 2);
   let steps = {
     done: 0,
   };
