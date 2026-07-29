@@ -12,19 +12,18 @@ export function server_data_endpoints(app) {
   let data_sequence = promise_resolved();
   let data = null;
   async function d_get(req, res) {
-    let p = performance_start(
-      text_combine_multiple([
-        "data_sequence = data_sequence.then(",
-        data_get_fn.name,
-        ")",
-      ]),
-    );
+    let category = text_combine_multiple([
+      "data_sequence = data_sequence.then(",
+      data_get_fn.name,
+      ")",
+    ]);
+    let p = performance_start(category);
     data_sequence = data_sequence.then(data_get_fn);
     performance_next(p, "await data_sequence");
     await data_sequence;
     performance_next(p, "res.json(data)");
     res.json(data);
-    let r = performance_end(p, "res.json(data)");
+    let r = performance_end(p);
     async function data_get_fn() {
       if (null_is(data)) {
         data = {};

@@ -1,3 +1,6 @@
+import { date_today_iso } from "./date_today_iso.mjs";
+import { date_week_sunday } from "./date_week_sunday.mjs";
+import { week_dates } from "./week_dates.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { availability_send } from "./availability_send.mjs";
 import { availability_load } from "./availability_load.mjs";
@@ -8,5 +11,8 @@ export async function app_calendar_availability(parent, user) {
   async function on_ranges(ranges) {
     await availability_send(uid, ranges);
   }
-  week_calendar(parent, initial, on_ranges);
+  let iso = date_today_iso();
+  let sunday = date_week_sunday(iso);
+  let dates = week_dates(sunday);
+  week_calendar(parent, dates, initial, on_ranges);
 }
