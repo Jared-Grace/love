@@ -1,4 +1,4 @@
-import { js_dollar_choice_argument } from "./js_dollar_choice_argument.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
@@ -47,7 +47,7 @@ export async function js_dollar(ast) {
       if (lower === choice_name) {
         text_combine(
           "This variable name is used by ",
-          js_dollar_choice_argument.name,
+          fn_name("js_dollar_choice_argument"),
         );
         let js_dollar_arguments = {
           remaining,
