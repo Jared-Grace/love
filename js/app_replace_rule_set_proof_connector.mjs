@@ -1,3 +1,4 @@
+import { html_text_align } from "./html_text_align.mjs";
 import { app_replace_proof_arrow_font_size } from "./app_replace_proof_arrow_font_size.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
@@ -26,7 +27,7 @@ export function app_replace_rule_set_proof_connector(
   html_style_margin_y(connector, gap);
   let number_side = html_div(connector);
   html_style_flex(number_side, "1");
-  html_style_set(number_side, "text-align", "right");
+  html_text_align(number_side, "right");
   html_style_set(number_side, "padding-right", gap);
   let text = text_combine_multiple([index, "."]);
   html_span_text_deemphasized(number_side, text);

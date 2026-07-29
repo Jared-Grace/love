@@ -1,3 +1,4 @@
+import { html_text_align } from "./html_text_align.mjs";
 import { ternary } from "./ternary.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_font_color_set_or_remove } from "./html_font_color_set_or_remove.mjs";
@@ -21,7 +22,7 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
   let direction = ternary(rtl, "rtl", "ltr");
   let alignment = ternary(rtl, "right", "left");
   html_style_set(line, "direction", direction);
-  html_style_set(line, "text-align", alignment);
+  html_text_align(line, alignment);
   let has_name = text_empty_not_is(name);
   if (has_name) {
     ("color the language name with the language color so it matches its verse text");

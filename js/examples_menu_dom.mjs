@@ -1,3 +1,4 @@
+import { html_text_align } from "./html_text_align.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { less_than } from "./less_than.mjs";
@@ -56,7 +57,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     }
     let button = app_shared_button_wide(parent, label, on_click);
     html_style_margin_bottom(button, "0.5rem");
-    html_style_set(button, "text-align", "left");
+    html_text_align(button, "left");
   }
   function family_at(index) {
     "family is attached to each example at build time (see the corpus reader), so the client";
