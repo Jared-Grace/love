@@ -6,12 +6,10 @@ export async function app_ceb_bible_gloss_generate_download(chapter_code) {
   arguments_assert(arguments, 1);
   let destination_get = app_ceb_bible_gloss_generate_upload_path;
   let fn = app_ceb_bible_gloss_generate_download;
-  let project_url = firebase_storage_url_project_jg();
-  let value = await global_firebase_storage_download_json_decompress(
+  let value = await firebase_storage_download_json_decompress_project_jg(
     fn,
     destination_get,
     chapter_code,
-    project_url,
   );
   return value;
 }
