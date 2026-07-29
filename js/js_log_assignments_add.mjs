@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_visit_declarations } from "./js_visit_declarations.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
@@ -13,7 +14,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { log } from "./log.mjs";
 import { each } from "./each.mjs";
 import { js_imports_missing_add_specified_single } from "./js_imports_missing_add_specified_single.mjs";
 export async function js_log_assignments_add(ast) {
@@ -45,7 +45,7 @@ export async function js_log_assignments_add(ast) {
       }
       each(names, lambda_add_name);
       let args_code = [f_name + ".name", "{" + properties.join(", ") + "}"];
-      let statement = js_call_statement(log.name, args_code);
+      let statement = js_call_statement(fn_name("log"), args_code);
       function lambda_insert() {
         let index = list_index_of(list, node);
         list_insert(list, index + 1, statement);
@@ -55,5 +55,5 @@ export async function js_log_assignments_add(ast) {
     js_visit_declarations(ast, lambda_visit);
   }
   list_adder_invoke(lambda);
-  await js_imports_missing_add_specified_single(ast, log.name);
+  await js_imports_missing_add_specified_single(ast, fn_name("log"));
 }
