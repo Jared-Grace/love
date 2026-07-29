@@ -103,6 +103,28 @@ export async function app_g_conversation(
   let greeted = {
     done: false,
   };
+  function present(t) {
+    let neq3 = not_equal(t, null);
+    return neq3;
+  }
+  let prayer_texts_all = list_map_property(turns, "prayer_text");
+  let some_prayers = list_filter(prayer_texts_all, present);
+  let prayer_parts = 4;
+  let some_count = list_size(some_prayers);
+  if (positive_is(some_count)) {
+    prayer_parts = some_count;
+  }
+  let steps_total = add(add(multiply(2, list_size(turns)), prayer_parts), 2);
+  let steps = {
+    done: 0,
+  };
+  async function advance() {
+    "one advancing step of the conversation moves the day forward: every forward choice — each opener chosen, each objection answered, choosing to pray, each prayer prayed, the final goodbye — ticks the shared step counter and drifts the sky to steps.done / steps_total of this conversation's slice, so the whole minimum path (not just the gospel turns) spans the slice and the goodbye lands at its end. wrong openers do NOT tick — guessing costs no daylight, so discernment stays the fast path.";
+    steps.done = add(steps.done, 1);
+    let fraction = divide(steps.done, steps_total);
+    let target = app_g_conversation_sky_target(fraction);
+    await app_g_sky_to(target);
+  }
   function label_for(turn) {
     let kind = property_get(turn, "kind");
     let v = emoji_cross();
@@ -134,6 +156,11 @@ export async function app_g_conversation(
     }
     await app_g_sky_snap();
     overlay_close();
+  }
+  async function goodbye() {
+    "the final parting after the prayer is itself an advancing step — it ticks the day to its close (dusk) before snapping shut, so 'saying goodbye' spends the last of the slice rather than closing at whatever time the prayer left.";
+    await advance();
+    await close_now();
   }
   function render_farewell() {
     ("the player ends an unbeliever conversation before it completes but after engaging at least one gospel point: the seed is planted, so the NPC's parting words REFLECT rather than convert - ",
@@ -179,13 +206,7 @@ export async function app_g_conversation(
     }
     async function on_correct() {
       remaining = list_filter(remaining, keep);
-      let left3 = list_size(turns);
-      let right = list_size(remaining);
-      let completed = subtract(left3, right);
-      let bottom = list_size(turns);
-      let fraction = divide(completed, bottom);
-      let target = app_g_conversation_sky_target(fraction);
-      await app_g_sky_to(target);
+      await advance();
       render();
     }
     let concern = property_get(turn, "concern");
@@ -243,7 +264,7 @@ export async function app_g_conversation(
     let correct_turn = list_random_item(remaining);
     function choice_of(turn) {
       let is_correct = equal(turn, correct_turn);
-      function on_click() {
+      async function on_click() {
         if (not(is_correct)) {
           if (app_g_discern_prevent(discern)) {
             return;
@@ -251,6 +272,7 @@ export async function app_g_conversation(
           render_boundary(turn);
           return;
         }
+        await advance();
         run_turn(turn);
       }
       let choice = {
@@ -274,18 +296,16 @@ export async function app_g_conversation(
     app_g_npc_says(npc, overlay, npc_says);
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What do you want to do?");
-    function pray() {
-      let prayer_texts = list_map_property(turns, "prayer_text");
-      function present(t) {
-        let neq2 = not_equal(t, null);
-        return neq2;
+    async function pray() {
+      await advance();
+      function on_part() {
+        advance();
       }
-      let some = list_filter(prayer_texts, present);
       function on_prayed() {
         prayed.done = true;
         render();
       }
-      app_g_pray_turn(some, on_prayed);
+      app_g_pray_turn(some_prayers, on_part, on_prayed);
     }
     let left5 = emoji_pray();
     let text2 = text_combine(left5, " Pray");
@@ -311,7 +331,7 @@ export async function app_g_conversation(
       app_g_button_conversation_end(overlay, leave);
     } else {
       render_close();
-      app_g_button_conversation_end(overlay, leave);
+      app_g_button_conversation_end(overlay, goodbye);
     }
   }
   await app_g_sky_reset();
