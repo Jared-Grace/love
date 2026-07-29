@@ -30,7 +30,7 @@ export async function functions_fn_name_literals_unresolved() {
         list_add(unresolved, value);
       }
     }
-    js_visit_calls_named(ast, fn_name.name, lambda);
+    js_visit_calls_named(ast, fn_name("fn_name"), lambda);
     let any = greater_than(unresolved.length, 0);
     if (any) {
       list_add(offenders, {
