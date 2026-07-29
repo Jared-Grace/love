@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { list_first } from "./list_first.mjs";
@@ -13,11 +14,9 @@ import { js_call_empty } from "./js_call_empty.mjs";
 import { js_call_argument_add } from "./js_call_argument_add.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function js_text_combine_multiple_normalize(ast) {
   function collect(la) {
-    js_visit_calls_named_nodes(ast, text_combine_multiple.name, la);
+    js_visit_calls_named_nodes(ast, fn_name("text_combine_multiple"), la);
   }
   let nodes = list_adder(collect);
   let changed = false;
@@ -40,7 +39,7 @@ export async function js_text_combine_multiple_normalize(ast) {
       changed = true;
     }
     if (size === 2) {
-      let call = js_call_empty(text_combine.name);
+      let call = js_call_empty(fn_name("text_combine"));
       let left = list_first(elements);
       let right = list_last(elements);
       js_call_argument_add(call, left);
