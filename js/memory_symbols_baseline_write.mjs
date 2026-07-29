@@ -10,12 +10,7 @@ export async function memory_symbols_baseline_write() {
   let known = await memory_symbol_references_judged();
   ("the sort is in place, so the list itself is what gets written - what it hands back is that same list, not a copy");
   list_sort_text(known);
-  let baseline = {
-    known,
-  };
-  let json = json_format_to(baseline);
   let path = memory_symbols_baseline_path();
-  await file_overwrite(path, json);
-  let r = known.length;
+  let r = await baseline_known_write(known, path);
   return r;
 }
