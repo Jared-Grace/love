@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { node_run } from "./node_run.mjs";
-import { qa_gate_tree_shard_run } from "./qa_gate_tree_shard_run.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
 export async function qa_snapshot_shard_told(folder, index, count) {
@@ -12,7 +12,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
   let count_word = text_combine("", count);
   let words = [
     "scripts/ai.mjs",
-    qa_gate_tree_shard_run.name,
+    fn_name("qa_gate_tree_shard_run"),
     index_word,
     count_word,
   ];
