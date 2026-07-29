@@ -1,7 +1,7 @@
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
-export async function data_facts_cache_delete() {
+export async function functions_facts_cache_delete() {
   "Throws away what was read off each file last time, so the next question is";
   "answered by reading the files again.";
   "It is worth having a name because the alternative is a shell removal aimed at";
