@@ -141,14 +141,19 @@ export async function app_search_results(context, div_results) {
     }
     each(book_collapse_setters, book_set);
   }
-  async function collect_all_texts() {
+  async function buttons_expand(buttons) {
+    "open a whole list of verse buttons at once - expanding one chapter, one book or the entire page all come down to this, so it is said once here";
     async function lambda9(b) {
       let click2 = property_get(b, "click");
       await catch_null_async(click2);
       let bible_texts2 = property_get(b, "bible_texts");
       return bible_texts2;
     }
-    let waited = await list_map_unordered_async(button_list, lambda9);
+    let waited = await list_map_unordered_async(buttons, lambda9);
+    return waited;
+  }
+  async function collect_all_texts() {
+    let waited = await buttons_expand(button_list);
     let squashed = list_squash(waited);
     return squashed;
   }
@@ -187,13 +192,17 @@ export async function app_search_results(context, div_results) {
   list_sort_text_mapper(results, bible_order_key);
   let book_code_shown = null;
   let div_book_body = null;
+  let book_chapter_expands = null;
   let book_collapse_setters = [];
+  let book_chapter_single_expanders = [];
   function book_card_add(book_code) {
     let same = equal(book_code, book_code_shown);
     if (same) {
       return;
     }
     book_code_shown = book_code;
+    let chapter_expands = [];
+    book_chapter_expands = chapter_expands;
     let div_book = app_shared_container_blue(div_results);
     let book_name = ebible_book_code_to_name(books, book_code);
     let header = html_div_text_bold(div_book, book_name);
@@ -215,17 +224,29 @@ export async function app_search_results(context, div_results) {
         html_style_margin_bottom(header, "0.3em");
       }
     }
+    async function chapters_single_expand() {
+      "a book holding one chapter offers no choice of chapter, so opening the book opens that chapter with it rather than asking for a second click that could only go one way";
+      let one = list_size_1(chapter_expands);
+      if (not(one)) {
+        return;
+      }
+      let only = list_single(chapter_expands);
+      await only();
+    }
     async function toggle() {
       let next = not(collapsed);
       collapsed_set(next);
       let expanded = not(next);
       if (expanded) {
+        ("the scrolling comes first because it costs no waiting: the reader sees the card land where they can read it while the verses inside it are still arriving");
         await html_scroll_center(div_book);
+        await chapters_single_expand();
       }
     }
     html_on_click(header, toggle);
     collapsed_set(false);
     list_add(book_collapse_setters, collapsed_set);
+    list_add(book_chapter_single_expanders, chapters_single_expand);
   }
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
@@ -312,13 +333,26 @@ export async function app_search_results(context, div_results) {
     }
     list_sort_number_mapper(verse_numbers, integer_to_try);
     let bs = list_map(verse_numbers, each_verse_number);
+    async function chapter_expand() {
+      "everything this chapter matched, opened together";
+      await buttons_expand(bs);
+    }
+    list_add(book_chapter_expands, chapter_expand);
     return bs;
   }
   let button_lists = list_map(results, each_result);
   button_list = list_squash(button_lists);
-  let scrolls = html_page_scrolls();
-  if (scrolls) {
-    books_collapsed_set(true);
+  let one_book = list_size_1(book_collapse_setters);
+  if (one_book) {
+    ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
+    books_collapsed_set(false);
+    let only_book_expand = list_single(book_chapter_single_expanders);
+    await only_book_expand();
+  } else {
+    let scrolls = html_page_scrolls();
+    if (scrolls) {
+      books_collapsed_set(true);
+    }
   }
   let s = list_size_1(button_list);
   if (s) {
