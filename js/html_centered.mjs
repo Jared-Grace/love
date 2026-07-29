@@ -1,4 +1,4 @@
-import { html_style_set } from "./html_style_set.mjs";
+import { html_text_align } from "./html_text_align.mjs";
 export function html_centered(div) {
-  html_style_set(div, "text-align", "center");
+  html_text_align(div, "center");
 }
