@@ -1,7 +1,7 @@
 import { global_function_property_initialize_async } from "./global_function_property_initialize_async.mjs";
 import { global_function_property_delete } from "./global_function_property_delete.mjs";
 import { ebible_offline_database_name } from "./ebible_offline_database_name.mjs";
-import { ebible_offline_database_open_timeout_ms } from "./ebible_offline_database_open_timeout_ms.mjs";
+import { indexeddb_database_open_timeout_ms } from "./indexeddb_database_open_timeout_ms.mjs";
 import { ebible_offline_store } from "./ebible_offline_store.mjs";
 import { lambda_timeout } from "./lambda_timeout.mjs";
 import { not } from "./not.mjs";
@@ -41,7 +41,7 @@ export async function ebible_offline_database() {
   }
   async function connect() {
     "even with no event at all (a database wedged by another tab), the open resolves within a bounded time so a save can never hang forever at its first step";
-    let ms = ebible_offline_database_open_timeout_ms();
+    let ms = indexeddb_database_open_timeout_ms();
     async function open_bounded() {
       let db = await lambda_timeout(open, ms);
       return db;
