@@ -375,6 +375,7 @@ export function permission_grant_names() {
   let spelled372 = fn_name("qa_tree_names_skipped");
   let spelled373 = fn_name("literals_frozen_names");
   let spelled374 = fn_name("functions_literal_route");
+  let spelled375 = fn_name("app_g_conversation_key");
   let names = [
     spelled,
     spelled2,
@@ -750,6 +751,7 @@ export function permission_grant_names() {
     spelled372,
     spelled373,
     spelled374,
+    spelled375,
   ];
   return names;
 }
