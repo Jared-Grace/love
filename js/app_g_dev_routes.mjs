@@ -1,6 +1,4 @@
 import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
-import { app_g_conversation } from "./app_g_conversation.mjs";
-import { g_day_sky_phase } from "./g_day_sky_phase.mjs";
 import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
