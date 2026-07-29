@@ -1,4 +1,6 @@
 import { memory_index_lines_gate_run } from "./memory_index_lines_gate_run.mjs";
+import { functions_name_only_imports_gate_run } from "./functions_name_only_imports_gate_run.mjs";
+import { js_name_only_imports_cases_gate_run } from "./js_name_only_imports_cases_gate_run.mjs";
 import { js_code_literal_key_only_cases_gate_run } from "./js_code_literal_key_only_cases_gate_run.mjs";
 import { functions_arity_gate_run } from "./functions_arity_gate_run.mjs";
 import { functions_statements_after_return_gate_run } from "./functions_statements_after_return_gate_run.mjs";
@@ -102,6 +104,8 @@ export function qa_gates() {
     js_function_self_call_cases_gate_run,
     js_comment_migratable_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
+    js_name_only_imports_cases_gate_run,
+    functions_name_only_imports_gate_run,
     functions_self_call_gate_run,
     js_operator_targets_leaf_gate_run,
     fn_name_literals_gate_run,
