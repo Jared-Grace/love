@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { js_block_call_add_first } from "./js_block_call_add_first.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_auto } from "./function_auto.mjs";
@@ -11,7 +11,7 @@ export async function function_parallel_mark(f_name) {
   async function mark(ast) {
     let block = js_find_body_block(ast);
     let selects = [block];
-    let mark_name = function_duplicate_kind_parallel.name;
+    let mark_name = fn_name("function_duplicate_kind_parallel");
     await js_block_call_add_first(ast, selects, mark_name);
   }
   await function_transform(f_name, mark);
