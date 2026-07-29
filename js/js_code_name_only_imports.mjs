@@ -34,7 +34,7 @@ export function js_code_name_only_imports(code) {
     if (brought_in) {
       return;
     }
-    let counted = property_get(mentions, mentioned);
+    let counted = property_get_or_null(mentions, mentioned);
     mentions[mentioned] = counted ? counted + 1 : 1;
     let read_is = equal(above_type, "MemberExpression");
     if (not(read_is)) {
@@ -47,15 +47,15 @@ export function js_code_name_only_imports(code) {
     let spelling_is = equal(word, "name");
     let spelled = ours_is && spelling_is;
     if (spelled) {
-      let told = property_get(spellings, mentioned);
+      let told = property_get_or_null(spellings, mentioned);
       spellings[mentioned] = told ? told + 1 : 1;
     }
   }
   js_visit_types(ast, ["Identifier"], lambda);
   let only = [];
   for (let mentioned of imported) {
-    let counted = property_get(mentions, mentioned);
-    let told = property_get(spellings, mentioned);
+    let counted = property_get_or_null(mentions, mentioned);
+    let told = property_get_or_null(spellings, mentioned);
     let used = counted ? counted : 0;
     let spelled = told ? told : 0;
     let any = greater_than(used, 0);
