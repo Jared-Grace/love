@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_statement_return_add } from "./js_statement_return_add.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_call_empty } from "./js_call_empty.mjs";
@@ -7,11 +8,10 @@ import { js_function_declaration_to_block_body } from "./js_function_declaration
 import { function_new_declaration_to } from "./function_new_declaration_to.mjs";
 import { marker_next_declare_single_init_elements } from "./marker_next_declare_single_init_elements.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
-import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { each_async } from "./each_async.mjs";
 export async function app_replace_rule_sets_migrate_functionize() {
   "this took a list of objects and moved each object to its own file";
-  let f_name = app_replace_rule_sets.name;
+  let f_name = fn_name("app_replace_rule_sets");
   let code = await function_transform_marker_specified(f_name, "rules", lambda);
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
