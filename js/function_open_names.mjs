@@ -13,20 +13,21 @@ export async function function_open_names() {
   "Those refuse on the ai seam, so this is also the list a Claude cannot run and a permission rule must never name";
   "A fn that only hands one of the two names to something else is left out, since naming a thing is not doing it, and the list is read as though everything on it opens a window";
   "Membership is settled on the tree, so a name written inside a message can never be mistaken for a call";
-  let by_file = await data_identifiers_search(file_open.name);
-  let by_function = await data_identifiers_search(function_open.name);
+  ("The two roots are named rather than imported, because this wants the word and never the fn. Importing them to read a name off pulled the editor launcher into everything that asks this question, and the launcher shells out, so every caller came out reaching a command runner - which is a refusal the safety check over permission rules hands down, and it handed it down to the check itself once this list was shared with it. A named marker is followed by a rename just as an import is, and carries none of that weight.");
+  let by_file = await data_identifiers_search(fn_name("file_open"));
+  let by_function = await data_identifiers_search(fn_name("function_open"));
   let names = properties_get(by_file);
   let more = properties_get(by_function);
   list_add_multiple(names, more);
   let unique = list_unique(names);
-  let openers = [file_open.name, function_open.name];
+  let openers = [fn_name("file_open"), fn_name("function_open")];
   ("The two fns that do the opening are on the list because of what they are, not because of what they call, and one of them calls neither");
   for (let name of unique) {
     if (list_includes(openers, name)) {
       continue;
     }
-    let by_one = await function_calls_name_is(name, file_open.name);
-    let by_two = await function_calls_name_is(name, function_open.name);
+    let by_one = await function_calls_name_is(name, fn_name("file_open"));
+    let by_two = await function_calls_name_is(name, fn_name("function_open"));
     let calls = or(by_one, by_two);
     if (calls) {
       list_add(openers, name);
