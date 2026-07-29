@@ -21,7 +21,16 @@ export async function functions_name_only_imports() {
     ("A file that will not parse is not an answer to this question and must not be");
     ("allowed to become one. It is skipped rather than counted, because a torn or");
     ("half-written file says nothing about how anybody wrote their imports");
+    ("What is skipped is counted and said out loud, because a swallowed failure and");
+    ("a clean sweep leave exactly the same empty list. This reader threw on its very");
+    ("first name and every one of the eighteen hundred files was quietly skipped -");
+    ("which read as a repo with nothing wrong in it, the most reassuring possible");
+    ("shape for a total failure to wear");
     let names = await catch_null_async(read);
+    let skipped_is = equal(names, null);
+    if (skipped_is) {
+      list_add(unreadable, f_name);
+    }
     let told = {
       f_name,
       names: names ? names : [],
@@ -29,6 +38,12 @@ export async function functions_name_only_imports() {
     return told;
   }
   let measured = await list_map_unordered_async(f_names, measure);
+  let unread = list_size(unreadable);
+  let any_unread = greater_than(unread, 0);
+  if (any_unread) {
+    let joined = list_join_comma(unreadable);
+    console.log("UNREADABLE  " + unread + " of " + f_names.length + "  " + joined);
+  }
   function any_lambda(m) {
     let names = property_get(m, "names");
     let any = greater_than(names.length, 0);
