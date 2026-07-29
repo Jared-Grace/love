@@ -1,3 +1,4 @@
+import { html_span_text } from "./html_span_text.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -20,7 +21,6 @@ import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
-import { html_span } from "./html_span.mjs";
 import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "./app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
@@ -243,7 +243,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     hidden = not(hidden);
     html_display_none_or_block(hidden, bottom);
   }
-  html_span(top, verse_number);
+  html_span_text(top, verse_number);
   let show_language_names = list_multiple_is(text_languages);
   function to_entry(item) {
     let name = "";
