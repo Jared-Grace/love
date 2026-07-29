@@ -1,3 +1,4 @@
+import { number_from_text } from "./number_from_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
@@ -21,6 +22,11 @@ export function js_calls_named_sized(ast, f_name, count) {
   ("reason the arity sweep skips them: the call in front of the reader reaches the");
   ("local, so pointing it somewhere else would move a call that was never about");
   ("the imported function at all.");
+  ("The count is read back from text before anything is compared with it. A");
+  ("command line hands every argument over as text, and the comparison here is the");
+  ("strict one - so a count spelled on a command line would match nothing at all");
+  ("and answer with an empty list, which reads exactly like a repo that has none.");
+  let wanted = number_from_text(count);
   let imported = js_imports_local_names(ast);
   let bound = js_binding_names(ast);
   let brought_in = list_includes(imported, f_name);
@@ -46,7 +52,7 @@ export function js_calls_named_sized(ast, f_name, count) {
     }
     let args = property_get(node, "arguments");
     let size = list_size(args);
-    let sized = equal(size, count);
+    let sized = equal(size, wanted);
     if (not(sized)) {
       return;
     }
