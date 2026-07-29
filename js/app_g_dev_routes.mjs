@@ -146,9 +146,9 @@ export function app_g_dev_routes(div_map) {
     app_g_day_discern_button(div_map);
   }
   async function day_conversation() {
-    "the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): a stub conversation whose each HALF-TURN advances the sky one step across a full day, so the conversation→time mechanic is easy to see. paints via g_clock_sky_phase, so it also showcases the fast-dark + plateau night curve";
+    "the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation and watch the working day age 6 AM sunrise → 7 PM dusk as you answer each turn (app_g_conversation drives the sky through g_day_sky_phase). proves the conversation→time mechanic on the actual conversation, not a stub";
     await app_g_view_set(null);
-    await app_g_day_conversation_demo(div_map);
+    await app_g_day_conversation_demo();
   }
   let routes = {
     study,
