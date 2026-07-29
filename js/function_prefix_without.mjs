@@ -1,6 +1,6 @@
-import { app_karate_home } from "../../karate_code/js/app_karate_home.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 export function function_prefix_without(app_fn) {
-  let skipped = text_prefix_without(app_karate_home.name, app_fn.name);
+  let skipped = text_prefix_without(fn_name("app_karate_home"), app_fn.name);
   return skipped;
 }
