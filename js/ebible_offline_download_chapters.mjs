@@ -1,9 +1,9 @@
+import { ebible_verses_storage_browser_fresh } from "./ebible_verses_storage_browser_fresh.mjs";
 import { add } from "./add.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_offline_download_chunk_size } from "./ebible_offline_download_chunk_size.mjs";
 import { ebible_offline_put_list } from "./ebible_offline_put_list.mjs";
-import { ebible_verses_storage_browser } from "./ebible_verses_storage_browser.mjs";
 import { list_chunk } from "./list_chunk.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -22,7 +22,10 @@ export async function ebible_offline_download_chapters(
   async function lambda_chunk(chunk) {
     async function to_entry(chapter_code) {
       async function fetch() {
-        let v = await ebible_verses_storage_browser(bible_folder, chapter_code);
+        let v = await ebible_verses_storage_browser_fresh(
+          bible_folder,
+          chapter_code,
+        );
         return v;
       }
       ("a translation that omits a book simply has no file for that chapter, so a miss is skipped rather than failing the whole download");
