@@ -98,7 +98,7 @@ export function app_code_lesson_expression_remainder_divide() {
     let divisor = list_get(nums, 1);
     let percent = js_code_binary_spaced_nb(dividend, "%", divisor);
     let recognize = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Which is the remainder formula? ",
       answer_on_button: html_text_set_code_dark,
@@ -108,7 +108,7 @@ export function app_code_lesson_expression_remainder_divide() {
       decoys: recognize_decoys,
     };
     let build = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Build the remainder formula: ",
       answer_on_button: null,
