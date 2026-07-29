@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { function_comments_migrate } from "./function_comments_migrate.mjs";
 import { js_comments_get } from "./js_comments_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -13,7 +13,7 @@ export function js_code_comments_none_assert(code, f_path) {
     count,
     hint: text_combine_multiple([
       "this file still has comments, and rewriting it would delete them — run ",
-      function_comments_migrate.name,
+      fn_name("function_comments_migrate"),
       " to turn the ones on their own line into statements, then move any that share a line with code by hand",
     ]),
   });
