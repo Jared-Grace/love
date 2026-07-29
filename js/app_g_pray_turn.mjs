@@ -19,8 +19,8 @@ import { html_remove } from "./html_remove.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_pray_turn(prayer_texts, on_done) {
-  "the conversation-closing PRAYER turn as its own overlay (gratitude-style, DRY via app_g_prayer_menu_overlay): prompt 'What would you like to pray to God?' + a green button per prayer. the choices are the turns' `prayer_text`s (contextual intercession, composed 'God, <ask> <text>, Amen'; falls back to generic if the conversation had none). the player prays EACH one — tapping a prayer prays it (a brief overlay) and REMOVES it — and only when ALL are prayed does it call on_done (interceding fully for the person, not just one request)";
+export function app_g_pray_turn(prayer_texts, on_part, on_done) {
+  "the conversation-closing PRAYER turn as its own overlay (gratitude-style, DRY via app_g_prayer_menu_overlay): prompt 'What would you like to pray to God?' + a green button per prayer. the choices are the turns' `prayer_text`s (contextual intercession, composed 'God, <ask> <text>, Amen'; falls back to generic if the conversation had none). the player prays EACH one — tapping a prayer prays it (a brief overlay) and REMOVES it, calling on_part for that prayed part — and only when ALL are prayed does it call on_done (interceding fully for the person, not just one request)";
   let overlay = app_g_prayer_menu_overlay();
   let chosen = petitions_choose(prayer_texts);
   function make_item(petition) {
@@ -48,6 +48,7 @@ export function app_g_pray_turn(prayer_texts, on_done) {
           return other !== item;
         }
         remaining = list_filter(remaining, keep);
+        on_part();
         let color = app_shared_color_green_light();
         app_g_message_overlay(emoji_pray(), text, color, 3500, render);
       }

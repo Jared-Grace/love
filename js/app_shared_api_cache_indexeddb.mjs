@@ -6,10 +6,15 @@ export async function app_shared_api_cache_indexeddb(
   db_get,
   store,
 ) {
-  let fn = async function lambda(url, body) {
+  let fn_http = async function lambda(url, body) {
     let v = await http_post_json_cache_indexeddb(url, body, db_get, store);
     return v;
   };
-  let result = await app_shared_api_generic(f_name, args, fn);
+  let a = {
+    f_name,
+    args,
+    fn_http,
+  };
+  let result = await app_shared_api_generic(a);
   return result;
 }
