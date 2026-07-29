@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_replace_rule_sets_fns } from "./app_replace_rule_sets_fns.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -8,7 +9,6 @@ import { js_string } from "./js_string.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
-import { error } from "./error.mjs";
 import { js_call_empty } from "./js_call_empty.mjs";
 import { js_property } from "./js_property.mjs";
 import { null_is } from "./null_is.mjs";
@@ -53,7 +53,7 @@ export async function app_replace_rule_sets_why_generate() {
       let n = null_is(found);
       if (n) {
         let expression = js_parse_expression(property);
-        let c = js_call_empty(error.name);
+        let c = js_call_empty(fn_name("error"));
         found = js_property(expression, c);
         let properties = js_object_expression_properties(f);
         list_add(properties, found);
