@@ -350,6 +350,9 @@ export function permission_grant_names() {
   let spelled347 = fn_name("instructions_notes_gate_run");
   let spelled348 = fn_name("function_open_names_reached");
   let spelled349 = fn_name("functions_duplicates");
+  let spelled350 = fn_name("function_aliases_for");
+  let spelled351 = fn_name("data_aliases_path");
+  let spelled352 = fn_name("function_aliases_inverted");
   let names = [
     spelled,
     spelled2,
@@ -700,6 +703,9 @@ export function permission_grant_names() {
     spelled347,
     spelled348,
     spelled349,
+    spelled350,
+    spelled351,
+    spelled352,
   ];
   return names;
 }
