@@ -10,6 +10,7 @@ import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { list_get } from "./list_get.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -23,9 +24,10 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 export function app_code_lesson_expression_string_concat() {
   "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
   function pair() {
-    "two DIFFERENT words from the shared verse, so the join is always between two distinct texts";
+    "two DIFFERENT words from the shared verse - the verse repeats some words (that appears twice), so the list is made unique first, otherwise a pair could be one word joined to itself and the reversed-order decoy would equal the answer";
     let words = app_code_verse_words_clean();
-    let two = list_shuffle_take(words, 2);
+    let distinct = list_unique(words);
+    let two = list_shuffle_take(distinct, 2);
     return two;
   }
   function pair_code(index) {
