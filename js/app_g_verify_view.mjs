@@ -24,10 +24,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_button_bible_chapter_open } from "./html_button_bible_chapter_open.mjs";
-import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
-import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
-import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
-import { html_button_biblehub_open } from "./html_button_biblehub_open.mjs";
+import { html_buttons_biblehub_verse_group } from "./html_buttons_biblehub_verse_group.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -252,40 +249,35 @@ export async function app_g_verify_view(
   let book_code = chapter_code.slice(0, 3);
   let bh_book = g_verify_book_name(book_code);
   let verse_list = verse.split(",");
-  let bh_verse = verse_list[0];
   html_button_bible_chapter_open(links_bar, chapter_code, "Whole Chapter");
-  html_button_biblehub_open_commentary(
+  ("Commentary / Parallel / Interlinear each as a verse-group: one button for a single verse, or its own container of per-verse buttons for a multi-verse passage (a single button reaches only the first verse)");
+  html_buttons_biblehub_verse_group(
     links_bar,
-    bh_chapter,
     bh_book,
-    bh_verse,
+    bh_chapter,
+    verse_list,
+    "Commentary",
+    "",
+    "#commentary",
   );
-  html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
-  ("for a multi-verse passage give one Interlinear button PER verse number — each opens that verse's interlinear; a single button only reaches the first verse. A leading label names what the bare-number buttons are");
-  if (greater_than_equal(verse_list.length, 2)) {
-    let il_label = html_span_text(links_bar, "Interlinear:");
-    app_shared_text_deemphasized(il_label);
-    html_style_set(il_label, "margin-right", small_gap);
-    function interlinear_verse_button(vn) {
-      html_button_biblehub_open(
-        links_bar,
-        bh_book,
-        bh_chapter,
-        vn,
-        vn,
-        "interlinear/",
-        "",
-      );
-    }
-    verse_list.forEach(interlinear_verse_button);
-  } else {
-    html_button_biblehub_open_interlinear(
-      links_bar,
-      bh_chapter,
-      bh_book,
-      bh_verse,
-    );
-  }
+  html_buttons_biblehub_verse_group(
+    links_bar,
+    bh_book,
+    bh_chapter,
+    verse_list,
+    "Parallel",
+    "",
+    "",
+  );
+  html_buttons_biblehub_verse_group(
+    links_bar,
+    bh_book,
+    bh_chapter,
+    verse_list,
+    "Interlinear",
+    "interlinear/",
+    "",
+  );
   let approve_bar = html_div(container);
   html_style_margin_top(approve_bar, small_gap);
   html_centered(approve_bar);
