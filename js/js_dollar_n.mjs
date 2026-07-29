@@ -1,9 +1,9 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_statement_if_swap } from "./js_statement_if_swap.mjs";
 import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_single } from "./list_single.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
@@ -26,7 +26,7 @@ export function js_dollar_n({
     log(js_dollar_n.name, {
       name,
     });
-    if (equal(name, not.name)) {
+    if (equal(name, fn_name("not"))) {
       let arguments2 = js_call_arguments_get(test);
       let only = list_single(arguments2);
       js_statement_if_test_set(n, only);
