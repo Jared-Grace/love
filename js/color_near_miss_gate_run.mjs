@@ -7,8 +7,9 @@ export async function color_near_miss_gate_run() {
   "QA gate for the colour rule: two colours are either the same colour or clearly different ones, never almost the same. A near miss is a decision that got made twice — one designer picked a gold, another picked a gold a shade off, and now a change to either leaves the two screens disagreeing. Measured against the baseline file rather than against zero, so the rule binds new code today; a pair the baseline does not list fails, and a pair it lists that no longer happens fails too, so the list can only shrink.";
   let pairs = await colors_near_miss_pairs();
   let known = await color_near_miss_baseline_read();
-  let added = list_difference(pairs, known);
-  let stale = list_difference(known, pairs);
+  let change = names_versus_baseline(pairs, known);
+  let added = property_get(change, "added");
+  let stale = property_get(change, "stale");
   let any_added = greater_than(added.length, 0);
   if (any_added) {
     let message_added =
