@@ -1,6 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
-import { app_code_quiz } from "./app_code_quiz.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
@@ -14,7 +13,10 @@ export async function app_code_screens_crawl_lesson(
   records,
 ) {
   "crawl one lesson the way a learner meets it: its examples screen, then its quiz starting at the first kind and clicking Next through every following kind (forwards, backwards, unscramble, ...). A unique query string on each load forces a fresh render so the hash seeds the right screen. Stops walking when the lesson title changes, which means Next has carried us out of this lesson (into the next lesson or a review). Every screen is tagged and pushed onto records";
-  let combined = text_combine_multiple(["&screen=", app_code_examples.name]);
+  let combined = text_combine_multiple([
+    "&screen=",
+    fn_name("app_code_examples"),
+  ]);
   let examples_url = text_combine_multiple([
     url_prefix,
     "?s=",
@@ -32,7 +34,7 @@ export async function app_code_screens_crawl_lesson(
   list_add(records, examples);
   let combined2 = text_combine_multiple([
     "&screen=",
-    app_code_quiz.name,
+    fn_name("app_code_quiz"),
     "&quiz=0",
   ]);
   let quiz_url = text_combine_multiple([
@@ -50,7 +52,7 @@ export async function app_code_screens_crawl_lesson(
   first.screen = "quiz";
   first.kind = 0;
   list_add(records, first);
-  let combined3 = text_combine_multiple(["&screen=", app_code_quiz.name]);
+  let combined3 = text_combine_multiple(["&screen=", fn_name("app_code_quiz")]);
   let quiz_marker = text_combine_multiple(["lesson=", id, combined3]);
   let script = app_code_screen_next_click_script();
   let kind = 1;
