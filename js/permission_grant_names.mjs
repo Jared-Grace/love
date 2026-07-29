@@ -356,6 +356,7 @@ export function permission_grant_names() {
   let spelled353 = fn_name("functions_tail_duplicates");
   let spelled354 = fn_name("data_files_update");
   let spelled355 = fn_name("function_identifier_rename");
+  let spelled356 = fn_name("function_delete");
   let names = [
     spelled,
     spelled2,
@@ -712,6 +713,7 @@ export function permission_grant_names() {
     spelled353,
     spelled354,
     spelled355,
+    spelled356,
   ];
   return names;
 }
