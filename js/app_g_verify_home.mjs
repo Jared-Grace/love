@@ -48,6 +48,7 @@ import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
+import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code =
@@ -69,6 +70,7 @@ export async function app_g_verify_home(context) {
   let status = null;
   let chapter_state = null;
   let chapter_codes = null;
+  let view = null;
   async function initial_load() {
     try {
       let f_name = fn_name("g_sermon_write_read");
@@ -114,6 +116,8 @@ export async function app_g_verify_home(context) {
     chapter_codes = chapter_codes.concat([chapter_code]).sort();
   }
   render(chapter, status, chapter_state);
+  ("on page load/refresh scroll the passage to the top of the viewport, past the chapter-grid, title and hint — the reviewer wants to read the passage immediately. Only here (the one-time initial render), NOT on the 4s poll re-renders, which would yank the page mid-read");
+  await html_scroll_generic(view, "auto", "start");
   poll();
   function on_visible() {
     if (not(document.hidden)) {
@@ -240,7 +244,7 @@ export async function app_g_verify_home(context) {
       let value9 = app_g_verify_banner_font_size();
       html_style_font_size(banner, value9);
     }
-    let view = null;
+    view = null;
     let verse_buttons = {};
     function highlight_selected() {
       function lambda8(k) {
