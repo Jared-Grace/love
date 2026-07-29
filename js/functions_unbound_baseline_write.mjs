@@ -7,12 +7,7 @@ export async function functions_unbound_baseline_write() {
   "rewrite the unbound-name baseline from what the repo reads unbound right now. For seeding the ratchet once, and for shrinking it after a name has been bound or a dead line deleted - never for blessing a new one, which is the one thing the gate exists to refuse.";
   let known = await functions_unbound_names();
   await functions_unbound_baseline_growth_assert(known);
-  let baseline = {
-    known,
-  };
-  let json = json_format_to(baseline);
   let path = unbound_baseline_path();
-  await file_overwrite(path, json);
-  let r = known.length;
+  let r = await baseline_known_write(known, path);
   return r;
 }
