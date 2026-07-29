@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
-import { data_facts_cache_path } from "./data_facts_cache_path.mjs";
+import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
 import { function_facts_of_parsed } from "./function_facts_of_parsed.mjs";
 import { file_stamp } from "./file_stamp.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
@@ -36,7 +36,7 @@ export async function functions_facts_all() {
   ("An unreadable or missing record is not an error - it means everything is read,");
   ("which is exactly what happened before any of this was written.");
   let f_paths = await functions_paths();
-  let cache_path = data_facts_cache_path();
+  let cache_path = functions_facts_cache_path();
   async function remembered_read() {
     let read = await file_read_json(cache_path);
     return read;
