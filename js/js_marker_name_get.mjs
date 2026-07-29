@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_message } from "./assert_message.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { marker } from "./marker.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
@@ -27,7 +27,7 @@ export function js_marker_name_get(v) {
     return null;
   }
   let name = property_get(callee, "name");
-  if (name !== marker.name) {
+  if (name !== fn_name("marker")) {
     return null;
   }
   let arguments2 = js_call_arguments_get(node);
