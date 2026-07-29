@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { functions_unreachable_check_sites } from "./functions_unreachable_check_sites.mjs";
-import { list_matching_single } from "./list_matching_single.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
@@ -42,7 +42,7 @@ export async function functions_unreachable_check_gate_run() {
       "unreachable check gate: ",
       count,
       " checks can never be true - hand the sentence to ",
-      list_matching_single.name,
+      fn_name("list_matching_single"),
       " instead: ",
       joined,
     ]);
