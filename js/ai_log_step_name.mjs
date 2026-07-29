@@ -1,6 +1,4 @@
-import { function_select_apply_args } from "./function_select_apply_args.mjs";
-import { function_select_apply_code } from "./function_select_apply_code.mjs";
-import { function_select_multiple_apply_args } from "./function_select_multiple_apply_args.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -10,9 +8,9 @@ export function ai_log_step_name(entry) {
   "The commands that pair a selector with a transform are carriers - every one of them is logged under the same name, so read plainly the whole vocabulary arrives as one command run thousands of times and no pairing can be seen at all. The step is the transform it was handed, and that is what this answers.";
   let f_name = property_get(entry, "f_name");
   let carriers = [
-    function_select_apply_args.name,
-    function_select_apply_code.name,
-    function_select_multiple_apply_args.name,
+    fn_name("function_select_apply_args"),
+    fn_name("function_select_apply_code"),
+    fn_name("function_select_multiple_apply_args"),
   ];
   let carried = list_includes(carriers, f_name);
   let plain = not(carried);
