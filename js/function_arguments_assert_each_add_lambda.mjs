@@ -1,4 +1,4 @@
-import { arguments_assert_each } from "./arguments_assert_each.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_flo_body_add_first } from "./js_flo_body_add_first.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
@@ -17,7 +17,10 @@ export function function_arguments_assert_each_add_lambda(predicates_comma) {
       predicates_comma,
     });
     let code =
-      arguments_assert_each.name + "(arguments, [" + predicates_comma + "]);";
+      fn_name("arguments_assert_each") +
+      "(arguments, [" +
+      predicates_comma +
+      "]);";
     let statement = js_parse_statement(code);
     js_flo_body_add_first(ast, statement);
     await js_imports_missing_add_all(ast);
