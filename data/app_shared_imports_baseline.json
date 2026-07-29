@@ -4,10 +4,6 @@
   "app_shared_bible_verse_line -> app_bible_on_click_google_define",
   "app_shared_delete -> app_apps_all_main_fns_generate",
   "app_shared_gloss_bible_home_generic -> app_g_bible_home_inner",
-  "app_shared_glow_correct_apply -> app_code",
-  "app_shared_glow_correct_apply -> app_g",
-  "app_shared_glow_correct_keyframe -> app_code",
-  "app_shared_glow_correct_keyframe -> app_g",
   "app_shared_new -> app_apps_all_main_fns_generate"
  ]
 }
