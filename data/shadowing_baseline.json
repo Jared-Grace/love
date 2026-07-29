@@ -582,13 +582,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_bound_names",
-   "shadows_outer": [
-    "names"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_calls_to_each",
    "shadows_outer": [
     "nti"
@@ -620,13 +613,6 @@
    "name": "js_list_add_run_apply",
    "shadows_outer": [
     "call"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_module_variable_names",
-   "shadows_outer": [
-    "names"
    ],
    "shadows_function": []
   },
