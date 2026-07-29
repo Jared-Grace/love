@@ -1,5 +1,4 @@
-import { function_eachify } from "../../love/js/function_eachify.mjs";
-import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { function_eachify_transform } from "./function_eachify_transform.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { assert_message } from "./assert_message.mjs";
@@ -18,7 +17,7 @@ export async function function_eachify_unordered(f_name) {
         "Unordering only reshuffles concurrent async calls, so ",
         function_eachify_unordered.name,
         " needs an async function. Do you want to use ",
-        function_eachify.name,
+        fn_name("function_eachify"),
         " instead? Or should the function be async?",
       ]),
     );
