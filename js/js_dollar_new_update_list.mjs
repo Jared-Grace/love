@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
-import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_property_parse_expression_add } from "./js_property_parse_expression_add.mjs";
@@ -22,6 +22,6 @@ export async function js_dollar_new_update_list(code) {
     list_add(elements, oe);
     await js_imports_missing_add_all(ast);
   }
-  let code2 = await function_transform(js_dollar_choices.name, lambda);
+  let code2 = await function_transform(fn_name("js_dollar_choices"), lambda);
   return code2;
 }
