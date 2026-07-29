@@ -13,8 +13,14 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function function_open_names_reached() {
   "Every fn that puts a VS Code window on the human's screen, however many calls away the opening is.";
-  "Its neighbour answers the same question one call deep, which is right for what that one is asked and too narrow for what is built on it. The rename twin that opens its result opens a window; so does every fn that calls that twin, and there were seven of those, none of them on the one-deep list. The gate that refuses to auto-approve an opener reads the one-deep list, so a grant on any of the seven passes the gate and then buys the guaranteed error the gate exists to prevent.";
-  "Growth stops at the naming convention, and that bound is the whole difficulty. Neither imports nor calls can decide this on their own, because the opening is often conditional: an import closure was tried first and swallowed half the repo, and a call closure did the same, pulling in every fn that shells out - the command runner reaches an opener down a branch it does not normally take, so scheduling a push came out as opening a window. A reached call is what a fn could do, not what it does.";
+  "Its neighbour answers the same question one call deep, which is right for what that one is asked and too narrow for what is built on it. " +
+    fn_name("function_rename_open") +
+    " opens a window; so does every fn that calls it, and there were seven of those, none of them on the one-deep list. " +
+    fn_name("permission_editor_open_gate_run") +
+    " reads the one-deep list, so a grant on any of the seven passes the gate and then buys the guaranteed error the gate exists to prevent.";
+  "Growth stops at the naming convention, and that bound is the whole difficulty. Neither imports nor calls can decide this on their own, because the opening is often conditional: an import closure was tried first and swallowed half the repo, and a call closure did the same, pulling in every fn that shells out - the command runner reaches an opener down a branch it does not normally take, so " +
+    fn_name("git_push_schedule") +
+    " came out as opening a window. A reached call is what a fn could do, not what it does.";
   "So the set grows only through names ending in the open suffix, because that suffix is the one place the repo states that showing the human something is the point of the fn rather than something it might do. Membership is still settled on the tree - the suffix decides whether a fn may carry the set forward, and an actual call decides whether it is in it - which keeps out the bracket, the emoji and the browser window that share the ending and open nothing.";
   "Callers of an opener are the answer rather than more frontier. They are what a permission rule must not name, and stopping there is what keeps a widely-called helper from carrying the set across the whole repo.";
   "Settling is checked rather than assumed. A pass that adds nothing means the set is closed, and a run that never stops adding says the call graph is not what this expects, which is worth an error rather than a silent cut-off at whatever round the loop happened to end on.";
