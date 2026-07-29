@@ -48,13 +48,6 @@
    "shadows_function": []
   },
   {
-   "name": "browser_files_database_initialize",
-   "shadows_outer": [
-    "db"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_a_list_chooser_generic",
    "shadows_outer": [
     "text"
@@ -310,6 +303,13 @@
    "name": "bible_verses_uplifting_package_upload",
    "shadows_outer": [
     "present"
+   ],
+   "shadows_function": []
+  },
+  {
+   "name": "browser_files_database_initialize",
+   "shadows_outer": [
+    "db"
    ],
    "shadows_function": []
   },
@@ -606,13 +606,6 @@
    "name": "js_code_comment_statement_generic",
    "shadows_outer": [
     "known"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_comments_left_count",
-   "shadows_outer": [
-    "left"
    ],
    "shadows_function": []
   },
