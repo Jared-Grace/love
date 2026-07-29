@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { html_style_background } from "./html_style_background.mjs";
-import { app_g_bible_passage_button } from "./app_g_bible_passage_button.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_scripture } from "./app_g_scripture.mjs";
 export function app_g_bible_passage_button_direct(
@@ -11,7 +11,7 @@ export function app_g_bible_passage_button_direct(
   ("a Bible passage choice button built from a reference + verse text DIRECTLY (no chapter-code lookup) — for verses that carry their own reference/text (e.g. the how-are-you comfort verses, which span many books). dark bg + light-green reference + glowing gold verse (",
     app_g_scripture.name,
     "); the base that ",
-    app_g_bible_passage_button.name,
+    fn_name("app_g_bible_passage_button"),
     " delegates to");
   let b = app_g_button_green(overlay, "", lambda);
   html_style_background(b, "rgba(0, 0, 0, 0.8)");
