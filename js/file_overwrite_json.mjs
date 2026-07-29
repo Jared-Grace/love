@@ -1,10 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { property_get } from "./property_get.mjs";
 import { import_install } from "./import_install.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
-import { json_to } from "./json_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_path_temp } from "./file_path_temp.mjs";
 export async function file_overwrite_json(file_path, object) {
@@ -16,7 +16,7 @@ export async function file_overwrite_json(file_path, object) {
   await file_parent_exists_ensure(file_path);
   text_combine_multiple([
     "Using ",
-    json_to.name,
+    fn_name("json_to"),
     " did not work on sufficiently large object, whereas the following did:",
   ]);
   let fs = await import("fs");
