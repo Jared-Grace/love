@@ -1,10 +1,9 @@
+import { app_g_conversation_day_fraction } from "./app_g_conversation_day_fraction.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { g_day_sky_phase } from "./g_day_sky_phase.mjs";
 import { g_time_index } from "./g_time_index.mjs";
 import { property_get } from "./property_get.mjs";
 import { positive_is } from "./positive_is.mjs";
-import { add } from "./add.mjs";
-import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 export function app_g_conversation_sky_target(conversation_fraction) {
   ("the sky PHASE a conversation drifts to at the given progress (0..1), aware of the day SLICE it belongs to. in a day session (slices_total > 0) the conversation advances the sky only through ITS slice — from slices_done / slices_total to (slices_done + 1) / slices_total of the working day, which ",

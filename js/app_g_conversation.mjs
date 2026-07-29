@@ -1,3 +1,9 @@
+import { app_g_day_state } from "./app_g_day_state.mjs";
+import { app_g_conversation_day_fraction } from "./app_g_conversation_day_fraction.mjs";
+import { g_day_clock } from "./g_day_clock.mjs";
+import { g_clock_label } from "./g_clock_label.mjs";
+import { emoji_clock } from "./emoji_clock.mjs";
+import { app_g_toast } from "./app_g_toast.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
@@ -133,6 +139,16 @@ export async function app_g_conversation(
     let fraction = divide(steps.done, steps_total);
     let target = app_g_conversation_sky_target(fraction);
     await app_g_sky_to(target);
+    let toast_state = app_g_day_state();
+    let show_toast = property_get(toast_state, "sky_toast");
+    if (show_toast) {
+      let day_fraction = app_g_conversation_day_fraction(fraction);
+      let clock = g_day_clock(day_fraction);
+      let label = g_clock_label(clock);
+      let r = emoji_clock();
+      let text = text_combine_multiple([r, " ", label]);
+      app_g_toast(text, 1400);
+    }
   }
   function label_for(turn) {
     let kind = property_get(turn, "kind");

@@ -1,3 +1,8 @@
+import { list_size } from "./list_size.mjs";
+import { list_sum } from "./list_sum.mjs";
+import { html_div_centered } from "./html_div_centered.mjs";
+import { html_text_align_left } from "./html_text_align_left.mjs";
+import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { app_bible_search_word_download } from "./app_bible_search_word_download.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
@@ -292,9 +297,10 @@ export async function app_search_results(context, div_results) {
     html_border(div_chapter, "0.1em", border_color);
     let border_radius = app_shared_border_radius_extra_large();
     html_border_radius(div_chapter, border_radius);
-    html_style_padding_em(div_chapter, "0.5");
+    html_style_padding_em(div_chapter, "0.3");
     html_style_margin_x(div_chapter, "0.15em");
-    html_style_margin_y(div_chapter, "0.15em");
+    html_style_margin_y(div_chapter, "0.1em");
+    html_text_align_left(div_chapter);
     let chapter_header_text = text_combine_multiple([
       "Chapter ",
       chapter_name,
