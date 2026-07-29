@@ -1,3 +1,4 @@
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { equal } from "./equal.mjs";
 import { claude_transcripts_folder } from "./claude_transcripts_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
@@ -7,8 +8,6 @@ import { text_ends_with } from "./text_ends_with.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { list_reverse } from "./list_reverse.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { p_command_of_line } from "./p_command_of_line.mjs";
@@ -64,7 +63,6 @@ export async function p_commands_repeated() {
     let n = row.count;
     return n;
   }
-  list_sort_number_mapper(rows, by_count);
-  list_reverse(rows);
-  return rows;
+  let ranked = list_sort_number_mapper_reverse(rows, by_count);
+  return ranked;
 }

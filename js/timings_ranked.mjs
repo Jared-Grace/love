@@ -1,6 +1,5 @@
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { list_reverse } from "./list_reverse.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { property_get } from "./property_get.mjs";
 export function timings_ranked(timings) {
   "The same timings, slowest first, as a new list.";
@@ -11,7 +10,6 @@ export function timings_ranked(timings) {
     let milliseconds = property_get(timing, "milliseconds");
     return milliseconds;
   }
-  list_sort_number_mapper(sorted, lambda_milliseconds);
-  list_reverse(sorted);
-  return sorted;
+  let ranked = list_sort_number_mapper_reverse(sorted, lambda_milliseconds);
+  return ranked;
 }
