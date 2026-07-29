@@ -356,6 +356,9 @@ export function permission_grant_names() {
   let spelled353 = fn_name("data_files_update");
   let spelled354 = fn_name("function_identifier_rename");
   let spelled355 = fn_name("function_delete");
+  let spelled356 = fn_name("argument_unalias");
+  let spelled357 = fn_name("argument_alias_words");
+  let spelled358 = fn_name("process_open_wanted_is");
   let names = [
     spelled,
     spelled2,
@@ -712,6 +715,9 @@ export function permission_grant_names() {
     spelled353,
     spelled354,
     spelled355,
+    spelled356,
+    spelled357,
+    spelled358,
   ];
   return names;
 }
