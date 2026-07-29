@@ -1,3 +1,4 @@
+import { js_node_is } from "./js_node_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
@@ -40,6 +41,14 @@ export function js_pure_read_names(node) {
   let pure = true;
   function lambda(v) {
     let visited = property_get(v, "node");
+    ("The walk comes through the lists and plain values holding the parts together as");
+    ("well as the parts themselves. Those carry nothing of their own, so they are");
+    ("stepped over rather than judged - judging them would call every expression");
+    ("impure the moment it had more than one part.");
+    let part_is = js_node_is(visited);
+    if (not(part_is)) {
+      return;
+    }
     let type = js_node_type(visited);
     let known_is = list_includes(allowed, type);
     if (not(known_is)) {
