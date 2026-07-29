@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { daemons_ensure } from "./daemons_ensure.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { linger_is } from "./linger_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -11,7 +11,7 @@ export async function daemons_gate_run() {
   assert_json(linger, {
     hint: text_combine_multiple([
       "services are set to stop when you log out — run ",
-      daemons_ensure.name,
+      fn_name("daemons_ensure"),
       " to turn linger back on",
     ]),
   });
@@ -19,7 +19,7 @@ export async function daemons_gate_run() {
   list_empty_is_assert_json(unhealthy, {
     hint: text_combine_multiple([
       "these daemons are not running — run ",
-      daemons_ensure.name,
+      fn_name("daemons_ensure"),
       " to install and start them",
     ]),
   });
