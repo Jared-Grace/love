@@ -1,9 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { functions_duplicates_names } from "./functions_duplicates_names.mjs";
-import { function_replace } from "./function_replace.mjs";
-import { functions_duplicates_baseline_write } from "./functions_duplicates_baseline_write.mjs";
 export async function functions_duplicates_gate_run() {
   "QA gate for one idea arriving twice. Small units written by many hands at once produce this on their own - two people reach for the same small job, neither can see that the other already wrote it, and it lands under two names. Nothing else in the repo can notice, because each half looks perfectly reasonable alone.";
   "Measured against the baseline file rather than against zero, so the rule binds what is written today instead of waiting on a judgment about every pair already here. A name the baseline does not list fails, and a name it lists that no longer has a twin fails too, so the list can only shrink.";
@@ -12,14 +11,14 @@ export async function functions_duplicates_gate_run() {
   let path = duplicates_baseline_path();
   let hint = text_combine_multiple([
     "these functions do work another name already does - collapse the pair onto one name with ",
-    function_replace.name,
+    fn_name("function_replace"),
     ", or make them genuinely differ",
   ]);
   let result = await baseline_names_gate_generic(
     offenders,
     path,
     hint,
-    functions_duplicates_baseline_write.name,
+    fn_name("functions_duplicates_baseline_write"),
   );
   return result;
 }
