@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_call_absence_tested_name } from "./js_call_absence_tested_name.mjs";
 import { functions_refusing_finders } from "./functions_refusing_finders.mjs";
 import { js_call_of_any_named } from "./js_call_of_any_named.mjs";
@@ -9,9 +10,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-import { assert_json } from "./assert_json.mjs";
 export async function functions_unreachable_check_sites() {
   "Every place a function asks whether the find-one helper found nothing. It";
   "never hands back nothing - it throws - so the asking can never be true, and";
@@ -22,7 +21,7 @@ export async function functions_unreachable_check_sites() {
   "reaches for most, and each had a careful sentence sitting in it unread. The";
   "twin that carries the caller's words into the finding is what was missing;";
   "with that written, this stays at zero.";
-  let checkers = [assert_json.name, null_is.name, not.name];
+  let checkers = [fn_name("assert_json"), fn_name("null_is"), not.name];
   let finders = functions_refusing_finders();
   let f_names = await repo_functions_names("love");
   let sites = [];
