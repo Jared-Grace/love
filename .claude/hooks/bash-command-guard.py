@@ -3032,6 +3032,16 @@ TIME_SUBSHELL_RE = re.compile(r"^\s*time\s+\(\s*(.+?)\s*\)\s*$", re.DOTALL)
 # following redirect catches.
 TIME_SUBSHELL_ANY_RE = re.compile(r"(^|[;&|]\s*)time\s+\(\s*([^()]*?)\s*\)")
 
+# An `&` acting as a control operator - backgrounding, or the first half of
+# `&&` - as opposed to one naming a file descriptor. `2>&1` and `>&2` are
+# redirections and change nothing about what is timed; `a && b` and `cmd &`
+# are list operators, and `time ( a && b )` measures both where `time a && b`
+# measures only the first. Written as "an ampersand not preceded by a
+# redirection character" so the everyday `2>&1` inside a timed command is not
+# mistaken for one - which it was, on the first cut of this, refusing exactly
+# the shape the rewrite exists for.
+SUBSHELL_CONTROL_AMPERSAND_RE = re.compile(r"(?<![<>])&")
+
 # Constructs whose effect a subshell deliberately contains. `cd` and a
 # variable assignment both outlive the command when the parentheses go, and
 # the working directory persists between Bash calls here - so for these the
@@ -3081,7 +3091,7 @@ def time_subshell_stripped(command, safe_verbs, safe_exact_commands):
         # keyword times a whole pipeline either way - so only these two are
         # refused, and refusing the whole rewrite is right, because a command
         # carrying one such wrapper should not be half-reworded.
-        if ";" in inner or "&" in inner:
+        if ";" in inner or SUBSHELL_CONTROL_AMPERSAND_RE.search(inner):
             return None
     stripped = TIME_SUBSHELL_ANY_RE.sub(lambda m: m.group(1) + "time " + m.group(2), command)
     try:
