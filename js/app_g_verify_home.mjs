@@ -350,6 +350,14 @@ export async function app_g_verify_home(context) {
     clearTimeout(poll_timer);
     poll_timer = setTimeout(refresh, 4000);
   }
+  ("do NOT re-render while the reviewer is typing in the suggest box — a poll that lands mid-edit would rebuild the textarea and wipe their in-progress draft. Defer: shown_json is left stale, so the next poll after they click away or submit renders the fresh lines");
+  function editing_now() {
+    let active = document.activeElement;
+    if (not(active)) {
+      return false;
+    }
+    return equal(active.tagName, "TEXTAREA");
+  }
   async function refresh() {
     if (document.hidden) {
       poll();
@@ -386,7 +394,7 @@ export async function app_g_verify_home(context) {
         status: fresh_status,
         chapter_state: fresh_state,
       });
-      if (not_equal(fresh_json, shown_json)) {
+      if (not_equal(fresh_json, shown_json) && not(editing_now())) {
         render(fresh_chapter, fresh_status, fresh_state);
       }
     } catch (ignore) {
