@@ -1,3 +1,4 @@
+import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { each_index } from "./each_index.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -28,7 +29,7 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     property_set(npc, "meet", false);
     property_set(npc, "christian", false);
     property_set(npc, "objections", 2);
-    property_set(npc, "conversation", g_conversation_generate());
+    property_set(npc, app_g_conversation_key(), g_conversation_generate());
   }
   each_index(npcs, npc_initialize);
   return npcs;
