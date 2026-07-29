@@ -1,4 +1,4 @@
-import { each } from "./each.mjs";
+import { list_each_size } from "./list_each_size.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { js_imports_shadowed } from "./js_imports_shadowed.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -20,7 +20,6 @@ export function js_imports_shadowed_remove(ast) {
     let declaration = property_get(entry, "declaration");
     list_remove(body, declaration);
   }
-  each(dead, drop);
-  let removed = dead.length;
+  let removed = list_each_size(dead, drop);
   return removed;
 }
