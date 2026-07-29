@@ -84,12 +84,7 @@ export async function app_search_results(context, div_results) {
   let words_missing = [];
   async function lambda(word) {
     async function get() {
-      let destination = app_bible_search_word_path(word);
-      let project_url = firebase_storage_url_project_jg();
-      let o = await firebase_storage_download_json_decompress(
-        project_url,
-        destination,
-      );
+      let o = await app_bible_search_word_download(word);
       return o;
     }
     ("the index keeps one file per word it has seen, so a word appearing nowhere has no file and the download fails; catch it and carry on, rather than letting one unknown word reject the whole search and leave a blank page");
