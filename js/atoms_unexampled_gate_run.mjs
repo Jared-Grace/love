@@ -1,10 +1,6 @@
+import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { atoms_unexampled } from "./atoms_unexampled.mjs";
 import { atoms_unexampled_baseline_path } from "./atoms_unexampled_baseline_path.mjs";
-import { baseline_known_read } from "./baseline_known_read.mjs";
-import { names_versus_baseline } from "./names_versus_baseline.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { atoms_unexampled_baseline_write } from "./atoms_unexampled_baseline_write.mjs";
 export async function atoms_unexampled_gate_run() {
   "QA gate: an atom the instructions tell a Claude to reach for is demonstrated by an example";

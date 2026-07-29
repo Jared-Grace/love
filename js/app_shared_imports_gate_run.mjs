@@ -1,12 +1,8 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { app_shared_imports_baseline_write } from "./app_shared_imports_baseline_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_app_specific_imports } from "./app_shared_app_specific_imports.mjs";
 import { app_shared_imports_baseline_path } from "./app_shared_imports_baseline_path.mjs";
-import { baseline_known_read } from "./baseline_known_read.mjs";
-import { names_versus_baseline } from "./names_versus_baseline.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_shared_imports_gate_run() {
   arguments_assert(arguments, 0);
@@ -27,26 +23,16 @@ export async function app_shared_imports_gate_run() {
   ("back in.");
   let offenders = await app_shared_app_specific_imports();
   let path = app_shared_imports_baseline_path();
-  let recorded = await baseline_known_read(path);
-  let change = names_versus_baseline(offenders, recorded);
-  let added = property_get(change, "added");
-  let stale = property_get(change, "stale");
-  list_empty_is_assert_json(added, {
-    hint: "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
-    added,
-  });
-  list_empty_is_assert_json(stale, {
-    hint: text_combine_multiple([
-      "these were cleared - shrink the record with ",
-      app_shared_imports_baseline_write.name,
-      " so the same reach cannot come back unnoticed",
-    ]),
-    stale,
-  });
+  await baseline_names_gate_generic(
+    offenders,
+    path,
+    "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
+    app_shared_imports_baseline_write.name,
+  );
   let r = {
     checked: list_size(offenders),
-    added,
-    stale,
+    added: 0,
+    stale: 0,
   };
   return r;
 }
