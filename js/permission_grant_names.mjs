@@ -368,6 +368,7 @@ export function permission_grant_names() {
   let spelled365 = fn_name("functions_selects_unsafe_baseline_write");
   let spelled366 = fn_name("daemons_status");
   let spelled367 = fn_name("ebible_book_divisions");
+  let spelled368 = fn_name("app_g_view_phase_conversation");
   let names = [
     spelled,
     spelled2,
@@ -736,6 +737,7 @@ export function permission_grant_names() {
     spelled365,
     spelled366,
     spelled367,
+    spelled368,
   ];
   return names;
 }
