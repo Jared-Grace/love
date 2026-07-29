@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { arity_baseline_path } from "./arity_baseline_path.mjs";
 import { functions_arity_mismatches } from "./functions_arity_mismatches.mjs";
-import { functions_arity_baseline_write } from "./functions_arity_baseline_write.mjs";
 export async function functions_arity_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: a call hands a repo function exactly what it declares.");
@@ -23,7 +23,7 @@ export async function functions_arity_gate_run() {
     offenders,
     path,
     "these calls hand a repo function the wrong number of things - give it what it declares, or change what it declares and every call with it",
-    functions_arity_baseline_write.name,
+    fn_name("functions_arity_baseline_write"),
   );
   return r;
 }
