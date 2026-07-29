@@ -1,11 +1,38 @@
+import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
+import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
+import { memory_fn_reference_gate_run } from "./memory_fn_reference_gate_run.mjs";
+import { memory_fn_reference_tokens_gate_run } from "./memory_fn_reference_tokens_gate_run.mjs";
+import { memory_link_gate_run } from "./memory_link_gate_run.mjs";
+import { memory_link_verdict_gate_run } from "./memory_link_verdict_gate_run.mjs";
+import { memory_frontmatter_gate_run } from "./memory_frontmatter_gate_run.mjs";
+import { memory_integrity_gate_run } from "./memory_integrity_gate_run.mjs";
+import { memory_pointer_gate_run } from "./memory_pointer_gate_run.mjs";
+import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { permission_reachable_gate_run } from "./permission_reachable_gate_run.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 export function qa_gates_machine() {
   "The gates whose answer is about this machine and this folder rather than about the code";
   "One asks the operating system whether the background services are alive, which no copy of the files can answer";
-  "The other two put commands to the real hook and read its answer, and the hook builds this project's scratch folder name out of where the project sits - so a rule naming that folder is rightly not honoured from anywhere else, and both were measured failing on a frozen copy for exactly that reason and no other";
-  "Naming them is what lets a verdict be kept against a commit: everything else is a question the files alone answer, so the same commit gives the same answer tomorrow, while these three can change without a single line changing";
-  let gates = [daemons_gate_run, guard_gate_run, permission_reachable_gate_run];
+  "Two put commands to the real hook and read its answer, and the hook builds this project's scratch folder name out of where the project sits - so a rule naming that folder is rightly not honoured from anywhere else, and both were measured failing on a frozen copy for exactly that reason and no other";
+  "The rest read the notes we keep, and those live somewhere else on this machine entirely - the path to them is worked out from a folder outside this repo, so a copy of the repo does not contain them and cannot";
+  "Naming them is what lets a verdict be kept against a commit: everything else is a question the files alone answer, so the same commit gives the same answer tomorrow, while these can change without a single line changing";
+  "The notes were in the other list until now, which was a lie in the one direction that matters. Being in that list meant being asked inside the frozen copy, and being asked there meant the answer was kept against a commit of this repo - but the folder they actually read was the living one outside, so a verdict earned when the notes were sound could be handed back long after they had stopped being, and handed back as though the files had been looked at. A wrongly red gate wastes a few minutes; a wrongly green one is believed";
+  "Being asked out here instead means the answer is never kept, which is the honest shape: it is not a fact about any commit of this repo, so no commit should be able to vouch for it. The whole-folder gate asks both halves, so nothing has stopped being checked - only stopped being remembered";
+  let gates = [
+    daemons_gate_run,
+    guard_gate_run,
+    permission_reachable_gate_run,
+    memory_hook_gate_run,
+    memory_pointer_gate_run,
+    memory_integrity_gate_run,
+    memory_frontmatter_gate_run,
+    memory_link_verdict_gate_run,
+    memory_link_gate_run,
+    memory_fn_reference_tokens_gate_run,
+    memory_fn_reference_gate_run,
+    memory_symbol_gate_run,
+    memory_index_size_gate_run,
+  ];
   return gates;
 }
