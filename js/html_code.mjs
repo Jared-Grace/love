@@ -20,12 +20,14 @@ export function html_code(name, body) {
   let title = html_code_element("title", attributes_none, name);
   let emoji = app_shared_icon_emoji(name);
   let favicon = html_code_favicon_emoji(emoji);
+  ("offering to install and keeping a copy on disk are two separate opt-ins, asked separately. an app that only wants a return visit to open at once registers the worker and never shows an install banner; an app that wants installing gets both, because a home-screen copy with no cached files would open to a blank page the first time it is opened offline");
   let pwa = apps_pwa_is(name);
   let manifest_link = null;
   if (pwa) {
     manifest_link = html_code_manifest_link(name);
   }
-  let service_worker = html_code_service_worker_register(pwa);
+  let registers = apps_service_worker_is(name);
+  let service_worker = html_code_service_worker_register(registers);
   let r2 = html_code_meta_charset();
   let r3 = html_code_meta_viewport();
   let head_items = list_filter_null_not_is([
