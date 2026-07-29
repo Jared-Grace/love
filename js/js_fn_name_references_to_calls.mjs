@@ -42,7 +42,7 @@ export async function js_fn_name_references_to_calls(ast) {
     }
     let string_code = js_code_string(name);
     let args = [string_code];
-    let call_code = js_code_call_args(fn_name.name, args);
+    let call_code = js_code_call_args(fn_name("fn_name"), args);
     let expression = js_parse_expression(call_code);
     object_replace(node, expression);
   }
