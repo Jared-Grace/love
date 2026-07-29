@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_first } from "./list_first.mjs";
@@ -11,7 +12,6 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { object_replace } from "./object_replace.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 export function js_html_style_assign_to_set_node(node) {
   let args = js_call_arguments_get(node);
   if (!list_size_2(args)) {
@@ -25,7 +25,7 @@ export function js_html_style_assign_to_set_node(node) {
   }
   let key_expression = js_property_key_string_expression(property);
   let value = js_property_value_get(property);
-  let code = js_code_call(html_style_set.name);
+  let code = js_code_call(fn_name("html_style_set"));
   let expression = js_parse_expression(code);
   let arguments2 = js_call_arguments_get(expression);
   list_add_multiple(arguments2, [
