@@ -1,9 +1,9 @@
+import { list_from_index } from "./list_from_index.mjs";
 import { newline } from "./newline.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_add } from "./list_add.mjs";
 export function qa_gate_failed_complaints(output) {
@@ -21,7 +21,7 @@ export function qa_gate_failed_complaints(output) {
     let parts = text_split(line, prefix);
     let after = list_last(parts);
     let halves = text_split_colon(after);
-    let said = list_slice(halves, 1);
+    let said = list_from_index(halves, 1);
     let complaint = list_join(said, ":");
     list_add(complaints, complaint);
   }
