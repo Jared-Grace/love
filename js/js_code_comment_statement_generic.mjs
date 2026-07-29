@@ -43,7 +43,7 @@ export function js_code_comment_statement_generic(value, f_names) {
     if (is) {
       let substitution = text_combine_multiple([
         "${",
-        fn_name.name,
+        fn_name("fn_name"),
         '("',
         text,
         '")}',
