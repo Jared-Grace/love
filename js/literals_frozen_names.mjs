@@ -11,6 +11,8 @@ export function literals_frozen_names() {
   let spelled6 = fn_name("app_shared_bible_mode_hash_key");
   let spelled7 = fn_name("browser_files_store");
   let spelled8 = fn_name("browser_files_database_name");
+  let spelled9 = fn_name("download_cache_database_name");
+  let spelled10 = fn_name("download_cache_store");
   let names = [
     spelled,
     spelled2,
@@ -19,6 +21,8 @@ export function literals_frozen_names() {
     spelled6,
     spelled7,
     spelled8,
+    spelled9,
+    spelled10,
   ];
   return names;
 }
