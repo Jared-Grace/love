@@ -1,3 +1,4 @@
+import { noop } from "./noop.mjs";
 import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
 import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
@@ -112,7 +113,7 @@ export function app_g_dev_routes(div_map) {
       "comfort them and carry their burden",
       "settle their doubts and help them trust You",
     ];
-    app_g_pray_turn(prayer_texts, done);
+    app_g_pray_turn(prayer_texts, noop, done);
   }
   async function sky() {
     ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (",
