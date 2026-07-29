@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { entries_names_text } from "./entries_names_text.mjs";
-import { functions_unbound_baseline_write } from "./functions_unbound_baseline_write.mjs";
 import { functions_unbound_names } from "./functions_unbound_names.mjs";
 import { functions_unbound_versus_baseline } from "./functions_unbound_versus_baseline.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -30,7 +30,7 @@ export async function functions_unbound_gate_run() {
       "unbound gate: " +
       stale.length +
       " baseline entries are bound now - rerun " +
-      functions_unbound_baseline_write.name +
+      fn_name("functions_unbound_baseline_write") +
       " to shrink the baseline: " +
       entries_names_text(stale);
     throw new Error(message_stale);
