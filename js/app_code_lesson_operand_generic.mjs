@@ -16,7 +16,11 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_operand_generic(params) {
-  "the shared shape for the identify-an-operand lessons (dividend / divisor / quotient): show a division (or Math.floor(a / b) === c) and let the learner pick which number is the named role, the other numbers standing as decoys (app_code_lesson_quiz_choose_operand) with a role-named 'Show me the answer' (app_code_quiz_correction_operand). The caller passes only what differs: the role word, the define_prose that ends in the bolded term, a batch_get producing {question, answer}, and the name_id. The intro is BUILT here from a random sample of batch_get, so its worked example varies each visit (a different example may be the one that clicks)";
+  ("the shared shape for the identify-an-operand lessons (dividend / divisor / quotient): show a division (or Math.floor(a / b) === c) and let the learner pick which number is the named role, the other numbers standing as decoys (",
+    app_code_lesson_quiz_choose_operand.name,
+    ") with a role-named 'Show me the answer' (",
+    app_code_quiz_correction_operand.name,
+    "). The caller passes only what differs: the role word, the define_prose that ends in the bolded term, a batch_get producing {question, answer}, and the name_id. The intro is BUILT here from a random sample of batch_get, so its worked example varies each visit (a different example may be the one that clicks)");
   let role = property_get(params, "role");
   let define_prose = property_get(params, "define_prose");
   let batch_get = property_get(params, "batch_get");
@@ -30,7 +34,8 @@ export function app_code_lesson_operand_generic(params) {
     "define the role with the term bolded, then a RANDOM worked example from the same generator as the quiz, then the ask";
     let intro = app_code_container_light_blue(root);
     app_code_lesson_bold_term(intro, define_prose, role);
-    let sample = list_first(batch_get());
+    let list = batch_get();
+    let sample = list_first(list);
     let sample_question = property_get(sample, "question");
     let sample_answer = property_get(sample, "answer");
     let middle = text_combine_multiple([" the ", role, " is "]);
@@ -40,13 +45,15 @@ export function app_code_lesson_operand_generic(params) {
       above_more(root);
     }
     let ask = app_code_container_light_blue(root);
-    html_div_cycle_code(ask, [
-      text_combine_multiple(["In this lesson you will choose the ", role]),
+    let combined = text_combine_multiple([
+      "In this lesson you will choose the ",
+      role,
     ]);
+    html_div_cycle_code(ask, [combined]);
   }
   function quizzes_get(question, answer) {
     let forwards = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label,
       answer_on_button: null,
