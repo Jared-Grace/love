@@ -1,3 +1,5 @@
+import { null_is } from "./null_is.mjs";
+import { equal } from "./equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
@@ -19,14 +21,14 @@ export async function marker_call_replace_generic(input, lambda$a) {
       let v = marker_next_get(a);
       let next = property_get(v, "next");
       let v2 = js_statement_call_get(next);
-      let expression = property_get(v2, "expression");
-      if (expression === null) {
+      if (null_is(v2)) {
         return;
       }
-      let arguments2 = js_call_arguments_get(expression);
+      let call = property_get(v2, "call");
+      let arguments2 = js_call_arguments_get(call);
       let replaced = null;
-      if (input === "c") {
-        let callee = property_get(expression, "callee");
+      if (equal(input, "c")) {
+        let callee = property_get(call, "callee");
         replaced = callee;
       } else {
         let arg_index_at = list_get(arguments2, arg_index);
