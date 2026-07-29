@@ -8,7 +8,7 @@ import { property_delete } from "./property_delete.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_initialize } from "./property_initialize.mjs";
 import { property_set } from "./property_set.mjs";
-export function data_facts_merge(facts, data) {
+export function function_facts_merge(facts, data) {
   arguments_assert(arguments, 2);
   ("Fold what one file says into the index everything is looked up in.");
   ("The cheap half. It touches lists and records and never opens a file, so it");
