@@ -1,3 +1,5 @@
+import { argument_alias_group_show } from "./argument_alias_group_show.mjs";
+import { argument_unalias } from "./argument_unalias.mjs";
 import { process_env_or_null } from "./process_env_or_null.mjs";
 import { process_ai_seam_is } from "./process_ai_seam_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -11,7 +13,8 @@ export function process_open_wanted_is() {
   let asked = process_env_or_null("love_show");
   let explicit = null_not_is(asked);
   if (explicit) {
-    let show = argument_unalias(argument_alias_group_show(), asked);
+    let group_name = argument_alias_group_show();
+    let show = argument_unalias(group_name, asked);
     let wanted = equal(show, "open");
     return wanted;
   }
