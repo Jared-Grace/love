@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { python_mirrors_write } from "./python_mirrors_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { python_mirrors } from "./python_mirrors.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -24,7 +24,7 @@ export async function python_mirrors_assert() {
   list_empty_is_assert_json(paths, {
     hint: text_combine_multiple([
       "these generated python files no longer match their source — regenerate them with ",
-      python_mirrors_write.name,
+      fn_name("python_mirrors_write"),
     ]),
     paths,
   });
