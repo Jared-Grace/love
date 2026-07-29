@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_search_results } from "./app_search_results.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
@@ -25,7 +25,7 @@ export function app_g_dev_index() {
     "the #index dev directory, rendered like the Bible SEARCH RESULTS (DRY — the SAME ",
     app_shared_container_blue.name,
     " cards + bold collapsible header the search uses, mirroring ",
-    app_search_results.name,
+    fn_name("app_search_results"),
     ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link (click + reload-on-hash-change) jumps to that screen. routes + categories come from the ",
   ]),
     app_g_dev_routes.name,
