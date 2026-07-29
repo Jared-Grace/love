@@ -1,12 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
-import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
-import { example_command_lambda } from "./example_command_lambda.mjs";
-import { example_select_apply_named } from "./example_select_apply_named.mjs";
-import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs";
-import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
-import { app_g_day_guide_highlight } from "./app_g_day_guide_highlight.mjs";
-import { functions_html_style_literals_migrate } from "./functions_html_style_literals_migrate.mjs";
 import { list_join } from "./list_join.mjs";
 import { newline } from "./newline.mjs";
 export function qa_report_cases() {
@@ -16,26 +9,34 @@ export function qa_report_cases() {
   let separator = newline();
   let two_reds = list_join(
     [
-      text_combine_multiple(["=== ", memory_index_size_gate_run.name, " ==="]),
+      text_combine_multiple([
+        "=== ",
+        fn_name("memory_index_size_gate_run"),
+        " ===",
+      ]),
       "memory index size gate: the index is 24062 bytes and may be 24000",
       text_combine_multiple([
         "GATE FAILED  ",
-        memory_index_size_gate_run.name,
+        fn_name("memory_index_size_gate_run"),
         ": memory index size gate: the index is 24062 bytes and may be 24000",
       ]),
       "",
-      text_combine_multiple(["=== ", function_imports_gate_run.name, " ==="]),
+      text_combine_multiple([
+        "=== ",
+        fn_name("function_imports_gate_run"),
+        " ===",
+      ]),
       text_combine_multiple([
         "MISSING IMPORT  ",
-        example_command_lambda.name,
+        fn_name("example_command_lambda"),
         "  -> ",
-        example_select_apply_named.name,
+        fn_name("example_select_apply_named"),
       ]),
       "",
       "offenders 1",
       text_combine_multiple([
         "GATE FAILED  ",
-        function_imports_gate_run.name,
+        fn_name("function_imports_gate_run"),
         ": imports gate: 1 functions reference an unimported repo function",
       ]),
     ],
@@ -45,12 +46,12 @@ export function qa_report_cases() {
     [
       text_combine_multiple([
         "=== ",
-        functions_shadowing_gate_run.name,
+        fn_name("functions_shadowing_gate_run"),
         " ===",
       ]),
       text_combine_multiple([
         "QUIET ON THE SECOND ASK  ",
-        functions_shadowing_gate_run.name,
+        fn_name("functions_shadowing_gate_run"),
         ": it complained while the others were running and had nothing to say when asked on its own",
       ]),
     ],
@@ -58,14 +59,18 @@ export function qa_report_cases() {
   );
   let colon_inside = list_join(
     [
-      text_combine_multiple(["=== ", html_style_literal_gate_run.name, " ==="]),
+      text_combine_multiple([
+        "=== ",
+        fn_name("html_style_literal_gate_run"),
+        " ===",
+      ]),
       text_combine_multiple([
         "GATE FAILED  ",
-        html_style_literal_gate_run.name,
+        fn_name("html_style_literal_gate_run"),
         ': {"list":["',
-        app_g_day_guide_highlight.name,
+        fn_name("app_g_day_guide_highlight"),
         '"],"json":{"hint":"',
-        functions_html_style_literals_migrate.name,
+        fn_name("functions_html_style_literals_migrate"),
         '"}}',
       ]),
     ],
@@ -75,7 +80,10 @@ export function qa_report_cases() {
     {
       label: "every red gate is reported, not only the first",
       output: two_reds,
-      names: [memory_index_size_gate_run.name, function_imports_gate_run.name],
+      names: [
+        fn_name("memory_index_size_gate_run"),
+        fn_name("function_imports_gate_run"),
+      ],
       sections: 2,
       includes: "",
       excludes: "",
@@ -83,21 +91,27 @@ export function qa_report_cases() {
     {
       label: "a count-only complaint still carries the names printed above it",
       output: two_reds,
-      names: [memory_index_size_gate_run.name, function_imports_gate_run.name],
+      names: [
+        fn_name("memory_index_size_gate_run"),
+        fn_name("function_imports_gate_run"),
+      ],
       sections: 2,
       includes: text_combine_multiple([
         "MISSING IMPORT  ",
-        example_command_lambda.name,
+        fn_name("example_command_lambda"),
       ]),
       excludes: "",
     },
     {
       label: "the complaining gate does not name itself as one of the faults",
       output: two_reds,
-      names: [memory_index_size_gate_run.name, function_imports_gate_run.name],
+      names: [
+        fn_name("memory_index_size_gate_run"),
+        fn_name("function_imports_gate_run"),
+      ],
       sections: 2,
       includes: "",
-      excludes: function_imports_gate_run.name,
+      excludes: fn_name("function_imports_gate_run"),
     },
     {
       label: "a gate that was quiet the second time is not a failure",
@@ -110,11 +124,11 @@ export function qa_report_cases() {
     {
       label: "a colon inside the complaint is kept, not cut at the first one",
       output: colon_inside,
-      names: [html_style_literal_gate_run.name],
+      names: [fn_name("html_style_literal_gate_run")],
       sections: 1,
       includes: text_combine_multiple([
         '{"list":["',
-        app_g_day_guide_highlight.name,
+        fn_name("app_g_day_guide_highlight"),
         '"]',
       ]),
       excludes: "",
