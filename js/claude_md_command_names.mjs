@@ -13,7 +13,6 @@ export function claude_md_command_names(text) {
     let name = words[subtract(words.length, 1)];
     return name;
   }
-  let names = matches.map(inner);
-  let unique = [...new Set(names)];
+  let unique = list_map_unique(matches, inner);
   return unique;
 }

@@ -8,7 +8,6 @@ export function memory_pointer_tokens(text) {
     let name = m[1];
     return name;
   }
-  let names = matches.map(inner);
-  let unique = [...new Set(names)];
+  let unique = list_map_unique(matches, inner);
   return unique;
 }
