@@ -1,5 +1,7 @@
+import { process_open_wanted_is } from "./process_open_wanted_is.mjs";
+import { or } from "./or.mjs";
+import { not } from "./not.mjs";
 import { function_path_declaration_unparse } from "./function_path_declaration_unparse.mjs";
-import { file_open_seam_assert } from "./file_open_seam_assert.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { file_open_editor } from "./file_open_editor.mjs";
@@ -12,7 +14,8 @@ export async function file_open(f_path) {
   "The seam marker's own description already promised this: it says it marks the process so that a fn which would launch an editor prints instead. That branch was here the whole time, sitting behind a check that threw before it could run.";
   let wanted = process_open_wanted_is();
   let terminal = await data_terminal_get();
-  let printed = or(terminal, not(wanted));
+  let right = not(wanted);
+  let printed = or(terminal, right);
   if (printed) {
     let ext = function_name_extension();
     let ew = text_ends_with(f_path, ext);
