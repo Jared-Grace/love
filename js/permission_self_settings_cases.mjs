@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { ai_git } from "./ai_git.mjs";
 import { path_join } from "./path_join.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { claude_config_folder } from "./claude_config_folder.mjs";
@@ -68,7 +68,7 @@ export function permission_self_settings_cases() {
     {
       rule: text_combine_multiple([
         "Bash(node scripts/ai.mjs ",
-        ai_git.name,
+        fn_name("ai_git"),
         ":*)",
       ]),
       blocked: false,
