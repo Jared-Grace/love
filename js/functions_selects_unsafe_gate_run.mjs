@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { functions_selects_unsafe_names } from "./functions_selects_unsafe_names.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { functions_selects_unsafe_baseline_write } from "./functions_selects_unsafe_baseline_write.mjs";
 import { selects_unsafe_baseline_path } from "./selects_unsafe_baseline_path.mjs";
 export async function functions_selects_unsafe_gate_run() {
   "Gate: the set of transforms that can be handed a written line of code does not";
@@ -21,7 +21,7 @@ export async function functions_selects_unsafe_gate_run() {
     names,
     path,
     "these transforms can be handed written code through an already approved command and could not before — narrow the parameter to a name",
-    functions_selects_unsafe_baseline_write.name,
+    fn_name("functions_selects_unsafe_baseline_write"),
   );
   let r = {
     watched: names.length,
