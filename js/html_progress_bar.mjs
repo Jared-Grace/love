@@ -41,7 +41,7 @@ export function html_progress_bar(
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
-  let a = add_1(count_progress, 1);
+  let a = add_1(count_progress);
   let combined = text_combine_multiple([
     progress_bar_name,
     " ",
