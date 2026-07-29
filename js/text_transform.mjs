@@ -3,7 +3,6 @@ import { list_map } from "./list_map.mjs";
 import { list_to } from "./list_to.mjs";
 export function text_transform(s, lambda$c) {
   let l = list_to(s);
-  let mapped = list_map(l, lambda$c);
-  let joined = list_join_empty(mapped);
+  let joined = list_map_join_empty(l, lambda$c);
   return joined;
 }
