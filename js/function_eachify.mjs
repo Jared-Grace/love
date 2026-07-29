@@ -1,7 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { function_eachify_transform } from "./function_eachify_transform.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
 export async function function_eachify(f_name) {
   let output = await function_eachify_transform(
     f_name,
@@ -10,7 +9,7 @@ export async function function_eachify(f_name) {
   );
   return output;
   function each_name_get(async_is) {
-    let each_name = async_is ? each_async.name : each.name;
+    let each_name = async_is ? fn_name("each_async") : fn_name("each");
     return each_name;
   }
   function f_name_multiple_get(unaliased) {
