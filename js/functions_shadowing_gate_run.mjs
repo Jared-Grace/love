@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { entries_names_text } from "./entries_names_text.mjs";
-import { functions_shadowing_baseline_write } from "./functions_shadowing_baseline_write.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { functions_shadowing_versus_baseline } from "./functions_shadowing_versus_baseline.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -30,7 +30,7 @@ export async function functions_shadowing_gate_run() {
       "shadowing gate: " +
       stale.length +
       " baseline entries no longer shadow anything — rerun " +
-      functions_shadowing_baseline_write.name +
+      fn_name("functions_shadowing_baseline_write") +
       " to shrink the baseline: " +
       entries_names_text(stale);
     throw new Error(message_stale);
