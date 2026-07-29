@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { functions_shadowing_rename_all } from "./functions_shadowing_rename_all.mjs";
 import { functions_shadowing_operator } from "./functions_shadowing_operator.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -36,7 +36,7 @@ export async function functions_shadowing_operator_gate_run() {
         size +
         text_combine_multiple([
           " functions hide a name the auto pass writes into code, so the next operator written in one of them becomes a call to the local - rename the local with ",
-          functions_shadowing_rename_all.name,
+          fn_name("functions_shadowing_rename_all"),
         ]),
     );
   }
