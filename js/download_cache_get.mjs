@@ -13,8 +13,8 @@ export async function download_cache_get(key) {
     if (missing) {
       return null;
     }
-    let value = property_get(item, "value");
-    return value;
+    let saved = property_get(item, "value");
+    return saved;
   }
   let value = await catch_null_async(get);
   return value;
