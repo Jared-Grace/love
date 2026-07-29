@@ -1,11 +1,9 @@
+import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { functions_duplicates_names } from "./functions_duplicates_names.mjs";
-import { duplicates_baseline_read } from "./duplicates_baseline_read.mjs";
-import { names_versus_baseline } from "./names_versus_baseline.mjs";
-import { property_get } from "./property_get.mjs";
 import { function_replace } from "./function_replace.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { functions_duplicates_baseline_write } from "./functions_duplicates_baseline_write.mjs";
-import { greater_than } from "./greater_than.mjs";
 export async function functions_duplicates_gate_run() {
   "QA gate for one idea arriving twice. Small units written by many hands at once produce this on their own - two people reach for the same small job, neither can see that the other already wrote it, and it lands under two names. Nothing else in the repo can notice, because each half looks perfectly reasonable alone.";
   "Measured against the baseline file rather than against zero, so the rule binds what is written today instead of waiting on a judgment about every pair already here. A name the baseline does not list fails, and a name it lists that no longer has a twin fails too, so the list can only shrink.";
