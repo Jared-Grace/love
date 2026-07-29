@@ -24,8 +24,8 @@ export function js_bound_names(ast) {
       let name = property_get(param, "name");
       return name;
     }
-    let names = list_map(identifiers, name_of);
-    return names;
+    let names_inner = list_map(identifiers, name_of);
+    return names_inner;
   }
   let per_function = list_map(all, params_of);
   let parameters = list_concat_multiple(per_function);
