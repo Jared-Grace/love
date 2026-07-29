@@ -2717,14 +2717,21 @@ def open_twin_advice(command):
     """An extra sentence when the dispatcher function ends in `_open` and a
     function of the same name without that suffix exists; else empty text.
 
-    Advice only, never a decision, and that is the point. A `_open` suffix
-    usually means "and then show it to the human in an editor", which is
-    meaningless from this seam - `file_open` refuses it at run time. The
-    grant the message above suggests is then UNCONSTRUCTIBLE:
-    permission_grant_refusals turns it down by name, and
-    permission_editor_open_gate_run would fail the build on the rule. So
-    following the advice costs a human prompt that ends in a refusal, which
-    is the one outcome worth spending a sentence to avoid.
+    Advice only, never a decision, and that is the point. The reason is
+    narrower than it first looks, and the first version of this note got it
+    wrong: it said the seam REFUSES to open an editor, so the call fails
+    either way. `file_open` used to throw exactly so - it no longer does. It
+    prints the file instead when this invocation did not want an editor,
+    because the throw came after the work had already been done and advised
+    calling a twin that some twenty openers do not have, so what Claude saw
+    was a failure for a rename that had in fact landed.
+
+    What survives, and is the whole reason for the sentence: the grant the
+    message above suggests is UNCONSTRUCTIBLE for a `_open` name.
+    permission_grant_refusals turns it down by name and
+    permission_editor_open_gate_run would fail the build on the rule. So the
+    advice sends Claude to spend a human prompt and reach a refusal, where
+    naming the twin costs one approval that never has to be given again.
 
     Kept as advice because "ends in _open" is not the same question as "opens
     an editor" - of the names carrying that suffix, most are ordinary domain
@@ -2748,12 +2755,12 @@ def open_twin_advice(command):
             if live_names and twin in live_names:
                 return (
                     f"\nNOTE: `{words[2]}` ends in `_open`. If it is the "
-                    f"showing-in-an-editor twin of `{twin}`, call `{twin}` "
-                    "instead - this seam refuses to open an editor, so the "
-                    "call fails either way, and the grant suggested above "
-                    "cannot be written for it (permission_grant_refusals "
-                    "turns it down and the editor-open gate would fail on "
-                    "the rule)."
+                    f"showing-in-an-editor twin of `{twin}`, prefer `{twin}` "
+                    "- the grant suggested above cannot be written for a "
+                    "name ending that way (permission_grant_refusals turns "
+                    "it down and the editor-open gate would fail on the "
+                    "rule), so approving it here is a one-off every time, "
+                    "while the twin can be granted once."
                 )
     return ""
 
