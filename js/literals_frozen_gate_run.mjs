@@ -1,16 +1,15 @@
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { literals_frozen_record_new } from "./literals_frozen_record_new.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { literals_frozen_write } from "./literals_frozen_write.mjs";
 import { list_concat_unique } from "./list_concat_unique.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -84,7 +83,7 @@ export async function literals_frozen_gate_run() {
   list_empty_is_assert_json(moved, {
     hint: text_combine_multiple([
       "a frozen value is not what the record says - if the change was meant, write the record again with ",
-      literals_frozen_write.name,
+      fn_name("literals_frozen_write"),
       " so it stands in the commit; if it was not, put the old value back",
     ]),
     moved,
@@ -92,7 +91,7 @@ export async function literals_frozen_gate_run() {
   list_empty_is_assert_json(fresh, {
     hint: text_combine_multiple([
       "a frozen constant the record has never held - nothing has moved, so record it with ",
-      literals_frozen_record_new.name,
+      fn_name("literals_frozen_record_new"),
       " which only ever adds a name the record is missing and cannot touch a value it already holds",
     ]),
     fresh,
@@ -100,7 +99,7 @@ export async function literals_frozen_gate_run() {
   list_empty_is_assert_json(gone, {
     hint: text_combine_multiple([
       "a frozen constant the code no longer has, whose value arrived under another name in the same breath - a rename, so nothing published has changed. Clear the old name with ",
-      literals_frozen_record_new.name,
+      fn_name("literals_frozen_record_new"),
       " which drops it only because that value is being recorded under its new name",
     ]),
     gone,
