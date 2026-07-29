@@ -380,6 +380,7 @@ export function permission_grant_names() {
   let spelled377 = fn_name("function_calls_callee_set");
   let spelled378 = fn_name("functions_calls_callee_set");
   let spelled379 = fn_name("apps_reachable_unguarded_steps");
+  let spelled380 = fn_name("function_imports");
   let names = [
     spelled,
     spelled2,
@@ -760,6 +761,7 @@ export function permission_grant_names() {
     spelled377,
     spelled378,
     spelled379,
+    spelled380,
   ];
   return names;
 }
