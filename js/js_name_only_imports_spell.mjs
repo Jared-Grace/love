@@ -27,6 +27,13 @@ export function js_name_only_imports_spell(ast) {
   ("this cannot take away an import something still calls. The now-unread import is");
   ("left standing here and swept up by the pass that removes imports nothing reads,");
   ("which is the one place that job belongs.");
+  ("There is an older neighbour that spells names too, and the difference between");
+  ("them is the whole reason both are here. That one spells every name in the file,");
+  ("including ones the file also calls - which is right when the file is being made");
+  ("small by hand, because the caller has looked and decided. It is wrong to run");
+  ("over the whole repo, because where a name is also called the import stays");
+  ("regardless, so spelling it takes away the click-through and removes no road at");
+  ("all. This one is the sweeping half and so declines exactly those.");
   let only = js_name_only_imports(ast);
   function each_item(v) {
     let node = property_get(v, "node");
