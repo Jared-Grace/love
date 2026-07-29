@@ -8,7 +8,6 @@ import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.m
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -19,6 +18,7 @@ export async function permission_grant_refusals_context(unaliased, context) {
   "the shared answers arrive already worked out, so asking this about every standing grant in turn costs one pass over the repo instead of one pass per name";
   let live_names = property_get(context, "live");
   let denied = property_get(context, "denied");
+  let openers = property_get(context, "openers");
   let remembered = property_get(context, "remembered");
   let refusals = [];
   let live = list_includes(live_names, unaliased);
@@ -38,12 +38,14 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " is on the guard's deny floor, which runs before the allow decision, so the rule would buy nothing but a guaranteed refusal",
     );
   }
-  let opens = text_ends_with(unaliased, "_open");
+  ("Membership is read off the call graph rather than off the ending of the name, because the ending is wrong in both directions. It says yes to a book emoji and a bracket, which open nothing and were refused on a reason that was simply untrue of them; and it says nothing about the two openers that do not carry it, so the one tool standing before a rule is written stayed quiet about a function whose rule the gate would then go red over. Both come from the same source now.");
+  ("The reason itself is about the environment, not about the seam. It used to say the showing is meaningless here, which was true only while reaching an opener from this seam threw; it prints instead now, so a rule on one would work. What is left is that whether the window appears is read from the environment rather than from the arguments, and a standing rule covers every invocation without being able to say which answer it is approving - which is the same bar this repo already sets for granting at all.");
+  let opens = list_includes(openers, unaliased);
   if (opens) {
     list_add(
       refusals,
       unaliased +
-        " opens an editor, which is meaningless from this seam — grant the twin without the suffix instead",
+        " puts a window on the human's screen, and whether it does is read from the environment rather than from its arguments, so one rule approves both answers — grant a function that does the same work without the showing",
     );
   }
   let params = await function_params_get(unaliased);
