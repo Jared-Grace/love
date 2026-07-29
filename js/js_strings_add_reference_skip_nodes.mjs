@@ -1,4 +1,3 @@
-import { text_frozen } from "./text_frozen.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_named_argument_nodes } from "./js_call_named_argument_nodes.mjs";
 import { js_import_source_nodes } from "./js_import_source_nodes.mjs";
@@ -21,7 +20,7 @@ export function js_strings_add_reference_skip_nodes(ast) {
     f_name7,
     f_name8,
     fn_name.name,
-    text_frozen.name,
+    fn_name("text_frozen"),
   ];
   function lambda2(la) {
     function lambda(f_name) {
