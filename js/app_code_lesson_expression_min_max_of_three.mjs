@@ -1,3 +1,4 @@
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -83,7 +84,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     next_arg,
     example_count: 2,
     decoys,
-    forwards_question_label: "Value of: ",
+    forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: "value: ",
     backwards_question_label: "value: ",
     backwards_answer_label: "What code gives this value? ",
