@@ -1,7 +1,6 @@
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { list_reverse } from "./list_reverse.mjs";
 import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
@@ -41,7 +40,6 @@ export function permission_prompt_events_grouped_by(events, key) {
     let n = row.count;
     return n;
   }
-  list_sort_number_mapper(rows, by_count);
-  list_reverse(rows);
-  return rows;
+  let ranked = list_sort_number_mapper_reverse(rows, by_count);
+  return ranked;
 }
