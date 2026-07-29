@@ -371,6 +371,7 @@ export function permission_grant_names() {
   let spelled368 = fn_name("app_g_view_phase_conversation");
   let spelled369 = fn_name("functions_arity_mismatches");
   let spelled370 = fn_name("functions_arity_gate_run");
+  let spelled371 = fn_name("functions_arity_baseline_write");
   let names = [
     spelled,
     spelled2,
@@ -742,6 +743,7 @@ export function permission_grant_names() {
     spelled368,
     spelled369,
     spelled370,
+    spelled371,
   ];
   return names;
 }
