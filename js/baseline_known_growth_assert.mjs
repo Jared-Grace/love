@@ -1,10 +1,6 @@
+import { baseline_growth_assert_generic } from "./baseline_growth_assert_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { baseline_known_read } from "./baseline_known_read.mjs";
 import { names_versus_baseline } from "./names_versus_baseline.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { not } from "./not.mjs";
 export async function baseline_known_growth_assert(known, path, hint) {
   arguments_assert(arguments, 3);
   ("Refuse to record a name a ratchet file did not already hold.");
@@ -16,16 +12,12 @@ export async function baseline_known_growth_assert(known, path, hint) {
   ("The reading half of this was already shared. This is its twin, and it takes the");
   ("path and the sentence to say because those are the only two things that differ");
   ("between one ratchet and the next.");
-  let exists = await file_exists(path);
-  let first = not(exists);
-  if (first) {
-    return;
-  }
-  let recorded = await baseline_known_read(path);
-  let change = names_versus_baseline(known, recorded);
-  let added = property_get(change, "added");
-  list_empty_is_assert_json(added, {
+  ("This is the plain-names case: a baseline holding a flat list of offending names,");
+  ("compared with a flat difference.");
+  await baseline_growth_assert_generic(
+    known,
+    path,
+    names_versus_baseline,
     hint,
-    added,
-  });
+  );
 }
