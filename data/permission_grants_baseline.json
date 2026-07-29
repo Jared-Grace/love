@@ -17,19 +17,11 @@
    "refusals": 2
   },
   {
-   "name": "app_code_reload_persists_test",
-   "refusals": 1
-  },
-  {
    "name": "firebase_prod_asset_url",
    "refusals": 1
   },
   {
    "name": "js_top_level_broken_comments_from_code",
-   "refusals": 1
-  },
-  {
-   "name": "qa_commit_gate_run_at",
    "refusals": 1
   },
   {
