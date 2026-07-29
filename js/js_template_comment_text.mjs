@@ -26,7 +26,7 @@ export function js_template_comment_text(template) {
     let expression = expressions[index];
     let callee = property_get(expression, "callee");
     let name = property_get(callee, "name");
-    let wrapper_is = equal(name, fn_name.name);
+    let wrapper_is = equal(name, fn_name("fn_name"));
     if (wrapper_is) {
       let args = property_get(expression, "arguments");
       let first = args[0];
