@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { statements_after_return_baseline_path } from "./statements_after_return_baseline_path.mjs";
 import { functions_statements_after_return } from "./functions_statements_after_return.mjs";
-import { functions_statements_after_return_baseline_write } from "./functions_statements_after_return_baseline_write.mjs";
 export async function functions_statements_after_return_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: a function may not newly carry work below the line that already left it.");
@@ -20,7 +20,7 @@ export async function functions_statements_after_return_gate_run() {
     offenders,
     path,
     "these functions carry statements below a return - delete the dead lines, or move them above the return if they were meant to run",
-    functions_statements_after_return_baseline_write.name,
+    fn_name("functions_statements_after_return_baseline_write"),
   );
   return r;
 }
