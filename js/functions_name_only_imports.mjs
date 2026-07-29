@@ -20,8 +20,8 @@ export async function functions_name_only_imports() {
     let f_path = property_get(paths, f_name);
     async function read() {
       let code = await file_read(f_path);
-      let names = js_code_name_only_imports(code);
-      return names;
+      let names_inner = js_code_name_only_imports(code);
+      return names_inner;
     }
     ("A file that will not parse is not an answer to this question and must not be");
     ("allowed to become one. It is skipped rather than counted, because a torn or");
