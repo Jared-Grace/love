@@ -1,4 +1,4 @@
-import { lambda_background } from "./lambda_background.mjs";
+import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { download_cache_get } from "./download_cache_get.mjs";
 import { download_cache_key } from "./download_cache_key.mjs";
 import { download_cache_put } from "./download_cache_put.mjs";
@@ -23,7 +23,7 @@ export async function firebase_storage_download_json_decompress_cache(
   }
   if (held) {
     ("nothing waits on this: the reader has their copy, and being offline must read as success rather than as an error nobody asked for");
-    lambda_background(fetch_and_save);
+    promise_later_catch_ignore(fetch_and_save);
     return cached;
   }
   let o = await fetch_and_save();
