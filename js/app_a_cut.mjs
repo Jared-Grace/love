@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { app_a_paste } from "./app_a_paste.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { js_block_find } from "./js_block_find.mjs";
 import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
@@ -18,7 +18,7 @@ export function app_a_cut(o, a) {
       let f = js_block_find(stack);
       let item = property_get(f, "item");
       let context = property_get(a, "context");
-      storage_local_set_context(context, app_a_paste.name, item);
+      storage_local_set_context(context, fn_name("app_a_paste"), item);
       let body = property_get(f, "body");
       list_remove(body, item);
     },
