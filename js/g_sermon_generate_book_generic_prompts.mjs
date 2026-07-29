@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { openai_chat_completions } from "./openai_chat_completions.mjs";
@@ -10,7 +11,6 @@ import { list_new_multiple } from "./list_new_multiple.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { list_nearby } from "./list_nearby.mjs";
@@ -117,7 +117,7 @@ export async function g_sermon_generate_book_generic_prompts(
     }
     function filter_group(group) {
       let item = property_get(group, "item");
-      let match_chapter = property_exists(item, "chapter_code", chapter_code);
+      let match_chapter = property_equals(item, "chapter_code", chapter_code);
       return match_chapter;
     }
     let groups_match_chapter = list_filter(nearbys, filter_group);
