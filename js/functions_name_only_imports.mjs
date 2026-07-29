@@ -1,3 +1,7 @@
+import { list_add } from "./list_add.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { equal } from "./equal.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { js_code_name_only_imports } from "./js_code_name_only_imports.mjs";
 import { file_read } from "./file_read.mjs";
@@ -11,6 +15,7 @@ export async function functions_name_only_imports() {
   "Each one is a road nothing travels: the import is real, so everything the named function reaches counts as reachable from here, while the code never calls it. One line of prose written this way put an entire download chain inside a game screen's reach and turned a gate red for everybody";
   let paths = await functions_names_to_paths();
   let f_names = Object.keys(paths);
+  let unreadable = [];
   async function measure(f_name) {
     let f_path = property_get(paths, f_name);
     async function read() {
@@ -42,7 +47,9 @@ export async function functions_name_only_imports() {
   let any_unread = greater_than(unread, 0);
   if (any_unread) {
     let joined = list_join_comma(unreadable);
-    console.log("UNREADABLE  " + unread + " of " + f_names.length + "  " + joined);
+    console.log(
+      "UNREADABLE  " + unread + " of " + f_names.length + "  " + joined,
+    );
   }
   function any_lambda(m) {
     let names = property_get(m, "names");
