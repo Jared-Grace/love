@@ -331,7 +331,7 @@ export async function app_g_verify_view(
     if (native_sizing) {
       return;
     }
-    "suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly";
+    ("suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly");
     let element = html_component_element_get(suggest_area);
     html_style_set(suggest_area, "height", "auto");
     let content = element.scrollHeight;
