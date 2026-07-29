@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_flo_body_add_return } from "./js_flo_body_add_return.mjs";
-import { js_auto_transforms } from "./js_auto_transforms.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +18,7 @@ export async function js_auto_transform_new_inner(f_name_unprefixed) {
     await js_imports_missing_add_all(ast);
   }
   let code = await function_transform_marker_specified(
-    js_auto_transforms.name,
+    fn_name("js_auto_transforms"),
     "transforms",
     lambda,
   );
