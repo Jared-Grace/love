@@ -1,5 +1,5 @@
 import { each_object_unordered_async } from "./each_object_unordered_async.mjs";
-export async function each_object_values_generic_async(
+export async function object_values_map_generic_async(
   object,
   lambda$value$key,
   oad,
