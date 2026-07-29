@@ -33,9 +33,9 @@ export async function js_function_last_asyncify(
       let properties = properties_get(result);
       let difference = list_difference(properties, visited);
       async function lambda(f_name) {
-        async function lambda2(ast) {
+        async function lambda2(ast_inner) {
           list_add(visited, f_name);
-          let v = await js_await_add_inner(functions, ast, visited);
+          let v = await js_await_add_inner(functions, ast_inner, visited);
           return v;
         }
         let output = await function_transform(f_name, lambda2);
