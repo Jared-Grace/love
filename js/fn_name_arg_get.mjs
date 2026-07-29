@@ -7,7 +7,7 @@ export function fn_name_arg_get(args, f_name) {
   function lambda() {
     let v = {
       msg: text_combine_multiple([
-        fn_name.name,
+        fn_name("fn_name"),
         " first argument should be a literal: ",
         f_name,
       ]),
