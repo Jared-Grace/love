@@ -1,76 +1,22 @@
-import { html_document_body } from "./html_document_body.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_p_text } from "./html_p_text.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { html_button } from "./html_button.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
-import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
-import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
-import { property_set } from "./property_set.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function app_g_day_conversation_demo(div_map) {
-  "the #day_conversation test panel: a stub conversation of 12 HALF-TURNS whose each advance walks the sky one 2-hour step across a full day (midnight → sunrise → noon → sunset → back to midnight), so you can watch the light change PER HALF-TURN — including the fast-dark + long dark plateau of the reshaped night (g_clock_sky_phase). sibling of #day_unbelievers under the 'day' group; proves the conversation→time half-turn mechanic that the real conversation will drive. BESPOKE (DOM / closure) — do NOT auto-canonicalize";
-  let total = 12;
-  let turn = {
-    n: 0,
+import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
+import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
+import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
+import { app_g_view_set } from "./app_g_view_set.mjs";
+import { property_get } from "./property_get.mjs";
+export async function app_g_day_conversation_demo() {
+  "the #day_conversation route: open a REAL unbeliever conversation (not a stub stepper), so you actually go THROUGH a conversation and watch the working day age. its per-turn sky drift now rides the clock-anchored day 6 AM sunrise → 7 PM dusk (app_g_conversation on_correct → g_day_sky_phase), so each answered turn steps the light a little further into evening. picks any unconverted npc and hands it to the same view path the tapped-npc game uses";
+  let npcs = await app_g_npcs_get();
+  let unconverted = list_filter_object_includes(npcs, {
+    christian: false,
+  });
+  let npc = list_random_item(unconverted);
+  let view = {
+    kind: app_g_view_kind_npc(),
+    x: property_get(npc, "x"),
+    y: property_get(npc, "y"),
+    phase: app_g_view_phase_conversation(),
   };
-  let body = html_document_body();
-  let panel = html_div(body);
-  html_style_assign(panel, {
-    position: "fixed",
-    bottom: "0",
-    left: "0",
-    width: "100vw",
-    "box-sizing": "border-box",
-    padding: "0.75rem",
-    background: "rgba(0, 0, 0, 0.75)",
-    color: "white",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    gap: "0.5rem",
-    "z-index": "2000",
-  });
-  let label = html_p_text(panel, "");
-  html_style_assign(label, {
-    margin: "0",
-    "font-size": "1.15rem",
-  });
-  async function refresh() {
-    let hour = turn.n / total * 24;
-    let text = text_combine_multiple([
-      "Half-turn ",
-      turn.n,
-      " / ",
-      total,
-      "  —  ",
-      hour,
-      ":00",
-    ]);
-    html_text_set(label, text);
-    let phase = g_clock_sky_phase(hour);
-    let g = await app_g_game_save_get();
-    property_set(g, "sky_phase", phase);
-    await app_g_sky_snap();
-  }
-  async function next() {
-    turn.n = turn.n + 1;
-    if (turn.n > total) {
-      turn.n = 0;
-    }
-    await refresh();
-  }
-  let button = html_button(panel, "Next half-turn ›", next);
-  html_style_assign(button, {
-    background: "white",
-    color: "black",
-    border: "none",
-    padding: "0.6rem 1.4rem",
-    "border-radius": "0.5rem",
-    "font-size": "1.2rem",
-    "font-weight": "bold",
-    cursor: "pointer",
-  });
-  await refresh();
+  await app_g_view_set(view);
 }
