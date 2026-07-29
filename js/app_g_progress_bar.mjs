@@ -1,4 +1,4 @@
-import { html_progress_bar } from "./html_progress_bar.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_g_progress_caption_font_size } from "./app_g_progress_caption_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -18,7 +18,7 @@ export function app_g_progress_bar(root, count, total, name) {
     ") on a pale-green track (",
     app_shared_color_green_light.name,
     "), rounded, with a small '<Name> N out of M' caption — shown above study / sermon. mirrors ",
-    html_progress_bar.name,
+    fn_name("html_progress_bar"),
     "'s structure but with g's greens (that shared bar is used by 3 other apps with their own colors, so this is kept g-local rather than reworking the shared signature)");
   let container = html_div(root);
   let track = html_div(container);
