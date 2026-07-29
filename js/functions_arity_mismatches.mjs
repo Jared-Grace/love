@@ -1,8 +1,8 @@
+import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
 import { not } from "./not.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_calls_imported_sizes } from "./js_calls_imported_sizes.mjs";
-import { js_flo_params_get } from "./js_flo_params_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
@@ -22,7 +22,7 @@ export async function functions_arity_mismatches() {
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
     let declaration = property_get(parsed, "declaration");
-    let params = js_flo_params_get(declaration);
+    let params = js_function_declaration_params_get(declaration);
     let value = list_size(params);
     property_set(declared, name, value);
     let ast = property_get(parsed, "ast");
