@@ -7,8 +7,8 @@ export async function app_a_functionize(a, f_name_new) {
   let a_first = property_get(context, app_a_functionize.name);
   function lambda(ai) {
     let node = property_get(ai, "node");
-    let ast = property_get(ai, "ast");
-    let v_match = js_node_to_visitor(ast, node);
+    let ast_inner = property_get(ai, "ast");
+    let v_match = js_node_to_visitor(ast_inner, node);
     let stack = property_get(v_match, "stack");
     let f = js_block_find(stack);
     return f;
