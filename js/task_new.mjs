@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_not_is_assert_json } from "./text_empty_not_is_assert_json.mjs";
@@ -10,7 +11,6 @@ import { js_call_statement_insert } from "./js_call_statement_insert.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new_open } from "./function_new_open.mjs";
 import { function_current_get } from "./function_current_get.mjs";
-import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   arguments_assert(arguments, 1);
   text_empty_not_is_assert_json(task_name, {
@@ -31,7 +31,7 @@ export async function task_new(task_name) {
   }
   async function lambda(ast) {
     let body_block = js_flo_body(ast);
-    js_call_statement_insert(todo.name, [], body_block, 0);
+    js_call_statement_insert(fn_name("todo"), [], body_block, 0);
   }
   let result = await function_transform(f_name_task, lambda);
 }
