@@ -360,6 +360,7 @@ export function permission_grant_names() {
   let spelled357 = fn_name("argument_alias_words");
   let spelled358 = fn_name("process_open_wanted_is");
   let spelled359 = fn_name("functions_facts_cache_delete");
+  let spelled360 = fn_name("functions_facts_cache_path");
   let names = [
     spelled,
     spelled2,
@@ -720,6 +721,7 @@ export function permission_grant_names() {
     spelled357,
     spelled358,
     spelled359,
+    spelled360,
   ];
   return names;
 }
