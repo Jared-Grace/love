@@ -15,7 +15,6 @@ export function memory_fn_reference_tokens(text) {
     let inside = m.slice(prefix);
     return inside;
   }
-  let names = matches.map(inside_get);
-  let unique = [...new Set(names)];
+  let unique = list_map_unique(matches, inside_get);
   return unique;
 }
