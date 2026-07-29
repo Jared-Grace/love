@@ -6,6 +6,8 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_string_concat_shape } from "./app_code_string_concat_shape.mjs";
+import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
