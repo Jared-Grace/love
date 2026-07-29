@@ -750,13 +750,6 @@
    "shadows_function": []
   },
   {
-   "name": "retry",
-   "shadows_outer": [
-    "wait"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "roman_to_integer",
    "shadows_outer": [
     "input"
