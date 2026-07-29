@@ -20,7 +20,8 @@ export async function functions_while_frozen() {
   async function measure(f_name) {
     let f_path = property_get(paths, f_name);
     async function read() {
-      let frozen_inner = js_code_while_frozen_conditions(await file_read(f_path));
+      let code = await file_read(f_path);
+      let frozen_inner = js_code_while_frozen_conditions(code);
       return frozen_inner;
     }
     ("A file that will not parse is not an answer to this question and must not be");
