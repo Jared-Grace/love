@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { app_shared_imports_baseline_write } from "./app_shared_imports_baseline_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_app_specific_imports } from "./app_shared_app_specific_imports.mjs";
 import { app_shared_imports_baseline_path } from "./app_shared_imports_baseline_path.mjs";
@@ -27,7 +27,7 @@ export async function app_shared_imports_gate_run() {
     offenders,
     path,
     "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
-    app_shared_imports_baseline_write.name,
+    fn_name("app_shared_imports_baseline_write"),
   );
   let r = {
     checked: list_size(offenders),
