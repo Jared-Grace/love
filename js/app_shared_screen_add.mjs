@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_shared_screen_add_generic } from "./app_shared_screen_add_generic.mjs";
-import { html_clear_context } from "./html_clear_context.mjs";
 import { js_flo_body_add } from "./js_flo_body_add.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
@@ -21,7 +21,7 @@ export async function app_shared_screen_add(a_name, screen_name) {
     let v = "context";
     await function_param_new_double(combined_screen, v);
     async function lambda2(ast) {
-      let code = js_code_call_args(html_clear_context.name, [v]);
+      let code = js_code_call_args(fn_name("html_clear_context"), [v]);
       let code_assign = js_code_let_assign("root", code);
       let statement = js_parse_statement(code_assign);
       js_flo_body_add(ast, statement);
