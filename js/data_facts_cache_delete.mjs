@@ -1,4 +1,4 @@
-import { data_facts_cache_path } from "./data_facts_cache_path.mjs";
+import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
 export async function data_facts_cache_delete() {
@@ -16,7 +16,7 @@ export async function data_facts_cache_delete() {
   "It says whether there was anything to throw away, because a cache that was";
   "already absent and one just cleared look identical afterwards - and a cold";
   "measurement taken in the belief it was warm is worse than no measurement.";
-  let path = data_facts_cache_path();
+  let path = functions_facts_cache_path();
   let held = await file_exists(path);
   await file_delete_if_exists(path);
   let r = {
