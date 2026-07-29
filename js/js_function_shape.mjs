@@ -30,30 +30,7 @@ export function js_function_shape(declaration) {
   let doing = js_function_declaration_statements_doing(declaration);
   let working = list_filter(doing, js_function_marker_call_not_is);
   property_set(block, "body", working);
-  let keys = js_member_key_nodes(declaration);
-  let blanks = {};
-  let taken = [];
-  function blanked(node) {
-    let key_is = list_includes(keys, node);
-    if (key_is) {
-      return;
-    }
-    let name = property_get_name(node);
-    let personal_is = list_includes(personal, name);
-    if (personal_is) {
-      let known = property_exists(blanks, name);
-      if (known) {
-        let already = property_get(blanks, name);
-        property_set(node, "name", already);
-        return;
-      }
-      let blank = "_" + taken.length;
-      list_add(taken, name);
-      blanks[name] = blank;
-      property_set(node, "name", blank);
-    }
-  }
-  js_visit_identifiers_nodes(declaration, blanked);
+  js_names_blank(declaration, personal);
   let shape = js_unparse(declaration);
   return shape;
 }
