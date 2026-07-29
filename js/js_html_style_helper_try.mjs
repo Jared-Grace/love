@@ -1,10 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_function_declaration_statements_doing } from "./js_function_declaration_statements_doing.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -34,7 +34,7 @@ export function js_html_style_helper_try(declaration) {
   }
   let call = property_get(statement, "expression");
   let callee = js_call_callee_name_try(call);
-  let sets = equal(callee, html_style_set.name);
+  let sets = equal(callee, fn_name("html_style_set"));
   if (!sets) {
     return null;
   }
