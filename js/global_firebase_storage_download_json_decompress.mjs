@@ -6,9 +6,10 @@ export async function global_firebase_storage_download_json_decompress(
   property_name,
   project_url,
 ) {
+  ("two layers, and each answers a question the other cannot. this one remembers within a visit, so asking twice costs nothing at all; the one it calls remembers across visits, so arriving fresh costs no round trip either");
   async function get() {
     let destination = destination_get(property_name);
-    let o = await firebase_storage_download_json_decompress(
+    let o = await firebase_storage_download_json_decompress_cache(
       project_url,
       destination,
     );
