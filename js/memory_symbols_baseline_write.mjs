@@ -1,7 +1,6 @@
+import { baseline_known_write } from "./baseline_known_write.mjs";
 import { memory_symbols_baseline_path } from "./memory_symbols_baseline_path.mjs";
 import { memory_symbol_references_judged } from "./memory_symbol_references_judged.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 export async function memory_symbols_baseline_write() {
   "Rewrite the baseline from what memory carries right now. For seeding it once, for shrinking it after a name has been fixed, and - unlike the shadowing ratchet next door - for recording a new name that turns out to be innocent.";
