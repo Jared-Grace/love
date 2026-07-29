@@ -1,3 +1,16 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_parse } from "./js_parse.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_literal_value_get } from "./js_literal_value_get.mjs";
+import { js_stack_node_above } from "./js_stack_node_above.mjs";
+import { js_node_type } from "./js_node_type.mjs";
+import { list_add } from "./list_add.mjs";
+import { js_string_site_key_is } from "./js_string_site_key_is.mjs";
+import { js_visit_types } from "./js_visit_types.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 export function js_code_literal_key_only(code, literal) {
   arguments_assert(arguments, 2);
   ("Whether every place a file writes a given word, outside its own account of");
@@ -35,8 +48,11 @@ export function js_code_literal_key_only(code, literal) {
     }
   }
   js_visit_types(ast, ["Literal"], lambda);
-  let any = greater_than(list_size(sites), 0);
-  let all_named = equal(list_size(sites), list_size(named));
+  let a = list_size(sites);
+  let any = greater_than(a, 0);
+  let left = list_size(sites);
+  let right = list_size(named);
+  let all_named = equal(left, right);
   let key_only = any && all_named;
   return key_only;
 }
