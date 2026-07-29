@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_only_imports } from "./js_name_only_imports.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
@@ -8,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { text_quote_double } from "./text_quote_double.mjs";
+import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_name_only_imports_spell(ast) {
@@ -49,8 +50,9 @@ export function js_name_only_imports_spell(ast) {
     if (not(spelling_is)) {
       return;
     }
-    let quoted = text_quote_double(mentioned);
-    let call_code = js_code_call_args("fn_name", [quoted]);
+    let quoted = text_pad_space_quote_double(mentioned);
+    let spelled_f_name = fn_name("fn_name");
+    let call_code = js_code_call_args(spelled_f_name, [quoted]);
     let call = js_parse_expression(call_code);
     object_replace(node, call);
   }
