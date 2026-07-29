@@ -90,7 +90,7 @@ export function app_code_lesson_expression_whole_part_both() {
   function quizzes_get(question, answer) {
     "two quiz kinds: forwards (given the division, choose its whole part value) then backwards (given a whole part value, choose which division has it - the other batch divisions are the distractors, so no tailored decoys are needed)";
     let forwards = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "What is the whole part? ",
       answer_on_button: noop,

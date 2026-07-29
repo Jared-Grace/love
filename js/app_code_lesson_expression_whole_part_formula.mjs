@@ -62,7 +62,7 @@ export function app_code_lesson_expression_whole_part_formula() {
   function quizzes_get(question, answer) {
     "two quiz kinds: first RECOGNISE the whole-part formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens - recognise before produce";
     let recognize = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Which is the whole part formula? ",
       answer_on_button: html_text_set_code_dark,
@@ -72,7 +72,7 @@ export function app_code_lesson_expression_whole_part_formula() {
       decoys: recognize_decoys,
     };
     let build = {
-      question_label: "Division: ",
+      question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
       answer_label: "Build the whole part formula: ",
       answer_on_button: null,
