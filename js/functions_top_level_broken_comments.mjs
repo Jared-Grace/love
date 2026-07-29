@@ -23,7 +23,9 @@ export async function functions_top_level_broken_comments() {
     }
     return null;
   }
-  let mapped = await list_map_unordered_async(names, offender_of);
-  let offenders = list_filter_null_not_is(mapped);
+  let offenders = await list_map_unordered_async_filter_null_not_is(
+    names,
+    offender_of,
+  );
   return offenders;
 }

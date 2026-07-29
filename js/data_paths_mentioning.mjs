@@ -14,7 +14,9 @@ export async function data_paths_mentioning(name) {
     }
     return null;
   }
-  let mapped = await list_map_unordered_async(paths, to_path_or_null);
-  let filtered = list_filter_null_not_is(mapped);
+  let filtered = await list_map_unordered_async_filter_null_not_is(
+    paths,
+    to_path_or_null,
+  );
   return filtered;
 }
