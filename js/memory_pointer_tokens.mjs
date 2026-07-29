@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 export function memory_pointer_tokens(text) {
   "Extract every index pointer target in text - the markdown-link file name written between ']( ' and ')' - de-duplicated. Empty list when nothing matches.";
   "An anchor is dropped: a pointer aimed at one heading inside an entry still names the same file, and the file is what has to exist.";
