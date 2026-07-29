@@ -26,11 +26,10 @@ import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
 import { app_g_sky_to } from "./app_g_sky_to.mjs";
-import { g_time_index } from "./g_time_index.mjs";
+import { g_day_sky_phase } from "./g_day_sky_phase.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -184,8 +183,7 @@ export async function app_g_conversation(
       let completed = subtract(left3, right);
       let bottom = list_size(turns);
       let fraction = divide(completed, bottom);
-      let right2 = g_time_index("night");
-      let target = multiply(fraction, right2);
+      let target = g_day_sky_phase(fraction);
       await app_g_sky_to(target);
       render();
     }
