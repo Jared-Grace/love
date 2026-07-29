@@ -14,12 +14,12 @@ export async function firebase_storage_download_json_decompress_cache(
   let cached = await download_cache_get(key);
   let held = null_not_is(cached);
   async function fetch_and_save() {
-    let o = await firebase_storage_download_json_decompress(
+    let fetched = await firebase_storage_download_json_decompress(
       project_url,
       destination,
     );
-    await download_cache_put(key, o);
-    return o;
+    await download_cache_put(key, fetched);
+    return fetched;
   }
   if (held) {
     ("nothing waits on this: the reader has their copy, and being offline must read as success rather than as an error nobody asked for");

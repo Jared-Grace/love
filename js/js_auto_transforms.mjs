@@ -48,5 +48,4 @@ export function js_auto_transforms() {
     js_imports_fix,
   ];
   return transforms;
-  return;
 }

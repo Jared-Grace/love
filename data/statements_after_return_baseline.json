@@ -1,6 +1,5 @@
 {
  "known": [
-  "app_code_lesson_identifiers_valid",
   "app_replace_rule_set_verify",
   "app_sandbox",
   "command_line_generic",
@@ -14,11 +13,9 @@
   "g_sermon_generate",
   "html_hash_set",
   "indexeddb_exists",
-  "js_auto_transforms",
   "js_expand_generic",
   "js_ternary_replace",
   "messenger_reply",
-  "reply_on_match_output_code",
   "sandbox_4",
   "sandbox"
  ]

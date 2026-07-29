@@ -10,10 +10,10 @@ export async function indexeddb_database_open(name, store) {
       let version = 1;
       let request = indexedDB.open(name, version);
       request.onupgradeneeded = function lambda2() {
-        let db = request.result;
-        let has = db.objectStoreNames.contains(store);
+        let upgrading = request.result;
+        let has = upgrading.objectStoreNames.contains(store);
         if (not(has)) {
-          db.createObjectStore(store, {
+          upgrading.createObjectStore(store, {
             keyPath: "key",
           });
         }
