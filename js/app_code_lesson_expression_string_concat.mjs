@@ -95,8 +95,13 @@ export function app_code_lesson_expression_string_concat() {
     let code_b = app_code_string_code(b);
     let join_code = text_combine_multiple([code_a, " + ", code_b]);
     let joined_value = text_combine_multiple([a, b]);
-    let joined_code = app_code_string_code(joined_value);
     let color = app_code_string_value_color();
+    let on_light = app_code_string_value_color_on_light();
+    function value_word(host) {
+      "the word value, coloured for the light container background, so the word points at the blue value it names";
+      let word = html_span_text(host, "value");
+      html_font_color_set(word, on_light);
+    }
     let concept = app_code_container_light_blue(root);
     let seen_line = html_div(concept);
     html_span_text(seen_line, "You've seen that ");
@@ -113,18 +118,26 @@ export function app_code_lesson_expression_string_concat() {
     html_span_text_code_dark(looks_line, join_code);
     let derive = app_code_container_light_blue(root);
     let same_line = html_div(derive);
-    html_span_text(same_line, "The value of ");
+    html_span_text(same_line, "The ");
+    value_word(same_line);
+    html_span_text(same_line, " of ");
     html_span_text_code_dark(same_line, join_code);
-    html_span_text(same_line, " is the same as the value of ");
-    html_span_text_code_dark(same_line, joined_code);
+    html_span_text(same_line, " is the same as the ");
+    value_word(same_line);
+    html_span_text(same_line, " of ");
+    app_code_string_colored(same_line, joined_value);
     let remember_line = html_div(derive);
-    html_span_text(remember_line, "Remember, the value of ");
-    html_span_text_code_dark(remember_line, joined_code);
+    html_span_text(remember_line, "Remember, the ");
+    value_word(remember_line);
+    html_span_text(remember_line, " of ");
+    app_code_string_colored(remember_line, joined_value);
     html_span_text(remember_line, " is ");
     let remember_value = html_span_text_code_dark(remember_line, joined_value);
     html_font_color_set(remember_value, color);
     let so_line = html_div(derive);
-    html_span_text(so_line, "So the value of ");
+    html_span_text(so_line, "So the ");
+    value_word(so_line);
+    html_span_text(so_line, " of ");
     html_span_text_code_dark(so_line, join_code);
     html_span_text(so_line, " is ");
     let so_value = html_span_text_code_dark(so_line, joined_value);
