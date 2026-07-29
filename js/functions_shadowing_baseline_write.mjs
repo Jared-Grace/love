@@ -8,12 +8,7 @@ export async function functions_shadowing_baseline_write() {
   "Growing the file is refused rather than written. Seeding and shrinking are both honest, but a name that shadows today and did not yesterday is the offense the gate exists to catch, and rewriting the baseline over it would turn the one red light into a green one with nothing left to show it happened.";
   let known = await functions_shadowing();
   await functions_shadowing_baseline_growth_assert(known);
-  let baseline = {
-    known,
-  };
-  let json = json_format_to(baseline);
   let path = shadowing_baseline_path();
-  await file_overwrite(path, json);
-  let r = known.length;
+  let r = await baseline_known_write(known, path);
   return r;
 }
