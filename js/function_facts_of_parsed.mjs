@@ -30,7 +30,7 @@ export function function_facts_of_parsed(parsed) {
       let value = property_get(first, "value");
       la(value);
     }
-    js_visit_calls_named(ast, fn_name.name, on_call);
+    js_visit_calls_named(ast, fn_name("fn_name"), on_call);
   }
   let identifiers_fn_names = list_adder(collect);
   let facts = {
