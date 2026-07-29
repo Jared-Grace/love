@@ -1,8 +1,6 @@
 import { list_filter_size } from "./list_filter_size.mjs";
 import { text_identifier_segments } from "./text_identifier_segments.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function text_identifier_count(text_source, identifier_name) {
