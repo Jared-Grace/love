@@ -32,13 +32,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_a_functionize",
-   "shadows_outer": [
-    "ast"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_a_identifier_generic",
    "shadows_outer": [
     "overlay",
@@ -610,24 +603,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_dollar_a",
-   "shadows_outer": [
-    "stack_1",
-    "stack_2",
-    "ast"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_dollar_s",
-   "shadows_outer": [
-    "stack_1",
-    "stack_2",
-    "ast"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_expand_generic",
    "shadows_outer": [
     "name"
@@ -638,20 +613,6 @@
    "name": "js_function_declaration_params_names_node",
    "shadows_outer": [
     "type_is"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_function_last_asyncify",
-   "shadows_outer": [
-    "ast"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_function_last_deasyncify",
-   "shadows_outer": [
-    "ast"
    ],
    "shadows_function": []
   },
