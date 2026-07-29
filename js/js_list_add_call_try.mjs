@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_expression_statement_is } from "./js_expression_statement_is.mjs";
 import { not } from "./not.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
@@ -16,7 +16,7 @@ export function js_list_add_call_try(node) {
   }
   let expression = js_statement_expression_get(node);
   let name = js_call_callee_name_try(expression);
-  let e = equal(name, list_add.name);
+  let e = equal(name, fn_name("list_add"));
   if (not(e)) {
     return null;
   }
