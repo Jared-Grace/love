@@ -1,8 +1,8 @@
+import { firebase_storage_download_json_decompress_cache } from "./firebase_storage_download_json_decompress_cache.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_supper_verses_get_upload_destination } from "./app_supper_verses_get_upload_destination.mjs";
-import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
 import { global_function_property_initialize_async } from "./global_function_property_initialize_async.mjs";
 import { app_supper_verses_parse } from "./app_supper_verses_parse.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -16,7 +16,7 @@ export async function app_supper_verses_get(ebible_folder) {
         let destination =
           app_supper_verses_get_upload_destination(ebible_folder);
         let project_url = firebase_storage_url_project_jg();
-        let v = await firebase_storage_download_json_decompress(
+        let v = await firebase_storage_download_json_decompress_cache(
           project_url,
           destination,
         );
@@ -26,9 +26,10 @@ export async function app_supper_verses_get(ebible_folder) {
       let missing = null_is(v);
       if (missing) {
         let verses = await app_supper_verses_parse(ebible_folder);
-        return {
+        let r = {
           verses,
         };
+        return r;
       }
       return v;
     }
