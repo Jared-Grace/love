@@ -3024,6 +3024,14 @@ def split_top_level_statements_text(command):
 
 TIME_SUBSHELL_RE = re.compile(r"^\s*time\s+\(\s*(.+?)\s*\)\s*$", re.DOTALL)
 
+# The same wrapper wherever it stands, not only as the whole command. Group 1
+# keeps whatever preceded it (start of string, or a separator) so the rewrite
+# puts it back; group 2 is the inner command, which may hold no parenthesis of
+# its own. `( time CMD )` stays excluded by construction - this needs `time`
+# BEFORE the bracket, and there the parentheses decide whose stderr a
+# following redirect catches.
+TIME_SUBSHELL_ANY_RE = re.compile(r"(^|[;&|]\s*)time\s+\(\s*([^()]*?)\s*\)")
+
 # Constructs whose effect a subshell deliberately contains. `cd` and a
 # variable assignment both outlive the command when the parentheses go, and
 # the working directory persists between Bash calls here - so for these the
@@ -3053,15 +3061,29 @@ def time_subshell_stripped(command, safe_verbs, safe_exact_commands):
 
     Only offered when the stripped form actually passes: a deny must always
     leave a way forward, or it is worse than the prompt it replaced."""
-    match = TIME_SUBSHELL_RE.match(command)
-    if not match:
+    ("The wrapper no longer has to be the whole command. Labelling a "
+     "measurement is the ordinary way to write one - `echo \"=== cold:\"; "
+     "time ( ... )` - and matching only a whole-command wrapper meant that "
+     "one echo in front turned a deny that reworded itself into a plain "
+     "prompt with no advice in it. Every occurrence is rewritten instead, "
+     "and the result is checked as a whole, so the answer is the same "
+     "whether the timing stands alone or sits in a chain.")
+    matches = list(TIME_SUBSHELL_ANY_RE.finditer(command))
+    if not matches:
         return None
-    inner = match.group(1)
-    if "(" in inner or ")" in inner:
-        return None
-    if SUBSHELL_LOAD_BEARING_RE.search(inner):
-        return None
-    stripped = "time " + inner
+    for match in matches:
+        inner = match.group(2)
+        if SUBSHELL_LOAD_BEARING_RE.search(inner):
+            return None
+        # A separator inside the parentheses makes the strip a behaviour
+        # change rather than a reword: `time ( a; b )` measures both, while
+        # `time a; b` measures only the first. A pipe is fine - bash's `time`
+        # keyword times a whole pipeline either way - so only these two are
+        # refused, and refusing the whole rewrite is right, because a command
+        # carrying one such wrapper should not be half-reworded.
+        if ";" in inner or "&" in inner:
+            return None
+    stripped = TIME_SUBSHELL_ANY_RE.sub(lambda m: m.group(1) + "time " + m.group(2), command)
     try:
         if not is_safe(stripped, safe_verbs, safe_exact_commands):
             return None
