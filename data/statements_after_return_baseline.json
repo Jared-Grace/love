@@ -1,0 +1,25 @@
+{
+ "known": [
+  "app_code_lesson_identifiers_valid",
+  "app_replace_rule_set_verify",
+  "app_sandbox",
+  "command_line_generic",
+  "data_file_update",
+  "data_files_update",
+  "ebible_languages_add",
+  "ebible_languages_english_each",
+  "ebible_version_upload_refresh_all",
+  "g_sermon_generate_book_generic_open",
+  "g_sermon_generate_book",
+  "g_sermon_generate",
+  "html_hash_set",
+  "indexeddb_exists",
+  "js_auto_transforms",
+  "js_expand_generic",
+  "js_ternary_replace",
+  "messenger_reply",
+  "reply_on_match_output_code",
+  "sandbox_4",
+  "sandbox"
+ ]
+}
