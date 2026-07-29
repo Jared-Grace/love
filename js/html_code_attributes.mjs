@@ -11,7 +11,6 @@ export function html_code_attributes(attributes) {
     let r = text_combine_multiple([" ", key, '="', value, '"']);
     return r;
   }
-  let mapped = list_map(list, lambda);
-  let joined = list_join_empty(mapped);
+  let joined = list_map_join_empty(list, lambda);
   return joined;
 }
