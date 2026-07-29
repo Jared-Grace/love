@@ -1,3 +1,6 @@
+import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
+import { app_g_conversation } from "./app_g_conversation.mjs";
+import { g_day_sky_phase } from "./g_day_sky_phase.mjs";
 import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
@@ -125,7 +128,9 @@ export function app_g_dev_routes(div_map) {
     await app_g_sky_snap();
   }
   async function hour() {
-    "the #hour previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (g_clock_sky_phase) the real day uses, so what you pick here IS what the day will show";
+    ("the #hour previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
+      g_clock_sky_phase.name,
+      ") the real day uses, so what you pick here IS what the day will show");
     await app_g_view_set(null);
     await app_g_hour_choices();
   }
@@ -136,7 +141,8 @@ export function app_g_dev_routes(div_map) {
     let three = app_g_day_talkables_choose(npcs);
     let state = app_g_day_state();
     property_set(state, "talkable", three);
-    property_set(state, "slices_total", list_size(three));
+    let value = list_size(three);
+    property_set(state, "slices_total", value);
     property_set(state, "slices_done", 0);
     await app_g_day_sky_update();
     function mark(npc) {
@@ -146,7 +152,11 @@ export function app_g_dev_routes(div_map) {
     app_g_day_discern_button(div_map);
   }
   async function day_conversation() {
-    "the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation and watch the working day age 6 AM sunrise → 7 PM dusk as you answer each turn (app_g_conversation drives the sky through g_day_sky_phase). proves the conversation→time mechanic on the actual conversation, not a stub";
+    ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation and watch the working day age 6 AM sunrise → 7 PM dusk as you answer each turn (",
+      app_g_conversation.name,
+      " drives the sky through ",
+      g_day_sky_phase.name,
+      "). proves the conversation→time mechanic on the actual conversation, not a stub");
     await app_g_view_set(null);
     await app_g_day_conversation_demo();
   }
