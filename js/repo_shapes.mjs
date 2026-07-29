@@ -28,7 +28,9 @@ export async function repo_shapes(repo_name) {
     };
     return entry;
   }
-  let mapped = await list_map_unordered_async(names, to_entry);
-  let entries = list_filter_null_not_is(mapped);
+  let entries = await list_map_unordered_async_filter_null_not_is(
+    names,
+    to_entry,
+  );
   return entries;
 }
