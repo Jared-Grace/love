@@ -1,15 +1,15 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_node_type_is_new_lambda(f_name, node_type) {
   async function lambda(ast) {
     let code =
       "export function " +
       f_name +
       "(node) { let is = " +
-      js_node_type_is.name +
+      fn_name("js_node_type_is") +
       '(node, "' +
       node_type +
       '"); return is; }';
