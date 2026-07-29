@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { functions_shadowing_function } from "./functions_shadowing_function.mjs";
-import { functions_shadowing_rename_all } from "./functions_shadowing_rename_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_size } from "./list_size.mjs";
@@ -33,7 +33,7 @@ export async function functions_shadowing_function_gate_run() {
       "shadowing function gate: ",
       size,
       " functions bind a name the repo already answers to, so a call written there reaches the local instead - rename it with ",
-      functions_shadowing_rename_all.name,
+      fn_name("functions_shadowing_rename_all"),
     ]);
     error(combined);
   }
