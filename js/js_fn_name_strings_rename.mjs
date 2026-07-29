@@ -17,5 +17,5 @@ export function js_fn_name_strings_rename(ast, f_name_before, f_name_after) {
     let s = js_string(f_name_after);
     object_replace(value, s);
   }
-  js_visit_calls_named(ast, fn_name.name, lambda);
+  js_visit_calls_named(ast, fn_name("fn_name"), lambda);
 }
