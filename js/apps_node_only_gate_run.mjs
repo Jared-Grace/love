@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { apps_reachable_unguarded_steps } from "./apps_reachable_unguarded_steps.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_size } from "./list_size.mjs";
@@ -54,7 +56,14 @@ export async function apps_node_only_gate_run() {
   ("imports per app asked, and on the ordinary run there is nothing to ask about.");
   let blamed = await list_map_unordered_async(violations, blame);
   list_empty_is_assert_json(blamed, {
-    hint: "an app reaches a function that calls a Node built-in with no browser branch, so that screen blanks at runtime; give the function a browser branch, or swap the caller onto one that already has it",
+    hint:
+      "an app reaches a function that calls a Node built-in with no browser branch, so that screen blanks at runtime. Two causes: (1) a REAL call into the Node function - give that function a browser branch, or swap the caller onto one that already has it; (2) the only link is an imported-fn X.name reference (a fn imported ONLY to spell its name, which drags its whole dependency tree into the bundle) - run " +
+      fn_name("file_name_references_strip") +
+      text_combine_multiple([
+        " on the file holding that reference to swap X.name for a dependency-free ",
+        fn_name.name,
+        " marker (then the now-unused import is dropped)",
+      ]),
   });
   ("Says how much it looked at, because a gate that answers nothing cannot be");
   ("told apart from one that did nothing. Both leave the same empty line, and the");

@@ -1,3 +1,4 @@
+import { html_text_align } from "./html_text_align.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { equal } from "./equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -53,7 +54,7 @@ export function html_subset_ordered_row(
   }
   let label = html_div(row);
   html_style_flex(label, "1 1 0");
-  html_style_set(label, "text-align", "left");
+  html_text_align(label, "left");
   let style_value = app_shared_spaced_small_gap();
   html_style_set(label, "padding-left", style_value);
   html_span_text(label, name);

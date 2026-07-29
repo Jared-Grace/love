@@ -197,8 +197,8 @@ export async function app_search_results(context, div_results) {
   list_sort_text_mapper(results, bible_order_key);
   function result_verses_count(vk) {
     let verse_numbers = property_get(vk, "value");
-    let s = list_size(verse_numbers);
-    return s;
+    let count = list_size(verse_numbers);
+    return count;
   }
   function book_verses_count(book_code) {
     "how many verses a book card is holding, which the card says out loud so the reader can weigh a book before opening it";
