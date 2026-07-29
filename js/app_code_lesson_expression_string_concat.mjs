@@ -5,7 +5,7 @@ import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_string_shape } from "./app_code_string_shape.mjs";
+import { app_code_string_concat_shape } from "./app_code_string_concat_shape.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -72,9 +72,7 @@ export function app_code_lesson_expression_string_concat() {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
         html_span_text(parent, "String concatenation ");
-        app_code_string_shape(parent, 1);
-        html_span_text_code_dark(parent, " + ");
-        app_code_string_shape(parent, 1);
+        app_code_string_concat_shape(parent);
       }
       return render;
     }
