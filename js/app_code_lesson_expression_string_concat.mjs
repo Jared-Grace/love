@@ -91,7 +91,11 @@ export function app_code_lesson_expression_string_concat() {
     let two = pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
+    let code_a = app_code_string_code(a);
+    let code_b = app_code_string_code(b);
+    let join_code = text_combine_multiple([code_a, " + ", code_b]);
     let joined_value = text_combine_multiple([a, b]);
+    let joined_code = app_code_string_code(joined_value);
     let color = app_code_string_value_color();
     let concept = app_code_container_light_blue(root);
     let seen_line = html_div(concept);
@@ -106,22 +110,22 @@ export function app_code_lesson_expression_string_concat() {
     html_span_text(combines_line, " combines two strings into one");
     let looks_line = html_div(concept);
     html_span_text(looks_line, "It looks like this: ");
-    app_code_string_concat_colored(looks_line, a, b);
+    html_span_text_code_dark(looks_line, join_code);
     let derive = app_code_container_light_blue(root);
     let same_line = html_div(derive);
     html_span_text(same_line, "The value of ");
-    app_code_string_concat_colored(same_line, a, b);
+    html_span_text_code_dark(same_line, join_code);
     html_span_text(same_line, " is the same as the value of ");
-    app_code_string_colored(same_line, joined_value);
+    html_span_text_code_dark(same_line, joined_code);
     let remember_line = html_div(derive);
     html_span_text(remember_line, "Remember, the value of ");
-    app_code_string_colored(remember_line, joined_value);
+    html_span_text_code_dark(remember_line, joined_code);
     html_span_text(remember_line, " is ");
     let remember_value = html_span_text_code_dark(remember_line, joined_value);
     html_font_color_set(remember_value, color);
     let so_line = html_div(derive);
     html_span_text(so_line, "So the value of ");
-    app_code_string_concat_colored(so_line, a, b);
+    html_span_text_code_dark(so_line, join_code);
     html_span_text(so_line, " is ");
     let so_value = html_span_text_code_dark(so_line, joined_value);
     html_font_color_set(so_value, color);
@@ -136,10 +140,10 @@ export function app_code_lesson_expression_string_concat() {
     let order = app_code_container_light_blue(root);
     let left_line = html_div(order);
     html_span_text(left_line, "The left string is ");
-    app_code_string_colored(left_line, a);
+    html_span_text_code_dark(left_line, code_a);
     let right_line = html_div(order);
     html_span_text(right_line, "The right string is ");
-    app_code_string_colored(right_line, b);
+    html_span_text_code_dark(right_line, code_b);
     let after_line = html_div(order);
     html_span_text_code_dark(after_line, "+");
     html_span_text(
@@ -148,6 +152,6 @@ export function app_code_lesson_expression_string_concat() {
     );
     let space_line = html_div(order);
     html_span_text(space_line, "There is no space between them: ");
-    app_code_string_colored(space_line, joined_value);
+    html_span_text_code_dark(space_line, joined_code);
   }
 }
