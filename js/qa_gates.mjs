@@ -1,3 +1,4 @@
+import { functions_statements_after_return_gate_run } from "./functions_statements_after_return_gate_run.mjs";
 import { instructions_notes_gate_run } from "./instructions_notes_gate_run.mjs";
 import { claude_md_size_gate_run } from "./claude_md_size_gate_run.mjs";
 import { app_shared_imports_gate_run } from "./app_shared_imports_gate_run.mjs";
@@ -129,6 +130,7 @@ export function qa_gates() {
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
     functions_unreachable_check_gate_run,
+    functions_statements_after_return_gate_run,
     app_shared_imports_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
