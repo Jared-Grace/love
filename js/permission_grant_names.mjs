@@ -377,6 +377,7 @@ export function permission_grant_names() {
   let spelled374 = fn_name("functions_literal_route");
   let spelled375 = fn_name("app_g_conversation_key");
   let spelled376 = fn_name("functions_calls_named_sized");
+  let spelled377 = fn_name("function_calls_callee_set");
   let names = [
     spelled,
     spelled2,
@@ -754,6 +755,7 @@ export function permission_grant_names() {
     spelled374,
     spelled375,
     spelled376,
+    spelled377,
   ];
   return names;
 }
