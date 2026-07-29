@@ -1,4 +1,4 @@
-import { app_code_quiz } from "./app_code_quiz.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
 import { app_code_screen_text_normalize } from "./app_code_screen_text_normalize.mjs";
@@ -22,7 +22,7 @@ export async function app_code_reload_persists_test(url_prefix) {
     async function check(id) {
       let combined = text_combine_multiple([
         "&screen=",
-        app_code_quiz.name,
+        fn_name("app_code_quiz"),
         "&quiz=0",
       ]);
       let url = text_combine_multiple([
