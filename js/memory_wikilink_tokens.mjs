@@ -12,7 +12,6 @@ export function memory_wikilink_tokens(text) {
     let name = m.slice(2, -2);
     return name;
   }
-  let names = matches.map(inner);
-  let unique = [...new Set(names)];
+  let unique = list_map_unique(matches, inner);
   return unique;
 }
