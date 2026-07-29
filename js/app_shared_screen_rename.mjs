@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { invoke_multiple_async } from "./invoke_multiple_async.mjs";
 import { function_rename_open } from "./function_rename_open.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -25,7 +26,7 @@ export async function app_shared_screen_rename(
         let key = property_get(item, "key");
         async function lambda5() {
           let name = property_get(key, "name");
-          let match = name === screen_name_before;
+          let match = equal(name, screen_name_before);
           if (match) {
             let key_after = js_expression_string(screen_name_after);
             let combined_screen = function_name_combine(
@@ -43,7 +44,7 @@ export async function app_shared_screen_rename(
                 combined_screen_after,
               );
             }
-            list_add(lambda3);
+            list_add(afters, lambda3);
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
