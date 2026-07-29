@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_style_helpers } from "./html_style_helpers.mjs";
@@ -8,7 +9,6 @@ import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_code_html_style_literals_left } from "./js_code_html_style_literals_left.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { functions_html_style_literals_migrate } from "./functions_html_style_literals_migrate.mjs";
 export async function html_style_literal_gate_run() {
   "QA gate: no function sets a style property by name where a named helper already says the same thing.";
   "It is clearable, and it was cleared before it was written: the codemod named in the failure fixes every case it can report, so a red gate here is a command to run rather than a puzzle to solve. It can also go red without anybody writing a literal, when a new helper is added and older code turns out to have been spelling that property by hand all along - which is the more useful of the two, because nothing else would ever have gone looking for those.";
@@ -30,7 +30,7 @@ export async function html_style_literal_gate_run() {
   let offenders = list_filter(entries, offends_is);
   let names = list_map_property(offenders, "name");
   list_empty_is_assert_json(names, {
-    hint: functions_html_style_literals_migrate.name,
+    hint: fn_name("functions_html_style_literals_migrate"),
   });
   ("Says how much it looked at, because a gate that answers nothing cannot be");
   ("told apart from one that did nothing. Both leave the same empty line, and the");
