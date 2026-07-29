@@ -2713,6 +2713,51 @@ def find_argumentless_dispatcher_call(command):
     return None
 
 
+def open_twin_advice(command):
+    """An extra sentence when the dispatcher function ends in `_open` and a
+    function of the same name without that suffix exists; else empty text.
+
+    Advice only, never a decision, and that is the point. A `_open` suffix
+    usually means "and then show it to the human in an editor", which is
+    meaningless from this seam - `file_open` refuses it at run time. The
+    grant the message above suggests is then UNCONSTRUCTIBLE:
+    permission_grant_refusals turns it down by name, and
+    permission_editor_open_gate_run would fail the build on the rule. So
+    following the advice costs a human prompt that ends in a refusal, which
+    is the one outcome worth spending a sentence to avoid.
+
+    Kept as advice because "ends in _open" is not the same question as "opens
+    an editor" - of the names carrying that suffix, most are ordinary domain
+    functions (a bracket character, a bible panel, a browser window). Denying
+    on the suffix would refuse those outright; adding a sentence costs
+    nothing when it does not apply and the human still decides."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return ""
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if (
+            len(words) >= 3
+            and words[0] == "node"
+            and ai_script_is(words[1])
+            and words[2].endswith("_open")
+        ):
+            twin = words[2][: -len("_open")]
+            live_names = repos_function_names()
+            if live_names and twin in live_names:
+                return (
+                    f"\nNOTE: `{words[2]}` ends in `_open`. If it is the "
+                    f"showing-in-an-editor twin of `{twin}`, call `{twin}` "
+                    "instead - this seam refuses to open an editor, so the "
+                    "call fails either way, and the grant suggested above "
+                    "cannot be written for it (permission_grant_refusals "
+                    "turns it down and the editor-open gate would fail on "
+                    "the rule)."
+                )
+    return ""
+
+
 def argumentless_dispatcher_deny_reason(name, count):
     return (
         f"`{name}` declares {count} parameter(s) and this call supplies none, "
@@ -3551,6 +3596,7 @@ def main():
                     "one. If it should run unprompted, grant it by its own "
                     "full name (`node scripts/ai.mjs permission_grant_add "
                     "<fn>`); otherwise it is fine to approve once."
+                    + open_twin_advice(command)
                 ),
             }
         }))
