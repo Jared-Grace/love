@@ -11,35 +11,17 @@ export async function functions_duplicates_gate_run() {
   "Measured against the baseline file rather than against zero, so the rule binds what is written today instead of waiting on a judgment about every pair already here. A name the baseline does not list fails, and a name it lists that no longer has a twin fails too, so the list can only shrink.";
   "A group is a question, not an instruction. The same steps can be two ideas on purpose - cutting a piece out of a list and cutting a piece out of some words are written alike and must stay apart - so when this goes red the answer is sometimes to collapse the pair and sometimes to make the two genuinely differ. What it must never be is a wider baseline.";
   let offenders = await functions_duplicates_names();
-  let known = await duplicates_baseline_read();
-  let change = names_versus_baseline(offenders, known);
-  let added = property_get(change, "added");
-  let stale = property_get(change, "stale");
-  let any_added = greater_than(added.length, 0);
-  if (any_added) {
-    let message_added =
-      "duplicates gate: " +
-      added.length +
-      " functions do work another name already does - collapse the pair onto one name with " +
-      function_replace.name +
-      ", or make them genuinely differ: " +
-      list_join_comma(added);
-    throw new Error(message_added);
-  }
-  let any_stale = greater_than(stale.length, 0);
-  if (any_stale) {
-    let message_stale =
-      "duplicates gate: " +
-      stale.length +
-      " baseline entries no longer have a twin - rerun " +
-      functions_duplicates_baseline_write.name +
-      " to shrink the baseline: " +
-      list_join_comma(stale);
-    throw new Error(message_stale);
-  }
-  let result = {
-    added: 0,
-    stale: 0,
-  };
+  let path = duplicates_baseline_path();
+  let hint = text_combine_multiple([
+    "these functions do work another name already does - collapse the pair onto one name with ",
+    function_replace.name,
+    ", or make them genuinely differ",
+  ]);
+  let result = await baseline_names_gate_generic(
+    offenders,
+    path,
+    hint,
+    functions_duplicates_baseline_write.name,
+  );
   return result;
 }
