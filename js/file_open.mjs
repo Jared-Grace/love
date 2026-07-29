@@ -7,9 +7,13 @@ import { file_read } from "./file_read.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { data_terminal_get } from "./data_terminal_get.mjs";
 export async function file_open(f_path) {
-  file_open_seam_assert(f_path);
+  "Puts a file in front of the human - on their screen when this invocation wanted that, and in the terminal when it did not.";
+  "It used to throw rather than print whenever Claude reached it, and the advice it threw was to call the twin without the open ending. That advice only works when such a twin exists, and around twenty fns reach an opener without having one, so the message asked for something impossible - after the work had already been done, since the opening is the last step. What Claude saw was a failure for a rename that had in fact landed.";
+  "The seam marker's own description already promised this: it says it marks the process so that a fn which would launch an editor prints instead. That branch was here the whole time, sitting behind a check that threw before it could run.";
+  let wanted = process_open_wanted_is();
   let terminal = await data_terminal_get();
-  if (terminal) {
+  let printed = or(terminal, not(wanted));
+  if (printed) {
     let ext = function_name_extension();
     let ew = text_ends_with(f_path, ext);
     let output = null;
