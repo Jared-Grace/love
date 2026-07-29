@@ -72,7 +72,7 @@ export function examples_notes() {
       "shorthand + computed keys ARE references — keep the import",
     example_fn_name_reference_strip: text_combine_multiple([
       "drop a name-only dependency (fn.name -> ",
-      fn_name.name,
+      fn_name("fn_name"),
       '("fn")) for web bundling',
     ]),
     example_fold_wrap_index:
