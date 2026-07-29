@@ -5,6 +5,7 @@ import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { app_code_string_shape } from "./app_code_string_shape.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -71,11 +72,14 @@ export function app_code_lesson_expression_string_concat() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Joining strings");
+        html_span_text(parent, "String concatenation ");
+        app_code_string_shape(parent, 1);
+        html_span_text_code_dark(parent, " + ");
+        app_code_string_shape(parent, 1);
       }
       return render;
     }
-    let rights = ["string", "join"];
+    let rights = ["string", "concatenation"];
     let built = app_code_lesson_name_id_generic(
       rights,
       "expressions",
@@ -112,6 +116,10 @@ export function app_code_lesson_expression_string_concat() {
     let value_out = html_span_text_code_dark(value_line, joined_value);
     let color = app_code_string_value_color();
     html_font_color_set(value_out, color);
+    let name_line = html_div(define);
+    html_span_text(name_line, "Joining strings like this is called ");
+    let name_term = html_span_text(name_line, "concatenation");
+    html_bold(name_term);
     html_div_cycle_code(define, [
       "The first string comes first, then the second",
     ]);
