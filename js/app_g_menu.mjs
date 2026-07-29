@@ -1,3 +1,4 @@
+import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
@@ -29,7 +30,7 @@ export function app_g_menu(overlay, player) {
     app_g_container_text(overlay, "What prayer would you like to pray?");
     async function lambda22() {
       let prayer = property_get(player, "prayer");
-      property_set(prayer, "conversation", true);
+      property_set(prayer, app_g_conversation_key(), true);
       await app_g_player_save(player);
       close();
     }
