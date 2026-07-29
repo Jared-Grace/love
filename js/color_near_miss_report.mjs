@@ -1,5 +1,5 @@
+import { list_each_size } from "./list_each_size.mjs";
 import { colors_near_miss_findings } from "./colors_near_miss_findings.mjs";
-import { each } from "./each.mjs";
 import { log } from "./log.mjs";
 import { property_get } from "./property_get.mjs";
 export async function color_near_miss_report() {
@@ -15,7 +15,6 @@ export async function color_near_miss_report() {
       files_other,
     });
   }
-  each(findings, print_one);
-  let r = findings.length;
+  let r = list_each_size(findings, print_one);
   return r;
 }

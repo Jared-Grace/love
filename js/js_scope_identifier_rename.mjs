@@ -1,5 +1,5 @@
+import { list_each_size } from "./list_each_size.mjs";
 import { js_shorthand_properties_expand } from "./js_shorthand_properties_expand.mjs";
-import { each } from "./each.mjs";
 import { js_scope_identifier_nodes_own } from "./js_scope_identifier_nodes_own.mjs";
 import { property_set } from "./property_set.mjs";
 export function js_scope_identifier_rename(scope_node, name, name_after) {
@@ -11,7 +11,6 @@ export function js_scope_identifier_rename(scope_node, name, name_after) {
   function rename(node) {
     property_set(node, "name", name_after);
   }
-  each(nodes, rename);
-  let renamed = nodes.length;
+  let renamed = list_each_size(nodes, rename);
   return renamed;
 }

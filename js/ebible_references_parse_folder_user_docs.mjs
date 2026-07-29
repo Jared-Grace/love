@@ -1,7 +1,6 @@
-import { list_join_newline_2 } from "./list_join_newline_2.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
 import { ebible_references_parse } from "./ebible_references_parse.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -21,7 +20,6 @@ export async function ebible_references_parse_folder_user_docs(
     return v2;
   }
   let mapped = list_map(list, lambda);
-  let joined = list_join_newline_2(mapped);
-  await clipboard_copy(joined);
+  let joined = await list_join_newline_2_copy(mapped);
   return joined;
 }
