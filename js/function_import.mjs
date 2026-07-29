@@ -1,11 +1,14 @@
-import { function_import_unalias } from "./function_import_unalias.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function function_import(f_name) {
-  text_combine("if you need to unalias use ", function_import_unalias.name);
+  text_combine(
+    "if you need to unalias use ",
+    fn_name("function_import_unalias"),
+  );
   let v = await function_name_to_path_search(f_name);
   let f = property_get(v, "f_path");
   let f_path = await path_resolve(f);
