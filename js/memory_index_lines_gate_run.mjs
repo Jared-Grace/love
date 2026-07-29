@@ -1,3 +1,6 @@
+import { list_last } from "./list_last.mjs";
+import { list_remove_last } from "./list_remove_last.mjs";
+import { equal } from "./equal.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
@@ -15,6 +18,12 @@ export async function memory_index_lines_gate_run() {
   let path = path_join([folder, name]);
   let text = await file_read(path);
   let lines = text.split("\n");
+  ("a file ending in a newline splits with an empty piece after it, and the loader does not count that as a further line - so the number this gate reports is the same number the loader's own warning names, and the two can be read against each other");
+  let last = list_last(lines);
+  let trailing = equal(last, "");
+  if (trailing) {
+    list_remove_last(lines);
+  }
   let count = list_size(lines);
   let ceiling = memory_index_line_count_ceiling();
   let over = greater_than(count, ceiling);

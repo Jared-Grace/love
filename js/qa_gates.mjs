@@ -1,3 +1,4 @@
+import { memory_index_lines_gate_run } from "./memory_index_lines_gate_run.mjs";
 import { js_code_literal_key_only_cases_gate_run } from "./js_code_literal_key_only_cases_gate_run.mjs";
 import { functions_arity_gate_run } from "./functions_arity_gate_run.mjs";
 import { functions_statements_after_return_gate_run } from "./functions_statements_after_return_gate_run.mjs";
@@ -80,6 +81,7 @@ export function qa_gates() {
     memory_fn_reference_gate_run,
     memory_symbol_gate_run,
     memory_index_size_gate_run,
+    memory_index_lines_gate_run,
     examples_gate_run,
     permission_gate_run,
     permission_editor_open_gate_run,
