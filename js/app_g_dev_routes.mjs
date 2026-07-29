@@ -1,16 +1,11 @@
+import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
-import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
 import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_day_talkable_marker } from "./app_g_day_talkable_marker.mjs";
 import { each } from "./each.mjs";
-import { app_g } from "./app_g.mjs";
-import { app_g_dev_if } from "./app_g_dev_if.mjs";
-import { app_g_dev_index } from "./app_g_dev_index.mjs";
-import { app_g_sky_step } from "./app_g_sky_step.mjs";
-import { app_g_sky_jump } from "./app_g_sky_jump.mjs";
 import { app_g_sky_choices } from "./app_g_sky_choices.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
@@ -38,11 +33,11 @@ import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
-    app_g.name,
+    fn_name("app_g"),
     " (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — ",
-    app_g_dev_if.name,
+    fn_name("app_g_dev_if"),
     " dispatches from it and ",
-    app_g_dev_index.name,
+    fn_name("app_g_dev_index"),
     " lists its keys, so the #index directory can never drift from the real routes");
   async function study() {
     let view = {
@@ -117,9 +112,9 @@ export function app_g_dev_routes(div_map) {
   }
   async function sky() {
     ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (",
-      app_g_sky_step.name,
+      fn_name("app_g_sky_step"),
       ") and jumping (",
-      app_g_sky_jump.name,
+      fn_name("app_g_sky_jump"),
       ") now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
@@ -128,7 +123,7 @@ export function app_g_dev_routes(div_map) {
   }
   async function hour() {
     ("the #hour previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
-      g_clock_sky_phase.name,
+      fn_name("g_clock_sky_phase"),
       ") the real day uses, so what you pick here IS what the day will show");
     await app_g_view_set(null);
     await app_g_hour_choices();
