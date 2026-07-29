@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_calls_imported_sizes } from "./js_calls_imported_sizes.mjs";
@@ -22,7 +23,8 @@ export async function functions_arity_mismatches() {
     let parsed = await function_parse_declaration(name);
     let declaration = property_get(parsed, "declaration");
     let params = js_flo_params_get(declaration);
-    property_set(declared, name, list_size(params));
+    let value = list_size(params);
+    property_set(declared, name, value);
     let ast = property_get(parsed, "ast");
     let calls = js_calls_imported_sizes(ast);
     let entry = {
@@ -38,7 +40,7 @@ export async function functions_arity_mismatches() {
     function call_each(call) {
       let callee = property_get(call, "name");
       let known = property_exists(declared, callee);
-      if (!known) {
+      if (not(known)) {
         return;
       }
       let want = property_get(declared, callee);
