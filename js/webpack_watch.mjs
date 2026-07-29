@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
 import { identity } from "./identity.mjs";
 import { path_name } from "./path_name.mjs";
@@ -19,7 +20,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { function_dependencies } from "./function_dependencies.mjs";
-import { app_shared_context_initialize } from "./app_shared_context_initialize.mjs";
 import { property_exists_equals } from "./property_exists_equals.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -39,7 +39,7 @@ export async function webpack_watch() {
       let main = await app_shared_name_main(a_name);
       let deps = await function_dependencies([
         main,
-        app_shared_context_initialize.name,
+        fn_name("app_shared_context_initialize"),
       ]);
       let r = {
         a_name,
