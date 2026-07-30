@@ -422,6 +422,7 @@ export function permission_grant_names() {
   let spelled419 = fn_name("app_code_lesson_ids");
   let spelled420 = fn_name("functions_assert_json_get_lambda_sites");
   let spelled421 = fn_name("functions_assert_json_get_lambda_collapse");
+  let spelled422 = fn_name("app_shared_dev_build_multiple_prompt");
   let names = [
     spelled,
     spelled2,
@@ -844,6 +845,7 @@ export function permission_grant_names() {
     spelled419,
     spelled420,
     spelled421,
+    spelled422,
   ];
   return names;
 }
