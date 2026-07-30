@@ -1,3 +1,4 @@
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { markdown_render } from "./markdown_render.mjs";
@@ -66,7 +67,7 @@ export async function app_g_design() {
     html_cursor_pointer(header);
     let description = html_div_text(card, note.description);
     html_style_assign(description, {
-      "font-size": "0.85em",
+      "font-size": app_shared_font_size_label(),
       opacity: "0.8",
     });
     let body = html_div(card);
