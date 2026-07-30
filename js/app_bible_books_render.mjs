@@ -24,10 +24,8 @@ export function app_bible_books_render(
     let t_name = property_get(testament, "name");
     let divisions = property_get(testament, "divisions");
     ("tap the testament title to fold or unfold its sections, so a phone reader can collapse a whole testament and jump straight to the other one; the caret shows which way it is");
-    let sections_holder = app_shared_container_blue_collapsible(
-      list_div,
-      t_name,
-    );
+    let collapsible = app_shared_container_blue_collapsible(list_div, t_name);
+    let sections_holder = property_get(collapsible, "body");
     function render_section(section) {
       let s_name = property_get(section, "name");
       let s_books = property_get(section, "books");
