@@ -70,7 +70,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   html_centered(bar);
   bar_extra(bar);
   let e = ebible_folder_english();
-  if (app_bible_chapter_set_default(context)) {
+  if (await app_bible_chapter_set_default(context)) {
     return null;
   }
   let hash = html_hash_object_get();

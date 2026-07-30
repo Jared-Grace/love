@@ -55,30 +55,51 @@ export function js_declared_names_cases() {
       declared: ["f"],
     },
     {
-      name: "NOT COVERED - a name unpacked out of an object is missed",
+      name: "a name unpacked out of an object",
       code: text_frozen(
         "export function f(o) {\n  let { part } = o;\n  return part;\n}\n",
       ),
-      declared: ["f"],
+      declared: ["f", "part"],
     },
     {
-      name: "NOT COVERED - a name unpacked out of a list is missed",
+      name: "a name unpacked out of a list",
       code: text_frozen(
         "export function f(o) {\n  let [first] = o;\n  return first;\n}\n",
       ),
-      declared: ["f"],
+      declared: ["f", "first"],
     },
     {
-      name: "NOT COVERED - the error a catch clause names is missed",
+      name: "unpacking under a different name, keeping the one on the left",
       code: text_frozen(
-        "export function f(lambda) {\n  try {\n    return lambda();\n  } catch (e) {\n    return e;\n  }\n}\n",
+        "export function f(o) {\n  let { part: piece } = o;\n  return piece;\n}\n",
       ),
-      declared: ["f"],
+      declared: ["f", "piece"],
     },
     {
-      name: "NOT COVERED - a declared class is missed",
+      name: "a skipped slot names nothing, and the rest of the list is one name",
+      code: text_frozen(
+        "export function f(o) {\n  let [, second, ...remaining] = o;\n  return [second, remaining];\n}\n",
+      ),
+      declared: ["f", "second", "remaining"],
+    },
+    {
+      name: "a value standing to the right of a name binds nothing itself",
+      code: text_frozen(
+        "export function f(o) {\n  let { part = 1 } = o;\n  return part;\n}\n",
+      ),
+      declared: ["f", "part"],
+    },
+    {
+      name: "a declared class",
       code: text_frozen(
         "class Thing {}\nexport function f() {\n  return Thing;\n}\n",
+      ),
+      declared: ["f", "Thing"],
+    },
+    {
+      name: "the error a catch clause names is bound, but it is not declared - the all-clauses reading is what supplies it",
+      code: text_frozen(
+        "export function f(lambda) {\n  try {\n    return lambda();\n  } catch (e) {\n    return e;\n  }\n}\n",
       ),
       declared: ["f"],
     },

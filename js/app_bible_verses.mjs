@@ -14,7 +14,7 @@ import { property_get } from "./property_get.mjs";
 import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 export async function app_bible_verses(context) {
-  let n = app_bible_chapter_set_default(context);
+  let n = await app_bible_chapter_set_default(context);
   if (n) {
     return;
   }
