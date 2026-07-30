@@ -197,9 +197,17 @@ export function app_code_lesson_expression_string_order() {
       ["code", "ag"],
       ["text", " and "],
       ["code", "ah"],
-      ["text", " have the same first symbol"],
+      ["text", " have the same first symbol ("],
+      ["code", "a"],
+      ["text", ")"],
     ]);
-    code_prose_line(stage_2, [["text", "So the second symbols are compared"]]);
+    code_prose_line(stage_2, [
+      ["text", "So the second symbols are compared ("],
+      ["code", "g"],
+      ["text", ", "],
+      ["code", "h"],
+      ["text", ")"],
+    ]);
     code_prose_line(stage_2, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
@@ -214,9 +222,19 @@ export function app_code_lesson_expression_string_order() {
       ["code", "abg"],
       ["text", " and "],
       ["code", "abh"],
-      ["text", " have the same first 2 symbols"],
+      ["text", " have the same first 2 symbols ("],
+      ["code", "a"],
+      ["text", ", "],
+      ["code", "b"],
+      ["text", ")"],
     ]);
-    code_prose_line(stage_3, [["text", "So the third symbols are compared"]]);
+    code_prose_line(stage_3, [
+      ["text", "So the third symbols are compared ("],
+      ["code", "g"],
+      ["text", ", "],
+      ["code", "h"],
+      ["text", ")"],
+    ]);
     code_prose_line(stage_3, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
