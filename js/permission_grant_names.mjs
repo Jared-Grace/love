@@ -386,6 +386,7 @@ export function permission_grant_names() {
   let spelled383 = fn_name("memory_index_lines_gate_run");
   let spelled384 = fn_name("qa_gate_run");
   let spelled385 = fn_name("functions_name_only_imports_gate_run");
+  let spelled386 = fn_name("js_operators_binary");
   let names = [
     spelled,
     spelled2,
@@ -772,6 +773,7 @@ export function permission_grant_names() {
     spelled383,
     spelled384,
     spelled385,
+    spelled386,
   ];
   return names;
 }
