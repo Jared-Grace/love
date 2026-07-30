@@ -3,6 +3,8 @@ import { fn_name } from "./fn_name.mjs";
 export function examples_notes() {
   "One line for each example saying what it is there to show - why it sits at the rung it sits at, rather than what it does. The reading order and the grouping live next door; this is the reason each entry earns its place.";
   "These were written beside the names they describe, as comments on the same line. Normalizing a file parses it and writes the tree back out, and a comment lives nowhere in a tree, so all thirty-four were deleted in one pass. They are data now because they always were data - curriculum text, not a note to whoever is reading the source.";
+  let f_name = fn_name("fn_name");
+  let f_name2 = fn_name("fn_name");
   let notes = {
     example_atomize_nested_call: "flatten a nested call — simplest transform",
     example_if_test_set_positive: "set an if-condition — a single slot edit",
@@ -72,8 +74,13 @@ export function examples_notes() {
       "shorthand + computed keys ARE references — keep the import",
     example_fn_name_reference_strip: text_combine_multiple([
       "drop a name-only dependency (fn.name -> ",
-      fn_name("fn_name"),
+      f_name,
       '("fn")) for web bundling',
+    ]),
+    example_prose_name_spelled_not_imported: text_combine_multiple([
+      "a function named in a docstring is spelled with ",
+      f_name2,
+      " rather than imported to be asked its name, so prose adds no road",
     ]),
     example_fold_wrap_index:
       "fold hand-written wrap logic into a call to the pure fn",
