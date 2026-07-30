@@ -17,7 +17,7 @@ export function app_code_lesson_expression_greater_than() {
     operator,
     question_middle: "bigger than",
     pair,
-    name_id_rights: [" greater than"],
+    name_id_rights: ["greater than"],
     closing,
     preamble: null,
     explanation: null,
