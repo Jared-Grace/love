@@ -1,11 +1,8 @@
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { literal_duplicates_cases } from "./literal_duplicates_cases.mjs";
 import { literal_duplicates_generic } from "./literal_duplicates_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export function literal_duplicates_cases_gate_run() {
   "QA gate: each body of source written down in the corpus is read the way that";
   "corpus says.";

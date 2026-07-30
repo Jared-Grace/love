@@ -1,11 +1,7 @@
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_while_frozen_cases } from "./js_while_frozen_cases.mjs";
 import { js_code_while_frozen_conditions } from "./js_code_while_frozen_conditions.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export function js_while_frozen_cases_gate_run() {
   "QA gate: each written-out loop in the corpus is called stuck exactly as often as the corpus says";
   "The sweep this reader feeds answers nothing while the repo is well, so a reader that had quietly stopped looking would give the same clean answer as a repo with nothing wrong in it - the most reassuring shape a total failure can wear, and one this repo has already been fooled by once";
