@@ -85,20 +85,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_lesson_expression_greater_than_equal",
-   "shadows_outer": [
-    "next_arg"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_code_lesson_expression_less_than_equal",
-   "shadows_outer": [
-    "next_arg"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_code_lesson_expression_remainder_divide",
    "shadows_outer": [
     "percent"
