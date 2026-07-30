@@ -6,7 +6,6 @@ import { not } from "./not.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
 import { property_delete } from "./property_delete.mjs";
 import { property_exists_not_assert_json } from "./property_exists_not_assert_json.mjs";
-import { error } from "./error.mjs";
 import { property_set } from "./property_set.mjs";
 export async function function_alias_change(alias_old, alias_new) {
   arguments_assert(arguments, 2);
