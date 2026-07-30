@@ -59,9 +59,9 @@ export async function app_g_dev_tools_open_verify() {
     await page.waitForTimeout(8000);
     let routed = page.url();
     ("the text alone cannot answer this one: both panels can be present in the page and only one of them be the one you SEE, so the picture is the evidence and the words are only the index to it");
-    let picture = folder_gitignore_join(
-      text_combine_multiple([fn_name("app_g_dev_tools_open_verify"), ".png"]),
-    );
+    let f_name = fn_name("app_g_dev_tools_open_verify");
+    let name = text_combine_multiple([f_name, ".png"]);
+    let picture = folder_gitignore_join(name);
     await page.screenshot({
       path: picture,
     });
