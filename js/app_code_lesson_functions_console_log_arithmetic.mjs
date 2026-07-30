@@ -27,7 +27,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
-    name_id_rights: [" arithmetic"],
+    name_id_rights: ["arithmetic"],
     category: "operators",
     next_arg,
     example_count: 1,
