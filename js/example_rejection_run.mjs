@@ -1,9 +1,10 @@
+import { function_import } from "./function_import.mjs";
 import { equal } from "./equal.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function example_rejection_run(e) {
-  let fn_mod = await import("./" + e.fn + ".mjs");
-  let fn = fn_mod[e.fn];
+  "A rejection example names the guard it is asking to refuse, and the name is turned into the function the one way the repo turns any name into a function. This used to build the path itself, spelling the folder the function files happen to sit in - which was a second place holding that knowledge, and the wrong answer the moment a file is somewhere else.";
+  let fn = await function_import(e.fn);
   function arg_parse(a) {
     if (equal(a.parse, "value")) {
       let r = a.value;
