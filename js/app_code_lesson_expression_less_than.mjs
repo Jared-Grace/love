@@ -26,7 +26,7 @@ export function app_code_lesson_expression_less_than() {
     operator,
     question_middle: "smaller than",
     pair,
-    name_id_rights: [" less than"],
+    name_id_rights: ["less than"],
     closing,
     preamble: null,
     explanation,
