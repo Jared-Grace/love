@@ -263,18 +263,20 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(less_true, "<");
     html_span_text(less_true, " is ");
     html_span_text_code_dark(less_true, true_text);
-    let less_false = html_div(less_box);
+    let less_equal = html_div(less_box);
+    html_span_text(less_equal, "When the two strings are equal then ");
+    html_span_text_code_dark(less_equal, "<");
+    html_span_text(less_equal, " is ");
+    html_span_text_code_dark(less_equal, false_text);
+    let less_after = html_div(less_box);
     html_span_text(
-      less_false,
+      less_after,
       "When the left string comes after the right string then ",
     );
-    html_span_text_code_dark(less_false, "<");
-    html_span_text(less_false, " is ");
-    html_span_text_code_dark(less_false, false_text);
+    html_span_text_code_dark(less_after, "<");
+    html_span_text(less_after, " is ");
+    html_span_text_code_dark(less_after, false_text);
     let greater_box = app_code_container_light_blue(root);
-    let opposite_line = html_div(greater_box);
-    html_span_text_code_dark(opposite_line, ">");
-    html_span_text(opposite_line, " is the opposite");
     let greater_true = html_div(greater_box);
     html_span_text(
       greater_true,
@@ -283,13 +285,18 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(greater_true, ">");
     html_span_text(greater_true, " is ");
     html_span_text_code_dark(greater_true, true_text);
-    let greater_false = html_div(greater_box);
+    let greater_equal = html_div(greater_box);
+    html_span_text(greater_equal, "When the two strings are equal then ");
+    html_span_text_code_dark(greater_equal, ">");
+    html_span_text(greater_equal, " is ");
+    html_span_text_code_dark(greater_equal, false_text);
+    let greater_before = html_div(greater_box);
     html_span_text(
-      greater_false,
+      greater_before,
       "When the left string comes before the right string then ",
     );
-    html_span_text_code_dark(greater_false, ">");
-    html_span_text(greater_false, " is ");
-    html_span_text_code_dark(greater_false, false_text);
+    html_span_text_code_dark(greater_before, ">");
+    html_span_text(greater_before, " is ");
+    html_span_text_code_dark(greater_before, false_text);
   }
 }
