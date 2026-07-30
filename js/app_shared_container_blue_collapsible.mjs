@@ -10,7 +10,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_caret_open } from "./app_shared_caret_open.mjs";
 import { app_shared_caret_closed } from "./app_shared_caret_closed.mjs";
 import { not } from "./not.mjs";
-
 export function app_shared_container_blue_collapsible(parent, title_text) {
   "a blue card whose bold centered title folds everything inside it away when tapped, with a caret saying which way it is - so a phone reader can shut a whole group and jump past it to the next one. it hands back the div to draw into, which starts open";
   let card = app_shared_container_blue(parent);
