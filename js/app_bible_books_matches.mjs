@@ -1,3 +1,4 @@
+import { ebible_book_division_uncategorized } from "./ebible_book_division_uncategorized.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -80,12 +81,15 @@ export function app_bible_books_matches(query, books) {
   let empty = list_empty_is(leftovers);
   let has_leftovers = not(empty);
   if (has_leftovers) {
+    let uncategorized = ebible_book_division_uncategorized();
+    let section_name = property_get(uncategorized, "name");
+    let testament_name = property_get(uncategorized, "testament");
     let section = {
-      name: "Uncategorized",
+      name: section_name,
       books: leftovers,
     };
     let other = {
-      name: "Other",
+      name: testament_name,
       divisions: [section],
     };
     list_add(result, other);
