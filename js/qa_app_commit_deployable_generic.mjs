@@ -1,4 +1,4 @@
-import { list_map_property_get } from "./list_map_property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { git_commits_between } from "./git_commits_between.mjs";
 import { qa_app_commit_gate_run_at } from "./qa_app_commit_gate_run_at.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
