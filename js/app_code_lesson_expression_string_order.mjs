@@ -223,9 +223,7 @@ export function app_code_lesson_expression_string_order() {
       ["text", " and "],
       ["code", "abh"],
       ["text", " have the same first 2 symbols ("],
-      ["code", "a"],
-      ["text", ", "],
-      ["code", "b"],
+      ["code", "ab"],
       ["text", ")"],
     ]);
     code_prose_line(stage_3, [
