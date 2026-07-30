@@ -22,7 +22,7 @@ export function app_code_lesson_expression_not() {
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
-    name_id_rights: [" not"],
+    name_id_rights: ["not"],
     category: "operators",
     next_arg,
     example_count: 2,
