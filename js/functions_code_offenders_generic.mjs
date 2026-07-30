@@ -52,6 +52,11 @@ export async function functions_code_offenders_generic(reader, found_key) {
     return told;
   }
   let measured = await list_map_unordered_async(f_names, measure);
+  ("How many were looked at is said even when nothing was found, because nothing");
+  ("found is the answer these sweeps give on a good day and it is also the answer a");
+  ("sweep gives when it has stopped visiting anything. One number told beside it");
+  ("separates the two, and it costs a line.");
+  console.log("looked at " + f_names.length + " functions");
   let unread = list_size(unreadable);
   let any_unread = greater_than(unread, 0);
   if (any_unread) {
