@@ -21,6 +21,11 @@ export function js_literal_key_calls_set(ast, literal, f_name) {
   ("A word standing as the key of a written-out record is left alone even though it");
   ("does name a field. A call cannot stand in that place unless the brackets are put");
   ("around it, and adding brackets is a second change of a different kind.");
+  ("How many places were pointed is answered, because so many of the words this is");
+  ("asked about stand somewhere it may not touch: a caller handed a file where the");
+  ("word is only ever written some other way gets no change at all, and without a");
+  ("count that reads exactly like a file it repaired.");
+  let changed = 0;
   let call_code = js_code_call_args(f_name, []);
   function each_item(v) {
     let node = property_get(v, "node");
@@ -42,6 +47,8 @@ export function js_literal_key_calls_set(ast, literal, f_name) {
     }
     let expression = js_parse_expression(call_code);
     object_replace(node, expression);
+    changed = add(changed, 1);
   }
   js_visit_types(ast, ["Literal"], each_item);
+  return changed;
 }
