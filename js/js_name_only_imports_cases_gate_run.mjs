@@ -13,31 +13,17 @@ export function js_name_only_imports_cases_gate_run() {
   "So the cases must fail in both directions: a reader that says every import is spelling-only breaks the called-as-well-as-spelled cases, and one that says none is breaks the spelled-once case";
   "Throws so the dispatcher seam exits nonzero";
   let cases = js_name_only_imports_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let code = property_get(c, "code");
-    let expected = property_get(c, "only");
-    let actual = js_code_name_only_imports(code);
-    let told = list_join_comma(actual);
-    let wanted = list_join_comma(expected);
-    let b = equal(told, wanted);
-    let mark = b ? "pass  " : "FAIL  ";
-    let name = property_get(c, "name");
-    console.log(mark + name + "  -> [" + told + "]");
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    let only = js_code_name_only_imports(code);
+    return only;
   }
-  let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "name only imports cases gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "only",
+    "name",
+    "name only imports",
+  );
   return r;
 }

@@ -73,7 +73,7 @@ node scripts/ai.mjs function_select_apply_args_auto <fn> <selector> <selector_ar
 ```
 A *selector* is any fn `(ast, …args) → node`; a *transform* is any fn `(ast, selects, …args)`. Keeping the halves separate is what makes them multiply — every new transform pairs with every existing selector. The `_auto` suffix canonicalizes afterwards, which is what adds the import a new call needs; without it a commit can record a file that doesn't load.
 
-**Find one without reading the whole note:** `s js_,<verb>` (`functions_search`, over names) · `functions_prose_search <words>` (over what a function says it is for) · `functions_name_vocabulary <count>` (what this repo calls things — check your words before concluding nothing exists) · `i <name>` (`data_identifiers_search`, who calls what).
+**Find one without reading the whole note:** `s js_,<verb>` (`functions_search`, over names — `functions_search_multiple <a,b,c>` asks several guesses in one command, keyed by the word that found them) · `functions_prose_search <words>` (over what a function says it is for) · `functions_name_vocabulary <count>` (what this repo calls things — check your words before concluding nothing exists) · `i <name>` (`data_identifiers_search`, who calls what).
 
 **Everything else is in the note** — the full address × verb vocabulary and what each one does, authoring a whole function from names alone, registering examples and gates, the `_args` splitter's limits (it breaks on commas and dots), why a parameter may never take code, the two things deliberately not built, and the `ao` gotchas. **It is not optional reading; it is moved, not retired.** Open it the first time you touch a `js/*.mjs` file in a session.
 

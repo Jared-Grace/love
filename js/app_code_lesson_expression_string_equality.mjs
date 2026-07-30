@@ -113,12 +113,20 @@ export function app_code_lesson_expression_string_equality() {
     return built;
   }
   function above(root) {
-    "two rule boxes, each its own light-blue container - === and !== - and within each box the true case and the false case are stated on their own line, condition first (when ... then ... is true/false). No worked examples here: the four refreshable examples below demonstrate all four cases.";
+    "first a recall box anchoring on the === the learner already knows on numbers, then reveal it also compares strings; then two rule boxes, each its own light-blue container - === and !== - and within each box the true case and the false case are stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. No worked examples here: the four refreshable examples below demonstrate all four cases.";
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
+    let recall = app_code_container_light_blue(root);
+    let recall_line = html_div(recall);
+    html_span_text(recall_line, "You've seen that ");
+    html_span_text_code_dark(recall_line, "===");
+    html_span_text(recall_line, " asks if two numbers are the same");
+    let also_line = html_div(recall);
+    html_span_text_code_dark(also_line, "===");
+    html_span_text(also_line, " also compares two strings");
     let equals_box = app_code_container_light_blue(root);
     let equals_true = html_div(equals_box);
-    html_span_text(equals_true, "when both strings are exactly the same then ");
+    html_span_text(equals_true, "When both strings are exactly the same then ");
     html_span_text_code_dark(equals_true, "===");
     html_span_text(equals_true, " is ");
     html_span_text_code_dark(equals_true, true_text);

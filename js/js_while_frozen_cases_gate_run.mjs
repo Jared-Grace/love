@@ -12,28 +12,18 @@ export function js_while_frozen_cases_gate_run() {
   "So the cases fail in both directions: a reader that never names a loop breaks the four that must be named, and one that names every loop breaks the eleven that must be left alone - among them every ordinary way a loop has of ending, which are the ways this could send somebody to read working code";
   "Throws so the dispatcher seam exits nonzero";
   let cases = js_while_frozen_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let code = property_get(c, "code");
-    let expected = property_get(c, "stuck");
     let frozen = js_code_while_frozen_conditions(code);
     let told = frozen.length;
-    let b = equal(told, expected);
-    let mark = b ? "pass  " : "FAIL  ";
-    let name = property_get(c, "name");
-    console.log(mark + name + "  -> " + told + " of " + expected);
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    return told;
   }
-  let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error("while frozen cases gate: " + failures.length + " failed");
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "stuck",
+    "name",
+    "while frozen",
+  );
   return r;
 }
