@@ -390,6 +390,7 @@ export function permission_grant_names() {
   let spelled387 = fn_name("js_while_frozen_cases_gate_run");
   let spelled388 = fn_name("functions_while_frozen_gate_run");
   let spelled389 = fn_name("function_param_delete");
+  let spelled390 = fn_name("literal_duplicates_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -780,6 +781,7 @@ export function permission_grant_names() {
     spelled387,
     spelled388,
     spelled389,
+    spelled390,
   ];
   return names;
 }
