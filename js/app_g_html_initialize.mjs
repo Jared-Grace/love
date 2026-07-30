@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_hide_loadable } from "./html_hide_loadable.mjs";
 import { g_icon_cross_unpositioned } from "./g_icon_cross_unpositioned.mjs";
@@ -20,9 +21,12 @@ export function app_g_html_initialize(context) {
   html_style_overflow_hidden(root);
   app_g_player_style_initialize();
   let div_map_container = html_div(root);
+  ("the camera is the PLAYER, so the map does not scroll by hand: overflow HIDDEN still lets the code set scrollLeft/scrollTop (unlike overflow clip), which is the only thing that ever moves this view — ",
+    fn_name("app_g_player_center"),
+    " animates it back to the player after each move, and the 350ms glide is the delay you see. dragging the map away from the player used to be possible and left the player off-screen with nothing to bring them back");
   html_style_assign(div_map_container, {
     position: "relative",
-    overflow: "auto",
+    overflow: "hidden",
     width: "100%",
     "pointer-events": "auto",
   });
