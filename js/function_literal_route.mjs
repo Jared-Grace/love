@@ -1,3 +1,4 @@
+import { greater_than_equal_assert_json } from "./greater_than_equal_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get } from "./property_get.mjs";
@@ -41,7 +42,7 @@ export async function function_literal_route(f_name, getter_f_name) {
     await js_imports_auto_relative(ast, paths, from_dir);
   }
   await file_js_transform(f_path, lambda);
-  greater_than_assert_json(sites, 0, {
+  greater_than_equal_assert_json(sites, 1, {
     hint: "nothing in this file spells that word anywhere a call may stand, so there was nothing to point at the getter — is it written inside a list, or as the key of a written-out record? either one wants an edit by hand",
     f_name,
     getter_f_name,
