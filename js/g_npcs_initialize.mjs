@@ -1,3 +1,4 @@
+import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { each_index } from "./each_index.mjs";
 import { property_set } from "./property_set.mjs";
@@ -15,8 +16,8 @@ export function g_npcs_initialize(player_img, coordinates_land) {
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
   function npc_initialize(npc, index) {
-    let r4 = mod(index, gender_count);
-    let gender = list_get(genders, r4);
+    let r = mod(index, gender_count);
+    let gender = list_get(genders, r);
     let imgs = property_get(gender, "imgs");
     let r3 = list_random_item(imgs);
     property_set(npc, "img", r3);
@@ -31,7 +32,8 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     property_set(npc, "objections", 2);
     let pronouns = g_gender_pronouns(name);
     let conversation = g_conversation_generate(pronouns);
-    property_set(npc, app_g_conversation_key(), conversation);
+    let property_name = app_g_conversation_key();
+    property_set(npc, property_name, conversation);
   }
   each_index(npcs, npc_initialize);
   return npcs;
