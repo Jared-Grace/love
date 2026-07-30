@@ -22,7 +22,7 @@ export function app_code_lesson_expression_not_equal() {
     operator,
     question_middle: "different from",
     pair,
-    name_id_rights: [" not equal to"],
+    name_id_rights: ["not equal to"],
     closing,
     preamble: null,
     explanation: null,
