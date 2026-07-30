@@ -174,75 +174,75 @@ export function app_code_lesson_expression_string_order() {
       list_map(parts, part_render);
       return div;
     }
-    let stage_ = app_code_container_light_blue(root);
-    code_prose_line(stage_, [
-      ["code", "g"],
+    let stage_one = app_code_container_light_blue(root);
+    code_prose_line(stage_one, [
+      ["code", '"g"'],
       ["text", " comes before "],
-      ["code", "h"],
+      ["code", '"h"'],
     ]);
-    code_prose_line(stage_, [
+    code_prose_line(stage_one, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
       ["text", ", so "],
-      ["code", "g"],
+      ["code", '"g"'],
       ["text", " is before "],
-      ["code", "h"],
+      ["code", '"h"'],
     ]);
-    let stage_2 = app_code_container_light_blue(root);
-    code_prose_line(stage_2, [
-      ["code", "ag"],
+    let stage_two = app_code_container_light_blue(root);
+    code_prose_line(stage_two, [
+      ["code", '"ag"'],
       ["text", " comes before "],
-      ["code", "ah"],
+      ["code", '"ah"'],
     ]);
-    code_prose_line(stage_2, [
-      ["code", "ag"],
+    code_prose_line(stage_two, [
+      ["code", '"ag"'],
       ["text", " and "],
-      ["code", "ah"],
+      ["code", '"ah"'],
       ["text", " have the same first symbol ("],
       ["code", "a"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_2, [
+    code_prose_line(stage_two, [
       ["text", "So the second symbols are compared ("],
       ["code", "g"],
       ["text", ", "],
       ["code", "h"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_2, [
+    code_prose_line(stage_two, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
       ["text", ", so "],
-      ["code", "ag"],
+      ["code", '"ag"'],
       ["text", " is before "],
-      ["code", "ah"],
+      ["code", '"ah"'],
     ]);
-    let stage_3 = app_code_container_light_blue(root);
-    code_prose_line(stage_3, [
-      ["code", "abg"],
+    let stage_three = app_code_container_light_blue(root);
+    code_prose_line(stage_three, [
+      ["code", '"abg"'],
       ["text", " and "],
-      ["code", "abh"],
+      ["code", '"abh"'],
       ["text", " have the same first 2 symbols ("],
       ["code", "ab"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_3, [
+    code_prose_line(stage_three, [
       ["text", "So the third symbols are compared ("],
       ["code", "g"],
       ["text", ", "],
       ["code", "h"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_3, [
+    code_prose_line(stage_three, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
       ["text", ", so "],
-      ["code", "abg"],
+      ["code", '"abg"'],
       ["text", " is before "],
-      ["code", "abh"],
+      ["code", '"abh"'],
     ]);
     let pattern = app_code_container_light_blue(root);
     code_prose_line(pattern, [["text", "This pattern continues:"]]);
