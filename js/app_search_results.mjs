@@ -183,8 +183,13 @@ export async function app_search_results(context, div_results) {
     let squashed = await collect_all_texts();
     await list_join_newline_2_copy(squashed);
   }
-  app_shared_button_wide(div_results, "Expand all", expand_all_lambda);
-  app_shared_button_wide(div_results, "Collapse all", collapse_all_lambda);
+  ("the three buttons stand in one row, so each wears a picture for the same reason the copying one always has: a reader picks the one they want by its picture before they have read any of the words");
+  let down = emoji_triangle_down();
+  let expand_all_text = text_combine(down, " Expand all");
+  app_shared_button_wide(div_results, expand_all_text, expand_all_lambda);
+  let up = emoji_triangle_up();
+  let collapse_all_text = text_combine(up, " Collapse all");
+  app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
   let left2 = html_button_copy_text();
   let copy_all_text = text_combine(left2, " all");
   let copy_all = app_shared_button_wide(
