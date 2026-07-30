@@ -30,19 +30,19 @@ export function app_code_lesson_expression_string_order() {
   let combos = [
     {
       operator: less_operator,
-      left_first: true,
-    },
-    {
-      operator: greater_operator,
-      left_first: true,
+      relation: "before",
     },
     {
       operator: less_operator,
-      left_first: false,
+      relation: "equal",
     },
     {
       operator: greater_operator,
-      left_first: false,
+      relation: "after",
+    },
+    {
+      operator: greater_operator,
+      relation: "equal",
     },
   ];
   function words_source() {
@@ -59,11 +59,13 @@ export function app_code_lesson_expression_string_order() {
     return lower_only;
   }
   function question_code(combo, earlier, later) {
-    "one comparison as a code string: the shared earlier/later pair in quotes with the operator between them, arranged so the alphabetically-earlier word sits on the left when left_first is set and on the right when it is not - which fixes whether the comparison is true or false without computing it here";
+    "one comparison as a code string: the shared pair arranged by the relation - equal uses the earlier word on both sides, before puts the earlier word on the left, after puts the later word on the left - which fixes whether the comparison is true or false without computing it here";
     let operator = property_get(combo, "operator");
-    let left_first = property_get(combo, "left_first");
-    let left = ternary(left_first, earlier, later);
-    let right = ternary(left_first, later, earlier);
+    let relation = property_get(combo, "relation");
+    let after = equal(relation, "after");
+    let before = equal(relation, "before");
+    let left = ternary(after, later, earlier);
+    let right = ternary(before, later, earlier);
     let code_left = app_code_string_code(left);
     let code_right = app_code_string_code(right);
     let joined = text_combine_multiple([
@@ -76,7 +78,7 @@ export function app_code_lesson_expression_string_order() {
     return joined;
   }
   function refill() {
-    "four comparisons over ONE shared pair of words, so only the operator and the left/right order change from one example to the next and the learner reads the rule off the contrast: less-than and greater-than, each shown true and false, a balanced two true and two false";
+    "four comparisons over ONE shared pair of words: each operator shown true (in its correct direction) and false (when the two strings are equal), so the equal-is-false case - the one < and > share and the thing most easily missed - is drilled for both, a balanced two true and two false";
     let words = words_source();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
