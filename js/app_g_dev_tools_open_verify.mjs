@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { server_url } from "./server_url.mjs";
@@ -51,12 +53,20 @@ export async function app_g_dev_tools_open_verify() {
     await page.waitForTimeout(8000);
     let opened = await page.innerText("body");
     let hash = page.url();
+    ("the text alone cannot answer this one: both panels can be present in the page and only one of them be the one you SEE, so the picture is the evidence and the words are only the index to it");
+    let picture = folder_gitignore_join(
+      text_combine_multiple([fn_name("app_g_dev_tools_open_verify"), ".png"]),
+    );
+    await page.screenshot({
+      path: picture,
+    });
     told = {
       url,
       booted,
       menu,
       opened,
       hash,
+      picture,
       lines,
     };
   } finally {
