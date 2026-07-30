@@ -24,8 +24,8 @@ export async function git_commits_back_to(folder, commit_floor) {
     behind,
     "the commit named as the oldest one to ship is not behind the one we are standing on, so there is no walk from here back to it - was it named from another line of work?",
   );
-  let range = text_combine_multiple([floor_full, "..HEAD"]);
-  let printed = await git_folder_run(folder, ["rev-list", range]);
+  let commit_range = text_combine_multiple([floor_full, "..HEAD"]);
+  let printed = await git_folder_run(folder, ["rev-list", commit_range]);
   let s = text_trim(printed);
   let lines = text_split_newline(s);
   let commits = list_filter_equal_not(lines, "");
