@@ -1,23 +1,9 @@
+import { list_adder_group_start_add_end } from "./list_adder_group_start_add_end.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
-import { list_add } from "./list_add.mjs";
 export async function list_adder_group_async(lambda) {
   async function adder_groups(la) {
-    let group = null;
-    await lambda({
-      start,
-      add: add_item,
-      end,
-    });
-    function end() {
-      la(group);
-      start();
-    }
-    function start() {
-      group = [];
-    }
-    function add_item(item) {
-      list_add(group, item);
-    }
+    let handed = list_adder_group_start_add_end(la);
+    await lambda(handed);
   }
   let groups = await list_adder_async(adder_groups);
   return groups;
