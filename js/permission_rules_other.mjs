@@ -2,21 +2,18 @@ import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function permission_rules_other() {
   "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
-  let combined = text_combine_multiple([
-    "Bash(pkill -f ai.mjs ",
-    fn_name("qa_gate_run"),
-    ")",
-  ]);
+  let f_name = fn_name("qa_gate_run");
+  let combined = text_combine_multiple(["Bash(pkill -f ai.mjs ", f_name, ")"]);
+  let f_name2 = fn_name("examples_gate_run");
   let combined2 = text_combine_multiple([
     "Bash(pkill -f ai.mjs ",
-    fn_name("examples_gate_run"),
+    f_name2,
     ")",
   ]);
   let texts = [
     "Bash(find:*)",
     "Bash(grep:*)",
     "Bash(cat:*)",
-    "Bash(cp:*)",
     "Bash(cut:*)",
     "Bash(cd:*)",
     "Bash(date:*)",
@@ -87,8 +84,6 @@ export function permission_rules_other() {
     "Bash(rm -f public/dev/sandbox.js public/dev/calendar.js)",
     "Bash(rm -f public/dev/sandbox.js)",
     "Bash(rm -f public/dev/calendar.js)",
-    "Edit(.claude/hooks/**)",
-    "Edit(.claude/hooks/bash-command-guard.py)",
     "Edit(.claude/hooks/claude_edit_claim.mjs)",
     "Edit(.claude/hooks/memory_write_allow.mjs)",
     "Edit(.claude/settings.json)",
