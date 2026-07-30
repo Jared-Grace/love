@@ -28,7 +28,7 @@ export async function qa_app_commit_deployable_generic(
     let remembered = property_get(at, "remembered");
     let set_aside = property_get(at, "elsewhere");
     ("the gates that were red here and could not reach this app are named as well as counted, because they are the whole argument for looking at one app rather than at the repo - a walk that showed only what blocked it would read as though nothing else had been red at all");
-    let elsewhere = list_map_property_get(set_aside, "gate");
+    let elsewhere = list_map_property(set_aside, "gate");
     list_add(walked, {
       commit,
       deployable,
