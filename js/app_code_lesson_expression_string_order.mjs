@@ -1,3 +1,4 @@
+import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
@@ -120,7 +121,8 @@ export function app_code_lesson_expression_string_order() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Alphabetical order");
+        html_span_text(parent, "Alphabetical order ");
+        app_code_string_operators_shape(parent, "<", ">");
       }
       return render;
     }
