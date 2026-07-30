@@ -1,3 +1,4 @@
+import { list_map_property_get } from "./list_map_property_get.mjs";
 import { git_commits_between } from "./git_commits_between.mjs";
 import { qa_app_commit_gate_run_at } from "./qa_app_commit_gate_run_at.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
@@ -25,11 +26,15 @@ export async function qa_app_commit_deployable_generic(
     let deployable = property_get(at, "deployable");
     let blocking = property_get(at, "blocking");
     let remembered = property_get(at, "remembered");
+    let set_aside = property_get(at, "elsewhere");
+    ("the gates that were red here and could not reach this app are named as well as counted, because they are the whole argument for looking at one app rather than at the repo - a walk that showed only what blocked it would read as though nothing else had been red at all");
+    let elsewhere = list_map_property_get(set_aside, "gate");
     list_add(walked, {
       commit,
       deployable,
       remembered,
       blocking,
+      elsewhere,
     });
     if (deployable) {
       chosen = commit;
