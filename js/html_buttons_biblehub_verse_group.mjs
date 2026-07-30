@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -17,7 +18,9 @@ export function html_buttons_biblehub_verse_group(
   folder,
   ending,
 ) {
-  "one biblehub link kind (commentary / parallel / interlinear) for a passage. SINGLE verse: one button captioned <label> appended to parent. MULTI-verse: parent is a shared two-column GRID (see html_buttons_biblehub_verse_grid) — appends a right-aligned <label>: cell and a left-aligned cell of one bare verse-number button per verse, so the verse numbers of all three link-kinds line up in a column";
+  ("one biblehub link kind (commentary / parallel / interlinear) for a passage. SINGLE verse: one button captioned <label> appended to parent. MULTI-verse: parent is a shared two-column GRID (see ",
+    fn_name("html_buttons_biblehub_verse_grid"),
+    ") — appends a right-aligned <label>: cell and a left-aligned cell of one bare verse-number button per verse, so the verse numbers of all three link-kinds line up in a column");
   let multi = greater_than_equal(verse_list.length, 2);
   if (not(multi)) {
     html_button_biblehub_open(
