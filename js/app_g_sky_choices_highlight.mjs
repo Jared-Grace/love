@@ -8,7 +8,7 @@ import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 export async function app_g_sky_choices_highlight() {
-  "restyle the #sky choice pills so the one matching the CURRENT sky (the anchor nearest the live phase) is active/selected — called on render, after a jump, and after each walk-step, so the you-are-here marker always tracks the live sky. reads the pills the choice panel stashed on this function; a no-op when the panel isn't up (the real game), so the demo-only step path can call it blindly";
+  "restyle the #day_parts choice pills so the one matching the CURRENT sky (the anchor nearest the live phase) is active/selected — called on render, after a jump, and after each walk-step, so the you-are-here marker always tracks the live sky. reads the pills the choice panel stashed on this function; a no-op when the panel isn't up (the real game), so the demo-only step path can call it blindly";
   let up = global_function_property_exists(
     app_g_sky_choices_highlight,
     "pills",
