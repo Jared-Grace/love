@@ -1,3 +1,4 @@
+import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
 import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
 import { js_free_names_cases_gate_run } from "./js_free_names_cases_gate_run.mjs";
@@ -147,6 +148,7 @@ export function qa_gates() {
     app_g_day_blocked_check,
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
+    functions_names_in_text_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
