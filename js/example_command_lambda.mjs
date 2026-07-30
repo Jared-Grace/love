@@ -1,4 +1,4 @@
-import { js_strings_add_reference_to_fn_names } from "./js_strings_add_reference_to_fn_names.mjs";
+import { example_whole_file_lambda } from "./example_whole_file_lambda.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_shadowing_rename_lambda } from "./js_shadowing_rename_lambda.mjs";
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
@@ -6,9 +6,6 @@ import { example_select_apply_named } from "./example_select_apply_named.mjs";
 import { example_fn_name_references_lambda } from "./example_fn_name_references_lambda.mjs";
 import { equal } from "./equal.mjs";
 import { function_identifier_replace_lambda } from "./function_identifier_replace_lambda.mjs";
-import { js_atomize } from "./js_atomize.mjs";
-import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
-import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
 import { function_arguments_assert_each_add_lambda } from "./function_arguments_assert_each_add_lambda.mjs";
 import { js_node_type_is_new_lambda } from "./js_node_type_is_new_lambda.mjs";
 import { example_imports_lambda } from "./example_imports_lambda.mjs";
@@ -21,7 +18,7 @@ import { example_fold_auto_lambda } from "./example_fold_auto_lambda.mjs";
 import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
 import { js_block_body_add_code_first } from "./js_block_body_add_code_first.mjs";
 import { example_block_body_add_lambda } from "./example_block_body_add_lambda.mjs";
-export function example_command_lambda(f_name, args, e) {
+export async function example_command_lambda(f_name, args, e) {
   "An example that names its address as well as its verb takes the one branch";
   "that covers every pairing. The branches below each fix a verb to the one";
   "address it was written with, so they can show a cell of the multiplication and";
@@ -46,18 +43,6 @@ export function example_command_lambda(f_name, args, e) {
       args,
     );
     return lambda_named;
-  }
-  if (equal(f_name, js_atomize.name)) {
-    return js_atomize;
-  }
-  if (equal(f_name, js_imports_unused_remove.name)) {
-    return js_imports_unused_remove;
-  }
-  if (equal(f_name, js_imports_paths_fix.name)) {
-    return js_imports_paths_fix;
-  }
-  if (equal(f_name, js_strings_add_reference_to_fn_names.name)) {
-    return js_strings_add_reference_to_fn_names;
   }
   let right = fn_name("function_arguments_assert_each_add");
   if (equal(f_name, right)) {
@@ -122,9 +107,10 @@ export function example_command_lambda(f_name, args, e) {
   }
   ("Every pairing that was once a branch of its own now arrives through the one");
   ("above, because its example names its address as well as its verb. What is left");
-  ("here is what that generic path cannot yet say: a whole-file pass, which has no");
-  ("address at all, and the two block verbs, whose address is a slot inside an if");
-  ("rather than anything a register lists.");
+  ("here is the two block verbs, whose address is a slot inside an if rather than");
+  ("anything a register lists. A whole-file pass has no address at all, so it needs");
+  ("no branch either: it leaves by the last return, which reads the name as the");
+  ("whole specification.");
   if (equal(f_name, js_block_body_add_code.name)) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
@@ -148,5 +134,6 @@ export function example_command_lambda(f_name, args, e) {
     let lambda13 = example_fn_name_references_lambda();
     return lambda13;
   }
-  return null;
+  let whole_file = await example_whole_file_lambda(f_name);
+  return whole_file;
 }
