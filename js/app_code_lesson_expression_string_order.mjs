@@ -153,25 +153,87 @@ export function app_code_lesson_expression_string_order() {
       dictionary_line,
       "Strings are compared in alphabetical order, the way words are listed in a dictionary",
     );
-    let how_box = app_code_container_light_blue(root);
-    let one_at_a_time_line = html_div(how_box);
-    html_span_text(
-      one_at_a_time_line,
-      "The letters are compared one at a time",
-    );
-    let decides_line = html_div(how_box);
-    html_span_text(
-      decides_line,
-      "The first letter that is different decides the order",
-    );
-    let example_1_line = html_div(how_box);
-    html_span_text_code_dark(example_1_line, '"ca"');
-    html_span_text(example_1_line, " comes before ");
-    html_span_text_code_dark(example_1_line, '"cb"');
-    let example_2_line = html_div(how_box);
-    html_span_text_code_dark(example_2_line, '"dea"');
-    html_span_text(example_2_line, " comes before ");
-    html_span_text_code_dark(example_2_line, '"deb"');
+    function code_prose_line(box, parts) {
+      "one line in a box, built from parts - each part is a two-item [kind, text] pair where kind 'code' renders a dark code token (a symbol or a sequence of symbols) and anything else renders plain prose";
+      let div = html_div(box);
+      function add(part) {
+        "render one part into the line: a code token or plain prose";
+        let kind = list_get(part, 0);
+        let text = list_get(part, 1);
+        let is_code = equal(kind, "code");
+        let renderer = ternary(
+          is_code,
+          html_span_text_code_dark,
+          html_span_text,
+        );
+        renderer(div, text);
+        return null;
+      }
+      list_map(parts, add);
+      return div;
+    }
+    let stage_ = app_code_container_light_blue(root);
+    code_prose_line(stage_, [
+      ["code", "g"],
+      ["text", " comes before "],
+      ["code", "h"],
+    ]);
+    code_prose_line(stage_, [
+      ["code", "g"],
+      ["text", " comes earlier in the alphabet than "],
+      ["code", "h"],
+      ["text", ", so "],
+      ["code", "g"],
+      ["text", " is before "],
+      ["code", "h"],
+    ]);
+    let stage_2 = app_code_container_light_blue(root);
+    code_prose_line(stage_2, [
+      ["code", "ag"],
+      ["text", " comes before "],
+      ["code", "ah"],
+    ]);
+    code_prose_line(stage_2, [
+      ["code", "ag"],
+      ["text", " and "],
+      ["code", "ah"],
+      ["text", " have the same first symbol"],
+    ]);
+    code_prose_line(stage_2, [["text", "So the second symbols are compared"]]);
+    code_prose_line(stage_2, [
+      ["code", "g"],
+      ["text", " comes earlier in the alphabet than "],
+      ["code", "h"],
+      ["text", ", so "],
+      ["code", "ag"],
+      ["text", " is before "],
+      ["code", "ah"],
+    ]);
+    let stage_3 = app_code_container_light_blue(root);
+    code_prose_line(stage_3, [
+      ["code", "abg"],
+      ["text", " and "],
+      ["code", "abh"],
+      ["text", " have the same first 2 symbols"],
+    ]);
+    code_prose_line(stage_3, [["text", "So the third symbols are compared"]]);
+    code_prose_line(stage_3, [
+      ["code", "g"],
+      ["text", " comes earlier in the alphabet than "],
+      ["code", "h"],
+      ["text", ", so "],
+      ["code", "abg"],
+      ["text", " is before "],
+      ["code", "abh"],
+    ]);
+    let pattern = app_code_container_light_blue(root);
+    code_prose_line(pattern, [["text", "This pattern continues:"]]);
+    code_prose_line(pattern, [
+      [
+        "text",
+        "If the first symbols are the same, then the first symbols that are different are compared",
+      ],
+    ]);
     let less_box = app_code_container_light_blue(root);
     let less_true = html_div(less_box);
     html_span_text(
