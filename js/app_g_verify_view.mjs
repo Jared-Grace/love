@@ -250,9 +250,13 @@ export async function app_g_verify_view(
   let bh_book = g_verify_book_name(book_code);
   let verse_list = verse.split(",");
   html_button_bible_chapter_open(links_bar, chapter_code, "Whole Chapter");
-  ("Commentary / Parallel / Interlinear each as a verse-group: one button for a single verse, or its own container of per-verse buttons for a multi-verse passage (a single button reaches only the first verse)");
+  ("Commentary / Parallel / Interlinear each as a verse-group: one button for a single verse, or (multi-verse) a row of per-verse buttons in a shared centered grid so the verse numbers line up across the three kinds (a single button reaches only the first verse)");
+  let multi_verse = greater_than_equal(verse_list.length, 2);
+  let links_target = multi_verse
+    ? html_buttons_biblehub_verse_grid(links_bar)
+    : links_bar;
   html_buttons_biblehub_verse_group(
-    links_bar,
+    links_target,
     bh_book,
     bh_chapter,
     verse_list,
@@ -261,7 +265,7 @@ export async function app_g_verify_view(
     "#commentary",
   );
   html_buttons_biblehub_verse_group(
-    links_bar,
+    links_target,
     bh_book,
     bh_chapter,
     verse_list,
@@ -270,7 +274,7 @@ export async function app_g_verify_view(
     "",
   );
   html_buttons_biblehub_verse_group(
-    links_bar,
+    links_target,
     bh_book,
     bh_chapter,
     verse_list,
