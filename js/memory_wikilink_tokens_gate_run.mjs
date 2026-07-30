@@ -1,11 +1,7 @@
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { memory_wikilink_cases } from "./memory_wikilink_cases.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
 import { property_get } from "./property_get.mjs";
-import { json_equal } from "./json_equal.mjs";
-import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export function memory_wikilink_tokens_gate_run() {
   "QA gate: each written-down piece of writing yields the double-bracket names the";
   "corpus says it does, and no others.";
