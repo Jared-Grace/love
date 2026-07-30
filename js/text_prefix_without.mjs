@@ -1,4 +1,4 @@
-import { assert_json_get } from "./assert_json_get.mjs";
+import { assert_json } from "./assert_json.mjs";
 import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function text_prefix_without(t, prefix) {
