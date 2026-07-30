@@ -1,3 +1,4 @@
+import { functions_assert_json_get_lambda_gate_run } from "./functions_assert_json_get_lambda_gate_run.mjs";
 import { app_code_lessons_rights_space_gate_run } from "./app_code_lessons_rights_space_gate_run.mjs";
 import { js_identifiers_referenced_names_cases_gate_run } from "./js_identifiers_referenced_names_cases_gate_run.mjs";
 import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
