@@ -18,7 +18,7 @@ export function app_code_string_operators_shape(
   let dots = html_span_text(string_tile, "...");
   html_font_color_set(dots, placeholder_color);
   html_span_text(string_tile, quote);
-  html_span_text(parent, " ");
+  html_span_text(parent, ": ");
   html_span_text_code_dark(parent, operator_a);
   html_span_text(parent, ", ");
   html_span_text_code_dark(parent, operator_b);
