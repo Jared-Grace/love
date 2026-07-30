@@ -66,6 +66,8 @@ export function examples_notes() {
       "refuse to fold when an internal local escapes the block",
     example_fold_refused_gap:
       "refuse to fold across a gap between the matched statements",
+    example_no_function_named_refused:
+      "the guard on the seam every command passes through — refusing before anything is written down",
     example_imports_migrate_multi_function: "add missing imports across a file",
     example_auto_imports_all_three: "add + remove + canonicalize at once",
     example_imports_property_names_are_not_references:
