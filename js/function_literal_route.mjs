@@ -29,15 +29,29 @@ export async function function_literal_route(f_name, getter_f_name) {
   });
   let f_path = property_get(paths, f_name);
   let from_dir = import_from_dir_path(f_path);
+  ("How many places were pointed is carried back out and refused when it is none.");
+  ("The rewriting only reaches a word standing where a call may stand, so a file");
+  ("spelling it somewhere else - inside a list being joined, say - comes back");
+  ("untouched. Answered the same way either way, that read as a repair that had");
+  ("landed: the report offering this command stayed red, the command kept saying it");
+  ("had done the work, and the reader was left to conclude the report was at fault.");
+  let sites = 0;
   async function lambda(ast) {
-    js_literal_key_calls_set(ast, literal, getter_f_name);
+    sites = js_literal_key_calls_set(ast, literal, getter_f_name);
     await js_imports_auto_relative(ast, paths, from_dir);
   }
   await file_js_transform(f_path, lambda);
+  greater_than_assert_json(sites, 0, {
+    hint: "nothing in this file spells that word anywhere a call may stand, so there was nothing to point at the getter — is it written inside a list, or as the key of a written-out record? either one wants an edit by hand",
+    f_name,
+    getter_f_name,
+    literal,
+  });
   let r = {
     f_name,
     getter_f_name,
     literal,
+    sites,
   };
   return r;
 }
