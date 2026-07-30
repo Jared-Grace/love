@@ -1,3 +1,4 @@
+import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
 import { null_is } from "./null_is.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
@@ -42,7 +43,7 @@ export async function qa_gate_failures_report(results, gates) {
           ": it complained while the others were running and had nothing to say when asked on its own, which is what a file being edited mid-run looks like",
       );
     } catch (e) {
-      console.log("GATE FAILED  " + name + ": " + e.message);
+      console.log(qa_gate_failed_prefix() + name + ": " + e.message);
       let first = null_is(known);
       if (first) {
         known = await functions_names();

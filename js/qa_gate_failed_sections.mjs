@@ -1,3 +1,4 @@
+import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
 import { list_from_index } from "./list_from_index.mjs";
 import { newline } from "./newline.mjs";
 import { text_split } from "./text_split.mjs";
@@ -22,7 +23,7 @@ export function qa_gate_failed_sections(output) {
   let edge = "===";
   let opening = "=== ";
   let closing = " ===";
-  let failure = "GATE FAILED  ";
+  let failure = qa_gate_failed_prefix();
   let hush = "QUIET ON THE SECOND ASK  ";
   let separator = newline();
   let lines = text_split(output, separator);
