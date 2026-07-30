@@ -1,3 +1,4 @@
+import { property_exists } from "./property_exists.mjs";
 import { json_from } from "./json_from.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { ai_log_path } from "./ai_log_path.mjs";
