@@ -15,29 +15,17 @@ export function memory_wikilink_tokens_gate_run() {
   "memory folder they had genuinely read and genuinely never looked at.";
   "Throws so the dispatcher seam exits nonzero.";
   let cases = memory_wikilink_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let text = property_get(c, "text");
-    let expected = property_get(c, "links");
-    let actual = memory_wikilink_tokens(text);
-    let b = json_equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
-    let why = property_get(c, "why");
-    console.log(mark + JSON.stringify(actual) + "  " + why);
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    let links = memory_wikilink_tokens(text);
+    return links;
   }
-  let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "memory wikilink tokens gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "links",
+    "why",
+    "memory wikilink tokens",
+  );
   return r;
 }
