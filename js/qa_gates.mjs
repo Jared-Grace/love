@@ -1,3 +1,4 @@
+import { js_free_names_cases_gate_run } from "./js_free_names_cases_gate_run.mjs";
 import { memory_wikilink_tokens_gate_run } from "./memory_wikilink_tokens_gate_run.mjs";
 import { literal_duplicates_gate_run } from "./literal_duplicates_gate_run.mjs";
 import { literal_duplicates_cases_gate_run } from "./literal_duplicates_cases_gate_run.mjs";
@@ -105,6 +106,7 @@ export function qa_gates() {
     daemons_gate_run,
     python_mirrors_assert,
     function_worker_pool_run_try,
+    js_free_names_cases_gate_run,
     function_imports_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
