@@ -53,6 +53,11 @@ export async function app_g_dev_tools_open_verify() {
     await page.waitForTimeout(8000);
     let opened = await page.innerText("body");
     let hash = page.url();
+    ("one card is pressed too, because the button and the cards go to a screen the same way now - so a run that only pressed the button would leave the larger half of that going-there untested");
+    let card = page.getByText("design");
+    await card.click();
+    await page.waitForTimeout(8000);
+    let routed = page.url();
     ("the text alone cannot answer this one: both panels can be present in the page and only one of them be the one you SEE, so the picture is the evidence and the words are only the index to it");
     let picture = folder_gitignore_join(
       text_combine_multiple([fn_name("app_g_dev_tools_open_verify"), ".png"]),

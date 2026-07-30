@@ -26,7 +26,7 @@ export function app_g_dev_index() {
     app_shared_container_blue.name,
     " cards + bold collapsible header the search uses, mirroring ",
     f_name,
-    ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link (click + reload-on-hash-change) jumps to that screen. routes + categories come from the ",
+    ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link jumps to that screen. routes + categories come from the ",
   ]),
     app_g_dev_routes.name,
     " registry + ",
