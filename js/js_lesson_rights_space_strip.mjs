@@ -29,8 +29,8 @@ export function js_lesson_rights_space_strip(ast) {
   "silently did nothing looks exactly like a sweep that worked.";
   let changed = 0;
   function list_strip(list_node) {
-    let list_is = js_node_type_is(list_node, "ArrayExpression");
-    if (not(list_is)) {
+    let list_written_is = js_node_type_is(list_node, "ArrayExpression");
+    if (not(list_written_is)) {
       return;
     }
     let elements = property_get(list_node, "elements");
