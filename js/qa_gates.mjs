@@ -1,3 +1,4 @@
+import { app_code_lessons_rights_space_gate_run } from "./app_code_lessons_rights_space_gate_run.mjs";
 import { js_identifiers_referenced_names_cases_gate_run } from "./js_identifiers_referenced_names_cases_gate_run.mjs";
 import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
 import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
@@ -166,6 +167,7 @@ export function qa_gates() {
     app_shared_imports_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
+    app_code_lessons_rights_space_gate_run,
   ];
   return gates;
 }
