@@ -6,7 +6,7 @@ import { app_g_sky_pill_style } from "./app_g_sky_pill_style.mjs";
 import { app_g_sky_phase_write } from "./app_g_sky_phase_write.mjs";
 import { g_clock_sky_phase } from "./g_clock_sky_phase.mjs";
 export async function app_g_hour_choices() {
-  "the #hour previewer's panel (dev only): a fixed grid of 24 pills, one per wall-clock hour 0..23. clicking a pill paints the sky at that hour (g_clock_sky_phase → app_g_sky_phase_write), the active pill inverts, so you can eyeball every hour — especially the dusk band past sunset (18..21) — to CHOOSE the day's cutoff. starts on 18:00 (sunset) since that is the band you're deciding. BESPOKE (loop + local highlight) — do NOT auto-canonicalize";
+  "the #day_hours previewer's panel (dev only): a fixed grid of 24 pills, one per wall-clock hour 0..23. clicking a pill paints the sky at that hour (g_clock_sky_phase → app_g_sky_phase_write), the active pill inverts, so you can eyeball every hour — especially the dusk band past sunset (18..21) — to CHOOSE the day's cutoff. starts on 18:00 (sunset) since that is the band you're deciding. BESPOKE (loop + local highlight) — do NOT auto-canonicalize";
   let body = html_document_body();
   let panel = html_div(body);
   html_style_assign(panel, {
