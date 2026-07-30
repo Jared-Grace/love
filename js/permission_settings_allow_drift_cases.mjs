@@ -62,9 +62,17 @@ export function permission_settings_allow_drift_cases() {
       verdict: text_frozen("addition"),
     },
     {
-      name: "rules differ but neither side names a dispatcher function, so nothing arrived or departed",
+      name: "a rule would be added that names no dispatcher function, so no name can pay for it",
       missing: [text_frozen("Bash(ls:*)")],
       extra: [],
+      arrived: [],
+      departed: [],
+      verdict: text_frozen("addition"),
+    },
+    {
+      name: "a hand-written rule departs, which only narrows and needs no name",
+      missing: [],
+      extra: [text_frozen("Bash(ls:*)")],
       arrived: [],
       departed: [],
       verdict: text_frozen("shrink"),
