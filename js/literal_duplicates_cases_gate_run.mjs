@@ -20,36 +20,24 @@ export function literal_duplicates_cases_gate_run() {
   "for reasons that are not about this.";
   "Throws so the dispatcher seam exits nonzero.";
   let cases = literal_duplicates_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let codes = property_get(c, "codes");
-    let expected = property_get(c, "found");
     let found = literal_duplicates_generic(codes);
-    let actual = [];
+    let named = [];
     for (let entry of found) {
-      list_add(actual, {
+      list_add(named, {
         f_name: entry.f_name,
         files: entry.files,
       });
     }
-    let b = json_equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
-    let why = property_get(c, "why");
-    console.log(mark + JSON.stringify(actual) + "  " + why);
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    return named;
   }
-  let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "duplicated constant cases gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "found",
+    "why",
+    "duplicated constant",
+  );
   return r;
 }
