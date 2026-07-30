@@ -15,7 +15,7 @@ export function js_identifiers_referenced_names_cases() {
   let a = text_frozen("list_add");
   let a2 = text_frozen("list_add");
   let a3 = text_frozen("list_add");
-  let a4 = text_frozen("list_add");
+  let b = text_frozen("list_map");
   let cases = [
     {
       name: "a name called as a function",
@@ -62,9 +62,9 @@ export function js_identifiers_referenced_names_cases() {
     {
       name: "a name mentioned twice is answered once",
       code: text_frozen(
-        "export function f() {\n  return list_add(list_add([], 1), 2);\n}\n",
+        "export function f(lambda) {\n  return list_map(list_map([], lambda), lambda);\n}\n",
       ),
-      referenced: ["f", a4],
+      referenced: ["f", "lambda", b],
     },
     {
       name: "a name the file declares is still a mention - what binds it is another reading's question",
