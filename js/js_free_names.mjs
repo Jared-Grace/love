@@ -18,8 +18,11 @@ export function js_free_names(ast) {
   ("time, so no answer moves.");
   let names = js_declared_names(ast);
   let names2 = js_function_params_all(ast);
-  let names3 = js_global_names();
-  let bound = list_concat_multiple([imports, names, names2, names3]);
+  ("a caught error is bound by neither of the two lists above - it is not declared");
+  ("and it is not written in a parameter list - so it is asked for on its own");
+  let names3 = js_catch_clause_names_all(ast);
+  let names4 = js_global_names();
+  let bound = list_concat_multiple([imports, names, names2, names3, names4]);
   let free = list_difference(referenced, bound);
   return free;
 }
