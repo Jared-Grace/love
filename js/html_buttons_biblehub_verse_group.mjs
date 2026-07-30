@@ -1,9 +1,10 @@
 import { html_div } from "./html_div.mjs";
-import { html_centered } from "./html_centered.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_button_biblehub_open } from "./html_button_biblehub_open.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
@@ -16,7 +17,7 @@ export function html_buttons_biblehub_verse_group(
   folder,
   ending,
 ) {
-  "one biblehub link kind (commentary / parallel / interlinear) for a passage. For a SINGLE verse: one button captioned <label>. For a MULTI-verse passage: its OWN container holding a <label>: caption and one bare verse-number button per verse — because a single button reaches only the first verse of the group";
+  "one biblehub link kind (commentary / parallel / interlinear) for a passage. SINGLE verse: one button captioned <label> appended to parent. MULTI-verse: parent is a shared two-column GRID (see html_buttons_biblehub_verse_grid) — appends a right-aligned <label>: cell and a left-aligned cell of one bare verse-number button per verse, so the verse numbers of all three link-kinds line up in a column";
   let multi = greater_than_equal(verse_list.length, 2);
   if (not(multi)) {
     html_button_biblehub_open(
@@ -30,15 +31,17 @@ export function html_buttons_biblehub_verse_group(
     );
     return;
   }
-  let row = html_div(parent);
-  html_centered(row);
-  let caption = html_span_text(row, label + ":");
+  let caption = html_span_text(parent, label + ":");
   app_shared_text_deemphasized(caption);
+  html_style_set(caption, "justify-self", "end");
+  let buttons_cell = html_div(parent);
+  html_display_flex(buttons_cell);
   let gap = app_shared_spaced_small_gap();
-  html_style_set(caption, "margin-right", gap);
+  html_style_gap(buttons_cell, gap);
+  html_style_set(buttons_cell, "justify-self", "start");
   function verse_button(verse_number) {
     html_button_biblehub_open(
-      row,
+      buttons_cell,
       book_name,
       chapter_name,
       verse_number,

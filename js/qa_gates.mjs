@@ -1,3 +1,4 @@
+import { memory_wikilink_tokens_gate_run } from "./memory_wikilink_tokens_gate_run.mjs";
 import { literal_duplicates_gate_run } from "./literal_duplicates_gate_run.mjs";
 import { literal_duplicates_cases_gate_run } from "./literal_duplicates_cases_gate_run.mjs";
 import { js_while_frozen_cases_gate_run } from "./js_while_frozen_cases_gate_run.mjs";
@@ -81,6 +82,7 @@ export function qa_gates() {
     memory_pointer_gate_run,
     memory_integrity_gate_run,
     memory_frontmatter_gate_run,
+    memory_wikilink_tokens_gate_run,
     memory_link_verdict_gate_run,
     memory_link_gate_run,
     memory_fn_reference_tokens_gate_run,
