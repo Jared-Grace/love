@@ -17,13 +17,29 @@ export function html_scroll_center_coordinates(
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
   let half_tile = divide(tile_size, 2);
-  let left = subtract(
-    add(multiply(x, tile_size), half_tile),
-    divide(container_e.clientWidth, 2),
-  );
-  let top = subtract(
-    add(multiply(y, tile_size), half_tile),
-    divide(container_e.clientHeight, 2),
-  );
-  return html_scroll_animate(container_e, left, top);
+  ("a coordinate is counted from the GRID's own corner, which need not be the corner of what scrolls: a wrapper may hold empty room around the grid so the outermost tile can still reach the middle of the window. so the grid's offset inside the scroller is measured and added, rather than assumed to be nothing. the tile is positioned by the grid, so the grid is its offsetParent");
+  let grid = tile_e_offset_parent();
+  function tile_e_offset_parent() {
+    let tile_e = html_component_element_get(tile_component);
+    let parent = tile_e.offsetParent;
+    return parent;
+  }
+  let grid_left = 0;
+  let grid_top = 0;
+  if (grid) {
+    grid_left = grid.offsetLeft;
+    grid_top = grid.offsetTop;
+  }
+  let left2 = multiply(x, tile_size);
+  let right = add(left2, half_tile);
+  let left3 = add(grid_left, right);
+  let right2 = divide(container_e.clientWidth, 2);
+  let left = subtract(left3, right2);
+  let left4 = multiply(y, tile_size);
+  let right3 = add(left4, half_tile);
+  let left5 = add(grid_top, right3);
+  let right4 = divide(container_e.clientHeight, 2);
+  let top = subtract(left5, right4);
+  let promise = html_scroll_animate(container_e, left, top);
+  return promise;
 }
