@@ -14,7 +14,7 @@ export function app_code_lesson_expression_or() {
   let next_arg = app_code_binary_next_arg(symbol, pair);
   let lesson = app_code_lesson_expression_generic({
     above,
-    name_id_rights: [" or"],
+    name_id_rights: ["or"],
     category: "operators",
     next_arg,
     example_count: 2,
