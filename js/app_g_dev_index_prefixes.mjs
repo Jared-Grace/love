@@ -5,6 +5,7 @@ export function app_g_dev_index_prefixes() {
   let day = "day: ";
   let prefixes = {
     unbeliever: conversation,
+    quick: unbeliever,
     gospel_share: unbeliever,
     hru: unbeliever,
     believe: unbeliever,
