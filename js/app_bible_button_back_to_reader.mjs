@@ -6,8 +6,7 @@ import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_bible_home } from "./app_bible_home.mjs";
+import { app_bible_screen_home_set } from "./app_bible_screen_home_set.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export async function app_bible_button_back_to_reader(parent, context) {
   "a book/chapter/verse picker is a transient one-job screen; name the escape by its destination so the reader can see exactly which verse they will return to, e.g. \"Back to John 3:16\"";
@@ -22,7 +21,7 @@ export async function app_bible_button_back_to_reader(parent, context) {
   let v = emoji_arrow_left();
   let text = text_combine_multiple([v, " Back to ", reference]);
   async function lambda() {
-    await app_shared_screen_set(context, app_bible_home);
+    await app_bible_screen_home_set(context);
   }
   let button = app_shared_button_uncolored(parent, text, lambda);
   return button;
