@@ -21,7 +21,8 @@ export async function app_supper_home_generic(context) {
   app_shared_content_center_padding_gap(content, column, gap);
   let bar = property_get(bc, "bar");
   html_centered(bar);
-  let text = emoji_gear();
+  ("the gear says what it opens, the way every other gear in these apps does - a bare picture left the one control on this screen unnamed, and the reader had to press it to find out");
+  let text = app_shared_gear_versions_text();
   app_shared_screen_set_button(bar, context, app_supper_versions, text);
   let folders = app_supper_folders_get(context);
   let empty = list_empty_is(folders);
