@@ -1,3 +1,5 @@
+import { html_div } from "./html_div.mjs";
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -24,11 +26,18 @@ export function app_g_dev_overlay(title_text) {
     "overflow-y": "auto",
   });
   let title = html_p_text(div, title_text);
-  ("the '← routes' pill is fixed at the top-left of every dev page, so the title starts clear of it rather than underneath it");
+  ("centred rather than pushed right: the '← routes' pill is fixed at the top-left of every dev page, and a centred title clears it on a phone as well as a desktop, where a left-padded one drifted a long way from the cards it names");
   html_style_assign(title, {
     margin: "0",
-    "padding-left": "5.5rem",
+    "text-align": "center",
     "font-weight": "bold",
   });
-  return div;
+  ("the cards go in a COLUMN of their own, capped and centred, so a wide screen reads as a page down the middle instead of one card stretched the whole way across. the panel above keeps the scrolling and the background; this holds the content");
+  let column = html_div(div);
+  html_style_assign(column, {
+    width: "100%",
+    "max-width": app_shared_column_max_width(),
+    margin: "0 auto",
+  });
+  return column;
 }
