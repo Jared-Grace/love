@@ -133,7 +133,7 @@ export function app_code_lesson_expression_string_equality() {
     let equals_false = html_div(equals_box);
     html_span_text(
       equals_false,
-      "when the strings are different in some way then ",
+      "When the strings are different in some way then ",
     );
     html_span_text_code_dark(equals_false, "===");
     html_span_text(equals_false, " is ");
@@ -145,13 +145,13 @@ export function app_code_lesson_expression_string_equality() {
     let not_true = html_div(not_box);
     html_span_text(
       not_true,
-      "when the strings are different in some way then ",
+      "When the strings are different in some way then ",
     );
     html_span_text_code_dark(not_true, "!==");
     html_span_text(not_true, " is ");
     html_span_text_code_dark(not_true, true_text);
     let not_false = html_div(not_box);
-    html_span_text(not_false, "when both strings are exactly the same then ");
+    html_span_text(not_false, "When both strings are exactly the same then ");
     html_span_text_code_dark(not_false, "!==");
     html_span_text(not_false, " is ");
     html_span_text_code_dark(not_false, false_text);
