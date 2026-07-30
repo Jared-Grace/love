@@ -1,3 +1,7 @@
+import { ebible_book_code_to_division_index } from "./ebible_book_code_to_division_index.mjs";
+import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
+import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
+import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
@@ -187,11 +191,20 @@ export async function app_search_results(context, div_results) {
   );
   html_br_2(div_results);
   function bible_order_key(vk) {
+    "the genre section comes before the book so every section stays one unbroken run, which is what lets a section card be opened as the results cross into it; for the 66-book canon that is the canonical order anyway, since each section is a contiguous run of it";
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
+    let division_index = ebible_book_code_to_division_index(book_code);
+    let division_index_padded = number_pad(division_index, 2);
     let book_index = list_index_of_property(books, "book_code", book_code);
     let book_index_padded = number_pad(book_index, 2);
-    let key = text_combine_multiple([book_index_padded, "-", chapter_code]);
+    let key = text_combine_multiple([
+      division_index_padded,
+      "-",
+      book_index_padded,
+      "-",
+      chapter_code,
+    ]);
     return key;
   }
   list_sort_text_mapper(results, bible_order_key);
@@ -219,6 +232,34 @@ export async function app_search_results(context, div_results) {
   let book_chapter_expands = null;
   let book_collapse_setters = [];
   let book_chapter_single_expanders = [];
+  let testament_name_shown = null;
+  let division_name_shown = null;
+  let div_testament_body = null;
+  let div_division_body = null;
+  function book_group_div(book_code) {
+    "which section card this book's own card belongs in, nesting the results the same way choosing a book does: a testament card holding section cards holding the books. the results arrive sorted by section, so crossing into a new one is exactly when its card is opened - no card is opened twice and none is opened for a section nothing matched";
+    let division = ebible_book_code_to_division(book_code);
+    let testament_name = property_get(division, "testament");
+    let division_name = property_get(division, "name");
+    let testament_same = equal(testament_name, testament_name_shown);
+    if (not(testament_same)) {
+      testament_name_shown = testament_name;
+      division_name_shown = null;
+      div_testament_body = app_shared_container_blue_collapsible(
+        div_books,
+        testament_name,
+      );
+    }
+    let division_same = equal(division_name, division_name_shown);
+    if (not(division_same)) {
+      division_name_shown = division_name;
+      div_division_body = app_shared_container_blue_medium_titled(
+        div_testament_body,
+        division_name,
+      );
+    }
+    return div_division_body;
+  }
   function book_card_add(book_code) {
     let same = equal(book_code, book_code_shown);
     if (same) {
@@ -227,7 +268,8 @@ export async function app_search_results(context, div_results) {
     book_code_shown = book_code;
     let chapter_expands = [];
     book_chapter_expands = chapter_expands;
-    let div_book = app_shared_container_blue(div_books);
+    let div_group = book_group_div(book_code);
+    let div_book = app_shared_container_blue(div_group);
     html_style_padding_em(div_book, "0.3");
     html_style_margin_y(div_book, "0.15em");
     html_text_align_left(div_book);
