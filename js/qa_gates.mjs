@@ -1,3 +1,5 @@
+import { js_while_frozen_cases_gate_run } from "./js_while_frozen_cases_gate_run.mjs";
+import { functions_while_frozen_gate_run } from "./functions_while_frozen_gate_run.mjs";
 import { memory_index_lines_gate_run } from "./memory_index_lines_gate_run.mjs";
 import { functions_name_only_imports_gate_run } from "./functions_name_only_imports_gate_run.mjs";
 import { js_name_only_imports_cases_gate_run } from "./js_name_only_imports_cases_gate_run.mjs";
@@ -106,6 +108,8 @@ export function qa_gates() {
     js_code_literal_key_only_cases_gate_run,
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
+    js_while_frozen_cases_gate_run,
+    functions_while_frozen_gate_run,
     functions_self_call_gate_run,
     js_operator_targets_leaf_gate_run,
     fn_name_literals_gate_run,
