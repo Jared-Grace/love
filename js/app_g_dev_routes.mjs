@@ -70,6 +70,27 @@ export function app_g_dev_routes(div_map) {
     let result = app_g_view_phase_conversation();
     await npc_view_of(npc, result);
   }
+  async function quick() {
+    "the #quick dev route: open an unbeliever whose conversation is trimmed to ONLY the gospel-share turn, so answering that one objection lands straight on the closing prayer that converts — the fast path to test convert-on-gospel-share without walking the how-are-you and believe turns first.";
+    let npcs = await app_g_npcs_get();
+    let unconverted = list_filter_object_includes(npcs, {
+      christian: false,
+    });
+    let npc = list_random_item(unconverted);
+    let gender = property_get(npc, "gender");
+    let pronouns = g_gender_pronouns(gender);
+    let full = g_conversation_generate(pronouns);
+    let turns = property_get(full, "turns");
+    let gospel = list_get(turns, 0);
+    let quick_conversation = {
+      turns: [gospel],
+      converts: true,
+    };
+    let key = app_g_conversation_key();
+    property_set(npc, key, quick_conversation);
+    let phase = app_g_view_phase_conversation();
+    await npc_view_of(npc, phase);
+  }
   async function gospel_share() {
     let result2 = app_g_view_phase_gospel();
     await npc_view(result2);
@@ -155,6 +176,7 @@ export function app_g_dev_routes(div_map) {
   let routes = {
     study,
     unbeliever,
+    quick,
     hour,
     day_unbelievers,
     day_conversation,
