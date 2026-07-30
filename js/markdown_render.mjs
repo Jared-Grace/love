@@ -4,6 +4,7 @@ import { html_pre_text } from "./html_pre_text.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_color_gray_medium } from "./app_shared_color_gray_medium.mjs";
 export function markdown_render(parent, text) {
   "render a markdown NOTE into `parent` as formatted DOM, block by block: #..#### headings (bold divs, sized by level), --- horizontal rules, > blockquotes, - / * bullet lists (indented by leading spaces), ``` fenced code and | tables (monospace blocks), and paragraphs (blank-line separated). inline styling of each block goes through markdown_inline. a FOCUSED subset for the design-note reader ([[project_g_dev_routes_focused]]), not a spec-complete parser. BESPOKE (line loop / fenced-block state / arrays) — do NOT auto-canonicalize.";
   let lines = text.split("\n");
@@ -78,7 +79,7 @@ export function markdown_render(parent, text) {
       flush_paragraph();
       let quote = html_div(parent);
       html_style_assign(quote, {
-        "border-left": "3px solid #b0b0b0",
+        "border-left": "3px solid " + app_shared_color_gray_medium(),
         "padding-left": "0.7em",
         opacity: "0.85",
         margin: "0.4em 0",
