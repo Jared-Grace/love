@@ -26,9 +26,10 @@ export async function example_rejection_run(e) {
     return expression;
   }
   let args = e.args.map(arg_parse);
+  ("The call is awaited so that a guard declared async is judged on what it does rather than on how it was written. Such a guard turns even a refusal thrown on its first line into a rejected promise, which walks straight past a catch that is not waiting for it - so the example would read as having passed silently, and the corpus would report a guard broken exactly where it works.");
   let threw = false;
   try {
-    fn(...args);
+    await fn(...args);
   } catch (err) {
     threw = true;
   }
