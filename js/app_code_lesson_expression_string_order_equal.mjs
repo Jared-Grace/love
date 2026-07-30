@@ -129,7 +129,11 @@ export function app_code_lesson_expression_string_order_equal() {
       return render;
     }
     let rights = ["string", "order", "equal"];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
   function above(root) {
