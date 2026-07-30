@@ -25,6 +25,7 @@ import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_button_bible_chapter_open } from "./html_button_bible_chapter_open.mjs";
 import { html_buttons_biblehub_verse_group } from "./html_buttons_biblehub_verse_group.mjs";
+import { html_buttons_biblehub_verse_grid } from "./html_buttons_biblehub_verse_grid.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
