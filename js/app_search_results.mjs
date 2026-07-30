@@ -1,3 +1,7 @@
+import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
+import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
+import { html_span_text_bold } from "./html_span_text_bold.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { ebible_book_code_to_division_index } from "./ebible_book_code_to_division_index.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
@@ -288,13 +292,11 @@ export async function app_search_results(context, div_results) {
     let book_name = ebible_book_code_to_name(books, book_code);
     let verses_count = book_verses_count(book_code);
     let verses_counted = word_count_pluralize(verses_count, "verse");
-    let header_text = text_combine_multiple([
-      book_name,
-      " (",
-      verses_counted,
-      ")",
-    ]);
-    let header = html_div_text_bold(div_book, header_text);
+    ("the book's name is the thing being chosen between, so it is the only part in bold; how many verses it holds is there to weigh it by, and setting that in the same weight made every card read as two equally loud things");
+    let header = html_div(div_book);
+    html_span_text_bold(header, book_name);
+    let counted_text = text_combine_multiple([" (", verses_counted, ")"]);
+    html_span_text(header, counted_text);
     html_cursor_pointer(header);
     let div_body = html_div_centered(div_book);
     div_book_body = div_body;
