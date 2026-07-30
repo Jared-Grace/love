@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { g_struggles } from "./g_struggles.mjs";
 import { g_doubts } from "./g_doubts.mjs";
 import { g_verses_off_topic } from "./g_verses_off_topic.mjs";
@@ -10,9 +11,11 @@ export function g_conversation_generate(pronouns) {
     let w = list_random_item(off);
     return w;
   }
+  let value = property_get(pronouns, "possessive");
   let gospel_turn = {
     kind: "gospel_share_objection",
-    concern: "Honestly, I don't see why I'd need God — my life is fine as it is.",
+    concern:
+      "Honestly, I don't see why I'd need God — my life is fine as it is.",
     correct: {
       reference: "Romans 5:8",
       text: "But God proves His own love for us in this: While we were still sinners, Christ died for us.",
@@ -20,11 +23,14 @@ export function g_conversation_generate(pronouns) {
     wrong: off_topic(),
     prayer_text: text_combine_multiple([
       "open ",
-      property_get(pronouns, "possessive"),
+      value,
       " heart to the good news",
     ]),
   };
-  let struggle = list_random_item(g_struggles());
+  let list = g_struggles();
+  let struggle = list_random_item(list);
+  let value2 = property_get(pronouns, "object");
+  let value3 = property_get(pronouns, "possessive");
   let how_turn = {
     kind: "how_r_u",
     concern: property_get(struggle, "concern"),
@@ -32,13 +38,16 @@ export function g_conversation_generate(pronouns) {
     wrong: off_topic(),
     prayer_text: text_combine_multiple([
       "comfort ",
-      property_get(pronouns, "object"),
+      value2,
       " and carry ",
-      property_get(pronouns, "possessive"),
+      value3,
       " burden",
     ]),
   };
-  let doubt = list_random_item(g_doubts());
+  let list2 = g_doubts();
+  let doubt = list_random_item(list2);
+  let value4 = property_get(pronouns, "possessive");
+  let value5 = property_get(pronouns, "object");
   let believe_turn = {
     kind: "believe",
     concern: property_get(doubt, "concern"),
@@ -46,9 +55,9 @@ export function g_conversation_generate(pronouns) {
     wrong: off_topic(),
     prayer_text: text_combine_multiple([
       "settle ",
-      property_get(pronouns, "possessive"),
+      value4,
       " doubts and help ",
-      property_get(pronouns, "object"),
+      value5,
       " trust You",
     ]),
   };

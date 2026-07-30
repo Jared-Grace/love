@@ -1,3 +1,5 @@
+import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
+import { g_prayers_believer } from "./g_prayers_believer.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_conversation_day_fraction } from "./app_g_conversation_day_fraction.mjs";
 import { g_day_clock } from "./g_day_clock.mjs";
@@ -95,7 +97,7 @@ export async function app_g_conversation(
   let pronouns = g_gender_pronouns(npc_gender);
   let christian = property_get(npc, "christian");
   if (christian) {
-    "a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.";
+    ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
     let container_believer = app_g_container_player(overlay);
     app_g_p_text(container_believer, "What would you like to do?");
@@ -173,10 +175,11 @@ export async function app_g_conversation(
     let v3 = emoji_sunrise();
     let left = emoji_smile();
     let left2 = emoji_thinking();
+    let value2 = property_get(pronouns, "object");
     let labels = {
       gospel_share_objection: text_combine_multiple([
         "Tell ",
-        property_get(pronouns, "object"),
+        value2,
         " that Jesus died ",
         v,
         ", was buried ",

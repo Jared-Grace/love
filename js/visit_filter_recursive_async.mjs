@@ -1,3 +1,4 @@
+import { visit_filter_recursive_stack_message } from "./visit_filter_recursive_stack_message.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { each_async } from "./each_async.mjs";
@@ -29,8 +30,7 @@ export async function visit_filter_recursive_async(
   await each_async(children, lambda);
   let removed = list_pop(stack);
   if (not_equal(removed, node)) {
-    error(
-      "the walk keeps a stack of the nodes it is currently inside, and the one taken back off the top is not the one this step put there - something else added to or removed from that stack while the children were being visited",
-    );
+    let message = visit_filter_recursive_stack_message();
+    error(message);
   }
 }
