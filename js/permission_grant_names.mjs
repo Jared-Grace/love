@@ -405,6 +405,7 @@ export function permission_grant_names() {
   let spelled402 = fn_name("qa_app_commit_gate_run_at");
   let spelled403 = fn_name("functions_shape_blocks_report");
   let spelled404 = fn_name("qa_commit_named_at");
+  let spelled405 = fn_name("app_search_query_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -810,6 +811,7 @@ export function permission_grant_names() {
     spelled402,
     spelled403,
     spelled404,
+    spelled405,
   ];
   return names;
 }
