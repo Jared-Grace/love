@@ -15,30 +15,18 @@ export function js_code_literal_key_only_cases_gate_run() {
   "repo with nothing left to do. Only a written-down case can tell those apart.";
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_code_literal_key_only_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let code = property_get(c, "code");
     let literal = property_get(c, "literal");
-    let expected = property_get(c, "key_only");
-    let actual = js_code_literal_key_only(code, literal);
-    let b = equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
-    let why = property_get(c, "why");
-    console.log(mark + actual + "  " + why);
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    let key_only = js_code_literal_key_only(code, literal);
+    return key_only;
   }
-  let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "literal key only cases gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "key_only",
+    "why",
+    "literal key only",
+  );
   return r;
 }
