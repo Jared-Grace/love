@@ -37,6 +37,16 @@ export function app_g_dev_index() {
   let all = list_concat(names, ["reset", "index"]);
   let prefixes = app_g_dev_index_prefixes();
   let tree = app_g_dev_index_tree(all, prefixes);
+  let open_key = "g_dev_index_open";
+  let open_paths = new Set();
+  let open_stored = sessionStorage.getItem(open_key);
+  if (open_stored) {
+    open_paths = new Set(JSON.parse(open_stored));
+  }
+  function open_persist() {
+    "remember which category nodes are expanded ACROSS the reload that opening a route triggers: the open set lives in sessionStorage (per tab, survives the hash-change reload, gone on tab close — dev-only state), so coming BACK to #index from a game screen restores the same drilled-open path instead of collapsing everything.";
+    sessionStorage.setItem(open_key, JSON.stringify([...open_paths]));
+  }
   function index_card(parent) {
     "a search-style blue card, but with the shared 10px margin-y overridden to a TIGHTER 0.15rem so the #index choices sit close together (the search results want the room; a dev directory does not)";
     let card = app_shared_container_blue(parent);
@@ -54,7 +64,7 @@ export function app_g_dev_index() {
     });
     return card;
   }
-  function render_node(parent, label, node) {
+  function render_node(parent, path, label, node) {
     let child_labels = Object.keys(node.children).sort();
     if (equal(child_labels.length, 0)) {
       leaf_card(parent, label, node.hash);
@@ -64,28 +74,35 @@ export function app_g_dev_index() {
     let header = html_div_text_bold(card, label + " ›");
     html_cursor_pointer(header);
     let body = html_div(card);
-    html_display_none(body);
     let open = {
-      on: false,
+      on: open_paths.has(path),
     };
+    if (open.on) {
+      html_display_block(body);
+    } else {
+      html_display_none(body);
+    }
     function toggle() {
       open.on = not(open.on);
       if (open.on) {
         html_display_block(body);
+        open_paths.add(path);
       } else {
         html_display_none(body);
+        open_paths.delete(path);
       }
+      open_persist();
     }
     html_on_click(header, toggle);
     if (node.hash) {
       leaf_card(body, "→ " + label, node.hash);
     }
     for (let cl of child_labels) {
-      render_node(body, cl, node.children[cl]);
+      render_node(body, path + "/" + cl, cl, node.children[cl]);
     }
   }
   let top = Object.keys(tree.children).sort();
   for (let label of top) {
-    render_node(div, label, tree.children[label]);
+    render_node(div, label, label, tree.children[label]);
   }
 }
