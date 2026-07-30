@@ -78,7 +78,7 @@ export function js_imports_local_names_cases() {
     },
     {
       name: "a file with no import line at all",
-      code: text_frozen("export function f() {\n  return 1;\n}\n"),
+      code: text_frozen("export function f(o) {\n  return o;\n}\n"),
       local: [],
     },
     {
