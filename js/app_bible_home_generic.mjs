@@ -1,4 +1,4 @@
-import { html_span_text } from "./html_span_text.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -243,7 +243,13 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     hidden = not(hidden);
     html_display_none_or_block(hidden, bottom);
   }
-  html_span_text(top, verse_number);
+  ("the verse NUMBER is not printed above the text here: the bar already carries it as the verse-picker button, so a single-verse view would show it twice. the WHOLE-CHAPTER reader is different — it prints each verse's number inline (",
+    fn_name("app_shared_bible_read"),
+    ") because that is the only place the number appears there. shared by ",
+    fn_name("app_bible"),
+    " and ",
+    fn_name("app_g_bible"),
+    ", so both single-verse views drop the duplicate together.");
   let show_language_names = list_multiple_is(text_languages);
   function to_entry(item) {
     let name = "";
