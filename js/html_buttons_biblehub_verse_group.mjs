@@ -1,9 +1,9 @@
+import { html_style_justify_self } from "./html_style_justify_self.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_button_biblehub_open } from "./html_button_biblehub_open.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -36,12 +36,12 @@ export function html_buttons_biblehub_verse_group(
   }
   let caption = html_span_text(parent, label + ":");
   app_shared_text_deemphasized(caption);
-  html_style_set(caption, "justify-self", "end");
+  html_style_justify_self(caption, "end");
   let buttons_cell = html_div(parent);
   html_display_flex(buttons_cell);
   let gap = app_shared_spaced_small_gap();
   html_style_gap(buttons_cell, gap);
-  html_style_set(buttons_cell, "justify-self", "start");
+  html_style_justify_self(buttons_cell, "start");
   function verse_button(verse_number) {
     html_button_biblehub_open(
       buttons_cell,
