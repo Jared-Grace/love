@@ -28,6 +28,8 @@ export function visit_filter_recursive(
   });
   let removed = list_pop(stack);
   if (removed !== node) {
-    error();
+    error(
+      "the walk keeps a stack of the nodes it is currently inside, and the one taken back off the top is not the one this step put there - something else added to or removed from that stack while the children were being visited",
+    );
   }
 }

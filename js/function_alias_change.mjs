@@ -17,7 +17,11 @@ export async function function_alias_change(alias_old, alias_new) {
     let aliases = property_get(a, "aliases");
     let exists = property_get(a, "exists");
     if (not(exists)) {
-      error();
+      error_json({
+        hint: "there is no alias by the old name to change, so there is nothing here to give the new name to - check the spelling of the old one",
+        alias_old,
+        alias_new,
+      });
     }
     property_delete(aliases, alias_old);
     property_exists_not_assert_json(aliases, alias_new, {

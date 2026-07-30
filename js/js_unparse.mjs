@@ -7,10 +7,9 @@ import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
 import { error } from "./error.mjs";
 export function js_unparse(ast) {
-  let a = promise_not_is(ast);
-  if (not(a)) {
-    error();
-  }
+  promise_not_is_assert_json(ast, {
+    hint: "the syntax tree to write back out arrived as a promise, so an await is missing where this was called",
+  });
   let a3 = js_visit_filter(ast);
   if (not(a3)) {
     let o = {
