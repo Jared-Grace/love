@@ -1,7 +1,5 @@
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
-import { ebible_languages_sort_mode } from "./ebible_languages_sort_mode.mjs";
-import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
-import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
+import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 export function app_bible_subset_screen_generic(
   context,
   options,
@@ -14,7 +12,6 @@ export function app_bible_subset_screen_generic(
 ) {
   "back is the caller's: the bible languages chooser returns to the settings hub, the supper versions chooser returns home";
   let root = app_shared_bible_screen_open(context, back);
-  ebible_languages_sort_mode(options);
   function on_sort_change() {
     app_bible_subset_screen_generic(
       context,
@@ -27,8 +24,7 @@ export function app_bible_subset_screen_generic(
       back,
     );
   }
-  app_shared_language_sort_button(root, on_sort_change);
-  html_subset_ordered_choose(
+  app_shared_bible_subset_sorted_choose(
     root,
     options,
     chosen,
@@ -36,5 +32,6 @@ export function app_bible_subset_screen_generic(
     key_property,
     on_change,
     choices_label,
+    on_sort_change,
   );
 }

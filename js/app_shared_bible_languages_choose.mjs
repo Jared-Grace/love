@@ -1,7 +1,5 @@
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
-import { ebible_languages_sort_mode } from "./ebible_languages_sort_mode.mjs";
-import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
-import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
+import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
@@ -40,7 +38,6 @@ export function app_shared_bible_languages_choose(
     }
     html_hash_transform(transform);
   }
-  ebible_languages_sort_mode(languages);
   function on_sort_change() {
     app_shared_bible_languages_choose(
       content,
@@ -49,9 +46,8 @@ export function app_shared_bible_languages_choose(
       back,
     );
   }
-  app_shared_language_sort_button(content, on_sort_change);
   let choices_label = app_shared_languages_prompt_text();
-  html_subset_ordered_choose(
+  app_shared_bible_subset_sorted_choose(
     content,
     languages,
     chosen,
@@ -59,5 +55,6 @@ export function app_shared_bible_languages_choose(
     "language_code",
     on_change,
     choices_label,
+    on_sort_change,
   );
 }
