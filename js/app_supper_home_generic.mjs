@@ -6,7 +6,7 @@ import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
 import { app_supper_versions } from "./app_supper_versions.mjs";
-import { emoji_gear } from "./emoji_gear.mjs";
+import { app_shared_gear_versions_text } from "./app_shared_gear_versions_text.mjs";
 import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
 import { app_supper_verses_render } from "./app_supper_verses_render.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
