@@ -69,7 +69,7 @@ export function app_code_lesson_expression_less_than_equal() {
   let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "less than or equal to",
-    name_id_rights: [" less than or equal to"],
+    name_id_rights: ["less than or equal to"],
     closing,
     preamble: null,
     explanation,
