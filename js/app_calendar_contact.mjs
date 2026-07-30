@@ -1,4 +1,4 @@
-import { error } from "./error.mjs";
+import { todo } from "./todo.mjs";
 import { log } from "./log.mjs";
 import { app_calendar_paste_convert } from "./app_calendar_paste_convert.mjs";
 import { clipboard_paste } from "./clipboard_paste.mjs";
@@ -36,7 +36,7 @@ export async function app_calendar_contact(context) {
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();
-    let country = error();
+    let country = todo();
     let r = app_calendar_paste_convert(paste, country);
     let duration = property_get(r, "duration");
     let start = property_get(r, "start");
