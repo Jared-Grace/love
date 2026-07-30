@@ -23,8 +23,9 @@ export async function app_g(context) {
     await app_g_game_initialize_if_absent();
     await app_g_refresh(context, div_map_container);
   }
-  await html_loading(lambda);
+  ("listen for the hash BEFORE the game boots, not after. the listener needs nothing the boot produces - it only reloads - and the boot re-reads the hash from a clean page anyway. registered after, one throw anywhere in that boot skipped it, and the loading wrapper rethrows (it wraps the boot in a finally, not a catch), so the map could already be drawn and clickable while every hash navigation was quietly dead: tapping your own character opened the menu, pressing dev tools wrote the hash, and nothing reloaded, so the dev directory never arrived and there was nothing on screen to say why. moving it first makes the one recovery that always works - a reload - the thing a broken boot cannot take away");
   html_reload_on_hash_change();
+  await html_loading(lambda);
   await catch_null_async(g_verses_waiting_prepare);
   await catch_null_async(g_verses_hs_warning_prepare);
 }
