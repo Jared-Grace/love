@@ -143,12 +143,12 @@ export async function app_search_results(context, div_results) {
     return;
   }
   let button_list = null;
-  function books_collapsed_set(collapsed) {
-    "open or shut every book card at once - the one place that knows how to reach all of them, so the two buttons and the first draw all say it the same way";
-    function book_set(collapsed_set) {
+  function collapse_setters_set(setters, collapsed) {
+    "open or shut a whole level of cards at once - the one place that knows how to reach all of them, so the buttons and the first draw all say it the same way. it takes the level it acts on because the book cards and the testament cards are shut for different reasons: the first draw shuts the books to leave the reader an overview of what matched, which shutting the testaments over them would hide";
+    function setter_call(collapsed_set) {
       collapsed_set(collapsed);
     }
-    each(book_collapse_setters, book_set);
+    each(setters, setter_call);
   }
   async function buttons_expand(buttons) {
     "open a whole list of verse buttons at once - expanding one chapter, one book or the entire page all come down to this, so it is said once here";
@@ -168,12 +168,15 @@ export async function app_search_results(context, div_results) {
   }
   async function expand_all_lambda() {
     "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
-    books_collapsed_set(false);
+    "the testament cards open ahead of the books inside them, since a reader who folded one away would otherwise press this and watch nothing happen there";
+    collapse_setters_set(testament_collapse_setters, false);
+    collapse_setters_set(book_collapse_setters, false);
     await collect_all_texts();
   }
   function collapse_all_lambda() {
     "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
-    books_collapsed_set(true);
+    "the testament cards stay as the reader left them: shutting those too would hide the very overview of books this button exists to come back to";
+    collapse_setters_set(book_collapse_setters, true);
   }
   async function copy_all_lambda() {
     "let the reader copy every matching verse in one click, without first expanding them all on screen";
@@ -231,6 +234,7 @@ export async function app_search_results(context, div_results) {
   let div_book_body = null;
   let book_chapter_expands = null;
   let book_collapse_setters = [];
+  let testament_collapse_setters = [];
   let book_chapter_single_expanders = [];
   let testament_name_shown = null;
   let division_name_shown = null;
@@ -245,10 +249,13 @@ export async function app_search_results(context, div_results) {
     if (not(testament_same)) {
       testament_name_shown = testament_name;
       division_name_shown = null;
-      div_testament_body = app_shared_container_blue_collapsible(
+      let collapsible = app_shared_container_blue_collapsible(
         div_books,
         testament_name,
       );
+      div_testament_body = property_get(collapsible, "body");
+      let testament_collapsed_set = property_get(collapsible, "collapsed_set");
+      list_add(testament_collapse_setters, testament_collapsed_set);
     }
     let division_same = equal(division_name, division_name_shown);
     if (not(division_same)) {
@@ -423,13 +430,13 @@ export async function app_search_results(context, div_results) {
   let one_book = list_size_1(book_collapse_setters);
   if (one_book) {
     ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
-    books_collapsed_set(false);
+    collapse_setters_set(book_collapse_setters, false);
     let only_book_expand = list_single(book_chapter_single_expanders);
     await only_book_expand();
   } else {
     let scrolls = html_page_scrolls();
     if (scrolls) {
-      books_collapsed_set(true);
+      collapse_setters_set(book_collapse_setters, true);
     }
   }
   let s = list_size_1(button_list);
