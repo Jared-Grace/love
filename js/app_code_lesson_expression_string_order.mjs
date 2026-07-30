@@ -172,13 +172,13 @@ export function app_code_lesson_expression_string_order() {
       list_map(parts, part_render);
       return div;
     }
-    let stage_1 = app_code_container_light_blue(root);
-    code_prose_line(stage_1, [
+    let stage_ = app_code_container_light_blue(root);
+    code_prose_line(stage_, [
       ["code", "g"],
       ["text", " comes before "],
       ["code", "h"],
     ]);
-    code_prose_line(stage_1, [
+    code_prose_line(stage_, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
