@@ -202,7 +202,6 @@ export function app_g_dev_routes(div_map) {
     dove,
     gratitude,
     pray,
-    sky,
   };
   return routes;
 }

@@ -5,14 +5,16 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function html_overlay(container, z_index) {
-  "a dimmed panel pinned over a scrollable container (the game map), holding a menu or conversation. `touch-action: none` stops the map from PANNING under it: the overlay covers the whole map, so without this a touch-drag on the overlay reaches the scrollable parent and slides the world behind the conversation — the player drags the map instead of reading. taps (button clicks) still work; only the pan/zoom gesture is blocked.";
+  "a dimmed panel pinned over a scrollable container (the game map), holding a menu or conversation. it SCROLLS ITS OWN content (`overflow-y: auto`) so a tall conversation — long gospel openers on a short phone — can be read to the bottom, instead of the lower choices spilling off-screen unreachable. and it does NOT let the MAP pan underneath: `touch-action: pan-y` allows only a vertical scroll of the overlay itself (never a horizontal map drag), and `overscroll-behavior: contain` stops that scroll from chaining into the map once the overlay hits its end. so the world stays put while you read, taps still work, and nothing is trapped below the fold.";
   let overlay = html_div(container);
   let element = html_component_element_get(container);
   let s = {
     position: "absolute",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
-    "touch-action": "none",
+    "overflow-y": "auto",
+    "overscroll-behavior": "contain",
+    "touch-action": "pan-y",
     "z-index": z_index,
   };
   html_style_assign(overlay, s);
