@@ -1,13 +1,9 @@
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_function_self_call_cases } from "./js_function_self_call_cases.mjs";
 import { js_function_self_call_unconditional_is } from "./js_function_self_call_unconditional_is.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export function js_function_self_call_cases_gate_run() {
   "Gate: each written-down function must be judged the way the corpus says. The sweep built on this reading finds nothing in the repo today, so a reader that had gone quiet and a repo that is clean give the same answer, and only this can tell them apart. Throws so the dispatcher seam exits nonzero.";
   let cases = js_function_self_call_cases();

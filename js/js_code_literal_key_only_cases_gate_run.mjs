@@ -1,11 +1,7 @@
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_code_literal_key_only_cases } from "./js_code_literal_key_only_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export function js_code_literal_key_only_cases_gate_run() {
   "QA gate: each small file written down in the corpus is judged the way that";
   "corpus says.";
