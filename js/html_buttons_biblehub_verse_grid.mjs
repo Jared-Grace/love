@@ -1,3 +1,5 @@
+import { html_display_grid } from "./html_display_grid.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -9,9 +11,9 @@ export function html_buttons_biblehub_verse_grid(parent) {
     fn_name("html_buttons_biblehub_verse_group"),
     " call fills one row (a label cell + a buttons cell)");
   let grid = html_div(parent);
-  html_style_set(grid, "display", "grid");
+  html_display_grid(grid);
   html_style_set(grid, "grid-template-columns", "auto auto");
-  html_style_set(grid, "align-items", "center");
+  html_align_items_center(grid);
   html_style_set(grid, "width", "fit-content");
   let gap = app_shared_spaced_small_gap();
   html_style_gap(grid, gap);
