@@ -16,7 +16,8 @@ export function g_gender_pronouns(gender_name) {
     possessive_pronoun: "his",
     reflexive: "himself",
   };
-  let is_female = equal(gender_name, g_gender_female());
+  let right = g_gender_female();
+  let is_female = equal(gender_name, right);
   if (is_female) {
     return female;
   }
