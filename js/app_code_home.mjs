@@ -1,4 +1,4 @@
-import { fn_name } from "./fn_name.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
@@ -75,9 +75,8 @@ export async function app_code_home(context) {
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    ("not awaited on purpose: the shared refresh runs ",
-      fn_name("html_scroll_top_window"),
-      " right after this screen returns, so awaiting the centre-scroll here would let that scroll-to-top undo it. Left un-awaited, the white overlay is put up synchronously (before the scroll-to-top, so its jump is hidden), and the centre-scroll then runs a tick later - AFTER the scroll-to-top - so it wins; the overlay fades out to reveal the already-centred list");
+    property_set(context, "scroll_handled", true);
+    ("tell the shared refresh this screen handled its own scrolling, so the refresh's scroll-to-top is skipped - otherwise it would run after this screen returns and undo the centring below");
     await app_code_scroll_center_faded(just_left);
   }
 }
