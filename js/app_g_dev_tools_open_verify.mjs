@@ -71,6 +71,7 @@ export async function app_g_dev_tools_open_verify() {
       menu,
       opened,
       hash,
+      routed,
       picture,
       lines,
     };
