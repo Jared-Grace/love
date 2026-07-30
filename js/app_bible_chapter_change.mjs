@@ -15,5 +15,5 @@ export async function app_bible_chapter_change(
   let verses_next = await ebible_verses_browser(e, next);
   let mapped = list_map_property(verses_next, "verse_number");
   let verse_number_next = verse_number_get(mapped);
-  app_bible_chapter_verse_open(context, next, verse_number_next);
+  await app_bible_chapter_verse_open(context, next, verse_number_next);
 }
