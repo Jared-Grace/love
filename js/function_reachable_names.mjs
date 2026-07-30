@@ -10,10 +10,10 @@ export async function function_reachable_names(f_name) {
     let imports = await function_imports(visited_f_name);
     return imports;
   }
-  async function lambda(add) {
+  async function lambda(add_reachable) {
     function each_visited(v) {
       let node = property_get(v, "node");
-      add(node);
+      add_reachable(node);
     }
     await visit_unique_async(f_name, children_get, each_visited);
   }
