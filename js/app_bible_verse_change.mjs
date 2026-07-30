@@ -18,6 +18,6 @@ export async function app_bible_verse_change(
     await chapter_change(context, chapter_code);
   } else {
     let verse_number = property_get(next, "verse_number");
-    app_bible_verse_open(context, verse_number);
+    await app_bible_verse_open(context, verse_number);
   }
 }
