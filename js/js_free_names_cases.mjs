@@ -102,6 +102,41 @@ export function js_free_names_cases() {
       ),
       free: [],
     },
+    {
+      name: "the error a catch clause names, read inside the clause",
+      code: text_frozen(
+        "export function f(lambda) {\n  try {\n    return lambda();\n  } catch (e) {\n    return e;\n  }\n}\n",
+      ),
+      free: [],
+    },
+    {
+      name: "a name unpacked out of an object",
+      code: text_frozen(
+        "export function f(o) {\n  let { part } = o;\n  return part;\n}\n",
+      ),
+      free: [],
+    },
+    {
+      name: "a name unpacked out of a list",
+      code: text_frozen(
+        "export function f(o) {\n  let [first] = o;\n  return first;\n}\n",
+      ),
+      free: [],
+    },
+    {
+      name: "a class this file declares",
+      code: text_frozen(
+        "class Thing {}\nexport function f() {\n  return Thing;\n}\n",
+      ),
+      free: [],
+    },
+    {
+      name: "a caught error named after a repo function is bound here, so no import is wanted",
+      code: text_frozen(
+        "export function f(lambda) {\n  try {\n    return lambda();\n  } catch (list_add) {\n    return list_add;\n  }\n}\n",
+      ),
+      free: [],
+    },
   ];
   return cases;
 }
