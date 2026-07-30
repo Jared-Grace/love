@@ -124,6 +124,7 @@ export function app_code_lesson_expression_string_equality() {
     let same_code = text_combine_multiple([code_a, " === ", code_a]);
     let different_code = text_combine_multiple([code_a, " === ", code_b]);
     let not_code = text_combine_multiple([code_a, " !== ", code_b]);
+    let not_same_code = text_combine_multiple([code_a, " !== ", code_a]);
     let recall = app_code_container_light_blue(root);
     let recall_line = html_div(recall);
     html_span_text(recall_line, "You've seen that ");
@@ -161,5 +162,10 @@ export function app_code_lesson_expression_string_equality() {
     html_span_text(not_example, " is ");
     let text5 = js_keyword_true();
     html_span_text_code_dark(not_example, text5);
+    let not_same_example = html_div(not_box);
+    html_span_text_code_dark(not_same_example, not_same_code);
+    html_span_text(not_same_example, " is ");
+    let text6 = js_keyword_false();
+    html_span_text_code_dark(not_same_example, text6);
   }
 }
