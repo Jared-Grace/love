@@ -1,3 +1,4 @@
+import { app_code_string_equality_shape } from "./app_code_string_equality_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
@@ -100,7 +101,8 @@ export function app_code_lesson_expression_string_equality() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Comparing strings");
+        html_span_text(parent, "Comparing strings ");
+        app_code_string_equality_shape(parent);
       }
       return render;
     }
