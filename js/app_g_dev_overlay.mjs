@@ -24,8 +24,10 @@ export function app_g_dev_overlay(title_text) {
     "overflow-y": "auto",
   });
   let title = html_p_text(div, title_text);
+  ("the '← routes' pill is fixed at the top-left of every dev page, so the title starts clear of it rather than underneath it");
   html_style_assign(title, {
     margin: "0",
+    "padding-left": "5.5rem",
     "font-weight": "bold",
   });
   return div;
