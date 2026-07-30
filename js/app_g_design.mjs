@@ -1,3 +1,4 @@
+import { markdown_render } from "./markdown_render.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
@@ -5,7 +6,6 @@ import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
-import { html_pre_text } from "./html_pre_text.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_display_none } from "./html_display_none.mjs";
@@ -47,13 +47,11 @@ export async function app_g_design() {
     });
     let body = html_div(card);
     html_display_none(body);
-    let text = html_pre_text(body, note.text);
-    html_style_assign(text, {
-      "white-space": "pre-wrap",
-      "word-break": "break-word",
-      "font-family": "inherit",
+    html_style_assign(body, {
       margin: "0.5rem 0 0 0",
+      "word-break": "break-word",
     });
+    markdown_render(body, note.text);
     let open = {
       on: false,
     };
