@@ -1,3 +1,4 @@
+import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -41,11 +42,13 @@ export function app_g_dev_index() {
   let open_paths = new Set();
   let open_stored = sessionStorage.getItem(open_key);
   if (open_stored) {
-    open_paths = new Set(JSON.parse(open_stored));
+    let v = JSON.parse(open_stored);
+    open_paths = new Set(v);
   }
   function open_persist() {
     "remember which category nodes are expanded ACROSS the reload that opening a route triggers: the open set lives in sessionStorage (per tab, survives the hash-change reload, gone on tab close — dev-only state), so coming BACK to #index from a game screen restores the same drilled-open path instead of collapsing everything.";
-    sessionStorage.setItem(open_key, JSON.stringify([...open_paths]));
+    let v2 = JSON.stringify([...open_paths]);
+    sessionStorage.setItem(open_key, v2);
   }
   function index_card(parent) {
     "a search-style blue card, but with the shared 10px margin-y overridden to a TIGHTER 0.15rem so the #index choices sit close together (the search results want the room; a dev directory does not)";
@@ -57,6 +60,11 @@ export function app_g_dev_index() {
     let card = index_card(parent);
     let href = "#" + hash;
     let link = html_a_href_text(card, href, label);
+    ("the address stays on the anchor so the card can still be copied or opened in a new tab, but the going-there is done by hand: a bare href only changes the hash and waits for a listener to reload, and that listener is registered while the app starts up, so a start-up that fails takes every card on this page with it");
+    function go() {
+      html_hash_name_reload(hash);
+    }
+    html_on_click(link, go);
     html_display_block(link);
     html_style_assign(link, {
       color: "inherit",
