@@ -1,3 +1,4 @@
+import { property_set } from "./property_set.mjs";
 import { html_scroll_top_window } from "./html_scroll_top_window.mjs";
 import { app_shared_home_name } from "./app_shared_home_name.mjs";
 import { app_shared_screen_stored_initialize } from "./app_shared_screen_stored_initialize.mjs";
@@ -19,6 +20,12 @@ export async function app_shared_refresh(context) {
   let has_after = null_not_is(after_refresh);
   if (has_after) {
     after_refresh(context);
+  }
+  let scroll_handled = property_get_or_null(context, "scroll_handled");
+  property_set(context, "scroll_handled", null);
+  let handled = null_not_is(scroll_handled);
+  if (handled) {
+    return;
   }
   html_scroll_top_window();
 }
