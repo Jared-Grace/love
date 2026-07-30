@@ -10,7 +10,7 @@ import { app_g_sky_choices_highlight } from "./app_g_sky_choices_highlight.mjs";
 import { global_function_property_set } from "./global_function_property_set.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 export async function app_g_sky_choices() {
-  ("the #sky demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in ",
+  ("the #day_parts demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in ",
     g_times.name,
     " — clicking a pill jumps the sky straight to that keyframe (",
     app_g_sky_jump.name,
