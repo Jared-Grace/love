@@ -136,7 +136,7 @@ export function app_g_dev_routes(div_map) {
     ];
     app_g_pray_turn(prayer_texts, noop, done);
   }
-  async function sky() {
+  async function day_parts() {
     ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (",
       fn_name("app_g_sky_step"),
       ") and jumping (",
@@ -147,8 +147,8 @@ export function app_g_dev_routes(div_map) {
     await app_g_sky_choices();
     await app_g_sky_snap();
   }
-  async function hour() {
-    ("the #hour previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
+  async function day_hours() {
+    ("the #day_hours previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
       fn_name("g_clock_sky_phase"),
       ") the real day uses, so what you pick here IS what the day will show");
     await app_g_view_set(null);
@@ -190,9 +190,10 @@ export function app_g_dev_routes(div_map) {
     study,
     unbeliever,
     quick,
-    hour,
     day_unbelievers,
     day_conversation,
+    day_parts,
+    day_hours,
     gospel_share,
     hru,
     believe,
