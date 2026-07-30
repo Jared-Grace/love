@@ -1,3 +1,4 @@
+import { permission_settings_local_gate_run } from "./permission_settings_local_gate_run.mjs";
 import { permission_settings_allow_drift_cases_gate_run } from "./permission_settings_allow_drift_cases_gate_run.mjs";
 import { functions_assert_json_get_lambda_gate_run } from "./functions_assert_json_get_lambda_gate_run.mjs";
 import { app_code_lessons_rights_space_gate_run } from "./app_code_lessons_rights_space_gate_run.mjs";
@@ -172,6 +173,7 @@ export function qa_gates() {
     app_code_lessons_rights_space_gate_run,
     functions_assert_json_get_lambda_gate_run,
     permission_settings_allow_drift_cases_gate_run,
+    permission_settings_local_gate_run,
   ];
   return gates;
 }
