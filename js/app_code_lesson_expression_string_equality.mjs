@@ -85,7 +85,7 @@ export function app_code_lesson_expression_string_equality() {
     above,
     name_id,
     next_arg,
-    example_count: 2,
+    example_count: 4,
     decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: "value: ",
@@ -113,59 +113,42 @@ export function app_code_lesson_expression_string_equality() {
     return built;
   }
   function above(root) {
-    "anchor on the equality the learner already knows on numbers, then reveal it works on strings too - true when the text is exactly the same, false when it differs; then not-equals as the opposite. A same example and a different example are shown for each, with fresh verse words each visit.";
-    let list3 = app_code_verse_words_clean();
-    let words = list_unique(list3);
-    let two = list_shuffle_take(words, 2);
-    let a = list_get(two, 0);
-    let b = list_get(two, 1);
-    let code_a = app_code_string_code(a);
-    let code_b = app_code_string_code(b);
-    let same_code = text_combine_multiple([code_a, " === ", code_a]);
-    let different_code = text_combine_multiple([code_a, " === ", code_b]);
-    let not_code = text_combine_multiple([code_a, " !== ", code_b]);
-    let not_same_code = text_combine_multiple([code_a, " !== ", code_a]);
-    let recall = app_code_container_light_blue(root);
-    let recall_line = html_div(recall);
+    "anchor on the equality the learner already knows on numbers, then state the two rules - triple-equals is true only when the strings match, not-equals is its opposite. No worked examples here on purpose: the four refreshable examples below (all four true/false cases) do the demonstrating, so the rules are stated once and the cases shown once.";
+    let true_text = js_keyword_true();
+    let false_text = js_keyword_false();
+    let equals_box = app_code_container_light_blue(root);
+    let recall_line = html_div(equals_box);
     html_span_text(recall_line, "You've seen that ");
     html_span_text_code_dark(recall_line, "===");
     html_span_text(recall_line, " asks if two numbers are the same");
-    let also_line = html_div(recall);
+    let also_line = html_div(equals_box);
     html_span_text_code_dark(also_line, "===");
     html_span_text(also_line, " also compares two strings");
-    let idea = app_code_container_light_blue(root);
-    let rule_line = html_div(idea);
-    html_span_text_code_dark(rule_line, "===");
-    html_span_text(rule_line, " is ");
-    let text = js_keyword_true();
-    html_span_text_code_dark(rule_line, text);
-    html_span_text(rule_line, " when the strings are exactly the same");
-    let same_line = html_div(idea);
-    html_span_text_code_dark(same_line, same_code);
-    html_span_text(same_line, " is ");
-    let text2 = js_keyword_true();
-    html_span_text_code_dark(same_line, text2);
-    let different_line = html_div(idea);
-    html_span_text_code_dark(different_line, different_code);
-    html_span_text(different_line, " is ");
-    let text3 = js_keyword_false();
-    html_span_text_code_dark(different_line, text3);
+    let equals_rule = html_div(equals_box);
+    html_span_text_code_dark(equals_rule, "===");
+    html_span_text(equals_rule, " is ");
+    html_span_text_code_dark(equals_rule, true_text);
+    html_span_text(
+      equals_rule,
+      " when both strings are exactly the same, otherwise ",
+    );
+    html_span_text_code_dark(equals_rule, "===");
+    html_span_text(equals_rule, " is ");
+    html_span_text_code_dark(equals_rule, false_text);
     let not_box = app_code_container_light_blue(root);
+    let opposite_line = html_div(not_box);
+    html_span_text_code_dark(opposite_line, "!==");
+    html_span_text(opposite_line, " is the opposite");
     let not_rule = html_div(not_box);
     html_span_text_code_dark(not_rule, "!==");
-    html_span_text(not_rule, " is the opposite - ");
-    let text4 = js_keyword_true();
-    html_span_text_code_dark(not_rule, text4);
-    html_span_text(not_rule, " when the strings are different");
-    let not_example = html_div(not_box);
-    html_span_text_code_dark(not_example, not_code);
-    html_span_text(not_example, " is ");
-    let text5 = js_keyword_true();
-    html_span_text_code_dark(not_example, text5);
-    let not_same_example = html_div(not_box);
-    html_span_text_code_dark(not_same_example, not_same_code);
-    html_span_text(not_same_example, " is ");
-    let text6 = js_keyword_false();
-    html_span_text_code_dark(not_same_example, text6);
+    html_span_text(not_rule, " is ");
+    html_span_text_code_dark(not_rule, true_text);
+    html_span_text(
+      not_rule,
+      " when the strings are different in some way, otherwise ",
+    );
+    html_span_text_code_dark(not_rule, "!==");
+    html_span_text(not_rule, " is ");
+    html_span_text_code_dark(not_rule, false_text);
   }
 }
