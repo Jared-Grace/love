@@ -2,11 +2,8 @@ import { lists_sizes_equal } from "./lists_sizes_equal.mjs";
 import { assert_json_get } from "./assert_json_get.mjs";
 export function lists_sizes_equal_assert(lists) {
   let a = lists_sizes_equal(lists);
-  function lambda() {
-    let r = {
-      lists,
-    };
-    return r;
-  }
-  assert_json_get(a, lambda);
+  let r = {
+    lists,
+  };
+  assert_json(a, r);
 }
