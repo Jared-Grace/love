@@ -1,3 +1,4 @@
+import { html_imgs_load_wait } from "./html_imgs_load_wait.mjs";
 import { app_g_player_img } from "./app_g_player_img.mjs";
 import { app_g_div_map_on_click } from "./app_g_div_map_on_click.mjs";
 import { app_g_game_save_get_or_refresh } from "./app_g_game_save_get_or_refresh.mjs";
@@ -25,4 +26,5 @@ export async function app_g_refresh(context, div_map_container) {
   app_g_time_tint(div_map_container, g);
   await app_g_dev_if(div_map);
   await app_g_view_render(div_map);
+  await html_imgs_load_wait(div_map_container);
 }
