@@ -409,6 +409,7 @@ export function permission_grant_names() {
   let spelled406 = fn_name("app_search_query_hash_word_gap");
   let spelled407 = fn_name("js_declared_names_cases_gate_run");
   let spelled408 = fn_name("functions_names_in_text_gate_run");
+  let spelled409 = fn_name("firebase_prod_app_unchanged_assert");
   let names = [
     spelled,
     spelled2,
@@ -818,6 +819,7 @@ export function permission_grant_names() {
     spelled406,
     spelled407,
     spelled408,
+    spelled409,
   ];
   return names;
 }
