@@ -32,16 +32,16 @@ export function app_code_lesson_expression_string_order() {
       left_first: true,
     },
     {
+      operator: greater_operator,
+      left_first: true,
+    },
+    {
       operator: less_operator,
       left_first: false,
     },
     {
       operator: greater_operator,
       left_first: false,
-    },
-    {
-      operator: greater_operator,
-      left_first: true,
     },
   ];
   function words_source() {
@@ -57,15 +57,10 @@ export function app_code_lesson_expression_string_order() {
     let lower_only = list_filter(distinct, lower_case_is);
     return lower_only;
   }
-  function question_code(combo) {
-    "one comparison as a code string: two lower-case verse words in quotes with the operator between them, arranged so the alphabetically-earlier word sits on the left when left_first is set and on the right when it is not - which fixes whether the comparison is true or false without computing it here";
+  function question_code(combo, earlier, later) {
+    "one comparison as a code string: the shared earlier/later pair in quotes with the operator between them, arranged so the alphabetically-earlier word sits on the left when left_first is set and on the right when it is not - which fixes whether the comparison is true or false without computing it here";
     let operator = property_get(combo, "operator");
     let left_first = property_get(combo, "left_first");
-    let words = words_source();
-    let two = list_shuffle_take(words, 2);
-    let ordered = list_sort_text(two);
-    let earlier = list_get(ordered, 0);
-    let later = list_get(ordered, 1);
     let left = ternary(left_first, earlier, later);
     let right = ternary(left_first, later, earlier);
     let code_left = app_code_string_code(left);
@@ -80,8 +75,18 @@ export function app_code_lesson_expression_string_order() {
     return joined;
   }
   function refill() {
-    "four comparisons: less-than true, less-than false, greater-than true, greater-than false - a balanced two true and two false, both operators drilled";
-    let list = list_map(combos, question_code);
+    "four comparisons over ONE shared pair of words, so only the operator and the left/right order change from one example to the next and the learner reads the rule off the contrast: less-than and greater-than, each shown true and false, a balanced two true and two false";
+    let words = words_source();
+    let two = list_shuffle_take(words, 2);
+    let ordered = list_sort_text(two);
+    let earlier = list_get(ordered, 0);
+    let later = list_get(ordered, 1);
+    function one(combo) {
+      "one example built from the combo and the shared pair";
+      let code = question_code(combo, earlier, later);
+      return code;
+    }
+    let list = list_map(combos, one);
     return list;
   }
   function decoys(question, answer) {
