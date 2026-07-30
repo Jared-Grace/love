@@ -39,7 +39,7 @@ export function app_code_lesson_expression_equals() {
     operator,
     question_middle: "the same as",
     pair,
-    name_id_rights: [" equal to"],
+    name_id_rights: ["equal to"],
     closing,
     preamble,
     explanation,
