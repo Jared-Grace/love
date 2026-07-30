@@ -15,7 +15,9 @@ export async function app_supper_home_generic(context) {
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
+  ("a narrower edge than the other screens keep, because everything on this one already sits inside a card that has its own edge - the ordinary gap outside it read as a second margin around the first");
+  let gap = app_shared_spaced_small_gap();
+  app_shared_content_center_padding_gap(content, column, gap);
   let bar = property_get(bc, "bar");
   html_centered(bar);
   let text = emoji_gear();
