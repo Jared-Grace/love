@@ -156,7 +156,7 @@ export function app_code_lesson_expression_string_order() {
     function code_prose_line(box, parts) {
       "one line in a box, built from parts - each part is a two-item [kind, text] pair where kind 'code' renders a dark code token (a symbol or a sequence of symbols) and anything else renders plain prose";
       let div = html_div(box);
-      function add(part) {
+      function part_render(part) {
         "render one part into the line: a code token or plain prose";
         let kind = list_get(part, 0);
         let text = list_get(part, 1);
@@ -169,16 +169,16 @@ export function app_code_lesson_expression_string_order() {
         renderer(div, text);
         return null;
       }
-      list_map(parts, add);
+      list_map(parts, part_render);
       return div;
     }
-    let stage_ = app_code_container_light_blue(root);
-    code_prose_line(stage_, [
+    let stage_1 = app_code_container_light_blue(root);
+    code_prose_line(stage_1, [
       ["code", "g"],
       ["text", " comes before "],
       ["code", "h"],
     ]);
-    code_prose_line(stage_, [
+    code_prose_line(stage_1, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
