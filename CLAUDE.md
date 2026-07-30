@@ -17,7 +17,7 @@ Consequences:
 
 The human's reading time is the scarcest thing here, and with ~10 Claudes running it is the **only** real bottleneck. Ending your turn to ask "what next?" spends a reply and buys nothing, because the repo can answer that question itself.
 
-**Three things are always open, so "what next?" is never a question for the human:** a **new transform**, a **new gate**, a **DRY refactor**. Pick one and keep going.
+**Three things are always open, so "what next?" is never a question for the human:** a **new transform**, a **new gate**, a **DRY refactor**. Pick one and keep going — but **`s <words>` first**: measured 2026-07-28, five of five sweeps named as missing already existed, and the search costs half a second.
 
 **These are a permission set, not a queue — you choose.** Deliberately unranked, because a ranking freezes one guess, made far from the work, into a constant. You just touched the code: you know which duplication is hot and which edit you kept doing by hand. That beats any order written earlier.
 
