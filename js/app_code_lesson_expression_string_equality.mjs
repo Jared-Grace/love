@@ -113,42 +113,39 @@ export function app_code_lesson_expression_string_equality() {
     return built;
   }
   function above(root) {
-    "anchor on the equality the learner already knows on numbers, then state the two rules - triple-equals is true only when the strings match, not-equals is its opposite. No worked examples here on purpose: the four refreshable examples below (all four true/false cases) do the demonstrating, so the rules are stated once and the cases shown once.";
+    "two rule boxes, each its own light-blue container - === and !== - and within each box the true case and the false case are stated on their own line, condition first (when ... then ... is true/false). No worked examples here: the four refreshable examples below demonstrate all four cases.";
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
     let equals_box = app_code_container_light_blue(root);
-    let recall_line = html_div(equals_box);
-    html_span_text(recall_line, "You've seen that ");
-    html_span_text_code_dark(recall_line, "===");
-    html_span_text(recall_line, " asks if two numbers are the same");
-    let also_line = html_div(equals_box);
-    html_span_text_code_dark(also_line, "===");
-    html_span_text(also_line, " also compares two strings");
-    let equals_rule = html_div(equals_box);
-    html_span_text_code_dark(equals_rule, "===");
-    html_span_text(equals_rule, " is ");
-    html_span_text_code_dark(equals_rule, true_text);
+    let equals_true = html_div(equals_box);
+    html_span_text(equals_true, "when both strings are exactly the same then ");
+    html_span_text_code_dark(equals_true, "===");
+    html_span_text(equals_true, " is ");
+    html_span_text_code_dark(equals_true, true_text);
+    let equals_false = html_div(equals_box);
     html_span_text(
-      equals_rule,
-      " when both strings are exactly the same, otherwise ",
+      equals_false,
+      "when the strings are different in some way then ",
     );
-    html_span_text_code_dark(equals_rule, "===");
-    html_span_text(equals_rule, " is ");
-    html_span_text_code_dark(equals_rule, false_text);
+    html_span_text_code_dark(equals_false, "===");
+    html_span_text(equals_false, " is ");
+    html_span_text_code_dark(equals_false, false_text);
     let not_box = app_code_container_light_blue(root);
     let opposite_line = html_div(not_box);
     html_span_text_code_dark(opposite_line, "!==");
     html_span_text(opposite_line, " is the opposite");
-    let not_rule = html_div(not_box);
-    html_span_text_code_dark(not_rule, "!==");
-    html_span_text(not_rule, " is ");
-    html_span_text_code_dark(not_rule, true_text);
+    let not_true = html_div(not_box);
     html_span_text(
-      not_rule,
-      " when the strings are different in some way, otherwise ",
+      not_true,
+      "when the strings are different in some way then ",
     );
-    html_span_text_code_dark(not_rule, "!==");
-    html_span_text(not_rule, " is ");
-    html_span_text_code_dark(not_rule, false_text);
+    html_span_text_code_dark(not_true, "!==");
+    html_span_text(not_true, " is ");
+    html_span_text_code_dark(not_true, true_text);
+    let not_false = html_div(not_box);
+    html_span_text(not_false, "when both strings are exactly the same then ");
+    html_span_text_code_dark(not_false, "!==");
+    html_span_text(not_false, " is ");
+    html_span_text_code_dark(not_false, false_text);
   }
 }
