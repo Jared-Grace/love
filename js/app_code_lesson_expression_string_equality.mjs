@@ -42,20 +42,13 @@ export function app_code_lesson_expression_string_equality() {
       same: false,
     },
   ];
-  function question_code(combo) {
-    "one comparison as a code string: two verse words in quotes with the operator between them; when the pair should match, the same word is used on both sides";
+  function question_code(combo, word_a, word_b) {
+    "one comparison as a code string: the shared pair with the operator between them; when the pair should match, word_a is used on both sides, otherwise word_a and word_b - so every example shares the same left word and only the right word and the operator change";
     let operator = property_get(combo, "operator");
     let same = property_get(combo, "same");
-    let list2 = app_code_verse_words_clean();
-    let words = list_unique(list2);
-    let two = list_shuffle_take(words, 2);
-    let left = list_get(two, 0);
-    let right = list_get(two, 1);
-    if (same) {
-      right = left;
-    }
-    let code_left = app_code_string_code(left);
-    let code_right = app_code_string_code(right);
+    let right_word = ternary(same, word_a, word_b);
+    let code_left = app_code_string_code(word_a);
+    let code_right = app_code_string_code(right_word);
     let joined = text_combine_multiple([
       code_left,
       " ",
@@ -66,8 +59,18 @@ export function app_code_lesson_expression_string_equality() {
     return joined;
   }
   function refill() {
-    "four comparisons: triple-equals same, triple-equals different, not-equals same, not-equals different - a balanced two true and two false, both operators drilled";
-    let list = list_map(combos, question_code);
+    "four comparisons over ONE shared pair of words, so only the operator and whether the two sides match change from one example to the next: triple-equals and not-equals, each shown true and false, a balanced two true and two false";
+    let list2 = app_code_verse_words_clean();
+    let words = list_unique(list2);
+    let two = list_shuffle_take(words, 2);
+    let word_a = list_get(two, 0);
+    let word_b = list_get(two, 1);
+    function one(combo) {
+      "one example built from the combo and the shared pair";
+      let code = question_code(combo, word_a, word_b);
+      return code;
+    }
+    let list = list_map(combos, one);
     return list;
   }
   function decoys(question, answer) {
