@@ -35,7 +35,7 @@ export function app_code_lesson_expression_true_false() {
       }
       return render;
     }
-    let rights = [" true or false"];
+    let rights = ["true or false"];
     let built = app_code_lesson_name_id_generic(rights, "values", title_get);
     return built;
   }
