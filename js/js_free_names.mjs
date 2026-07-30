@@ -1,6 +1,7 @@
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { js_function_params_all } from "./js_function_params_all.mjs";
+import { js_catch_clause_names_all } from "./js_catch_clause_names_all.mjs";
 import { js_global_names } from "./js_global_names.mjs";
 import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
