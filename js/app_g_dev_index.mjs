@@ -1,9 +1,7 @@
+import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
-import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { html_a_href_text } from "./html_a_href_text.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -21,41 +19,19 @@ import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function app_g_dev_index() {
+  let f_name = fn_name("app_search_results");
   (text_combine_multiple([
     "the #index dev directory, rendered like the Bible SEARCH RESULTS (DRY — the SAME ",
     app_shared_container_blue.name,
     " cards + bold collapsible header the search uses, mirroring ",
-    fn_name("app_search_results"),
+    f_name,
     ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link (click + reload-on-hash-change) jumps to that screen. routes + categories come from the ",
   ]),
     app_g_dev_routes.name,
     " registry + ",
     app_g_dev_index_prefixes.name,
     ", so it never drifts. BESPOKE (recursion / closures / Object.keys) — do NOT auto-canonicalize");
-  let div = html_body_div();
-  html_style_assign(div, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    background: app_shared_color_page_background(),
-    color: "black",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "stretch",
-    "justify-content": "flex-start",
-    gap: "0",
-    "z-index": "1000",
-    padding: "1rem",
-    "box-sizing": "border-box",
-    "overflow-y": "auto",
-  });
-  let title = html_p_text(div, "Dev routes");
-  html_style_assign(title, {
-    margin: "0",
-    "font-weight": "bold",
-  });
+  let div = app_g_dev_overlay("Dev routes");
   let routes = app_g_dev_routes(null);
   let names = properties_get(routes);
   let all = list_concat(names, ["reset", "index"]);
