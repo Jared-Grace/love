@@ -397,7 +397,7 @@ export function permission_grant_names() {
   let spelled394 = fn_name("daemons_names");
   let spelled395 = fn_name("g_design_notes");
   let spelled396 = fn_name("js_free_names_cases_gate_run");
-  let spelled397 = fn_name("functions_search_multiple");
+  let spelled397 = fn_name("functions_search_any_word");
   let spelled398 = fn_name("function_reachable_names");
   let spelled399 = fn_name("js_name_only_imports_cases_gate_run");
   let spelled400 = fn_name("js_code_literal_key_only_cases_gate_run");
