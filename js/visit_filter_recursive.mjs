@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
@@ -27,7 +28,7 @@ export function visit_filter_recursive(
     stack: copy,
   });
   let removed = list_pop(stack);
-  if (removed !== node) {
+  if (not_equal(removed, node)) {
     error(
       "the walk keeps a stack of the nodes it is currently inside, and the one taken back off the top is not the one this step put there - something else added to or removed from that stack while the children were being visited",
     );
