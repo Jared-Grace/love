@@ -22,7 +22,8 @@ export async function git_commits_back_to(folder, floor) {
   );
   let range = text_combine_multiple([floor_full, "..HEAD"]);
   let printed = await git_folder_run(folder, ["rev-list", range]);
-  let lines = text_split_newline(text_trim(printed));
+  let s = text_trim(printed);
+  let lines = text_split_newline(s);
   let commits = list_filter_equal_not(lines, "");
   list_add(commits, floor_full);
   return commits;
