@@ -414,6 +414,7 @@ export function permission_grant_names() {
   let spelled411 = fn_name("qa_app_commit_deployable_generic");
   let spelled412 = fn_name("lock_force_release");
   let spelled413 = fn_name("js_imports_local_names_cases_gate_run");
+  let spelled414 = fn_name("js_identifiers_referenced_names_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -828,6 +829,7 @@ export function permission_grant_names() {
     spelled411,
     spelled412,
     spelled413,
+    spelled414,
   ];
   return names;
 }
