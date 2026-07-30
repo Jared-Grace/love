@@ -41,7 +41,7 @@ export function app_g_menu(overlay, player) {
   let text = text_combine(left, " Pray");
   function lambda7() {
     app_g_menu_clear_back(overlay, player);
-    app_g_container_text(overlay, "What prayer would you like to pray?");
+    app_g_container_text(overlay, "What else would you like to pray?");
     async function lambda22() {
       let prayer = property_get(player, "prayer");
       let property_name = app_g_conversation_key();
