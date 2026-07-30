@@ -1,5 +1,5 @@
 import { error } from "./error.mjs";
-export function todo(description) {
+export function todo() {
   "Every one of the twelve places that reach for this marker hands over nothing,";
   "so the description was only ever read as undefined and the message read";
   "literally as todo: undefined. The line that threw is named in the stack";
