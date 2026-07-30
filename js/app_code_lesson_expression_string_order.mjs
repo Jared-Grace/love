@@ -151,7 +151,7 @@ export function app_code_lesson_expression_string_order() {
     let dictionary_line = html_div(recall);
     html_span_text(
       dictionary_line,
-      "Strings are put in alphabetical order, the way words are listed in a dictionary",
+      "Strings are compared in alphabetical order, the way words are listed in a dictionary",
     );
     let less_box = app_code_container_light_blue(root);
     let less_true = html_div(less_box);
