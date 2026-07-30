@@ -402,6 +402,7 @@ export function permission_grant_names() {
   let spelled399 = fn_name("js_name_only_imports_cases_gate_run");
   let spelled400 = fn_name("js_code_literal_key_only_cases_gate_run");
   let spelled401 = fn_name("qa_app_reachable_names");
+  let spelled402 = fn_name("qa_app_commit_gate_run_at");
   let names = [
     spelled,
     spelled2,
@@ -804,6 +805,7 @@ export function permission_grant_names() {
     spelled399,
     spelled400,
     spelled401,
+    spelled402,
   ];
   return names;
 }
