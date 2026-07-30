@@ -260,8 +260,10 @@ export async function app_g_conversation(
         " for this turn's after_kind — carried as the pending intro so render_openers / render_pray say it in place of the usual continue-prompt: 'npc says the after, then asks what to talk about next'. one turn per opener in the demo, so the after always leads to the menu; a multi-turn thread would instead chain into the next turn's before.");
       remaining = list_filter(remaining, keep);
       await advance();
-      let after_kind = property_get(turn, "after_kind");
-      pending.text = g_response(after_kind);
+      let after_kind = property_get_or_null(turn, "after_kind");
+      if (after_kind) {
+        pending.text = g_response(after_kind);
+      }
       render();
     }
     let concern = property_get(turn, "concern");
