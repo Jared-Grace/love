@@ -36,8 +36,8 @@ export async function app_code_lessons_rights_space_strip() {
       }
       let f_path = property_get(paths, f_name);
       async function read() {
-        let code = await file_read(f_path);
-        return code;
+        let read_code = await file_read(f_path);
+        return read_code;
       }
       let code = await catch_null_async(read);
       let unreadable = equal(code, null);
