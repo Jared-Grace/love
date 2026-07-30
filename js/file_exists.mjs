@@ -1,3 +1,4 @@
+import { promise_not_is_assert_json } from "./promise_not_is_assert_json.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { indexeddb_exists } from "./indexeddb_exists.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
@@ -18,9 +19,9 @@ export async function file_exists(file_path) {
     );
     return present;
   }
-  if (promise_is(file_path)) {
-    error();
-  }
+  promise_not_is_assert_json(file_path, {
+    hint: "the file path arrived as a promise, so an await is missing where this was called",
+  });
   let fs = await import("fs");
   let v = fs.promises;
   let access = property_get(v, "access");
