@@ -26,8 +26,8 @@ export async function git_commits_between(folder, newest, oldest) {
     behind,
     "the commit named as the oldest one to ship is not behind the one named as the newest, so there is no walk from one back to the other - was it named from another line of work?",
   );
-  let range = text_combine_multiple([oldest_full, "..", newest_full]);
-  let printed = await git_folder_run(folder, ["rev-list", range]);
+  let range_text = text_combine_multiple([oldest_full, "..", newest_full]);
+  let printed = await git_folder_run(folder, ["rev-list", range_text]);
   let s = text_trim(printed);
   let lines = text_split_newline(s);
   let commits = list_filter_equal_not(lines, "");
