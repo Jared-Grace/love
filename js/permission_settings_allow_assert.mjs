@@ -1,7 +1,6 @@
 import { permission_settings_allow_drift } from "./permission_settings_allow_drift.mjs";
 import { permission_settings_allow_drift_verdict } from "./permission_settings_allow_drift_verdict.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { permission_settings_allow_write } from "./permission_settings_allow_write.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -43,20 +42,22 @@ export async function permission_settings_allow_assert() {
     ]);
     throw new Error(message);
   }
-  ("a rename and a removal both leave authority where it was or narrower, and the human already approved the grant that is moving - so the repair is the argument-free regenerator, which can only ever write what committed source already says");
-  await permission_settings_allow_write();
+  ("A rename and a removal both leave authority where it was or narrower, so repairing them here would be safe in itself - and it is still not done here. Calling the regenerator from a gate makes every caller of the gate a writer of permission rules, and the deploy command reaches this through ",
+    fn_name("firebase_deploy"),
+    " while taking an app name of its own, so the escalation check correctly stops granting it. One command losing its standing approval is a worse price than one command being run after a rename, and the verdict below is what makes that command a single obvious step rather than a puzzle.");
   let told = json_format_to({
-    repaired: verdict,
+    verdict,
     arrived,
     departed,
   });
   console.log(told);
-  let repaired = {
-    on_disk: property_get(counts, "generated"),
-    generated: property_get(counts, "generated"),
-    missing: 0,
-    extra: 0,
-    repaired: verdict,
-  };
-  return repaired;
+  let f_name2 = fn_name("permission_settings_allow_write");
+  let message2 = text_combine_multiple([
+    "permission settings gate: authority did not grow - this is a ",
+    verdict,
+    ", so the standing approvals are simply following their functions. Write the rules out again with ",
+    f_name2,
+    " and this passes.",
+  ]);
+  throw new Error(message2);
 }
