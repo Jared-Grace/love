@@ -20,14 +20,23 @@ export function app_shared_container_blue_collapsible(parent, title_text) {
   html_cursor_pointer(title_div);
   let body = html_div(card);
   let collapsed = false;
-  function toggle() {
-    collapsed = not(collapsed);
+  function collapsed_set(value) {
+    collapsed = value;
     html_display_none_or_block(collapsed, body);
     let caret_closed = app_shared_caret_closed();
     let caret = collapsed ? caret_closed : caret_open;
     let text = text_combine_multiple([caret, " ", title_text]);
     html_text_set(title_div, text);
   }
+  function toggle() {
+    let next = not(collapsed);
+    collapsed_set(next);
+  }
   html_on_click(title_div, toggle);
-  return body;
+  ("the setter comes back beside the body because a card is also shut and opened from outside itself - a page-wide open-everything button that could not reach in here would leave a folded card looking broken");
+  let r = {
+    body,
+    collapsed_set,
+  };
+  return r;
 }
