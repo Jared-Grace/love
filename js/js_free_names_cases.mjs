@@ -97,7 +97,9 @@ export function js_free_names_cases() {
     },
     {
       name: "a word used as a key in an object",
-      code: text_frozen("export function f() {\n  return { list_add: 1 };\n}\n"),
+      code: text_frozen(
+        "export function f() {\n  return { list_add: 1 };\n}\n",
+      ),
       free: [],
     },
   ];
