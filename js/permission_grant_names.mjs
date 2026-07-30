@@ -400,6 +400,7 @@ export function permission_grant_names() {
   let spelled397 = fn_name("functions_search_multiple");
   let spelled398 = fn_name("function_reachable_names");
   let spelled399 = fn_name("js_name_only_imports_cases_gate_run");
+  let spelled400 = fn_name("js_code_literal_key_only_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -800,6 +801,7 @@ export function permission_grant_names() {
     spelled397,
     spelled398,
     spelled399,
+    spelled400,
   ];
   return names;
 }
