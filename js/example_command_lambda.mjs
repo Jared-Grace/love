@@ -1,3 +1,4 @@
+import { js_strings_add_reference_to_fn_names } from "./js_strings_add_reference_to_fn_names.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_shadowing_rename_lambda } from "./js_shadowing_rename_lambda.mjs";
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
@@ -55,27 +56,36 @@ export function example_command_lambda(f_name, args, e) {
   if (equal(f_name, js_imports_paths_fix.name)) {
     return js_imports_paths_fix;
   }
-  if (equal(f_name, fn_name("function_arguments_assert_each_add"))) {
+  if (equal(f_name, js_strings_add_reference_to_fn_names.name)) {
+    return js_strings_add_reference_to_fn_names;
+  }
+  let right = fn_name("function_arguments_assert_each_add");
+  if (equal(f_name, right)) {
     let lambda = function_arguments_assert_each_add_lambda(args[1]);
     return lambda;
   }
-  if (equal(f_name, fn_name("js_node_type_is_new"))) {
+  let right2 = fn_name("js_node_type_is_new");
+  if (equal(f_name, right2)) {
     let lambda2 = js_node_type_is_new_lambda(args[0], args[1]);
     return lambda2;
   }
-  if (equal(f_name, fn_name("function_identifier_replace_current"))) {
+  let right3 = fn_name("function_identifier_replace_current");
+  if (equal(f_name, right3)) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }
-  if (equal(f_name, fn_name("js_shadowing_rename"))) {
+  let right4 = fn_name("js_shadowing_rename");
+  if (equal(f_name, right4)) {
     let lambda23 = js_shadowing_rename_lambda(args[0], args[1]);
     return lambda23;
   }
-  if (equal(f_name, fn_name("file_imports_repair"))) {
+  let right5 = fn_name("file_imports_repair");
+  if (equal(f_name, right5)) {
     let lambda3 = example_imports_lambda();
     return lambda3;
   }
-  if (equal(f_name, fn_name("js_imports_auto_relative"))) {
+  let right6 = fn_name("js_imports_auto_relative");
+  if (equal(f_name, right6)) {
     let lambda4 = example_auto_lambda();
     return lambda4;
   }
@@ -95,15 +105,18 @@ export function example_command_lambda(f_name, args, e) {
     );
     return lambda6;
   }
-  if (equal(f_name, fn_name("js_fold"))) {
+  let right7 = fn_name("js_fold");
+  if (equal(f_name, right7)) {
     let lambda7 = example_fold_lambda(args[0]);
     return lambda7;
   }
-  if (equal(f_name, fn_name("js_fold_all"))) {
+  let right8 = fn_name("js_fold_all");
+  if (equal(f_name, right8)) {
     let lambda8 = example_fold_lambda(args[0]);
     return lambda8;
   }
-  if (equal(f_name, fn_name("js_fold_auto"))) {
+  let right9 = fn_name("js_fold_auto");
+  if (equal(f_name, right9)) {
     let lambda9 = example_fold_auto_lambda(args);
     return lambda9;
   }
@@ -130,7 +143,8 @@ export function example_command_lambda(f_name, args, e) {
     );
     return lambda12;
   }
-  if (equal(f_name, fn_name("js_fn_name_references_to_calls"))) {
+  let right10 = fn_name("js_fn_name_references_to_calls");
+  if (equal(f_name, right10)) {
     let lambda13 = example_fn_name_references_lambda();
     return lambda13;
   }
