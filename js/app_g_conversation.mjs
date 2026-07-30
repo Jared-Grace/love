@@ -91,16 +91,32 @@ export async function app_g_conversation(
   }
   let name_player = property_get(player, "name");
   let greeting = g_greeting(meet, name_player);
+  let npc_gender = property_get(npc, "gender");
+  let pronouns = g_gender_pronouns(npc_gender);
   let christian = property_get(npc, "christian");
   if (christian) {
+    "a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.";
     app_g_npc_says(npc, overlay, greeting);
+    let container_believer = app_g_container_player(overlay);
+    app_g_p_text(container_believer, "What would you like to do?");
+    function pray_together() {
+      function on_part() {}
+      async function on_prayed() {
+        await overlay_close();
+      }
+      let believer_prayers = g_prayers_believer(pronouns);
+      app_g_pray_turn(believer_prayers, on_part, on_prayed);
+    }
+    let pray_emoji = emoji_pray();
+    let pray_label = text_combine(pray_emoji, " Pray together");
+    app_g_button_green(container_believer, pray_label, pray_together);
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
   let property_name2 = app_g_conversation_key();
   let has = property_exists(npc, property_name2);
   if (not(has)) {
-    let value = g_conversation_generate();
+    let value = g_conversation_generate(pronouns);
     let property_name3 = app_g_conversation_key();
     property_set(npc, property_name3, value);
   }
@@ -159,7 +175,9 @@ export async function app_g_conversation(
     let left2 = emoji_thinking();
     let labels = {
       gospel_share_objection: text_combine_multiple([
-        "Tell them that Jesus died ",
+        "Tell ",
+        property_get(pronouns, "object"),
+        " that Jesus died ",
         v,
         ", was buried ",
         v2,
