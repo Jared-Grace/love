@@ -395,6 +395,7 @@ export function permission_grant_names() {
   let spelled392 = fn_name("memory_wikilink_tokens_gate_run");
   let spelled393 = fn_name("example_tool_family");
   let spelled394 = fn_name("daemons_names");
+  let spelled395 = fn_name("g_design_notes");
   let names = [
     spelled,
     spelled2,
@@ -790,6 +791,7 @@ export function permission_grant_names() {
     spelled392,
     spelled393,
     spelled394,
+    spelled395,
   ];
   return names;
 }
