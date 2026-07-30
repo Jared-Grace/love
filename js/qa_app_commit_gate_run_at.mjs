@@ -15,6 +15,7 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   "The commit is judged once for the whole repo and every app's answer is then a matter of looking, so the second app to ask pays nothing.";
   let at = await qa_commit_named_at(commit);
   let judged = property_get(at, "judged");
+  let remembered = property_get(at, "remembered");
   let failed = property_get(judged, "failed");
   let named = property_get(judged, "named");
   let reach = await qa_app_reachable_names(search);
@@ -53,6 +54,7 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   let r = {
     app: search,
     commit,
+    remembered,
     reach: reach.length,
     deployable: clear,
     blocking,
