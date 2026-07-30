@@ -396,6 +396,7 @@ export function permission_grant_names() {
   let spelled393 = fn_name("example_tool_family");
   let spelled394 = fn_name("daemons_names");
   let spelled395 = fn_name("g_design_notes");
+  let spelled396 = fn_name("js_free_names_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -792,6 +793,7 @@ export function permission_grant_names() {
     spelled393,
     spelled394,
     spelled395,
+    spelled396,
   ];
   return names;
 }
