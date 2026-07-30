@@ -139,7 +139,10 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(numbers_line, ">");
     html_span_text(numbers_line, " to compare two numbers");
     let strings_line = html_div(recall);
-    html_span_text(strings_line, "They also compare two strings");
+    html_span_text_code_dark(strings_line, "<");
+    html_span_text(strings_line, " and ");
+    html_span_text_code_dark(strings_line, ">");
+    html_span_text(strings_line, " can also compare two strings");
     let dictionary_line = html_div(recall);
     html_span_text(
       dictionary_line,
@@ -147,12 +150,18 @@ export function app_code_lesson_expression_string_order() {
     );
     let less_box = app_code_container_light_blue(root);
     let less_true = html_div(less_box);
-    html_span_text(less_true, "When the left string comes first then ");
+    html_span_text(
+      less_true,
+      "When the left string comes before the right string then ",
+    );
     html_span_text_code_dark(less_true, "<");
     html_span_text(less_true, " is ");
     html_span_text_code_dark(less_true, true_text);
     let less_false = html_div(less_box);
-    html_span_text(less_false, "When the left string comes later then ");
+    html_span_text(
+      less_false,
+      "When the left string comes after the right string then ",
+    );
     html_span_text_code_dark(less_false, "<");
     html_span_text(less_false, " is ");
     html_span_text_code_dark(less_false, false_text);
@@ -161,12 +170,18 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(opposite_line, ">");
     html_span_text(opposite_line, " is the opposite");
     let greater_true = html_div(greater_box);
-    html_span_text(greater_true, "When the left string comes later then ");
+    html_span_text(
+      greater_true,
+      "When the left string comes after the right string then ",
+    );
     html_span_text_code_dark(greater_true, ">");
     html_span_text(greater_true, " is ");
     html_span_text_code_dark(greater_true, true_text);
     let greater_false = html_div(greater_box);
-    html_span_text(greater_false, "When the left string comes first then ");
+    html_span_text(
+      greater_false,
+      "When the left string comes before the right string then ",
+    );
     html_span_text_code_dark(greater_false, ">");
     html_span_text(greater_false, " is ");
     html_span_text_code_dark(greater_false, false_text);
