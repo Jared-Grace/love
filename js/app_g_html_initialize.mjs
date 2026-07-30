@@ -12,8 +12,11 @@ import { html_remix_icon } from "./html_remix_icon.mjs";
 export function app_g_html_initialize(context) {
   let root = html_mobile_default(context);
   html_remix_icon();
+  ("the game font is sized to MATCH the other apps' reading text (~20px), not run larger. the conversation chrome renders through the shared 1.2em control token, so it lands at 1.2 × this root; a 16px root puts it at ~19px — level with the reading apps' 20px rather than the 21.6px an 18px root gave. the map is px/vw/vh-based (",
+    fn_name("g_img_square_size_css"),
+    "), so this only sizes text, never the tiles.");
   html_style_assign(root, {
-    "font-size": "18px",
+    "font-size": "16px",
     margin: "0",
     padding: 0,
     height: "100%",
