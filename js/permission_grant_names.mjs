@@ -415,6 +415,7 @@ export function permission_grant_names() {
   let spelled412 = fn_name("lock_force_release");
   let spelled413 = fn_name("js_imports_local_names_cases_gate_run");
   let spelled414 = fn_name("js_identifiers_referenced_names_cases_gate_run");
+  let spelled415 = fn_name("firebase_prod_apps_unchanged_report");
   let names = [
     spelled,
     spelled2,
@@ -830,6 +831,7 @@ export function permission_grant_names() {
     spelled412,
     spelled413,
     spelled414,
+    spelled415,
   ];
   return names;
 }
