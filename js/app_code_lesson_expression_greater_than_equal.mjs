@@ -69,7 +69,7 @@ export function app_code_lesson_expression_greater_than_equal() {
   let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "greater than or equal to",
-    name_id_rights: [" greater than or equal to"],
+    name_id_rights: ["greater than or equal to"],
     closing,
     preamble: null,
     explanation,
