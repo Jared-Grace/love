@@ -5,6 +5,7 @@ import { error_json } from "./error_json.mjs";
 import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
+import { promise_not_is_assert_json } from "./promise_not_is_assert_json.mjs";
 import { error } from "./error.mjs";
 export function js_unparse(ast) {
   promise_not_is_assert_json(ast, {
