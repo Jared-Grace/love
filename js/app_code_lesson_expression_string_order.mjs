@@ -153,6 +153,25 @@ export function app_code_lesson_expression_string_order() {
       dictionary_line,
       "Strings are compared in alphabetical order, the way words are listed in a dictionary",
     );
+    let how_box = app_code_container_light_blue(root);
+    let one_at_a_time_line = html_div(how_box);
+    html_span_text(
+      one_at_a_time_line,
+      "The letters are compared one at a time",
+    );
+    let decides_line = html_div(how_box);
+    html_span_text(
+      decides_line,
+      "The first letter that is different decides the order",
+    );
+    let example_1_line = html_div(how_box);
+    html_span_text_code_dark(example_1_line, '"ca"');
+    html_span_text(example_1_line, " comes before ");
+    html_span_text_code_dark(example_1_line, '"cb"');
+    let example_2_line = html_div(how_box);
+    html_span_text_code_dark(example_2_line, '"dea"');
+    html_span_text(example_2_line, " comes before ");
+    html_span_text_code_dark(example_2_line, '"deb"');
     let less_box = app_code_container_light_blue(root);
     let less_true = html_div(less_box);
     html_span_text(
