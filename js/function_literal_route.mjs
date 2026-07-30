@@ -36,18 +36,22 @@ export async function function_literal_route(f_name, getter_f_name) {
   ("untouched. Answered the same way either way, that read as a repair that had");
   ("landed: the report offering this command stayed red, the command kept saying it");
   ("had done the work, and the reader was left to conclude the report was at fault.");
+  ("The refusal stands ahead of the import repair, and so ahead of the file being");
+  ("written at all, because a run that is going to refuse must leave nothing behind");
+  ("- repaired imports on a file it did not otherwise touch is a change nobody");
+  ("asked for, arriving alongside a message saying nothing was done.");
   let sites = 0;
   async function lambda(ast) {
     sites = js_literal_key_calls_set(ast, literal, getter_f_name);
+    greater_than_equal_assert_json(sites, 1, {
+      hint: "nothing in this file spells that word anywhere a call may stand, so there was nothing to point at the getter — is it written inside a list, or as the key of a written-out record? either one wants an edit by hand",
+      f_name,
+      getter_f_name,
+      literal,
+    });
     await js_imports_auto_relative(ast, paths, from_dir);
   }
   await file_js_transform(f_path, lambda);
-  greater_than_equal_assert_json(sites, 1, {
-    hint: "nothing in this file spells that word anywhere a call may stand, so there was nothing to point at the getter — is it written inside a list, or as the key of a written-out record? either one wants an edit by hand",
-    f_name,
-    getter_f_name,
-    literal,
-  });
   let r = {
     f_name,
     getter_f_name,
