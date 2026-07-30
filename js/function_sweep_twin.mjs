@@ -20,7 +20,7 @@ export async function function_sweep_twin(f_name) {
     ", and asking only about the end answered that there was no sweep at all. That is the worst answer this can give - a false absence reads as permission to build the thing that already exists, and on 2026-07-30 it was believed and a duplicate command was written, gated, granted and then deleted. Only names that really live are reported, so widening the guess cannot invent a twin; it can only stop missing one.");
   let names = await functions_names();
   let candidates = [];
-  let severals = ["multiple", "all", "each"];
+  let severals = ["multiple", "all", "each", "any"];
   let parts = function_name_to_parts(f_name);
   let size = list_size(parts);
   for (let several of severals) {
