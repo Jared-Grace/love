@@ -5,8 +5,6 @@ import { browser_files_database_initialize } from "./browser_files_database_init
 import { browser_files_store } from "./browser_files_store.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { throws_not_async } from "./throws_not_async.mjs";
-import { error } from "./error.mjs";
-import { promise_is } from "./promise_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {

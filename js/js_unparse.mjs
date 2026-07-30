@@ -4,15 +4,13 @@ import { not } from "./not.mjs";
 import { error_json } from "./error_json.mjs";
 import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
-import { promise_not_is } from "./promise_not_is.mjs";
 import { promise_not_is_assert_json } from "./promise_not_is_assert_json.mjs";
-import { error } from "./error.mjs";
 export function js_unparse(ast) {
   promise_not_is_assert_json(ast, {
     hint: "the syntax tree to write back out arrived as a promise, so an await is missing where this was called",
   });
-  let a3 = js_visit_filter(ast);
-  if (not(a3)) {
+  let a = js_visit_filter(ast);
+  if (not(a)) {
     let o = {
       ast,
     };
