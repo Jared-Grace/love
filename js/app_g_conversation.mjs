@@ -345,13 +345,12 @@ export async function app_g_conversation(
       return choice;
     }
     let choices = list_map(remaining, choice_of);
-    let container = app_g_turn_menu(
+    app_g_turn_menu(
       overlay,
       "What would you like to say?",
       choices,
       discern,
     );
-    app_g_button_conversation_end(container, leave);
   }
   function render_pray() {
     let npc_says = g_anything_else();
