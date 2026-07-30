@@ -94,6 +94,7 @@ export function examples_groups() {
         "example_imports_shorthand_and_computed_are_references",
         "example_shadowing_rename_shorthand",
         "example_fn_name_reference_strip",
+        "example_prose_name_spelled_not_imported",
         "example_fold_wrap_index",
         "example_fold_all_two",
         "example_fold_auto_discover",
