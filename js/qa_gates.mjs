@@ -1,3 +1,4 @@
+import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
 import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
 import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
@@ -112,6 +113,7 @@ export function qa_gates() {
     cases_gate_run_generic_gate_run,
     js_free_names_cases_gate_run,
     js_declared_names_cases_gate_run,
+    js_imports_local_names_cases_gate_run,
     function_imports_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
