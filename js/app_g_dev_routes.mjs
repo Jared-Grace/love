@@ -1,3 +1,4 @@
+import { app_g_design } from "./app_g_design.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { list_get } from "./list_get.mjs";
@@ -177,7 +178,15 @@ export function app_g_dev_routes(div_map) {
     await app_g_view_set(null);
     await app_g_day_conversation_demo();
   }
+  async function design() {
+    ("the #design reader: every memory note about this game's design, gathered and shown as collapsible cards (",
+      app_g_design.name,
+      "). not a mechanic under test like its siblings — it is the DESIGN behind them, kept in the game so it can be read where the work happens");
+    await app_g_view_set(null);
+    await app_g_design();
+  }
   let routes = {
+    design,
     study,
     unbeliever,
     quick,
