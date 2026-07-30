@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { property_get } from "./property_get.mjs";
