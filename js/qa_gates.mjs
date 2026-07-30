@@ -1,3 +1,5 @@
+import { literal_duplicates_gate_run } from "./literal_duplicates_gate_run.mjs";
+import { literal_duplicates_cases_gate_run } from "./literal_duplicates_cases_gate_run.mjs";
 import { js_while_frozen_cases_gate_run } from "./js_while_frozen_cases_gate_run.mjs";
 import { functions_while_frozen_gate_run } from "./functions_while_frozen_gate_run.mjs";
 import { memory_index_lines_gate_run } from "./memory_index_lines_gate_run.mjs";
@@ -124,6 +126,8 @@ export function qa_gates() {
     examples_notes_gate_run,
     examples_comments_none_gate_run,
     html_style_literal_gate_run,
+    literal_duplicates_cases_gate_run,
+    literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
