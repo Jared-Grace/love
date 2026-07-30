@@ -12,7 +12,7 @@ export function app_code_lesson_expression_exponent() {
     noun_upper: "Multiplication",
     verb: "multiply",
     title_word: "Exponent ",
-    right_word: " exponent",
+    right_word: "exponent",
   });
   return lesson;
 }
