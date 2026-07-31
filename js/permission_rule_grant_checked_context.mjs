@@ -1,14 +1,13 @@
+import { permission_settings_shared_path } from "./permission_settings_shared_path.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { permission_grant_rule } from "./permission_grant_rule.mjs";
 import { permission_grant_refusals_context } from "./permission_grant_refusals_context.mjs";
 import { permission_run_names } from "./permission_run_names.mjs";
-import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { permission_rule_command_probe } from "./permission_rule_command_probe.mjs";
 import { guard_check } from "./guard_check.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -45,8 +44,7 @@ export async function permission_rule_grant_checked_context(
     return refused;
   }
   ("the repo-shared settings file rather than the per-machine one, so peers and the gates see the grant");
-  let list = permission_settings_paths();
-  let settings_path = list_first(list);
+  let settings_path = permission_settings_shared_path();
   let settings = await file_read_json(settings_path);
   let permissions = property_get(settings, "permissions");
   let allow = property_get(permissions, "allow");
