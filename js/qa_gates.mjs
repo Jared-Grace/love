@@ -43,6 +43,7 @@ import { markers_gate_run } from "./markers_gate_run.mjs";
 import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
 import { python_mirrors_assert } from "./python_mirrors_assert.mjs";
 import { functions_duplicates_gate_run } from "./functions_duplicates_gate_run.mjs";
+import { functions_fold_gate_run } from "./functions_fold_gate_run.mjs";
 import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
 import { js_operator_targets_leaf_gate_run } from "./js_operator_targets_leaf_gate_run.mjs";
 import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
