@@ -1,3 +1,4 @@
+import { properties_size } from "./properties_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
@@ -9,11 +10,9 @@ import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
-import { properties_get } from "./properties_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
@@ -100,10 +99,8 @@ export async function functions_facts_all() {
     }
   }
   each(entries, record);
-  let list = properties_get(remembered);
-  let counted_before = list_size(list);
-  let list2 = properties_get(keeping);
-  let counted_now = list_size(list2);
+  let counted_before = properties_size(remembered);
+  let counted_now = properties_size(keeping);
   let count_changed = not_equal(counted_before, counted_now);
   let any_read_again = not_equal(read_again_count, 0);
   let write_wanted = any_read_again || count_changed;
