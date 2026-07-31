@@ -14,9 +14,7 @@ export function js_object_property_text_remove(ast, selects, key_name, text) {
   ("tried and thought better of.");
   ("Without this, undoing was writing the whole list out again, which is the one");
   ("shape that can silently drop everything it did not mention.");
-  let node = list_single(selects);
-  let record = js_node_value_get(node);
-  let elements = js_object_property_elements_get(record, key_name);
+  let elements = js_select_object_property_elements(selects, key_name);
   function same_is(element) {
     let held = property_get(element, "value");
     let same = equal(held, text);
