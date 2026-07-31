@@ -345,7 +345,13 @@ export async function app_g_conversation(
       return choice;
     }
     let choices = list_map(remaining, choice_of);
-    app_g_turn_menu(overlay, "What would you like to say?", choices, discern);
+    app_g_turn_menu(
+      overlay,
+      "What would you like to say?",
+      choices,
+      discern,
+      leave,
+    );
   }
   function render_pray() {
     let npc_says = g_anything_else();
@@ -381,14 +387,18 @@ export async function app_g_conversation(
     }
   }
   function render() {
-    "every screen's end-conversation button hangs off the OVERLAY, not the green container box, so the parting line sits the same distance below the choices on the openers menu as it does on the pray and close screens — one placement, one spacing.";
+    ("the openers screen ASKS what you would like to say, so its parting line is one of the answers — ",
+      app_g_turn_menu.name,
+      " puts it in the box with the other things you could say, and this function adds none. the pray and close screens ask something else (or nothing), so there the parting line still hangs off the OVERLAY below whatever they show.");
     html_clear(overlay);
     let i2 = list_size(remaining);
     let has_openers = positive_is(i2);
-    let ending = leave;
     if (has_openers) {
       render_openers();
-    } else if (not(prayed.done)) {
+      return;
+    }
+    let ending = leave;
+    if (not(prayed.done)) {
       render_pray();
     } else {
       render_close();
