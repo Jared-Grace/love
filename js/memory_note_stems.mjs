@@ -8,23 +8,13 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function memory_note_stems() {
   "The name every memory note is known by - its file name without the suffix. This is the identity a double-bracket link is resolved against, so it is what any check on those links has to compare with. Read-only.";
-  "The index is not a note and carries no header, so nothing links to it and it is left out.";
-  let folder = memory_folder();
-  let names = await folder_read_files(folder);
-  let index_name = memory_index_name();
+  "The index is not a note and carries no header, so nothing links to it and it is left out - which the reader of note names already knows.";
+  let names = await memory_note_names();
   let suffix = ".md";
-  let stems = [];
-  for (let name of names) {
-    let is_md = text_ends_with(name, suffix);
-    if (not(is_md)) {
-      continue;
-    }
-    let is_index = equal(name, index_name);
-    if (is_index) {
-      continue;
-    }
+  function stem_of(name) {
     let stem = text_suffix_without(name, suffix);
-    list_add(stems, stem);
+    return stem;
   }
+  let stems = list_map(names, stem_of);
   return stems;
 }
