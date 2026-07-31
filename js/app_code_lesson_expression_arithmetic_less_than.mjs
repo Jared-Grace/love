@@ -15,6 +15,9 @@ import { ternary } from "./ternary.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
+import { divide } from "./divide.mjs";
+import { modulo } from "./modulo.mjs";
+import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -61,6 +64,46 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       value,
     };
     return r3;
+  }
+  function op_divide() {
+    "the / arithmetic piece: the top is a multiple of the bottom so the result is a small whole number";
+    let bottom = integer_random(2, 4);
+    let value = integer_random(2, 5);
+    let top = multiply(value, bottom);
+    let r4 = {
+      left: top,
+      right: bottom,
+      symbol: "/",
+      value,
+    };
+    return r4;
+  }
+  function op_remainder() {
+    "the % arithmetic piece: the leftover after dividing, built so the leftover is at least 2 and the divisor is bigger than it";
+    let value = integer_random(2, 4);
+    let right = add(value, integer_random(1, 3));
+    let whole = multiply(right, integer_random(1, 2));
+    let left = add(whole, value);
+    let r5 = {
+      left,
+      right,
+      symbol: "%",
+      value: modulo(left, right),
+    };
+    return r5;
+  }
+  function op_exponent() {
+    "the ** arithmetic piece: a small base to a small power so the result stays small";
+    let base = integer_random(2, 3);
+    let power = integer_random(2, 3);
+    let value = exponent(base, power);
+    let r6 = {
+      left: base,
+      right: power,
+      symbol: "**",
+      value,
+    };
+    return r6;
   }
   let combos = [
     {
