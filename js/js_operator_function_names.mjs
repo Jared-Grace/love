@@ -1,9 +1,9 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { js_operators_unary } from "./js_operators_unary.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -43,8 +43,7 @@ export function js_operator_function_names() {
   ("An empty answer here would make every gate reading it pass while checking");
   ("nothing, which is the one failure a list like this can have and the one that");
   ("looks exactly like success.");
-  let none = list_empty_is(names);
-  let some = not(none);
+  let some = list_empty_not_is(names);
   assert_json(some, {
     hint: "the operator tables answered with no function names at all, so anything checking against this list would be checking nothing — would you like to look at whether the tables still carry a fn on each record?",
   });
