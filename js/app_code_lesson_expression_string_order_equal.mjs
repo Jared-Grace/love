@@ -149,40 +149,35 @@ export function app_code_lesson_expression_string_order_equal() {
       ["code", ">="],
       ["text", " with strings too"],
     ]);
-    app_code_prose_code_line(addition, [
-      ["code", "<="],
-      ["text", " is the same as "],
-      ["code", "<"],
-      ["text", ", but is "],
-      ["code", "true"],
-      ["text", " (instead of "],
-      ["code", "false"],
-      ["text", ") when the two strings are equal"],
-    ]);
-    app_code_prose_code_line(addition, [
-      ["code", ">="],
-      ["text", " is the same as "],
-      ["code", ">"],
-      ["text", ", but is "],
-      ["code", "true"],
-      ["text", " (instead of "],
-      ["code", "false"],
-      ["text", ") when the two strings are equal"],
-    ]);
+    function differential(operator, strict_operator) {
+      "one differential line: this operator is the same as its strict form, but true (instead of false) when the two strings are equal - the frame single-sourced so <= and >= cannot drift and a wording change is made once, not once per operator";
+      app_code_prose_code_line(addition, [
+        ["code", operator],
+        ["text", " is the same as "],
+        ["code", strict_operator],
+        ["text", ", but is "],
+        ["code", "true"],
+        ["text", " (instead of "],
+        ["code", "false"],
+        ["text", ") when the two strings are equal"],
+      ]);
+    }
+    differential("<=", "<");
+    differential(">=", ">");
     let meaning = app_code_container_light_blue(root);
-    app_code_prose_code_line(meaning, [
-      ["code", "<="],
-      [
-        "text",
-        " means the first string comes before the second string, or the two strings are equal",
-      ],
-    ]);
-    app_code_prose_code_line(meaning, [
-      ["code", ">="],
-      [
-        "text",
-        " means the first string comes after the second string, or the two strings are equal",
-      ],
-    ]);
+    function positive(operator, direction) {
+      "one positive-meaning line: this operator means the first string comes before/after the second string, or the two are equal - the frame single-sourced so <= and >= cannot drift";
+      let phrase = text_combine_multiple([
+        " means the first string comes ",
+        direction,
+        " the second string, or the two strings are equal",
+      ]);
+      app_code_prose_code_line(meaning, [
+        ["code", operator],
+        ["text", phrase],
+      ]);
+    }
+    positive("<=", "before");
+    positive(">=", "after");
   }
 }
