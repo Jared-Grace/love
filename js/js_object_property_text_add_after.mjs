@@ -20,9 +20,7 @@ export function js_object_property_text_add_after(
   ("it: the lists that most need an entry put in a particular place are exactly");
   ("the ones kept inside a record, so appending and then dragging by hand went on");
   ("until this.");
-  let node = list_single(selects);
-  let record = js_node_value_get(node);
-  let elements = js_object_property_elements_get(record, key_name);
+  let elements = js_select_object_property_elements(selects, key_name);
   let found = js_array_element_text_find(elements, after_text);
   let delta = 1;
   js_array_text_insert_beside(elements, found, text, delta);

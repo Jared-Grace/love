@@ -11,9 +11,7 @@ export function js_object_property_text_add(ast, selects, key_name, text) {
   ("of a function, so a list inside a record inside a list had no address at all.");
   ("That was the last thing standing between writing a unit and putting it where");
   ("it counts, since the registers that decide what runs are shaped exactly so.");
-  let node = list_single(selects);
-  let record = js_node_value_get(node);
-  let elements = js_object_property_elements_get(record, key_name);
+  let elements = js_select_object_property_elements(selects, key_name);
   let literal = js_string(text);
   list_add(elements, literal);
 }

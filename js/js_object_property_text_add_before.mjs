@@ -18,9 +18,7 @@ export function js_object_property_text_add_before(
   ("A curriculum is the case: the simplest thing to show belongs at the head of");
   ("its group, and the head is the one place naming what comes before cannot");
   ("reach.");
-  let node = list_single(selects);
-  let record = js_node_value_get(node);
-  let elements = js_object_property_elements_get(record, key_name);
+  let elements = js_select_object_property_elements(selects, key_name);
   let found = js_array_element_text_find(elements, before_text);
   let delta = 0;
   js_array_text_insert_beside(elements, found, text, delta);
