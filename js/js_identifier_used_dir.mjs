@@ -14,7 +14,7 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 ("global registry, so it runs the same in a sandbox. Backs the dir-scoped delete-unused.");
 export async function js_identifier_used_dir(dir, name) {
   let files = await folder_read_files(dir);
-  let name_file = text_combine_multiple([name, ".mjs"]);
+  let name_file = js_file_name(name);
   function is_other(file) {
     let is_self = equal(file, name_file);
     return not(is_self);

@@ -16,8 +16,7 @@ import { file_overwrite } from "./file_overwrite.mjs";
 ("scaffold and copies params directly, so it needs NO global dictionary and runs the same in");
 ("a sandbox as in the repo.");
 export async function js_identifier_wrap_dir(dir, name_old, name_new) {
-  let old_file = text_combine_multiple([name_old, ".mjs"]);
-  let file_path = path_join([dir, old_file]);
+  let file_path = js_file_dir_path(dir, name_old);
   let src = await file_read(file_path);
   let ast_old = js_parse(src);
   let declaration_call = js_flo(ast_old);
@@ -44,7 +43,6 @@ export async function js_identifier_wrap_dir(dir, name_old, name_new) {
   property_from(declaration_new, "params", declaration_call);
   await js_return_atomize(ast_new);
   let new_src = js_unparse(ast_new);
-  let new_file = text_combine_multiple([name_new, ".mjs"]);
-  let file_path2 = path_join([dir, new_file]);
+  let file_path2 = js_file_dir_path(dir, name_new);
   await file_overwrite(file_path2, new_src);
 }

@@ -34,7 +34,7 @@ export async function literals_frozen_storage_unfrozen() {
         continue;
       }
       ("Only what hands back one written word is asked about. What the opening is given besides those is either a number, which no browser looks anything up by, or a function, which holds no word at all - and asking either of them for a value gets nothing back, which is the same answer as a word that is empty.");
-      let path = text_combine_multiple(["js/", imported, ".mjs"]);
+      let path = js_file_dir_path(folder_js(), imported);
       let code = await file_read(path);
       let literal = js_code_getter_literal(code, imported);
       let word = not_equal(literal, "");

@@ -10,7 +10,7 @@ export async function permission_grant_names_write(names) {
   let f_name = fn_name("permission_grant_names");
   let note = permission_grant_names_note();
   let code = js_code_names_spelled(f_name, note, names);
-  let path = text_combine_multiple(["js/", f_name, ".mjs"]);
+  let path = js_file_dir_path(folder_js(), f_name);
   await file_overwrite(path, code);
   await function_auto(f_name);
   let report = {

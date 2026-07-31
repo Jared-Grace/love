@@ -55,10 +55,8 @@ export async function js_identifiers_prefix_rename_dir(
   }
   await list_map_unordered_async(files, transform_file);
   async function move(pair) {
-    let before_file = text_combine_multiple([pair.before, ".mjs"]);
-    let after_file = text_combine_multiple([pair.after, ".mjs"]);
-    let path_before = path_join([dir, before_file]);
-    let path_after = path_join([dir, after_file]);
+    let path_before = js_file_dir_path(dir, pair.before);
+    let path_after = js_file_dir_path(dir, pair.after);
     await file_move(path_before, path_after);
   }
   await list_map_unordered_async(pairs, move);

@@ -14,8 +14,7 @@ import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 ("heart of the repo-wide param-delete tool.");
 export async function js_identifier_param_delete_dir(dir, f_name, param_name) {
   let files = await folder_read_files(dir);
-  let def_file = text_combine_multiple([f_name, ".mjs"]);
-  let def_path = path_join([dir, def_file]);
+  let def_path = js_file_dir_path(dir, f_name);
   let index = null;
   function edit_def(ast) {
     let found = function_param_index(ast, param_name);
