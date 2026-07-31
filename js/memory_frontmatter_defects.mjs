@@ -1,3 +1,4 @@
+import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { memory_types } from "./memory_types.mjs";
@@ -17,7 +18,7 @@ export async function memory_frontmatter_defects() {
   "One sweep serves both the report and the repair, so the two cannot come to disagree about what a fault is.";
   let folder = memory_folder();
   let names = await folder_read_files(folder);
-  let index_name = "MEMORY.md";
+  let index_name = memory_index_name();
   let suffix = ".md";
   let types = memory_types();
   let defects = [];

@@ -1,3 +1,4 @@
+import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { file_read } from "./file_read.mjs";
@@ -10,7 +11,7 @@ export async function memory_dangling_pointers() {
   "This is the reverse of the orphan check next door: that one finds a file no line reaches, this one finds a line reaching no file. Which line a pointer is read out of is decided by the reader this calls, and a corpus pins that reading, because the index resolves cleanly today and a sweep that finds nothing would say the same whether the reading worked or not.";
   let folder = memory_folder();
   let names = await folder_read_files(folder);
-  let index_name = "MEMORY.md";
+  let index_name = memory_index_name();
   let index_path = path_join([folder, index_name]);
   let index_text = await file_read(index_path);
   let targets = memory_pointer_tokens(index_text);

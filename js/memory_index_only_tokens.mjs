@@ -1,3 +1,4 @@
+import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
@@ -16,7 +17,7 @@ export async function memory_index_only_tokens() {
   "A name that answers to a note is dropped, because that is a link rather than a fact.";
   let folder = memory_folder();
   let names = await folder_read_files(folder);
-  let index_name = "MEMORY.md";
+  let index_name = memory_index_name();
   let suffix = ".md";
   let index_path = path_join([folder, index_name]);
   let index_text = await file_read(index_path);
