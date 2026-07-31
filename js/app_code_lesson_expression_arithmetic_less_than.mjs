@@ -15,7 +15,6 @@ import { ternary } from "./ternary.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { modulo } from "./modulo.mjs";
 import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
@@ -81,8 +80,10 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   function op_remainder() {
     "the % arithmetic piece: the leftover after dividing, built so the leftover is at least 2 and the divisor is bigger than it";
     let value = integer_random(2, 4);
-    let right = add(value, integer_random(1, 3));
-    let whole = multiply(right, integer_random(1, 2));
+    let right3 = integer_random(1, 3);
+    let right = add(value, right3);
+    let right4 = integer_random(1, 2);
+    let whole = multiply(right, right4);
     let left = add(whole, value);
     let r5 = {
       left,
