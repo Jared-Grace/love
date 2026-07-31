@@ -1,10 +1,6 @@
-import { memory_index_name } from "./memory_index_name.mjs";
-import { memory_folder } from "./memory_folder.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
+import { memory_note_names } from "./memory_note_names.mjs";
+import { memory_note_text } from "./memory_note_text.mjs";
 import { memory_types } from "./memory_types.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_read } from "./file_read.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
 import { memory_frontmatter_field } from "./memory_frontmatter_field.mjs";
 import { list_add } from "./list_add.mjs";
