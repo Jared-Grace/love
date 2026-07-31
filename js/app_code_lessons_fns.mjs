@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_plus_less_than } from "./app_code_lesson_expression_plus_less_than.mjs";
+import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 import { app_code_lesson_expression_greater_than } from "./app_code_lesson_expression_greater_than.mjs";
@@ -153,7 +153,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_string_order,
     app_code_lesson_expression_string_trichotomy,
     app_code_lesson_expression_string_order_equal,
-    app_code_lesson_expression_plus_less_than,
+    app_code_lesson_expression_arithmetic_less_than,
   ];
   return fns;
 }
