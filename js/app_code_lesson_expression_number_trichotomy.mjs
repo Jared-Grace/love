@@ -126,18 +126,18 @@ export function app_code_lesson_expression_number_trichotomy() {
     "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box stating why there are exactly three (same, or first smaller, or first bigger, only one true); then a box mapping each operator to its case. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
     let example = app_code_container_light_blue(root);
     app_code_prose_code_line(example, [
-      ["code", "2"],
+      ["code", "1"],
       ["text", " and "],
-      ["code", "2"],
+      ["code", "1"],
       ["text", " are the same: "],
-      ["code", "2 === 2"],
+      ["code", "1 === 1"],
     ]);
     app_code_prose_code_line(example, [
-      ["code", "1"],
+      ["code", "2"],
       ["text", " and "],
       ["code", "3"],
       ["text", " are different: "],
-      ["code", "1 !== 3"],
+      ["code", "2 !== 3"],
     ]);
     let reasoning = app_code_container_light_blue(root);
     app_code_prose_code_line(reasoning, [
@@ -146,16 +146,16 @@ export function app_code_lesson_expression_number_trichotomy() {
     app_code_prose_code_line(reasoning, [
       ["code", "3"],
       ["text", " is bigger than "],
-      ["code", "1"],
+      ["code", "2"],
       ["text", ": "],
-      ["code", "3 > 1"],
+      ["code", "3 > 2"],
     ]);
     app_code_prose_code_line(reasoning, [
-      ["code", "1"],
+      ["code", "2"],
       ["text", " is smaller than "],
       ["code", "3"],
       ["text", ": "],
-      ["code", "1 < 3"],
+      ["code", "2 < 3"],
     ]);
     let cases = app_code_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Take any two numbers"]]);
