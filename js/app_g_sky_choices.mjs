@@ -1,5 +1,4 @@
-import { html_document_body } from "./html_document_body.mjs";
-import { html_div } from "./html_div.mjs";
+import { html_body_div } from "./html_body_div.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_times } from "./g_times.mjs";
@@ -19,8 +18,7 @@ export async function app_g_sky_choices() {
     ", so adding a keyframe adds its button automatically. stashes the pills (button + index) so ",
     app_g_sky_choices_highlight.name,
     " can mark the CURRENT sky, and applies that you-are-here highlight once on render");
-  let body = html_document_body();
-  let panel = html_div(body);
+  let panel = html_body_div();
   html_style_assign(panel, {
     position: "fixed",
     top: "0.5rem",
