@@ -7,9 +7,7 @@ export async function permission_rules() {
   "every allow rule across both settings files, whatever tool it grants";
   let rules = [];
   for (let path of permission_settings_paths()) {
-    let settings = await file_read_json(path);
-    let permissions = property_get(settings, "permissions");
-    let allow = property_get(permissions, "allow");
+    let allow = await permission_settings_allow_read(path);
     list_add_multiple(rules, allow);
   }
   let unique = list_unique(rules);

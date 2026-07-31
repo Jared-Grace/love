@@ -12,11 +12,8 @@ export async function permission_settings_allow_drift() {
   "how the allow rules on disk differ from the ones the JS list generates, told as function names rather than as rule text";
   "named rather than counted, because what a caller has to decide is whether authority GREW, and the rule text cannot say that while a name can - one name gone and another arrived is a rename carrying a grant the human already gave, and a name arriving with none gone is a grant nobody gave";
   "the local settings file beside the shared one is per-machine and outside version control, so it is not read here";
-  let paths = permission_settings_paths();
-  let path = list_first(paths);
-  let settings = await file_read_json(path);
-  let permissions = property_get(settings, "permissions");
-  let allow = property_get(permissions, "allow");
+  let path = permission_settings_shared_path();
+  let allow = await permission_settings_allow_read(path);
   let expected = permission_allow_generated();
   let missing = list_without_multiple(expected, allow);
   let extra = list_without_multiple(allow, expected);
