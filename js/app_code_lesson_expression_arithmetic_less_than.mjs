@@ -1,3 +1,9 @@
+import { html_div } from "./html_div.mjs";
+import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
+import { js_operator_percent } from "./js_operator_percent.mjs";
+import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -189,10 +195,21 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   function above(root) {
     "the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from the < comparison so nothing is hand-typed";
     let header = app_code_container_light_blue(root);
-    html_div_cycle_code(header, [
-      "We always do the arithmetic before the ",
-      less_than_symbol,
-    ]);
+    let line = html_div(header);
+    html_span_text(line, "We always do the ");
+    let four = js_operators_arithmetic();
+    let o = js_operator_percent();
+    let o2 = js_operator_double_asterisk();
+    let more = [o, o2];
+    let operators = list_concat(four, more);
+    function operator_symbol(operator) {
+      "the symbol shown in an operator's tile";
+      let symbol = property_get(operator, "operator");
+      return symbol;
+    }
+    app_code_operators_word_list(line, operators, "or", operator_symbol);
+    html_span_text(line, " before the ");
+    html_span_text_code_dark(line, less_than_symbol);
     function worked_example(
       other,
       other_on_left,
@@ -220,26 +237,32 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       let final = less_than_fn(final_left, final_right);
       let box = app_code_container_light_blue(root);
       let t5 = text_to(a_value);
-      html_div_cycle_code(box, [
-        "For ",
+      let full_expression = text_combine_multiple([
         full_left,
         " ",
         less_than_symbol,
         " ",
         full_right,
+      ]);
+      html_div_cycle_code(box, [
+        "For ",
+        full_expression,
         ", we do ",
         sub,
         " first, which is ",
         t5,
       ]);
       let t6 = text_to(final);
-      html_div_cycle_code(box, [
-        "Now we have ",
+      let combined_expression = text_combine_multiple([
         combined_left,
         " ",
         less_than_symbol,
         " ",
         combined_right,
+      ]);
+      html_div_cycle_code(box, [
+        "Now we have ",
+        combined_expression,
         ", which is ",
         t6,
       ]);
