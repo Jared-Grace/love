@@ -22,7 +22,7 @@ import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_expression_arithmetic_less_than() {
-  "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison is kept as < here so the only new thing is arithmetic-on-the-sides; > <= >= === !== generalise for free by the same rule. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Four refreshable examples vary the operator (+ - *), put the arithmetic on the left and the right, and show true and false. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; every comparison is strict, never the equal case, so this stays about arithmetic and < and not <=. Intended home: right after the comparison operators and the arithmetic precedence pair lessons, as the first step that lets a comparison's sides be expressions; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
+  "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison is kept as < here so the only new thing is arithmetic-on-the-sides; > <= >= === !== generalise for free by the same rule. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Eight refreshable examples vary the operator across ALL the already-learned number binary operators (+ - * / % **), put the arithmetic on the left and the right, and show true and false; the right side is emphasised because arithmetic on the right of the < is where the rule actually bites - left-to-right alone would put the < first and be wrong - whereas on the left, plain left-to-right already lands on the right answer. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; every comparison is strict, never the equal case, so this stays about arithmetic and < and not <=. Intended home: right after the comparison operators and the arithmetic precedence pair lessons, as the first step that lets a comparison's sides be expressions; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
   let less_than_operator = js_operator_less_than();
   let less_than_symbol = property_get(less_than_operator, "operator");
   let less_than_fn = property_get(less_than_operator, "fn");
@@ -112,17 +112,37 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       want_true: true,
     },
     {
-      op: op_subtract,
+      op: op_multiply,
       arithmetic_left: false,
       want_true: false,
     },
     {
-      op: op_multiply,
+      op: op_subtract,
       arithmetic_left: false,
       want_true: true,
     },
     {
-      op: op_add,
+      op: op_divide,
+      arithmetic_left: false,
+      want_true: false,
+    },
+    {
+      op: op_remainder,
+      arithmetic_left: false,
+      want_true: true,
+    },
+    {
+      op: op_exponent,
+      arithmetic_left: false,
+      want_true: false,
+    },
+    {
+      op: op_divide,
+      arithmetic_left: true,
+      want_true: true,
+    },
+    {
+      op: op_remainder,
       arithmetic_left: true,
       want_true: false,
     },
@@ -160,7 +180,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return code;
   }
   function refill() {
-    "the four comparisons for one screen: add-left true, subtract-right false, multiply-right true, add-left false - so the two demo examples (the first two) are one true and one false with two different operators, and all four span +, -, *, both arrangements and both answers";
+    "the eight comparisons for one screen, spanning + - * / % ** on both sides of the < and both answers; the first two are the demo pair (one true, one false, two different operators); the right side is emphasised because arithmetic on the right of the < is where doing it first actually matters (on the left, plain left-to-right already gives the right answer)";
     let list = list_map(combos, one);
     return list;
   }
