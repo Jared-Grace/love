@@ -40,7 +40,7 @@ import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
 import { indexeddb_store_clear } from "./indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
-import { emoji_down } from "./emoji_down.mjs";
+import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
@@ -107,7 +107,7 @@ export async function app_a_function(context) {
   if (false) {
     let a = emoji_up();
     let b = app_a_button(content, a, upload);
-    let text = emoji_down();
+    let text = emoji_arrow_down();
     let b3 = app_a_button(content, text, download);
   }
   let bc = html_bar_content(root);
