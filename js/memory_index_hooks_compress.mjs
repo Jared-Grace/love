@@ -1,8 +1,7 @@
+import { memory_index_lines } from "./memory_index_lines.mjs";
+import { memory_index_path } from "./memory_index_path.mjs";
 import { equal } from "./equal.mjs";
 import { text_code_spans_blanked } from "./text_code_spans_blanked.mjs";
-import { memory_folder } from "./memory_folder.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_read } from "./file_read.mjs";
 import { memory_index_line_length_ceiling } from "./memory_index_line_length_ceiling.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -20,11 +19,7 @@ export async function memory_index_hooks_compress() {
   "This is safe to run over the whole index only because of that. Where it is untrue, the name lives in the index and nowhere else - and the reader of index-only names answers exactly those, so ask it before and after: empty both times is the proof that the lines were compressed rather than robbed.";
   "A link is only a link when it is not quoted. A note explaining how links are written shows one as an example, and the first run of this read one of those as the real thing and cut the line off inside the quotation - so the line is read with its backtick spans blanked out, keeping every position where it was.";
   "Lines carrying no link are left alone. Their whole length is the hook for the note they point at, and shortening that is a judgment about what the note is for, which no rule here can make.";
-  let folder = memory_folder();
-  let name = "MEMORY.md";
-  let path = path_join([folder, name]);
-  let text = await file_read(path);
-  let lines = text.split("\n");
+  let lines = await memory_index_lines();
   let ceiling = memory_index_line_length_ceiling();
   let opener = "- [";
   let link_open = "[[";
@@ -70,6 +65,7 @@ export async function memory_index_hooks_compress() {
     list_add(shortened, record);
   }
   let rebuilt = kept.join("\n");
+  let path = memory_index_path();
   await file_overwrite(path, rebuilt);
   let r = {
     lines: shortened.length,

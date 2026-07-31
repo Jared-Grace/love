@@ -1,7 +1,7 @@
+import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { add } from "./add.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
@@ -10,10 +10,7 @@ import { not } from "./not.mjs";
 export async function memory_hook_limit_candidates() {
   "Index entries whose NOTE states a bound on its own advice but whose HOOK does not carry one - the excerpt defect, where the line loaded into every session keeps the licence and leaves the brake in the body. A truncated licence reads as an unconditional instruction, so this is the shape worth hunting. HEURISTIC and deliberately a REPORT, never a gate: whether a hook would surface its bound is a meaning question, and a gate claiming to answer it would be green while wrong. Expect false positives - the answer is a candidate list to read, not a defect list. Read-only.";
   let folder = memory_folder();
-  let index_name = "MEMORY.md";
-  let index_path = path_join([folder, index_name]);
-  let index_text = await file_read(index_path);
-  let lines = text_split_newline(index_text);
+  let lines = await memory_index_lines();
   let body_markers = [
     "Guardrail",
     "guardrail",
