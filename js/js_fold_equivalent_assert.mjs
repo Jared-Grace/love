@@ -1,8 +1,7 @@
+import { list_slice_count } from "./list_slice_count.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_block_canonical } from "./js_block_canonical.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { add } from "./add.mjs";
 import { error_json } from "./error_json.mjs";
 export function js_fold_equivalent_assert(
   pattern_sigs,
@@ -20,8 +19,7 @@ export function js_fold_equivalent_assert(
   "matched block is NOT x's computation, so the fold would change behavior — throw rather than rewrite.";
   arguments_assert(arguments, 8);
   let x_canonical = js_block_canonical(pattern_sigs, params, return_local);
-  let block_end = add(start, k);
-  let block_sigs = list_slice(target_sigs, start, block_end);
+  let block_sigs = list_slice_count(target_sigs, start, k);
   let b_canonical = js_block_canonical(block_sigs, arg_keys, output_name);
   let differ = equal_not(x_canonical, b_canonical);
   if (differ) {
