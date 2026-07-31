@@ -1,3 +1,4 @@
+import { js_find_body_block } from "./js_find_body_block.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
@@ -43,8 +44,7 @@ export function js_fold(x_ast, f_ast) {
   if (empty) {
     return null;
   }
-  let f_declaration = js_flo(f_ast);
-  let f_block = property_get(f_declaration, "body");
+  let f_block = js_find_body_block(f_ast);
   let f_statements = property_get(f_block, "body");
   let target_sigs = list_map(f_statements, js_atomic_statement_signature);
   let match = js_fold_match_block(pattern_sigs, target_sigs, params);
