@@ -49,7 +49,7 @@ import { json_decompress } from "./json_decompress.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
-import { emoji_up } from "./emoji_up.mjs";
+import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -105,7 +105,7 @@ export async function app_a_function(context) {
     await app_a_file_system_initialize_download();
   }
   if (false) {
-    let a = emoji_up();
+    let a = emoji_arrow_up();
     let b = app_a_button(content, a, upload);
     let text = emoji_arrow_down();
     let b3 = app_a_button(content, text, download);
