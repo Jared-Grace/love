@@ -1,0 +1,6 @@
+{
+ "known": [
+  "functions_call_pairs_frequent,functions_fold_sites",
+  "js_object_property_text_add_after,js_object_property_text_add_before"
+ ]
+}
