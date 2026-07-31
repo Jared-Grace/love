@@ -22,8 +22,6 @@ import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_order() {
   "comparing two strings for order with < and > - the same less-than and greater-than the learner already knows on numbers, now on strings, where the ordering is alphabetical (dictionary order). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would make God sort before and - true to the machine but the opposite of the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Four questions cover both operators in both directions, strictly before/after with two different words - the equal case is deferred to the string trichotomy lesson. Intended home: just after the numeric less-than / greater-than lessons and the string-equality lesson; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
@@ -133,22 +131,25 @@ export function app_code_lesson_expression_string_order() {
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
     let recall = app_code_container_light_blue(root);
-    let numbers_line = html_div(recall);
-    html_span_text(numbers_line, "You've used ");
-    html_span_text_code_dark(numbers_line, "<");
-    html_span_text(numbers_line, " and ");
-    html_span_text_code_dark(numbers_line, ">");
-    html_span_text(numbers_line, " to compare two numbers");
-    let strings_line = html_div(recall);
-    html_span_text_code_dark(strings_line, "<");
-    html_span_text(strings_line, " and ");
-    html_span_text_code_dark(strings_line, ">");
-    html_span_text(strings_line, " can also compare two strings");
-    let dictionary_line = html_div(recall);
-    html_span_text(
-      dictionary_line,
-      "Strings are compared in alphabetical order, the way words are listed in a dictionary",
-    );
+    app_code_prose_code_line(recall, [
+      ["text", "You've used "],
+      ["code", "<"],
+      ["text", " and "],
+      ["code", ">"],
+      ["text", " to compare two numbers"],
+    ]);
+    app_code_prose_code_line(recall, [
+      ["code", "<"],
+      ["text", " and "],
+      ["code", ">"],
+      ["text", " can also compare two strings"],
+    ]);
+    app_code_prose_code_line(recall, [
+      [
+        "text",
+        "Strings are compared in alphabetical order, the way words are listed in a dictionary",
+      ],
+    ]);
     let stage_one = app_code_container_light_blue(root);
     app_code_prose_code_line(stage_one, [
       ["code", '"g"'],
@@ -228,38 +229,30 @@ export function app_code_lesson_expression_string_order() {
       ],
     ]);
     let less_box = app_code_container_light_blue(root);
-    let less_true = html_div(less_box);
-    html_span_text(
-      less_true,
-      "When the left string comes before the right string then ",
-    );
-    html_span_text_code_dark(less_true, "<");
-    html_span_text(less_true, " is ");
-    html_span_text_code_dark(less_true, true_text);
-    let less_after = html_div(less_box);
-    html_span_text(
-      less_after,
-      "When the left string comes after the right string then ",
-    );
-    html_span_text_code_dark(less_after, "<");
-    html_span_text(less_after, " is ");
-    html_span_text_code_dark(less_after, false_text);
+    app_code_prose_code_line(less_box, [
+      ["text", "When the left string comes before the right string then "],
+      ["code", "<"],
+      ["text", " is "],
+      ["code", true_text],
+    ]);
+    app_code_prose_code_line(less_box, [
+      ["text", "When the left string comes after the right string then "],
+      ["code", "<"],
+      ["text", " is "],
+      ["code", false_text],
+    ]);
     let greater_box = app_code_container_light_blue(root);
-    let greater_true = html_div(greater_box);
-    html_span_text(
-      greater_true,
-      "When the left string comes after the right string then ",
-    );
-    html_span_text_code_dark(greater_true, ">");
-    html_span_text(greater_true, " is ");
-    html_span_text_code_dark(greater_true, true_text);
-    let greater_before = html_div(greater_box);
-    html_span_text(
-      greater_before,
-      "When the left string comes before the right string then ",
-    );
-    html_span_text_code_dark(greater_before, ">");
-    html_span_text(greater_before, " is ");
-    html_span_text_code_dark(greater_before, false_text);
+    app_code_prose_code_line(greater_box, [
+      ["text", "When the left string comes after the right string then "],
+      ["code", ">"],
+      ["text", " is "],
+      ["code", true_text],
+    ]);
+    app_code_prose_code_line(greater_box, [
+      ["text", "When the left string comes before the right string then "],
+      ["code", ">"],
+      ["text", " is "],
+      ["code", false_text],
+    ]);
   }
 }
