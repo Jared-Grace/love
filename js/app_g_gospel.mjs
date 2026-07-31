@@ -53,26 +53,24 @@ export async function app_g_gospel(
     list_shuffle(passages);
     let passage = list_last(passages);
     let ob = app_g_objection_random(passage);
-    let verse_wrong = list_random_item(g_verses_off_topic());
-    let discern = { prayed: false };
+    let list = g_verses_off_topic();
+    let verse_wrong = list_random_item(list);
+    let discern = {
+      prayed: false,
+    };
     function build_correct(container) {
       async function lambda() {
         property_transform(npc, "objections", subtract_1);
-        await app_g_gospel(
-          overlay,
-          npc,
-          overlay_close,
-          player,
-          div_map,
-        );
+        await app_g_gospel(overlay, npc, overlay_close, player, div_map);
       }
-      return app_g_bible_passage_button(
+      let b2 = app_g_bible_passage_button(
         passage,
         chapter_code,
         books,
         container,
         lambda,
       );
+      return b2;
     }
     function build_wrong(container) {
       let lambda2 = invoke_once(lambda3);
@@ -101,6 +99,12 @@ export async function app_g_gospel(
       }
       return b;
     }
+    function on_end() {
+      if (app_g_discern_prevent(discern)) {
+        return;
+      }
+      overlay_close();
+    }
     app_g_turn_quiz(
       overlay,
       npc,
@@ -109,14 +113,8 @@ export async function app_g_gospel(
       build_correct,
       build_wrong,
       discern,
+      on_end,
     );
-    function on_end() {
-      if (app_g_discern_prevent(discern)) {
-        return;
-      }
-      overlay_close();
-    }
-    app_g_button_conversation_end(overlay, on_end);
   } else {
     let doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, doxology);
