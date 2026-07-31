@@ -1,3 +1,4 @@
+import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
 import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
 import { app_code_placeholder_tile_string } from "./app_code_placeholder_tile_string.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
@@ -181,28 +182,33 @@ export function app_code_lesson_expression_string_trichotomy() {
     ]);
     let cases = app_code_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Take any two strings"]]);
-    app_code_prose_code_line(cases, [["text", "Either they are the same"]]);
-    app_code_prose_code_line(cases, [
-      ["text", "or the first comes before the second"],
-    ]);
-    app_code_prose_code_line(cases, [
-      ["text", "or the first comes after the second"],
+    app_code_prose_code_list(cases, [
+      [["text", "They are the same"]],
+      [["text", "The first comes before the second"]],
+      [["text", "The first comes after the second"]],
     ]);
     app_code_prose_code_line(cases, [
       ["text", "Only one of the three can be true"],
     ]);
     let operators = app_code_container_light_blue(root);
+    let true_text = js_keyword_true();
     app_code_prose_code_line(operators, [
       ["code", equals_operator],
-      ["text", " is true when they are the same"],
+      ["text", " is "],
+      ["code", true_text],
+      ["text", " when they are the same"],
     ]);
     app_code_prose_code_line(operators, [
       ["code", less_operator],
-      ["text", " is true when the first comes before"],
+      ["text", " is "],
+      ["code", true_text],
+      ["text", " when the first comes before"],
     ]);
     app_code_prose_code_line(operators, [
       ["code", greater_operator],
-      ["text", " is true when the first comes after"],
+      ["text", " is "],
+      ["code", true_text],
+      ["text", " when the first comes after"],
     ]);
   }
 }
