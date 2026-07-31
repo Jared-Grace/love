@@ -1,5 +1,5 @@
+import { text_split_newline } from "./text_split_newline.mjs";
 import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
-import { newline } from "./newline.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { list_last } from "./list_last.mjs";
@@ -15,8 +15,7 @@ export function qa_gate_failed_halves(output) {
   "the first colon may hold more colons of its own and only the caller knows whether";
   "to put them back.";
   let prefix = qa_gate_failed_prefix();
-  let separator = newline();
-  let lines = text_split(output, separator);
+  let lines = text_split_newline(output);
   let all = [];
   for (let line of lines) {
     if (text_includes_not(line, prefix)) {
