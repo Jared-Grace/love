@@ -1,10 +1,12 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { js_identifier_used_dir } from "./js_identifier_used_dir.mjs";
 import { error_json } from "./error_json.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { path_join } from "./path_join.mjs";
 import { file_delete } from "./file_delete.mjs";
 ("Delete a fn's ./<name>.mjs from a flat dir ONLY if no OTHER file references it — the");
-("hermetic, sandbox-testable core of function_delete_unused. Refuses (throws) when the");
+("hermetic, sandbox-testable core of ",
+  fn_name("function_delete_unused"),
+  ". Refuses (throws) when the");
 ("fn is still used, so the doc pair can show both the delete and the guard that stops it.");
 export async function js_identifier_delete_unused_dir(dir, name) {
   let used = await js_identifier_used_dir(dir, name);
