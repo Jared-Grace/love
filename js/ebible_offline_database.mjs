@@ -1,64 +1,12 @@
-import { global_function_property_initialize_async } from "./global_function_property_initialize_async.mjs";
-import { global_function_property_delete } from "./global_function_property_delete.mjs";
 import { ebible_offline_database_name } from "./ebible_offline_database_name.mjs";
-import { indexeddb_database_open_timeout_ms } from "./indexeddb_database_open_timeout_ms.mjs";
 import { ebible_offline_store } from "./ebible_offline_store.mjs";
-import { lambda_timeout } from "./lambda_timeout.mjs";
-import { not } from "./not.mjs";
+import { indexeddb_database_open } from "./indexeddb_database_open.mjs";
 export async function ebible_offline_database() {
-  "one database holds every downloaded bible version; the promise is remembered so many chapters opening at once still open the database only once";
-  async function open() {
-    let store = ebible_offline_store();
-    let name = ebible_offline_database_name();
-    let opened = await new Promise(function lambda4(resolve, reject) {
-      let request = indexedDB.open(name, 1);
-      request.onupgradeneeded = function lambda() {
-        let db = request.result;
-        let has = db.objectStoreNames.contains(store);
-        if (not(has)) {
-          db.createObjectStore(store, {
-            keyPath: "key",
-          });
-        }
-      };
-      request.onsuccess = function lambda2() {
-        let v = resolve(request.result);
-        return v;
-      };
-      request.onerror = function lambda3() {
-        let v2 = reject(request.error);
-        return v2;
-      };
-      request.onblocked = function lambda5() {
-        "another tab of this app still holds the database open, so this upgrade cannot proceed; fail loudly instead of hanging so the reader is asked to try again";
-        let v3 = reject(
-          new Error("ebible offline database is open in another tab"),
-        );
-        return v3;
-      };
-    });
-    return opened;
-  }
-  async function connect() {
-    "even with no event at all (a database wedged by another tab), the open resolves within a bounded time so a save can never hang forever at its first step";
-    let ms = indexeddb_database_open_timeout_ms();
-    async function open_bounded() {
-      let db = await lambda_timeout(open, ms);
-      return db;
-    }
-    try {
-      let db = await open_bounded();
-      return db;
-    } catch (e) {
-      ("drop the remembered attempt so the next save re-opens once the other tab lets go, rather than being poisoned by this one failure for the rest of the session");
-      global_function_property_delete(ebible_offline_database, "database");
-      throw e;
-    }
-  }
-  let database = await global_function_property_initialize_async(
-    ebible_offline_database,
-    "database",
-    connect,
-  );
+  "one database holds every bible kept for reading with no internet.";
+  "opening it is the same act as opening any other one-store database here, and it is spelled once rather than here as well: remembered under the database's own name so many chapters starting at once open it only once, given up on within a bounded time so a database wedged by another tab cannot hang a save at its first step forever, and forgotten on failure so the next save tries again instead of being poisoned by this one. Written out twice, every one of those has to be got right twice, and a repair to either copy leaves the other holding the fault.";
+  "so all that is left to say here is which database, and which store inside it - both from their own getter and neither from an app, because a name-only import of an app entry point was measured at 410 KiB on one bundle while a getter holding one word costs nothing";
+  let name = ebible_offline_database_name();
+  let store = ebible_offline_store();
+  let database = await indexeddb_database_open(name, store);
   return database;
 }
