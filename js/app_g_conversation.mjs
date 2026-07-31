@@ -278,8 +278,8 @@ export async function app_g_conversation(
       wrong,
       on_correct,
       discern,
+      leave,
     );
-    app_g_button_conversation_end(overlay, leave);
   }
   function topic_for(turn) {
     let kind = property_get(turn, "kind");
