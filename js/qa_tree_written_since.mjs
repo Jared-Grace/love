@@ -1,3 +1,4 @@
+import { file_path_temp_is } from "./file_path_temp_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_read_recursive_skipped_paths_async } from "./folder_read_recursive_skipped_paths_async.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
@@ -14,9 +15,19 @@ export async function qa_tree_written_since(folder, skipped, since) {
   ("A file that has gone missing since the walk is left out rather than reported.");
   ("It cannot have been caught half-written into the copy by a deletion, and there");
   ("is nothing left to read to find out.");
+  ("A file part way through being written is left out for a nearer reason: it was");
+  ("never taken across in the first place, so there is nothing there to settle, and");
+  ("by the time this list is read it has been moved onto its real name and is gone.");
+  ("Naming it here would ask for a second copy of a file that no longer exists,");
+  ("which throws - and it would also stand in the report of what is still moving, as");
+  ("something nobody is waiting on.");
   let paths = await folder_read_recursive_skipped_paths_async(folder, skipped);
   let moving = [];
   for (let p of paths) {
+    let temp = file_path_temp_is(p);
+    if (temp) {
+      continue;
+    }
     let modified = await path_modified_ms(p);
     let gone = equal(modified, null);
     if (gone) {
