@@ -26,27 +26,27 @@ export function app_code_lesson_expression_number_trichotomy() {
   let greater_operator = ">";
   let combos = [
     {
+      operator: equals_operator,
+      relation: "equal",
+    },
+    {
+      operator: equals_operator,
+      relation: "smaller",
+    },
+    {
       operator: less_operator,
       relation: "smaller",
+    },
+    {
+      operator: less_operator,
+      relation: "bigger",
     },
     {
       operator: greater_operator,
       relation: "bigger",
     },
     {
-      operator: equals_operator,
-      relation: "equal",
-    },
-    {
-      operator: less_operator,
-      relation: "equal",
-    },
-    {
       operator: greater_operator,
-      relation: "equal",
-    },
-    {
-      operator: equals_operator,
       relation: "smaller",
     },
   ];
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_number_trichotomy() {
     return joined;
   }
   function refill() {
-    "six comparisons over ONE shared pair of numbers: each operator shown true (in its correct case) and the equal case shown for each of the three operators, so the learner sees that for a fixed pair exactly one of the three is true";
+    "six comparisons over ONE shared pair of numbers: each operator shown once true then once false, grouped two-by-two in the same/smaller/bigger order of the a/b/c list, so the learner sees each of the three go both ways for the fixed pair";
     let max = app_code_lesson_operators_value_max();
     let max2 = subtract(max, 1);
     let low = integer_random(1, max2);
