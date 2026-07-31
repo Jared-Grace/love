@@ -16,23 +16,12 @@ export async function memory_frontmatter_defects() {
   "Every memory note whose header fails one of the things the memory instructions require of it: a name that is the file's own name, a description that says what the note is for, and a kind drawn from the four that exist. Read-only.";
   "The header is the only part of a note that other tooling reads. A wrong name breaks the identity links resolve against, a missing description leaves a session unable to tell whether the note is worth opening, and an invented kind is a convention drifting where nobody will see it.";
   "One sweep serves both the report and the repair, so the two cannot come to disagree about what a fault is.";
-  let folder = memory_folder();
-  let names = await folder_read_files(folder);
-  let index_name = memory_index_name();
+  let names = await memory_note_names();
   let suffix = ".md";
   let types = memory_types();
   let defects = [];
   for (let name of names) {
-    let is_md = text_ends_with(name, suffix);
-    if (not(is_md)) {
-      continue;
-    }
-    let is_index = equal(name, index_name);
-    if (is_index) {
-      continue;
-    }
-    let path = path_join([folder, name]);
-    let text = await file_read(path);
+    let text = await memory_note_text(name);
     let expected = text_suffix_without(name, suffix);
     let declared = memory_frontmatter_field(text, "name");
     let named_right = equal(declared, expected);
