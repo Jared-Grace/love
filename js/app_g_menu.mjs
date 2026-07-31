@@ -1,6 +1,6 @@
+import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_menu_container } from "./app_g_menu_container.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
@@ -17,26 +17,26 @@ import { text_combine } from "./text_combine.mjs";
 import { g_prayer_conversation } from "./g_prayer_conversation.mjs";
 import { app_g_dev_tools_open } from "./app_g_dev_tools_open.mjs";
 export function app_g_menu(overlay, player) {
-  ("the tap-yourself menu (Pray / Study / New Game / Dev Tools). heading and buttons sit in ONE ",
-    fn_name("app_g_container_player"),
-    " card — the SAME container the conversation / prayer screens use, so the buttons carry the same tight spacing rather than the wider flex gap this used to add. the card is wrapped in a VERTICALLY-CENTERED column, not top-anchored in the bare overlay: you open this by tapping your own character in the middle of the map, so the options meet your eyes and finger where you already tapped — otherwise a player taps the dim centre, hits nothing, and never realises it is a menu. the heading names it a menu the same way the conversation turns do.");
+  ("the tap-yourself menu (Pray / Study / New Game / Dev Tools). a heading card over bare buttons in a VERTICALLY-CENTERED column (",
+    fn_name("app_g_menu_container"),
+    "), not top-anchored in the bare overlay: you open this by tapping your own character in the middle of the map, so the options meet your eyes and finger where you already tapped — otherwise a player taps the dim centre, hits nothing, and never realises it is a menu. every screen you can reach FROM here wears this same look, including the pray sub-screen, rather than the menu borrowing the prayer TURN's speaker card.");
   let container = app_g_menu_container(overlay);
   async function close() {
     await app_g_view_set(null);
     html_remove(overlay);
   }
-  app_g_p_text(container, "What would you like to do?");
+  app_g_container_text(container, "What would you like to do?");
   app_g_button_back(container, close);
   let left = emoji_pray();
   let text = text_combine(left, " Pray");
   function lambda7() {
-    "the pray sub-screen wears the SAME centered menu card as the top menu (not a bare top-anchored overlay): its own frame, a back-to-menu button, the heading, then the prayer button.";
+    "the pray sub-screen wears the SAME centered menu column as the top menu — a back-to-menu button, the heading card, then the prayer button. it is reached from the menu, so it is still the menu talking, not a person taking a conversation turn.";
     let sub = app_g_menu_container(overlay);
     function to_menu() {
       app_g_menu(overlay, player);
     }
     app_g_button_back(sub, to_menu);
-    app_g_p_text(sub, "What else would you like to pray?");
+    app_g_container_text(sub, "What else would you like to pray?");
     async function lambda22() {
       let prayer = property_get(player, "prayer");
       let property_name = app_g_conversation_key();
