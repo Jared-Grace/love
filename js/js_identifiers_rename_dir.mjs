@@ -1,13 +1,16 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { js_identifiers_rename_dir_lambda } from "./js_identifiers_rename_dir_lambda.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_move } from "./file_move.mjs";
 ("Rename a fn across a flat directory (one ./<name>.mjs per fn): rewrite the identifier");
 ("at every site in every file, then move before.mjs to after.mjs. Hermetic — no global");
-("dictionary — so it is the sandbox-testable heart of the repo-wide function_rename.");
+("dictionary — so it is the sandbox-testable heart of the repo-wide ",
+  fn_name("function_rename"),
+  ".");
 export async function js_identifiers_rename_dir(dir, name_before, name_after) {
   let lambda = js_identifiers_rename_dir_lambda(name_before, name_after);
   let files = await folder_read_files(dir);

@@ -1,7 +1,8 @@
+import { folder_js } from "./folder_js.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { permission_grant_names_note } from "./permission_grant_names_note.mjs";
 import { js_code_names_spelled } from "./js_code_names_spelled.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { function_auto } from "./function_auto.mjs";
 export async function permission_grant_names_write(names) {
@@ -10,7 +11,8 @@ export async function permission_grant_names_write(names) {
   let f_name = fn_name("permission_grant_names");
   let note = permission_grant_names_note();
   let code = js_code_names_spelled(f_name, note, names);
-  let path = js_file_dir_path(folder_js(), f_name);
+  let dir = folder_js();
+  let path = js_file_dir_path(dir, f_name);
   await file_overwrite(path, code);
   await function_auto(f_name);
   let report = {
