@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_g_progress_caption_font_size } from "./app_g_progress_caption_font_size.mjs";
+import { html_progress_caption_font_size } from "./html_progress_caption_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
@@ -41,7 +41,7 @@ export function app_g_progress_bar(root, count, total, name) {
   let s = text_combine_multiple([name, " ", a, " out of ", total]);
   let caption = text_first_upper_to(s);
   let text_div = html_div_text_centered(container, caption);
-  let value = app_g_progress_caption_font_size();
+  let value = html_progress_caption_font_size();
   html_style_font_size(text_div, value);
   return container;
 }
