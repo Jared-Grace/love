@@ -1,9 +1,7 @@
+import { memory_index_lines } from "./memory_index_lines.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { equal } from "./equal.mjs";
-import { memory_folder } from "./memory_folder.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_read } from "./file_read.mjs";
 import { memory_index_line_count_ceiling } from "./memory_index_line_count_ceiling.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
@@ -13,11 +11,7 @@ export async function memory_index_lines_gate_run() {
   "Fails when the memory index holds more lines than it can be loaded whole at, which is the second half of a budget the size gate only measured one half of.";
   "The loader cuts the index on whichever limit it meets first. The size gate watches the bytes, and on the day this was written the index sat under that ceiling and over this one - green while every session for days had been recalling an index with its last thirteen entries missing. A budget with two limits and one check reads as safe exactly when it is not.";
   "The way out is not the way out of the size gate, which is why this is a gate of its own. Shortening lines buys bytes and no lines at all; what buys a line is one entry ceasing to need its own line - a note the index already names declaring it under a Children heading, so the hooks live in that note and the index keeps the one pointer that reaches them.";
-  let folder = memory_folder();
-  let name = "MEMORY.md";
-  let path = path_join([folder, name]);
-  let text = await file_read(path);
-  let lines = text.split("\n");
+  let lines = await memory_index_lines();
   ("a file ending in a newline splits with an empty piece after it, and the loader does not count that as a further line - so the number this gate reports is the same number the loader's own warning names, and the two can be read against each other");
   let last = list_last(lines);
   let trailing = equal(last, "");
