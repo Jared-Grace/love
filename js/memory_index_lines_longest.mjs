@@ -1,6 +1,4 @@
-import { memory_folder } from "./memory_folder.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_read } from "./file_read.mjs";
+import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_index_line_length_ceiling } from "./memory_index_line_length_ceiling.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_size } from "./text_size.mjs";
@@ -15,11 +13,7 @@ import { not } from "./not.mjs";
 export async function memory_index_lines_longest() {
   "The index entries that are longer than one line may be, named by the note each points at and how long it is, longest first. Read-only.";
   "The note name rather than the line number, because a line number moves every time a peer adds an entry above it, and the name is what the next reader has to open.";
-  let folder = memory_folder();
-  let name = "MEMORY.md";
-  let path = path_join([folder, name]);
-  let text = await file_read(path);
-  let lines = text.split("\n");
+  let lines = await memory_index_lines();
   let ceiling = memory_index_line_length_ceiling();
   let opener = "- [";
   let over = [];
