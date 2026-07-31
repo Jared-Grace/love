@@ -1,11 +1,8 @@
+import { app_bible_screen_content } from "./app_bible_screen_content.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
-import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
-import { app_bible_button_back_to_reader } from "./app_bible_button_back_to_reader.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { app_bible_chapter_set } from "./app_bible_chapter_set.mjs";
-import { html_clear_context } from "./html_clear_context.mjs";
 import { app_bible_chapters } from "./app_bible_chapters.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
@@ -18,12 +15,8 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
 import { app_bible_books_render } from "./app_bible_books_render.mjs";
 export async function app_bible_books(context) {
-  let root = html_clear_context(context);
-  ("pad a FRESH content child, never the persistent context root — the root survives navigation, so padding it leaves the column padding stuck on the body and it stacks with the reader's own padding next time, squeezing verses to one word per line");
-  let content = html_div(root);
-  let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
-  await app_bible_button_back_to_reader(content, context);
+  let opened = await app_bible_screen_content(context);
+  let content = property_get(opened, "content");
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
   ("the book being read now, so its button can be marked in the list");
