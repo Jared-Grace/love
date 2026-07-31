@@ -125,7 +125,7 @@ export function app_code_lesson_expression_string_order_equal() {
     return built;
   }
   function above(root) {
-    "taught differentially, not from scratch: a recall box (the learner already compared strings with < and >, and when two strings are equal both are false), then the new box saying <= and >= are the SAME as the < and > they already know, with the one addition that each is also true when the two strings are equal. Building on the known operator rather than re-defining every case means the one new thing - the equal case - is what stands out. No worked examples here: the four refreshable examples below demonstrate the cases.";
+    "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one addition that it is also true when the two strings are equal. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
     let recall = app_code_container_light_blue(root);
     app_code_prose_code_line(recall, [
       ["text", "You've compared strings with "],
@@ -164,6 +164,21 @@ export function app_code_lesson_expression_string_order_equal() {
       ["text", ", but is also "],
       ["code", "true"],
       ["text", " when the two strings are equal"],
+    ]);
+    let meaning = app_code_container_light_blue(root);
+    app_code_prose_code_line(meaning, [
+      ["code", "<="],
+      [
+        "text",
+        " means the first string comes before the second string, or the two strings are equal",
+      ],
+    ]);
+    app_code_prose_code_line(meaning, [
+      ["code", ">="],
+      [
+        "text",
+        " means the first string comes after the second string, or the two strings are equal",
+      ],
     ]);
   }
 }
