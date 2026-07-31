@@ -1,3 +1,4 @@
+import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -10,7 +11,7 @@ export async function memory_note_stems() {
   "The index is not a note and carries no header, so nothing links to it and it is left out.";
   let folder = memory_folder();
   let names = await folder_read_files(folder);
-  let index_name = "MEMORY.md";
+  let index_name = memory_index_name();
   let suffix = ".md";
   let stems = [];
   for (let name of names) {

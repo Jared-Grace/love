@@ -14,10 +14,9 @@ export async function function_select_multiple_apply_generic(
   ("The outside of the many-node pairing: two names become two functions, and one");
   ("function name becomes a file to rewrite. The pairing itself lives in the pure");
   ("middle, where the corpus can check it.");
-  await function_callee_seam_assert(select_fn_name);
-  await function_callee_seam_assert(apply_fn_name);
-  let select_fn = await function_import(select_fn_name);
-  let apply_fn = await function_import(apply_fn_name);
+  let pair = await function_select_apply_pair(select_fn_name, apply_fn_name);
+  let select_fn = property_get(pair, "select_fn");
+  let apply_fn = property_get(pair, "apply_fn");
   async function lambda(ast) {
     await js_select_multiple_apply(
       ast,

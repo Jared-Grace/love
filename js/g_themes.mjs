@@ -1,3 +1,4 @@
+import { list_map_join_empty } from "./list_map_join_empty.mjs";
 import { g_themes_plural } from "./g_themes_plural.mjs";
 import { g_themes_verb } from "./g_themes_verb.mjs";
 import { each } from "./each.mjs";
@@ -6,12 +7,10 @@ import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { each_object } from "./each_object.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 import { text_pad_space } from "./text_pad_space.mjs";
 import { not } from "./not.mjs";
 import { text_letters_is } from "./text_letters_is.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function g_themes(text) {
   let split = text_split_empty(text);
@@ -22,8 +21,7 @@ export function g_themes(text) {
     }
     return item;
   }
-  let mapped = list_map(split, lambda2);
-  let joined = list_join_empty(mapped);
+  let joined = list_map_join_empty(split, lambda2);
   let n = whitespace_normalize(joined);
   let map = {
     [g_themes_verb("act")]: "morality",
