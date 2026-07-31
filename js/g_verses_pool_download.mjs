@@ -1,8 +1,6 @@
+import { firebase_storage_verses_download_cache } from "./firebase_storage_verses_download_cache.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { firebase_storage_download_json_decompress_cache } from "./firebase_storage_download_json_decompress_cache.mjs";
-import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { g_verses_pool_destination } from "./g_verses_pool_destination.mjs";
-import { property_get } from "./property_get.mjs";
 export async function g_verses_pool_download(name) {
   ("download a named verse pool ({verses:[{reference,text}]}) in ONE request (the supper-style batch); pairs with ",
     fn_name("g_verses_pool_upload"));
