@@ -154,14 +154,23 @@ export function app_code_lesson_expression_string_trichotomy() {
     "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box: any two strings give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
     let transfer = app_code_container_light_blue(root);
     app_code_prose_code_line(transfer, [
-      ["text", "Two numbers are always the same, smaller, or bigger"],
+      ["text", "Remember, two numbers are always the same ("],
+      ["code", "==="],
+      ["text", "), smaller ("],
+      ["code", "<"],
+      ["text", "), or bigger ("],
+      ["code", ">"],
+      ["text", ")"],
     ]);
     app_code_prose_code_line(transfer, [
       ["text", "Two strings work the same way"],
     ]);
     let dictionary = app_code_container_light_blue(root);
     app_code_prose_code_line(dictionary, [
-      ["text", "Strings are compared in alphabetical order"],
+      [
+        "text",
+        "Remember, strings are compared in alphabetical order, the order they appear in the dictionary",
+      ],
     ]);
     app_code_prose_code_line(dictionary, [
       ["code", '"grace"'],
