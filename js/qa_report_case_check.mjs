@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
 import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
@@ -5,7 +6,6 @@ import { list_size } from "./list_size.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function qa_report_case_check(one) {
@@ -48,8 +48,7 @@ export function qa_report_case_check(one) {
   }
   let said = list_map_property(sections, "said");
   let whole = list_join_comma(said);
-  let b = text_empty_is(includes);
-  let asked_includes = not(b);
+  let asked_includes = text_empty_not_is(includes);
   if (asked_includes) {
     let carried = text_includes(whole, includes);
     if (not(carried)) {
@@ -64,8 +63,7 @@ export function qa_report_case_check(one) {
       return missing;
     }
   }
-  let b2 = text_empty_is(excludes);
-  let asked_excludes = not(b2);
+  let asked_excludes = text_empty_not_is(excludes);
   if (asked_excludes) {
     let present = text_includes(whole, excludes);
     if (present) {
