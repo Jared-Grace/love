@@ -1,8 +1,8 @@
+import { text_skip } from "./text_skip.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_size } from "./text_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_parse } from "./js_parse.mjs";
 export function js_code_spans_replaced(code, nodes, replacement_of) {
@@ -21,8 +21,7 @@ export function js_code_spans_replaced(code, nodes, replacement_of) {
     cursor = end;
   }
   each(nodes, lambda);
-  let size = text_size(code);
-  let rest = text_slice(code, cursor, size);
+  let rest = text_skip(code, cursor);
   list_add(pieces, rest);
   let replaced = text_combine_multiple(pieces);
   js_parse(replaced);
