@@ -1,6 +1,7 @@
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -24,7 +25,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_order() {
-  "comparing two strings for order with < and > - the same less-than and greater-than the learner already knows on numbers, now on strings, where the ordering is alphabetical (dictionary order). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would make God sort before and - true to the machine but the opposite of the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Four questions cover both operators and both answers. Intended home: just after the numeric less-than / greater-than lessons and the string-equality lesson; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
+  "comparing two strings for order with < and > - the same less-than and greater-than the learner already knows on numbers, now on strings, where the ordering is alphabetical (dictionary order). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would make God sort before and - true to the machine but the opposite of the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Four questions cover both operators in both directions, strictly before/after with two different words - the equal case is deferred to the string trichotomy lesson. Intended home: just after the numeric less-than / greater-than lessons and the string-equality lesson; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
   let less_operator = "<";
   let greater_operator = ">";
   let combos = [
@@ -34,7 +35,7 @@ export function app_code_lesson_expression_string_order() {
     },
     {
       operator: less_operator,
-      relation: "equal",
+      relation: "after",
     },
     {
       operator: greater_operator,
@@ -42,7 +43,7 @@ export function app_code_lesson_expression_string_order() {
     },
     {
       operator: greater_operator,
-      relation: "equal",
+      relation: "before",
     },
   ];
   function words_source() {
@@ -59,7 +60,7 @@ export function app_code_lesson_expression_string_order() {
     return lower_only;
   }
   function question_code(combo, earlier, later) {
-    "one comparison as a code string: the shared pair arranged by the relation - equal uses the earlier word on both sides, before puts the earlier word on the left, after puts the later word on the left - which fixes whether the comparison is true or false without computing it here";
+    "one comparison as a code string: the shared pair arranged by the relation - before puts the earlier word on the left, after puts the later word on the left - which fixes whether the comparison is true or false without computing it here";
     let operator = property_get(combo, "operator");
     let relation = property_get(combo, "relation");
     let after = equal(relation, "after");
@@ -78,7 +79,7 @@ export function app_code_lesson_expression_string_order() {
     return joined;
   }
   function refill() {
-    "four comparisons over ONE shared pair of words: each operator shown true (in its correct direction) and false (when the two strings are equal), so the equal-is-false case - the one < and > share and the thing most easily missed - is drilled for both, a balanced two true and two false";
+    "four comparisons over ONE shared pair of DIFFERENT words: each operator shown true (in its correct direction) and false (in the wrong one), pure alphabetical ordering with no equal case - the equal case now lives in the string trichotomy lesson";
     let words = words_source();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
@@ -137,7 +138,7 @@ export function app_code_lesson_expression_string_order() {
     return built;
   }
   function above(root) {
-    "first a recall box anchoring on the < and > the learner already knows on numbers, revealing they also order strings alphabetically (dictionary order); then two rule boxes, each its own light-blue container - < and > - and within each box the true case and the false case are stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. No worked examples here: the four refreshable examples below demonstrate all four cases.";
+    "first a recall box anchoring on the < and > the learner already knows on numbers, revealing they also order strings alphabetically (dictionary order); then two rule boxes, each its own light-blue container - < and > - within each the true direction and the false direction stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. Strict ordering only, no equal case - that is the string trichotomy lesson. No worked examples here: the refreshable examples below demonstrate the cases.";
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
     let recall = app_code_container_light_blue(root);
@@ -157,32 +158,13 @@ export function app_code_lesson_expression_string_order() {
       dictionary_line,
       "Strings are compared in alphabetical order, the way words are listed in a dictionary",
     );
-    function code_prose_line(box, parts) {
-      "one line in a box, built from parts - each part is a two-item [kind, text] pair where kind 'code' renders a dark code token (a symbol or a sequence of symbols) and anything else renders plain prose";
-      let div = html_div(box);
-      function part_render(part) {
-        "render one part into the line: a code token or plain prose";
-        let kind = list_get(part, 0);
-        let text = list_get(part, 1);
-        let is_code = equal(kind, "code");
-        let renderer = ternary(
-          is_code,
-          html_span_text_code_dark,
-          html_span_text,
-        );
-        renderer(div, text);
-        return null;
-      }
-      list_map(parts, part_render);
-      return div;
-    }
     let stage_one = app_code_container_light_blue(root);
-    code_prose_line(stage_one, [
+    app_code_prose_code_line(stage_one, [
       ["code", '"g"'],
       ["text", " comes before "],
       ["code", '"h"'],
     ]);
-    code_prose_line(stage_one, [
+    app_code_prose_code_line(stage_one, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
@@ -192,12 +174,12 @@ export function app_code_lesson_expression_string_order() {
       ["code", '"h"'],
     ]);
     let stage_two = app_code_container_light_blue(root);
-    code_prose_line(stage_two, [
+    app_code_prose_code_line(stage_two, [
       ["code", '"ag"'],
       ["text", " comes before "],
       ["code", '"ah"'],
     ]);
-    code_prose_line(stage_two, [
+    app_code_prose_code_line(stage_two, [
       ["code", '"ag"'],
       ["text", " and "],
       ["code", '"ah"'],
@@ -205,14 +187,14 @@ export function app_code_lesson_expression_string_order() {
       ["code", "a"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_two, [
+    app_code_prose_code_line(stage_two, [
       ["text", "So the second symbols are compared ("],
       ["code", "g"],
       ["text", ", "],
       ["code", "h"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_two, [
+    app_code_prose_code_line(stage_two, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
@@ -222,7 +204,7 @@ export function app_code_lesson_expression_string_order() {
       ["code", '"ah"'],
     ]);
     let stage_three = app_code_container_light_blue(root);
-    code_prose_line(stage_three, [
+    app_code_prose_code_line(stage_three, [
       ["code", '"abg"'],
       ["text", " and "],
       ["code", '"abh"'],
@@ -230,14 +212,14 @@ export function app_code_lesson_expression_string_order() {
       ["code", "ab"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_three, [
+    app_code_prose_code_line(stage_three, [
       ["text", "So the third symbols are compared ("],
       ["code", "g"],
       ["text", ", "],
       ["code", "h"],
       ["text", ")"],
     ]);
-    code_prose_line(stage_three, [
+    app_code_prose_code_line(stage_three, [
       ["code", "g"],
       ["text", " comes earlier in the alphabet than "],
       ["code", "h"],
@@ -247,8 +229,8 @@ export function app_code_lesson_expression_string_order() {
       ["code", '"abh"'],
     ]);
     let pattern = app_code_container_light_blue(root);
-    code_prose_line(pattern, [["text", "This pattern continues:"]]);
-    code_prose_line(pattern, [
+    app_code_prose_code_line(pattern, [["text", "This pattern continues:"]]);
+    app_code_prose_code_line(pattern, [
       [
         "text",
         "If the first symbols are the same, then the first symbols that are different are compared",
@@ -263,11 +245,6 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(less_true, "<");
     html_span_text(less_true, " is ");
     html_span_text_code_dark(less_true, true_text);
-    let less_equal = html_div(less_box);
-    html_span_text(less_equal, "When the two strings are equal then ");
-    html_span_text_code_dark(less_equal, "<");
-    html_span_text(less_equal, " is ");
-    html_span_text_code_dark(less_equal, false_text);
     let less_after = html_div(less_box);
     html_span_text(
       less_after,
@@ -285,11 +262,6 @@ export function app_code_lesson_expression_string_order() {
     html_span_text_code_dark(greater_true, ">");
     html_span_text(greater_true, " is ");
     html_span_text_code_dark(greater_true, true_text);
-    let greater_equal = html_div(greater_box);
-    html_span_text(greater_equal, "When the two strings are equal then ");
-    html_span_text_code_dark(greater_equal, ">");
-    html_span_text(greater_equal, " is ");
-    html_span_text_code_dark(greater_equal, false_text);
     let greater_before = html_div(greater_box);
     html_span_text(
       greater_before,
