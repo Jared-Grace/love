@@ -1,10 +1,9 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_single_message } from "./list_single_message.mjs";
 import { equal_curried } from "./equal_curried.mjs";
@@ -26,8 +25,7 @@ export function js_literal_single_find_generic(ast, value_is, sort_name) {
     return wanted;
   }
   let used = list_filter(literals, sort_value_is);
-  let written = list_map(used, js_literal_value_get);
-  let values = list_unique(written);
+  let values = list_map_unique(used, js_literal_value_get);
   let asked = {
     hint: text_combine_multiple([
       "a selector names one thing, so this function was expected to use exactly one ",
