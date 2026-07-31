@@ -1,8 +1,8 @@
+import { list_size_less_1 } from "./list_size_less_1.mjs";
 import { html_text_align } from "./html_text_align.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { equal } from "./equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
-import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_swap_at } from "./list_swap_at.mjs";
 import { html_div } from "./html_div.mjs";
@@ -23,8 +23,7 @@ export function html_subset_ordered_row(
   changed,
 ) {
   let name = list_get_property(chosen, i, name_property);
-  let left = list_size(chosen);
-  let last = subtract(left, 1);
+  let last = list_size_less_1(chosen);
   let row = html_div(parent);
   html_display_flex(row);
   html_width_full(row);
