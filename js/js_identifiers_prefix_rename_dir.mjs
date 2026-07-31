@@ -1,3 +1,4 @@
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -9,7 +10,6 @@ import { js_identifiers_rename_dir_lambda } from "./js_identifiers_rename_dir_la
 import { path_join } from "./path_join.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_move } from "./file_move.mjs";
 ("Bulk-rename every fn under a name prefix across a flat directory (one ./<name>.mjs per fn):");
 ("change prefix_before to prefix_after on each matching identifier at every site in every file,");

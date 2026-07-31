@@ -1,3 +1,5 @@
+import { folder_js } from "./folder_js.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
@@ -19,10 +21,8 @@ export async function literals_frozen_storage_unfrozen() {
   let identifiers = await data_identifiers_get();
   ("Both ways of reaching a database count: the ones that ask the shared opener, and the two that still speak to the browser directly. Asking the index for the browser's own name is what finds the second kind, and it is the same question, so a third one written tomorrow is found without anybody adding it here.");
   let direct = property_or_null(identifiers, "indexedDB");
-  let shared = property_or_null(
-    identifiers,
-    fn_name("indexeddb_database_open"),
-  );
+  let property_name = fn_name("indexeddb_database_open");
+  let shared = property_or_null(identifiers, property_name);
   let openers = list_concat_unique(direct, shared);
   let frozen = literals_frozen_names();
   let offenders = [];
@@ -34,7 +34,8 @@ export async function literals_frozen_storage_unfrozen() {
         continue;
       }
       ("Only what hands back one written word is asked about. What the opening is given besides those is either a number, which no browser looks anything up by, or a function, which holds no word at all - and asking either of them for a value gets nothing back, which is the same answer as a word that is empty.");
-      let path = js_file_dir_path(folder_js(), imported);
+      let dir = folder_js();
+      let path = js_file_dir_path(dir, imported);
       let code = await file_read(path);
       let literal = js_code_getter_literal(code, imported);
       let word = not_equal(literal, "");

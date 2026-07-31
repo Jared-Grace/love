@@ -1,10 +1,9 @@
-import { path_join } from "./path_join.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_declaration_movable_assert } from "./js_declaration_movable_assert.mjs";
 import { js_code_export } from "./js_code_export.mjs";
