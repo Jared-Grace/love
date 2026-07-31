@@ -1,5 +1,4 @@
-import { permission_settings_paths } from "./permission_settings_paths.mjs";
-import { list_first } from "./list_first.mjs";
+import { permission_settings_shared_path } from "./permission_settings_shared_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { permission_allow_generated_from } from "./permission_allow_generated_from.mjs";
