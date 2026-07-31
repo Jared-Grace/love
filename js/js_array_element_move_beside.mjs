@@ -1,6 +1,5 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -24,8 +23,7 @@ export function js_array_element_move_beside(
   ("finds nothing when the answer was the entry itself, and the list helper answers");
   ("that with a number that reads as a place — so the entry silently lands at the");
   ("front, in a register whose order is its meaning.");
-  let same = equal(moving, neighbour);
-  let different = not(same);
+  let different = equal_not(moving, neighbour);
   assert_json(different, {
     hint: "an entry cannot be moved to sit beside itself — would you like to name the entry it should end up next to?",
   });
