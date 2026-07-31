@@ -2,7 +2,6 @@ import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { permission_settings_local_unwatched } from "./permission_settings_local_unwatched.mjs";
 import { permission_settings_local_baseline_path } from "./permission_settings_local_baseline_path.mjs";
-import { permission_settings_local_baseline_write } from "./permission_settings_local_baseline_write.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function permission_settings_local_gate_run() {
   "QA gate: the per-machine settings file grants nothing new that the shared, generated, gated list has never been told about";
@@ -23,7 +22,7 @@ export async function permission_settings_local_gate_run() {
     unwatched,
     path,
     hint,
-    permission_settings_local_baseline_write.name,
+    fn_name("permission_settings_local_baseline_write"),
   );
   return r;
 }
