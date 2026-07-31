@@ -1,3 +1,4 @@
+import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -229,30 +230,30 @@ export function app_code_lesson_expression_string_order() {
       ],
     ]);
     let less_box = app_code_container_light_blue(root);
-    app_code_prose_code_line(less_box, [
-      ["text", "When the left string comes before the right string then "],
-      ["code", "<"],
-      ["text", " is "],
-      ["code", true_text],
-    ]);
-    app_code_prose_code_line(less_box, [
-      ["text", "When the left string comes after the right string then "],
-      ["code", "<"],
-      ["text", " is "],
-      ["code", false_text],
-    ]);
+    app_code_prose_rule_line(
+      less_box,
+      "the left string comes before the right string",
+      "<",
+      true_text,
+    );
+    app_code_prose_rule_line(
+      less_box,
+      "the left string comes after the right string",
+      "<",
+      false_text,
+    );
     let greater_box = app_code_container_light_blue(root);
-    app_code_prose_code_line(greater_box, [
-      ["text", "When the left string comes after the right string then "],
-      ["code", ">"],
-      ["text", " is "],
-      ["code", true_text],
-    ]);
-    app_code_prose_code_line(greater_box, [
-      ["text", "When the left string comes before the right string then "],
-      ["code", ">"],
-      ["text", " is "],
-      ["code", false_text],
-    ]);
+    app_code_prose_rule_line(
+      greater_box,
+      "the left string comes after the right string",
+      ">",
+      true_text,
+    );
+    app_code_prose_rule_line(
+      greater_box,
+      "the left string comes before the right string",
+      ">",
+      false_text,
+    );
   }
 }

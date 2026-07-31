@@ -1,3 +1,4 @@
+import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
@@ -121,34 +122,34 @@ export function app_code_lesson_expression_string_equality() {
       ["text", " also compares two strings"],
     ]);
     let equals_box = app_code_container_light_blue(root);
-    app_code_prose_code_line(equals_box, [
-      ["text", "When both strings are exactly the same then "],
-      ["code", "==="],
-      ["text", " is "],
-      ["code", true_text],
-    ]);
-    app_code_prose_code_line(equals_box, [
-      ["text", "When the strings are different in some way then "],
-      ["code", "==="],
-      ["text", " is "],
-      ["code", false_text],
-    ]);
+    app_code_prose_rule_line(
+      equals_box,
+      "both strings are exactly the same",
+      "===",
+      true_text,
+    );
+    app_code_prose_rule_line(
+      equals_box,
+      "the strings are different in some way",
+      "===",
+      false_text,
+    );
     let not_box = app_code_container_light_blue(root);
     app_code_prose_code_line(not_box, [
       ["code", "!=="],
       ["text", " is the opposite"],
     ]);
-    app_code_prose_code_line(not_box, [
-      ["text", "When the strings are different in some way then "],
-      ["code", "!=="],
-      ["text", " is "],
-      ["code", true_text],
-    ]);
-    app_code_prose_code_line(not_box, [
-      ["text", "When both strings are exactly the same then "],
-      ["code", "!=="],
-      ["text", " is "],
-      ["code", false_text],
-    ]);
+    app_code_prose_rule_line(
+      not_box,
+      "the strings are different in some way",
+      "!==",
+      true_text,
+    );
+    app_code_prose_rule_line(
+      not_box,
+      "both strings are exactly the same",
+      "!==",
+      false_text,
+    );
   }
 }
