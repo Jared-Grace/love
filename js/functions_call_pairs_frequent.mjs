@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
-import { folder_src } from "./folder_src.mjs";
+import { folder_js } from "./folder_js.mjs";
 import { path_join } from "./path_join.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
@@ -18,7 +18,7 @@ export async function functions_call_pairs_frequent() {
   "them. A wired pair recurring across many files is a candidate to extract into one named fn. The";
   "complement of the fold: the fold reuses fns that EXIST, this proposes fns that SHOULD.";
   arguments_assert(arguments, 0);
-  let directory = folder_src();
+  let directory = folder_js();
   let files = await folder_read_files(directory);
   let module_fs = await import("fs");
   let tally = {};
@@ -52,9 +52,20 @@ export async function functions_call_pairs_frequent() {
       let seen = property_exists(tally, key);
       if (!seen) {
         let example =
-          callee1 + "(" + property_get(s1, "args").join(", ") + ") -> " +
-          callee2 + "(" + args2.join(", ") + ")";
-        property_set(tally, key, { count: 0, files: {}, wired: wired, example: example });
+          callee1 +
+          "(" +
+          property_get(s1, "args").join(", ") +
+          ") -> " +
+          callee2 +
+          "(" +
+          args2.join(", ") +
+          ")";
+        property_set(tally, key, {
+          count: 0,
+          files: {},
+          wired: wired,
+          example: example,
+        });
       }
       let record = property_get(tally, key);
       record.count = record.count + 1;
@@ -69,7 +80,11 @@ export async function functions_call_pairs_frequent() {
       continue;
     }
     let file_count = Object.keys(record.files).length;
-    rows.push({ files: file_count, count: record.count, pair: record.example });
+    rows.push({
+      files: file_count,
+      count: record.count,
+      pair: record.example,
+    });
   }
   rows.sort((a, b) => b.files - a.files);
   let top = rows.slice(0, 25);
