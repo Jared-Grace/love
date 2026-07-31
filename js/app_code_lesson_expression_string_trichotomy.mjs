@@ -31,27 +31,27 @@ export function app_code_lesson_expression_string_trichotomy() {
   let greater_operator = ">";
   let combos = [
     {
+      operator: equals_operator,
+      relation: "equal",
+    },
+    {
+      operator: equals_operator,
+      relation: "before",
+    },
+    {
       operator: less_operator,
       relation: "before",
+    },
+    {
+      operator: less_operator,
+      relation: "after",
     },
     {
       operator: greater_operator,
       relation: "after",
     },
     {
-      operator: equals_operator,
-      relation: "equal",
-    },
-    {
-      operator: less_operator,
-      relation: "equal",
-    },
-    {
       operator: greater_operator,
-      relation: "equal",
-    },
-    {
-      operator: equals_operator,
       relation: "before",
     },
   ];
@@ -88,7 +88,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     return joined;
   }
   function refill() {
-    "six comparisons over ONE shared pair of words: each operator shown true (in its correct case) and the equal case shown for each of the three operators, so the learner sees that for a fixed pair exactly one of the three is true, matching the number trichotomy they just did";
+    "six comparisons over ONE shared pair of words: each operator shown once true then once false, grouped two-by-two in the same/before/after order of the a/b/c list, so the learner sees each of the three go both ways for the fixed pair, matching the number trichotomy they just did";
     let words = words_source();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
