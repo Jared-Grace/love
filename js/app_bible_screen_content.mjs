@@ -1,7 +1,6 @@
+import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
-import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_bible_button_back_to_reader } from "./app_bible_button_back_to_reader.mjs";
 export async function app_bible_screen_content(context) {
   "the opening every bible screen away from the reader shares - a cleared context, a fresh content child holding the shared reading column, and the way back to the reader above it";
