@@ -1,4 +1,4 @@
-import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
+import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { js_code_global_init } from "./js_code_global_init.mjs";
