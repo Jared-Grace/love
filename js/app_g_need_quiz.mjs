@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
@@ -17,7 +19,11 @@ export function app_g_need_quiz(
   off,
   closing,
 ) {
-  "the shared need→Scripture quiz: each turn the NPC voices a CONCERN (a struggle for app_g_how, a doubt for app_g_believe) and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after the turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]. NOTE: turn_count caps at 2 (a STUB — meant to grow) but is CLAMPED to the pool sizes, so a short pool (e.g. a 1-item disciple pool) still runs";
+  ("the shared need→Scripture quiz: each turn the NPC voices a CONCERN (a struggle for ",
+    fn_name("app_g_how"),
+    ", a doubt for ",
+    fn_name("app_g_believe"),
+    ") and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after the turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]. NOTE: turn_count caps at 2 (a STUB — meant to grow) but is CLAMPED to the pool sizes, so a short pool (e.g. a 1-item disciple pool) still runs");
   list_shuffle(needs);
   list_shuffle(off);
   function turn_spec(index) {
@@ -29,11 +35,15 @@ export function app_g_need_quiz(
     };
     return spec;
   }
-  let turn_count = math_min(math_min(2, list_size(needs)), list_size(off));
+  let b = list_size(needs);
+  let a = math_min(2, b);
+  let b2 = list_size(off);
+  let turn_count = math_min(a, b2);
   let specs = range_map(turn_count, turn_spec);
   function turn(index) {
     html_clear(overlay);
-    let done = index >= list_size(specs);
+    let b3 = list_size(specs);
+    let done = greater_than_equal(index, b3);
     if (done) {
       app_g_npc_says(npc, overlay, closing);
       app_g_button_conversation_end(overlay, overlay_close);
@@ -49,6 +59,12 @@ export function app_g_need_quiz(
     function on_correct() {
       turn(index + 1);
     }
+    function on_end() {
+      if (app_g_discern_prevent(discern)) {
+        return;
+      }
+      overlay_close();
+    }
     app_g_turn_quiz_once(
       overlay,
       npc,
@@ -57,14 +73,8 @@ export function app_g_need_quiz(
       wrong,
       on_correct,
       discern,
+      on_end,
     );
-    function on_end() {
-      if (app_g_discern_prevent(discern)) {
-        return;
-      }
-      overlay_close();
-    }
-    app_g_button_conversation_end(overlay, on_end);
   }
   turn(0);
 }
