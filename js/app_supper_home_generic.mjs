@@ -12,14 +12,13 @@ import { app_supper_verses_render } from "./app_supper_verses_render.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_supper_home_generic(context) {
-  let root = html_clear_context(context);
-  let bc = html_bar_content_padded(root);
-  let content = property_get(bc, "content");
+  let frame = app_shared_bar_content(context);
+  let content = property_get(frame, "content");
   let column = app_shared_column_max_width();
   ("a narrower edge than the other screens keep, because everything on this one already sits inside a card that has its own edge - the ordinary gap outside it read as a second margin around the first");
   let gap = app_shared_spaced_small_gap();
   app_shared_content_center_padding_gap(content, column, gap);
-  let bar = property_get(bc, "bar");
+  let bar = property_get(frame, "bar");
   html_centered(bar);
   ("the gear says what it opens, the way every other gear in these apps does - a bare picture left the one control on this screen unnamed, and the reader had to press it to find out");
   let text = app_shared_gear_versions_text();

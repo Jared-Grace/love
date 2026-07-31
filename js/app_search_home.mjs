@@ -38,11 +38,10 @@ import { text_replace_to_space } from "./text_replace_to_space.mjs";
 export async function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
-  let bc = html_bar_content_padded(root);
+  let bc = app_shared_bar_content_root(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
-  let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
+  app_shared_content_column_pad(content);
   html_centered(bar);
   let hash = html_hash_object_get();
   let language_codes = app_next_hash_to_languages_chosen(hash);

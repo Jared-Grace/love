@@ -90,11 +90,10 @@ export async function app_verses(context) {
     list_shuffle(order);
     order_standalone_first();
   }
-  let bc = html_bar_content_padded(root);
+  let bc = app_shared_bar_content_root(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
-  let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
+  app_shared_content_column_pad(content);
   html_centered(bar);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_text_body(
