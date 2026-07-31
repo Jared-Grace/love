@@ -10,9 +10,7 @@ export async function permission_run_names() {
   "every name a permission rule auto-approves for node scripts/r.mjs, across both settings files";
   let names = [];
   for (let path of permission_settings_paths()) {
-    let settings = await file_read_json(path);
-    let permissions = property_get(settings, "permissions");
-    let allow = property_get(permissions, "allow");
+    let allow = await permission_settings_allow_read(path);
     for (let rule of allow) {
       let name = dispatcher_run_name(rule);
       if (not(text_empty_is(name))) {
