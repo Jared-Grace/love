@@ -1,5 +1,5 @@
+import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_flo } from "./js_flo.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_fold_match_block } from "./js_fold_match_block.mjs";
@@ -16,8 +16,7 @@ export function js_fold_suggest(f_ast, patterns) {
   ("contiguous block of F — the fn you would have called instead of hand-writing the logic. Advisory:");
   ("each hit reports fn name, start index, and length; the real fold pass re-checks soundness before");
   ("rewriting. Skips a pattern that names F itself so a fn is never suggested to fold into itself.");
-  let f_declaration = js_flo(f_ast);
-  let f_block = property_get(f_declaration, "body");
+  let f_block = js_find_body_block(f_ast);
   let f_statements = property_get(f_block, "body");
   let target_sigs = list_map(f_statements, js_atomic_statement_signature);
   let f_name = js_flo_name(f_ast);
