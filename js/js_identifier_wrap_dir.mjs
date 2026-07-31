@@ -1,5 +1,5 @@
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo } from "./js_flo.mjs";

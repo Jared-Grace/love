@@ -1,5 +1,6 @@
+import { folder_js } from "./folder_js.mjs";
+import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { literals_frozen_names } from "./literals_frozen_names.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_code_getter_literal } from "./js_code_getter_literal.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -11,7 +12,8 @@ export async function literals_frozen_values() {
   let names = literals_frozen_names();
   let values = {};
   for (let f_name of names) {
-    let path = js_file_dir_path(folder_js(), f_name);
+    let dir = folder_js();
+    let path = js_file_dir_path(dir, f_name);
     let code = await file_read(path);
     let literal = js_code_getter_literal(code, f_name);
     let some = not_equal(literal, "");
