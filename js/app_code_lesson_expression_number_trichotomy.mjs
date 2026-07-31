@@ -159,9 +159,11 @@ export function app_code_lesson_expression_number_trichotomy() {
       ["code", "2 < 3"],
     ]);
     let cases = app_code_container_light_blue(root);
-    app_code_prose_code_line(cases, [["text", "Take any two numbers"]]);
+    app_code_prose_code_line(cases, [["text", "Suppose we have two numbers"]]);
     app_code_prose_code_line(cases, [
-      ["text", "Then exactly one of these will be true:"],
+      ["text", "Then exactly one of these will be "],
+      ["code", "true"],
+      ["text", ":"],
     ]);
     app_code_prose_code_list(cases, [
       [
