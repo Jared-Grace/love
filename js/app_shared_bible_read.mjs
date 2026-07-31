@@ -1,7 +1,7 @@
+import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
+import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_style_justify_self } from "./html_style_justify_self.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
-import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
-import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
@@ -27,7 +27,6 @@ import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
-import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_p } from "./html_p.mjs";
