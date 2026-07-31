@@ -1,5 +1,5 @@
-import { folder_src } from "./folder_src.mjs";
+import { folder_js } from "./folder_js.mjs";
 export function functions_path() {
-  let second = folder_src();
+  let second = folder_js();
   return second;
 }
