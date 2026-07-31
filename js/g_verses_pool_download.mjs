@@ -7,11 +7,6 @@ export async function g_verses_pool_download(name) {
   ("download a named verse pool ({verses:[{reference,text}]}) in ONE request (the supper-style batch); pairs with ",
     fn_name("g_verses_pool_upload"));
   let destination = g_verses_pool_destination(name);
-  let project_url = firebase_storage_url_project_jg();
-  let o = await firebase_storage_download_json_decompress_cache(
-    project_url,
-    destination,
-  );
-  let verses = property_get(o, "verses");
+  let verses = await firebase_storage_verses_download_cache(destination);
   return verses;
 }

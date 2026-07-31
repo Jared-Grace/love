@@ -11,8 +11,5 @@ export async function app_calendar_availability(parent, user) {
   async function on_ranges(ranges) {
     await availability_send(uid, ranges);
   }
-  let iso = date_today_iso();
-  let sunday = date_week_sunday(iso);
-  let dates = week_dates(sunday);
-  week_calendar(parent, dates, initial, on_ranges);
+  week_calendar_current(parent, initial, on_ranges);
 }
