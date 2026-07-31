@@ -1,7 +1,9 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_files_texts } from "./js_files_texts.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
-import { folder_js } from "./folder_js.mjs";
-import { path_join } from "./path_join.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
@@ -13,18 +15,18 @@ import { property_set } from "./property_set.mjs";
 import { list_includes } from "./list_includes.mjs";
 export async function functions_call_pairs_frequent() {
   "Auto-DRY recommender: scan every js fn, count how often each ORDERED pair of consecutive";
-  "call-declarations recurs across files (alpha-renamed via js_pair_canonical), and return the top";
-  "WIRED pairs — where the second statement consumes the first's output — ranked by how many files hold";
-  "them. A wired pair recurring across many files is a candidate to extract into one named fn. The";
-  "complement of the fold: the fold reuses fns that EXIST, this proposes fns that SHOULD.";
+  ("call-declarations recurs across files (alpha-renamed via ",
+    fn_name("js_pair_canonical"),
+    "), and return the top");
+  ("WIRED pairs — where the second statement consumes the first's output — ranked by how many files hold");
+  ("them. A wired pair recurring across many files is a candidate to extract into one named fn. The");
+  ("complement of the fold: the fold reuses fns that EXIST, this proposes fns that SHOULD.");
   arguments_assert(arguments, 0);
-  let directory = folder_js();
-  let files = await folder_read_files(directory);
-  let module_fs = await import("fs");
+  let entries = await js_files_texts();
   let tally = {};
-  function file_scan(file) {
-    let path = path_join([directory, file]);
-    let text = module_fs.readFileSync(path, "utf8");
+  function file_scan(entry) {
+    let file = property_get(entry, "file");
+    let text = property_get(entry, "text");
     let sigs = null;
     try {
       let ast = js_parse(text);
@@ -33,32 +35,32 @@ export async function functions_call_pairs_frequent() {
     } catch (e) {
       return;
     }
-    let last = sigs.length - 1;
+    let last = subtract(sigs.length, 1);
     let i = 0;
-    while (i < last) {
-      let s1 = sigs[i];
+    while (less_than(i, last)) {
+      let s = sigs[i];
       let s2 = sigs[i + 1];
       i = i + 1;
-      let callee1 = property_get(s1, "callee");
+      let callee = property_get(s, "callee");
       let callee2 = property_get(s2, "callee");
-      let both_calls = callee1 && callee2;
-      if (!both_calls) {
+      let both_calls = callee && callee2;
+      if (not(both_calls)) {
         continue;
       }
-      let key = js_pair_canonical(s1, s2);
-      let name1 = property_get(s1, "name");
-      let args2 = property_get(s2, "args");
-      let wired = list_includes(args2, name1);
+      let key = js_pair_canonical(s, s2);
+      let name = property_get(s, "name");
+      let args = property_get(s2, "args");
+      let wired = list_includes(args, name);
       let seen = property_exists(tally, key);
-      if (!seen) {
+      if (not(seen)) {
         let example =
-          callee1 +
+          callee +
           "(" +
-          property_get(s1, "args").join(", ") +
+          property_get(s, "args").join(", ") +
           ") -> " +
           callee2 +
           "(" +
-          args2.join(", ") +
+          args.join(", ") +
           ")";
         property_set(tally, key, {
           count: 0,
@@ -72,11 +74,11 @@ export async function functions_call_pairs_frequent() {
       record.files[file] = true;
     }
   }
-  list_map(files, file_scan);
+  list_map(entries, file_scan);
   let rows = [];
   for (let key in tally) {
     let record = tally[key];
-    if (!record.wired) {
+    if (not(record.wired)) {
       continue;
     }
     let file_count = Object.keys(record.files).length;
@@ -86,7 +88,11 @@ export async function functions_call_pairs_frequent() {
       pair: record.example,
     });
   }
-  rows.sort((a, b) => b.files - a.files);
+  function lambda(a, b) {
+    let difference = subtract(b.files, a.files);
+    return difference;
+  }
+  rows.sort(lambda);
   let top = rows.slice(0, 25);
   return top;
 }
