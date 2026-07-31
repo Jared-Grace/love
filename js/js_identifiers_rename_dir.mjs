@@ -16,9 +16,7 @@ export async function js_identifiers_rename_dir(dir, name_before, name_after) {
     await file_js_transform(f_path, lambda);
   }
   await list_map_unordered_async(files, transform_file);
-  let name_before_file = text_combine_multiple([name_before, ".mjs"]);
-  let name_after_file = text_combine_multiple([name_after, ".mjs"]);
-  let path_before = path_join([dir, name_before_file]);
-  let path_after = path_join([dir, name_after_file]);
+  let path_before = js_file_dir_path(dir, name_before);
+  let path_after = js_file_dir_path(dir, name_after);
   await file_move(path_before, path_after);
 }
