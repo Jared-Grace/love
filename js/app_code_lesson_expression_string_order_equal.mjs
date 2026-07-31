@@ -125,7 +125,7 @@ export function app_code_lesson_expression_string_order_equal() {
     return built;
   }
   function above(root) {
-    "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one addition that it is also true when the two strings are equal. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
+    "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one change named at the point it happens: where the strict operator is false (the two strings equal), this one is true instead. Naming both the before value (false) and the after value (true) inline is what makes the delta line self-contained, on top of the recall box's general premise. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
     let recall = app_code_container_light_blue(root);
     app_code_prose_code_line(recall, [
       ["text", "You've compared strings with "],
@@ -153,17 +153,21 @@ export function app_code_lesson_expression_string_order_equal() {
       ["code", "<="],
       ["text", " is the same as "],
       ["code", "<"],
-      ["text", ", but is also "],
+      ["text", ", but is "],
       ["code", "true"],
-      ["text", " when the two strings are equal"],
+      ["text", " (instead of "],
+      ["code", "false"],
+      ["text", ") when the two strings are equal"],
     ]);
     app_code_prose_code_line(addition, [
       ["code", ">="],
       ["text", " is the same as "],
       ["code", ">"],
-      ["text", ", but is also "],
+      ["text", ", but is "],
       ["code", "true"],
-      ["text", " when the two strings are equal"],
+      ["text", " (instead of "],
+      ["code", "false"],
+      ["text", ") when the two strings are equal"],
     ]);
     let meaning = app_code_container_light_blue(root);
     app_code_prose_code_line(meaning, [
