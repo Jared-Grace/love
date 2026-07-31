@@ -1,5 +1,4 @@
-import { example_transform_difference_print } from "./example_transform_difference_print.mjs";
-import { equal } from "./equal.mjs";
+import { example_compare_verdict } from "./example_compare_verdict.mjs";
 import { not } from "./not.mjs";
 import { example_command_lambda } from "./example_command_lambda.mjs";
 import { example_transform_before } from "./example_transform_before.mjs";
@@ -24,12 +23,6 @@ export async function example_transform_run(e) {
   let out = await file_temp(in_sandbox);
   let got = await js_format_trim(out);
   let want = await js_format_trim(e.after);
-  let same_is = equal(got, want);
-  if (same_is) {
-    let r3 = "pass";
-    return r3;
-  }
-  example_transform_difference_print(e.title, got, want);
-  let r4 = "fail";
-  return r4;
+  let r3 = example_compare_verdict(e.title, got, want);
+  return r3;
 }
