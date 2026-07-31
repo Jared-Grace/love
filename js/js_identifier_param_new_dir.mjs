@@ -19,7 +19,7 @@ export async function js_identifier_param_new_dir(
   default_value,
 ) {
   let files = await folder_read_files(dir);
-  let def_file = text_combine_multiple([f_name, ".mjs"]);
+  let def_file = js_file_name(f_name);
   async function transform_file(file) {
     let f_path = path_join([dir, file]);
     function edit(ast) {

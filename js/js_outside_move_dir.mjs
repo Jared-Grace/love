@@ -32,11 +32,10 @@ export async function js_outside_move_dir(ast, dir) {
   each(declarations, lambda_movable);
   async function lambda_write(declaration) {
     let f_name = js_function_declaration_name(declaration);
-    let f_file = text_combine_multiple([f_name, ".mjs"]);
     let code_declaration = js_unparse(declaration);
     let contents = js_code_export(code_declaration);
     let formatted = await js_format(contents);
-    let file_path = path_join([dir, f_file]);
+    let file_path = js_file_dir_path(dir, f_name);
     await file_overwrite(file_path, formatted);
   }
   await each_async(declarations, lambda_write);

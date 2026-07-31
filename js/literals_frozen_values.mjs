@@ -11,7 +11,7 @@ export async function literals_frozen_values() {
   let names = literals_frozen_names();
   let values = {};
   for (let f_name of names) {
-    let path = text_combine_multiple(["js/", f_name, ".mjs"]);
+    let path = js_file_dir_path(folder_js(), f_name);
     let code = await file_read(path);
     let literal = js_code_getter_literal(code, f_name);
     let some = not_equal(literal, "");

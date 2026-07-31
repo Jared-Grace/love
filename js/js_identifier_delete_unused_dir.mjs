@@ -14,7 +14,6 @@ export async function js_identifier_delete_unused_dir(dir, name) {
       name,
     });
   }
-  let name_file = text_combine_multiple([name, ".mjs"]);
-  let f_path = path_join([dir, name_file]);
+  let f_path = js_file_dir_path(dir, name);
   await file_delete(f_path);
 }

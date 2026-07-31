@@ -10,11 +10,11 @@ import { file_overwrite } from "./file_overwrite.mjs";
 ("place. The hermetic, sandbox-testable core of function_copy — mirrors its duplicate-then-");
 ("rename-inside-the-copy, minus the ambient path/registry work.");
 export async function js_identifier_copy_dir(dir, name_old, name_new) {
-  let old_file = text_combine_multiple([name_old, ".mjs"]);
-  let src = await file_read(path_join([dir, old_file]));
+  let old_path = js_file_dir_path(dir, name_old);
+  let src = await file_read(old_path);
   let ast = js_parse(src);
   js_identifier_rename(ast, name_old, name_new);
   let new_src = js_unparse(ast);
-  let new_file = text_combine_multiple([name_new, ".mjs"]);
-  await file_overwrite(path_join([dir, new_file]), new_src);
+  let new_path = js_file_dir_path(dir, name_new);
+  await file_overwrite(new_path, new_src);
 }

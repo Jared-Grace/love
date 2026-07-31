@@ -23,8 +23,7 @@ export async function js_selects_functionize_dir(
   "The span is named by the calls at its two ends, which is how the instructions";
   "spell this verb anyway - the ends are ordinary selections and nothing has to";
   "be written into the code first to mark them.";
-  let f_file = text_combine_multiple([file_name, ".mjs"]);
-  let f_path = path_join([dir, f_file]);
+  let f_path = js_file_dir_path(dir, file_name);
   let source = await file_read(f_path);
   let ast = js_parse(source);
   let names = text_split_comma(call_names);
