@@ -21,7 +21,7 @@ export async function app_shared_component(a_name, on_click, button_text) {
   let root = html_document_body();
   html_margin_0(root);
   html_clear(root);
-  let bc = html_bar_content_padded(root);
+  let bc = app_shared_bar_content_root(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
   let component = html_button_wide(bar, button_text, on_click);

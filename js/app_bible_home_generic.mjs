@@ -60,13 +60,10 @@ import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_bible_home_generic(context, lambda$a, bar_extra) {
-  let root = html_clear_context(context);
-  let bc = html_bar_content_padded(root);
-  let content = property_get(bc, "content");
-  ("center the reader in one column the code app's way: full-width scroll area (scrollbar at the window edge), content padded into the column");
-  let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
-  let bar = property_get(bc, "bar");
+  let frame = app_shared_bar_content(context);
+  let content = property_get(frame, "content");
+  app_shared_content_column_pad(content);
+  let bar = property_get(frame, "bar");
   html_centered(bar);
   bar_extra(bar);
   let e = ebible_folder_english();
