@@ -1,6 +1,5 @@
+import { js_block_find_from_nodes_single } from "./js_block_find_from_nodes_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_to_block } from "./js_node_to_block.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { js_call_add_generic } from "./js_call_add_generic.mjs";
@@ -17,8 +16,7 @@ export async function js_selects_call_add_generic(
   ("The call writes itself: the arguments come from the named function's own");
   ("parameters, so what goes in is a name off a list, never a line of code");
   ("somebody wrote.");
-  let node = list_single(selects);
-  let f = js_node_to_block(ast, node);
+  let f = js_block_find_from_nodes_single(ast, selects);
   let body = property_get(f, "body");
   let index = property_get(f, "index");
   let index_insert = index + index_delta;
