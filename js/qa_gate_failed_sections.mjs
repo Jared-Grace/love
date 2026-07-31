@@ -1,5 +1,5 @@
 import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
-import { list_from_index } from "./list_from_index.mjs";
+import { list_skip } from "./list_skip.mjs";
 import { newline } from "./newline.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -61,7 +61,7 @@ export function qa_gate_failed_sections(output) {
     if (not(mine)) {
       continue;
     }
-    let rest = list_from_index(halves, 1);
+    let rest = list_skip(halves, 1);
     let complaint = list_join(rest, ":");
     list_add(said, complaint);
     let whole = list_join(said, separator);
