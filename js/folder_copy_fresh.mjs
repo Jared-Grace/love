@@ -1,3 +1,4 @@
+import { file_path_temp_is } from "./file_path_temp_is.mjs";
 import { path_base } from "./path_base.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 export async function folder_copy_fresh(source, target, skipped) {
@@ -11,6 +12,10 @@ export async function folder_copy_fresh(source, target, skipped) {
     recursive: true,
   });
   function lambda(from) {
+    let temp = file_path_temp_is(from);
+    if (temp) {
+      return false;
+    }
     let base = path_base(from);
     let wanted = list_includes_not(skipped, base);
     return wanted;
