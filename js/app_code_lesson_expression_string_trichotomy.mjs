@@ -181,9 +181,11 @@ export function app_code_lesson_expression_string_trichotomy() {
       ["code", '"truth"'],
     ]);
     let cases = app_code_container_light_blue(root);
-    app_code_prose_code_line(cases, [["text", "Take any two strings"]]);
+    app_code_prose_code_line(cases, [["text", "Suppose we have two strings"]]);
     app_code_prose_code_line(cases, [
-      ["text", "Then exactly one of these will be true:"],
+      ["text", "Then exactly one of these will be "],
+      ["code", "true"],
+      ["text", ":"],
     ]);
     app_code_prose_code_list(cases, [
       [
