@@ -1,7 +1,7 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 export function ai_log_step_name(entry) {
   "What a logged line really did, which is not always what it was called.";
@@ -12,8 +12,7 @@ export function ai_log_step_name(entry) {
     fn_name("function_select_apply_code"),
     fn_name("function_select_multiple_apply_args"),
   ];
-  let carried = list_includes(carriers, f_name);
-  let plain = not(carried);
+  let plain = list_includes_not(carriers, f_name);
   if (plain) {
     return f_name;
   }
