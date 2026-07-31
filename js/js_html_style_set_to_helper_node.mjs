@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -38,8 +39,7 @@ export function js_html_style_set_to_helper_node(node, helpers) {
   let kept = js_call_arguments_get(expression);
   let target = list_first(args);
   list_add_multiple(kept, [object_copy(target)]);
-  let kind = property_get(helper, "kind");
-  let through = equal(kind, "value");
+  let through = property_equals(helper, "kind", "value");
   if (through) {
     list_add_multiple(kept, [object_copy(value_node)]);
   }
