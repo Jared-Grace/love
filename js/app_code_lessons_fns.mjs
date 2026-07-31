@@ -26,6 +26,8 @@ import { app_code_lesson_expression_string_spaces } from "./app_code_lesson_expr
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
 import { app_code_lesson_expression_string_equality } from "./app_code_lesson_expression_string_equality.mjs";
 import { app_code_lesson_expression_string_order } from "./app_code_lesson_expression_string_order.mjs";
+import { app_code_lesson_expression_number_trichotomy } from "./app_code_lesson_expression_number_trichotomy.mjs";
+import { app_code_lesson_expression_string_trichotomy } from "./app_code_lesson_expression_string_trichotomy.mjs";
 import { app_code_lesson_expression_string_order_equal } from "./app_code_lesson_expression_string_order_equal.mjs";
 import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
 import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
@@ -146,7 +148,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
     app_code_lesson_expression_string_equality,
+    app_code_lesson_expression_number_trichotomy,
     app_code_lesson_expression_string_order,
+    app_code_lesson_expression_string_trichotomy,
     app_code_lesson_expression_string_order_equal,
   ];
   return fns;
