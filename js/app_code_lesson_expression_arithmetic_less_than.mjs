@@ -124,9 +124,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   }
   let next_arg = list_iterator_refillable(refill);
   function above(root) {
-    ("the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from ",
-      fn_name("less_than"),
-      " so nothing is hand-typed");
+    "the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from the < comparison so nothing is hand-typed";
     let header = app_code_container_light_blue(root);
     html_div_cycle_code(header, [
       "We always do the arithmetic before the ",
@@ -198,7 +196,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       }
       return render;
     }
-    let rights = [" arithmetic less than"];
+    let rights = ["arithmetic less than"];
     let built = app_code_lesson_name_id_generic(
       rights,
       "expressions",
