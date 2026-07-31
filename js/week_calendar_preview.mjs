@@ -17,8 +17,5 @@ export function week_calendar_preview() {
   function on_ranges(ranges) {
     storage_local_specify_set(key, ranges);
   }
-  let iso = date_today_iso();
-  let sunday = date_week_sunday(iso);
-  let dates = week_dates(sunday);
-  week_calendar(root, dates, initial, on_ranges);
+  week_calendar_current(root, initial, on_ranges);
 }
