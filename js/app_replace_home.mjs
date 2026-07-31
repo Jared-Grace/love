@@ -1,3 +1,4 @@
+import { app_shared_gear_text } from "./app_shared_gear_text.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_replace_goals_generic } from "./app_replace_goals_generic.mjs";
@@ -9,20 +10,17 @@ import { each_index } from "./each_index.mjs";
 import { app_replace_goals } from "./app_replace_goals.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_replace_settings } from "./app_replace_settings.mjs";
-import { emoji_gear } from "./emoji_gear.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_replace_home(context) {
   let root = property_get(context, "root");
   async function lambda4() {
     await app_shared_screen_set(context, app_replace_settings);
   }
-  let left = emoji_gear();
-  let text = text_combine(left, " Settings");
+  let text = app_shared_gear_text(" Settings");
   app_shared_button_wide(root, text, lambda4);
   app_shared_text_body(root, "Choose a rule set");
   let d = app_replace_rule_sets_data_initialize(context);
