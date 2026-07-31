@@ -15,6 +15,9 @@ export function literals_frozen_names() {
   let spelled10 = fn_name("download_cache_store");
   ("The last of these is a field name rather than a key of its own, and it is here for a reason worth reading before adding another of that kind. The game is saved by copying the whole game object and writing it to json with two fields taken out, so the saving never chose a schema and every field name anywhere under it escaped the moment the first game was saved. A field named in a blanket dump is therefore as published as a storage key, and there is no list to read it off - the set is every name in the object graph.");
   let spelled11 = fn_name("app_g_conversation_key");
+  ("A reader who kept bibles for reading with no internet is holding a database under this name, with one store inside it under that one - the same escape as the reader's files and the download cache beside them, which were already here. These two were not, so until now the one edit this list exists to catch could have been made to them quietly.");
+  let spelled12 = fn_name("ebible_offline_database_name");
+  let spelled13 = fn_name("ebible_offline_store");
   let names = [
     spelled,
     spelled2,
@@ -26,6 +29,8 @@ export function literals_frozen_names() {
     spelled9,
     spelled10,
     spelled11,
+    spelled12,
+    spelled13,
   ];
   return names;
 }
