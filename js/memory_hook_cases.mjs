@@ -8,7 +8,7 @@ export function memory_hook_cases() {
   "The escape cases (decision silent) are the SECURITY invariant, not convenience: a path that TEXTUALLY sits under the memory realpath but RESOLVES outside it - via .. traversal, or a prefix-sibling like memory-sibling - must fall through, never allow. The hook resolves realpath and checks memory_root plus a trailing slash, so a naive string-prefix check would leak these; only a test pins that it does not.";
   let config = memory_folder();
   let real = memory_folder_realpath();
-  let note = "MEMORY.md";
+  let note = memory_index_name();
   let absent = "brand_new_note_that_does_not_exist_yet.md";
   let config_folder = claude_config_folder();
   let settings = path_join([config_folder, "settings.json"]);
