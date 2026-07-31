@@ -365,6 +365,22 @@ export async function app_g_verify_view(
   ("fit the content now and again after this tick; then once more after the serif font loads, whose metrics change the height");
   invoke_now_and_later(autosize);
   document.fonts.ready.then(autosize);
+  ("a Reset control that restores the box to the CURRENT saved lines (value4) and drops any in-progress draft — so the reviewer can start over from exactly what Claude has now, having edited the box away from it");
+  let reset_bar = html_div(container);
+  html_style_margin_top(reset_bar, small_gap);
+  html_centered(reset_bar);
+  function reset_to_current() {
+    html_value_set(suggest_area, value4);
+    sessionStorage.removeItem(draft_key);
+    sessionStorage.removeItem(base_key);
+    autosize();
+  }
+  let reset_button = app_shared_button(
+    reset_bar,
+    "Reset to current lines",
+    reset_to_current,
+  );
+  app_shared_text_deemphasized(reset_button);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
