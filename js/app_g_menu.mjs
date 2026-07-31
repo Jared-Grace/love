@@ -17,9 +17,9 @@ import { text_combine } from "./text_combine.mjs";
 import { g_prayer_conversation } from "./g_prayer_conversation.mjs";
 import { app_g_dev_tools_open } from "./app_g_dev_tools_open.mjs";
 export function app_g_menu(overlay, player) {
-  ("the tap-yourself menu (Pray / Study / New Game / Dev Tools). a heading card over bare buttons in a VERTICALLY-CENTERED column (",
+  ("the tap-yourself menu (Pray / Study / New Game / Dev Tools): a heading card over bare buttons, top-anchored in the frame ",
     fn_name("app_g_menu_container"),
-    "), not top-anchored in the bare overlay: you open this by tapping your own character in the middle of the map, so the options meet your eyes and finger where you already tapped — otherwise a player taps the dim centre, hits nothing, and never realises it is a menu. every screen you can reach FROM here wears this same look, including the pray sub-screen, rather than the menu borrowing the prayer TURN's speaker card.");
+    " gives it, spaced only by the margin every control already carries. every screen you can reach FROM here wears this same look, including the pray sub-screen, rather than the menu borrowing the prayer TURN's speaker card.");
   let container = app_g_menu_container(overlay);
   async function close() {
     await app_g_view_set(null);
@@ -30,7 +30,7 @@ export function app_g_menu(overlay, player) {
   let left = emoji_pray();
   let text = text_combine(left, " Pray");
   function lambda7() {
-    "the pray sub-screen wears the SAME centered menu column as the top menu — a back-to-menu button, the heading card, then the prayer button. it is reached from the menu, so it is still the menu talking, not a person taking a conversation turn.";
+    "the pray sub-screen wears the SAME menu frame as the top menu — a back-to-menu button, the heading card, then the prayer button. it is reached from the menu, so it is still the menu talking, not a person taking a conversation turn.";
     let sub = app_g_menu_container(overlay);
     function to_menu() {
       app_g_menu(overlay, player);
