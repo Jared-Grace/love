@@ -124,7 +124,7 @@ export function app_code_lesson_expression_number_trichotomy() {
     return built;
   }
   function above(root) {
-    "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box stating why there are exactly three (same, or first smaller, or first bigger, only one true); then a box mapping each operator to its case. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
+    "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box: any two numbers give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
     let example = app_code_container_light_blue(root);
     app_code_prose_code_line(example, [
       ["code", "1"],
@@ -160,33 +160,25 @@ export function app_code_lesson_expression_number_trichotomy() {
     ]);
     let cases = app_code_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Take any two numbers"]]);
-    app_code_prose_code_list(cases, [
-      [["text", "They are the same"]],
-      [["text", "The first is smaller than the second"]],
-      [["text", "The first is bigger than the second"]],
-    ]);
     app_code_prose_code_line(cases, [
-      ["text", "Only one of the three can be true"],
+      ["text", "Then exactly one of these will be true:"],
     ]);
-    let operators = app_code_container_light_blue(root);
-    let true_text = js_keyword_true();
-    app_code_prose_code_line(operators, [
-      ["code", equals_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when they are the same"],
-    ]);
-    app_code_prose_code_line(operators, [
-      ["code", less_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when the first is smaller"],
-    ]);
-    app_code_prose_code_line(operators, [
-      ["code", greater_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when the first is bigger"],
+    app_code_prose_code_list(cases, [
+      [
+        ["text", "They are the same ("],
+        ["code", equals_operator],
+        ["text", ")"],
+      ],
+      [
+        ["text", "The first is smaller than the second ("],
+        ["code", less_operator],
+        ["text", ")"],
+      ],
+      [
+        ["text", "The first is bigger than the second ("],
+        ["code", greater_operator],
+        ["text", ")"],
+      ],
     ]);
   }
 }

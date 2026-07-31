@@ -151,7 +151,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     return built;
   }
   function above(root) {
-    "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box stating why there are exactly three for strings; then a box mapping each operator to its case. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
+    "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box: any two strings give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
     let transfer = app_code_container_light_blue(root);
     app_code_prose_code_line(transfer, [
       ["text", "Two numbers are always the same, smaller, or bigger"],
@@ -182,33 +182,25 @@ export function app_code_lesson_expression_string_trichotomy() {
     ]);
     let cases = app_code_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Take any two strings"]]);
-    app_code_prose_code_list(cases, [
-      [["text", "They are the same"]],
-      [["text", "The first comes before the second"]],
-      [["text", "The first comes after the second"]],
-    ]);
     app_code_prose_code_line(cases, [
-      ["text", "Only one of the three can be true"],
+      ["text", "Then exactly one of these will be true:"],
     ]);
-    let operators = app_code_container_light_blue(root);
-    let true_text = js_keyword_true();
-    app_code_prose_code_line(operators, [
-      ["code", equals_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when they are the same"],
-    ]);
-    app_code_prose_code_line(operators, [
-      ["code", less_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when the first comes before"],
-    ]);
-    app_code_prose_code_line(operators, [
-      ["code", greater_operator],
-      ["text", " is "],
-      ["code", true_text],
-      ["text", " when the first comes after"],
+    app_code_prose_code_list(cases, [
+      [
+        ["text", "They are the same ("],
+        ["code", equals_operator],
+        ["text", ")"],
+      ],
+      [
+        ["text", "The first comes before the second ("],
+        ["code", less_operator],
+        ["text", ")"],
+      ],
+      [
+        ["text", "The first comes after the second ("],
+        ["code", greater_operator],
+        ["text", ")"],
+      ],
     ]);
   }
 }
