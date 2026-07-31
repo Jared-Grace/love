@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
-import { folder_src } from "./folder_src.mjs";
+import { folder_js } from "./folder_js.mjs";
 import { path_join } from "./path_join.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
@@ -17,7 +17,7 @@ export async function functions_fold_sites() {
   "tries js_fold against the files that call all its callees. Complement of the miner: this finds reuse";
   "of fns that EXIST. Returns { x, f } pairs; a mutual x<->f pair means two duplicate DEFINITIONS.";
   arguments_assert(arguments, 0);
-  let directory = folder_src();
+  let directory = folder_js();
   let files = await folder_read_files(directory);
   let module_fs = await import("fs");
   let entries = {};
@@ -36,7 +36,10 @@ export async function functions_fold_sites() {
     } catch (e) {
       return;
     }
-    entries[name] = { text: text, pattern: pattern };
+    entries[name] = {
+      text: text,
+      pattern: pattern,
+    };
     for (let callee of callees) {
       if (!callee_index[callee]) {
         callee_index[callee] = {};
@@ -64,7 +67,10 @@ export async function functions_fold_sites() {
       try {
         let folded = js_fold(x_ast, js_parse(entries[f_name].text));
         if (folded !== null) {
-          sites.push({ x: x_name, f: f_name });
+          sites.push({
+            x: x_name,
+            f: f_name,
+          });
         }
       } catch (e) {
         continue;

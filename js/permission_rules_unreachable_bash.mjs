@@ -10,7 +10,6 @@ import { equal } from "./equal.mjs";
 export async function permission_rules_unreachable_bash() {
   "audit: every Bash allow rule the guard does not actually auto-approve, so the rule silently never applies and the command still prompts";
   "a rule is matched against the VERB the guard computes, not the text you typed. that fold drops a leading directory option from a version-control command and keeps the dispatcher path spelling, so a rule can look right and still be unreachable";
-  "the rules are put to the guard several at a time. each one starts a fresh guard and waits for it to answer, and one rule after another was the slowest single question in the whole repo-wide gate while this machine sat idle through nearly all of it. no rule depends on another, and the answers are gathered in the order the rules were written, so the list reads exactly as it did";
   let rules = await permission_rules();
   async function offence_or_null(rule) {
     let command = permission_rule_command_probe(rule);
@@ -32,8 +31,6 @@ export async function permission_rules_unreachable_bash() {
     };
     return offence;
   }
-  let limit = probes_at_once();
-  let judged = await list_map_limited_async(rules, offence_or_null, limit);
-  let offenders = list_filter_null_not_is(judged);
+  let offenders = await probes_offenders(rules, offence_or_null);
   return offenders;
 }
