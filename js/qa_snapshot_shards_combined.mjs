@@ -1,9 +1,8 @@
+import { list_join_newline } from "./list_join_newline.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_join } from "./list_join.mjs";
-import { newline } from "./newline.mjs";
 export function qa_snapshot_shards_combined(results) {
   "What several runs of the frozen copy said, read back as one answer";
   "A share that complained makes the whole answer a complaint, because the shares are only a way of dividing the work and no reader cares which of them held the unhappy gate";
@@ -22,8 +21,7 @@ export function qa_snapshot_shards_combined(results) {
     let printed = property_get(result, "printed");
     list_add(sayings, printed);
   }
-  let separator = newline();
-  let said = list_join(sayings, separator);
+  let said = list_join_newline(sayings);
   let r = {
     green: green,
     failed: failed,
