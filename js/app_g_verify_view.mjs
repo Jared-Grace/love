@@ -375,12 +375,7 @@ export async function app_g_verify_view(
     sessionStorage.removeItem(base_key);
     autosize();
   }
-  let reset_button = app_shared_button(
-    reset_bar,
-    "Reset to current lines",
-    reset_to_current,
-  );
-  app_shared_text_deemphasized(reset_button);
+  app_shared_button(reset_bar, "Reset to current lines", reset_to_current);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
