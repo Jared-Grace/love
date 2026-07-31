@@ -95,11 +95,9 @@ export async function app_shared_bible_read(context, verse_action) {
   ("clear first so this reader can re-render in place (mode switch) instead of only on a fresh page load");
   html_clear(root);
   html_margin_0(root);
-  let bc = html_bar_content_padded(root);
+  let bc = app_shared_bar_content_root(root);
   let content = property_get(bc, "content");
-  ("center the reader in one column the code app's way: keep the scroll area full width (scrollbar stays at the window edge) and pad its content into the column, so verses and the full-width nav bars line up and a wide desktop gets a comfortable measure instead of edge-to-edge text");
-  let column = app_shared_column_max_width();
-  app_shared_content_center_padding(content, column);
+  app_shared_content_column_pad(content);
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
