@@ -1,3 +1,4 @@
+import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -93,16 +94,6 @@ export function app_code_lesson_expression_string_order() {
     let list = list_map(combos, one);
     return list;
   }
-  function decoys(question, answer) {
-    "a comparison has only one other possible value - the opposite of true and false";
-    let true_text = js_keyword_true();
-    let is_true = equal(answer, true_text);
-    let on_true = js_keyword_false();
-    let on_false = js_keyword_true();
-    let opposite = ternary(is_true, on_true, on_false);
-    let r = [opposite];
-    return r;
-  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -110,7 +101,7 @@ export function app_code_lesson_expression_string_order() {
     name_id,
     next_arg,
     example_count: 4,
-    decoys,
+    decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: "value: ",
     backwards_question_label: "value: ",
