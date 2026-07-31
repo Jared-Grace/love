@@ -4,7 +4,7 @@ import { functions_imports_missing } from "./functions_imports_missing.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { folder_src } from "./folder_src.mjs";
+import { folder_js } from "./folder_js.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_imports_repair } from "./file_imports_repair.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,7 +22,7 @@ export async function functions_imports_missing_repair() {
     let name = property_get(offender, "name");
     let right = function_name_extension();
     let combined = text_combine(name, right);
-    let src = folder_src();
+    let src = folder_js();
     let f_path = path_join([src, combined]);
     let args = [f_path];
     await function_call_commit(file_imports_repair, args);
