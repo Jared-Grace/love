@@ -1,8 +1,8 @@
+import { function_select_apply_pair } from "./function_select_apply_pair.mjs";
+import { property_get } from "./property_get.mjs";
 import { function_transform_imports } from "./function_transform_imports.mjs";
-import { function_callee_seam_assert } from "./function_callee_seam_assert.mjs";
 import { js_select_apply } from "./js_select_apply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_import } from "./function_import.mjs";
 export async function function_select_apply_generic(
   f_name,
   select_fn_name,

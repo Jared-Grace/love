@@ -1,3 +1,4 @@
+import { memory_index_name } from "./memory_index_name.mjs";
 import { path_join } from "./path_join.mjs";
 import { claude_config_folder } from "./claude_config_folder.mjs";
 import { memory_folder } from "./memory_folder.mjs";
