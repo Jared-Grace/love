@@ -1,8 +1,6 @@
+import { week_calendar_current } from "./week_calendar_current.mjs";
 import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
-import { week_dates } from "./week_dates.mjs";
-import { date_today_iso } from "./date_today_iso.mjs";
-import { date_week_sunday } from "./date_week_sunday.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { storage_local_specify_get } from "./storage_local_specify_get.mjs";
 import { storage_local_specify_set } from "./storage_local_specify_set.mjs";
