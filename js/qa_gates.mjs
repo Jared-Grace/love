@@ -1,3 +1,4 @@
+import { literals_frozen_storage_gate_run } from "./literals_frozen_storage_gate_run.mjs";
 import { functions_tail_duplicates_gate_run } from "./functions_tail_duplicates_gate_run.mjs";
 import { permission_settings_local_gate_run } from "./permission_settings_local_gate_run.mjs";
 import { permission_settings_allow_drift_cases_gate_run } from "./permission_settings_allow_drift_cases_gate_run.mjs";
@@ -165,6 +166,7 @@ export function qa_gates() {
     functions_shadowing_function_gate_run,
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
+    literals_frozen_storage_gate_run,
     functions_unreachable_check_gate_run,
     functions_statements_after_return_gate_run,
     functions_arity_gate_run,
