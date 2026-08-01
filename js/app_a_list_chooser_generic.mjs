@@ -42,12 +42,12 @@ export function app_a_list_chooser_generic(
   function refresh() {
     html_clear(f_names_div);
     list_sort_text_alpha_size(filtered);
-    function lambda(text) {
+    function lambda(words) {
       async function on_click() {
-        await lambda$text(text);
+        await lambda$text(words);
       }
-      let b = app_a_button_wide(f_names_div, text, on_click);
-      lambda$button$text(b, text);
+      let b = app_a_button_wide(f_names_div, words, on_click);
+      lambda$button$text(b, words);
     }
     each(filtered, lambda);
   }
