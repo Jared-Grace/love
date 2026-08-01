@@ -1,3 +1,4 @@
+import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { ternary } from "./ternary.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
@@ -10,12 +11,10 @@ import { js_declare } from "./js_declare.mjs";
 import { log } from "./log.mjs";
 import { app_a_functions_overlay_generic } from "./app_a_functions_overlay_generic.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_a_function_name_selected_key } from "./app_a_function_name_selected_key.mjs";
 import { app_a_functionize_choices_add } from "./app_a_functionize_choices_add.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { app_a_function_overlay_refresh } from "./app_a_function_overlay_refresh.mjs";
-import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { function_param_delete } from "./function_param_delete.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
@@ -220,8 +219,7 @@ export function app_a_identifier_generic(
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {
-          let key = app_a_function_name_selected_key();
-          let f_name = storage_session_get_context(context, key);
+          let f_name = app_a_function_name_selected(context);
           await function_param_delete(f_name, name);
           await app_a_function_overlay_refresh(a, o3);
         },
