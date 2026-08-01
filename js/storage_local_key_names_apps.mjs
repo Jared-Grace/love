@@ -1,3 +1,7 @@
+import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
+import { app_shared_name_main } from "./app_shared_name_main.mjs";
+import { webpack_build_generic_source_fn_names } from "./webpack_build_generic_source_fn_names.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
 import { storage_local_key_owner_forwarders } from "./storage_local_key_owner_forwarders.mjs";
@@ -9,13 +13,21 @@ export async function storage_local_key_names_apps() {
   "Every app whose own name reaches a browser storage key, because the storing it reaches is written to serve whoever calls it. Read-only.";
   "An app hands its own name to the shared setup once, and from there it rides along in the context every screen is drawn with. Whichever shared piece of code later saves a font size or which screen you were on files it under that name, so the key on the disk says the app - and the app's file has no storing in it at all to find.";
   "So it is asked from the app end rather than the storing end. An app publishes its name if the code it carries includes any of the storing that takes an owner, which is a question its imports answer: what an entry point can reach is what a page built from it ships.";
+  "The name of an app and the code of an app are two different functions, and asking the first what it can reach answers nothing - several of them are an empty body whose whole job is to be a name. The roots are taken the way the builder takes them, from the app's own function, so what is weighed is what would be built. There are two, and the second is the shared boot: everything that happens before a screen is drawn hangs off it rather than off the app.";
   "Reaching is not running, so an app that carries the storing and never runs it is named here anyway. That is the safe direction on purpose. Being named costs a line in the record and a sentence at a rename; not being named costs somebody's saved settings, with no way to get them back.";
   arguments_assert(arguments, 0);
   let apps = app_apps_all_main_fns();
   let forwarders = await storage_local_key_owner_forwarders();
   let names = [];
   for (let app of apps) {
-    let reachable = await function_reachable_names(app);
+    let without = app_shared_name_prefix_without(app);
+    let main = await app_shared_name_main(without);
+    let roots = webpack_build_generic_source_fn_names(main);
+    let reachable = [];
+    for (let root of roots) {
+      let reached = await function_reachable_names(root);
+      list_add_multiple(reachable, reached);
+    }
     let met = list_intersect(reachable, forwarders);
     let publishes = list_empty_not_is(met);
     if (publishes) {

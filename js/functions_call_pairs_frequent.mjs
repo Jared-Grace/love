@@ -18,6 +18,7 @@ import { function_exists } from "./function_exists.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
+import { js_return_name } from "./js_return_name.mjs";
 export async function functions_call_pairs_frequent() {
   "Auto-DRY recommender: scan every js fn, count how often each ORDERED pair of consecutive";
   ("call-declarations recurs across files (alpha-renamed via ",
@@ -41,10 +42,12 @@ export async function functions_call_pairs_frequent() {
     let file = property_get(entry, "file");
     let text = property_get(entry, "text");
     let sigs = null;
+    let return_name = null;
     try {
       let ast = js_parse(text);
       let statements = js_flo_body(ast);
       sigs = list_map(statements, js_atomic_statement_signature);
+      return_name = js_return_name(ast);
     } catch (e) {
       return;
     }
@@ -73,7 +76,9 @@ export async function functions_call_pairs_frequent() {
       let args = property_get(s2, "args");
       let wired = list_includes(args, name);
       if (wired) {
-        keys_here.push(key);
+        let name2 = property_get(s2, "name");
+        let returned = equal(name2, return_name);
+        keys_here.push({ key: key, returned: returned });
       }
       let seen = property_exists(tally, key);
       if (not(seen)) {
@@ -102,10 +107,12 @@ export async function functions_call_pairs_frequent() {
   }
   list_map(entries, file_scan);
   ("A function whose whole body IS one of these pairs is the atom the pair is asking");
-  ("for, already written. Nothing but the pair means one wired pair and no third call");
-  ("beyond the two and the argument check, which is what tells");
-  (fn_name("list_multiple_is"), " apart from a long function that happens to");
-  ("hold one wired pair somewhere in the middle of it.");
+  ("for, already written under a name the composed one never guesses: the pair");
+  ("list_size then equal-to-zero is called ", fn_name("list_empty_is"), " here.");
+  ("Whole body means the file holds one wired pair, that pair's result is what the");
+  ("function hands back, and there is no third worked-out value - which is what tells");
+  ("an atom apart from a long function that happens to hold one wired pair in the");
+  ("middle of it.");
   let atom_by_key = {};
   for (let file in file_keys) {
     let scanned = property_get(file_keys, file);
@@ -117,7 +124,11 @@ export async function functions_call_pairs_frequent() {
     if (not(atom_is)) {
       continue;
     }
-    let only_key = keys_here[0];
+    let single = keys_here[0];
+    if (not(property_get(single, "returned"))) {
+      continue;
+    }
+    let only_key = property_get(single, "key");
     let f_name = function_path_to_name(file);
     let seen_names = property_get_or_null(atom_by_key, only_key);
     if (not(seen_names)) {
