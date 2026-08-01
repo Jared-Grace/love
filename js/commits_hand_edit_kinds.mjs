@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { integer_from_base_try } from "./integer_from_base_try.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { commit_edit_kind } from "./commit_edit_kind.mjs";
@@ -9,7 +10,6 @@ import { property_set } from "./property_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function commits_hand_edit_kinds(count_given) {
   "What the hand-made single-file edits to code actually were, counted by kind";
@@ -19,13 +19,11 @@ export async function commits_hand_edit_kinds(count_given) {
   let commits = await commits_ai_js_numstat(count);
   let single = [];
   for (let commit of commits) {
-    let subject = property_get(commit, "subject");
-    let by_hand = equal(subject, "ai");
+    let by_hand = property_equals(commit, "subject", "ai");
     if (not(by_hand)) {
       continue;
     }
-    let files = property_get(commit, "files");
-    let alone = equal(files, 1);
+    let alone = property_equals(commit, "files", 1);
     if (not(alone)) {
       continue;
     }
