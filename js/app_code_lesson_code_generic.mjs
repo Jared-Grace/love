@@ -101,11 +101,13 @@ export function app_code_lesson_code_generic(params) {
   };
   ("the unscramble (build-from-tokens) answer prompt is set inside the quizzes builder; a lesson may override it too");
   let unscramble_label = property_get_or(params, "unscramble_label", null);
+  let unscramble = property_get_or(params, "unscramble", true);
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get,
     forwards,
     backwards,
     unscramble_label,
+    unscramble,
   });
   let lesson = app_code_lesson_base(
     name_id,

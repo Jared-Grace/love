@@ -17,6 +17,7 @@ export async function function_auto_check(f_name) {
     let parsed = await function_parse_unaliased(unaliased);
     let ast = property_get(parsed, "ast");
     await js_auto_generic(ast, transforms);
+    js_unparse_parse(ast);
   } catch (e) {
     ok = false;
     error_message = e.message;
