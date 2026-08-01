@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_hub_children } from "./memory_hub_children.mjs";
 import { memory_folder } from "./memory_folder.mjs";
@@ -61,8 +62,7 @@ export async function memory_orphans() {
       return false;
     }
     let stem = text_suffix_without(name, ".md");
-    let is_declared = list_includes(declared, stem);
-    let n = not(is_declared);
+    let n = list_includes_not(declared, stem);
     return n;
   }
   let orphans = list_filter(names, is_orphan);
