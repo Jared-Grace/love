@@ -1,3 +1,4 @@
+import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -111,7 +112,7 @@ export async function app_shared_bible_read(context, verse_action) {
     " to save that passage",
   ]);
   let hash = html_hash_object_get();
-  let c = property_get_or(hash, "c", "");
+  let c = property_get_or(hash, app_shared_bible_chapter_hash_key(), "");
   let b = property_get_or(hash, "b", "");
   let ref = property_get_or(hash, "ref", "");
   let ref_line = text_replace(ref, "+", " ");
