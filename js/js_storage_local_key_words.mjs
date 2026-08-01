@@ -1,10 +1,9 @@
+import { js_storage_local_key_scan } from "./js_storage_local_key_scan.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
 export function js_storage_local_key_words(ast, seams) {
   "Every word this file writes into a key in somebody's browser storage, read off the calls that do the writing. Read-only, pure.";
@@ -25,10 +24,6 @@ export function js_storage_local_key_words(ast, seams) {
       list_add(found, word);
     }
   }
-  for (let seam of seams) {
-    js_visit_calls_named_nodes(ast, seam, collect);
-  }
-  let unique = list_unique(found);
-  unique.sort();
+  let unique = js_storage_local_key_scan(ast, seams, collect, found);
   return unique;
 }
