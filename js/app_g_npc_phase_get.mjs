@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { not } from "./not.mjs";
@@ -11,8 +12,11 @@ export function app_g_npc_phase_get(player) {
   if (needs_study) {
     return app_g_view_phase_study();
   }
-  let prayer = property_get(player, "prayer");
-  let conversation = property_get(prayer, app_g_conversation_key());
+  let conversation = property_path_get_2(
+    player,
+    "prayer",
+    app_g_conversation_key(),
+  );
   if (not(conversation)) {
     return app_g_view_phase_pray();
   }
