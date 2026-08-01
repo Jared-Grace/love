@@ -1,3 +1,4 @@
+import { js_hash_key_literals_cases_gate_run } from "./js_hash_key_literals_cases_gate_run.mjs";
 import { hash_key_literals_gate_run } from "./hash_key_literals_gate_run.mjs";
 import { path_pattern_covers_cases_gate_run } from "./path_pattern_covers_cases_gate_run.mjs";
 import { permission_decider_rule_gate_run } from "./permission_decider_rule_gate_run.mjs";
