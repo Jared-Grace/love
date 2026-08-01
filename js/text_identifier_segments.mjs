@@ -1,4 +1,4 @@
-import { equal } from "./equal.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { each } from "./each.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_identifier_char_is } from "./text_identifier_char_is.mjs";
@@ -19,8 +19,7 @@ export function text_identifier_segments(text) {
     let merged = false;
     if (not(e)) {
       let last = list_last(segments);
-      let left = property_get(last, "identifier");
-      let same = equal(left, identifier);
+      let same = property_equals(last, "identifier", identifier);
       if (same) {
         let t = property_get(last, "text");
         let combined = text_combine(t, character);
