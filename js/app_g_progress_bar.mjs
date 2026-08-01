@@ -14,9 +14,9 @@ import { multiply } from "./multiply.mjs";
 import { add_1 } from "./add_1.mjs";
 export function app_g_progress_bar(root, count, total, name) {
   ("a progress bar styled for g — dark-green fill (",
-    app_shared_button_background.name,
+    fn_name("app_shared_button_background"),
     ") on a pale-green track (",
-    app_shared_color_green_light.name,
+    fn_name("app_shared_color_green_light"),
     "), rounded, with a small '<Name> N out of M' caption — shown above study / sermon. mirrors ",
     fn_name("html_progress_bar"),
     "'s structure but with g's greens (that shared bar is used by 3 other apps with their own colors, so this is kept g-local rather than reworking the shared signature)");
