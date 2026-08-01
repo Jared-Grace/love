@@ -17,9 +17,9 @@ export async function memory_hook_check(tool_name, file_path) {
     let child = spawn("node", [".claude/hooks/memory_write_allow.mjs"], {
       shell: false,
     });
-    let stdout = "";
+    let printed = "";
     function on_stdout(data) {
-      stdout += data.toString();
+      printed += data.toString();
     }
     child.stdout.on("data", on_stdout);
     function on_error(err) {
@@ -29,7 +29,7 @@ export async function memory_hook_check(tool_name, file_path) {
     function on_close(code) {
       resolve({
         code,
-        stdout,
+        stdout: printed,
       });
     }
     child.on("close", on_close);
