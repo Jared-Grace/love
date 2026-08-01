@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
 import { html_data_set_object } from "./html_data_set_object.mjs";
@@ -21,8 +22,7 @@ export function app_replace_goals(context) {
   app_replace_button_home(root, context);
   let r = app_replace_rule_set_title(context);
   let rule_set_name = property_get(r, "rule_set_name");
-  let item = property_get(r, "rule_set");
-  let goals = property_get(item, "goals");
+  let goals = property_path_get_2(r, "rule_set", "goals");
   let completed_previous = true;
   let d = app_replace_rule_sets_data_initialize(context);
   function each_goal(goal, index) {
