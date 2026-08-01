@@ -1,12 +1,11 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 export async function functions_shadowing_operator() {
   "The hidings that the tooling itself will act on. Every hidden name is a bug";
   "waiting for somebody to read the wrong line, but these are worse in kind: the";
@@ -29,8 +28,7 @@ export async function functions_shadowing_operator() {
       return b;
     }
     let dangerous = list_filter(hidden, operator_is);
-    let none = list_empty_is(dangerous);
-    let any = not(none);
+    let any = list_empty_not_is(dangerous);
     if (any) {
       let finding = {
         name: f_name,
