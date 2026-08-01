@@ -8,7 +8,7 @@ import { list_includes } from "./list_includes.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export async function permission_rule_settings_write_is(rule) {
+export async function permission_rule_decider_write_is(rule) {
   arguments_assert(arguments, 1);
   ("whether one allow rule would let a tool CHANGE a file that holds Claude's own permission rules");
   ("this is the one grant that can widen itself. Everything else a rule approves is a thing that gets done; this one approves deciding what else gets done without asking, and any rule at all can be written into that file, including one granting a shell outright, which answers to nothing on the deny floor because that floor names particular commands rather than shapes. Two such rules once stood.");
