@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { error_is } from "./error_is.mjs";
+import { error_readable } from "./error_readable.mjs";
 export function error_json_replacer(key, value) {
   arguments_assert(arguments, 2);
   ("stands in front of every value on its way into json and hands back the words of anything thrown, so an error written down keeps what it said");
