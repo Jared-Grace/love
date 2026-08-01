@@ -46,8 +46,8 @@ export async function ebible_versions_english_downloadable_words_lookup() {
         let replaced = text_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
         let split = text_split_space(n);
-        function lambda5(s) {
-          let lower = text_lower_to(s);
+        function lambda5(s2) {
+          let lower = text_lower_to(s2);
           word_add(lower);
           let t = text_transform_lookup(lower, normalize);
           if (equal_not(t, lower)) {
