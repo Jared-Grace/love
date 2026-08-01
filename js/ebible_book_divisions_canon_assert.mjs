@@ -3,8 +3,6 @@ import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function ebible_book_divisions_canon_assert() {
@@ -18,8 +16,7 @@ export function ebible_book_divisions_canon_assert() {
       let codes = property_get(division, "book_codes");
       return codes;
     }
-    let per = list_map(divisions, division_codes);
-    let flat = list_concat_multiple(per);
+    let flat = list_map_concat_multiple(divisions, division_codes);
     return flat;
   }
   let grouped = list_map_concat_multiple(testaments, testament_codes);
