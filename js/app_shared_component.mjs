@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -12,8 +13,7 @@ import { html_button_wide } from "./html_button_wide.mjs";
 export async function app_shared_component(a_name, on_click, button_text) {
   let combined = await app_shared_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
-  let d = property_get(v, "d");
-  let code = property_get(d, "code");
+  let code = property_path_get_2(v, "d", "code");
   let code_assign = js_code_global_init();
   let list = [code_assign, code, combined];
   let joined = list_join_newline(list);
