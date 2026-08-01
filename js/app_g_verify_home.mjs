@@ -53,11 +53,11 @@ import { app_shared_button_list_centered } from "./app_shared_button_list_center
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
+  let v6 = app_g_verify_chapter_query_key();
+  let v7 = app_g_verify_chapter_storage_key();
   let chapter_code =
-    new URLSearchParams(location.search).get(
-      app_g_verify_chapter_query_key(),
-    ) ||
-    localStorage.getItem(app_g_verify_chapter_storage_key()) ||
+    new URLSearchParams(location.search).get(v6) ||
+    localStorage.getItem(v7) ||
     "1JN01";
   let book_code = chapter_code.slice(0, 3);
   let v2 = chapter_code.slice(3);
