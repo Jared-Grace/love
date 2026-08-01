@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { log } from "./log.mjs";
 import { js_identifier_is_if } from "./js_identifier_is_if.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_visit_function_nodes } from "./js_visit_function_nodes.mjs";
 export function js_visit_function_nodes_named(ast, lambda$v, name) {
@@ -11,8 +11,7 @@ export function js_visit_function_nodes_named(ast, lambda$v, name) {
       id,
     });
     function lambda3() {
-      let actual = property_get(id, "name");
-      let eq = equal(actual, name);
+      let eq = property_equals(id, "name", name);
       if (eq) {
         lambda$v(v);
       }
