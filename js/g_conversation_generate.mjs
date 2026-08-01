@@ -1,3 +1,7 @@
+import { list_copy } from "./list_copy.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
+import { property_set } from "./property_set.mjs";
+import { each_index } from "./each_index.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { g_struggles } from "./g_struggles.mjs";
@@ -67,7 +71,7 @@ export function g_conversation_generate(pronouns) {
       " trust You",
     ]),
   };
-  "the correct opener is decided HERE, once, when the conversation is generated: each turn receives a fixed `order` drawn from a shuffled sequence, and the runtime always asks for the lowest-ordered turn still unplayed. it used to be drawn fresh on every openers screen, so a player returning from a boundary faced a NEW correct answer each time — guessing then need never terminate, and an unlucky player hits a wall without ever learning that prayer is an option. the DISPLAY order stays the authored turns order, so a fixed correct answer is not a fixed button.";
+  ("the correct opener is decided HERE, once, when the conversation is generated: each turn receives a fixed `order` drawn from a shuffled sequence, and the runtime always asks for the lowest-ordered turn still unplayed. it used to be drawn fresh on every openers screen, so a player returning from a boundary faced a NEW correct answer each time — guessing then need never terminate, and an unlucky player hits a wall without ever learning that prayer is an option. the DISPLAY order stays the authored turns order, so a fixed correct answer is not a fixed button.");
   let turns = [gospel_turn, how_turn, believe_turn];
   let sequence = list_copy(turns);
   list_shuffle(sequence);
