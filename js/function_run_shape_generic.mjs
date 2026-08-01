@@ -1,16 +1,15 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_function_declaration_statements_doing } from "./js_function_declaration_statements_doing.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_function_marker_call_not_is } from "./js_function_marker_call_not_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
-import { less_than } from "./less_than.mjs";
 export async function function_run_shape_generic(f_name, size, fn_take) {
   arguments_assert(arguments, 3);
   ("What the named function does in a run of its working statements, with its own");
@@ -27,8 +26,7 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
   let declaration = property_get(parsed, "declaration");
   let doing = js_function_declaration_statements_doing(declaration);
   let working = list_filter(doing, js_function_marker_call_not_is);
-  let count = list_size(working);
-  let short_is = less_than(count, size);
+  let short_is = list_size_less_than_value(working, size);
   if (short_is) {
     let nothing = "";
     return nothing;
