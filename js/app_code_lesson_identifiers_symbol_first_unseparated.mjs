@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
@@ -11,7 +12,6 @@ import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
 import { app_code_lesson_same_message } from "./app_code_lesson_same_message.mjs";
@@ -34,8 +34,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let c = app_code_container_light_blue(root);
     let batch = property_get(r, "batch");
     let b = batch();
-    let first = list_first(b);
-    let question = property_get(first, "question");
+    let question = list_first_property(b, "question");
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
     let div3 = html_div(c);

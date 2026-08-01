@@ -1,7 +1,7 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
-import { list_first } from "./list_first.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 import { app_code_lesson_previous_set } from "./app_code_lesson_previous_set.mjs";
@@ -105,8 +105,7 @@ export function app_code_examples(context) {
           let previous = app_code_lesson_current(context);
           let batch = property_get(previous, "batch");
           let list = batch();
-          let first = list_first(list);
-          let quizzes = property_get(first, "quizzes");
+          let quizzes = list_first_property(list, "quizzes");
           let index_last = list_index_last(quizzes);
           app_code_quiz_index_set(context, index_last);
           await app_shared_screen_set(context, app_code_quiz);

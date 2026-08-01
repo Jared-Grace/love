@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
@@ -6,7 +7,6 @@ import { object_merge_set } from "./object_merge_set.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
-import { list_first } from "./list_first.mjs";
 import { reply_messages_matches } from "./reply_messages_matches.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
@@ -76,8 +76,7 @@ export async function app_message(context) {
             "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
           );
         } else {
-          let first = list_first(results);
-          let outputs = property_get(first, "outputs");
+          let outputs = list_first_property(results, "outputs");
           html_div_text_multiple(right, outputs);
         }
       }
