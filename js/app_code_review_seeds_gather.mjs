@@ -1,5 +1,5 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_review_seed_from_items } from "./app_code_review_seed_from_items.mjs";
 import { range_map } from "./range_map.mjs";
@@ -11,8 +11,7 @@ export function app_code_review_seeds_gather(lessons) {
     let lesson_id = property_get(lesson, "id");
     let batch = property_get(lesson, "batch");
     let items = batch();
-    let first = list_first(items);
-    let kinds = property_get(first, "exercises");
+    let kinds = list_first_property(items, "exercises");
     let kind_count = list_size(kinds);
     function each_kind(kind_index) {
       let seed = app_code_review_seed_from_items(lesson_id, kind_index, items);
