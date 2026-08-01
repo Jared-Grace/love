@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_book_division_uncategorized } from "./ebible_book_division_uncategorized.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -12,8 +13,6 @@ import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 export function app_bible_books_matches(query, books) {
   "filter the whole Old-and-New-Testament to section to books tree down to what matches the search text, dropping any section or testament left with nothing, so the renderer just draws what comes back";
   let q = text_lower_to(query);
@@ -25,8 +24,7 @@ export function app_bible_books_matches(query, books) {
   }
   function has_any(item, key) {
     let list = property_get(item, key);
-    let empty = list_empty_is(list);
-    let any = not(empty);
+    let any = list_empty_not_is(list);
     return any;
   }
   function division_matches(division) {
@@ -78,8 +76,7 @@ export function app_bible_books_matches(query, books) {
     return unknown;
   }
   let leftovers = list_filter(matching_books, is_uncategorized);
-  let empty = list_empty_is(leftovers);
-  let has_leftovers = not(empty);
+  let has_leftovers = list_empty_not_is(leftovers);
   if (has_leftovers) {
     let uncategorized = ebible_book_division_uncategorized();
     let section_name = property_get(uncategorized, "name");
