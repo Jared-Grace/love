@@ -1,3 +1,4 @@
+import { text_ends_with_not } from "./text_ends_with_not.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { memory_index_name } from "./memory_index_name.mjs";
 import { memory_hub_children } from "./memory_hub_children.mjs";
@@ -5,8 +6,6 @@ import { memory_folder } from "./memory_folder.mjs";
 import { folder_read } from "./folder_read.mjs";
 import { file_read } from "./file_read.mjs";
 import { path_join } from "./path_join.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
@@ -20,8 +19,7 @@ export async function memory_orphans() {
   let index_text = await file_read(index_path);
   let ignores = [index_name];
   function is_indexed(name) {
-    let is_md = text_ends_with(name, ".md");
-    let is_not_md = not(is_md);
+    let is_not_md = text_ends_with_not(name, ".md");
     if (is_not_md) {
       return false;
     }
@@ -48,8 +46,7 @@ export async function memory_orphans() {
     declared = declared.concat(children);
   }
   function is_orphan(name) {
-    let is_md = text_ends_with(name, ".md");
-    let is_not_md = not(is_md);
+    let is_not_md = text_ends_with_not(name, ".md");
     if (is_not_md) {
       return false;
     }
