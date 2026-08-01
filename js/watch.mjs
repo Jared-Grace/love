@@ -42,7 +42,7 @@ export async function watch() {
           }
         }
       }
-      log(watch.name, {
+      log(fn_name("watch"), {
         path,
       });
       try {
