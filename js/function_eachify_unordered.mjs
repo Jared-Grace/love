@@ -15,7 +15,7 @@ export async function function_eachify_unordered(f_name) {
       async_is,
       text_combine_multiple([
         "Unordering only reshuffles concurrent async calls, so ",
-        function_eachify_unordered.name,
+        fn_name("function_eachify_unordered"),
         " needs an async function. Do you want to use ",
         fn_name("function_eachify"),
         " instead? Or should the function be async?",
