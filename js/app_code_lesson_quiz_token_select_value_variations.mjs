@@ -1,4 +1,5 @@
-import { list_last } from "./list_last.mjs";
+import { list_last_is } from "./list_last_is.mjs";
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_size } from "./list_size.mjs";
@@ -10,15 +11,12 @@ import { null_is } from "./null_is.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function app_code_lesson_quiz_token_select_value_variations(code) {
   "Every rearrangement of the SAME tiles that computes the SAME value - so the unscramble accepts any valid ordering, not just the one it was written in. `1 < 3 - 1` and `1 - 1 < 3` are built from the identical tiles and both are true, so both are right. The commutative-swap variations only move sides of a commutative node; this moves any tile anywhere. Every ordering is the same multiset of tiles, so it can never accept an answer the learner could not have built, and a wrong VALUE is rejected by the value check.";
   "Bounded by permuting all tiles (n!) and evaluating each: cheap because these are flat 3-operand expressions (5 tiles, 120 orderings), most of which do not parse and are dropped. Above a small tile cap it declines rather than blow the factorial up, and a code that does not itself evaluate (an identifier, a call, anything with side effects) yields no target and so no variations.";
   let tokens = app_code_quiz_tokens(code);
   let semicolon = ";";
-  let last = list_last(tokens);
-  let has_semicolon = equal(last, semicolon);
+  let has_semicolon = list_last_is(tokens, semicolon);
   if (has_semicolon) {
     list_remove_last(tokens);
   }
@@ -61,7 +59,6 @@ export function app_code_lesson_quiz_token_select_value_variations(code) {
     let joined = list_join(perm, separator);
     return joined;
   }
-  let codes = list_map(good, join_code);
-  let unique = list_unique(codes);
+  let unique = list_map_unique(good, join_code);
   return unique;
 }
