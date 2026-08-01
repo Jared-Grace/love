@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -32,7 +33,7 @@ export function js_hash_object_names(ast) {
       return;
     }
     let called = property_get(callee, "name");
-    let reads = equal(called, "html_hash_object_get");
+    let reads = equal(called, fn_name("html_hash_object_get"));
     if (not(reads)) {
       return;
     }
@@ -55,7 +56,7 @@ export function js_hash_object_names(ast) {
     }
     let called2 = property_get(callee2, "name");
     let changes = list_includes(
-      ["html_hash_transform", "html_hash_transform_reload"],
+      [fn_name("html_hash_transform"), fn_name("html_hash_transform_reload")],
       called2,
     );
     if (not(changes)) {
