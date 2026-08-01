@@ -17,8 +17,8 @@ export async function functions_callers_inside_dependencies(
     let callers = await data_identifiers_search_names(name);
     function caller_inside_is(caller) {
       let itself = equal(caller, name);
-      let inside = list_includes(reachable_names, caller);
-      let b = inside && not(itself);
+      let inside_inner = list_includes(reachable_names, caller);
+      let b = inside_inner && not(itself);
       return b;
     }
     let inside = list_filter(callers, caller_inside_is);
