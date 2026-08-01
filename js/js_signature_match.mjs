@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -50,8 +51,7 @@ export function js_signature_match(pattern, target, params, binding) {
   let target_name = property_get(target, "name");
   let already_bound = property_exists(binding_so_far, pattern_name);
   if (already_bound) {
-    let current = property_get(binding_so_far, pattern_name);
-    let consistent = equal(current, target_name);
+    let consistent = property_equals(binding_so_far, pattern_name, target_name);
     if (not(consistent)) {
       return null;
     }
