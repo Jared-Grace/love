@@ -1,6 +1,6 @@
+import { property_starts_with } from "./property_starts_with.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_find } from "./list_find.mjs";
 import { js_node_to_block_item } from "./js_node_to_block_item.mjs";
 export function js_find_string_starting_with(ast, prefix) {
@@ -13,8 +13,7 @@ export function js_find_string_starting_with(ast, prefix) {
   "means in a way a number never will.";
   let results = js_strings_generic(ast);
   function starting_is(result) {
-    let value = property_get(result, "value");
-    let starts_is = text_starts_with(value, prefix);
+    let starts_is = property_starts_with(result, "value", prefix);
     return starts_is;
   }
   let only = list_find(results, starting_is);
