@@ -1,10 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { g_time_current_index } from "./g_time_current_index.mjs";
 import { app_g_sky_pill_style } from "./app_g_sky_pill_style.mjs";
 import { global_function_property_exists } from "./global_function_property_exists.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 export async function app_g_sky_choices_highlight() {
@@ -24,8 +24,7 @@ export async function app_g_sky_choices_highlight() {
   let current = g_time_current_index(g);
   function restyle(pill) {
     let button = property_get(pill, "button");
-    let index = property_get(pill, "index");
-    let active = equal(index, current);
+    let active = property_equals(pill, "index", current);
     app_g_sky_pill_style(button, active);
   }
   each(pills, restyle);
