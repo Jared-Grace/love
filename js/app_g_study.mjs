@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { property_set } from "./property_set.mjs";
@@ -75,8 +76,7 @@ export function app_g_study(player, overlay, close) {
       function refresh() {
         html_clear(div);
         let v = app_g_wrong(passage, passages, property);
-        let passage_wrong = property_get(v, "passage_wrong");
-        let sermon_wrong = property_get(passage_wrong, property);
+        let sermon_wrong = property_path_get_2(v, "passage_wrong", property);
         let sermon_wrong_list = app_g_openai_split(sermon_wrong);
         function correct() {
           let item = list_get(sermon_correct_list, sermon_index);
