@@ -1,3 +1,7 @@
+import { text_dispatcher_command_names_cases } from "./text_dispatcher_command_names_cases.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_dispatcher_command_names } from "./text_dispatcher_command_names.mjs";
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function text_dispatcher_command_names_gate_run() {
   "QA gate: each written-down piece of writing yields the commands the corpus says";
   "it spells out, and no others.";

@@ -17,6 +17,9 @@ export async function qa_tree_folder_freeze(here, folder, skipped) {
   await qa_tree_files_recopy(here, folder, moved);
   let unsettled = await qa_tree_written_since(here, skipped, settling);
   qa_tree_settled_print(moved, unsettled);
-  let r = { moved, unsettled };
+  let r = {
+    moved,
+    unsettled,
+  };
   return r;
 }

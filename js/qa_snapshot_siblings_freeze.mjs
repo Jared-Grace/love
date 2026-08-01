@@ -7,7 +7,7 @@ import { path_join } from "./path_join.mjs";
 import { qa_tree_names_skipped } from "./qa_tree_names_skipped.mjs";
 import { qa_tree_folder_freeze } from "./qa_tree_folder_freeze.mjs";
 import { qa_snapshot_link } from "./qa_snapshot_link.mjs";
-import { folder_exists } from "./folder_exists.mjs";
+import { file_exists } from "./file_exists.mjs";
 import { equal } from "./equal.mjs";
 export async function qa_snapshot_siblings_freeze(repos) {
   arguments_assert(arguments, 1);
@@ -29,7 +29,7 @@ export async function qa_snapshot_siblings_freeze(repos) {
     let frozen = path_join([repos, name]);
     await qa_tree_folder_freeze(live, frozen, skipped);
     let installed = path_join([live, "node_modules"]);
-    let there = await folder_exists(installed);
+    let there = await file_exists(installed);
     if (there) {
       let link = path_join([frozen, "node_modules"]);
       await qa_snapshot_link(installed, link);
