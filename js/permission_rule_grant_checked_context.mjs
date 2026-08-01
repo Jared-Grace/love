@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_shared_path } from "./permission_settings_shared_path.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -46,8 +47,7 @@ export async function permission_rule_grant_checked_context(
   ("the repo-shared settings file rather than the per-machine one, so peers and the gates see the grant");
   let settings_path = permission_settings_shared_path();
   let settings = await file_read_json(settings_path);
-  let permissions = property_get(settings, "permissions");
-  let allow = property_get(permissions, "allow");
+  let allow = property_path_get_2(settings, "permissions", "allow");
   list_add(allow, rule);
   ("the width this file is already kept at — rewriting it at another turns a one-line addition into a whole-file diff");
   let spaces = 2;
