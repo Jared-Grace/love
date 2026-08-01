@@ -85,8 +85,6 @@ export function permission_rules_other() {
     "Bash(rm -f public/dev/sandbox.js public/dev/calendar.js)",
     "Bash(rm -f public/dev/sandbox.js)",
     "Bash(rm -f public/dev/calendar.js)",
-    "Edit(.claude/hooks/claude_edit_claim.mjs)",
-    "Edit(.claude/hooks/memory_write_allow.mjs)",
   ];
   return texts;
 }
