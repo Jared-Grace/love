@@ -1,3 +1,4 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
@@ -5,14 +6,12 @@ import { function_params_get } from "./function_params_get.mjs";
 import { function_params_plain } from "./function_params_plain.mjs";
 import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 export async function functions_selects_unsafe_params() {
   "Every transform that can be handed a line of written code, and so every one";
   "that carries arbitrary text through a command already approved.";
@@ -27,8 +26,7 @@ export async function functions_selects_unsafe_params() {
   let offenders = [];
   for (let name of love) {
     let params = await function_params_get(name);
-    let count = list_size(params);
-    let two = greater_than(count, 1);
+    let two = list_multiple_is(params);
     if (two) {
       let second = list_get(params, 1);
       let second_name = second.name;
