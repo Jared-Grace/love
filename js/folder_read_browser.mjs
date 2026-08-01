@@ -27,11 +27,11 @@ export async function folder_read_browser(path_folder) {
       return first;
     }
     let unique = list_map_unique(mapped, lambda);
-    let r = {
+    let r2 = {
       unique,
       prefix,
       filtered,
     };
-    return r;
+    return r2;
   }
 }
