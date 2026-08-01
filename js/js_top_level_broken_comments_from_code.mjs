@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,8 +11,11 @@ export function js_top_level_broken_comments_from_code(code) {
   let body = property_get(ast, "body");
   let broken = [];
   for (let statement of body) {
-    let type = property_get(statement, "type");
-    let expression_is = equal(type, "ExpressionStatement");
+    let expression_is = property_equals(
+      statement,
+      "type",
+      "ExpressionStatement",
+    );
     if (expression_is) {
       let kind = property_path_get_2(statement, "expression", "type");
       let live_is = equal(kind, "TemplateLiteral");
