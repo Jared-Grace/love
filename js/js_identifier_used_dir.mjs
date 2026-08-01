@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_file_name } from "./js_file_name.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,8 +18,7 @@ export async function js_identifier_used_dir(dir, name) {
   let files = await folder_read_files(dir);
   let name_file = js_file_name(name);
   function is_other(file) {
-    let is_self = equal(file, name_file);
-    let n = not(is_self);
+    let n = equal_not(file, name_file);
     return n;
   }
   let others = list_filter(files, is_other);
