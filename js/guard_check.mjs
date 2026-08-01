@@ -6,15 +6,17 @@ export async function guard_check(command) {
   let spawn = property_get(cp, "spawn");
   let payload = JSON.stringify({
     tool_name: "Bash",
-    tool_input: { command },
+    tool_input: {
+      command,
+    },
   });
   let result = await new Promise(function lambda(resolve, reject) {
     let child = spawn("python3", [".claude/hooks/bash-command-guard.py"], {
       shell: false,
     });
-    let stdout = "";
+    let printed = "";
     function on_stdout(data) {
-      stdout += data.toString();
+      printed += data.toString();
     }
     child.stdout.on("data", on_stdout);
     function on_error(err) {
@@ -22,7 +24,10 @@ export async function guard_check(command) {
     }
     child.on("error", on_error);
     function on_close(code) {
-      resolve({ code, stdout });
+      resolve({
+        code,
+        stdout: printed,
+      });
     }
     child.on("close", on_close);
     child.stdin.write(payload);
@@ -30,7 +35,9 @@ export async function guard_check(command) {
   });
   let stdout = property_get(result, "stdout");
   if (stdout.trim() === "") {
-    return { decision: "silent" };
+    return {
+      decision: "silent",
+    };
   }
   let parsed = JSON.parse(stdout);
   let hook = property_get(parsed, "hookSpecificOutput");
