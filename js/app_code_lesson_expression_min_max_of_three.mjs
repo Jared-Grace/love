@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -8,8 +9,6 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
@@ -69,8 +68,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     let nums = text_integers(question);
     function not_answer(n) {
       let tn = text_to(n);
-      let same = equal(tn, answer);
-      let diff = not(same);
+      let diff = equal_not(tn, answer);
       return diff;
     }
     let others = list_filter(nums, not_answer);
