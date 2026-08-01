@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { g_sermon_groups_check } from "./g_sermon_groups_check.mjs";
 import { property_get } from "./property_get.mjs";
@@ -37,8 +38,7 @@ export async function g_sermon_groups_backup_multiple(chapters_comma) {
     return b;
   }
   function refused_is(result) {
-    let uploaded = property_get(result, "uploaded");
-    let b = not(uploaded);
+    let b = property_not(result, "uploaded");
     return b;
   }
   let sent_results = list_filter(results, uploaded_is);
