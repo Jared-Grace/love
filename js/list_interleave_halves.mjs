@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -13,7 +14,7 @@ export function list_interleave_halves(list) {
   function lambda2(la) {
     function lambda(item, index) {
       la(item);
-      let paired = index < second_size;
+      let paired = less_than(index, second_size);
       if (paired) {
         let other = list_get(second, index);
         la(other);
