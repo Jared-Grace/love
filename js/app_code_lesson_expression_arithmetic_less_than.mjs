@@ -201,10 +201,10 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     let max = subtract(value, 1);
     let below_value = integer_random(1, max);
     let candidates = [below_value, above_value, value];
-    function yields(other) {
+    function yields(other_number) {
       "true when placing this other number against the arithmetic value makes the comparison give the answer we want; equal is last in the list so strict < and > pick a strict number and only === / !== reach the equal case";
-      let side_left = ternary(arithmetic_left, value, other);
-      let side_right = ternary(arithmetic_left, other, value);
+      let side_left = ternary(arithmetic_left, value, other_number);
+      let side_right = ternary(arithmetic_left, other_number, value);
       let result = comparison_fn(side_left, side_right);
       let same = equal(result, want_true);
       return same;
