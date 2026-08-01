@@ -19,13 +19,13 @@ export function html_overlay(container, z_index) {
   };
   html_style_assign(overlay, s);
   function update() {
-    let s = {
+    let s2 = {
       top: text_combine(element.scrollTop, "px"),
       left: text_combine(element.scrollLeft, "px"),
       width: text_combine(element.clientWidth, "px"),
       height: text_combine(element.clientHeight, "px"),
     };
-    html_style_assign(overlay, s);
+    html_style_assign(overlay, s2);
   }
   update();
   let remove_scroll = html_on_scroll(container, update);
