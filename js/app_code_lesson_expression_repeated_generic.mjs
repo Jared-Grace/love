@@ -1,3 +1,4 @@
+import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
@@ -68,8 +69,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let t = text_to(left);
       return t;
     }
-    let list = range(count);
-    let repeats = list_map(list, left_text);
+    let repeats = range_map(count, left_text);
     let separator = text_combine_multiple([" ", expand_symbol, " "]);
     let expanded = list_join(repeats, separator);
     return expanded;
