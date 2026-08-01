@@ -1,11 +1,10 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
@@ -38,15 +37,13 @@ export async function literals_frozen_gate_run() {
     let is = property_or_null(now, f_name);
     let different = not_equal(was, is);
     if (different) {
-      let b2 = property_exists(recorded, f_name);
-      let unheard = not(b2);
+      let unheard = property_exists_not(recorded, f_name);
       if (unheard) {
         list_add(fresh, f_name);
         continue;
       }
       ("A name the code no longer has is the mirror of the one above and just as harmless on its own: the name moved and the value stood still, where the danger is the value moving and the name standing still. Renaming a frozen constant makes BOTH at once - the old name leaves and the new one arrives carrying the same value - and until this the leaving half was read as a value that had vanished, which is the loud branch. So renaming two of them cost the heavy command twice for a change that published nothing new.");
-      let b3 = property_exists(now, f_name);
-      let departed = not(b3);
+      let departed = property_exists_not(now, f_name);
       if (departed) {
         list_add(gone, f_name);
         continue;
