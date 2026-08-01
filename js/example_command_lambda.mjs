@@ -74,7 +74,7 @@ export async function example_command_lambda(f_name, args, e) {
     let lambda4 = example_auto_lambda();
     return lambda4;
   }
-  if (equal(f_name, js_statement_if_test_set.name)) {
+  if (equal(f_name, fn_name("js_statement_if_test_set"))) {
     let lambda5 = example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
@@ -82,7 +82,7 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda5;
   }
-  if (equal(f_name, js_return_argument_set.name)) {
+  if (equal(f_name, fn_name("js_return_argument_set"))) {
     let lambda6 = example_slot_expression_set_lambda(
       "ReturnStatement",
       js_return_argument_set,
@@ -111,7 +111,7 @@ export async function example_command_lambda(f_name, args, e) {
   ("anything a register lists. A whole-file pass has no address at all, so it needs");
   ("no branch either: it leaves by the last return, which reads the name as the");
   ("whole specification.");
-  if (equal(f_name, js_block_body_add_code.name)) {
+  if (equal(f_name, fn_name("js_block_body_add_code"))) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -120,7 +120,7 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda11;
   }
-  if (equal(f_name, js_block_body_add_code_first.name)) {
+  if (equal(f_name, fn_name("js_block_body_add_code_first"))) {
     let lambda12 = example_block_body_add_lambda(
       args[0],
       args[1],
