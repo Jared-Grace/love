@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { equal } from "./equal.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -17,8 +18,7 @@ export function js_identifier_nodes_bound_by(root, name, binder) {
       if (not(identifier)) {
         return;
       }
-      let left = property_get(node, "name");
-      let named = equal(left, name);
+      let named = property_equals(node, "name", name);
       if (not(named)) {
         return;
       }
