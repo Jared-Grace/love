@@ -16,11 +16,11 @@ export async function app_supper_verses_get(ebible_folder) {
         let destination =
           app_supper_verses_get_upload_destination(ebible_folder);
         let project_url = firebase_storage_url_project_jg();
-        let v = await firebase_storage_download_json_decompress_cache(
+        let v2 = await firebase_storage_download_json_decompress_cache(
           project_url,
           destination,
         );
-        return v;
+        return v2;
       }
       let v = await catch_null_async(download);
       let missing = null_is(v);
