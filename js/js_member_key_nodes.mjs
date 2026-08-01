@@ -1,7 +1,6 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { not } from "./not.mjs";
 export function js_member_key_nodes(ast) {
   "Every name that is the key of something looked up on something else - the word after the dot. It reads like a name and is not one: nothing else can be put in its place and mean the same, and no scope ever binds it.";
@@ -12,7 +11,6 @@ export function js_member_key_nodes(ast) {
     let written_after_a_dot = not(computed);
     return written_after_a_dot;
   }
-  let fixed = list_filter(members, fixed_is);
-  let keys = list_map_property(fixed, "property");
+  let keys = list_filter_map_property(members, fixed_is, "property");
   return keys;
 }
