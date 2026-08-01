@@ -19,7 +19,7 @@ export function qa_gates_read() {
         " - repair it with ",
         fn_name("file_imports_repair"),
         " on js/",
-        qa_gates.name,
+        fn_name("qa_gates"),
         ".mjs, then run the gate again",
       ]),
     ]);
