@@ -1,3 +1,4 @@
+import { js_declare_assign_null_cases_gate_run } from "./js_declare_assign_null_cases_gate_run.mjs";
 import { functions_head_duplicates_gate_run } from "./functions_head_duplicates_gate_run.mjs";
 import { literals_frozen_storage_gate_run } from "./literals_frozen_storage_gate_run.mjs";
 import { functions_tail_duplicates_gate_run } from "./functions_tail_duplicates_gate_run.mjs";
@@ -132,6 +133,7 @@ export function qa_gates() {
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
     js_while_frozen_cases_gate_run,
+    js_declare_assign_null_cases_gate_run,
     functions_while_frozen_gate_run,
     functions_self_call_gate_run,
     js_operator_targets_leaf_gate_run,
