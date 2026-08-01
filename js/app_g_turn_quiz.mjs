@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
@@ -15,9 +16,9 @@ export function app_g_turn_quiz(
   discern,
   leave,
 ) {
-  ("render a quiz turn: the NPC voices a need/objection, then the player's choice area (light green) holds a prompt + two SHUFFLED gold Scripture choices + the parting line + a pray-for-discernment button that reveals the correct one. build_correct/build_wrong each take the container and return their passage button.\n\nthe parting line (",
-    app_g_button_conversation_end.name,
-    ", running `leave`) is one of the CHOICES in the box, below the two passages and above the discernment prayer — the prompt asks what you would like to SAY, and saying goodbye is an answer to that. every caller used to append it to the overlay under the box instead, so this places it once for all of them.");
+  ("render a quiz turn: the NPC voices a need/objection, then the player's choice area (light green) holds a prompt + two SHUFFLED gold Scripture choices + a pray-for-discernment button that reveals the correct one + the parting line. build_correct/build_wrong each take the container and return their passage button.\n\nthe parting line (",
+    fn_name("app_g_button_conversation_end"),
+    ", running `leave`) is one of the CHOICES in the box, placed LAST of everything in it — the prompt asks what you would like to SAY, and saying goodbye is an answer to that, but it is the answer you reach for once none of the passages is what you want. every caller used to append it to the overlay under the box instead, so this places it once for all of them.");
   app_g_npc_says(npc, overlay, npc_text);
   let container = app_g_container_player(overlay);
   app_g_p_text(container, prompt);
@@ -29,6 +30,6 @@ export function app_g_turn_quiz(
     build_wrong(container);
   }
   invoke_multiple_shuffle_2(place_correct, place_wrong);
-  app_g_button_conversation_end(container, leave);
   app_g_pray_discern(container, correct, app_g_reveal_scripture, discern);
+  app_g_button_conversation_end(container, leave);
 }
