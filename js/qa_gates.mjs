@@ -1,3 +1,4 @@
+import { js_dot_name_object_name_cases_gate_run } from "./js_dot_name_object_name_cases_gate_run.mjs";
 import { storage_key_seams_gate_run } from "./storage_key_seams_gate_run.mjs";
 import { storage_local_key_names_gate_run } from "./storage_local_key_names_gate_run.mjs";
 import { text_dispatcher_command_names_gate_run } from "./text_dispatcher_command_names_gate_run.mjs";
