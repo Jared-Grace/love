@@ -1,6 +1,6 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { functions_fn_name_literals_unresolved } from "./functions_fn_name_literals_unresolved.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function fn_name_literals_gate_run() {
   "QA gate: every spelled function name in the code names a function that exists. Spelling";
@@ -11,8 +11,7 @@ export async function fn_name_literals_gate_run() {
   let offenders = await functions_fn_name_literals_unresolved();
   for (let offender of offenders) {
     let name = property_get(offender, "name");
-    let unresolved = property_get(offender, "unresolved");
-    let joined = list_join_comma(unresolved);
+    let joined = property_list_join_comma(offender, "unresolved");
     console.log("UNRESOLVED  " + name + "  -> " + joined);
   }
   console.log("\noffenders " + offenders.length);
