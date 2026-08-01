@@ -1,8 +1,8 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_add_call_try } from "./js_list_add_call_try.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_is } from "./list_is.mjs";
 import { not } from "./not.mjs";
 import { js_list_add_run_start_is } from "./js_list_add_run_start_is.mjs";
@@ -19,8 +19,7 @@ export function js_list_add_combine(ast) {
     if (null_is(add_call)) {
       return;
     }
-    let stack = property_get(v, "stack");
-    let e = list_get_end_1(stack);
+    let e = property_list_get_end_1(v, "stack");
     let l = list_is(e);
     if (not(l)) {
       return;

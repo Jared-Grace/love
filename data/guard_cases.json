@@ -171,6 +171,13 @@
     { "command": "find . -exec rm {} \\;", "decision": "ask", "why": "-exec running an untrusted verb" },
     { "command": "find . -name x -delete", "decision": "ask", "why": "-delete is destructive without any exec" },
 
+    { "command": "sort js/not.mjs", "decision": "allow", "why": "sort reading a file is what the grant was for" },
+    { "command": "sort -o .claude/settings.json js/not.mjs", "decision": "ask", "why": "-o writes a file with no redirection, so nothing else in the guard sees it - here over the file that decides what is auto-approved" },
+    { "command": "sort --output=x.txt js/not.mjs", "decision": "ask", "why": "the long form with an attached value writes just the same" },
+    { "command": "uniq -c js/not.mjs", "decision": "allow", "why": "one operand is the input, and reading it is the whole point of the grant" },
+    { "command": "uniq -f 2 js/not.mjs", "decision": "allow", "why": "-f takes a value, so the value must not be counted as a second operand" },
+    { "command": "uniq js/not.mjs .claude/settings.json", "decision": "ask", "why": "uniq's second operand is an OUTPUT file, so this writes with no flag saying so" },
+
     { "command": "sed -n 's/a/b/' f.txt", "decision": "allow", "why": "the accepted sed shape: optional -n, one script, then filenames" },
     { "command": "sed 's/a/b/' f.txt", "decision": "allow", "why": "bare positional script is the other accepted form" },
     { "command": "sed -i 's/a/b/' f.txt", "decision": "silent", "why": "-i edits in place, outside the accepted shape" },
