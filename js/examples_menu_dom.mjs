@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { html_text_align } from "./html_text_align.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
@@ -15,7 +16,6 @@ import { add_1 } from "./add_1.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { examples_groups } from "./examples_groups.mjs";
 import { app_shared_text_category } from "./app_shared_text_category.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { equal } from "./equal.mjs";
@@ -48,8 +48,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_margin(header, "0.75rem 0 0.35rem");
   }
   function example_button(index) {
-    let object = list_get(examples, index);
-    let title = property_get(object, "title");
+    let title = list_get_property(examples, index, "title");
     let a = add_1(index);
     let label = text_combine_multiple([a, ". ", title]);
     function on_click() {
@@ -62,8 +61,7 @@ export function examples_menu_dom(parent, examples, on_select) {
   function family_at(index) {
     "family is attached to each example at build time (see the corpus reader), so the client";
     "reads a plain string here and never pulls the heavy real transforms into the bundle";
-    let example = list_get(examples, index);
-    let family = property_get(example, "family");
+    let family = list_get_property(examples, index, "family");
     return family;
   }
   function render_segment(name, start, size) {
