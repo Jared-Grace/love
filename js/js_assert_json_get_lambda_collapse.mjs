@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { list_get } from "./list_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { each } from "./each.mjs";
 import { and } from "./and.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
@@ -137,8 +137,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       let same = equal(one, record_name);
       return same;
     }
-    let times = list_filter(bound, named);
-    let left4 = list_size(times);
+    let left4 = list_filter_size(bound, named);
     let once_is = equal(left4, 1);
     return once_is;
   }
