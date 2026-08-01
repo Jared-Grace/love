@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
@@ -52,8 +51,7 @@ export async function function_fold_everywhere(x_name) {
   async function fold_into(f_name) {
     let before = await function_parse_declaration_js_unparse(f_name);
     let after = await function_fold(x_name, f_name);
-    let same = equal(before, after);
-    let changed = not(same);
+    let changed = equal_not(before, after);
     let outcome = {
       f_name,
       changed,
