@@ -30,10 +30,10 @@ export async function command_line_generic(command, extra) {
       shell: false,
     };
     let child = spawn(cmd, args, options);
-    let stdout = "";
+    let printed = "";
     let stderr = "";
     function lambda(data) {
-      stdout += data.toString();
+      printed += data.toString();
     }
     child.stdout.on("data", lambda);
     function lambda2(data) {
@@ -53,7 +53,7 @@ export async function command_line_generic(command, extra) {
               "Command exited with code ",
               code,
               "\n\nSTDOUT:\n",
-              stdout,
+              printed,
               "\n\nSTDERR:\n",
               stderr,
             ]),
@@ -62,13 +62,13 @@ export async function command_line_generic(command, extra) {
         if (false) {
           await file_temp_json_open({
             code,
-            stdout,
+            stdout: printed,
             stderr,
           });
         }
       } else {
         resolve({
-          stdout,
+          stdout: printed,
         });
       }
     }
