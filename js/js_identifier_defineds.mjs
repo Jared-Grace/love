@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
@@ -22,8 +23,7 @@ export function js_identifier_defineds(v) {
   function lambda4(la) {
     let e = list_get_end_1(stack);
     if (js_node_type_is(e, "Property")) {
-      let node = property_get(v, "node");
-      let value = property_get(node, "name");
+      let value = property_path_get_2(v, "node", "name");
       la([value]);
     }
     function_type_add(e, "FunctionExpression");
