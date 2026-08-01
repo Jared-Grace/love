@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_from } from "./property_from.mjs";
 import { repos_paths_names_map_unordered_combine } from "./repos_paths_names_map_unordered_combine.mjs";
 import { list_single } from "./list_single.mjs";
@@ -20,8 +21,7 @@ export async function function_name_to_path_search(f_name) {
   }
   let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
-    let mapped = property_get(m, "mapped");
-    let exists2 = property_get(mapped, "exists");
+    let exists2 = property_path_get_2(m, "mapped", "exists");
     let ti = true_is(exists2);
     return ti;
   }
