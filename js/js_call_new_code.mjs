@@ -1,3 +1,4 @@
+import { list_skip } from "./list_skip.mjs";
 import { js_function_declaration } from "./js_function_declaration.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { each_async } from "./each_async.mjs";
@@ -7,8 +8,6 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_function_declaration_param_add } from "./js_function_declaration_param_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_split } from "./text_split.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
@@ -26,8 +25,7 @@ export async function js_call_new_code(f_name_call, ast) {
     let lambda = "lambda";
     if (list_first(split) === lambda) {
       let skip_count = 1;
-      let b = list_size(split);
-      let remaining = list_slice(split, skip_count, b);
+      let remaining = list_skip(split, skip_count);
       let lamda_name = await js_identifier_unique(existing, lambda);
       let declaration_lambda = js_function_declaration(declaration, lamda_name);
       async function lambda2(p) {
