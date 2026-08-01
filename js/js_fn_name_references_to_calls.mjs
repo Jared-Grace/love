@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
@@ -23,8 +24,7 @@ export async function js_fn_name_references_to_calls(ast) {
       return;
     }
     let object = property_get(node, "object");
-    let object_type = property_get(object, "type");
-    let object_is_identifier = equal(object_type, "Identifier");
+    let object_is_identifier = property_equals(object, "type", "Identifier");
     if (not(object_is_identifier)) {
       return;
     }
