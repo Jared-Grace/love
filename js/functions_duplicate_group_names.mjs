@@ -1,6 +1,5 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { list_map } from "./list_map.mjs";
 export function functions_duplicate_group_names(groups) {
   arguments_assert(arguments, 1);
@@ -8,8 +7,7 @@ export function functions_duplicate_group_names(groups) {
   ("the word is the group's own members joined, because that is the only thing about a group that stays put - the shared run itself is code, and reformatting it would read as a new offence while nothing had changed");
   ("so collapsing a group makes its word disappear rather than change, which is what the record's other tooth is watching for");
   function group_name(group) {
-    let names = property_get(group, "names");
-    let joined = list_join_comma(names);
+    let joined = property_list_join_comma(group, "names");
     return joined;
   }
   let named = list_map(groups, group_name);
