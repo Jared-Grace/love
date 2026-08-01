@@ -113,8 +113,8 @@ export function app_a_function_node(a) {
       function lambda20() {
         app_a_body(node, parent, a, true);
       }
-      let r = app_a_braces_wrap(parent, lambda20);
-      return r;
+      let r2 = app_a_braces_wrap(parent, lambda20);
+      return r2;
     },
     ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
