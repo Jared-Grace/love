@@ -206,7 +206,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return code;
   }
   function refill() {
-    "the eight comparisons for one screen, spanning + - * / ** on both sides of the < and both answers; the first two are the demo pair (one true, one false, two different operators); the right side is emphasised because arithmetic on the right of the < is where doing it first actually matters (on the left, plain left-to-right already gives the right answer)";
+    "the eight refreshable comparisons, four shown per screen, spanning + - * / ** on both sides of the < and both answers; the first two are the demo pair (one true, one false, two different operators); the right side is emphasised because arithmetic on the right of the < is where doing it first actually matters (on the left, plain left-to-right already gives the right answer)";
     let list = list_map(combos, one);
     return list;
   }
