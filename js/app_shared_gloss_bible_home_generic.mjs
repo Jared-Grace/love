@@ -98,12 +98,12 @@ export async function app_shared_gloss_bible_home_generic(
   let component = app_shared_button_wide(p, text, lambda6);
   let component22 = html_hr(p);
   return;
-  async function scroll(verses) {
-    let f = list_first(verses);
+  async function scroll(verses_inner) {
+    let f = list_first(verses_inner);
     let p = property_get(f, "p_verse");
     log(app_shared_gloss_bible_home_generic.name, {
       p,
-      verses,
+      verses: verses_inner,
     });
     await html_scroll_top_now(p);
   }
