@@ -25,7 +25,7 @@ export async function function_worker_pool_run_try() {
     return got;
   }
   let answers = await list_map_unordered_async(wanted, lambda);
-  log(function_worker_pool_run_try.name, {
+  log(fn_name("function_worker_pool_run_try"), {
     calls: wanted.length,
     answers,
   });
