@@ -77,8 +77,8 @@ export async function js_ternary_replace(ast) {
     js_call_argument_add(e, test);
     js_call_arguments_add(e, rights);
     js_left_right_set(a, expression, e);
-    let c = js_code_statement("a");
-    let statement = js_parse_statement(c);
+    let c2 = js_code_statement("a");
+    let statement = js_parse_statement(c2);
     property_set(statement, "expression", a);
     object_replace(node, statement);
     replaced = true;
