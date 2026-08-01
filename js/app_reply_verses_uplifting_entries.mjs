@@ -34,9 +34,9 @@ export async function app_reply_verses_uplifting_entries(
     let bible_folder = property_get(language, "bible_folder");
     let package_map = await uplifting_package_get(bible_folder);
     if (null_not_is(package_map)) {
-      let text = property_get_or_null(package_map, reference);
-      if (null_not_is(text)) {
-        entry_add(language, text);
+      let words = property_get_or_null(package_map, reference);
+      if (null_not_is(words)) {
+        entry_add(language, words);
       }
       return;
     }
