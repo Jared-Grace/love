@@ -1,6 +1,6 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_size_assert_message } from "./list_size_assert_message.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { html_parse_find_a_href_text } from "./html_parse_find_a_href_text.mjs";
@@ -44,8 +44,7 @@ export async function ebible_languages_add_item_info(bible_folder) {
     3,
     "Should be 3 of these, if not then investigate?",
   );
-  let i = list_last(filtered);
-  let name = property_get(i, "text");
+  let name = list_last_property(filtered, "text");
   let r3 = {
     name,
     language_code,
