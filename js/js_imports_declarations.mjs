@@ -1,10 +1,10 @@
+import { property_starts_with } from "./property_starts_with.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { each } from "./each.mjs";
@@ -23,8 +23,7 @@ export function js_imports_declarations(ast) {
       if (not(a2)) {
         return;
       }
-      let value = property_get(source, "value");
-      let a3 = text_starts_with(value, ".");
+      let a3 = property_starts_with(source, "value", ".");
       if (not(a3)) {
         return;
       }
