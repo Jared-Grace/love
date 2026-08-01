@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_add } from "./list_add.mjs";
@@ -5,7 +6,6 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { each } from "./each.mjs";
@@ -21,8 +21,11 @@ export async function app_shared_bible_copy(
   list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
   let primary = list_last(languages_verses);
   let primary_books = property_get(primary, "books");
-  let primary_verses = property_get(primary, "verses");
-  let primary_verse_numbers = list_map_property(primary_verses, "verse_number");
+  let primary_verse_numbers = property_list_map_property(
+    primary,
+    "verses",
+    "verse_number",
+  );
   let m = list_multiple_is(verse_numbers_chosen);
   let normalized = verse_numbers_chosen;
   if (not(m)) {
