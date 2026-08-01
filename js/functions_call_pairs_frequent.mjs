@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
 import { subtract } from "./subtract.mjs";
@@ -61,7 +62,10 @@ export async function functions_call_pairs_frequent() {
       }
     }
     let keys_here = [];
-    property_set(file_keys, file, { keys: keys_here, calls: calls });
+    property_set(file_keys, file, {
+      keys: keys_here,
+      calls: calls,
+    });
     function statements_scan(statements, body_is) {
       let sigs = list_map(statements, js_atomic_statement_signature);
       let last = subtract(sigs.length, 1);
@@ -81,9 +85,11 @@ export async function functions_call_pairs_frequent() {
         let args = property_get(s2, "args");
         let wired = list_includes(args, name);
         if (wired && body_is) {
-          let name2 = property_get(s2, "name");
-          let returned = equal(name2, return_name);
-          keys_here.push({ key: key, returned: returned });
+          let returned = property_equals(s2, "name", return_name);
+          keys_here.push({
+            key: key,
+            returned: returned,
+          });
         }
         let seen = property_exists(tally, key);
         if (not(seen)) {
@@ -123,7 +129,9 @@ export async function functions_call_pairs_frequent() {
   list_map(entries, file_scan);
   ("A function whose whole body IS one of these pairs is the atom the pair is asking");
   ("for, already written under a name the composed one never guesses: the pair");
-  ("list_size then equal-to-zero is called ", fn_name("list_empty_is"), " here.");
+  ("list_size then equal-to-zero is called ",
+    fn_name("list_empty_is"),
+    " here.");
   ("Whole body means the file holds one wired pair, that pair's result is what the");
   ("function hands back, and there is no third worked-out value - which is what tells");
   ("an atom apart from a long function that happens to hold one wired pair in the");
