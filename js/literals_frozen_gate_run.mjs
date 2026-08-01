@@ -1,7 +1,7 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -66,8 +66,7 @@ export async function literals_frozen_gate_run() {
   let arrived = list_map(fresh, lambda);
   function lambda2(f_name) {
     let was = property_get(recorded, f_name);
-    let carried = list_includes(arrived, was);
-    let n = not(carried);
+    let n = list_includes_not(arrived, was);
     return n;
   }
   let orphaned = list_filter(gone, lambda2);
