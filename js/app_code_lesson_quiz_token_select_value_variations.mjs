@@ -1,5 +1,6 @@
+import { list_last } from "./list_last.mjs";
+import { list_remove_last } from "./list_remove_last.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { list_remove_last_equal } from "./list_remove_last_equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -16,7 +17,11 @@ export function app_code_lesson_quiz_token_select_value_variations(code) {
   "Bounded by permuting all tiles (n!) and evaluating each: cheap because these are flat 3-operand expressions (5 tiles, 120 orderings), most of which do not parse and are dropped. Above a small tile cap it declines rather than blow the factorial up, and a code that does not itself evaluate (an identifier, a call, anything with side effects) yields no target and so no variations.";
   let tokens = app_code_quiz_tokens(code);
   let semicolon = ";";
-  list_remove_last_equal(tokens, semicolon);
+  let last = list_last(tokens);
+  let has_semicolon = equal(last, semicolon);
+  if (has_semicolon) {
+    list_remove_last(tokens);
+  }
   let size = list_size(tokens);
   let cap = 7;
   let too_big = greater_than(size, cap);
