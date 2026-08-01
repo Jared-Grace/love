@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,7 +7,6 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
@@ -57,11 +57,10 @@ export function js_hash_object_names(ast) {
     if (not(plain2)) {
       return;
     }
-    let called2 = property_get(callee2, "name");
-    let changes = list_includes(
-      [fn_name("html_hash_transform"), fn_name("html_hash_transform_reload")],
-      called2,
-    );
+    let changes = property_in_list(callee2, "name", [
+      fn_name("html_hash_transform"),
+      fn_name("html_hash_transform_reload"),
+    ]);
     if (not(changes)) {
       return;
     }
@@ -84,8 +83,7 @@ export function js_hash_object_names(ast) {
     if (null_is(id2)) {
       return;
     }
-    let taken = property_get(id2, "name");
-    let hands = list_includes(handed, taken);
+    let hands = property_in_list(id2, "name", handed);
     if (not(hands)) {
       return;
     }
