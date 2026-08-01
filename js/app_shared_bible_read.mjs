@@ -1,3 +1,4 @@
+import { app_shared_bible_book_hash_key } from "./app_shared_bible_book_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
@@ -114,7 +115,7 @@ export async function app_shared_bible_read(context, verse_action) {
   ]);
   let hash = html_hash_object_get();
   let c = property_get_or(hash, app_shared_bible_chapter_hash_key(), "");
-  let b = property_get_or(hash, "b", "");
+  let b = property_get_or(hash, app_shared_bible_book_hash_key(), "");
   let ref = property_get_or(hash, "ref", "");
   let ref_line = text_replace(ref, "+", " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
