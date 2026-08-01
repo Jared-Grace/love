@@ -1,3 +1,4 @@
+import { path_pattern_covers_cases_gate_run } from "./path_pattern_covers_cases_gate_run.mjs";
 import { permission_settings_rule_gate_run } from "./permission_settings_rule_gate_run.mjs";
 import { storage_local_key_words_gate_run } from "./storage_local_key_words_gate_run.mjs";
 import { js_dot_name_object_name_cases_gate_run } from "./js_dot_name_object_name_cases_gate_run.mjs";
