@@ -1,10 +1,9 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
-import { less_than } from "./less_than.mjs";
 import { commits_shape_name } from "./commits_shape_name.mjs";
 import { not } from "./not.mjs";
 import { integer_from_base_try } from "./integer_from_base_try.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -39,8 +38,7 @@ export async function commits_ai_js_shapes(count_given) {
     let bucket = property_get(buckets, key);
     bucket.count = bucket.count + 1;
     ("A few names are kept alongside each count, because a count says how often a shape happens and only the change itself says what the missing command would have to do");
-    let a = list_size(bucket.samples);
-    let few = less_than(a, 6);
+    let few = list_size_less_than_value(bucket.samples, 6);
     if (few) {
       let item = property_get(commit, "commit");
       list_add(bucket.samples, item);
