@@ -250,7 +250,12 @@ export async function app_g_verify_view(
   let book_code = chapter_code.slice(0, 3);
   let bh_book = g_verify_book_name(book_code);
   let verse_list = verse.split(",");
-  html_button_bible_chapter_open(links_bar, chapter_code, "Whole Chapter");
+  html_button_bible_chapter_open(
+    links_bar,
+    chapter_code,
+    verse,
+    "Whole Chapter",
+  );
   ("Commentary / Parallel / Interlinear each as a verse-group: one button for a single verse, or (multi-verse) a row of per-verse buttons in a shared centered grid so the verse numbers line up across the three kinds (a single button reaches only the first verse)");
   let multi_verse = greater_than_equal(verse_list.length, 2);
   let links_target = multi_verse
