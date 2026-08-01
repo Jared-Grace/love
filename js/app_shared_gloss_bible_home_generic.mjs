@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { json_from_try } from "./json_from_try.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -99,8 +100,7 @@ export async function app_shared_gloss_bible_home_generic(
   let component22 = html_hr(p);
   return;
   async function scroll(verses_inner) {
-    let f = list_first(verses_inner);
-    let p = property_get(f, "p_verse");
+    let p = list_first_property(verses_inner, "p_verse");
     log(app_shared_gloss_bible_home_generic.name, {
       p,
       verses: verses_inner,
