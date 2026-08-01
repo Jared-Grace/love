@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
@@ -50,8 +51,7 @@ export async function functions_name_references_mixed() {
       found.reference = true;
     }
     function each_call(v) {
-      let node = property_get(v, "node");
-      let callee = property_get(node, "callee");
+      let callee = property_path_get_2(v, "node", "callee");
       let callee_name = property_get_or_null(callee, "name");
       let right = fn_name("fn_name");
       let is_marker = equal(callee_name, right);
