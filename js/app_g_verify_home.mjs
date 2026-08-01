@@ -1,3 +1,4 @@
+import { app_g_verify_chapter_storage_key } from "./app_g_verify_chapter_storage_key.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
 import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
@@ -53,7 +54,7 @@ export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code =
     new URLSearchParams(location.search).get("chapter") ||
-    localStorage.getItem("g_verify_chapter") ||
+    localStorage.getItem(app_g_verify_chapter_storage_key()) ||
     "1JN01";
   let book_code = chapter_code.slice(0, 3);
   let v2 = chapter_code.slice(3);
