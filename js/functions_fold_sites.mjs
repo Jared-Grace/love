@@ -20,6 +20,18 @@ export async function functions_fold_sites() {
   ("fns fresh (not the possibly-stale identifier index), keeps the foldable-shaped ones, and for each");
   ("tries ",
     fn_name("js_fold"),
+    " against the files that call all its callees.");
+  ("Which files those are is read off every run of statements in each file, not the");
+  ("one it opens with. Reading only the top left this blind where it mattered most:");
+  ("nine live sites of ",
+    fn_name("list_first_property"),
+    " sat inside ifs and lambdas, so the files holding them were never even offered");
+  ("as candidates, and this reported a clean repo while ",
+    fn_name("function_fold_everywhere"),
+    " - which asks the identifier index, and so sees a call wherever it is written -");
+  ("folded all nine.");
+  ("Old text kept below so the two readings can be compared: tries ",
+    fn_name("js_fold"),
     " against the files that call all its callees. Complement of the miner: this finds reuse");
   ("of fns that EXIST. Returns { x, f } pairs; a mutual x<->f pair means two duplicate DEFINITIONS.");
   arguments_assert(arguments, 0);
@@ -34,8 +46,13 @@ export async function functions_fold_sites() {
     try {
       let ast = js_parse(text);
       name = js_flo_name(ast);
-      let list = js_flo_body(ast);
-      let sigs = list_map(list, js_atomic_statement_signature);
+      let blocks = js_blocks_all(ast);
+      let sigs = [];
+      for (let block of blocks) {
+        let statements = property_get(block, "body");
+        let block_sigs = list_map(statements, js_atomic_statement_signature);
+        sigs = sigs.concat(block_sigs);
+      }
       pattern = js_fn_fold_pattern(ast);
       function lambda(s) {
         let r = s.callee;
