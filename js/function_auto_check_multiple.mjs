@@ -12,11 +12,11 @@ export async function function_auto_check_multiple(names_comma) {
   let names = text_split_comma(names_comma);
   async function name_entry(name) {
     let missing = await function_exists_not(name);
-    let r = {
+    let r2 = {
       name,
       missing,
     };
-    return r;
+    return r2;
   }
   let entries = await list_map_async(names, name_entry);
   function missing_is(entry) {
