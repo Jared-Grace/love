@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { text_code_spans_without } from "./text_code_spans_without.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
@@ -7,7 +8,6 @@ import { file_read } from "./file_read.mjs";
 import { list_add } from "./list_add.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
 import { memory_note_stems } from "./memory_note_stems.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { not } from "./not.mjs";
 export async function memory_links_unresolved() {
@@ -33,8 +33,7 @@ export async function memory_links_unresolved() {
   let links = memory_wikilink_tokens(prose);
   let stems = await memory_note_stems();
   function unresolved_is(link) {
-    let resolved = list_includes(stems, link);
-    let b = not(resolved);
+    let b = list_includes_not(stems, link);
     return b;
   }
   let unresolved = list_filter(links, unresolved_is);
