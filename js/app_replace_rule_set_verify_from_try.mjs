@@ -29,14 +29,14 @@ export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
     max_depth,
     end,
   );
-  function neighbors_get(start) {
-    let indices = list_to_indices(start);
+  function neighbors_get(start_inner) {
+    let indices = list_to_indices(start_inner);
     function lambda(la) {
       each_nested_args(rules_parsed, indices, lambda3);
       function lambda3(rule, index) {
-        let eq = app_replace_rule_valid(rule, index, start);
+        let eq = app_replace_rule_valid(rule, index, start_inner);
         if (eq) {
-          let neighbor = app_replace_rule_apply(rule, index, start);
+          let neighbor = app_replace_rule_apply(rule, index, start_inner);
           la({
             neighbor,
             data: {
