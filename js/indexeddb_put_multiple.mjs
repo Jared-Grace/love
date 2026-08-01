@@ -1,7 +1,6 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_filter_remove } from "./list_filter_remove.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { object_values } from "./object_values.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
@@ -14,8 +13,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   let keys = list_map_property(v, key);
   let existing = await indexeddb_get_all(db_get, store);
   function lambda(item) {
-    let k = property_get(item, key);
-    let includes = list_includes(keys, k);
+    let includes = property_in_list(item, key, keys);
     return includes;
   }
   list_filter_remove(existing, lambda);
