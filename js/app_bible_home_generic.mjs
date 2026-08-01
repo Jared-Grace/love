@@ -1,9 +1,9 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_last } from "./list_last.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
@@ -192,8 +192,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let p_verse = html_p(content);
   let top = html_div(p_verse);
   ("when the spine (last-chosen) language reads right-to-left, mirror the verse frame: the number moves to the right and the lines right-align, matching the chapter reader");
-  let spine = list_last(text_languages);
-  let spine_text = property_get(spine, "text");
+  let spine_text = list_last_property(text_languages, "text");
   let frame_rtl = text_rtl_is(spine_text);
   if (frame_rtl) {
     html_style_set(top, "direction", "rtl");
