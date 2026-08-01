@@ -7,8 +7,8 @@ export function list_chunk(list, chunk_size) {
     hint: "chunk size should be a positive number of items per chunk",
   });
   function lambda(la) {
-    list_each_by(list, lambda, chunk_size);
-    function lambda(position) {
+    list_each_by(list, lambda_inner, chunk_size);
+    function lambda_inner(position) {
       let sliced = list_slice_count(list, position, chunk_size);
       la(sliced);
     }
