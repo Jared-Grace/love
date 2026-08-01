@@ -23,7 +23,7 @@ export async function function_params_new_generic(
     }
     async function lambda5(ast) {
       js_visit_calls_named(ast, f_name, lambda);
-      function lambda({ args, v }) {
+      function lambda({ args, v: v2 }) {
         on_call(args);
       }
       await js_imports_missing_add_all(ast);
