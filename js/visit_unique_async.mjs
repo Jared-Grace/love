@@ -1,8 +1,7 @@
-import { property_exists } from "./property_exists.mjs";
+import { property_exists_not } from "./property_exists_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { not } from "./not.mjs";
 import { visit_async } from "./visit_async.mjs";
 export async function visit_unique_async(node, children_get, on_each) {
   "Walks a graph outward from one node, never following the same node twice";
@@ -11,8 +10,7 @@ export async function visit_unique_async(node, children_get, on_each) {
   async function lambda(node) {
     let children = await children_get(node);
     function unseen_is(child) {
-      let met = property_exists(seen, child);
-      let b = not(met);
+      let b = property_exists_not(seen, child);
       return b;
     }
     let fresh = list_filter(children, unseen_is);
