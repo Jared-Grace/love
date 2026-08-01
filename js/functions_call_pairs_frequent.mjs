@@ -6,6 +6,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
+import { js_blocks_all } from "./js_blocks_all.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_pair_canonical } from "./js_pair_canonical.mjs";
 import { list_map } from "./list_map.mjs";
@@ -41,68 +42,82 @@ export async function functions_call_pairs_frequent() {
   function file_scan(entry) {
     let file = property_get(entry, "file");
     let text = property_get(entry, "text");
-    let sigs = null;
+    let body = null;
+    let blocks = null;
     let return_name = null;
     try {
       let ast = js_parse(text);
-      let statements = js_flo_body(ast);
-      sigs = list_map(statements, js_atomic_statement_signature);
+      body = js_flo_body(ast);
+      blocks = js_blocks_all(ast);
       return_name = js_return_name(ast);
     } catch (e) {
       return;
     }
-    let last = subtract(sigs.length, 1);
+    let body_sigs = list_map(body, js_atomic_statement_signature);
     let calls = 0;
-    for (let sig of sigs) {
+    for (let sig of body_sigs) {
       if (property_get(sig, "callee")) {
         calls = calls + 1;
       }
     }
     let keys_here = [];
     property_set(file_keys, file, { keys: keys_here, calls: calls });
-    let i = 0;
-    while (less_than(i, last)) {
-      let s = sigs[i];
-      let s2 = sigs[i + 1];
-      i = i + 1;
-      let callee = property_get(s, "callee");
-      let callee2 = property_get(s2, "callee");
-      let both_calls = callee && callee2;
-      if (not(both_calls)) {
-        continue;
+    function statements_scan(statements, body_is) {
+      let sigs = list_map(statements, js_atomic_statement_signature);
+      let last = subtract(sigs.length, 1);
+      let i = 0;
+      while (less_than(i, last)) {
+        let s = sigs[i];
+        let s2 = sigs[i + 1];
+        i = i + 1;
+        let callee = property_get(s, "callee");
+        let callee2 = property_get(s2, "callee");
+        let both_calls = callee && callee2;
+        if (not(both_calls)) {
+          continue;
+        }
+        let key = js_pair_canonical(s, s2);
+        let name = property_get(s, "name");
+        let args = property_get(s2, "args");
+        let wired = list_includes(args, name);
+        if (wired && body_is) {
+          let name2 = property_get(s2, "name");
+          let returned = equal(name2, return_name);
+          keys_here.push({ key: key, returned: returned });
+        }
+        let seen = property_exists(tally, key);
+        if (not(seen)) {
+          let example =
+            callee +
+            "(" +
+            property_get(s, "args").join(", ") +
+            ") -> " +
+            callee2 +
+            "(" +
+            args.join(", ") +
+            ")";
+          property_set(tally, key, {
+            count: 0,
+            files: {},
+            wired: wired,
+            example: example,
+            left: callee,
+            right: callee2,
+          });
+        }
+        let record = property_get(tally, key);
+        record.count = record.count + 1;
+        record.files[file] = true;
       }
-      let key = js_pair_canonical(s, s2);
-      let name = property_get(s, "name");
-      let args = property_get(s2, "args");
-      let wired = list_includes(args, name);
-      if (wired) {
-        let name2 = property_get(s2, "name");
-        let returned = equal(name2, return_name);
-        keys_here.push({ key: key, returned: returned });
-      }
-      let seen = property_exists(tally, key);
-      if (not(seen)) {
-        let example =
-          callee +
-          "(" +
-          property_get(s, "args").join(", ") +
-          ") -> " +
-          callee2 +
-          "(" +
-          args.join(", ") +
-          ")";
-        property_set(tally, key, {
-          count: 0,
-          files: {},
-          wired: wired,
-          example: example,
-          left: callee,
-          right: callee2,
-        });
-      }
-      let record = property_get(tally, key);
-      record.count = record.count + 1;
-      record.files[file] = true;
+    }
+    ("Every run of statements, not the one the function opens with. Two lines written");
+    ("under an if or inside a lambda are the same two lines, and counting only the top");
+    ("of each file made this agree with a fold that had the same blind spot - both");
+    ("reported a tidy repo about the same unread half of it.");
+    for (let block of blocks) {
+      let statements = property_get(block, "body");
+      let body_is = equal(statements, body);
+      statements_scan(statements, body_is);
     }
   }
   list_map(entries, file_scan);
