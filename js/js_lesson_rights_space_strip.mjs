@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
@@ -9,7 +10,6 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { text_starts_with_space } from "./text_starts_with_space.mjs";
 import { text_skip_while } from "./text_skip_while.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { not } from "./not.mjs";
 export function js_lesson_rights_space_strip(ast) {
@@ -63,8 +63,7 @@ export function js_lesson_rights_space_strip(ast) {
     if (not(named)) {
       return;
     }
-    let key_name = property_get(key, "name");
-    let wanted = equal(key_name, "name_id_rights");
+    let wanted = property_equals(key, "name", "name_id_rights");
     if (not(wanted)) {
       return;
     }
