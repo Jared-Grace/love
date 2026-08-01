@@ -1347,6 +1347,23 @@ DANGEROUS_FIND_FLAGS = {
 
 FIND_EXEC_FLAGS = {"-exec", "-execdir"}
 
+# Flags that hand a *read* verb a file to write. Each of these verbs is in
+# permissions.allow because looking at things is harmless; none of them was
+# granted so that it could put bytes somewhere. Same reasoning as
+# DANGEROUS_FIND_FLAGS above, one verb wider.
+WRITING_FLAGS_BY_VERB = {
+    "sort": {"-o", "--output"},
+    "ffprobe": {"-o"},
+}
+
+# uniq's second positional operand is an OUTPUT file (`uniq [OPT]... [INPUT
+# [OUTPUT]]`), so it writes without any flag saying so. These are the uniq
+# options that take a value, whose value must not be counted as an operand.
+UNIQ_VALUE_FLAGS = {
+    "-f", "-s", "-w",
+    "--skip-fields", "--skip-chars", "--check-chars", "--group", "--all-repeated",
+}
+
 
 def is_dangerous_find(words):
     """True iff this is a `find` invocation carrying an action flag that
