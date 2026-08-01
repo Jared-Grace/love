@@ -1,12 +1,11 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_bare_call_names(ast) {
   "Every name this file sets from a call that was handed nothing, as a dictionary from the name to the function called.";
@@ -30,8 +29,7 @@ export function js_bare_call_names(ast) {
       return;
     }
     let args = property_get(init, "arguments");
-    let count = list_size(args);
-    let bare = equal(count, 0);
+    let bare = list_empty_is(args);
     if (not(bare)) {
       return;
     }
