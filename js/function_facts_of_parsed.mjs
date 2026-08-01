@@ -1,11 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { fn_name_arg_get } from "./fn_name_arg_get.mjs";
+import { js_fn_name_literals } from "./js_fn_name_literals.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { js_strings } from "./js_strings.mjs";
-import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
-import { list_adder } from "./list_adder.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
 export function function_facts_of_parsed(parsed) {
@@ -24,15 +21,7 @@ export function function_facts_of_parsed(parsed) {
   let async_is = property_get(declaration, "async");
   let identifiers = js_identifiers_names(ast);
   let strings = js_strings(ast);
-  function collect(la) {
-    function on_call({ args }) {
-      let first = fn_name_arg_get(args, f_name);
-      let value = property_get(first, "value");
-      la(value);
-    }
-    js_visit_calls_named(ast, fn_name("fn_name"), on_call);
-  }
-  let identifiers_fn_names = list_adder(collect);
+  let identifiers_fn_names = js_fn_name_literals(ast, f_name);
   let facts = {
     f_name,
     async_is,
