@@ -12,6 +12,14 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
+import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
+import { js_operator_less_than_equal } from "./js_operator_less_than_equal.mjs";
+import { js_operator_greater_than_equal } from "./js_operator_greater_than_equal.mjs";
+import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
+import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
+import { equal } from "./equal.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_first } from "./list_first.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -31,6 +39,11 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   let less_than_operator = js_operator_less_than();
   let less_than_symbol = property_get(less_than_operator, "operator");
   let less_than_fn = property_get(less_than_operator, "fn");
+  let greater_than_operator = js_operator_greater_than();
+  let less_than_equal_operator = js_operator_less_than_equal();
+  let greater_than_equal_operator = js_operator_greater_than_equal();
+  let triple_equal_operator = js_operator_triple_equal();
+  let bang_double_equal_operator = js_operator_bang_double_equal();
   function op_add() {
     "the + arithmetic piece: two small addends and their sum, sum always at least 2";
     let x = integer_random(1, 4);
@@ -117,41 +130,49 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       op: op_add,
       arithmetic_left: true,
       want_true: true,
+      comparison: less_than_operator,
     },
     {
       op: op_multiply,
       arithmetic_left: false,
       want_true: false,
+      comparison: greater_than_operator,
     },
     {
       op: op_subtract,
       arithmetic_left: false,
       want_true: true,
+      comparison: less_than_equal_operator,
     },
     {
       op: op_divide,
       arithmetic_left: false,
       want_true: false,
+      comparison: greater_than_equal_operator,
     },
     {
       op: op_remainder,
       arithmetic_left: false,
       want_true: true,
+      comparison: triple_equal_operator,
     },
     {
       op: op_exponent,
       arithmetic_left: false,
       want_true: false,
+      comparison: bang_double_equal_operator,
     },
     {
       op: op_divide,
       arithmetic_left: true,
       want_true: true,
+      comparison: less_than_operator,
     },
     {
       op: op_remainder,
       arithmetic_left: true,
       want_true: false,
+      comparison: greater_than_operator,
     },
   ];
   function one(combo) {
