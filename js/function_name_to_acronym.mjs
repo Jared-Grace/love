@@ -9,9 +9,15 @@ export function function_name_to_acronym(f_name) {
   try {
     letters = list_map(parts, list_first);
   } catch (e) {
-    ("if this error, then maybe string empty, __ instead of _ or ends with _");
+    ("An error handed to json straight is an empty pair of brackets, because the");
+    ("words it carries sit on properties that are deliberately not walked. So this");
+    ("used to raise the name it was given and nothing at all about what went");
+    ("wrong, and the guess written beside it - an empty part, two marks in a row,");
+    ("a trailing mark - was a guess only because the sentence saying which one it");
+    ("actually was had already been thrown away.");
+    let cause = error_readable(e);
     error_json({
-      e,
+      cause,
       f_name,
     });
   }
