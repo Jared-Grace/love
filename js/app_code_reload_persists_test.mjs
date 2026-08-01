@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
@@ -44,8 +45,7 @@ export async function app_code_reload_persists_test(url_prefix) {
       let second = await app_code_screen_capture(page);
       let text2 = property_get(second, "text");
       let kind = app_code_screen_text_normalize(text2);
-      let b = equal(kind0, kind);
-      let moved = not(b);
+      let moved = equal_not(kind0, kind);
       ("reload the way F5 does - re-load the CURRENT address including the hash that Next updated. page.reload() can re-load the originally committed url (quiz=0) instead of the SPA-updated hash, which would falsely look like a reset");
       let current = page.url();
       await page.goto(current);
