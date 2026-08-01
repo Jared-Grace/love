@@ -1,3 +1,4 @@
+import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { html_hash_get } from "./html_hash_get.mjs";
@@ -30,7 +31,7 @@ export function app_code_hash_restore(context) {
     if (is_screen) {
       app_shared_screen_stored_set(context, value);
     }
-    let is_quiz = equal(key, "quiz");
+    let is_quiz = equal(key, app_code_quiz_hash_key());
     if (is_quiz) {
       let value2 = Number(value);
       storage_session_set_context(context, "quiz_index", value2);
