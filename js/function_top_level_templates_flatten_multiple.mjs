@@ -14,8 +14,8 @@ export async function function_top_level_templates_flatten_multiple(
     function_top_level_templates_flatten,
   );
   function changed_is(result) {
-    let changed = property_get(result, "changed");
-    return changed;
+    let changed_inner = property_get(result, "changed");
+    return changed_inner;
   }
   let changed = list_filter(results, changed_is);
   let r = {
