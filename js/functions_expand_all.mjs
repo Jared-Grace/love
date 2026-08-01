@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { js_block_find } from "./js_block_find.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
@@ -17,8 +18,7 @@ export async function functions_expand_all(f_name_expand) {
     async function lambda(ast) {
       let list = js_list_calls_named(ast, f_name_expand);
       async function lambda4(call) {
-        let v = property_get(call, "v");
-        let stack = property_get(v, "stack");
+        let stack = property_path_get_2(call, "v", "stack");
         let r = js_block_find(stack);
         let body = property_get(r, "body");
         let item = property_get(r, "item");
