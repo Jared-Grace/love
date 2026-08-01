@@ -1,3 +1,4 @@
+import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -5,9 +6,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function js_fn_name_references_to_calls(ast) {
@@ -42,8 +41,7 @@ export async function js_fn_name_references_to_calls(ast) {
     }
     let string_code = js_code_string(name);
     let args = [string_code];
-    let call_code = js_code_call_args(fn_name("fn_name"), args);
-    let expression = js_parse_expression(call_code);
+    let expression = js_call_args_from_code(fn_name("fn_name"), args);
     object_replace(node, expression);
   }
   js_visit_type(ast, "MemberExpression", each_item);
