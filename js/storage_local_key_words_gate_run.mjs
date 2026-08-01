@@ -1,13 +1,12 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { storage_local_key_words } from "./storage_local_key_words.mjs";
 import { storage_local_key_words_found } from "./storage_local_key_words_found.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 export async function storage_local_key_words_gate_run() {
   "QA gate: every word that has been written into a browser storage key is still written somewhere in the source.";
   "A key is an owner and a word joined. Its other half is a function name and has its own gate, because a rename moves it and a rename is a command. This half nothing moves for you: somebody reads a line, thinks of a clearer word for the setting, and types it. Nothing about that edit looks dangerous - the line compiles, the app works, and the browser goes on looking under the old key where the person's saved setting still sits.";
@@ -17,14 +16,12 @@ export async function storage_local_key_words_gate_run() {
   let recorded = await storage_local_key_words();
   let found = await storage_local_key_words_found();
   function written_not_is(word) {
-    let written = list_includes(found, word);
-    let n = not(written);
+    let n = list_includes_not(found, word);
     return n;
   }
   let gone = list_filter(recorded, written_not_is);
   function recorded_not_is(word) {
-    let known = list_includes(recorded, word);
-    let n2 = not(known);
+    let n2 = list_includes_not(recorded, word);
     return n2;
   }
   let fresh = list_filter(found, recorded_not_is);
