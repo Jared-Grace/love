@@ -1,3 +1,4 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
@@ -17,7 +18,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { and } from "./and.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
@@ -72,8 +72,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let attempts = 0;
   let attempts_max = multiply(answer_count_max, 3);
   function need_more() {
-    let a = list_size(distractors);
-    let more = less_than(a, distractor_count);
+    let more = list_size_less_than_value(distractors, distractor_count);
     let room = less_than(attempts, attempts_max);
     let r = and(more, room);
     return r;
