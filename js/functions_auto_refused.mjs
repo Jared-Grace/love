@@ -1,10 +1,9 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { not } from "./not.mjs";
 export async function functions_auto_refused() {
   arguments_assert(arguments, 0);
@@ -24,7 +23,6 @@ export async function functions_auto_refused() {
     let not_ok = not(ok);
     return not_ok;
   }
-  let refused = list_filter(results, refused_is);
-  let names = list_map_property(refused, "name");
+  let names = list_filter_map_property(results, refused_is, "name");
   return names;
 }
