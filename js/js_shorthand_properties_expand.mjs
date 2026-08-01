@@ -1,10 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
 import { property_set } from "./property_set.mjs";
 import { add } from "./add.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-import { equal } from "./equal.mjs";
 export function js_shorthand_properties_expand(ast, name) {
   arguments_assert(arguments, 2);
   ("Writes out in full every shorthand entry whose word is the one named, so");
@@ -25,8 +25,7 @@ export function js_shorthand_properties_expand(ast, name) {
     let shorthand = property_get(node, "shorthand");
     if (shorthand) {
       let key = property_get(node, "key");
-      let key_name = property_get(key, "name");
-      let same = equal(key_name, name);
+      let same = property_equals(key, "name", name);
       if (same) {
         let fresh = js_identifier_expression(name);
         property_set(node, "key", fresh);
