@@ -1,3 +1,4 @@
+import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -71,7 +72,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   }
   let hash = html_hash_object_get();
   let verse_number_hash = app_bible_hash_v_get(hash);
-  let chapter_code = property_get(hash, "c");
+  let property_name = app_shared_bible_chapter_hash_key();
+  let chapter_code = property_get(hash, property_name);
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
   let book_code = property_get(v2, "book_code");
