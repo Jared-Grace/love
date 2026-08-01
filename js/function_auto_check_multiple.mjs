@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { function_exists_not } from "./function_exists_not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,8 +25,7 @@ export async function function_auto_check_multiple(names_comma) {
     return b;
   }
   function live_is(entry) {
-    let missing = property_get(entry, "missing");
-    let b = not(missing);
+    let b = property_not(entry, "missing");
     return b;
   }
   let dead = list_filter_map_property(entries, missing_is, "name");
