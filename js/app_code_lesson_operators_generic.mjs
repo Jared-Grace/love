@@ -1,10 +1,9 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { app_code_lesson_code_expression } from "./app_code_lesson_code_expression.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "./app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_replace } from "./text_replace.mjs";
-import { list_first } from "./list_first.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
@@ -32,8 +31,7 @@ export function app_code_lesson_operators_generic(
       operator_math,
     );
     let list = batch();
-    let first = list_first(list);
-    let question = property_get(first, "question");
+    let question = list_first_property(list, "question");
     let replaced = text_replace(question, operator_js, operator_math);
     let operator_name_math_articled =
       text_articled_pad_space(operator_name_math);

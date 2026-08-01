@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { log_keep } from "./log_keep.mjs";
@@ -62,8 +63,7 @@ export async function g_sermon_generate_book_generic_prompts(
     }
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
-      let verse_first = list_first(verses_chapter);
-      let chapter_code = property_get(verse_first, "chapter_code");
+      let chapter_code = list_first_property(verses_chapter, "chapter_code");
       let interlinear = property_get(chapters_interlinear, chapter_code);
       async function each_verse(verse, index) {
         let text = property_get(verse, "text");
