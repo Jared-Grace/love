@@ -176,6 +176,7 @@ export function qa_gates() {
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
     literals_frozen_storage_gate_run,
+    storage_local_key_names_gate_run,
     functions_unreachable_check_gate_run,
     functions_statements_after_return_gate_run,
     functions_arity_gate_run,
