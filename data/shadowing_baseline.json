@@ -17,7 +17,6 @@
   {
    "name": "app_a_function_node",
    "shadows_outer": [
-    "r",
     "value"
    ],
    "shadows_function": []
@@ -386,20 +385,6 @@
    "shadows_function": []
   },
   {
-   "name": "folder_read_browser",
-   "shadows_outer": [
-    "r"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "function_auto_check_multiple",
-   "shadows_outer": [
-    "r"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "function_comments_migrate_multiple",
    "shadows_outer": [
     "changed",
@@ -497,13 +482,6 @@
    "name": "html_checkboxes",
    "shadows_outer": [
     "div"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "html_code_children",
-   "shadows_outer": [
-    "r"
    ],
    "shadows_function": []
   },
@@ -700,13 +678,6 @@
    "name": "visit_unique_async",
    "shadows_outer": [
     "node"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "webpack_watch",
-   "shadows_outer": [
-    "r"
    ],
    "shadows_function": []
   }
