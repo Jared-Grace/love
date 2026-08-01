@@ -20,8 +20,8 @@ export async function functions_auto_refused() {
   );
   function refused_is(result) {
     let ok = property_get(result, "ok");
-    let refused = not(ok);
-    return refused;
+    let not_ok = not(ok);
+    return not_ok;
   }
   let refused = list_filter(results, refused_is);
   let names = list_map_property(refused, "name");
