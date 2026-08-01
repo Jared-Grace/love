@@ -1,5 +1,5 @@
 import { permission_rules } from "./permission_rules.mjs";
-import { permission_rule_settings_write_is } from "./permission_rule_settings_write_is.mjs";
+import { permission_rule_decider_write_is } from "./permission_rule_decider_write_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 export async function permission_rules_settings_write() {
@@ -8,7 +8,7 @@ export async function permission_rules_settings_write() {
   let rules = await permission_rules();
   let offenders = [];
   for (let rule of rules) {
-    let widens = await permission_rule_settings_write_is(rule);
+    let widens = await permission_rule_decider_write_is(rule);
     if (not(widens)) {
       continue;
     }
