@@ -1,5 +1,5 @@
-import { storage_key_seams_durable } from "./storage_key_seams_durable.mjs";
-import { js_storage_key_word_forwarded_is } from "./js_storage_key_word_forwarded_is.mjs";
+import { storage_key_seams_all } from "./storage_key_seams_all.mjs";
+import { storage_local_key_names_apps } from "./storage_local_key_names_apps.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
@@ -32,7 +32,9 @@ export async function storage_local_key_names_found() {
       }
     }
   }
-  let unique = list_unique(found);
+  let apps = await storage_local_key_names_apps();
+  let both = list_concat(found, apps);
+  let unique = list_unique(both);
   unique.sort();
   return unique;
 }
