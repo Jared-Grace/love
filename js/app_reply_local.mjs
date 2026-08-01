@@ -1,5 +1,5 @@
+import { list_find_property_get } from "./list_find_property_get.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
-import { property_get } from "./property_get.mjs";
 import { ebible_verse_merge } from "./ebible_verse_merge.mjs";
 import { global_function_set } from "./global_function_set.mjs";
 import { app_reply } from "./app_reply.mjs";
@@ -14,10 +14,18 @@ export async function app_reply_local(context) {
     args: [],
   });
   function verse_get(bible_folder, chapter_code, verse_number) {
-    let v2 = list_find_property(result, "bible_folder", bible_folder);
-    let chapters = property_get(v2, "chapters");
-    let v3 = list_find_property(chapters, "chapter_code", chapter_code);
-    let verses = property_get(v3, "verses");
+    let chapters = list_find_property_get(
+      result,
+      "bible_folder",
+      bible_folder,
+      "chapters",
+    );
+    let verses = list_find_property_get(
+      chapters,
+      "chapter_code",
+      chapter_code,
+      "verses",
+    );
     let v = list_find_property(verses, "verse_number", verse_number);
     let verse = ebible_verse_merge(bible_folder, chapter_code, v);
     return verse;
