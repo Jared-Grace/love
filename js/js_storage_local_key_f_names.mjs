@@ -1,10 +1,10 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_argument_at } from "./js_call_argument_at.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_node_value_get } from "./js_node_value_get.mjs";
 import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -34,7 +34,7 @@ export function js_storage_local_key_f_names(ast) {
     let by_reference = equal(callee, spelled);
     if (by_reference) {
       let inner = js_call_argument_at(word_node, "1");
-      let word = js_node_value_get(inner);
+      let word = property_get(inner, "value");
       list_add(found, word);
     }
   }
