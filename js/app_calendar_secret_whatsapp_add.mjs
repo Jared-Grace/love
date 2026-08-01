@@ -1,11 +1,10 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_calendar_contacts_downloaded_path } from "./app_calendar_contacts_downloaded_path.mjs";
 import { app_calendar_whatsapp_phone } from "./app_calendar_whatsapp_phone.mjs";
 import { app_calendar_preaching_ask_phones } from "./app_calendar_preaching_ask_phones.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { app_calendar_secret_transform } from "./app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "./app_calendar_contact_add_multiple.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_take } from "./list_take.mjs";
@@ -38,8 +37,7 @@ export async function app_calendar_secret_whatsapp_add() {
     }
     return null;
   }
-  let mapped = list_map(lines, lambda);
-  let filtered = list_filter_null_not_is(mapped);
+  let filtered = list_map_filter_null_not_is(lines, lambda);
   async function lambda2(data) {
     app_calendar_contact_add_multiple(data, filtered);
   }

@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_focus } from "./html_focus.mjs";
@@ -22,8 +23,6 @@ import { html_centered } from "./html_centered.mjs";
 import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_chosen.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { emoji_search } from "./emoji_search.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -49,8 +48,10 @@ export async function app_search_home(context) {
     let r = list_find_property_or_null(languages, "language_code", code);
     return r;
   }
-  let mapped = list_map(language_codes, code_to_language);
-  let languages_chosen = list_filter_null_not_is(mapped);
+  let languages_chosen = list_map_filter_null_not_is(
+    language_codes,
+    code_to_language,
+  );
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
   let search_instructions =

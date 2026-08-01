@@ -1,9 +1,8 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
@@ -23,8 +22,7 @@ export function app_shared_bible_languages_choose(
     let r = list_find_property_or_null(languages, "language_code", code);
     return r;
   }
-  let mapped = list_map(languages_chosen, to_language);
-  let chosen = list_filter_null_not_is(mapped);
+  let chosen = list_map_filter_null_not_is(languages_chosen, to_language);
   function on_change() {
     let codes = list_map_property(chosen, "language_code");
     if (list_empty_is(codes)) {
