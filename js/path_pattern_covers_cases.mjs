@@ -1,7 +1,7 @@
 export function path_pattern_covers_cases() {
-  ("Written-out permission path patterns paired with a file, pinning which ones the pattern reaches");
-  ("This decides whether a rule counts as granting a settings file, so it has to fail in both directions. Reading too widely fails a build over rules that grant nothing of the sort; reading too narrowly is the whole hole the gate exists to close, and the narrow reading is the tempting one, because the rule that hands over the settings file by granting a folder several levels above it does not mention the file at all.");
-  ("Every path here is spelled from the root, which is the shape the reader is promised and the reason it can be asked about at all without knowing where anything ran.");
+  "Written-out permission path patterns paired with a file, pinning which ones the pattern reaches";
+  "This decides whether a rule counts as granting a settings file, so it has to fail in both directions. Reading too widely fails a build over rules that grant nothing of the sort; reading too narrowly is the whole hole the gate exists to close, and the narrow reading is the tempting one, because the rule that hands over the settings file by granting a folder several levels above it does not mention the file at all.";
+  "Every path here is spelled from the root, which is the shape the reader is promised and the reason it can be asked about at all without knowing where anything ran.";
   let cases = [
     {
       name: "the pattern is the file itself",
