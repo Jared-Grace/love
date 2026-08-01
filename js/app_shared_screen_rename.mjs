@@ -1,4 +1,4 @@
-import { equal } from "./equal.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { invoke_multiple_async } from "./invoke_multiple_async.mjs";
 import { function_rename_open } from "./function_rename_open.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -25,8 +25,7 @@ export async function app_shared_screen_rename(
       function lambda4() {
         let key = property_get(item, "key");
         async function lambda5() {
-          let name = property_get(key, "name");
-          let match = equal(name, screen_name_before);
+          let match = property_equals(key, "name", screen_name_before);
           if (match) {
             let key_after = js_expression_string(screen_name_after);
             let combined_screen = function_name_combine(
