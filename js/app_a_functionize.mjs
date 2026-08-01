@@ -1,16 +1,13 @@
+import { js_node_to_block } from "./js_node_to_block.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_functionize } from "./js_functionize.mjs";
-import { js_block_find } from "./js_block_find.mjs";
-import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_a_functionize(a, f_name_new) {
   let a_first = property_path_get_2(a, "context", app_a_functionize.name);
   function lambda(ai) {
     let node = property_get(ai, "node");
     let ast_inner = property_get(ai, "ast");
-    let v_match = js_node_to_visitor(ast_inner, node);
-    let stack = property_get(v_match, "stack");
-    let f = js_block_find(stack);
+    let f = js_node_to_block(ast_inner, node);
     return f;
   }
   let a_f = lambda(a);
