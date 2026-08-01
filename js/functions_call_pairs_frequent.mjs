@@ -98,5 +98,11 @@ export async function functions_call_pairs_frequent() {
   }
   rows.sort(lambda);
   let top = rows.slice(0, 25);
+  for (let row of top) {
+    let composed = function_name_pair_composed(row.left, row.right);
+    row.composed = composed;
+    let search = await function_exists(composed);
+    row.exists = property_get(search, "exists");
+  }
   return top;
 }
