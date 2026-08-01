@@ -11,8 +11,8 @@ export async function function_comments_migrate_multiple(names_comma) {
   let names = text_split_comma(names_comma);
   let results = await list_map_async(names, function_comments_migrate);
   function changed_is(result) {
-    let changed = property_get(result, "changed");
-    return changed;
+    let changed_inner = property_get(result, "changed");
+    return changed_inner;
   }
   function left_is(result) {
     let left = property_get(result, "left");
