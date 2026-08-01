@@ -1,11 +1,10 @@
+import { js_code_call_args_await_maybe_parse_statement } from "./js_code_call_args_await_maybe_parse_statement.mjs";
 import { function_parse_declaration_unaliased } from "./function_parse_declaration_unaliased.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
-import { js_parse_statement } from "./js_parse_statement.mjs";
-import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -35,12 +34,11 @@ export async function app_shared_update_generic(
     declaration.async = true;
     let value_string = await app_shared_name_main(name);
     let main_name = js_code_string(value_string);
-    let code = js_code_call_args_await_maybe(
+    let statement = js_code_call_args_await_maybe_parse_statement(
       unaliased,
       [main_name, f_name],
       declaration_call,
     );
-    let statement = js_parse_statement(code);
     let body_block = js_flo_body(ast);
     list_clear(body_block);
     list_add(body_block, statement);
