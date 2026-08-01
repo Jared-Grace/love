@@ -1,8 +1,8 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { functions_name_only_imports } from "./functions_name_only_imports.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function functions_name_only_imports_gate_run() {
   "QA gate: no file imports a name only to read the word it is called";
@@ -12,8 +12,7 @@ export async function functions_name_only_imports_gate_run() {
   let offenders = await functions_name_only_imports();
   for (let offender of offenders) {
     let f_name = property_get(offender, "f_name");
-    let names = property_get(offender, "names");
-    let joined = list_join_comma(names);
+    let joined = property_list_join_comma(offender, "names");
     console.log("NAME ONLY  " + f_name + "  -> " + joined);
   }
   console.log("\noffenders " + offenders.length);
