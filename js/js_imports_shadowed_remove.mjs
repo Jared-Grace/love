@@ -1,8 +1,8 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_each_size } from "./list_each_size.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { js_imports_shadowed } from "./js_imports_shadowed.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_imports_shadowed_remove(ast) {
@@ -10,8 +10,7 @@ export function js_imports_shadowed_remove(ast) {
   let names = js_imports_shadowed(ast);
   let entries = js_imports_declarations(ast);
   function shadowed_is(entry) {
-    let name = property_get(entry, "name");
-    let included = list_includes(names, name);
+    let included = property_in_list(entry, "name", names);
     return included;
   }
   let dead = list_filter(entries, shadowed_is);
