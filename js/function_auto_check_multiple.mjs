@@ -1,6 +1,6 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { function_exists_not } from "./function_exists_not.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
@@ -28,10 +28,8 @@ export async function function_auto_check_multiple(names_comma) {
     let b = not(missing);
     return b;
   }
-  let dead_entries = list_filter(entries, missing_is);
-  let dead = list_map_property(dead_entries, "name");
-  let live_entries = list_filter(entries, live_is);
-  let live = list_map_property(live_entries, "name");
+  let dead = list_filter_map_property(entries, missing_is, "name");
+  let live = list_filter_map_property(entries, live_is, "name");
   let results = await list_map_async(live, function_auto_check);
   function refused_is(result) {
     let b = not(result.ok);
