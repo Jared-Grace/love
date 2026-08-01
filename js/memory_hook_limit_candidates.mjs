@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { path_join } from "./path_join.mjs";
@@ -5,7 +6,6 @@ import { file_read } from "./file_read.mjs";
 import { add } from "./add.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function memory_hook_limit_candidates() {
   "Index entries whose NOTE states a bound on its own advice but whose HOOK does not carry one - the excerpt defect, where the line loaded into every session keeps the licence and leaves the brake in the body. A truncated licence reads as an unconditional instruction, so this is the shape worth hunting. HEURISTIC and deliberately a REPORT, never a gate: whether a hook would surface its bound is a meaning question, and a gate claiming to answer it would be green while wrong. Expect false positives - the answer is a candidate list to read, not a defect list. Read-only.";
@@ -45,8 +45,7 @@ export async function memory_hook_limit_candidates() {
   for (let line of lines) {
     let opener = "](";
     let at = line.indexOf(opener);
-    let b = equal(at, -1);
-    let found = not(b);
+    let found = equal_not(at, -1);
     if (found) {
       let past = add(at, 2);
       let rest = line.slice(past);
@@ -55,8 +54,7 @@ export async function memory_hook_limit_candidates() {
       let is_md = text_ends_with(name, ".md");
       if (is_md) {
         let dash = line.indexOf(" — ");
-        let b2 = equal(dash, -1);
-        let has_hook = not(b2);
+        let has_hook = equal_not(dash, -1);
         if (has_hook) {
           let start = add(dash, 3);
           let hook = line.slice(start);
