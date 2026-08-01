@@ -9,9 +9,9 @@ export async function app_g_sky_step() {
   ("advance the sky ONE step to the next colour anchor (morning→noon→afternoon→sunset→night→sunrise→morning…) and smoothly drift there — the #day_parts dev demo calls this on each move, so walking cycles the day. builds on the persisted phase so steps land on clean integers (",
     fn_name("g_phase_color"),
     " wraps the ever-growing value). then WRITES the new phase to disk (",
-    app_g_game_save.name,
+    fn_name("app_g_game_save"),
     ") so the #day_parts demo remembers the current sky across refresh — this demo-only path adds the persistence that ",
-    app_g_sky_to.name,
+    fn_name("app_g_sky_to"),
     " alone (in-memory only) lacks");
   let g = await app_g_game_save_get();
   let phase = g_sky_phase_get(g);
