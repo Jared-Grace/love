@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { js_tokenizer } from "./js_tokenizer.mjs";
 import { js_tokenizer_label_property_path } from "./js_tokenizer_label_property_path.mjs";
 import { property_path_get } from "./property_path_get.mjs";
@@ -5,8 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { undefined_is } from "./undefined_is.mjs";
 import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function app_code_quiz_tokens(code) {
   "tokenize code for the unscramble quiz. Like the normalized tokenizer, EXCEPT a string literal becomes THREE tokens - an opening quote, its text, and a closing quote - so the learner has to place the quotes themselves. The plain JS tokenizer lumps a whole string into one token and drops its quotes, which would make a string unscramble trivial and never teach quote placement.";
   let quote = '"';
@@ -30,7 +29,6 @@ export function app_code_quiz_tokens(code) {
     let one = [t];
     return one;
   }
-  let expanded = list_map(tokens, expand);
-  let flat = list_concat_multiple(expanded);
+  let flat = list_map_concat_multiple(tokens, expand);
   return flat;
 }

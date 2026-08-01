@@ -1,9 +1,8 @@
-import { list_map } from "./list_map.mjs";
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_review_seed_from_items } from "./app_code_review_seed_from_items.mjs";
 import { range_map } from "./range_map.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review_seeds_gather(lessons) {
@@ -22,8 +21,7 @@ export function app_code_review_seeds_gather(lessons) {
     let per_kind = range_map(kind_count, each_kind);
     return per_kind;
   }
-  let per_lesson = list_map(lessons, each_lesson);
-  let all = list_concat_multiple(per_lesson);
+  let all = list_map_concat_multiple(lessons, each_lesson);
   list_shuffle(all);
   return all;
 }

@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -27,8 +28,7 @@ export function js_bound_names(ast) {
     let names_inner = list_map(identifiers, name_of);
     return names_inner;
   }
-  let per_function = list_map(all, params_of);
-  let parameters = list_concat_multiple(per_function);
+  let parameters = list_map_concat_multiple(all, params_of);
   let names = list_concat_multiple([declared, parameters]);
   return names;
 }
