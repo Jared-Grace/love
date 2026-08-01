@@ -75,7 +75,7 @@ async function watching_start() {
     function lambda2() {
       quiet = null;
       generation = generation + 1;
-      log(function_worker_pool_run.name, {
+      log(fn_name("function_worker_pool_run"), {
         retired_for: path,
         generation,
       });
