@@ -1,9 +1,9 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_pointers_out } from "./folder_pointers_out.mjs";
 import { property_get } from "./property_get.mjs";
 import { path_base } from "./path_base.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -23,8 +23,7 @@ export async function qa_tree_pointers_assert(repos) {
       list_add(leaking, pointer);
     }
   }
-  let size = list_size(leaking);
-  let none = equal(size, 0);
+  let none = list_empty_is(leaking);
   assert_json(none, {
     leaking,
     hint: "the frozen copy points at a living folder, so a question asked of it is being answered by files that can change while it is asked - copy that folder in instead of pointing at it",
