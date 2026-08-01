@@ -1,3 +1,4 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
@@ -16,10 +17,8 @@ import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_any } from "./list_any.mjs";
-import { not } from "./not.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
@@ -61,8 +60,7 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   let binding = property_get(match, "binding");
   let needed = list_concat(params, [return_local]);
   function unbound_is(name) {
-    let has = property_exists(binding, name);
-    let missing = not(has);
+    let missing = property_exists_not(binding, name);
     return missing;
   }
   let any_unbound = list_any(needed, unbound_is);
