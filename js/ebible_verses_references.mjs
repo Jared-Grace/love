@@ -10,7 +10,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
   let books = await ebible_version_books(bible_folder);
   let vs = await ebible_verses(bible_folder, chapter_code);
   function lambda(v) {
-    let text = property_get(v, "text");
+    let words = property_get(v, "text");
     let verse_number = property_get(v, "verse_number");
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
@@ -18,7 +18,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
       [verse_number],
     );
     let v2 = text_combine_multiple([
-      text,
+      words,
       " ",
       text_wrap_parenthesis(reference),
     ]);
