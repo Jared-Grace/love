@@ -1,5 +1,5 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declare_init_get } from "./js_declare_init_get.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { list_first } from "./list_first.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
@@ -34,8 +34,7 @@ export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
     list_remove_multiple(stack_2_inner, [stack_1_inner, next]);
     function lambda2(declaration) {
       let init = js_declare_init_get(declaration);
-      let id = property_get(declaration, "id");
-      let name = property_get(id, "name");
+      let name = property_path_get_2(declaration, "id", "name");
       let is = js_identifiers_named(ast_inner, name);
       function lambda3(item) {
         let replacement = object_copy(init);
