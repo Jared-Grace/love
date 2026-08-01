@@ -67,6 +67,8 @@ export async function functions_call_pairs_frequent() {
           files: {},
           wired: wired,
           example: example,
+          left: callee,
+          right: callee2,
         });
       }
       let record = property_get(tally, key);
@@ -86,6 +88,8 @@ export async function functions_call_pairs_frequent() {
       files: file_count,
       count: record.count,
       pair: record.example,
+      left: record.left,
+      right: record.right,
     });
   }
   function lambda(a, b) {
