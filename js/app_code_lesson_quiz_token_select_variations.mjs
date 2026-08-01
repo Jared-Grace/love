@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { app_code_lesson_quiz_token_select_value_variations } from "./app_code_lesson_quiz_token_select_value_variations.mjs";
@@ -29,8 +30,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     "gather one orderable per commutative node - each carries its list of ordering functions and a restore to its original arrangement";
     let commutatives = js_code_binary_expression_commutative();
     function on_binary(node) {
-      let operator = property_get(node, "operator");
-      let includes = list_includes(commutatives, operator);
+      let includes = property_in_list(node, "operator", commutatives);
       if (includes) {
         let left = property_get(node, "left");
         let right = property_get(node, "right");
