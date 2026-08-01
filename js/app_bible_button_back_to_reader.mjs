@@ -1,3 +1,4 @@
+import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -11,7 +12,8 @@ import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export async function app_bible_button_back_to_reader(parent, context) {
   "a book/chapter/verse picker is a transient one-job screen; name the escape by its destination so the reader can see exactly which verse they will return to, e.g. \"Back to John 3:16\"";
   let hash = html_hash_object_get();
-  let chapter_code = property_get(hash, "c");
+  let property_name = app_shared_bible_chapter_hash_key();
+  let chapter_code = property_get(hash, property_name);
   let verse_number = app_bible_hash_v_get(hash);
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
