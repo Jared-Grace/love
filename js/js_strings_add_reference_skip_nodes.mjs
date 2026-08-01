@@ -19,7 +19,7 @@ export function js_strings_add_reference_skip_nodes(ast) {
     f_name6,
     f_name7,
     f_name8,
-    fn_name.name,
+    fn_name("fn_name"),
     fn_name("text_frozen"),
   ];
   function lambda2(la) {
