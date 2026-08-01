@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_call_function_if } from "./js_call_function_if.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -13,8 +14,7 @@ export async function js_await_remove_inner(functions, ast, visited) {
       if (en) {
         return;
       }
-      let f = property_get(functions, name);
-      let async_is = property_get(f, "async");
+      let async_is = property_path_get_2(functions, name, "async");
       if (async_is) {
         return;
       }
