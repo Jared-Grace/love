@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_find } from "./list_find.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_find_object_containing_text(ast, text) {
   "One record out of a list of them, found by a word written inside it. Records";
@@ -21,8 +21,7 @@ export function js_find_object_containing_text(ast, text) {
       let value = property_get(property, "value");
       let literal_is = js_literal_is(value);
       if (literal_is) {
-        let held = property_get(value, "value");
-        let same = equal(held, text);
+        let same = property_equals(value, "value", text);
         return same;
       }
       return false;
