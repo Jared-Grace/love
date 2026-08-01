@@ -1,3 +1,7 @@
+import { list_size } from "./list_size.mjs";
+import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -45,6 +49,12 @@ export function app_code_quiz(context) {
       "quiz_index",
       0,
     );
+    let count = list_size(qs);
+    let in_range = less_than(quiz_index, count);
+    if (not(in_range)) {
+      quiz_index = 0;
+      app_code_quiz_index_set(context, quiz_index);
+    }
     let q = list_get(qs, quiz_index);
     q(context, container, c, refresh, next_get);
   }
