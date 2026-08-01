@@ -1,6 +1,5 @@
-import { property_get } from "./property_get.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 export function js_function_declaration_name(declaration) {
-  let declaration_id = property_get(declaration, "id");
-  let name = property_get(declaration_id, "name");
+  let name = property_path_get_2(declaration, "id", "name");
   return name;
 }
