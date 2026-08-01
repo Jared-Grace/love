@@ -42,7 +42,6 @@
   {
    "name": "app_bible_books_matches",
    "shadows_outer": [
-    "empty",
     "mapped"
    ],
    "shadows_function": []
