@@ -173,14 +173,14 @@ export function app_g_dev_routes(div_map) {
   }
   async function day_conversation() {
     ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation as a ONE-slice day, so it spans the whole 6 AM sunrise → 7 PM dusk and the change is easy to SEE as you answer each turn (",
-      app_g_day_conversation_demo.name,
+      fn_name("app_g_day_conversation_demo"),
       "). the real game runs many slices, so a conversation there only ages its OWN slice, not the whole day");
     await app_g_view_set(null);
     await app_g_day_conversation_demo();
   }
   async function design() {
     ("the #design reader: every memory note about this game's design, gathered and shown as collapsible cards (",
-      app_g_design.name,
+      fn_name("app_g_design"),
       "). not a mechanic under test like its siblings — it is the DESIGN behind them, kept in the game so it can be read where the work happens");
     await app_g_view_set(null);
     await app_g_design();
