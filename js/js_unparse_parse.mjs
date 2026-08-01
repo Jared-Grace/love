@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { js_parse } from "./js_parse.mjs";
 export function js_unparse_parse(ast) {
   arguments_assert(arguments, 1);
   ("write a tree back out as source and read it straight back in, handing back the tree that came back");
