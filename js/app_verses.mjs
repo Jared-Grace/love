@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
@@ -276,8 +277,7 @@ export async function app_verses(context) {
     function group_each(group) {
       let reference = property_get(group, "reference");
       list_add(lines, reference);
-      let entries = property_get(group, "entries");
-      let texts = list_map_property(entries, "text");
+      let texts = property_list_map_property(group, "entries", "text");
       list_add_multiple(lines, texts);
     }
     each(verse_groups, group_each);
