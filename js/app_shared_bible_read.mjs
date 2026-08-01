@@ -1,3 +1,4 @@
+import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_style_justify_self } from "./html_style_justify_self.mjs";
@@ -69,7 +70,6 @@ import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
 import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
-import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
@@ -204,7 +204,11 @@ export async function app_shared_bible_read(context, verse_action) {
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
-      app_shared_bible_code_open(chapter_code);
+      let verse_numbers = list_map_property(primary_verses, "verse_number");
+      let first = list_first(verse_numbers);
+      let last = list_last(verse_numbers);
+      let endpoints = equal(first, last) ? [first] : [first, last];
+      app_shared_bible_code_verses_open(chapter_code, endpoints);
     }
     app_shared_button(bar, "View whole chapter", view_whole_chapter);
   } else {
