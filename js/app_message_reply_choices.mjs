@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { reply_on_match_output_code } from "./reply_on_match_output_code.mjs";
 import { reply_on_match_capture } from "./reply_on_match_capture.mjs";
 import { reply_on_match_output_add_multiple } from "./reply_on_match_output_add_multiple.mjs";
@@ -66,8 +67,7 @@ export function app_message_reply_choices() {
   function lambda(filtered, u) {
     function lambda2(possibility) {
       let tokens = property_get(possibility, "tokens");
-      let data = property_get(possibility, "data");
-      let v = property_get(data, u);
+      let v = property_path_get_2(possibility, "data", u);
       let after = property_get(v, "after");
       let before = property_get(v, "before");
       let sliced = list_slice(tokens, before, after);
