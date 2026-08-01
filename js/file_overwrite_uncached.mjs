@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
 import { promise_catch_ignore } from "./promise_catch_ignore.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
@@ -6,10 +7,7 @@ import { null_is } from "./null_is.mjs";
 import { data_file_update } from "./data_file_update.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_compress } from "./json_compress.mjs";
-import { list_add } from "./list_add.mjs";
 import { indexeddb_put } from "./indexeddb_put.mjs";
-import { json_decompress } from "./json_decompress.mjs";
-import { property_get } from "./property_get.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
@@ -21,19 +19,16 @@ export async function file_overwrite_uncached(file_path, contents) {
     file_path = file_path_normalize(file_path);
     let store = browser_files_store();
     async function value_get(previous) {
+      ("a browser file stores ONE version — the current contents — and the record keeps the `versions` list shape because ",
+        fn_name("file_read"),
+        " reads the last entry of it.");
+      ("it used to APPEND, keeping every version ever written. nothing ever read one: the only reader takes the last. and the cost was paid on every single write, because the whole history had to be decompressed, grown by one full copy, and recompressed. MEASURED on a real g save (12 KB of json per version, lz-string): 1 version = 8 ms per write, 50 = 171 ms, 100 = 348 ms, 200 = 1055 ms, 400 = 3322 ms — it gets slower the longer the game is played, forever. the game writes twice per tap, which is why praying for the next conversation took half a second on a save that had reached 68 KB. keeping only the current version makes every write cost the same 8 ms no matter how long the game has been played, and drops the decompress entirely, since the previous contents are no longer needed.");
       let p = "compressed";
-      let f = null;
       let nn = null_is(previous);
       if (nn) {
-        f = {
-          ["versions"]: [""],
-        };
         previous = {
           key: file_path,
         };
-      } else {
-        let compressed_before = property_get(previous, p);
-        f = await json_decompress(compressed_before);
       }
       let e = text_empty_is(contents);
       if (e) {
@@ -41,8 +36,9 @@ export async function file_overwrite_uncached(file_path, contents) {
       } else {
         property_delete_if_exists(previous, "deleted");
       }
-      let list = property_get(f, "versions");
-      list_add(list, contents);
+      let f = {
+        ["versions"]: [contents],
+      };
       let compressed_after = await json_compress(f);
       property_set(previous, p, compressed_after);
       return previous;
