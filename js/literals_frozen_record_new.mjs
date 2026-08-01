@@ -1,5 +1,5 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { property_delete } from "./property_delete.mjs";
 import { and } from "./and.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
@@ -53,8 +53,7 @@ export async function literals_frozen_record_new() {
     if (live) {
       continue;
     }
-    let was = property_get(recorded, f_name);
-    let carried = list_includes(arrived, was);
+    let carried = property_in_list(recorded, f_name, arrived);
     if (carried) {
       property_delete(recorded, f_name);
       list_add(dropped, f_name);
