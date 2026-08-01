@@ -9,7 +9,7 @@ export function app_g_bible_passage_button_direct(
   lambda,
 ) {
   ("a Bible passage choice button built from a reference + verse text DIRECTLY (no chapter-code lookup) — for verses that carry their own reference/text (e.g. the how-are-you comfort verses, which span many books). dark bg + light-green reference + glowing gold verse (",
-    app_g_scripture.name,
+    fn_name("app_g_scripture"),
     "); the base that ",
     fn_name("app_g_bible_passage_button"),
     " delegates to");
