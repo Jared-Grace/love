@@ -27,8 +27,8 @@ export async function sandbox_4_a() {
         bible_folders,
         ebible_version_books,
       );
-      let mapped = list_map_property(books, "text");
-      let verse_references = list_filter_starts_with_any(split, mapped);
+      let mapped_inner = list_map_property(books, "text");
+      let verse_references = list_filter_starts_with_any(split, mapped_inner);
     }
     await each_async(list, lambda2);
     let v = [first, mapped2];
