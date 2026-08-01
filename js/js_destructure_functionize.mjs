@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declare_init_get } from "./js_declare_init_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_is } from "./list_is.mjs";
@@ -20,8 +21,7 @@ import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
 export async function js_destructure_functionize(ast) {
   let variable_name = js_return_identifier_name();
   function lambda(v) {
-    let node = property_get(v, "node");
-    let properties = property_get(node, "properties");
+    let properties = property_path_get_2(v, "node", "properties");
     let stack = property_get(v, "stack");
     let e = list_get_end_1(stack);
     let l = list_is(e);
