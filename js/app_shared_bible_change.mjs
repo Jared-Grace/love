@@ -17,7 +17,8 @@ export async function app_shared_bible_change(
   function transform(hash) {
     let property_name = app_shared_bible_chapter_hash_key();
     property_set(hash, property_name, next);
-    property_set(hash, "v", "");
+    let property_name2 = app_shared_bible_verse_hash_key();
+    property_set(hash, property_name2, "");
   }
   html_hash_transform_reload(transform);
 }
