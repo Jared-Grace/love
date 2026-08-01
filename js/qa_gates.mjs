@@ -183,6 +183,7 @@ export function qa_gates() {
     functions_shadowing_function_gate_run,
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
+    hash_key_literals_gate_run,
     literals_frozen_storage_gate_run,
     storage_local_key_names_gate_run,
     storage_local_key_words_gate_run,
