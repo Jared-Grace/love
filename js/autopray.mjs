@@ -10,8 +10,8 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { log_keep } from "./log_keep.mjs";
 export async function autopray() {
   async function lambda3(la) {
-    async function lambda(chapter_code, verses) {
-      let mapped = list_map_property(verses, "text");
+    async function lambda(chapter_code, verses_inner) {
+      let mapped = list_map_property(verses_inner, "text");
       each(mapped, la);
     }
     await ebible_chapters_each_verses(ebible_folder_english(), lambda);
