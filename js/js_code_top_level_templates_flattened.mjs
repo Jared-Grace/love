@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_code_string_statement } from "./js_code_string_statement.mjs";
 import { js_code_spans_replaced } from "./js_code_spans_replaced.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -14,8 +15,11 @@ export function js_code_top_level_templates_flattened(code) {
     let type = property_get(statement, "type");
     let expression_is = equal(type, "ExpressionStatement");
     if (expression_is) {
-      let expression = property_get(statement, "expression");
-      let expression_type = property_get(expression, "type");
+      let expression_type = property_path_get_2(
+        statement,
+        "expression",
+        "type",
+      );
       let template_is = equal(expression_type, "TemplateLiteral");
       return template_is;
     }
