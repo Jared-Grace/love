@@ -1,3 +1,4 @@
+import { storage_key_seams_gate_run } from "./storage_key_seams_gate_run.mjs";
 import { storage_local_key_names_gate_run } from "./storage_local_key_names_gate_run.mjs";
 import { text_dispatcher_command_names_gate_run } from "./text_dispatcher_command_names_gate_run.mjs";
 import { functions_dispatcher_commands_gate_run } from "./functions_dispatcher_commands_gate_run.mjs";
@@ -178,6 +179,7 @@ export function qa_gates() {
     literals_frozen_gate_run,
     literals_frozen_storage_gate_run,
     storage_local_key_names_gate_run,
+    storage_key_seams_gate_run,
     functions_unreachable_check_gate_run,
     functions_statements_after_return_gate_run,
     functions_arity_gate_run,
