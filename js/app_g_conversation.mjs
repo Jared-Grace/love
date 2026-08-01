@@ -1,3 +1,6 @@
+import { list_min } from "./list_min.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_first } from "./list_first.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
