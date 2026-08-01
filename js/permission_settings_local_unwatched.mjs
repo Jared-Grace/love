@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { file_exists_not } from "./file_exists_not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -35,8 +36,7 @@ export async function permission_settings_local_unwatched() {
   }
   let local_allow = property_get(local_permissions, "allow");
   let shared = await file_read_json(shared_path);
-  let shared_permissions = property_get(shared, "permissions");
-  let shared_allow = property_get(shared_permissions, "allow");
+  let shared_allow = property_path_get_2(shared, "permissions", "allow");
   let unwatched = list_without_multiple(local_allow, shared_allow);
   return unwatched;
 }
