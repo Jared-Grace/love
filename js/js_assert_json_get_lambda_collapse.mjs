@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -55,8 +56,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       let none = null;
       return none;
     }
-    let declarator = list_get(declarators, 0);
-    let id = property_get(declarator, "id");
+    let id = list_get_property(declarators, 0, "id");
     let name = identifier_name(id);
     return name;
   }
@@ -68,8 +68,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
     if (not(one_is)) {
       return false;
     }
-    let declarator = list_get(declarators, 0);
-    let init = property_get(declarator, "init");
+    let init = list_get_property(declarators, 0, "init");
     let record_is = js_node_type_is(init, "ObjectExpression");
     if (not(record_is)) {
       return false;
