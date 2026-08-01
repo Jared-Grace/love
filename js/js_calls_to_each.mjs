@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_await_if_unwrap } from "./js_await_if_unwrap.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -64,8 +65,7 @@ export function js_calls_to_each(ast) {
       return;
     }
     let r = await js_call_new(fn_name("each_async"), ast);
-    let parsed = property_get(r, "parsed");
-    let expression3 = property_get(parsed, "expression");
+    let expression3 = property_path_get_2(r, "parsed", "expression");
     if (async_is) {
       expression3 = property_get(expression3, "argument");
     }
