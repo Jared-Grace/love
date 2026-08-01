@@ -26,8 +26,8 @@ export async function storage_key_seams_gate_run() {
     both,
   });
   let classified = list_concat(durable, durable_not);
-  function classified_not_is(f_name) {
-    let n = list_includes_not(classified, f_name);
+  function classified_not_is(caller) {
+    let n = list_includes_not(classified, caller);
     return n;
   }
   let unclassified = list_filter(callers, classified_not_is);
