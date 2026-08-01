@@ -292,7 +292,7 @@ export async function app_g_conversation(
     return topic;
   }
   function render_boundary(turn) {
-    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a BEAT (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the beat plus the re-randomized openers make guessing slower than praying for discernment, so prayer becomes the best path";
+    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a PAUSE (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the pause plus the re-randomized openers make guessing slower than praying for discernment, so prayer becomes the best path";
     html_clear(overlay);
     app_g_npc_typing(npc, overlay);
     function reveal() {
