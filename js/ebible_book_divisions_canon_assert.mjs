@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
@@ -21,8 +22,7 @@ export function ebible_book_divisions_canon_assert() {
     let flat = list_concat_multiple(per);
     return flat;
   }
-  let per_testament = list_map(testaments, testament_codes);
-  let grouped = list_concat_multiple(per_testament);
+  let grouped = list_map_concat_multiple(testaments, testament_codes);
   let same = lists_equal_pair(grouped, canon);
   assert_json(same, {
     grouped,

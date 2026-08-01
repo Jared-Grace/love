@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
@@ -6,7 +7,6 @@ import { list_concat } from "./list_concat.mjs";
 import { add_1 } from "./add_1.mjs";
 import { range } from "./range.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function list_permutations(list) {
   "every ordering of the list (n! of them, so keep the list small); duplicate items produce duplicate orderings";
   let size = list_size(list);
@@ -27,7 +27,6 @@ export function list_permutations(list) {
     let mapped = list_map(sub_orderings, prepend);
     return mapped;
   }
-  let grouped = list_map(range(size), orderings_starting_at);
-  let all = list_concat_multiple(grouped);
+  let all = list_map_concat_multiple(range(size), orderings_starting_at);
   return all;
 }
