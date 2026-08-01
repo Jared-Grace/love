@@ -61,7 +61,7 @@ export async function apps_node_only_gate_run() {
       fn_name("file_name_references_strip") +
       text_combine_multiple([
         " on the file holding that reference to swap X.name for a dependency-free ",
-        fn_name.name,
+        fn_name("fn_name"),
         " marker (then the now-unused import is dropped)",
       ]),
   });
