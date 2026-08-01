@@ -1,10 +1,9 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
 import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
-import { not } from "./not.mjs";
 import { permission_prompt_events_blocked } from "./permission_prompt_events_blocked.mjs";
 import { permission_prompt_events_confirmed } from "./permission_prompt_events_confirmed.mjs";
 import { permission_prompt_rows_print } from "./permission_prompt_rows_print.mjs";
@@ -24,8 +23,7 @@ export async function permission_prompt_confirmed_report(
   let confirmed = permission_prompt_events_confirmed(events);
   function known_is(event) {
     let value = property_get(event, key);
-    let empty = text_empty_is(value);
-    let b = not(empty);
+    let b = text_empty_not_is(value);
     return b;
   }
   let named = list_filter(confirmed, known_is);
