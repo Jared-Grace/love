@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
 export async function function_acronym_to_name(alias) {
-  "The map is only asked for a name that could be an acronym at all. Every other name is a guaranteed miss, and reaching the map to hear it reads every function file in every repo - about 0.6 seconds, spent twice on every open, for an answer known from the name's own spelling.";
+  "The map is only asked for a name that could be an acronym at all. Every other name is a guaranteed miss, and reaching the map to hear it lists every function file in every repo and derives an acronym for each - 41ms, spent twice on every open, for an answer the name's own spelling already gave.";
   let expanded = null;
   let expandeds = [];
   let possible = function_name_acronym_possible_is(alias);
