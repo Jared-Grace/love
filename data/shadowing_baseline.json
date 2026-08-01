@@ -57,7 +57,6 @@
   {
    "name": "app_calendar_paste_convert",
    "shadows_outer": [
-    "start",
     "zone"
    ],
    "shadows_function": []
@@ -80,13 +79,6 @@
    "name": "app_code_lesson_expression_remainder_divide",
    "shadows_outer": [
     "percent"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_code_lesson_functions_arithmetic",
-   "shadows_outer": [
-    "c"
    ],
    "shadows_function": []
   },
@@ -146,13 +138,6 @@
    "name": "app_message_provide_generic",
    "shadows_outer": [
     "context"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_replace_rule_set_verify_from_try",
-   "shadows_outer": [
-    "start"
    ],
    "shadows_function": []
   },
@@ -227,13 +212,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_supper_verses_get",
-   "shadows_outer": [
-    "v"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "bible_verses_uplifting_package_upload",
    "shadows_outer": [
     "present"
@@ -260,7 +238,6 @@
    "name": "command_line_generic",
    "shadows_outer": [
     "options",
-    "c",
     "args",
     "command"
    ],
@@ -270,13 +247,6 @@
    "name": "command_line_read",
    "shadows_outer": [
     "answer"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "crypto_mini_sat_dimacs_to_output",
-   "shadows_outer": [
-    "v"
    ],
    "shadows_function": []
   },
@@ -312,16 +282,14 @@
    "name": "ebible_references_parse_lines_generic",
    "shadows_outer": [
     "bible_folder",
-    "books",
-    "v"
+    "books"
    ],
    "shadows_function": []
   },
   {
    "name": "ebible_versions_english_downloadable_words_lookup",
    "shadows_outer": [
-    "lower",
-    "s"
+    "lower"
    ],
    "shadows_function": []
   },
@@ -349,7 +317,6 @@
   {
    "name": "function_comments_migrate_multiple",
    "shadows_outer": [
-    "changed",
     "left"
    ],
    "shadows_function": []
@@ -358,13 +325,6 @@
    "name": "function_name_to_path_search",
    "shadows_outer": [
     "mapped"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "function_params_new_generic",
-   "shadows_outer": [
-    "v"
    ],
    "shadows_function": []
   },
@@ -379,20 +339,6 @@
    "name": "function_string_split_space_change",
    "shadows_outer": [
     "literal"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "function_top_level_templates_flatten_multiple",
-   "shadows_outer": [
-    "changed"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "functions_callers_inside_dependencies",
-   "shadows_outer": [
-    "inside"
    ],
    "shadows_function": []
   },
@@ -419,13 +365,6 @@
    "shadows_function": []
   },
   {
-   "name": "g_sermon_passage_get",
-   "shadows_outer": [
-    "v"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "g_themes",
    "shadows_outer": [
     "list"
@@ -436,13 +375,6 @@
    "name": "html_checkboxes",
    "shadows_outer": [
     "div"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "html_overlay",
-   "shadows_outer": [
-    "s"
    ],
    "shadows_function": []
   },
@@ -465,8 +397,7 @@
   {
    "name": "indexeddb_put_backend",
    "shadows_outer": [
-    "tx",
-    "s"
+    "tx"
    ],
    "shadows_function": []
   },
@@ -514,25 +445,10 @@
    "shadows_function": []
   },
   {
-   "name": "js_offset_inside_function_is",
-   "shadows_outer": [
-    "inside"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_ternary_replace",
    "shadows_outer": [
     "a",
-    "test",
-    "c"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "list_chunk",
-   "shadows_outer": [
-    "lambda"
+    "test"
    ],
    "shadows_function": []
   },
@@ -558,20 +474,6 @@
    "shadows_function": []
   },
   {
-   "name": "reply_messages_all",
-   "shadows_outer": [
-    "result"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "reply_on_match_capture",
-   "shadows_outer": [
-    "lambda"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "reply_test",
    "shadows_outer": [
     "item"
@@ -589,13 +491,6 @@
    "name": "roman_to_integer",
    "shadows_outer": [
     "input"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "server",
-   "shadows_outer": [
-    "result"
    ],
    "shadows_function": []
   },
