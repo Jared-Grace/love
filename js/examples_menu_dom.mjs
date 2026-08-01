@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { html_text_align } from "./html_text_align.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
@@ -94,8 +95,7 @@ export function examples_menu_dom(parent, examples, on_select) {
   }
   let index = 0;
   for (let group of examples_groups()) {
-    let members = property_get(group, "examples");
-    let size = list_size(members);
+    let size = property_list_size(group, "examples");
     let value = property_get(group, "name");
     render_segment(value, index, size);
     index = index + size;
