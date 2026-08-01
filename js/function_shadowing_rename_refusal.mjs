@@ -1,3 +1,6 @@
+import { js_binding_names } from "./js_binding_names.mjs";
+import { js_imports } from "./js_imports.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -28,6 +31,23 @@ export async function function_shadowing_rename_refusal(
   }
   let parsed = await function_parse_declaration(f_name);
   let ast = property_get(parsed, "ast");
+  ("A name the file BINDS and a name the file merely READS are two different");
+  ("refusals, and asking only the second reported the first as no reason at all.");
+  ("The rename itself refuses a word the file binds or imports; this asked");
+  ("whether the word was read while unbound, which a bound word never is - so a");
+  ("replacement already declared here came back as empty text, and a sweep");
+  ("printed a skipped name with nothing beside it. Measured on one site: image");
+  ("generate declares its own words, and the sweep said only that it had been");
+  ("skipped.");
+  let names = js_binding_names(ast);
+  let imports = js_imports(ast);
+  let taken = list_concat(names, imports);
+  let declared = list_includes(taken, name_after);
+  if (declared) {
+    let held =
+      "the replacement is already bound or imported in this file, so the rename would move the hiding rather than end it";
+    return held;
+  }
   let free = js_free_names(ast);
   let bound_already = list_includes(free, name_after);
   if (bound_already) {
