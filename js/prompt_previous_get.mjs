@@ -14,6 +14,6 @@ export async function prompt_previous_get() {
   let other = list_concat([fn_name("prompt_previous")], b);
   let difference = list_difference(prompts, other);
   let previous = list_last(difference);
-  log_keep(prompt_previous_get.name, previous);
+  log_keep(fn_name("prompt_previous_get"), previous);
   return previous;
 }
