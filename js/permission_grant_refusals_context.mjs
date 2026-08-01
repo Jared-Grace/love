@@ -57,12 +57,13 @@ export async function permission_grant_refusals_context(unaliased, context) {
   let seams = await function_command_seams_reached_memo(unaliased, remembered);
   let reaches = greater_than(seams.length, 0);
   ("Reaching a command-running function is only a reason to refuse when there are arguments that could steer it there. The refusal is a sentence about arguments, and a function declaring none cannot have it be true: a rule covers every argument the function is ever handed, and handing arguments to a function that declares none changes nothing it does. That is exactly the condition this repo already states for granting at all - behaviour fixed regardless of the arguments - so an empty parameter list proves it rather than estimating it. Without this the gates and reports, which take nothing and are the most worth granting, were the ones refused.");
+  ("What the refusal says is what was measured, and no more. Two things are known here - the function declares arguments, and something it reaches runs commands - and the third thing, whether an argument can travel from one to the other, is exactly what is not looked at. Saying outright that the arguments CAN become a command line reads as that third thing having been found, and a reader who then goes and traces it finds it is not so: on the promote-and-deploy command the argument reaches no command runner at all, and the branch that does takes no arguments. The refusal is still right to stand, because not-looked-at is not the same as ruled-out. It is the sentence that has to stop claiming more than the check did.");
   let steerable = and(reaches, takes_arguments);
   if (steerable) {
     list_add(
       refusals,
       unaliased +
-        " reaches a command-running function, so its arguments can become a command line: " +
+        " declares arguments and reaches a command-running function, so nothing here can rule out an argument steering one: " +
         list_join_comma(seams),
     );
   }
