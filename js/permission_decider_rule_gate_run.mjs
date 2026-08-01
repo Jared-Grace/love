@@ -25,7 +25,7 @@ export async function permission_decider_rule_gate_run() {
   log_console(message2);
   if (greater_than(offenders.length, 0)) {
     let combined = text_combine_multiple([
-      "permission settings rule gate: ",
+      "permission decider rule gate: ",
       offenders.length,
       " allow rules let a tool change a file that decides what is auto-approved",
     ]);
