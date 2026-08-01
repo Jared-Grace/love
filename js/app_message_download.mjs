@@ -1,7 +1,6 @@
+import { buffer_to_json } from "./buffer_to_json.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { json_from } from "./json_from.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_storage_download } from "./firebase_storage_download.mjs";
 import { messages_firebase_path } from "./messages_firebase_path.mjs";
@@ -15,8 +14,7 @@ export async function app_message_download() {
     let name = property_get(item, "name");
     let project_url = firebase_storage_url_project_jg();
     let buffer = await firebase_storage_download(project_url, name);
-    let s = buffer_text_to(buffer);
-    let o = json_from(s);
+    let o = buffer_to_json(buffer);
     return o;
   }
   let downloads = await list_map_unordered_async(files, lambda);
