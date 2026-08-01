@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -45,8 +46,7 @@ export function js_calls_named_sized(ast, f_name, count) {
     if (not(plain)) {
       return;
     }
-    let name = property_get(callee, "name");
-    let named = equal(name, f_name);
+    let named = property_equals(callee, "name", f_name);
     if (not(named)) {
       return;
     }
