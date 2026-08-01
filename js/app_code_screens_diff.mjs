@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { file_read } from "./file_read.mjs";
 import { app_code_screen_text_normalize } from "./app_code_screen_text_normalize.mjs";
 import { each } from "./each.mjs";
@@ -8,7 +9,6 @@ import { property_exists } from "./property_exists.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 export async function app_code_screens_diff(baseline_path, current_path) {
   "compare a fresh screen manifest against the committed baseline and return which screens changed - keyed by lesson id, screen, and kind, comparing digit-masked text so the random numbers in each quiz do not count as changes. Returns { changed, added, removed } lists of keys for the make-sense judge to focus on";
   let baseline_json = await file_read(baseline_path);
@@ -47,8 +47,7 @@ export async function app_code_screens_diff(baseline_path, current_path) {
       list_add(added, key);
       return;
     }
-    let before = property_get(baseline_map, key);
-    let same = equal(before, masked);
+    let same = property_equals(baseline_map, key, masked);
     if (not(same)) {
       list_add(changed, key);
     }
