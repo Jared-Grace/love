@@ -1,3 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
+import { g_prayer_prompt } from "./g_prayer_prompt.mjs";
+import { g_prayer_prompt_more } from "./g_prayer_prompt_more.mjs";
 import { petitions_choose } from "./petitions_choose.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_prayer_menu_overlay } from "./app_g_prayer_menu_overlay.mjs";
@@ -21,7 +24,11 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_g_pray_turn(prayer_texts, on_part, on_done) {
   ("the conversation-closing PRAYER turn as its own overlay (gratitude-style, DRY via ",
     app_g_prayer_menu_overlay.name,
-    "): prompt 'What would you like to pray to God?' + a green button per prayer. the choices are the turns' `prayer_text`s (contextual intercession, composed 'God, <ask> <text>, Amen'; falls back to generic if the conversation had none). the player prays EACH one — tapping a prayer prays it (a brief overlay) and REMOVES it, calling on_part for that prayed part — and only when ALL are prayed does it call on_done (interceding fully for the person, not just one request)");
+    "): the prompt (",
+    fn_name("g_prayer_prompt"),
+    ") + a green button per prayer. the prompt gains its 'else' (",
+    fn_name("g_prayer_prompt_more"),
+    ") only from the SECOND screen on — 'what else' names a remainder, so it is true once a part has been prayed and false the first time the question is asked. the choices are the turns' `prayer_text`s (contextual intercession, composed 'God, <ask> <text>, Amen'; falls back to generic if the conversation had none). the player prays EACH one — tapping a prayer prays it (a brief overlay) and REMOVES it, calling on_part for that prayed part — and only when ALL are prayed does it call on_done (interceding fully for the person, not just one request)");
   let overlay = app_g_prayer_menu_overlay();
   let chosen = petitions_choose(prayer_texts);
   function make_item(petition) {
@@ -31,6 +38,9 @@ export function app_g_pray_turn(prayer_texts, on_part, on_done) {
     return item;
   }
   let remaining = list_map(chosen, make_item);
+  let prayed = {
+    done: false,
+  };
   function render() {
     html_clear(overlay);
     let i = list_size(remaining);
@@ -42,7 +52,11 @@ export function app_g_pray_turn(prayer_texts, on_part, on_done) {
       return;
     }
     let container = app_g_container_player(overlay);
-    app_g_p_text(container, "What would you like to pray to God?");
+    let prompt = g_prayer_prompt();
+    if (prayed.done) {
+      prompt = g_prayer_prompt_more();
+    }
+    app_g_p_text(container, prompt);
     function add_item(item) {
       let text = property_get(item, "text");
       let v = emoji_pray();
@@ -53,6 +67,7 @@ export function app_g_pray_turn(prayer_texts, on_part, on_done) {
           return neq;
         }
         remaining = list_filter(remaining, keep);
+        prayed.done = true;
         on_part();
         let color = app_shared_color_green_light();
         let emoji_text = emoji_pray();

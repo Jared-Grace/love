@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { g_prayer_prompt } from "./g_prayer_prompt.mjs";
 import { app_g_prayer_menu_overlay } from "./app_g_prayer_menu_overlay.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -17,7 +19,11 @@ import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_g_gratitude_overlay() {
-  "the spontaneous gratitude prayer menu, laid out like a player TURN in a conversation (DRY): a player container (`app_g_container_player`) with the prompt 'What would you like to pray to God?' + a green button (topical emoji + text) per shuffled thanksgiving; the 'Amen' button sits OUTSIDE the container (like the End-conversation button) and closes. tapping a thanks prays it (a brief thanks overlay) and RE-ROLLS the set so you can keep thanking — openable anytime, no meter (gratitude is spontaneous, 1 Thess 5:18)";
+  ("the spontaneous gratitude prayer menu, laid out like a player TURN in a conversation (DRY): a player container (`",
+    fn_name("app_g_container_player"),
+    "`) with the shared prayer prompt (`",
+    fn_name("g_prayer_prompt"),
+    "`, never the 'what else' one — every re-roll is a FRESH set of thanksgivings, not the remainder of one prayer) + a green button (topical emoji + text) per shuffled thanksgiving; the 'Amen' button sits OUTSIDE the container (like the End-conversation button) and closes. tapping a thanks prays it (a brief thanks overlay) and RE-ROLLS the set so you can keep thanking — openable anytime, no meter (gratitude is spontaneous, 1 Thess 5:18)");
   let overlay = app_g_prayer_menu_overlay();
   let all = g_thanks_gratitude();
   let amen_name = g_name_jesus();
@@ -25,7 +31,8 @@ export function app_g_gratitude_overlay() {
   function render() {
     html_clear(overlay);
     let container = app_g_container_player(overlay);
-    app_g_p_text(container, "What would you like to pray to God?");
+    let prompt = g_prayer_prompt();
+    app_g_p_text(container, prompt);
     let candidates = list_filter_includes_not(all, "text", previous_texts);
     list_shuffle(candidates);
     let some = list_take(candidates, 4);
@@ -36,7 +43,8 @@ export function app_g_gratitude_overlay() {
       let label = text_combine_multiple([emoji, " ", text]);
       function on_pick() {
         let color = app_shared_color_green_light();
-        app_g_message_overlay(emoji_pray(), text, color, 3500, render);
+        let emoji_text = emoji_pray();
+        app_g_message_overlay(emoji_text, text, color, 3500, render);
       }
       app_g_button_green(container, label, on_pick);
     }
@@ -44,8 +52,9 @@ export function app_g_gratitude_overlay() {
     function done() {
       html_remove(overlay);
     }
+    let v = emoji_pray();
     let amen = text_combine_multiple([
-      emoji_pray(),
+      v,
       " In the name of ",
       amen_name,
       ", Amen",

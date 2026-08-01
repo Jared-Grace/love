@@ -30,13 +30,15 @@ export function app_g_menu(overlay, player) {
   let left = emoji_pray();
   let text = text_combine(left, " Pray");
   function lambda7() {
-    "the pray sub-screen wears the SAME menu frame as the top menu — a back-to-menu button, the heading card, then the prayer button. it is reached from the menu, so it is still the menu talking, not a person taking a conversation turn.";
+    ("the pray sub-screen wears the SAME menu frame as the top menu — a back-to-menu button, the heading card, then the prayer button. it is reached from the menu, so it is still the menu talking, not a person taking a conversation turn.\n\nit asks 'What would you like to pray?' with no 'else': nothing has been prayed yet on this screen. 'what else' names a REMAINDER, so it belongs only to a multi-part prayer once a first part is behind you — see ",
+      fn_name("g_prayer_prompt_more"),
+      ".");
     let sub = app_g_menu_container(overlay);
     function to_menu() {
       app_g_menu(overlay, player);
     }
     app_g_button_back(sub, to_menu);
-    app_g_container_text(sub, "What else would you like to pray?");
+    app_g_container_text(sub, "What would you like to pray?");
     async function lambda22() {
       let prayer = property_get(player, "prayer");
       let property_name = app_g_conversation_key();
