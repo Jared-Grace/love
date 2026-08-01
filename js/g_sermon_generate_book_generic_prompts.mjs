@@ -69,13 +69,13 @@ export async function g_sermon_generate_book_generic_prompts(
         let text = property_get(verse, "text");
         let verse_number = property_get(verse, "verse_number");
         function mapper(verses_chapter_folder) {
-          let text = list_find_property_get(
+          let words = list_find_property_get(
             verses_chapter_folder,
             "verse_number",
             verse_number,
             "text",
           );
-          return text;
+          return words;
         }
         let texts_add = list_map(verses_chapter_folders, mapper);
         let original = null;
