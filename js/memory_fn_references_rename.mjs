@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -28,8 +29,7 @@ export async function memory_fn_references_rename(before, after) {
     let path = path_join([folder, name]);
     let text = await file_read(path);
     let updated = text.replace(marked, replacement);
-    let b = equal(text, updated);
-    let changed = not(b);
+    let changed = equal_not(text, updated);
     if (changed) {
       await file_overwrite(path, updated);
       let one = {
