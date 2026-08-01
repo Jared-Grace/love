@@ -1,8 +1,7 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 export async function functions_shadowing_function() {
   "Every place a local wears the name of a function this repo already has. The";
   "other kind of hiding puts a name over an enclosing binding, which costs a";
@@ -17,8 +16,7 @@ export async function functions_shadowing_function() {
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
     let over_function = property_get(offender, "shadows_function");
-    let none = list_empty_is(over_function);
-    let any = not(none);
+    let any = list_empty_not_is(over_function);
     if (any) {
       let finding = {
         name: f_name,
