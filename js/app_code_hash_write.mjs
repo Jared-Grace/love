@@ -1,3 +1,4 @@
+import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_shared_screen_stored_get } from "./app_shared_screen_stored_get.mjs";
@@ -22,7 +23,7 @@ export function app_code_hash_write(context) {
   let value2 = storage_session_get_context(context, "lesson_id");
   add_part(app_code_lesson_hash_key(), value2);
   let value3 = app_shared_screen_stored_get(context);
-  add_part("screen", value3);
+  add_part(app_code_screen_hash_key(), value3);
   let value4 = storage_session_get_context(context, "quiz_index");
   add_part("quiz", value4);
   let query = list_join(parts, "&");
