@@ -17,18 +17,10 @@ export async function function_new_getter_number(f_name, meaning, value) {
     );
     throw new Error(said);
   }
-  async function lambda(ast) {
-    let block = js_find_body_block(ast);
-    let left = JSON.stringify(meaning);
-    let prose = text_combine(left, ";");
-    js_block_body_add_code(ast, [block], prose);
-    let right = JSON.stringify(number);
-    let bound = text_combine("let v = ", right);
-    let statement = text_combine(bound, ";");
-    js_block_body_add_code(ast, [block], statement);
-    js_block_body_add_code(ast, [block], "return v;");
-  }
-  await function_new_transform(f_name, lambda);
-  await function_auto(f_name);
-  return f_name;
+  ("Once the value is known to be a number, writing the file is the same work its");
+  ("twin already does, so it is asked to do it. The two used to end in the same");
+  ("dozen lines, and a reader had to compare them character by character to find that");
+  ("the only difference was up here.");
+  let written = await function_new_getter(f_name, meaning, number);
+  return written;
 }
