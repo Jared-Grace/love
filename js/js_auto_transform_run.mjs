@@ -5,9 +5,10 @@ export async function js_auto_transform_run(t, ast) {
   try {
     await t(ast);
   } catch (e) {
+    let cause = error_readable(e);
     error_json({
       transform: t.name,
-      cause: e.message,
+      cause,
     });
   }
 }
