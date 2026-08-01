@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { commits_scratch_path_is } from "./commits_scratch_path_is.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { commits_shape_name } from "./commits_shape_name.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
@@ -26,8 +26,7 @@ export async function commits_ai_js_file_shapes(count_given) {
   let edits = 0;
   let scratch = 0;
   for (let commit of commits) {
-    let subject = property_get(commit, "subject");
-    let named = equal(subject, "ai");
+    let named = property_equals(commit, "subject", "ai");
     if (not(named)) {
       continue;
     }
