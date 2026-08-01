@@ -135,6 +135,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_remainder_3,
     app_code_lesson_expression_remainder_4,
     app_code_lesson_expression_remainder_subtract,
+    app_code_lesson_expression_arithmetic_less_than,
     app_code_lesson_expression_round_down,
     app_code_lesson_expression_integer_division,
     app_code_lesson_expression_dividend,
@@ -153,12 +154,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
-    app_code_lesson_expression_string_equality,
-    app_code_lesson_expression_number_trichotomy,
-    app_code_lesson_expression_string_order,
-    app_code_lesson_expression_string_trichotomy,
-    app_code_lesson_expression_string_order_equal,
-    app_code_lesson_expression_arithmetic_less_than,
   ];
   return fns;
 }
