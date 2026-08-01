@@ -14,7 +14,7 @@ import { null_is } from "./null_is.mjs";
 export function js_hash_object_names(ast) {
   "The names this file gives to the object a page's address is read into, so a reading can tell a word written into somebody's link apart from a word written into any other object.";
   "Asked of the code rather than of a naming habit. Every one of these is called hash today, and a reading that trusted the word would go on agreeing with itself right up until somebody chose a different one - which is the moment it would matter.";
-  "Two ways to come by one. Reading the address gives you it directly. Changing the address hands it to a function you wrote, and that function's first parameter is the same object under whatever name that function chose.";
+  "Three ways to come by one. Reading the address gives you it directly. Changing the address hands it to a function you wrote, and that function's first parameter is the same object under whatever name that function chose. Building a link for another tab starts from an empty object that is an address only because of what is done with it at the end.";
   arguments_assert(arguments, 1);
   let names = [];
   function declared(v) {
@@ -57,13 +57,6 @@ export function js_hash_object_names(ast) {
     if (not(plain2)) {
       return;
     }
-    let changes = property_in_list(callee2, "name", [
-      fn_name("html_hash_transform"),
-      fn_name("html_hash_transform_reload"),
-    ]);
-    if (not(changes)) {
-      return;
-    }
     let args = property_get(node2, "arguments");
     if (list_empty_is(args)) {
       return;
@@ -73,8 +66,21 @@ export function js_hash_object_names(ast) {
     if (not(named)) {
       return;
     }
-    let taker = property_get(first, "name");
-    list_add(handed, taker);
+    let word = property_get(first, "name");
+    ("A third way, and the one that does not look like an address at all while it is being built. A link opened in a new tab is put together from an empty object, filled field by field, and only turned into an address at the end. Nothing before that last line says what the object is for, so the turning is what says it, and every field written into it was written into somebody's link.");
+    let made = property_equals(callee2, "name", fn_name("hash_to_url"));
+    if (made) {
+      list_add(names, word);
+      return;
+    }
+    let changes = property_in_list(callee2, "name", [
+      fn_name("html_hash_transform"),
+      fn_name("html_hash_transform_reload"),
+    ]);
+    if (not(changes)) {
+      return;
+    }
+    list_add(handed, word);
   }
   js_visit_type(ast, "CallExpression", handled);
   function written(v3) {
