@@ -41,11 +41,11 @@ export async function webpack_watch() {
         main,
         fn_name("app_shared_context_initialize"),
       ]);
-      let r = {
+      let r2 = {
         a_name,
         deps,
       };
-      return r;
+      return r2;
     }
     let r = await catch_null_async(lambda);
     return r;
