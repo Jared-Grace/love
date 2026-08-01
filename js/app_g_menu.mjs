@@ -46,8 +46,8 @@ export function app_g_menu(overlay, player) {
       await app_g_player_save(player);
       close();
     }
-    let text = g_prayer_conversation();
-    app_g_button_green(sub, text, lambda22);
+    let words = g_prayer_conversation();
+    app_g_button_green(sub, words, lambda22);
   }
   app_g_button_uncolored(container, text, lambda7);
   app_g_study(player, container, close);
