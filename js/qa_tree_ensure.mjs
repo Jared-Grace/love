@@ -1,3 +1,4 @@
+import { qa_tree_pointers_assert } from "./qa_tree_pointers_assert.mjs";
 import { qa_snapshot_siblings_freeze } from "./qa_snapshot_siblings_freeze.mjs";
 import { qa_tree_folder_freeze } from "./qa_tree_folder_freeze.mjs";
 import { qa_trees_reap } from "./qa_trees_reap.mjs";
@@ -16,6 +17,7 @@ export async function qa_tree_ensure() {
   "Doing the whole folder again instead would never settle, because several of us write here without stopping and a folder held to the standard of one instant never reaches it. One file is a standard that is reached at once, and it is the standard that was actually wanted - not that the copy is a single moment, but that no file in it is half of two";
   "Asking a second time is what makes it a repair rather than a hope. Whatever is still moving after the files were taken across is named out loud, because a copy that could not be settled is worth knowing about and a silent one reads exactly like a clean one";
   "The neighbouring repos are frozen the same way and for the same reason. Asking after every function does not stop at this repo, so a sweep run in here was reading the neighbours as they stood at that instant - and a red that goes quiet the moment it is asked again is the pair of answers this whole arrangement exists to make impossible";
+  "Whether the copy actually reaches nothing living is looked at before it is handed over, rather than reasoned about here in words. The neighbours were pointed at for as long as this existed, under a written claim that nothing here asked about them, and the claim being written down is precisely what stopped anybody checking it";
   let repos = qa_tree_repos_folder();
   let report = await qa_trees_reap();
   await folder_exists_ensure(repos);
@@ -27,5 +29,6 @@ export async function qa_tree_ensure() {
   let live = path_join([here, "node_modules"]);
   let link = path_join([folder, "node_modules"]);
   await qa_snapshot_link(live, link);
+  await qa_tree_pointers_assert(repos);
   return folder;
 }
