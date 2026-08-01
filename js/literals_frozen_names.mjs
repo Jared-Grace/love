@@ -25,6 +25,9 @@ export function literals_frozen_names() {
   let spelled16 = fn_name("app_shared_bible_language_hash_key");
   let spelled17 = fn_name("app_supper_passage_hash_key");
   let spelled18 = fn_name("app_supper_folders_hash_key");
+  ("Two more of the same kind, found only by reading every place a hash is written rather than every place one of the known words appears. A bible link can also carry a book on its own, and a reference written out the way a person would say it, and both open a page that nothing else opens.");
+  let spelled19 = fn_name("app_shared_bible_book_hash_key");
+  let spelled20 = fn_name("app_shared_bible_reference_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -43,6 +46,8 @@ export function literals_frozen_names() {
     spelled16,
     spelled17,
     spelled18,
+    spelled19,
+    spelled20,
   ];
   return names;
 }
