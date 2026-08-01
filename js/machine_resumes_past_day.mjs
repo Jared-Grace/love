@@ -23,8 +23,8 @@ export async function machine_resumes_past_day() {
   async function journal_stdout(journalctl_arguments, wrap) {
     let journalctl_command = "journalctl " + journalctl_arguments;
     let command = wrap(journalctl_command);
-    let stdout = await command_line_stdout(command);
-    return stdout;
+    let printed = await command_line_stdout(command);
+    return printed;
   }
   async function journal_reachable(wrap) {
     let probe = await journal_stdout("-k -o cat -n 1", wrap);
