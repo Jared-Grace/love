@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_expression_array } from "./js_expression_array.mjs";
 import { function_cache_name } from "./function_cache_name.mjs";
@@ -17,8 +18,7 @@ export async function function_cache(f_name) {
   let v3 = await function_cache_name(f_name);
   let f_name_cache = property_get(v3, "f_name_cache");
   let unaliased = property_get(v3, "unaliased");
-  let parsed = property_get(v3, "parsed");
-  let declaration_call = property_get(parsed, "declaration");
+  let declaration_call = property_path_get_2(v3, "parsed", "declaration");
   let c = fn_name("invoke_cache_file");
   let v4 = await function_parse_declaration(c);
   let declaration_cache = property_get(v4, "declaration");
