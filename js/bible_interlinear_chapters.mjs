@@ -1,3 +1,4 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { log } from "./log.mjs";
 import { each_object } from "./each_object.mjs";
@@ -8,8 +9,6 @@ import { ebible_reference_parts } from "./ebible_reference_parts.mjs";
 import { list_single } from "./list_single.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
@@ -48,8 +47,11 @@ export async function bible_interlinear_chapters() {
       let exists = property_exists(item2, original_property);
       return exists;
     }
-    let filtered = list_filter(verse_words, lambda4);
-    let mapped = list_map_property(filtered, original_property);
+    let mapped = list_filter_map_property(
+      verse_words,
+      lambda4,
+      original_property,
+    );
     let text = list_join_space(mapped);
     let v = ebible_references_names(books, [vid]);
     let chapter_verses_list = property_get(v, "chapter_verses_list");
