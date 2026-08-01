@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_token_select_value_variations } from "./app_code_lesson_quiz_token_select_value_variations.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
@@ -111,7 +112,13 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     }
     generate(orderable_nodes);
   }
-  let codes = list_adder_unique(generate_all);
+  let value_codes = app_code_lesson_quiz_token_select_value_variations(code);
+  function generate_all_with_values(la) {
+    "the commutative-swap orderings, plus every same-tiles same-value rearrangement, into one deduplicated pool";
+    generate_all(la);
+    each(value_codes, la);
+  }
+  let codes = list_adder_unique(generate_all_with_values);
   let variations = list_map(codes, app_code_quiz_tokens);
   if (expression_is) {
     function trim_semicolon(item) {

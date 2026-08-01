@@ -301,7 +301,6 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     forwards_answer_label: "value: ",
     backwards_question_label: "value: ",
     backwards_answer_label: "What code gives this value? ",
-    unscramble: false,
     forwards_answer_count_override: 2,
   });
   return lesson;
