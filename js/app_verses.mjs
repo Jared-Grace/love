@@ -1,3 +1,4 @@
+import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -67,7 +68,11 @@ export async function app_verses(context) {
   let remembered_l = app_shared_language_codes_saved_or(default_l);
   let hash = html_hash_object_get();
   ("a url hash wins over the remembered choice, so a shared link still opens in the languages it names");
-  let l = property_get_or(hash, "l", remembered_l);
+  let l = property_get_or(
+    hash,
+    app_shared_bible_language_hash_key(),
+    remembered_l,
+  );
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
     let r2 = list_find_property_or_null(languages, "language_code", code);
