@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
@@ -168,7 +169,7 @@ export async function app_shared_bible_read(context, verse_action) {
       chapter_code = ref_chapter;
     }
   }
-  let v_hash = property_get_or(hash, "v", "");
+  let v_hash = property_get_or(hash, app_shared_bible_verse_hash_key(), "");
   async function chapter_previous() {
     await app_shared_bible_change(
       chapter_code,
@@ -191,7 +192,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let verse_rows = [];
   function persist_selection() {
     let v = list_join(verse_numbers_chosen, "-");
-    html_hash_property_set("v", v);
+    html_hash_property_set(app_shared_bible_verse_hash_key(), v);
   }
   function selection_last() {
     if (list_empty_is(verse_numbers_chosen)) {
