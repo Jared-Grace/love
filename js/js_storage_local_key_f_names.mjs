@@ -1,3 +1,4 @@
+import { js_storage_local_key_scan } from "./js_storage_local_key_scan.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,8 +8,6 @@ import { js_call_argument_at } from "./js_call_argument_at.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 export function js_storage_local_key_f_names(ast, seams) {
@@ -43,10 +42,6 @@ export function js_storage_local_key_f_names(ast, seams) {
       list_add(found, dotted);
     }
   }
-  for (let seam of seams) {
-    js_visit_calls_named_nodes(ast, seam, collect);
-  }
-  let unique = list_unique(found);
-  unique.sort();
+  let unique = js_storage_local_key_scan(ast, seams, collect, found);
   return unique;
 }
