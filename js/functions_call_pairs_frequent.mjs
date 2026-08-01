@@ -13,6 +13,8 @@ import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { function_name_pair_composed } from "./function_name_pair_composed.mjs";
+import { function_exists } from "./function_exists.mjs";
 export async function functions_call_pairs_frequent() {
   "Auto-DRY recommender: scan every js fn, count how often each ORDERED pair of consecutive";
   ("call-declarations recurs across files (alpha-renamed via ",
@@ -21,6 +23,13 @@ export async function functions_call_pairs_frequent() {
   ("WIRED pairs — where the second statement consumes the first's output — ranked by how many files hold");
   ("them. A wired pair recurring across many files is a candidate to extract into one named fn. The");
   ("complement of the fold: the fold reuses fns that EXIST, this proposes fns that SHOULD.");
+  ("Each row also carries the name the pair WOULD have here (",
+    fn_name("function_name_pair_composed"),
+    ") and whether a function already answers to it, because reading the report and");
+  ("judging that by eye is how a function that already existed came within one command");
+  ("of being written a second time: the word you reach for to describe a wrapper is");
+  ("the one word its name is least likely to hold. An `exists: true` row is not noise");
+  ("either - it says the atom is there and the sites were never folded onto it.");
   arguments_assert(arguments, 0);
   let entries = await js_files_texts();
   let tally = {};
