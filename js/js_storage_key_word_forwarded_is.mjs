@@ -10,7 +10,7 @@ export function js_storage_key_word_forwarded_is(ast, seams) {
   arguments_assert(arguments, 2);
   let forwarded = false;
   function look(node) {
-    let word_node = js_call_argument_at(node, "2");
+    let word_node = js_call_argument_at_try(node, "2");
     let variable = js_identifier_name_try(word_node);
     let plain = not_equal(variable, null);
     if (plain) {
