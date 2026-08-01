@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-import { equal } from "./equal.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_bible_books_matches } from "./app_bible_books_matches.mjs";
 import { property_get } from "./property_get.mjs";
@@ -40,8 +40,7 @@ export function app_bible_books_render(
         }
         let button = app_shared_button(buttons_div, text, on_click);
         ("mark the book you are currently reading so the picker shows your place");
-        let book_code = property_get(book, "book_code");
-        let is_current = equal(book_code, current_book_code);
+        let is_current = property_equals(book, "book_code", current_book_code);
         app_shared_button_toggle_style(is_current, button);
         list_add(all_buttons, button);
       }
