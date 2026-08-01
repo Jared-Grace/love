@@ -1,8 +1,8 @@
+import { list_size_2 } from "./list_size_2.mjs";
 import { js_node_absent_is } from "./js_node_absent_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_call_absence_tested_name(node, checkers) {
@@ -27,8 +27,7 @@ export function js_call_absence_tested_name(node, checkers) {
   if (not(compared)) {
     return null;
   }
-  let left2 = list_size(args);
-  let two = equal(left2, 2);
+  let two = list_size_2(args);
   if (not(two)) {
     return null;
   }
