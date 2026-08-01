@@ -1,6 +1,6 @@
+import { property_not } from "./property_not.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 export function qa_snapshot_shards_combined(results) {
@@ -11,8 +11,7 @@ export function qa_snapshot_shards_combined(results) {
   let failed = [];
   let sayings = [];
   for (let result of results) {
-    let quiet = property_get(result, "green");
-    let complained = not(quiet);
+    let complained = property_not(result, "green");
     if (complained) {
       green = false;
     }
