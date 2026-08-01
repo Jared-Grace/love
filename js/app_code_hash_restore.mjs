@@ -1,3 +1,4 @@
+import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { html_hash_get } from "./html_hash_get.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_shared_screen_stored_set } from "./app_shared_screen_stored_set.mjs";
@@ -20,7 +21,7 @@ export function app_code_hash_restore(context) {
     let key = list_get(kv, 0);
     let item = list_get(kv, 1);
     let value = decodeURIComponent(item);
-    let is_lesson = equal(key, "lesson");
+    let is_lesson = equal(key, app_code_lesson_hash_key());
     if (is_lesson) {
       storage_session_set_context(context, "lesson_id", value);
     }
