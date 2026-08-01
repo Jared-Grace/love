@@ -1,7 +1,7 @@
+import { list_size_1 } from "./list_size_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_string_site_labels } from "./js_string_site_labels.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal } from "./equal.mjs";
 export function js_code_literal_prose_only(code, literal) {
@@ -15,8 +15,7 @@ export function js_code_literal_prose_only(code, literal) {
   ("something nobody can do.");
   let ast = js_parse(code);
   let labels = js_string_site_labels(ast, literal);
-  let size = list_size(labels);
-  let one = equal(size, 1);
+  let one = list_size_1(labels);
   if (one) {
     let only = list_first(labels);
     let prose_is = equal(only, "ExpressionStatement");
