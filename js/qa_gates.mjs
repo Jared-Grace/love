@@ -123,6 +123,7 @@ export function qa_gates() {
     permission_rule_probe_gate_run,
     permission_rule_file_gate_run,
     permission_self_settings_gate_run,
+    path_pattern_covers_cases_gate_run,
     permission_settings_rule_gate_run,
     permission_grants_gate_run,
     permission_settings_allow_assert,

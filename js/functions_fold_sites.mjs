@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
-import { js_flo_body } from "./js_flo_body.mjs";
+import { js_blocks_all } from "./js_blocks_all.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_fn_fold_pattern } from "./js_fn_fold_pattern.mjs";
 import { js_fold } from "./js_fold.mjs";
@@ -30,9 +30,7 @@ export async function functions_fold_sites() {
     fn_name("function_fold_everywhere"),
     " - which asks the identifier index, and so sees a call wherever it is written -");
   ("folded all nine.");
-  ("Old text kept below so the two readings can be compared: tries ",
-    fn_name("js_fold"),
-    " against the files that call all its callees. Complement of the miner: this finds reuse");
+  ("Complement of the miner: this finds reuse");
   ("of fns that EXIST. Returns { x, f } pairs; a mutual x<->f pair means two duplicate DEFINITIONS.");
   arguments_assert(arguments, 0);
   let records = await js_files_texts();

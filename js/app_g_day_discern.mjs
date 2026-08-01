@@ -9,7 +9,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_g_day_discern(div_map) {
-  "the day's discernment prayer (#day_unbelievers) — INSTANT in this dev testbed (no wait-on-the-Lord overlay/delay; that beat belongs to the real menu prayer). picks a random talkable target and sets prayer.conversation (satisfies the pre-conversation pray-gate), then the gold guide leads to them — NO crosshair on the person; the trail of breathing gold tiles does the pointing, and the target's OWN tile glows the same way once the player arrives adjacent, just before the conversation opens";
+  "the day's discernment prayer (#day_unbelievers) — INSTANT in this dev testbed (no wait-on-the-Lord overlay/delay; that pause belongs to the real menu prayer). picks a random talkable target and sets prayer.conversation (satisfies the pre-conversation pray-gate), then the gold guide leads to them — NO crosshair on the person; the trail of breathing gold tiles does the pointing, and the target's OWN tile glows the same way once the player arrives adjacent, just before the conversation opens";
   let state = app_g_day_state();
   let talkable = property_get(state, "talkable");
   let target = list_random_item(talkable);

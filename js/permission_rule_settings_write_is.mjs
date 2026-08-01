@@ -14,7 +14,7 @@ export async function permission_rule_settings_write_is(rule) {
   ("this is the one grant that can widen itself. Everything else a rule approves is a thing that gets done; this one approves deciding what else gets done without asking, and any rule at all can be written into that file, including one granting a shell outright, which answers to nothing on the deny floor because that floor names particular commands rather than shapes. Two such rules once stood.");
   ("two gates read the settings files afterwards and would have said so on the next run. Both are a reading taken later, and nothing whatever stood in the way at the moment of the edit, so this is here to make the rule unwritable rather than merely noticed.");
   ("reading is untouched. A rule granting Read on a settings file is a live grant that widens nothing, and failing it would cost a real convenience for no safety at all.");
-  ("kept apart from the sweep over the settings files, because a rule is a plain string and this is a plain yes or no: the corpus can hand it any rule at all, including the ones nobody has written down.");
+  ("kept apart from the sweep over the settings files, because a rule is a plain string and this is a plain yes or no, which can be asked about a rule nobody has written down. What it turns on is which files a pattern reaches, and that question is written out in a corpus of its own next door - here there is only the tool name to check and the two paths to try.");
   let tools = permission_file_tools_writing();
   let tool = permission_rule_tool_name(rule);
   let writes = list_includes(tools, tool);
