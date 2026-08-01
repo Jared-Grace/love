@@ -1,12 +1,11 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { js_operators_unary } from "./js_operators_unary.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function js_operator_function_names() {
   "Every function name the auto pass WRITES INTO code when it turns an operator";
@@ -30,8 +29,7 @@ export function js_operator_function_names() {
     if (missing) {
       return;
     }
-    let already = list_includes(names, fn.name);
-    let fresh = not(already);
+    let fresh = list_includes_not(names, fn.name);
     if (fresh) {
       list_add(names, fn.name);
     }
