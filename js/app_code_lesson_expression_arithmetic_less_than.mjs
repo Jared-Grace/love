@@ -176,10 +176,13 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     },
   ];
   function one(combo) {
-    "one comparison code string whose true/false answer is fixed by construction: the arithmetic piece makes a value, and the OTHER number is placed above or below that value to force the wanted answer - with the arithmetic on the LEFT of the < (arithmetic_left) or on the RIGHT, so the learner meets arithmetic on both sides of the comparison";
+    "one comparison code string whose true/false answer is fixed by construction: the arithmetic piece makes a value, and the OTHER number is chosen from below/above/equal to that value so the combo's comparison operator yields the wanted answer - decided by RUNNING the operator's own fn, so the boolean can never be mis-derived per operator (=== needs the equal case, < never uses it). The arithmetic sits on the LEFT of the comparison (arithmetic_left) or on the RIGHT, so the learner meets arithmetic on both sides.";
     let op = property_get(combo, "op");
     let arithmetic_left = property_get(combo, "arithmetic_left");
     let want_true = property_get(combo, "want_true");
+    let comparison = property_get(combo, "comparison");
+    let comparison_symbol = property_get(comparison, "operator");
+    let comparison_fn = property_get(comparison, "fn");
     let piece = op();
     let piece_left = property_get(piece, "left");
     let piece_symbol = property_get(piece, "symbol");
@@ -198,13 +201,27 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     let above_value = add(value, right2);
     let max = subtract(value, 1);
     let below_value = integer_random(1, max);
-    let third = ternary(want_true, above_value, below_value);
-    let single = ternary(want_true, below_value, above_value);
-    let on_false = text_to(single);
-    let left = ternary(arithmetic_left, arithmetic_code, on_false);
-    let on_true = text_to(third);
-    let right = ternary(arithmetic_left, on_true, arithmetic_code);
-    let code = text_combine_multiple([left, " ", less_than_symbol, " ", right]);
+    let candidates = [below_value, above_value, value];
+    function yields(other) {
+      "true when placing this other number against the arithmetic value makes the comparison give the answer we want; equal is last in the list so strict < and > pick a strict number and only === / !== reach the equal case";
+      let side_left = ternary(arithmetic_left, value, other);
+      let side_right = ternary(arithmetic_left, other, value);
+      let result = comparison_fn(side_left, side_right);
+      let same = equal(result, want_true);
+      return same;
+    }
+    let good = list_filter(candidates, yields);
+    let other = list_first(good);
+    let other_text = text_to(other);
+    let left = ternary(arithmetic_left, arithmetic_code, other_text);
+    let right = ternary(arithmetic_left, other_text, arithmetic_code);
+    let code = text_combine_multiple([
+      left,
+      " ",
+      comparison_symbol,
+      " ",
+      right,
+    ]);
     return code;
   }
   function refill() {
