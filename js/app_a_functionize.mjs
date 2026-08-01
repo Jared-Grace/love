@@ -1,10 +1,10 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_functionize } from "./js_functionize.mjs";
 import { js_block_find } from "./js_block_find.mjs";
 import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_a_functionize(a, f_name_new) {
-  let context = property_get(a, "context");
-  let a_first = property_get(context, app_a_functionize.name);
+  let a_first = property_path_get_2(a, "context", app_a_functionize.name);
   function lambda(ai) {
     let node = property_get(ai, "node");
     let ast_inner = property_get(ai, "ast");
