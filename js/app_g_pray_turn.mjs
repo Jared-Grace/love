@@ -23,7 +23,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_g_pray_turn(prayer_texts, on_part, on_done) {
   ("the conversation-closing PRAYER turn as its own overlay (gratitude-style, DRY via ",
-    app_g_prayer_menu_overlay.name,
+    fn_name("app_g_prayer_menu_overlay"),
     "): the prompt (",
     fn_name("g_prayer_prompt"),
     ") + a green button per prayer. the prompt gains its 'else' (",
