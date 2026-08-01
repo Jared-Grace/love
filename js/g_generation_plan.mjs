@@ -1,3 +1,5 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -23,6 +25,16 @@ export function g_generation_plan() {
   let npcs_fewest = 1 + Math.ceil(divided);
   let divided2 = divide(other_conversations, s.arc_conversations_minimum);
   let npcs_most = 1 + Math.floor(divided2);
+  ("The floor on the count is a scheduling fact, not a taste. An npc is once a day, so the people holding an unplayed beat must number at least the conversations that day asks for - and one more than that, or the day is a list being cleared rather than a choice being made.");
+  let per_day_whole = Math.ceil(conversations_per_day);
+  let npcs_minimum = Math.max(per_day_whole, s.npcs_available_minimum);
+  let npcs_floor_met = greater_than_equal(npcs_fewest, npcs_minimum);
+  ("Arc length is the quantity that can fail to schedule, because an arc of nine conversations needs nine separate days to be spent in.");
+  let days_fit = less_than_equal(s.arc_conversations_maximum, s.plant_days);
+  let leader_days_fit = less_than_equal(
+    s.leader_conversations_maximum,
+    s.plant_days,
+  );
   let r = {
     conversations_per_day,
     plant_matches,
@@ -34,6 +46,10 @@ export function g_generation_plan() {
     other_conversations,
     npcs_fewest,
     npcs_most,
+    npcs_minimum,
+    npcs_floor_met,
+    days_fit,
+    leader_days_fit,
   };
   return r;
 }
