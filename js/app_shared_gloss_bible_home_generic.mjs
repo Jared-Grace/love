@@ -1,3 +1,4 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { json_from_try } from "./json_from_try.mjs";
@@ -6,7 +7,6 @@ import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_boo
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_scroll_top_now } from "./html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { list_last } from "./list_last.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_nbsp } from "./html_span_nbsp.mjs";
@@ -40,8 +40,7 @@ export async function app_shared_gloss_bible_home_generic(
   let verses = property_get(first2, "verses");
   let passage = property_get(first2, "passage");
   let prop = "p";
-  let last = list_last(verses);
-  let p = property_get(last, prop);
+  let p = list_last_property(verses, prop);
   let h = html_hr(p);
   let texts = null;
   if (text_use) {
