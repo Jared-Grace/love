@@ -1,3 +1,4 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_declarations } from "./js_visit_declarations.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
@@ -5,7 +6,6 @@ import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_call_statement } from "./js_call_statement.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_adder_invoke } from "./list_adder_invoke.mjs";
@@ -29,8 +29,7 @@ export async function js_log_assignments_add(ast) {
   function lambda(la) {
     function lambda_visit(v) {
       let node = property_get(v, "node");
-      let stack = property_get(v, "stack");
-      let list = list_get_end_1(stack);
+      let list = property_list_get_end_1(v, "stack");
       let declarators = js_declaration_declarators_get(node);
       let names_raw = list_map(declarators, lambda_declarator_name);
       let names = list_filter(names_raw, lambda_not_null);
