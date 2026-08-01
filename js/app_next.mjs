@@ -1,3 +1,5 @@
+import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
+import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -18,8 +20,10 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next(context) {
   let hash = html_hash_object_get();
-  let chapter_code = property_get(hash, "c");
-  let verse_number = property_get(hash, "v");
+  let property_name = app_shared_bible_chapter_hash_key();
+  let chapter_code = property_get(hash, property_name);
+  let property_name2 = app_shared_bible_verse_hash_key();
+  let verse_number = property_get(hash, property_name2);
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   async function lambda(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
@@ -45,8 +49,10 @@ export async function app_next(context) {
   });
   let chapter_code2 = property_get(next, "chapter_code");
   let verse_number2 = property_get(next, "verse_number");
-  property_set(hash, "v", verse_number2);
-  property_set(hash, "c", chapter_code2);
+  let property_name3 = app_shared_bible_verse_hash_key();
+  property_set(hash, property_name3, verse_number2);
+  let property_name4 = app_shared_bible_chapter_hash_key();
+  property_set(hash, property_name4, chapter_code2);
   let h = hash_to_url(hash);
   let url = html_url_without_hash();
   url += h;
