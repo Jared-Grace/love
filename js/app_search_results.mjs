@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
 import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
 import { html_span_text_bold } from "./html_span_text_bold.mjs";
@@ -6,7 +7,6 @@ import { ebible_book_code_to_division_index } from "./ebible_book_code_to_divisi
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
@@ -221,8 +221,7 @@ export async function app_search_results(context, div_results) {
   }
   list_sort_text_mapper(results, bible_order_key);
   function result_verses_count(vk) {
-    let verse_numbers = property_get(vk, "value");
-    let count = list_size(verse_numbers);
+    let count = property_list_size(vk, "value");
     return count;
   }
   function book_verses_count(book_code) {
