@@ -1,3 +1,4 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { js_declare_single_identifier_is_if } from "./js_declare_single_identifier_is_if.mjs";
 import { js_identifiers_names_equal_not } from "./js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "./js_literal_is_if.mjs";
@@ -9,14 +10,12 @@ import { list_first_is } from "./list_first_is.mjs";
 import { list_previous } from "./list_previous.mjs";
 import { not } from "./not.mjs";
 import { list_is } from "./list_is.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_return_above_combine(ast) {
   "this refactors two sequential statements to be one return statement";
   js_visit_returns_identifiers(ast, lambda2);
   function lambda2({ v, node, argument }) {
-    let stack = property_get(v, "stack");
-    let e = list_get_end_1(stack);
+    let e = property_list_get_end_1(v, "stack");
     let l = list_is(e);
     if (not(l)) {
       return;

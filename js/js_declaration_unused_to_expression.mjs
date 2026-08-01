@@ -1,3 +1,4 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -9,7 +10,6 @@ import { js_node_effectful_is } from "./js_node_effectful_is.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_not_is } from "./list_not_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_declaration_unused_to_expression(ast) {
@@ -29,8 +29,7 @@ export function js_declaration_unused_to_expression(ast) {
     if (count !== 1) {
       return;
     }
-    let stack = property_get(v, "stack");
-    let e = list_get_end_1(stack);
+    let e = property_list_get_end_1(v, "stack");
     let nl = list_not_is(e);
     if (nl) {
       return;
