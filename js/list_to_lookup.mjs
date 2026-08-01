@@ -10,7 +10,7 @@ export function list_to_lookup(list, property_key) {
     "if each key has one value, then ",
     fn_name("list_to_dictionary"),
     " but if each key corresponds to a list of values, then ",
-    list_to_lookup.name,
+    fn_name("list_to_lookup"),
   ]);
   let lookup = {};
   function lambda(item) {
