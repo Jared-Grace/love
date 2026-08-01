@@ -61,7 +61,7 @@ export async function app_replace_rule_sets_why_generate() {
       let s = js_string(result);
       js_property_value_set(found, s);
       let code = js_unparse(f);
-      log(app_replace_rule_sets_why_generate.name, code);
+      log(fn_name("app_replace_rule_sets_why_generate"), code);
     }
     let waited = await function_transform(f_name, lambda4);
   }
