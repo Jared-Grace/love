@@ -1,7 +1,7 @@
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
 import { g_sermon_passage_line_count } from "./g_sermon_passage_line_count.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
@@ -16,8 +16,7 @@ export async function g_sermon_chapter_passages_for_grouping(chapter) {
   }
   list_sort_number_mapper(passages, passage_first_verse);
   function to_ref_lines(passage) {
-    let verse_numbers = property_get(passage, "verse_numbers");
-    let ref = list_join_comma(verse_numbers);
+    let ref = g_sermon_passage_verses_key(passage);
     let lines = g_sermon_passage_line_count(passage);
     let r = {
       ref,
