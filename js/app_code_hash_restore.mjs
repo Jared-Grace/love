@@ -1,3 +1,4 @@
+import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { html_hash_get } from "./html_hash_get.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
@@ -25,7 +26,7 @@ export function app_code_hash_restore(context) {
     if (is_lesson) {
       storage_session_set_context(context, "lesson_id", value);
     }
-    let is_screen = equal(key, "screen");
+    let is_screen = equal(key, app_code_screen_hash_key());
     if (is_screen) {
       app_shared_screen_stored_set(context, value);
     }
