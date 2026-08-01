@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_book_hash_key } from "./app_shared_bible_book_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
@@ -46,7 +47,6 @@ import { list_copy } from "./list_copy.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
@@ -352,8 +352,7 @@ export async function app_shared_bible_read(context, verse_action) {
     let item = list_first(verse_numbers_chosen);
     let index = list_index_of(ordered, item);
     if (greater_than_equal(index, 0)) {
-      let row = list_get(verse_rows, index);
-      let component = property_get(row, "p");
+      let component = list_get_property(verse_rows, index, "p");
       await html_scroll_center_now(component);
     }
   }
