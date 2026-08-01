@@ -1,3 +1,4 @@
+import { js_unparse_parse } from "./js_unparse_parse.mjs";
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
 import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,6 +9,7 @@ export async function function_auto_check(f_name) {
   "A refusal is reported rather than thrown, because the caller sweeping a list wants the whole list, not the first failure. The message is carried out with it: a name alone says something is wrong, and the message says which step gave up, which is the difference between a list to fix and a list to stare at.";
   "Skipping the final write is not enough on its own. One step of the pipeline lifts each function declared beside the exported one out into a file of its own, and that step creates those files as it goes - so running the whole pipeline and merely declining to save the result still litters the repo with new files. The dry list swaps that one step for the version that changes the tree the same way and creates nothing. This was learned the hard way: an earlier version of this check ran the real list and created fourteen files across two sweeps, which then had to be found and deleted.";
   "finding and reading the file is inside the attempt along with the pipeline, so that a name that names nothing is reported the same way a name whose file the pipeline chokes on is - one entry saying no, with the reason. It used to sit outside, which meant a single dead name in a list of sixty threw past the sweep and discarded the fifty-nine answers already paid for";
+  "the tree is written back out and read in again at the end, and that is the question this was actually being asked. A pipeline that finishes has not said the file still loads: a step once wrote a value into the header of a loop that walks an object, which is an ordinary tree and an unparseable line, so every step finished and the answer here was yes while the file it described could no longer be read. The write costs no disk and it is what turns a yes into one worth acting on.";
   let unaliased = await function_name_unalias_only(f_name);
   ("the local is not named error, because that is the name of a function in this repo and the import-repair pass would bind it and add an import for it");
   let ok = true;
