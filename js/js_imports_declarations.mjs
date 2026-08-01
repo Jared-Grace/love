@@ -1,3 +1,4 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
@@ -5,8 +6,6 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_single } from "./list_single.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { each } from "./each.mjs";
 export function js_imports_declarations(ast) {
@@ -33,8 +32,7 @@ export function js_imports_declarations(ast) {
       let local = property_get(v2, "local");
       let imported = property_get(v2, "imported");
       let both = [imported, local];
-      let mapped = list_map_property(both, "name");
-      let unique = list_unique(mapped);
+      let unique = list_map_property_unique(both, "name");
       ("the names should be the same");
       let name = list_single(unique);
       la({
