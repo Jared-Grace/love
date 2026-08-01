@@ -33,9 +33,8 @@ import { modulo } from "./modulo.mjs";
 import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_expression_arithmetic_less_than() {
-  "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison is kept as < here so the only new thing is arithmetic-on-the-sides; > <= >= === !== generalise for free by the same rule. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Eight refreshable examples vary the operator across ALL the already-learned number binary operators (+ - * / % **), put the arithmetic on the left and the right, and show true and false; the right side is emphasised because arithmetic on the right of the < is where the rule actually bites - left-to-right alone would put the < first and be wrong - whereas on the left, plain left-to-right already lands on the right answer. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; every comparison is strict, never the equal case, so this stays about arithmetic and < and not <=. Intended home: right after the comparison operators and the arithmetic precedence pair lessons, as the first step that lets a comparison's sides be expressions; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
+  "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison itself also VARIES across the examples over all six the student has met (< > <= >= === !==), because the rule - arithmetic first, then compare - is identical for every one of them, so they belong in this one lesson too rather than six near-identical copies. The true/false answer is forced per example by RUNNING the example's own comparison fn against candidate numbers (below/above/equal to the arithmetic value) and keeping the one that gives the wanted answer, so no answer can be mis-derived operator by operator. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Eight refreshable examples vary the operator across ALL the already-learned number binary operators (+ - * / % **), put the arithmetic on the left and the right, and show true and false; the right side is emphasised because arithmetic on the right of the < is where the rule actually bites - left-to-right alone would put the < first and be wrong - whereas on the left, plain left-to-right already lands on the right answer. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; the equal case appears only where the operator needs it (=== and its like), while < and > stay strict. Intended home: right after the comparison operators and the arithmetic precedence pair lessons, as the first step that lets a comparison's sides be expressions; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
   let less_than_operator = js_operator_less_than();
   let less_than_symbol = property_get(less_than_operator, "operator");
   let less_than_fn = property_get(less_than_operator, "fn");
@@ -246,8 +245,16 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       return symbol;
     }
     app_code_operators_word_list(line, operators, "or", operator_symbol);
-    html_span_text(line, " before the ");
-    html_span_text_code_dark(line, less_than_symbol);
+    html_span_text(line, " before any comparison ");
+    let comparisons = [
+      less_than_operator,
+      greater_than_operator,
+      less_than_equal_operator,
+      greater_than_equal_operator,
+      triple_equal_operator,
+      bang_double_equal_operator,
+    ];
+    app_code_operators_word_list(line, comparisons, "or", operator_symbol);
     function worked_example(
       other,
       other_on_left,
@@ -260,10 +267,10 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       let t3 = text_to(a_left);
       let t4 = text_to(a_right);
       let sub = text_combine_multiple([t3, " ", a_symbol, " ", t4]);
-      let on_true2 = text_to(other);
-      let full_left = ternary(other_on_left, on_true2, sub);
-      let on_false2 = text_to(other);
-      let full_right = ternary(other_on_left, sub, on_false2);
+      let on_true = text_to(other);
+      let full_left = ternary(other_on_left, on_true, sub);
+      let on_false = text_to(other);
+      let full_right = ternary(other_on_left, sub, on_false);
       let on_true3 = text_to(other);
       let on_false3 = text_to(a_value);
       let combined_left = ternary(other_on_left, on_true3, on_false3);
@@ -311,12 +318,11 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     worked_example(7, false, 3, "*", 2, p);
   }
   function title_name_id() {
-    "the home title is arithmetic <, an Expressions lesson";
+    "the home title is arithmetic comparisons, an Expressions lesson; the id string stays 'arithmetic less than' so a student's saved progress on this lesson is unchanged";
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "arithmetic ");
-        html_span_text_code_dark(parent, less_than_symbol);
+        html_span_text(parent, "arithmetic comparisons");
       }
       return render;
     }
