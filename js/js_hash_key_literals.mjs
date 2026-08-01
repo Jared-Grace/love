@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -71,8 +72,7 @@ export function js_hash_key_literals(ast) {
     if (not(named)) {
       return;
     }
-    let owner_name = property_get(owner, "name");
-    let addressed = list_includes(held, owner_name);
+    let addressed = property_in_list(owner, "name", held);
     if (not(addressed)) {
       return;
     }
