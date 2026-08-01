@@ -18,6 +18,13 @@ export function literals_frozen_names() {
   ("A reader who kept bibles for reading with no internet is holding a database under this name, with one store inside it under that one - the same escape as the reader's files and the download cache beside them, which were already here. These two were not, so until now the one edit this list exists to catch could have been made to them quietly.");
   let spelled12 = fn_name("ebible_offline_database_name");
   let spelled13 = fn_name("ebible_offline_store");
+  ("Every word a link carries is published the moment somebody saves or sends that link, and until now only two of them were named here while the rest were spelled out at the sites that read and wrote them. The five below are the words a bible link and a supper link stand on - which chapter, which verse, which language, which passage, which versions. Rewording one of them reads as a tidy-up and breaks every link anybody kept.");
+  ("They are short because a link is read by people, and that shortness is the whole danger: a word of one letter looks like nothing to lose, so it is the one most likely to be typed over.");
+  let spelled14 = fn_name("app_shared_bible_chapter_hash_key");
+  let spelled15 = fn_name("app_shared_bible_verse_hash_key");
+  let spelled16 = fn_name("app_shared_bible_language_hash_key");
+  let spelled17 = fn_name("app_supper_passage_hash_key");
+  let spelled18 = fn_name("app_supper_folders_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -31,6 +38,11 @@ export function literals_frozen_names() {
     spelled11,
     spelled12,
     spelled13,
+    spelled14,
+    spelled15,
+    spelled16,
+    spelled17,
+    spelled18,
   ];
   return names;
 }
