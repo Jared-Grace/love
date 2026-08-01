@@ -21,7 +21,7 @@ import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_equality() {
-  "comparing two strings for equality - the same triple-equals and not-equals the learner already knows on numbers, now on strings: it is true when the two strings are exactly the same text. Half the questions use triple-equals (true when the words match) and half not-equals (true when they differ), over words from the shared verse. Intended home: just after the numeric equal-to / not-equal-to lessons and the string lessons; parked at the END for now while one student is mid-stream, written as if it sat at that earlier home.";
+  "comparing two strings for equality - the same triple-equals and not-equals the learner already knows on numbers, now on strings: it is true when the two strings are exactly the same text. Half the questions use triple-equals (true when the words match) and half not-equals (true when they differ), over words from the shared verse. Placed just after the numeric equal-to / not-equal-to lessons and the string lessons.";
   let equal_operator = "===";
   let not_equal_operator = "!==";
   let combos = [
