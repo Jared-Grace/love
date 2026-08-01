@@ -1,6 +1,5 @@
-import { list_last } from "./list_last.mjs";
+import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
-import { equal } from "./equal.mjs";
 import { app_code_lesson_quiz_token_select_value_variations } from "./app_code_lesson_quiz_token_select_value_variations.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -125,8 +124,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   if (expression_is) {
     function trim_semicolon(item) {
       let expected_last = ";";
-      let last = list_last(item);
-      let has_semicolon = equal(last, expected_last);
+      let has_semicolon = list_last_is(item, expected_last);
       if (has_semicolon) {
         list_remove_last(item);
       }
