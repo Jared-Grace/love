@@ -1,7 +1,6 @@
+import { property_not } from "./property_not.mjs";
 import { function_auto } from "./function_auto.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
-import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 export async function function_auto_checked(f_name) {
   "Canonicalize a function and say whether it still loads, in one command.";
   "Ask the read-only check FIRST and only canonicalize when it says yes. The";
@@ -15,8 +14,7 @@ export async function function_auto_checked(f_name) {
   "swapped out, so the cost of the guarantee is a second pass over a file that";
   "was going to be parsed anyway.";
   let checked = await function_auto_check(f_name);
-  let ok = property_get(checked, "ok");
-  let refused = not(ok);
+  let refused = property_not(checked, "ok");
   if (refused) {
     return checked;
   }
