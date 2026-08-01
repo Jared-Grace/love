@@ -1,8 +1,7 @@
+import { equal_not } from "./equal_not.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { each_index } from "./each_index.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function app_code_operators_shape_list(
   parent,
   placeholder_tile,
@@ -13,8 +12,7 @@ export function app_code_operators_shape_list(
   html_span_text(parent, ": ");
   function operator_render(operator, index) {
     "render one operator tile, with a comma-space before it except for the first";
-    let first = equal(index, 0);
-    let rest = not(first);
+    let rest = equal_not(index, 0);
     if (rest) {
       html_span_text(parent, ", ");
     }
