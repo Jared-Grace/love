@@ -1,3 +1,4 @@
+import { app_g_scripture_reference_god_says } from "./app_g_scripture_reference_god_says.mjs";
 import { app_g_scripture_separator_font_size } from "./app_g_scripture_separator_font_size.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -8,7 +9,8 @@ export function app_g_scripture(parent, reference, verse_text) {
   ("render displayed Scripture inline: reference (green) + 📖 (the written-word marker) + glowing gold verse (",
     app_g_scripture_verse.name,
     "); attaches the reference/verse spans to `parent` so a discernment reveal can restyle them onto the gold surface (verse → dark inscribed, reference → dark green, kept NOT-gold)");
-  let reference_span = html_span_text(parent, reference);
+  let said = app_g_scripture_reference_god_says(reference);
+  let reference_span = html_span_text(parent, said);
   html_font_color_set(reference_span, "#a0eaa0");
   let separator = html_span_text(parent, "📖");
   let font_size = app_g_scripture_separator_font_size();

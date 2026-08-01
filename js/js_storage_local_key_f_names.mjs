@@ -22,13 +22,13 @@ export function js_storage_local_key_f_names(ast, seams) {
   let spelled = fn_name("fn_name");
   let found = [];
   function collect(node) {
-    let owner_node = js_call_argument_at(node, "1");
+    let owner_node = js_call_argument_at_try(node, "1");
     let owner = js_identifier_name_try(owner_node);
     let named = not_equal(owner, null);
     if (named) {
       list_add(found, owner);
     }
-    let word_node = js_call_argument_at(node, "2");
+    let word_node = js_call_argument_at_try(node, "2");
     let callee = js_call_callee_name_try(word_node);
     let by_reference = equal(callee, spelled);
     if (by_reference) {
