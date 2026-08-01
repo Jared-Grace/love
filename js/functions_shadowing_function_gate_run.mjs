@@ -1,7 +1,7 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_shadowing_function } from "./functions_shadowing_function.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { each } from "./each.mjs";
@@ -15,8 +15,7 @@ export async function functions_shadowing_function_gate_run() {
   let offenders = await functions_shadowing_function();
   function lambda(offender) {
     let f_name = property_get(offender, "name");
-    let hides = property_get(offender, "hides");
-    let joined = list_join_comma(hides);
+    let joined = property_list_join_comma(offender, "hides");
     let message = text_combine_multiple([
       "HIDES A FUNCTION  ",
       f_name,
