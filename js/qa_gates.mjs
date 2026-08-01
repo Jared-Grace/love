@@ -1,3 +1,5 @@
+import { text_dispatcher_command_names_gate_run } from "./text_dispatcher_command_names_gate_run.mjs";
+import { functions_dispatcher_commands_gate_run } from "./functions_dispatcher_commands_gate_run.mjs";
 import { js_declare_assign_null_cases_gate_run } from "./js_declare_assign_null_cases_gate_run.mjs";
 import { functions_head_duplicates_gate_run } from "./functions_head_duplicates_gate_run.mjs";
 import { literals_frozen_storage_gate_run } from "./literals_frozen_storage_gate_run.mjs";
@@ -102,6 +104,8 @@ export function qa_gates() {
     memory_link_gate_run,
     memory_fn_reference_tokens_gate_run,
     memory_fn_reference_gate_run,
+    text_dispatcher_command_names_gate_run,
+    functions_dispatcher_commands_gate_run,
     memory_symbol_gate_run,
     memory_index_size_gate_run,
     memory_index_lines_gate_run,
