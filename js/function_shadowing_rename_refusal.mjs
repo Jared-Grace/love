@@ -1,11 +1,10 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { js_free_names } from "./js_free_names.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 export async function function_shadowing_rename_refusal(
   f_name,
   name,
@@ -42,8 +41,7 @@ export async function function_shadowing_rename_refusal(
   ("whole-function twin does, and exactly one means the inner twin does. Since the");
   ("sweep now chooses between them by kind, neither count is a reason to skip.");
   let scopes = js_scopes_shadowing(ast, name);
-  let count = list_size(scopes);
-  let several = greater_than(count, 1);
+  let several = list_multiple_is(scopes);
   if (several) {
     let many =
       "the file hides the word in more than one place, so there is no single inner binding to move and the choice belongs to whoever is reading it";
