@@ -20,6 +20,7 @@ export async function permission_grant_refusals_context(unaliased, context) {
   let denied = property_get(context, "denied");
   let openers = property_get(context, "openers");
   let remembered = property_get(context, "remembered");
+  let parsed = property_get(context, "parsed");
   let refusals = [];
   let live = list_includes(live_names, unaliased);
   if (not(live)) {
