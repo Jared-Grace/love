@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { counter } from "./counter.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 export function js_node_effectful_is(node) {
@@ -16,6 +17,6 @@ export function js_node_effectful_is(node) {
     js_visit_types(node, types, lambda2);
   }
   let count = counter(lambda3);
-  let effectful = count > 0;
+  let effectful = greater_than(count, 0);
   return effectful;
 }

@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,12 +12,12 @@ import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_marker_name_get(v) {
   let stack = property_get(v, "stack");
-  let stack_1 = list_get_end(stack, 1);
-  let a = js_node_is(stack_1);
+  let stack_ = list_get_end(stack, 1);
+  let a = js_node_is(stack_);
   if (not(a)) {
     return null;
   }
-  let a2 = js_node_type_is(stack_1, "ExpressionStatement");
+  let a2 = js_node_type_is(stack_, "ExpressionStatement");
   if (not(a2)) {
     return null;
   }
@@ -27,7 +28,8 @@ export function js_marker_name_get(v) {
     return null;
   }
   let name = property_get(callee, "name");
-  if (name !== fn_name("marker")) {
+  let right = fn_name("marker");
+  if (not_equal(name, right)) {
     return null;
   }
   let arguments2 = js_call_arguments_get(node);
