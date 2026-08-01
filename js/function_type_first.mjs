@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_visit_nodes } from "./js_visit_nodes.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -9,7 +10,8 @@ export async function function_type_first(f_name, type) {
   let ast = property_get(v, "ast");
   function lambda2(la) {
     function lambda(node) {
-      if (js_node_type(node) === type) {
+      let left = js_node_type(node);
+      if (equal(left, type)) {
         la(node);
       }
     }

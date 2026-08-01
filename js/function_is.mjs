@@ -1,4 +1,5 @@
+import { equal } from "./equal.mjs";
 export function function_is(f) {
-  let fi = typeof f === "function";
+  let fi = equal(typeof f, "function");
   return fi;
 }
