@@ -1,3 +1,4 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_book_hash_key } from "./app_shared_bible_book_hash_key.mjs";
@@ -237,8 +238,7 @@ export async function app_shared_bible_read(context, verse_action) {
   );
   languages_verses = list_filter_null_not_is(languages_verses);
   let show_language_names = list_multiple_is(languages_verses);
-  let primary_entry = list_last(languages_verses);
-  let primary_verses = property_get(primary_entry, "verses");
+  let primary_verses = list_last_property(languages_verses, "verses");
   async function render_verse(v) {
     let verse_number_v = property_get(v, "verse_number");
     let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
