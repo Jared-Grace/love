@@ -1,3 +1,4 @@
+import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
@@ -186,7 +187,6 @@ export function app_g_dev_routes(div_map) {
     await app_g_design();
   }
   let routes = {
-    design,
     study,
     unbeliever,
     quick,
@@ -203,5 +203,10 @@ export function app_g_dev_routes(div_map) {
     gratitude,
     pray,
   };
+  let local = localhost_is();
+  if (local) {
+    ("#design is the ONE route that stays localhost-only, and it is held back HERE rather than at the dispatcher because this registry is what both the dispatcher and the #index directory read — gating it once means the card cannot be listed on a screen where tapping it would do nothing. every other route ships, so the dev screens are reachable on a phone against the deployed site, where there is no localhost to develop from. design is different in kind: it is the private design notes, not a mechanic under test");
+    property_set(routes, "design", design);
+  }
   return routes;
 }
