@@ -1,3 +1,4 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { integer_from_base_try } from "./integer_from_base_try.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
@@ -45,8 +46,7 @@ export async function commits_hand_edit_kinds(count_given) {
     }
     let bucket = property_get(counted, kind);
     bucket.count = bucket.count + 1;
-    let a = list_size(bucket.samples);
-    let few = less_than(a, 4);
+    let few = list_size_less_than_value(bucket.samples, 4);
     if (few) {
       list_add(bucket.samples, single[index]);
     }
