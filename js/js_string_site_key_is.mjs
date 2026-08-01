@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_stack_node_above } from "./js_stack_node_above.mjs";
@@ -25,15 +26,13 @@ export function js_string_site_key_is(stack) {
   let member_is = equal(above_type, "MemberExpression");
   if (member_is) {
     let computed = property_get(above, "computed");
-    let looked_up = property_get(above, "property");
-    let held_is = equal(looked_up, held_node);
+    let held_is = property_equals(above, "property", held_node);
     let bracketed = computed && held_is;
     return bracketed;
   }
   let entry_is = equal(above_type, "Property");
   if (entry_is) {
-    let entry_key = property_get(above, "key");
-    let named_is = equal(entry_key, held_node);
+    let named_is = property_equals(above, "key", held_node);
     return named_is;
   }
   let call_is = equal(above_type, "CallExpression");
