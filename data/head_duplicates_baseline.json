@@ -1,3 +1,8 @@
 {
- "known": []
+ "known": [
+  "function_copy_generic,function_rename_open_generic,function_wrap_generic",
+  "commits_ai_js_file_shapes,commits_command_named_share",
+  "function_select_apply_generic,function_select_multiple_apply_generic",
+  "js_free_names_cases,js_identifiers_referenced_names_cases"
+ ]
 }
