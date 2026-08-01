@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -39,8 +40,11 @@ export function js_identifier_defineds(v) {
           let ids = list_map_property(declarations, "id");
           function lambda(id) {
             if (js_node_type_is(id, "ObjectPattern")) {
-              let properties = property_get(id, "properties");
-              let values = list_map_property(properties, "value");
+              let values = property_list_map_property(
+                id,
+                "properties",
+                "value",
+              );
               let names = js_identifiers_to_names(values);
               la(names);
             } else if (js_node_type_is(id, "ArrayPattern")) {
