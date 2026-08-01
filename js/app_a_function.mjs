@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -180,8 +181,7 @@ export async function app_a_function(context) {
       fn: async function lambda10() {
         let v6 = await app_a_functions_overlay(a, lambda11);
         let overlay_result = property_get(v6, "overlay_result");
-        let chooser_result = property_get(v6, "chooser_result");
-        let input_set = property_get(chooser_result, "input_set");
+        let input_set = property_path_get_2(v6, "chooser_result", "input_set");
         let combined = function_new_js_name("");
         input_set(combined);
         async function lambda11(f_name_call) {
