@@ -1,8 +1,7 @@
+import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_only_imports } from "./js_name_only_imports.mjs";
-import { js_code_call_args } from "./js_code_call_args.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -59,8 +58,7 @@ export function js_name_only_imports_spell(ast) {
     }
     let quoted = text_pad_space_quote_double(mentioned);
     let spelled_f_name = fn_name("fn_name");
-    let call_code = js_code_call_args(spelled_f_name, [quoted]);
-    let call = js_parse_expression(call_code);
+    let call = js_call_args_from_code(spelled_f_name, [quoted]);
     object_replace(node, call);
   }
   js_visit_types(ast, ["MemberExpression"], each_item);
