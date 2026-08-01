@@ -320,7 +320,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     above,
     name_id,
     next_arg,
-    example_count: 2,
+    example_count: 4,
     decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: "value: ",
