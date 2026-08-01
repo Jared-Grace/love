@@ -86,8 +86,6 @@ export function permission_rules_other() {
     "Bash(rm -f public/dev/calendar.js)",
     "Edit(.claude/hooks/claude_edit_claim.mjs)",
     "Edit(.claude/hooks/memory_write_allow.mjs)",
-    "Edit(.claude/settings.json)",
-    "Edit(.claude/settings.local.json)",
   ];
   return texts;
 }
