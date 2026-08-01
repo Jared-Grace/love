@@ -1,9 +1,10 @@
+import { function_ast_memo } from "./function_ast_memo.mjs";
+import { js_flo_params_get } from "./js_flo_params_get.mjs";
+import { function_params_plain_ast } from "./function_params_plain_ast.mjs";
 import { functions_permission_seams } from "./functions_permission_seams.mjs";
 import { function_seams_reached_memo } from "./function_seams_reached_memo.mjs";
-import { function_params_plain } from "./function_params_plain.mjs";
 import { and } from "./and.mjs";
 import { function_command_seams_reached_memo } from "./function_command_seams_reached_memo.mjs";
-import { function_params_get } from "./function_params_get.mjs";
 import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -49,7 +50,9 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " puts a window on the human's screen, and whether it does is read from the environment rather than from its arguments, so one rule approves both answers — grant a function that does the same work without the showing",
     );
   }
-  let params = await function_params_get(unaliased);
+  ("Both questions this asks about the function's own parameters are read off one tree. Finding the file and parsing it is the whole cost, and it does not depend on which of the two is being asked, so asking each from a name paid for the same parse twice - four hundred and forty names, eight hundred and eighty parses.");
+  let ast = await function_ast_memo(unaliased, parsed);
+  let params = js_flo_params_get(ast);
   let takes_arguments = greater_than(params.length, 0);
   let seams = await function_command_seams_reached_memo(unaliased, remembered);
   let reaches = greater_than(seams.length, 0);
@@ -82,7 +85,7 @@ export async function permission_grant_refusals_context(unaliased, context) {
     );
   }
   ("A word inside a parameter's name is a guess about what the parameter holds, and the guess is wrong often enough to matter - chapter_code holds a Bible chapter identifier, not source text. Reading the shape of the name instead would loosen the check for every function nobody has looked at, so the function declares the exception itself and an unmarked parameter is still refused.");
-  let plain = await function_params_plain(unaliased);
+  let plain = function_params_plain_ast(ast);
   for (let p of params) {
     let p_name = property_get(p, "name");
     let declared = list_includes(plain, p_name);
