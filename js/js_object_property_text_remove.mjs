@@ -1,8 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_select_object_property_elements } from "./js_select_object_property_elements.mjs";
 import { list_matching_single } from "./list_matching_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_object_property_text_remove(ast, selects, key_name, text) {
   arguments_assert(arguments, 4);
@@ -14,8 +13,7 @@ export function js_object_property_text_remove(ast, selects, key_name, text) {
   ("shape that can silently drop everything it did not mention.");
   let elements = js_select_object_property_elements(selects, key_name);
   function same_is(element) {
-    let held = property_get(element, "value");
-    let same = equal(held, text);
+    let same = property_equals(element, "value", text);
     return same;
   }
   ("The refusal is handed to the finding rather than written after it, because the");
