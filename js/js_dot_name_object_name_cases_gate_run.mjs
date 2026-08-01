@@ -1,8 +1,8 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_dot_name_object_name_cases } from "./js_dot_name_object_name_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { list_first } from "./list_first.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function js_dot_name_object_name_cases_gate_run() {
@@ -15,8 +15,7 @@ export function js_dot_name_object_name_cases_gate_run() {
     let code = property_get(c, "code");
     let ast = js_parse(code);
     let body = property_get(ast, "body");
-    let statement = list_first(body);
-    let expression = property_get(statement, "expression");
+    let expression = list_first_property(body, "expression");
     let object = js_dot_name_object_name_try(expression);
     return object;
   }
