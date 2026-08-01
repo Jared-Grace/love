@@ -1,9 +1,8 @@
-import { list_size } from "./list_size.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function kinds_all_is(kinds, wanted) {
-  let size = list_size(kinds);
-  let empty = equal(size, 0);
+  let empty = list_empty_is(kinds);
   if (empty) {
     return false;
   }
