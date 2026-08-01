@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,7 +8,6 @@ import { js_binding_names } from "./js_binding_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -50,8 +50,7 @@ export function js_calls_named_sized(ast, f_name, count) {
     if (not(named)) {
       return;
     }
-    let args = property_get(node, "arguments");
-    let size = list_size(args);
+    let size = property_list_size(node, "arguments");
     let sized = equal(size, wanted);
     if (not(sized)) {
       return;
