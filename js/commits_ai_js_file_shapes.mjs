@@ -1,10 +1,9 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { commits_scratch_path_is } from "./commits_scratch_path_is.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { commits_shape_name } from "./commits_shape_name.mjs";
 import { not } from "./not.mjs";
-import { less_than } from "./less_than.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -58,8 +57,7 @@ export async function commits_ai_js_file_shapes(count_given) {
       }
       let bucket = property_get(buckets, key);
       bucket.count = bucket.count + 1;
-      let a = list_size(bucket.samples);
-      let few = less_than(a, 6);
+      let few = list_size_less_than_value(bucket.samples, 6);
       if (few) {
         list_add(bucket.samples, path);
       }
