@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -165,8 +166,10 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     }
     return null;
   }
-  let text_mapped = list_map(languages_available, lambda_text_map);
-  let text_languages = list_filter_null_not_is(text_mapped);
+  let text_languages = list_map_filter_null_not_is(
+    languages_available,
+    lambda_text_map,
+  );
   if (list_empty_is(languages_available)) {
     languages_available = [
       {

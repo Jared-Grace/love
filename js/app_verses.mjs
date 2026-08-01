@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { app_reply_verses_uplifting_entries } from "./app_reply_verses_uplifting_entries.mjs";
@@ -25,7 +26,6 @@ import { property_get_or } from "./property_get_or.mjs";
 import { text_split_plus } from "./text_split_plus.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
@@ -73,8 +73,10 @@ export async function app_verses(context) {
     let r2 = list_find_property_or_null(languages, "language_code", code);
     return r2;
   }
-  let mapped = list_map(language_codes, code_to_language);
-  let languages_chosen = list_filter_null_not_is(mapped);
+  let languages_chosen = list_map_filter_null_not_is(
+    language_codes,
+    code_to_language,
+  );
   let verse_groups = [];
   let verse_count = 1;
   let offline_notified = false;
