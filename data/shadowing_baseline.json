@@ -40,13 +40,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_a_list_chooser_generic",
-   "shadows_outer": [
-    "text"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_bible_books_matches",
    "shadows_outer": [
     "empty",
@@ -134,13 +127,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_g_menu",
-   "shadows_outer": [
-    "text"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_g_rows_ensure",
    "shadows_outer": [
     "rows"
@@ -199,13 +185,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_reply_verses_uplifting_entries",
-   "shadows_outer": [
-    "text"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_reply",
    "shadows_outer": [
     "lambda6"
@@ -229,8 +208,7 @@
   {
    "name": "app_shared_gloss_bible_home_generic",
    "shadows_outer": [
-    "p",
-    "verses"
+    "p"
    ],
    "shadows_function": []
   },
@@ -251,15 +229,7 @@
   {
    "name": "app_supper_verses_get",
    "shadows_outer": [
-    "v",
-    "verses"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "autopray",
-   "shadows_outer": [
-    "verses"
+    "v"
    ],
    "shadows_function": []
   },
@@ -290,7 +260,6 @@
    "name": "command_line_generic",
    "shadows_outer": [
     "options",
-    "stdout",
     "c",
     "args",
     "command"
@@ -345,13 +314,6 @@
     "bible_folder",
     "books",
     "v"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "ebible_verses_references",
-   "shadows_outer": [
-    "text"
    ],
    "shadows_function": []
   },
@@ -444,7 +406,6 @@
   {
    "name": "g_sermon_generate_book_generic_prompts",
    "shadows_outer": [
-    "text",
     "each_chapter",
     "groups"
    ],
@@ -472,13 +433,6 @@
    "shadows_function": []
   },
   {
-   "name": "guard_check",
-   "shadows_outer": [
-    "stdout"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "html_checkboxes",
    "shadows_outer": [
     "div"
@@ -496,13 +450,6 @@
    "name": "html_parse_descendants_classes",
    "shadows_outer": [
     "item"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "html_text_characters_numbered",
-   "shadows_outer": [
-    "text"
    ],
    "shadows_function": []
   },
@@ -592,15 +539,7 @@
   {
    "name": "machine_resumes_past_day",
    "shadows_outer": [
-    "stdout",
     "wrap"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "memory_hook_check",
-   "shadows_outer": [
-    "stdout"
    ],
    "shadows_function": []
   },
@@ -654,23 +593,9 @@
    "shadows_function": []
   },
   {
-   "name": "sandbox_4_a",
-   "shadows_outer": [
-    "mapped"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "server",
    "shadows_outer": [
     "result"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "text_to_uuid_cache",
-   "shadows_outer": [
-    "text"
    ],
    "shadows_function": []
   },
