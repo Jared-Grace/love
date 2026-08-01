@@ -29,6 +29,9 @@ export function g_generation_plan() {
   let per_day_whole = Math.ceil(conversations_per_day);
   let npcs_minimum = Math.max(per_day_whole, s.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs_fewest, npcs_minimum);
+  ("The most conversations a day may hold is set by the fewest matches one may contain. Cutting the day into more pieces than that makes each piece too small to be worth the approach it costs.");
+  let per_day_most = divide(s.day_matches, s.conversation_matches_minimum);
+  let conversations_per_day_maximum = Math.floor(per_day_most);
   ("Arc length is the quantity that can fail to schedule, because an arc of nine conversations needs nine separate days to be spent in.");
   let days_fit = less_than_equal(s.arc_conversations_maximum, s.plant_days);
   let leader_days_fit = less_than_equal(
@@ -37,6 +40,7 @@ export function g_generation_plan() {
   );
   let r = {
     conversations_per_day,
+    conversations_per_day_maximum,
     plant_matches,
     plant_conversations,
     question_matches,
