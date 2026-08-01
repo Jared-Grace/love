@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { entries_by_shape_first } from "./entries_by_shape_first.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { repos_names } from "./repos_names.mjs";
@@ -23,8 +24,7 @@ export async function functions_absorbable() {
       let shape = property_get(entry, "shape");
       let known = property_exists(by_shape, shape);
       if (known) {
-        let common = property_get(by_shape, shape);
-        let common_name = property_get(common, "name");
+        let common_name = property_path_get_2(by_shape, shape, "name");
         let name = property_get(entry, "name");
         list_add(matches, {
           repo_name,
