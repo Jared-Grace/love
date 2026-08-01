@@ -1,3 +1,4 @@
+import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -20,7 +21,7 @@ export function app_bible_languages(context) {
       codes = [v];
     }
     let l = list_join_plus(codes);
-    html_hash_property_set("l", l);
+    html_hash_property_set(app_shared_bible_language_hash_key(), l);
   }
   ("reached from the settings hub, so back returns there");
   let back = app_shared_screen_later(context, app_bible_settings);
