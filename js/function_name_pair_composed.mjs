@@ -1,9 +1,8 @@
+import { function_name_combine_multiple_concat } from "./function_name_combine_multiple_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_name_to_parts } from "./function_name_to_parts.mjs";
-import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
 export function function_name_pair_composed(name_left, name_right) {
   arguments_assert(arguments, 2);
@@ -26,7 +25,6 @@ export function function_name_pair_composed(name_left, name_right) {
   if (shared_is) {
     right_rest = list_skip_1(parts_right);
   }
-  let parts = list_concat(parts_left, right_rest);
-  let composed = function_name_combine_multiple(parts);
+  let composed = function_name_combine_multiple_concat(parts_left, right_rest);
   return composed;
 }
