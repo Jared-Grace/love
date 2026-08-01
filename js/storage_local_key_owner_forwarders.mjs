@@ -12,19 +12,24 @@ export async function storage_local_key_owner_forwarders() {
   arguments_assert(arguments, 0);
   let sites = await storage_local_key_sites();
   let live = await functions_names();
-  let forwarders = [];
-  for (let site of sites) {
-    let f_name = property_get(site, "f_name");
+  function forwarding_is(site) {
     let names = property_get(site, "names");
-    for (let one of names) {
+    function live_not_is(one) {
       let is_live = list_includes(live, one);
-      if (is_live) {
-        continue;
-      }
-      list_add(forwarders, f_name);
+      let n = not(is_live);
+      return n;
     }
+    let forwarded = list_filter(names, live_not_is);
+    let any = list_empty_not_is(forwarded);
+    return any;
   }
-  let unique = list_unique(forwarders);
+  let forwarding = list_filter(sites, forwarding_is);
+  function site_f_name(site) {
+    let f_name = property_get(site, "f_name");
+    return f_name;
+  }
+  let f_names = list_map(forwarding, site_f_name);
+  let unique = list_unique(f_names);
   unique.sort();
   return unique;
 }
