@@ -1,5 +1,5 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
@@ -34,8 +34,7 @@ export function function_params_declared(fn) {
   let parts = text_split_comma(trimmed);
   let names = list_map(parts, text_trim);
   function named_is(name) {
-    let blank = text_empty_is(name);
-    let b = not(blank);
+    let b = text_empty_not_is(name);
     return b;
   }
   let declared = list_filter(names, named_is);
