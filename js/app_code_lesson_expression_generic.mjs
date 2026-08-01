@@ -55,6 +55,7 @@ export function app_code_lesson_expression_generic(params) {
     null,
   );
   let unscramble_label = property_get_or(params, "unscramble_label", null);
+  let unscramble = property_get_or(params, "unscramble", true);
   let lesson = app_code_lesson_code_generic({
     value: "value",
     batch_get: b,
@@ -69,6 +70,7 @@ export function app_code_lesson_expression_generic(params) {
     backwards_question_label,
     backwards_answer_label,
     unscramble_label,
+    unscramble,
   });
   return lesson;
 }
