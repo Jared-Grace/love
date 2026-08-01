@@ -1,6 +1,6 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -30,8 +30,7 @@ export function path_pattern_covers_is(pattern, path) {
       return false;
     }
     let leaf = path.slice(under2.length);
-    let deeper = text_includes(leaf, separator);
-    let n = not(deeper);
+    let n = text_includes_not(leaf, separator);
     return n;
   }
   let same = equal(pattern, path);
