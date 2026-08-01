@@ -15,6 +15,9 @@ import { property_set } from "./property_set.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { function_name_pair_composed } from "./function_name_pair_composed.mjs";
 import { function_exists } from "./function_exists.mjs";
+import { function_path_to_name } from "./function_path_to_name.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
 export async function functions_call_pairs_frequent() {
   "Auto-DRY recommender: scan every js fn, count how often each ORDERED pair of consecutive";
   ("call-declarations recurs across files (alpha-renamed via ",
@@ -33,6 +36,7 @@ export async function functions_call_pairs_frequent() {
   arguments_assert(arguments, 0);
   let entries = await js_files_texts();
   let tally = {};
+  let file_keys = {};
   function file_scan(entry) {
     let file = property_get(entry, "file");
     let text = property_get(entry, "text");
@@ -45,6 +49,14 @@ export async function functions_call_pairs_frequent() {
       return;
     }
     let last = subtract(sigs.length, 1);
+    let calls = 0;
+    for (let sig of sigs) {
+      if (property_get(sig, "callee")) {
+        calls = calls + 1;
+      }
+    }
+    let keys_here = [];
+    property_set(file_keys, file, { keys: keys_here, calls: calls });
     let i = 0;
     while (less_than(i, last)) {
       let s = sigs[i];
@@ -60,6 +72,9 @@ export async function functions_call_pairs_frequent() {
       let name = property_get(s, "name");
       let args = property_get(s2, "args");
       let wired = list_includes(args, name);
+      if (wired) {
+        keys_here.push(key);
+      }
       let seen = property_exists(tally, key);
       if (not(seen)) {
         let example =
@@ -86,6 +101,31 @@ export async function functions_call_pairs_frequent() {
     }
   }
   list_map(entries, file_scan);
+  ("A function whose whole body IS one of these pairs is the atom the pair is asking");
+  ("for, already written. Nothing but the pair means one wired pair and no third call");
+  ("beyond the two and the argument check, which is what tells");
+  (fn_name("list_multiple_is"), " apart from a long function that happens to");
+  ("hold one wired pair somewhere in the middle of it.");
+  let atom_by_key = {};
+  for (let file in file_keys) {
+    let scanned = property_get(file_keys, file);
+    let keys_here = property_get(scanned, "keys");
+    let calls = property_get(scanned, "calls");
+    let alone = equal(keys_here.length, 1);
+    let bare = less_than(calls, 4);
+    let atom_is = alone && bare;
+    if (not(atom_is)) {
+      continue;
+    }
+    let only_key = keys_here[0];
+    let f_name = function_path_to_name(file);
+    let seen_names = property_get_or_null(atom_by_key, only_key);
+    if (not(seen_names)) {
+      seen_names = [];
+      property_set(atom_by_key, only_key, seen_names);
+    }
+    seen_names.push(f_name);
+  }
   let rows = [];
   for (let key in tally) {
     let record = tally[key];
@@ -99,6 +139,7 @@ export async function functions_call_pairs_frequent() {
       pair: record.example,
       left: record.left,
       right: record.right,
+      atoms: property_get_or_null(atom_by_key, key),
     });
   }
   function lambda(a, b) {
