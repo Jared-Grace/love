@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_dispatcher_command_names } from "./text_dispatcher_command_names.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
 export function function_entries_dispatcher_commands_unresolved(
   entries,
   f_names,
