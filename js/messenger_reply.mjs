@@ -1,11 +1,10 @@
+import { list_map_property_join_space } from "./list_map_property_join_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { property_set } from "./property_set.mjs";
 import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { messenger_reply_messages_message } from "./messenger_reply_messages_message.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { messenger_reply_unreplied } from "./messenger_reply_unreplied.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
@@ -43,8 +42,7 @@ export async function messenger_reply() {
     let mine_last_lines = text_split_newline(message);
     let mine_last_lines_last = list_last(mine_last_lines);
     let property_name = messenger_reply_messages_message();
-    let mapped2 = list_map_property(unreplied, property_name);
-    let joined = list_join_space(mapped2);
+    let joined = list_map_property_join_space(unreplied, property_name);
     async function lambda(messages2) {
       property_set(messages2, joined, 1);
     }
