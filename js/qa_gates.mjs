@@ -143,6 +143,7 @@ export function qa_gates() {
     js_function_self_call_cases_gate_run,
     js_comment_migratable_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
+    js_hash_key_literals_cases_gate_run,
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
     js_while_frozen_cases_gate_run,
