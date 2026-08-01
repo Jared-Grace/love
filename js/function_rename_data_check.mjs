@@ -1,9 +1,8 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { examples_folder } from "./examples_folder.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
 import { data_paths } from "./data_paths.mjs";
 import { file_identifier_replace } from "./file_identifier_replace.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -12,8 +11,7 @@ export async function function_rename_data_check(f_name_before, f_name_after) {
   let paths_all = await data_paths();
   function examples_not_is(f_path) {
     let folder = examples_folder();
-    let sw = text_starts_with(f_path, folder);
-    let n = not(sw);
+    let n = text_starts_with_not(f_path, folder);
     return n;
   }
   let paths = list_filter(paths_all, examples_not_is);
