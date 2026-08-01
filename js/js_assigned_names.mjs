@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type } from "./js_node_type.mjs";
@@ -24,8 +25,7 @@ export function js_assigned_names(node) {
       ? property_get(visited, "argument")
       : property_get(visited, "left");
     function named(w) {
-      let identifier = property_get(w, "node");
-      let name = property_get(identifier, "name");
+      let name = property_path_get_2(w, "node", "name");
       list_add(names, name);
     }
     js_visit_types(target, ["Identifier"], named);
