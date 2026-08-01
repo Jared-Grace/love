@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_map_property_join_space } from "./list_map_property_join_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
@@ -37,8 +38,7 @@ export async function messenger_reply() {
     let messages = await messenger_reply_messages(page, first);
     let v2 = await messenger_reply_unreplied(messages);
     let unreplied = property_get(v2, "unreplied");
-    let mine_last = property_get(v2, "mine_last");
-    let message = property_get(mine_last, "message");
+    let message = property_path_get_2(v2, "mine_last", "message");
     let mine_last_lines = text_split_newline(message);
     let mine_last_lines_last = list_last(mine_last_lines);
     let property_name = messenger_reply_messages_message();
