@@ -1,15 +1,14 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { lookup_adder_async } from "./lookup_adder_async.mjs";
 import { functions_asts_each } from "./functions_asts_each.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { property_get } from "./property_get.mjs";
 export async function functions_search_call(search) {
   async function lambda2(la) {
     async function lambda(ast) {
       function lambda3(a) {
-        let v = property_get(a, "v");
-        let node = property_get(v, "node");
+        let node = property_path_get_2(a, "v", "node");
         let code = js_unparse(node);
         let f = js_flo_name(ast);
         la(f, code);
