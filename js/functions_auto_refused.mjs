@@ -1,10 +1,9 @@
+import { property_not } from "./property_not.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
-import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 export async function functions_auto_refused() {
   arguments_assert(arguments, 0);
   ("every function the normalize pass cannot carry through and leave loadable, asked of the whole repo at once and answered without touching a file");
@@ -19,8 +18,7 @@ export async function functions_auto_refused() {
     at_once,
   );
   function refused_is(result) {
-    let ok = property_get(result, "ok");
-    let not_ok = not(ok);
+    let not_ok = property_not(result, "ok");
     return not_ok;
   }
   let names = list_filter_map_property(results, refused_is, "name");
