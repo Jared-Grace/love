@@ -1,3 +1,4 @@
+import { range_map } from "./range_map.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -11,7 +12,6 @@ import { list_concat_single } from "./list_concat_single.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { range } from "./range.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -38,8 +38,7 @@ export function app_code_lesson_expression_remainder_subtract() {
       let t = text_to(divisor);
       return t;
     }
-    let list = range(count);
-    let subtractions = list_map(list, divisor_text);
+    let subtractions = range_map(count, divisor_text);
     let single = text_to(number);
     let terms = list_concat_single(single, subtractions);
     let separator = text_combine_multiple([" ", minus, " "]);
