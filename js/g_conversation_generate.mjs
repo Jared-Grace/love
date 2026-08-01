@@ -67,8 +67,16 @@ export function g_conversation_generate(pronouns) {
       " trust You",
     ]),
   };
+  "the correct opener is decided HERE, once, when the conversation is generated: each turn receives a fixed `order` drawn from a shuffled sequence, and the runtime always asks for the lowest-ordered turn still unplayed. it used to be drawn fresh on every openers screen, so a player returning from a boundary faced a NEW correct answer each time — guessing then need never terminate, and an unlucky player hits a wall without ever learning that prayer is an option. the DISPLAY order stays the authored turns order, so a fixed correct answer is not a fixed button.";
+  let turns = [gospel_turn, how_turn, believe_turn];
+  let sequence = list_copy(turns);
+  list_shuffle(sequence);
+  function order_set(turn, index) {
+    property_set(turn, "order", index);
+  }
+  each_index(sequence, order_set);
   let conversation = {
-    turns: [gospel_turn, how_turn, believe_turn],
+    turns: turns,
     converts: true,
   };
   return conversation;

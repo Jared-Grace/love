@@ -1,3 +1,4 @@
+import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { app_shared_bible_subset_sorted_choose } from "./app_shared_bible_subset_sorted_choose.mjs";
@@ -32,7 +33,8 @@ export function app_shared_bible_languages_choose(
     let l = list_join_plus(codes);
     app_shared_language_codes_save(l);
     function transform(hash) {
-      property_set(hash, "l", l);
+      let property_name = app_shared_bible_language_hash_key();
+      property_set(hash, property_name, l);
     }
     html_hash_transform(transform);
   }
