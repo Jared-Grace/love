@@ -25,9 +25,9 @@ export async function function_shadowing_rename_refusal(
   let candidates = await functions_names();
   let clash = list_includes(candidates, name_after);
   if (clash) {
-    let taken =
+    let taken_message =
       "the replacement is itself the name of a repo function, so the file would hide that one instead";
-    return taken;
+    return taken_message;
   }
   let parsed = await function_parse_declaration(f_name);
   let ast = property_get(parsed, "ast");
