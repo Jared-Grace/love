@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -6,7 +7,6 @@ import { list_map_property } from "./list_map_property.mjs";
 import { repo_functions_code } from "./repo_functions_code.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { js_code_html_style_literals_left } from "./js_code_html_style_literals_left.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function html_style_literal_gate_run() {
@@ -17,8 +17,7 @@ export async function html_style_literal_gate_run() {
   let helper_names = list_map_property(helpers, "name");
   let entries = await repo_functions_code("love");
   function offends_is(entry) {
-    let name = property_get(entry, "name");
-    let helper_is = list_includes(helper_names, name);
+    let helper_is = property_in_list(entry, "name", helper_names);
     if (helper_is) {
       return false;
     }
