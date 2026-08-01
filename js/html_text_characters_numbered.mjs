@@ -17,8 +17,8 @@ export function html_text_characters_numbered(parent, text) {
       html_font_jetbrains_mono(span);
       html_flex_column_center(span);
       html_display_set(span, "inline-flex");
-      let text = i();
-      let s = html_span_text_smaller(span, text);
+      let words = i();
+      let s = html_span_text_smaller(span, words);
       html_font_color_set(s, "rgb(0, 110, 221)");
     },
     noop,
