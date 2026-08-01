@@ -88,19 +88,19 @@ export async function command_line_generic(command, extra) {
     let current = "";
     let inQuotes = false;
     for (let i = 0; i < command.length; i++) {
-      let c = command[i];
-      if (c === '"') {
+      let c2 = command[i];
+      if (c2 === '"') {
         inQuotes = not(inQuotes);
         continue;
       }
-      if (c === " " && not(inQuotes)) {
+      if (c2 === " " && not(inQuotes)) {
         if (current.length) {
           args.push(current);
           current = "";
         }
         continue;
       }
-      current += c;
+      current += c2;
     }
     if (current.length) {
       args.push(current);
