@@ -1,3 +1,6 @@
+import { list_last } from "./list_last.mjs";
+import { list_remove_last } from "./list_remove_last.mjs";
+import { equal } from "./equal.mjs";
 import { app_code_lesson_quiz_token_select_value_variations } from "./app_code_lesson_quiz_token_select_value_variations.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -8,7 +11,6 @@ import { property_set } from "./property_set.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
-import { list_remove_last_equal } from "./list_remove_last_equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -123,7 +125,11 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   if (expression_is) {
     function trim_semicolon(item) {
       let expected_last = ";";
-      list_remove_last_equal(item, expected_last);
+      let last = list_last(item);
+      let has_semicolon = equal(last, expected_last);
+      if (has_semicolon) {
+        list_remove_last(item);
+      }
     }
     each(variations, trim_semicolon);
   }
