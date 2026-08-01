@@ -1386,6 +1386,47 @@ def is_dangerous_find(words):
     return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
 
 
+def is_writing_read_verb(words):
+    """True iff this is one of the read-only verbs in permissions.allow being
+    asked to WRITE a file - `sort -o FILE`, `ffprobe -o FILE`, or `uniq INPUT
+    OUTPUT`. This is is_dangerous_find's rationale generalized past find: a
+    verb is on the allow list because looking is harmless, verb_of() sees only
+    the leading token, and so a single unchained `sort -o .claude/settings.json
+    x` auto-approves a write to the file that decides what auto-approves.
+    Redirection is already caught (it makes the command unparsed content that
+    can't inherit the verb's trust); these write with no redirection at all, so
+    nothing stood in their way.
+
+    Not exhaustive by construction, and it doesn't need to be: this is a floor
+    under specific measured holes, not a claim that every other trusted verb is
+    incapable of writing. Add a verb here the moment one is found.
+
+    A false positive costs one prompt and nothing else - the same trade
+    is_dangerous_find already accepts for `find . -name -delete`."""
+    verb = words[0]
+    flags = WRITING_FLAGS_BY_VERB.get(verb)
+    if flags:
+        for w in words[1:]:
+            if w in flags or w.split("=", 1)[0] in flags:
+                return True
+    if verb == "uniq":
+        operands = []
+        skip = False
+        for w in words[1:]:
+            if skip:
+                skip = False
+                continue
+            if w.split("=", 1)[0] in UNIQ_VALUE_FLAGS:
+                skip = "=" not in w
+                continue
+            if w.startswith("-") and w != "-":
+                continue
+            operands.append(w)
+        if len(operands) >= 2:
+            return True
+    return False
+
+
 def is_safe_find_exec(words, safe_verbs):
     """See module docstring for the full rationale. Requires exactly one
     -exec/-execdir in `words`, no other DANGEROUS_FIND_FLAGS before it, a
@@ -2036,6 +2077,8 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
                 return False
             continue
         if is_dangerous_find(words):
+            return False
+        if is_writing_read_verb(words):
             return False
         if " ".join(words) in safe_exact_commands:
             continue
