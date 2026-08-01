@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_book_division_uncategorized } from "./ebible_book_division_uncategorized.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
@@ -10,7 +11,6 @@ import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_includes } from "./text_includes.mjs";
 export function app_bible_books_matches(query, books) {
@@ -34,8 +34,7 @@ export function app_bible_books_matches(query, books) {
       let book = list_find_property_or_null(books, "book_code", code);
       return book;
     }
-    let mapped = list_map(codes, to_book);
-    let present = list_filter_null_not_is(mapped);
+    let present = list_map_filter_null_not_is(codes, to_book);
     let matching = list_filter(present, match_book);
     let section = {
       name,
