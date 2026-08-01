@@ -1,14 +1,14 @@
-import { list_last } from "../../love/js/list_last.mjs";
-import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
-import { list_first_last_slice } from "../../love/js/list_first_last_slice.mjs";
-import { list_size_max_skip_replace } from "../../love/js/list_size_max_skip_replace.mjs";
-import { list_map_property } from "../../love/js/list_map_property.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { app_shared_bible_copy } from "../../love/js/app_shared_bible_copy.mjs";
-import { app_shared_bible_verse_highlight } from "../../love/js/app_shared_bible_verse_highlight.mjs";
-import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
-import { list_toggle } from "../../love/js/list_toggle.mjs";
-import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
+import { list_last_property } from "./list_last_property.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_first_last_slice } from "./list_first_last_slice.mjs";
+import { list_size_max_skip_replace } from "./list_size_max_skip_replace.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_copy } from "./app_shared_bible_copy.mjs";
+import { app_shared_bible_verse_highlight } from "./app_shared_bible_verse_highlight.mjs";
+import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
+import { list_toggle } from "./list_toggle.mjs";
+import { invoke_multiple } from "./invoke_multiple.mjs";
 export function app_shared_bible_toggle_update(
   updates,
   verse_numbers_chosen,
@@ -34,8 +34,7 @@ export function app_shared_bible_toggle_update(
     let sliced = null;
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
-      let l = list_last(languages_verses);
-      let verses = property_get(l, "verses");
+      let verses = list_last_property(languages_verses, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = property_get(v, "sliced");
