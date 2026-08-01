@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -8,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 export function js_hash_object_names(ast) {
@@ -32,8 +32,11 @@ export function js_hash_object_names(ast) {
     if (not(plain)) {
       return;
     }
-    let called = property_get(callee, "name");
-    let reads = equal(called, fn_name("html_hash_object_get"));
+    let reads = property_equals(
+      callee,
+      "name",
+      fn_name("html_hash_object_get"),
+    );
     if (not(reads)) {
       return;
     }
