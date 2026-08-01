@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function js_dot_name_object_name_try(node) {
   "The name of the thing whose own name is being read - what X is in X.name - or null where the node is anything else. Read-only, pure.";
   "This is how a function's name is spelled when it is wanted as a word rather than as a call, and it is a reference: rename the function and this follows. The other spelling asks for the word by hand and is a reference too, so a reading that watches where names travel has to know both.";
