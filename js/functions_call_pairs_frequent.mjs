@@ -21,6 +21,7 @@ import { function_path_to_name } from "./function_path_to_name.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { js_return_name } from "./js_return_name.mjs";
+import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 export async function functions_call_pairs_frequent() {
   "Auto-DRY recommender: scan every js fn, count how often each ORDERED pair of consecutive";
   ("call-declarations recurs across files (alpha-renamed via ",
@@ -36,6 +37,9 @@ export async function functions_call_pairs_frequent() {
   ("of being written a second time: the word you reach for to describe a wrapper is");
   ("the one word its name is least likely to hold. An `exists: true` row is not noise");
   ("either - it says the atom is there and the sites were never folded onto it.");
+  ("Every row also says in how many of those files the pair would actually FOLD, and");
+  ("that is what it is ranked by. Recurring often and being collapsible are different");
+  ("questions, and the second is the one worth acting on.");
   arguments_assert(arguments, 0);
   let entries = await js_files_texts();
   let tally = {};
@@ -73,6 +77,7 @@ export async function functions_call_pairs_frequent() {
       while (less_than(i, last)) {
         let s = sigs[i];
         let s2 = sigs[i + 1];
+        let start = i;
         i = i + 1;
         let callee = property_get(s, "callee");
         let callee2 = property_get(s2, "callee");
@@ -105,6 +110,7 @@ export async function functions_call_pairs_frequent() {
           property_set(tally, key, {
             count: 0,
             files: {},
+            closed_files: {},
             wired: wired,
             example: example,
             left: callee,
@@ -114,6 +120,18 @@ export async function functions_call_pairs_frequent() {
         let record = property_get(tally, key);
         record.count = record.count + 1;
         record.files[file] = true;
+        ("Whether the name standing between the two lines is read anywhere else in this");
+        ("same run of statements. If it is, the pair cannot be collapsed here whatever");
+        ("atom is written for it, because the collapsed call would delete a name");
+        ("something later still needs. Asked with the fold's own gate rather than a");
+        ("reading of my own, so a row promising a fold and the fold itself cannot");
+        ("disagree.");
+        if (wired) {
+          let escapes = js_fold_block_escapes(statements, start, 2, [name]);
+          if (not(escapes)) {
+            record.closed_files[file] = true;
+          }
+        }
       }
     }
     ("Every run of statements, not the one the function opens with. Two lines written");
@@ -167,7 +185,9 @@ export async function functions_call_pairs_frequent() {
       continue;
     }
     let file_count = Object.keys(record.files).length;
+    let closed_count = Object.keys(record.closed_files).length;
     rows.push({
+      foldable: closed_count,
       files: file_count,
       count: record.count,
       pair: record.example,
@@ -176,9 +196,18 @@ export async function functions_call_pairs_frequent() {
       atoms: property_get_or_null(atom_by_key, key),
     });
   }
+  ("Ranked by how many files the pair could actually be collapsed in, not by how many");
+  ("hold it. The two differ badly and in the direction that wastes work: a pair whose");
+  ("middle name is used again everywhere reads as a top row and folds nowhere, and");
+  ("the only way to learn that used to be to write the atom, run the fold, get");
+  ("nothing, and delete it again - which was paid twice before this column existed.");
   function lambda(a, b) {
-    let difference = subtract(b.files, a.files);
-    return difference;
+    let difference = subtract(b.foldable, a.foldable);
+    if (difference) {
+      return difference;
+    }
+    let by_files = subtract(b.files, a.files);
+    return by_files;
   }
   rows.sort(lambda);
   let top = rows.slice(0, 25);

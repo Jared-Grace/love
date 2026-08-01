@@ -3,13 +3,13 @@ import { equal_not } from "./equal_not.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 import { user_data_set } from "./user_data_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
 import { assert_json } from "./assert_json.mjs";
 export async function function_current_set(f_name) {
-  let v2 = await function_unalias_exists(f_name);
-  let unaliased = property_get(v2, "unaliased");
-  let exists = property_get(v2, "exists");
+  "Records which fn the human is working on. It used to end by parsing that fn and printing it back out, and hand the result over - work that every one of its six callers threw away, so it was read from disk and parsed for nobody.";
+  let v = await function_unalias_exists(f_name);
+  let unaliased = property_get(v, "unaliased");
+  let exists = property_get(v, "exists");
   assert_json(exists, {
     f_name,
     unaliased,
@@ -19,6 +19,4 @@ export async function function_current_set(f_name) {
     await user_data_set("function_current", unaliased);
     await function_current_selects_empty();
   }
-  let v = await function_parse_declaration_js_unparse(unaliased);
-  return v;
 }
