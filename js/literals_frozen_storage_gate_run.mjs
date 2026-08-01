@@ -11,6 +11,7 @@ export async function literals_frozen_storage_gate_run() {
   ("Whether a word has escaped is usually a judgement, and guessing it from a name or a meaning would be worse than not asking. This asks nothing of the kind. A word passed to the opening of a browser database has escaped by that act alone - the browser wrote it down - so the question has an answer the code itself can give.");
   ("Measured against zero rather than against a record of what was already wrong, because the set was clear when this was written: two names were missing on the day it was built, both put right in the same breath, and there is nothing left to grandfather.");
   ("What it does not reach: the words that escape into local storage, which arrive at their seam as a key computed far from it rather than as a getter the opening imports. Those stay a judgement, and stay on the list by hand.");
+  ("Half of that gap has since been closed from the other side. A local storage key is a function's own NAME with a word after it, so what escapes there is a name rather than a value, and a gate over values could never have watched it, and the sibling that does keeps a record of its own. The word after the name is the half still standing here: it is written out at the call rather than held by a getter, so nothing reads it off a name.");
   let offenders = await literals_frozen_storage_unfrozen();
   let f_name = fn_name("literals_frozen_names");
   let f_name2 = fn_name("literals_frozen_record_new");
