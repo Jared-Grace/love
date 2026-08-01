@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -32,8 +33,7 @@ export function js_pure_read_names(node) {
   let operators = js_operator_function_names();
   let callees = [];
   function called(v) {
-    let call = property_get(v, "node");
-    let callee = property_get(call, "callee");
+    let callee = property_path_get_2(v, "node", "callee");
     list_add(callees, callee);
   }
   js_visit_types(node, ["CallExpression"], called);
