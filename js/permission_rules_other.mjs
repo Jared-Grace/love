@@ -2,6 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function permission_rules_other() {
   "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
+  "no rule here may edit a settings file. Two once did, and a standing approval to edit the file that decides what is approved without asking is the one grant that can widen itself: any rule at all can be added to it, and a rule granting a shell outright answers to nothing on the deny floor, which names particular commands rather than shapes. Two gates would have caught it afterwards - the shared file must match what this generates, and the local one is watched against a record - but both are a reading taken later, and nothing at all stood in the way at the moment of the edit. The list is generated on purpose so that a new approval is a named function a human says yes to; a rule that can rewrite the list goes around that, so the way to change what is approved is to change this source and regenerate, which is a visible edit that a standing approval never buys.";
   let f_name = fn_name("qa_gate_run");
   let combined = text_combine_multiple(["Bash(pkill -f ai.mjs ", f_name, ")"]);
   let f_name2 = fn_name("examples_gate_run");
