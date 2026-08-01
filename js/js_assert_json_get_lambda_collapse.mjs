@@ -1,3 +1,4 @@
+import { list_size_1 } from "./list_size_1.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
@@ -50,8 +51,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
   }
   function variable_name(variable) {
     let declarators = property_get(variable, "declarations");
-    let left = list_size(declarators);
-    let one_is = equal(left, 1);
+    let one_is = list_size_1(declarators);
     if (not(one_is)) {
       let none = null;
       return none;
@@ -63,8 +63,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
   function record_of_plain_names_is(variable) {
     "true only when the record is written out right here and holds nothing but plain names, so reading it early can neither wait on anything nor go wrong";
     let declarators = property_get(variable, "declarations");
-    let left2 = list_size(declarators);
-    let one_is = equal(left2, 1);
+    let one_is = list_size_1(declarators);
     if (not(one_is)) {
       return false;
     }
