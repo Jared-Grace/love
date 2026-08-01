@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_size } from "./list_size.mjs";
@@ -46,8 +47,7 @@ export async function js_node_atomize_variable_name_get(
         let exists = property_get(v4, "exists");
         if (exists) {
           let r = await function_parse_strict_declaration(name);
-          let declaration = property_get(r, "declaration");
-          let params = property_get(declaration, "params");
+          let params = property_path_get_2(r, "declaration", "params");
           let child = list_get_end(stack, offset);
           let index = list_index_of(stack_1, child);
           let param = list_get(params, index);
