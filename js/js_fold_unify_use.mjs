@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
@@ -16,8 +16,7 @@ export function js_fold_unify_use(pattern_key, target_key, params, binding) {
   let is_hole = is_param || is_bound;
   if (is_hole) {
     if (is_bound) {
-      let current = property_get(binding, pattern_key);
-      let consistent = equal(current, target_key);
+      let consistent = property_equals(binding, pattern_key, target_key);
       if (consistent) {
         return binding;
       }
