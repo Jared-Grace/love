@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_shape } from "./function_shape.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
@@ -68,8 +69,7 @@ export async function functions_shape_blocks(line_count) {
       let key = list_join_comma(names);
       let known2 = property_exists(by_names, key);
       if (known2) {
-        let found = property_get(by_names, key);
-        let windows = property_get(found, "windows");
+        let windows = property_path_get_2(by_names, key, "windows");
         list_add(windows, block);
       } else {
         property_set(by_names, key, {
