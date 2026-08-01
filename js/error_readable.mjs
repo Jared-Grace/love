@@ -20,7 +20,8 @@ export function error_readable(e) {
   let absent = undefined_is(e);
   let nothing = or(empty, absent);
   if (nothing) {
-    return "nothing was thrown that could say what went wrong";
+    let r = "nothing was thrown that could say what went wrong";
+    return r;
   }
   let printed = text_to(e);
   return printed;
