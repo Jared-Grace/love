@@ -7,13 +7,13 @@ import { uuid } from "./uuid.mjs";
 import { property_initialize } from "./property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
   function capture(possibilities, property, u) {
-    function lambda(item) {
+    function lambda_inner(item) {
       let index = property_get(item, "index");
       let d = property_initialize(item, "data", {});
       let o = property_initialize(d, u, {});
       property_set(o, property, index);
     }
-    each(possibilities, lambda);
+    each(possibilities, lambda_inner);
   }
   let before = async function lambda2(possibilities) {
     let u = await uuid();
