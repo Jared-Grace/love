@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
@@ -14,8 +15,7 @@ export function js_template_comment_text(template) {
   let expressions = property_get(template, "expressions");
   let pieces = [];
   function lambda(quasi) {
-    let value = property_get(quasi, "value");
-    let cooked = property_get(value, "cooked");
+    let cooked = property_path_get_2(quasi, "value", "cooked");
     list_add(pieces, cooked);
     let index = list_index_of(quasis, quasi);
     let size = list_size(expressions);
@@ -24,8 +24,7 @@ export function js_template_comment_text(template) {
       return;
     }
     let expression = expressions[index];
-    let callee = property_get(expression, "callee");
-    let name = property_get(callee, "name");
+    let name = property_path_get_2(expression, "callee", "name");
     let wrapper_is = equal(name, fn_name("fn_name"));
     if (wrapper_is) {
       let args = property_get(expression, "arguments");
