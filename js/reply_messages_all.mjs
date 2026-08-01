@@ -10,8 +10,8 @@ import { reply_messages_inner } from "./reply_messages_inner.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function reply_messages_all(start, messages) {
   async function lambda(message) {
-    let result = await reply_messages_inner(message, start);
-    let value = property_get(result, "matches");
+    let result_inner = await reply_messages_inner(message, start);
+    let value = property_get(result_inner, "matches");
     if (equal(value, false)) {
       let size = text_size(message);
       let r = range_1(size);
@@ -26,7 +26,7 @@ export async function reply_messages_all(start, messages) {
       }
       await each_async(r, lambda2);
     }
-    return result;
+    return result_inner;
   }
   messages = list_unique(messages);
   let result = await list_map_unordered_async(messages, lambda);
