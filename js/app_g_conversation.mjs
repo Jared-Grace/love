@@ -215,7 +215,7 @@ export async function app_g_conversation(
   }
   function render_farewell() {
     ("the player ends an unbeliever conversation before it completes but after engaging at least one gospel point: the seed is planted, so the NPC's parting words REFLECT rather than convert - ",
-      g_response.name,
+      fn_name("g_response"),
       " 'ponder' ('you've given me a lot to think about'), the same warm structured grammar the natural close uses. one more warm goodbye actually closes.");
     html_clear(overlay);
     let npc_says4 = g_response("ponder");
@@ -388,7 +388,7 @@ export async function app_g_conversation(
   }
   function render() {
     ("the openers screen ASKS what you would like to say, so its parting line is one of the answers — ",
-      app_g_turn_menu.name,
+      fn_name("app_g_turn_menu"),
       " puts it in the box with the other things you could say, and this function adds none. the pray and close screens ask something else (or nothing), so there the parting line still hangs off the OVERLAY below whatever they show.");
     html_clear(overlay);
     let i2 = list_size(remaining);
