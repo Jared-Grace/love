@@ -24,12 +24,17 @@ export async function server() {
     "stale-while-revalidate caching for the game's static art (img/game/**): a dev RELOAD serves the cached sprite INSTANTLY (never blocks on the HTTP/1.1 6-connection cap → no 'did not load' flood) AND revalidates in the background, so an EDITED sprite is picked up on the next normal reload — no hard-reload needed. html/js keep default freshness (the dev bundle is already ?v= busted)";
     let asset = file_path.includes("/img/game/");
     if (asset) {
-      res.setHeader("Cache-Control", "public, max-age=0, stale-while-revalidate=31536000");
+      res.setHeader(
+        "Cache-Control",
+        "public, max-age=0, stale-while-revalidate=31536000",
+      );
     }
   }
-  let static_options = { setHeaders: cache_headers };
+  let static_options = {
+    setHeaders: cache_headers,
+  };
   let v = express.static(result, static_options);
-  "serve the public folder at the root too, so absolute asset urls like /bible/uplifting/engbsb.json resolve in dev exactly as they do in prod, where firebase hosting serves public as the site root";
+  ("serve the public folder at the root too, so absolute asset urls like /bible/uplifting/engbsb.json resolve in dev exactly as they do in prod, where firebase hosting serves public as the site root");
   let folder_public_resolved = await module_public_resolve(import.meta);
   let v_public = express.static(folder_public_resolved, static_options);
   let u = server_url_api();
@@ -39,13 +44,21 @@ export async function server() {
     let f_name = property_get(body, "f_name");
     let args = property_get(body, "args");
     try {
-      let result = await function_worker_pool_run(f_name, args);
-      res.json({ result });
+      let result_inner = await function_worker_pool_run(f_name, args);
+      res.json({
+        result: result_inner,
+      });
     } catch (caught) {
-      "express does not catch a rejection from an async handler, so without this the browser waits forever instead of failing — the page's own catch can only run once a response actually arrives";
+      ("express does not catch a rejection from an async handler, so without this the browser waits forever instead of failing — the page's own catch can only run once a response actually arrives");
       let failed = String(property_get(caught, "message"));
-      log(api_generic.name, { f_name, failed });
-      res.status(500).json({ result: null, failed });
+      log(api_generic.name, {
+        f_name,
+        failed,
+      });
+      res.status(500).json({
+        result: null,
+        failed,
+      });
     }
   }
   async function api(req, res) {
