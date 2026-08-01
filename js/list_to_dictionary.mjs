@@ -5,7 +5,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function list_to_dictionary(list, lambda$item2k, lambda$item2v) {
   text_combine_multiple([
     "if each key has one value, then ",
-    list_to_dictionary.name,
+    fn_name("list_to_dictionary"),
     " but if each key corresponds to a list of values, then ",
     fn_name("list_to_lookup"),
   ]);
