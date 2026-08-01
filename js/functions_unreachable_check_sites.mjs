@@ -21,7 +21,7 @@ export async function functions_unreachable_check_sites() {
   "reaches for most, and each had a careful sentence sitting in it unread. The";
   "twin that carries the caller's words into the finding is what was missing;";
   "with that written, this stays at zero.";
-  let checkers = [fn_name("assert_json"), fn_name("null_is"), not.name];
+  let checkers = [fn_name("assert_json"), fn_name("null_is"), fn_name("not")];
   let finders = functions_refusing_finders();
   let f_names = await repo_functions_names("love");
   let sites = [];
