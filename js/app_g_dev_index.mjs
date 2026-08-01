@@ -23,14 +23,14 @@ export function app_g_dev_index() {
   let f_name = fn_name("app_search_results");
   (text_combine_multiple([
     "the #index dev directory, rendered like the Bible SEARCH RESULTS (DRY — the SAME ",
-    app_shared_container_blue.name,
+    fn_name("app_shared_container_blue"),
     " cards + bold collapsible header the search uses, mirroring ",
     f_name,
     ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link jumps to that screen. routes + categories come from the ",
   ]),
-    app_g_dev_routes.name,
+    fn_name("app_g_dev_routes"),
     " registry + ",
-    app_g_dev_index_prefixes.name,
+    fn_name("app_g_dev_index_prefixes"),
     ", so it never drifts. BESPOKE (recursion / closures / Object.keys) — do NOT auto-canonicalize");
   let div = app_g_dev_overlay("Dev routes");
   let routes = app_g_dev_routes(null);
