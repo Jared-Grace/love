@@ -1,3 +1,4 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
@@ -30,7 +31,6 @@ import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_go
 import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
@@ -214,8 +214,7 @@ export async function app_replace_rule_set(context) {
             duration,
             div_symbols,
           ));
-        let object2 = list_last(history);
-        let last_state = property_get(object2, "state");
+        let last_state = list_last_property(history, "state");
         let b = json_equal(start, last_state);
         if (not(b)) {
           let rule_used = list_get(rules_used, index_selected);
