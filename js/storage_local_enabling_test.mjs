@@ -1,7 +1,6 @@
 import { storage_local_enable } from "./storage_local_enable.mjs";
 import { global_function_initialize_object } from "./global_function_initialize_object.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
-import { storage_local_get_global } from "./storage_local_get_global.mjs";
 import { storage_key_get } from "./storage_key_get.mjs";
 import { storage_local_keys_value_dictionary } from "./storage_local_keys_value_dictionary.mjs";
 import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
@@ -69,8 +68,7 @@ export function storage_local_enabling_test() {
   }
   ("global actually uses global");
   {
-    let storage_local_key = storage_key_get(app_fn, key);
-    let value_global = storage_local_get_global(storage_local_key);
+    let value_global = storage_local_get(app_fn, key);
     equal_assert_json(value_global, v, {
       hint: "the global store should hold the value that was set through the app function",
     });
