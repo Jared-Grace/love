@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 export function error_is(value) {
   arguments_assert(arguments, 1);
   ("whether this is a thrown error rather than ordinary data");
