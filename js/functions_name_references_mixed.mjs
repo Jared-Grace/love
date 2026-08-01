@@ -1,3 +1,4 @@
+import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -37,23 +38,11 @@ export async function functions_name_references_mixed() {
     };
     function each_member(v) {
       let node = property_get(v, "node");
-      let computed = property_get(node, "computed");
-      if (computed) {
+      let object_name = js_dot_name_object_name_try(node);
+      let dotted_not = equal(object_name, null);
+      if (dotted_not) {
         return;
       }
-      let object = property_get(node, "object");
-      let object_type = property_get(object, "type");
-      let object_is_identifier = equal(object_type, "Identifier");
-      if (not(object_is_identifier)) {
-        return;
-      }
-      let property = property_get(node, "property");
-      let property_name = property_get_or_null(property, "name");
-      let property_is_name = equal(property_name, "name");
-      if (not(property_is_name)) {
-        return;
-      }
-      let object_name = property_get(object, "name");
       let is_fn = list_includes(f_names, object_name);
       if (not(is_fn)) {
         return;
