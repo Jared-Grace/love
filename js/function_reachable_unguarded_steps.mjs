@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_browser_guarded_is } from "./function_browser_guarded_is.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { property_get } from "./property_get.mjs";
 import { visit_unique_async } from "./visit_unique_async.mjs";
-import { equal } from "./equal.mjs";
 export async function function_reachable_unguarded_steps(f_name, target) {
   arguments_assert(arguments, 2);
   ("One road a browser can travel from this entry point to the function named, or nothing if it cannot get there");
@@ -21,8 +21,7 @@ export async function function_reachable_unguarded_steps(f_name, target) {
     return imports;
   }
   function lambda(v) {
-    let node = property_get(v, "node");
-    let found = equal(node, target);
+    let found = property_equals(v, "node", target);
     if (found) {
       let walked = property_get(v, "stack");
       steps = walked;
