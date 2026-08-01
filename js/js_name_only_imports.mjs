@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports } from "./js_imports.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
@@ -45,8 +46,7 @@ export function js_name_only_imports(ast) {
     ("own word. On the right it would be somebody else's field that happens to be");
     ("called the same thing");
     let looked_up = property_get(above, "property");
-    let object = property_get(above, "object");
-    let ours_is = equal(object, node);
+    let ours_is = property_equals(above, "object", node);
     let word = property_get_or_null(looked_up, "name");
     let spelling_is = equal(word, "name");
     let spelled = ours_is && spelling_is;
