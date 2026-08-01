@@ -25,9 +25,9 @@ export async function app_supper_verses_get(ebible_folder) {
       let v = await catch_null_async(download);
       let missing = null_is(v);
       if (missing) {
-        let verses = await app_supper_verses_parse(ebible_folder);
+        let verses_inner = await app_supper_verses_parse(ebible_folder);
         let r = {
-          verses,
+          verses: verses_inner,
         };
         return r;
       }
