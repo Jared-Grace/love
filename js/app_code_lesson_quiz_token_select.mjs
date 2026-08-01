@@ -1,10 +1,10 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -114,8 +114,7 @@ export function app_code_lesson_quiz_token_select(
           let skipped = list_skip(variation, size);
           return skipped;
         }
-        let mapped = list_map(variations, lambda3);
-        let combined = list_concat_multiple(mapped);
+        let combined = list_map_concat_multiple(variations, lambda3);
         let unique = list_unique(combined);
         let n = list_includes_not(unique, token);
         if (n) {
