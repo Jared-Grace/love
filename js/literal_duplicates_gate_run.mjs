@@ -13,8 +13,10 @@ export async function literal_duplicates_gate_run() {
   "spelling one word, and routing either through the other invents agreement";
   "nobody wrote. A gate over that would be red forever with no honest way to clear";
   "it, which is a gate that has stopped being evidence.";
+  "The per-family lines below say which files are involved, and the one command at the end does the whole set. They are not two ways of saying the same thing: reading the lines is how a reader checks the narrowing was right before letting anything run, and copying them was only ever the way to act on it because nothing else could.";
   let offenders = await literal_duplicates_unambiguous();
   let verb = fn_name("functions_literal_route");
+  let repair = fn_name("literal_duplicates_repair");
   for (let offender of offenders) {
     let joined = list_join_comma(offender.files);
     console.log("SPELLED OUT  " + JSON.stringify(offender.literal));
@@ -35,7 +37,9 @@ export async function literal_duplicates_gate_run() {
     let message =
       "duplicated constant gate: " +
       offenders.length +
-      " values are named by a getter and still spelled out inside that getter's own family - the line above each one is the command that routes it through the name";
+      " values are named by a getter and still spelled out inside that getter's own family - node scripts/ai.mjs " +
+      repair +
+      " routes every one of them and commits each under its own name; the lines above say which files each one touches";
     throw new Error(message);
   }
   let result = {
