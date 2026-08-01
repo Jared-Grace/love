@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { qa_report_cases } from "./qa_report_cases.mjs";
 import { qa_report_case_check } from "./qa_report_case_check.mjs";
 import { list_map } from "./list_map.mjs";
@@ -27,8 +28,7 @@ export function qa_report_gate_run() {
     console.log(mark + property_get(result, "label") + tail);
   }
   function failed_is(result) {
-    let passed = property_get(result, "pass");
-    let bad = not(passed);
+    let bad = property_not(result, "pass");
     return bad;
   }
   let failures = list_filter(results, failed_is);
