@@ -1,3 +1,8 @@
+import { round } from "./round.mjs";
+import { floor } from "./floor.mjs";
+import { math_min } from "./math_min.mjs";
+import { ceil } from "./ceil.mjs";
+import { math_max } from "./math_max.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { random_seed_from_text } from "./random_seed_from_text.mjs";
@@ -30,10 +35,10 @@ export async function g_arc_lengths(chapter) {
     settings.question_matches_percent,
     100,
   );
-  let question_turns = Math.round(divided);
+  let question_turns = round(divided);
   let arc_turns = subtract(matches, question_turns);
   let quarter = divide(arc_turns, 4);
-  let cap = Math.floor(quarter);
+  let cap = floor(quarter);
   let shortest = settings.conversation_turns_low;
   let step = settings.conversation_turns_mean;
   let lengths = [];
@@ -43,7 +48,7 @@ export async function g_arc_lengths(chapter) {
     if (less_than(remaining, shortest)) {
       break;
     }
-    let take = Math.min(length, remaining);
+    let take = math_min(length, remaining);
     list_add(lengths, take);
     remaining = subtract(remaining, take);
     length = subtract(length, step);
@@ -65,10 +70,10 @@ export async function g_arc_lengths(chapter) {
   ) {
     let left = next();
     let p = multiply(left, count);
-    let giver = Math.floor(p);
+    let giver = floor(p);
     let left2 = next();
     let p2 = multiply(left2, count);
-    let taker = Math.floor(p2);
+    let taker = floor(p2);
     let given = subtract(lengths[giver], 1);
     let taken = add(lengths[taker], 1);
     let stays_above = greater_than_equal(given, shortest);
@@ -82,8 +87,8 @@ export async function g_arc_lengths(chapter) {
   list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
   let divided2 = divide(settings.day_matches, settings.conversation_turns_mean);
-  let v = Math.ceil(divided2);
-  let npcs_minimum = Math.max(v, settings.npcs_available_minimum);
+  let v = ceil(divided2);
+  let npcs_minimum = math_max(v, settings.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs, npcs_minimum);
   let r = {
     chapter,
