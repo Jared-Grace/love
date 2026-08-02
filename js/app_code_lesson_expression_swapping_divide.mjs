@@ -42,7 +42,12 @@ export function app_code_lesson_expression_swapping_divide() {
       "*",
       " keep the value when swapped",
     ]);
-    html_div_cycle_code(recall, ["", "3 + 4 === 7", " and ", "4 + 3 === 7"]);
+    html_div_cycle_code(recall, [
+      "",
+      "3 + 4 === 7",
+      " and swapped: ",
+      "4 + 3 === 7",
+    ]);
     let division = app_code_container_light_blue(root);
     html_div_cycle_code(division, [
       "Dividing groups a number into equally sized parts",
@@ -50,7 +55,7 @@ export function app_code_lesson_expression_swapping_divide() {
     html_div_cycle_code(division, [
       "",
       "1 / 2 === 0.5",
-      " but ",
+      " but swapped: ",
       "2 / 1 === 2",
     ]);
     html_div_cycle_code(division, [
@@ -65,7 +70,12 @@ export function app_code_lesson_expression_swapping_divide() {
     html_div_cycle_code(leftover, [
       "The remainder is what is left after dividing",
     ]);
-    html_div_cycle_code(leftover, ["", "7 % 3 === 1", " but ", "3 % 7 === 3"]);
+    html_div_cycle_code(leftover, [
+      "",
+      "7 % 3 === 1",
+      " but swapped: ",
+      "3 % 7 === 3",
+    ]);
     html_div_cycle_code(leftover, [
       "",
       "1",
