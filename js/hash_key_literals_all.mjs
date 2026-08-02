@@ -7,16 +7,9 @@ import { property_set } from "./property_set.mjs";
 export async function hash_key_literals_all() {
   "Every place in this repo that writes a word straight into the address of a page. Read-only.";
   "Which files are worth opening is asked next door, where the reason it is not a shortcut is written down once for both readings.";
+  "All that is said here is which part of the address is meant - which files, and which reading. The walking is shared with the part after the question mark, which opens the same trees the same way.";
   arguments_assert(arguments, 0);
   let candidates = await hash_function_names();
-  let sites = [];
-  for (let candidate of candidates) {
-    let tree = await function_ast(candidate);
-    let found = js_hash_key_literals(tree);
-    for (let site of found) {
-      property_set(site, "f_name", candidate);
-      list_add(sites, site);
-    }
-  }
+  let sites = await key_literals_all_generic(candidates, js_hash_key_literals);
   return sites;
 }
