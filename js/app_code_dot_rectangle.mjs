@@ -16,7 +16,7 @@ export function app_code_dot_rectangle(parent, rows, columns, rotated) {
   let grid_rows = rotated ? columns : rows;
   let grid_columns = rotated ? rows : columns;
   let grid = html_div(parent);
-  html_style_grid(grid, grid_columns, grid_rows);
+  html_style_grid(grid, grid_columns);
   html_style_assign(grid, {
     "align-self": "flex-start",
     width: "fit-content",
