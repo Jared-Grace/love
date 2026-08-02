@@ -1,3 +1,4 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
 import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
@@ -447,8 +448,7 @@ export async function app_search_results(context, div_results) {
   }
   let s = list_size_1(button_list);
   if (s) {
-    let only = list_single(button_list);
-    let only_click = property_get(only, "click");
+    let only_click = list_single_property(button_list, "click");
     await only_click();
   }
 }
