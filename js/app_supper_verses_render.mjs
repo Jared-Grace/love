@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_scroll_top_set } from "./html_scroll_top_set.mjs";
@@ -23,7 +24,11 @@ export async function app_supper_verses_render(root, folders) {
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
   let choices = await ebible_choices();
   function folder_name(folder) {
-    let choice = list_find_property_or_null(choices, "bible_folder", folder);
+    let choice = list_find_property_or_null(
+      choices,
+      bible_folder_key(),
+      folder,
+    );
     if (null_is(choice)) {
       return folder;
     }
