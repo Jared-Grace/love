@@ -1,7 +1,7 @@
+import { list_copy } from "./list_copy.mjs";
 import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -14,7 +14,8 @@ export async function app_reply_verses_add(
   bible_texts,
   languages_chosen,
 ) {
-  let copy = list_copy_reverse(languages_chosen);
+  "the reader's own order is kept, so the language they chose first is read first - the same way round as the chapter reader and the search results";
+  let copy = list_copy(languages_chosen);
   let mapped = list_map_property(copy, "bible_folder");
   let verses = await ebible_references_parse_lines_browser(mapped, [reference]);
   function lambda(v) {

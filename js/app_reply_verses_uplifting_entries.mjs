@@ -1,4 +1,4 @@
-import { list_copy_reverse } from "./list_copy_reverse.mjs";
+import { list_copy } from "./list_copy.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,7 +15,7 @@ export async function app_reply_verses_uplifting_entries(
   languages_chosen,
 ) {
   "one entry per language, named and ordered so the reader can tell the languages apart by colour the way the supper app does";
-  ("the reader's own order is kept, so the language they chose first leads in the strong blue - the same way round as the chapter reader");
+  "the reader's own order is kept, so the language they chose first leads in the strong blue - the same way round as the chapter reader";
   let ordered = list_copy(languages_chosen);
   let multiple = list_multiple_is(ordered);
   let entries = [];
