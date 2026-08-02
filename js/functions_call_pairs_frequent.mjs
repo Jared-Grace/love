@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -148,7 +149,10 @@ export async function functions_call_pairs_frequent() {
   list_map(entries, file_scan);
   ("A function whose whole body IS one of these pairs is the atom the pair is asking");
   ("for, already written under a name the composed one never guesses: the pair");
-  ("list_size then equal-to-zero is called ",
+  (text_combine_multiple([
+    fn_name("list_size"),
+    " then equal-to-zero is called ",
+  ]),
     fn_name("list_empty_is"),
     " here.");
   ("Whole body means the file holds one wired pair, that pair's result is what the");
@@ -167,7 +171,8 @@ export async function functions_call_pairs_frequent() {
       continue;
     }
     let single = keys_here[0];
-    if (not(property_get(single, "returned"))) {
+    let b2 = property_get(single, "returned");
+    if (not(b2)) {
       continue;
     }
     let only_key = property_get(single, "key");

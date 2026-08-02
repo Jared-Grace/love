@@ -1,10 +1,9 @@
+import { property_text_split_space } from "./property_text_split_space.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { processes_dispatcher_report } from "./processes_dispatcher_report.mjs";
 import { machine_load_average } from "./machine_load_average.mjs";
 import { cpu_count } from "./cpu_count.mjs";
-import { text_split_space } from "./text_split_space.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -17,8 +16,7 @@ export async function qa_gate_runs_in_flight() {
   let runs = [];
   let shards = [];
   for (let row of running) {
-    let line = property_get(row, "line");
-    let words = text_split_space(line);
+    let words = property_text_split_space(row, "line");
     let item = fn_name("qa_gate_tree_shard_run");
     let shard_is = list_includes(words, item);
     if (shard_is) {
