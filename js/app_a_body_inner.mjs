@@ -30,11 +30,11 @@ export function app_a_body_inner(parent, body, a, indent) {
         let hidden = true;
         let buttons = null;
         function imports_refresh() {
-          function lambda3(b) {
+          function lambda3(b2) {
             let text = null;
             text = ternary(hidden, "Show", "Hide");
             text += " imports";
-            html_text_set(b, text);
+            html_text_set(b2, text);
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
