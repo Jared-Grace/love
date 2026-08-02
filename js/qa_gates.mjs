@@ -194,6 +194,7 @@ export function qa_gates() {
     functions_shadowing_gate_run,
     functions_parameters_unread_gate_run,
     functions_parameters_unread_computed_gate_run,
+    js_call_named_argument_at_undroppable_cases_gate_run,
     functions_duplicates_gate_run,
     functions_fold_gate_run,
     markers_gate_run,
