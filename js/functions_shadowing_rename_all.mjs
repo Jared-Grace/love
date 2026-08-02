@@ -1,3 +1,4 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { functions_shadowing_offender_hidden } from "./functions_shadowing_offender_hidden.mjs";
 import { function_shadowing_function_rename } from "./function_shadowing_function_rename.mjs";
 import { function_shadowing_rename_refusal } from "./function_shadowing_rename_refusal.mjs";
@@ -8,7 +9,6 @@ import { ai_git_noted } from "./ai_git_noted.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -37,8 +37,7 @@ export async function functions_shadowing_rename_all(name, name_after) {
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
     let outer = property_get(offender, "shadows_outer");
-    let over_function = property_get(offender, "shadows_function");
-    let both = list_concat(outer, over_function);
+    let both = list_concat_property(outer, offender, "shadows_function");
     let hides = list_includes(both, name);
     if (hides) {
       ("Two kinds of hiding, two renames, chosen by which list the word came from");
