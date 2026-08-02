@@ -11,17 +11,13 @@ export async function storage_browser_direct_baseline_write() {
   arguments_assert(arguments, 0);
   let known = await storage_browser_direct_all();
   let path = storage_browser_direct_baseline_path();
-  let f_name = fn_name("storage_browser_doors");
-  let hint = text_combine_multiple([
-    "these speak straight to a browser store and the record does not hold them, so this rewrite would bless them - move each onto a door instead, or, if speaking to the browser is the whole of what it does, name it to ",
-    f_name,
-    " where the reason can be read",
-  ]);
   await baseline_growth_assert_generic(
     known,
     path,
     names_versus_baseline,
-    hint,
+    storage_browser_direct_hint(
+      "these speak straight to a browser store and the record does not hold them, so this rewrite would bless them - move each onto a door instead, or, if speaking to the browser is the whole of what it does, name it to ",
+    ),
   );
   let r = await baseline_known_write(known, path);
   return r;
