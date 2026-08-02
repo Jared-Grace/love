@@ -58,20 +58,22 @@ export function app_code_lesson_expression_swapping_add() {
       "+",
     ]);
     let times = app_code_container_light_blue(root);
-    html_div_cycle_code(times, ["3 rows of 4 dots"]);
-    app_code_dot_rectangle(times, 3, 4);
-    html_div_cycle_code(times, ["Turned a quarter, that is 4 rows of 3"]);
-    app_code_dot_rectangle(times, 4, 3);
-    html_div_cycle_code(times, ["The same dots, so the count stays the same"]);
-    html_div_cycle_code(times, ["", "3 * 4 === 12", " and ", "4 * 3 === 12"]);
     html_div_cycle_code(times, [
-      "",
-      "12",
-      " and ",
-      "12",
-      " are the same, so we can swap the numbers around ",
-      "*",
+      "We can represent ",
+      "3 * 4",
+      " like this: 3 rows of 4 dots",
     ]);
+    app_code_dot_rectangle(times, 3, 4);
+    html_div_cycle_code(times, ["3 rows of 4 and 4 rows of 3 are the same"]);
+    app_code_dot_rectangle(times, 4, 3);
+    html_div_cycle_code(times, [
+      "The dots stay the same, so the count stays the same",
+    ]);
+    html_div_cycle_code(times, [
+      "It is the same for all other numbers, not just 3 and 4",
+    ]);
+    html_div_cycle_code(times, ["So we can swap the 3 and 4"]);
+    html_div_cycle_code(times, ["And we can swap the numbers around ", "*"]);
     let minus = app_code_container_light_blue(root);
     html_div_cycle_code(minus, [
       "Subtracting takes one number away from the other",

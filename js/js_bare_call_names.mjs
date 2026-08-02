@@ -1,4 +1,4 @@
-import { list_empty_is } from "./list_empty_is.mjs";
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
@@ -28,8 +28,7 @@ export function js_bare_call_names(ast) {
     if (not(plain)) {
       return;
     }
-    let args = property_get(init, "arguments");
-    let bare = list_empty_is(args);
+    let bare = property_list_empty_is(init, "arguments");
     if (not(bare)) {
       return;
     }

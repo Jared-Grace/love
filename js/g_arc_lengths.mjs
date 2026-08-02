@@ -1,8 +1,8 @@
+import { multiply_floor } from "./multiply_floor.mjs";
 import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { floor } from "./floor.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -14,7 +14,6 @@ import { g_passage_match_count } from "./g_passage_match_count.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { identity } from "./identity.mjs";
-import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -64,11 +63,9 @@ export async function g_arc_lengths(chapter) {
     attempt++
   ) {
     let left = next();
-    let p = multiply(left, count);
-    let giver = floor(p);
+    let giver = multiply_floor(left, count);
     let left2 = next();
-    let p2 = multiply(left2, count);
-    let taker = floor(p2);
+    let taker = multiply_floor(left2, count);
     let given = subtract(lengths[giver], 1);
     let taken = add(lengths[taker], 1);
     let stays_above = greater_than_equal(given, shortest);
