@@ -9,35 +9,17 @@ import { unbound_entries_print } from "./unbound_entries_print.mjs";
 export async function functions_unbound_gate_run() {
   "QA gate for the other half of the free-name question: a name that is read, binds to nothing, and names no repo function either. Its sibling gate catches the free name that does name a function, which is a missing import; this one catches the free name that names nothing at all, which is a guaranteed error the moment the line runs. Measured against the baseline file rather than against zero, so the rule binds new code today; a name the baseline does not list fails, and a name it lists that no longer happens fails too, so the list can only shrink.";
   let offenders = await functions_unbound_names();
-  let known = await unbound_baseline_read();
-  let change = functions_unbound_versus_baseline(offenders, known);
-  let added = property_get(change, "added");
-  let stale = property_get(change, "stale");
-  unbound_entries_print(added, "NEW    ");
-  unbound_entries_print(stale, "GONE   ");
-  let any_added = greater_than(added.length, 0);
-  if (any_added) {
-    let message_added =
-      "unbound gate: " +
-      added.length +
-      " functions read a name that nothing binds and no function answers to - bind it, correct the spelling, or delete the line: " +
-      entries_names_text(added);
-    throw new Error(message_added);
-  }
-  let any_stale = greater_than(stale.length, 0);
-  if (any_stale) {
-    let message_stale =
-      "unbound gate: " +
-      stale.length +
-      " baseline entries are bound now - rerun " +
-      fn_name("functions_unbound_baseline_write") +
-      " to shrink the baseline: " +
-      entries_names_text(stale);
-    throw new Error(message_stale);
-  }
-  let result = {
-    added: 0,
-    stale: 0,
-  };
+  let path = unbound_baseline_path();
+  let fields = ["unbound"];
+  let hint =
+    "these functions read a name that nothing binds and no function answers to - bind it, correct the spelling, or delete the line";
+  let result = await baseline_entries_gate_generic(
+    offenders,
+    path,
+    fields,
+    unbound_entries_print,
+    hint,
+    fn_name("functions_unbound_baseline_write"),
+  );
   return result;
 }
