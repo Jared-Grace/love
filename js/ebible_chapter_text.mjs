@@ -1,5 +1,4 @@
-import { ebible_chapter_main_parsed } from "./ebible_chapter_main_parsed.mjs";
-import { ebible_main_verse_numbers } from "./ebible_main_verse_numbers.mjs";
+import { ebible_chapter_verse_numbers } from "./ebible_chapter_verse_numbers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_parse_find_remove } from "./html_parse_find_remove.mjs";
@@ -15,10 +14,10 @@ import { property_get } from "./property_get.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
-  let opened = await ebible_chapter_main_parsed(bible_folder, chapter_code);
+  let opened = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
   let d = property_get(opened, "d");
   let main = property_get(opened, "main");
-  let verse_numbers = ebible_main_verse_numbers(d, main);
+  let verse_numbers = property_get(opened, "verse_numbers");
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();

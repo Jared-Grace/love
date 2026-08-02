@@ -1,0 +1,21 @@
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
+import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
+import { list_difference } from "./list_difference.mjs";
+export async function function_parameters_unread(f_name) {
+  "which of one function's parameters its own body never reads";
+  "a parameter nothing reads is worse than dead weight - every call site is written as though handing that value over does something, so the code reads as having a behaviour it does not have. one such pair sat in front of a search app for weeks looking like an english fallback that was never there";
+  "the names are asked of the body alone rather than of the whole declaration, because a parameter is itself an identifier in the parameter list - asking the declaration would find every parameter reading itself";
+  let parsed = await function_parse_declaration(f_name);
+  let declaration = property_get(parsed, "declaration");
+  let params_names = js_function_declaration_params_names(declaration);
+  let body = property_get(declaration, "body");
+  let read = js_identifiers_referenced_names(body);
+  let unread = list_difference(params_names, read);
+  let finding = {
+    name: f_name,
+    unread,
+  };
+  return finding;
+}
