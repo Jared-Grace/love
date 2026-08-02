@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
@@ -42,7 +43,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     async function lambda(chapter_code, verses) {
       function lambda4(verse) {
         let text = property_get(verse, "text");
-        let verse_number = property_get(verse, "verse_number");
+        let verse_number = property_get(verse, verse_number_key());
         let replaced = text_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
         let split = text_split_space(n);
