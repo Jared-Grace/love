@@ -9,7 +9,7 @@ import { list_chunk } from "./list_chunk.mjs";
 import { each_async } from "./each_async.mjs";
 import { each_unordered_async } from "./each_unordered_async.mjs";
 export async function bible_interlinear_chapters_upload() {
-  ("publish the original-language text one file per chapter, in the exact compressed shape every other version uses, so the reader fetches `bible/original/<chapter>.json` the same way it fetches any translation. Resumable: a chapter already in storage is skipped and each upload is retried, so a dropped connection mid-run only costs the current handful and re-running finishes the rest");
+  "publish the original-language text one file per chapter, in the exact compressed shape every other version uses, so the reader fetches `bible/original/<chapter>.json` the same way it fetches any translation. Resumable: a chapter already in storage is skipped and each upload is retried, so a dropped connection mid-run only costs the current handful and re-running finishes the rest";
   let cache = await bible_interlinear_verses_cache();
   let bible_folder = property_get(cache, "bible_folder");
   let chapters = property_get(cache, "chapters");
