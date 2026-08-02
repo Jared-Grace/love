@@ -3,7 +3,7 @@ import { app_bible_screen_content } from "./app_bible_screen_content.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { app_bible_chapter_set } from "./app_bible_chapter_set.mjs";
+import { app_shared_bible_chapter_set } from "./app_shared_bible_chapter_set.mjs";
 import { app_bible_chapters } from "./app_bible_chapters.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
@@ -28,7 +28,7 @@ export async function app_shared_bible_books(context) {
     "open a chosen book at its first chapter, then hand off to the chapter picker";
     let book_code = property_get(book, "book_code");
     let chapter_code = ebible_chapter_code_pad(book_code, "1");
-    app_bible_chapter_set(chapter_code);
+    app_shared_bible_chapter_set(chapter_code);
     await app_shared_screen_set(context, app_bible_chapters);
   }
   ("a search box on top for readers who know the name, and the full canon grouped by section below for readers who browse; styled with the shared input look the search app uses, so every search box reads the same");
