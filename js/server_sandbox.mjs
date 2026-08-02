@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import fs from "fs";
 import { fileURLToPath } from "url";
 import { text_combine } from "./text_combine.mjs";
 export function server_sandbox() {
@@ -9,8 +8,11 @@ export function server_sandbox() {
   let app = express();
   let PORT = 3000;
   console.log(__dirname);
-  app.use(express.static(__dirname));
-  app.listen(PORT, () => {
-    console.log(text_combine("Server running on http://localhost:", PORT));
-  });
+  let v = express.static(__dirname);
+  app.use(v);
+  function lambda() {
+    let combined = text_combine("Server running on http://localhost:", PORT);
+    console.log(combined);
+  }
+  app.listen(PORT, lambda);
 }
