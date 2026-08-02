@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
@@ -35,7 +36,7 @@ export function app_shared_bible_toggle_update(
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
       let verses = list_last_property(languages_verses, "verses");
-      let verse_numbers = list_map_property(verses, "verse_number");
+      let verse_numbers = list_map_property(verses, verse_number_key());
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = property_get(v, "sliced");
     } else {
