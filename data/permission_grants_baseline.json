@@ -17,10 +17,6 @@
    "refusals": 2
   },
   {
-   "name": "firebase_prod_asset_url",
-   "refusals": 1
-  },
-  {
    "name": "js_top_level_broken_comments_from_code",
    "refusals": 1
   },
