@@ -4,8 +4,9 @@ import { multiply } from "./multiply.mjs";
 import { g_sermon_days_total } from "./g_sermon_days_total.mjs";
 import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-export async function g_npc_pool_size() {
-  "How many npcs need writing - enough converts to spend every day of preaching the sermon supply holds.";
+export async function g_npc_pool_convert_turns() {
+  "How many turns of convert arc need writing - enough to spend every day of preaching the sermon supply holds.";
+  "Turns rather than a head COUNT, and that is a correction rather than a preference. Counting heads means dividing by an arc's usual length, and an arc drawn near thirty but reaching ninety above and only twelve below does not AVERAGE thirty - the long tail pulls it to about thirty-six. Sizing the pool on the middle over-bought by a fifth and asked for three hundred and ninety-two days of preaching out of three hundred and nineteen. A total cannot drift like that, because whoever draws the arcs stops when the total is reached.";
   "Worked out from the sermon rather than chosen, because the sermon is the only fixed quantity left. Choosing this would be choosing how much of the preaching gets used.";
   "Leaders are not counted here. A leader's length is solved from the converts around them, so leaders are as many as there are plants and that is not known until a game groups them.";
   let s = g_generation_settings();
@@ -19,8 +20,7 @@ export async function g_npc_pool_size() {
   let leader_part = divide(share, a_day);
   let convert_part = subtract(1, leader_part);
   let convert_turns = multiply(arc_turns, convert_part);
-  let slots = divide(convert_turns, s.arc_turns_mean);
-  let wanted = multiply(slots, s.npc_pool_multiple);
+  let wanted = multiply(convert_turns, s.npc_pool_multiple);
   let r = Math.round(wanted);
   return r;
 }
