@@ -1,3 +1,5 @@
+import { g_sermon_chapter_days_all } from "./g_sermon_chapter_days_all.mjs";
+import { g_game_plants_areas } from "./g_game_plants_areas.mjs";
 import { g_sermon_days_total } from "./g_sermon_days_total.mjs";
 import { g_npc_pool_convert_turns } from "./g_npc_pool_convert_turns.mjs";
 import { g_npc_pool } from "./g_npc_pool.mjs";
