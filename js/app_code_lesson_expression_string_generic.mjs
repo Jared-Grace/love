@@ -1,3 +1,4 @@
+import { app_code_label_value } from "./app_code_label_value.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -23,8 +24,8 @@ export function app_code_lesson_expression_string_generic(params) {
     example_count: 2,
     decoys,
     forwards_question_label: "The string: ",
-    forwards_answer_label: "value: ",
-    backwards_question_label: "value: ",
+    forwards_answer_label: app_code_label_value(),
+    backwards_question_label: app_code_label_value(),
     backwards_answer_label: "What code gives this value? ",
     unscramble_label: "Build the code that gives this value: ",
   });
