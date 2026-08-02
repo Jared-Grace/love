@@ -1,3 +1,4 @@
+import { integer_random_below } from "./integer_random_below.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { add } from "./add.mjs";
@@ -9,8 +10,7 @@ export function app_code_arithmetic_to_value(value) {
   "a random small arithmetic expression that evaluates to value (value at least 2), returned as { code, symbol }: code is the expression string, symbol is its operator (+, - or /) so a caller can vary the operator across examples. Each of +, - and / always has a form for any such value - so a true equality can pair two different-looking expressions of the same value (3 + 4 === 5 + 2), and the learner sees the two sides are worked out first and only then compared. No * form, because a small product needs a factor pair the value may not have; the three chosen forms need no such luck.";
   function form_add() {
     "value split into two addends, both at least 1";
-    let max = subtract(value, 1);
-    let a = integer_random(1, max);
+    let a = integer_random_below(value);
     let b = subtract(value, a);
     let r = [a, "+", b];
     return r;
