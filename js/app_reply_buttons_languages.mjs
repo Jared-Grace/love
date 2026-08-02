@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { app_reply_buttons_languages_on_toggle } from "./app_reply_buttons_languages_on_toggle.mjs";
 import { app_reply_buttons_languages_reorder } from "./app_reply_buttons_languages_reorder.mjs";
 import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
@@ -20,7 +21,7 @@ export function app_reply_buttons_languages(languages_chosen, root, languages) {
   );
   let by_code = {};
   function pair(language, index) {
-    let code = property_get(language, "language_code");
+    let code = property_get(language, language_code_key());
     let button = property_get(buttons, index);
     property_set(by_code, code, button);
   }
