@@ -41,6 +41,14 @@ export function js_address_fused_words(ast, words) {
         }
       }
       each(marks, on_mark);
+      let opener = word + "=";
+      let leads = text_starts_with(text, opener);
+      if (leads) {
+        list_add(found, {
+          word,
+          text,
+        });
+      }
     }
     each(words, on_word);
   }
