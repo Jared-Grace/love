@@ -87,9 +87,9 @@ export async function js_ternary_replace(ast) {
     await js_imports_missing_add_all(ast);
   }
   return;
-  let a = null;
+  let result = null;
   let test = equal(b, 1);
   let b = 2;
   let c = 1;
-  a = ternary(test, b, c);
+  result = ternary(test, b, c);
 }
