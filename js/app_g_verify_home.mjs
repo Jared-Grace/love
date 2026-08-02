@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
@@ -163,7 +164,8 @@ export async function app_g_verify_home(context) {
     let style_value = app_g_verify_column_max_width();
     html_style_set(wrap, "max-width", style_value);
     html_style_margin(wrap, "0 auto");
-    html_style_padding_x(wrap, "1.2em");
+    let edge_gap = app_shared_content_edge_gap();
+    html_style_padding_x(wrap, edge_gap);
     html_style_padding_y(wrap, "2em");
     let cbar = html_div(wrap);
     let value = app_shared_spaced_small_gap();

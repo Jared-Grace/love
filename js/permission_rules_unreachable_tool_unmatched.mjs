@@ -1,10 +1,11 @@
+import { permission_file_edit_tools_unmatched } from "./permission_file_edit_tools_unmatched.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { permission_rules } from "./permission_rules.mjs";
 import { permission_rule_tool_name } from "./permission_rule_tool_name.mjs";
 import { permission_rule_path_probe } from "./permission_rule_path_probe.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export async function permission_rules_unreachable_write() {
+export async function permission_rules_unreachable_tool_unmatched() {
   "audit: every allow rule granting a file-editing tool the permission engine never matches, so the grant can never fire whatever path it names";
   "the engine matches a file tool against Edit rules alone, and Edit covers every file-editing tool. so such a rule is not a narrower grant than its Edit twin but a dead one: with the twin beside it the rule says nothing the twin does not already say, and without the twin it says nothing at all";
   "this is a fourth decider, and the only one that needs no probe. the bash guard, the file-path hook and the self-settings guard each have to be asked about a particular path before they answer, whereas these are unreachable by tool name alone. which names those are is a set next door, so a tool added to it is covered without touching this";
