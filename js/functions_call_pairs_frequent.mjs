@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
@@ -184,8 +185,8 @@ export async function functions_call_pairs_frequent() {
     if (not(record.wired)) {
       continue;
     }
-    let file_count = Object.keys(record.files).length;
-    let closed_count = Object.keys(record.closed_files).length;
+    let file_count = object_property_names(record.files).length;
+    let closed_count = object_property_names(record.closed_files).length;
     rows.push({
       foldable: closed_count,
       files: file_count,
