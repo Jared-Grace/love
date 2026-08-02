@@ -30,11 +30,11 @@ export async function ebible_references_parse_lines_generic(
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
       let book_code = property_get(v2, "book_code");
-      function each_version(bible_folder, books) {
+      function each_version(bible_folder_each, books_each) {
         function lambda4(verse_number) {
           verse_number = text_to(verse_number);
           la({
-            bible_folder,
+            bible_folder: bible_folder_each,
             chapter_code,
             verse_number,
           });
@@ -49,7 +49,7 @@ export async function ebible_references_parse_lines_generic(
   async function lambda3(v4) {
     let verse_number = property_get(v4, "verse_number");
     let chapter_code = property_get(v4, "chapter_code");
-    let bible_folder = property_get(v4, "bible_folder");
+    let bible_folder_of_verse = property_get(v4, "bible_folder");
     let v3 = await catch_null_async(verse_get_lambda);
     async function verse_get_lambda() {
       let reference = ebible_parts_chapter_code_to_reference(
@@ -57,7 +57,11 @@ export async function ebible_references_parse_lines_generic(
         books,
         [verse_number],
       );
-      let result = await verse_get(bible_folder, chapter_code, verse_number);
+      let result = await verse_get(
+        bible_folder_of_verse,
+        chapter_code,
+        verse_number,
+      );
       object_merge_set(result, {
         reference,
       });

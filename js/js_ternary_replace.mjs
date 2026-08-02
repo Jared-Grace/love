@@ -69,17 +69,17 @@ export async function js_ternary_replace(ast) {
     }
     let first = list_first(names);
     let expression = js_parse_expression(first);
-    let a = js_assign_default();
+    let assignment = js_assign_default();
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     let rights = list_map_property(ess, "right");
-    let test = js_statement_if_test_get(node);
-    js_call_argument_add(e, test);
+    let test_node = js_statement_if_test_get(node);
+    js_call_argument_add(e, test_node);
     js_call_arguments_add(e, rights);
-    js_left_right_set(a, expression, e);
+    js_left_right_set(assignment, expression, e);
     let c2 = js_code_statement("a");
     let statement = js_parse_statement(c2);
-    property_set(statement, "expression", a);
+    property_set(statement, "expression", assignment);
     object_replace(node, statement);
     replaced = true;
   }

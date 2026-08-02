@@ -6,7 +6,7 @@ import { multiply } from "./multiply.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_arithmetic_to_value(value) {
-  "a random small arithmetic expression, as a code string, that evaluates to value (value at least 2). Uses +, - and / - each always has a form for any such value - so a true equality can pair two different-looking expressions of the same value (3 + 4 === 5 + 2), and the learner sees the two sides are worked out first and only then compared. No * form, because a small product needs a factor pair the value may not have; the three chosen forms need no such luck.";
+  "a random small arithmetic expression that evaluates to value (value at least 2), returned as { code, symbol }: code is the expression string, symbol is its operator (+, - or /) so a caller can vary the operator across examples. Each of +, - and / always has a form for any such value - so a true equality can pair two different-looking expressions of the same value (3 + 4 === 5 + 2), and the learner sees the two sides are worked out first and only then compared. No * form, because a small product needs a factor pair the value may not have; the three chosen forms need no such luck.";
   function form_add() {
     "value split into two addends, both at least 1";
     let max = subtract(value, 1);
@@ -36,5 +36,9 @@ export function app_code_arithmetic_to_value(value) {
   let symbol = parts[1];
   let right = text_to(parts[2]);
   let code = text_combine_multiple([left, " ", symbol, " ", right]);
-  return code;
+  let result = {
+    code,
+    symbol,
+  };
+  return result;
 }
