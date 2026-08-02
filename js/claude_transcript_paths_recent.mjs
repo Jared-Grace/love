@@ -1,6 +1,5 @@
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import fs from "fs";
 import { list_filter } from "./list_filter.mjs";
@@ -13,8 +12,7 @@ export function claude_transcript_paths_recent(days) {
   let left2 = multiply(left, 60);
   let left3 = multiply(left2, 60);
   let span = multiply(left3, 1000);
-  let left4 = date_now_milliseconds();
-  let cutoff = subtract(left4, span);
+  let cutoff = date_milliseconds_since(span);
   function recent_is(path) {
     let stat = fs.statSync(path);
     let b = greater_than(stat.mtimeMs, cutoff);
