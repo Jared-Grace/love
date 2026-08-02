@@ -1,3 +1,4 @@
+import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -15,6 +16,6 @@ export function g_leader_turns(convert_turns) {
   let top = multiply(share, convert_turns);
   let room = subtract(a_day, share);
   let exact = divide(top, room);
-  let r = Math.round(exact);
+  let r = round(exact);
   return r;
 }
