@@ -101,10 +101,10 @@ export async function app_g_conversation(
   let name_player = property_get(player, "name");
   let phase_open = app_g_conversation_sky_target(0);
   let time_open = g_phase_time(phase_open);
-  let greeting = g_greeting(meet, name_player, time_open);
+  let christian = property_get(npc, "christian");
+  let greeting = g_greeting(meet, name_player, time_open, christian);
   let npc_gender = property_get(npc, "gender");
   let pronouns = g_gender_pronouns(npc_gender);
-  let christian = property_get(npc, "christian");
   if (christian) {
     ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
