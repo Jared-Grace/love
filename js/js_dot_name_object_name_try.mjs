@@ -1,8 +1,8 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_dot_name_object_name_try(node) {
@@ -28,8 +28,7 @@ export function js_dot_name_object_name_try(node) {
   if (anonymous) {
     return null;
   }
-  let property = property_get(node, "property");
-  let property_name = property_get_or_null(property, "name");
+  let property_name = property_nested_or_null(node, "property", "name");
   let names_the_name = equal(property_name, "name");
   if (not(names_the_name)) {
     return null;

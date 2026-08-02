@@ -1,6 +1,6 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -28,8 +28,7 @@ export async function js_fn_name_references_to_calls(ast) {
     if (not(object_is_identifier)) {
       return;
     }
-    let property = property_get(node, "property");
-    let property_name = property_get_or_null(property, "name");
+    let property_name = property_nested_or_null(node, "property", "name");
     let property_is_name = equal(property_name, "name");
     if (not(property_is_name)) {
       return;
