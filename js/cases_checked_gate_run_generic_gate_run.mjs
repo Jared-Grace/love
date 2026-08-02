@@ -20,11 +20,22 @@ export async function cases_checked_gate_run_generic_gate_run() {
   function check(c) {
     return c;
   }
+  ("Two agreeing cases rather than one, and they want different things on purpose. The");
+  ("runner refuses a corpus that wants the same thing of every case, because a run");
+  ("producing that one thing whatever it was given would be answered right by all of");
+  ("them - so a single case could never be handed to it.");
   let agreeing = [
     {
       label: "a case its checker was happy with",
       expected: "allow",
       actual: "allow",
+      note: "",
+      pass: true,
+    },
+    {
+      label: "a case its checker was happy with, wanting the other thing",
+      expected: "deny",
+      actual: "deny",
       note: "",
       pass: true,
     },
@@ -36,10 +47,10 @@ export async function cases_checked_gate_run_generic_gate_run() {
     "",
   );
   let passed = property_get(counted, "pass");
-  let b = equal(passed, 1);
+  let b = equal(passed, 2);
   assert_json(b, {
     passed,
-    hint: "the runner was handed one agreeing case and did not count it as passing",
+    hint: "the runner was handed two agreeing cases and did not count both as passing",
   });
   let disagreeing = [
     {
@@ -85,7 +96,7 @@ export async function cases_checked_gate_run_generic_gate_run() {
     hint: "the runner was handed a corpus with nothing in it and did not refuse - a gate whose cases quietly went missing would print pass 0 fail 0 and read as clean",
   });
   let result = {
-    agreeing: 1,
+    agreeing: 2,
     refused: 1,
     refused_empty: 1,
   };
