@@ -1,16 +1,15 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_node_call_get } from "./js_node_call_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_get } from "./property_get.mjs";
 export async function js_call_callee_set(ast, selects, f_name) {
   arguments_assert(arguments, 3);
   ("Points one call at a different function, keeping what it was already being");
@@ -27,8 +26,7 @@ export async function js_call_callee_set(ast, selects, f_name) {
   let f_name_before = js_call_callee_name_try(call);
   let args = js_call_arguments_get(call);
   let d = await function_parse_declaration(f_name);
-  let declaration = property_get(d, "declaration");
-  let names = js_function_declaration_params_names(declaration);
+  let names = js_function_declaration_property_params_names(d, "declaration");
   let count_args = list_size(args);
   let count_params = list_size(names);
   let same = equal(count_args, count_params);
