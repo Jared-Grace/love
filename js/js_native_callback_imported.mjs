@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { js_array_methods_callback } from "./js_array_methods_callback.mjs";
@@ -18,7 +19,7 @@ export function js_native_callback_imported(ast) {
     let callee = property_get(call, "callee");
     let callee_type = property_get(callee, "type");
     let member = equal(callee_type, "MemberExpression");
-    if (!member) {
+    if (not(member)) {
       continue;
     }
     let computed = property_get(callee, "computed");
@@ -28,23 +29,24 @@ export function js_native_callback_imported(ast) {
     let property = property_get(callee, "property");
     let method = property_get(property, "name");
     let watched = list_includes(methods, method);
-    if (!watched) {
+    if (not(watched)) {
       continue;
     }
     let args = property_get(call, "arguments");
-    let one = equal(list_size(args), 1);
-    if (!one) {
+    let left = list_size(args);
+    let one = equal(left, 1);
+    if (not(one)) {
       continue;
     }
     let argument = args[0];
     let argument_type = property_get(argument, "type");
     let bare = equal(argument_type, "Identifier");
-    if (!bare) {
+    if (not(bare)) {
       continue;
     }
     let passed = property_get(argument, "name");
     let from_elsewhere = list_includes(imported, passed);
-    if (!from_elsewhere) {
+    if (not(from_elsewhere)) {
       continue;
     }
     let site = {
