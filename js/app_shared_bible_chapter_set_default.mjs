@@ -2,7 +2,7 @@ import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_ha
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_bible_chapter_verse_open } from "./app_bible_chapter_verse_open.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
-export async function app_bible_chapter_set_default(context) {
+export async function app_shared_bible_chapter_set_default(context) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, app_shared_bible_chapter_hash_key());
   if (n) {

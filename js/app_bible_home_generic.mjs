@@ -17,7 +17,7 @@ import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.m
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
 import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
-import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
+import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_bible_verse_previous } from "./app_bible_verse_previous.mjs";
@@ -74,7 +74,7 @@ export async function app_bible_home_generic(
   html_centered(bar);
   bar_extra(bar);
   let e = ebible_folder_english();
-  if (await app_bible_chapter_set_default(context)) {
+  if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }
   let hash = html_hash_object_get();
