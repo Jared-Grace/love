@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -24,45 +25,47 @@ export function js_html_style_helper_try(declaration) {
   "The body must be that one call and nothing else. A helper that also sets a second property, or reads something first, is not interchangeable with the bare call, so rewriting to it would change behaviour rather than preserve it.";
   let statements = js_function_declaration_statements_doing(declaration);
   let single = list_size_1(statements);
-  if (!single) {
+  if (not(single)) {
     return null;
   }
   let statement = list_first(statements);
   let expression_is = js_node_type_is(statement, "ExpressionStatement");
-  if (!expression_is) {
+  if (not(expression_is)) {
     return null;
   }
   let call = property_get(statement, "expression");
-  let sets = js_call_callee_name_equal(call, fn_name("html_style_set"));
-  if (!sets) {
+  let name2 = fn_name("html_style_set");
+  let sets = js_call_callee_name_equal(call, name2);
+  if (not(sets)) {
     return null;
   }
   let args = js_call_arguments_get(call);
-  let three = equal(list_size(args), 3);
-  if (!three) {
+  let left = list_size(args);
+  let three = equal(left, 3);
+  if (not(three)) {
     return null;
   }
   let params = js_function_declaration_params_names(declaration);
   let target = list_first(args);
   let target_is = js_identifier_is(target);
-  if (!target_is) {
+  if (not(target_is)) {
     return null;
   }
   let styled = js_identifier_name(target);
   let first = list_first(params);
   let same = equal(styled, first);
-  if (!same) {
+  if (not(same)) {
     return null;
   }
   let key = list_second(args);
   let key_is = js_literal_is(key);
-  if (!key_is) {
+  if (not(key_is)) {
     return null;
   }
   let prop = js_literal_value_get(key);
   let value_node = list_get(args, 2);
   let kind = js_html_style_helper_kind_try(value_node, params);
-  if (!kind) {
+  if (not(kind)) {
     return null;
   }
   let name = js_function_declaration_name(declaration);
