@@ -1,3 +1,4 @@
+import { cases_checked_gate_run_generic_gate_run } from "./cases_checked_gate_run_generic_gate_run.mjs";
 import { baseline_growth_guarded_gate_run } from "./baseline_growth_guarded_gate_run.mjs";
 import { baseline_writers_growth_gate_run } from "./baseline_writers_growth_gate_run.mjs";
 import { functions_parameters_unread_gate_run } from "./functions_parameters_unread_gate_run.mjs";
@@ -160,6 +161,7 @@ export function qa_gates() {
     python_mirrors_assert,
     function_worker_pool_run_try,
     cases_gate_run_generic_gate_run,
+    cases_checked_gate_run_generic_gate_run,
     js_free_names_cases_gate_run,
     js_declared_names_cases_gate_run,
     js_imports_local_names_cases_gate_run,
