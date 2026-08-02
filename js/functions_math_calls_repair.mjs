@@ -1,5 +1,5 @@
 import { ai_git_noted } from "./ai_git_noted.mjs";
-import { file_math_calls_repair } from "./file_math_calls_repair.mjs";
+import { file_builtin_calls_repair } from "./file_builtin_calls_repair.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { functions_math_calls_pending } from "./functions_math_calls_pending.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,7 +16,7 @@ export async function functions_math_calls_repair() {
   for (let one of pending) {
     let f_path = property_get(one, "f_path");
     let args = [f_path];
-    await function_call_commit(file_math_calls_repair, args);
+    await function_call_commit(file_builtin_calls_repair, args);
     let name = property_get(one, "name");
     list_add(repaired, name);
   }
