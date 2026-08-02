@@ -15,7 +15,9 @@ export function js_selects_prose_add_generic(
   let f = js_block_find_from_nodes_single(ast, selects);
   let body = property_get(f, "body");
   let index = property_get(f, "index");
+  ("Where that line sits in its block is what the two commands above shift by one or by nothing");
   let index_insert = add(index, index_delta);
+  ("The sentence becomes a real statement here rather than a stripped comment which is why it survives the round trip");
   let statement = js_prose_statement(sentence);
   list_insert(body, index_insert, statement);
 }
