@@ -43,18 +43,6 @@
    ]
   },
   {
-   "name": "bible_verse_grace",
-   "unread": [
-    "reference"
-   ]
-  },
-  {
-   "name": "error_json_replacer",
-   "unread": [
-    "key"
-   ]
-  },
-  {
    "name": "js_list_declarations_visitors",
    "unread": [
     "lambda$v"
