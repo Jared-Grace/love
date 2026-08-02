@@ -1,3 +1,6 @@
+import { round } from "./round.mjs";
+import { math_max } from "./math_max.mjs";
+import { abs } from "./abs.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -63,8 +66,8 @@ export async function g_plant_chapters() {
     }
     let book_days = list_map_sum(held, days_of);
     let exact = divide(book_days, wanted);
-    let rounded = Math.round(exact);
-    let count = Math.max(1, rounded);
+    let rounded = round(exact);
+    let count = math_max(1, rounded);
     let share = divide(book_days, count);
     let book_plant_list = [];
     let taken = [];
@@ -94,9 +97,9 @@ export async function g_plant_chapters() {
       let last_plant_is = less_than_equal(plants_left, 1);
       let with_it = days_so_far + days;
       let difference = subtract(days_so_far, share);
-      let gap_stopping = Math.abs(difference);
+      let gap_stopping = abs(difference);
       let difference2 = subtract(with_it, share);
-      let gap_carrying = Math.abs(difference2);
+      let gap_carrying = abs(difference2);
       let nearer_stopping = less_than(gap_stopping, gap_carrying);
       let started_is = greater_than(taken.length, 0);
       let close_first = nearer_stopping && started_is && not(last_plant_is);
