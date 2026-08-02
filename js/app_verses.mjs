@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
@@ -64,7 +65,7 @@ export async function app_verses(context) {
   let languages_chosen_default = app_reply_languages_chosen_default();
   let default_codes = list_map_property(
     languages_chosen_default,
-    "language_code",
+    language_code_key(),
   );
   let default_l = list_join_plus(default_codes);
   let remembered_l = app_shared_language_codes_saved_or(default_l);
@@ -77,7 +78,7 @@ export async function app_verses(context) {
   );
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
-    let r2 = list_find_property_or_null(languages, "language_code", code);
+    let r2 = list_find_property_or_null(languages, language_code_key(), code);
     return r2;
   }
   let languages_chosen = list_map_filter_null_not_is(
