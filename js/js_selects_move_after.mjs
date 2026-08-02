@@ -1,3 +1,4 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -10,7 +11,6 @@ import { add } from "./add.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { js_statements_move_binding_assert } from "./js_statements_move_binding_assert.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { list_index_of } from "./list_index_of.mjs";
 import { list_insert } from "./list_insert.mjs";
 export function js_selects_move_after(ast, selects) {
   arguments_assert(arguments, 2);
@@ -52,7 +52,6 @@ export function js_selects_move_after(ast, selects) {
     down_is,
   );
   list_remove(body, item_moved);
-  let index_target = list_index_of(body, item_target);
-  let index_insert = add(index_target, 1);
+  let index_insert = list_index_of_add(body, item_target, 1);
   list_insert(body, index_insert, item_moved);
 }
