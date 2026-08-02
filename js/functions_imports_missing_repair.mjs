@@ -1,9 +1,8 @@
+import { function_name_to_base } from "./function_name_to_base.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { functions_imports_missing } from "./functions_imports_missing.mjs";
 import { property_get } from "./property_get.mjs";
-import { function_name_extension } from "./function_name_extension.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { folder_js } from "./folder_js.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_imports_repair } from "./file_imports_repair.mjs";
@@ -20,8 +19,7 @@ export async function functions_imports_missing_repair() {
   let repaired = [];
   for (let offender of offenders) {
     let name = property_get(offender, "name");
-    let right = function_name_extension();
-    let combined = text_combine(name, right);
+    let combined = function_name_to_base(name);
     let src = folder_js();
     let f_path = path_join([src, combined]);
     let args = [f_path];
