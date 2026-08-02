@@ -1,5 +1,5 @@
+import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
-import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
@@ -26,8 +26,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
-  let operator = js_operator_percent();
-  let percent = property_get(operator, "operator");
+  let percent = js_operator_percent_sign();
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the remainder formula a - Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven and the remainder is real";
     let dividend = app_code_uneven_dividend_only(quotient, divisor);
