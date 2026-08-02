@@ -26,8 +26,8 @@ export async function app_shared_prefixes_invalid() {
   let all = await functions_names();
   let app_fns = list_filter_starts_with(all, prefix);
   function part_of(f_name) {
-    let parts = function_name_to_parts(f_name);
-    let part = list_second(parts);
+    let name_parts = function_name_to_parts(f_name);
+    let part = list_second(name_parts);
     return part;
   }
   function owned_is(f_name) {
