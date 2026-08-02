@@ -1,3 +1,4 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { country_philippines } from "./country_philippines.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
@@ -86,7 +87,8 @@ export function app_calendar_paste_convert(input, country) {
   list_add_first(list, formatted);
   let minutes_labelled = word_count_pluralize(minutes, "minute");
   let hours_labelled = word_count_pluralize(hours, "hour");
-  let duration = ternary(hours >= 1, hours_labelled, minutes_labelled);
+  let condition = greater_than_equal(hours, 1);
+  let duration = ternary(condition, hours_labelled, minutes_labelled);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last up to: ",
     duration,
