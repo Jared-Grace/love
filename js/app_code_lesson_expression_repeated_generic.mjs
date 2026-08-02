@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
@@ -146,7 +147,11 @@ export function app_code_lesson_expression_repeated_generic(words) {
       return render;
     }
     let rights = [right_word];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function above(root) {
