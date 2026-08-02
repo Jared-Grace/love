@@ -1,6 +1,6 @@
+import { qa_gates_names } from "./qa_gates_names.mjs";
 import { functions_names_ending_found_assert } from "./functions_names_ending_found_assert.mjs";
 import { functions_names_in_flight_without } from "./functions_names_in_flight_without.mjs";
-import { qa_gates } from "./qa_gates.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { functions_gate_run_unwired_exempt } from "./functions_gate_run_unwired_exempt.mjs";
@@ -13,8 +13,8 @@ export async function functions_gate_run_unwired() {
     "_gate_run",
     "no gate was found in this repo at all - the answer below would be nothing whatever the list holds, so look at what spells the ending being looked for rather than at the list",
   );
-  let gates = qa_gates();
-  let wired = list_map_property(gates, "name");
+  ("The list is read off the file rather than off the loaded one, because a command that lists a gate and then asks this again would otherwise be answered from before its own edit, and hand its own finished work back as still to do.");
+  let wired = await qa_gates_names();
   let unwired = list_difference(gate_names, wired);
   let exempt = functions_gate_run_unwired_exempt();
   let excused = list_map_property(exempt, "name");
