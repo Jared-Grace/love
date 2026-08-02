@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_numbers_used } from "./function_numbers_used.mjs";
@@ -23,8 +24,7 @@ export async function functions_numbers_shared(most) {
     for (let value of numbers) {
       let known = property_exists(by_value, value);
       if (known) {
-        let group = property_get(by_value, value);
-        let written_by = property_get(group, "names");
+        let written_by = property_path_get_2(by_value, value, "names");
         list_add(written_by, f_name);
         continue;
       }
