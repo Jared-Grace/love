@@ -17,6 +17,7 @@ export function g_generation_settings() {
   "How many people a plant holds is a RAMP over the plants already planted, not a draw around one number. A first plant is small because a first plant is always small - nobody's first church is twelve disciples - and the size settling near thirteen later is what makes the Lord's Supper table an arrival rather than the default. Six is where it starts and six plants is how long it takes to settle.";
   "Past the settle the size stays there, and a bigger room is a separate rare event rather than the top of a wider draw. Widening the draw was tried on paper and put more than half the settled plants at fourteen or above, because spreading a bell's upper half over three numbers makes each of them common. A one-in-ten roll says the rare thing rarely and says it in one number somebody can move.";
   "Below the target a plant may fall two, so a settled plant is eleven to thirteen rather than always thirteen. A church that lost people is as real as one that grew.";
+  "Eleven areas is the escalation ladder's own length - a rung apiece - and it is a CEILING rather than a count. A selection that only makes three plants climbs three rungs, because one plant cannot be a whole escalation; a selection twice the size climbs the same eleven more slowly. What it is NOT is the number of books, which is the player's choice and says nothing about pacing.";
   "The pool multiple is how many npcs are written for every one a single playthrough meets. One means every game meets everybody in a different order and grouping; two means a game meets half of them and a second game is genuinely new people.";
   let day_matches = g_day_matches();
   let day_lines = g_day_lines();
@@ -46,6 +47,7 @@ export function g_generation_settings() {
     plant_npcs_below_settle: 2,
     plant_npcs_large_percent: 10,
     npc_pool_multiple: 1,
+    areas_maximum: 11,
     sender_areas: 1,
     question_matches_percent: 25,
     arc_length_swaps: 50,
