@@ -1,11 +1,10 @@
+import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { g_sermon_chapter_days_all } from "./g_sermon_chapter_days_all.mjs";
 import { g_game_plants_areas } from "./g_game_plants_areas.mjs";
 import { g_sermon_days_total } from "./g_sermon_days_total.mjs";
 import { g_npc_pool_convert_turns } from "./g_npc_pool_convert_turns.mjs";
 import { g_npc_pool } from "./g_npc_pool.mjs";
 import { g_game_plants } from "./g_game_plants.mjs";
-import { random_seed_from_text } from "./random_seed_from_text.mjs";
-import { random_seed_generator } from "./random_seed_generator.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export async function g_game_plants_report(word) {
@@ -14,11 +13,9 @@ export async function g_game_plants_report(word) {
   "The pool is seeded on a fixed word and the game on whatever word is handed in, which is the two layers kept apart: change the word and the same people group differently.";
   let sermon_days = await g_sermon_days_total();
   let turns_wanted = await g_npc_pool_convert_turns();
-  let pool_seed = random_seed_from_text(g_npc_pool.name);
-  let pool_next = random_seed_generator(pool_seed);
+  let pool_next = random_seed_generator_from_text(g_npc_pool.name);
   let pool = g_npc_pool(turns_wanted, pool_next);
-  let game_seed = random_seed_from_text(word);
-  let next = random_seed_generator(game_seed);
+  let next = random_seed_generator_from_text(word);
   let bare = g_game_plants(next, pool);
   let stream = await g_sermon_chapter_days_all();
   let plants = g_game_plants_areas(bare, stream);
