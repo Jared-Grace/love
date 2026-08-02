@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
@@ -25,8 +26,7 @@ export function js_native_callback_imported(ast) {
     if (computed) {
       continue;
     }
-    let property = property_get(callee, "property");
-    let method = property_get(property, "name");
+    let method = property_path_get_2(callee, "property", "name");
     let watched = list_includes(methods, method);
     if (not(watched)) {
       continue;
