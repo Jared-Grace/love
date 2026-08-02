@@ -1,7 +1,7 @@
+import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { range_map } from "./range_map.mjs";
-import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -25,11 +25,9 @@ import { html_bold } from "./html_bold.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_subtract() {
   "practice a % b (remainder) by writing it out as repeated subtraction (17 % 5 becomes 17 - 5 - 5 - 5): the quiz matches the % form with its subtraction chain, because this lesson teaches what % MEANS - take the divisor away again and again until what is left is smaller than it, and that leftover is the remainder - not the closed-form value; divisor 3..6, 2 or 3 subtractions, leftover 1..divisor-1";
-  let operator = js_operator_percent();
-  let percent = property_get(operator, "operator");
+  let percent = js_operator_percent_sign();
   function subtract_code(number, divisor, count) {
     "the remainder worked out as repeated subtraction - subtract_code(17, 5, 3) is 17 - 5 - 5 - 5: the number, then the divisor taken away count times";
     let minus = js_operator_minus_symbol();
