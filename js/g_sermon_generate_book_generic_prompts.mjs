@@ -126,7 +126,7 @@ export async function g_sermon_generate_book_generic_prompts(
       let n = property_get(g, "nearby");
       let user_prompt_before = prompt_get(n);
       let user_prompt_after = prompt_get([passage]);
-      function prompt_get(groups) {
+      function prompt_get(groups_prompted) {
         let size = list_size(bible_folders);
         let a = add_1(size);
         let r = list_new_multiple(a);
@@ -138,7 +138,7 @@ export async function g_sermon_generate_book_generic_prompts(
           list_add(passages_folders_group, original);
           return passages_folders_group;
         }
-        let passages_folders = list_map(groups, each_group);
+        let passages_folders = list_map(groups_prompted, each_group);
         function lambda(item2) {
           list_add_pair(r, item2);
         }
