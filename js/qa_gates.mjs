@@ -191,6 +191,7 @@ export function qa_gates() {
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
     functions_parameters_unread_gate_run,
+    functions_parameters_unread_computed_gate_run,
     functions_duplicates_gate_run,
     functions_fold_gate_run,
     markers_gate_run,

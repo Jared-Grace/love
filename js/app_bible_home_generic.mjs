@@ -1,4 +1,3 @@
-import { app_bible } from "./app_bible.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -114,16 +113,19 @@ export async function app_bible_home_generic(
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
+  let property_name = verse_number_key();
   let verse_current = list_find_property(
     verses,
-    verse_number_key(),
+    property_name,
     verse_number_hash,
   );
-  let verse_number = property_get(verse_current, verse_number_key());
+  let property_name2 = verse_number_key();
+  let verse_number = property_get(verse_current, property_name2);
   let text = property_get(verse_current, "text");
   let languages_chosen = app_shared_bible_languages_chosen_get();
   async function lambda_language(lc) {
-    let bible_folder = property_get(lc, bible_folder_key());
+    let property_name3 = bible_folder_key();
+    let bible_folder = property_get(lc, property_name3);
     async function get() {
       async function lambda_verses_l() {
         let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
@@ -158,9 +160,10 @@ export async function app_bible_home_generic(
   let languages_available = list_filter_null_not_is(fetched);
   function lambda_text_map(item) {
     let verses_l = property_get(item, "verses");
+    let property_name4 = verse_number_key();
     let verse_current_l = list_find_property_or_null(
       verses_l,
-      verse_number_key(),
+      property_name4,
       verse_number_hash,
     );
     let nn = null_not_is(verse_current_l);
