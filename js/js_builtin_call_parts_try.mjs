@@ -1,5 +1,5 @@
-import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { js_call_callee_try } from "./js_call_callee_try.mjs";
+import { js_call_member_callee_try } from "./js_call_member_callee_try.mjs";
+import { null_is } from "./null_is.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
@@ -9,13 +9,8 @@ export function js_builtin_call_parts_try(node) {
   "Which built-ins are covered is not decided here. This says only what the call is spelled as, and the list of pairings says whether that spelling is one the repo keeps a name for - so a built-in joining the list is a line of data rather than a change to a reading.";
   "A method reached through a written-out key rather than a name is left unrecognised. A name in brackets is worked out while the program runs, so which method it reaches is not something a reading of the file can know, and guessing would rewrite a call nobody can prove.";
   let none = null;
-  let callee = js_call_callee_try(node);
-  let member_not = js_node_type_not_is(callee, "MemberExpression");
-  if (member_not) {
-    return none;
-  }
-  let worked_out = property_get(callee, "computed");
-  if (worked_out) {
+  let callee = js_call_member_callee_try(node);
+  if (null_is(callee)) {
     return none;
   }
   let object_node = property_get(callee, "object");
