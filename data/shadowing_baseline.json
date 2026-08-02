@@ -32,13 +32,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_calendar_paste_convert",
-   "shadows_outer": [
-    "zone"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_code_examples",
    "shadows_outer": [
     "previous"
@@ -119,23 +112,9 @@
    "shadows_function": []
   },
   {
-   "name": "app_replace_tests_run_e2e_goal",
-   "shadows_outer": [
-    "goal"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_reply",
    "shadows_outer": [
     "lambda6"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_search_home",
-   "shadows_outer": [
-    "query_hash"
    ],
    "shadows_function": []
   },
@@ -150,13 +129,6 @@
    "name": "bible_verses_uplifting_package_upload",
    "shadows_outer": [
     "present"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "browser_files_database_initialize",
-   "shadows_outer": [
-    "db"
    ],
    "shadows_function": []
   },
@@ -179,30 +151,9 @@
    "shadows_function": []
   },
   {
-   "name": "command_line_read",
-   "shadows_outer": [
-    "answer"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "digits_3_random_next",
-   "shadows_outer": [
-    "next"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "ebible_book_video_generate",
    "shadows_outer": [
     "path_video"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "ebible_chapters_all_plain",
-   "shadows_outer": [
-    "entry"
    ],
    "shadows_function": []
   },
@@ -229,20 +180,6 @@
    "shadows_function": []
   },
   {
-   "name": "example_files_refuses_run",
-   "shadows_outer": [
-    "threw"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "example_files_run",
-   "shadows_outer": [
-    "got"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "examples_menu_dom",
    "shadows_outer": [
     "index"
@@ -253,27 +190,6 @@
    "name": "function_comments_migrate_multiple",
    "shadows_outer": [
     "left"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "function_rename_prefix_add",
-   "shadows_outer": [
-    "f_name_before"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "function_string_split_space_change",
-   "shadows_outer": [
-    "literal"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "functions_param_new",
-   "shadows_outer": [
-    "param_name"
    ],
    "shadows_function": []
   },
@@ -289,20 +205,6 @@
    "name": "g_sermon_generate_book_generic",
    "shadows_outer": [
     "prompt_system"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "g_themes",
-   "shadows_outer": [
-    "list"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "html_checkboxes",
-   "shadows_outer": [
-    "div"
    ],
    "shadows_function": []
   },
@@ -323,45 +225,10 @@
    "shadows_function": []
   },
   {
-   "name": "indexeddb_put_backend",
-   "shadows_outer": [
-    "tx"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "integer_factorization_to_sat",
    "shadows_outer": [
     "cnf",
     "bits"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_code_comment_statement_generic",
-   "shadows_outer": [
-    "known"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_expand_generic",
-   "shadows_outer": [
-    "name"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_function_declaration_params_names_node",
-   "shadows_outer": [
-    "type_is"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "js_list_add_run_apply",
-   "shadows_outer": [
-    "call"
    ],
    "shadows_function": []
   },
