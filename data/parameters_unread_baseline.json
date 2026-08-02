@@ -13,12 +13,6 @@
    ]
   },
   {
-   "name": "app_code_lesson_index_by_id",
-   "unread": [
-    "context"
-   ]
-  },
-  {
    "name": "app_code_lesson_quiz_choose_operand",
    "unread": [
     "batch_get"
