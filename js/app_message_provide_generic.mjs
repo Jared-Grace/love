@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { app_shared_flow_back } from "./app_shared_flow_back.mjs";
 import { html_checkboxes } from "./html_checkboxes.mjs";
 import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
@@ -30,11 +31,14 @@ export function app_message_provide_generic(category, emoji, context, verse) {
     return null;
   };
   let yes = "yes";
+  let v2 = emoji_x_purple();
+  let bt = app_shared_button_back_text();
+  let e = emoji_check();
   let choices = [
     {
       value: "no",
       title: text_combine_multiple([
-        emoji_x_purple(),
+        v2,
         " I cannot agree to provide for all of your ",
         category,
         " at this time",
@@ -45,14 +49,14 @@ export function app_message_provide_generic(category, emoji, context, verse) {
         ", then I have no money to pay for my ",
         category,
         ' to you. Please choose "',
-        app_shared_button_back_text(),
+        bt,
         '"',
       ]),
     },
     {
       value: yes,
       title: text_combine_multiple([
-        emoji_check(),
+        e,
         " Yes, I will provide for all of your ",
         category,
         " ",
@@ -64,14 +68,14 @@ export function app_message_provide_generic(category, emoji, context, verse) {
       ),
     },
   ];
-  let on_next = function lambda4() {
+  let on_next = async function lambda4() {
     let screens = app_message_flow_travel();
-    app_shared_flow_next(context, screens);
+    await app_shared_flow_next(context, screens);
   };
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     let value_checked = html_checkboxes_checked_value_get(checkboxes);
-    let v = value_checked === yes;
+    let v = equal(value_checked, yes);
     return v;
   };
   html_checkboxes(
