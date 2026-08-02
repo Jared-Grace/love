@@ -1,3 +1,4 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { modulo } from "./modulo.mjs";
@@ -11,7 +12,7 @@ export function date_zone_offset_iso(d) {
   ("wide, so two lines written in two places cannot be put in order together.");
   let behind = d.getTimezoneOffset();
   let ahead = -behind;
-  let ahead_is = ahead >= 0;
+  let ahead_is = greater_than_equal(ahead, 0);
   let sign = ahead_is ? "+" : "-";
   let size = ahead_is ? ahead : behind;
   let hours = divide_floor(size, 60);

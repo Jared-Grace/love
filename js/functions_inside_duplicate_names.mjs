@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_inside_duplicates_size } from "./functions_inside_duplicates_size.mjs";
+import { functions_inside_duplicates } from "./functions_inside_duplicates.mjs";
+import { functions_duplicate_group_names } from "./functions_duplicate_group_names.mjs";
+import { list_unique } from "./list_unique.mjs";
 export async function functions_inside_duplicate_names() {
   arguments_assert(arguments, 0);
   ("Name every group of functions sharing a run of work somewhere inside them, one flat word to a group, so a ratchet can hold them.");
