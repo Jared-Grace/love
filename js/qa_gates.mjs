@@ -1,3 +1,4 @@
+import { zzz_probe_wire_gate_run } from "./zzz_probe_wire_gate_run.mjs";
 import { firebase_function_folders_orphaned_gate_run } from "./firebase_function_folders_orphaned_gate_run.mjs";
 import { qa_gates_repeated_gate_run } from "./qa_gates_repeated_gate_run.mjs";
 import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_empty_cases_gate_run.mjs";
@@ -282,6 +283,7 @@ export function qa_gates() {
     functions_cases_ungated_gate_run,
     qa_gates_repeated_gate_run,
     firebase_function_folders_orphaned_gate_run,
+    zzz_probe_wire_gate_run,
   ];
   return gates;
 }
