@@ -19,7 +19,13 @@ export function app_code_lesson_cross_precedence_intro(params) {
   let inner = strong_fn(inner_left, inner_right);
   function binary(left, op, right) {
     "the code x op y, e.g. 3 * 4 or 10 - 6";
-    let code = text_combine_multiple([text_to(left), " ", op, " ", text_to(right)]);
+    let code = text_combine_multiple([
+      text_to(left),
+      " ",
+      op,
+      " ",
+      text_to(right),
+    ]);
     return code;
   }
   let sub = binary(inner_left, strong_symbol, inner_right);

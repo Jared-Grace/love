@@ -3,6 +3,7 @@ import { http } from "./http.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { buffer_text_to } from "./buffer_text_to.mjs";
 export async function firebase_prod_asset_download(file_name) {
+  "$plain file_name";
   let url = firebase_prod_asset_url(file_name);
   ("retry so a transient timeout re-resolves DNS and recovers instead of crashing the whole deploy");
   async function download() {
