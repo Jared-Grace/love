@@ -1,10 +1,10 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
 import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
-import { list_size } from "./list_size.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_get } from "./list_get.mjs";
 import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
@@ -43,8 +43,7 @@ export async function qa_gate_run() {
   ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
   ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
   let sections = qa_gate_failed_sections(printed);
-  let size = list_size(sections);
-  let any = greater_than(size, 0);
+  let any = list_size_greater_than(sections, 0);
   if (any) {
     let known = await functions_names();
     let flying = [];
