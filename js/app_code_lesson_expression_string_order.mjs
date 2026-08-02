@@ -1,16 +1,15 @@
+import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
-import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
@@ -48,8 +47,7 @@ export function app_code_lesson_expression_string_order() {
   ];
   function words_source() {
     "the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner";
-    let cleaned = app_code_verse_words_clean();
-    let distinct = list_unique(cleaned);
+    let distinct = app_code_verse_words_clean_unique();
     function lower_case_is(word) {
       "whether a word is already all lower case (unchanged by lower-casing it)";
       let lowered = text_lower_to(word);

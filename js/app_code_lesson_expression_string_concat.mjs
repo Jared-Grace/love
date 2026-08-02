@@ -1,6 +1,6 @@
+import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_verse_words_clean } from "./app_code_verse_words_clean.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -10,7 +10,6 @@ import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_get } from "./list_get.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -25,8 +24,7 @@ export function app_code_lesson_expression_string_concat() {
   "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
   function pair() {
     "two DIFFERENT words from the shared verse - the verse repeats some words (that appears twice), so the list is made unique first, otherwise a pair could be one word joined to itself and the reversed-order decoy would equal the answer";
-    let words = app_code_verse_words_clean();
-    let distinct = list_unique(words);
+    let distinct = app_code_verse_words_clean_unique();
     let two = list_shuffle_take(distinct, 2);
     return two;
   }
