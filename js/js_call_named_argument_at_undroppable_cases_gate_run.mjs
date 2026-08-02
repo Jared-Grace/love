@@ -1,3 +1,8 @@
+import { js_call_named_argument_at_undroppable_cases } from "./js_call_named_argument_at_undroppable_cases.mjs";
+import { property_js_parse } from "./property_js_parse.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_call_named_argument_at_undroppable } from "./js_call_named_argument_at_undroppable.mjs";
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function js_call_named_argument_at_undroppable_cases_gate_run() {
   "QA gate: each written-down file names exactly the arguments the corpus says could not be dropped.";
   "This reading is the last refusal in front of the repair that takes an unread parameter off a function and off every call site at once. Something it stops seeing is written away in silence, and a call site that meant to do work at that place quietly stops doing it.";
