@@ -1,12 +1,11 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { property_path_equals_2 } from "./property_path_equals_2.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function js_template_comment_text(template) {
   "The plain words of a comment written as a template literal, with every name that was substituted back in as text. Reading it out this way is what lets such a comment be written back as an ordinary string when the place it sits cannot hold anything more complicated.";
@@ -18,8 +17,7 @@ export function js_template_comment_text(template) {
     let cooked = property_path_get_2(quasi, "value", "cooked");
     list_add(pieces, cooked);
     let index = list_index_of(quasis, quasi);
-    let size = list_size(expressions);
-    let past = greater_than_equal(index, size);
+    let past = list_index_past_end_is(expressions, index);
     if (past) {
       return;
     }
