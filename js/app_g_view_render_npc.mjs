@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
@@ -39,32 +40,39 @@ export async function app_g_view_render_npc(div_map) {
     html_remove(overlay);
     await app_g_view_set(null);
   }
-  if (phase === app_g_view_phase_study()) {
+  let right = app_g_view_phase_study();
+  if (equal(phase, right)) {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
     return;
   }
-  if (phase === app_g_view_phase_pray()) {
+  let right2 = app_g_view_phase_pray();
+  if (equal(phase, right2)) {
     await app_g_click_npc_pray(player, overlay, overlay_close, div_map);
     return;
   }
-  if (phase === app_g_view_phase_conversation()) {
+  let right3 = app_g_view_phase_conversation();
+  if (equal(phase, right3)) {
     let prayer = property_get(player, "prayer");
     await app_g_conversation(prayer, npc, overlay, overlay_close, div_map);
     return;
   }
-  if (phase === app_g_view_phase_gospel()) {
+  let right4 = app_g_view_phase_gospel();
+  if (equal(phase, right4)) {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
     return;
   }
-  if (phase === app_g_view_phase_how()) {
+  let right5 = app_g_view_phase_how();
+  if (equal(phase, right5)) {
     app_g_how(overlay, npc, overlay_close);
     return;
   }
-  if (phase === app_g_view_phase_believe()) {
+  let right6 = app_g_view_phase_believe();
+  if (equal(phase, right6)) {
     app_g_believe(overlay, npc, overlay_close);
     return;
   }
-  if (phase === app_g_view_phase_disciple()) {
+  let right7 = app_g_view_phase_disciple();
+  if (equal(phase, right7)) {
     app_g_disciple(overlay, npc, overlay_close);
     return;
   }
