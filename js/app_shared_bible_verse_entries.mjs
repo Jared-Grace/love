@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -13,7 +14,7 @@ export function app_shared_bible_verse_entries(
     let verses_l = property_get(entry, "verses");
     let verse_l = list_find_property_or_null(
       verses_l,
-      "verse_number",
+      verse_number_key(),
       verse_number,
     );
     let nn = null_not_is(verse_l);
