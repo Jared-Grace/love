@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
@@ -210,7 +211,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
       html_align_items_center(grid);
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
-      html_style_set(grid, "row-gap", "0.4em");
+      html_style_set(grid, "row-gap", app_shared_content_edge_gap());
       html_style_set(grid, "vertical-align", "middle");
       let pill = html_span(grid);
       html_style_set(pill, "grid-row", "2");
