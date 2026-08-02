@@ -2,7 +2,6 @@
  "known": [
   "app_code_lesson_expression_arithmetic_equality,app_code_lesson_expression_comparison_and,app_code_lesson_expression_in_between",
   "app_code_lesson_expression_string_equality,app_code_lesson_expression_string_order_equal,app_code_lesson_expression_string_order",
-  "html_loading_generic,html_loading_immediate,html_loading",
   "js_free_names_cases,js_identifiers_referenced_names_cases,js_imports_local_names_cases",
   "app_a_function_on_keydown_remove,app_a_overlay_keydown",
   "app_code_button_skip_lesson,app_code_lesson_quiz",
@@ -22,7 +21,6 @@
   "functions_call_pairs_frequent,functions_fold_sites",
   "g_game_generate_report,g_game_plants_report",
   "guard_gate_run,memory_hook_gate_run",
-  "html_loading_generic,html_loading",
   "indexeddb_name_literals_gate_run,key_literals_gate_run_generic",
   "js_call_argument_named_node_set,js_call_arguments_same_names_set",
   "js_operator_call_to_node_unary,js_operator_call_to_node",
