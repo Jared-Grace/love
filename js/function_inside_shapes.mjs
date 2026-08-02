@@ -1,3 +1,4 @@
+import { list_slice_count } from "./list_slice_count.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -7,8 +8,6 @@ import { js_function_declaration_name } from "./js_function_declaration_name.mjs
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { add } from "./add.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { js_node_copy } from "./js_node_copy.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
 import { list_add } from "./list_add.mjs";
@@ -35,8 +34,7 @@ export async function function_inside_shapes(f_name, size) {
     if (past) {
       break;
     }
-    let end = add(index, size);
-    let run = list_slice(working, index, end);
+    let run = list_slice_count(working, index, size);
     let copied = js_node_copy(run);
     let shape = js_statements_shape(copied, personal);
     list_add(shapes, shape);
