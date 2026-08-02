@@ -1,3 +1,4 @@
+import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
 import { function_parameters_unread } from "./function_parameters_unread.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -50,6 +51,8 @@ export async function function_parameter_unread_remove(f_name, parameter_name) {
   let param_remove =
     js_function_declaration_param_at_remove_curried_right(index);
   await function_transform(f_name, param_remove);
+  ("the argument that was being handed over was often a name computed one line earlier and read nowhere else, so taking the argument out leaves that line standing with nothing to read it. the existing pass drops it when the value was only a read, and keeps it as a bare line when computing it did work of its own");
+  await functions_transform_list(f_names, js_declaration_unused_to_expression);
   let names_comma = list_join_comma(f_names);
   await function_auto_multiple(names_comma);
   let r = {

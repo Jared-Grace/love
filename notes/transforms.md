@@ -27,6 +27,7 @@
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
 | Create a whole named constant — file, meaning line, value — nothing left to finish by hand | (no alias) | `function_new_getter <name> <meaning> <value>` |
 | Create a whole **thin wrapper** — file, matching parameters, the delegating call, the `await`, the `return`, the import — in one command | (no alias) | `function_wrap <wrapped> <name_new>` — the wrapped fn is named first, the new one second; only the prose is left to add |
+| Create a whole **sweep** — the command that asks one question of several names — from the single form's name | (no alias) | `function_new_sweep <single> <name_new>` — the single form is named first, the new one second; only the prose is left to add |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
@@ -76,6 +77,22 @@ export async function js_probe(ast, selects, param_name, word) {
   return r;
 }
 ```
+
+**Then ask whether it is a sweep, because that shape is one command too.** The loops reading below says the same thing every time: the commonest missing command is the one that asks a question of several names at once, and every sweep written so far was written by hand. `function_new_sweep <single> <name_new>` writes the whole of it from the single form's own parameter list — the first parameter becomes `names_comma`, everything after it is carried through unchanged, and the body is the one every sweep has: take the joined word apart, call the single form once per name, answer under the name that asked. `function_new_sweep function_dependency_path zzz_probe` produced this, which is byte for byte the body `functions_dependency_path` had been carrying by hand:
+
+```js
+export async function zzz_probe(names_comma, f_name_to) {
+  let names = text_split_comma_dot_trim(names_comma);
+  async function answer_one(name_one) {
+    let answer_found = await function_dependency_path(name_one, f_name_to);
+    return answer_found;
+  }
+  let found = await list_map_async_record_try(names, answer_one);
+  return found;
+}
+```
+
+`list_map_async_record_try` is that body's one shared half — one answer per item under the item, an item whose answer throws answered as nothing rather than ending the run, and one at a time so a lambda carrying a memo between items still shares it. Three sweeps had hand-written it before it had a name; reach for it directly when a sweep needs a body the generator cannot write.
 
 Only the prose is yours to add afterwards (`js_block_prose_add`). This repo is mostly thin wrappers — a plain twin beside a `_generic`, an `_after` beside a `_before` — so reach here before the long way, and keep the long way for a body that genuinely does something new. Two sessions running have walked the six commands below to build what this one line builds.
 
