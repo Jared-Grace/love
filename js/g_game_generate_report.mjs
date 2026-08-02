@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { g_game_generate } from "./g_game_generate.mjs";
 import { property_get } from "./property_get.mjs";
