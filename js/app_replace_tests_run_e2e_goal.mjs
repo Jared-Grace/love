@@ -37,13 +37,13 @@ export async function app_replace_tests_run_e2e_goal(
     await playwright_by_attribute_test_click(page, rule_set_name);
     await playwright_by_attribute_test_click(page, json);
     let rules_parsed = app_replace_rule_set_rules_get(rule_set);
-    async function each_goal(goal) {
+    async function each_goal(goal_each) {
       let refresh_count = 0;
       refresh_count = await app_replace_rule_set_attribute_refresh_count_assert(
         refresh_count,
         page,
       );
-      let se = app_replace_start_end_get(goal);
+      let se = app_replace_start_end_get(goal_each);
       let start = property_get(se, "start");
       let end = property_get(se, "end");
       let path = app_replace_rule_set_verify_goal_path(
@@ -66,7 +66,7 @@ export async function app_replace_tests_run_e2e_goal(
       let last_goal = false;
       let eq = json_equal(rule_set, last_rs);
       if (eq) {
-        if (json_equal(goal, goal_last)) {
+        if (json_equal(goal_each, goal_last)) {
           last_goal = true;
         }
       }
