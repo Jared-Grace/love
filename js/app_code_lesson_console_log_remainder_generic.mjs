@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
@@ -97,7 +98,11 @@ export function app_code_lesson_console_log_remainder_generic(
       return render;
     }
     let rights = [name_right];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function remainder_color(remainder) {
