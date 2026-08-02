@@ -1,5 +1,5 @@
+import { divide_round } from "./divide_round.mjs";
 import { numbers_apart } from "./numbers_apart.mjs";
-import { round } from "./round.mjs";
 import { math_max } from "./math_max.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -65,8 +65,7 @@ export async function g_plant_chapters() {
       return days;
     }
     let book_days = list_map_sum(held, days_of);
-    let exact = divide(book_days, wanted);
-    let rounded = round(exact);
+    let rounded = divide_round(book_days, wanted);
     let count = math_max(1, rounded);
     let share = divide(book_days, count);
     let book_plant_list = [];
