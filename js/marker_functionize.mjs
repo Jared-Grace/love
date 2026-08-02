@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { js_functionize } from "./js_functionize.mjs";
 import { marker_previous_index } from "./marker_previous_index.mjs";
 import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
@@ -11,15 +12,16 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
-    let v2 = marker_next_index(a_from);
-    let index_from = property_get(v2, "index");
+    let v = marker_next_index(a_from);
+    let index_from = property_get(v, "index");
     let a_to = js_marker_named_ast_arg(ast, m_name_to);
     let v3 = marker_previous_index(a_to);
     let index_to = property_get(v3, "index");
     let stack_2_from = property_get(a_from, "stack_2");
     let stack_2_to = property_get(a_to, "stack_2");
+    let b = equal(stack_2_from, stack_2_to);
     assert_message(
-      stack_2_from === stack_2_to,
+      b,
       "The two markers were expected to live in the same block. Would you like to check that both sit in the same scope?",
     );
     await js_functionize(ast, f_name_new, stack_2_from, index_from, index_to);
