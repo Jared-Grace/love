@@ -92,6 +92,8 @@ export async function zzz_probe(names_comma, f_name_to) {
 }
 ```
 
+**The one thing it cannot tell you is whether the single form's first parameter is a name.** It writes `names_comma` in that slot and hands each word straight over, so a single form whose first parameter is a *function value* rather than a name — `function_aliases_for(fn)` reads `fn.name` — generates a sweep that answers nothing under every name, silently, because the failure lands inside the per-item catch. Read the single form's first parameter before generating; if it is not a name, the sweep is not this shape.
+
 `list_map_async_record_try` is that body's one shared half — one answer per item under the item, an item whose answer throws answered as nothing rather than ending the run, and one at a time so a lambda carrying a memo between items still shares it. Three sweeps had hand-written it before it had a name; reach for it directly when a sweep needs a body the generator cannot write.
 
 Only the prose is yours to add afterwards (`js_block_prose_add`). This repo is mostly thin wrappers — a plain twin beside a `_generic`, an `_after` beside a `_before` — so reach here before the long way, and keep the long way for a body that genuinely does something new. Two sessions running have walked the six commands below to build what this one line builds.
