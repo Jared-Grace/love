@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -47,7 +48,7 @@ export function g_game_plants_areas(plants, stream) {
         let code = property_get(held, "chapter");
         list_add(chapters, code);
         let book_opened = property_get(held, "book");
-        if (!book_first) {
+        if (not(book_first)) {
           book_first = book_opened;
         }
         left_in = property_get(held, "days");
@@ -66,7 +67,7 @@ export function g_game_plants_areas(plants, stream) {
     }
     let sender_present = greater_than_equal(s.sender_areas, area);
     let leader_short = property_get(plant, "leader_short");
-    let elder_short = leader_short && !sender_present;
+    let elder_short = leader_short && not(sender_present);
     let days_short = less_than(taken, days);
     let added = {
       chapters,
