@@ -1,5 +1,4 @@
-import { list_map } from "./list_map.mjs";
-import { list_sum } from "./list_sum.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
 import { property_get } from "./property_get.mjs";
 export function timings_total_ms(timings) {
   "How long the whole set took added up, in milliseconds.";
@@ -8,7 +7,6 @@ export function timings_total_ms(timings) {
     let milliseconds = property_get(timing, "milliseconds");
     return milliseconds;
   }
-  let milliseconds_each = list_map(timings, lambda_milliseconds);
-  let total = list_sum(milliseconds_each);
+  let total = list_map_sum(timings, lambda_milliseconds);
   return total;
 }

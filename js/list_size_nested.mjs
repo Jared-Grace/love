@@ -1,8 +1,6 @@
-import { list_sum } from "./list_sum.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_map } from "./list_map.mjs";
 export function list_size_nested(rows) {
-  let mapped = list_map(rows, list_size);
-  let total = list_sum(mapped);
+  let total = list_map_sum(rows, list_size);
   return total;
 }
