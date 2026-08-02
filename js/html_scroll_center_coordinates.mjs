@@ -1,7 +1,7 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
-import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -30,13 +30,11 @@ export function html_scroll_center_coordinates(
     grid_left = grid.offsetLeft;
     grid_top = grid.offsetTop;
   }
-  let left2 = multiply(x, tile_size);
-  let right = add(left2, half_tile);
+  let right = multiply_add(x, tile_size, half_tile);
   let left3 = add(grid_left, right);
   let right2 = divide(container_e.clientWidth, 2);
   let left = subtract(left3, right2);
-  let left4 = multiply(y, tile_size);
-  let right3 = add(left4, half_tile);
+  let right3 = multiply_add(y, tile_size, half_tile);
   let left5 = add(grid_top, right3);
   let right4 = divide(container_e.clientHeight, 2);
   let top = subtract(left5, right4);

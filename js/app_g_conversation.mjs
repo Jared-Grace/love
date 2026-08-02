@@ -1,3 +1,4 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { g_something_else } from "./g_something_else.mjs";
 import { list_min } from "./list_min.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -13,7 +14,6 @@ import { g_clock_label } from "./g_clock_label.mjs";
 import { emoji_clock } from "./emoji_clock.mjs";
 import { app_g_toast } from "./app_g_toast.mjs";
 import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
 import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
@@ -154,8 +154,7 @@ export async function app_g_conversation(
     prayer_parts = some_count;
   }
   let right = list_size(turns);
-  let left3 = multiply(2, right);
-  let left6 = add(left3, prayer_parts);
+  let left6 = multiply_add(2, right, prayer_parts);
   let steps_total = add(left6, 2);
   let steps = {
     done: 0,

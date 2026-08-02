@@ -1,5 +1,5 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
 import { modulo } from "./modulo.mjs";
 export function random_seed_from_text(text) {
   "Turn a word into a seed number, so anything random can be made repeatable by keying it to a name it already has.";
@@ -8,8 +8,7 @@ export function random_seed_from_text(text) {
   let n = 7;
   for (let letter of text) {
     let code = letter.charCodeAt(0);
-    let scaled = multiply(n, 31);
-    let added = add(scaled, code);
+    let added = multiply_add(n, 31, code);
     n = modulo(added, 2147483646);
   }
   let r = add(n, 1);
