@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
 import { indexeddb_name_literals_all } from "./indexeddb_name_literals_all.mjs";
