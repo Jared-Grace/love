@@ -16,5 +16,4 @@ export function js_operator_call_to_node_unary(node, o) {
   property_set(expression, "operator", operator);
   property_set(expression, "argument", argument);
   object_replace(node, expression);
-  return;
 }

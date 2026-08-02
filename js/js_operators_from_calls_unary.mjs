@@ -9,5 +9,4 @@ export function js_operators_from_calls_unary(ast) {
     operators,
     js_operator_call_to_node_unary,
   );
-  return;
 }

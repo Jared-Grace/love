@@ -18,5 +18,4 @@ export function js_operator_node_to_call(node, o, properties) {
   }
   list_map(properties, lambda);
   object_replace(node, expression);
-  return;
 }

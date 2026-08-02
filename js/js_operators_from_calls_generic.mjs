@@ -28,5 +28,4 @@ export function js_operators_from_calls_generic(ast, operators, fn_to_node) {
     each(matches, apply);
   }
   js_visit_type_node(ast, "CallExpression", lambda);
-  return;
 }
