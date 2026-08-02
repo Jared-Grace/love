@@ -17,7 +17,7 @@ export function g_game_plants_whole(next, days_total) {
   "Every plant of a whole game, drawn to fill exactly the days of preaching there are and no more.";
   "The days are the budget and the people are drawn against it, which is the way round that leaves no remainder. Drawing a pool first and then cutting plants out of it left whoever went last holding whatever was over - measured at two and four people, reported as plants because they were the right shape to be counted as one.";
   "A plant too small to be a plant is never MADE here. While fewer days remain than a plant needs, those days go to the plant already standing rather than starting a church that cannot finish - which is also what a person would do, staying where they are rather than founding something a fortnight before they leave.";
-  "The last plant's cast may be worth more days than are left, and its days are cut to what there is rather than its people being turned away. An arc that does not finish is a person the player was still working with when the road ended, which is true of every real journey.";
+  "The last plant is however big the days left let it be, and it is the only one that comes out under the size it meant to be. Cutting its DAYS back instead was tried and put the leader in front of the player ninety-eight days in a hundred, because the arcs were all still there and had fewer days to happen in.";
   let s = g_generation_settings();
   let plants = [];
   let days_left = days_total;
@@ -39,25 +39,20 @@ export function g_game_plants_whole(next, days_total) {
     }
     let wanted = g_plant_npcs(index, next);
     let converts_count = subtract(wanted, 1);
-    let converts = g_plant_converts(next, converts_count, npc_next);
-    npc_next = npc_next + converts_count;
-    let convert_turns = 0;
-    for (let npc of converts) {
-      let turns = property_get(npc, "turns");
-      convert_turns = convert_turns + turns;
-    }
+    let grown = g_plant_converts(next, converts_count, npc_next, days_left);
+    let converts = property_get(grown, "converts");
+    let convert_turns = property_get(grown, "convert_turns");
+    let days = property_get(grown, "days");
+    npc_next = npc_next + converts.length;
     let leader_turns = g_leader_turns(convert_turns);
     let arc_turns = leader_turns + convert_turns;
-    let days_asked = g_plant_days_turns(arc_turns);
-    let days = math_min(days_asked, days_left);
     days_left = subtract(days_left, days);
-    let npcs = converts_count + 1;
+    let npcs = converts.length + 1;
     let plant = {
       index,
       npcs,
-      wanted: npcs,
+      wanted,
       days,
-      days_asked,
       leader_turns,
       convert_turns,
       arc_turns,

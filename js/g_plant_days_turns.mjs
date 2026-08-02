@@ -1,6 +1,5 @@
-import { ceil } from "./ceil.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_plant_days_turns(arc_turns) {
@@ -10,7 +9,6 @@ export function g_plant_days_turns(arc_turns) {
   let s = g_generation_settings();
   let kept = subtract(100, s.question_matches_percent);
   let a_day = multiply_divide(s.day_matches, kept, 100);
-  let exact = divide(arc_turns, a_day);
-  let r = ceil(exact);
+  let r = divide_ceil(arc_turns, a_day);
   return r;
 }

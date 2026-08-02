@@ -15,7 +15,7 @@ export async function g_game_generate_report(word) {
   for (let plant of plants) {
     let npcs = property_get(plant, "npcs");
     let days = property_get(plant, "days");
-    let days_asked = property_get(plant, "days_asked");
+    let wanted = property_get(plant, "wanted");
     days_total = days_total + days;
     npcs_total = npcs_total + npcs;
     let seen = sizes[npcs];
@@ -25,7 +25,7 @@ export async function g_game_generate_report(word) {
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
     }
-    let trimmed = subtract(days_asked, days);
+    let trimmed = subtract(wanted, npcs);
     if (trimmed) {
       trimmed_plants = trimmed_plants + 1;
     }
@@ -33,7 +33,7 @@ export async function g_game_generate_report(word) {
       index: property_get(plant, "index"),
       npcs,
       days,
-      days_asked,
+      wanted,
       leader_turns: property_get(plant, "leader_turns"),
       leader_days_percent: property_get(plant, "leader_days_percent"),
       leader_short: property_get(plant, "leader_short"),

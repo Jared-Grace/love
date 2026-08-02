@@ -1,3 +1,4 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
@@ -35,8 +36,10 @@ export function g_generation_plan() {
   let share_high = divide(s.leader_days_percent_maximum, 100);
   let share_middle = divide(share_low + share_high, 2);
   let turns_a_day = multiply(share_middle, s.conversation_turns_mean);
-  let days_needed = divide(s.leader_turns_minimum, turns_a_day);
-  let plant_days_minimum_needed = ceil(days_needed);
+  let plant_days_minimum_needed = divide_ceil(
+    s.leader_turns_minimum,
+    turns_a_day,
+  );
   let plant_days_minimum_fits = greater_than_equal(
     s.plant_days_minimum,
     plant_days_minimum_needed,
