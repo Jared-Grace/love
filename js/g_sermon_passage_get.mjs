@@ -1,16 +1,14 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { g_sermon_verse_to_text } from "./g_sermon_verse_to_text.mjs";
 import { g_sermon_generate_chapter_passages_get } from "./g_sermon_generate_chapter_passages_get.mjs";
 import { list_find } from "./list_find.mjs";
-import { list_first } from "./list_first.mjs";
-import { property_get } from "./property_get.mjs";
 export async function g_sermon_passage_get(chapter_code, verse_number) {
   let books = await ebible_version_books(ebible_folder_english());
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v3) {
-    let verse_numbers = property_get(v3, "verse_numbers");
-    let first = list_first(verse_numbers);
+    let first = property_list_first(v3, "verse_numbers");
     let v2 = first === verse_number;
     return v2;
   }
