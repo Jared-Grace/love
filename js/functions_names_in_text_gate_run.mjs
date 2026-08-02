@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { functions_names_in_text_cases } from "./functions_names_in_text_cases.mjs";
 import { functions_names_in_text } from "./functions_names_in_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,18 +22,14 @@ export function functions_names_in_text_gate_run() {
     let left = expected.join(",");
     let right = actual.join(",");
     let b = equal(left, right);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(mark + text + "  ->  [" + actual.join(", ") + "]");
     if (not(b)) {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(
       "functions names in text gate: " + failures.length + " failed",

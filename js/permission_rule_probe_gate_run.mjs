@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { permission_rule_probe_cases } from "./permission_rule_probe_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { permission_rule_command_probe } from "./permission_rule_command_probe.mjs";
@@ -16,18 +18,14 @@ export function permission_rule_probe_gate_run() {
     let expected = property_get(c, "command");
     let actual = permission_rule_command_probe(rule);
     let b = equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(mark + rule + "  ->  " + actual);
     if (not(b)) {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(
       "permission rule probe gate: " + failures.length + " failed",

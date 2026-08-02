@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { permission_tool_unmatched_cases } from "./permission_tool_unmatched_cases.mjs";
 import { permission_rule_tool_unmatched_is } from "./permission_rule_tool_unmatched_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,18 +17,14 @@ export function permission_tool_unmatched_gate_run() {
     let expected = property_get(c, "unmatched");
     let actual = permission_rule_tool_unmatched_is(rule);
     let b = equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(mark + rule + "  " + expected + " / " + actual);
     if (not(b)) {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(
       "permission tool unmatched gate: " + failures.length + " failed",
