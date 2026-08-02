@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -76,7 +77,11 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       return render;
     }
     let rights = ["solve the remainder formula"];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function above(root) {
