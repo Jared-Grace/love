@@ -1,3 +1,4 @@
+import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -14,7 +15,7 @@ export function app_shared_message_overlay(emoji_text, message) {
     top: "0",
     left: "0",
     width: "100vw",
-    height: "100vh",
+    height: app_shared_viewport_height_full(),
     background: "rgba(0, 0, 0, 0.6)",
     display: "flex",
     "flex-direction": "column",
