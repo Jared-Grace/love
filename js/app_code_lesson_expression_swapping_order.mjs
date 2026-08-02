@@ -66,7 +66,7 @@ export function app_code_lesson_expression_swapping_order() {
       "Swapping would say the bigger number is now the smaller one",
     ]);
     html_div_cycle_code(less, [
-      "So we can never swap the numbers around ",
+      "So we can never swap two different numbers around ",
       "<",
       " or ",
       ">",
@@ -83,7 +83,7 @@ export function app_code_lesson_expression_swapping_order() {
       "false",
     ]);
     html_div_cycle_code(or_equal, [
-      "So we can never swap the numbers around ",
+      "So we can never swap two different numbers around ",
       "<=",
       " or ",
       ">=",
