@@ -1,3 +1,4 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { files_to_commit_take } from "./files_to_commit_take.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -23,6 +24,6 @@ export async function ai_git_noted() {
     return nothing;
   }
   let args = [];
-  let result = await ai_git_files("ai", args, files);
+  let result = await ai_git_files(git_message_hand_made(), args, files);
   return result;
 }
