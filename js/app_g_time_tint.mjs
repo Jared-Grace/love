@@ -1,3 +1,4 @@
+import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_z } from "./g_z.mjs";
@@ -11,7 +12,7 @@ export function app_g_time_tint(container, g) {
       top: "0",
       left: "0",
       width: "100vw",
-      height: "100vh",
+      height: app_shared_viewport_height_full(),
       "pointer-events": "none",
       "z-index": g_z(z),
     });
