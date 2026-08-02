@@ -54,7 +54,7 @@ export function app_code_lesson_expression_swapping_add() {
       "7",
       " and ",
       "7",
-      " are the same, so we can swap the numbers around ",
+      " are the same, so we can always swap the numbers around ",
       "+",
     ]);
     let times = app_code_container_light_blue(root);
@@ -73,7 +73,10 @@ export function app_code_lesson_expression_swapping_add() {
       "It is the same for all other numbers, not just 3 and 4",
     ]);
     html_div_cycle_code(times, ["So we can swap the 3 and 4"]);
-    html_div_cycle_code(times, ["And we can swap the numbers around ", "*"]);
+    html_div_cycle_code(times, [
+      "And we can always swap the numbers around ",
+      "*",
+    ]);
     let minus = app_code_container_light_blue(root);
     html_div_cycle_code(minus, [
       "Subtracting takes one number away from the other",
