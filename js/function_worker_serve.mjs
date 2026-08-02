@@ -1,3 +1,5 @@
+import { json_from } from "./json_from.mjs";
+import { json_to } from "./json_to.mjs";
 import { function_run } from "./function_run.mjs";
 import { property_get } from "./property_get.mjs";
 import { undefined_is } from "./undefined_is.mjs";
@@ -21,7 +23,7 @@ export async function function_worker_serve() {
   });
   let pending = "";
   async function job_run(line) {
-    let job = JSON.parse(line);
+    let job = json_from(line);
     let id = property_get(job, "id");
     let reply;
     try {
@@ -46,7 +48,7 @@ export async function function_worker_serve() {
         failed: error_text(caught),
       };
     }
-    results.write(text_combine(JSON.stringify(reply), "\n"));
+    results.write(text_combine(json_to(reply), "\n"));
   }
   function lambda(chunk) {
     pending = text_combine(pending, chunk.toString());
