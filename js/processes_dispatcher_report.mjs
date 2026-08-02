@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { processes_dispatcher_running } from "./processes_dispatcher_running.mjs";
 import { process_cpu_seconds_or_null } from "./process_cpu_seconds_or_null.mjs";
 import { process_alive_seconds_or_null } from "./process_alive_seconds_or_null.mjs";
@@ -31,12 +32,14 @@ export async function processes_dispatcher_report() {
     if (lived) {
       share = divide(cpu, alive);
     }
+    let n = multiply(share, 100);
+    let top = round(n);
     let row = {
       pid,
       line,
       cpu_seconds: round(cpu),
       alive_seconds: round(alive),
-      share: round(share * 100) / 100,
+      share: divide(top, 100),
     };
     list_add(rows, row);
   }
