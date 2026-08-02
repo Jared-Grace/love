@@ -1,10 +1,9 @@
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -26,8 +25,7 @@ export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the whole-part formula Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven";
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
-    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let division = app_code_uneven_division_code(quotient, divisor);
     let t = text_to(divisor);
     let formula = text_combine_multiple(["Math.floor(", division, ") * ", t]);
     let r = {
