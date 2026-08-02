@@ -15,7 +15,10 @@ export function permission_prompt_events_grouped_by(events, key) {
       groups.set(label, {
         label,
         count: 0,
+        seconds_total: 0,
+        seconds_mean: 0,
         seconds_worst: 0,
+        milliseconds_total: 0,
         latest: "",
         sample: event.command,
         verdict: "",
@@ -23,6 +26,8 @@ export function permission_prompt_events_grouped_by(events, key) {
     }
     let group = groups.get(label);
     group.count = group.count + 1;
+    ("The whole time a label costs is what says whether it is worth working on - a slow thing run once is an anecdote and a quick thing run four hundred times is a bill. Summed in milliseconds and rounded once at the end so a thousand sub-second calls do not each round away to nothing.");
+    group.milliseconds_total = group.milliseconds_total + event.waited;
     let divided = divide(event.waited, 1000);
     let seconds = Math.round(divided);
     if (greater_than(seconds, group.seconds_worst)) {
@@ -34,6 +39,11 @@ export function permission_prompt_events_grouped_by(events, key) {
   }
   let rows = [];
   for (let group of groups.values()) {
+    let total = divide(group.milliseconds_total, 1000);
+    group.seconds_total = Math.round(total);
+    let mean = divide(group.milliseconds_total, group.count);
+    let mean_seconds = divide(mean, 1000);
+    group.seconds_mean = Math.round(mean_seconds * 10) / 10;
     list_add(rows, group);
   }
   function by_count(row) {
