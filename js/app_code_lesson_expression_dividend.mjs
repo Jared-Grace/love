@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -44,7 +45,7 @@ export function app_code_lesson_expression_dividend() {
     }
     let name_id2 = app_code_lesson_name_id_generic(
       ["dividend"],
-      "operators",
+      app_code_category_operators(),
       title_get,
     );
     return name_id2;
