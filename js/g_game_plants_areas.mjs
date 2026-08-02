@@ -78,7 +78,9 @@ export function g_game_plants_areas(plants, stream) {
       elder_short,
       days_short,
     };
-    let both = object_merge(plant, added);
+    let both = {};
+    object_merge(both, plant);
+    object_merge(both, added);
     list_add(placed, both);
   }
   return placed;
