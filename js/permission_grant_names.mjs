@@ -654,6 +654,20 @@ export function permission_grant_names() {
   let spelled649 = fn_name("js_function_declaration_params_names_plain");
   let spelled650 = fn_name("js_query_key_literals_cases_gate_run");
   let spelled651 = fn_name("permission_settings_allow_drift_cases_gate_run");
+  let spelled652 = fn_name("firebase_prod_app_shipped_is");
+  let spelled653 = fn_name("firebase_prod_app_hashes_stale_is");
+  let spelled654 = fn_name("firebase_prod_app_hashes_write");
+  let spelled655 = fn_name(
+    "js_call_named_argument_at_undroppable_cases_gate_run",
+  );
+  let spelled656 = fn_name("storage_local_key_words_write");
+  let spelled657 = fn_name("function_current_get");
+  let spelled658 = fn_name("functions_app_specific_imports_gate_run");
+  let spelled659 = fn_name("functions_app_specific_imports");
+  let spelled660 = fn_name("qa_snapshot_uncommitted_names");
+  let spelled661 = fn_name("firebase_prod_app_disk_hashes");
+  let spelled662 = fn_name("firebase_prod_app_names");
+  let spelled663 = fn_name("permission_settings_local_baseline_write");
   let names = [
     spelled,
     spelled2,
@@ -1306,6 +1320,18 @@ export function permission_grant_names() {
     spelled649,
     spelled650,
     spelled651,
+    spelled652,
+    spelled653,
+    spelled654,
+    spelled655,
+    spelled656,
+    spelled657,
+    spelled658,
+    spelled659,
+    spelled660,
+    spelled661,
+    spelled662,
+    spelled663,
   ];
   return names;
 }
