@@ -1,3 +1,11 @@
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { multiply } from "./multiply.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 export function html_scroll_animate(element, target_left, target_top) {
   let duration = 350;
   let from_left = element.scrollLeft;
@@ -12,30 +20,36 @@ export function html_scroll_animate(element, target_left, target_top) {
         return;
       }
       done = true;
-      let superseded = element.scroll_animation_token !== token;
-      if (!superseded) {
+      let superseded = not_equal(element.scroll_animation_token, token);
+      if (not(superseded)) {
         element.scrollLeft = target_left;
         element.scrollTop = target_top;
       }
       settled();
     }
     function step(now) {
-      let cancelled = element.scroll_animation_token !== token;
+      let cancelled = not_equal(element.scroll_animation_token, token);
       if (cancelled) {
         finish();
         return;
       }
-      if (start === null) {
+      if (equal(start, null)) {
         start = now;
       }
-      let fraction = (now - start) / duration;
-      if (fraction > 1) {
+      let top = subtract(now, start);
+      let fraction = divide(top, duration);
+      if (greater_than(fraction, 1)) {
         fraction = 1;
       }
-      let ease = fraction * fraction * (3 - 2 * fraction);
-      element.scrollLeft = from_left + (target_left - from_left) * ease;
-      element.scrollTop = from_top + (target_top - from_top) * ease;
-      if (fraction < 1) {
+      let left = multiply(fraction, fraction);
+      let right = multiply(2, fraction);
+      let right2 = subtract(3, right);
+      let ease = multiply(left, right2);
+      let left2 = subtract(target_left, from_left);
+      element.scrollLeft = from_left + multiply(left2, ease);
+      let left3 = subtract(target_top, from_top);
+      element.scrollTop = from_top + multiply(left3, ease);
+      if (less_than(fraction, 1)) {
         requestAnimationFrame(step);
         return;
       }
