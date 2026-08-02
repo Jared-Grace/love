@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
@@ -103,7 +104,7 @@ export async function functions_fold_sites() {
       let r5 = not_equal(name, x_name) && candidate_sets.every(lambda4);
       return r5;
     }
-    let candidates = Object.keys(candidate_sets[0]).filter(lambda5);
+    let candidates = object_property_names(candidate_sets[0]).filter(lambda5);
     let x_ast = js_parse(entries[x_name].text);
     for (let f_name of candidates) {
       try {
