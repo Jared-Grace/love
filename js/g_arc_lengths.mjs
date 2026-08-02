@@ -44,6 +44,24 @@ export async function g_arc_lengths(chapter) {
   }
   ("Whatever is left is under the shortest conversation, so it cannot be an arc. It goes to the question pool, which has no length floor because a question is one turn.");
   let turns_unspent = remaining;
+  ("Now nudge the lengths, so a cast does not read as an arithmetic sequence. Each nudge picks two arcs and moves ONE turn between them, which conserves the budget exactly and cannot change how many people there are - the two properties the descent had and would be a shame to lose. A move that would push either arc outside the range is simply skipped, which is why the count is a number of ATTEMPTS rather than a promise.");
+  ("Seeded on the chapter code, so this chapter always lands the same way. Authored content is worked out once and reused by every playthrough, so a run that differed each time would make a change in the output impossible to read.");
+  let seed = number_seed_from_text(chapter);
+  let next = random_seeded(seed);
+  let count = lengths.length;
+  for (let attempt = 0; less_than(attempt, settings.arc_length_swaps); attempt++) {
+    let giver = Math.floor(multiply(next(), count));
+    let taker = Math.floor(multiply(next(), count));
+    let given = subtract(lengths[giver], 1);
+    let taken = add(lengths[taker], 1);
+    let stays_above = greater_than_equal(given, shortest);
+    let stays_below = less_than_equal(taken, cap);
+    let different = not(equal(giver, taker));
+    if (stays_above && stays_below && different) {
+      lengths[giver] = given;
+      lengths[taker] = taken;
+    }
+  }
   list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
   let divided2 = divide(settings.day_matches, settings.conversation_turns_mean);
