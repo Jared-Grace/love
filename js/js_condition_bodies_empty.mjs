@@ -1,7 +1,7 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
@@ -32,8 +32,7 @@ export function js_condition_bodies_empty(ast) {
     if (not(block_is)) {
       return false;
     }
-    let body = property_get(node, "body");
-    let none = list_empty_is(body);
+    let none = property_list_empty_is(node, "body");
     return none;
   }
   for (let node of js_list_type_nodes(ast, "IfStatement")) {
