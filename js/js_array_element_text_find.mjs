@@ -1,7 +1,6 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { list_matching_single } from "./list_matching_single.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 export function js_array_element_text_find(elements, text) {
   arguments_assert(arguments, 2);
   ("The one entry of an ordered register holding a given word. Every verb that");
@@ -17,8 +16,7 @@ export function js_array_element_text_find(elements, text) {
   ("threw on the first name it reached, so the whole family refused every register");
   ("of that shape rather than the ones that really lack the word.");
   function same_is(element) {
-    let held = property_get_or_null(element, "value");
-    let same = equal(held, text);
+    let same = property_get_or_null_equal(element, "value", text);
     return same;
   }
   ("The counting and the refusing are shared with the twin next door, which asks");

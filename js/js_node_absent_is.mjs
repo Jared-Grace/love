@@ -1,3 +1,4 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
@@ -12,8 +13,7 @@ export function js_node_absent_is(node) {
   }
   let identifier = equal(type, "Identifier");
   if (identifier) {
-    let name = property_get_or_null(node, "name");
-    let absent_word_is = equal(name, "undefined");
+    let absent_word_is = property_get_or_null_equal(node, "name", "undefined");
     return absent_word_is;
   }
   return false;
