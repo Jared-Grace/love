@@ -114,15 +114,19 @@ export async function functions_facts_all() {
     let facts = property_get(entry, "facts");
     return facts;
   }
-  let facts = list_map(entries, facts_of);
+  let facts_all = list_map(entries, facts_of);
   ("Whether anything actually changed is worth saying out loud, because the caller");
   ("folding these into the index can skip that fold entirely when the answer is no,");
   ("and it is the same answer that decides whether the record is worth rewriting.");
   ("The stat pass has to happen either way - that is what makes the answer true -");
   ("but folding a hundred and forty thousand names into lookups does not.");
   let changed = write_wanted;
+  ("The whole-repo list is named apart from the one-file facts that three inner");
+  ("readings each bind, so neither hides the other. The word given up is the outer");
+  ("one because it is bound once and read once, while the inner three are each the");
+  ("plain word for what they hold.");
   let r = {
-    facts,
+    facts: facts_all,
     changed,
   };
   return r;
