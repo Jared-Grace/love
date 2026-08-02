@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";
-import { js_math_to_calls } from "./js_math_to_calls.mjs";
+import { js_builtin_to_calls } from "./js_builtin_to_calls.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function file_math_calls_repair(f_path) {
   "Say the covered Math calls in one file with the names the repo keeps for them, and bring those names in.";
@@ -9,7 +9,7 @@ export async function file_math_calls_repair(f_path) {
   arguments_assert(arguments, 1);
   let moved = [];
   async function lambda(ast) {
-    let one = await js_math_to_calls(ast);
+    let one = await js_builtin_to_calls(ast);
     list_add_multiple(moved, one);
   }
   await file_js_transform(f_path, lambda);
