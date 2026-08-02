@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -30,7 +31,7 @@ export async function functions_name_vocabulary(top) {
   }
   function ranked(counts) {
     let out = [];
-    let words = Object.keys(counts);
+    let words = object_property_names(counts);
     for (let word of words) {
       let times = property_get(counts, word);
       list_add(out, {
