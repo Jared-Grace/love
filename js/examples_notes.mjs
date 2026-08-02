@@ -190,6 +190,8 @@ export function examples_notes() {
       "explain one step beside the step - an account anywhere but the top of a block",
     example_prose_add_before_selected:
       "the same account written above the line it is about",
+    example_arguments_same_names_set:
+      "finish a generated call in one command - the loop that ran after every one of them",
   };
   return notes;
 }
