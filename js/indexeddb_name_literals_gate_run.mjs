@@ -1,11 +1,9 @@
+import { literals_gate_run_generic } from "./literals_gate_run_generic.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
 import { indexeddb_name_literals_all } from "./indexeddb_name_literals_all.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 export async function indexeddb_name_literals_gate_run() {
   "QA gate: no file names a browser database or one of its stores by writing the name into the call. Every one of them is held by a function, so it can be frozen.";
@@ -14,31 +12,22 @@ export async function indexeddb_name_literals_gate_run() {
   "This is the one kind of published word the other watches cannot reach. The one that follows frozen words into longer strings looks for the word with an equals sign after it, which a store name never has, and looking for the values themselves would answer with every sentence that happens to use an everyday word. Only the shape is left.";
   "It stands at zero rather than at a line already drawn, because every way into a store in this repo already holds its name in a function. Nothing here is being lived with.";
   "How many ways in were found, and how many files were opened, are both carried out with the answer. A gate that passes by finding nothing cannot be told apart from one whose reading has stopped answering, and either of those numbers coming back at zero is the second of those.";
+  "What is left here is the sentence saying what kind of word this is, and the count of ways in. The asking itself - the sites, the three commands that repair them, and the file count travelling with the verdict - is the same question the two address gates ask, and is asked in one place next door.";
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let doors = await indexeddb_name_doors();
   let ways = object_property_names(doors);
   let walked = await indexeddb_name_literals_all();
-  let files = property_get(walked, "files");
-  let sites = property_get(walked, "sites");
-  let f_name = fn_name("function_new_getter");
-  let f_name2 = fn_name("function_literal_route");
-  let f_name3 = fn_name("literals_frozen_record_new");
-  list_empty_is_assert_json(sites, {
-    hint: text_combine_multiple([
-      "the name of a browser database or one of its stores is written straight into a call, where nothing can watch it - give it a function of its own with ",
-      f_name,
-      ", move the sites onto that function with ",
-      f_name2,
-      ", then name the function in the frozen list and record it with ",
-      f_name3,
-    ]),
-    sites,
-  });
+  let told = literals_gate_run_generic(
+    walked,
+    "the name of a browser database or one of its stores is written straight into a call",
+  );
+  let files = property_get(told, "files");
+  let sites = property_get(told, "sites");
   let r = {
     doors: list_size(ways),
     files,
-    sites: list_size(sites),
+    sites,
   };
   return r;
 }
