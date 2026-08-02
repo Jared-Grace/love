@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
@@ -48,7 +49,7 @@ export async function app_next(context) {
     verse_number,
   });
   let chapter_code2 = property_get(next, "chapter_code");
-  let verse_number2 = property_get(next, "verse_number");
+  let verse_number2 = property_get(next, verse_number_key());
   let property_name3 = app_shared_bible_verse_hash_key();
   property_set(hash, property_name3, verse_number2);
   let property_name4 = app_shared_bible_chapter_hash_key();
