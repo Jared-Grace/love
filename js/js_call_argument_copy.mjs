@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { list_get } from "./list_get.mjs";
+import { object_copy } from "./object_copy.mjs";
 export function js_call_argument_copy(call, index) {
   arguments_assert(arguments, 2);
   ("A copy of one of the things a call is given, taken by its place counting from");
