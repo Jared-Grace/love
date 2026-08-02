@@ -1,5 +1,5 @@
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
-import { app_bible_screen_content } from "./app_bible_screen_content.mjs";
+import { app_shared_bible_screen_content } from "./app_shared_bible_screen_content.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
@@ -14,7 +14,7 @@ import { property_get } from "./property_get.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function app_shared_bible_chapters_before(context) {
-  let opened = await app_bible_screen_content(context);
+  let opened = await app_shared_bible_screen_content(context);
   let root = property_get(opened, "root");
   let content = property_get(opened, "content");
   let e = ebible_folder_english();
