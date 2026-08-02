@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -24,15 +25,13 @@ export async function app_supper_verses_render(root, folders) {
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
   let choices = await ebible_choices();
   function folder_name(folder) {
-    let choice = list_find_property_or_null(
-      choices,
-      bible_folder_key(),
-      folder,
-    );
+    let property_name = bible_folder_key();
+    let choice = list_find_property_or_null(choices, property_name, folder);
     if (null_is(choice)) {
       return folder;
     }
-    return property_get(choice, "name");
+    let value = property_get(choice, "name");
+    return value;
   }
   let names = list_map(folders, folder_name);
   let r = list_first_remaining(waited);
@@ -42,7 +41,8 @@ export async function app_supper_verses_render(root, folders) {
   let size = list_size(passages);
   let passage_area = html_div(root);
   app_supper_prayers_render(root);
-  let index = list_get_wrap_index(passages, app_supper_passage_index_get());
+  let index2 = app_supper_passage_index_get();
+  let index = list_get_wrap_index(passages, index2);
   function show() {
     html_clear(passage_area);
     let passage = list_get(passages, index);
@@ -57,10 +57,13 @@ export async function app_supper_verses_render(root, folders) {
     html_scroll_top_set(root, 0);
   }
   function go_left() {
-    go(list_get_wrap_index(passages, index + size - 1));
+    let index3 = subtract(index + size, 1);
+    let r2 = list_get_wrap_index(passages, index3);
+    go(r2);
   }
   function go_right() {
-    go(list_get_wrap_index(passages, index + 1));
+    let r3 = list_get_wrap_index(passages, index + 1);
+    go(r3);
   }
   show();
 }
