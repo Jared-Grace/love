@@ -1,4 +1,3 @@
-import { js_selects_code_add_after } from "./js_selects_code_add_after.mjs";
 import { js_shadowing_rename_in } from "./js_shadowing_rename_in.mjs";
 import { js_call_arguments_same_names_set } from "./js_call_arguments_same_names_set.mjs";
 import { js_selects_prose_add_before } from "./js_selects_prose_add_before.mjs";
@@ -108,7 +107,6 @@ export function example_transforms() {
     js_selects_prose_add_before,
     js_call_arguments_same_names_set,
     js_shadowing_rename_in,
-    js_selects_code_add_after,
   };
   return transforms;
 }

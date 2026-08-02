@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
 import { floor } from "./floor.mjs";
 import { math_min } from "./math_min.mjs";
@@ -37,8 +38,7 @@ export async function g_arc_lengths(chapter) {
   );
   let question_turns = round(divided);
   let arc_turns = subtract(matches, question_turns);
-  let quarter = divide(arc_turns, 4);
-  let cap = floor(quarter);
+  let cap = divide_floor(arc_turns, 4);
   let shortest = settings.conversation_turns_low;
   let step = settings.conversation_turns_mean;
   let lengths = [];

@@ -16,5 +16,7 @@ export async function key_literals_all_generic(names, read) {
       list_add(sites, site);
     }
   }
-  return sites;
+  let files = list_size(names);
+  let r = { files, sites };
+  return r;
 }

@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
 import { math_max } from "./math_max.mjs";
@@ -50,8 +51,10 @@ export function g_generation_plan() {
   let npcs_minimum = math_max(per_day_whole, s.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs_fewest, npcs_minimum);
   ("The most conversations a day may hold is set by the fewest matches one may contain. Cutting the day into more pieces than that makes each piece too small to be worth the approach it costs.");
-  let per_day_most = divide(s.day_matches, s.conversation_turns_low);
-  let conversations_per_day_maximum = floor(per_day_most);
+  let conversations_per_day_maximum = divide_floor(
+    s.day_matches,
+    s.conversation_turns_low,
+  );
   ("Arc length is the quantity that can fail to schedule, because an arc of nine conversations needs nine separate days to be spent in.");
   let days_fit = less_than_equal(s.arc_conversations_maximum, s.plant_days);
   let leader_days_fit = less_than_equal(
