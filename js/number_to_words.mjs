@@ -1,3 +1,4 @@
+import { floor } from "./floor.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -57,7 +58,7 @@ export function number_to_words(num) {
       if (less_than(a2, 20)) {
         str = a[mod(n, 100)];
         let divided = divide(n, 100);
-        n = Math.floor(divided);
+        n = floor(divided);
       } else {
         let left = mod(n, 100);
         let right = mod(n, 10);
@@ -66,7 +67,7 @@ export function number_to_words(num) {
           mod(n, 10) ? text_combine("-", a[mod(n, 10)]) : "",
         );
         let divided2 = divide(n, 100);
-        n = Math.floor(divided2);
+        n = floor(divided2);
       }
       if (greater_than(n, 0)) {
         str = text_combine_multiple([
@@ -78,7 +79,7 @@ export function number_to_words(num) {
       words = text_combine_multiple([str, " ", g[group], " ", words]);
     }
     let divided3 = divide(num, 1000);
-    num = Math.floor(divided3);
+    num = floor(divided3);
     group++;
   }
   let v2 = words.trim().replace(/\s+/g, " ");
