@@ -9,7 +9,7 @@ let dictionary = null;
 export async function strongs_greek_definition(strong_number) {
   if (equal(dictionary, null)) {
     let file_path = strongs_greek_json_path();
-    let dictionary = await file_read_json(file_path);
+    dictionary = await file_read_json(file_path);
   }
   let entry = dictionary["G" + strong_number];
   if (not(entry)) {
