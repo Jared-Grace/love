@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,7 +16,7 @@ export async function ebible_index(bible_folder) {
       chapters: [],
     });
     list_add_if_not_includes(index, book);
-    let verse_numbers = list_map_property(verses, "verse_number");
+    let verse_numbers = list_map_property(verses, verse_number_key());
     let chapter = {
       chapter_name,
       verse_numbers,
