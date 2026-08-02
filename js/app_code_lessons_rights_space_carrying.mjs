@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +24,7 @@ export async function app_code_lessons_rights_space_carrying() {
   "peer is editing it right now, and half a file is not a finding.";
   let paths = await functions_names_to_paths();
   let found = [];
-  for (let f_name of Object.keys(paths)) {
+  for (let f_name of object_property_names(paths)) {
     let lesson_is = text_starts_with(f_name, "app_code_lesson");
     if (not(lesson_is)) {
       continue;
