@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { memory_orphans } from "./memory_orphans.mjs";
 import { memory_dangling_pointers } from "./memory_dangling_pointers.mjs";
 import { memory_dangling_links } from "./memory_dangling_links.mjs";
@@ -14,7 +15,7 @@ export async function memory_integrity_gate_run() {
   console.log(
     "dangling pointers (no entry behind them): " + dangling_pointers.join(", "),
   );
-  console.log("mis-prefixed links: " + JSON.stringify(dangling_links));
+  console.log("mis-prefixed links: " + json_to(dangling_links));
   let all = [];
   list_add_multiple(all, orphans);
   list_add_multiple(all, dangling_pointers);
