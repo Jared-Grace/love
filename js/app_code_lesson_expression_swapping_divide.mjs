@@ -58,7 +58,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "0.5",
       " and ",
       "2",
-      " are different, so we cannot swap the numbers around ",
+      " are different, so we cannot always swap the numbers around ",
       "/",
     ]);
     let leftover = app_code_container_light_blue(root);
@@ -71,7 +71,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "1",
       " and ",
       "3",
-      " are different, so we cannot swap the numbers around ",
+      " are different, so we cannot always swap the numbers around ",
       "%",
     ]);
     let power = app_code_container_light_blue(root);
@@ -83,7 +83,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "8",
       " and ",
       "9",
-      " are different, so we cannot swap the numbers around ",
+      " are different, so we cannot always swap the numbers around ",
       "**",
     ]);
   }
