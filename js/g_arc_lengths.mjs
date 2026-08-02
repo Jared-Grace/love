@@ -1,3 +1,14 @@
+import { g_generation_settings } from "./g_generation_settings.mjs";
+import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
+import { g_passage_match_count } from "./g_passage_match_count.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { identity } from "./identity.mjs";
+import { multiply } from "./multiply.mjs";
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export async function g_arc_lengths(chapter) {
   "Works out how long each arc in one chapter should be, from the settings and the chapter's own sermon lines - so the npc count falls out as the length of the list rather than being chosen.";
   "Lengths are in TURNS, and this function deliberately says nothing about days or conversations. It CANNOT: which leader arcs are running and whether extra preaching has pushed the chapter out of sync are both unknown here, and both decide how the turns fall across days. So generation hands over turns, and a later scheduling pass - which knows those things - cuts them into conversations and places them.";
