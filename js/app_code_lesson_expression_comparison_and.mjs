@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -97,7 +98,7 @@ export function app_code_lesson_expression_comparison_and() {
     let rights = ["comparison inside and"];
     let built = app_code_lesson_name_id_generic(
       rights,
-      "expressions",
+      app_code_category_expressions(),
       title_get,
     );
     return built;
