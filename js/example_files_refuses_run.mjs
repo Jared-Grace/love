@@ -6,13 +6,13 @@ import { example_files_materialize } from "./example_files_materialize.mjs";
 export async function example_files_refuses_run(e, lambda) {
   async function in_sandbox(dir) {
     await example_files_materialize(dir, e.before);
-    let threw = false;
+    let threw_in_sandbox = false;
     try {
       await lambda(dir);
     } catch (err) {
-      threw = true;
+      threw_in_sandbox = true;
     }
-    return threw;
+    return threw_in_sandbox;
   }
   let threw = await folder_temp(in_sandbox);
   return threw ? "pass" : "fail";
