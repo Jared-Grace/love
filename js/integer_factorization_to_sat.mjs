@@ -253,10 +253,10 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   let v4 = Math.sqrt(integer_to_factor);
   let v5 = Math.log(v4);
   let left2 = Math.ceil(v5);
-  let bits = text_combine(left2, 1);
-  let cnf = factorizationCNF(integer_to_factor, bits);
-  let cnf3 = to3SAT(cnf);
-  cnf3.bits = bits;
+  let bits_count = text_combine(left2, 1);
+  let cnf_built = factorizationCNF(integer_to_factor, bits_count);
+  let cnf3 = to3SAT(cnf_built);
+  cnf3.bits = bits_count;
   cnf3.dimacs = cnf3.toDimacs();
   return cnf3;
 }
