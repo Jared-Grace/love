@@ -1,4 +1,4 @@
-import { list_add } from "./list_add.mjs";
+import { add_1 } from "./add_1.mjs";
 export function probe_imports_fix_check() {
   "how many opening lines two functions must share before the gate calls it duplication";
   "four, which is where its neighbour over endings sits. An opening is where a function gets hold of what it works on, and getting hold of a thing takes the same few calls whoever is asking - so this end starts noisier than that one, and the number is set by working the noise off rather than by leaving it above the noise.";

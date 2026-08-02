@@ -1,7 +1,5 @@
-import { permission_file_edit_tools_unmatched } from "./permission_file_edit_tools_unmatched.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { permission_rule_tool_unmatched_is } from "./permission_rule_tool_unmatched_is.mjs";
 import { permission_rules } from "./permission_rules.mjs";
-import { permission_rule_tool_name } from "./permission_rule_tool_name.mjs";
 import { permission_rule_path_probe } from "./permission_rule_path_probe.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
