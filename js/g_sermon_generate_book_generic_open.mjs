@@ -1,10 +1,10 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { invoke_cache_file_get } from "./invoke_cache_file_get.mjs";
 import { openai_responses } from "./openai_responses.mjs";
 import { invoke_cache_file_key_get } from "./invoke_cache_file_key_get.mjs";
 import { openai_responses_cache_args } from "./openai_responses_cache_args.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_single } from "./list_single.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
@@ -38,8 +38,7 @@ export async function g_sermon_generate_book_generic_open() {
     prompt_user_middle,
     prompt_system,
   );
-  let only = list_single(chapters);
-  let passages = property_get(only, "passages");
+  let passages = list_single_property(chapters, "passages");
   let e = list_get_end(passages, 4);
   let prompt_user = property_get(e, "prompt_user");
   let prompt_system2 = property_get(e, "prompt_system");
