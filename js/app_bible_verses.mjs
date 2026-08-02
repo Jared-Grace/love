@@ -2,7 +2,7 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
+import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
@@ -31,7 +31,7 @@ export async function app_bible_verses(context) {
   let items = list_map_property(verses, verse_number_key());
   let oc = app_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
-  app_bible_picker_buttons_enlarge(buttons);
+  app_shared_bible_picker_buttons_enlarge(buttons);
   let current = property_get(r, verse_number_key());
   app_bible_picker_mark_current(buttons, items, current);
 }
