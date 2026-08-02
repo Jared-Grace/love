@@ -1,4 +1,4 @@
-import { less_than } from "./less_than.mjs";
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
@@ -9,7 +9,6 @@ import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
@@ -34,8 +33,7 @@ export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
     let code = ebible_chapter_code_pad(book_code, chapter);
     return code;
   }
-  let a = list_size(parts);
-  let single = less_than(a, 3);
+  let single = list_size_less_than_value(parts, 3);
   if (single) {
     let v2 = to_code(first_chapter);
     let r2 = [v2];
