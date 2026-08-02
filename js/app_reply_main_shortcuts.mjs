@@ -152,8 +152,8 @@ export function app_reply_main_shortcuts(
     r_en_40,
     r_yt,
   ];
-  function languages_default_concat_single(ke) {
-    let r2 = languages_default_concat([ke]);
+  function languages_default_concat_single(ke2) {
+    let r2 = languages_default_concat([ke2]);
     return r2;
   }
   function languages_default_concat(right) {
