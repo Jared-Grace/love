@@ -61,7 +61,7 @@ export async function g_sermon_generate_book_generic_prompts(
       texts = lists_to_news(bible_folders);
       verse_numbers = [];
     }
-    async function each_chapter(verses_chapter_folders) {
+    async function each_chapter_verses(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let chapter_code = list_first_property(verses_chapter, "chapter_code");
       let interlinear = property_get(chapters_interlinear, chapter_code);
@@ -104,7 +104,7 @@ export async function g_sermon_generate_book_generic_prompts(
       }
       await each_index_async(verses_chapter, each_verse);
     }
-    await each_multiple_async(verses_book_folders, each_chapter);
+    await each_multiple_async(verses_book_folders, each_chapter_verses);
   }
   let groups = await list_adder_async(adder);
   let nearness = 2;
