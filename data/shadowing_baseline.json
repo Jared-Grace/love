@@ -1,13 +1,6 @@
 {
  "known": [
   {
-   "name": "app_a_identifier_generic",
-   "shadows_outer": [
-    "c"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_ternary_replace",
    "shadows_outer": [
     "a"

@@ -94,56 +94,53 @@ export function app_code_lesson_expression_swapping() {
     return built;
   }
   function above(root) {
-    "some operators survive a swap for ANY two numbers (you can always swap), others only when the two numbers happen to be equal (you cannot always swap) - so we test with two different numbers";
-    let header = app_code_container_light_blue(root);
-    html_div_cycle_code(header, [
-      "Some operators you can always swap, some you cannot",
+    "a concrete walk-through of a swap: take 1 + 2, swap to 2 + 1, and work each out - + and * land on the same value either way (can always swap), while - and / land on different values (cannot always swap). One box per operator, each showing the two swapped expressions worked out to their numbers first, then the verdict";
+    let setup = app_code_container_light_blue(root);
+    html_div_cycle_code(setup, ["Suppose we have ", "1 + 2"]);
+    html_div_cycle_code(setup, [
+      "We can swap the ",
+      "1",
+      " and ",
+      "2",
+      ", giving ",
+      "2 + 1",
     ]);
-    let yes = app_code_container_light_blue(root);
-    html_div_cycle_code(yes, [
+    let plus = app_code_container_light_blue(root);
+    html_div_cycle_code(plus, ["", "1 + 2 === 3", " and ", "2 + 1 === 3"]);
+    html_div_cycle_code(plus, [
       "For ",
-      "3 + 4 === 4 + 3",
-      ", both sides are ",
-      "7",
-      ", so it is ",
-      "true",
-    ]);
-    html_div_cycle_code(yes, [
-      "With ",
       "+",
-      " and ",
-      "*",
-      ", swapping never changes the answer - you can always swap",
+      ", swapping does not change the value",
     ]);
-    let no = app_code_container_light_blue(root);
-    html_div_cycle_code(no, [
+    let star = app_code_container_light_blue(root);
+    html_div_cycle_code(star, ["", "3 * 4 === 4 * 3"]);
+    html_div_cycle_code(star, [
       "For ",
-      "6 - 2 === 2 - 6",
-      ", the sides are ",
-      "4",
+      "*",
+      ", swapping does not change the value, either",
+    ]);
+    let minus = app_code_container_light_blue(root);
+    html_div_cycle_code(minus, ["", "5 - 4 === 1", " but ", "4 - 5 === -1"]);
+    html_div_cycle_code(minus, [
+      "",
+      "1",
       " and ",
-      "-4",
-      ", so it is ",
-      "false",
-    ]);
-    html_div_cycle_code(no, [
-      "With ",
+      "-1",
+      " are different, so we cannot always swap ",
       "-",
-      ", ",
+    ]);
+    let divide = app_code_container_light_blue(root);
+    html_div_cycle_code(divide, ["", "1 / 2 === 0.5", " but ", "2 / 1 === 2"]);
+    html_div_cycle_code(divide, [
+      "",
+      "0.5",
+      " and ",
+      "2",
+      " are different, so we cannot always swap ",
       "/",
-      ", ",
-      "%",
-      " and comparisons, swapping can change the answer - you cannot always swap",
     ]);
-    let note = app_code_container_light_blue(root);
-    html_div_cycle_code(note, [
-      "But ",
-      "0 - 0 === 0 - 0",
-      " is ",
-      "true",
-      " - the two numbers are the same, so any operator gives ",
-      "true",
-    ]);
-    html_div_cycle_code(note, ["So we test with two different numbers"]);
+    let summary = app_code_container_light_blue(root);
+    html_div_cycle_code(summary, ["Some operators we can always swap"]);
+    html_div_cycle_code(summary, ["and some we cannot always swap"]);
   }
 }
