@@ -1,6 +1,6 @@
+import { list_concat_if } from "./list_concat_if.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_greeting_words } from "./g_greeting_words.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { g_time_sky_remark } from "./g_time_sky_remark.mjs";
 import { null_is } from "./null_is.mjs";
 import { boolean_random_n } from "./boolean_random_n.mjs";
@@ -44,13 +44,10 @@ export function g_greeting(met, name_player, time, christian) {
     let combined = text_combine_multiple(["do you ", r5, " to ", r6, r7, r8]);
     let right3 = list_random_item(["mind", "heart"]);
     let combined2 = text_combine("is on your ", right3);
-    let topics = [combined, combined2];
+    let topics_plain = [combined, combined2];
     ("the same split once more, on the question that opens a second conversation: a believer can ask what the Lord has laid on your heart, and nobody else would put it that way. it is one option among three rather than the christian version of the question, so a believer still mostly asks what is on your mind like anyone would");
-    if (christian) {
-      let combined3 = "has the Lord laid on your heart";
-      let topics_faith = [combined3];
-      topics = list_concat(topics, topics_faith);
-    }
+    let topics_faith = ["has the Lord laid on your heart"];
+    let topics = list_concat_if(topics_plain, topics_faith, christian);
     let r9 = list_random_item(topics);
     meet_message += text_combine_multiple([
       r2,
