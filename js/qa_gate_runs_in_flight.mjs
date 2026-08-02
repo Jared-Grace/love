@@ -11,7 +11,7 @@ import { greater_than } from "./greater_than.mjs";
 export async function qa_gate_runs_in_flight() {
   "How many whole-repo gate runs are going at this moment - counting the runs themselves and the shards they spread across the processors - beside how many processors there are to spread over";
   "The gate freezes a copy of the folder and asks its gates in several processes at once so that one run finishes quickly. Several of us run it at the same time and none of them can see the others so the sharing that makes one run fast is exactly what makes four runs slow - and each run then takes long enough that the next one starts before it ends";
-  "Measured on 2026-08-02 with four runs going at once - fourteen processors carrying a load of thirty-seven and a single run past ten minutes where it is normally about one";
+  "Measured on 2026-08-02 - four runs going at once with their shards each holding most of a processor put a load of thirty-seven on fourteen processors and carried one run past ten minutes. What a run costs on a quiet machine was not measured then so nothing here says how much of that was the crowding";
   "A run is found by whole word rather than by the letters appearing somewhere in the line, which is what keeps this from counting itself - its own name holds the gate's name inside it";
   let running = await processes_dispatcher_report();
   let runs = [];
@@ -19,12 +19,14 @@ export async function qa_gate_runs_in_flight() {
   for (let row of running) {
     let line = property_get(row, "line");
     let words = text_split_space(line);
-    let shard_is = list_includes(words, fn_name("qa_gate_tree_shard_run"));
+    let item = fn_name("qa_gate_tree_shard_run");
+    let shard_is = list_includes(words, item);
     if (shard_is) {
       list_add(shards, row);
       continue;
     }
-    let run_is = list_includes(words, fn_name("qa_gate_run"));
+    let item2 = fn_name("qa_gate_run");
+    let run_is = list_includes(words, item2);
     if (run_is) {
       list_add(runs, row);
     }
