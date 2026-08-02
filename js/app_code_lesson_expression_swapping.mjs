@@ -94,70 +94,60 @@ export function app_code_lesson_expression_swapping() {
     return built;
   }
   function above(root) {
-    "a concrete walk-through of a swap: take 1 + 2, swap to 2 + 1, and work each out - + and * land on the same value either way (can always swap), while - and / land on different values (cannot always swap). One box per operator, each showing the two swapped expressions worked out to their numbers first, then the verdict";
+    "before the quiz, show swappability for EVERY operator the quiz uses, grouped into three chunks so the learner meets a rule per group, not nine separate facts: (1) setup - swap the two numbers, one worked case; (2) + and *, swapping keeps the value, can always swap; (3) -, / and %, swapping changes the value, cannot always swap; (4) <, >, <= and >=, swapping flips the comparison, cannot always swap. Each operator gets its own example line so nothing in the quiz is unseen. The comparison lines are true === false etc under the hood - the rule line names the reason (the comparison flips) rather than leaning on boolean === boolean, which is not taught yet";
     let setup = app_code_container_light_blue(root);
-    html_div_cycle_code(setup, ["Suppose we have ", "1 + 2"]);
     html_div_cycle_code(setup, [
-      "We can swap the ",
-      "1",
-      " and ",
-      "2",
-      ", giving ",
+      "We can swap the two numbers, so ",
+      "1 + 2",
+      " becomes ",
       "2 + 1",
     ]);
-    let plus = app_code_container_light_blue(root);
-    html_div_cycle_code(plus, ["", "1 + 2 === 3", " and ", "2 + 1 === 3"]);
-    html_div_cycle_code(plus, [
-      "For ",
-      "+",
-      ", swapping does not change the value",
+    html_div_cycle_code(setup, [
+      "Both are ",
+      "3",
+      ", so ",
+      "1 + 2 === 2 + 1",
+      " is ",
+      "true",
     ]);
-    let star = app_code_container_light_blue(root);
-    html_div_cycle_code(star, ["", "3 * 4 === 4 * 3"]);
-    html_div_cycle_code(star, [
-      "For ",
-      "*",
-      ", swapping does not change the value, either",
-    ]);
-    let minus = app_code_container_light_blue(root);
-    html_div_cycle_code(minus, ["", "5 - 4 === 1", " but ", "4 - 5 === -1"]);
-    html_div_cycle_code(minus, [
-      "",
-      "1",
-      " and ",
-      "-1",
-      " are different, so we cannot always swap ",
-      "-",
-    ]);
-    let divide_row = app_code_container_light_blue(root);
-    html_div_cycle_code(divide_row, [
-      "",
-      "1 / 2 === 0.5",
-      " but ",
-      "2 / 1 === 2",
-    ]);
-    html_div_cycle_code(divide_row, [
-      "",
-      "0.5",
-      " and ",
-      "2",
-      " are different, so we cannot always swap ",
-      "/",
-    ]);
-    let summary = app_code_container_light_blue(root);
-    html_div_cycle_code(summary, [
-      "For ",
+    let swap_yes = app_code_container_light_blue(root);
+    html_div_cycle_code(swap_yes, ["", "3 + 4 === 4 + 3", " is ", "true"]);
+    html_div_cycle_code(swap_yes, ["", "2 * 5 === 5 * 2", " is ", "true"]);
+    html_div_cycle_code(swap_yes, [
+      "With ",
       "+",
       " and ",
       "*",
-      ", we can always swap",
+      ", swapping keeps the same value, so we can always swap",
     ]);
-    html_div_cycle_code(summary, [
-      "For ",
+    let arith_no = app_code_container_light_blue(root);
+    html_div_cycle_code(arith_no, ["", "5 - 4 === 4 - 5", " is ", "false"]);
+    html_div_cycle_code(arith_no, ["", "6 / 2 === 2 / 6", " is ", "false"]);
+    html_div_cycle_code(arith_no, ["", "7 % 3 === 3 % 7", " is ", "false"]);
+    html_div_cycle_code(arith_no, [
+      "With ",
       "-",
-      " and ",
+      ", ",
       "/",
-      ", we cannot always swap",
+      " and ",
+      "%",
+      ", swapping changes the value, so we cannot always swap",
+    ]);
+    let compare_no = app_code_container_light_blue(root);
+    html_div_cycle_code(compare_no, ["", "3 < 5 === 5 < 3", " is ", "false"]);
+    html_div_cycle_code(compare_no, ["", "5 > 2 === 2 > 5", " is ", "false"]);
+    html_div_cycle_code(compare_no, ["", "3 <= 5 === 5 <= 3", " is ", "false"]);
+    html_div_cycle_code(compare_no, ["", "5 >= 2 === 2 >= 5", " is ", "false"]);
+    html_div_cycle_code(compare_no, [
+      "With ",
+      "<",
+      ", ",
+      ">",
+      ", ",
+      "<=",
+      " and ",
+      ">=",
+      ", swapping flips the comparison, so we cannot always swap",
     ]);
   }
 }
