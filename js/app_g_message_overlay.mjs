@@ -1,3 +1,4 @@
+import { app_shared_viewport_width_full } from "./app_shared_viewport_width_full.mjs";
 import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
@@ -25,7 +26,7 @@ export function app_g_message_overlay(
     position: "fixed",
     top: "0",
     left: "0",
-    width: "100vw",
+    width: app_shared_viewport_width_full(),
     height: app_shared_viewport_height_full(),
     background: "rgba(0, 0, 0, 0.6)",
     display: "flex",
