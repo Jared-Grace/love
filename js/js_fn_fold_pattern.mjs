@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
@@ -12,8 +13,6 @@ import { js_signature_has_callee } from "./js_signature_has_callee.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { subtract } from "./subtract.mjs";
 export function js_fn_fold_pattern(fn_ast) {
   arguments_assert(arguments, 1);
@@ -40,8 +39,11 @@ export function js_fn_fold_pattern(fn_ast) {
   }
   let body_count = subtract(statement_count, 1);
   let body_statements = list_take(statements, body_count);
-  let body_sigs = list_map(body_statements, js_atomic_statement_signature);
-  let pattern_sigs = list_filter(body_sigs, js_signature_has_callee);
+  let pattern_sigs = list_map_filter(
+    body_statements,
+    js_atomic_statement_signature,
+    js_signature_has_callee,
+  );
   let call_count = list_size(pattern_sigs);
   let too_few = less_than(call_count, 2);
   if (too_few) {
