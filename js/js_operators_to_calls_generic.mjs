@@ -5,7 +5,7 @@ import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_filter_property_path_not } from "./list_filter_property_path_not.mjs";
 import { js_operator_node_to_call } from "./js_operator_node_to_call.mjs";
-import { js_operators_to_fn_name } from "./js_operators_to_fn_name.mjs";
+import { list_map_fn_names } from "./list_map_fn_names.mjs";
 import { js_imports_missing_add_specified } from "./js_imports_missing_add_specified.mjs";
 export async function js_operators_to_calls_generic(
   ast,
@@ -24,6 +24,6 @@ export async function js_operators_to_calls_generic(
     each(matches, lambda_apply);
   }
   js_visit_type_node(ast, type, lambda);
-  let names = js_operators_to_fn_name(usable);
+  let names = list_map_fn_names(usable);
   await js_imports_missing_add_specified(ast, names);
 }
