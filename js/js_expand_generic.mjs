@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { exit } from "./exit.mjs";
 import { undefined_not_is_assert_object_property_json } from "./undefined_not_is_assert_object_property_json.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -30,17 +31,15 @@ import { js_function_declaration_to_block_body } from "./js_function_declaration
 import { js_identifier_rename } from "./js_identifier_rename.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_intersect } from "./list_intersect.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
-export async function js_expand_generic(next, stack_2, ast) {
+export async function js_expand_generic(next, stack_, ast) {
   let inserted = null;
   let v = js_statement_call_get(next);
   let call = property_get(v, "call");
-  if (call !== null) {
+  if (not_equal(call, null)) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
     async function lambda5(arg, arg_index) {
@@ -53,7 +52,7 @@ export async function js_expand_generic(next, stack_2, ast) {
       }
     }
     await each_index_async(arguments2, lambda5);
-    let index = list_index_of(stack_2, next);
+    let index = list_index_of(stack_, next);
     let a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
@@ -95,10 +94,10 @@ export async function js_expand_generic(next, stack_2, ast) {
       }
     }
     js_return_on(last, lambda, noop);
-    list_remove(stack_2, next);
+    list_remove(stack_, next);
     each_reverse(body_block, lambda4);
     function lambda4(item) {
-      list_insert(stack_2, index, item);
+      list_insert(stack_, index, item);
     }
     inserted = list_map(body_block, js_unparse);
   }
