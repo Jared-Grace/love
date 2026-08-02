@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { list_find_property_not_null_is } from "./list_find_property_not_null_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -16,12 +17,12 @@ export function app_reply_buttons_languages_on_toggle(
 ) {
   function lambda(language) {
     let name = property_get(language, "name");
-    let language_code = property_get(language, "language_code");
+    let language_code = property_get(language, language_code_key());
     let component = null;
     function chosen_get() {
       let chosen = list_find_property_not_null_is(
         languages_chosen,
-        "language_code",
+        language_code_key(),
         language_code,
       );
       return chosen;
@@ -34,7 +35,11 @@ export function app_reply_buttons_languages_on_toggle(
         return;
       }
       if (chosen) {
-        list_remove_property(languages_chosen, "language_code", language_code);
+        list_remove_property(
+          languages_chosen,
+          language_code_key(),
+          language_code,
+        );
       } else {
         list_add(languages_chosen, language);
       }
