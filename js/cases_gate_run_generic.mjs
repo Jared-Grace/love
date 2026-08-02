@@ -1,3 +1,5 @@
+import { cases_expected_answers } from "./cases_expected_answers.mjs";
+import { list_size_greater_than_assert_json } from "./list_size_greater_than_assert_json.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { gate_case_mark } from "./gate_case_mark.mjs";
 import { gate_counts_log } from "./gate_counts_log.mjs";
@@ -44,6 +46,20 @@ export function cases_gate_run_generic(
   list_empty_not_is_assert_json(cases, {
     label,
     hint: "this corpus came back with no cases at all, so the gate would have passed without asking anything - look at whatever builds the cases rather than at what they check",
+  });
+  ("A corpus writing the same answer beside every case is refused for the same reason,");
+  ("one step further in. It asks something, so it passes the check above - but every");
+  ("case agrees, so a reader handing back that one answer whatever it is given is");
+  ("answered right by all of them. The gate then reads green off a reader that has");
+  ("stopped looking at its input at all. This is the shape that keeps being got");
+  ("wrong: a corpus of cases that must all answer yes cannot catch a reader that");
+  ("says yes to everything, and a corpus whose cases all answer with nothing cannot");
+  ("catch a reader that has quietly stopped finding anything.");
+  let answers = cases_expected_answers(cases, expected_key);
+  list_size_greater_than_assert_json(answers, 1, {
+    label,
+    answers,
+    hint: "every case in this corpus writes down the same answer, so a reader handing that answer back whatever it is given would pass all of them - write a case that must be answered differently",
   });
   let failures = [];
   for (let c of cases) {
