@@ -99,11 +99,11 @@ export async function app_shared_gloss_bible_home_generic(
   let component22 = html_hr(p);
   return;
   async function scroll(verses_inner) {
-    let p = list_first_property(verses_inner, "p_verse");
+    let p2 = list_first_property(verses_inner, "p_verse");
     log(app_shared_gloss_bible_home_generic.name, {
-      p,
+      p: p2,
       verses: verses_inner,
     });
-    await html_scroll_top_now(p);
+    await html_scroll_top_now(p2);
   }
 }
