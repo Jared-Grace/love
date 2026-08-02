@@ -13,6 +13,7 @@ export async function g_game_generate_report(word) {
   let npcs_total = 0;
   let elder_short_plants = 0;
   let trimmed_plants = 0;
+  let days_spread = 0;
   for (let plant of plants) {
     let npcs = property_get(plant, "npcs");
     let days = property_get(plant, "days");
@@ -26,6 +27,9 @@ export async function g_game_generate_report(word) {
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
     }
+    let days_drawn = property_get(plant, "days_drawn");
+    let spread = subtract(days, days_drawn);
+    days_spread = days_spread + spread;
     let trimmed = subtract(wanted, npcs);
     if (trimmed) {
       trimmed_plants = trimmed_plants + 1;
@@ -34,6 +38,7 @@ export async function g_game_generate_report(word) {
       index: property_get(plant, "index"),
       npcs,
       days,
+      days_drawn,
       wanted,
       leader_turns: property_get(plant, "leader_turns"),
       leader_days_percent: property_get(plant, "leader_days_percent"),
@@ -53,6 +58,7 @@ export async function g_game_generate_report(word) {
     sizes,
     elder_short_plants,
     trimmed_plants,
+    days_spread,
     rows,
   };
   return r;

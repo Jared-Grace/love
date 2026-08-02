@@ -1,3 +1,4 @@
+import { divide_round } from "./divide_round.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with_https_prefix } from "./text_starts_with_https_prefix.mjs";
 import { ternary } from "./ternary.mjs";
@@ -7,7 +8,6 @@ import { retry } from "./retry.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { round } from "./round.mjs";
 import { catch_call_later } from "./catch_call_later.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { http_sleep } from "./http_sleep.mjs";
@@ -17,7 +17,6 @@ import { not } from "./not.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { json_to } from "./json_to.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { divide } from "./divide.mjs";
 export async function http_generic(url, options) {
   let method = options.method || "GET";
   let body = options.body || null;
@@ -87,8 +86,7 @@ export async function http_generic(url, options) {
       res.on("data", i);
       function on_end() {
         let statusCode = property_get(res, "statusCode");
-        let d = divide(statusCode, 100);
-        let rounded = round(d);
+        let rounded = divide_round(statusCode, 100);
         let b2 = equal(rounded, 2);
         assert_json(b2, {
           url,
