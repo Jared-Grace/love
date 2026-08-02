@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_openai_split } from "./g_openai_split.mjs";
-export function app_g_openai_split_property(object, property_name) {
+export function g_openai_split_property(object, property_name) {
   arguments_assert(arguments, 2);
   ("The lines of one named part of a passage, cut apart the way what a machine");
   ("wrote comes back.");

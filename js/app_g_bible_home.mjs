@@ -1,5 +1,5 @@
 import { app_g_bible } from "./app_g_bible.mjs";
-import { app_g_openai_split_property } from "./app_g_openai_split_property.mjs";
+import { g_openai_split_property } from "./g_openai_split_property.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { firebase_upload_object_compressed_browser } from "./firebase_upload_object_compressed_browser.mjs";
 import { each } from "./each.mjs";
@@ -37,7 +37,7 @@ export async function app_g_bible_home(context) {
       ));
     function on_passage({ passage, verses }) {
       let p = list_last_property(verses, "p");
-      let mapped = app_g_openai_split_property(passage, "sermon");
+      let mapped = g_openai_split_property(passage, "sermon");
       let size = list_size(mapped);
       let joined = list_join_newline(mapped);
       let ta = html_textarea(p);
