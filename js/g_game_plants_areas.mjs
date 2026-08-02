@@ -13,6 +13,7 @@ export function g_game_plants_areas(plants, stream) {
   "The plants were built without a chapter anywhere in them - a plant is as long as its cast is worth - so this lays the finished plants along the preaching supply afterwards and reads the book off where each one landed. That order can be anything and the plants do not change, which is what lets a first plant be small in every game.";
   "A chapter is allowed to straddle two plants. Nothing lines up otherwise, and a plant that had to stop where a chapter stopped would be back to taking its length from the sermon instead of from its people.";
   "An area is a book, and the Sender goes with the player through the first of them. That is what the early plants being under the elder floor MEANS: the player is not failing to raise up an elder, the church already has one standing in it, and the player is the one being formed. Elders get appointed on the way back through - Acts 14:23 - so the floor is a claim about the plants the player founds alone.";
+  "A plant that ran out of preaching or ran out of people is UNFINISHED rather than failed, and the elder floor is not asked of it. Both supplies are sized to each other so both run low together, and the last plant of a game is the remainder of each - counting that as a plant with no elder in it would report the end of the content as a fault in the player.";
   let s = g_generation_settings();
   let cursor = 0;
   let left_in = 0;
@@ -67,16 +68,24 @@ export function g_game_plants_areas(plants, stream) {
     }
     let sender_present = greater_than_equal(s.sender_areas, area);
     let leader_short = property_get(plant, "leader_short");
-    let elder_short = leader_short && not(sender_present);
     let days_short = less_than(taken, days);
+    let npcs = property_get(plant, "npcs");
+    let wanted_npcs = property_get(plant, "wanted");
+    let npcs_short = less_than(npcs, wanted_npcs);
+    let unfinished = days_short || npcs_short;
+    let alone = not(sender_present);
+    let finished = not(unfinished);
+    let elder_short = leader_short && alone && finished;
     let added = {
       chapters,
       chapter_first: opened,
       book,
       area,
       sender_present,
+      unfinished,
       elder_short,
       days_short,
+      npcs_short,
     };
     let both = {};
     object_merge(both, plant);
