@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -188,8 +189,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
     let callee = property_get(call, "callee");
     let value2 = fn_name("assert_json");
     property_set(callee, "name", value2);
-    let args = property_get(call, "arguments");
-    let second = list_get(args, 1);
+    let second = property_list_get(call, "arguments", 1);
     property_set(second, "name", record_name);
   }
   function block_each(v) {

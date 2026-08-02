@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
 import { playwright_refresh } from "./playwright_refresh.mjs";
 import { playwright_by_attribute_test_click } from "./playwright_by_attribute_test_click.mjs";
@@ -16,15 +17,13 @@ import { equal_assert_json } from "./equal_assert_json.mjs";
 import { each_async } from "./each_async.mjs";
 import { json_to } from "./json_to.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_get } from "./list_get.mjs";
 export async function app_replace_tests_proof(url) {
   "an interaction test for the proof rail on a goal whose rule repeats (a a becomes b b): with no rule chosen the whole solved proof glows green; choosing a rule narrows the green to just that rule's single usage - not its other usages; the proof survives a browser refresh; and start over clears it";
   async function on_page(page) {
     await playwright_refresh(page);
     let rule_set = app_replace_rule_set_replace();
     let name = property_get(rule_set, "name");
-    let goals = property_get(rule_set, "goals");
-    let goal = list_get(goals, 1);
+    let goal = property_list_get(rule_set, "goals", 1);
     await playwright_by_attribute_test_click(page, name);
     await playwright_by_attribute_test_click(page, json_to(goal));
     let refresh_count = 0;
