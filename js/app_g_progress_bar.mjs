@@ -1,16 +1,11 @@
+import { html_progress_caption } from "./html_progress_caption.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { html_progress_caption_font_size } from "./html_progress_caption_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { add_1 } from "./add_1.mjs";
 export function app_g_progress_bar(root, count, total, name) {
   ("a progress bar styled for g — dark-green fill (",
     fn_name("app_shared_button_background"),
