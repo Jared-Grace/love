@@ -189,7 +189,22 @@ export async function functions_call_pairs_frequent() {
       continue;
     }
     let file_count = object_property_names(record.files).length;
-    let closed_count = object_property_names(record.closed_files).length;
+    let atom_names = property_get_or_null(atom_by_key, key);
+    ("A function whose whole body IS the pair cannot be collapsed into itself, so its");
+    ("own file is not a place the pair could be folded. Counting it held rows at the");
+    ("top of the list that no atom could ever close - three of the five promised by");
+    ("the list_size-then-equal row were list_empty_is, list_size_1 and list_size_2");
+    ("themselves - which is the same wasted work this column exists to remove, one");
+    ("level up.");
+    let closed_names = object_property_names(record.closed_files);
+    let closed_count = 0;
+    for (let closed_file of closed_names) {
+      let closed_name = function_path_to_name(closed_file);
+      let already_atom = atom_names && list_includes(atom_names, closed_name);
+      if (not(already_atom)) {
+        closed_count = closed_count + 1;
+      }
+    }
     rows.push({
       foldable: closed_count,
       files: file_count,
@@ -197,7 +212,7 @@ export async function functions_call_pairs_frequent() {
       pair: record.example,
       left: record.left,
       right: record.right,
-      atoms: property_get_or_null(atom_by_key, key),
+      atoms: atom_names,
     });
   }
   ("Ranked by how many files the pair could actually be collapsed in, not by how many");
