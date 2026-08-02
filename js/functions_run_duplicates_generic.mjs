@@ -1,13 +1,10 @@
+import { shapes_shared_groups } from "./shapes_shared_groups.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { properties_get } from "./properties_get.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 export async function functions_run_duplicates_generic(size, fn_shape) {
   arguments_assert(arguments, 2);
   ("Every group of functions sharing a run of work of this length, grouped by that");

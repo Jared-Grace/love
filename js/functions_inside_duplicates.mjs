@@ -1,14 +1,10 @@
+import { shapes_shared_groups } from "./shapes_shared_groups.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_inside_shapes } from "./function_inside_shapes.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
-import { properties_get } from "./properties_get.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
 export async function functions_inside_duplicates(size) {
   arguments_assert(arguments, 1);
   ("Every group of functions sharing a run of work of this length, wherever the run sits in each of them, grouped by that run.");

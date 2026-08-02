@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
+import { subtract } from "./subtract.mjs";
 export function shapes_shared_groups(by_shape) {
   arguments_assert(arguments, 1);
   ("Every shape that more than one name was found under, as a group carrying the shape, the names and how many there are - the largest group first.");
