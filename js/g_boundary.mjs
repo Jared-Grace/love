@@ -46,14 +46,15 @@ export function g_boundary(met, topic) {
   let combined4 = text_combine_multiple(["Could we ", r8, r9, "?"]);
   let neutral = [combined, combined2, combined3, combined4];
   let r10 = list_random_item([
-    "I'd still rather not get into that, though.",
+    g_boundary_rather_not(),
     "That, though, I'd like to keep to myself for now.",
   ]);
-  let combined5 = text_combine_multiple(["It's good to see you again. ", r10]);
+  let seen_again = g_boundary_seen_again();
+  let combined5 = text_combine_multiple([seen_again, r10]);
   let contextual = [combined5];
   if (not(met)) {
     let r11 = list_random_item([
-      "Maybe once I know you a little better?",
+      g_boundary_know_better(),
       "I hope you understand.",
     ]);
     let combined6 = text_combine_multiple([
