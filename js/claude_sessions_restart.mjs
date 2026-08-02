@@ -43,22 +43,26 @@ export async function claude_sessions_restart(minutes) {
   let command2 = text_combine_multiple(["tmux attach -t ", session]);
   await command_line_interactive(command2);
   return restored;
-  async function claude_pane_session_is(pane, session) {
+  async function claude_pane_session_is(pane_given, session_given) {
     "Whether this terminal is a pane of the session about to be rebuilt. The pane is read from the environment rather than written into the command, because commands here run with no shell and would pass a dollar sign through as text.";
-    if (not(pane)) {
+    if (not(pane_given)) {
       return false;
     }
     let asking = text_combine_multiple([
       "tmux display-message -p -t ",
-      pane,
+      pane_given,
       " #{session_name}",
     ]);
     let result = await command_line_code_ignore(asking);
     let name = property_get(result, "stdout").trim();
-    let same = equal(name, session);
+    let same = equal(name, session_given);
     return same;
   }
-  async function claude_session_refill(session, pane, minutes_given) {
+  async function claude_session_refill(
+    session_given,
+    pane_given,
+    minutes_given,
+  ) {
     "Empty the session of every window except the one this was typed in, then give each saved session a window again.";
     "Killing comes before opening, not after: the sweep that clears the old windows cannot tell a window it just made from one left over, so opening first would throw away the new ones too.";
     let sessions = await claude_sessions_recent(minutes_given);
@@ -70,10 +74,13 @@ export async function claude_sessions_restart(minutes) {
       ]);
       return combined2;
     }
-    let command3 = text_combine_multiple(["tmux kill-window -a -t ", pane]);
+    let command3 = text_combine_multiple([
+      "tmux kill-window -a -t ",
+      pane_given,
+    ]);
     await command_line_code_ignore(command3);
     for (let session_saved of sessions) {
-      await claude_session_window_start(session, session_saved);
+      await claude_session_window_start(session_given, session_saved);
     }
     let combined3 = text_combine_multiple([
       "Reopened ",
