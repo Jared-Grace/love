@@ -33,7 +33,7 @@ export async function messenger_reply_messages(page, url) {
         if (e) {
           continue;
         }
-        function lambda4(imgs) {
+        function lambda4(imgs_found) {
           function lambda3(img) {
             let v4 = getComputedStyle(img).borderRadius === "50%";
             return v4;
@@ -42,7 +42,7 @@ export async function messenger_reply_messages(page, url) {
             let v6 = img.src;
             return v6;
           }
-          let v5 = imgs.filter(lambda3).map(lambda5);
+          let v5 = imgs_found.filter(lambda3).map(lambda5);
           return v5;
         }
         let imgs = await c.$$eval("img", lambda4);
