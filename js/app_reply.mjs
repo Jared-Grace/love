@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
@@ -180,7 +181,7 @@ export async function app_reply(context) {
     let v = prayer_blessing_expand();
     ("the languages are named in the order they were chosen, matching the order their verses were just read in");
     let copy = list_copy(languages_chosen);
-    let mapped = list_map_property(copy, "language_code");
+    let mapped = list_map_property(copy, language_code_key());
     let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
       responses,
