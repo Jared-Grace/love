@@ -1,11 +1,10 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { list_get } from "./list_get.mjs";
@@ -32,8 +31,7 @@ export function app_code_lesson_expression_whole_part() {
   }
   function refill() {
     "four questions, each with a DIFFERENT divisor so two never look alike";
-    let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    let list = list_map(divisors, make);
+    let list = list_shuffle_take_map([3, 4, 5, 6], 4, make);
     return list;
   }
   function decoys(question, answer) {
