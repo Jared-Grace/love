@@ -1,8 +1,7 @@
+import { text_split_last } from "./text_split_last.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
-import { text_split } from "./text_split.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
-import { list_last } from "./list_last.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { list_add } from "./list_add.mjs";
 export function qa_gate_failed_halves(output) {
@@ -21,8 +20,7 @@ export function qa_gate_failed_halves(output) {
     if (text_includes_not(line, prefix)) {
       continue;
     }
-    let parts = text_split(line, prefix);
-    let after = list_last(parts);
+    let after = text_split_last(line, prefix);
     let halves = text_split_colon(after);
     list_add(all, halves);
   }
