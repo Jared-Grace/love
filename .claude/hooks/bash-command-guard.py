@@ -3731,69 +3731,48 @@ def main():
 
     stripped = time_subshell_stripped(command, safe_verbs, safe_exact_commands)
     if stripped is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": (
-                    "Drop the parentheses and run this instead - it is "
-                    "already approved, so it needs no human at all:\n"
-                    f"  {stripped}\n"
-                    "`time` runs its command in a subshell either way, so "
-                    "the timing is the same; the parentheses only add a "
-                    "shape this hook does not parse. (They would be worth "
-                    "keeping around a `cd` or an assignment, or in `( time "
-                    "CMD ) 2>&1 | ...` where they decide whose stderr the "
-                    "redirect catches - none of which is the case here.)"
-                ),
-            }
-        }))
-        return
+        return decide("deny", (
+            "Drop the parentheses and run this instead - it is "
+            "already approved, so it needs no human at all:\n"
+            f"  {stripped}\n"
+            "`time` runs its command in a subshell either way, so "
+            "the timing is the same; the parentheses only add a "
+            "shape this hook does not parse. (They would be worth "
+            "keeping around a `cd` or an assignment, or in `( time "
+            "CMD ) 2>&1 | ...` where they decide whose stderr the "
+            "redirect catches - none of which is the case here.)"
+        ))
 
     split = splittable_statements(command, safe_verbs, safe_exact_commands)
     if split is not None:
         trusted, blocked = split
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": (
-                    "Run this as separate Bash calls instead of one chain - "
-                    "it splits cleanly, so there is no need to ask the human "
-                    "about the whole thing.\n"
-                    + "".join(f"  already allowed: {t}\n" for t in trusted)
-                    + f"  needs its own call: {blocked}\n"
-                    "The allowed parts run with no prompt at all. The last "
-                    "one is then a single plain command rather than a chain, "
-                    "which is both easier to approve and, if it is a "
-                    "`node scripts/ai.mjs <fn>` call, something that can be "
-                    "granted once by name and never asked about again - a "
-                    "chain never can be."
-                ),
-            }
-        }))
-        return
+        return decide("deny", (
+            "Run this as separate Bash calls instead of one chain - "
+            "it splits cleanly, so there is no need to ask the human "
+            "about the whole thing.\n"
+            + "".join(f"  already allowed: {t}\n" for t in trusted)
+            + f"  needs its own call: {blocked}\n"
+            "The allowed parts run with no prompt at all. The last "
+            "one is then a single plain command rather than a chain, "
+            "which is both easier to approve and, if it is a "
+            "`node scripts/ai.mjs <fn>` call, something that can be "
+            "granted once by name and never asked about again - a "
+            "chain never can be."
+        ))
 
     verb = matched_leading_verb(command, safe_verbs)
     if verb is not None and verb_matched_mid_word(command, verb):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "ask",
-                "permissionDecisionReason": (
-                    f"The allow rule {verb!r} matches this command only as a "
-                    "text prefix of a longer word, so the thing actually "
-                    "being run has no grant of its own. There is nothing to "
-                    "split here and rewording will not help - this is a "
-                    "different command that shares an opening with a trusted "
-                    "one. If it should run unprompted, grant it by its own "
-                    "full name (`node scripts/ai.mjs permission_grant_add "
-                    "<fn>`); otherwise it is fine to approve once."
-                    + open_twin_advice(command)
-                ),
-            }
-        }))
-        return
+        return decide("ask", (
+            f"The allow rule {verb!r} matches this command only as a "
+            "text prefix of a longer word, so the thing actually "
+            "being run has no grant of its own. There is nothing to "
+            "split here and rewording will not help - this is a "
+            "different command that shares an opening with a trusted "
+            "one. If it should run unprompted, grant it by its own "
+            "full name (`node scripts/ai.mjs permission_grant_add "
+            "<fn>`); otherwise it is fine to approve once."
+            + open_twin_advice(command)
+        ))
 
     if verb is not None:
         print(json.dumps({
