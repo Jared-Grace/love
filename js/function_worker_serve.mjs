@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { equal } from "./equal.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
 import { function_run } from "./function_run.mjs";
@@ -11,7 +13,9 @@ import { text_combine } from "./text_combine.mjs";
 ("line per request on fd 4. Dedicated fds rather than stdout because a called");
 ("function's own console output would otherwise corrupt the protocol stream.");
 ("Staleness is deliberately NOT this process's problem: a worker only ever");
-("serves the code it booted with, and function_worker_pool_run retires it as");
+("serves the code it booted with, and ",
+  fn_name("function_worker_pool_run"),
+  " retires it as");
 ("soon as a watched file changes. That is what keeps dev hot reload honest.");
 export async function function_worker_serve() {
   let fs = await import("fs");
@@ -25,7 +29,7 @@ export async function function_worker_serve() {
   async function job_run(line) {
     let job = json_from(line);
     let id = property_get(job, "id");
-    let reply;
+    let reply = null;
     try {
       let f_name = property_get(job, "f_name");
       let args = property_get(job, "args");
@@ -48,19 +52,24 @@ export async function function_worker_serve() {
         failed: error_text(caught),
       };
     }
-    results.write(text_combine(json_to(reply), "\n"));
+    let left = json_to(reply);
+    let combined = text_combine(left, "\n");
+    results.write(combined);
   }
   function lambda(chunk) {
-    pending = text_combine(pending, chunk.toString());
+    let right = chunk.toString();
+    pending = text_combine(pending, right);
     let lines = pending.split("\n");
     ("A chunk boundary can land mid-line, so the trailing fragment waits for more.");
     pending = lines.pop();
-    lines.forEach(function line_run(line) {
-      let blank = line.trim() === "";
+    function line_run(line) {
+      let left2 = line.trim();
+      let blank = equal(left2, "");
       if (not(blank)) {
         job_run(line);
       }
-    });
+    }
+    lines.forEach(line_run);
   }
   jobs.on("data", lambda);
   let closed = new Promise(function lambda2(resolve) {
@@ -69,12 +78,15 @@ export async function function_worker_serve() {
     }
     jobs.on("end", lambda3);
   });
-  return await closed;
+  let r = await closed;
+  return r;
   function error_text(caught) {
     let stacked = caught && caught.stack;
     if (stacked) {
-      return caught.stack;
+      let r2 = caught.stack;
+      return r2;
     }
-    return String(caught);
+    let r3 = String(caught);
+    return r3;
   }
 }
