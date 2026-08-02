@@ -1,10 +1,8 @@
+import { text_wrapped_inner } from "./text_wrapped_inner.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { subtract } from "./subtract.mjs";
-import { text_empty } from "./text_empty.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { not } from "./not.mjs";
 export function permission_rule_command_probe(rule) {
   "a realistic shell command a Bash allow rule claims to auto-approve, for asking the guard whether the rule actually applies — or empty text when the rule grants some other tool";
   "Bash(<command>) grants exactly that command; Bash(<prefix>:*) grants that prefix plus any arguments, so the prefix alone is the shortest command it claims";
@@ -14,8 +12,8 @@ export function permission_rule_command_probe(rule) {
   let inner = text_wrapped_inner(rule, opening, closing);
   let arguments_any = ":*";
   if (text_ends_with(inner, arguments_any)) {
-    let difference2 = subtract(inner.length, arguments_any.length);
-    let prefix = inner.slice(0, difference2);
+    let difference = subtract(inner.length, arguments_any.length);
+    let prefix = inner.slice(0, difference);
     let separator = "/";
     if (text_ends_with(prefix, separator)) {
       ("two leaves, not one — a path verb that moves rather than acts in place needs a source and a destination, and probing it with a single path reports a prompt the real two-argument command never sees");
