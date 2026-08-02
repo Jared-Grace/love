@@ -1,8 +1,8 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { json_to } from "./json_to.mjs";
 import { memory_orphans } from "./memory_orphans.mjs";
 import { memory_dangling_pointers } from "./memory_dangling_pointers.mjs";
 import { memory_dangling_links } from "./memory_dangling_links.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function memory_integrity_gate_run() {
   "Gate: the memory index and the files it indexes must agree. Three ways they can drift, and each is a leak in a different direction - an entry no line reaches, a line reaching no entry, and a double-bracket link whose target is spelled under the wrong type prefix. All three read clean today, which is what makes them safe to hold to.";
@@ -16,10 +16,7 @@ export async function memory_integrity_gate_run() {
     "dangling pointers (no entry behind them): " + dangling_pointers.join(", "),
   );
   console.log("mis-prefixed links: " + json_to(dangling_links));
-  let all = [];
-  list_add_multiple(all, orphans);
-  list_add_multiple(all, dangling_pointers);
-  list_add_multiple(all, dangling_links);
+  let all = list_concat_multiple([orphans, dangling_pointers, dangling_links]);
   if (greater_than(all.length, 0)) {
     throw new Error("memory integrity gate: " + all.length + " to reconcile");
   }

@@ -9,7 +9,7 @@ import { noop } from "./noop.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_g_bible_home_inner(context, download, app_fn) {
+export async function app_shared_bible_home_inner(context, download, app_fn) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
