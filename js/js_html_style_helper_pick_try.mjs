@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
@@ -17,7 +18,7 @@ export function js_html_style_helper_pick_try(helpers, prop, value_node) {
     let value = js_literal_value_get(value_node);
     function fixed_is(helper) {
       let fixed = property_equals(helper, "kind", "fixed");
-      if (!fixed) {
+      if (not(fixed)) {
         return false;
       }
       let same = property_equals(helper, "value", value);
