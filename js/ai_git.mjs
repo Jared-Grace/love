@@ -1,3 +1,4 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { files_to_commit_take } from "./files_to_commit_take.mjs";
 import { ai_git_files } from "./ai_git_files.mjs";
 Error.stackTraceLimit = Infinity;
@@ -13,6 +14,6 @@ export async function ai_git() {
   await files_to_commit_take();
   let none = [];
   let args = [];
-  let result = await ai_git_files("ai", args, none);
+  let result = await ai_git_files(git_message_hand_made(), args, none);
   return result;
 }
