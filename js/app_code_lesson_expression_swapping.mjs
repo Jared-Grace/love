@@ -94,22 +94,16 @@ export function app_code_lesson_expression_swapping() {
     return built;
   }
   function above(root) {
-    "before the quiz, show swappability for EVERY operator the quiz uses, grouped into three chunks so the learner meets a rule per group, not nine separate facts: (1) setup - swap the two numbers, one worked case; (2) + and *, swapping keeps the value, can always swap; (3) -, / and %, swapping changes the value, cannot always swap; (4) <, >, <= and >=, swapping flips the comparison, cannot always swap. Each operator gets its own example line so nothing in the quiz is unseen. The comparison lines are true === false etc under the hood - the rule line names the reason (the comparison flips) rather than leaning on boolean === boolean, which is not taught yet";
+    "before the quiz, show swappability for EVERY operator the quiz uses, grouped into three chunks so the learner meets a rule per group, not nine separate facts: (1) setup - defines swap step by step: suppose 1 + 2, then swap the 1 and the 2, now 2 + 1; (2) + and *, swapping keeps the value, can always swap; (3) -, / and %, swapping changes the value, cannot always swap; (4) <, >, <= and >=, swapping flips the comparison, cannot always swap. Each operator gets its own example line so nothing in the quiz is unseen. The comparison lines are true === false etc under the hood - the rule line names the reason (the comparison flips) rather than leaning on boolean === boolean, which is not taught yet";
     let setup = app_code_container_light_blue(root);
+    html_div_cycle_code(setup, ["Suppose we have ", "1 + 2"]);
     html_div_cycle_code(setup, [
-      "We can swap the two numbers, so ",
-      "1 + 2",
-      " becomes ",
-      "2 + 1",
+      "Then we can swap the ",
+      "1",
+      " and the ",
+      "2",
     ]);
-    html_div_cycle_code(setup, [
-      "Both are ",
-      "3",
-      ", so ",
-      "1 + 2 === 2 + 1",
-      " is ",
-      "true",
-    ]);
+    html_div_cycle_code(setup, ["Now we have ", "2 + 1"]);
     let swap_yes = app_code_container_light_blue(root);
     html_div_cycle_code(swap_yes, ["", "3 + 4 === 4 + 3", " is ", "true"]);
     html_div_cycle_code(swap_yes, ["", "2 * 5 === 5 * 2", " is ", "true"]);
