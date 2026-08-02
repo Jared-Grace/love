@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_choices } from "./ebible_choices.mjs";
 import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
 import { app_supper_chosen_from_options } from "./app_supper_chosen_from_options.mjs";
@@ -19,7 +20,7 @@ export async function app_supper_versions(context) {
     options,
     chosen,
     "name",
-    "bible_folder",
+    bible_folder_key(),
     on_change,
     "Versions",
     back,
