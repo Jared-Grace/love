@@ -9,5 +9,4 @@ export async function data_generate(data) {
     function_facts_merge(facts, data);
   }
   each(all, merge);
-  return;
 }

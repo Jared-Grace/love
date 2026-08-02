@@ -17,5 +17,4 @@ export async function function_delete(f_names_comma) {
     await file_delete(f_path);
     await function_aliases_delete(f_name);
   }
-  return;
 }
