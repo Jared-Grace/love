@@ -1,5 +1,5 @@
 import { g_sermon_days_total } from "./g_sermon_days_total.mjs";
-import { g_npc_pool_size } from "./g_npc_pool_size.mjs";
+import { g_npc_pool_convert_turns } from "./g_npc_pool_convert_turns.mjs";
 import { g_npc_pool } from "./g_npc_pool.mjs";
 import { g_game_plants } from "./g_game_plants.mjs";
 import { random_seed_from_text } from "./random_seed_from_text.mjs";
@@ -11,7 +11,7 @@ export async function g_game_plants_report(word) {
   "The tally is the point. Whether the big rooms are rare is a claim about a distribution and it cannot be read off a setting - a bell reaching sixteen was widened once on the reasonable-sounding grounds that sixteen should be possible and put over half the settled plants at fourteen or above. Counting them is the only way anybody finds that out.";
   "The pool is seeded on a fixed word and the game on whatever word is handed in, which is the two layers kept apart: change the word and the same people group differently.";
   let sermon_days = await g_sermon_days_total();
-  let count = await g_npc_pool_size();
+  let count = await g_npc_pool_convert_turns();
   let pool_seed = random_seed_from_text(g_npc_pool.name);
   let pool_next = random_seed_generator(pool_seed);
   let pool = g_npc_pool(count, pool_next);

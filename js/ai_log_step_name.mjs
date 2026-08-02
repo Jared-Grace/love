@@ -1,7 +1,7 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
 export function ai_log_step_name(entry) {
   "What a logged line really did, which is not always what it was called.";
@@ -16,8 +16,7 @@ export function ai_log_step_name(entry) {
   if (plain) {
     return f_name;
   }
-  let args = property_get(entry, "args");
-  let transform = list_get(args, 3);
+  let transform = property_list_get(entry, "args", 3);
   let missing = not(transform);
   if (missing) {
     return f_name;
