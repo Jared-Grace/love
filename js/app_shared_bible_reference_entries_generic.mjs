@@ -6,7 +6,7 @@ import { each_async } from "./each_async.mjs";
 export async function app_shared_bible_reference_entries_generic(
   reference,
   languages_chosen,
-  text_get,
+  text_get_fn,
 ) {
   "one entry per language named and left in the order the reader chose so the colours run the same way the chapter reader runs them - the language chosen first leads in the strong blue";
   "where the words come from is the caller's to say - straight out of the bible files or out of an offline package - since everything around that is the same either way";
@@ -14,7 +14,7 @@ export async function app_shared_bible_reference_entries_generic(
   let entries = [];
   async function language_each(language) {
     let bible_folder = property_get(language, "bible_folder");
-    let text = await text_get(bible_folder, reference);
+    let text = await text_get_fn(bible_folder, reference);
     let none = null_is(text);
     if (none) {
       return;
