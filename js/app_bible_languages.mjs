@@ -6,14 +6,14 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
-import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
+import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_bible_settings } from "./app_bible_settings.mjs";
 export function app_bible_languages(context) {
   let languages = ebible_languages();
-  let languages_chosen = app_bible_languages_chosen_get();
+  let languages_chosen = app_shared_bible_languages_chosen_get();
   function on_change() {
     "write the chosen languages back to the url hash (key l) so the choice is shareable, survives a reload, and matches the chapter reader";
     let codes = list_map_property(languages_chosen, language_code_key());
