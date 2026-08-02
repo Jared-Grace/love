@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import fs from "fs";
@@ -18,7 +19,7 @@ export async function notification_hook_check(message) {
   }
   let cp = await import("child_process");
   let spawn = property_get(cp, "spawn");
-  let payload = JSON.stringify({
+  let payload = json_to({
     hook_event_name: "Notification",
     message,
     session_id: "notification-hook-check",
