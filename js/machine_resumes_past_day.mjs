@@ -1,9 +1,9 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { command_line_stdout } from "./command_line_stdout.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { not } from "./not.mjs";
 import { error } from "./error.mjs";
 import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
@@ -29,8 +29,7 @@ export async function machine_resumes_past_day() {
   async function journal_reachable(wrap_given) {
     let probe = await journal_stdout("-k -o cat -n 1", wrap_given);
     let s = text_trim(probe);
-    let b = text_empty_is(s);
-    let reachable = not(b);
+    let reachable = text_empty_not_is(s);
     return reachable;
   }
   let wrap = command_plain;
