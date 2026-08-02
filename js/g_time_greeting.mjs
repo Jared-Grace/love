@@ -1,17 +1,15 @@
 import { fn_name } from "./fn_name.mjs";
-import { property_get } from "./property_get.mjs";
+import { g_time_part } from "./g_time_part.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function g_time_greeting(time) {
-  ("how a person greets you at a named time of day — the everyday three, good morning, good afternoon and good evening, spread across the six keyframes of ",
-    fn_name("g_times"),
-    ". sunrise greets as morning and sunset as evening because the words follow the LIGHT rather than the clock, and night keeps evening because no one says good night on arriving. every keyframe answers, so a caller never has to test for a missing one");
-  let greetings = {
-    morning: "good morning",
-    noon: "good afternoon",
-    afternoon: "good afternoon",
-    sunset: "good evening",
-    night: "good evening",
-    sunrise: "good morning",
-  };
-  let greeting = property_get(greetings, time);
+  ("how a person greets you at a named time of day — good morning, or just morning, built from the everyday word for the stretch of day (",
+    fn_name("g_time_part"),
+    "). this sits directly in front of your NAME, so every form here has to stay short enough to read as an address rather than as a sentence: good morning Jared works, hoping your morning goes well does not, and that longer shape lives in ",
+    fn_name("g_time_remark"),
+    " instead");
+  let part = g_time_part(time);
+  let full = text_combine("good ", part);
+  let greeting = list_random_item([full, part]);
   return greeting;
 }
