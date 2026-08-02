@@ -12,7 +12,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
 import { app_bible_settings } from "./app_bible_settings.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { app_bible_mode_switch } from "./app_bible_mode_switch.mjs";
+import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
@@ -236,7 +236,7 @@ export async function app_shared_bible_home_generic(
   );
   async function lambda3() {
     let mode = app_shared_bible_mode_chapter();
-    await app_bible_mode_switch(context, mode, app_fn);
+    await app_shared_bible_mode_switch(context, mode, app_fn);
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let component = app_shared_button_copy(bottom, noop);
