@@ -19,11 +19,9 @@ export async function app_g_sky_reset() {
   property_set(g, "sky_phase", value);
   let value2 = integer_random_0(101);
   property_set(g, "sky_seed", value2);
-  let bag = global_function_initialize(app_g_sky_set, {});
-  let b = property_exists(bag, "element");
-  if (not(b)) {
+  let element = app_g_sky_element_or_null();
+  if (null_is(element)) {
     return;
   }
-  let element = property_get(bag, "element");
   app_g_sky_set(element, g);
 }
