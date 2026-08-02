@@ -1,3 +1,5 @@
+import { qa_tree_processes_end } from "./qa_tree_processes_end.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_tree_untouched_is } from "./qa_tree_untouched_is.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -32,6 +34,7 @@ export async function qa_trees_reap() {
   let mine = qa_snapshot_owner();
   list_add(live, mine);
   let reaped = [];
+  let ended_all = [];
   for (let owner of owners) {
     let heard_from = list_includes(live, owner);
     if (heard_from) {
@@ -42,11 +45,15 @@ export async function qa_trees_reap() {
     if (not(untouched)) {
       continue;
     }
+    ("Whatever is still running inside the copy is ended before the copy goes. Deleting it out from under a running process never stopped that process - it only left it working forever on a folder that no longer existed, and one of those was found holding most of a core after four days. Ending it is finishing this job, not a new one.");
+    let ended = await qa_tree_processes_end(stale);
     await folder_delete(stale);
     list_add(reaped, owner);
+    list_add_multiple(ended_all, ended);
   }
   let report = {
     reaped,
+    ended: ended_all,
     kept: subtract(owners.length, reaped.length),
   };
   return report;
