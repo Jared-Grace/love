@@ -1,9 +1,8 @@
+import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { math_min } from "./math_min.mjs";
-import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
-import { multiply_divide } from "./multiply_divide.mjs";
 import { g_plant_npcs } from "./g_plant_npcs.mjs";
 import { g_leader_turns } from "./g_leader_turns.mjs";
 import { g_plant_days_turns } from "./g_plant_days_turns.mjs";
@@ -41,8 +40,7 @@ export function g_game_plants(next, pool) {
     let arc_turns = leader_turns + convert_turns;
     let days = g_plant_days_turns(arc_turns);
     let conversations = divide(leader_turns, s.conversation_turns_mean);
-    let reached = multiply_divide(conversations, 100, days);
-    let leader_days_percent = round(reached);
+    let leader_days_percent = multiply_divide_round(conversations, 100, days);
     let leader_short = less_than(leader_turns, s.leader_turns_minimum);
     let npcs = converts_count + 1;
     let plant = {

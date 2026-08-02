@@ -1,5 +1,4 @@
-import { multiply_divide } from "./multiply_divide.mjs";
-import { round } from "./round.mjs";
+import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -75,8 +74,11 @@ export async function g_game_generate_report(word) {
     };
     list_add(rows, row);
   }
-  let reached = multiply_divide(question_matches_total, 100, matches_total);
-  let question_percent_whole = round(reached);
+  let question_percent_whole = multiply_divide_round(
+    question_matches_total,
+    100,
+    matches_total,
+  );
   let r = {
     plants: plants.length,
     days_total,
