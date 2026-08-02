@@ -1,9 +1,13 @@
+import { fn_name } from "./fn_name.mjs";
+import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { word_plural } from "./word_plural.mjs";
 export function word_pluralize(count, word) {
-  "the word in singular form when count is 1, otherwise its plural; plural is the naive word_plural (adds s), so pass a regularly-pluralized word";
+  ("the word in singular form when count is 1, otherwise its plural; plural is the naive ",
+    fn_name("word_plural"),
+    " (adds s), so pass a regularly-pluralized word");
   let many = word_plural(word);
-  let one = count === 1;
+  let one = equal(count, 1);
   let chosen = ternary(one, word, many);
   return chosen;
 }
