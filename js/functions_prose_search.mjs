@@ -1,7 +1,7 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { functions_prose } from "./functions_prose.mjs";
 import { search_generic } from "./search_generic.mjs";
@@ -17,8 +17,7 @@ export async function functions_prose_search(search) {
   let names = properties_get(prose);
   function purpose_of(f_name) {
     "The first line only, because this is what gets read down a list of hits.";
-    let lines = property_get(prose, f_name);
-    let first = list_first(lines);
+    let first = property_list_first(prose, f_name);
     return first;
   }
   function include(f_name, term) {
