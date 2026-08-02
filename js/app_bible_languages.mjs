@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -15,7 +16,7 @@ export function app_bible_languages(context) {
   let languages_chosen = app_bible_languages_chosen_get();
   function on_change() {
     "write the chosen languages back to the url hash (key l) so the choice is shareable, survives a reload, and matches the chapter reader";
-    let codes = list_map_property(languages_chosen, "language_code");
+    let codes = list_map_property(languages_chosen, language_code_key());
     if (list_empty_is(codes)) {
       let v = ebible_language_en_code();
       codes = [v];
@@ -31,7 +32,7 @@ export function app_bible_languages(context) {
     languages,
     languages_chosen,
     "name",
-    "language_code",
+    language_code_key(),
     on_change,
     choices_label,
     back,
