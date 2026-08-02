@@ -1,12 +1,9 @@
+import { js_function_declaration_personal_names } from "./js_function_declaration_personal_names.mjs";
 import { js_function_declaration_statements_working } from "./js_function_declaration_statements_working.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
-import { js_declared_names } from "./js_declared_names.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
 export async function function_run_shape_generic(f_name, size, fn_take) {
   arguments_assert(arguments, 3);
@@ -28,11 +25,7 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
     let nothing = "";
     return nothing;
   }
-  let own = js_function_declaration_name(declaration);
-  let params = js_function_declaration_params_names(declaration);
-  let locals = js_declared_names(declaration);
-  let named = list_concat(params, locals);
-  let personal = list_concat([own], named);
+  let personal = js_function_declaration_personal_names(declaration);
   let run = fn_take(working, size);
   let shape = js_statements_shape(run, personal);
   return shape;

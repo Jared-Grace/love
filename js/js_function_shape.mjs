@@ -1,12 +1,9 @@
+import { js_function_declaration_personal_names } from "./js_function_declaration_personal_names.mjs";
 import { js_function_declaration_statements_working } from "./js_function_declaration_statements_working.mjs";
 import { js_names_blank } from "./js_names_blank.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
-import { js_declared_names } from "./js_declared_names.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_concat } from "./list_concat.mjs";
 export function js_function_shape(declaration) {
   "What a function does, with everything that only says who wrote it taken away. Two functions doing the same thing land on the same text however differently they were spelled.";
   "Four things are taken away and no more. The name of the function, because that is the very thing being asked about - two names for one job is the answer, not the question. The names it gives its own parameters and workings, because a name a reader never sees from outside carries no meaning to compare. The sentences of prose, because a description differing is not the work differing. And the marks a body carries for a reader, because a mark is something said about the work rather than a part of it.";
@@ -14,11 +11,7 @@ export function js_function_shape(declaration) {
   "Everything else stays, above all the names of the other functions it calls. Those are what it does. Blanking them too would make every function of the same length look alike, and the answer would be noise.";
   "Order of first appearance is what numbers the blanks, so the numbering is a property of the work rather than of the order somebody happened to declare things in.";
   "The word after a dot is left alone even when it reads exactly like a private name, and it often does - a function that asks a list whether it includes something calls the answer includes. Blanking that word too made four separate roundings of a number look like one function, and made asking a list whether it holds something identical to cutting a piece out of some words.";
-  let own = js_function_declaration_name(declaration);
-  let params = js_function_declaration_params_names(declaration);
-  let locals = js_declared_names(declaration);
-  let b = list_concat(params, locals);
-  let personal = list_concat([own], b);
+  let personal = js_function_declaration_personal_names(declaration);
   let block = property_get(declaration, "body");
   let working = js_function_declaration_statements_working(declaration);
   property_set(block, "body", working);
