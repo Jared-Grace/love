@@ -1,11 +1,10 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { indexeddb_name_parameters } from "./indexeddb_name_parameters.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
@@ -28,8 +27,10 @@ export async function indexeddb_name_doors() {
       continue;
     }
     let parsed = await function_parse_declaration(f_name);
-    let declaration = property_get(parsed, "declaration");
-    let params = js_function_declaration_params_names(declaration);
+    let params = js_function_declaration_property_params_names(
+      parsed,
+      "declaration",
+    );
     let positions = [];
     let position = 0;
     for (let param of params) {

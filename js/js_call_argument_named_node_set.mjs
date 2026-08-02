@@ -1,15 +1,14 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_node_call_get } from "./js_node_call_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_set } from "./list_set.mjs";
-import { property_get } from "./property_get.mjs";
 export async function js_call_argument_named_node_set(
   ast,
   selects,
@@ -31,8 +30,7 @@ export async function js_call_argument_named_node_set(
   let call = js_node_call_get(node);
   let f_name = js_call_callee_name_try(call);
   let d = await function_parse_declaration(f_name);
-  let declaration = property_get(d, "declaration");
-  let names = js_function_declaration_params_names(declaration);
+  let names = js_function_declaration_property_params_names(d, "declaration");
   let includes = list_includes(names, param_name);
   assert_json(includes, {
     hint: "the called function has no parameter by that name — would you like one of the names it does have?",
