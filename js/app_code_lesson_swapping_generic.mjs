@@ -1,3 +1,4 @@
+import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -73,7 +74,7 @@ export function app_code_lesson_swapping_generic(config) {
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: "What code gives this value? ",
+    backwards_answer_label: app_code_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
   return lesson;
