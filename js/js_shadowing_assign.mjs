@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declare_single_init } from "./js_declare_single_init.mjs";
 import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { list_single } from "./list_single.mjs";
@@ -37,8 +38,7 @@ export function js_shadowing_assign(ast, name) {
     if (null_is(declarator)) {
       return;
     }
-    let id = property_get(declarator, "id");
-    let declared = property_get(id, "name");
+    let declared = property_path_get_2(declarator, "id", "name");
     if (not_equal(declared, name)) {
       return;
     }
