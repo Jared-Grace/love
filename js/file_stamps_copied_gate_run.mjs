@@ -57,6 +57,9 @@ export async function file_stamps_copied_gate_run() {
       if (equal_not(exact, whole)) {
         fractional = add(fractional, 1);
       }
+      let live_exact = await path_modified_ms(source_path);
+      let copy_exact = await path_modified_ms(copy_path);
+      console.log("SAMPLE " + name + " live=" + live_exact + " copy=" + copy_exact);
       let same = json_equal(stamp_before, stamp_copied);
       if (same) {
         continue;
