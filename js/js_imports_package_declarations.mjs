@@ -1,10 +1,10 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { property_starts_with } from "./property_starts_with.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_single } from "./list_single.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { each } from "./each.mjs";
 export function js_imports_package_declarations(ast) {
@@ -29,8 +29,7 @@ export function js_imports_package_declarations(ast) {
       if (repo_is) {
         return;
       }
-      let specifier = list_single(specifiers);
-      let local = property_get(specifier, "local");
+      let local = list_single_property(specifiers, "local");
       let name = property_get(local, "name");
       la({
         name,
