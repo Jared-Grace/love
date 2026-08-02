@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
+import { indexeddb_name_literals_all } from "./indexeddb_name_literals_all.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_size } from "./list_size.mjs";
 export async function indexeddb_name_literals_gate_run() {
   "QA gate: no file names a browser database or one of its stores by writing the name into the call. Every one of them is held by a function, so it can be frozen.";
   "A name like this reaches a disk in somebody's browser the first time anything is kept under it, and nothing here can reach that disk again. Written at the site it looks like nothing - an everyday word like files or bible, in a line that reads clearly - and rewording it is the sort of tidy-up nobody would think to check. Everything a person had kept under the old name is then simply not there, and no later edit brings it back.";
