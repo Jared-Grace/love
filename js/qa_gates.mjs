@@ -1,3 +1,4 @@
+import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
 import { js_name_value_use_nodes_cases_gate_run } from "./js_name_value_use_nodes_cases_gate_run.mjs";
 import { js_call_named_argument_at_undroppable_cases_gate_run } from "./js_call_named_argument_at_undroppable_cases_gate_run.mjs";
 import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
@@ -245,6 +246,7 @@ export function qa_gates() {
     functions_statements_after_return_gate_run,
     functions_arity_gate_run,
     app_shared_imports_gate_run,
+    functions_app_specific_imports_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     app_code_lessons_rights_space_gate_run,
