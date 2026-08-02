@@ -15,8 +15,8 @@ export async function functions_names_untracked() {
   "Swallowing that refusal is safe here in the one direction that matters. What comes back is subtracted from what a check complains about, so a reading that failed altogether excuses nobody and makes every check that uses it stricter. It cannot go quiet.";
   async function lambda(folder) {
     async function asked() {
-      let paths = await git_files_untracked_folder(folder);
-      return paths;
+      let folder_paths = await git_files_untracked_folder(folder);
+      return folder_paths;
     }
     let r = await catch_null_async(asked);
     return r;
