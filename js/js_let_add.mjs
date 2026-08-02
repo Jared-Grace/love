@@ -9,8 +9,8 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_let_add(ast) {
   function lambda(v) {
-    let stack_1 = property_list_get_end_1(v, "stack");
-    let type_is = js_node_type_is(stack_1, "ExpressionStatement");
+    let stack_ = property_list_get_end_1(v, "stack");
+    let type_is = js_node_type_is(stack_, "ExpressionStatement");
     if (not(type_is)) {
       return;
     }
@@ -27,8 +27,7 @@ export function js_let_add(ast) {
       return;
     }
     let assign = js_declare(name, right);
-    object_replace(stack_1, assign);
+    object_replace(stack_, assign);
   }
   js_visit_type(ast, "AssignmentExpression", lambda);
-  return;
 }

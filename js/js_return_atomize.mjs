@@ -11,5 +11,4 @@ export async function js_return_atomize(ast) {
     await js_return_atomize_node(ast, node, variable_name);
   }
   await each_async(rs, lambda);
-  return;
 }

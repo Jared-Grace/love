@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
@@ -28,7 +29,7 @@ export async function js_dollar(ast) {
         ("during the transformations, an identifier could be replaced into another node");
         return;
       }
-      let stack_1 = list_get_end_1(stack);
+      let stack_ = list_get_end_1(stack);
       let stack_2 = list_get_end_2(stack);
       let stack_3 = list_get_end_3(stack);
       let name = property_get(node, "name");
@@ -44,15 +45,13 @@ export async function js_dollar(ast) {
       }
       let remaining = list_skip(split, 2);
       let lower = text_lower_to(second);
-      if (lower === choice_name) {
-        text_combine(
-          "This variable name is used by ",
-          fn_name("js_dollar_choice_argument"),
-        );
+      if (equal(lower, choice_name)) {
+        let right = fn_name("js_dollar_choice_argument");
+        text_combine("This variable name is used by ", right);
         let js_dollar_arguments = {
           remaining,
           node,
-          stack_1,
+          stack_,
           stack_2,
           stack_3,
           ast,
@@ -65,5 +64,4 @@ export async function js_dollar(ast) {
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   invoke_multiple(afters);
-  return;
 }
