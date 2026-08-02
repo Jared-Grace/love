@@ -26,6 +26,17 @@ export function g_generation_plan() {
     2,
   );
   let leader_turns = multiply(leader_conversations, s.conversation_turns_mean);
+  ("How SHORT a plant may be is decided by the leader and by nothing else. Every other quantity scales with the plant's length, so only the leader's fixed hundred turns can fail to fit. Working the floor out here rather than writing it down is what makes it answer to the leader settings instead of drifting from them.");
+  let share_low = divide(s.leader_days_percent_minimum, 100);
+  let share_high = divide(s.leader_days_percent_maximum, 100);
+  let share_middle = divide(share_low + share_high, 2);
+  let turns_a_day = multiply(share_middle, s.conversation_turns_mean);
+  let days_needed = divide(s.leader_turns_minimum, turns_a_day);
+  let plant_days_minimum_needed = Math.ceil(days_needed);
+  let plant_days_minimum_fits = greater_than_equal(
+    s.plant_days_minimum,
+    plant_days_minimum_needed,
+  );
   let other_conversations = subtract(arc_conversations, leader_conversations);
   let divided = divide(other_conversations, s.arc_conversations_maximum);
   let npcs_fewest = 1 + Math.ceil(divided);
@@ -56,6 +67,8 @@ export function g_generation_plan() {
     leader_conversations_maximum,
     leader_conversations,
     leader_turns,
+    plant_days_minimum_needed,
+    plant_days_minimum_fits,
     other_conversations,
     npcs_fewest,
     npcs_most,
