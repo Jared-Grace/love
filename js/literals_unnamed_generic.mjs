@@ -1,3 +1,4 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { literal_getters } from "./literal_getters.mjs";
 import { property_js_parse } from "./property_js_parse.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
