@@ -38,7 +38,7 @@ import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
-import { app_bible_chapters } from "./app_bible_chapters.mjs";
+import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
@@ -100,7 +100,12 @@ export async function app_bible_home_generic(
   let book_name = ebible_book_code_to_name(books, book_code);
   app_shared_bible_button_chapter_previous(bar, context, chapter_code);
   app_shared_screen_set_button(bar, context, app_shared_bible_books, book_name);
-  app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
+  app_shared_screen_set_button(
+    bar,
+    context,
+    app_shared_bible_chapters,
+    chapter_name,
+  );
   app_shared_bible_button_chapter_next(bar, context, chapter_code);
   app_shared_screen_set_button(
     bar,
