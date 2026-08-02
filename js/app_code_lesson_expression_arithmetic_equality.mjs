@@ -92,7 +92,11 @@ export function app_code_lesson_expression_arithmetic_equality() {
     html_div_cycle_code(yes, [
       "For ",
       "3 + 4 === 5 + 2",
-      ", we do ",
+      ", the ",
+      "+",
+      " runs before the ",
+      "===",
+      ", so we do ",
       "3 + 4",
       " and ",
       "5 + 2",
