@@ -1,5 +1,5 @@
 import { app_bible_chapter_open } from "./app_bible_chapter_open.mjs";
-export function app_bible_chapter_open_curried(context) {
+export function app_shared_bible_chapter_open_curried(context) {
   let r2 = async function app_bible_chapter_open_curried_2_result(
     chapter_code,
   ) {
