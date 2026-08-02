@@ -1,10 +1,5 @@
+import { html_progress_caption } from "./html_progress_caption.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
-import { html_progress_caption_font_size } from "./html_progress_caption_font_size.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
-import { add_1 } from "./add_1.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
