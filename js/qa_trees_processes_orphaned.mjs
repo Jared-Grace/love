@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { processes_folder_within } from "./processes_folder_within.mjs";
 import { process_folder_or_null } from "./process_folder_or_null.mjs";
 import { qa_tree_owners_folder } from "./qa_tree_owners_folder.mjs";
@@ -14,6 +15,11 @@ export async function qa_trees_processes_orphaned() {
   let orphaned = [];
   for (let pid of pids) {
     let working = process_folder_or_null(pid);
+    ("Nothing known about a process is a reason to leave it alone, never a reason to end it. It reads as nothing when the process went away between the list being made and this line, and equally when it is somebody else's to look at - and a missing folder and an unreadable one are the same word here, so without this the second case would be answered as though the folder were gone.");
+    let unknown = equal(working, null);
+    if (unknown) {
+      continue;
+    }
     let there = await file_exists(working);
     let gone = not(there);
     if (gone) {
