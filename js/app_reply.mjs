@@ -46,12 +46,12 @@ export async function app_reply(context) {
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");
-  let english_choices = await ebible_versions_english_choices_browser();
+  await ebible_versions_english_choices_browser();
   let languages_chosen_default = app_reply_languages_chosen_default();
   let languages_chosen = [];
   languages_chosen_reset();
   let root = property_get(r, "root");
-  let en = property_get(r, "en");
+  property_get(r, "en");
   ("the legacy reply app keeps the authored list in its own bundle; the verses app, by contrast, now fetches the list from firebase as data");
   let encouragement = bible_verses_uplifting();
   let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
@@ -61,7 +61,7 @@ export async function app_reply(context) {
   let typed = null;
   typed_reset();
   let card = app_shared_container_blue(root);
-  let p = app_reply_languages_prompt(card);
+  app_reply_languages_prompt(card);
   function languages_chosen_reset() {
     app_reply_languages_chosen_reset(
       languages_chosen,
@@ -80,7 +80,7 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  let component4 = app_shared_button(card, "❤️", love);
+  app_shared_button(card, "❤️", love);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
     card,
@@ -106,7 +106,7 @@ export async function app_reply(context) {
     async function lambda3() {
       await update(c);
     }
-    let component = app_shared_button(card2, c, lambda3);
+    app_shared_button(card2, c, lambda3);
   }
   each(choices_verse_count, lambda2);
   let visible_count = null;
@@ -133,7 +133,7 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = app_shared_button_copy(card2, copy_refresh);
+  app_shared_button_copy(card2, copy_refresh);
   let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
@@ -150,7 +150,7 @@ export async function app_reply(context) {
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
     );
   }
-  let component2 = app_shared_button(card4, "Meeting requested", lambda5);
+  app_shared_button(card4, "Meeting requested", lambda5);
   let card5 = app_shared_container_blue(root);
   app_shared_text_body(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
@@ -188,7 +188,7 @@ export async function app_reply(context) {
       bible_texts,
       [result],
     ]);
-    let joined = await list_join_newline_2_copy(concated);
+    await list_join_newline_2_copy(concated);
   }
   function lambda6(event) {
     let key = property_get(event, "key");
