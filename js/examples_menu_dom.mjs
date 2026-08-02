@@ -48,21 +48,21 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_bold_semi(header);
     html_style_margin(header, "0.75rem 0 0.35rem");
   }
-  function example_button(index) {
-    let title = list_get_property(examples, index, "title");
-    let a = add_1(index);
+  function example_button(index_example) {
+    let title = list_get_property(examples, index_example, "title");
+    let a = add_1(index_example);
     let label = text_combine_multiple([a, ". ", title]);
     function on_click() {
-      on_select(index);
+      on_select(index_example);
     }
     let button = app_shared_button_wide(parent, label, on_click);
     html_style_margin_bottom(button, "0.5rem");
     html_text_align(button, "left");
   }
-  function family_at(index) {
+  function family_at(index_example) {
     "family is attached to each example at build time (see the corpus reader), so the client";
     "reads a plain string here and never pulls the heavy real transforms into the bundle";
-    let family = list_get_property(examples, index, "family");
+    let family = list_get_property(examples, index_example, "family");
     return family;
   }
   function render_segment(name, start, size) {
