@@ -16,7 +16,9 @@ export async function indexeddb_name_literals_gate_run() {
   arguments_assert(arguments, 0);
   let doors = await indexeddb_name_doors();
   let ways = Object.keys(doors);
-  let sites = await indexeddb_name_literals_all();
+  let walked = await indexeddb_name_literals_all();
+  let files = property_get(walked, "files");
+  let sites = property_get(walked, "sites");
   let f_name = fn_name("function_new_getter");
   let f_name2 = fn_name("function_literal_route");
   let f_name3 = fn_name("literals_frozen_record_new");

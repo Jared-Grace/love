@@ -1,3 +1,4 @@
+import { app_g_openai_split_property } from "./app_g_openai_split_property.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
@@ -68,8 +69,7 @@ export function app_g_study(player, overlay, close) {
       );
       let div = html_div(overlay);
       let property = "sermon";
-      let sermon_correct = property_get(passage, property);
-      let sermon_correct_list = app_g_openai_split(sermon_correct);
+      let sermon_correct_list = app_g_openai_split_property(passage, property);
       let sermon_index = 0;
       let mistakes = false;
       refresh();
