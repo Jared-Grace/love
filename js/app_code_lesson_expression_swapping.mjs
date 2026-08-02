@@ -145,7 +145,19 @@ export function app_code_lesson_expression_swapping() {
       "/",
     ]);
     let summary = app_code_container_light_blue(root);
-    html_div_cycle_code(summary, ["Some operators we can always swap"]);
-    html_div_cycle_code(summary, ["and some we cannot always swap"]);
+    html_div_cycle_code(summary, [
+      "For ",
+      "+",
+      " and ",
+      "*",
+      ", we can always swap",
+    ]);
+    html_div_cycle_code(summary, [
+      "For ",
+      "-",
+      " and ",
+      "/",
+      ", we cannot always swap",
+    ]);
   }
 }
