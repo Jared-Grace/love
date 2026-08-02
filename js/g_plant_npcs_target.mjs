@@ -1,3 +1,5 @@
+import { math_min } from "./math_min.mjs";
+import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -11,10 +13,10 @@ export function g_plant_npcs_target(index) {
   let settle = s.plant_npcs_settle;
   let climb = s.plant_npcs_settle_plants;
   let along = divide(index, climb);
-  let part = Math.min(1, along);
+  let part = math_min(1, along);
   let risen = subtract(settle, first);
   let moved = multiply(risen, part);
   let landed = first + moved;
-  let r = Math.round(landed);
+  let r = round(landed);
   return r;
 }
