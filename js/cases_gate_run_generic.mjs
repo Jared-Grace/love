@@ -47,20 +47,6 @@ export function cases_gate_run_generic(
     label,
     hint: "this corpus came back with no cases at all, so the gate would have passed without asking anything - look at whatever builds the cases rather than at what they check",
   });
-  ("A corpus writing the same answer beside every case is refused for the same reason,");
-  ("one step further in. It asks something, so it passes the check above - but every");
-  ("case agrees, so a reader handing back that one answer whatever it is given is");
-  ("answered right by all of them. The gate then reads green off a reader that has");
-  ("stopped looking at its input at all. This is the shape that keeps being got");
-  ("wrong: a corpus of cases that must all answer yes cannot catch a reader that");
-  ("says yes to everything, and a corpus whose cases all answer with nothing cannot");
-  ("catch a reader that has quietly stopped finding anything.");
-  let answers = cases_expected_answers(cases, expected_key);
-  list_size_greater_than_assert_json(answers, 1, {
-    label,
-    answers,
-    hint: "every case in this corpus writes down the same answer, so a reader handing that answer back whatever it is given would pass all of them - write a case that must be answered differently",
-  });
   let failures = [];
   for (let c of cases) {
     let actual = answer(c);
@@ -79,6 +65,26 @@ export function cases_gate_run_generic(
   if (greater_than(failures.length, 0)) {
     throw new Error(label + " cases gate: " + failures.length + " failed");
   }
+  ("A corpus writing the same answer beside every case is refused for the same reason,");
+  ("one step further in. It asks something, so it passes the check above - but every");
+  ("case agrees, so a reader handing back that one answer whatever it is given is");
+  ("answered right by all of them. The gate then reads green off a reader that has");
+  ("stopped looking at its input at all. This is the shape that keeps being got");
+  ("wrong: a corpus of cases that must all answer yes cannot catch a reader that");
+  ("says yes to everything, and a corpus whose cases all answer with nothing cannot");
+  ("catch a reader that has quietly stopped finding anything.");
+  ("It is asked here, after the answering, rather than up beside the empty check it");
+  ("belongs with. What is dangerous is a corpus like this coming out green - a red one");
+  ("has already stopped the run and says something truer about why. Asked first, it");
+  ("also stood in front of the one corpus that is meant to be red: the frame's own");
+  ("gate hands the runner a single case the reader disagrees with, to prove it");
+  ("refuses, and one case can only ever write down one answer.");
+  let answers = cases_expected_answers(cases, expected_key);
+  list_size_greater_than_assert_json(answers, 1, {
+    label,
+    answers,
+    hint: "every case in this corpus writes down the same answer, so a reader handing that answer back whatever it is given would pass all of them - write a case that must be answered differently",
+  });
   let r = {
     pass: cases.length,
     fail: 0,
