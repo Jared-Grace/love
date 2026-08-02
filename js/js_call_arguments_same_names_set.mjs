@@ -1,8 +1,7 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
-import { property_get } from "./property_get.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_node_call_get } from "./js_node_call_get.mjs";
@@ -14,8 +13,10 @@ export async function js_call_arguments_same_names_set(ast, selects) {
   let call = js_node_call_get(node);
   let f_name = js_call_callee_name_try(call);
   let d = await function_parse_declaration(f_name);
-  let declaration = property_get(d, "declaration");
-  let names_param = js_function_declaration_params_names(declaration);
+  let names_param = js_function_declaration_property_params_names(
+    d,
+    "declaration",
+  );
   let names_bound = js_binding_names(ast);
   let names_shared = list_intersect(names_param, names_bound);
   for (let param_name of names_shared) {
