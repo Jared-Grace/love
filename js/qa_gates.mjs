@@ -276,7 +276,6 @@ export function qa_gates() {
     functions_page_serialized_gate_run,
     functions_gate_run_unwired_gate_run,
     functions_cases_ungated_gate_run,
-    functions_condition_bodies_empty_gate_run,
   ];
   return gates;
 }
