@@ -1,3 +1,4 @@
+import { js_code_literal_site_none_cases_gate_run } from "./js_code_literal_site_none_cases_gate_run.mjs";
 import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
 import { js_name_value_use_nodes_cases_gate_run } from "./js_name_value_use_nodes_cases_gate_run.mjs";
 import { js_call_named_argument_at_undroppable_cases_gate_run } from "./js_call_named_argument_at_undroppable_cases_gate_run.mjs";
@@ -177,6 +178,7 @@ export function qa_gates() {
     js_function_self_call_cases_gate_run,
     js_comment_migratable_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
+    js_code_literal_site_none_cases_gate_run,
     js_hash_key_literals_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
     js_query_key_literals_cases_gate_run,
