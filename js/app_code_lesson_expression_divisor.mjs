@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
@@ -42,7 +43,7 @@ export function app_code_lesson_expression_divisor() {
     }
     let name_id2 = app_code_lesson_name_id_generic(
       ["divisor"],
-      "operators",
+      app_code_category_operators(),
       title_get,
     );
     return name_id2;
