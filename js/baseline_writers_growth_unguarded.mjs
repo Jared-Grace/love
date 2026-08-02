@@ -22,8 +22,7 @@ export async function baseline_writers_growth_unguarded() {
       continue;
     }
     let imports = await function_imports(f_name);
-    let guards = list_filter_text_includes(imports, "growth_assert");
-    let guarded = list_empty_not_is(guards);
+    let guarded = baseline_growth_guarded_is(imports);
     if (guarded) {
       continue;
     }
