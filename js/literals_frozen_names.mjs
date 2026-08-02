@@ -44,6 +44,7 @@ export function literals_frozen_names() {
   ("The first entry here that never touched a browser, and it belongs for the same reason as the rest: the word a hand-made commit is messaged with is written into the public log, and a log cannot be retyped. Every reading of how much of this repo was built by named commands rather than by hand asks the log for exactly this word, so changing it in place would leave four readers looking for the new word while every commit already made carries the old one - and the answer would come back saying the vocabulary was used all along.");
   ("It was spelled out in six files until it was named, two writing it and four reading it, which is why nothing could watch it: a value with no function holding it has nothing to freeze.");
   let spelled29 = fn_name("git_message_hand_made");
+  let spelled30 = fn_name("g_sermon_edited_store_name");
   let names = [
     spelled,
     spelled2,
@@ -73,6 +74,7 @@ export function literals_frozen_names() {
     spelled27,
     spelled28,
     spelled29,
+    spelled30,
   ];
   return names;
 }
