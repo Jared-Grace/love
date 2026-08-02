@@ -3623,14 +3623,7 @@ def main():
     # fail loudly on a conflict, which a blind append cannot. See
     # find_heredoc_file_write.
     if find_heredoc_file_write(command):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": HEREDOC_FILE_WRITE_DENY_REASON,
-            }
-        }))
-        return
+        return decide("deny", HEREDOC_FILE_WRITE_DENY_REASON)
 
     # Also a hard floor (before any allow decision, so a stray allow rule can't
     # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every
@@ -3641,14 +3634,7 @@ def main():
     # is unaffected - its script is not in word position 1.
     non_ai_script = find_non_ai_scripts_invocation(command)
     if non_ai_script:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": non_ai_scripts_deny_reason(non_ai_script),
-            }
-        }))
-        return
+        return decide("deny", non_ai_scripts_deny_reason(non_ai_script))
 
     # Correctness floor rather than a safety one: a dispatcher call naming a
     # function no repo defines is guaranteed to throw, so a prompt spends the
@@ -3659,16 +3645,9 @@ def main():
     # after the seam floor so `node scripts/r.mjs <fn>` keeps its own message.
     dead_fn = find_dead_dispatcher_function(command)
     if dead_fn:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": dead_dispatcher_deny_reason(
-                    dead_fn, repos_function_names()
-                ),
-            }
-        }))
-        return
+        return decide("deny", dead_dispatcher_deny_reason(
+            dead_fn, repos_function_names()
+        ))
 
     # The same correctness floor one step on: the name is live, but the call
     # gives it none of the arguments it declares, so it throws for a reason
