@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
