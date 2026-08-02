@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
@@ -16,7 +17,7 @@ export async function indexeddb_name_literals_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let doors = await indexeddb_name_doors();
-  let ways = Object.keys(doors);
+  let ways = object_property_names(doors);
   let walked = await indexeddb_name_literals_all();
   let files = property_get(walked, "files");
   let sites = property_get(walked, "sites");
