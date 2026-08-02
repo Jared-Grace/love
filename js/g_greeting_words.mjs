@@ -1,7 +1,6 @@
+import { list_concat_if } from "./list_concat_if.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_time_greeting } from "./g_time_greeting.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { not } from "./not.mjs";
 export function g_greeting_words(time, christian) {
   ("every opening word an NPC could greet you with — the four plain ones, the greeting for the time of day the sky is showing (",
     fn_name("g_time_greeting"),
