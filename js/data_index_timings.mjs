@@ -47,10 +47,12 @@ export async function data_index_timings() {
   let stamps_from = performance_now();
   await file_stamps_by_path(f_paths);
   note("file_stamps_by_path_again", stamps_from);
+  ("How many names the fold had to place is the size of the work it did, so it is the identifiers that are counted and not the four lists they are sorted into. Counting the top of the index instead said four, every time, whatever the repo held.");
+  let identifiers = property_get(data, "identifiers");
   let r = {
     load,
     files: f_paths.length,
-    names: properties_size(data),
+    names: properties_size(identifiers),
     timings: timings_ranked(timings),
   };
   return r;
