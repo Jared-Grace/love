@@ -8,8 +8,8 @@ export async function g_arc_lengths_all() {
   "The arc lengths of every chapter that has been grouped, side by side, so what the chapters actually contain can be compared with the numbers the settings guess at.";
   "It finds its own set from the grouping todo rather than receiving a list, so it cannot fall behind the chapters that exist. A chapter joins this report by being grouped.";
   "The two settings it puts under pressure are the plant's length in days and the leader's share of the turns. Both were chosen from reasoning about weeks and cell sizes; the days and the longest arc here are read off the sermon text, so a gap between the two columns is a real finding rather than a rounding difference.";
-  let todo = await g_sermon_groups_todo();
-  let chapters = property_get(todo, "done");
+  let groups_todo = await g_sermon_groups_todo();
+  let chapters = property_get(groups_todo, "done");
   let settings = g_generation_settings();
   async function chapter_row(chapter) {
     let arcs = await g_arc_lengths(chapter);
