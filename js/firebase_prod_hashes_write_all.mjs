@@ -17,8 +17,8 @@ export async function firebase_prod_hashes_write_all() {
   let failed = [];
   for (let app_name of app_names) {
     async function lambda() {
-      let looked = await firebase_prod_app_hashes(app_name);
-      return looked;
+      let found_hashes = await firebase_prod_app_hashes(app_name);
+      return found_hashes;
     }
     let looked = await catch_null_async(lambda);
     let unreadable = null_is(looked);
