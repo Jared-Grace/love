@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_fn } from "./property_get_fn.mjs";
