@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { repo_functions_code } from "./repo_functions_code.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
@@ -21,7 +22,7 @@ export async function literals_frozen_fused_all() {
   let values = await literals_frozen_values();
   let repo_name = repo_love_name();
   let entries = await repo_functions_code(repo_name);
-  let getters = Object.keys(values);
+  let getters = object_property_names(values);
   let fused = [];
   for (let getter of getters) {
     let word = property_get(values, getter);
