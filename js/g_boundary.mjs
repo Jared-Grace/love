@@ -1,3 +1,6 @@
+import { g_boundary_rather_not } from "./g_boundary_rather_not.mjs";
+import { g_boundary_seen_again } from "./g_boundary_seen_again.mjs";
+import { g_boundary_know_better } from "./g_boundary_know_better.mjs";
 import { list_random_item_or_empty } from "./list_random_item_or_empty.mjs";
 import { g_boundary_softener } from "./g_boundary_softener.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -45,18 +48,17 @@ export function g_boundary(met, topic) {
   let r9 = text_random_or_empty(", if that's okay");
   let combined4 = text_combine_multiple(["Could we ", r8, r9, "?"]);
   let neutral = [combined, combined2, combined3, combined4];
+  let r12 = g_boundary_rather_not();
   let r10 = list_random_item([
-    g_boundary_rather_not(),
+    r12,
     "That, though, I'd like to keep to myself for now.",
   ]);
   let seen_again = g_boundary_seen_again();
   let combined5 = text_combine_multiple([seen_again, r10]);
   let contextual = [combined5];
   if (not(met)) {
-    let r11 = list_random_item([
-      g_boundary_know_better(),
-      "I hope you understand.",
-    ]);
+    let r13 = g_boundary_know_better();
+    let r11 = list_random_item([r13, "I hope you understand."]);
     let combined6 = text_combine_multiple([
       "You seem kind, but we only just met. ",
       r11,

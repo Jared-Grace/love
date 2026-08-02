@@ -1,3 +1,5 @@
+import { g_prayer_ask } from "./g_prayer_ask.mjs";
+import { g_prayer_closing } from "./g_prayer_closing.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { g_prayer } from "./g_prayer.mjs";

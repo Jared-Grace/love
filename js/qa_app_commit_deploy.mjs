@@ -1,3 +1,5 @@
+import { qa_promoted_unjudged } from "./qa_promoted_unjudged.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
 import { apps_frozen_names } from "./apps_frozen_names.mjs";
@@ -22,6 +24,11 @@ export async function qa_app_commit_deploy(search, commit) {
   let deployable = property_get(judged, "deployable");
   true_is_assert_json(deployable, judged);
   let hashes = await qa_app_commit_promote(search, commit);
+  ("Sending puts out every app waiting in the folder, not the one named here, so the others have to be accounted for before this one goes. Each of them either already matches what is being served - in which case it changes nothing and was argued about when it was sent - or it was built out of a named commit that was judged sound for it. Anything else is somebody's unfinished work about to be published under this run's name");
+  ("This asks nothing of the whole repo and judges no commit, so it costs about a second and cannot drift into the fourteen-minute question this whole path exists to avoid");
+  ("It belongs to this way of sending and not to the one that gates the whole tree first. That one has already asked whether everything standing in the folder is sound, which is a different warrant for the same conclusion - and asking this of it as well would refuse a build it had every right to send");
+  let unaccounted = await qa_promoted_unjudged();
+  list_empty_is_assert_json(unaccounted, unaccounted);
   async function lambda() {
     let app_names = apps_frozen_names();
     await list_map_unordered_async(
@@ -33,8 +40,9 @@ export async function qa_app_commit_deploy(search, commit) {
     return stdout;
   }
   let message = firebase_deploy_locked_message();
+  let lock_name = fn_name("firebase_deploy");
   let published = await lock_error(
-    fn_name("firebase_deploy"),
+    lock_name,
     lambda,
     qa_app_commit_deploy.name,
     message,

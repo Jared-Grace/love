@@ -5,5 +5,6 @@ export function g_boundary_rather_not() {
     " and ",
     fn_name("g_boundary_believer"),
     ", each of which offers it alongside a second phrasing of its own");
-  return "I'd still rather not get into that, though.";
+  let r = "I'd still rather not get into that, though.";
+  return r;
 }
