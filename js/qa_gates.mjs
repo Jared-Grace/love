@@ -180,6 +180,7 @@ export function qa_gates() {
     js_comment_migratable_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
     js_code_literal_site_none_cases_gate_run,
+    js_code_getter_literal_cases_gate_run,
     js_hash_key_literals_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
     js_query_key_literals_cases_gate_run,
