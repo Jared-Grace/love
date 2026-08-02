@@ -16,10 +16,16 @@ export function g_generation_plan() {
   let question_matches = divide(top, 100);
   let arc_matches = subtract(plant_matches, question_matches);
   let arc_conversations = divide(arc_matches, s.conversation_turns_mean);
+  ("The leader's conversations are a share of the plant's DAYS, so a longer plant means a longer discipling rather than the same ten visits stretched thinner.");
+  let leader_low = multiply(s.plant_days, s.leader_days_percent_minimum);
+  let leader_conversations_minimum = divide(leader_low, 100);
+  let leader_high = multiply(s.plant_days, s.leader_days_percent_maximum);
+  let leader_conversations_maximum = divide(leader_high, 100);
   let leader_conversations = divide(
-    s.leader_conversations_minimum + s.leader_conversations_maximum,
+    leader_conversations_minimum + leader_conversations_maximum,
     2,
   );
+  let leader_turns = multiply(leader_conversations, s.conversation_turns_mean);
   let other_conversations = subtract(arc_conversations, leader_conversations);
   let divided = divide(other_conversations, s.arc_conversations_maximum);
   let npcs_fewest = 1 + Math.ceil(divided);
