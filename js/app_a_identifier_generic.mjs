@@ -1,3 +1,4 @@
+import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { ternary } from "./ternary.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
@@ -18,7 +19,6 @@ import { app_a_function_overlay_refresh } from "./app_a_function_overlay_refresh
 import { function_param_delete } from "./function_param_delete.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
-import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { app_a_overlay_on_enter } from "./app_a_overlay_on_enter.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { clipboard_paste } from "./clipboard_paste.mjs";
@@ -59,8 +59,7 @@ export function app_a_identifier_generic(
   async function choices_get(o3, choices) {
     let node = property_get(a, "node");
     let ast = property_get(a, "ast");
-    let v_match = js_node_to_visitor(ast, node);
-    let stack = property_get(v_match, "stack");
+    let stack = js_node_to_visitor_stack(ast, node);
     let e = list_get_end_2(stack);
     let overlay_close = property_get(o3, "overlay_close");
     let overlay = property_get(o3, "overlay");

@@ -1,15 +1,14 @@
+import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_next } from "./list_next.mjs";
 import { list_filter_last } from "./list_filter_last.mjs";
 import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { list_index_of_end } from "./list_index_of_end.mjs";
-import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_a_node_index(a) {
   let ast = property_get(a, "ast");
   let node = property_get(a, "node");
-  let v_match = js_node_to_visitor(ast, node);
-  let stack = property_get(v_match, "stack");
+  let stack = js_node_to_visitor_stack(ast, node);
   function lambda(item) {
     let index_end = list_index_of_end(stack, item);
     let i = js_stack_list_block_is(stack, index_end);
