@@ -1,3 +1,4 @@
+import { divide_round } from "./divide_round.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -36,8 +37,7 @@ export function app_code_dot_rectangle(parent, rows, columns) {
   function dot_color(row, column) {
     "the ROW picks the hue (each row a clearly different colour), the COLUMN picks the lightness (each column a step lighter)";
     let top = multiply(row, 360);
-    let n = divide(top, rows);
-    let hue = round(n);
+    let hue = divide_round(top, rows);
     let column_last = subtract(columns, 1);
     let column_span = equal(column_last, 0) ? 1 : column_last;
     let top2 = multiply(column, 35);
