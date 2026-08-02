@@ -1,7 +1,7 @@
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_menu_container } from "./app_g_menu_container.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
+import { g_conversation_key } from "./g_conversation_key.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_study } from "./app_g_study.mjs";
@@ -41,7 +41,7 @@ export function app_g_menu(overlay, player) {
     app_g_container_text(sub, "What would you like to pray?");
     async function lambda22() {
       let prayer = property_get(player, "prayer");
-      let property_name = app_g_conversation_key();
+      let property_name = g_conversation_key();
       property_set(prayer, property_name, true);
       await app_g_player_save(player);
       close();
