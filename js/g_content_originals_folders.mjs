@@ -1,3 +1,4 @@
+import { g_sermon_edited_store_name } from "./g_sermon_edited_store_name.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function g_content_originals_folders() {
   "Every folder on the drive holding writing the game did itself.";
@@ -8,7 +9,7 @@ export function g_content_originals_folders() {
   let f_name3 = fn_name("g_objection_generate");
   let f_name4 = fn_name("g_arc_generate");
   let f_name5 = fn_name("g_struggle_generate");
-  let f_name6 = fn_name("app_g_bible");
+  let f_name6 = g_sermon_edited_store_name();
   let names = [f_name, f_name2, f_name3, f_name4, f_name5, f_name6];
   return names;
 }
