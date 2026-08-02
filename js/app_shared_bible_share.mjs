@@ -35,6 +35,17 @@ export async function app_shared_bible_share(
   ]);
   let languages = list_join(languages_chosen, "+");
   let base = html_url_without_hash();
-  let url = text_combine_multiple([base, "#ref=", reference, ",l=", languages]);
+  ("the two words this link stands on are frozen, so they are read off the functions that hold them rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change");
+  let url = text_combine_multiple([
+    base,
+    "#",
+    app_shared_bible_reference_hash_key(),
+    "=",
+    reference,
+    ",",
+    app_shared_bible_language_hash_key(),
+    "=",
+    languages,
+  ]);
   await window_share(url);
 }
