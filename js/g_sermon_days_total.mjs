@@ -12,7 +12,7 @@ export async function g_sermon_days_total() {
     let days = await g_sermon_chapter_days(chapter);
     return days;
   }
-  let each = await list_map_async(chapters, chapter_days);
-  let r = list_sum(each);
+  let chapter_days_each = await list_map_async(chapters, chapter_days);
+  let r = list_sum(chapter_days_each);
   return r;
 }
