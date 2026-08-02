@@ -19,7 +19,6 @@
   "functions_call_pairs_frequent,functions_fold_sites",
   "g_game_generate_report,g_game_plants_report",
   "guard_gate_run,memory_hook_gate_run",
-  "indexeddb_name_literals_gate_run,key_literals_gate_run_generic",
   "js_call_argument_named_node_set,js_call_arguments_same_names_set",
   "js_operator_call_to_node_unary,js_operator_call_to_node",
   "list_get,text_get",
