@@ -67,7 +67,7 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
-import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_chosen.mjs";
+import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -122,7 +122,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let ref = property_get_or(hash, app_shared_bible_reference_hash_key(), "");
   let ref_line = text_replace(ref, "+", " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
-  let languages_chosen = app_next_hash_to_languages_chosen(hash);
+  let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let language = list_last(languages_chosen);
   let primary_folder = ebible_language_to_bible_folder(language);
   let books = await ebible_version_books_browser(primary_folder);
