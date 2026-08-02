@@ -1,3 +1,4 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +17,7 @@ export async function commits_command_named_share(count_given) {
   let hand = 0;
   for (let commit of commits) {
     let subject = property_get(commit, "subject");
-    let bare = equal(subject, "ai");
+    let bare = equal(subject, git_message_hand_made());
     if (bare) {
       hand = hand + 1;
       continue;
