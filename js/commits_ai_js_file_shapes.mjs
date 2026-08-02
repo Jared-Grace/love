@@ -1,3 +1,4 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { commits_scratch_path_is } from "./commits_scratch_path_is.mjs";
@@ -25,7 +26,7 @@ export async function commits_ai_js_file_shapes(count_given) {
   let edits = 0;
   let scratch = 0;
   for (let commit of commits) {
-    let named = property_equals(commit, "subject", "ai");
+    let named = property_equals(commit, "subject", git_message_hand_made());
     if (not(named)) {
       continue;
     }
