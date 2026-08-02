@@ -25,11 +25,11 @@ export async function command_line_generic(command, extra) {
   let args = property_get(r5, "args");
   let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
-    let options = {
+    let spawn_options = {
       ...extra,
       shell: false,
     };
-    let child = spawn(cmd, args, options);
+    let child = spawn(cmd, args, spawn_options);
     let printed = "";
     let stderr = "";
     function lambda(data) {
@@ -75,27 +75,27 @@ export async function command_line_generic(command, extra) {
     child.on("close", lambda4);
   });
   return result;
-  function parseCommand(command) {
-    if (typeof command !== "string") {
+  function parseCommand(command_text) {
+    if (typeof command_text !== "string") {
       throw new TypeError("command must be a string");
     }
-    if (/[|&;`$()]/.test(command)) {
+    if (/[|&;`$()]/.test(command_text)) {
       throw new Error(
         "Shell operators are not allowed in command_line_generic",
       );
     }
-    let args = [];
+    let args_parsed = [];
     let current = "";
     let inQuotes = false;
-    for (let i = 0; i < command.length; i++) {
-      let c2 = command[i];
+    for (let i = 0; i < command_text.length; i++) {
+      let c2 = command_text[i];
       if (c2 === '"') {
         inQuotes = not(inQuotes);
         continue;
       }
       if (c2 === " " && not(inQuotes)) {
         if (current.length) {
-          args.push(current);
+          args_parsed.push(current);
           current = "";
         }
         continue;
@@ -103,11 +103,11 @@ export async function command_line_generic(command, extra) {
       current += c2;
     }
     if (current.length) {
-      args.push(current);
+      args_parsed.push(current);
     }
     let r2 = {
-      cmd: args.shift(),
-      args,
+      cmd: args_parsed.shift(),
+      args: args_parsed,
     };
     return r2;
   }
