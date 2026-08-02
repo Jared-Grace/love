@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -10,7 +11,6 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -46,8 +46,7 @@ export function app_code_lesson_expression_remainder_any() {
     let nums = text_integers(question);
     let number = list_get(nums, 0);
     let divisor = list_get(nums, 1);
-    let p = divide(number, divisor);
-    let quotient = floor(p);
+    let quotient = divide_floor(number, divisor);
     let whole_part = multiply(quotient, divisor);
     let raw = divide(number, divisor);
     let r = [quotient, whole_part, raw];

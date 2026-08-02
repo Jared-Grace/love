@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { file_read_folder_user_txt_split_normalize } from "./file_read_folder_user_txt_split_normalize.mjs";
 import { list_translate_openai } from "./list_translate_openai.mjs";
@@ -7,10 +8,8 @@ import { list_map_pairs } from "./list_map_pairs.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_get } from "./list_get.mjs";
-import { floor } from "./floor.mjs";
 import { list_filter_index } from "./list_filter_index.mjs";
 import { list_split } from "./list_split.mjs";
-import { divide } from "./divide.mjs";
 export async function sermon_translate_urdu(file_name) {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let separator = "---";
@@ -22,8 +21,7 @@ export async function sermon_translate_urdu(file_name) {
   function lambda2(item, index) {
     let change = lambda(item, index);
     if (change) {
-      let p = divide(index, 2);
-      let i = floor(p);
+      let i = divide_floor(index, 2);
       let item3 = list_get(value2, i);
       let mapped2 = list_map_pairs(item3, item, pair_to_list);
       return mapped2;
