@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
 import { apps_frozen_names } from "./apps_frozen_names.mjs";
-import { firebase_deploy } from "./firebase_deploy.mjs";
 import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
 import { firebase_deploy_bypass_unchanged } from "./firebase_deploy_bypass_unchanged.mjs";
 import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
@@ -34,7 +34,7 @@ export async function qa_app_commit_deploy(search, commit) {
   }
   let message = firebase_deploy_locked_message();
   let published = await lock_error(
-    firebase_deploy.name,
+    fn_name("firebase_deploy"),
     lambda,
     qa_app_commit_deploy.name,
     message,
