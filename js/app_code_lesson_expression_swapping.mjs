@@ -129,9 +129,14 @@ export function app_code_lesson_expression_swapping() {
       " are different, so we cannot always swap ",
       "-",
     ]);
-    let divide = app_code_container_light_blue(root);
-    html_div_cycle_code(divide, ["", "1 / 2 === 0.5", " but ", "2 / 1 === 2"]);
-    html_div_cycle_code(divide, [
+    let divide_row = app_code_container_light_blue(root);
+    html_div_cycle_code(divide_row, [
+      "",
+      "1 / 2 === 0.5",
+      " but ",
+      "2 / 1 === 2",
+    ]);
+    html_div_cycle_code(divide_row, [
       "",
       "0.5",
       " and ",
