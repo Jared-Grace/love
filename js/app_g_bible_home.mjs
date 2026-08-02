@@ -1,3 +1,4 @@
+import { app_g_bible } from "./app_g_bible.mjs";
 import { app_g_openai_split_property } from "./app_g_openai_split_property.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { firebase_upload_object_compressed_browser } from "./firebase_upload_object_compressed_browser.mjs";
@@ -31,6 +32,7 @@ export async function app_g_bible_home(context) {
     ({ chapter_code, downloaded, r, passages } = await app_g_bible_home_inner(
       context,
       g_sermon_generate_download,
+      app_g_bible,
     ));
     function on_passage({ passage, verses }) {
       let p = list_last_property(verses, "p");
