@@ -1,3 +1,5 @@
+import { json_from } from "./json_from.mjs";
+import { json_to } from "./json_to.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -42,12 +44,12 @@ export function app_g_dev_index() {
   let open_paths = new Set();
   let open_stored = sessionStorage.getItem(open_key);
   if (open_stored) {
-    let v = JSON.parse(open_stored);
+    let v = json_from(open_stored);
     open_paths = new Set(v);
   }
   function open_persist() {
     "remember which category nodes are expanded ACROSS the reload that opening a route triggers: the open set lives in sessionStorage (per tab, survives the hash-change reload, gone on tab close — dev-only state), so coming BACK to #index from a game screen restores the same drilled-open path instead of collapsing everything.";
-    let v2 = JSON.stringify([...open_paths]);
+    let v2 = json_to([...open_paths]);
     sessionStorage.setItem(open_key, v2);
   }
   function index_card(parent) {
