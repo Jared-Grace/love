@@ -1,6 +1,5 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { js_condition_bodies_empty_cases } from "./js_condition_bodies_empty_cases.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_condition_bodies_empty } from "./js_condition_bodies_empty.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function js_condition_bodies_empty_cases_gate_run() {
@@ -13,8 +12,7 @@ export function js_condition_bodies_empty_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_condition_bodies_empty_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let empties = js_condition_bodies_empty(ast);
     return empties;
   }
