@@ -1,3 +1,4 @@
+import { list_random_item_or_empty } from "./list_random_item_or_empty.mjs";
 import { g_boundary_softener } from "./g_boundary_softener.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
@@ -13,8 +14,7 @@ export function g_boundary(met, topic) {
   ]);
   let softener = g_boundary_softener();
   let r2 = list_random_item(["talk about", "get into", "discuss"]);
-  let t = list_random_item([" right now", " just now"]);
-  let r3 = text_random_or_empty(t);
+  let r3 = list_random_item_or_empty([" right now", " just now"]);
   let combined = text_combine_multiple([
     thanks,
     "I'd rather not ",
