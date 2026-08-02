@@ -8,6 +8,7 @@ import { text_trim } from "./text_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   await page.goto(url);
   await messenger_reply_messages_urls_add(url);
   await messenger_reply_wait(page);
