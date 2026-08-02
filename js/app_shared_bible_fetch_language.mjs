@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
@@ -23,7 +24,11 @@ export async function app_shared_bible_fetch_language(
       verses = await ebible_verses_browser(bible_folder, chapter_code);
     }
     let books = await ebible_version_books_browser(bible_folder);
-    let language = list_find_property(ebible_languages(), "language_code", lc);
+    let language = list_find_property(
+      ebible_languages(),
+      language_code_key(),
+      lc,
+    );
     let v2 = {
       language_code: lc,
       language,
