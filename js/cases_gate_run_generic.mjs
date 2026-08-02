@@ -1,3 +1,4 @@
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { gate_case_mark } from "./gate_case_mark.mjs";
 import { gate_counts_log } from "./gate_counts_log.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -35,6 +36,15 @@ export function cases_gate_run_generic(
   ("nothing to ask.");
   ("A failing line says what it wanted as well as what it got, which none of them");
   ("did - reading a failure meant opening the corpus to find out what was expected.");
+  ("A corpus with nothing in it is refused before anything is asked. Every gate here");
+  ("passes by raising nothing, so a corpus that had quietly come back empty would not");
+  ("turn its gate red - it would turn it green, print 'pass 0 fail 0', and read as a");
+  ("clean run of the very check that exists because the sweep beneath it cannot tell");
+  ("a right answer from no answer.");
+  list_empty_not_is_assert_json(cases, {
+    label,
+    hint: "this corpus came back with no cases at all, so the gate would have passed without asking anything - look at whatever builds the cases rather than at what they check",
+  });
   let failures = [];
   for (let c of cases) {
     let actual = answer(c);
