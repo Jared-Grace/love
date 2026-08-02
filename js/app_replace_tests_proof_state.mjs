@@ -1,6 +1,7 @@
 export async function app_replace_tests_proof_state(page) {
   "read the proof rail as a compact string: each state's symbols joined, a green (highlighted) symbol suffixed with *, states separated by |, or the word gone when no proof is on screen - so the proof interaction test can assert exactly which symbols are highlighted";
   "Nothing in here may be normalized. The inner function is handed to the page rather than called, so it is written out as text and run in the browser, where a name this repo keeps means nothing - a rewritten comparison lands there as a call to something undefined, and the read it belongs to then fails for a reason no gate can see.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   function extract() {
     let green = "rgb(0, 180, 0)";
     let dark = "rgb(30, 58, 138)";
