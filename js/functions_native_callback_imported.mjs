@@ -17,8 +17,8 @@ export async function functions_native_callback_imported() {
   function record_each(record) {
     let text = property_get(record, "text");
     function parse() {
-      let ast = js_parse(text);
-      return ast;
+      let tree = js_parse(text);
+      return tree;
     }
     let ast = catch_null(parse);
     let readable = not_equal(ast, null);
