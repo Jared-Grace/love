@@ -3,8 +3,8 @@ import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function app_shared_flow_next(context, screens) {
-  let before_or_after = function lambda(screens, index) {
-    let skipped = list_skip(screens, text_combine(index, 1));
+  let before_or_after = function lambda(screens_given, index) {
+    let skipped = list_skip(screens_given, text_combine(index, 1));
     return skipped;
   };
   let find = list_first;
