@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -20,11 +21,11 @@ export function app_shared_bible_verse_highlight(
     let first = list_first(sliced);
     let last = list_last(sliced);
     let top = "0";
-    if (first === verse_number) {
+    if (equal(first, verse_number)) {
       top = radius;
     }
     let bottom = "0";
-    if (last === verse_number) {
+    if (equal(last, verse_number)) {
       bottom = radius;
     }
     let value = text_combine_multiple([
