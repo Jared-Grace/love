@@ -1,3 +1,4 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -14,7 +15,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -50,8 +50,7 @@ export function app_code_lesson_expression_string_order() {
     let distinct = app_code_verse_words_clean_unique();
     function lower_case_is(word) {
       "whether a word is already all lower case (unchanged by lower-casing it)";
-      let lowered = text_lower_to(word);
-      let same = equal(word, lowered);
+      let same = text_lower_is(word);
       return same;
     }
     let lower_only = list_filter(distinct, lower_case_is);
