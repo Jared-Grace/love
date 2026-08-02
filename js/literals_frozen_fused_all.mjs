@@ -13,23 +13,27 @@ export async function literals_frozen_fused_all() {
   "Every place a frozen word is spelled into the middle of a joined-up address rather than read off the function that holds it, as {f_name, getter, word, text}. Read-only.";
   "Freezing a word only protects the sites that ask for it. A site that writes the word into a longer string keeps the old spelling when the function is deliberately given a new one, and nothing says so - the freeze record still matches its own source, and the site is a string the record was never about.";
   "A word is only counted against a file of the same family, meaning the two names begin with the same two words. Without that, every one-letter word collides with somebody else's protocol: the version in a cache-busting address reads as the verse of a bible link, and the query of a search engine reads as the query of this repo's own search. Those are different meanings that happen to be spelled the same, and asking a person to tell them apart every time is the reading nobody would keep.";
-  "The walk is narrowed by the word with its equals sign, which every fused shape contains, so a file that could not hold one is never opened.";
+  "The repo is read once for the whole walk, and each word is then asked of what is already in hand. Reading it per word instead cost this check thirteen minutes, which was nine times the next slowest gate and set the wall clock of every run of q on its own.";
+  "Of the two narrowings the family one goes first, because it compares two names and opens nothing, while the word with its equals sign - which every fused shape contains - still spares the reading of a tree.";
   arguments_assert(arguments, 0);
   let values = await literals_frozen_values();
   let repo_name = repo_love_name();
+  let entries = await repo_functions_code(repo_name);
   let getters = Object.keys(values);
   let fused = [];
   for (let getter of getters) {
     let word = property_get(values, getter);
     let needle = word + "=";
-    let candidates = await repo_functions_names_code_includes(
-      repo_name,
-      needle,
-    );
-    for (let candidate of candidates) {
+    for (let entry of entries) {
+      let candidate = property_get(entry, "name");
       let shared = names_leading_words_shared_count(getter, candidate);
       let stranger = less_than(shared, 2);
       if (stranger) {
+        continue;
+      }
+      let code = property_get(entry, "code");
+      let mentions = text_includes(code, needle);
+      if (not(mentions)) {
         continue;
       }
       let tree = await function_ast(candidate);
