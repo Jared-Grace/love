@@ -1,3 +1,4 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -6,7 +7,6 @@ import { property_set } from "./property_set.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { add_1 } from "./add_1.mjs";
 import { each } from "./each.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function js_block_canonical(sigs, input_names, output_name) {
@@ -46,8 +46,7 @@ export function js_block_canonical(sigs, input_names, output_name) {
     let encoded = list_join_empty([callee, "(", joined, ")"]);
     return encoded;
   }
-  let encodeds = list_map(sigs, encode);
-  let body = list_join(encodeds, ";");
+  let body = list_map_join_separator(sigs, encode, ";");
   let out_slot = canon_arg(output_name);
   let full = list_join_empty([body, "=>", out_slot]);
   return full;

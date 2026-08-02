@@ -1,3 +1,4 @@
+import { js_binding_names } from "./js_binding_names.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -10,5 +11,6 @@ export async function js_call_arguments_same_names_set(ast, selects) {
   let f_name = js_call_callee_name_try(call);
   let d = await function_parse_declaration(f_name);
   let declaration = property_get(d, "declaration");
-  let params_names = js_function_declaration_params_names(declaration2);
+  let names_param = js_function_declaration_params_names(declaration);
+  let names_bound = js_binding_names(ast);
 }

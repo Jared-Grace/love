@@ -1,10 +1,9 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_unreachable_check_sites } from "./functions_unreachable_check_sites.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 import { each } from "./each.mjs";
 import { log_console } from "./log_console.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -36,8 +35,7 @@ export async function functions_unreachable_check_gate_run() {
       let f_name = property_get(site, "f_name");
       return f_name;
     }
-    let names = list_map(sites, lambda_name);
-    let joined = list_join(names, " ");
+    let joined = list_map_join_separator(sites, lambda_name, " ");
     let combined = text_combine_multiple([
       "unreachable check gate: ",
       count,
