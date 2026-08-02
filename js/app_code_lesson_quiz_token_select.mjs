@@ -87,8 +87,8 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let merged = app_code_quiz_string_tokens_merge(variation_first);
         let code2 = js_tokens_to_code(merged);
-        function lambda5(index, token) {
-          let sum = text_index_of_from_start(code2, token, index);
+        function lambda5(index, token_each) {
+          let sum = text_index_of_from_start(code2, token_each, index);
           return sum;
         }
         let reduced = list_reduce(chosen, lambda5, 0);
