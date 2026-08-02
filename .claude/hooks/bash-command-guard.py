@@ -3694,14 +3694,7 @@ def main():
     # 'ask' into a self-correcting 'deny', never blocks an auto-approve.
     awk_tool = find_awk_text_tool(command)
     if awk_tool is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": awk_text_tool_deny_reason(awk_tool),
-            }
-        }))
-        return
+        return decide("deny", awk_text_tool_deny_reason(awk_tool))
 
     # A journal read of one of this repo's own daemons has an argumentless
     # function answering it for every daemon at once. Deny with that pointer
@@ -3711,14 +3704,7 @@ def main():
     # 'ask' into a self-correcting 'deny', and only for love_ units.
     daemon_unit = find_journalctl_daemon_unit(command)
     if daemon_unit is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": journalctl_daemon_unit_deny_reason(daemon_unit),
-            }
-        }))
-        return
+        return decide("deny", journalctl_daemon_unit_deny_reason(daemon_unit))
 
     safe_verbs = load_safe_verbs()
     safe_exact_commands = load_safe_exact_commands()
@@ -3726,18 +3712,11 @@ def main():
         return
 
     if snapshot_detached_checkout_is(command):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "allow",
-                "permissionDecisionReason": (
-                    "Auto-approved: a detached checkout of a scratch worktree "
-                    "under /dev/shm, which moves no branch and discards only "
-                    "that worktree's own state."
-                ),
-            }
-        }))
-        return
+        return decide("allow", (
+            "Auto-approved: a detached checkout of a scratch worktree "
+            "under /dev/shm, which moves no branch and discards only "
+            "that worktree's own state."
+        ))
 
     try:
         safe = is_safe(command, safe_verbs, safe_exact_commands)
@@ -3745,17 +3724,10 @@ def main():
         safe = False
 
     if safe:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "allow",
-                "permissionDecisionReason": (
-                    "Auto-approved: every command in this sequence/for-loop "
-                    "uses a verb already in permissions.allow."
-                ),
-            }
-        }))
-        return
+        return decide("allow", (
+            "Auto-approved: every command in this sequence/for-loop "
+            "uses a verb already in permissions.allow."
+        ))
 
     stripped = time_subshell_stripped(command, safe_verbs, safe_exact_commands)
     if stripped is not None:

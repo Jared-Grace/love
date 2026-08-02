@@ -1,4 +1,4 @@
-import { app_g_openai_split_property } from "./app_g_openai_split_property.mjs";
+import { g_openai_split_property } from "./g_openai_split_property.mjs";
 import { g_themes } from "./g_themes.mjs";
 import { list_get } from "./list_get.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_g_wrong(passage, passages, property) {
   let text = property_get(passage, "text");
-  let split = app_g_openai_split_property(passage, property);
+  let split = g_openai_split_property(passage, property);
   let ob = list_random_item(split);
   let themes_correct = g_themes(text_combine_multiple([text, " ", ob]));
   function lambda(p) {

@@ -1,5 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
+import { g_greeting_words } from "./g_greeting_words.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { g_time_sky_remark } from "./g_time_sky_remark.mjs";
+import { null_is } from "./null_is.mjs";
+import { boolean_random_n } from "./boolean_random_n.mjs";
 import { g_time_remark } from "./g_time_remark.mjs";
-import { g_time_greeting } from "./g_time_greeting.mjs";
 import { g_random_dot_bang } from "./g_random_dot_bang.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
@@ -68,7 +73,8 @@ export function g_greeting(met, name_player, time, christian) {
     " answers null at the three plain daylight hours, so this sentence simply does not exist at noon however the dice land. it brings its own question or exclamation mark, so no dot is added");
   let sky_remark = g_time_sky_remark(time, christian);
   let sky_maybe = "";
-  if (not(null_is(sky_remark))) {
+  let b = null_is(sky_remark);
+  if (not(b)) {
     let rare = boolean_random_n(6);
     if (rare) {
       sky_maybe = text_combine(" ", sky_remark);
