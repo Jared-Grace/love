@@ -613,6 +613,32 @@ export function permission_grant_names() {
   let spelled608 = fn_name("storage_local_key_words_record_new");
   let spelled609 = fn_name("functions_inside_duplicates_gate_run");
   let spelled610 = fn_name("permission_tool_unmatched_gate_run");
+  let spelled611 = fn_name("app_replace_rule_set_verify_nearley");
+  let spelled612 = fn_name("baseline_growth_guarded_gate_run");
+  let spelled613 = fn_name("baseline_writers_growth_gate_run");
+  let spelled614 = fn_name("baseline_writers_growth_unguarded");
+  let spelled615 = fn_name("baseline_writers_names");
+  let spelled616 = fn_name("dispatcher_commands_fn_named");
+  let spelled617 = fn_name("dispatcher_scripts");
+  let spelled618 = fn_name("function_acronym_to_name");
+  let spelled619 = fn_name("function_declarations_unused_clear");
+  let spelled620 = fn_name("function_fold_suggest");
+  let spelled621 = fn_name("function_literal_route_any");
+  let spelled622 = fn_name("function_name_full_assert");
+  let spelled623 = fn_name("function_new_sweep");
+  let spelled624 = fn_name("function_parameters_unread");
+  let spelled625 = fn_name("function_parameter_unread_remove");
+  let spelled626 = fn_name("functions_inside_duplicates_baseline_write");
+  let spelled627 = fn_name("functions_literal_route_any");
+  let spelled628 = fn_name("functions_parameters_unread");
+  let spelled629 = fn_name("functions_parameters_unread_baseline_write");
+  let spelled630 = fn_name("functions_parameters_unread_gate_run");
+  let spelled631 = fn_name("functions_work_none_is");
+  let spelled632 = fn_name("js_log_remove_workflow");
+  let spelled633 = fn_name("lock_held_is");
+  let spelled634 = fn_name("parameters_unread_baseline_path");
+  let spelled635 = fn_name("qa_gates_publish");
+  let spelled636 = fn_name("sandbox_nearley");
   let names = [
     spelled,
     spelled2,
@@ -1224,6 +1250,32 @@ export function permission_grant_names() {
     spelled608,
     spelled609,
     spelled610,
+    spelled611,
+    spelled612,
+    spelled613,
+    spelled614,
+    spelled615,
+    spelled616,
+    spelled617,
+    spelled618,
+    spelled619,
+    spelled620,
+    spelled621,
+    spelled622,
+    spelled623,
+    spelled624,
+    spelled625,
+    spelled626,
+    spelled627,
+    spelled628,
+    spelled629,
+    spelled630,
+    spelled631,
+    spelled632,
+    spelled633,
+    spelled634,
+    spelled635,
+    spelled636,
   ];
   return names;
 }
