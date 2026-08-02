@@ -62,18 +62,6 @@
    ]
   },
   {
-   "name": "html_alert",
-   "unread": [
-    "message"
-   ]
-  },
-  {
-   "name": "html_span_on_click_google_define",
-   "unread": [
-    "search_term"
-   ]
-  },
-  {
    "name": "html_style_grid",
    "unread": [
     "rows"
