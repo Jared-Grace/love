@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
@@ -20,12 +21,12 @@ export function app_shared_bible_languages_choose(
   "back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there";
   app_shared_bible_panel_open(content, back);
   function to_language(code) {
-    let r = list_find_property_or_null(languages, "language_code", code);
+    let r = list_find_property_or_null(languages, language_code_key(), code);
     return r;
   }
   let chosen = list_map_filter_null_not_is(languages_chosen, to_language);
   function on_change() {
-    let codes = list_map_property(chosen, "language_code");
+    let codes = list_map_property(chosen, language_code_key());
     if (list_empty_is(codes)) {
       let v = ebible_language_en_code();
       codes = [v];
@@ -52,7 +53,7 @@ export function app_shared_bible_languages_choose(
     languages,
     chosen,
     "name",
-    "language_code",
+    language_code_key(),
     on_change,
     choices_label,
     on_sort_change,
