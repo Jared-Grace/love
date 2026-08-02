@@ -1,6 +1,6 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
 export function functions_shadowing_offender_hidden(offender) {
   arguments_assert(arguments, 1);
   ("Every word a function hides, whichever of the two ways it hides it.");
@@ -10,7 +10,6 @@ export function functions_shadowing_offender_hidden(offender) {
   ("rename, but asking whether a word is hidden at all does not care which, so the");
   ("two lists are read only to be laid end to end.");
   let outer = property_get(offender, "shadows_outer");
-  let over_function = property_get(offender, "shadows_function");
-  let hidden = list_concat(outer, over_function);
+  let hidden = list_concat_property(outer, offender, "shadows_function");
   return hidden;
 }
