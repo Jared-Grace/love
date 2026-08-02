@@ -1,10 +1,10 @@
+import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_replace_multiple } from "./list_replace_multiple.mjs";
 import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_a_functionize_choices_add } from "./app_a_functionize_choices_add.mjs";
@@ -38,8 +38,7 @@ export function app_a_function_declaration(a) {
   function choices_get(o, choices) {
     app_a_functionize_choices_add(choices, a, o);
     let ast = property_get(a, "ast");
-    let v_match = js_node_to_visitor(ast, node);
-    let stack = property_get(v_match, "stack");
+    let stack = js_node_to_visitor_stack(ast, node);
     let e2 = list_get_end_2(stack);
     function lambda6() {
       list_add(choices, {

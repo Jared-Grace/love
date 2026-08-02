@@ -5,7 +5,6 @@ import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
 import { property_get } from "./property_get.mjs";
 import { import_install } from "./import_install.mjs";
-import fs from "fs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { subtract } from "./subtract.mjs";
@@ -80,10 +79,10 @@ export async function image_generate(text, path_output) {
   let right3 = multiply_divide(left2, lineHeight, 2);
   let startY = subtract(left, right3);
   function lambda(line, i) {
-    let divided2 = divide(WIDTH, 2);
+    let divided = divide(WIDTH, 2);
     let right4 = multiply(i, lineHeight);
     let combined = text_combine(startY, right4);
-    ctx.fillText(line, divided2, combined);
+    ctx.fillText(line, divided, combined);
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");
