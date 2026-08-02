@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { git_push_folder_now } from "./git_push_folder_now.mjs";
 import { date_diff_mins } from "./date_diff_mins.mjs";
@@ -16,13 +17,14 @@ export async function git_push_folder(folder) {
   async function lambda() {
     let now = date_now();
     let now_iso = date_iso_to(now);
-    let property_name = function_name_combine(fn_name("git_push"), "when");
+    let left = fn_name("git_push");
+    let property_name = function_name_combine(left, "when");
     let d_path = user_data_path();
     let joined = path_join([folder, d_path]);
     let before_iso = await data_property_get_generic(joined, property_name);
     let before = date_to(before_iso);
     let mins = date_diff_mins(now, before);
-    if (mins < 5) {
+    if (less_than(mins, 5)) {
       return;
     }
     await git_push_folder_now(folder);
