@@ -1,3 +1,4 @@
+import { html_hash_name_get } from "./html_hash_name_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_refresh } from "./app_shared_refresh.mjs";
@@ -5,8 +6,6 @@ import { app_message } from "./app_message.mjs";
 import { app_message_provide_travel } from "./app_message_provide_travel.mjs";
 import { app_message_provide_food } from "./app_message_provide_food.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_hash_get } from "./html_hash_get.mjs";
-import { text_skip } from "./text_skip.mjs";
 import { app_sandbox_choose } from "./app_sandbox_choose.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
@@ -15,8 +14,7 @@ export async function app_sandbox(context) {
   html_reload_on_hash_change();
   html_clear(root);
   html_mobile_default(context);
-  let s = html_hash_get();
-  let name = text_skip(s, 1);
+  let name = html_hash_name_get();
   app_sandbox_choose(root, name);
   return;
   let app_fn = app_message;
