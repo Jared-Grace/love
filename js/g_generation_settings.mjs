@@ -6,6 +6,7 @@ export function g_generation_settings() {
   "The two that already had names keep them. Matches in a day and sermon lines in a day are read from their own functions rather than copied, so this cannot drift from the pacing the rest of the game is built on.";
   "A conversation's length is a DRAW, not a size, so it takes three numbers rather than one - a low end, a middle it sits near, and a high end it rarely reaches. One npc is short some days and long others, and that variety is wanted.";
   "The low end is a setting because getting into a conversation costs a fixed price - walk over, tap the player, pray, pick the prayer, tap the person, ask for discernment, choose an opener - and a conversation holding one or two turns spends more of itself on the approach than on the Scripture it exists to reach. It also fixes the most conversations a day can hold, which is why that number is worked out rather than written down.";
+  "The swap count is how many times the finished arc lengths are nudged - two arcs picked, one giving a turn to the other - which takes the arithmetic out of a descending list without changing the total or the number of people. Fifty is enough for the lengths to stop looking counted and few enough that the descent's shape survives. It is seeded on the chapter code, so a chapter always lands the same way.";
   "The fewest CONVERSATIONS an arc may hold is one, and a one-conversation arc is a whole person rather than a thin one - somebody who hears and believes, and whose discipling then happens through the other believers rather than on screen. Holding the floor at three bought nothing and cost variety, because the budget then had to go into fewer, longer arcs.";
   let day_matches = g_day_matches();
   let day_lines = g_day_lines();
@@ -23,6 +24,7 @@ export function g_generation_settings() {
     arc_conversations_minimum: 1,
     arc_conversations_maximum: 9,
     question_matches_percent: 25,
+    arc_length_swaps: 50,
     npcs_available_minimum: 4,
   };
   return r;
