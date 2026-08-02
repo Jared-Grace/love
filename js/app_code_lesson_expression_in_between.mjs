@@ -31,8 +31,8 @@ export function app_code_lesson_expression_in_between() {
     let min3 = add(a, 2);
     let c = integer_random(min3, 9);
     let below = subtract(a, 1);
-    let above = add(c, 1);
-    let b = list_random_item([below, above]);
+    let above_c = add(c, 1);
+    let b = list_random_item([below, above_c]);
     let code = range_code(a, b, c);
     return code;
   }
