@@ -2,7 +2,7 @@ import { each_async } from "./each_async.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { folder_js } from "./folder_js.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
-import { js_math_calls_rewrite } from "./js_math_calls_rewrite.mjs";
+import { js_builtin_calls_rewrite } from "./js_builtin_calls_rewrite.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { path_join } from "./path_join.mjs";
@@ -24,7 +24,7 @@ export async function functions_math_calls_pending() {
     let f_path = path_join([src, file_name]);
     let parsed = await file_js_parse(f_path);
     let ast = property_get(parsed, "ast");
-    let rewritten = js_math_calls_rewrite(ast);
+    let rewritten = js_builtin_calls_rewrite(ast);
     let moved = property_get(rewritten, "moved");
     let none = list_empty_is(moved);
     if (none) {
