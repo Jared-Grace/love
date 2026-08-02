@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
 import { js_code_literal_prose_only } from "./js_code_literal_prose_only.mjs";
 import { literal_getter_peer_is } from "./literal_getter_peer_is.mjs";
@@ -38,7 +39,7 @@ export function literal_duplicates_generic(codes) {
   }
   let found = [];
   for (let getter of getters) {
-    let quoted = JSON.stringify(getter.literal);
+    let quoted = json_to(getter.literal);
     let files = [];
     for (let f_name of Object.keys(codes)) {
       let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
