@@ -24,7 +24,8 @@ export function js_name_value_use_nodes(ast, f_name) {
   let declarations = list_map_property(imports, "declaration");
   let imported = list_map_squash(declarations, js_identifiers);
   let functions = js_function_node_find_named_list(ast, f_name);
-  let ids = list_map_property(functions, "id");
+  let nodes = list_map_property(functions, "node");
+  let ids = list_map_property(nodes, "id");
   let uncalled = list_difference(named, callees);
   let unimported = list_difference(uncalled, imported);
   let value_uses = list_difference(unimported, ids);
