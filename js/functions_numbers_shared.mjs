@@ -1,3 +1,4 @@
+import { list_multiple_not_is } from "./list_multiple_not_is.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
@@ -6,7 +7,6 @@ import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { properties_get } from "./properties_get.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -39,8 +39,7 @@ export async function functions_numbers_shared(most) {
   for (let key of keys) {
     let group = property_get(by_value, key);
     let names = property_get(group, "names");
-    let shared = list_multiple_is(names);
-    let alone = not(shared);
+    let alone = list_multiple_not_is(names);
     if (alone) {
       continue;
     }
