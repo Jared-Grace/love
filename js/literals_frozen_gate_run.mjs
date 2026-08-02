@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -25,8 +26,8 @@ export async function literals_frozen_gate_run() {
   let now = await literals_frozen_values();
   let path = literals_frozen_path();
   let recorded = await file_read_json(path);
-  let a = Object.keys(now);
-  let b = Object.keys(recorded);
+  let a = object_property_names(now);
+  let b = object_property_names(recorded);
   let names = list_concat_unique(a, b);
   ("A name the record has never held is told apart from one whose value has moved, because only the second is the thing described above. Counting them together made adding a frozen constant fail as though a published value had changed under it - the case this says in its own words it is not watching - and the repair offered was the heavy command, so a rare and deliberate act was being asked for every time somebody named a new one.");
   let fresh = [];
