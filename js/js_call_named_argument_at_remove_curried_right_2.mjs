@@ -1,3 +1,4 @@
+import { js_call_named_argument_at_remove } from "./js_call_named_argument_at_remove.mjs";
 export function js_call_named_argument_at_remove_curried_right_2(
   f_name,
   index,
