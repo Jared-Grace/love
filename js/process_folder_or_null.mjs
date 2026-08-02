@@ -1,7 +1,6 @@
+import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import fs from "fs";
 import { path_join } from "./path_join.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { text_remove_end } from "./text_remove_end.mjs";
 import { process_folder_deleted_note } from "./process_folder_deleted_note.mjs";
 export function process_folder_or_null(pid) {
   "Where a running process is working, or nothing when there is no such process or it is not ours to look at.";
@@ -19,10 +18,6 @@ export function process_folder_or_null(pid) {
     return null;
   }
   let note = process_folder_deleted_note();
-  let marked = text_ends_with(answered, note);
-  if (marked) {
-    let plain = text_remove_end(answered, note);
-    return plain;
-  }
-  return answered;
+  let plain = text_suffix_without_try(answered, note);
+  return plain;
 }
