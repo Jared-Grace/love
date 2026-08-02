@@ -1,5 +1,5 @@
-import { app_g_verify_chapter_query_key } from "./app_g_verify_chapter_query_key.mjs";
-import { app_g_verify_chapter_storage_key } from "./app_g_verify_chapter_storage_key.mjs";
+import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
+import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
 import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
@@ -53,8 +53,8 @@ import { app_shared_button_list_centered } from "./app_shared_button_list_center
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let v6 = app_g_verify_chapter_query_key();
-  let v7 = app_g_verify_chapter_storage_key();
+  let v6 = g_verify_chapter_query_key();
+  let v7 = g_verify_chapter_storage_key();
   let chapter_code =
     new URLSearchParams(location.search).get(v6) ||
     localStorage.getItem(v7) ||
