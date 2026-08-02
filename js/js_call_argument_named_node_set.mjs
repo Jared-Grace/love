@@ -26,11 +26,9 @@ export async function js_call_argument_named_node_set(
   ("there — a written line, or a name that must be only a name — share everything");
   ("except how they were read. Which matters because only one of them can be");
   ("handed a standing approval.");
-  let node = list_single(selects);
-  let call = js_node_call_get(node);
+  let call = js_selects_call_get(selects);
   let f_name = js_call_callee_name_try(call);
-  let d = await function_parse_declaration(f_name);
-  let names = js_function_declaration_property_params_names(d, "declaration");
+  let names = await function_params_names(f_name);
   let includes = list_includes(names, param_name);
   assert_json(includes, {
     hint: "the called function has no parameter by that name — would you like one of the names it does have?",

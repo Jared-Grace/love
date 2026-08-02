@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 export async function function_params_names(f_name) {
   arguments_assert(arguments, 1);
   ("The names a function calls the things it takes, in the order it takes them.");
