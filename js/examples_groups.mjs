@@ -76,7 +76,6 @@ export function examples_groups() {
         "example_prose_add_after_selected",
         "example_prose_add_before_selected",
         "example_arguments_same_names_set",
-        "example_shadowing_rename_in",
       ],
     },
     {
@@ -99,6 +98,7 @@ export function examples_groups() {
         "example_imports_property_names_are_not_references",
         "example_imports_shorthand_and_computed_are_references",
         "example_shadowing_rename_shorthand",
+        "example_shadowing_rename_in",
         "example_fn_name_reference_strip",
         "example_prose_name_spelled_not_imported",
         "example_fold_wrap_index",
