@@ -48,7 +48,12 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(plus, [
       "Adding puts two amounts together, so the order does not matter",
     ]);
-    html_div_cycle_code(plus, ["", "3 + 4 === 7", " and ", "4 + 3 === 7"]);
+    html_div_cycle_code(plus, [
+      "",
+      "3 + 4 === 7",
+      " and swapped: ",
+      "4 + 3 === 7",
+    ]);
     html_div_cycle_code(plus, [
       "",
       "7",
@@ -81,7 +86,12 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(minus, [
       "Subtracting takes one number away from the other",
     ]);
-    html_div_cycle_code(minus, ["", "5 - 4 === 1", " but ", "4 - 5 === -1"]);
+    html_div_cycle_code(minus, [
+      "",
+      "5 - 4 === 1",
+      " but swapped: ",
+      "4 - 5 === -1",
+    ]);
     html_div_cycle_code(minus, [
       "",
       "1",

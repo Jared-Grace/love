@@ -50,7 +50,7 @@ export function app_code_lesson_expression_swapping_equal() {
       "3 === 5",
       " is ",
       "false",
-      ", and ",
+      ", and swapped: ",
       "5 === 3",
       " is ",
       "false",
