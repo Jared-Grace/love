@@ -1,0 +1,21 @@
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { js_identifier_expression } from "./js_identifier_expression.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+export function js_math_node_to_call(node, o) {
+  "Point one call to a built-in Math method at the function standing for it, keeping exactly what the call was already being given.";
+  "A call handing over a different number of things than that function takes is left standing. Math reads as many as it is given and the function beside it takes a fixed two, so a largest-of-three would come out as a largest-of-two that read as if nothing had changed - the one outcome here worth spending a check to prevent.";
+  let fn = property_get(o, "fn");
+  let args = js_call_arguments_get(node);
+  let given = list_size(args);
+  let declared = fn.length;
+  let same = equal(given, declared);
+  if (not(same)) {
+    return;
+  }
+  let callee = js_identifier_expression(fn.name);
+  property_set(node, "callee", callee);
+}
