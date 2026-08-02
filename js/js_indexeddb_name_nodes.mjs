@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { list_get_or_null } from "./list_get_or_null.mjs";
+import { list_add } from "./list_add.mjs";
+import { js_visit_type } from "./js_visit_type.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function js_indexeddb_name_nodes(ast, doors) {
   "Every place this file names a browser database or one of its stores, as {called, key} - the call doing the naming, and whatever stands where the name goes.";
   "What stands there is handed back whole rather than read, because the two things that can stand there are opposites. A word written out is a word published unwatched. A call is a word held by a function, which is the repaired shape, and the question about those is the other one: whether that function has been frozen.";

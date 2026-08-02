@@ -1,4 +1,4 @@
-import { function_read } from "./function_read.mjs";
+import { function_dependency_path } from "./function_read.mjs";
 import { text_split_comma_dot } from "./text_split_comma_dot.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { list_map } from "./list_map.mjs";
@@ -13,12 +13,12 @@ export async function functions_dependency_path(names_comma, f_name_to) {
   let names = list_map(names_split, text_trim);
   let found = {};
   for (let f_name of names) {
-    async function read_one() {
-      let contents_one = await function_read(f_name);
-      return contents_one;
+    async function path_one() {
+      let path_found = await function_dependency_path(f_name);
+      return path_found;
     }
-    let contents = await catch_null_async(read_one);
-    property_set(found, f_name, contents);
+    let path = await catch_null_async(path_one);
+    property_set(found, f_name, path);
   }
   return found;
 }
