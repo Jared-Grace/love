@@ -8,14 +8,16 @@ import { not } from "./not.mjs";
 export function js_math_node_to_call(node, o) {
   "Point one call to a built-in Math method at the function standing for it, keeping exactly what the call was already being given.";
   "A call handing over a different number of things than that function takes is left standing. Math reads as many as it is given and the function beside it takes a fixed two, so a largest-of-three would come out as a largest-of-two that read as if nothing had changed - the one outcome here worth spending a check to prevent.";
+  "Whether it moved is handed back, because a sweep over many files has to say which ones it changed and a call left standing is indistinguishable from one that was never a candidate once the tree has been written out again.";
   let fn = property_get(o, "fn");
   let args = js_call_arguments_get(node);
   let given = list_size(args);
   let declared = fn.length;
   let same = equal(given, declared);
   if (not(same)) {
-    return;
+    return false;
   }
   let callee = js_identifier_expression(fn.name);
   property_set(node, "callee", callee);
+  return true;
 }
