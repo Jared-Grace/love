@@ -1,10 +1,9 @@
+import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { round } from "./round.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
-import { multiply_divide } from "./multiply_divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
@@ -29,12 +28,11 @@ export function g_plant_arcs(plant) {
   let chapters = property_get(plant, "chapters");
   let lines = multiply(days, settings.day_lines);
   let matches = g_passage_match_count(lines);
-  let divided = multiply_divide(
+  let question_turns = multiply_divide_round(
     matches,
     settings.question_matches_percent,
     100,
   );
-  let question_turns = round(divided);
   let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
   let next = random_seed_generator_from_text(joined);
