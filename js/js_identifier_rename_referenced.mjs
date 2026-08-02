@@ -1,3 +1,4 @@
+import { js_shorthand_properties_expand } from "./js_shorthand_properties_expand.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
 import { property_set_if_equals_curried_right_3 } from "./property_set_if_equals_curried_right_3.mjs";
 import { equal } from "./equal.mjs";
@@ -9,6 +10,8 @@ export function js_identifier_rename_referenced(ast, name_from, name_to) {
     return;
   }
   let nodes = js_identifiers_referenced_nodes(ast);
+  ("A short entry in an object is one word doing two jobs: it is the key and it is the value at once. It really does read the value, so it is gathered above with the rest - and renaming it there would carry the emitted key along with it, which is the very thing the paragraph above says must never happen. So the entry is written out in full first, and only for the word being renamed. The nodes were gathered a line earlier on purpose: the fresh key is not among them and keeps the old word, while the value is and takes the new one.");
+  js_shorthand_properties_expand(ast, name_from);
   let r = property_set_if_equals_curried_right_3("name", name_from, name_to);
   each(nodes, r);
 }
