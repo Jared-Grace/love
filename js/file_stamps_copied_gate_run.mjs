@@ -1,3 +1,5 @@
+import { divide } from "./divide.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { add } from "./add.mjs";
@@ -7,7 +9,6 @@ import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
 import { property_get } from "./property_get.mjs";
 import { undefined_not_is_assert } from "./undefined_not_is_assert.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { folder_temp } from "./folder_temp.mjs";
 import { json_to } from "./json_to.mjs";
@@ -33,6 +34,10 @@ export async function file_stamps_copied_gate_run() {
       let name = "stamp_" + index + ".txt";
       let written_path = path_join([source, name]);
       await fs.promises.writeFile(written_path, name);
+      let apart = divide(index, wanted);
+      let right = divide(apart, 1000);
+      let moment = add(1700000000, right);
+      await fs.promises.utimes(written_path, moment, moment);
       names.push(name);
       index = add(index, 1);
     }
@@ -42,7 +47,7 @@ export async function file_stamps_copied_gate_run() {
     let copies = list_map_path_join_left(names, target);
     let copied = await file_stamps_by_path(copies);
     let differing = [];
-    let fractional = 0;
+    let rounding_up = 0;
     let checked = 0;
     for (let name of names) {
       let source_path = path_join([source, name]);
@@ -54,12 +59,9 @@ export async function file_stamps_copied_gate_run() {
       checked = add(checked, 1);
       let exact = await path_modified_ms(source_path);
       let whole = round(exact);
-      if (equal_not(exact, whole)) {
-        fractional = add(fractional, 1);
+      if (greater_than(whole, exact)) {
+        rounding_up = add(rounding_up, 1);
       }
-      let live_exact = await path_modified_ms(source_path);
-      let copy_exact = await path_modified_ms(copy_path);
-      console.log("SAMPLE " + name + " live=" + live_exact + " copy=" + copy_exact);
       let same = json_equal(stamp_before, stamp_copied);
       if (same) {
         continue;
@@ -72,14 +74,14 @@ export async function file_stamps_copied_gate_run() {
     }
     let result = {
       checked,
-      fractional,
+      rounding_up,
       differing,
     };
     return result;
   }
   let answer = await folder_temp(lambda_folder);
   let checked = property_get(answer, "checked");
-  let fractional = property_get(answer, "fractional");
+  let rounding_up = property_get(answer, "rounding_up");
   let differing = property_get(answer, "differing");
   for (let one of differing) {
     console.log("stamp differs after copy  " + json_to(one));
@@ -94,16 +96,16 @@ export async function file_stamps_copied_gate_run() {
         " files stand differently in a copy than where they came from - is the moment a file was written being asked for more finely than taking a folder across can carry?",
     );
   }
-  if (equal(fractional, 0)) {
+  if (equal(rounding_up, 0)) {
     throw new Error(
       "file stamps copied gate: not one of the " +
         checked +
-        " files written here kept a fraction of a millisecond, so a copy would have matched however finely it was asked - this passed without asking anything. Where are these files being written?",
+        " files here sits in the half of a millisecond that rounds upward, so cutting the fraction away and rounding it would have given the same answer everywhere and this passed without telling them apart. Are the moments being set as asked for?",
     );
   }
   let r = {
     checked,
-    fractional,
+    rounding_up,
     differing: 0,
   };
   return r;
