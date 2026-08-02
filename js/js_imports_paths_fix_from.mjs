@@ -11,7 +11,11 @@ export function js_imports_paths_fix_from(ast, dictionary, from_dir) {
   function lambda(i) {
     let name = property_get(i, "name");
     let declaration = property_get(i, "declaration");
-    let from = function_name_to_path_import_relative(name, dictionary, from_dir);
+    let from = function_name_to_path_import_relative(
+      name,
+      dictionary,
+      from_dir,
+    );
     let expression = js_parse_expression(from);
     property_set(declaration, "source", expression);
   }
