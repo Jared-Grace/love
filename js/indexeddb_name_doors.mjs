@@ -1,3 +1,17 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { repo_love_name } from "./repo_love_name.mjs";
+import { repo_functions_names } from "./repo_functions_names.mjs";
+import { indexeddb_name_parameters } from "./indexeddb_name_parameters.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { add } from "./add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { property_set } from "./property_set.mjs";
+import { not } from "./not.mjs";
 export async function indexeddb_name_doors() {
   "Every browser-database function that receives the name of a kept thing, and which of its arguments those are, as {f_name: [position]}. Read-only.";
   "Worked out from the functions themselves rather than written down. A list written down is right on the day it is written and silently wrong afterwards: somebody adds a thirteenth way into the store, the list does not hear about it, and the reading built on the list goes on passing while watching one place fewer than it says it does. Read off the parameter lists, it cannot fall behind them.";
