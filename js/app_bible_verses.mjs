@@ -12,14 +12,14 @@ import { app_bible_verse_open_curried } from "./app_bible_verse_open_curried.mjs
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
+import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 export async function app_bible_verses(context) {
   let n = await app_shared_bible_chapter_set_default(context);
   if (n) {
     return;
   }
-  let r = await app_bible_chapters_before(context);
+  let r = await app_shared_bible_chapters_before(context);
   let card = property_get(r, "card");
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);

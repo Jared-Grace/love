@@ -13,7 +13,7 @@ import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-export async function app_bible_chapters_before(context) {
+export async function app_shared_bible_chapters_before(context) {
   let opened = await app_bible_screen_content(context);
   let root = property_get(opened, "root");
   let content = property_get(opened, "content");

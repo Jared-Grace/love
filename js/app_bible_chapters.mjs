@@ -2,13 +2,13 @@ import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.m
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
+import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 import { app_shared_bible_chapter_open_curried } from "./app_shared_bible_chapter_open_curried.mjs";
 import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 export async function app_bible_chapters(context) {
-  let r = await app_bible_chapters_before(context);
+  let r = await app_shared_bible_chapters_before(context);
   let card = property_get(r, "card");
   let book_code = property_get(r, "book_code");
   let e = ebible_folder_english();
