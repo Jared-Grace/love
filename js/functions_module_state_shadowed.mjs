@@ -1,7 +1,6 @@
+import { js_module_state_shadowed } from "./js_module_state_shadowed.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { js_module_variable_names } from "./js_module_variable_names.mjs";
-import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
 import { property_get } from "./property_get.mjs";
 import { catch_null } from "./catch_null.mjs";

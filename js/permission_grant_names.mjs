@@ -716,6 +716,31 @@ export function permission_grant_names() {
   let spelled709 = fn_name("app_ceb_bible_gloss_generate_upload_path");
   let spelled710 = fn_name("qa_app_commit_deploy");
   let spelled711 = fn_name("qa_app_commit_promote");
+  let spelled712 = fn_name("list_squash");
+  let spelled713 = fn_name("functions_path");
+  let spelled714 = fn_name("firebase_function_folder_names");
+  let spelled715 = fn_name("firebase_function_folders_orphaned");
+  let spelled716 = fn_name("function_params_names");
+  let spelled717 = fn_name("functions_operators_raw_baseline_write");
+  let spelled718 = fn_name("functions_operators_raw_gate_run");
+  let spelled719 = fn_name("functions_operators_raw_names");
+  let spelled720 = fn_name("function_locals_unread");
+  let spelled721 = fn_name("app_code_lesson_expression_comparing_true_false");
+  let spelled722 = fn_name("qa_promoted_unjudged");
+  let spelled723 = fn_name("functions_gate_run_unwired_wire");
+  let spelled724 = fn_name("functions_locals_unread");
+  let spelled725 = fn_name("qa_commit_named");
+  let spelled726 = fn_name("qa_gates_names");
+  let spelled727 = fn_name("functions_locals_unread_baseline_write");
+  let spelled728 = fn_name("functions_locals_unread_gate_run");
+  let spelled729 = fn_name("functions_page_auto_borrowing");
+  let spelled730 = fn_name("functions_page_auto_borrowing_gate_run");
+  let spelled731 = fn_name("permission_plain_marker");
+  let spelled732 = fn_name("function_shadowing_assign");
+  let spelled733 = fn_name("strongs_greek_definition");
+  let spelled734 = fn_name("strongs_greek_json_path");
+  let spelled735 = fn_name("js_atomize_cases_gate_run");
+  let spelled736 = fn_name("g_sermon_edited_path");
   let names = [
     spelled,
     spelled2,
@@ -1428,6 +1453,31 @@ export function permission_grant_names() {
     spelled709,
     spelled710,
     spelled711,
+    spelled712,
+    spelled713,
+    spelled714,
+    spelled715,
+    spelled716,
+    spelled717,
+    spelled718,
+    spelled719,
+    spelled720,
+    spelled721,
+    spelled722,
+    spelled723,
+    spelled724,
+    spelled725,
+    spelled726,
+    spelled727,
+    spelled728,
+    spelled729,
+    spelled730,
+    spelled731,
+    spelled732,
+    spelled733,
+    spelled734,
+    spelled735,
+    spelled736,
   ];
   return names;
 }
