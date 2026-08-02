@@ -1,3 +1,5 @@
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
@@ -35,7 +37,6 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
-import { html_style_padding_em } from "./html_style_padding_em.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_border_radius_extra_large } from "./app_shared_border_radius_extra_large.mjs";
 import { app_shared_container_blue_medium_background_color } from "./app_shared_container_blue_medium_background_color.mjs";
@@ -286,7 +287,9 @@ export async function app_search_results(context, div_results) {
     book_chapter_expands = chapter_expands;
     let div_group = book_group_div(book_code);
     let div_book = app_shared_container_blue(div_group);
-    html_style_padding_em(div_book, "0.3");
+    ("this is the third of four cards nested one inside the next, and the two outside it already trim to this one named amount; it used to write its own number a twentieth of a letter away from that, which no reader could have told apart and no line of the file explained");
+    let book_padding = app_shared_spaced_tiny_gap();
+    html_style_padding(div_book, book_padding);
     html_style_margin_y(div_book, "0.15em");
     html_text_align_left(div_book);
     let book_name = ebible_book_code_to_name(books, book_code);
@@ -354,7 +357,9 @@ export async function app_search_results(context, div_results) {
     html_border(div_chapter, "0.1em", border_color);
     let border_radius = app_shared_border_radius_extra_large();
     html_border_radius(div_chapter, border_radius);
-    html_style_padding_em(div_chapter, "0.3");
+    ("the innermost of the four cards, spending the same named amount as the three around it, so the verse text at the bottom is not standing behind four different numbers nobody chose together");
+    let chapter_padding = app_shared_spaced_tiny_gap();
+    html_style_padding(div_chapter, chapter_padding);
     html_style_margin_x(div_chapter, "0.15em");
     html_style_margin_y(div_chapter, "0.1em");
     html_text_align_left(div_chapter);
