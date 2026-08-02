@@ -32,19 +32,21 @@ export async function baseline_entries_gate_generic(
   let stale = property_get(change, "stale");
   entries_print(added, "NEW    ");
   entries_print(stale, "GONE   ");
-  let added_names = entries_names_text(added);
-  list_empty_is_assert_json(added, {
+  ("The names alone go in the message, not the entries. A gate inside the whole-repo");
+  ("run only gets its message read, so it has to carry who offended - but the offending");
+  ("names beside each one are already printed above, and repeating every field there");
+  ("buries the list it was meant to hand over.");
+  let added_names = list_map_property(added, "name");
+  list_empty_is_assert_json(added_names, {
     hint,
-    added: added_names,
   });
-  let stale_names = entries_names_text(stale);
-  list_empty_is_assert_json(stale, {
+  let stale_names = list_map_property(stale, "name");
+  list_empty_is_assert_json(stale_names, {
     hint: text_combine_multiple([
       "these no longer offend - shrink the record with ",
       name_write,
       " so the same name cannot come back unnoticed",
     ]),
-    stale: stale_names,
   });
   let r = {
     added: 0,
