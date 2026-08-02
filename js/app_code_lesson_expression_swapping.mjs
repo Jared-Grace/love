@@ -27,9 +27,9 @@ export function app_code_lesson_expression_swapping() {
     return pair;
   }
   function operator_random(want_true) {
-    "an operator whose swap is true (+, *) when want_true, otherwise one whose swap is false (-, /, <, >)";
+    "an operator whose swap is true (+, *) when want_true, otherwise one whose swap is false (-, /, %, <, >, <=, >=); ** is left out because 2 ** 4 === 4 ** 2 is 16 === 16, the one distinct pair where swapping exponent does not flip the answer";
     let true_ops = ["+", "*"];
-    let false_ops = ["-", "/", "<", ">"];
+    let false_ops = ["-", "/", "%", "<", ">", "<=", ">="];
     let ops = ternary(want_true, true_ops, false_ops);
     let op = list_random_item(ops);
     return op;
