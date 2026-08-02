@@ -28,7 +28,8 @@ export function js_math_call_member_try(node) {
   if (object_plain_not) {
     return none;
   }
-  let math_is = js_identifier_named(object, text_frozen("Math"));
+  let identifier_name = text_frozen("Math");
+  let math_is = js_identifier_named(object, identifier_name);
   if (not(math_is)) {
     return none;
   }
