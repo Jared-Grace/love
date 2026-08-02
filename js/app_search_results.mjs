@@ -1,3 +1,4 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { property_list_size } from "./property_list_size.mjs";
@@ -128,8 +129,7 @@ export async function app_search_results(context, div_results) {
   let results_all = object_to_list(dictionary);
   function result_verses_exist(vk) {
     "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
-    let verse_numbers = property_get(vk, "value");
-    let e = list_empty_not_is(verse_numbers);
+    let e = property_list_empty_not_is(vk, "value");
     return e;
   }
   let results_verses = list_filter(results_all, result_verses_exist);
