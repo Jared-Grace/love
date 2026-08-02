@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
@@ -155,8 +156,8 @@ export async function app_g_view_render_study(div_map) {
     for (let i = 0; i < words.length; i++) {
       let b = app_shared_button_inline(words_div, words[i], tap(i));
       html_style_assign(b, {
-        "padding-left": "0.4em",
-        "padding-right": "0.4em",
+        "padding-left": app_shared_content_edge_gap(),
+        "padding-right": app_shared_content_edge_gap(),
         "font-size": app_shared_style_control_font_size(),
       });
       word_bs.push(b);
