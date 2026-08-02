@@ -28,7 +28,7 @@ export async function file_stamps_by_path(f_paths) {
       continue;
     }
     let exact = property_get(stat, "mtimeMs");
-    let written = Math.trunc(exact);
+    let written = round(exact);
     let size = property_get(stat, "size");
     let stamp = {
       written,
