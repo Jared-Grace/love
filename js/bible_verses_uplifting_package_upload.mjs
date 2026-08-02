@@ -91,8 +91,8 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
     );
     let present_verses = list_filter_null_not_is(verses);
     let texts = list_map_property(present_verses, "text");
-    let present = list_filter_null_not_is(texts);
-    let joined = list_join_space(present);
+    let present_texts = list_filter_null_not_is(texts);
+    let joined = list_join_space(present_texts);
     property_set(map, line, joined);
   }
   await each_async(lines, line_each);
