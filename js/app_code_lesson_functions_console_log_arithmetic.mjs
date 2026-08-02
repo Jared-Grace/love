@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { each } from "./each.mjs";
@@ -28,7 +29,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     above,
     lambda$code: js_code_statement,
     name_id_rights: ["arithmetic"],
-    category: "operators",
+    category: app_code_category_operators(),
     next_arg,
     example_count: 1,
     quiz_backwards_answer_count_override: null,
