@@ -1,3 +1,4 @@
+import { functions_gate_run_unwired_gate_run } from "./functions_gate_run_unwired_gate_run.mjs";
 import { js_code_literal_site_none_cases_gate_run } from "./js_code_literal_site_none_cases_gate_run.mjs";
 import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
 import { js_name_value_use_nodes_cases_gate_run } from "./js_name_value_use_nodes_cases_gate_run.mjs";
@@ -262,6 +263,7 @@ export function qa_gates() {
     functions_inside_duplicates_gate_run,
     functions_builtin_calls_gate_run,
     functions_page_serialized_gate_run,
+    functions_gate_run_unwired_gate_run,
   ];
   return gates;
 }

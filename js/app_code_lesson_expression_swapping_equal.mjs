@@ -38,10 +38,17 @@ export function app_code_lesson_expression_swapping_equal() {
       "===",
       " asks: are the two numbers the same?",
     ]);
-    html_div_cycle_code(intro, ["", "!==", " asks: are they different?"]);
+    html_div_cycle_code(intro, [
+      "",
+      "!==",
+      " asks: are the two numbers different?",
+    ]);
     let same = app_code_container_light_blue(root);
     html_div_cycle_code(same, [
-      "Asking either way gives the same answer, so we can swap the numbers around them",
+      "Asking either way gives the same answer, so we can always swap the numbers around ",
+      "===",
+      " and ",
+      "!==",
     ]);
     html_div_cycle_code(same, [
       "",
@@ -69,7 +76,8 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     let paren = app_code_container_light_blue(root);
     html_div_cycle_code(paren, [
-      "When both sides are comparisons, we wrap each one in ( )",
+      "When both sides are comparisons, we wrap each one in ",
+      "( )",
     ]);
     html_div_cycle_code(paren, ["", "(3 === 5) === (5 === 3)", " is ", "true"]);
   }
