@@ -17,5 +17,4 @@ export function js_visit_calls_named(ast, f_name, lambda) {
     });
   }
   js_visit_calls(ast, lambda_inner);
-  return;
 }

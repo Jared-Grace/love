@@ -30,5 +30,4 @@ export function js_fold_equivalent_assert(
       block: b_canonical,
     });
   }
-  return;
 }

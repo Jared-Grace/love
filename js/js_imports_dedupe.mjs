@@ -18,5 +18,4 @@ export function js_imports_dedupe(ast) {
     list_remove(body, declaration);
   }
   each(duplicates, drop);
-  return;
 }

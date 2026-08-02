@@ -18,5 +18,4 @@ export async function js_imports_verify_assert(ast) {
   list_empty_is_assert_json(unused, {
     hint: "transform left dead imports",
   });
-  return;
 }

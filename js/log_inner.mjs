@@ -12,5 +12,4 @@ export function log_inner(f_name, message) {
     list_add_first(list, f_name);
   }
   each(list, log_console);
-  return;
 }

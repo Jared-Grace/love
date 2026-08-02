@@ -30,5 +30,4 @@ export async function app_replace_rule_sets_migrate_functionize() {
     }
     await each_async(elements, lambda3);
   }
-  return;
 }

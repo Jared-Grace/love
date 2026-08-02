@@ -1,3 +1,6 @@
+import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
+import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
@@ -21,16 +24,27 @@ export async function app_code_reload_persists_test(url_prefix) {
   let results = [];
   async function on_page(page) {
     async function check(id) {
+      "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
+      let v = app_code_screen_hash_key();
+      let f_name = fn_name("app_code_quiz");
+      let v2 = app_code_quiz_hash_key();
       let combined = text_combine_multiple([
-        "&screen=",
-        fn_name("app_code_quiz"),
-        "&quiz=0",
+        "&",
+        v,
+        "=",
+        f_name,
+        "&",
+        v2,
+        "=0",
       ]);
+      let v3 = app_code_lesson_hash_key();
       let url = text_combine_multiple([
         url_prefix,
         "?s=",
         id,
-        "_r#lesson=",
+        "_r#",
+        v3,
+        "=",
         id,
         combined,
       ]);
