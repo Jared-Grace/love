@@ -1,7 +1,6 @@
+import { js_selects_block_item } from "./js_selects_block_item.mjs";
 import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_to_block_item } from "./js_node_to_block_item.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { json_copy } from "./json_copy.mjs";
@@ -15,8 +14,7 @@ export function js_statement_wrap_for_of(ast, selects, name_item, code_list) {
   ("edit.");
   ("The line is copied before its old node is turned into the loop, because the");
   ("loop it is going into is the same node it is coming out of.");
-  let node = list_single(selects);
-  let item = js_node_to_block_item(ast, node);
+  let item = js_selects_block_item(ast, selects);
   let pieces = ["for (let ", name_item, " of ", code_list, ") {}"];
   let code = text_combine_multiple(pieces);
   let loop = js_parse_statement(code);
