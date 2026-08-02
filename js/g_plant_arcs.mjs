@@ -1,3 +1,8 @@
+import { multiply } from "./multiply.mjs";
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_passage_match_count } from "./g_passage_match_count.mjs";
 import { random_seed_from_text } from "./random_seed_from_text.mjs";
@@ -17,10 +22,12 @@ export function g_plant_arcs(plant) {
   let settings = g_generation_settings();
   let days = property_get(plant, "days");
   let chapters = property_get(plant, "chapters");
-  let matches = g_passage_match_count(days * settings.day_lines);
-  let question_share = matches * settings.question_matches_percent;
-  let question_turns = Math.round(question_share / 100);
-  let arc_turns = matches - question_turns;
+  let lines = multiply(days, settings.day_lines);
+  let matches = g_passage_match_count(lines);
+  let question_share = multiply(matches, settings.question_matches_percent);
+  let divided = divide(question_share, 100);
+  let question_turns = Math.round(divided);
+  let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
   let seed = random_seed_from_text(joined);
   let next = random_seed_generator(seed);
@@ -31,27 +38,32 @@ export function g_plant_arcs(plant) {
     settings.plant_npcs_maximum,
   );
   ("The leader's share is a portion of the plant's DAYS, so a longer plant disciples the leader longer rather than visiting the same number of times more thinly.");
-  let share_low = settings.leader_days_percent_minimum / 100;
-  let share_high = settings.leader_days_percent_maximum / 100;
-  let share = (share_low + share_high) / 2;
-  let leader_wanted = Math.round(days * share * settings.conversation_turns_mean);
-  let converts = npcs - 1;
+  let share_low = divide(settings.leader_days_percent_minimum, 100);
+  let share_high = divide(settings.leader_days_percent_maximum, 100);
+  let share = divide(share_low + share_high, 2);
+  let left = multiply(days, share);
+  let p = multiply(left, settings.conversation_turns_mean);
+  let leader_wanted = Math.round(p);
+  let converts = subtract(npcs, 1);
   let shortest = settings.conversation_turns_low;
-  let converts_least = converts * shortest;
-  let leader_room = arc_turns - converts_least;
+  let converts_least = multiply(converts, shortest);
+  let leader_room = subtract(arc_turns, converts_least);
   let leader_turns = Math.min(leader_wanted, leader_room);
-  let leader_short = leader_turns < settings.leader_turns_minimum;
+  let leader_short = less_than(leader_turns, settings.leader_turns_minimum);
   ("Whatever the leader does not take is split evenly and then jittered, so the total and the head count both survive the variety.");
-  let convert_turns = arc_turns - leader_turns;
-  let evenly = Math.floor(convert_turns / converts);
-  let over = convert_turns - evenly * converts;
+  let convert_turns = subtract(arc_turns, leader_turns);
+  let divided2 = divide(convert_turns, converts);
+  let evenly = Math.floor(divided2);
+  let right = multiply(evenly, converts);
+  let over = subtract(convert_turns, right);
   let shares = [];
-  for (let index = 0; index < converts; index++) {
-    let extra = index < over;
+  for (let index = 0; less_than(index, converts); index++) {
+    let extra = less_than(index, over);
     let amount = extra ? evenly + 1 : evenly;
     list_add(shares, amount);
   }
-  let widest = Math.max(evenly * 2, shortest);
+  let p2 = multiply(evenly, 2);
+  let widest = Math.max(p2, shortest);
   let jittered = list_numbers_jitter(
     shares,
     next,
@@ -72,7 +84,7 @@ export function g_plant_arcs(plant) {
     leader_short,
     convert_lengths: jittered,
     spent,
-    balanced: spent === arc_turns,
+    balanced: equal(spent, arc_turns),
   };
   return r;
 }

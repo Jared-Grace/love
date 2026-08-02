@@ -1,3 +1,9 @@
+import { less_than } from "./less_than.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 export function list_numbers_jitter(numbers, next, attempts, least, most) {
   "Nudges a list of numbers about without changing what they add up to - each nudge takes one from a number and gives it to another.";
@@ -9,18 +15,18 @@ export function list_numbers_jitter(numbers, next, attempts, least, most) {
     list_add(jittered, number);
   }
   let count = jittered.length;
-  for (let attempt = 0; attempt < attempts; attempt++) {
+  for (let attempt = 0; less_than(attempt, attempts); attempt++) {
     let left = next();
-    let scaled = left * count;
+    let scaled = multiply(left, count);
     let giver = Math.floor(scaled);
     let left2 = next();
-    let scaled2 = left2 * count;
+    let scaled2 = multiply(left2, count);
     let taker = Math.floor(scaled2);
-    let given = jittered[giver] - 1;
+    let given = subtract(jittered[giver], 1);
     let taken = jittered[taker] + 1;
-    let stays_above = given >= least;
-    let stays_below = taken <= most;
-    let different = giver !== taker;
+    let stays_above = greater_than_equal(given, least);
+    let stays_below = less_than_equal(taken, most);
+    let different = not_equal(giver, taker);
     let allowed = stays_above && stays_below && different;
     if (allowed) {
       jittered[giver] = given;
