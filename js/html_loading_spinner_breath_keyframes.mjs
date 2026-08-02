@@ -1,9 +1,9 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { html_loading_spinner_breath_scales } from "./html_loading_spinner_breath_scales.mjs";
 import { html_loading_spinner_breath_halves } from "./html_loading_spinner_breath_halves.mjs";
 import { html_loading_spinner_breath_name } from "./html_loading_spinner_breath_name.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function html_loading_spinner_breath_keyframes() {
@@ -13,18 +13,14 @@ export function html_loading_spinner_breath_keyframes() {
   function stop(scale, index) {
     let fraction = divide(index, halves);
     let percent = multiply(fraction, 100);
-    let left = text_combine("  ", percent);
-    let left2 = text_combine(left, "% { transform: scale(");
-    let left3 = text_combine(left2, scale);
-    let line = text_combine(left3, "); }");
+    let left2 = text_combine_3("  ", percent, "% { transform: scale(");
+    let line = text_combine_3(left2, scale, "); }");
     return line;
   }
   let lines = list_map_index(scales, stop);
   let body = list_join_newline(lines);
   let name = html_loading_spinner_breath_name();
-  let head = text_combine("@keyframes ", name);
-  let head2 = text_combine(head, " {\n");
-  let opened = text_combine(head2, body);
-  let r = text_combine(opened, "\n}");
+  let head2 = text_combine_3("@keyframes ", name, " {\n");
+  let r = text_combine_3(head2, body, "\n}");
   return r;
 }

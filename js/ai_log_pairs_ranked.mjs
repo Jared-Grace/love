@@ -1,3 +1,4 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { property_exists } from "./property_exists.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function ai_log_pairs_ranked(entries) {
@@ -31,8 +31,7 @@ export function ai_log_pairs_ranked(entries) {
       let before = property_get(last, session);
       let repeat = equal(before, step);
       if (not(repeat)) {
-        let arrow = text_combine(before, " then ");
-        let key = text_combine(arrow, step);
+        let key = text_combine_3(before, " then ", step);
         property_count_add(counts, key, 1);
       }
     }

@@ -1,6 +1,6 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_property_expression(object_name, property_name) {
   arguments_assert(arguments, 2);
@@ -16,8 +16,7 @@ export function js_property_expression(object_name, property_name) {
   ("line, which is the one shape no standing approval covers.");
   js_identifier_expression(object_name);
   js_identifier_expression(property_name);
-  let dotted = text_combine(object_name, ".");
-  let text = text_combine(dotted, property_name);
+  let text = text_combine_3(object_name, ".", property_name);
   let expression = js_parse_expression(text);
   return expression;
 }

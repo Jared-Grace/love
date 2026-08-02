@@ -55,7 +55,10 @@ export function app_shared_contact_overlay(from) {
   form();
   function form() {
     html_clear(card);
-    html_p_text(card, "Is there anything you would like to tell the developer?");
+    html_p_text(
+      card,
+      "Is there anything you would like to tell the developer?",
+    );
     let textarea = html_textarea(card);
     html_placeholder(textarea, "Please write your message here");
     app_shared_input_style(textarea);
@@ -70,7 +73,7 @@ export function app_shared_contact_overlay(from) {
       }
       let unchanged = equal(message, prefix);
       if (unchanged) {
-        "they have not written anything past the '<app> app: ' prefix yet, so keep the form rather than send an empty note";
+        ("they have not written anything past the '<app> app: ' prefix yet, so keep the form rather than send an empty note");
         html_focus(textarea);
         return;
       }
