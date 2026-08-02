@@ -14,8 +14,11 @@ export async function g_content_backup() {
   let namespaces = g_content_backup_namespaces();
   let generations = await g_content_backup_generations();
   async function lambda(namespace) {
-    let paths = await g_content_backup_namespace(namespace, generations);
-    return paths;
+    let namespace_paths = await g_content_backup_namespace(
+      namespace,
+      generations,
+    );
+    return namespace_paths;
   }
   let per_namespace = await list_map_async(namespaces, lambda);
   let paths = list_concat_multiple(per_namespace);
