@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -20,7 +21,7 @@ export async function ebible_languages_versions() {
   let english_versions = list_map(english, english_version);
   let languages = ebible_languages();
   function versions_for(language) {
-    let is_english = property_equals(language, "language_code", en);
+    let is_english = property_equals(language, language_code_key(), en);
     if (is_english) {
       return english_versions;
     }
