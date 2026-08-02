@@ -67,7 +67,7 @@ export async function g_plant_chapters() {
     let rounded = Math.round(exact);
     let count = Math.max(1, rounded);
     let share = divide(book_days, count);
-    let plants = [];
+    let book_plant_list = [];
     let taken = [];
     let days_so_far = 0;
     function plant_close() {
@@ -84,14 +84,14 @@ export async function g_plant_chapters() {
         floor_met: not(short_is),
         over_maximum: long_is,
       };
-      list_add(plants, plant);
+      list_add(book_plant_list, plant);
       taken = [];
       days_so_far = 0;
     }
     for (let counted of held) {
       let chapter = property_get(counted, "chapter");
       let days = days_of(counted);
-      let plants_left = subtract(count, plants.length);
+      let plants_left = subtract(count, book_plant_list.length);
       let last_plant_is = less_than_equal(plants_left, 1);
       let with_it = days_so_far + days;
       let difference = subtract(days_so_far, share);
@@ -108,7 +108,7 @@ export async function g_plant_chapters() {
       days_so_far = days_so_far + days;
     }
     plant_close();
-    return plants;
+    return book_plant_list;
   }
   let per_book = list_map(books, book_plants);
   let plants = [];
