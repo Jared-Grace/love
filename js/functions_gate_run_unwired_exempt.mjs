@@ -11,10 +11,6 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("qa_commit_gate_run"),
       why: "asks the whole-repo gate about one commit rather than about the folder, so it stands above the list for the same reason",
     },
-    {
-      name: fn_name("firebase_function_folders_orphaned_gate_run"),
-      why: "asks the network rather than the folder, and an unreachable bucket leaves it only two answers, both bad in the list - failing reddens every run for anybody offline, and reporting nothing is a check that passes hardest exactly when it can see least. Run on purpose until somebody decides which",
-    },
   ];
   return exempt;
 }
