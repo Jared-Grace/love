@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { g_game_generate } from "./g_game_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -24,7 +25,7 @@ export async function g_game_generate_report(word) {
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
     }
-    let trimmed = days_asked - days;
+    let trimmed = subtract(days_asked, days);
     if (trimmed) {
       trimmed_plants = trimmed_plants + 1;
     }
