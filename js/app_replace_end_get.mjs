@@ -1,7 +1,5 @@
-import { text_split_space } from "./text_split_space.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_text_split_space } from "./property_text_split_space.mjs";
 export function app_replace_end_get(goal) {
-  let end_value = property_get(goal, "end");
-  let end = text_split_space(end_value);
+  let end = property_text_split_space(goal, "end");
   return end;
 }

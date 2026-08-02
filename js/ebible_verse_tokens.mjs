@@ -1,5 +1,4 @@
-import { text_split_space } from "./text_split_space.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_text_split_space } from "./property_text_split_space.mjs";
 import { ebible_verse } from "./ebible_verse.mjs";
 export async function ebible_verse_tokens(
   bible_folder,
@@ -7,7 +6,6 @@ export async function ebible_verse_tokens(
   verse_number,
 ) {
   let v = await ebible_verse(bible_folder, chapter_code, verse_number);
-  let text = property_get(v, "text");
-  let s = text_split_space(text);
+  let s = property_text_split_space(v, "text");
   return s;
 }
