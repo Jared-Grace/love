@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_code_prefix } from "./js_code_prefix.mjs";
 import { js_operator_bang } from "./js_operator_bang.mjs";
@@ -23,7 +24,7 @@ export function app_code_lesson_expression_not() {
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id_rights: ["not"],
-    category: "operators",
+    category: app_code_category_operators(),
     next_arg,
     example_count: 2,
     forwards_answer_count_override: 2,
