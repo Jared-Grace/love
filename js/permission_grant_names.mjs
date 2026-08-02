@@ -424,7 +424,7 @@ export function permission_grant_names() {
   let spelled421 = fn_name("functions_assert_json_get_lambda_collapse");
   let spelled422 = fn_name("app_shared_dev_build_multiple_prompt");
   let spelled423 = fn_name("html_update_latest_promote");
-  let spelled424 = fn_name("html_update_latest_promote_deploy_code");
+  let spelled424 = fn_name("app_code_html_update_latest_promote_deploy");
   let spelled425 = fn_name("literal_duplicates_repair");
   let spelled426 = fn_name("html_update_latest_promote_multiple_prompt");
   let spelled427 = fn_name("data_index_timings");
