@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,15 +15,18 @@ export async function app_g_view_render(div_map) {
     return;
   }
   let kind = property_get(view, "kind");
-  if (kind === app_g_view_kind_menu()) {
+  let right = app_g_view_kind_menu();
+  if (equal(kind, right)) {
     await app_g_view_render_menu(div_map);
     return;
   }
-  if (kind === app_g_view_kind_npc()) {
+  let right2 = app_g_view_kind_npc();
+  if (equal(kind, right2)) {
     await app_g_view_render_npc(div_map);
     return;
   }
-  if (kind === app_g_view_kind_study()) {
+  let right3 = app_g_view_kind_study();
+  if (equal(kind, right3)) {
     await app_g_view_render_study(div_map);
     return;
   }
