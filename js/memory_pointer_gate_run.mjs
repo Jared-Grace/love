@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { memory_pointer_cases } from "./memory_pointer_cases.mjs";
 import { memory_pointer_tokens } from "./memory_pointer_tokens.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,18 +17,14 @@ export function memory_pointer_gate_run() {
     let expected = property_get(c, "targets");
     let actual = memory_pointer_tokens(text);
     let b = lists_equal_pair(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(mark + expected.join(",") + " / " + actual.join(","));
     if (not(b)) {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error("memory pointer gate: " + failures.length + " failed");
   }

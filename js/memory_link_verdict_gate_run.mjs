@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { memory_link_cases } from "./memory_link_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { memory_link_verdict } from "./memory_link_verdict.mjs";
@@ -25,7 +27,7 @@ export function memory_link_verdict_gate_run() {
     let kind_ok = equal(kind_expected, kind_actual);
     let suggestion_ok = equal(suggestion_expected, suggestion_actual);
     let b = kind_ok && suggestion_ok;
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(
       mark + link + "  ->  " + kind_actual + "  " + suggestion_actual,
     );
@@ -33,12 +35,8 @@ export function memory_link_verdict_gate_run() {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error("memory link verdict gate: " + failures.length + " failed");
   }
