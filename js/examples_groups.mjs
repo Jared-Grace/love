@@ -100,6 +100,7 @@ export function examples_groups() {
         "example_imports_shorthand_and_computed_are_references",
         "example_shadowing_rename_shorthand",
         "example_shadowing_rename_in",
+        "example_shadowing_assign",
         "example_builtin_calls_rewrite",
         "example_fn_name_reference_strip",
         "example_prose_name_spelled_not_imported",
