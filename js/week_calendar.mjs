@@ -1,3 +1,5 @@
+import { math_min } from "./math_min.mjs";
+import { math_max } from "./math_max.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { date_weekday_short } from "./date_weekday_short.mjs";
 import { date_month_day } from "./date_month_day.mjs";
@@ -163,8 +165,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     render_summary();
   }
   function range_add(day, a, b) {
-    let start = Math.min(a, b);
-    let end = Math.max(a, b);
+    let start = math_min(a, b);
+    let end = math_max(a, b);
     list_add(ranges, {
       day: day,
       start: start,
@@ -189,7 +191,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
         equal(current.day, span.day) &&
         less_than_equal(span.start, current.end + 1);
       if (joins) {
-        let end = Math.max(current.end, span.end);
+        let end = math_max(current.end, span.end);
         current = {
           day: current.day,
           start: current.start,
