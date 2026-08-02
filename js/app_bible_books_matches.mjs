@@ -1,3 +1,4 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_book_division_uncategorized } from "./ebible_book_division_uncategorized.mjs";
@@ -23,8 +24,7 @@ export function app_bible_books_matches(query, books) {
     return m;
   }
   function has_any(item, key) {
-    let list = property_get(item, key);
-    let any = list_empty_not_is(list);
+    let any = property_list_empty_not_is(item, key);
     return any;
   }
   function division_matches(division) {
