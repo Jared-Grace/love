@@ -1,10 +1,9 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_page_serialized_report } from "./functions_page_serialized_report.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-import { property_get } from "./property_get.mjs";
 export async function functions_page_serialized_gate_run() {
   "QA gate: no function sent to a browser reads a name imported at the top of its file.";
   "A function handed to a browser driver to run in the page is handed over as text. The import lines above it stay here, so a name they bound is simply absent where the function runs and the browser stops on it - a failure that surfaces as a browser test going wrong, pointing at nothing, days after whatever wrote the name.";
@@ -14,8 +13,7 @@ export async function functions_page_serialized_gate_run() {
   arguments_assert(arguments, 0);
   let exposed = await functions_page_serialized_report();
   function borrowing_is(o) {
-    let borrowed = property_get(o, "borrowed");
-    let some = list_empty_not_is(borrowed);
+    let some = property_list_empty_not_is(o, "borrowed");
     return some;
   }
   let broken = list_filter(exposed, borrowing_is);
