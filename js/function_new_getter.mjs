@@ -1,3 +1,4 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { function_new_transform } from "./function_new_transform.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
@@ -13,8 +14,7 @@ export async function function_new_getter(f_name, meaning, value) {
     let prose = text_combine(left, ";");
     js_block_body_add_code(ast, [block], prose);
     let right = JSON.stringify(value);
-    let bound = text_combine("let v = ", right);
-    let statement = text_combine(bound, ";");
+    let statement = text_combine_3("let v = ", right, ";");
     js_block_body_add_code(ast, [block], statement);
     js_block_body_add_code(ast, [block], "return v;");
   }
