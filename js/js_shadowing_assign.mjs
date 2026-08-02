@@ -1,10 +1,10 @@
+import { js_declare_single_init } from "./js_declare_single_init.mjs";
 import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
-import { js_declare_init_get } from "./js_declare_init_get.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { list_add } from "./list_add.mjs";
@@ -46,8 +46,7 @@ export function js_shadowing_assign(ast, name) {
   }
   js_visit_type(scope, "VariableDeclaration", lambda);
   let declaration = list_single(found);
-  let single = js_declare_single(declaration);
-  let init = js_declare_init_get(single);
+  let init = js_declare_single_init(declaration);
   let nothing = null_is(init);
   not_assert_json(nothing, {
     hint: "that line declares the name without giving it a value, so there is nothing for it to write to the outer binding - was the rename the one you wanted?",
