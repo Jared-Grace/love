@@ -1,3 +1,4 @@
+import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
@@ -6,8 +7,6 @@ import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { random_seed_from_text } from "./random_seed_from_text.mjs";
-import { random_seed_generator } from "./random_seed_generator.mjs";
 import { add } from "./add.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
@@ -59,8 +58,7 @@ export async function g_arc_lengths(chapter) {
   let turns_unspent = remaining;
   ("Now nudge the lengths, so a cast does not read as an arithmetic sequence. Each nudge picks two arcs and moves ONE turn between them, which conserves the budget exactly and cannot change how many people there are - the two properties the descent had and would be a shame to lose. A move that would push either arc outside the range is simply skipped, which is why the count is a number of ATTEMPTS rather than a promise.");
   ("Seeded on the chapter code, so this chapter always lands the same way. Authored content is worked out once and reused by every playthrough, so a run that differed each time would make a change in the output impossible to read.");
-  let seed = random_seed_from_text(chapter);
-  let next = random_seed_generator(seed);
+  let next = random_seed_generator_from_text(chapter);
   let count = lengths.length;
   for (
     let attempt = 0;

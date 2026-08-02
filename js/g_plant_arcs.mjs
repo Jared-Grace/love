@@ -1,3 +1,4 @@
+import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
@@ -11,8 +12,6 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_passage_match_count } from "./g_passage_match_count.mjs";
-import { random_seed_from_text } from "./random_seed_from_text.mjs";
-import { random_seed_generator } from "./random_seed_generator.mjs";
 import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
 import { list_numbers_jitter } from "./list_numbers_jitter.mjs";
 import { list_sum } from "./list_sum.mjs";
@@ -38,8 +37,7 @@ export function g_plant_arcs(plant) {
   let question_turns = round(divided);
   let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
-  let seed = random_seed_from_text(joined);
-  let next = random_seed_generator(seed);
+  let next = random_seed_generator_from_text(joined);
   let npcs = random_bell_low_middle_high(
     next,
     settings.plant_npcs_minimum,

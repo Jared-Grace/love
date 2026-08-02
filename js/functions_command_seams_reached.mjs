@@ -12,11 +12,12 @@ export async function functions_command_seams_reached(names_comma) {
   ("A name nothing answers to is reported as nothing rather than thrown on, so one misspelt word cannot throw away the walks already paid for. That is also why nothing and no-path read the same here: both mean this name does not reach the target, and a starting point that does not exist does not reach anything.");
   let names = text_split_comma_dot_trim(names_comma);
   let found = {};
+  let remembered = {};
   for (let f_name of names) {
     async function reached_one() {
       let reached_found = await function_command_seams_reached_memo(
         f_name,
-        f_name_to,
+        remembered,
       );
       return reached_found;
     }
@@ -24,5 +25,4 @@ export async function functions_command_seams_reached(names_comma) {
     property_set(found, f_name, reached);
   }
   return found;
-  let remembered = {};
 }
