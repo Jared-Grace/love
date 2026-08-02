@@ -1,8 +1,7 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_console_log_nested_generic } from "./app_code_lesson_console_log_nested_generic.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_division_verb } from "./js_operator_division_verb.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
@@ -22,8 +21,7 @@ export function app_code_lesson_expression_nested_divide() {
   }
   function triples_get() {
     "four triples with four DIFFERENT middle numbers, so the four questions are all distinct";
-    let middles = list_shuffle_take(range_map(4, middle_of), 4);
-    let triples = list_map(middles, triple_of);
+    let triples = list_shuffle_take_map(range_map(4, middle_of), 4, triple_of);
     return triples;
   }
   let lesson = app_code_lesson_console_log_nested_generic({
