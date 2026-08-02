@@ -1,6 +1,5 @@
-import { round } from "./round.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { g_day_matches } from "./g_day_matches.mjs";
 import { g_day_lines } from "./g_day_lines.mjs";
 export function g_passage_match_count(lines) {
@@ -8,7 +7,6 @@ export function g_passage_match_count(lines) {
   let top = g_day_matches();
   let bottom = g_day_lines();
   let rate = divide(top, bottom);
-  let count = multiply(lines, rate);
-  let r = round(count);
+  let r = multiply_round(lines, rate);
   return r;
 }
