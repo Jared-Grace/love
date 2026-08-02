@@ -29,24 +29,24 @@ export async function image_generate(text, path_output) {
   let ctx = canvas.getContext("2d");
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
-  function wrapText(text, fontSize) {
+  function wrapText(text_wrapping, fontSize) {
     ctx.font = text_combine_multiple([fontSize, "px ", FONT_FAMILY]);
-    let words = text.split(" ");
-    let lines = [];
+    let words = text_wrapping.split(" ");
+    let lines_wrapped = [];
     let line = "";
     for (let word of words) {
       let test = line ? text_combine_multiple([line, " ", word]) : word;
       if (less_than_equal(ctx.measureText(test).width, MAX_WIDTH)) {
         line = test;
       } else {
-        lines.push(line);
+        lines_wrapped.push(line);
         line = word;
       }
     }
     if (line) {
-      lines.push(line);
+      lines_wrapped.push(line);
     }
-    return lines;
+    return lines_wrapped;
   }
   function findMaxFontSize() {
     let low = 10;
@@ -56,9 +56,9 @@ export async function image_generate(text, path_output) {
       let top = add(low, high);
       let divided = divide(top, 2);
       let mid = Math.floor(divided);
-      let lines = wrapText(text, mid);
-      let lineHeight = multiply(mid, 1.25);
-      let totalHeight = multiply(lines.length, lineHeight);
+      let lines_tried = wrapText(text, mid);
+      let line_height_tried = multiply(mid, 1.25);
+      let totalHeight = multiply(lines_tried.length, line_height_tried);
       if (less_than_equal(totalHeight, MAX_HEIGHT)) {
         best = mid;
         low = text_combine(mid, 1);

@@ -119,12 +119,12 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     let bible_folder = property_get(lc, "bible_folder");
     async function get() {
       async function lambda_verses_l() {
-        let r = await ebible_verses_browser(bible_folder, chapter_code);
-        return r;
+        let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
+        return r_verses;
       }
       async function lambda_books_l() {
-        let r = await ebible_version_books_browser(bible_folder);
-        return r;
+        let r_books = await ebible_version_books_browser(bible_folder);
+        return r_books;
       }
       let fetched_l = await invoke_multiple_unordered_async([
         lambda_verses_l,
