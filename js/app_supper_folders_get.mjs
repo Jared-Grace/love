@@ -9,12 +9,12 @@ export function app_supper_folders_get(context) {
   let sl = property_get_or_null(hash, app_supper_folders_hash_key());
   let missing = null_is(sl);
   if (missing) {
-    let folders = property_list_map_property(
+    let folders_default = property_list_map_property(
       context,
       "supper_default_chosen",
       "bible_folder",
     );
-    return folders;
+    return folders_default;
   }
   let folders = text_split_plus(sl);
   return folders;
