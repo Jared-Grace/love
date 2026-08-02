@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
@@ -167,7 +168,11 @@ export function app_code_lesson_expression_whole_part_both() {
       return render;
     }
     let rights = ["whole part in one step"];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function above(root) {
