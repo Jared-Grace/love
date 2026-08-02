@@ -39,7 +39,14 @@ export function g_greeting(met, name_player, time, christian) {
     let combined = text_combine_multiple(["do you ", r5, " to ", r6, r7, r8]);
     let right3 = list_random_item(["mind", "heart"]);
     let combined2 = text_combine("is on your ", right3);
-    let r9 = list_random_item([combined, combined2]);
+    let topics = [combined, combined2];
+    ("the same split once more, on the question that opens a second conversation: a believer can ask what the Lord has laid on your heart, and nobody else would put it that way. it is one option among three rather than the christian version of the question, so a believer still mostly asks what is on your mind like anyone would");
+    if (christian) {
+      let combined3 = "has the Lord laid on your heart";
+      let topics_faith = [combined3];
+      topics = list_concat(topics, topics_faith);
+    }
+    let r9 = list_random_item(topics);
     meet_message += text_combine_multiple([
       r2,
       " you",
