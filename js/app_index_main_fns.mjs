@@ -2,20 +2,28 @@ import { fn_name } from "./fn_name.mjs";
 export function app_index_main_fns() {
   let r = [
     {
-      app_fn: fn_name("app_reply"),
-      text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
-    },
-    {
-      app_fn: fn_name("app_verses"),
-      text: "Lets you choose languages and how many random encouraging Bible verses you would like, then generates and copies them for you to share",
+      app_fn: fn_name("app_bible"),
+      text: "Allows reading the Bible",
     },
     {
       app_fn: fn_name("app_search"),
       text: "Allows search across multiple versions of the Bible in English and copying results in multiple languages",
     },
     {
-      app_fn: fn_name("app_bible"),
-      text: "Allows reading the Bible",
+      app_fn: fn_name("app_verses"),
+      text: "Lets you choose languages and how many random encouraging Bible verses you would like, then generates and copies them for you to share",
+    },
+    {
+      app_fn: fn_name("app_g"),
+      text: "Gospel sharing game",
+    },
+    {
+      app_fn: fn_name("app_code"),
+      text: "Teaches the JavaScript programming language one small step at a time, by solving code",
+    },
+    {
+      app_fn: fn_name("app_replace"),
+      text: "Teaches computer programming basics using substitution rules",
     },
     {
       app_fn: fn_name("app_original_bible"),
@@ -30,18 +38,6 @@ export function app_index_main_fns() {
       text: "Bible verses and prayers for Lord's Supper",
     },
     {
-      app_fn: fn_name("app_g"),
-      text: "Gospel sharing game",
-    },
-    {
-      app_fn: fn_name("app_replace"),
-      text: "Teaches computer programming basics using substitution rules",
-    },
-    {
-      app_fn: fn_name("app_code"),
-      text: "Teaches the JavaScript programming language one small step at a time, by solving code",
-    },
-    {
       app_fn: fn_name("app_examples"),
       text: "Shows real code edits - the same code before and after each automatic change - the tools for building software by hand",
     },
@@ -52,6 +48,10 @@ export function app_index_main_fns() {
     {
       app_fn: fn_name("app_g_bible"),
       text: "App for me",
+    },
+    {
+      app_fn: fn_name("app_reply"),
+      text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
     },
   ];
   return r;
