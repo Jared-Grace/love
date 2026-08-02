@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
@@ -24,8 +25,11 @@ export function g_plant_arcs(plant) {
   let chapters = property_get(plant, "chapters");
   let lines = multiply(days, settings.day_lines);
   let matches = g_passage_match_count(lines);
-  let question_share = multiply(matches, settings.question_matches_percent);
-  let divided = divide(question_share, 100);
+  let divided = multiply_divide(
+    matches,
+    settings.question_matches_percent,
+    100,
+  );
   let question_turns = Math.round(divided);
   let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
