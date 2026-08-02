@@ -3655,6 +3655,23 @@ def main():
         }))
         return
 
+    # A journal read of one of this repo's own daemons has an argumentless
+    # function answering it for every daemon at once. Deny with that pointer
+    # rather than prompting the human, so the next Claude reaches the named
+    # reader instead of retyping the unit name and getting it wrong. Safe as a
+    # floor: journalctl is never allow-listed, so this only ever converts an
+    # 'ask' into a self-correcting 'deny', and only for love_ units.
+    daemon_unit = find_journalctl_daemon_unit(command)
+    if daemon_unit is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": journalctl_daemon_unit_deny_reason(daemon_unit),
+            }
+        }))
+        return
+
     safe_verbs = load_safe_verbs()
     safe_exact_commands = load_safe_exact_commands()
     if not safe_verbs and not safe_exact_commands:
