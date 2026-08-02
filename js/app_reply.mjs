@@ -1,3 +1,4 @@
+import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -33,7 +34,6 @@ import { list_clear } from "./list_clear.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
@@ -134,8 +134,7 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let text2 = html_button_copy_text();
-  let component3 = app_shared_button(card2, text2, copy_refresh);
+  let component3 = app_shared_button_copy(card2, copy_refresh);
   let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
