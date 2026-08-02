@@ -61,7 +61,7 @@ export function app_code_lesson_expression_swapping_order() {
       "false",
     ]);
     html_div_cycle_code(less, [
-      "Swapping would say the bigger number is now the smaller one",
+      "Swapping would say the bigger number is now the smaller number",
     ]);
     html_div_cycle_code(less, [
       "So we can never swap two different numbers around ",
