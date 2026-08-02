@@ -439,7 +439,7 @@ export function permission_grant_names() {
   let spelled436 = fn_name("functions_fold_repair");
   let spelled437 = fn_name("functions_head_duplicates_gate_run");
   let spelled438 = fn_name("functions_head_duplicates_size");
-  let spelled439 = fn_name("functions_math_calls_pending");
+  let spelled439 = fn_name("functions_builtin_calls_pending");
   let spelled440 = fn_name("functions_selects_unsafe_names");
   let spelled441 = fn_name("functions_tail_duplicates_gate_run");
   let spelled442 = fn_name("functions_tail_duplicates_size");
