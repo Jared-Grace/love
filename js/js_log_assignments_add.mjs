@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
 import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
@@ -21,10 +23,12 @@ export async function js_log_assignments_add(ast) {
   function lambda_declarator_name(declarator) {
     let id = property_get(declarator, "id");
     let type = property_get(id, "type");
-    return type === "Identifier" ? property_get(id, "name") : null;
+    let r = equal(type, "Identifier") ? property_get(id, "name") : null;
+    return r;
   }
   function lambda_not_null(name) {
-    return name !== null;
+    let neq = not_equal(name, null);
+    return neq;
   }
   function lambda(la) {
     function lambda_visit(v) {
@@ -36,7 +40,8 @@ export async function js_log_assignments_add(ast) {
         lambda_declarator_name,
         lambda_not_null,
       );
-      if (list_size(names) === 0) {
+      let left = list_size(names);
+      if (equal(left, 0)) {
         return;
       }
       let line_text = js_unparse(node);
@@ -47,7 +52,8 @@ export async function js_log_assignments_add(ast) {
       }
       each(names, lambda_add_name);
       let args_code = [f_name + ".name", "{" + properties.join(", ") + "}"];
-      let statement = js_call_statement(fn_name("log"), args_code);
+      let f_name2 = fn_name("log");
+      let statement = js_call_statement(f_name2, args_code);
       function lambda_insert() {
         let index = list_index_of(list, node);
         list_insert(list, index + 1, statement);
@@ -57,5 +63,6 @@ export async function js_log_assignments_add(ast) {
     js_visit_declarations(ast, lambda_visit);
   }
   list_adder_invoke(lambda);
-  await js_imports_missing_add_specified_single(ast, fn_name("log"));
+  let name_new = fn_name("log");
+  await js_imports_missing_add_specified_single(ast, name_new);
 }
