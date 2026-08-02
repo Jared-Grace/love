@@ -1,9 +1,9 @@
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_swapping_add() {
   "the first swapping lesson: put the SAME two numbers on each side of ===, swapped around the operator - a op b === b op a. Leads with + (the earliest arithmetic anyone learns), then *, both of which keep their value when swapped, each with an everyday reason so the rule is understood, not memorised; then - as the contrast that changes when swapped. Each case shows both sides worked out so the swap is visible, not left implied. The quiz mixes + * (true) with - (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
