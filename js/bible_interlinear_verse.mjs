@@ -1,31 +1,59 @@
+import { fn_name } from "./fn_name.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
-"Given a readable verse reference (e.g. \"1 John 3:4\"), return its ordered";
-"interlinear words, each { original, translit, parsing, parsing_long, gloss, strong }.";
-"The readable \"VerseId\" is only stamped on the FIRST word of a verse; the rest share";
-"the numeric \"Verse\" id — so find the id from the first word, then gather all words.";
-"Uses plain bracket access because these external rows have optional fields (an";
-"asserting property_get would throw on the many rows that omit \"VerseId\").";
-const ORIGINAL_KEY = "WLC / Nestle Base TR RP WH NE NA SBL";
-const GLOSS_KEY = " BSB version ";
+('Given a readable verse reference (e.g. "1 John 3:4"), return its ordered');
+("interlinear words, each { original, translit, parsing, parsing_long, gloss, strong }.");
+('The readable "VerseId" is only stamped on the FIRST word of a verse; the rest share');
+('the numeric "Verse" id — so find the id from the first word, then gather all words.');
+("Uses plain bracket access because these external rows have optional fields (an");
+("asserting ",
+  fn_name("property_get"),
+  ' would throw on the many rows that omit "VerseId").');
+let ORIGINAL_KEY = "WLC / Nestle Base TR RP WH NE NA SBL";
+let GLOSS_KEY = " BSB version ";
 export async function bible_interlinear_verse(reference) {
-  let words = await file_read_json(bible_interlinear_json_path());
-  let first = words.find((x) => x["VerseId"] === reference);
-  if (!first) {
-    return [];
+  let file_path = bible_interlinear_json_path();
+  let words = await file_read_json(file_path);
+  function lambda(x) {
+    let eq = equal(x["VerseId"], reference);
+    return eq;
+  }
+  let first = words.find(lambda);
+  if (not(first)) {
+    let r = [];
+    return r;
   }
   let verse_id = first["Verse"];
-  let sort_key = first["Language"] === "Hebrew" ? "Heb Sort" : "Greek Sort";
-  let verse_words = words.filter((x) => x["Verse"] === verse_id);
-  verse_words = verse_words.slice().sort((a, b) => a[sort_key] - b[sort_key]);
-  return verse_words
-    .map((x) => ({
+  let sort_key = equal(first["Language"], "Hebrew") ? "Heb Sort" : "Greek Sort";
+  function lambda2(x) {
+    let eq2 = equal(x["Verse"], verse_id);
+    return eq2;
+  }
+  let verse_words = words.filter(lambda2);
+  function lambda3(a, b) {
+    let difference = subtract(a[sort_key], b[sort_key]);
+    return difference;
+  }
+  verse_words = verse_words.slice().sort(lambda3);
+  function lambda4(x) {
+    let r2 = {
       original: (x[ORIGINAL_KEY] || "").trim(),
       translit: (x["Translit"] || "").trim(),
       parsing: (x["Parsing"] || "").trim(),
       parsing_long: (x["Parsing_1"] || "").trim(),
       gloss: (x[GLOSS_KEY] || "").trim(),
       strong: x["Str Grk"] || x["Str Heb"] || "",
-    }))
-    .filter((w) => w.original !== "");
+    };
+    return r2;
+  }
+  function lambda5(w) {
+    let neq = not_equal(w.original, "");
+    return neq;
+  }
+  let r3 = verse_words.map(lambda4).filter(lambda5);
+  return r3;
 }
