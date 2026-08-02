@@ -9,7 +9,7 @@ export function app_shared_gradient_color(index, count) {
   if (greater_than(last, 0)) {
     t = divide(index, last);
   }
-  let brand = [37, 99, 235];
+  let brand = app_shared_color_brand_blue_rgb();
   let deemphasized = [100, 116, 139];
   let color = color_between(t, brand, deemphasized);
   return color;
