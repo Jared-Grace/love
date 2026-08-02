@@ -1,6 +1,5 @@
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -20,8 +19,7 @@ export function app_code_lesson_expression_whole_part() {
   function make(divisor) {
     "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
     let quotient = integer_random(2, 3);
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
-    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let division = app_code_uneven_division_code(quotient, divisor);
     let floored = text_combine_multiple(["Math.floor(", division, ")"]);
     let t = text_to(divisor);
     let code = text_combine_multiple([floored, " * ", t]);
