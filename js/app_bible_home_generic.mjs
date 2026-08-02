@@ -15,7 +15,7 @@ import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_bible_mode_switch } from "./app_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
-import { app_bible_button_chapter_previous } from "./app_bible_button_chapter_previous.mjs";
+import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
 import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
@@ -98,7 +98,7 @@ export async function app_bible_home_generic(
   let books = list_first(fetched_en);
   let verses = list_second(fetched_en);
   let book_name = ebible_book_code_to_name(books, book_code);
-  app_bible_button_chapter_previous(bar, context, chapter_code);
+  app_shared_bible_button_chapter_previous(bar, context, chapter_code);
   app_shared_screen_set_button(bar, context, app_shared_bible_books, book_name);
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
   app_shared_bible_button_chapter_next(bar, context, chapter_code);
