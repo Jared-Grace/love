@@ -42,6 +42,5 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
     return r;
   }
   let gold = app_g_day_guide_pick(g, player, target, minX, maxX, minY, maxY);
-  console.log("GUIDEDEBUG", JSON.stringify({ tile, barH, origin_x, origin_y, minX, maxX, minY, maxY, player: { x: player.x, y: player.y }, target: { x: target.x, y: target.y }, gold, targetInWindow, cw: container.clientWidth, ch: container.clientHeight }));
   return gold;
 }
