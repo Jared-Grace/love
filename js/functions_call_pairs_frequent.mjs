@@ -149,10 +149,8 @@ export async function functions_call_pairs_frequent() {
   list_map(entries, file_scan);
   ("A function whose whole body IS one of these pairs is the atom the pair is asking");
   ("for, already written under a name the composed one never guesses: the pair");
-  (text_combine_multiple([
-    fn_name("list_size"),
-    " then equal-to-zero is called ",
-  ]),
+  let f_name2 = fn_name("list_size");
+  (text_combine_multiple([f_name2, " then equal-to-zero is called "]),
     fn_name("list_empty_is"),
     " here.");
   ("Whole body means the file holds one wired pair, that pair's result is what the");
