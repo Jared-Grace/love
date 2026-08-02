@@ -1,9 +1,9 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { not } from "./not.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { git_commits_between } from "./git_commits_between.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -35,8 +35,7 @@ export async function qa_app_commit_deployable_remembered(
     let at = await qa_app_commit_gate_run_at(search, commit);
     let deployable = property_get(at, "deployable");
     let blocking = property_get(at, "blocking");
-    let set_aside = property_get(at, "elsewhere");
-    let elsewhere = list_map_property(set_aside, "gate");
+    let elsewhere = property_list_map_property(at, "elsewhere", "gate");
     list_add(looked, {
       commit,
       deployable,
