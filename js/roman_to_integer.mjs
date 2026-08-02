@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function roman_to_integer(input) {
@@ -38,10 +39,10 @@ export function roman_to_integer(input) {
       M: 1000,
     };
     let total = 0;
-    for (let i = 0; i < roman.length; i++) {
+    for (let i = 0; less_than(i, roman.length); i++) {
       let v1 = values[roman[i]];
       let v2 = values[roman[text_combine(i, 1)]] || 0;
-      total += v1 < v2 ? -v1 : v1;
+      total += less_than(v1, v2) ? -v1 : v1;
     }
     return total;
   }
@@ -55,7 +56,8 @@ export function roman_to_integer(input) {
     let romanPart = match[1];
     let suffix = match[2] || "";
     let asciiRoman = unicodeToAscii(romanPart);
-    let v5 = text_combine(romanToInt(asciiRoman), suffix);
+    let left = romanToInt(asciiRoman);
+    let v5 = text_combine(left, suffix);
     return v5;
   }
   let v6 = parseRomanOrInteger(input);
