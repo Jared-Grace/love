@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,8 +12,7 @@ export function js_address_fused_words(ast, words) {
   "Prose is left out. A docstring is a string standing alone as a statement, and one that describes a link naturally spells the link out; flagging that would ask somebody to reword an explanation to satisfy a check, which is the opposite of what this is for.";
   let prose = [];
   function on_statement(visited) {
-    let statement = property_get(visited, "node");
-    let expression = property_get(statement, "expression");
+    let expression = property_path_get_2(visited, "node", "expression");
     list_add(prose, expression);
   }
   js_visit_type(ast, "ExpressionStatement", on_statement);
