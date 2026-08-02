@@ -3565,6 +3565,70 @@ def dispatcher_deny_reason(fn):
     )
 
 
+# A path under this session-scoped folder is a background task's own output
+# file - the harness writes it, names it in the tool result, and re-invokes the
+# caller when the command exits. SCRATCHPAD_PREFIX already spells the folder
+# every session of this repo gets; the session id and the task id are the two
+# words that vary.
+TASK_OUTPUT_RE = re.compile(
+    re.escape(SCRATCHPAD_PREFIX) + r"[^/\s'\"]+/tasks/[^\s'\";|)]+"
+)
+
+# The loop keyword, and a wait inside it. `read -t` is a sleep wearing another
+# name and is what these are actually written with, since a foreground `sleep`
+# is refused by the harness; `sleep` is listed too so the plainer spelling is
+# caught the same way.
+POLL_LOOP_RE = re.compile(r"(^|[\s;&|(])(for|while|until)\s")
+POLL_WAIT_RE = re.compile(r"(^|[\s;&|(])(read\s+-t\b|sleep\s)")
+
+
+def task_output_poll_loop_path(command):
+    """If `command` is a loop that busy-waits on a background task's output
+    file, return that path; else None.
+
+    There is nothing to wait for. A background Bash command re-invokes its
+    caller when it exits, so the loop's whole job is done by the harness -
+    what it buys is a prompt on the way in (nothing grants a loop carrying
+    `read` and a command substitution) and then a turn spent sitting still.
+    Measured over the seven days to 2026-08-02: nine such prompts from one
+    session, the worst wait in that bucket seven hours.
+
+    Narrow on purpose. Polling is the right shape for state this harness
+    cannot see - a deploy, a CI run, a page going live - and one of those is
+    in the same measurement, waiting on a URL. So the tell is not the loop; it
+    is the loop naming a path under the session's own tasks folder, which is
+    the one place the notification is guaranteed. Everything else keeps the
+    answer it had.
+
+    Safe as a floor: a loop like this is never allow-listed, so this only
+    converts a silent fall-through into a deny that names the way forward -
+    and the way forward is always open, since reading the file is already
+    approved and needs no loop around it."""
+    if not POLL_LOOP_RE.search(command) or not POLL_WAIT_RE.search(command):
+        return None
+    match = TASK_OUTPUT_RE.search(command)
+    if match is None:
+        return None
+    return match.group(0)
+
+
+def task_output_poll_loop_deny_reason(path):
+    return (
+        "There is nothing to wait for here - that file belongs to a "
+        "background command, and you are re-invoked automatically when it "
+        "exits, so the loop only spends a turn sitting still and asks the "
+        "human for permission on the way in.\n"
+        "  - to see what has been written so far: "
+        f"`tail -30 {path}` (already approved, no loop needed)\n"
+        "  - to see the rest: end the turn. The notification arrives on its "
+        "own and names this same file.\n"
+        "Polling is still right for something this harness cannot see - a "
+        "deploy going live, a run on another machine - and a loop over one of "
+        "those is left alone. This is only about a task it already watches "
+        "for you."
+    )
+
+
 def decide(decision, reason):
     """Emit one verdict and hand back None, so a caller writes
     `return decide("deny", why)` where it used to spell the whole envelope
@@ -3705,6 +3769,15 @@ def main():
     daemon_unit = find_journalctl_daemon_unit(command)
     if daemon_unit is not None:
         return decide("deny", journalctl_daemon_unit_deny_reason(daemon_unit))
+
+    # Same floor-instead-of-prompt reasoning again, applied to a loop that sits
+    # and waits for a background task's output file to fill: the harness
+    # re-invokes the caller when that command exits, so the loop is answering a
+    # question nobody had to ask. See task_output_poll_loop_path for why the
+    # tell is the tasks folder rather than the loop.
+    poll_path = task_output_poll_loop_path(command)
+    if poll_path is not None:
+        return decide("deny", task_output_poll_loop_deny_reason(poll_path))
 
     safe_verbs = load_safe_verbs()
     safe_exact_commands = load_safe_exact_commands()
