@@ -8,8 +8,8 @@ import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 export function html_parse_descendants_classes(item, d) {
   let descendants = html_parse_find_list_to(item, "*");
   function lambda2(la) {
-    function lambda(item) {
-      let c = html_parse_attr(d, item, "class");
+    function lambda(descendant) {
+      let c = html_parse_attr(d, descendant, "class");
       if (text_is(c)) {
         let split = text_split(c, " ");
         each(split, la);
