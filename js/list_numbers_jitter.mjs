@@ -1,3 +1,4 @@
+import { floor } from "./floor.mjs";
 import { less_than } from "./less_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -18,10 +19,10 @@ export function list_numbers_jitter(numbers, next, attempts, least, most) {
   for (let attempt = 0; less_than(attempt, attempts); attempt++) {
     let left = next();
     let scaled = multiply(left, count);
-    let giver = Math.floor(scaled);
+    let giver = floor(scaled);
     let left2 = next();
     let scaled2 = multiply(left2, count);
-    let taker = Math.floor(scaled2);
+    let taker = floor(scaled2);
     let given = subtract(jittered[giver], 1);
     let taken = jittered[taker] + 1;
     let stays_above = greater_than_equal(given, least);
