@@ -14,6 +14,11 @@ export function js_duplicate_elements(ast, size) {
   for (let v of vs) {
     let node = property_get(v, "node");
     let elements = property_get(node, "elements");
+    ("A short list is passed over, and that is what tells a register apart from a handful of things written side by side. A run of the same name twice is ordinary in the small: a padding written either side of a word, a cycle stepping through nothing and then something and then nothing again, the same reading handed to both halves of a pair. None of those is a register and none of them is wrong.");
+    let short = less_than(elements.length, size);
+    if (short) {
+      continue;
+    }
     let seen = [];
     for (let element of elements) {
       let named = js_identifier_is(element);
