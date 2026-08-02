@@ -26,12 +26,7 @@ export async function commits_command_named_share(count_given) {
     commanded = commanded + 1;
     let words = text_split(subject, " ");
     let word = list_first(words);
-    let seen = property_exists(commands, word);
-    if (not(seen)) {
-      property_set(commands, word, 0);
-    }
-    let so_far = property_get(commands, word);
-    property_set(commands, word, so_far + 1);
+    property_count_add(commands, word, 1);
   }
   let total = list_size(commits);
   let share = divide(commanded, total);
