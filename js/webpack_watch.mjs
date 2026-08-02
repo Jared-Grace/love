@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_find_property_not_null_is } from "./list_find_property_not_null_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
@@ -33,15 +35,14 @@ import { path_modified_ms } from "./path_modified_ms.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
-  let dev_relative = folder_public_join(app_shared_name_dev_text());
+  let f_path = app_shared_name_dev_text();
+  let dev_relative = folder_public_join(f_path);
   let a_names = await apps_names_dev();
   async function app_deps_get(a_name) {
     async function lambda() {
       let main = await app_shared_name_main(a_name);
-      let deps = await function_dependencies([
-        main,
-        fn_name("app_shared_context_initialize"),
-      ]);
+      let f_name2 = fn_name("app_shared_context_initialize");
+      let deps = await function_dependencies([main, f_name2]);
       let r2 = {
         a_name,
         deps,
@@ -53,7 +54,8 @@ export async function webpack_watch() {
   }
   let built = await list_map_async(a_names, app_deps_get);
   let app_deps = list_filter(built, null_not_is);
-  log(fn_name("webpack_watch"), {
+  let f_name3 = fn_name("webpack_watch");
+  log(webpack_watch.name, {
     apps: a_names,
     indexed: app_deps.length,
   });
@@ -88,7 +90,8 @@ export async function webpack_watch() {
     }
     property_set(building, a_name, true);
     async function lambda() {
-      log(fn_name("webpack_watch"), {
+      let f_name4 = fn_name("webpack_watch");
+      log(webpack_watch.name, {
         rebuild: a_name,
       });
       await app_shared_dev_build(a_name);
@@ -113,7 +116,8 @@ export async function webpack_watch() {
     if (failed) {
       return;
     }
-    property_set(ad, "deps", property_get(fresh, "deps"));
+    let value = property_get(fresh, "deps");
+    property_set(ad, "deps", value);
   }
   async function apps_discover() {
     "an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work";
@@ -133,7 +137,8 @@ export async function webpack_watch() {
         return;
       }
       list_add(app_deps, ad);
-      log(fn_name("webpack_watch"), {
+      let f_name5 = fn_name("webpack_watch");
+      log(webpack_watch.name, {
         discovered: a_name,
       });
       build_schedule(a_name);
@@ -163,7 +168,7 @@ export async function webpack_watch() {
     let file = text_combine(a_name, ".js");
     let bundle = path_join([dev_relative, file]);
     let bundle_ms = await path_modified_ms(bundle);
-    if (bundle_ms === null) {
+    if (equal(bundle_ms, null)) {
       return true;
     }
     let deps = property_get(ad, "deps");
@@ -173,14 +178,14 @@ export async function webpack_watch() {
         return p;
       }
       let path = catch_null(resolve);
-      if (path === null) {
+      if (equal(path, null)) {
         return true;
       }
       let ms = await path_modified_ms(path);
-      if (ms === null) {
+      if (equal(ms, null)) {
         return false;
       }
-      let newer = ms > bundle_ms;
+      let newer = greater_than(ms, bundle_ms);
       return newer;
     }
     let flags = await list_map_unordered_async(deps, dep_stale_is);
@@ -195,7 +200,8 @@ export async function webpack_watch() {
     }
   }
   await list_map_unordered_async(app_deps, schedule_if_stale);
-  log(fn_name("webpack_watch"), {
+  let f_name6 = fn_name("webpack_watch");
+  log(webpack_watch.name, {
     watching: folders,
   });
 }
