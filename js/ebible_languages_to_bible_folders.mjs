@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -7,7 +8,7 @@ export function ebible_languages_to_bible_folders(language_codes) {
   function lambda(c) {
     let bible_folder = list_find_property_get(
       languages,
-      "language_code",
+      language_code_key(),
       c,
       bible_folder_key(),
     );
