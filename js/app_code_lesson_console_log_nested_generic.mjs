@@ -1,7 +1,7 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -21,8 +21,7 @@ export function app_code_lesson_console_log_nested_generic(params) {
   let triples_get = property_get(params, "triples_get");
   let separator = text_combine_multiple([" ", symbol, " "]);
   function triple_to_code(triple) {
-    let texts = list_map(triple, text_to);
-    let joined = list_join(texts, separator);
+    let joined = list_map_join_separator(triple, text_to, separator);
     return joined;
   }
   function refill() {
