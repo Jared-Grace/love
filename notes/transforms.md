@@ -31,6 +31,7 @@
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
+| Rename **several** names inside one fn in one command — the words in one list, what each becomes in the other | (no alias) | `function_identifier_replace_multiple <fn> <a,b,c> <x,y,z>` — the shape after `function_copy`, where every local the copy brought along wants a new name at once |
 | Add **several** parameters to one fn in one command | (no alias) | `function_params_new <fn> <a,b,c> <defaults>` — the singular is a thin wrapper over it, so running the singular in a loop is spending N commands on a capability that was already there |
 | Canonicalize a fn **and say whether it still loads**, in one command | (no alias) | `function_auto_checked <fn>` |
 | The same over a list, answering per name | (no alias) | `function_auto_multiple_checked <a,b,c>` |
