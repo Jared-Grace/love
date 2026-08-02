@@ -256,6 +256,14 @@
     { "command": "grep 'awk' notes.txt", "decision": "allow", "why": "quote-aware: 'awk' inside a grep pattern is literal text, not the awk program, so grep stays trusted" },
     { "command": "gawk 'BEGIN{print 1}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "gawk/mawk/nawk variants are the same eval seam as awk and denied alike" },
 
+    { "command": "journalctl --user -u love_git_push_auto -n 6 --no-pager", "decision": "deny", "reason_includes": "daemons_journal_recent", "why": "this repo's own daemon has an argumentless named reader, so the guard names it rather than handing the human a prompt" },
+    { "command": "journalctl --user --unit=love_server -n 20", "decision": "deny", "reason_includes": "daemons_journal_recent", "why": "the joined --unit= spelling names the same unit and is caught alike" },
+    { "command": "journalctl --user -ulove_server -n 20", "decision": "deny", "reason_includes": "daemons_journal_recent", "why": "the short flag written against its value is the third spelling of one unit and is caught alike" },
+    { "command": "journalctl --user -u love_g_content_backup_auto.service --since '10 min ago'", "decision": "deny", "reason_includes": "daemons_journal_recent", "why": "the .service suffix is optional in systemd and must not be a way past the check" },
+    { "command": "journalctl --user -u sshd -n 5", "decision": "silent", "why": "a unit this repo did not create has no function answering for it, so it is left to the native engine untouched" },
+    { "command": "journalctl -b -n 20", "decision": "silent", "why": "a journal read naming no unit at all is outside what the named reader answers" },
+    { "command": "grep 'journalctl --user -u love_server' notes.txt", "decision": "allow", "why": "quote-aware: the command inside a grep pattern is literal text, so grep stays trusted" },
+
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
     { "command": "while true; do ls; done", "decision": "allow", "why": "while blocks are modelled like for/if" },
