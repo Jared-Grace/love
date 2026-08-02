@@ -45,10 +45,12 @@ export function roman_to_integer(input) {
     }
     return total;
   }
-  function parseRomanOrInteger(input) {
-    let match = input.match(/^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯIVXLCDM]+)([a-zA-Z]*)$/);
+  function parseRomanOrInteger(roman_or_integer) {
+    let match = roman_or_integer.match(
+      /^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯIVXLCDM]+)([a-zA-Z]*)$/,
+    );
     if (not(match)) {
-      return input;
+      return roman_or_integer;
     }
     let romanPart = match[1];
     let suffix = match[2] || "";
