@@ -1,7 +1,7 @@
 {
-  "known": [
-    "g_objection_generate - Copy",
-    "g_preach_generate - Copy",
-    "text_to_uuid_set"
-  ]
+ "known": [
+  "g_objection_generate - Copy",
+  "g_preach_generate - Copy",
+  "text_to_uuid_set"
+ ]
 }
