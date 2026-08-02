@@ -24,7 +24,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bible_home_inner } from "./app_g_bible_home_inner.mjs";
+import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 export async function app_shared_gloss_bible_home_generic(
   context,
@@ -33,7 +33,7 @@ export async function app_shared_gloss_bible_home_generic(
   app_fn,
 ) {
   let generated = g_sermon_generate_book_generic_property();
-  let v = await app_g_bible_home_inner(context, download, app_fn);
+  let v = await app_shared_bible_home_inner(context, download, app_fn);
   let passages = property_get(v, "passages");
   if (list_empty_is(passages)) {
     return;

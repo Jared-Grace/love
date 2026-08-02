@@ -4,7 +4,7 @@ import { list_last_property } from "./list_last_property.mjs";
 import { firebase_upload_object_compressed_browser } from "./firebase_upload_object_compressed_browser.mjs";
 import { each } from "./each.mjs";
 import { g_sermon_generate_download } from "./g_sermon_generate_download.mjs";
-import { app_g_bible_home_inner } from "./app_g_bible_home_inner.mjs";
+import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "./g_sermon_generate_upload_path.mjs";
@@ -29,11 +29,12 @@ export async function app_g_bible_home(context) {
   let r = null;
   async function lambda5(la) {
     let passages = null;
-    ({ chapter_code, downloaded, r, passages } = await app_g_bible_home_inner(
-      context,
-      g_sermon_generate_download,
-      app_g_bible,
-    ));
+    ({ chapter_code, downloaded, r, passages } =
+      await app_shared_bible_home_inner(
+        context,
+        g_sermon_generate_download,
+        app_g_bible,
+      ));
     function on_passage({ passage, verses }) {
       let p = list_last_property(verses, "p");
       let mapped = app_g_openai_split_property(passage, "sermon");

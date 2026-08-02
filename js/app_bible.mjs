@@ -1,5 +1,5 @@
 import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
-import { app_bible_shared_initialize } from "./app_bible_shared_initialize.mjs";
+import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
 import { app_bible_screens } from "./app_bible_screens.mjs";
 import { app_bible_home } from "./app_bible_home.mjs";
 import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
@@ -15,7 +15,7 @@ export async function app_bible(context) {
   let verse = equal(mode, right);
   if (verse) {
     let screens = app_bible_screens();
-    await app_bible_shared_initialize(
+    await app_shared_bible_initialize(
       context,
       app_bible,
       screens,
