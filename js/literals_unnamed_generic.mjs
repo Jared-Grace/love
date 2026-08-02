@@ -1,8 +1,8 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { literal_getters } from "./literal_getters.mjs";
 import { property_js_parse } from "./property_js_parse.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
-import { property_get } from "./property_get.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { js_fn_name_literals } from "./js_fn_name_literals.mjs";
 import { js_literals_used } from "./js_literals_used.mjs";
@@ -29,8 +29,7 @@ export function literals_unnamed_generic(codes) {
     let ast = property_js_parse(codes, f_name);
     let skip = {};
     for (let declaration of js_imports_all(ast)) {
-      let node = property_get(declaration, "node");
-      let source = property_get(node, "source");
+      let source = property_path_get_2(declaration, "node", "source");
       let path = js_literal_value_get(source);
       skip[path] = true;
     }
