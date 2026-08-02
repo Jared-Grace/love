@@ -1,7 +1,6 @@
+import { function_name_to_base } from "./function_name_to_base.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { functions_name_references_mixed } from "./functions_name_references_mixed.mjs";
-import { function_name_extension } from "./function_name_extension.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { folder_js } from "./folder_js.mjs";
 import { path_join } from "./path_join.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
@@ -16,8 +15,7 @@ export async function functions_name_references_mixed_strip() {
   let mixed = await functions_name_references_mixed();
   let stripped = [];
   for (let name of mixed) {
-    let right = function_name_extension();
-    let combined = text_combine(name, right);
+    let combined = function_name_to_base(name);
     let src = folder_js();
     let f_path = path_join([src, combined]);
     let args = [f_path];
