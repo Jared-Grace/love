@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,7 +14,7 @@ export async function app_shared_bible_reference_entries_generic(
   let multiple = list_multiple_is(languages_chosen);
   let entries = [];
   async function language_each(language) {
-    let bible_folder = property_get(language, "bible_folder");
+    let bible_folder = property_get(language, bible_folder_key());
     let text = await text_get_fn(bible_folder, reference);
     let none = null_is(text);
     if (none) {
