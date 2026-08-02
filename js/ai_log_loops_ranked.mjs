@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
@@ -86,12 +87,12 @@ export function ai_log_loops_ranked(entries) {
     property_set(varied, session, false);
   }
   ("A conversation's last run is still open when the lines end, and it is the most recent thing anybody did - so close every one of them rather than dropping the newest evidence in the file.");
-  let sessions = Object.keys(lengths);
+  let sessions = object_property_names(lengths);
   for (let session of sessions) {
     run_close(session);
   }
   let ranked = [];
-  let steps = Object.keys(spent);
+  let steps = object_property_names(spent);
   for (let step of steps) {
     let commands_saved = property_get(spent, step);
     let times = property_get(loops, step);
@@ -110,7 +111,7 @@ export function ai_log_loops_ranked(entries) {
     });
   }
   ("A step whose every run repeated the identical command has nothing to build, so it ranks at nothing - but it is still listed, because a poller spending a hundred thousand process starts is worth somebody seeing even though no sweep would touch it.");
-  let steps_identical = Object.keys(identical);
+  let steps_identical = object_property_names(identical);
   for (let step of steps_identical) {
     let ranked_already = property_exists(spent, step);
     if (ranked_already) {
