@@ -1,10 +1,10 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { permission_grant_refusals_names } from "./permission_grant_refusals_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
@@ -19,8 +19,7 @@ export async function permission_grant_check_multiple(names_comma) {
   let missing = list_without_multiple(asked, granted);
   let refusals_by_name = await permission_grant_refusals_names(missing);
   function clean_is(f_name) {
-    let refusals = property_get(refusals_by_name, f_name);
-    let b = list_empty_is(refusals);
+    let b = property_list_empty_is(refusals_by_name, f_name);
     return b;
   }
   function refused_is(f_name) {
