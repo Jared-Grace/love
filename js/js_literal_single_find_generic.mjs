@@ -1,7 +1,5 @@
+import { js_literals_used } from "./js_literals_used.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
-import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,18 +11,13 @@ export function js_literal_single_find_generic(ast, value_is, sort_name) {
   "Comments are left out, because in this repo a comment is a string too. A function of four explanations and one message holds five strings and means one, so counting them all would refuse every function that says anything about itself - which is all of them. It costs nothing to leave them out when looking for a number, and it would cost a wrong answer to forget when looking for a string.";
   "One value, not one place. The same value written three times is still one decision written three times, and the transform this hands to takes every one of them - so demanding a single node would refuse exactly the functions most worth making general.";
   "The sort of value is asked for rather than fixed, because what makes a string the interesting one and a number the interesting one is the same question asked of a different kind of thing. Naming the sort is only so the complaint can say which kind was being looked for.";
-  let prose = js_prose_literal_nodes(ast);
-  let literals = js_list_type_nodes(ast, "Literal");
+  let written = js_literals_used(ast);
   function sort_value_is(node) {
-    let commented = list_includes(prose, node);
-    if (commented) {
-      return false;
-    }
     let each_value = js_literal_value_get(node);
     let wanted = value_is(each_value);
     return wanted;
   }
-  let used = list_filter(literals, sort_value_is);
+  let used = list_filter(written, sort_value_is);
   let values = list_map_unique(used, js_literal_value_get);
   let asked = {
     hint: text_combine_multiple([
