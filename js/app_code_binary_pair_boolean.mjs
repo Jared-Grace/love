@@ -7,10 +7,22 @@ import { property_get } from "./property_get.mjs";
 export function app_code_binary_pair_boolean(fn) {
   "left/right operands (the keywords true and false) for a binary BOOLEAN operator lesson; picks a random one of the four true/false combinations whose result equals want_true, classifying them with the operator's own fn";
   let combinations = [
-    { left: true, right: true },
-    { left: true, right: false },
-    { left: false, right: true },
-    { left: false, right: false },
+    {
+      left: true,
+      right: true,
+    },
+    {
+      left: true,
+      right: false,
+    },
+    {
+      left: false,
+      right: true,
+    },
+    {
+      left: false,
+      right: false,
+    },
   ];
   function keyword(value) {
     if (value) {

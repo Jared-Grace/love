@@ -9,7 +9,10 @@ import { js_code_fn_names_pieces } from "./js_code_fn_names_pieces.mjs";
 import { js_add_reference_pieces_replace_code } from "./js_add_reference_pieces_replace_code.mjs";
 import { js_parse_expression_replace } from "./js_parse_expression_replace.mjs";
 import { js_strings_replace_generic } from "./js_strings_replace_generic.mjs";
-export async function js_strings_add_reference_to_fn_names_generic(ast, fn_names) {
+export async function js_strings_add_reference_to_fn_names_generic(
+  ast,
+  fn_names,
+) {
   let skip = js_strings_add_reference_skip_nodes(ast);
   let statement_nodes = js_statement_expression_nodes(ast);
   function replace_try(value, node) {

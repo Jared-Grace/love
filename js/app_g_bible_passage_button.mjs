@@ -16,6 +16,11 @@ export function app_g_bible_passage_button(
     verse_numbers,
   );
   let verse_text = property_get(passage, "text");
-  let b = app_g_bible_passage_button_direct(reference, verse_text, overlay, lambda);
+  let b = app_g_bible_passage_button_direct(
+    reference,
+    verse_text,
+    overlay,
+    lambda,
+  );
   return b;
 }
