@@ -1,3 +1,3 @@
 export function html_alert(message) {
-  alert();
+  alert(message);
 }
