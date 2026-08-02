@@ -1,3 +1,4 @@
+import { text_frozen } from "./text_frozen.mjs";
 export function js_name_value_use_nodes_cases() {
   "Small written-out files, each saying how many places in it hand the name f over as a value rather than calling it.";
   "This reading is one of the three refusals in front of the repair that takes an unread parameter off a function and off every call site at once. A function handed over as a value has its parameter list fixed by whoever ends up calling it, and that caller is nowhere in the file - so a handing-over this reading fails to see becomes a live argument written away in silence.";
