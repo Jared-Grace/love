@@ -3248,12 +3248,7 @@ def find_git_commit_write(command):
     handling. Only the bare `git <sub>` shape is caught - a `git -C <dir> ...`
     form is deliberately left alone so this floor never overrides an exact
     `git -C ...` allow rule the human may have granted."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if len(words) >= 2 and words[0] == "git" and words[1] in GIT_WRITE_COMMIT_SUBCOMMANDS:
             return words[1]
         if len(words) >= 2 and words[0] == "git" and words[1] in GIT_DISCARD_SUBCOMMANDS:
