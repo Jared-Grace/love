@@ -1,4 +1,4 @@
-import { data_generate } from "./data_generate.mjs";
+import { data_index_get } from "./data_index_get.mjs";
 import { equal } from "./equal.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { data_path } from "./data_path.mjs";
@@ -7,7 +7,8 @@ export async function data_all(file_path) {
   let data = {};
   let d_path = data_path();
   if (equal(file_path, d_path)) {
-    await data_generate(data);
+    "The index is asked for rather than built here, so that a process asking twice folds once. Building it in place was what made the auto pass rebuild the whole thing for every step that consulted it.";
+    data = await data_index_get();
   } else {
     await data_all_initialize(file_path);
     data = await file_read_json(file_path);
