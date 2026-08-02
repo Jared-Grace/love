@@ -1,5 +1,5 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { permission_grant_refusals_names } from "./permission_grant_refusals_names.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { permission_settings_allow_drift } from "./permission_settings_allow_drift.mjs";
@@ -52,8 +52,7 @@ export async function permission_settings_allow_assert() {
   ("Which command repairs a shrink depends on whether the departed names are still live. A rule left on disk for a function that still exists and could still be granted did not follow its function anywhere - the names list lost it, which is what two Claudes granting at once does - and regenerating from that list would delete a grant the human gave. So the names are asked about before a command is named, and the two cases get different ones.");
   let refusals_by_name = await permission_grant_refusals_names(departed);
   function restorable_is(f_name3) {
-    let refusals = property_get(refusals_by_name, f_name3);
-    let b = list_empty_is(refusals);
+    let b = property_list_empty_is(refusals_by_name, f_name3);
     return b;
   }
   let restorable = list_filter(departed, restorable_is);
