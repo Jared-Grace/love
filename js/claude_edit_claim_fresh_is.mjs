@@ -1,6 +1,5 @@
-import { subtract } from "./subtract.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { less_than } from "./less_than.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { statSync } from "fs";
 import { claude_edit_claim_path } from "./claude_edit_claim_path.mjs";
 ("Did Claude claim this exact file within the last few seconds?");
@@ -18,8 +17,7 @@ export function claude_edit_claim_fresh_is(file_path) {
   let claim = claude_edit_claim_path(file_path);
   try {
     let stat = statSync(claim);
-    let left = date_now_milliseconds();
-    let age = subtract(left, stat.mtimeMs);
+    let age = date_milliseconds_since(stat.mtimeMs);
     let fresh = less_than(age, FRESH_MILLISECONDS);
     return fresh;
   } catch (missing) {
