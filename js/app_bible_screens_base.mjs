@@ -1,4 +1,4 @@
-import { app_bible_languages } from "./app_bible_languages.mjs";
+import { app_shared_bible_languages } from "./app_shared_bible_languages.mjs";
 import { app_bible_verses } from "./app_bible_verses.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
@@ -10,7 +10,7 @@ export function app_bible_screens_base(a) {
     app_shared_bible_books,
     app_shared_bible_chapters,
     app_bible_verses,
-    app_bible_languages,
+    app_shared_bible_languages,
     app_bible_settings,
     app_bible_offline,
   ]);
