@@ -1,10 +1,10 @@
+import { text_replace } from "./text_replace.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_join } from "./list_join.mjs";
-import { text_split } from "./text_split.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
@@ -27,8 +27,7 @@ export async function app_shared_bible_share(
   if (not(single)) {
     verse_range = text_combine_multiple([first, "-", last]);
   }
-  let list = text_split(book_name, " ");
-  let book_plus = list_join(list, "+");
+  let book_plus = text_replace(book_name, " ", "+");
   let reference = text_combine_multiple([
     book_plus,
     "+",
