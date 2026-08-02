@@ -97,7 +97,7 @@ export function app_code_lesson_expression_swapping_add() {
       "1",
       " and ",
       "-1",
-      " are different, so we can never swap the numbers around ",
+      " are different, so we can never swap two different numbers around ",
       "-",
     ]);
   }
