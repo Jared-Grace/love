@@ -63,6 +63,25 @@ export async function cases_checked_gate_run_generic(
   if (any) {
     throw new Error(label + " gate: " + failures.length + " failed" + hint);
   }
+  ("A corpus wanting the same thing of every case is refused for the same reason as an");
+  ("empty one, one step further in. It runs something, so it passes the check above -");
+  ("but every case wants the one thing, so a run that produced that thing whatever it");
+  ("was given is answered right by all of them, and the gate reads green off a");
+  ("checker that has stopped looking. A corpus of cases that must all be allowed");
+  ("cannot catch a hook that allows everything.");
+  ("What each case wanted is read off the verdicts rather than off the cases, because");
+  ("here it is the checker that says so - the case is carried somewhere real first and");
+  ("only the checker knows what came back. So this also catches a checker that has");
+  ("stopped reading its case and wants one fixed thing of all of them.");
+  ("Asked here, after the running, rather than up beside the empty check it belongs");
+  ("with: what is dangerous is a corpus like this coming out green, and a red one has");
+  ("already stopped the run and says something truer about why.");
+  let answers = cases_expected_answers(results, "expected");
+  list_size_greater_than_assert_json(answers, 1, {
+    label,
+    answers,
+    hint: "every case in this corpus wanted the same thing, so a run producing that one thing whatever it was given would pass all of them - write a case that must come out differently",
+  });
   let r2 = {
     pass: results.length,
     fail: 0,
