@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -79,10 +80,8 @@ export function app_code_lesson_quiz_multiple_choice(
   }
   while (need_more()) {
     let item = next_get();
-    let answer_batch = property_get(item, answer_property);
-    let answer_text = text_to(answer_batch);
-    let question_batch = property_get(item, question_property);
-    let question_text = text_to(question_batch);
+    let answer_text = property_text_to(item, answer_property);
+    let question_text = property_text_to(item, question_property);
     let ambiguous = equal(question_text, quiz_question_text);
     let already = list_includes(seen, answer_text);
     let skip = or(already, ambiguous);
