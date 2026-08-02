@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
 import { js_colors_written } from "./js_colors_written.mjs";
 import { color_parse } from "./color_parse.mjs";
@@ -5,7 +6,7 @@ import { colors_near_miss_is } from "./colors_near_miss_is.mjs";
 export async function colors_near_miss_findings() {
   "every pair of colours in js that read as the same colour without being it, each finding naming both spellings, how far apart they are, and the files on each side. Sorted so the answer is the same on every run, which is what lets a ratchet compare today's list against yesterday's.";
   let written = await js_colors_written();
-  let spellings = Object.keys(written).sort();
+  let spellings = object_property_names(written).sort();
   let readable = [];
   for (let spelling of spellings) {
     let parsed = color_parse(spelling);
