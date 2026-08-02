@@ -57,7 +57,7 @@ export async function app_g_verify_home(context) {
   let v6 = g_verify_chapter_query_key();
   let v7 = g_verify_chapter_storage_key();
   let chapter_code =
-    new URLSearchParams(location.search).get(v6) ||
+    html_query_property_get(v6) ||
     localStorage.getItem(v7) ||
     "1JN01";
   let book_code = chapter_code.slice(0, 3);
