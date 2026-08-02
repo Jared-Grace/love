@@ -1,7 +1,7 @@
 import { list_first } from "./list_first.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { app_shared_bible_chapter_change } from "./app_shared_bible_chapter_change.mjs";
-export async function app_bible_chapter_previous(context, chapter_code) {
+export async function app_shared_bible_chapter_previous(context, chapter_code) {
   "the previous-chapter button opens the previous chapter at its first verse, matching the next-chapter button";
   await app_shared_bible_chapter_change(
     context,
