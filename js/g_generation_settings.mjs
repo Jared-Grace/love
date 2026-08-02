@@ -46,6 +46,7 @@ export function g_generation_settings() {
     plant_npcs_below_settle: 2,
     plant_npcs_large_percent: 10,
     npc_pool_multiple: 1,
+    sender_areas: 1,
     question_matches_percent: 25,
     arc_length_swaps: 50,
     npcs_available_minimum: 4,
