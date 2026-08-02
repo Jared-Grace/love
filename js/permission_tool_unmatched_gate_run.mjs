@@ -1,0 +1,40 @@
+import { permission_tool_unmatched_cases } from "./permission_tool_unmatched_cases.mjs";
+import { permission_rule_tool_unmatched_is } from "./permission_rule_tool_unmatched_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_add } from "./list_add.mjs";
+import { not } from "./not.mjs";
+export function permission_tool_unmatched_gate_run() {
+  "Gate: the written-down rules must each get the answer the corpus declares. The audit built on this judgment reads the live settings files, where a correct answer and a broken one both come back empty today, so this is the only place a mistake in it can be seen. Throws so the dispatcher seam exits nonzero.";
+  let cases = permission_tool_unmatched_cases();
+  let failures = [];
+  for (let c of cases) {
+    let rule = property_get(c, "rule");
+    let expected = property_get(c, "unmatched");
+    let actual = permission_rule_tool_unmatched_is(rule);
+    let b = equal(expected, actual);
+    let mark = b ? "pass  " : "FAIL  ";
+    console.log(mark + rule + "  " + expected + " / " + actual);
+    if (not(b)) {
+      list_add(failures, c);
+    }
+  }
+  console.log(
+    "\npass " +
+      subtract(cases.length, failures.length) +
+      "  fail " +
+      failures.length,
+  );
+  if (greater_than(failures.length, 0)) {
+    throw new Error(
+      "permission tool unmatched gate: " + failures.length + " failed",
+    );
+  }
+  let r = {
+    pass: cases.length,
+    fail: 0,
+  };
+  return r;
+}
