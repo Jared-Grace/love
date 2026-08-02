@@ -145,6 +145,7 @@ export function qa_gates() {
     permission_settings_allow_assert,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
+    file_stamps_copied_gate_run,
     python_mirrors_assert,
     function_worker_pool_run_try,
     cases_gate_run_generic_gate_run,
