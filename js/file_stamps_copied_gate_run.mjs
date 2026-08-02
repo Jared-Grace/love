@@ -1,3 +1,20 @@
+import { path_join } from "./path_join.mjs";
+import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
+import { add } from "./add.mjs";
+import { list_map_path_join_left } from "./list_map_path_join_left.mjs";
+import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
+import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
+import { property_get } from "./property_get.mjs";
+import { undefined_not_is_assert } from "./undefined_not_is_assert.mjs";
+import { path_modified_ms } from "./path_modified_ms.mjs";
+import { equal_not } from "./equal_not.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { folder_temp } from "./folder_temp.mjs";
+import { json_to } from "./json_to.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { round } from "./round.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 export async function file_stamps_copied_gate_run() {
   "Gate: a file taken across into a copy of a folder still stands the same way it stood where it came from. What a file says about itself here is when it was written and how long it is, and everything remembered about a file is remembered against exactly that pair.";
   "This is the one thing the whole gate rests on and the one thing that breaks in silence. The gate freezes the working folder into a copy and asks its questions there, and every answer it has ever worked out about a file it keeps against that file's stamp. Where a copy says a file was written a hair away from when the original says it, nothing is wrong and nothing is reported - every file in the copy simply reads as freshly changed, so every question reads and parses the entire repo again, several runs at once, every time it is asked. Measured before it was fixed: six and a half seconds against one, on the first question alone.";
@@ -14,9 +31,8 @@ export async function file_stamps_copied_gate_run() {
     let index = 0;
     while (less_than(index, wanted)) {
       let name = "stamp_" + index + ".txt";
-      let body = list_repeat_text("x", index);
       let written_path = path_join([source, name]);
-      await fs.promises.writeFile(written_path, body);
+      await fs.promises.writeFile(written_path, name);
       names.push(name);
       index = add(index, 1);
     }
@@ -36,7 +52,7 @@ export async function file_stamps_copied_gate_run() {
       undefined_not_is_assert(stamp_before, source_path);
       undefined_not_is_assert(stamp_copied, copy_path);
       checked = add(checked, 1);
-      let exact = await file_written_exact(source_path);
+      let exact = await path_modified_ms(source_path);
       let whole = round(exact);
       if (equal_not(exact, whole)) {
         fractional = add(fractional, 1);
