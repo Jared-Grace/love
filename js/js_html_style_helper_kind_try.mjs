@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
@@ -12,7 +13,7 @@ export function js_html_style_helper_kind_try(value_node, params) {
   let single = list_size_1(params);
   if (single) {
     let literal_is = js_literal_is(value_node);
-    if (!literal_is) {
+    if (not(literal_is)) {
       return null;
     }
     let value = js_literal_value_get(value_node);
@@ -23,17 +24,17 @@ export function js_html_style_helper_kind_try(value_node, params) {
     return fixed;
   }
   let pair = list_size_2(params);
-  if (!pair) {
+  if (not(pair)) {
     return null;
   }
   let identifier_is = js_identifier_is(value_node);
-  if (!identifier_is) {
+  if (not(identifier_is)) {
     return null;
   }
   let passed = js_identifier_name(value_node);
   let second = list_second(params);
   let same = equal(passed, second);
-  if (!same) {
+  if (not(same)) {
     return null;
   }
   let through = {
