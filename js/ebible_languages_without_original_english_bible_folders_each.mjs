@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_index_of_property } from "./list_index_of_property.mjs";
 import { each_index_async } from "./each_index_async.mjs";
@@ -19,10 +20,11 @@ export async function ebible_languages_without_original_english_bible_folders_ea
     );
   }
   async function lambda(language, i) {
-    if (i < index_next) {
+    if (less_than(i, index_next)) {
       return;
     }
-    let bible_folder = property_get(language, bible_folder_key());
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(language, property_name);
     await lambda$bible_folder(bible_folder);
   }
   await each_index_async(languages, lambda);
