@@ -9,12 +9,10 @@ export function g_time_remark(time, christian) {
     " takes it about half the time), which is what keeps the same NPC from sounding like a recording. no full stop here — the caller picks the dot or the exclamation mark, so the same sentence can land calm or warm");
   let part = g_time_part(time);
   ("every opening below takes the plain present tense, so any opening pairs with any closing and all twelve read. a wish opening (may your …) would need be rather than is and would break exactly half the pairs, which is why there isn't one");
-  let openings = ["Hope your ", "I hope your ", "I trust your "];
+  let openings_plain = ["Hope your ", "I hope your ", "I trust your "];
   ("a believer hopes the same things and says them the same way, so the faith openings are added to the plain ones rather than swapped in — and they are openings rather than closings because praying for your day is a way of hoping, not a different thing to hope. both keep the plain present tense, so all twenty pairs still read");
-  if (christian) {
-    let openings_faith = ["I pray your ", "I'm praying your "];
-    openings = list_concat(openings, openings_faith);
-  }
+  let openings_faith = ["I pray your ", "I'm praying your "];
+  let openings = list_concat_if(openings_plain, openings_faith, christian);
   let closings = [
     " is going well",
     " has been a good one",
