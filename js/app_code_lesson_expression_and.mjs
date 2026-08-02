@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
 import { app_code_binary_pair_boolean } from "./app_code_binary_pair_boolean.mjs";
@@ -15,7 +16,7 @@ export function app_code_lesson_expression_and() {
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id_rights: ["and"],
-    category: "operators",
+    category: app_code_category_operators(),
     next_arg,
     example_count: 2,
     forwards_answer_count_override: 2,
