@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -15,7 +16,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_shared_bible_offline_row(parent, language) {
   let row = html_div(parent);
   let name = property_get(language, "name");
-  let bible_folder = property_get(language, "bible_folder");
+  let bible_folder = property_get(language, bible_folder_key());
   render();
   function render() {
     html_clear(row);
