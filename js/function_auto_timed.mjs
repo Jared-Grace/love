@@ -1,9 +1,8 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
 import { function_transform_result } from "./function_transform_result.mjs";
 import { js_auto } from "./js_auto.mjs";
-import { list_single } from "./list_single.mjs";
-import { property_get } from "./property_get.mjs";
 import { machine_load_average } from "./machine_load_average.mjs";
 export async function function_auto_timed(f_name) {
   "The same normalize pass the plain one runs, answering with how long each of its twenty-four steps took rather than with the normalized function.";
@@ -18,8 +17,7 @@ export async function function_auto_timed(f_name) {
   ("The load rides along for the reason it does everywhere else here: several of us share this machine, and a step measured while it was busy reads exactly like a step that got slower.");
   let unaliased = await function_name_unalias_only(f_name);
   let results = await function_transform_result(unaliased, js_auto);
-  let report = list_single(results);
-  let sorted = property_get(report, "sorted");
+  let sorted = list_single_property(results, "sorted");
   let load = machine_load_average();
   let timed = {
     f_name: unaliased,
