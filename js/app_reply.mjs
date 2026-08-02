@@ -124,7 +124,6 @@ export async function app_reply(context) {
       reference_current = await app_reply_verses_add(
         en,
         reference,
-        english_choices,
         reference_current,
         bible_texts,
         languages_chosen,
@@ -181,7 +180,8 @@ export async function app_reply(context) {
     let v = prayer_blessing_expand();
     ("the languages are named in the order they were chosen, matching the order their verses were just read in");
     let copy = list_copy(languages_chosen);
-    let mapped = list_map_property(copy, language_code_key());
+    let property_name = language_code_key();
+    let mapped = list_map_property(copy, property_name);
     let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
       responses,

@@ -10,14 +10,14 @@ import { property_get } from "./property_get.mjs";
 export async function app_reply_verses_add(
   en,
   reference,
-  english_choices,
   reference_current,
   bible_texts,
   languages_chosen,
 ) {
   "the reader's own order is kept, so the language they chose first is read first - the same way round as the chapter reader and the search results";
   let copy = list_copy(languages_chosen);
-  let mapped = list_map_property(copy, bible_folder_key());
+  let property_name = bible_folder_key();
+  let mapped = list_map_property(copy, property_name);
   let verses = await ebible_references_parse_lines_browser(mapped, [reference]);
   function lambda(v) {
     if (null_is(v)) {
