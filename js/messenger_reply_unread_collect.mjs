@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { messenger_reply_puppeteer } from "./messenger_reply_puppeteer.mjs";
 import { http_sleep } from "./http_sleep.mjs";
 import { each } from "./each.mjs";
@@ -30,7 +31,7 @@ export async function messenger_reply_unread_collect() {
       let without = text_prefix_without(url, prefix);
       let selector = text_combine_multiple(['a[href="', without, '"]']);
       let link = await page_open.$(selector);
-      if (link !== null) {
+      if (not_equal(link, null)) {
         await link.click();
         await page_open.waitForSelector(selector, {
           state: "detached",
