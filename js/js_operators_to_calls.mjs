@@ -7,5 +7,4 @@ export async function js_operators_to_calls(ast) {
   let binary_operators = js_operators_binary();
   await js_operators_to_calls_unary(ast, unary_operators);
   await js_operators_to_calls_binary(ast, binary_operators);
-  return;
 }

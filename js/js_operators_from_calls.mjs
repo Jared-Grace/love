@@ -14,5 +14,4 @@ export function js_operators_from_calls(ast) {
   ("needs a shape of its own to be rebuilt into.");
   let operators = js_operators_binary();
   js_operators_from_calls_generic(ast, operators, js_operator_call_to_node);
-  return;
 }

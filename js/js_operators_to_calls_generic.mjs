@@ -26,5 +26,4 @@ export async function js_operators_to_calls_generic(
   js_visit_type_node(ast, type, lambda);
   let names = js_operators_to_fn_name(usable);
   await js_imports_missing_add_specified(ast, names);
-  return;
 }

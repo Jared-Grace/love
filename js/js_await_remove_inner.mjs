@@ -25,5 +25,4 @@ export async function js_await_remove_inner(functions, ast, visited) {
     await js_call_function_if(argument, lambda3);
   }
   await js_visit_type_each_async(ast, "AwaitExpression", lambda);
-  return;
 }
