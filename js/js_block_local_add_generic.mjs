@@ -1,8 +1,7 @@
+import { js_selects_block_body } from "./js_selects_block_body.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
 import { list_add } from "./list_add.mjs";
-import { js_block_body_get } from "./js_block_body_get.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_block_local_add_generic(ast, selects, name, value_code) {
@@ -14,8 +13,7 @@ export function js_block_local_add_generic(ast, selects, name, value_code) {
   ("kind of starting value into that text from an argument that is only ever a");
   ("name or a plain value, so the granted commands never carry a line of code and");
   ("the whole path can be approved once instead of every time.");
-  let block = list_single(selects);
-  let body = js_block_body_get(block);
+  let body = js_selects_block_body(selects);
   ("Asking for the name as an expression is how it is checked: anything that is");
   ("not one bare name is refused here rather than written into the file.");
   js_identifier_expression(name);
