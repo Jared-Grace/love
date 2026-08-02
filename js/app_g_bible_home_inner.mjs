@@ -1,4 +1,3 @@
-import { app_bible } from "./app_bible.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { integer_to_try_multiple_max_text_to } from "./integer_to_try_multiple_max_text_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -18,7 +17,8 @@ export async function app_g_bible_home_inner(context, download, app_fn) {
   async function lambda3(la) {
     async function lambda(a) {
       list_add(verses, a);
-      let verse_number = property_get(a, verse_number_key());
+      let property_name = verse_number_key();
+      let verse_number = property_get(a, property_name);
       chapter_code = property_get(a, "chapter_code");
       downloaded = await download(chapter_code);
       let passages_downloaded = property_get(downloaded, "passages");
