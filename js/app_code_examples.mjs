@@ -102,8 +102,8 @@ export function app_code_examples(context) {
         text: "Previous lesson's last quiz",
         on_click: async function lambda() {
           app_code_lesson_previous_set(context);
-          let previous = app_code_lesson_current(context);
-          let batch = property_get(previous, "batch");
+          let lesson_previous = app_code_lesson_current(context);
+          let batch = property_get(lesson_previous, "batch");
           let list = batch();
           let quizzes = list_first_property(list, "quizzes");
           let index_last = list_index_last(quizzes);
