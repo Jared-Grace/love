@@ -1,3 +1,4 @@
+import { functions_operators_raw_baseline_write } from "./functions_operators_raw_baseline_write.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_auto_checked } from "./function_auto_checked.mjs";
@@ -48,6 +49,9 @@ export async function functions_operators_raw_repair_some(how_many) {
     let args = [name];
     await function_call_commit(function_auto_checked, args);
   }
+  ("The record the gate measures against is shrunk here rather than left to whoever runs the whole-repo gate next. A name that no longer offends and is still written down fails that gate just as loudly as a new offense does - so a run that repaired ten functions and stopped would turn the gate red for every peer, and the one thing this is for is being safe to run at any moment");
+  let shrink = [];
+  await function_call_commit(functions_operators_raw_baseline_write, shrink);
   let left = await functions_operators_raw();
   let names = list_map(left, name_of);
   let repaired = list_without_multiple(attempted, names);
