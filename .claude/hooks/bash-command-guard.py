@@ -2419,6 +2419,32 @@ def _strip_command_prefixes(words):
     return words
 
 
+def statements_words(text):
+    """Yield each statement/pipe segment of `text` as a word list with its
+    leading assignments and transparent wrappers already stripped - the walk
+    every deny-floor finder opens with, written once.
+
+    An unparseable command (redirection, subshell, `$(...)`, backgrounding)
+    yields NOTHING rather than raising, so a caller's loop simply does not run
+    and it falls through to its own abstaining return. That is the behaviour
+    all these finders already had: unparseable is not evidence, so a floor must
+    never deny on a guess. Callers keep their own `return None`/`return False`
+    because the floors disagree about which means "found nothing", and folding
+    that in would make one of the two lie.
+
+    find_python_eval deliberately does NOT use this: it treats Unsupported as a
+    positive signal rather than an abstention, handing the command to
+    find_stdin_program_unparsed, since `<<` heredoc is exactly how an
+    interpreter is fed code without a flag. A helper that swallows Unsupported
+    cannot express that, and it should stay visible where it happens."""
+    try:
+        tokens = tokenize(text)
+    except Unsupported:
+        return
+    for words in split_statements(tokens):
+        yield _strip_command_prefixes(words)
+
+
 def find_raw_node_eval(command):
     """True iff `command` runs a raw (un-sandboxed) `node` with an eval flag,
     so main() can DENY it with an instructive message instead of letting it
