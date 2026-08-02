@@ -21,8 +21,8 @@ export function js_function_declaration_params_names_node(node) {
         js_function_declaration_params_names_node,
       );
     } else {
-      let type_is = js_node_type_is(node, "Property");
-      if (type_is) {
+      let property_is = js_node_type_is(node, "Property");
+      if (property_is) {
         let value = property_get(node, "value");
         names = js_function_declaration_params_names_node(value);
       } else {
