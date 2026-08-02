@@ -17,113 +17,456 @@ import { emoji_crown } from "./emoji_crown.mjs";
 export function g_thanks_gratitude() {
   "the pool of short, person-neutral thanksgivings for the spontaneous gratitude prayer menu — each is {emoji, text}: a topical (by-theme) emoji + a thanksgiving composed DRY via g_thanks(thing) ('<address>, thank You for <thing>'). the menu shuffles these and shows a few (no back-to-back set overlap); picking one prays it. no meter, no reward (gratitude is spontaneous)";
   let thanks = [
-    { emoji: emoji_bread(), text: g_thanks("enough food to stay alive today") },
-    { emoji: emoji_bread(), text: g_thanks("clean water to drink") },
-    { emoji: emoji_bread(), text: g_thanks("clothes to wear") },
-    { emoji: emoji_bread(), text: g_thanks("a roof over my head") },
-    { emoji: emoji_bread(), text: g_thanks("my daily bread") },
-    { emoji: emoji_bread(), text: g_thanks("work to do with my hands") },
-    { emoji: emoji_bread(), text: g_thanks("enough for my needs, and often more") },
-    { emoji: emoji_bread(), text: g_thanks("the harvest that comes from the earth") },
-    { emoji: emoji_bread(), text: g_thanks("warmth when the days are cold") },
-    { emoji: emoji_bread(), text: g_thanks("provision I did not earn") },
-    { emoji: emoji_cross(), text: g_thanks(text_combine("saving me through ", g_name_jesus())) },
-    { emoji: emoji_cross(), text: g_thanks(text_combine_multiple(["the cross where ", g_name_jesus(), " died in my place"])) },
-    { emoji: emoji_cross(), text: g_thanks("forgiving all my sins") },
-    { emoji: emoji_cross(), text: g_thanks("grace I could never earn") },
-    { emoji: emoji_cross(), text: g_thanks("adopting me as Your own child") },
-    { emoji: emoji_cross(), text: g_thanks(text_combine_multiple(["the blood of ", g_name_jesus(), " that makes me clean"])) },
-    { emoji: emoji_cross(), text: g_thanks(text_combine_multiple(["raising ", g_name_jesus(), " from the dead"])) },
-    { emoji: emoji_cross(), text: g_thanks("no condemnation for those in Christ") },
-    { emoji: emoji_cross(), text: g_thanks("rescuing me out of the darkness") },
-    { emoji: emoji_cross(), text: g_thanks("writing my name in the book of life") },
-    { emoji: emoji_cross(), text: g_thanks("making me new") },
-    { emoji: emoji_book_open(), text: g_thanks("Your word to guide me") },
-    { emoji: emoji_book_open(), text: g_thanks("Your promises that never fail") },
-    { emoji: emoji_book_open(), text: g_thanks("the truth that sets me free") },
-    { emoji: emoji_book_open(), text: g_thanks("Scripture to light my path") },
-    { emoji: emoji_book_open(), text: g_thanks("Your commands, which are for my good") },
-    { emoji: emoji_book_open(), text: g_thanks(text_combine("the good news of ", g_name_jesus())) },
-    { emoji: emoji_book_open(), text: g_thanks("being able to read Your word") },
-    { emoji: emoji_book_open(), text: g_thanks("Your word that stands forever") },
-    { emoji: emoji_book_open(), text: g_thanks("the wisdom You give when I ask") },
-    { emoji: emoji_book_open(), text: g_thanks("those who taught me Your word") },
-    { emoji: emoji_dove(), text: g_thanks("Your Spirit living within me") },
-    { emoji: emoji_dove(), text: g_thanks("the Comforter You sent to me") },
-    { emoji: emoji_dove(), text: g_thanks("leading me one step at a time") },
-    { emoji: emoji_dove(), text: g_thanks("the peace that guards my heart") },
-    { emoji: emoji_dove(), text: g_thanks("correcting me gently when I stray") },
-    { emoji: emoji_dove(), text: g_thanks("the gifts Your Spirit gives") },
-    { emoji: emoji_dove(), text: g_thanks("helping me pray when I have no words") },
-    { emoji: emoji_dove(), text: g_thanks("growing good fruit in me") },
-    { emoji: emoji_dove(), text: g_thanks("sealing me as Your own") },
-    { emoji: emoji_dove(), text: g_thanks("a presence that never leaves me") },
-    { emoji: emoji_family(), text: g_thanks("the people You put around me") },
-    { emoji: emoji_family(), text: g_thanks("friends who point me to You") },
-    { emoji: emoji_family(), text: g_thanks("the family of believers") },
-    { emoji: emoji_family(), text: g_thanks("everyone who prays for me") },
-    { emoji: emoji_family(), text: g_thanks("someone to share a meal with") },
-    { emoji: emoji_family(), text: g_thanks("unexpected kindness from strangers") },
-    { emoji: emoji_family(), text: g_thanks("those who forgive me") },
-    { emoji: emoji_family(), text: g_thanks("the church, Your own body") },
-    { emoji: emoji_family(), text: g_thanks("everyone who first told me about You") },
-    { emoji: emoji_family(), text: g_thanks("love that reflects Your love") },
-    { emoji: text_combine(emoji_sunrise(), emoji_heart()), text: g_thanks("another day to love") },
-    { emoji: emoji_sunrise(), text: g_thanks("the sunrise each morning") },
-    { emoji: emoji_sunrise(), text: g_thanks("the beauty spread across the earth") },
-    { emoji: emoji_sunrise(), text: g_thanks("the turning of the seasons") },
-    { emoji: emoji_sunrise(), text: g_thanks("the stars, which You named") },
-    { emoji: emoji_sunrise(), text: g_thanks("fresh air to breathe") },
-    { emoji: emoji_sunrise(), text: g_thanks("birdsong at the break of day") },
-    { emoji: emoji_sunrise(), text: g_thanks("rain that waters the ground") },
-    { emoji: emoji_sunrise(), text: g_thanks("mountains and seas that show Your glory") },
-    { emoji: emoji_sunrise(), text: g_thanks("the wonder woven through creation") },
-    { emoji: emoji_heart(), text: g_thanks("breath in my lungs") },
-    { emoji: emoji_heart(), text: g_thanks("a heart that keeps beating") },
-    { emoji: emoji_heart(), text: g_thanks("healing when I am sick") },
-    { emoji: emoji_heart(), text: g_thanks("eyes to see Your world") },
-    { emoji: emoji_heart(), text: g_thanks("ears to hear voices and music") },
-    { emoji: emoji_heart(), text: g_thanks("strength for the tasks of today") },
-    { emoji: emoji_heart(), text: g_thanks("hands to work and to help") },
-    { emoji: emoji_heart(), text: g_thanks("a mind to think and to know") },
-    { emoji: emoji_heart(), text: g_thanks("the good gift of being alive") },
-    { emoji: emoji_heart(), text: g_thanks("feet to carry me where I am needed") },
-    { emoji: emoji_crown(), text: g_thanks("Your faithfulness that never fails") },
-    { emoji: emoji_crown(), text: g_thanks("mercy that is new every morning") },
-    { emoji: emoji_crown(), text: g_thanks("Your steadfast, unchanging love") },
-    { emoji: emoji_crown(), text: g_thanks("Your holiness and majesty") },
-    { emoji: emoji_crown(), text: g_thanks("Your power over all things") },
-    { emoji: emoji_crown(), text: g_thanks("Your justice that sets things right") },
-    { emoji: emoji_crown(), text: g_thanks("Your goodness in every season") },
-    { emoji: emoji_crown(), text: g_thanks("being a King who came to serve") },
-    { emoji: emoji_crown(), text: g_thanks("staying the same when all else changes") },
-    { emoji: emoji_crown(), text: g_thanks("reigning over everything I fear") },
-    { emoji: emoji_rainbow(), text: g_thanks("hope beyond this life") },
-    { emoji: emoji_rainbow(), text: g_thanks("the home You are preparing") },
-    { emoji: emoji_rainbow(), text: g_thanks("the promise of no more tears") },
-    { emoji: emoji_rainbow(), text: g_thanks("the resurrection to come") },
-    { emoji: emoji_rainbow(), text: g_thanks(text_combine_multiple(["the promise of seeing ", g_name_jesus(), " face to face one day"])) },
-    { emoji: emoji_rainbow(), text: g_thanks("the truth that death is not the end") },
-    { emoji: emoji_rainbow(), text: g_thanks("an inheritance that never fades") },
-    { emoji: emoji_rainbow(), text: g_thanks(text_combine_multiple(["the day ", g_name_jesus(), " returns"])) },
-    { emoji: emoji_rainbow(), text: g_thanks("joy that will never end") },
-    { emoji: emoji_rainbow(), text: g_thanks("Your promises kept into forever") },
-    { emoji: emoji_home(), text: g_thanks("a place to rest") },
-    { emoji: emoji_home(), text: g_thanks("a home to return to") },
-    { emoji: emoji_home(), text: g_thanks("a bed to sleep in") },
-    { emoji: emoji_home(), text: g_thanks("shelter from the storm") },
-    { emoji: emoji_hourglass(), text: g_thanks("Your patience with me") },
-    { emoji: emoji_hourglass(), text: g_thanks("time to grow") },
-    { emoji: emoji_hourglass(), text: g_thanks("Your perfect timing") },
-    { emoji: emoji_pray(), text: g_thanks("a new day I did nothing to earn") },
-    { emoji: emoji_pray(), text: g_thanks("rest at the end of the work") },
-    { emoji: emoji_pray(), text: g_thanks("laughter shared with others") },
-    { emoji: emoji_pray(), text: g_thanks("small joys along the way") },
-    { emoji: emoji_pray(), text: g_thanks("second chances") },
-    { emoji: emoji_pray(), text: g_thanks("quiet moments alone with You") },
-    { emoji: emoji_pray(), text: g_thanks("prayers You have answered") },
-    { emoji: emoji_pray(), text: g_thanks("Your patience when I forget to thank You") },
-    { emoji: emoji_pray(), text: g_thanks("the gift of simply speaking to You") },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("enough food to stay alive today"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("clean water to drink"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("clothes to wear"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("a roof over my head"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("my daily bread"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("work to do with my hands"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("enough for my needs, and often more"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("the harvest that comes from the earth"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("warmth when the days are cold"),
+    },
+    {
+      emoji: emoji_bread(),
+      text: g_thanks("provision I did not earn"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks(text_combine("saving me through ", g_name_jesus())),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks(
+        text_combine_multiple([
+          "the cross where ",
+          g_name_jesus(),
+          " died in my place",
+        ]),
+      ),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("forgiving all my sins"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("grace I could never earn"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("adopting me as Your own child"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks(
+        text_combine_multiple([
+          "the blood of ",
+          g_name_jesus(),
+          " that makes me clean",
+        ]),
+      ),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks(
+        text_combine_multiple(["raising ", g_name_jesus(), " from the dead"]),
+      ),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("no condemnation for those in Christ"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("rescuing me out of the darkness"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("writing my name in the book of life"),
+    },
+    {
+      emoji: emoji_cross(),
+      text: g_thanks("making me new"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("Your word to guide me"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("Your promises that never fail"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("the truth that sets me free"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("Scripture to light my path"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("Your commands, which are for my good"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks(text_combine("the good news of ", g_name_jesus())),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("being able to read Your word"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("Your word that stands forever"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("the wisdom You give when I ask"),
+    },
+    {
+      emoji: emoji_book_open(),
+      text: g_thanks("those who taught me Your word"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("Your Spirit living within me"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("the Comforter You sent to me"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("leading me one step at a time"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("the peace that guards my heart"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("correcting me gently when I stray"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("the gifts Your Spirit gives"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("helping me pray when I have no words"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("growing good fruit in me"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("sealing me as Your own"),
+    },
+    {
+      emoji: emoji_dove(),
+      text: g_thanks("a presence that never leaves me"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("the people You put around me"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("friends who point me to You"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("the family of believers"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("everyone who prays for me"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("someone to share a meal with"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("unexpected kindness from strangers"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("those who forgive me"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("the church, Your own body"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("everyone who first told me about You"),
+    },
+    {
+      emoji: emoji_family(),
+      text: g_thanks("love that reflects Your love"),
+    },
+    {
+      emoji: text_combine(emoji_sunrise(), emoji_heart()),
+      text: g_thanks("another day to love"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("the sunrise each morning"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("the beauty spread across the earth"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("the turning of the seasons"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("the stars, which You named"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("fresh air to breathe"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("birdsong at the break of day"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("rain that waters the ground"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("mountains and seas that show Your glory"),
+    },
+    {
+      emoji: emoji_sunrise(),
+      text: g_thanks("the wonder woven through creation"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("breath in my lungs"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("a heart that keeps beating"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("healing when I am sick"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("eyes to see Your world"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("ears to hear voices and music"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("strength for the tasks of today"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("hands to work and to help"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("a mind to think and to know"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("the good gift of being alive"),
+    },
+    {
+      emoji: emoji_heart(),
+      text: g_thanks("feet to carry me where I am needed"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your faithfulness that never fails"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("mercy that is new every morning"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your steadfast, unchanging love"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your holiness and majesty"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your power over all things"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your justice that sets things right"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("Your goodness in every season"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("being a King who came to serve"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("staying the same when all else changes"),
+    },
+    {
+      emoji: emoji_crown(),
+      text: g_thanks("reigning over everything I fear"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("hope beyond this life"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("the home You are preparing"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("the promise of no more tears"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("the resurrection to come"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks(
+        text_combine_multiple([
+          "the promise of seeing ",
+          g_name_jesus(),
+          " face to face one day",
+        ]),
+      ),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("the truth that death is not the end"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("an inheritance that never fades"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks(
+        text_combine_multiple(["the day ", g_name_jesus(), " returns"]),
+      ),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("joy that will never end"),
+    },
+    {
+      emoji: emoji_rainbow(),
+      text: g_thanks("Your promises kept into forever"),
+    },
+    {
+      emoji: emoji_home(),
+      text: g_thanks("a place to rest"),
+    },
+    {
+      emoji: emoji_home(),
+      text: g_thanks("a home to return to"),
+    },
+    {
+      emoji: emoji_home(),
+      text: g_thanks("a bed to sleep in"),
+    },
+    {
+      emoji: emoji_home(),
+      text: g_thanks("shelter from the storm"),
+    },
+    {
+      emoji: emoji_hourglass(),
+      text: g_thanks("Your patience with me"),
+    },
+    {
+      emoji: emoji_hourglass(),
+      text: g_thanks("time to grow"),
+    },
+    {
+      emoji: emoji_hourglass(),
+      text: g_thanks("Your perfect timing"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("a new day I did nothing to earn"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("rest at the end of the work"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("laughter shared with others"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("small joys along the way"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("second chances"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("quiet moments alone with You"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("prayers You have answered"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("Your patience when I forget to thank You"),
+    },
+    {
+      emoji: emoji_pray(),
+      text: g_thanks("the gift of simply speaking to You"),
+    },
   ];
   return thanks;
 }
