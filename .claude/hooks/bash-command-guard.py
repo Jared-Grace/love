@@ -3565,6 +3565,26 @@ def dispatcher_deny_reason(fn):
     )
 
 
+def decide(decision, reason):
+    """Emit one verdict and hand back None, so a caller writes
+    `return decide("deny", why)` where it used to spell the whole envelope
+    out.
+
+    The envelope was written eighteen times in main(), and every one of them
+    was the same six lines around a decision word and a sentence - which is
+    also why a new branch cost eight lines to add rather than one. Nothing
+    here changes what is emitted; the shape is still exactly what the hook
+    protocol expects, worked out in one place instead of eighteen."""
+    print(json.dumps({
+        "hookSpecificOutput": {
+            "hookEventName": "PreToolUse",
+            "permissionDecision": decision,
+            "permissionDecisionReason": reason,
+        }
+    }))
+    return None
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
