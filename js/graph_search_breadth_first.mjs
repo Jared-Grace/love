@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_pop_first } from "./list_pop_first.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { equal } from "./equal.mjs";
@@ -22,7 +24,7 @@ export function graph_search_breadth_first(
     previous: null,
     depth: 0,
   });
-  while (queue.length > 0) {
+  while (greater_than(queue.length, 0)) {
     let q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
     let node = property_get(q_current, "node");
@@ -39,7 +41,7 @@ export function graph_search_breadth_first(
       });
       return q_current;
     }
-    if (depth >= max_depth) {
+    if (greater_than_equal(depth, max_depth)) {
       continue;
     }
     let neighbors = neighbors_get(node);
