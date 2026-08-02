@@ -1,3 +1,6 @@
+import { function_call_timed } from "./function_call_timed.mjs";
+import { data_functions_get } from "./data_functions_get.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
@@ -16,12 +19,16 @@ export async function function_auto_timed(f_name) {
     " is reached from fifty-odd places, and every one of them wants the normalized source it returns today.");
   ("The load rides along for the reason it does everywhere else here: several of us share this machine, and a step measured while it was busy reads exactly like a step that got slower.");
   let unaliased = await function_name_unalias_only(f_name);
+  ("The index is asked for first and timed on its own, because two of the steps open with that same question and whichever of them asks first pays for the whole answer. Timed only from inside them, that one cost wears the name of whichever step happened to run first - which is how a three line function came to look more expensive to normalize than a forty line one.");
+  let indexing = await function_call_timed(data_functions_get, []);
+  let index_ms = property_get(indexing, "milliseconds");
   let results = await function_transform_result(unaliased, js_auto);
   let sorted = list_single_property(results, "sorted");
   let load = machine_load_average();
   let timed = {
     f_name: unaliased,
     load,
+    index_ms,
     sorted,
   };
   return timed;

@@ -1,3 +1,6 @@
+import { js_selects_prose_add_before } from "./js_selects_prose_add_before.mjs";
+import { js_selects_prose_add_after } from "./js_selects_prose_add_after.mjs";
+import { js_call_argument_named_text_set } from "./js_call_argument_named_text_set.mjs";
 import { js_object_field_add } from "./js_object_field_add.mjs";
 import { js_call_argument_named_property_set } from "./js_call_argument_named_property_set.mjs";
 import { js_call_argument_named_call_set } from "./js_call_argument_named_call_set.mjs";
@@ -97,6 +100,9 @@ export function example_transforms() {
     js_call_argument_named_call_set,
     js_call_argument_named_property_set,
     js_object_field_add,
+    js_call_argument_named_text_set,
+    js_selects_prose_add_after,
+    js_selects_prose_add_before,
   };
   return transforms;
 }
