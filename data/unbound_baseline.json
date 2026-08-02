@@ -17,7 +17,6 @@
   {
    "name": "g_sermon_generate_book_generic_open",
    "unbound": [
-    "returnp",
     "f_name"
    ]
   },
