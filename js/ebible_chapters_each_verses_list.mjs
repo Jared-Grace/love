@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { list_any_starts_with } from "./list_any_starts_with.mjs";
@@ -15,16 +16,16 @@ export async function ebible_chapters_each_verses_list(
   let mapped = list_map_property(books, "book_code");
   await each_async(chapter_codes, lambda);
   async function lambda(chapter_code) {
-    if (bible_folder === "hausa" && chapter_code === "DAN14") {
+    if (equal(bible_folder, "hausa") && equal(chapter_code, "DAN14")) {
       return;
     }
-    if (bible_folder === "englxxup" && chapter_code === "PRO30") {
+    if (equal(bible_folder, "englxxup") && equal(chapter_code, "PRO30")) {
       return;
     }
-    if (bible_folder === "engnna" && chapter_code === "GEN05") {
+    if (equal(bible_folder, "engnna") && equal(chapter_code, "GEN05")) {
       return;
     }
-    if (bible_folder === "engojb" && chapter_code === "MAL04") {
+    if (equal(bible_folder, "engojb") && equal(chapter_code, "MAL04")) {
       return;
     }
     log_keep(ebible_chapters_each_verses_list.name, {
