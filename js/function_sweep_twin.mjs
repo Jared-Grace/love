@@ -1,3 +1,5 @@
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_name_to_parts } from "./function_name_to_parts.mjs";
 import { list_size } from "./list_size.mjs";
@@ -38,12 +40,20 @@ export async function function_sweep_twin(f_name) {
     let plural = text_combine("functions_", rest);
     candidates.push(plural);
   }
+  ("A name may carry a word after the several-word, and asking only for the candidate itself missed those: ",
+    fn_name("functions_search"),
+    " is swept by ",
+    fn_name("functions_search_any_word"),
+    " and this answered that it had no sweep at all, in the one reading whose job is to stop a sweep being rebuilt. So a live name that begins with a candidate and then continues counts too. The underscore is required before whatever follows, so a candidate cannot reach a longer word that merely starts the same way; and only names that really live are reported, so this can still only stop missing a twin rather than invent one.");
   let found = [];
   for (let candidate of candidates) {
     let lives = list_includes(names, candidate);
     if (lives) {
       found.push(candidate);
     }
+    let continued_prefix = text_combine(candidate, "_");
+    let continued = list_filter_starts_with(names, continued_prefix);
+    list_add_multiple(found, continued);
   }
   return found;
 }
