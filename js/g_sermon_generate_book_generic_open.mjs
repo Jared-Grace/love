@@ -1,3 +1,4 @@
+import { error } from "./error.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { invoke_cache_file_get } from "./invoke_cache_file_get.mjs";
 import { openai_responses } from "./openai_responses.mjs";
@@ -46,7 +47,7 @@ export async function g_sermon_generate_book_generic_open() {
   let key_get = invoke_cache_file_key_get(openai_responses, args);
   let k = await key_get();
   await file_open(k);
-  returnp;
+  error("todo");
   let cached_get = invoke_cache_file_get();
   let r = await cached_get(k);
   return r;
