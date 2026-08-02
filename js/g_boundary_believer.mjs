@@ -1,3 +1,6 @@
+import { g_boundary_seen_again } from "./g_boundary_seen_again.mjs";
+import { g_boundary_rather_not } from "./g_boundary_rather_not.mjs";
+import { g_boundary_know_better } from "./g_boundary_know_better.mjs";
 import { list_random_item_or_empty } from "./list_random_item_or_empty.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
@@ -106,12 +109,11 @@ export function g_boundary_believer(met, door) {
   if (not(armour)) {
     armour = heart;
   }
-  let r26 = list_random_item([
-    "It's good to see you again. ",
-    "Always good to see you. ",
-  ]);
+  let r30 = g_boundary_seen_again();
+  let r26 = list_random_item([r30, "Always good to see you. "]);
+  let r31 = g_boundary_rather_not();
   let r27 = list_random_item([
-    "I'd still rather not get into that, though.",
+    r31,
     "That one I'd like to keep to myself a while longer.",
   ]);
   let combined12 = text_combine_multiple([r26, r27]);
@@ -121,10 +123,8 @@ export function g_boundary_believer(met, door) {
       "It's good to meet another believer. ",
       "Praise God, a brother in the Lord. ",
     ]);
-    let r29 = list_random_item([
-      "Maybe once I know you a little better?",
-      "Give me a little time on that one.",
-    ]);
+    let r32 = g_boundary_know_better();
+    let r29 = list_random_item([r32, "Give me a little time on that one."]);
     let combined13 = text_combine_multiple([r28, r29]);
     contextual = [combined13];
   }

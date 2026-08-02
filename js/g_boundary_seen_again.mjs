@@ -5,5 +5,6 @@ export function g_boundary_seen_again() {
     " and ",
     fn_name("g_boundary_believer"),
     ", which both open that way: a believer and an unbeliever guard different things with different words, but they are equally glad to see you, so this one line is the same in both mouths");
-  return "It's good to see you again. ";
+  let r = "It's good to see you again. ";
+  return r;
 }

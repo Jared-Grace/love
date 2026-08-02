@@ -7,5 +7,6 @@ export function g_boundary_know_better() {
     " and ",
     fn_name("g_boundary_believer"),
     ": a stranger is a stranger either way, so the first meeting sounds the same whether or not the person believes");
-  return "Maybe once I know you a little better?";
+  let r = "Maybe once I know you a little better?";
+  return r;
 }
