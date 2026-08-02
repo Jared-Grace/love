@@ -35,11 +35,8 @@ export function app_code_lesson_expression_swapping_order() {
       return render;
     }
     let rights = ["swapping order"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
+    let left = app_code_category_expressions();
+    let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
   function above(root) {
@@ -71,6 +68,9 @@ export function app_code_lesson_expression_swapping_order() {
       "<",
       " or ",
       ">",
+    ]);
+    html_div_cycle_code(less, [
+      "However, we can always swap two numbers that are the same, because the code is the same before and after",
     ]);
     let or_equal = app_code_container_light_blue(root);
     html_div_cycle_code(or_equal, [
