@@ -11,18 +11,7 @@ export function permission_rule_command_probe(rule) {
   "when the prefix ends in a directory separator it names a folder, not a command — nobody runs the bare folder, so probe with a leaf inside it instead, or the probe reports a prompt the real command never sees";
   let opening = "Bash(";
   let closing = ")";
-  let b = text_starts_with(rule, opening);
-  if (not(b)) {
-    let v = text_empty();
-    return v;
-  }
-  let b2 = text_ends_with(rule, closing);
-  if (not(b2)) {
-    let v2 = text_empty();
-    return v2;
-  }
-  let difference = subtract(rule.length, closing.length);
-  let inner = rule.slice(opening.length, difference);
+  let inner = text_wrapped_inner(rule, opening, closing);
   let arguments_any = ":*";
   if (text_ends_with(inner, arguments_any)) {
     let difference2 = subtract(inner.length, arguments_any.length);
