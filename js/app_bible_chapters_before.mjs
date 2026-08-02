@@ -1,4 +1,4 @@
-import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
+import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { app_bible_screen_content } from "./app_bible_screen_content.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -19,8 +19,7 @@ export async function app_bible_chapters_before(context) {
   let content = property_get(opened, "content");
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
-  let property_name = app_shared_bible_chapter_hash_key();
-  let chapter_code = property_get(hash, property_name);
+  let chapter_code = app_shared_bible_chapter_hash_get(hash);
   let verse_number = app_bible_hash_v_get(hash);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let books = await ebible_version_books_browser(e);
