@@ -1,0 +1,16 @@
+export async function indexeddb_name_literals_all() {
+  "Every place in this repo that writes the name of a browser database or one of its stores straight into a call. Read-only.";
+  "The ways in are read off the functions themselves once, before any file is opened, so this cannot fall behind a new way in the way a written-down list would.";
+  "Only files that say the browser database's own word anywhere are opened, because reading a tree costs a great deal more than looking for a word in text and every file that names a store has to spell one of these to reach it.";
+  arguments_assert(arguments, 0);
+  let doors = await indexeddb_name_doors();
+  let repo_name = repo_love_name();
+  let word = "indexeddb_";
+  let candidates = await repo_functions_names_code_includes(repo_name, word);
+  function read(tree) {
+    let found = js_indexeddb_name_literals(tree, doors);
+    return found;
+  }
+  let sites = await key_literals_all_generic(candidates, read);
+  return sites;
+}
