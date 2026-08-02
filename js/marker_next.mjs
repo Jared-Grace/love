@@ -1,5 +1,4 @@
-import { property_get } from "./property_get.mjs";
-import { marker_next_get } from "./marker_next_get.mjs";
+import { marker_next_node } from "./marker_next_node.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
@@ -9,8 +8,7 @@ export async function marker_next() {
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
-      let r = marker_next_get(a);
-      let next = property_get(r, "next");
+      let next = marker_next_node(a);
       let code = js_unparse(next);
       la(code);
     }
