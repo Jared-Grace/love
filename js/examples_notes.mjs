@@ -192,6 +192,8 @@ export function examples_notes() {
       "the same account written above the line it is about",
     example_arguments_same_names_set:
       "finish a generated call in one command - the loop that ran after every one of them",
+    example_shadowing_rename_in:
+      "naming the holder supplies the one judgment the plain shadowing rename refuses to make",
   };
   return notes;
 }
