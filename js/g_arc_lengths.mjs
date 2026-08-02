@@ -37,19 +37,18 @@ export async function g_arc_lengths(chapter) {
     if (less_than(remaining, minimum)) {
       break;
     }
-    if (less_than(length, minimum)) {
-      break;
-    }
     let take = Math.min(length, remaining);
     list_add(lengths, take);
     remaining = subtract(remaining, take);
-    if (greater_than(length, minimum)) {
-      length = subtract(length, 1);
+    length = subtract(length, 1);
+    if (less_than(length, minimum)) {
+      length = cap;
     }
   }
   if (greater_than(remaining, 0)) {
     list_add(lengths, remaining);
   }
+  list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
   let divided4 = divide(settings.day_matches, settings.conversation_turns);
   let v = Math.ceil(divided4);
