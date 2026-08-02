@@ -680,6 +680,23 @@ export function permission_grant_names() {
   let spelled673 = fn_name("qa_snapshot_ensure");
   let spelled674 = fn_name("shadowing_baseline_path");
   let spelled675 = fn_name("process_end");
+  let spelled676 = fn_name("functions_gate_run_unwired_gate_run");
+  let spelled677 = fn_name("literals_frozen_write");
+  let spelled678 = fn_name("baselines_watched_gate_run");
+  let spelled679 = fn_name("functions_gate_run_unwired");
+  let spelled680 = fn_name("baseline_paths_names");
+  let spelled681 = fn_name("storage_function_folders_orphaned");
+  let spelled682 = fn_name("functions_condition_bodies_empty_gate_run");
+  let spelled683 = fn_name("functions_cases_ungated_gate_run");
+  let spelled684 = fn_name("functions_cases_ungated");
+  let spelled685 = fn_name("baselines_unwatched");
+  let spelled686 = fn_name("permission_settings_allow_drift");
+  let spelled687 = fn_name("storage_function_folders_orphaned_gate_run");
+  let spelled688 = fn_name("folder_user_storage_function_path_function");
+  let spelled689 = fn_name("claude_transcripts_folder");
+  let spelled690 = fn_name("functions_names_untracked");
+  let spelled691 = fn_name("qa_commit_named_path");
+  let spelled692 = fn_name("storage_function_folder_rename");
   let names = [
     spelled,
     spelled2,
@@ -1356,6 +1373,23 @@ export function permission_grant_names() {
     spelled673,
     spelled674,
     spelled675,
+    spelled676,
+    spelled677,
+    spelled678,
+    spelled679,
+    spelled680,
+    spelled681,
+    spelled682,
+    spelled683,
+    spelled684,
+    spelled685,
+    spelled686,
+    spelled687,
+    spelled688,
+    spelled689,
+    spelled690,
+    spelled691,
+    spelled692,
   ];
   return names;
 }
