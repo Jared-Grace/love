@@ -1,3 +1,4 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { isaiah_chapters_count } from "./isaiah_chapters_count.mjs";
 import { object_adder } from "./object_adder.mjs";
 import { each_object } from "./each_object.mjs";
@@ -7,7 +8,7 @@ export async function ebible_versions_english_full() {
   let object = await ebible_versions_english_books_count_cache();
   let c = isaiah_chapters_count();
   let filter = function lambda3(value, key) {
-    let v = value >= c;
+    let v = greater_than_equal(value, c);
     return v;
   };
   function lambda(oad) {
