@@ -1,5 +1,4 @@
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { list_size } from "./list_size.mjs";
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_pop } from "./list_pop.mjs";
@@ -13,8 +12,7 @@ export function list_cartesian_functions_inner(
   result,
   candidate,
 ) {
-  let size = list_size(list);
-  let g = greater_than_equal(index, size);
+  let g = list_index_past_end_is(list, index);
   if (g) {
     let copy = list_copy(candidate);
     list_add(result, copy);

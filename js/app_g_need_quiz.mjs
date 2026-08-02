@@ -1,5 +1,5 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
@@ -42,8 +42,7 @@ export function app_g_need_quiz(
   let specs = range_map(turn_count, turn_spec);
   function turn(index) {
     html_clear(overlay);
-    let b3 = list_size(specs);
-    let done = greater_than_equal(index, b3);
+    let done = list_index_past_end_is(specs, index);
     if (done) {
       app_g_npc_says(npc, overlay, closing);
       app_g_button_conversation_end(overlay, overlay_close);
