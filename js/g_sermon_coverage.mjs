@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -10,19 +11,30 @@ export function g_sermon_coverage(verse_text, lines) {
     let spaced = lower.replace(/[^a-z]+/g, " ");
     let split = text_split_space(spaced);
     function nonempty(word) {
-      return word.length > 0;
+      let g = greater_than(word.length, 0);
+      return g;
     }
-    return list_filter(split, nonempty);
+    let filtered = list_filter(split, nonempty);
+    return filtered;
   }
-  let line_words = words(list_join_space(lines));
-  let verse_words = list_unique(words(verse_text));
+  let joined = list_join_space(lines);
+  let line_words = words(joined);
+  let list = words(verse_text);
+  let verse_words = list_unique(list);
   function uncovered(word) {
-    return list_includes_not(line_words, word);
+    let n = list_includes_not(line_words, word);
+    return n;
   }
   let uncovered_verse_words = list_filter(verse_words, uncovered);
   function extra(word) {
-    return list_includes_not(verse_words, word);
+    let n2 = list_includes_not(verse_words, word);
+    return n2;
   }
-  let extra_line_words = list_filter(list_unique(line_words), extra);
-  return { uncovered_verse_words, extra_line_words };
+  let list2 = list_unique(line_words);
+  let extra_line_words = list_filter(list2, extra);
+  let r = {
+    uncovered_verse_words,
+    extra_line_words,
+  };
+  return r;
 }
