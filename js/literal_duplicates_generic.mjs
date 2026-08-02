@@ -1,3 +1,4 @@
+import { literal_getters } from "./literal_getters.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
@@ -8,8 +9,6 @@ import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
-import { js_code_getter_literal } from "./js_code_getter_literal.mjs";
-import { literal_distinctive_is } from "./literal_distinctive_is.mjs";
 import { list_add } from "./list_add.mjs";
 export function literal_duplicates_generic(codes) {
   "Every getter in a handed-in body of source whose written value some other file";
@@ -28,16 +27,7 @@ export function literal_duplicates_generic(codes) {
   "works or is broken. Handing the body of source in is what lets a written-down";
   "set of files - including ones nobody would ever commit - ask this the questions";
   "the repo itself cannot pose.";
-  let getters = [];
-  for (let f_name of object_property_names(codes)) {
-    let literal = js_code_getter_literal(codes[f_name], f_name);
-    if (not_equal(literal, "") && literal_distinctive_is(literal)) {
-      list_add(getters, {
-        f_name,
-        literal,
-      });
-    }
-  }
+  let getters = literal_getters(codes);
   let found = [];
   for (let getter of getters) {
     let quoted = json_to(getter.literal);
