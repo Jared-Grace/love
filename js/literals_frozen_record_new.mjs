@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_delete } from "./property_delete.mjs";
@@ -29,7 +30,7 @@ export async function literals_frozen_record_new() {
   let path = literals_frozen_path();
   let recorded = await file_read_json(path);
   let added = [];
-  let names = Object.keys(values);
+  let names = object_property_names(values);
   for (let f_name of names) {
     let known = property_exists(recorded, f_name);
     if (known) {
@@ -47,7 +48,7 @@ export async function literals_frozen_record_new() {
   }
   let arrived = list_map(added, lambda);
   let dropped = [];
-  let known_names = Object.keys(recorded);
+  let known_names = object_property_names(recorded);
   for (let f_name of known_names) {
     let live = property_exists(values, f_name);
     if (live) {
