@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { html_div } from "./html_div.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
-import { app_a_water } from "./app_a_water.mjs";
+import { g_water } from "./g_water.mjs";
 import { g_tile_path } from "./g_tile_path.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,7 +13,7 @@ export function app_g_map_room_new(parent) {
   ("the padding is 50vh/50vw and the background is offset by the same, so a water square begins exactly where the grid begins and the drawn water lines up with the water tiles inside the map.");
   let room = html_div(parent);
   let tile = g_img_square_size_css();
-  let name = app_a_water();
+  let name = g_water();
   let src = g_tile_path(name);
   html_style_assign(room, {
     padding: "50vh 50vw",

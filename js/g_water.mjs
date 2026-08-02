@@ -1,4 +1,4 @@
-export function app_a_water() {
+export function g_water() {
   let w = "water";
   return w;
 }
