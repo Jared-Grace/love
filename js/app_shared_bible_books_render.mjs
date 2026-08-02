@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
+import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
 export function app_shared_bible_books_render(
   list_div,
   query,
@@ -49,5 +49,5 @@ export function app_shared_bible_books_render(
     each(divisions, render_section);
   }
   each(testaments, render_testament);
-  app_bible_picker_buttons_enlarge(all_buttons);
+  app_shared_bible_picker_buttons_enlarge(all_buttons);
 }
