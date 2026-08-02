@@ -20,6 +20,9 @@ export async function functions_gate_run_unwired() {
   let unwired = list_difference(gate_names, wired);
   let exempt = functions_gate_run_unwired_exempt();
   let excused = list_map_property(exempt, "name");
-  let missing = list_difference(unwired, excused);
+  let named = list_difference(unwired, excused);
+  ("A gate the repo has not recorded yet is passed over. Writing one and listing it are two edits to two files, seconds apart, and everybody works in this folder at once - so without this the check would be red for everyone every time anybody began a gate, which is the surest way to have it taken back out.");
+  let in_flight = await functions_names_untracked();
+  let missing = list_difference(named, in_flight);
   return missing;
 }

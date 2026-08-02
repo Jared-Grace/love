@@ -26,6 +26,9 @@ export async function functions_cases_ungated() {
     let names = js_identifiers_referenced_names(ast);
     list_add_multiple(read, names);
   }
-  let ungated = list_difference(corpora, read);
+  let unread = list_difference(corpora, read);
+  ("A corpus the repo has not recorded yet is passed over. Writing the cases and writing the gate that reads them are two files, and everybody works in this folder at once - so without this the check would be red for everyone from the moment anybody began a corpus until they finished it.");
+  let in_flight = await functions_names_untracked();
+  let ungated = list_difference(unread, in_flight);
   return ungated;
 }
