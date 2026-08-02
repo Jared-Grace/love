@@ -66,5 +66,4 @@ export async function file_overwrite_uncached(file_path, contents) {
     await file_to_commit_add_try(file_path);
   }
   await data_file_update(file_path);
-  return;
 }
