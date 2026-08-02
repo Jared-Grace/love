@@ -1,5 +1,4 @@
 import { ceil } from "./ceil.mjs";
-import { math_min } from "./math_min.mjs";
 import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -9,7 +8,6 @@ import { multiply_divide } from "./multiply_divide.mjs";
 import { g_plant_npcs } from "./g_plant_npcs.mjs";
 import { g_plant_converts } from "./g_plant_converts.mjs";
 import { g_leader_turns } from "./g_leader_turns.mjs";
-import { g_plant_days_turns } from "./g_plant_days_turns.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";

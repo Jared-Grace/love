@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 export function permission_grant_names() {
   "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
-  let spelled = fn_name("ai_git");
+  let spelled1 = fn_name("ai_git");
   let spelled2 = fn_name("ai_log_add");
   let spelled3 = fn_name("work_options");
   let spelled4 = fn_name("work_items");
@@ -460,466 +460,114 @@ export function permission_grant_names() {
   let spelled457 = fn_name("storage_browser_direct_baseline_path");
   let spelled458 = fn_name("storage_browser_direct_baseline_write");
   let spelled459 = fn_name("storage_browser_direct_gate_run");
-  let names = [
-    spelled,
-    spelled2,
-    spelled3,
-    spelled4,
-    spelled5,
-    spelled6,
-    spelled7,
-    spelled8,
-    spelled9,
-    spelled10,
-    spelled11,
-    spelled12,
-    spelled13,
-    spelled14,
-    spelled15,
-    spelled16,
-    spelled17,
-    spelled18,
-    spelled19,
-    spelled20,
-    spelled21,
-    spelled22,
-    spelled23,
-    spelled24,
-    spelled25,
-    spelled26,
-    spelled27,
-    spelled28,
-    spelled29,
-    spelled30,
-    spelled31,
-    spelled32,
-    spelled33,
-    spelled34,
-    spelled35,
-    spelled36,
-    spelled37,
-    spelled38,
-    spelled39,
-    spelled40,
-    spelled41,
-    spelled42,
-    spelled43,
-    spelled44,
-    spelled45,
-    spelled46,
-    spelled47,
-    spelled48,
-    spelled49,
-    spelled50,
-    spelled51,
-    spelled52,
-    spelled53,
-    spelled54,
-    spelled55,
-    spelled56,
-    spelled57,
-    spelled58,
-    spelled59,
-    spelled60,
-    spelled61,
-    spelled62,
-    spelled63,
-    spelled64,
-    spelled65,
-    spelled66,
-    spelled67,
-    spelled68,
-    spelled69,
-    spelled70,
-    spelled71,
-    spelled72,
-    spelled73,
-    spelled74,
-    spelled75,
-    spelled76,
-    spelled77,
-    spelled78,
-    spelled79,
-    spelled80,
-    spelled81,
-    spelled82,
-    spelled83,
-    spelled84,
-    spelled85,
-    spelled86,
-    spelled87,
-    spelled88,
-    spelled89,
-    spelled90,
-    spelled91,
-    spelled92,
-    spelled93,
-    spelled94,
-    spelled95,
-    spelled96,
-    spelled97,
-    spelled98,
-    spelled99,
-    spelled100,
-    spelled101,
-    spelled102,
-    spelled103,
-    spelled104,
-    spelled105,
-    spelled106,
-    spelled107,
-    spelled108,
-    spelled109,
-    spelled110,
-    spelled111,
-    spelled112,
-    spelled113,
-    spelled114,
-    spelled115,
-    spelled116,
-    spelled117,
-    spelled118,
-    spelled119,
-    spelled120,
-    spelled121,
-    spelled122,
-    spelled123,
-    spelled124,
-    spelled125,
-    spelled126,
-    spelled127,
-    spelled128,
-    spelled129,
-    spelled130,
-    spelled131,
-    spelled132,
-    spelled133,
-    spelled134,
-    spelled135,
-    spelled136,
-    spelled137,
-    spelled138,
-    spelled139,
-    spelled140,
-    spelled141,
-    spelled142,
-    spelled143,
-    spelled144,
-    spelled145,
-    spelled146,
-    spelled147,
-    spelled148,
-    spelled149,
-    spelled150,
-    spelled151,
-    spelled152,
-    spelled153,
-    spelled154,
-    spelled155,
-    spelled156,
-    spelled157,
-    spelled158,
-    spelled159,
-    spelled160,
-    spelled161,
-    spelled162,
-    spelled163,
-    spelled164,
-    spelled165,
-    spelled166,
-    spelled167,
-    spelled168,
-    spelled169,
-    spelled170,
-    spelled171,
-    spelled172,
-    spelled173,
-    spelled174,
-    spelled175,
-    spelled176,
-    spelled177,
-    spelled178,
-    spelled179,
-    spelled180,
-    spelled181,
-    spelled182,
-    spelled183,
-    spelled184,
-    spelled185,
-    spelled186,
-    spelled187,
-    spelled188,
-    spelled189,
-    spelled190,
-    spelled191,
-    spelled192,
-    spelled193,
-    spelled194,
-    spelled195,
-    spelled196,
-    spelled197,
-    spelled198,
-    spelled199,
-    spelled200,
-    spelled201,
-    spelled202,
-    spelled203,
-    spelled204,
-    spelled205,
-    spelled206,
-    spelled207,
-    spelled208,
-    spelled209,
-    spelled210,
-    spelled211,
-    spelled212,
-    spelled213,
-    spelled214,
-    spelled215,
-    spelled216,
-    spelled217,
-    spelled218,
-    spelled219,
-    spelled220,
-    spelled221,
-    spelled222,
-    spelled223,
-    spelled224,
-    spelled225,
-    spelled226,
-    spelled227,
-    spelled228,
-    spelled229,
-    spelled230,
-    spelled231,
-    spelled232,
-    spelled233,
-    spelled234,
-    spelled235,
-    spelled236,
-    spelled237,
-    spelled238,
-    spelled239,
-    spelled240,
-    spelled241,
-    spelled242,
-    spelled243,
-    spelled244,
-    spelled245,
-    spelled246,
-    spelled247,
-    spelled248,
-    spelled249,
-    spelled250,
-    spelled251,
-    spelled252,
-    spelled253,
-    spelled254,
-    spelled255,
-    spelled256,
-    spelled257,
-    spelled258,
-    spelled259,
-    spelled260,
-    spelled261,
-    spelled262,
-    spelled263,
-    spelled264,
-    spelled265,
-    spelled266,
-    spelled267,
-    spelled268,
-    spelled269,
-    spelled270,
-    spelled271,
-    spelled272,
-    spelled273,
-    spelled274,
-    spelled275,
-    spelled276,
-    spelled277,
-    spelled278,
-    spelled279,
-    spelled280,
-    spelled281,
-    spelled282,
-    spelled283,
-    spelled284,
-    spelled285,
-    spelled286,
-    spelled287,
-    spelled288,
-    spelled289,
-    spelled290,
-    spelled291,
-    spelled292,
-    spelled293,
-    spelled294,
-    spelled295,
-    spelled296,
-    spelled297,
-    spelled298,
-    spelled299,
-    spelled300,
-    spelled301,
-    spelled302,
-    spelled303,
-    spelled304,
-    spelled305,
-    spelled306,
-    spelled307,
-    spelled308,
-    spelled309,
-    spelled310,
-    spelled311,
-    spelled312,
-    spelled313,
-    spelled314,
-    spelled315,
-    spelled316,
-    spelled317,
-    spelled318,
-    spelled319,
-    spelled320,
-    spelled321,
-    spelled322,
-    spelled323,
-    spelled324,
-    spelled325,
-    spelled326,
-    spelled327,
-    spelled328,
-    spelled329,
-    spelled330,
-    spelled331,
-    spelled332,
-    spelled333,
-    spelled334,
-    spelled335,
-    spelled336,
-    spelled337,
-    spelled338,
-    spelled339,
-    spelled340,
-    spelled341,
-    spelled342,
-    spelled343,
-    spelled344,
-    spelled345,
-    spelled346,
-    spelled347,
-    spelled348,
-    spelled349,
-    spelled350,
-    spelled351,
-    spelled352,
-    spelled353,
-    spelled354,
-    spelled355,
-    spelled356,
-    spelled357,
-    spelled358,
-    spelled359,
-    spelled360,
-    spelled361,
-    spelled362,
-    spelled363,
-    spelled364,
-    spelled365,
-    spelled366,
-    spelled367,
-    spelled368,
-    spelled369,
-    spelled370,
-    spelled371,
-    spelled372,
-    spelled373,
-    spelled374,
-    spelled375,
-    spelled376,
-    spelled377,
-    spelled378,
-    spelled379,
-    spelled380,
-    spelled381,
-    spelled382,
-    spelled383,
-    spelled384,
-    spelled385,
-    spelled386,
-    spelled387,
-    spelled388,
-    spelled389,
-    spelled390,
-    spelled391,
-    spelled392,
-    spelled393,
-    spelled394,
-    spelled395,
-    spelled396,
-    spelled397,
-    spelled398,
-    spelled399,
-    spelled400,
-    spelled401,
-    spelled402,
-    spelled403,
-    spelled404,
-    spelled405,
-    spelled406,
-    spelled407,
-    spelled408,
-    spelled409,
-    spelled410,
-    spelled411,
-    spelled412,
-    spelled413,
-    spelled414,
-    spelled415,
-    spelled416,
-    spelled417,
-    spelled418,
-    spelled419,
-    spelled420,
-    spelled421,
-    spelled422,
-    spelled423,
-    spelled424,
-    spelled425,
-    spelled426,
-    spelled427,
-    spelled428,
-    spelled429,
-    spelled430,
-    spelled431,
-    spelled432,
-    spelled433,
-    spelled434,
-    spelled435,
-    spelled436,
-    spelled437,
-    spelled438,
-    spelled439,
-    spelled440,
-    spelled441,
-    spelled442,
-    spelled443,
-    spelled444,
-    spelled445,
-    spelled446,
-    spelled447,
-    spelled448,
-    spelled449,
-    spelled450,
-    spelled451,
-    spelled452,
-    spelled453,
-    spelled454,
-    spelled455,
-    spelled456,
-    spelled457,
-    spelled458,
-    spelled459,
-  ];
+  let spelled460 = fn_name("app_code_lesson_name_id_words");
+  let spelled461 = fn_name("bible_interlinear_json_path");
+  let spelled462 = fn_name("bible_interlinear_verse");
+  let spelled463 = fn_name("colors_near_miss_pairs");
+  let spelled464 = fn_name("commands_time_dispatcher_report");
+  let spelled465 = fn_name("commands_time_report");
+  let spelled466 = fn_name("daemons_ensure");
+  let spelled467 = fn_name("duplicates_baseline_path");
+  let spelled468 = fn_name("example_selectors");
+  let spelled469 = fn_name("firebase_storage_list_jg");
+  let spelled470 = fn_name("firebase_storage_url_project_jg");
+  let spelled471 = fn_name("function_delete_if_exists_multiple");
+  let spelled472 = fn_name("function_delete_if_exists_multiple_args");
+  let spelled473 = fn_name("function_fold");
+  let spelled474 = fn_name("function_head_shape");
+  let spelled475 = fn_name("function_literal_route");
+  let spelled476 = fn_name("function_literal_route_key");
+  let spelled477 = fn_name("function_name_pair_composed");
+  let spelled478 = fn_name("function_name_to_acronym");
+  let spelled479 = fn_name("function_name_to_path_unalias");
+  let spelled480 = fn_name("function_name_unalias");
+  let spelled481 = fn_name("function_name_unalias_only");
+  let spelled482 = fn_name("function_parallel_mark");
+  let spelled483 = fn_name("function_parallel_marked_is");
+  let spelled484 = fn_name("function_parallel_mark_remove");
+  let spelled485 = fn_name("function_parse_declaration_js_unparse");
+  let spelled486 = fn_name("function_replace");
+  let spelled487 = fn_name("functions_auto_refused");
+  let spelled488 = fn_name("functions_dispatcher_commands_gate_run");
+  let spelled489 = fn_name("functions_dispatcher_commands_unresolved");
+  let spelled490 = fn_name("functions_facts_all");
+  let spelled491 = fn_name("functions_fold_pairs_mutual");
+  let spelled492 = fn_name("functions_fold_pairs_soundable");
+  let spelled493 = fn_name("functions_fold_sites");
+  let spelled494 = fn_name("functions_head_duplicate_names");
+  let spelled495 = fn_name("functions_head_duplicates");
+  let spelled496 = fn_name("functions_head_duplicates_baseline_path");
+  let spelled497 = fn_name("functions_head_duplicates_baseline_write");
+  let spelled498 = fn_name("functions_name_only_imports_spell");
+  let spelled499 = fn_name("functions_name_references_mixed");
+  let spelled500 = fn_name("functions_name_references_mixed_strip");
+  let spelled501 = fn_name("functions_operators_raw");
+  let spelled502 = fn_name("functions_search");
+  let spelled503 = fn_name("functions_shadowing");
+  let spelled504 = fn_name("functions_shape_blocks");
+  let spelled505 = fn_name("functions_statements_after_return");
+  let spelled506 = fn_name("functions_tail_duplicates_baseline_path");
+  let spelled507 = fn_name("functions_tail_duplicates_baseline_write");
+  let spelled508 = fn_name("functions_unbound_names");
+  let spelled509 = fn_name("function_wrap");
+  let spelled510 = fn_name("g_arc_generate");
+  let spelled511 = fn_name("g_arc_lengths");
+  let spelled512 = fn_name("g_arc_lengths_all");
+  let spelled513 = fn_name("g_boundary_believer");
+  let spelled514 = fn_name("g_content_backup");
+  let spelled515 = fn_name("g_content_backup_folder");
+  let spelled516 = fn_name("g_content_backup_namespace");
+  let spelled517 = fn_name("g_content_backup_namespaces");
+  let spelled518 = fn_name("g_content_backup_originals");
+  let spelled519 = fn_name("g_content_originals_folder");
+  let spelled520 = fn_name("g_content_originals_folders");
+  let spelled521 = fn_name("g_generation_plan");
+  let spelled522 = fn_name("g_plant_arcs_all");
+  let spelled523 = fn_name("g_plant_chapters");
+  let spelled524 = fn_name("g_sermon_chapter_codes_all");
+  let spelled525 = fn_name("g_sermon_chapter_lines");
+  let spelled526 = fn_name("g_sermon_chapter_passages");
+  let spelled527 = fn_name("g_sermon_glosses_for_word");
+  let spelled528 = fn_name("hash_key_getters_all");
+  let spelled529 = fn_name("hash_key_getters_frozen_gate_run");
+  let spelled530 = fn_name("hash_key_literals_all");
+  let spelled531 = fn_name("hash_key_literals_gate_run");
+  let spelled532 = fn_name("identity");
+  let spelled533 = fn_name("js_address_fused_words_cases_gate_run");
+  let spelled534 = fn_name("js_declare_assign_null_cases_gate_run");
+  let spelled535 = fn_name("js_dot_name_object_name_cases_gate_run");
+  let spelled536 = fn_name("js_fold_call_statement");
+  let spelled537 = fn_name("js_hash_key_getters_cases_gate_run");
+  let spelled538 = fn_name("js_hash_key_literals_cases_gate_run");
+  let spelled539 = fn_name("js_query_key_getters_cases_gate_run");
+  let spelled540 = fn_name("literals_frozen_fused_all");
+  let spelled541 = fn_name("literals_frozen_fused_gate_run");
+  let spelled542 = fn_name("literals_frozen_storage_gate_run");
+  let spelled543 = fn_name("literals_frozen_storage_unfrozen");
+  let spelled544 = fn_name("memory_note_stems");
+  let spelled545 = fn_name("memory_notes_word_rename");
+  let spelled546 = fn_name("path_pattern_covers_cases_gate_run");
+  let spelled547 = fn_name("permission_decider_paths");
+  let spelled548 = fn_name("permission_decider_rule_gate_run");
+  let spelled549 = fn_name("permission_rules_decider_write");
+  let spelled550 = fn_name("permission_settings_local_gate_run");
+  let spelled551 = fn_name("qa_shard_count");
+  let spelled552 = fn_name("qa_tree_pointers_assert");
+  let spelled553 = fn_name("query_key_getters_frozen_gate_run");
+  let spelled554 = fn_name("query_key_literals_gate_run");
+  let spelled555 = fn_name("storage_key_get_callers");
+  let spelled556 = fn_name("storage_key_seams_all");
+  let spelled557 = fn_name("storage_key_seams_gate_run");
+  let spelled558 = fn_name("storage_local_key_names_apps");
+  let spelled559 = fn_name("storage_local_key_names_found");
+  let spelled560 = fn_name("storage_local_key_names_gate_run");
+  let spelled561 = fn_name("storage_local_key_names_path");
+  let spelled562 = fn_name("storage_local_key_names_record_new");
+  let spelled563 = fn_name("storage_local_key_names_rename_report");
+  let spelled564 = fn_name("storage_local_key_owner_forwarders");
+  let spelled565 = fn_name("storage_local_key_words_found");
+  let spelled566 = fn_name("storage_local_key_words_gate_run");
+  let spelled567 = fn_name("text_dispatcher_command_names_gate_run");
+  let names = [spelled1, spelled2, spelled3, spelled4, spelled5, spelled6, spelled7, spelled8, spelled9, spelled10, spelled11, spelled12, spelled13, spelled14, spelled15, spelled16, spelled17, spelled18, spelled19, spelled20, spelled21, spelled22, spelled23, spelled24, spelled25, spelled26, spelled27, spelled28, spelled29, spelled30, spelled31, spelled32, spelled33, spelled34, spelled35, spelled36, spelled37, spelled38, spelled39, spelled40, spelled41, spelled42, spelled43, spelled44, spelled45, spelled46, spelled47, spelled48, spelled49, spelled50, spelled51, spelled52, spelled53, spelled54, spelled55, spelled56, spelled57, spelled58, spelled59, spelled60, spelled61, spelled62, spelled63, spelled64, spelled65, spelled66, spelled67, spelled68, spelled69, spelled70, spelled71, spelled72, spelled73, spelled74, spelled75, spelled76, spelled77, spelled78, spelled79, spelled80, spelled81, spelled82, spelled83, spelled84, spelled85, spelled86, spelled87, spelled88, spelled89, spelled90, spelled91, spelled92, spelled93, spelled94, spelled95, spelled96, spelled97, spelled98, spelled99, spelled100, spelled101, spelled102, spelled103, spelled104, spelled105, spelled106, spelled107, spelled108, spelled109, spelled110, spelled111, spelled112, spelled113, spelled114, spelled115, spelled116, spelled117, spelled118, spelled119, spelled120, spelled121, spelled122, spelled123, spelled124, spelled125, spelled126, spelled127, spelled128, spelled129, spelled130, spelled131, spelled132, spelled133, spelled134, spelled135, spelled136, spelled137, spelled138, spelled139, spelled140, spelled141, spelled142, spelled143, spelled144, spelled145, spelled146, spelled147, spelled148, spelled149, spelled150, spelled151, spelled152, spelled153, spelled154, spelled155, spelled156, spelled157, spelled158, spelled159, spelled160, spelled161, spelled162, spelled163, spelled164, spelled165, spelled166, spelled167, spelled168, spelled169, spelled170, spelled171, spelled172, spelled173, spelled174, spelled175, spelled176, spelled177, spelled178, spelled179, spelled180, spelled181, spelled182, spelled183, spelled184, spelled185, spelled186, spelled187, spelled188, spelled189, spelled190, spelled191, spelled192, spelled193, spelled194, spelled195, spelled196, spelled197, spelled198, spelled199, spelled200, spelled201, spelled202, spelled203, spelled204, spelled205, spelled206, spelled207, spelled208, spelled209, spelled210, spelled211, spelled212, spelled213, spelled214, spelled215, spelled216, spelled217, spelled218, spelled219, spelled220, spelled221, spelled222, spelled223, spelled224, spelled225, spelled226, spelled227, spelled228, spelled229, spelled230, spelled231, spelled232, spelled233, spelled234, spelled235, spelled236, spelled237, spelled238, spelled239, spelled240, spelled241, spelled242, spelled243, spelled244, spelled245, spelled246, spelled247, spelled248, spelled249, spelled250, spelled251, spelled252, spelled253, spelled254, spelled255, spelled256, spelled257, spelled258, spelled259, spelled260, spelled261, spelled262, spelled263, spelled264, spelled265, spelled266, spelled267, spelled268, spelled269, spelled270, spelled271, spelled272, spelled273, spelled274, spelled275, spelled276, spelled277, spelled278, spelled279, spelled280, spelled281, spelled282, spelled283, spelled284, spelled285, spelled286, spelled287, spelled288, spelled289, spelled290, spelled291, spelled292, spelled293, spelled294, spelled295, spelled296, spelled297, spelled298, spelled299, spelled300, spelled301, spelled302, spelled303, spelled304, spelled305, spelled306, spelled307, spelled308, spelled309, spelled310, spelled311, spelled312, spelled313, spelled314, spelled315, spelled316, spelled317, spelled318, spelled319, spelled320, spelled321, spelled322, spelled323, spelled324, spelled325, spelled326, spelled327, spelled328, spelled329, spelled330, spelled331, spelled332, spelled333, spelled334, spelled335, spelled336, spelled337, spelled338, spelled339, spelled340, spelled341, spelled342, spelled343, spelled344, spelled345, spelled346, spelled347, spelled348, spelled349, spelled350, spelled351, spelled352, spelled353, spelled354, spelled355, spelled356, spelled357, spelled358, spelled359, spelled360, spelled361, spelled362, spelled363, spelled364, spelled365, spelled366, spelled367, spelled368, spelled369, spelled370, spelled371, spelled372, spelled373, spelled374, spelled375, spelled376, spelled377, spelled378, spelled379, spelled380, spelled381, spelled382, spelled383, spelled384, spelled385, spelled386, spelled387, spelled388, spelled389, spelled390, spelled391, spelled392, spelled393, spelled394, spelled395, spelled396, spelled397, spelled398, spelled399, spelled400, spelled401, spelled402, spelled403, spelled404, spelled405, spelled406, spelled407, spelled408, spelled409, spelled410, spelled411, spelled412, spelled413, spelled414, spelled415, spelled416, spelled417, spelled418, spelled419, spelled420, spelled421, spelled422, spelled423, spelled424, spelled425, spelled426, spelled427, spelled428, spelled429, spelled430, spelled431, spelled432, spelled433, spelled434, spelled435, spelled436, spelled437, spelled438, spelled439, spelled440, spelled441, spelled442, spelled443, spelled444, spelled445, spelled446, spelled447, spelled448, spelled449, spelled450, spelled451, spelled452, spelled453, spelled454, spelled455, spelled456, spelled457, spelled458, spelled459, spelled460, spelled461, spelled462, spelled463, spelled464, spelled465, spelled466, spelled467, spelled468, spelled469, spelled470, spelled471, spelled472, spelled473, spelled474, spelled475, spelled476, spelled477, spelled478, spelled479, spelled480, spelled481, spelled482, spelled483, spelled484, spelled485, spelled486, spelled487, spelled488, spelled489, spelled490, spelled491, spelled492, spelled493, spelled494, spelled495, spelled496, spelled497, spelled498, spelled499, spelled500, spelled501, spelled502, spelled503, spelled504, spelled505, spelled506, spelled507, spelled508, spelled509, spelled510, spelled511, spelled512, spelled513, spelled514, spelled515, spelled516, spelled517, spelled518, spelled519, spelled520, spelled521, spelled522, spelled523, spelled524, spelled525, spelled526, spelled527, spelled528, spelled529, spelled530, spelled531, spelled532, spelled533, spelled534, spelled535, spelled536, spelled537, spelled538, spelled539, spelled540, spelled541, spelled542, spelled543, spelled544, spelled545, spelled546, spelled547, spelled548, spelled549, spelled550, spelled551, spelled552, spelled553, spelled554, spelled555, spelled556, spelled557, spelled558, spelled559, spelled560, spelled561, spelled562, spelled563, spelled564, spelled565, spelled566, spelled567];
   return names;
 }
