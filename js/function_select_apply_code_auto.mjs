@@ -18,6 +18,11 @@ export async function function_select_apply_code_auto(
   ("that gap records a file that does not load.");
   ("Both halves stay on their own for the times only one is wanted; this is simply");
   ("the one to reach for.");
+  ("This is the code-carrying sibling of the list-carrying one, and it existed on");
+  ("that side only, so every line of written code went in through a command that");
+  ("stopped one step short. Written code is the shape most likely to name a");
+  ("function the file has never imported, which makes the missing step worst");
+  ("exactly where it was missing.");
   ("The pairing that made the change is what names this, not the pass that tidied");
   ("up after it: canonicalizing changes nothing anybody asked for.");
   let output = await function_select_apply_code(
