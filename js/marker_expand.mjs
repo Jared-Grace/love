@@ -1,6 +1,6 @@
+import { marker_next_node } from "./marker_next_node.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_expand_generic } from "./js_expand_generic.mjs";
-import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 export async function marker_expand() {
@@ -8,8 +8,7 @@ export async function marker_expand() {
   let v = await function_transform_marker(f_name, lambda);
   return v;
   async function lambda(a) {
-    let r = marker_next_get(a);
-    let next = property_get(r, "next");
+    let next = marker_next_node(a);
     let ast = property_get(a, "ast");
     let stack_2 = property_get(a, "stack_2");
     let inserted = await js_expand_generic(next, stack_2, ast);
