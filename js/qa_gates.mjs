@@ -1,3 +1,4 @@
+import { js_name_value_use_nodes_cases_gate_run } from "./js_name_value_use_nodes_cases_gate_run.mjs";
 import { js_call_named_argument_at_undroppable_cases_gate_run } from "./js_call_named_argument_at_undroppable_cases_gate_run.mjs";
 import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
 import { functions_parameters_unread_computed_gate_run } from "./functions_parameters_unread_computed_gate_run.mjs";
@@ -196,6 +197,7 @@ export function qa_gates() {
     functions_parameters_unread_gate_run,
     functions_parameters_unread_computed_gate_run,
     js_call_named_argument_at_undroppable_cases_gate_run,
+    js_name_value_use_nodes_cases_gate_run,
     functions_duplicates_gate_run,
     functions_fold_gate_run,
     markers_gate_run,
