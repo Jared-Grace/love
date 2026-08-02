@@ -1,4 +1,4 @@
-import { round } from "./round.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -21,7 +21,6 @@ export async function g_npc_pool_convert_turns() {
   let leader_part = divide(share, a_day);
   let convert_part = subtract(1, leader_part);
   let convert_turns = multiply(arc_turns, convert_part);
-  let wanted = multiply(convert_turns, s.npc_pool_multiple);
-  let r = round(wanted);
+  let r = multiply_round(convert_turns, s.npc_pool_multiple);
   return r;
 }
