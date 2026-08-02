@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,14 +7,12 @@ import { js_function_declaration_name } from "./js_function_declaration_name.mjs
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { js_node_copy } from "./js_node_copy.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
 import { list_add } from "./list_add.mjs";
 import { add_1 } from "./add_1.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function function_inside_shapes(f_name, size) {
   arguments_assert(arguments, 2);
@@ -28,8 +27,7 @@ export async function function_inside_shapes(f_name, size) {
   let locals = js_declared_names(declaration);
   let named = list_concat(params, locals);
   let personal = list_concat([own], named);
-  let count = list_size(working);
-  let last = subtract(count, size);
+  let last = list_size_subtract(working, size);
   let shapes = [];
   let index = 0;
   while (true) {
