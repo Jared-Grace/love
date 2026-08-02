@@ -19,11 +19,7 @@ export async function permission_prompt_events_paths(
     return p;
   }
   let lists = await list_map_unordered_async(paths, scan);
-  let left2 = Number(days);
-  let left3 = multiply(left2, 24);
-  let left4 = multiply(left3, 60);
-  let left5 = multiply(left4, 60);
-  let span = multiply(left5, 1000);
+  let span = date_days_milliseconds(days);
   let difference = date_milliseconds_since(span);
   let cutoff = new Date(difference).toISOString();
   let events = [];
