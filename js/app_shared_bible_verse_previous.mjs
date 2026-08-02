@@ -1,7 +1,7 @@
 import { app_shared_bible_verse_change } from "./app_shared_bible_verse_change.mjs";
 import { app_shared_bible_chapter_previous_last_verse } from "./app_shared_bible_chapter_previous_last_verse.mjs";
 import { list_previous_try } from "./list_previous_try.mjs";
-export async function app_bible_verse_previous(
+export async function app_shared_bible_verse_previous(
   context,
   chapter_code,
   verse_current,

@@ -20,7 +20,7 @@ import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { app_bible_verse_previous } from "./app_bible_verse_previous.mjs";
+import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
@@ -287,7 +287,7 @@ export async function app_shared_bible_home_generic(
     verse_number,
   });
   async function lambda() {
-    await app_bible_verse_previous(context, chapter_code, verse_current);
+    await app_shared_bible_verse_previous(context, chapter_code, verse_current);
   }
   async function lambda7() {
     await app_shared_bible_verse_next(context, chapter_code, verse_current);
