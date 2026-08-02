@@ -1,3 +1,4 @@
+import { app_code_label_value } from "./app_code_label_value.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_arithmetic_to_value } from "./app_code_arithmetic_to_value.mjs";
@@ -74,8 +75,8 @@ export function app_code_lesson_expression_arithmetic_equality() {
     example_count: 4,
     decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
-    forwards_answer_label: "value: ",
-    backwards_question_label: "value: ",
+    forwards_answer_label: app_code_label_value(),
+    backwards_question_label: app_code_label_value(),
     backwards_answer_label: "What code gives this value? ",
     forwards_answer_count_override: 2,
   });
