@@ -1,6 +1,5 @@
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -25,8 +24,7 @@ export async function permission_prompt_events_paths(
   let left4 = multiply(left3, 60);
   let left5 = multiply(left4, 60);
   let span = multiply(left5, 1000);
-  let left6 = date_now_milliseconds();
-  let difference = subtract(left6, span);
+  let difference = date_milliseconds_since(span);
   let cutoff = new Date(difference).toISOString();
   let events = [];
   for (let list of lists) {
