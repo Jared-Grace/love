@@ -1,3 +1,5 @@
+import { lambda_throws_async } from "./lambda_throws_async.mjs";
+import { property_get } from "./property_get.mjs";
 import { baseline_writers_growth_exempt } from "./baseline_writers_growth_exempt.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -12,6 +14,7 @@ export async function baselines_stale_repair() {
   "safe to run at any moment because every writer it reaches is guarded against growth - such a writer cannot record a new offence, only drop one that has gone. so this can tighten a ratchet and can never loosen one, whatever state the folder is in when it runs";
   "the repo names three writers that are allowed to grow, each with its reason, and those are passed over rather than trusted. one of them takes no arguments and so would sail through the count check below - the exemption list is the only thing that catches it, and running it here would bless whatever new offence happened to be standing";
   "a writer that has to be told something is passed over too. those are the shared writers the others end at, not ratchets of their own, and a step needing an argument would have to have it guessed for it";
+  "a writer that refuses is written down and the run carries on to the next one. refusing is the growth guard working, not this breaking: it means that ratchet has a NEW offence standing, which is somebody's to fix rather than to record. stopping there would let one real fault hide every stale entry behind it, and the first run of this did exactly that - one shadowing offence in a peer's file kept fifteen other ratchets from being put back in step";
   "anything already noted is committed first, so the first writer's commit carries its own files and not a neighbour's leftovers";
   await ai_git_noted();
   let f_names = await baseline_writers_names();
@@ -19,6 +22,7 @@ export async function baselines_stale_repair() {
   let exempt_names = list_map_property(exempt, "f_name");
   let shrunk = [];
   let skipped = [];
+  let refused = [];
   for (let f_name of f_names) {
     let allowed_to_grow = list_includes(exempt_names, f_name);
     if (allowed_to_grow) {
@@ -31,7 +35,20 @@ export async function baselines_stale_repair() {
       list_add(skipped, f_name);
       continue;
     }
-    let result = await function_call_commit(fn, []);
+    let result = null;
+    async function step() {
+      result = await function_call_commit(fn, []);
+    }
+    let verdict = await lambda_throws_async(step);
+    let complained = property_get(verdict, "throws");
+    if (complained) {
+      let raised = property_get(verdict, "result");
+      list_add(refused, {
+        f_name,
+        message: raised.message,
+      });
+      continue;
+    }
     list_add(shrunk, {
       f_name,
       result,
@@ -40,6 +57,7 @@ export async function baselines_stale_repair() {
   let r = {
     shrunk,
     skipped,
+    refused,
   };
   return r;
 }
