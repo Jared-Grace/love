@@ -14,12 +14,12 @@ import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function messenger_reply_unread_collect() {
   let page = await messenger_reply_puppeteer(lambda);
-  async function lambda(page) {
+  async function lambda(page_open) {
     let v = messenger_reply_url();
-    let messages = await messenger_reply_messages(page, v);
-    await messenger_reply_unread_click(page);
-    await messenger_reply_wait(page);
-    let urls = await messenger_reply_messages_urls_add_page(page);
+    let messages = await messenger_reply_messages(page_open, v);
+    await messenger_reply_unread_click(page_open);
+    await messenger_reply_wait(page_open);
+    let urls = await messenger_reply_messages_urls_add_page(page_open);
     while (true) {
       let e = list_empty_is(urls);
       if (e) {
@@ -29,15 +29,15 @@ export async function messenger_reply_unread_collect() {
       let prefix = "https://www.facebook.com";
       let without = text_prefix_without(url, prefix);
       let selector = text_combine_multiple(['a[href="', without, '"]']);
-      let link = await page.$(selector);
+      let link = await page_open.$(selector);
       if (link !== null) {
         await link.click();
-        await page.waitForSelector(selector, {
+        await page_open.waitForSelector(selector, {
           state: "detached",
         });
       }
       list_remove(urls, url);
-      let urls_new = await messenger_reply_messages_urls_add_page(page);
+      let urls_new = await messenger_reply_messages_urls_add_page(page_open);
       function lambda2(url_new) {
         list_add_if_not_includes(urls, url_new);
       }
