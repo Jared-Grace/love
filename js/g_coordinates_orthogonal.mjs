@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
 export function g_coordinates_orthogonal(coordinates) {
   let x = property_get(coordinates, "x");
@@ -8,7 +9,7 @@ export function g_coordinates_orthogonal(coordinates) {
       y,
     },
     {
-      x: x - 1,
+      x: subtract(x, 1),
       y,
     },
     {
@@ -17,7 +18,7 @@ export function g_coordinates_orthogonal(coordinates) {
     },
     {
       x,
-      y: y - 1,
+      y: subtract(y, 1),
     },
   ];
   return neighbors;
