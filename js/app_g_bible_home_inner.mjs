@@ -4,7 +4,7 @@ import { list_adder_async } from "./list_adder_async.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_bible_home_generic } from "./app_bible_home_generic.mjs";
+import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
@@ -36,7 +36,7 @@ export async function app_g_bible_home_inner(context, download, app_fn) {
       }
       each(passages_downloaded, lambda2);
     }
-    r = await app_bible_home_generic(context, lambda, noop, app_fn);
+    r = await app_shared_bible_home_generic(context, lambda, noop, app_fn);
   }
   let passages = await list_adder_async(lambda3);
   let v = {
