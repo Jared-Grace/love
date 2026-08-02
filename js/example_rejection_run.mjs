@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { function_import } from "./function_import.mjs";
 import { equal } from "./equal.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -19,7 +20,7 @@ export async function example_rejection_run(e) {
       ("them, so the corpus needs a way to write one — without it such a guard can");
       ("only be checked through a whole transform, which tests the arithmetic");
       ("around it rather than the judgement inside it.");
-      let r2 = a.code.map(js_parse_statement);
+      let r2 = list_map(a.code, js_parse_statement);
       return r2;
     }
     let expression = js_parse_expression(a.code);
