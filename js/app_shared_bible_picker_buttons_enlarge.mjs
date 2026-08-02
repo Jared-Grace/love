@@ -7,7 +7,7 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { each } from "./each.mjs";
-export function app_bible_picker_buttons_enlarge(buttons) {
+export function app_shared_bible_picker_buttons_enlarge(buttons) {
   "the book/chapter/verse pickers are the primary touch surface on a phone, so size every choice to how many there are: a short list that all fits gets big chunky targets, a long one keeps the standard enlarged size - larger targets are better whenever there is room for them";
   let count = list_size(buttons);
   let size = app_shared_bible_picker_button_size(count);
