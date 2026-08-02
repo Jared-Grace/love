@@ -639,6 +639,7 @@ export function permission_grant_names() {
   let spelled634 = fn_name("parameters_unread_baseline_path");
   let spelled635 = fn_name("qa_gates_publish");
   let spelled636 = fn_name("sandbox_nearley");
+  let spelled637 = fn_name("function_parse");
   let names = [
     spelled,
     spelled2,
@@ -1276,6 +1277,7 @@ export function permission_grant_names() {
     spelled634,
     spelled635,
     spelled636,
+    spelled637,
   ];
   return names;
 }

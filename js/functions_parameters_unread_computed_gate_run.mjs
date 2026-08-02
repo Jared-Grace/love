@@ -1,3 +1,9 @@
+import { functions_parameters_unread_computed } from "./functions_parameters_unread_computed.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { list_size } from "./list_size.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function functions_parameters_unread_computed_gate_run() {
   "Gate: no call site may build an argument the function it calls never reads.";
   "This is the bug half of the unread-parameter rule, and it ratchets against";

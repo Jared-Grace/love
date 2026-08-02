@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { json_to } from "./json_to.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,16 +8,23 @@ import { text_includes } from "./text_includes.mjs";
 ('right move, so it is worth protecting from silent decay. Returns "" when');
 ("the case makes no such claim or the claim holds, else what went wrong.");
 export function guard_case_reason_note(c, result) {
-  if (!property_exists(c, "reason_includes")) {
-    return "";
+  let b = property_exists(c, "reason_includes");
+  if (not(b)) {
+    let r = "";
+    return r;
   }
   let needle = property_get(c, "reason_includes");
-  if (!property_exists(result, "reason")) {
-    return "expected reason to include " + json_to(needle) + ", got no reason";
+  let b2 = property_exists(result, "reason");
+  if (not(b2)) {
+    let r2 =
+      "expected reason to include " + json_to(needle) + ", got no reason";
+    return r2;
   }
   let reason = property_get(result, "reason");
   if (text_includes(reason, needle)) {
-    return "";
+    let r3 = "";
+    return r3;
   }
-  return "reason missing " + json_to(needle);
+  let r4 = "reason missing " + json_to(needle);
+  return r4;
 }
