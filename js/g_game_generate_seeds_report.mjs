@@ -15,6 +15,7 @@ export async function g_game_generate_seeds_report(words_comma) {
       elder_short_plants: property_get(report, "elder_short_plants"),
       trimmed_plants: property_get(report, "trimmed_plants"),
       days_spread: property_get(report, "days_spread"),
+      leader_days_percent_low: property_get(report, "leader_days_percent_low"),
     };
     return summary;
   }
