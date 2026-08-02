@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,7 +27,7 @@ export function js_declaration_unused_to_expression(ast) {
     }
     let name = property_get(id, "name");
     let count = js_identifiers_named_count(ast, name);
-    if (count !== 1) {
+    if (not_equal(count, 1)) {
       return;
     }
     let e = property_list_get_end_1(v, "stack");
