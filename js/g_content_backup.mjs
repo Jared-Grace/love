@@ -1,3 +1,4 @@
+import { g_content_backup_originals } from "./g_content_backup_originals.mjs";
 import { g_content_backup_namespaces } from "./g_content_backup_namespaces.mjs";
 import { g_content_backup_namespace } from "./g_content_backup_namespace.mjs";
 import { g_content_backup_generations } from "./g_content_backup_generations.mjs";
@@ -23,6 +24,8 @@ export async function g_content_backup() {
   let per_namespace = await list_map_async(namespaces, lambda);
   let paths = list_concat_multiple(per_namespace);
   await g_content_backup_generations_write(generations);
+  ("the drive's copies come along in the same pass so that both wordings of an edited chapter are committed together, rather than one of them waiting on somebody remembering to fetch it");
+  await g_content_backup_originals();
   let folder = g_content_backup_folder();
   let f_name = g_content_backup.name;
   let args = [];
