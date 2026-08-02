@@ -30,6 +30,11 @@ export async function g_game_generate_report(word) {
     if (lower) {
       leader_days_percent_low = percent;
     }
+    let question_percent = property_get(plant, "question_percent");
+    let higher = greater_than(question_percent, question_percent_high);
+    if (higher) {
+      question_percent_high = question_percent;
+    }
     let elder_short = property_get(plant, "elder_short");
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
