@@ -1,3 +1,4 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -246,8 +247,7 @@ export function app_code_lesson_console_log_remainder_generic(
       html_span_text(line, " is ");
       remainder_chip(line, remainder);
     }
-    let left2 = multiply(2, divisor);
-    let row_count = add(left2, 1);
+    let row_count = multiply_add(2, divisor, 1);
     let list2 = range(row_count);
     each(list2, row);
     let has_insight = list_empty_not_is(insight);
