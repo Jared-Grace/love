@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
@@ -27,7 +28,7 @@ export async function app_reply_local(context) {
       chapter_code,
       "verses",
     );
-    let v = list_find_property(verses, "verse_number", verse_number);
+    let v = list_find_property(verses, verse_number_key(), verse_number);
     let verse = ebible_verse_merge(bible_folder, chapter_code, v);
     return verse;
   }
