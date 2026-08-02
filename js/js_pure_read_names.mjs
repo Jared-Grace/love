@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,7 +8,6 @@ import { js_node_type } from "./js_node_type.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { js_pure_expression_types } from "./js_pure_expression_types.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { equal } from "./equal.mjs";
@@ -57,8 +57,7 @@ export function js_pure_read_names(node) {
     }
     let call_is = equal(type, "CallExpression");
     if (call_is) {
-      let callee = property_get(visited, "callee");
-      let word = property_get_or_null(callee, "name");
+      let word = property_nested_or_null(visited, "callee", "name");
       let operator_is = list_includes(operators, word);
       if (not(operator_is)) {
         pure = false;
