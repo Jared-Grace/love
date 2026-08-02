@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -198,7 +199,7 @@ function worker_reply_take(worker, line) {
 }
 function worker_exited(worker, code) {
   let waiting = property_get(worker, "waiting");
-  let ids = Object.keys(waiting);
+  let ids = object_property_names(waiting);
   let message = text_combine_multiple([
     "the warm worker exited with code ",
     code,
@@ -223,7 +224,7 @@ function worker_exited(worker, code) {
 }
 function worker_exit_if_idle(worker) {
   let waiting = property_get(worker, "waiting");
-  let idle = Object.keys(waiting).length === 0;
+  let idle = object_property_names(waiting).length === 0;
   let child = property_get(worker, "child");
   if (child === null || not(idle)) {
     return;
