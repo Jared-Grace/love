@@ -1,3 +1,4 @@
+import { list_random_item_or_empty } from "./list_random_item_or_empty.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -18,11 +19,10 @@ export function g_boundary_believer(met, door) {
     "Oh, I can't complain",
     "I've nothing to complain about",
   ]);
-  let t = list_random_item([
+  let r6 = list_random_item_or_empty([
     " The Lord's been good.",
     " Others have it far harder.",
   ]);
-  let r6 = text_random_or_empty(t);
   let combined2 = text_combine_multiple([r5, ".", r6]);
   let r7 = list_random_item(["busy", "run off my feet", "up to my eyes"]);
   let r8 = list_random_item([

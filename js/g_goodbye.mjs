@@ -37,7 +37,11 @@ export function g_goodbye() {
     " Take good care!",
     " Until next time!",
   ]);
-  let emoji_close = list_random_item([emoji_wave(), emoji_heart(), emoji_pray()]);
+  let emoji_close = list_random_item([
+    emoji_wave(),
+    emoji_heart(),
+    emoji_pray(),
+  ]);
   let line = text_combine_multiple([
     emoji_open,
     " ",
