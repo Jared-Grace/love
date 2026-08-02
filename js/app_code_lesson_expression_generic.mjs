@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_batch_code_eval } from "./app_code_batch_code_eval.mjs";
 import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
 import { app_code_lesson_name_id_words } from "./app_code_lesson_name_id_words.mjs";
@@ -13,7 +14,11 @@ export function app_code_lesson_expression_generic(params) {
   let name_id = property_get_or_null(params, "name_id");
   let name_id_missing = null_is(name_id);
   if (name_id_missing) {
-    let category = property_get_or(params, "category", "expressions");
+    let category = property_get_or(
+      params,
+      "category",
+      app_code_category_expressions(),
+    );
     let name_id_rights = property_get(params, "name_id_rights");
     name_id = app_code_lesson_name_id_words(category, name_id_rights);
   }
