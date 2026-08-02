@@ -11,7 +11,8 @@ export async function permission_settings_shared_write(settings) {
   "The width is spelled here rather than taken from the repo's usual one, which is a single space. What is being matched is another program's habit, so the number has to be free to follow that program and must not move when the repo changes its own mind about how wide it writes.";
   let path = permission_settings_shared_path();
   let json = json_format_to_spaces_replaced(settings, 2, null);
-  let text = text_combine_multiple([json, newline()]);
+  let v = newline();
+  let text = text_combine_multiple([json, v]);
   await file_overwrite(path, text);
   return path;
 }

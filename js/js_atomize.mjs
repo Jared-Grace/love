@@ -29,6 +29,11 @@ export async function js_atomize(ast) {
         ("the pieces of a comma-joined expression, which is how a comment naming a function is written - there is no statement list here to lift a local into, and leaving the call where it stands changes nothing about what runs");
         return;
       }
+      let asked_again = js_stack_loop_condition_is(stack);
+      if (asked_again) {
+        ("a loop header, which is asked again every time round. the name would go in the block above the loop, so the answer would be taken once and kept for the whole loop - and a loop over a list its own body shortens then runs a different number of times. this is the one place where lifting a piece out is not the same code");
+        return;
+      }
       let variable_name = js_node_atomize_name();
       await js_node_atomize(ast, v, variable_name, offset);
     }
