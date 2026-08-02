@@ -1,3 +1,7 @@
+import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_em_text } from "./html_em_text.mjs";
@@ -10,37 +14,41 @@ export function markdown_inline(container, text) {
   let n = text.length;
   let plain = "";
   function flush() {
-    if (plain.length > 0) {
+    if (greater_than(plain.length, 0)) {
       html_span_text(container, plain);
       plain = "";
     }
   }
-  while (i < n) {
+  while (less_than(i, n)) {
     let two = text.slice(i, i + 2);
     let ch = text[i];
-    if (two === "**") {
+    if (equal(two, "**")) {
       let end = text.indexOf("**", i + 2);
-      if (end !== -1) {
+      if (not_equal(end, -1)) {
         flush();
-        let bold = html_span_text(container, text.slice(i + 2, end));
+        let text2 = text.slice(i + 2, end);
+        let bold = html_span_text(container, text2);
         html_bold(bold);
         i = end + 2;
         continue;
       }
     }
-    if (two === "[[") {
+    if (equal(two, "[[")) {
       let end = text.indexOf("]]", i + 2);
-      if (end !== -1) {
+      if (not_equal(end, -1)) {
         flush();
-        let wiki = html_span_text(container, text.slice(i + 2, end));
-        html_style_assign(wiki, { color: "#1a3aa0" });
+        let text3 = text.slice(i + 2, end);
+        let wiki = html_span_text(container, text3);
+        html_style_assign(wiki, {
+          color: "#1a3aa0",
+        });
         i = end + 2;
         continue;
       }
     }
-    if (ch === "`") {
+    if (equal(ch, "`")) {
       let end = text.indexOf("`", i + 1);
-      if (end !== -1) {
+      if (not_equal(end, -1)) {
         flush();
         let code = html_span_code_dark(container);
         code.textContent = text.slice(i + 1, end);
@@ -48,27 +56,26 @@ export function markdown_inline(container, text) {
         continue;
       }
     }
-    if (ch === "[") {
+    if (equal(ch, "[")) {
       let close = text.indexOf("]", i + 1);
-      if (close !== -1 && text[close + 1] === "(") {
+      if (not_equal(close, -1) && equal(text[close + 1], "(")) {
         let paren = text.indexOf(")", close + 2);
-        if (paren !== -1) {
+        if (not_equal(paren, -1)) {
           flush();
-          html_a_href_text(
-            container,
-            text.slice(close + 2, paren),
-            text.slice(i + 1, close),
-          );
+          let href = text.slice(close + 2, paren);
+          let text4 = text.slice(i + 1, close);
+          html_a_href_text(container, href, text4);
           i = paren + 1;
           continue;
         }
       }
     }
-    if (ch === "*") {
+    if (equal(ch, "*")) {
       let end = text.indexOf("*", i + 1);
-      if (end !== -1) {
+      if (not_equal(end, -1)) {
         flush();
-        html_em_text(container, text.slice(i + 1, end));
+        let text5 = text.slice(i + 1, end);
+        html_em_text(container, text5);
         i = end + 1;
         continue;
       }
