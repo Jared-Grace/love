@@ -1,8 +1,5 @@
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
-import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_style_margin_y } from "./html_style_margin_y.mjs";
+import { app_shared_container_trim_tiny } from "./app_shared_container_trim_tiny.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
