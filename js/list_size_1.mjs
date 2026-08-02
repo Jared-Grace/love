@@ -1,7 +1,5 @@
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
+import { list_size_equal } from "./list_size_equal.mjs";
 export function list_size_1(list) {
-  let left = list_size(list);
-  let s = equal(left, 1);
+  let s = list_size_equal(list, 1);
   return s;
 }
