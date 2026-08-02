@@ -17,8 +17,9 @@ export function js_name_value_use_nodes(ast, f_name) {
     fn_name("app_shared_bible_read"),
     " which calls it with four arguments - dropping the third parameter would have slid the verse number into the slot before it and sent the button to the wrong verse");
   ("the three benign ways the name can stand in a file are subtracted by node rather than by counting - the callee of a call to it, the specifier of the import that brought it in and the id of its own declaration");
+  ("the calls are asked for as nodes rather than as the records the visitor hands out - a record keeps the call node one level down beside the arguments, so subtracting its callee straight off the record finds no callee at all and stops the whole reading in a file that both calls the name and hands it over");
   let named = js_identifiers_named(ast, f_name);
-  let calls = js_list_calls_named(ast, f_name);
+  let calls = js_list_calls_named_nodes(ast, f_name);
   let callees = list_map_property(calls, "callee");
   let imports = js_imports_declarations(ast);
   let declarations = list_map_property(imports, "declaration");
