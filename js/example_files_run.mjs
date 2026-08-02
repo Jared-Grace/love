@@ -37,8 +37,8 @@ export async function example_files_run(e) {
       };
       return r3;
     }
-    let got = await list_map_unordered_async(names, read);
-    return got;
+    let got_in_sandbox = await list_map_unordered_async(names, read);
+    return got_in_sandbox;
   }
   let got = await folder_temp(in_sandbox);
   let got_canonical = await example_files_canonical(got);
