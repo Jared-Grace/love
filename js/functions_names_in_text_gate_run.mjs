@@ -13,31 +13,18 @@ export function functions_names_in_text_gate_run() {
   "The reading this holds is a judgment that feeds a sweep, and the sweep runs over whatever a gate happened to print - so nothing it produces can be checked against a separate account of the same text. A clean sweep therefore proves nothing about the reading, and this corpus is where the reading itself is answerable.";
   "Order is compared as written, not as a set, because the answer is read back by a reader who expects the names in the order the writing put them.";
   let cases = functions_names_in_text_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let text = property_get(c, "text");
     let known = property_get(c, "known");
-    let expected = property_get(c, "names");
-    let actual = functions_names_in_text(text, known);
-    let left = expected.join(",");
-    let right = actual.join(",");
-    let b = equal(left, right);
-    let mark = gate_case_mark(b);
-    console.log(mark + text + "  ->  [" + actual.join(", ") + "]");
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    let names = functions_names_in_text(text, known);
+    return names;
   }
-  let passed = subtract(cases.length, failures.length);
-  gate_counts_log(passed, failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "functions names in text gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "names",
+    "why",
+    "functions names in text",
+  );
   return r;
 }
