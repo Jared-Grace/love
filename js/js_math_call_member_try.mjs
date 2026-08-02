@@ -1,0 +1,42 @@
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
+import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
+import { js_identifier_named } from "./js_identifier_named.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_get_name } from "./property_get_name.mjs";
+import { text_frozen } from "./text_frozen.mjs";
+import { not } from "./not.mjs";
+export function js_math_call_member_try(node) {
+  "The name of the built-in Math method this call reaches, or nothing at all when the call is not one of those.";
+  "Nothing rather than a refusal, because this is asked of every call in a file and almost none of them are Math calls. A refusal would make the ordinary case the loud one.";
+  "A method reached through a written-out key rather than a name is left unrecognised. Math with a name in brackets is worked out while the program runs, so which method it reaches is not something a reading of the file can know, and guessing would rewrite a call nobody can prove.";
+  let none = null;
+  let call_not = js_node_type_not_is(node, "CallExpression");
+  if (call_not) {
+    return none;
+  }
+  let callee = property_get(node, "callee");
+  let member_not = js_node_type_not_is(callee, "MemberExpression");
+  if (member_not) {
+    return none;
+  }
+  let worked_out = property_get(callee, "computed");
+  if (worked_out) {
+    return none;
+  }
+  let object = property_get(callee, "object");
+  let object_plain_not = js_identifier_not_is(object);
+  if (object_plain_not) {
+    return none;
+  }
+  let math_is = js_identifier_named(object, text_frozen("Math"));
+  if (not(math_is)) {
+    return none;
+  }
+  let property = property_get(callee, "property");
+  let property_plain_not = js_identifier_not_is(property);
+  if (property_plain_not) {
+    return none;
+  }
+  let member = property_get_name(property);
+  return member;
+}
