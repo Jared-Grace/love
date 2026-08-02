@@ -1,3 +1,4 @@
+import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
 import { app_code_review_load } from "./app_code_review_load.mjs";
@@ -42,7 +43,6 @@ import { html_progress_bar } from "./html_progress_bar.mjs";
 import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let number = app_code_review_number_get(context);
@@ -93,8 +93,12 @@ export function app_code_review(context) {
   }
   persist();
   let back = app_shared_button_back_text();
-  let back_text = text_combine(back, " to the previous lesson");
-  let back_button = app_shared_button_wide(g, back_text, go_previous);
+  let back_button = app_shared_button_wide_text_combine(
+    g,
+    back,
+    " to the previous lesson",
+    go_previous,
+  );
   let skip_button = null;
   if (has_next) {
     let arrow = emoji_arrow_right();
