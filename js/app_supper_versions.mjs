@@ -3,7 +3,7 @@ import { ebible_choices } from "./ebible_choices.mjs";
 import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
 import { app_supper_chosen_from_options } from "./app_supper_chosen_from_options.mjs";
 import { app_supper_versions_hash_set } from "./app_supper_versions_hash_set.mjs";
-import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
+import { app_shared_bible_subset_screen_generic } from "./app_shared_bible_subset_screen_generic.mjs";
 import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
 export async function app_supper_versions(context) {
   let options = await ebible_choices();
@@ -15,7 +15,7 @@ export async function app_supper_versions(context) {
   async function back() {
     await app_shared_screen_set_home(context);
   }
-  app_bible_subset_screen_generic(
+  app_shared_bible_subset_screen_generic(
     context,
     options,
     chosen,
