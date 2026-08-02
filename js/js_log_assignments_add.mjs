@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_declarations } from "./js_visit_declarations.mjs";
@@ -9,8 +10,6 @@ import { js_call_statement } from "./js_call_statement.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_adder_invoke } from "./list_adder_invoke.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,8 +30,11 @@ export async function js_log_assignments_add(ast) {
       let node = property_get(v, "node");
       let list = property_list_get_end_1(v, "stack");
       let declarators = js_declaration_declarators_get(node);
-      let names_raw = list_map(declarators, lambda_declarator_name);
-      let names = list_filter(names_raw, lambda_not_null);
+      let names = list_map_filter(
+        declarators,
+        lambda_declarator_name,
+        lambda_not_null,
+      );
       if (list_size(names) === 0) {
         return;
       }
