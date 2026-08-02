@@ -1,3 +1,4 @@
+import { ceil } from "./ceil.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -11,7 +12,7 @@ export function g_npc_pool(turns_wanted, next) {
   "Seeded by whoever calls this, and it must be seeded on something that never moves - the arcs here are authored content, so a run that drew differently would leave written words attached to a length nobody has any more.";
   let s = g_generation_settings();
   let ceiling = divide(turns_wanted, s.arc_turns_low);
-  let most = Math.ceil(ceiling);
+  let most = ceil(ceiling);
   let pool = [];
   let spent = 0;
   for (let index = 0; less_than(index, most); index++) {
