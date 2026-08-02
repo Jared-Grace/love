@@ -711,6 +711,11 @@ export function permission_grant_names() {
   let spelled704 = fn_name("storage_function_folder_path");
   let spelled705 = fn_name("storage_function_folder_rename_check");
   let spelled706 = fn_name("permission_grant_check_multiple");
+  let spelled707 = fn_name("g_sermon_generate_upload_path");
+  let spelled708 = fn_name("g_arc_generate_upload_path");
+  let spelled709 = fn_name("app_ceb_bible_gloss_generate_upload_path");
+  let spelled710 = fn_name("qa_app_commit_deploy");
+  let spelled711 = fn_name("qa_app_commit_promote");
   let names = [
     spelled,
     spelled2,
@@ -1418,6 +1423,11 @@ export function permission_grant_names() {
     spelled704,
     spelled705,
     spelled706,
+    spelled707,
+    spelled708,
+    spelled709,
+    spelled710,
+    spelled711,
   ];
   return names;
 }
