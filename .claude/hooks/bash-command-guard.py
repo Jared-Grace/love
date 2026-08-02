@@ -2831,6 +2831,65 @@ def open_twin_advice(command):
     return ""
 
 
+PATH_TAKING_NAME_TWIN = {"file_js_parse": "function_parse"}
+
+JS_FILE_PATH_RE = re.compile(r"^js/([a-z][a-z0-9_]*)\.mjs$")
+
+
+def path_taking_name_twin_call(command):
+    """If `command` is a lone dispatcher call to a path-taking function whose
+    argument is `js/<name>.mjs` for a live `<name>`, return
+    (fn, twin, name); else None.
+
+    The pair in PATH_TAKING_NAME_TWIN is hand-written and one entry long on
+    purpose. `file_js_parse` cannot be granted - the refusal checker turns
+    down a parameter reading as a path, and rightly, because one rule would
+    cover every argument the function is ever handed, including a path out of
+    the repo. `function_parse` reaches the identical parse through a function
+    NAME, which is why it can be and is granted. So the prompt Claude was
+    about to spend is one it can never stop spending, while a rewrite one
+    word wide never asks again.
+
+    Deriving the pairing rather than listing it would mean knowing in python
+    which function wraps which, so it is listed, and the caller only advises
+    where the advice is TRUE: the argument has to be a `js/<name>.mjs` path
+    for a name that exists, because that is exactly the case
+    function_name_to_path_search can resolve. `scripts/ai.mjs` and a path in
+    /dev/shm fall through untouched and keep prompting, which is correct -
+    the twin cannot reach those."""
+    statements = list(statements_words(command))
+    if len(statements) != 1:
+        return None
+    words = statements[0]
+    if len(words) != 4 or words[0] != "node" or not ai_script_is(words[1]):
+        return None
+    twin = PATH_TAKING_NAME_TWIN.get(words[2])
+    if twin is None:
+        return None
+    match = JS_FILE_PATH_RE.match(words[3])
+    if match is None:
+        return None
+    name = match.group(1)
+    live_names = repos_function_names()
+    if not live_names or name not in live_names or twin not in live_names:
+        return None
+    return (words[2], twin, name)
+
+
+def path_taking_name_twin_ask_reason(fn, twin, name):
+    return (
+        f"`{fn}` has no grant and cannot be given one - its parameter reads "
+        "as a path, and a single rule would cover every path it is ever "
+        f"handed. `{twin}` takes a function NAME, reaches the same parse "
+        "through function_name_to_path_search, and is already allow-listed, "
+        "so it never asks.\n"
+        f"  - run instead: `node scripts/ai.mjs {twin} {name}`\n"
+        f"  - it answers the same {{ast, code, f_path}}\n"
+        "Approving this one is fine if you meant the path itself; the point "
+        "is only that this prompt returns every time and the twin's does not."
+    )
+
+
 def argumentless_dispatcher_deny_reason(name, count):
     return (
         f"`{name}` declares {count} parameter(s) and this call supplies none, "
@@ -3760,6 +3819,25 @@ def main():
                     "separate Bash calls with one already-allowed verb each "
                     "(or chain only allow-listed verbs with '&&'/';'); "
                     "otherwise it's fine to approve."
+                ),
+            }
+        }))
+        return
+
+    # Reached only when no allow rule matched at all - load_safe_verbs() reads
+    # settings.json AND settings.local.json, so `verb is None` means nothing
+    # granted this. That is what makes asking here safe rather than an ask
+    # floor overriding somebody's grant: the alternative to this branch is the
+    # native engine prompting with no message, not the command running.
+    twin_call = path_taking_name_twin_call(command)
+    if twin_call is not None:
+        fn, twin, name = twin_call
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "ask",
+                "permissionDecisionReason": path_taking_name_twin_ask_reason(
+                    fn, twin, name
                 ),
             }
         }))
