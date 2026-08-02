@@ -1,9 +1,8 @@
+import { json_equal_not } from "./json_equal_not.mjs";
 import { firebase_prod_app_hashes } from "./firebase_prod_app_hashes.mjs";
 import { firebase_prod_hashes } from "./firebase_prod_hashes.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { json_equal } from "./json_equal.mjs";
-import { not } from "./not.mjs";
 export async function firebase_prod_app_hashes_stale_is(app_name) {
   "$plain app_name";
   "whether what one app is serving has moved on from what was last written down about it";
@@ -17,7 +16,6 @@ export async function firebase_prod_app_hashes_stale_is(app_name) {
     return true;
   }
   let live = await firebase_prod_app_hashes(app_name);
-  let same = json_equal(written, live);
-  let stale = not(same);
+  let stale = json_equal_not(written, live);
   return stale;
 }
