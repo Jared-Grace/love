@@ -194,7 +194,7 @@ export async function app_g_verify_home(context) {
       }
       function lambda5(code) {
         if (not_equal(code, chapter_code)) {
-          location.href = location.pathname + "?chapter=" + code;
+          location.href = g_verify_chapter_url(location.pathname, code);
         }
       }
       let buttons = app_shared_button_list_centered(
@@ -393,7 +393,10 @@ export async function app_g_verify_home(context) {
           let object2 = await api_read(f_name8, []);
           let codes = property_get(object2, "chapters");
           if (list_includes(codes, next_chapter)) {
-            location.href = location.pathname + "?chapter=" + next_chapter;
+            location.href = g_verify_chapter_url(
+              location.pathname,
+              next_chapter,
+            );
             return;
           }
         }
