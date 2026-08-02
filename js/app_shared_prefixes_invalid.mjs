@@ -22,7 +22,8 @@ export async function app_shared_prefixes_invalid() {
   let reserved = ["shared"];
   let ans = await apps_names();
   let owned = list_concat(ans, reserved);
-  let prefix = function_name_separator_trail(app_shared_name_prefix());
+  let a_name = app_shared_name_prefix();
+  let prefix = function_name_separator_trail(a_name);
   let all = await functions_names();
   let app_fns = list_filter_starts_with(all, prefix);
   function part_of(f_name) {
@@ -42,14 +43,17 @@ export async function app_shared_prefixes_invalid() {
     return is;
   }
   function invalid_is(f_name) {
-    let is = not(owned_is(f_name));
+    let b = owned_is(f_name);
+    let is = not(b);
     return is;
   }
   let invalid = list_filter(app_fns, invalid_is);
-  let parts = list_unique(list_map(invalid, part_of));
+  let list = list_map(invalid, part_of);
+  let parts = list_unique(list);
   function group(part) {
     function same(f_name) {
-      let s = equal(part_of(f_name), part);
+      let left = part_of(f_name);
+      let s = equal(left, part);
       return s;
     }
     let functions = list_filter(invalid, same);
