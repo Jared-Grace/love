@@ -1,3 +1,5 @@
+import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
+import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
 import { storage_function_folders_orphaned_gate_run } from "./storage_function_folders_orphaned_gate_run.mjs";
 import { js_code_getter_literal_cases_gate_run } from "./js_code_getter_literal_cases_gate_run.mjs";
 import { functions_gate_run_unwired_gate_run } from "./functions_gate_run_unwired_gate_run.mjs";
@@ -254,6 +256,7 @@ export function qa_gates() {
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
     storage_function_folders_orphaned_gate_run,
+    baselines_watched_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     app_code_lessons_rights_space_gate_run,
@@ -262,12 +265,14 @@ export function qa_gates() {
     permission_settings_local_gate_run,
     baseline_growth_guarded_gate_run,
     baseline_writers_growth_gate_run,
+    baselines_watched_gate_run,
     functions_tail_duplicates_gate_run,
     functions_head_duplicates_gate_run,
     functions_inside_duplicates_gate_run,
     functions_builtin_calls_gate_run,
     functions_page_serialized_gate_run,
     functions_gate_run_unwired_gate_run,
+    functions_cases_ungated_gate_run,
   ];
   return gates;
 }
