@@ -16,6 +16,7 @@ export function js_builtin_calls() {
   let math = text_frozen("Math");
   let json = text_frozen("JSON");
   let date = text_frozen("Date");
+  let object = text_frozen("Object");
   let calls = [
     {
       object: math,
