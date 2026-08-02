@@ -1,3 +1,5 @@
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_equals } from "./property_equals.mjs";
@@ -13,7 +15,6 @@ import { list_new_multiple } from "./list_new_multiple.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { file_exists } from "./file_exists.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { list_nearby } from "./list_nearby.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -68,11 +69,13 @@ export async function g_sermon_generate_book_generic_prompts(
       let interlinear = property_get(chapters_interlinear, chapter_code);
       async function each_verse(verse, index) {
         let text = property_get(verse, "text");
-        let verse_number = property_get(verse, verse_number_key());
+        let property_name = verse_number_key();
+        let verse_number = property_get(verse, property_name);
         function mapper(verses_chapter_folder) {
+          let property_find = verse_number_key();
           let words = list_find_property_get(
             verses_chapter_folder,
-            verse_number_key(),
+            property_find,
             verse_number,
             "text",
           );
@@ -80,10 +83,11 @@ export async function g_sermon_generate_book_generic_prompts(
         }
         let texts_add = list_map(verses_chapter_folders, mapper);
         let original = null;
-        if (verse_number !== "0") {
+        if (not_equal(verse_number, "0")) {
+          let property_name2 = verse_number_key();
           let original_verse = list_find_property(
             interlinear,
-            verse_number_key(),
+            property_name2,
             verse_number,
           );
           original = property_get(original_verse, "text");
@@ -93,7 +97,7 @@ export async function g_sermon_generate_book_generic_prompts(
         list_add(verse_numbers, verse_number);
         let ei = bible_verse_end_is(text);
         let index_last = list_index_last(verses_chapter);
-        if (ei || index === index_last) {
+        if (ei || equal(index, index_last)) {
           la({
             originals,
             texts,
@@ -156,10 +160,8 @@ export async function g_sermon_generate_book_generic_prompts(
         "sermons were originally generated using: ",
         openai_chat_completions,
       ]);
-      log_keep(
-        g_sermon_generate_book_generic_prompts.name,
-        text_combine_multiple([prompt_system, " ", prompt_user]),
-      );
+      let message = text_combine_multiple([prompt_system, " ", prompt_user]);
+      log_keep(g_sermon_generate_book_generic_prompts.name, message);
       let r2 = {
         prompt_system,
         prompt_user,
