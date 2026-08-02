@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -24,7 +25,7 @@ export async function app_shared_bible_copy(
   let primary_verse_numbers = property_list_map_property(
     primary,
     "verses",
-    "verse_number",
+    verse_number_key(),
   );
   let m = list_multiple_is(verse_numbers_chosen);
   let normalized = verse_numbers_chosen;
@@ -48,7 +49,7 @@ export async function app_shared_bible_copy(
       let verses_l = property_get(entry, "verses");
       let verse_l = list_find_property_or_null(
         verses_l,
-        "verse_number",
+        verse_number_key(),
         verse_number,
       );
       let nn = null_not_is(verse_l);
