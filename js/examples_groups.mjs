@@ -10,6 +10,7 @@ export function examples_groups() {
       name: "Single edits",
       examples: [
         "example_atomize_nested_call",
+        "example_atomize_loop_header_left",
         "example_if_test_set_positive",
         "example_return_argument_set_positive",
         "example_ir_identifier_replace",
