@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { not } from "./not.mjs";
 import { set_on_first } from "./set_on_first.mjs";
@@ -11,7 +12,7 @@ export function js_node_to_visitors(ast, node_search) {
     function lambda3(sa) {
       function lambda(v) {
         let node = property_get(v, "node");
-        if (node === node_search) {
+        if (equal(node, node_search)) {
           let add_to_list = true;
           let e = property_list_get_end_1(v, "stack");
           let type_is = js_import_specifier_is(e);
