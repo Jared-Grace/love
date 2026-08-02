@@ -1,6 +1,5 @@
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -10,8 +9,7 @@ export function app_code_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over the shared identify-an-operand generic";
   function make(divisor, quotient) {
     "a division whose divisor is the answer; the dividend (quotient*divisor + a leftover) is the decoy button. When quotient is 0 the dividend is the smaller number (e.g. 2 / 3), so the divisor is still the number you divide BY, even when it is the larger one";
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
-    let question = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let question = app_code_uneven_division_code(quotient, divisor);
     let answer = text_to(divisor);
     let r = {
       question,
