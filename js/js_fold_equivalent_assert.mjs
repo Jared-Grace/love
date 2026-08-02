@@ -1,3 +1,4 @@
+import { js_fold_equivalent_complaint } from "./js_fold_equivalent_complaint.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -24,7 +25,7 @@ export function js_fold_equivalent_assert(
   let differ = equal_not(x_canonical, b_canonical);
   if (differ) {
     error_json({
-      hint: "fold equivalence check failed: matched block is not x's body",
+      hint: js_fold_equivalent_complaint(),
       x: x_canonical,
       block: b_canonical,
     });
