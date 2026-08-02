@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 export async function path_modified_ms(path) {
   let fs = await import("fs");
   try {
@@ -5,7 +6,7 @@ export async function path_modified_ms(path) {
     let ms = stat.mtimeMs;
     return ms;
   } catch (e) {
-    if (e.code === "ENOENT") {
+    if (equal(e.code, "ENOENT")) {
       return null;
     }
     throw e;
