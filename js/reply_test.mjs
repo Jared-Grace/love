@@ -305,10 +305,10 @@ export function reply_test() {
       },
     },
   ];
-  async function lambda(item) {
-    let message = property_get(item, "message");
-    let start = property_get(item, "start");
-    let expected = property_get(item, "expected");
+  async function lambda(descendant) {
+    let message = property_get(descendant, "message");
+    let start = property_get(descendant, "start");
+    let expected = property_get(descendant, "expected");
     let actual = await reply_messages_inner(message, start);
     json_equal_assert_json(actual, expected, {
       hint: "the reply parse should match the expected tokens for this message",
