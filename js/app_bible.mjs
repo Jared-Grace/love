@@ -11,12 +11,14 @@ export async function app_bible(context) {
   let mode = app_bible_mode_get();
   ("write the mode back so the url always names the reader you are in, even on a first visit that arrived without it");
   app_bible_mode_set(mode);
-  let verse = equal(mode, app_shared_bible_mode_verse());
+  let right = app_shared_bible_mode_verse();
+  let verse = equal(mode, right);
   if (verse) {
+    let screens = app_bible_screens();
     await app_bible_shared_initialize(
       context,
       app_bible,
-      app_bible_screens(),
+      screens,
       app_bible_home,
     );
     return;
