@@ -1,1 +1,18 @@
-{ "known": [] }
+{
+ "known": [
+  "app_bible_main",
+  "app_ceb_bible_main",
+  "app_chapter_main",
+  "app_g_bible_main",
+  "app_g_main",
+  "app_index_main",
+  "app_message_main",
+  "app_original_bible_main",
+  "app_reply_main",
+  "app_search_main",
+  "app_supper_main",
+  "g_verify_approval",
+  "g_verify_status",
+  "s3"
+ ]
+}
