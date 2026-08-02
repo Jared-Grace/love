@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { throws_assert_json_async } from "./throws_assert_json_async.mjs";
+import { text_to } from "./text_to.mjs";
 export async function throws_assert_text_async(lambda) {
   arguments_assert(arguments, 1);
   ("Insists that a lambda which has to be waited for refuses, and hands its refusal");
