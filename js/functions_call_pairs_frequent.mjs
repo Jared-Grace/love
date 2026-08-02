@@ -193,7 +193,14 @@ export async function functions_call_pairs_frequent() {
     ("A function whose whole body IS the pair cannot be collapsed into itself, so its");
     ("own file is not a place the pair could be folded. Counting it held rows at the");
     ("top of the list that no atom could ever close - three of the five promised by");
-    ("the list_size-then-equal row were list_empty_is, list_size_1 and list_size_2");
+    ("the ",
+      fn_name("list_size"),
+      "-then-equal row were ",
+      fn_name("list_empty_is"),
+      ", ",
+      fn_name("list_size_1"),
+      " and ",
+      fn_name("list_size_2"));
     ("themselves - which is the same wasted work this column exists to remove, one");
     ("level up.");
     let closed_names = object_property_names(record.closed_files);
