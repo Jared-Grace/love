@@ -1,7 +1,6 @@
+import { list_any } from "./list_any.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { js_spread_element_is } from "./js_spread_element_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_get_try } from "./list_get_try.mjs";
 import { undefined_is } from "./undefined_is.mjs";
@@ -17,8 +16,7 @@ export function js_call_named_argument_at_undroppable(ast, f_name, index) {
   function lambda(node) {
     let args = js_call_arguments_get(node);
     let before = list_take(args, index);
-    let spreads = list_filter(before, js_spread_element_is);
-    let spread_is = list_empty_not_is(spreads);
+    let spread_is = list_any(before, js_spread_element_is);
     if (spread_is) {
       let call = js_unparse(node);
       list_add(unsafe, call);
