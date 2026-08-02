@@ -1,3 +1,4 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
 import { math_min } from "./math_min.mjs";
@@ -50,8 +51,7 @@ export function g_plant_arcs(plant) {
   let share_high = divide(settings.leader_days_percent_maximum, 100);
   let share = divide(share_low + share_high, 2);
   let left = multiply(days, share);
-  let p = multiply(left, settings.conversation_turns_mean);
-  let leader_wanted = round(p);
+  let leader_wanted = multiply_round(left, settings.conversation_turns_mean);
   let converts = subtract(npcs, 1);
   let shortest = settings.conversation_turns_low;
   let converts_least = multiply(converts, shortest);
