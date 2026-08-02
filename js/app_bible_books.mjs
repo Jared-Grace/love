@@ -14,7 +14,7 @@ import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
-import { app_bible_books_render } from "./app_bible_books_render.mjs";
+import { app_shared_bible_books_render } from "./app_shared_bible_books_render.mjs";
 export async function app_bible_books(context) {
   let opened = await app_bible_screen_content(context);
   let content = property_get(opened, "content");
@@ -37,8 +37,20 @@ export async function app_bible_books(context) {
   let list_div = html_div(content);
   function on_input() {
     let query = html_value_get(search);
-    app_bible_books_render(list_div, query, books, on_open, current_book_code);
+    app_shared_bible_books_render(
+      list_div,
+      query,
+      books,
+      on_open,
+      current_book_code,
+    );
   }
   html_on_input(search, on_input);
-  app_bible_books_render(list_div, "", books, on_open, current_book_code);
+  app_shared_bible_books_render(
+    list_div,
+    "",
+    books,
+    on_open,
+    current_book_code,
+  );
 }
