@@ -1,3 +1,4 @@
+import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -11,7 +12,7 @@ export async function app_code_scroll_center_faded(component) {
     top: "0",
     left: "0",
     width: "100vw",
-    height: "100vh",
+    height: app_shared_viewport_height_full(),
     background: "white",
     "z-index": "1000",
     opacity: "1",
