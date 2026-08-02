@@ -1,20 +1,6 @@
 {
  "known": [
   {
-   "name": "app_a_app",
-   "shadows_outer": [
-    "e"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_a_body_inner",
-   "shadows_outer": [
-    "b"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_a_function_node",
    "shadows_outer": [
     "value"
@@ -24,7 +10,6 @@
   {
    "name": "app_a_function",
    "shadows_outer": [
-    "a",
     "e",
     "choices"
    ],
@@ -36,13 +21,6 @@
     "overlay",
     "oc",
     "c"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_bible_books_matches",
-   "shadows_outer": [
-    "mapped"
    ],
    "shadows_function": []
   },
@@ -111,20 +89,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_g_gospel",
-   "shadows_outer": [
-    "o"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_g_rows_ensure",
-   "shadows_outer": [
-    "rows"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_g_verify_home",
    "shadows_outer": [
     "chapter",
@@ -162,13 +126,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_reply_main_shortcuts",
-   "shadows_outer": [
-    "ke"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_reply",
    "shadows_outer": [
     "lambda6"
@@ -186,27 +143,6 @@
    "name": "app_shared_flow_next",
    "shadows_outer": [
     "screens"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_shared_gloss_bible_home_generic",
-   "shadows_outer": [
-    "p"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_shared_prefixes_invalid",
-   "shadows_outer": [
-    "parts"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_supper_folders_get",
-   "shadows_outer": [
-    "folders"
    ],
    "shadows_function": []
   },
@@ -321,13 +257,6 @@
    "shadows_function": []
   },
   {
-   "name": "function_name_to_path_search",
-   "shadows_outer": [
-    "mapped"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "function_rename_prefix_add",
    "shadows_outer": [
     "f_name_before"
@@ -409,13 +338,6 @@
    "shadows_function": []
   },
   {
-   "name": "js_calls_to_each",
-   "shadows_outer": [
-    "nti"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "js_code_comment_statement_generic",
    "shadows_outer": [
     "known"
@@ -483,13 +405,6 @@
    "name": "reply_wrap_invoke",
    "shadows_outer": [
     "possibilities"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "roman_to_integer",
-   "shadows_outer": [
-    "input"
    ],
    "shadows_function": []
   },
