@@ -63,9 +63,9 @@ export function app_code_lesson_expression_swapping_add() {
       "3 * 4",
       " like this: 3 rows of 4 dots",
     ]);
-    app_code_dot_rectangle(times, 3, 4);
+    app_code_dot_rectangle(times, 3, 4, false);
     html_div_cycle_code(times, ["3 rows of 4 and 4 rows of 3 are the same"]);
-    app_code_dot_rectangle(times, 4, 3);
+    app_code_dot_rectangle(times, 3, 4, true);
     html_div_cycle_code(times, [
       "The dots stay the same, so the count stays the same",
     ]);
