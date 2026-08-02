@@ -1,3 +1,4 @@
+import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -86,7 +87,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: "What code gives this value? ",
+    backwards_answer_label: app_code_label_value_backwards(),
     unscramble_label: "Build the code that gives this value: ",
   });
   return lesson;
