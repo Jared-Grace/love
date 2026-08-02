@@ -47,7 +47,7 @@ export function js_assign_combine(ast) {
     let name = property_get(id, "name");
     if (equal(name2, name)) {
       let count = js_identifiers_named_count(ast, name);
-      if (count === 2) {
+      if (equal(count, 2)) {
         let init = property_get(declaration, "init");
         property_set(declaration2, "init", init);
         list_remove(e, node);
