@@ -1,11 +1,9 @@
-import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
+import { js_selects_call_get } from "./js_selects_call_get.mjs";
+import { function_params_names } from "./function_params_names.mjs";
 import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_node_call_get } from "./js_node_call_get.mjs";
-import { list_single } from "./list_single.mjs";
 export async function js_call_arguments_same_names_set(ast, selects) {
   "Points every argument of a chosen call at the binding of the same name where this function has one";
   "A call written from a function own parameter names arrives with every colliding name uniquified so the caller has to point each one back at what it meant";
