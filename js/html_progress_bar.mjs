@@ -39,18 +39,12 @@ export function html_progress_bar(
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
-  let a = add_1(count_progress);
-  let combined = text_combine_multiple([
-    progress_bar_name,
-    " ",
-    a,
-    " out of ",
+  html_progress_caption(
+    progress_container_text,
+    count_progress,
     count_total,
-  ]);
-  let text = text_first_upper_to(combined);
-  let div2 = html_div_text_centered(progress_container_text, text);
-  let value = html_progress_caption_font_size();
-  html_style_font_size(div2, value);
+    progress_bar_name,
+  );
   let r = {
     container: progress_container_text,
   };
