@@ -1,6 +1,6 @@
 import { verse_number_key } from "./verse_number_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { app_bible_chapter_verse_open } from "./app_bible_chapter_verse_open.mjs";
+import { app_shared_bible_chapter_verse_open } from "./app_shared_bible_chapter_verse_open.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
@@ -16,5 +16,5 @@ export async function app_shared_bible_chapter_change(
   let verses_next = await ebible_verses_browser(e, next);
   let mapped = list_map_property(verses_next, verse_number_key());
   let verse_number_next = verse_number_get(mapped);
-  await app_bible_chapter_verse_open(context, next, verse_number_next);
+  await app_shared_bible_chapter_verse_open(context, next, verse_number_next);
 }
