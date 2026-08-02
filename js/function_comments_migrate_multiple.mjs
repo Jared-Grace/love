@@ -1,4 +1,4 @@
-import { greater_than } from "./greater_than.mjs";
+import { property_greater_than } from "./property_greater_than.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { function_comments_migrate } from "./function_comments_migrate.mjs";
@@ -15,8 +15,7 @@ export async function function_comments_migrate_multiple(names_comma) {
     return changed_inner;
   }
   function left_is(result) {
-    let left_count = property_get(result, "left");
-    let any = greater_than(left_count, 0);
+    let any = property_greater_than(result, "left", 0);
     return any;
   }
   let changed = list_filter(results, changed_is);
