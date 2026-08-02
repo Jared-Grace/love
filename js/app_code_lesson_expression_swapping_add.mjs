@@ -53,7 +53,7 @@ export function app_code_lesson_expression_swapping_add() {
       "7",
       " and ",
       "7",
-      " are the same, so we can swap ",
+      " are the same, so we can swap the numbers around ",
       "+",
     ]);
     let times = app_code_container_light_blue(root);
@@ -64,7 +64,7 @@ export function app_code_lesson_expression_swapping_add() {
       "10",
       " and ",
       "10",
-      " are the same, so we can swap ",
+      " are the same, so we can swap the numbers around ",
       "*",
     ]);
     let minus = app_code_container_light_blue(root);
@@ -77,7 +77,7 @@ export function app_code_lesson_expression_swapping_add() {
       "1",
       " and ",
       "-1",
-      " are different, so we cannot swap ",
+      " are different, so we cannot swap the numbers around ",
       "-",
     ]);
   }

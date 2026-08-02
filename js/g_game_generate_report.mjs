@@ -7,6 +7,7 @@ export async function g_game_generate_report(word) {
   "What one whole game comes out as - a row for each plant and the tallies the shape of it is judged by.";
   "The days totalling exactly the preaching there is, and the sizes holding nothing under the smallest a plant is allowed to be, are the two things this exists to show. Both are claims the generation makes about itself and neither can be read off a setting.";
   "A plant that came out under the size it meant to be is counted separately, because there should be at most one of those and it should be the last.";
+  "The question share is worked out, never chosen, so it is here to be read rather than checked against a setting. It is what the arcs left of the days; a whole game far above the planning quarter says the arcs are short for the days they were given.";
   let plants = await g_game_generate(word);
   let rows = [];
   let sizes = {};
@@ -16,6 +17,9 @@ export async function g_game_generate_report(word) {
   let trimmed_plants = 0;
   let days_spread = 0;
   let leader_days_percent_low = 100;
+  let question_percent_high = 0;
+  let matches_total = 0;
+  let question_matches_total = 0;
   for (let plant of plants) {
     let npcs = property_get(plant, "npcs");
     let days = property_get(plant, "days");
@@ -35,6 +39,9 @@ export async function g_game_generate_report(word) {
     if (higher) {
       question_percent_high = question_percent;
     }
+    matches_total = matches_total + property_get(plant, "matches");
+    question_matches_total =
+      question_matches_total + property_get(plant, "question_matches");
     let elder_short = property_get(plant, "elder_short");
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
@@ -60,9 +67,13 @@ export async function g_game_generate_report(word) {
       chapters: property_get(plant, "chapters"),
       sender_present: property_get(plant, "sender_present"),
       elder_short,
+      question_matches: property_get(plant, "question_matches"),
+      question_percent,
     };
     list_add(rows, row);
   }
+  let reached = multiply_divide(question_matches_total, 100, matches_total);
+  let question_percent_whole = round(reached);
   let r = {
     plants: plants.length,
     days_total,
@@ -72,6 +83,8 @@ export async function g_game_generate_report(word) {
     trimmed_plants,
     days_spread,
     leader_days_percent_low,
+    question_percent_whole,
+    question_percent_high,
     rows,
   };
   return r;
