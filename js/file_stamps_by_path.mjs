@@ -17,7 +17,7 @@ export async function file_stamps_by_path(f_paths) {
   let stat_of = property_get(fs, "statSync");
   for (let f_path of f_paths) {
     function lambda_stat() {
-      let read = promises(f_path);
+      let read = stat_of(f_path);
       return read;
     }
     let stat = catch_null(lambda_stat);
