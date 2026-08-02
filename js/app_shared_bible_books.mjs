@@ -15,7 +15,7 @@ import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
 import { app_shared_bible_books_render } from "./app_shared_bible_books_render.mjs";
-export async function app_bible_books(context) {
+export async function app_shared_bible_books(context) {
   let opened = await app_bible_screen_content(context);
   let content = property_get(opened, "content");
   let e = ebible_folder_english();
