@@ -30,8 +30,11 @@ export async function g_sermon_generate_book_generic(
     async function lambda3(p) {
       let passage = property_get(p, "passage");
       let prompt_user = property_get(p, "prompt_user");
-      let prompt_system = property_get(p, "prompt_system");
-      let output = await openai_responses_cache(prompt_system, prompt_user);
+      let prompt_system_passage = property_get(p, "prompt_system");
+      let output = await openai_responses_cache(
+        prompt_system_passage,
+        prompt_user,
+      );
       let passage_extension = {
         [g_sermon_generate_book_generic_property()]: output,
       };
