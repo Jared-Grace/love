@@ -27,7 +27,7 @@ import { html_button_biblehub_open_commentary } from "./html_button_biblehub_ope
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
-import { app_bible_verses } from "./app_bible_verses.mjs";
+import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
@@ -110,7 +110,7 @@ export async function app_shared_bible_home_generic(
   app_shared_screen_set_button(
     bar,
     context,
-    app_bible_verses,
+    app_shared_bible_verses,
     verse_number_hash,
   );
   let text2 = app_shared_gear_settings_text();
