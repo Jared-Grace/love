@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { app_karate_email_verify } from "../../karate_code/js/app_karate_email_verify.mjs";
 import { app_karate_email } from "../../karate_code/js/app_karate_email.mjs";
 import { app_karate_computer_save_trusted } from "../../karate_code/js/app_karate_computer_save_trusted.mjs";
@@ -13,7 +14,8 @@ export function app_karate_flow_sign_up_screens(context) {
       fn: app_karate_computer_save,
       skip: function lambda() {
         let value = app_karate_computer_save_property_value(context);
-        let v2 = value === app_karate_computer_save_trusted();
+        let right = app_karate_computer_save_trusted();
+        let v2 = equal(value, right);
         return v2;
       },
     },
