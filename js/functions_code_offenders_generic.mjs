@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { file_read } from "./file_read.mjs";
@@ -30,7 +31,7 @@ export async function functions_code_offenders_generic(reader, found_key) {
   ("The name the finding is filed under is asked for rather than fixed, because each");
   ("sweep's own callers already read it by a word of their own.");
   let paths = await functions_names_to_paths();
-  let f_names = Object.keys(paths);
+  let f_names = object_property_names(paths);
   let unreadable = [];
   async function measure(f_name) {
     let f_path = property_get(paths, f_name);
