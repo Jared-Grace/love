@@ -1,3 +1,4 @@
+import { math_min } from "./math_min.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
@@ -16,7 +17,7 @@ export function g_arc_conversation_lengths(turns, next) {
   let remaining = turns;
   while (greater_than(remaining, 0)) {
     let drawn = random_bell_low_middle_high(next, low, middle, high);
-    let take = Math.min(drawn, remaining);
+    let take = math_min(drawn, remaining);
     let leftover = subtract(remaining, take);
     let stub = less_than(leftover, low);
     let taken = stub ? remaining : take;
