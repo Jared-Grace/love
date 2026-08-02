@@ -1,6 +1,6 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { repo_functions_code } from "./repo_functions_code.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
@@ -34,8 +34,7 @@ export async function literals_frozen_fused_all() {
       if (stranger) {
         continue;
       }
-      let code = property_get(entry, "code");
-      let mentions = text_includes(code, needle);
+      let mentions = property_text_includes(entry, "code", needle);
       if (not(mentions)) {
         continue;
       }
