@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
 import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -40,7 +41,7 @@ export async function js_log_assignments_add(ast) {
       }
       let line_text = js_unparse(node);
       let code_key = js_identifier_unique_ast(ast, "code");
-      let properties = [code_key + ": " + JSON.stringify(line_text)];
+      let properties = [code_key + ": " + json_to(line_text)];
       function lambda_add_name(name) {
         list_add(properties, name);
       }
