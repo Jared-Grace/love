@@ -1,3 +1,4 @@
+import { g_time_remark } from "./g_time_remark.mjs";
 import { g_time_greeting } from "./g_time_greeting.mjs";
 import { g_random_dot_bang } from "./g_random_dot_bang.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
@@ -52,12 +53,18 @@ export function g_greeting(met, name_player, time) {
       "?",
     ]);
   }
+  ("about half of greetings also say something ABOUT the time of day, as its own sentence between the name and the rest. it is drawn independently of the opening word, so the time can show up as good morning, or as hoping your morning goes well, or as both, or as neither — which is the difference between an NPC who knows what time it is and one reading a clock aloud");
+  let remark = g_time_remark(time);
+  let r11 = g_random_dot_bang();
+  let remark_sentence = text_combine_multiple([" ", remark, r11]);
+  let remark_maybe = text_random_or_empty(remark_sentence);
   let r10 = g_random_dot_bang();
   let npc_says = text_combine_multiple([
     v,
     " ",
     name_player,
     r10,
+    remark_maybe,
     meet_message,
   ]);
   return npc_says;
