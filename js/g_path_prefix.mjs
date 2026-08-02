@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { location_pathname_part_first_starts_with } from "./location_pathname_part_first_starts_with.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { localhost_is } from "./localhost_is.mjs";
-export function app_g_path_prefix() {
+export function g_path_prefix() {
   let path_prefix = "";
   let l = localhost_is();
   let path_part = app_shared_name_latest_text();
