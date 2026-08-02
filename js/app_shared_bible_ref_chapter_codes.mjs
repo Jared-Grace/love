@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
@@ -15,7 +16,8 @@ export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
   let v = ebible_references_names(books_en, [ref_line]);
   let book_names = property_get(v, "book_names");
   if (list_empty_is(book_names)) {
-    return [];
+    let r = [];
+    return r;
   }
   let chapter_verses_list = property_get(v, "chapter_verses_list");
   let book_name = list_first(book_names);
@@ -32,9 +34,12 @@ export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
     let code = ebible_chapter_code_pad(book_code, chapter);
     return code;
   }
-  let single = list_size(parts) < 3;
+  let a = list_size(parts);
+  let single = less_than(a, 3);
   if (single) {
-    return [to_code(first_chapter)];
+    let v2 = to_code(first_chapter);
+    let r2 = [v2];
+    return r2;
   }
   let middle = list_second(parts);
   let dash = text_split_dash(middle);
