@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_index_of_property } from "./list_index_of_property.mjs";
 import { each_index_async } from "./each_index_async.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +10,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   let index_next = null;
   if (false) {
     ("this is used to start at a folder and keep going to resume after interruption");
-    let property = "bible_folder";
+    let property = bible_folder_key();
     let including_and_onward = "porbrbsl";
     index_next = list_index_of_property(
       languages,
@@ -21,7 +22,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
     if (i < index_next) {
       return;
     }
-    let bible_folder = property_get(language, "bible_folder");
+    let bible_folder = property_get(language, bible_folder_key());
     await lambda$bible_folder(bible_folder);
   }
   await each_index_async(languages, lambda);
