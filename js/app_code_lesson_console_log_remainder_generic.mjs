@@ -254,11 +254,11 @@ export function app_code_lesson_console_log_remainder_generic(
     if (has_insight) {
       let insight_box = app_code_container_light_blue(root);
       function insight_line(line) {
-        let row = html_div(insight_box);
+        let insight_row = html_div(insight_box);
         let text = property_get(line, "text");
-        html_span_text(row, text);
+        html_span_text(insight_row, text);
         let value = property_get(line, "remainder");
-        remainder_chip(row, value);
+        remainder_chip(insight_row, value);
       }
       each(insight, insight_line);
     }
