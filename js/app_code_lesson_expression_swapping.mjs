@@ -15,7 +15,7 @@ import { ternary } from "./ternary.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_swapping() {
-  "the next step after both-sides-arithmetic: put the SAME two numbers on each side, but swapped around the operator - a op b === b op a. With + and * the two sides land on the same number, so it is true; with -, /, < and > the order matters, so the two sides differ and it is false. The learner meets the idea that swapping sometimes keeps the answer and sometimes flips it, which is exactly what the chained-comparison pitfall (2 < 5 < 3) later turns on. Answer is the code's own true/false value, correct by construction. Comparisons parse cleanly without parentheses because < and > bind tighter than ===.";
+  "the next step after both-sides-arithmetic: put the SAME two numbers on each side, but swapped around the operator - a op b === b op a. With + and * the two sides land on the same number, so it is true; with -, /, %, <, >, <= and >= the order matters, so the two sides differ and it is false (** is left out: 2 ** 4 === 4 ** 2 is 16 === 16, the one distinct pair where swapping exponent does not flip). The learner meets the idea that swapping sometimes keeps the answer and sometimes flips it, which is exactly what the chained-comparison pitfall (2 < 5 < 3) later turns on. Answer is the code's own true/false value, correct by construction. Comparisons parse cleanly without parentheses because < and > bind tighter than ===.";
   function distinct_pair() {
     "two different small numbers, so swapping actually changes the order";
     let a = integer_random(2, 9);
@@ -129,9 +129,9 @@ export function app_code_lesson_expression_swapping() {
       "-",
       ", ",
       "/",
-      " and ",
-      "<",
-      ", the order matters",
+      ", ",
+      "%",
+      " and comparisons, the order matters",
     ]);
   }
 }
