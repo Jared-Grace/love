@@ -1,3 +1,6 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { list_all } from "./list_all.mjs";
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,24 +16,25 @@ export function js_duplicate_elements(ast, size) {
   let duplicates = [];
   let vs = js_list_type(ast, "ArrayExpression");
   for (let v of vs) {
-    let node = property_get(v, "node");
-    let elements = property_get(node, "elements");
+    let elements = property_path_get_2(v, "node", "elements");
     ("A short list is passed over, and that is what tells a register apart from a handful of things written side by side. A run of the same name twice is ordinary in the small: a padding written either side of a word, a cycle stepping through nothing and then something and then nothing again, the same reading handed to both halves of a pair. None of those is a register and none of them is wrong.");
     let short = less_than(elements.length, size);
     if (short) {
       continue;
     }
+    ("A list holding anything but names is passed over too, and that is what tells a register apart from a long thing being spelled out. Text built up a piece at a time is the common one: the pieces between the names are written words, and a name standing either side of one of them is the same name doing two different jobs rather than one job listed twice.");
+    let all_named = list_all(elements, js_identifier_is);
+    if (not(all_named)) {
+      continue;
+    }
     let seen = [];
     for (let element of elements) {
-      let named = js_identifier_is(element);
-      if (named) {
-        let name = property_get(element, "name");
-        let twice = list_includes(seen, name);
-        if (twice) {
-          list_add_if_not_includes(duplicates, name);
-        }
-        list_add(seen, name);
+      let name = property_get(element, "name");
+      let twice = list_includes(seen, name);
+      if (twice) {
+        list_add_if_not_includes(duplicates, name);
       }
+      list_add(seen, name);
     }
   }
   return duplicates;
