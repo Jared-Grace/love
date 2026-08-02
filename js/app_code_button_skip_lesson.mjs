@@ -25,7 +25,7 @@ export function app_code_button_skip_lesson(context, parent) {
     app_code_quiz_index_reset(context);
     await app_code_after_lesson(context);
   }
-  "when this lesson is a checkpoint, app_code_after_lesson goes to the REVIEW next, so the button should say review, not lesson";
+  ("when this lesson is a checkpoint, app_code_after_lesson goes to the REVIEW next, so the button should say review, not lesson");
   let destination = "lesson";
   if (has_review) {
     destination = "review";
