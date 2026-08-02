@@ -1,3 +1,4 @@
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_filter_ends_with } from "./list_filter_ends_with.mjs";
 import { qa_gates } from "./qa_gates.mjs";
@@ -10,6 +11,10 @@ export async function functions_gate_run_unwired() {
   "This is the quiet half of a check the repo already makes in the other direction. An orphaned corpus is caught because a corpus with nobody reading it is easy to spot from the corpus. A gate nobody runs cannot be spotted from the gate at all - only from the list.";
   let f_names = await functions_names();
   let gate_names = list_filter_ends_with(f_names, "_gate_run");
+  ("Refused when no gate is found at all, because this hands back a subtraction and an empty left side gives the same nothing a healthy repo gives. That would be a check on whether every gate is run which passes hardest at the moment it has stopped finding any.");
+  list_empty_not_is_assert_json(gate_names, {
+    hint: "no gate was found in this repo at all - the answer below would be nothing whatever the list holds, so look at what spells the ending being looked for rather than at the list",
+  });
   let gates = qa_gates();
   let wired = list_map_property(gates, "name");
   let unwired = list_difference(gate_names, wired);
