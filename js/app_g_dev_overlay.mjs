@@ -1,3 +1,4 @@
+import { app_shared_viewport_width_full } from "./app_shared_viewport_width_full.mjs";
 import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
@@ -12,7 +13,7 @@ export function app_g_dev_overlay(title_text) {
     position: "fixed",
     top: "0",
     left: "0",
-    width: "100vw",
+    width: app_shared_viewport_width_full(),
     height: app_shared_viewport_height_full(),
     background: app_shared_color_page_background(),
     color: "black",
