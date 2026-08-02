@@ -22,9 +22,6 @@ export async function app_g_day_discern(div_map) {
   let prayer = property_get(player, "prayer");
   let property_name = app_g_conversation_key();
   property_set(prayer, property_name, true);
-  console.log("GUIDEDEBUG discern saving");
   await app_g_player_save(player);
-  console.log("GUIDEDEBUG discern saved");
   await app_g_day_guide_show(div_map);
-  console.log("GUIDEDEBUG discern done");
 }
