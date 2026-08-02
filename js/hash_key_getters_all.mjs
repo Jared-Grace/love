@@ -9,19 +9,9 @@ export async function hash_key_getters_all() {
   "The whole set is what comes back so that a walk which has stopped reaching anything can be told from a repo in order. Both of these readings pass by finding nothing, and finding nothing is also what a walk that broke does.";
   "The pair is the answer rather than the name alone, so anything asking further can say where to look.";
   "Which files are worth opening is asked next door, because the other reading of page addresses narrows its walk exactly the same way and the two had to agree by hand about the word to look for.";
+  "All that is said here is which part of the address is meant - which files, and which reading. The walking is shared with the part after the question mark, which opens the same trees the same way.";
   arguments_assert(arguments, 0);
   let candidates = await hash_function_names();
-  let pairs = [];
-  for (let candidate of candidates) {
-    let tree = await function_ast(candidate);
-    let getters = js_hash_key_getters(tree);
-    for (let getter of getters) {
-      let pair = {
-        f_name: candidate,
-        getter,
-      };
-      list_add(pairs, pair);
-    }
-  }
+  let pairs = await key_getters_all_generic(candidates, js_hash_key_getters);
   return pairs;
 }
