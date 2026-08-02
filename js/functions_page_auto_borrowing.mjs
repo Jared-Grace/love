@@ -43,8 +43,8 @@ export async function functions_page_auto_borrowing() {
       let parsed = await file_js_parse(f_path);
       let ast = property_get(parsed, "ast");
       await js_auto_generic(ast, transforms);
-      let borrowed = js_page_serialized_import_uses(ast);
-      return borrowed;
+      let uses = js_page_serialized_import_uses(ast);
+      return uses;
     }
     let borrowed = await catch_null_async(attempt);
     if (equal(borrowed, null)) {
