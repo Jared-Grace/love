@@ -13,14 +13,14 @@ export function js_indexeddb_name_nodes(ast, doors) {
       return;
     }
     let called = property_get(callee, "name");
-    let positions = property_get_default(doors, called, null);
-    let stranger = equal(positions, null);
-    if (stranger) {
+    let known = property_exists(doors, called);
+    if (not(known)) {
       return;
     }
+    let positions = property_get(doors, called);
     let args = property_get(node, "arguments");
     for (let position of positions) {
-      let key = list_index_get_default(args, position, null);
+      let key = list_get_or_null(args, position);
       let missing = equal(key, null);
       if (missing) {
         continue;
