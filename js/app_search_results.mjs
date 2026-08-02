@@ -1,3 +1,4 @@
+import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_single_property } from "./list_single_property.mjs";
@@ -196,10 +197,10 @@ export async function app_search_results(context, div_results) {
   let collapse_all_text = text_combine(up, " Collapse all");
   app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
   let left2 = html_button_copy_text();
-  let copy_all_text = text_combine(left2, " all");
-  let copy_all = app_shared_button_wide(
+  let copy_all = app_shared_button_wide_text_combine(
     div_results,
-    copy_all_text,
+    left2,
+    " all",
     copy_all_lambda,
   );
   html_br_2(div_results);
@@ -395,8 +396,12 @@ export async function app_search_results(context, div_results) {
           );
         }
         let left = emoji_book_open();
-        let oc_text = text_combine(left, " Open chapter");
-        let oc = app_shared_button_wide(div_verse, oc_text, lambda3);
+        let oc = app_shared_button_wide_text_combine(
+          div_verse,
+          left,
+          " Open chapter",
+          lambda3,
+        );
         html_style_margin_y(oc, "0.2em");
         await app_reply_verses_add(
           en,

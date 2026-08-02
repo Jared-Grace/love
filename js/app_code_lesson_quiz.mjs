@@ -1,3 +1,4 @@
+import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { app_code_content_cap } from "./app_code_content_cap.mjs";
 import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
 import { app_code_feedback_cell } from "./app_code_feedback_cell.mjs";
@@ -116,10 +117,10 @@ export function app_code_lesson_quiz(
     show_correction();
   }
   let left2 = emoji_light_bulb();
-  let reveal_label = text_combine(left2, " Show me the answer");
-  let reveal_button = app_shared_button_wide(
+  let reveal_button = app_shared_button_wide_text_combine(
     parent_container,
-    reveal_label,
+    left2,
+    " Show me the answer",
     on_reveal,
   );
   let value2 = app_shared_spaced_gap();
