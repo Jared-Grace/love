@@ -3,6 +3,7 @@ export function js_identifiers_rename_unused_number_suffixes_cases() {
   "Small written-out files, each paired with what the file should read like once the made-up numbers have been taken off the names that carry them.";
   "A name the file invented to stand beside another one - `divided2` next to `divided` - is the file's own, and losing the number costs nothing once the plain name is free. A word in the place of a property is not the file's own: it is spelled the way the object being asked spells it, and shortening it asks for a thing that object does not have. Nothing complains, because asking an object for a name it lacks answers nothing at all, so the file goes on running and quietly does the wrong thing.";
   "The last two cases are the real one that went wrong. A compression library was asked for `compressToUTF16` and `decompressFromUTF16`; the pass shortened both to `...UTF`, and the writing and the reading of every compressed text became undefined without a word said. They are held here so that pair of readings can never be shortened again.";
+  "The last case is the same fault one step further in, found on 2026-08-03. A short entry in an object - `{ divided2 }` - is one word doing two jobs, the key and the value together, so it genuinely does read the value and the pass was right to reach it. Renaming it there moved the key with it, and a reader elsewhere asking for `divided2` got nothing. The entry is written out in full first now, so the key keeps its word and only the value moves.";
   "Each file is held as fixed text, and so is each answer. Left as references they would follow a rename while the frozen file beside them kept the old word.";
   let cases = [
     {
@@ -39,6 +40,15 @@ export function js_identifiers_rename_unused_number_suffixes_cases() {
       ),
       renamed: text_frozen(
         "export function f() {\n  return {\n    decompressFromUTF16: 1\n  };\n}\n",
+      ),
+    },
+    {
+      name: "a short entry in an object is the key and the value at once, and only the value moves",
+      code: text_frozen(
+        "export function f(width) {\n  let divided2 = divide(width, 2);\n  return { divided2 };\n}\n",
+      ),
+      renamed: text_frozen(
+        "export function f(width) {\n  let divided = divide(width, 2);\n  return {\n    divided2: divided\n  };\n}\n",
       ),
     },
   ];
