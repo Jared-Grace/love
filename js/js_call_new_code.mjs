@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { js_function_declaration } from "./js_function_declaration.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -23,7 +24,8 @@ export async function js_call_new_code(f_name_call, ast) {
     let arg_code = await js_identifier_unique(existing, arg_name);
     let split = text_split(arg_name, "$");
     let lambda = "lambda";
-    if (list_first(split) === lambda) {
+    let left = list_first(split);
+    if (equal(left, lambda)) {
       let skip_count = 1;
       let remaining = list_skip(split, skip_count);
       let lamda_name = await js_identifier_unique(existing, lambda);
