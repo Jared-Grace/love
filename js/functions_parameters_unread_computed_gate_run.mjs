@@ -1,6 +1,6 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { functions_parameters_unread_computed } from "./functions_parameters_unread_computed.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -20,8 +20,7 @@ export async function functions_parameters_unread_computed_gate_run() {
   for (let finding of findings) {
     let f_name = property_get(finding, "name");
     let parameter_name = property_get(finding, "parameter_name");
-    let built = property_get(finding, "built");
-    let joined = list_join_comma(built);
+    let joined = property_list_join_comma(finding, "built");
     console.log(
       "BUILT AND DROPPED  " + f_name + "  " + parameter_name + "  <- " + joined,
     );
