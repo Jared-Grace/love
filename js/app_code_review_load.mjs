@@ -13,10 +13,10 @@ export function app_code_review_load(context, number) {
   let stored = storage_local_get_context(context, key);
   let stored_present = null_not_is(stored);
   if (stored_present) {
-    let queue = property_get(stored, "seeds");
+    let queue_stored = property_get(stored, "seeds");
     let passed = property_get(stored, "passed");
     let resumed = {
-      queue,
+      queue: queue_stored,
       passed,
     };
     return resumed;
