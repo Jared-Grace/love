@@ -1,6 +1,5 @@
+import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
-import { app_code_review_scope } from "./app_code_review_scope.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
@@ -14,8 +13,7 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 export function app_code_button_skip_lesson(context, parent) {
   "a 'Skip to the next lesson' button that jumps straight to the next lesson (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) on the last lesson with no review, since there is nowhere to skip to";
   let number = app_code_lesson_current_number(context);
-  let scope = app_code_review_scope(number);
-  let has_review = null_not_is(scope);
+  let has_review = app_code_review_due_is(number);
   let last = app_code_lesson_current_last_is(context);
   let no_next = last && not(has_review);
   if (no_next) {
