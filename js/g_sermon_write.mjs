@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -25,7 +26,9 @@ export async function g_sermon_write(
   let passages = property_get(chapter, "passages");
   let key = list_join_comma(verse_numbers);
   function passage_other(passage) {
-    return g_sermon_passage_verses_key(passage) !== key;
+    let left = g_sermon_passage_verses_key(passage);
+    let neq = not_equal(left, key);
+    return neq;
   }
   let others = list_filter(passages, passage_other);
   list_add(others, {
@@ -33,12 +36,10 @@ export async function g_sermon_write(
     english,
     lines,
   });
-  await file_overwrite_uncached(
-    path,
-    json_format_to({
-      chapter_code,
-      passages: others,
-    }),
-  );
+  let contents = json_format_to({
+    chapter_code,
+    passages: others,
+  });
+  await file_overwrite_uncached(path, contents);
   return path;
 }
