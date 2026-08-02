@@ -12,6 +12,13 @@ export async function functions_cases_ungated() {
   let f_names = await functions_names();
   let corpora = list_filter_ends_with(f_names, "_cases");
   let gates = list_filter_ends_with(f_names, "_gate_run");
+  ("Both sides are refused when they come back empty, and that is the whole of what keeps this from being answered right by accident. What it hands back is a subtraction, so no corpora found and no gates found each make the answer nothing - the same nothing a repo in good order gives, printed the same way. The one thing that cannot be told from the answer is whether anything was looked at.");
+  list_empty_not_is_assert_json(corpora, {
+    hint: "no written-down corpus was found in this repo at all - the answer below would be nothing whatever the gates read, so look at what spells the ending being looked for rather than at any gate",
+  });
+  list_empty_not_is_assert_json(gates, {
+    hint: "no gate was found in this repo at all - nothing would then be read by anything and every corpus would be reported, so look at what spells the ending being looked for",
+  });
   let read = [];
   for (let gate of gates) {
     let ast = await function_ast(gate);

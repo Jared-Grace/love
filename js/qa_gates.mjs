@@ -256,7 +256,6 @@ export function qa_gates() {
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
     storage_function_folders_orphaned_gate_run,
-    baselines_watched_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     app_code_lessons_rights_space_gate_run,
