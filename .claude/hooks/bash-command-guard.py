@@ -3246,12 +3246,7 @@ def ai_dispatcher_call_is(piece):
     blocked shape this branch is entitled to recommend running on its own -
     it is read-only until the function says otherwise, it is what a permission
     rule can name, and a wrapper or a pipe around it does not change either."""
-    try:
-        tokens = tokenize(piece)
-    except Unsupported:
-        return False
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(piece):
         if len(words) >= 3 and words[0] == "node" and words[1] in AI_DISPATCHER_SCRIPTS:
             return True
     return False
@@ -3453,12 +3448,7 @@ def find_journalctl_daemon_unit(command):
     journalctl is never in the allow-list, so this only ever converts an 'ask'
     into a self-correcting 'deny', never blocks something that would have
     auto-approved."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if not words or words[0] != "journalctl":
             continue
         for index, word in enumerate(words):
