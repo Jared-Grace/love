@@ -9,6 +9,10 @@ export function app_code_dot_rectangle(parent, rows, columns) {
   "a rectangle of dots, columns wide and rows tall, picturing rows * columns as a grid of things counted; the very same dots turned a quarter read as columns * rows, which is why multiplying keeps its value when the two numbers are swapped";
   let grid = html_div(parent);
   html_style_grid(grid, columns, rows);
+  html_style_assign(grid, {
+    "align-self": "flex-start",
+    width: "fit-content",
+  });
   let cells = multiply(rows, columns);
   each_range(cells, add_dot);
   return grid;

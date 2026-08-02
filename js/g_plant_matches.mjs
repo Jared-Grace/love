@@ -1,7 +1,6 @@
+import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
-import { multiply_divide } from "./multiply_divide.mjs";
-import { round } from "./round.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_plant_matches(days, arc_turns) {
   "How a plant's matches divide - the ones an arc is being spoken in, and the ones left over for questions.";
@@ -11,8 +10,7 @@ export function g_plant_matches(days, arc_turns) {
   let matches = multiply(days, s.day_matches);
   let arc_matches = arc_turns;
   let question_matches = subtract(matches, arc_matches);
-  let reached = multiply_divide(question_matches, 100, matches);
-  let question_percent = round(reached);
+  let question_percent = multiply_divide_round(question_matches, 100, matches);
   let r = {
     matches,
     arc_matches,
