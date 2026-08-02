@@ -1,3 +1,4 @@
+import { app_shared_viewport_height_full } from "./app_shared_viewport_height_full.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_hide_loadable } from "./html_hide_loadable.mjs";
@@ -34,7 +35,11 @@ export function app_g_html_initialize(context) {
     "pointer-events": "auto",
   });
   ("this was needed instead of 100% to allow vertical scrolling");
-  html_style_set(div_map_container, "height", "100vh");
+  html_style_set(
+    div_map_container,
+    "height",
+    app_shared_viewport_height_full(),
+  );
   html_scroll_none(div_map_container);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
