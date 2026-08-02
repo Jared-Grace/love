@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
@@ -257,7 +258,7 @@ export async function app_g_verify_home(context) {
           : "";
         html_style_background_color_set(verse_buttons[k], bg);
       }
-      Object.keys(verse_buttons).forEach(lambda8);
+      object_property_names(verse_buttons).forEach(lambda8);
     }
     async function on_approved(v) {
       chapter_advance_armed = true;
