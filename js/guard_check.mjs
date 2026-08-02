@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -36,14 +37,17 @@ export async function guard_check(command) {
     child.stdin.end();
   });
   let stdout = property_get(result, "stdout");
-  if (stdout.trim() === "") {
-    return {
+  let left = stdout.trim();
+  if (equal(left, "")) {
+    let r = {
       decision: "silent",
     };
+    return r;
   }
   let hook = json_from_property_get(stdout, "hookSpecificOutput");
-  return {
+  let r2 = {
     decision: property_get(hook, "permissionDecision"),
     reason: property_get(hook, "permissionDecisionReason"),
   };
+  return r2;
 }
