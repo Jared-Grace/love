@@ -1,3 +1,4 @@
+import { g_phase_time } from "./g_phase_time.mjs";
 import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { g_something_else } from "./g_something_else.mjs";
@@ -98,7 +99,9 @@ export async function app_g_conversation(
     property_set(npc, "meet", true);
   }
   let name_player = property_get(player, "name");
-  let greeting = g_greeting(meet, name_player);
+  let phase_open = app_g_conversation_sky_target(0);
+  let time_open = g_phase_time(phase_open);
+  let greeting = g_greeting(meet, name_player, time_open);
   let npc_gender = property_get(npc, "gender");
   let pronouns = g_gender_pronouns(npc_gender);
   let christian = property_get(npc, "christian");
