@@ -2,8 +2,8 @@ export async function indexeddb_put_backend(db_get, store, key, next) {
   let db = await db_get();
   if (false) {
     let previous = await new Promise(function lambda3(resolve, reject) {
-      let tx = db.transaction(store, "readonly");
-      let s2 = tx.objectStore(store);
+      let tx_read = db.transaction(store, "readonly");
+      let s2 = tx_read.objectStore(store);
       let req = s2.get(key);
       req.onsuccess = function lambda() {
         let v = resolve(req.result ?? null);
