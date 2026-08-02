@@ -23,10 +23,10 @@ export function app_code_review_scope(lesson_number) {
   if (none) {
     return null;
   }
-  "cap at 25 so no single review is a marathon (constant easy work > hard work);";
-  "for every lesson up to 124 the power of 5 is already 25 or less, so this only bites at 125;";
-  "when the curriculum passes ~125 this starts dropping old lessons from ever recurring - revisit then:";
-  "sample from the full range, or move to per-item spaced repetition. deferred: the cost is falling";
+  ("cap at 25 so no single review is a marathon (constant easy work > hard work);");
+  ("for every lesson up to 124 the power of 5 is already 25 or less, so this only bites at 125;");
+  ("when the curriculum passes ~125 this starts dropping old lessons from ever recurring - revisit then:");
+  ("sample from the full range, or move to per-item spaced repetition. deferred: the cost is falling");
   let cap = 25;
   let scope = math_min(power_of_5, cap);
   return scope;

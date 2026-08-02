@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { random_seed_from_text } from "./random_seed_from_text.mjs";
 import { random_seed_generator } from "./random_seed_generator.mjs";
@@ -24,8 +25,11 @@ export async function g_arc_lengths(chapter) {
   let settings = g_generation_settings();
   let lines = await g_sermon_chapter_lines(chapter);
   let matches = g_passage_match_count(lines);
-  let question_share = multiply(matches, settings.question_matches_percent);
-  let divided = divide(question_share, 100);
+  let divided = multiply_divide(
+    matches,
+    settings.question_matches_percent,
+    100,
+  );
   let question_turns = Math.round(divided);
   let arc_turns = subtract(matches, question_turns);
   let quarter = divide(arc_turns, 4);

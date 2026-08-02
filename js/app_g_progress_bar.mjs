@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_progress_caption_font_size } from "./html_progress_caption_font_size.mjs";
 import { html_div } from "./html_div.mjs";
@@ -9,8 +10,6 @@ import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { add_1 } from "./add_1.mjs";
 export function app_g_progress_bar(root, count, total, name) {
   ("a progress bar styled for g — dark-green fill (",
@@ -28,8 +27,7 @@ export function app_g_progress_bar(root, count, total, name) {
     overflow: "hidden",
   });
   let fill = html_div(track);
-  let top = multiply(100, count);
-  let left = divide(top, total);
+  let left = multiply_divide(100, count, total);
   let width = text_combine(left, "%");
   html_style_assign(fill, {
     "border-radius": "9999px",

@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
@@ -76,8 +77,7 @@ export async function image_generate(text, path_output) {
   ctx.textBaseline = "middle";
   let left = divide(HEIGHT, 2);
   let left2 = subtract(lines.length, 1);
-  let top2 = multiply(left2, lineHeight);
-  let right3 = divide(top2, 2);
+  let right3 = multiply_divide(left2, lineHeight, 2);
   let startY = subtract(left, right3);
   function lambda(line, i) {
     let divided2 = divide(WIDTH, 2);
