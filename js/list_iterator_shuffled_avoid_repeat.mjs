@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
-import { equal } from "./equal.mjs";
 import { list_iterator_refillable_on } from "./list_iterator_refillable_on.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_first } from "./list_first.mjs";
@@ -15,8 +15,7 @@ export function list_iterator_shuffled_avoid_repeat(items, key_property) {
     let multiple = list_size_greater_than(remaining, 1);
     if (multiple) {
       let first = list_first(remaining);
-      let left = property_get(first, key_property);
-      let repeats = equal(left, last_key);
+      let repeats = property_equals(first, key_property, last_key);
       if (repeats) {
         list_remove_at(remaining, 0);
         list_add(remaining, first);
