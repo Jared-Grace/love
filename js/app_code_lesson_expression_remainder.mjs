@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
@@ -65,7 +66,11 @@ export function app_code_lesson_expression_remainder() {
     }
     ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
     let rights = ["remainder part"];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
 }
