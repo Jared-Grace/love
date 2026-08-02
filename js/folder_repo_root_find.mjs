@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import path from "path";
 import fs from "fs";
 export function folder_repo_root_find(start_dir) {
@@ -8,7 +9,7 @@ export function folder_repo_root_find(start_dir) {
       return dir;
     }
     let parent = path.dirname(dir);
-    if (parent === dir) {
+    if (equal(parent, dir)) {
       throw new Error("Could not find repo root (.git) above " + start_dir);
     }
     dir = parent;
