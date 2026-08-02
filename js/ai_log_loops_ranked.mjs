@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -71,8 +72,7 @@ export function ai_log_loops_ranked(entries) {
     if (again) {
       property_count_add(lengths, session, 1);
       let signature_before = property_get(signatures, session);
-      let b = equal(signature_before, signature);
-      let differs = not(b);
+      let differs = equal_not(signature_before, signature);
       if (differs) {
         property_set(varied, session, true);
       }
