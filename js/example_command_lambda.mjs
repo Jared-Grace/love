@@ -1,6 +1,5 @@
 import { example_arguments_lambda } from "./example_arguments_lambda.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { js_shadowing_rename_lambda } from "./js_shadowing_rename_lambda.mjs";
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
 import { example_select_apply_named } from "./example_select_apply_named.mjs";
 import { example_fn_name_references_lambda } from "./example_fn_name_references_lambda.mjs";
@@ -59,11 +58,6 @@ export async function example_command_lambda(f_name, args, e) {
     let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
     return lambda22;
   }
-  let right4 = fn_name("js_shadowing_rename");
-  if (equal(f_name, right4)) {
-    let lambda23 = js_shadowing_rename_lambda(args[0], args[1]);
-    return lambda23;
-  }
   let right5 = fn_name("file_imports_repair");
   if (equal(f_name, right5)) {
     let lambda3 = example_imports_lambda();
@@ -110,9 +104,11 @@ export async function example_command_lambda(f_name, args, e) {
   ("Every pairing that was once a branch of its own now arrives through the one");
   ("above, because its example names its address as well as its verb. What is left");
   ("here is the two block verbs, whose address is a slot inside an if rather than");
-  ("anything a register lists. A whole-file pass has no address at all, so it needs");
-  ("no branch either: it leaves by the last return, which reads the name as the");
-  ("whole specification.");
+  ("anything a register lists. A pass with no address at all needs no branch either:");
+  ("it leaves by the last return, which hands the verb the tree and then the");
+  ("arguments the example already lists, so the name and those arguments are the");
+  ("whole specification. That is what a branch fixing a verb to its two names only");
+  ("ever restated, which is why the shadowing rename no longer has one.");
   let right13 = fn_name("js_block_body_add_code");
   if (equal(f_name, right13)) {
     let lambda11 = example_block_body_add_lambda(

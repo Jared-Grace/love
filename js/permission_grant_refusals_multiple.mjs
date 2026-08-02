@@ -1,1 +1,1 @@
-export function permission_grant_refusals_multiple() {}
+export function permission_grant_refusals_multiple(names_comma) {}
