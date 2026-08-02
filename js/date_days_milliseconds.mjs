@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { multiply } from "./multiply.mjs";
 export function date_days_milliseconds(days) {
   arguments_assert(arguments, 1);
   ("How many milliseconds that many days come to - the number a window measured in days has to become before it can be taken off a clock reading.");
