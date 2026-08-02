@@ -1,8 +1,7 @@
+import { js_code_let_assign_parse_statement } from "./js_code_let_assign_parse_statement.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_screen_add_generic } from "./app_shared_screen_add_generic.mjs";
 import { js_flo_body_add } from "./js_flo_body_add.mjs";
-import { js_parse_statement } from "./js_parse_statement.mjs";
-import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_param_new_double } from "./function_param_new_double.mjs";
@@ -22,8 +21,7 @@ export async function app_shared_screen_add(a_name, screen_name) {
     await function_param_new_double(combined_screen, v);
     async function lambda2(ast) {
       let code = js_code_call_args(fn_name("html_clear_context"), [v]);
-      let code_assign = js_code_let_assign("root", code);
-      let statement = js_parse_statement(code_assign);
+      let statement = js_code_let_assign_parse_statement("root", code);
       js_flo_body_add(ast, statement);
     }
     let output = await function_transform(combined_screen, lambda2);
