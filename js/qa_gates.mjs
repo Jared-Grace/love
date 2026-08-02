@@ -1,3 +1,4 @@
+import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_empty_cases_gate_run.mjs";
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
 import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
@@ -186,6 +187,8 @@ export function qa_gates() {
     js_code_literal_key_only_cases_gate_run,
     js_code_literal_site_none_cases_gate_run,
     js_code_getter_literal_cases_gate_run,
+    js_condition_bodies_empty_cases_gate_run,
+    functions_condition_bodies_empty_gate_run,
     js_hash_key_literals_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
     js_query_key_literals_cases_gate_run,
