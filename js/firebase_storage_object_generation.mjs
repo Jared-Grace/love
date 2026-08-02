@@ -1,3 +1,5 @@
+import { firebase_storage_object_metadata } from "./firebase_storage_object_metadata.mjs";
+import { property_get } from "./property_get.mjs";
 export async function firebase_storage_object_generation(
   project_url,
   storage_path,
