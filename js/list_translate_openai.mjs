@@ -1,5 +1,4 @@
-import { property_get } from "./property_get.mjs";
-import { json_from } from "./json_from.mjs";
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { openai_responses_cache } from "./openai_responses_cache.mjs";
 import { json_to } from "./json_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -15,7 +14,6 @@ export async function list_translate_openai(list, language) {
     ]),
     json,
   );
-  let v = json_from(r);
-  let translated = property_get(v, "value");
+  let translated = json_from_property_get(r, "value");
   return translated;
 }
