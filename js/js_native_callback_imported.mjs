@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -6,7 +7,6 @@ import { js_array_methods_callback } from "./js_array_methods_callback.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 export function js_native_callback_imported(ast) {
   "every place this file hands an IMPORTED name straight to a native array method as its callback";
   "the method passes the index and the whole list after the item, so a repo function that counts its own arguments throws the moment it is called - and the repo has a sweep whose whole job is to add that count to functions that lack it, so a site that works today is one sweep away from throwing";
@@ -17,8 +17,7 @@ export function js_native_callback_imported(ast) {
   let found = [];
   for (let call of calls) {
     let callee = property_get(call, "callee");
-    let callee_type = property_get(callee, "type");
-    let member = equal(callee_type, "MemberExpression");
+    let member = property_equals(callee, "type", "MemberExpression");
     if (not(member)) {
       continue;
     }
@@ -38,8 +37,7 @@ export function js_native_callback_imported(ast) {
       continue;
     }
     let argument = args[0];
-    let argument_type = property_get(argument, "type");
-    let bare = equal(argument_type, "Identifier");
+    let bare = property_equals(argument, "type", "Identifier");
     if (not(bare)) {
       continue;
     }
