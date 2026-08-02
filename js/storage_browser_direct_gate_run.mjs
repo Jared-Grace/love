@@ -13,12 +13,9 @@ export async function storage_browser_direct_gate_run() {
   arguments_assert(arguments, 0);
   let offenders = await storage_browser_direct_all();
   let path = storage_browser_direct_baseline_path();
-  let f_name = fn_name("storage_browser_doors");
-  let hint = text_combine_multiple([
+  let hint = storage_browser_direct_hint(
     "this file speaks straight to a browser store, where no reading that watches a kept word can see it - keep the word through one of the storing functions instead, or, if speaking to the browser is the whole of what this file does, name it to ",
-    f_name,
-    " where the reason can be read",
-  ]);
+  );
   let f_name2 = fn_name("storage_browser_direct_baseline_write");
   let r = await baseline_names_gate_generic(offenders, path, hint, f_name2);
   return r;
