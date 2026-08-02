@@ -1,10 +1,10 @@
+import { qa_build_copy_name } from "./qa_build_copy_name.mjs";
 import { app_shared_name_search } from "./app_shared_name_search.mjs";
 import { qa_build_folder } from "./qa_build_folder.mjs";
 import { qa_snapshot_app_build } from "./qa_snapshot_app_build.mjs";
 import { qa_snapshot_app_hashes } from "./qa_snapshot_app_hashes.mjs";
 import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
 import { qa_snapshot_ensure_named } from "./qa_snapshot_ensure_named.mjs";
-import { text_frozen } from "./text_frozen.mjs";
 export async function qa_app_commit_hashes(search, commit) {
   "$plain search";
   "$plain commit";
@@ -16,7 +16,7 @@ export async function qa_app_commit_hashes(search, commit) {
   "The name the app is looked up by is worked out here rather than inside the copy. The two could disagree if an app were named differently at that commit - and it is the pieces that go out that are being reduced, so what they are called is what this repo calls them";
   let folder = qa_build_folder();
   await qa_snapshot_clean(folder);
-  let copy_name = text_frozen("qa_build");
+  let copy_name = qa_build_copy_name();
   await qa_snapshot_ensure_named(copy_name, commit);
   await qa_snapshot_app_build(folder, search);
   let app_name = await app_shared_name_search(search);
