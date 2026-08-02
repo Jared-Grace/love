@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -45,7 +46,7 @@ export async function app_search_home(context) {
   let language_codes = app_next_hash_to_languages_chosen(hash);
   let languages = ebible_languages();
   function code_to_language(code) {
-    let r = list_find_property_or_null(languages, "language_code", code);
+    let r = list_find_property_or_null(languages, language_code_key(), code);
     return r;
   }
   let languages_chosen = list_map_filter_null_not_is(
