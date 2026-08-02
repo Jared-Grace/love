@@ -1,8 +1,7 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
@@ -23,8 +22,7 @@ export function app_code_lesson_expression_plus_minus() {
   }
   function triples_get() {
     "four triples with four DIFFERENT first numbers, so the four questions are all distinct";
-    let firsts = list_shuffle_take(range_map(5, first_of), 4);
-    let triples = list_map(firsts, triple_of);
+    let triples = list_shuffle_take_map(range_map(5, first_of), 4, triple_of);
     return triples;
   }
   function above(root) {

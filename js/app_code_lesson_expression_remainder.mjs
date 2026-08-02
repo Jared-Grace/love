@@ -1,10 +1,9 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -32,8 +31,7 @@ export function app_code_lesson_expression_remainder() {
   }
   function batch_get() {
     "four questions, each with a different divisor 3..6 so the questions never look alike";
-    let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    let list = list_map(divisors, make);
+    let list = list_shuffle_take_map([3, 4, 5, 6], 4, make);
     return list;
   }
   let name_id = title_name_id();

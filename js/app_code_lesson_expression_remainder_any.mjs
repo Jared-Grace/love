@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { multiply } from "./multiply.mjs";
@@ -7,8 +8,6 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { floor } from "./floor.mjs";
@@ -39,8 +38,7 @@ export function app_code_lesson_expression_remainder_any() {
   function refill() {
     "four questions, each with a DIFFERENT divisor, so two examples (or answer choices) never come out identical";
     let divisors = range_map(8, divisor_of);
-    let chosen = list_shuffle_take(divisors, 4);
-    let list = list_map(chosen, make);
+    let list = list_shuffle_take_map(divisors, 4, make);
     return list;
   }
   function decoys(question, answer) {
