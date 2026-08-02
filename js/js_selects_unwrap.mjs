@@ -1,6 +1,5 @@
+import { js_selects_block_item } from "./js_selects_block_item.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_to_block_item } from "./js_node_to_block_item.mjs";
 import { js_node_to_block } from "./js_node_to_block.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_inner_body } from "./js_statement_inner_body.mjs";
@@ -15,8 +14,7 @@ export function js_selects_unwrap(ast, selects) {
   ("What it cannot undo is meaning: lines written to run under a test now run");
   ("always, and lines written to run once each now run once. Deciding that is the");
   ("reason this asks for nothing but the wrapper.");
-  let node = list_single(selects);
-  let item = js_node_to_block_item(ast, node);
+  let item = js_selects_block_item(ast, selects);
   let f = js_node_to_block(ast, item);
   let body = property_get(f, "body");
   let index = property_get(f, "index");
