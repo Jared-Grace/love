@@ -1,3 +1,4 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
@@ -8,7 +9,6 @@ import { ebible_book_code_to_division_index } from "./ebible_book_code_to_divisi
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
@@ -234,8 +234,7 @@ export async function app_search_results(context, div_results) {
       return e;
     }
     let mine = list_filter(results, belongs);
-    let sizes = list_map(mine, result_verses_count);
-    let total = list_sum(sizes);
+    let total = list_map_sum(mine, result_verses_count);
     return total;
   }
   let div_books = html_div_centered(div_results);
