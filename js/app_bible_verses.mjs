@@ -8,7 +8,7 @@ import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { identity } from "./identity.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { app_bible_verse_open_curried } from "./app_bible_verse_open_curried.mjs";
+import { app_shared_bible_verse_open_curried } from "./app_shared_bible_verse_open_curried.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
@@ -29,7 +29,7 @@ export async function app_bible_verses(context) {
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, verse_number_key());
-  let oc = app_bible_verse_open_curried(context);
+  let oc = app_shared_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_shared_bible_picker_buttons_enlarge(buttons);
   let current = property_get(r, verse_number_key());
