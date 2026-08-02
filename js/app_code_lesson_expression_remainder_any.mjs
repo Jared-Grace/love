@@ -1,9 +1,9 @@
+import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { multiply } from "./multiply.mjs";
-import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -19,11 +19,9 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
-  let operator = js_operator_percent();
-  let percent = property_get(operator, "operator");
+  let percent = js_operator_percent_sign();
   function make(divisor) {
     "n % d for the given divisor, with the number from 5 to 20 so it is a real division rather than a tiny one";
     let number = integer_random(5, 20);
