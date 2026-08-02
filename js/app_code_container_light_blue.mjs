@@ -1,3 +1,4 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -41,7 +42,7 @@ export function app_code_container_light_blue(parent) {
   let background = app_shared_container_blue_background_color();
   html_style_background_color_set(c, background);
   let border_color = app_code_container_light_blue_border_color();
-  html_border(c, "0.15em", border_color);
+  html_border(c, app_shared_spaced_neighbor_gap(), border_color);
   let border_radius = app_shared_border_radius_large();
   html_border_radius(c, border_radius);
   return c;
