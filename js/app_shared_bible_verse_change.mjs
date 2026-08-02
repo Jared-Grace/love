@@ -1,7 +1,7 @@
 import { verse_number_key } from "./verse_number_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { app_bible_verse_open } from "./app_bible_verse_open.mjs";
+import { app_shared_bible_verse_open } from "./app_shared_bible_verse_open.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 export async function app_shared_bible_verse_change(
@@ -19,6 +19,6 @@ export async function app_shared_bible_verse_change(
     await chapter_change(context, chapter_code);
   } else {
     let verse_number = property_get(next, verse_number_key());
-    await app_bible_verse_open(context, verse_number);
+    await app_shared_bible_verse_open(context, verse_number);
   }
 }
