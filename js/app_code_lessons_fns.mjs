@@ -162,7 +162,10 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
     app_code_lesson_expression_arithmetic_equality,
-    app_code_lesson_expression_swapping,
+    app_code_lesson_expression_swapping_add,
+    app_code_lesson_expression_swapping_divide,
+    app_code_lesson_expression_swapping_order,
+    app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
   ];
