@@ -19,8 +19,8 @@ export function js_list_add_run_apply(run) {
   let first_args = js_call_arguments_get(first_call);
   let list_node = list_first(first_args);
   function value_get(statement) {
-    let call = js_statement_expression_get(statement);
-    let args = js_call_arguments_get(call);
+    let statement_call = js_statement_expression_get(statement);
+    let args = js_call_arguments_get(statement_call);
     let value = list_second(args);
     return value;
   }
