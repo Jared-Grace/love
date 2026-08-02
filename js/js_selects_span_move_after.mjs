@@ -1,7 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { js_node_to_block } from "./js_node_to_block.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -29,8 +29,7 @@ export function js_selects_span_move_after(ast, selects) {
   ("not. Moving several lines at once cannot be safer than moving one, so the");
   ("same question is asked of the whole run: does it cross anything it reads, or");
   ("anything that reads it.");
-  let count = list_size(selects);
-  let three = equal(count, 3);
+  let three = list_size_equal(selects, 3);
   assert_message(
     three,
     "Three lines were expected here - where the run starts, where it ends, and the line it should follow. Would you like to name all three?",

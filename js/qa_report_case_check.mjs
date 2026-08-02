@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
@@ -34,8 +35,7 @@ export function qa_report_case_check(one) {
     };
     return named_wrong;
   }
-  let left2 = list_size(sections);
-  let same_count = equal(left2, wanted_sections);
+  let same_count = list_size_equal(sections, wanted_sections);
   if (not(same_count)) {
     let counted_wrong = {
       label,
