@@ -1,3 +1,5 @@
+import { json_to_try } from "./json_to_try.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
@@ -14,9 +16,10 @@ export async function file_overwrite_json(file_path, object) {
     return;
   }
   await file_parent_exists_ensure(file_path);
+  let f_name = fn_name("json_to");
   text_combine_multiple([
     "Using ",
-    fn_name("json_to"),
+    f_name,
     " did not work on sufficiently large object, whereas the following did:",
   ]);
   let fs = await import("fs");
@@ -27,9 +30,9 @@ export async function file_overwrite_json(file_path, object) {
     try {
       await fs.promises.writeFile(temp_path_whole, json_whole);
       await fs.promises.rename(temp_path_whole, file_path);
-      await file_to_commit_add_try(file_path);
     } catch (e) {
-      await fs.promises.unlink(temp_path_whole).catch(() => {});
+      function lambda() {}
+      await fs.promises.unlink(temp_path_whole).catch(lambda);
       throw e;
     }
     return;
@@ -46,7 +49,8 @@ export async function file_overwrite_json(file_path, object) {
     await pipeline(json, out);
     await fs.promises.rename(temp_path, file_path);
   } catch (e) {
-    await fs.promises.unlink(temp_path).catch(() => {});
+    function lambda2() {}
+    await fs.promises.unlink(temp_path).catch(lambda2);
     throw e;
   }
 }

@@ -1,3 +1,4 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -10,7 +11,6 @@ import { g_sermon_groups_todo } from "./g_sermon_groups_todo.mjs";
 import { g_sermon_chapter_days } from "./g_sermon_chapter_days.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
@@ -61,8 +61,7 @@ export async function g_plant_chapters() {
       let days = property_get(counted, "days");
       return days;
     }
-    let each_days = list_map(held, days_of);
-    let book_days = list_sum(each_days);
+    let book_days = list_map_sum(held, days_of);
     let exact = divide(book_days, wanted);
     let rounded = Math.round(exact);
     let count = Math.max(1, rounded);
