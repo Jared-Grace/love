@@ -1,32 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { query_key_literals_all } from "./query_key_literals_all.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_size } from "./list_size.mjs";
+import { key_literals_gate_run_generic } from "./key_literals_gate_run_generic.mjs";
 export async function query_key_literals_gate_run() {
   "QA gate: no word is written straight into the query part of a page address. Every one of them is held by a function, so it can be frozen.";
-  "The query part is published exactly like the part after the hash - somebody bookmarks the link, or sends it to a friend - and after that it is on disks nobody here can reach. Written at the site it looks like nothing: a letter or two, in a line that reads clearly, and rewording it is the sort of tidy-up nobody would think to check. Every link anybody kept then asks for a word the page no longer answers to.";
+  "The query part is published exactly like the part after the hash - somebody bookmarks the link, or sends it to a friend - and after that it is on disks nobody here can reach.";
   "The part after the hash had a full watch over it while this half had one frozen word and nothing looking. That is the gap this closes, and it was a gap of the worst kind: everything about it read as healthy.";
-  "It stands at zero rather than at a line already drawn, because the one site there was had been routed onto a function before this was written. Nothing here is being lived with.";
+  "All that is said here is which part of the address is meant. The judging is shared with the part after the hash, which asks the identical question of a different walk.";
   arguments_assert(arguments, 0);
   let sites = await query_key_literals_all();
-  let f_name = fn_name("function_new_getter");
-  let f_name2 = fn_name("function_literal_route");
-  let f_name3 = fn_name("literals_frozen_record_new");
-  list_empty_is_assert_json(sites, {
-    hint: text_combine_multiple([
-      "a word is written straight into the query part of a page address, where nothing can watch it - give it a function of its own with ",
-      f_name,
-      ", move the sites onto that function with ",
-      f_name2,
-      ", then name the function in the frozen list and record it with ",
-      f_name3,
-    ]),
-    sites,
-  });
-  let r = {
-    sites: list_size(sites),
-  };
+  let r = key_literals_gate_run_generic(sites, "the query part");
   return r;
 }
