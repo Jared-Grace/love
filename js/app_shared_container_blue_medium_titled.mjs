@@ -10,11 +10,8 @@ import { html_div_centered } from "./html_div_centered.mjs";
 export function app_shared_container_blue_medium_titled(parent, title_text) {
   "a nested card headed by its centered name in the deep blue of the card family, holding whatever the caller draws into the div it hands back - the section level of a testament to section to books tree, so the book picker and the search results group the same way. its left-right padding is trimmed so what sits inside gets the row width";
   let card = app_shared_container_blue_medium(parent);
-  let padding = app_shared_spaced_tiny_gap();
-  html_style_padding_x(card, padding);
-  ("the same trim top-and-bottom, and between one section card and the next: a page listing every section of both testaments spends most of its height on these frames, and the books inside them are what the reader came to see");
-  html_style_padding_y(card, padding);
-  html_style_margin_y(card, padding);
+  ("the framing card's trim, the same amount the testament card above it wears: a page listing every section of both testaments spends most of its height and width on these frames, and the books inside them are what the reader came to see");
+  app_shared_container_trim_tiny(card);
   let header = html_div_text_centered(card, title_text);
   let color = app_shared_color_blue_dark();
   html_font_color_set(header, color);
