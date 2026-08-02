@@ -21,6 +21,8 @@ export function permission_rules_other() {
     "Bash(cd:*)",
     "Bash(date:*)",
     "Bash(diff:*)",
+    "Bash(comm:*)",
+    "Bash(join:*)",
     "Bash(echo:*)",
     "Bash(printf:*)",
     "Bash(seq:*)",
