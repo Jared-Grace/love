@@ -9,7 +9,7 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
-export function app_bible_books_render(
+export function app_shared_bible_books_render(
   list_div,
   query,
   books,
