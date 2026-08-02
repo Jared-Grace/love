@@ -1,0 +1,350 @@
+{
+ "known": [
+  {
+   "name": "app_bible_verse_switch_button",
+   "unread": [
+    "chapter_code"
+   ]
+  },
+  {
+   "name": "app_code_comparison_decoys",
+   "unread": [
+    "question"
+   ]
+  },
+  {
+   "name": "app_code_lesson_index_by_id",
+   "unread": [
+    "context"
+   ]
+  },
+  {
+   "name": "app_code_lesson_quiz_choose_operand",
+   "unread": [
+    "batch_get"
+   ]
+  },
+  {
+   "name": "app_code_lesson_quiz_token_select",
+   "unread": [
+    "batch_get"
+   ]
+  },
+  {
+   "name": "app_code_next",
+   "unread": [
+    "context"
+   ]
+  },
+  {
+   "name": "app_replace_tests_run_e2e_hinted_fn",
+   "unread": [
+    "p"
+   ]
+  },
+  {
+   "name": "app_reply_verses_add",
+   "unread": [
+    "en",
+    "english_choices"
+   ]
+  },
+  {
+   "name": "bible_verse_grace",
+   "unread": [
+    "reference"
+   ]
+  },
+  {
+   "name": "error_json_replacer",
+   "unread": [
+    "key"
+   ]
+  },
+  {
+   "name": "html_alert",
+   "unread": [
+    "message"
+   ]
+  },
+  {
+   "name": "html_span_on_click_google_define",
+   "unread": [
+    "search_term"
+   ]
+  },
+  {
+   "name": "html_style_grid",
+   "unread": [
+    "rows"
+   ]
+  },
+  {
+   "name": "js_block_body_add_code_generic",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_block_local_add_generic",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_block_prose_add",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_block_return_identifier_add",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_block_statements_after_return_remove",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_call_argument_named_node_set",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_call_callee_set",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_dollar_0",
+   "unread": [
+    "remaining",
+    "stack_1",
+    "stack_2",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_aa",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_3",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_e",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_iel",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_2",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_ien",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_2",
+    "stack_3",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_in",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_2",
+    "stack_3",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_ine",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_2",
+    "stack_3",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_ir",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_2",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_l",
+   "unread": [
+    "stack_1",
+    "stack_2",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_n",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_t",
+   "unread": [
+    "remaining",
+    "stack_",
+    "stack_2",
+    "stack_3",
+    "ast",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_dollar_x",
+   "unread": [
+    "remaining",
+    "node",
+    "stack_3",
+    "afters"
+   ]
+  },
+  {
+   "name": "js_function_node_empty",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_import_inside",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_list_declarations_visitors",
+   "unread": [
+    "lambda$v"
+   ]
+  },
+  {
+   "name": "js_object_property_text_add_after",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_object_property_text_add_before",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_object_property_text_add",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_object_property_text_remove",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_selects_array_elements",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_selects_object_properties",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_statement_if_return_add",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_statement_return_argument_set",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "js_statement_wrap_if",
+   "unread": [
+    "ast"
+   ]
+  },
+  {
+   "name": "lambda_right",
+   "unread": [
+    "left"
+   ]
+  },
+  {
+   "name": "marker_down_choices_lambda",
+   "unread": [
+    "stack_2",
+    "stack_1"
+   ]
+  },
+  {
+   "name": "marker",
+   "unread": [
+    "marker_name"
+   ]
+  },
+  {
+   "name": "sandbox_7",
+   "unread": [
+    "a"
+   ]
+  },
+  {
+   "name": "vite_config_file_name_get",
+   "unread": [
+    "format"
+   ]
+  }
+ ]
+}

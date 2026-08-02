@@ -1,12 +1,10 @@
+import { property_count_add } from "./property_count_add.mjs";
 import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { divide } from "./divide.mjs";
 export async function commits_command_named_share(count_given) {
   "How much of the repo was built by named commands rather than by hand, which is the one measurement of whether the whole editing vocabulary is being used at all. Its neighbour asks which shape of hand edit dominates; this one asks the question before that, whether hand editing dominates.";

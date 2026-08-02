@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -115,7 +116,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let text = property_get(verse_current, "text");
   let languages_chosen = app_bible_languages_chosen_get();
   async function lambda_language(lc) {
-    let bible_folder = property_get(lc, "bible_folder");
+    let bible_folder = property_get(lc, bible_folder_key());
     async function get() {
       async function lambda_verses_l() {
         let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
