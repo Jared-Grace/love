@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
@@ -74,7 +75,11 @@ export function app_code_lesson_expression_remainder_any() {
       return render;
     }
     let rights = ["remainder"];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function above(root) {
