@@ -1,3 +1,4 @@
+import { list_copy } from "./list_copy.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
@@ -29,7 +30,6 @@ import { list_join_comma } from "./list_join_comma.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { each_async } from "./each_async.mjs";
-import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { each } from "./each.mjs";
@@ -178,7 +178,8 @@ export async function app_reply(context) {
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
     let v = prayer_blessing_expand();
-    let copy = list_copy_reverse(languages_chosen);
+    ("the languages are named in the order they were chosen, matching the order their verses were just read in");
+    let copy = list_copy(languages_chosen);
     let mapped = list_map_property(copy, "language_code");
     let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
