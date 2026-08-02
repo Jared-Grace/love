@@ -11,7 +11,7 @@ export async function functions_dependency_path(names_comma, f_name_to) {
   let found = {};
   for (let f_name of names) {
     async function path_one() {
-      let path_found = await function_dependency_path(f_name);
+      let path_found = await function_dependency_path(f_name, f_name_to);
       return path_found;
     }
     let path = await catch_null_async(path_one);
