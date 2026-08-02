@@ -11,7 +11,7 @@ import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_gener
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_bible_settings } from "./app_bible_settings.mjs";
-export function app_bible_languages(context) {
+export function app_shared_bible_languages(context) {
   let languages = ebible_languages();
   let languages_chosen = app_shared_bible_languages_chosen_get();
   function on_change() {
