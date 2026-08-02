@@ -36,24 +36,6 @@ export async function functions_run_duplicates_generic(size, fn_shape) {
       by_shape[shape] = [f_name];
     }
   }
-  let shapes = properties_get(by_shape);
-  let groups = [];
-  for (let shape of shapes) {
-    let names = property_get(by_shape, shape);
-    let shared = list_multiple_is(names);
-    if (shared) {
-      let count = list_size(names);
-      list_add(groups, {
-        count,
-        names,
-        shape,
-      });
-    }
-  }
-  function by_count(a, b) {
-    let difference = subtract(b.count, a.count);
-    return difference;
-  }
-  groups.sort(by_count);
+  let groups = shapes_shared_groups(by_shape);
   return groups;
 }
