@@ -3,8 +3,21 @@ import { property_get } from "./property_get.mjs";
 import { property_get_fn } from "./property_get_fn.mjs";
 import { on_keydowns_key } from "./on_keydowns_key.mjs";
 export function app_a_function_on_keydown_remove(a) {
+  arguments_assert(arguments, 1);
+  ("Takes the app's own key handler out of the list the page is listening on, so");
+  ("keys pressed from here on reach whatever is put there next and not the screen");
+  ("underneath.");
+  ("The list and the handler come back with it. Whoever suspends the handler is");
+  ("usually about to put its own in the same list and to put this one back");
+  ("afterwards, and handing the two over here is what saves that caller looking");
+  ("them up a second time and writing this same run of lines again.");
   let context = property_get(a, "context");
   let on_keydowns = property_get_fn(context, on_keydowns_key);
   let app_a_function_on_keydown = property_get(a, "app_a_function_on_keydown");
   list_remove(on_keydowns, app_a_function_on_keydown);
+  let r = {
+    on_keydowns,
+    app_a_function_on_keydown,
+  };
+  return r;
 }

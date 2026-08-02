@@ -36,6 +36,15 @@ export function literals_frozen_names() {
   ("Beside it is the first frozen key that nothing in this repo ever writes. It is set by hand in a browser to hold a page on one chapter, so the value lives only on that disk - which is exactly the condition this list is about, and is easier to miss than a key with a writer, because searching for what saves it finds nothing.");
   let spelled24 = fn_name("g_verify_chapter_query_key");
   let spelled25 = fn_name("g_verify_chapter_storage_key");
+  (
+    "Three field names of the bible itself, and the first entries here that were never a key of anything. Each chapter this repo has written to storage is a record of verses keyed by their number, and each language in the shipped list keeps its code and the folder its chapters sit under - so all three are already spelled inside files sitting in storage and inside every package a reader downloaded for reading with no internet. A reader who downloaded a bible last year is holding those words on their own disk, and nothing here can reach in and retype them."
+  );
+  (
+    "They were spelled out by hand in sixty files until they were named, which is why they were invisible to this list: a value with no function holding it has nothing to freeze."
+  );
+  let spelled26 = fn_name("verse_number_key");
+  let spelled27 = fn_name("language_code_key");
+  let spelled28 = fn_name("bible_folder_key");
   let names = [
     spelled,
     spelled2,
