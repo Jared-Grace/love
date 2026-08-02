@@ -38,7 +38,7 @@ export function js_identifiers_rename_unused_number_suffixes_cases() {
         "export function f() {\n  return { decompressFromUTF16: 1 };\n}\n",
       ),
       renamed: text_frozen(
-        "export function f() {\n  return { decompressFromUTF16: 1 };\n}\n",
+        "export function f() {\n  return {\n    decompressFromUTF16: 1\n  };\n}\n",
       ),
     },
   ];
