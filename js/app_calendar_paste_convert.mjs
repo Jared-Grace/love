@@ -62,11 +62,11 @@ export function app_calendar_paste_convert(input, country) {
   let formats = [converted_info, speaker_info];
   function lambda(item) {
     let start_inner = property_get(item, "start");
-    let zone = property_get(item, "zone");
+    let zone_inner = property_get(item, "zone");
     let name = property_get(item, "name");
     let parenthesis = property_get(item, "parenthesis");
     let flag = property_get(item, "flag");
-    let start_zoned = date_time_zone_set_zone(start_inner, zone);
+    let start_zoned = date_time_zone_set_zone(start_inner, zone_inner);
     let start_formatted = date_time_zone_format_to_time_space(start_zoned);
     let t = text_combine_multiple([
       name,
