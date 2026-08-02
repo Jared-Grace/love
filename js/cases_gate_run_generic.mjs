@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -38,7 +40,7 @@ export function cases_gate_run_generic(
     let actual = answer(c);
     let expected = property_get(c, expected_key);
     let b = json_equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     let wanted = b ? "" : "  want " + json_to(expected);
     let described = property_get(c, described_key);
     console.log(mark + json_to(actual) + wanted + "  " + described);
@@ -47,7 +49,7 @@ export function cases_gate_run_generic(
     }
   }
   let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(label + " cases gate: " + failures.length + " failed");
   }

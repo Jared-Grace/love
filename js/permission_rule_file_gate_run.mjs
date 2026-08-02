@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { permission_rule_file_cases } from "./permission_rule_file_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { permission_rule_tool_name } from "./permission_rule_tool_name.mjs";
@@ -21,18 +23,14 @@ export function permission_rule_file_gate_run() {
     let tool_ok = equal(tool_expected, tool_actual);
     let path_ok = equal(path_expected, path_actual);
     let b = tool_ok && path_ok;
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     console.log(mark + rule + "  ->  " + tool_actual + "  |  " + path_actual);
     if (not(b)) {
       list_add(failures, c);
     }
   }
-  console.log(
-    "\npass " +
-      subtract(cases.length, failures.length) +
-      "  fail " +
-      failures.length,
-  );
+  let passed = subtract(cases.length, failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(
       "permission rule file gate: " + failures.length + " failed",

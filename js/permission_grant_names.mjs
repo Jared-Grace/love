@@ -574,6 +574,44 @@ export function permission_grant_names() {
   let spelled571 = fn_name("app_original_bible_gloss_generate_upload_path");
   let spelled572 = fn_name("daemons_journal_recent");
   let spelled573 = fn_name("daemon_journal_recent_count");
+  let spelled574 = fn_name("ai_git_command_args");
+  let spelled575 = fn_name("claude_transcript_paths_recent");
+  let spelled576 = fn_name("clock_label");
+  let spelled577 = fn_name("color_between");
+  let spelled578 = fn_name("compile_cache_enable");
+  let spelled579 = fn_name("file_stamps_copied_gate_run");
+  let spelled580 = fn_name("function_inside_shapes");
+  let spelled581 = fn_name("function_name_new_plugin_names");
+  let spelled582 = fn_name("functions_builtin_calls_gate_run");
+  let spelled583 = fn_name("functions_builtin_calls_repair");
+  let spelled584 = fn_name("functions_command_seams_reached");
+  let spelled585 = fn_name("functions_inside_duplicates_report");
+  let spelled586 = fn_name("functions_numbers_shared_report");
+  let spelled587 = fn_name("functions_page_serialized_gate_run");
+  let spelled588 = fn_name("functions_page_serialized_report");
+  let spelled589 = fn_name("functions_shadowing_function");
+  let spelled590 = fn_name("function_unalias_exists");
+  let spelled591 = fn_name("g_game_generate");
+  let spelled592 = fn_name("g_game_generate_report");
+  let spelled593 = fn_name("g_game_generate_seeds_report");
+  let spelled594 = fn_name("g_plant_npcs_target");
+  let spelled595 = fn_name("g_sermon_chapter_days_all");
+  let spelled596 = fn_name("hour_label_12");
+  let spelled597 = fn_name(
+    "js_identifiers_rename_unused_number_suffixes_cases_gate_run",
+  );
+  let spelled598 = fn_name("literals_unnamed");
+  let spelled599 = fn_name("permission_rules_unreachable_tool_unmatched");
+  let spelled600 = fn_name("permission_settings_local_baseline_path");
+  let spelled601 = fn_name("permission_settings_local_unwatched");
+  let spelled602 = fn_name("probes_at_once");
+  let spelled603 = fn_name("processes_dispatcher_report");
+  let spelled604 = fn_name("processes_dispatcher_running");
+  let spelled605 = fn_name("processes_runaway");
+  let spelled606 = fn_name("processes_runaway_gate_run");
+  let spelled607 = fn_name("qa_gate_runs_in_flight");
+  let spelled608 = fn_name("repos_beside_paths");
+  let spelled609 = fn_name("storage_local_key_words_record_new");
   let names = [
     spelled,
     spelled2,
@@ -1148,6 +1186,42 @@ export function permission_grant_names() {
     spelled571,
     spelled572,
     spelled573,
+    spelled574,
+    spelled575,
+    spelled576,
+    spelled577,
+    spelled578,
+    spelled579,
+    spelled580,
+    spelled581,
+    spelled582,
+    spelled583,
+    spelled584,
+    spelled585,
+    spelled586,
+    spelled587,
+    spelled588,
+    spelled589,
+    spelled590,
+    spelled591,
+    spelled592,
+    spelled593,
+    spelled594,
+    spelled595,
+    spelled596,
+    spelled597,
+    spelled598,
+    spelled599,
+    spelled600,
+    spelled601,
+    spelled602,
+    spelled603,
+    spelled604,
+    spelled605,
+    spelled606,
+    spelled607,
+    spelled608,
+    spelled609,
   ];
   return names;
 }

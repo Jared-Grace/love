@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { property_not } from "./property_not.mjs";
 import { qa_report_cases } from "./qa_report_cases.mjs";
 import { qa_report_case_check } from "./qa_report_case_check.mjs";
@@ -15,10 +17,7 @@ export function qa_report_gate_run() {
   let results = list_map(cases, qa_report_case_check);
   for (let result of results) {
     let passed = property_get(result, "pass");
-    let mark = "FAIL  ";
-    if (passed) {
-      mark = "pass  ";
-    }
+    let mark = gate_case_mark(passed);
     let note = property_get(result, "note");
     let quiet = text_empty_is(note);
     let tail = "";
@@ -33,7 +32,7 @@ export function qa_report_gate_run() {
   }
   let failures = list_filter(results, failed_is);
   let passes = subtract(results.length, failures.length);
-  console.log("\npass " + passes + "  fail " + failures.length);
+  gate_counts_log(passes, failures.length);
   let any = greater_than(failures.length, 0);
   if (any) {
     throw new Error(
