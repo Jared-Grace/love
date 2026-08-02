@@ -4,7 +4,7 @@ import { app_bible_chapter_verse_open } from "./app_bible_chapter_verse_open.mjs
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
-export async function app_bible_chapter_change(
+export async function app_shared_bible_chapter_change(
   context,
   chapter_code,
   list_next_wrap_fn,
