@@ -47,7 +47,7 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
+import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { list_first } from "./list_first.mjs";
@@ -61,7 +61,11 @@ import { null_not_is } from "./null_not_is.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
-export async function app_bible_home_generic(context, lambda$a, bar_extra) {
+export async function app_shared_bible_home_generic(
+  context,
+  lambda$a,
+  bar_extra,
+) {
   let frame = app_shared_bar_content(context);
   let content = property_get(frame, "content");
   app_shared_content_column_pad(content);
@@ -115,7 +119,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   );
   let verse_number = property_get(verse_current, verse_number_key());
   let text = property_get(verse_current, "text");
-  let languages_chosen = app_bible_languages_chosen_get();
+  let languages_chosen = app_shared_bible_languages_chosen_get();
   async function lambda_language(lc) {
     let bible_folder = property_get(lc, bible_folder_key());
     async function get() {
