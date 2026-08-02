@@ -130,14 +130,14 @@ export async function app_g_verify_home(context) {
     }
   }
   document.addEventListener("visibilitychange", on_visible);
-  function render(chapter, status, chapter_state) {
+  function render(chapter_shown, status, chapter_state) {
     shown_json = json_to({
-      chapter,
+      chapter: chapter_shown,
       status,
       chapter_state,
     });
     html_clear(root);
-    let passages = property_get(chapter, "passages");
+    let passages = property_get(chapter_shown, "passages");
     function lambda(a, b) {
       let na = Number(property_get(a, "verse_numbers")[0]);
       let nb = Number(property_get(b, "verse_numbers")[0]);
