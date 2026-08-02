@@ -1,6 +1,6 @@
+import { list_random_item_or_empty } from "./list_random_item_or_empty.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { text_random_or_empty } from "./text_random_or_empty.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_heart } from "./emoji_heart.mjs";
 export function g_boundary_acknowledge() {
@@ -17,13 +17,12 @@ export function g_boundary_acknowledge() {
     "Please forgive me for asking.",
     "No worries at all.",
   ]);
-  let t = list_random_item([
+  let reassure = list_random_item_or_empty([
     " No pressure at all.",
     " Whenever you're ready.",
     " Thank you for being honest with me.",
     " We can talk about whatever you'd like.",
   ]);
-  let reassure = text_random_or_empty(t);
   let line = text_combine_multiple([face, " ", lead, reassure]);
   return line;
 }
