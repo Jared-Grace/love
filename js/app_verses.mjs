@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
@@ -168,7 +169,7 @@ export async function app_verses(context) {
       offline_notified = false;
       return false;
     }
-    let folders = list_map_property(languages_chosen, "bible_folder");
+    let folders = list_map_property(languages_chosen, bible_folder_key());
     let packages = await list_map_unordered_async(
       folders,
       uplifting_package_get,
