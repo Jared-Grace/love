@@ -5,7 +5,7 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function functions_math_calls_gate_run() {
+export async function functions_builtin_calls_gate_run() {
   "QA gate: no file still calls a built-in Math method the repo keeps a name for. The normalize pass writes those names, so a file that has been through it has none left.";
   "It stands at zero rather than at a line already drawn. The thirty-two files that were carrying one were all moved on the day this was written, so there is nothing here being lived with and nothing to grandfather - which is the only moment a gate like this can be added without the baseline immediately becoming the thing everybody reads instead.";
   "What it is really watching is a file that never went through the pass. Anything normalized comes back clean by construction, so the only way to fail is to hand-write a call and commit without running the pass over it - and the repair below is then one command rather than a file to open.";
