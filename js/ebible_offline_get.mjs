@@ -14,8 +14,8 @@ export async function ebible_offline_get(bible_folder, name) {
     if (null_is(item)) {
       return null;
     }
-    let value = property_get(item, "value");
-    return value;
+    let value_stored = property_get(item, "value");
+    return value_stored;
   }
   let value = await catch_null_async(get);
   return value;
