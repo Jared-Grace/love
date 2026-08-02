@@ -64,7 +64,7 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(times, [
       "We can represent ",
       "3 * 4",
-      " like this: 3 rows of 4 dots",
+      " as 3 rows of 4 dots",
     ]);
     app_code_dot_rectangle(times, 3, 4, false);
     html_div_cycle_code(times, ["3 rows of 4 and 4 rows of 3 are the same"]);
@@ -73,7 +73,7 @@ export function app_code_lesson_expression_swapping_add() {
       "The dots stay the same, so the total count stays the same",
     ]);
     html_div_cycle_code(times, [
-      "It is the same for all other numbers, not just 3 and 4",
+      "The count stays the same for all other numbers, not just 3 and 4",
     ]);
     html_div_cycle_code(times, ["So we can swap the 3 and 4"]);
     html_div_cycle_code(times, [
@@ -82,7 +82,7 @@ export function app_code_lesson_expression_swapping_add() {
     ]);
     let minus = app_code_container_light_blue(root);
     html_div_cycle_code(minus, [
-      "Subtracting takes one number away from the other",
+      "Subtracting takes the second number away from the first number",
     ]);
     html_div_cycle_code(minus, [
       "",
