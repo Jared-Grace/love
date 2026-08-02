@@ -38,7 +38,7 @@ export function app_code_quiz(context) {
     on_batch,
     true,
   );
-  function on_batch_item(container, bs, refresh, next_get) {
+  function on_batch_item(container, bs, refresh_given, next_get) {
     let b = list_single(bs);
     let c = app_code_container_light_blue(container);
     app_code_example_answer_gap(c);
@@ -56,7 +56,7 @@ export function app_code_quiz(context) {
       app_code_quiz_index_set(context, quiz_index);
     }
     let q = list_get(qs, quiz_index);
-    q(context, container, c, refresh, next_get);
+    q(context, container, c, refresh_given, next_get);
   }
   refresh();
   async function lambda() {
