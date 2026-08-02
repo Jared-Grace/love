@@ -11,7 +11,7 @@
     "folder_read_browser -> app_a_files_paths",
     "g_coordinates_clicked_adjascent_nearest_player -> app_g_game_save_get",
     "g_coordinates_clicked_adjascent_nearest_player -> app_g_player_get",
-    "g_coordinates_land -> app_a_water",
+    "g_coordinates_land -> g_water",
     "g_game_prefix -> app_g_path_prefix",
     "g_npcs_initialize -> app_g_conversation_key",
     "g_sermon_chapter_codes_all -> app_g_bible",
