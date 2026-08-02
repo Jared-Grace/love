@@ -1,3 +1,4 @@
+import { property_negative } from "./property_negative.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_count_add } from "./property_count_add.mjs";
@@ -124,8 +125,7 @@ export function ai_log_loops_ranked(entries) {
     });
   }
   function lambda_rank(record) {
-    let commands_saved = property_get(record, "commands_saved");
-    let ordered = subtract(0, commands_saved);
+    let ordered = property_negative(record, "commands_saved");
     return ordered;
   }
   list_sort_number_mapper(ranked, lambda_rank);
