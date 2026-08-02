@@ -15,9 +15,9 @@ export function js_object_expression_named_generic(ast, node_type, search) {
         function lambda4() {
           let name = js_identifier_name(id);
           if (equal(name, search)) {
+            let node = property_get(v, "node");
+            la(node);
           }
-          let node = property_get(v, "node");
-          la(node);
         }
         js_node_type_is_if(id, "Identifier", lambda4);
       }

@@ -6,10 +6,6 @@ export function g_time_current_index(g) {
     g_times.name,
     " ring and round to the closest anchor (5.6 → 6 → wraps to 0 = morning). drives the #day_parts choice panel's you-are-here highlight");
   let phase = g_sky_phase_get(g);
-  let list = g_times();
-  let n = list_size(list);
-  let wrapped = mod(phase, n);
-  let nearest = round(wrapped);
-  let index = mod(nearest, n);
+  let index = g_phase_time_index(phase);
   return index;
 }
