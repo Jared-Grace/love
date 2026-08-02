@@ -1,5 +1,6 @@
 export async function app_replace_tests_proof_rule_click(page, index) {
   "click the proof's rule button at the given 0-based position; a rule can repeat across steps, so it is clicked by position rather than by name";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   function click(position) {
     let v = document.querySelectorAll("p");
     let paragraphs = Array.from(v);
