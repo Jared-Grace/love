@@ -8,6 +8,8 @@ export function g_generation_settings() {
   "The low end is a setting because getting into a conversation costs a fixed price - walk over, tap the player, pray, pick the prayer, tap the person, ask for discernment, choose an opener - and a conversation holding one or two turns spends more of itself on the approach than on the Scripture it exists to reach. It also fixes the most conversations a day can hold, which is why that number is worked out rather than written down.";
   "The swap count is how many times the finished arc lengths are nudged - two arcs picked, one giving a turn to the other - which takes the arithmetic out of a descending list without changing the total or the number of people. Fifty is enough for the lengths to stop looking counted and few enough that the descent's shape survives. It is seeded on the chapter code, so a chapter always lands the same way.";
   "The leader is measured in DAYS, as a share of the plant's own length, rather than in a count of conversations. A flat ten-to-twelve said the same thing about a five-day plant and a twenty-day one, and it can only be right about one of them. Half the days is the floor: the leader is the person being formed into an elder, and formation that happens on a minority of days is not formation.";
+  "How many people a plant holds is CHOSEN here rather than worked out from the turns, and that is the way round it has to be. Derived the other way it came out at about six however big the plant was, because the longest arc was capped at a share of the budget and a share grows with what it is a share of - so a bigger plant bought longer arcs and never more people.";
+  "Thirteen is the Lord's Supper table: the leader and twelve, which is the size a house church is drawn at everywhere else in this game. It is a middle rather than a fixed number, because a cast that is always exactly thirteen is a cast somebody can count.";
   "A hundred turns is the least the leader may be worth, and it is the ONE number here that decides how long a plant has to be. Everything else about a plant scales with its length - more days means more matches, more converts, longer arcs - so nothing else has a floor. The leader does, because an elder is formed over a fixed amount of time and a plant too short to do that has no elder to appoint at the end of it.";
   "The ceiling is every day. That is the logical bound rather than a preference - an npc holds one conversation a day, so the leader cannot be seen more often than the plant has days. Lower it if a leader who is always there stops feeling like a choice.";
   "The fewest CONVERSATIONS an arc may hold is one, and a one-conversation arc is a whole person rather than a thin one - somebody who hears and believes, and whose discipling then happens through the other believers rather than on screen. Holding the floor at three bought nothing and cost variety, because the budget then had to go into fewer, longer arcs.";
@@ -27,6 +29,9 @@ export function g_generation_settings() {
     leader_turns_minimum: 100,
     arc_conversations_minimum: 1,
     arc_conversations_maximum: 9,
+    plant_npcs_minimum: 10,
+    plant_npcs_mean: 13,
+    plant_npcs_maximum: 16,
     question_matches_percent: 25,
     arc_length_swaps: 50,
     npcs_available_minimum: 4,

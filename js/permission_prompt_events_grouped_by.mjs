@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -43,7 +44,9 @@ export function permission_prompt_events_grouped_by(events, key) {
     group.seconds_total = Math.round(total);
     let mean = divide(group.milliseconds_total, group.count);
     let mean_seconds = divide(mean, 1000);
-    group.seconds_mean = Math.round(mean_seconds * 10) / 10;
+    let p = multiply(mean_seconds, 10);
+    let top = Math.round(p);
+    group.seconds_mean = divide(top, 10);
     list_add(rows, group);
   }
   function by_count(row) {
