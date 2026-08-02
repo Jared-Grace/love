@@ -21,7 +21,7 @@ export function g_boundary_acknowledge() {
     " No pressure at all.",
     " Whenever you're ready.",
     " Thank you for being honest with me.",
-    " We can talk about something else.",
+    " We can talk about whatever you'd like.",
   ]);
   let reassure = text_random_or_empty(t);
   let line = text_combine_multiple([face, " ", lead, reassure]);
