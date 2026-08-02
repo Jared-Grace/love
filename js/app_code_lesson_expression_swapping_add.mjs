@@ -25,14 +25,23 @@ export function app_code_lesson_expression_swapping_add() {
       return render;
     }
     let rights = ["swapping plus times"];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
   function above(root) {
     "define swap once, then show it for +, * and -: + and * keep the value when swapped (each with an everyday reason), - changes it. Every case shows both sides worked out so the swap is seen, not implied";
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, ["Suppose we have ", "3 + 4"]);
-    html_div_cycle_code(setup, ["Then we can swap the ", "3", " and the ", "4"]);
+    html_div_cycle_code(setup, [
+      "Then we can swap the ",
+      "3",
+      " and the ",
+      "4",
+    ]);
     html_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
     let plus = app_code_container_light_blue(root);
     html_div_cycle_code(plus, [

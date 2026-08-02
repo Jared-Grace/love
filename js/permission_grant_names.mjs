@@ -427,6 +427,39 @@ export function permission_grant_names() {
   let spelled424 = fn_name("html_update_latest_promote_deploy_code");
   let spelled425 = fn_name("literal_duplicates_repair");
   let spelled426 = fn_name("html_update_latest_promote_multiple_prompt");
+  let spelled427 = fn_name("data_index_timings");
+  let spelled428 = fn_name("function_auto_timed");
+  let spelled429 = fn_name("function_fold_everywhere");
+  let spelled430 = fn_name("function_identifier_replace_multiple");
+  let spelled431 = fn_name("function_params_new");
+  let spelled432 = fn_name("function_read_multiple");
+  let spelled433 = fn_name("functions_call_pairs_frequent");
+  let spelled434 = fn_name("functions_dependency_path");
+  let spelled435 = fn_name("functions_fold_gate_run");
+  let spelled436 = fn_name("functions_fold_repair");
+  let spelled437 = fn_name("functions_head_duplicates_gate_run");
+  let spelled438 = fn_name("functions_head_duplicates_size");
+  let spelled439 = fn_name("functions_math_calls_pending");
+  let spelled440 = fn_name("functions_selects_unsafe_names");
+  let spelled441 = fn_name("functions_tail_duplicates_gate_run");
+  let spelled442 = fn_name("functions_tail_duplicates_size");
+  let spelled443 = fn_name("g_game_plants_report");
+  let spelled444 = fn_name("g_game_plants_seeds_report");
+  let spelled445 = fn_name("g_sermon_indices_uncovered");
+  let spelled446 = fn_name("g_sermon_passage_verses_key");
+  let spelled447 = fn_name("g_sermon_passage_words");
+  let spelled448 = fn_name("indexeddb_name_doors");
+  let spelled449 = fn_name("indexeddb_name_literals_gate_run");
+  let spelled450 = fn_name("js_indexeddb_name_literals_cases_gate_run");
+  let spelled451 = fn_name("js_storage_browser_objects_cases_gate_run");
+  let spelled452 = fn_name("permission_grant_refusals_multiple");
+  let spelled453 = fn_name("process_folder_or_null");
+  let spelled454 = fn_name("qa_trees_processes_orphaned");
+  let spelled455 = fn_name("repo_functions_names_code_includes");
+  let spelled456 = fn_name("storage_browser_direct_all");
+  let spelled457 = fn_name("storage_browser_direct_baseline_path");
+  let spelled458 = fn_name("storage_browser_direct_baseline_write");
+  let spelled459 = fn_name("storage_browser_direct_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -854,6 +887,39 @@ export function permission_grant_names() {
     spelled424,
     spelled425,
     spelled426,
+    spelled427,
+    spelled428,
+    spelled429,
+    spelled430,
+    spelled431,
+    spelled432,
+    spelled433,
+    spelled434,
+    spelled435,
+    spelled436,
+    spelled437,
+    spelled438,
+    spelled439,
+    spelled440,
+    spelled441,
+    spelled442,
+    spelled443,
+    spelled444,
+    spelled445,
+    spelled446,
+    spelled447,
+    spelled448,
+    spelled449,
+    spelled450,
+    spelled451,
+    spelled452,
+    spelled453,
+    spelled454,
+    spelled455,
+    spelled456,
+    spelled457,
+    spelled458,
+    spelled459,
   ];
   return names;
 }
