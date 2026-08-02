@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function permission_tool_unmatched_cases() {
   "which allow rules name a file-editing tool the permission engine never matches, and which do not. the audit built on this judgment sweeps the settings files, and those hold no offending rule today and should never hold one, so a sweep that finds nothing proves nothing. these rules are written down instead of found, which is what lets a wrong answer show up as a failure rather than as silence";
   "the four that must answer yes are the four the human was warned about on 2026-08-02, one line each on startup, every one of them a grant that had been sitting there doing nothing. keeping them here means the day they are written again the build says so, rather than the human finding out from a prompt that will not stop coming";
@@ -49,7 +51,11 @@ export function permission_tool_unmatched_cases() {
       why: "a tool named with no path at all, which parses to an empty name and grants nothing there is anything to audit",
     },
     {
-      rule: "Bash(node scripts/ai.mjs ai_git:*)",
+      rule: text_combine_multiple([
+        "Bash(node scripts/ai.mjs ",
+        fn_name("ai_git"),
+        ":*)",
+      ]),
       unmatched: false,
       why: "a command rule, which names no file tool and belongs to the bash guard",
     },
