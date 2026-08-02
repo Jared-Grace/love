@@ -3,7 +3,7 @@ export const example = {
   fn: js_builtin_calls_rewrite.name,
   args: [],
   kind: "transform",
-  title: "Say a built-in Math method with the name the repo keeps for it",
+  title: "Say a built-in method with the name the repo keeps for it",
   note: [
     "The operator pass already turns ",
     {
@@ -13,8 +13,20 @@ export const example = {
     {
       fn: js_builtin_calls_rewrite.name,
     },
-    " finishes it: every call to a Math method the repo already has a function for is pointed at that function.",
-    " Three of them are left exactly as written, and each refusal is the interesting part.",
+    " finishes it: every call to a method the repo already has a function for is pointed at that function. Which built-ins those are is a list of pairings, so ",
+    {
+      code: "JSON.stringify",
+    },
+    " and ",
+    {
+      code: "Date.now",
+    },
+    " are covered by the same reading that covers ",
+    {
+      code: "Math.floor",
+    },
+    ".",
+    " Three calls here are left exactly as written, and each refusal is the interesting part.",
     " ",
     {
       code: "Math.max(a, b, c)",
@@ -33,7 +45,7 @@ export const example = {
     {
       code: "thing.round",
     },
-    " only looks like one — the name before the dot is what says a call is a Math call.",
+    " only looks like one — the name before the dot is half of what says which pairing a call matches.",
   ],
   before: `export function f(a, b, c, thing) {
   let low = Math.floor(a);
@@ -42,7 +54,9 @@ export const example = {
   let three = Math.max(a, b, c);
   let root = Math.sqrt(a);
   let other = thing.round(b);
-  let all = [low, near, small, three, root, other];
+  let text = JSON.stringify(a);
+  let stamp = Date.now();
+  let all = [low, near, small, three, root, other, text, stamp];
   return all;
 }`,
   after: `export function f(a, b, c, thing) {
@@ -52,7 +66,9 @@ export const example = {
   let three = Math.max(a, b, c);
   let root = Math.sqrt(a);
   let other = thing.round(b);
-  let all = [low, near, small, three, root, other];
+  let text = json_to(a);
+  let stamp = date_now_milliseconds();
+  let all = [low, near, small, three, root, other, text, stamp];
   return all;
 }`,
 };
