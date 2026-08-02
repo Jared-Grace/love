@@ -1,4 +1,4 @@
-import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.mjs";
+import { app_shared_bible_picker_mark_current } from "./app_shared_bible_picker_mark_current.mjs";
 import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,5 +23,5 @@ export async function app_shared_bible_chapters(context) {
   );
   app_shared_bible_picker_buttons_enlarge(buttons);
   let current = property_get(r, "chapter_code");
-  app_bible_picker_mark_current(buttons, items, current);
+  app_shared_bible_picker_mark_current(buttons, items, current);
 }

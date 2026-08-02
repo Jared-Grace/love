@@ -1,5 +1,5 @@
 import { verse_number_key } from "./verse_number_key.mjs";
-import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.mjs";
+import { app_shared_bible_picker_mark_current } from "./app_shared_bible_picker_mark_current.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
@@ -33,5 +33,5 @@ export async function app_bible_verses(context) {
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_shared_bible_picker_buttons_enlarge(buttons);
   let current = property_get(r, verse_number_key());
-  app_bible_picker_mark_current(buttons, items, current);
+  app_shared_bible_picker_mark_current(buttons, items, current);
 }
