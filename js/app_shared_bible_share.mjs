@@ -42,9 +42,7 @@ export async function app_shared_bible_share(
   let v2 = app_shared_bible_language_hash_key();
   let url = text_combine_multiple([
     base,
-    "#",
-    v,
-    "=",
+    "#ref=",
     reference,
     ",",
     v2,
