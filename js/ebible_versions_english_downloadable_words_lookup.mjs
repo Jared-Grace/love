@@ -53,8 +53,8 @@ export async function ebible_versions_english_downloadable_words_lookup() {
           if (equal_not(t, lower)) {
             word_add(lower);
           }
-          function word_add(lower) {
-            let word = property_initialize_empty(result, lower);
+          function word_add(lower_word) {
+            let word = property_initialize_empty(result, lower_word);
             let chapter = property_initialize_empty(word, chapter_code);
             let versions = property_initialize_list(chapter, verse_number);
             list_add_if_not_includes(versions, bible_folder);
