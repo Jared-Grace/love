@@ -48,8 +48,6 @@ export async function messenger_reply_playwright() {
   let combined = text_combine_multiple(["Found ", count, " matches"]);
   console.log(combined);
   await locator.nth(0).click();
-  if (false) {
-  }
   await command_line_read_empty();
   await browser.close();
 }
