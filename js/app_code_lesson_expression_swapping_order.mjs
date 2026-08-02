@@ -70,7 +70,7 @@ export function app_code_lesson_expression_swapping_order() {
       ">",
     ]);
     html_div_cycle_code(less, [
-      "However, we can always swap two numbers that are the same, because the same numbers are on either side before and after",
+      "However, we can always swap two numbers that are the same, because they are the same numbers before and after",
     ]);
     let or_equal = app_code_container_light_blue(root);
     html_div_cycle_code(or_equal, [

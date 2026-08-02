@@ -10,6 +10,7 @@ export async function guard_gate_run() {
     cases,
     guard_case_check,
     "guard",
+    "",
   );
   return r;
 }

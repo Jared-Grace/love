@@ -1,3 +1,6 @@
+import { js_special_arguments } from "./js_special_arguments.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { ternary } from "./ternary.mjs";
 import { js_function_declaration_params_names_plain } from "./js_function_declaration_params_names_plain.mjs";
 import { js_params_names_protocol } from "./js_params_names_protocol.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -14,9 +17,13 @@ export async function function_parameters_unread(f_name) {
   let params_names = js_function_declaration_params_names_plain(declaration);
   let body = property_get(declaration, "body");
   let read = js_identifiers_referenced_names(body);
+  ("a body reaching for arguments reads every parameter at once without naming any of them, so nothing there is unread. saying otherwise would be worse than a wrong count - the repair arm believes this answer, and it would have stripped a live argument off every call site of the one function here that does it");
   let protocol = js_params_names_protocol(params_names);
   let kept = list_difference(params_names, protocol);
-  let unread = list_difference(kept, read);
+  let unread_named = list_difference(kept, read);
+  let arguments_name = js_special_arguments();
+  let arguments_read = list_includes(read, arguments_name);
+  let unread = ternary(arguments_read, [], unread_named);
   let finding = {
     name: f_name,
     unread,
