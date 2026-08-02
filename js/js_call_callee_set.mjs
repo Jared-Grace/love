@@ -1,10 +1,8 @@
-import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
+import { js_selects_call_get } from "./js_selects_call_get.mjs";
+import { function_params_names } from "./function_params_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_call_get } from "./js_node_call_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -21,12 +19,10 @@ export async function js_call_callee_set(ast, selects, f_name) {
   ("arguments are being kept rather than written afresh. Swapping in a function");
   ("that wants a different number of them leaves a call that reads fine and is");
   ("wrong, which is the one outcome worth spending a check to prevent.");
-  let node = list_single(selects);
-  let call = js_node_call_get(node);
+  let call = js_selects_call_get(selects);
   let f_name_before = js_call_callee_name_try(call);
   let args = js_call_arguments_get(call);
-  let d = await function_parse_declaration(f_name);
-  let names = js_function_declaration_property_params_names(d, "declaration");
+  let names = await function_params_names(f_name);
   let count_args = list_size(args);
   let count_params = list_size(names);
   let same = equal(count_args, count_params);
