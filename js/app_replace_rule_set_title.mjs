@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { app_replace_rule_set_why_font_size } from "./app_replace_rule_set_why_font_size.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -15,7 +16,7 @@ export function app_replace_rule_set_title(context) {
   let rule_set_name = property_get(rule_set, "name");
   let text = text_combine("Rule set: ", rule_set_name);
   let title = html_p_text(root, text);
-  html_style_margin_y(title, "0.4em");
+  html_style_margin_y(title, app_shared_content_edge_gap());
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
   let value = app_shared_spaced_small_gap();
