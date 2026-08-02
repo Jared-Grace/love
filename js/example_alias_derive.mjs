@@ -1,11 +1,13 @@
+import { equal } from "./equal.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_first } from "./list_first.mjs";
 ("The alias to SHOW for an example — derived from the fn name via the inverted");
 ("alias map, never hard-coded. Fns without an alias return null (show no command).");
 export function example_alias_derive(f_name, inverted) {
   let aliases = property_get_or_null(inverted, f_name);
-  if (aliases === null) {
+  if (equal(aliases, null)) {
     return null;
   }
-  return list_first(aliases);
+  let first = list_first(aliases);
+  return first;
 }
