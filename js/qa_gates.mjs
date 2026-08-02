@@ -1,3 +1,4 @@
+import { baseline_growth_guarded_gate_run } from "./baseline_growth_guarded_gate_run.mjs";
 import { baseline_writers_growth_gate_run } from "./baseline_writers_growth_gate_run.mjs";
 import { functions_parameters_unread_gate_run } from "./functions_parameters_unread_gate_run.mjs";
 import { functions_inside_duplicates_gate_run } from "./functions_inside_duplicates_gate_run.mjs";
@@ -240,6 +241,7 @@ export function qa_gates() {
     functions_assert_json_get_lambda_gate_run,
     permission_settings_allow_drift_cases_gate_run,
     permission_settings_local_gate_run,
+    baseline_growth_guarded_gate_run,
     baseline_writers_growth_gate_run,
     functions_tail_duplicates_gate_run,
     functions_head_duplicates_gate_run,
