@@ -40,7 +40,7 @@ export function js_storage_browser_objects_cases() {
         'let settings = { localStorage: true };\nlet on = property_get(settings, "localStorage");',
       ),
       objects: [],
-      why: "a field of somebody's own object spelled the same way is not the browser's store, and the word is asked as a name read but bound nowhere so this falls out rather than being ruled out",
+      why: "a field of somebody's own object spelled the same way is not the browser's store, and the word is asked as a name read as a value so this falls out rather than being ruled out",
     },
     {
       code: text_frozen('("the chapter is kept in localStorage");'),
