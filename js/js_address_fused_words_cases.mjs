@@ -28,6 +28,18 @@ export function js_address_fused_words_cases() {
       why: "a comma separates the fields of a bible link, so it counts as a separator too",
     },
     {
+      code: text_frozen('let url = base + "ref=" + reference;'),
+      words: ["ref"],
+      fused: ["ref="],
+      why: "the first field of an address has no separator in front of it, so the word standing at the start of the string is the same fusion with nothing before it",
+    },
+    {
+      code: text_frozen('let text = "RestartSec=2";'),
+      words: ["c"],
+      fused: [],
+      why: "a one-letter word asked as contained anywhere matches the middle of an unrelated word - the beginning is asked as a beginning so a line about a daemon stays nobody's link",
+    },
+    {
       code: text_frozen(
         'let word = app_shared_bible_reference_hash_key();\nlet url = base + "#" + word + "=" + reference;',
       ),
