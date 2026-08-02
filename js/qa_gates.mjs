@@ -1,3 +1,4 @@
+import { functions_inside_duplicates_gate_run } from "./functions_inside_duplicates_gate_run.mjs";
 import { file_stamps_copied_gate_run } from "./file_stamps_copied_gate_run.mjs";
 import { functions_builtin_calls_gate_run } from "./functions_builtin_calls_gate_run.mjs";
 import { functions_page_serialized_gate_run } from "./functions_page_serialized_gate_run.mjs";
@@ -98,6 +99,7 @@ import { examples_gate_run } from "./examples_gate_run.mjs";
 import { permission_gate_run } from "./permission_gate_run.mjs";
 import { permission_editor_open_gate_run } from "./permission_editor_open_gate_run.mjs";
 import { permission_self_settings_gate_run } from "./permission_self_settings_gate_run.mjs";
+import { permission_tool_unmatched_gate_run } from "./permission_tool_unmatched_gate_run.mjs";
 import { permission_grants_gate_run } from "./permission_grants_gate_run.mjs";
 import { permission_settings_allow_assert } from "./permission_settings_allow_assert.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
@@ -143,6 +145,7 @@ export function qa_gates() {
     permission_rule_probe_gate_run,
     permission_rule_file_gate_run,
     permission_self_settings_gate_run,
+    permission_tool_unmatched_gate_run,
     path_pattern_covers_cases_gate_run,
     permission_decider_rule_gate_run,
     permission_grants_gate_run,
@@ -236,6 +239,7 @@ export function qa_gates() {
     permission_settings_local_gate_run,
     functions_tail_duplicates_gate_run,
     functions_head_duplicates_gate_run,
+    functions_inside_duplicates_gate_run,
     functions_builtin_calls_gate_run,
     functions_page_serialized_gate_run,
   ];
