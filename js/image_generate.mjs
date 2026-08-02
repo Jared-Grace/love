@@ -1,4 +1,4 @@
-import { floor } from "./floor.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
@@ -55,8 +55,7 @@ export async function image_generate(text, path_output) {
     let best = low;
     while (less_than_equal(low, high)) {
       let top = add(low, high);
-      let divided = divide(top, 2);
-      let mid = floor(divided);
+      let mid = divide_floor(top, 2);
       let lines_tried = wrapText(text, mid);
       let line_height_tried = multiply(mid, 1.25);
       let totalHeight = multiply(lines_tried.length, line_height_tried);

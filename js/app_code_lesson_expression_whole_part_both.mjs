@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +10,6 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { floor } from "./floor.mjs";
 import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
@@ -55,8 +55,7 @@ export function app_code_lesson_expression_whole_part_both() {
     let dividend = list_get(nums, 0);
     let divisor = list_get(nums, 1);
     let list = [];
-    let p = divide(dividend, divisor);
-    let item = floor(p);
+    let item = divide_floor(dividend, divisor);
     list_add(list, item);
     let item2 = subtract(dividend, answer);
     list_add(list, item2);
