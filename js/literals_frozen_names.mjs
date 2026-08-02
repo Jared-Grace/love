@@ -34,8 +34,8 @@ export function literals_frozen_names() {
   let spelled23 = fn_name("app_code_quiz_hash_key");
   ("Two of a kind this list had no example of. Every other address word here sits after the hash, and the readings that find them all look there; this one sits after the question mark, which nothing in the repo reads for words at all. A verify link is sent with a chapter in it the same way a bible link is, and it breaks the same way if the word is retyped.");
   ("Beside it is the first frozen key that nothing in this repo ever writes. It is set by hand in a browser to hold a page on one chapter, so the value lives only on that disk - which is exactly the condition this list is about, and is easier to miss than a key with a writer, because searching for what saves it finds nothing.");
-  let spelled24 = fn_name("app_g_verify_chapter_query_key");
-  let spelled25 = fn_name("app_g_verify_chapter_storage_key");
+  let spelled24 = fn_name("g_verify_chapter_query_key");
+  let spelled25 = fn_name("g_verify_chapter_storage_key");
   let names = [
     spelled,
     spelled2,

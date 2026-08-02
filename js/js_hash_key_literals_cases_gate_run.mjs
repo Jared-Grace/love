@@ -1,8 +1,7 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_hash_key_literals_cases } from "./js_hash_key_literals_cases.mjs";
 import { js_hash_key_literals } from "./js_hash_key_literals.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export function js_hash_key_literals_cases_gate_run() {
   "QA gate: each written-down file yields exactly the published words the corpus says it does.";
@@ -11,8 +10,7 @@ export function js_hash_key_literals_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_hash_key_literals_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let sites = js_hash_key_literals(ast);
     let words = list_map_property(sites, "word");
     return words;
