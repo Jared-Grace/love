@@ -24,8 +24,8 @@ export function js_code_comment_statement_generic(value, f_names) {
       let text = property_get(segment, "text");
       let underscored = text_includes(text, "_");
       if (underscored) {
-        let known = list_includes(f_names, text);
-        return known;
+        let known_name = list_includes(f_names, text);
+        return known_name;
       }
     }
     return false;
