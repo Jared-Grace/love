@@ -31,7 +31,7 @@ export function app_code_lesson_expression_swapping_equal() {
     return built;
   }
   function above(root) {
-    "show that === and !== swap (asking either way gives the same answer), that < > <= >= still flip, and that when both sides are comparisons each is wrapped in ( )";
+    "show that === and !== swap (asking either way gives the same answer), that < > <= >= still flip, and that when both sides are comparisons each is wrapped in ( and ). the wrapping is taught in two steps: first one wrapped comparison against a plain false - (3 === 5) === false - which is the single new idea that a comparison stands where a true/false stood; only then both sides wrapped";
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
       "",
@@ -77,8 +77,11 @@ export function app_code_lesson_expression_swapping_equal() {
     let paren = app_code_container_light_blue(root);
     html_div_cycle_code(paren, [
       "When both sides are comparisons, we wrap each one in ",
-      "( )",
+      "(",
+      " and ",
+      ")",
     ]);
+    html_div_cycle_code(paren, ["", "(3 === 5) === false", " is ", "true"]);
     html_div_cycle_code(paren, ["", "(3 === 5) === (5 === 3)", " is ", "true"]);
   }
 }
