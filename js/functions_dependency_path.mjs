@@ -1,12 +1,15 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_split_comma_dot_trim } from "./text_split_comma_dot_trim.mjs";
 import { function_dependency_path } from "./function_dependency_path.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { property_set } from "./property_set.mjs";
 export async function functions_dependency_path(names_comma, f_name_to) {
-  "The source of each of several functions, asked in one command - one answer per name, under the name it belongs to.";
-  "Reading is what somebody does before deciding, and a decision rarely rests on one function: a caller and the two things it calls, a name and its generic underneath. The single form was run fifty times in a row for a hundred and fifty-five commands nobody wanted to spend, twenty-one deep at its worst, and the log reads that as the shape of a missing command rather than as work.";
-  "Answered under the name rather than in a bare list, because a run of sources read straight through is the one shape where losing which is which costs the most - every one of them opens with its imports and they all look alike.";
-  "A name nothing in the repo answers to is reported as nothing rather than thrown on, and that is the difference between a sweep and a loop. The single form refuses an unknown name, which is the useful answer when it is the only name asked about; over a list it would throw away every source already read because one name was misspelt.";
+  "The shortest run of imports from each of several functions down to one other function, asked in one command - one answer per starting name, and nothing against a name that cannot reach it at all.";
+  ("The question is almost never asked about one starting point. It is asked about every app at once, or about every function holding a standing approval at once, because what is really being asked is whether anything in a whole family reaches something it must not - and the log shows exactly that, twenty-five apps traced to ",
+    fn_name("file_overwrite_buffer"),
+    " one command at a time, then the same twenty-five again.");
+  ("Each starting point still costs its own walk, because a walk follows the imports out of the one name it started at and two starting points share none of it. What this saves is the twenty-four process starts around the twenty-five walks, which on this repo is the larger half.");
+  ("A name nothing answers to is reported as nothing rather than thrown on, so one misspelt word cannot throw away the walks already paid for. That is also why nothing and no-path read the same here: both mean this name does not reach the target, and a starting point that does not exist does not reach anything.");
   let names = text_split_comma_dot_trim(names_comma);
   let found = {};
   for (let f_name of names) {

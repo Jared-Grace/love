@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
