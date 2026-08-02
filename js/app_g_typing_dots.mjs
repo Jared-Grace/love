@@ -1,3 +1,4 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -11,7 +12,7 @@ export function app_g_typing_dots(container) {
   let row = html_div(container);
   html_style_assign(row, {
     display: "flex",
-    gap: "0.4em",
+    gap: app_shared_content_edge_gap(),
     "justify-content": "center",
     padding: "0.35em 0",
   });
