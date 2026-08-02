@@ -1,4 +1,4 @@
-import { example_whole_file_lambda } from "./example_whole_file_lambda.mjs";
+import { example_arguments_lambda } from "./example_arguments_lambda.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_shadowing_rename_lambda } from "./js_shadowing_rename_lambda.mjs";
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
@@ -74,7 +74,8 @@ export async function example_command_lambda(f_name, args, e) {
     let lambda4 = example_auto_lambda();
     return lambda4;
   }
-  if (equal(f_name, fn_name("js_statement_if_test_set"))) {
+  let right11 = fn_name("js_statement_if_test_set");
+  if (equal(f_name, right11)) {
     let lambda5 = example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
@@ -82,7 +83,8 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda5;
   }
-  if (equal(f_name, fn_name("js_return_argument_set"))) {
+  let right12 = fn_name("js_return_argument_set");
+  if (equal(f_name, right12)) {
     let lambda6 = example_slot_expression_set_lambda(
       "ReturnStatement",
       js_return_argument_set,
@@ -111,7 +113,8 @@ export async function example_command_lambda(f_name, args, e) {
   ("anything a register lists. A whole-file pass has no address at all, so it needs");
   ("no branch either: it leaves by the last return, which reads the name as the");
   ("whole specification.");
-  if (equal(f_name, fn_name("js_block_body_add_code"))) {
+  let right13 = fn_name("js_block_body_add_code");
+  if (equal(f_name, right13)) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -120,7 +123,8 @@ export async function example_command_lambda(f_name, args, e) {
     );
     return lambda11;
   }
-  if (equal(f_name, fn_name("js_block_body_add_code_first"))) {
+  let right14 = fn_name("js_block_body_add_code_first");
+  if (equal(f_name, right14)) {
     let lambda12 = example_block_body_add_lambda(
       args[0],
       args[1],
@@ -134,6 +138,6 @@ export async function example_command_lambda(f_name, args, e) {
     let lambda13 = example_fn_name_references_lambda();
     return lambda13;
   }
-  let whole_file = await example_whole_file_lambda(f_name);
-  return whole_file;
+  let from_arguments = await example_arguments_lambda(f_name, args);
+  return from_arguments;
 }
