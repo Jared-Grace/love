@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { webpack_config_entry_path } from "./webpack_config_entry_path.mjs";
 import { process_env_args_get } from "./process_env_args_get.mjs";
 import { vite_config_define } from "./vite_config_define.mjs";
@@ -12,7 +13,7 @@ export async function vite_config_build() {
   let c = vite_config_define({
     publicDir: false,
     define: {
-      "process.env.NODE_ENV": JSON.stringify("production"),
+      "process.env.NODE_ENV": json_to("production"),
       "process.env": {},
       process: {},
     },
