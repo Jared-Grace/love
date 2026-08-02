@@ -21,11 +21,7 @@ export async function function_inside_shapes(f_name, size) {
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
   let working = js_function_declaration_statements_working(declaration);
-  let own = js_function_declaration_name(declaration);
-  let params = js_function_declaration_params_names(declaration);
-  let locals = js_declared_names(declaration);
-  let named = list_concat(params, locals);
-  let personal = list_concat([own], named);
+  let personal = js_function_declaration_personal_names(declaration);
   let last = list_size_subtract(working, size);
   let shapes = [];
   let index = 0;
