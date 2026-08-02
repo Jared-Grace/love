@@ -1,3 +1,5 @@
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { identity } from "./identity.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_sermon_chapter_groups } from "./g_sermon_chapter_groups.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
@@ -13,7 +15,8 @@ export async function g_arc_lengths(chapter) {
   "Works out how long each arc in one chapter should be, from the settings and the chapter's own passage grouping - so the npc count falls out as the length of the list rather than being chosen.";
   "Everything is measured in CONVERSATIONS, not in matches, because the thing that can fail to schedule is days: an npc is talked to once a day, so an arc of nine conversations needs nine days and a chapter only has as many days as it has passage groups.";
   "Three ceilings sit on the longest arc and the smallest wins - the settings' own maximum, a quarter of the arc budget so no one person eats the chapter, and the chapter's day count.";
-  "Lengths descend by one from that ceiling and then sit at the minimum, longest first, because a long arc is the hardest thing to place and should be placed while the space is empty. Whatever is left at the end is a short tail arc, which always fits.";
+  "Lengths descend by one from that ceiling, and when they reach the shortest arc the descent STARTS AGAIN from the ceiling, so the budget spreads across the whole range instead of pouring its remainder into a tail of singletons. The finished list is then sorted longest first, because a long arc is the hardest thing to place and should be placed while the space is still empty.";
+  "A one-conversation arc is wanted, not tolerated. It is somebody who hears and believes, and whose discipling happens through the other believers rather than on screen - and it always fits, which is what makes deriving the npc count safe rather than merely convenient.";
   let settings = g_generation_settings();
   let groups = await g_sermon_chapter_groups(chapter);
   let days = groups.length;
