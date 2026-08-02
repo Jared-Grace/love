@@ -1,3 +1,4 @@
+import { math_min } from "./math_min.mjs";
 import { markdown_inline } from "./markdown_inline.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_pre_text } from "./html_pre_text.mjs";
@@ -13,7 +14,9 @@ export function markdown_render(parent, text) {
   function flush_paragraph() {
     if (paragraph.length > 0) {
       let div = html_div(parent);
-      html_style_assign(div, { margin: "0.5em 0" });
+      html_style_assign(div, {
+        margin: "0.5em 0",
+      });
       markdown_inline(div, paragraph.join(" "));
       paragraph = [];
     }
@@ -65,7 +68,7 @@ export function markdown_render(parent, text) {
       flush_paragraph();
       let heading = html_div(parent);
       let sizes = ["1.5em", "1.3em", "1.15em", "1.05em"];
-      let size = sizes[Math.min(level - 1, sizes.length - 1)];
+      let size = sizes[math_min(level - 1, sizes.length - 1)];
       html_style_assign(heading, {
         "font-weight": "bold",
         "font-size": size,
