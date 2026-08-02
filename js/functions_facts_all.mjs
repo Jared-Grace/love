@@ -114,6 +114,16 @@ export async function functions_facts_all() {
     let facts = property_get(entry, "facts");
     return facts;
   }
-  let all = list_map(entries, facts_of);
-  return all;
+  let facts = list_map(entries, facts_of);
+  ("Whether anything actually changed is worth saying out loud, because the caller");
+  ("folding these into the index can skip that fold entirely when the answer is no,");
+  ("and it is the same answer that decides whether the record is worth rewriting.");
+  ("The stat pass has to happen either way - that is what makes the answer true -");
+  ("but folding a hundred and forty thousand names into lookups does not.");
+  let changed = write_wanted;
+  let r = {
+    facts,
+    changed,
+  };
+  return r;
 }
