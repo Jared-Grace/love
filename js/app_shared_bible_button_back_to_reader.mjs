@@ -8,7 +8,7 @@ import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { app_bible_screen_home_set } from "./app_bible_screen_home_set.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
-export async function app_bible_button_back_to_reader(parent, context) {
+export async function app_shared_bible_button_back_to_reader(parent, context) {
   "a book/chapter/verse picker is a transient one-job screen; name the escape by its destination so the reader can see exactly which verse they will return to, e.g. \"Back to John 3:16\"";
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
