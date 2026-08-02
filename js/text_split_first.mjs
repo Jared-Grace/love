@@ -1,8 +1,9 @@
+import { less_than } from "./less_than.mjs";
 import { text_take } from "./text_take.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
 export function text_split_first(item, s) {
   let index = text_index_of_try(item, s);
-  if (index < 0) {
+  if (less_than(index, 0)) {
     return item;
   }
   let taken = text_take(item, index);
