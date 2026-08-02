@@ -1,3 +1,6 @@
+import { ceil } from "./ceil.mjs";
+import { math_min } from "./math_min.mjs";
+import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
@@ -20,7 +23,7 @@ export function g_game_plants_whole(next, days_total) {
   let days_left = days_total;
   let npc_next = 0;
   let shortest = divide(days_total, s.plant_days_minimum);
-  let most = Math.ceil(shortest) + 1;
+  let most = ceil(shortest) + 1;
   for (let index = 0; less_than(index, most); index++) {
     let none = less_than(days_left, 1);
     if (none) {
@@ -29,7 +32,7 @@ export function g_game_plants_whole(next, days_total) {
     let started = greater_than(plants.length, 0);
     let thin = less_than(days_left, s.plant_days_minimum);
     if (thin && started) {
-      let plant_last = plants[plants.length - 1];
+      let plant_last = plants[subtract(plants.length, 1)];
       plant_last.days = plant_last.days + days_left;
       days_left = 0;
       break;
@@ -46,7 +49,7 @@ export function g_game_plants_whole(next, days_total) {
     let leader_turns = g_leader_turns(convert_turns);
     let arc_turns = leader_turns + convert_turns;
     let days_asked = g_plant_days_turns(arc_turns);
-    let days = Math.min(days_asked, days_left);
+    let days = math_min(days_asked, days_left);
     days_left = subtract(days_left, days);
     let npcs = converts_count + 1;
     let plant = {
@@ -67,7 +70,7 @@ export function g_game_plants_whole(next, days_total) {
     let days = property_get(plant, "days");
     let conversations = divide(leader_turns, s.conversation_turns_mean);
     let reached = multiply_divide(conversations, 100, days);
-    plant.leader_days_percent = Math.round(reached);
+    plant.leader_days_percent = round(reached);
     plant.leader_short = less_than(leader_turns, s.leader_turns_minimum);
   }
   return plants;
