@@ -1,6 +1,5 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { js_declare_assign_null_cases } from "./js_declare_assign_null_cases.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
 import { js_unparse_parse } from "./js_unparse_parse.mjs";
 import { js_declarators_filled_count } from "./js_declarators_filled_count.mjs";
@@ -11,8 +10,7 @@ export function js_declare_assign_null_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero";
   let cases = js_declare_assign_null_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     js_declare_assign_null(ast);
     let read_back = js_unparse_parse(ast);
     let filled = js_declarators_filled_count(read_back);

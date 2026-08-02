@@ -1,3 +1,4 @@
+import { g_something_else } from "./g_something_else.mjs";
 import { list_min } from "./list_min.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_first } from "./list_first.mjs";
@@ -306,7 +307,12 @@ export async function app_g_conversation(
       let container = app_g_container_player(overlay);
       app_g_p_text(container, "What would you like to say?");
       let text = g_boundary_acknowledge();
-      app_g_button_green(container, text, render);
+      function acknowledged() {
+        "the NPC has just declined a topic, so the prompt waiting back at the openers must invite something ELSE — the usual continue-prompt is open half the time ('what's on your mind?'), and an open invitation from the same person who just said no reads as taking the limit back. carried as the pending intro so it replaces that prompt.";
+        pending.text = g_something_else();
+        render();
+      }
+      app_g_button_green(container, text, acknowledged);
       app_g_button_conversation_end(container, leave);
     }
     let delay = list_random_item([2500, 3000, 3500]);

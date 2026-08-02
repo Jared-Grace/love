@@ -1,7 +1,6 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_hash_key_getters_cases } from "./js_hash_key_getters_cases.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_hash_key_getters } from "./js_hash_key_getters.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function js_hash_key_getters_cases_gate_run() {
@@ -11,8 +10,7 @@ export function js_hash_key_getters_cases_gate_run() {
   arguments_assert(arguments, 0);
   let cases = js_hash_key_getters_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let getters = js_hash_key_getters(ast);
     return getters;
   }
