@@ -1,3 +1,4 @@
+import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { app_code_content_cap } from "./app_code_content_cap.mjs";
 import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
@@ -24,8 +25,6 @@ import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
-import { app_code_review_scope } from "./app_code_review_scope.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div } from "./html_div.mjs";
@@ -82,8 +81,7 @@ export function app_code_lesson_quiz(
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_code_lesson_current_number(context);
-  let review_scope = app_code_review_scope(number);
-  let has_review = null_not_is(review_scope);
+  let has_review = app_code_review_due_is(number);
   let lcli = app_code_lesson_current_last_is(context);
   let no_more = lcli && not(has_review);
   async function on_move_on() {
