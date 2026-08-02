@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
@@ -11,7 +12,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
   let vs = await ebible_verses(bible_folder, chapter_code);
   function lambda(v) {
     let words = property_get(v, "text");
-    let verse_number = property_get(v, "verse_number");
+    let verse_number = property_get(v, verse_number_key());
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
