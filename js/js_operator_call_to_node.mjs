@@ -23,5 +23,4 @@ export function js_operator_call_to_node(node, o) {
   property_set(expression, "left", left);
   property_set(expression, "right", right);
   object_replace(node, expression);
-  return;
 }
