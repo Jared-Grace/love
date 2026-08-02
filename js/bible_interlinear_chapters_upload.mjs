@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -11,7 +12,7 @@ import { each_unordered_async } from "./each_unordered_async.mjs";
 export async function bible_interlinear_chapters_upload() {
   "publish the original-language text one file per chapter, in the exact compressed shape every other version uses, so the reader fetches `bible/original/<chapter>.json` the same way it fetches any translation. Resumable: a chapter already in storage is skipped and each upload is retried, so a dropped connection mid-run only costs the current handful and re-running finishes the rest";
   let cache = await bible_interlinear_verses_cache();
-  let bible_folder = property_get(cache, "bible_folder");
+  let bible_folder = property_get(cache, bible_folder_key());
   let chapters = property_get(cache, "chapters");
   let chunks = list_chunk(chapters, 20);
   async function lambda_chunk(chunk) {
