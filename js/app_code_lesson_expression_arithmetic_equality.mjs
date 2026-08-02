@@ -1,0 +1,130 @@
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_code_arithmetic_to_value } from "./app_code_arithmetic_to_value.mjs";
+import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
+import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { integer_random } from "./integer_random.mjs";
+import { add } from "./add.mjs";
+import { equal } from "./equal.mjs";
+import { ternary } from "./ternary.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+export function app_code_lesson_expression_arithmetic_equality() {
+  "the step from a comparison with arithmetic on ONE side (already learned - 8 === 3 + 5) to arithmetic on BOTH sides (3 + 4 === 5 + 2). The single new idea: each side is worked out to its own number FIRST, and only then are the two numbers compared - so two different-looking expressions can turn out equal. Uses === alone, where the true/false answer is simply whether the two sides land on the same number, the most intuitive both-sides case; the other comparisons with arithmetic on both sides are a later step. Placed right after the arithmetic-comparison lesson, and it sets up the swapping lesson, which is this same both-sides shape with the very same expression mirrored on each side.";
+  function equality(left, right) {
+    "one === comparison as a code string, both sides already built";
+    let code = text_combine_multiple([left, " === ", right]);
+    return code;
+  }
+  function true_case() {
+    "two different-looking arithmetic expressions of the SAME value, so === is true; a second try if the two happen to come out identical";
+    let value = integer_random(2, 9);
+    let left = app_code_arithmetic_to_value(value);
+    let right = app_code_arithmetic_to_value(value);
+    let same = equal(left, right);
+    let right_retry = app_code_arithmetic_to_value(value);
+    let right_final = ternary(same, right_retry, right);
+    let code = equality(left, right_final);
+    return code;
+  }
+  function false_case() {
+    "two arithmetic expressions of DIFFERENT values, so === is false; the right value is bumped above the left so they can never coincide";
+    let value = integer_random(2, 8);
+    let bump = integer_random(1, 3);
+    let value_other = add(value, bump);
+    let left = app_code_arithmetic_to_value(value);
+    let right = app_code_arithmetic_to_value(value_other);
+    let code = equality(left, right);
+    return code;
+  }
+  function refill() {
+    "four examples a screen, true and false alternating, so the learner meets both outcomes each time";
+    let v = true_case();
+    let v2 = false_case();
+    let v3 = true_case();
+    let v4 = false_case();
+    let list = [v, v2, v3, v4];
+    return list;
+  }
+  let next_arg = list_iterator_refillable(refill);
+  let name_id = title_name_id();
+  let lesson = app_code_lesson_expression_generic({
+    above,
+    name_id,
+    next_arg,
+    example_count: 4,
+    decoys: app_code_comparison_decoys,
+    forwards_question_label: app_code_label_code_question(),
+    forwards_answer_label: "value: ",
+    backwards_question_label: "value: ",
+    backwards_answer_label: "What code gives this value? ",
+    forwards_answer_count_override: 2,
+  });
+  return lesson;
+  function title_name_id() {
+    "the home title: both sides arithmetic, an Expressions lesson";
+    function title_get(lesson_name, left_upper) {
+      function render(parent) {
+        app_code_lesson_name_id_category(parent, left_upper);
+        html_span_text(parent, "both sides arithmetic");
+      }
+      return render;
+    }
+    let rights = ["arithmetic both sides"];
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
+    return built;
+  }
+  function above(root) {
+    "first the rule, then it worked once true and once false: each side is done first to its own number, and only then are the two numbers compared";
+    let header = app_code_container_light_blue(root);
+    html_div_cycle_code(header, [
+      "Both sides of a comparison can be arithmetic",
+    ]);
+    let yes = app_code_container_light_blue(root);
+    html_div_cycle_code(yes, [
+      "For ",
+      "3 + 4 === 5 + 2",
+      ", we do ",
+      "3 + 4",
+      " and ",
+      "5 + 2",
+      " first",
+    ]);
+    html_div_cycle_code(yes, [
+      "Both are ",
+      "7",
+      ", so ",
+      "7 === 7",
+      " is ",
+      "true",
+    ]);
+    let no = app_code_container_light_blue(root);
+    html_div_cycle_code(no, [
+      "For ",
+      "10 - 4 === 2 + 5",
+      ", we do ",
+      "10 - 4",
+      " and ",
+      "2 + 5",
+      " first",
+    ]);
+    html_div_cycle_code(no, [
+      "That is ",
+      "6",
+      " and ",
+      "7",
+      ", so ",
+      "6 === 7",
+      " is ",
+      "false",
+    ]);
+  }
+}
