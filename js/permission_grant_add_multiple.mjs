@@ -6,7 +6,6 @@ import { list_includes } from "./list_includes.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { permission_grant_names_write } from "./permission_grant_names_write.mjs";
-import { permission_grant_refusals } from "./permission_grant_refusals.mjs";
 import { permission_settings_allow_write_from } from "./permission_settings_allow_write_from.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
@@ -17,13 +16,14 @@ export async function permission_grant_add_multiple(names_comma) {
   let asked = text_split_comma(names_comma);
   let names = permission_grant_names();
   let missing = list_without_multiple(asked, names);
+  ("Every verdict is asked for in one sweep because the answers that do not depend on which function is being asked about cost a walk of the whole repo and the single-name check makes them fresh every time it is called");
   let refusals_by_name = await permission_grant_refusals_names(missing);
   async function each_asked(unaliased) {
     let already = list_includes(names, unaliased);
     if (already) {
       return;
     }
-    let refusals = await permission_grant_refusals(unaliased);
+    let refusals = property_get(refusals_by_name, unaliased);
     list_empty_is_assert_json(refusals, {
       hint: "this function must not be given a standing approval, for the reasons listed - drop it from the batch, narrow the function until they go away, or leave it asking",
       unaliased,
