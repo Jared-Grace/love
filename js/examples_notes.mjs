@@ -196,6 +196,8 @@ export function examples_notes() {
       "naming the holder supplies the one judgment the plain shadowing rename refuses to make",
     example_math_calls_rewrite:
       "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
+    example_code_add_after_selected:
+      "a line of code written between two particular lines rather than at either end of the block",
   };
   return notes;
 }
