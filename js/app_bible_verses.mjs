@@ -3,7 +3,7 @@ import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.m
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
-import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
+import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { identity } from "./identity.mjs";
@@ -15,7 +15,7 @@ import { property_get } from "./property_get.mjs";
 import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 export async function app_bible_verses(context) {
-  let n = await app_bible_chapter_set_default(context);
+  let n = await app_shared_bible_chapter_set_default(context);
   if (n) {
     return;
   }
