@@ -9,8 +9,12 @@ export async function guard_case_check(c) {
   let result = await guard_check(command);
   let actual = property_get(result, "decision");
   let note = guard_case_reason_note(c, result);
+  ("The command is padded out to a fixed width so a run of these lines reads as");
+  ("three columns; every corpus hands its case's one-line reading over under the");
+  ("same name, which is what lets one frame print all of them.");
+  let label = command.padEnd(44);
   return {
-    command,
+    label,
     expected,
     actual,
     note,

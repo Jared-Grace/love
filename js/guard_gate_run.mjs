@@ -13,27 +13,6 @@ import { list_filter } from "./list_filter.mjs";
 ("Throws on any mismatch so the r.mjs seam exits nonzero.");
 export async function guard_gate_run() {
   let cases = await guard_cases_read();
-  let results = await list_map_unordered_async(cases, guard_case_check);
-  for (let r of results) {
-    let mark = gate_case_mark(r.pass);
-    let note = equal(r.note, "") ? "" : "  " + r.note;
-    console.log(
-      mark + r.command.padEnd(46) + r.expected + " / " + r.actual + note,
-    );
-  }
-  function failed(r) {
-    let n = not(r.pass);
-    return n;
-  }
-  let failures = list_filter(results, failed);
-  let passed = subtract(results.length, failures.length);
-  gate_counts_log(passed, failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error("guard gate: " + failures.length + " failed");
-  }
-  let r2 = {
-    pass: results.length,
-    fail: 0,
-  };
-  return r2;
+  let r = await cases_checked_gate_run_generic(cases, guard_case_check, "guard");
+  return r;
 }
