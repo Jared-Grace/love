@@ -1,3 +1,4 @@
+import { ceil } from "./ceil.mjs";
 import { divide } from "./divide.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { g_day_lines } from "./g_day_lines.mjs";
@@ -8,6 +9,6 @@ export async function g_sermon_chapter_days(chapter) {
   let lines = await g_sermon_chapter_lines(chapter);
   let per_day = g_day_lines();
   let exact = divide(lines, per_day);
-  let r = Math.ceil(exact);
+  let r = ceil(exact);
   return r;
 }
