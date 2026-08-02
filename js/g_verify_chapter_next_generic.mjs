@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -19,8 +20,11 @@ export async function g_verify_chapter_next_generic(
   let list = await passages_get(chapter_code);
   let ordered = list_map(list, g_sermon_passage_verses_key);
   let object = await written_get(chapter_code);
-  let list2 = property_get(object, "passages");
-  let written = list_map(list2, g_sermon_passage_verses_key);
+  let written = property_list_map(
+    object,
+    "passages",
+    g_sermon_passage_verses_key,
+  );
   let object2 = await approval_get(chapter_code);
   let approved = String(property_get(object2, "approved") || "");
   let latest_index = -1;
