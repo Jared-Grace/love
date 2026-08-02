@@ -1,9 +1,8 @@
+import { text_split_last } from "./text_split_last.mjs";
 import fs from "fs";
 import { path_join } from "./path_join.mjs";
-import { text_split } from "./text_split.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { list_last } from "./list_last.mjs";
 export function process_stat_fields_or_null(pid) {
   "What the machine records about a running process, from its state onwards, or nothing when there is no such process or it is not ours to look at.";
   "The record begins with the process's number and then its name in brackets, and the name is whatever the program was called - it may hold spaces and it may hold brackets of its own. Counting words from the front therefore lands on a different thing for a program with a space in its name, which is a wrong answer that looks exactly like a right one. Everything up to the last closing bracket is dropped instead, because the name is the only part that can hold one.";
@@ -19,8 +18,7 @@ export function process_stat_fields_or_null(pid) {
   } catch (e) {
     return null;
   }
-  let pieces = text_split(line, ")");
-  let tail = list_last(pieces);
+  let tail = text_split_last(line, ")");
   let trimmed = text_trim(tail);
   let fields = text_split_space(trimmed);
   return fields;
