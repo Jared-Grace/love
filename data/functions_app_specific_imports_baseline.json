@@ -20,8 +20,6 @@
   "g_sermon_generate_book_generic_open -> app_ceb_bible_gloss_generate_chapter_bible_folders",
   "g_sermon_generate_book_generic_open -> app_ceb_bible_gloss_generate_chapter_language",
   "g_sermon_generate_upload -> app_g_bible",
-  "g_sermon_passage_line_count -> g_openai_split_property",
-  "g_sermon_verse_to_text -> g_openai_split_property",
   "g_tutorials_each_remove_try -> app_g",
   "html_checkboxes -> app_karate_button_background_invalid",
   "html_checkboxes -> app_karate_container_main",
