@@ -3616,14 +3616,7 @@ def main():
     # to Claude as a redirect. Safe as a floor: python -c is never allow-listed,
     # so this only ever converts a 'silent'/'ask' into a self-correcting 'deny'.
     if find_python_eval(command):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": PYTHON_EVAL_DENY_REASON,
-            }
-        }))
-        return
+        return decide("deny", PYTHON_EVAL_DENY_REASON)
 
     # Same floor-instead-of-prompt reasoning, applied to the shell writing a
     # file from a heredoc: the Write and Edit tools do it without a prompt and
