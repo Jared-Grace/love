@@ -1,6 +1,6 @@
 import { list_add } from "./list_add.mjs";
 import { js_builtin_calls_usable } from "./js_builtin_calls_usable.mjs";
-import { js_builtin_call_member_try } from "./js_builtin_call_member_try.mjs";
+import { js_builtin_call_parts_try } from "./js_builtin_call_parts_try.mjs";
 import { js_builtin_node_to_call } from "./js_builtin_node_to_call.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -13,7 +13,7 @@ export function js_builtin_calls_rewrite(ast) {
   let usable = js_builtin_calls_usable(ast);
   let moved = [];
   function lambda(node) {
-    let member = js_builtin_call_member_try(node);
+    let member = js_builtin_call_parts_try(node);
     if (not(member)) {
       return;
     }
