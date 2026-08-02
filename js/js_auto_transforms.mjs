@@ -1,3 +1,4 @@
+import { js_returns_empty_last_remove } from "./js_returns_empty_last_remove.mjs";
 import { js_log_f_name_add } from "./js_log_f_name_add.mjs";
 import { js_destructure_functionize } from "./js_destructure_functionize.mjs";
 import { js_assert_arguments_args } from "./js_assert_arguments_args.mjs";
@@ -45,6 +46,7 @@ export function js_auto_transforms() {
     js_identifiers_rename_unused_number_suffixes,
     js_log_f_name_add,
     js_strings_add_reference_to_fn_names_if_underscore,
+    js_returns_empty_last_remove,
     js_imports_fix,
   ];
   return transforms;

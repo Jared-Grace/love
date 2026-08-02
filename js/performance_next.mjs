@@ -21,5 +21,4 @@ export function performance_next(p, category) {
     time,
     category,
   });
-  return;
 }

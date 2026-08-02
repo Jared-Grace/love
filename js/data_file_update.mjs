@@ -19,5 +19,4 @@ export async function data_file_update(f_path) {
   let parsed = await file_js_parse(f_path);
   data_file_update_inner(parsed, d);
   await data_save(d);
-  return;
 }

@@ -120,5 +120,4 @@ export function app_code_examples(context) {
   let b2 = app_shared_button_screen_wide(context, app_code_home, g, text);
   let value = app_shared_spaced_gap();
   html_style_margin_top(b2, value);
-  return;
 }

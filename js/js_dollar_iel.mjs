@@ -4,16 +4,15 @@ import { js_dollar_i } from "./js_dollar_i.mjs";
 export function js_dollar_iel({
   remaining,
   node,
-  stack_1,
+  stack_,
   stack_2,
   stack_3,
   ast,
   afters,
 }) {
   js_dollar_i({
-    stack_1,
+    stack_,
   });
   let b = js_statement_block_new(null);
-  property_set(stack_1, "alternate", b);
-  return;
+  property_set(stack_, "alternate", b);
 }
