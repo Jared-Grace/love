@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { text_combine } from "./text_combine.mjs";
-export async function functions_math_calls_pending() {
+export async function functions_builtin_calls_pending() {
   "Every function still calling a built-in Math method the repo keeps a name for, asked of the whole repo and answered without writing to a single file.";
   "The question is asked of the tree rather than of the text, because the text cannot answer it. A call handing over three things where the function beside it takes two is left standing on purpose, so a file spelling one of those would be named as pending forever and a sweep proving itself by asking again would never come back empty. Rewriting a parsed copy and seeing what moved asks exactly what the sweep will do.";
   "Only files that mention Math at all are parsed. The wider question is the same answer and several thousand parses more, and the word is right there in the source of every file that could possibly qualify.";
