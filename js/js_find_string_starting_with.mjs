@@ -1,7 +1,6 @@
+import { list_find_item_property } from "./list_find_item_property.mjs";
 import { property_starts_with } from "./property_starts_with.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_find } from "./list_find.mjs";
 import { js_node_to_block_item } from "./js_node_to_block_item.mjs";
 export function js_find_string_starting_with(ast, prefix) {
   "The line a written sentence sits on, found by how that sentence begins. This";
@@ -16,8 +15,7 @@ export function js_find_string_starting_with(ast, prefix) {
     let starts_is = property_starts_with(result, "value", prefix);
     return starts_is;
   }
-  let only = list_find(results, starting_is);
-  let node = property_get(only, "node");
+  let node = list_find_item_property(results, starting_is, "node");
   let item = js_node_to_block_item(ast, node);
   return item;
 }
