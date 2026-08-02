@@ -32,30 +32,9 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_examples",
-   "shadows_outer": [
-    "previous"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_code_lesson_console_log_remainder_generic",
-   "shadows_outer": [
-    "row"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_code_lesson_expression_remainder_divide",
    "shadows_outer": [
     "percent"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_code_lesson_quiz_token_select",
-   "shadows_outer": [
-    "token"
    ],
    "shadows_function": []
   },
@@ -68,25 +47,11 @@
    "shadows_function": []
   },
   {
-   "name": "app_g_bible_home_inner",
-   "shadows_outer": [
-    "passages"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_g_verify_home",
    "shadows_outer": [
     "chapter",
     "status",
     "chapter_state"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_replace_tests_proof_start_over_click",
-   "shadows_outer": [
-    "button"
    ],
    "shadows_function": []
   },
@@ -195,20 +160,6 @@
    "name": "machine_resumes_past_day",
    "shadows_outer": [
     "wrap"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "messenger_reply_messages",
-   "shadows_outer": [
-    "imgs"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "messenger_reply_unread_collect",
-   "shadows_outer": [
-    "page"
    ],
    "shadows_function": []
   },
