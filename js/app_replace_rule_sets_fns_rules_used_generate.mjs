@@ -1,3 +1,4 @@
+import { property_js_object_expression_properties } from "./property_js_object_expression_properties.mjs";
 import { js_flo_body_empty_return } from "./js_flo_body_empty_return.mjs";
 import { function_transform_exists_ensure } from "./function_transform_exists_ensure.mjs";
 import { object_adder_async } from "./object_adder_async.mjs";
@@ -9,7 +10,6 @@ import { app_replace_rules_parse } from "./app_replace_rules_parse.mjs";
 import { js_string } from "./js_string.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_object_to_expression } from "./js_object_to_expression.mjs";
-import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { js_property } from "./js_property.mjs";
 import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -38,8 +38,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
         return ru;
       }
       let rules_used = list_map(goals, lambda2);
-      let item = property_get(a, "item");
-      let properties = js_object_expression_properties(item);
+      let properties = property_js_object_expression_properties(a, "item");
       let p_name = "rules_used";
       let expression = js_object_to_expression(rules_used);
       let s = js_string(p_name);
