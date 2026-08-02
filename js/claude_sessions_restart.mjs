@@ -58,14 +58,14 @@ export async function claude_sessions_restart(minutes) {
     let same = equal(name, session);
     return same;
   }
-  async function claude_session_refill(session, pane, minutes) {
+  async function claude_session_refill(session, pane, minutes_given) {
     "Empty the session of every window except the one this was typed in, then give each saved session a window again.";
     "Killing comes before opening, not after: the sweep that clears the old windows cannot tell a window it just made from one left over, so opening first would throw away the new ones too.";
-    let sessions = await claude_sessions_recent(minutes);
+    let sessions = await claude_sessions_recent(minutes_given);
     if (not(sessions.length)) {
       let combined2 = text_combine_multiple([
         "Every Claude was closed and committed, but no transcript was written in the last ",
-        minutes,
+        minutes_given,
         " minutes, so there was nothing to reopen. Try a wider window?",
       ]);
       return combined2;
