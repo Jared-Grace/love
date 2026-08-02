@@ -28,7 +28,8 @@ export function literals_unnamed_generic(codes) {
     let ast = property_js_parse(codes, f_name);
     let skip = {};
     for (let declaration of js_imports_all(ast)) {
-      let source = property_get(declaration, "source");
+      let node = property_get(declaration, "node");
+      let source = property_get(node, "source");
       let path = js_literal_value_get(source);
       skip[path] = true;
     }
@@ -46,10 +47,12 @@ export function literals_unnamed_generic(codes) {
       if (not(b3)) {
         continue;
       }
-      if (property_get(skip, value)) {
+      let skipped = property_get_or_null(skip, value);
+      if (skipped) {
         continue;
       }
-      if (property_get(named, value)) {
+      let has_name = property_get_or_null(named, value);
+      if (has_name) {
         continue;
       }
       held[value] = true;
