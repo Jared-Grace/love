@@ -57,7 +57,7 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     let order_recall = app_code_container_light_blue(root);
     html_div_cycle_code(order_recall, [
-      "But we still cannot always swap the numbers around ",
+      "But we can never swap the numbers around ",
       "<",
       ", ",
       ">",
