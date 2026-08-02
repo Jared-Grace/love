@@ -9,8 +9,8 @@ export function digits_3_random_next() {
     function lambda3(la) {
       function lambda2(c) {
         function lambda5() {
-          let next = digit_count_values_shuffled_next(c);
-          return next;
+          let next_value = digit_count_values_shuffled_next(c);
+          return next_value;
         }
         let next = property_initialize_lambda(data, c, lambda5);
         let v2 = next();
