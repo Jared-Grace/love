@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_comparing_true_false } from "./app_code_lesson_expression_comparing_true_false.mjs";
 import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
@@ -168,6 +169,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
+    app_code_lesson_expression_comparing_true_false,
   ];
   return fns;
 }
