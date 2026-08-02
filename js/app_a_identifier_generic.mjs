@@ -71,17 +71,17 @@ export function app_a_identifier_generic(
       fn: async function lambda15() {
         let r = app_a_overlay_on_enter(on_enter, o3, a);
         let o = property_get(r, "overlay_result");
-        let overlay = property_get(o, "overlay");
-        let oc = property_get(r, "container");
+        let overlay_change = property_get(o, "overlay");
+        let oc_change = property_get(r, "container");
         let text = property_get(change, "text");
         let text2 = text_combine(text, " from:");
-        let div2 = html_div_text(oc, text2);
-        let div = html_div_text(oc, name);
+        let div2 = html_div_text(oc_change, text2);
+        let div = html_div_text(oc_change, name);
         let text3 = text_combine(text, " to:");
-        html_div_text(oc, text3);
+        html_div_text(oc_change, text3);
         let fn = null;
         fn = ternary(lines_multiple, app_a_textarea, app_a_input);
-        let input = fn(overlay);
+        let input = fn(overlay_change);
         if (lines_multiple) {
           let row_count = 20;
           html_rows_set(input, row_count);
@@ -96,7 +96,7 @@ export function app_a_identifier_generic(
           await on_change(value_new);
           await app_a_function_on_change(a, o);
         }
-        let component = app_a_button_wide(overlay, text, on_enter);
+        let component = app_a_button_wide(overlay_change, text, on_enter);
       },
     };
     let to = object_merge_set(change, c);
@@ -117,13 +117,13 @@ export function app_a_identifier_generic(
           let lambda22 = html_on_enter_lambda(lambda23);
           overlay_close();
           let o2 = app_a_overlay_keydown(a, lambda22);
-          let overlay = property_get(o2, "overlay");
-          let oc = app_a_overlay_container_centered(overlay);
+          let overlay_delete = property_get(o2, "overlay");
+          let oc_delete = app_a_overlay_container_centered(overlay_delete);
           let div3 = html_div_text(
-            oc,
+            oc_delete,
             "How many statements do you want to delete?",
           );
-          let input = app_a_input_integer(overlay);
+          let input = app_a_input_integer(overlay_delete);
           html_centered(input);
           html_value_set(input, 1);
           await html_select(input);
@@ -135,7 +135,7 @@ export function app_a_identifier_generic(
             let removals = list_remove_at_count(list, index, value_new);
             await app_a_function_on_change(a, o2);
           }
-          let component = app_a_button_wide(overlay, "Delete", lambda23);
+          let component = app_a_button_wide(overlay_delete, "Delete", lambda23);
         },
       },
       {
@@ -188,7 +188,7 @@ export function app_a_identifier_generic(
         e1,
       });
       function lambda7() {
-        let c = {
+        let choice_assign = {
           shortcut: "g",
           text: "Assign result",
           fn: async function lambda() {
@@ -209,13 +209,13 @@ export function app_a_identifier_generic(
             await app_a_function_on_change(a, o3);
           },
         };
-        list_add(choices, c);
+        list_add(choices, choice_assign);
       }
       js_node_type_is_if(e1, "CallExpression", lambda7);
     }
     js_node_type_is_if(e, "ExpressionStatement", lambda6);
     function lambda4() {
-      let c = {
+      let choice_param_delete = {
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {
@@ -224,7 +224,7 @@ export function app_a_identifier_generic(
           await app_a_function_overlay_refresh(a, o3);
         },
       };
-      list_add(choices, c);
+      list_add(choices, choice_param_delete);
     }
     js_node_type_is_if(e, "FunctionDeclaration", lambda4);
   }
