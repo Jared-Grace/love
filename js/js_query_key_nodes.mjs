@@ -1,12 +1,11 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_add } from "./list_add.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { not } from "./not.mjs";
 export function js_query_key_nodes(ast) {
@@ -29,8 +28,7 @@ export function js_query_key_nodes(ast) {
       return;
     }
     let args = property_get(node, "arguments");
-    let count = list_size(args);
-    let empty = less_than(count, 1);
+    let empty = list_size_less_than_value(args, 1);
     if (empty) {
       return;
     }
