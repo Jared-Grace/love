@@ -1,3 +1,4 @@
+import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
@@ -6,7 +7,6 @@ import { list_includes } from "./list_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 export function js_native_callback_imported(ast) {
   "every place this file hands an IMPORTED name straight to a native array method as its callback";
   "the method passes the index and the whole list after the item, so a repo function that counts its own arguments throws the moment it is called - and the repo has a sweep whose whole job is to add that count to functions that lack it, so a site that works today is one sweep away from throwing";
@@ -33,8 +33,7 @@ export function js_native_callback_imported(ast) {
       continue;
     }
     let args = property_get(call, "arguments");
-    let left = list_size(args);
-    let one = equal(left, 1);
+    let one = list_size_1(args);
     if (not(one)) {
       continue;
     }
