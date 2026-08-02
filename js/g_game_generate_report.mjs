@@ -1,3 +1,6 @@
+import { multiply_divide } from "./multiply_divide.mjs";
+import { round } from "./round.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { g_game_generate } from "./g_game_generate.mjs";
