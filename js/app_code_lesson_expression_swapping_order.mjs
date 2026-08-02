@@ -91,7 +91,7 @@ export function app_code_lesson_expression_swapping_order() {
     ]);
     let swappers = app_code_container_light_blue(root);
     html_div_cycle_code(swappers, [
-      "Only ",
+      "So far, only ",
       "+",
       " and ",
       "*",
