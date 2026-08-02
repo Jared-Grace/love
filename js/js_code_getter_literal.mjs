@@ -1,3 +1,4 @@
+import { json_from } from "./json_from.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -30,7 +31,7 @@ export function js_code_getter_literal(code, f_name) {
   ("stops being watched by asking this.");
   let frozen = [...body.matchAll(/text_frozen\(\s*("(?:[^"\\]|\\.)*")\s*\)/g)];
   function frozen_text(found) {
-    let text = JSON.parse(found[1]);
+    let text = json_from(found[1]);
     return text;
   }
   let texts = list_map_unique(frozen, frozen_text);
@@ -44,14 +45,14 @@ export function js_code_getter_literal(code, f_name) {
   }
   let direct = body.match(/return\s+("(?:[^"\\]|\\.)*")\s*;/);
   if (direct) {
-    let r2 = JSON.parse(direct[1]);
+    let r2 = json_from(direct[1]);
     return r2;
   }
   let named = body.match(
     /let\s+([A-Za-z_$][\w$]*)\s*=\s*("(?:[^"\\]|\\.)*")\s*;\s*return\s+\1\s*;/,
   );
   if (named) {
-    let r3 = JSON.parse(named[2]);
+    let r3 = json_from(named[2]);
     return r3;
   }
   let r4 = "";
