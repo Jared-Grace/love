@@ -1,3 +1,4 @@
+import { marker_next_node } from "./marker_next_node.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -6,7 +7,6 @@ import { js_statement_call_get } from "./js_statement_call_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { list_get } from "./list_get.mjs";
-import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { function_current_get } from "./function_current_get.mjs";
@@ -18,8 +18,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
-      let v = marker_next_get(a);
-      let next = property_get(v, "next");
+      let next = marker_next_node(a);
       let v2 = js_statement_call_get(next);
       if (null_is(v2)) {
         return;
