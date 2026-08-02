@@ -1,7 +1,7 @@
+import { property_js_object_expression_properties } from "./property_js_object_expression_properties.mjs";
 import { list_find_item_property } from "./list_find_item_property.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_list_type } from "./js_list_type.mjs";
-import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { list_any } from "./list_any.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,8 +15,7 @@ export function js_find_object_containing_text(ast, text) {
   "inner are both correct answers with no way to ask for the one meant.";
   let vs = js_list_type(ast, "ObjectExpression");
   function containing_is(v) {
-    let node = property_get(v, "node");
-    let properties = js_object_expression_properties(node);
+    let properties = property_js_object_expression_properties(v, "node");
     function says_is(property) {
       let value = property_get(property, "value");
       let literal_is = js_literal_is(value);
