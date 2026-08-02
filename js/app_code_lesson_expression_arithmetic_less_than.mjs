@@ -1,5 +1,5 @@
+import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
-import { html_div } from "./html_div.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -212,8 +212,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   let next_arg = list_iterator_refillable(refill);
   function above(root) {
     "the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from the < comparison so nothing is hand-typed";
-    let header = app_code_container_light_blue(root);
-    let line = html_div(header);
+    let line = app_code_container_light_blue_div(root);
     html_span_text(line, "We always do the ");
     let four = js_operators_arithmetic();
     let o = js_operator_double_asterisk();
