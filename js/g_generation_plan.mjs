@@ -41,7 +41,7 @@ export function g_generation_plan() {
   ("Arc length is the quantity that can fail to schedule, because an arc of nine conversations needs nine separate days to be spent in.");
   let days_fit = less_than_equal(s.arc_conversations_maximum, s.plant_days);
   let leader_days_fit = less_than_equal(
-    s.leader_conversations_maximum,
+    leader_conversations_maximum,
     s.plant_days,
   );
   let r = {
@@ -52,7 +52,10 @@ export function g_generation_plan() {
     question_matches,
     arc_matches,
     arc_conversations,
+    leader_conversations_minimum,
+    leader_conversations_maximum,
     leader_conversations,
+    leader_turns,
     other_conversations,
     npcs_fewest,
     npcs_most,
