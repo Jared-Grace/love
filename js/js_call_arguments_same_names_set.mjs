@@ -1,3 +1,4 @@
+import { list_intersect } from "./list_intersect.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,4 +14,5 @@ export async function js_call_arguments_same_names_set(ast, selects) {
   let declaration = property_get(d, "declaration");
   let names_param = js_function_declaration_params_names(declaration);
   let names_bound = js_binding_names(ast);
+  let intersection = list_intersect(names_param, other);
 }
