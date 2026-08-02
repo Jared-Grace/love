@@ -5,7 +5,6 @@ import { function_name_extension } from "./function_name_extension.mjs";
 import { js_math_calls_rewrite } from "./js_math_calls_rewrite.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { path_join } from "./path_join.mjs";
 import { property_get } from "./property_get.mjs";
 import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
