@@ -3412,6 +3412,63 @@ def awk_text_tool_deny_reason(program):
     )
 
 
+DAEMON_UNIT_PREFIX = "love_"
+
+
+def find_journalctl_daemon_unit(command):
+    """If any statement/pipe segment in `command` reads the journal of one of
+    THIS repo's daemons (`journalctl ... -u love_<name>`), return that unit name
+    so main() can DENY it with a pointer at the named reader. Else None.
+
+    Deliberately narrow: only units carrying the love_ prefix this repo gives
+    its own systemd units are matched, so `journalctl -u sshd`, a boot log, or
+    any other unit falls through to normal handling untouched. journalctl itself
+    is not the hazard here - it is that the repo already has an argumentless
+    function answering this question for every daemon at once, which the guard
+    can name at the moment somebody types the raw command instead.
+
+    Quote-aware and prefix-unwrapping like the other floor finders; an
+    unparseable command returns None and falls through. Safe as a floor:
+    journalctl is never in the allow-list, so this only ever converts an 'ask'
+    into a self-correcting 'deny', never blocks something that would have
+    auto-approved."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if not words or words[0] != "journalctl":
+            continue
+        for index, word in enumerate(words):
+            if index == 0:
+                continue
+            unit = None
+            if word in ("-u", "--unit") and index + 1 < len(words):
+                unit = words[index + 1]
+            elif word.startswith("--unit="):
+                unit = word[len("--unit="):]
+            elif word.startswith("-u") and len(word) > 2:
+                unit = word[2:]
+            if unit is not None and unit.startswith(DAEMON_UNIT_PREFIX):
+                return unit
+    return None
+
+
+def journalctl_daemon_unit_deny_reason(unit):
+    return (
+        f"`journalctl -u {unit}` is refused: this repo's own daemons already "
+        "have a named reader. Run `node scripts/ai.mjs daemons_journal_recent` "
+        "instead - it answers for every love_ daemon at once, keyed by the "
+        "function name, so a mistyped unit cannot come back empty and read as a "
+        "quiet daemon. It takes no arguments, which is what lets it hold a "
+        "standing approval where the single-daemon form cannot. For whether a "
+        "daemon is up rather than what it has said, use `node scripts/ai.mjs "
+        "daemons_status`. Units outside this repo are not refused - only love_ "
+        "ones are, because only those have a function that already answers."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "

@@ -1,3 +1,4 @@
+import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
 import { list_map_first_upper_join } from "./list_map_first_upper_join.mjs";
 import { list_map_cycle } from "./list_map_cycle.mjs";
 import { list_shuffle_cycled_size } from "./list_shuffle_cycled_size.mjs";
@@ -13,9 +14,6 @@ import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { languages_popular } from "./languages_popular.mjs";
 import { list_to_text_or_list } from "./list_to_text_or_list.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_code_verse_words } from "./app_code_verse_words.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_letters_spaces() {
@@ -61,8 +59,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     ]);
   }
   function batch_get() {
-    let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = app_code_verse_words_letters_only();
     let counts = [2, 2, 3, 3];
     let list = list_slices_size_cycler(mapped, counts, 1);
     list_shuffle_cycled_size(list, counts);

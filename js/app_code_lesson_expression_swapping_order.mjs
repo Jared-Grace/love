@@ -1,9 +1,9 @@
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_swapping_order() {
   "the third swapping lesson: the ordering comparisons < > <= >=, which FLIP when swapped. The reason is understood, not memorised: if 2 < 3 is true then 3 < 2 is false, because swapping would say the bigger number is now the smaller one. + and * are recalled as the ones that can swap, so the quiz mixes them (true) with < > <= >= (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -20,7 +20,16 @@ export function app_code_lesson_expression_swapping_order() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_cycle_code(parent, ["swapping ", "<", " ", ">", " ", "<=", " ", ">="]);
+        html_cycle_code(parent, [
+          "swapping ",
+          "<",
+          " ",
+          ">",
+          " ",
+          "<=",
+          " ",
+          ">=",
+        ]);
       }
       return render;
     }

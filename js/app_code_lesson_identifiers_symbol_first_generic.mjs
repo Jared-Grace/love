@@ -1,3 +1,4 @@
+import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers_valid.mjs";
 import { list_map_index } from "./list_map_index.mjs";
@@ -16,17 +17,13 @@ import { list_size } from "./list_size.mjs";
 import { list_slices_size_cycler } from "./list_slices_size_cycler.mjs";
 import { list_items_double } from "./list_items_double.mjs";
 import { range_from } from "./range_from.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
-import { app_code_verse_words } from "./app_code_verse_words.mjs";
-import { list_map } from "./list_map.mjs";
 export function app_code_lesson_identifiers_symbol_first_generic(
   name_id,
   above,
   on_question,
 ) {
   function batch_get() {
-    let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = app_code_verse_words_letters_only();
     let min = 1;
     let max = 2;
     let counts = range_from(min, max);

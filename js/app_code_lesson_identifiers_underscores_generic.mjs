@@ -1,3 +1,4 @@
+import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_multiply_3_random_doubled } from "./list_multiply_3_random_doubled.mjs";
@@ -18,9 +19,6 @@ import { list_size } from "./list_size.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { list_cycler } from "./list_cycler.mjs";
 import { list_slices_size_cycles_shuffled } from "./list_slices_size_cycles_shuffled.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_code_verse_words } from "./app_code_verse_words.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -84,8 +82,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     }
   }
   function batch_get() {
-    let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = app_code_verse_words_letters_only();
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
     let separators_invalid_next = list_cycler([
       [separator_invalid],
