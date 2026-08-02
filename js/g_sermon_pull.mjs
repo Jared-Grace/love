@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { g_sermon_generate_chapter_passages_get } from "./g_sermon_generate_chapter_passages_get.mjs";
 import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
@@ -9,20 +11,34 @@ import { g_verify_book_name } from "./g_verify_book_name.mjs";
 ('(original | parsing | gloss ⟵ Strong\'s root definition). key is "5" or grouped "19,20".');
 export async function g_sermon_pull(chapter, key) {
   let passages = await g_sermon_generate_chapter_passages_get(chapter);
-  let p = passages.find((x) => x.verse_numbers.join(",") === key);
+  function lambda(x) {
+    let left = x.verse_numbers.join(",");
+    let eq = equal(left, key);
+    return eq;
+  }
+  let p = passages.find(lambda);
   console.log("chapter:", chapter);
-  console.log("vv:", json_to(p.verse_numbers));
+  let json = json_to(p.verse_numbers);
+  console.log("vv:", json);
   console.log("GREEK  :", p.original);
   console.log("ENGLISH:", p.text);
-  console.log("GENERATED:", p.sermon.replace(/\\r\\n/g, " / "));
+  let v2 = p.sermon.replace(/\\r\\n/g, " / ");
+  console.log("GENERATED:", v2);
   console.log("--- tokens ---");
   let toks = g_sermon_passage_words(p.text);
-  console.log(toks.map((w, i) => i + ":" + w).join("  "));
+  function lambda2(w, i) {
+    let r = i + ":" + w;
+    return r;
+  }
+  let v3 = toks.map(lambda2).join("  ");
+  console.log(v3);
   console.log(
     "--- interlinear: original | parsing | gloss  ⟵ Strong's root definition ---",
   );
-  let book = g_verify_book_name(chapter.slice(0, 3));
-  let chapter_number = Number(chapter.slice(3));
+  let book_code = chapter.slice(0, 3);
+  let book = g_verify_book_name(book_code);
+  let v4 = chapter.slice(3);
+  let chapter_number = Number(v4);
   for (let v of p.verse_numbers) {
     let ref = book + " " + chapter_number + ":" + v;
     console.log("[" + ref + "]");
@@ -30,7 +46,7 @@ export async function g_sermon_pull(chapter, key) {
     for (let w of words) {
       let def = w.strong ? await strongs_greek_definition(w.strong) : null;
       let root = def ? (def.strongs_def || "").trim().replace(/\s+/g, " ") : "";
-      if (root.length > 110) {
+      if (greater_than(root.length, 110)) {
         root = root.slice(0, 110) + "…";
       }
       console.log(
