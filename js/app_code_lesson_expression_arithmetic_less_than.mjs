@@ -1,3 +1,4 @@
+import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
@@ -321,8 +322,8 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     example_count: 4,
     decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
-    forwards_answer_label: "value: ",
-    backwards_question_label: "value: ",
+    forwards_answer_label: app_code_label_value(),
+    backwards_question_label: app_code_label_value(),
     backwards_answer_label: "What code gives this value? ",
     forwards_answer_count_override: 2,
   });
