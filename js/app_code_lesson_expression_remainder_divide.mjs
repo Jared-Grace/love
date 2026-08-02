@@ -1,4 +1,4 @@
-import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
+import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -30,8 +30,7 @@ export function app_code_lesson_expression_remainder_divide() {
   let percent = property_get(operator, "operator");
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the remainder formula a - Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven and the remainder is real";
-    let parts = app_code_uneven_dividend(quotient, divisor);
-    let dividend = property_get(parts, "dividend");
+    let dividend = app_code_uneven_dividend_only(quotient, divisor);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let t = text_to(divisor);
     let whole_part = text_combine_multiple([
