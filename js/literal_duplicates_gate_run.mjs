@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { literal_duplicates_unambiguous } from "./literal_duplicates_unambiguous.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -19,7 +20,7 @@ export async function literal_duplicates_gate_run() {
   let repair = fn_name("literal_duplicates_repair");
   for (let offender of offenders) {
     let joined = list_join_comma(offender.files);
-    console.log("SPELLED OUT  " + JSON.stringify(offender.literal));
+    console.log("SPELLED OUT  " + json_to(offender.literal));
     console.log("  named by   " + offender.f_name);
     console.log("  spelled in " + joined);
     console.log(
