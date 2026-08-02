@@ -1,6 +1,5 @@
 import { process_record_or_null } from "./process_record_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import fs from "fs";
 import { text_split } from "./text_split.mjs";
 import { text_zero_character } from "./text_zero_character.mjs";
 import { list_filter } from "./list_filter.mjs";

@@ -4,7 +4,6 @@ import { function_command_seams_reached_memo } from "./function_dependency_path.
 import { catch_null_async } from "./catch_null_async.mjs";
 import { property_set } from "./property_set.mjs";
 export async function functions_command_seams_reached(names_comma) {
-  "The shortest run of imports from each of several functions down to one other function, asked in one command - one answer per starting name, and nothing against a name that cannot reach it at all.";
   ("The question is almost never asked about one starting point. It is asked about every app at once, or about every function holding a standing approval at once, because what is really being asked is whether anything in a whole family reaches something it must not - and the log shows exactly that, twenty-five apps traced to ",
     fn_name("file_overwrite_buffer"),
     " one command at a time, then the same twenty-five again.");

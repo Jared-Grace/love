@@ -12,19 +12,8 @@ export function app_shared_gradient_color(index, count) {
   if (greater_than(last, 0)) {
     t = divide(index, last);
   }
-  let f = subtract(1, t);
-  let left = multiply(37, f);
-  let right = multiply(100, t);
-  let n = add(left, right);
-  let r = round(n);
-  let left2 = multiply(99, f);
-  let right2 = multiply(116, t);
-  let n2 = add(left2, right2);
-  let g = round(n2);
-  let left3 = multiply(235, f);
-  let right3 = multiply(139, t);
-  let n3 = add(left3, right3);
-  let b = round(n3);
-  let color = text_combine_multiple(["rgb(", r, ", ", g, ", ", b, ")"]);
+  let brand = [37, 99, 235];
+  let deemphasized = [100, 116, 139];
+  let color = color_between(t, brand, deemphasized);
   return color;
 }

@@ -1,7 +1,6 @@
 import { process_record_or_null } from "./process_record_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_split_last } from "./text_split_last.mjs";
-import fs from "fs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_trim } from "./text_trim.mjs";
 export function process_stat_fields_or_null(pid) {
