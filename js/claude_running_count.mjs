@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { property_get } from "./property_get.mjs";
 import { command_line_code_ignore } from "./command_line_code_ignore.mjs";
 ("How many Claude sessions are alive on this machine right now.");
@@ -8,9 +9,11 @@ import { command_line_code_ignore } from "./command_line_code_ignore.mjs";
 export async function claude_running_count() {
   let result = await command_line_code_ignore("pgrep -x claude");
   let stdout = property_get(result, "stdout");
-  let lines = stdout.split("\n").filter(function lambda(line) {
-    let filled = line.trim().length > 0;
+  function lambda(line) {
+    let filled = greater_than(line.trim().length, 0);
     return filled;
-  });
-  return lines.length;
+  }
+  let lines = stdout.split("\n").filter(lambda);
+  let r = lines.length;
+  return r;
 }
