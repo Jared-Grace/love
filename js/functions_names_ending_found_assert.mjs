@@ -1,7 +1,10 @@
 import { functions_names } from "./functions_names.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { list_filter_ends_with } from "./list_filter_ends_with.mjs";
-export async function functions_names_ending_found_assert(ending, missing_hint) {
+export async function functions_names_ending_found_assert(
+  ending,
+  missing_hint,
+) {
   "$plain ending";
   "$plain missing_hint";
   "Every function in this repo whose name ends in the words given, refusing outright when there are none.";
