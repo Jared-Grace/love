@@ -1,7 +1,6 @@
-import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { list_matching_single } from "./list_matching_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 export function js_array_element_identifier_find(elements, identifier_name) {
   arguments_assert(arguments, 2);
   ("The one entry of an ordered register standing for a given function. The twin");
@@ -16,8 +15,7 @@ export function js_array_element_identifier_find(elements, identifier_name) {
   ("once, and insisting would refuse the whole register rather than the entries");
   ("that really lack the name.");
   function same_is(element) {
-    let held = property_get_or_null(element, "name");
-    let same = equal(held, identifier_name);
+    let same = property_get_or_null_equal(element, "name", identifier_name);
     return same;
   }
   ("The counting and the refusing are shared with the twin. They were not, and");
