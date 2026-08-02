@@ -1,5 +1,4 @@
-import { ceil } from "./ceil.mjs";
-import { divide } from "./divide.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { g_day_lines } from "./g_day_lines.mjs";
 export async function g_sermon_chapter_days(chapter) {
@@ -8,7 +7,6 @@ export async function g_sermon_chapter_days(chapter) {
   "Rounded UP, because a part-day of sermon still needs a day to be preached in.";
   let lines = await g_sermon_chapter_lines(chapter);
   let per_day = g_day_lines();
-  let exact = divide(lines, per_day);
-  let r = ceil(exact);
+  let r = divide_ceil(lines, per_day);
   return r;
 }
