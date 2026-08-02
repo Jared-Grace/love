@@ -16,10 +16,10 @@ export async function browser_files_database_initialize() {
   let db = await new Promise(function lambda4(resolve, reject) {
     let req = indexedDB.open(db_name, version);
     req.onupgradeneeded = function lambda() {
-      let db = req.result;
-      let b = db.objectStoreNames.contains(store_files);
+      let db_upgrading = req.result;
+      let b = db_upgrading.objectStoreNames.contains(store_files);
       if (not(b)) {
-        db.createObjectStore(store_files, {
+        db_upgrading.createObjectStore(store_files, {
           keyPath: browser_files_path_key(),
         });
       }
