@@ -1,17 +1,18 @@
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { readdir, stat } from "fs/promises";
 import { path_join } from "./path_join.mjs";
 import { claude_sessions_folder } from "./claude_sessions_folder.mjs";
-"The sessions that were open when the machine went down, newest first.";
-"";
-"No bookkeeping file: a session that was open was being written to, so recency";
-"of the transcript IS the open-set. That also survives an unplanned reboot or a";
-"crash, which a \"save before you shut down\" snapshot would not.";
+("The sessions that were open when the machine went down, newest first.");
+("");
+("No bookkeeping file: a session that was open was being written to, so recency");
+("of the transcript IS the open-set. That also survives an unplanned reboot or a");
+('crash, which a "save before you shut down" snapshot would not.');
 const MINUTE_MS = 60 * 1000;
 const ENDING = ".jsonl";
 export async function claude_sessions_recent(minutes) {
   let folder = claude_sessions_folder();
   let names = await readdir(folder);
-  let cutoff = Date.now() - Number(minutes) * MINUTE_MS;
+  let cutoff = date_now_milliseconds() - Number(minutes) * MINUTE_MS;
   let recent = [];
   for (let name of names) {
     if (!name.endsWith(ENDING)) continue;
