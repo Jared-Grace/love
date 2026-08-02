@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
 import { null_is } from "./null_is.mjs";
@@ -16,7 +17,7 @@ export async function app_reply_verses_add(
 ) {
   "the reader's own order is kept, so the language they chose first is read first - the same way round as the chapter reader and the search results";
   let copy = list_copy(languages_chosen);
-  let mapped = list_map_property(copy, "bible_folder");
+  let mapped = list_map_property(copy, bible_folder_key());
   let verses = await ebible_references_parse_lines_browser(mapped, [reference]);
   function lambda(v) {
     if (null_is(v)) {
