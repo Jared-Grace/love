@@ -1,7 +1,6 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_parse_declaration_unaliased } from "./function_parse_declaration_unaliased.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -18,8 +17,10 @@ export async function function_new_sweep(f_name_single, f_name_new) {
   "The single form is named first and the new one second, the same order every other command that builds one function out of another takes";
   "Everything after the first parameter is carried straight through, because a question asked of several names is still asked with the same everything else - what is swept is the name, never the rest";
   let r = await function_parse_declaration_unaliased(f_name_single);
-  let declaration = property_get(r, "declaration");
-  let param_names = js_function_declaration_params_names(declaration);
+  let param_names = js_function_declaration_property_params_names(
+    r,
+    "declaration",
+  );
   let params_sweep = list_skip_1(param_names);
   list_add_first(params_sweep, "names_comma");
   let params_comma = list_join_comma(params_sweep);
