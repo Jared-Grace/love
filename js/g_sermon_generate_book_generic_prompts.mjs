@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -67,11 +68,11 @@ export async function g_sermon_generate_book_generic_prompts(
       let interlinear = property_get(chapters_interlinear, chapter_code);
       async function each_verse(verse, index) {
         let text = property_get(verse, "text");
-        let verse_number = property_get(verse, "verse_number");
+        let verse_number = property_get(verse, verse_number_key());
         function mapper(verses_chapter_folder) {
           let words = list_find_property_get(
             verses_chapter_folder,
-            "verse_number",
+            verse_number_key(),
             verse_number,
             "text",
           );
@@ -82,7 +83,7 @@ export async function g_sermon_generate_book_generic_prompts(
         if (verse_number !== "0") {
           let original_verse = list_find_property(
             interlinear,
-            "verse_number",
+            verse_number_key(),
             verse_number,
           );
           original = property_get(original_verse, "text");
