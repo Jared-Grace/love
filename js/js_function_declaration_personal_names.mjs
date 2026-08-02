@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
+import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
+import { js_declared_names } from "./js_declared_names.mjs";
+import { list_concat } from "./list_concat.mjs";
 export function js_function_declaration_personal_names(declaration) {
   arguments_assert(arguments, 1);
   ("Every name a function chose for itself: its own name, the names it gave the things handed to it, and the names it gave the things it made along the way.");
