@@ -20,14 +20,14 @@ export async function machine_resumes_past_day() {
     let wrapped = 'sg systemd-journal -c "' + journalctl_command + '"';
     return wrapped;
   }
-  async function journal_stdout(journalctl_arguments, wrap) {
+  async function journal_stdout(journalctl_arguments, wrap_given) {
     let journalctl_command = "journalctl " + journalctl_arguments;
-    let command = wrap(journalctl_command);
+    let command = wrap_given(journalctl_command);
     let printed = await command_line_stdout(command);
     return printed;
   }
-  async function journal_reachable(wrap) {
-    let probe = await journal_stdout("-k -o cat -n 1", wrap);
+  async function journal_reachable(wrap_given) {
+    let probe = await journal_stdout("-k -o cat -n 1", wrap_given);
     let reachable = not(text_empty_is(text_trim(probe)));
     return reachable;
   }
