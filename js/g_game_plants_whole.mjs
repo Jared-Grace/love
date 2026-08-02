@@ -1,3 +1,4 @@
+import { floor } from "./floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { round } from "./round.mjs";
 import { modulo } from "./modulo.mjs";
@@ -57,14 +58,15 @@ export function g_game_plants_whole(next, days_total) {
     for (let plant of plants) {
       let days = property_get(plant, "days_drawn");
       let part = multiply_divide(spare, days, days_spent);
-      let whole = Math.floor(part);
+      let whole = floor(part);
       plant.days = plant.days + whole;
       given = given + whole;
     }
     let residue = subtract(spare, given);
     for (let step = 0; less_than(step, residue); step++) {
       let along = modulo(step, held);
-      let at = subtract(held - 1, along);
+      let left = subtract(held, 1);
+      let at = subtract(left, along);
       let plant = plants[at];
       plant.days = plant.days + 1;
     }
