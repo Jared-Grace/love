@@ -1,8 +1,8 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { memory_hook_check } from "./memory_hook_check.mjs";
 export async function memory_hook_case_check(c) {
   "One case of the memory-path corpus: run the payload past the real hook and report the decision it actually produced alongside the one the corpus expects.";
@@ -15,8 +15,7 @@ export async function memory_hook_case_check(c) {
   let actual = property_get(result, "decision");
   let note = "";
   if (not_equal(reason_includes, "") && equal(actual, expected)) {
-    let reason = property_get(result, "reason");
-    let b = text_includes(reason, reason_includes);
+    let b = property_text_includes(result, "reason", reason_includes);
     if (not(b)) {
       note = "reason does not name " + reason_includes;
     }
