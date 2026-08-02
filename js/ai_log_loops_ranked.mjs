@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
@@ -68,7 +69,7 @@ export function ai_log_loops_ranked(entries) {
     let step = ai_log_step_name(entry);
     let before = property_or_null(previous, session);
     let value = property_or_null(entry, "args");
-    let signature = JSON.stringify(value);
+    let signature = json_to(value);
     let again = equal(before, step);
     if (again) {
       property_count_add(lengths, session, 1);
