@@ -1,7 +1,7 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { entries_versus_baseline } from "./entries_versus_baseline.mjs";
-import { entries_names_text } from "./entries_names_text.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
