@@ -1,8 +1,8 @@
+import { functions_shadowing_offender_hidden } from "./functions_shadowing_offender_hidden.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -20,9 +20,7 @@ export async function functions_shadowing_operator() {
   let found = [];
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
-    let outer = property_get(offender, "shadows_outer");
-    let over_function = property_get(offender, "shadows_function");
-    let hidden = list_concat(outer, over_function);
+    let hidden = functions_shadowing_offender_hidden(offender);
     function operator_is(word) {
       let b = list_includes(names, word);
       return b;

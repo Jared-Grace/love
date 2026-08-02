@@ -1,3 +1,4 @@
+import { functions_shadowing_offender_hidden } from "./functions_shadowing_offender_hidden.mjs";
 import { function_shadowing_function_rename } from "./function_shadowing_function_rename.mjs";
 import { function_shadowing_rename_refusal } from "./function_shadowing_rename_refusal.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
@@ -87,9 +88,7 @@ export async function functions_shadowing_rename_all(name, name_after) {
   let left = [];
   for (let offender2 of after) {
     let f_name2 = property_get(offender2, "name");
-    let outer2 = property_get(offender2, "shadows_outer");
-    let over_function2 = property_get(offender2, "shadows_function");
-    let both2 = list_concat(outer2, over_function2);
+    let both2 = functions_shadowing_offender_hidden(offender2);
     let hides2 = list_includes(both2, name);
     if (hides2) {
       list_add(left, f_name2);
