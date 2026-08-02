@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { bind } from "./bind.mjs";
 import { module_acorn_get } from "./module_acorn_get.mjs";
 import { invoke_until } from "./invoke_until.mjs";
@@ -10,7 +11,7 @@ export function js_tokenizer_with_eof(code) {
     let a = js_parse_generic_arg();
     let tokenizer = acorn.tokenizer(code, a);
     function end_is(token) {
-      let r = token.type.label === "eof";
+      let r = equal(token.type.label, "eof");
       return r;
     }
     let next_get = bind(tokenizer.getToken, tokenizer);
