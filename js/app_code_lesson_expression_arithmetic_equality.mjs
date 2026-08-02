@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_arithmetic_to_value } from "./app_code_arithmetic_to_value.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -16,20 +17,25 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_arithmetic_equality() {
   "the step from a comparison with arithmetic on ONE side (already learned - 8 === 3 + 5) to arithmetic on BOTH sides (3 + 4 === 5 + 2). The single new idea: each side is worked out to its own number FIRST, and only then are the two numbers compared - so two different-looking expressions can turn out equal. This is operator precedence: + and the other arithmetic operators bind tighter than ===, so the two sides collapse to numbers before === compares them; the intro says it with solve - a childhood math word, already the learner-facing vocabulary in the whole-part lessons (Solve the formula) - not runs, which is a code-execution term nowhere defined for the learner yet: we solve each side before the ===. Uses === alone, where the true/false answer is simply whether the two sides land on the same number, the most intuitive both-sides case; the other comparisons with arithmetic on both sides are a later step. Placed right after the arithmetic-comparison lesson, and it sets up the swapping lesson, which is this same both-sides shape with the very same expression mirrored on each side.";
   function equality(left, right) {
-    "one === comparison as a code string, both sides already built";
-    let code = text_combine_multiple([left, " === ", right]);
-    return code;
+    "one === comparison as { code, key }: code is the comparison string, key is the two sides' operators joined, so neighbouring examples can be kept from sharing an operator pair";
+    let code = text_combine_multiple([left.code, " === ", right.code]);
+    let key = text_combine_multiple([left.symbol, right.symbol]);
+    let example = {
+      code,
+      key,
+    };
+    return example;
   }
   function true_case() {
     "two different-looking arithmetic expressions of the SAME value, so === is true; a second try if the two happen to come out identical";
     let value = integer_random(2, 9);
     let left = app_code_arithmetic_to_value(value);
     let right = app_code_arithmetic_to_value(value);
-    let same = equal(left, right);
+    let same = equal(left.code, right.code);
     let right_retry = app_code_arithmetic_to_value(value);
     let right_final = ternary(same, right_retry, right);
-    let code = equality(left, right_final);
-    return code;
+    let example = equality(left, right_final);
+    return example;
   }
   function false_case() {
     "two arithmetic expressions of DIFFERENT values, so === is false; the right value is bumped above the left so they can never coincide";
@@ -38,17 +44,26 @@ export function app_code_lesson_expression_arithmetic_equality() {
     let value_other = add(value, bump);
     let left = app_code_arithmetic_to_value(value);
     let right = app_code_arithmetic_to_value(value_other);
-    let code = equality(left, right);
-    return code;
+    let example = equality(left, right);
+    return example;
   }
   function refill() {
-    "four examples a screen, true and false alternating, so the learner meets both outcomes each time";
-    let v = true_case();
-    let v2 = false_case();
-    let v3 = true_case();
-    let v4 = false_case();
-    let list = [v, v2, v3, v4];
-    return list;
+    "four examples a screen, true and false alternating so the learner meets both outcomes each time, and no two neighbours sharing an operator pair so the set looks varied (a neighbour is regenerated until its operator key differs)";
+    let makers = [true_case, false_case, true_case, false_case];
+    let codes = [];
+    let previous_key = "";
+    let i = 0;
+    while (less_than(i, makers.length)) {
+      let maker = makers[i];
+      let example = maker();
+      while (equal(example.key, previous_key)) {
+        example = maker();
+      }
+      codes.push(example.code);
+      previous_key = example.key;
+      i = add(i, 1);
+    }
+    return codes;
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
