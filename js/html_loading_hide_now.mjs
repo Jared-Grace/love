@@ -9,21 +9,15 @@ export function html_loading_hide_now() {
   ("remove the overlay the instant the work finishes, with no fade-out linger. paired with ",
     fn_name("html_loading_immediate"),
     " this makes a cached re-render flash-free: the overlay is created and removed inside one synchronous burst, so the browser never paints it, yet a genuinely slow re-render still shows the spinner the whole time it waits");
-  let state = html_loading_state();
-  state.count = subtract(state.count, 1);
-  if (greater_than(state.count, 0)) {
+  let last = html_loading_count_down_last_is();
+  if (not(last)) {
     return;
   }
-  state.count = 0;
+  let state = html_loading_state();
   let timer = state.timer;
   if (not_equal(timer, null)) {
     clearTimeout(timer);
     state.timer = null;
   }
-  let overlay = state.overlay;
-  if (equal(overlay, null)) {
-    return;
-  }
-  html_remove(overlay);
-  state.overlay = null;
+  html_loading_overlay_remove();
 }
