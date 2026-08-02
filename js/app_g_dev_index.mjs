@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
@@ -75,7 +76,7 @@ export function app_g_dev_index() {
     return card;
   }
   function render_node(parent, path, label, node) {
-    let child_labels = Object.keys(node.children).sort();
+    let child_labels = object_property_names(node.children).sort();
     if (equal(child_labels.length, 0)) {
       leaf_card(parent, label, node.hash);
       return;
@@ -111,7 +112,7 @@ export function app_g_dev_index() {
       render_node(body, path + "/" + cl, cl, node.children[cl]);
     }
   }
-  let top = Object.keys(tree.children).sort();
+  let top = object_property_names(tree.children).sort();
   for (let label of top) {
     render_node(div, label, label, tree.children[label]);
   }
