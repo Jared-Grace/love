@@ -14,7 +14,7 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
-export async function app_bible_verses(context) {
+export async function app_shared_bible_verses(context) {
   let n = await app_shared_bible_chapter_set_default(context);
   if (n) {
     return;
