@@ -10,7 +10,6 @@
   "html_checkboxes -> app_karate_button_background_invalid",
   "html_checkboxes -> app_karate_container_main",
   "html_checkboxes -> app_karate_validate_style_assign",
-  "app_code_html_update_latest_promote_deploy -> app_code",
   "karate_tests -> app_karate",
   "karate_tests -> app_karate_main_title",
   "karate_tests -> app_replace_url_dev",
