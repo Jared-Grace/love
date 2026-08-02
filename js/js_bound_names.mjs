@@ -10,10 +10,7 @@ export function js_bound_names(ast) {
   "Every name a file binds for itself, counting the ones it declares and the ones it takes as parameters. A name on this list means something local inside this file, whatever else it may mean elsewhere.";
   "Parameters are the reason this exists rather than the declaration list alone. A function taking an argument called after some other function looks, to anything reading names out of the text, exactly like a use of that other function - and treating it as one produced a file that called its own string argument as though it were code.";
   let declared = js_declared_names(ast);
-  let functions = js_list_type_nodes(ast, "FunctionDeclaration");
-  let expressions = js_list_type_nodes(ast, "FunctionExpression");
-  let arrows = js_list_type_nodes(ast, "ArrowFunctionExpression");
-  let all = list_concat_multiple([functions, expressions, arrows]);
+  let all = js_list_function_nodes(ast);
   function params_of(node) {
     let params = property_get(node, "params");
     function identifier_is(param) {
