@@ -15,11 +15,14 @@ export async function function_import(f_name) {
   let imported = await import(text_combine("file://", f_path));
   let imported_fn = imported[f_name];
   if (typeof imported_fn !== "function") {
+    ("Said as a named export rather than a default one, because that is what this reads and the two send a reader to different places. The old wording asked for a default export, so the one thing to try was the one thing that would never work.");
     throw new Error(
       text_combine_multiple([
-        '❌ The module "',
+        "the file at ",
+        f_path,
+        " does not export a function called ",
         f_name,
-        '" does not export a default function.',
+        " - a file here is named after the one function it hands out, so either the export inside it is spelt differently or this is asking for the wrong file",
       ]),
     );
   }
