@@ -27,11 +27,8 @@ export function app_code_lesson_expression_swapping_add() {
       return render;
     }
     let rights = ["swapping plus times"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
+    let left = app_code_category_expressions();
+    let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
   function above(root) {
@@ -100,6 +97,9 @@ export function app_code_lesson_expression_swapping_add() {
       "-1",
       " are different, so we can never swap two different numbers around ",
       "-",
+    ]);
+    html_div_cycle_code(minus, [
+      "However, we can always swap two numbers that are the same, because the code is the same before and after",
     ]);
   }
 }
