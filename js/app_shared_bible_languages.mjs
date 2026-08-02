@@ -7,7 +7,7 @@ import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
-import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
+import { app_shared_bible_subset_screen_generic } from "./app_shared_bible_subset_screen_generic.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
@@ -27,7 +27,7 @@ export function app_shared_bible_languages(context) {
   ("reached from the settings hub, so back returns there");
   let back = app_shared_screen_later(context, app_shared_bible_settings);
   let choices_label = app_shared_languages_prompt_text();
-  app_bible_subset_screen_generic(
+  app_shared_bible_subset_screen_generic(
     context,
     languages,
     languages_chosen,
