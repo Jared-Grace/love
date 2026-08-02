@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_worker_pool_run } from "./function_worker_pool_run.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -13,7 +14,7 @@ export async function function_worker_pool_run_try() {
       throw new Error(
         text_combine_multiple([
           "the pool answered ",
-          JSON.stringify(got),
+          json_to(got),
           " for ",
           fn_name("identity"),
           "(",
