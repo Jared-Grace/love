@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { list_second } from "./list_second.mjs";
 import { file_exists_not } from "./file_exists_not.mjs";
@@ -96,8 +97,7 @@ export async function permission_settings_local_dangling_remove() {
   await file_overwrite_json(path, settings);
   ("Asked again off the file just written, so what comes back is what the gates will read rather than what this meant to leave. An empty remaining is the proof; anything else is a rule this could not account for and is worth reading");
   let after = await file_read_json(path);
-  let after_permissions = property_get(after, "permissions");
-  let after_allow = property_get(after_permissions, "allow");
+  let after_allow = property_path_get_2(after, "permissions", "allow");
   let remaining = [];
   for (let rule of after_allow) {
     let dangling2 = dangling_is(rule);
