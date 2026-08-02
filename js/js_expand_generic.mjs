@@ -85,8 +85,8 @@ export async function js_expand_generic(next, stack_2, ast) {
       let declaration_call = property_get(v, "declaration");
       let nnd = null_not_is(declaration_call);
       if (nnd) {
-        let name = js_function_declaration_name(declaration_call);
-        let assign = js_declare(name, argument);
+        let name_declared = js_function_declaration_name(declaration_call);
+        let assign = js_declare(name_declared, argument);
         list_add(body_block, assign);
       } else {
         let assignment = property_get(v, "assignment");
