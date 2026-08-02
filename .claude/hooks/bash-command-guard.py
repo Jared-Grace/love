@@ -3671,14 +3671,7 @@ def main():
     # so it never shadows the sanctioned (allowed) form.
     near_miss_path = find_sandbox_path_near_miss(command)
     if near_miss_path is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": sandbox_path_near_miss_deny_reason(),
-            }
-        }))
-        return
+        return decide("deny", sandbox_path_near_miss_deny_reason())
 
     # Raw `git add`/`git commit`: Claude commits only through the sanctioned
     # function (ai_git / git_ac_call_folder_try), so deny with that redirect
@@ -3690,14 +3683,7 @@ def main():
     # 'deny', never blocks something that would have auto-approved.
     git_write = find_git_commit_write(command)
     if git_write is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": git_commit_write_deny_reason(git_write),
-            }
-        }))
-        return
+        return decide("deny", git_commit_write_deny_reason(git_write))
 
     # awk (or a gawk/mawk/nawk variant) in any segment: Turing-complete, can
     # exec (`system(...)`) and write files, so never auto-trusted - but in this
