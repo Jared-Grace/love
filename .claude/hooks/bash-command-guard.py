@@ -2890,6 +2890,60 @@ def path_taking_name_twin_ask_reason(fn, twin, name):
     )
 
 
+PKILL_ADVICE_TWIN = "process_end"
+
+
+def pkill_advice_pattern(command):
+    """If `command` is a lone `pkill` that nothing granted, return the word it
+    matches on; else None.
+
+    A pkill that reaches here is one no rule spells, so it is about to cost a
+    prompt with no message in it, and it will cost that prompt every time it
+    is written again - the recurring targets already hold exact-text rules and
+    the rest are one-offs, so there is no rule to add that would end this.
+    What ends it is not sweeping: `pgrep -af` is allow-listed and prints the
+    set, `process_end` takes one pid and is allow-listed too, so the pair asks
+    nothing and ends exactly what was looked at.
+
+    That is a different kind of advice from the twin above - it does not name
+    a substitute for the target, because no granted pkill is a substitute for
+    another one. Killing vite does not kill webpack. It names a substitute for
+    the SHAPE.
+
+    The last word is the pattern: every spelling here is a flag or two and
+    then the thing to match. Nothing is advised when there is no such word,
+    and nothing when process_end has gone from the repo, because the advice
+    has to name a command that answers."""
+    statements = list(statements_words(command))
+    if len(statements) != 1:
+        return None
+    words = statements[0]
+    if not words or words[0] != "pkill" or len(words) < 2:
+        return None
+    live_names = repos_function_names()
+    if not live_names or PKILL_ADVICE_TWIN not in live_names:
+        return None
+    pattern = words[-1]
+    if not pattern or pattern.startswith("-"):
+        return None
+    return pattern
+
+
+def pkill_advice_ask_reason(pattern):
+    return (
+        "`pkill` ends EVERY process matching, sight unseen, and this exact "
+        "text has no rule - so this prompt returns every time it is written. "
+        "Two commands do the same job and both are already auto-approved:\n"
+        f"  - `pgrep -af {pattern}` prints what would die\n"
+        f"  - `node scripts/ai.mjs {PKILL_ADVICE_TWIN} <pid>` ends the one "
+        "you meant\n"
+        "That matters with several of us in this one directory: pkill matches "
+        "by command line, not by owner, so a sweep aimed at your own gate run "
+        "ends every peer's as well. A pid cannot do that by accident.\n"
+        "Approving this one is fine if the sweep really is what you meant."
+    )
+
+
 def argumentless_dispatcher_deny_reason(name, count):
     return (
         f"`{name}` declares {count} parameter(s) and this call supplies none, "
@@ -3839,6 +3893,17 @@ def main():
                 "permissionDecisionReason": path_taking_name_twin_ask_reason(
                     fn, twin, name
                 ),
+            }
+        }))
+        return
+
+    pattern = pkill_advice_pattern(command)
+    if pattern is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "ask",
+                "permissionDecisionReason": pkill_advice_ask_reason(pattern),
             }
         }))
         return
