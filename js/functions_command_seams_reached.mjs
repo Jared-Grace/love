@@ -1,5 +1,5 @@
 import { text_split_comma_dot_trim } from "./text_split_comma_dot_trim.mjs";
-import { function_command_seams_reached_memo } from "./function_dependency_path.mjs";
+import { function_command_seams_reached_memo } from "./function_command_seams_reached_memo.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { property_set } from "./property_set.mjs";
 export async function functions_command_seams_reached(names_comma) {
