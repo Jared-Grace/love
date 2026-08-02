@@ -1,7 +1,7 @@
 import { list_last } from "./list_last.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { app_shared_bible_chapter_change } from "./app_shared_bible_chapter_change.mjs";
-export async function app_bible_chapter_previous_last_verse(
+export async function app_shared_bible_chapter_previous_last_verse(
   context,
   chapter_code,
 ) {
