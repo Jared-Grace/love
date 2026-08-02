@@ -1,0 +1,20 @@
+import { functions_names } from "./functions_names.mjs";
+import { list_filter_ends_with } from "./list_filter_ends_with.mjs";
+import { qa_gates } from "./qa_gates.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { functions_gate_run_unwired_exempt } from "./functions_gate_run_unwired_exempt.mjs";
+export async function functions_gate_run_unwired() {
+  "The gates this repo has written and never listed, so nothing ever runs them.";
+  "A gate is a function whose name ends in the two words the whole-repo gate's own members end in, and it is run by being a member of that list and by nothing else. So a gate that was written, tested by hand once, and never added is not a weak gate - it is a gate that has never run, and it reads exactly like the ones that do: same name, same shape, green when you call it.";
+  "This is the quiet half of a check the repo already makes in the other direction. An orphaned corpus is caught because a corpus with nobody reading it is easy to spot from the corpus. A gate nobody runs cannot be spotted from the gate at all - only from the list.";
+  let f_names = await functions_names();
+  let gate_names = list_filter_ends_with(f_names, "_gate_run");
+  let gates = qa_gates();
+  let wired = list_map_property(gates, "name");
+  let unwired = list_difference(gate_names, wired);
+  let exempt = functions_gate_run_unwired_exempt();
+  let excused = list_map_property(exempt, "name");
+  let missing = list_difference(unwired, excused);
+  return missing;
+}
