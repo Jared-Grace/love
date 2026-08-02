@@ -77,6 +77,7 @@ import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbo
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
 import { app_code_lesson_expression_swapping } from "./app_code_lesson_expression_swapping.mjs";
+import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
 export function app_code_lessons_fns() {
   let fns = [
     app_code_lesson_symbols_digits_numbered,
@@ -158,6 +159,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_min_max_of_three,
     app_code_lesson_expression_arithmetic_equality,
     app_code_lesson_expression_swapping,
+    app_code_lesson_expression_comparison_and,
   ];
   return fns;
 }
