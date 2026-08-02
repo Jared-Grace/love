@@ -698,6 +698,18 @@ export function permission_grant_names() {
   let spelled691 = fn_name("qa_commit_named_path");
   let spelled692 = fn_name("storage_function_folder_rename");
   let spelled693 = fn_name("functions_operators_raw_repair_some");
+  let spelled694 = fn_name("firebase_prod_apps_unshipped");
+  let spelled695 = fn_name("firebase_prod_hashes");
+  let spelled696 = fn_name("firebase_prod_hashes_write_all");
+  let spelled697 = fn_name("function_parse_strict");
+  let spelled698 = fn_name("js_code_getter_literal_cases_gate_run");
+  let spelled699 = fn_name("js_code_literal_site_none_cases_gate_run");
+  let spelled700 = fn_name("js_condition_bodies_empty_cases_gate_run");
+  let spelled701 = fn_name("js_page_serializing_members");
+  let spelled702 = fn_name("processes_dispatcher_waiting");
+  let spelled703 = fn_name("qa_gates_repeated_gate_run");
+  let spelled704 = fn_name("storage_function_folder_path");
+  let spelled705 = fn_name("storage_function_folder_rename_check");
   let names = [
     spelled,
     spelled2,
@@ -1392,6 +1404,18 @@ export function permission_grant_names() {
     spelled691,
     spelled692,
     spelled693,
+    spelled694,
+    spelled695,
+    spelled696,
+    spelled697,
+    spelled698,
+    spelled699,
+    spelled700,
+    spelled701,
+    spelled702,
+    spelled703,
+    spelled704,
+    spelled705,
   ];
   return names;
 }
