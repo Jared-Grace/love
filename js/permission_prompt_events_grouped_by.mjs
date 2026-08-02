@@ -1,3 +1,4 @@
+import { round } from "./round.mjs";
 import { multiply } from "./multiply.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,7 +31,7 @@ export function permission_prompt_events_grouped_by(events, key) {
     ("The whole time a label costs is what says whether it is worth working on - a slow thing run once is an anecdote and a quick thing run four hundred times is a bill. Summed in milliseconds and rounded once at the end so a thousand sub-second calls do not each round away to nothing.");
     group.milliseconds_total = group.milliseconds_total + event.waited;
     let divided = divide(event.waited, 1000);
-    let seconds = Math.round(divided);
+    let seconds = round(divided);
     if (greater_than(seconds, group.seconds_worst)) {
       group.seconds_worst = seconds;
     }
@@ -41,11 +42,11 @@ export function permission_prompt_events_grouped_by(events, key) {
   let rows = [];
   for (let group of groups.values()) {
     let total = divide(group.milliseconds_total, 1000);
-    group.seconds_total = Math.round(total);
+    group.seconds_total = round(total);
     let mean = divide(group.milliseconds_total, group.count);
     let mean_seconds = divide(mean, 1000);
     let p = multiply(mean_seconds, 10);
-    let top = Math.round(p);
+    let top = round(p);
     group.seconds_mean = divide(top, 10);
     list_add(rows, group);
   }
