@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { functions_names_to_paths_list } from "./functions_names_to_paths_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -14,7 +15,7 @@ export async function function_name_unalias(f_name) {
   let expanded_paths = await functions_names_to_paths_list(expandeds);
   let unaliased = exists_alias
     ? unaliased_actual
-    : expanded !== null
+    : not_equal(expanded, null)
       ? expanded
       : f_name;
   let v = {
