@@ -1,7 +1,5 @@
+import { number_moved_round } from "./number_moved_round.mjs";
 import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
-import { add } from "./add.mjs";
-import { round } from "./round.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function color_between(t, start, end) {
@@ -10,9 +8,8 @@ export function color_between(t, start, end) {
     let from = list_get(start, index);
     let to = list_get(end, index);
     let span = subtract(to, from);
-    let shift = multiply(t, span);
-    let value = add(from, shift);
-    return round(value);
+    let value = number_moved_round(from, span, t);
+    return value;
   }
   let r = channel(0);
   let g = channel(1);

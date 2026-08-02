@@ -1,3 +1,4 @@
+import { divide_round } from "./divide_round.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { round } from "./round.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -30,8 +31,7 @@ export function permission_prompt_events_grouped_by(events, key) {
     group.count = group.count + 1;
     ("The whole time a label costs is what says whether it is worth working on - a slow thing run once is an anecdote and a quick thing run four hundred times is a bill. Summed in milliseconds and rounded once at the end so a thousand sub-second calls do not each round away to nothing.");
     group.milliseconds_total = group.milliseconds_total + event.waited;
-    let divided = divide(event.waited, 1000);
-    let seconds = round(divided);
+    let seconds = divide_round(event.waited, 1000);
     if (greater_than(seconds, group.seconds_worst)) {
       group.seconds_worst = seconds;
     }

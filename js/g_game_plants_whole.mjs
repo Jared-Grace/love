@@ -1,5 +1,6 @@
 import { ceil } from "./ceil.mjs";
 import { round } from "./round.mjs";
+import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
@@ -7,56 +8,55 @@ import { greater_than } from "./greater_than.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { g_plant_npcs } from "./g_plant_npcs.mjs";
 import { g_plant_converts } from "./g_plant_converts.mjs";
-import { g_leader_turns } from "./g_leader_turns.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export function g_game_plants_whole(next, days_total) {
-  "Every plant of a whole game, drawn to fill exactly the days of preaching there are and no more.";
-  "The days are the budget and the people are drawn against it, which is the way round that leaves no remainder. Drawing a pool first and then cutting plants out of it left whoever went last holding whatever was over - measured at two and four people, reported as plants because they were the right shape to be counted as one.";
-  "A plant too small to be a plant is never MADE here. While fewer days remain than a plant needs, those days go to the plant already standing rather than starting a church that cannot finish - which is also what a person would do, staying where they are rather than founding something a fortnight before they leave.";
-  "The last plant is however big the days left let it be, and it is the only one that comes out under the size it meant to be. Cutting its DAYS back instead was tried and put the leader in front of the player ninety-eight days in a hundred, because the arcs were all still there and had fewer days to happen in.";
+  "Every plant of a whole game, each one whole, together filling exactly the days of preaching there are.";
+  "Plants are drawn at the size they mean to be until one of them would not fit in the days that are left. That one is not made at all - the days it would have taken are handed back to the plants that already exist, a day at a time round the whole game.";
+  "Nothing here is a remainder, and that is the change. The leftover used to be given to whichever plant happened to be last, which made one plant of every game a runt or a stretched one for a reason nobody playing could see. Spreading it means every plant is the size it asked for and no single plant carries the arithmetic.";
+  "Extra days are days the arcs did not need, so a plant that receives them holds the same people a little longer. That lowers the leader's SHARE of the days rather than the leader's turns, which is the harmless direction - a floor of half the days is a long way below where these land.";
   let s = g_generation_settings();
   let plants = [];
-  let days_left = days_total;
+  let days_spent = 0;
   let npc_next = 0;
   let shortest = divide(days_total, s.plant_days_minimum);
   let most = ceil(shortest) + 1;
   for (let index = 0; less_than(index, most); index++) {
-    let none = less_than(days_left, 1);
-    if (none) {
-      break;
-    }
-    let started = greater_than(plants.length, 0);
-    let thin = less_than(days_left, s.plant_days_minimum);
-    if (thin && started) {
-      let plant_last = plants[subtract(plants.length, 1)];
-      plant_last.days = plant_last.days + days_left;
-      days_left = 0;
-      break;
-    }
     let wanted = g_plant_npcs(index, next);
     let converts_count = subtract(wanted, 1);
-    let grown = g_plant_converts(next, converts_count, npc_next, days_left);
-    let converts = property_get(grown, "converts");
-    let convert_turns = property_get(grown, "convert_turns");
-    let days = property_get(grown, "days");
-    npc_next = npc_next + converts.length;
-    let leader_turns = g_leader_turns(convert_turns);
-    let arc_turns = leader_turns + convert_turns;
-    days_left = subtract(days_left, days);
-    let npcs = converts.length + 1;
+    let drawn = g_plant_converts(next, converts_count, npc_next);
+    let days = property_get(drawn, "days");
+    let days_after = days_spent + days;
+    let over = greater_than(days_after, days_total);
+    if (over) {
+      break;
+    }
+    npc_next = npc_next + converts_count;
+    days_spent = days_after;
+    let npcs = converts_count + 1;
     let plant = {
       index,
       npcs,
       wanted,
       days,
-      leader_turns,
-      convert_turns,
-      arc_turns,
-      converts,
+      leader_turns: property_get(drawn, "leader_turns"),
+      convert_turns: property_get(drawn, "convert_turns"),
+      arc_turns: property_get(drawn, "arc_turns"),
+      converts: property_get(drawn, "converts"),
+      days_drawn: days,
     };
     list_add(plants, plant);
+  }
+  let held = plants.length;
+  let spare = subtract(days_total, days_spent);
+  let any = greater_than(held, 0);
+  if (any) {
+    for (let step = 0; less_than(step, spare); step++) {
+      let at = modulo(step, held);
+      let plant = plants[at];
+      plant.days = plant.days + 1;
+    }
   }
   for (let plant of plants) {
     let leader_turns = property_get(plant, "leader_turns");
