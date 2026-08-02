@@ -141,7 +141,8 @@ export function app_code_lesson_expression_swapping() {
       "0 - 0 === 0 - 0",
       " is ",
       "true",
-      " - the two numbers are the same, so swapping changes nothing",
+      " - the two numbers are the same, so any operator gives ",
+      "true",
     ]);
     html_div_cycle_code(note, ["So we test with two different numbers"]);
   }
