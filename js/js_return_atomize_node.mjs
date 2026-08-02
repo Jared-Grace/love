@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -12,7 +13,7 @@ export async function js_return_atomize_node(ast, node, variable_name) {
     if (js_node_type_is(argument, "Identifier")) {
       return;
     }
-    if (argument === null) {
+    if (equal(argument, null)) {
       return;
     }
     if (js_node_type_is(argument, "Literal")) {
