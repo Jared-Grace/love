@@ -130,11 +130,11 @@ export async function app_g_verify_home(context) {
     }
   }
   document.addEventListener("visibilitychange", on_visible);
-  function render(chapter_shown, status_shown, chapter_state) {
+  function render(chapter_shown, status_shown, chapter_state_shown) {
     shown_json = json_to({
       chapter: chapter_shown,
       status: status_shown,
-      chapter_state,
+      chapter_state: chapter_state_shown,
     });
     html_clear(root);
     let passages = property_get(chapter_shown, "passages");
@@ -152,7 +152,7 @@ export async function app_g_verify_home(context) {
       return key2;
     }
     let real_keys = passages.map(lambda2);
-    let approved_key = property_get(chapter_state, "approved");
+    let approved_key = property_get(chapter_state_shown, "approved");
     let approved_index = real_keys.indexOf(approved_key);
     let pending = null;
     let b3 = list_includes(real_keys, status_verse);
@@ -328,7 +328,7 @@ export async function app_g_verify_home(context) {
       }
       return;
     }
-    let latest = property_get(chapter_state, "latest");
+    let latest = property_get(chapter_state_shown, "latest");
     if (
       not_equal(latest, null) &&
       not_equal(latest, approved_key) &&
