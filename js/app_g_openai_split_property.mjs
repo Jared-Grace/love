@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_openai_split } from "./app_g_openai_split.mjs";
+import { g_openai_split } from "./g_openai_split.mjs";
 export function app_g_openai_split_property(object, property_name) {
   arguments_assert(arguments, 2);
   ("The lines of one named part of a passage, cut apart the way what a machine");
@@ -11,6 +11,6 @@ export function app_g_openai_split_property(object, property_name) {
   ("Which part is asked for is given rather than fixed, because the cutting is the");
   ("same for all of them and the choosing is the only thing a caller differs in.");
   let text = property_get(object, property_name);
-  let lines = app_g_openai_split(text);
+  let lines = g_openai_split(text);
   return lines;
 }
