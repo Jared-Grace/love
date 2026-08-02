@@ -1,7 +1,7 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
-import { list_map } from "./list_map.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 export function js_module_variable_names(ast) {
   "The names a file's own top-level variables are bound to - the state every function in the file shares. Only the ones written at the outer level count: a variable declared inside a function belongs to that function and travels with it, while these stay behind in the file that declared them.";
@@ -9,8 +9,11 @@ export function js_module_variable_names(ast) {
   let body = property_get(ast, "body");
   let declarations = list_filter_property(body, "type", "VariableDeclaration");
   function lambda(declaration) {
-    let declarators = property_get(declaration, "declarations");
-    let names_inner = list_map(declarators, js_function_declaration_name);
+    let names_inner = property_list_map(
+      declaration,
+      "declarations",
+      js_function_declaration_name,
+    );
     return names_inner;
   }
   let names = list_map_concat_multiple(declarations, lambda);

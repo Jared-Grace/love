@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -38,8 +39,7 @@ export function js_block_canonical(sigs, input_names, output_name) {
   each(input_names, register);
   function encode(sig) {
     let callee = property_get(sig, "callee");
-    let args = property_get(sig, "args");
-    let canon_args = list_map(args, canon_arg);
+    let canon_args = property_list_map(sig, "args", canon_arg);
     let joined = list_join(canon_args, ",");
     let name = property_get(sig, "name");
     register(name);

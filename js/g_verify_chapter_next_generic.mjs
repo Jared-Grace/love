@@ -2,10 +2,10 @@ import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
-"\"Where does this chapter stand?\" for any approval-gated content kind. The three";
-"getters are what differs per kind: the ordered passage list, the authored store,";
-"and the approval store. The GATE is the shared part — the next passage is only";
-"offered once the latest one is approved, so exactly one passage is ever pending.";
+('"Where does this chapter stand?" for any approval-gated content kind. The three');
+("getters are what differs per kind: the ordered passage list, the authored store,");
+("and the approval store. The GATE is the shared part — the next passage is only");
+("offered once the latest one is approved, so exactly one passage is ever pending.");
 export async function g_verify_chapter_next_generic(
   chapter_code,
   passages_get,
@@ -36,5 +36,11 @@ export async function g_verify_chapter_next_generic(
   else if (approved === ordered[latest_index])
     action = "write:" + ordered[latest_index + 1];
   else action = "wait";
-  return { chapter: chapter_code, approved, latest, next, action };
+  return {
+    chapter: chapter_code,
+    approved,
+    latest,
+    next,
+    action,
+  };
 }
