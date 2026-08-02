@@ -76,7 +76,10 @@ import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
-import { app_code_lesson_expression_swapping } from "./app_code_lesson_expression_swapping.mjs";
+import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
+import { app_code_lesson_expression_swapping_divide } from "./app_code_lesson_expression_swapping_divide.mjs";
+import { app_code_lesson_expression_swapping_order } from "./app_code_lesson_expression_swapping_order.mjs";
+import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_expression_swapping_equal.mjs";
 import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
 export function app_code_lessons_fns() {
