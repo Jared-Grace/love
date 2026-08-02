@@ -7,6 +7,9 @@ export async function query_key_literals_all() {
   "All that is said here is which part of the address is meant - which files, and which reading. The walking is shared with the part after the hash, which opens the same trees the same way.";
   arguments_assert(arguments, 0);
   let candidates = await query_function_names();
-  let walked = await key_literals_all_generic(candidates, js_query_key_literals);
+  let walked = await key_literals_all_generic(
+    candidates,
+    js_query_key_literals,
+  );
   return walked;
 }

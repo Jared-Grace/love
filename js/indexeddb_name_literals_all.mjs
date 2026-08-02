@@ -1,4 +1,3 @@
-import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { indexeddb_name_doors } from "./indexeddb_name_doors.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
@@ -19,11 +18,6 @@ export async function indexeddb_name_literals_all() {
     let found = js_indexeddb_name_literals(tree, doors);
     return found;
   }
-  let sites = await key_literals_all_generic(candidates, read);
-  let files = list_size(candidates);
-  let r = {
-    files,
-    sites,
-  };
-  return r;
+  let walked = await key_literals_all_generic(candidates, read);
+  return walked;
 }
