@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
@@ -12,7 +13,7 @@ export function app_replace_rule_set_refresh_rb(
 ) {
   let index_selected = property_get(state, "index_selected");
   let success = property_get(state, "success");
-  let selected = rule_index === index_selected;
+  let selected = equal(rule_index, index_selected);
   let enabled = true;
   html_enable_if(rule_button, enabled);
   app_replace_lefts_rights_style(rule_button, selected || success, success);
