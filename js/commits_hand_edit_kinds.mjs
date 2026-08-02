@@ -1,3 +1,4 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { integer_from_base_try } from "./integer_from_base_try.mjs";
@@ -20,7 +21,7 @@ export async function commits_hand_edit_kinds(count_given) {
   let commits = await commits_ai_js_numstat(count);
   let single = [];
   for (let commit of commits) {
-    let by_hand = property_equals(commit, "subject", "ai");
+    let by_hand = property_equals(commit, "subject", git_message_hand_made());
     if (not(by_hand)) {
       continue;
     }
