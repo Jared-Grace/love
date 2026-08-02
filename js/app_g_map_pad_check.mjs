@@ -1,12 +1,12 @@
 import { assert_message } from "./assert_message.mjs";
 import { app_g_map_pad } from "./app_g_map_pad.mjs";
 import { app_g_map_buffer_pad } from "./app_g_map_buffer_pad.mjs";
-import { app_a_water } from "./app_a_water.mjs";
+import { g_water } from "./g_water.mjs";
 import { equal } from "./equal.mjs";
 export function app_g_map_pad_check() {
   "deterministic REGRESSION check of the map buffer padding: a 2x2 core becomes a (2 + 2*pad) square whose outer ring is all water and whose original content is preserved at offset [pad][pad]. run: node scripts/ai.mjs app_g_map_pad_check";
   const pad = app_g_map_buffer_pad();
-  const water = app_a_water();
+  const water = g_water();
   const core = [
     ["a", "b"],
     ["c", "d"],
