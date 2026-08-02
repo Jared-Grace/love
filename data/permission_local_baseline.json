@@ -28,7 +28,6 @@
   "Bash(node scripts/ai.mjs g_verify_active_chapters_path:*)",
   "Bash(node scripts/ai.mjs g_verify_next_books_set:*)",
   "Bash(node scripts/ai.mjs g_verify_next_books_clear:*)",
-  "Bash(node scripts/ai.mjs functions_search:*)",
   "Bash(node scripts/ai.mjs webpack_build:*)",
   "Bash(node scripts/ai.mjs g_verify_loop_check_line)",
   "Bash(node scripts/ai.mjs g_chapter_code_next:*)",
