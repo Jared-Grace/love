@@ -1,5 +1,5 @@
 import { app_apps_all_main_fns_generate } from "./app_apps_all_main_fns_generate.mjs";
-import { app_shared_delete_confirm } from "./app_shared_delete_confirm.mjs";
+import { apps_delete_confirm } from "./apps_delete_confirm.mjs";
 import { app_shared_delete_files } from "./app_shared_delete_files.mjs";
 import { app_shared_delete_fn } from "./app_shared_delete_fn.mjs";
 import { app_shared_delete_fn_main } from "./app_shared_delete_fn_main.mjs";
@@ -14,7 +14,7 @@ export async function app_shared_delete(name) {
     hint: "the app name should be non-empty text — was it blank?",
   });
   app_shared_frozen_assert(name);
-  let confirmed = await app_shared_delete_confirm(name);
+  let confirmed = await apps_delete_confirm(name);
   if (not(confirmed)) {
     let r = "No worries — nothing was deleted. Your app is safe and sound.";
     return r;
