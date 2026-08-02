@@ -24,8 +24,7 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
   ("which the gate over shared openings would have caught in its own author.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
-  let doing = js_function_declaration_statements_doing(declaration);
-  let working = list_filter(doing, js_function_marker_call_not_is);
+  let working = js_function_declaration_statements_working(declaration);
   let short_is = list_size_less_than_value(working, size);
   if (short_is) {
     let nothing = "";
