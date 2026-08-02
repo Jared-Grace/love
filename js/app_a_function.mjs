@@ -156,16 +156,16 @@ export async function app_a_function(context) {
           let overlay_close = property_get(o, "overlay_close");
           let overlay = property_get(o, "overlay");
           let v = app_a_choice_close(overlay_close);
-          let choices = [v];
+          let choices_overlay = [v];
           function on_keydown(e) {
-            app_a_on_keydown(e, choices);
+            app_a_on_keydown(e, choices_overlay);
           }
           let div = app_a_overlay_container(overlay);
           let fn = await app_a_function_import(f_name);
           let r = await fn();
           let j = json_format_to(r);
           let pre = html_pre_text(div, j);
-          app_a_buttons_shortcuts(overlay, choices);
+          app_a_buttons_shortcuts(overlay, choices_overlay);
         }
         let result = await html_loading(lambda5);
       },
@@ -199,8 +199,8 @@ export async function app_a_function(context) {
     },
   ];
   let key = app_a_app_selected_key();
-  let e = storage_session_exists(app_a, key);
-  if (e) {
+  let selected_exists = storage_session_exists(app_a, key);
+  if (selected_exists) {
     list_add(choices, preview_app);
   }
   list_add(choices, {
