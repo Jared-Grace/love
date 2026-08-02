@@ -1,3 +1,4 @@
+import { list_find_property_not_null_is } from "./list_find_property_not_null_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
 import { identity } from "./identity.mjs";
@@ -118,8 +119,11 @@ export async function webpack_watch() {
     "an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work";
     let names = await apps_names_dev();
     async function lambda(a_name) {
-      let known = list_find_property_or_null(app_deps, "a_name", a_name);
-      let known_already = null_not_is(known);
+      let known_already = list_find_property_not_null_is(
+        app_deps,
+        "a_name",
+        a_name,
+      );
       if (known_already) {
         return;
       }
