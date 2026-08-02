@@ -5,7 +5,7 @@ import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
+import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -20,7 +20,7 @@ export async function app_shared_bible_chapters_before(context) {
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
-  let verse_number = app_bible_hash_v_get(hash);
+  let verse_number = app_shared_bible_hash_v_get(hash);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
