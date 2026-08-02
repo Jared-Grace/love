@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
 import { list_iterator_refillable_on } from "./list_iterator_refillable_on.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_size } from "./list_size.mjs";
@@ -12,16 +14,18 @@ export function list_iterator_shuffled_avoid_repeat(items, key_property) {
   function on_refill(remaining) {
     list_shuffle(remaining);
     let size = list_size(remaining);
-    let multiple = size > 1;
+    let multiple = greater_than(size, 1);
     if (multiple) {
       let first = list_first(remaining);
-      let repeats = property_get(first, key_property) === last_key;
+      let left = property_get(first, key_property);
+      let repeats = equal(left, last_key);
       if (repeats) {
         list_remove_at(remaining, 0);
         list_add(remaining, first);
       }
     }
-    last_key = property_get(list_last(remaining), key_property);
+    let object = list_last(remaining);
+    last_key = property_get(object, key_property);
   }
   function refill_get() {
     return items;
