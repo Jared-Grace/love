@@ -1,6 +1,6 @@
+import { integer_random_below } from "./integer_random_below.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
 import { app_code_placeholder_tile_number } from "./app_code_placeholder_tile_number.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
@@ -63,8 +63,7 @@ export function app_code_lesson_expression_number_trichotomy() {
   function refill() {
     "six comparisons over ONE shared pair of numbers: each operator shown once true then once false, grouped two-by-two in the same/smaller/bigger order of the a/b/c list, so the learner sees each of the three go both ways for the fixed pair";
     let max = app_code_lesson_operators_value_max();
-    let max2 = subtract(max, 1);
-    let low = integer_random(1, max2);
+    let low = integer_random_below(max);
     let high = integer_random(low + 1, max);
     function one(combo) {
       "one example built from the combo and the shared pair";

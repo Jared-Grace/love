@@ -1,3 +1,4 @@
+import { integer_random_below } from "./integer_random_below.mjs";
 import { html_div } from "./html_div.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
@@ -26,7 +27,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 import { ternary } from "./ternary.mjs";
 import { add } from "./add.mjs";
-import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
@@ -180,8 +180,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     ]);
     let right2 = integer_random(1, 3);
     let above_value = add(value, right2);
-    let max = subtract(value, 1);
-    let below_value = integer_random(1, max);
+    let below_value = integer_random_below(value);
     let candidates = [below_value, above_value, value];
     function yields(other_number) {
       "true when placing this other number against the arithmetic value makes the comparison give the answer we want; equal is last in the list so strict < and > pick a strict number and only === / !== reach the equal case";
