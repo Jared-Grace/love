@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { function_new_transform } from "./function_new_transform.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
@@ -10,10 +11,10 @@ export async function function_new_getter(f_name, meaning, value) {
   "The value is a whole argument of the command rather than a word inside a joined list, which is what lets it hold a full stop - every size here is written like nought point eight five of the surrounding text, and a joined list would tear that in two.";
   async function lambda(ast) {
     let block = js_find_body_block(ast);
-    let left = JSON.stringify(meaning);
+    let left = json_to(meaning);
     let prose = text_combine(left, ";");
     js_block_body_add_code(ast, [block], prose);
-    let right = JSON.stringify(value);
+    let right = json_to(value);
     let statement = text_combine_3("let v = ", right, ";");
     js_block_body_add_code(ast, [block], statement);
     js_block_body_add_code(ast, [block], "return v;");
