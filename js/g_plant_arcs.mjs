@@ -1,3 +1,7 @@
+import { round } from "./round.mjs";
+import { math_min } from "./math_min.mjs";
+import { floor } from "./floor.mjs";
+import { math_max } from "./math_max.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
@@ -30,7 +34,7 @@ export function g_plant_arcs(plant) {
     settings.question_matches_percent,
     100,
   );
-  let question_turns = Math.round(divided);
+  let question_turns = round(divided);
   let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
   let seed = random_seed_from_text(joined);
@@ -47,17 +51,17 @@ export function g_plant_arcs(plant) {
   let share = divide(share_low + share_high, 2);
   let left = multiply(days, share);
   let p = multiply(left, settings.conversation_turns_mean);
-  let leader_wanted = Math.round(p);
+  let leader_wanted = round(p);
   let converts = subtract(npcs, 1);
   let shortest = settings.conversation_turns_low;
   let converts_least = multiply(converts, shortest);
   let leader_room = subtract(arc_turns, converts_least);
-  let leader_turns = Math.min(leader_wanted, leader_room);
+  let leader_turns = math_min(leader_wanted, leader_room);
   let leader_short = less_than(leader_turns, settings.leader_turns_minimum);
   ("Whatever the leader does not take is split evenly and then jittered, so the total and the head count both survive the variety.");
   let convert_turns = subtract(arc_turns, leader_turns);
   let divided2 = divide(convert_turns, converts);
-  let evenly = Math.floor(divided2);
+  let evenly = floor(divided2);
   let right = multiply(evenly, converts);
   let over = subtract(convert_turns, right);
   let shares = [];
@@ -67,7 +71,7 @@ export function g_plant_arcs(plant) {
     list_add(shares, amount);
   }
   let p2 = multiply(evenly, 2);
-  let widest = Math.max(p2, shortest);
+  let widest = math_max(p2, shortest);
   let jittered = list_numbers_jitter(
     shares,
     next,
