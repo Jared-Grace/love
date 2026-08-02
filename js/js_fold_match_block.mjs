@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -5,7 +6,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { subtract } from "./subtract.mjs";
 import { add_1 } from "./add_1.mjs";
 import { js_signature_match } from "./js_signature_match.mjs";
 export function js_fold_match_block(pattern_sigs, target_sigs, params) {
@@ -18,8 +18,7 @@ export function js_fold_match_block(pattern_sigs, target_sigs, params) {
   ("matching block, or null.");
   arguments_assert(arguments, 3);
   let k = list_size(pattern_sigs);
-  let n = list_size(target_sigs);
-  let last_start = subtract(n, k);
+  let last_start = list_size_subtract(target_sigs, k);
   let start = 0;
   while (less_than_equal(start, last_start)) {
     let binding = {};

@@ -1,7 +1,5 @@
-import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
 export function list_size_less_1(count) {
-  let sz = list_size(count);
-  let sz1 = subtract(sz, 1);
+  let sz1 = list_size_subtract(count, 1);
   return sz1;
 }
