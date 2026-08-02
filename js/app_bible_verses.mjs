@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { app_bible_picker_mark_current } from "./app_bible_picker_mark_current.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -27,10 +28,10 @@ export async function app_bible_verses(context) {
   html_font_color_set(chapter_div, color);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
-  let items = list_map_property(verses, "verse_number");
+  let items = list_map_property(verses, verse_number_key());
   let oc = app_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_bible_picker_buttons_enlarge(buttons);
-  let current = property_get(r, "verse_number");
+  let current = property_get(r, verse_number_key());
   app_bible_picker_mark_current(buttons, items, current);
 }
