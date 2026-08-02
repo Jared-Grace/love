@@ -23,12 +23,10 @@ export async function app_g_sky_to(target) {
     " style). an element-attached token cancels a superseded drift (e.g. a conversation-end snap); `from` is the element's LIVE phase, so a step fired mid-drift chains smoothly instead of jumping. a setTimeout GUARANTEES the target color is painted even if rAF is throttled/paused (background tab or a janky frame) — otherwise a dropped final frame leaves the tint STUCK on the old color while the phase silently advanced");
   let g = await app_g_game_save_get();
   property_set(g, "sky_phase", target);
-  let bag = global_function_initialize(app_g_sky_set, {});
-  let b = property_exists(bag, "element");
-  if (not(b)) {
+  let element = app_g_sky_element_or_null();
+  if (null_is(element)) {
     return;
   }
-  let element = property_get(bag, "element");
   let seed = g_sky_seed_get(g);
   let from = element.sky_phase;
   let duration = 600;
