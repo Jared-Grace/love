@@ -1,3 +1,4 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -5,7 +6,6 @@ import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -77,8 +77,7 @@ export function app_code_lesson_expression_whole_part_both() {
       let r2 = [];
       return r2;
     }
-    let left = multiply(2, whole_part);
-    let quotient_dividend = add(left, 1);
+    let quotient_dividend = multiply_add(2, whole_part, 1);
     let quotient_trap = js_code_binary_spaced_nb(quotient_dividend, "/", 2);
     let value_dividend = multiply(3, whole_part);
     let value_trap = js_code_binary_spaced_nb(value_dividend, "/", 3);
