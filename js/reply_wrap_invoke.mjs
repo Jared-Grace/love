@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
 import { integer_is_assert_json } from "./integer_is_assert_json.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { null_is } from "./null_is.mjs";
@@ -22,7 +24,7 @@ export async function reply_wrap_invoke(item, possibilities) {
     let size = null;
     if (si) {
       size = text_size(item);
-      if (size > 1) {
+      if (greater_than(size, 1)) {
         let split = text_split_empty(item);
         wrapped = reply_sequence(split);
       }
@@ -35,7 +37,7 @@ export async function reply_wrap_invoke(item, possibilities) {
           let token = list_get(tokens, index_start);
           let matches_previous = property_get(p, "matches");
           let e = json_equal(item, token);
-          let empty = item === "";
+          let empty = equal(item, "");
           let delta = 1;
           if (si) {
             integer_is_assert_json(size, {
