@@ -41,16 +41,7 @@ export async function functions_module_state_shadowed() {
     if (not(readable)) {
       return;
     }
-    let names = js_module_variable_names(ast);
-    let hidden = [];
-    function name_each(name) {
-      let scopes = js_scopes_shadowing(ast, name);
-      if (list_empty_is(scopes)) {
-        return;
-      }
-      list_add(hidden, name);
-    }
-    each(names, name_each);
+    let hidden = js_module_state_shadowed(ast);
     if (list_empty_is(hidden)) {
       return;
     }
