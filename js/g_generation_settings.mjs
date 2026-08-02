@@ -23,6 +23,7 @@ export function g_generation_settings() {
     plant_days_maximum: 21,
     leader_days_percent_minimum: 50,
     leader_days_percent_maximum: 100,
+    leader_turns_minimum: 100,
     arc_conversations_minimum: 1,
     arc_conversations_maximum: 9,
     question_matches_percent: 25,
