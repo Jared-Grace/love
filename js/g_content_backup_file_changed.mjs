@@ -1,12 +1,11 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_object_generation } from "./firebase_storage_object_generation.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { g_content_backup_path } from "./g_content_backup_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { and } from "./and.mjs";
 import { g_content_backup_file } from "./g_content_backup_file.mjs";
 import { property_set } from "./property_set.mjs";
-import { equal } from "./equal.mjs";
 export async function g_content_backup_file_changed(storage_path, generations) {
   "Copies one stored file down, unless the copy already here is of the same writing.";
   "Asking what version storage holds is a few hundred bytes; fetching the file is tens of thousands. Almost nothing changes between one day and the next, so asking first turns a pass that reads everything into one that reads what somebody edited.";
@@ -16,8 +15,7 @@ export async function g_content_backup_file_changed(storage_path, generations) {
     project_url,
     storage_path,
   );
-  let before = property_get_or_null(generations, storage_path);
-  let same = equal(before, generation);
+  let same = property_get_or_null_equal(generations, storage_path, generation);
   let path = g_content_backup_path(storage_path);
   let exists = await file_exists(path);
   let held = and(same, exists);

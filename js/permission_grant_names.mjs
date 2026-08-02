@@ -568,6 +568,10 @@ export function permission_grant_names() {
   let spelled565 = fn_name("storage_local_key_words_found");
   let spelled566 = fn_name("storage_local_key_words_gate_run");
   let spelled567 = fn_name("text_dispatcher_command_names_gate_run");
+  let spelled568 = fn_name("firebase_prod_asset_download");
+  let spelled569 = fn_name("firebase_prod_asset_unchanged_is");
+  let spelled570 = fn_name("g_sermon_generate_download");
+  let spelled571 = fn_name("app_original_bible_gloss_generate_upload_path");
   let names = [
     spelled,
     spelled2,
@@ -1136,6 +1140,10 @@ export function permission_grant_names() {
     spelled565,
     spelled566,
     spelled567,
+    spelled568,
+    spelled569,
+    spelled570,
+    spelled571,
   ];
   return names;
 }
