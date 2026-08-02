@@ -5,6 +5,7 @@ import { list_add } from "./list_add.mjs";
 export async function g_game_generate_report(word) {
   "What one whole game comes out as - a row for each plant and the tallies the shape of it is judged by.";
   "The days totalling exactly the preaching there is, and the sizes holding nothing under the smallest a plant is allowed to be, are the two things this exists to show. Both are claims the generation makes about itself and neither can be read off a setting.";
+  "A plant that came out under the size it meant to be is counted separately, because there should be at most one of those and it should be the last.";
   let plants = await g_game_generate(word);
   let rows = [];
   let sizes = {};
