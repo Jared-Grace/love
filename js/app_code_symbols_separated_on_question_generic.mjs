@@ -1,3 +1,4 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { html_style_padding_y_none } from "./html_style_padding_y_none.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -19,7 +20,7 @@ export function app_code_symbols_separated_on_question_generic(
     display: "flex",
     "flex-wrap": "wrap",
   });
-  html_style_padding_x(parent, "0.15em");
+  html_style_padding_x(parent, app_shared_spaced_neighbor_gap());
   function lambda(d, index_1) {
     let row_item = html_span(parent);
     html_flex_column_center(row_item);
