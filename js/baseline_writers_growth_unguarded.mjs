@@ -3,7 +3,8 @@ import { baseline_writers_growth_exempt } from "./baseline_writers_growth_exempt
 import { list_map_property } from "./list_map_property.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_any_ends_with } from "./list_any_ends_with.mjs";
+import { list_filter_ends_with_any } from "./list_filter_ends_with_any.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 export async function baseline_writers_growth_unguarded() {
@@ -22,7 +23,8 @@ export async function baseline_writers_growth_unguarded() {
       continue;
     }
     let imports = await function_imports(f_name);
-    let guarded = list_any_ends_with(imports, "_growth_assert");
+    let guards = list_filter_ends_with_any(imports, ["_growth_assert"]);
+    let guarded = list_empty_not_is(guards);
     if (guarded) {
       continue;
     }
