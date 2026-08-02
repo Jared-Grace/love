@@ -61,7 +61,7 @@ export function literals_unnamed_generic(codes) {
       if (js_code_literal_key_only(codes[f_name], value)) {
         continue;
       }
-      let files = property_get(files_by_literal, value);
+      let files = property_get_or_null(files_by_literal, value);
       if (not(files)) {
         files = [];
         files_by_literal[value] = files;
