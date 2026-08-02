@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { number_seed_from_text } from "./number_seed_from_text.mjs";
 import { random_seeded } from "./random_seeded.mjs";
 import { add } from "./add.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { g_passage_match_count } from "./g_passage_match_count.mjs";
@@ -70,8 +69,7 @@ export async function g_arc_lengths(chapter) {
     let taken = add(lengths[taker], 1);
     let stays_above = greater_than_equal(given, shortest);
     let stays_below = less_than_equal(taken, cap);
-    let b = equal(giver, taker);
-    let different = not(b);
+    let different = equal_not(giver, taker);
     if (stays_above && stays_below && different) {
       lengths[giver] = given;
       lengths[taker] = taken;
