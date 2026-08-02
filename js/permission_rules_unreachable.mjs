@@ -8,6 +8,7 @@ export async function permission_rules_unreachable() {
   let bash = await permission_rules_unreachable_bash();
   let file = await permission_rules_unreachable_file();
   let self_settings = await permission_rules_unreachable_self_settings();
+  let write = await permission_rules_unreachable_write();
   let offenders = [];
   list_add_multiple(offenders, bash);
   list_add_multiple(offenders, file);
