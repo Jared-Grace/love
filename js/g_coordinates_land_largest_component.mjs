@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { g_coordinates_land } from "./g_coordinates_land.mjs";
 import { g_coordinates_land_index } from "./g_coordinates_land_index.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
@@ -20,7 +21,7 @@ export function g_coordinates_land_largest_component(coordinates) {
     }
     let component = [];
     let queue = [seed_key];
-    while (queue.length > 0) {
+    while (greater_than(queue.length, 0)) {
       let k = list_pop_first(queue);
       if (set_includes(visited, k)) {
         continue;
@@ -40,7 +41,7 @@ export function g_coordinates_land_largest_component(coordinates) {
         }
       }
     }
-    if (component.length > largest.length) {
+    if (greater_than(component.length, largest.length)) {
       largest = component;
     }
   }
