@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -8,7 +9,8 @@ export function js_object_expression_property_single_try(node) {
     return property;
   }
   let properties = js_object_expression_properties(node);
-  if (!list_size_1(properties)) {
+  let b = list_size_1(properties);
+  if (not(b)) {
     return property;
   }
   let single = list_single(properties);
