@@ -26,6 +26,7 @@
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
 | Create a whole named constant — file, meaning line, value — nothing left to finish by hand | (no alias) | `function_new_getter <name> <meaning> <value>` |
+| Create a whole **thin wrapper** — file, matching parameters, the delegating call, the `await`, the `return`, the import — in one command | (no alias) | `function_wrap <wrapped> <name_new>` — the wrapped fn is named first, the new one second; only the prose is left to add |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
@@ -64,6 +65,18 @@ node scripts/ai.mjs functions_replace app_x_font_size,app_y_font_size app_shared
 **A value containing a dot reaches a transform fine — on Claude's seam only.** It used not to: every granted runner split its joined argument on commas *and* dots, so `0.85em` arrived as `0` and `85em` and the transform refused on argument count, which ruled out font sizes, versions and file names — the values most likely to be duplicated constants. **The full stop was only ever there to forgive a typo**, since the human types these lists at a keyboard and the two keys sit beside each other. Claude writes the command out whole, so there is no typo to forgive; `text_comma_dot_separators` asks `process_ai_seam_is` and hands back the comma alone on `ai.mjs`, both on `r.mjs`. So `js_block_local_text_add v,0.85em` now works, and **the comma is still the only separator you may not put in a value.**
 
 **Authoring a whole new function without touching an editor.** This is the point of the vocabulary, and it works today — `js_find_statement_after` and `js_find_body_block` were both written this way, with no `Write` and no `Edit`:
+
+**First ask whether it is a thin wrapper, because that shape is already one command.** `function_wrap <wrapped> <name_new>` writes the file, gives it the wrapped function's own parameters, calls it with them, awaits it, returns the result, and adds the import — the whole of the sequence below, from two names. `function_wrap js_call_argument_named_text_set js_probe` produced this and nothing was left to finish:
+
+```js
+import { js_call_argument_named_text_set } from "./js_call_argument_named_text_set.mjs";
+export async function js_probe(ast, selects, param_name, word) {
+  let r = await js_call_argument_named_text_set(ast, selects, param_name, word);
+  return r;
+}
+```
+
+Only the prose is yours to add afterwards (`js_block_prose_add`). This repo is mostly thin wrappers — a plain twin beside a `_generic`, an `_after` beside a `_before` — so reach here before the long way, and keep the long way for a body that genuinely does something new. Two sessions running have walked the six commands below to build what this one line builds.
 
 **Write it from names, never from code — then nothing on the path ever prompts.** Every argument below is a *function name* or a *variable name*, and every command is `function_select_apply_args`, which is already granted:
 
