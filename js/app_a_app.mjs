@@ -56,8 +56,8 @@ export async function app_a_app(context) {
       },
     });
   }
-  function on_keydown(e) {
-    app_a_on_keydown(e, choices);
+  function on_keydown(e2) {
+    app_a_on_keydown(e2, choices);
   }
   function lambda(item) {
     let fn = property_get(item, "fn");
