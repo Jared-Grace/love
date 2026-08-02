@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { command_line_read } from "./command_line_read.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function apps_delete_confirm(name) {
@@ -7,6 +8,6 @@ export async function apps_delete_confirm(name) {
     '"? If so, type "yes, delete": ',
   ]);
   let answer = await command_line_read(prompt);
-  let confirmed = answer === "yes, delete";
+  let confirmed = equal(answer, "yes, delete");
   return confirmed;
 }
