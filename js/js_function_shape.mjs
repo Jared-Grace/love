@@ -1,10 +1,8 @@
+import { js_function_declaration_statements_working } from "./js_function_declaration_statements_working.mjs";
 import { js_names_blank } from "./js_names_blank.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { js_function_marker_call_not_is } from "./js_function_marker_call_not_is.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
-import { js_function_declaration_statements_doing } from "./js_function_declaration_statements_doing.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -22,8 +20,7 @@ export function js_function_shape(declaration) {
   let b = list_concat(params, locals);
   let personal = list_concat([own], b);
   let block = property_get(declaration, "body");
-  let doing = js_function_declaration_statements_doing(declaration);
-  let working = list_filter(doing, js_function_marker_call_not_is);
+  let working = js_function_declaration_statements_working(declaration);
   property_set(block, "body", working);
   js_names_blank(declaration, personal);
   let shape = js_unparse(declaration);
