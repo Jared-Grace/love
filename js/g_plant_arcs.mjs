@@ -1,6 +1,6 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
 import { math_min } from "./math_min.mjs";
-import { floor } from "./floor.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -60,8 +60,7 @@ export function g_plant_arcs(plant) {
   let leader_short = less_than(leader_turns, settings.leader_turns_minimum);
   ("Whatever the leader does not take is split evenly and then jittered, so the total and the head count both survive the variety.");
   let convert_turns = subtract(arc_turns, leader_turns);
-  let divided2 = divide(convert_turns, converts);
-  let evenly = floor(divided2);
+  let evenly = divide_floor(convert_turns, converts);
   let right = multiply(evenly, converts);
   let over = subtract(convert_turns, right);
   let shares = [];
