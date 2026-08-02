@@ -1,5 +1,5 @@
-import { app_shared_button_arrow_left } from "../../love/js/app_shared_button_arrow_left.mjs";
-import { app_bible_chapter_previous } from "../../love/js/app_bible_chapter_previous.mjs";
+import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
+import { app_shared_bible_chapter_previous } from "./app_shared_bible_chapter_previous.mjs";
 export function app_shared_bible_button_chapter_previous(
   bar,
   context,
@@ -7,7 +7,7 @@ export function app_shared_bible_button_chapter_previous(
 ) {
   "bare arrow keeps the cramped top bar narrow; the book and chapter buttons between the arrows signal chapter nav";
   async function chapter_previous() {
-    await app_bible_chapter_previous(context, chapter_code);
+    await app_shared_bible_chapter_previous(context, chapter_code);
   }
   app_shared_button_arrow_left(bar, chapter_previous);
 }
