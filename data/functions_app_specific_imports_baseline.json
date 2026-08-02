@@ -8,7 +8,7 @@
   "apps_node_only_gate_run -> app_apps_all_main_fns",
   "apps_reachable_unguarded_steps -> app_apps_all_main_fns",
   "ebible_versions_english_downloadable_words_search_upload -> app_bible_search_word_path",
-  "g_npcs_initialize -> app_g_conversation_key",
+  "g_npcs_initialize -> g_conversation_key",
   "g_sermon_chapter_codes_all -> app_g_bible",
   "g_sermon_chapter_passages -> app_g_bible",
   "g_sermon_chapters_passage_lines -> app_g_bible",

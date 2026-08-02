@@ -1,5 +1,5 @@
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
-import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
+import { g_conversation_key } from "./g_conversation_key.mjs";
 import { each_index } from "./each_index.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -32,7 +32,7 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     property_set(npc, "objections", 2);
     let pronouns = g_gender_pronouns(name);
     let conversation = g_conversation_generate(pronouns);
-    let property_name = app_g_conversation_key();
+    let property_name = g_conversation_key();
     property_set(npc, property_name, conversation);
   }
   each_index(npcs, npc_initialize);

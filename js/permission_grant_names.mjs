@@ -374,7 +374,7 @@ export function permission_grant_names() {
   let spelled371 = fn_name("qa_tree_names_skipped");
   let spelled372 = fn_name("literals_frozen_names");
   let spelled373 = fn_name("functions_literal_route");
-  let spelled374 = fn_name("app_g_conversation_key");
+  let spelled374 = fn_name("g_conversation_key");
   let spelled375 = fn_name("functions_calls_named_sized");
   let spelled376 = fn_name("function_calls_callee_set");
   let spelled377 = fn_name("functions_calls_callee_set");

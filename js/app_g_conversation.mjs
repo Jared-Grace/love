@@ -15,7 +15,7 @@ import { g_clock_label } from "./g_clock_label.mjs";
 import { emoji_clock } from "./emoji_clock.mjs";
 import { app_g_toast } from "./app_g_toast.mjs";
 import { add } from "./add.mjs";
-import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
+import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -92,7 +92,7 @@ export async function app_g_conversation(
   }
   let player = await app_g_player_get();
   property_set(player, "conversed", true);
-  let property_name = app_g_conversation_key();
+  let property_name = g_conversation_key();
   property_set(prayer, property_name, false);
   let meet = property_get(npc, "meet");
   if (not(meet)) {
@@ -124,14 +124,14 @@ export async function app_g_conversation(
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
-  let property_name2 = app_g_conversation_key();
+  let property_name2 = g_conversation_key();
   let has = property_exists(npc, property_name2);
   if (not(has)) {
     let value = g_conversation_generate(pronouns);
-    let property_name3 = app_g_conversation_key();
+    let property_name3 = g_conversation_key();
     property_set(npc, property_name3, value);
   }
-  let property_name4 = app_g_conversation_key();
+  let property_name4 = g_conversation_key();
   let conversation = property_get(npc, property_name4);
   let turns = property_get(conversation, "turns");
   let converts = property_get(conversation, "converts");
