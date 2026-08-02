@@ -2,7 +2,7 @@
  "known": [
   "app_shared_bible_read -> app_next_hash_to_languages_chosen",
   "app_shared_bible_verse_line -> app_bible_on_click_google_define",
-  "app_shared_delete -> app_apps_all_main_fns_generate",
+  "apps_delete -> app_apps_all_main_fns_generate",
   "app_shared_gloss_bible_home_generic -> app_g_bible_home_inner",
   "apps_new -> app_apps_all_main_fns_generate"
  ]
