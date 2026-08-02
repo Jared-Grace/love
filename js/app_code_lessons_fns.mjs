@@ -75,6 +75,7 @@ import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_lette
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
+import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
 export function app_code_lessons_fns() {
   let fns = [
     app_code_lesson_symbols_digits_numbered,
@@ -154,6 +155,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
+    app_code_lesson_expression_arithmetic_equality,
   ];
   return fns;
 }
