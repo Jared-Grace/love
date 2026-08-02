@@ -1,3 +1,5 @@
+import { js_address_fused_words_cases_gate_run } from "./js_address_fused_words_cases_gate_run.mjs";
+import { literals_frozen_fused_gate_run } from "./literals_frozen_fused_gate_run.mjs";
 import { js_hash_key_getters_cases_gate_run } from "./js_hash_key_getters_cases_gate_run.mjs";
 import { hash_key_getters_frozen_gate_run } from "./hash_key_getters_frozen_gate_run.mjs";
 import { js_hash_key_literals_cases_gate_run } from "./js_hash_key_literals_cases_gate_run.mjs";
@@ -148,6 +150,7 @@ export function qa_gates() {
     js_code_literal_key_only_cases_gate_run,
     js_hash_key_literals_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
+    js_address_fused_words_cases_gate_run,
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
     js_while_frozen_cases_gate_run,
@@ -191,6 +194,7 @@ export function qa_gates() {
     literals_frozen_gate_run,
     hash_key_literals_gate_run,
     hash_key_getters_frozen_gate_run,
+    literals_frozen_fused_gate_run,
     literals_frozen_storage_gate_run,
     storage_local_key_names_gate_run,
     storage_local_key_words_gate_run,
