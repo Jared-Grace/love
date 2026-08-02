@@ -1,3 +1,4 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
@@ -290,7 +291,7 @@ export async function app_search_results(context, div_results) {
     ("this is the third of four cards nested one inside the next, and the two outside it already trim to this one named amount; it used to write its own number a twentieth of a letter away from that, which no reader could have told apart and no line of the file explained");
     let book_padding = app_shared_spaced_tiny_gap();
     html_style_padding(div_book, book_padding);
-    html_style_margin_y(div_book, "0.15em");
+    html_style_margin_y(div_book, app_shared_spaced_neighbor_gap());
     html_text_align_left(div_book);
     let book_name = ebible_book_code_to_name(books, book_code);
     let verses_count = book_verses_count(book_code);
@@ -310,7 +311,7 @@ export async function app_search_results(context, div_results) {
       if (collapsed) {
         html_display_none(div_body);
         html_display_inline_block(div_book);
-        html_style_margin_x(div_book, "0.15em");
+        html_style_margin_x(div_book, app_shared_spaced_neighbor_gap());
         html_style_margin_bottom(header, "0");
       } else {
         html_display_block(div_body);
@@ -360,7 +361,7 @@ export async function app_search_results(context, div_results) {
     ("the innermost of the four cards, spending the same named amount as the three around it, so the verse text at the bottom is not standing behind four different numbers nobody chose together");
     let chapter_padding = app_shared_spaced_tiny_gap();
     html_style_padding(div_chapter, chapter_padding);
-    html_style_margin_x(div_chapter, "0.15em");
+    html_style_margin_x(div_chapter, app_shared_spaced_neighbor_gap());
     html_style_margin_y(div_chapter, "0.1em");
     html_text_align_left(div_chapter);
     let chapter_header_text = text_combine_multiple([
