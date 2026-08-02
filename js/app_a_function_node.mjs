@@ -245,8 +245,8 @@ export function app_a_function_node(a) {
       let container = html_span(parent);
       app_a_symbol_text_template(container);
       function lambda22(q, e) {
-        let value = property_get(q, "value");
-        app_a_raw(value, container);
+        let quasi_value = property_get(q, "value");
+        app_a_raw(quasi_value, container);
         if (null_not_is(e)) {
           app_a_keyword_purple(container, "$");
           function lambda24() {
