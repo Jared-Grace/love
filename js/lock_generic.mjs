@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { file_read_try } from "./file_read_try.mjs";
 import { not } from "./not.mjs";
@@ -27,7 +28,7 @@ export async function lock_generic(lock_name, wait, lambda, who) {
         locked = true;
         break;
       } catch (e) {
-        if (e.code !== "ELOCKED") {
+        if (not_equal(e.code, "ELOCKED")) {
           throw e;
         }
         if (not(notified)) {
