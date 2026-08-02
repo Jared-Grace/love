@@ -47,9 +47,9 @@ export async function file_stamps_copied_gate_run() {
     await folder_copy_fresh(source, target, []);
     let copies = list_map_path_join_left(names, target);
     let copied = await file_stamps_by_path(copies);
-    let differing = [];
-    let rounding_up = 0;
-    let checked = 0;
+    let differing_so_far = [];
+    let rounding_up_so_far = 0;
+    let checked_so_far = 0;
     for (let name of names) {
       let source_path = path_join([source, name]);
       let copy_path = path_join([target, name]);
@@ -61,26 +61,26 @@ export async function file_stamps_copied_gate_run() {
       undefined_not_is_assert_json(stamp_copied, {
         copy_path,
       });
-      checked = add(checked, 1);
+      checked_so_far = add(checked_so_far, 1);
       let exact = await path_modified_ms(source_path);
       let whole = round(exact);
       if (greater_than(whole, exact)) {
-        rounding_up = add(rounding_up, 1);
+        rounding_up_so_far = add(rounding_up_so_far, 1);
       }
       let same = json_equal(stamp_before, stamp_copied);
       if (same) {
         continue;
       }
-      differing.push({
+      differing_so_far.push({
         name,
         source: stamp_before,
         copy: stamp_copied,
       });
     }
     let result = {
-      checked,
-      rounding_up,
-      differing,
+      checked: checked_so_far,
+      rounding_up: rounding_up_so_far,
+      differing: differing_so_far,
     };
     return result;
   }
