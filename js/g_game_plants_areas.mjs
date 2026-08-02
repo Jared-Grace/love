@@ -1,3 +1,4 @@
+import { math_min } from "./math_min.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -55,7 +56,7 @@ export function g_game_plants_areas(plants, stream) {
         left_in = property_get(held, "days");
       }
       let wanted = subtract(days, taken);
-      let paid = Math.min(wanted, left_in);
+      let paid = math_min(wanted, left_in);
       taken = taken + paid;
       left_in = subtract(left_in, paid);
     }
