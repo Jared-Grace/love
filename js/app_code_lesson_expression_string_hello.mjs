@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
 import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -46,7 +47,7 @@ export function app_code_lesson_expression_string_hello() {
     let rights = ["string"];
     let built = app_code_lesson_name_id_generic(
       rights,
-      "expressions",
+      app_code_category_expressions(),
       title_get,
     );
     return built;
