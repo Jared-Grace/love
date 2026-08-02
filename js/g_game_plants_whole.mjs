@@ -16,6 +16,7 @@ export function g_game_plants_whole(next, days_total) {
   "Plants are drawn at the size they mean to be until one of them would not fit in the days that are left. That one is not made at all - the days it would have taken are handed back to the plants that already exist, a day at a time round the whole game.";
   "Nothing here is a remainder, and that is the change. The leftover used to be given to whichever plant happened to be last, which made one plant of every game a runt or a stretched one for a reason nobody playing could see. Spreading it means every plant is the size it asked for and no single plant carries the arithmetic.";
   "Extra days are days the arcs did not need, so a plant that receives them holds the same people a little longer. That lowers the leader's SHARE of the days rather than the leader's turns, which is the harmless direction - a floor of half the days is a long way below where these land.";
+  "Shared out in PROPORTION to how long each plant already is, and the whole days go first with what is left over landing on the longest. A day each all round was tried and fell hardest on the small early plants, which have the fewest days to dilute: a nine-day plant taking two spare days dropped its leader from three days in four to three in five, while a twenty-three-day plant hardly noticed. Proportion means the plants with room take the days, which is where the room is.";
   let s = g_generation_settings();
   let plants = [];
   let days_spent = 0;
@@ -52,8 +53,18 @@ export function g_game_plants_whole(next, days_total) {
   let spare = subtract(days_total, days_spent);
   let any = greater_than(held, 0);
   if (any) {
-    for (let step = 0; less_than(step, spare); step++) {
-      let at = modulo(step, held);
+    let given = 0;
+    for (let plant of plants) {
+      let days = property_get(plant, "days_drawn");
+      let part = multiply_divide(spare, days, days_spent);
+      let whole = Math.floor(part);
+      plant.days = plant.days + whole;
+      given = given + whole;
+    }
+    let residue = subtract(spare, given);
+    for (let step = 0; less_than(step, residue); step++) {
+      let along = modulo(step, held);
+      let at = subtract(held - 1, along);
       let plant = plants[at];
       plant.days = plant.days + 1;
     }
