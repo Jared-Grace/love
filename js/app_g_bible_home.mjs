@@ -1,3 +1,4 @@
+import { app_g_openai_split_property } from "./app_g_openai_split_property.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { firebase_upload_object_compressed_browser } from "./firebase_upload_object_compressed_browser.mjs";
 import { each } from "./each.mjs";
@@ -19,7 +20,6 @@ import { html_rows_set } from "./html_rows_set.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_textarea } from "./html_textarea.mjs";
-import { app_g_openai_split } from "./app_g_openai_split.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_bible_home(context) {
@@ -34,8 +34,7 @@ export async function app_g_bible_home(context) {
     ));
     function on_passage({ passage, verses }) {
       let p = list_last_property(verses, "p");
-      let sermon = property_get(passage, "sermon");
-      let mapped = app_g_openai_split(sermon);
+      let mapped = app_g_openai_split_property(passage, "sermon");
       let size = list_size(mapped);
       let joined = list_join_newline(mapped);
       let ta = html_textarea(p);
