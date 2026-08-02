@@ -17,13 +17,16 @@ export async function functions_page_auto_borrowing_gate_run() {
   let skipped = property_get(v, "skipped");
   let offenders = property_get(v, "offenders");
   console.log("files put through the pass: " + checked);
-  if (list_empty_not_is(skipped)) {
-    console.log("could not get through the pass: " + list_join_comma(skipped));
+  let some_skipped = list_empty_not_is(skipped);
+  if (some_skipped) {
+    let joined = list_join_comma(skipped);
+    console.log("could not get through the pass: " + joined);
   }
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
     let borrowed = property_get(offender, "borrowed");
-    console.log("PASS WOULD BREAK  " + f_name + "  " + json_to(borrowed));
+    let shown = json_to(borrowed);
+    console.log("PASS WOULD BREAK  " + f_name + "  " + shown);
   }
   let size = list_size(offenders);
   let any = greater_than(size, 0);
