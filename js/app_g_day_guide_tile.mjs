@@ -1,9 +1,9 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
 import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
@@ -18,13 +18,11 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
   let tile = img.getBoundingClientRect().width;
   let bar = document.getElementById("day-discern-bar");
   let barH = bar ? bar.getBoundingClientRect().height : 0;
-  let p = divide(container.scrollLeft, tile);
-  let minX = ceil(p);
+  let minX = divide_ceil(container.scrollLeft, tile);
   let p2 = divide(container.scrollLeft + container.clientWidth, tile);
   let left = floor(p2);
   let maxX = subtract(left, 1);
-  let p3 = divide(container.scrollTop, tile);
-  let minY = ceil(p3);
+  let minY = divide_ceil(container.scrollTop, tile);
   let top = subtract(container.scrollTop + container.clientHeight, barH);
   let p4 = divide(top, tile);
   let left2 = floor(p4);
