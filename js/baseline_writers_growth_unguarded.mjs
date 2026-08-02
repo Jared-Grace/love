@@ -6,7 +6,6 @@ import { list_includes } from "./list_includes.mjs";
 import { list_filter_text_includes } from "./list_filter_text_includes.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 export async function baseline_writers_growth_unguarded() {
   "audit: every ratchet writer that can record something the file did not already hold, because nothing in it refuses to grow";
   "a ratchet that can be rewritten in both directions is not a ratchet. the rewrite gets reached for at exactly the moment the gate goes red, which is the moment it was doing its job, so the one thing the writer must refuse is the one thing it is most likely to be asked for";
