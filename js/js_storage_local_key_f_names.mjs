@@ -1,3 +1,4 @@
+import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { js_storage_local_key_scan } from "./js_storage_local_key_scan.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
@@ -7,9 +8,7 @@ import { fn_name } from "./fn_name.mjs";
 import { js_call_argument_at } from "./js_call_argument_at.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { list_add } from "./list_add.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 export function js_storage_local_key_f_names(ast, seams) {
   "Every function name this file writes into a key in somebody's browser storage, read off the calls that do the writing. Read-only, pure.";
   "A stored key here is a function's own name with a word after it. The first thing the storing is handed is the function the setting belongs to, and its name is joined to the word to make the key the browser looks under - so the name is not only a name any more, it is published, and it is sitting on disks this repo will never see again.";
@@ -29,8 +28,7 @@ export function js_storage_local_key_f_names(ast, seams) {
       list_add(found, owner);
     }
     let word_node = js_call_argument_at_try(node, "2");
-    let callee = js_call_callee_name_try(word_node);
-    let by_reference = equal(callee, spelled);
+    let by_reference = js_call_callee_name_equal(word_node, spelled);
     if (by_reference) {
       let inner = js_call_argument_at(word_node, "1");
       let word = property_get(inner, "value");

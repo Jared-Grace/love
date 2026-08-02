@@ -1,3 +1,4 @@
+import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -57,13 +58,17 @@ export function app_code_lesson_expression_swapping_add() {
       "+",
     ]);
     let times = app_code_container_light_blue(root);
-    html_div_cycle_code(times, ["3 rows of 4 is the same as 4 rows of 3"]);
-    html_div_cycle_code(times, ["", "2 * 5 === 10", " and ", "5 * 2 === 10"]);
+    html_div_cycle_code(times, ["3 rows of 4 dots"]);
+    app_code_dot_rectangle(times, 3, 4);
+    html_div_cycle_code(times, ["Turned a quarter, that is 4 rows of 3"]);
+    app_code_dot_rectangle(times, 4, 3);
+    html_div_cycle_code(times, ["The same dots, so the count stays the same"]);
+    html_div_cycle_code(times, ["", "3 * 4 === 12", " and ", "4 * 3 === 12"]);
     html_div_cycle_code(times, [
       "",
-      "10",
+      "12",
       " and ",
-      "10",
+      "12",
       " are the same, so we can swap the numbers around ",
       "*",
     ]);
