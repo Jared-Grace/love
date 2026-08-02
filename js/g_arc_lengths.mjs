@@ -1,3 +1,9 @@
+import { number_seed_from_text } from "./number_seed_from_text.mjs";
+import { random_seeded } from "./random_seeded.mjs";
+import { add } from "./add.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { g_passage_match_count } from "./g_passage_match_count.mjs";
@@ -30,7 +36,7 @@ export async function g_arc_lengths(chapter) {
   let lengths = [];
   let remaining = arc_turns;
   let length = cap;
-  for (let taken = 0; less_than(taken, arc_turns); taken++) {
+  for (let emitted = 0; less_than(emitted, arc_turns); emitted++) {
     if (less_than(remaining, shortest)) {
       break;
     }
@@ -49,14 +55,23 @@ export async function g_arc_lengths(chapter) {
   let seed = number_seed_from_text(chapter);
   let next = random_seeded(seed);
   let count = lengths.length;
-  for (let attempt = 0; less_than(attempt, settings.arc_length_swaps); attempt++) {
-    let giver = Math.floor(multiply(next(), count));
-    let taker = Math.floor(multiply(next(), count));
+  for (
+    let attempt = 0;
+    less_than(attempt, settings.arc_length_swaps);
+    attempt++
+  ) {
+    let left = next();
+    let p = multiply(left, count);
+    let giver = Math.floor(p);
+    let left2 = next();
+    let p2 = multiply(left2, count);
+    let taker = Math.floor(p2);
     let given = subtract(lengths[giver], 1);
     let taken = add(lengths[taker], 1);
     let stays_above = greater_than_equal(given, shortest);
     let stays_below = less_than_equal(taken, cap);
-    let different = not(equal(giver, taker));
+    let b = equal(giver, taker);
+    let different = not(b);
     if (stays_above && stays_below && different) {
       lengths[giver] = given;
       lengths[taker] = taken;
