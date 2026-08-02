@@ -8,6 +8,7 @@ import { math_min } from "./math_min.mjs";
 import { json_to } from "./json_to.mjs";
 import { json_from } from "./json_from.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function js_builtin_calls() {
   "Every method of a built-in this repo already keeps a function of its own for, paired with that function and with the name the built-in is reached through.";
   "Only the methods a function already stands for are listed. One with nothing standing for it is not a gap this list can fill - naming it here would leave the rewrite pointing at a name nothing answers to, which is worse than leaving the built-in call alone.";
@@ -62,6 +63,11 @@ export function js_builtin_calls() {
       object: date,
       member: text_frozen("now"),
       fn: date_now_milliseconds,
+    },
+    {
+      object,
+      member: text_frozen("keys"),
+      fn: object_property_names,
     },
   ];
   return calls;
