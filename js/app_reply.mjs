@@ -122,7 +122,6 @@ export async function app_reply(context) {
     let reference_current = null;
     async function reference_each(reference) {
       reference_current = await app_reply_verses_add(
-        en,
         reference,
         reference_current,
         bible_texts,
