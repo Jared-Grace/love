@@ -94,9 +94,11 @@ export function app_code_lesson_expression_swapping() {
     return built;
   }
   function above(root) {
-    "the rule, then it worked once where swapping keeps the answer and once where it flips it";
+    "some operators survive a swap for ANY two numbers (you can always swap), others only when the two numbers happen to be equal (you cannot always swap) - so we test with two different numbers";
     let header = app_code_container_light_blue(root);
-    html_div_cycle_code(header, ["Swapping the numbers around an operator"]);
+    html_div_cycle_code(header, [
+      "Some operators you can always swap, some you cannot",
+    ]);
     let yes = app_code_container_light_blue(root);
     html_div_cycle_code(yes, [
       "For ",
@@ -111,7 +113,7 @@ export function app_code_lesson_expression_swapping() {
       "+",
       " and ",
       "*",
-      ", the order does not matter",
+      ", swapping never changes the answer - you can always swap",
     ]);
     let no = app_code_container_light_blue(root);
     html_div_cycle_code(no, [
@@ -131,7 +133,16 @@ export function app_code_lesson_expression_swapping() {
       "/",
       ", ",
       "%",
-      " and comparisons, the order matters",
+      " and comparisons, swapping can change the answer - you cannot always swap",
     ]);
+    let note = app_code_container_light_blue(root);
+    html_div_cycle_code(note, [
+      "But ",
+      "0 - 0 === 0 - 0",
+      " is ",
+      "true",
+      " - the two numbers are the same, so swapping changes nothing",
+    ]);
+    html_div_cycle_code(note, ["So we test with two different numbers"]);
   }
 }
