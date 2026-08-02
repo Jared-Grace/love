@@ -9,18 +9,7 @@ export function permission_rule_granted_name(rule) {
   "read rather than remembered, because the file on disk is the only record of what was granted before a rename moved the list out from under it, and a name that has departed exists nowhere else by then";
   let opening = "Bash(node ";
   let closing = ":*)";
-  let opens = text_starts_with(rule, opening);
-  if (not(opens)) {
-    let v = text_empty();
-    return v;
-  }
-  let closes = text_ends_with(rule, closing);
-  if (not(closes)) {
-    let v2 = text_empty();
-    return v2;
-  }
-  let difference = subtract(rule.length, closing.length);
-  let inner = rule.slice(opening.length, difference);
+  let inner = text_wrapped_inner(rule, opening, closing);
   let words = inner.split(" ");
   let last = subtract(words.length, 1);
   let f_name = words[last];
