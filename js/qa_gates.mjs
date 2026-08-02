@@ -1,3 +1,4 @@
+import { qa_gates_repeated_gate_run } from "./qa_gates_repeated_gate_run.mjs";
 import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_empty_cases_gate_run.mjs";
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
@@ -276,7 +277,7 @@ export function qa_gates() {
     functions_page_serialized_gate_run,
     functions_gate_run_unwired_gate_run,
     functions_cases_ungated_gate_run,
-    functions_condition_bodies_empty_gate_run,
+    qa_gates_repeated_gate_run,
   ];
   return gates;
 }
