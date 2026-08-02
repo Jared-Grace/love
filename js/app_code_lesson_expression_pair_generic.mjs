@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_get } from "./list_get.mjs";
@@ -64,7 +65,7 @@ export function app_code_lesson_expression_pair_generic(params) {
     let rights = [word];
     let built = app_code_lesson_name_id_generic(
       rights,
-      "expressions",
+      app_code_category_expressions(),
       title_get,
     );
     return built;
