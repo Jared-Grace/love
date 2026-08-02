@@ -1,3 +1,4 @@
+import { qa_trees_processes_orphaned_end } from "./qa_trees_processes_orphaned_end.mjs";
 import { qa_tree_processes_end } from "./qa_tree_processes_end.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_tree_untouched_is } from "./qa_tree_untouched_is.mjs";
@@ -51,9 +52,12 @@ export async function qa_trees_reap() {
     list_add(reaped, owner);
     list_add_multiple(ended_all, ended);
   }
+  ("The copies that are already gone are swept last, and they are the reason any of this had to be written. A process outliving its own copy is in no folder, so the loop above cannot reach it however often it runs - the folder was its only name in that list. Left to a command somebody has to remember, it would sit exactly as long as the one that sat four days. Here it costs one reading of the machine's own process list per reap, and nobody has to remember anything.");
+  let orphaned = await qa_trees_processes_orphaned_end();
   let report = {
     reaped,
     ended: ended_all,
+    orphaned,
     kept: subtract(owners.length, reaped.length),
   };
   return report;

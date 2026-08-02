@@ -1,3 +1,5 @@
+import { js_storage_browser_objects_cases_gate_run } from "./js_storage_browser_objects_cases_gate_run.mjs";
+import { storage_browser_direct_gate_run } from "./storage_browser_direct_gate_run.mjs";
 import { js_query_key_literals_cases_gate_run } from "./js_query_key_literals_cases_gate_run.mjs";
 import { js_query_key_getters_cases_gate_run } from "./js_query_key_getters_cases_gate_run.mjs";
 import { query_key_literals_gate_run } from "./query_key_literals_gate_run.mjs";
@@ -156,6 +158,7 @@ export function qa_gates() {
     js_hash_key_getters_cases_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
+    js_storage_browser_objects_cases_gate_run,
     js_address_fused_words_cases_gate_run,
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
@@ -202,6 +205,7 @@ export function qa_gates() {
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
     query_key_getters_frozen_gate_run,
+    storage_browser_direct_gate_run,
     literals_frozen_fused_gate_run,
     literals_frozen_storage_gate_run,
     storage_local_key_names_gate_run,
