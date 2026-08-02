@@ -1,27 +1,42 @@
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function path_relative(from_dir, to_path) {
   arguments_assert(arguments, 2);
-  let from_parts = from_dir.split("/").filter((s) => s !== "" && s !== ".");
-  let to_parts = to_path.split("/").filter((s) => s !== "" && s !== ".");
+  function lambda(s) {
+    let r = not_equal(s, "") && not_equal(s, ".");
+    return r;
+  }
+  let from_parts = from_dir.split("/").filter(lambda);
+  function lambda2(s) {
+    let r2 = not_equal(s, "") && not_equal(s, ".");
+    return r2;
+  }
+  let to_parts = to_path.split("/").filter(lambda2);
   let i = 0;
   for (
     ;
-    i < from_parts.length && i < to_parts.length && from_parts[i] === to_parts[i];
+    less_than(i, from_parts.length) &&
+    less_than(i, to_parts.length) &&
+    equal(from_parts[i], to_parts[i]);
     i++
   ) {}
   let segments = [];
-  for (let u = i; u < from_parts.length; u++) {
+  for (let u = i; less_than(u, from_parts.length); u++) {
     segments.push("..");
   }
-  for (let d = i; d < to_parts.length; d++) {
+  for (let d = i; less_than(d, to_parts.length); d++) {
     segments.push(to_parts[d]);
   }
   let joined = segments.join("/");
-  if (joined === "") {
-    return ".";
+  if (equal(joined, "")) {
+    let r3 = ".";
+    return r3;
   }
-  if (segments[0] === "..") {
+  if (equal(segments[0], "..")) {
     return joined;
   }
-  return "./" + joined;
+  let r4 = "./" + joined;
+  return r4;
 }
