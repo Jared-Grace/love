@@ -10,7 +10,7 @@ export async function g_verify_books_urls() {
     "http://localhost:" + server_port() + "/love/public/dev/g_verify.html";
   function book_url(book) {
     let chapter = property_get(book, "chapter");
-    let url = base + "?chapter=" + chapter;
+    let url = g_verify_chapter_url(base, chapter);
     return url;
   }
   let urls = list_map(books, book_url);
