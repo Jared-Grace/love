@@ -1,3 +1,4 @@
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -210,7 +211,11 @@ export function app_code_lesson_expression_remainder_divide() {
       return render;
     }
     let rights = ["remainder by dividing"];
-    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      app_code_category_operators(),
+      title_get,
+    );
     return built;
   }
   function above(root) {
