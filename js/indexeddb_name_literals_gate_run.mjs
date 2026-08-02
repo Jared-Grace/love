@@ -11,7 +11,7 @@ export async function indexeddb_name_literals_gate_run() {
   "Held by a function it can be named in the frozen list, and there an in-place change shows up as a changed value rather than as nothing at all. So this asks the one thing that has to be true before the freeze can watch anything: that there is a name to freeze.";
   "This is the one kind of published word the other watches cannot reach. The one that follows frozen words into longer strings looks for the word with an equals sign after it, which a store name never has, and looking for the values themselves would answer with every sentence that happens to use an everyday word. Only the shape is left.";
   "It stands at zero rather than at a line already drawn, because every way into a store in this repo already holds its name in a function. Nothing here is being lived with.";
-  "How many ways in were found is carried out with the answer. A gate that passes by finding nothing cannot be told apart from one whose reading has stopped answering, and a run reporting no ways in at all is the second of those.";
+  "How many ways in were found, and how many files were opened, are both carried out with the answer. A gate that passes by finding nothing cannot be told apart from one whose reading has stopped answering, and either of those numbers coming back at zero is the second of those.";
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let doors = await indexeddb_name_doors();
@@ -35,6 +35,7 @@ export async function indexeddb_name_literals_gate_run() {
   });
   let r = {
     doors: list_size(ways),
+    files,
     sites: list_size(sites),
   };
   return r;
