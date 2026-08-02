@@ -2789,7 +2789,8 @@
       "Bash(node scripts/ai.mjs folder_user_storage_function_path_function:*)",
       "Bash(node scripts/ai.mjs claude_transcripts_folder:*)",
       "Bash(node scripts/ai.mjs functions_names_untracked:*)",
-      "Bash(node scripts/ai.mjs qa_commit_named_path:*)"
+      "Bash(node scripts/ai.mjs qa_commit_named_path:*)",
+      "Bash(node scripts/ai.mjs storage_function_folder_rename:*)"
     ],
     "defaultMode": "acceptEdits"
   },
