@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { example_transform_card_dom } from "./example_transform_card_dom.mjs";
 import { example_rejection_card_dom } from "./example_rejection_card_dom.mjs";
@@ -6,11 +7,14 @@ import { example_files_card_dom } from "./example_files_card_dom.mjs";
 ("example_html.");
 export function example_card_dom(parent, example) {
   let kind = property_get(example, "kind");
-  if (kind === "rejection") {
-    return example_rejection_card_dom(parent, example);
+  if (equal(kind, "rejection")) {
+    let card = example_rejection_card_dom(parent, example);
+    return card;
   }
-  if (kind === "files") {
-    return example_files_card_dom(parent, example);
+  if (equal(kind, "files")) {
+    let card2 = example_files_card_dom(parent, example);
+    return card2;
   }
-  return example_transform_card_dom(parent, example);
+  let card3 = example_transform_card_dom(parent, example);
+  return card3;
 }
