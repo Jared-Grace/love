@@ -1,3 +1,5 @@
+import { gate_case_mark } from "./gate_case_mark.mjs";
+import { gate_counts_log } from "./gate_counts_log.mjs";
 import { js_comment_migratable_cases } from "./js_comment_migratable_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -21,7 +23,7 @@ export function js_comment_migratable_cases_gate_run() {
     let comment = list_single(comments);
     let actual = js_comment_migratable_is(code, ast, comment);
     let b = equal(expected, actual);
-    let mark = b ? "pass  " : "FAIL  ";
+    let mark = gate_case_mark(b);
     let why = property_get(c, "why");
     console.log(mark + actual + "  " + why);
     if (not(b)) {
@@ -29,7 +31,7 @@ export function js_comment_migratable_cases_gate_run() {
     }
   }
   let passed = subtract(cases.length, failures.length);
-  console.log("\npass " + passed + "  fail " + failures.length);
+  gate_counts_log(passed, failures.length);
   if (greater_than(failures.length, 0)) {
     throw new Error(
       "comment migratable cases gate: " + failures.length + " failed",
