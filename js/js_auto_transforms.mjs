@@ -1,4 +1,4 @@
-import { js_math_to_calls } from "./js_math_to_calls.mjs";
+import { js_builtin_to_calls } from "./js_builtin_to_calls.mjs";
 import { js_returns_empty_last_remove } from "./js_returns_empty_last_remove.mjs";
 import { js_log_f_name_add } from "./js_log_f_name_add.mjs";
 import { js_destructure_functionize } from "./js_destructure_functionize.mjs";
@@ -26,7 +26,7 @@ import { js_imports_fix } from "./js_imports_fix.mjs";
 export function js_auto_transforms() {
   let transforms = [
     js_operators_to_calls,
-    js_math_to_calls,
+    js_builtin_to_calls,
     js_await_add,
     js_dollar,
     js_arrow_blockify,
