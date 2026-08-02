@@ -61,9 +61,6 @@ export async function js_expand_generic(next, stack_2, ast) {
     let declaration = property_get(v2, "declaration");
     let identifiers_call = js_identifiers_names(ast_call);
     let identifiers = js_identifiers_names(ast);
-    let intesection = list_intersect(identifiers_call, identifiers);
-    if (list_empty_not_is(intesection)) {
-    }
     let identifiers_all = list_concat(identifiers, identifiers_call);
     let f_names = await functions_names();
     list_remove_all_multiple(f_names, identifiers_all);
