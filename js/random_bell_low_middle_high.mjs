@@ -1,3 +1,4 @@
+import { round } from "./round.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
@@ -13,6 +14,6 @@ export function random_bell_low_middle_high(next, low, middle, high) {
   let reach = above ? reach_up : reach_down;
   let moved = multiply(bell, reach);
   let landed = middle + moved;
-  let r = Math.round(landed);
+  let r = round(landed);
   return r;
 }
