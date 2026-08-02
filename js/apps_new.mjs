@@ -5,7 +5,7 @@ import { apps_new_fn_main } from "./apps_new_fn_main.mjs";
 import { text_and_empty_not_is_assert_json } from "./text_and_empty_not_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_new_fn } from "./apps_new_fn.mjs";
-export async function app_shared_new(name) {
+export async function apps_new(name) {
   arguments_assert(arguments, 1);
   text_and_empty_not_is_assert_json(name, {
     hint: "the app name should be non-empty text — was it blank?",
