@@ -611,6 +611,8 @@ export function permission_grant_names() {
   let spelled606 = fn_name("qa_gate_runs_in_flight");
   let spelled607 = fn_name("repos_beside_paths");
   let spelled608 = fn_name("storage_local_key_words_record_new");
+  let spelled609 = fn_name("functions_inside_duplicates_gate_run");
+  let spelled610 = fn_name("permission_tool_unmatched_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -1220,6 +1222,8 @@ export function permission_grant_names() {
     spelled606,
     spelled607,
     spelled608,
+    spelled609,
+    spelled610,
   ];
   return names;
 }
