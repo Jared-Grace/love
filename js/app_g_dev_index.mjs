@@ -24,9 +24,10 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function app_g_dev_index() {
   let f_name = fn_name("app_search_results");
+  let f_name2 = fn_name("app_shared_container_blue");
   (text_combine_multiple([
     "the #index dev directory, rendered like the Bible SEARCH RESULTS (DRY — the SAME ",
-    fn_name("app_shared_container_blue"),
+    f_name2,
     " cards + bold collapsible header the search uses, mirroring ",
     f_name,
     ".book_card_add): a drill-down where a category card 'a ›' toggles a nested body of its child cards, and drilling a: b: reaches leaf ROUTE cards whose link jumps to that screen. routes + categories come from the ",
