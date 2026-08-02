@@ -1,9 +1,12 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function js_atomize_cases() {
   "Written-out code pinning which calls the lifting pass takes out into a name of their own and which it leaves where they stand";
   "The pass holds back in three places, and holding back looks exactly like doing nothing. A pass that had stopped working would leave every one of these alone and be right about three of them, so the cases that must be lifted are carried as firmly as the ones that must not - they are the half that can tell the difference";
-  "The first case is not invented. It is the line js_node_type_is was written as, and the lifting of it above its own guard ran the lookup on nothing, threw, and stopped every canonicalize in the repo on 2026-08-03";
-  "Each piece of code is frozen text, because the words inside are ordinary repo names and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests";
+  ("The first case is not invented. It is the line ",
+    fn_name("js_node_type_is"),
+    " was written as, and the lifting of it above its own guard ran the lookup on nothing, threw, and stopped every canonicalize in the repo on 2026-08-03");
+  ("Each piece of code is frozen text, because the words inside are ordinary repo names and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests");
   let cases = [
     {
       name: "a comparison on the right of an and, one side a call - the line that broke the repo",
