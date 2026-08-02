@@ -1,3 +1,5 @@
+import { json_to } from "./json_to.mjs";
+import { json_from } from "./json_from.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +9,7 @@ export async function memory_hook_check(tool_name, file_path) {
   arguments_assert(arguments, 2);
   let cp = await import("child_process");
   let spawn = property_get(cp, "spawn");
-  let payload = JSON.stringify({
+  let payload = json_to({
     tool_name,
     tool_input: {
       file_path,
@@ -44,7 +46,7 @@ export async function memory_hook_check(tool_name, file_path) {
     };
     return r;
   }
-  let parsed = JSON.parse(stdout);
+  let parsed = json_from(stdout);
   let hook = property_get(parsed, "hookSpecificOutput");
   let r2 = {
     decision: property_get(hook, "permissionDecision"),
