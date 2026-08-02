@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
 import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
@@ -430,12 +431,15 @@ export async function app_g_verify_view(
   function suggestion_text_normalize(t) {
     let split = t.split("\n");
     function line_trim(one) {
-      return one.trim();
+      let r4 = one.trim();
+      return r4;
     }
     function line_full(one) {
-      return greater_than(one.length, 0);
+      let g = greater_than(one.length, 0);
+      return g;
     }
-    return split.map(line_trim).filter(line_full).join("\n");
+    let r5 = split.map(line_trim).filter(line_full).join("\n");
+    return r5;
   }
   ("did the loop apply the reviewer's last suggestion word for word? the saved lines ARE what Claude decided, so comparing them with the newest suggestion for this verse answers it — no extra state to write and nothing that can disagree with the page");
   async function suggestion_applied_is() {
@@ -456,9 +460,11 @@ export async function app_g_verify_view(
         return false;
       }
       let last = mine[subtract(mine.length, 1)];
-      let sent = suggestion_text_normalize(property_get(last, "text"));
+      let value11 = property_get(last, "text");
+      let sent = suggestion_text_normalize(value11);
       let now = suggestion_text_normalize(value4);
-      return equal(sent, now);
+      let eq3 = equal(sent, now);
+      return eq3;
     } catch (ignore_applied) {
       ignore_applied;
       return false;
@@ -477,7 +483,8 @@ export async function app_g_verify_view(
         let text = "✓ Claude reviewed your suggestion for v" + verse;
         let applied = await suggestion_applied_is();
         if (applied) {
-          text = "✓ Claude used your suggestion for v" + verse + " as you sent it";
+          text =
+            "✓ Claude used your suggestion for v" + verse + " as you sent it";
         }
         if (note) {
           text = text + " — " + note;
