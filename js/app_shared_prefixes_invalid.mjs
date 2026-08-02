@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
@@ -10,7 +11,6 @@ import { list_concat } from "./list_concat.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -48,8 +48,7 @@ export async function app_shared_prefixes_invalid() {
     return is;
   }
   let invalid = list_filter(app_fns, invalid_is);
-  let list = list_map(invalid, part_of);
-  let parts = list_unique(list);
+  let parts = list_map_unique(invalid, part_of);
   function group(part) {
     function same(f_name) {
       let left = part_of(f_name);
