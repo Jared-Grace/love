@@ -1,7 +1,7 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,8 +10,7 @@ export function app_code_quiz_correction(container, qa) {
   let box = app_code_container_light_blue(container);
   html_centered(box);
   let code = property_get(qa, "question");
-  let input = property_get(qa, "answer");
-  let output = text_to(input);
+  let output = property_text_to(qa, "answer");
   let arrow = emoji_arrow_right();
   let middle = text_combine_multiple([" ", arrow, " "]);
   html_div_cycle_code(box, ["", code, middle, output]);

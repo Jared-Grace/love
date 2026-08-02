@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
 import { uplifting_package_destination } from "./uplifting_package_destination.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
@@ -23,7 +24,6 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { each_async } from "./each_async.mjs";
 import { each } from "./each.mjs";
 import { each_object } from "./each_object.mjs";
-import { text_to } from "./text_to.mjs";
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
 export async function bible_verses_uplifting_package_upload(bible_folder) {
@@ -35,8 +35,7 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
     interlinear_chapters = await bible_interlinear_chapters();
     function chapter_normalize(chapter_verses) {
       function verse_normalize(verse) {
-        let number = property_get(verse, "verse_number");
-        let value = text_to(number);
+        let value = property_text_to(verse, "verse_number");
         property_set(verse, "verse_number", value);
       }
       each(chapter_verses, verse_normalize);
