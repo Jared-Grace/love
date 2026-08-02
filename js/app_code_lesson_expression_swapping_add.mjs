@@ -99,7 +99,7 @@ export function app_code_lesson_expression_swapping_add() {
       "-",
     ]);
     html_div_cycle_code(minus, [
-      "However, we can always swap two numbers that are the same, because they are the same numbers before and after",
+      "However, we can always swap two numbers that are the same, because both numbers are the same before and after",
     ]);
   }
 }
