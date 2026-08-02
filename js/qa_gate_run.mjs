@@ -1,3 +1,4 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
@@ -13,7 +14,6 @@ import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gates_machine } from "./qa_gates_machine.mjs";
 import { qa_gates_told } from "./qa_gates_told.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { qa_gates_read } from "./qa_gates_read.mjs";
 export async function qa_gate_run() {
@@ -57,8 +57,7 @@ export async function qa_gate_run() {
     qa_gate_in_flight_print(flying);
   }
   let failed_copy = property_get(told, "failed");
-  let failed_here = property_get(here, "failed");
-  let failed = list_concat(failed_copy, failed_here);
+  let failed = list_concat_property(failed_copy, here, "failed");
   if (greater_than(failed.length, 0)) {
     ("Every red is asked once more out here, in the folder as it stands, because the copy was taken while several of us were writing to it and a file caught half-copied answers the same way however many times it is asked in there. What that ask finds is printed and nothing else: the verdict below stays exactly what the frozen copy said, since a gate quiet out here may only be quiet because somebody is mid-edit, and a clean answer from this gate is supposed to mean the code is sound");
     let joined = list_join_comma(failed);
