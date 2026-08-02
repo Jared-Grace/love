@@ -14,6 +14,7 @@ export async function g_game_generate_report(word) {
   let elder_short_plants = 0;
   let trimmed_plants = 0;
   let days_spread = 0;
+  let leader_days_percent_low = 100;
   for (let plant of plants) {
     let npcs = property_get(plant, "npcs");
     let days = property_get(plant, "days");
@@ -23,6 +24,11 @@ export async function g_game_generate_report(word) {
     let seen = sizes[npcs];
     let already = seen ? seen : 0;
     sizes[npcs] = already + 1;
+    let percent = property_get(plant, "leader_days_percent");
+    let lower = less_than(percent, leader_days_percent_low);
+    if (lower) {
+      leader_days_percent_low = percent;
+    }
     let elder_short = property_get(plant, "elder_short");
     if (elder_short) {
       elder_short_plants = elder_short_plants + 1;
@@ -59,6 +65,7 @@ export async function g_game_generate_report(word) {
     elder_short_plants,
     trimmed_plants,
     days_spread,
+    leader_days_percent_low,
     rows,
   };
   return r;
