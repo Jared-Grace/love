@@ -3606,16 +3606,9 @@ def main():
     # prompts) or, worse, auto-approving.
     denied_fn = find_denied_dispatcher_function(command)
     if denied_fn or find_raw_node_eval(command):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": (
-                    dispatcher_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
-                ),
-            }
-        }))
-        return
+        return decide("deny", (
+            dispatcher_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
+        ))
 
     # Same hard-floor category as the node-eval block above: `python -c` is
     # arbitrary command-line code, the analog of `node -e`. Floored (not just
