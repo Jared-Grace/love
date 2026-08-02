@@ -8,7 +8,6 @@ import { list_add } from "./list_add.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_reply_verses_add(
-  en,
   reference,
   reference_current,
   bible_texts,
