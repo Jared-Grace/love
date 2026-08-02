@@ -1,3 +1,4 @@
+import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { range_map } from "./range_map.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
@@ -13,7 +14,6 @@ import { list_concat_single } from "./list_concat_single.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -49,8 +49,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     let divisors = list_shuffle_take([3, 4, 5, 6], 4);
     function to_pair(divisor) {
       let count = integer_random(2, 3);
-      let max = subtract(divisor, 1);
-      let leftover = integer_random(1, max);
+      let leftover = integer_random_below(divisor);
       let number = multiply_add(count, divisor, leftover);
       let question = js_code_binary_spaced_nb(number, percent, divisor);
       let answer = subtract_code(number, divisor, count);
