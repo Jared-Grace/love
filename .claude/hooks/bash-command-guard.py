@@ -3413,12 +3413,7 @@ def find_awk_text_tool(command):
     unparseable command returns None and falls through. Safe as a floor: awk is
     never in the allow-list, so this only ever converts an 'ask' into a
     self-correcting 'deny', never blocks something that would have auto-approved."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if words and words[0] in AWK_TEXT_TOOLS:
             return words[0]
     return None
