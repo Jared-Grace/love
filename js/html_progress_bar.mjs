@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { html_progress_caption_font_size } from "./html_progress_caption_font_size.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -12,8 +13,6 @@ import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 export function html_progress_bar(
   root,
   count_progress,
@@ -30,8 +29,7 @@ export function html_progress_bar(
     padding: "0",
   });
   let div = html_div(progress_container);
-  let top = multiply(100, count_progress);
-  let left = divide(top, count_total);
+  let left = multiply_divide(100, count_progress, count_total);
   html_style_assign(div, {
     "border-radius": "9999px",
     "background-color": color_valid,
