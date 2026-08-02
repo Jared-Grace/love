@@ -1,3 +1,4 @@
+import { property_negative } from "./property_negative.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { property_count_add } from "./property_count_add.mjs";
@@ -9,7 +10,6 @@ import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { subtract } from "./subtract.mjs";
 export async function functions_name_vocabulary(top) {
   "The words this repo actually names things with - what it calls the thing a name ends in, and what it calls the area a name starts in.";
   "Written because a search over names can only be used by somebody who already speaks the repo's words, and on 2026-07-28 that cost about nine hundred commands. The function looked for was named perfectly; the search said batch and refusal check while the repo says multiple and grant add, and no amount of naming discipline closes a gap that sits in the asker rather than in the name. Reading this first is the translation step, and it is one command.";
@@ -39,8 +39,7 @@ export async function functions_name_vocabulary(top) {
       });
     }
     function lambda_rank(record) {
-      let times = property_get(record, "times");
-      let ordered = subtract(0, times);
+      let ordered = property_negative(record, "times");
       return ordered;
     }
     list_sort_number_mapper(out, lambda_rank);

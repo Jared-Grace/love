@@ -1,3 +1,4 @@
+import { property_negative } from "./property_negative.mjs";
 import { repo_path_combine } from "./repo_path_combine.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -6,8 +7,6 @@ import { text_bytes_size } from "./text_bytes_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_take } from "./list_take.mjs";
-import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
 export async function claude_md_sections_longest(top) {
   "Which headed parts of the instructions file carry the most weight, heaviest first.";
   "The size gate can only say the file is too big, which tells a reader to shorten something without saying what. This says where the weight actually is, and that is the whole difference between a complaint and a place to start.";
@@ -37,8 +36,7 @@ export async function claude_md_sections_longest(top) {
   }
   section_close();
   function lambda_rank(record) {
-    let size = property_get(record, "bytes");
-    let ordered = subtract(0, size);
+    let ordered = property_negative(record, "bytes");
     return ordered;
   }
   list_sort_number_mapper(sections, lambda_rank);
