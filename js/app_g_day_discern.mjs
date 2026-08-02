@@ -1,4 +1,4 @@
-import { app_g_conversation_key } from "./app_g_conversation_key.mjs";
+import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
@@ -20,7 +20,7 @@ export async function app_g_day_discern(div_map) {
   property_set(state, "target_start", distance);
   property_set(state, "target_best", distance);
   let prayer = property_get(player, "prayer");
-  let property_name = app_g_conversation_key();
+  let property_name = g_conversation_key();
   property_set(prayer, property_name, true);
   await app_g_player_save(player);
   await app_g_day_guide_show(div_map);
