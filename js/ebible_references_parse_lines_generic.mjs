@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -49,7 +50,7 @@ export async function ebible_references_parse_lines_generic(
   async function lambda3(v4) {
     let verse_number = property_get(v4, "verse_number");
     let chapter_code = property_get(v4, "chapter_code");
-    let bible_folder_of_verse = property_get(v4, "bible_folder");
+    let bible_folder_of_verse = property_get(v4, bible_folder_key());
     let v3 = await catch_null_async(verse_get_lambda);
     async function verse_get_lambda() {
       let reference = ebible_parts_chapter_code_to_reference(
