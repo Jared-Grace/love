@@ -130,10 +130,10 @@ export async function app_g_verify_home(context) {
     }
   }
   document.addEventListener("visibilitychange", on_visible);
-  function render(chapter_shown, status, chapter_state) {
+  function render(chapter_shown, status_shown, chapter_state) {
     shown_json = json_to({
       chapter: chapter_shown,
-      status,
+      status: status_shown,
       chapter_state,
     });
     html_clear(root);
@@ -145,8 +145,8 @@ export async function app_g_verify_home(context) {
       return difference;
     }
     passages = passages.slice().sort(lambda);
-    let busy = property_get(status, "busy");
-    let status_verse = property_get(status, "verse");
+    let busy = property_get(status_shown, "busy");
+    let status_verse = property_get(status_shown, "verse");
     function lambda2(p) {
       let key2 = g_sermon_passage_verses_key(p);
       return key2;
@@ -229,7 +229,7 @@ export async function app_g_verify_home(context) {
     html_style_font_size(hint, value8);
     html_margin_em(hint, "0");
     if (busy) {
-      let note = property_get(status, "note");
+      let note = property_get(status_shown, "note");
       let text = "Claude is writing v" + status_verse + "…";
       if (note) {
         text = text + "  " + note;
