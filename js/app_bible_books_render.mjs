@@ -3,7 +3,7 @@ import { app_shared_container_blue_collapsible } from "./app_shared_container_bl
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_bible_books_matches } from "./app_bible_books_matches.mjs";
+import { app_shared_bible_books_matches } from "./app_shared_bible_books_matches.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +18,7 @@ export function app_bible_books_render(
 ) {
   "draw the Old-and-New-Testament to section to books tree as nested cards: a testament card holds a bold centered title and its section cards; each section card holds a blue heading and its book buttons. every shown book is sized together at the end, so a narrow search of a few books gets big targets while the whole canon stays compact";
   html_clear(list_div);
-  let testaments = app_bible_books_matches(query, books);
+  let testaments = app_shared_bible_books_matches(query, books);
   let all_buttons = [];
   function render_testament(testament) {
     let t_name = property_get(testament, "name");

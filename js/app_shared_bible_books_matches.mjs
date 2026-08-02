@@ -14,7 +14,7 @@ import { list_map } from "./list_map.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_includes } from "./text_includes.mjs";
-export function app_bible_books_matches(query, books) {
+export function app_shared_bible_books_matches(query, books) {
   "filter the whole Old-and-New-Testament to section to books tree down to what matches the search text, dropping any section or testament left with nothing, so the renderer just draws what comes back";
   let q = text_lower_to(query);
   function match_book(book) {
