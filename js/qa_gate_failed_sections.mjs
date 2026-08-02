@@ -1,3 +1,4 @@
+import { text_split_last } from "./text_split_last.mjs";
 import { list_first_is } from "./list_first_is.mjs";
 import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -8,7 +9,6 @@ import { text_ends_with } from "./text_ends_with.mjs";
 import { text_between } from "./text_between.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
@@ -52,8 +52,7 @@ export function qa_gate_failed_sections(output) {
       list_add(said, line);
       continue;
     }
-    let parts = text_split(line, failure);
-    let after = list_last(parts);
+    let after = text_split_last(line, failure);
     let halves = text_split_colon(after);
     let mine = list_first_is(halves, name);
     if (not(mine)) {
