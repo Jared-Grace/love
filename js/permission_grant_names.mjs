@@ -679,6 +679,7 @@ export function permission_grant_names() {
   let spelled672 = fn_name("qa_build_folder");
   let spelled673 = fn_name("qa_snapshot_ensure");
   let spelled674 = fn_name("shadowing_baseline_path");
+  let spelled675 = fn_name("process_end");
   let names = [
     spelled,
     spelled2,
@@ -1354,6 +1355,7 @@ export function permission_grant_names() {
     spelled672,
     spelled673,
     spelled674,
+    spelled675,
   ];
   return names;
 }
