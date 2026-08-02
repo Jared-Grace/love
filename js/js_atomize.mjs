@@ -35,6 +35,11 @@ export async function js_atomize(ast) {
         ("a loop header, which is asked again every time round. the name would go in the block above the loop, so the answer would be taken once and kept for the whole loop - and a loop over a list its own body shortens then runs a different number of times. this is the one place where lifting a piece out is not the same code");
         return;
       }
+      let guarded = js_stack_logical_right_is(stack);
+      if (guarded) {
+        ("the right of an and, an or, or a nullish, which is only run when the left side says so. the name would go above the whole line, so the piece would run in front of the very guard that decides whether it should run at all - and a guard asked after the thing it guards is no guard");
+        return;
+      }
       let variable_name = js_node_atomize_name();
       await js_node_atomize(ast, v, variable_name, offset);
     }
