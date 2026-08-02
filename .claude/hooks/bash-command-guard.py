@@ -2984,12 +2984,7 @@ def find_sandbox_path_near_miss(command):
     finders; an unparseable command returns None and falls through to normal
     handling. Returns "" (still not None) if the flag value is empty - the deny
     still fires; main() only tests `is not None`."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         path = sandbox_read_path_near_miss(words)
         if path is not None:
             return path
