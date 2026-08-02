@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,14 +25,16 @@ export function js_signature_match(pattern, target, params, binding) {
   }
   let pattern_args = property_get(pattern, "args");
   let target_args = property_get(target, "args");
-  let arity_equal = equal(list_size(pattern_args), list_size(target_args));
+  let left = list_size(pattern_args);
+  let right = list_size(target_args);
+  let arity_equal = equal(left, right);
   if (not(arity_equal)) {
     return null;
   }
   let binding_so_far = binding;
   let count = list_size(pattern_args);
   let index = 0;
-  while (index < count) {
+  while (less_than(index, count)) {
     let pattern_key = list_get(pattern_args, index);
     let target_key = list_get(target_args, index);
     let unified = js_fold_unify_use(
