@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
 import { equal } from "./equal.mjs";
@@ -47,8 +48,11 @@ export async function functions_fold_sites() {
       let blocks = js_blocks_all(ast);
       let sigs = [];
       for (let block of blocks) {
-        let statements = property_get(block, "body");
-        let block_sigs = list_map(statements, js_atomic_statement_signature);
+        let block_sigs = property_list_map(
+          block,
+          "body",
+          js_atomic_statement_signature,
+        );
         sigs = sigs.concat(block_sigs);
       }
       pattern = js_fn_fold_pattern(ast);

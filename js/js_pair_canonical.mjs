@@ -1,10 +1,10 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { add_1 } from "./add_1.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function js_pair_canonical(sig, sig2) {
@@ -30,13 +30,11 @@ export function js_pair_canonical(sig, sig2) {
     return fresh;
   }
   let callee = property_get(sig, "callee");
-  let args = property_get(sig, "args");
-  let slotted = list_map(args, slot);
+  let slotted = property_list_map(sig, "args", slot);
   let name = property_get(sig, "name");
   slot(name);
   let callee2 = property_get(sig2, "callee");
-  let args2 = property_get(sig2, "args");
-  let slotted2 = list_map(args2, slot);
+  let slotted2 = property_list_map(sig2, "args", slot);
   let joined = list_join(slotted, ",");
   let joined2 = list_join(slotted2, ",");
   let key = list_join_empty([

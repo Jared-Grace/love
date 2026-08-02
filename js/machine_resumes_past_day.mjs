@@ -28,7 +28,9 @@ export async function machine_resumes_past_day() {
   }
   async function journal_reachable(wrap_given) {
     let probe = await journal_stdout("-k -o cat -n 1", wrap_given);
-    let reachable = not(text_empty_is(text_trim(probe)));
+    let s = text_trim(probe);
+    let b = text_empty_is(s);
+    let reachable = not(b);
     return reachable;
   }
   let wrap = command_plain;

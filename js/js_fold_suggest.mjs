@@ -1,10 +1,10 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_fold_match_block } from "./js_fold_match_block.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { each } from "./each.mjs";
@@ -17,8 +17,11 @@ export function js_fold_suggest(f_ast, patterns) {
   ("each hit reports fn name, start index, and length; the real fold pass re-checks soundness before");
   ("rewriting. Skips a pattern that names F itself so a fn is never suggested to fold into itself.");
   let f_block = js_find_body_block(f_ast);
-  let f_statements = property_get(f_block, "body");
-  let target_sigs = list_map(f_statements, js_atomic_statement_signature);
+  let target_sigs = property_list_map(
+    f_block,
+    "body",
+    js_atomic_statement_signature,
+  );
   let f_name = js_flo_name(f_ast);
   function collect(emit) {
     function consider(pattern) {
