@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { property_count_add } from "./property_count_add.mjs";
@@ -38,7 +39,7 @@ export function ai_log_pairs_ranked(entries) {
     property_set(last, session, step);
   }
   let pairs = [];
-  let keys = Object.keys(counts);
+  let keys = object_property_names(counts);
   for (let key of keys) {
     let times = property_get(counts, key);
     list_add(pairs, {
