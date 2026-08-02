@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";

@@ -1,3 +1,4 @@
+import { nearley_grammar_text_parser } from "./nearley_grammar_text_parser.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { app_replace_rule_set_rules_get } from "./app_replace_rule_set_rules_get.mjs";
 import { app_replace_rule_set_strings_simple } from "./app_replace_rule_set_strings_simple.mjs";
@@ -10,10 +11,6 @@ import { list_single } from "./list_single.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { log_json } from "./log_json.mjs";
-import nearley from "nearley";
-import compile from "nearley/lib/compile.js";
-import generate from "nearley/lib/generate.js";
-import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_replace_rule_set_verify_nearley() {
   let r2 = app_replace_rule_set_strings_simple();
@@ -38,21 +35,7 @@ export function app_replace_rule_set_verify_nearley() {
   }
   let mapped = list_map(rules, lambda);
   let joined2 = list_join_newline_2(mapped);
-  let v = nearley.Grammar.fromCompiled(grammarParser);
-  let parserGrammar = new nearley.Parser(v);
-  parserGrammar.feed(grammarText);
-  let grammarAst = parserGrammar.results[0];
-  let compiled = compile(grammarAst, {});
-  let jsModule = generate(compiled, "grammar", {
-    output: "commonjs",
-  });
-  let module = {
-    exports: {},
-  };
-  eval(jsModule);
-  let grammar = module.exports;
-  let v2 = nearley.Grammar.fromCompiled(grammar);
-  let parser = new nearley.Parser(v2);
+  let parser = nearley_grammar_text_parser(grammarText);
   let input = '"_"';
   input = "001";
   parser.feed(input);
