@@ -1,4 +1,4 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { property_path_equals_2 } from "./property_path_equals_2.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -6,7 +6,6 @@ import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_find } from "./list_find.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_stored_get } from "./app_shared_screen_stored_get.mjs";
 export async function app_shared_flow(context, screens, before_or_after, find) {
@@ -17,8 +16,7 @@ export async function app_shared_flow(context, screens, before_or_after, find) {
     current,
   });
   function lambda(item2) {
-    let self = property_path_get_2(item2, "fn", "name");
-    let eq = equal(self, current);
+    let eq = property_path_equals_2(item2, "fn", "name", current);
     return eq;
   }
   let only = list_find(screens, lambda);
