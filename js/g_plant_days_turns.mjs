@@ -1,3 +1,4 @@
+import { ceil } from "./ceil.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
@@ -10,6 +11,6 @@ export function g_plant_days_turns(arc_turns) {
   let kept = subtract(100, s.question_matches_percent);
   let a_day = multiply_divide(s.day_matches, kept, 100);
   let exact = divide(arc_turns, a_day);
-  let r = Math.ceil(exact);
+  let r = ceil(exact);
   return r;
 }
