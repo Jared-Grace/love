@@ -194,6 +194,8 @@ export function examples_notes() {
       "finish a generated call in one command - the loop that ran after every one of them",
     example_shadowing_rename_in:
       "naming the holder supplies the one judgment the plain shadowing rename refuses to make",
+    example_math_calls_rewrite:
+      "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
   };
   return notes;
 }
