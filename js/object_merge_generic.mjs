@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { object_merge_generic_message_match } from "./object_merge_generic_message_match.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { each } from "./each.mjs";
@@ -10,14 +11,14 @@ export function object_merge_generic(mode, to, from) {
   function lambda(property_name) {
     let value_new = property_get(from, property_name);
     if (property_exists(to, property_name)) {
-      if (mode === "strict") {
+      if (equal(mode, "strict")) {
         error_json({
           to,
           from,
           property_name,
         });
       } else {
-        if (mode === "match") {
+        if (equal(mode, "match")) {
           let existing = property_get(to, property_name);
           if (equal_not(existing, value_new)) {
             error_json({
