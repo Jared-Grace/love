@@ -701,7 +701,7 @@ export function permission_grant_names() {
   let spelled694 = fn_name("firebase_prod_apps_unshipped");
   let spelled695 = fn_name("firebase_prod_hashes");
   let spelled696 = fn_name("firebase_prod_hashes_write_all");
-  let spelled697 = fn_name("function_parse_strict");
+  let spelled697 = fn_name("function_parse");
   let spelled698 = fn_name("js_code_getter_literal_cases_gate_run");
   let spelled699 = fn_name("js_code_literal_site_none_cases_gate_run");
   let spelled700 = fn_name("js_condition_bodies_empty_cases_gate_run");
@@ -710,6 +710,7 @@ export function permission_grant_names() {
   let spelled703 = fn_name("qa_gates_repeated_gate_run");
   let spelled704 = fn_name("storage_function_folder_path");
   let spelled705 = fn_name("storage_function_folder_rename_check");
+  let spelled706 = fn_name("permission_grant_check_multiple");
   let names = [
     spelled,
     spelled2,
@@ -1416,6 +1417,7 @@ export function permission_grant_names() {
     spelled703,
     spelled704,
     spelled705,
+    spelled706,
   ];
   return names;
 }

@@ -68,6 +68,7 @@ import { js_name_only_imports_cases_gate_run } from "./js_name_only_imports_case
 import { js_code_literal_key_only_cases_gate_run } from "./js_code_literal_key_only_cases_gate_run.mjs";
 import { functions_arity_gate_run } from "./functions_arity_gate_run.mjs";
 import { functions_statements_after_return_gate_run } from "./functions_statements_after_return_gate_run.mjs";
+import { functions_operators_raw_gate_run } from "./functions_operators_raw_gate_run.mjs";
 import { instructions_notes_gate_run } from "./instructions_notes_gate_run.mjs";
 import { claude_md_size_gate_run } from "./claude_md_size_gate_run.mjs";
 import { app_shared_imports_gate_run } from "./app_shared_imports_gate_run.mjs";
@@ -257,6 +258,7 @@ export function qa_gates() {
     js_dot_name_object_name_cases_gate_run,
     functions_unreachable_check_gate_run,
     functions_statements_after_return_gate_run,
+    functions_operators_raw_gate_run,
     functions_arity_gate_run,
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
