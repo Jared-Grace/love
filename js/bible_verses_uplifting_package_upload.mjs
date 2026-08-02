@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
 import { uplifting_package_destination } from "./uplifting_package_destination.mjs";
@@ -35,8 +36,8 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
     interlinear_chapters = await bible_interlinear_chapters();
     function chapter_normalize(chapter_verses) {
       function verse_normalize(verse) {
-        let value = property_text_to(verse, "verse_number");
-        property_set(verse, "verse_number", value);
+        let value = property_text_to(verse, verse_number_key());
+        property_set(verse, verse_number_key(), value);
       }
       each(chapter_verses, verse_normalize);
     }
@@ -70,7 +71,7 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
     }
     let found = list_find_property_or_null(
       chapter_verses,
-      "verse_number",
+      verse_number_key(),
       verse_number,
     );
     if (null_is(found)) {
