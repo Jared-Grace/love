@@ -1,7 +1,6 @@
-import { round } from "./round.mjs";
+import { number_moved_round } from "./number_moved_round.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
 import { random_bell } from "./random_bell.mjs";
 export function random_bell_low_middle_high(next, low, middle, high) {
   "A whole number drawn near the middle, never under the low end, and reaching the high end only rarely.";
@@ -12,8 +11,6 @@ export function random_bell_low_middle_high(next, low, middle, high) {
   let reach_up = subtract(high, middle);
   let reach_down = subtract(middle, low);
   let reach = above ? reach_up : reach_down;
-  let moved = multiply(bell, reach);
-  let landed = middle + moved;
-  let r = round(landed);
+  let r = number_moved_round(middle, reach, bell);
   return r;
 }

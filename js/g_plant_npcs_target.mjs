@@ -1,8 +1,7 @@
+import { number_moved_round } from "./number_moved_round.mjs";
 import { math_min } from "./math_min.mjs";
-import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_plant_npcs_target(index) {
   "The size a plant is aiming at, from how many plants have already been planted - six for the first and one more each time until it settles at thirteen.";
@@ -15,8 +14,6 @@ export function g_plant_npcs_target(index) {
   let along = divide(index, climb);
   let part = math_min(1, along);
   let risen = subtract(settle, first);
-  let moved = multiply(risen, part);
-  let landed = first + moved;
-  let r = round(landed);
+  let r = number_moved_round(first, risen, part);
   return r;
 }
