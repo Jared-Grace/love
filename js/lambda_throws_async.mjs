@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 export async function lambda_throws_async(lambda) {
   arguments_assert(arguments, 1);
   ("Runs a lambda that has to be waited for and says whether it refused, handing");
