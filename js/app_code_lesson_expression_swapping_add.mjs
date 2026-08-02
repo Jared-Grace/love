@@ -67,7 +67,7 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(times, ["3 rows of 4 and 4 rows of 3 are the same"]);
     app_code_dot_rectangle(times, 3, 4, true);
     html_div_cycle_code(times, [
-      "The dots stay the same, so the count stays the same",
+      "The dots stay the same, so the total count stays the same",
     ]);
     html_div_cycle_code(times, [
       "It is the same for all other numbers, not just 3 and 4",

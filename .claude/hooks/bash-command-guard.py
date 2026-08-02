@@ -2809,12 +2809,7 @@ def open_twin_advice(command):
     functions (a bracket character, a bible panel, a browser window). Denying
     on the suffix would refuse those outright; adding a sentence costs
     nothing when it does not apply and the human still decides."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return ""
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if (
             len(words) >= 3
             and words[0] == "node"
@@ -2897,13 +2892,8 @@ def find_dead_dispatcher_function(command):
     a dangling allow rule (a grant left behind by a deleted function) should not
     outrank that. Fails open everywhere - unparseable command, unresolvable
     name, unreadable repos folder all return None."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
     candidates = []
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if (
             len(words) >= 3
             and words[0] == "node"
@@ -2962,12 +2952,7 @@ def find_non_ai_scripts_invocation(command):
     (`unshare ... node --permission ... scripts/temp/x.mjs`), whose script arg
     is not in position 1 - that path stays allowed by is_safe_sandboxed_node_*.
     An unparseable command returns None and falls through to normal handling."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if (
             len(words) >= 2
             and words[0] == "node"
