@@ -13,7 +13,7 @@ import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_g_openai_split } from "./app_g_openai_split.mjs";
+import { g_openai_split } from "./g_openai_split.mjs";
 import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "./app_g_button_uncolored.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
@@ -77,7 +77,7 @@ export function app_g_study(player, overlay, close) {
         html_clear(div);
         let v = app_g_wrong(passage, passages, property);
         let sermon_wrong = property_path_get_2(v, "passage_wrong", property);
-        let sermon_wrong_list = app_g_openai_split(sermon_wrong);
+        let sermon_wrong_list = g_openai_split(sermon_wrong);
         function correct() {
           let item = list_get(sermon_correct_list, sermon_index);
           async function lambda3() {
