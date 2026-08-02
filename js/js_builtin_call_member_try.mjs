@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { not } from "./not.mjs";
-export function js_math_call_member_try(node) {
+export function js_builtin_call_member_try(node) {
   "The name of the built-in Math method this call reaches, or nothing at all when the call is not one of those.";
   "Nothing rather than a refusal, because this is asked of every call in a file and almost none of them are Math calls. A refusal would make the ordinary case the loud one.";
   "A method reached through a written-out key rather than a name is left unrecognised. Math with a name in brackets is worked out while the program runs, so which method it reaches is not something a reading of the file can know, and guessing would rewrite a call nobody can prove.";
