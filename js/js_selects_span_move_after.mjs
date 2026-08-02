@@ -1,3 +1,4 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -13,7 +14,6 @@ import { not } from "./not.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { js_statements_move_binding_assert } from "./js_statements_move_binding_assert.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
-import { list_index_of } from "./list_index_of.mjs";
 import { list_insert_at_multiple } from "./list_insert_at_multiple.mjs";
 export function js_selects_span_move_after(ast, selects) {
   arguments_assert(arguments, 2);
@@ -90,7 +90,6 @@ export function js_selects_span_move_after(ast, selects) {
   );
   let item_target = property_get(f_target, "item");
   list_remove_multiple(body, statements_moved);
-  let index_landed = list_index_of(body, item_target);
-  let index_insert = add(index_landed, 1);
+  let index_insert = list_index_of_add(body, item_target, 1);
   list_insert_at_multiple(body, index_insert, statements_moved);
 }

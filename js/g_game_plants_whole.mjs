@@ -1,3 +1,5 @@
+import { g_npc_arc_turns_multiple } from "./g_npc_arc_turns_multiple.mjs";
+import { g_plant_matches } from "./g_plant_matches.mjs";
 import { floor } from "./floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { round } from "./round.mjs";
@@ -27,7 +29,8 @@ export function g_game_plants_whole(next, days_total) {
   for (let index = 0; less_than(index, most); index++) {
     let wanted = g_plant_npcs(index, next);
     let converts_count = subtract(wanted, 1);
-    let drawn = g_plant_converts(next, converts_count, npc_next);
+    let turns_all = g_npc_arc_turns_multiple(next, converts_count);
+    let drawn = g_plant_converts(turns_all, npc_next);
     let days = property_get(drawn, "days");
     let days_after = days_spent + days;
     let over = greater_than(days_after, days_total);
@@ -78,6 +81,10 @@ export function g_game_plants_whole(next, days_total) {
     let reached = multiply_divide(conversations, 100, days);
     plant.leader_days_percent = round(reached);
     plant.leader_short = less_than(leader_turns, s.leader_turns_minimum);
+    let arc_turns = property_get(plant, "arc_turns");
+    let split = g_plant_matches(days, arc_turns);
+    plant.question_matches = property_get(split, "question_matches");
+    plant.question_percent = property_get(split, "question_percent");
   }
   return plants;
 }

@@ -1,9 +1,8 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { add } from "./add.mjs";
 import { list_insert } from "./list_insert.mjs";
 export function js_array_element_move_beside(
   elements,
@@ -30,7 +29,6 @@ export function js_array_element_move_beside(
   list_remove(elements, moving);
   ("The place is read AFTER the entry has left, so the number counts the list the");
   ("entry is about to join rather than the one it was still in.");
-  let index = list_index_of(elements, neighbour);
-  let index_at = add(index, delta);
+  let index_at = list_index_of_add(elements, neighbour, delta);
   list_insert(elements, index_at, moving);
 }
