@@ -19,7 +19,6 @@
   "functions_call_pairs_frequent,functions_fold_sites",
   "g_game_generate_report,g_game_plants_report",
   "list_get,text_get",
-  "permission_settings_allow_assert,permission_settings_allow_drift_verdict",
-  "qa_commit_gate_run_at,qa_commit_named_at"
+  "permission_settings_allow_assert,permission_settings_allow_drift_verdict"
  ]
 }
