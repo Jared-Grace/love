@@ -45,7 +45,7 @@ export function app_code_lesson_expression_swapping_divide() {
     html_div_cycle_code(recall, ["", "3 + 4 === 7", " and ", "4 + 3 === 7"]);
     let division = app_code_container_light_blue(root);
     html_div_cycle_code(division, [
-      "Dividing shares one number into the other",
+      "Dividing groups a number into equally sized parts",
     ]);
     html_div_cycle_code(division, [
       "",
