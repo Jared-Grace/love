@@ -1,3 +1,5 @@
+import { json_from } from "./json_from.mjs";
+import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 import { import_install } from "./import_install.mjs";
@@ -181,7 +183,7 @@ function worker_results_read(worker, chunk) {
   });
 }
 function worker_reply_take(worker, line) {
-  let reply = JSON.parse(line);
+  let reply = json_from(line);
   let id = property_get(reply, "id");
   let waiting = property_get(worker, "waiting");
   let settle = property_get(waiting, id);
@@ -255,7 +257,7 @@ async function worker_job_run(worker, f_name, args) {
     f_name,
     args,
   };
-  child.stdio[3].write(text_combine_multiple([JSON.stringify(job), "\n"]));
+  child.stdio[3].write(text_combine_multiple([json_to(job), "\n"]));
   let r = await answered;
   return r;
 }
