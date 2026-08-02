@@ -25,13 +25,21 @@ export function app_code_lesson_expression_swapping_equal() {
       return render;
     }
     let rights = ["swapping equal"];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
   function above(root) {
     "show that === and !== swap (asking either way gives the same answer), that < > <= >= still flip, and that when both sides are comparisons each is wrapped in ( )";
     let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, ["", "===", " asks: are the two numbers the same?"]);
+    html_div_cycle_code(intro, [
+      "",
+      "===",
+      " asks: are the two numbers the same?",
+    ]);
     html_div_cycle_code(intro, ["", "!==", " asks: are they different?"]);
     let same = app_code_container_light_blue(root);
     html_div_cycle_code(same, [
@@ -63,11 +71,6 @@ export function app_code_lesson_expression_swapping_equal() {
     html_div_cycle_code(paren, [
       "When both sides are comparisons, we wrap each one in ( )",
     ]);
-    html_div_cycle_code(paren, [
-      "",
-      "(3 === 5) === (5 === 3)",
-      " is ",
-      "true",
-    ]);
+    html_div_cycle_code(paren, ["", "(3 === 5) === (5 === 3)", " is ", "true"]);
   }
 }

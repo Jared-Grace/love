@@ -25,7 +25,11 @@ export function app_code_lesson_expression_swapping_divide() {
       return render;
     }
     let rights = ["swapping divide power"];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
   function above(root) {
@@ -40,8 +44,15 @@ export function app_code_lesson_expression_swapping_divide() {
     ]);
     html_div_cycle_code(recall, ["", "3 + 4 === 7", " and ", "4 + 3 === 7"]);
     let division = app_code_container_light_blue(root);
-    html_div_cycle_code(division, ["Dividing shares one number into the other"]);
-    html_div_cycle_code(division, ["", "1 / 2 === 0.5", " but ", "2 / 1 === 2"]);
+    html_div_cycle_code(division, [
+      "Dividing shares one number into the other",
+    ]);
+    html_div_cycle_code(division, [
+      "",
+      "1 / 2 === 0.5",
+      " but ",
+      "2 / 1 === 2",
+    ]);
     html_div_cycle_code(division, [
       "",
       "0.5",
