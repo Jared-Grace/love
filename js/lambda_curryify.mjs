@@ -1,6 +1,7 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export function lambda_curryify(fn) {
   let r4 = function curried(...args) {
-    if (args.length >= fn.length) {
+    if (greater_than_equal(args.length, fn.length)) {
       let r = fn(...args);
       return r;
     }
