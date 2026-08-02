@@ -1,8 +1,10 @@
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 export function promise_is(value) {
   let v =
-    value !== null &&
-    typeof value === "object" &&
-    typeof value.then === "function" &&
-    typeof value.catch === "function";
+    not_equal(value, null) &&
+    equal(typeof value, "object") &&
+    equal(typeof value.then, "function") &&
+    equal(typeof value.catch, "function");
   return v;
 }
