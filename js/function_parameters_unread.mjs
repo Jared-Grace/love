@@ -1,3 +1,4 @@
+import { js_params_names_protocol } from "./js_params_names_protocol.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
@@ -12,7 +13,9 @@ export async function function_parameters_unread(f_name) {
   let params_names = js_function_declaration_params_names(declaration);
   let body = property_get(declaration, "body");
   let read = js_identifiers_referenced_names(body);
-  let unread = list_difference(params_names, read);
+  let protocol = js_params_names_protocol(params_names);
+  let kept = list_difference(params_names, protocol);
+  let unread = list_difference(kept, read);
   let finding = {
     name: f_name,
     unread,
