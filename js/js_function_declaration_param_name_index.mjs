@@ -1,3 +1,7 @@
+import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { list_index_of } from "./list_index_of.mjs";
 export function js_function_declaration_param_name_index(
   declaration,
   parameter_name,
