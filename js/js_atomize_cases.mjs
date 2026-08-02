@@ -28,9 +28,9 @@ export function js_atomize_cases() {
       lifted: 0,
     },
     {
-      name: "a comparison on the right of a nullish",
+      name: "a comparison on the right of a nullish, which runs only when the left side is nothing",
       code: text_frozen("let m = a_get(x) ?? equal(kind_get(x), y);\n"),
-      lifted: 1,
+      lifted: 0,
     },
     {
       name: "no guard in front of it at all, so the call is given a name",
