@@ -1,3 +1,5 @@
+import { ceil } from "./ceil.mjs";
+import { floor } from "./floor.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
 import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -10,16 +12,21 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
   const tile = img.getBoundingClientRect().width;
   const bar = document.getElementById("day-discern-bar");
   const barH = bar ? bar.getBoundingClientRect().height : 0;
-  const minX = Math.ceil(container.scrollLeft / tile);
-  const maxX =
-    Math.floor((container.scrollLeft + container.clientWidth) / tile) - 1;
-  const minY = Math.ceil(container.scrollTop / tile);
+  const minX = ceil(container.scrollLeft / tile);
+  const maxX = floor((container.scrollLeft + container.clientWidth) / tile) - 1;
+  const minY = ceil(container.scrollTop / tile);
   const maxY =
-    Math.floor((container.scrollTop + container.clientHeight - barH) / tile) - 1;
+    floor((container.scrollTop + container.clientHeight - barH) / tile) - 1;
   const targetInWindow =
-    target.x >= minX && target.x <= maxX && target.y >= minY && target.y <= maxY;
+    target.x >= minX &&
+    target.x <= maxX &&
+    target.y >= minY &&
+    target.y <= maxY;
   if (targetInWindow) {
-    return { x: target.x, y: target.y };
+    return {
+      x: target.x,
+      y: target.y,
+    };
   }
   return app_g_day_guide_pick(g, player, target, minX, maxX, minY, maxY);
 }
