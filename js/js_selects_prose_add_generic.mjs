@@ -9,10 +9,13 @@ export function js_selects_prose_add_generic(
   sentence,
   index_delta,
 ) {
+  "Writes one sentence of an account beside a chosen line in the block that line sits in";
+  "Until this an account could only be written at the top of a block so a line explaining one step in the middle of a function was a hand edit every time";
+  "The written value stays inside this family so the two commands standing on it carry only an address and a sentence";
   let f = js_block_find_from_nodes_single(ast, selects);
   let body = property_get(f, "body");
   let index = property_get(f, "index");
   let index_insert = add(index, index_delta);
   let statement = js_prose_statement(sentence);
-  list_insert(body, index_insert, value);
+  list_insert(body, index_insert, statement);
 }

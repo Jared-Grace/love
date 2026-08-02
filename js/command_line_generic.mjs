@@ -1,3 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 import { file_temp_json_open } from "./file_temp_json_open.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,19 +50,16 @@ export async function command_line_generic(command, extra) {
     }
     child.on("error", lambda3);
     async function lambda4(code) {
-      if (code_ignore !== true && code !== 0) {
-        reject(
-          new Error(
-            text_combine_multiple([
-              "Command exited with code ",
-              code,
-              "\n\nSTDOUT:\n",
-              printed,
-              "\n\nSTDERR:\n",
-              stderr,
-            ]),
-          ),
-        );
+      if (not_equal(code_ignore, true) && not_equal(code, 0)) {
+        let combined = text_combine_multiple([
+          "Command exited with code ",
+          code,
+          "\n\nSTDOUT:\n",
+          printed,
+          "\n\nSTDERR:\n",
+          stderr,
+        ]);
+        reject(new Error(combined));
         if (false) {
           await file_temp_json_open({
             code,
@@ -76,24 +77,27 @@ export async function command_line_generic(command, extra) {
   });
   return result;
   function parseCommand(command_text) {
-    if (typeof command_text !== "string") {
+    if (not_equal(typeof command_text, "string")) {
       throw new TypeError("command must be a string");
     }
     if (/[|&;`$()]/.test(command_text)) {
       throw new Error(
-        "Shell operators are not allowed in command_line_generic",
+        text_combine_multiple([
+          "Shell operators are not allowed in ",
+          fn_name("command_line_generic"),
+        ]),
       );
     }
     let args_parsed = [];
     let current = "";
     let inQuotes = false;
-    for (let i = 0; i < command_text.length; i++) {
+    for (let i = 0; less_than(i, command_text.length); i++) {
       let c2 = command_text[i];
-      if (c2 === '"') {
+      if (equal(c2, '"')) {
         inQuotes = not(inQuotes);
         continue;
       }
-      if (c2 === " " && not(inQuotes)) {
+      if (equal(c2, " ") && not(inQuotes)) {
         if (current.length) {
           args_parsed.push(current);
           current = "";
