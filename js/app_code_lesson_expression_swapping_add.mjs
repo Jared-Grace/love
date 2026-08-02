@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
@@ -28,7 +29,7 @@ export function app_code_lesson_expression_swapping_add() {
     let rights = ["swapping plus times"];
     let built = app_code_lesson_name_id_generic(
       rights,
-      "expressions",
+      app_code_category_expressions(),
       title_get,
     );
     return built;
