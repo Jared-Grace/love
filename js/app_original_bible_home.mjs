@@ -1,4 +1,4 @@
-import { app_g_bible } from "./app_g_bible.mjs";
+import { app_original_bible } from "./app_original_bible.mjs";
 import { app_original_bible_gloss_generate_download } from "./app_original_bible_gloss_generate_download.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
 export async function app_original_bible_home(context) {
@@ -7,6 +7,6 @@ export async function app_original_bible_home(context) {
     context,
     download,
     false,
-    app_g_bible,
+    app_original_bible,
   );
 }
