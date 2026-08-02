@@ -19,7 +19,7 @@ export async function app_g_bible_home_inner(context, download) {
       let verse_number = property_get(a, "verse_number");
       chapter_code = property_get(a, "chapter_code");
       downloaded = await download(chapter_code);
-      let passages = property_get(downloaded, "passages");
+      let passages_downloaded = property_get(downloaded, "passages");
       function lambda2(passage) {
         let verse_numbers = property_get(passage, "verse_numbers");
         let s = integer_to_try_multiple_max_text_to(verse_numbers);
@@ -32,7 +32,7 @@ export async function app_g_bible_home_inner(context, download) {
           list_clear(verses);
         }
       }
-      each(passages, lambda2);
+      each(passages_downloaded, lambda2);
     }
     r = await app_bible_home_generic(context, lambda, noop);
   }
