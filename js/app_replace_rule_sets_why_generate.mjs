@@ -44,8 +44,11 @@ export async function app_replace_rule_sets_why_generate() {
       let list = js_list_type_nodes(ast, type);
       function lambda3(e) {
         let search = "name";
-        let found = js_object_expression_property_named_or_null(e, search);
-        return found;
+        let found_named = js_object_expression_property_named_or_null(
+          e,
+          search,
+        );
+        return found_named;
       }
       let f = list_find(list, lambda3);
       let property = "why";
