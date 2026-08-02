@@ -1,3 +1,4 @@
+import { math_max } from "./math_max.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
@@ -28,7 +29,7 @@ export function g_plant_npcs(index, next) {
     return big;
   }
   let under = subtract(target, s.plant_npcs_below_settle);
-  let lowest = Math.max(s.plant_npcs_first, under);
+  let lowest = math_max(s.plant_npcs_first, under);
   let r = random_bell_low_middle_high(next, lowest, target, target);
   return r;
 }
