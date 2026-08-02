@@ -34,10 +34,8 @@
   "Read(/home/j/.claude/projects/-home-j-repos-love/memory/**)",
   "Read(/home/j/backup/love_claude_memory/memory/**)",
   "Read(/media/j/JPM/user/storage/**)",
-  "Write(/media/j/JPM/user/storage/**)",
   "Edit(/media/j/JPM/user/storage/**)",
   "Edit(/home/j/backup/love_claude_memory/memory/**)",
-  "Write(/home/j/backup/love_claude_memory/memory/**)",
   "Bash(node scripts/ai.mjs ebible_languages)",
   "Bash(node scripts/ai.mjs bundle_size_gate_run)"
  ]
