@@ -61,7 +61,12 @@ export function app_code_lesson_expression_swapping_order() {
     html_div_cycle_code(less, [
       "Swapping would say the bigger number is now the smaller one",
     ]);
-    html_div_cycle_code(less, ["So we cannot swap ", "<", " or ", ">"]);
+    html_div_cycle_code(less, [
+      "So we cannot swap the numbers around ",
+      "<",
+      " or ",
+      ">",
+    ]);
     let or_equal = app_code_container_light_blue(root);
     html_div_cycle_code(or_equal, [
       "",
@@ -73,14 +78,19 @@ export function app_code_lesson_expression_swapping_order() {
       " is ",
       "false",
     ]);
-    html_div_cycle_code(or_equal, ["So we cannot swap ", "<=", " or ", ">="]);
+    html_div_cycle_code(or_equal, [
+      "So we cannot swap the numbers around ",
+      "<=",
+      " or ",
+      ">=",
+    ]);
     let swappers = app_code_container_light_blue(root);
     html_div_cycle_code(swappers, [
       "Only ",
       "+",
       " and ",
       "*",
-      " can always swap",
+      " keep the value when swapped",
     ]);
   }
 }

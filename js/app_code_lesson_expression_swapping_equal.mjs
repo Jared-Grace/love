@@ -43,7 +43,7 @@ export function app_code_lesson_expression_swapping_equal() {
     html_div_cycle_code(intro, ["", "!==", " asks: are they different?"]);
     let same = app_code_container_light_blue(root);
     html_div_cycle_code(same, [
-      "Asking either way gives the same answer, so these can swap",
+      "Asking either way gives the same answer, so we can swap the numbers around them",
     ]);
     html_div_cycle_code(same, [
       "",
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     let order_recall = app_code_container_light_blue(root);
     html_div_cycle_code(order_recall, [
-      "But ",
+      "But we still cannot swap the numbers around ",
       "<",
       ", ",
       ">",
@@ -65,7 +65,6 @@ export function app_code_lesson_expression_swapping_equal() {
       "<=",
       " and ",
       ">=",
-      " still cannot swap",
     ]);
     let paren = app_code_container_light_blue(root);
     html_div_cycle_code(paren, [
