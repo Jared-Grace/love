@@ -1,3 +1,4 @@
+import { app_bible } from "./app_bible.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -222,7 +223,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   );
   async function lambda3() {
     let mode = app_shared_bible_mode_chapter();
-    await app_bible_mode_switch(context, mode);
+    await app_bible_mode_switch(context, mode, app_bible);
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let component = app_shared_button_copy(bottom, noop);

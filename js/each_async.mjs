@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function each_async(list, lambda$item) {
@@ -9,7 +10,7 @@ export async function each_async(list, lambda$item) {
   });
   for (let item of list) {
     let result = await lambda$item(item);
-    if (result === true) {
+    if (equal(result, true)) {
       break;
     }
   }
