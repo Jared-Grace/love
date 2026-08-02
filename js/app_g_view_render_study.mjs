@@ -1,3 +1,7 @@
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
@@ -33,13 +37,14 @@ export async function app_g_view_render_study(div_map) {
   let word_index = property_get(view, "word_index");
   let words = text_split_space(text);
   let overlay = app_g_overlay(div_map);
-  app_g_container_text(
-    overlay,
-    text_combine(emoji_book_open(), " Study: Tap each word in order"),
-  );
+  let left = emoji_book_open();
+  let text2 = text_combine(left, " Study: Tap each word in order");
+  app_g_container_text(overlay, text2);
   let current = word_index;
-  let green_vivid = text_combine(app_shared_button_background(), "ee");
-  let green_pale = text_combine(app_shared_button_background(), "66");
+  let left2 = app_shared_button_background();
+  let green_vivid = text_combine(left2, "ee");
+  let left3 = app_shared_button_background();
+  let green_pale = text_combine(left3, "66");
   let blue_pale = app_shared_color_blue_light();
   let white = app_shared_button_font_color();
   let ring = text_combine_multiple([
@@ -57,7 +62,7 @@ export async function app_g_view_render_study(div_map) {
     });
   }
   function persist_cancel() {
-    if (save_pending !== null) {
+    if (not_equal(save_pending, null)) {
       clearTimeout(save_pending);
       save_pending = null;
     }
@@ -76,18 +81,22 @@ export async function app_g_view_render_study(div_map) {
   function render_pray_gate() {
     html_clear(container);
     function begin() {
-      app_g_prayer_study_overlay(g_prayer_study_before(), render_words);
+      let prayer = g_prayer_study_before();
+      app_g_prayer_study_overlay(prayer, render_words);
     }
-    let label = text_combine(emoji_pray(), " Pray and study");
+    let left4 = emoji_pray();
+    let label = text_combine(left4, " Pray and study");
     app_g_button_green(container, label, begin);
   }
   function render_thank_gate() {
     persist_cancel();
     html_clear(container);
     function thank() {
-      app_g_prayer_study_overlay(g_prayer_study_after(), close);
+      let prayer2 = g_prayer_study_after();
+      app_g_prayer_study_overlay(prayer2, close);
     }
-    let label = text_combine(emoji_pray(), " Thank God, then finish");
+    let left5 = emoji_pray();
+    let label = text_combine(left5, " Thank God, then finish");
     app_g_button_green(container, label, thank);
   }
   function render_words() {
@@ -126,9 +135,9 @@ export async function app_g_view_render_study(div_map) {
     }
     function style_word(i) {
       let b = word_bs[i];
-      if (i < current) {
+      if (less_than(i, current)) {
         style_completed(b);
-      } else if (i === current) {
+      } else if (equal(i, current)) {
         style_next(b);
       } else {
         style_upcoming(b);
@@ -136,14 +145,14 @@ export async function app_g_view_render_study(div_map) {
     }
     function tap(i) {
       async function on_tap() {
-        let is_current = i === current;
+        let is_current = equal(i, current);
         if (not(is_current)) {
           return;
         }
         current = i + 1;
         style_completed(word_bs[i]);
         update_bar();
-        let done = current >= words.length;
+        let done = greater_than_equal(current, words.length);
         if (done) {
           render_thank_gate();
           return;
@@ -153,8 +162,9 @@ export async function app_g_view_render_study(div_map) {
       }
       return on_tap;
     }
-    for (let i = 0; i < words.length; i++) {
-      let b = app_shared_button_inline(words_div, words[i], tap(i));
+    for (let i = 0; less_than(i, words.length); i++) {
+      let lambda = tap(i);
+      let b = app_shared_button_inline(words_div, words[i], lambda);
       html_style_assign(b, {
         "padding-left": app_shared_content_edge_gap(),
         "padding-right": app_shared_content_edge_gap(),
@@ -164,7 +174,7 @@ export async function app_g_view_render_study(div_map) {
       style_word(i);
     }
   }
-  let fresh = current === 0;
+  let fresh = equal(current, 0);
   if (fresh) {
     render_pray_gate();
   } else {
