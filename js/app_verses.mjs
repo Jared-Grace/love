@@ -1,3 +1,4 @@
+import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
@@ -35,7 +36,6 @@ import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
@@ -139,8 +139,7 @@ export async function app_verses(context) {
     card3,
     "If the copy did not work, this button will gently copy them again.",
   );
-  let text2 = html_button_copy_text();
-  let copy_button = app_shared_button(card3, text2, copy);
+  let copy_button = app_shared_button_copy(card3, copy);
   let card4 = app_shared_container_blue(content);
   card4_refresh();
   app_shared_contact_button(content, app_verses);
