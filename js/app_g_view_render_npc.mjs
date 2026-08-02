@@ -49,13 +49,7 @@ export async function app_g_view_render_npc(div_map) {
   }
   if (phase === app_g_view_phase_conversation()) {
     let prayer = property_get(player, "prayer");
-    await app_g_conversation(
-      prayer,
-      npc,
-      overlay,
-      overlay_close,
-      div_map,
-    );
+    await app_g_conversation(prayer, npc, overlay, overlay_close, div_map);
     return;
   }
   if (phase === app_g_view_phase_gospel()) {

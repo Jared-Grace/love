@@ -1,6 +1,6 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { list_single } from "./list_single.mjs";
 import { true_is } from "./true_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -35,8 +35,7 @@ export async function function_exists_inner(u) {
     u,
   );
   if (exists) {
-    let only = list_single(filtered);
-    let f_path2 = property_get(only, "f_path");
+    let f_path2 = list_single_property(filtered, "f_path");
     property_set(result, "f_path", f_path2);
   }
   return result;
