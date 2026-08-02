@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_size } from "./text_size.mjs";
@@ -13,7 +14,7 @@ export function text_tokens_recursive(
   current,
 ) {
   let index_last = text_size(input);
-  if (index_left === index_last) {
+  if (equal(index_left, index_last)) {
     let copy = list_copy(current);
     list_add(tokens_matches, copy);
   }
@@ -32,5 +33,6 @@ export function text_tokens_recursive(
       );
     }
   }
-  each_range_from(text_combine(index_left, 1), index_last, lambda);
+  let from2 = text_combine(index_left, 1);
+  each_range_from(from2, index_last, lambda);
 }
