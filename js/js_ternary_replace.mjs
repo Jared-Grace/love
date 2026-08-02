@@ -1,3 +1,4 @@
+import { js_code_call_parse_expression } from "./js_code_call_parse_expression.mjs";
 import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_argument_add } from "./js_call_argument_add.mjs";
@@ -12,7 +13,6 @@ import { js_list_type_each } from "./js_list_type_each.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { object_replace } from "./object_replace.mjs";
-import { js_code_call } from "./js_code_call.mjs";
 import { js_left_right_set } from "./js_left_right_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_assign_default } from "./js_assign_default.mjs";
@@ -70,8 +70,7 @@ export async function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let assignment = js_assign_default();
-    let code_expression = js_code_call(ternary.name);
-    let e = js_parse_expression(code_expression);
+    let e = js_code_call_parse_expression(ternary.name);
     let rights = list_map_property(ess, "right");
     let test_node = js_statement_if_test_get(node);
     js_call_argument_add(e, test_node);
