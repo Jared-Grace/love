@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_supper_folders_hash_key } from "./app_supper_folders_hash_key.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -12,7 +13,7 @@ export function app_supper_folders_get(context) {
     let folders_default = property_list_map_property(
       context,
       "supper_default_chosen",
-      "bible_folder",
+      bible_folder_key(),
     );
     return folders_default;
   }
