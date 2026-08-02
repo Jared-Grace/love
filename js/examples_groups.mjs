@@ -72,6 +72,9 @@ export function examples_groups() {
         "example_block_local_text_add",
         "example_block_local_record_add",
         "example_block_local_list_add",
+        "example_argument_text_set",
+        "example_prose_add_after_selected",
+        "example_prose_add_before_selected",
       ],
     },
     {

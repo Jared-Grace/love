@@ -184,6 +184,12 @@ export function examples_notes() {
       "reaching a record written straight into a call so that no name addresses it",
     example_functionize_adds_file:
       "extracting a span into a function that gets its own file",
+    example_argument_text_set:
+      "point one argument of a call at a written word - the shape the rest of the setter family could not reach",
+    example_prose_add_after_selected:
+      "explain one step beside the step - an account anywhere but the top of a block",
+    example_prose_add_before_selected:
+      "the same account written above the line it is about",
   };
   return notes;
 }

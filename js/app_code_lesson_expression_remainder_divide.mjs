@@ -80,7 +80,7 @@ export function app_code_lesson_expression_remainder_divide() {
     let r2 = [whole_part, no_floor, no_multiply];
     return r2;
   }
-  function backwards_decoys(shown_formula, percent) {
+  function backwards_decoys(shown_formula, answer_percent) {
     "for the backwards kind (given the remainder formula, pick the % it equals): tempting wrong matches. The DIVISION a / b (it sits right inside the formula, but that is the division, not its remainder), the SWAPPED remainder b % a, and the QUOTIENT part Math.floor(a / b) (only a piece of the formula). Dividend is the formula's first integer, divisor the third (inside Math.floor)";
     let nums = text_integers(shown_formula);
     let dividend = list_get(nums, 0);
@@ -96,7 +96,7 @@ export function app_code_lesson_expression_remainder_divide() {
     let nums = text_integers(question);
     let dividend = list_get(nums, 0);
     let divisor = list_get(nums, 1);
-    let percent = js_code_binary_spaced_nb(dividend, "%", divisor);
+    let percent_expression = js_code_binary_spaced_nb(dividend, "%", divisor);
     let recognize = {
       question_label: app_code_label_code_question(),
       on_question: html_text_set_code_dark,
@@ -134,7 +134,7 @@ export function app_code_lesson_expression_remainder_divide() {
       if (is_backwards) {
         let r4 = {
           question: answer,
-          answer: percent,
+          answer: percent_expression,
         };
         return r4;
       }
