@@ -6,8 +6,8 @@ import { app_g_map_get } from "./app_g_map_get.mjs";
 export async function app_g_rows_ensure(g) {
   let has = property_exists(g, "rows");
   if (has) {
-    let rows = property_get(g, "rows");
-    await app_g_map_save(rows);
+    let rows_existing = property_get(g, "rows");
+    await app_g_map_save(rows_existing);
     return;
   }
   let rows = await app_g_map_get();
