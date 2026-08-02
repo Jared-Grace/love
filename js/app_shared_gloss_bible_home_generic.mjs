@@ -1,3 +1,4 @@
+import { app_g_bible } from "./app_g_bible.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_first_property } from "./list_first_property.mjs";
@@ -32,7 +33,7 @@ export async function app_shared_gloss_bible_home_generic(
   text_use,
 ) {
   let generated = g_sermon_generate_book_generic_property();
-  let v = await app_g_bible_home_inner(context, download);
+  let v = await app_g_bible_home_inner(context, download, app_g_bible);
   let passages = property_get(v, "passages");
   if (list_empty_is(passages)) {
     return;
