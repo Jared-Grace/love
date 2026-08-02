@@ -1,3 +1,4 @@
+import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
 import { permission_settings_local_unwatched } from "./permission_settings_local_unwatched.mjs";
 import { permission_settings_local_baseline_path } from "./permission_settings_local_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
