@@ -31,6 +31,7 @@ export async function app_shared_gloss_bible_home_generic(
   context,
   download,
   text_use,
+  app_fn,
 ) {
   let generated = g_sermon_generate_book_generic_property();
   let v = await app_g_bible_home_inner(context, download, app_g_bible);
