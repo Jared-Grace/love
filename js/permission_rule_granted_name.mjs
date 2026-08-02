@@ -1,8 +1,5 @@
-import { text_starts_with } from "./text_starts_with.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { text_empty } from "./text_empty.mjs";
+import { text_wrapped_inner } from "./text_wrapped_inner.mjs";
 import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 export function permission_rule_granted_name(rule) {
   "the dispatcher function a generated allow rule grants, or empty text when the rule grants something else";
   "the generated rules are the only ones shaped `Bash(node <script> <fn>:*)`, and the function is always the last word, which is what lets the two families - the plain seam and the four-word commit command - be read by one reader";
