@@ -1,3 +1,4 @@
+import { list_skip } from "./list_skip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,14 +15,12 @@ import { function_new_transform } from "./function_new_transform.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_auto } from "./function_auto.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
-import { list_insert_at } from "./list_insert_at.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
@@ -46,8 +45,7 @@ export async function function_head_extract(f_name, size, name_new, meaning) {
     "That function has less work in it than the run you asked to take out. Would you like to name a shorter run?",
   );
   let head = list_take(working, size);
-  let count = list_size(working);
-  let rest = list_slice(working, size, count);
+  let rest = list_skip(working, size);
   let made = js_statements_declared_names(head);
   let read_after = js_statements_referenced_names(rest);
   let carried = list_intersect(made, read_after);
