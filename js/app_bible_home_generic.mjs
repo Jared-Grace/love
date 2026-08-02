@@ -26,7 +26,7 @@ import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
-import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
+import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { app_bible_verses } from "./app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -78,7 +78,7 @@ export async function app_bible_home_generic(
     return null;
   }
   let hash = html_hash_object_get();
-  let verse_number_hash = app_bible_hash_v_get(hash);
+  let verse_number_hash = app_shared_bible_hash_v_get(hash);
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
