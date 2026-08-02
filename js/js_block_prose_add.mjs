@@ -1,8 +1,7 @@
+import { js_prose_statement } from "./js_prose_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_block_body_get } from "./js_block_body_get.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { js_parse_statement } from "./js_parse_statement.mjs";
 import { list_insert } from "./list_insert.mjs";
 export function js_block_prose_add(ast, selects, sentence) {
   arguments_assert(arguments, 3);
@@ -18,8 +17,6 @@ export function js_block_prose_add(ast, selects, sentence) {
   ("start of another.");
   let block = list_single(selects);
   let body = js_block_body_get(block);
-  let quoted = JSON.stringify(sentence);
-  let code = text_combine(quoted, ";");
-  let statement = js_parse_statement(code);
+  let statement = js_prose_statement(sentence);
   list_insert(body, 0, statement);
 }
