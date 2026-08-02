@@ -63,8 +63,18 @@ export async function app_code_screens_crawl_lesson(
   first.screen = "quiz";
   first.kind = 0;
   list_add(records, first);
-  let combined3 = text_combine_multiple(["&screen=", fn_name("app_code_quiz")]);
-  let quiz_marker = text_combine_multiple(["lesson=", id, combined3]);
+  let combined3 = text_combine_multiple([
+    "&",
+    app_code_screen_hash_key(),
+    "=",
+    fn_name("app_code_quiz"),
+  ]);
+  let quiz_marker = text_combine_multiple([
+    app_code_lesson_hash_key(),
+    "=",
+    id,
+    combined3,
+  ]);
   let script = app_code_screen_next_click_script();
   let kind = 1;
   while (less_than(kind, 8)) {
