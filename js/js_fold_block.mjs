@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,7 +23,6 @@ import { list_any } from "./list_any.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 export function js_fold_block(x_ast, f_ast, f_block) {
@@ -42,8 +42,11 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   let return_statement = list_last(x_statements);
   let return_argument = js_return_argument_get(return_statement);
   let return_local = property_get_name(return_argument);
-  let body_sigs = list_map(body_statements, js_atomic_statement_signature);
-  let pattern_sigs = list_filter(body_sigs, js_signature_has_callee);
+  let pattern_sigs = list_map_filter(
+    body_statements,
+    js_atomic_statement_signature,
+    js_signature_has_callee,
+  );
   let k = list_size(pattern_sigs);
   let empty = equal(k, 0);
   if (empty) {
