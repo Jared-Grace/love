@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { each_async } from "./each_async.mjs";
@@ -14,7 +15,7 @@ export async function app_autopray(context) {
     let chapter_code = property_get(chapter, "chapter_code");
     let verses = property_get(chapter, "verses");
     async function each_verse(verse) {
-      let verse_number = property_get(verse, "verse_number");
+      let verse_number = property_get(verse, verse_number_key());
       let verse_text = property_get(verse, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
