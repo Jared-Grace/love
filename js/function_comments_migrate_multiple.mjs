@@ -15,8 +15,8 @@ export async function function_comments_migrate_multiple(names_comma) {
     return changed_inner;
   }
   function left_is(result) {
-    let left = property_get(result, "left");
-    let any = greater_than(left, 0);
+    let left_count = property_get(result, "left");
+    let any = greater_than(left_count, 0);
     return any;
   }
   let changed = list_filter(results, changed_is);
