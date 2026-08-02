@@ -3,12 +3,12 @@ import { global_function_property_cache } from "./global_function_property_cache
 import { text_split_first } from "./text_split_first.mjs";
 import { list_map_prefix_without } from "./list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
-import { app_a_files_paths } from "./app_a_files_paths.mjs";
+import { browser_files_paths } from "./browser_files_paths.mjs";
 import { text_slash_forward } from "./text_slash_forward.mjs";
 import { path_normalize } from "./path_normalize.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function folder_read_browser(path_folder) {
-  let files_paths = await app_a_files_paths();
+  let files_paths = await browser_files_paths();
   let r = global_function_property_cache(
     folder_read_browser,
     path_folder,

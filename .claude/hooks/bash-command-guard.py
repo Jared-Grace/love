@@ -3775,23 +3775,16 @@ def main():
         ))
 
     if verb is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "ask",
-                "permissionDecisionReason": (
-                    f"This starts with the allowed verb {verb!r} but also "
-                    "carries chained or unparsed content (a pipe, ';', "
-                    "'$(...)', redirection, or a not-yet-trusted verb) that "
-                    "can't inherit that verb's trust, so it needs a real "
-                    "look. If it splits cleanly, prefer rewording into "
-                    "separate Bash calls with one already-allowed verb each "
-                    "(or chain only allow-listed verbs with '&&'/';'); "
-                    "otherwise it's fine to approve."
-                ),
-            }
-        }))
-        return
+        return decide("ask", (
+            f"This starts with the allowed verb {verb!r} but also "
+            "carries chained or unparsed content (a pipe, ';', "
+            "'$(...)', redirection, or a not-yet-trusted verb) that "
+            "can't inherit that verb's trust, so it needs a real "
+            "look. If it splits cleanly, prefer rewording into "
+            "separate Bash calls with one already-allowed verb each "
+            "(or chain only allow-listed verbs with '&&'/';'); "
+            "otherwise it's fine to approve."
+        ))
 
     # Reached only when no allow rule matched at all - load_safe_verbs() reads
     # settings.json AND settings.local.json, so `verb is None` means nothing
@@ -3801,27 +3794,11 @@ def main():
     twin_call = path_taking_name_twin_call(command)
     if twin_call is not None:
         fn, twin, name = twin_call
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "ask",
-                "permissionDecisionReason": path_taking_name_twin_ask_reason(
-                    fn, twin, name
-                ),
-            }
-        }))
-        return
+        return decide("ask", path_taking_name_twin_ask_reason(fn, twin, name))
 
     pattern = pkill_advice_pattern(command)
     if pattern is not None:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "ask",
-                "permissionDecisionReason": pkill_advice_ask_reason(pattern),
-            }
-        }))
-        return
+        return decide("ask", pkill_advice_ask_reason(pattern))
 
 
 if __name__ == "__main__":
