@@ -1,10 +1,10 @@
+import { js_function_declaration_property_params_names } from "./js_function_declaration_property_params_names.mjs";
 import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
 import { function_parameters_unread } from "./function_parameters_unread.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
 import { functions_call_argument_at_undroppable } from "./functions_call_argument_at_undroppable.mjs";
@@ -29,8 +29,10 @@ export async function function_parameter_unread_remove(f_name, parameter_name) {
     hint: "this parameter is read somewhere in the body - taking it out would change what the function does",
   });
   let parsed = await function_parse_declaration(f_name);
-  let declaration = property_get(parsed, "declaration");
-  let names = js_function_declaration_params_names(declaration);
+  let names = js_function_declaration_property_params_names(
+    parsed,
+    "declaration",
+  );
   let index = list_index_of(names, parameter_name);
   let f_names = await data_identifiers_search_names(f_name);
   let unsafe = await functions_call_argument_at_undroppable(
