@@ -4,7 +4,7 @@ import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { app_bible_verse_open } from "./app_bible_verse_open.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-export async function app_bible_verse_change(
+export async function app_shared_bible_verse_change(
   context,
   chapter_code,
   verse_current,
