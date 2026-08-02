@@ -1,3 +1,4 @@
+import { app_bible } from "./app_bible.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { integer_to_try_multiple_max_text_to } from "./integer_to_try_multiple_max_text_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -9,7 +10,7 @@ import { noop } from "./noop.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_g_bible_home_inner(context, download) {
+export async function app_g_bible_home_inner(context, download, app_fn) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
@@ -35,7 +36,7 @@ export async function app_g_bible_home_inner(context, download) {
       }
       each(passages_downloaded, lambda2);
     }
-    r = await app_bible_home_generic(context, lambda, noop);
+    r = await app_bible_home_generic(context, lambda, noop, app_fn);
   }
   let passages = await list_adder_async(lambda3);
   let v = {

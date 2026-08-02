@@ -62,7 +62,12 @@ import { null_not_is } from "./null_not_is.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
-export async function app_bible_home_generic(context, lambda$a, bar_extra) {
+export async function app_bible_home_generic(
+  context,
+  lambda$a,
+  bar_extra,
+  app_fn,
+) {
   let frame = app_shared_bar_content(context);
   let content = property_get(frame, "content");
   app_shared_content_column_pad(content);
@@ -223,7 +228,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   );
   async function lambda3() {
     let mode = app_shared_bible_mode_chapter();
-    await app_bible_mode_switch(context, mode, app_bible);
+    await app_bible_mode_switch(context, mode, app_fn);
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let component = app_shared_button_copy(bottom, noop);
