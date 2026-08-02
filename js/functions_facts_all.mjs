@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
 import { function_facts_of_parsed } from "./function_facts_of_parsed.mjs";
-import { file_stamp } from "./file_stamp.mjs";
+import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -45,8 +45,10 @@ export async function functions_facts_all() {
   if (null_not_is(remembered_or_null)) {
     remembered = remembered_or_null;
   }
+  ("Every file is asked about in one pass before any of them is looked at, because the asking is the same question seven thousand times over and answering each one in its own turn cost more than the questions did.");
+  let stamps = await file_stamps_by_path(f_paths);
   async function entry_of(f_path) {
-    let stamp = await file_stamp(f_path);
+    let stamp = property_get_or_null(stamps, f_path);
     let before = property_get_or_null(remembered, f_path);
     let unchanged = false;
     if (null_not_is(stamp) && null_not_is(before)) {
