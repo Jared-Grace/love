@@ -1,3 +1,4 @@
+import { app_code_verse_words_letters_only } from "./app_code_verse_words_letters_only.mjs";
 import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
 import { app_code_lesson_symbols_digits_numbered_fifth_on_symbol } from "./app_code_lesson_symbols_digits_numbered_fifth_on_symbol.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
@@ -8,9 +9,7 @@ import { html_cycle } from "./html_cycle.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_join_space_nb } from "./list_join_space_nb.mjs";
 import { list_slices_size_random } from "./list_slices_size_random.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_verse_words } from "./app_code_verse_words.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
@@ -35,8 +34,7 @@ export function app_code_lesson_symbols_space() {
     );
   }
   function batch_get() {
-    let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = app_code_verse_words_letters_only();
     let list2 = list_slices_size_random(mapped, 2, 3);
     let mapped2 = list_map(list2, list_join_space_nb);
     return mapped2;
