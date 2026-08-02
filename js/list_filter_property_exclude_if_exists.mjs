@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -9,7 +10,8 @@ export function list_filter_property_exclude_if_exists(
   function lambda(item) {
     let exists = property_exists(item, property_name);
     if (exists) {
-      let ne = property_get(item, property_name) !== value;
+      let left = property_get(item, property_name);
+      let ne = not_equal(left, value);
       return ne;
     }
     return true;
