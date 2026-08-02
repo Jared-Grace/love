@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { firebase_storage_download_ebible_cache } from "./firebase_storage_download_ebible_cache.mjs";
 import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -19,7 +20,7 @@ export async function ebible_index_flat(bible_folder) {
   async function lambda(la) {
     await ebible_chapters_each_verses(bible_folder, each_chapter);
     async function each_chapter(chapter_code, verses) {
-      let verse_numbers = list_map_property(verses, "verse_number");
+      let verse_numbers = list_map_property(verses, verse_number_key());
       function lambda2(verse_number) {
         la({
           chapter_code,
