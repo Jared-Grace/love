@@ -65,7 +65,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "/",
     ]);
     html_div_cycle_code(division, [
-      "However, we can always swap two numbers that are the same, because the code is the same before and after",
+      "However, we can always swap two numbers that are the same, because the same numbers are on either side before and after",
     ]);
     let leftover = app_code_container_light_blue(root);
     html_div_cycle_code(leftover, [
