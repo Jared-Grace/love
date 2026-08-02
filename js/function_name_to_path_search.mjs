@@ -35,8 +35,8 @@ export async function function_name_to_path_search(f_name) {
   };
   if (exists) {
     let only = list_single(filtered);
-    let mapped = property_get(only, "mapped");
-    property_from(search, "f_path", mapped);
+    let only_mapped = property_get(only, "mapped");
+    property_from(search, "f_path", only_mapped);
     property_from(search, "repo_name", only);
   }
   return search;
