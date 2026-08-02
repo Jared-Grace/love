@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_fused_all } from "./literals_frozen_fused_all.mjs";
 import { literals_frozen_values } from "./literals_frozen_values.mjs";
@@ -30,7 +31,7 @@ export async function literals_frozen_fused_gate_run() {
   }
   named.sort();
   let values = await literals_frozen_values();
-  let list = Object.keys(values);
+  let list = object_property_names(values);
   let watched = list_size(list);
   list_empty_is_assert_json(named, {
     hint: 'a frozen word is written into a joined-up address, where nothing watches it - split the string so the word is read off the function that holds it and only the punctuation is spelled out, as in base + "#" + the_key() + "=" + value',
