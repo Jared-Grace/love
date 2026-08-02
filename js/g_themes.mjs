@@ -46,8 +46,8 @@ export function g_themes(text) {
     wrong: "morality",
   };
   function lambda4(la) {
-    function lambda3(list, words) {
-      let split3 = text_split_space(list);
+    function lambda3(theme_text, words) {
+      let split3 = text_split_space(theme_text);
       let split2 = text_split_space(words);
       function lambda(word) {
         let padded = text_pad_space(word);
