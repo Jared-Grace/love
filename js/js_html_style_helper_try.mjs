@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -8,7 +9,6 @@ import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_identifier_name } from "./js_identifier_name.mjs";
@@ -40,8 +40,7 @@ export function js_html_style_helper_try(declaration) {
     return null;
   }
   let args = js_call_arguments_get(call);
-  let left = list_size(args);
-  let three = equal(left, 3);
+  let three = list_size_equal(args, 3);
   if (not(three)) {
     return null;
   }
