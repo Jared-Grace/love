@@ -16,6 +16,8 @@ export async function g_game_generate_seeds_report(words_comma) {
       trimmed_plants: property_get(report, "trimmed_plants"),
       days_spread: property_get(report, "days_spread"),
       leader_days_percent_low: property_get(report, "leader_days_percent_low"),
+      question_percent_whole: property_get(report, "question_percent_whole"),
+      question_percent_high: property_get(report, "question_percent_high"),
     };
     return summary;
   }
