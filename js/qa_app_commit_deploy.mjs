@@ -1,3 +1,4 @@
+import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
 import { apps_frozen_names } from "./apps_frozen_names.mjs";
 import { firebase_deploy } from "./firebase_deploy.mjs";
 import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
@@ -23,13 +24,21 @@ export async function qa_app_commit_deploy(search, commit) {
   let hashes = await qa_app_commit_promote(search, commit);
   async function lambda() {
     let app_names = apps_frozen_names();
-    await list_map_unordered_async(app_names, firebase_prod_app_unchanged_assert);
+    await list_map_unordered_async(
+      app_names,
+      firebase_prod_app_unchanged_assert,
+    );
     let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
     let stdout = await firebase_deploy_bypass_unchanged(confirm);
     return stdout;
   }
   let message = firebase_deploy_locked_message();
-  let published = await lock_error(firebase_deploy.name, lambda, qa_app_commit_deploy.name, message);
+  let published = await lock_error(
+    firebase_deploy.name,
+    lambda,
+    qa_app_commit_deploy.name,
+    message,
+  );
   let r = {
     app: property_get(judged, "app"),
     commit,
