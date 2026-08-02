@@ -17,11 +17,14 @@ export async function g_game_plants_report(word) {
   let pool = g_npc_pool(turns_wanted, pool_next);
   let game_seed = random_seed_from_text(word);
   let next = random_seed_generator(game_seed);
-  let plants = g_game_plants(next, pool);
+  let bare = g_game_plants(next, pool);
+  let stream = await g_sermon_chapter_days_all();
+  let plants = g_game_plants_areas(bare, stream);
   let rows = [];
   let sizes = {};
   let days_total = 0;
   let short_plants = 0;
+  let elder_short_plants = 0;
   for (let plant of plants) {
     let npcs = property_get(plant, "npcs");
     let days = property_get(plant, "days");
@@ -33,6 +36,10 @@ export async function g_game_plants_report(word) {
     if (short_is) {
       short_plants = short_plants + 1;
     }
+    let elder_short_is = property_get(plant, "elder_short");
+    if (elder_short_is) {
+      elder_short_plants = elder_short_plants + 1;
+    }
     let row = {
       index: property_get(plant, "index"),
       npcs,
@@ -40,6 +47,12 @@ export async function g_game_plants_report(word) {
       leader_turns: property_get(plant, "leader_turns"),
       leader_days_percent: property_get(plant, "leader_days_percent"),
       leader_short: short_is,
+      area: property_get(plant, "area"),
+      book: property_get(plant, "book"),
+      chapters: property_get(plant, "chapters"),
+      sender_present: property_get(plant, "sender_present"),
+      elder_short: elder_short_is,
+      days_short: property_get(plant, "days_short"),
     };
     list_add(rows, row);
   }
@@ -51,6 +64,7 @@ export async function g_game_plants_report(word) {
     days_total,
     sizes,
     short_plants,
+    elder_short_plants,
     rows,
   };
   return r;
