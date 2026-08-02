@@ -1,3 +1,4 @@
+import { language_code_key } from "./language_code_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_languages_add_item_info } from "./ebible_languages_add_item_info.mjs";
@@ -8,7 +9,7 @@ import { function_transform } from "./function_transform.mjs";
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = fn_name("ebible_languages");
   let r = await ebible_languages_add_item_info(bible_folder);
-  let language_code = property_get(r, "language_code");
+  let language_code = property_get(r, language_code_key());
   let name = property_get(r, "name");
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
