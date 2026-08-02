@@ -1,3 +1,4 @@
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -51,7 +52,7 @@ export function app_code_lesson_console_log_nested_generic(params) {
     let rights = [word];
     let built = app_code_lesson_name_id_generic(
       rights,
-      "expressions",
+      app_code_category_expressions(),
       title_get,
     );
     return built;
