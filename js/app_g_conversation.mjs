@@ -1,3 +1,4 @@
+import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { g_something_else } from "./g_something_else.mjs";
 import { list_min } from "./list_min.mjs";
@@ -7,7 +8,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_prayers_believer } from "./g_prayers_believer.mjs";
-import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_conversation_day_fraction } from "./app_g_conversation_day_fraction.mjs";
 import { g_day_clock } from "./g_day_clock.mjs";
 import { g_clock_label } from "./g_clock_label.mjs";
@@ -165,8 +165,7 @@ export async function app_g_conversation(
     let fraction = divide(steps.done, steps_total);
     let target = app_g_conversation_sky_target(fraction);
     await app_g_sky_to(target);
-    let toast_state = app_g_day_state();
-    let show_toast = property_get(toast_state, "sky_toast");
+    let show_toast = app_g_day_state_property("sky_toast");
     if (show_toast) {
       let day_fraction = app_g_conversation_day_fraction(fraction);
       let clock = g_day_clock(day_fraction);

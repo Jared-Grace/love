@@ -21,7 +21,14 @@ export async function app_g_day_sky_update() {
   let weights = app_g_day_slice_weights();
   let walk_weight = property_get(weights, "walk");
   let conversation_weight = property_get(weights, "conversation");
-  let fraction = app_g_day_fraction(slices_done, slices_total, target_start, target_best, walk_weight, conversation_weight);
+  let fraction = app_g_day_fraction(
+    slices_done,
+    slices_total,
+    target_start,
+    target_best,
+    walk_weight,
+    conversation_weight,
+  );
   let phase = g_day_sky_phase(fraction);
   let g = await app_g_game_save_get();
   property_set(g, "sky_phase", phase);
