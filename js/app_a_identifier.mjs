@@ -1,8 +1,8 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { ternary } from "./ternary.mjs";
 import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_identifier_defineds_includes } from "./js_identifier_defineds_includes.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { js_identifier_rename_imports_fix } from "./js_identifier_rename_imports_fix.mjs";
 import { app_a_identifier_generic } from "./app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "./app_a_keyword_blue.mjs";
@@ -20,8 +20,7 @@ export function app_a_identifier(a) {
   if (equal(name, a2)) {
     span = app_a_keyword_blue(parent, name);
   } else {
-    let f_names = property_get(a, "f_names");
-    let includes = list_includes(f_names, name);
+    let includes = property_list_includes(a, "f_names", name);
     span = html_span_text(parent, name);
     let color = null;
     if (includes) {
@@ -31,8 +30,7 @@ export function app_a_identifier(a) {
       let v_match = js_node_to_visitor(ast, node);
       let includes3 = js_identifier_defineds_includes(v_match, name);
       if (includes3) {
-        let f_names_local = property_get(a, "f_names_local");
-        let includes2 = list_includes(f_names_local, name);
+        let includes2 = property_list_includes(a, "f_names_local", name);
         color = ternary(includes2, "#00c800ff", "#4a4affff");
       } else {
         color = "red";
