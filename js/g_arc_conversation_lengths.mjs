@@ -1,3 +1,6 @@
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,14 +14,14 @@ export function g_arc_conversation_lengths(turns, next) {
   let high = settings.conversation_turns_high;
   let lengths = [];
   let remaining = turns;
-  while (remaining > 0) {
+  while (greater_than(remaining, 0)) {
     let drawn = random_bell_low_middle_high(next, low, middle, high);
     let take = Math.min(drawn, remaining);
-    let leftover = remaining - take;
-    let stub = leftover < low;
+    let leftover = subtract(remaining, take);
+    let stub = less_than(leftover, low);
     let taken = stub ? remaining : take;
     list_add(lengths, taken);
-    remaining = remaining - taken;
+    remaining = subtract(remaining, taken);
   }
   return lengths;
 }
