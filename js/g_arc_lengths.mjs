@@ -1,8 +1,8 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { round } from "./round.mjs";
 import { floor } from "./floor.mjs";
 import { math_min } from "./math_min.mjs";
-import { ceil } from "./ceil.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -17,7 +17,6 @@ import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { identity } from "./identity.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -86,8 +85,7 @@ export async function g_arc_lengths(chapter) {
   }
   list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
-  let divided2 = divide(settings.day_matches, settings.conversation_turns_mean);
-  let v = ceil(divided2);
+  let v = divide_ceil(settings.day_matches, settings.conversation_turns_mean);
   let npcs_minimum = math_max(v, settings.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs, npcs_minimum);
   let r = {
