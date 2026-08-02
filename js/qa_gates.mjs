@@ -1,5 +1,5 @@
 import { file_stamps_copied_gate_run } from "./file_stamps_copied_gate_run.mjs";
-import { functions_math_calls_gate_run } from "./functions_math_calls_gate_run.mjs";
+import { functions_builtin_calls_gate_run } from "./functions_builtin_calls_gate_run.mjs";
 import { js_indexeddb_name_literals_cases_gate_run } from "./js_indexeddb_name_literals_cases_gate_run.mjs";
 import { indexeddb_name_literals_gate_run } from "./indexeddb_name_literals_gate_run.mjs";
 import { js_storage_browser_objects_cases_gate_run } from "./js_storage_browser_objects_cases_gate_run.mjs";
@@ -233,7 +233,7 @@ export function qa_gates() {
     permission_settings_local_gate_run,
     functions_tail_duplicates_gate_run,
     functions_head_duplicates_gate_run,
-    functions_math_calls_gate_run,
+    functions_builtin_calls_gate_run,
   ];
   return gates;
 }

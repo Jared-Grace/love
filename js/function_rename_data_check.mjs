@@ -1,6 +1,5 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { text_starts_with_not } from "./text_starts_with_not.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { examples_folder } from "./examples_folder.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { data_paths } from "./data_paths.mjs";
@@ -30,8 +29,7 @@ export async function function_rename_data_check(f_name_before, f_name_after) {
   }
   let changes_all = await list_map_unordered_async(paths, lambda);
   function changed_is(change) {
-    let sites = property_get(change, "sites");
-    let any = greater_than(sites, 0);
+    let any = property_greater_than(change, "sites", 0);
     return any;
   }
   let changes = list_filter(changes_all, changed_is);
