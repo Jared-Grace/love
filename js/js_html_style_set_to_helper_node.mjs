@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_code_call_parse_expression } from "./js_code_call_parse_expression.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -17,29 +18,32 @@ export function js_html_style_set_to_helper_node(node, helpers) {
   "Rewrite one call that sets a style property by name into the named helper that means the same thing.";
   "Doing nothing is the answer whenever the call does not clearly match. There is no helper for the property, the property is worked out while the program runs rather than written down, the call is shaped oddly - each of those leaves the call exactly as it was, which is always correct, where a guess would not be.";
   let args = js_call_arguments_get(node);
-  let three = equal(list_size(args), 3);
-  if (!three) {
+  let left = list_size(args);
+  let three = equal(left, 3);
+  if (not(three)) {
     return;
   }
   let key = list_second(args);
   let key_is = js_literal_is(key);
-  if (!key_is) {
+  if (not(key_is)) {
     return;
   }
   let prop = js_literal_value_get(key);
   let value_node = list_get(args, 2);
   let helper = js_html_style_helper_pick_try(helpers, prop, value_node);
-  if (!helper) {
+  if (not(helper)) {
     return;
   }
   let name = property_get(helper, "name");
   let expression = js_code_call_parse_expression(name);
   let kept = js_call_arguments_get(expression);
   let target = list_first(args);
-  list_add_multiple(kept, [object_copy(target)]);
+  let copy = object_copy(target);
+  list_add_multiple(kept, [copy]);
   let through = property_equals(helper, "kind", "value");
   if (through) {
-    list_add_multiple(kept, [object_copy(value_node)]);
+    let copy2 = object_copy(value_node);
+    list_add_multiple(kept, [copy2]);
   }
   object_replace(node, expression);
 }
