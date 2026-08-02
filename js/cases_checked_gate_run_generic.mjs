@@ -1,3 +1,4 @@
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,6 +31,15 @@ export async function cases_checked_gate_run_generic(
   ("A gate may add a sentence to its refusal saying what shape to go looking for,");
   ("which is worth most at the moment it fails and is lost if it only lives in the");
   ("docstring. A gate with nothing to add hands over nothing to say.");
+  ("A corpus with nothing in it is refused before anything is run. Every gate here");
+  ("passes by raising nothing, so a corpus that had quietly come back empty would");
+  ("not turn its gate red - it would turn it green, print 'pass 0 fail 0', and read");
+  ("as a clean run of the very check that exists because the sweep beneath it cannot");
+  ("tell a right answer from no answer.");
+  list_empty_not_is_assert_json(cases, {
+    label,
+    hint: "this corpus came back with no cases at all, so the gate would have passed without asking anything - look at whatever builds the cases rather than at what they check",
+  });
   let results = await list_map_unordered_async(cases, check);
   for (let r of results) {
     let passed = property_get(r, "pass");
