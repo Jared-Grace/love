@@ -1,3 +1,7 @@
+import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
+import { html_div_text_centered } from "./html_div_text_centered.mjs";
+import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
@@ -62,10 +66,8 @@ import { object_to_list } from "./object_to_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
-import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { html_div } from "./html_div.mjs";
@@ -91,7 +93,6 @@ import { html_scroll_center } from "./html_scroll_center.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
-  let english_choices = [en];
   let books = await ebible_version_books_browser(en);
   let query = property_get(context, "query");
   let words = text_to_words(query);
@@ -403,22 +404,19 @@ export async function app_search_results(context, div_results) {
           lambda3,
         );
         html_style_margin_y(oc, "0.2em");
-        await app_reply_verses_add(
-          en,
+        let entries = await app_shared_bible_reference_entries(
           reference,
-          english_choices,
-          null,
-          bible_texts,
           languages_chosen,
         );
-        function each_bible_text(bible_text) {
-          let p = html_p_text(div_verse, bible_text);
-          let is_reference = equal(bible_text, reference);
-          if (is_reference) {
-            app_shared_text_deemphasized(p);
-          }
-        }
-        each(bible_texts, each_bible_text);
+        ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on");
+        let d = html_div_text_centered(div_verse, reference);
+        app_shared_text_deemphasized(d);
+        ("each language reads in its own colour along one gradient, the same way the supper app tells its versions apart");
+        app_shared_bible_verse_texts(div_verse, entries);
+        ("what gets copied is the reference then each language's words, in the order they are read on the page");
+        list_add(bible_texts, reference);
+        let texts = list_map_property(entries, "text");
+        list_add_multiple(bible_texts, texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
         }
