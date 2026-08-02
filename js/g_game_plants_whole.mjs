@@ -83,6 +83,7 @@ export function g_game_plants_whole(next, days_total) {
     plant.leader_short = less_than(leader_turns, s.leader_turns_minimum);
     let arc_turns = property_get(plant, "arc_turns");
     let split = g_plant_matches(days, arc_turns);
+    plant.matches = property_get(split, "matches");
     plant.question_matches = property_get(split, "question_matches");
     plant.question_percent = property_get(split, "question_percent");
   }
