@@ -1,5 +1,5 @@
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { json_to } from "./json_to.mjs";
-import { json_from } from "./json_from.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export async function guard_check(command) {
@@ -41,8 +41,7 @@ export async function guard_check(command) {
       decision: "silent",
     };
   }
-  let parsed = json_from(stdout);
-  let hook = property_get(parsed, "hookSpecificOutput");
+  let hook = json_from_property_get(stdout, "hookSpecificOutput");
   return {
     decision: property_get(hook, "permissionDecision"),
     reason: property_get(hook, "permissionDecisionReason"),

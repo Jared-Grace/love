@@ -1,5 +1,5 @@
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { json_to } from "./json_to.mjs";
-import { json_from } from "./json_from.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -46,8 +46,7 @@ export async function memory_hook_check(tool_name, file_path) {
     };
     return r;
   }
-  let parsed = json_from(stdout);
-  let hook = property_get(parsed, "hookSpecificOutput");
+  let hook = json_from_property_get(stdout, "hookSpecificOutput");
   let r2 = {
     decision: property_get(hook, "permissionDecision"),
     reason: property_get(hook, "permissionDecisionReason"),
