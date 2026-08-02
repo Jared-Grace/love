@@ -1,8 +1,7 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
-import { list_join } from "./list_join.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function python_code_mirror(mirror) {
@@ -13,8 +12,7 @@ export function python_code_mirror(mirror) {
   let constant = property_get(mirror, "constant");
   let source = property_get(mirror, "source");
   let names = source();
-  let quoted = list_map(names, json_to);
-  let joined = list_join(quoted, ", ");
+  let joined = list_map_join_separator(names, json_to, ", ");
   let writer = fn_name("python_mirrors_write");
   let checker = fn_name("python_mirrors_assert");
   let code = text_combine_multiple([
