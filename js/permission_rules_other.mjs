@@ -4,6 +4,7 @@ export function permission_rules_other() {
   "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
   "no rule here may edit a hook file either, and that was the wider hole of the two. A hook runs before the permission engine, and its allow skips the engine rather than adding to it, so a standing approval to edit the hook covering the write tools reaches the rules file as well - and that hook abstains everywhere outside the memory folder and does not guard itself. Two such rules stood here; one named a file nothing currently runs, which is a smaller thing only for as long as nobody registers it.";
   "no rule here may edit a settings file. Two once did, and a standing approval to edit the file that decides what is approved without asking is the one grant that can widen itself: any rule at all can be added to it, and a rule granting a shell outright answers to nothing on the deny floor, which names particular commands rather than shapes. Two gates would have caught it afterwards - the shared file must match what this generates, and the local one is watched against a record - but both are a reading taken later, and nothing at all stood in the way at the moment of the edit. The list is generated on purpose so that a new approval is a named function a human says yes to; a rule that can rewrite the list goes around that, so the way to change what is approved is to change this source and regenerate, which is a visible edit that a standing approval never buys.";
+  "no rule here may name the Write tool. the engine matches a file tool against Edit rules alone, and an Edit rule covers every file-editing tool including Write, so a Write rule grants nothing its Edit twin does not already grant and nothing at all without one. Two stood here beside their twins, and the only thing they bought was a warning on every session for every Claude, which reads as a missing permission and is not one - the loudest possible way to say nothing. the reachability audit fails the build on a new one.";
   let f_name = fn_name("qa_gate_run");
   let combined = text_combine_multiple(["Bash(pkill -f ai.mjs ", f_name, ")"]);
   let f_name2 = fn_name("examples_gate_run");
@@ -76,8 +77,6 @@ export function permission_rules_other() {
     "mcp__claude-in-chrome__read_network_requests",
     "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-repos-love/**)",
-    "Write(/tmp/claude-1000/-home-j-repos-love/**)",
-    "Write(/home/j/repos/love/scripts/temp/**)",
     "Edit(/home/j/repos/love/scripts/temp/**)",
     "Bash(mkdir /tmp/claude-1000/-home-j-repos-love/:*)",
     "Bash(mkdir -p /tmp/claude-1000/-home-j-repos-love/:*)",
