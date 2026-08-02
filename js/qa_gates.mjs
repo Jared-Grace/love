@@ -1,3 +1,4 @@
+import { js_atomize_cases_gate_run } from "./js_atomize_cases_gate_run.mjs";
 import { js_page_serialized_import_uses_cases_gate_run } from "./js_page_serialized_import_uses_cases_gate_run.mjs";
 import { functions_page_auto_borrowing_gate_run } from "./functions_page_auto_borrowing_gate_run.mjs";
 import { functions_locals_unread_gate_run } from "./functions_locals_unread_gate_run.mjs";
@@ -204,6 +205,7 @@ export function qa_gates() {
     js_name_only_imports_cases_gate_run,
     functions_name_only_imports_gate_run,
     js_while_frozen_cases_gate_run,
+    js_atomize_cases_gate_run,
     js_declare_assign_null_cases_gate_run,
     functions_while_frozen_gate_run,
     functions_self_call_gate_run,
