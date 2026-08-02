@@ -1,3 +1,4 @@
+import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
 import { functions_parameters_unread_computed_gate_run } from "./functions_parameters_unread_computed_gate_run.mjs";
 import { cases_checked_gate_run_generic_gate_run } from "./cases_checked_gate_run_generic_gate_run.mjs";
 import { baseline_growth_guarded_gate_run } from "./baseline_growth_guarded_gate_run.mjs";
