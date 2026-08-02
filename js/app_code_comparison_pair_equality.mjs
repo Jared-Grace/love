@@ -1,4 +1,4 @@
-import { subtract } from "./subtract.mjs";
+import { integer_random_below } from "./integer_random_below.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 export function app_code_comparison_pair_equality() {
@@ -13,8 +13,7 @@ export function app_code_comparison_pair_equality() {
       };
       return equal_pair;
     }
-    let max2 = subtract(max, 1);
-    let left = integer_random(1, max2);
+    let left = integer_random_below(max);
     let right = integer_random(left + 1, max);
     let different_pair = {
       left,
