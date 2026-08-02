@@ -2460,12 +2460,7 @@ def find_raw_node_eval(command):
     (redirection, subshells, `$(...)`, backgrounding) raises Unsupported and is
     reported as "not detected" - it falls through to normal handling rather
     than being force-denied on a guess."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return False
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if words and words[0] == "node" and any(is_node_eval_flag(w) for w in words[1:]):
             return True
     return False
@@ -2682,12 +2677,7 @@ def find_denied_dispatcher_function(command):
     main() can DENY it; else None. Quote-aware like find_raw_node_eval, and
     leading assignments / xargs / timeout prefixes are unwrapped the same way;
     an unparseable command returns None and falls through to normal handling."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if (
             len(words) >= 3
             and words[0] == "node"
@@ -2781,12 +2771,7 @@ def find_argumentless_dispatcher_call(command):
     needs the tokenizer's word list to agree with what the shell would pass,
     and fails open here instead. Redirections are dropped during tokenize, so
     `node scripts/ai.mjs <fn> 2>&1 | grep ...` still arrives as three words."""
-    try:
-        tokens = tokenize(command)
-    except Unsupported:
-        return None
-    for words in split_statements(tokens):
-        words = _strip_command_prefixes(words)
+    for words in statements_words(command):
         if (
             len(words) == 3
             and words[0] == "node"
