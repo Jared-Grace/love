@@ -10,7 +10,7 @@ import { fn_name } from "./fn_name.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
-import { app_bible_settings } from "./app_bible_settings.mjs";
+import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
@@ -114,7 +114,7 @@ export async function app_shared_bible_home_generic(
     verse_number_hash,
   );
   let text2 = app_shared_gear_settings_text();
-  app_shared_screen_set_button(bar, context, app_bible_settings, text2);
+  app_shared_screen_set_button(bar, context, app_shared_bible_settings, text2);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
