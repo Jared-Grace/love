@@ -28,7 +28,7 @@ export async function reply_wrap_invoke(item, possibilities) {
       }
     }
     if (null_is(wrapped)) {
-      wrapped = function reply_wrap_inner(possibilities) {
+      wrapped = function reply_wrap_inner(possibilities_given) {
         function lambda2(p) {
           let tokens = property_get(p, "tokens");
           let index_start = property_get(p, "index");
@@ -51,8 +51,8 @@ export async function reply_wrap_invoke(item, possibilities) {
           };
           object_assign(p, r);
         }
-        each(possibilities, lambda2);
-        return possibilities;
+        each(possibilities_given, lambda2);
+        return possibilities_given;
       };
     }
   }
