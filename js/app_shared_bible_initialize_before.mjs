@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_initialize } from "./app_shared_initialize.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { object_merge } from "./object_merge.mjs";
-export function app_bible_shared_initialize_before(
+export function app_shared_bible_initialize_before(
   context,
   app_fn,
   screens,
