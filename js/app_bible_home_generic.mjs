@@ -1,3 +1,4 @@
+import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
@@ -30,7 +31,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { list_add } from "./list_add.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { not } from "./not.mjs";
@@ -223,8 +223,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     await app_bible_mode_switch(context, mode);
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
-  let text4 = html_button_copy_text();
-  let component = app_shared_button(bottom, text4, noop);
+  let component = app_shared_button_copy(bottom, noop);
   let v3 = app_shared_bible_toggle_update(
     updates,
     verse_numbers_chosen,
