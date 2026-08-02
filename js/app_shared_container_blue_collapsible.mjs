@@ -1,3 +1,4 @@
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
@@ -20,6 +21,8 @@ export function app_shared_container_blue_collapsible(parent, title_text) {
   let gap = app_shared_spaced_tiny_gap();
   html_style_padding_y(card, gap);
   html_style_margin_y(card, gap);
+  ("trimmed left-and-right for the same reason, and the same amount as the section cards it holds: this is the outermost of four cards nested one inside the next, so every bit of side padding here is taken off the width of the verse text at the bottom of them");
+  html_style_padding_x(card, gap);
   let caret_open = app_shared_caret_open();
   let title = text_combine_multiple([caret_open, " ", title_text]);
   let title_div = html_div_text_bold(card, title);
