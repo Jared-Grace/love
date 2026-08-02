@@ -76,6 +76,7 @@ export function examples_groups() {
         "example_prose_add_after_selected",
         "example_prose_add_before_selected",
         "example_arguments_same_names_set",
+        "example_shadowing_rename_in",
       ],
     },
     {
