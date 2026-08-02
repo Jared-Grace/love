@@ -119,7 +119,7 @@ export async function app_reply(context) {
     }
     let taken = list_shuffle_take(e, verse_count);
     let reference_current = null;
-    async function lambda6(reference) {
+    async function reference_each(reference) {
       reference_current = await app_reply_verses_add(
         en,
         reference,
@@ -129,7 +129,7 @@ export async function app_reply(context) {
         languages_chosen,
       );
     }
-    await each_async(taken, lambda6);
+    await each_async(taken, reference_each);
     visible_count = buttons_refresh();
     await copy_refresh();
   }
