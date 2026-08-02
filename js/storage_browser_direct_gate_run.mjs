@@ -1,9 +1,9 @@
+import { storage_browser_direct_hint } from "./storage_browser_direct_hint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { storage_browser_direct_all } from "./storage_browser_direct_all.mjs";
 import { storage_browser_direct_baseline_path } from "./storage_browser_direct_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function storage_browser_direct_gate_run() {
   "QA gate: no new file speaks to one of the browser's own stores itself. Every word that reaches a disk goes through a door, where something is watching it.";
   "A word used to name a kept thing is published the moment it is written, and after that it is in a store on somebody else's machine. Every reading that watches those words - which are frozen, which are composed where, which are written out instead of held - begins at the names of the functions that do the storing. A file that goes straight to the browser is read by none of them, so its word is published with nothing at all looking at it, and the repo reads exactly as if it were in order.";
@@ -16,7 +16,7 @@ export async function storage_browser_direct_gate_run() {
   let hint = storage_browser_direct_hint(
     "this file speaks straight to a browser store, where no reading that watches a kept word can see it - keep the word through one of the storing functions instead, or, if speaking to the browser is the whole of what this file does, name it to ",
   );
-  let f_name2 = fn_name("storage_browser_direct_baseline_write");
-  let r = await baseline_names_gate_generic(offenders, path, hint, f_name2);
+  let f_name = fn_name("storage_browser_direct_baseline_write");
+  let r = await baseline_names_gate_generic(offenders, path, hint, f_name);
   return r;
 }
