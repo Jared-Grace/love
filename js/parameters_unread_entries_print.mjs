@@ -6,7 +6,9 @@ export function parameters_unread_entries_print(entries, label) {
   function print(entry) {
     let name = property_get(entry, "name");
     let unread = property_get(entry, "unread");
-    console.log(label + "UNREAD PARAM  " + name + "  -> " + list_join_comma(unread));
+    console.log(
+      label + "UNREAD PARAM  " + name + "  -> " + list_join_comma(unread),
+    );
   }
   each(entries, print);
 }
