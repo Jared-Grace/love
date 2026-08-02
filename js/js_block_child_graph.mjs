@@ -1,5 +1,5 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
@@ -13,8 +13,7 @@ export function js_block_child_graph(ast) {
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
-        let body = property_get(left, "body");
-        let includes = list_includes(body, right);
+        let includes = property_list_includes(left, "body", right);
         if (includes) {
           la([left, right]);
           return;
