@@ -1,10 +1,10 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_bare_call_names } from "./js_bare_call_names.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 export function js_key_getters_generic(ast, nodes) {
@@ -37,8 +37,7 @@ export function js_key_getters_generic(ast, nodes) {
     if (not(plain)) {
       continue;
     }
-    let args = property_get(key, "arguments");
-    let bare = list_empty_is(args);
+    let bare = property_list_empty_is(key, "arguments");
     if (not(bare)) {
       continue;
     }
