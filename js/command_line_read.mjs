@@ -5,9 +5,9 @@ export async function command_line_read(prompt) {
       input: process.stdin,
       output: process.stdout,
     });
-    function lambda(answer) {
+    function lambda(answer_typed) {
       rl.close();
-      resolve(answer);
+      resolve(answer_typed);
     }
     rl.question(prompt, lambda);
   });
