@@ -1,6 +1,6 @@
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-export function app_bible_picker_button_size(count) {
+export function app_shared_bible_picker_button_size(count) {
   "choose a tap-target size from how many choices there are: a set small enough to fit on one screen has no scrolling cost, so make every target big and easy to tap; past that cutoff fall back to the PLAIN button size — the same 1em font and 0.3em padding as the verse-mode reader's own buttons — so a long list like the 66-book picker or Psalms' 150 chapters reads as ordinary buttons that match the rest of the app, rather than oversized ones that force endless scrolling";
   let fits_on_one_screen = 30;
   let roomy = less_than_equal(count, fits_on_one_screen);
