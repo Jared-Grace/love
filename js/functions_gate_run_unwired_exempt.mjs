@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 export function functions_gate_run_unwired_exempt() {
   "The gates the whole-repo gate is not expected to list, each named with the reason it is not one of its members.";
   "Named one at a time rather than spotted by shape, because a rule guessing which gate is allowed to sit outside the list would go wrong in the one direction that matters - quietly excusing the next gate somebody wrote and forgot to wire in.";
