@@ -1,3 +1,4 @@
+import { js_stack_loop_condition_is } from "./js_stack_loop_condition_is.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { property_get } from "./property_get.mjs";
@@ -37,7 +38,6 @@ export async function js_atomize(ast) {
       let variable_name = js_node_atomize_name();
       await js_node_atomize(ast, v, variable_name, offset);
     }
-    return;
   }
   await each_async(ces, lambda);
 }
