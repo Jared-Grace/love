@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
@@ -209,7 +210,7 @@ export async function app_shared_bible_read(context, verse_action) {
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
-      let verse_numbers = list_map_property(primary_verses, "verse_number");
+      let verse_numbers = list_map_property(primary_verses, verse_number_key());
       let first = list_first(verse_numbers);
       let last = list_last(verse_numbers);
       let endpoints = equal(first, last) ? [first] : [first, last];
@@ -240,7 +241,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let show_language_names = list_multiple_is(languages_verses);
   let primary_verses = list_last_property(languages_verses, "verses");
   async function render_verse(v) {
-    let verse_number_v = property_get(v, "verse_number");
+    let verse_number_v = property_get(v, verse_number_key());
     let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
     let verse_book_code = ebible_chapter_code_to_book(verse_chapter_code);
     let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
@@ -348,7 +349,7 @@ export async function app_shared_bible_read(context, verse_action) {
       return;
     }
     invoke_multiple(updates);
-    let ordered = list_map_property(verse_rows, "verse_number");
+    let ordered = list_map_property(verse_rows, verse_number_key());
     let item = list_first(verse_numbers_chosen);
     let index = list_index_of(ordered, item);
     if (greater_than_equal(index, 0)) {
