@@ -1,3 +1,5 @@
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { statSync } from "fs";
 import { claude_edit_claim_path } from "./claude_edit_claim_path.mjs";
@@ -11,13 +13,14 @@ import { claude_edit_claim_path } from "./claude_edit_claim_path.mjs";
 ("The window has to outlast the gap between the PreToolUse hook firing and");
 ("chokidar reporting the write, but stay short enough that the human editing the");
 ("same file moments later is not mistaken for Claude.");
-const FRESH_MILLISECONDS = 3000;
+let FRESH_MILLISECONDS = 3000;
 export function claude_edit_claim_fresh_is(file_path) {
   let claim = claude_edit_claim_path(file_path);
   try {
     let stat = statSync(claim);
-    let age = date_now_milliseconds() - stat.mtimeMs;
-    let fresh = age < FRESH_MILLISECONDS;
+    let left = date_now_milliseconds();
+    let age = subtract(left, stat.mtimeMs);
+    let fresh = less_than(age, FRESH_MILLISECONDS);
     return fresh;
   } catch (missing) {
     ("No claim file at all is the common case: the human just saved.");
