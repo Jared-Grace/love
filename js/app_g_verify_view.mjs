@@ -426,7 +426,45 @@ export async function app_g_verify_view(
     }
   }
   app_shared_button(suggest_bar, "Send suggestion", on_suggest);
-  ("show a badge if the loop has already reviewed a suggestion for this verse, so the reviewer knows it was seen and handled");
+  ("compare two suggestions the way the READER sees them: line endings, trailing spaces and blank lines are formatting they cannot see on the page, so none of them may make an applied-as-sent suggestion look declined");
+  function suggestion_text_normalize(t) {
+    let split = t.split("\n");
+    function line_trim(one) {
+      return one.trim();
+    }
+    function line_full(one) {
+      return greater_than(one.length, 0);
+    }
+    return split.map(line_trim).filter(line_full).join("\n");
+  }
+  ("did the loop apply the reviewer's last suggestion word for word? the saved lines ARE what Claude decided, so comparing them with the newest suggestion for this verse answers it — no extra state to write and nothing that can disagree with the page");
+  async function suggestion_applied_is() {
+    try {
+      let all = await app_shared_api({
+        f_name: fn_name("g_verify_suggest_history_read"),
+        args: [chapter_code],
+      });
+      let mine = [];
+      function lambda_mine(h) {
+        let one = property_get(h, "verse");
+        if (equal(one, verse)) {
+          mine.push(h);
+        }
+      }
+      all.forEach(lambda_mine);
+      if (equal(mine.length, 0)) {
+        return false;
+      }
+      let last = mine[subtract(mine.length, 1)];
+      let sent = suggestion_text_normalize(property_get(last, "text"));
+      let now = suggestion_text_normalize(value4);
+      return equal(sent, now);
+    } catch (ignore_applied) {
+      ignore_applied;
+      return false;
+    }
+  }
+  ("show a badge if the loop has already reviewed a suggestion for this verse, so the reviewer knows it was seen and handled — and when the saved lines match what they sent, SAY that it was taken as sent, because accepted and declined are the two answers they are waiting for and the neutral wording cannot tell them apart");
   async function reviewed_show() {
     try {
       let r = await app_shared_api({
@@ -437,6 +475,10 @@ export async function app_g_verify_view(
       if (equal(reviewed_verse, verse)) {
         let note = property_get(r, "note");
         let text = "✓ Claude reviewed your suggestion for v" + verse;
+        let applied = await suggestion_applied_is();
+        if (applied) {
+          text = "✓ Claude used your suggestion for v" + verse + " as you sent it";
+        }
         if (note) {
           text = text + " — " + note;
         }
