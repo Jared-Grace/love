@@ -5,12 +5,7 @@ import { emoji_bow } from "./emoji_bow.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export function g_prayer_conversation() {
   "the player's randomized, grammared prayer asking God to bless the NEXT conversation before it begins (was one fixed 'Heavenly Father, please bless this next conversation, in Jesus name, amen' string). composed from the shared address grammar + a varied ask word + a varied blessing petition + a varied closing, wrapped in bow / pray emojis, so praying before each person never reads the same twice";
-  let ask = list_random_item([
-    "please ",
-    "would You ",
-    "I ask You to ",
-    "I pray You would ",
-  ]);
+  let ask = g_prayer_ask();
   let petition = list_random_item([
     "bless this next conversation",
     "go before me into this conversation",
@@ -19,12 +14,7 @@ export function g_prayer_conversation() {
     "let Your love lead this conversation",
     "help me listen and love well",
   ]);
-  let closing = list_random_item([
-    ", in Jesus' name, amen",
-    ", amen",
-    ", for Your glory, amen",
-    ", in Jesus' name I pray, amen",
-  ]);
+  let closing = g_prayer_closing();
   let petition2 = text_combine_multiple([ask, petition, closing]);
   let body = g_prayer(petition2);
   let v = emoji_bow();
