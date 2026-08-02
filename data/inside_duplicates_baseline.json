@@ -19,7 +19,6 @@
   "functions_call_pairs_frequent,functions_fold_sites",
   "g_game_generate_report,g_game_plants_report",
   "js_call_argument_named_node_set,js_call_arguments_same_names_set",
-  "js_operator_call_to_node_unary,js_operator_call_to_node",
   "list_get,text_get",
   "memory_integrity_gate_run,permission_rules_unreachable",
   "permission_settings_allow_assert,permission_settings_allow_drift_verdict",
