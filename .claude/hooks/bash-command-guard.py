@@ -3658,16 +3658,9 @@ def main():
     # answer, just without the click.
     argumentless = find_argumentless_dispatcher_call(command)
     if argumentless:
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": argumentless_dispatcher_deny_reason(
-                    argumentless[0], argumentless[1]
-                ),
-            }
-        }))
-        return
+        return decide("deny", argumentless_dispatcher_deny_reason(
+            argumentless[0], argumentless[1]
+        ))
 
     # Near-miss on the sandboxed throwaway: the exact sandbox shape but with an
     # --allow-fs-read path outside the repo. Rather than fall through to a human
