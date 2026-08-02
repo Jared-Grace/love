@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { app_bible_verse_open } from "./app_bible_verse_open.mjs";
@@ -17,7 +18,7 @@ export async function app_bible_verse_change(
   if (ni) {
     await chapter_change(context, chapter_code);
   } else {
-    let verse_number = property_get(next, "verse_number");
+    let verse_number = property_get(next, verse_number_key());
     await app_bible_verse_open(context, verse_number);
   }
 }
