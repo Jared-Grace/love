@@ -60,13 +60,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_code_quiz",
-   "shadows_outer": [
-    "refresh"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_code_review_load",
    "shadows_outer": [
     "queue",
@@ -91,20 +84,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_message_provide_generic",
-   "shadows_outer": [
-    "context"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_replace_rule_sets_why_generate",
-   "shadows_outer": [
-    "found"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_replace_tests_proof_start_over_click",
    "shadows_outer": [
     "button"
@@ -115,13 +94,6 @@
    "name": "app_reply",
    "shadows_outer": [
     "lambda6"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "app_shared_flow_next",
-   "shadows_outer": [
-    "screens"
    ],
    "shadows_function": []
   },
@@ -147,13 +119,6 @@
     "options",
     "args",
     "command"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "ebible_book_video_generate",
-   "shadows_outer": [
-    "path_video"
    ],
    "shadows_function": []
   },
@@ -187,13 +152,6 @@
    "shadows_function": []
   },
   {
-   "name": "function_comments_migrate_multiple",
-   "shadows_outer": [
-    "left"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "g_sermon_generate_book_generic_prompts",
    "shadows_outer": [
     "each_chapter",
@@ -205,13 +163,6 @@
    "name": "g_sermon_generate_book_generic",
    "shadows_outer": [
     "prompt_system"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "html_parse_descendants_classes",
-   "shadows_outer": [
-    "item"
    ],
    "shadows_function": []
   },
@@ -258,20 +209,6 @@
    "name": "messenger_reply_unread_collect",
    "shadows_outer": [
     "page"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "reply_test",
-   "shadows_outer": [
-    "item"
-   ],
-   "shadows_function": []
-  },
-  {
-   "name": "reply_wrap_invoke",
-   "shadows_outer": [
-    "possibilities"
    ],
    "shadows_function": []
   },
