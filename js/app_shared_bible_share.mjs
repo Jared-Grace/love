@@ -1,3 +1,5 @@
+import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
+import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -25,7 +27,8 @@ export async function app_shared_bible_share(
   if (not(single)) {
     verse_range = text_combine_multiple([first, "-", last]);
   }
-  let book_plus = list_join(text_split(book_name, " "), "+");
+  let list = text_split(book_name, " ");
+  let book_plus = list_join(list, "+");
   let reference = text_combine_multiple([
     book_plus,
     "+",
@@ -36,14 +39,16 @@ export async function app_shared_bible_share(
   let languages = list_join(languages_chosen, "+");
   let base = html_url_without_hash();
   ("the two words this link stands on are frozen, so they are read off the functions that hold them rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change");
+  let v = app_shared_bible_reference_hash_key();
+  let v2 = app_shared_bible_language_hash_key();
   let url = text_combine_multiple([
     base,
     "#",
-    app_shared_bible_reference_hash_key(),
+    v,
     "=",
     reference,
     ",",
-    app_shared_bible_language_hash_key(),
+    v2,
     "=",
     languages,
   ]);
