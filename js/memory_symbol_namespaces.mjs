@@ -1,6 +1,5 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { text_split_first } from "./text_split_first.mjs";
 import { each } from "./each.mjs";
@@ -19,8 +18,7 @@ export async function memory_symbol_namespaces() {
   let namespaces = {};
   function admit(name) {
     let first = text_split_first(name, "_");
-    let count = property_get(counts, first);
-    let family = greater_than(count, 1);
+    let family = property_greater_than(counts, first, 1);
     if (family) {
       namespaces[first] = true;
     }
