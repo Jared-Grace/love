@@ -1,9 +1,9 @@
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_swapping_divide() {
   "the second swapping lesson: the arithmetic operators that do NOT swap - / (divide), % (remainder) and ** (power). Each gets an everyday reason it is directional, so the rule is understood, not memorised, and both sides are worked out so the swap is seen. + and * are recalled as the ones that do swap, so the quiz mixes them (true) with / % ** (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();

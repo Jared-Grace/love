@@ -1,3 +1,5 @@
+import { js_builtin_objects_spellings } from "./js_builtin_objects_spellings.mjs";
+import { repo_functions_names_code_includes_multiple } from "./repo_functions_names_code_includes_multiple.mjs";
 import { each_async } from "./each_async.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { folder_js } from "./folder_js.mjs";
@@ -7,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { path_join } from "./path_join.mjs";
 import { property_get } from "./property_get.mjs";
-import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function functions_builtin_calls_pending() {
