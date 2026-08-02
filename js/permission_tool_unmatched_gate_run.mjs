@@ -1,38 +1,22 @@
-import { gate_case_mark } from "./gate_case_mark.mjs";
-import { gate_counts_log } from "./gate_counts_log.mjs";
 import { permission_tool_unmatched_cases } from "./permission_tool_unmatched_cases.mjs";
 import { permission_rule_tool_unmatched_is } from "./permission_rule_tool_unmatched_is.mjs";
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 export function permission_tool_unmatched_gate_run() {
   "Gate: the written-down rules must each get the answer the corpus declares. The audit built on this judgment reads the live settings files, where a correct answer and a broken one both come back empty today, so this is the only place a mistake in it can be seen. Throws so the dispatcher seam exits nonzero.";
+  "The counting, the mark per case, the tally and the counted throw were written out by hand here first, and are the same twenty-five lines every gate of this shape had. They live in one place now, so this says only which reader is being asked and what the corpus calls its answer.";
   let cases = permission_tool_unmatched_cases();
-  let failures = [];
-  for (let c of cases) {
+  function answer(c) {
     let rule = property_get(c, "rule");
-    let expected = property_get(c, "unmatched");
-    let actual = permission_rule_tool_unmatched_is(rule);
-    let b = equal(expected, actual);
-    let mark = gate_case_mark(b);
-    console.log(mark + rule + "  " + expected + " / " + actual);
-    if (not(b)) {
-      list_add(failures, c);
-    }
+    let unmatched = permission_rule_tool_unmatched_is(rule);
+    return unmatched;
   }
-  let passed = subtract(cases.length, failures.length);
-  gate_counts_log(passed, failures.length);
-  if (greater_than(failures.length, 0)) {
-    throw new Error(
-      "permission tool unmatched gate: " + failures.length + " failed",
-    );
-  }
-  let r = {
-    pass: cases.length,
-    fail: 0,
-  };
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "unmatched",
+    "why",
+    "permission tool unmatched",
+  );
   return r;
 }
