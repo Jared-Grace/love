@@ -45,12 +45,12 @@ export function app_bible_books_matches(query, books) {
   function testament_matches(testament) {
     let name = property_get(testament, "name");
     let divisions = property_get(testament, "divisions");
-    let mapped = list_map(divisions, division_matches);
+    let divisions_mapped = list_map(divisions, division_matches);
     function section_has_books(section) {
       let any = has_any(section, "books");
       return any;
     }
-    let sections = list_filter(mapped, section_has_books);
+    let sections = list_filter(divisions_mapped, section_has_books);
     let filled = {
       name,
       divisions: sections,
