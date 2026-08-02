@@ -20,6 +20,20 @@ export async function file_overwrite_json(file_path, object) {
     " did not work on sufficiently large object, whereas the following did:",
   ]);
   let fs = await import("fs");
+  let temp_path_whole = file_path_temp(file_path);
+  ("The sentence above is true of an object too big to be one piece of text and of nothing else. Every other object here is written in one pass, because assembling the same text a piece at a time costs two seconds on a five megabyte record - and that record is rewritten by nearly every command that edits a file, so it was the largest single cost in the whole seam. Asking first and falling back is what keeps both true at once.");
+  let json_whole = json_to_try(object);
+  if (null_not_is(json_whole)) {
+    try {
+      await fs.promises.writeFile(temp_path_whole, json_whole);
+      await fs.promises.rename(temp_path_whole, file_path);
+      await file_to_commit_add_try(file_path);
+    } catch (e) {
+      await fs.promises.unlink(temp_path_whole).catch(() => {});
+      throw e;
+    }
+    return;
+  }
   let v = await import("stream/promises");
   let pipeline = property_get(v, "pipeline");
   let streamJsonStringify = await (
