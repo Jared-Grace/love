@@ -1,7 +1,7 @@
+import { list_find_item_property } from "./list_find_item_property.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_find } from "./list_find.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_find_declaration_named(ast, name) {
   "The line that makes a value, addressed by the name it makes. Every step of a";
@@ -18,7 +18,6 @@ export function js_find_declaration_named(ast, name) {
     let includes = list_includes(names, name);
     return includes;
   }
-  let only = list_find(vs, named_is);
-  let found = property_get(only, "node");
+  let found = list_find_item_property(vs, named_is, "node");
   return found;
 }
