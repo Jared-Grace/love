@@ -7,7 +7,6 @@ import { list_index_of_next_outside } from "./list_index_of_next_outside.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_types_function_node } from "./js_types_function_node.mjs";
 import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
-import { js_stack_filtered_each } from "./js_stack_filtered_each.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -20,6 +19,13 @@ import { property_get } from "./property_get.mjs";
 import { error } from "./error.mjs";
 import { json_to } from "./json_to.mjs";
 export function js_identifier_defineds(v) {
+  "every name already bound where this identifier stands - what is in scope for it.";
+  "The top of the file is asked as well as the blocks around it, and the two are";
+  "asked the same way because they hold statements the same way. Leaving the top out";
+  "made a module-level binding invisible: the step that adds the word let could not";
+  "see one, so it wrote a fresh let over an assignment meant for it, and a cache";
+  "filled that way read back empty for the life of the process. That shape is a";
+  "cache, which is the whole reason a binding sits up there in the first place.";
   let stack = property_get(v, "stack");
   function lambda4(la) {
     let e = list_get_end_1(stack);
@@ -28,7 +34,11 @@ export function js_identifier_defineds(v) {
       la([value]);
     }
     function_type_add(e, "FunctionExpression");
-    js_stack_filtered_each(stack, "BlockStatement", lambda3);
+    js_stack_filtered_multiple_each(
+      stack,
+      ["BlockStatement", "Program"],
+      lambda3,
+    );
     function lambda3(bs) {
       let bs_list = list_next(stack, bs);
       let item = list_next(stack, bs_list);
