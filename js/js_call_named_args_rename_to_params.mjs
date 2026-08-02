@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_call_named_find } from "./js_call_named_find.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { function_params_get } from "./function_params_get.mjs";
@@ -12,10 +13,12 @@ export async function js_call_named_args_rename_to_params(ast, f_name) {
   let args = js_call_arguments_get(call);
   let params = await function_params_get(f_name);
   function lambda(arg, param) {
-    if (!js_identifier_is(arg)) {
+    let b = js_identifier_is(arg);
+    if (not(b)) {
       return;
     }
-    if (!js_identifier_is(param)) {
+    let b2 = js_identifier_is(param);
+    if (not(b2)) {
       return;
     }
     let name_from = js_identifier_name(arg);
