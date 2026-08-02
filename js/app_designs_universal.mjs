@@ -42,7 +42,7 @@ export function app_designs_universal(context) {
     let possbilities = list_cartesian_product_self(colors, slots);
     function lambda3(possibility) {
       let shape = html_div(container);
-      html_style_grid(shape, columns, rows);
+      html_style_grid(shape, columns);
       function lambda(y) {
         let offset = multiply(y, columns);
         function lambda2(x) {
@@ -60,7 +60,7 @@ export function app_designs_universal(context) {
       each_range(rows, lambda);
     }
     each(possbilities, lambda3);
-    let component = html_hr(root);
+    html_hr(root);
   }
   each(dimensions, lambda4);
 }
