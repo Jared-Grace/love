@@ -10,7 +10,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
+import { app_shared_bible_on_click_google_define } from "./app_shared_bible_on_click_google_define.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 export function app_shared_bible_verse_line(parent, name, text, color) {
   let line = html_div(parent);
@@ -34,6 +34,6 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
   ("hold the verse words in their own isolated run so a right-to-left script like Urdu or Arabic reads in its own direction, detected from the text itself, without the Latin label flipping it");
   let text_holder = html_span(line);
   html_attribute_set(text_holder, "dir", "auto");
-  app_bible_on_click_google_define(text_holder, text);
+  app_shared_bible_on_click_google_define(text_holder, text);
   return line;
 }

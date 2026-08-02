@@ -1,7 +1,7 @@
 {
  "known": [
-  "app_shared_bible_read -> app_next_hash_to_languages_chosen",
-  "app_shared_bible_verse_line -> app_bible_on_click_google_define",
+  "app_shared_bible_read -> app_shared_bible_hash_to_languages_chosen",
+  "app_shared_bible_verse_line -> app_shared_bible_on_click_google_define",
   "app_shared_gloss_bible_home_generic -> app_g_bible_home_inner"
  ]
 }

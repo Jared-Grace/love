@@ -21,7 +21,7 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_chosen.mjs";
+import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { emoji_search } from "./emoji_search.mjs";
@@ -43,7 +43,7 @@ export async function app_search_home(context) {
   app_shared_content_column_pad(content);
   html_centered(bar);
   let hash = html_hash_object_get();
-  let language_codes = app_next_hash_to_languages_chosen(hash);
+  let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
   let languages = ebible_languages();
   function code_to_language(code) {
     let r = list_find_property_or_null(languages, language_code_key(), code);

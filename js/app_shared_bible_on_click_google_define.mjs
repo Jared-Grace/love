@@ -3,7 +3,7 @@ import { each } from "./each.mjs";
 import { html_span_on_click_google_define } from "./html_span_on_click_google_define.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-export function app_bible_on_click_google_define(top, text) {
+export function app_shared_bible_on_click_google_define(top, text) {
   let split = text_split_space(text);
   function lambda(item) {
     html_span_space(top);
