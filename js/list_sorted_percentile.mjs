@@ -1,3 +1,5 @@
+import { floor } from "./floor.mjs";
+import { ceil } from "./ceil.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 export function list_sorted_percentile(sorted, fraction) {
@@ -5,8 +7,8 @@ export function list_sorted_percentile(sorted, fraction) {
   let n = sorted.length;
   let right = subtract(n, 1);
   let rank = multiply(fraction, right);
-  let lo = Math.floor(rank);
-  let hi = Math.ceil(rank);
+  let lo = floor(rank);
+  let hi = ceil(rank);
   let frac = subtract(rank, lo);
   let low = sorted[lo];
   let high = sorted[hi];
