@@ -1,0 +1,43 @@
+import { each_async } from "./each_async.mjs";
+import { file_js_parse } from "./file_js_parse.mjs";
+import { folder_js } from "./folder_js.mjs";
+import { function_name_extension } from "./function_name_extension.mjs";
+import { js_math_calls_rewrite } from "./js_math_calls_rewrite.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
+import { path_join } from "./path_join.mjs";
+import { property_get } from "./property_get.mjs";
+import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
+import { repo_love_name } from "./repo_love_name.mjs";
+import { text_combine } from "./text_combine.mjs";
+export async function functions_math_calls_pending() {
+  "Every function still calling a built-in Math method the repo keeps a name for, asked of the whole repo and answered without writing to a single file.";
+  "The question is asked of the tree rather than of the text, because the text cannot answer it. A call handing over three things where the function beside it takes two is left standing on purpose, so a file spelling one of those would be named as pending forever and a sweep proving itself by asking again would never come back empty. Rewriting a parsed copy and seeing what moved asks exactly what the sweep will do.";
+  "Only files that mention Math at all are parsed. The wider question is the same answer and several thousand parses more, and the word is right there in the source of every file that could possibly qualify.";
+  let repo = repo_love_name();
+  let mentions = await repo_functions_names_code_includes(repo, "Math.");
+  let pending = [];
+  async function lambda(name) {
+    let right = function_name_extension();
+    let file_name = text_combine(name, right);
+    let src = folder_js();
+    let f_path = path_join([src, file_name]);
+    let parsed = await file_js_parse(f_path);
+    let ast = property_get(parsed, "ast");
+    let rewritten = js_math_calls_rewrite(ast);
+    let moved = property_get(rewritten, "moved");
+    let none = list_empty_is(moved);
+    if (none) {
+      return;
+    }
+    let one = {
+      name,
+      f_path,
+      moved,
+    };
+    list_add(pending, one);
+  }
+  await each_async(mentions, lambda);
+  return pending;
+}
