@@ -25,25 +25,19 @@ export function g_time_sky_remark(time, christian) {
     adjective,
     "?",
   ]);
+  ("crediting the Maker is not a THIRD sentence, it is the same exclamation with a longer ending — what a wonderful sunset, and then who made it. so the ending is what varies and the sentence is written once: a believer draws from two endings where anyone else has one, and adding a further way to finish the thought needs no new shape");
+  let endings = ["!"];
+  let endings_faith = [" the Lord has made!"];
+  let endings_all = list_concat_if(endings, endings_faith, christian);
+  let ending = list_random_item(endings_all);
   let exclaimed = text_combine_multiple([
     "What a ",
     adjective,
     " ",
     sight,
-    "!",
+    ending,
   ]);
   let shapes = [asked, exclaimed];
-  if (christian) {
-    let praised = text_combine_multiple([
-      "What a ",
-      adjective,
-      " ",
-      sight,
-      " the Lord has made!",
-    ]);
-    let shapes_faith = [praised];
-    shapes = list_concat(shapes, shapes_faith);
-  }
   let remark = list_random_item(shapes);
   return remark;
 }
