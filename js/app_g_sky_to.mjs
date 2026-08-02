@@ -1,3 +1,5 @@
+import { app_g_sky_element_or_null } from "./app_g_sky_element_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -7,14 +9,9 @@ import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
-import { app_g_sky_set } from "./app_g_sky_set.mjs";
 import { app_g_sky_paint } from "./app_g_sky_paint.mjs";
 import { g_sky_seed_get } from "./g_sky_seed_get.mjs";
-import { global_function_initialize } from "./global_function_initialize.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { not } from "./not.mjs";
 export async function app_g_sky_to(target) {
   ("smoothly DRIFT the sky to a target continuous PHASE (0=morning … 4=night, 5=sunrise; values past the last anchor keep going, wrapping back to morning) and persist it (g.sky_phase). a CSS gradient can't be transitioned, so this recomputes ",
     fn_name("g_phase_color"),
