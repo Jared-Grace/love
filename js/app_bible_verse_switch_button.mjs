@@ -1,3 +1,4 @@
+import { app_bible } from "./app_bible.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
@@ -15,7 +16,7 @@ export function app_bible_verse_switch_button(
     let property_name = app_shared_bible_verse_hash_key();
     html_hash_property_set(property_name, verse_number);
     let mode = app_shared_bible_mode_verse();
-    await app_bible_mode_switch(context, mode);
+    await app_bible_mode_switch(context, mode, app_bible);
   }
   app_shared_button(actions, "🔎 This verse", to_verse_view);
 }
