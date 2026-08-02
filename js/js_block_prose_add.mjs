@@ -1,7 +1,6 @@
+import { js_selects_block_body } from "./js_selects_block_body.mjs";
 import { js_prose_statement } from "./js_prose_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_block_body_get } from "./js_block_body_get.mjs";
 import { list_insert } from "./list_insert.mjs";
 export function js_block_prose_add(ast, selects, sentence) {
   arguments_assert(arguments, 3);
@@ -15,8 +14,7 @@ export function js_block_prose_add(ast, selects, sentence) {
   ("One sentence with no comma and no full stop, because the splitter that hands a");
   ("joined list over would read either one as the end of this argument and the");
   ("start of another.");
-  let block = list_single(selects);
-  let body = js_block_body_get(block);
+  let body = js_selects_block_body(selects);
   let statement = js_prose_statement(sentence);
   list_insert(body, 0, statement);
 }
