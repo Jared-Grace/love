@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
 import { js_code_literal_prose_only } from "./js_code_literal_prose_only.mjs";
@@ -28,7 +29,7 @@ export function literal_duplicates_generic(codes) {
   "set of files - including ones nobody would ever commit - ask this the questions";
   "the repo itself cannot pose.";
   let getters = [];
-  for (let f_name of Object.keys(codes)) {
+  for (let f_name of object_property_names(codes)) {
     let literal = js_code_getter_literal(codes[f_name], f_name);
     if (not_equal(literal, "") && literal_distinctive_is(literal)) {
       list_add(getters, {
@@ -41,7 +42,7 @@ export function literal_duplicates_generic(codes) {
   for (let getter of getters) {
     let quoted = json_to(getter.literal);
     let files = [];
-    for (let f_name of Object.keys(codes)) {
+    for (let f_name of object_property_names(codes)) {
       let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
       let holds = codes[f_name].includes(quoted);
       let candidate = not_equal(f_name, getter.f_name) && not(peer_is) && holds;
