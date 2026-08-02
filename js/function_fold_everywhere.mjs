@@ -1,3 +1,6 @@
+import { list_add } from "./list_add.mjs";
+import { js_fold_equivalent_complaint } from "./js_fold_equivalent_complaint.mjs";
+import { catch_only_run_async } from "./catch_only_run_async.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
@@ -48,9 +51,26 @@ export async function function_fold_everywhere(x_name) {
   let candidates = await data_identifiers_search(ids_comma);
   let names = properties_get(candidates);
   let others = list_without(names, x_name);
+  ("One candidate the checker turns down used to end the whole run. The matcher can");
+  ("bind a block that is not x's computation - reusing an earlier value where x uses");
+  ("the one just worked out - and the check behind it throws rather than write that,");
+  ("which is right for the one file and wrong for the hundred others still waiting.");
+  ("So the throw is caught here, by its own words and no others, and the file is");
+  ("named in the answer instead. It is a refusal, not a silence: a run that turns");
+  ("some down says which, and anything else it did not expect still comes straight");
+  ("back up.");
+  let rejected = [];
   async function fold_into(f_name) {
     let before = await function_parse_declaration_js_unparse(f_name);
-    let after = await function_fold(x_name, f_name);
+    let after = before;
+    async function attempt() {
+      after = await function_fold(x_name, f_name);
+    }
+    async function turned_down() {
+      list_add(rejected, f_name);
+    }
+    let complaint = js_fold_equivalent_complaint();
+    await catch_only_run_async(attempt, complaint, turned_down);
     let changed = equal_not(before, after);
     let outcome = {
       f_name,
@@ -62,9 +82,11 @@ export async function function_fold_everywhere(x_name) {
   let changed_outcomes = list_filter_property(outcomes, "changed", true);
   let folded = list_map_property(changed_outcomes, "f_name");
   folded.sort();
+  rejected.sort();
   let everywhere = {
     candidates: others,
     folded,
+    rejected,
   };
   return everywhere;
 }
