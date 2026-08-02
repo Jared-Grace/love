@@ -8,8 +8,13 @@ import { list_filter } from "./list_filter.mjs";
 import { gate_counts_log } from "./gate_counts_log.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
-export async function cases_checked_gate_run_generic(cases, check, label) {
-  arguments_assert(arguments, 3);
+export async function cases_checked_gate_run_generic(
+  cases,
+  check,
+  label,
+  hint,
+) {
+  arguments_assert(arguments, 4);
   ("Puts every case of a corpus to its own checker and refuses the run when any");
   ("case is answered differently from the way it says.");
   ("The sibling of the plain cases gate, and the difference is who does the");
@@ -22,6 +27,9 @@ export async function cases_checked_gate_run_generic(cases, check, label) {
   ("and whether it passed.");
   ("The checking runs unordered because no case depends on another, and a corpus");
   ("whose cases each start a process is otherwise as slow as the sum of them.");
+  ("A gate may add a sentence to its refusal saying what shape to go looking for,");
+  ("which is worth most at the moment it fails and is lost if it only lives in the");
+  ("docstring. A gate with nothing to add hands over nothing to say.");
   let results = await list_map_unordered_async(cases, check);
   for (let r of results) {
     let passed = property_get(r, "pass");
@@ -43,7 +51,7 @@ export async function cases_checked_gate_run_generic(cases, check, label) {
   gate_counts_log(passes, failures.length);
   let any = greater_than(failures.length, 0);
   if (any) {
-    throw new Error(label + " gate: " + failures.length + " failed");
+    throw new Error(label + " gate: " + failures.length + " failed" + hint);
   }
   let r2 = {
     pass: results.length,

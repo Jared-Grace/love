@@ -8,6 +8,7 @@ export async function memory_hook_gate_run() {
     cases,
     memory_hook_case_check,
     "memory hook",
+    "",
   );
   return r;
 }
