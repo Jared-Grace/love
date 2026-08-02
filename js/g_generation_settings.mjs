@@ -13,6 +13,11 @@ export function g_generation_settings() {
   "A hundred turns is the least the leader may be worth, and it is the ONE number here that decides how long a plant has to be. Everything else about a plant scales with its length - more days means more matches, more converts, longer arcs - so nothing else has a floor. The leader does, because an elder is formed over a fixed amount of time and a plant too short to do that has no elder to appoint at the end of it.";
   "The ceiling is every day. That is the logical bound rather than a preference - an npc holds one conversation a day, so the leader cannot be seen more often than the plant has days. Lower it if a leader who is always there stops feeling like a choice.";
   "The fewest CONVERSATIONS an arc may hold is one, and a one-conversation arc is a whole person rather than a thin one - somebody who hears and believes, and whose discipling then happens through the other believers rather than on screen. Holding the floor at three bought nothing and cost variety, because the budget then had to go into fewer, longer arcs.";
+  "An arc's TURNS are drawn directly rather than counted out in conversations, because a conversation is itself a draw and multiplying two draws together says nothing either of them meant. Thirty is two and a half conversations at the usual length - long enough to hear and believe and be answered once, short enough that a room holds a dozen of them.";
+  "How many people a plant holds is a RAMP over the plants already planted, not a draw around one number. A first plant is small because a first plant is always small - nobody's first church is twelve disciples - and the size settling near thirteen later is what makes the Lord's Supper table an arrival rather than the default. Six is where it starts and six plants is how long it takes to settle.";
+  "Past the settle the size stays there, and a bigger room is a separate rare event rather than the top of a wider draw. Widening the draw was tried on paper and put more than half the settled plants at fourteen or above, because spreading a bell's upper half over three numbers makes each of them common. A one-in-ten roll says the rare thing rarely and says it in one number somebody can move.";
+  "Below the target a plant may fall two, so a settled plant is eleven to thirteen rather than always thirteen. A church that lost people is as real as one that grew.";
+  "The pool multiple is how many npcs are written for every one a single playthrough meets. One means every game meets everybody in a different order and grouping; two means a game meets half of them and a second game is genuinely new people.";
   let day_matches = g_day_matches();
   let day_lines = g_day_lines();
   let r = {
@@ -32,6 +37,15 @@ export function g_generation_settings() {
     plant_npcs_minimum: 10,
     plant_npcs_mean: 13,
     plant_npcs_maximum: 16,
+    arc_turns_low: 12,
+    arc_turns_mean: 30,
+    arc_turns_high: 90,
+    plant_npcs_first: 6,
+    plant_npcs_settle: 13,
+    plant_npcs_settle_plants: 7,
+    plant_npcs_below_settle: 2,
+    plant_npcs_large_percent: 10,
+    npc_pool_multiple: 1,
     question_matches_percent: 25,
     arc_length_swaps: 50,
     npcs_available_minimum: 4,
