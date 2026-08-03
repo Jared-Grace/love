@@ -1,3 +1,4 @@
+import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
 import { js_declaration_record_of_plain_names_is } from "./js_declaration_record_of_plain_names_is.mjs";
 import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
@@ -67,8 +68,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       return none;
     }
     let handed = property_get(second, "argument");
-    let handed_name = js_identifier_name_try(handed);
-    let same = equal(handed_name, record_name);
+    let same = js_identifier_named_try(handed, record_name);
     if (not(same)) {
       let none = null;
       return none;
@@ -126,8 +126,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
         return;
       }
       let second = list_get(args, 1);
-      let second_name = js_identifier_name_try(second);
-      let handed = equal(second_name, wrapper_name);
+      let handed = js_identifier_named_try(second, wrapper_name);
       if (not(handed)) {
         return;
       }
