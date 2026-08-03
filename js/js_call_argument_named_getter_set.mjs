@@ -21,7 +21,7 @@ export async function js_call_argument_named_getter_set(
   ("Both arguments are bare names, which is what keeps it approvable once: the");
   ("name of the constant is checked to be only a name before it is called, so");
   ("nothing worked out can arrive here dressed as a getter.");
-  let identifier = js_identifier_expression(getter_name);
+  js_identifier_expression(getter_name);
   let node_argument = js_call_empty(getter_name);
   await js_call_argument_named_node_set(
     ast,
