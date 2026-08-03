@@ -1,5 +1,5 @@
-import { folder_js } from "./folder_js.mjs";
-import { js_file_dir_path } from "./js_file_dir_path.mjs";
+import { function_getter_literal_try } from "./function_getter_literal_try.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
@@ -7,9 +7,6 @@ import { list_concat_unique } from "./list_concat_unique.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { literals_frozen_names } from "./literals_frozen_names.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { file_read } from "./file_read.mjs";
-import { js_code_getter_literal } from "./js_code_getter_literal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
@@ -34,11 +31,8 @@ export async function literals_frozen_storage_unfrozen() {
         continue;
       }
       ("Only what hands back one written word is asked about. What the opening is given besides those is either a number, which no browser looks anything up by, or a function, which holds no word at all - and asking either of them for a value gets nothing back, which is the same answer as a word that is empty.");
-      let dir = folder_js();
-      let path = js_file_dir_path(dir, imported);
-      let code = await file_read(path);
-      let literal = js_code_getter_literal(code, imported);
-      let word = not_equal(literal, "");
+      let literal = await function_getter_literal_try(imported);
+      let word = null_not_is(literal);
       if (not(word)) {
         continue;
       }
