@@ -35,10 +35,10 @@ export async function qa_commit_named_report() {
     });
   }
   function shippable_is(one) {
-    let sound = property_get_or_null(one, "green");
+    let entry_green = property_get_or_null(one, "green");
     let counted = property_get_or_null(one, "behind");
     let placed = number_is(counted);
-    let both = and(sound, placed);
+    let both = and(entry_green, placed);
     return both;
   }
   let sound = list_filter(looked, shippable_is);
