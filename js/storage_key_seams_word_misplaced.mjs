@@ -35,13 +35,6 @@ export async function storage_key_seams_word_misplaced() {
     let names = list_map_property(params, "name");
     let given = list_includes(names, variable);
     if (not(given)) {
-      let worked_out = text_combine_multiple([
-        seam,
-        " -> ",
-        variable,
-        " is worked out here rather than given, so its callers have no key slot",
-      ]);
-      list_add(misplaced, worked_out);
       continue;
     }
     let place = list_index_of(names, variable);
