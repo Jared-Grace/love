@@ -94,6 +94,13 @@ export function js_identifier_defineds(v) {
       la(params_names);
     }
     js_stack_filtered_multiple_each(stack, types, lambda5);
+    ("A loop header binds a name too, and it is bound nowhere else - the counter or the item, live for the length of the loop and gone after it. Leaving the headers out made every one of those names read as bound by nothing, which is the same answer as a name from outside. The span extractor believed it and handed a loop's own item out as a parameter, so the cut function asked its caller for a word only the loop had ever known: the caller passed a name that was not in scope there at all, and the file it wrote threw on the first line that read it.");
+    function lambda6(node) {
+      let looped = js_loop_declared_names(node);
+      la(looped);
+    }
+    let types_loop = js_types_loop_node();
+    js_stack_filtered_multiple_each(stack, types_loop, lambda6);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
