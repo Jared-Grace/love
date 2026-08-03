@@ -75,7 +75,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "  trouble - what is actually wrong, in one sentence, in their own voice",
     "  summary - one sentence naming them by calling and trouble, shown to the player when they return days later",
     "",
-    "Between them the people must cover a spread of callings. Do not write the same kind of person twice.",
     "Give sex and calling as facts and never a personality that is supposed to follow from them.",
     "",
     "THE TURNS",
