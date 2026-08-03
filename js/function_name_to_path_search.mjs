@@ -10,6 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 export async function function_name_to_path_search(f_name) {
+  "Looks in every repository here for the file a name would live in, reporting whether exactly one holds it, whether several do, and where it was found.";
   let f_path = function_name_to_path_relative(f_name);
   async function lambda(joined) {
     let present = await file_exists(joined);
