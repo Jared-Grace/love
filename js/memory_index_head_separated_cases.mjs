@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function memory_index_head_separated_cases() {
   "The heads of index lines that a rebuild is allowed to touch, and the ones it is not, each with the reason.";
   "Every one of these is a real head off the index. The three that answer no are the three lines a run without this question came back having broken, kept here so the same shape cannot be let through again.";
@@ -18,7 +20,11 @@ export function memory_index_head_separated_cases() {
       why: "an open bracket is a promise that something later closes it, and the closing is in the part a rebuild drops",
     },
     {
-      head: "- [Auto-commit after edits](x.md) — `ai_git`; ",
+      head: text_combine_multiple([
+        "- [Auto-commit after edits](x.md) — `",
+        fn_name("ai_git"),
+        "`; ",
+      ]),
       separated: true,
       why: "a semicolon is the ordinary way this index introduces the links it carries",
     },
