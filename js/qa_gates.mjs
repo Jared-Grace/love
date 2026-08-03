@@ -191,6 +191,7 @@ export function qa_gates() {
     path_pattern_covers_cases_gate_run,
     permission_decider_rule_gate_run,
     permission_grants_gate_run,
+    permission_writers_gate_run,
     permission_settings_allow_assert,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
