@@ -16,9 +16,7 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   let head_rename = text_frozen(
     "export function f(ast, name_from, name_to) {\n  let r = ",
   );
-  let between_rename = text_frozen(
-    "('name', name_from, name_to);\n  ",
-  );
+  let between_rename = text_frozen("('name', name_from, name_to);\n  ");
   let tail_rename = text_frozen("(ast, r);\n}\n");
   let code_unasked = text_combine_multiple([
     head_rename,
@@ -27,37 +25,43 @@ export function js_identifiers_renamed_without_naming_check_cases() {
     name_walk,
     tail_rename,
   ]);
+  let t = text_frozen("export function f(ast, personal) {\n  let keys = ");
+  let t2 = text_frozen("(ast);\n  function blanked(identifier) {\n    ");
+  let t3 = text_frozen("(identifier, 'name', keys);\n  }\n  ");
+  let t4 = text_frozen("(ast, blanked);\n}\n");
   let code_asked = text_combine_multiple([
-    text_frozen("export function f(ast, personal) {\n  let keys = "),
+    t,
     name_ask_naming,
-    text_frozen("(ast);\n  function blanked(identifier) {\n    "),
+    t2,
     name_write,
-    text_frozen("(identifier, 'name', keys);\n  }\n  "),
+    t3,
     name_walk,
-    text_frozen("(ast, blanked);\n}\n"),
+    t4,
   ]);
+  let t5 = text_frozen(
+    "export function f(ast) {\n  let collected = [];\n  function each_one(identifier) {\n    ",
+  );
+  let t6 = text_frozen("(collected, identifier);\n  }\n  ");
+  let t7 = text_frozen("(ast, each_one);\n  return collected;\n}\n");
   let code_reading = text_combine_multiple([
-    text_frozen(
-      "export function f(ast) {\n  let collected = [];\n  function each_one(identifier) {\n    ",
-    ),
+    t5,
     name_add,
-    text_frozen("(collected, identifier);\n  }\n  "),
+    t6,
     name_walk_plain,
-    text_frozen("(ast, each_one);\n  return collected;\n}\n"),
+    t7,
   ]);
-  let code_handed = text_combine_multiple([
-    text_frozen(
-      "export function f(nodes, name_to) {\n  function each_one(node) {\n    ",
-    ),
-    name_write,
-    text_frozen("(node, 'name', name_to);\n  }\n  "),
-    name_each,
-    text_frozen("(nodes, each_one);\n}\n"),
-  ]);
+  let t8 = text_frozen(
+    "export function f(nodes, name_to) {\n  function each_one(node) {\n    ",
+  );
+  let t9 = text_frozen("(node, 'name', name_to);\n  }\n  ");
+  let t10 = text_frozen("(nodes, each_one);\n}\n");
+  let code_handed = text_combine_multiple([t8, name_write, t9, name_each, t10]);
+  let t11 = text_frozen("export function f(ast, name_from, name_to) {\n  ");
+  let t12 = text_frozen("(ast, name_from);\n  let r = ");
   let code_expanded = text_combine_multiple([
-    text_frozen("export function f(ast, name_from, name_to) {\n  "),
+    t11,
     name_ask_expand,
-    text_frozen("(ast, name_from);\n  let r = "),
+    t12,
     name_write_curried,
     between_rename,
     name_walk_plain,
