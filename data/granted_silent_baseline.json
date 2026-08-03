@@ -1,18 +1,13 @@
 {
  "known": [
   "app_g_day_guide_pick_check",
-  "app_shared_dev_build_multiple",
   "g_verify_chapters_available",
   "app_g_map_pad_check",
   "app_shared_dev_build_multiple_prompt",
   "app_code_html_update_latest_promote_deploy",
   "html_update_latest_promote_multiple_prompt",
-  "function_params_new",
   "g_sermon_passage_verses_key",
   "g_sermon_passage_words",
-  "bible_interlinear_json_path",
-  "sandbox_nearley",
-  "strongs_greek_json_path",
   "g_genders_names",
   "g_gender_male",
   "g_gender_female",
