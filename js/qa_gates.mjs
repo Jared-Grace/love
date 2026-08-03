@@ -1,3 +1,4 @@
+import { memory_index_head_separated_cases_gate_run } from "./memory_index_head_separated_cases_gate_run.mjs";
 import { permission_writers_gate_run } from "./permission_writers_gate_run.mjs";
 import { qa_commit_named_entry_stale_gate_run } from "./qa_commit_named_entry_stale_gate_run.mjs";
 import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
@@ -322,6 +323,7 @@ export function qa_gates() {
     functions_page_auto_borrowing_gate_run,
     js_module_state_shadowed_cases_gate_run,
     error_where_cases_gate_run,
+    memory_index_head_separated_cases_gate_run,
     functions_module_state_shadowed_gate_run,
     functions_gate_run_unwired_gate_run,
     functions_cases_ungated_gate_run,
