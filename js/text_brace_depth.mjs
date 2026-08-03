@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { equal } from "./equal.mjs";
@@ -15,7 +16,7 @@ export function text_brace_depth(text) {
     }
     let closes = equal(letter, right);
     if (closes) {
-      depth = depth - 1;
+      depth = subtract(depth, 1);
     }
   }
   return depth;
