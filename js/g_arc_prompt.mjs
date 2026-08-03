@@ -59,7 +59,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "and the most is",
     turns_high,
     "turns.",
-  ]);
+  ]);range_from
   let b = js_boolean_values();
   let servant = list_concat_single_right(b, "freed");
   let json = json_format_to({
