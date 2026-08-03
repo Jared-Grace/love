@@ -81,11 +81,11 @@ export function app_reply_choices() {
     "With",
     text_combine("always be with you! ", emoji_dove()),
   );
-  let s = app_reply_response_how_r_u_skip_first_upper();
-  let b = {
+  app_reply_response_how_r_u_skip_first_upper();
+  ({
     text: text_combine(emoji_pray(), " Bless"),
     response: prayer_blessing_expand(),
-  };
+  });
   let greetings = app_reply_response_greetings();
   let hru = app_reply_response_how_r_u();
   let hru_today = app_reply_response_how_r_u_today();
