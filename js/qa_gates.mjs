@@ -1,4 +1,4 @@
-import { hash_key_doors_wrapped_gate_run } from "./hash_key_doors_wrapped_gate_run.mjs";
+import { address_key_doors_wrapped_gate_run } from "./address_key_doors_wrapped_gate_run.mjs";
 import { baselines_prefix_split_gate_run } from "./baselines_prefix_split_gate_run.mjs";
 import { functions_granted_silent_gate_run } from "./functions_granted_silent_gate_run.mjs";
 import { storage_key_seams_word_misplaced_gate_run } from "./storage_key_seams_word_misplaced_gate_run.mjs";
@@ -293,7 +293,7 @@ export function qa_gates() {
     literals_marked_both_ways_gate_run,
     firebase_folder_gate_run,
     hash_key_literals_gate_run,
-    hash_key_doors_wrapped_gate_run,
+    address_key_doors_wrapped_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
     query_key_getters_frozen_gate_run,

@@ -86,6 +86,7 @@ import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_exp
 import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
 export function app_code_lessons_fns() {
+  "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
