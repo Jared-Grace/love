@@ -7,7 +7,8 @@ import { js_statement_work_is } from "./js_statement_work_is.mjs";
 export async function function_work_size_direct(f_name) {
   arguments_assert(arguments, 1);
   ("How many lines of work the named function holds at the top of its own body, counting nothing that sits inside a loop, a branch or a function written within it.");
-  ("The twin of the count at every depth, and the two together say which tool a long function needs. A function whose two counts are close is a straight run of work, and a run is what the span extractor cuts. A function counting eighty deep and four direct is four lines wrapping a closure, and there is no span in it to take - what would have to move is the closure itself, which is a different edit and, at the time of writing, one nothing here can make.");
+  ("The twin of the count at every depth, and the two together say how a long function is long. A function whose two counts are close is a straight run of work. A function counting seventy deep and five direct is five lines wrapping a closure, and all its size is inside that closure.");
+  ("It was asked in order to find out whether a second tool was needed for the second shape, and the answer was no. A closure written beside the lines that use it is a statement like any other, so the span extractor takes it as a span of one: it moves out under its own name, reads what it closed over as parameters, and is handed back to the line that passed it on. Measured on the curry step of the normalize pipeline, which went from seventy lines of work to five.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
   let body = js_function_declaration_to_block_body(declaration);
