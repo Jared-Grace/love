@@ -1,3 +1,4 @@
+import { repos_uncommitted } from "./repos_uncommitted.mjs";
 import { folder_memory_backup } from "./folder_memory_backup.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,8 +28,12 @@ export async function ai_git_files(f_name, args, files) {
       let repos = property_get(result, "repos");
       list_add(repos, noted);
     }
+    ("what is still waiting is asked here, inside the lock and after the commit, because outside it a peer's commit lands between the two and the answer describes a moment that never existed");
+    let waiting = await repos_uncommitted();
+    result.waiting = waiting;
   }
   await lock_wait(ai_git_files.name, lambda, ai_git_files.name);
   ("answering with what was committed is what makes an empty commit visible: without it a commit that found nothing to do reads exactly like one that worked");
+  ("saying nothing is waiting is what makes it readable. Every folder answering that it committed nothing is the ordinary shape of a peer having swept a second earlier, so on its own it cannot be told from a commit that failed - and reading it as failure cost a hand-run status and a hand-run log after every commit. An empty waiting list settles it in the same answer: whoever's commit it was, no folder is holding the work now");
   return result;
 }
