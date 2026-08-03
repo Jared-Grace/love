@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
 import { js_flo } from "./js_flo.mjs";
@@ -5,7 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { js_node_types_includes } from "./js_node_types_includes.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
-
 export function js_function_nested_find_named(ast, name) {
   arguments_assert(arguments, 2);
   ("The function written inside the exported one under the name you give, however deep it sits.");
@@ -16,16 +17,16 @@ export function js_function_nested_find_named(ast, name) {
   let found = null;
   for (let v of visitors) {
     let node = property_get(v, "node");
-    let same = node === outer;
+    let same = equal(node, outer);
     if (same) {
       continue;
     }
     let declaration_is = js_node_types_includes(node, "FunctionDeclaration");
-    if (!declaration_is) {
+    if (not(declaration_is)) {
       continue;
     }
     let named = js_function_declaration_name(node);
-    let matched = named === name;
+    let matched = equal(named, name);
     if (matched) {
       found = node;
       break;
