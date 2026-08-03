@@ -45,7 +45,7 @@ export async function app_message(context) {
   let start = app_message_reply_choices();
   await refresh();
   let div = app_shared_container(root);
-  let div2 = html_div_text(div, "Please enter your message for me:");
+  html_div_text(div, "Please enter your message for me:");
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
   app_shared_input_style(textarea);
