@@ -35,9 +35,9 @@ export function app_code_lesson_functions_console_log() {
     let verb = property_get(o_f, "verb");
     let call = property_get(o_f, "call");
     let c = app_code_container_light_blue(root);
-    let fn_name_call = js_code_call_arg_fn(f_name, next);
-    let operators = js_operators_arithmetic();
-    let span = html_div_cycle_code_multiple(c, [
+    js_code_call_arg_fn(f_name, next);
+    js_operators_arithmetic();
+    html_div_cycle_code_multiple(c, [
       ["Here is an example of a function call: ", call],
       ["", verb, " is a function"],
       ["And here is a new function: ", f_name],
