@@ -3,7 +3,7 @@ import { file_read } from "./file_read.mjs";
 export async function file_transform(f_path, lambda) {
   let contents = await file_read(f_path);
   let after = lambda(contents);
-  let result = await file_overwrite(f_path, after);
+  await file_overwrite(f_path, after);
   let r = {
     after,
     f_path,
