@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -15,7 +14,6 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 import { property_get } from "./property_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -105,16 +103,13 @@ export function app_code_lesson_expression_true_false_compare_generic(
     return code;
   }
   function refill() {
-    "every one of the four possibilities, in a fresh order each screen";
+    "every one of the four possibilities, every screen, always in the same order. A refill therefore shows the same table again, which is the honest answer to asking for more examples when four is all there are";
     function mapper(combination) {
       let code = line(combination);
       return code;
     }
     let all = combinations();
     let codes = list_map(all, mapper);
-    (fn_name("list_shuffle"),
-      " re-orders the list where it stands and hands nothing back, so the list is returned rather than the call");
-    list_shuffle(codes);
     return codes;
   }
   function above(root) {
