@@ -3,6 +3,7 @@ import { html_update_latest_promote_multiple } from "./html_update_latest_promot
 export async function html_update_latest_promote_multiple_prompt(
   app_names_comma,
 ) {
+  "The way in from a command line for moving several apps up a build stage at once, taking their names as one comma-joined word.";
   let app_names = text_split_comma_dot(app_names_comma);
   let r = await html_update_latest_promote_multiple(app_names);
   return r;
