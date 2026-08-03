@@ -636,7 +636,7 @@ export function permission_grant_names() {
   let spelled631 = fn_name("functions_work_none_is");
   let spelled632 = fn_name("js_log_remove_workflow");
   let spelled633 = fn_name("lock_held_is");
-  let spelled634 = fn_name("parameters_unread_baseline_path");
+  let spelled634 = fn_name("functions_parameters_unread_baseline_path");
   let spelled635 = fn_name("qa_gates_publish");
   let spelled636 = fn_name("sandbox_nearley");
   let spelled637 = fn_name("function_parse");
