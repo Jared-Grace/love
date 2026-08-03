@@ -1,14 +1,9 @@
 {
  "known": [
-  "app_shared_name_search_multiple",
   "app_g_day_guide_pick_check",
-  "app_apps_all_main_fns",
   "app_shared_dev_build_multiple",
   "g_verify_chapters_available",
   "app_g_map_pad_check",
-  "app_shared_api_generic_f_name_args",
-  "functions_param_new_multiple",
-  "ai_log_pairs_frequent",
   "app_shared_dev_build_multiple_prompt",
   "app_code_html_update_latest_promote_deploy",
   "html_update_latest_promote_multiple_prompt",
