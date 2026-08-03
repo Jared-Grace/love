@@ -23,6 +23,6 @@ export async function function_multiplize(f_name) {
     js_flo_param_add(ast, list);
     await js_imports_missing_add_all(ast);
   }
-  let output = await function_new_open_transform(combined, lambda);
+  await function_new_open_transform(combined, lambda);
   return combined;
 }
