@@ -1,3 +1,5 @@
+import { js_function_declaration_unused_remove_cases_gate_run } from "./js_function_declaration_unused_remove_cases_gate_run.mjs";
+import { function_aliases_dead_gate_run } from "./function_aliases_dead_gate_run.mjs";
 import { memory_index_head_separated_cases_gate_run } from "./memory_index_head_separated_cases_gate_run.mjs";
 import { permission_writers_gate_run } from "./permission_writers_gate_run.mjs";
 import { qa_commit_named_entry_stale_gate_run } from "./qa_commit_named_entry_stale_gate_run.mjs";
@@ -331,6 +333,7 @@ export function qa_gates() {
     functions_duplicate_elements_gate_run,
     js_duplicate_elements_cases_gate_run,
     functions_work_size_gate_run,
+    js_function_declaration_unused_remove_cases_gate_run,
   ];
   return gates;
 }
