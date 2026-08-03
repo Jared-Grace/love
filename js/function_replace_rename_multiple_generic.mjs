@@ -11,7 +11,7 @@ export async function function_replace_rename_multiple_generic(
     if (n) {
       return;
     }
-    let v = await function_rename_replace(f_name, from, to);
+    await function_rename_replace(f_name, from, to);
   }
   await each_async(f_names, lambda);
 }
