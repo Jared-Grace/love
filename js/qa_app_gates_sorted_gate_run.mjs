@@ -1,3 +1,7 @@
+import { qa_app_gates_sorted_cases } from "./qa_app_gates_sorted_cases.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
+import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function qa_app_gates_sorted_gate_run() {
   "Gate: each written-down set of red gates must be sorted into exactly the holding and the set-aside the corpus says. Throws so the dispatcher seam exits nonzero.";
   "This is the judgement one app's deployment turns on, and both ways of being wrong are silent. Set a gate aside that could reach the app and a break ships; hold one that could not and a ready deploy waits on work that could never have touched it. Neither looks any different from working.";
@@ -10,6 +14,12 @@ export function qa_app_gates_sorted_gate_run() {
     let sorted = qa_app_gates_sorted(failed, named, reach);
     return sorted;
   }
-  let r = cases_gate_run_generic(cases, answer, "sorted", "why", "qa app gates sorted");
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "sorted",
+    "why",
+    "qa app gates sorted",
+  );
   return r;
 }

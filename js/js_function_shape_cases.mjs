@@ -3,7 +3,7 @@ import { text_frozen } from "./text_frozen.mjs";
 export function js_function_shape_cases() {
   "Pairs of written-out functions, each paired with whether the two of them do the same work once the names only their own writer sees have been taken away";
   "Held as pairs rather than as a function beside the shape it comes out as, because the shape is a middle step and its exact text changes every time the shaping learns to leave one more thing alone. What must not change is which pairs are the same piece of work, and that is what every duplicate finder in the repo reads this for";
-  "Both answers are carried in numbers, and they have to be. Taking a name away can only ever make two pieces of code look more alike, so a shaping that took away too much would say yes to everything and be right about half of these, and a shaping that took away nothing would say no to everything and be right about the other half. Neither half can tell on its own";
+  "Three pairs are the same work and four are not, and both halves have to be here. Taking a name away can only ever make two pieces of code look more alike, so a shaping that took away too much says yes to every pair and is right about the three, while one that took away nothing says no to every pair and is right about the four. Neither half can tell on its own";
   ("The pairs that must differ are the ones that have actually gone wrong. A word used as the key of an entry in an object was being taken away like any other, so ",
     fn_name("list_get"),
     " and ",
