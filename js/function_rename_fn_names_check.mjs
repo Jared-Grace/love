@@ -6,6 +6,7 @@ export async function function_rename_fn_names_check(
   f_name_before,
   f_name_after,
 ) {
+  "Follows a rename into the places the old name was written out as text rather than called, which a rename of identifiers alone would leave behind.";
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
     function lambda3(ast) {
