@@ -26,7 +26,7 @@ import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_true_false() {
-  "=== and !== on true and false, the prerequisite the swapping lessons were already leaning on: every === the learner has met so far had numbers or strings on both sides, and nothing had ever compared two true/false values. Two steps. First the plain form - true === true, true !== false - which is the single new idea that the equality operators read true and false the same way they read numbers. Then a comparison standing where a plain true or false stood, wrapped in ( ) so the two comparisons stay apart: 3 === 5 is false, so (3 === 5) === false is true. That second step is the same rule the arithmetic-comparison lesson already taught - work each side out FIRST, then compare - with a comparison in the place arithmetic held. Both shapes appear in the quiz, half with a plain keyword on the left and half with a wrapped comparison. Answer is the code's own true/false value, correct by construction.";
+  "=== and !== on plain true and false, the prerequisite the swapping lessons were already leaning on: every === the learner has met so far had numbers or strings on both sides, and nothing had ever compared two true/false values. ONE new idea, and nothing else: the equality operators read true and false the same way they read numbers. A comparison standing where a plain true or false stood is a second idea and gets its own lesson (comparing a comparison), which in turn is what the swapping lesson's (a === b) === (b === a) needs. Only four true/false combinations exist, so the quiz enumerates all four rather than sampling, picks two for true and two for false, and never repeats a line on a screen. Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
@@ -65,72 +65,61 @@ export function app_code_lesson_expression_comparing_true_false() {
     let word = ternary(value, on_true, on_false);
     return word;
   }
-  function keyword_side() {
-    "a plain true or false, with the value it holds";
-    let value = list_random_item([true, false]);
-    let code = keyword(value);
-    let r = {
-      code,
-      value,
-    };
-    return r;
+  function combinations() {
+    "the four ways two true/false values can sit either side of the operator";
+    let list = [
+      {
+        left: true,
+        right: true,
+      },
+      {
+        left: true,
+        right: false,
+      },
+      {
+        left: false,
+        right: true,
+      },
+      {
+        left: false,
+        right: false,
+      },
+    ];
+    return list;
   }
-  function comparison_side() {
-    "a comparison of two small numbers wrapped in parentheses, with the true or false it works out to";
-    let r2 = js_operator_triple_equal();
-    let o = js_operator_bang_double_equal();
-    let o2 = js_operator_less_than();
-    let o3 = js_operator_greater_than();
-    let operators = [r2, o, o2, o3];
-    let operator = list_random_item(operators);
-    let symbol = property_get(operator, "operator");
-    let fn = property_get(operator, "fn");
-    let a = integer_random(2, 9);
-    let b = integer_random(2, 9);
-    let value = fn(a, b);
-    let t2 = text_to(a);
-    let t3 = text_to(b);
-    let code = text_combine_multiple(["(", t2, " ", symbol, " ", t3, ")"]);
-    let r = {
-      code,
-      value,
-    };
-    return r;
-  }
-  function left_side() {
-    "the left of the line: half the time a plain true or false, half the time a wrapped comparison";
-    let makers = [keyword_side, comparison_side];
-    let maker = list_random_item(makers);
-    let r = maker();
-    return r;
-  }
-  function expression(want_true) {
-    "left === right or left !== right, with the operator picked so the whole line lands on want_true: === when the two sides already agree, !== when they differ";
-    let left = left_side();
-    let right = keyword_side();
-    let left_value = property_get(left, "value");
-    let right_value = property_get(right, "value");
-    let same = equal(left_value, right_value);
+  function line(combination, want_true) {
+    "one combination written out, with the operator picked so the line lands on want_true: === when the two sides already agree, !== when they differ";
+    let left = property_get(combination, "left");
+    let right = property_get(combination, "right");
+    let same = equal(left, right);
     let wanted = equal(same, want_true);
-    let on_true2 = js_operator_triple_equal_symbol();
-    let on_false2 = js_operator_bang_double_equal_symbol();
-    let symbol = ternary(wanted, on_true2, on_false2);
-    let value2 = property_get(left, "code");
-    let value3 = property_get(right, "code");
-    let code = text_combine_multiple([value2, " ", symbol, " ", value3]);
+    let on_true = js_operator_triple_equal_symbol();
+    let on_false = js_operator_bang_double_equal_symbol();
+    let symbol = ternary(wanted, on_true, on_false);
+    let left_code = keyword(left);
+    let right_code = keyword(right);
+    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
     return code;
   }
+  function lines(want_true) {
+    "all four combinations written out, every one landing on want_true";
+    function mapper(combination) {
+      let code = line(combination, want_true);
+      return code;
+    }
+    let all = combinations();
+    let mapped = list_map(all, mapper);
+    return mapped;
+  }
   function refill() {
-    "four examples a screen, true and false alternating";
-    let v = expression(true);
-    let v2 = expression(false);
-    let v3 = expression(true);
-    let v4 = expression(false);
-    let list = [v, v2, v3, v4];
+    "four examples a screen, true and false alternating, no two the same";
+    let trues = list_shuffle_take(lines(true), 2);
+    let falses = list_shuffle_take(lines(false), 2);
+    let list = [trues[0], falses[0], trues[1], falses[1]];
     return list;
   }
   function above(root) {
-    "first === and !== on plain true and false, then a comparison wrapped in ( ) standing where a plain true or false stood";
+    "=== and !== on plain true and false, worked out three times: the same pair, a different pair, and the not-equal reading";
     let plain = app_code_container_light_blue(root);
     let s = js_operator_triple_equal_symbol();
     let s2 = js_operator_bang_double_equal_symbol();
@@ -149,33 +138,5 @@ export function app_code_lesson_expression_comparing_true_false() {
     html_div_cycle_code(plain, ["", "true === true", " is ", "true"]);
     html_div_cycle_code(plain, ["", "true === false", " is ", "false"]);
     html_div_cycle_code(plain, ["", "false !== true", " is ", "true"]);
-    let inside = app_code_container_light_blue(root);
-    let t5 = js_keyword_true();
-    let f3 = js_keyword_false();
-    html_div_cycle_code(inside, ["A comparison gives ", t5, " or ", f3]);
-    let t6 = js_keyword_true();
-    let f4 = js_keyword_false();
-    html_div_cycle_code(inside, [
-      "So a comparison can stand where a plain ",
-      t6,
-      " or ",
-      f4,
-      " stood",
-    ]);
-    html_div_cycle_code(inside, [
-      "We wrap the comparison in ",
-      "(",
-      " and ",
-      ")",
-      " to keep the two comparisons apart",
-    ]);
-    html_div_cycle_code(inside, [
-      "We work out the comparison first, then compare the two answers",
-    ]);
-    let worked = app_code_container_light_blue(root);
-    html_div_cycle_code(worked, ["", "3 === 5", " is ", "false"]);
-    html_div_cycle_code(worked, ["So ", "(3 === 5) === false", " is ", "true"]);
-    html_div_cycle_code(worked, ["", "2 < 5", " is ", "true"]);
-    html_div_cycle_code(worked, ["So ", "(2 < 5) !== true", " is ", "false"]);
   }
 }

@@ -14,33 +14,67 @@ export function g_arc_prompt(chapter_code, verses_text, arcs_count) {
   "Every closed list is ASKED FOR here rather than spelled out. A word written into this prose could disagree with the list a coverage tally counts and nothing would ever notice.";
   "How many people is a parameter because it is proportional to the chapter's own days rather than fixed - roughly six tenths of a person per day of preaching - so a five day chapter and a twenty day chapter do not receive the same town.";
   "The conversation lengths are handed over so the model can group its own turns into conversations. It has to do the grouping, because it is the only party that knows where one exchange finishes, and a grouping decided afterwards leaves every conversation after the first opening mid-thought.";
-  let callings = list_join_comma_space(g_callings());
-  let sexes = list_join_comma_space(g_sexes());
-  let seasons = list_join_comma_space(g_seasons());
-  let openers_unbeliever = list_join_comma_space(g_openers_unbeliever());
-  let openers_disciple = list_join_comma_space(g_openers_disciple());
+  let list = g_callings();
+  let callings = list_join_comma_space(list);
+  let list2 = g_sexes();
+  let sexes = list_join_comma_space(list2);
+  let list3 = g_seasons();
+  let seasons = list_join_comma_space(list3);
+  let list4 = g_openers_unbeliever();
+  let openers_unbeliever = list_join_comma_space(list4);
+  let list5 = g_openers_disciple();
+  let openers_disciple = list_join_comma_space(list5);
   let s = g_generation_settings();
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
+  let joined = list_join_space([
+    "The chapter being preached here is",
+    chapter_code,
+  ]);
+  let joined2 = list_join_space([
+    "Write",
+    arcs_count,
+    "people, all different from each other.",
+  ]);
+  let joined3 = list_join_space(["  sex - one of:", sexes]);
+  let joined4 = list_join_space(["  calling - one or more of:", callings]);
+  let joined5 = list_join_space(["  season - one of:", seasons]);
+  let joined6 = list_join_space([
+    "  opener - for somebody who does not yet believe, one of:",
+    openers_unbeliever,
+  ]);
+  let joined7 = list_join_space([
+    "           for somebody who already believes, one of:",
+    openers_disciple,
+  ]);
+  let joined8 = list_join_space([
+    "A conversation holds about",
+    turns_mean,
+    "turns, and runs from",
+    turns_low,
+    "turns to",
+    turns_high,
+    "turns.",
+  ]);
   let lines = [
     "You are writing the people of one town for a Christian game about planting a church.",
     "The player walks up to somebody, hears what troubles them, and answers with a passage of Scripture.",
     "",
     "THE CHAPTER",
-    list_join_space(["The chapter being preached here is", chapter_code]),
+    joined,
     "Its verses are the only Scripture anybody in this town may be answered from:",
     verses_text,
     "",
     "WHO TO WRITE",
-    list_join_space(["Write", arcs_count, "people, all different from each other."]),
+    joined2,
     "Invent each person from what these verses can honestly answer. Never pick a trouble first and then hunt for a verse.",
     "If a verse cannot honestly answer a trouble, that trouble does not belong to this chapter.",
     "",
     "Each person is given, and you choose the values:",
-    list_join_space(["  sex - one of:", sexes]),
-    list_join_space(["  calling - one or more of:", callings]),
-    list_join_space(["  season - one of:", seasons]),
+    joined3,
+    joined4,
+    joined5,
     "  trouble - what is actually wrong, in one sentence, in their own voice",
     "  summary - one sentence naming them by calling and trouble, shown to the player when they return days later",
     "",
@@ -52,8 +86,8 @@ export function g_arc_prompt(chapter_code, verses_text, arcs_count) {
     "The player's own line is always the frame God's word says followed by the passage, so you never write it.",
     "",
     "Each turn is given as:",
-    list_join_space(["  opener - for somebody who does not yet believe, one of:", openers_unbeliever]),
-    list_join_space(["           for somebody who already believes, one of:", openers_disciple]),
+    joined6,
+    joined7,
     "  utterance - what the person says",
     "  verse_numbers - the verses of this chapter that answer it, point for point",
     "  after - what the person says once that passage has landed",
@@ -63,7 +97,7 @@ export function g_arc_prompt(chapter_code, verses_text, arcs_count) {
     "",
     "GROUPING",
     "Group each person's turns into conversations. One conversation is one day.",
-    list_join_space(["A conversation holds about", turns_mean, "turns, rarely fewer than", turns_low, "and rarely more than", turns_high, "."]),
+    joined8,
     "You decide where each conversation ends, so write the opening turn of a later conversation as somebody picking a thread back up days later.",
     "",
     "LENGTH",
