@@ -12,5 +12,5 @@ export async function function_current_selects_apply_generic(
     let selects = await function_current_selects_nodes_ast(ast);
     await imported_fn(ast, selects, ...args);
   }
-  let output = await function_transform(f_name_current, lambda);
+  await function_transform(f_name_current, lambda);
 }
