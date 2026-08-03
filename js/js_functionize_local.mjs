@@ -1,5 +1,4 @@
-import { js_identifiers_naming_nodes } from "./js_identifiers_naming_nodes.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
 import { list_slice_from_indices } from "./list_slice_from_indices.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -17,10 +16,6 @@ import { js_code_names_object_or_single } from "./js_code_names_object_or_single
 import { js_statement_return } from "./js_statement_return.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_identifier_defineds_includes } from "./js_identifier_defineds_includes.mjs";
-import { not } from "./not.mjs";
-import { js_visit_identifiers } from "./js_visit_identifiers.mjs";
-import { list_adder_unique } from "./list_adder_unique.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -61,24 +56,7 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   }
   let body = property_get(ast, "body");
   list_add(body, declaration);
-  ("A word standing for a property is not a name the span reads from outside it, and asking the shared judgment rather than a reading written here is what keeps the two from disagreeing. The reading written here knew only the key of an object being built and not the word after a dot, so a span holding one mention of a function's own spelling asked its caller for a parameter called name - which is bound nowhere at the call site, and the file it wrote threw the first time it ran.");
-  let naming = js_identifiers_naming_nodes(declaration);
-  function lambda3(la) {
-    function lambda2(v) {
-      let node = property_get(v, "node");
-      let named_is = list_includes(naming, node);
-      if (named_is) {
-        return;
-      }
-      let name = property_get(node, "name");
-      let a = js_identifier_defineds_includes(v, name);
-      if (not(a)) {
-        la(name);
-      }
-    }
-    js_visit_identifiers(declaration, lambda2);
-  }
-  let missing = list_adder_unique(lambda3);
+  let missing = js_declaration_names_unbound(declaration);
   list_remove(missing, f_name_new);
   let other = await functions_names();
   missing = list_difference(missing, other);
