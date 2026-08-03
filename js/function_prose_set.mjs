@@ -1,3 +1,6 @@
+import { list_index_is } from "./list_index_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { assert_json } from "./assert_json.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
@@ -19,6 +22,14 @@ export async function function_prose_set(f_name, position, sentence) {
   let index = subtract(left, 1);
   function lambda(ast) {
     let statements = js_prose_statement_nodes(ast);
+    let within_is = list_index_is(statements, index);
+    let lines = list_size(statements);
+    assert_json(within_is, {
+      hint: "this function does not say that many things about itself — would you like to read its account back first, and name one of the numbers there?",
+      f_name,
+      position,
+      lines,
+    });
     let statement = list_get(statements, index);
     let written = js_prose_statement(sentence);
     let expression = property_get(written, "expression");
