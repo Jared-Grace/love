@@ -43,5 +43,5 @@ export async function app_shared_update_generic(
     list_clear(body_block);
     list_add(body_block, statement);
   }
-  let output = await function_transform(f_name_transformed, lambda);
+  await function_transform(f_name_transformed, lambda);
 }
