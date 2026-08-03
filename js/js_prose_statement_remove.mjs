@@ -1,10 +1,10 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_prose_statement_nodes } from "./js_prose_statement_nodes.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_adder_invoke } from "./list_adder_invoke.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { equal } from "./equal.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_prose_statement_remove(ast, index) {
@@ -17,8 +17,7 @@ export function js_prose_statement_remove(ast, index) {
   function lambda(la) {
     function lambda_visit(v) {
       let node = property_get(v, "node");
-      let stack = property_get(v, "stack");
-      let body = list_get_end_1(stack);
+      let body = property_list_get_end_1(v, "stack");
       let found = equal(node, target);
       if (found) {
         function lambda_remove() {
