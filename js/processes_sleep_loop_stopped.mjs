@@ -1,8 +1,7 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { processes_sleep_loop_waiting } from "./processes_sleep_loop_waiting.mjs";
 import { processes_sleep_loop_stopped_seconds } from "./processes_sleep_loop_stopped_seconds.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export async function processes_sleep_loop_stopped() {
   arguments_assert(arguments, 0);
@@ -18,8 +17,7 @@ export async function processes_sleep_loop_stopped() {
   let least = processes_sleep_loop_stopped_seconds();
   let stopped = [];
   for (let row of waiting) {
-    let alive_seconds = property_get(row, "alive_seconds");
-    let long_lived = greater_than(alive_seconds, least);
+    let long_lived = property_greater_than(row, "alive_seconds", least);
     if (long_lived) {
       list_add(stopped, row);
     }
