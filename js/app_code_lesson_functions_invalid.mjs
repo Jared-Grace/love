@@ -53,8 +53,8 @@ export function app_code_lesson_functions_invalid() {
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
     let r2 = js_operator_to_code_call(o_f, next);
-    let right = property_get(r2, "right");
-    let left = property_get(r2, "left");
+    property_get(r2, "right");
+    property_get(r2, "left");
     let call = property_get(r2, "call");
     let normalized = js_tokenizer_normalized(call);
     let parts2 = [
