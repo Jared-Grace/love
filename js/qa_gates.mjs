@@ -292,6 +292,7 @@ export function qa_gates() {
     literals_marked_both_ways_gate_run,
     firebase_folder_gate_run,
     hash_key_literals_gate_run,
+    hash_key_doors_wrapped_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
     query_key_getters_frozen_gate_run,
