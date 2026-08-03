@@ -6,7 +6,9 @@ export function qa_app_gates_sorted_cases() {
     {
       why: "the ordinary case: a gate naming something this app ships holds it, and only the shared names are carried back",
       failed: ["gate_named_this"],
-      named: { gate_named_this: ["thing_shipped_here", "thing_shipped_elsewhere"] },
+      named: {
+        gate_named_this: ["thing_shipped_here", "thing_shipped_elsewhere"],
+      },
       reach: ["thing_shipped_here", "thing_else_here"],
       sorted: {
         blocking: [
@@ -22,7 +24,9 @@ export function qa_app_gates_sorted_cases() {
     {
       why: "the whole point: a gate naming only what this app cannot reach is a complaint about somewhere else and must not hold this deploy",
       failed: ["gate_named_this"],
-      named: { gate_named_this: ["thing_shipped_elsewhere"] },
+      named: {
+        gate_named_this: ["thing_shipped_elsewhere"],
+      },
       reach: ["thing_shipped_here"],
       sorted: {
         blocking: [],
@@ -38,7 +42,9 @@ export function qa_app_gates_sorted_cases() {
     {
       why: "a red gate recorded with an EMPTY list cannot be placed and is counted against the app. This is the fault that let sixteen unproven gates through: only the absent spelling was checked, and every red gate is in fact recorded with a list, so the rule applied to nothing at all",
       failed: ["gate_named_this"],
-      named: { gate_named_this: [] },
+      named: {
+        gate_named_this: [],
+      },
       reach: ["thing_shipped_here"],
       sorted: {
         blocking: [
@@ -70,7 +76,9 @@ export function qa_app_gates_sorted_cases() {
     {
       why: "a gate whose own function this app ships is still sorted on what it NAMED, not on itself. The fact is carried back for the reader and changes nothing",
       failed: ["gate_named_this"],
-      named: { gate_named_this: ["thing_shipped_elsewhere"] },
+      named: {
+        gate_named_this: ["thing_shipped_elsewhere"],
+      },
       reach: ["gate_named_this", "thing_shipped_here"],
       sorted: {
         blocking: [],
@@ -88,7 +96,10 @@ export function qa_app_gates_sorted_cases() {
       failed: [],
       named: {},
       reach: ["thing_shipped_here"],
-      sorted: { blocking: [], elsewhere: [] },
+      sorted: {
+        blocking: [],
+        elsewhere: [],
+      },
     },
     {
       why: "gates are sorted one at a time and both answers can occur together, so a single blocker among several is enough to hold the app while the rest are still set aside correctly",
@@ -124,7 +135,9 @@ export function qa_app_gates_sorted_cases() {
     {
       why: "written down because the answer is the ALARMING one and should never change quietly: an app reaching nothing has nothing in common with any complaint, so every named gate is set aside and the app reads as clear. That is the letting-out direction. It is written down rather than fixed because it cannot happen today - the reach is walked from the app's own roots and a root reaches at least itself, so an empty answer means the walk threw rather than returned. Should a reach ever be able to come back empty, this is the case that must change first",
       failed: ["gate_named_this"],
-      named: { gate_named_this: ["thing_shipped_elsewhere"] },
+      named: {
+        gate_named_this: ["thing_shipped_elsewhere"],
+      },
       reach: [],
       sorted: {
         blocking: [],
