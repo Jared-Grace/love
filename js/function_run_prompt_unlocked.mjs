@@ -12,6 +12,6 @@ export async function function_run_prompt_unlocked() {
   async function lambda2() {
     git_ac_call_repos_unawait(f_name, args);
   }
-  let r = await lock_try_prompt(lambda2, function_run_prompt_unlocked.name);
+  await lock_try_prompt(lambda2, function_run_prompt_unlocked.name);
   return result;
 }
