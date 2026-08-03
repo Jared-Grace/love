@@ -1,4 +1,5 @@
 export async function playwright_refresh(page) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let context = page.context();
   await context.clearCookies();
   function lambda() {
