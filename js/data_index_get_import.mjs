@@ -12,10 +12,10 @@ export async function data_index_get_import() {
   "Fetched here instead, the same files load the moment the index is genuinely";
   "wanted and not one moment sooner, and what is behind the branch is exactly";
   "what it always was.";
-  let module = await import(
-    text_combine_multiple(["./", fn_name("data_index_get"), ".mjs"])
-  );
+  let f_name = fn_name("data_index_get");
+  let module = await import(text_combine_multiple(["./", f_name, ".mjs"]));
   ("The name is asked for rather than spelled after a dot, because a word after a dot belongs to whatever is being asked and no rename may follow it there. This one must follow a rename - it is the export's own name - so it is written as the marker that says so, the same one the path above already uses");
-  let fn = property_get(module, fn_name("data_index_get"));
+  let property_name = fn_name("data_index_get");
+  let fn = property_get(module, property_name);
   return fn;
 }

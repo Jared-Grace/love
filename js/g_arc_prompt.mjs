@@ -72,7 +72,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     joined4,
     joined5,
     "  trouble - what is wrong, in one sentence, in their own words",
-    "  summary - one sentence: their calling and their trouble",
+    "  summary - one sentence: their calling and their trouble. The player reads it when they return.",
     "",
     "Sex and calling are facts. Do not give a personality meant to follow from them.",
     "",
