@@ -59,6 +59,8 @@ export function literals_frozen_names() {
   ("A fifth bucket folder, which the four above were called the completion of - and it was missed because the reading that found them asked who builds a chapter's address, and this one is not a chapter. Every backup taken of a shipped app since the middle of July is sitting under it.");
   ("It was the one of its kind spelled as a REFERENCE rather than as a frozen word, which is the opposite of what a bucket folder is. Renaming the function of that name would have moved where later backups were written and where the code looked for them, while every backup already taken stayed where it was - and the rename would have read as safe, because following a reference is exactly what a rename is for.");
   let spelled38 = fn_name("firebase_prod_app_backup_namespace");
+  ("A field of a page address, and the first one found by following a word one line back rather than reading only the slot it is handed to. It was set into a plain variable and passed on, which every gate over addresses called clean.");
+  let spelled39 = fn_name("app_replace_animation_duration_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -97,6 +99,7 @@ export function literals_frozen_names() {
     spelled36,
     spelled37,
     spelled38,
+    spelled39,
   ];
   return names;
 }
