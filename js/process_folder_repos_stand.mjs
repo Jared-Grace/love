@@ -1,6 +1,5 @@
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { module_dirname } from "./module_dirname.mjs";
-import { folder_repo_root_find } from "./folder_repo_root_find.mjs";
 import { path_directory } from "./path_directory.mjs";
 import { equal } from "./equal.mjs";
 export async function process_folder_repos_stand() {
@@ -8,11 +7,12 @@ export async function process_folder_repos_stand() {
   "A repo is found by stepping out of the current folder and back down by name, so the current folder is not incidental to a dispatcher call - it is half of every path the call will build. Standing beside the repos is the only place that stepping means anything.";
   "So the test is exactly that: is the folder above this one the folder the repos sit in. Being inside a repo is not enough and being inside any repo at all is not the question - a repo somewhere else entirely passes that test and still resolves every name to nothing.";
   "When the answer is no, the dispatcher already knows a folder that works, because it is running out of one. The repo holding this file is found from the file's own path rather than from anything the caller said, which is what makes it true wherever the call was made from.";
+  "That repo is the folder above the one this file sits in, and is deliberately not the nearest folder holding a .git. The gates run inside a frozen copy of the tree that carries no .git at all, so looking for one there finds nothing and throws - and a copy of the repo is still the repo for every purpose this has.";
   "Nothing moves for a call made from a repo, which is every ordinary call. What this ends is the case where a name was looked for in a folder that holds no repos, found nothing, and reported that as an absence rather than as a wrong place to have looked - an error which, sent to the side, reads exactly like a truthful empty answer.";
   let here = folder_current_absolute();
   let beside = path_directory(here);
   let dirname = await module_dirname(import.meta);
-  let mine = folder_repo_root_find(dirname);
+  let mine = path_directory(dirname);
   let repos = path_directory(mine);
   let already = equal(beside, repos);
   if (already) {
