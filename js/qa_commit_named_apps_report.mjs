@@ -1,3 +1,4 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
 import { qa_app_reachable_names } from "./qa_app_reachable_names.mjs";
@@ -11,7 +12,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { number_is } from "./number_is.mjs";
@@ -54,8 +54,7 @@ export async function qa_commit_named_apps_report() {
       let failed = property_get_or_null(entry, "failed");
       let blamed = property_get_or_null(entry, "named");
       let sorted = qa_app_gates_sorted(green, failed, blamed, reach);
-      let blocking = property_get(sorted, "blocking");
-      let clear = list_empty_is(blocking);
+      let clear = property_list_empty_is(sorted, "blocking");
       let distance = property_get_or_null(distances, commit);
       let placed = number_is(distance);
       let both = and(clear, placed);
