@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_frozen } from "./text_frozen.mjs";
 export function js_function_shape_cases() {
   "Pairs of written-out functions, each paired with whether the two of them do the same work once the names only their own writer sees have been taken away";
   "Held as pairs rather than as a function beside the shape it comes out as, because the shape is a middle step and its exact text changes every time the shaping learns to leave one more thing alone. What must not change is which pairs are the same piece of work, and that is what every duplicate finder in the repo reads this for";
