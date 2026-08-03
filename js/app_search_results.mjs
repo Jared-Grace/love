@@ -1,3 +1,4 @@
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -355,14 +356,14 @@ export async function app_search_results(context, div_results) {
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
     let border_color = app_shared_container_blue_border_color();
-    html_border(div_chapter, "0.1em", border_color);
+    html_border(div_chapter, app_shared_spaced_frame_gap(), border_color);
     let border_radius = app_shared_border_radius_extra_large();
     html_border_radius(div_chapter, border_radius);
     ("the innermost of the four cards, spending the same named amount as the three around it, so the verse text at the bottom is not standing behind four different numbers nobody chose together");
     let chapter_padding = app_shared_spaced_tiny_gap();
     html_style_padding(div_chapter, chapter_padding);
     html_style_margin_x(div_chapter, app_shared_spaced_neighbor_gap());
-    html_style_margin_y(div_chapter, "0.1em");
+    html_style_margin_y(div_chapter, app_shared_spaced_frame_gap());
     html_text_align_left(div_chapter);
     let chapter_header_text = text_combine_multiple([
       "Chapter ",
