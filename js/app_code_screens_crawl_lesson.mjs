@@ -17,6 +17,7 @@ export async function app_code_screens_crawl_lesson(
 ) {
   "crawl one lesson the way a learner meets it: its examples screen, then its quiz starting at the first kind and clicking Next through every following kind (forwards, backwards, unscramble, ...). A unique query string on each load forces a fresh render so the hash seeds the right screen. Stops walking when the lesson title changes, which means Next has carried us out of this lesson (into the next lesson or a review). Every screen is tagged and pushed onto records";
   "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let v = app_code_screen_hash_key();
   let f_name = fn_name("app_code_examples");
   let combined = text_combine_multiple(["&", v, "=", f_name]);
