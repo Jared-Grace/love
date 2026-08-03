@@ -14,7 +14,6 @@ export async function function_prose_add(f_name, sentence) {
     let statement = js_prose_statement(sentence);
     js_flo_body_add_after_prose(ast, statement);
   }
-  let output = await function_transform(f_name, lambda);
-  await function_auto(f_name);
+  let output = await function_transform_auto(f_name, lambda);
   return output;
 }

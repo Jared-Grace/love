@@ -21,7 +21,6 @@ export async function function_list_name_add(f_name, name) {
     list_add(elements, expression);
     await js_imports_missing_add_specified_single(ast, name);
   }
-  let output = await function_transform(f_name, lambda);
-  await function_auto(f_name);
+  let output = await function_transform_auto(f_name, lambda);
   return output;
 }

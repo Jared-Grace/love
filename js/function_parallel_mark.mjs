@@ -20,7 +20,6 @@ export async function function_parallel_mark(f_name) {
     let mark_name = fn_name("function_duplicate_kind_parallel");
     await js_block_call_add_first(ast, selects, mark_name);
   }
-  await function_transform(f_name, mark);
-  await function_auto(f_name);
+  await function_transform_auto(f_name, mark);
   return f_name;
 }

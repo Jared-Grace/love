@@ -157,10 +157,12 @@ export function app_g_dev_routes(div_map) {
   }
   async function day_unbelievers() {
     "the #day_unbelievers demo: 3 nearby unbelievers become today's ONLY talkable people (chosen close together so the walk between them is short). each gets a soft speech-bubble marker; every OTHER npc gives a randomized 'busy' line instead of a conversation (the gate lives in the conversation entry, reading the day session). foundation for the discernment-walk + slice-time day mechanic";
+    "there is no button on the map for the discernment prayer. it is prayed from the tap-yourself menu, under Pray, where every other prayer in the game is prayed - so the map here holds only the world and the people in it, and the demo reaches its one mechanic through the door the real game already has.";
     await app_g_view_set(null);
     let npcs = await app_g_npcs_get();
     let three = app_g_day_talkables_choose(npcs);
     let state = app_g_day_state();
+    property_set(state, "div_map", div_map);
     property_set(state, "talkable", three);
     let value = list_size(three);
     property_set(state, "slices_total", value);
@@ -170,7 +172,6 @@ export function app_g_dev_routes(div_map) {
       app_g_day_talkable_marker(div_map, npc);
     }
     each(three, mark);
-    app_g_day_discern_button(div_map);
   }
   async function day_conversation() {
     ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation as a ONE-slice day, so it spans the whole 6 AM sunrise → 7 PM dusk and the change is easy to SEE as you answer each turn (",
