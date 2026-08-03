@@ -1,10 +1,10 @@
+import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { html_style_white_space } from "./html_style_white_space.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
@@ -159,13 +159,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let made = app_code_lesson_number_chip(parent, number, color);
       return made;
     }
-    function dark_tile(parent) {
-      "one continuous black code tile that holds a whole expression, so it reads as a single unit instead of being chopped into separate pieces (matching how the % lesson renders its code)";
-      let tile = html_span(parent);
-      html_style_code_dark(tile);
-      html_style_white_space(tile, "nowrap");
-      return tile;
-    }
     function running_count(grid, number) {
       "the count under an intermediate repeat - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
       let text = text_to(number);
@@ -227,7 +220,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     }
     function short_form(parent, left, count, left_color, count_color) {
       "one dark tile reading the short form, both numbers as lifted color chips";
-      let tile = dark_tile(parent);
+      let tile = html_span_code_dark_nowrap(parent);
       app_code_lesson_number_chip_lifted(tile, left, left_color);
       html_span_text(tile, short_separator);
       app_code_lesson_number_chip_lifted(tile, count, count_color);
