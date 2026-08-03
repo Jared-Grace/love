@@ -23,7 +23,11 @@ export async function permission_grants_gate_run() {
     let message_added =
       "permission grants gate: " +
       added.length +
-      " standing grants fail the safety check and were not recorded as known — take the rule out, or narrow the function, or, if the grant was meant, name it to " +
+      " standing grants fail the safety check and were not recorded as known — take the rule out with " +
+      fn_name("permission_grant_remove") +
+      ", or, where the function has been deleted and the rule is left naming nothing, take back every such rule at once with " +
+      fn_name("permission_grants_dead_remove") +
+      ", or narrow the function, or, if the grant was meant, name it to " +
       fn_name("permission_grants_baseline_bless") +
       " one at a time: " +
       list_join_comma(list);

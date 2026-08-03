@@ -1,3 +1,6 @@
+import { js_node_name_text_try } from "./js_node_name_text_try.mjs";
+import { js_name_set_from_call_try } from "./js_name_set_from_call_try.mjs";
+import { value_or_if_null } from "./value_or_if_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";

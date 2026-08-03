@@ -11,9 +11,10 @@ import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_arc_prompt(chapter_code, verses_text, turn_target) {
-  "The instruction that writes one person, as one string ready to send.";
+  "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast. A cast is about 24000 output tokens. At that size one bad verse citation costs the rewrite of everybody, and the person written last gets the least care.";
-  "Every closed list is ASKED FOR rather than spelled out here. A word written twice can disagree with itself, and the copy that counts is the one a coverage tally reads.";
+  "The callings, sexes, seasons and openers come from functions, never from words typed into this prose.";
+  "Two copies of one list drift apart. Coverage would then be counted against a set the prompt never offered, and nothing would report it.";
   "The turn target is one number.";
   ("It is drawn for this person by ", fn_name("g_arc_lengths"), ".");
   ("Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
