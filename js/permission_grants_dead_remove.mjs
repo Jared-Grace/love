@@ -32,9 +32,7 @@ export async function permission_grants_dead_remove() {
     };
     return clean;
   }
-  await permission_grant_names_write(kept);
-  let written = await permission_settings_allow_write_from(kept);
-  let allow = property_get(written, "allow");
+  let allow = await permission_grant_names_settings_write(kept);
   let report = {
     dead,
     names: kept.length,
