@@ -1,3 +1,4 @@
+import { range_from } from "./range_from.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { js_boolean_values } from "./js_boolean_values.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -59,12 +60,13 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "and the most is",
     turns_high,
     "turns.",
-  ]);range_from
+  ]);
+  let mapped = range_from(13, 80);
   let b = js_boolean_values();
   let servant = list_concat_single_right(b, "freed");
   let json = json_format_to({
     gender: genders,
-    age: "13-80",
+    age: mapped,
     marriage: ["single", "betrothed", "married", "widowed"],
     master: b,
     servant,

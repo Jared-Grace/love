@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
+import { functions_duplicates_baseline_path } from "./functions_duplicates_baseline_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { functions_duplicates_names } from "./functions_duplicates_names.mjs";
@@ -8,7 +8,7 @@ export async function functions_duplicates_gate_run() {
   "Measured against the baseline file rather than against zero, so the rule binds what is written today instead of waiting on a judgment about every pair already here. A name the baseline does not list fails, and a name it lists that no longer has a twin fails too, so the list can only shrink.";
   "A group is a question, not an instruction. The same steps can be two ideas on purpose - cutting a piece out of a list and cutting a piece out of some words are written alike and must stay apart - so when this goes red the answer is sometimes to collapse the pair and sometimes to make the two genuinely differ. What it must never be is a wider baseline.";
   let offenders = await functions_duplicates_names();
-  let path = duplicates_baseline_path();
+  let path = functions_duplicates_baseline_path();
   let hint = text_combine_multiple([
     "these functions do work another name already does - collapse the pair onto one name with ",
     fn_name("function_replace"),
