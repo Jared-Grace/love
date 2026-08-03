@@ -19,6 +19,8 @@ export function qa_gate_failed_sections(output) {
   "The whole of what it said, not the one sentence it threw. A gate that finds eight faults prints the eight and then throws a count, so the sentence alone carries no name at all - and whoever reads it next is handed a number and left to find the eight by hand. The names were printed the whole time, one line above";
   "The gate's own name is left out, its heading dropped and its complaint taken apart at the colon. Every gate is itself a function of this repo, so a section read whole would name the gate among the things at fault, and point the reader at whoever last edited the gate rather than at whoever wrote the thing it is complaining about";
   "A gate that was quiet when asked again is left out, because it never had anything wrong with it - that is what a file being saved mid-run looks like";
+  "A complaint may run over several lines, and it is followed to its end. The gates that measure a list of offenders against a record print nothing at all as they go and carry the whole of what they found in one thrown object, laid out over as many lines as it has names. Ending the section on the line the complaint began on kept the first of those lines and dropped the rest, so those gates read back as having named nobody - and a gate that named nobody cannot be placed, so every one of them held every app. Sixteen were doing exactly that in one recorded run.";
+  "How far to keep reading is asked of the braces rather than of the next heading, because the reasons printed under a complaint are not part of it, and out here they follow it directly. Inside the frozen copy they are not printed at all, so reading to the heading would have behaved differently in the two places - the worse kind of difference, since the record is written in one of them and read in the other.";
   let edge = "===";
   let opening = "=== ";
   let closing = " ===";
@@ -87,6 +89,11 @@ export function qa_gate_failed_sections(output) {
     if (whole_arrived) {
       close_section();
     }
+  }
+  let cut_off = greater_than(owed, 0);
+  if (cut_off) {
+    ("the printing stopped part way through a complaint - keep what did arrive, since a gate known to be red with nothing said about it is the worst thing to hand a reader");
+    close_section();
   }
   return sections;
 }
