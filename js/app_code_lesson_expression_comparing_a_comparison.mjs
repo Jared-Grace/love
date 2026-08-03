@@ -1,3 +1,5 @@
+import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -179,7 +181,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     html_div_cycle_code(card, ["So ", whole, " is ", ended_code]);
   }
   function above(root) {
-    "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the left-to-right rule, then two worked examples taken a step at a time";
+    "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the replacing rule, then two lines walked through a replacement at a time";
     naming(root);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
@@ -202,12 +204,9 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       f2,
       " can be used, we can use a comparison",
     ]);
-    let order = app_code_container_light_blue(root);
-    html_div_cycle_code(order, [
-      "We work out the comparisons from left to right",
-    ]);
     let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
+    replacing(root, "3 === 5", false);
     worked_example(root, "3 === 5", false, same, false);
     worked_example(root, "2 < 5", true, different, true);
   }

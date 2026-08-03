@@ -13,8 +13,8 @@ export async function git_commit_behind_count(commit, newer) {
   "A commit the folder no longer holds comes back as nothing rather than as a throw. A record outlives the history it names, and a reader that fell over on the first name git had forgotten would lose every good answer beside it to one bad one.";
   async function counted() {
     let here = folder_current_absolute();
-    let range = text_combine_multiple([commit, "..", newer]);
-    let printed = await git_folder_run(here, ["rev-list", "--count", range]);
+    let span = text_combine_multiple([commit, "..", newer]);
+    let printed = await git_folder_run(here, ["rev-list", "--count", span]);
     let trimmed = text_trim(printed);
     return trimmed;
   }
