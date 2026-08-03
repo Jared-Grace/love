@@ -3817,6 +3817,14 @@ def main():
     if find_in_place_edit(command):
         return decide("deny", IN_PLACE_EDIT_DENY_REASON)
 
+    # A floor of a different kind: not "there is a better tool" but "this
+    # cannot work". A pgrep-conditioned sleep loop self-matches through the
+    # bash -c line it is written in, so it never terminates and takes a whole
+    # session down with it. Denied rather than left to prompt because a prompt
+    # is what approved all twelve of the stuck ones. See find_pgrep_wait_loop.
+    if find_pgrep_wait_loop(command):
+        return decide("deny", PGREP_WAIT_LOOP_DENY_REASON)
+
     # Also a hard floor (before any allow decision, so a stray allow rule can't
     # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every
     # other scripts/ file - the human's r.mjs/rl.mjs/g.mjs seams and utilities -
