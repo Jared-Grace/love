@@ -32,7 +32,8 @@ import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_a_comparison() {
-  "a comparison standing where a plain true or false stood: (3 === 5) === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The parentheses are the other half of the idea and are given a reason rather than a rule: without them the line is three comparisons in a row and there is nothing to say which pair goes together. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
+  "a comparison standing where a plain true or false stood: 3 === 5 === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
+  "No parentheses, because in every line this lesson can generate they change no answer: === and !== are worked out left to right, and < > <= >= bind tighter than both, so plain left to right already lands on the right value. Teaching them here would be teaching a rule the learner cannot yet see the need for. They earn their place one lesson later, in swapping, where both sides are comparisons and they change the answer for real - a === b === b === a is false while (a === b) === (b === a) is true - and that lesson already introduces them itself.";
   let name_id = title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
@@ -72,7 +73,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     return word;
   }
   function comparison_side() {
-    "a comparison of two small numbers wrapped in parentheses, with the true or false it works out to";
+    "a comparison of two small numbers, with the true or false it works out to";
     let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
     let smaller = js_operator_less_than();
@@ -86,15 +87,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let value = fn(a, b);
     let a_code = text_to(a);
     let b_code = text_to(b);
-    let code = text_combine_multiple([
-      "(",
-      a_code,
-      " ",
-      symbol,
-      " ",
-      b_code,
-      ")",
-    ]);
+    let code = text_combine_multiple([a_code, " ", symbol, " ", b_code]);
     let r = {
       code,
       value,
@@ -102,7 +95,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     return r;
   }
   function expression(want_true) {
-    "a wrapped comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
+    "a comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
     let left = comparison_side();
     let right_value = list_random_item([true, false]);
     let agree = property_equals(left, "value", right_value);
@@ -125,67 +118,66 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     return list;
   }
   function naming(root) {
-    "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it - so an example first, then the six operators the word covers, listed from the one place that holds them";
-    "The bold falls on the word rather than on the list, which is what the repo already does for a term it is defining: the word is what the learner has to carry to the next lesson, and the six symbols are already set apart as code tiles, so bolding them too would leave the sentence with nothing plain in it and the eye with nowhere to land. It falls on the example line rather than the list line because that is where the word is first said";
+    "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it";
+    "Taught by showing rather than by listing symbols: one whole comparison per operator, so the learner reads the shape a comparison takes six times over rather than reading six symbols and being left to assemble the shape. The six come from the one list that holds them, so no other lesson can teach the word a different set";
+    "The same two numbers every time, so the only thing that changes down the column is the symbol - which is exactly the thing the word covers. Some of the six answer true and some answer false, and that is left alone on purpose: a comparison is a comparison whatever it answers, and the very next card is where the answer starts to matter";
     let card = app_code_container_light_blue(root);
-    let example = html_div(card);
-    html_cycle_code_bold(example, ["", "3 < 5", " is a ", "comparison"]);
-    let line = html_div(card);
-    html_span_text(line, "A comparison uses ");
-    function operator_symbol(operator) {
-      "the symbol shown in an operator's tile";
+    app_code_lesson_bold_term(card, "Here are some examples of ", "comparisons");
+    function example_show(operator) {
+      "one whole comparison for an operator, tiled as code";
       let symbol = property_get(operator, "operator");
-      return symbol;
+      let code = text_combine_multiple(["3 ", symbol, " 5"]);
+      html_div_cycle_code(card, ["", code]);
     }
     let operators = js_operators_comparison();
-    app_code_operators_word_list(line, operators, "or", operator_symbol);
+    each(operators, example_show);
+  }
+  function worked_example(root, code, value, operator, right_value) {
+    "one worked line taken a step at a time: what the comparison alone answers, then the whole line with that answer standing in its place, then what that comes to";
+    "Three lines rather than one because the whole move this lesson teaches happens in the middle line - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust";
+    "The last line is worked out by the operator's own function rather than typed, so the example cannot say something the code would not do";
+    let card = app_code_container_light_blue(root);
+    let answer = keyword(value);
+    html_div_cycle_code(card, ["", code, " is ", answer]);
+    let symbol = property_get(operator, "operator");
+    let right_code = keyword(right_value);
+    let whole = text_combine_multiple([code, " ", symbol, " ", right_code]);
+    let stood_in = text_combine_multiple([answer, " ", symbol, " ", right_code]);
+    html_div_cycle_code(card, ["So ", whole, " is ", stood_in]);
+    let fn = property_get(operator, "fn");
+    let ended = fn(value, right_value);
+    let ended_code = keyword(ended);
+    html_div_cycle_code(card, ["And ", stood_in, " is ", ended_code]);
   }
   function above(root) {
-    "first what the word comparison names, then the idea: a comparison gives true or false, so a comparison can stand where a plain true or false stood; the parentheses keep the two comparisons apart; then two worked examples";
+    "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the left-to-right rule, then two worked examples taken a step at a time";
     naming(root);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
-    html_div_cycle_code(idea, ["A comparison gives ", t, " or ", f]);
+    let smaller = js_operator_less_than_symbol();
+    html_div_cycle_code(idea, [
+      "A comparison like ",
+      smaller,
+      " will result in ",
+      t,
+      " or ",
+      f,
+    ]);
     let t2 = js_keyword_true();
     let f2 = js_keyword_false();
     html_div_cycle_code(idea, [
-      "So a comparison can stand where a plain ",
+      "So anywhere ",
       t2,
       " or ",
       f2,
-      " stood",
+      " can be used, we can use a comparison",
     ]);
-    html_div_cycle_code(idea, [
-      "We work out the comparison first, then compare the two answers",
-    ]);
-    let wrapping = app_code_container_light_blue(root);
-    html_div_cycle_code(wrapping, [
-      "We wrap the comparison in ",
-      "(",
-      " and ",
-      ")",
-    ]);
-    html_div_cycle_code(wrapping, [
-      "Without the ",
-      "(",
-      " and ",
-      ")",
-      ", ",
-      "3 === 5 === false",
-      " is three comparisons in a row",
-    ]);
-    html_div_cycle_code(wrapping, [
-      "The ",
-      "(",
-      " and ",
-      ")",
-      " say which two go together first",
-    ]);
-    let worked = app_code_container_light_blue(root);
-    html_div_cycle_code(worked, ["", "3 === 5", " is ", "false"]);
-    html_div_cycle_code(worked, ["So ", "(3 === 5) === false", " is ", "true"]);
-    html_div_cycle_code(worked, ["", "2 < 5", " is ", "true"]);
-    html_div_cycle_code(worked, ["So ", "(2 < 5) !== true", " is ", "false"]);
+    let order = app_code_container_light_blue(root);
+    html_div_cycle_code(order, ["We work out the comparisons from left to right"]);
+    let same = js_operator_triple_equal();
+    let different = js_operator_bang_double_equal();
+    worked_example(root, "3 === 5", false, same, false);
+    worked_example(root, "2 < 5", true, different, true);
   }
 }
