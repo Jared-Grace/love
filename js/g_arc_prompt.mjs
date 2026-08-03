@@ -69,7 +69,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     sons:b,
     daughters:b,
     master: b,
-    servant:["none", "master", "servant", "freed"],
+    servitude:["none", "master", "servant", "freed"],
     government: ["civilian", "official", "soldier"],
   });
   let lines = [
