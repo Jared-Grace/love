@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -108,7 +109,8 @@ export function g_arc_prompt(chapter_code, verses_text, turn_targets) {
     "You decide where each conversation ends, so write the opening turn of a later conversation as somebody picking a thread back up days later.",
     "",
     "LENGTH",
-    "Each person is given a number of turns to aim at. It is a target and not a quota.",
+    joined9,
+    "A turn count is a target and not a quota.",
     "Return fewer turns whenever the person has run out of things the chapter can honestly answer.",
     "Never add a question the person's own trouble does not make them ask, and never stretch an exchange to reach the number.",
     "",
