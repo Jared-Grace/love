@@ -38,7 +38,7 @@ import { js_function_declaration_name } from "./js_function_declaration_name.mjs
 import { js_declare } from "./js_declare.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { each_async } from "./each_async.mjs";
-export async function js_curry_replace_visitor(ast, name, f_names) {
+export async function js_curry_replace_visitor(ast, f_names) {
   async function lambda2(la) {
     let list = js_list_function_nodes_visitors(ast);
     async function lambda(v) {
