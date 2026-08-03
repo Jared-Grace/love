@@ -8,10 +8,11 @@ export function qa_app_gates_sorted_gate_run() {
   "Everything it needs is written down, so this asks its question in a moment. Reaching the same judgement through its caller means judging a commit first, which is fourteen minutes - which is why every fault found in it so far was found by hand on a real afternoon instead.";
   let cases = qa_app_gates_sorted_cases();
   function answer(c) {
+    let green = property_get(c, "green");
     let failed = property_get(c, "failed");
     let named = property_get(c, "named");
     let reach = property_get(c, "reach");
-    let sorted = qa_app_gates_sorted(failed, named, reach);
+    let sorted = qa_app_gates_sorted(green, failed, named, reach);
     return sorted;
   }
   let r = cases_gate_run_generic(

@@ -118,10 +118,15 @@ export function app_code_lesson_expression_true_false_compare_generic(
     return codes;
   }
   function above(root) {
-    "the whole idea in one line: this operator reads true and false the same way it reads numbers. The examples below are all four possibilities, so they carry the demonstration and no worked line here would add anything";
+    "the recall line first, then the idea. The word also is only meaningful once what came before is named, and both operators have already been taught on numbers and again on strings, so the recall line names both of those and the second line adds true and false to them. The examples below are all four possibilities, so they carry the demonstration and no worked line here would add anything";
     let plain = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
+    html_div_cycle_code(plain, [
+      "",
+      symbol,
+      " already compares numbers and strings",
+    ]);
     html_div_cycle_code(plain, ["", symbol, " also works on ", t, " and ", f]);
   }
 }

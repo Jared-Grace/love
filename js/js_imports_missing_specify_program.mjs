@@ -1,18 +1,8 @@
-import { list_intersect } from "./list_intersect.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { js_imports } from "./js_imports.mjs";
-import { js_declared_names } from "./js_declared_names.mjs";
-import { js_function_params_all } from "./js_function_params_all.mjs";
+import { js_imports_missing_specify } from "./js_imports_missing_specify.mjs";
 export function js_imports_missing_specify_program(ast, candidates) {
-  "the same question as the twin without the suffix, asked of a file that need not export a single function — a script, or a module with several. Parameters count as bound here too: a parameter sharing a function's name is still that parameter everywhere the parameter is visible, and importing the function over it only adds a module nobody reads.";
-  let imports = js_imports(ast);
-  let declared = js_declared_names(ast);
-  let params = js_function_params_all(ast);
-  let identifiers = js_identifiers_names(ast);
-  let imports_self = list_concat_multiple([imports, declared, params]);
-  let missing = list_difference(identifiers, imports_self);
-  let imports_missing = list_intersect(missing, candidates);
+  "the candidate functions this module references but never imports, asked of a file that need not export a single function - a script, or a module with several.";
+  "It asks the twin without the suffix rather than answering a second way, because the twin now asks the whole module too. What the suffix once meant was that the other one looked only inside the exported declaration, so a name referenced at the top of a file was invisible to it; that was widened, and from then on the two were the same question answered by two readings that had drifted apart.";
+  "The reading here was the one that had gone wrong. It counted every word in the tree, and a word after a dot looks exactly like a name a file reads. So a file writing console.log was told it was missing an import of log, and Math.abs an import of abs - both real functions here, and both offered as candidates whenever the caller hands over every name, which the caller above it does. Measured on two files in this repo before the change: each was told log, and the only log in either is console.log.";
+  let imports_missing = js_imports_missing_specify(ast, candidates);
   return imports_missing;
 }
