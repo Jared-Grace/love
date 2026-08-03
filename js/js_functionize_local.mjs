@@ -1,3 +1,4 @@
+import { js_statements_await_any_is } from "./js_statements_await_any_is.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_statements_escapes_unmatched } from "./js_statements_escapes_unmatched.mjs";
@@ -10,8 +11,6 @@ import { js_statements_declared_names } from "./js_statements_declared_names.mjs
 import { js_statements_referenced_names } from "./js_statements_referenced_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { js_node_types_includes } from "./js_node_types_includes.mjs";
-import { list_any } from "./list_any.mjs";
 import { js_code_function_declaration } from "./js_code_function_declaration.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
@@ -49,11 +48,7 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   let referenced = js_statements_referenced_names(tail);
   let outputs = list_intersection(declared, referenced);
   let outputs_any = list_empty_not_is(outputs);
-  function lambda(r) {
-    let result = js_node_types_includes(r, "AwaitExpression");
-    return result;
-  }
-  let async_is = list_any(span, lambda);
+  let async_is = js_statements_await_any_is(span);
   let code_declaration = js_code_function_declaration(f_name_new, "", async_is);
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_function_declaration_to_block_body(declaration);
