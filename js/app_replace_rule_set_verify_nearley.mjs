@@ -34,7 +34,7 @@ export function app_replace_rule_set_verify_nearley() {
     return r;
   }
   let mapped = list_map(rules, lambda);
-  let joined2 = list_join_newline_2(mapped);
+  list_join_newline_2(mapped);
   let parser = nearley_grammar_text_parser(grammarText);
   let input = '"_"';
   input = "001";
