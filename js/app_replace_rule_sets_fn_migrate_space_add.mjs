@@ -10,5 +10,5 @@ export async function app_replace_rule_sets_fn_migrate_space_add(name) {
     let list = js_list_nodes_object_expression(ast);
     app_replace_rule_sets_fn_migrate_goals_space_add_elements(list);
   }
-  let output = await function_transform(name, lambda);
+  await function_transform(name, lambda);
 }
