@@ -33,7 +33,8 @@ export async function functions_auto_pending() {
     };
     return told;
   }
-  let measured = await list_map_unordered_async(f_names, measure);
+  ("A fixed number at a time, not all of them. Each answer here runs the whole normalizing pipeline over one function, which is a different order of work from reading a file and looking at it - started all at once, seven thousand of them filled the machine and the sweep never finished at all. The sweeps around this one hand every item over at once and are right to, because what each of theirs does is a read.");
+  let measured = await list_map_limited_async(f_names, measure, 40);
   let combined = text_combine_multiple([
     "looked at ",
     f_names.length,
