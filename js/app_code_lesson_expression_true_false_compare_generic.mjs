@@ -1,3 +1,4 @@
+import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
@@ -46,6 +47,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
     backwards_answer_label: app_code_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
+  property_set(lesson, "examples_complete", true);
   return lesson;
   function title_name_id() {
     "the home title: comparing true and false with this operator, an Expressions lesson";

@@ -17,7 +17,7 @@ export async function firebase_folder_sites() {
   "Every site is answered for, not only the ones that are wrong. A reading that returns the empty list is the one shape that cannot be told from a reading that asked nothing, and this is the question that shape gets asked of it most - a handful of sites is few enough that a person will believe a clean answer without checking it.";
   "The word is looked for one step back as well as at the argument itself, because it is almost never handed over where it is made: the folder is fetched on one line and passed on the next. A reading that stopped at the argument would have called every site here unheld and been believed.";
   "Nothing rather than a complaint when no function names the folder. Most of what reaches these slots is a name worked out while the command runs - which app is being deployed, which function is being sent up - and none of that is a written word at all, so there is nothing there to freeze. Telling those apart from a word somebody typed is the job of whoever reads this, and it needs the answer to be neutral.";
-  let seams = firebase_folder_seams();
+  let seams = await firebase_folder_seams();
   let identifiers = await data_identifiers_get();
   let sites = [];
   for (let seam of seams) {

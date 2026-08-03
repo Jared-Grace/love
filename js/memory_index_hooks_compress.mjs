@@ -1,6 +1,6 @@
 import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_index_path } from "./memory_index_path.mjs";
-import { equal } from "./equal.mjs";
+import { memory_index_head_separated_is } from "./memory_index_head_separated_is.mjs";
 import { text_code_spans_blanked } from "./text_code_spans_blanked.mjs";
 import { memory_index_line_length_ceiling } from "./memory_index_line_length_ceiling.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -19,6 +19,8 @@ export async function memory_index_hooks_compress() {
   "This is safe to run over the whole index only because of that. Where it is untrue, the name lives in the index and nowhere else - and the reader of index-only names answers exactly those, so ask it before and after: empty both times is the proof that the lines were compressed rather than robbed.";
   "A link is only a link when it is not quoted. A note explaining how links are written shows one as an example, and the first run of this read one of those as the real thing and cut the line off inside the quotation - so the line is read with its backtick spans blanked out, keeping every position where it was.";
   "Lines carrying no link are left alone. Their whole length is the hook for the note they point at, and shortening that is a judgment about what the note is for, which no rule here can make.";
+  "A line whose first link is a word in its sentence is left alone too. Rebuilding drops whatever followed that link, which is right when what follows is a list and wrong when the sentence was going to carry on - and the question that tells them apart is whether the words before the link stop at a separator. Measured 2026-08-02: three lines came back broken from a run that did not ask, one of them reading BOUNDED by with its object taken out.";
+  "A rebuilt line is only kept when it is genuinely shorter than the one it replaces. Shortening is the whole reason this runs, so a line that came back the same length or longer has nothing to offer and every chance of having lost something on the way.";
   let lines = await memory_index_lines();
   let ceiling = memory_index_line_length_ceiling();
   let opener = "- [";
@@ -39,6 +41,11 @@ export async function memory_index_hooks_compress() {
     }
     let at = masked.indexOf(link_open);
     let head = line.slice(0, at);
+    let separated = memory_index_head_separated_is(head);
+    if (not(separated)) {
+      list_add(kept, line);
+      continue;
+    }
     let tidy = memory_index_head_tidy(head);
     let links = memory_wikilink_tokens(masked);
     function inner(stem) {
@@ -53,11 +60,12 @@ export async function memory_index_hooks_compress() {
       separator = " ";
     }
     let short = tidy + separator + joined;
-    list_add(kept, short);
-    let same = equal(short, line);
-    if (same) {
+    let shorter = greater_than(line.length, short.length);
+    if (not(shorter)) {
+      list_add(kept, line);
       continue;
     }
+    list_add(kept, short);
     let record = {
       was: line.length,
       now: short.length,
