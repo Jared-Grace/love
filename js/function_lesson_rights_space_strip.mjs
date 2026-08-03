@@ -17,7 +17,7 @@ export async function function_lesson_rights_space_strip(f_name) {
       f_name,
     });
   }
-  let r = await function_transform(f_name, lambda);
+  await function_transform(f_name, lambda);
   let told = {
     f_name,
     stripped,
