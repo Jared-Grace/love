@@ -1,3 +1,4 @@
+import { js_duplicate_elements_cases_gate_run } from "./js_duplicate_elements_cases_gate_run.mjs";
 import { functions_duplicate_elements_gate_run } from "./functions_duplicate_elements_gate_run.mjs";
 import { js_module_state_shadowed_cases_gate_run } from "./js_module_state_shadowed_cases_gate_run.mjs";
 import { functions_module_state_shadowed_gate_run } from "./functions_module_state_shadowed_gate_run.mjs";
@@ -294,6 +295,7 @@ export function qa_gates() {
     functions_cases_ungated_gate_run,
     qa_gates_repeated_gate_run,
     functions_duplicate_elements_gate_run,
+    js_duplicate_elements_cases_gate_run,
   ];
   return gates;
 }
