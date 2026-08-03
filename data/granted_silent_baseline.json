@@ -2,16 +2,6 @@
  "known": [
   "app_g_day_guide_pick_check",
   "g_verify_chapters_available",
-  "app_g_map_pad_check",
-  "app_shared_dev_build_multiple_prompt",
-  "app_code_html_update_latest_promote_deploy",
-  "html_update_latest_promote_multiple_prompt",
-  "g_sermon_passage_verses_key",
-  "g_sermon_passage_words",
-  "g_genders_names",
-  "g_gender_male",
-  "g_gender_female",
-  "g_female_img_names",
-  "g_male_img_names"
+  "app_g_map_pad_check"
  ]
 }
