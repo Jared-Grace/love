@@ -1,3 +1,4 @@
+import { functions_unreachable_statements_gate_run } from "./functions_unreachable_statements_gate_run.mjs";
 import { hash_reading_names_word_gate_run } from "./hash_reading_names_word_gate_run.mjs";
 import { js_hash_object_word_calls_unknown_cases_gate_run } from "./js_hash_object_word_calls_unknown_cases_gate_run.mjs";
 import { hash_object_word_calls_unknown_gate_run } from "./hash_object_word_calls_unknown_gate_run.mjs";
@@ -350,6 +351,7 @@ export function qa_gates() {
     functions_granted_silent_gate_run,
     baselines_prefix_split_gate_run,
     number_to_words_cases_gate_run,
+    functions_unreachable_statements_gate_run,
   ];
   return gates;
 }
