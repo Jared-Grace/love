@@ -18,6 +18,11 @@ import { browser_is } from "./browser_is.mjs";
 import { json_to } from "./json_to.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function http_generic(url, options) {
+  "Fetches an address and answers the raw bytes that came back, from a browser or from node alike.";
+  "Bytes are the answer rather than text or a parsed reading of them, because the callers want different things - a picture, a font, a page of JSON - and every one of those can be had from the bytes while none of them can be had from another's reading.";
+  "Which half runs is decided by where this is running, not by what the caller asked for. A browser has fetch and no way to open a socket; node has sockets and, for a long time, no fetch worth relying on. So the two halves do the same job by different means and the caller is spared knowing which.";
+  "The browser half runs inside the shared loading mark, gives up after eight seconds, and tries three times. A stalled connection is the reason for the ceiling: a fetch with no ceiling never settles at all, so the loading mark never comes down and the page looks broken for good, where a fresh attempt on a new connection nearly always succeeds.";
+  "The node half waits its turn before asking unless the caller says not to, so that a sweep over hundreds of addresses does not arrive as a flood, and it refuses anything the far end did not answer with a success.";
   let method = options.method || "GET";
   let body = options.body || null;
   let b = browser_is();
