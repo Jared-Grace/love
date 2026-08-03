@@ -48,6 +48,18 @@ export function functions_names_in_text_cases() {
       why: "a name is lower case, and a capitalised word opening a sentence is a different word. Matching loosely here would let ordinary prose put a function into an answer it never appeared in",
     },
     {
+      text: "and each of these is folded the wrong way round",
+      known: ["and", "each", "gate_named_this"],
+      names: [],
+      why: "a sentence made of ordinary words, two of which this repo also happens to have functions for. Answering with them is how a gate complaining about one file came to read as a complaint about every app at once: every bundle carries the small words, so every intersection hits",
+    },
+    {
+      text: "and each of these: gate_named_this",
+      known: ["and", "each", "gate_named_this"],
+      names: ["gate_named_this"],
+      why: "the same writing carrying both kinds, which is the ordinary case - a gate says a sentence and names an offender inside it. Only the offender comes back, and dropping the small words does not cost the answer anything it was using",
+    },
+    {
       text: "$gate_named_this",
       known: ["gate_named_this"],
       names: [],
