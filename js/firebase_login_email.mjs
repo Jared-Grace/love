@@ -23,5 +23,5 @@ export function firebase_login_email(context, auth) {
     return v;
   }
   html_on_enter(input_password, login);
-  let component = app_shared_button_wide(root, "Login", login);
+  app_shared_button_wide(root, "Login", login);
 }
