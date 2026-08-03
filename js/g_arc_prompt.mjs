@@ -13,7 +13,6 @@ import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
-  "Two copies of one list drift apart. Coverage would then be counted against a set the prompt never offered, and nothing would report it.";
   "The turn target is one number.";
   ("It is drawn for this person by ", fn_name("g_arc_lengths"), ".");
   ("Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
