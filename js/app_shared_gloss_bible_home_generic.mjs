@@ -43,7 +43,7 @@ export async function app_shared_gloss_bible_home_generic(
   let passage = property_get(first2, "passage");
   let prop = "p";
   let p = list_last_property(verses, prop);
-  let h = html_hr(p);
+  html_hr(p);
   let texts = null;
   if (text_use) {
     let first = property_list_first(passage, "texts");
@@ -66,13 +66,13 @@ export async function app_shared_gloss_bible_home_generic(
       html_span_nbsp(div3);
       let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
       html_font_color_set_white(span2);
-      let span4 = html_span_space(div3);
+      html_span_space(div3);
     }
     each(explains, lambda2);
   }
   let word_property = app_shared_gloss_bible_generate_generic_word();
   function lambda(e) {
-    let component2 = html_hr(p);
+    html_hr(p);
     let div2 = html_div(p);
     let word = property_get(e, word_property);
     let gloss = property_get(e, "gloss");
@@ -96,8 +96,8 @@ export async function app_shared_gloss_bible_home_generic(
     await scroll(verses);
   }
   let text = emoji_arrow_up();
-  let component = app_shared_button_wide(p, text, lambda6);
-  let component22 = html_hr(p);
+  app_shared_button_wide(p, text, lambda6);
+  html_hr(p);
   return;
   async function scroll(verses_inner) {
     let p2 = list_first_property(verses_inner, "p_verse");
