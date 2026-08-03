@@ -16,7 +16,7 @@ export async function sandbox() {
   await function_current_selects_empty();
   ("current_commands: ");
   {
-    let r = await function_node_select_args(
+    await function_node_select_args(
       fn_name("js_find_function_type_name_starts_with"),
       "ab",
     );
