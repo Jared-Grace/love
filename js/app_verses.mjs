@@ -136,12 +136,12 @@ export async function app_verses(context) {
   );
   let left = emoji_arrows_crossed();
   let text = text_combine(left, " New verses");
-  let reroll_button = app_shared_button(card3, text, reroll);
+  app_shared_button(card3, text, reroll);
   app_shared_text_body(
     card3,
     "If the copy did not work, this button will gently copy them again.",
   );
-  let copy_button = app_shared_button_copy(card3, copy);
+  app_shared_button_copy(card3, copy);
   let card4 = app_shared_container_blue(content);
   card4_refresh();
   app_shared_contact_button(content, app_verses);
@@ -282,6 +282,6 @@ export async function app_verses(context) {
       list_add_multiple(lines, texts);
     }
     each(verse_groups, group_each);
-    let joined = await list_join_newline_2_copy(lines);
+    await list_join_newline_2_copy(lines);
   }
 }
