@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { functions_selects_unsafe_names } from "./functions_selects_unsafe_names.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { selects_unsafe_baseline_path } from "./selects_unsafe_baseline_path.mjs";
+import { functions_selects_unsafe_baseline_path } from "./functions_selects_unsafe_baseline_path.mjs";
 export async function functions_selects_unsafe_gate_run() {
   "Gate: the set of transforms that can be handed a written line of code does not";
   "grow.";
@@ -16,7 +16,7 @@ export async function functions_selects_unsafe_gate_run() {
   "opening is made on purpose and by somebody. One that goes away fails too, so";
   "the list can only shrink.";
   let names = await functions_selects_unsafe_names();
-  let path = selects_unsafe_baseline_path();
+  let path = functions_selects_unsafe_baseline_path();
   await baseline_names_gate_generic(
     names,
     path,
