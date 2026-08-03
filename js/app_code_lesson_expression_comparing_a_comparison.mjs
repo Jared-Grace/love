@@ -137,13 +137,28 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let operators = js_operators_comparison();
     app_code_operators_word_list(line, operators, "or", operator_symbol);
   }
-  function worked_example(root, code, value, operator, right_value) {
-    "one worked line taken a step at a time: what the comparison alone answers, then the whole line with that answer standing in its place, then what that comes to";
-    "Three lines rather than one because the whole move this lesson teaches happens in the middle line - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust";
-    "The last line is worked out by the operator's own function rather than typed, so the example cannot say something the code would not do";
+  function replacing(root, code, value) {
+    "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
+    "The order caveat points back to a rule the learner already has - we do * before + - so replacing in order is a rule they are recognising rather than one they are taking on";
     let card = app_code_container_light_blue(root);
     let answer = keyword(value);
     html_div_cycle_code(card, ["", code, " is ", answer]);
+    html_div_cycle_code(card, ["So we can replace ", code, " with ", answer]);
+    let times = js_operator_asterisk_symbol();
+    let plus = js_operator_plus_symbol();
+    html_div_cycle_code(card, [
+      "We replace in order, like ",
+      times,
+      " before ",
+      plus,
+    ]);
+  }
+  function worked_example(root, code, value, operator, right_value) {
+    "one line walked through a replacement at a time: the line we start with, the comparison being swapped for its answer, what that leaves, what that comes to, and the whole line's answer";
+    "Five lines rather than one because the move this lesson teaches happens in the middle - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust";
+    "The last two lines are worked out by the operator's own function rather than typed, so the example cannot say something the code would not do";
+    let card = app_code_container_light_blue(root);
+    let answer = keyword(value);
     let symbol = property_get(operator, "operator");
     let right_code = keyword(right_value);
     let whole = text_combine_multiple([code, " ", symbol, " ", right_code]);
@@ -154,11 +169,14 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       " ",
       right_code,
     ]);
-    html_div_cycle_code(card, ["So ", whole, " is ", stood_in]);
     let fn = property_get(operator, "fn");
     let ended = fn(value, right_value);
     let ended_code = keyword(ended);
+    html_div_cycle_code(card, ["So for ", whole]);
+    html_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
+    html_div_cycle_code(card, ["And then we have ", stood_in]);
     html_div_cycle_code(card, ["And ", stood_in, " is ", ended_code]);
+    html_div_cycle_code(card, ["So ", whole, " is ", ended_code]);
   }
   function above(root) {
     "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the left-to-right rule, then two worked examples taken a step at a time";
