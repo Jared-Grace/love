@@ -14,7 +14,7 @@ export async function videos_join(paths_videos, path_output) {
     let mapped = list_map(paths_videos, lambda4);
     let contents = list_join_newline(mapped);
     await file_overwrite(temp_path, contents);
-    let result2 = await file_parent_exists_ensure(path_output);
+    await file_parent_exists_ensure(path_output);
     await command_line(
       text_combine_multiple([
         "ffmpeg -f concat -safe 0 -i ",
@@ -24,5 +24,5 @@ export async function videos_join(paths_videos, path_output) {
       ]),
     );
   }
-  let result = await file_temp(lambda3);
+  await file_temp(lambda3);
 }
