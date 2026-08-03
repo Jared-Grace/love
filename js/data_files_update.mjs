@@ -5,6 +5,7 @@ import { data_path } from "./data_path.mjs";
 import { data_save } from "./data_save.mjs";
 import { data_all } from "./data_all.mjs";
 export async function data_files_update() {
+  "Switched off at the top, so running it does nothing at present; the work standing below the return is what it did, kept for whoever decides to turn it back on.";
   return;
   let d_path = data_path();
   var d = await data_all(d_path);
