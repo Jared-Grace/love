@@ -1,6 +1,6 @@
+import { hash_key_doors } from "./hash_key_doors.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_hash_object_names } from "./js_hash_object_names.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
