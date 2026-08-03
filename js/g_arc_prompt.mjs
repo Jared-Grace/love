@@ -62,13 +62,14 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   ]);
   let b = js_boolean_values();
   let servant = list_concat_single_right(b, "freed");
+  const children_count = ['none', 'one', 'multiple'];
   let json = json_format_to({
     gender: genders,
     age: ["teenager", "young adult", "middle-aged", "older", "elderly"],
     marriage: ["single", "betrothed", "married", "widowed"],
     sons:b,
-    daughters:b,
-    master: b,
+    daughters:children_count,
+    master: children_count,
     servitude:["none", "master", "servant", "freed"],
     government: ["civilian", "official", "soldier"],
   });
