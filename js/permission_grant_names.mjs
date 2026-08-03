@@ -830,6 +830,8 @@ export function permission_grant_names() {
   let spelled817 = fn_name("storage_key_seams_durable");
   let spelled818 = fn_name("storage_key_seams_word_misplaced");
   let spelled819 = fn_name("storage_local_key_words_path");
+  let spelled820 = fn_name("qa_commit_named_report");
+  let spelled821 = fn_name("function_prose_remove");
   let names = [
     spelled,
     spelled2,
@@ -1650,6 +1652,8 @@ export function permission_grant_names() {
     spelled817,
     spelled818,
     spelled819,
+    spelled820,
+    spelled821,
   ];
   return names;
 }
