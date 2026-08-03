@@ -249,6 +249,7 @@ export function qa_gates() {
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
     functions_names_in_text_gate_run,
+    qa_gate_failed_sections_gate_run,
     qa_gate_said_advice_remove_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,

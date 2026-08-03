@@ -7,6 +7,8 @@ export function examples_notes() {
   let f_name2 = fn_name("fn_name");
   let notes = {
     example_atomize_nested_call: "flatten a nested call — simplest transform",
+    example_atomize_loop_header_left:
+      "the one place the same flattening is not the same code — a loop header, asked again every time round",
     example_if_test_set_positive: "set an if-condition — a single slot edit",
     example_return_argument_set_positive:
       "set a return's argument — same setter shape, another node",
@@ -194,6 +196,8 @@ export function examples_notes() {
       "finish a generated call in one command - the loop that ran after every one of them",
     example_shadowing_rename_in:
       "naming the holder supplies the one judgment the plain shadowing rename refuses to make",
+    example_shadowing_assign:
+      "the other way to end a hiding — write the outer binding instead of renaming the inner one, for when the hiding was itself the bug",
     example_builtin_calls_rewrite:
       "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
   };
