@@ -39,7 +39,7 @@ export async function function_cache(f_name) {
     );
     await js_function_declaration_asyncify_params_from(ast, declaration_call);
   }
-  let v = await function_new_open_transform(f_name_cache, lambda);
+  await function_new_open_transform(f_name_cache, lambda);
   if (args_none) {
     let v2 = await function_run(f_name_cache, []);
     return v2;
