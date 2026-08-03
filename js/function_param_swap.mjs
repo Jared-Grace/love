@@ -2,6 +2,7 @@ import { list_swap_at } from "./list_swap_at.mjs";
 import { function_param_index } from "./function_param_index.mjs";
 import { function_params_new_generic } from "./function_params_new_generic.mjs";
 export async function function_param_swap(f_name, param_name_a, param_name_b) {
+  "Exchanges the places of two of a function's parameters, moving every call's arguments to match.";
   let index_a = null;
   let index_b = null;
   await function_params_new_generic(
