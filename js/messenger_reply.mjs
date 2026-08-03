@@ -40,14 +40,14 @@ export async function messenger_reply() {
     let unreplied = property_get(v2, "unreplied");
     let message = property_path_get_2(v2, "mine_last", "message");
     let mine_last_lines = text_split_newline(message);
-    let mine_last_lines_last = list_last(mine_last_lines);
+    list_last(mine_last_lines);
     let property_name = messenger_reply_messages_message();
     let joined = list_map_property_join_space(unreplied, property_name);
     async function lambda(messages2) {
       property_set(messages2, joined, 1);
     }
     await messenger_reply_messages_transform(lambda);
-    let answer = await command_line_read_empty();
+    await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
   return;
