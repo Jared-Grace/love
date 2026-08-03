@@ -1,4 +1,4 @@
-import { list_concat } from "./list_concat.mjs";
+import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { js_boolean_values } from "./js_boolean_values.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
@@ -61,7 +61,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "turns.",
   ]);
   let b = js_boolean_values();
-  let servant = list_concat_single_right(b, 'freed');
+  let servant = list_concat_single_right(b, "freed");
   let json = json_format_to({
     gender: genders,
     age: "13-80",
