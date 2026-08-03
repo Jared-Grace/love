@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -6,7 +7,6 @@ import { list_get_or_null } from "./list_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { number_is } from "./number_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_text_combine_number_calls(ast) {
   "Every place this file joins text to a plain number written out on the spot, handed back as the calls themselves.";
@@ -21,8 +21,7 @@ export function js_text_combine_number_calls(ast) {
     if (not(plain)) {
       return;
     }
-    let called = property_get(callee, "name");
-    let joining = equal(called, joiner);
+    let joining = property_equals(callee, "name", joiner);
     if (not(joining)) {
       return;
     }
