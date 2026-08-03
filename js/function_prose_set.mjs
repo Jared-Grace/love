@@ -35,7 +35,6 @@ export async function function_prose_set(f_name, position, sentence) {
     let expression = property_get(written, "expression");
     property_set(statement, "expression", expression);
   }
-  let output = await function_transform(f_name, lambda);
-  await function_auto(f_name);
+  let output = await function_transform_auto(f_name, lambda);
   return output;
 }

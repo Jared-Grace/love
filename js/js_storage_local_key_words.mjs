@@ -1,3 +1,8 @@
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
+import { js_literal_value_try } from "./js_literal_value_try.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { js_storage_local_key_scan } from "./js_storage_local_key_scan.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
@@ -10,6 +15,7 @@ export function js_storage_local_key_words(ast, seams) {
   "A stored key here is the owning function's name with a word after it. The name half is watched already, because a rename moves it and a rename is a command anybody may run. This is the other half, and it moves for a different reason: somebody reads the line, thinks of a better word for the setting, and types it. The line still compiles, every gate over code stays green, and every reader from then on looks under a key nothing was ever written to.";
   "Only a word written out is collected. A word spelled as a reference to a function is that function's name, which the record of published names already holds, and counting it twice would make a rename fail two gates saying the same thing.";
   "Which calls to read is handed in, the same list the name reading is given, so a word written at a front door is reached where it is actually written rather than where it is finally stored.";
+  "The word is looked for one step back as well as at the call itself. It is often set on the line above and handed over as a variable, and a reading that stopped at the argument saw a variable, said nothing, and left the word watched by nobody - which is what had happened to the id every message a person sends is filed under. The same reading of bucket folders had already learned this; this one had not.";
   arguments_assert(arguments, 2);
   let found = [];
   function collect(node) {
@@ -22,6 +28,18 @@ export function js_storage_local_key_words(ast, seams) {
     if (written) {
       let word = js_literal_value_get(word_node);
       list_add(found, word);
+      return;
+    }
+    let variable = js_identifier_name_try(word_node);
+    let plain = not_equal(variable, null);
+    if (not(plain)) {
+      return;
+    }
+    let source = js_name_set_from_node_try(ast, variable);
+    let word_above = js_literal_value_try(source);
+    let set_here = not_equal(word_above, null);
+    if (set_here) {
+      list_add(found, word_above);
     }
   }
   let unique = js_storage_local_key_scan(ast, seams, collect, found);

@@ -15,15 +15,8 @@ export function js_statement_find_name_inner(ast, name) {
   ("The twin of the reader that climbs to the top of the body, and the difference is the whole point. Asking for the line at the top of the body addresses the loop, which is right when the span is meant to take the loop whole; asking for the nearest line addresses something written inside it, which is the only way to cut a loop's own contents down. A long function whose size is folded inside a loop could be reached by neither the span reader that climbs nor the reader that lifts a closure, because a loop is neither.");
   ("The line has to be one of a list of lines - a block's own contents - and not a lone line hanging off a branch written without braces. A span is cut out of a run of lines, so a line standing on its own is not a place a span can begin.");
   ("Mentions outside the body do not count, for the same reason as its twin: a called function's earliest mention in the file is the line that imports it.");
-  let mentions = js_identifiers_named(ast, name);
-  let body = js_flo_body(ast);
-  let found = null;
-  for (let mention of mentions) {
-    let stack = js_node_to_visitor_stack(ast, mention);
-    let inside = list_includes(stack, body);
-    if (not(inside)) {
-      continue;
-    }
+  ("All of the searching is held one name down, and the only thing said here is which node of the stack over the word to take: the innermost one that is a line and stands in a list of lines.");
+  function pick(stack) {
     let nearest = list_copy_reverse(stack);
     for (let node of nearest) {
       let statement_is = js_statement_node_is(node);
@@ -33,15 +26,11 @@ export function js_statement_find_name_inner(ast, name) {
       let container = list_previous(stack, node);
       let listed = list_is(container);
       if (listed) {
-        found = node;
-        break;
+        return node;
       }
     }
-    break;
+    return null;
   }
-  null_not_is_assert_json(found, {
-    hint: "no line of this function's body mentions that word. Would you like to check the spelling, or pick a word the function really writes?",
-    name,
-  });
+  let found = js_statement_find_name_generic(ast, name, pick);
   return found;
 }
