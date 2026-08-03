@@ -11,7 +11,7 @@ export async function function_rename_fn_names_check(
     function lambda3(ast) {
       js_fn_name_strings_rename(ast, f_name_before, f_name_after);
     }
-    let waited = await functions_transform_list(value, lambda3);
+    await functions_transform_list(value, lambda3);
   }
   await property_exists_if_async(i, f_name_before, lambda);
 }
