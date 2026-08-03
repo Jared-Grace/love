@@ -199,7 +199,7 @@ export async function app_search_results(context, div_results) {
   let collapse_all_text = text_combine(up, " Collapse all");
   app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
   let left2 = html_button_copy_text();
-  let copy_all = app_shared_button_wide_text_combine(
+  app_shared_button_wide_text_combine(
     div_results,
     left2,
     " all",
