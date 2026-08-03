@@ -1,3 +1,17 @@
+import { repo_love_name } from "./repo_love_name.mjs";
+import { repo_functions_code } from "./repo_functions_code.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_text_includes } from "./property_text_includes.mjs";
+import { function_ast } from "./function_ast.mjs";
+import { js_marker_call_words } from "./js_marker_call_words.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_filter_property } from "./list_filter_property.mjs";
+import { not } from "./not.mjs";
 export async function literals_marked_both_ways() {
   "Every word this repo marks both ways at once - frozen in one place and spelled as a reference in another - as {word, frozen_in, referenced_in}. Read-only.";
   "The two markers mean opposite things about the same word. Frozen says the word only looks like a name, so a rename must walk straight past it; a reference says the word is a name, so a rename must carry it along. A word wearing both is a flat contradiction, and one of the two sites is wrong.";
@@ -12,7 +26,11 @@ export async function literals_marked_both_ways() {
   let frozen_sites = [];
   for (let entry of entries) {
     let candidate = property_get(entry, "name");
-    let freezes = property_text_includes(entry, "code", "text_frozen(");
+    let freezes = property_text_includes(
+      entry,
+      "code",
+      text_combine_multiple([fn_name("text_frozen"), "("]),
+    );
     if (not(freezes)) {
       continue;
     }
@@ -29,7 +47,11 @@ export async function literals_marked_both_ways() {
   let words_frozen = list_map_property_unique(frozen_sites, "word");
   let conflicts = [];
   for (let word of words_frozen) {
-    let needle = text_combine_multiple(['fn_name("', word, '")']);
+    let needle = text_combine_multiple([
+      text_combine_multiple([fn_name("fn_name"), '("']),
+      word,
+      '")',
+    ]);
     let referenced_in = [];
     for (let entry of entries) {
       let candidate = property_get(entry, "name");
@@ -49,7 +71,7 @@ export async function literals_marked_both_ways() {
     if (clean) {
       continue;
     }
-    let same_word = list_filter_property_equals(frozen_sites, "word", word);
+    let same_word = list_filter_property(frozen_sites, "word", word);
     let frozen_in = list_map_property_unique(same_word, "f_name");
     let conflict = {
       word,
