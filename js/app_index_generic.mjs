@@ -19,11 +19,11 @@ export function app_index_generic(context, entries) {
       open(fn);
     }
     let card = app_shared_container_blue(root);
-    let component = app_shared_button_wide(card, without, lambda2);
+    app_shared_button_wide(card, without, lambda2);
     let text = property_get(entry, "text");
     let has_text = text_empty_not_is(text);
     if (has_text) {
-      let div = html_div_text_centered(card, text);
+      html_div_text_centered(card, text);
     }
   }
   each(entries, lambda3);
