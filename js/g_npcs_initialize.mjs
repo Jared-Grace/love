@@ -1,4 +1,4 @@
-import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
+import { list_without } from "./list_without.mjs";
 import { property_transform_multiple } from "./property_transform_multiple.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
@@ -15,9 +15,10 @@ import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
   let genders = g_genders_get(player_img);
   function lambda2(imgs) {
-    $r,list_without(imgs, item);
+    let filtered = list_without(imgs, item);
+    return filtered;
   }
-  property_transform_multiple(list, 'imgs', lambda2);
+  property_transform_multiple(list, "imgs", lambda2);
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
