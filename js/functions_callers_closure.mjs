@@ -2,8 +2,8 @@ import { text_split_comma } from "./text_split_comma.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is_not } from "./list_empty_is_not.mjs";
-
+import { list_pop } from "./list_pop.mjs";
+import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
 export async function functions_callers_closure(names_comma) {
   "every function that can reach any of these through a chain of calls, however long the chain";
   "who calls a function answers one step. what a change to it can touch is every step, and working that out by grepping one ring and then grepping the ring around that is what a caller does by hand until somebody names it - which was three greps and a guess about when to stop.";
@@ -15,11 +15,11 @@ export async function functions_callers_closure(names_comma) {
   for (let seed of seeds) {
     list_add(pending, seed);
   }
-  while (list_empty_is_not(pending)) {
-    let name = pending.pop();
+  async function step() {
+    let name = list_pop(pending);
     let seen = list_includes(found, name);
     if (seen) {
-      continue;
+      return;
     }
     list_add(found, name);
     let callers = await data_identifiers_search_names(name);
@@ -31,5 +31,6 @@ export async function functions_callers_closure(names_comma) {
       list_add(pending, caller);
     }
   }
+  await list_empty_not_is_while_async(pending, step);
   return found;
 }
