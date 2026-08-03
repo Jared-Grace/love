@@ -1,3 +1,4 @@
+import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
@@ -8,9 +9,6 @@ import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { functions_names } from "./functions_names.mjs";
-import { js_module_binding_names } from "./js_module_binding_names.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 export async function js_function_nested_lift_reading(ast, declaration) {
@@ -29,10 +27,7 @@ export async function js_function_nested_lift_reading(ast, declaration) {
   let stray_at = list_map_property(stray, "start");
   let unbound = js_declaration_names_unbound(declaration);
   list_remove(unbound, name_old);
-  let other = await functions_names();
-  ("What the file binds at its outermost level is subtracted alongside the repo's own names, and for the same reason: the function is about to land at that level, so those are names it can still reach.");
-  let here = js_module_binding_names(ast);
-  let reachable = list_concat(other, here);
+  let reachable = await js_module_names_reachable(ast);
   let closed = list_difference(unbound, reachable);
   let written = js_assigned_names(declaration);
   let written_closed = list_intersection(closed, written);
