@@ -10,10 +10,10 @@ import { list_get } from "./list_get.mjs";
 import { mod } from "./mod.mjs";
 import { list_remove_end } from "./list_remove_end.mjs";
 import { list_size } from "./list_size.mjs";
-import { g_genders_names } from "./g_genders_names.mjs";
+import { g_genders_get } from "./g_genders_get.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
-  let genders = g_genders_names();
+  let genders = g_genders_get();
   function lambda2(imgs) {
     let filtered = list_without(imgs, player_img);
     return filtered;
