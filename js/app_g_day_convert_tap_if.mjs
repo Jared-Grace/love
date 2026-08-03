@@ -22,8 +22,8 @@ export async function app_g_day_convert_tap_if(div_map, npc) {
   }
   let target = property_get(state, "target");
   if (null_is(target)) {
-    let chosen = list_includes(talkable, npc);
-    if (not(chosen)) {
+    let chosen_not = list_includes_not(talkable, npc);
+    if (chosen_not) {
       return false;
     }
     await app_g_day_convert(div_map, npc);
