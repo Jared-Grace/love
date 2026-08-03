@@ -1,7 +1,6 @@
 {
  "known": [
   "function_dependencies_single",
-  "function_new",
   "function_transform_single",
   "function_dependency_path",
   "app_shared_dev_build",
@@ -26,7 +25,6 @@
   "function_alias_add",
   "function_alias_replace",
   "function_name_to_path_relative",
-  "function_read",
   "html_public_from_latest",
   "html_update_dev",
   "html_update_dev_webpack",
