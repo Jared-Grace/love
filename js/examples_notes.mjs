@@ -198,6 +198,8 @@ export function examples_notes() {
       "naming the holder supplies the one judgment the plain shadowing rename refuses to make",
     example_shadowing_assign:
       "the other way to end a hiding — write the outer binding instead of renaming the inner one, for when the hiding was itself the bug",
+    example_let_add_module_binding:
+      "the same hiding seen from the writing end — a name bound at the top of the file is bound, so no let is added over the line that fills it",
     example_builtin_calls_rewrite:
       "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
   };
