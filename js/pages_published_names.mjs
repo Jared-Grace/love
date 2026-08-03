@@ -10,6 +10,6 @@ export async function pages_published_names() {
   arguments_assert(arguments, 0);
   let folder = folder_public();
   let htmls = await folder_read_htmls(folder);
-  let names = list_sorted(htmls);
+  let names = list_sort_text(htmls);
   return names;
 }
