@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_ast_offenders_generic } from "./functions_ast_offenders_generic.mjs";
+import { js_prose_sequence_sentences } from "./js_prose_sequence_sentences.mjs";
 export async function functions_prose_sequence() {
   arguments_assert(arguments, 0);
   ("Audit: every function in this repo that explains itself in sentences the reader which gathers explanations cannot see, each named beside the sentences it is hiding.");
