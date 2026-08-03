@@ -8,7 +8,7 @@ export async function bible_interlinear_verses_upload() {
     async function lambda5(verse) {
       await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
     }
-    let waited = await list_map_unordered_async(verses, lambda5);
+    await list_map_unordered_async(verses, lambda5);
   }
   await each_async(chapters, lambda2);
 }
