@@ -21,7 +21,6 @@ import { list_map } from "./list_map.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
 import { each } from "./each.mjs";
-
 export async function js_selects_function_lift(ast, selects, f_name_new) {
   arguments_assert(arguments, 3);
   ("Move a function written inside another one out to stand on its own, under a name you give it. Everything it reached out of itself for becomes a parameter, and every place it was called is handed those same things.");
@@ -36,7 +35,9 @@ export async function js_selects_function_lift(ast, selects, f_name_new) {
   list_add(callees, id);
   let mentions = js_identifiers_named(ast, name_old);
   let stray = list_difference(mentions, callees);
-  list_empty_is_assert_json(stray, {
+  ("The places are reported as how far into the file they are written rather than as the nodes themselves. A refusal that printed the nodes would print a tree thousands of lines deep, and the one thing the reader needs - where to look - would be somewhere inside it.");
+  let stray_at = list_map_property(stray, "start");
+  list_empty_is_assert_json(stray_at, {
     hint: "this function is handed on as a value somewhere rather than called, so there is no call to hand its closed-over names to. Would you like to give the value's receiver those names another way first, or lift a function it holds instead?",
     name_old,
   });
