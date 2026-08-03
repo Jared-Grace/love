@@ -5,6 +5,6 @@ export async function file_exists_ensure_json(file_path) {
   let n = await file_exists_not(file_path);
   if (n) {
     let json = json_empty();
-    let r = await file_write(file_path, json);
+    await file_write(file_path, json);
   }
 }
