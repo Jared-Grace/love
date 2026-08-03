@@ -55,7 +55,7 @@ export function graph_search_breadth_first(
           node: neighbor,
           data,
           previous: q_current,
-          depth: text_combine(depth, 1),
+          depth: add(depth, 1),
         });
       }
     }
