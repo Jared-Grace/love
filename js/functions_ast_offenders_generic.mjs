@@ -21,6 +21,9 @@ export async function functions_ast_offenders_generic(reader, found_key) {
     let found = reader(ast);
     return found;
   }
-  let offenders = await functions_code_offenders_generic(code_reader, found_key);
+  let offenders = await functions_code_offenders_generic(
+    code_reader,
+    found_key,
+  );
   return offenders;
 }
