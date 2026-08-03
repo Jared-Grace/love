@@ -2,7 +2,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { hash_key_doors } from "./hash_key_doors.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { function_ast } from "./function_ast.mjs";
@@ -29,8 +28,7 @@ export async function hash_key_doors_wrapped() {
     if (uncalled) {
       continue;
     }
-    let names = object_property_names(callers);
-    for (let name of names) {
+    for (let name of callers) {
       let itself = equal(name, door);
       if (itself) {
         continue;
