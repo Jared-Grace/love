@@ -14,6 +14,7 @@ import { null_is } from "./null_is.mjs";
 import { list_not_is } from "./list_not_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 export function js_declaration_unused_to_expression(ast) {
+  "Takes out a name that is declared and then never read, keeping whatever the declaration was doing when that could matter, so nothing that ran stops running.";
   function lambda(v) {
     let node = property_get(v, "node");
     let declaration = js_declare_single(node);
