@@ -14,6 +14,7 @@ import { html_name_to_path_dev } from "./html_name_to_path_dev.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 export async function html_update_dev(name) {
+  "Writes an app's dev page to load its source directly, module by module, rather than through a bundle.";
   let v2 = await app_shared_name_search_info(name);
   name = property_get(v2, "a_name");
   let file_path = html_name_to_path_dev(name);
@@ -21,7 +22,8 @@ export async function html_update_dev(name) {
   let path = await function_name_repo_path_combine(a_name, file_path);
   let name_prefixed = await app_shared_name_main(name);
   let call = js_code_call_app_shared_context_initialize(name_prefixed);
-  let imports = [name_prefixed, fn_name("app_shared_context_initialize")];
+  let f_name = fn_name("app_shared_context_initialize");
+  let imports = [name_prefixed, f_name];
   let mapped =
     await function_name_to_path_import_code_root_multiple_map(imports);
   list_add(mapped, call);
