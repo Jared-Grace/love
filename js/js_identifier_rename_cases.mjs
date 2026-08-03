@@ -2,13 +2,9 @@ import { text_frozen } from "./text_frozen.mjs";
 export function js_identifier_rename_cases() {
   "Pieces of code, a name to move and the name to move it to, each paired with what the code should read as afterwards";
   "Every rename in the repo comes through here, so what this pass touches is what a rename touches. Renaming a function moves its name in every file that mentions it, and a file mentioning it as the word after a dot was having that word moved too. The object being asked then answers nothing rather than complaining, so the file goes on running and quietly does the wrong thing";
-  ("Two of the cases are the ones that had actually gone wrong. ",
-    text_frozen("abs"),
-    " wraps Math.abs and ",
-    text_frozen("log"),
-    " shares its word with console.log in seventy-two files, so moving either name rewrote the word this repo does not own");
-  ("Each piece of code is frozen text. The words inside are ordinary repo names, and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests");
-  ("The two words above are frozen for the same reason the code below them is, though they are only being talked about. Each of them is what a case is made of, and a case is about the word it was written with; spelled as a reference, a rename of either function would move the word here and leave it standing in the case underneath, so the sentence saying which word went wrong would name a different one than the case testing it");
+  ("Two of the cases are the shape that had actually gone wrong. A function here was named the same word as a method somebody else owns - Math.abs, and console.log in seventy-two files - so moving that function's name rewrote a word this repo does not own, and the object then answered nothing rather than complaining");
+  ("Those two cases are written with words this repo owns no function by, though the fault was found with words it does. Nothing is lost by that: the pass being tested does not know which words name functions here, so a word after a dot is left alone or is not, whatever it is spelled. What is gained is that the words below address only what they are, so no word here is frozen in one place while standing as a reference in another - which is a contradiction a rename can only half obey, and one the repo refuses to record any more of");
+  ("Each piece of code is frozen text. The words inside look like names, and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests");
   let cases = [
     {
       name: "a value the file reads takes the new name wherever it is read",
@@ -24,12 +20,12 @@ export function js_identifier_rename_cases() {
     {
       name: "a word after a dot belongs to whatever is being asked and stays where it is",
       code: text_frozen(
-        "export function f(n) {\n  let a = Math.abs(n);\n  return a;\n}\n",
+        "export function f(n) {\n  let a = Math.trunc(n);\n  return a;\n}\n",
       ),
-      from: text_frozen("abs"),
-      to: text_frozen("absolute"),
+      from: text_frozen("trunc"),
+      to: text_frozen("truncate"),
       renamed: text_frozen(
-        "export function f(n) {\n  let a = Math.abs(n);\n  return a;\n}\n",
+        "export function f(n) {\n  let a = Math.trunc(n);\n  return a;\n}\n",
       ),
     },
     {
