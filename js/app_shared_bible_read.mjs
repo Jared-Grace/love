@@ -117,9 +117,12 @@ export async function app_shared_bible_read(context, verse_action) {
     " to save that passage",
   ]);
   let hash = html_hash_object_get();
-  let c = property_get_or(hash, app_shared_bible_chapter_hash_key(), "");
-  let b = property_get_or(hash, app_shared_bible_book_hash_key(), "");
-  let ref = property_get_or(hash, app_shared_bible_reference_hash_key(), "");
+  let key = app_shared_bible_chapter_hash_key();
+  let c = property_get_or(hash, key, "");
+  let key2 = app_shared_bible_book_hash_key();
+  let b = property_get_or(hash, key2, "");
+  let key3 = app_shared_bible_reference_hash_key();
+  let ref = property_get_or(hash, key3, "");
   let ref_line = text_replace(ref, "+", " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
@@ -173,7 +176,8 @@ export async function app_shared_bible_read(context, verse_action) {
       chapter_code = ref_chapter;
     }
   }
-  let v_hash = property_get_or(hash, app_shared_bible_verse_hash_key(), "");
+  let key4 = app_shared_bible_verse_hash_key();
+  let v_hash = property_get_or(hash, key4, "");
   async function chapter_previous() {
     await app_shared_bible_change(
       chapter_code,
@@ -196,7 +200,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let verse_rows = [];
   function persist_selection() {
     let v = list_join(verse_numbers_chosen, "-");
-    html_hash_property_set(app_shared_bible_verse_hash_key(), v);
+    let property_name = app_shared_bible_verse_hash_key();
+    html_hash_property_set(property_name, v);
   }
   function selection_last() {
     if (list_empty_is(verse_numbers_chosen)) {
@@ -210,7 +215,8 @@ export async function app_shared_bible_read(context, verse_action) {
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
-      let verse_numbers = list_map_property(primary_verses, verse_number_key());
+      let property_name2 = verse_number_key();
+      let verse_numbers = list_map_property(primary_verses, property_name2);
       let first = list_first(verse_numbers);
       let last = list_last(verse_numbers);
       let endpoints = equal(first, last) ? [first] : [first, last];
@@ -241,7 +247,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let show_language_names = list_multiple_is(languages_verses);
   let primary_verses = list_last_property(languages_verses, "verses");
   async function render_verse(v) {
-    let verse_number_v = property_get(v, verse_number_key());
+    let property_name3 = verse_number_key();
+    let verse_number_v = property_get(v, property_name3);
     let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
     let verse_book_code = ebible_chapter_code_to_book(verse_chapter_code);
     let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
@@ -349,7 +356,8 @@ export async function app_shared_bible_read(context, verse_action) {
       return;
     }
     invoke_multiple(updates);
-    let ordered = list_map_property(verse_rows, verse_number_key());
+    let property_name4 = verse_number_key();
+    let ordered = list_map_property(verse_rows, property_name4);
     let item = list_first(verse_numbers_chosen);
     let index = list_index_of(ordered, item);
     if (greater_than_equal(index, 0)) {
