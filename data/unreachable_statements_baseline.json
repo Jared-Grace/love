@@ -1,0 +1,24 @@
+{
+ "known": [
+  "app_ceb_bible_gloss_generate_book_open",
+  "app_code_lesson_operators_dot_numbers",
+  "app_replace_rule_set_verify",
+  "app_sandbox",
+  "command_line_generic",
+  "data_file_update",
+  "data_files_update",
+  "ebible_languages_add",
+  "ebible_languages_english_each",
+  "ebible_version_upload_refresh_all",
+  "g_sermon_generate_book",
+  "g_sermon_generate",
+  "html_hash_set",
+  "indexeddb_exists",
+  "js_expand_generic",
+  "js_ternary_replace",
+  "karate_tests",
+  "messenger_reply",
+  "sandbox_4",
+  "sandbox_sat"
+ ]
+}
