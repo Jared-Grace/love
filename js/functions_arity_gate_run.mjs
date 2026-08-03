@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { arity_baseline_path } from "./arity_baseline_path.mjs";
+import { functions_arity_baseline_path } from "./functions_arity_baseline_path.mjs";
 import { functions_arity_mismatches } from "./functions_arity_mismatches.mjs";
 export async function functions_arity_gate_run() {
   arguments_assert(arguments, 0);
@@ -18,7 +18,7 @@ export async function functions_arity_gate_run() {
   ("dropped message may have been abandoned on purpose, and a missing argument");
   ("needs somebody to know what belonged there. The list only shrinks.");
   let offenders = await functions_arity_mismatches();
-  let path = arity_baseline_path();
+  let path = functions_arity_baseline_path();
   let r = await baseline_names_gate_generic(
     offenders,
     path,
