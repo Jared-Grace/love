@@ -3,8 +3,8 @@ import { functions_work_size_baseline_path } from "./functions_work_size_baselin
 import { functions_work_oversize_names } from "./functions_work_oversize_names.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function functions_work_size_baseline_write() {
-  ("record which functions already hold more lines of work than the ceiling allows, so the gate can refuse the next one without refusing the ones already here");
-  ("run this after cutting a function down, to shrink the record - never to make a newly grown one green, which is the one thing it must not be used for");
+  "record which functions already hold more lines of work than the ceiling allows, so the gate can refuse the next one without refusing the ones already here";
+  "run this after cutting a function down, to shrink the record - never to make a newly grown one green, which is the one thing it must not be used for";
   let path = functions_work_size_baseline_path();
   let named = await functions_work_oversize_names();
   await baseline_known_growth_assert(
