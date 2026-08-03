@@ -1,3 +1,4 @@
+import { literals_marked_both_ways_gate_run } from "./literals_marked_both_ways_gate_run.mjs";
 import { functions_page_serialized_declined_gate_run } from "./functions_page_serialized_declined_gate_run.mjs";
 import { js_duplicate_elements_cases_gate_run } from "./js_duplicate_elements_cases_gate_run.mjs";
 import { functions_duplicate_elements_gate_run } from "./functions_duplicate_elements_gate_run.mjs";
@@ -254,6 +255,7 @@ export function qa_gates() {
     functions_shadowing_function_gate_run,
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
+    literals_marked_both_ways_gate_run,
     hash_key_literals_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
