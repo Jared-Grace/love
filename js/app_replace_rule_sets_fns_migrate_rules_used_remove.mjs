@@ -21,5 +21,5 @@ export async function app_replace_rule_sets_fns_migrate_rules_used_remove() {
       list_remove(properties, p_existing);
     }
   }
-  let result = await app_replace_rule_sets_fns_transform(lambda);
+  await app_replace_rule_sets_fns_transform(lambda);
 }
