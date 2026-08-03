@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_auto_pending_changed } from "./functions_auto_pending_changed.mjs";
+import { function_auto_checked } from "./function_auto_checked.mjs";
+import { function_auto_pending_is } from "./function_auto_pending_is.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { list_add } from "./list_add.mjs";
 export async function functions_auto_pending_changed_repair() {
   "Runs the canonicalizing pass over exactly the functions being edited that still need it, and says which ones it could not settle.";
   "It finds its own set, so nothing has to be listed for it. That is what makes it safe to run before every commit: asked when there is nothing to do, it does nothing and says so.";
