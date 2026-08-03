@@ -4,11 +4,12 @@ export function js_identifier_rename_cases() {
   "Pieces of code, a name to move and the name to move it to, each paired with what the code should read as afterwards";
   "Every rename in the repo comes through here, so what this pass touches is what a rename touches. Renaming a function moves its name in every file that mentions it, and a file mentioning it as the word after a dot was having that word moved too. The object being asked then answers nothing rather than complaining, so the file goes on running and quietly does the wrong thing";
   ("Two of the cases are the ones that had actually gone wrong. ",
-    fn_name("abs"),
+    text_frozen("abs"),
     " wraps Math.abs and ",
-    fn_name("log"),
+    text_frozen("log"),
     " shares its word with console.log in seventy-two files, so moving either name rewrote the word this repo does not own");
   ("Each piece of code is frozen text. The words inside are ordinary repo names, and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests");
+  ("The two words above are frozen for the same reason the code below them is, though they are only being talked about. Each of them is what a case is made of, and a case is about the word it was written with; spelled as a reference, a rename of either function would move the word here and leave it standing in the case underneath, so the sentence saying which word went wrong would name a different one than the case testing it");
   let cases = [
     {
       name: "a value the file reads takes the new name wherever it is read",
