@@ -137,7 +137,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       return symbol;
     }
     let operators = js_operators_comparison();
-    app_code_operators_word_list(line, operators, "or", operator_symbol);
+    app_code_operators_word_list(line, operators, "and", operator_symbol);
   }
   function replacing(root, code, value) {
     "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
