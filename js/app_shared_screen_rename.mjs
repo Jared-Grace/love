@@ -38,7 +38,7 @@ export async function app_shared_screen_rename(
             );
             property_set(item, "key", key_after);
             async function lambda3() {
-              let result2 = await function_rename_open(
+              await function_rename_open(
                 combined_screen,
                 combined_screen_after,
               );
