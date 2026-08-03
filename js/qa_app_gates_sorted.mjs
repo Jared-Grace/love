@@ -1,3 +1,9 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_intersection } from "./list_intersection.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_includes } from "./list_includes.mjs";
 export function qa_app_gates_sorted(failed, named, reach) {
   "Sorts the gates that were red at one commit into the ones that reach what one app ships and the ones that cannot, from the names alone";
   "This is the whole judgement a deployment turns on, and it is pure: two lists in, two lists out, no gate run and no file read. Its caller has to spend fourteen minutes judging a commit before it can ask anything, which is why every fault in this sorting so far had to be found by hand on a real afternoon rather than by asking it a question. Separated out, it can be asked as many questions as anyone likes.";
