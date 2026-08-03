@@ -16,7 +16,7 @@ import { html_button } from "./html_button.mjs";
 export function app_calendar_paste(context) {
   let root = property_get(context, "root");
   let output = null;
-  let p = html_p_text_multiple(root, [
+  html_p_text_multiple(root, [
     "Click to paste the date/time from Google Calendar to copy",
     "Request date/time for: ",
   ]);
@@ -41,7 +41,7 @@ export function app_calendar_paste(context) {
     let name = property_get(country, "name");
     let flag = property_get(country, "flag");
     let combined = text_combine_multiple([name, " ", flag]);
-    let component = html_button(root, combined, lambda2);
+    html_button(root, combined, lambda2);
     async function lambda2() {
       html_clear(output);
       let lines = null;
