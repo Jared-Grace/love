@@ -1,3 +1,5 @@
+import { js_function_shape_cases_gate_run } from "./js_function_shape_cases_gate_run.mjs";
+import { qa_app_gates_sorted_gate_run } from "./qa_app_gates_sorted_gate_run.mjs";
 import { qa_gate_failed_sections_gate_run } from "./qa_gate_failed_sections_gate_run.mjs";
 import { qa_gate_said_advice_remove_gate_run } from "./qa_gate_said_advice_remove_gate_run.mjs";
 import { functions_work_size_gate_run } from "./functions_work_size_gate_run.mjs";
