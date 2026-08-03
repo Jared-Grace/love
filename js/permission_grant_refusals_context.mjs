@@ -40,6 +40,16 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " is on the guard's deny floor, which runs before the allow decision, so the rule would buy nothing but a guaranteed refusal",
     );
   }
+  ("Everything else here is measured off the call graph and the parameter list, and some functions are unsafe to grant for a reason neither can reach. The remover of dangling allow rules is the case that forced this: it only ever takes an approval away so nothing about escalation is true of it, it declares no arguments so nothing about steering is true of it, and its own prose says outright that a command editing the file which decides what runs unasked has to be seen every time. It was called clean twice in three days and only a reader who opened the file stopped the rule being written.");
+  ("So the author gets a vote beside the measurements. A refusal written in prose is worth no less than one worked out here - it is the same judgment made earlier by somebody with more of the picture - and this is the only kind that can say a grant is unwise where nothing about the code is.");
+  let refused_itself = await function_grant_declined_is(unaliased);
+  if (refused_itself) {
+    list_add(
+      refusals,
+      unaliased +
+        " has asked in its own words never to be handed a standing approval - read what it says before granting it anyway",
+    );
+  }
   ("Membership is read off the call graph rather than off the ending of the name, because the ending is wrong in both directions. It says yes to a book emoji and a bracket, which open nothing and were refused on a reason that was simply untrue of them; and it says nothing about the two openers that do not carry it, so the one tool standing before a rule is written stayed quiet about a function whose rule the gate would then go red over. Both come from the same source now.");
   ("The reason itself is about the environment, not about the seam. It used to say the showing is meaningless here, which was true only while reaching an opener from this seam threw; it prints instead now, so a rule on one would work. What is left is that whether the window appears is read from the environment rather than from the arguments, and a standing rule covers every invocation without being able to say which answer it is approving - which is the same bar this repo already sets for granting at all.");
   let opens = list_includes(openers, unaliased);
