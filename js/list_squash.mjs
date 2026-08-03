@@ -3,6 +3,7 @@ import { list_is } from "./list_is.mjs";
 import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
 export function list_squash(lists) {
+  "One flat list out of lists nested to any depth, so a caller need not know how deeply the pieces were wrapped.";
   function lambda2(la) {
     list_process(lists);
     function list_process(list) {
