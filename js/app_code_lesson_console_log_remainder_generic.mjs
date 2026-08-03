@@ -1,3 +1,4 @@
+import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -20,7 +21,6 @@ import { html_span } from "./html_span.mjs";
 import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
-import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -98,11 +98,8 @@ export function app_code_lesson_console_log_remainder_generic(
       return render;
     }
     let rights = [name_right];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
+    let left2 = app_code_category_operators();
+    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
     return built;
   }
   function remainder_color(remainder) {
