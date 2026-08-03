@@ -36,7 +36,7 @@ export async function git_history_delete(user, repo, f_path, repo_path_used) {
   async function lambda() {
     await command_line_git_folder(repo_folder, "remote remove origin");
   }
-  let r = await catch_null_async(lambda);
+  await catch_null_async(lambda);
   let command_git2 = text_combine_multiple([
     "filter-repo --path ",
     f_path,
