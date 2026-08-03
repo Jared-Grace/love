@@ -6,6 +6,7 @@ import { repo_path_combine } from "./repo_path_combine.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { webpack_dev_chunks_clean } from "./webpack_dev_chunks_clean.mjs";
 export async function webpack_build_dev(search) {
+  "Builds the dev bundle for one app, clearing that app's old chunks first so nothing stale is left beside the new ones.";
   let words_after = [];
   let info = await app_shared_name_search_info(search);
   let repo_name = property_get(info, "repo_name");
