@@ -13,7 +13,8 @@ export function js_query_key_nodes(ast) {
   "What stands there is handed back whole rather than read, because the two things that can stand there are opposites. A word written out is a word published unwatched. A call is a word held by a function, which is the repaired shape, and the question about those is the other one: whether that function has been frozen.";
   "There is one door and the field stands first in it, so this walk is a great deal simpler than the one for the part after the hash - which has two doors and a second shape where the field stands after the object it belongs to. Written as its own reading all the same, because the two ask about different halves of an address and joining them would make every later change to one a change to both.";
   arguments_assert(arguments, 1);
-  let door = fn_name("html_query_property_get");
+  let doors = query_key_doors();
+  let door = list_first(doors);
   let sites = [];
   function lambda(visited) {
     let node = property_get(visited, "node");

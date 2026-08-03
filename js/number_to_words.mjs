@@ -62,8 +62,10 @@ export function number_to_words(num) {
       } else {
         let left = mod(n, 100);
         let right = mod(n, 10);
+        let tens_value = subtract(left, right);
+        let tens = divide(tens_value, 10);
         str = text_combine(
-          b[subtract(left, right)],
+          b[tens],
           mod(n, 10) ? text_combine("-", a[mod(n, 10)]) : "",
         );
         let divided2 = divide(n, 100);

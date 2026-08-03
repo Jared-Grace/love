@@ -1,3 +1,4 @@
+import { text_combine } from "./text_combine.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -156,8 +157,9 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       plus,
     ]);
   }
-  function worked_example(root, code, value, operator, right_value) {
+  function worked_example(root, lead, code, value, operator, right_value) {
     "one line walked through a replacement at a time: the line we start with, the comparison being swapped for its answer, what that leaves, what that comes to, and the whole line's answer";
+    "The lead word is given by the caller because it says where this walkthrough sits in the run of them. The first follows from the rule just stated, so it is So; each one after is another of the same, so it is And. A second walkthrough opening with So would claim to follow from the first, which it does not";
     "Five lines rather than one because the move this lesson teaches happens in the middle - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust";
     "The last two lines are worked out by the operator's own function rather than typed, so the example cannot say something the code would not do";
     let card = app_code_container_light_blue(root);
@@ -175,7 +177,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let fn = property_get(operator, "fn");
     let ended = fn(value, right_value);
     let ended_code = keyword(ended);
-    html_div_cycle_code(card, ["So for ", whole]);
+    let opening = text_combine(lead, " for ");
+    html_div_cycle_code(card, [opening, whole]);
     html_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
     html_div_cycle_code(card, ["And then we have ", stood_in]);
     html_div_cycle_code(card, ["And ", stood_in, " is ", ended_code]);
@@ -208,7 +211,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
     replacing(root, "3 === 5", false);
-    worked_example(root, "3 === 5", false, same, false);
-    worked_example(root, "2 < 5", true, different, true);
+    worked_example(root, "So", "3 === 5", false, same, false);
+    worked_example(root, "And", "2 < 5", true, different, true);
   }
 }
