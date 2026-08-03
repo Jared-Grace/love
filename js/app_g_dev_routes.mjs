@@ -1,3 +1,4 @@
+import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
@@ -179,6 +180,13 @@ export function app_g_dev_routes(div_map) {
     await app_g_view_set(null);
     await app_g_day_conversation_demo();
   }
+  async function characters() {
+    ("the #characters contact sheet: every character sprite the game owns, each turning once all the way round (",
+      fn_name("app_g_characters"),
+      "). a sibling of #design in kind - it shows you what the game is MADE of rather than putting a mechanic under test - and it ships, because a rotation that came out wrong is a thing to check against the deployed art on a phone");
+    await app_g_view_set(null);
+    app_g_characters();
+  }
   async function design() {
     ("the #design reader: every memory note about this game's design, gathered and shown as collapsible cards (",
       fn_name("app_g_design"),
@@ -202,6 +210,7 @@ export function app_g_dev_routes(div_map) {
     dove,
     gratitude,
     pray,
+    characters,
   };
   let local = localhost_is();
   if (local) {
