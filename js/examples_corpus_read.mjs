@@ -13,6 +13,9 @@ import { function_aliases_inverted } from "./function_aliases_inverted.mjs";
 import { example_alias_derive } from "./example_alias_derive.mjs";
 import { example_tool_family } from "./example_tool_family.mjs";
 export async function examples_corpus_read() {
+  "Every worked example the repo keeps, read off disk in the order they are meant to be met, each already carrying the short name and the family of the function it shows.";
+  "The order is held in a list of its own rather than taken from the folder, because examples are for teaching and what should be met first is a judgment nobody can read off a file name. A name in that list which has no file is passed over, and a file the list never names is added at the end, so neither one going missing costs the whole corpus - and the file left at the end is itself the sign that somebody wrote an example and did not say where it belongs.";
+  "The short name and the family are attached here, once, rather than by each reader. There are several readers - the gate that checks the corpus, the page that shows it - and a name derived twice is a name that can differ, which would show as one example wearing two names in two places.";
   let mjs = await examples_names();
   list_sort_text(mjs);
   function to_file(base) {
