@@ -7,6 +7,6 @@ export function js_query_key_literals(ast) {
   "All that is said here is which part of the address is meant. The judging is shared with the part after the hash, which asks the identical question of a different walk.";
   arguments_assert(arguments, 1);
   let nodes = js_query_key_nodes(ast);
-  let sites = js_key_literals_generic(nodes);
+  let sites = js_key_literals_generic(ast, nodes);
   return sites;
 }

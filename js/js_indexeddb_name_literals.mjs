@@ -7,6 +7,6 @@ export function js_indexeddb_name_literals(ast, doors) {
   "All that is said here is which calls name a kept thing. The judging is shared with the words in a page address, which asks the identical question of a different walk.";
   arguments_assert(arguments, 2);
   let nodes = js_indexeddb_name_nodes(ast, doors);
-  let sites = js_key_literals_generic(nodes);
+  let sites = js_key_literals_generic(ast, nodes);
   return sites;
 }

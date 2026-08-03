@@ -228,14 +228,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     }
     app_code_operators_word_list(line, operators, "or", operator_symbol);
     html_span_text(line, " before any comparison ");
-    let comparisons = [
-      less_than_operator,
-      greater_than_operator,
-      less_than_equal_operator,
-      greater_than_equal_operator,
-      triple_equal_operator,
-      bang_double_equal_operator,
-    ];
+    let comparisons = js_operators_comparison();
     app_code_operators_word_list(line, comparisons, "or", operator_symbol);
     function worked_example(
       other,
