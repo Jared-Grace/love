@@ -44,11 +44,11 @@ export async function app_replace_rule_set_success(
   await html_move_animate_multiple(sbs, goal_list_symbols, duration);
   app_shared_success_message(div_below);
   let p_next = html_p(div_below);
-  let goal_index_next = text_combine(goal_index, 1);
+  let goal_index_next = add(goal_index, 1);
   let ii = list_index_is(goals, goal_index_next);
   let rule_set_index = storage_session_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
-  let rule_set_index_next = text_combine(rule_set_index, 1);
+  let rule_set_index_next = add(rule_set_index, 1);
   let ii2 = list_index_is(rule_sets, rule_set_index_next);
   let next = true;
   if (not(ii) && not(ii2)) {
