@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { js_statement_return_insert_code } from "./js_statement_return_insert_code.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { app_a_list_overlay_generic } from "./app_a_list_overlay_generic.mjs";
@@ -8,7 +9,6 @@ import { app_a_node_index } from "./app_a_node_index.mjs";
 import { app_a_functions_overlay } from "./app_a_functions_overlay.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
@@ -52,11 +52,8 @@ export function app_a_statement_choices_add(choices, a, o) {
           let v = app_a_node_index(a);
           let list = property_get(v, "list");
           let index = property_get(v, "index");
-          js_statement_return_insert_code(
-            list,
-            text_combine(index, 1),
-            identifier_name,
-          );
+          let index2 = add(index, 1);
+          js_statement_return_insert_code(list, index2, identifier_name);
           await app_a_function_on_change(a, overlay_result);
         }
       },
