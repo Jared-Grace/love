@@ -238,7 +238,7 @@ export async function app_shared_bible_home_generic(
     let mode = app_shared_bible_mode_chapter();
     await app_shared_bible_mode_switch(context, mode, app_fn);
   }
-  let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
+  app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let component = app_shared_button_copy(bottom, noop);
   let v3 = app_shared_bible_toggle_update(
     updates,
