@@ -1,8 +1,9 @@
+import { add } from "./add.mjs";
 import { each_index } from "./each_index.mjs";
-import { text_combine } from "./text_combine.mjs";
-export function each_index_1(list, lambda$item$index_1) {
+export function each_index_1(list, lambda$item$index_) {
   function lambda(item, index) {
-    lambda$item$index_1(item, add(index, 1));
+    let sum = add(index, 1);
+    lambda$item$index_(item, sum);
   }
   let r = each_index(list, lambda);
   return r;
