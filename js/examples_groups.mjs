@@ -101,6 +101,7 @@ export function examples_groups() {
         "example_shadowing_rename_shorthand",
         "example_shadowing_rename_in",
         "example_shadowing_assign",
+        "example_let_add_module_binding",
         "example_builtin_calls_rewrite",
         "example_fn_name_reference_strip",
         "example_prose_name_spelled_not_imported",
