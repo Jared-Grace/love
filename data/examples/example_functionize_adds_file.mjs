@@ -53,6 +53,7 @@ export const example = {
     {
       name: "rows_summarize.mjs",
       source: `export function rows_summarize(source) {
+  arguments_assert(arguments, 1);
   let rows = list_unique(source);
   let total = list_size(rows);
   return total;
