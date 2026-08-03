@@ -1,3 +1,4 @@
+import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { equal } from "./equal.mjs";
@@ -6,7 +7,6 @@ import { functions_names } from "./functions_names.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function functions_auto_pending() {
