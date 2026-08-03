@@ -119,8 +119,24 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let list = [v, v2, v3, v4];
     return list;
   }
+  function naming(root) {
+    "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it - so an example first, then the six operators the word covers, listed from the one place that holds them";
+    let card = app_code_container_light_blue(root);
+    let example = html_div(card);
+    html_cycle_code(example, ["", "3 < 5", " is a comparison"]);
+    let line = html_div(card);
+    html_span_text(line, "A comparison uses ");
+    function operator_symbol(operator) {
+      "the symbol shown in an operator's tile";
+      let symbol = property_get(operator, "operator");
+      return symbol;
+    }
+    let operators = js_operators_comparison();
+    app_code_operators_word_list(line, operators, "or", operator_symbol);
+  }
   function above(root) {
-    "a comparison gives true or false, so a comparison can stand where a plain true or false stood; the parentheses keep the two comparisons apart; then two worked examples";
+    "first what the word comparison names, then the idea: a comparison gives true or false, so a comparison can stand where a plain true or false stood; the parentheses keep the two comparisons apart; then two worked examples";
+    naming(root);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();

@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
+import { js_literal_value_try } from "./js_literal_value_try.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 export function js_key_literal_word_try(ast, key) {
   "The word standing where a field of an address is named, whether it was typed into the slot or set a line above and handed over - or null where it came from somewhere this file cannot read. Read-only, pure.";
   "Both are the same publishing. A word in an address leaves the moment somebody saves the link, and neither shape can be frozen, because a freeze watches a function and neither of these is one.";
