@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -12,9 +13,11 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   "The whole instruction that writes ONE person - who they are and every turn they hold - as one string ready to send.";
   "One person per call rather than the whole chapter's cast in one response. A cast is JAS01's 298 turns, near 24000 output tokens, and at that size one bad verse citation costs the rewrite of all seven people and the last person written gets the least care. One person is the natural unit because the turn target is drawn per person.";
   "Every closed list is ASKED FOR here rather than spelled out. A word written into this prose could disagree with the list a coverage tally counts and nothing would ever notice.";
-  "The turn target is one number, drawn for this person by g_arc_lengths. It is what their whole life in this chapter is worth - about twelve turns to a conversation and one conversation a day, so seventy turns is about six days.";
-  "The conversation lengths are handed over so the model can group its own turns into conversations. It has to do the grouping, because it is the only party that knows where one exchange finishes, and a grouping decided afterwards leaves every conversation after the first opening mid-thought.";
-  "STILL MISSING: people written blind to each other converge into variations on the same person. The fix is to hand over the summaries of the arcs already written for this chapter, and this does not take them yet.";
+  ("The turn target is one number, drawn for this person by ",
+    fn_name("g_arc_lengths"),
+    ". It is what their whole life in this chapter is worth - about twelve turns to a conversation and one conversation a day, so seventy turns is about six days.");
+  ("The conversation lengths are handed over so the model can group its own turns into conversations. It has to do the grouping, because it is the only party that knows where one exchange finishes, and a grouping decided afterwards leaves every conversation after the first opening mid-thought.");
+  ("STILL MISSING: people written blind to each other converge into variations on the same person. The fix is to hand over the summaries of the arcs already written for this chapter, and this does not take them yet.");
   let list = g_callings();
   let callings = list_join_comma_space(list);
   let list2 = g_sexes();
