@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { property_list_first } from "./property_list_first.mjs";
+import { js_literal_is } from "./js_literal_is.mjs";
+import { js_literal_value_get } from "./js_literal_value_get.mjs";
+import { text_is } from "./text_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { not } from "./not.mjs";
 export function js_prose_sequence_sentences(ast) {
   arguments_assert(arguments, 1);
   ("Every sentence in one file that was written to explain the code but wrapped in brackets beside something else, so the reader that gathers explanations never sees it.");
