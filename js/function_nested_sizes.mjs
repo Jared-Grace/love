@@ -1,4 +1,5 @@
-import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
+import { property_get_curried_right } from "./property_get_curried_right.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,6 +27,7 @@ export async function function_nested_sizes(f_name) {
     return row;
   }
   let rows = list_map(nested, lambda);
-  let ranked = functions_lift_candidates();
+  let sizer = property_get_curried_right("size");
+  let ranked = list_sort_number_mapper_reverse(rows, sizer);
   return ranked;
 }
