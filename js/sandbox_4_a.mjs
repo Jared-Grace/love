@@ -23,12 +23,9 @@ export async function sandbox_4_a() {
     let split3 = text_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
     async function lambda2(item2) {
-      let books_all = await list_map_unordered_async(
-        bible_folders,
-        ebible_version_books,
-      );
+      await list_map_unordered_async(bible_folders, ebible_version_books);
       let mapped_inner = list_map_property(books, "text");
-      let verse_references = list_filter_starts_with_any(split, mapped_inner);
+      list_filter_starts_with_any(split, mapped_inner);
     }
     await each_async(list, lambda2);
     let v = [first, mapped2];
