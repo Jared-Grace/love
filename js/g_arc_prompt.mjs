@@ -60,7 +60,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "THe setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
-    "You should choose this about each person:",
+    "You should choose this about each person:",json_format_to(),
     joined3,
     joined4,
     joined5,
