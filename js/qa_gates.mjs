@@ -1,3 +1,4 @@
+import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
 import { firebase_chapter_upload_folders_gate_run } from "./firebase_chapter_upload_folders_gate_run.mjs";
 import { qa_gate_run_start_wanted_gate_run } from "./qa_gate_run_start_wanted_gate_run.mjs";
 import { process_line_sleep_loop_is_gate_run } from "./process_line_sleep_loop_is_gate_run.mjs";
@@ -192,6 +193,7 @@ export function qa_gates() {
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     processes_runaway_gate_run,
+    processes_sleep_loop_stopped_gate_run,
     file_stamps_copied_gate_run,
     python_mirrors_assert,
     function_worker_pool_run_try,
