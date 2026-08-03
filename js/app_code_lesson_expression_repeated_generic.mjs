@@ -1,13 +1,8 @@
+import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
-import { html_align_items_center } from "./html_align_items_center.mjs";
-import { html_style_background } from "./html_style_background.mjs";
-import { html_style_justify_self } from "./html_style_justify_self.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
@@ -40,7 +35,6 @@ import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_display_set } from "./html_display_set.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -147,11 +141,8 @@ export function app_code_lesson_expression_repeated_generic(words) {
       return render;
     }
     let rights = [right_word];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
+    let left2 = app_code_category_operators();
+    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
     return built;
   }
   function above(root) {
@@ -208,24 +199,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let column_count = add(doubled, 1);
       let end_column = column_count;
       let grid = html_span(parent);
-      html_display_set(grid, "inline-grid");
-      html_style_set(grid, "grid-template-rows", "auto auto");
-      let t2 = text_to(column_count);
-      let style_value3 = text_combine_multiple(["repeat(", t2, ", auto)"]);
-      html_style_set(grid, "grid-template-columns", style_value3);
-      html_align_items_center(grid);
-      html_style_set(grid, "justify-items", "center");
-      html_style_set(grid, "column-gap", "0.35em");
-      html_style_set(grid, "row-gap", app_shared_content_edge_gap());
-      html_style_set(grid, "vertical-align", "middle");
-      let pill = html_span(grid);
-      html_style_set(pill, "grid-row", "2");
-      html_style_set(pill, "grid-column", "1 / -1");
-      html_style_background(pill, "black");
-      let border_radius = app_shared_border_radius();
-      html_border_radius(pill, border_radius);
-      html_style_set(pill, "align-self", "stretch");
-      html_style_justify_self(pill, "stretch");
+      app_code_lesson_repeat_grid_style(grid, column_count);
       function spacer(column) {
         "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
         let s = html_span(grid);
@@ -257,8 +231,8 @@ export function app_code_lesson_expression_repeated_generic(words) {
       }
       spacer(1);
       spacer(end_column);
-      let list2 = range(count);
-      each(list2, place_repeat);
+      let list = range(count);
+      each(list, place_repeat);
       let count2 = subtract(count, 1);
       let list3 = range(count2);
       each(list3, place_operator);

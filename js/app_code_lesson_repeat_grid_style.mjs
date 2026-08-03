@@ -1,0 +1,32 @@
+import { html_display_set } from "./html_display_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { text_to } from "./text_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_style_background } from "./html_style_background.mjs";
+import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
+import { html_style_justify_self } from "./html_style_justify_self.mjs";
+export function app_code_lesson_repeat_grid_style(grid, column_count) {
+  html_display_set(grid, "inline-grid");
+  html_style_set(grid, "grid-template-rows", "auto auto");
+  let t = text_to(column_count);
+  let style_value3 = text_combine_multiple(["repeat(", t, ", auto)"]);
+  html_style_set(grid, "grid-template-columns", style_value3);
+  html_align_items_center(grid);
+  html_style_set(grid, "justify-items", "center");
+  html_style_set(grid, "column-gap", "0.35em");
+  let style_value = app_shared_content_edge_gap();
+  html_style_set(grid, "row-gap", style_value);
+  html_style_set(grid, "vertical-align", "middle");
+  let pill = html_span(grid);
+  html_style_set(pill, "grid-row", "2");
+  html_style_set(pill, "grid-column", "1 / -1");
+  html_style_background(pill, "black");
+  let border_radius = app_shared_border_radius();
+  html_border_radius(pill, border_radius);
+  html_style_set(pill, "align-self", "stretch");
+  html_style_justify_self(pill, "stretch");
+}
