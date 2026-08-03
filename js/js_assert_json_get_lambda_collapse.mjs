@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { js_assert_json_get_call_below_try } from "./js_assert_json_get_call_below_try.mjs";
 import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
 import { js_declaration_record_of_plain_names_is } from "./js_declaration_record_of_plain_names_is.mjs";
@@ -42,43 +43,6 @@ export function js_assert_json_get_lambda_collapse(ast) {
   "be two declarations of one word; and anything handed over that is not a plain name.";
   let moved = 0;
   let bound = js_binding_names(ast);
-  function payload_line(declaration) {
-    "the one line of the wrapper's body holding the record, when the body is nothing else";
-    let f_body = property_get(declaration, "body");
-    let inner = property_get(f_body, "body");
-    let two_is = list_size_2(inner);
-    if (not(two_is)) {
-      let none = null;
-      return none;
-    }
-    let first = list_get(inner, 0);
-    let second = list_get(inner, 1);
-    let variable_is = js_node_type_is(first, "VariableDeclaration");
-    let return_is = js_node_type_is(second, "ReturnStatement");
-    let shaped = and(variable_is, return_is);
-    if (not(shaped)) {
-      let none = null;
-      return none;
-    }
-    let record_name = js_declaration_single_variable_name_try(first);
-    let name_is = equal_not(record_name, null);
-    if (not(name_is)) {
-      let none = null;
-      return none;
-    }
-    let handed = property_get(second, "argument");
-    let same = js_identifier_named_try(handed, record_name);
-    if (not(same)) {
-      let none = null;
-      return none;
-    }
-    let plain_is = js_declaration_record_of_plain_names_is(first);
-    if (not(plain_is)) {
-      let none = null;
-      return none;
-    }
-    return first;
-  }
   function name_free_is(record_name) {
     "the record's name may leave the wrapper only if the wrapper is the one place binding it";
     function named(one) {
@@ -104,7 +68,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       if (not(declared_is)) {
         return;
       }
-      let held = payload_line(statement);
+      let held = js_function_declaration_record_line_try(statement);
       let held_is = equal_not(held, null);
       if (not(held_is)) {
         return;
@@ -133,4 +97,42 @@ export function js_assert_json_get_lambda_collapse(ast) {
   }
   js_visit_types(ast, ["BlockStatement"], block_each);
   return moved;
+}
+function js_function_declaration_record_line_try(declaration) {
+  arguments_assert(arguments, 1);
+  ("the one line of the wrapper's body holding the record, when the body is nothing else");
+  let f_body = property_get(declaration, "body");
+  let inner = property_get(f_body, "body");
+  let two_is = list_size_2(inner);
+  if (not(two_is)) {
+    let none = null;
+    return none;
+  }
+  let first = list_get(inner, 0);
+  let second = list_get(inner, 1);
+  let variable_is = js_node_type_is(first, "VariableDeclaration");
+  let return_is = js_node_type_is(second, "ReturnStatement");
+  let shaped = and(variable_is, return_is);
+  if (not(shaped)) {
+    let none = null;
+    return none;
+  }
+  let record_name = js_declaration_single_variable_name_try(first);
+  let name_is = equal_not(record_name, null);
+  if (not(name_is)) {
+    let none = null;
+    return none;
+  }
+  let handed = property_get(second, "argument");
+  let same = js_identifier_named_try(handed, record_name);
+  if (not(same)) {
+    let none = null;
+    return none;
+  }
+  let plain_is = js_declaration_record_of_plain_names_is(first);
+  if (not(plain_is)) {
+    let none = null;
+    return none;
+  }
+  return first;
 }
