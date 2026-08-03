@@ -57,7 +57,7 @@ export async function app_search_home(context) {
   app_shared_bible_languages_gear(bar, content, language_codes);
   let search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
-  let p = app_shared_text_body(content, search_instructions);
+  app_shared_text_body(content, search_instructions);
   let input = html_input_text(content, search_instructions);
   app_shared_input_style(input);
   html_on_enter(input, search);
