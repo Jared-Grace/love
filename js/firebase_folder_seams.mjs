@@ -1,3 +1,5 @@
+import { json_to } from "./json_to.mjs";
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,9 +15,6 @@ import { list_index_of } from "./list_index_of.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { number_text } from "./number_text.mjs";
-import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -33,9 +32,11 @@ export async function firebase_folder_seams() {
     index: 0,
   };
   let seams = [first];
-  let known = [json_to(first)];
+  let json = json_to(first);
+  let known = [json];
   let asked = 0;
-  let waiting = greater_than(list_size(seams), asked);
+  let a = list_size(seams);
+  let waiting = greater_than(a, asked);
   while (waiting) {
     let seam = list_get_or_null(seams, asked);
     asked = add_1(asked);
@@ -44,7 +45,8 @@ export async function firebase_folder_seams() {
     let callers = property_or_null(identifiers, builder);
     let uncalled = null_is(callers);
     if (uncalled) {
-      waiting = greater_than(list_size(seams), asked);
+      let a2 = list_size(seams);
+      waiting = greater_than(a2, asked);
       continue;
     }
     for (let caller of callers) {
@@ -64,11 +66,12 @@ export async function firebase_folder_seams() {
           continue;
         }
         let passed_on = js_node_name_text_try(folder);
-        let position = list_index_of(params_names, passed_on);
-        let own = greater_than(position, -1);
+        ("Asked whether the word is one of this function's own parameters before asking where it sits, because the reader that answers where refuses a word that is not there at all. Almost nothing reaching these slots is a parameter, so the ordinary case would be the refusing one.");
+        let own = list_includes(params_names, passed_on);
         if (not(own)) {
           continue;
         }
+        let position = list_index_of(params_names, passed_on);
         let found = {
           builder: caller,
           index: position,
@@ -82,7 +85,8 @@ export async function firebase_folder_seams() {
         list_add(seams, found);
       }
     }
-    waiting = greater_than(list_size(seams), asked);
+    let a3 = list_size(seams);
+    waiting = greater_than(a3, asked);
   }
   return seams;
 }
