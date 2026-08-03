@@ -24,12 +24,12 @@ export function app_code_next(
   app_shared_button_wide(container_more, more_label, refresh);
   let container_buttons = html_div(parent_next_back);
   html_page_padding_x(container_buttons);
-  let bn = app_shared_button_wide_next(container_buttons, on_next);
+  app_shared_button_wide_next(container_buttons, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
     if (null_not_is(back_text)) {
       bt = text_combine_middle_space(bt, back_text);
     }
-    let bb = app_shared_button_wide(container_buttons, bt, on_back);
+    app_shared_button_wide(container_buttons, bt, on_back);
   }
 }
