@@ -3,6 +3,7 @@ import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_frozen_assert } from "./app_shared_frozen_assert.mjs";
 export async function html_public_from_latest(search) {
+  "Moves an app from the stage it was checked at into the one people see, page and source together, refusing on an app that is frozen.";
   let info = await app_shared_name_search_info(search);
   let a_name = property_get(info, "a_name");
   app_shared_frozen_assert(a_name);
