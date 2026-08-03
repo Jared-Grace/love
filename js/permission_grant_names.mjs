@@ -678,7 +678,7 @@ export function permission_grant_names() {
   let spelled671 = fn_name("qa_app_commit_hashes");
   let spelled672 = fn_name("qa_build_folder");
   let spelled673 = fn_name("qa_snapshot_ensure");
-  let spelled674 = fn_name("shadowing_baseline_path");
+  let spelled674 = fn_name("functions_shadowing_baseline_path");
   let spelled675 = fn_name("process_end");
   let spelled676 = fn_name("functions_gate_run_unwired_gate_run");
   let spelled677 = fn_name("literals_frozen_write");

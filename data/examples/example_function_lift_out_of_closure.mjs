@@ -56,6 +56,7 @@ export const example = {
   return shown;
 }
 function row_padded(row, width) {
+  arguments_assert(arguments, 2);
   let out = text_pad(row, width);
   return out;
 }`,

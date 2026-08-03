@@ -60,6 +60,7 @@ export const example = {
   return out;
 }
 function row_prepared(row) {
+  arguments_assert(arguments, 1);
   let trimmed = text_trim(row);
   let padded = text_pad(trimmed, 4);
   return padded;
