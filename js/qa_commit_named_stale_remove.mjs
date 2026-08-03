@@ -15,19 +15,6 @@ export async function qa_commit_named_stale_remove() {
   "A single everyday word is the whole test, because the reader can no longer produce one - so a record holding one was certainly written by the older reader. Nothing here guesses at which names look wrong; it asks the same question the reader now asks, and disbelieves any record that disagrees with it";
   "The whole entry goes rather than the offending name alone. The names of one judging were worked out together by one reader, so a record half of which came from a reader that has been replaced is not a record of anything - and trimming it would leave something that looks judged and is not";
   let remembered = await qa_commit_named();
-  function stale_is(entry) {
-    let named = property_get(entry, "named");
-    for (let gate of object_property_names(named)) {
-      let names = property_get(named, gate);
-      for (let name of names) {
-        let unmistakable = function_name_unmistakable_is(name);
-        if (not(unmistakable)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
   let forgotten = [];
   let kept = {};
   for (let commit of object_property_names(remembered)) {
