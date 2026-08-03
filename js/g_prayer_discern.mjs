@@ -1,3 +1,4 @@
+import { g_prayer_petitions_bowed } from "./g_prayer_petitions_bowed.mjs";
 export function g_prayer_discern() {
   "the player's randomized, grammared prayer asking God WHO to go to next - the discernment prayer of the day walk. only the petitions live here; the address, the asking word, the closing and the bow-and-hands around them are the shared shape every tapped prayer wears.";
   "it asks about a PERSON, not about words. the discernment prayer inside a conversation asks what to SAY to somebody already in front of you; this one is prayed with nobody in front of you at all, and what it asks for is the somebody.";
