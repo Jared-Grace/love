@@ -44,6 +44,12 @@ export function literals_frozen_names() {
   ("The first entry here that never touched a browser, and it belongs for the same reason as the rest: the word a hand-made commit is messaged with is written into the public log, and a log cannot be retyped. Every reading of how much of this repo was built by named commands rather than by hand asks the log for exactly this word, so changing it in place would leave four readers looking for the new word while every commit already made carries the old one - and the answer would come back saying the vocabulary was used all along.");
   ("It was spelled out in six files until it was named, two writing it and four reading it, which is why nothing could watch it: a value with no function holding it has nothing to freeze.");
   let spelled29 = fn_name("git_message_hand_made");
+  ("Four folders on the shared bucket, and the first entries here that escaped to a disk belonging to everybody rather than to one reader. Every sermon, objection and arc the game has ever generated is sitting under one of these words, and a shipped page builds the same address to read them - so the word may not move even though a function of that name is what wrote them.");
+  ("They were spelled twice each until they were named, once frozen at the uploader and once as a reference in the list saying what a backup may take. A rename would have moved the backup's reading to a folder that does not exist while the files stayed where they were, and neither spelling could have told anybody that the other existed.");
+  let spelled30 = fn_name("g_sermon_generate_upload_namespace");
+  let spelled31 = fn_name("g_sermon_write_upload_namespace");
+  let spelled32 = fn_name("g_objection_generate_upload_namespace");
+  let spelled33 = fn_name("g_arc_generate_upload_namespace");
   let names = [
     spelled,
     spelled2,
@@ -73,6 +79,10 @@ export function literals_frozen_names() {
     spelled27,
     spelled28,
     spelled29,
+    spelled30,
+    spelled31,
+    spelled32,
+    spelled33,
   ];
   return names;
 }
