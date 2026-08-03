@@ -28,8 +28,11 @@ export async function firebase_chapter_upload_folders_unfrozen() {
     for (let call of calls) {
       let args = property_get(call, "args");
       let folder = list_first(args);
-      ("Whatever stands there is asked for the name it calls. A written word answers with nothing, and so does a name handed straight through from somewhere else - both are the same finding, that no function of this repo is holding the word.");
-      let held_by = js_call_callee_name_try(folder);
+      ("Whatever stands there is asked for the name it calls, and then, when it is a name rather than a call, for what that name was set from. Every caller here does it the second way - the folder is fetched on one line and passed on the next - so a reading that stopped at the argument would have called all eight of them unheld and been believed.");
+      let called_directly = js_call_callee_name_try(folder);
+      let passed_on = js_node_name_text_try(folder);
+      let set_from = js_name_set_from_call_try(tree, passed_on);
+      let held_by = first_not_null(called_directly, set_from);
       let unheld = null_is(held_by);
       if (unheld) {
         let item = text_combine_multiple([caller, " -> nothing"]);
