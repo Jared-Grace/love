@@ -24,13 +24,16 @@ export async function function_functionize(
     f_name_new,
   });
   let ends = list_join_comma([call_from, call_to]);
+  let select_fn_name = fn_name("js_statement_find_call_named");
+  let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
-    fn_name("js_statement_find_call_named"),
+    select_fn_name,
     ends,
-    fn_name("js_selects_functionize"),
+    apply_fn_name,
     f_name_new,
   );
-  await function_auto_multiple(list_join_comma([f_name, f_name_new]));
+  let names_comma = list_join_comma([f_name, f_name_new]);
+  await function_auto_multiple(names_comma);
   return output;
 }
