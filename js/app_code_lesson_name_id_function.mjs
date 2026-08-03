@@ -15,7 +15,7 @@ export function app_code_lesson_name_id_function(left, rights) {
       let remaining = property_get(r, "remaining");
       let first = property_get(r, "first");
       html_span_text_code_dark(parent, first);
-      let spans = html_span_text_multiple(parent, remaining);
+      html_span_text_multiple(parent, remaining);
     };
     return r2;
   };
