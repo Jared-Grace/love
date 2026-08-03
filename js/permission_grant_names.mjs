@@ -363,7 +363,7 @@ export function permission_grant_names() {
   let spelled360 = fn_name("functions_statements_after_return_gate_run");
   let spelled361 = fn_name("functions_statements_after_return_baseline_write");
   let spelled362 = fn_name("html_regenerate_all");
-  let spelled363 = fn_name("statements_after_return_baseline_path");
+  let spelled363 = fn_name("functions_statements_after_return_baseline_path");
   let spelled364 = fn_name("functions_selects_unsafe_baseline_write");
   let spelled365 = fn_name("daemons_status");
   let spelled366 = fn_name("ebible_book_divisions");
