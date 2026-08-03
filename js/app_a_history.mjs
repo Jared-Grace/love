@@ -8,5 +8,5 @@ export function app_a_history(context) {
   let key = app_a_function_name_selected_history_key();
   let h = storage_local_get_context(context, key);
   let on_select = app_a_function_select_curried(context);
-  let r = app_a_list_chooser(context, "function", h, on_select);
+  app_a_list_chooser(context, "function", h, on_select);
 }
