@@ -7,5 +7,5 @@ export async function ebible_version_upload_refresh_all() {
   return;
   await ebible_versions_english_choices_each(ebible_version_upload_refresh);
   return;
-  let r = await ebible_languages_chapters_cache_refresh();
+  await ebible_languages_chapters_cache_refresh();
 }
