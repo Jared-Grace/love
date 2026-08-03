@@ -1,3 +1,7 @@
+import { qa_gate_runs_in_flight } from "./qa_gate_runs_in_flight.mjs";
+import { property_get } from "./property_get.mjs";
+import { add } from "./add.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function qa_gate_run_start_wanted_is() {
   "Whether starting a whole-repo judging right now is worth the quarter of an hour it will cost, or whether the machine is already doing that and a second one would only make both slower";
   "Nobody can see anybody else here. Ten of us work in one folder and a judging takes long enough that the next one starts before the last one ends, so the runs pile up without a single one of them being able to tell. Measured 2026-08-03: SIX judgings at once, load seventy-three on fourteen processors, every one of them holding most of a processor and none of them under half an hour. The same run on a quiet machine takes about a minute.";
