@@ -23,6 +23,7 @@ export async function permission_settings_local_dangling_remove() {
   "it finds its own set rather than being handed one, so it cannot be asked to remove a rule that is still good, and running it twice is the same as running it once";
   "ONLY a name nothing answers to is taken. A rule naming an alias key is wrong for a different reason - it grants whatever that key points at later - but the key does point somewhere today, so taking it away would take away an approval somebody is using. That is a judgment, and it is left to whoever wrote the rule";
   "this can only ever remove an approval, never write one, which is what makes it safe to run unasked. For the same reason it must never be given a standing approval of its own: a command that edits the file deciding what runs unasked has to be seen every time";
+  "do NOT grant this - it edits the file that decides what runs unasked and has to be seen every time";
   let paths = permission_settings_paths();
   let path = list_second(paths);
   let absent = await file_exists_not(path);
