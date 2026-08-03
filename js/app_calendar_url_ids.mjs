@@ -13,8 +13,8 @@ export async function app_calendar_url_ids() {
   urls = list_map_prefix_without_try_multiple(urls, prefixes);
   let suffixes = ["#", "?"];
   urls = list_map_suffix_without_try_multiple(urls, suffixes);
-  let size = list_size(urls);
+  list_size(urls);
   let url_ids = list_unique(urls);
-  let message = list_size(url_ids);
+  list_size(url_ids);
   return url_ids;
 }
