@@ -57,7 +57,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "and the most is",
     turns_high,
     "turns.",
-  ]);
+  ]);js_boolean_values
   let json = json_format_to({
     gender: genders,
     married: "boolean",
