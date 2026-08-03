@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { js_prose_statement } from "./js_prose_statement.mjs";
@@ -14,7 +15,8 @@ export async function function_prose_set(f_name, position, sentence) {
   "The sentence is a whole argument of the command, so a comma is fine in it, and it is quoted before it is written, so nothing handed in here can arrive as code.";
   "The old statement keeps its place and only what it says is replaced, rather than one line being taken out and another put back. A line of an account sits among its neighbours in a written order, and taking it out to put one back is two chances to land it somewhere else.";
   arguments_assert(arguments, 3);
-  let index = number_from_text(position) - 1;
+  let left = number_from_text(position);
+  let index = subtract(left, 1);
   function lambda(ast) {
     let statements = js_prose_statement_nodes(ast);
     let statement = list_get(statements, index);
