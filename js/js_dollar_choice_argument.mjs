@@ -6,6 +6,6 @@ export async function js_dollar_choice_argument() {
   async function lambda(ast) {
     result = js_dollar_choice_argument_find(ast, result);
   }
-  let output = await function_transform(fn_name("js_dollar"), lambda);
+  await function_transform(fn_name("js_dollar"), lambda);
   return result;
 }
