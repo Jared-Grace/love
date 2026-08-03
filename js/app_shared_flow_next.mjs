@@ -4,7 +4,7 @@ import { list_skip } from "./list_skip.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function app_shared_flow_next(context, screens) {
   let before_or_after = function lambda(screens_given, index) {
-    let skipped = list_skip(screens_given, text_combine(index, 1));
+    let skipped = list_skip(screens_given, add(index, 1));
     return skipped;
   };
   let find = list_first;
