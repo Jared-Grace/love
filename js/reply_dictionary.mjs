@@ -12,6 +12,5 @@ export async function reply_dictionary() {
   properties_delete(dictionary, excludes_pairs);
   let excludes = ["ware"];
   properties_delete(dictionary, excludes);
-  let includes = [];
   return dictionary;
 }
