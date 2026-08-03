@@ -1,4 +1,4 @@
-import { text_frozen } from "./text_frozen.mjs";
+import { app_ceb_bible_gloss_generate_upload_namespace } from "./app_ceb_bible_gloss_generate_upload_namespace.mjs";
 import { g_objection_generate_upload_path_generic } from "./g_objection_generate_upload_path_generic.mjs";
 export function app_ceb_bible_gloss_generate_upload_path(chapter_code) {
   "Where one chapter's Cebuano glosses sit in storage.";
