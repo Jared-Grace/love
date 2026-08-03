@@ -1,3 +1,5 @@
+import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { permission_rules_other } from "./permission_rules_other.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -14,10 +16,14 @@ export function permission_allow_generated_from(names) {
   list_add_multiple(rules, other);
   let scripts = dispatcher_scripts_claude();
   let commands = dispatcher_commands_fn_named();
+  ("A granted name that is itself one of those second entry points gets no plain rule. The guard folds four words into the verb for one of those, never three, so a rule naming it alone matches nothing anybody ever runs - and an allow rule that can never take effect is a gate failure of its own. What such a command is granted by is the per-function family written just below, which it gets whether or not its own name is on the list.");
   for (let script of scripts) {
     for (let name of names) {
-      let rule = permission_grant_rule(name, script);
-      list_add(rules, rule);
+      let command_is = list_includes(commands, name);
+      if (not(command_is)) {
+        let rule = permission_grant_rule(name, script);
+        list_add(rules, rule);
+      }
     }
     for (let command of commands) {
       for (let name of names) {
