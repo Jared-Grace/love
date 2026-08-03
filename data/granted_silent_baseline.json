@@ -1,6 +1,5 @@
 {
  "known": [
-  "function_transform_single",
   "app_shared_dev_build",
   "app_shared_name_search_info",
   "app_shared_name_search_multiple",
@@ -47,16 +46,12 @@
   "js_declaration_unused_to_expression",
   "function_current_get",
   "folder_user_storage_function_path_function",
-  "list_squash",
-  "functions_path",
   "strongs_greek_json_path",
   "g_genders_names",
   "g_gender_male",
   "g_gender_female",
   "app_shared_url_dev",
   "g_female_img_names",
-  "g_male_img_names",
-  "webpack_build_dev",
-  "function_param_swap"
+  "g_male_img_names"
  ]
 }
