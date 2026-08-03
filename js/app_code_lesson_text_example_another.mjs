@@ -1,10 +1,8 @@
-import { greater_than_equal } from "./greater_than_equal.mjs";
+import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { word_plural } from "./word_plural.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_text_example_another(lesson) {
-  let example_count = property_get(lesson, "example_count");
-  let plural = greater_than_equal(example_count, 2);
+  let plural = app_code_lesson_examples_plural_is(lesson);
   let root_word = "example";
   let another = null;
   if (plural) {

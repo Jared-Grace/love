@@ -23,7 +23,10 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   let elsewhere = [];
   for (let gate of failed) {
     let names = property_get_or_null(named, gate);
-    let unnamed = null_is(names);
+    let missing = null_is(names);
+    let said_none = list_empty_is_or_null(names);
+    ("Nothing was recorded for this gate, or a list was recorded and it holds nothing - the same silence twice, and neither can show the gate is about somewhere else. Only the first used to be counted here, and every red gate is in fact recorded WITH a list, so the guard was reading for a shape that no longer occurs and every unproven gate was being set aside.");
+    let unnamed = said_none;
     if (unnamed) {
       ("red with nothing said about it, so nothing here can place it - counted against this app on purpose");
       list_add(blocking, {

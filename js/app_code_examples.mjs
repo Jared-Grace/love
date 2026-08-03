@@ -1,6 +1,6 @@
+import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { list_index_last } from "./list_index_last.mjs";
@@ -41,8 +41,7 @@ export function app_code_examples(context) {
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
-  let example_count = property_get(lesson, "example_count");
-  let plural = greater_than_equal(example_count, 2);
+  let plural = app_code_lesson_examples_plural_is(lesson);
   let root_word = "example";
   let is_a = null;
   if (plural) {
