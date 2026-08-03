@@ -6,5 +6,5 @@ export async function function_run_prompt() {
   async function lambda() {
     await function_run_line_git(line);
   }
-  let r = await function_run_prompt_lock(lambda);
+  await function_run_prompt_lock(lambda);
 }
