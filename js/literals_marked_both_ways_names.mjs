@@ -1,3 +1,5 @@
+import { literals_marked_both_ways } from "./literals_marked_both_ways.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export async function literals_marked_both_ways_names() {
   "Just the words that are marked both ways, with the files they were found in left off. Read-only.";
   "The ratchet beside this one measures a flat list of names, and the writer that seeds it measures the same list, so the narrowing is named once here rather than once in each of them.";
