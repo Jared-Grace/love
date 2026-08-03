@@ -1,3 +1,5 @@
+import { js_module_binding_names } from "./js_module_binding_names.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
@@ -44,7 +46,10 @@ export async function js_selects_function_lift(ast, selects, f_name_new) {
   let unbound = js_declaration_names_unbound(declaration);
   list_remove(unbound, name_old);
   let other = await functions_names();
-  let closed = list_difference(unbound, other);
+  ("What the file itself binds at its outermost level is subtracted alongside the repo's own names, and for the same reason: the function is about to land at that level, so those are names it can still reach. Without this, lifting a second helper out of a file that already had one lifted hands it the first as an argument - which runs, and reads as though the two were unrelated.");
+  let here = js_module_binding_names(ast);
+  let reachable = list_concat(other, here);
+  let closed = list_difference(unbound, reachable);
   let written = js_assigned_names(declaration);
   list_intersect_empty_is_assert_json(closed, written, {
     hint: "this function writes to a name it closed over, and a parameter would only be a copy of it, so the write would stop reaching the line waiting to read it. Would you like it to hand the new value back instead?",
