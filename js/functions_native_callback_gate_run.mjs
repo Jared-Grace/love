@@ -1,3 +1,4 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_native_callback_imported } from "./functions_native_callback_imported.mjs";
 import { js_array_methods_callback } from "./js_array_methods_callback.mjs";
@@ -27,15 +28,19 @@ export async function functions_native_callback_gate_run() {
   let joined = list_join_comma(methods);
   console.log("methods that pass an index after the item: " + joined);
   let offenders = await functions_native_callback_imported();
+  let sites = [];
   for (let offender of offenders) {
-    let f_name = property_get(offender, "name");
-    let method = property_get(offender, "method");
-    let passed = property_get(offender, "passed");
-    console.log(
-      "BARE CALLBACK  " + f_name + "  ." + method + "(" + passed + ")",
-    );
+    let f_name = property_get(offender, "f_name");
+    sites = list_concat_property(sites, offender, "sites");
+    for (let site of property_get(offender, "sites")) {
+      let method = property_get(site, "method");
+      let passed = property_get(site, "passed");
+      console.log(
+        "BARE CALLBACK  " + f_name + "  ." + method + "(" + passed + ")",
+      );
+    }
   }
-  let size = list_size(offenders);
+  let size = list_size(sites);
   console.log("\nbare imported callbacks " + size);
   let any = greater_than(size, 0);
   if (any) {
