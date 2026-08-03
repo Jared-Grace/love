@@ -1,3 +1,4 @@
+import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -74,11 +75,16 @@ export function app_code_examples(context) {
   let on_back = null;
   let back_text = null;
   let more_text = text_combine("See ", another);
+  let complete = app_code_lesson_examples_complete_is(lesson);
+  let on_more = refresh;
+  if (complete) {
+    on_more = null;
+  }
   app_code_next(
     context,
     c,
     more_text,
-    refresh,
+    on_more,
     example_another,
     on_back,
     back_text,

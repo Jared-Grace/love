@@ -18,10 +18,13 @@ export function app_code_next(
   parent_next_back,
 ) {
   "the way-forward controls on the examples screen: a self-descriptive 'see more examples' button (its own action, no question) that refreshes the examples in place, then the primary Next button and an optional Back. more_text is the plain label for the refresh button; refresh runs it; on_next is Next; on_back/back_text are the optional back control";
-  let container_more = html_div(parent_more);
-  let left = emoji_repeat_1();
-  let more_label = text_combine_multiple([left, " ", more_text]);
-  app_shared_button_wide(container_more, more_label, refresh);
+  "A null refresh hides the see-more button, the same way a null on_back hides Back. A lesson whose examples are already all of them has nothing to refresh to, and a button that redraws the identical screen reads as broken rather than as complete";
+  if (null_not_is(refresh)) {
+    let container_more = html_div(parent_more);
+    let left = emoji_repeat_1();
+    let more_label = text_combine_multiple([left, " ", more_text]);
+    app_shared_button_wide(container_more, more_label, refresh);
+  }
   let container_buttons = html_div(parent_next_back);
   html_page_padding_x(container_buttons);
   app_shared_button_wide_next(container_buttons, on_next);
