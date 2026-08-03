@@ -14,7 +14,6 @@
   "Bash(node /home/j/repos/love/scripts/ai.mjs ai_git)",
   "Bash(node scripts/ai.mjs git_ac_call_folder_try:*)",
   "Bash(node /home/j/repos/love/scripts/ai.mjs git_ac_call_folder_try:*)",
-  "Bash(node scripts/ai.mjs webpack_build_dev:*)",
   "Bash(node scripts/ai.mjs html_update_dev_webpack g_verify)",
   "Bash(node scripts/ai.mjs html_update_latest_promote_deploy:*)",
   "Bash(node scripts/ai.mjs g_sermon_write_lines_file:*)",
