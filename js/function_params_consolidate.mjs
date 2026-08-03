@@ -22,6 +22,6 @@ export async function function_params_consolidate(f_name) {
     list_clear(params);
     list_add(params, arg_new);
   }
-  let result = await function_transform(f_name, lambda);
-  let f_names = await functions_names();
+  await function_transform(f_name, lambda);
+  await functions_names();
 }
