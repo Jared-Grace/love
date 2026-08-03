@@ -15,8 +15,8 @@ export async function messenger_reply_playwright() {
   let data = await file_read_json(p);
   let pin = property_get(data, "pin");
   let v2 = await import_install("playwright");
-  let webkit = property_get(v2, "webkit");
-  let firefox = property_get(v2, "firefox");
+  property_get(v2, "webkit");
+  property_get(v2, "firefox");
   let chromium = property_get(v2, "chromium");
   let browser = null;
   async function lambda() {
