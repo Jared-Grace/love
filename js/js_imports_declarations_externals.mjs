@@ -11,7 +11,7 @@ export function js_imports_declarations_externals(ast) {
     function lambda(v) {
       let node = property_get(v, "node");
       let source = property_get(node, "source");
-      let specifiers = property_get(node, "specifiers");
+      property_get(node, "specifiers");
       let a2 = js_node_type_is(source, "Literal");
       if (not(a2)) {
         return;
