@@ -1,7 +1,6 @@
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { pages_published_baseline_path } from "./pages_published_baseline_path.mjs";
-import { pages_published_baseline_write } from "./pages_published_baseline_write.mjs";
 import { pages_published_names } from "./pages_published_names.mjs";
 export async function pages_published_gate_run() {
   "Fail if the set of addresses this repo serves is not the set it last recorded. Read-only.";

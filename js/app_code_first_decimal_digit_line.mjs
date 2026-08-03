@@ -21,8 +21,7 @@ export function app_code_first_decimal_digit_line(
   html_style_code_dark_nowrap(tile);
   html_span_text(tile, whole_text);
   html_span_text(tile, ".");
-  let chip = app_code_lesson_number_chip(tile, digit, color);
-  app_code_lesson_chip_lift(chip);
+  let chip = app_code_lesson_number_chip_lifted(tile, digit, color);
   html_style_margin_x(chip, app_shared_spaced_neighbor_gap());
   html_span_text(tile, decimal_after);
   html_span_text(div, " the first digit after the decimal point is ");
