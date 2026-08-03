@@ -43,8 +43,13 @@ export async function functions_locals_unread_repair_some(how_many) {
     let args = [name];
     await function_call_commit(function_declarations_unused_clear, args);
   }
+  ("A record that will not shrink is written down and the run still answers. The guard refusing means some OTHER function has a new unread name standing - a peer mid-edit, most likely - and that is theirs to fix rather than this run's to record. Throwing there would kill the command after its work had already landed and been committed, so the caller would read a stack trace over changes that were fine, which is what the first version of this did");
   let shrink = [];
-  await function_call_commit(functions_locals_unread_baseline_write, shrink);
+  async function step() {
+    await function_call_commit(functions_locals_unread_baseline_write, shrink);
+  }
+  let verdict = await lambda_throws_async(step);
+  let record_refused = property_get(verdict, "throws");
   let left = await functions_locals_unread();
   let names = list_map(left, name_of);
   let repaired = list_without_multiple(attempted, names);
@@ -54,6 +59,7 @@ export async function functions_locals_unread_repair_some(how_many) {
     repaired,
     refused,
     declined,
+    record_refused,
     remaining: still,
   };
   return r;
