@@ -11,8 +11,9 @@ import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
 export async function address_key_doors_wrapped() {
-  "Every function that is a door onto the address of a page without being one of the two the readings know about - one that hands a parameter of its own where the name of a field goes. Read-only.";
-  "A word written at a call to such a function is as published as one written at the door itself, and no reading of published address words would ever reach it, because they all look at calls to the two known doors. So an empty answer is what says the written-down set of doors is still the whole set.";
+  "Every function that is a door onto the address of a page without being written down as one - a function handing a parameter of its own where the name of a field goes. Both halves of an address, the part after the hash and the part after the question mark. Read-only.";
+  "A word written at a call to such a function is as published as one written at the door itself, and no reading of published address words would ever reach it, because they all look at calls to the doors that are written down. So an empty answer is what says the written-down set is still the whole set.";
+  "The field stands first in every door there is today, so one place is asked of all of them. That holds only while it is true, and the list they come from says so at the point where a fourth would be added.";
   "A word held in a local rather than a parameter is not this. Set from a call, it is the repaired shape - the word is held by a function, and whether that function is frozen is a different question. Set from a word written out, it is caught where words written out are caught.";
   "One step in, not two. A parameter of a function nested inside this one is filled from this same file, so it publishes nothing on its own; it would only matter if that inner function were handed out to be called elsewhere, and there is none doing this today.";
   arguments_assert(arguments, 0);
