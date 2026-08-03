@@ -6,6 +6,7 @@ import { function_run } from "./function_run.mjs";
 export async function function_run_from_process_argv_full_name() {
   "runs the function named on the command line, refusing shorthand — it must be named in full";
   let [, , f_name, ...args] = process.argv;
+  await process_folder_repos_stand();
   process_ai_seam_set();
   await function_name_full_assert(f_name);
   await ai_log_add_try(f_name, args);
