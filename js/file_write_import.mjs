@@ -10,9 +10,9 @@ export async function file_write_import() {
   "loading for a branch that runs when the file is missing, which it is once.";
   "Fetched here instead, those files load the moment something genuinely writes";
   "and not one moment sooner.";
-  let module = await import(
-    text_combine_multiple(["./", fn_name("file_write"), ".mjs"])
-  );
-  let fn = property_get(module, fn_name("file_write"));
+  let f_name = fn_name("file_write");
+  let module = await import(text_combine_multiple(["./", f_name, ".mjs"]));
+  let property_name = fn_name("file_write");
+  let fn = property_get(module, property_name);
   return fn;
 }
