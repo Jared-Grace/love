@@ -1,9 +1,7 @@
 {
  "known": [
   "app_shared_dev_build",
-  "app_shared_name_search_info",
   "app_shared_name_search_multiple",
-  "apps_frozen_names_all",
   "app_g_day_guide_pick_check",
   "app_apps_all_main_fns",
   "firebase_deploy",
@@ -16,9 +14,7 @@
   "app_shared_api_generic_f_name_args",
   "functions_param_new_multiple",
   "ai_log_pairs_frequent",
-  "apps_names_prefixed",
   "html_regenerate_all",
-  "app_search_query_hash_key",
   "firebase_prod_app_unchanged_assert",
   "app_shared_dev_build_multiple_prompt",
   "app_code_html_update_latest_promote_deploy",
@@ -35,7 +31,6 @@
   "g_genders_names",
   "g_gender_male",
   "g_gender_female",
-  "app_shared_url_dev",
   "g_female_img_names",
   "g_male_img_names"
  ]
