@@ -19,10 +19,7 @@ export function app_code_lesson_symbols_letters() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    let span = html_span_text(
-      div,
-      "In English, there are 26 letters in the alphabet: ",
-    );
+    html_span_text(div, "In English, there are 26 letters in the alphabet: ");
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     html_text_characters_numbered(div2, alphabet_lower);
