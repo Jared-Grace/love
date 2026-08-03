@@ -1,9 +1,6 @@
+import { git_status_paths } from "./git_status_paths.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
-import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { git_status_line_path } from "./git_status_line_path.mjs";
 export async function git_files_changed_folder(folder, paths) {
   "Of the files handed in, which ones this folder actually has a change to commit.";
   "Asking git rather than deciding here is what makes the answer usable: a path it";
