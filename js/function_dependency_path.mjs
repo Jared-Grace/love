@@ -7,6 +7,7 @@ import { function_exists_assert_json } from "./function_exists_assert_json.mjs";
 import { visit_unique_async } from "./visit_unique_async.mjs";
 import { function_imports } from "./function_imports.mjs";
 export async function function_dependency_path(f_name_from, f_name_to) {
+  "The shortest chain of imports leading from one function to another, or nothing at all when the first never reaches the second.";
   let result = null;
   let v2 = await function_name_unalias(f_name_from);
   let from = property_get(v2, "unaliased");
