@@ -1,3 +1,5 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { subtract } from "./subtract.mjs";
 import { and } from "./and.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,19 +18,24 @@ export async function memory_index_heading_blank_after_remove() {
   let lines = await memory_index_lines();
   let hash = "#";
   let kept = [];
+  ("the first line has nothing before it, so there is no heading it could be sitting under - asking for the last of an empty list is the one thing that would throw here rather than answer");
   for (let line of lines) {
+    let started = list_empty_not_is(kept);
     let blank = text_empty_is(line);
-    let before = list_last(kept);
-    let heading = text_starts_with(before, hash);
-    let drop = and(blank, heading);
-    if (not(drop)) {
+    let after_something = and(started, blank);
+    let heading = false;
+    if (after_something) {
+      let before = list_last(kept);
+      heading = text_starts_with(before, hash);
+    }
+    if (not(heading)) {
       list_add(kept, line);
     }
   }
   let rebuilt = kept.join("\n");
   let path = memory_index_path();
   await file_overwrite(path, rebuilt);
-  let removed = lines.length - kept.length;
+  let removed = subtract(lines.length, kept.length);
   let r = {
     removed,
   };
