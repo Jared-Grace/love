@@ -14,10 +14,10 @@ import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function messenger_reply_unread_collect() {
-  let page = await messenger_reply_puppeteer(lambda);
+  await messenger_reply_puppeteer(lambda);
   async function lambda(page_open) {
     let v = messenger_reply_url();
-    let messages = await messenger_reply_messages(page_open, v);
+    await messenger_reply_messages(page_open, v);
     await messenger_reply_unread_click(page_open);
     await messenger_reply_wait(page_open);
     let urls = await messenger_reply_messages_urls_add_page(page_open);
