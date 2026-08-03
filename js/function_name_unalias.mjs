@@ -5,6 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { function_acronym_to_name } from "./function_acronym_to_name.mjs";
 import { function_alias_add_generic } from "./function_alias_add_generic.mjs";
 export async function function_name_unalias(f_name) {
+  "The real function name behind whatever was typed, resolving an alias or an acronym, and saying which of the two it was.";
   arguments_assert(arguments, 1);
   var v2 = await function_alias_add_generic(f_name);
   let unaliased_actual = property_get(v2, "unaliased");
