@@ -271,6 +271,7 @@ export function qa_gates() {
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
     literals_marked_both_ways_gate_run,
+    firebase_chapter_upload_folders_gate_run,
     hash_key_literals_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
