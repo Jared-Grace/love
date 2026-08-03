@@ -1,3 +1,5 @@
+import { js_loop_declared_names } from "./js_loop_declared_names.mjs";
+import { js_types_loop_node } from "./js_types_loop_node.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
