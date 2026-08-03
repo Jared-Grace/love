@@ -1,3 +1,4 @@
+import { qa_gate_said_advice_remove } from "./qa_gate_said_advice_remove.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_commit_at_generic } from "./qa_commit_at_generic.mjs";
@@ -22,7 +23,9 @@ export async function qa_commit_named_at(commit) {
     for (let section of sections) {
       let gate = property_get(section, "name");
       let said = property_get(section, "said");
-      let names = functions_names_in_text(said, known);
+      ("A gate's advice about how to put the matter right is not an accusation, and it is written in ordinary English - which names functions here, because this repo has atoms called not, and, or and each. Reading it as an accusation held every app out of a deployment for words a gate used while being helpful");
+      let accused = qa_gate_said_advice_remove(said);
+      let names = functions_names_in_text(accused, known);
       named[gate] = names;
     }
     let judged = {
