@@ -60,7 +60,7 @@ export async function image_generate(text, path_output) {
       let totalHeight = multiply(lines_tried.length, line_height_tried);
       if (less_than_equal(totalHeight, MAX_HEIGHT)) {
         best = mid;
-        low = text_combine(mid, 1);
+        low = add(mid, 1);
       } else {
         high = subtract(mid, 1);
       }
