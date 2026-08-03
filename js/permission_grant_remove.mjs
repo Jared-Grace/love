@@ -5,6 +5,7 @@ import { not } from "./not.mjs";
 import { list_remove } from "./list_remove.mjs";
 export async function permission_grant_remove(unaliased) {
   "take back the standing approval this one function held, so that running it asks again";
+  "do NOT grant - it edits the file that decides what runs unasked and has to be seen every time";
   "the inverse of the verb that grants one, and until now the only half that existed. A granted function that is later deleted leaves its rule behind naming nothing, which the gate reads as a dead name and fails on - so the removal had to happen by hand in a generated file, which is the one place a hand is never meant to go";
   "naming a function that holds no rule changes nothing and says so, so running this twice is the same as running it once";
   let names = permission_grant_names();

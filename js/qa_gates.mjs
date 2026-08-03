@@ -1,3 +1,4 @@
+import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
 import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
 import { firebase_chapter_upload_folders_gate_run } from "./firebase_chapter_upload_folders_gate_run.mjs";
 import { qa_gate_run_start_wanted_gate_run } from "./qa_gate_run_start_wanted_gate_run.mjs";
@@ -316,6 +317,7 @@ export function qa_gates() {
     js_page_serialized_import_uses_cases_gate_run,
     functions_page_auto_borrowing_gate_run,
     js_module_state_shadowed_cases_gate_run,
+    error_where_cases_gate_run,
     functions_module_state_shadowed_gate_run,
     functions_gate_run_unwired_gate_run,
     functions_cases_ungated_gate_run,
