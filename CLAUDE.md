@@ -77,7 +77,7 @@ A *selector* is any fn `(ast, …args) → node`; a *transform* is any fn `(ast,
 
 **Everything else is in the note** — the full address × verb vocabulary and what each one does, authoring a whole function from names alone, registering examples and gates, the `_args` splitter's limits (it breaks on commas and dots), why a parameter may never take code, the two things deliberately not built, and the `ao` gotchas. **It is not optional reading; it is moved, not retired.** Open it the first time you touch a `js/*.mjs` file in a session.
 
-**Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>`, or better `function_auto_checked <fn>`, which checks first and so reports a broken file instead of throwing. Nothing else canonicalizes your file, and it does **not** commit when Claude runs it, so always commit yourself afterwards.
+**Run `ao` yourself after editing a `js/*.mjs` file** — `function_auto_checked <fn>`, which checks first and so reports a broken file instead of throwing; or `functions_auto_pending_changed_repair`, which needs no name at all: it finds every uncommitted function the pass would still change and runs it over exactly those. Nothing else canonicalizes your file, and neither **commits** when Claude runs it, so always commit yourself afterwards.
 
 ## Shared constants: merge freely, never revalue
 
