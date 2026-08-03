@@ -2624,6 +2624,65 @@ def find_heredoc_file_write(command):
     return bool(HEREDOC_FILE_WRITE_TEXT.search(unquoted))
 
 
+# An in-place stream edit is the third spelling of "the shell writes a file",
+# after `node -e` and the heredoc, and it is the one that keeps being reached
+# for on this repo's own source. It is never allow-listed, so today it prompts
+# a human for a change the Edit tool makes with no prompt at all - the settings
+# file runs in acceptEdits, so Edit and Write on a repo file are already free.
+# The prompt therefore buys nothing and costs a click, and worse, it teaches
+# the shape: a Claude who got a yes once reaches for `sed -i` again.
+#
+# The failure mode is the same one the heredoc note describes, and sharper.
+# `sed -i 's/a/b/'` rewrites every match in the file and reports nothing about
+# how many there were, so a pattern meant for one call site silently changes
+# five, and a pattern that matches nothing silently changes none - both exit 0.
+# Edit names the exact text it is replacing and refuses when that text is not
+# there or is not unique, which under several Claudes editing one working
+# directory is the whole difference between a change and a guess. For a
+# structural change there is better still: a named transform edits the AST and
+# carries every caller and import with it.
+IN_PLACE_EDIT_TEXT = re.compile(
+    r"\b(?:sed|perl)\b[^|;&\n]*?\s(?:-[a-zA-Z]*i[a-zA-Z]*(?:\.\w+)?|--in-place)"
+    r"(?=[\s=]|$)"
+)
+
+IN_PLACE_EDIT_DENY_REASON = (
+    "Editing a file in place from the shell can't be approved here - use the "
+    "Edit tool, which needs no approval on this repo.\n"
+    "  - `sed -i` replaces EVERY match and tells you nothing about how many "
+    "there were. A pattern you meant for one call site quietly changes five, "
+    "and a pattern that matches nothing quietly changes none. Both exit 0, so "
+    "neither looks any different from success.\n"
+    "  - Edit names the exact text it is replacing and fails loudly when that "
+    "text has moved or is not unique. Several Claudes share this one working "
+    "directory, so that difference is the whole point.\n"
+    "  - For a STRUCTURAL change to a js/*.mjs function - renaming a symbol, "
+    "adding or dropping a parameter, moving a definition - reach for a named "
+    "transform instead: it edits the AST and carries every caller, import and "
+    "alias with it, which no text replace can do. See CLAUDE.md, 'Editing with "
+    "transforms', and find one with `node scripts/ai.mjs functions_search "
+    "js_,<verb>`.\n"
+    "Reading with sed is untouched - this is only the in-place flag."
+)
+
+
+def find_in_place_edit(command):
+    """True iff `command` rewrites a file in place with sed or perl.
+
+    Quoted spans are blanked first, for the same reason as
+    find_heredoc_file_write: a command that merely quotes the shape (a grep
+    pattern, a test case naming it) is not performing it. Over-blanking hides
+    a mention rather than inventing one, which here means the command keeps
+    the answer it has today instead of gaining a wrong one.
+
+    Only the flag decides. `sed -n`, `sed -e`, a sed in a pipeline writing to
+    stdout - none of those touch a file, and all keep their existing answer.
+    The flag is matched as a cluster (`-i`, `-ni`, `-in`, `-i.bak`) and as
+    GNU's long spelling, because every one of them writes."""
+    unquoted = QUOTED_SPAN_TEXT.sub(" ", command)
+    return bool(IN_PLACE_EDIT_TEXT.search(unquoted))
+
+
 PYTHON_EVAL_DENY_REASON = (
     "An interpreter handed code on the command line can't be approved here. "
     "That is one seam wearing many names, and all of them are floored the same "
@@ -3688,6 +3747,14 @@ def main():
     # find_heredoc_file_write.
     if find_heredoc_file_write(command):
         return decide("deny", HEREDOC_FILE_WRITE_DENY_REASON)
+
+    # And the third spelling of the same thing: the shell rewriting a file in
+    # place. Floored for the same reason - sed -i is never allow-listed, so
+    # this only ever turns a prompt into a redirect Claude can act on itself,
+    # and the tool it redirects to is already approval-free here. See
+    # find_in_place_edit.
+    if find_in_place_edit(command):
+        return decide("deny", IN_PLACE_EDIT_DENY_REASON)
 
     # Also a hard floor (before any allow decision, so a stray allow rule can't
     # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every

@@ -71,6 +71,14 @@
     { "command": "cat << EOF", "decision": "ask", "why": "a heredoc with nowhere to land is not a file write and keeps its existing answer - both halves are required" },
     { "command": "grep 'cat >> f << EOF' notes.txt", "decision": "allow", "why": "quoted spans are blanked before the text match, so mentioning the shape is not performing it - the case that first fired this floor wrongly" },
     { "command": "ls > out.txt", "decision": "ask", "why": "redirecting a COMMAND's output to a file is untouched; only a heredoc, where the text is already in hand, is floored" },
+
+    { "command": "sed -i 's/a/b/' js/x.mjs", "decision": "deny", "reason_includes": "use the Edit tool", "why": "in-place stream editing is the third spelling of the shell writing a file - it replaces every match and reports none of them, while Edit names the text it replaces and fails loudly when a peer moved it" },
+    { "command": "sed -i.bak 's/a/b/' f", "decision": "deny", "reason_includes": "Edit tool", "why": "a backup suffix on the flag still rewrites the file, so the flag is matched as a cluster rather than as the exact two characters" },
+    { "command": "perl -pi -e 's/a/b/' f", "decision": "deny", "reason_includes": "Edit tool", "why": "perl's in-place flag writes the same way sed's does, and it is the spelling reached for when sed is refused" },
+    { "command": "sed --in-place 's/a/b/' f", "decision": "deny", "reason_includes": "Edit tool", "why": "GNU's long spelling of the same flag - matched explicitly, since the cluster pattern cannot reach past the second dash" },
+    { "command": "sed -n '1,5p' js/x.mjs", "decision": "allow", "why": "only the in-place flag decides; sed reading a file writes nothing and stays trusted" },
+    { "command": "cat js/x.mjs | sed -e 's/a/b/'", "decision": "allow", "why": "a sed in a pipeline writes to standard output, not to the file - the flag is the whole test" },
+    { "command": "grep -o 'sed -i' notes.txt", "decision": "allow", "why": "quoted spans are blanked first, so naming the shape is not performing it - the same narrowing the heredoc floor needs" },
     { "command": "python3 report.py", "decision": "silent", "why": "python on a script FILE is a different surface (the hook itself runs that way) - left alone, not floored" },
     { "command": "grep 'python3 -c' notes.txt", "decision": "allow", "why": "quote-aware: 'python3 -c' inside a grep pattern is literal text, not a python invocation, so grep stays trusted" },
     { "command": "python3 - <<PY\nprint(1)\nPY", "decision": "deny", "reason_includes": "standard input", "why": "a heredoc is -c with the code moved off the argument list - and it was a live bypass, since << is exactly what makes a command unparseable" },
@@ -180,7 +188,7 @@
 
     { "command": "sed -n 's/a/b/' f.txt", "decision": "allow", "why": "the accepted sed shape: optional -n, one script, then filenames" },
     { "command": "sed 's/a/b/' f.txt", "decision": "allow", "why": "bare positional script is the other accepted form" },
-    { "command": "sed -i 's/a/b/' f.txt", "decision": "silent", "why": "-i edits in place, outside the accepted shape" },
+    { "command": "sed -i 's/a/b/' f.txt", "decision": "deny", "reason_includes": "Edit tool", "why": "-i edits in place, outside the accepted shape - and abstaining meant a human prompt for a change the Edit tool makes with none, so it is floored into a redirect instead" },
     { "command": "sed -f script.sed f.txt", "decision": "silent", "why": "-f hides the real script from the command string" },
     { "command": "sed -e 's/a/b/' -e 's/c/d/' f.txt", "decision": "silent", "why": "exactly one script is accepted, never a second -e" },
 
