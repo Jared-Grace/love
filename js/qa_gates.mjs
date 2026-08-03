@@ -1,3 +1,4 @@
+import { permission_writers_gate_run } from "./permission_writers_gate_run.mjs";
 import { qa_commit_named_entry_stale_gate_run } from "./qa_commit_named_entry_stale_gate_run.mjs";
 import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
 import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
