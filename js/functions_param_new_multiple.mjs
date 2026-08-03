@@ -7,6 +7,7 @@ export async function functions_param_new_multiple(
   param_names,
   default_value,
 ) {
+  "Gives several named functions several new parameters at once, one value standing in for all of them at every call that already exists.";
   arguments_assert(arguments, 3);
   let split = text_split_comma(param_names);
   async function lambda(param_name) {
