@@ -17,8 +17,8 @@ export async function openai_generic(fn, system, user) {
       await fn(input_file_path, output_file_path);
       data = await file_read(output_file_path);
     }
-    let result2 = await file_temp(lambda2);
+    await file_temp(lambda2);
   }
-  let result = await file_temp(lambda);
+  await file_temp(lambda);
   return data;
 }
