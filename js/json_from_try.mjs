@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { text_first } from "./text_first.mjs";
 import { text_last } from "./text_last.mjs";
@@ -9,12 +10,11 @@ import { json_starts_find_index } from "./json_starts_find_index.mjs";
 import { text_take } from "./text_take.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { json_from } from "./json_from.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function json_from_try(json) {
   let left = json_starts_find_index(json);
   let skipped = text_skip(json, left);
   let right = json_ends_find_index(skipped);
-  let count = text_combine(right, 1);
+  let count = add(right, 1);
   let without = text_take(skipped, count);
   let first = text_first(without);
   let right2 = js_code_bracket_open();
