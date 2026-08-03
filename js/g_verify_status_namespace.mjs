@@ -1,3 +1,4 @@
+import { text_frozen } from "./text_frozen.mjs";
 export function g_verify_status_namespace() {
   "The word the marks a reviewer leaves on a chapter are uploaded under, which is the folder they are already sitting in on the shared bucket.";
   "The word is shaped like a function name and names no function - it never did, and that is on purpose. What it names is a place on a bucket this repo cannot reach, so it is frozen: an edit here would send every future reading to a folder holding nothing while every mark already left stayed where it was.";
