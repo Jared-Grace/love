@@ -467,7 +467,7 @@ export function permission_grant_names() {
   let spelled464 = fn_name("commands_time_dispatcher_report");
   let spelled465 = fn_name("commands_time_report");
   let spelled466 = fn_name("daemons_ensure");
-  let spelled467 = fn_name("duplicates_baseline_path");
+  let spelled467 = fn_name("functions_duplicates_baseline_path");
   let spelled468 = fn_name("example_selectors");
   let spelled469 = fn_name("firebase_storage_list_jg");
   let spelled470 = fn_name("firebase_storage_url_project_jg");
