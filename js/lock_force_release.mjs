@@ -5,6 +5,7 @@ import { path_join } from "./path_join.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { log_keep } from "./log_keep.mjs";
 export async function lock_force_release(lock_name) {
+  "Removes a named lock whatever holds it, for when the process that took it is gone and the lock outlived it.";
   let f_path = folder_user_storage_function_path(lock_generic);
   let result = path_join([f_path, lock_name]);
   let lock_path = text_combine(result, ".lock");
