@@ -18,14 +18,13 @@ export async function firebase_chapter_upload_folders_gate_run() {
   if (any) {
     let joined = list_join_comma(offenders);
     let f_name = fn_name("literals_frozen_names");
-    throw new Error(
-      text_combine_multiple([
-        "chapter upload folder gate: ",
-        joined,
-        " - each of these hands a bucket folder to the address builder without a watched function holding the word, so retyping it moves every future read while the uploaded files stay where they are; give the word a function of its own and add that function to ",
-        f_name,
-      ]),
-    );
+    let combined = text_combine_multiple([
+      "chapter upload folder gate: ",
+      joined,
+      " - each of these hands a bucket folder to the address builder without a watched function holding the word, so retyping it moves every future read while the uploaded files stay where they are; give the word a function of its own and add that function to ",
+      f_name,
+    ]);
+    throw new Error(combined);
   }
   for (let site of sites) {
     let caller = property_get(site, "caller");
