@@ -46,6 +46,17 @@ export function app_g_menu(overlay, player) {
       await app_g_player_save(player);
       close();
     }
+    ("on a day walk (#day_unbelievers) the same button asks a DIFFERENT thing and does a different thing: it prays for discernment about WHO to go to next, and answering it picks the person and lays the gold guide to them. it belongs here rather than on a bar of its own across the bottom of the map, because it is a prayer, and every other prayer in the game is prayed from this screen. a bar at the bottom also read as the primary action of the whole map, which put the walking second to a button.");
+    let day_talkable = app_g_day_state_property("talkable");
+    if (null_is_not(day_talkable)) {
+      async function on_discern() {
+        await app_g_day_discern();
+        close();
+      }
+      let words_discern = g_prayer_discern();
+      app_g_button_green(sub, words_discern, on_discern);
+      return;
+    }
     let words = g_prayer_conversation();
     app_g_button_green(sub, words, lambda22);
   }
