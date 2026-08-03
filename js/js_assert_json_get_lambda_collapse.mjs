@@ -1,3 +1,4 @@
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -126,8 +127,8 @@ export function js_assert_json_get_lambda_collapse(ast) {
       let same = equal(one, record_name);
       return same;
     }
-    let left4 = list_filter_size(bound, named);
-    let once_is = equal(left4, 1);
+    let left = list_filter_size(bound, named);
+    let once_is = equal(left, 1);
     return once_is;
   }
   function call_below(body, declaration, wrapper_name) {
