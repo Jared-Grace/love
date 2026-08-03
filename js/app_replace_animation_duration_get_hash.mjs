@@ -1,8 +1,9 @@
+import { app_replace_animation_duration_hash_key } from "./app_replace_animation_duration_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 export function app_replace_animation_duration_get_hash() {
   let hash = html_hash_object_get();
-  let property = "d";
+  let property = app_replace_animation_duration_hash_key();
   let d = property_get_or_null(hash, property);
   return d;
 }
