@@ -8,11 +8,12 @@ import { g_seasons } from "./g_seasons.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-export function g_arc_prompt(chapter_code, verses_text, arcs_count) {
+export function g_arc_prompt(chapter_code, verses_text, turn_targets) {
   "The whole instruction that writes one chapter's cast - every person in that town and every turn they hold - as one string ready to send.";
   "ONE call for the whole chapter rather than one per person. Arcs written separately from the same chapter converge into variations on the same person, so a call that sees all of them at once makes them differ by construction - which is what removes the summary stage and the de-duplication pass that were otherwise needed to get the same thing.";
   "Every closed list is ASKED FOR here rather than spelled out. A word written into this prose could disagree with the list a coverage tally counts and nothing would ever notice.";
   "How many people is a parameter because it is proportional to the chapter's own days rather than fixed - roughly six tenths of a person per day of preaching - so a five day chapter and a twenty day chapter do not receive the same town.";
+  "It arrives as the LIST OF TURN TARGETS rather than as a count beside them. The count is how many targets there are, so passing both would be writing one number twice and letting the two disagree.";
   "The conversation lengths are handed over so the model can group its own turns into conversations. It has to do the grouping, because it is the only party that knows where one exchange finishes, and a grouping decided afterwards leaves every conversation after the first opening mid-thought.";
   let list = g_callings();
   let callings = list_join_comma_space(list);
@@ -32,10 +33,16 @@ export function g_arc_prompt(chapter_code, verses_text, arcs_count) {
     "The chapter being preached here is",
     chapter_code,
   ]);
+  let arcs_count = list_size(turn_targets);
+  let targets = list_join_comma_space(turn_targets);
   let joined2 = list_join_space([
     "Write",
     arcs_count,
     "people, all different from each other.",
+  ]);
+  let joined9 = list_join_space([
+    "Aim at these turn counts, one per person, in the order you write them:",
+    targets,
   ]);
   let joined3 = list_join_space(["  sex - one of:", sexes]);
   let joined4 = list_join_space(["  calling - one or more of:", callings]);

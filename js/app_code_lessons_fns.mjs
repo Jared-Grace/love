@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_comparing_true_false } from "./app_code_lesson_expression_comparing_true_false.mjs";
 import { app_code_lesson_expression_arithmetic_less_than } from "./app_code_lesson_expression_arithmetic_less_than.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
