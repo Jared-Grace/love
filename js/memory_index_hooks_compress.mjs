@@ -21,6 +21,7 @@ export async function memory_index_hooks_compress() {
   "Lines carrying no link are left alone. Their whole length is the hook for the note they point at, and shortening that is a judgment about what the note is for, which no rule here can make.";
   "A line whose first link is a word in its sentence is left alone too. Rebuilding drops whatever followed that link, which is right when what follows is a list and wrong when the sentence was going to carry on - and the question that tells them apart is whether the words before the link stop at a separator. Measured 2026-08-02: three lines came back broken from a run that did not ask, one of them reading BOUNDED by with its object taken out.";
   "A rebuilt line is only kept when it is genuinely shorter than the one it replaces. Shortening is the whole reason this runs, so a line that came back the same length or longer has nothing to offer and every chance of having lost something on the way.";
+  "An answer of no lines is an ordinary answer. It says the index holds nothing this can shorten without taking something out of it, which is the state a well-kept index is in most of the time, and the remedy left over is the one this cannot make: moving a hub's children into the hub's own note.";
   let lines = await memory_index_lines();
   let ceiling = memory_index_line_length_ceiling();
   let opener = "- [";
