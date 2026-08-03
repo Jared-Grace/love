@@ -1,3 +1,4 @@
+import { qa_commit_named_entry_stale_gate_run } from "./qa_commit_named_entry_stale_gate_run.mjs";
 import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
 import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
 import { firebase_folder_gate_run } from "./firebase_folder_gate_run.mjs";
@@ -270,6 +271,7 @@ export function qa_gates() {
     qa_gate_said_advice_remove_gate_run,
     qa_app_gates_sorted_gate_run,
     qa_gate_run_start_wanted_gate_run,
+    qa_commit_named_entry_stale_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
