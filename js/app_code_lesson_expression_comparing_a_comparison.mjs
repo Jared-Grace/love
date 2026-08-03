@@ -119,22 +119,22 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   }
   function naming(root) {
     "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it";
-    "Taught by showing rather than by listing symbols: one whole comparison per operator, so the learner reads the shape a comparison takes six times over rather than reading six symbols and being left to assemble the shape. The six come from the one list that holds them, so no other lesson can teach the word a different set";
-    "The same two numbers every time, so the only thing that changes down the column is the symbol - which is exactly the thing the word covers. Some of the six answer true and some answer false, and that is left alone on purpose: a comparison is a comparison whatever it answers, and the very next card is where the answer starts to matter";
+    "One line, with the six operators inlined rather than spelled out as six whole comparisons. The symbol is the only thing that differs between them, so six worked-out lines would repeat two numbers six times to show one difference - and they would also read as six things to learn where there is one";
+    "The six come from the one list that holds them, so no other lesson can teach the word a different set. The bold falls on the word, which is what the repo already does for a term it is defining: the word is what the learner carries to the next lesson, and the symbols are already set apart as code tiles";
     let card = app_code_container_light_blue(root);
-    app_code_lesson_bold_term(
+    let line = app_code_lesson_bold_term(
       card,
       "Here are some examples of ",
       "comparisons",
     );
-    function example_show(operator) {
-      "one whole comparison for an operator, tiled as code";
+    html_span_text(line, ": ");
+    function operator_symbol(operator) {
+      "the symbol shown in an operator's tile";
       let symbol = property_get(operator, "operator");
-      let code = text_combine_multiple(["3 ", symbol, " 5"]);
-      html_div_cycle_code(card, ["", code]);
+      return symbol;
     }
     let operators = js_operators_comparison();
-    each(operators, example_show);
+    app_code_operators_word_list(line, operators, "or", operator_symbol);
   }
   function worked_example(root, code, value, operator, right_value) {
     "one worked line taken a step at a time: what the comparison alone answers, then the whole line with that answer standing in its place, then what that comes to";
