@@ -1,3 +1,5 @@
+import { js_identifiers_naming_nodes } from "./js_identifiers_naming_nodes.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { list_slice_from_indices } from "./list_slice_from_indices.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -15,9 +17,6 @@ import { js_code_names_object_or_single } from "./js_code_names_object_or_single
 import { js_statement_return } from "./js_statement_return.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_get_end } from "./list_get_end.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { js_identifier_defineds_includes } from "./js_identifier_defineds_includes.mjs";
 import { not } from "./not.mjs";
 import { js_visit_identifiers } from "./js_visit_identifiers.mjs";
@@ -62,15 +61,14 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   }
   let body = property_get(ast, "body");
   list_add(body, declaration);
+  ("A word standing for a property is not a name the span reads from outside it, and asking the shared judgment rather than a reading written here is what keeps the two from disagreeing. The reading written here knew only the key of an object being built and not the word after a dot, so a span holding one mention of a function's own spelling asked its caller for a parameter called name - which is bound nowhere at the call site, and the file it wrote threw the first time it ran.");
+  let naming = js_identifiers_naming_nodes(declaration);
   function lambda3(la) {
     function lambda2(v) {
-      let stack = property_get(v, "stack");
       let node = property_get(v, "node");
-      let stack_1 = list_get_end(stack, 1);
-      if (js_node_type_is(stack_1, "Property")) {
-        if (property_equals(stack_1, "key", node)) {
-          return;
-        }
+      let named_is = list_includes(naming, node);
+      if (named_is) {
+        return;
       }
       let name = property_get(node, "name");
       let a = js_identifier_defineds_includes(v, name);

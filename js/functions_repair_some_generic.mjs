@@ -25,6 +25,7 @@ export async function functions_repair_some_generic(
   ("The count arrives from a command line as a word, so it is read as a number before it is used - handing a word to the taking would quietly take none.");
   ("A function that asked in its own words to be left alone is dropped before any are taken, not after, so declining one never costs somebody else their turn.");
   ("What was repaired is worked out by asking the sweep again rather than by writing down what was tried, because the two are not the same thing. A repair that refuses changes no file, so a name that was tried and a name that was fixed would otherwise come back in one list. The ones that refused are named on their own, because those are the ones somebody has to read.");
+  ("A repair that throws costs its own name and nothing else. The sweep reads a copy of the repo taken a moment ago, and with many hands editing one working directory a name in that copy can already have been renamed away by the time its turn comes - the repair then says there is no such function and throws. Left to travel, that throw would end the run partway through, so a batch of twenty could lose eighteen turns to one name nobody chose. The thrower is not lost by catching it: what was repaired is worked out by asking the sweep again, so a name that changed no file comes back named among the refused, which is where a reader should look for it anyway.");
   ("Each function is committed the moment it is repaired rather than all of them at the end, because somebody else's sweep takes the files otherwise, and what it leaves behind then says nothing about how they were changed.");
   ("The record is shrunk here rather than left to whoever runs the whole-repo gate next. A name that no longer offends and is still written down fails that gate exactly as loudly as a new offense, so a run that repaired ten and stopped would turn the gate red for every peer.");
   ("A record that will not shrink is reported and the run still answers. The guard refusing means some OTHER function has a new offense standing - a peer mid-edit, most likely - and that is theirs to fix rather than this run's to record. Throwing there would kill the command after its work had already landed and been committed, so the caller would read a stack trace over changes that were fine.");
@@ -45,7 +46,10 @@ export async function functions_repair_some_generic(
   let attempted = list_take(willing, size);
   for (let name of attempted) {
     let args = [name];
-    await function_call_commit(repair, args);
+    async function repair_attempt() {
+      await function_call_commit(repair, args);
+    }
+    await lambda_throws_async(repair_attempt);
   }
   let shrink = [];
   async function step() {

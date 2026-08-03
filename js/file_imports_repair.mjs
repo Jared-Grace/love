@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { import_from_dir_path } from "./import_from_dir_path.mjs";
-import { js_imports_missing_all_program } from "./js_imports_missing_all_program.mjs";
+import { js_imports_missing_all } from "./js_imports_missing_all.mjs";
 import { function_imports_add_relative } from "./function_imports_add_relative.mjs";
 export async function file_imports_repair(f_path) {
   arguments_assert(arguments, 1);
@@ -14,7 +14,7 @@ export async function file_imports_repair(f_path) {
   ("outside, so the only way to learn which had happened was to open the file.");
   let added = [];
   async function lambda(ast) {
-    let missing = await js_imports_missing_all_program(ast);
+    let missing = await js_imports_missing_all(ast);
     list_add_multiple(added, missing);
     await function_imports_add_relative(ast, missing, dictionary, from_dir);
   }
