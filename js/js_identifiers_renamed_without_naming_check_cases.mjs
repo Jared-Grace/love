@@ -3,13 +3,14 @@ export function js_identifiers_renamed_without_naming_check_cases() {
   "Pieces of code paired with the readers each one walks every word with while writing over a word and never asking which of those words merely names something";
   "Four of the five ask nothing wrong, and they have to be here. The question is made of three parts and a piece of code is only at fault when all three hold, so a reading that answered on any one part alone would call three of these an offence. What is left is the shape that has actually landed three times";
   "Each piece of code is frozen text. The words inside are the names of real readers in this repo, and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests";
+  let t = text_frozen("js_visit_identifiers_nodes");
   let cases = [
     {
       name: "walks every word and writes over one, having asked nothing",
       code: text_frozen(
         "export function f(ast, name_from, name_to) {\n  let r = property_set_if_equals_curried_right_3('name', name_from, name_to);\n  js_visit_identifiers_nodes(ast, r);\n}\n",
       ),
-      walked: [text_frozen("js_visit_identifiers_nodes")],
+      walked: [t],
     },
     {
       name: "walks every word and writes over one, having asked which words only name something",
