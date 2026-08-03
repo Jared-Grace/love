@@ -31,7 +31,7 @@ export async function ebible_references_parse_lines_generic(
       let verse_end = property_get(v2, "verse_end");
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
-      let book_code = property_get(v2, "book_code");
+      property_get(v2, "book_code");
       function each_version(bible_folder_each, books_each) {
         function lambda4(verse_number) {
           verse_number = text_to(verse_number);
