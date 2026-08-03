@@ -1,3 +1,4 @@
+import { lambda_throws_async } from "./lambda_throws_async.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_auto_declined_is } from "./function_auto_declined_is.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
