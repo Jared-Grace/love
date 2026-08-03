@@ -107,6 +107,5 @@ export async function js_expand_generic(next, stack_, ast) {
   undefined_not_is_assert_object_property_json(value, v, property_name, {
     hint: "the expanded call value shouldn't be undefined",
   });
-  let call2 = value;
   exit();
 }
