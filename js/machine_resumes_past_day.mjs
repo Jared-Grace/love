@@ -13,6 +13,10 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 export async function machine_resumes_past_day() {
   arguments_assert(arguments, 0);
+  ("Every moment in the last day at which this machine woke from sleep, each written out the way a person reads a time.");
+  ("The machine's own journal is the only thing that knows this. Nothing the repo keeps survives a sleep, so a run that stopped in the night leaves no record of why - and the journal's answer is what tells a wake apart from a crash.");
+  ("Reading the journal is tried plainly first and then again through the group that is allowed to read it, because on a machine where the account has already been added to that group the plain way works and the wrapping is noise, while on one where it has not the plain way answers with nothing at all rather than saying it was refused. Trying both is how an empty answer is told apart from a locked door.");
+  ("Both ways failing is said out loud with the line that fixes it, since an empty list would otherwise read as a machine that never slept.");
   function command_plain(journalctl_command) {
     return journalctl_command;
   }
