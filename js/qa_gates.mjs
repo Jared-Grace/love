@@ -1,3 +1,4 @@
+import { baselines_prefix_split_gate_run } from "./baselines_prefix_split_gate_run.mjs";
 import { functions_granted_silent_gate_run } from "./functions_granted_silent_gate_run.mjs";
 import { storage_key_seams_word_misplaced_gate_run } from "./storage_key_seams_word_misplaced_gate_run.mjs";
 import { js_function_declaration_unused_remove_cases_gate_run } from "./js_function_declaration_unused_remove_cases_gate_run.mjs";
@@ -338,6 +339,7 @@ export function qa_gates() {
     functions_work_size_gate_run,
     js_function_declaration_unused_remove_cases_gate_run,
     functions_granted_silent_gate_run,
+    baselines_prefix_split_gate_run,
   ];
   return gates;
 }
