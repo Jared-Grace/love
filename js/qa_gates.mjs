@@ -1,3 +1,4 @@
+import { functions_page_serialized_declined_gate_run } from "./functions_page_serialized_declined_gate_run.mjs";
 import { js_duplicate_elements_cases_gate_run } from "./js_duplicate_elements_cases_gate_run.mjs";
 import { functions_duplicate_elements_gate_run } from "./functions_duplicate_elements_gate_run.mjs";
 import { js_module_state_shadowed_cases_gate_run } from "./js_module_state_shadowed_cases_gate_run.mjs";
@@ -6,7 +7,6 @@ import { js_atomize_cases_gate_run } from "./js_atomize_cases_gate_run.mjs";
 import { js_page_serialized_import_uses_cases_gate_run } from "./js_page_serialized_import_uses_cases_gate_run.mjs";
 import { functions_page_auto_borrowing_gate_run } from "./functions_page_auto_borrowing_gate_run.mjs";
 import { functions_locals_unread_gate_run } from "./functions_locals_unread_gate_run.mjs";
-import { qa_gates_repeated_gate_run } from "./qa_gates_repeated_gate_run.mjs";
 import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_empty_cases_gate_run.mjs";
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
@@ -287,13 +287,13 @@ export function qa_gates() {
     functions_inside_duplicates_gate_run,
     functions_builtin_calls_gate_run,
     functions_page_serialized_gate_run,
+    functions_page_serialized_declined_gate_run,
     js_page_serialized_import_uses_cases_gate_run,
     functions_page_auto_borrowing_gate_run,
     js_module_state_shadowed_cases_gate_run,
     functions_module_state_shadowed_gate_run,
     functions_gate_run_unwired_gate_run,
     functions_cases_ungated_gate_run,
-    qa_gates_repeated_gate_run,
     functions_duplicate_elements_gate_run,
     js_duplicate_elements_cases_gate_run,
   ];
