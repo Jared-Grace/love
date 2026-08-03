@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "./app_replace_rule_set_success_attribute_completed.mjs";
 import { app_replace_rule_set_success_attribute_next } from "./app_replace_rule_set_success_attribute_next.mjs";
@@ -19,7 +20,6 @@ import { app_replace_symbol_tile_valid_multiple_nested } from "./app_replace_sym
 import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
-import { text_combine } from "./text_combine.mjs";
 export async function app_replace_rule_set_success(
   rule_name,
   goal,
