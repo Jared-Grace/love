@@ -13,5 +13,5 @@ export async function html_img_load_wait(component) {
       setTimeout(resolve, 3000);
     }
   }
-  let p = await promise_wrap(lambda);
+  await promise_wrap(lambda);
 }
