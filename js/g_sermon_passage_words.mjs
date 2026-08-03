@@ -2,6 +2,7 @@ import { greater_than } from "./greater_than.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function g_sermon_passage_words(text) {
+  "The words of a passage, with every kind of dash counted as a space, so a hyphenated pair is met as the two words it holds.";
   let spaced = text.replace(/[-–—]+/g, " ");
   let split = text_split_space(spaced);
   function nonempty(word) {
