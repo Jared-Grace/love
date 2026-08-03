@@ -1,9 +1,8 @@
+import { js_declaration_record_of_plain_names_is } from "./js_declaration_record_of_plain_names_is.mjs";
 import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { list_get_property } from "./list_get_property.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -43,36 +42,6 @@ export function js_assert_json_get_lambda_collapse(ast) {
   "be two declarations of one word; and anything handed over that is not a plain name.";
   let moved = 0;
   let bound = js_binding_names(ast);
-  function record_of_plain_names_is(variable) {
-    "true only when the record is written out right here and holds nothing but plain names, so reading it early can neither wait on anything nor go wrong";
-    let declarators = property_get(variable, "declarations");
-    let one_is = list_size_1(declarators);
-    if (not(one_is)) {
-      return false;
-    }
-    let init = list_get_property(declarators, 0, "init");
-    let record_is = js_node_type_is(init, "ObjectExpression");
-    if (not(record_is)) {
-      return false;
-    }
-    let entries = property_get(init, "properties");
-    let plain = true;
-    function entry_each(entry) {
-      let entry_is = js_node_type_is(entry, "Property");
-      if (not(entry_is)) {
-        plain = false;
-        return;
-      }
-      let value = property_get(entry, "value");
-      let named = js_identifier_name_try(value);
-      let named_is = equal_not(named, null);
-      if (not(named_is)) {
-        plain = false;
-      }
-    }
-    each(entries, entry_each);
-    return plain;
-  }
   function payload_line(declaration) {
     "the one line of the wrapper's body holding the record, when the body is nothing else";
     let f_body = property_get(declaration, "body");
@@ -104,7 +73,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       let none = null;
       return none;
     }
-    let plain_is = record_of_plain_names_is(first);
+    let plain_is = js_declaration_record_of_plain_names_is(first);
     if (not(plain_is)) {
       let none = null;
       return none;
@@ -169,8 +138,8 @@ export function js_assert_json_get_lambda_collapse(ast) {
   }
   function call_point_at_record(call, record_name) {
     let callee = property_get(call, "callee");
-    let value2 = fn_name("assert_json");
-    property_set(callee, "name", value2);
+    let value = fn_name("assert_json");
+    property_set(callee, "name", value);
     let second = property_list_get(call, "arguments", 1);
     property_set(second, "name", record_name);
   }
