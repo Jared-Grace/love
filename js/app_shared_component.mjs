@@ -24,6 +24,6 @@ export async function app_shared_component(a_name, on_click, button_text) {
   let bc = app_shared_bar_content_root(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
-  let component = html_button_wide(bar, button_text, on_click);
+  html_button_wide(bar, button_text, on_click);
   await app_shared_context_initialize_root(content, fn);
 }
