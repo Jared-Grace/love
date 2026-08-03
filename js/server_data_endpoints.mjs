@@ -23,7 +23,7 @@ export function server_data_endpoints(app) {
     await data_sequence;
     performance_next(p, "res.json(data)");
     res.json(data);
-    let r = performance_end(p);
+    performance_end(p);
     async function data_get_fn() {
       if (null_is(data)) {
         data = {};
