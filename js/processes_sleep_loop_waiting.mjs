@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_read } from "./folder_read.mjs";
 import { process_own_id } from "./process_own_id.mjs";
