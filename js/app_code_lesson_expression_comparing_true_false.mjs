@@ -1,3 +1,5 @@
+import { list_map } from "./list_map.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -10,21 +12,14 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { equal } from "./equal.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
-import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
-import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
-import { js_operator_less_than } from "./js_operator_less_than.mjs";
-import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_true_false() {
   "=== and !== on plain true and false, the prerequisite the swapping lessons were already leaning on: every === the learner has met so far had numbers or strings on both sides, and nothing had ever compared two true/false values. ONE new idea, and nothing else: the equality operators read true and false the same way they read numbers. A comparison standing where a plain true or false stood is a second idea and gets its own lesson (comparing a comparison), which in turn is what the swapping lesson's (a === b) === (b === a) needs. Only four true/false combinations exist, so the quiz enumerates all four rather than sampling, picks two for true and two for false, and never repeats a line on a screen. Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -113,8 +108,10 @@ export function app_code_lesson_expression_comparing_true_false() {
   }
   function refill() {
     "four examples a screen, true and false alternating, no two the same";
-    let trues = list_shuffle_take(lines(true), 2);
-    let falses = list_shuffle_take(lines(false), 2);
+    let list2 = lines(true);
+    let trues = list_shuffle_take(list2, 2);
+    let list3 = lines(false);
+    let falses = list_shuffle_take(list3, 2);
     let list = [trues[0], falses[0], trues[1], falses[1]];
     return list;
   }
