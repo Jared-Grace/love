@@ -1,5 +1,6 @@
 export async function app_replace_tests_proof_start_over_click(page) {
   "click the start over button, found by its text, which forgets the goal's saved steps so the proof clears";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   function click() {
     let buttons = Array.from(document.querySelectorAll("button"));
     function is_start_over(button_each) {
