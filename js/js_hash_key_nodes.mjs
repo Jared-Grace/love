@@ -1,3 +1,4 @@
+import { js_field_call_prefix } from "./js_field_call_prefix.mjs";
 import { hash_key_doors } from "./hash_key_doors.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_hash_object_names } from "./js_hash_object_names.mjs";
@@ -48,7 +49,8 @@ export function js_hash_key_nodes(ast) {
       key_note(called, key);
       return;
     }
-    let field = text_starts_with(called, "property_");
+    let prefix = js_field_call_prefix();
+    let field = text_starts_with(called, prefix);
     if (not(field)) {
       return;
     }
