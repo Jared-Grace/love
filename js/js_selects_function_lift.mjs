@@ -42,6 +42,8 @@ export async function js_selects_function_lift(ast, selects, f_name_new) {
   let params = property_get(declaration, "params");
   let items = list_map(closed, js_parse_expression);
   list_add_multiple(params, items);
+  ("The count is written once the parameters are settled, because it has to say how many the function takes after everything it closed over has become one.");
+  js_function_arguments_assert_add(declaration);
   function lambda(call) {
     let callee = property_get(call, "callee");
     property_set(callee, "name", f_name_new);
