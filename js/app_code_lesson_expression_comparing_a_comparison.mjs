@@ -1,6 +1,7 @@
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
-import { each } from "./each.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
