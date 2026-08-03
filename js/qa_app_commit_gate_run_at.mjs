@@ -1,12 +1,8 @@
-import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
+import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
 import { qa_commit_named_at } from "./qa_commit_named_at.mjs";
 import { qa_app_reachable_names } from "./qa_app_reachable_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_intersection } from "./list_intersection.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_add } from "./list_add.mjs";
 export async function qa_app_commit_gate_run_at(search, commit) {
   "Whether one app is sound at one commit: every gate that was red there, sorted into the ones that reach what this app ships and the ones that cannot";
   "One app is what gets deployed, and a break in another app cannot travel into this app's bundle - so a whole-repo verdict answers a question nobody asked and holds a ready deploy for work that could never affect it. Measured on one afternoon: five aborts of a prod fix, none of them able to reach the app being shipped.";
