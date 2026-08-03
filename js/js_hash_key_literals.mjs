@@ -9,6 +9,6 @@ export function js_hash_key_literals(ast) {
   "All that is said here is which part of the address is meant. The judging is shared with the part after the question mark, which asks the identical question of a different walk.";
   arguments_assert(arguments, 1);
   let nodes = js_hash_key_nodes(ast);
-  let sites = js_key_literals_generic(nodes);
+  let sites = js_key_literals_generic(ast, nodes);
   return sites;
 }
