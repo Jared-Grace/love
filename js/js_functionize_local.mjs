@@ -29,6 +29,12 @@ import { list_min } from "./list_min.mjs";
 import { list_insert } from "./list_insert.mjs";
 export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   let span = list_slice_from_indices(stack_, indices);
+  ("A run of lines that jumps out of itself is refused before anything is written. A return in the run would go on returning, but from the new function instead of the one the reader was looking at, and the caller would carry quietly on to the next line - the failure with no error. The places are given as how far into the file they are written.");
+  let escapes = js_statements_escapes_unmatched(span);
+  list_empty_is_assert_json(escapes, {
+    hint: "this run of lines returns, breaks, or goes round again in a way that leaves the run, and a function of its own has nowhere for that to land. Would you like to choose ends that hold the whole loop, or that stop short of the jump?",
+    f_name_new,
+  });
   ("A span that declares a name the rest of the block still reads cannot simply");
   ("leave — the name would go with it and the reader behind would be left pointing");
   ("at nothing. Those names are the ones the new function hands back, which is the");
