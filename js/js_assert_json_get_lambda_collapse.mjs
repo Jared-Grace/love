@@ -49,7 +49,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       return none;
     }
     let id = list_get_property(declarators, 0, "id");
-    let name = identifier_name(id);
+    let name = js_identifier_name_try(id);
     return name;
   }
   function record_of_plain_names_is(variable) {
@@ -73,7 +73,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
         return;
       }
       let value = property_get(entry, "value");
-      let named = identifier_name(value);
+      let named = js_identifier_name_try(value);
       let named_is = equal_not(named, null);
       if (not(named_is)) {
         plain = false;
@@ -107,7 +107,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       return none;
     }
     let handed = property_get(second, "argument");
-    let handed_name = identifier_name(handed);
+    let handed_name = js_identifier_name_try(handed);
     let same = equal(handed_name, record_name);
     if (not(same)) {
       let none = null;
@@ -154,7 +154,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
         return;
       }
       let callee = property_get(call, "callee");
-      let callee_name = identifier_name(callee);
+      let callee_name = js_identifier_name_try(callee);
       let right = fn_name("assert_json_get");
       let asked = equal(callee_name, right);
       if (not(asked)) {
@@ -166,7 +166,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
         return;
       }
       let second = list_get(args, 1);
-      let second_name = identifier_name(second);
+      let second_name = js_identifier_name_try(second);
       let handed = equal(second_name, wrapper_name);
       if (not(handed)) {
         return;
@@ -197,7 +197,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
         return;
       }
       let id = property_get(statement, "id");
-      let wrapper_name = identifier_name(id);
+      let wrapper_name = js_identifier_name_try(id);
       let call = call_below(body, statement, wrapper_name);
       let called_is = equal_not(call, null);
       if (not(called_is)) {
