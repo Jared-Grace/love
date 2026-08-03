@@ -6,7 +6,6 @@ import { list_get } from "./list_get.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
-import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_set } from "./property_set.mjs";

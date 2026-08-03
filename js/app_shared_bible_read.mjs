@@ -150,8 +150,8 @@ export async function app_shared_bible_read(context, verse_action) {
   }
   let dismiss_help = app_shared_dismissable_message(
     app_shared_bible_read,
-    bar,
     "chapter_help_dismissed",
+    bar,
     help_text,
   );
   let count_status = html_p(bar);
