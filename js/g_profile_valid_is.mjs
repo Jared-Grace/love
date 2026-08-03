@@ -27,12 +27,15 @@ export function g_profile_valid_is(profile) {
   if (not(childless) && not(list_includes(bearing, marriage))) {
     return false;
   }
-  ("A teenager has not married yet and has nobody of their own.");
+  ("A girl married in her teens and a young man did not - Roman and Jewish men married in their twenties - so a married teenager is a wife rather than a husband.");
+  ("She may be widowed there too. 1 Timothy 5 verses 11 to 14 speaks straight to widows young enough to marry again, so a teenage widow is somebody a book addresses rather than an oddity.");
+  ("Nothing here says she is childless. The rule above already withholds children from anyone unmarried, so a married teenager may have borne and an unmarried one cannot.");
   let unwed = ["single", "betrothed"];
-  if (equal(age, "teenager") && not(list_includes(unwed, marriage))) {
-    return false;
-  }
-  if (equal(age, "teenager") && not(childless)) {
+  if (
+    equal(age, "teenager") &&
+    equal(gender, "male") &&
+    not(list_includes(unwed, marriage))
+  ) {
     return false;
   }
   ("A teenager owns no household, and manumission under thirty gave a lesser standing than this axis means by freed.");

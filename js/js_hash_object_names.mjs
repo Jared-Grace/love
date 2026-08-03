@@ -1,6 +1,8 @@
+import { hash_object_read_name } from "./hash_object_read_name.mjs";
+import { hash_object_made_name } from "./hash_object_made_name.mjs";
+import { hash_object_transform_names } from "./hash_object_transform_names.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { property_equals } from "./property_equals.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -32,7 +34,7 @@ export function js_hash_object_names(ast) {
     if (not(plain)) {
       return;
     }
-    let property_value = fn_name("html_hash_object_get");
+    let property_value = hash_object_read_name();
     let reads = property_equals(callee, "name", property_value);
     if (not(reads)) {
       return;
@@ -65,15 +67,14 @@ export function js_hash_object_names(ast) {
     }
     let word = property_get(first, "name");
     ("A third way, and the one that does not look like an address at all while it is being built. A link opened in a new tab is put together from an empty object, filled field by field, and only turned into an address at the end. Nothing before that last line says what the object is for, so the turning is what says it, and every field written into it was written into somebody's link.");
-    let property_value2 = fn_name("hash_to_url");
+    let property_value2 = hash_object_made_name();
     let made = property_equals(callee2, "name", property_value2);
     if (made) {
       list_add(names, word);
       return;
     }
-    let f_name = fn_name("html_hash_transform");
-    let f_name2 = fn_name("html_hash_transform_reload");
-    let changes = property_in_list(callee2, "name", [f_name, f_name2]);
+    let transforms = hash_object_transform_names();
+    let changes = property_in_list(callee2, "name", transforms);
     if (not(changes)) {
       return;
     }
