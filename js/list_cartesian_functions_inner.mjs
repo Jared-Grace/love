@@ -1,10 +1,10 @@
+import { add } from "./add.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function list_cartesian_functions_inner(
   list,
   index,
@@ -22,7 +22,7 @@ export function list_cartesian_functions_inner(
   function lambda(fn) {
     let v = fn(item);
     list_add(candidate, v);
-    let index2 = text_combine(index, 1);
+    let index2 = add(index, 1);
     list_cartesian_functions_inner(list, index2, fns, result, candidate);
     list_pop(candidate);
   }
