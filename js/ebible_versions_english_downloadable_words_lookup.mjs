@@ -14,8 +14,6 @@ import { text_only_or_space } from "./text_only_or_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
 export async function ebible_versions_english_downloadable_words_lookup() {
-  let symbols_all =
-    "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
   let symbols_allowed =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let normalize = {
@@ -36,7 +34,6 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     "¼": "1/4",
     "¾": "3/4",
   };
-  let s = null;
   let bible_folders = await ebible_versions_english_downloadable_cache();
   let result = {};
   async function lambda2(bible_folder) {
