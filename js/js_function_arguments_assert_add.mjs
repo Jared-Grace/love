@@ -1,7 +1,7 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_function_arguments_assert_first_is } from "./js_function_arguments_assert_first_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { text_to } from "./text_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_code_call_args_statement } from "./js_code_call_args_statement.mjs";
@@ -18,8 +18,7 @@ export function js_function_arguments_assert_add(declaration) {
   if (already) {
     return;
   }
-  let params = property_get(declaration, "params");
-  let count = list_size(params);
+  let count = property_list_size(declaration, "params");
   let counted = text_to(count);
   let name = fn_name("arguments_assert");
   let code = js_code_call_args_statement(name, ["arguments", counted]);
