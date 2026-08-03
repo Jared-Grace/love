@@ -927,6 +927,8 @@
       "Bash(node scripts/ai.mjs number_to_words_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs functions_text_combine_number:*)",
       "Bash(node scripts/ai.mjs functions_text_combine_number_add_repair:*)",
+      "Bash(node scripts/ai.mjs baselines_prefix_split_repair:*)",
+      "Bash(node scripts/ai.mjs baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1777,6 +1779,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args number_to_words_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args functions_text_combine_number:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args functions_text_combine_number_add_repair:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args baselines_prefix_split_repair:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2626,6 +2630,8 @@
       "Bash(node scripts/aig.mjs number_to_words_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs functions_text_combine_number:*)",
       "Bash(node scripts/aig.mjs functions_text_combine_number_add_repair:*)",
+      "Bash(node scripts/aig.mjs baselines_prefix_split_repair:*)",
+      "Bash(node scripts/aig.mjs baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3475,7 +3481,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args hash_reading_names_word_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args number_to_words_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args functions_text_combine_number:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args functions_text_combine_number_add_repair:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args functions_text_combine_number_add_repair:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args baselines_prefix_split_repair:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args baselines_prefix_split_baseline_write:*)"
     ],
     "defaultMode": "acceptEdits"
   },
