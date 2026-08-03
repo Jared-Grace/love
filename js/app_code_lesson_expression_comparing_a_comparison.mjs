@@ -145,12 +145,20 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       ")",
     ]);
     html_div_cycle_code(wrapping, [
-      "Without the brackets, ",
+      "Without the ",
+      "(",
+      " and ",
+      ")",
+      ", ",
       "3 === 5 === false",
       " is three comparisons in a row",
     ]);
     html_div_cycle_code(wrapping, [
-      "The brackets say which two go together first",
+      "The ",
+      "(",
+      " and ",
+      ")",
+      " say which two go together first",
     ]);
     let worked = app_code_container_light_blue(root);
     html_div_cycle_code(worked, ["", "3 === 5", " is ", "false"]);
