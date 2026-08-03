@@ -1,3 +1,4 @@
+import { js_names_only_spelled } from "./js_names_only_spelled.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports } from "./js_imports.mjs";
@@ -6,9 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { js_stack_node_above } from "./js_stack_node_above.mjs";
 import { js_node_type } from "./js_node_type.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_name_only_imports(ast) {
@@ -56,18 +55,6 @@ export function js_name_only_imports(ast) {
     }
   }
   js_visit_types(ast, ["Identifier"], lambda);
-  let only = [];
-  for (let mentioned of imported) {
-    let counted = property_get_or_null(mentions, mentioned);
-    let told = property_get_or_null(spellings, mentioned);
-    let used = counted ? counted : 0;
-    let spelled = told ? told : 0;
-    let any = greater_than(used, 0);
-    let all_spelled = equal(used, spelled);
-    let name_only = any && all_spelled;
-    if (name_only) {
-      list_add(only, mentioned);
-    }
-  }
+  let only = js_names_only_spelled(imported, mentions, spellings);
   return only;
 }
