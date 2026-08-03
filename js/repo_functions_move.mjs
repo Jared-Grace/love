@@ -20,7 +20,7 @@ export async function repo_functions_move(f_names, repo_name_to) {
     await file_copy(f_path, f_path_to);
     await file_delete(f_path);
   }
-  let waited = await list_map_unordered_async(f_names, lambda);
+  await list_map_unordered_async(f_names, lambda);
   let identifiers = await data_identifiers_get();
   function lambda2(f_name) {
     let list = property_get(identifiers, f_name);
