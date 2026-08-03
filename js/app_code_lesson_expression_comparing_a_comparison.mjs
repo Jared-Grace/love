@@ -1,8 +1,6 @@
-import { html_cycle_code_bold } from "./html_cycle_code_bold.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
+import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
+import { each } from "./each.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
-import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -33,7 +31,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_a_comparison() {
   "a comparison standing where a plain true or false stood: 3 === 5 === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
-  "No parentheses, because in every line this lesson can generate they change no answer: === and !== are worked out left to right, and < > <= >= bind tighter than both, so plain left to right already lands on the right value. Teaching them here would be teaching a rule the learner cannot yet see the need for. They earn their place one lesson later, in swapping, where both sides are comparisons and they change the answer for real - a === b === b === a is false while (a === b) === (b === a) is true - and that lesson already introduces them itself.";
+  "Left to right is the whole rule here, and it is taught as a rule rather than as the reason something else is missing. In every line this lesson can generate, working left to right lands on the right value on its own.";
   let name_id = title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
@@ -122,7 +120,11 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "Taught by showing rather than by listing symbols: one whole comparison per operator, so the learner reads the shape a comparison takes six times over rather than reading six symbols and being left to assemble the shape. The six come from the one list that holds them, so no other lesson can teach the word a different set";
     "The same two numbers every time, so the only thing that changes down the column is the symbol - which is exactly the thing the word covers. Some of the six answer true and some answer false, and that is left alone on purpose: a comparison is a comparison whatever it answers, and the very next card is where the answer starts to matter";
     let card = app_code_container_light_blue(root);
-    app_code_lesson_bold_term(card, "Here are some examples of ", "comparisons");
+    app_code_lesson_bold_term(
+      card,
+      "Here are some examples of ",
+      "comparisons",
+    );
     function example_show(operator) {
       "one whole comparison for an operator, tiled as code";
       let symbol = property_get(operator, "operator");
@@ -142,7 +144,13 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let symbol = property_get(operator, "operator");
     let right_code = keyword(right_value);
     let whole = text_combine_multiple([code, " ", symbol, " ", right_code]);
-    let stood_in = text_combine_multiple([answer, " ", symbol, " ", right_code]);
+    let stood_in = text_combine_multiple([
+      answer,
+      " ",
+      symbol,
+      " ",
+      right_code,
+    ]);
     html_div_cycle_code(card, ["So ", whole, " is ", stood_in]);
     let fn = property_get(operator, "fn");
     let ended = fn(value, right_value);
@@ -174,7 +182,9 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       " can be used, we can use a comparison",
     ]);
     let order = app_code_container_light_blue(root);
-    html_div_cycle_code(order, ["We work out the comparisons from left to right"]);
+    html_div_cycle_code(order, [
+      "We work out the comparisons from left to right",
+    ]);
     let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
     worked_example(root, "3 === 5", false, same, false);
