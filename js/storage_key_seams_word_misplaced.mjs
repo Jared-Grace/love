@@ -15,7 +15,7 @@ import { not } from "./not.mjs";
 export async function storage_key_seams_word_misplaced() {
   "The front doors where the key word is not the second thing the door is given, so the reading looks at the wrong argument and never sees the word. Read-only.";
   "Every reading of published keys asks each call for its second argument, because that is where the storing itself takes the key. A door is read at its callers the same way, and nothing has ever checked that the door takes its key there too - so a door that takes it third has its callers read at whatever stands second, and the word somebody typed is collected from nowhere and watched by nothing.";
-  "A door that hands on a word it worked out itself is named here as well. There is no key slot at its callers at all, so the second thing they are given is some other argument entirely, and reading it can only be wrong - quietly finding nothing, or quietly finding a word that was never a key.";
+  "A door that hands on a word it worked out itself is passed over rather than named. Its word is written in its own file and is read there, one line back from the call - so there is nothing at its callers to find and nothing lost by not looking.";
   arguments_assert(arguments, 0);
   let durable = storage_key_seams_durable();
   let all = await storage_key_seams_all();
