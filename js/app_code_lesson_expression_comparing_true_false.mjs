@@ -116,7 +116,7 @@ export function app_code_lesson_expression_comparing_true_false() {
     return list;
   }
   function above(root) {
-    "=== and !== on plain true and false, worked out three times: the same pair, a different pair, and the not-equal reading";
+    "the whole idea in one line: === and !== read true and false the same way they read numbers. The worked lines that stood here said true === true is true, which is character for character what the examples box below already shows, so the examples carry that half";
     let plain = app_code_container_light_blue(root);
     let s = js_operator_triple_equal_symbol();
     let s2 = js_operator_bang_double_equal_symbol();
@@ -132,8 +132,5 @@ export function app_code_lesson_expression_comparing_true_false() {
       " and ",
       f2,
     ]);
-    html_div_cycle_code(plain, ["", "true === true", " is ", "true"]);
-    html_div_cycle_code(plain, ["", "true === false", " is ", "false"]);
-    html_div_cycle_code(plain, ["", "false !== true", " is ", "true"]);
   }
 }
