@@ -5,6 +5,10 @@ import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
 export function commits_shape_name(commit) {
+  "What kind of change a commit was, said in a few plain words, read off nothing but how many files it touched and how many lines it added and took away.";
+  "Every commit in this repo carries the same message, so the log says who made a change and when but never what sort of change it was. These names are the missing sort. They are guessed from the numbers because the numbers are the only thing the log actually knows.";
+  "The names are deliberately loose. Whether a commit was one file rewritten or one file with a block replaced is a matter of degree, and the point is to be able to count the kinds over hundreds of commits, not to be right about any single one.";
+  "Many files with only a few lines each is the one shape worth calling out by what made it, because that is what a transform run leaves behind and a person editing by hand almost never does.";
   let files = property_get(commit, "files");
   let added = property_get(commit, "added");
   let removed = property_get(commit, "removed");

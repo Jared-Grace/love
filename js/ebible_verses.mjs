@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { list_first } from "./list_first.mjs";
 import { each_next_reverse } from "./each_next_reverse.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -20,7 +21,6 @@ import { list_filter } from "./list_filter.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { ebible_chapter_text } from "./ebible_chapter_text.mjs";
 import { list_reverse } from "./list_reverse.mjs";
-import { text_combine } from "./text_combine.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   "Cuts one chapter of a Bible into its verses, each with the number it is known by.";
   "A chapter arrives as one unbroken run of words with the verse numbers standing among them as words of their own, so the cutting has to find those markers rather than read a line each. That is why this is work at all: the numbers are not a field beside the text, they are in it.";
@@ -53,7 +53,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let filtered4 = list_filter(r, lambda2);
         index = list_first(filtered4);
       }
-      let skipped = list_skip(filtered, text_combine(index, 1));
+      let skip_count = add(index, 1);
+      let skipped = list_skip(filtered, skip_count);
       let v = ebible_verse_new(skipped, number);
       la(v);
       filtered = list_take(filtered, index);
