@@ -110,6 +110,7 @@ export function examples_groups() {
         "example_fold_auto_discover",
         "example_expand_call_inline",
         "example_selects_functionize_local",
+        "example_functionize_inside_a_loop",
       ],
     },
     {
