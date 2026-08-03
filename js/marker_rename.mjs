@@ -25,9 +25,5 @@ export async function marker_rename(from, to) {
     object_replace(a0, s);
   }
   let f_name_current = await function_current_get();
-  let v = await function_transform_marker_specified(
-    f_name_current,
-    from,
-    lambda,
-  );
+  await function_transform_marker_specified(f_name_current, from, lambda);
 }
