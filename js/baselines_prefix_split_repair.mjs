@@ -1,3 +1,4 @@
+import { text_suffix_change } from "./text_suffix_change.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
@@ -11,7 +12,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { text_suffix_without } from "./text_suffix_without.mjs";
 export async function baselines_prefix_split_repair() {
   "Moves each ratchet's record under the same prefix its rewriter already uses, so the four functions of a family can be found from any one of them.";
   "It finds its own set, so nothing has to be listed for it, and the target name is read off the rewriter rather than guessed. That is the whole reason this can be a command at all: which word a family belongs under is not a choice being made here, it is a fact already written down in three of the four files and missing from the fourth.";
@@ -27,8 +27,7 @@ export async function baselines_prefix_split_repair() {
   let renamed = [];
   let skipped = [];
   for (let f_name_before of split) {
-    let slug = text_suffix_without(f_name_before, suffix);
-    let tail = text_combine(slug, suffix_write);
+    let tail = text_suffix_change(f_name_before, suffix, suffix_write);
     let needle = text_combine("_", tail);
     function writer_is(name) {
       let ends = text_ends_with(name, needle);
@@ -38,8 +37,7 @@ export async function baselines_prefix_split_repair() {
     let single = list_size_equal(writers, 1);
     if (single) {
       let writer = list_get(writers, 0);
-      let prefix = text_suffix_without(writer, tail);
-      let f_name_after = text_combine(prefix, f_name_before);
+      let f_name_after = text_suffix_change(writer, tail, f_name_before);
       await function_call_commit(function_rename, [
         f_name_before,
         f_name_after,
