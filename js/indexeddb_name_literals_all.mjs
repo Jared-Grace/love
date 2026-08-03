@@ -12,7 +12,7 @@ export async function indexeddb_name_literals_all() {
   arguments_assert(arguments, 0);
   let doors = await indexeddb_name_doors();
   let repo_name = repo_love_name();
-  let word = "indexeddb_";
+  let word = indexeddb_code_word();
   let candidates = await repo_functions_names_code_includes(repo_name, word);
   function read(tree) {
     let found = js_indexeddb_name_literals(tree, doors);
