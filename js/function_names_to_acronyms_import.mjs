@@ -7,6 +7,6 @@ export async function function_names_to_acronyms_import() {
   let module = await import(
     text_combine_multiple(["./", fn_name("function_names_to_acronyms"), ".mjs"])
   );
-  let fn = module.function_names_to_acronyms;
+  let fn = property_get(module, fn_name("function_names_to_acronyms"));
   return fn;
 }

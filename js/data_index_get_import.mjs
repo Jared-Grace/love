@@ -14,6 +14,7 @@ export async function data_index_get_import() {
   let module = await import(
     text_combine_multiple(["./", fn_name("data_index_get"), ".mjs"])
   );
-  let fn = module.data_index_get;
+  ("The name is asked for rather than spelled after a dot, because a word after a dot belongs to whatever is being asked and no rename may follow it there. This one must follow a rename - it is the export's own name - so it is written as the marker that says so, the same one the path above already uses");
+  let fn = property_get(module, fn_name("data_index_get"));
   return fn;
 }

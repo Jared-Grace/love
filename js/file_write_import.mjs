@@ -12,6 +12,6 @@ export async function file_write_import() {
   let module = await import(
     text_combine_multiple(["./", fn_name("file_write"), ".mjs"])
   );
-  let fn = module.file_write;
+  let fn = property_get(module, fn_name("file_write"));
   return fn;
 }
