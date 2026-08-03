@@ -17,7 +17,7 @@ export async function js_auto_transform_new_inner(f_name_unprefixed) {
     js_flo_body_add_return(ast);
     await js_imports_missing_add_all(ast);
   }
-  let code = await function_transform_marker_specified(
+  await function_transform_marker_specified(
     fn_name("js_auto_transforms"),
     "transforms",
     lambda,
