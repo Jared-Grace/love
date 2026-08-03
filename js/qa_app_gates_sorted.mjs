@@ -1,17 +1,31 @@
+import { and } from "./and.mjs";
+import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
-export function qa_app_gates_sorted(failed, named, reach) {
+export function qa_app_gates_sorted(green, failed, named, reach) {
   "Sorts the gates that were red at one commit into the ones that reach what one app ships and the ones that cannot, from the names alone";
   "This is the whole judgement a deployment turns on, and it is pure: two lists in, two lists out, no gate run and no file read. Its caller has to spend fourteen minutes judging a commit before it can ask anything, which is why every fault in this sorting so far had to be found by hand on a real afternoon rather than by asking it a question. Separated out, it can be asked as many questions as anyone likes.";
   "Three faults have been found in it in two days, and all three were silent. A guard that read for a shape that no longer occurred set aside sixteen unproven gates; a reader that stopped at the first line of a complaint made sixteen more of them name nobody; a reader that counted ordinary English made every gate name something every app ships. Wrong in the letting-out direction and wrong in the holding-back direction both look exactly like working.";
   "Which gates are set aside is DERIVED and never declared. A gate's own complaint names the functions it is complaining about; the app's reach names what it carries; a complaint whose names all fall outside that reach is a complaint about something else. No list here says which gates matter to which app, because such a list is a judgement that can be wrong in silence and would want revisiting every time a gate or an app changed.";
   "Naming nothing counts against the app. It may well be about somewhere else, but nothing here can show that, and the direction to be wrong in is the one that stops a deploy rather than the one that lets a break through. It is one condition with two spellings - absent from the record, or present holding nothing - and both are counted, because checking only for the absent one once meant the rule applied to nothing at all.";
+  "There is a THIRD spelling of naming nothing, and it is one level up from the other two: the judging came back not green and listed no red gate at all. That is what a run that died partway leaves behind, and it was letting commits through. The record held such an entry on 2026-08-03 and this sorting read it as clear for every app, because a loop over no gates adds no blocker - a failure with nothing in it is indistinguishable from no failure once you are only reading the list.";
+  "So the overall verdict is asked as well as the list. It is only consulted when the list is empty, because a red commit that named its gates is already answered gate by gate below, and nothing here should second-guess that.";
   let blocking = [];
   let elsewhere = [];
+  let silent = list_empty_is(failed);
+  let broken = not(green);
+  let unfinished = and(broken, silent);
+  if (unfinished) {
+    list_add(blocking, {
+      gate: "the judging itself",
+      why: "did not come back green and named no red gate, so what broke cannot be placed",
+      names: [],
+    });
+  }
   for (let gate of failed) {
     let names = property_get_or_null(named, gate);
     let unnamed = list_empty_is_or_null(names);
