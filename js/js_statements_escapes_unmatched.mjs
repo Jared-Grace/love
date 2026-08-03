@@ -27,13 +27,18 @@ export function js_statements_escapes_unmatched(statements) {
   function lambda2(statement) {
     function lambda(v) {
       let node = property_get(v, "node");
-      let label = property_get(node, "label");
-      let labelled = label !== null && label !== undefined;
+      let label = property_or_null(node, "label");
+      let labelled = null_not_is(label);
       let type = js_node_type(node);
       let returning = type === "ReturnStatement";
       let types_barrier = returning ? types_function : types_landing;
       let stack = property_get(v, "stack");
       function barrier_is(held) {
+        ("The chain a node hangs from holds the lists a node sits in as well as the nodes themselves, and a list has no kind, so it is asked about first.");
+        let node_is = js_node_is(held);
+        if (!node_is) {
+          return false;
+        }
         let is = js_node_types_is(held, types_barrier);
         return is;
       }
