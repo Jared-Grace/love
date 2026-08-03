@@ -18,6 +18,6 @@ export function js_dollar_l({
   let n = js_keyword_null();
   let v = js_code_wrap_braces(result);
   let parsed = js_call_args_from_code(fn_name("log"), [n, v]);
-  let code2 = js_unparse(node);
+  js_unparse(node);
   object_replace(node, parsed);
 }
