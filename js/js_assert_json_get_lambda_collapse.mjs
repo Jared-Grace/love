@@ -41,15 +41,6 @@ export function js_assert_json_get_lambda_collapse(ast) {
   "be two declarations of one word; and anything handed over that is not a plain name.";
   let moved = 0;
   let bound = js_binding_names(ast);
-  function identifier_name(node) {
-    let plain = js_node_type_is(node, "Identifier");
-    if (not(plain)) {
-      let none = null;
-      return none;
-    }
-    let name = property_get(node, "name");
-    return name;
-  }
   function variable_name(variable) {
     let declarators = property_get(variable, "declarations");
     let one_is = list_size_1(declarators);
