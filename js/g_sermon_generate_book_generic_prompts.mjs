@@ -115,7 +115,7 @@ export async function g_sermon_generate_book_generic_prompts(
   let nearness = 2;
   let nearbys = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
-    let path = local_function_path_json(chapter_code, fn);
+    local_function_path_json(chapter_code, fn);
     function filter_group(group) {
       let item = property_get(group, "item");
       let match_chapter = property_equals(item, "chapter_code", chapter_code);
