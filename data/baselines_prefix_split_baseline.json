@@ -1,0 +1,12 @@
+{
+ "known": [
+  "arity_baseline_path",
+  "duplicates_baseline_path",
+  "operators_raw_baseline_path",
+  "parameters_unread_baseline_path",
+  "selects_unsafe_baseline_path",
+  "shadowing_baseline_path",
+  "statements_after_return_baseline_path",
+  "unbound_baseline_path"
+ ]
+}

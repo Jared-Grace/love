@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_functions_nested_declarations } from "./js_functions_nested_declarations.mjs";
+import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
+import { list_find_or_null } from "./list_find_or_null.mjs";
+import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
+import { equal } from "./equal.mjs";
 export function js_function_nested_find_named(ast, name) {
   arguments_assert(arguments, 2);
   ("The function written inside the exported one under the name you give, however deep it sits.");

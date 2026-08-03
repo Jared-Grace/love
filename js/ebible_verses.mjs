@@ -22,6 +22,12 @@ import { ebible_chapter_text } from "./ebible_chapter_text.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
+  "Cuts one chapter of a Bible into its verses, each with the number it is known by.";
+  "A chapter arrives as one unbroken run of words with the verse numbers standing among them as words of their own, so the cutting has to find those markers rather than read a line each. That is why this is work at all: the numbers are not a field beside the text, they are in it.";
+  "The cutting runs from the end of the chapter backwards. A number's word can appear more than once in a chapter - as part of the text itself, or because the same digits come round again - and the marker is always the later one, so taking the last and then throwing away everything after it leaves a shorter chapter in which the same rule holds again. Read forwards, the first match is as likely to be a word of the verse as the mark of one.";
+  "Where the chapter names the number after this one, the search is narrowed to what lies past that one's mark, which keeps a number that also occurs inside an earlier verse from being taken for the heading of a later one.";
+  "Anything standing before the first number is kept as a verse of its own under a nought, because a chapter often opens with a title or a heading and dropping it would lose words that are in the book.";
+  "A verse left with nothing in it once the empty brackets are taken out is dropped. Those are places the translation has no words for rather than verses somebody could read, and a reader shown a numbered blank would take it for a fault in the app.";
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
   let property = "text";
   let text = property_get(v2, property);
