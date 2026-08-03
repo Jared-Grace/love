@@ -5,6 +5,7 @@ import { text_is_assert_multiple_json } from "./text_is_assert_multiple_json.mjs
 import { function_alias_generic } from "./function_alias_generic.mjs";
 import { property_set } from "./property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
+  "Points an alias that already exists at a different function, rather than adding a new one.";
   let items = [alias_old, f_name];
   text_is_assert_multiple_json(items, {
     hint: "the alias and function name should both be text",
