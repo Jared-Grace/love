@@ -1,3 +1,18 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_flo } from "./js_flo.mjs";
+import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
+import { js_node_type } from "./js_node_type.mjs";
+import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
+import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
+import { property_get_curried_right } from "./property_get_curried_right.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function function_nested_sizes(f_name) {
   arguments_assert(arguments, 1);
   ("Every function written inside the named one, with how many lines of work each holds, biggest first.");
@@ -28,6 +43,7 @@ export async function function_nested_sizes(f_name) {
     });
   }
   each(visitors, lambda);
-  let ranked = list_sort_by_property_descending(rows, "size");
+  let sizer = property_get_curried_right("size");
+  let ranked = list_sort_number_mapper_reverse(rows, sizer);
   return ranked;
 }
