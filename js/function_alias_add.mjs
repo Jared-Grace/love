@@ -8,6 +8,7 @@ import { function_alias_generic } from "./function_alias_generic.mjs";
 import { property_set } from "./property_set.mjs";
 import { error_json } from "./error_json.mjs";
 export async function function_alias_add(first, second) {
+  "Gives an existing function a shorter name to be reached by, taking the shorter of the two words as the alias and refusing a word already spoken for.";
   let list = [first, second];
   list_sort_text_size(list);
   let [alias, f_name] = list;
