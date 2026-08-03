@@ -1,8 +1,6 @@
 {
  "known": [
-  "function_dependencies_single",
   "function_transform_single",
-  "function_dependency_path",
   "app_shared_dev_build",
   "app_shared_name_search_info",
   "app_shared_name_search_multiple",
@@ -11,12 +9,9 @@
   "function_rename_check",
   "function_rename_fn_names_check",
   "app_apps_all_main_fns",
-  "data_identifiers_search",
-  "data_identifiers_search_names",
   "data_identifiers_fn_names_get",
   "qa_gates",
   "firebase_deploy",
-  "firebase_storage_exists",
   "function_alias_add",
   "function_alias_replace",
   "function_name_to_path_relative",
