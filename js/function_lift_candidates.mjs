@@ -1,10 +1,10 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_functions_nested_declarations } from "./js_functions_nested_declarations.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { or } from "./or.mjs";
 import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
 import { list_size } from "./list_size.mjs";
@@ -20,10 +20,8 @@ export async function function_lift_candidates(f_name) {
   let rows = [];
   for (let declaration of nested) {
     let reading = await js_function_nested_lift_reading(ast, declaration);
-    let stray_at = property_get(reading, "stray_at");
-    let passed_is = list_empty_not_is(stray_at);
-    let written_closed = property_get(reading, "written_closed");
-    let writes_is = list_empty_not_is(written_closed);
+    let passed_is = property_list_empty_not_is(reading, "stray_at");
+    let writes_is = property_list_empty_not_is(reading, "written_closed");
     let refused_is = or(passed_is, writes_is);
     if (refused_is) {
       continue;
