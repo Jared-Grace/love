@@ -1,3 +1,4 @@
+import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { html_display_set } from "./html_display_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { text_to } from "./text_to.mjs";
@@ -22,8 +23,7 @@ export function app_code_lesson_repeat_grid_style(grid, column_count) {
   html_style_set(grid, "row-gap", style_value);
   html_style_set(grid, "vertical-align", "middle");
   let pill = html_span(grid);
-  html_style_set(pill, "grid-row", "2");
-  html_style_set(pill, "grid-column", "1 / -1");
+  html_style_grid_cell(pill, 2, "1 / -1");
   html_style_background(pill, "black");
   let border_radius = app_shared_border_radius();
   html_border_radius(pill, border_radius);
