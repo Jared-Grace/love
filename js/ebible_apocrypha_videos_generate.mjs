@@ -18,9 +18,5 @@ export async function ebible_apocrypha_videos_generate() {
   }
   let m = await list_map_async(books, lambda);
   let mapped = list_map_property(m, "path_video");
-  let path_video = await bible_audio_folder_book_video_join(
-    bible_folder,
-    "apocrypha",
-    mapped,
-  );
+  await bible_audio_folder_book_video_join(bible_folder, "apocrypha", mapped);
 }
