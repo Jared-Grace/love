@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_add } from "./list_add.mjs";
@@ -5,7 +6,6 @@ import { text_size } from "./text_size.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function text_tokens_recursive(
   input,
   dictionary,
@@ -33,6 +33,6 @@ export function text_tokens_recursive(
       );
     }
   }
-  let from2 = text_combine(index_left, 1);
+  let from2 = add(index_left, 1);
   each_range_from(from2, index_last, lambda);
 }
