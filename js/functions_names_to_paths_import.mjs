@@ -7,6 +7,6 @@ export async function functions_names_to_paths_import() {
   let module = await import(
     text_combine_multiple(["./", fn_name("functions_names_to_paths"), ".mjs"])
   );
-  let fn = module.functions_names_to_paths;
+  let fn = property_get(module, fn_name("functions_names_to_paths"));
   return fn;
 }
