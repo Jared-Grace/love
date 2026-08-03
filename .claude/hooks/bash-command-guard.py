@@ -2744,6 +2744,56 @@ def find_pgrep_wait_loop(command):
     return bool(PGREP_WAIT_LOOP_TEXT.search(unquoted))
 
 
+# The same certainty from the other direction: a loop whose condition is the
+# constant true has no exit at all. `while true; do node …; sleep 3; done` was
+# the fourth stuck shape found on 2026-08-03, and the expensive one - it had
+# been starting a full dispatcher every three seconds for the better part of a
+# day, on a machine roughly ten sessions share, so it loaded everyone else's
+# work as well as consuming its own.
+#
+# `break` and `exit` are the only things that can end such a loop, so a body
+# holding either keeps its existing answer. That exception is what separates a
+# claim about the shape from a guess: without a break there is provably no way
+# out, and with one there is nothing here to say.
+CONSTANT_LOOP_TEXT = re.compile(
+    r"\b(?:while\s+true|while\s+:|until\s+false)\b.*?\bdo\b.*?\bsleep\b.*?"
+    r"\bdone\b",
+    re.DOTALL,
+)
+
+CONSTANT_LOOP_ESCAPE_TEXT = re.compile(r"\b(?:break|exit)\b")
+
+CONSTANT_LOOP_DENY_REASON = (
+    "A `while true` loop that sleeps has no way to end, so it can't be "
+    "approved here - and a backgrounded command already does what it was "
+    "reaching for.\n"
+    "  - There is no exit condition and no `break`, so this runs until "
+    "somebody kills it. Your session is blocked on this tool call for exactly "
+    "that long: one was found on 2026-08-03 that had been restarting a full "
+    "dispatcher every three seconds for most of a day, loading a machine that "
+    "about ten sessions share.\n"
+    "  - WHAT TO DO INSTEAD: run the command in the background. It re-invokes "
+    "you when it exits, so there is nothing to poll for. To watch something "
+    "genuinely external, the Monitor tool waits without holding a shell.\n"
+    "  - A loop with a real `break` in its body is untouched; this is only "
+    "about the one that cannot reach an end."
+)
+
+
+def find_constant_loop(command):
+    """True iff `command` loops on a constant condition, sleeps, and has no
+    `break` or `exit` anywhere in it.
+
+    Quoted spans are blanked first for the usual reason, and that blanking is
+    also what makes the escape check honest: a `break` that only appears
+    inside a string is not an exit, and blanking removes it before it can be
+    mistaken for one."""
+    unquoted = QUOTED_SPAN_TEXT.sub(" ", command)
+    if not CONSTANT_LOOP_TEXT.search(unquoted):
+        return False
+    return not CONSTANT_LOOP_ESCAPE_TEXT.search(unquoted)
+
+
 PYTHON_EVAL_DENY_REASON = (
     "An interpreter handed code on the command line can't be approved here. "
     "That is one seam wearing many names, and all of them are floored the same "
@@ -3824,6 +3874,11 @@ def main():
     # is what approved all twelve of the stuck ones. See find_pgrep_wait_loop.
     if find_pgrep_wait_loop(command):
         return decide("deny", PGREP_WAIT_LOOP_DENY_REASON)
+
+    # And the loop with no exit condition at all, which is the same certainty
+    # arrived at more simply. See find_constant_loop.
+    if find_constant_loop(command):
+        return decide("deny", CONSTANT_LOOP_DENY_REASON)
 
     # Also a hard floor (before any allow decision, so a stray allow rule can't
     # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every
