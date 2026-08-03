@@ -59,10 +59,11 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let r2 = js_boolean_values();
+  let b = js_boolean_values();
   let json = json_format_to({
     gender: genders,
-    married: "boolean",
+    age: '13-80',
+    marriage: ['single', 'betrothed', 'married', 'widowed'],
   });
   let lines = [
     "This is a Christian game about sharing the gospel.",

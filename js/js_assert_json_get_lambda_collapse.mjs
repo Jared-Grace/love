@@ -1,3 +1,4 @@
+import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
@@ -42,17 +43,6 @@ export function js_assert_json_get_lambda_collapse(ast) {
   "be two declarations of one word; and anything handed over that is not a plain name.";
   let moved = 0;
   let bound = js_binding_names(ast);
-  function variable_name(variable) {
-    let declarators = property_get(variable, "declarations");
-    let one_is = list_size_1(declarators);
-    if (not(one_is)) {
-      let none = null;
-      return none;
-    }
-    let id = list_get_property(declarators, 0, "id");
-    let name = js_identifier_name_try(id);
-    return name;
-  }
   function record_of_plain_names_is(variable) {
     "true only when the record is written out right here and holds nothing but plain names, so reading it early can neither wait on anything nor go wrong";
     let declarators = property_get(variable, "declarations");
@@ -101,7 +91,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       let none = null;
       return none;
     }
-    let record_name = variable_name(first);
+    let record_name = js_declaration_single_variable_name_try(first);
     let name_is = equal_not(record_name, null);
     if (not(name_is)) {
       let none = null;
@@ -204,7 +194,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       if (not(called_is)) {
         return;
       }
-      let record_name = variable_name(held);
+      let record_name = js_declaration_single_variable_name_try(held);
       let free_is = name_free_is(record_name);
       if (not(free_is)) {
         return;
