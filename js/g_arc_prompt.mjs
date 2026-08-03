@@ -59,7 +59,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let json = json_format_to({});
+  let json = json_format_to({gender:genders,married:'boolean'});
   let lines = [
     "This is a Christian game about sharing the gospel.",
     "THe setting is 1st-2nd century while Rome is persecuting Christians.",

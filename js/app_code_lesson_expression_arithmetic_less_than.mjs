@@ -1,3 +1,4 @@
+import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -302,11 +303,8 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       return render;
     }
     let rights = ["arithmetic less than"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
+    let left2 = app_code_category_expressions();
+    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
     return built;
   }
   let name_id = title_name_id();
