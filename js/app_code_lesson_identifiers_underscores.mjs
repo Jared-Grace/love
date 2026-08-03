@@ -39,7 +39,7 @@ export function app_code_lesson_identifiers_underscores() {
         "is shorter and is near the middle vertically, not the bottom or the top",
       ]),
     );
-    let d = html_span_text_code_dark_centered(div, separator_valid);
+    html_span_text_code_dark_centered(div, separator_valid);
     html_div_text(
       div,
       text_combine_multiple([
