@@ -52,7 +52,7 @@ export function app_reply_buttons_languages_on_toggle(
       let chosen = chosen_get();
       app_shared_button_toggle_style(chosen, component);
     }
-    let to = object_merge_set(component, {
+    object_merge_set(component, {
       update,
     });
     return component;
