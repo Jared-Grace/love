@@ -1,3 +1,4 @@
+import { js_boolean_values } from "./js_boolean_values.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -57,7 +58,8 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "and the most is",
     turns_high,
     "turns.",
-  ]);js_boolean_values
+  ]);
+  let r2 = js_boolean_values();
   let json = json_format_to({
     gender: genders,
     married: "boolean",
