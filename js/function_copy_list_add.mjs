@@ -17,6 +17,6 @@ export async function function_copy_list_add(fn_base_name, fns_list) {
     list_add(elements, expression);
     await js_imports_missing_add_specified_single(ast, name_new);
   }
-  let output = await function_transform(fns_list.name, lambda);
+  await function_transform(fns_list.name, lambda);
   return name_new;
 }
