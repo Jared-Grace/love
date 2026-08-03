@@ -6,7 +6,7 @@ export async function ebible_versions_download() {
   let list = await ebible_versions();
   async function lambda(item) {
     async function lambda3() {
-      let file_path = await ebible_version_download(item);
+      await ebible_version_download(item);
     }
     await catch_null_async(lambda3);
   }
