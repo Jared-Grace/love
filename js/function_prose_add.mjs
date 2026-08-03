@@ -1,8 +1,7 @@
+import { function_transform_auto } from "./function_transform_auto.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_prose_statement } from "./js_prose_statement.mjs";
 import { js_flo_body_add_after_prose } from "./js_flo_body_add_after_prose.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_auto } from "./function_auto.mjs";
 export async function function_prose_add(f_name, sentence) {
   "Adds one line to a function's own account of itself, at the end of what it already says and above the first thing it does.";
   "Writing that line was a hand edit every time, and the history says how often: of four hundred commits made under no command's name, sixty-three were a block added to one file, and adding a paragraph of explanation is the commonest thing that shape is. The transform to do it has existed all along - what was missing was a way to hand it a real sentence.";

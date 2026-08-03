@@ -1,9 +1,8 @@
+import { function_transform_auto } from "./function_transform_auto.mjs";
 import { function_parallel_marked_is } from "./function_parallel_marked_is.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_call_remove } from "./js_statement_call_remove.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_auto } from "./function_auto.mjs";
 import { not } from "./not.mjs";
 export async function function_parallel_mark_remove(f_name) {
   "Take the alike-on-purpose mark back off one function, for when the twin it was alike with is gone.";
@@ -18,7 +17,6 @@ export async function function_parallel_mark_remove(f_name) {
   function unmark(ast) {
     js_statement_call_remove(ast, function_duplicate_kind_parallel);
   }
-  await function_transform(f_name, unmark);
-  await function_auto(f_name);
+  await function_transform_auto(f_name, unmark);
   return f_name;
 }
