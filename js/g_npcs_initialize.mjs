@@ -13,9 +13,9 @@ import { list_size } from "./list_size.mjs";
 import { g_genders_get } from "./g_genders_get.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
-  let genders = g_genders_get(player_img);
+  let genders = g_genders_get();
   function lambda2(imgs) {
-    let filtered = list_without(imgs, item);
+    let filtered = list_without(imgs, player_img);
     return filtered;
   }
   property_transform_multiple(list, "imgs", lambda2);
