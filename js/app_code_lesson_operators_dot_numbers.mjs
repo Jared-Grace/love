@@ -28,7 +28,7 @@ export function app_code_lesson_operators_dot_numbers() {
   function above(root) {
     let operator_name_math_articled = text_articled_pad_space(operator_name);
     let c4 = app_code_container_light_blue(root);
-    let div = html_div_cycle_code(c4, [
+    html_div_cycle_code(c4, [
       text_combine_multiple([
         "In JavaScript, ",
         operator_name_math_articled,
