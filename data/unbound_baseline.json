@@ -1,6 +1,12 @@
 {
  "known": [
   {
+   "name": "app_ceb_bible_gloss_generate_book_open",
+   "unbound": [
+    "f_name"
+   ]
+  },
+  {
    "name": "function_param_swap_task_simple",
    "unbound": [
     "f_name2",
@@ -15,12 +21,6 @@
    ]
   },
   {
-   "name": "app_ceb_bible_gloss_generate_book_open",
-   "unbound": [
-    "f_name"
-   ]
-  },
-  {
    "name": "g_sermon_generate_sandbox",
    "unbound": [
     "p"
@@ -31,12 +31,6 @@
    "unbound": [
     "page",
     "p"
-   ]
-  },
-  {
-   "name": "reply_on_match_capture",
-   "unbound": [
-    "u"
    ]
   },
   {
