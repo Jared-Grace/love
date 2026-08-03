@@ -190,7 +190,7 @@ export function app_reply_main_shortcuts(
       }
       each(responses, lambda7);
     }
-    let component = app_shared_button(root, name, lambda5);
+    app_shared_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
 }
