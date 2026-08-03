@@ -1,3 +1,6 @@
+import { js_module_binding_names } from "./js_module_binding_names.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_statements_escapes_unmatched } from "./js_statements_escapes_unmatched.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
@@ -66,11 +69,16 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   list_add(body, declaration);
   let missing = js_declaration_names_unbound(declaration);
   list_remove(missing, f_name_new);
+  ("A name the file itself binds at its outermost level is not something the span reached out of the function for - the new function lands beside those names and can read them where it stands. Without subtracting them, cutting a second run out of a file that already holds a cut hands the first function to the second as an argument, which runs and reads as though the two were related.");
   let other = await functions_names();
-  missing = list_difference(missing, other);
+  let here = js_module_binding_names(ast);
+  let reachable = list_concat(other, here);
+  missing = list_difference(missing, reachable);
   let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
+  ("The count is written once the parameters are settled, so it says how many the new function really takes.");
+  js_function_arguments_assert_add(declaration);
   list_remove_multiple(stack_, span);
   let code_call = js_code_call_args_await_maybe(
     f_name_new,
