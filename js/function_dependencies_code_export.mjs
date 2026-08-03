@@ -6,7 +6,6 @@ import { js_code_global_init } from "./js_code_global_init.mjs";
 import { function_dependencies_code } from "./function_dependencies_code.mjs";
 export async function function_dependencies_code_export(f_name) {
   let global_init = js_code_global_init();
-  let i = 10;
   let v = await function_dependencies_code(f_name);
   let externals = property_get(v, "externals");
   let v2 = {
