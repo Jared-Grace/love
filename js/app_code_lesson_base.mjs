@@ -33,7 +33,7 @@ export function app_code_lesson_base(
       function each_batch_item(bi) {
         let question = property_get(bi, "question");
         let answer = property_get(bi, "answer");
-        let symbols = text_split_empty(question);
+        text_split_empty(question);
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
