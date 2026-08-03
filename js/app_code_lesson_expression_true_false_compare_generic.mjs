@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -111,8 +112,10 @@ export function app_code_lesson_expression_true_false_compare_generic(
     }
     let all = combinations();
     let codes = list_map(all, mapper);
-    let shuffled = list_shuffle(codes);
-    return shuffled;
+    (fn_name("list_shuffle"),
+      " re-orders the list where it stands and hands nothing back, so the list is returned rather than the call");
+    list_shuffle(codes);
+    return codes;
   }
   function above(root) {
     "the whole idea in one line: this operator reads true and false the same way it reads numbers. The examples below are all four possibilities, so they carry the demonstration and no worked line here would add anything";
