@@ -1,3 +1,4 @@
+import { html_span } from "./html_span.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_content_center_padding_gap } from "./app_shared_content_center_padding_gap.mjs";
@@ -20,12 +21,15 @@ export async function app_supper_home_generic(context) {
   let bar = property_get(frame, "bar");
   html_centered(bar);
   ("the gear says what it opens, the way every other gear in these apps does - a bare picture left the one control on this screen unnamed, and the reader had to press it to find out");
+  ("the passage arrows sit in the bar on either side of the versions gear, so the reader moves between passages without scrolling back down past the card");
+  let previous = html_span(bar);
   let text = app_shared_gear_versions_text();
   app_shared_screen_set_button(bar, context, app_supper_versions, text);
+  let next = html_span(bar);
   let folders = app_supper_folders_get(context);
   let empty = list_empty_is(folders);
   if (empty) {
     return;
   }
-  await app_supper_verses_render(content, folders);
+  await app_supper_verses_render(content, folders, previous, next);
 }

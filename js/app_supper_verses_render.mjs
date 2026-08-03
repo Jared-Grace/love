@@ -1,3 +1,5 @@
+import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
+import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
 import { subtract } from "./subtract.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { html_div } from "./html_div.mjs";
@@ -9,7 +11,6 @@ import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_supper_passages_get } from "./app_supper_passages_get.mjs";
 import { app_supper_passage_render } from "./app_supper_passage_render.mjs";
-import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
 import { app_supper_prayers_render } from "./app_supper_prayers_render.mjs";
 import { app_supper_passage_index_get } from "./app_supper_passage_index_get.mjs";
 import { app_supper_passage_index_set } from "./app_supper_passage_index_set.mjs";
@@ -21,7 +22,7 @@ import { ebible_choices } from "./ebible_choices.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_supper_verses_render(root, folders) {
+export async function app_supper_verses_render(root, folders, previous, next) {
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
   let choices = await ebible_choices();
   function folder_name(folder) {
@@ -48,7 +49,6 @@ export async function app_supper_verses_render(root, folders) {
     let passage = list_get(passages, index);
     let card = app_shared_container_blue(passage_area);
     app_supper_passage_render(card, passage, remaining, names);
-    app_shared_arrows_wide(passage_area, go_left, go_right);
   }
   function go(new_index) {
     index = new_index;
@@ -65,5 +65,7 @@ export async function app_supper_verses_render(root, folders) {
     let r3 = list_get_wrap_index(passages, index + 1);
     go(r3);
   }
+  app_shared_button_arrow_left(previous, go_left);
+  app_shared_button_arrow_right(next, go_right);
   show();
 }
