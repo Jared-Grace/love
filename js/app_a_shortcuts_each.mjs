@@ -5,7 +5,7 @@ export function app_a_shortcuts_each(choices, on_choice) {
     let shortcut = property_get(c, "shortcut");
     let text = property_get(c, "text");
     let fn = property_get(c, "fn");
-    let b = on_choice(shortcut, text, fn);
+    on_choice(shortcut, text, fn);
   }
   each(choices, on_each);
 }
