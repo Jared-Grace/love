@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { g_character_img } from "./g_character_img.mjs";
 import { app_g_npc_img_set } from "./app_g_npc_img_set.mjs";
 export function app_g_div_map_npcs_add(div_map, npcs) {
-  let game_prefix = g_game_prefix();
+  g_game_prefix();
   function lambda(npc) {
     let ci = g_character_img(div_map, npc);
     app_g_npc_img_set(npc, ci);
