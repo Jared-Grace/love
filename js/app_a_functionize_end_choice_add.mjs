@@ -22,7 +22,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
         let o = property_get(r, "overlay_result");
         let overlay = property_get(o, "overlay");
         let oc = property_get(r, "container");
-        let div = html_div_text(oc, "Name of new function:");
+        html_div_text(oc, "Name of new function:");
         let input = app_a_input(overlay);
         html_focus(input);
         async function on_enter() {
@@ -31,7 +31,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
           await app_a_function_on_change(a, o);
           property_delete(context, app_a_functionize.name);
         }
-        let component = app_a_button_wide(overlay, "Functionize", on_enter);
+        app_a_button_wide(overlay, "Functionize", on_enter);
       },
     });
   }
