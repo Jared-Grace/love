@@ -20,9 +20,7 @@ export function js_hash_key_nodes(ast) {
   "Two shapes reach an address. The short doors take the field first and store it themselves, so it stands at the front. The long way changes the address as an object, and there the field stands second, after the object it belongs to.";
   arguments_assert(arguments, 1);
   let held = js_hash_object_names(ast);
-  let f_name = fn_name("html_hash_property_set");
-  let f_name2 = fn_name("html_hash_object_property_set");
-  let doors = [f_name, f_name2];
+  let doors = hash_key_doors();
   let sites = [];
   function key_note(called, key) {
     let site = {
