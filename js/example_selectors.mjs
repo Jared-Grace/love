@@ -1,3 +1,4 @@
+import { js_statement_find_name_inner } from "./js_statement_find_name_inner.mjs";
 import { js_function_nested_find_named } from "./js_function_nested_find_named.mjs";
 import { js_find_call_index_argument } from "./js_find_call_index_argument.mjs";
 import { js_statement_find_call_named_index } from "./js_statement_find_call_named_index.mjs";
@@ -36,6 +37,7 @@ export function example_selectors() {
     js_statement_find_call_named_index,
     js_find_call_index_argument,
     js_function_nested_find_named,
+    js_statement_find_name_inner,
   };
   return selectors;
 }
