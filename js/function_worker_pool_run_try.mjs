@@ -29,7 +29,7 @@ export async function function_worker_pool_run_try() {
     return got;
   }
   let answers = await list_map_unordered_async(wanted, lambda);
-  let f_name3 = fn_name("function_worker_pool_run_try");
+  fn_name("function_worker_pool_run_try");
   log(function_worker_pool_run_try.name, {
     calls: wanted.length,
     answers,
