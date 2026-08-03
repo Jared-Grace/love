@@ -66,5 +66,5 @@ export async function app_g_bible_home(context) {
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed_browser(destination, downloaded);
   }
-  let component = app_shared_button(bar, "Update", lambda4);
+  app_shared_button(bar, "Update", lambda4);
 }
