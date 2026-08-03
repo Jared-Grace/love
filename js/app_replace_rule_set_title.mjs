@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_replace_rule_set_title(context) {
-  let r2 = app_replace_rule_sets_progress_bar(context);
+  app_replace_rule_sets_progress_bar(context);
   let root = property_get(context, "root");
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
