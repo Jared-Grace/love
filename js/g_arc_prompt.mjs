@@ -10,14 +10,14 @@ import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_arc_prompt(chapter_code, verses_text, turn_target) {
-  "The whole instruction that writes ONE person - who they are and every turn they hold - as one string ready to send.";
-  "One person per call rather than the whole chapter's cast in one response. A cast is JAS01's 298 turns, near 24000 output tokens, and at that size one bad verse citation costs the rewrite of all seven people and the last person written gets the least care. One person is the natural unit because the turn target is drawn per person.";
-  "Every closed list is ASKED FOR here rather than spelled out. A word written into this prose could disagree with the list a coverage tally counts and nothing would ever notice.";
-  ("The turn target is one number, drawn for this person by ",
-    fn_name("g_arc_lengths"),
-    ". It is what their whole life in this chapter is worth - about twelve turns to a conversation and one conversation a day, so seventy turns is about six days.");
-  ("The conversation lengths are handed over so the model can group its own turns into conversations. It has to do the grouping, because it is the only party that knows where one exchange finishes, and a grouping decided afterwards leaves every conversation after the first opening mid-thought.");
-  ("STILL MISSING: people written blind to each other converge into variations on the same person. The fix is to hand over the summaries of the arcs already written for this chapter, and this does not take them yet.");
+  "The instruction that writes one person, as one string ready to send.";
+  "ONE PERSON A CALL, not the whole chapter's cast. A cast is about 24000 output tokens. At that size one bad verse citation costs the rewrite of everybody, and the person written last gets the least care.";
+  "Every closed list is ASKED FOR rather than spelled out here. A word written twice can disagree with itself, and the copy that counts is the one a coverage tally reads.";
+  "The turn target is one number.";
+  ("It is drawn for this person by ", fn_name("g_arc_lengths"), ".");
+  "Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.";
+  "The conversation lengths go in so the model groups its own turns. Only it knows where an exchange finishes. Group afterwards and every later conversation opens mid-thought.";
+  "STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.";
   let list = g_callings();
   let callings = list_join_comma_space(list);
   let list2 = g_sexes();
@@ -32,10 +32,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let joined = list_join_space([
-    "The chapter being preached here is",
-    chapter_code,
-  ]);
+  let joined = list_join_space(["The player is preaching", chapter_code]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined3 = list_join_space(["  sex - one of:", sexes]);
   let joined4 = list_join_space(["  calling - one or more of:", callings]);
@@ -51,11 +48,10 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let joined8 = list_join_space([
     "A conversation holds about",
     turns_mean,
-    "turns, and runs from",
+    "turns. The fewest is",
     turns_low,
-    "turns to",
+    "and the most is",
     turns_high,
-    "turns.",
   ]);
   let lines = [
     "You are writing the people of one town for a Christian game about planting a church.",
