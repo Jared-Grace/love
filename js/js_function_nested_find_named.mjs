@@ -1,10 +1,10 @@
+import { js_node_type } from "./js_node_type.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_node_types_includes } from "./js_node_types_includes.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 export function js_function_nested_find_named(ast, name) {
@@ -21,7 +21,9 @@ export function js_function_nested_find_named(ast, name) {
     if (same) {
       continue;
     }
-    let declaration_is = js_node_types_includes(node, "FunctionDeclaration");
+    ("The node's own type, not the types anywhere inside it. The reader next door collects every type in a subtree, so asking it this question passes an arrow function that merely holds a declaration somewhere - and a named function written as a value would then be lifted as though it were a declaration, out of a container that is not a list of statements at all.");
+    let node_type = js_node_type(node);
+    let declaration_is = equal(node_type, "FunctionDeclaration");
     if (not(declaration_is)) {
       continue;
     }
