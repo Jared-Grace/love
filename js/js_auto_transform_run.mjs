@@ -1,3 +1,4 @@
+import { error_where } from "./error_where.mjs";
 import { error_json } from "./error_json.mjs";
 import { error_readable } from "./error_readable.mjs";
 export async function js_auto_transform_run(t, ast) {
