@@ -1,3 +1,4 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_permission_seams } from "./functions_permission_seams.mjs";
@@ -7,9 +8,7 @@ import { permission_grant_refusals_names } from "./permission_grant_refusals_nam
 import { list_join_comma } from "./list_join_comma.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { property_get } from "./property_get.mjs";
 export async function permission_writers_gate_run() {
   "gate: a function that can reach Claude's own permission rules must be refused a standing approval, unless it is one of the few recorded as safe to grant";
   "the safety check works out what it can from the parameter list, and refuses a rule writer only when it also declares arguments - the reasoning being that a function taking nothing can only write what committed source already says. That is true of a generator and false of anything reading from a file, and the prose of the check said so: an argument-free writer sourced from outside would pass, none existed yet, and if one were written the check would let it through.";
@@ -26,8 +25,7 @@ export async function permission_writers_gate_run() {
     if (allowed) {
       continue;
     }
-    let refusals = property_get(refusals_by_name, f_name);
-    let clean = list_empty_is(refusals);
+    let clean = property_list_empty_is(refusals_by_name, f_name);
     if (clean) {
       list_add(open, f_name);
     }
