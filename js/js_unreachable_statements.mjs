@@ -1,9 +1,9 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { js_statement_stopping_types } from "./js_statement_stopping_types.mjs";
 import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_unreachable_statements(ast) {
@@ -15,8 +15,7 @@ export function js_unreachable_statements(ast) {
   let dead = [];
   let blocks = js_list_type(ast, "BlockStatement");
   for (let visited of blocks) {
-    let block = property_get(visited, "node");
-    let statements = property_get(block, "body");
+    let statements = property_path_get_2(visited, "node", "body");
     let stopped = false;
     for (let statement of statements) {
       if (stopped) {
