@@ -8,7 +8,7 @@ export async function function_copy_generic_replace(plugin_fn, args_comma) {
     plugin_fn,
     args_comma,
   ));
-  let result = await function_delete(f_name_new);
+  await function_delete(f_name_new);
   let r = await function_copy_open(f_name_old, f_name_new);
   return r;
 }
