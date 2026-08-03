@@ -1,3 +1,8 @@
+import { property_or_null } from "./property_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { js_node_is } from "./js_node_is.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_types_function_node } from "./js_types_function_node.mjs";
 import { js_types_loop_all_node } from "./js_types_loop_all_node.mjs";
@@ -8,7 +13,6 @@ import { js_node_type } from "./js_node_type.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_add } from "./list_add.mjs";
-
 export function js_statements_escapes_unmatched(statements) {
   arguments_assert(arguments, 1);
   ("Every place inside these lines that leaves by jumping - returning, breaking, or going round again - and lands somewhere outside them. Reported as how far into the file each one is written.");
@@ -30,21 +34,21 @@ export function js_statements_escapes_unmatched(statements) {
       let label = property_or_null(node, "label");
       let labelled = null_not_is(label);
       let type = js_node_type(node);
-      let returning = type === "ReturnStatement";
+      let returning = equal(type, "ReturnStatement");
       let types_barrier = returning ? types_function : types_landing;
       let stack = property_get(v, "stack");
       function barrier_is(held) {
-        ("The chain a node hangs from holds the lists a node sits in as well as the nodes themselves, and a list has no kind, so it is asked about first.");
+        "The chain a node hangs from holds the lists a node sits in as well as the nodes themselves, and a list has no kind, so it is asked about first.";
         let node_is = js_node_is(held);
-        if (!node_is) {
+        if (not(node_is)) {
           return false;
         }
         let is = js_node_types_is(held, types_barrier);
         return is;
       }
       let held_is = list_any(stack, barrier_is);
-      let matched = held_is && !labelled;
-      if (!matched) {
+      let matched = held_is && not(labelled);
+      if (not(matched)) {
         let start = property_get(node, "start");
         list_add(offsets, start);
       }
