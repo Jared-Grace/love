@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { js_boolean_values } from "./js_boolean_values.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
@@ -59,14 +60,15 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let b = js_boolean_values();lc
+  let b = js_boolean_values();
+  let concated = list_concat(a, b2);
   let json = json_format_to({
     gender: genders,
-    age: '13-80',
-    marriage: ['single', 'betrothed', 'married', 'widowed'],
+    age: "13-80",
+    marriage: ["single", "betrothed", "married", "widowed"],
     master: b,
     servant: b,
-    government: ['civilian', 'official', 'soldier']
+    government: ["civilian", "official", "soldier"],
   });
   let lines = [
     "This is a Christian game about sharing the gospel.",
