@@ -21,8 +21,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
   let list = g_callings();
   let callings = list_join_comma_space(list);
-  let list2 = g_genders_names();
-  let genders = list_join_comma_space(list2);
+  let genders = g_genders_names();
   let list3 = g_seasons();
   let seasons = list_join_comma_space(list3);
   let list4 = g_openers_unbeliever();
