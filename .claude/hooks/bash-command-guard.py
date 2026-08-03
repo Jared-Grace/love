@@ -2683,6 +2683,67 @@ def find_in_place_edit(command):
     return bool(IN_PLACE_EDIT_TEXT.search(unquoted))
 
 
+# A sleep-loop waiting on `pgrep` can never end, and that is a fact about the
+# shape rather than a guess about the wait. This hook only ever sees a command
+# that Claude's Bash tool will run as `bash -c '<command>'`, so the pattern
+# handed to `pgrep -f` is sitting in that shell's OWN command line - and -f
+# matches full command lines. pgrep excludes itself but not its parent, so the
+# waiting shell finds itself on every pass, the condition stays true forever,
+# and the session behind it never gets its tool call back.
+#
+# Demonstrated directly on 2026-08-03: `pgrep -af "ai.mjs qa_gate_run"`, run
+# through this same seam, listed its own bash -c wrapper among the matches -
+# alongside two shells that had been going round `while pgrep -f "ai.mjs
+# qa_gate_run"; do sleep 30; done` for twenty-one hours, each finding the other
+# and itself. Twelve such shells were alive at once that morning, none younger
+# than eighteen hours, none of which had ever terminated: about two hundred and
+# fifty session-hours. Every one had been auto-approved, because a loop that
+# sleeps burns no processor and prints nothing, so nothing else on this machine
+# can see it - the runaway check needs CPU time, and the session that wrote it
+# is blocked on the very call it would have to make to notice.
+#
+# An anchored pattern (`^node …$`) would not self-match, so this is not quite
+# every possible spelling - but nothing here needs the escape hatch, because
+# the loop itself is unnecessary. A command run in the background reports its
+# own completion.
+PGREP_WAIT_LOOP_TEXT = re.compile(
+    r"\b(?:while|until)\b.*?\bpgrep\b.*?\bdo\b.*?\bsleep\b.*?\bdone\b",
+    re.DOTALL,
+)
+
+PGREP_WAIT_LOOP_DENY_REASON = (
+    "A loop that waits on `pgrep` can't be approved here, because it can "
+    "never finish - and you do not need it at all.\n"
+    "  - THE BUG: this command runs as `bash -c '<your command>'`, so the "
+    "pattern you hand `pgrep -f` is sitting in that shell's own command line. "
+    "`-f` matches full command lines, and pgrep excludes itself but not its "
+    "parent. So the waiting shell finds ITSELF on every pass, the condition "
+    "never goes false, and your session never gets this tool call back. "
+    "Twelve shells were found stuck this way at once, none younger than "
+    "eighteen hours.\n"
+    "  - WHAT TO DO INSTEAD: run the thing in the background and let it tell "
+    "you. A backgrounded command re-invokes you when it exits, so there is "
+    "nothing to wait for. If you truly must poll something external, the "
+    "Monitor tool waits without a shell.\n"
+    "  - Nothing else on this machine can see this mistake: a sleeping loop "
+    "uses no processor, so the runaway check cannot find it, and it prints "
+    "nothing, so it does not look wrong. `node scripts/ai.mjs "
+    "processes_sleep_loop_waiting` lists any that are already going."
+)
+
+
+def find_pgrep_wait_loop(command):
+    """True iff `command` is a while/until loop that tests `pgrep` and sleeps.
+
+    Quoted spans are blanked first, so a command that merely names the shape
+    (a grep pattern, a corpus case) is not mistaken for performing it. The
+    pgrep must come BEFORE the loop's `do`, which is what keeps an ordinary
+    loop that happens to call pgrep in its body out of this - only the loop
+    whose CONDITION is the pgrep can hang on the self-match."""
+    unquoted = QUOTED_SPAN_TEXT.sub(" ", command)
+    return bool(PGREP_WAIT_LOOP_TEXT.search(unquoted))
+
+
 PYTHON_EVAL_DENY_REASON = (
     "An interpreter handed code on the command line can't be approved here. "
     "That is one seam wearing many names, and all of them are floored the same "
