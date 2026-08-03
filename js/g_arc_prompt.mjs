@@ -21,7 +21,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let list = g_callings();
   let callings = list_join_comma_space(list);
   let list2 = g_genders_names();
-  let sexes = list_join_comma_space(list2);
+  let genders = list_join_comma_space(list2);
   let list3 = g_seasons();
   let seasons = list_join_comma_space(list3);
   let list4 = g_openers_unbeliever();
@@ -35,7 +35,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let preaching = list_join_space(["The player is preaching", chapter_code]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
-  let joined3 = list_join_space(["  sex - one of:", sexes]);
+  let joined3 = list_join_space(["  gender - one of:", genders]);
   let joined4 = list_join_space(["  calling - one or more of:", callings]);
   let joined5 = list_join_space(["  season - one of:", seasons]);
   let joined6 = list_join_space([
@@ -76,7 +76,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "  trouble - what is wrong, in one sentence, in their own words",
     "  summary - one sentence: their calling and their trouble. The player reads it when they return.",
     "",
-    "Sex and calling are facts. Do not give a personality meant to follow from them.",
+    "Gender and calling are facts. Do not give a personality meant to follow from them.",
     "",
     "THE TURNS",
     "A turn is one exchange.",
@@ -110,13 +110,13 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "No names. The game picks names when it runs.",
     "No other townspeople. This person knows none of them.",
     "No time of day, no weather, no place.",
-    "Nothing about the player - not their sex, family, past, or how long they have been here.",
+    "Nothing about the player - not their gender, family, past, or how long they have been here.",
     "Nothing about persecution, soldiers, rulers, or danger, unless these verses raise it.",
     "No wrong answers. Every passage you name must be the right one.",
     "",
     "Keep every utterance short - a sentence or two, the way people actually speak.",
     "",
-    "Answer as JSON: one person, with sex, calling, season, trouble, summary, and conversations.",
+    "Answer as JSON: one person, with gender, calling, season, trouble, summary, and conversations.",
     "Each conversation is a list of turns.",
   ];
   let r = list_join_newline(lines);
