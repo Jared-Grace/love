@@ -1,7 +1,7 @@
 import { js_identifier_rename_imports_fix_curried_right_2 } from "./js_identifier_rename_imports_fix_curried_right_2.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_paths_mentioning } from "./data_paths_mentioning.mjs";
-import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
+import { functions_duplicates_baseline_path } from "./functions_duplicates_baseline_path.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { function_alias_keys } from "./function_alias_keys.mjs";
 import { function_delete } from "./function_delete.mjs";
@@ -44,7 +44,7 @@ export async function functions_merge(f_name_keep, f_name_drop) {
   }
   ("a gate baseline is a record of the defect, not something depending on it, so the one file listing this pair as an open twin must not be what stops the pair being closed - every other mention in the data folder still does");
   let paths_mentioning = await data_paths_mentioning(f_name_drop);
-  let baseline_path = duplicates_baseline_path();
+  let baseline_path = functions_duplicates_baseline_path();
   let blocking = list_filter_equal_not(paths_mentioning, baseline_path);
   list_empty_is_assert_json(blocking, {
     f_name_drop,

@@ -28,7 +28,7 @@ export function baseline_growth_guarded_cases() {
     {
       imports: [
         fn_name("baseline_known_write"),
-        fn_name("duplicates_baseline_path"),
+        fn_name("functions_duplicates_baseline_path"),
       ],
       guarded: false,
       why: "writes the record and nothing else - the exact shape of the four writers this was built to catch, every one of which promised in its own prose to refuse",
