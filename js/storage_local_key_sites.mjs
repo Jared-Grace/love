@@ -1,7 +1,7 @@
+import { repo_functions_names_code_includes_multiple } from "./repo_functions_names_code_includes_multiple.mjs";
 import { js_storage_local_key_words } from "./js_storage_local_key_words.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
-import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
 import { storage_key_seams_all } from "./storage_key_seams_all.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_storage_local_key_f_names } from "./js_storage_local_key_f_names.mjs";
@@ -14,9 +14,11 @@ export async function storage_local_key_sites() {
   "The two halves of a key come back from one walk for the same reason. A key is an owner and a word joined, both are on somebody's disk, and either one changing loses the same setting - so asking about them separately would parse every one of these trees twice to answer one question about one line.";
   arguments_assert(arguments, 0);
   let repo_name = repo_love_name();
-  let seam = "storage_local_";
-  let candidates = await repo_functions_names_code_includes(repo_name, seam);
   let seams = await storage_key_seams_all();
+  let candidates = await repo_functions_names_code_includes_multiple(
+    repo_name,
+    seams,
+  );
   let sites = [];
   for (let f_name of candidates) {
     let ast = await function_ast(f_name);
