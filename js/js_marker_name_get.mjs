@@ -11,6 +11,10 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_marker_name_get(v) {
+  "The name a marker is standing under, read off a call while the walk is at it - and nothing at all when the call being looked at is not a marker.";
+  "Nothing rather than a refusal, because this is asked of every call in a file and almost none of them are markers. A refusal would make the ordinary answer the loud one.";
+  "Four things have to hold before the name is handed back, and each is a way a marker could be written that nothing could act on: it has to stand as a statement of its own, so there is a place to put what replaces it; it has to be called by a plain word rather than reached through something; it has to be the marker itself and not some other call; and its name has to be written out on the spot, because a name worked out while the program runs is not there to be read while the file is being changed.";
+  "The one thing that throws instead of answering is a marker whose statement is not sitting in a list of statements. Every other failure here means this was not a marker; that one means it was, and the walk has arrived somewhere the change cannot be made, which is worth stopping for rather than passing over in silence.";
   let stack = property_get(v, "stack");
   let stack_ = list_get_end(stack, 1);
   let a = js_node_is(stack_);
