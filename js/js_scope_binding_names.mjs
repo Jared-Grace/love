@@ -14,7 +14,7 @@ export function js_scope_binding_names(node) {
     let caught = js_catch_clause_names(node);
     return caught;
   }
-  let loop_types = ["ForStatement", "ForInStatement", "ForOfStatement"];
+  let loop_types = js_types_loop_node();
   let binds_loop = js_node_types_is(node, loop_types);
   if (binds_loop) {
     let looped = js_loop_declared_names(node);
