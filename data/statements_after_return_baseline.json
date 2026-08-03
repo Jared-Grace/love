@@ -1,5 +1,6 @@
 {
  "known": [
+  "app_ceb_bible_gloss_generate_book_open",
   "app_replace_rule_set_verify",
   "app_sandbox",
   "command_line_generic",
@@ -8,7 +9,6 @@
   "ebible_languages_add",
   "ebible_languages_english_each",
   "ebible_version_upload_refresh_all",
-  "app_ceb_bible_gloss_generate_book_open",
   "g_sermon_generate_book",
   "g_sermon_generate",
   "html_hash_set",
