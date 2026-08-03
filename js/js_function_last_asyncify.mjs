@@ -38,7 +38,7 @@ export async function js_function_last_asyncify(
           let v = await js_await_add_inner(functions, ast_inner, visited);
           return v;
         }
-        let output = await function_transform(f_name, lambda2);
+        await function_transform(f_name, lambda2);
       }
       await each_async(difference, lambda);
     }
