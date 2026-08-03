@@ -1,12 +1,5 @@
 {
  "known": [
-  "functions_arity_baseline_path",
-  "duplicates_baseline_path",
-  "functions_operators_raw_baseline_path",
-  "functions_parameters_unread_baseline_path",
-  "functions_selects_unsafe_baseline_path",
-  "functions_shadowing_baseline_path",
-  "functions_statements_after_return_baseline_path",
-  "functions_unbound_baseline_path"
+  "duplicates_baseline_path"
  ]
 }
