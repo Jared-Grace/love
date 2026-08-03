@@ -1,12 +1,6 @@
 import { function_functionize_generic } from "./function_functionize_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { function_exists } from "./function_exists.mjs";
-import { property_get } from "./property_get.mjs";
-import { false_is_assert_json } from "./false_is_assert_json.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { function_select_multiple_apply_args } from "./function_select_multiple_apply_args.mjs";
-import { function_auto_multiple } from "./function_auto_multiple.mjs";
 export async function function_functionize(
   f_name,
   word_from,
