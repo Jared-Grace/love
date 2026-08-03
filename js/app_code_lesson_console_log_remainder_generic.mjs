@@ -1,3 +1,4 @@
+import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { multiply_add } from "./multiply_add.mjs";
@@ -17,9 +18,7 @@ import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span } from "./html_span.mjs";
 import { equal } from "./equal.mjs";
-import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
@@ -114,8 +113,7 @@ export function app_code_lesson_console_log_remainder_generic(
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
     "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result; the remainder here is the largest one (divisor-1), which the reversed spectrum makes the lightest blue, and two box-shadow rings (a light ring hugging the chip, then a dark ring beyond it) lift it off the black tile";
     let triple_equal = js_operator_triple_equal_symbol();
-    let tile = html_span(parent);
-    html_style_code_dark(tile);
+    let tile = html_span_code_dark(parent);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
     let color = remainder_color(remainder);
