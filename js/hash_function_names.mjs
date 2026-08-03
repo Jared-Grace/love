@@ -7,7 +7,7 @@ export async function hash_function_names() {
   "A file that never says the word cannot hold either shape the readings know, because both are reached through a function whose own name carries it - so this narrows the walk from the whole repo to a handful of trees without narrowing the answer.";
   arguments_assert(arguments, 0);
   let repo_name = repo_love_name();
-  let word = "hash";
+  let word = hash_code_word();
   let names = await repo_functions_names_code_includes(repo_name, word);
   return names;
 }

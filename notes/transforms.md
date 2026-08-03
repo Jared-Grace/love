@@ -20,7 +20,8 @@
 
 | When you want to… | Use | Full function |
 |---|---|---|
-| Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |
+| Rename a function everywhere (def + imports + callers + aliases) **and commit it in the same step** — reach for this one | `function_rename_commit <before> <after>` | `function_rename_commit` |
+| Rename without committing (only when the commit has to wait) | `function_rename <before> <after>` | `function_rename` |
 | Bulk-rename every fn under a name prefix (namespace migration) | `ri <prefix_before> <prefix_after>` | `functions_rename_if_starts_with` |
 | Replace an identifier with an expression, inside the fn you name | `ir <name> <expr>` | `function_identifier_replace <fn> <name> <expr>` |
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
