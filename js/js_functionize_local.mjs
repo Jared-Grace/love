@@ -1,5 +1,4 @@
-import { js_module_binding_names } from "./js_module_binding_names.mjs";
-import { list_concat } from "./list_concat.mjs";
+import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_statements_escapes_unmatched } from "./js_statements_escapes_unmatched.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -22,7 +21,6 @@ import { js_statement_return } from "./js_statement_return.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove } from "./list_remove.mjs";
-import { functions_names } from "./functions_names.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -69,10 +67,7 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   list_add(body, declaration);
   let missing = js_declaration_names_unbound(declaration);
   list_remove(missing, f_name_new);
-  ("A name the file itself binds at its outermost level is not something the span reached out of the function for - the new function lands beside those names and can read them where it stands. Without subtracting them, cutting a second run out of a file that already holds a cut hands the first function to the second as an argument, which runs and reads as though the two were related.");
-  let other = await functions_names();
-  let here = js_module_binding_names(ast);
-  let reachable = list_concat(other, here);
+  let reachable = await js_module_names_reachable(ast);
   missing = list_difference(missing, reachable);
   let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
