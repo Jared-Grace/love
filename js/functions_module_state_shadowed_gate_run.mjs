@@ -17,7 +17,7 @@ export async function functions_module_state_shadowed_gate_run() {
   "arriving by hand or by some other route.";
   let offenders = await functions_module_state_shadowed();
   for (let offender of offenders) {
-    let f_name = property_get(offender, "name");
+    let f_name = property_get(offender, "f_name");
     let joined = property_list_join_comma(offender, "hidden");
     console.log("SHARED STATE HIDDEN  " + f_name + "  " + joined);
   }
