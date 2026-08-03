@@ -1,5 +1,6 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { property_get } from "./property_get.mjs";
 export async function file_write_import() {
   "The file writer, fetched only at the moment something actually writes.";
   "Named apart and asked for this way because a plain import is followed before";
