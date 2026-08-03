@@ -56,7 +56,7 @@ export async function js_destructure_functionize(ast) {
       let name3 = js_identifier_name(key);
       let value = property_get(p, "value");
       let name2 = js_identifier_name(value);
-      let assign = js_assign_object_property_get(
+      js_assign_object_property_get(
         name3,
         name4,
         block_body,
