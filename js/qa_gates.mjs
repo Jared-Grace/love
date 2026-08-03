@@ -1,3 +1,4 @@
+import { number_to_words_cases_gate_run } from "./number_to_words_cases_gate_run.mjs";
 import { address_key_doors_wrapped_gate_run } from "./address_key_doors_wrapped_gate_run.mjs";
 import { baselines_prefix_split_gate_run } from "./baselines_prefix_split_gate_run.mjs";
 import { functions_granted_silent_gate_run } from "./functions_granted_silent_gate_run.mjs";
@@ -342,6 +343,7 @@ export function qa_gates() {
     js_function_declaration_unused_remove_cases_gate_run,
     functions_granted_silent_gate_run,
     baselines_prefix_split_gate_run,
+    number_to_words_cases_gate_run,
   ];
   return gates;
 }
