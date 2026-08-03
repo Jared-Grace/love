@@ -26,7 +26,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
   arguments_assert(arguments, 2);
   ("One comparison operator applied to plain true and false - the prerequisite the swapping lessons were already leaning on, because every === the learner has met so far had numbers or strings on both sides and nothing had ever compared two true/false values.");
   ("One operator a lesson rather than both together, which is what makes the examples complete rather than a sample: two true/false values can sit either side of an operator in exactly four ways, the screen holds four examples, so every screen is the whole truth of this operator and nothing is left for the learner to wonder whether they have seen.");
-  ("The order is shuffled per screen rather than fixed, so a second screen is a re-reading rather than a repetition, and no possibility is ever the one that got dropped.");
+  ("The order is fixed rather than shuffled, and the fixed order is the whole point: the left word holds still for two lines while the right word changes, which is what makes the four lines a table the learner can read down rather than four separate facts. A shuffled screen hides that pattern, and it has nothing to offer in exchange - there are only four possibilities and every screen already carries all of them, so a fresh order is not fresh content.");
   ("A comparison standing where a plain true or false stood is a second idea and gets its own lesson (comparing a comparison), which in turn is what the swapping lesson's (a === b) === (b === a) needs. Answer is the code's own true/false value, correct by construction.");
   let symbol = property_get(operator, "operator");
   let name_id = title_name_id();
@@ -74,7 +74,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
     return word;
   }
   function combinations() {
-    "the four ways two true/false values can sit either side of the operator";
+    "the four ways two true/false values can sit either side of the operator, in the order they are shown: the left word true for the first two and false for the last two, the right word changing every line. Reading down, the left column is the slow one and the right column the fast one, so no possibility can be missing without leaving a visible gap in the pattern";
     let list = [
       {
         left: true,
