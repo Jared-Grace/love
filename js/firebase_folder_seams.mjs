@@ -67,7 +67,7 @@ export async function firebase_folder_seams() {
         let passed_on = js_node_name_text_try(folder);
         let position = list_index_of(params_names, passed_on);
         let own = greater_than(position, -1);
-        if (!own) {
+        if (not(own)) {
           continue;
         }
         let word = text_combine_multiple([
