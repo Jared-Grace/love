@@ -49,12 +49,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
         app_code_lesson_name_id_category(parent, left_upper);
         let t = js_keyword_true();
         let f = js_keyword_false();
-        html_cycle_code(parent, [
-          "comparing a comparison with ",
-          t,
-          " or ",
-          f,
-        ]);
+        html_cycle_code(parent, ["comparing a comparison with ", t, " or ", f]);
       }
       return render;
     }
