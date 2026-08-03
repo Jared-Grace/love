@@ -5,7 +5,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_supper_prayers_render(root) {
   let prayer_card = app_shared_container_blue(root);
   function lambda(item) {
-    let p2 = app_shared_text_body(
+    app_shared_text_body(
       prayer_card,
       text_combine_multiple([
         "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Thanks. Help. Bless this ",
@@ -15,5 +15,5 @@ export function app_supper_prayers_render(root) {
     );
   }
   each(["bread", "fruit of the vine"], lambda);
-  let p3 = app_shared_text_body(prayer_card, "Sing hymn");
+  app_shared_text_body(prayer_card, "Sing hymn");
 }
