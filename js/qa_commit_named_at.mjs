@@ -20,6 +20,7 @@ export async function qa_commit_named_at(commit) {
     let sections = qa_gate_failed_sections(printed);
     let known = await functions_names();
     let named = {};
+    let spoke = {};
     for (let section of sections) {
       let gate = property_get(section, "name");
       let said = property_get(section, "said");
@@ -27,11 +28,15 @@ export async function qa_commit_named_at(commit) {
       let accused = qa_gate_said_advice_remove(said);
       let names = functions_names_in_text(accused, known);
       named[gate] = names;
+      ("What the gate actually said is kept beside what was read out of it, because the reading is done by whatever reader stands in the working tree and the working tree is not part of the commit being judged. A record holding only the reading cannot be corrected when the reader is: thirteen of sixteen commits went on holding words a corrected reader would never say, and the only cure was to forget them and spend fourteen minutes each judging them again");
+      ("Keeping the saying makes that a recomputation instead. It is the input the reading is a pure function of, so anything derived from it can be derived again at any time, by any later reader, without the gates being run once more");
+      spoke[gate] = said;
     }
     let judged = {
       green,
       failed,
       named,
+      said: spoke,
     };
     return judged;
   }
