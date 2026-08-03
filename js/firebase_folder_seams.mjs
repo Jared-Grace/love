@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -35,8 +36,7 @@ export async function firebase_folder_seams() {
   let json = json_to(first);
   let known = [json];
   let asked = 0;
-  let a = list_size(seams);
-  let waiting = greater_than(a, asked);
+  let waiting = list_size_greater_than(seams, asked);
   while (waiting) {
     let seam = list_get_or_null(seams, asked);
     asked = add_1(asked);
