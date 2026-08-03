@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_single_message } from "./list_single_message.mjs";
