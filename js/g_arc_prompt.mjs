@@ -32,7 +32,8 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let joined = list_join_space(["The player is preaching", chapter_code]);
+  let preaching = list_join_space(["The player is preaching", chapter_code]);
+  let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined3 = list_join_space(["  sex - one of:", sexes]);
   let joined4 = list_join_space(["  calling - one or more of:", callings]);
@@ -52,6 +53,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_low,
     "and the most is",
     turns_high,
+    "turns.",
   ]);
   let lines = [
     "This is a Christian game about planting a church.",
