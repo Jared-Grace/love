@@ -1,3 +1,4 @@
+import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 export function app_shared_bible_picker_button_size(count) {
@@ -9,7 +10,7 @@ export function app_shared_bible_picker_button_size(count) {
     ("1.3em text with 0.55em of padding above and below makes a target about 44 pixels tall at the default text size, which is the size a finger needs; the earlier 1.7em/0.6em was about 60 pixels, bigger than a finger and so only spending screen without buying accuracy");
     let large = {
       font: "1.3em",
-      pad_x: "0.85em",
+      pad_x: app_shared_font_size_label(),
       pad_y: "0.55em",
       margin_x: "0.2em",
       margin_y: app_shared_content_edge_gap(),
