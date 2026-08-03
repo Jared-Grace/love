@@ -20,7 +20,7 @@ export async function app_calendar_secret_whatsapp_add() {
   let lines = text_split_newline(contents);
   function lambda(line) {
     let columns = text_split_comma(line);
-    let indicized = list_to_indices_items(columns);
+    list_to_indices_items(columns);
     let names = ["first", "middle", "last"];
     let size = list_size(names);
     let taken = list_take(columns, size);
