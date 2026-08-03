@@ -22,6 +22,6 @@ export async function function_list_generate(f_generate, list) {
     let code = json_to(list);
     js_statement_return_insert_code(body_block, 0, code);
   }
-  let output = await function_transform(f_name, lambda);
+  await function_transform(f_name, lambda);
   return f_name;
 }
