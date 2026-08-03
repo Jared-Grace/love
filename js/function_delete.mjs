@@ -5,6 +5,7 @@ import { assert_message } from "./assert_message.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
 export async function function_delete(f_names_comma) {
+  "Removes the files of the named functions along with any aliases pointing at them, refusing on a name nothing answers to.";
   await text_split_comma_dot_map_unordered(f_names_comma, lambda);
   async function lambda(f_name) {
     let u = await function_unalias_exists(f_name);
