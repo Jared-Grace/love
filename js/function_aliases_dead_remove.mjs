@@ -15,8 +15,8 @@ export async function function_aliases_dead_remove() {
     let kept = list_includes_not(keys, key);
     return kept;
   }
-  function lambda(aliases) {
-    let kept = object_filter(aliases, keeping_is);
+  function lambda(aliases_before) {
+    let kept = object_filter(aliases_before, keeping_is);
     return kept;
   }
   let d_path = data_aliases_path();
