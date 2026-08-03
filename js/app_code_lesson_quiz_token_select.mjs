@@ -47,7 +47,7 @@ export function app_code_lesson_quiz_token_select(
 ) {
   let answer_div = html_div_code_dark(parent);
   let answer_property = property_get(info, "answer_property");
-  let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+  app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
   ("ensures div is visible from beginning");
   let text = text_space_nb();
@@ -94,7 +94,7 @@ export function app_code_lesson_quiz_token_select(
         let reduced = list_reduce(chosen, lambda5, 0);
         let taken = text_take(code2, reduced);
         html_clear(answer_div);
-        let span_taken = html_span_text(answer_div, taken);
+        html_span_text(answer_div, taken);
         function lambda4(variation) {
           let same = lists_equal_pair(variation, chosen);
           return same;
