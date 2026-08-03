@@ -1,39 +1,15 @@
-import { js_node_type } from "./js_node_type.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
-import { js_flo } from "./js_flo.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
-import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 export function js_function_nested_find_named(ast, name) {
   arguments_assert(arguments, 2);
   ("The function written inside the exported one under the name you give, however deep it sits.");
   ("Addressed by its own name rather than by where it stands, because a closure keeps its name while every line around it moves - and because the thing worth reaching for is nearly always already named. Most of a long function's size sits inside a closure written beside the lines that use it, and a span cannot reach into one: the span extractor sees the whole closure as a single statement and can only wrap it up again.");
-  ("The exported function is skipped so that a file whose inner function shares its name still finds the inner one - and so that asking for the outer name is an error rather than a move that would empty the file.");
-  let visitors = js_list_function_nodes_visitors(ast);
-  let outer = js_flo(ast);
-  let found = null;
-  for (let v of visitors) {
-    let node = property_get(v, "node");
-    let same = equal(node, outer);
-    if (same) {
-      continue;
-    }
-    ("The node's own type, not the types anywhere inside it. The reader next door collects every type in a subtree, so asking it this question passes an arrow function that merely holds a declaration somewhere - and a named function written as a value would then be lifted as though it were a declaration, out of a container that is not a list of statements at all.");
-    let node_type = js_node_type(node);
-    let declaration_is = equal(node_type, "FunctionDeclaration");
-    if (not(declaration_is)) {
-      continue;
-    }
-    let named = js_function_declaration_name(node);
+  ("Which functions are even candidates is asked next door, by the same reader the size report and the candidate report ask. All this adds is the name.");
+  let declarations = js_functions_nested_declarations(ast);
+  function lambda(declaration) {
+    let named = js_function_declaration_name(declaration);
     let matched = equal(named, name);
-    if (matched) {
-      found = node;
-      break;
-    }
+    return matched;
   }
+  let found = list_find_or_null(declarations, lambda);
   null_not_is_assert_json(found, {
     hint: "no function written inside this one is declared under that word. Would you like to check the spelling, or name one the function really writes?",
     name,
