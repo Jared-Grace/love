@@ -37,7 +37,7 @@ export function app_replace_settings(context) {
   async function lambda3() {
     await c(value_get_divide);
   }
-  let component = app_shared_button(
+  app_shared_button(
     div,
     text_combine(emoji_font_smaller(), " Font size smaller"),
     lambda3,
