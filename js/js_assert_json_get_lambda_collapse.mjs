@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_assert_json_get_call_point_at_record } from "./js_assert_json_get_call_point_at_record.mjs";
 import { js_function_declaration_record_line_try } from "./js_function_declaration_record_line_try.mjs";
 import { js_assert_json_get_call_below_try } from "./js_assert_json_get_call_below_try.mjs";
@@ -47,8 +48,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
     return once_is;
   }
   function block_each(v) {
-    let node = property_get(v, "node");
-    let body = property_get(node, "body");
+    let body = property_path_get_2(v, "node", "body");
     function statement_each(statement) {
       let declared_is = js_node_type_is(statement, "FunctionDeclaration");
       if (not(declared_is)) {
