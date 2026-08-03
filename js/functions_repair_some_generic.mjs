@@ -17,8 +17,8 @@ export async function functions_repair_some_generic(
   how_many,
 ) {
   arguments_assert(arguments, 5);
-  "$plain name_key";
-  "$plain how_many";
+  ("$plain name_key");
+  ("$plain how_many");
   ("Puts a few of the functions one sweep still complains about through the repair for it, commits each as it lands, shrinks the record the gate measures against, and stops there.");
   ("A few at a time rather than all of them. The whole set of any of these reaches across most of the repo, and with many hands editing one working directory that is a bet on the next quarter of an hour being quiet - somebody's bet to make, not this command's. A few is nobody's bet, and a peer editing one of the few is a conflict seen at once rather than one buried in two hundred. Running it over and over gets to the same place, because each run fixes the ones it took and the next ask no longer returns them.");
   ("Two of these had been written out in full, alike line for line, differing only in which sweep to ask, which word the sweep files a name under, which repair to run and which record to shrink. Everything else was the careful part, and the careful part is what gets subtly wrong in the third copy.");
