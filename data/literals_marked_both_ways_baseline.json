@@ -1,0 +1,9 @@
+{
+ "known": [
+  "list_add",
+  "list_map",
+  "property_get",
+  "app_calendar",
+  "app_bible"
+ ]
+}
