@@ -1,5 +1,6 @@
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 export async function function_exists(f_name) {
+  "Looks for the file a function name would live in and reports what it found, including whether more than one repository holds that name.";
   let result = await function_name_to_path_search(f_name);
   return result;
 }
