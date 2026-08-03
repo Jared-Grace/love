@@ -1,6 +1,6 @@
 import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
 import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
-import { firebase_chapter_upload_folders_gate_run } from "./firebase_chapter_upload_folders_gate_run.mjs";
+import { firebase_folder_gate_run } from "./firebase_folder_gate_run.mjs";
 import { qa_gate_run_start_wanted_gate_run } from "./qa_gate_run_start_wanted_gate_run.mjs";
 import { process_line_sleep_loop_is_gate_run } from "./process_line_sleep_loop_is_gate_run.mjs";
 import { js_function_shape_cases_gate_run } from "./js_function_shape_cases_gate_run.mjs";
@@ -279,7 +279,7 @@ export function qa_gates() {
     atoms_unexampled_gate_run,
     literals_frozen_gate_run,
     literals_marked_both_ways_gate_run,
-    firebase_chapter_upload_folders_gate_run,
+    firebase_folder_gate_run,
     hash_key_literals_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
