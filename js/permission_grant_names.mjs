@@ -808,6 +808,8 @@ export function permission_grant_names() {
   let spelled797 = fn_name("qa_commit_named_entry_stale_gate_run");
   let spelled798 = fn_name("webpack_build_dev");
   let spelled799 = fn_name("function_list_name_add");
+  let spelled800 = fn_name("function_prose_set");
+  let spelled801 = fn_name("function_prose_numbered");
   let names = [
     spelled,
     spelled2,
@@ -1608,6 +1610,8 @@ export function permission_grant_names() {
     spelled797,
     spelled798,
     spelled799,
+    spelled800,
+    spelled801,
   ];
   return names;
 }

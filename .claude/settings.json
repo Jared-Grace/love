@@ -876,6 +876,8 @@
       "Bash(node scripts/ai.mjs qa_commit_named_entry_stale_gate_run:*)",
       "Bash(node scripts/ai.mjs webpack_build_dev:*)",
       "Bash(node scripts/ai.mjs function_list_name_add:*)",
+      "Bash(node scripts/ai.mjs function_prose_set:*)",
+      "Bash(node scripts/ai.mjs function_prose_numbered:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1675,6 +1677,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args qa_commit_named_entry_stale_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args webpack_build_dev:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_list_name_add:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_prose_set:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_prose_numbered:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2473,6 +2477,8 @@
       "Bash(node scripts/aig.mjs qa_commit_named_entry_stale_gate_run:*)",
       "Bash(node scripts/aig.mjs webpack_build_dev:*)",
       "Bash(node scripts/aig.mjs function_list_name_add:*)",
+      "Bash(node scripts/aig.mjs function_prose_set:*)",
+      "Bash(node scripts/aig.mjs function_prose_numbered:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3271,7 +3277,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args permission_writers_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_named_entry_stale_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args webpack_build_dev:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args function_list_name_add:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args function_list_name_add:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_prose_set:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_prose_numbered:*)"
     ],
     "defaultMode": "acceptEdits"
   },
