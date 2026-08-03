@@ -1,3 +1,4 @@
+import { qa_gate_run_start_wanted_gate_run } from "./qa_gate_run_start_wanted_gate_run.mjs";
 import { process_line_sleep_loop_is_gate_run } from "./process_line_sleep_loop_is_gate_run.mjs";
 import { js_function_shape_cases_gate_run } from "./js_function_shape_cases_gate_run.mjs";
 import { js_identifier_rename_cases_gate_run } from "./js_identifier_rename_cases_gate_run.mjs";
@@ -260,6 +261,7 @@ export function qa_gates() {
     process_line_sleep_loop_is_gate_run,
     qa_gate_said_advice_remove_gate_run,
     qa_app_gates_sorted_gate_run,
+    qa_gate_run_start_wanted_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
