@@ -1,6 +1,5 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { js_list_calls_named } from "./js_list_calls_named.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,8 +12,7 @@ export function js_marker_call_words(ast, marker_name) {
   let nodes = js_list_calls_named(ast, marker_name);
   let words = [];
   for (let node of nodes) {
-    let args = property_get(node, "args");
-    let first = list_first(args);
+    let first = property_list_first(node, "args");
     let literal = js_literal_is(first);
     if (not(literal)) {
       continue;
