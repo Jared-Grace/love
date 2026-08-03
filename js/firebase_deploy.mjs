@@ -7,15 +7,24 @@ import { qa_gate_run } from "./qa_gate_run.mjs";
 import { lock_error } from "./lock_error.mjs";
 import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
 export async function firebase_deploy() {
+  "Puts this repo's pages live, but only after the whole check passes and every frozen app is proved unchanged, and only one such deploy may run on this machine at a time.";
   async function lambda() {
     await qa_gate_run();
     let app_names = apps_frozen_names();
-    await list_map_unordered_async(app_names, firebase_prod_app_unchanged_assert);
+    await list_map_unordered_async(
+      app_names,
+      firebase_prod_app_unchanged_assert,
+    );
     let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
     let stdout = await firebase_deploy_bypass_unchanged(confirm);
     return stdout;
   }
   let message = firebase_deploy_locked_message();
-  let r = await lock_error(firebase_deploy.name, lambda, firebase_deploy.name, message);
+  let r = await lock_error(
+    firebase_deploy.name,
+    lambda,
+    firebase_deploy.name,
+    message,
+  );
   return r;
 }
