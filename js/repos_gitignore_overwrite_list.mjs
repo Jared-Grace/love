@@ -17,5 +17,5 @@ export async function repos_gitignore_overwrite_list(repos) {
       await file_copy_overwrite(from, to);
     }
   }
-  let waited = await list_map_unordered_async(mapped2, lambda);
+  await list_map_unordered_async(mapped2, lambda);
 }
