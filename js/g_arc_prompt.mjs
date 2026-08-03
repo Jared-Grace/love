@@ -5,7 +5,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_callings } from "./g_callings.mjs";
-import { g_sexes } from "./g_sexes.mjs";
+import { g_genders_names } from "./g_genders_names.mjs";
 import { g_seasons } from "./g_seasons.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
@@ -20,7 +20,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
   let list = g_callings();
   let callings = list_join_comma_space(list);
-  let list2 = g_sexes();
+  let list2 = g_genders_names();
   let sexes = list_join_comma_space(list2);
   let list3 = g_seasons();
   let seasons = list_join_comma_space(list3);
