@@ -37,7 +37,7 @@ import { text_replace_to_space } from "./text_replace_to_space.mjs";
 export async function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
-  let bc = app_shared_bar_content_root(root);
+  let bc = app_shared_bar_content_root_sticky(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
   app_shared_content_column_pad(content);

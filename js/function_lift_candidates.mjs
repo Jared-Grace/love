@@ -1,5 +1,7 @@
-import { property_get_curried_right } from "./property_get_curried_right.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
+import { list_intersection } from "./list_intersection.mjs";
+import { lift_candidates_cut_order } from "./lift_candidates_cut_order.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -18,6 +20,7 @@ export async function function_lift_candidates(f_name) {
   let parsed = await function_parse_declaration(f_name);
   let ast = property_get(parsed, "ast");
   let nested = js_functions_nested_declarations(ast);
+  let names_nested = list_map(nested, js_function_declaration_name);
   let rows = [];
   for (let declaration of nested) {
     let reading = await js_function_nested_lift_reading(ast, declaration);
@@ -31,13 +34,15 @@ export async function function_lift_candidates(f_name) {
     let deep = js_function_declaration_statements_deep(declaration);
     let size = list_size(deep);
     let closed = property_get(reading, "closed");
+    ("Which of the names it closes over are themselves functions written here, because those are the ones to lift first rather than hand in.");
+    let closed_nested = list_intersection(closed, names_nested);
     list_add(rows, {
       name,
       size,
       closed,
+      closed_nested,
     });
   }
-  let sizer = property_get_curried_right("size");
-  let ranked = list_sort_number_mapper_reverse(rows, sizer);
+  let ranked = lift_candidates_cut_order(rows);
   return ranked;
 }
