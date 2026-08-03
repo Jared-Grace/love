@@ -104,7 +104,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "",
     "WHAT NOT TO WRITE",
     "No names. Names are chosen when the game runs, so nobody may be addressed or referred to by name.",
-    "No other people. Nobody in this town knows any of the others, so nobody may mention them.",
+    "No other townspeople. This person knows nobody else the player meets here, so they may not mention them.",
     "No time of day, no weather, no place, and nothing about where this town is.",
     "Nothing about the player - not their sex, their family, their past, or how long they have been here.",
     "Nothing about persecution, soldiers, rulers, or danger, unless these very verses raise it.",
@@ -112,7 +112,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "",
     "Keep every utterance short - a sentence or two, the way somebody actually speaks.",
     "",
-    "Answer as JSON: a list of people, each with sex, calling, season, trouble, summary, and conversations, where each conversation is a list of turns.",
+    "Answer as JSON: one person, with sex, calling, season, trouble, summary, and conversations, where each conversation is a list of turns.",
   ];
   let r = list_join_newline(lines);
   return r;
