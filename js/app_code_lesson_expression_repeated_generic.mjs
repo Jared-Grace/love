@@ -1,3 +1,4 @@
+import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { range_map } from "./range_map.mjs";
@@ -186,13 +187,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       html_style_font_size(made, size);
       return made;
     }
-    function cell_at(node, row, column) {
-      "place a node in a specific grid row and column";
-      let style_value = text_to(row);
-      html_style_set(node, "grid-row", style_value);
-      let style_value2 = text_to(column);
-      html_style_set(node, "grid-column", style_value2);
-    }
     function expanded_counted(parent, left, left_color, count_color, count) {
       "the left number repeated and joined by the smaller operator, with the running count 1..count OUTSIDE the code, on the light background below each repeat: row 1 is one continuous black pill (left chips joined by the smaller operator), row 2 holds the counts (no black behind them), the last count in the count colour so how-many visibly becomes the second number of the short form";
       let doubled = multiply(2, count);
@@ -204,14 +198,14 @@ export function app_code_lesson_expression_repeated_generic(words) {
         "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
         let s = html_span(grid);
         html_style_set(s, "width", "0.3em");
-        cell_at(s, 1, column);
+        html_style_grid_cell(s, 1, column);
       }
       function place_repeat(index) {
         let position = add(index, 1);
         let doubled2 = multiply(2, index);
         let column = add(doubled2, 2);
         let chip2 = lifted_chip(grid, left, left_color);
-        cell_at(chip2, 2, column);
+        html_style_grid_cell(chip2, 2, column);
         let last = equal(position, count);
         let numeral = null;
         if (last) {
@@ -219,7 +213,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
         } else {
           numeral = running_count(grid, position);
         }
-        cell_at(numeral, 1, column);
+        html_style_grid_cell(numeral, 1, column);
       }
       function place_operator(gap) {
         let doubled3 = multiply(2, gap);
@@ -227,7 +221,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
         let op = html_span_text(grid, expand_symbol);
         html_font_color_set(op, "white");
         html_font_jetbrains_mono(op);
-        cell_at(op, 2, column);
+        html_style_grid_cell(op, 2, column);
       }
       spacer(1);
       spacer(end_column);
