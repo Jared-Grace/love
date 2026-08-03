@@ -25,11 +25,11 @@ export async function functions_expand_all(f_name_expand) {
         log(functions_expand_all.name, {
           f_name,
         });
-        let inserted = await js_expand_generic(item, body, ast);
+        await js_expand_generic(item, body, ast);
       }
       await each_async(list, lambda4);
     }
-    let output = await function_transform(f_name, lambda);
+    await function_transform(f_name, lambda);
     return;
   }
   await each_async(f_names, lambda2);
