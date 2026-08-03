@@ -40,6 +40,7 @@ export const example = {
   return joined;
 }
 function names_joined(names) {
+  arguments_assert(arguments, 1);
   let sorted = list_sort_text(names);
   let joined = list_join(sorted);
   return joined;
