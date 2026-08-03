@@ -6,8 +6,6 @@ import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
-
 export async function permission_grants_dead_remove() {
   "takes back every standing approval whose function no longer exists, and finds that set itself rather than being handed it";
   "do NOT grant - it edits the file that decides what runs unasked and has to be seen every time";
