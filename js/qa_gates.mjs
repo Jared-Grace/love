@@ -1,3 +1,5 @@
+import { js_hash_object_word_calls_unknown_cases_gate_run } from "./js_hash_object_word_calls_unknown_cases_gate_run.mjs";
+import { hash_object_word_calls_unknown_gate_run } from "./hash_object_word_calls_unknown_gate_run.mjs";
 import { number_to_words_cases_gate_run } from "./number_to_words_cases_gate_run.mjs";
 import { address_key_doors_wrapped_gate_run } from "./address_key_doors_wrapped_gate_run.mjs";
 import { baselines_prefix_split_gate_run } from "./baselines_prefix_split_gate_run.mjs";
@@ -227,6 +229,7 @@ export function qa_gates() {
     js_condition_bodies_empty_cases_gate_run,
     functions_condition_bodies_empty_gate_run,
     js_hash_key_literals_cases_gate_run,
+    js_hash_object_word_calls_unknown_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
@@ -294,6 +297,7 @@ export function qa_gates() {
     literals_marked_both_ways_gate_run,
     firebase_folder_gate_run,
     hash_key_literals_gate_run,
+    hash_object_word_calls_unknown_gate_run,
     address_key_doors_wrapped_gate_run,
     hash_key_getters_frozen_gate_run,
     query_key_literals_gate_run,
