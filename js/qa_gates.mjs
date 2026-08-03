@@ -1,3 +1,4 @@
+import { functions_work_size_gate_run } from "./functions_work_size_gate_run.mjs";
 import { literals_marked_both_ways_gate_run } from "./literals_marked_both_ways_gate_run.mjs";
 import { functions_page_serialized_declined_gate_run } from "./functions_page_serialized_declined_gate_run.mjs";
 import { js_duplicate_elements_cases_gate_run } from "./js_duplicate_elements_cases_gate_run.mjs";
@@ -298,6 +299,7 @@ export function qa_gates() {
     functions_cases_ungated_gate_run,
     functions_duplicate_elements_gate_run,
     js_duplicate_elements_cases_gate_run,
+    functions_work_size_gate_run,
   ];
   return gates;
 }
