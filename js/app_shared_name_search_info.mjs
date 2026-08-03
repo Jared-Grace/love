@@ -12,6 +12,7 @@ import { app_shared_name_search } from "./app_shared_name_search.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 export async function app_shared_name_search_info(search) {
+  "Everything a command needs about one app found by a partial name: which app it is, which repository holds it, and where its page and its source sit at each build stage.";
   let a_name = await app_shared_name_search(search);
   let f_name = await app_shared_name_main(a_name);
   let app_name = app_shared_name_prefixed(a_name);
