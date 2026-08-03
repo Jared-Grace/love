@@ -1,9 +1,8 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { functions_prose } from "./functions_prose.mjs";
 import { properties_get } from "./properties_get.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function functions_granted_silent() {
   "Every command Claude may run without being asked that says nothing about what it does.";
@@ -14,8 +13,7 @@ export async function functions_granted_silent() {
   let prose = await functions_prose();
   let spoken = properties_get(prose);
   function silent_is(f_name) {
-    let said = list_includes(spoken, f_name);
-    let quiet = not(said);
+    let quiet = list_includes_not(spoken, f_name);
     return quiet;
   }
   let silent = list_filter(names, silent_is);
