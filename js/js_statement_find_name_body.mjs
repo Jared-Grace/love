@@ -4,7 +4,7 @@ import { js_flo_body } from "./js_flo_body.mjs";
 import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_next } from "./list_next.mjs";
-import { null_is_assert_json } from "./null_is_assert_json.mjs";
+import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 export function js_statement_find_name_body(ast, name) {
   arguments_assert(arguments, 2);
   ("The first line of the function's own body that mentions a word, however deep inside that line the word is written.");
@@ -22,7 +22,7 @@ export function js_statement_find_name_body(ast, name) {
       break;
     }
   }
-  null_is_assert_json(found, {
+  null_not_is_assert_json(found, {
     hint: "no line of this function's body mentions that word. Would you like to check the spelling, or pick a word the function really writes?",
     name,
   });
