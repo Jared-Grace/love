@@ -20,7 +20,7 @@ export async function app_calendar_contact(context) {
     await app_shared_screen_set(context, app_calendar_home);
   }
   let text = app_shared_button_home_text();
-  let component = app_a_button_wide(root, text, lambda2);
+  app_a_button_wide(root, text, lambda2);
   let dictionary = await app_calendar_download_browser_contacts();
   let contact_selected = storage_session_get_context(
     context,
@@ -31,23 +31,19 @@ export async function app_calendar_contact(context) {
   });
   let contact = property_get(dictionary, contact_selected);
   let json = json_to(contact);
-  let p = app_shared_text_body(root, json);
+  app_shared_text_body(root, json);
   let id_properties = app_calendar_id_properties();
-  let id = object_pick_try_single_value(contact, id_properties);
+  object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();
     let country = todo();
     let r = app_calendar_paste_convert(paste, country);
-    let duration = property_get(r, "duration");
+    property_get(r, "duration");
     let start = property_get(r, "start");
     log(app_calendar_contact.name, typeof start);
     log(app_calendar_contact.name, {
       r,
     });
   }
-  let component2 = app_a_button_wide(
-    root,
-    "Meeting add Outlook paste",
-    lambda3,
-  );
+  app_a_button_wide(root, "Meeting add Outlook paste", lambda3);
 }
