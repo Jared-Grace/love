@@ -56,8 +56,8 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "turns.",
   ]);
   let lines = [
-    "This is a Christian game about planting a church.",
-    "The player walks up to somebody, hears what troubles them, and answers with a passage of Scripture.",
+    "This is a Christian game about sharing the gospel.",
+    "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
     "THE CHAPTER",
     joined,
@@ -65,7 +65,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     verses_text,
     "",
     "WHO TO WRITE",
-    "Write one person.",
+    "Write one person: {}",
     "Start from the verses. Ask what trouble they honestly answer.",
     "Never pick a trouble first and then hunt for a verse.",
     "",
