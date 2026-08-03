@@ -18,7 +18,6 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
-  let call_name = null;
   async function lambda(v) {
     let stack = property_get(v, "stack");
     let node = property_get(v, "node");
