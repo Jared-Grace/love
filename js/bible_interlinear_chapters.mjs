@@ -20,7 +20,7 @@ import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 export async function bible_interlinear_chapters() {
-  let bible_folder = bible_interlinear_verses_upload_folder();
+  bible_interlinear_verses_upload_folder();
   let books = await ebible_version_books(ebible_folder_english());
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
@@ -62,7 +62,7 @@ export async function bible_interlinear_chapters() {
     let verse_end = property_get(v2, "verse_end");
     let verse_start = property_get(v2, "verse_start");
     let chapter_code = property_get(v2, "chapter_code");
-    let index = property_get(v2, "index");
+    property_get(v2, "index");
     equal_assert_json(verse_start, verse_end, {
       hint: "a single-verse reference should have an equal start and end verse — did a multi-verse range slip in?",
       vid,
