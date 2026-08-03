@@ -1,3 +1,4 @@
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -35,7 +36,7 @@ export function app_code_dot_rectangle(parent, rows, columns, rotated) {
       html_style_assign(dot, {
         width: "0.7em",
         height: "0.7em",
-        margin: "0.1em",
+        margin: app_shared_spaced_frame_gap(),
         "border-radius": "50%",
         "background-color": color,
         opacity,
