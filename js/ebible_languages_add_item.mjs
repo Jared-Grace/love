@@ -21,5 +21,5 @@ export async function ebible_languages_add_item(bible_folder) {
     let expression = js_object_to_expression(object);
     list_add(elements, expression);
   }
-  let output = await function_transform(f_name, lambda);
+  await function_transform(f_name, lambda);
 }
