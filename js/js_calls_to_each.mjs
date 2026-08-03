@@ -68,10 +68,10 @@ export function js_calls_to_each(ast) {
     if (async_is) {
       expression3 = property_get(expression3, "argument");
     }
-    let arguments2 = js_call_arguments_get(expression3);
+    js_call_arguments_get(expression3);
     let code2 = js_code_brackets_empty();
     let array_expression = js_parse_expression(code2);
-    let elements = property_get(array_expression, "elements");
+    property_get(array_expression, "elements");
     ("the shape being matched is two awaited calls standing one after the other on the same callee, differing only in their argument");
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
