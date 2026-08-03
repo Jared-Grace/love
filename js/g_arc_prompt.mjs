@@ -59,7 +59,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let b = js_boolean_values();
+  let b = js_boolean_values();lc
   let json = json_format_to({
     gender: genders,
     age: '13-80',

@@ -12,11 +12,11 @@ export async function functions_prose_silent_oversize() {
   "The list is meant to be read, not enforced. Writing what a function is for is a judgment about the work, made by somebody who has read it, and a gate that failed until every name here had a sentence would be answered with sentences written to clear the gate. So this only says where the reading would pay.";
   let sizes = await functions_work_sizes();
   let prose = await functions_prose();
-  let floor = functions_prose_silent_size_floor();
+  let size_floor = functions_prose_silent_size_floor();
   let silent = [];
   for (let entry of sizes) {
     let size = property_get(entry, "size");
-    let small = less_than(size, floor);
+    let small = less_than(size, size_floor);
     if (small) {
       continue;
     }
