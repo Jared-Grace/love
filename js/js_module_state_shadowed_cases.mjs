@@ -15,14 +15,14 @@ export function js_module_state_shadowed_cases() {
   let cases = [
     {
       code: text_frozen(
-        'let dictionary = null;\nexport function look(key) {\n  if (dictionary === null) {\n    let dictionary = read();\n  }\n  return dictionary[key];\n}\n',
+        "let dictionary = null;\nexport function look(key) {\n  if (dictionary === null) {\n    let dictionary = read();\n  }\n  return dictionary[key];\n}\n",
       ),
       hidden: ["dictionary"],
       why: "the case the reader exists for - a cache the file shares, filled into a copy that is dropped at the closing brace, so every read of the shared name gets null for the life of the process",
     },
     {
       code: text_frozen(
-        'let dictionary = null;\nexport function look(key) {\n  if (dictionary === null) {\n    dictionary = read();\n  }\n  return dictionary[key];\n}\n',
+        "let dictionary = null;\nexport function look(key) {\n  if (dictionary === null) {\n    dictionary = read();\n  }\n  return dictionary[key];\n}\n",
       ),
       hidden: [],
       why: "the same file with the word let taken off - the line writes the shared name, which is what the reader is asking about",
