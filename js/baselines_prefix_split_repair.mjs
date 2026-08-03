@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { baselines_prefix_split } from "./baselines_prefix_split.mjs";
@@ -7,9 +8,7 @@ import { function_call_commit } from "./function_call_commit.mjs";
 import { function_rename } from "./function_rename.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
-import { equal } from "./equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
@@ -36,8 +35,7 @@ export async function baselines_prefix_split_repair() {
       return ends;
     }
     let writers = list_filter(names, writer_is);
-    let one = list_size(writers);
-    let single = equal(one, 1);
+    let single = list_size_equal(writers, 1);
     if (single) {
       let writer = list_get(writers, 0);
       let prefix = text_suffix_without(writer, tail);

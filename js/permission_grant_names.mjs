@@ -838,6 +838,22 @@ export function permission_grant_names() {
   let spelled825 = fn_name("baselines_prefix_split");
   let spelled826 = fn_name("baselines_prefix_split_gate_run");
   let spelled827 = fn_name("function_new_code");
+  let spelled828 = fn_name("memory_index_heading_blank_after_remove");
+  let spelled829 = fn_name("functions_work_oversize_names");
+  let spelled830 = fn_name("storage_key_seams_word_misplaced_gate_run");
+  let spelled831 = fn_name("function_nested_sizes");
+  let spelled832 = fn_name("functions_work_size_ceiling");
+  let spelled833 = fn_name("repo_current_name");
+  let spelled834 = fn_name("literals_frozen_path");
+  let spelled835 = fn_name("functions_prose_silent_oversize");
+  let spelled836 = fn_name("qa_commit_named_at_when_wanted");
+  let spelled837 = fn_name("function_lift_candidates");
+  let spelled838 = fn_name("functions_lift_candidates");
+  let spelled839 = fn_name("hash_key_doors_wrapped_gate_run");
+  let spelled840 = fn_name("qa_commit_named_apps_report");
+  let spelled841 = fn_name("functions_granted_silent_baseline_write");
+  let spelled842 = fn_name("app_code_lessons_fns");
+  let spelled843 = fn_name("function_param_new_first");
   let names = [
     spelled,
     spelled2,
@@ -1666,6 +1682,22 @@ export function permission_grant_names() {
     spelled825,
     spelled826,
     spelled827,
+    spelled828,
+    spelled829,
+    spelled830,
+    spelled831,
+    spelled832,
+    spelled833,
+    spelled834,
+    spelled835,
+    spelled836,
+    spelled837,
+    spelled838,
+    spelled839,
+    spelled840,
+    spelled841,
+    spelled842,
+    spelled843,
   ];
   return names;
 }
