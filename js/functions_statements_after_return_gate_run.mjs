@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { statements_after_return_baseline_path } from "./statements_after_return_baseline_path.mjs";
+import { functions_statements_after_return_baseline_path } from "./functions_statements_after_return_baseline_path.mjs";
 import { functions_statements_after_return } from "./functions_statements_after_return.mjs";
 export async function functions_statements_after_return_gate_run() {
   arguments_assert(arguments, 0);
@@ -15,7 +15,7 @@ export async function functions_statements_after_return_gate_run() {
   ("one already here. Some of those are a body deliberately switched off at the top,");
   ("which is a different decision from an accident and is not this gate's to make.");
   let offenders = await functions_statements_after_return();
-  let path = statements_after_return_baseline_path();
+  let path = functions_statements_after_return_baseline_path();
   let r = await baseline_names_gate_generic(
     offenders,
     path,
