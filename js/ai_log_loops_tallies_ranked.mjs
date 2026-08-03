@@ -6,13 +6,10 @@ import { list_add } from "./list_add.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-export function ai_log_loops_tallies_ranked(
-  spent,
-  step,
-  loops,
-  longest,
-  identical,
-) {
+export function ai_log_loops_tallies_ranked(spent, loops, longest, identical) {
+  arguments_assert(arguments, 4);
+  ("The ranking of steps built from the four tallies a walk over the log leaves behind - what was spent on each step, how many runs it had, its longest run, and what its identical reruns cost.");
+  ("Cut out of the walk it used to end, because the walk was 82 lines of work and this is the half of it that reads a finished tally rather than building one. Both halves are shorter than the question they answer now.");
   let ranked = [];
   let steps = object_property_names(spent);
   for (let step of steps) {
