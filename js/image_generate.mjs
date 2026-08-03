@@ -13,7 +13,7 @@ import { divide } from "./divide.mjs";
 import { add } from "./add.mjs";
 export async function image_generate(text, path_output) {
   let v2 = await import_install("canvas");
-  let registerFont = property_get(v2, "registerFont");
+  property_get(v2, "registerFont");
   let createCanvas = property_get(v2, "createCanvas");
   let WIDTH = 1080;
   let HEIGHT = 1920;
