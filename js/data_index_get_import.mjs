@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function data_index_get_import() {
