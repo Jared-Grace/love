@@ -102,7 +102,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     let next = Array.from(
       {
-        length: text_combine(columns.length, 1),
+        length: add(columns.length, 1),
       },
       lambda6,
     );
@@ -114,12 +114,12 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         let c = col.pop();
         let [s, carry] = fullAdderCSA(cnf, a, b, c);
         next[i].push(s);
-        next[text_combine(i, 1)].push(carry);
+        next[add(i, 1)].push(carry);
       }
       if (equal(col.length, 2)) {
         let [s, carry] = halfAdder(cnf, col[0], col[1]);
         next[i].push(s);
-        next[text_combine(i, 1)].push(carry);
+        next[add(i, 1)].push(carry);
       } else if (equal(col.length, 1)) {
         next[i].push(col[0]);
       }
@@ -254,7 +254,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   let v4 = Math.sqrt(integer_to_factor);
   let v5 = Math.log(v4);
   let left2 = ceil(v5);
-  let bits_count = text_combine(left2, 1);
+  let bits_count = add(left2, 1);
   let cnf_built = factorizationCNF(integer_to_factor, bits_count);
   let cnf3 = to3SAT(cnf_built);
   cnf3.bits = bits_count;
