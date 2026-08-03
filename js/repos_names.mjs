@@ -4,6 +4,7 @@ import { folder_read } from "./folder_read.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function repos_names() {
+  "The name of every repository sitting beside this one, with the editor's own folder left out.";
   let path_folder = repos_folder();
   let rns = await folder_read(path_folder);
   let v = folder_vscode();
