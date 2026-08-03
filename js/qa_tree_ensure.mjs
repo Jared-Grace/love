@@ -19,7 +19,7 @@ export async function qa_tree_ensure() {
   "The neighbouring repos are frozen the same way and for the same reason. Asking after every function does not stop at this repo, so a sweep run in here was reading the neighbours as they stood at that instant - and a red that goes quiet the moment it is asked again is the pair of answers this whole arrangement exists to make impossible";
   "Whether the copy actually reaches nothing living is looked at before it is handed over, rather than reasoned about here in words. The neighbours were pointed at for as long as this existed, under a written claim that nothing here asked about them, and the claim being written down is precisely what stopped anybody checking it";
   let repos = qa_tree_repos_folder();
-  let report = await qa_trees_reap();
+  await qa_trees_reap();
   await folder_exists_ensure(repos);
   await qa_snapshot_siblings_freeze(repos);
   let here = folder_current_absolute();
