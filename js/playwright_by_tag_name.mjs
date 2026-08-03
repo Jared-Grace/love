@@ -1,5 +1,6 @@
 import { equal } from "./equal.mjs";
 export async function playwright_by_tag_name(page, tag_name) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let elements = await page.locator("*").elementHandles();
   let filtered = [];
   for (let el of elements) {
