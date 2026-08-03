@@ -5,5 +5,5 @@ export async function error_attention_set(value) {
     return value;
   }
   let d_path = data_path();
-  let value2 = await data_transform("error_attention", null, lambda, d_path);
+  await data_transform("error_attention", null, lambda, d_path);
 }
