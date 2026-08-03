@@ -1,3 +1,4 @@
+import { process_folder_repos_stand } from "./process_folder_repos_stand.mjs";
 import { function_name_full_assert } from "./function_name_full_assert.mjs";
 import { process_ai_seam_set } from "./process_ai_seam_set.mjs";
 import { ai_log_add_try } from "./ai_log_add_try.mjs";
