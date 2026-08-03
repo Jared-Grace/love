@@ -12,5 +12,5 @@ export async function app_shared_screens_generate(search) {
     let expression = js_expression_array_empty();
     js_flo_body_empty_return(ast, expression);
   }
-  let output = await function_new_open_transform(combined, lambda);
+  await function_new_open_transform(combined, lambda);
 }
