@@ -10,6 +10,7 @@ export async function function_transform_single(
   f_name_transformer_args_comma,
   f_name,
 ) {
+  "Runs one named transform over one named function, with the transform's own arguments following its name in the same joined word.";
   let fr = list_first_remaining_from_comma_dot(f_name_transformer_args_comma);
   let remaining = property_get(fr, "remaining");
   let f_name_transformer = property_get(fr, "first");
