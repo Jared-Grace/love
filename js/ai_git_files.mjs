@@ -1,9 +1,9 @@
+import { folder_memory_backup } from "./folder_memory_backup.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { git_ac_call_repos_files_or_all } from "./git_ac_call_repos_files_or_all.mjs";
 import { git_acp_call_folder_try } from "./git_acp_call_folder_try.mjs";
-import { folder_home_backup } from "./folder_home_backup.mjs";
 import { lock_wait } from "./lock_wait.mjs";
 export async function ai_git_files(f_name, args, files) {
   "The commit itself, once someone else has decided which files it is for. Taking";
@@ -15,7 +15,7 @@ export async function ai_git_files(f_name, args, files) {
   let result = null;
   async function lambda() {
     result = await git_ac_call_repos_files_or_all(f_name, args, files);
-    let memory_backup_folder = folder_home_backup("love_claude_memory");
+    let memory_backup_folder = folder_memory_backup();
     let noted = await git_acp_call_folder_try(
       memory_backup_folder,
       f_name,
