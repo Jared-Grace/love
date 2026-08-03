@@ -96,7 +96,7 @@ export function html_checkboxes(
     });
     let s = html_span_text(label, title);
     html_style_font_size(s, app_shared_style_control_font_size());
-    let div_details = html_div_text(label, details);
+    html_div_text(label, details);
     object_merge_set(checkbox, {
       container,
     });
