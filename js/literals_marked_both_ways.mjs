@@ -23,14 +23,12 @@ export async function literals_marked_both_ways() {
   let entries = await repo_functions_code(repo_name);
   let frozen_marker = fn_name("text_frozen");
   let reference_marker = fn_name("fn_name");
+  let frozen_needle = text_combine_multiple([frozen_marker, "("]);
+  let reference_prefix = text_combine_multiple([reference_marker, '("']);
   let frozen_sites = [];
   for (let entry of entries) {
     let candidate = property_get(entry, "name");
-    let freezes = property_text_includes(
-      entry,
-      "code",
-      text_combine_multiple([fn_name("text_frozen"), "("]),
-    );
+    let freezes = property_text_includes(entry, "code", frozen_needle);
     if (not(freezes)) {
       continue;
     }
@@ -47,11 +45,7 @@ export async function literals_marked_both_ways() {
   let words_frozen = list_map_property_unique(frozen_sites, "word");
   let conflicts = [];
   for (let word of words_frozen) {
-    let needle = text_combine_multiple([
-      text_combine_multiple([fn_name("fn_name"), '("']),
-      word,
-      '")',
-    ]);
+    let needle = text_combine_multiple([reference_prefix, word, '")']);
     let referenced_in = [];
     for (let entry of entries) {
       let candidate = property_get(entry, "name");
