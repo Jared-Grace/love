@@ -930,6 +930,7 @@
       "Bash(node scripts/ai.mjs baselines_prefix_split_repair:*)",
       "Bash(node scripts/ai.mjs baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/ai.mjs g_profiles:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args_last:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1783,6 +1784,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args baselines_prefix_split_repair:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args g_profiles:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args ai_git_command_args_last:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2635,6 +2637,7 @@
       "Bash(node scripts/aig.mjs baselines_prefix_split_repair:*)",
       "Bash(node scripts/aig.mjs baselines_prefix_split_baseline_write:*)",
       "Bash(node scripts/aig.mjs g_profiles:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args_last:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3487,7 +3490,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args functions_text_combine_number_add_repair:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args baselines_prefix_split_repair:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args baselines_prefix_split_baseline_write:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args g_profiles:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args g_profiles:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args ai_git_command_args_last:*)"
     ],
     "defaultMode": "acceptEdits"
   },
