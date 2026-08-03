@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { ceil } from "./ceil.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
