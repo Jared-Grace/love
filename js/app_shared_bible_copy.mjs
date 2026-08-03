@@ -62,5 +62,5 @@ export async function app_shared_bible_copy(
     each(languages_verses, per_language);
   }
   each(sliced, per_verse);
-  let joined = await list_join_newline_2_copy(lines);
+  await list_join_newline_2_copy(lines);
 }
