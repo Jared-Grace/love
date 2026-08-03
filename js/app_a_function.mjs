@@ -107,9 +107,9 @@ export async function app_a_function(context) {
   }
   if (false) {
     let a2 = emoji_arrow_up();
-    let b = app_a_button(content, a2, upload);
+    app_a_button(content, a2, upload);
     let text = emoji_arrow_down();
-    let b3 = app_a_button(content, text, download);
+    app_a_button(content, text, download);
   }
   let bc = html_bar_content(root);
   let content = property_get(bc, "content");
@@ -164,10 +164,10 @@ export async function app_a_function(context) {
           let fn = await app_a_function_import(f_name);
           let r = await fn();
           let j = json_format_to(r);
-          let pre = html_pre_text(div, j);
+          html_pre_text(div, j);
           app_a_buttons_shortcuts(overlay, choices_overlay);
         }
-        let result = await html_loading(lambda5);
+        await html_loading(lambda5);
       },
     },
     {
@@ -187,7 +187,7 @@ export async function app_a_function(context) {
         async function lambda11(f_name_call) {
           let fn = await app_a_function_import(f_name_call);
           await fn(ast);
-          let code = js_unparse(ast);
+          js_unparse(ast);
           await app_a_function_on_change(a, overlay_result);
         }
       },
