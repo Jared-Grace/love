@@ -1,8 +1,7 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_suffix_change } from "./text_suffix_change.mjs";
 export async function baselines_prefix_split() {
@@ -21,8 +20,7 @@ export async function baselines_prefix_split() {
   let paths = list_filter(names, path_is);
   function split_is(name) {
     let write = text_suffix_change(name, suffix, suffix_write);
-    let present = list_includes(names, write);
-    let missing = not(present);
+    let missing = list_includes_not(names, write);
     return missing;
   }
   let split = list_filter(paths, split_is);
