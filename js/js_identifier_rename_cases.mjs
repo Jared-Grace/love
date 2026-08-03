@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function js_identifier_rename_cases() {
   "Pieces of code, a name to move and the name to move it to, each paired with what the code should read as afterwards";

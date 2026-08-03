@@ -1,5 +1,4 @@
 import { fn_name } from "./fn_name.mjs";
-
 export function permission_writers_grantable() {
   "the functions that write Claude's own permission rules and may still be handed a standing approval, which is every one the gate below is allowed to find clean";
   "both are argument-free generators: one renders the settings file from the granted-names list, the other renders that list from itself. What they write is fixed by committed source, so a rule covering every argument they are ever handed covers nothing they would not do anyway, and changing what they write means editing the source first - a visible edit that no standing approval buys.";
