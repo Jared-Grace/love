@@ -1,3 +1,4 @@
+import { html_cycle_code_bold } from "./html_cycle_code_bold.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
@@ -125,9 +126,10 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   }
   function naming(root) {
     "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it - so an example first, then the six operators the word covers, listed from the one place that holds them";
+    "The bold falls on the word rather than on the list, which is what the repo already does for a term it is defining: the word is what the learner has to carry to the next lesson, and the six symbols are already set apart as code tiles, so bolding them too would leave the sentence with nothing plain in it and the eye with nowhere to land. It falls on the example line rather than the list line because that is where the word is first said";
     let card = app_code_container_light_blue(root);
     let example = html_div(card);
-    html_cycle_code(example, ["", "3 < 5", " is a comparison"]);
+    html_cycle_code_bold(example, ["", "3 < 5", " is a ", "comparison"]);
     let line = html_div(card);
     html_span_text(line, "A comparison uses ");
     function operator_symbol(operator) {
