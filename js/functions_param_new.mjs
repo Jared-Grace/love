@@ -5,6 +5,7 @@ export async function functions_param_new(
   param_name,
   default_value,
 ) {
+  "Gives several named functions the same new parameter at once, with one value standing in at every call that already exists.";
   let fn = async function lambda(f_name, param_name_each) {
     let v = await function_param_new(f_name, param_name_each, default_value);
     return v;
