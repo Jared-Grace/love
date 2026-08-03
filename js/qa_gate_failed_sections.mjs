@@ -29,6 +29,17 @@ export function qa_gate_failed_sections(output) {
   let sections = [];
   let name = null;
   let said = [];
+  let owed = 0;
+  function close_section() {
+    let whole = list_join(said, separator);
+    let section = {
+      name: name,
+      said: whole,
+    };
+    list_add(sections, section);
+    name = null;
+    owed = 0;
+  }
   for (let line of lines) {
     let opens = text_starts_with(line, edge);
     let closes = text_ends_with(line, edge);
@@ -36,6 +47,7 @@ export function qa_gate_failed_sections(output) {
     if (heading) {
       name = text_between(line, opening, closing);
       said = [];
+      owed = 0;
       continue;
     }
     let nobody = null_is(name);
@@ -50,6 +62,15 @@ export function qa_gate_failed_sections(output) {
     let complained = text_includes(line, failure);
     if (not(complained)) {
       list_add(said, line);
+      let owing = greater_than(owed, 0);
+      if (owing) {
+        ("still inside the complaint that opened a line or more ago, so this line is part of it and the section stays open until the whole of it has arrived");
+        owed = owed + text_brace_depth(line);
+        let arrived = less_than_equal(owed, 0);
+        if (arrived) {
+          close_section();
+        }
+      }
       continue;
     }
     let after = text_split_last(line, failure);
@@ -61,13 +82,11 @@ export function qa_gate_failed_sections(output) {
     let rest = list_skip(halves, 1);
     let complaint = list_join(rest, ":");
     list_add(said, complaint);
-    let whole = list_join(said, separator);
-    let section = {
-      name: name,
-      said: whole,
-    };
-    list_add(sections, section);
-    name = null;
+    owed = text_brace_depth(complaint);
+    let whole_arrived = less_than_equal(owed, 0);
+    if (whole_arrived) {
+      close_section();
+    }
   }
   return sections;
 }
