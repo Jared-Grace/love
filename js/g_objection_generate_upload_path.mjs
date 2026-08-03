@@ -1,7 +1,7 @@
-import { text_frozen } from "./text_frozen.mjs";
+import { g_objection_generate_upload_namespace } from "./g_objection_generate_upload_namespace.mjs";
 import { g_objection_generate_upload_path_generic } from "./g_objection_generate_upload_path_generic.mjs";
 export function g_objection_generate_upload_path(chapter_code) {
-  let f_name = text_frozen("g_objection_generate_upload");
+  let f_name = g_objection_generate_upload_namespace();
   let destination = g_objection_generate_upload_path_generic(
     f_name,
     chapter_code,

@@ -1,7 +1,8 @@
 export function marker_aliases_retired() {
-  ("An archive of the alias keys the marker family held before selectors replaced it.");
-  ("Kept as a copy so the keys can be restored if the family is revived.");
-  ("Do not normalize this file: the values are live function names, and the normalize pass would rewrite each one into a name reference.");
+  "An archive of the alias keys the marker family held before selectors replaced it.";
+  "Kept as a copy so the keys can be restored if the family is revived.";
+  "Do not normalize this file: the values are live function names, and the normalize pass would rewrite each one into a name reference.";
+  "LIVE-NAMES-AS-VALUES - do NOT auto-canonicalize";
   let aliases = {
     m: "marker_top",
     md: "marker_down",
