@@ -33,5 +33,5 @@ export async function task_new(task_name) {
     let body_block = js_flo_body(ast);
     js_call_statement_insert(fn_name("todo"), [], body_block, 0);
   }
-  let result = await function_transform(f_name_task, lambda);
+  await function_transform(f_name_task, lambda);
 }
