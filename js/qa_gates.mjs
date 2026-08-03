@@ -3,6 +3,8 @@ import { qa_gate_run_start_wanted_gate_run } from "./qa_gate_run_start_wanted_ga
 import { process_line_sleep_loop_is_gate_run } from "./process_line_sleep_loop_is_gate_run.mjs";
 import { js_function_shape_cases_gate_run } from "./js_function_shape_cases_gate_run.mjs";
 import { js_identifier_rename_cases_gate_run } from "./js_identifier_rename_cases_gate_run.mjs";
+import { js_identifiers_renamed_without_naming_check_cases_gate_run } from "./js_identifiers_renamed_without_naming_check_cases_gate_run.mjs";
+import { functions_identifiers_renamed_without_naming_check_gate_run } from "./functions_identifiers_renamed_without_naming_check_gate_run.mjs";
 import { qa_app_gates_sorted_gate_run } from "./qa_app_gates_sorted_gate_run.mjs";
 import { qa_gate_failed_sections_gate_run } from "./qa_gate_failed_sections_gate_run.mjs";
 import { qa_gate_said_advice_remove_gate_run } from "./qa_gate_said_advice_remove_gate_run.mjs";
@@ -222,6 +224,8 @@ export function qa_gates() {
     js_atomize_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
+    js_identifiers_renamed_without_naming_check_cases_gate_run,
+    functions_identifiers_renamed_without_naming_check_gate_run,
     js_declare_assign_null_cases_gate_run,
     functions_while_frozen_gate_run,
     functions_self_call_gate_run,
