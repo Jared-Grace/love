@@ -54,7 +54,7 @@ export async function webpack_watch() {
   }
   let built = await list_map_async(a_names, app_deps_get);
   let app_deps = list_filter(built, null_not_is);
-  let f_name3 = fn_name("webpack_watch");
+  fn_name("webpack_watch");
   log(webpack_watch.name, {
     apps: a_names,
     indexed: app_deps.length,
@@ -90,7 +90,7 @@ export async function webpack_watch() {
     }
     property_set(building, a_name, true);
     async function lambda() {
-      let f_name4 = fn_name("webpack_watch");
+      fn_name("webpack_watch");
       log(webpack_watch.name, {
         rebuild: a_name,
       });
@@ -137,7 +137,7 @@ export async function webpack_watch() {
         return;
       }
       list_add(app_deps, ad);
-      let f_name5 = fn_name("webpack_watch");
+      fn_name("webpack_watch");
       log(webpack_watch.name, {
         discovered: a_name,
       });
@@ -200,7 +200,7 @@ export async function webpack_watch() {
     }
   }
   await list_map_unordered_async(app_deps, schedule_if_stale);
-  let f_name6 = fn_name("webpack_watch");
+  fn_name("webpack_watch");
   log(webpack_watch.name, {
     watching: folders,
   });
