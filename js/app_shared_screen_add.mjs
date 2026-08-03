@@ -24,6 +24,6 @@ export async function app_shared_screen_add(a_name, screen_name) {
       let statement = js_code_let_assign_parse_statement("root", code);
       js_flo_body_add(ast, statement);
     }
-    let output = await function_transform(combined_screen, lambda2);
+    await function_transform(combined_screen, lambda2);
   }
 }
