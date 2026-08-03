@@ -3,6 +3,7 @@ import { list_includes } from "./list_includes.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 export async function app_shared_name_search_multiple(search) {
+  "Every app whose name matches what was typed, taking an exact name on its own rather than as one match among several.";
   text_is_assert_json(search, {
     hint: "the search term should be text — did an empty or non-text value arrive?",
     search,
