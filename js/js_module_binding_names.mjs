@@ -1,10 +1,10 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_map } from "./list_map.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -32,8 +32,11 @@ export function js_module_binding_names(ast) {
     let held_type = property_get(held, "type");
     let variable_is = equal(held_type, "VariableDeclaration");
     if (variable_is) {
-      let declarators = property_get(held, "declarations");
-      let declared = list_map(declarators, js_function_declaration_name);
+      let declared = property_list_map(
+        held,
+        "declarations",
+        js_function_declaration_name,
+      );
       list_add_multiple(names, declared);
       return;
     }
