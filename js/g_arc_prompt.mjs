@@ -15,8 +15,9 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
   "The turn target is one number.";
   ("turn_target is drawn for this person by ", fn_name("g_arc_lengths"), ".");
-  ("Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
-  ("The conversation lengths go in so the model groups its own turns. Only it knows where an exchange finishes. Group afterwards and every later conversation opens mid-thought.");
+  ("~Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
+  "LLM groups 'turn_target' turns into conversations.";
+  "Cutting the flat list into days afterwards would open a conversation mid-thought, though days have passed since the last one.";
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
   let list = g_callings();
   let callings = list_join_comma_space(list);

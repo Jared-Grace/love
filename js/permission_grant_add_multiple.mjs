@@ -32,9 +32,7 @@ export async function permission_grant_add_multiple(names_comma) {
     list_add(names, unaliased);
   }
   await each_async(asked, each_asked);
-  await permission_grant_names_write(names);
-  let written = await permission_settings_allow_write_from(names);
-  let allow = property_get(written, "allow");
+  let allow = await permission_grant_names_settings_write(names);
   let report = {
     asked: asked.length,
     names: names.length,
