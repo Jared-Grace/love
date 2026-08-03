@@ -1,9 +1,9 @@
+import { qa_commit_named_entry_stale_is } from "./qa_commit_named_entry_stale_is.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_gate_said_advice_remove } from "./qa_gate_said_advice_remove.mjs";
 import { functions_names_in_text } from "./functions_names_in_text.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { function_name_unmistakable_is } from "./function_name_unmistakable_is.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,7 +12,6 @@ import { json_equal } from "./json_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 export async function qa_commit_named_stale_repair() {
   "Reads the names out of every judged commit again, using what each gate actually said, so that a judgement made by an older reader is corrected rather than thrown away";
   "Its older neighbour could only forget, because the record kept the reading and not the saying. Where the saying is kept this is a recomputation: the names are a pure function of what the gate said, so any later reader can work them out again without a single gate being run. Fourteen minutes of judging becomes a moment of reading";
@@ -34,15 +33,10 @@ export async function qa_commit_named_stale_repair() {
     let spoke = property_get_or_null(entry, "said");
     let unspoken = null_is(spoke);
     if (unspoken) {
-      let named = property_get(entry, "named");
-      for (let gate of object_property_names(named)) {
-        for (let name of property_get(named, gate)) {
-          let unmistakable = function_name_unmistakable_is(name);
-          if (not(unmistakable)) {
-            list_add(unhelpable, commit);
-            break;
-          }
-        }
+      ("Named once however many of its gates are spoiled, because the entry is the unit that would be forgotten. Asking name by name here once listed the same commit as often as it had bad gates");
+      let stale = qa_commit_named_entry_stale_is(entry);
+      if (stale) {
+        list_add(unhelpable, commit);
       }
       kept[commit] = entry;
       continue;
