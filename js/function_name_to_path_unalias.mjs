@@ -3,6 +3,7 @@ import { function_name_to_path_search } from "./function_name_to_path_search.mjs
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 export async function function_name_to_path_unalias(f_name) {
+  "Resolves a name through its alias and then finds the file it lives in, handing back what both steps learned together.";
   let u = await function_name_unalias(f_name);
   let unaliased = property_get(u, "unaliased");
   let result = await function_name_to_path_search(unaliased);
