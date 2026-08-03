@@ -1,12 +1,11 @@
+import { qa_commit_named_entry_stale_is } from "./qa_commit_named_entry_stale_is.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
-import { function_name_unmistakable_is } from "./function_name_unmistakable_is.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 export async function qa_commit_named_stale_remove() {
   "Forgets every judged commit whose kept names the reader could no longer say, so that it is judged again instead of being answered from a record written by a reader that no longer exists";
   "A judgement is remembered under the commit it was made about, and a commit is frozen, so the record was taken to be true forever. Half of that holds. What the gates FOUND at that commit cannot change; which functions each of them was taken to have NAMED was worked out by whatever reader was loaded at the moment of judging, and that reader lives in the working tree rather than in the commit being judged";
@@ -19,7 +18,7 @@ export async function qa_commit_named_stale_remove() {
   let kept = {};
   for (let commit of object_property_names(remembered)) {
     let entry = property_get(remembered, commit);
-    let stale = stale_is(entry);
+    let stale = qa_commit_named_entry_stale_is(entry);
     if (stale) {
       list_add(forgotten, commit);
       continue;
@@ -42,7 +41,7 @@ export async function qa_commit_named_stale_remove() {
   let remaining = [];
   for (let commit of object_property_names(after)) {
     let entry2 = property_get(after, commit);
-    let stale2 = stale_is(entry2);
+    let stale2 = qa_commit_named_entry_stale_is(entry2);
     if (stale2) {
       list_add(remaining, commit);
     }
