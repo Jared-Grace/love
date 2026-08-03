@@ -23,7 +23,7 @@ export function reply_on_match_capture(fn, lambda) {
   let after = function lambda3(filtered, u) {
     capture(filtered, "after", u);
   };
-  let on_args = function lambda4(args) {
+  let on_args = function lambda4(args, u) {
     list_add(args, u);
   };
   let matcher = reply_on_match_generic(fn, before, after, on_args, [lambda]);

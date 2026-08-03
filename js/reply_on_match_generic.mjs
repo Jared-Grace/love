@@ -9,13 +9,13 @@ export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
       hint: "the possibilities to match against should be a list",
     });
     possibilities = await reply_wrap_invoke(fn, possibilities);
-    let b = before(possibilities);
+    let b = await before(possibilities);
     let filtered = reply_matches(possibilities);
     after(filtered, b);
     let ne = list_empty_not_is(filtered);
     if (ne) {
       let args = [filtered];
-      on_args(args);
+      on_args(args, b);
       invoke_multiple_args(lambdas, args);
     }
     return filtered;
