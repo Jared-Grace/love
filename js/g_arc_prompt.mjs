@@ -61,12 +61,11 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let mapped = range_from(13, 80);
   let b = js_boolean_values();
   let servant = list_concat_single_right(b, "freed");
   let json = json_format_to({
     gender: genders,
-    age: mapped,
+    age: ['teenager','young adult','middle-aged','older','elderly'],
     marriage: ["single", "betrothed", "married", "widowed"],
     master: b,
     servant,
