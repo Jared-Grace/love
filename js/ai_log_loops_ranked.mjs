@@ -1,6 +1,6 @@
+import { ai_log_loops_tallies_ranked } from "./ai_log_loops_tallies_ranked.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
-import { property_negative } from "./property_negative.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { ai_log_step_name } from "./ai_log_step_name.mjs";
 import { property_count_add } from "./property_count_add.mjs";
@@ -11,8 +11,6 @@ import { property_or_null } from "./property_or_null.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -91,45 +89,12 @@ export function ai_log_loops_ranked(entries) {
   for (let session of sessions) {
     run_close(session);
   }
-  let ranked = [];
-  let steps = object_property_names(spent);
-  for (let step of steps) {
-    let commands_saved = property_get(spent, step);
-    let times = property_get(loops, step);
-    let run_longest = property_get(longest, step);
-    let repeated = property_or_null(identical, step);
-    let none = null_is(repeated);
-    if (none) {
-      repeated = 0;
-    }
-    list_add(ranked, {
-      step,
-      commands_saved,
-      loops: times,
-      longest: run_longest,
-      repeated_identical: repeated,
-    });
-  }
-  ("A step whose every run repeated the identical command has nothing to build, so it ranks at nothing - but it is still listed, because a poller spending a hundred thousand process starts is worth somebody seeing even though no sweep would touch it.");
-  let steps_identical = object_property_names(identical);
-  for (let step of steps_identical) {
-    let ranked_already = property_exists(spent, step);
-    if (ranked_already) {
-      continue;
-    }
-    let repeated = property_get(identical, step);
-    list_add(ranked, {
-      step,
-      commands_saved: 0,
-      loops: 0,
-      longest: 0,
-      repeated_identical: repeated,
-    });
-  }
-  function lambda_rank(record) {
-    let ordered = property_negative(record, "commands_saved");
-    return ordered;
-  }
-  list_sort_number_mapper(ranked, lambda_rank);
+  let ranked = ai_log_loops_tallies_ranked(
+    spent,
+    step,
+    loops,
+    longest,
+    identical,
+  );
   return ranked;
 }
