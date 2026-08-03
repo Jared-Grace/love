@@ -20,38 +20,10 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   let failed = property_get(judged, "failed");
   let named = property_get(judged, "named");
   let reach = await qa_app_reachable_names(search);
-  let blocking = [];
-  let elsewhere = [];
-  for (let gate of failed) {
-    let names = property_get_or_null(named, gate);
-    ("Nothing recorded for this gate, or a list recorded and holding nothing - the same silence twice, and neither can show the gate is about somewhere else. Only the first used to be counted here, and every red gate is in fact recorded WITH a list, so this was reading for a shape that no longer occurs and every unproven gate was quietly set aside.");
-    let unnamed = list_empty_is_or_null(names);
-    if (unnamed) {
-      ("red with nothing said about it, so nothing here can place it - counted against this app on purpose");
-      list_add(blocking, {
-        gate,
-        why: "named no function, so it cannot be placed",
-        names: [],
-      });
-      continue;
-    }
-    let mine = list_intersection(names, reach);
-    let none = list_empty_is(mine);
-    if (none) {
-      let carried = list_includes(reach, gate);
-      list_add(elsewhere, {
-        gate,
-        names,
-        gate_itself_shipped: carried,
-      });
-      continue;
-    }
-    list_add(blocking, {
-      gate,
-      why: "names something this app ships",
-      names: mine,
-    });
-  }
+  ("The sorting itself is pure and lives on its own, where it can be asked a question without a commit being judged first. Every fault found in it so far was found by hand on a real afternoon, because reaching it meant spending fourteen minutes here.");
+  let sorted = qa_app_gates_sorted(failed, named, reach);
+  let blocking = property_get(sorted, "blocking");
+  let elsewhere = property_get(sorted, "elsewhere");
   let clear = list_empty_is(blocking);
   let r = {
     app: search,
