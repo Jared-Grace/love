@@ -254,6 +254,7 @@ export function qa_gates() {
     qa_report_gate_run,
     functions_names_in_text_gate_run,
     qa_gate_failed_sections_gate_run,
+    process_line_sleep_loop_is_gate_run,
     qa_gate_said_advice_remove_gate_run,
     qa_app_gates_sorted_gate_run,
     examples_registers_gate_run,
