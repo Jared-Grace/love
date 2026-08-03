@@ -40,7 +40,7 @@ export async function function_string_split_space_change(f_names, list) {
       }
       each(chunks, lambda4);
     }
-    let output = await function_transform(f_name, lambda);
+    await function_transform(f_name, lambda);
   }
   await each_async(split3, lambda5);
 }
