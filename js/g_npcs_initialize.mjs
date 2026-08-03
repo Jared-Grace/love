@@ -13,8 +13,8 @@ import { g_genders_get } from "./g_genders_get.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
   let genders = g_genders_get(player_img);
-  function lambda(item) {}
-  each(list, lambda);
+  function lambda(g) {}
+  each(genders, lambda);
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
