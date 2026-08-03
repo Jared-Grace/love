@@ -64,8 +64,9 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     gender: genders,
     age: '13-80',
     marriage: ['single', 'betrothed', 'married', 'widowed'],
-    servants_has: b,
-    master_has: b,
+    master: b,
+    servant: b,
+    government: ['civilian', 'official']
   });
   let lines = [
     "This is a Christian game about sharing the gospel.",

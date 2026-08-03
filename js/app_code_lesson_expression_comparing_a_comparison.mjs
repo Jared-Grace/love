@@ -1,3 +1,4 @@
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { each } from "./each.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
