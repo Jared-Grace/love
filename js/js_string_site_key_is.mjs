@@ -1,3 +1,4 @@
+import { js_field_call_prefix } from "./js_field_call_prefix.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_last } from "./list_last.mjs";
@@ -42,7 +43,7 @@ export function js_string_site_key_is(stack) {
     if (unnamed) {
       return false;
     }
-    let field_call = text_starts_with(callee_named, "property_");
+    let field_call = text_starts_with(callee_named, js_field_call_prefix());
     if (not(field_call)) {
       return false;
     }
