@@ -31,5 +31,5 @@ export async function app_index_main_fns_migrate() {
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
-  let output = await function_transform_fn(app_index_main_fns, lambda);
+  await function_transform_fn(app_index_main_fns, lambda);
 }
