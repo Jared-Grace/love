@@ -6,7 +6,6 @@ import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { function_select_multiple_apply_args } from "./function_select_multiple_apply_args.mjs";
 import { function_auto_multiple } from "./function_auto_multiple.mjs";
-
 export async function function_functionize_inner(
   f_name,
   word_from,
