@@ -6,7 +6,7 @@ import { list_map_combine_left } from "./list_map_combine_left.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { command_line } from "./command_line.mjs";
 export async function g_sermon_generate_sandbox() {
-  let k = openai_key_folder();
+  openai_key_folder();
   let v = py_script_run_cmd("openai_chat");
   let file_names = "openai.txt input.txt output.txt";
   let split = text_split_space(file_names);
