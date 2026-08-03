@@ -1,4 +1,5 @@
 export async function puppeteer_hrefs(page) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   function lambda3(links) {
     function lambda(link) {
       let v2 = link.href;
