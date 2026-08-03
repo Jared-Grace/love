@@ -28,7 +28,7 @@ export async function function_params_new_generic(
       }
       await js_imports_missing_add_all(ast);
     }
-    let output = await function_transform(f_name_caller, lambda5);
+    await function_transform(f_name_caller, lambda5);
   }
   await each_async(properties, lambda4);
 }
