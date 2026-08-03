@@ -31,5 +31,5 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
       app_replace_rule_sets_fn_migrate_goals_space_add_elements(elements);
     }
   }
-  let output = await function_transform(name, lambda);
+  await function_transform(name, lambda);
 }
