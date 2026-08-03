@@ -9,6 +9,7 @@
   "function_imports_add_at",
   "function_name_to_path_import_at",
   "functions_rename_if_part_equals",
+  "g_objection_generate_upload_path_generic",
   "html_meta_viewport",
   "js_imports_missing_add_all_at",
   "js_imports_missing_add_all_program_at",
