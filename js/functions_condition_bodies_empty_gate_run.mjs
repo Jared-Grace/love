@@ -15,7 +15,7 @@ export async function functions_condition_bodies_empty_gate_run() {
   "shape: the guard reads as being there and is not there.";
   let offenders = await functions_condition_bodies_empty();
   for (let offender of offenders) {
-    let f_name = property_get(offender, "name");
+    let f_name = property_get(offender, "f_name");
     let kinds = property_get(offender, "kinds");
     console.log("EMPTY ANSWER  " + f_name + "  -> " + list_join_comma(kinds));
   }
