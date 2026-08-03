@@ -31,7 +31,7 @@ export function js_object_property_getter_set(
   let hint =
     "this record holds no setting by that name — would you like to check the spelling, or the record it sits in?";
   let found = list_matching_single(properties, named_is, hint, key_name);
-  let identifier = js_identifier_expression(getter_name);
+  js_identifier_expression(getter_name);
   let value = js_call_empty(getter_name);
   js_property_value_set(found, value);
 }
