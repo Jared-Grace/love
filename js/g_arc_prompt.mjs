@@ -1,3 +1,4 @@
+import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
@@ -32,7 +33,10 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let preaching = list_join_space(["The player is answering from ", chapter_code]);
+  let preaching = list_join_space([
+    "The player is answering from ",
+    chapter_code,
+  ]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined3 = list_join_space(["  gender - one of:", genders]);
@@ -55,12 +59,14 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
+  let json = json_format_to();
   let lines = [
     "This is a Christian game about sharing the gospel.",
     "THe setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
-    "You should choose this about each person:",json_format_to(),
+    "You should choose this about each person:",
+    json,
     joined3,
     joined4,
     joined5,
