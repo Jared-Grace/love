@@ -125,7 +125,7 @@ export function permission_grant_names() {
   let spelled122 = fn_name("function_worker_pool_run_try");
   let spelled123 = fn_name("function_work_none_is");
   let spelled124 = fn_name("functions_shadowing_baseline_read");
-  let spelled125 = fn_name("unbound_baseline_read");
+  let spelled125 = fn_name("functions_unbound_baseline_read");
   let spelled126 = fn_name("permission_grants_baseline_read");
   let spelled127 = fn_name("functions_names");
   let spelled128 = fn_name("functions_unbound_gate_run");
