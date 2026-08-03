@@ -43,7 +43,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       property_set(previous, p, compressed_after);
       return previous;
     }
-    let item = await indexeddb_put(
+    await indexeddb_put(
       browser_files_database_initialize,
       store,
       file_path,
