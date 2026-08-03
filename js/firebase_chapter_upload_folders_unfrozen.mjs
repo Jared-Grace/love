@@ -32,7 +32,7 @@ export async function firebase_chapter_upload_folders_unfrozen() {
       let called_directly = js_call_callee_name_try(folder);
       let passed_on = js_node_name_text_try(folder);
       let set_from = js_name_set_from_call_try(tree, passed_on);
-      let held_by = first_not_null(called_directly, set_from);
+      let held_by = value_or_if_null(called_directly, set_from);
       let unheld = null_is(held_by);
       if (unheld) {
         let item = text_combine_multiple([caller, " -> nothing"]);
