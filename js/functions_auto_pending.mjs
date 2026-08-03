@@ -14,6 +14,7 @@ export async function functions_auto_pending() {
   "This is the general form of the raw-operator sweep beside it, and it subsumes it: operators written as symbols are one of the things the pass fixes, and this asks about all of them at once by running the pass rather than by naming the shapes.";
   "Why it matters is not tidiness. Every gate that reads a body reads the shape the pass leaves, so a function the pass has never run over is compared against nothing - the fold sees no site, the duplicate sweeps see no twin. One un-run function hides every copy of itself, and it hides it silently.";
   "A function the pipeline cannot process is counted as skipped rather than as an answer, and the number is said out loud. A reader that throws on its first name would otherwise have every function quietly skipped, which reads as a repo with nothing wrong in it - the most reassuring shape a total failure can wear.";
+  "Measured over the whole repo on 2026-08-03 it was still running after an hour and a half, with the machine's load average between eight and twenty-six, so this is a diagnostic to start and leave rather than a check to wait on.";
   arguments_assert(arguments, 0);
   let f_names = await functions_names();
   let unreadable = [];
