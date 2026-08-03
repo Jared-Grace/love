@@ -17,6 +17,7 @@ import { property_get } from "./property_get.mjs";
 import { error } from "./error.mjs";
 export async function app_code_reload_persists_test(url_prefix) {
   "regression test for the quiz-position-survives-reload bug that reached a user: clicking Next advanced storage but not the url hash, so a browser reload re-seeded the OLD position and dropped back to the first quiz. For a couple of multi-kind lessons it goes quiz 0, Next to the next kind, then RELOADS, and asserts the reloaded screen still matches the later kind (and that Next actually moved). Throws if the position does not survive reload - so the bug can never silently return";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let lesson_ids = [
     "symbols_digits_numbered",
     "operators_remainder_by_dividing",
