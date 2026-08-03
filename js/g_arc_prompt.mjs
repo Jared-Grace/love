@@ -61,13 +61,13 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "turns.",
   ]);
   let b = js_boolean_values();
-  let concated = list_concat(a, b2);
+  let servant = list_concat_single_right(b, 'freed');
   let json = json_format_to({
     gender: genders,
     age: "13-80",
     marriage: ["single", "betrothed", "married", "widowed"],
     master: b,
-    servant: b,
+    servant,
     government: ["civilian", "official", "soldier"],
   });
   let lines = [
