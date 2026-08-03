@@ -1,11 +1,8 @@
+import { indexed_get_generic } from "./indexed_get_generic.mjs";
 import { integer_is_assert_json } from "./integer_is_assert_json.mjs";
 import { undefined_not_is_assert_lambda } from "./undefined_not_is_assert_lambda.mjs";
 export function text_get(s, index) {
-  integer_is_assert_json(index, {
-    hint: "a text index should be a whole number — did a non-integer index arrive?",
-  });
-  let item = s[index];
-  undefined_not_is_assert_lambda(item, object_get);
+  let item = indexed_get_generic(s, index, "text", object_get);
   function object_get() {
     let v = {
       s,
