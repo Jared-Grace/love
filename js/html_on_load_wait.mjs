@@ -11,5 +11,5 @@ export async function html_on_load_wait() {
       setTimeout(resolve, 3000);
     }
   }
-  let p = await promise_wrap(lambda);
+  await promise_wrap(lambda);
 }
