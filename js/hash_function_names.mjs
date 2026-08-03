@@ -1,3 +1,4 @@
+import { hash_code_word } from "./hash_code_word.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
