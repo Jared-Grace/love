@@ -1,3 +1,4 @@
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { less_than } from "./less_than.mjs";
 import { identity } from "./identity.mjs";
 export function js_operator_less_than() {

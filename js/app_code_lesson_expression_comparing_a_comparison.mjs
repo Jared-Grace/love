@@ -33,6 +33,7 @@ import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_a_comparison() {
   "a comparison standing where a plain true or false stood: 3 === 5 === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
   "Left to right is the whole rule here, and it is taught as a rule rather than as the reason something else is missing. In every line this lesson can generate, working left to right lands on the right value on its own.";
+  "Parentheses are therefore not shown at all. They change no answer here, so they would be a rule the learner cannot yet see the need for. They earn their place one lesson later, in swapping, where both sides are comparisons and they change the answer for real - a === b === b === a is false while (a === b) === (b === a) is true - and that lesson already introduces them itself.";
   let name_id = title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
