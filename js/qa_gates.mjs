@@ -175,6 +175,7 @@ import { app_g_day_guide_pick_check } from "./app_g_day_guide_pick_check.mjs";
 import { app_g_map_pad_check } from "./app_g_map_pad_check.mjs";
 import { app_g_day_blocked_check } from "./app_g_day_blocked_check.mjs";
 export function qa_gates() {
+  "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
     guard_gate_run,
     memory_hook_gate_run,
