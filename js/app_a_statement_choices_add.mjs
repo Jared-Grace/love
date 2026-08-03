@@ -24,13 +24,7 @@ export function app_a_statement_choices_add(choices, a, o) {
         let index = property_get(v, "index");
         let list = property_get(v, "list");
         let ast = property_get(a, "ast");
-        let parsed = await js_call_new_insert(
-          f_name_call,
-          ast,
-          list,
-          index,
-          stack,
-        );
+        await js_call_new_insert(f_name_call, ast, list, index, stack);
         await app_a_function_on_change(a, overlay_result);
       }
     },
