@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -99,8 +100,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "a wrapped comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
     let left = comparison_side();
     let right_value = list_random_item([true, false]);
-    let left_value = property_get(left, "value");
-    let agree = equal(left_value, right_value);
+    let agree = property_equals(left, "value", right_value);
     let wanted = equal(agree, want_true);
     let on_true = js_operator_triple_equal_symbol();
     let on_false = js_operator_bang_double_equal_symbol();
