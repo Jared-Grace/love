@@ -171,7 +171,7 @@ export function app_a_function_node(a) {
       let id = property_get(node, "id");
       app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
-      let span = html_span_text(parent, text3);
+      html_span_text(parent, text3);
       let init = js_declare_init_get(node);
       app_a_function_node_child(a, init);
     },
@@ -194,7 +194,7 @@ export function app_a_function_node(a) {
       });
       if (not(shorthand)) {
         let c = js_code_colon();
-        let span4 = html_span_text(parent, c);
+        html_span_text(parent, c);
         html_span_space(parent);
         let value3 = property_get(node, "value");
         app_a_function_node_child(a, value3);
