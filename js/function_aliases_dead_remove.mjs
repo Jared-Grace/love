@@ -22,6 +22,9 @@ export async function function_aliases_dead_remove() {
   let d_path = data_aliases_path();
   let v = await data_transform("aliases", {}, lambda, d_path);
   let aliases = properties_get(v);
-  let report = { dead, aliases: aliases.length };
+  let report = {
+    dead,
+    aliases: aliases.length,
+  };
   return report;
 }
