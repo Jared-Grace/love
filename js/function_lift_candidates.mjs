@@ -1,3 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_functions_nested_declarations } from "./js_functions_nested_declarations.mjs";
+import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { or } from "./or.mjs";
+import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_get_curried_right } from "./property_get_curried_right.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function function_lift_candidates(f_name) {
   arguments_assert(arguments, 1);
   ("Every function written inside the named one that the lift would actually move, with how many lines of work it holds and what it would have to be handed. Biggest first.");
