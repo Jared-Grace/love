@@ -23,7 +23,7 @@ export function js_dollar_n({
   let test = property_get(n, "test");
   function lambda() {
     let name = js_call_callee_name_try(test);
-    let f_name = fn_name("js_dollar_n");
+    fn_name("js_dollar_n");
     log(js_dollar_n.name, {
       name,
     });
