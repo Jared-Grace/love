@@ -1,3 +1,4 @@
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border } from "./html_border.mjs";
@@ -5,7 +6,14 @@ import { app_shared_container_blue_border_color } from "./app_shared_container_b
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 export function app_shared_container_blue(parent) {
   let div = app_shared_container_base(parent);
-  html_style_background_color_set(div, app_shared_container_blue_background_color());
-  html_border(div, "0.1em", app_shared_container_blue_border_color());
+  html_style_background_color_set(
+    div,
+    app_shared_container_blue_background_color(),
+  );
+  html_border(
+    div,
+    app_shared_spaced_frame_gap(),
+    app_shared_container_blue_border_color(),
+  );
   return div;
 }
