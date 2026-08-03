@@ -18,7 +18,7 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     let filtered = list_without(imgs, player_img);
     return filtered;
   }
-  property_transform_multiple(list, "imgs", lambda2);
+  property_transform_multiple(genders, "imgs", lambda2);
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
