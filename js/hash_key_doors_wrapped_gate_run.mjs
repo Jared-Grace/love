@@ -1,3 +1,4 @@
+import { hash_key_doors_callers } from "./hash_key_doors_callers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { hash_key_doors } from "./hash_key_doors.mjs";
 import { hash_key_doors_wrapped } from "./hash_key_doors_wrapped.mjs";
@@ -24,8 +25,9 @@ export async function hash_key_doors_wrapped_gate_run() {
     ]),
     wrapped,
   });
+  let list = hash_key_doors();
   let r = {
-    doors: list_size(hash_key_doors()),
+    doors: list_size(list),
     callers: list_size(pairs),
     wrapped,
   };
