@@ -28,5 +28,5 @@ export function app_code_symbols_separated_on_question_generic(
     on_symbol(row_item, index_1, symbols);
     return digit;
   }
-  let spans = list_map_index_1(symbols, lambda);
+  list_map_index_1(symbols, lambda);
 }
