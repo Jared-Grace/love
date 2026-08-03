@@ -9,20 +9,22 @@ export function g_profile_valid_is(profile) {
   let gender = profile.gender;
   let age = profile.age;
   let marriage = profile.marriage;
-  let children = profile.children;
-  let household = profile.household;
+  let sons = profile.sons;
+  let daughters = profile.daughters;
+  let servitude = profile.servitude;
   let government = profile.government;
+  let childless = equal(sons, "none") && equal(daughters, "none");
   ("No woman held a Roman office or served in a legion.");
   if (equal(gender, "female") && not_equal(government, "civilian")) {
     return false;
   }
   ("A slave held no office and served in no legion.");
-  if (equal(household, "servant") && not_equal(government, "civilian")) {
+  if (equal(servitude, "servant") && not_equal(government, "civilian")) {
     return false;
   }
   ("Children come of a marriage, and a widow keeps the ones she bore.");
   let bearing = ["married", "widowed"];
-  if (equal(children, true) && not(list_includes(bearing, marriage))) {
+  if (not(childless) && not(list_includes(bearing, marriage))) {
     return false;
   }
   ("A teenager has not married yet and has nobody of their own.");
@@ -30,12 +32,12 @@ export function g_profile_valid_is(profile) {
   if (equal(age, "teenager") && not(list_includes(unwed, marriage))) {
     return false;
   }
-  if (equal(age, "teenager") && equal(children, true)) {
+  if (equal(age, "teenager") && not(childless)) {
     return false;
   }
   ("A teenager owns no household, and manumission under thirty gave a lesser standing than this axis means by freed.");
   let settled = ["master", "freed"];
-  if (equal(age, "teenager") && list_includes(settled, household)) {
+  if (equal(age, "teenager") && list_includes(settled, servitude)) {
     return false;
   }
   ("Roman office carried a legal minimum age well above the teens.");
