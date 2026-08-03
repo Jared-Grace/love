@@ -17,5 +17,4 @@ export function list_difference_mapper(list, list_other, mapper) {
   }
   let difference = list_adder(lambda2);
   return difference;
-  function lambda3(item) {}
 }
