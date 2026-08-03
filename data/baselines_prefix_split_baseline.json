@@ -6,7 +6,7 @@
   "functions_parameters_unread_baseline_path",
   "functions_selects_unsafe_baseline_path",
   "functions_shadowing_baseline_path",
-  "statements_after_return_baseline_path",
+  "functions_statements_after_return_baseline_path",
   "unbound_baseline_path"
  ]
 }
