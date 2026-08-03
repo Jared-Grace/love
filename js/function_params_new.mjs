@@ -12,6 +12,8 @@ export async function function_params_new(
   param_names_comma,
   values_default_comma,
 ) {
+  "Gives one function several new parameters at once, each with its own value standing in at every call that already exists.";
+  "The check that a new name does not collide with one the function already uses is switched off, so a name that is already in there will be taken silently rather than refused.";
   arguments_assert(arguments, 3);
   let param_names = text_split(param_names_comma, ",");
   let values_default = text_split(values_default_comma, ",");
