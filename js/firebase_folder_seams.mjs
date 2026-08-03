@@ -28,13 +28,12 @@ export async function firebase_folder_seams() {
   "Only a bare parameter counts as passing the folder on. A wrapper that works the word out, or fetches it from somewhere, is not handing its caller's word through - it is the place the word is written, which is the thing being looked for rather than another place to look.";
   let root = fn_name("firebase_deploy_function_destination");
   let identifiers = await data_identifiers_get();
-  let seams = [
-    {
-      builder: root,
-      index: 0,
-    },
-  ];
-  let known = [text_combine_multiple([root, " ", number_text(0)])];
+  let first = {
+    builder: root,
+    index: 0,
+  };
+  let seams = [first];
+  let known = [json_to(first)];
   let asked = 0;
   let waiting = greater_than(list_size(seams), asked);
   while (waiting) {
@@ -70,20 +69,16 @@ export async function firebase_folder_seams() {
         if (not(own)) {
           continue;
         }
-        let word = text_combine_multiple([
-          caller,
-          " ",
-          number_text(position),
-        ]);
+        let found = {
+          builder: caller,
+          index: position,
+        };
+        let word = json_to(found);
         let already = list_includes(known, word);
         if (already) {
           continue;
         }
         list_add(known, word);
-        let found = {
-          builder: caller,
-          index: position,
-        };
         list_add(seams, found);
       }
     }
