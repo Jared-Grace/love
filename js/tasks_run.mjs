@@ -12,7 +12,7 @@ export async function tasks_run() {
   let result = await functions_search(search);
   let properties = properties_get(result);
   async function lambda(item) {
-    let result3 = await function_run_unalias(item, []);
+    await function_run_unalias(item, []);
   }
   await each_async(properties, lambda);
   return result;
