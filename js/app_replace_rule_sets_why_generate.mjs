@@ -30,7 +30,7 @@ export async function app_replace_rule_sets_why_generate() {
     return r3;
   }
   let rule_sets = list_map(r2, lambda2);
-  let taken = list_take(rule_sets, 2);
+  list_take(rule_sets, 2);
   ("generate all responses first");
   await each_async(rule_sets, app_replace_rule_sets_why_generate_single);
   async function lambda(rs) {
@@ -66,7 +66,7 @@ export async function app_replace_rule_sets_why_generate() {
       let code = js_unparse(f);
       log(fn_name("app_replace_rule_sets_why_generate"), code);
     }
-    let waited = await function_transform(f_name, lambda4);
+    await function_transform(f_name, lambda4);
   }
   await each_async(rule_sets, lambda);
 }
