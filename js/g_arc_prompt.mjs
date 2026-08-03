@@ -1,5 +1,3 @@
-import { list_concat_single_right } from "./list_concat_single_right.mjs";
-import { js_boolean_values } from "./js_boolean_values.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -7,27 +5,21 @@ import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_callings } from "./g_callings.mjs";
-import { g_genders_names } from "./g_genders_names.mjs";
-import { g_seasons } from "./g_seasons.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-export function g_arc_prompt(chapter_code, verses_text, turn_target) {
+export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
   "The turn target is one number.";
+  "The profile is RECEIVED rather than chosen. Code deals it, so the spread of gender, age, marriage, children, servitude and government over a whole game is what was decided rather than whatever an LLM reaches for first - and a value code chose cannot be out of range, so three checks stop being needed.";
+  ("the profile is one of ", fn_name("g_profiles"), ".");
   ("turn_target is drawn for this person by ", fn_name("g_arc_lengths"), ".");
   ("~Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
-  let list = g_callings();
-  let callings = list_join_comma_space(list);
-  let genders = g_genders_names();
-  let list3 = g_seasons();
-  let seasons = list_join_comma_space(list3);
-  let list4 = g_openers_unbeliever();
-  let openers_unbeliever = list_join_comma_space(list4);
+  let list = g_openers_unbeliever();
+  let openers_unbeliever = list_join_comma_space(list);
   let list5 = g_openers_disciple();
   let openers_disciple = list_join_comma_space(list5);
   let s = g_generation_settings();
@@ -40,9 +32,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   ]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
-  let joined3 = list_join_space(["  gender - one of:", genders]);
-  let joined4 = list_join_space(["  married:", callings]);
-  let joined5 = list_join_space(["  age: between 13 and 80", seasons]);
   let joined6 = list_join_space([
     "  opener - for somebody who does not yet believe, one of:",
     openers_unbeliever,
@@ -60,35 +49,24 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     turns_high,
     "turns.",
   ]);
-  let b = js_boolean_values();
-  let servant = list_concat_single_right(b, "freed");
-  const children_count = ['none', 'one', 'multiple'];
-  let json = json_format_to({
-    gender: genders,
-    age: ["teenager", "young adult", "middle-aged", "older", "elderly"],
-    marriage: ["single", "betrothed", "married", "widowed"],
-    sons:b,
-    daughters:children_count,
-    master: children_count,
-    servitude:["none", "master", "servant", "freed"],
-    government: ["civilian", "official", "soldier"],
-  });
+  let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
     "THe setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
-    "You should choose this about each person:",
-    json,
+    "You should choose this about the person:",
     "  trouble - what is wrong, in one sentence, in their own words",
-    "  summary - one sentence: their calling and their trouble. The player reads it when they return.",
+    "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
     "THE CHAPTER",
     joined,
     "These verses are the only Scripture you may answer from.",
     verses_text,
     "",
     "WHO TO WRITE",
-    "Write one person: {}",
+    "Write this one person:",
+    json,
+    "These facts are settled. Do not change them, and do not give a personality meant to follow from them.",
     "Start from the verses. Ask what trouble they honestly answer.",
     "Never pick a trouble first and then hunt for a verse.",
     "",
@@ -130,7 +108,8 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "",
     "Keep every utterance short - a sentence or two, the way people actually speak.",
     "",
-    "Answer as JSON: one person, with gender, calling, season, trouble, summary, and conversations.",
+    "Answer as JSON: one person, with trouble, summary, and conversations.",
+    "Do not repeat the settled facts back. They are already known.",
     "Each conversation is a list of turns.",
   ];
   let r = list_join_newline(lines);
