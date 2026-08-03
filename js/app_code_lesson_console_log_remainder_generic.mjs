@@ -121,8 +121,8 @@ export function app_code_lesson_console_log_remainder_generic(
     html_style_code_dark(tile);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
-    let chip = remainder_chip(tile, remainder);
-    app_code_lesson_chip_lift(chip);
+    let color = remainder_color(remainder);
+    app_code_lesson_number_chip_lifted(tile, remainder, color);
     let t2 = text_to(result);
     let after = text_combine_multiple([" ", triple_equal, " ", t2]);
     html_span_text(tile, after);
