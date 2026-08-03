@@ -64,7 +64,7 @@ export function app_a_identifier_generic(
     let overlay_close = property_get(o3, "overlay_close");
     let overlay = property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
-    let div4 = html_div_text(oc, name);
+    html_div_text(oc, name);
     let context = property_get(a, "context");
     let change = {
       fn: async function lambda15() {
@@ -74,8 +74,8 @@ export function app_a_identifier_generic(
         let oc_change = property_get(r, "container");
         let text = property_get(change, "text");
         let text2 = text_combine(text, " from:");
-        let div2 = html_div_text(oc_change, text2);
-        let div = html_div_text(oc_change, name);
+        html_div_text(oc_change, text2);
+        html_div_text(oc_change, name);
         let text3 = text_combine(text, " to:");
         html_div_text(oc_change, text3);
         let fn = null;
@@ -98,7 +98,7 @@ export function app_a_identifier_generic(
         let component = app_a_button_wide(overlay_change, text, on_enter);
       },
     };
-    let to = object_merge_set(change, c);
+    object_merge_set(change, c);
     list_add_multiple(choices, [
       {
         shortcut: "c",
@@ -118,7 +118,7 @@ export function app_a_identifier_generic(
           let o2 = app_a_overlay_keydown(a, lambda22);
           let overlay_delete = property_get(o2, "overlay");
           let oc_delete = app_a_overlay_container_centered(overlay_delete);
-          let div3 = html_div_text(
+          html_div_text(
             oc_delete,
             "How many statements do you want to delete?",
           );
@@ -131,7 +131,7 @@ export function app_a_identifier_generic(
             let v = app_a_node_index(a);
             let index = property_get(v, "index");
             let list = property_get(v, "list");
-            let removals = list_remove_at_count(list, index, value_new);
+            list_remove_at_count(list, index, value_new);
             await app_a_function_on_change(a, o2);
           }
           let component = app_a_button_wide(overlay_delete, "Delete", lambda23);
