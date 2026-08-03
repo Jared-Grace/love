@@ -1,11 +1,10 @@
+import { function_transform_auto } from "./function_transform_auto.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
 import { js_array_expression_only_elements } from "./js_array_expression_only_elements.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_imports_missing_add_specified_single } from "./js_imports_missing_add_specified_single.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_auto } from "./function_auto.mjs";
 export async function function_list_name_add(f_name, name) {
   "Adds one function's name to the end of the list another function hands back, together with the import that name needs.";
   "This is the shape of joining a register. A new gate is written and then named in the list of gates; a new screen is written and then named in the list of screens. The writing is the work and the naming is the paperwork, and the paperwork was two hand edits every time - a line in the list and a line at the top of the file - in a file nobody meant to be reading.";

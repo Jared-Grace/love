@@ -1,14 +1,10 @@
+import { js_statement_find_name_generic } from "./js_statement_find_name_generic.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_identifiers_named } from "./js_identifiers_named.mjs";
-import { js_flo_body } from "./js_flo_body.mjs";
-import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { js_statement_node_is } from "./js_statement_node_is.mjs";
 import { list_previous } from "./list_previous.mjs";
 import { list_is } from "./list_is.mjs";
-import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 export function js_statement_find_name_inner(ast, name) {
   arguments_assert(arguments, 2);
   ("The nearest line to the first mention of a word - the line the word is actually written on, however many loops and branches stand between it and the top of the function.");

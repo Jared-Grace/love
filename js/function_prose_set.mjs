@@ -1,3 +1,4 @@
+import { function_transform_auto } from "./function_transform_auto.mjs";
 import { list_index_is } from "./list_index_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -9,8 +10,6 @@ import { js_prose_statement_nodes } from "./js_prose_statement_nodes.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_auto } from "./function_auto.mjs";
 export async function function_prose_set(f_name, position, sentence) {
   "Puts a new sentence in the place of one line a function already says about itself, named by its number.";
   "Adding a line has a command and changing one did not, which left every correction to a hand edit. A line that has gone wrong is worse than a line that is missing: the missing one is silent, and the wrong one is read and believed. Two of those were corrected by hand on this repo the day this was written, both of them numbers that had been guessed and then measured.";
