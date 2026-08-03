@@ -1,16 +1,14 @@
+import { js_assert_json_get_call_point_at_record } from "./js_assert_json_get_call_point_at_record.mjs";
 import { js_function_declaration_record_line_try } from "./js_function_declaration_record_line_try.mjs";
 import { js_assert_json_get_call_below_try } from "./js_assert_json_get_call_below_try.mjs";
 import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { property_list_get } from "./property_list_get.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { each } from "./each.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { property_set } from "./property_set.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { add } from "./add.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
@@ -48,13 +46,6 @@ export function js_assert_json_get_lambda_collapse(ast) {
     let once_is = equal(left, 1);
     return once_is;
   }
-  function call_point_at_record(call, record_name) {
-    let callee = property_get(call, "callee");
-    let value = fn_name("assert_json");
-    property_set(callee, "name", value);
-    let second = property_list_get(call, "arguments", 1);
-    property_set(second, "name", record_name);
-  }
   function block_each(v) {
     let node = property_get(v, "node");
     let body = property_get(node, "body");
@@ -84,7 +75,7 @@ export function js_assert_json_get_lambda_collapse(ast) {
       if (not(free_is)) {
         return;
       }
-      call_point_at_record(call, record_name);
+      js_assert_json_get_call_point_at_record(call, record_name);
       object_replace(statement, held);
       moved = add(moved, 1);
     }
