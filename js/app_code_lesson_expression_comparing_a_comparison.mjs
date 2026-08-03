@@ -150,7 +150,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let times = js_operator_asterisk_symbol();
     let plus = js_operator_plus_symbol();
     html_div_cycle_code(card, [
-      "We replace in order, like ",
+      "In general, replacing must honor order like ",
       times,
       " before ",
       plus,
