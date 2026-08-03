@@ -5,6 +5,7 @@ export async function function_param_new_first(
   param_name,
   values_default_comma,
 ) {
+  "Gives a function a new parameter and moves it to the front, so the commonest shape - a new first argument - is one command rather than two.";
   await function_params_new(f_name, param_name, values_default_comma);
   await function_param_move_first(f_name, param_name);
 }
