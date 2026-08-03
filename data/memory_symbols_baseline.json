@@ -13,6 +13,8 @@
   "html_meta_viewport",
   "js_imports_missing_add_all_at",
   "js_imports_missing_add_all_program_at",
+  "js_imports_missing_all_program",
+  "js_imports_missing_specify_program",
   "js_imports_paths_fix_at",
   "list_count",
   "list_empty",
