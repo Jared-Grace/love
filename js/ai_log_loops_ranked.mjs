@@ -89,12 +89,6 @@ export function ai_log_loops_ranked(entries) {
   for (let session of sessions) {
     run_close(session);
   }
-  let ranked = ai_log_loops_tallies_ranked(
-    spent,
-    step,
-    loops,
-    longest,
-    identical,
-  );
+  let ranked = ai_log_loops_tallies_ranked(spent, loops, longest, identical);
   return ranked;
 }
