@@ -8,14 +8,16 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_remove } from "./html_remove.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_margin_y_set } from "./app_shared_margin_y_set.mjs";
-export function app_shared_dismissable_message(app_fn, parent, key, text) {
+export function app_shared_dismissable_message(app_fn, key, parent, text) {
   let show = storage_local_exists_not(app_fn, key);
   function dismiss_noop() {}
   if (show) {
     let p = html_p(parent);
     app_shared_margin_y_set(p);
     html_span_text(p, text);
-    let x = html_span_text(p, text_combine("  ", emoji_x_purple()));
+    let right = emoji_x_purple();
+    let text2 = text_combine("  ", right);
+    let x = html_span_text(p, text2);
     app_shared_text_deemphasized(x);
     let dismissed = false;
     function dismiss() {
