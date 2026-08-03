@@ -12,6 +12,9 @@ export async function functions_oversize_nesting() {
   ("A wide gap between the two numbers was first read as meaning the span extractor would reach the size anyway, a closure written beside its use being a statement like any other. That was wrong, and the same day proved it: cutting a span around a closure hands the closure to a new function whole, so the size moves and the record stays the same length. Which of the three shapes a gap is takes a further reading - ",
     fn_name("function_nested_sizes"),
     " names each closure in a function and sizes it - and each shape has a command of its own.");
+  ("To go straight to the work rather than to a reading, ask ",
+    fn_name("functions_lift_candidates"),
+    ": it walks this same list and hands back, for each entry that holds one, the biggest closure the lift would actually take. Of the 130 entries here, 71 hold one.");
   let named = await functions_work_oversize_names();
   let rows = [];
   for (let name of named) {
