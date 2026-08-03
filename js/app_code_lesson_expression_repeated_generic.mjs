@@ -1,3 +1,4 @@
+import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
@@ -27,7 +28,6 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
-import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
@@ -166,12 +166,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       html_style_white_space(tile, "nowrap");
       return tile;
     }
-    function lifted_chip(tile, number, color) {
-      "a color chip embedded INSIDE a dark tile, lifted off the black by rings - the same way the % lesson embeds its remainder chip in a code tile";
-      let made = app_code_lesson_number_chip(tile, number, color);
-      app_code_lesson_chip_lift(made);
-      return made;
-    }
     function running_count(grid, number) {
       "the count under an intermediate repeat - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
       let text = text_to(number);
@@ -204,7 +198,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
         let position = add(index, 1);
         let doubled2 = multiply(2, index);
         let column = add(doubled2, 2);
-        let chip2 = lifted_chip(grid, left, left_color);
+        let chip2 = app_code_lesson_number_chip_lifted(grid, left, left_color);
         html_style_grid_cell(chip2, 2, column);
         let last = equal(position, count);
         let numeral = null;
@@ -234,9 +228,9 @@ export function app_code_lesson_expression_repeated_generic(words) {
     function short_form(parent, left, count, left_color, count_color) {
       "one dark tile reading the short form, both numbers as lifted color chips";
       let tile = dark_tile(parent);
-      lifted_chip(tile, left, left_color);
+      app_code_lesson_number_chip_lifted(tile, left, left_color);
       html_span_text(tile, short_separator);
-      lifted_chip(tile, count, count_color);
+      app_code_lesson_number_chip_lifted(tile, count, count_color);
     }
     let already = text_combine_multiple([
       "You already know how to ",
