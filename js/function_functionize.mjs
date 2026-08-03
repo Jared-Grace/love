@@ -25,7 +25,7 @@ export async function function_functionize(
     f_name_new,
   });
   let ends = list_join_comma([call_from, call_to]);
-  let select_fn_name = fn_name("js_statement_find_call_named_body");
+  let select_fn_name = fn_name("js_statement_find_name_body");
   let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
