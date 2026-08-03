@@ -35,9 +35,9 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let preaching = list_join_space(["The player is answering from ", chapter_code]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
-  let joined3 = list_join_space(["  gender - one of:", genders]);
-  let joined4 = list_join_space(["  calling - one or more of:", callings]);
-  let joined5 = list_join_space(["  season - one of:", seasons]);
+  let joined3 = list_join_space(["gender - one of:", genders]);
+  let joined4 = list_join_space(["calling - one or more of:", callings]);
+  let joined5 = list_join_space(["age: between 13 and 80", seasons]);
   let joined6 = list_join_space([
     "  opener - for somebody who does not yet believe, one of:",
     openers_unbeliever,
