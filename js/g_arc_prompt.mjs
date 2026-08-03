@@ -32,7 +32,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let preaching = list_join_space(["The player is preaching", chapter_code]);
+  let preaching = list_join_space(["The player is answering from ", chapter_code]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined3 = list_join_space(["  gender - one of:", genders]);
@@ -57,8 +57,15 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
   ]);
   let lines = [
     "This is a Christian game about sharing the gospel.",
+    "THe setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
+    "The person needs:",
+    joined3,
+    joined4,
+    joined5,
+    "  trouble - what is wrong, in one sentence, in their own words",
+    "  summary - one sentence: their calling and their trouble. The player reads it when they return.",
     "THE CHAPTER",
     joined,
     "These verses are the only Scripture you may answer from.",
@@ -69,12 +76,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target) {
     "Start from the verses. Ask what trouble they honestly answer.",
     "Never pick a trouble first and then hunt for a verse.",
     "",
-    "Give this person:",
-    joined3,
-    joined4,
-    joined5,
-    "  trouble - what is wrong, in one sentence, in their own words",
-    "  summary - one sentence: their calling and their trouble. The player reads it when they return.",
     "",
     "Gender and calling are facts. Do not give a personality meant to follow from them.",
     "",
