@@ -2756,7 +2756,7 @@ def find_pgrep_wait_loop(command):
 # claim about the shape from a guess: without a break there is provably no way
 # out, and with one there is nothing here to say.
 CONSTANT_LOOP_TEXT = re.compile(
-    r"\b(?:while\s+true|while\s+:|until\s+false)\b.*?\bdo\b.*?\bsleep\b.*?"
+    r"\b(?:while\s+(?:true\b|:)|until\s+false\b).*?\bdo\b.*?\bsleep\b.*?"
     r"\bdone\b",
     re.DOTALL,
 )
