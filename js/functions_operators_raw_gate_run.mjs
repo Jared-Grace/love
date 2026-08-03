@@ -2,7 +2,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { operators_raw_baseline_path } from "./operators_raw_baseline_path.mjs";
+import { functions_operators_raw_baseline_path } from "./functions_operators_raw_baseline_path.mjs";
 import { functions_operators_raw_names } from "./functions_operators_raw_names.mjs";
 export async function functions_operators_raw_gate_run() {
   arguments_assert(arguments, 0);
@@ -23,7 +23,7 @@ export async function functions_operators_raw_gate_run() {
   ("of them that is true of is a judgement, not this gate's to make. The record only");
   ("has to stop the number growing.");
   let offenders = await functions_operators_raw_names();
-  let path = operators_raw_baseline_path();
+  let path = functions_operators_raw_baseline_path();
   let name_write = fn_name("functions_operators_raw_baseline_write");
   let r = await baseline_names_gate_generic(
     offenders,
