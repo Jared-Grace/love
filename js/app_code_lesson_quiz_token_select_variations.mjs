@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_token_select_variations_set_sides } from "./app_code_lesson_quiz_token_select_variations_set_sides.mjs";
 import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_last_is } from "./list_last_is.mjs";
@@ -33,15 +34,19 @@ export function app_code_lesson_quiz_token_select_variations(code) {
       if (includes) {
         let left = property_get(node, "left");
         let right = property_get(node, "right");
-        function set_sides(a, b) {
-          property_set(node, "left", a);
-          property_set(node, "right", b);
-        }
         function keep() {
-          set_sides(left, right);
+          app_code_lesson_quiz_token_select_variations_set_sides(
+            left,
+            right,
+            node,
+          );
         }
         function swap() {
-          set_sides(right, left);
+          app_code_lesson_quiz_token_select_variations_set_sides(
+            right,
+            left,
+            node,
+          );
         }
         let orderings = [keep, swap];
         let orderable = {
