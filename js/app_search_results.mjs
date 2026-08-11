@@ -1,3 +1,4 @@
+import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
@@ -160,17 +161,12 @@ export async function app_search_results(context, div_results) {
     }
     each(setters, setter_call);
   }
-  async function collect_all_texts() {
-    let waited = await app_search_results_buttons_expand(button_list);
-    let squashed = list_squash(waited);
-    return squashed;
-  }
   async function expand_all_lambda() {
     "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
     "the testament cards open ahead of the books inside them, since a reader who folded one away would otherwise press this and watch nothing happen there";
     collapse_setters_set(testament_collapse_setters, false);
     collapse_setters_set(book_collapse_setters, false);
-    await collect_all_texts();
+    await app_search_results_collect_all_texts(button_list);
   }
   function collapse_all_lambda() {
     "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
@@ -179,7 +175,7 @@ export async function app_search_results(context, div_results) {
   }
   async function copy_all_lambda() {
     "let the reader copy every matching verse in one click, without first expanding them all on screen";
-    let squashed = await collect_all_texts();
+    let squashed = await app_search_results_collect_all_texts(button_list);
     await list_join_newline_2_copy(squashed);
   }
   ("the three buttons stand in one row, so each wears a picture for the same reason the copying one always has: a reader picks the one they want by its picture before they have read any of the words");
