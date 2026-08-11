@@ -22,7 +22,18 @@ export async function qa_gate_timings_write() {
       folder: property_get(told, "folder"),
     });
   }
-  let json = said.slice(began);
+  ("The result is read from where it opens to where it closes rather than to the end of what was said, because the run keeps talking afterwards. The dispatcher inside the copy prints a line of its own once the run is over, and reading to the end handed a parser a whole result followed by that line, which it refused - a measurement that had taken nine minutes and had already finished, thrown away over three words printed after it.");
+  ("A result of this shape opens and closes hard against the left margin and everything inside it is indented, so the first close after the opening is the one belonging to it, and no counting of braces is needed.");
+  let ended = said.indexOf("\n}", began);
+  if (less_than(ended, 0)) {
+    error_json({
+      hint: "the timing run began printing its result and never finished it, so what is here is half a measurement - it was stopped while it was talking",
+      f_name: qa_gate_timings_write.name,
+      folder: property_get(told, "folder"),
+    });
+  }
+  let closed = add(ended, 2);
+  let json = said.slice(began, closed);
   let timings = json_from_property_get(json, "timings");
   let taken = {};
   for (let timing of timings) {
