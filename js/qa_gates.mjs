@@ -1,3 +1,4 @@
+import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
 import { apps_prod_chunks_missing_gate_run } from "./apps_prod_chunks_missing_gate_run.mjs";
 import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run.mjs";
@@ -331,6 +332,7 @@ export function qa_gates() {
     functions_arguments_assert_gate_run,
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
+    functions_cross_app_imports_gate_run,
     storage_function_folders_orphaned_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
