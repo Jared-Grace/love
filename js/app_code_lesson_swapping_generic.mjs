@@ -1,3 +1,4 @@
+import { app_code_lesson_swapping_generic_side } from "./app_code_lesson_swapping_generic_side.mjs";
 import { range_from } from "./range_from.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -10,7 +11,6 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_swapping_generic(config) {
@@ -26,19 +26,10 @@ export function app_code_lesson_swapping_generic(config) {
     let op = list_random_item(ops);
     return op;
   }
-  function side(left_number, op, right_number) {
-    "one side of the equality: a number, the operator, another number; parenthesised when wrap is on";
-    let left = text_to(left_number);
-    let right = text_to(right_number);
-    let inner = text_combine_multiple([left, " ", op, " ", right]);
-    let wrapped = text_combine_multiple(["(", inner, ")"]);
-    let code = ternary(wrap, wrapped, inner);
-    return code;
-  }
   function pair_code(op, a, b) {
     "the whole line for one pair of numbers: a op b === b op a, each side parenthesised when wrap is on";
-    let left = side(a, op, b);
-    let right = side(b, op, a);
+    let left = app_code_lesson_swapping_generic_side(a, op, b, wrap);
+    let right = app_code_lesson_swapping_generic_side(b, op, a, wrap);
     let code = text_combine_multiple([left, " === ", right]);
     return code;
   }
