@@ -1,10 +1,8 @@
-import { fn_name } from "./fn_name.mjs";
-import { function_imports_none_assert } from "./function_imports_none_assert.mjs";
 import { app_shared_url_dev_local } from "./app_shared_url_dev_local.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_g } from "./app_g.mjs";
 import { app_g_dev_route_names } from "./app_g_dev_route_names.mjs";
-import { html_offscreen_report } from "./html_offscreen_report.mjs";
+import { html_offscreen_report_script } from "./html_offscreen_report_script.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
