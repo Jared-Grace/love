@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { function_imports_none_assert } from "./function_imports_none_assert.mjs";
 import { app_shared_url_dev_local } from "./app_shared_url_dev_local.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_g } from "./app_g.mjs";
@@ -14,6 +16,7 @@ export async function app_g_dev_routes_phone_report() {
   "opens every one of the game's dev screens on a screen the size of a phone and reports whatever has fallen off it and cannot be scrolled back to. this exists because the fault it looks for is invisible where the work is done: a size written in fixed units fits a laptop perfectly and beheads a picture on a phone, and the only thing that had ever noticed was somebody playing the game on their own phone and saying so";
   "an empty page is opened between screens, and only then the next address. writing a new word after the # only ASKS whoever is listening to change screens, and the browser will not rebuild a page for a hash it thinks it is already on - going away to nothing first is what makes each screen be built afresh from its own word, the same way it would be for somebody following a link";
   "reads the dev build off the local server, so what it measures is the code as it stands rather than whatever was last promoted";
+  "the measuring itself is checked before a browser is even opened. it is handed over as text and runs where none of this repo's names exist, and the canonicalizing pass has already once turned its comparisons into calls to functions of this repo - which would have thrown in the browser and been read here as a screen that simply had nothing wrong with it. the two gates that watch for that only see a function written INSIDE the one that sends it, so this one, living in its own file, is invisible to them";
   let probe = fn_name("html_offscreen_report");
   let reason = "it is handed to the browser as its own text and read there";
   await function_imports_none_assert(probe, reason);
