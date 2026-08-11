@@ -38,9 +38,9 @@ export function g_plant_arcs(plant) {
   let next = random_seed_generator_from_text(joined);
   let npcs = random_bell_low_middle_high(
     next,
-    settings.plant_npcs_minimum,
-    settings.plant_npcs_mean,
-    settings.plant_npcs_maximum,
+    settings.plant_cast_minimum,
+    settings.plant_cast_mean,
+    settings.plant_cast_maximum,
   );
   ("The leader's share is a portion of the plant's DAYS, so a longer plant disciples the leader longer rather than visiting the same number of times more thinly.");
   let share_low = divide(settings.leader_days_percent_minimum, 100);
