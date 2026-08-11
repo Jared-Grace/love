@@ -281,7 +281,7 @@ export function permission_grant_names() {
   let spelled278 = fn_name("functions_duplicates_names");
   let spelled279 = fn_name("functions_parallel_marks_stale");
   let spelled280 = fn_name("qa_gate_confirm");
-  let spelled281 = fn_name("app_g_dev_index_tree_check");
+  let spelled281 = fn_name("g_dev_index_tree_check");
   let spelled282 = fn_name("functions_parallel_marks_gate_run");
   let spelled283 = fn_name("memory_hook_limit_candidates");
   let spelled284 = fn_name("function_shadowing_report");
