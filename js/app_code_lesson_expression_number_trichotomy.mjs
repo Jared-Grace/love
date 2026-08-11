@@ -1,16 +1,12 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_number_trichotomy_title_name_id } from "./app_code_lesson_expression_number_trichotomy_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
-import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
-import { app_code_placeholder_tile_number } from "./app_code_placeholder_tile_number.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -20,7 +16,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_number_trichotomy() {
   "the trichotomy of comparing two numbers: any two numbers are the same, or the first is smaller, or the first is bigger - exactly one of the three, and that is WHY there are three cases (either they are the same, or if different one must be bigger than the other). Taught on numbers first, where same/smaller/bigger is the most familiar intuition, so the structure is met before the next lesson carries the very same structure over to strings. Uses the three operators the learner already knows one at a time - === for same, < for smaller, > for bigger. Placed just after the numeric comparison lessons and before the string ordering lessons.";
   let equals_operator = "===";
@@ -77,7 +72,11 @@ export function app_code_lesson_expression_number_trichotomy() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_number_trichotomy_title_name_id(
+    equals_operator,
+    less_operator,
+    greater_operator,
+  );
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -92,28 +91,6 @@ export function app_code_lesson_expression_number_trichotomy() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: same, smaller, or bigger";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Same, smaller, or bigger ");
-        app_code_operators_shape_list(
-          parent,
-          app_code_placeholder_tile_number,
-          [equals_operator, less_operator, greater_operator],
-        );
-      }
-      return render;
-    }
-    let rights = ["number", "trichotomy"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box: any two numbers give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
     let example = app_code_container_light_blue(root);
