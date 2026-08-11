@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
@@ -57,24 +58,17 @@ export function app_code_lesson_expression_repeated_generic(words) {
   let title_word = property_get(words, "title_word");
   let right_word = property_get(words, "right_word");
   let symbol = property_get(operator, "operator");
-  function expanded_code(left, count) {
-    "the short form written out in full - with a left number of 2 and a count of 3, three 2s joined by the smaller operator";
-    function left_text(index) {
-      let t = text_to(left);
-      return t;
-    }
-    let repeats = range_map(count, left_text);
-    let separator = text_combine_multiple([" ", expand_symbol, " "]);
-    let expanded = list_join(repeats, separator);
-    return expanded;
-  }
   function batch_get() {
     "four questions - four distinct left numbers (so the written-out forms never collide), each with its own random count of 2 or 3 so the length of the written-out form varies; the ANSWER is the written-out form, not the value";
     let lefts = list_shuffle_take([2, 3, 4, 5], 4);
     function to_pair(left) {
       let count = integer_random(2, 3);
       let question = js_code_binary_spaced_nb(left, symbol, count);
-      let answer = expanded_code(left, count);
+      let answer = app_code_lesson_expression_repeated_generic_expanded_code(
+        left,
+        count,
+        expand_symbol,
+      );
       let pair = {
         question,
         answer,
@@ -253,4 +247,20 @@ export function app_code_lesson_expression_repeated_generic(words) {
     ]);
     html_div_cycle_code(c, [how_many]);
   }
+}
+function app_code_lesson_expression_repeated_generic_expanded_code(
+  left,
+  count,
+  expand_symbol,
+) {
+  arguments_assert(arguments, 3);
+  ("the short form written out in full - with a left number of 2 and a count of 3, three 2s joined by the smaller operator");
+  function left_text(index) {
+    let t = text_to(left);
+    return t;
+  }
+  let repeats = range_map(count, left_text);
+  let separator = text_combine_multiple([" ", expand_symbol, " "]);
+  let expanded = list_join(repeats, separator);
+  return expanded;
 }
