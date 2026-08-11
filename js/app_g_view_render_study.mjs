@@ -1,5 +1,5 @@
+import { app_g_view_render_study_style_word } from "./app_g_view_render_study_style_word.mjs";
 import { app_g_view_render_study_style_completed } from "./app_g_view_render_study_style_completed.mjs";
-import { app_g_view_render_study_style_upcoming } from "./app_g_view_render_study_style_upcoming.mjs";
 import { app_g_view_render_study_style_next } from "./app_g_view_render_study_style_next.mjs";
 import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -108,16 +108,6 @@ export async function app_g_view_render_study(div_map) {
     app_g_view_render_study_update_bar(bar_div, current, words);
     let words_div = html_div(container);
     let word_bs = [];
-    function style_word(i) {
-      let b = word_bs[i];
-      if (less_than(i, current)) {
-        app_g_view_render_study_style_completed(b);
-      } else if (equal(i, current)) {
-        app_g_view_render_study_style_next(b);
-      } else {
-        app_g_view_render_study_style_upcoming(b);
-      }
-    }
     function tap(i) {
       async function on_tap() {
         let is_current = equal(i, current);
@@ -146,7 +136,7 @@ export async function app_g_view_render_study(div_map) {
         "font-size": app_shared_style_control_font_size(),
       });
       word_bs.push(b);
-      style_word(i);
+      app_g_view_render_study_style_word(i, word_bs, current);
     }
   }
   let fresh = equal(current, 0);
