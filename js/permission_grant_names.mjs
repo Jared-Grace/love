@@ -909,6 +909,23 @@ export function permission_grant_names() {
   let spelled896 = fn_name("storage_browser_doors");
   let spelled897 = fn_name("qa_promoted_commits_full_repair");
   let spelled898 = fn_name("apps_prod_chunks_unreachable");
+  let spelled899 = fn_name(
+    "functions_rename_if_starts_ends_with_prefix_change",
+  );
+  let spelled900 = fn_name("functions_rename_names_prefix_change");
+  let spelled901 = fn_name("functions_rename_if_starts_with_replace");
+  let spelled902 = fn_name("object_merge_match_test");
+  let spelled903 = fn_name("reply_test");
+  let spelled904 = fn_name("cpu_count");
+  let spelled905 = fn_name("app_shared_font_size_label");
+  let spelled906 = fn_name("browser_secure_context_all");
+  let spelled907 = fn_name("browser_secure_context_baseline_write");
+  let spelled908 = fn_name("browser_secure_context_gate_run");
+  let spelled909 = fn_name("app_code_lesson_name_id_category_then_file");
+  let spelled910 = fn_name("app_code_lesson_name_id_category_then_migrate");
+  let spelled911 = fn_name("functions_app_import_advice_report");
+  let spelled912 = fn_name("app_g_day_guide_window_check");
+  let spelled913 = fn_name("functions_app_specific_imports_baseline_path");
   let names = [
     spelled,
     spelled2,
@@ -1808,6 +1825,21 @@ export function permission_grant_names() {
     spelled896,
     spelled897,
     spelled898,
+    spelled899,
+    spelled900,
+    spelled901,
+    spelled902,
+    spelled903,
+    spelled904,
+    spelled905,
+    spelled906,
+    spelled907,
+    spelled908,
+    spelled909,
+    spelled910,
+    spelled911,
+    spelled912,
+    spelled913,
   ];
   return names;
 }
