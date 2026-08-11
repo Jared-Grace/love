@@ -1,3 +1,4 @@
+import { week_calendar_summary_empty } from "./week_calendar_summary_empty.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
@@ -110,20 +111,13 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     let text = week_range_label(span);
     app_shared_text_body(summary, text);
   }
-  function summary_empty() {
-    let none = app_shared_text_body(
-      summary,
-      "No times chosen yet — click a piece to start",
-    );
-    app_shared_text_deemphasized(none);
-  }
   function render_summary() {
     html_clear(summary);
     let has = list_empty_not_is(ranges);
     if (has) {
       each(ranges, summary_line);
     } else {
-      summary_empty();
+      week_calendar_summary_empty(summary);
     }
   }
   function paint() {
