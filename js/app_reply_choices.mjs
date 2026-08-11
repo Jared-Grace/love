@@ -34,7 +34,7 @@ import { app_reply_choices_will_done_fragment } from "./app_reply_choices_will_d
 import { reply_choices_name } from "./reply_choices_name.mjs";
 import { reply_choices_location } from "./reply_choices_location.mjs";
 import { reply_choices_give } from "./reply_choices_give.mjs";
-import { app_reply_choices_praise } from "./app_reply_choices_praise.mjs";
+import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { app_reply_response_greetings } from "./app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "./app_reply_response_how_r_u.mjs";
 import { emoji_handshake } from "./emoji_handshake.mjs";
@@ -399,7 +399,7 @@ export function app_reply_choices() {
     },
     {
       text: "🎵 Praise",
-      response: app_reply_choices_praise(),
+      response: reply_choices_praise(),
     },
     {
       text: text_combine(emoji_pray(), " Pray"),
