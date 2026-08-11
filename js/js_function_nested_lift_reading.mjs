@@ -1,3 +1,5 @@
+import { js_global_names } from "./js_global_names.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
@@ -28,7 +30,10 @@ export async function js_function_nested_lift_reading(ast, declaration) {
   let unbound = js_declaration_names_unbound(declaration);
   list_remove(unbound, name_old);
   let reachable = await js_module_names_reachable(ast);
-  let closed = list_difference(unbound, reachable);
+  ("What the language and the page supply is already there wherever the function is moved to, so it is not something the function has to be handed. Left in, every throw in a moved function grew the parameter list by the two names it threw with, and the caller then passed the language its own words back.");
+  let globals = js_global_names();
+  let supplied = list_concat(reachable, globals);
+  let closed = list_difference(unbound, supplied);
   let written = js_assigned_names(declaration);
   let written_closed = list_intersection(closed, written);
   let reading = {
