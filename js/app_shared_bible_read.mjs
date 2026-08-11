@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
@@ -79,8 +79,6 @@ import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapt
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_split } from "./text_split.mjs";
-import { list_join } from "./list_join.mjs";
-import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
@@ -192,8 +190,8 @@ export async function app_shared_bible_read(context, verse_action) {
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
-      let property_name2 = verse_number_key();
-      let verse_numbers = list_map_property(primary_verses, property_name2);
+      let property_name = verse_number_key();
+      let verse_numbers = list_map_property(primary_verses, property_name);
       let first = list_first(verse_numbers);
       let last = list_last(verse_numbers);
       let endpoints = equal(first, last) ? [first] : [first, last];
@@ -348,10 +346,4 @@ export async function app_shared_bible_read(context, verse_action) {
     }
   }
   promise_later(resume);
-}
-function app_shared_bible_read_persist_selection(verse_numbers_chosen) {
-  arguments_assert(arguments, 1);
-  let v = list_join(verse_numbers_chosen, "-");
-  let property_name = app_shared_bible_verse_hash_key();
-  html_hash_property_set(property_name, v);
 }
