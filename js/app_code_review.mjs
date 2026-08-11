@@ -1,3 +1,4 @@
+import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
@@ -36,7 +37,6 @@ import { app_shared_button_restart_text } from "./app_shared_button_restart_text
 import { not } from "./not.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
@@ -54,11 +54,6 @@ export function app_code_review(context) {
   let progress = html_div(g);
   let success_container = html_div(g);
   let c = app_code_container_light_blue(g);
-  function show_success() {
-    html_clear(success_container);
-    app_shared_success_message(success_container);
-    html_visibility_visible(success_container);
-  }
   function hide_success() {
     html_visibility_hidden(success_container);
   }
@@ -150,7 +145,7 @@ export function app_code_review(context) {
     let seed = list_first(queue);
     let exercise = app_code_review_seed_to_exercise(seed);
     async function on_correct(clean) {
-      show_success();
+      app_code_review_show_success(success_container);
       await sleep_success_color();
       let index_front = 0;
       list_remove_at(queue, index_front);
