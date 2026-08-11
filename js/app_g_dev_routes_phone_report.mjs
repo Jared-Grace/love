@@ -12,7 +12,7 @@ import { phone_test_width } from "./phone_test_width.mjs";
 import { playwright_test_url } from "./playwright_test_url.mjs";
 export async function app_g_dev_routes_phone_report() {
   "opens every one of the game's dev screens on a screen the size of a phone and reports whatever has fallen off it and cannot be scrolled back to. this exists because the fault it looks for is invisible where the work is done: a size written in fixed units fits a laptop perfectly and beheads a picture on a phone, and the only thing that had ever noticed was somebody playing the game on their own phone and saying so";
-  "the whole address is opened again for each screen and then reloaded, because writing a new word after the # only ASKS whoever is listening to change screens - a reload is what makes the screen actually be built from that word, the same way it would be for somebody following a link";
+  "an empty page is opened between screens, and only then the next address. writing a new word after the # only ASKS whoever is listening to change screens, and the browser will not rebuild a page for a hash it thinks it is already on - going away to nothing first is what makes each screen be built afresh from its own word, the same way it would be for somebody following a link";
   "reads the dev build off the local server, so what it measures is the code as it stands rather than whatever was last promoted";
   let names = await app_g_dev_route_names();
   let url = await app_shared_url_dev_local(app_g);
