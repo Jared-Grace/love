@@ -1,15 +1,9 @@
-import { null_not_is } from "./null_not_is.mjs";
-import { and } from "./and.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
+import { qa_gate_said_advice_remove_advice_free } from "./qa_gate_said_advice_remove_advice_free.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
 import { json_to_try } from "./json_to_try.mjs";
 import { less_than } from "./less_than.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_join } from "./list_join.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_is } from "./list_is.mjs";
-import { not } from "./not.mjs";
 export function qa_gate_said_advice_remove(said) {
   "Everything a gate said with its advice sentence taken out, so that what is read back is what the gate is accusing rather than what it suggests doing about it";
   "A gate that throws through the shared baseline reader carries two different things in one breath: the offenders, in a list, and a hint - a sentence of English telling whoever reads it how to put the matter right. Only the first is an accusation. The hint names the REPAIR function, which is not at fault, and it is written in ordinary English";
@@ -33,33 +27,7 @@ export function qa_gate_said_advice_remove(said) {
     return said;
   }
   let advice = "hint";
-  function advice_free(value) {
-    let listed = list_is(value);
-    if (listed) {
-      let each_free = [];
-      for (let member of value) {
-        let item = advice_free(member);
-        list_add(each_free, item);
-      }
-      return each_free;
-    }
-    let filled = null_not_is(value);
-    let shaped = equal(typeof value, "object");
-    let objected = and(filled, shaped);
-    if (not(objected)) {
-      return value;
-    }
-    let kept = {};
-    for (let key of object_property_names(value)) {
-      let advised = equal(key, advice);
-      if (advised) {
-        continue;
-      }
-      kept[key] = advice_free(value[key]);
-    }
-    return kept;
-  }
-  let freed = advice_free(parsed);
+  let freed = qa_gate_said_advice_remove_advice_free(parsed, advice);
   let written = json_to_try(freed);
   let unwritable = null_is(written);
   if (unwritable) {
