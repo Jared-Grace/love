@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { app_code_lesson_quiz_on_move_on } from "./app_code_lesson_quiz_on_move_on.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
@@ -107,7 +108,7 @@ export function app_code_lesson_quiz(
   function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
     html_visibility_hidden(container_success_message);
-    show_correction();
+    app_code_lesson_quiz_show_correction(container_correction);
   }
   let left2 = emoji_light_bulb();
   let reveal_button = app_shared_button_wide_text_combine(
@@ -151,9 +152,6 @@ export function app_code_lesson_quiz(
       qa,
     );
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
-  }
-  function show_correction() {
-    html_visibility_visible(container_correction);
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
