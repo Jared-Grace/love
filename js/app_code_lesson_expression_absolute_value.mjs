@@ -1,4 +1,4 @@
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_code_lesson_expression_absolute_value_title_name_id } from "./app_code_lesson_expression_absolute_value_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { subtract } from "./subtract.mjs";
@@ -8,9 +8,6 @@ import { integer_even_is } from "./integer_even_is.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_absolute_value() {
@@ -44,7 +41,7 @@ export function app_code_lesson_expression_absolute_value() {
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_absolute_value_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -58,20 +55,6 @@ export function app_code_lesson_expression_absolute_value() {
     unscramble_label: "Build the code that gives this positive value: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title is console.log absolute value";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Absolute value ");
-        html_span_text_code_dark(parent, "Math.abs");
-      }
-      return render;
-    }
-    let rights = ["absolute value"];
-    let built = app_code_lesson_name_id_generic(rights, "functions", title_get);
-    return built;
-  }
   function above(root) {
     "examples FIRST (a negative made positive, a positive kept the same), then the three plain rules, with Math.abs in code style. Negatives were seen earlier (e.g. 2 - 5 is -3)";
     let magnitude = integer_random(2, 9);
