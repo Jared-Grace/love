@@ -7,7 +7,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_name_id_symbol(left, rights, symbol) {
-  let name_get = function app_code_lesson_name_id_symbol_name_get(parent) {
+  let paint = function app_code_lesson_name_id_symbol_paint(parent) {
     let r = list_first_remaining(rights);
     let first = property_get(r, "first");
     let remaining = property_get(r, "remaining");
@@ -17,6 +17,6 @@ export function app_code_lesson_name_id_symbol(left, rights, symbol) {
     html_span_text_code_dark(parent, symbol);
     app_code_lesson_name_id_remaining(parent, remaining);
   };
-  let name_id = app_code_lesson_name_id_category_then(rights, left, name_get);
+  let name_id = app_code_lesson_name_id_category_then(rights, left, paint);
   return name_id;
 }
