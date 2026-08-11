@@ -2,7 +2,7 @@ import { uplifting_package_get } from "./uplifting_package_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_shared_bible_reference_text } from "./app_shared_bible_reference_text.mjs";
-export async function app_reply_verses_uplifting_text(bible_folder, reference) {
+export async function reply_verses_uplifting_text(bible_folder, reference) {
   "the words one version has for one uplifting reference or null when that version does not hold it";
   let package_map = await uplifting_package_get(bible_folder);
   if (null_not_is(package_map)) {
