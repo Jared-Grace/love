@@ -2,7 +2,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { reply_response_how_r_u_skip_before } from "./reply_response_how_r_u_skip_before.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_reply_response_how_r_u_skip() {
+export function reply_response_how_r_u_skip() {
   let before = reply_response_how_r_u_skip_before();
   let t = text_combine_multiple([
     before,
