@@ -20,13 +20,12 @@ export async function app_g_verify_view_history_show(
   container,
   small_gap,
   suggest_area,
-  sessionStorage,
   draft_key,
   base_key,
   value,
   autosize,
 ) {
-  arguments_assert(arguments, 10);
+  arguments_assert(arguments, 9);
   try {
     let all = await app_shared_api({
       f_name: fn_name("g_verify_suggest_history_read"),
@@ -58,7 +57,6 @@ export async function app_g_verify_view_history_show(
           html_value_set(suggest_area, t);
           app_g_verify_view_draft_save(
             suggest_area,
-            sessionStorage,
             draft_key,
             base_key,
             value,
