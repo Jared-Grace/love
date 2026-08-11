@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -43,13 +44,13 @@ export function app_g_day_guide_pick(
       less_than_equal(x, max_x) &&
       greater_than_equal(y, min_y) &&
       less_than_equal(y, max_y);
-    if (!in_window) {
+    if (not(in_window)) {
       continue;
     }
     let key = g_coordinates_key(candidate);
     let walkable =
       property_exists(to_target, key) && property_exists(from_player, key);
-    if (!walkable) {
+    if (not(walkable)) {
       continue;
     }
     let candidate_to_target = property_get(to_target, key);
