@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_console_log_remainder_generic_code_of } from "./app_code_lesson_console_log_remainder_generic_code_of.mjs";
 import { app_code_lesson_console_log_remainder_generic_example } from "./app_code_lesson_console_log_remainder_generic_example.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
@@ -8,7 +8,6 @@ import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_
 import { object_merge } from "./object_merge.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -211,13 +210,4 @@ export function app_code_lesson_console_log_remainder_generic(
       );
     }
   }
-}
-function app_code_lesson_console_log_remainder_generic_code_of(
-  n,
-  percent,
-  divisor,
-) {
-  arguments_assert(arguments, 3);
-  let code = js_code_binary_spaced_nb(n, percent, divisor);
-  return code;
 }
