@@ -1,3 +1,6 @@
+import { g_day_lines } from "./g_day_lines.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
+import { multiply } from "./multiply.mjs";
 import { g_plant_chapters_lines_of } from "./g_plant_chapters_lines_of.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { divide_round } from "./divide_round.mjs";
@@ -13,7 +16,6 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not } from "./not.mjs";
 import { g_sermon_groups_todo } from "./g_sermon_groups_todo.mjs";
-import { g_sermon_chapter_days } from "./g_sermon_chapter_days.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { property_get } from "./property_get.mjs";
