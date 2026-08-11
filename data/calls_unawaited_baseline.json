@@ -1,0 +1,13 @@
+{
+ "known": [
+  "app_replace_settings",
+  "app_shared_screen_later",
+  "app_shared_screen_set_lambda",
+  "firebase_prod_asset_backup_auto",
+  "function_curryify_specify_name_get_curried_right",
+  "g_sermon_write_download_fresh",
+  "g_verify_approval_download_fresh",
+  "g_verify_status_download_fresh",
+  "js_imports_auto_relative"
+ ]
+}
