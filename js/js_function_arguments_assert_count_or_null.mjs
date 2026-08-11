@@ -18,7 +18,7 @@ export function js_function_arguments_assert_count_or_null(declaration) {
     if (guard_is) {
       let call = js_statement_call_any_get(statement);
       let args = property_get(call, "arguments");
-      let second = list_at(args, 1);
+      let second = list_second(args);
       let missing = null_is(second);
       if (missing) {
         return;
