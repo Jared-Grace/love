@@ -101,12 +101,13 @@ export function app_g_dev_routes(div_map) {
     app_g_gratitude_overlay();
   }
   async function pray() {
+    ("the #pray screen: the closing prayer turn of a conversation, with the petitions the GAME offers, asked for from ",
+      fn_name("g_prayers_conversation"),
+      " rather than written out here.");
+    ("two petitions used to be spelled into this route by hand, and neither of them was a prayer the game could produce. so the screen under test was showing words that existed nowhere else in the game - the one thing a preview must never do, because what it proves is then about itself.");
     await app_g_view_set(null);
     function done() {}
-    let prayer_texts = [
-      "comfort them and carry their burden",
-      "settle their doubts and help them trust You",
-    ];
+    let prayer_texts = g_prayers_conversation();
     app_g_pray_turn(prayer_texts, noop, done);
   }
   async function day_parts() {
