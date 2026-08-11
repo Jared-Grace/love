@@ -1,10 +1,9 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
 import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
-import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -12,7 +11,6 @@ import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizz
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { list_join } from "./list_join.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -247,20 +245,4 @@ export function app_code_lesson_expression_repeated_generic(words) {
     ]);
     html_div_cycle_code(c, [how_many]);
   }
-}
-function app_code_lesson_expression_repeated_generic_expanded_code(
-  left,
-  count,
-  expand_symbol,
-) {
-  arguments_assert(arguments, 3);
-  ("the short form written out in full - with a left number of 2 and a count of 3, three 2s joined by the smaller operator");
-  function left_text(index) {
-    let t = text_to(left);
-    return t;
-  }
-  let repeats = range_map(count, left_text);
-  let separator = text_combine_multiple([" ", expand_symbol, " "]);
-  let expanded = list_join(repeats, separator);
-  return expanded;
 }
