@@ -1,8 +1,8 @@
+import { examples_menu_dom_group_header } from "./examples_menu_dom_group_header.mjs";
 import { examples_menu_dom_tool_subheader } from "./examples_menu_dom_tool_subheader.mjs";
 import { examples_menu_dom_example_button } from "./examples_menu_dom_example_button.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { list_get_property } from "./list_get_property.mjs";
-import { html_style_margin } from "./html_style_margin.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
@@ -10,7 +10,6 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { examples_groups } from "./examples_groups.mjs";
-import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { equal } from "./equal.mjs";
@@ -24,13 +23,6 @@ export function examples_menu_dom(parent, examples, on_select) {
     parent,
     "Each example is one code transform — the same file shown before and after. They run easiest first; pick any to see it in full.",
   );
-  function group_header(name) {
-    let header = html_element(parent, "h2");
-    html_text_set(header, name);
-    app_shared_text_category(header);
-    html_style_font_size(header, "1rem");
-    html_style_margin(header, "1.5rem 0 0.5rem");
-  }
   function family_at(index_example) {
     "family is attached to each example at build time (see the corpus reader), so the client";
     "reads a plain string here and never pulls the heavy real transforms into the bundle";
@@ -41,7 +33,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     "a tier (or the trailing Other bucket): draw its header, then its cards — and open a";
     "tool sub-header only at the FIRST card of a run of 2+ cards sharing a tool family, so";
     "clusters (rename, parameters, fold) get a label and lone tools stay clean.";
-    group_header(name);
+    examples_menu_dom_group_header(name, parent);
     let last = subtract(size, 1);
     let local = 0;
     while (less_than(local, size)) {
