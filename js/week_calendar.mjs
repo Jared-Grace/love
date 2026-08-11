@@ -1,3 +1,4 @@
+import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
@@ -28,7 +29,6 @@ import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_any } from "./list_any.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
@@ -104,14 +104,6 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       element: cell,
     });
   }
-  function selected_is(day, slot) {
-    function in_range(span) {
-      let r = week_calendar_range_covers(span, day, slot);
-      return r;
-    }
-    let found = list_any(ranges, in_range);
-    return found;
-  }
   function anchor_is(day, slot) {
     let live = not_equal(anchor, null);
     let same = live && equal(anchor.day, day) && equal(anchor.slot, slot);
@@ -119,7 +111,11 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   }
   function record_color(record) {
     let is_anchor = anchor_is(record.day, record.slot);
-    let is_selected = selected_is(record.day, record.slot);
+    let is_selected = week_calendar_selected_is(
+      record.day,
+      record.slot,
+      ranges,
+    );
     let anchor_color = app_shared_color_blue_dark();
     let selected_color = app_shared_container_blue_border_color();
     let empty_color = week_calendar_color_empty(record.slot);
@@ -222,7 +218,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     }
   }
   function free_click(day, slot) {
-    let selected = selected_is(day, slot);
+    let selected = week_calendar_selected_is(day, slot, ranges);
     if (selected) {
       endpoint_back_up(day, slot);
       on_ranges(ranges);
