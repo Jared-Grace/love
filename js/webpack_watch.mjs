@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { webpack_watch_apps_discover } from "./webpack_watch_apps_discover.mjs";
 import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -73,28 +74,6 @@ export async function webpack_watch() {
     let names = list_map(matched, a_name_of);
     return names;
   }
-  async function build_run(a_name) {
-    let busy = property_exists_equals(building, a_name, true);
-    if (busy) {
-      build_schedule(a_name);
-      return;
-    }
-    property_set(building, a_name, true);
-    async function lambda() {
-      fn_name("webpack_watch");
-      log(webpack_watch.name, {
-        rebuild: a_name,
-      });
-      await app_shared_dev_build(a_name);
-      await deps_refresh(a_name);
-      await webpack_watch_apps_discover(app_deps, app_deps_get, build_schedule);
-    }
-    try {
-      await catch_log_async(lambda);
-    } finally {
-      property_set(building, a_name, false);
-    }
-  }
   async function deps_refresh(a_name) {
     "re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart";
     let ad = list_find_property_or_null(app_deps, "a_name", a_name);
@@ -116,7 +95,14 @@ export async function webpack_watch() {
       clearTimeout(existing);
     }
     function fire() {
-      build_run(a_name);
+      webpack_watch_build_run(
+        a_name,
+        building,
+        build_schedule,
+        deps_refresh,
+        app_deps,
+        app_deps_get,
+      );
     }
     let t = setTimeout(fire, 1200);
     property_set(pending, a_name, t);
@@ -144,4 +130,34 @@ export async function webpack_watch() {
   log(webpack_watch.name, {
     watching: folders,
   });
+}
+async function webpack_watch_build_run(
+  a_name,
+  building,
+  build_schedule,
+  deps_refresh,
+  app_deps,
+  app_deps_get,
+) {
+  arguments_assert(arguments, 6);
+  let busy = property_exists_equals(building, a_name, true);
+  if (busy) {
+    build_schedule(a_name);
+    return;
+  }
+  property_set(building, a_name, true);
+  async function lambda() {
+    fn_name("webpack_watch");
+    log(webpack_watch.name, {
+      rebuild: a_name,
+    });
+    await app_shared_dev_build(a_name);
+    await deps_refresh(a_name);
+    await webpack_watch_apps_discover(app_deps, app_deps_get, build_schedule);
+  }
+  try {
+    await catch_log_async(lambda);
+  } finally {
+    property_set(building, a_name, false);
+  }
 }
