@@ -21,6 +21,37 @@
   100% { transform: rotate(-360deg); }
 }
 @keyframes html_loading_breath {
+  0% { transform: scale(1.2365766574040844); }
+  12.5% { transform: scale(0.9506588771265739); }
+  25% { transform: scale(1.2487502426843626); }
+  37.5% { transform: scale(0.8227339613732276); }
+  50% { transform: scale(1.195103588914717); }
+  62.5% { transform: scale(0.9561224668796965); }
+  75% { transform: scale(1.305871731472251); }
+  87.5% { transform: scale(0.8485490211580655); }
+  100% { transform: scale(1.2365766574040844); }
+}
+@keyframes html_loading_core {
+  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }
+}</style><div id="app-loading" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.8);z-index:1000"><div style="position:fixed;top:50%;left:50%;width:16rem;height:16rem;transform:translate(-50%,-50%)"><div style="position:absolute;inset:0;animation:html_loading_breath 8s ease-in-out infinite"><div style="position:absolute;inset:0;border:1rem solid #8cb4ff33;border-top-color:#bcd6ff;border-radius:50%;box-shadow:0 0 1rem #8cb4ff99;animation:html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite"></div></div><div style="position:absolute;inset:4rem;border:0.6rem solid #8cb4ff26;border-bottom-color:#bcd6ff;border-radius:50%;animation:html_loading_spin_reverse 1.4s linear infinite"></div><div style="position:absolute;top:50%;left:50%;width:2.8rem;height:2.8rem;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#bcd6ff 0%,#4a90e2 70%);box-shadow:0 0 1rem #8cb4ffe6;animation:html_loading_core 2s ease-in-out infinite"></div></div><p style="position:fixed;top:calc(50% + 11rem);left:50%;transform:translateX(-50%);margin:0;color:white;font-size:1.5rem;font-family:sans-serif;text-align:center;width:max-content;max-width:100vw;box-sizing:border-box;text-shadow:0 0.05em 0.15em rgba(0, 0, 0, 0.8);background:radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%);padding:1.25rem 3.5rem">One moment, please 🙏</p></div>
+  <script>if (location.pathname.indexOf('/dev/') !== -1) { var dev_error_show = function (kind, message) { var box = document.getElementById('dev-error-banner'); if (!box) { box = document.createElement('pre'); box.id = 'dev-error-banner'; box.setAttribute('style', 'position:fixed;left:0;right:0;bottom:0;max-height:60vh;overflow:auto;margin:0;padding:1rem;z-index:2147483647;background:#ffdddd;color:#900;font:0.9rem monospace;white-space:pre-wrap;border-top:0.25rem solid #900'); document.body.appendChild(box); } box.textContent = box.textContent + kind + ': ' + message + '\n'; }; window.addEventListener('error', function (e) { dev_error_show('error', (e.message || e.error) + ' @ ' + e.filename + ':' + e.lineno); }); window.addEventListener('unhandledrejection', function (e) { var reason = e.reason; dev_error_show('unhandled', (reason && reason.stack) || reason); }); }</script>
+  <div id="app-error" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.8);z-index:1001;display:none;color:white;font-family:sans-serif;font-size:1.5rem;text-align:center;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:1.5rem;box-sizing:border-box"><p>Sorry — this didn't finish loading.</p><button style="font:inherit;color:black;background:white;border:none;border-radius:0.5rem;padding:0.75rem 2rem;cursor:pointer" onclick="location.reload()">Try again</button></div><script>var app_error_show = function () { var box = document.getElementById('app-error'); if (!box) { return; } box.style.display = 'flex'; var splash = document.getElementById('app-loading'); if (splash) { splash.remove(); } }; window.addEventListener('error', app_error_show); window.addEventListener('unhandledrejection', app_error_show);</script>
+  <style>@keyframes html_loading_spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes html_loading_glow {
+  0% { box-shadow: 0 0 0.75rem #8cb4ff66; }
+  50% { box-shadow: 0 0 2rem #8cb4ffe6; }
+  100% { box-shadow: 0 0 0.75rem #8cb4ff66; }
+}
+@keyframes html_loading_spin_reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes html_loading_breath {
   0% { transform: scale(1.202717080694609); }
   12.5% { transform: scale(0.865498734356756); }
   25% { transform: scale(1.2658678067923668); }
@@ -39,6 +70,7 @@
   <script src="g.js?v=1786453986106"> 
     
   </script>
+  <script>if ('serviceWorker' in navigator) { if (location.pathname.indexOf('/dev/') !== -1) { navigator.serviceWorker.getRegistrations().then(function (registrations) { registrations.forEach(function (registration) { registration.unregister(); }); }); } }</script>
   <script>if ('serviceWorker' in navigator) { if (location.pathname.indexOf('/dev/') !== -1) { navigator.serviceWorker.getRegistrations().then(function (registrations) { registrations.forEach(function (registration) { registration.unregister(); }); }); } }</script>
 </body>
 </html>
