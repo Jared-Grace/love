@@ -1,7 +1,7 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_names_unbound_mentioned } from "./js_names_unbound_mentioned.mjs";
+import { set_includes } from "./set_includes.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
 import { js_global_names } from "./js_global_names.mjs";
-import { js_identifier_nodes_bound_by } from "./js_identifier_nodes_bound_by.mjs";
 import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -15,13 +15,14 @@ export function js_free_names_scoped(ast) {
   let globals = js_global_names();
   let name = js_flo_name(ast);
   let supplied = list_concat_multiple([imports, globals, [name]]);
+  ("Which names have a mention nothing binds is asked once for the whole file rather than once for each name. Asking name by name walked the whole tree again every time, and a file binds seven or eight names of its own: measured 2026-08-11 across this repo that was sixty-four seconds, the largest single thing in the gate for names nothing supplies. One walk knows about all of them, because the walk is already holding the scopes around each mention.");
+  let unbound = js_names_unbound_mentioned(ast);
   function free_is(candidate) {
     let covered = list_includes(supplied, candidate);
     if (covered) {
       return false;
     }
-    let nodes = js_identifier_nodes_bound_by(ast, candidate, null);
-    let any = list_empty_not_is(nodes);
+    let any = set_includes(unbound, candidate);
     return any;
   }
   let free = list_filter(names, free_is);
