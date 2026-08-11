@@ -1,8 +1,9 @@
+import { fn_name } from "./fn_name.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
@@ -11,7 +12,6 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_passage_match_count } from "./g_passage_match_count.mjs";
-import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
 import { list_numbers_jitter } from "./list_numbers_jitter.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -23,10 +23,12 @@ export function g_plant_arcs(plant) {
   "This is the third arrangement, and why the FIRST one failed is worth keeping, because it is not the reason it looks like. Deriving the count came out at about six people whatever the plant's size - but the fault was never the deriving. It was that the leader's length was CAPPED AT A SHARE OF THE BUDGET, and a share grows with the thing it is a share of, so every extra turn a bigger plant won went straight back to the leader and none of it reached the room.";
   "Drawing the count from a bell fixed that symptom and paid for it in coupling. Measured over the eighteen plants in the supply, turns per person ran from 24 to 65, and two plants fell under the elder floor purely because their chapter was short. Cutting the cap is what lets deriving work: the leader is worked out from the plant's DAYS alone, so what is left over genuinely tracks how much preaching there is.";
   "The floor that guaranteed every convert a minimum length is GONE and nothing replaced it, because the ordering makes it unreachable - a cast sized by what the turns afford cannot be a cast the turns cannot afford. It was already unreachable: across all eighteen plants that cap never once bound, and the tightest of them wanted 81 turns for its leader against 210 available.";
-  "There is no clamp on the count. Plants are meant to run fifteen to twenty-one days, which derives to eleven through fifteen people, so a clamp would have nothing to do. A plant landing outside that is saying its chapter grouping is off, and g_plant_chapters has already said so through floor_met and over_maximum. Clamping here would be that same finding suppressed rather than heard twice.";
-  "The leader is taken off the top, because the leader is the one person whose length is fixed by something outside the budget - an elder is formed over a set amount of time, and the rest of the plant has to fit around that rather than the leader fitting around the rest.";
-  "The converts then split what is left evenly and are jittered apart. Even-then-jitter rather than a descent: a descent says the second person is always most of the first, which is a shape, and the shape shows. What is wanted is a room of people who are mostly comparable and occasionally not.";
-  "Seeded on the plant's chapters, so a plant always has the same cast. This is authored content - worked out once and met by every player - so a run that differed each time would make a change in the output impossible to read.";
+  ("There is no clamp on the count. Plants are meant to run fifteen to twenty-one days, which derives to eleven through fifteen people, so a clamp would have nothing to do. A plant landing outside that is saying its chapter grouping is off, and ",
+    fn_name("g_plant_chapters"),
+    " has already said so through floor_met and over_maximum. Clamping here would be that same finding suppressed rather than heard twice.");
+  ("The leader is taken off the top, because the leader is the one person whose length is fixed by something outside the budget - an elder is formed over a set amount of time, and the rest of the plant has to fit around that rather than the leader fitting around the rest.");
+  ("The converts then split what is left evenly and are jittered apart. Even-then-jitter rather than a descent: a descent says the second person is always most of the first, which is a shape, and the shape shows. What is wanted is a room of people who are mostly comparable and occasionally not.");
+  ("Seeded on the plant's chapters, so a plant always has the same cast. This is authored content - worked out once and met by every player - so a run that differed each time would make a change in the output impossible to read.");
   let settings = g_generation_settings();
   let days = property_get(plant, "days");
   let chapters = property_get(plant, "chapters");
