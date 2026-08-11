@@ -1,4 +1,4 @@
-import { ternary } from "./ternary.mjs";
+import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -10,9 +10,7 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split } from "./text_split.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_parentheses_moved() {
   "the same three numbers and the same two operators, with the ( and ) in one of two places: (2 + 3) * 4 is 20 and 2 + (3 * 4) is 14. The first parentheses lesson showed the brackets against no brackets. This one shows them against THEMSELVES - nothing on the line differs except where the pair sits, so the answer can only come from reading their position. That is also the first place a learner sees brackets that change nothing: 2 + (3 * 4) is what 2 + 3 * 4 already did, because the brackets there agree with the * being stronger.";
   "The two wrong answers offered are the values of BOTH placements. One of them is the real answer and the multiple choice drops it as a duplicate, so what is left is always the other placement - the exact mistake of reading the brackets in the wrong spot.";
@@ -31,46 +29,12 @@ export function app_code_lesson_expression_parentheses_moved() {
     let a = integer_random(2, 5);
     let b = integer_random(2, 5);
     let c = integer_random(2, 5);
-    let code = arrange(a, b, c, group_first);
-    return code;
-  }
-  function arrange(a, b, c, group_first) {
-    "(a + b) * c when group_first, otherwise a + (b * c)";
-    let plus = js_operator_plus_symbol();
-    let times = js_operator_asterisk_symbol();
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let a_text = text_to(a);
-    let b_text = text_to(b);
-    let c_text = text_to(c);
-    let grouped = [
-      open,
-      a_text,
-      " ",
-      plus,
-      " ",
-      b_text,
-      close,
-      " ",
-      times,
-      " ",
-      c_text,
-    ];
-    let spread = [
-      a_text,
-      " ",
-      plus,
-      " ",
-      open,
-      b_text,
-      " ",
-      times,
-      " ",
-      c_text,
-      close,
-    ];
-    let parts = ternary(group_first, grouped, spread);
-    let code = text_combine_multiple(parts);
+    let code = app_code_lesson_expression_parentheses_moved_arrange(
+      a,
+      b,
+      c,
+      group_first,
+    );
     return code;
   }
   function decoys(question, answer) {
@@ -83,8 +47,18 @@ export function app_code_lesson_expression_parentheses_moved() {
     let a = words[0];
     let b = words[2];
     let c = words[4];
-    let grouped = arrange(a, b, c, true);
-    let spread = arrange(a, b, c, false);
+    let grouped = app_code_lesson_expression_parentheses_moved_arrange(
+      a,
+      b,
+      c,
+      true,
+    );
+    let spread = app_code_lesson_expression_parentheses_moved_arrange(
+      a,
+      b,
+      c,
+      false,
+    );
     let v5 = eval(grouped);
     let v6 = eval(spread);
     let r = [v5, v6];
