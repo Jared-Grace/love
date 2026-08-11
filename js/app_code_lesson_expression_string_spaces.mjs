@@ -1,9 +1,8 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_replace_space_to } from "./text_replace_space_to.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -34,19 +33,15 @@ export function app_code_lesson_expression_string_spaces() {
   return lesson;
   function title_name_id() {
     "the home title: a string can hold spaces";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Strings with spaces ");
-        app_code_string_shape(parent, 2);
-      }
-      return render;
+    function paint(parent) {
+      html_span_text(parent, "Strings with spaces ");
+      app_code_string_shape(parent, 2);
     }
     let rights = ["string", "spaces"];
-    let built = app_code_lesson_name_id_generic(
+    let built = app_code_lesson_name_id_category_then(
       rights,
       app_code_category_expressions(),
-      title_get,
+      paint,
     );
     return built;
   }
