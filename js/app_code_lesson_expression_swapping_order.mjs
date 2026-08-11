@@ -100,5 +100,24 @@ export function app_code_lesson_expression_swapping_order() {
       "*",
       " keep the same value when swapped",
     ]);
+    html_div_cycle_code(swappers, [
+      "But ",
+      "-",
+      " , ",
+      "/",
+      " , ",
+      "%",
+      " , ",
+      "**",
+      " , ",
+      "<",
+      " , ",
+      ">",
+      " , ",
+      "<=",
+      " and ",
+      ">=",
+      " do not always keep the same value when swapped",
+    ]);
   }
 }
