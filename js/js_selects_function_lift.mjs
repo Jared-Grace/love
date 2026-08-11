@@ -1,3 +1,4 @@
+import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +12,6 @@ import { list_previous } from "./list_previous.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
 import { each } from "./each.mjs";
 export async function js_selects_function_lift(ast, selects, f_name_new) {
@@ -40,9 +40,7 @@ export async function js_selects_function_lift(ast, selects, f_name_new) {
   let stack = js_node_to_visitor_stack(ast, declaration);
   let container = list_previous(stack, declaration);
   property_set(id, "name", f_name_new);
-  let params = property_get(declaration, "params");
-  let items = list_map(closed, js_parse_expression);
-  list_add_multiple(params, items);
+  js_function_declaration_params_add(declaration, closed);
   ("The count is written once the parameters are settled, because it has to say how many the function takes after everything it closed over has become one.");
   js_function_arguments_assert_add(declaration);
   function lambda(call) {

@@ -1,3 +1,4 @@
+import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_statements_await_any_is } from "./js_statements_await_any_is.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
@@ -21,8 +22,6 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_difference } from "./list_difference.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
@@ -64,9 +63,7 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   list_remove(missing, f_name_new);
   let reachable = await js_module_names_reachable(ast);
   missing = list_difference(missing, reachable);
-  let list = property_get(declaration, "params");
-  let items = list_map(missing, js_parse_expression);
-  list_add_multiple(list, items);
+  js_function_declaration_params_add(declaration, missing);
   ("The count is written once the parameters are settled, so it says how many the new function really takes.");
   js_function_arguments_assert_add(declaration);
   list_remove_multiple(stack_, span);
