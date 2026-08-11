@@ -49,7 +49,7 @@ export function js_declaration_names_unbound_cases() {
       code: text_frozen(
         "export function f(items) {\n  for (let item of items) {\n    take(item);\n  }\n}\n",
       ),
-      unbound: [own6, t3],
+      unbound: [own, t3],
     },
   ];
   return cases;
