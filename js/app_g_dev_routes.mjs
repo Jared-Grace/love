@@ -1,3 +1,5 @@
+import { app_g_dev_routes_npc_view_of } from "./app_g_dev_routes_npc_view_of.mjs";
+import { app_g_day_start } from "./app_g_day_start.mjs";
 import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
@@ -7,16 +9,11 @@ import { list_get } from "./list_get.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
-import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
-import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_day_talkable_marker } from "./app_g_day_talkable_marker.mjs";
-import { each } from "./each.mjs";
 import { app_g_sky_choices } from "./app_g_sky_choices.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
-import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
@@ -33,10 +30,8 @@ import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_day_sky_update } from "./app_g_day_sky_update.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
-import { list_size } from "./list_size.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
     fn_name("app_g"),
@@ -53,19 +48,10 @@ export function app_g_dev_routes(div_map) {
     };
     await app_g_view_set(view);
   }
-  async function npc_view_of(npc, phase) {
-    let view = {
-      kind: app_g_view_kind_npc(),
-      x: property_get(npc, "x"),
-      y: property_get(npc, "y"),
-      phase,
-    };
-    await app_g_view_set(view);
-  }
   async function npc_view(phase) {
     let npcs = await app_g_npcs_get();
     let npc = list_random_item(npcs);
-    await npc_view_of(npc, phase);
+    await app_g_dev_routes_npc_view_of(npc, phase);
   }
   async function unbeliever() {
     let npcs = await app_g_npcs_get();
@@ -74,7 +60,7 @@ export function app_g_dev_routes(div_map) {
     });
     let npc = list_random_item(unconverted);
     let result = app_g_view_phase_conversation();
-    await npc_view_of(npc, result);
+    await app_g_dev_routes_npc_view_of(npc, result);
   }
   async function quick() {
     "the #quick dev route: open an unbeliever whose conversation is trimmed to ONLY the gospel-share turn, so answering that one objection lands straight on the closing prayer that converts — the fast path to test convert-on-gospel-share without walking the how-are-you and believe turns first.";
@@ -95,7 +81,7 @@ export function app_g_dev_routes(div_map) {
     let key = g_conversation_key();
     property_set(npc, key, quick_conversation);
     let phase = app_g_view_phase_conversation();
-    await npc_view_of(npc, phase);
+    await app_g_dev_routes_npc_view_of(npc, phase);
   }
   async function gospel_share() {
     let result2 = app_g_view_phase_gospel();
@@ -159,19 +145,7 @@ export function app_g_dev_routes(div_map) {
     "the #day_unbelievers demo: 3 nearby unbelievers become today's ONLY talkable people (chosen close together so the walk between them is short). each gets a soft speech-bubble marker; every OTHER npc gives a randomized 'busy' line instead of a conversation (the gate lives in the conversation entry, reading the day session). foundation for the discernment-walk + slice-time day mechanic";
     "there is no button on the map for the discernment prayer. it is prayed from the tap-yourself menu, under Pray, where every other prayer in the game is prayed - so the map here holds only the world and the people in it, and the demo reaches its one mechanic through the door the real game already has.";
     await app_g_view_set(null);
-    let npcs = await app_g_npcs_get();
-    let three = app_g_day_talkables_choose(npcs);
-    let state = app_g_day_state();
-    property_set(state, "div_map", div_map);
-    property_set(state, "talkable", three);
-    let value = list_size(three);
-    property_set(state, "slices_total", value);
-    property_set(state, "slices_done", 0);
-    await app_g_day_sky_update();
-    function mark(npc) {
-      app_g_day_talkable_marker(div_map, npc);
-    }
-    each(three, mark);
+    await app_g_day_start(div_map);
   }
   async function day_conversation() {
     ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation as a ONE-slice day, so it spans the whole 6 AM sunrise → 7 PM dusk and the change is easy to SEE as you answer each turn (",
