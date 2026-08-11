@@ -1,4 +1,4 @@
-import { week_calendar_anchor_is } from "./week_calendar_anchor_is.mjs";
+import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
@@ -8,10 +8,8 @@ import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { date_weekday_short } from "./date_weekday_short.mjs";
 import { date_month_day } from "./date_month_day.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -27,7 +25,6 @@ import { numbers_up_to } from "./numbers_up_to.mjs";
 import { slot_hour_label } from "./slot_hour_label.mjs";
 import { week_range_label } from "./week_range_label.mjs";
 import { week_range_sort_key } from "./week_range_sort_key.mjs";
-import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -105,25 +102,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       element: cell,
     });
   }
-  function record_color(record) {
-    let is_anchor = week_calendar_anchor_is(record.day, record.slot, anchor);
-    let is_selected = week_calendar_selected_is(
-      record.day,
-      record.slot,
-      ranges,
-    );
-    let anchor_color = app_shared_color_blue_dark();
-    let selected_color = app_shared_container_blue_border_color();
-    let empty_color = week_calendar_color_empty(record.slot);
-    let chosen = is_anchor
-      ? anchor_color
-      : is_selected
-        ? selected_color
-        : empty_color;
-    return chosen;
-  }
   function paint_record(record) {
-    let color = record_color(record);
+    let color = week_calendar_record_color(record, anchor, ranges);
     html_style_background_color_set(record.element, color);
   }
   function summary_line(span) {
