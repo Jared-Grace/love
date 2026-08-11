@@ -1,8 +1,8 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split_new_line } from "./text_split_new_line.mjs";
 import { text_split_space } from "./text_split_space.mjs";
@@ -22,8 +22,7 @@ export async function commits_function_nested_lift(folder) {
   let lifts = [];
   for (let line of lines) {
     let parts = text_split_space(line);
-    let size = list_size(parts);
-    let shaped = equal(size, 5);
+    let shaped = list_size_equal(parts, 5);
     if (not(shaped)) {
       continue;
     }
