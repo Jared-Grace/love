@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_parentheses_same_strength_title_name_id } from "./app_code_lesson_expression_parentheses_same_strength_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -47,7 +48,13 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     let plus = js_operator_plus_symbol();
     let minus = js_operator_minus_symbol();
     let inner_symbol = ternary(inner_plus, plus, minus);
-    let code = line(a, minus, b, inner_symbol, c);
+    let code = app_code_lesson_expression_parentheses_same_strength_line(
+      a,
+      minus,
+      b,
+      inner_symbol,
+      c,
+    );
     return code;
   }
   function divide_line() {
@@ -59,29 +66,13 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     let a = multiply(left2, k);
     let divided = js_operator_division_symbol();
     let times = js_operator_asterisk_symbol();
-    let code = line(a, divided, b, times, c);
-    return code;
-  }
-  function line(a, outer_symbol, b, inner_symbol, c) {
-    "the one shape this lesson ever writes: a number, the outer operator, then a group of two numbers";
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let t = text_to(a);
-    let t2 = text_to(b);
-    let t3 = text_to(c);
-    let code = text_combine_multiple([
-      t,
-      " ",
-      outer_symbol,
-      " ",
-      open,
-      t2,
-      " ",
-      inner_symbol,
-      " ",
-      t3,
-      close,
-    ]);
+    let code = app_code_lesson_expression_parentheses_same_strength_line(
+      a,
+      divided,
+      b,
+      times,
+      c,
+    );
     return code;
   }
   function refill() {
@@ -154,4 +145,33 @@ export function app_code_lesson_expression_parentheses_same_strength() {
       " still go first",
     ]);
   }
+}
+function app_code_lesson_expression_parentheses_same_strength_line(
+  a,
+  outer_symbol,
+  b,
+  inner_symbol,
+  c,
+) {
+  arguments_assert(arguments, 5);
+  ("the one shape this lesson ever writes: a number, the outer operator, then a group of two numbers");
+  let open = js_code_parenthesis_left();
+  let close = js_code_parenthesis_right();
+  let t = text_to(a);
+  let t2 = text_to(b);
+  let t3 = text_to(c);
+  let code = text_combine_multiple([
+    t,
+    " ",
+    outer_symbol,
+    " ",
+    open,
+    t2,
+    " ",
+    inner_symbol,
+    " ",
+    t3,
+    close,
+  ]);
+  return code;
 }
