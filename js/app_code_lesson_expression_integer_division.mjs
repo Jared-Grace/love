@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_expression_integer_division_title_name_id } from "./app_code_lesson_expression_integer_division_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -12,9 +12,6 @@ import { text_to } from "./text_to.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_integer_division() {
@@ -47,7 +44,7 @@ export function app_code_lesson_expression_integer_division() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_integer_division_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -61,23 +58,6 @@ export function app_code_lesson_expression_integer_division() {
     unscramble_label: "Build the code that produces the whole count: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title is console.log integer division";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Integer division");
-      }
-      return render;
-    }
-    let rights = ["integer division"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let recall = app_code_container_light_blue(root);
     html_div_cycle_code(recall, [
