@@ -33,6 +33,6 @@
   "app_supper_tl_home -> app_supper_home_generic",
   "app_verses -> app_reply_initialize",
   "app_verses -> app_reply_languages_chosen_default",
-  "app_verses_references_to_groups -> app_reply_verses_uplifting_entries"
+  "app_verses_references_to_groups -> reply_verses_uplifting_entries"
  ]
 }
