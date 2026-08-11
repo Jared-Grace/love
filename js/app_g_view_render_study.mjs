@@ -1,3 +1,4 @@
+import { app_g_view_render_study_style_next } from "./app_g_view_render_study_style_next.mjs";
 import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -121,20 +122,12 @@ export async function app_g_view_render_study(div_map) {
         "box-shadow": "none",
       });
     }
-    function style_next(b) {
-      html_style_assign(b, {
-        "background-color": green_vivid,
-        color: white,
-        "font-weight": "normal",
-        "box-shadow": ring,
-      });
-    }
     function style_word(i) {
       let b = word_bs[i];
       if (less_than(i, current)) {
         style_completed(b);
       } else if (equal(i, current)) {
-        style_next(b);
+        app_g_view_render_study_style_next(b);
       } else {
         style_upcoming(b);
       }
@@ -153,7 +146,7 @@ export async function app_g_view_render_study(div_map) {
           render_thank_gate();
           return;
         }
-        style_next(word_bs[current]);
+        app_g_view_render_study_style_next(word_bs[current]);
         persist_soon();
       }
       return on_tap;
