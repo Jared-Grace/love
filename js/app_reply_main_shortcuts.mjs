@@ -1,3 +1,4 @@
+import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
 import { app_reply_choices_whatsapp } from "./app_reply_choices_whatsapp.mjs";
@@ -17,7 +18,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
 import { app_reply_greetings } from "./app_reply_greetings.mjs";
@@ -53,8 +53,8 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_pk_ = shortcut_extend_count(r_pk_base, 1);
-  let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
+  let r_pk_ = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 1);
+  let r_pk_10 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
   let r_pk_10_g = app_reply_main_shortcuts_shortcut_extend_response(
     r_pk_10,
@@ -97,8 +97,8 @@ export function app_reply_main_shortcuts(
     v,
     glory,
   );
-  let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
-  let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
+  let r_pk_20 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 20);
+  let r_pk_40 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
   let r_ug_base = {
     name: "UG",
@@ -106,8 +106,8 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ug_ = shortcut_extend_count(r_ug_base, 10);
-  let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
+  let r_ug_ = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 10);
+  let r_ug_40 = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 40);
   let languages_ke = languages_default_concat_single(ke);
   let r_ke_base = {
     name: "KE",
@@ -115,8 +115,8 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ke_ = shortcut_extend_count(r_ke_base, 10);
-  let r_ke_40 = shortcut_extend_count(r_ke_base, 40);
+  let r_ke_ = app_reply_main_shortcuts_shortcut_extend_count(r_ke_base, 10);
+  let r_ke_40 = app_reply_main_shortcuts_shortcut_extend_count(r_ke_base, 40);
   let r_default = {
     name: "",
     languages: languages_chosen_default,
@@ -129,7 +129,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_te_ = shortcut_extend_count(r_te_base, 10);
+  let r_te_ = app_reply_main_shortcuts_shortcut_extend_count(r_te_base, 10);
   let bn = ebible_language_bengali();
   let r_bn_base = {
     name: "BN",
@@ -137,7 +137,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_bn_ = shortcut_extend_count(r_bn_base, 10);
+  let r_bn_ = app_reply_main_shortcuts_shortcut_extend_count(r_bn_base, 10);
   let ar = ebible_language_arabic();
   let r_ar_base = {
     name: "AR",
@@ -145,8 +145,8 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ar_ = shortcut_extend_count(r_ar_base, 10);
-  let r_yt = shortcut_extend_count(r_default, 2);
+  let r_ar_ = app_reply_main_shortcuts_shortcut_extend_count(r_ar_base, 10);
+  let r_yt = app_reply_main_shortcuts_shortcut_extend_count(r_default, 2);
   r_yt = app_reply_main_shortcuts_shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
   let r_en_ = {
@@ -190,11 +190,6 @@ export function app_reply_main_shortcuts(
   function languages_default_concat(right) {
     let concated = list_concat(languages_chosen_default, right);
     return concated;
-  }
-  function shortcut_extend_count(base, count) {
-    let extended = app_reply_main_shortcuts_shortcut_extend(base, count);
-    property_set(extended, "count", count);
-    return extended;
   }
   function shortcut_each(s) {
     let name = property_get(s, "name");
