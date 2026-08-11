@@ -13,9 +13,7 @@ export async function function_nested_sizes(f_name) {
   ("Every function written inside the named one, with how many lines of work each holds, biggest first.");
   ("The reading that turns a diagnosis into a command. The report next door says how much of a function's size is folded inside something rather than standing at the top of its body, but not which something - so the answer to a large gap was to open the file and read it. This names each closure and sizes it, which is exactly the two words the lift asks for.");
   ("Every closure is listed, including the ones the lift will refuse. The list that has already dropped those is the candidate report; this one is the honest picture of where a function's size actually sits, which is a different question and the one to ask when the lift says no.");
-  let parsed = await function_parse_declaration(f_name);
-  let ast = property_get(parsed, "ast");
-  let nested = js_functions_nested_declarations(ast);
+  let nested = await function_nested_declarations(f_name);
   function lambda(declaration) {
     let name = js_function_declaration_name(declaration);
     let deep = js_function_declaration_statements_deep(declaration);
@@ -27,7 +25,6 @@ export async function function_nested_sizes(f_name) {
     return row;
   }
   let rows = list_map(nested, lambda);
-  let sizer = property_get_curried_right("size");
-  let ranked = list_sort_number_mapper_reverse(rows, sizer);
+  let ranked = list_sort_size_reverse(rows);
   return ranked;
 }
