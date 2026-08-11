@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -8,24 +9,10 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { add } from "./add.mjs";
 import { ternary } from "./ternary.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_comparison_and() {
   "the step from && with plain true/false operands (already learned) to && with a COMPARISON as an operand: 3 < 5 && 2 < 4. The one new idea: each comparison is worked out to true or false FIRST, and only then does && combine them - so a comparison can stand exactly where a true or false stood. Both forms appear: comparison && comparison, and comparison paired with a plain true/false. This is precisely the shape the chained-comparison fix needs (2 < 5 && 5 < 3), so it comes right before the pitfall lesson. Comparisons parse without parentheses because < and > bind tighter than &&. Answer is the code's own true/false value, correct by construction.";
-  function comparison(want) {
-    "a comparison code string that is `want`: low < high is true, low > high is false";
-    let low = integer_random(1, 5);
-    let min = add(low, 1);
-    let high = integer_random(min, 9);
-    let op = ternary(want, "<", ">");
-    let left = text_to(low);
-    let right = text_to(high);
-    let code = text_combine_multiple([left, " ", op, " ", right]);
-    return code;
-  }
   function and_operands_false() {
     "a pair of truth values whose && is false: at least one is false";
     let patterns = [
@@ -46,15 +33,15 @@ export function app_code_lesson_expression_comparison_and() {
   function two_comparisons(want_true) {
     "comparison && comparison";
     let truths = operand_truths(want_true);
-    let left = comparison(truths[0]);
-    let right = comparison(truths[1]);
+    let left = app_code_lesson_expression_comparison_and_comparison(truths[0]);
+    let right = app_code_lesson_expression_comparison_and_comparison(truths[1]);
     let code = text_combine_multiple([left, " && ", right]);
     return code;
   }
   function comparison_and_literal(want_true) {
     "comparison && a plain true or false";
     let truths = operand_truths(want_true);
-    let left = comparison(truths[0]);
+    let left = app_code_lesson_expression_comparison_and_comparison(truths[0]);
     let right = ternary(truths[1], "true", "false");
     let code = text_combine_multiple([left, " && ", right]);
     return code;
