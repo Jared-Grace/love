@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_min_max_generic_title_name_id } from "./app_code_lesson_expression_min_max_generic_title_name_id.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -10,8 +11,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -61,7 +60,11 @@ export function app_code_lesson_expression_min_max_generic(params) {
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_min_max_generic_title_name_id(
+    noun_upper,
+    called_name,
+    noun,
+  );
   let forwards_question_label = text_combine(noun_upper, " of two: ");
   let forwards_answer_label = text_combine(noun, " value: ");
   let backwards_question_label = text_combine(noun, " value: ");
@@ -88,22 +91,6 @@ export function app_code_lesson_expression_min_max_generic(params) {
     unscramble_label,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: {noun_upper} of two {fn}";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        let heading = text_combine(noun_upper, " of two ");
-        html_span_text(parent, heading);
-        html_span_text_code_dark(parent, called_name);
-      }
-      return render;
-    }
-    let right = text_combine(noun, " of two");
-    let rights = [right];
-    let built = app_code_lesson_name_id_generic(rights, "functions", title_get);
-    return built;
-  }
   function above(root) {
     "the lesson-specific opening line (define_render), then the worked example in BOTH orders - the chosen number on the left and on the right - then the equal-numbers case";
     define_render(root);
