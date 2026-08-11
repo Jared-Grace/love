@@ -3,7 +3,7 @@ import { app_g_day_blocked_is } from "./app_g_day_blocked_is.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
-export function g_day_blocked_check() {
+export function app_g_day_blocked_check() {
   "deterministic REGRESSION check of #day_unbelievers force-righteousness (app_g_day_blocked_is): with no discerned target NOBODY is blocked; once a target is set the target itself is NOT blocked but any OTHER talkable IS. run: node scripts/ai.mjs app_g_day_blocked_check";
   let state = app_g_day_state();
   let target = {
