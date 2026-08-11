@@ -1,3 +1,4 @@
+import { qa_gates_dealt_gate_run } from "./qa_gates_dealt_gate_run.mjs";
 import { browser_secure_context_gate_run } from "./browser_secure_context_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
