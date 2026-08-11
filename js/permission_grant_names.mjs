@@ -882,6 +882,17 @@ export function permission_grant_names() {
   let spelled869 = fn_name("function_nested_lift_name_or_null");
   let spelled870 = fn_name("functions_asts");
   let spelled871 = fn_name("folder_user_root");
+  let spelled872 = fn_name("qa_promoted");
+  let spelled873 = fn_name("function_paths_frozen_is");
+  let spelled874 = fn_name("function_paths_frozen_enable");
+  let spelled875 = fn_name("function_paths_frozen_gate_run");
+  let spelled876 = fn_name("g_sermon_days_total");
+  let spelled877 = fn_name("g_npc_pool_convert_turns");
+  let spelled878 = fn_name("g_sermon_passages_all");
+  let spelled879 = fn_name("text_capitals_underscore_lower");
+  let spelled880 = fn_name("qa_promoted_publish");
+  let spelled881 = fn_name("apps_prod_chunks_missing_gate_run");
+  let spelled882 = fn_name("memory_fn_references_rename");
   let names = [
     spelled,
     spelled2,
@@ -1754,6 +1765,17 @@ export function permission_grant_names() {
     spelled869,
     spelled870,
     spelled871,
+    spelled872,
+    spelled873,
+    spelled874,
+    spelled875,
+    spelled876,
+    spelled877,
+    spelled878,
+    spelled879,
+    spelled880,
+    spelled881,
+    spelled882,
   ];
   return names;
 }
