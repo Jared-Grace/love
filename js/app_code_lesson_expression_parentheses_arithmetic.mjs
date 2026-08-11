@@ -1,3 +1,4 @@
+import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_expression } from "./app_code_lesson_expression_parentheses_arithmetic_expression.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -8,7 +9,6 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { text_replace } from "./text_replace.mjs";
 export function app_code_lesson_expression_parentheses_arithmetic() {
   "the FIRST parentheses a learner ever meets, and they are met where they change the answer: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. Everything else here is already known - the numbers, the operators, and the precedence rule itself, which the plus-times lesson taught as we always do the * first, even when it comes later in the line. So exactly one thing is new: a pair of symbols that overrides that rule. The parenthesised group is shown on BOTH sides of the *, the same way the plus-times lesson showed the same multiplication in both positions, so what is learned is the brackets rather than a position.";
   "The tailored wrong answer is the value of the very same line with the parentheses taken away, which is the whole mistake this lesson exists to prevent: a learner who does not yet believe the brackets matter will read (1 + 2) * 3 as 1 + 2 * 3 and answer 7. Offering that number is what makes choosing 9 an act of reading the brackets rather than of arithmetic.";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     name_id,
     next_arg,
     example_count: 4,
-    decoys,
+    decoys: app_code_parentheses_flat_decoys,
   });
   return lesson;
   function refill() {
@@ -34,16 +34,6 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       app_code_lesson_expression_parentheses_arithmetic_expression(false);
     let list = [v, v2, v3, v4];
     return list;
-  }
-  function decoys(question, answer) {
-    "the tailored wrong answer is this very line with the parentheses taken away - the exact mistake of not reading them. It equals the real answer for a line where the brackets change nothing, and the multiple choice then drops it as a duplicate";
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let without_open = text_replace(question, open, "");
-    let flat = text_replace(without_open, close, "");
-    let value = eval(flat);
-    let r = [value];
-    return r;
   }
   function above(root) {
     "the rule they already have, then the brackets overriding it, then the same group on the other side of the *, then the rule in one line";
