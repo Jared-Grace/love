@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g } from "./app_g.mjs";
+import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_g_dev_index_open_key } from "./app_g_dev_index_open_key.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
 export function app_g_dev_index_open_persist(open_paths) {
