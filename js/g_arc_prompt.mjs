@@ -13,9 +13,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
   "The profile (gender, age, etc.) is RECEIVED rather than LLM decide.";
   ("the profile is one of ", fn_name("g_profiles"), ".");
-  ("turn_target is the turns this person's arc is worth, drawn once for them by ",
-    fn_name("g_npc_pool"),
-    ". It is fixed before any game begins, because the words written here get attached to it - a length redrawn per game would leave them belonging to nobody.");
+  ("turn_target is drawn for this person by ", fn_name("g_npc_pool"), ".");
   ("~Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");

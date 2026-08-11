@@ -1,3 +1,6 @@
+import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
+import { lock_wait } from "./lock_wait.mjs";
+import { qa_gate_run_unlocked } from "./qa_gate_run_unlocked.mjs";
 import { add } from "./add.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -11,9 +14,15 @@ export async function qa_gate_timings_write() {
   "Times every gate on its own inside the frozen copy and writes down what each one took, so the shares handed out afterwards can be made even";
   "It is timed inside the copy rather than out here because that is where the suite runs. The copy is in memory and nobody may write to it, so a name's file is found once and kept, and a gate timed in the living folder is timed against a slower repo - by a different amount for each gate, which is the amount that would go into the shares as an error";
   "One gate at a time is the whole point, so this wants a machine with nothing else on it. Taken while several of us were working, the numbers are of gates waiting for processors rather than of gates, and the shares made from them would be even in waiting rather than even in work";
+  "So it waits for the same lock the repo-wide gate waits for, and for the same reason rather than a new one: the heaviest thing this machine does is ask all the gates, this is that, and two of them at once make each other slow. Hoping for a quiet machine was the alternative, and the run before this one was taken at a load of thirteen and had to be thrown away";
   "Nothing watches this for going out of date, and nothing should. A gate that has grown slower since it was timed makes the shares less even, which is the state the repo lived in before any of this - so a stale record is merely worth less, never wrong, and a gate policing it would fail on every ordinary afternoon";
   "The reading is checked for being suspiciously short before anything is written, because the timing comes back as the words a second run printed, and a run that died early prints something that still parses. A record naming a handful of gates would look like a successful measurement and would quietly hand every unmeasured gate the same average, which is the shape the dealing already falls back to and would report as though it had measured";
-  let told = await qa_snapshot_timed_solo_told();
+  let who = qa_snapshot_owner();
+  async function lambda() {
+    let timed = await qa_snapshot_timed_solo_told();
+    return timed;
+  }
+  let told = await lock_wait(qa_gate_run_unlocked.name, lambda, who);
   let said = property_get(told, "said");
   let began = said.lastIndexOf("\n{");
   if (less_than(began, 0)) {
