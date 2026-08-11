@@ -67,17 +67,32 @@ export function app_code_lesson_expression_swapping_add() {
       " as 3 rows of 4 dots",
     ]);
     app_code_dot_rectangle(times, 3, 4, false);
-    html_div_cycle_code(times, ["3 rows of 4 and 4 rows of 3 are the same"]);
+    html_div_cycle_code(times, [
+      "If we swap ",
+      "3 * 4",
+      " then we have ",
+      "4 * 3",
+    ]);
+    html_div_cycle_code(times, [
+      "That's 4 rows of 3 dots, as you can see below",
+    ]);
     app_code_dot_rectangle(times, 3, 4, true);
     html_div_cycle_code(times, [
-      "The dots stay the same, so the total count stays the same",
+      "Turning the rectangle of dots does not change the number of dots",
     ]);
     html_div_cycle_code(times, [
-      "The count stays the same for all other numbers, not just 3 and 4",
+      "So ",
+      "3 * 4 === 12",
+      " and ",
+      "4 * 3 === 12",
+      " are the same",
     ]);
-    html_div_cycle_code(times, ["So we can swap the 3 and 4"]);
     html_div_cycle_code(times, [
-      "And we can always swap the numbers around ",
+      "And this works for every rectangle of dots, not just ",
+      "3 * 4",
+    ]);
+    html_div_cycle_code(times, [
+      "So we can always swap the numbers around ",
       "*",
     ]);
     let minus = app_code_container_light_blue(root);
