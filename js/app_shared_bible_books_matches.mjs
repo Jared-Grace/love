@@ -1,4 +1,4 @@
-import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
+import { app_shared_bible_books_matches_has_any } from "./app_shared_bible_books_matches_has_any.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_book_division_uncategorized } from "./ebible_book_division_uncategorized.mjs";
@@ -23,10 +23,6 @@ export function app_shared_bible_books_matches(query, books) {
     let m = text_includes(lower, q);
     return m;
   }
-  function has_any(item, key) {
-    let any = property_list_empty_not_is(item, key);
-    return any;
-  }
   function division_matches(division) {
     let name = property_get(division, "name");
     let codes = property_get(division, "book_codes");
@@ -47,7 +43,7 @@ export function app_shared_bible_books_matches(query, books) {
     let divisions = property_get(testament, "divisions");
     let divisions_mapped = list_map(divisions, division_matches);
     function section_has_books(section) {
-      let any = has_any(section, "books");
+      let any = app_shared_bible_books_matches_has_any(section, "books");
       return any;
     }
     let sections = list_filter(divisions_mapped, section_has_books);
@@ -60,7 +56,7 @@ export function app_shared_bible_books_matches(query, books) {
   let testaments = ebible_book_testaments();
   let mapped = list_map(testaments, testament_matches);
   function testament_has_sections(testament) {
-    let any = has_any(testament, "divisions");
+    let any = app_shared_bible_books_matches_has_any(testament, "divisions");
     return any;
   }
   let result = list_filter(mapped, testament_has_sections);
