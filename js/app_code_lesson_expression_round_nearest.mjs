@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_round_nearest_title_name_id } from "./app_code_lesson_expression_round_nearest_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -8,8 +9,6 @@ import { list_map_index } from "./list_map_index.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
@@ -55,7 +54,7 @@ export function app_code_lesson_expression_round_nearest() {
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_round_nearest_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -70,20 +69,6 @@ export function app_code_lesson_expression_round_nearest() {
       "Build the code that rounds to the nearest rounded value: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title is console.log round to nearest";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Round to nearest ");
-        html_span_text_code_dark(parent, "Math.round");
-      }
-      return render;
-    }
-    let rights = ["round to nearest"];
-    let built = app_code_lesson_name_id_generic(rights, "functions", title_get);
-    return built;
-  }
   function above(root) {
     "example before rule: show a round-down and a round-up first, THEN name it nearest, THEN teach how it decides - the first digit after the decimal point, shown on a two-digit decimal so first is unambiguous. Randomized each visit";
     "the whole part avoids 3 and 4 so it never equals a highlighted first digit (3 or 4 below), which would make the number look like it repeats a digit";
