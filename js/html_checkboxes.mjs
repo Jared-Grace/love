@@ -1,14 +1,12 @@
+import { html_checkboxes_validate } from "./html_checkboxes_validate.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_karate_button_background_invalid } from "../../karate_code/js/app_karate_button_background_invalid.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
-import { app_karate_validate_style_assign } from "../../karate_code/js/app_karate_validate_style_assign.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -48,7 +46,8 @@ export function html_checkboxes(
   button_back(context, container_main);
   let div = html_div_text(container_main, top_text);
   html_centered(div);
-  html_style_font_size(div, app_shared_style_control_font_size());
+  let value2 = app_shared_style_control_font_size();
+  html_style_font_size(div, value2);
   html_style_padding(div, "0.6em");
   let checkboxes = null;
   let bn = null;
@@ -72,17 +71,16 @@ export function html_checkboxes(
       html_style_background_color_set(container, selected);
       await sleep_0();
       let valid = valid_get(checkboxes);
-      validate(valid);
+      html_checkboxes_validate(valid, checkboxes, bn);
       let ci = app_karate_button_background_invalid();
       let c = valid ? "#4ad66bff" : ci;
-      html_box_shadow_set(
-        container,
-        text_combine_multiple([
-          "inset 0 0 0 .15em ",
-          html_rgba_to_rgb(c),
-          ", inset 0 0 0 .3em white",
-        ]),
-      );
+      let taken = html_rgba_to_rgb(c);
+      let style_value = text_combine_multiple([
+        "inset 0 0 0 .15em ",
+        taken,
+        ", inset 0 0 0 .3em white",
+      ]);
+      html_box_shadow_set(container, style_value);
     }
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
@@ -95,7 +93,8 @@ export function html_checkboxes(
       margin: "1em",
     });
     let s = html_span_text(label, title);
-    html_style_font_size(s, app_shared_style_control_font_size());
+    let value3 = app_shared_style_control_font_size();
+    html_style_font_size(s, value3);
     html_div_text(label, details);
     object_merge_set(checkbox, {
       container,
@@ -111,10 +110,6 @@ export function html_checkboxes(
     return v;
   }
   bn = button_next(container_main, lambda6);
-  function validate(valid) {
-    let containers = list_map_property(checkboxes, "container");
-    app_karate_validate_style_assign(valid, containers, null, bn);
-  }
-  validate(false);
+  html_checkboxes_validate(false, checkboxes, bn);
   invoke_multiple(afters);
 }
