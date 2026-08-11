@@ -9,6 +9,7 @@ export function daemons_names() {
   let f_name2 = fn_name("webpack_watch");
   let f_name3 = fn_name("git_push_auto");
   let f_name4 = fn_name("g_content_backup_auto");
-  let v = [f_name, f_name2, f_name3, f_name4];
+  let f_name5 = fn_name("qa_commit_named_auto");
+  let v = [f_name, f_name2, f_name3, f_name4, f_name5];
   return v;
 }
