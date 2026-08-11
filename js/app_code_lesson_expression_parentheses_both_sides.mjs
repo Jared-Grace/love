@@ -1,6 +1,6 @@
+import { app_code_lesson_expression_parentheses_both_sides_wrapped } from "./app_code_lesson_expression_parentheses_both_sides_wrapped.mjs";
 import { app_code_lesson_expression_parentheses_both_sides_title_name_id } from "./app_code_lesson_expression_parentheses_both_sides_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
-import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -35,24 +35,10 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function wrapped() {
-    "one comparison already wrapped in ( and ), with the true or false it works out to";
-    let side = app_code_comparison_side();
-    let inner = property_get(side, "code");
-    let value = property_get(side, "value");
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let code = text_combine_multiple([open, inner, close]);
-    let r = {
-      code,
-      value,
-    };
-    return r;
-  }
   function expression(want_true) {
     "a wrapped comparison, then === or !==, then another wrapped comparison, with the operator picked so the whole line lands on want_true";
-    let left = wrapped();
-    let right = wrapped();
+    let left = app_code_lesson_expression_parentheses_both_sides_wrapped();
+    let right = app_code_lesson_expression_parentheses_both_sides_wrapped();
     let left_value = property_get(left, "value");
     let right_value = property_get(right, "value");
     let agree = equal(left_value, right_value);
