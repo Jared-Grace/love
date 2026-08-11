@@ -1,3 +1,6 @@
+import { storage_session_get } from "./storage_session_get.mjs";
+import { app_g } from "./app_g.mjs";
+import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
