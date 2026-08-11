@@ -1,9 +1,9 @@
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
-import { app_reply_response_how_r_u_skip_before } from "./app_reply_response_how_r_u_skip_before.mjs";
+import { reply_response_how_r_u_skip_before } from "./reply_response_how_r_u_skip_before.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_reply_response_how_r_u_skip() {
-  let before = app_reply_response_how_r_u_skip_before();
+  let before = reply_response_how_r_u_skip_before();
   let t = text_combine_multiple([
     before,
     emoji_book_open(),
