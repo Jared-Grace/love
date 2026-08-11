@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_reply_verses_uplifting_entries } from "./app_reply_verses_uplifting_entries.mjs";
+import { reply_verses_uplifting_entries } from "./reply_verses_uplifting_entries.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
 export async function app_verses_references_to_groups(
@@ -9,7 +9,7 @@ export async function app_verses_references_to_groups(
   arguments_assert(arguments, 2);
   let groups = [];
   async function reference_each(reference) {
-    let entries = await app_reply_verses_uplifting_entries(
+    let entries = await reply_verses_uplifting_entries(
       reference,
       languages_chosen,
     );
