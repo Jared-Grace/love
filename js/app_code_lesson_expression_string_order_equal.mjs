@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_string_order_equal_question_code } from "./app_code_lesson_expression_string_order_equal_question_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -6,7 +7,6 @@ import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
@@ -18,9 +18,6 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { equal } from "./equal.mjs";
-import { ternary } from "./ternary.mjs";
-import { property_get } from "./property_get.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_order_equal() {
@@ -56,25 +53,6 @@ export function app_code_lesson_expression_string_order_equal() {
     let lower_only = list_filter(distinct, lower_case_is);
     return lower_only;
   }
-  function question_code(combo, earlier, later) {
-    "one comparison as a code string: the shared pair arranged by the relation - equal uses the earlier word on both sides, before puts the earlier word on the left, after puts the later word on the left - which fixes the true/false answer without computing it here";
-    let operator = property_get(combo, "operator");
-    let relation = property_get(combo, "relation");
-    let after = equal(relation, "after");
-    let before = equal(relation, "before");
-    let left = ternary(after, later, earlier);
-    let right = ternary(before, later, earlier);
-    let code_left = app_code_string_code(left);
-    let code_right = app_code_string_code(right);
-    let joined = text_combine_multiple([
-      code_left,
-      " ",
-      operator,
-      " ",
-      code_right,
-    ]);
-    return joined;
-  }
   function refill() {
     "four comparisons over ONE shared pair of words: <= and >= each shown true (when the strings are equal) and false (when they are in the strictly-wrong direction), so the new equal-is-true behaviour stands out against the < and > the learner already knows";
     let words = words_source();
@@ -84,7 +62,11 @@ export function app_code_lesson_expression_string_order_equal() {
     let later = list_get(ordered, 1);
     function one(combo) {
       "one example built from the combo and the shared pair";
-      let code = question_code(combo, earlier, later);
+      let code = app_code_lesson_expression_string_order_equal_question_code(
+        combo,
+        earlier,
+        later,
+      );
       return code;
     }
     let list = list_map(combos, one);
@@ -117,11 +99,8 @@ export function app_code_lesson_expression_string_order_equal() {
       return render;
     }
     let rights = ["string", "order", "equal"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
+    let left = app_code_category_expressions();
+    let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
   function above(root) {
