@@ -5,7 +5,7 @@ import { text_combine_3 } from "./text_combine_3.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { function_new_code } from "./function_new_code.mjs";
-export async function functions_new_baseline_ratchet_gate(
+export async function functions_new_baseline_ratchet_gate_new(
   lister,
   name_path,
   name_write,
