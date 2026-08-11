@@ -79,6 +79,7 @@ export function g_plant_arcs(plant) {
   let r = {
     book: property_get(plant, "book"),
     chapters,
+    lines,
     days,
     matches,
     question_turns,

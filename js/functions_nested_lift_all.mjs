@@ -1,13 +1,10 @@
+import { functions_nested_lift_pass } from "./functions_nested_lift_pass.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
 import { property_get } from "./property_get.mjs";
-import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { function_exists } from "./function_exists.mjs";
-import { function_call_commit } from "./function_call_commit.mjs";
-import { function_nested_lift } from "./function_nested_lift.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 export async function functions_nested_lift_all() {

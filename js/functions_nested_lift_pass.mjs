@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { function_exists } from "./function_exists.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { function_nested_lift } from "./function_nested_lift.mjs";
+import { not } from "./not.mjs";
 export async function functions_nested_lift_pass() {
   arguments_assert(arguments, 0);
   ("One walk down the work list, moving out the piece it names inside each function that has one, each under a name worked out from the two names it has, and each committed under its own command before the next one starts.");
@@ -36,8 +46,15 @@ export async function functions_nested_lift_pass() {
       nested,
       f_name_new,
     ]);
-    list_add(lifted, { name: f_name, nested, f_name_new });
+    list_add(lifted, {
+      name: f_name,
+      nested,
+      f_name_new,
+    });
   }
-  let r = { lifted, skipped };
+  let r = {
+    lifted,
+    skipped,
+  };
   return r;
 }
