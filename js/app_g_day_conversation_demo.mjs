@@ -21,11 +21,7 @@ export async function app_g_day_conversation_demo() {
     christian: false,
   });
   let npc = list_random_item(unconverted);
-  let view = {
-    kind: app_g_view_kind_npc(),
-    x: property_get(npc, "x"),
-    y: property_get(npc, "y"),
-    phase: app_g_view_phase_conversation(),
-  };
+  let phase = app_g_view_phase_conversation();
+  let view = app_g_view_npc(npc, phase);
   await app_g_view_set(view);
 }
