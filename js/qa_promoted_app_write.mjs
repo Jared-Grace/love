@@ -1,3 +1,4 @@
+import { git_commit_full } from "./git_commit_full.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { qa_promoted } from "./qa_promoted.mjs";
 import { qa_promoted_path } from "./qa_promoted_path.mjs";
