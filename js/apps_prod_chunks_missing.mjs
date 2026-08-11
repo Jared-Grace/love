@@ -1,4 +1,4 @@
-import { app_prod_chunks_missing } from "./app_prod_chunks_missing.mjs";
+import { app_shared_prod_chunks_missing } from "./app_shared_prod_chunks_missing.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -10,7 +10,7 @@ export async function apps_prod_chunks_missing() {
   "An app missing nothing is left out entirely, so an empty answer means the fault is nowhere - which is the shape a gate can be built on.";
   let app_names = await apps_names();
   async function app_lambda(app_name) {
-    let missing = await app_prod_chunks_missing(app_name);
+    let missing = await app_shared_prod_chunks_missing(app_name);
     let r = {
       app_name,
       missing,
