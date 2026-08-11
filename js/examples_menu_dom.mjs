@@ -1,3 +1,4 @@
+import { examples_menu_dom_tool_subheader } from "./examples_menu_dom_tool_subheader.mjs";
 import { examples_menu_dom_example_button } from "./examples_menu_dom_example_button.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -6,9 +7,6 @@ import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { examples_groups } from "./examples_groups.mjs";
@@ -32,17 +30,6 @@ export function examples_menu_dom(parent, examples, on_select) {
     app_shared_text_category(header);
     html_style_font_size(header, "1rem");
     html_style_margin(header, "1.5rem 0 0.5rem");
-  }
-  function tool_subheader(name) {
-    "a lighter label than the tier header — clusters same-tool cards inside a tier";
-    let header = html_element(parent, "h3");
-    html_text_set(header, name);
-    html_style_font_size(header, "0.8rem");
-    html_style_set(header, "text-transform", "uppercase");
-    html_style_set(header, "letter-spacing", "0.05em");
-    html_font_color_set(header, "#888");
-    html_bold_semi(header);
-    html_style_margin(header, "0.75rem 0 0.35rem");
   }
   function family_at(index_example) {
     "family is attached to each example at build time (see the corpus reader), so the client";
@@ -71,7 +58,7 @@ export function examples_menu_dom(parent, examples, on_select) {
       }
       if (equal_not(family, family_prev)) {
         if (equal(family, family_next)) {
-          tool_subheader(family);
+          examples_menu_dom_tool_subheader(family, parent);
         }
       }
       examples_menu_dom_example_button(g, examples, on_select, parent);
