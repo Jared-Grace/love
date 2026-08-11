@@ -1,3 +1,4 @@
+import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
 import { apps_prod_chunks_missing_gate_run } from "./apps_prod_chunks_missing_gate_run.mjs";
 import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run.mjs";
 import { functions_calls_unawaited_gate_run } from "./functions_calls_unawaited_gate_run.mjs";
@@ -327,6 +328,7 @@ export function qa_gates() {
     functions_statements_after_return_gate_run,
     functions_operators_raw_gate_run,
     functions_arity_gate_run,
+    functions_arguments_assert_gate_run,
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
     storage_function_folders_orphaned_gate_run,
