@@ -15,8 +15,8 @@ export async function app_shared_prod_chunks_unreachable(app_name) {
   "Each attempt is allowed to fail on its own and is written down with the reason it gave. A refusal from the far end and a name that never resolved look identical once either is reduced to a missing name, and the two want opposite things done about them";
   let source_name = file_name_js(app_name);
   async function source_lambda() {
-    let text = await firebase_prod_asset_download(source_name);
-    return text;
+    let file_text = await firebase_prod_asset_download(source_name);
+    return file_text;
   }
   let got = await catch_message_async(source_lambda);
   let live = property_get(got, "ok");
