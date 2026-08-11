@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_binding_names } from "./js_binding_names.mjs";
+import { js_imports } from "./js_imports.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_includes } from "./list_includes.mjs";
 export function js_name_taken_is(ast, name) {
   arguments_assert(arguments, 2);
   ("Whether this file already has the name for something of its own - either it binds the name somewhere, or it imports it.");
