@@ -1,3 +1,4 @@
+import { g_plant_chapters_lines_of } from "./g_plant_chapters_lines_of.mjs";
 import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { numbers_apart } from "./numbers_apart.mjs";
@@ -68,10 +69,6 @@ export async function g_plant_chapters() {
       let days = property_get(counted, "days");
       return days;
     }
-    function lines_of(counted) {
-      let lines = property_get(counted, "lines");
-      return lines;
-    }
     let book_days = list_map_sum(held, days_of);
     let rounded = divide_round(book_days, wanted);
     let count = math_max(1, rounded);
@@ -116,7 +113,7 @@ export async function g_plant_chapters() {
       }
       list_add(taken, chapter);
       days_so_far = days_so_far + days;
-      lines_so_far = lines_so_far + lines_of(counted);
+      lines_so_far = lines_so_far + g_plant_chapters_lines_of(counted);
     }
     plant_close();
     return book_plant_list;
