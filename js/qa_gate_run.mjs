@@ -1,91 +1,18 @@
-import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
-import { qa_gate_parts_print } from "./qa_gate_parts_print.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
-import { list_concat_property } from "./list_concat_property.mjs";
-import { list_size_greater_than } from "./list_size_greater_than.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
-import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
-import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
-import { functions_names } from "./functions_names.mjs";
-import { list_get } from "./list_get.mjs";
-import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
-import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
-import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
-import { property_get } from "./property_get.mjs";
-import { qa_gates_machine } from "./qa_gates_machine.mjs";
-import { qa_gates_told } from "./qa_gates_told.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { qa_gates_read } from "./qa_gates_read.mjs";
+import { lock_wait } from "./lock_wait.mjs";
+import { qa_gate_run_unlocked } from "./qa_gate_run_unlocked.mjs";
+import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
 export async function qa_gate_run() {
-  "The repo-wide correctness gate (alias `q`), asking every gate there is";
-  "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing";
-  "A clean answer here is meant to mean the code is sound - so every question the files alone can answer is put to a frozen copy of the folder rather than to the folder itself. Asked of the living folder, neither answer could be checked: a complaint might be nothing but a neighbour saving a file, and a clean answer might be about a file broken a moment after it was read. Asked of a copy nobody can touch, both answers can be had again and come out the same";
-  "The three questions about this machine and about where the folder sits are asked here, where the answer is, and their names are added to whatever the copy complained about so one complaint covers both halves";
-  "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
-  "How long each part of the run took is printed at the end, because the whole number on its own sends whoever wants it faster to the wrong place. Measured once: the gates themselves were four and a half minutes of a nineteen minute run, and the other three quarters went on what happens after them - so every reading of the gates, and every plan to make one of them faster, was aimed at a quarter of the cost. The parts are timed rather than reasoned about because the reasoning was wrong twice on the same afternoon";
-  let began = date_now_milliseconds();
-  let folder = await qa_tree_ensure();
-  let machine = qa_gates_machine();
-  async function copy_asked() {
-    let asked = await qa_snapshot_gate_told(folder);
+  "The repo-wide correctness gate (alias `q`), asking every gate there is - one run at a time on this machine, so a second waits for the first rather than competing with it";
+  "Waiting for a neighbour is the one thing we are told not to do, and this is the exception, because here the neighbour is not a person deciding something. It is a run of the same questions, it is going to finish on its own, and until it does there is nothing to add by starting a second one";
+  "Measured, on twelve processors: three of these at once, each taking nineteen minutes, so everybody waited nineteen minutes. Taken one at a time on a quiet machine they are about six minutes each, so the three finish at six, twelve and eighteen - the same moment for the last one, and the first is free three times sooner. Nobody loses and somebody gains, which is what makes waiting the kind thing rather than the patient thing";
+  "The reason it is not merely no worse is that these runs make each other slow. How many shares to divide into is worked out from what the machine is already doing, so a second run finds the processors full and divides into one share, and then stays busy long enough for a third to find the same. Two of the three measured were running whole and undivided for exactly that reason. Waiting takes the machine out of that circle";
+  "Who is holding it is printed once by the waiting itself, so a wait never reads as a hang. Nothing else here prints, since everything the run says it says under the lock";
+  "A run that dies without giving the lock back does not keep the next one out forever - the lock is watched for its owner going quiet and is taken from a process that is no longer there";
+  let who = qa_snapshot_owner();
+  async function lambda() {
+    let asked = await qa_gate_run_unlocked();
     return asked;
   }
-  async function machine_asked() {
-    let asked = await qa_gates_told(machine);
-    return asked;
-  }
-  let halves = await invoke_multiple_unordered_async([
-    copy_asked,
-    machine_asked,
-  ]);
-  let asked_ms = date_milliseconds_since(began);
-  let told = list_get(halves, 0);
-  let here = list_get(halves, 1);
-  let printed = property_get(told, "printed");
-  console.log(printed);
-  let at_blame = date_now_milliseconds();
-  ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
-  ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
-  let sections = qa_gate_failed_sections(printed);
-  let any = list_size_greater_than(sections, 0);
-  if (any) {
-    let known = await functions_names();
-    let flying = [];
-    for (let section of sections) {
-      let name = property_get(section, "name");
-      let said = property_get(section, "said");
-      console.log("\n=== who last touched what " + name + " named ===");
-      let some = await qa_gate_blame_print(said, known);
-      list_add_multiple(flying, some);
-    }
-    qa_gate_in_flight_print(flying);
-  }
-  let blamed_ms = date_milliseconds_since(at_blame);
-  let failed_copy = property_get(told, "failed");
-  let failed = list_concat_property(failed_copy, here, "failed");
-  if (greater_than(failed.length, 0)) {
-    ("Every red is asked once more out here, in the folder as it stands, because the copy was taken while several of us were writing to it and a file caught half-copied answers the same way however many times it is asked in there. What that ask finds is printed and nothing else: the verdict below stays exactly what the frozen copy said, since a gate quiet out here may only be quiet because somebody is mid-edit, and a clean answer from this gate is supposed to mean the code is sound");
-    let joined = list_join_comma(failed);
-    console.log(
-      "\n=== asking the red gates again, here in the living folder ===",
-    );
-    let at_again = date_now_milliseconds();
-    await qa_gates_here_failed(joined);
-    let again_ms = date_milliseconds_since(at_again);
-    qa_gate_parts_print(asked_ms, blamed_ms, again_ms);
-    throw new Error("qa gate: " + failed.join(", ") + " failed");
-  }
-  qa_gate_parts_print(asked_ms, blamed_ms, 0);
-  console.log("\nall gates passed");
-  ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then the whole-run timings live in the printed block, and one gate at a time is asked for by name instead");
-  let gates = qa_gates_read();
-  let r = {
-    gates: gates.length,
-    failed: 0,
-    frozen: folder,
-  };
+  let r = await lock_wait(qa_gate_run_unlocked.name, lambda, who);
   return r;
 }
