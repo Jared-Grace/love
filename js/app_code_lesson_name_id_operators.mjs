@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 export function app_code_lesson_name_id_operators(word, title_get) {
   arguments_assert(arguments, 2);
   ("A lesson of the operators category, found by one word and titled by the drawing handed in.");
