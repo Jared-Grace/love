@@ -20,7 +20,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     above,
     name_id,
     next_arg,
-    example_count: 4,
+    example_count: 2,
     decoys: app_code_parentheses_flat_decoys,
   });
   return lesson;
