@@ -19,6 +19,7 @@ import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export function g_plant_arcs(plant) {
   "Works out one plant's whole cast - how many people it holds and how many turns each of them is worth.";
+  "The budget is worked out from the plant's LINES, which the plant carries, and never from its days multiplied back out. Those are not the same number: a chapter's days are its lines rounded UP, so rebuilding lines from days hands back a whole day of sermon for every part-day rounded, once per chapter, and a plant of three chapters can be paid for preaching that was never written. Lines are the fact and days are the rounding of it, so anything scaled by how much preaching there is reads the lines.";
   "The COUNT is DERIVED from what the leader leaves - as many people as those turns buy at the usual arc length. Nothing is drawn and nothing is clamped, so a plant with twice the preaching holds twice the people rather than the same people talking twice as long.";
   "This is the third arrangement, and why the FIRST one failed is worth keeping, because it is not the reason it looks like. Deriving the count came out at about six people whatever the plant's size - but the fault was never the deriving. It was that the leader's length was CAPPED AT A SHARE OF THE BUDGET, and a share grows with the thing it is a share of, so every extra turn a bigger plant won went straight back to the leader and none of it reached the room.";
   "Drawing the count from a bell fixed that symptom and paid for it in coupling. Measured over the eighteen plants in the supply, turns per person ran from 24 to 65, and two plants fell under the elder floor purely because their chapter was short. Cutting the cap is what lets deriving work: the leader is worked out from the plant's DAYS alone, so what is left over genuinely tracks how much preaching there is.";
@@ -32,7 +33,7 @@ export function g_plant_arcs(plant) {
   let settings = g_generation_settings();
   let days = property_get(plant, "days");
   let chapters = property_get(plant, "chapters");
-  let lines = multiply(days, settings.day_lines);
+  let lines = property_get(plant, "lines");
   let matches = g_passage_match_count(lines);
   let question_turns = multiply_divide_round(
     matches,

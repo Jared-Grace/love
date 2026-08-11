@@ -1,3 +1,4 @@
+import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { numbers_apart } from "./numbers_apart.mjs";
 import { math_max } from "./math_max.mjs";
@@ -30,10 +31,13 @@ export async function g_plant_chapters() {
   let least = settings.plant_days_minimum;
   let most = settings.plant_days_maximum;
   let wanted = settings.plant_days;
+  ("A chapter is counted in LINES as well as days, and both travel with the plant. Days are what the plant is sized and paced by, and they are rounded UP per chapter because a part-day of sermon still occupies a day. Lines are the sermon's actual size, and every budget scaled by how much preaching there is has to read them rather than multiply the days back out - that reconstruction hands back a whole day of lines for every part-day rounded up, once per chapter, and the error compounds over a plant.");
   async function chapter_day_count(chapter) {
+    let lines = await g_sermon_chapter_lines(chapter);
     let days = await g_sermon_chapter_days(chapter);
     let counted = {
       chapter,
+      lines,
       days,
     };
     return counted;
@@ -64,6 +68,10 @@ export async function g_plant_chapters() {
       let days = property_get(counted, "days");
       return days;
     }
+    function lines_of(counted) {
+      let lines = property_get(counted, "lines");
+      return lines;
+    }
     let book_days = list_map_sum(held, days_of);
     let rounded = divide_round(book_days, wanted);
     let count = math_max(1, rounded);
@@ -71,6 +79,7 @@ export async function g_plant_chapters() {
     let book_plant_list = [];
     let taken = [];
     let days_so_far = 0;
+    let lines_so_far = 0;
     function plant_close() {
       let empty_is = equal(taken.length, 0);
       if (empty_is) {
@@ -81,6 +90,7 @@ export async function g_plant_chapters() {
       let plant = {
         book,
         chapters: taken,
+        lines: lines_so_far,
         days: days_so_far,
         floor_met: not(short_is),
         over_maximum: long_is,
@@ -88,6 +98,7 @@ export async function g_plant_chapters() {
       list_add(book_plant_list, plant);
       taken = [];
       days_so_far = 0;
+      lines_so_far = 0;
     }
     for (let counted of held) {
       let chapter = property_get(counted, "chapter");
@@ -105,6 +116,7 @@ export async function g_plant_chapters() {
       }
       list_add(taken, chapter);
       days_so_far = days_so_far + days;
+      lines_so_far = lines_so_far + lines_of(counted);
     }
     plant_close();
     return book_plant_list;
