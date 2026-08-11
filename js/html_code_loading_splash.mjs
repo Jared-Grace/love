@@ -12,8 +12,11 @@ export function html_code_loading_splash() {
   let style_close = "</style>";
   let backdrop = html_loading_backdrop_style();
   let backdrop_attribute = html_code_style_attribute(backdrop);
+  let id = html_loading_splash_id();
   let open = text_combine_multiple([
-    '<div id="app-loading"',
+    '<div id="',
+    id,
+    '"',
     backdrop_attribute,
     ">",
   ]);
