@@ -312,8 +312,10 @@ export async function app_g_verify_view(
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
   let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
   ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
-  let saved_draft = storage_session_get(app_g_storage_app(),draft_key);
-  let saved_base = storage_session_get(app_g_storage_app(),base_key);
+  let app_fn = app_g_storage_app();
+  let saved_draft = storage_session_get(app_fn, draft_key);
+  let app_fn2 = app_g_storage_app();
+  let saved_base = storage_session_get(app_fn2, base_key);
   let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value4);
   if (draft_fresh) {
     html_value_set(suggest_area, saved_draft);
