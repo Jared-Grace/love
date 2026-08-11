@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_comparison_side } from "./app_code_lesson_expression_comparing_a_comparison_comparison_side.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -81,26 +82,6 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function naming(root) {
-    "what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it";
-    "One line, with the six operators inlined rather than spelled out as six whole comparisons. The symbol is the only thing that differs between them, so six worked-out lines would repeat two numbers six times to show one difference - and they would also read as six things to learn where there is one";
-    "The six come from the one list that holds them, so no other lesson can teach the word a different set. The bold falls on the word, which is what the repo already does for a term it is defining: the word is what the learner carries to the next lesson, and the symbols are already set apart as code tiles";
-    "Joined by and rather than by or, because this line shows all six at once. Or is right where a line says what a single comparison uses, since a comparison uses exactly one of them - the arithmetic-comparison lesson says it that way and keeps or. Here the six are being enumerated, not chosen between";
-    let card = app_code_container_light_blue(root);
-    let line = app_code_lesson_bold_term(
-      card,
-      "Here are some examples of ",
-      "comparisons",
-    );
-    html_span_text(line, ": ");
-    function operator_symbol(operator) {
-      "the symbol shown in an operator's tile";
-      let symbol = property_get(operator, "operator");
-      return symbol;
-    }
-    let operators = js_operators_comparison();
-    app_code_operators_word_list(line, operators, "and", operator_symbol);
-  }
   function replacing(root, code, value) {
     "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
     "The order caveat points back to a rule the learner already has - we do * before + - so replacing in order is a rule they are recognising rather than one they are taking on";
@@ -146,7 +127,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   }
   function above(root) {
     "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the replacing rule, then two lines walked through a replacement at a time";
-    naming(root);
+    app_code_lesson_expression_comparing_a_comparison_naming(root);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
@@ -174,4 +155,25 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     worked_example(root, "So", "3 === 5", false, same, false);
     worked_example(root, "And", "2 < 5", true, different, true);
   }
+}
+function app_code_lesson_expression_comparing_a_comparison_naming(root) {
+  arguments_assert(arguments, 1);
+  ("what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it");
+  ("One line, with the six operators inlined rather than spelled out as six whole comparisons. The symbol is the only thing that differs between them, so six worked-out lines would repeat two numbers six times to show one difference - and they would also read as six things to learn where there is one");
+  ("The six come from the one list that holds them, so no other lesson can teach the word a different set. The bold falls on the word, which is what the repo already does for a term it is defining: the word is what the learner carries to the next lesson, and the symbols are already set apart as code tiles");
+  ("Joined by and rather than by or, because this line shows all six at once. Or is right where a line says what a single comparison uses, since a comparison uses exactly one of them - the arithmetic-comparison lesson says it that way and keeps or. Here the six are being enumerated, not chosen between");
+  let card = app_code_container_light_blue(root);
+  let line = app_code_lesson_bold_term(
+    card,
+    "Here are some examples of ",
+    "comparisons",
+  );
+  html_span_text(line, ": ");
+  function operator_symbol(operator) {
+    "the symbol shown in an operator's tile";
+    let symbol = property_get(operator, "operator");
+    return symbol;
+  }
+  let operators = js_operators_comparison();
+  app_code_operators_word_list(line, operators, "and", operator_symbol);
 }
