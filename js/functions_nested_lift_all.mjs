@@ -12,49 +12,23 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 export async function functions_nested_lift_all() {
   arguments_assert(arguments, 0);
-  ("Moves out every function written inside another one that the work list already names, one at a time, each under a name worked out from the two names it has, and each committed under its own command before the next one starts.");
-  ("The list was already a list of commands and still had to be run by hand, once per row, which is the shape this repo calls a missing command. Running it by hand also breaks the record of what happened: a run of seventy cuts has no single command to name, so it would have to be filed under the bare word, and seventy behaviour-preserving moves would arrive looking like seventy hand edits.");
-  ("Nothing is caught. Every cut that has already run is already committed, so a cut that cannot be made stops the run with everything before it kept and its own reason said out loud - which is what should happen, because a shape the move cannot handle is a finding rather than a row to step over.");
-  ("The two things that can be seen coming are stepped over rather than thrown, because neither is a fault: a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Both are handed back with the reason, because each one names a file that wants a person to read it.");
-  ("It asks the list again at the end. The answer is the proof: the rows left are the functions still standing over the ceiling, and they are left because they hold a straight run of work rather than a closure, so they want the other cut.");
+  ("Moves out every function written inside another one that the work list can name, walking the list again and again until a whole walk moves nothing, and committing each move under its own command as it lands.");
+  ("The list was already a list of commands and still had to be run by hand, once per row, which is the shape this repo calls a missing command. Running it by hand also breaks the record of what happened: a run of seventy moves has no single command to name, so it would have to be filed under the bare word, and seventy behaviour-preserving moves would arrive looking like seventy hand edits.");
+  ("One walk is not enough, and that is a fact about the list rather than a fault in it. The list names only the biggest piece inside each function, because moving that one changes what the second biggest is - so a function holding three pieces gives up one per walk. Measured on the first run: sixty-seven moved, and two lessons still held a piece their neighbour had already had lifted out of it.");
+  ("What ends it is a walk that moves nothing, not a list that empties. The list never empties: a function whose piece cannot be given a name is stepped over every walk and stays on it, so waiting for it to empty would walk for ever.");
+  ("It asks the list once more at the end. The answer is the proof: the rows left are the functions still standing over the ceiling, and they are left because they hold a straight run of work rather than a closure, so they want the other cut.");
   await ai_git_noted();
-  let candidates = await functions_lift_candidates();
   let lifted = [];
   let skipped = [];
-  for (let row of candidates) {
-    let f_name = property_get(row, "name");
-    let nested = property_get(row, "nested");
-    let f_name_new = function_nested_lift_name_or_null(f_name, nested);
-    let named_is = null_not_is(f_name_new);
-    if (not(named_is)) {
-      list_add(skipped, {
-        name: f_name,
-        nested,
-        why: "the piece inside is not named the way this repo names things, so what it should be called once it stands on its own is for somebody reading it to choose",
-      });
-      continue;
-    }
-    let search = await function_exists(f_name_new);
-    let taken = property_get(search, "exists");
-    if (taken) {
-      list_add(skipped, {
-        name: f_name,
-        nested,
-        f_name_new,
-        why: "a function already answers to the name this one would take, and whether the two are the same work is a question for somebody reading both",
-      });
-      continue;
-    }
-    await function_call_commit(function_nested_lift, [
-      f_name,
-      nested,
-      f_name_new,
-    ]);
-    list_add(lifted, {
-      name: f_name,
-      nested,
-      f_name_new,
-    });
+  let dry = false;
+  while (not(dry)) {
+    let pass = await functions_nested_lift_pass();
+    let pass_lifted = property_get(pass, "lifted");
+    let pass_skipped = property_get(pass, "skipped");
+    list_add_multiple(lifted, pass_lifted);
+    skipped = pass_skipped;
+    let moved = list_size(pass_lifted);
+    dry = equal(moved, 0);
   }
   let left = await functions_lift_candidates();
   let remaining = list_size(left);
