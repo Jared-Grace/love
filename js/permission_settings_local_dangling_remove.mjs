@@ -1,3 +1,4 @@
+import { permission_settings_local_dangling_remove_dangling_is } from "./permission_settings_local_dangling_remove_dangling_is.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { list_second } from "./list_second.mjs";
@@ -6,15 +7,10 @@ import { file_read_json } from "./file_read_json.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_or_null } from "./property_or_null.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_aliases } from "./function_aliases.mjs";
-import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 export async function permission_settings_local_dangling_remove() {
   "takes out of the per-machine settings file every allow rule naming something nothing answers to, and then asks again to show none is left";
@@ -58,27 +54,14 @@ export async function permission_settings_local_dangling_remove() {
   let allow = property_get(permissions, "allow");
   let f_names = await functions_names();
   let aliases = await function_aliases();
-  function dangling_is(rule) {
-    let name = dispatcher_run_name(rule);
-    let unnamed = text_empty_is(name);
-    if (unnamed) {
-      return false;
-    }
-    let alive = list_includes(f_names, name);
-    if (alive) {
-      return false;
-    }
-    let target = property_or_null(aliases, name);
-    let aliased = null_not_is(target);
-    if (aliased) {
-      return false;
-    }
-    return true;
-  }
   let removed = [];
   let kept = [];
   for (let rule of allow) {
-    let dangling = dangling_is(rule);
+    let dangling = permission_settings_local_dangling_remove_dangling_is(
+      rule,
+      f_names,
+      aliases,
+    );
     if (dangling) {
       list_add(removed, rule);
       continue;
@@ -101,7 +84,11 @@ export async function permission_settings_local_dangling_remove() {
   let after_allow = property_path_get_2(after, "permissions", "allow");
   let remaining = [];
   for (let rule of after_allow) {
-    let dangling2 = dangling_is(rule);
+    let dangling2 = permission_settings_local_dangling_remove_dangling_is(
+      rule,
+      f_names,
+      aliases,
+    );
     if (dangling2) {
       list_add(remaining, rule);
     }
