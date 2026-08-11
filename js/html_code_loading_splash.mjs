@@ -1,3 +1,4 @@
+import { html_loading_splash_id } from "./html_loading_splash_id.mjs";
 import { html_loading_backdrop_style } from "./html_loading_backdrop_style.mjs";
 import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
 import { html_loading_message_style } from "./html_loading_message_style.mjs";
