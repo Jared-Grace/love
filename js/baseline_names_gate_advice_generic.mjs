@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { baseline_known_read } from "./baseline_known_read.mjs";
+import { names_versus_baseline } from "./names_versus_baseline.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function baseline_names_gate_advice_generic(
   offenders,
   path,
