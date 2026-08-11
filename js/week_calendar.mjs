@@ -1,3 +1,4 @@
+import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
@@ -173,42 +174,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       end: end,
     });
     list_sort_number_mapper(ranges, week_range_sort_key);
-    ranges = ranges_merged(ranges);
-  }
-  function ranges_merged(sorted) {
-    "join overlapping or touching windows on the same day into one: walk the day-then-start sorted list, growing the current window whenever the next one starts within a piece of its end";
-    let out = [];
-    let current = null;
-    function flush() {
-      if (not_equal(current, null)) {
-        list_add(out, current);
-      }
-    }
-    function fold(span) {
-      let live = not_equal(current, null);
-      let joins =
-        live &&
-        equal(current.day, span.day) &&
-        less_than_equal(span.start, current.end + 1);
-      if (joins) {
-        let end = math_max(current.end, span.end);
-        current = {
-          day: current.day,
-          start: current.start,
-          end: end,
-        };
-      } else {
-        flush();
-        current = {
-          day: span.day,
-          start: span.start,
-          end: span.end,
-        };
-      }
-    }
-    each(sorted, fold);
-    flush();
-    return out;
+    ranges = week_calendar_ranges_merged(ranges);
   }
   function endpoint_back_up(day, slot) {
     let next = [];
