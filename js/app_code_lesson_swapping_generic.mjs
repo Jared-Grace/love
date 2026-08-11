@@ -1,8 +1,5 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_swapping_generic_pairs_wanted } from "./app_code_lesson_swapping_generic_pairs_wanted.mjs";
 import { app_code_lesson_swapping_generic_pair_code } from "./app_code_lesson_swapping_generic_pair_code.mjs";
-import { range_from } from "./range_from.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -10,7 +7,6 @@ import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_swapping_generic(config) {
