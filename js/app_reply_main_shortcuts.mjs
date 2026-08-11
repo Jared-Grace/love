@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_reply_main_shortcuts_languages_default_concat } from "./app_reply_main_shortcuts_languages_default_concat.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
@@ -102,7 +103,10 @@ export function app_reply_main_shortcuts(
   );
   let r_pk_20 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 40);
-  let languages_ug = languages_default_concat_single(lug);
+  let languages_ug = app_reply_main_shortcuts_languages_default_concat_single(
+    lug,
+    languages_chosen_default,
+  );
   let r_ug_base = {
     name: "UG",
     languages: languages_ug,
@@ -111,7 +115,10 @@ export function app_reply_main_shortcuts(
   };
   let r_ug_ = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 10);
   let r_ug_40 = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 40);
-  let languages_ke = languages_default_concat_single(ke);
+  let languages_ke = app_reply_main_shortcuts_languages_default_concat_single(
+    ke,
+    languages_chosen_default,
+  );
   let r_ke_base = {
     name: "KE",
     languages: languages_ke,
@@ -128,7 +135,10 @@ export function app_reply_main_shortcuts(
   };
   let r_te_base = {
     name: "TE",
-    languages: languages_default_concat_single(te),
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      te,
+      languages_chosen_default,
+    ),
     count: 0,
     responses: [],
   };
@@ -136,7 +146,10 @@ export function app_reply_main_shortcuts(
   let bn = ebible_language_bengali();
   let r_bn_base = {
     name: "BN",
-    languages: languages_default_concat_single(bn),
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      bn,
+      languages_chosen_default,
+    ),
     count: 0,
     responses: [],
   };
@@ -144,7 +157,10 @@ export function app_reply_main_shortcuts(
   let ar = ebible_language_arabic();
   let r_ar_base = {
     name: "AR",
-    languages: languages_default_concat_single(ar),
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      ar,
+      languages_chosen_default,
+    ),
     count: 0,
     responses: [],
   };
@@ -186,13 +202,6 @@ export function app_reply_main_shortcuts(
     r_en_,
     r_yt,
   ];
-  function languages_default_concat_single(ke2) {
-    let r2 = app_reply_main_shortcuts_languages_default_concat(
-      [ke2],
-      languages_chosen_default,
-    );
-    return r2;
-  }
   function shortcut_each(s) {
     let name = property_get(s, "name");
     let languages2 = property_get(s, "languages");
@@ -211,4 +220,15 @@ export function app_reply_main_shortcuts(
     app_shared_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
+}
+function app_reply_main_shortcuts_languages_default_concat_single(
+  ke2,
+  languages_chosen_default,
+) {
+  arguments_assert(arguments, 2);
+  let r2 = app_reply_main_shortcuts_languages_default_concat(
+    [ke2],
+    languages_chosen_default,
+  );
+  return r2;
 }
