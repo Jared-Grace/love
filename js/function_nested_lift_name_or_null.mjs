@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_lower_is } from "./text_lower_is.mjs";
+import { text_combine_3 } from "./text_combine_3.mjs";
+import { not } from "./not.mjs";
 export function function_nested_lift_name_or_null(f_name, nested) {
   arguments_assert(arguments, 2);
   ("The name a function written inside another one should stand under once it is moved out, worked out from the two names it already has, and nothing at all when those two names cannot say it.");
