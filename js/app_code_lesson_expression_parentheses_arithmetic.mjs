@@ -1,3 +1,4 @@
+import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_expression } from "./app_code_lesson_expression_parentheses_arithmetic_expression.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
@@ -106,12 +107,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     ]);
     html_div_cycle_code(either, ["So ", "4 * (2 + 3)", " is ", "20"]);
     let rule = app_code_container_light_blue(root);
-    html_div_cycle_code(rule, [
-      "Whatever is inside ",
-      open,
-      " and ",
-      close,
-      app_code_parentheses_inside_before_outside(""),
-    ]);
+    let r = app_code_parentheses_inside_before_outside("");
+    html_div_cycle_code(rule, ["Whatever is inside ", open, " and ", close, r]);
   }
 }

@@ -1,3 +1,4 @@
+import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -88,15 +89,10 @@ export function app_code_lesson_expression_parentheses_one_side() {
       " means the same as ",
       "3 === 5",
     ]);
-    html_div_cycle_code(idea, [
-      "The ",
-      open,
-      " and ",
-      close,
-      app_code_parentheses_inside_before_outside(
-        " show that whatever is inside",
-      ),
-    ]);
+    let r = app_code_parentheses_inside_before_outside(
+      " show that whatever is inside",
+    );
+    html_div_cycle_code(idea, ["The ", open, " and ", close, r]);
     let first = app_code_container_light_blue(root);
     html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
     html_div_cycle_code(first, ["So ", "(3 === 5) === false", " is ", "true"]);
