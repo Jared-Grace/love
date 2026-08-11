@@ -1,4 +1,4 @@
-import { app_apps_all_main_fns_generate } from "./app_apps_all_main_fns_generate.mjs";
+import { apps_all_main_fns_generate } from "./apps_all_main_fns_generate.mjs";
 import { apps_delete_confirm } from "./apps_delete_confirm.mjs";
 import { apps_delete_files } from "./apps_delete_files.mjs";
 import { apps_delete_fn } from "./apps_delete_fn.mjs";
@@ -23,5 +23,5 @@ export async function apps_delete(name) {
   await apps_delete_fn_main(name);
   await apps_delete_fn(name);
   await apps_delete_fn_latest(name);
-  await app_apps_all_main_fns_generate();
+  await apps_all_main_fns_generate();
 }
