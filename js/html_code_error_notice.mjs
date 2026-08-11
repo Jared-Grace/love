@@ -33,13 +33,15 @@ export function html_code_error_notice() {
   ]);
   let splash_id = html_loading_splash_id();
   ("the notice covers the splash and then takes it away, so the spinner cannot keep turning behind the words telling a person that the turning has stopped.");
+  ("it is moved onto the DOCUMENT element the moment it is found, and held onto, because an app boots by clearing the body - which swept the notice away with everything else, and left the one thing meant to survive a failed boot as the one thing that could not. the loading overlay lives up there for the same reason.");
   let code = text_combine_multiple([
-    "var app_error_show = function () { ",
-    "var box = document.getElementById('",
+    "var app_error_box = document.getElementById('",
     id,
     "'); ",
-    "if (!box) { return; } ",
-    "box.style.display = 'flex'; ",
+    "if (app_error_box) { document.documentElement.appendChild(app_error_box); } ",
+    "var app_error_show = function () { ",
+    "if (!app_error_box) { return; } ",
+    "app_error_box.style.display = 'flex'; ",
     "var splash = document.getElementById('",
     splash_id,
     "'); ",
