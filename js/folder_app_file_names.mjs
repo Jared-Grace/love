@@ -10,8 +10,8 @@ export async function folder_app_file_names(folder, app_name) {
   "The order is whatever the folder listing gives back, which is the same order every time and the same for every caller, so two of these compared against each other line up.";
   let file_names = await folder_read_files(folder);
   function app_lambda(file_name) {
-    let mine = file_name_app_is(file_name, app_name);
-    return mine;
+    let app_file_name_is = file_name_app_is(file_name, app_name);
+    return app_file_name_is;
   }
   let mine = list_filter(file_names, app_lambda);
   return mine;
