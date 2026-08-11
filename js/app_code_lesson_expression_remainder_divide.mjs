@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
@@ -21,7 +22,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { app_code_arrow } from "./app_code_arrow.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
   let percent = js_operator_percent_sign();
@@ -124,24 +124,8 @@ export function app_code_lesson_expression_remainder_divide() {
       backwards: true,
     };
     let infos = [recognize, build, backwards];
-    function qa_for(info) {
-      "forwards kinds are shown the division and answer with the formula; the backwards kind is shown the formula and answers with the % it equals";
-      let is_backwards = property_get_or(info, "backwards", false);
-      if (is_backwards) {
-        let r4 = {
-          question: answer,
-          answer: percent_expression,
-        };
-        return r4;
-      }
-      let r5 = {
-        question,
-        answer,
-      };
-      return r5;
-    }
     function each_info(info) {
-      let quiz_qa = qa_for(info);
+      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(info);
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
           container,
@@ -159,7 +143,7 @@ export function app_code_lesson_expression_remainder_divide() {
     }
     let quizzes = list_map(infos, each_info);
     function each_exercise(info) {
-      let quiz_qa = qa_for(info);
+      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(info);
       let exercise = {
         info,
         question: property_get(quiz_qa, "question"),
