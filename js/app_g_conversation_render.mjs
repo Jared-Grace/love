@@ -22,8 +22,8 @@ export function app_g_conversation_render(
     fn_name("app_g_turn_menu"),
     " puts it in the box with the other things you could say, and this function adds none. the pray and close screens ask something else (or nothing), so there the parting line still hangs off the OVERLAY below whatever they show.");
   html_clear(overlay);
-  let i2 = list_size(remaining);
-  let has_openers = positive_is(i2);
+  let i = list_size(remaining);
+  let has_openers = positive_is(i);
   if (has_openers) {
     render_openers();
     return;
