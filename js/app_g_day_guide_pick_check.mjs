@@ -7,9 +7,9 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { g_water } from "./g_water.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
-export function g_day_guide_pick_check() {
+export function app_g_day_guide_pick_check() {
   ("deterministic REGRESSION check of the pure gold-guide picker on synthetic 12x12 maps, with the player at the BOTTOM (6,10), the target at the TOP (6,1) and only the bottom half 'visible' (window y 5..11). OPEN MAP: the gold tile must be a real tile inside the window and closer to the target than the player (it caught the neighbours-are-wrapped bug where guide returned null), and it must be the exact best tile (6,5) — the top-middle of what the player can see. DETOUR MAP: a wall of water across y=6 with its only gap at x=0 makes the shortest path leave the window on the far left, so the last path tile still in view is (0,5), nine steps from the target, while the visible tile actually nearest the target is (6,5) at three. it must pick (6,5) — that is the 'sometimes it chooses a tile nearby' bug, and asking every visible tile instead of only the path's tiles is what fixes it. asserts, so it can join the qa gate — run: node scripts/ai.mjs ",
-    fn_name("g_day_guide_pick_check"));
+    fn_name("app_g_day_guide_pick_check"));
   let target = {
     x: 6,
     y: 1,

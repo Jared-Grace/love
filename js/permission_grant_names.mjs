@@ -104,7 +104,7 @@ export function permission_grant_names() {
   let spelled101 = fn_name("permission_grants_flagged");
   let spelled102 = fn_name("qa_tree_ensure");
   let spelled103 = fn_name("qa_gate_tree_run");
-  let spelled104 = fn_name("g_day_guide_pick_check");
+  let spelled104 = fn_name("app_g_day_guide_pick_check");
   let spelled105 = fn_name("functions_merge");
   let spelled106 = fn_name("data_paths");
   let spelled107 = fn_name("data_paths_mentioning");
