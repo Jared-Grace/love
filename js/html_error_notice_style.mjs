@@ -1,3 +1,5 @@
+import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
+import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 export function html_error_notice_style() {
   "how the could-not-start notice is drawn: the same dim full-screen layer the loading splash uses, with its words held in the middle of the viewport rather than below the middle, because there is no spinner above them to leave room for.";
   "it starts hidden. the notice is baked into the page before the app's own script runs - a handler installed by code that never got to run catches nothing - so it has to be standing there unseen until something goes wrong.";
