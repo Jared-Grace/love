@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { app_code_content_cap } from "./app_code_content_cap.mjs";
@@ -150,14 +151,12 @@ export function app_code_lesson_quiz(
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
-    render_correction();
+    app_code_lesson_quiz_render_correction(
+      container_correction,
+      correction_render,
+      qa,
+    );
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
-  }
-  function render_correction() {
-    "render the correction for the current question but keep it INVISIBLE (visibility hidden, still occupying its grid cell in the feedback slot) so the slot always reserves the taller of correction-or-success and NOTHING shifts when Show me the answer swaps the success message for it";
-    html_clear(container_correction);
-    correction_render(container_correction, qa);
-    html_visibility_hidden(container_correction);
   }
   function show_correction() {
     html_visibility_visible(container_correction);
