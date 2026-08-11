@@ -92,12 +92,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     ]);
     html_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
     let rule = app_code_container_light_blue(root);
-    html_div_cycle_code(rule, [
-      "",
-      open,
-      " and ",
-      close,
-      " are solved first, before working left to right",
-    ]);
+    let r = app_code_parentheses_inside_before_outside("");
+    html_div_cycle_code(rule, ["Whatever is inside ", open, " and ", close, r]);
   }
 }
