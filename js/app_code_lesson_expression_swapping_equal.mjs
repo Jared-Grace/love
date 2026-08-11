@@ -46,13 +46,20 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     let same = app_code_container_light_blue(root);
     html_div_cycle_code(same, [
-      "Asking either way gives the same answer, so we can always swap the numbers around ",
+      "Asking if two numbers are the same (",
       "===",
-      " and ",
+      ") doesn't matter if the two numbers are swapped - it's still asking if those two numbers are the same",
+    ]);
+    html_div_cycle_code(same, ["So we can always swap ", "==="]);
+    html_div_cycle_code(same, [
+      "Likewise, for asking if two numbers are different (",
       "!==",
+      "), we can always swap ",
+      "!==",
+      " as well",
     ]);
     html_div_cycle_code(same, [
-      "",
+      "For example: ",
       "3 === 5",
       " is ",
       "false",
