@@ -16,8 +16,8 @@ export function js_code_arguments_assert_stale(code) {
   function read() {
     let ast = js_parse(code);
     let got = js_function_declaration_params_ast_get(ast);
-    let declaration = property_get(got, "declaration");
-    return declaration;
+    let declaration_read = property_get(got, "declaration");
+    return declaration_read;
   }
   let declaration = catch_null(read);
   let unreadable = null_is(declaration);
