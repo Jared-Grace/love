@@ -14,8 +14,6 @@ export async function app_g_click_npc(div_map, npcs_matched, player_img_c) {
   if (converted) {
     return;
   }
-  let x = property_get(npc, "x");
-  let y = property_get(npc, "y");
   let player = await app_g_player_get();
   let npc_img = app_g_npc_img_get(npc);
   let direction_npc = g_direction(npc, player);
