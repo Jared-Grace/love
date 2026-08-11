@@ -33,7 +33,7 @@ import { app_reply_choices_glory } from "./app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "./app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "./app_reply_choices_name.mjs";
 import { app_reply_choices_location } from "./app_reply_choices_location.mjs";
-import { app_reply_choices_give } from "./app_reply_choices_give.mjs";
+import { reply_choices_give } from "./reply_choices_give.mjs";
 import { app_reply_choices_praise } from "./app_reply_choices_praise.mjs";
 import { app_reply_response_greetings } from "./app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "./app_reply_response_how_r_u.mjs";
@@ -171,7 +171,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_give(),
-      response: app_reply_choices_give(),
+      response: reply_choices_give(),
     },
     {
       text: text_combine(emoji_pray(), " Fundraiser"),
