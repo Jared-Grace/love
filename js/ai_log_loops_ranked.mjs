@@ -1,3 +1,4 @@
+import { ai_log_loops_ranked_run_close } from "./ai_log_loops_ranked_run_close.mjs";
 import { ai_log_loops_tallies_ranked } from "./ai_log_loops_tallies_ranked.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
@@ -8,11 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_or_null } from "./property_or_null.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 export function ai_log_loops_ranked(entries) {
   "Which step gets run over and over in a row, and how many commands a sweep would have saved - the reading that says what to turn into one command that finds its own set.";
@@ -28,36 +25,6 @@ export function ai_log_loops_ranked(entries) {
   let loops = {};
   let longest = {};
   let identical = {};
-  function run_close(session) {
-    "Shut an open run and record it, if it was ever a run at all.";
-    let length = property_or_null(lengths, session);
-    let missing = null_is(length);
-    if (missing) {
-      return;
-    }
-    let single = less_than(length, 2);
-    if (single) {
-      return;
-    }
-    let step = property_get(previous, session);
-    let wasted = subtract(length, 1);
-    let changed = property_get(varied, session);
-    if (not(changed)) {
-      property_count_add(identical, step, wasted);
-      return;
-    }
-    property_count_add(spent, step, wasted);
-    property_count_add(loops, step, 1);
-    let best = property_or_null(longest, step);
-    let unseen = null_is(best);
-    if (unseen) {
-      best = 0;
-    }
-    let beaten = greater_than(length, best);
-    if (beaten) {
-      property_set(longest, step, length);
-    }
-  }
   for (let entry of entries) {
     ("The earliest lines were written before the conversation was noted on each one, so they are passed over rather than pooled - pooling them would braid every conversation of those days into one and manufacture runs nobody ran.");
     let noted = property_exists(entry, "session");
@@ -78,7 +45,16 @@ export function ai_log_loops_ranked(entries) {
       }
       continue;
     }
-    run_close(session);
+    ai_log_loops_ranked_run_close(
+      session,
+      lengths,
+      previous,
+      varied,
+      identical,
+      spent,
+      loops,
+      longest,
+    );
     property_set(lengths, session, 1);
     property_set(previous, session, step);
     property_set(signatures, session, signature);
@@ -87,7 +63,16 @@ export function ai_log_loops_ranked(entries) {
   ("A conversation's last run is still open when the lines end, and it is the most recent thing anybody did - so close every one of them rather than dropping the newest evidence in the file.");
   let sessions = object_property_names(lengths);
   for (let session of sessions) {
-    run_close(session);
+    ai_log_loops_ranked_run_close(
+      session,
+      lengths,
+      previous,
+      varied,
+      identical,
+      spent,
+      loops,
+      longest,
+    );
   }
   let ranked = ai_log_loops_tallies_ranked(spent, loops, longest, identical);
   return ranked;
