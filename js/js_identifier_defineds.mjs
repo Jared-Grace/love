@@ -1,3 +1,6 @@
+import { js_identifiers_naming_nodes } from "./js_identifiers_naming_nodes.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { js_catch_clause_names } from "./js_catch_clause_names.mjs";
 import { js_identifier_defineds_function_type_add } from "./js_identifier_defineds_function_type_add.mjs";
 import { js_loop_declared_names } from "./js_loop_declared_names.mjs";
 import { js_types_loop_node } from "./js_types_loop_node.mjs";
@@ -32,8 +35,14 @@ export function js_identifier_defineds(v) {
   function lambda4(la) {
     let e = list_get_end_1(stack);
     if (js_node_type_is(e, "Property")) {
-      let value = property_path_get_2(v, "node", "name");
-      la([value]);
+      ("Only the word standing as the key is answered as bound by itself, and asking the shared judgment settles which word that is rather than treating every name inside a pair as one. A pair has two sides, and the side after the colon is an ordinary name being read - so calling the whole pair a key told every caller that a value written there was already in scope, and a name reached out of an enclosing function that way was invisible. That is how a moved function came to read a colour it was never handed.");
+      let naming = js_identifiers_naming_nodes(e);
+      let named_node = property_get(v, "node");
+      let named_is = list_includes(naming, named_node);
+      if (named_is) {
+        let value = property_path_get_2(v, "node", "name");
+        la([value]);
+      }
     }
     js_identifier_defineds_function_type_add(e, "FunctionExpression", la);
     js_stack_filtered_multiple_each(
@@ -97,6 +106,12 @@ export function js_identifier_defineds(v) {
     }
     let types_loop = js_types_loop_node();
     js_stack_filtered_multiple_each(stack, types_loop, lambda6);
+    ("A caught error is bound by the clause that names it and by nothing else - it is neither declared nor written in a parameter list, so both of the readings above walk straight past it. Bound by nothing reads the same as coming from outside, so a span cut out of a catch asked its caller for the error, and the caller had never heard of it.");
+    function lambda7(node) {
+      let caught = js_catch_clause_names(node);
+      la(caught);
+    }
+    js_stack_filtered_multiple_each(stack, ["CatchClause"], lambda7);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
