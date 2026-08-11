@@ -1,3 +1,4 @@
+import { app_code_lesson_console_log_remainder_generic_remainder_color } from "./app_code_lesson_console_log_remainder_generic_remainder_color.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
@@ -18,7 +19,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
-import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
@@ -86,12 +86,11 @@ export function app_code_lesson_console_log_remainder_generic(
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function remainder_color(remainder) {
-    let color = app_code_remainder_color(remainder, divisor);
-    return color;
-  }
   function remainder_chip(parent, remainder) {
-    let color = remainder_color(remainder);
+    let color = app_code_lesson_console_log_remainder_generic_remainder_color(
+      remainder,
+      divisor,
+    );
     let chip = app_code_lesson_number_chip(parent, remainder, color);
     return chip;
   }
@@ -101,7 +100,10 @@ export function app_code_lesson_console_log_remainder_generic(
     let tile = html_span_code_dark(parent);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
-    let color = remainder_color(remainder);
+    let color = app_code_lesson_console_log_remainder_generic_remainder_color(
+      remainder,
+      divisor,
+    );
     app_code_lesson_number_chip_lifted(tile, remainder, color);
     let t2 = text_to(result);
     let after = text_combine_multiple([" ", triple_equal, " ", t2]);
