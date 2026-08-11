@@ -5,7 +5,7 @@ import { text_combine_today } from "./text_combine_today.mjs";
 import { app_reply_how_feel_today } from "./app_reply_how_feel_today.mjs";
 import { newline_2 } from "./newline_2.mjs";
 import { app_reply_greetings_live } from "./app_reply_greetings_live.mjs";
-import { app_reply_response_how_r_u_today } from "./app_reply_response_how_r_u_today.mjs";
+import { reply_response_how_r_u_today } from "./reply_response_how_r_u_today.mjs";
 import { app_reply_how_r_u_today } from "./app_reply_how_r_u_today.mjs";
 import { text_the_servant_of_god_first_upper } from "./text_the_servant_of_god_first_upper.mjs";
 import { emoji_no } from "./emoji_no.mjs";
@@ -88,7 +88,7 @@ export function app_reply_choices() {
   });
   let greetings = reply_response_greetings();
   let hru = app_reply_response_how_r_u();
-  let hru_today = app_reply_response_how_r_u_today();
+  let hru_today = reply_response_how_r_u_today();
   let how_family = app_reply_response_how_family();
   let how_day = app_reply_response_how_day();
   let live = app_reply_response_live();
