@@ -125,7 +125,12 @@ export function app_code_lesson_expression_remainder_divide() {
     };
     let infos = [recognize, build, backwards];
     function each_info(info) {
-      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(info);
+      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(
+        info,
+        question,
+        answer,
+        percent_expression,
+      );
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
           container,
@@ -143,7 +148,12 @@ export function app_code_lesson_expression_remainder_divide() {
     }
     let quizzes = list_map(infos, each_info);
     function each_exercise(info) {
-      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(info);
+      let quiz_qa = app_code_lesson_expression_remainder_divide_qa_for(
+        info,
+        question,
+        answer,
+        percent_expression,
+      );
       let exercise = {
         info,
         question: property_get(quiz_qa, "question"),

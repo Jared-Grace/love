@@ -71,7 +71,7 @@ export function app_code_review(context) {
   async function go_next() {
     await app_code_review_go_to_lesson(next_lesson, context);
   }
-  app_code_review_persist(context, key);
+  app_code_review_persist(context, key, passed, queue);
   let back = app_shared_button_back_text();
   let back_button = app_shared_button_wide_text_combine(
     g,
@@ -141,7 +141,7 @@ export function app_code_review(context) {
         let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
         list_add(queue, requeued);
       }
-      app_code_review_persist(context, key);
+      app_code_review_persist(context, key, passed, queue);
       present();
     }
     function on_incorrect() {
