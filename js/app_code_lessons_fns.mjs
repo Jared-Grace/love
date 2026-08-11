@@ -143,6 +143,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_exponent,
     app_code_lesson_expression_parentheses_arithmetic,
     app_code_lesson_expression_parentheses_same_strength,
+    app_code_lesson_expression_parentheses_moved,
     app_code_lesson_expression_arithmetic_less_than,
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
