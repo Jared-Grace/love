@@ -1,3 +1,4 @@
+import { week_calendar_anchor_is } from "./week_calendar_anchor_is.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
@@ -104,13 +105,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       element: cell,
     });
   }
-  function anchor_is(day, slot) {
-    let live = not_equal(anchor, null);
-    let same = live && equal(anchor.day, day) && equal(anchor.slot, slot);
-    return same;
-  }
   function record_color(record) {
-    let is_anchor = anchor_is(record.day, record.slot);
+    let is_anchor = week_calendar_anchor_is(record.day, record.slot, anchor);
     let is_selected = week_calendar_selected_is(
       record.day,
       record.slot,
