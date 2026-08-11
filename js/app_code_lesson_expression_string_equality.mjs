@@ -1,7 +1,7 @@
+import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
 import { app_code_lesson_expression_string_equality_title_name_id } from "./app_code_lesson_expression_string_equality_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -9,7 +9,6 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -58,8 +57,7 @@ export function app_code_lesson_expression_string_equality() {
   }
   function refill() {
     "four comparisons over ONE shared pair of words, so only the operator and whether the two sides match change from one example to the next: triple-equals and not-equals, each shown true and false, a balanced two true and two false";
-    let words = app_code_verse_words_clean_unique();
-    let two = list_shuffle_take(words, 2);
+    let two = app_code_lesson_expression_string_concat_pair();
     let word_a = list_get(two, 0);
     let word_b = list_get(two, 1);
     function one(combo) {
