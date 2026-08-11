@@ -1,9 +1,8 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_add() {
@@ -19,16 +18,12 @@ export function app_code_lesson_expression_swapping_add() {
   return lesson;
   function title_name_id() {
     "the home title: swapping + and *, an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_cycle_code(parent, ["swapping ", "+", " and ", "*"]);
-      }
-      return render;
+    function paint(parent) {
+      html_cycle_code(parent, ["swapping ", "+", " and ", "*"]);
     }
     let rights = ["swapping plus times"];
     let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
+    let built = app_code_lesson_name_id_category_then(rights, left, paint);
     return built;
   }
   function above(root) {
