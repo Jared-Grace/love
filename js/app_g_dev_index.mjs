@@ -32,7 +32,8 @@ export function app_g_dev_index() {
   let prefixes = app_g_dev_index_prefixes();
   let tree = app_g_dev_index_tree(all, prefixes);
   let open_key = app_g_dev_index_open_key();
-  let open_stored = storage_session_get(app_g_storage_app(), open_key);
+  let app_fn = app_g_storage_app();
+  let open_stored = storage_session_get(app_fn, open_key);
   let open_paths = new Set(open_stored);
   let top = object_property_names(tree.children).sort();
   for (let label of top) {
