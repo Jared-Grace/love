@@ -1,9 +1,8 @@
+import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 export function app_code_lesson_expression_repeated_generic_title_name_id(
   title_word,
   symbol,
@@ -19,8 +18,6 @@ export function app_code_lesson_expression_repeated_generic_title_name_id(
     }
     return render;
   }
-  let rights = [right_word];
-  let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_generic(rights, left, title_get);
+  let built = app_code_lesson_name_id_operators(right_word, title_get);
   return built;
 }
