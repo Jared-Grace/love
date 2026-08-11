@@ -180,7 +180,7 @@ import { g_day_sky_phase_check } from "./g_day_sky_phase_check.mjs";
 import { g_day_fraction_check } from "./g_day_fraction_check.mjs";
 import { g_day_guide_pick_check } from "./g_day_guide_pick_check.mjs";
 import { g_map_pad_check } from "./g_map_pad_check.mjs";
-import { g_day_blocked_check } from "./g_day_blocked_check.mjs";
+import { app_g_day_blocked_check } from "./app_g_day_blocked_check.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -287,7 +287,7 @@ export function qa_gates() {
     g_day_fraction_check,
     g_day_guide_pick_check,
     g_map_pad_check,
-    g_day_blocked_check,
+    app_g_day_blocked_check,
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
     functions_names_in_text_gate_run,
