@@ -99,12 +99,18 @@ export function app_code_lesson_expression_parentheses_one_side() {
     html_div_cycle_code(second, ["", "2 < 5", " is ", "true"]);
     html_div_cycle_code(second, ["So ", "(2 < 5) !== true", " is ", "false"]);
     let either = app_code_container_light_blue(root);
+    ("The outer operator is named by its SYMBOL, never by the word comparison. Two comparisons stand on this line - the > inside the brackets and the === outside them - and the word is already spent on the inner one by the card above, which says we put ( and ) AROUND a comparison. So either side of the comparison would say the brackets can sit outside the thing they are around. Both symbols are listed because the quiz asks both, and a rule naming only === would read as a rule about ===.");
+    let same_symbol = js_operator_triple_equal_symbol();
+    let different_symbol = js_operator_bang_double_equal_symbol();
     html_div_cycle_code(either, [
       "The ",
       open,
       " and ",
       close,
-      " can be on either side",
+      " can be on either side of the ",
+      same_symbol,
+      " or ",
+      different_symbol,
     ]);
     html_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
     html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
