@@ -1,4 +1,4 @@
-import { week_calendar_render_summary } from "./week_calendar_render_summary.mjs";
+import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_day_cell } from "./week_calendar_day_cell.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
@@ -55,7 +55,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   html_div_text(grid, "");
   each(days, header_cell);
   each(slots, slot_row);
-  paint();
+  week_calendar_paint(records, paint_record, summary, ranges, summary_line);
   function header_cell(day) {
     let weekday = date_weekday_short(day);
     let month_day = date_month_day(day);
@@ -89,10 +89,6 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   function summary_line(span) {
     let text = week_range_label(span);
     app_shared_text_body(summary, text);
-  }
-  function paint() {
-    each(records, paint_record);
-    week_calendar_render_summary(summary, ranges, summary_line);
   }
   function range_add(day, a, b) {
     let start = math_min(a, b);
@@ -139,7 +135,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     } else {
       free_click(day, slot);
     }
-    paint();
+    week_calendar_paint(records, paint_record, summary, ranges, summary_line);
   }
   function anchor_click(day, slot) {
     let same_piece = equal(anchor.day, day) && equal(anchor.slot, slot);
