@@ -1,3 +1,4 @@
+import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
 import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
 import { app_verses_order_standalone_first } from "./app_verses_order_standalone_first.mjs";
 import { language_code_key } from "./language_code_key.mjs";
@@ -40,7 +41,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
@@ -138,7 +138,7 @@ export async function app_verses(context) {
   );
   app_shared_button_copy(card3, copy);
   let card4 = app_shared_container_blue(content);
-  card4_refresh();
+  app_verses_card4_refresh(verse_groups, card4);
   app_shared_contact_button(content, app_verses);
   await draw_restore();
   async function draw_restore() {
@@ -229,7 +229,7 @@ export async function app_verses(context) {
   function display() {
     html_clear(card4);
     each(verse_groups, display_group);
-    card4_refresh();
+    app_verses_card4_refresh(verse_groups, card4);
   }
   function display_group(group) {
     let reference = property_get(group, "reference");
@@ -237,10 +237,6 @@ export async function app_verses(context) {
     app_shared_text_deemphasized(d);
     let entries = property_get(group, "entries");
     app_shared_bible_verse_texts(card4, entries);
-  }
-  function card4_refresh() {
-    let empty = list_empty_is(verse_groups);
-    html_display_none_or_block(empty, card4);
   }
   async function copy() {
     let lines = [];
