@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_comparison_and_and_operands_false } from "./app_code_lesson_expression_comparison_and_and_operands_false.mjs";
 import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -9,7 +9,6 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_comparison_and() {
@@ -105,15 +104,4 @@ export function app_code_lesson_expression_comparison_and() {
       "false",
     ]);
   }
-}
-function app_code_lesson_expression_comparison_and_and_operands_false() {
-  arguments_assert(arguments, 0);
-  ("a pair of truth values whose && is false: at least one is false");
-  let patterns = [
-    [true, false],
-    [false, true],
-    [false, false],
-  ];
-  let pattern = list_random_item(patterns);
-  return pattern;
 }
