@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_min_max_of_three_title_name_id } from "./app_code_lesson_expression_min_max_of_three_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -17,8 +18,6 @@ import { math_max } from "./math_max.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -77,7 +76,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     return others;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_min_max_of_three_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -91,22 +90,6 @@ export function app_code_lesson_expression_min_max_of_three() {
     unscramble_label: "Build the code that gives this value: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title: more than two numbers";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text_code_dark(parent, "Math.max");
-        html_span_text(parent, ", ");
-        html_span_text_code_dark(parent, "Math.min");
-        html_span_text(parent, " 3 numbers");
-      }
-      return render;
-    }
-    let rights = ["more than two numbers"];
-    let built = app_code_lesson_name_id_generic(rights, "functions", title_get);
-    return built;
-  }
   function above(root) {
     "the duo: Math.min and Math.max each shown with the same three numbers, so both are established as taking more than two; randomized each visit";
     let three = three_numbers();
