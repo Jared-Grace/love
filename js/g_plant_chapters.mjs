@@ -31,19 +31,19 @@ export async function g_plant_chapters() {
   let settings = g_generation_settings();
   let least = settings.plant_days_minimum;
   let most = settings.plant_days_maximum;
-  let wanted = settings.plant_days;
-  ("A chapter is counted in LINES as well as days, and both travel with the plant. Days are what the plant is sized and paced by, and they are rounded UP per chapter because a part-day of sermon still occupies a day. Lines are the sermon's actual size, and every budget scaled by how much preaching there is has to read them rather than multiply the days back out - that reconstruction hands back a whole day of lines for every part-day rounded up, once per chapter, and the error compounds over a plant.");
-  async function chapter_day_count(chapter) {
+  let per_day = g_day_lines();
+  let wanted = multiply(settings.plant_days, per_day);
+  ("The grouping is done in LINES and the days are worked out ONCE, when the plant closes. A chapter's own day count cannot be used for this, because it is that chapter's lines rounded UP - and a plant is not one chapter. Adding four rounded-up chapters together spends the part-day rounding four times, as though the preaching stopped for the night at every chapter break. It does not: a plant is consecutive chapters of one letter, and a day reads on across the join.");
+  ("Measured over the supply that error was eight days - nothing on a one-chapter plant, one to two on a plant of three or four - and days are what the leader's discipling is paid out of, so those were days of formation nobody preached for.");
+  async function chapter_line_count(chapter) {
     let lines = await g_sermon_chapter_lines(chapter);
-    let days = await g_sermon_chapter_days(chapter);
     let counted = {
       chapter,
       lines,
-      days,
     };
     return counted;
   }
-  let counteds = await list_map_async(chapters, chapter_day_count);
+  let counteds = await list_map_async(chapters, chapter_line_count);
   let books = [];
   let book_last = "";
   for (let counted of counteds) {
