@@ -23,25 +23,15 @@ export async function baseline_names_gate_generic(
   ("and nothing else about how a ratchet reads may differ between one gate and the");
   ("next - a gate that checked only for growth would be a ratchet with one tooth,");
   ("and it is exactly the sort of half that gets copied without being noticed.");
-  let recorded = await baseline_known_read(path);
-  let change = names_versus_baseline(offenders, recorded);
-  let added = property_get(change, "added");
-  let stale = property_get(change, "stale");
-  list_empty_is_assert_json(added, {
-    hint,
-    added,
-  });
-  list_empty_is_assert_json(stale, {
-    hint: text_combine_multiple([
-      "these no longer offend - shrink the record with ",
-      name_write,
-      " so the same name cannot come back unnoticed",
-    ]),
-    stale,
-  });
-  let r = {
-    added: 0,
-    stale: 0,
-  };
+  ("A gate that can work out something particular to say about the names that newly offend hands over the way of working it out instead of the sentence, and that is the sibling this one now stands on. Saying the same thing every time is the ordinary case and stays the shorter thing to write, so it is kept as the sentence it always was and turned into a way of making one here.");
+  function hint_get() {
+    return hint;
+  }
+  let r = await baseline_names_gate_advice_generic(
+    offenders,
+    path,
+    hint_get,
+    name_write,
+  );
   return r;
 }
