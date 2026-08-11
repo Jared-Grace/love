@@ -1,3 +1,11 @@
+import { html_error_notice_style } from "./html_error_notice_style.mjs";
+import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
+import { html_error_notice_message_text } from "./html_error_notice_message_text.mjs";
+import { html_error_notice_button_style } from "./html_error_notice_button_style.mjs";
+import { html_error_notice_button_text } from "./html_error_notice_button_text.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_loading_splash_id } from "./html_loading_splash_id.mjs";
+import { html_code_element } from "./html_code_element.mjs";
 export function html_code_error_notice() {
   "A boot that dies leaves a person looking at nothing. The white screen is the worst answer a page can give, because it says neither what happened nor what to do, and it looks exactly like a page that is still coming. This puts a plain, kind notice and a Try again button in front of every app on EVERY path, so a start-up that throws is something a person can see and answer instead of something they have to guess at.";
   "It is the production sibling of the dev banner beside it, and the two are different on purpose: the banner shows the error text, the file and the line, which is what the person FIXING it needs and what the person WAITING for it cannot use. So the banner stays dev-only and this one carries no error text at all.";
