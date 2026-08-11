@@ -12,7 +12,9 @@ export function function_paths_frozen_enable() {
   let memory = folder_memory();
   let frozen = text_starts_with(here, memory);
   if (frozen) {
-    let object = global_function_initialize_object(function_paths_frozen_enable);
+    let object = global_function_initialize_object(
+      function_paths_frozen_enable,
+    );
     property_set(object, "frozen", true);
   }
   let r = {
