@@ -1,11 +1,10 @@
+import { git_folder_run } from "./git_folder_run.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { path_join } from "./path_join.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { command_line_git_folder } from "./command_line_git_folder.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split } from "./text_split.mjs";
@@ -28,8 +27,13 @@ export async function function_commit_last(f_name) {
   let here = folder_current_absolute();
   let folder = path_join([here, "..", repo_name]);
   let f_path = function_name_to_path_relative(f_name);
-  let asked = text_combine_multiple(["log -1 --format=%h/%ar/%s -- ", f_path]);
-  let printed = await command_line_git_folder(folder, asked);
+  let printed = await git_folder_run(folder, [
+    "log",
+    "-1",
+    "--format=%h/%ar/%s",
+    "--",
+    f_path,
+  ]);
   let trimmed = text_trim(printed);
   let empty = text_empty_is(trimmed);
   if (empty) {
