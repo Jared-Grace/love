@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -13,20 +14,11 @@ import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_comparison_and() {
   "the step from && with plain true/false operands (already learned) to && with a COMPARISON as an operand: 3 < 5 && 2 < 4. The one new idea: each comparison is worked out to true or false FIRST, and only then does && combine them - so a comparison can stand exactly where a true or false stood. Both forms appear: comparison && comparison, and comparison paired with a plain true/false. This is precisely the shape the chained-comparison fix needs (2 < 5 && 5 < 3), so it comes right before the pitfall lesson. Comparisons parse without parentheses because < and > bind tighter than &&. Answer is the code's own true/false value, correct by construction.";
-  function and_operands_false() {
-    "a pair of truth values whose && is false: at least one is false";
-    let patterns = [
-      [true, false],
-      [false, true],
-      [false, false],
-    ];
-    let pattern = list_random_item(patterns);
-    return pattern;
-  }
   function operand_truths(want_true) {
     "the two operand truth values: both true for a true &&, otherwise a false-making pair";
     let both_true = [true, true];
-    let on_false = and_operands_false();
+    let on_false =
+      app_code_lesson_expression_comparison_and_and_operands_false();
     let truths = ternary(want_true, both_true, on_false);
     return truths;
   }
@@ -113,4 +105,15 @@ export function app_code_lesson_expression_comparison_and() {
       "false",
     ]);
   }
+}
+function app_code_lesson_expression_comparison_and_and_operands_false() {
+  arguments_assert(arguments, 0);
+  ("a pair of truth values whose && is false: at least one is false");
+  let patterns = [
+    [true, false],
+    [false, true],
+    [false, false],
+  ];
+  let pattern = list_random_item(patterns);
+  return pattern;
 }
