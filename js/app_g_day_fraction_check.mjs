@@ -3,7 +3,7 @@ import { app_g_day_fraction } from "./app_g_day_fraction.mjs";
 import { equal } from "./equal.mjs";
 import { divide } from "./divide.mjs";
 import { add } from "./add.mjs";
-export function g_day_fraction_check() {
+export function app_g_day_fraction_check() {
   "deterministic REGRESSION check of the walk+conversation day fraction. At 1:1 over 3 people the day is 6 equal sixths, alternating walk then conversation: dawn 0 → walk to person 1 fills 1/6 → convert BLOCK jumps to 2/6 → … → reach person 3 at 5/6 → convert to sunset (1). Within a walk the sky moves by distance closed; a far leg and near leg both fill their sixth. Also checks a reweighted 2:1 ratio (walk-heavier). run: node scripts/ai.mjs app_g_day_fraction_check";
   assert_message(
     equal(app_g_day_fraction(0, 3, null, null, 1, 1), 0),
