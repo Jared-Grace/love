@@ -1,4 +1,4 @@
-import { app_apps_all_main_fns_generate } from "./app_apps_all_main_fns_generate.mjs";
+import { apps_all_main_fns_generate } from "./apps_all_main_fns_generate.mjs";
 import { app_shared_update } from "./app_shared_update.mjs";
 import { apps_new_fn_latest } from "./apps_new_fn_latest.mjs";
 import { apps_new_fn_main } from "./apps_new_fn_main.mjs";
@@ -14,5 +14,5 @@ export async function apps_new(name) {
   await apps_new_fn_main(name);
   await apps_new_fn_latest(name);
   await app_shared_update(name);
-  await app_apps_all_main_fns_generate();
+  await apps_all_main_fns_generate();
 }
