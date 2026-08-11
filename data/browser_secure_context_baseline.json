@@ -1,0 +1,8 @@
+{
+ "known": [
+  "clipboard_copy -> navigator.clipboard",
+  "clipboard_paste -> navigator.clipboard",
+  "uuid_browser -> crypto.randomUUID",
+  "window_share -> navigator.share"
+ ]
+}
