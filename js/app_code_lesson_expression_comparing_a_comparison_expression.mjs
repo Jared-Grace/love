@@ -7,7 +7,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_keyword } from "./app_code_lesson_expression_comparing_a_comparison_keyword.mjs";
+import { js_true_false_word } from "./js_true_false_word.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_comparing_a_comparison_expression(
   want_true,
@@ -22,8 +22,7 @@ export function app_code_lesson_expression_comparing_a_comparison_expression(
   let on_false = js_operator_bang_double_equal_symbol();
   let symbol = ternary(wanted, on_true, on_false);
   let left_code = property_get(left, "code");
-  let right_code =
-    app_code_lesson_expression_comparing_a_comparison_keyword(right_value);
+  let right_code = js_true_false_word(right_value);
   let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
   return code;
 }
