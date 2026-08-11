@@ -1,4 +1,4 @@
-import { json_from } from "./json_from.mjs";
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
 import { qa_snapshot_timed_solo_told } from "./qa_snapshot_timed_solo_told.mjs";
@@ -23,8 +23,7 @@ export async function qa_gate_timings_write() {
     });
   }
   let json = said.slice(began);
-  let report = json_from(json);
-  let timings = property_get(report, "timings");
+  let timings = json_from_property_get(json, "timings");
   let taken = {};
   for (let timing of timings) {
     let f_name = property_get(timing, "name");
