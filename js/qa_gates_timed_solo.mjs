@@ -1,39 +1,11 @@
-import { function_paths_frozen_enable } from "./function_paths_frozen_enable.mjs";
-import { machine_load_average } from "./machine_load_average.mjs";
-import { timings_total_ms } from "./timings_total_ms.mjs";
-import { console_log_silence } from "./console_log_silence.mjs";
-import { console_log_restore } from "./console_log_restore.mjs";
-import { list_map_async } from "./list_map_async.mjs";
-import { qa_gate_result } from "./qa_gate_result.mjs";
 import { qa_gates } from "./qa_gates.mjs";
-import { timings_print } from "./timings_print.mjs";
+import { qa_gates_timed_solo_generic } from "./qa_gates_timed_solo_generic.mjs";
 export async function qa_gates_timed_solo() {
-  "How long each gate takes with nothing else running, slowest first.";
-  "This is the one number the whole-suite run cannot give you. That run asks every gate at once, so what it times is a gate competing with all the others for the same machine - which is the right number for predicting how long the suite takes, and the wrong one for deciding which gate to make faster. A gate can look slow there purely because it waited.";
-  "One gate at a time is therefore the point, not an oversight: nothing else may be running, or the number means the contended thing again.";
-  "Which is only half of what it can promise, and the load numbers are here because the missing half already misled somebody. One gate at a time is all this can arrange INSIDE its own run; several of us share the machine, and a neighbour asking the whole suite at the same moment contends for exactly the same processors. A gate measured then reads as slow when it is merely waiting - one that takes five seconds was written down as taking thirty, and named the thing to fix. So the load before and after come back with the times, and a run taken while the machine was busy is one to take again rather than to act on.";
+  "How long every gate takes with nothing else running, slowest first, asked of the folder as it stands.";
   "It exists because the question kept being answered by hand, with a shell loop that started a fresh node for every gate. That loop timed the process starts as much as the gates, left nothing behind to run again, and had to be approved every time it was written out; this is one call, in one process, that anybody can repeat.";
   "The total comes back with the ranking because the hand-rolled version always ended by adding the printed numbers up. Two questions get asked together - which gate to make faster, and whether the set is worth attacking at all - so answering only the first sent every reader back to a sum over the printed lines.";
-  "It says the folders cannot change, the same as the whole-suite run does, and for the same reason it is safe to say anywhere: the saying is looked at where it lands and refused unless it can be seen to be true. Standing in the living folder it changes nothing. Standing inside the frozen copy - which is where the suite actually runs - it turns on the same once-per-name lookup the suite gets, and without it the ranking would be of a slower repo than the one being ranked, by an amount that differs from gate to gate rather than shifting them all together.";
-  function_paths_frozen_enable();
+  "Ranking what the suite actually spends its time on is the other one to reach for, and it is not this one - the suite runs inside a frozen copy, and a copy is faster to read than the folder everybody is writing to. This asks about here.";
   let gates = qa_gates();
-  let load_before = machine_load_average();
-  let real = console_log_silence();
-  let results = null;
-  try {
-    results = await list_map_async(gates, qa_gate_result);
-  } finally {
-    console_log_restore(real);
-  }
-  timings_print(results);
-  let total_ms = timings_total_ms(results);
-  let load_after = machine_load_average();
-  let report = {
-    gates: results.length,
-    total_ms,
-    load_before,
-    load_after,
-    timings: results,
-  };
+  let report = await qa_gates_timed_solo_generic(gates);
   return report;
 }

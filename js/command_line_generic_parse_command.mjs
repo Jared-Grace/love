@@ -6,7 +6,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function command_line_generic_parse_command(command_text) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 1);
   if (not_equal(typeof command_text, "string")) {
     throw new TypeError("command must be a string");
   }

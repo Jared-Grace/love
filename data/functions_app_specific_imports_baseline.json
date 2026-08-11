@@ -7,7 +7,6 @@
   "apps_new -> app_apps_all_main_fns_generate",
   "apps_node_only_gate_run -> app_apps_all_main_fns",
   "apps_reachable_unguarded_steps -> app_apps_all_main_fns",
-  "html_checkboxes -> app_karate_container_main",
   "karate_tests -> app_karate",
   "karate_tests -> app_karate_main_title",
   "karate_tests -> app_replace_url_dev",
