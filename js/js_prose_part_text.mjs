@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_literal_is } from "./js_literal_is.mjs";
+import { js_literal_value_get } from "./js_literal_value_get.mjs";
+import { text_is } from "./text_is.mjs";
+import { js_call_is } from "./js_call_is.mjs";
+import { property_list_first } from "./property_list_first.mjs";
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { null_is } from "./null_is.mjs";
 export function js_prose_part_text(node) {
   arguments_assert(arguments, 1);
   ("The words one piece of a paragraph contributes to the sentence, whether that piece was written as text or as a name.");
@@ -11,7 +19,8 @@ export function js_prose_part_text(node) {
     if (string_is) {
       return value;
     }
-    return "";
+    let r = "";
+    return r;
   }
   let call_is = js_call_is(node);
   if (call_is) {
@@ -24,12 +33,14 @@ export function js_prose_part_text(node) {
         return word;
       }
     }
-    return "";
+    let r2 = "";
+    return r2;
   }
   let name = js_identifier_name_try(node);
   let missing = null_is(name);
   if (missing) {
-    return "";
+    let r3 = "";
+    return r3;
   }
   return name;
 }
