@@ -1,3 +1,5 @@
+import { lift_candidate_size_least } from "./lift_candidate_size_least.mjs";
+import { less_than } from "./less_than.mjs";
 import { function_ast_nested } from "./function_ast_nested.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
@@ -32,6 +34,13 @@ export async function function_lift_candidates(f_name) {
     let name = property_get(reading, "name_old");
     let deep = js_function_declaration_statements_deep(declaration);
     let size = list_size(deep);
+    ("A piece too small to be worth moving is left out rather than listed. It is the same rule as leaving out a function with nothing liftable in it - a row here is a command to run, and a command that moves one line out of a long function has not shortened anything.");
+    ("Without this the list ends by naming the smallest thing in the file. It names the biggest piece inside each function, so once every piece worth cutting has been cut the biggest one left is whatever is left, and a one-line wrapper stood at the top of the work list looking like work.");
+    let least = lift_candidate_size_least();
+    let small_is = less_than(size, least);
+    if (small_is) {
+      continue;
+    }
     let closed = property_get(reading, "closed");
     ("Which of the names it closes over are themselves functions written here, because those are the ones to lift first rather than hand in.");
     let closed_nested = list_intersection(closed, names_nested);

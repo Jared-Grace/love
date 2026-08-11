@@ -14,7 +14,9 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   "The turn target is one number.";
   "The profile is RECEIVED rather than chosen. Code deals it, so the spread of gender, age, marriage, children, servitude and government over a whole game is what was decided rather than whatever an LLM reaches for first - and a value code chose cannot be out of range, so three checks stop being needed.";
   ("the profile is one of ", fn_name("g_profiles"), ".");
-  ("turn_target is drawn for this person by ", fn_name("g_arc_lengths"), ".");
+  ("turn_target is the turns this person's arc is worth, drawn once for them by ",
+    fn_name("g_npc_pool"),
+    ". It is fixed before any game begins, because the words written here get attached to it - a length redrawn per game would leave them belonging to nobody.");
   ("~Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
@@ -26,7 +28,10 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let preaching = list_join_space(["The player is answering from", chapter_code]);
+  let preaching = list_join_space([
+    "The player is answering from",
+    chapter_code,
+  ]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined6 = list_join_space([
