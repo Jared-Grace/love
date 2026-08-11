@@ -36,6 +36,12 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     "font-size": font_size,
     opacity: "0.6",
   });
+  ("the lesson's own number leads the title, the same 1-based number and same trailing period the home list shows in its gutter, so a learner reading a lesson can say which one they are on without going back - and so can anyone they are asking about it. It sits INSIDE the muted title rather than beside the home button, because it is part of naming where you are rather than a second control");
+  let lesson_id = property_get(lesson, "id");
+  let lesson_index = app_code_lesson_index_by_id(lesson_id);
+  let number_text = add_1_period(lesson_index);
+  html_span_text(title, number_text);
+  html_span_space(title);
   app_code_lesson_title_render(title, lesson);
   return strip;
 }
