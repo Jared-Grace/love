@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_function_nodes } from "./js_list_function_nodes.mjs";
@@ -13,31 +14,31 @@ export function app_code_lesson_name_id_category_then_maker_or_null(ast) {
   function maker_is(node) {
     let params = property_get(node, "params");
     let params_size = list_size(params);
-    if (params_size !== 2) {
+    if (not_equal(params_size, 2)) {
       return false;
     }
     let second = property_get(params, "1");
     let second_type = property_get(second, "type");
-    if (second_type !== "Identifier") {
+    if (not_equal(second_type, "Identifier")) {
       return false;
     }
     let second_name = property_get(second, "name");
-    if (second_name !== "left_upper") {
+    if (not_equal(second_name, "left_upper")) {
       return false;
     }
     let body = property_get(node, "body");
     let statements = property_get(body, "body");
     let statements_size = list_size(statements);
-    if (statements_size !== 2) {
+    if (not_equal(statements_size, 2)) {
       return false;
     }
     let last = property_get(statements, "1");
     let last_type = property_get(last, "type");
-    if (last_type !== "ReturnStatement") {
+    if (not_equal(last_type, "ReturnStatement")) {
       return false;
     }
     let painter = app_code_lesson_name_id_category_then_painter_or_null(node);
-    let found = painter !== null;
+    let found = not_equal(painter, null);
     return found;
   }
   let makers = list_filter(nodes, maker_is);
