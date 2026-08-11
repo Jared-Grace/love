@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_keyword } from "./app_code_lesson_expression_comparing_a_comparison_keyword.mjs";
+import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_naming } from "./app_code_lesson_expression_comparing_a_comparison_naming.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -55,8 +55,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
     "The order caveat points back to a rule the learner already has - we do * before + - so replacing in order is a rule they are recognising rather than one they are taking on";
     let card = app_code_container_light_blue(root);
-    let answer =
-      app_code_lesson_expression_comparing_a_comparison_keyword(value);
+    let answer = js_true_false_word(value);
     html_div_cycle_code(card, ["", code, " is ", answer]);
     html_div_cycle_code(card, ["So we can replace ", code, " with ", answer]);
     let times = js_operator_asterisk_symbol();
