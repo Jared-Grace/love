@@ -1,22 +1,17 @@
+import { app_code_lesson_expression_remainder_subtract_subtract_code } from "./app_code_lesson_expression_remainder_subtract_subtract_code.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
-import { range_map } from "./range_map.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { list_join } from "./list_join.mjs";
-import { list_concat_single } from "./list_concat_single.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -29,20 +24,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_subtract() {
   "practice a % b (remainder) by writing it out as repeated subtraction (17 % 5 becomes 17 - 5 - 5 - 5): the quiz matches the % form with its subtraction chain, because this lesson teaches what % MEANS - take the divisor away again and again until what is left is smaller than it, and that leftover is the remainder - not the closed-form value; divisor 3..6, 2 or 3 subtractions, leftover 1..divisor-1";
   let percent = js_operator_percent_sign();
-  function subtract_code(number, divisor, count) {
-    "the remainder worked out as repeated subtraction - subtract_code(17, 5, 3) is 17 - 5 - 5 - 5: the number, then the divisor taken away count times";
-    let minus = js_operator_minus_symbol();
-    function divisor_text(index) {
-      let t = text_to(divisor);
-      return t;
-    }
-    let subtractions = range_map(count, divisor_text);
-    let single = text_to(number);
-    let terms = list_concat_single(single, subtractions);
-    let separator = text_combine_multiple([" ", minus, " "]);
-    let chain = list_join(terms, separator);
-    return chain;
-  }
   function batch_get() {
     "four questions - four distinct divisors (so the chains never look alike), each with its own count of subtractions (2 or 3, so the chain length varies) and its own leftover, so the number worked on is count*divisor + leftover and the subtraction always stops one short of going negative; the ANSWER is the subtraction chain, not the value";
     let divisors = list_shuffle_take([3, 4, 5, 6], 4);
@@ -51,7 +32,11 @@ export function app_code_lesson_expression_remainder_subtract() {
       let leftover = integer_random_below(divisor);
       let number = multiply_add(count, divisor, leftover);
       let question = js_code_binary_spaced_nb(number, percent, divisor);
-      let answer = subtract_code(number, divisor, count);
+      let answer = app_code_lesson_expression_remainder_subtract_subtract_code(
+        number,
+        divisor,
+        count,
+      );
       let pair = {
         question,
         answer,
@@ -105,11 +90,8 @@ export function app_code_lesson_expression_remainder_subtract() {
       return render;
     }
     let rights = ["remainder by subtracting"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
+    let left = app_code_category_operators();
+    let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
   function above(root) {
