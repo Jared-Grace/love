@@ -22,17 +22,20 @@ export function js_code_arguments_assert_stale(code) {
   let declaration = catch_null(read);
   let unreadable = null_is(declaration);
   if (unreadable) {
-    return [];
+    let r = [];
+    return r;
   }
   let declared = js_function_arguments_assert_count_or_null(declaration);
   let unguarded = null_is(declared);
   if (unguarded) {
-    return [];
+    let r2 = [];
+    return r2;
   }
   let params = property_list_size(declaration, "params");
   let agrees = equal(declared, params);
   if (agrees) {
-    return [];
+    let r3 = [];
+    return r3;
   }
   let stale = [
     {
