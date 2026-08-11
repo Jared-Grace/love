@@ -1,3 +1,4 @@
+import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -45,9 +46,6 @@ import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_copy } from "./list_copy.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { integer_to_try } from "./integer_to_try.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -203,15 +201,6 @@ export async function app_shared_bible_read(context, verse_action) {
     let property_name = app_shared_bible_verse_hash_key();
     html_hash_property_set(property_name, v);
   }
-  function selection_last() {
-    if (list_empty_is(verse_numbers_chosen)) {
-      return null;
-    }
-    let sorted = list_copy(verse_numbers_chosen);
-    list_sort_number_mapper(sorted, integer_to_try);
-    let last = list_last(sorted);
-    return last;
-  }
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
@@ -334,7 +323,7 @@ export async function app_shared_bible_read(context, verse_action) {
     app_shared_button(actions, text2, share);
     function row_update() {
       update();
-      let right = selection_last();
+      let right = app_shared_bible_read_selection_last(verse_numbers_chosen);
       let is_last = equal(verse_number_v, right);
       let hidden = not(is_last);
       html_display_none_or_block(hidden, actions);
