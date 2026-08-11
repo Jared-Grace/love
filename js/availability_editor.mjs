@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { availability_editor_add_button } from "./availability_editor_add_button.mjs";
 import { availability_editor_render_preview } from "./availability_editor_render_preview.mjs";
 import { availability_editor_highlight } from "./availability_editor_highlight.mjs";
 import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
@@ -19,7 +19,6 @@ import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { list_add } from "./list_add.mjs";
 import { busy_item_build } from "./busy_item_build.mjs";
 import { busy_item_label } from "./busy_item_label.mjs";
 export function availability_editor(parent) {
@@ -126,21 +125,4 @@ export function availability_editor(parent) {
     let text = busy_item_label(item);
     app_shared_text_body(preview, text);
   }
-}
-function availability_editor_add_button(
-  kind,
-  text,
-  choose,
-  panel,
-  button_records,
-) {
-  arguments_assert(arguments, 5);
-  function on_click() {
-    choose(kind);
-  }
-  let element = app_shared_button(panel, text, on_click);
-  list_add(button_records, {
-    kind: kind,
-    element: element,
-  });
 }
