@@ -1,3 +1,4 @@
+import { app_g_day_guide_window_check } from "./app_g_day_guide_window_check.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -61,9 +62,12 @@ export function app_g_day_guide_pick_check() {
     best2,
     "gold tile must be the visible tile nearest the target, not the last tile of the path still in view",
   );
+  ("the WINDOW half of the same guide is checked from here rather than from its own line in the gate list, and the reason is a gate rather than a preference. a function belonging to no app may not reach into one, and the gate list belongs to no app - so the two app-scoped checks it already names are a recorded wart it refuses to grow, and a third line was refused. it cannot be renamed to something honest about holding both, either: a rename reads as a new name, which is growth, which is refused as well. so the name stays as it was and this sentence carries what it can no longer say. the two are halves of ONE feature - the window says which tiles the player will be able to see, the picker chooses among them - so running them together is right in itself, and only the ORDER of discovery is backwards");
+  let window_checked = app_g_day_guide_window_check();
   let r = {
     gold: [gold.x, gold.y],
     gold_detour: [gold2.x, gold2.y],
+    window: window_checked,
   };
   return r;
 }

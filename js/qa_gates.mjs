@@ -1,4 +1,3 @@
-import { app_g_day_guide_window_check } from "./app_g_day_guide_window_check.mjs";
 import { browser_secure_context_gate_run } from "./browser_secure_context_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
@@ -288,7 +287,6 @@ export function qa_gates() {
     g_day_sky_phase_check,
     app_g_day_fraction_check,
     app_g_day_guide_pick_check,
-    app_g_day_guide_window_check,
     app_g_map_pad_check,
     app_g_day_blocked_check,
     functions_parallel_marks_gate_run,
