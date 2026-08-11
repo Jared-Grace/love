@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_starts_ends_with_curried_right } from "./text_starts_ends_with_curried_right.mjs";
+import { text_prefix_change_curried_right_2 } from "./text_prefix_change_curried_right_2.mjs";
+import { functions_rename_generic } from "./functions_rename_generic.mjs";
 export async function functions_rename_if_starts_ends_with_prefix_change(
   f_name_prefix_before,
   f_name_suffix,
