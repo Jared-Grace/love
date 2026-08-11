@@ -1,8 +1,8 @@
+import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { range_map } from "./range_map.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -23,9 +23,6 @@ import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
@@ -87,7 +84,11 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let pairs = list_map(lefts, to_pair);
     return pairs;
   }
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_repeated_generic_title_name_id(
+    title_word,
+    symbol,
+    right_word,
+  );
   let example_question_label = app_code_label_code_question();
   let written_out = text_combine_multiple([
     "What is this written out as ",
@@ -131,21 +132,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
     html_div_text_code_dark,
   );
   return lesson;
-  function title_name_id() {
-    "the home title names the operator in words and then shows it";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, title_word);
-        html_span_text_code_dark(parent, symbol);
-      }
-      return render;
-    }
-    let rights = [right_word];
-    let left2 = app_code_category_operators();
-    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
-    return built;
-  }
   function above(root) {
     let c = app_code_container_light_blue(root);
     let short_separator = text_combine_multiple([" ", symbol, " "]);
