@@ -1,3 +1,4 @@
+import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
 import { app_g_npc_unconverted_random } from "./app_g_npc_unconverted_random.mjs";
 import { app_g_dev_routes_npc_view_of } from "./app_g_dev_routes_npc_view_of.mjs";
 import { app_g_day_start } from "./app_g_day_start.mjs";
@@ -13,7 +14,6 @@ import { noop } from "./noop.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_sky_choices } from "./app_g_sky_choices.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
-import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
@@ -28,7 +28,6 @@ import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
@@ -47,11 +46,6 @@ export function app_g_dev_routes(div_map) {
       word_index: 0,
     };
     await app_g_view_set(view);
-  }
-  async function npc_view(phase) {
-    let npcs = await app_g_npcs_get();
-    let npc = list_random_item(npcs);
-    await app_g_dev_routes_npc_view_of(npc, phase);
   }
   async function unbeliever() {
     let npc = await app_g_npc_unconverted_random();
@@ -77,19 +71,19 @@ export function app_g_dev_routes(div_map) {
   }
   async function gospel_share() {
     let result2 = app_g_view_phase_gospel();
-    await npc_view(result2);
+    await app_g_dev_routes_npc_view(result2);
   }
   async function hru() {
     let result3 = app_g_view_phase_how();
-    await npc_view(result3);
+    await app_g_dev_routes_npc_view(result3);
   }
   async function believe() {
     let result4 = app_g_view_phase_believe();
-    await npc_view(result4);
+    await app_g_dev_routes_npc_view(result4);
   }
   async function disciple() {
     let result5 = app_g_view_phase_disciple();
-    await npc_view(result5);
+    await app_g_dev_routes_npc_view(result5);
   }
   async function discern() {
     await app_g_view_set(null);
