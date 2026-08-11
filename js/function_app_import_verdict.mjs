@@ -1,3 +1,5 @@
+import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { apps_names_prefixed } from "./apps_names_prefixed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
@@ -14,8 +16,11 @@ export async function function_app_import_verdict(imported) {
   ("That reading rests on the callers' names, which is a strong hint and not a proof, so the callers are given back to be looked at rather than only counted. A caller can wear a prefix that is itself a lie - measured on a colour whose two callers both wore an app's prefix while neither was that app's code, so the count said the app owned it and the truth was that nothing did.");
   ("Exactly one caller belonging to the app decides nothing, and saying so is the point. That one caller may itself be on its way out, in which case the count is about to become none - which is exactly how a colour named after an app turned out to have no app behind it. So this asks for a person and names the single function they have to look at.");
   ("A name gives itself back among its own callers, and it is dropped rather than counted.");
+  ("An app's own front door is asked about first and answered separately, because the count says the wrong thing about it every time. Nothing inside an app calls the function the app starts at, so it always has no callers of its own and always reads as a lie - and renaming a front door is the one rename here that would be plainly wrong. What an importer of one has done instead is take the whole app with it, which was measured at 410 KiB on a bundle, so these are the heaviest lines in the record rather than the emptiest.");
   let app_names = await apps_names_prefixed();
   let app = function_name_app_try(imported, app_names);
+  let mains = await app_apps_all_main_fns();
+  let entry_is = list_includes(mains, imported);
   let names = await data_identifiers_search_names(imported);
   let callers_own = [];
   let callers_other = [];
@@ -41,6 +46,9 @@ export async function function_app_import_verdict(imported) {
   }
   if (none_is) {
     verdict = "rename";
+  }
+  if (entry_is) {
+    verdict = "entry";
   }
   let r = {
     imported,
