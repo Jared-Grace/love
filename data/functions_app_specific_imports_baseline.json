@@ -13,7 +13,7 @@
   "qa_gates -> app_code_lessons_rights_space_gate_run",
   "qa_gates -> g_day_blocked_check",
   "qa_gates -> g_day_fraction_check",
-  "qa_gates -> app_g_day_guide_pick_check",
+  "qa_gates -> g_day_guide_pick_check",
   "qa_gates -> app_g_map_pad_check",
   "sandbox_2 -> app_calendar_secret_facebook_add",
   "sandbox_4 -> app_calendar_download_contacts",
