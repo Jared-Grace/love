@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_comparing_a_comparison_keyword } from "./app_code_lesson_expression_comparing_a_comparison_keyword.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_naming } from "./app_code_lesson_expression_comparing_a_comparison_naming.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
@@ -47,13 +48,6 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function keyword(value) {
-    "the code word for a true or false value";
-    let on_true = js_keyword_true();
-    let on_false = js_keyword_false();
-    let word = ternary(value, on_true, on_false);
-    return word;
-  }
   function expression(want_true) {
     "a comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
     let left = app_code_comparison_side();
@@ -64,7 +58,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let on_false = js_operator_bang_double_equal_symbol();
     let symbol = ternary(wanted, on_true, on_false);
     let left_code = property_get(left, "code");
-    let right_code = keyword(right_value);
+    let right_code =
+      app_code_lesson_expression_comparing_a_comparison_keyword(right_value);
     let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
     return code;
   }
@@ -81,7 +76,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
     "The order caveat points back to a rule the learner already has - we do * before + - so replacing in order is a rule they are recognising rather than one they are taking on";
     let card = app_code_container_light_blue(root);
-    let answer = keyword(value);
+    let answer =
+      app_code_lesson_expression_comparing_a_comparison_keyword(value);
     html_div_cycle_code(card, ["", code, " is ", answer]);
     html_div_cycle_code(card, ["So we can replace ", code, " with ", answer]);
     let times = js_operator_asterisk_symbol();
@@ -99,9 +95,11 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "Five lines rather than one because the move this lesson teaches happens in the middle - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust";
     "The last two lines are worked out by the operator's own function rather than typed, so the example cannot say something the code would not do";
     let card = app_code_container_light_blue(root);
-    let answer = keyword(value);
+    let answer =
+      app_code_lesson_expression_comparing_a_comparison_keyword(value);
     let symbol = property_get(operator, "operator");
-    let right_code = keyword(right_value);
+    let right_code =
+      app_code_lesson_expression_comparing_a_comparison_keyword(right_value);
     let whole = text_combine_multiple([code, " ", symbol, " ", right_code]);
     let stood_in = text_combine_multiple([
       answer,
@@ -112,7 +110,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     ]);
     let fn = property_get(operator, "fn");
     let ended = fn(value, right_value);
-    let ended_code = keyword(ended);
+    let ended_code =
+      app_code_lesson_expression_comparing_a_comparison_keyword(ended);
     let opening = text_combine(lead, " for ");
     html_div_cycle_code(card, [opening, whole]);
     html_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
