@@ -1,4 +1,4 @@
-import { property_equals_any } from "./property_equals_any.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
@@ -28,9 +28,9 @@ export function js_shorthand_properties_names_expand(ast, names) {
     let shorthand = property_get(node, "shorthand");
     if (shorthand) {
       let key = property_get(node, "key");
-      let same = property_equals_any(key, "name", names);
+      let name = property_get_name(key);
+      let same = list_includes(names, name);
       if (same) {
-        let name = property_get_name(key);
         let fresh = js_identifier_expression(name);
         property_set(node, "key", fresh);
         property_set(node, "shorthand", false);
