@@ -974,6 +974,7 @@
       "Bash(node scripts/ai.mjs functions_app_import_verdicts:*)",
       "Bash(node scripts/ai.mjs storage_browser_doors:*)",
       "Bash(node scripts/ai.mjs qa_promoted_commits_full_repair:*)",
+      "Bash(node scripts/ai.mjs apps_prod_chunks_unreachable:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1871,6 +1872,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args functions_app_import_verdicts:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args storage_browser_doors:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args qa_promoted_commits_full_repair:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args apps_prod_chunks_unreachable:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2767,6 +2769,7 @@
       "Bash(node scripts/aig.mjs functions_app_import_verdicts:*)",
       "Bash(node scripts/aig.mjs storage_browser_doors:*)",
       "Bash(node scripts/aig.mjs qa_promoted_commits_full_repair:*)",
+      "Bash(node scripts/aig.mjs apps_prod_chunks_unreachable:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3663,7 +3666,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args function_app_import_verdict:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args functions_app_import_verdicts:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args storage_browser_doors:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args qa_promoted_commits_full_repair:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_promoted_commits_full_repair:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args apps_prod_chunks_unreachable:*)"
     ],
     "defaultMode": "acceptEdits"
   },
