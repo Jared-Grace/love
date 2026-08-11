@@ -1,3 +1,4 @@
+import { js_function_declaration_free_names_cases_gate_run } from "./js_function_declaration_free_names_cases_gate_run.mjs";
 import { js_declaration_names_unbound_cases_gate_run } from "./js_declaration_names_unbound_cases_gate_run.mjs";
 import { qa_gate_run_start_wanted_stale_gate_run } from "./qa_gate_run_start_wanted_stale_gate_run.mjs";
 import { qa_gates_dealt_gate_run } from "./qa_gates_dealt_gate_run.mjs";
@@ -375,6 +376,7 @@ export function qa_gates() {
     functions_calls_unawaited_gate_run,
     apps_prod_chunks_missing_gate_run,
     js_declaration_names_unbound_cases_gate_run,
+    js_function_declaration_free_names_cases_gate_run,
   ];
   return gates;
 }
