@@ -139,9 +139,11 @@ export function app_code_lesson_expression_parentheses_moved() {
       " does anyway",
     ]);
     html_div_cycle_code(nothing, [
-      "The ",
+      "We always do ",
       times,
-      " is stronger, so it goes first either way",
+      " before ",
+      plus,
+      ", so it goes first either way",
     ]);
     html_div_cycle_code(nothing, [
       "Those ",
