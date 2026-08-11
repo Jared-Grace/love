@@ -1,3 +1,4 @@
+import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
 import { g_phase_time } from "./g_phase_time.mjs";
 import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
@@ -65,11 +66,6 @@ import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { emoji_cross } from "./emoji_cross.mjs";
-import { emoji_rock } from "./emoji_rock.mjs";
-import { emoji_sunrise } from "./emoji_sunrise.mjs";
-import { emoji_smile } from "./emoji_smile.mjs";
-import { emoji_thinking } from "./emoji_thinking.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_g_conversation(
@@ -158,8 +154,8 @@ export async function app_g_conversation(
     prayer_parts = some_count;
   }
   let right = list_size(turns);
-  let left6 = multiply_add(2, right, prayer_parts);
-  let steps_total = add(left6, 2);
+  let left = multiply_add(2, right, prayer_parts);
+  let steps_total = add(left, 2);
   let steps = {
     done: 0,
   };
@@ -178,31 +174,6 @@ export async function app_g_conversation(
       let text = text_combine_multiple([r, " ", label]);
       app_g_toast(text, 1400);
     }
-  }
-  function label_for(turn) {
-    let kind = property_get(turn, "kind");
-    let v = emoji_cross();
-    let v2 = emoji_rock();
-    let v3 = emoji_sunrise();
-    let left = emoji_smile();
-    let left2 = emoji_thinking();
-    let value2 = property_get(pronouns, "object");
-    let labels = {
-      gospel_share_objection: text_combine_multiple([
-        "Tell ",
-        value2,
-        " that Jesus died ",
-        v,
-        ", was buried ",
-        v2,
-        " and rose to life ",
-        v3,
-      ]),
-      how_r_u: text_combine(left, " How are you?"),
-      believe: text_combine(left2, " What do you believe?"),
-    };
-    let label = property_get(labels, kind);
-    return label;
   }
   async function close_now() {
     if (converts) {
@@ -360,7 +331,7 @@ export async function app_g_conversation(
         run_turn(turn);
       }
       let choice = {
-        label: label_for(turn),
+        label: app_g_conversation_label_for(turn, pronouns),
         on_click,
         correct: is_correct,
       };
