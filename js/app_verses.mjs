@@ -1,3 +1,4 @@
+import { app_verses_display } from "./app_verses_display.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
 import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
@@ -41,7 +42,6 @@ import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
@@ -207,7 +207,7 @@ export async function app_verses(context) {
     chosen_references = references;
     list_clear(verse_groups);
     list_add_multiple(verse_groups, groups);
-    display();
+    app_verses_display(card4, verse_groups, display_group);
     app_verses_draw_save({
       count: verse_count,
       references,
@@ -218,11 +218,6 @@ export async function app_verses(context) {
   }
   async function reroll() {
     await app_verses_draw_fresh(true, order, verse_count, references_show);
-  }
-  function display() {
-    html_clear(card4);
-    each(verse_groups, display_group);
-    app_verses_card4_refresh(verse_groups, card4);
   }
   function display_group(group) {
     let reference = property_get(group, "reference");
