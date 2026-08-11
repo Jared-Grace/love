@@ -1,7 +1,6 @@
+import { global_function_property_set } from "./global_function_property_set.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { folder_memory } from "./folder_memory.mjs";
-import { global_function_initialize_object } from "./global_function_initialize_object.mjs";
-import { property_set } from "./property_set.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function function_paths_frozen_enable() {
   "Say, once, that the folders this process reads cannot change under it - so where a function's file lives may be worked out once per name instead of once per asking.";
@@ -12,10 +11,7 @@ export function function_paths_frozen_enable() {
   let memory = folder_memory();
   let frozen = text_starts_with(here, memory);
   if (frozen) {
-    let object = global_function_initialize_object(
-      function_paths_frozen_enable,
-    );
-    property_set(object, "frozen", true);
+    global_function_property_set(function_paths_frozen_enable, "frozen", true);
   }
   let r = {
     frozen,
