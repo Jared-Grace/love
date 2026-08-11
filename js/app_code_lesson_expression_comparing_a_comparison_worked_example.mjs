@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_keyword } from "./app_code_lesson_expression_comparing_a_comparison_keyword.mjs";
+import { js_true_false_word } from "./js_true_false_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -19,16 +19,14 @@ export function app_code_lesson_expression_comparing_a_comparison_worked_example
   ("Five lines rather than one because the move this lesson teaches happens in the middle - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust");
   ("The last two lines are worked out by the operator's own function rather than typed, so the example cannot say something the code would not do");
   let card = app_code_container_light_blue(root);
-  let answer = app_code_lesson_expression_comparing_a_comparison_keyword(value);
+  let answer = js_true_false_word(value);
   let symbol = property_get(operator, "operator");
-  let right_code =
-    app_code_lesson_expression_comparing_a_comparison_keyword(right_value);
+  let right_code = js_true_false_word(right_value);
   let whole = text_combine_multiple([code, " ", symbol, " ", right_code]);
   let stood_in = text_combine_multiple([answer, " ", symbol, " ", right_code]);
   let fn = property_get(operator, "fn");
   let ended = fn(value, right_value);
-  let ended_code =
-    app_code_lesson_expression_comparing_a_comparison_keyword(ended);
+  let ended_code = js_true_false_word(ended);
   let opening = text_combine(lead, " for ");
   html_div_cycle_code(card, [opening, whole]);
   html_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
