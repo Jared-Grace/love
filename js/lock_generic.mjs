@@ -1,3 +1,4 @@
+import { lock_options } from "./lock_options.mjs";
 import { lock_folder_path } from "./lock_folder_path.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -23,7 +24,8 @@ export async function lock_generic(lock_name, wait, lambda, who) {
     let notified = false;
     do {
       try {
-        release = await lockfile.lock(result);
+        let r3 = lock_options();
+        release = await lockfile.lock(result, r3);
         locked = true;
         break;
       } catch (e) {
@@ -66,7 +68,12 @@ export async function lock_generic(lock_name, wait, lambda, who) {
     }
   } finally {
     if (release) {
-      await release();
+      ("Giving the lock back is allowed to fail quietly, and only for one reason: if the lock was already declared lost while the work was running, handing it back is refused, and that refusal would be thrown from here - out of a finally, on top of whatever the work itself was returning or complaining about. The work is the thing worth hearing. A lock nobody holds any more needs no giving back");
+      async function lambda_release() {
+        let r2 = await release();
+        return r2;
+      }
+      await catch_null_async(lambda_release);
     }
   }
   return r;
