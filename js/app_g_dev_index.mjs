@@ -1,6 +1,8 @@
 import { app_g_dev_index_render_node } from "./app_g_dev_index_render_node.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { json_from } from "./json_from.mjs";
+import { app_g } from "./app_g.mjs";
+import { app_g_dev_index_open_key } from "./app_g_dev_index_open_key.mjs";
+import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -29,13 +31,9 @@ export function app_g_dev_index() {
   let all = list_concat(names, ["reset", "index"]);
   let prefixes = app_g_dev_index_prefixes();
   let tree = app_g_dev_index_tree(all, prefixes);
-  let open_key = "g_dev_index_open";
-  let open_paths = new Set();
-  let open_stored = sessionStorage.getItem(open_key);
-  if (open_stored) {
-    let v = json_from(open_stored);
-    open_paths = new Set(v);
-  }
+  let open_key = app_g_dev_index_open_key();
+  let open_stored = storage_session_get(app_g, open_key);
+  let open_paths = new Set(open_stored);
   let top = object_property_names(tree.children).sort();
   for (let label of top) {
     app_g_dev_index_render_node(
@@ -44,8 +42,6 @@ export function app_g_dev_index() {
       label,
       tree.children[label],
       open_paths,
-      sessionStorage,
-      open_key,
     );
   }
 }
