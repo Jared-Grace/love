@@ -1,4 +1,4 @@
-import { divide_floor } from "./divide_floor.mjs";
+import { image_generate_find_max_font_size } from "./image_generate_find_max_font_size.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
@@ -10,7 +10,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
-import { add } from "./add.mjs";
 export async function image_generate(text, path_output) {
   let v2 = await import_install("canvas");
   property_get(v2, "registerFont");
@@ -48,26 +47,7 @@ export async function image_generate(text, path_output) {
     }
     return lines_wrapped;
   }
-  function findMaxFontSize() {
-    let low = 10;
-    let high = 500;
-    let best = low;
-    while (less_than_equal(low, high)) {
-      let top = add(low, high);
-      let mid = divide_floor(top, 2);
-      let lines_tried = wrapText(text, mid);
-      let line_height_tried = multiply(mid, 1.25);
-      let totalHeight = multiply(lines_tried.length, line_height_tried);
-      if (less_than_equal(totalHeight, MAX_HEIGHT)) {
-        best = mid;
-        low = add(mid, 1);
-      } else {
-        high = subtract(mid, 1);
-      }
-    }
-    return best;
-  }
-  let FONT_SIZE = findMaxFontSize();
+  let FONT_SIZE = image_generate_find_max_font_size(wrapText, text, MAX_HEIGHT);
   let lines = wrapText(text, FONT_SIZE);
   let lineHeight = multiply(FONT_SIZE, 1.25);
   ctx.font = text_combine_multiple([FONT_SIZE, "px ", FONT_FAMILY]);
