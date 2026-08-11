@@ -1,3 +1,5 @@
+import { global_function_initialize_object } from "./global_function_initialize_object.mjs";
+import { property_set } from "./property_set.mjs";
 export function function_paths_frozen_enable() {
   "Say, once, that the folders this process reads cannot change under it - so where a function's file lives may be worked out once per name instead of once per asking.";
   "Whoever calls this is making a promise the code cannot check for itself, which is why it is asked for out loud rather than guessed at. The promise is that no file will be created, moved or removed anywhere this process looks, for as long as it runs.";
