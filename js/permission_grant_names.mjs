@@ -933,6 +933,19 @@ export function permission_grant_names() {
   let spelled918 = fn_name("functions_lift_captured_locals");
   let spelled919 = fn_name("process_starter_gone_is");
   let spelled920 = fn_name("daemon_unit_name");
+  let spelled921 = fn_name("qa_gate_run_start_wanted_stale_gate_run");
+  let spelled922 = fn_name("qa_commit_named_stale_is");
+  let spelled923 = fn_name("app_g_dev_route_names");
+  let spelled924 = fn_name("qa_commit_named_auto_step");
+  let spelled925 = fn_name("app_g_dev_routes_phone_report");
+  let spelled926 = fn_name("qa_commit_named_gate_forget");
+  let spelled927 = fn_name("js_declaration_names_unbound_cases_gate_run");
+  let spelled928 = fn_name("app_g_dev_routes_phone_gate_run");
+  let spelled929 = fn_name("js_function_declaration_free_names_cases_gate_run");
+  let spelled930 = fn_name("functions_operators_raw_baseline_path");
+  let spelled931 = fn_name("functions_inside_duplicates_baseline_path");
+  let spelled932 = fn_name("apps_frozen");
+  let spelled933 = fn_name("folder_repo_love");
   let names = [
     spelled,
     spelled2,
@@ -1854,6 +1867,19 @@ export function permission_grant_names() {
     spelled918,
     spelled919,
     spelled920,
+    spelled921,
+    spelled922,
+    spelled923,
+    spelled924,
+    spelled925,
+    spelled926,
+    spelled927,
+    spelled928,
+    spelled929,
+    spelled930,
+    spelled931,
+    spelled932,
+    spelled933,
   ];
   return names;
 }
