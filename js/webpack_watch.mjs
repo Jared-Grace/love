@@ -1,5 +1,4 @@
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
 import { list_find_property_not_null_is } from "./list_find_property_not_null_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
@@ -27,12 +26,6 @@ import { property_exists_equals } from "./property_exists_equals.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { catch_null } from "./catch_null.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { path_join } from "./path_join.mjs";
-import { path_modified_ms } from "./path_modified_ms.mjs";
-import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
   let f_path = app_shared_name_dev_text();
@@ -163,37 +156,12 @@ export async function webpack_watch() {
   }
   watcher.on("change", on_change).on("add", on_change);
   ("on startup rebuild only STALE apps (bundle missing, or older than one of its source files) so a watcher (re)start refreshes what changed while it was down, while skipping apps that are already current");
-  async function bundle_stale_is(ad) {
-    let a_name = a_name_of(ad);
-    let file = text_combine(a_name, ".js");
-    let bundle = path_join([dev_relative, file]);
-    let bundle_ms = await path_modified_ms(bundle);
-    if (equal(bundle_ms, null)) {
-      return true;
-    }
-    let deps = property_get(ad, "deps");
-    async function dep_stale_is(dep) {
-      function resolve() {
-        let p = function_name_to_path_relative(dep);
-        return p;
-      }
-      let path = catch_null(resolve);
-      if (equal(path, null)) {
-        return true;
-      }
-      let ms = await path_modified_ms(path);
-      if (equal(ms, null)) {
-        return false;
-      }
-      let newer = greater_than(ms, bundle_ms);
-      return newer;
-    }
-    let flags = await list_map_unordered_async(deps, dep_stale_is);
-    let stale = list_includes(flags, true);
-    return stale;
-  }
   async function schedule_if_stale(ad) {
-    let stale = await bundle_stale_is(ad);
+    let stale = await webpack_watch_bundle_stale_is(
+      ad,
+      a_name_of,
+      dev_relative,
+    );
     if (stale) {
       let a_name = a_name_of(ad);
       build_schedule(a_name);
