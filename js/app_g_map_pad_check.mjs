@@ -6,9 +6,9 @@ import { app_g_map_pad } from "./app_g_map_pad.mjs";
 import { app_g_map_buffer_pad } from "./app_g_map_buffer_pad.mjs";
 import { g_water } from "./g_water.mjs";
 import { equal } from "./equal.mjs";
-export function g_map_pad_check() {
+export function app_g_map_pad_check() {
   ("deterministic REGRESSION check of the map buffer padding: a 2x2 core becomes a (2 + 2*pad) square whose outer ring is all water and whose original content is preserved at offset [pad][pad]. run: node scripts/ai.mjs ",
-    fn_name("g_map_pad_check"));
+    fn_name("app_g_map_pad_check"));
   let pad = app_g_map_buffer_pad();
   let water = g_water();
   let core = [
