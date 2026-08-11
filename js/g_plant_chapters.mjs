@@ -65,23 +65,19 @@ export async function g_plant_chapters() {
   function book_plants(held_book) {
     let book = property_get(held_book, "book");
     let held = property_get(held_book, "counteds");
-    function days_of(counted) {
-      let days = property_get(counted, "days");
-      return days;
-    }
-    let book_days = list_map_sum(held, days_of);
-    let rounded = divide_round(book_days, wanted);
+    let book_lines = list_map_sum(held, g_plant_chapters_lines_of);
+    let rounded = divide_round(book_lines, wanted);
     let count = math_max(1, rounded);
-    let share = divide(book_days, count);
+    let share = divide(book_lines, count);
     let book_plant_list = [];
     let taken = [];
-    let days_so_far = 0;
     let lines_so_far = 0;
     function plant_close() {
       let empty_is = equal(taken.length, 0);
       if (empty_is) {
         return;
       }
+      let days_so_far = divide_ceil(lines_so_far, per_day);
       let short_is = less_than(days_so_far, least);
       let long_is = greater_than(days_so_far, most);
       let plant = {
@@ -94,16 +90,15 @@ export async function g_plant_chapters() {
       };
       list_add(book_plant_list, plant);
       taken = [];
-      days_so_far = 0;
       lines_so_far = 0;
     }
     for (let counted of held) {
       let chapter = property_get(counted, "chapter");
-      let days = days_of(counted);
+      let lines = g_plant_chapters_lines_of(counted);
       let plants_left = subtract(count, book_plant_list.length);
       let last_plant_is = less_than_equal(plants_left, 1);
-      let with_it = days_so_far + days;
-      let gap_stopping = numbers_apart(days_so_far, share);
+      let with_it = lines_so_far + lines;
+      let gap_stopping = numbers_apart(lines_so_far, share);
       let gap_carrying = numbers_apart(with_it, share);
       let nearer_stopping = less_than(gap_stopping, gap_carrying);
       let started_is = greater_than(taken.length, 0);
@@ -112,8 +107,7 @@ export async function g_plant_chapters() {
         plant_close();
       }
       list_add(taken, chapter);
-      days_so_far = days_so_far + days;
-      lines_so_far = lines_so_far + g_plant_chapters_lines_of(counted);
+      lines_so_far = lines_so_far + lines;
     }
     plant_close();
     return book_plant_list;
