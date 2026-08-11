@@ -1,6 +1,5 @@
+import { app_g_design_note_body } from "./app_g_design_note_body.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
 import { markdown_render } from "./markdown_render.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
@@ -38,28 +37,6 @@ export async function app_g_design() {
     );
     return;
   }
-  function note_body(text) {
-    "the note text with its leading YAML frontmatter (--- name/description/metadata ---) removed: that block is already shown as the card's header and description, so rendering it again as a paragraph is noise. only strips a fence at the very top; a note without one is returned unchanged.";
-    let fence = "---";
-    let left = text.slice(0, 3);
-    let starts_fenced = equal(left, fence);
-    if (not(starts_fenced)) {
-      return text;
-    }
-    let close = text.indexOf("\n---", 3);
-    if (equal(close, -1)) {
-      return text;
-    }
-    let sum = add(close, 1);
-    let line_end = text.indexOf("\n", sum);
-    if (equal(line_end, -1)) {
-      let r2 = "";
-      return r2;
-    }
-    let body_start = add(line_end, 1);
-    let r3 = text.slice(body_start);
-    return r3;
-  }
   function note_card(note) {
     let card = app_shared_container_blue(div);
     html_style_margin_y(card, "0.15rem");
@@ -76,7 +53,7 @@ export async function app_g_design() {
       margin: "0.5rem 0 0 0",
       "word-break": "break-word",
     });
-    let text2 = note_body(note.text);
+    let text2 = app_g_design_note_body(note.text);
     markdown_render(body, text2);
     let open = {
       on: false,
