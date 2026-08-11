@@ -1,7 +1,6 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
 import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
 import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
@@ -40,13 +39,10 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
-import { html_bold_semi } from "./html_bold_semi.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_margin_em } from "./html_margin_em.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
@@ -54,7 +50,6 @@ import { app_shared_verse_selected_background_color } from "./app_shared_verse_s
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_text_category_color } from "./app_shared_text_category_color.mjs";
 import { app_shared_text_warning_color } from "./app_shared_text_warning_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
@@ -498,16 +493,4 @@ export async function app_g_verify_view(
     }
   }
   history_show();
-}
-function app_g_verify_view_label_new(caption, container, small_gap) {
-  arguments_assert(arguments, 3);
-  let l = html_p_text(container, caption);
-  let color = app_shared_text_category_color();
-  html_font_color_set(l, color);
-  let value6 = app_g_verify_label_font_size();
-  html_style_font_size(l, value6);
-  html_style_set(l, "letter-spacing", "0.11em");
-  html_bold_semi(l);
-  html_margin_em(l, "0");
-  html_style_margin_top(l, small_gap);
 }
