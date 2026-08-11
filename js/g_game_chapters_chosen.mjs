@@ -1,3 +1,4 @@
+import { multiply_floor } from "./multiply_floor.mjs";
 import { g_sermon_chapters_written } from "./g_sermon_chapters_written.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -5,9 +6,7 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { floor } from "./floor.mjs";
 import { less_than } from "./less_than.mjs";
-import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
 export async function g_game_chapters_chosen(word) {
   "Which chapters one game preaches and in what order - every written chapter, with the books put in an order the word decides.";
