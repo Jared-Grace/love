@@ -1,3 +1,4 @@
+import { app_verses_order_standalone_first } from "./app_verses_order_standalone_first.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -11,7 +12,6 @@ import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
@@ -43,9 +43,6 @@ import { html_clear } from "./html_clear.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_swap_first } from "./list_swap_first.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -63,22 +60,21 @@ export async function app_verses(context) {
   let languages = property_get(r, "languages");
   let root = property_get(r, "root");
   let languages_chosen_default = app_reply_languages_chosen_default();
+  let property_name = language_code_key();
   let default_codes = list_map_property(
     languages_chosen_default,
-    language_code_key(),
+    property_name,
   );
   let default_l = list_join_plus(default_codes);
   let remembered_l = app_shared_language_codes_saved_or(default_l);
   let hash = html_hash_object_get();
   ("a url hash wins over the remembered choice, so a shared link still opens in the languages it names");
-  let l = property_get_or(
-    hash,
-    app_shared_bible_language_hash_key(),
-    remembered_l,
-  );
+  let key = app_shared_bible_language_hash_key();
+  let l = property_get_or(hash, key, remembered_l);
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
-    let r2 = list_find_property_or_null(languages, language_code_key(), code);
+    let property_name2 = language_code_key();
+    let r2 = list_find_property_or_null(languages, property_name2, code);
     return r2;
   }
   let languages_chosen = list_map_filter_null_not_is(
@@ -97,7 +93,7 @@ export async function app_verses(context) {
   if (have_references) {
     order = list_copy(references_source);
     list_shuffle(order);
-    order_standalone_first();
+    app_verses_order_standalone_first(order);
   }
   let bc = app_shared_bar_content_root(root);
   let bar = property_get(bc, "bar");
@@ -170,7 +166,8 @@ export async function app_verses(context) {
       offline_notified = false;
       return false;
     }
-    let folders = list_map_property(languages_chosen, bible_folder_key());
+    let property_name3 = bible_folder_key();
+    let folders = list_map_property(languages_chosen, property_name3);
     let packages = await list_map_unordered_async(
       folders,
       uplifting_package_get,
@@ -192,24 +189,10 @@ export async function app_verses(context) {
     }
     return false;
   }
-  function order_standalone_first() {
-    "asking for a single verse shows the first reference, so keep a standalone verse there, never a multi-verse range";
-    let none = list_empty_is(order);
-    if (none) {
-      return;
-    }
-    let first_reference = list_first(order);
-    let first_is_range = text_includes(first_reference, "-");
-    if (first_is_range) {
-      let singles = list_filter_text_includes_not(order, "-");
-      let single = list_first(singles);
-      list_swap_first(order, single);
-    }
-  }
   async function draw_fresh(copy_after) {
     "changing the count — or tapping New verses — draws a brand-new set of that many verses: a fresh shuffle every time, so the verses always refresh rather than the count only adding to or trimming what was already there";
     list_shuffle(order);
-    order_standalone_first();
+    app_verses_order_standalone_first(order);
     let references = list_take(order, verse_count);
     await references_show(references, copy_after);
   }
