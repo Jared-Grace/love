@@ -5,7 +5,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
-export function app_code_lesson_expression_comparing_a_comparison_naming(root) {
+export function app_code_lesson_expression_comparing_a_comparison_recall(root) {
   arguments_assert(arguments, 1);
   ("what the word comparison names, said in full before the lesson leans on it. The word has been used since the arithmetic-comparison lesson, but only ever alongside its operators in passing, and every line of this lesson rests on it");
   ("One line, with the six operators inlined rather than spelled out as six whole comparisons. The symbol is the only thing that differs between them, so six worked-out lines would repeat two numbers six times to show one difference - and they would also read as six things to learn where there is one");
