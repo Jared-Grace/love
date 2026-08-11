@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_parentheses_same_strength_line } from "./app_code_lesson_expression_parentheses_same_strength_line.mjs";
 import { app_code_lesson_expression_parentheses_same_strength_title_name_id } from "./app_code_lesson_expression_parentheses_same_strength_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -16,8 +16,6 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { multiply } from "./multiply.mjs";
 import { ternary } from "./ternary.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_parentheses_same_strength() {
   "the second parentheses lesson, and the one that answers a question the first leaves open. The first showed brackets beating a STRONGER operator: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. A learner can come away believing brackets only matter when the operators differ in strength - that they are a way of saying do the weak one first. This lesson shows them changing an answer where both operators are the SAME strength: 12 - (3 + 4) is 5 where 12 - 3 + 4 is 13, and 12 / (2 * 3) is 2 where 12 / 2 * 3 is 18. What the brackets override here is not strength but the left-to-right order the same-strength lessons taught.";
   "The group is always on the RIGHT of the - or the /, because that is the only side where it changes anything: (a + b) - c and a + b - c are the same line. That the position matters here, when the first lesson showed the group happily on either side of a *, is the point rather than an accident - and it is why the title names the OUTER operator.";
@@ -145,33 +143,4 @@ export function app_code_lesson_expression_parentheses_same_strength() {
       " still go first",
     ]);
   }
-}
-function app_code_lesson_expression_parentheses_same_strength_line(
-  a,
-  outer_symbol,
-  b,
-  inner_symbol,
-  c,
-) {
-  arguments_assert(arguments, 5);
-  ("the one shape this lesson ever writes: a number, the outer operator, then a group of two numbers");
-  let open = js_code_parenthesis_left();
-  let close = js_code_parenthesis_right();
-  let t = text_to(a);
-  let t2 = text_to(b);
-  let t3 = text_to(c);
-  let code = text_combine_multiple([
-    t,
-    " ",
-    outer_symbol,
-    " ",
-    open,
-    t2,
-    " ",
-    inner_symbol,
-    " ",
-    t3,
-    close,
-  ]);
-  return code;
 }
