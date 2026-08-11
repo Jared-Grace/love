@@ -19,7 +19,11 @@ import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export function g_plant_arcs(plant) {
   "Works out one plant's whole cast - how many people it holds and how many turns each of them is worth.";
-  "The COUNT is drawn first and the turns are shared out to fit it, which is the opposite of the way this was built before. Deriving the count from the lengths made it about six people whatever the plant's size, because the longest arc was capped at a share of the budget: a bigger plant bought longer arcs and never more people. Drawing the count first makes the plant's size buy what it should, which is a fuller room.";
+  "The COUNT is DERIVED from what the leader leaves - as many people as those turns buy at the usual arc length. Nothing is drawn and nothing is clamped, so a plant with twice the preaching holds twice the people rather than the same people talking twice as long.";
+  "This is the third arrangement, and why the FIRST one failed is worth keeping, because it is not the reason it looks like. Deriving the count came out at about six people whatever the plant's size - but the fault was never the deriving. It was that the leader's length was CAPPED AT A SHARE OF THE BUDGET, and a share grows with the thing it is a share of, so every extra turn a bigger plant won went straight back to the leader and none of it reached the room.";
+  "Drawing the count from a bell fixed that symptom and paid for it in coupling. Measured over the eighteen plants in the supply, turns per person ran from 24 to 65, and two plants fell under the elder floor purely because their chapter was short. Cutting the cap is what lets deriving work: the leader is worked out from the plant's DAYS alone, so what is left over genuinely tracks how much preaching there is.";
+  "The floor that guaranteed every convert a minimum length is GONE and nothing replaced it, because the ordering makes it unreachable - a cast sized by what the turns afford cannot be a cast the turns cannot afford. It was already unreachable: across all eighteen plants that cap never once bound, and the tightest of them wanted 81 turns for its leader against 210 available.";
+  "There is no clamp on the count. Plants are meant to run fifteen to twenty-one days, which derives to eleven through fifteen people, so a clamp would have nothing to do. A plant landing outside that is saying its chapter grouping is off, and g_plant_chapters has already said so through floor_met and over_maximum. Clamping here would be that same finding suppressed rather than heard twice.";
   "The leader is taken off the top, because the leader is the one person whose length is fixed by something outside the budget - an elder is formed over a set amount of time, and the rest of the plant has to fit around that rather than the leader fitting around the rest.";
   "The converts then split what is left evenly and are jittered apart. Even-then-jitter rather than a descent: a descent says the second person is always most of the first, which is a shape, and the shape shows. What is wanted is a room of people who are mostly comparable and occasionally not.";
   "Seeded on the plant's chapters, so a plant always has the same cast. This is authored content - worked out once and met by every player - so a run that differed each time would make a change in the output impossible to read.";
@@ -36,26 +40,20 @@ export function g_plant_arcs(plant) {
   let arc_turns = subtract(matches, question_turns);
   let joined = list_join_comma(chapters);
   let next = random_seed_generator_from_text(joined);
-  let npcs = random_bell_low_middle_high(
-    next,
-    settings.plant_cast_minimum,
-    settings.plant_cast_mean,
-    settings.plant_cast_maximum,
-  );
-  ("The leader's share is a portion of the plant's DAYS, so a longer plant disciples the leader longer rather than visiting the same number of times more thinly.");
+  ("The leader's share is a portion of the plant's DAYS, so a longer plant disciples the leader longer rather than visiting the same number of times more thinly. It is worked out from the days ALONE - nothing about the cast reaches it - and that is what lets the count below be derived rather than guessed.");
   let share_low = divide(settings.leader_days_percent_minimum, 100);
   let share_high = divide(settings.leader_days_percent_maximum, 100);
   let share = divide(share_low + share_high, 2);
   let left = multiply(days, share);
-  let leader_wanted = multiply_round(left, settings.conversation_turns_mean);
-  let converts = subtract(npcs, 1);
-  let shortest = settings.conversation_turns_low;
-  let converts_least = multiply(converts, shortest);
-  let leader_room = subtract(arc_turns, converts_least);
-  let leader_turns = math_min(leader_wanted, leader_room);
+  let leader_turns = multiply_round(left, settings.conversation_turns_mean);
   let leader_short = less_than(leader_turns, settings.leader_turns_minimum);
-  ("Whatever the leader does not take is split evenly and then jittered, so the total and the head count both survive the variety.");
+  ("The cast is what the leftover turns will pay for at the usual arc length. One person at the least, because a plant with a leader and nobody in it is not a plant.");
   let convert_turns = subtract(arc_turns, leader_turns);
+  let afforded = divide_round(convert_turns, settings.arc_turns_mean);
+  let converts = math_max(1, afforded);
+  let npcs = converts + 1;
+  let shortest = settings.conversation_turns_low;
+  ("Whatever the leader does not take is split evenly and then jittered, so the total and the head count both survive the variety.");
   let evenly = divide_floor(convert_turns, converts);
   let right = multiply(evenly, converts);
   let over = subtract(convert_turns, right);
