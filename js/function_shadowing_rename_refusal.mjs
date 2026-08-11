@@ -1,7 +1,5 @@
+import { js_name_taken_is } from "./js_name_taken_is.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { js_binding_names } from "./js_binding_names.mjs";
-import { js_imports } from "./js_imports.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -40,10 +38,7 @@ export async function function_shadowing_rename_refusal(
   ("printed a skipped name with nothing beside it. Measured on one site: image");
   ("generate declares its own words, and the sweep said only that it had been");
   ("skipped.");
-  let names = js_binding_names(ast);
-  let imports = js_imports(ast);
-  let taken = list_concat(names, imports);
-  let declared = list_includes(taken, name_after);
+  let declared = js_name_taken_is(ast, name_after);
   if (declared) {
     let held =
       "the replacement is already bound or imported in this file, so the rename would move the hiding rather than end it";

@@ -1,3 +1,5 @@
+import { null_is } from "./null_is.mjs";
+import { machine_ran_out_is } from "./machine_ran_out_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
 import { and } from "./and.mjs";
@@ -18,6 +20,20 @@ export function qa_commit_named_entry_stale_is(entry) {
   let contentless = and(broken, silent);
   if (contentless) {
     return true;
+  }
+  ("There is a third way to be no record of anything, and this one looks least like it. The gates come back red, they are named, and the entry reads as a full judgement - but every one of them says the machine ran out of file handles, which is what happens when several judgings and several working-tree runs walk the folder at once. About thirty gates were recorded red that way on 2026-08-11 and not one of them had looked at anything.");
+  ("It is worse than a run that died, because a run that died leaves the emptiness the check above catches. This leaves a verdict. The commit is then refused for every app for ever, and it is never judged again, because it already looks judged.");
+  ("One spoiled gate condemns the whole entry, the same as everywhere else here. The gates of one judging ran on one machine at one moment, so a machine that was full for one of them was full for the run.");
+  let spoke = property_get_or_null(entry, "said");
+  let b = null_is(spoke);
+  if (not(b)) {
+    for (let gate of object_property_names(spoke)) {
+      let said = property_get(spoke, gate);
+      let ran_out = machine_ran_out_is(said);
+      if (ran_out) {
+        return true;
+      }
+    }
   }
   let named = property_get(entry, "named");
   for (let gate of object_property_names(named)) {
