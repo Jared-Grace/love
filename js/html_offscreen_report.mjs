@@ -1,32 +1,24 @@
-import { round } from "./round.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 export function html_offscreen_report() {
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   "everything drawn on this page that has fallen off the screen and cannot be scrolled back to. runs inside the page itself, so it reads the sizes the browser actually settled on rather than the ones the code asked for - which is the only way to catch a size that was fine on a laptop and too big on a phone";
   "off the TOP and off the LEFT are always reported, because scrolling only ever moves forwards from nothing: there is no way to reach above the first line or left of the first column, so anything there is simply gone and nothing on the screen says so";
   "off the BOTTOM and off the RIGHT are reported only when nothing can be scrolled to reach them. content below the fold of a page that scrolls is not a fault, it is a page";
+  "every comparison here is written the plain way on purpose. this whole function is sent to a browser as text, where none of this repo's names exist, so the canonicalizing pass turning a less-than into a call to a function named less_than would leave code that throws the moment it lands - and it would throw over there, where no gate is reading";
   let width = window.innerWidth;
   let height = window.innerHeight;
   let found = [];
   let selector =
     "body p, body span, body button, body h1, body h2, body h3, body li, body td";
   let all = document.querySelectorAll(selector);
-  function scrollable(element, forward, along_y) {
-    if (not(forward)) {
-      return false;
-    }
+  function scrollable(element, along_y) {
     let node = element;
     while (node) {
       let style = window.getComputedStyle(node);
       let flow = along_y ? style.overflowY : style.overflowX;
-      let scrolls =
-        equal(flow, "auto") || equal(flow, "scroll") || equal(flow, "overlay");
+      let scrolls = flow == "auto" || flow == "scroll" || flow == "overlay";
       let inner = along_y ? node.scrollHeight : node.scrollWidth;
       let outer = along_y ? node.clientHeight : node.clientWidth;
-      if (scrolls && greater_than(inner, outer + 1)) {
+      if (scrolls && inner - outer > 1) {
         return true;
       }
       node = node.parentElement;
@@ -34,57 +26,55 @@ export function html_offscreen_report() {
     let page = document.documentElement;
     let inner_page = along_y ? page.scrollHeight : page.scrollWidth;
     let outer_page = along_y ? page.clientHeight : page.clientWidth;
-    let g = greater_than(inner_page, outer_page + 1);
-    return g;
+    let scrolls_page = inner_page - outer_page > 1;
+    return scrolls_page;
   }
   for (let element of all) {
     let rect = element.getBoundingClientRect();
-    if (less_than(rect.width, 1) || less_than(rect.height, 1)) {
+    let too_small = rect.width < 1 || rect.height < 1;
+    if (too_small) {
       continue;
     }
     let style = window.getComputedStyle(element);
-    if (equal(style.visibility, "hidden") || equal(style.display, "none")) {
-      continue;
-    }
-    if (equal(style.opacity, "0")) {
+    let unseen =
+      style.visibility == "hidden" ||
+      style.display == "none" ||
+      style.opacity == "0";
+    if (unseen) {
       continue;
     }
     let text = element.textContent.trim();
-    if (less_than(text.length, 1)) {
+    let wordless = text.length < 1;
+    if (wordless) {
       continue;
     }
     let edges = [];
-    if (less_than(rect.top, -1)) {
+    if (rect.top < -1) {
       edges.push("top");
     }
-    if (less_than(rect.left, -1)) {
+    if (rect.left < -1) {
       edges.push("left");
     }
-    if (
-      greater_than(rect.bottom, height + 1) &&
-      not(scrollable(element, true, true))
-    ) {
+    if (rect.bottom - height > 1 && !scrollable(element, true)) {
       edges.push("bottom");
     }
-    if (
-      greater_than(rect.right, width + 1) &&
-      not(scrollable(element, true, false))
-    ) {
+    if (rect.right - width > 1 && !scrollable(element, false)) {
       edges.push("right");
     }
-    if (less_than(edges.length, 1)) {
+    let inside = edges.length < 1;
+    if (inside) {
       continue;
     }
     found.push({
       tag: element.tagName.toLowerCase(),
       text: text.slice(0, 60),
       edges,
-      top: round(rect.top),
-      left: round(rect.left),
-      bottom: round(rect.bottom),
-      right: round(rect.right),
-      width: round(rect.width),
-      height: round(rect.height),
+      top: Math.round(rect.top),
+      left: Math.round(rect.left),
+      bottom: Math.round(rect.bottom),
+      right: Math.round(rect.right),
+      width: Math.round(rect.width),
+      height: Math.round(rect.height),
     });
   }
   return found;
