@@ -1,8 +1,6 @@
 {
  "known": [
-  "app_g_dev_index -> sessionStorage",
   "app_g_verify_home -> localStorage",
-  "app_g_verify_home -> sessionStorage",
-  "app_g_verify_view -> sessionStorage"
+  "app_g_verify_home -> sessionStorage"
  ]
 }
