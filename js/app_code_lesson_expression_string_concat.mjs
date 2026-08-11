@@ -1,4 +1,4 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
@@ -6,9 +6,6 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_string_concat_shape } from "./app_code_string_concat_shape.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -57,7 +54,7 @@ export function app_code_lesson_expression_string_concat() {
     return r;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_string_concat_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -71,24 +68,6 @@ export function app_code_lesson_expression_string_concat() {
     unscramble_label: "Build the code that gives this value: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title: joining strings";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "String concatenation ");
-        app_code_string_concat_shape(parent);
-      }
-      return render;
-    }
-    let rights = ["string", "concatenation"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     "anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.";
     let two = pair();
