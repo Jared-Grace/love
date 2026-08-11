@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -16,8 +17,7 @@ export function app_code_lesson_name_id_category_then_paint_name(ast, maker) {
   if (taken) {
     return false;
   }
-  let id = property_get(maker, "id");
-  let name_before = property_get(id, "name");
+  let name_before = property_path_get_2(maker, "id", "name");
   function rename(node) {
     let name = property_get(node, "name");
     if (name === name_before) {
