@@ -48,12 +48,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
         app_code_lesson_name_id_category(parent, left_upper);
         let open = js_code_parenthesis_left();
         let close = js_code_parenthesis_right();
-        html_cycle_code(parent, [
-          "a comparison inside ",
-          open,
-          " and ",
-          close,
-        ]);
+        html_cycle_code(parent, ["a comparison inside ", open, " and ", close]);
       }
       return render;
     }
@@ -131,12 +126,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     ]);
     let first = app_code_container_light_blue(root);
     html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
-    html_div_cycle_code(first, [
-      "So ",
-      "(3 === 5) === false",
-      " is ",
-      "true",
-    ]);
+    html_div_cycle_code(first, ["So ", "(3 === 5) === false", " is ", "true"]);
     let second = app_code_container_light_blue(root);
     html_div_cycle_code(second, ["", "2 < 5", " is ", "true"]);
     html_div_cycle_code(second, ["So ", "(2 < 5) !== true", " is ", "false"]);

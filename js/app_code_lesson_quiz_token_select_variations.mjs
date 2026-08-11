@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_token_select_variations_set_sides } from "./app_code_lesson_quiz_token_select_variations_set_sides.mjs";
 import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
 import { property_in_list } from "./property_in_list.mjs";
@@ -71,18 +72,23 @@ export function app_code_lesson_quiz_token_select_variations(code) {
         let original = list_copy(args);
         let perms = list_permutations(original);
         let key = js_special_arguments();
-        function set_args(perm) {
-          property_set(node, key, perm);
-        }
         function make_ordering(perm) {
           function ordering() {
-            set_args(perm);
+            app_code_lesson_quiz_token_select_variations_set_args(
+              perm,
+              node,
+              key,
+            );
           }
           return ordering;
         }
         let orderings = list_map(perms, make_ordering);
         function restore() {
-          set_args(original);
+          app_code_lesson_quiz_token_select_variations_set_args(
+            original,
+            node,
+            key,
+          );
         }
         let orderable = {
           orderings,
@@ -117,4 +123,12 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     each(variations, trim_semicolon);
   }
   return variations;
+}
+function app_code_lesson_quiz_token_select_variations_set_args(
+  perm,
+  node,
+  key,
+) {
+  arguments_assert(arguments, 3);
+  property_set(node, key, perm);
 }
