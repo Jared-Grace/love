@@ -20,8 +20,8 @@ export function lift_candidates_cut_order(rows) {
     return row_stuck;
   }
   function free_is(row) {
-    let stuck = stuck_is(row);
-    let row_free = not(stuck);
+    let stuck_row = stuck_is(row);
+    let row_free = not(stuck_row);
     return row_free;
   }
   let free = list_filter(rows, free_is);
