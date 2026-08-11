@@ -27,7 +27,6 @@ import { app_shared_style_control_font_size } from "./app_shared_style_control_f
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_karate_container_main } from "../../karate_code/js/app_karate_container_main.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_checkboxes(
@@ -43,7 +42,7 @@ export function html_checkboxes(
   valid_get,
 ) {
   let root = html_clear_context(context);
-  let container_main = app_karate_container_main(root);
+  let container_main = container_main_get(root);
   button_back(context, container_main);
   let div = html_div_text(container_main, top_text);
   html_centered(div);

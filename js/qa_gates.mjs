@@ -361,6 +361,7 @@ export function qa_gates() {
     number_to_words_cases_gate_run,
     functions_unreachable_statements_gate_run,
     functions_calls_unawaited_gate_run,
+    apps_prod_chunks_missing_gate_run,
   ];
   return gates;
 }
