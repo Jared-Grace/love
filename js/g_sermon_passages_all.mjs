@@ -1,5 +1,4 @@
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { g_sermon_groups_todo } from "./g_sermon_groups_todo.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { g_sermon_chapter_passages_for_grouping } from "./g_sermon_chapter_passages_for_grouping.mjs";
