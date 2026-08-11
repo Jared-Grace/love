@@ -1,8 +1,8 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -22,8 +22,7 @@ export function g_sermon_chapter_verses_text(passages) {
   let ordered = list_sort_number_mapper(copied, first_verse);
   let lines = [];
   for (let passage of ordered) {
-    let numbers = property_get(passage, "verse_numbers");
-    let joined = list_join_comma(numbers);
+    let joined = property_list_join_comma(passage, "verse_numbers");
     let english = property_get(passage, "english");
     let line = list_join_space([joined, english]);
     list_add(lines, line);
