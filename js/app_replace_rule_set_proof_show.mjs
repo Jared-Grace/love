@@ -1,4 +1,4 @@
-import { app_replace_rule_set_proof_show_in_run } from "./app_replace_rule_set_proof_show_in_run.mjs";
+import { app_replace_rule_set_proof_show_highlighted_is } from "./app_replace_rule_set_proof_show_highlighted_is.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_div } from "./html_div.mjs";
@@ -16,42 +16,15 @@ import { app_replace_rule_set_proof_connector } from "./app_replace_rule_set_pro
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_replace_rule_set_proof_show(parent, history) {
   "on success, show the proof as a centered rail underneath start over, and make each rule a button: choosing one highlights just the symbols it replaced (the matched left in the state above, the produced right in the state below) and the rule itself, and de-glows everything else; choosing it again clears the focus";
   let selected = null;
   render();
-  function highlighted_is(position, j) {
-    if (null_is(selected)) {
-      ("with nothing chosen every step symbol glows green (the whole solved proof); choosing a rule narrows the green to just that rule's single usage and darkens the rest");
-      return true;
-    }
-    let entry = list_get(history, selected);
-    let rule = property_get(entry, "rule");
-    let index = property_get(entry, "index");
-    if (equal(position, selected)) {
-      let right = property_get(rule, "right");
-      let size = list_size(right);
-      let r = app_replace_rule_set_proof_show_in_run(j, index, size);
-      return r;
-    }
-    let right2 = subtract(selected, 1);
-    if (equal(position, right2)) {
-      let left = property_get(rule, "left");
-      let size2 = list_size(left);
-      let r2 = app_replace_rule_set_proof_show_in_run(j, index, size2);
-      return r2;
-    }
-    return false;
-  }
   function render() {
     html_clear(parent);
     let header = app_shared_text_body(parent, "Your steps:");
@@ -96,7 +69,12 @@ export function app_replace_rule_set_proof_show(parent, history) {
       let symbols = app_replace_button_side(row, state);
       function style_symbol(symbol, j) {
         "highlighted symbols get the green solved style; the rest get the plain invalid/dark style already used in the derivation and for dimmed rules - no new style, just valid off";
-        let highlighted = highlighted_is(position, j);
+        let highlighted = app_replace_rule_set_proof_show_highlighted_is(
+          position,
+          j,
+          selected,
+          history,
+        );
         app_replace_symbol_tile_valid_if(symbol, highlighted, true);
       }
       each_index(symbols, style_symbol);
