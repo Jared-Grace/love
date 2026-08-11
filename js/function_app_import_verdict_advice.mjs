@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
 export function function_app_import_verdict_advice(verdict) {
   arguments_assert(arguments, 1);
   ("What one of the five answers about an app-owned import is telling whoever reads it to do, said in a sentence.");

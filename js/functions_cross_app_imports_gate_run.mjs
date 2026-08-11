@@ -13,12 +13,10 @@ export async function functions_cross_app_imports_gate_run() {
   let offenders = await functions_cross_app_imports();
   let path = functions_cross_app_imports_baseline_path();
   let name_write = fn_name("functions_cross_app_imports_baseline_write");
-  await baseline_names_gate_generic(
-    offenders,
-    path,
+  let hint_get = functions_app_import_advice_curried(
     "one app reaches into another and did not before - move what it needs into shared code, or let the app that owns it hand it over",
-    name_write,
   );
+  await baseline_names_gate_advice_generic(offenders, path, hint_get, name_write);
   let r = {
     checked: list_size(offenders),
     added: 0,

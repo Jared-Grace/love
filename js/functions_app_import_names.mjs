@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_space } from "./text_split_space.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
 export function functions_app_import_names(pairs) {
   arguments_assert(arguments, 1);
   ("The app-owned names being imported in a run of reported lines, each one given back once however many functions reached for it.");
