@@ -1,3 +1,4 @@
+import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
 import { app_reply_choices_whatsapp } from "./app_reply_choices_whatsapp.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
@@ -16,7 +17,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_add } from "./property_get_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
@@ -56,19 +56,47 @@ export function app_reply_main_shortcuts(
   let r_pk_ = shortcut_extend_count(r_pk_base, 1);
   let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
-  let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
+  let r_pk_10_g = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    "g",
+    g,
+  );
   let h = app_reply_how_r_u();
-  let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
-  let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
+  let r_pk_10_gh = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10_g,
+    "h",
+    h,
+  );
+  let r_pk_10_h = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    "h",
+    h,
+  );
   let c = app_reply_called_why();
-  let r_pk_1_c = shortcut_extend_response(r_pk_, "c", c);
+  let r_pk_1_c = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "c",
+    c,
+  );
   let m = app_reply_give();
-  let r_pk_1_m = shortcut_extend_response(r_pk_, "m", m);
+  let r_pk_1_m = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "m",
+    m,
+  );
   let w = app_reply_choices_whatsapp();
-  let r_pk_1_w = shortcut_extend_response(r_pk_, "w", w);
+  let r_pk_1_w = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "w",
+    w,
+  );
   let glory = app_reply_glory();
   let v = emoji_fire();
-  let r_pk_10_glory = shortcut_extend_response(r_pk_10, v, glory);
+  let r_pk_10_glory = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    v,
+    glory,
+  );
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
@@ -127,7 +155,11 @@ export function app_reply_main_shortcuts(
     count: 40,
     responses: [],
   };
-  let r_intro = shortcut_extend_response(r_default, "intro", gl);
+  let r_intro = app_reply_main_shortcuts_shortcut_extend_response(
+    r_default,
+    "intro",
+    gl,
+  );
   let shortcuts = [
     r_intro,
     r_pk_,
@@ -162,11 +194,6 @@ export function app_reply_main_shortcuts(
   function shortcut_extend_count(base, count) {
     let extended = app_reply_main_shortcuts_shortcut_extend(base, count);
     property_set(extended, "count", count);
-    return extended;
-  }
-  function shortcut_extend_response(base, name_suffix, r) {
-    let extended = app_reply_main_shortcuts_shortcut_extend(base, name_suffix);
-    property_get_add(extended, "responses", r);
     return extended;
   }
   function shortcut_each(s) {
