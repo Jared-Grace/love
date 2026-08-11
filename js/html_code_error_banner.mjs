@@ -4,7 +4,7 @@ export function html_code_error_banner() {
   "It is written as page text rather than as one of this repo's functions because it has to be standing BEFORE the app's own script runs - a handler installed by code that never got to run catches nothing, which is the exact case it exists for.";
   let attributes_none = {};
   let style =
-    "position:fixed;left:0;right:0;bottom:0;max-height:60vh;overflow:auto;margin:0;padding:1rem;z-index:2147483647;background:#fff0f0;color:#900;font:0.9rem monospace;white-space:pre-wrap;border-top:0.25rem solid #900";
+    "position:fixed;left:0;right:0;bottom:0;max-height:60vh;overflow:auto;margin:0;padding:1rem;z-index:2147483647;background:#ffdddd;color:#900;font:0.9rem monospace;white-space:pre-wrap;border-top:0.25rem solid #900";
   let code =
     "if (location.pathname.indexOf('/dev/') !== -1) { " +
     "var dev_error_show = function (kind, message) { " +
