@@ -256,7 +256,7 @@ export function permission_grant_names() {
   let spelled253 = fn_name("qa_gate_failed_complaints");
   let spelled254 = fn_name("g_verify_reviewed_set");
   let spelled255 = fn_name("g_day_sky_phase_check");
-  let spelled256 = fn_name("g_day_fraction_check");
+  let spelled256 = fn_name("app_g_day_fraction_check");
   let spelled257 = fn_name("timings_total_ms");
   let spelled258 = fn_name("g_clock_sky_phase_check");
   let spelled259 = fn_name("timings_ranked");
