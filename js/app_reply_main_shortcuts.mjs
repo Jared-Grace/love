@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_reply_main_shortcuts_languages_default_concat_single } from "./app_reply_main_shortcuts_languages_default_concat_single.mjs";
 import { app_reply_main_shortcuts_languages_default_concat } from "./app_reply_main_shortcuts_languages_default_concat.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
@@ -220,15 +220,4 @@ export function app_reply_main_shortcuts(
     app_shared_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
-}
-function app_reply_main_shortcuts_languages_default_concat_single(
-  ke2,
-  languages_chosen_default,
-) {
-  arguments_assert(arguments, 2);
-  let r2 = app_reply_main_shortcuts_languages_default_concat(
-    [ke2],
-    languages_chosen_default,
-  );
-  return r2;
 }
