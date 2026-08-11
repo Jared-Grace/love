@@ -1,17 +1,15 @@
+import { app_shared_gloss_bible_home_generic_scroll } from "./app_shared_gloss_bible_home_generic_scroll.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { list_first_property } from "./list_first_property.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { json_from_try } from "./json_from_try.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { html_scroll_top_now } from "./html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_nbsp } from "./html_span_nbsp.mjs";
-import { log } from "./log.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_span_colon_2 } from "./html_span_colon_2.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -93,18 +91,9 @@ export async function app_shared_gloss_bible_home_generic(
   }
   each(explains, lambda);
   async function lambda6() {
-    await scroll(verses);
+    await app_shared_gloss_bible_home_generic_scroll(verses);
   }
   let text = emoji_arrow_up();
   app_shared_button_wide(p, text, lambda6);
   html_hr(p);
-  return;
-  async function scroll(verses_inner) {
-    let p2 = list_first_property(verses_inner, "p_verse");
-    log(app_shared_gloss_bible_home_generic.name, {
-      p: p2,
-      verses: verses_inner,
-    });
-    await html_scroll_top_now(p2);
-  }
 }
