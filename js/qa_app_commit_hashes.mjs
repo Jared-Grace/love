@@ -22,7 +22,8 @@ export async function qa_app_commit_hashes(search, commit) {
   let copy_name = qa_build_copy_name();
   await qa_snapshot_ensure_named(copy_name, commit);
   let app_name = await app_shared_name_search(search);
-  ("Everything of this app already standing where the copy builds to is taken away first, so what is standing there afterwards is what this build made and nothing else. Putting the copy back the way its commit had it is not enough on its own: it restores the pieces that commit carried and leaves untouched whatever a previous build here left behind, and a build is free to name the extra scripts it cuts out with numbers it chooses, so the two builds' leftovers sit side by side and neither one is what came out.");
+  ("The extra scripts of this app already standing where the copy builds to are taken away first, so what is standing there afterwards is what this build made and nothing else. Putting the copy back the way its commit had it is not enough on its own: it restores the pieces that commit carried and leaves untouched whatever a previous build here left behind, and a build is free to name the extra scripts it cuts out with numbers it chooses, so the two builds' leftovers sit side by side and neither one is what came out.");
+  ("The page and the script are left where they are, both because the build writes them over anyway and because the app is only found to be here at all by its page sitting in that folder. Nothing is asked to be kept, and the page is kept regardless.");
   let kept = [];
   let p = folder_public();
   let built = path_join([folder, p]);
