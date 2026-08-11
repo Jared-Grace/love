@@ -16,8 +16,8 @@ export function lift_candidates_cut_order(rows) {
     fn_name("app_code_lesson_expression_repeated_generic"),
     " on 2026-08-03: ranked by size the first cut was expanded_counted, thirty-five lines closing over four sibling helpers and one word. Ranked this way it is cell_at, four lines closing over nothing.");
   function stuck_is(row) {
-    let stuck = property_list_empty_not_is(row, "closed_nested");
-    return stuck;
+    let row_stuck = property_list_empty_not_is(row, "closed_nested");
+    return row_stuck;
   }
   function free_is(row) {
     let stuck = stuck_is(row);
