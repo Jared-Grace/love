@@ -65,8 +65,8 @@ export function g_plant_arcs(plant) {
     let amount = extra ? evenly + 1 : evenly;
     list_add(shares, amount);
   }
-  let p2 = multiply(evenly, 2);
-  let widest = math_max(p2, shortest);
+  let p = multiply(evenly, 2);
+  let widest = math_max(p, shortest);
   let jittered = list_numbers_jitter(
     shares,
     next,
