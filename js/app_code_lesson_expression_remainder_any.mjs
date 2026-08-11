@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_expression_remainder_any_title_name_id } from "./app_code_lesson_expression_remainder_any_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
@@ -14,10 +14,6 @@ import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_integers } from "./text_integers.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_any() {
@@ -52,7 +48,7 @@ export function app_code_lesson_expression_remainder_any() {
     return r;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_remainder_any_title_name_id(percent);
   let params = {
     above,
     name_id,
@@ -64,24 +60,6 @@ export function app_code_lesson_expression_remainder_any() {
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function title_name_id() {
-    "the home title is console.log remainder % (no 'by <divisor>', since the divisor now varies)";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Remainder ");
-        html_span_text_code_dark(parent, percent);
-      }
-      return render;
-    }
-    let rights = ["remainder"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let derive = app_code_container_light_blue(root);
     html_div_cycle_code(derive, [
