@@ -1,3 +1,4 @@
+import { js_declaration_names_unbound_cases_gate_run } from "./js_declaration_names_unbound_cases_gate_run.mjs";
 import { qa_gate_run_start_wanted_stale_gate_run } from "./qa_gate_run_start_wanted_stale_gate_run.mjs";
 import { qa_gates_dealt_gate_run } from "./qa_gates_dealt_gate_run.mjs";
 import { browser_secure_context_gate_run } from "./browser_secure_context_gate_run.mjs";
@@ -373,6 +374,7 @@ export function qa_gates() {
     functions_unreachable_statements_gate_run,
     functions_calls_unawaited_gate_run,
     apps_prod_chunks_missing_gate_run,
+    js_declaration_names_unbound_cases_gate_run,
   ];
   return gates;
 }
