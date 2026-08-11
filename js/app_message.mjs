@@ -1,3 +1,4 @@
+import { app_message_messages_get } from "./app_message_messages_get.mjs";
 import { app_message_message_display } from "./app_message_message_display.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -16,7 +17,6 @@ import { app_shared_button_uncolored_background_color } from "./app_shared_butto
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_div } from "./html_div.mjs";
@@ -60,7 +60,7 @@ export async function app_message(context) {
   ]);
   async function refresh() {
     html_clear(div_messages);
-    let messages = messages_get();
+    let messages = app_message_messages_get(context, messages_property);
     function lambda(message) {
       app_message_message_display("left", message, div_messages);
       let right = app_message_message_display(
@@ -89,14 +89,6 @@ export async function app_message(context) {
     let nexts = list_map(messages, lambda);
     await invoke_multiple_unordered_async(nexts);
   }
-  function messages_get() {
-    let value = storage_local_initialize_context(
-      context,
-      messages_property,
-      [],
-    );
-    return value;
-  }
   async function on_send() {
     let message = html_value_get(textarea);
     html_value_set(textarea, "");
@@ -106,7 +98,7 @@ export async function app_message(context) {
       ("no canned reply matched, so this is something for the developer to read — send it to the inbox tagged as coming from the message app");
       await app_shared_contact_send("message", message);
     }
-    let messages = messages_get();
+    let messages = app_message_messages_get(context, messages_property);
     list_add(messages, message);
     storage_local_set_context(context, messages_property, messages);
     await refresh();
