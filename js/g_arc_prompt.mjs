@@ -14,7 +14,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   "The profile (gender, age, etc.) is RECEIVED rather than LLM decide.";
   ("the profile is one of ", fn_name("g_profiles"), ".");
   ("turn_target is drawn for this person by ", fn_name("g_npc_pool"), ".");
-  ("~Twelve turns make a conversation and a conversation is a day, so seventy turns is about six days of their life.");
+  ("~Twelve turns make a conversation, and one person holds at most one conversation a day, so seventy turns is about six days this person is met on - not six days running, because the player's day holds a conversation with everybody else too.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
   let list = g_openers_unbeliever();
