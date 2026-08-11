@@ -54,21 +54,13 @@ export function app_g_dev_routes(div_map) {
     await app_g_dev_routes_npc_view_of(npc, phase);
   }
   async function unbeliever() {
-    let npcs = await app_g_npcs_get();
-    let unconverted = list_filter_object_includes(npcs, {
-      christian: false,
-    });
-    let npc = list_random_item(unconverted);
+    let npc = await app_g_npc_unconverted_random();
     let result = app_g_view_phase_conversation();
     await app_g_dev_routes_npc_view_of(npc, result);
   }
   async function quick() {
     "the #quick dev route: open an unbeliever whose conversation is trimmed to ONLY the gospel-share turn, so answering that one objection lands straight on the closing prayer that converts — the fast path to test convert-on-gospel-share without walking the how-are-you and believe turns first.";
-    let npcs = await app_g_npcs_get();
-    let unconverted = list_filter_object_includes(npcs, {
-      christian: false,
-    });
-    let npc = list_random_item(unconverted);
+    let npc = await app_g_npc_unconverted_random();
     let gender = property_get(npc, "gender");
     let pronouns = g_gender_pronouns(gender);
     let full = g_conversation_generate(pronouns);
