@@ -1,3 +1,4 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_secure_context_names } from "./browser_secure_context_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -23,8 +24,9 @@ export function js_secure_context_members(ast) {
     }
     let object = property_get(node, "object");
     let key = property_get(node, "property");
-    let object_name = property_get(object, "name");
-    let key_name = property_get(key, "name");
+    ("asked in a way that answers rather than throws: the object of a member is often another member - navigator.clipboard.writeText - and such a node has no name at all, which is an answer of no here and not a fault");
+    let object_name = property_get_or_null(object, "name");
+    let key_name = property_get_or_null(key, "name");
     if (null_is(object_name) || null_is(key_name)) {
       continue;
     }
