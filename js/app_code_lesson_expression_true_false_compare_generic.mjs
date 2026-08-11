@@ -1,18 +1,15 @@
+import { app_code_lesson_expression_true_false_compare_generic_title_name_id } from "./app_code_lesson_expression_true_false_compare_generic_title_name_id.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -33,7 +30,11 @@ export function app_code_lesson_expression_true_false_compare_generic(
   ("A comparison standing where a plain true or false stood is a second idea and gets its own lesson (comparing a comparison), which in turn is what the swapping lesson's (a === b) === (b === a) needs. Answer is the code's own true/false value, correct by construction.");
   let symbol = property_get(operator, "operator");
   let fn = property_get(operator, "fn");
-  let name_id = title_name_id();
+  let name_id =
+    app_code_lesson_expression_true_false_compare_generic_title_name_id(
+      symbol,
+      rights,
+    );
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
@@ -49,28 +50,6 @@ export function app_code_lesson_expression_true_false_compare_generic(
   });
   property_set(lesson, "examples_complete", true);
   return lesson;
-  function title_name_id() {
-    "the home title: comparing true and false with this operator, an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        let t = js_keyword_true();
-        let f = js_keyword_false();
-        html_cycle_code(parent, [
-          "comparing ",
-          t,
-          " and ",
-          f,
-          " with ",
-          symbol,
-        ]);
-      }
-      return render;
-    }
-    let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function keyword(value) {
     "the code word for a true or false value";
     let on_true = js_keyword_true();
