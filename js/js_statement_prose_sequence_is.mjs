@@ -1,3 +1,5 @@
+import { list_all_is } from "./list_all_is.mjs";
+import { js_prose_part_is } from "./js_prose_part_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,10 +7,6 @@ import { property_list_first } from "./property_list_first.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { text_is } from "./text_is.mjs";
-import { js_call_is } from "./js_call_is.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statement_prose_sequence_is(node) {
   arguments_assert(arguments, 1);
@@ -36,6 +34,6 @@ export function js_statement_prose_sequence_is(node) {
     return false;
   }
   let parts = property_get(expression, "expressions");
-  let all_prose_is = list_every(parts, js_prose_part_is);
+  let all_prose_is = list_all_is(parts, js_prose_part_is);
   return all_prose_is;
 }
