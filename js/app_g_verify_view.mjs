@@ -308,14 +308,14 @@ export async function app_g_verify_view(
   ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
   let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
-  let saved_draft = sessionStorage.getItem(draft_key);
-  let saved_base = sessionStorage.getItem(base_key);
+  ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
+  let saved_draft = storage_session_get(app_g, draft_key);
+  let saved_base = storage_session_get(app_g, base_key);
   let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value4);
   if (draft_fresh) {
     html_value_set(suggest_area, saved_draft);
   } else {
-    sessionStorage.removeItem(draft_key);
-    sessionStorage.removeItem(base_key);
+    app_g_verify_view_draft_drop(draft_key, base_key);
   }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
@@ -331,13 +331,7 @@ export async function app_g_verify_view(
     html_style_set(suggest_area, "height", h + "px");
   }
   function on_suggest_input() {
-    app_g_verify_view_draft_save(
-      suggest_area,
-      sessionStorage,
-      draft_key,
-      base_key,
-      value4,
-    );
+    app_g_verify_view_draft_save(suggest_area, draft_key, base_key, value4);
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
@@ -350,8 +344,7 @@ export async function app_g_verify_view(
   html_centered(reset_bar);
   function reset_to_current() {
     html_value_set(suggest_area, value4);
-    sessionStorage.removeItem(draft_key);
-    sessionStorage.removeItem(base_key);
+    app_g_verify_view_draft_drop(draft_key, base_key);
     autosize();
   }
   app_shared_button(reset_bar, "Reset to current lines", reset_to_current);
@@ -378,8 +371,7 @@ export async function app_g_verify_view(
       html_clear(suggest_bar);
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
       app_shared_text_deemphasized(sent);
-      sessionStorage.removeItem(draft_key);
-      sessionStorage.removeItem(base_key);
+      app_g_verify_view_draft_drop(draft_key, base_key);
       ("a fresh suggestion supersedes any prior reviewed-badge, so clear the marker and hide the badge until this new one is reviewed");
       try {
         await app_shared_api({
@@ -444,7 +436,6 @@ export async function app_g_verify_view(
     container,
     small_gap,
     suggest_area,
-    sessionStorage,
     draft_key,
     base_key,
     value4,
