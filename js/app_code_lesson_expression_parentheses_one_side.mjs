@@ -115,13 +115,20 @@ export function app_code_lesson_expression_parentheses_one_side() {
     html_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
     html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
     ("Solve, not work out - the childhood math word the track already runs on, decided in the arithmetic-both-sides lesson and used by every lesson that names the act. Past tense, because the two lines above it on this card have already done it: the line points back at what the reader just watched happen, rather than stating a rule they have yet to apply.");
-    ("Still needs an antecedent, and this line is it. Without it the word points at nothing on the card and the reader supplies the contrast themselves - or misses that there is one. What is NOT said here is because it was inside ( and ): the idea card three cards up already says inside is solved before outside, so a reason clause would be that sentence reworded a few lines later, which is the worst kind of repeat - too close to be a second angle, too far to be recognised and skipped. This says the one thing that card cannot: on THIS order, and for the first time in the lesson, the order we read in and the order we solve in come apart.");
+    ("However needs an antecedent, and this line is it. Without it the word points at nothing on the card and the reader supplies the contrast themselves - or misses that there is one.");
     ("Comes first ON THE LINE, never just comes first. The whole card turns on two different firsts, so the one meaning position on the page has to say so; bare comes first is the other meaning, and would make the next line contradict it.");
     html_div_cycle_code(either, ["The ", "false", " comes first on the line"]);
+    ("The reason clause INSTANTIATES the idea card three cards up rather than repeating it. That card states the rule in its general form - whatever is inside is solved before whatever is outside - and this line says what the whatever turned out to be here. A rule and its instance differ in GENERALITY, not in wording, so this is not the near-copy the repo warns against: substituting the instance into the rule is the whole of what a worked example does, and a card that shows an instance without ever naming which rule it instances leaves the reader to guess the link.");
+    ("3 > 8 is written twice rather than replaced by it. The repo kills a pronoun with the name it stands for, and here the doubled name is also what binds the two halves of the sentence together - the thing solved first and the thing inside the brackets are the SAME thing, which is the entire point.");
     html_div_cycle_code(either, [
-      "We still had to solve the ",
+      "However, we had to solve the ",
       "3 > 8",
-      " first",
+      " first because ",
+      "3 > 8",
+      " was inside ",
+      open,
+      " and ",
+      close,
     ]);
   }
 }
