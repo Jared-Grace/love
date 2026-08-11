@@ -1,6 +1,6 @@
+import { availability_editor_render_preview } from "./availability_editor_render_preview.mjs";
 import { availability_editor_highlight } from "./availability_editor_highlight.mjs";
 import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
-import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { week_dates } from "./week_dates.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
@@ -18,9 +18,7 @@ import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { busy_item_build } from "./busy_item_build.mjs";
 import { busy_item_label } from "./busy_item_label.mjs";
 export function availability_editor(parent) {
@@ -68,7 +66,7 @@ export function availability_editor(parent) {
   });
   let preview = html_div(parent);
   render_grid();
-  render_preview();
+  availability_editor_render_preview(preview, ranges, chosen, line);
   function render_grid() {
     html_clear(grid_holder);
     let dates = week_dates(week_start);
@@ -77,12 +75,12 @@ export function availability_editor(parent) {
   }
   function on_grid_ranges(new_ranges) {
     ranges = new_ranges;
-    render_preview();
+    availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function shift_week(delta) {
     week_start = date_add_days(week_start, delta);
     render_grid();
-    render_preview();
+    availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function on_jump() {
     let picked = html_value_get(jump);
@@ -90,7 +88,7 @@ export function availability_editor(parent) {
     if (ok) {
       week_start = date_week_sunday(picked);
       render_grid();
-      render_preview();
+      availability_editor_render_preview(preview, ranges, chosen, line);
     }
   }
   function add_button(kind, text) {
@@ -106,23 +104,11 @@ export function availability_editor(parent) {
   function choose(kind) {
     chosen = kind;
     availability_editor_highlight(chosen, button_records);
-    render_preview();
+    availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function line(span) {
     let item = busy_item_build(chosen, span);
     let text = busy_item_label(item);
     app_shared_text_body(preview, text);
-  }
-  function render_preview() {
-    html_clear(preview);
-    let has_ranges = list_empty_not_is(ranges);
-    let none = equal(chosen, null);
-    if (none) {
-      app_shared_text_body(preview, "Pick how these times repeat");
-    } else if (has_ranges) {
-      each(ranges, line);
-    } else {
-      app_shared_text_body(preview, "Select times on the grid above");
-    }
   }
 }
