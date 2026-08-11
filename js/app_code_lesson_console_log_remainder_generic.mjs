@@ -1,5 +1,5 @@
+import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { app_code_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_code_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_color } from "./app_code_lesson_console_log_remainder_generic_remainder_color.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -17,7 +17,6 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
@@ -85,14 +84,6 @@ export function app_code_lesson_console_log_remainder_generic(
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function remainder_chip(parent, remainder) {
-    let color = app_code_lesson_console_log_remainder_generic_remainder_color(
-      remainder,
-      divisor,
-    );
-    let chip = app_code_lesson_number_chip(parent, remainder, color);
-    return chip;
-  }
   function example(parent) {
     "a concrete grouping story: share (divisor+1)*divisor + (divisor-1) loaves of bread into divisor groups; each group gets divisor+1 loaves (deliberately not the group count, so every number in the story is used in only one place), and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
     let each_group = add(divisor, 1);
@@ -138,7 +129,11 @@ export function app_code_lesson_console_log_remainder_generic(
       " left over, so ",
     ]);
     let leftover_line = html_div(parent);
-    remainder_chip(leftover_line, left);
+    app_code_lesson_console_log_remainder_generic_remainder_chip(
+      leftover_line,
+      left,
+      divisor,
+    );
     html_span_text(leftover_line, leftover_middle);
     app_code_lesson_console_log_remainder_generic_equation_with_remainder(
       leftover_line,
@@ -155,7 +150,11 @@ export function app_code_lesson_console_log_remainder_generic(
     html_span_text_bold(definition, "remainder");
     let conclusion = html_div(parent);
     html_span_text(conclusion, "So the remainder is ");
-    remainder_chip(conclusion, left);
+    app_code_lesson_console_log_remainder_generic_remainder_chip(
+      conclusion,
+      left,
+      divisor,
+    );
   }
   function above(root) {
     let intro = app_code_container_light_blue(root);
@@ -180,7 +179,11 @@ export function app_code_lesson_console_log_remainder_generic(
       evenly,
       "When two numbers divide evenly, nothing is left over, so the remainder is ",
     );
-    remainder_chip(evenly, 0);
+    app_code_lesson_console_log_remainder_generic_remainder_chip(
+      evenly,
+      0,
+      divisor,
+    );
     html_div_cycle_code(evenly_box, ["", percent, " gives the remainder"]);
     let meaning = app_code_container_light_blue(root);
     html_div_cycle_code(meaning, [
@@ -202,7 +205,11 @@ export function app_code_lesson_console_log_remainder_generic(
       let is_item = equal_0(item);
       if (is_item) {
         let remainder = divide(index, 2);
-        remainder_chip(legend, remainder);
+        app_code_lesson_console_log_remainder_generic_remainder_chip(
+          legend,
+          remainder,
+          divisor,
+        );
       } else {
         html_span_text(legend, part);
       }
@@ -222,7 +229,11 @@ export function app_code_lesson_console_log_remainder_generic(
       html_style_padding_y(line, "0.35em");
       html_span_text_code_dark(line, expr);
       html_span_text(line, " is ");
-      remainder_chip(line, remainder);
+      app_code_lesson_console_log_remainder_generic_remainder_chip(
+        line,
+        remainder,
+        divisor,
+      );
     }
     let row_count = multiply_add(2, divisor, 1);
     let list2 = range(row_count);
@@ -235,7 +246,11 @@ export function app_code_lesson_console_log_remainder_generic(
         let text = property_get(line, "text");
         html_span_text(insight_row, text);
         let value = property_get(line, "remainder");
-        remainder_chip(insight_row, value);
+        app_code_lesson_console_log_remainder_generic_remainder_chip(
+          insight_row,
+          value,
+          divisor,
+        );
       }
       each(insight, insight_line);
     }
@@ -244,15 +259,27 @@ export function app_code_lesson_console_log_remainder_generic(
     let alternates = equal(divisor, 2);
     if (alternates) {
       html_span_text(closing_line, "The remainder alternates between ");
-      remainder_chip(closing_line, 0);
+      app_code_lesson_console_log_remainder_generic_remainder_chip(
+        closing_line,
+        0,
+        divisor,
+      );
       html_span_text(closing_line, " and ");
-      remainder_chip(closing_line, 1);
+      app_code_lesson_console_log_remainder_generic_remainder_chip(
+        closing_line,
+        1,
+        divisor,
+      );
     } else {
       html_span_text(
         closing_line,
         "The remainder counts up, then starts over at ",
       );
-      remainder_chip(closing_line, 0);
+      app_code_lesson_console_log_remainder_generic_remainder_chip(
+        closing_line,
+        0,
+        divisor,
+      );
     }
   }
 }
