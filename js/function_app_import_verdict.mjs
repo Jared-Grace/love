@@ -39,6 +39,17 @@ export async function function_app_import_verdict(imported) {
     }
     list_add(callers_other, name);
   }
+  let uses = await function_imports(imported);
+  let reaches = [];
+  for (let used of uses) {
+    let app_used = function_name_app_try(used, app_names);
+    let own_is = equal(app_used, app);
+    if (own_is) {
+      list_add(reaches, used);
+    }
+  }
+  let reaches_size = list_size(reaches);
+  let reaches_is = equal_not(reaches_size, 0);
   let own_size = list_size(callers_own);
   let none_is = equal(own_size, 0);
   let single_is = equal(own_size, 1);
@@ -49,6 +60,9 @@ export async function function_app_import_verdict(imported) {
   if (none_is) {
     verdict = "rename";
   }
+  if (none_is && reaches_is) {
+    verdict = "reaches";
+  }
   if (entry_is) {
     verdict = "entry";
   }
@@ -58,6 +72,7 @@ export async function function_app_import_verdict(imported) {
     verdict,
     callers_own,
     callers_other,
+    reaches,
   };
   return r;
 }
