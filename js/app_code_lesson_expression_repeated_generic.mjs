@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_repeated_generic_final_count } from "./app_code_lesson_expression_repeated_generic_final_count.mjs";
 import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
 import { app_code_lesson_expression_repeated_generic_running_count } from "./app_code_lesson_expression_repeated_generic_running_count.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
@@ -5,7 +6,6 @@ import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
@@ -30,7 +30,6 @@ import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -135,13 +134,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let made = app_code_lesson_number_chip(parent, number, color);
       return made;
     }
-    function final_count(grid, number, color) {
-      "the FINAL count as a coloured chip with white text - it IS the second number of the short form, so it echoes that chip and stands out clearly from the quiet running counts";
-      let made = app_code_lesson_number_chip(grid, number, color);
-      let size = app_shared_font_size_label();
-      html_style_font_size(made, size);
-      return made;
-    }
     function expanded_counted(parent, left, left_color, count_color, count) {
       "the left number repeated and joined by the smaller operator, with the running count 1..count OUTSIDE the code, on the light background below each repeat: row 1 is one continuous black pill (left chips joined by the smaller operator), row 2 holds the counts (no black behind them), the last count in the count colour so how-many visibly becomes the second number of the short form";
       let doubled = multiply(2, count);
@@ -164,7 +156,11 @@ export function app_code_lesson_expression_repeated_generic(words) {
         let last = equal(position, count);
         let numeral = null;
         if (last) {
-          numeral = final_count(grid, position, count_color);
+          numeral = app_code_lesson_expression_repeated_generic_final_count(
+            grid,
+            position,
+            count_color,
+          );
         } else {
           numeral = app_code_lesson_expression_repeated_generic_running_count(
             grid,
