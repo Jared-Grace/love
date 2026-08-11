@@ -13,8 +13,10 @@ export async function functions_rename_names_prefix_change(
   ("Renames each function named in the given list, changing only the front of its name and leaving the rest alone. Hands back which names were changed and to what, the same as the siblings that pick their own set out of the repo.");
   ("The siblings all find their own set from a shape in the name, which is the better command whenever the shape is really what decides. This one is for when it is not: a family sharing a front and a back where only some members belong, so the set is a judgment somebody made and the command is told it rather than guessing it.");
   ("A name in the list that no function answers to is a mistake worth stopping on rather than skipping quietly, because a list is typed by hand and a typo in one would otherwise look exactly like a rename that was never wanted.");
+  ("The names arrive joined by commas, which is how every command here is handed a list, because a command line gives each word over separately and a list written as words would be read as further parameters.");
+  let names = text_split_comma(f_names);
   function filter(f_name) {
-    let wanted_is = list_includes(f_names, f_name);
+    let wanted_is = list_includes(names, f_name);
     return wanted_is;
   }
   let name_change = text_prefix_change_curried_right_2(
@@ -22,7 +24,7 @@ export async function functions_rename_names_prefix_change(
     f_name_prefix_after,
   );
   let known = await functions_names();
-  for (let f_name of f_names) {
+  for (let f_name of names) {
     let known_is = list_includes(known, f_name);
     true_is_assert_json(known_is, {
       hint: "each name in the list should be a function this repo has - is one of them spelled wrong?",
