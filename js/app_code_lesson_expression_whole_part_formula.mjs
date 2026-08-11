@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
@@ -12,8 +12,6 @@ import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -123,7 +121,7 @@ export function app_code_lesson_expression_whole_part_formula() {
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_whole_part_formula_title_name_id();
   let lesson = app_code_lesson_base(
     name_id,
     above,
@@ -136,23 +134,6 @@ export function app_code_lesson_expression_whole_part_formula() {
     example_answer,
   );
   return lesson;
-  function title_name_id() {
-    "the home title is console.log whole part formula";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Whole part formula");
-      }
-      return render;
-    }
-    let rights = ["whole part formula"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, ["Suppose we are dividing two numbers:"]);
