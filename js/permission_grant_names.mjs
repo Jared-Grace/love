@@ -246,7 +246,7 @@ export function permission_grant_names() {
   let spelled243 = fn_name("function_marked_is");
   let spelled244 = fn_name("ebible_chapter_code_assert");
   let spelled245 = fn_name("qa_gates_timed_solo");
-  let spelled246 = fn_name("app_g_day_blocked_check");
+  let spelled246 = fn_name("g_day_blocked_check");
   let spelled247 = fn_name("function_ast");
   let spelled248 = fn_name("function_params_plain");
   let spelled249 = fn_name("function_name_to_path_search");
