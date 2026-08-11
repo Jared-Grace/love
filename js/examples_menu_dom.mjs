@@ -1,8 +1,7 @@
+import { examples_menu_dom_example_button } from "./examples_menu_dom_example_button.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { list_get_property } from "./list_get_property.mjs";
-import { html_text_align } from "./html_text_align.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
-import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
@@ -12,9 +11,6 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { add_1 } from "./add_1.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { examples_groups } from "./examples_groups.mjs";
 import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_size } from "./list_size.mjs";
@@ -48,17 +44,6 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_bold_semi(header);
     html_style_margin(header, "0.75rem 0 0.35rem");
   }
-  function example_button(index_example) {
-    let title = list_get_property(examples, index_example, "title");
-    let a = add_1(index_example);
-    let label = text_combine_multiple([a, ". ", title]);
-    function on_click() {
-      on_select(index_example);
-    }
-    let button = app_shared_button_wide(parent, label, on_click);
-    html_style_margin_bottom(button, "0.5rem");
-    html_text_align(button, "left");
-  }
   function family_at(index_example) {
     "family is attached to each example at build time (see the corpus reader), so the client";
     "reads a plain string here and never pulls the heavy real transforms into the bundle";
@@ -89,7 +74,7 @@ export function examples_menu_dom(parent, examples, on_select) {
           tool_subheader(family);
         }
       }
-      example_button(g);
+      examples_menu_dom_example_button(g, examples, on_select, parent);
       local = local + 1;
     }
   }
