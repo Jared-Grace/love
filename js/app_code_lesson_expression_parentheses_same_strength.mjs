@@ -39,6 +39,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
   }
   function above(root) {
     "the left-to-right rule they already have, then brackets overriding it after a -, then the same thing after a /, then the rule in one line";
+    "Nothing here says strength or stronger. That word is ours, not the learner's - it appears in these docstrings and nowhere on a screen. What the plus-minus lesson actually told them is whichever one comes first, we do first, and what the precedence lessons told them is we always do * before +, even if * appears later. A card that leans on strength would be leaning on a word never defined.";
     let plus = js_operator_plus_symbol();
     let minus = js_operator_minus_symbol();
     let divided = js_operator_division_symbol();
@@ -50,7 +51,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
       plus,
       " and ",
       minus,
-      " are the same strength, so we work left to right",
+      " are solved left to right",
     ]);
     html_div_cycle_code(recall, ["So ", "12 - 3 + 4", " is ", "13"]);
     let changed = app_code_container_light_blue(root);
@@ -91,11 +92,11 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     html_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
     let rule = app_code_container_light_blue(root);
     html_div_cycle_code(rule, [
-      "Even when both operators are the same strength, ",
+      "",
       open,
       " and ",
       close,
-      " still go first",
+      " are always solved first, whatever the operators are",
     ]);
   }
 }
