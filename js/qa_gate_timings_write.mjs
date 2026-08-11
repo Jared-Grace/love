@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
 import { lock_wait } from "./lock_wait.mjs";
-import { qa_gate_run_unlocked } from "./qa_gate_run_unlocked.mjs";
 import { add } from "./add.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -22,7 +22,7 @@ export async function qa_gate_timings_write() {
     let timed = await qa_snapshot_timed_solo_told();
     return timed;
   }
-  let told = await lock_wait(qa_gate_run_unlocked.name, lambda, who);
+  let told = await lock_wait(fn_name("qa_gate_run_unlocked"), lambda, who);
   let said = property_get(told, "said");
   let began = said.lastIndexOf("\n{");
   if (less_than(began, 0)) {
