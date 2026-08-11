@@ -14,7 +14,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   ("Naming the commit is what makes the writing down worth anything. With this many of us committing, the newest commit changes several times while one run finishes, so an answer asked about whatever is newest is almost always an answer nobody has yet - measured, after guessing otherwise.");
   ("Two askers wanted the same remembering and differed only in what they kept, so what they kept is the one thing handed in. Everything around it - looking first, freezing, running, writing back, and saying whether the answer was already there - is the same work twice, and was written twice until this was named.");
   ("The answer is handed back under a plain word rather than under either asker's own, because neither asker's word means anything to the other. Each puts its own name on it on the way out, which is one line and keeps what its own callers already read.");
-  let remembered = property_get_or_null(known, commit);
+  let remembered = property_get_or_null(known, named);
   ("An answer already written down is handed straight back, and one of us paying the couple of minutes is all of us knowing.");
   if (remembered) {
     let r = {
