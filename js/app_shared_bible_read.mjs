@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -15,7 +15,6 @@ import { text_rtl_is } from "./text_rtl_is.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
@@ -88,8 +87,6 @@ import { text_combine } from "./text_combine.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_dismissable_message } from "./app_shared_dismissable_message.mjs";
-import { list_size } from "./list_size.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_change } from "./app_shared_bible_change.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
@@ -318,8 +315,8 @@ export async function app_shared_bible_read(context, verse_action) {
         languages_chosen,
       );
     }
-    let text2 = html_button_share_text();
-    app_shared_button(actions, text2, share);
+    let text = html_button_share_text();
+    app_shared_button(actions, text, share);
     function row_update() {
       update();
       let right = app_shared_bible_read_selection_last(verse_numbers_chosen);
@@ -355,18 +352,4 @@ export async function app_shared_bible_read(context, verse_action) {
     }
   }
   promise_later(resume);
-}
-function app_shared_bible_read_count_refresh(
-  verse_numbers_chosen,
-  max,
-  count_status,
-) {
-  arguments_assert(arguments, 3);
-  let n = list_size(verse_numbers_chosen);
-  let text = "";
-  if (greater_than(n, 0)) {
-    ("up to, because the second number is the most you may pick rather than how many verses are there - without those words one verse chosen in a hundred-verse chapter reads as one of two");
-    text = text_combine_multiple([n, " of up to ", max, " selected"]);
-  }
-  html_text_set(count_status, text);
 }
