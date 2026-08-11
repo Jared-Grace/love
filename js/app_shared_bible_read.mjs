@@ -261,7 +261,10 @@ export async function app_shared_bible_read(context, verse_action) {
       );
     }
     let number = app_shared_button(p, verse_number_v, select_persist);
-    html_style_justify_self(number, "end");
+    ("each verse row is its own grid, so the number gutter is a fixed track and the button inside it used to size itself to its digits - a one-digit button came out narrower than a two-digit one. Stretching the button across the whole track is what makes every verse number button the same width, zero side padding keeps a three-digit number (Psalm 119) inside that width, and centering puts the digits in the middle of the button");
+    html_style_justify_self(number, "stretch");
+    html_style_padding_x(number, "0");
+    html_centered(number);
     let text_cell = html_div(p);
     let entries = app_shared_bible_verse_entries(
       languages_verses,
