@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_string_trichotomy_title_name_id } from "./app_code_lesson_expression_string_trichotomy_title_name_id.mjs";
-import { app_code_lesson_expression_string_trichotomy_question_code } from "./app_code_lesson_expression_string_trichotomy_question_code.mjs";
+import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { text_lower_is } from "./text_lower_is.mjs";
@@ -67,11 +67,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     let later = list_get(ordered, 1);
     function one(combo) {
       "one example built from the combo and the shared pair";
-      let code = app_code_lesson_expression_string_trichotomy_question_code(
-        combo,
-        earlier,
-        later,
-      );
+      let code = app_code_string_comparison_code(combo, earlier, later);
       return code;
     }
     let list = list_map(combos, one);

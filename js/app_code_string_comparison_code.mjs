@@ -4,13 +4,9 @@ import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_string_order_equal_question_code(
-  combo,
-  earlier,
-  later,
-) {
+export function app_code_string_comparison_code(combo, earlier, later) {
   arguments_assert(arguments, 3);
-  ("one comparison as a code string: the shared pair arranged by the relation - equal uses the earlier word on both sides, before puts the earlier word on the left, after puts the later word on the left - which fixes the true/false answer without computing it here");
+  ("one comparison as a code string: the shared pair arranged by the relation - before puts the earlier word on the left, after puts the later word on the left - which fixes whether the comparison is true or false without computing it here");
   let operator = property_get(combo, "operator");
   let relation = property_get(combo, "relation");
   let after = equal(relation, "after");
