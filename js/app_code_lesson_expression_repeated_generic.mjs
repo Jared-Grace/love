@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_repeated_generic_running_count } from "./app_code_lesson_expression_repeated_generic_running_count.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
 import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
@@ -20,11 +21,9 @@ import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
-import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
 import { html_div } from "./html_div.mjs";
@@ -32,7 +31,6 @@ import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -137,14 +135,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let made = app_code_lesson_number_chip(parent, number, color);
       return made;
     }
-    function running_count(grid, number) {
-      "the count under an intermediate repeat - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
-      let text = text_to(number);
-      let label = html_span_text_smaller(grid, text);
-      html_font_color_set(label, "rgb(55, 55, 55)");
-      html_bold(label);
-      return label;
-    }
     function final_count(grid, number, color) {
       "the FINAL count as a coloured chip with white text - it IS the second number of the short form, so it echoes that chip and stands out clearly from the quiet running counts";
       let made = app_code_lesson_number_chip(grid, number, color);
@@ -176,7 +166,10 @@ export function app_code_lesson_expression_repeated_generic(words) {
         if (last) {
           numeral = final_count(grid, position, count_color);
         } else {
-          numeral = running_count(grid, position);
+          numeral = app_code_lesson_expression_repeated_generic_running_count(
+            grid,
+            position,
+          );
         }
         html_style_grid_cell(numeral, 1, column);
       }
