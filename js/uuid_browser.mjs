@@ -1,3 +1,6 @@
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { modulo } from "./modulo.mjs";
 export function uuid_browser() {
   "A fresh identifier, from the browser's own randomness.";
   "crypto.randomUUID exists ONLY in a SECURE CONTEXT - https, or localhost. Reached over plain http on a home network, which is how a phone opens the dev site (a phone has no localhost to develop from), it is simply not there, and calling it throws before anything is drawn. That is not a phone quirk to be worked around at the one place it was noticed: the page dies the same way on any http address, so the door itself answers in both worlds.";
@@ -13,15 +16,15 @@ export function uuid_browser() {
   let rolls = new Uint8Array(shape.length);
   crypto.getRandomValues(rolls);
   let built = "";
-  for (let place = 0; place < shape.length; place++) {
+  for (let place = 0; less_than(place, shape.length); place++) {
     let mark = shape[place];
     let roll = rolls[place];
-    if (mark === "x") {
-      built = built + hex[roll % hex.length];
+    if (equal(mark, "x")) {
+      built = built + hex[modulo(roll, hex.length)];
       continue;
     }
-    if (mark === "y") {
-      built = built + variants[roll % variants.length];
+    if (equal(mark, "y")) {
+      built = built + variants[modulo(roll, variants.length)];
       continue;
     }
     built = built + mark;
