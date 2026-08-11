@@ -1,3 +1,4 @@
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_invalid_color } from "./html_border_invalid_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
@@ -21,7 +22,8 @@ export function app_shared_validate_style_assign(
   let button_background = app_shared_button_background();
   let font_color = app_shared_button_font_color();
   if (not(valid)) {
-    font_color = "#d0d0d0ff";
+    ("the washed-out lettering on a button that cannot be pressed yet is the repo's own grey, not a shade written here. the shade this used to spell sat four steps from a grey the repo already had, which is a difference nobody can see and a second name for one colour.");
+    font_color = app_shared_color_gray();
     border_color = html_border_invalid_color();
     background = "#ffb0b0ff";
     button_background = app_shared_button_background_invalid();
