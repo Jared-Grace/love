@@ -1,3 +1,4 @@
+import { function_worker_serve_error_text } from "./function_worker_serve_error_text.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { json_from } from "./json_from.mjs";
@@ -49,7 +50,7 @@ export async function function_worker_serve() {
       reply = {
         id,
         result: null,
-        failed: error_text(caught),
+        failed: function_worker_serve_error_text(caught, String),
       };
     }
     let left = json_to(reply);
@@ -80,13 +81,4 @@ export async function function_worker_serve() {
   });
   let r = await closed;
   return r;
-  function error_text(caught) {
-    let stacked = caught && caught.stack;
-    if (stacked) {
-      let r2 = caught.stack;
-      return r2;
-    }
-    let r3 = String(caught);
-    return r3;
-  }
 }
