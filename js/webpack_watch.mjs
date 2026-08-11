@@ -1,13 +1,11 @@
+import { webpack_watch_apps_discover } from "./webpack_watch_apps_discover.mjs";
 import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
-import { list_find_property_not_null_is } from "./list_find_property_not_null_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
 import { identity } from "./identity.mjs";
 import { path_name } from "./path_name.mjs";
 import { list_map } from "./list_map.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { each_async } from "./each_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -89,7 +87,7 @@ export async function webpack_watch() {
       });
       await app_shared_dev_build(a_name);
       await deps_refresh(a_name);
-      await apps_discover();
+      await webpack_watch_apps_discover(app_deps, app_deps_get, build_schedule);
     }
     try {
       await catch_log_async(lambda);
@@ -111,32 +109,6 @@ export async function webpack_watch() {
     }
     let value = property_get(fresh, "deps");
     property_set(ad, "deps", value);
-  }
-  async function apps_discover() {
-    "an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work";
-    let names = await apps_names_dev();
-    async function lambda(a_name) {
-      let known_already = list_find_property_not_null_is(
-        app_deps,
-        "a_name",
-        a_name,
-      );
-      if (known_already) {
-        return;
-      }
-      let ad = await app_deps_get(a_name);
-      let failed = null_is(ad);
-      if (failed) {
-        return;
-      }
-      list_add(app_deps, ad);
-      fn_name("webpack_watch");
-      log(webpack_watch.name, {
-        discovered: a_name,
-      });
-      build_schedule(a_name);
-    }
-    await each_async(names, lambda);
   }
   function build_schedule(a_name) {
     let existing = property_get_or_null(pending, a_name);
