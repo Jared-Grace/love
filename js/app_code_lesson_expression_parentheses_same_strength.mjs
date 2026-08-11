@@ -72,7 +72,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     ]);
     html_div_cycle_code(changed, ["So ", "12 - (3 + 4)", " is ", "5"]);
     let after_divide = app_code_container_light_blue(root);
-    html_div_cycle_code(after_divide, ["The same happens after a ", divided]);
+    html_div_cycle_code(after_divide, ["Likewise for ", divided, " :"]);
     html_div_cycle_code(after_divide, ["", "12 / 2 * 3", " is ", "18"]);
     html_div_cycle_code(after_divide, [
       "But ",
