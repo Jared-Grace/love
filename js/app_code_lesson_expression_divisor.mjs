@@ -1,10 +1,9 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over the shared identify-an-operand generic";
@@ -34,17 +33,13 @@ export function app_code_lesson_expression_divisor() {
   return lesson;
   function title_name_id() {
     "the home title is console.log divisor";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Divisor");
-      }
-      return render;
+    function paint(parent) {
+      html_span_text(parent, "Divisor");
     }
-    let name_id2 = app_code_lesson_name_id_generic(
+    let name_id2 = app_code_lesson_name_id_category_then(
       ["divisor"],
       app_code_category_operators(),
-      title_get,
+      paint,
     );
     return name_id2;
   }
