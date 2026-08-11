@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_parentheses_one_side_keyword } from "./app_code_lesson_expression_parentheses_one_side_keyword.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
@@ -10,8 +11,6 @@ import { equal } from "./equal.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -38,13 +37,6 @@ export function app_code_lesson_expression_parentheses_one_side() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function keyword(value) {
-    "the code word for a true or false value";
-    let on_true = js_keyword_true();
-    let on_false = js_keyword_false();
-    let word = ternary(value, on_true, on_false);
-    return word;
-  }
   function expression(want_true) {
     "a comparison wrapped in ( and ), then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
     let left = app_code_comparison_side();
@@ -55,7 +47,8 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let on_false = js_operator_bang_double_equal_symbol();
     let symbol = ternary(wanted, on_true, on_false);
     let left_code = property_get(left, "code");
-    let right_code = keyword(right_value);
+    let right_code =
+      app_code_lesson_expression_parentheses_one_side_keyword(right_value);
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let code = text_combine_multiple([
