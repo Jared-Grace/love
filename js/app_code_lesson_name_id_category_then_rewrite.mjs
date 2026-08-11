@@ -1,3 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -14,7 +17,7 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
   ("It changes the file it is handed and says what it did, rather than saying whether it could - a file it has no claim on is left exactly as it was, and the reason is handed back so a run over many files can be read afterwards.");
   ("The name being called is swapped only where the plain unit was called. Where a lesson went through the operators wrapper instead, that wrapper is the one that moved, so the line here already says the right thing.");
   let maker = app_code_lesson_name_id_category_then_maker_or_null(ast);
-  if (maker === null) {
+  if (equal(maker, null)) {
     let missing = {
       done: false,
       reason: "no title maker",
@@ -28,7 +31,7 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
   let opening = property_get(unpacked, "first");
   let remaining = property_get(unpacked, "remaining");
   let opens = app_code_lesson_name_id_category_then_opens_category_is(opening);
-  if (!opens) {
+  if (not(opens)) {
     let other = {
       done: false,
       reason: "the title does not open with the category",
@@ -39,7 +42,10 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
   property_set(maker, "params", params);
   property_set(painter_body, "body", remaining);
   property_set(maker, "body", painter_body);
-  let calls = js_list_calls_named_nodes(ast, "app_code_lesson_name_id_generic");
+  let calls = js_list_calls_named_nodes(
+    ast,
+    fn_name("app_code_lesson_name_id_generic"),
+  );
   function callee_swap(call) {
     let callee = property_get(call, "callee");
     property_set(callee, "name", "app_code_lesson_name_id_category_then");
