@@ -1,8 +1,6 @@
-import { g_sermon_groups_todo } from "./g_sermon_groups_todo.mjs";
-import { g_sermon_chapter_days } from "./g_sermon_chapter_days.mjs";
+import { g_plant_chapters } from "./g_plant_chapters.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_async } from "./list_map_async.mjs";
-import { list_sum } from "./list_sum.mjs";
 export async function g_sermon_days_total() {
   "How many days of preaching the whole written sermon supply comes to, added up over every chapter already grouped.";
   "This is the one hard limit on how much game there is. Plants are worked out from their casts now, so nothing else says when the content runs out - the sermon does, because a day without preaching in it is not a day.";
