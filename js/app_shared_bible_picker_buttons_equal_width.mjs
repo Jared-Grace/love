@@ -18,8 +18,8 @@ export function app_shared_bible_picker_buttons_equal_width(
   function label_size(item) {
     let label = item_to_button_text(item);
     let text = text_combine_multiple([label]);
-    let size = text_size(text);
-    return size;
+    let label_width = text_size(text);
+    return label_width;
   }
   let sizes = list_map(items, label_size);
   let widest = list_max(sizes);
