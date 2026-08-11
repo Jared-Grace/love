@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_conversation_render_close } from "./app_g_conversation_render_close.mjs";
 import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
@@ -258,23 +259,13 @@ export async function app_g_conversation(
       leave,
     );
   }
-  function topic_for(turn) {
-    let kind = property_get(turn, "kind");
-    let topics = {
-      gospel_share_objection: "faith",
-      how_r_u: "how I'm doing",
-      believe: "what I believe",
-    };
-    let topic = property_get(topics, kind);
-    return topic;
-  }
   function render_boundary(turn) {
     "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a PAUSE (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the pause makes guessing slower than praying for discernment, so prayer stays the best path — while the correct opener itself is FIXED, so guessing always terminates and nobody is walled in";
     html_clear(overlay);
     app_g_npc_typing(npc, overlay);
     function reveal() {
       html_clear(overlay);
-      let topic2 = topic_for(turn);
+      let topic2 = app_g_conversation_topic_for(turn);
       let message = g_boundary(meet, topic2);
       app_g_npc_says(npc, overlay, message);
       let container = app_g_container_player(overlay);
@@ -392,4 +383,15 @@ export async function app_g_conversation(
   }
   await app_g_sky_reset();
   render();
+}
+function app_g_conversation_topic_for(turn) {
+  arguments_assert(arguments, 1);
+  let kind = property_get(turn, "kind");
+  let topics = {
+    gospel_share_objection: "faith",
+    how_r_u: "how I'm doing",
+    believe: "what I believe",
+  };
+  let topic = property_get(topics, kind);
+  return topic;
 }
