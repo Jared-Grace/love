@@ -1,7 +1,6 @@
 import { function_name_to_path_search_cached } from "./function_name_to_path_search_cached.mjs";
 import { function_name_to_path_search_live } from "./function_name_to_path_search_live.mjs";
 import { function_paths_frozen_is } from "./function_paths_frozen_is.mjs";
-
 export async function function_name_to_path_search(f_name) {
   "Looks in every repository here for the file a name would live in, reporting whether exactly one holds it, whether several do, and where it was found.";
   "Asks the disk every time, unless this process has said its folders cannot change, in which case each name is looked up once and kept. Both roads answer the same thing; they differ only in how often the disk is troubled for it.";

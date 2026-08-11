@@ -1,3 +1,4 @@
+import { function_paths_frozen_enable } from "./function_paths_frozen_enable.mjs";
 import { qa_gates_told } from "./qa_gates_told.mjs";
 import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
