@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_try } from "./list_first_try.mjs";
@@ -8,27 +10,27 @@ export function app_code_lesson_name_id_category_then_painter_or_null(maker) {
   let body = property_get(maker, "body");
   let statements = property_get(body, "body");
   let first = list_first_try(statements);
-  if (first === null) {
+  if (equal(first, null)) {
     return null;
   }
   let type = property_get(first, "type");
-  if (type === "FunctionDeclaration") {
+  if (equal(type, "FunctionDeclaration")) {
     return first;
   }
-  if (type !== "VariableDeclaration") {
+  if (not_equal(type, "VariableDeclaration")) {
     return null;
   }
   let declarations = property_get(first, "declarations");
   let declaration = list_first_try(declarations);
-  if (declaration === null) {
+  if (equal(declaration, null)) {
     return null;
   }
   let init = property_get(declaration, "init");
-  if (init === null) {
+  if (equal(init, null)) {
     return null;
   }
   let init_type = property_get(init, "type");
-  if (init_type !== "FunctionExpression") {
+  if (not_equal(init_type, "FunctionExpression")) {
     return null;
   }
   return init;
