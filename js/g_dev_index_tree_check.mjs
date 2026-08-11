@@ -2,7 +2,7 @@ import { assert_message } from "./assert_message.mjs";
 import { app_g_dev_index_tree } from "./app_g_dev_index_tree.mjs";
 import { app_g_dev_index_prefixes } from "./app_g_dev_index_prefixes.mjs";
 import { equal } from "./equal.mjs";
-export function app_g_dev_index_tree_check() {
+export function g_dev_index_tree_check() {
   "deterministic REGRESSION check of the #index drill-down tree: a top-level route is a leaf carrying its own hash; a category node carries no hash; a categorized route nests under its ': ' segments with the deepest node carrying the route hash; and a name that is BOTH a route and a category (unbeliever) carries a hash AND has children. run: node scripts/ai.mjs app_g_dev_index_tree_check";
   let prefixes = app_g_dev_index_prefixes();
   let names = ["study", "unbeliever", "gospel_share"];
