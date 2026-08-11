@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
@@ -113,13 +114,6 @@ export async function app_g_verify_view(
     }
     li_list.forEach(lambda6);
   }
-  function panel_flush() {
-    let p = app_shared_container_base(container);
-    html_style_padding_x(p, "0");
-    html_style_padding_y(p, "0");
-    html_style_overflow_hidden(p);
-    return p;
-  }
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   let value7 = app_g_verify_passage_font_size();
@@ -157,7 +151,7 @@ export async function app_g_verify_view(
   }
   tokens.forEach(lambda9);
   app_g_verify_view_label_new("BY PASSAGE ORDER", container, small_gap);
-  let cov = panel_flush();
+  let cov = app_g_verify_view_panel_flush(container);
   function lambda10(l, li) {
     return li;
   }
@@ -195,7 +189,7 @@ export async function app_g_verify_view(
   }
   order.forEach(lambda14);
   app_g_verify_view_label_new("IN SERMON ORDER", container, small_gap);
-  let ord = panel_flush();
+  let ord = app_g_verify_view_panel_flush(container);
   function lambda16(l, li) {
     let eq2 = equal(li, 0);
     let row = app_g_verify_view_row_new(ord, eq2, small_gap, border);
@@ -480,4 +474,12 @@ export async function app_g_verify_view(
     }
   }
   history_show();
+}
+function app_g_verify_view_panel_flush(container) {
+  arguments_assert(arguments, 1);
+  let p = app_shared_container_base(container);
+  html_style_padding_x(p, "0");
+  html_style_padding_y(p, "0");
+  html_style_overflow_hidden(p);
+  return p;
 }
