@@ -1,3 +1,4 @@
+import { app_g_view_render_study_style_completed } from "./app_g_view_render_study_style_completed.mjs";
 import { app_g_view_render_study_style_upcoming } from "./app_g_view_render_study_style_upcoming.mjs";
 import { app_g_view_render_study_style_next } from "./app_g_view_render_study_style_next.mjs";
 import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
@@ -107,18 +108,10 @@ export async function app_g_view_render_study(div_map) {
     app_g_view_render_study_update_bar(bar_div, current, words);
     let words_div = html_div(container);
     let word_bs = [];
-    function style_completed(b) {
-      html_style_assign(b, {
-        "background-color": blue_pale,
-        color: "black",
-        "font-weight": "normal",
-        "box-shadow": "none",
-      });
-    }
     function style_word(i) {
       let b = word_bs[i];
       if (less_than(i, current)) {
-        style_completed(b);
+        app_g_view_render_study_style_completed(b);
       } else if (equal(i, current)) {
         app_g_view_render_study_style_next(b);
       } else {
@@ -132,7 +125,7 @@ export async function app_g_view_render_study(div_map) {
           return;
         }
         current = i + 1;
-        style_completed(word_bs[i]);
+        app_g_view_render_study_style_completed(word_bs[i]);
         app_g_view_render_study_update_bar(bar_div, current, words);
         let done = greater_than_equal(current, words.length);
         if (done) {
