@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_console_log_remainder_generic_example } from "./app_code_lesson_console_log_remainder_generic_example.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
@@ -45,16 +46,16 @@ export function app_code_lesson_console_log_remainder_generic(
   let modulo_fn = property_get(operator, "fn");
   let divisor_text = text_to(divisor);
   let name_right = text_combine(" remainder by ", divisor_text);
-  function code_of(n) {
-    let code = js_code_binary_spaced_nb(n, percent, divisor);
-    return code;
-  }
   function refill() {
     let max = app_code_lesson_operators_value_max();
     let base = integer_random(0, max);
     function each_offset(offset) {
       let n = add(base, offset);
-      let r = code_of(n);
+      let r = app_code_lesson_console_log_remainder_generic_code_of(
+        n,
+        percent,
+        divisor,
+      );
       return r;
     }
     let list = range_map(divisor, each_offset);
@@ -144,7 +145,11 @@ export function app_code_lesson_console_log_remainder_generic(
     html_style_padding_x(table, "0");
     html_style_padding_y(table, "0");
     function row(n) {
-      let expr = code_of(n);
+      let expr = app_code_lesson_console_log_remainder_generic_code_of(
+        n,
+        percent,
+        divisor,
+      );
       let remainder = modulo_fn(n, divisor);
       let line = html_div(table);
       let band = app_code_remainder_color_light(remainder, divisor);
@@ -206,4 +211,13 @@ export function app_code_lesson_console_log_remainder_generic(
       );
     }
   }
+}
+function app_code_lesson_console_log_remainder_generic_code_of(
+  n,
+  percent,
+  divisor,
+) {
+  arguments_assert(arguments, 3);
+  let code = js_code_binary_spaced_nb(n, percent, divisor);
+  return code;
 }

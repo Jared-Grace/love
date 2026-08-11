@@ -94,9 +94,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
       open,
       " and ",
       close,
-      " show that ",
-      "3 === 5",
-      " is worked out on its own",
+      " show that whatever is inside is solved before whatever is outside",
     ]);
     let first = app_code_container_light_blue(root);
     html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
