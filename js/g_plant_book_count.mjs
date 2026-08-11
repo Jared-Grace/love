@@ -1,3 +1,13 @@
+import { g_generation_settings } from "./g_generation_settings.mjs";
+import { g_day_lines } from "./g_day_lines.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
+import { math_max } from "./math_max.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 export function g_plant_book_count(lines) {
   "How many plants a book's sermon lines should be divided into - the count whose plants land inside the wanted length, or failing that the count that misses it by least.";
   "The count is SEARCHED rather than divided out. Dividing by the wanted length and rounding asks what is nearest to eighteen days; it does not ask whether the answer is inside fifteen to twenty-one, and those are different questions. James is the case that shows it: two plants is twenty-two and a half days and three is exactly fifteen, and rounding its total picks two - the one that is out of range - because two is the nearer of them to eighteen.";
@@ -11,11 +21,15 @@ export function g_plant_book_count(lines) {
   let best = 1;
   let best_outside = -1;
   let best_gap = -1;
-  let ceiling = math_max(1, divide_ceil(lines, per_day));
+  let b = divide_ceil(lines, per_day);
+  let ceiling = math_max(1, b);
   for (let count = 1; less_than_equal(count, ceiling); count++) {
-    let days = divide(divide(lines, count), per_day);
-    let under = math_max(0, subtract(least, days));
-    let over = math_max(0, subtract(days, most));
+    let top = divide(lines, count);
+    let days = divide(top, per_day);
+    let b2 = subtract(least, days);
+    let under = math_max(0, b2);
+    let b3 = subtract(days, most);
+    let over = math_max(0, b3);
     let outside = under + over;
     let gap = numbers_apart(days, wanted);
     let first_is = less_than(best_outside, 0);
