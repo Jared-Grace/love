@@ -2,9 +2,9 @@ import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_phrase_my_dear_brother } from "./reply_phrase_my_dear_brother.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_word_hello } from "./reply_word_hello.mjs";
-import { app_reply_response_greetings } from "./app_reply_response_greetings.mjs";
+import { reply_response_greetings } from "./reply_response_greetings.mjs";
 export function app_message_reply_greeting() {
-  let greeting_response = app_reply_response_greetings();
+  let greeting_response = reply_response_greetings();
   let hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let my_dear_brother = reply_phrase_my_dear_brother();
