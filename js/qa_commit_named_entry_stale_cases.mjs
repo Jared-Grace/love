@@ -75,6 +75,50 @@ export function qa_commit_named_entry_stale_cases() {
       },
       stale: false,
     },
+    {
+      why: "the third way to be no record of anything, found live on 2026-08-11: the gates came back red and named, and every one of them had run out of file handles. It reads as a full judgement and is a report about how busy the machine was. It must be forgotten, or the commit is refused for every app for ever and is never judged again because it already looks judged",
+      entry: {
+        green: false,
+        failed: ["gate_named_this"],
+        named: {
+          gate_named_this: [],
+        },
+        said: {
+          gate_named_this: " EMFILE: too many open files, scandir '..'",
+        },
+      },
+      stale: true,
+    },
+    {
+      why: "a gate that said an ordinary thing is KEPT even though the saying is now read. The machine running out is the only saying that unmakes a judgement, and every other complaint a gate has is exactly what the record is for",
+      entry: {
+        green: false,
+        failed: ["gate_named_this"],
+        named: {
+          gate_named_this: ["thing_shipped_here"],
+        },
+        said: {
+          gate_named_this: " thing_shipped_here is spelled two ways",
+        },
+      },
+      stale: false,
+    },
+    {
+      why: "one gate running out of file handles condemns the whole entry, beside gates that answered properly. They ran on one machine at one moment, so a machine that was full for one of them was full for the run",
+      entry: {
+        green: false,
+        failed: ["gate_named_this", "gate_named_that"],
+        named: {
+          gate_named_this: ["thing_shipped_here"],
+          gate_named_that: [],
+        },
+        said: {
+          gate_named_this: " thing_shipped_here is spelled two ways",
+          gate_named_that: " ENOMEM: not enough memory, read",
+        },
+      },
+      stale: true,
+    },
   ];
   return cases;
 }
