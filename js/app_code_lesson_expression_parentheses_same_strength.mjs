@@ -70,17 +70,17 @@ export function app_code_lesson_expression_parentheses_same_strength() {
       "12 - 7",
     ]);
     html_div_cycle_code(changed, ["So ", "12 - (3 + 4)", " is ", "5"]);
-    let divide = app_code_container_light_blue(root);
-    html_div_cycle_code(divide, ["The same happens after a ", divided]);
-    html_div_cycle_code(divide, ["", "12 / 2 * 3", " is ", "18"]);
-    html_div_cycle_code(divide, [
+    let after_divide = app_code_container_light_blue(root);
+    html_div_cycle_code(after_divide, ["The same happens after a ", divided]);
+    html_div_cycle_code(after_divide, ["", "12 / 2 * 3", " is ", "18"]);
+    html_div_cycle_code(after_divide, [
       "But ",
       "12 / (2 * 3)",
       " does the ",
       "2 * 3",
       " first",
     ]);
-    html_div_cycle_code(divide, [
+    html_div_cycle_code(after_divide, [
       "",
       "2 * 3",
       " is ",
@@ -88,7 +88,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
       ", so we have ",
       "12 / 6",
     ]);
-    html_div_cycle_code(divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
+    html_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
     let rule = app_code_container_light_blue(root);
     html_div_cycle_code(rule, [
       "Even when both operators are the same strength, ",
