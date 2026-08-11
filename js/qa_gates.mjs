@@ -1,3 +1,4 @@
+import { browser_secure_context_gate_run } from "./browser_secure_context_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
 import { functions_arguments_assert_gate_run } from "./functions_arguments_assert_gate_run.mjs";
 import { apps_prod_chunks_missing_gate_run } from "./apps_prod_chunks_missing_gate_run.mjs";
@@ -317,6 +318,7 @@ export function qa_gates() {
     query_key_literals_gate_run,
     query_key_getters_frozen_gate_run,
     storage_browser_direct_gate_run,
+    browser_secure_context_gate_run,
     indexeddb_name_literals_gate_run,
     literals_frozen_fused_gate_run,
     literals_frozen_storage_gate_run,
