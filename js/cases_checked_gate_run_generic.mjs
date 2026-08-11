@@ -1,8 +1,9 @@
+import { probes_at_once } from "./probes_at_once.mjs";
+import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { cases_expected_answers } from "./cases_expected_answers.mjs";
 import { list_size_greater_than_assert_json } from "./list_size_greater_than_assert_json.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { gate_case_mark } from "./gate_case_mark.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -28,8 +29,19 @@ export async function cases_checked_gate_run_generic(
   ("answer. What it hands back is the same five words every time: how the case reads");
   ("in one line, what was wanted, what came, a note when something else is wrong,");
   ("and whether it passed.");
-  ("The checking runs unordered because no case depends on another, and a corpus");
-  ("whose cases each start a process is otherwise as slow as the sum of them.");
+  ("The checking runs several at a time because no case depends on another, and a");
+  ("corpus whose cases each start a process is otherwise as slow as the sum of them.");
+  ("Several at a time, not all at once. Every corpus here starts a whole program per");
+  ("case, and the guard's has three hundred and thirty-five of them, so all-at-once");
+  ("asked this machine for twenty-four times the processors it has - at a moment when");
+  ("six other runs of the suite are working beside it. Nothing is gained by asking for");
+  ("more than there are: the work is starting programs, which is the processor's own");
+  ("work rather than waiting on a disk, so past that number they only take turns more");
+  ("expensively. The cost is paid by everything else running, which is why it never");
+  ("showed up in this gate's own timing.");
+  ("The number is the one the permission audits already ask for by name, so all the");
+  ("case corpora and all the probes agree about it and none of them learns it by");
+  ("being copied.");
   ("A gate may add a sentence to its refusal saying what shape to go looking for,");
   ("which is worth most at the moment it fails and is lost if it only lives in the");
   ("docstring. A gate with nothing to add hands over nothing to say.");
@@ -42,7 +54,8 @@ export async function cases_checked_gate_run_generic(
     label,
     hint: "this corpus came back with no cases at all, so the gate would have passed without asking anything - look at whatever builds the cases rather than at what they check",
   });
-  let results = await list_map_unordered_async(cases, check);
+  let at_once = probes_at_once();
+  let results = await list_map_limited_async(cases, check, at_once);
   for (let r of results) {
     let passed = property_get(r, "pass");
     let mark = gate_case_mark(passed);
