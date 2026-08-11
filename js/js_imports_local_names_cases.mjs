@@ -17,14 +17,7 @@ export function js_imports_local_names_cases() {
   "beside them kept the old word, and the pair would stop agreeing over a rename";
   "that changed nothing about what this reading does.";
   let a = text_frozen("list_add");
-  let a2 = text_frozen("list_add");
-  let a3 = text_frozen("list_add");
-  let a4 = text_frozen("list_add");
-  let a5 = text_frozen("list_add");
-  let a6 = text_frozen("list_add");
   let b = text_frozen("list_map");
-  let b2 = text_frozen("list_map");
-  let b3 = text_frozen("list_map");
   ("no case asks for the same name twice, because no file can: two import lines");
   ("binding one word is a syntax error, so the uniqueness the collector keeps is a");
   ("guard against a shape the language does not allow rather than one a case could");
