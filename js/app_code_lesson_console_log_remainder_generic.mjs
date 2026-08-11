@@ -1,6 +1,6 @@
+import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
 import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
@@ -10,8 +10,6 @@ import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
@@ -73,7 +71,11 @@ export function app_code_lesson_console_log_remainder_generic(
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_console_log_remainder_generic_title_name_id(
+    percent,
+    divisor_text,
+    name_right,
+  );
   let params = {
     above,
     name_id,
@@ -84,23 +86,6 @@ export function app_code_lesson_console_log_remainder_generic(
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function title_name_id() {
-    "the home title puts the operator glyph % right after the operator name 'remainder', before the 'by <divisor>' qualifier: console.log remainder % by 2";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Remainder ");
-        html_span_text_code_dark(parent, percent);
-        let by = text_combine(" by ", divisor_text);
-        html_span_text(parent, by);
-      }
-      return render;
-    }
-    let rights = [name_right];
-    let left2 = app_code_category_operators();
-    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
-    return built;
-  }
   function remainder_color(remainder) {
     let color = app_code_remainder_color(remainder, divisor);
     return color;
