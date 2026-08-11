@@ -522,7 +522,7 @@ export function permission_grant_names() {
   let spelled519 = fn_name("g_content_originals_folders");
   let spelled520 = fn_name("g_generation_plan");
   let spelled521 = fn_name("g_plant_arcs_all");
-  let spelled522 = fn_name("g_plant_chapters");
+  let spelled522 = fn_name("g_game_plant_passages");
   let spelled523 = fn_name("g_sermon_chapter_codes_all");
   let spelled524 = fn_name("g_sermon_chapter_lines");
   let spelled525 = fn_name("g_sermon_chapter_passages");

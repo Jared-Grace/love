@@ -9,7 +9,7 @@ export async function qa_commit_named_auto() {
   "The failure is caught and written down rather than allowed to end the loop, because a gate that could not be run this minute is no reason to stop trying next minute.";
   let seconds = qa_commit_named_auto_seconds();
   while (true) {
-    await catch_log_async(qa_commit_named_head);
+    await catch_log_async(qa_commit_named_auto_step);
     await sleep_seconds(seconds);
   }
 }
