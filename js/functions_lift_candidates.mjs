@@ -1,3 +1,4 @@
+import { list_sort_size_reverse } from "./list_sort_size_reverse.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_work_oversize_names } from "./functions_work_oversize_names.mjs";
 import { function_lift_candidates } from "./function_lift_candidates.mjs";
@@ -7,8 +8,6 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get_curried_right } from "./property_get_curried_right.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function functions_lift_candidates() {
   arguments_assert(arguments, 0);
   ("Every function standing over the ceiling that holds a closure the lift would actually move, with the biggest such closure named and sized. Biggest closure first.");
@@ -42,7 +41,6 @@ export async function functions_lift_candidates() {
       closed,
     });
   }
-  let sizer = property_get_curried_right("size");
-  let ranked = list_sort_number_mapper_reverse(rows, sizer);
+  let ranked = list_sort_size_reverse(rows);
   return ranked;
 }
