@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_app_import_advice } from "./functions_app_import_advice.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 export function functions_app_import_advice_curried(sentence) {
   arguments_assert(arguments, 1);
   ("A way of making a gate's complaint out of the lines it is complaining about: the gate's own sentence about what the whole fault is, and under it one line per name saying what to do about that name in particular.");
