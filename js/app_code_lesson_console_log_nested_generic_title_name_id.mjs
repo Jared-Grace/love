@@ -19,10 +19,7 @@ export function app_code_lesson_console_log_nested_generic_title_name_id(
     return render;
   }
   let rights = [word];
-  let built = app_code_lesson_name_id_generic(
-    rights,
-    app_code_category_expressions(),
-    title_get,
-  );
+  let left = app_code_category_expressions();
+  let built = app_code_lesson_name_id_generic(rights, left, title_get);
   return built;
 }
