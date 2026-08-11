@@ -28,10 +28,12 @@ export async function app_shared_bible_verses(context) {
   html_font_color_set(chapter_div, color);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
-  let items = list_map_property(verses, verse_number_key());
+  let property_name = verse_number_key();
+  let items = list_map_property(verses, property_name);
   let oc = app_shared_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_shared_bible_picker_buttons_enlarge(buttons);
-  let current = property_get(r, verse_number_key());
+  let property_name2 = verse_number_key();
+  let current = property_get(r, property_name2);
   app_shared_bible_picker_mark_current(buttons, items, current);
 }
