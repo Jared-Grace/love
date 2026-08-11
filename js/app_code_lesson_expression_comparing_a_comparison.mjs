@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_comparing_a_comparison_comparison_side } from "./app_code_lesson_expression_comparing_a_comparison_comparison_side.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -19,13 +20,10 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { equal } from "./equal.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
-import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
-import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -33,7 +31,6 @@ import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_comparing_a_comparison() {
   "a comparison standing where a plain true or false stood: 3 === 5 === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
   "Taught as replacing rather than as evaluating: a comparison works out to a true or false, so it can be replaced by that true or false, and the line that is left is one the learner already knows how to read. The order caveat is pointed back at a rule they already have - we do * before + - so it is recognised rather than taken on. In every line this lesson can generate, replacing in order lands on the right value on its own.";
@@ -78,31 +75,10 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let word = ternary(value, on_true, on_false);
     return word;
   }
-  function comparison_side() {
-    "a comparison of two small numbers, with the true or false it works out to";
-    let same = js_operator_triple_equal();
-    let different = js_operator_bang_double_equal();
-    let smaller = js_operator_less_than();
-    let bigger = js_operator_greater_than();
-    let operators = [same, different, smaller, bigger];
-    let operator = list_random_item(operators);
-    let symbol = property_get(operator, "operator");
-    let fn = property_get(operator, "fn");
-    let a = integer_random(2, 9);
-    let b = integer_random(2, 9);
-    let value = fn(a, b);
-    let a_code = text_to(a);
-    let b_code = text_to(b);
-    let code = text_combine_multiple([a_code, " ", symbol, " ", b_code]);
-    let r = {
-      code,
-      value,
-    };
-    return r;
-  }
   function expression(want_true) {
     "a comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
-    let left = comparison_side();
+    let left =
+      app_code_lesson_expression_comparing_a_comparison_comparison_side();
     let right_value = list_random_item([true, false]);
     let agree = property_equals(left, "value", right_value);
     let wanted = equal(agree, want_true);
