@@ -20,7 +20,7 @@ export function text_capitals_underscore_lower(text) {
       return;
     }
     let lowered = text_lower_to(character);
-    let piece = text_combine_3("_", lowered, "");
+    let piece = text_combine("_", lowered);
     list_add(pieces, piece);
   }
   each(characters, character_add);
