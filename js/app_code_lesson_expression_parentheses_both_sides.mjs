@@ -133,12 +133,7 @@ export function app_code_lesson_expression_parentheses_both_sides() {
       "true",
     ]);
     let needed = app_code_container_light_blue(root);
-    html_div_cycle_code(needed, [
-      "Here we need the ",
-      open,
-      " and ",
-      close,
-    ]);
+    html_div_cycle_code(needed, ["Here we need the ", open, " and ", close]);
     html_div_cycle_code(needed, [
       "Without them we would write ",
       "3 === 5 === 5 === 3",

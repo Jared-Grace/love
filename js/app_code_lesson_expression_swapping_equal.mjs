@@ -84,12 +84,11 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     let paren = app_code_container_light_blue(root);
     html_div_cycle_code(paren, [
-      "When both sides are comparisons, we wrap each side in ",
+      "Remember: when both sides are comparisons, we wrap each side in ",
       "(",
       " and ",
       ")",
     ]);
-    html_div_cycle_code(paren, ["", "(3 === 5) === false", " is ", "true"]);
     html_div_cycle_code(paren, ["", "(3 === 5) === (5 === 3)", " is ", "true"]);
   }
 }
