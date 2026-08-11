@@ -1,10 +1,10 @@
+import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
 import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -24,19 +24,6 @@ export function app_code_lesson_expression_parentheses_moved() {
     decoys,
   });
   return lesson;
-  function expression(group_first) {
-    "a + b * c with the ( and ) around either the a + b or the b * c. Every number is 2..5, so both placements stay whole and above zero and their two answers can never coincide";
-    let a = integer_random(2, 5);
-    let b = integer_random(2, 5);
-    let c = integer_random(2, 5);
-    let code = app_code_lesson_expression_parentheses_moved_arrange(
-      a,
-      b,
-      c,
-      group_first,
-    );
-    return code;
-  }
   function decoys(question, answer) {
     "both placements of the very same three numbers. The one equal to the real answer is dropped as a duplicate, leaving the other placement as the wrong answer on offer";
     let open = js_code_parenthesis_left();
@@ -66,10 +53,10 @@ export function app_code_lesson_expression_parentheses_moved() {
   }
   function refill() {
     "four examples a screen, the group twice around the + and twice around the *";
-    let v = expression(true);
-    let v2 = expression(false);
-    let v3 = expression(true);
-    let v4 = expression(false);
+    let v = app_code_lesson_expression_parentheses_moved_expression(true);
+    let v2 = app_code_lesson_expression_parentheses_moved_expression(false);
+    let v3 = app_code_lesson_expression_parentheses_moved_expression(true);
+    let v4 = app_code_lesson_expression_parentheses_moved_expression(false);
     let list = [v, v2, v3, v4];
     return list;
   }
