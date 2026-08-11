@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_quiz_on_move_on } from "./app_code_lesson_quiz_on_move_on.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
@@ -25,9 +25,7 @@ import { subtract_1 } from "./subtract_1.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
-import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -170,10 +168,4 @@ export function app_code_lesson_quiz(
     qa = next_get();
     on_qa_change();
   }
-}
-async function app_code_lesson_quiz_on_move_on(context) {
-  arguments_assert(arguments, 1);
-  ("go to the review (at a checkpoint) or the next lesson");
-  app_code_quiz_index_reset(context);
-  await app_code_after_lesson(context);
 }
