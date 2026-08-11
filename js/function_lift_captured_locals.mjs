@@ -1,4 +1,3 @@
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_function_declaration_free_names } from "./js_function_declaration_free_names.mjs";
 import { catch_message_async } from "./catch_message_async.mjs";
@@ -78,10 +77,7 @@ export async function function_lift_captured_locals(
   let now = property_get(parsed, "declaration");
   ("The two sides are read differently on purpose. What the function reached for back then is read widely, because the narrow reading is the one that has been dropping names and leaning on it here would hide the very thing being looked for. What it reads today is read narrowly, because a word standing as the key of something is not a name being read, and counting keys named nine functions that turn out to read nothing of the kind");
   let free_now = js_function_declaration_free_names(now);
-  ("What the moved function is handed is subtracted here rather than there, and that is worth saying plainly, because a name turned into a parameter is a lift that went right and is the answer wanted most of the time. The narrow reading counts a parameter as free, which is a fault in it - its own account of itself says it leaves out what a function binds, and a parameter is bound - but its two other callers ask it about functions that are not written yet, and one of those reads nothing at all, so the fault has never shown there");
-  let handed = js_function_declaration_params_names(now);
-  let reaching = list_difference(free_now, handed);
-  let dropped = list_intersection(candidates, reaching);
+  let dropped = list_intersection(candidates, free_now);
   let without_self = list_difference(dropped, [nested, source, lifted]);
   let r = {
     lifted,
