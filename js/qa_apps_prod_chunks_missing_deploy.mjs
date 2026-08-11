@@ -1,3 +1,4 @@
+import { catch_message_async } from "./catch_message_async.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { apps_prod_chunks_missing } from "./apps_prod_chunks_missing.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";

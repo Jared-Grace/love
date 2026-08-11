@@ -7,10 +7,6 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("qa_gate_run"),
       why: "this is the whole-repo gate itself - it asks the list, so it cannot be in it",
     },
-    {
-      name: fn_name("qa_commit_gate_run"),
-      why: "asks the whole-repo gate about one commit rather than about the folder, so it stands above the list for the same reason",
-    },
   ];
   return exempt;
 }
