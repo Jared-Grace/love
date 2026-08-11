@@ -1,3 +1,4 @@
+import { app_search_results_book_verses_count } from "./app_search_results_book_verses_count.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
@@ -11,7 +12,6 @@ import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
-import { list_map_sum } from "./list_map_sum.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
@@ -208,18 +208,6 @@ export async function app_search_results(context, div_results) {
     let count = property_list_size(vk, "value");
     return count;
   }
-  function book_verses_count(book_code) {
-    "how many verses a book card is holding, which the card says out loud so the reader can weigh a book before opening it";
-    function belongs(vk) {
-      let chapter_code = property_get(vk, "key");
-      let vk_book_code = ebible_chapter_code_to_book(chapter_code);
-      let e = equal(vk_book_code, book_code);
-      return e;
-    }
-    let mine = list_filter(results, belongs);
-    let total = list_map_sum(mine, result_verses_count);
-    return total;
-  }
   let div_books = html_div_centered(div_results);
   let book_code_shown = null;
   let div_book_body = null;
@@ -275,7 +263,11 @@ export async function app_search_results(context, div_results) {
     html_style_margin_y(div_book, value2);
     html_text_align_left(div_book);
     let book_name = ebible_book_code_to_name(books, book_code);
-    let verses_count = book_verses_count(book_code);
+    let verses_count = app_search_results_book_verses_count(
+      book_code,
+      results,
+      result_verses_count,
+    );
     let verses_counted = word_count_pluralize(verses_count, "verse");
     ("the book's name is the thing being chosen between, so it is the only part in bold; how many verses it holds is there to weigh it by, and setting that in the same weight made every card read as two equally loud things");
     ("the count sits on its own line under the name rather than trailing it in brackets: shut cards stand side by side, so a name followed by its count made each card as wide as two things and fewer of them fit across a phone. stacked, a card is as wide as the longer of the two");
