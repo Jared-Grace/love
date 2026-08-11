@@ -56,7 +56,7 @@ export async function function_lift_captured_locals(
     let found = js_function_nested_find_named(old, nested);
     return found;
   }
-  "The function written inside is looked for gently, because the file standing at that commit is not always the one the move was made from - a later rename moves the record and the name to look under with it, and the file under the old name at that old moment holds somebody else's work. Refusing there would end the whole sweep on the first one, and the sweep is the only thing that can tell one bad move from a bad way of moving";
+  ("The function written inside is looked for gently, because the file standing at that commit is not always the one the move was made from - a later rename moves the record and the name to look under with it, and the file under the old name at that old moment holds somebody else's work. Refusing there would end the whole sweep on the first one, and the sweep is the only thing that can tell one bad move from a bad way of moving");
   let sought = await catch_message_async(find_lambda);
   let found_is = property_get(sought, "ok");
   if (not(found_is)) {
