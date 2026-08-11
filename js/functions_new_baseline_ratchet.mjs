@@ -1,7 +1,7 @@
-import { functions_new_baseline_ratchet_gate } from "./functions_new_baseline_ratchet_gate.mjs";
-import { functions_new_baseline_ratchet_write } from "./functions_new_baseline_ratchet_write.mjs";
-import { functions_new_baseline_ratchet_growth } from "./functions_new_baseline_ratchet_growth.mjs";
-import { functions_new_baseline_ratchet_path } from "./functions_new_baseline_ratchet_path.mjs";
+import { functions_new_baseline_ratchet_gate_new } from "./functions_new_baseline_ratchet_gate_new.mjs";
+import { functions_new_baseline_ratchet_write_new } from "./functions_new_baseline_ratchet_write_new.mjs";
+import { functions_new_baseline_ratchet_growth_new } from "./functions_new_baseline_ratchet_growth_new.mjs";
+import { functions_new_baseline_ratchet_path_new } from "./functions_new_baseline_ratchet_path_new.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
@@ -26,15 +26,15 @@ export async function functions_new_baseline_ratchet(lister, slug, hint) {
   let name_write = text_combine(slug, "_baseline_write");
   let name_gate = text_combine(slug, "_gate_run");
   let file = text_combine_3("data/", slug, "_baseline.json");
-  await functions_new_baseline_ratchet_path(file, name_path);
-  await functions_new_baseline_ratchet_growth(name_path, hint, name_growth);
-  await functions_new_baseline_ratchet_write(
+  await functions_new_baseline_ratchet_path_new(file, name_path);
+  await functions_new_baseline_ratchet_growth_new(name_path, hint, name_growth);
+  await functions_new_baseline_ratchet_write_new(
     lister,
     name_growth,
     name_path,
     name_write,
   );
-  await functions_new_baseline_ratchet_gate(
+  await functions_new_baseline_ratchet_gate_new(
     lister,
     name_path,
     name_write,
