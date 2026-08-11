@@ -1,3 +1,5 @@
+import { ternary } from "./ternary.mjs";
+import { text_replace } from "./text_replace.mjs";
 import { app_code_lesson_expression_parentheses_moved_title_name_id } from "./app_code_lesson_expression_parentheses_moved_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -83,7 +85,9 @@ export function app_code_lesson_expression_parentheses_moved() {
     let c = words[4];
     let grouped = arrange(a, b, c, true);
     let spread = arrange(a, b, c, false);
-    let r = [eval(grouped), eval(spread)];
+    let v5 = eval(grouped);
+    let v6 = eval(spread);
+    let r = [v5, v6];
     return r;
   }
   function refill() {
