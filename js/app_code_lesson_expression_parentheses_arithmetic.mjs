@@ -1,18 +1,14 @@
+import { app_code_lesson_expression_parentheses_arithmetic_expression } from "./app_code_lesson_expression_parentheses_arithmetic_expression.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
-import { app_code_lesson_expression_parentheses_arithmetic_group } from "./app_code_lesson_expression_parentheses_arithmetic_group.mjs";
-import { ternary } from "./ternary.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_replace } from "./text_replace.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_parentheses_arithmetic() {
   "the FIRST parentheses a learner ever meets, and they are met where they change the answer: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. Everything else here is already known - the numbers, the operators, and the precedence rule itself, which the plus-times lesson taught as we always do the * first, even when it comes later in the line. So exactly one thing is new: a pair of symbols that overrides that rule. The parenthesised group is shown on BOTH sides of the *, the same way the plus-times lesson showed the same multiplication in both positions, so what is learned is the brackets rather than a position.";
   "The tailored wrong answer is the value of the very same line with the parentheses taken away, which is the whole mistake this lesson exists to prevent: a learner who does not yet believe the brackets matter will read (1 + 2) * 3 as 1 + 2 * 3 and answer 7. Offering that number is what makes choosing 9 an act of reading the brackets rather than of arithmetic.";
@@ -28,23 +24,14 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     decoys,
   });
   return lesson;
-  function expression(group_first) {
-    "the group times a number, with the group on the left when group_first and on the right otherwise";
-    let inner = app_code_lesson_expression_parentheses_arithmetic_group();
-    let input = integer_random(2, 5);
-    let outer = text_to(input);
-    let times = js_operator_asterisk_symbol();
-    let left = ternary(group_first, inner, outer);
-    let right = ternary(group_first, outer, inner);
-    let code = text_combine_multiple([left, " ", times, " ", right]);
-    return code;
-  }
   function refill() {
     "four examples a screen, the group twice on the left and twice on the right";
-    let v = expression(true);
-    let v2 = expression(false);
-    let v3 = expression(true);
-    let v4 = expression(false);
+    let v = app_code_lesson_expression_parentheses_arithmetic_expression(true);
+    let v2 =
+      app_code_lesson_expression_parentheses_arithmetic_expression(false);
+    let v3 = app_code_lesson_expression_parentheses_arithmetic_expression(true);
+    let v4 =
+      app_code_lesson_expression_parentheses_arithmetic_expression(false);
     let list = [v, v2, v3, v4];
     return list;
   }
