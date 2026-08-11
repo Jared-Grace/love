@@ -39,8 +39,8 @@ export async function function_lift_captured_locals(
   let file_name = text_combine_multiple([source, ".mjs"]);
   let path = path_join(["js", file_name]);
   async function old_lambda() {
-    let text = await git_file_read_at(folder, before, path);
-    return text;
+    let file_text = await git_file_read_at(folder, before, path);
+    return file_text;
   }
   let read = await catch_message_async(old_lambda);
   let readable = property_get(read, "ok");
