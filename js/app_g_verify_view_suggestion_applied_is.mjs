@@ -8,7 +8,7 @@ import { app_g_verify_view_suggestion_text_normalize } from "./app_g_verify_view
 export async function app_g_verify_view_suggestion_applied_is(
   chapter_code,
   verse,
-  value4,
+  value,
   ignore_applied,
 ) {
   arguments_assert(arguments, 4);
@@ -31,9 +31,9 @@ export async function app_g_verify_view_suggestion_applied_is(
     let last = mine[subtract(mine.length, 1)];
     let value11 = property_get(last, "text");
     let sent = app_g_verify_view_suggestion_text_normalize(value11);
-    let now = app_g_verify_view_suggestion_text_normalize(value4);
-    let eq3 = equal(sent, now);
-    return eq3;
+    let now = app_g_verify_view_suggestion_text_normalize(value);
+    let eq = equal(sent, now);
+    return eq;
   } catch (ignore_applied) {
     ignore_applied;
     return false;
