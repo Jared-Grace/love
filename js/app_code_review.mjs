@@ -1,3 +1,4 @@
+import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
@@ -35,7 +36,6 @@ import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { not } from "./not.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
@@ -53,11 +53,8 @@ export function app_code_review(context) {
   let progress = html_div(g);
   let success_container = html_div(g);
   let c = app_code_container_light_blue(g);
-  function hide_success() {
-    html_visibility_hidden(success_container);
-  }
   app_shared_success_message(success_container);
-  hide_success();
+  app_code_review_hide_success(success_container);
   let lessons = app_code_lessons();
   let lessons_count = list_size(lessons);
   let previous_index = subtract(number, 1);
@@ -148,7 +145,7 @@ export function app_code_review(context) {
       present();
     }
     function on_incorrect() {
-      hide_success();
+      app_code_review_hide_success(success_container);
     }
     app_code_review_exercise(c, exercise, on_correct, on_incorrect);
   }

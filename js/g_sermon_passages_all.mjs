@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { g_sermon_groups_todo } from "./g_sermon_groups_todo.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -26,6 +27,6 @@ export async function g_sermon_passages_all() {
     return out;
   }
   let per_chapter = await list_map_async(chapters, chapter_passages);
-  let r = list_flat(per_chapter);
+  let r = list_concat_multiple(per_chapter);
   return r;
 }
