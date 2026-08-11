@@ -1,5 +1,5 @@
+import { g_game_chapters_chosen } from "./g_game_chapters_chosen.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
-import { g_sermon_chapter_days_all } from "./g_sermon_chapter_days_all.mjs";
 import { g_game_plants_areas } from "./g_game_plants_areas.mjs";
 import { g_sermon_days_total } from "./g_sermon_days_total.mjs";
 import { g_npc_pool_convert_turns } from "./g_npc_pool_convert_turns.mjs";
@@ -46,11 +46,17 @@ export async function g_game_plants_report(word) {
       leader_days_percent: property_get(plant, "leader_days_percent"),
       leader_short: short_is,
       area: property_get(plant, "area"),
-      book: property_get(plant, "book"),
-      chapters: property_get(plant, "chapters"),
+      start: property_get(plant, "start"),
+      end: property_get(plant, "end"),
+      lines: property_get(plant, "lines"),
+      arc_turns: property_get(plant, "arc_turns"),
+      spent: property_get(plant, "spent"),
+      over_budget: property_get(plant, "over_budget"),
       sender_present: property_get(plant, "sender_present"),
       elder_short: elder_short_is,
-      days_short: property_get(plant, "days_short"),
+      floor_met: property_get(plant, "floor_met"),
+      over_maximum: property_get(plant, "over_maximum"),
+      unfinished: property_get(plant, "unfinished"),
     };
     list_add(rows, row);
   }
