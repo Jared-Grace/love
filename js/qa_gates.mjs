@@ -178,7 +178,7 @@ import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
 import { g_clock_sky_phase_check } from "./g_clock_sky_phase_check.mjs";
 import { g_day_sky_phase_check } from "./g_day_sky_phase_check.mjs";
 import { g_day_fraction_check } from "./g_day_fraction_check.mjs";
-import { app_g_day_guide_pick_check } from "./app_g_day_guide_pick_check.mjs";
+import { g_day_guide_pick_check } from "./g_day_guide_pick_check.mjs";
 import { app_g_map_pad_check } from "./app_g_map_pad_check.mjs";
 import { g_day_blocked_check } from "./g_day_blocked_check.mjs";
 export function qa_gates() {
@@ -285,7 +285,7 @@ export function qa_gates() {
     g_clock_sky_phase_check,
     g_day_sky_phase_check,
     g_day_fraction_check,
-    app_g_day_guide_pick_check,
+    g_day_guide_pick_check,
     app_g_map_pad_check,
     g_day_blocked_check,
     functions_parallel_marks_gate_run,
