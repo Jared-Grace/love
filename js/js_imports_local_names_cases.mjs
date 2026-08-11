@@ -31,12 +31,12 @@ export function js_imports_local_names_cases() {
     {
       name: "the default binding of another file, whose local name is chosen here",
       code: text_frozen('import list_add from "./list_add.mjs";\n'),
-      local: [a2],
+      local: [a],
     },
     {
       name: "the whole module under one name",
       code: text_frozen('import * as list_add from "./list_add.mjs";\n'),
-      local: [a3],
+      local: [a],
     },
     {
       name: "renamed on the way in - the local name is the one bound, not the exported one",
@@ -50,14 +50,14 @@ export function js_imports_local_names_cases() {
       code: text_frozen(
         'import { list_add, list_map } from "./list_add.mjs";\n',
       ),
-      local: [a4, b],
+      local: [a, b],
     },
     {
       name: "the default and a named one together",
       code: text_frozen(
         'import list_add, { list_map } from "./list_add.mjs";\n',
       ),
-      local: [a5, b2],
+      local: [a, b],
     },
     {
       name: "a package rather than a file, which binds a local name just the same",
@@ -79,7 +79,7 @@ export function js_imports_local_names_cases() {
       code: text_frozen(
         'import { list_map } from "./list_map.mjs";\nimport { list_add } from "./list_add.mjs";\n',
       ),
-      local: [b3, a6],
+      local: [b, a],
     },
   ];
   return cases;
