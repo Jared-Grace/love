@@ -1,16 +1,10 @@
+import { app_code_lesson_expression_comparison_equal_generic_examples } from "./app_code_lesson_expression_comparison_equal_generic_examples.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_or } from "./js_operator_or.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_ordering.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 export function app_code_lesson_expression_comparison_equal_generic(words) {
   "the shared body of the two lessons teaching a comparison that also accepts equal (>= and <=): one strict relation makes it true, equal makes it true, the opposite relation makes it false";
   "The two differ in three things and nothing else: which strict relation counts as";
@@ -56,39 +50,10 @@ export function app_code_lesson_expression_comparison_equal_generic(words) {
     ];
     return parts;
   }
-  function examples() {
-    "all THREE relations stand together on every screen, so the case that tells this operator apart from === - the strict one, which is true here and false there - is never the one left out";
-    let ordering = app_code_comparison_pair_ordering(less_than);
-    let max = app_code_lesson_operators_value_max();
-    function equal_pair() {
-      let n = integer_random(1, max);
-      let coordinates = {
-        left: n,
-        right: n,
-      };
-      return coordinates;
-    }
-    function code_of(coordinates) {
-      let left = property_get(coordinates, "left");
-      let right = property_get(coordinates, "right");
-      let code = js_code_binary_spaced_nb(left, symbol, right);
-      return code;
-    }
-    function refill() {
-      let v = equal_pair();
-      let same = code_of(v);
-      let v2 = ordering(true_ordering);
-      let held = code_of(v2);
-      let n2 = not(true_ordering);
-      let v3 = ordering(n2);
-      let refused = code_of(v3);
-      let list = [same, held, refused];
-      return list;
-    }
-    let iterator = list_iterator_refillable(refill);
-    return iterator;
-  }
-  let next_arg = examples();
+  let next_arg = app_code_lesson_expression_comparison_equal_generic_examples(
+    symbol,
+    true_ordering,
+  );
   let rights = [middle_words];
   let lesson = app_code_lesson_expression_comparison({
     operator,
