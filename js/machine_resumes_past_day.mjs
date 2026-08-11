@@ -1,6 +1,6 @@
+import { machine_resumes_past_day_journal_stdout } from "./machine_resumes_past_day_journal_stdout.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { command_line_stdout } from "./command_line_stdout.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -24,14 +24,11 @@ export async function machine_resumes_past_day() {
     let wrapped = 'sg systemd-journal -c "' + journalctl_command + '"';
     return wrapped;
   }
-  async function journal_stdout(journalctl_arguments, wrap_given) {
-    let journalctl_command = "journalctl " + journalctl_arguments;
-    let command = wrap_given(journalctl_command);
-    let printed = await command_line_stdout(command);
-    return printed;
-  }
   async function journal_reachable(wrap_given) {
-    let probe = await journal_stdout("-k -o cat -n 1", wrap_given);
+    let probe = await machine_resumes_past_day_journal_stdout(
+      "-k -o cat -n 1",
+      wrap_given,
+    );
     let s = text_trim(probe);
     let reachable = text_empty_not_is(s);
     return reachable;
@@ -47,7 +44,10 @@ export async function machine_resumes_past_day() {
       );
     }
   }
-  let stdout = await journal_stdout("--since=-1d -o short-iso --reverse", wrap);
+  let stdout = await machine_resumes_past_day_journal_stdout(
+    "--since=-1d -o short-iso --reverse",
+    wrap,
+  );
   let lines = text_split(stdout, "\n");
   function line_is_resume(line) {
     let is_resume = line.includes("System returned from sleep");
