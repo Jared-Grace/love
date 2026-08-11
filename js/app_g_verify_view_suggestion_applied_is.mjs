@@ -9,9 +9,8 @@ export async function app_g_verify_view_suggestion_applied_is(
   chapter_code,
   verse,
   value,
-  ignore_applied,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 3);
   try {
     let all = await app_shared_api({
       f_name: fn_name("g_verify_suggest_history_read"),

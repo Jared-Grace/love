@@ -25,9 +25,8 @@ export async function app_g_verify_view_history_show(
   base_key,
   value,
   autosize,
-  ignore_h,
 ) {
-  arguments_assert(arguments, 11);
+  arguments_assert(arguments, 10);
   try {
     let all = await app_shared_api({
       f_name: fn_name("g_verify_suggest_history_read"),

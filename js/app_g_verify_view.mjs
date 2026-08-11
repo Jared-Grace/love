@@ -417,7 +417,6 @@ export async function app_g_verify_view(
           chapter_code,
           verse,
           value4,
-          ignore_applied,
         );
         if (applied) {
           text =
@@ -450,6 +449,5 @@ export async function app_g_verify_view(
     base_key,
     value4,
     autosize,
-    ignore_h,
   );
 }
