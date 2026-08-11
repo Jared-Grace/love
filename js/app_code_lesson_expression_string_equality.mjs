@@ -1,16 +1,13 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_string_equality_title_name_id } from "./app_code_lesson_expression_string_equality_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
-import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
@@ -20,7 +17,6 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_equality() {
   "comparing two strings for equality - the same triple-equals and not-equals the learner already knows on numbers, now on strings: it is true when the two strings are exactly the same text. Half the questions use triple-equals (true when the words match) and half not-equals (true when they differ), over words from the shared verse. Placed just after the numeric equal-to / not-equal-to lessons and the string lessons.";
@@ -75,7 +71,7 @@ export function app_code_lesson_expression_string_equality() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_string_equality_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -90,24 +86,6 @@ export function app_code_lesson_expression_string_equality() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: comparing strings";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Comparing strings ");
-        app_code_string_operators_shape(parent, "===", "!==");
-      }
-      return render;
-    }
-    let rights = ["string", "equality"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     "first a recall box anchoring on the === the learner already knows on numbers, then reveal it also compares strings; then two rule boxes, each its own light-blue container - === and !== - and within each box the true case and the false case are stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. No worked examples here: the four refreshable examples below demonstrate all four cases.";
     let true_text = js_keyword_true();
