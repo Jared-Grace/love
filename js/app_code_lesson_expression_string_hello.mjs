@@ -1,9 +1,7 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_string_hello_title_name_id } from "./app_code_lesson_expression_string_hello_title_name_id.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
 import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -26,7 +24,7 @@ export function app_code_lesson_expression_string_hello() {
     let r = [quoted];
     return r;
   }
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_string_hello_title_name_id();
   let lesson = app_code_lesson_expression_string_generic({
     words_get: fruits_of_the_spirit,
     decoys,
@@ -34,24 +32,6 @@ export function app_code_lesson_expression_string_hello() {
     name_id,
   });
   return lesson;
-  function title_name_id() {
-    "the home title names the new idea - a string";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Strings ");
-        app_code_string_shape(parent, 1);
-      }
-      return render;
-    }
-    let rights = ["string"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     "intro: name the string, show that a quote marks both the start and the end, show the shape with a deemphasized ... placeholder (the quotes are real code, the ... is a stand-in for whatever text you want), then a concrete example - a fruit of the Spirit; then show the value drops the quotes. string is bolded once at its definition";
     let list = fruits_of_the_spirit();
