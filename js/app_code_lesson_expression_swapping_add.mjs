@@ -44,7 +44,9 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
     let plus = app_code_container_light_blue(root);
     html_div_cycle_code(plus, [
-      "Adding puts two amounts together, so swapping does not matter",
+      "Adding (",
+      "+",
+      ") puts two amounts together, so swapping does not matter",
     ]);
     html_div_cycle_code(plus, [
       "For example: ",
@@ -97,7 +99,9 @@ export function app_code_lesson_expression_swapping_add() {
     ]);
     let minus = app_code_container_light_blue(root);
     html_div_cycle_code(minus, [
-      "Subtracting takes the second number away from the first number",
+      "Subtracting (",
+      "-",
+      ") takes the second number away from the first number",
     ]);
     html_div_cycle_code(minus, [
       "",

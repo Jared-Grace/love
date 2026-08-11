@@ -1,3 +1,4 @@
+import { firebase_prod_app_stale_delete } from "./firebase_prod_app_stale_delete.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
 import { app_shared_frozen_assert } from "./app_shared_frozen_assert.mjs";
 import { app_shared_name_search } from "./app_shared_name_search.mjs";
@@ -29,6 +30,9 @@ export async function qa_app_commit_promote(search, commit) {
     let sending = await user_repo_path_combine(relative);
     await file_copy_overwrite(made, sending);
   }
+  ("A piece the last build left behind and this one did not make is taken away rather than left beside the new ones. Which extra scripts a build cuts out of an app is the build's own choice, so an older build's leftovers are not overwritten by a newer one - and left standing they make the folder answer with more pieces than the note beside it records, which refuses the next sending for something nobody did.");
+  ("It happens after the new pieces are in place rather than before, so a run that fell over partway through has taken nothing away that it did not replace.");
+  await firebase_prod_app_stale_delete(app_name, file_names);
   await qa_promoted_app_write(app_name, commit, hashes);
   return hashes;
 }

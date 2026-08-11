@@ -48,7 +48,9 @@ export function app_code_lesson_expression_swapping_divide() {
     ]);
     let division = app_code_container_light_blue(root);
     html_div_cycle_code(division, [
-      "Dividing groups a number into equally sized parts",
+      "Dividing (",
+      "/",
+      ") groups a number into equally sized parts",
     ]);
     html_div_cycle_code(division, [
       "",
@@ -69,7 +71,9 @@ export function app_code_lesson_expression_swapping_divide() {
     ]);
     let leftover = app_code_container_light_blue(root);
     html_div_cycle_code(leftover, [
-      "The remainder is what is left after dividing",
+      "The remainder (",
+      "%",
+      ") is what is left after dividing",
     ]);
     html_div_cycle_code(leftover, [
       "",
@@ -86,7 +90,11 @@ export function app_code_lesson_expression_swapping_divide() {
       "%",
     ]);
     let power = app_code_container_light_blue(root);
-    html_div_cycle_code(power, ["A power multiplies a number by itself"]);
+    html_div_cycle_code(power, [
+      "A power (",
+      "**",
+      ") multiplies a number by itself",
+    ]);
     html_div_cycle_code(power, ["", "2 ** 3", " is ", "2 * 2 * 2 === 8"]);
     html_div_cycle_code(power, ["", "3 ** 2", " is ", "3 * 3 === 9"]);
     html_div_cycle_code(power, [
