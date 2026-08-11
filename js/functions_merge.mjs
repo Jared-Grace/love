@@ -1,3 +1,5 @@
+import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
+import { list_difference } from "./list_difference.mjs";
 import { js_identifier_rename_imports_fix_curried_right_2 } from "./js_identifier_rename_imports_fix_curried_right_2.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_paths_mentioning } from "./data_paths_mentioning.mjs";
@@ -43,9 +45,12 @@ export async function functions_merge(f_name_keep, f_name_drop) {
     await function_transform(name, swap);
   }
   ("a gate baseline is a record of the defect, not something depending on it, so the one file listing this pair as an open twin must not be what stops the pair being closed - every other mention in the data folder still does");
+  ("the commit-by-commit record of what each red gate named is the same kind of thing, and the case for passing over it is stronger: it is keyed by the commit it describes, so a name written into it is a statement about the past and can never be cleared. Left in, the first red gate ever to name a function made that function impossible to merge from then on, and the advice to clear the mention first asked for history to be falsified.");
   let paths_mentioning = await data_paths_mentioning(f_name_drop);
-  let baseline_path = functions_duplicates_baseline_path();
-  let blocking = list_filter_equal_not(paths_mentioning, baseline_path);
+  let path = functions_duplicates_baseline_path();
+  let path2 = qa_commit_named_path();
+  let records = [path, path2];
+  let blocking = list_difference(paths_mentioning, records);
   list_empty_is_assert_json(blocking, {
     f_name_drop,
     blocking,

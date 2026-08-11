@@ -17,9 +17,6 @@ import { app_g_container } from "./app_g_container.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
-import { app_shared_button_background } from "./app_shared_button_background.mjs";
-import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
 import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -27,7 +24,6 @@ import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -41,17 +37,6 @@ export async function app_g_view_render_study(div_map) {
   let text2 = text_combine(left, " Study: Tap each word in order");
   app_g_container_text(overlay, text2);
   let current = word_index;
-  let left2 = app_shared_button_background();
-  let green_vivid = text_combine(left2, "ee");
-  let left3 = app_shared_button_background();
-  let green_pale = text_combine(left3, "66");
-  let blue_pale = app_shared_color_blue_light();
-  let white = app_shared_button_font_color();
-  let ring = text_combine_multiple([
-    "0 0 0 0.12em ",
-    white,
-    ", 0 0 0 0.2em #00000080",
-  ]);
   let save_pending = null;
   async function persist() {
     save_pending = null;
