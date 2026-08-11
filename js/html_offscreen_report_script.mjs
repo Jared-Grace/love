@@ -1,0 +1,53 @@
+export function html_offscreen_report_script() {
+  "everything drawn on a page that has fallen off the screen and cannot be scrolled back to, as the browser-side code that finds it. runs inside the page via page.evaluate, so it reads the sizes the browser actually settled on rather than the ones the code asked for - which is the only way to catch a size that was fine on a laptop and too big on a phone";
+  "kept as a STRING on purpose. a function handed over as a value is sent as text and run where none of this repo's names exist, and the canonicalizing pass would turn its comparisons into calls to functions the page has never heard of. it was first written as a function and that is exactly what happened to it, within a minute. a string cannot be rewritten by anything that reads code, so this shape is immune rather than protected";
+  "off the TOP and off the LEFT are always reported, because scrolling only ever moves forwards from nothing: there is no way to reach above the first line or left of the first column, so anything there is simply gone and nothing on the screen says so";
+  "off the BOTTOM and off the RIGHT are reported only when nothing can be scrolled to reach them. content below the fold of a page that scrolls is not a fault, it is a page";
+  let script = [
+    "(() => {",
+    "  const W = window.innerWidth, H = window.innerHeight;",
+    "  const found = [];",
+    "  const sel = 'body p, body span, body button, body h1, body h2, body h3, body li, body td';",
+    "  function scrollable(el, vertical) {",
+    "    for (let node = el; node; node = node.parentElement) {",
+    "      const s = getComputedStyle(node);",
+    "      const flow = vertical ? s.overflowY : s.overflowX;",
+    "      const inner = vertical ? node.scrollHeight : node.scrollWidth;",
+    "      const outer = vertical ? node.clientHeight : node.clientWidth;",
+    "      if (['auto', 'scroll', 'overlay'].includes(flow) && inner > outer + 1) { return true; }",
+    "    }",
+    "    const de = document.documentElement;",
+    "    const inner = vertical ? de.scrollHeight : de.scrollWidth;",
+    "    const outer = vertical ? de.clientHeight : de.clientWidth;",
+    "    return inner > outer + 1;",
+    "  }",
+    "  document.querySelectorAll(sel).forEach(el => {",
+    "    const r = el.getBoundingClientRect();",
+    "    if (r.width < 1 || r.height < 1) { return; }",
+    "    const s = getComputedStyle(el);",
+    "    if (s.display === 'none' || s.visibility === 'hidden' || s.opacity === '0') { return; }",
+    "    const text = (el.textContent || '').trim();",
+    "    if (text.length === 0) { return; }",
+    "    const edges = [];",
+    "    if (r.top < -1) { edges.push('top'); }",
+    "    if (r.left < -1) { edges.push('left'); }",
+    "    if (r.bottom > H + 1 && !scrollable(el, true)) { edges.push('bottom'); }",
+    "    if (r.right > W + 1 && !scrollable(el, false)) { edges.push('right'); }",
+    "    if (edges.length === 0) { return; }",
+    "    found.push({",
+    "      tag: el.tagName.toLowerCase(),",
+    "      text: text.slice(0, 60),",
+    "      edges,",
+    "      top: Math.round(r.top),",
+    "      left: Math.round(r.left),",
+    "      bottom: Math.round(r.bottom),",
+    "      right: Math.round(r.right),",
+    "      width: Math.round(r.width),",
+    "      height: Math.round(r.height),",
+    "    });",
+    "  });",
+    "  return found;",
+    "})()",
+  ].join("\n");
+  return script;
+}
