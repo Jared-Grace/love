@@ -1,3 +1,4 @@
+import { lock_folder_path } from "./lock_folder_path.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { file_read_try } from "./file_read_try.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { path_join } from "./path_join.mjs";
-import { folder_user_storage_function_path } from "./folder_user_storage_function_path.mjs";
 import { sleep } from "./sleep.mjs";
 import { import_install } from "./import_install.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -13,8 +13,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 export async function lock_generic(lock_name, wait, lambda, who) {
   let lockfile = await import_install("proper-lockfile");
-  let f_path = folder_user_storage_function_path(lock_generic);
-  let result = path_join([f_path, lock_name]);
+  let result = lock_folder_path(lock_name);
   await folder_exists_ensure(result);
   let owner_path = path_join([result, "owner"]);
   let release = null;
