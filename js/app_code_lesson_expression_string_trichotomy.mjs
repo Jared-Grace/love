@@ -1,18 +1,14 @@
+import { app_code_lesson_expression_string_trichotomy_title_name_id } from "./app_code_lesson_expression_string_trichotomy_title_name_id.mjs";
 import { app_code_lesson_expression_string_trichotomy_question_code } from "./app_code_lesson_expression_string_trichotomy_question_code.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { text_lower_is } from "./text_lower_is.mjs";
 import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
-import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
-import { app_code_placeholder_tile_string } from "./app_code_placeholder_tile_string.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -20,7 +16,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_string_trichotomy() {
   "the trichotomy of comparing two strings - the very same three-case structure the learner just met on numbers, now carried over to strings: two strings are the same, or the first comes before the other in the dictionary, or the first comes after - exactly one of the three. The transfer is the point: === for same (as on numbers), < for before (where numbers had smaller), > for after (where numbers had bigger). Only the all-lowercase verse words are used, because JavaScript orders strings by character code, where every capital letter sorts before every small one, so mixing cases would break the alphabetical order being taught, and lowercasing a reverent word to dodge that is worse. Placed just after the string dictionary-order lesson and before the string <= / >= lesson.";
   let equals_operator = "===";
@@ -83,7 +78,11 @@ export function app_code_lesson_expression_string_trichotomy() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_string_trichotomy_title_name_id(
+    equals_operator,
+    less_operator,
+    greater_operator,
+  );
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -98,25 +97,6 @@ export function app_code_lesson_expression_string_trichotomy() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: same, before, or after";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Same, before, or after ");
-        app_code_operators_shape_list(
-          parent,
-          app_code_placeholder_tile_string,
-          [equals_operator, less_operator, greater_operator],
-        );
-      }
-      return render;
-    }
-    let rights = ["string", "trichotomy"];
-    let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function above(root) {
     "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box: any two strings give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
     let transfer = app_code_container_light_blue(root);
