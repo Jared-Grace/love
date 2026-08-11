@@ -2,7 +2,6 @@
  "known": [
   "function_worker_pool_run",
   "app_replace_tests_proof_state",
-  "app_g_day_guide_tile",
   "g_day_clock",
   "app_g_hour_choices",
   "messenger_reply_messages",
