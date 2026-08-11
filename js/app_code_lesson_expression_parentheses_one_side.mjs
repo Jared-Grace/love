@@ -1,4 +1,4 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -6,10 +6,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { equal } from "./equal.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -26,7 +23,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_parentheses_one_side() {
   "( and ) around a comparison, on the one line where they change nothing: (3 === 5) === false. The previous lesson wrote that same line flat - 3 === 5 === false - and said so deliberately, because parentheses there would have been a rule the learner could not yet see the need for. Here they are the whole lesson and nothing else moves: the same shape, the same answer, one new pair of symbols. Meeting them on a line whose value they do not change is what makes the next lesson safe, where both sides are comparisons and the parentheses decide the answer for real.";
   "Only the LEFT side is wrapped. Wrapping the right as well is the next lesson, and doing it here would put two new things in one step - brackets, and a comparison standing on the right - when only one of them is this lesson's idea.";
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_parentheses_one_side_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
@@ -41,22 +38,6 @@ export function app_code_lesson_expression_parentheses_one_side() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: a comparison inside ( and ), an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        let open = js_code_parenthesis_left();
-        let close = js_code_parenthesis_right();
-        html_cycle_code(parent, ["a comparison inside ", open, " and ", close]);
-      }
-      return render;
-    }
-    let rights = ["parentheses one side"];
-    let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function keyword(value) {
     "the code word for a true or false value";
     let on_true = js_keyword_true();
