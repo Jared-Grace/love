@@ -22,7 +22,7 @@ export async function command_line_generic(command, extra) {
   let code_ignore = property_get(ci, "value");
   let spawn = property_get(r3, "spawn");
   let match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
-  let r5 = command_line_generic_parse_command(command, TypeError, Error);
+  let r5 = command_line_generic_parse_command(command);
   let args = property_get(r5, "args");
   let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
