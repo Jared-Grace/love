@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_verify_view_panel_flush } from "./app_g_verify_view_panel_flush.mjs";
 import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
@@ -17,7 +17,6 @@ import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
-import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -41,8 +40,6 @@ import { html_centered } from "./html_centered.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
@@ -474,12 +471,4 @@ export async function app_g_verify_view(
     }
   }
   history_show();
-}
-function app_g_verify_view_panel_flush(container) {
-  arguments_assert(arguments, 1);
-  let p = app_shared_container_base(container);
-  html_style_padding_x(p, "0");
-  html_style_padding_y(p, "0");
-  html_style_overflow_hidden(p);
-  return p;
 }
