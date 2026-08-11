@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
@@ -154,24 +155,17 @@ export async function app_search_results(context, div_results) {
     return;
   }
   let button_list = null;
-  function collapse_setters_set(setters, collapsed) {
-    "open or shut a whole level of cards at once - the one place that knows how to reach all of them, so the buttons and the first draw all say it the same way. it takes the level it acts on because the book cards and the testament cards are shut for different reasons: the first draw shuts the books to leave the reader an overview of what matched, which shutting the testaments over them would hide";
-    function setter_call(collapsed_set) {
-      collapsed_set(collapsed);
-    }
-    each(setters, setter_call);
-  }
   async function expand_all_lambda() {
     "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
     "the testament cards open ahead of the books inside them, since a reader who folded one away would otherwise press this and watch nothing happen there";
-    collapse_setters_set(testament_collapse_setters, false);
-    collapse_setters_set(book_collapse_setters, false);
+    app_search_results_collapse_setters_set(testament_collapse_setters, false);
+    app_search_results_collapse_setters_set(book_collapse_setters, false);
     await app_search_results_collect_all_texts(button_list);
   }
   function collapse_all_lambda() {
     "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
     "the testament cards stay as the reader left them: shutting those too would hide the very overview of books this button exists to come back to";
-    collapse_setters_set(book_collapse_setters, true);
+    app_search_results_collapse_setters_set(book_collapse_setters, true);
   }
   async function copy_all_lambda() {
     "let the reader copy every matching verse in one click, without first expanding them all on screen";
@@ -437,13 +431,13 @@ export async function app_search_results(context, div_results) {
   let one_book = list_size_1(book_collapse_setters);
   if (one_book) {
     ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
-    collapse_setters_set(book_collapse_setters, false);
+    app_search_results_collapse_setters_set(book_collapse_setters, false);
     let only_book_expand = list_single(book_chapter_single_expanders);
     await only_book_expand();
   } else {
     let scrolls = html_page_scrolls();
     if (scrolls) {
-      collapse_setters_set(book_collapse_setters, true);
+      app_search_results_collapse_setters_set(book_collapse_setters, true);
     }
   }
   let s = list_size_1(button_list);
@@ -451,4 +445,12 @@ export async function app_search_results(context, div_results) {
     let only_click = list_single_property(button_list, "click");
     await only_click();
   }
+}
+function app_search_results_collapse_setters_set(setters, collapsed) {
+  arguments_assert(arguments, 2);
+  ("open or shut a whole level of cards at once - the one place that knows how to reach all of them, so the buttons and the first draw all say it the same way. it takes the level it acts on because the book cards and the testament cards are shut for different reasons: the first draw shuts the books to leave the reader an overview of what matched, which shutting the testaments over them would hide");
+  function setter_call(collapsed_set) {
+    collapsed_set(collapsed);
+  }
+  each(setters, setter_call);
 }
