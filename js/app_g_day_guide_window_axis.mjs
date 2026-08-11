@@ -22,8 +22,8 @@ export function app_g_day_guide_window_axis(
   "Everything is measured from where tile zero actually SITS. The grid of tiles is inset inside the scrolled content by a wide margin - the room that lets the map centre on a player standing at the very edge - so the scroll offset is not the first visible tile's position, and taking one for the other landed the window eight tiles right and nine tiles down of the truth, with the player himself outside it and no tile ever in view.";
   "Fully visible means fully: a tile that starts before the near edge is not counted, hence ceiling on the near side, and a tile that runs past the far edge is not counted either, hence floor and one back.";
   arguments_assert(arguments, 6);
-  let half = add(player_at, 0.5);
-  let into = multiply(half, tile);
+  let player_centre = add(player_at, 0.5);
+  let into = multiply(player_centre, tile);
   let centre = add(grid_inset, into);
   let middle = divide(view_length, 2);
   let wanted = subtract(centre, middle);
