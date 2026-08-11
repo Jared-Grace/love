@@ -8,7 +8,7 @@ import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-export function g_plant_book_count(lines) {
+export function g_plant_count(lines) {
   "How many plants a book's sermon lines should be divided into - the count whose plants land inside the wanted length, or failing that the count that misses it by least.";
   "The count is SEARCHED rather than divided out. Dividing by the wanted length and rounding asks what is nearest to eighteen days; it does not ask whether the answer is inside fifteen to twenty-one, and those are different questions. James is the case that shows it: two plants is twenty-two and a half days and three is exactly fifteen, and rounding its total picks two - the one that is out of range - because two is the nearer of them to eighteen.";
   "Being INSIDE the range beats being near the middle of it, so the search sorts on how far outside a plant would fall and only then on how far from the wanted length. A plant nobody has to flag is worth more than a plant of exactly the right size, because the range is what the flag is for.";
