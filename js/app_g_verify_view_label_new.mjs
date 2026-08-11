@@ -13,8 +13,8 @@ export function app_g_verify_view_label_new(caption, container, small_gap) {
   let l = html_p_text(container, caption);
   let color = app_shared_text_category_color();
   html_font_color_set(l, color);
-  let value6 = app_g_verify_label_font_size();
-  html_style_font_size(l, value6);
+  let value = app_g_verify_label_font_size();
+  html_style_font_size(l, value);
   html_style_set(l, "letter-spacing", "0.11em");
   html_bold_semi(l);
   html_margin_em(l, "0");
