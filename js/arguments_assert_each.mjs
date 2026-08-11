@@ -3,7 +3,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { assert_json_get } from "./assert_json_get.mjs";
 export function arguments_assert_each(args, predicates) {
   arguments_assert(arguments, 2);
-  arguments_assert(arguments, 2);
   for (let i = 0; less_than(i, predicates.length); i++) {
     let predicate = predicates[i];
     let arg = args[i];

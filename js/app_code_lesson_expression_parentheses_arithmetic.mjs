@@ -25,7 +25,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
   });
   return lesson;
   function refill() {
-    "four examples a screen, the group twice on the left and twice on the right";
+    "four at a time, alternating the group on the left and on the right. The examples screen draws two, so every screen shows the group once on each side - which is the whole of what there is to show, and why the count is 2 rather than the 4 the true-false lessons use";
     let v = app_code_lesson_expression_parentheses_arithmetic_expression(true);
     let v2 =
       app_code_lesson_expression_parentheses_arithmetic_expression(false);
