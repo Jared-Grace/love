@@ -1,3 +1,4 @@
+import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
@@ -26,10 +27,8 @@ import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
@@ -61,14 +60,10 @@ export function app_code_review(context) {
   hide_success();
   let lessons = app_code_lessons();
   let lessons_count = list_size(lessons);
-  async function go_to_lesson(lesson) {
-    let id = property_get(lesson, "id");
-    await app_shared_screen_go_tab(context, "lesson_id", id, app_code_examples);
-  }
   let previous_index = subtract(number, 1);
   let previous_lesson = list_get(lessons, previous_index);
   async function go_previous() {
-    await go_to_lesson(previous_lesson);
+    await app_code_review_go_to_lesson(previous_lesson, context);
   }
   let next_index = number;
   let has_next = less_than(next_index, lessons_count);
@@ -77,7 +72,7 @@ export function app_code_review(context) {
     next_lesson = list_get(lessons, next_index);
   }
   async function go_next() {
-    await go_to_lesson(next_lesson);
+    await app_code_review_go_to_lesson(next_lesson, context);
   }
   app_code_review_persist(context, key);
   let back = app_shared_button_back_text();
