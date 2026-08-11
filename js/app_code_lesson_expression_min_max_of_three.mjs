@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_min_max_of_three_three_numbers } from "./app_code_lesson_expression_min_max_of_three_three_numbers.mjs";
 import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
 import { app_code_lesson_expression_min_max_of_three_title_name_id } from "./app_code_lesson_expression_min_max_of_three_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -9,7 +10,6 @@ import { html_bold } from "./html_bold.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -24,14 +24,9 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_min_max_of_three() {
   "Math.min and Math.max are not limited to two numbers - give either one three numbers and it still returns the smallest / largest (Math.min(3, 8, 5) is 3, Math.max(3, 8, 5) is 8). One combined lesson - a min example and a max example - because going from two numbers to three is a small step once Math.min and Math.max are known. Half the questions are Math.min and half Math.max; three different numbers 2..12, the other two stand as decoys.";
-  function three_numbers() {
-    "three DIFFERENT numbers 2..12, so the smallest and the largest are always real and distinct";
-    let three = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 3);
-    return three;
-  }
   function make(index) {
     "one question over three different numbers, alternating Math.min and Math.max down the batch so both are drilled";
-    let three = three_numbers();
+    let three = app_code_lesson_expression_min_max_of_three_three_numbers();
     let a = list_get(three, 0);
     let b = list_get(three, 1);
     let c = list_get(three, 2);
@@ -76,7 +71,7 @@ export function app_code_lesson_expression_min_max_of_three() {
   return lesson;
   function above(root) {
     "the duo: Math.min and Math.max each shown with the same three numbers, so both are established as taking more than two; randomized each visit";
-    let three = three_numbers();
+    let three = app_code_lesson_expression_min_max_of_three_three_numbers();
     let a = list_get(three, 0);
     let b = list_get(three, 1);
     let c = list_get(three, 2);
