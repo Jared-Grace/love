@@ -1,9 +1,6 @@
-import { fn_name } from "./fn_name.mjs";
+import { command_line_generic_parse_command } from "./command_line_generic_parse_command.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { file_temp_json_open } from "./file_temp_json_open.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "./property_delete_if_exists_fn.mjs";
 import { command_line_generic_code_ignore } from "./command_line_generic_code_ignore.mjs";
@@ -25,7 +22,7 @@ export async function command_line_generic(command, extra) {
   let code_ignore = property_get(ci, "value");
   let spawn = property_get(r3, "spawn");
   let match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
-  let r5 = parseCommand(command);
+  let r5 = command_line_generic_parse_command(command, TypeError, Error);
   let args = property_get(r5, "args");
   let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
@@ -76,45 +73,6 @@ export async function command_line_generic(command, extra) {
     child.on("close", lambda4);
   });
   return result;
-  function parseCommand(command_text) {
-    if (not_equal(typeof command_text, "string")) {
-      throw new TypeError("command must be a string");
-    }
-    if (/[|&;`$()]/.test(command_text)) {
-      throw new Error(
-        text_combine_multiple([
-          "Shell operators are not allowed in ",
-          fn_name("command_line_generic"),
-        ]),
-      );
-    }
-    let args_parsed = [];
-    let current = "";
-    let inQuotes = false;
-    for (let i = 0; less_than(i, command_text.length); i++) {
-      let c2 = command_text[i];
-      if (equal(c2, '"')) {
-        inQuotes = not(inQuotes);
-        continue;
-      }
-      if (equal(c2, " ") && not(inQuotes)) {
-        if (current.length) {
-          args_parsed.push(current);
-          current = "";
-        }
-        continue;
-      }
-      current += c2;
-    }
-    if (current.length) {
-      args_parsed.push(current);
-    }
-    let r2 = {
-      cmd: args_parsed.shift(),
-      args: args_parsed,
-    };
-    return r2;
-  }
   return;
   let c = await import("child_process");
   let exec = property_get(c, "exec");
