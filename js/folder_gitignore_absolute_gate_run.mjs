@@ -1,3 +1,4 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ai_log_path } from "./ai_log_path.mjs";
@@ -7,8 +8,6 @@ import { folder_repo_love } from "./folder_repo_love.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 export function folder_gitignore_absolute_gate_run() {
   "Fail if any of the local records is kept at a place that depends on where the process happens to be standing. Read-only.";
   "A path spelled from the root means the same folder to every process here. A path spelled as a bare name means a different folder to each of them, and nothing says so - the folder is simply made, beside whoever asked, and read back empty by everybody else. That is how one folder became five, holding a second copy of the log and a second compiled cache, two of them committed into a repo whose ignore rules had never heard of them.";
@@ -21,8 +20,7 @@ export function folder_gitignore_absolute_gate_run() {
   let f_path2 = ai_log_path();
   let kept = [folder, f_path2];
   function lambda(f_path) {
-    let inside = text_starts_with(f_path, repo);
-    let outside = not(inside);
+    let outside = text_starts_with_not(f_path, repo);
     return outside;
   }
   let stray = list_filter(kept, lambda);
