@@ -2,7 +2,7 @@ import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
 import { app_shared_bible_books_choose } from "./app_shared_bible_books_choose.mjs";
-import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
+import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { app_shared_bible_chapters_render } from "./app_shared_bible_chapters_render.mjs";
 export async function app_shared_bible_choose_chapter(
   bar,
@@ -17,7 +17,7 @@ export async function app_shared_bible_choose_chapter(
     app_shared_bible_books_choose(content, books, book_code);
   }
   app_shared_button(bar, book_name, on_book);
-  let card = app_shared_container_blue_medium_titled(content, book_name);
+  let card = app_shared_bible_picker_card(content, book_name);
   ("no chapter is marked as current here, and truthfully so: this view is reached by clearing the chapter out of the url, so at this moment there is no chapter being read");
   let current_chapter_code = "";
   await app_shared_bible_chapters_render(
