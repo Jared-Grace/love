@@ -1,6 +1,6 @@
+import { html_div } from "./html_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
