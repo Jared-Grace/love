@@ -111,7 +111,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       open,
       " and ",
       close,
-      " is solved before whatever is outside",
+      app_code_parentheses_inside_before_outside(""),
     ]);
   }
 }

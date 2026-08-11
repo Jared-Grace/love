@@ -93,7 +93,9 @@ export function app_code_lesson_expression_parentheses_one_side() {
       open,
       " and ",
       close,
-      " show that whatever is inside is solved before whatever is outside",
+      app_code_parentheses_inside_before_outside(
+        " show that whatever is inside",
+      ),
     ]);
     let first = app_code_container_light_blue(root);
     html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
