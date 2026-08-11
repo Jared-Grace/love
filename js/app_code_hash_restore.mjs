@@ -3,7 +3,7 @@ import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { html_hash_get } from "./html_hash_get.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
-import { app_shared_screen_stored_set } from "./app_shared_screen_stored_set.mjs";
+import { app_shared_screen_stored_set_context } from "./app_shared_screen_stored_set_context.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_get } from "./list_get.mjs";
 import { each } from "./each.mjs";
@@ -29,7 +29,7 @@ export function app_code_hash_restore(context) {
     }
     let is_screen = equal(key, app_code_screen_hash_key());
     if (is_screen) {
-      app_shared_screen_stored_set(context, value);
+      app_shared_screen_stored_set_context(context, value);
     }
     let is_quiz = equal(key, app_code_quiz_hash_key());
     if (is_quiz) {
