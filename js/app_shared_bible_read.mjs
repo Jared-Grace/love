@@ -319,6 +319,8 @@ export async function app_shared_bible_read(context, verse_action) {
       verse_book_name,
       verse_number_v,
     );
+    ("the switch to the other reader stands right after the reference buttons and before copy, in the order the single-verse view puts the same row in, so moving between the two readers does not move the buttons under your thumb");
+    verse_action(context, actions, verse_chapter_code, verse_number_v);
     app_shared_button(actions, t, copy);
     async function share() {
       await app_shared_bible_share(
@@ -330,7 +332,6 @@ export async function app_shared_bible_read(context, verse_action) {
     }
     let text2 = html_button_share_text();
     app_shared_button(actions, text2, share);
-    verse_action(context, actions, verse_chapter_code, verse_number_v);
     function row_update() {
       update();
       let right = selection_last();
