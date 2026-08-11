@@ -1,3 +1,4 @@
+import { app_reply_main_shortcuts_languages_default_concat } from "./app_reply_main_shortcuts_languages_default_concat.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
@@ -18,7 +19,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
 import { app_reply_greetings } from "./app_reply_greetings.mjs";
 import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
@@ -46,7 +46,10 @@ export function app_reply_main_shortcuts(
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
   let te = ebible_language_telugu();
-  let languages_pk = languages_default_concat([pa, ur]);
+  let languages_pk = app_reply_main_shortcuts_languages_default_concat(
+    [pa, ur],
+    languages_chosen_default,
+  );
   let r_pk_base = {
     name: "PK",
     languages: languages_pk,
@@ -184,12 +187,11 @@ export function app_reply_main_shortcuts(
     r_yt,
   ];
   function languages_default_concat_single(ke2) {
-    let r2 = languages_default_concat([ke2]);
+    let r2 = app_reply_main_shortcuts_languages_default_concat(
+      [ke2],
+      languages_chosen_default,
+    );
     return r2;
-  }
-  function languages_default_concat(right) {
-    let concated = list_concat(languages_chosen_default, right);
-    return concated;
   }
   function shortcut_each(s) {
     let name = property_get(s, "name");
