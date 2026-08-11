@@ -11,9 +11,9 @@ export function text_digits_is(text) {
   if (empty) {
     return false;
   }
-  let digits = digits_text();
+  let digits_all = digits_text();
   function digit_is(character) {
-    let hit = text_includes(digits, character);
+    let hit = text_includes(digits_all, character);
     return hit;
   }
   let all = list_all(characters, digit_is);
