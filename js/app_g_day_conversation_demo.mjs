@@ -15,11 +15,7 @@ export async function app_g_day_conversation_demo() {
   property_set(state, "slices_total", 1);
   property_set(state, "slices_done", 0);
   property_set(state, "sky_toast", true);
-  let npcs = await app_g_npcs_get();
-  let unconverted = list_filter_object_includes(npcs, {
-    christian: false,
-  });
-  let npc = list_random_item(unconverted);
+  let npc = await app_g_npc_unconverted_random();
   let phase = app_g_view_phase_conversation();
   let view = app_g_view_npc(npc, phase);
   await app_g_view_set(view);

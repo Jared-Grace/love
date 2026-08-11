@@ -4,6 +4,8 @@ import { greater_than } from "./greater_than.mjs";
 export async function qa_gates_run(gates) {
   "Asks every gate in a list and complains if any of them do";
   "Which gates to ask is the caller's to choose, because not every gate answers a question about the code - one asks the machine and two ask where the folder sits, and none of the three can be asked of a copy";
+  "Both callers run inside the frozen copy, so this is the place to say that the folders cannot change: nothing may be written there while it is read, and the neighbours are frozen beside it. Saying it lets where each function lives be worked out once per name rather than once per asking, which was one look on disk per repository, nearly thirty-two thousand of them for every gate in the list";
+  function_paths_frozen_enable();
   let told = await qa_gates_told(gates);
   let failed = property_get(told, "failed");
   if (greater_than(failed.length, 0)) {

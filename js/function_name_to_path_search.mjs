@@ -1,44 +1,18 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { property_from } from "./property_from.mjs";
-import { repos_paths_names_map_unordered_combine } from "./repos_paths_names_map_unordered_combine.mjs";
-import { list_single } from "./list_single.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { true_is } from "./true_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
+import { function_name_to_path_search_cached } from "./function_name_to_path_search_cached.mjs";
+import { function_name_to_path_search_live } from "./function_name_to_path_search_live.mjs";
+import { function_paths_frozen_is } from "./function_paths_frozen_is.mjs";
+
 export async function function_name_to_path_search(f_name) {
   "Looks in every repository here for the file a name would live in, reporting whether exactly one holds it, whether several do, and where it was found.";
-  let f_path = function_name_to_path_relative(f_name);
-  async function lambda(joined) {
-    let present = await file_exists(joined);
-    let v = {
-      exists: present,
-      f_path: joined,
-    };
-    return v;
+  "Asks the disk every time, unless this process has said its folders cannot change, in which case each name is looked up once and kept. Both roads answer the same thing; they differ only in how often the disk is troubled for it.";
+  "The choice sits here rather than at the callers because there are dozens of them, reached through a dozen more, and none of them knows whether the folder underneath is moving. The one process that does know says so once, at its start.";
+  "Why it is worth a choice at all: one asking is one look on disk per repository, and a sweep asking after every function makes nearly thirty-two thousand of them. The whole gate is a hundred and seventy-nine such sweeps over a copy that cannot change, which is the same handful of answers found again about five million times.";
+  "The imports above were written by hand, and a moment when they were missing is why. This sits on the road the dispatcher itself walks to find any function at all, so while they are wrong nothing can be run - the repair that would fix them included.";
+  let frozen = function_paths_frozen_is();
+  if (frozen) {
+    let kept = await function_name_to_path_search_cached(f_name);
+    return kept;
   }
-  let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
-  function lambda2(m) {
-    let exists2 = property_path_get_2(m, "mapped", "exists");
-    let ti = true_is(exists2);
-    return ti;
-  }
-  let filtered = list_filter(mapped, lambda2);
-  let multiple = list_multiple_is(filtered);
-  let exists = list_size_1(filtered);
-  let search = {
-    f_name,
-    exists,
-    multiple,
-  };
-  if (exists) {
-    let only = list_single(filtered);
-    let only_mapped = property_get(only, "mapped");
-    property_from(search, "f_path", only_mapped);
-    property_from(search, "repo_name", only);
-  }
-  return search;
+  let fresh = await function_name_to_path_search_live(f_name);
+  return fresh;
 }
