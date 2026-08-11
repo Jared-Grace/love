@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
@@ -51,8 +52,7 @@ export async function qa_commit_named_gate_forget(gate_name) {
   let after = await qa_commit_named();
   let remaining = [];
   for (let commit of object_property_names(after)) {
-    let entry2 = property_get(after, commit);
-    let failed2 = property_get_or_null(entry2, "failed");
+    let failed2 = property_nested_or_null(after, commit, "failed");
     let listless2 = null_is(failed2);
     if (listless2) {
       continue;
