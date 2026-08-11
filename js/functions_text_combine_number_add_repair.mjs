@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_transform_single_auto } from "./function_transform_single_auto.mjs";
 import { functions_text_combine_number } from "./functions_text_combine_number.mjs";
-import { js_text_combine_number_add } from "./js_text_combine_number_add.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,7 +17,7 @@ export async function functions_text_combine_number_add_repair() {
   let repaired = [];
   for (let offender of offenders) {
     let f_name = property_get(offender, "f_name");
-    let args = [js_text_combine_number_add.name, f_name];
+    let args = [fn_name("js_text_combine_number_add"), f_name];
     await function_call_commit(function_transform_single_auto, args);
     list_add(repaired, f_name);
   }
