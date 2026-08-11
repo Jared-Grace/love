@@ -73,7 +73,7 @@ export function app_code_lesson_expression_comparison_and() {
   function above(root) {
     "the rule, then it worked once true and once false: each comparison is done first, and only then does && combine them";
     let header = app_code_container_light_blue(root);
-    html_div_cycle_code(header, ["A comparison can be one side of &&"]);
+    html_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
     let yes = app_code_container_light_blue(root);
     html_div_cycle_code(yes, [
       "For ",
