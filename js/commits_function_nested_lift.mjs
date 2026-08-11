@@ -14,8 +14,8 @@ export async function commits_function_nested_lift(folder) {
   "The history is the only record of what a lift was handed. The lifted function on disk says what it ended up as and never what it was moved out of, so a question about whether the move lost something can only be asked by standing the before and the after next to each other, and the before exists nowhere else";
   "It reads them out of the commit messages, which is possible only because a message here is the command and its real arguments rather than a description of them. Four words in a fixed order is a record, and it is free";
   "The commit given back is the one before the move rather than the move itself, because what the lift reached for is what was there beforehand";
-  let marker = fn_name("function_nested_lift");
-  let grep = text_combine_multiple(["--grep=", marker]);
+  let lift_marker = fn_name("function_nested_lift");
+  let grep = text_combine_multiple(["--grep=", lift_marker]);
   let words = ["log", "--all", "--format=%H %s", grep];
   let text = await git_folder_run(folder, words);
   let lines = text_split_new_line(text);
@@ -27,7 +27,7 @@ export async function commits_function_nested_lift(folder) {
       continue;
     }
     let left = list_get(parts, 1);
-    let named = equal(left, marker);
+    let named = equal(left, lift_marker);
     if (not(named)) {
       continue;
     }
