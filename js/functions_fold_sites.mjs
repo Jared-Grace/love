@@ -77,6 +77,22 @@ export async function functions_fold_sites() {
     }
   }
   list_map(records, file_load);
+  ("A file is read into its shape once and kept, because the pairing asks about the same files over and over. Counted 2026-08-11 across this repo: 57,709 readings of 2,772 different files, twenty-one times each, and this was the second slowest gate there is.");
+  ("What is kept has to be given up the moment a fold succeeds, and only then. Folding writes the call back into the shape it was given - that is how the folded version is handed back - so the kept shape is no longer the file after a success, and the next function pairing against it would be pairing against somebody else's fold. A fold that finds nothing changes nothing, which is every reading but a handful, so almost nothing is ever given up.");
+  let shapes = {};
+  function shape_of(f_name) {
+    let kept = shapes[f_name];
+    if (not_equal(kept, undefined)) {
+      return kept;
+    }
+    let text2 = property_get(entries, f_name).text;
+    let read = js_parse(text2);
+    shapes[f_name] = read;
+    return read;
+  }
+  function shape_forget(f_name) {
+    delete shapes[f_name];
+  }
   let sites = [];
   for (let x_name in entries) {
     let pattern = entries[x_name].pattern;
@@ -105,12 +121,13 @@ export async function functions_fold_sites() {
       return r5;
     }
     let candidates = object_property_names(candidate_sets[0]).filter(lambda5);
-    let x_ast = js_parse(entries[x_name].text);
+    let x_ast = shape_of(x_name);
     for (let f_name of candidates) {
       try {
-        let f_ast = js_parse(entries[f_name].text);
+        let f_ast = shape_of(f_name);
         let folded = js_fold(x_ast, f_ast);
         if (not_equal(folded, null)) {
+          shape_forget(f_name);
           sites.push({
             x: x_name,
             f: f_name,
