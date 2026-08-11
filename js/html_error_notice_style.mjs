@@ -1,16 +1,11 @@
-import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
-import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 export function html_error_notice_style() {
-  "how the could-not-start notice is drawn: the same dim full-screen layer the loading splash uses, with its words held in the middle of the viewport rather than below the middle, because there is no spinner above them to leave room for.";
-  "it starts hidden. the notice is baked into the page before the app's own script runs - a handler installed by code that never got to run catches nothing - so it has to be standing there unseen until something goes wrong.";
+  ("how the could-not-start notice is drawn: the loading splash's own dim full-screen layer, with its words held in the middle of the viewport rather than below the middle, because there is no spinner above them to leave room for.");
+  ("the layer is ASKED FOR rather than spelled again here, so a change to how a covering layer looks reaches both of them and the notice can never come up a shade apart from the splash it replaces.");
+  ("it starts hidden, and it sits one step above the splash so that showing it covers what it is replacing. the notice is baked into the page before the app's own script runs - a handler installed by code that never got to run catches nothing - so it has to be standing there unseen until something goes wrong.");
+  let backdrop = html_loading_backdrop_style();
   let r = {
+    ...backdrop,
     display: "none",
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: html_viewport_width_full(),
-    height: html_viewport_height_full(),
-    background: "rgba(0, 0, 0, 0.8)",
     "z-index": "1001",
     color: "white",
     "font-family": "sans-serif",
