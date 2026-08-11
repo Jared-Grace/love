@@ -13,9 +13,9 @@ export function app_g_sky_pill_style(button, active) {
     background,
     color,
     border: "none",
-    padding: "0.3rem 0.6rem",
+    padding: "0.3rem min(0.6rem, 2.4vw)",
     "border-radius": "0.4rem",
-    "font-size": "1rem",
+    "font-size": "min(1rem, 4vw)",
     "font-weight": weight,
     cursor: "pointer",
   });
