@@ -1,6 +1,6 @@
+import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
@@ -12,8 +12,6 @@ import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
 import { js_operator_less_than_equal } from "./js_operator_less_than_equal.mjs";
@@ -255,21 +253,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       less_than_symbol,
     );
   }
-  function title_name_id() {
-    "the home title is arithmetic comparisons, an Expressions lesson; the id string stays 'arithmetic less than' so a student's saved progress on this lesson is unchanged";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "arithmetic comparisons");
-      }
-      return render;
-    }
-    let rights = ["arithmetic less than"];
-    let left2 = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left2, title_get);
-    return built;
-  }
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_arithmetic_less_than_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
