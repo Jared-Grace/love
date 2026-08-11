@@ -3,9 +3,6 @@ import { text_adjascent_duplicates_remove_underscore } from "./text_adjascent_du
 import { list_join_underscore } from "./list_join_underscore.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
-import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
 export function app_code_lesson_name_id_generic(rights, left, name_get) {
   left = text_first_upper_to(left);
   let concated = list_concat_single(left, rights);
