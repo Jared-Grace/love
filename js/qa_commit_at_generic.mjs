@@ -18,7 +18,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   ("An answer already written down is handed straight back, and one of us paying the couple of minutes is all of us knowing.");
   if (remembered) {
     let r = {
-      commit,
+      commit: named,
       remembered: true,
       kept: remembered,
     };
