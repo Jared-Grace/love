@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_name_id(left, rights) {
-  let name_get = function app_code_lesson_name_id_name_get(parent) {
+  let paint = function app_code_lesson_name_id_paint(parent) {
     let r = list_first_remaining(rights);
     let first = property_get(r, "first");
     let remaining = property_get(r, "remaining");
@@ -13,6 +13,6 @@ export function app_code_lesson_name_id(left, rights) {
     html_span_text(parent, first_upper);
     app_code_lesson_name_id_remaining(parent, remaining);
   };
-  let name_id = app_code_lesson_name_id_category_then(rights, left, name_get);
+  let name_id = app_code_lesson_name_id_category_then(rights, left, paint);
   return name_id;
 }
