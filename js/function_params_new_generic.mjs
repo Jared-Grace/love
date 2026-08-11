@@ -1,3 +1,4 @@
+import { js_function_arguments_assert_count_repair } from "./js_function_arguments_assert_count_repair.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { each_async } from "./each_async.mjs";
@@ -12,7 +13,13 @@ export async function function_params_new_generic(
   on_call,
   f_name,
 ) {
-  await function_transform(f_name, function_transform_current_lambda);
+  "The line counting the function's arguments is put right as part of the same change, because the change is what makes it wrong. Every command that alters the list of names comes through here - adding, deleting, swapping, moving - so the one place is enough for all of them, and none of them has to remember.";
+  "Left undone, the function was broken outright and quietly. Nothing shows until something calls it, and then the line throws saying the caller handed over the wrong number, which sends the first reader to the calling file, where nothing is wrong.";
+  async function transform_and_count(ast) {
+    await function_transform_current_lambda(ast);
+    js_function_arguments_assert_count_repair(ast);
+  }
+  await function_transform(f_name, transform_and_count);
   let result = await data_identifiers_search(f_name);
   let properties = properties_get(result);
   async function lambda4(f_name_caller) {
