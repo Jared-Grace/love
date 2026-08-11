@@ -1,3 +1,4 @@
+import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
@@ -51,16 +52,13 @@ import { browser_files_store } from "./browser_files_store.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { sleep_0 } from "./sleep_0.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
-import { list_remove } from "./list_remove.mjs";
 import { app_a_function_node } from "./app_a_function_node.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
 import { app_a_button } from "./app_a_button.mjs";
 import { emoji_search } from "./emoji_search.mjs";
 import { app_a_functions } from "./app_a_functions.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
@@ -126,9 +124,19 @@ export async function app_a_function(context) {
   let preview_app = {
     shortcut: "p",
     text: emoji_mobile(),
-    fn: screen_choose(app_a_app_run),
+    fn: app_a_function_screen_choose(
+      app_a_app_run,
+      on_keydowns,
+      app_a_function_on_keydown,
+      context,
+    ),
   };
-  let screen_choose_open = screen_choose(app_a_functions);
+  let screen_choose_open = app_a_function_screen_choose(
+    app_a_functions,
+    on_keydowns,
+    app_a_function_on_keydown,
+    context,
+  );
   let choices = [
     {
       shortcut: "o",
@@ -173,7 +181,12 @@ export async function app_a_function(context) {
     {
       shortcut: "a",
       text: emoji_mobile(),
-      fn: screen_choose(app_a_apps),
+      fn: app_a_function_screen_choose(
+        app_a_apps,
+        on_keydowns,
+        app_a_function_on_keydown,
+        context,
+      ),
     },
     {
       shortcut: "t",
@@ -195,7 +208,12 @@ export async function app_a_function(context) {
     {
       shortcut: "h",
       text: emoji_hourglass(),
-      fn: screen_choose(app_a_history),
+      fn: app_a_function_screen_choose(
+        app_a_history,
+        on_keydowns,
+        app_a_function_on_keydown,
+        context,
+      ),
     },
   ];
   let key = app_a_app_selected_key();
@@ -212,14 +230,6 @@ export async function app_a_function(context) {
     },
   });
   app_a_buttons_shortcuts(bar, choices);
-  function screen_choose(screen) {
-    let f = async function screen_choose_inner() {
-      list_remove(on_keydowns, app_a_function_on_keydown);
-      await sleep_0();
-      await app_shared_screen_set(context, screen);
-    };
-    return f;
-  }
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
