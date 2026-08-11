@@ -1,3 +1,4 @@
+import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
 import { app_verses_order_standalone_first } from "./app_verses_order_standalone_first.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
@@ -7,7 +8,6 @@ import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
-import { app_reply_verses_uplifting_entries } from "./app_reply_verses_uplifting_entries.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
@@ -52,7 +52,6 @@ import { null_is } from "./null_is.mjs";
 import { app_verses_draw_save } from "./app_verses_draw_save.mjs";
 import { app_verses_draw_get } from "./app_verses_draw_get.mjs";
 import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_verses(context) {
@@ -203,7 +202,10 @@ export async function app_verses(context) {
     if (handled) {
       return;
     }
-    let groups = await references_to_groups(references);
+    let groups = await app_verses_references_to_groups(
+      references,
+      languages_chosen,
+    );
     let superseded = not_equal(my_seq, apply_seq);
     if (superseded) {
       ("a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display");
@@ -220,22 +222,6 @@ export async function app_verses(context) {
     if (copy_after) {
       await copy();
     }
-  }
-  async function references_to_groups(references) {
-    let groups = [];
-    async function reference_each(reference) {
-      let entries = await app_reply_verses_uplifting_entries(
-        reference,
-        languages_chosen,
-      );
-      let group = {
-        reference,
-        entries,
-      };
-      list_add(groups, group);
-    }
-    await each_async(references, reference_each);
-    return groups;
   }
   async function reroll() {
     await draw_fresh(true);
