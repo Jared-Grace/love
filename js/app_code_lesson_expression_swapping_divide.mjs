@@ -38,7 +38,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "+",
       " and ",
       "*",
-      " keep the value when swapped",
+      " keep the same value when swapped",
     ]);
     html_div_cycle_code(recall, [
       "",
