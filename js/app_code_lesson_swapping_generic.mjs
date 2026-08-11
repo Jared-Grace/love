@@ -1,3 +1,6 @@
+import { range_from } from "./range_from.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -5,8 +8,6 @@ import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_to } from "./text_to.mjs";
@@ -19,16 +20,6 @@ export function app_code_lesson_swapping_generic(config) {
   let true_ops = property_get(config, "true_ops");
   let false_ops = property_get(config, "false_ops");
   let wrap = property_get(config, "wrap");
-  function distinct_pair() {
-    "two different small numbers, so swapping actually changes the order";
-    let a = integer_random(2, 9);
-    let b_raw = integer_random(2, 9);
-    let collide = equal(a, b_raw);
-    let on_true = add(b_raw, 1);
-    let b = ternary(collide, on_true, b_raw);
-    let pair = [a, b];
-    return pair;
-  }
   function operator_random(want_true) {
     "an operator whose swap is true when want_true, otherwise one whose swap is false";
     let ops = ternary(want_true, true_ops, false_ops);
@@ -44,15 +35,46 @@ export function app_code_lesson_swapping_generic(config) {
     let code = ternary(wrap, wrapped, inner);
     return code;
   }
-  function expression(want_true) {
-    "a op b === b op a, the same two numbers swapped around the operator";
-    let op = operator_random(want_true);
-    let pair = distinct_pair();
-    let a = pair[0];
-    let b = pair[1];
+  function pair_code(op, a, b) {
+    "the whole line for one pair of numbers: a op b === b op a, each side parenthesised when wrap is on";
     let left = side(a, op, b);
     let right = side(b, op, a);
     let code = text_combine_multiple([left, " === ", right]);
+    return code;
+  }
+  function pairs_wanted(op, want_true) {
+    "every pair of different small numbers whose line really does land on want_true, found by working the line out rather than by trusting the operator it was built from";
+    "An operator that flips for almost every pair can still land on the same value for one of them: 2 ** 4 and 4 ** 2 are both 16. Written down as a false example that line reads true, and it contradicts the very rule the lesson is teaching, so the learner is shown a counterexample as if it were support. Two of the 448 pairs the divide lesson can build do this";
+    "The check is derived from the line itself, so an operator added to true_ops or false_ops later cannot bring the same fault back in quietly - it is caught for whatever operator has it, not for the one that happened to have it first";
+    let numbers = range_from(2, 9);
+    let pairs = [];
+    function left_lambda(a) {
+      function right_lambda(b) {
+        let same_number = equal(a, b);
+        if (same_number) {
+          return;
+        }
+        let code = pair_code(op, a, b);
+        let value = eval(code);
+        let wanted = equal(value, want_true);
+        if (wanted) {
+          let pair = [a, b];
+          list_add(pairs, pair);
+        }
+      }
+      each(numbers, right_lambda);
+    }
+    each(numbers, left_lambda);
+    return pairs;
+  }
+  function expression(want_true) {
+    "a op b === b op a, the same two different numbers swapped around the operator, picked from the pairs that really land on want_true";
+    let op = operator_random(want_true);
+    let pairs = pairs_wanted(op, want_true);
+    let pair = list_random_item(pairs);
+    let a = pair[0];
+    let b = pair[1];
+    let code = pair_code(op, a, b);
     return code;
   }
   function refill() {
