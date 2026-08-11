@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
 import { app_code_lesson_expression_min_max_of_three_title_name_id } from "./app_code_lesson_expression_min_max_of_three_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -23,23 +24,6 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_min_max_of_three() {
   "Math.min and Math.max are not limited to two numbers - give either one three numbers and it still returns the smallest / largest (Math.min(3, 8, 5) is 3, Math.max(3, 8, 5) is 8). One combined lesson - a min example and a max example - because going from two numbers to three is a small step once Math.min and Math.max are known. Half the questions are Math.min and half Math.max; three different numbers 2..12, the other two stand as decoys.";
-  function code(f_name, a, b, c) {
-    "the three-number call as a code string - the function name, then its three numbers separated by commas inside parentheses";
-    let ta = text_to(a);
-    let tb = text_to(b);
-    let tc = text_to(c);
-    let combined = text_combine_multiple([
-      f_name,
-      "(",
-      ta,
-      ", ",
-      tb,
-      ", ",
-      tc,
-      ")",
-    ]);
-    return combined;
-  }
   function three_numbers() {
     "three DIFFERENT numbers 2..12, so the smallest and the largest are always real and distinct";
     let three = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 3);
@@ -56,7 +40,7 @@ export function app_code_lesson_expression_min_max_of_three() {
     if (use_max) {
       f_name = "Math.max";
     }
-    let r = code(f_name, a, b, c);
+    let r = app_code_lesson_expression_min_max_of_three_code(f_name, a, b, c);
     return r;
   }
   function refill() {
@@ -106,8 +90,18 @@ export function app_code_lesson_expression_min_max_of_three() {
     let tb = text_to(b);
     let tc = text_to(c);
     let nums_text = text_combine_multiple([ta, ", ", tb, ", ", tc]);
-    let v_min = code("Math.min", a, b, c);
-    let v_max = code("Math.max", a, b, c);
+    let v_min = app_code_lesson_expression_min_max_of_three_code(
+      "Math.min",
+      a,
+      b,
+      c,
+    );
+    let v_max = app_code_lesson_expression_min_max_of_three_code(
+      "Math.max",
+      a,
+      b,
+      c,
+    );
     let define = app_code_container_light_blue(root);
     html_div_cycle_code(define, [
       "",
