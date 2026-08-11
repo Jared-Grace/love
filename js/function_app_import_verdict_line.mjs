@@ -8,7 +8,7 @@ export function function_app_import_verdict_line(verdict) {
   let advice = function_app_import_verdict_advice(word);
   let callers_own = property_get(verdict, "callers_own");
   let reaches = property_get(verdict, "reaches");
-  let evidence = list_add_multiple_new(callers_own, reaches);
+  let evidence = list_concat(callers_own, reaches);
   let evidence_text = list_join_comma_space(evidence);
   let r = text_combine_multiple([
     imported,
