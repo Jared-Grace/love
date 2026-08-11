@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_quiz_token_select_variations_set_args } from "./app_code_lesson_quiz_token_select_variations_set_args.mjs";
 import { app_code_lesson_quiz_token_select_variations_set_sides } from "./app_code_lesson_quiz_token_select_variations_set_sides.mjs";
 import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
 import { property_in_list } from "./property_in_list.mjs";
@@ -10,7 +10,6 @@ import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { property_set } from "./property_set.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
@@ -123,12 +122,4 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     each(variations, trim_semicolon);
   }
   return variations;
-}
-function app_code_lesson_quiz_token_select_variations_set_args(
-  perm,
-  node,
-  key,
-) {
-  arguments_assert(arguments, 3);
-  property_set(node, key, perm);
 }
