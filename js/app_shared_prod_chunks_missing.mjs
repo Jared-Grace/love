@@ -9,7 +9,7 @@ import { list_map } from "./list_map.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { path_join } from "./path_join.mjs";
 import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
-export async function app_prod_chunks_missing(app_name) {
+export async function app_shared_prod_chunks_missing(app_name) {
   "$plain app_name";
   "Every extra script one app waiting to be sent will send for and will not find, named as it would be named if it were there.";
   "An app cut into pieces is only whole where all of its pieces are. Where the page and the script travelled and the extra scripts stayed behind, everything looks right until the moment the app sends for one - and what comes back then is a refusal, which the app usually swallows and reports as having found nothing.";
