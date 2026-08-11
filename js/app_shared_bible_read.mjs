@@ -157,6 +157,8 @@ export async function app_shared_bible_read(context, verse_action) {
   );
   let count_status = html_p(bar);
   app_shared_text_deemphasized(count_status);
+  ("this line is empty until verses are picked, and a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter's buttons sit at the top of the screen where the reader's thumb expects them");
+  html_margin_0(count_status);
   function count_refresh() {
     let n = list_size(verse_numbers_chosen);
     let text = "";
