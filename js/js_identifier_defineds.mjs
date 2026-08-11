@@ -1,5 +1,5 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { js_identifiers_naming_nodes } from "./js_identifiers_naming_nodes.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { js_catch_clause_names } from "./js_catch_clause_names.mjs";
 import { js_identifier_defineds_function_type_add } from "./js_identifier_defineds_function_type_add.mjs";
 import { js_loop_declared_names } from "./js_loop_declared_names.mjs";
@@ -37,8 +37,7 @@ export function js_identifier_defineds(v) {
     if (js_node_type_is(e, "Property")) {
       ("Only the word standing as the key is answered as bound by itself, and asking the shared judgment settles which word that is rather than treating every name inside a pair as one. A pair has two sides, and the side after the colon is an ordinary name being read - so calling the whole pair a key told every caller that a value written there was already in scope, and a name reached out of an enclosing function that way was invisible. That is how a moved function came to read a colour it was never handed.");
       let naming = js_identifiers_naming_nodes(e);
-      let named_node = property_get(v, "node");
-      let named_is = list_includes(naming, named_node);
+      let named_is = property_in_list(v, "node", naming);
       if (named_is) {
         let value = property_path_get_2(v, "node", "name");
         la([value]);
