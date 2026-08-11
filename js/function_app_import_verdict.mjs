@@ -1,4 +1,4 @@
-import { function_imports } from "./function_imports.mjs";
+import { function_app_own_imports } from "./function_app_own_imports.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -41,15 +41,7 @@ export async function function_app_import_verdict(imported) {
     }
     list_add(callers_other, name);
   }
-  let uses = await function_imports(imported);
-  let reaches = [];
-  for (let used of uses) {
-    let app_used = function_name_app_try(used, app_names);
-    let own_is = equal(app_used, app);
-    if (own_is) {
-      list_add(reaches, used);
-    }
-  }
+  let reaches = await function_app_own_imports(imported, app_names, app);
   let reaches_size = list_size(reaches);
   let reaches_is = equal_not(reaches_size, 0);
   let own_size = list_size(callers_own);
