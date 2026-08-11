@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_parentheses_moved } from "./app_code_lesson_expression_parentheses_moved.mjs";
 import { app_code_lesson_expression_parentheses_same_strength } from "./app_code_lesson_expression_parentheses_same_strength.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic } from "./app_code_lesson_expression_parentheses_arithmetic.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";

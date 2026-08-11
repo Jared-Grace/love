@@ -230,7 +230,7 @@ export async function app_shared_bible_read(context, verse_action) {
     let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
     let p = html_p(content);
     html_display_grid(p);
-    let left = app_shared_number_gutter();
+    let left = app_shared_bible_verse_number_gutter();
     let columns = text_combine(left, " 1fr");
     html_style_set(p, "grid-template-columns", columns);
     let style_value = app_shared_spaced_small_gap();
