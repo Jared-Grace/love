@@ -114,6 +114,11 @@ export function app_code_lesson_expression_parentheses_one_side() {
     ]);
     html_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
     html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
-    html_div_cycle_code(either, ["We still work out the ", "3 > 8", " first"]);
+    ("Solve, not work out - the childhood math word the track already runs on, decided in the arithmetic-both-sides lesson and used by every lesson that names the act. Past tense, because the two lines above it on this card have already done it: the line points back at what the reader just watched happen, rather than stating a rule they have yet to apply.");
+    html_div_cycle_code(either, [
+      "We still had to solve the ",
+      "3 > 8",
+      " first",
+    ]);
   }
 }
