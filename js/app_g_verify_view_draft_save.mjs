@@ -1,5 +1,5 @@
+import { app_g_verify_storage_app } from "./app_g_verify_storage_app.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
 export function app_g_verify_view_draft_save(
