@@ -1,8 +1,8 @@
+import { app_g_dev_index_open_persist } from "./app_g_dev_index_open_persist.mjs";
 import { app_g_dev_index_leaf_card } from "./app_g_dev_index_leaf_card.mjs";
 import { app_g_dev_index_index_card } from "./app_g_dev_index_index_card.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_from } from "./json_from.mjs";
-import { json_to } from "./json_to.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -46,11 +46,6 @@ export function app_g_dev_index() {
     let v = json_from(open_stored);
     open_paths = new Set(v);
   }
-  function open_persist() {
-    "remember which category nodes are expanded ACROSS the reload that opening a route triggers: the open set lives in sessionStorage (per tab, survives the hash-change reload, gone on tab close — dev-only state), so coming BACK to #index from a game screen restores the same drilled-open path instead of collapsing everything.";
-    let v2 = json_to([...open_paths]);
-    sessionStorage.setItem(open_key, v2);
-  }
   function render_node(parent, path, label, node) {
     let child_labels = object_property_names(node.children).sort();
     if (equal(child_labels.length, 0)) {
@@ -78,7 +73,7 @@ export function app_g_dev_index() {
         html_display_none(body);
         open_paths.delete(path);
       }
-      open_persist();
+      app_g_dev_index_open_persist(open_paths, sessionStorage, open_key);
     }
     html_on_click(header, toggle);
     if (node.hash) {
