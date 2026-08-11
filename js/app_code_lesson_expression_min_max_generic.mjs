@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
 import { app_code_lesson_expression_min_max_generic_title_name_id } from "./app_code_lesson_expression_min_max_generic_title_name_id.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -25,13 +26,6 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let comparison = property_get(params, "comparison");
   let define_render = property_get(params, "define_render");
   let short_name = property_get(params, "short_name");
-  function code(a, b) {
-    "the two-number call as a code string - the function's name, then its two numbers separated by a comma inside parentheses";
-    let ta = text_to(a);
-    let tb = text_to(b);
-    let combined = text_combine_multiple([called_name, "(", ta, ", ", tb, ")"]);
-    return combined;
-  }
   function two_numbers() {
     "two DIFFERENT numbers 2..12, so there is always a real answer";
     let two = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 2);
@@ -42,7 +36,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
     let two = two_numbers();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
-    let r = code(a, b);
+    let r = app_code_lesson_expression_min_max_generic_code(a, b, called_name);
     return r;
   }
   function refill() {
@@ -109,9 +103,17 @@ export function app_code_lesson_expression_min_max_generic(params) {
       compare_middle,
       other_text,
     ]);
-    let v = code(chosen, other);
+    let v = app_code_lesson_expression_min_max_generic_code(
+      chosen,
+      other,
+      called_name,
+    );
     html_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
-    let v2 = code(other, chosen);
+    let v2 = app_code_lesson_expression_min_max_generic_code(
+      other,
+      chosen,
+      called_name,
+    );
     html_div_cycle_code(example_box, ["And ", v2, " is also ", chosen_text]);
     let chooses = text_combine_multiple([
       " chooses the ",
