@@ -1,33 +1,32 @@
-import { app_reply_choices_whatsapp } from "../../love/js/app_reply_choices_whatsapp.mjs";
-import { emoji_fire } from "../../love/js/emoji_fire.mjs";
-import { app_reply_glory } from "../../love/js/app_reply_glory.mjs";
-import { ebible_language_arabic } from "../../love/js/ebible_language_arabic.mjs";
-import { ebible_language_bengali } from "../../love/js/ebible_language_bengali.mjs";
-import { app_reply_give } from "../../love/js/app_reply_give.mjs";
-import { ebible_language_english } from "../../love/js/ebible_language_english.mjs";
-import { app_reply_called_why } from "../../love/js/app_reply_called_why.mjs";
-import { ebible_language_telugu } from "../../love/js/ebible_language_telugu.mjs";
-import { property_combine } from "../../love/js/property_combine.mjs";
-import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { each } from "../../love/js/each.mjs";
-import { property_get_invoke } from "../../love/js/property_get_invoke.mjs";
-import { list_find_property } from "../../love/js/list_find_property.mjs";
-import { list_map_property_invoke } from "../../love/js/list_map_property_invoke.mjs";
-import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { json_copy } from "../../love/js/json_copy.mjs";
-import { property_get_add } from "../../love/js/property_get_add.mjs";
-import { property_set } from "../../love/js/property_set.mjs";
-import { list_concat } from "../../love/js/list_concat.mjs";
-import { app_reply_how_r_u } from "../../love/js/app_reply_how_r_u.mjs";
-import { app_reply_greetings } from "../../love/js/app_reply_greetings.mjs";
-import { ebible_language_kenya } from "../../love/js/ebible_language_kenya.mjs";
-import { ebible_language_luganda } from "../../love/js/ebible_language_luganda.mjs";
-import { ebible_language_punjabi } from "../../love/js/ebible_language_punjabi.mjs";
-import { ebible_language_urdu } from "../../love/js/ebible_language_urdu.mjs";
-import { app_reply_greetings_live } from "../../love/js/app_reply_greetings_live.mjs";
-import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
+import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
+import { app_reply_choices_whatsapp } from "./app_reply_choices_whatsapp.mjs";
+import { emoji_fire } from "./emoji_fire.mjs";
+import { app_reply_glory } from "./app_reply_glory.mjs";
+import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
+import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
+import { app_reply_give } from "./app_reply_give.mjs";
+import { ebible_language_english } from "./ebible_language_english.mjs";
+import { app_reply_called_why } from "./app_reply_called_why.mjs";
+import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
+import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { each } from "./each.mjs";
+import { property_get_invoke } from "./property_get_invoke.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
+import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_get_add } from "./property_get_add.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
+import { app_reply_greetings } from "./app_reply_greetings.mjs";
+import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
+import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
+import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
+import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
+import { app_reply_greetings_live } from "./app_reply_greetings_live.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 export function app_reply_main_shortcuts(
   root,
   languages_chosen,
@@ -54,7 +53,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_pk_1 = shortcut_extend_count(r_pk_base, 1);
+  let r_pk_ = shortcut_extend_count(r_pk_base, 1);
   let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
   let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
@@ -62,11 +61,11 @@ export function app_reply_main_shortcuts(
   let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
   let c = app_reply_called_why();
-  let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
+  let r_pk_1_c = shortcut_extend_response(r_pk_, "c", c);
   let m = app_reply_give();
-  let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
+  let r_pk_1_m = shortcut_extend_response(r_pk_, "m", m);
   let w = app_reply_choices_whatsapp();
-  let r_pk_1_w = shortcut_extend_response(r_pk_1, "w", w);
+  let r_pk_1_w = shortcut_extend_response(r_pk_, "w", w);
   let glory = app_reply_glory();
   let v = emoji_fire();
   let r_pk_10_glory = shortcut_extend_response(r_pk_10, v, glory);
@@ -79,7 +78,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ug_10 = shortcut_extend_count(r_ug_base, 10);
+  let r_ug_ = shortcut_extend_count(r_ug_base, 10);
   let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
   let languages_ke = languages_default_concat_single(ke);
   let r_ke_base = {
@@ -88,7 +87,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
+  let r_ke_ = shortcut_extend_count(r_ke_base, 10);
   let r_ke_40 = shortcut_extend_count(r_ke_base, 40);
   let r_default = {
     name: "",
@@ -102,7 +101,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_te_10 = shortcut_extend_count(r_te_base, 10);
+  let r_te_ = shortcut_extend_count(r_te_base, 10);
   let bn = ebible_language_bengali();
   let r_bn_base = {
     name: "BN",
@@ -110,7 +109,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
+  let r_bn_ = shortcut_extend_count(r_bn_base, 10);
   let ar = ebible_language_arabic();
   let r_ar_base = {
     name: "AR",
@@ -118,11 +117,11 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ar_10 = shortcut_extend_count(r_ar_base, 10);
+  let r_ar_ = shortcut_extend_count(r_ar_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
-  r_yt = shortcut_extend(r_yt, "yt");
+  r_yt = app_reply_main_shortcuts_shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
-  let r_en_40 = {
+  let r_en_ = {
     name: "en40",
     languages: [en_l],
     count: 40,
@@ -131,7 +130,7 @@ export function app_reply_main_shortcuts(
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
   let shortcuts = [
     r_intro,
-    r_pk_1,
+    r_pk_,
     r_pk_1_c,
     r_pk_1_m,
     r_pk_1_w,
@@ -142,14 +141,14 @@ export function app_reply_main_shortcuts(
     r_pk_10_glory,
     r_pk_20,
     r_pk_40,
-    r_ug_10,
+    r_ug_,
     r_ug_40,
-    r_ke_10,
+    r_ke_,
     r_ke_40,
-    r_te_10,
-    r_bn_10,
-    r_ar_10,
-    r_en_40,
+    r_te_,
+    r_bn_,
+    r_ar_,
+    r_en_,
     r_yt,
   ];
   function languages_default_concat_single(ke2) {
@@ -161,18 +160,13 @@ export function app_reply_main_shortcuts(
     return concated;
   }
   function shortcut_extend_count(base, count) {
-    let extended = shortcut_extend(base, count);
+    let extended = app_reply_main_shortcuts_shortcut_extend(base, count);
     property_set(extended, "count", count);
     return extended;
   }
   function shortcut_extend_response(base, name_suffix, r) {
-    let extended = shortcut_extend(base, name_suffix);
+    let extended = app_reply_main_shortcuts_shortcut_extend(base, name_suffix);
     property_get_add(extended, "responses", r);
-    return extended;
-  }
-  function shortcut_extend(base, name_suffix) {
-    let extended = json_copy(base);
-    property_combine(extended, "name", name_suffix);
     return extended;
   }
   function shortcut_each(s) {
