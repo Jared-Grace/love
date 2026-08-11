@@ -1,3 +1,4 @@
+import { claude_sessions_restart_claude_session_refill } from "./claude_sessions_restart_claude_session_refill.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -9,9 +10,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { command_line_code_ignore } from "./command_line_code_ignore.mjs";
 import { command_line_interactive } from "./command_line_interactive.mjs";
 import { claude_running_count } from "./claude_running_count.mjs";
-import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { claude_sessions_restore } from "./claude_sessions_restore.mjs";
-import { claude_session_window_start } from "./claude_session_window_start.mjs";
 import { claude_tmux_session_name } from "./claude_tmux_session_name.mjs";
 let SETTLE_MS = 500;
 let SETTLE_TRIES = 20;
@@ -34,7 +33,11 @@ export async function claude_sessions_restart(minutes) {
     return combined;
   }
   if (inside) {
-    let refilled = await claude_session_refill(session, pane, minutes);
+    let refilled = await claude_sessions_restart_claude_session_refill(
+      session,
+      pane,
+      minutes,
+    );
     return refilled;
   }
   let command = text_combine_multiple(["tmux kill-session -t ", session]);
@@ -57,37 +60,6 @@ export async function claude_sessions_restart(minutes) {
     let name = property_get(result, "stdout").trim();
     let same = equal(name, session_given);
     return same;
-  }
-  async function claude_session_refill(
-    session_given,
-    pane_given,
-    minutes_given,
-  ) {
-    "Empty the session of every window except the one this was typed in, then give each saved session a window again.";
-    "Killing comes before opening, not after: the sweep that clears the old windows cannot tell a window it just made from one left over, so opening first would throw away the new ones too.";
-    let sessions = await claude_sessions_recent(minutes_given);
-    if (not(sessions.length)) {
-      let combined2 = text_combine_multiple([
-        "Every Claude was closed and committed, but no transcript was written in the last ",
-        minutes_given,
-        " minutes, so there was nothing to reopen. Try a wider window?",
-      ]);
-      return combined2;
-    }
-    let command3 = text_combine_multiple([
-      "tmux kill-window -a -t ",
-      pane_given,
-    ]);
-    await command_line_code_ignore(command3);
-    for (let session_saved of sessions) {
-      await claude_session_window_start(session_given, session_saved);
-    }
-    let combined3 = text_combine_multiple([
-      "Reopened ",
-      sessions.length,
-      " sessions as windows beside this one. They are already on the status bar - nothing to attach to.",
-    ]);
-    return combined3;
   }
   async function claude_sessions_settle() {
     "pkill returns the moment the signal is sent, not when the processes are gone, so wait for the count to actually reach zero before reopening.";
