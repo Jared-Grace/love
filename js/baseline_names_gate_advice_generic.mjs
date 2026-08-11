@@ -12,8 +12,8 @@ export async function baseline_names_gate_advice_generic(
   let change = names_versus_baseline(offenders, recorded);
   let added = property_get(change, "added");
   let stale = property_get(change, "stale");
-  let added_empty_is = list_empty_is(added);
-  if (list_empty_not_is(added)) {
+  let added_any_is = list_empty_not_is(added);
+  if (added_any_is) {
     let hint = await hint_get(added);
     list_empty_is_assert_json(added, {
       hint,
