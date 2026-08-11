@@ -1,6 +1,6 @@
+import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
@@ -254,15 +254,6 @@ export async function app_g_verify_home(context) {
     }
     view = null;
     let verse_buttons = {};
-    function highlight_selected() {
-      function lambda8(k) {
-        let bg = equal(k, selected_key)
-          ? app_shared_verse_selected_background_color()
-          : "";
-        html_style_background_color_set(verse_buttons[k], bg);
-      }
-      object_property_names(verse_buttons).forEach(lambda8);
-    }
     async function on_approved(v) {
       chapter_advance_armed = true;
       refresh();
@@ -270,7 +261,7 @@ export async function app_g_verify_home(context) {
     async function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
       sessionStorage.setItem(storage_key, selected_key);
-      highlight_selected();
+      app_g_verify_home_highlight_selected(selected_key, verse_buttons);
       let english = property_get(passage, "english");
       let lines = property_get(passage, "lines");
       await app_g_verify_view(
@@ -285,7 +276,7 @@ export async function app_g_verify_home(context) {
     function open_pending(verse) {
       selected_key = verse;
       sessionStorage.setItem(storage_key, verse);
-      highlight_selected();
+      app_g_verify_home_highlight_selected(selected_key, verse_buttons);
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
       app_shared_text_deemphasized(msg);
