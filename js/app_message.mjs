@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -62,8 +63,12 @@ export async function app_message(context) {
     html_clear(div_messages);
     let messages = messages_get();
     function lambda(message) {
-      message_display("left", message);
-      let right = message_display("right", "(Loading...)");
+      app_message_message_display("left", message, div_messages);
+      let right = app_message_message_display(
+        "right",
+        "(Loading...)",
+        div_messages,
+      );
       let background = app_shared_button_uncolored_background_color();
       html_style_background_color_set(right, background);
       async function next() {
@@ -84,15 +89,6 @@ export async function app_message(context) {
     }
     let nexts = list_map(messages, lambda);
     await invoke_multiple_unordered_async(nexts);
-  }
-  function message_display(direction, message) {
-    let div_message = app_shared_container(div_messages);
-    html_style_assign(div_message, {
-      width: "80%",
-      [text_combine("margin-", direction)]: "auto",
-    });
-    html_text_set(div_message, message);
-    return div_message;
   }
   function messages_get() {
     let value = storage_local_initialize_context(
@@ -116,4 +112,14 @@ export async function app_message(context) {
     storage_local_set_context(context, messages_property, messages);
     await refresh();
   }
+}
+function app_message_message_display(direction, message, div_messages) {
+  arguments_assert(arguments, 3);
+  let div_message = app_shared_container(div_messages);
+  html_style_assign(div_message, {
+    width: "80%",
+    [text_combine("margin-", direction)]: "auto",
+  });
+  html_text_set(div_message, message);
+  return div_message;
 }
