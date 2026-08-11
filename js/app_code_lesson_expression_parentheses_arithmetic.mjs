@@ -1,17 +1,13 @@
+import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_group } from "./app_code_lesson_expression_parentheses_arithmetic_group.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -21,7 +17,8 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
   "the FIRST parentheses a learner ever meets, and they are met where they change the answer: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. Everything else here is already known - the numbers, the operators, and the precedence rule itself, which the plus-times lesson taught as we always do the * first, even when it comes later in the line. So exactly one thing is new: a pair of symbols that overrides that rule. The parenthesised group is shown on BOTH sides of the *, the same way the plus-times lesson showed the same multiplication in both positions, so what is learned is the brackets rather than a position.";
   "The tailored wrong answer is the value of the very same line with the parentheses taken away, which is the whole mistake this lesson exists to prevent: a learner who does not yet believe the brackets matter will read (1 + 2) * 3 as 1 + 2 * 3 and answer 7. Offering that number is what makes choosing 9 an act of reading the brackets rather than of arithmetic.";
   "It comes before the comparison-parentheses lessons on purpose. Those wrap a comparison in brackets that change no answer at all - safe only once brackets are already believed in, and meaningless as a first meeting.";
-  let name_id = title_name_id();
+  let name_id =
+    app_code_lesson_expression_parentheses_arithmetic_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
@@ -31,33 +28,6 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     decoys,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: + / - inside ( and ), an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        let plus = js_operator_plus_symbol();
-        let minus = js_operator_minus_symbol();
-        let open = js_code_parenthesis_left();
-        let close = js_code_parenthesis_right();
-        html_cycle_code(parent, [
-          "",
-          plus,
-          " / ",
-          minus,
-          " inside ",
-          open,
-          " and ",
-          close,
-        ]);
-      }
-      return render;
-    }
-    let rights = ["parentheses arithmetic"];
-    let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function expression(group_first) {
     "the group times a number, with the group on the left when group_first and on the right otherwise";
     let inner = app_code_lesson_expression_parentheses_arithmetic_group();
