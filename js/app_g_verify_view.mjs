@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_verify_view_suggestion_text_normalize } from "./app_g_verify_view_suggestion_text_normalize.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
@@ -429,34 +430,6 @@ export async function app_g_verify_view(
   app_shared_button(suggest_bar, "Send suggestion", on_suggest);
   ("compare two suggestions the way the READER sees them: line endings, trailing spaces and blank lines are formatting they cannot see on the page, so none of them may make an applied-as-sent suggestion look declined");
   ("did the loop apply the reviewer's last suggestion word for word? the saved lines ARE what Claude decided, so comparing them with the newest suggestion for this verse answers it — no extra state to write and nothing that can disagree with the page");
-  async function suggestion_applied_is() {
-    try {
-      let all = await app_shared_api({
-        f_name: fn_name("g_verify_suggest_history_read"),
-        args: [chapter_code],
-      });
-      let mine = [];
-      function lambda_mine(h) {
-        let one = property_get(h, "verse");
-        if (equal(one, verse)) {
-          mine.push(h);
-        }
-      }
-      all.forEach(lambda_mine);
-      if (equal(mine.length, 0)) {
-        return false;
-      }
-      let last = mine[subtract(mine.length, 1)];
-      let value11 = property_get(last, "text");
-      let sent = app_g_verify_view_suggestion_text_normalize(value11);
-      let now = app_g_verify_view_suggestion_text_normalize(value4);
-      let eq3 = equal(sent, now);
-      return eq3;
-    } catch (ignore_applied) {
-      ignore_applied;
-      return false;
-    }
-  }
   ("show a badge if the loop has already reviewed a suggestion for this verse, so the reviewer knows it was seen and handled — and when the saved lines match what they sent, SAY that it was taken as sent, because accepted and declined are the two answers they are waiting for and the neutral wording cannot tell them apart");
   async function reviewed_show() {
     try {
@@ -468,7 +441,12 @@ export async function app_g_verify_view(
       if (equal(reviewed_verse, verse)) {
         let note = property_get(r, "note");
         let text = "✓ Claude reviewed your suggestion for v" + verse;
-        let applied = await suggestion_applied_is();
+        let applied = await app_g_verify_view_suggestion_applied_is(
+          chapter_code,
+          verse,
+          value4,
+          ignore_applied,
+        );
         if (applied) {
           text =
             "✓ Claude used your suggestion for v" + verse + " as you sent it";
@@ -527,4 +505,38 @@ export async function app_g_verify_view(
     }
   }
   history_show();
+}
+async function app_g_verify_view_suggestion_applied_is(
+  chapter_code,
+  verse,
+  value4,
+  ignore_applied,
+) {
+  arguments_assert(arguments, 4);
+  try {
+    let all = await app_shared_api({
+      f_name: fn_name("g_verify_suggest_history_read"),
+      args: [chapter_code],
+    });
+    let mine = [];
+    function lambda_mine(h) {
+      let one = property_get(h, "verse");
+      if (equal(one, verse)) {
+        mine.push(h);
+      }
+    }
+    all.forEach(lambda_mine);
+    if (equal(mine.length, 0)) {
+      return false;
+    }
+    let last = mine[subtract(mine.length, 1)];
+    let value11 = property_get(last, "text");
+    let sent = app_g_verify_view_suggestion_text_normalize(value11);
+    let now = app_g_verify_view_suggestion_text_normalize(value4);
+    let eq3 = equal(sent, now);
+    return eq3;
+  } catch (ignore_applied) {
+    ignore_applied;
+    return false;
+  }
 }
