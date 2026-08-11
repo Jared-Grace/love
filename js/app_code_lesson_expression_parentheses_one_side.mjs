@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_parentheses_one_side_keyword } from "./app_code_lesson_expression_parentheses_one_side_keyword.mjs";
+import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
@@ -47,8 +47,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let on_false = js_operator_bang_double_equal_symbol();
     let symbol = ternary(wanted, on_true, on_false);
     let left_code = property_get(left, "code");
-    let right_code =
-      app_code_lesson_expression_parentheses_one_side_keyword(right_value);
+    let right_code = js_true_false_word(right_value);
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let code = text_combine_multiple([
