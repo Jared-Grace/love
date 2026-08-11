@@ -1,6 +1,6 @@
 import { property_set } from "./property_set.mjs";
 import { html_scroll_top_window } from "./html_scroll_top_window.mjs";
-import { app_shared_home_name } from "./app_shared_home_name.mjs";
+import { app_shared_home_name_context } from "./app_shared_home_name_context.mjs";
 import { app_shared_screen_stored_initialize } from "./app_shared_screen_stored_initialize.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -12,7 +12,7 @@ export async function app_shared_refresh(context) {
   let screens = property_get(context, "screens");
   let body = html_document_body();
   html_clear(body);
-  let combined = app_shared_home_name(context);
+  let combined = app_shared_home_name_context(context);
   let screen_name = app_shared_screen_stored_initialize(context, combined);
   let screen = list_find_property(screens, "name", screen_name);
   await screen(context);

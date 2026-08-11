@@ -10,7 +10,9 @@ export function file_name_app_chunk_is(file_name, app_name) {
   "True when this is one of the extra script files a build cut out of one app - the app's own name with a number in front of it.";
   "A build is free to cut a piece of an app out into a file of its own, and it names that file after the app it came from with a number in front. Nothing writes those names down anywhere, so the only way to know one when you see it is to recognise the shape.";
   "The number is checked rather than skipped over, so a page of an app named for another app - one whose name happens to end in the same word - is not mistaken for a piece of this one.";
-  let suffix = text_combine(text_dot(), file_name_js(app_name));
+  let left = text_dot();
+  let right = file_name_js(app_name);
+  let suffix = text_combine(left, right);
   let other = text_ends_with_not(file_name, suffix);
   if (other) {
     return false;
