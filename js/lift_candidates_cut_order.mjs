@@ -21,8 +21,8 @@ export function lift_candidates_cut_order(rows) {
   }
   function free_is(row) {
     let stuck = stuck_is(row);
-    let free = not(stuck);
-    return free;
+    let row_free = not(stuck);
+    return row_free;
   }
   let free = list_filter(rows, free_is);
   let stuck = list_filter(rows, stuck_is);
