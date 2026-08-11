@@ -1,3 +1,4 @@
+import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
 import { app_g_verify_view_panel_flush } from "./app_g_verify_view_panel_flush.mjs";
 import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
@@ -308,11 +309,6 @@ export async function app_g_verify_view(
     sessionStorage.removeItem(draft_key);
     sessionStorage.removeItem(base_key);
   }
-  function draft_save() {
-    let current = html_value_get(suggest_area);
-    sessionStorage.setItem(draft_key, current);
-    sessionStorage.setItem(base_key, value4);
-  }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
     if (native_sizing) {
@@ -327,7 +323,13 @@ export async function app_g_verify_view(
     html_style_set(suggest_area, "height", h + "px");
   }
   function on_suggest_input() {
-    draft_save();
+    app_g_verify_view_draft_save(
+      suggest_area,
+      sessionStorage,
+      draft_key,
+      base_key,
+      value4,
+    );
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
@@ -459,7 +461,13 @@ export async function app_g_verify_view(
           html_style_font_size(txt, value10);
           function load_this() {
             html_value_set(suggest_area, t);
-            draft_save();
+            app_g_verify_view_draft_save(
+              suggest_area,
+              sessionStorage,
+              draft_key,
+              base_key,
+              value4,
+            );
             autosize();
           }
           app_shared_button(box, "Load into box", load_this);
