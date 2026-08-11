@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
@@ -71,7 +71,6 @@ import { object_to_list } from "./object_to_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
@@ -445,12 +444,4 @@ export async function app_search_results(context, div_results) {
     let only_click = list_single_property(button_list, "click");
     await only_click();
   }
-}
-function app_search_results_collapse_setters_set(setters, collapsed) {
-  arguments_assert(arguments, 2);
-  ("open or shut a whole level of cards at once - the one place that knows how to reach all of them, so the buttons and the first draw all say it the same way. it takes the level it acts on because the book cards and the testament cards are shut for different reasons: the first draw shuts the books to leave the reader an overview of what matched, which shutting the testaments over them would hide");
-  function setter_call(collapsed_set) {
-    collapsed_set(collapsed);
-  }
-  each(setters, setter_call);
 }
