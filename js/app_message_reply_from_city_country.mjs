@@ -1,6 +1,6 @@
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_choice } from "./reply_choice.mjs";
-import { app_reply_choices_location } from "./app_reply_choices_location.mjs";
+import { reply_choices_location } from "./reply_choices_location.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_cities } from "./reply_cities.mjs";
 import { reply_countries } from "./reply_countries.mjs";
@@ -14,7 +14,7 @@ export function app_message_reply_from_city_country() {
   let r_countries = reply_countries();
   let r_cities = reply_cities();
   let o_n = reply_optional(n);
-  let item = app_reply_choices_location();
+  let item = reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
   let from_city_country = reply_sequence_output(
     [iam_o_titled_name, "from", r_cities, o_n, r_countries],
