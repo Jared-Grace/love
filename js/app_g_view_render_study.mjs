@@ -1,3 +1,4 @@
+import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -11,7 +12,6 @@ import { app_g_container } from "./app_g_container.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
-import { app_g_progress_bar } from "./app_g_progress_bar.mjs";
 import { app_g_prayer_study_overlay } from "./app_g_prayer_study_overlay.mjs";
 import { g_prayer_study_before } from "./g_prayer_study_before.mjs";
 import { g_prayer_study_after } from "./g_prayer_study_after.mjs";
@@ -102,11 +102,7 @@ export async function app_g_view_render_study(div_map) {
   function render_words() {
     html_clear(container);
     let bar_div = html_div(container);
-    function update_bar() {
-      html_clear(bar_div);
-      app_g_progress_bar(bar_div, current, words.length, "word");
-    }
-    update_bar();
+    app_g_view_render_study_update_bar(bar_div, current, words);
     let words_div = html_div(container);
     let word_bs = [];
     function style_completed(b) {
@@ -151,7 +147,7 @@ export async function app_g_view_render_study(div_map) {
         }
         current = i + 1;
         style_completed(word_bs[i]);
-        update_bar();
+        app_g_view_render_study_update_bar(bar_div, current, words);
         let done = greater_than_equal(current, words.length);
         if (done) {
           render_thank_gate();
