@@ -1,22 +1,11 @@
-import { property_list_empty_is } from "./property_list_empty_is.mjs";
+import { qa_apps_commits_weigh } from "./qa_apps_commits_weigh.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
-import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
-import { qa_app_reachable_names } from "./qa_app_reachable_names.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
 import { git_commit_behind_count } from "./git_commit_behind_count.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
 import { properties_get } from "./properties_get.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_get_or_null } from "./list_get_or_null.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { number_is } from "./number_is.mjs";
-import { null_is } from "./null_is.mjs";
-import { and } from "./and.mjs";
 export async function qa_commit_named_apps_report() {
   "Which apps could be sent out right now, and from how far back - every app in the folder weighed against every commit anybody has already judged. Asks no gates and ships nothing.";
   "Its neighbour counts a commit sound only when every gate was green there, and says so, and says that the per-app question is a different one. This is that different one, asked of the whole record at once. A commit red on a gate no app can reach is useless by the strict count and shippable by every app, and only this one can tell you so.";
@@ -36,49 +25,14 @@ export async function qa_commit_named_apps_report() {
   let apps_unique = list_unique(named_all);
   let looked = [];
   let unweighed = [];
-  for (let app of apps_unique) {
-    async function reached() {
-      let names = await qa_app_reachable_names(app);
-      return names;
-    }
-    let reach = await catch_null_async(reached);
-    let missing = null_is(reach);
-    if (missing) {
-      list_add(unweighed, app);
-      continue;
-    }
-    let able = [];
-    for (let commit of commits) {
-      let entry = property_get_or_null(known, commit);
-      let green = property_get_or_null(entry, "green");
-      let failed = property_get_or_null(entry, "failed");
-      let blamed = property_get_or_null(entry, "named");
-      let sorted = qa_app_gates_sorted(green, failed, blamed, reach);
-      let clear = property_list_empty_is(sorted, "blocking");
-      let distance = property_get_or_null(distances, commit);
-      let placed = number_is(distance);
-      let both = and(clear, placed);
-      if (both) {
-        list_add(able, {
-          commit,
-          behind: distance,
-        });
-      }
-    }
-    ("Nearest to the folder first, so the freshest commit this app could ship from is the one at the front");
-    function behind_of(one) {
-      let counted = property_get(one, "behind");
-      return counted;
-    }
-    list_sort_number_mapper(able, behind_of);
-    let freshest = list_get_or_null(able, 0);
-    list_add(looked, {
-      app,
-      reach: list_size(reach),
-      shippable: list_size(able),
-      freshest,
-    });
-  }
+  await qa_apps_commits_weigh(
+    apps_unique,
+    unweighed,
+    commits,
+    known,
+    distances,
+    looked,
+  );
   let r = {
     head,
     entries: list_size(commits),
