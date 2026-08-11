@@ -20,37 +20,13 @@ export async function qa_app_commit_deploy(search, commit) {
   "Measured the day this was written: thirteen sendings of one app in an afternoon, every one of them refused, not one of them refused for the change being sent. The whole-repo asking takes about fourteen minutes and the repo moved a hundred and eighty five commits in the two and three quarter hours after the last moment it was all well at once. Something red appears inside the window faster than the window closes, so the answer, when it finally comes, is about a repo that has already gone";
   "The asking happens BEFORE anything is put where the sending reads from, which is the other way round from the older path. There, a refused sending had already overwritten what was waiting to go, so being told no still changed what would go out next time somebody said yes";
   "Nothing about frozen apps is relaxed. The sending puts out the whole folder it reads from, not this app alone, so every app that must not move is still checked and still kept a copy of first. Narrowing WHICH app is judged for soundness is not the same as narrowing which apps are protected, and only the first of those was narrowed here";
-  let judged = await qa_app_commit_gate_run_at(search, commit);
-  let deployable = property_get(judged, "deployable");
-  true_is_assert_json(deployable, judged);
-  let hashes = await qa_app_commit_promote(search, commit);
-  ("Sending puts out every app waiting in the folder, not the one named here, so the others have to be accounted for before this one goes. Each of them either already matches what is being served - in which case it changes nothing and was argued about when it was sent - or it was built out of a named commit that was judged sound for it. Anything else is somebody's unfinished work about to be published under this run's name");
-  ("This asks nothing of the whole repo and judges no commit, so it costs about a second and cannot drift into the fourteen-minute question this whole path exists to avoid");
-  ("It belongs to this way of sending and not to the one that gates the whole tree first. That one has already asked whether everything standing in the folder is sound, which is a different warrant for the same conclusion - and asking this of it as well would refuse a build it had every right to send");
-  let unaccounted = await qa_promoted_unjudged();
-  list_empty_is_assert_json(unaccounted, unaccounted);
-  async function lambda() {
-    let app_names = apps_frozen_names();
-    await list_map_unordered_async(
-      app_names,
-      firebase_prod_app_unchanged_assert,
-    );
-    let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
-    let stdout = await firebase_deploy_bypass_unchanged(confirm);
-    return stdout;
-  }
-  let message = firebase_deploy_locked_message();
-  let lock_name = fn_name("firebase_deploy");
-  let published = await lock_error(
-    lock_name,
-    lambda,
-    qa_app_commit_deploy.name,
-    message,
-  );
+  ("The two halves it is made of are each their own name now, because a run that sends several apps wants the first half once per app and the second half once for all of them. Written out again here they would be a second copy of the order they go in, and the two copies would answer differently the first time either was corrected");
+  let promoted = await qa_app_commit_promote_judged(search, commit);
+  let published = await qa_promoted_publish();
   let r = {
-    app: property_get(judged, "app"),
+    app: property_get(promoted, "app"),
     commit,
-    hashes,
+    hashes: property_get(promoted, "hashes"),
     published,
   };
   return r;
