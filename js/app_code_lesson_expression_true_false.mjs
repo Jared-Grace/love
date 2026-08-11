@@ -1,9 +1,8 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -26,17 +25,13 @@ export function app_code_lesson_expression_true_false() {
   return lesson;
   function title_name_id() {
     "the home title code-styles the literal keywords true and false (and console.log), separated by a COMMA — a plain list of two concepts. NOT 'or' (implies exclusive choice, but we teach both) and NOT 'and' (a beginner reads it as the && operator). Matches how other lessons list items (app_code_lesson_name_id_remaining).";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text_code_dark(parent, js_keyword_true());
-        html_span_text(parent, ", ");
-        html_span_text_code_dark(parent, js_keyword_false());
-      }
-      return render;
+    function paint(parent) {
+      html_span_text_code_dark(parent, js_keyword_true());
+      html_span_text(parent, ", ");
+      html_span_text_code_dark(parent, js_keyword_false());
     }
     let rights = ["true or false"];
-    let built = app_code_lesson_name_id_generic(rights, "values", title_get);
+    let built = app_code_lesson_name_id_category_then(rights, "values", paint);
     return built;
   }
   function above(root) {
