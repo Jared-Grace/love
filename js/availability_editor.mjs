@@ -1,16 +1,13 @@
+import { availability_editor_render_grid } from "./availability_editor_render_grid.mjs";
 import { availability_editor_add_button } from "./availability_editor_add_button.mjs";
 import { availability_editor_render_preview } from "./availability_editor_render_preview.mjs";
 import { availability_editor_highlight } from "./availability_editor_highlight.mjs";
-import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
-import { week_calendar } from "./week_calendar.mjs";
-import { week_dates } from "./week_dates.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { date_add_days } from "./date_add_days.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { html_input_date } from "./html_input_date.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -89,21 +86,27 @@ export function availability_editor(parent) {
     "margin-top": "0.75rem",
   });
   let preview = html_div(parent);
-  render_grid();
+  availability_editor_render_grid(
+    grid_holder,
+    week_start,
+    ranges,
+    on_grid_ranges,
+    week_label,
+  );
   availability_editor_render_preview(preview, ranges, chosen, line);
-  function render_grid() {
-    html_clear(grid_holder);
-    let dates = week_dates(week_start);
-    week_calendar(grid_holder, dates, ranges, on_grid_ranges);
-    availability_editor_update_week_label(dates, week_label);
-  }
   function on_grid_ranges(new_ranges) {
     ranges = new_ranges;
     availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function shift_week(delta) {
     week_start = date_add_days(week_start, delta);
-    render_grid();
+    availability_editor_render_grid(
+      grid_holder,
+      week_start,
+      ranges,
+      on_grid_ranges,
+      week_label,
+    );
     availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function on_jump() {
@@ -111,7 +114,13 @@ export function availability_editor(parent) {
     let ok = text_empty_not_is(picked);
     if (ok) {
       week_start = date_week_sunday(picked);
-      render_grid();
+      availability_editor_render_grid(
+        grid_holder,
+        week_start,
+        ranges,
+        on_grid_ranges,
+        week_label,
+      );
       availability_editor_render_preview(preview, ranges, chosen, line);
     }
   }
