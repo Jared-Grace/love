@@ -1,3 +1,4 @@
+import { markdown_render_mono_block } from "./markdown_render_mono_block.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -8,7 +9,6 @@ import { multiply } from "./multiply.mjs";
 import { math_min } from "./math_min.mjs";
 import { markdown_inline } from "./markdown_inline.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_pre_text } from "./html_pre_text.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -31,20 +31,6 @@ export function markdown_render(parent, text) {
       paragraph = [];
     }
   }
-  function mono_block(block_lines) {
-    let text3 = block_lines.join("\n");
-    let pre = html_pre_text(parent, text3);
-    html_style_assign(pre, {
-      "font-family": "monospace",
-      "font-size": "0.82em",
-      background: "rgba(0, 0, 0, 0.06)",
-      padding: "0.5em 0.7em",
-      "border-radius": "0.3em",
-      overflow: "auto",
-      margin: "0.5em 0",
-      "white-space": "pre",
-    });
-  }
   while (less_than(i, lines.length)) {
     let line = lines[i];
     let trimmed = line.trim();
@@ -59,7 +45,7 @@ export function markdown_render(parent, text) {
         i = i + 1;
       }
       i = i + 1;
-      mono_block(code_lines);
+      markdown_render_mono_block(code_lines, parent);
       continue;
     }
     if (equal(trimmed, "")) {
@@ -132,7 +118,7 @@ export function markdown_render(parent, text) {
         table_lines.push(lines[i]);
         i = i + 1;
       }
-      mono_block(table_lines);
+      markdown_render_mono_block(table_lines, parent);
       continue;
     }
     paragraph.push(trimmed);
