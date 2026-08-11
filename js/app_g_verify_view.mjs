@@ -1,3 +1,4 @@
+import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -8,7 +9,6 @@ import { app_g_verify_note_font_size } from "./app_g_verify_note_font_size.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
-import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -38,7 +38,6 @@ import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_font_set } from "./html_font_set.mjs";
-import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -121,18 +120,6 @@ export async function app_g_verify_view(
     html_style_overflow_hidden(p);
     return p;
   }
-  function row_new(panel, first) {
-    let row = html_div(panel);
-    html_display_flex(row);
-    html_style_gap(row, small_gap);
-    html_style_padding_x(row, small_gap);
-    html_style_padding_y(row, small_gap);
-    if (not(first)) {
-      html_style_set(row, "border-top", "1px solid " + border);
-    }
-    html_style_set(row, "transition", "background-color .12s");
-    return row;
-  }
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   let value7 = app_g_verify_passage_font_size();
@@ -187,7 +174,7 @@ export async function app_g_verify_view(
   function lambda14(li, k) {
     let l = lines[li];
     let eq = equal(k, 0);
-    let row = row_new(cov, eq);
+    let row = app_g_verify_view_row_new(cov, eq, small_gap, border);
     function lambda12(i) {
       let r3 = tokens[i];
       return r3;
@@ -211,7 +198,7 @@ export async function app_g_verify_view(
   let ord = panel_flush();
   function lambda16(l, li) {
     let eq2 = equal(li, 0);
-    let row = row_new(ord, eq2);
+    let row = app_g_verify_view_row_new(ord, eq2, small_gap, border);
     let text2 = String(li + 1);
     let n = html_span_text(row, text2);
     app_shared_text_deemphasized(n);
