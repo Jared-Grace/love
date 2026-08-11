@@ -20,7 +20,7 @@ export function app_code_lesson_expression_parentheses_moved() {
     above,
     name_id,
     next_arg,
-    example_count: 4,
+    example_count: 2,
     decoys,
   });
   return lesson;
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_parentheses_moved() {
     return r;
   }
   function refill() {
-    "four examples a screen, the group twice around the + and twice around the *";
+    "four at a time, alternating the group round the + and round the *. The examples screen draws two, so every screen shows both placements side by side - which is the whole point of this lesson";
     let v = app_code_lesson_expression_parentheses_moved_expression(true);
     let v2 = app_code_lesson_expression_parentheses_moved_expression(false);
     let v3 = app_code_lesson_expression_parentheses_moved_expression(true);
