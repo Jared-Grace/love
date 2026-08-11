@@ -1,3 +1,9 @@
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { divide } from "./divide.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 export function qa_gates_dealt(gates, costs, count) {
   "Splits the gates into a given number of shares, putting the slowest gate on whichever share is lightest so far";
   "Handing out every count-th gate is even in the number of gates and wildly uneven in the work, because what a gate costs has nothing to do with where it sits in the list. Measured 2026-08-11 over 172 gates and seven shares: 22, 44, 80, 99, 131, 147 and 150 seconds of work. The wait is the slowest share, so five of the seven sat finished while one of them worked";
@@ -7,40 +13,42 @@ export function qa_gates_dealt(gates, costs, count) {
   let known = [];
   for (let gate of gates) {
     let ms = costs[gate.name];
-    if (ms !== undefined) {
+    if (not_equal(ms, undefined)) {
       known.push(ms);
     }
   }
   let typical = 0;
-  if (known.length > 0) {
+  if (greater_than(known.length, 0)) {
     let added = 0;
     for (let ms of known) {
       added += ms;
     }
-    typical = added / known.length;
+    typical = divide(added, known.length);
   }
   function cost_of(gate) {
     let ms = costs[gate.name];
-    if (ms === undefined) {
+    if (equal(ms, undefined)) {
       return typical;
     }
     return ms;
   }
   function heaviest_first(one, other) {
-    let difference = cost_of(other) - cost_of(one);
+    let left = cost_of(other);
+    let right = cost_of(one);
+    let difference = subtract(left, right);
     return difference;
   }
   let ordered = [...gates].sort(heaviest_first);
   let shares = [];
   let carried = [];
-  for (let position = 0; position < count; position += 1) {
+  for (let position = 0; less_than(position, count); position += 1) {
     shares.push([]);
     carried.push(0);
   }
   for (let gate of ordered) {
     let lightest = 0;
-    for (let position = 1; position < count; position += 1) {
-      if (carried[position] < carried[lightest]) {
+    for (let position = 1; less_than(position, count); position += 1) {
+      if (less_than(carried[position], carried[lightest])) {
         lightest = position;
       }
     }

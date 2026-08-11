@@ -1,3 +1,6 @@
+import { json_from } from "./json_from.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { less_than } from "./less_than.mjs";
 import { qa_snapshot_timed_solo_told } from "./qa_snapshot_timed_solo_told.mjs";
 import { qa_gate_timings_path } from "./qa_gate_timings_path.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -12,14 +15,15 @@ export async function qa_gate_timings_write() {
   let told = await qa_snapshot_timed_solo_told();
   let said = property_get(told, "said");
   let began = said.lastIndexOf("\n{");
-  if (began < 0) {
+  if (less_than(began, 0)) {
     error_json({
       hint: "the timing run printed nothing that reads as a result - it was probably stopped before it finished, and there is nothing here worth writing down",
       f_name: qa_gate_timings_write.name,
       folder: property_get(told, "folder"),
     });
   }
-  let report = JSON.parse(said.slice(began));
+  let json = said.slice(began);
+  let report = json_from(json);
   let timings = property_get(report, "timings");
   let taken = {};
   for (let timing of timings) {
@@ -27,8 +31,8 @@ export async function qa_gate_timings_write() {
     let milliseconds = property_get(timing, "milliseconds");
     taken[f_name] = milliseconds;
   }
-  let gates = Object.keys(taken).length;
-  if (gates < 100) {
+  let gates = object_property_names(taken).length;
+  if (less_than(gates, 100)) {
     error_json({
       hint: "far fewer gates were timed than this repo has, so the run ended early - writing this would look like a measurement and would be one of a few gates only",
       f_name: qa_gate_timings_write.name,

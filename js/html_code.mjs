@@ -43,10 +43,13 @@ export function html_code(name, body) {
   let head = html_code_element("head", attributes_none, head_children);
   let splash = html_code_loading_splash();
   let banner = html_code_error_banner();
-  ("the banner stands BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when it is wanted");
+  let notice = html_code_error_notice();
+  ("the banner and the notice both stand BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when they are wanted");
+  ("they are two answers to the same moment, told apart by who is looking. the banner is the dev path only and shows the error, the file and the line, which is what the person FIXING it needs; the notice ships everywhere and says only that it did not load, with a way to try again, because a white screen tells a person neither what happened nor what to do and looks exactly like a page that is still coming");
   let body_items = list_filter_null_not_is([
     splash,
     banner,
+    notice,
     body,
     service_worker,
   ]);
