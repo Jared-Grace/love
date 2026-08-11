@@ -1,3 +1,4 @@
+import { app_shared_button_numbered_gutter } from "./app_shared_button_numbered_gutter.mjs";
 import { html_style_justify_self } from "./html_style_justify_self.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -11,7 +12,9 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_shared_button_numbered(root, index, on_click, with_marker) {
   "a wide list button: the 1-based number right-aligned and de-emphasized in a fixed left gutter so the numbers line up on their periods as a tidy column, then the row's title centered in the rest of the row; when with_marker is true a fixed slot sits between the number gutter and the title for a status marker (a completed check, a 'do this next' arrow) so showing or hiding it never shifts the number or the title; sharing this keeps every app's numbered list consistent for free - returns the button, the number span, the marker slot (null when with_marker is false), and the title slot";
   let button = app_shared_button_wide(root, "", on_click);
-  let gutter = app_shared_number_gutter();
+  ("the number column and the marker column are sized apart on purpose: the number has to hold three digits and a period, while the marker holds one emoji, so one width cannot be right for both");
+  let gutter = app_shared_button_numbered_gutter();
+  let marker_gutter = app_shared_number_gutter();
   let text = add_1_period(index);
   let number = html_span_text(button, text);
   html_style_justify_self(number, "end");
@@ -21,7 +24,7 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   if (with_marker) {
     marker_slot = html_span_text(button, "");
     html_style_justify_self(marker_slot, "center");
-    columns = text_combine_multiple([gutter, " ", gutter, " 1fr"]);
+    columns = text_combine_multiple([gutter, " ", marker_gutter, " 1fr"]);
   }
   let title = html_span_text(button, "");
   html_style_justify_self(title, "center");
