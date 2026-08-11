@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_conversation_topic_for } from "./app_g_conversation_topic_for.mjs";
 import { app_g_conversation_render_close } from "./app_g_conversation_render_close.mjs";
 import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
@@ -265,8 +265,8 @@ export async function app_g_conversation(
     app_g_npc_typing(npc, overlay);
     function reveal() {
       html_clear(overlay);
-      let topic2 = app_g_conversation_topic_for(turn);
-      let message = g_boundary(meet, topic2);
+      let topic = app_g_conversation_topic_for(turn);
+      let message = g_boundary(meet, topic);
       app_g_npc_says(npc, overlay, message);
       let container = app_g_container_player(overlay);
       app_g_p_text(container, "What would you like to say?");
@@ -383,15 +383,4 @@ export async function app_g_conversation(
   }
   await app_g_sky_reset();
   render();
-}
-function app_g_conversation_topic_for(turn) {
-  arguments_assert(arguments, 1);
-  let kind = property_get(turn, "kind");
-  let topics = {
-    gospel_share_objection: "faith",
-    how_r_u: "how I'm doing",
-    believe: "what I believe",
-  };
-  let topic = property_get(topics, kind);
-  return topic;
 }
