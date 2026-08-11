@@ -1,10 +1,10 @@
+import { js_identifier_defineds_function_type_add } from "./js_identifier_defineds_function_type_add.mjs";
 import { js_loop_declared_names } from "./js_loop_declared_names.mjs";
 import { js_types_loop_node } from "./js_types_loop_node.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { js_identifier_is } from "./js_identifier_is.mjs";
 import { list_index_of_next_outside } from "./list_index_of_next_outside.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_types_function_node } from "./js_types_function_node.mjs";
@@ -35,7 +35,7 @@ export function js_identifier_defineds(v) {
       let value = property_path_get_2(v, "node", "name");
       la([value]);
     }
-    function_type_add(e, "FunctionExpression");
+    js_identifier_defineds_function_type_add(e, "FunctionExpression", la);
     js_stack_filtered_multiple_each(
       stack,
       ["BlockStatement", "Program"],
@@ -76,21 +76,15 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
-        function_type_add(item2, "FunctionDeclaration");
+        js_identifier_defineds_function_type_add(
+          item2,
+          "FunctionDeclaration",
+          la,
+        );
       }
       each(bs_list, lambda2);
     }
     let types = js_types_function_node();
-    function function_type_add(item2, f_type) {
-      if (js_node_type_is(item2, f_type)) {
-        let id2 = property_get(item2, "id");
-        let ii = js_identifier_is(id2);
-        if (ii) {
-          let value = property_get(id2, "name");
-          la([value]);
-        }
-      }
-    }
     function lambda5(node) {
       let params_names = js_function_declaration_params_names(node);
       la(params_names);
