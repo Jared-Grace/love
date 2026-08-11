@@ -41,7 +41,14 @@ export function html_code(name, body) {
   let head_children = html_code_children(head_items, indent);
   let head = html_code_element("head", attributes_none, head_children);
   let splash = html_code_loading_splash();
-  let body_items = list_filter_null_not_is([splash, body, service_worker]);
+  let banner = html_code_error_banner();
+  ("the banner stands BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when it is wanted");
+  let body_items = list_filter_null_not_is([
+    splash,
+    banner,
+    body,
+    service_worker,
+  ]);
   let body_children = html_code_children(body_items, indent);
   let body_element = html_code_element("body", attributes_none, body_children);
   let indent2 = text_empty();
