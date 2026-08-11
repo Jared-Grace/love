@@ -29,7 +29,7 @@ import { app_reply_choices_thanks } from "./app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "./emojis_sing_wrap.mjs";
 import { emoji_voice } from "./emoji_voice.mjs";
 import { app_reply_response_how_r_u_skip_first_upper } from "./app_reply_response_how_r_u_skip_first_upper.mjs";
-import { app_reply_choices_glory } from "./app_reply_choices_glory.mjs";
+import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "./app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "./app_reply_choices_name.mjs";
 import { app_reply_choices_location } from "./app_reply_choices_location.mjs";
@@ -167,7 +167,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_glory(),
-      response: app_reply_choices_glory(),
+      response: reply_choices_glory(),
     },
     {
       text: app_reply_give(),
@@ -510,7 +510,7 @@ export function app_reply_choices() {
       text: text_combine(emoji_voice(), " Voice"),
       response: text_combine_multiple([
         emojis_sing_wrap("My voice is a gift and miracle from God! "),
-        app_reply_choices_glory(),
+        reply_choices_glory(),
         " ",
         app_reply_choices_thanks(),
       ]),
