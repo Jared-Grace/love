@@ -1,3 +1,14 @@
+import { file_exists } from "./file_exists.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_single } from "./list_single.mjs";
+import { list_size_1 } from "./list_size_1.mjs";
+import { property_from } from "./property_from.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { repos_paths_names_map_unordered_combine } from "./repos_paths_names_map_unordered_combine.mjs";
+import { true_is } from "./true_is.mjs";
 export async function function_name_to_path_search_live(f_name) {
   "Looks in every repository here for the file a name would live in, asking the disk each time, and reports whether exactly one holds it, whether several do, and where it was found.";
   "Asking the disk rather than a list made earlier is the whole of what this one is for. Everybody works in the one folder at once, so a file can arrive or leave between two questions, and a caller working in the living folder needs the answer that is true now.";
