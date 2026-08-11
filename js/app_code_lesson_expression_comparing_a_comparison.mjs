@@ -1,31 +1,23 @@
+import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_keyword } from "./app_code_lesson_expression_comparing_a_comparison_keyword.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_naming } from "./app_code_lesson_expression_comparing_a_comparison_naming.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
-import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { equal } from "./equal.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
-import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
-import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { property_get } from "./property_get.mjs";
-import { ternary } from "./ternary.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_comparing_a_comparison() {
   "a comparison standing where a plain true or false stood: 3 === 5 === false. ONE new idea on top of the previous lesson, which compared two plain true/false values - the left side is now a comparison, so it has to be worked out first and only then compared. That is the very rule the arithmetic-comparison lesson already taught (arithmetic first, then compare), with a comparison in the place arithmetic held, so the step is small. The right side stays a plain true or false here; both sides being comparisons is the swapping lesson. Answer is the code's own true/false value, correct by construction.";
   "Taught as replacing rather than as evaluating: a comparison works out to a true or false, so it can be replaced by that true or false, and the line that is left is one the learner already knows how to read. The order caveat is pointed back at a rule they already have - we do * before + - so it is recognised rather than taken on. In every line this lesson can generate, replacing in order lands on the right value on its own.";
@@ -48,27 +40,14 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function expression(want_true) {
-    "a comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
-    let left = app_code_comparison_side();
-    let right_value = list_random_item([true, false]);
-    let agree = property_equals(left, "value", right_value);
-    let wanted = equal(agree, want_true);
-    let on_true = js_operator_triple_equal_symbol();
-    let on_false = js_operator_bang_double_equal_symbol();
-    let symbol = ternary(wanted, on_true, on_false);
-    let left_code = property_get(left, "code");
-    let right_code =
-      app_code_lesson_expression_comparing_a_comparison_keyword(right_value);
-    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
-    return code;
-  }
   function refill() {
     "four examples a screen, true and false alternating";
-    let v = expression(true);
-    let v2 = expression(false);
-    let v3 = expression(true);
-    let v4 = expression(false);
+    let v = app_code_lesson_expression_comparing_a_comparison_expression(true);
+    let v2 =
+      app_code_lesson_expression_comparing_a_comparison_expression(false);
+    let v3 = app_code_lesson_expression_comparing_a_comparison_expression(true);
+    let v4 =
+      app_code_lesson_expression_comparing_a_comparison_expression(false);
     let list = [v, v2, v3, v4];
     return list;
   }
