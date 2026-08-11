@@ -12,8 +12,8 @@ export function app_g_verify_view_draft_save(
   ("keep the in-progress suggestion for one verse, together with the lines it was written against, so coming back to the verse restores the draft only while those lines are still the ones on the page.");
   ("the store is reached through the repo's own storing function rather than spoken to directly, so a word this app leaves in a reader's browser can be found by reading the code.");
   let current = html_value_get(suggest_area);
-  let app_fn = app_g_storage_app();
+  let app_fn = app_g_verify_storage_app();
   storage_session_set(app_fn, draft_key, current);
-  let app_fn2 = app_g_storage_app();
+  let app_fn2 = app_g_verify_storage_app();
   storage_session_set(app_fn2, base_key, value);
 }
