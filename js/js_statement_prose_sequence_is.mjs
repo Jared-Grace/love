@@ -1,12 +1,10 @@
+import { js_literal_text_is } from "./js_literal_text_is.mjs";
 import { list_all_is } from "./list_all_is.mjs";
 import { js_prose_part_is } from "./js_prose_part_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_list_first } from "./property_list_first.mjs";
-import { js_literal_is } from "./js_literal_is.mjs";
-import { js_literal_value_get } from "./js_literal_value_get.mjs";
-import { text_is } from "./text_is.mjs";
 import { not } from "./not.mjs";
 export function js_statement_prose_sequence_is(node) {
   arguments_assert(arguments, 1);
@@ -24,12 +22,7 @@ export function js_statement_prose_sequence_is(node) {
     return false;
   }
   let leading = property_list_first(expression, "expressions");
-  let literal_is = js_literal_is(leading);
-  if (not(literal_is)) {
-    return false;
-  }
-  let value = js_literal_value_get(leading);
-  let string_is = text_is(value);
+  let string_is = js_literal_text_is(leading);
   if (not(string_is)) {
     return false;
   }
