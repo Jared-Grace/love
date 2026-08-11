@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_expression_remainder_divide_solve_title_name_id } from "./app_code_lesson_expression_remainder_divide_solve_title_name_id.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -11,9 +11,6 @@ import { list_get } from "./list_get.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_divide_solve() {
@@ -51,7 +48,8 @@ export function app_code_lesson_expression_remainder_divide_solve() {
     return r;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id =
+    app_code_lesson_expression_remainder_divide_solve_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -67,23 +65,6 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       "Build the remainder formula that produces the solved value: ",
   });
   return lesson;
-  function title_name_id() {
-    "the home title is console.log solve the remainder formula";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Solve the remainder formula");
-      }
-      return render;
-    }
-    let rights = ["solve the remainder formula"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let recall = app_code_container_light_blue(root);
     html_div_cycle_code(recall, [
