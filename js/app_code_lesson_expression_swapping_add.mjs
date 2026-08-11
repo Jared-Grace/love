@@ -44,7 +44,7 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
     let plus = app_code_container_light_blue(root);
     html_div_cycle_code(plus, [
-      "Adding puts two amounts together, so the order does not matter",
+      "Adding puts two amounts together, so swapping does not matter",
     ]);
     html_div_cycle_code(plus, [
       "",
