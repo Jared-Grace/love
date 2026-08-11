@@ -69,7 +69,7 @@ function app_code_lesson_swapping_generic_pairs_wanted(
   op,
   want_true,
   wrap,
-  eval,
+  evaluate,
 ) {
   arguments_assert(arguments, 4);
   ("every pair of different small numbers whose line really does land on want_true, found by working the line out rather than by trusting the operator it was built from");
@@ -84,7 +84,7 @@ function app_code_lesson_swapping_generic_pairs_wanted(
         return;
       }
       let code = app_code_lesson_swapping_generic_pair_code(op, a, b, wrap);
-      let value = eval(code);
+      let value = evaluate(code);
       let wanted = equal(value, want_true);
       if (wanted) {
         let pair = [a, b];
