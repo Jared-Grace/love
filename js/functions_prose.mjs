@@ -1,3 +1,4 @@
+import { function_prose_lines_sequence } from "./function_prose_lines_sequence.mjs";
 import { not } from "./not.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { function_prose_lines } from "./function_prose_lines.mjs";
