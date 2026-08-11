@@ -1,8 +1,7 @@
+import { qa_commit_named_stale_repair_names_now } from "./qa_commit_named_stale_repair_names_now.mjs";
 import { qa_commit_named_entry_stale_is } from "./qa_commit_named_entry_stale_is.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
-import { qa_gate_said_advice_remove } from "./qa_gate_said_advice_remove.mjs";
-import { functions_names_in_text } from "./functions_names_in_text.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -20,11 +19,6 @@ export async function qa_commit_named_stale_repair() {
   "What the gates FOUND is never touched - green and failed are the frozen commit's own answer and no reader has any business revising them. Only the names read out of the saying are written again";
   let remembered = await qa_commit_named();
   let known = await functions_names();
-  function names_now(said) {
-    let accused = qa_gate_said_advice_remove(said);
-    let names = functions_names_in_text(accused, known);
-    return names;
-  }
   let repaired = [];
   let unhelpable = [];
   let kept = {};
@@ -45,7 +39,7 @@ export async function qa_commit_named_stale_repair() {
     let now = {};
     for (let gate of object_property_names(spoke)) {
       let said = property_get(spoke, gate);
-      now[gate] = names_now(said);
+      now[gate] = qa_commit_named_stale_repair_names_now(said, known);
     }
     let same = json_equal(was, now);
     if (same) {
