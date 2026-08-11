@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_message_message_display } from "./app_message_message_display.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -13,7 +13,6 @@ import { property_get } from "./property_get.mjs";
 import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
 import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -112,14 +111,4 @@ export async function app_message(context) {
     storage_local_set_context(context, messages_property, messages);
     await refresh();
   }
-}
-function app_message_message_display(direction, message, div_messages) {
-  arguments_assert(arguments, 3);
-  let div_message = app_shared_container(div_messages);
-  html_style_assign(div_message, {
-    width: "80%",
-    [text_combine("margin-", direction)]: "auto",
-  });
-  html_text_set(div_message, message);
-  return div_message;
 }
