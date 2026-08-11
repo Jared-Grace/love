@@ -22,12 +22,12 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     above,
     name_id,
     next_arg,
-    example_count: 4,
+    example_count: 2,
     decoys: app_code_parentheses_flat_decoys,
   });
   return lesson;
   function refill() {
-    "four examples a screen, two after a - and two after a /";
+    "four at a time, alternating a - line and a / line. The examples screen draws two, so every screen shows one of each - the two outer operators this lesson is about";
     let v =
       app_code_lesson_expression_parentheses_same_strength_subtract_line();
     let v2 = app_code_lesson_expression_parentheses_same_strength_divide_line();
