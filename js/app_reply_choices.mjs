@@ -28,7 +28,7 @@ import { app_reply_call_why_generic } from "./app_reply_call_why_generic.mjs";
 import { app_reply_choices_thanks } from "./app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "./emojis_sing_wrap.mjs";
 import { emoji_voice } from "./emoji_voice.mjs";
-import { app_reply_response_how_r_u_skip_first_upper } from "./app_reply_response_how_r_u_skip_first_upper.mjs";
+import { reply_response_how_r_u_skip_first_upper } from "./reply_response_how_r_u_skip_first_upper.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
 import { reply_choices_name } from "./reply_choices_name.mjs";
@@ -81,7 +81,7 @@ export function app_reply_choices() {
     "With",
     text_combine("always be with you! ", emoji_dove()),
   );
-  app_reply_response_how_r_u_skip_first_upper();
+  reply_response_how_r_u_skip_first_upper();
   ({
     text: text_combine(emoji_pray(), " Bless"),
     response: prayer_blessing_expand(),
