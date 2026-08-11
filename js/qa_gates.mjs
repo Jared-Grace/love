@@ -1,3 +1,4 @@
+import { apps_prod_chunks_missing_gate_run } from "./apps_prod_chunks_missing_gate_run.mjs";
 import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run.mjs";
 import { functions_calls_unawaited_gate_run } from "./functions_calls_unawaited_gate_run.mjs";
 import { functions_unreachable_statements_gate_run } from "./functions_unreachable_statements_gate_run.mjs";
