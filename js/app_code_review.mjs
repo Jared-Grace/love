@@ -1,3 +1,4 @@
+import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
@@ -14,7 +15,6 @@ import { list_remove_at } from "./list_remove_at.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { add_1 } from "./add_1.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -79,14 +79,7 @@ export function app_code_review(context) {
   async function go_next() {
     await go_to_lesson(next_lesson);
   }
-  function persist() {
-    let state = {
-      passed,
-      seeds: queue,
-    };
-    storage_local_set_context(context, key, state);
-  }
-  persist();
+  app_code_review_persist(context, key);
   let back = app_shared_button_back_text();
   let back_button = app_shared_button_wide_text_combine(
     g,
@@ -156,7 +149,7 @@ export function app_code_review(context) {
         let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
         list_add(queue, requeued);
       }
-      persist();
+      app_code_review_persist(context, key);
       present();
     }
     function on_incorrect() {
