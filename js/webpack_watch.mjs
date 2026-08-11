@@ -1,3 +1,4 @@
+import { webpack_watch_affected_get } from "./webpack_watch_affected_get.mjs";
 import { webpack_watch_build_run } from "./webpack_watch_build_run.mjs";
 import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -60,16 +61,6 @@ export async function webpack_watch() {
     let a_name = property_get(ad, "a_name");
     return a_name;
   }
-  function affected_get(f_name) {
-    function lambda(ad) {
-      let deps = property_get(ad, "deps");
-      let match = deps.includes(f_name);
-      return match;
-    }
-    let matched = list_filter(app_deps, lambda);
-    let names = list_map(matched, a_name_of);
-    return names;
-  }
   async function deps_refresh(a_name) {
     "re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart";
     let ad = list_find_property_or_null(app_deps, "a_name", a_name);
@@ -105,7 +96,7 @@ export async function webpack_watch() {
   }
   function on_change(path) {
     let f_name = path_name(path);
-    let affected = affected_get(f_name);
+    let affected = webpack_watch_affected_get(f_name, app_deps, a_name_of);
     list_map(affected, build_schedule);
   }
   watcher.on("change", on_change).on("add", on_change);
