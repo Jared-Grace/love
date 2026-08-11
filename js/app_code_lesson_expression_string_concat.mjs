@@ -1,7 +1,7 @@
+import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
 import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
@@ -9,7 +9,6 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -22,15 +21,9 @@ import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_string_concat() {
   "the third string lesson - concatenation: a plus between two strings combines them into one, and the value is the two texts run together with no quotes and no space. The learner meets the plus doing something different than it does for numbers; the words are drawn from the shared verse so they carry meaning, and the two examples come from distinct words.";
-  function pair() {
-    "two DIFFERENT words from the shared verse - the verse repeats some words (that appears twice), so the list is made unique first, otherwise a pair could be one word joined to itself and the reversed-order decoy would equal the answer";
-    let distinct = app_code_verse_words_clean_unique();
-    let two = list_shuffle_take(distinct, 2);
-    return two;
-  }
   function pair_code(index) {
     "one question: the two words each in quotes, joined by a plus, as a code string";
-    let two = pair();
+    let two = app_code_lesson_expression_string_concat_pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let code_a = app_code_string_code(a);
@@ -70,7 +63,7 @@ export function app_code_lesson_expression_string_concat() {
   return lesson;
   function above(root) {
     "anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.";
-    let two = pair();
+    let two = app_code_lesson_expression_string_concat_pair();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let code_a = app_code_string_code(a);
