@@ -1,3 +1,4 @@
+import { git_commit_full } from "./git_commit_full.mjs";
 import { file_json_transform_initialize } from "./file_json_transform_initialize.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -24,19 +25,19 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
     };
     return r;
   }
-  let folder = await qa_snapshot_ensure(commit);
+  let folder = await qa_snapshot_ensure(named);
   let told = await qa_snapshot_gate_told(folder);
   let kept = await judge(told);
-  known[commit] = kept;
+  known[named] = kept;
   ("The record is read again here, a moment before it is written, rather than the copy taken at the start being handed back. Judging takes about a quarter of an hour and ten of us share the one folder, so that copy is a picture of the record as it stood fifteen minutes ago - and writing it back put every entry written in the meantime out of existence. Two of us judging at once meant the slower one silently erased the faster one's quarter of an hour, and a run of the forgetting command during a judging was undone by it.");
   ("This does not make the writing indivisible and is not meant to. Reading and writing back is still two steps and two of us could still land inside the gap between them; what closes is the gap itself, from fifteen minutes down to the moment it takes to read one small file. Only this run's own commit is added, so nothing else in the record is ever this run's to write.");
   ("The reading and the writing back are one named step rather than two written here, because that step is where the shortness of the gap lives - anything that wants to keep it short should be changing one function and not every place a record is kept.");
   function entry_add(record) {
-    record[commit] = kept;
+    record[named] = kept;
   }
   await file_json_transform_initialize(path, {}, entry_add);
   let r2 = {
-    commit,
+    commit: named,
     remembered: false,
     kept,
   };
