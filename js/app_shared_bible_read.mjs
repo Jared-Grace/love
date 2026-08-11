@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
@@ -188,11 +189,6 @@ export async function app_shared_bible_read(context, verse_action) {
   let languages_verses = [];
   let updates = [];
   let verse_rows = [];
-  function persist_selection() {
-    let v = list_join(verse_numbers_chosen, "-");
-    let property_name = app_shared_bible_verse_hash_key();
-    html_hash_property_set(property_name, v);
-  }
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
@@ -258,7 +254,7 @@ export async function app_shared_bible_read(context, verse_action) {
     let select = property_get(r, "select");
     function select_persist() {
       select();
-      persist_selection();
+      app_shared_bible_read_persist_selection(verse_numbers_chosen);
       dismiss_help();
       app_shared_bible_read_count_refresh(
         verse_numbers_chosen,
@@ -352,4 +348,10 @@ export async function app_shared_bible_read(context, verse_action) {
     }
   }
   promise_later(resume);
+}
+function app_shared_bible_read_persist_selection(verse_numbers_chosen) {
+  arguments_assert(arguments, 1);
+  let v = list_join(verse_numbers_chosen, "-");
+  let property_name = app_shared_bible_verse_hash_key();
+  html_hash_property_set(property_name, v);
 }
