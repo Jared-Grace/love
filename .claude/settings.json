@@ -991,6 +991,8 @@
       "Bash(node scripts/ai.mjs app_g_day_guide_window_check:*)",
       "Bash(node scripts/ai.mjs functions_app_specific_imports_baseline_path:*)",
       "Bash(node scripts/ai.mjs html_code:*)",
+      "Bash(node scripts/ai.mjs qa_gates_dealt_gate_run:*)",
+      "Bash(node scripts/ai.mjs commits_function_nested_lift:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1905,6 +1907,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_g_day_guide_window_check:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args functions_app_specific_imports_baseline_path:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args html_code:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args qa_gates_dealt_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args commits_function_nested_lift:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2818,6 +2822,8 @@
       "Bash(node scripts/aig.mjs app_g_day_guide_window_check:*)",
       "Bash(node scripts/aig.mjs functions_app_specific_imports_baseline_path:*)",
       "Bash(node scripts/aig.mjs html_code:*)",
+      "Bash(node scripts/aig.mjs qa_gates_dealt_gate_run:*)",
+      "Bash(node scripts/aig.mjs commits_function_nested_lift:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3731,7 +3737,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args functions_app_import_advice_report:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_g_day_guide_window_check:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args functions_app_specific_imports_baseline_path:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args html_code:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args html_code:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_gates_dealt_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args commits_function_nested_lift:*)"
     ],
     "defaultMode": "acceptEdits"
   },
