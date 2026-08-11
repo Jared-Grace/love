@@ -1,5 +1,5 @@
+import { week_calendar_render_summary } from "./week_calendar_render_summary.mjs";
 import { week_calendar_day_cell } from "./week_calendar_day_cell.mjs";
-import { week_calendar_summary_empty } from "./week_calendar_summary_empty.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
@@ -18,7 +18,6 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
@@ -27,7 +26,6 @@ import { week_range_label } from "./week_range_label.mjs";
 import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
@@ -92,18 +90,9 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     let text = week_range_label(span);
     app_shared_text_body(summary, text);
   }
-  function render_summary() {
-    html_clear(summary);
-    let has = list_empty_not_is(ranges);
-    if (has) {
-      each(ranges, summary_line);
-    } else {
-      week_calendar_summary_empty(summary);
-    }
-  }
   function paint() {
     each(records, paint_record);
-    render_summary();
+    week_calendar_render_summary(summary, ranges, summary_line);
   }
   function range_add(day, a, b) {
     let start = math_min(a, b);
