@@ -1,3 +1,4 @@
+import { week_calendar_day_cell } from "./week_calendar_day_cell.mjs";
 import { week_calendar_summary_empty } from "./week_calendar_summary_empty.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
@@ -5,7 +6,6 @@ import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { date_weekday_short } from "./date_weekday_short.mjs";
 import { date_month_day } from "./date_month_day.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,7 +20,6 @@ import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { slot_hour_label } from "./slot_hour_label.mjs";
@@ -81,27 +80,9 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       padding: "0 0.4rem",
     });
     function day_of_slot(day) {
-      day_cell(day, slot);
+      week_calendar_day_cell(day, slot, grid, cell_pressed, records);
     }
     each(days, day_of_slot);
-  }
-  function day_cell(day, slot) {
-    let cell = html_div(grid);
-    let c = app_shared_color_gray_light();
-    html_style_assign(cell, {
-      height: "1.9rem",
-      border: `1px solid ${c}`,
-      "box-sizing": "border-box",
-    });
-    function on_press() {
-      cell_pressed(day, slot);
-    }
-    html_on_click(cell, on_press);
-    list_add(records, {
-      day: day,
-      slot: slot,
-      element: cell,
-    });
   }
   function paint_record(record) {
     let color = week_calendar_record_color(record, anchor, ranges);
