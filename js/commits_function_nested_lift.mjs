@@ -4,7 +4,7 @@ import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_lines } from "./text_lines.mjs";
+import { text_split_new_line } from "./text_split_new_line.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -18,7 +18,7 @@ export async function commits_function_nested_lift(folder) {
   let grep = text_combine_multiple(["--grep=", marker]);
   let words = ["log", "--all", "--format=%H %s", grep];
   let text = await git_folder_run(folder, words);
-  let lines = text_lines(text);
+  let lines = text_split_new_line(text);
   let lifts = [];
   for (let line of lines) {
     let parts = text_split_space(line);
@@ -27,7 +27,8 @@ export async function commits_function_nested_lift(folder) {
     if (not(shaped)) {
       continue;
     }
-    let named = equal(list_get(parts, 1), marker);
+    let left = list_get(parts, 1);
+    let named = equal(left, marker);
     if (not(named)) {
       continue;
     }
