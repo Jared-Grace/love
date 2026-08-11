@@ -36,7 +36,7 @@ import { reply_choices_location } from "./reply_choices_location.mjs";
 import { reply_choices_give } from "./reply_choices_give.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { reply_response_greetings } from "./reply_response_greetings.mjs";
-import { app_reply_response_how_r_u } from "./app_reply_response_how_r_u.mjs";
+import { reply_response_how_r_u } from "./reply_response_how_r_u.mjs";
 import { emoji_handshake } from "./emoji_handshake.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_rainbow } from "./emoji_rainbow.mjs";
@@ -87,7 +87,7 @@ export function app_reply_choices() {
     response: prayer_blessing_expand(),
   });
   let greetings = reply_response_greetings();
-  let hru = app_reply_response_how_r_u();
+  let hru = reply_response_how_r_u();
   let hru_today = reply_response_how_r_u_today();
   let how_family = app_reply_response_how_family();
   let how_day = app_reply_response_how_day();
