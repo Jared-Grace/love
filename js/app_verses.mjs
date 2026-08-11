@@ -1,3 +1,4 @@
+import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
 import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
 import { app_verses_order_standalone_first } from "./app_verses_order_standalone_first.mjs";
@@ -42,7 +43,6 @@ import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { list_take } from "./list_take.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -113,7 +113,7 @@ export async function app_verses(context) {
     async function on_click() {
       verse_count = c;
       counts_refresh();
-      await draw_fresh(false);
+      await app_verses_draw_fresh(false, order, verse_count, references_show);
     }
     component = app_shared_button(card, c, on_click);
     function update() {
@@ -188,13 +188,6 @@ export async function app_verses(context) {
     }
     return false;
   }
-  async function draw_fresh(copy_after) {
-    "changing the count — or tapping New verses — draws a brand-new set of that many verses: a fresh shuffle every time, so the verses always refresh rather than the count only adding to or trimming what was already there";
-    list_shuffle(order);
-    app_verses_order_standalone_first(order);
-    let references = list_take(order, verse_count);
-    await references_show(references, copy_after);
-  }
   async function references_show(references, copy_after) {
     apply_seq = apply_seq + 1;
     let my_seq = apply_seq;
@@ -224,7 +217,7 @@ export async function app_verses(context) {
     }
   }
   async function reroll() {
-    await draw_fresh(true);
+    await app_verses_draw_fresh(true, order, verse_count, references_show);
   }
   function display() {
     html_clear(card4);
