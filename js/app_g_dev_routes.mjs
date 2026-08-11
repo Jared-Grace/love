@@ -61,12 +61,11 @@ export function app_g_dev_routes(div_map) {
     let full = g_conversation_generate(pronouns);
     let turns = property_get(full, "turns");
     let gospel = list_get(turns, 0);
-    let quick_conversation = {
-      turns: [gospel],
-      converts: true,
-    };
+    ("the conversation the game generated is NARROWED here, never rebuilt. it used to be replaced with a fresh object spelling out the two fields this route cares about, which made this the second place that knew what a conversation is made of - so a field the generator started adding was simply absent here, and the screen under test was one the game could no longer produce.");
+    property_set(full, "turns", [gospel]);
+    property_set(full, "converts", true);
     let key = g_conversation_key();
-    property_set(npc, key, quick_conversation);
+    property_set(npc, key, full);
     let phase = app_g_view_phase_conversation();
     await app_g_dev_routes_npc_view_of(npc, phase);
   }
