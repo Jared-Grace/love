@@ -26,10 +26,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
-  let preaching = list_join_space([
-    "The player is answering from ",
-    chapter_code,
-  ]);
+  let preaching = list_join_space(["The player is answering from", chapter_code]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
   let joined6 = list_join_space([
