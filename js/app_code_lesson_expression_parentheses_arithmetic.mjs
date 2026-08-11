@@ -1,5 +1,5 @@
+import { app_code_lesson_expression_parentheses_arithmetic_group } from "./app_code_lesson_expression_parentheses_arithmetic_group.mjs";
 import { ternary } from "./ternary.mjs";
-import { equal } from "./equal.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -14,7 +14,6 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_to } from "./text_to.mjs";
@@ -59,26 +58,9 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
-  function group() {
-    "a small + or - inside ( and ); for - the first number is the larger one, so the group is never negative";
-    let plus = js_operator_plus_symbol();
-    let minus = js_operator_minus_symbol();
-    let symbol = list_random_item([plus, minus]);
-    let high = integer_random(5, 9);
-    let low = integer_random(2, 4);
-    let adding = equal(symbol, plus);
-    let first = ternary(adding, low, high);
-    let second = ternary(adding, high, low);
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let t = text_to(first);
-    let t2 = text_to(second);
-    let code = text_combine_multiple([open, t, " ", symbol, " ", t2, close]);
-    return code;
-  }
   function expression(group_first) {
     "the group times a number, with the group on the left when group_first and on the right otherwise";
-    let inner = group();
+    let inner = app_code_lesson_expression_parentheses_arithmetic_group();
     let input = integer_random(2, 5);
     let outer = text_to(input);
     let times = js_operator_asterisk_symbol();
@@ -162,20 +144,20 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     ]);
     html_div_cycle_code(either, [
       "",
-      "3 * (2 + 1)",
+      "4 * (2 + 3)",
       " does the ",
-      "2 + 1",
+      "2 + 3",
       " first",
     ]);
     html_div_cycle_code(either, [
       "",
-      "2 + 1",
+      "2 + 3",
       " is ",
-      "3",
+      "5",
       ", so we have ",
-      "3 * 3",
+      "4 * 5",
     ]);
-    html_div_cycle_code(either, ["So ", "3 * (2 + 1)", " is ", "9"]);
+    html_div_cycle_code(either, ["So ", "4 * (2 + 3)", " is ", "20"]);
     let rule = app_code_container_light_blue(root);
     html_div_cycle_code(rule, [
       "Whatever is inside ",
