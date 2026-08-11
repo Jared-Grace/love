@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { availability_editor_render_preview } from "./availability_editor_render_preview.mjs";
 import { availability_editor_highlight } from "./availability_editor_highlight.mjs";
 import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
@@ -55,10 +56,34 @@ export function availability_editor(parent) {
   let grid_holder = html_div(parent);
   let panel = app_shared_container_blue(parent);
   html_div_text(panel, "Repeat these times");
-  add_button("daily", "Daily");
-  add_button("weekly", "Weekly");
-  add_button("monthly", "Monthly");
-  add_button("once", "One time");
+  availability_editor_add_button(
+    "daily",
+    "Daily",
+    choose,
+    panel,
+    button_records,
+  );
+  availability_editor_add_button(
+    "weekly",
+    "Weekly",
+    choose,
+    panel,
+    button_records,
+  );
+  availability_editor_add_button(
+    "monthly",
+    "Monthly",
+    choose,
+    panel,
+    button_records,
+  );
+  availability_editor_add_button(
+    "once",
+    "One time",
+    choose,
+    panel,
+    button_records,
+  );
   let preview_heading = html_div_text(parent, "Busy times you'll add");
   html_style_assign(preview_heading, {
     "font-weight": "bold",
@@ -91,16 +116,6 @@ export function availability_editor(parent) {
       availability_editor_render_preview(preview, ranges, chosen, line);
     }
   }
-  function add_button(kind, text) {
-    function on_click() {
-      choose(kind);
-    }
-    let element = app_shared_button(panel, text, on_click);
-    list_add(button_records, {
-      kind: kind,
-      element: element,
-    });
-  }
   function choose(kind) {
     chosen = kind;
     availability_editor_highlight(chosen, button_records);
@@ -111,4 +126,21 @@ export function availability_editor(parent) {
     let text = busy_item_label(item);
     app_shared_text_body(preview, text);
   }
+}
+function availability_editor_add_button(
+  kind,
+  text,
+  choose,
+  panel,
+  button_records,
+) {
+  arguments_assert(arguments, 5);
+  function on_click() {
+    choose(kind);
+  }
+  let element = app_shared_button(panel, text, on_click);
+  list_add(button_records, {
+    kind: kind,
+    element: element,
+  });
 }
