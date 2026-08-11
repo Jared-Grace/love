@@ -1,3 +1,4 @@
+import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
 import { app_code_lesson_expression_parentheses_moved_arrange } from "./app_code_lesson_expression_parentheses_moved_arrange.mjs";
 import { text_replace } from "./text_replace.mjs";
@@ -67,12 +68,13 @@ export function app_code_lesson_expression_parentheses_moved() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let idea = app_code_container_light_blue(root);
+    let r = app_code_parentheses_inside_before_outside("");
     html_div_cycle_code(idea, [
       "Remember: whatever is inside ",
       open,
       " and ",
       close,
-      " is solved first",
+      r,
     ]);
     html_div_cycle_code(idea, [
       "The same numbers can have the ",
