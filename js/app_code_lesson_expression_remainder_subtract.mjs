@@ -1,5 +1,5 @@
+import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
 import { app_code_lesson_expression_remainder_subtract_subtract_code } from "./app_code_lesson_expression_remainder_subtract_subtract_code.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
@@ -12,8 +12,6 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div } from "./html_div.mjs";
@@ -46,7 +44,8 @@ export function app_code_lesson_expression_remainder_subtract() {
     let pairs = list_map(divisors, to_pair);
     return pairs;
   }
-  let name_id = title_name_id();
+  let name_id =
+    app_code_lesson_expression_remainder_subtract_title_name_id(percent);
   let example_question_label = app_code_label_code_question();
   let forwards = {
     question_label: example_question_label,
@@ -79,21 +78,6 @@ export function app_code_lesson_expression_remainder_subtract() {
     html_div_text_code_dark,
   );
   return lesson;
-  function title_name_id() {
-    "the home title is console.log remainder by subtracting %";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Remainder by subtracting ");
-        html_span_text_code_dark(parent, percent);
-      }
-      return render;
-    }
-    let rights = ["remainder by subtracting"];
-    let left = app_code_category_operators();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function above(root) {
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, [
