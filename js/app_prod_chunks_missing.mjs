@@ -21,7 +21,8 @@ export async function app_prod_chunks_missing(app_name) {
   let source_name = file_name_js(app_name);
   let scriptless = list_includes_not(present, source_name);
   if (scriptless) {
-    return [];
+    let r = [];
+    return r;
   }
   let path = path_join([folder, source_name]);
   let text = await file_read(path);
