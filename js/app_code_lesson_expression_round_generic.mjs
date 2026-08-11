@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 import { app_code_lesson_expression_round_generic_title_name_id } from "./app_code_lesson_expression_round_generic_title_name_id.mjs";
 import { app_code_between_two_wholes } from "./app_code_between_two_wholes.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -35,11 +36,6 @@ export function app_code_lesson_expression_round_generic(params) {
     superlative = "bigger";
     preposition = "above";
   }
-  function code(inner) {
-    "the rounding call on inner as a code string";
-    let combined = text_combine_multiple([called_name, "(", inner, ")"]);
-    return combined;
-  }
   function make(whole, index) {
     "alternate down the batch, the DECIMAL first because rounding is the main use: even positions are a decimal to round, odd positions are an already-whole number (nothing to round) - so the batch leads with the main rounding case and still drills the no-change edge case";
     let decimal_question = integer_even_is(index);
@@ -52,7 +48,7 @@ export function app_code_lesson_expression_round_generic(params) {
     } else {
       inner = text_to(whole);
     }
-    let r = code(inner);
+    let r = app_code_lesson_expression_round_generic_code(inner, called_name);
     return r;
   }
   function refill() {
@@ -157,9 +153,12 @@ export function app_code_lesson_expression_round_generic(params) {
       chosen_whole,
       chooses_suffix,
     ]);
-    let v = code(decimal);
+    let v = app_code_lesson_expression_round_generic_code(decimal, called_name);
     html_div_cycle_code(rounds, ["", v, " is ", chosen_whole]);
-    let v2 = code(extreme_decimal);
+    let v2 = app_code_lesson_expression_round_generic_code(
+      extreme_decimal,
+      called_name,
+    );
     html_div_cycle_code(rounds, [
       "",
       v2,
@@ -185,7 +184,10 @@ export function app_code_lesson_expression_round_generic(params) {
       called_name,
       " does not change a number that is already whole",
     ]);
-    let v3 = code(whole_stays);
+    let v3 = app_code_lesson_expression_round_generic_code(
+      whole_stays,
+      called_name,
+    );
     html_div_cycle_code(whole_para, ["For example, ", v3, " is ", whole_stays]);
   }
 }
