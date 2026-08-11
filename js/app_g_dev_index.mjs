@@ -1,15 +1,13 @@
+import { app_g_dev_index_leaf_card } from "./app_g_dev_index_leaf_card.mjs";
 import { app_g_dev_index_index_card } from "./app_g_dev_index_index_card.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
-import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_a_href_text } from "./html_a_href_text.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_block } from "./html_display_block.mjs";
@@ -53,26 +51,10 @@ export function app_g_dev_index() {
     let v2 = json_to([...open_paths]);
     sessionStorage.setItem(open_key, v2);
   }
-  function leaf_card(parent, label, hash) {
-    let card = app_g_dev_index_index_card(parent);
-    let href = "#" + hash;
-    let link = html_a_href_text(card, href, label);
-    ("the address stays on the anchor so the card can still be copied or opened in a new tab, but the going-there is done by hand: a bare href only changes the hash and waits for a listener to reload, and that listener is registered while the app starts up, so a start-up that fails takes every card on this page with it");
-    function go() {
-      html_hash_name_reload(hash);
-    }
-    html_on_click(link, go);
-    html_display_block(link);
-    html_style_assign(link, {
-      color: "inherit",
-      "text-decoration": "none",
-    });
-    return card;
-  }
   function render_node(parent, path, label, node) {
     let child_labels = object_property_names(node.children).sort();
     if (equal(child_labels.length, 0)) {
-      leaf_card(parent, label, node.hash);
+      app_g_dev_index_leaf_card(parent, label, node.hash);
       return;
     }
     let card = app_g_dev_index_index_card(parent);
@@ -100,7 +82,7 @@ export function app_g_dev_index() {
     }
     html_on_click(header, toggle);
     if (node.hash) {
-      leaf_card(body, "→ " + label, node.hash);
+      app_g_dev_index_leaf_card(body, "→ " + label, node.hash);
     }
     for (let cl of child_labels) {
       render_node(body, path + "/" + cl, cl, node.children[cl]);
