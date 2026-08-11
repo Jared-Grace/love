@@ -7,7 +7,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_shared_bible_picker_card(parent, title_text) {
   "the card a bible picker puts its choices in, headed by what they are choices of; the caller draws into the card itself rather than into a body under the heading, because the verse picker heads the same card twice - once with the book and once with the chapter";
   "one function rather than the card built again beside each picker, so the chapter picker on its own screen and the one the whole-chapter reader draws in place cannot drift into two looks";
-  ("hold the choices in a medium-blue card, matching the book picker's section cards");
+  "hold the choices in a medium-blue card, matching the book picker's section cards";
   let card = app_shared_container_blue_medium(parent);
   ("trim the card's left-right padding to match the book-section cards, giving the number buttons more of the row width");
   let pad_x = app_shared_spaced_tiny_gap();
