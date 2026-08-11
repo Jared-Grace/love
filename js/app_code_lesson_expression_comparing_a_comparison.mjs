@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_naming } from "./app_code_lesson_expression_comparing_a_comparison_naming.mjs";
+import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   }
   function above(root) {
     "first what the word comparison names, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the replacing rule, then two lines walked through a replacement at a time";
-    app_code_lesson_expression_comparing_a_comparison_naming(root);
+    app_code_lesson_expression_comparing_a_comparison_recall(root);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
