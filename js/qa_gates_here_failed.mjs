@@ -1,6 +1,6 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { qa_gates_named } from "./qa_gates_named.mjs";
-import { list_map_async } from "./list_map_async.mjs";
 import { qa_gate_result } from "./qa_gate_result.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_and_empty_not_is } from "./text_and_empty_not_is.mjs";
@@ -10,9 +10,10 @@ export async function qa_gates_here_failed(names_comma) {
   "The run freezes the folder first, and the second ask it already makes is put to that same frozen copy - so a gate that went red because the copy itself was taken mid-write answers exactly the same way when asked again, and reads as a real fault. Several of us write to this one folder continuously, so the copy is torn often enough that a red naming a different gate each time is the ordinary case rather than a strange one. Asking here is the only ask that can tell the two apart.";
   "A gate still red here is yours to fix. A gate quiet here was either a tear in the copy or a fault somebody has since fixed, and either way there is nothing left to do about it.";
   "This says nothing about the gates that were green. A green from a torn copy is worth no more than a red from one, and confirming a red is the cheap half; confirming a green means running everything again, which is the run you already did.";
+  "They are asked all at once rather than one after another, which is what the first run already does with the whole list in each of its shares - so this is the same gates run the same way, and nothing here was relying on one finishing before the next began. Asked in turn, twenty reds meant twenty full readings of the repo back to back, and that was measured taking longer than the entire first run it was checking. What is printed below is still in the order the names arrived, because the printing happens after all the answers are in.";
   let names = text_split_comma(names_comma);
   let gates = qa_gates_named(names);
-  let results = await list_map_async(gates, qa_gate_result);
+  let results = await list_map_unordered_async(gates, qa_gate_result);
   let failed = [];
   for (let result of results) {
     let name = property_get(result, "name");

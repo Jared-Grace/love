@@ -4,7 +4,7 @@ import { list_all } from "./list_all.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { html_focus } from "./html_focus.mjs";
-import { app_karate_validate_style_assign } from "../../karate_code/js/app_karate_validate_style_assign.mjs";
+import { app_shared_validate_style_assign } from "./app_shared_validate_style_assign.mjs";
 import { each } from "./each.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { not } from "./not.mjs";
@@ -18,7 +18,7 @@ import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_element } from "./html_element.mjs";
 import { app_karate_style_control_border } from "./app_karate_style_control_border.mjs";
-import { app_karate_green_dark } from "../../karate_code/js/app_karate_green_dark.mjs";
+import { app_shared_validate_border_color } from "./app_shared_validate_border_color.mjs";
 import { app_shared_style_control } from "./app_shared_style_control.mjs";
 import { true_is } from "./true_is.mjs";
 export function app_karate_screen_input_validate(
@@ -33,7 +33,7 @@ export function app_karate_screen_input_validate(
   });
   function lambda2(input) {
     app_shared_style_control(input);
-    let border_color = app_karate_green_dark();
+    let border_color = app_shared_validate_border_color();
     app_karate_style_control_border(input, border_color);
     let ul = html_element(div_checks, "ul");
     property_set(input, "ul", ul);
@@ -46,7 +46,7 @@ export function app_karate_screen_input_validate(
     each(inputs, validate_input);
     let mapped = list_map(inputs, validate_input);
     let valid_all = list_all(mapped, true_is);
-    app_karate_validate_style_assign(valid_all, [div], null, button_below);
+    app_shared_validate_style_assign(valid_all, [div], null, button_below);
   }
   each(inputs, lambda2);
   function validate_input(input) {
@@ -67,7 +67,7 @@ export function app_karate_screen_input_validate(
       }
     }
     each(checks, lambda);
-    app_karate_validate_style_assign(valid, [div], input, null);
+    app_shared_validate_style_assign(valid, [div], input, null);
     return valid;
   }
   let first = list_first(inputs);
