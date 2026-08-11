@@ -903,7 +903,7 @@ export function permission_grant_names() {
   let spelled890 = fn_name("app_shared_bible_book_hash_key");
   let spelled891 = fn_name("g_sermon_chapters_written");
   let spelled892 = fn_name("git_head_commit");
-  let spelled893 = fn_name("g_arc_prompt_sandbox");
+  let spelled893 = fn_name("g_arc_prompt_chapter");
   let spelled894 = fn_name("function_app_import_verdict");
   let spelled895 = fn_name("functions_app_import_verdicts");
   let spelled896 = fn_name("storage_browser_doors");
