@@ -1,3 +1,4 @@
+import { app_g_view_render_study_render_thank_gate } from "./app_g_view_render_study_render_thank_gate.mjs";
 import { app_g_view_render_study_style_word } from "./app_g_view_render_study_style_word.mjs";
 import { app_g_view_render_study_style_completed } from "./app_g_view_render_study_style_completed.mjs";
 import { app_g_view_render_study_style_next } from "./app_g_view_render_study_style_next.mjs";
@@ -17,7 +18,6 @@ import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_prayer_study_overlay } from "./app_g_prayer_study_overlay.mjs";
 import { g_prayer_study_before } from "./g_prayer_study_before.mjs";
-import { g_prayer_study_after } from "./g_prayer_study_after.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
@@ -91,17 +91,6 @@ export async function app_g_view_render_study(div_map) {
     let label = text_combine(left4, " Pray and study");
     app_g_button_green(container, label, begin);
   }
-  function render_thank_gate() {
-    persist_cancel();
-    html_clear(container);
-    function thank() {
-      let prayer2 = g_prayer_study_after();
-      app_g_prayer_study_overlay(prayer2, close);
-    }
-    let left5 = emoji_pray();
-    let label = text_combine(left5, " Thank God, then finish");
-    app_g_button_green(container, label, thank);
-  }
   function render_words() {
     html_clear(container);
     let bar_div = html_div(container);
@@ -119,7 +108,11 @@ export async function app_g_view_render_study(div_map) {
         app_g_view_render_study_update_bar(bar_div, current, words);
         let done = greater_than_equal(current, words.length);
         if (done) {
-          render_thank_gate();
+          app_g_view_render_study_render_thank_gate(
+            persist_cancel,
+            container,
+            close,
+          );
           return;
         }
         app_g_view_render_study_style_next(word_bs[current]);
