@@ -1,3 +1,4 @@
+import { app_verses_counts_refresh } from "./app_verses_counts_refresh.mjs";
 import { app_verses_display } from "./app_verses_display.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
@@ -112,7 +113,7 @@ export async function app_verses(context) {
     let component = null;
     async function on_click() {
       verse_count = c;
-      counts_refresh();
+      app_verses_counts_refresh(count_updates, count_update_invoke);
       await app_verses_draw_fresh(false, order, verse_count, references_show);
     }
     component = app_shared_button(card, c, on_click);
@@ -149,12 +150,9 @@ export async function app_verses(context) {
       return;
     }
     verse_count = property_get(saved, "count");
-    counts_refresh();
+    app_verses_counts_refresh(count_updates, count_update_invoke);
     let saved_references = property_get(saved, "references");
     await references_show(saved_references, false);
-  }
-  function counts_refresh() {
-    each(count_updates, count_update_invoke);
   }
   function count_update_invoke(update) {
     update();
