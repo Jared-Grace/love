@@ -25,5 +25,10 @@ export async function app_shared_bible_chapters_render(
     on_open,
   );
   app_shared_bible_picker_buttons_enlarge(buttons);
+  app_shared_bible_picker_buttons_equal_width(
+    buttons,
+    items,
+    code_to_button_text,
+  );
   app_shared_bible_picker_mark_current(buttons, items, current_chapter_code);
 }
