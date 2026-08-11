@@ -1,3 +1,4 @@
+import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
 import { app_g_verify_view_panel_flush } from "./app_g_verify_view_panel_flush.mjs";
@@ -95,22 +96,6 @@ export async function app_g_verify_view(
     }
     order_comps.forEach(lambda4);
   }
-  function highlight_lines(li_list) {
-    clear_all();
-    function lambda6(li) {
-      function lambda5(i) {
-        html_style_background_color_set(token_spans[i], highlight);
-      }
-      property_get(lines[li], "indices").forEach(lambda5);
-      if (row_comps[li]) {
-        html_style_background_color_set(row_comps[li], highlight);
-      }
-      if (order_comps[li]) {
-        html_style_background_color_set(order_comps[li], highlight);
-      }
-    }
-    li_list.forEach(lambda6);
-  }
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   let value7 = app_g_verify_passage_font_size();
@@ -139,7 +124,15 @@ export async function app_g_verify_view(
         }
       }
       lines.forEach(lambda7);
-      highlight_lines(lis);
+      app_g_verify_view_highlight_lines(
+        lis,
+        clear_all,
+        token_spans,
+        highlight,
+        lines,
+        row_comps,
+        order_comps,
+      );
     }
     html_on(span, "mouseenter", lambda8);
     html_on(span, "mouseleave", clear_all);
@@ -178,7 +171,15 @@ export async function app_g_verify_view(
     let text = property_get(l, "text");
     html_span_text(row, text);
     function lambda13() {
-      highlight_lines([li]);
+      app_g_verify_view_highlight_lines(
+        [li],
+        clear_all,
+        token_spans,
+        highlight,
+        lines,
+        row_comps,
+        order_comps,
+      );
     }
     html_on(row, "mouseenter", lambda13);
     html_on(row, "mouseleave", clear_all);
@@ -198,7 +199,15 @@ export async function app_g_verify_view(
     let text3 = property_get(l, "text");
     html_span_text(row, text3);
     function lambda15() {
-      highlight_lines([li]);
+      app_g_verify_view_highlight_lines(
+        [li],
+        clear_all,
+        token_spans,
+        highlight,
+        lines,
+        row_comps,
+        order_comps,
+      );
     }
     html_on(row, "mouseenter", lambda15);
     html_on(row, "mouseleave", clear_all);
