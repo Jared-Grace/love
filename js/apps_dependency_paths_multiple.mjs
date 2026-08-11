@@ -1,5 +1,5 @@
 import { text_split_comma } from "./text_split_comma.mjs";
-import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
+import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { function_dependency_path } from "./function_dependency_path.mjs";
 import { function_browser_guarded_is } from "./function_browser_guarded_is.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -12,7 +12,7 @@ export async function apps_dependency_paths_multiple(targets_comma) {
   "Which apps can reach each of these functions, by what route, and where on that route someone remembered to ask about the browser. An app reaching a Node-only function is only a fault when nothing along the way guards it, so the route and its guards are the answer rather than the yes or no.";
   "Every app is asked about every target in one call, because the finding that matters is which apps differ - one app reaching it and its neighbour not is what says the reach was accidental.";
   let targets = text_split_comma(targets_comma);
-  let mains = app_apps_all_main_fns();
+  let mains = apps_all_main_fns();
   let found = [];
   for (let target of targets) {
     for (let main of mains) {
