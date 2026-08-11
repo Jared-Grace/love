@@ -14,17 +14,34 @@ export async function qa_apps_prod_chunks_missing_deploy(commit) {
   await ai_git_noted();
   let faulty = await apps_prod_chunks_missing();
   let sent = [];
+  let refused = [];
   for (let r of faulty) {
     let app_name = property_get(r, "app_name");
-    let one = await function_call_commit(qa_app_commit_deploy, [
+    async function lambda() {
+      let one = await function_call_commit(qa_app_commit_deploy, [
+        app_name,
+        commit,
+      ]);
+      return one;
+    }
+    let outcome = await catch_message_async(lambda);
+    let ok = property_get(outcome, "ok");
+    if (ok) {
+      let value = property_get(outcome, "value");
+      sent.push(value);
+      continue;
+    }
+    let message = property_get(outcome, "message");
+    let turned_away = {
       app_name,
-      commit,
-    ]);
-    sent.push(one);
+      message,
+    };
+    refused.push(turned_away);
   }
   let remaining = await apps_prod_chunks_missing();
   let result = {
     sent,
+    refused,
     remaining,
   };
   return result;
