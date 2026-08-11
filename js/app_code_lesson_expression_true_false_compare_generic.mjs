@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_true_false_compare_generic_keyword } from "./app_code_lesson_expression_true_false_compare_generic_keyword.mjs";
 import { app_code_lesson_expression_true_false_compare_generic_title_name_id } from "./app_code_lesson_expression_true_false_compare_generic_title_name_id.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -16,7 +17,6 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_true_false_compare_generic(
   operator,
@@ -50,13 +50,6 @@ export function app_code_lesson_expression_true_false_compare_generic(
   });
   property_set(lesson, "examples_complete", true);
   return lesson;
-  function keyword(value) {
-    "the code word for a true or false value";
-    let on_true = js_keyword_true();
-    let on_false = js_keyword_false();
-    let word = ternary(value, on_true, on_false);
-    return word;
-  }
   function combinations() {
     "the four ways two true/false values can sit either side of the operator, enumerated rather than ordered for showing: the left word true for the first two and false for the last two, the right word changing every line, so no possibility can be missing without leaving a visible gap. What order they are shown in is decided by combinations_ordered";
     let list = [
@@ -83,8 +76,10 @@ export function app_code_lesson_expression_true_false_compare_generic(
     "one combination written out with this lesson's operator between the two words";
     let left = property_get(combination, "left");
     let right = property_get(combination, "right");
-    let left_code = keyword(left);
-    let right_code = keyword(right);
+    let left_code =
+      app_code_lesson_expression_true_false_compare_generic_keyword(left);
+    let right_code =
+      app_code_lesson_expression_true_false_compare_generic_keyword(right);
     let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
     return code;
   }
