@@ -1,3 +1,6 @@
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
+import { qa_gate_parts_print } from "./qa_gate_parts_print.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { list_concat_property } from "./list_concat_property.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -60,6 +63,7 @@ export async function qa_gate_run() {
     }
     qa_gate_in_flight_print(flying);
   }
+  let blamed_ms = date_milliseconds_since(at_blame);
   let failed_copy = property_get(told, "failed");
   let failed = list_concat_property(failed_copy, here, "failed");
   if (greater_than(failed.length, 0)) {
@@ -68,9 +72,13 @@ export async function qa_gate_run() {
     console.log(
       "\n=== asking the red gates again, here in the living folder ===",
     );
+    let at_again = date_now_milliseconds();
     await qa_gates_here_failed(joined);
+    let again_ms = date_milliseconds_since(at_again);
+    qa_gate_parts_print(asked_ms, blamed_ms, again_ms);
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
+  qa_gate_parts_print(asked_ms, blamed_ms, 0);
   console.log("\nall gates passed");
   ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then the whole-run timings live in the printed block, and one gate at a time is asked for by name instead");
   let gates = qa_gates_read();
