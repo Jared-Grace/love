@@ -1,3 +1,4 @@
+import { app_g_view_render_study_render_pray_gate } from "./app_g_view_render_study_render_pray_gate.mjs";
 import { app_g_view_render_study_render_thank_gate } from "./app_g_view_render_study_render_thank_gate.mjs";
 import { app_g_view_render_study_style_word } from "./app_g_view_render_study_style_word.mjs";
 import { app_g_view_render_study_style_completed } from "./app_g_view_render_study_style_completed.mjs";
@@ -15,9 +16,6 @@ import { app_g_overlay } from "./app_g_overlay.mjs";
 import { app_g_container } from "./app_g_container.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
-import { app_g_prayer_study_overlay } from "./app_g_prayer_study_overlay.mjs";
-import { g_prayer_study_before } from "./g_prayer_study_before.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
@@ -31,7 +29,6 @@ import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
-import { emoji_pray } from "./emoji_pray.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 export async function app_g_view_render_study(div_map) {
@@ -81,16 +78,6 @@ export async function app_g_view_render_study(div_map) {
   }
   app_g_button_back(overlay, close);
   let container = app_g_container(overlay);
-  function render_pray_gate() {
-    html_clear(container);
-    function begin() {
-      let prayer = g_prayer_study_before();
-      app_g_prayer_study_overlay(prayer, render_words);
-    }
-    let left4 = emoji_pray();
-    let label = text_combine(left4, " Pray and study");
-    app_g_button_green(container, label, begin);
-  }
   function render_words() {
     html_clear(container);
     let bar_div = html_div(container);
@@ -134,7 +121,7 @@ export async function app_g_view_render_study(div_map) {
   }
   let fresh = equal(current, 0);
   if (fresh) {
-    render_pray_gate();
+    app_g_view_render_study_render_pray_gate(container, render_words);
   } else {
     render_words();
   }
