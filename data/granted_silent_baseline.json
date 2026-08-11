@@ -1,7 +1,5 @@
 {
  "known": [
-  "app_g_day_guide_pick_check",
-  "g_verify_chapters_available",
-  "app_g_map_pad_check"
+  "g_verify_chapters_available"
  ]
 }
