@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { each } from "./each.mjs";
 import { reply_optional } from "./reply_optional.mjs";
@@ -8,6 +9,7 @@ import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_test() {
+  "Checks the reply parser against written-down messages and the tokens each one should come apart into - a sequence a choice an optional and a once-or-more each read both where they match and where they must not";
   let last = reply_last();
   let choice_a_k = reply_choice(["a", "k"]);
   let item = "a";
@@ -22,7 +24,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -39,7 +41,7 @@ export function reply_test() {
           "a",
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -54,7 +56,7 @@ export function reply_test() {
       expected: {
         tokens: [
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -70,7 +72,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -86,7 +88,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -102,7 +104,7 @@ export function reply_test() {
         tokens: [
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -118,7 +120,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -134,7 +136,7 @@ export function reply_test() {
         tokens: [
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -151,7 +153,7 @@ export function reply_test() {
           "k",
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -168,7 +170,7 @@ export function reply_test() {
           "a",
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -185,7 +187,7 @@ export function reply_test() {
           "k",
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -202,7 +204,7 @@ export function reply_test() {
           "a",
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -226,7 +228,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -242,7 +244,7 @@ export function reply_test() {
         tokens: [
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -259,7 +261,7 @@ export function reply_test() {
           "a",
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -277,7 +279,7 @@ export function reply_test() {
           "a",
           "a",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
@@ -295,7 +297,7 @@ export function reply_test() {
           "k",
           "k",
           {
-            namespace: "reply_last",
+            namespace: fn_name("reply_last"),
           },
         ],
         outputs: [],
