@@ -10,7 +10,7 @@ export function app_g_conversation_render_farewell(overlay, npc, close_now) {
     fn_name("g_response"),
     " 'ponder' ('you've given me a lot to think about'), the same warm structured grammar the natural close uses. one more warm goodbye actually closes.");
   html_clear(overlay);
-  let npc_says4 = g_response("ponder");
-  app_g_npc_says(npc, overlay, npc_says4);
+  let npc_says = g_response("ponder");
+  app_g_npc_says(npc, overlay, npc_says);
   app_g_button_conversation_end(overlay, close_now);
 }
