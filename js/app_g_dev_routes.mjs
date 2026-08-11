@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { g_prayers_conversation } from "./g_prayers_conversation.mjs";
 import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
 import { app_g_npc_unconverted_random } from "./app_g_npc_unconverted_random.mjs";
@@ -8,7 +9,6 @@ import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
-import { list_get } from "./list_get.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
@@ -59,8 +59,7 @@ export function app_g_dev_routes(div_map) {
     let gender = property_get(npc, "gender");
     let pronouns = g_gender_pronouns(gender);
     let full = g_conversation_generate(pronouns);
-    let turns = property_get(full, "turns");
-    let gospel = list_get(turns, 0);
+    let gospel = property_list_get(full, "turns", 0);
     ("the conversation the game generated is NARROWED here, never rebuilt. it used to be replaced with a fresh object spelling out the two fields this route cares about, which made this the second place that knew what a conversation is made of - so a field the generator started adding was simply absent here, and the screen under test was one the game could no longer produce.");
     property_set(full, "turns", [gospel]);
     property_set(full, "converts", true);
