@@ -15,8 +15,6 @@ export function js_free_names_cases() {
   "the canonicalizing pass would otherwise rewrite them into references and change what";
   "the case says.";
   let a = text_frozen("list_add");
-  let a2 = text_frozen("list_add");
-  let a3 = text_frozen("list_add");
   let b = text_frozen("list_map");
   let c = text_frozen("property_get");
   let cases = [
@@ -32,14 +30,14 @@ export function js_free_names_cases() {
       code: text_frozen(
         "let value = list_add([], 1);\nexport function f() {\n  return value;\n}\n",
       ),
-      free: [a2],
+      free: [a],
     },
     {
       name: "three free names at once",
       code: text_frozen(
         "export function f() {\n  return list_add(list_map([], property_get), 1);\n}\n",
       ),
-      free: [a3, b, c],
+      free: [a, b, c],
     },
     {
       name: "the repo's own one-name-per-line relative import",
