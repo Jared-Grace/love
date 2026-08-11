@@ -1,3 +1,4 @@
+import { app_g_conversation_render_close } from "./app_g_conversation_render_close.mjs";
 import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
 import { g_phase_time } from "./g_phase_time.mjs";
@@ -34,7 +35,6 @@ import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
-import { app_g_doxology } from "./app_g_doxology.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
 import { noop } from "./noop.mjs";
@@ -370,15 +370,6 @@ export async function app_g_conversation(
     let text2 = text_combine(left5, " Pray");
     app_g_button_green(container, text2, pray);
   }
-  function render_close() {
-    if (converts) {
-      let npc_says2 = app_g_doxology();
-      app_g_npc_says(npc, overlay, npc_says2);
-    } else {
-      let npc_says3 = g_response("ponder");
-      app_g_npc_says(npc, overlay, npc_says3);
-    }
-  }
   function render() {
     ("the openers screen ASKS what you would like to say, so its parting line is one of the answers — ",
       fn_name("app_g_turn_menu"),
@@ -394,7 +385,7 @@ export async function app_g_conversation(
     if (not(prayed.done)) {
       render_pray();
     } else {
-      render_close();
+      app_g_conversation_render_close(converts, npc, overlay);
       ending = goodbye;
     }
     app_g_button_conversation_end(overlay, ending);
