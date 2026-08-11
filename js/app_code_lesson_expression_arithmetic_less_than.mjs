@@ -1,3 +1,4 @@
+import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
@@ -213,6 +214,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   let next_arg = list_iterator_refillable(refill);
   function above(root) {
     "the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from the < comparison so nothing is hand-typed";
+    "The word comparison is BOLD here and followed by a colon, because this is where the learner first meets it and this line already lists the six operators it names. Bolding a term at its first mention is what the repo does for a word it is defining, and the colon is what turns the six symbols from a continuation of the rule into what the word means. Without it the word was used for thirty-nine lessons before the comparing-a-comparison lesson finally named it - which its own naming card admits: used since the arithmetic-comparison lesson, but only ever alongside its operators in passing. That card stays where it is and now reads as the recall it always was.";
     let line = app_code_container_light_blue_div(root);
     html_span_text(line, "We always do the ");
     let four = js_operators_arithmetic();
@@ -225,7 +227,9 @@ export function app_code_lesson_expression_arithmetic_less_than() {
       return symbol;
     }
     app_code_operators_word_list(line, operators, "or", operator_symbol);
-    html_span_text(line, " before any comparison ");
+    html_span_text(line, " before any ");
+    html_span_text_bold(line, "comparison");
+    html_span_text(line, ": ");
     let comparisons = js_operators_comparison();
     app_code_operators_word_list(line, comparisons, "or", operator_symbol);
     let sum = add(2, 3);
