@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_comparing_a_comparison_naming } from "./app_code_lesson_expression_comparing_a_comparison_naming.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_comparison_side } from "./app_code_lesson_expression_comparing_a_comparison_comparison_side.mjs";
+import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -56,8 +56,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   }
   function expression(want_true) {
     "a comparison, then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
-    let left =
-      app_code_lesson_expression_comparing_a_comparison_comparison_side();
+    let left = app_code_comparison_side();
     let right_value = list_random_item([true, false]);
     let agree = property_equals(left, "value", right_value);
     let wanted = equal(agree, want_true);
