@@ -46,6 +46,8 @@ export async function g_game_plants(chapters, pool) {
     let leader_days = multiply(days, share);
     let leader_turns = multiply_round(leader_days, s.conversation_turns_mean);
     let leader_short = less_than(leader_turns, s.leader_turns_minimum);
+    let conversations = divide(leader_turns, s.conversation_turns_mean);
+    let leader_days_percent = multiply_divide_round(conversations, 100, days);
     let wanted = subtract(arc_turns, leader_turns);
     let converts = [];
     let convert_turns = 0;
@@ -86,6 +88,7 @@ export async function g_game_plants(chapters, pool) {
       npcs,
       leader_turns,
       leader_short,
+      leader_days_percent,
       convert_turns,
       converts,
       spent,
