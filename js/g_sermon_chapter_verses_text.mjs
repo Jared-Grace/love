@@ -8,6 +8,7 @@ export function g_sermon_chapter_verses_text(passages) {
   "Numbered rather than run together, because every turn an arc writes has to name the verses that answer it. A block of unnumbered text can be quoted from but not cited, so the numbers are the part that makes the answer checkable.";
   "The ENGLISH is what goes over, not the sermon lines written from it. The lines are the game's own words and an arc that answered from them would be answering from a paraphrase of Scripture rather than from Scripture.";
   "A passage's verses are given together on one line because that is the unit the sermon was written against - splitting them back into single verses would offer a smaller answer than any passage actually makes.";
+  "Put back into VERSE ORDER, because the order they are stored in is the order somebody wrote them in - 1 John 1 opens on verse two - and a chapter handed over out of order reads as a chapter that has been cut about. The copy is taken first so sorting cannot reach back into the caller's own list.";
   let copied = list_copy(passages);
   function first_verse(passage) {
     let numbers = property_get(passage, "verse_numbers");
