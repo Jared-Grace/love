@@ -1,3 +1,4 @@
+import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
@@ -11,7 +12,6 @@ import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -104,16 +104,9 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       element: cell,
     });
   }
-  function range_covers(span, day, slot) {
-    let same_day = equal(span.day, day);
-    let after_start = greater_than_equal(slot, span.start);
-    let before_end = less_than_equal(slot, span.end);
-    let covers = same_day && after_start && before_end;
-    return covers;
-  }
   function selected_is(day, slot) {
     function in_range(span) {
-      let r = range_covers(span, day, slot);
+      let r = week_calendar_range_covers(span, day, slot);
       return r;
     }
     let found = list_any(ranges, in_range);
@@ -179,7 +172,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   function endpoint_back_up(day, slot) {
     let next = [];
     function handle(span) {
-      let covers = range_covers(span, day, slot);
+      let covers = week_calendar_range_covers(span, day, slot);
       if (not(covers)) {
         list_add(next, span);
       } else {

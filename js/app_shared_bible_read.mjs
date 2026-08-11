@@ -163,7 +163,8 @@ export async function app_shared_bible_read(context, verse_action) {
     let n = list_size(verse_numbers_chosen);
     let text = "";
     if (greater_than(n, 0)) {
-      text = text_combine_multiple([n, " of ", max, " selected"]);
+      ("up to, because the second number is the most you may pick rather than how many verses are there - without those words one verse chosen in a hundred-verse chapter reads as one of two");
+      text = text_combine_multiple([n, " of up to ", max, " selected"]);
     }
     html_text_set(count_status, text);
   }
