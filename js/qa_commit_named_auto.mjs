@@ -1,4 +1,4 @@
-import { qa_commit_named_head } from "./qa_commit_named_head.mjs";
+import { qa_commit_named_auto_step } from "./qa_commit_named_auto_step.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { qa_commit_named_auto_seconds } from "./qa_commit_named_auto_seconds.mjs";
