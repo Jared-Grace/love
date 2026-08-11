@@ -6,13 +6,12 @@ export function js_function_declaration_free_names_cases() {
   "The written-out functions are held as fixed text, because the pass that canonicalizes an edited file would otherwise read the names inside them as references and rewrite the very thing each case is written to say";
   let outer = text_frozen("outer_shade");
   let outer2 = text_frozen("outer_shade");
+  let t = text_frozen("paint");
   let cases = [
     {
       name: "a name the body calls and nothing inside it binds",
-      code: text_frozen(
-        "export function f() {\n  return paint(1);\n}\n",
-      ),
-      free: [text_frozen("paint")],
+      code: text_frozen("export function f() {\n  return paint(1);\n}\n"),
+      free: [t],
     },
     {
       name: "the words the function is handed",
