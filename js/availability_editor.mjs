@@ -1,3 +1,4 @@
+import { availability_editor_highlight } from "./availability_editor_highlight.mjs";
 import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
 import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
@@ -6,7 +7,6 @@ import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { date_add_days } from "./date_add_days.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -17,7 +17,6 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
@@ -106,19 +105,8 @@ export function availability_editor(parent) {
   }
   function choose(kind) {
     chosen = kind;
-    highlight();
+    availability_editor_highlight(chosen, button_records);
     render_preview();
-  }
-  function highlight() {
-    function paint_button(record) {
-      let selected = equal(record.kind, chosen);
-      let right = app_shared_color_blue_dark();
-      let outline = selected ? text_combine("3px solid ", right) : "none";
-      html_style_assign(record.element, {
-        outline: outline,
-      });
-    }
-    each(button_records, paint_button);
   }
   function line(span) {
     let item = busy_item_build(chosen, span);
