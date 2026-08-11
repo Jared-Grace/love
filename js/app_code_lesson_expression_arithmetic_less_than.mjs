@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -13,8 +14,6 @@ import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
 import { js_operator_less_than_equal } from "./js_operator_less_than_equal.mjs";
@@ -231,67 +230,30 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     html_span_text(line, " before any comparison ");
     let comparisons = js_operators_comparison();
     app_code_operators_word_list(line, comparisons, "or", operator_symbol);
-    function worked_example(
-      other,
-      other_on_left,
-      a_left,
-      a_symbol,
-      a_right,
-      a_value,
-    ) {
-      "one worked example: the arithmetic sub-expression done first to its value, then the comparison to true or false; other_on_left puts the plain number on the left of the < (arithmetic on the right) or the reverse";
-      let t3 = text_to(a_left);
-      let t4 = text_to(a_right);
-      let sub = text_combine_multiple([t3, " ", a_symbol, " ", t4]);
-      let on_true = text_to(other);
-      let full_left = ternary(other_on_left, on_true, sub);
-      let on_false = text_to(other);
-      let full_right = ternary(other_on_left, sub, on_false);
-      let on_true3 = text_to(other);
-      let on_false3 = text_to(a_value);
-      let combined_left = ternary(other_on_left, on_true3, on_false3);
-      let on_true4 = text_to(a_value);
-      let on_false4 = text_to(other);
-      let combined_right = ternary(other_on_left, on_true4, on_false4);
-      let final_left = ternary(other_on_left, other, a_value);
-      let final_right = ternary(other_on_left, a_value, other);
-      let final = less_than_fn(final_left, final_right);
-      let box = app_code_container_light_blue(root);
-      let t5 = text_to(a_value);
-      let full_expression = text_combine_multiple([
-        full_left,
-        " ",
-        less_than_symbol,
-        " ",
-        full_right,
-      ]);
-      html_div_cycle_code(box, [
-        "For ",
-        full_expression,
-        ", we do ",
-        sub,
-        " first, which is ",
-        t5,
-      ]);
-      let t6 = text_to(final);
-      let combined_expression = text_combine_multiple([
-        combined_left,
-        " ",
-        less_than_symbol,
-        " ",
-        combined_right,
-      ]);
-      html_div_cycle_code(box, [
-        "Now we have ",
-        combined_expression,
-        ", which is ",
-        t6,
-      ]);
-    }
     let sum = add(2, 3);
-    worked_example(9, true, 2, "+", 3, sum);
+    app_code_lesson_expression_arithmetic_less_than_worked_example(
+      9,
+      true,
+      2,
+      "+",
+      3,
+      sum,
+      less_than_fn,
+      root,
+      less_than_symbol,
+    );
     let p = multiply(3, 2);
-    worked_example(7, false, 3, "*", 2, p);
+    app_code_lesson_expression_arithmetic_less_than_worked_example(
+      7,
+      false,
+      3,
+      "*",
+      2,
+      p,
+      less_than_fn,
+      root,
+      less_than_symbol,
+    );
   }
   function title_name_id() {
     "the home title is arithmetic comparisons, an Expressions lesson; the id string stays 'arithmetic less than' so a student's saved progress on this lesson is unchanged";
