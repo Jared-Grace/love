@@ -17,7 +17,7 @@ import { app_message_reply_greeting } from "./app_message_reply_greeting.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choice_output } from "./reply_choice_output.mjs";
 import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
-import { app_reply_pray_response } from "./app_reply_pray_response.mjs";
+import { reply_pray_response } from "./reply_pray_response.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { property_get } from "./property_get.mjs";
@@ -42,7 +42,7 @@ export function app_message_reply_choices() {
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let o_come_and = reply_sequence_optional(["come", "and"]);
   let pray_request = reply_choices_will_done_fragment();
-  let will_be_done = app_reply_pray_response(pray_request);
+  let will_be_done = reply_pray_response(pray_request);
   let us = reply_word_us();
   let s_visit = reply_sequence([
     o_come_and,
