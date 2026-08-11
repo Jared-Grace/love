@@ -13,7 +13,7 @@ export function js_prose_sequence_sentences(ast) {
   ("Every sentence in one file that was written to explain the code but wrapped in brackets beside something else, so the reader that gathers explanations never sees it.");
   ("An explanation counts as one only when it is a string standing alone as a whole statement. Put a bracket round it and a second thing after a comma, and the statement is no longer a string - it is a pair - so the file reads as saying nothing about itself even while carrying paragraphs.");
   ("The shape is easy to arrive at by accident. Somebody wanting the name of a command inside the sentence writes the sentence, a comma, and the name spelled as a reference, which is the one way to keep a rename following it. That single comma is what hides the whole paragraph.");
-  ("Only the leading string is handed back, because that is the part written to be read. What follows it is a reference, and belongs to whatever the sentence was pointing at.");
+  ("The whole paragraph is put back together and handed over as one sentence, the name standing where it was written. Only the leading string used to be handed back, on the reading that what follows a name belongs to whatever the sentence was pointing at - which is true of the name and false of everything after it. A hundred and seventy-two of the hundred and eighty paragraphs here carry on past the name, and one carries on for four more lines, so stopping there was stopping mid-sentence rather than trimming a tail.");
   let sentences = [];
   for (let node of js_list_type_nodes(ast, "ExpressionStatement")) {
     let expression = property_get(node, "expression");
@@ -31,7 +31,9 @@ export function js_prose_sequence_sentences(ast) {
     if (not(string_is)) {
       continue;
     }
-    list_add(sentences, value);
+    let parts = property_get(expression, "expressions");
+    let sentence = list_map_join_empty(parts, js_prose_part_text);
+    list_add(sentences, sentence);
   }
   return sentences;
 }
