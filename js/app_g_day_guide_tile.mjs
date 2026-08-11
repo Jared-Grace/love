@@ -1,3 +1,7 @@
+import { math_max } from "./math_max.mjs";
+import { math_min } from "./math_min.mjs";
+import { multiply } from "./multiply.mjs";
+import { divide } from "./divide.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -22,19 +26,31 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
   let grid = img.offsetParent;
   let width = container.clientWidth;
   let height = container.clientHeight;
-  let scroll_x = grid.offsetLeft + (player.x + 0.5) * tile - width / 2;
-  let scroll_y = grid.offsetTop + (player.y + 0.5) * tile - height / 2;
-  let scroll_x_max = container.scrollWidth - width;
-  let scroll_y_max = container.scrollHeight - height;
-  let centred_x = Math.max(0, Math.min(scroll_x, scroll_x_max));
-  let centred_y = Math.max(0, Math.min(scroll_y, scroll_y_max));
+  let right = divide(width, 2);
+  let scroll_x = subtract(
+    grid.offsetLeft + multiply(player.x + 0.5, tile),
+    right,
+  );
+  let right2 = divide(height, 2);
+  let scroll_y = subtract(
+    grid.offsetTop + multiply(player.y + 0.5, tile),
+    right2,
+  );
+  let scroll_x_max = subtract(container.scrollWidth, width);
+  let scroll_y_max = subtract(container.scrollHeight, height);
+  let b = math_min(scroll_x, scroll_x_max);
+  let centred_x = math_max(0, b);
+  let b2 = math_min(scroll_y, scroll_y_max);
+  let centred_y = math_max(0, b2);
   let origin_x = subtract(grid.offsetLeft, centred_x);
   let origin_y = subtract(grid.offsetTop, centred_y);
   let minX = divide_ceil(-origin_x, tile);
-  let left = divide_floor(width - origin_x, tile);
+  let number = subtract(width, origin_x);
+  let left = divide_floor(number, tile);
   let maxX = subtract(left, 1);
   let minY = divide_ceil(-origin_y, tile);
-  let top = subtract(height - origin_y, barH);
+  let left3 = subtract(height, origin_y);
+  let top = subtract(left3, barH);
   let left2 = divide_floor(top, tile);
   let maxY = subtract(left2, 1);
   let targetInWindow =
