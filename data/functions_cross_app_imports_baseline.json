@@ -15,15 +15,6 @@
   "app_message -> app_karate_screen_input_validate",
   "app_message_provide_generic -> app_karate_button_next",
   "app_message_provide_generic -> app_karate_container_main",
-  "app_message_reply_choices -> reply_choices_glory",
-  "app_message_reply_choices -> reply_choices_will_done_fragment",
-  "app_message_reply_choices -> reply_pray_response",
-  "app_message_reply_from_city_country -> reply_choices_location",
-  "app_message_reply_give -> reply_choices_give",
-  "app_message_reply_greeting -> reply_response_greetings",
-  "app_message_reply_how_r_u -> reply_response_how_r_u",
-  "app_message_reply_iam_titled_name -> reply_choices_name",
-  "app_message_reply_praise_god -> reply_choices_praise",
   "app_reply_local -> app_reply",
   "app_sandbox -> app_message",
   "app_sandbox -> app_message_provide_food",
@@ -32,7 +23,6 @@
   "app_supper_tl -> app_supper_main_generic",
   "app_supper_tl_home -> app_supper_home_generic",
   "app_verses -> app_reply_initialize",
-  "app_verses -> app_reply_languages_chosen_default",
-  "app_verses_references_to_groups -> reply_verses_uplifting_entries"
+  "app_verses -> app_reply_languages_chosen_default"
  ]
 }
