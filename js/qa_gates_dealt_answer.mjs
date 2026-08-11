@@ -1,3 +1,6 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { qa_gates_dealt } from "./qa_gates_dealt.mjs";
 import { property_get } from "./property_get.mjs";
 export function qa_gates_dealt_answer(c) {
@@ -8,7 +11,9 @@ export function qa_gates_dealt_answer(c) {
   let count = property_get(c, "count");
   let gates = [];
   for (let f_name of names) {
-    gates.push({ name: f_name });
+    gates.push({
+      name: f_name,
+    });
   }
   let shares = qa_gates_dealt(gates, costs, count);
   let sizes = [];
@@ -18,17 +23,17 @@ export function qa_gates_dealt_answer(c) {
     for (let gate of share) {
       let f_name = property_get(gate, "name");
       let already = seen[f_name];
-      seen[f_name] = already === undefined ? 1 : already + 1;
+      seen[f_name] = equal(already, undefined) ? 1 : already + 1;
     }
   }
   let missing = [];
   let twice = [];
   for (let f_name of names) {
     let times = seen[f_name];
-    if (times === undefined) {
+    if (equal(times, undefined)) {
       missing.push(f_name);
     }
-    if (times !== undefined && times > 1) {
+    if (not_equal(times, undefined) && greater_than(times, 1)) {
       twice.push(f_name);
     }
   }
