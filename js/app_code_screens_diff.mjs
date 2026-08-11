@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { json_from } from "./json_from.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { property_equals } from "./property_equals.mjs";
@@ -16,13 +17,6 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   let current_json = await file_read(current_path);
   let baseline = json_from(baseline_json);
   let current = json_from(current_json);
-  function key_of(record) {
-    let id = property_get(record, "id");
-    let screen = property_get(record, "screen");
-    let kind_text = property_text_to(record, "kind");
-    let key = text_combine_multiple([id, "|", screen, "|", kind_text]);
-    return key;
-  }
   function masked_of(record) {
     let text = property_get(record, "text");
     let masked = app_code_screen_text_normalize(text);
@@ -30,7 +24,7 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   }
   let baseline_map = {};
   function index_baseline(record) {
-    let key = key_of(record);
+    let key = app_code_screens_diff_key_of(record);
     let masked = masked_of(record);
     property_set(baseline_map, key, masked);
   }
@@ -39,7 +33,7 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   let changed = [];
   let added = [];
   function check_current(record) {
-    let key = key_of(record);
+    let key = app_code_screens_diff_key_of(record);
     property_set(current_map, key, true);
     let masked = masked_of(record);
     let known = property_exists(baseline_map, key);
@@ -55,7 +49,7 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   each(current, check_current);
   let removed = [];
   function check_removed(record) {
-    let key = key_of(record);
+    let key = app_code_screens_diff_key_of(record);
     let still = property_exists(current_map, key);
     if (not(still)) {
       list_add(removed, key);
@@ -68,4 +62,12 @@ export async function app_code_screens_diff(baseline_path, current_path) {
     removed,
   };
   return result;
+}
+function app_code_screens_diff_key_of(record) {
+  arguments_assert(arguments, 1);
+  let id = property_get(record, "id");
+  let screen = property_get(record, "screen");
+  let kind_text = property_text_to(record, "kind");
+  let key = text_combine_multiple([id, "|", screen, "|", kind_text]);
+  return key;
 }
