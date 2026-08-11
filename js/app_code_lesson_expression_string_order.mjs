@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_string_order_words_source } from "./app_code_lesson_expression_string_order_words_source.mjs";
+import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_code_lesson_expression_string_order_title_name_id } from "./app_code_lesson_expression_string_order_title_name_id.mjs";
 import { app_code_lesson_expression_string_order_question_code } from "./app_code_lesson_expression_string_order_question_code.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_string_order() {
   ];
   function refill() {
     "four comparisons over ONE shared pair of DIFFERENT words: each operator shown true (in its correct direction) and false (in the wrong one), pure alphabetical ordering with no equal case - the equal case now lives in the string trichotomy lesson";
-    let words = app_code_lesson_expression_string_order_words_source();
+    let words = app_code_verse_words_lower_only();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
     let earlier = list_get(ordered, 0);
