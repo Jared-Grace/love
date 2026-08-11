@@ -17,10 +17,8 @@ export function app_g_dev_index_render_node(
   label,
   node,
   open_paths,
-  sessionStorage,
-  open_key,
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 5);
   let child_labels = object_property_names(node.children).sort();
   if (equal(child_labels.length, 0)) {
     app_g_dev_index_leaf_card(parent, label, node.hash);
@@ -47,7 +45,7 @@ export function app_g_dev_index_render_node(
       html_display_none(body);
       open_paths.delete(path);
     }
-    app_g_dev_index_open_persist(open_paths, sessionStorage, open_key);
+    app_g_dev_index_open_persist(open_paths);
   }
   html_on_click(header, toggle);
   if (node.hash) {
@@ -60,8 +58,6 @@ export function app_g_dev_index_render_node(
       cl,
       node.children[cl],
       open_paths,
-      sessionStorage,
-      open_key,
     );
   }
 }
