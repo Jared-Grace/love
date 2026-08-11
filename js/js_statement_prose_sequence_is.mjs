@@ -12,12 +12,11 @@ export function js_statement_prose_sequence_is(node) {
   ("Somebody wanting a function's name inside a sentence writes the sentence, a comma, and the name spelled as a reference, because that is the one spelling a rename follows. The comma turns the statement into a pair, and a pair is not a string - so every reading that recognises a comment by it being a lone string calls this line work and counts it.");
   ("Two readings are hurt by that, and in opposite directions. One counts how much a function does, and answers too big for a function whose paragraphs are simply written this way. The other asks what a fold would silently add to a caller, and names prose as the work it would add, refusing a fold that was safe.");
   ("What each piece inside the brackets is allowed to be is asked next door, because the sibling that reads a paragraph written with a backtick has to ask exactly the same question of exactly the same pieces.");
-  let statement_is = js_node_type_is(node, "ExpressionStatement");
-  if (not(statement_is)) {
-    return false;
-  }
-  let expression = property_get(node, "expression");
-  let pair_is = js_node_type_is(expression, "SequenceExpression");
+  let expression = js_statement_expression_of_type_or_null(
+    node,
+    "SequenceExpression",
+  );
+  let pair_is = null_not_is(expression);
   if (not(pair_is)) {
     return false;
   }
