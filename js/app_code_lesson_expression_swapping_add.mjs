@@ -47,7 +47,7 @@ export function app_code_lesson_expression_swapping_add() {
       "Adding puts two amounts together, so swapping does not matter",
     ]);
     html_div_cycle_code(plus, [
-      "",
+      "For example: ",
       "3 + 4 === 7",
       " and swapped: ",
       "4 + 3 === 7",
