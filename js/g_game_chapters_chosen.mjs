@@ -34,8 +34,7 @@ export async function g_game_chapters_chosen(word) {
   for (let step = 0; less_than(step, count); step++) {
     let spare = books.length;
     let drawn = next();
-    let along = multiply(drawn, spare);
-    let index = floor(along);
+    let index = multiply_floor(drawn, spare);
     let book = list_remove_at(books, index);
     let run = property_get(held, book);
     list_add_multiple(order, run);
