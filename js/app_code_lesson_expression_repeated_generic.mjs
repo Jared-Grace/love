@@ -1,7 +1,7 @@
+import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
 import { app_code_lesson_expression_repeated_generic_running_count } from "./app_code_lesson_expression_repeated_generic_running_count.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
 import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
-import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_repeat_grid_style } from "./app_code_lesson_repeat_grid_style.mjs";
@@ -189,13 +189,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
       let list3 = range(count2);
       each(list3, place_operator);
     }
-    function short_form(parent, left, count, left_color, count_color) {
-      "one dark tile reading the short form, both numbers as lifted color chips";
-      let tile = html_span_code_dark_nowrap(parent);
-      app_code_lesson_number_chip_lifted(tile, left, left_color);
-      html_span_text(tile, short_separator);
-      app_code_lesson_number_chip_lifted(tile, count, count_color);
-    }
     let already = text_combine_multiple([
       "You already know how to ",
       verb,
@@ -224,13 +217,27 @@ export function app_code_lesson_expression_repeated_generic(words) {
     html_span_text(map, " appears ");
     chip(map, 3, count_one);
     html_span_text(map, " times, so we can write ");
-    short_form(map, 2, 3, left_one, count_one);
+    app_code_lesson_expression_repeated_generic_short_form(
+      map,
+      2,
+      3,
+      left_one,
+      count_one,
+      short_separator,
+    );
     html_span_text(map, " for short");
     let likewise = html_div(c);
     html_span_text(likewise, "Likewise ");
     expanded_counted(likewise, 3, left_two, count_two, 4);
     html_span_text(likewise, " is ");
-    short_form(likewise, 3, 4, left_two, count_two);
+    app_code_lesson_expression_repeated_generic_short_form(
+      likewise,
+      3,
+      4,
+      left_two,
+      count_two,
+      short_separator,
+    );
     let how_many = text_combine_multiple([
       "The second number is how many to ",
       verb,

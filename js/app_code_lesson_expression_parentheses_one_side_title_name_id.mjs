@@ -13,7 +13,16 @@ export function app_code_lesson_expression_parentheses_one_side_title_name_id() 
       app_code_lesson_name_id_category(parent, left_upper);
       let open = js_code_parenthesis_left();
       let close = js_code_parenthesis_right();
-      html_cycle_code(parent, ["a comparison inside ", open, " and ", close]);
+      html_cycle_code(parent, [
+        "",
+        "===",
+        " / ",
+        "!==",
+        " inside ",
+        open,
+        " and ",
+        close,
+      ]);
     }
     return render;
   }

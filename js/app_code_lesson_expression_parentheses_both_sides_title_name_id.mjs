@@ -14,7 +14,11 @@ export function app_code_lesson_expression_parentheses_both_sides_title_name_id(
       let open = js_code_parenthesis_left();
       let close = js_code_parenthesis_right();
       html_cycle_code(parent, [
-        "a comparison inside ",
+        "",
+        "===",
+        " / ",
+        "!==",
+        " inside ",
         open,
         " and ",
         close,
