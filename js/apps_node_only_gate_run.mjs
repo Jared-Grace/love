@@ -4,7 +4,7 @@ import { apps_reachable_unguarded_steps } from "./apps_reachable_unguarded_steps
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_size } from "./list_size.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
-import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
+import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_node_only_is } from "./function_node_only_is.mjs";
@@ -18,7 +18,7 @@ export async function apps_node_only_gate_run() {
   "someone asked which environment they were in. Measuring the whole import closure instead";
   "named six functions that sit under a guard and cannot be fixed where they are, which is a";
   "gate that can never be cleared - so it stayed out of the suite and guarded nothing.";
-  let mains = app_apps_all_main_fns();
+  let mains = apps_all_main_fns();
   let reachable = await functions_reachable_unguarded(mains);
   let paths = await functions_names_to_paths();
   async function measure(f_name) {

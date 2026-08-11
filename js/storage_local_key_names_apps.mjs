@@ -3,7 +3,7 @@ import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { webpack_build_generic_source_fn_names } from "./webpack_build_generic_source_fn_names.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
+import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { storage_local_key_owner_forwarders } from "./storage_local_key_owner_forwarders.mjs";
 import { function_reachable_names } from "./function_reachable_names.mjs";
 import { list_intersect } from "./list_intersect.mjs";
@@ -16,7 +16,7 @@ export async function storage_local_key_names_apps() {
   "The name of an app and the code of an app are two different functions, and asking the first what it can reach answers nothing - several of them are an empty body whose whole job is to be a name. The roots are taken the way the builder takes them, from the app's own function, so what is weighed is what would be built. There are two, and the second is the shared boot: everything that happens before a screen is drawn hangs off it rather than off the app.";
   "Reaching is not running, so an app that carries the storing and never runs it is named here anyway. That is the safe direction on purpose. Being named costs a line in the record and a sentence at a rename; not being named costs somebody's saved settings, with no way to get them back.";
   arguments_assert(arguments, 0);
-  let apps = app_apps_all_main_fns();
+  let apps = apps_all_main_fns();
   let forwarders = await storage_local_key_owner_forwarders();
   let names = [];
   for (let app of apps) {

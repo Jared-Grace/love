@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-export function app_apps_all_main_fns() {
+export function apps_all_main_fns() {
   "The entry point of every app here, listed so the page that gathers them all can reach each one.";
   let f_name = fn_name("app_a");
   let f_name2 = fn_name("app_apps_all");

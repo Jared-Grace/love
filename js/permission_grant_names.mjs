@@ -139,7 +139,7 @@ export function permission_grant_names() {
   let spelled136 = fn_name("permission_rules");
   let spelled137 = fn_name("function_params_get");
   let spelled138 = fn_name("function_cycle_would_create_is");
-  let spelled139 = fn_name("app_apps_all_main_fns");
+  let spelled139 = fn_name("apps_all_main_fns");
   let spelled140 = fn_name("function_node_only_is");
   let spelled141 = fn_name("text_split_comma");
   let spelled142 = fn_name("bible_interlinear_offline_upload");
