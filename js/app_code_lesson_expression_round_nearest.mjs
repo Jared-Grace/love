@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_round_nearest_rounds_line } from "./app_code_lesson_expression_round_nearest_rounds_line.mjs";
 import { app_code_lesson_expression_round_nearest_title_name_id } from "./app_code_lesson_expression_round_nearest_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -99,14 +100,6 @@ export function app_code_lesson_expression_round_nearest() {
     html_span_text(name_line, " whole number");
     ("concrete first: two worked examples with DIFFERENT first digits in different colours, then the knife-edge pair rounding down then up, THEN the general rule, and the one-line takeaway LAST");
     let rule = app_code_container_light_blue(root);
-    function rounds_line(fraction_text, middle_text, result_text) {
-      "a plain tight decimal number, then the rounds-to prose, then the whole-number result as a code tile";
-      let line = html_div(rule);
-      let number = text_combine_multiple([whole_text, ".", fraction_text]);
-      html_span_text_code_dark(line, number);
-      html_span_text(line, middle_text);
-      html_span_text_code_dark(line, result_text);
-    }
     app_code_first_decimal_digit_line(
       rule,
       "For example, in ",
@@ -123,8 +116,20 @@ export function app_code_lesson_expression_round_nearest() {
       "999",
       color_high,
     );
-    rounds_line("4999", ' rounds "down" to ', whole_text);
-    rounds_line("5", ' rounds "up" to ', whole_up);
+    app_code_lesson_expression_round_nearest_rounds_line(
+      "4999",
+      ' rounds "down" to ',
+      whole_text,
+      rule,
+      whole_text,
+    );
+    app_code_lesson_expression_round_nearest_rounds_line(
+      "5",
+      ' rounds "up" to ',
+      whole_up,
+      rule,
+      whole_text,
+    );
     html_div_cycle_code(rule, [
       "If the first digit after the decimal point is ",
       "0",
