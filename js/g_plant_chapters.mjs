@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { g_plant_chapters_lines_of } from "./g_plant_chapters_lines_of.mjs";
-import { g_plant_book_count } from "./g_plant_book_count.mjs";
+import { g_plant_count } from "./g_plant_count.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { g_plant_passages_chapters } from "./g_plant_passages_chapters.mjs";
 import { g_plant_passage_key } from "./g_plant_passage_key.mjs";
@@ -57,7 +57,7 @@ export async function g_plant_chapters() {
     let book = property_get(held_book, "book");
     let held = property_get(held_book, "passages");
     let book_lines = list_map_sum(held, g_plant_chapters_lines_of);
-    let count = g_plant_book_count(book_lines);
+    let count = g_plant_count(book_lines);
     let share = divide(book_lines, count);
     let book_plant_list = [];
     let taken = [];
