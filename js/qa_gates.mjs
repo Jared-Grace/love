@@ -1,3 +1,4 @@
+import { functions_prose_sequence_gate_run } from "./functions_prose_sequence_gate_run.mjs";
 import { functions_calls_unawaited_gate_run } from "./functions_calls_unawaited_gate_run.mjs";
 import { functions_unreachable_statements_gate_run } from "./functions_unreachable_statements_gate_run.mjs";
 import { hash_reading_names_word_gate_run } from "./hash_reading_names_word_gate_run.mjs";
@@ -357,6 +358,7 @@ export function qa_gates() {
     number_to_words_cases_gate_run,
     functions_unreachable_statements_gate_run,
     functions_calls_unawaited_gate_run,
+    functions_prose_sequence_gate_run,
   ];
   return gates;
 }
