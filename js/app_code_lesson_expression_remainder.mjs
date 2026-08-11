@@ -1,3 +1,4 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
@@ -7,8 +8,6 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -57,19 +56,15 @@ export function app_code_lesson_expression_remainder() {
   }
   function title_name_id() {
     "the home title is console.log remainder";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Remainder");
-      }
-      return render;
+    function paint(parent) {
+      html_span_text(parent, "Remainder");
     }
     ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
     let rights = ["remainder part"];
-    let built = app_code_lesson_name_id_generic(
+    let built = app_code_lesson_name_id_category_then(
       rights,
       app_code_category_operators(),
-      title_get,
+      paint,
     );
     return built;
   }
