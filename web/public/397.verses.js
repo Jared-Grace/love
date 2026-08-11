@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[397],{397(r,e,t){t.d(e,{default:()=>n});const a={write:async r=>{await navigator.clipboard.writeText(r)},read:async()=>navigator.clipboard.readText(),readSync:()=>{throw new Error("`.readSync()` is not supported in browsers!")},writeSync:()=>{throw new Error("`.writeSync()` is not supported in browsers!")}},n=a}}]);

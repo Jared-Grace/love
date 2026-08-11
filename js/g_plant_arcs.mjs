@@ -41,7 +41,10 @@ export function g_plant_arcs(plant) {
     100,
   );
   let arc_turns = subtract(matches, question_turns);
-  let joined = list_join_comma(chapters);
+  ("Seeded on the plant's START and END passages rather than on its chapters, because chapters no longer identify a plant - a plant may begin and end mid-chapter, so two plants of the same book can both name the chapter they share and would then draw the same cast. The two addresses are unique by construction.");
+  let start = property_get(plant, "start");
+  let end = property_get(plant, "end");
+  let joined = list_join_comma([start, end]);
   let next = random_seed_generator_from_text(joined);
   ("The leader's share is a portion of the plant's DAYS, so a longer plant disciples the leader longer rather than visiting the same number of times more thinly. It is worked out from the days ALONE - nothing about the cast reaches it - and that is what lets the count below be derived rather than guessed.");
   let share_low = divide(settings.leader_days_percent_minimum, 100);
@@ -79,6 +82,8 @@ export function g_plant_arcs(plant) {
   let r = {
     book: property_get(plant, "book"),
     chapters,
+    start,
+    end,
     lines,
     days,
     matches,
