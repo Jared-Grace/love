@@ -21,6 +21,8 @@ export async function qa_apps_commits_weigh(
   looked,
 ) {
   arguments_assert(arguments, 6);
+  ("Weighs every app against every judged commit, adding one weighed entry per app to the list of what was looked at, and naming in the other list any app whose reach could not be worked out at all.");
+  ("How far back each commit stands is handed in already counted, because that is a fact about the folder rather than about the app, and counting it once per app would walk the same history over and over.");
   for (let app of apps_unique) {
     async function reached() {
       let names = await qa_app_reachable_names(app);
