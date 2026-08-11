@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -159,15 +160,6 @@ export async function app_shared_bible_read(context, verse_action) {
   app_shared_text_deemphasized(count_status);
   ("this line is empty until verses are picked, and a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter's buttons sit at the top of the screen where the reader's thumb expects them");
   html_margin_0(count_status);
-  function count_refresh() {
-    let n = list_size(verse_numbers_chosen);
-    let text = "";
-    if (greater_than(n, 0)) {
-      ("up to, because the second number is the most you may pick rather than how many verses are there - without those words one verse chosen in a hundred-verse chapter reads as one of two");
-      text = text_combine_multiple([n, " of up to ", max, " selected"]);
-    }
-    html_text_set(count_status, text);
-  }
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
   if (ref_mode) {
     let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
@@ -271,7 +263,11 @@ export async function app_shared_bible_read(context, verse_action) {
       select();
       persist_selection();
       dismiss_help();
-      count_refresh();
+      app_shared_bible_read_count_refresh(
+        verse_numbers_chosen,
+        max,
+        count_status,
+      );
     }
     let number = app_shared_button(p, verse_number_v, select_persist);
     html_style_justify_self(number, "end");
@@ -343,7 +339,7 @@ export async function app_shared_bible_read(context, verse_action) {
   }
   await list_map_add_async(primary_verses, render_verse, updates);
   html_page_bottom_space(content);
-  count_refresh();
+  app_shared_bible_read_count_refresh(verse_numbers_chosen, max, count_status);
   async function resume() {
     if (list_empty_is(verse_numbers_chosen)) {
       return;
@@ -359,4 +355,18 @@ export async function app_shared_bible_read(context, verse_action) {
     }
   }
   promise_later(resume);
+}
+function app_shared_bible_read_count_refresh(
+  verse_numbers_chosen,
+  max,
+  count_status,
+) {
+  arguments_assert(arguments, 3);
+  let n = list_size(verse_numbers_chosen);
+  let text = "";
+  if (greater_than(n, 0)) {
+    ("up to, because the second number is the most you may pick rather than how many verses are there - without those words one verse chosen in a hundred-verse chapter reads as one of two");
+    text = text_combine_multiple([n, " of up to ", max, " selected"]);
+  }
+  html_text_set(count_status, text);
 }
