@@ -13,13 +13,16 @@ export function js_declaration_names_unbound_cases() {
   let own6 = text_frozen("f");
   let outer = text_frozen("outer_shade");
   let outer2 = text_frozen("outer_shade");
+  let t = text_frozen("paint");
+  let t2 = text_frozen("risky");
+  let t3 = text_frozen("take");
   let cases = [
     {
       name: "the name after the colon in a pair is read, and is bound outside",
       code: text_frozen(
         "export function f(b) {\n  paint(b, { shade: outer_shade });\n}\n",
       ),
-      unbound: [own, text_frozen("paint"), outer],
+      unbound: [own, t, outer],
     },
     {
       name: "the word standing as the key of a pair is text, not a name",
@@ -28,7 +31,9 @@ export function js_declaration_names_unbound_cases() {
     },
     {
       name: "a pair written the short way really does read the name",
-      code: text_frozen("export function f() {\n  return { outer_shade };\n}\n"),
+      code: text_frozen(
+        "export function f() {\n  return { outer_shade };\n}\n",
+      ),
       unbound: [own3, outer2],
     },
     {
@@ -36,7 +41,7 @@ export function js_declaration_names_unbound_cases() {
       code: text_frozen(
         "export function f() {\n  try {\n    risky();\n  } catch (trouble) {\n    return trouble;\n  }\n}\n",
       ),
-      unbound: [own4, text_frozen("risky")],
+      unbound: [own4, t2],
     },
     {
       name: "a name the function binds for itself",
@@ -50,7 +55,7 @@ export function js_declaration_names_unbound_cases() {
       code: text_frozen(
         "export function f(items) {\n  for (let item of items) {\n    take(item);\n  }\n}\n",
       ),
-      unbound: [own6, text_frozen("take")],
+      unbound: [own6, t3],
     },
   ];
   return cases;
