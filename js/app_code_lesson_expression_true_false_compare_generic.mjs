@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_true_false_compare_generic_keyword } from "./app_code_lesson_expression_true_false_compare_generic_keyword.mjs";
+import { app_code_lesson_expression_true_false_compare_generic_line } from "./app_code_lesson_expression_true_false_compare_generic_line.mjs";
 import { app_code_lesson_expression_true_false_compare_generic_title_name_id } from "./app_code_lesson_expression_true_false_compare_generic_title_name_id.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -17,7 +17,6 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_true_false_compare_generic(
   operator,
   rights,
@@ -72,17 +71,6 @@ export function app_code_lesson_expression_true_false_compare_generic(
     ];
     return list;
   }
-  function line(combination) {
-    "one combination written out with this lesson's operator between the two words";
-    let left = property_get(combination, "left");
-    let right = property_get(combination, "right");
-    let left_code =
-      app_code_lesson_expression_true_false_compare_generic_keyword(left);
-    let right_code =
-      app_code_lesson_expression_true_false_compare_generic_keyword(right);
-    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
-    return code;
-  }
   function combinations_answered(want_true) {
     "the combinations this lesson's operator answers want_true for, keeping the enumeration order";
     function keep(combination) {
@@ -106,7 +94,10 @@ export function app_code_lesson_expression_true_false_compare_generic(
   function refill() {
     "every one of the four possibilities, every screen, always in the same order. A refill therefore shows the same table again, which is the honest answer to asking for more examples when four is all there are";
     function mapper(combination) {
-      let code = line(combination);
+      let code = app_code_lesson_expression_true_false_compare_generic_line(
+        combination,
+        symbol,
+      );
       return code;
     }
     let all = combinations_ordered();
