@@ -1,3 +1,4 @@
+import { app_g_dev_index_index_card } from "./app_g_dev_index_index_card.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { json_from } from "./json_from.mjs";
 import { json_to } from "./json_to.mjs";
@@ -13,8 +14,6 @@ import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { app_g_dev_index_prefixes } from "./app_g_dev_index_prefixes.mjs";
 import { app_g_dev_index_tree } from "./app_g_dev_index_tree.mjs";
@@ -54,14 +53,8 @@ export function app_g_dev_index() {
     let v2 = json_to([...open_paths]);
     sessionStorage.setItem(open_key, v2);
   }
-  function index_card(parent) {
-    "a search-style blue card, but with the shared 10px margin-y overridden to a TIGHTER 0.15rem so the #index choices sit close together (the search results want the room; a dev directory does not)";
-    let card = app_shared_container_blue(parent);
-    html_style_margin_y(card, "0.15rem");
-    return card;
-  }
   function leaf_card(parent, label, hash) {
-    let card = index_card(parent);
+    let card = app_g_dev_index_index_card(parent);
     let href = "#" + hash;
     let link = html_a_href_text(card, href, label);
     ("the address stays on the anchor so the card can still be copied or opened in a new tab, but the going-there is done by hand: a bare href only changes the hash and waits for a listener to reload, and that listener is registered while the app starts up, so a start-up that fails takes every card on this page with it");
@@ -82,7 +75,7 @@ export function app_g_dev_index() {
       leaf_card(parent, label, node.hash);
       return;
     }
-    let card = index_card(parent);
+    let card = app_g_dev_index_index_card(parent);
     let header = html_div_text_bold(card, label + " ›");
     html_cursor_pointer(header);
     let body = html_div(card);
