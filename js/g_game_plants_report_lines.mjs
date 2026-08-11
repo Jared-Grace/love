@@ -52,7 +52,7 @@ export async function g_game_plants_report_lines(word) {
   let object = property_get(report, "sizes");
   let tally = [
     "sermon " + property_get(report, "sermon_days") + " days",
-    "pool " + property_get(report, "pool") + " npcs",
+    "placed " + property_get(report, "npcs_placed") + " npcs",
     "plants " + property_get(report, "plants"),
     "leader_short " + property_get(report, "short_plants"),
     "elder_short " + property_get(report, "elder_short_plants"),
