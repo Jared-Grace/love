@@ -10,6 +10,8 @@ export async function qa_apps_prod_chunks_missing_deploy(commit) {
   "They go one after another rather than all at once. Sending is held by one lock and every one of them writes into the same folder, so running them together would only be a queue with the waiting hidden.";
   "Each is sent and written down before the next begins, so a run that stops halfway leaves the ones already sent properly sent and properly recorded, rather than leaving all of them half done.";
   "Anything already noted as changed is filed under its own bare name first, so the first app sent does not put somebody else's unfinished work out under its name.";
+  "An app that is refused is written down and the next one is begun, rather than the refusal ending the run. Being refused is a fact about that one app - its own commit was found unsound for it, which is a judgment somebody has to make - and letting it stop the others leaves apps broken for a reason that has nothing to do with them. Measured the day this was written: one app refused in fifth place and the six behind it were never tried";
+  "Every refusal is carried back out with the reason it gave, so whoever reads the answer can tell an app that was refused from an app that was never reached. Neither of those is the same as an app that was sent and is still wrong, and all three would look alike if the reasons were dropped";
   "Asking again at the end is the proof. What comes back is not what this tried to do but what is still wrong, so an answer of nothing is the only thing that reads as finished.";
   await ai_git_noted();
   let faulty = await apps_prod_chunks_missing();
