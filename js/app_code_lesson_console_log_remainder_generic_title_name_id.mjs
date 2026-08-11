@@ -1,10 +1,9 @@
+import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 export function app_code_lesson_console_log_remainder_generic_title_name_id(
   percent,
   divisor_text,
@@ -22,8 +21,6 @@ export function app_code_lesson_console_log_remainder_generic_title_name_id(
     }
     return render;
   }
-  let rights = [name_right];
-  let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_generic(rights, left, title_get);
+  let built = app_code_lesson_name_id_operators(name_right, title_get);
   return built;
 }
