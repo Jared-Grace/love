@@ -22,7 +22,7 @@
   "app_message_reply_give -> reply_choices_give",
   "app_message_reply_greeting -> app_reply_response_greetings",
   "app_message_reply_how_r_u -> app_reply_response_how_r_u",
-  "app_message_reply_iam_titled_name -> app_reply_choices_name",
+  "app_message_reply_iam_titled_name -> reply_choices_name",
   "app_message_reply_praise_god -> app_reply_choices_praise",
   "app_reply_local -> app_reply",
   "app_sandbox -> app_message",

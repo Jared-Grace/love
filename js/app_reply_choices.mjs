@@ -31,7 +31,7 @@ import { emoji_voice } from "./emoji_voice.mjs";
 import { app_reply_response_how_r_u_skip_first_upper } from "./app_reply_response_how_r_u_skip_first_upper.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "./app_reply_choices_will_done_fragment.mjs";
-import { app_reply_choices_name } from "./app_reply_choices_name.mjs";
+import { reply_choices_name } from "./reply_choices_name.mjs";
 import { reply_choices_location } from "./reply_choices_location.mjs";
 import { reply_choices_give } from "./reply_choices_give.mjs";
 import { app_reply_choices_praise } from "./app_reply_choices_praise.mjs";
@@ -353,12 +353,12 @@ export function app_reply_choices() {
     },
     {
       text: text_combine(emoji_wave(), " Name"),
-      response: app_reply_choices_name(),
+      response: reply_choices_name(),
     },
     {
       text: text_combine(emoji_wave(), " Name location"),
       response: text_combine_multiple([
-        app_reply_choices_name(),
+        reply_choices_name(),
         newline_2(),
         reply_choices_location(),
       ]),
