@@ -10,7 +10,8 @@ export async function function_app_import_verdict(imported) {
   ("What to do about one app-owned name that something outside its app is importing - the app it claims, who actually calls it split by whether they belong to that app, and which of the two ways out those callers point to.");
   ("Both records of this fault hold pairs and no advice, so every line of them is the same piece of reading done again by hand: ask who calls the name, ask which app each caller belongs to, and let the count decide. Doing it three times in one sitting is what says it should be a command.");
   ("No caller belongs to the app in the name, so the prefix is a lie and the name was never that app's. Renaming it to a prefix belonging to no app ends the fault outright, and a rename is behaviour-preserving, so it needs nobody's permission.");
-  ("Several callers belong to the app, so the name really is that app's and no rename can be honest. The call has to leave the shared side instead - the importer takes what it needs as something it is handed, and whoever owns the screen passes it.");
+  ("Several callers belong to the app, so the name is probably honest and no rename can help. What the importer does instead depends on what the importer is: code belonging to no app takes the thing as something it is handed, and whoever owns the screen passes it; another app needs its own, or a shared one both can reach.");
+  ("That reading rests on the callers' names, which is a strong hint and not a proof, so the callers are given back to be looked at rather than only counted. A caller can wear a prefix that is itself a lie - measured on a colour whose two callers both wore an app's prefix while neither was that app's code, so the count said the app owned it and the truth was that nothing did.");
   ("Exactly one caller belonging to the app decides nothing, and saying so is the point. That one caller may itself be on its way out, in which case the count is about to become none - which is exactly how a colour named after an app turned out to have no app behind it. So this asks for a person and names the single function they have to look at.");
   ("A name gives itself back among its own callers, and it is dropped rather than counted.");
   let app_names = await apps_names_prefixed();
@@ -34,7 +35,7 @@ export async function function_app_import_verdict(imported) {
   let own_size = list_size(callers_own);
   let none_is = equal(own_size, 0);
   let single_is = equal(own_size, 1);
-  let verdict = "parameter";
+  let verdict = "own";
   if (single_is) {
     verdict = "read";
   }
