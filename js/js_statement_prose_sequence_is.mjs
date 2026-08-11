@@ -15,7 +15,7 @@ export function js_statement_prose_sequence_is(node) {
   ("Whether this line is a paragraph written with a bracket and a comma round it, which is a comment to a reader and not a line of work.");
   ("Somebody wanting a function's name inside a sentence writes the sentence, a comma, and the name spelled as a reference, because that is the one spelling a rename follows. The comma turns the statement into a pair, and a pair is not a string - so every reading that recognises a comment by it being a lone string calls this line work and counts it.");
   ("Two readings are hurt by that, and in opposite directions. One counts how much a function does, and answers too big for a function whose paragraphs are simply written this way. The other asks what a fold would silently add to a caller, and names prose as the work it would add, refusing a fold that was safe.");
-  ("A call inside the brackets is allowed only when it is the one that spells a name. Anything else could do something, and treating a line that does something as a comment would hide real work from exactly the reading that exists to find it - which is worse than the counting this fixes.");
+  ("What each piece inside the brackets is allowed to be is asked next door, because the sibling that reads a paragraph written with a backtick has to ask exactly the same question of exactly the same pieces.");
   let statement_is = js_node_type_is(node, "ExpressionStatement");
   if (not(statement_is)) {
     return false;
@@ -36,18 +36,6 @@ export function js_statement_prose_sequence_is(node) {
     return false;
   }
   let parts = property_get(expression, "expressions");
-  for (let part of parts) {
-    let call_is = js_call_is(part);
-    if (not(call_is)) {
-      continue;
-    }
-    let callee = property_get(part, "callee");
-    let called = js_identifier_name_try(callee);
-    let naming = fn_name("fn_name");
-    let naming_is = equal(called, naming);
-    if (not(naming_is)) {
-      return false;
-    }
-  }
-  return true;
+  let all_prose_is = list_every(parts, js_prose_part_is);
+  return all_prose_is;
 }
