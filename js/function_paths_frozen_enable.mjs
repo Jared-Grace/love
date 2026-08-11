@@ -1,10 +1,23 @@
+import { folder_current_absolute } from "./folder_current_absolute.mjs";
+import { folder_memory } from "./folder_memory.mjs";
 import { global_function_initialize_object } from "./global_function_initialize_object.mjs";
 import { property_set } from "./property_set.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
 export function function_paths_frozen_enable() {
   "Say, once, that the folders this process reads cannot change under it - so where a function's file lives may be worked out once per name instead of once per asking.";
-  "Whoever calls this is making a promise the code cannot check for itself, which is why it is asked for out loud rather than guessed at. The promise is that no file will be created, moved or removed anywhere this process looks, for as long as it runs.";
-  "The gate run inside the frozen copy is what can make that promise honestly. The copy is taken whole, in memory, and the neighbouring repos are frozen beside it; nothing living is left pointed at, and that is checked rather than claimed. Nobody can write to it while it is being read.";
-  "The living folder is the opposite case and must never turn this on. Several of us edit it at once, so a name that had no file a moment ago has one now, and an answer kept from earlier would be a wrong answer rather than a stale one.";
-  let object = global_function_initialize_object(function_paths_frozen_enable);
-  property_set(object, "frozen", true);
+  "Whoever calls this is making a promise, and the promise is that no file will be created, moved or removed anywhere this process looks, for as long as it runs. The gate run inside the frozen copy is what can make it honestly: the copy is taken whole, the neighbouring repos are frozen beside it, nothing living is left pointed at, and that is checked rather than claimed.";
+  "The promise is looked at here rather than taken on the caller's word, and the two ways of being wrong are not the same size. A frozen reader that is refused simply does the slow thing it did before. A living reader that is believed gets answers about a folder that has moved on - a name whose file arrived a moment ago reads as having none - and nothing says so. So the cheap failure is chosen every time the promise cannot be seen to be true.";
+  "What it looks at is whether the process is standing in memory rather than on a disk. Only the frozen copy is ever there; it is made in memory precisely because it is thrown away and remade on every asking. A process running out of the folder people are editing is on a disk, always, so the two cases cannot be confused.";
+  let here = folder_current_absolute();
+  let memory = folder_memory();
+  let frozen = text_starts_with(here, memory);
+  if (frozen) {
+    let object = global_function_initialize_object(function_paths_frozen_enable);
+    property_set(object, "frozen", true);
+  }
+  let r = {
+    frozen,
+    here,
+  };
+  return r;
 }
