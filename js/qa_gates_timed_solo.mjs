@@ -1,3 +1,4 @@
+import { function_paths_frozen_enable } from "./function_paths_frozen_enable.mjs";
 import { machine_load_average } from "./machine_load_average.mjs";
 import { timings_total_ms } from "./timings_total_ms.mjs";
 import { console_log_silence } from "./console_log_silence.mjs";
