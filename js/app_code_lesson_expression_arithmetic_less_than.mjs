@@ -1,7 +1,9 @@
+import { list_to_or_list_word } from "./list_to_or_list_word.mjs";
+import { js_operator_symbol } from "./js_operator_symbol.mjs";
+import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
 import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
-import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
@@ -221,17 +223,17 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     let o = js_operator_double_asterisk();
     let more = [o];
     let operators = list_concat(four, more);
-    function operator_symbol(operator) {
-      "the symbol shown in an operator's tile";
-      let symbol = property_get(operator, "operator");
-      return symbol;
-    }
-    app_code_operators_word_list(line, operators, "or", operator_symbol);
+    let word_relationship = list_to_or_list_word();
+    app_code_operators_word_list(
+      line,
+      operators,
+      word_relationship,
+      js_operator_symbol,
+    );
     html_span_text(line, " before any ");
     html_span_text_bold(line, "comparison");
     html_span_text(line, ": ");
-    let comparisons = js_operators_comparison();
-    app_code_operators_word_list(line, comparisons, "or", operator_symbol);
+    app_code_operators_comparison_or_list(line);
     let sum = add(2, 3);
     app_code_lesson_expression_arithmetic_less_than_worked_example(
       9,
