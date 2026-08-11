@@ -1,6 +1,7 @@
+import { functions_app_import_advice_curried } from "./functions_app_import_advice_curried.mjs";
+import { baseline_names_gate_advice_generic } from "./baseline_names_gate_advice_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { functions_app_specific_imports } from "./functions_app_specific_imports.mjs";
 import { functions_app_specific_imports_baseline_path } from "./functions_app_specific_imports_baseline_path.mjs";
 import { list_size } from "./list_size.mjs";
@@ -16,7 +17,12 @@ export async function functions_app_specific_imports_gate_run() {
   let hint_get = functions_app_import_advice_curried(
     "these functions belong to no app and reach into one, and did not before - move what they need into shared code, or move the unit into the app it belongs to",
   );
-  await baseline_names_gate_advice_generic(offenders, path, hint_get, name_write);
+  await baseline_names_gate_advice_generic(
+    offenders,
+    path,
+    hint_get,
+    name_write,
+  );
   let r = {
     checked: list_size(offenders),
     added: 0,
