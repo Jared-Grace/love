@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
@@ -85,15 +86,10 @@ export function app_code_lesson_quiz(
   let has_review = app_code_review_due_is(number);
   let lcli = app_code_lesson_current_last_is(context);
   let no_more = lcli && not(has_review);
-  async function on_move_on() {
-    "go to the review (at a checkpoint) or the next lesson";
-    app_code_quiz_index_reset(context);
-    await app_code_after_lesson(context);
-  }
   async function on_next() {
     "Next moves to the next quiz KIND (forwards, backwards, unscramble...); on the last kind it goes to the next lesson, same as Skip";
     if (qli) {
-      await on_move_on();
+      await app_code_lesson_quiz_on_move_on(context);
     } else {
       app_code_quiz_index_transform(context, quizzes, add_1);
       refresh();
@@ -174,4 +170,10 @@ export function app_code_lesson_quiz(
     qa = next_get();
     on_qa_change();
   }
+}
+async function app_code_lesson_quiz_on_move_on(context) {
+  arguments_assert(arguments, 1);
+  ("go to the review (at a checkpoint) or the next lesson");
+  app_code_quiz_index_reset(context);
+  await app_code_after_lesson(context);
 }
