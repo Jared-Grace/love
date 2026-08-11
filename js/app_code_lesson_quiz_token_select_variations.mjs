@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_token_select_variations_generate_all } from "./app_code_lesson_quiz_token_select_variations_generate_all.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
@@ -13,8 +14,6 @@ import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first_remaining } from "./list_first_remaining.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
@@ -90,33 +89,14 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     js_visit_type_node(tree, "CallExpression", on_call);
   }
   let orderable_nodes = list_adder(collect);
-  function generate_all(la) {
-    "the cartesian product: for each node try every one of its orderings, recursing on the rest, then restore that node - so every combination is emitted and the tree ends as it began";
-    function generate(nodes) {
-      let none_left = list_empty_is(nodes);
-      if (none_left) {
-        let code_variation = js_unparse(tree);
-        la(code_variation);
-      } else {
-        let split = list_first_remaining(nodes);
-        let first = property_get(split, "first");
-        let remaining = property_get(split, "remaining");
-        let orderings = property_get(first, "orderings");
-        function try_ordering(ordering) {
-          ordering();
-          generate(remaining);
-        }
-        each(orderings, try_ordering);
-        let restore = property_get(first, "restore");
-        restore();
-      }
-    }
-    generate(orderable_nodes);
-  }
   let value_codes = app_code_lesson_quiz_token_select_value_variations(code);
   function generate_all_with_values(la) {
     "the commutative-swap orderings, plus every same-tiles same-value rearrangement, into one deduplicated pool";
-    generate_all(la);
+    app_code_lesson_quiz_token_select_variations_generate_all(
+      la,
+      tree,
+      orderable_nodes,
+    );
     each(value_codes, la);
   }
   let codes = list_adder_unique(generate_all_with_values);
