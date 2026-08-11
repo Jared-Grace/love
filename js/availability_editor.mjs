@@ -1,18 +1,15 @@
-import { date_year } from "./date_year.mjs";
-import { date_month_day_year } from "./date_month_day_year.mjs";
+import { availability_editor_update_week_label } from "./availability_editor_update_week_label.mjs";
 import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { week_dates } from "./week_dates.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
 import { date_week_sunday } from "./date_week_sunday.mjs";
 import { date_add_days } from "./date_add_days.mjs";
-import { date_month_day } from "./date_month_day.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_input_date } from "./html_input_date.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -21,12 +18,9 @@ import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { busy_item_build } from "./busy_item_build.mjs";
 import { busy_item_label } from "./busy_item_label.mjs";
@@ -80,25 +74,7 @@ export function availability_editor(parent) {
     html_clear(grid_holder);
     let dates = week_dates(week_start);
     week_calendar(grid_holder, dates, ranges, on_grid_ranges);
-    update_week_label(dates);
-  }
-  function update_week_label(dates) {
-    let first = list_first(dates);
-    let last = list_last(dates);
-    let left = date_year(first);
-    let right2 = date_year(last);
-    let same_year = equal(left, right2);
-    let start_label = same_year
-      ? date_month_day(first)
-      : date_month_day_year(first);
-    let end_label = date_month_day_year(last);
-    let text = text_combine_multiple([
-      "Week of: ",
-      start_label,
-      " – ",
-      end_label,
-    ]);
-    html_text_set(week_label, text);
+    availability_editor_update_week_label(dates, week_label);
   }
   function on_grid_ranges(new_ranges) {
     ranges = new_ranges;
