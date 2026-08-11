@@ -1,3 +1,8 @@
+import { property_get } from "./property_get.mjs";
+import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
+import { add_1_period } from "./add_1_period.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_div } from "./html_div.mjs";
