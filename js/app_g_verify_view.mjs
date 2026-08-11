@@ -1,3 +1,4 @@
+import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
 import { app_g_verify_view_panel_flush } from "./app_g_verify_view_panel_flush.mjs";
 import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
@@ -7,10 +8,8 @@ import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
 import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { app_g_verify_note_font_size } from "./app_g_verify_note_font_size.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
-import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -431,52 +430,17 @@ export async function app_g_verify_view(
   }
   reviewed_show();
   ("show the reviewer their own past suggestions for this verse; Load drops one back into the box to view or build on");
-  async function history_show() {
-    try {
-      let all = await app_shared_api({
-        f_name: fn_name("g_verify_suggest_history_read"),
-        args: [chapter_code],
-      });
-      let mine = [];
-      function lambda_hist(h) {
-        let left = property_get(h, "verse");
-        if (equal(left, verse)) {
-          mine.push(h);
-        }
-      }
-      all.forEach(lambda_hist);
-      if (greater_than_equal(mine.length, 1)) {
-        app_g_verify_view_label_new(
-          "YOUR PAST SUGGESTIONS FOR v" + verse,
-          container,
-          small_gap,
-        );
-        function lambda_show(h) {
-          let box = app_shared_container_base(container);
-          let t = property_get(h, "text");
-          let txt = html_p_text(box, t);
-          html_style_white_space(txt, "pre-wrap");
-          app_shared_text_deemphasized(txt);
-          let value10 = app_g_verify_note_font_size();
-          html_style_font_size(txt, value10);
-          function load_this() {
-            html_value_set(suggest_area, t);
-            app_g_verify_view_draft_save(
-              suggest_area,
-              sessionStorage,
-              draft_key,
-              base_key,
-              value4,
-            );
-            autosize();
-          }
-          app_shared_button(box, "Load into box", load_this);
-        }
-        mine.forEach(lambda_show);
-      }
-    } catch (ignore_h) {
-      ignore_h;
-    }
-  }
-  history_show();
+  await app_g_verify_view_history_show(
+    chapter_code,
+    verse,
+    container,
+    small_gap,
+    suggest_area,
+    sessionStorage,
+    draft_key,
+    base_key,
+    value4,
+    autosize,
+    ignore_h,
+  );
 }
