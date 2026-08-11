@@ -8,6 +8,8 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   "$plain known";
   "$plain path";
   arguments_assert(arguments, 4);
+  ("The commit is written out in full before anything is looked up or filed under it. Git answers to a shortened name, so naming one here used to file the answer under those few letters while every other answer in the record is listed under the full name - and the readers that walk a range of commits are handed full names by git, so they never met the entry again. That is a quarter of an hour of judging that looks like it worked and cannot afterwards be found; it happened, on the commit this line was written for.");
+  let named = await git_commit_full(commit);
   ("Answers a question about the commit you name, from a record if the answer is already in it, and otherwise by freezing a copy of that commit, running the gates over it, and writing the answer down.");
   ("Naming the commit is what makes the writing down worth anything. With this many of us committing, the newest commit changes several times while one run finishes, so an answer asked about whatever is newest is almost always an answer nobody has yet - measured, after guessing otherwise.");
   ("Two askers wanted the same remembering and differed only in what they kept, so what they kept is the one thing handed in. Everything around it - looking first, freezing, running, writing back, and saying whether the answer was already there - is the same work twice, and was written twice until this was named.");
