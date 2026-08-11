@@ -13,13 +13,13 @@ export async function g_sermon_passages_all(chapters) {
     let book = ebible_chapter_code_to_book(chapter);
     let passages = await g_sermon_chapter_passages_for_grouping(chapter);
     function placed(passage) {
-      let r = {
+      let passage_record = {
         book,
         chapter,
         ref: property_get(passage, "ref"),
         lines: property_get(passage, "lines"),
       };
-      return r;
+      return passage_record;
     }
     let out = list_map(passages, placed);
     return out;
