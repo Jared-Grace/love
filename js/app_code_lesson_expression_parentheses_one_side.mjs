@@ -23,7 +23,8 @@ import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_parentheses_one_side() {
   "( and ) around a comparison, on the one line where they change nothing: (3 === 5) === false. The previous lesson wrote that same line flat - 3 === 5 === false - and said so deliberately, because parentheses there would have been a rule the learner could not yet see the need for. Here they are the whole lesson and nothing else moves: the same shape, the same answer, one new pair of symbols. Meeting them on a line whose value they do not change is what makes the next lesson safe, where both sides are comparisons and the parentheses decide the answer for real.";
-  "Only the LEFT side is wrapped. Wrapping the right as well is the next lesson, and doing it here would put two new things in one step - brackets, and a comparison standing on the right - when only one of them is this lesson's idea.";
+  "Exactly ONE side is wrapped, and it is the left one on half the examples and the right one on the other half. Wrapping BOTH is the next lesson, and doing it here would put two new things in one step - brackets, and a second comparison - when only one of them is this lesson's idea. Moving the single comparison to the right adds no second thing, so it belongs here: the line still holds one bracket pair and one plain true or false.";
+  "The two orders are not the same to read, which is why both are shown. (3 > 8) === false reads straight through - the bracket comes first, so working the inside first is what left to right already does. false === (3 > 8) hands the reader false === with nothing yet to compare it to, so they have to go right, work the bracket, and come back. That is the case the rule is actually for, and it is the same asymmetry the arithmetic-comparison lesson meets - which is also why that lesson varies the side inside itself rather than spending a second lesson on the mirror.";
   let name_id = app_code_lesson_expression_parentheses_one_side_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
@@ -39,36 +40,31 @@ export function app_code_lesson_expression_parentheses_one_side() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function expression(want_true) {
-    "a comparison wrapped in ( and ), then === or !==, then a plain true or false, with the operator picked so the whole line lands on want_true";
-    let left = app_code_comparison_side();
-    let right_value = list_random_item([true, false]);
-    let agree = property_equals(left, "value", right_value);
+  function expression(want_true, comparison_first) {
+    "a comparison wrapped in ( and ) and a plain true or false, in whichever order comparison_first asks for, joined by === or !== picked so the whole line lands on want_true. Swapping the two sides cannot change the answer - === and !== read the same either way - so the same operator choice serves both orders";
+    let comparison = app_code_comparison_side();
+    let plain_value = list_random_item([true, false]);
+    let agree = property_equals(comparison, "value", plain_value);
     let wanted = equal(agree, want_true);
     let on_true = js_operator_triple_equal_symbol();
     let on_false = js_operator_bang_double_equal_symbol();
     let symbol = ternary(wanted, on_true, on_false);
-    let left_code = property_get(left, "code");
-    let right_code = js_true_false_word(right_value);
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    let code = text_combine_multiple([
-      open,
-      left_code,
-      close,
-      " ",
-      symbol,
-      " ",
-      right_code,
-    ]);
+    let inside = property_get(comparison, "code");
+    let comparison_code = text_combine_multiple([open, inside, close]);
+    let plain_code = js_true_false_word(plain_value);
+    let left_code = ternary(comparison_first, comparison_code, plain_code);
+    let right_code = ternary(comparison_first, plain_code, comparison_code);
+    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
     return code;
   }
   function refill() {
-    "four examples a screen, true and false alternating";
-    let v = expression(true);
-    let v2 = expression(false);
-    let v3 = expression(true);
-    let v4 = expression(false);
+    "four examples a screen, crossing the two things that vary so every screen shows all four: true and false alternating, and the comparison on the left then the right";
+    let v = expression(true, true);
+    let v2 = expression(false, false);
+    let v3 = expression(true, false);
+    let v4 = expression(false, true);
     let list = [v, v2, v3, v4];
     return list;
   }
@@ -102,5 +98,16 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let second = app_code_container_light_blue(root);
     html_div_cycle_code(second, ["", "2 < 5", " is ", "true"]);
     html_div_cycle_code(second, ["So ", "(2 < 5) !== true", " is ", "false"]);
+    let either = app_code_container_light_blue(root);
+    html_div_cycle_code(either, [
+      "The ",
+      open,
+      " and ",
+      close,
+      " can be on either side",
+    ]);
+    html_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
+    html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
+    html_div_cycle_code(either, ["We still work out the ", "3 > 8", " first"]);
   }
 }

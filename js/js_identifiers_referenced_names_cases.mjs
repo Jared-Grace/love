@@ -13,8 +13,6 @@ export function js_identifiers_referenced_names_cases() {
   "Each file is held as fixed text, and so are the names expected back. Left as references";
   "they would follow a rename while the frozen file beside them kept the old word.";
   let a = text_frozen("list_add");
-  let a2 = text_frozen("list_add");
-  let a3 = text_frozen("list_add");
   let b = text_frozen("list_map");
   let cases = [
     {
@@ -43,14 +41,14 @@ export function js_identifiers_referenced_names_cases() {
       code: text_frozen(
         "export function f(list_add) {\n  return { list_add };\n}\n",
       ),
-      referenced: ["f", a2],
+      referenced: ["f", a],
     },
     {
       name: "a property reached through brackets really does reference the name in them",
       code: text_frozen(
         "export function f(record, list_add) {\n  return record[list_add];\n}\n",
       ),
-      referenced: ["f", "record", a3],
+      referenced: ["f", "record", a],
     },
     {
       name: "the module's own url is one word the language supplies, not two names",

@@ -19,14 +19,9 @@ export function permission_settings_allow_drift_cases() {
   let t14 = text_frozen("a_two");
   let t15 = text_frozen("Bash(node scripts/ai.mjs new_name:*)");
   let t16 = text_frozen("new_name");
-  let t17 = text_frozen("Bash(node scripts/ai.mjs after_name:*)");
   let t18 = text_frozen("Bash(node scripts/ai.mjs extra_name:*)");
-  let t19 = text_frozen("Bash(node scripts/ai.mjs before_name:*)");
-  let t20 = text_frozen("after_name");
   let t21 = text_frozen("extra_name");
-  let t22 = text_frozen("before_name");
   let t23 = text_frozen("Bash(ls:*)");
-  let t24 = text_frozen("Bash(ls:*)");
   let cases = [
     {
       name: "nothing differs at all",
@@ -70,10 +65,10 @@ export function permission_settings_allow_drift_cases() {
     },
     {
       name: "two arrived against one departure, so a rename is being used to carry an extra grant in",
-      missing: [t17, t18],
-      extra: [t19],
-      arrived: [t20, t21],
-      departed: [t22],
+      missing: [t3, t18],
+      extra: [t4],
+      arrived: [t5, t21],
+      departed: [t6],
       verdict: text_frozen("addition"),
     },
     {
@@ -87,7 +82,7 @@ export function permission_settings_allow_drift_cases() {
     {
       name: "a hand-written rule departs, which only narrows and needs no name",
       missing: [],
-      extra: [t24],
+      extra: [t23],
       arrived: [],
       departed: [],
       verdict: text_frozen("shrink"),
