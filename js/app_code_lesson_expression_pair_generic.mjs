@@ -1,3 +1,4 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map_index } from "./list_map_index.mjs";
@@ -9,8 +10,6 @@ import { modulo } from "./modulo.mjs";
 import { ternary } from "./ternary.mjs";
 import { js_eval_left_to_right } from "./js_eval_left_to_right.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -53,20 +52,16 @@ export function app_code_lesson_expression_pair_generic(params) {
   return lesson;
   function title_name_id() {
     "the home title is <op1> <op2>, an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text_code_dark(parent, symbol1);
-        html_span_text(parent, " ");
-        html_span_text_code_dark(parent, symbol2);
-      }
-      return render;
+    function paint(parent) {
+      html_span_text_code_dark(parent, symbol1);
+      html_span_text(parent, " ");
+      html_span_text_code_dark(parent, symbol2);
     }
     let rights = [word];
-    let built = app_code_lesson_name_id_generic(
+    let built = app_code_lesson_name_id_category_then(
       rights,
       app_code_category_expressions(),
-      title_get,
+      paint,
     );
     return built;
   }
