@@ -1,15 +1,15 @@
-import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { html_border_invalid_color } from "../../love/js/html_border_invalid_color.mjs";
-import { app_shared_button_font_color } from "../../love/js/app_shared_button_font_color.mjs";
-import { each } from "../../love/js/each.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
-import { html_enable_if } from "../../love/js/html_enable_if.mjs";
-import { html_style_assign } from "../../love/js/html_style_assign.mjs";
-import { app_shared_button_background_invalid } from "../../love/js/app_shared_button_background_invalid.mjs";
-import { not } from "../../love/js/not.mjs";
-import { app_shared_button_background } from "../../love/js/app_shared_button_background.mjs";
-import { app_shared_validate_background } from "../../love/js/app_shared_validate_background.mjs";
-import { app_shared_validate_border_color } from "../../love/js/app_shared_validate_border_color.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_border_invalid_color } from "./html_border_invalid_color.mjs";
+import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
+import { each } from "./each.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { html_enable_if } from "./html_enable_if.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_button_background_invalid } from "./app_shared_button_background_invalid.mjs";
+import { not } from "./not.mjs";
+import { app_shared_button_background } from "./app_shared_button_background.mjs";
+import { app_shared_validate_background } from "./app_shared_validate_background.mjs";
+import { app_shared_validate_border_color } from "./app_shared_validate_border_color.mjs";
 export function app_shared_validate_style_assign(
   valid,
   divs,
