@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
 import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
@@ -81,7 +82,6 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_split } from "./text_split.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
