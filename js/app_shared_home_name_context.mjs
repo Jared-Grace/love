@@ -1,7 +1,7 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { function_name_combine } from "./function_name_combine.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_home_name } from "./app_shared_home_name.mjs";
 export function app_shared_home_name_context(context) {
-  let name = property_path_get_2(context, "app_fn", "name");
-  let combined = function_name_combine(name, "home");
+  let app_fn = property_get(context, "app_fn");
+  let combined = app_shared_home_name(app_fn);
   return combined;
 }
