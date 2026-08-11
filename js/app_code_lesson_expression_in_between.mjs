@@ -1,14 +1,11 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -65,7 +62,7 @@ export function app_code_lesson_expression_in_between() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_expression_in_between_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -79,20 +76,6 @@ export function app_code_lesson_expression_in_between() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title: in between, an Expressions lesson";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "in between");
-      }
-      return render;
-    }
-    let rights = ["in between"];
-    let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_generic(rights, left, title_get);
-    return built;
-  }
   function above(root) {
     "the goal, then the trap, then the fix: repeat the middle number and join with &&";
     let goal = app_code_container_light_blue(root);
