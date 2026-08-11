@@ -1,10 +1,10 @@
+import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
 import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
 import { app_code_lesson_expression_min_max_generic_title_name_id } from "./app_code_lesson_expression_min_max_generic_title_name_id.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -26,14 +26,9 @@ export function app_code_lesson_expression_min_max_generic(params) {
   let comparison = property_get(params, "comparison");
   let define_render = property_get(params, "define_render");
   let short_name = property_get(params, "short_name");
-  function two_numbers() {
-    "two DIFFERENT numbers 2..12, so there is always a real answer";
-    let two = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 2);
-    return two;
-  }
   function make(index) {
     "one question with a different pair of numbers";
-    let two = two_numbers();
+    let two = app_code_lesson_expression_min_max_generic_two_numbers();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let r = app_code_lesson_expression_min_max_generic_code(a, b, called_name);
@@ -88,7 +83,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
   function above(root) {
     "the lesson-specific opening line (define_render), then the worked example in BOTH orders - the chosen number on the left and on the right - then the equal-numbers case";
     define_render(root);
-    let two = two_numbers();
+    let two = app_code_lesson_expression_min_max_generic_two_numbers();
     let a = list_get(two, 0);
     let b = list_get(two, 1);
     let chosen = choose(a, b);
