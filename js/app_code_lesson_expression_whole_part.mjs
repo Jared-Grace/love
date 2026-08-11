@@ -1,3 +1,4 @@
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
@@ -10,8 +11,6 @@ import { list_get } from "./list_get.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -58,18 +57,14 @@ export function app_code_lesson_expression_whole_part() {
   return lesson;
   function title_name_id() {
     "the home title is console.log whole part";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Whole part");
-      }
-      return render;
+    function paint(parent) {
+      html_span_text(parent, "Whole part");
     }
     let rights = ["whole part"];
-    let built = app_code_lesson_name_id_generic(
+    let built = app_code_lesson_name_id_category_then(
       rights,
       app_code_category_operators(),
-      title_get,
+      paint,
     );
     return built;
   }
