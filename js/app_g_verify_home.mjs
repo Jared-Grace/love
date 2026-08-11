@@ -1,3 +1,4 @@
+import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { html_query_property_get } from "./html_query_property_get.mjs";
@@ -362,14 +363,6 @@ export async function app_g_verify_home(context) {
     poll_timer = setTimeout(refresh, 4000);
   }
   ("do NOT re-render while the reviewer is typing in the suggest box — a poll that lands mid-edit would rebuild the textarea and wipe their in-progress draft. Defer: shown_json is left stale, so the next poll after they click away or submit renders the fresh lines");
-  function editing_now() {
-    let active = document.activeElement;
-    if (not(active)) {
-      return false;
-    }
-    let eq = equal(active.tagName, "TEXTAREA");
-    return eq;
-  }
   async function refresh() {
     if (document.hidden) {
       poll();
@@ -409,7 +402,7 @@ export async function app_g_verify_home(context) {
         status: fresh_status,
         chapter_state: fresh_state,
       });
-      let b4 = editing_now();
+      let b4 = app_g_verify_home_editing_now(document);
       if (not_equal(fresh_json, shown_json) && not(b4)) {
         render(fresh_chapter, fresh_status, fresh_state);
       }
