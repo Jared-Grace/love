@@ -1,12 +1,10 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_console_log_nested_generic_title_name_id } from "./app_code_lesson_console_log_nested_generic_title_name_id.mjs";
 import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -31,7 +29,10 @@ export function app_code_lesson_console_log_nested_generic(params) {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = title_name_id();
+  let name_id = app_code_lesson_console_log_nested_generic_title_name_id(
+    symbol,
+    word,
+  );
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
@@ -39,24 +40,6 @@ export function app_code_lesson_console_log_nested_generic(params) {
     example_count: 2,
   });
   return lesson;
-  function title_name_id() {
-    "the home title is console.log nested <operator>";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Nested ");
-        html_span_text_code_dark(parent, symbol);
-      }
-      return render;
-    }
-    let rights = [word];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let c = app_code_container_light_blue(root);
     let line_seen = html_div(c);
@@ -66,7 +49,8 @@ export function app_code_lesson_console_log_nested_generic(params) {
       " two numbers: ",
     ]);
     html_span_text(line_seen, seen_text);
-    html_span_text_code_dark(line_seen, triple_to_code(pair));
+    let text = triple_to_code(pair);
+    html_span_text_code_dark(line_seen, text);
     let line_more = html_div(c);
     let more_text = text_combine_multiple([
       "We can ",
@@ -74,7 +58,8 @@ export function app_code_lesson_console_log_nested_generic(params) {
       " more than two numbers together like this: ",
     ]);
     html_span_text(line_more, more_text);
-    html_span_text_code_dark(line_more, triple_to_code(example_triple));
+    let text2 = triple_to_code(example_triple);
+    html_span_text_code_dark(line_more, text2);
     let line_name = html_div(c);
     html_span_text(line_name, "Code like this is called an expression");
     let line_between = html_div(c);
