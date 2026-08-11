@@ -1,3 +1,4 @@
+import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,7 +6,6 @@ import { js_identifier_is } from "./js_identifier_is.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { not } from "./not.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_add } from "./list_add.mjs";
@@ -33,8 +33,7 @@ export function js_calls_unawaited(functions, ast) {
     if (not(async_is)) {
       continue;
     }
-    let stack = property_get(visited, "stack");
-    let parent = list_get_end_1(stack);
+    let parent = property_list_get_end_1(visited, "stack");
     let waited_is = js_node_type_is(parent, "AwaitExpression");
     if (waited_is) {
       continue;
