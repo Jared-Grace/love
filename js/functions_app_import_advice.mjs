@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_app_import_verdicts_pairs } from "./functions_app_import_verdicts_pairs.mjs";
+import { list_map } from "./list_map.mjs";
+import { function_app_import_verdict_line } from "./function_app_import_verdict_line.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 export async function functions_app_import_advice(pairs) {
   arguments_assert(arguments, 1);
   ("What to do about each app-owned name in a run of reported lines, written out as one line per name for somebody a gate has just stopped.");

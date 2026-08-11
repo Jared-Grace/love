@@ -11,26 +11,10 @@ export async function functions_app_import_verdicts() {
   arguments_assert(arguments, 0);
   ("What to do about every app-owned name that something outside its app imports today, one answer per name, each carrying the app it claims, who calls it, and which way out that points to.");
   ("It finds its own set from the two readings that report the fault, so it cannot drift from what is really there and needs no list handed to it. The records themselves are a worklist with no advice on it, and this is the advice.");
-  ("One answer per imported name rather than per pair. Two functions reaching for the same name are the same question asked twice, and the answer is about the name.");
-  ("The imported name is the last word of a reported line, which is safe to read that way because no function name holds a space.");
+  ("Finding the set is what is left here, because the reading itself is asked of whichever lines it is given, and the gates that report these faults ask the same thing of the few lines that newly appeared.");
   let pairs = await functions_app_specific_imports();
   let crossing = await functions_cross_app_imports();
   list_add_multiple(pairs, crossing);
-  let names = [];
-  for (let pair of pairs) {
-    let words = text_split_space(pair);
-    let imported = list_last(words);
-    let known = list_includes(names, imported);
-    if (known) {
-      continue;
-    }
-    list_add(names, imported);
-  }
-  names.sort();
-  let verdicts = [];
-  for (let name of names) {
-    let verdict = await function_app_import_verdict(name);
-    list_add(verdicts, verdict);
-  }
+  let verdicts = await functions_app_import_verdicts_pairs(pairs);
   return verdicts;
 }

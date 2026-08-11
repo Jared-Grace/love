@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
@@ -14,9 +16,14 @@ export async function app_code_lesson_name_id_category_then_migrate() {
   ("The shared unit is a caller too, and the only one that is meant to hold the nest, so it is the one name taken back out.");
   ("Each file is committed as it is rewritten. A run this long is overtaken by somebody else's sweep, and a file swept up before this finishes says nothing about how it was changed.");
   await ai_git_noted();
-  let callers = await data_identifiers_search("app_code_lesson_name_id_generic");
+  let callers = await data_identifiers_search(
+    fn_name("app_code_lesson_name_id_generic"),
+  );
   let names = object_property_names(callers);
-  let work = list_without(names, "app_code_lesson_name_id_category_then");
+  let work = list_without(
+    names,
+    fn_name("app_code_lesson_name_id_category_then"),
+  );
   let migrated = [];
   let passed_over = [];
   for (let name of work) {
@@ -29,7 +36,7 @@ export async function app_code_lesson_name_id_category_then_migrate() {
     if (done) {
       list_add(migrated, name);
     }
-    if (!done) {
+    if (not(done)) {
       let reason = property_get(report, "reason");
       let skip = {
         name,

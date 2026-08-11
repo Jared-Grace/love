@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_app_import_verdict_advice } from "./function_app_import_verdict_advice.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function function_app_import_verdict_line(verdict) {
   arguments_assert(arguments, 1);
   ("One answer about one app-owned import written as a single line: the name, the app it claims, the one-word answer, what to do about it, and the evidence that decided it.");
