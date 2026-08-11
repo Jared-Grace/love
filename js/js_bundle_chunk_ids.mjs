@@ -8,10 +8,12 @@ export function js_bundle_chunk_ids(text) {
   "A build is free to cut part of an app out into a script of its own, left behind rather than carried, and to fetch it only when it is first wanted. The built app then carries the number of that script written into it, and this reads those numbers back out.";
   "Asking the built app is the only way to know. The number is the build's own choice and is not written down anywhere else, so two builds of one unchanged app can name the same piece differently and both be right.";
   "The same script is often sent for from more than one place, so each number is answered once.";
-  let found = text_regex_match(text, js_bundle_chunk_ids_regex());
+  let regex = js_bundle_chunk_ids_regex();
+  let found = text_regex_match(text, regex);
   let none = null_is(found);
   if (none) {
-    return [];
+    let r = [];
+    return r;
   }
   let ids = list_unique(found);
   return ids;

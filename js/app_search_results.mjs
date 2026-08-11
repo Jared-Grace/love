@@ -1,3 +1,4 @@
+import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
@@ -159,19 +160,8 @@ export async function app_search_results(context, div_results) {
     }
     each(setters, setter_call);
   }
-  async function buttons_expand(buttons) {
-    "open a whole list of verse buttons at once - expanding one chapter, one book or the entire page all come down to this, so it is said once here";
-    async function lambda9(b) {
-      let click2 = property_get(b, "click");
-      await catch_null_async(click2);
-      let bible_texts2 = property_get(b, "bible_texts");
-      return bible_texts2;
-    }
-    let waited = await list_map_unordered_async(buttons, lambda9);
-    return waited;
-  }
   async function collect_all_texts() {
-    let waited = await buttons_expand(button_list);
+    let waited = await app_search_results_buttons_expand(button_list);
     let squashed = list_squash(waited);
     return squashed;
   }
@@ -292,7 +282,8 @@ export async function app_search_results(context, div_results) {
     ("this is the third of four cards nested one inside the next, and the two outside it already trim to this one named amount; it used to write its own number a twentieth of a letter away from that, which no reader could have told apart and no line of the file explained");
     let book_padding = app_shared_spaced_tiny_gap();
     html_style_padding(div_book, book_padding);
-    html_style_margin_y(div_book, app_shared_spaced_neighbor_gap());
+    let value2 = app_shared_spaced_neighbor_gap();
+    html_style_margin_y(div_book, value2);
     html_text_align_left(div_book);
     let book_name = ebible_book_code_to_name(books, book_code);
     let verses_count = book_verses_count(book_code);
@@ -312,7 +303,8 @@ export async function app_search_results(context, div_results) {
       if (collapsed) {
         html_display_none(div_body);
         html_display_inline_block(div_book);
-        html_style_margin_x(div_book, app_shared_spaced_neighbor_gap());
+        let value3 = app_shared_spaced_neighbor_gap();
+        html_style_margin_x(div_book, value3);
         html_style_margin_bottom(header, "0");
       } else {
         html_display_block(div_body);
@@ -356,14 +348,17 @@ export async function app_search_results(context, div_results) {
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
     let border_color = app_shared_container_blue_border_color();
-    html_border(div_chapter, app_shared_spaced_frame_gap(), border_color);
+    let border_width = app_shared_spaced_frame_gap();
+    html_border(div_chapter, border_width, border_color);
     let border_radius = app_shared_border_radius_extra_large();
     html_border_radius(div_chapter, border_radius);
     ("the innermost of the four cards, spending the same named amount as the three around it, so the verse text at the bottom is not standing behind four different numbers nobody chose together");
     let chapter_padding = app_shared_spaced_tiny_gap();
     html_style_padding(div_chapter, chapter_padding);
-    html_style_margin_x(div_chapter, app_shared_spaced_neighbor_gap());
-    html_style_margin_y(div_chapter, app_shared_spaced_frame_gap());
+    let value4 = app_shared_spaced_neighbor_gap();
+    html_style_margin_x(div_chapter, value4);
+    let value5 = app_shared_spaced_frame_gap();
+    html_style_margin_y(div_chapter, value5);
     html_text_align_left(div_chapter);
     let chapter_header_text = text_combine_multiple([
       "Chapter ",
@@ -436,7 +431,7 @@ export async function app_search_results(context, div_results) {
     let bs = list_map(verse_numbers, each_verse_number);
     async function chapter_expand() {
       "everything this chapter matched, opened together";
-      await buttons_expand(bs);
+      await app_search_results_buttons_expand(bs);
     }
     list_add(book_chapter_expands, chapter_expand);
     return bs;
