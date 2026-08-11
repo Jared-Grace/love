@@ -1,3 +1,4 @@
+import { app_karate_container_main } from "../../karate_code/js/app_karate_container_main.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_flow_back } from "./app_shared_flow_back.mjs";
 import { html_checkboxes } from "./html_checkboxes.mjs";
