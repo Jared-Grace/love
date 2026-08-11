@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { app_g_verify_label_font_size } from "./app_g_verify_label_font_size.mjs";
@@ -137,17 +138,6 @@ export async function app_g_verify_view(
     html_style_set(row, "transition", "background-color .12s");
     return row;
   }
-  function label_new(caption) {
-    let l = html_p_text(container, caption);
-    let color = app_shared_text_category_color();
-    html_font_color_set(l, color);
-    let value6 = app_g_verify_label_font_size();
-    html_style_font_size(l, value6);
-    html_style_set(l, "letter-spacing", "0.11em");
-    html_bold_semi(l);
-    html_margin_em(l, "0");
-    html_style_margin_top(l, small_gap);
-  }
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   let value7 = app_g_verify_passage_font_size();
@@ -184,7 +174,7 @@ export async function app_g_verify_view(
     html_span_space(passage_panel);
   }
   tokens.forEach(lambda9);
-  label_new("BY PASSAGE ORDER");
+  app_g_verify_view_label_new("BY PASSAGE ORDER", container, small_gap);
   let cov = panel_flush();
   function lambda10(l, li) {
     return li;
@@ -222,7 +212,7 @@ export async function app_g_verify_view(
     row_comps[li] = row;
   }
   order.forEach(lambda14);
-  label_new("IN SERMON ORDER");
+  app_g_verify_view_label_new("IN SERMON ORDER", container, small_gap);
   let ord = panel_flush();
   function lambda16(l, li) {
     let eq2 = equal(li, 0);
@@ -310,7 +300,7 @@ export async function app_g_verify_view(
     }
   }
   app_shared_button(approve_bar, "Approve v" + verse, on_approve);
-  label_new("SUGGEST AN EDIT");
+  app_g_verify_view_label_new("SUGGEST AN EDIT", container, small_gap);
   let suggest_area = html_textarea(container);
   function lambda17(l) {
     let value = property_get(l, "text");
@@ -481,7 +471,11 @@ export async function app_g_verify_view(
       }
       all.forEach(lambda_hist);
       if (greater_than_equal(mine.length, 1)) {
-        label_new("YOUR PAST SUGGESTIONS FOR v" + verse);
+        app_g_verify_view_label_new(
+          "YOUR PAST SUGGESTIONS FOR v" + verse,
+          container,
+          small_gap,
+        );
         function lambda_show(h) {
           let box = app_shared_container_base(container);
           let t = property_get(h, "text");
@@ -504,4 +498,16 @@ export async function app_g_verify_view(
     }
   }
   history_show();
+}
+function app_g_verify_view_label_new(caption, container, small_gap) {
+  arguments_assert(arguments, 3);
+  let l = html_p_text(container, caption);
+  let color = app_shared_text_category_color();
+  html_font_color_set(l, color);
+  let value6 = app_g_verify_label_font_size();
+  html_style_font_size(l, value6);
+  html_style_set(l, "letter-spacing", "0.11em");
+  html_bold_semi(l);
+  html_margin_em(l, "0");
+  html_style_margin_top(l, small_gap);
 }
