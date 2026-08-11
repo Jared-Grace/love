@@ -24,7 +24,7 @@ import { app_shared_container_blue_medium_titled } from "./app_shared_container_
 import { html_div_centered } from "./html_div_centered.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
-import { app_bible_search_word_download } from "./app_bible_search_word_download.mjs";
+import { bible_search_word_download } from "./bible_search_word_download.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
@@ -103,7 +103,7 @@ export async function app_search_results(context, div_results) {
   let words_missing = [];
   async function lambda(word) {
     async function get() {
-      let o = await app_bible_search_word_download(word);
+      let o = await bible_search_word_download(word);
       return o;
     }
     ("the index keeps one file per word it has seen, so a word appearing nowhere has no file and the download fails; catch it and carry on, rather than letting one unknown word reject the whole search and leave a blank page");

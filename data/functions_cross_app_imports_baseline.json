@@ -19,7 +19,7 @@
   "app_sandbox -> app_message",
   "app_sandbox -> app_message_provide_food",
   "app_sandbox -> app_message_provide_travel",
-  "app_search_results -> app_bible_search_word_download",
+  "app_search_results -> bible_search_word_download",
   "app_supper_tl -> app_supper_main_generic",
   "app_supper_tl_home -> app_supper_home_generic",
   "app_verses -> app_reply_initialize",
