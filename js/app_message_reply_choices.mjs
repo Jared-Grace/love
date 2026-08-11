@@ -14,7 +14,7 @@ import { app_message_reply_phrases_single } from "./app_message_reply_phrases_si
 import { app_message_reply_how_r_u } from "./app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "./reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "./app_message_reply_greeting.mjs";
-import { app_reply_choices_glory } from "./app_reply_choices_glory.mjs";
+import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choice_output } from "./reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "./app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "./app_reply_pray_response.mjs";
@@ -54,7 +54,7 @@ export function app_message_reply_choices() {
   let visit_step = reply_on_match_output_code(s_visit, will_be_done, "todo()");
   let you = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you]);
-  let item = app_reply_choices_glory();
+  let item = reply_choices_glory();
   let thanks = reply_choice_output(["thanks", thank_you], item);
   let d = digits();
   let rc_digits = reply_choice(d);
