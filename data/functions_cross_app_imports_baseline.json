@@ -16,7 +16,7 @@
   "app_message_provide_generic -> app_karate_button_next",
   "app_message_provide_generic -> app_karate_container_main",
   "app_message_reply_choices -> reply_choices_glory",
-  "app_message_reply_choices -> app_reply_choices_will_done_fragment",
+  "app_message_reply_choices -> reply_choices_will_done_fragment",
   "app_message_reply_choices -> app_reply_pray_response",
   "app_message_reply_from_city_country -> reply_choices_location",
   "app_message_reply_give -> reply_choices_give",
