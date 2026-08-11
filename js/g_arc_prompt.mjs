@@ -11,8 +11,7 @@ import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
-  "The turn target is one number.";
-  "The profile is RECEIVED rather than chosen. Code deals it, so the spread of gender, age, marriage, children, servitude and government over a whole game is what was decided rather than whatever an LLM reaches for first - and a value code chose cannot be out of range, so three checks stop being needed.";
+  "The profile (gender, age, etc.) is RECEIVED rather than LLM decide.";
   ("the profile is one of ", fn_name("g_profiles"), ".");
   ("turn_target is the turns this person's arc is worth, drawn once for them by ",
     fn_name("g_npc_pool"),
