@@ -1,6 +1,6 @@
 import { app_g_dev_index_render_node } from "./app_g_dev_index_render_node.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { app_g } from "./app_g.mjs";
+import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_g_dev_index_open_key } from "./app_g_dev_index_open_key.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
@@ -32,7 +32,7 @@ export function app_g_dev_index() {
   let prefixes = app_g_dev_index_prefixes();
   let tree = app_g_dev_index_tree(all, prefixes);
   let open_key = app_g_dev_index_open_key();
-  let open_stored = storage_session_get(app_g, open_key);
+  let open_stored = storage_session_get(app_g_storage_app(), open_key);
   let open_paths = new Set(open_stored);
   let top = object_property_names(tree.children).sort();
   for (let label of top) {

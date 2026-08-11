@@ -1,5 +1,5 @@
 import { storage_session_get } from "./storage_session_get.mjs";
-import { app_g } from "./app_g.mjs";
+import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
@@ -312,8 +312,8 @@ export async function app_g_verify_view(
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
   let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
   ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
-  let saved_draft = storage_session_get(app_g, draft_key);
-  let saved_base = storage_session_get(app_g, base_key);
+  let saved_draft = storage_session_get(app_g_storage_app(),draft_key);
+  let saved_base = storage_session_get(app_g_storage_app(),base_key);
   let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value4);
   if (draft_fresh) {
     html_value_set(suggest_area, saved_draft);

@@ -9,7 +9,7 @@ export async function qa_gate_tree_shard_run(index_given, count_given) {
   let index = integer_from_base_try(index_given, 10);
   let count = integer_from_base_try(count_given, 10);
   let gates = qa_gates_tree();
-  let mine = qa_gates_shard(gates, index, count);
+  let mine = await qa_gates_shard(gates, index, count);
   let r = await qa_gates_run(mine);
   return r;
 }
