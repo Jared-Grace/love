@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_repeated_generic_chip } from "./app_code_lesson_expression_repeated_generic_chip.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_counted } from "./app_code_lesson_expression_repeated_generic_expanded_counted.mjs";
 import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
@@ -13,7 +14,6 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
@@ -115,11 +115,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let count_one = app_code_lesson_chip_color(1);
     let left_two = app_code_lesson_chip_color(2);
     let count_two = app_code_lesson_chip_color(3);
-    function chip(parent, number, color) {
-      "a standalone color chip sitting in the sentence on the light background, matching a number inside the code";
-      let made = app_code_lesson_number_chip(parent, number, color);
-      return made;
-    }
     let already = text_combine_multiple([
       "You already know how to ",
       verb,
@@ -151,9 +146,9 @@ export function app_code_lesson_expression_repeated_generic(words) {
     );
     let map = html_div(c);
     html_span_text(map, "The ");
-    chip(map, 2, left_one);
+    app_code_lesson_expression_repeated_generic_chip(map, 2, left_one);
     html_span_text(map, " appears ");
-    chip(map, 3, count_one);
+    app_code_lesson_expression_repeated_generic_chip(map, 3, count_one);
     html_span_text(map, " times, so we can write ");
     app_code_lesson_expression_repeated_generic_short_form(
       map,
