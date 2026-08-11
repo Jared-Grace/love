@@ -71,10 +71,11 @@ export async function function_lift_captured_locals(
   let own_then = js_binding_names(declaration);
   let enclosing = list_difference(surrounding, own_then);
   let mentioned = js_identifier_names_all(declaration);
-  let candidates = list_intersection(enclosing, mentioned);
+  let candidates = list_intersection(mentioned, enclosing);
   let now = await function_ast(lifted);
-  let bound_now = js_binding_names(now);
-  let dropped = list_difference(candidates, bound_now);
+  "The two sides are read differently on purpose. What the function reached for back then is read widely, because the narrow reading is the one that has been dropping names and leaning on it here would hide the very thing being looked for. What it reads today is read narrowly, because a word standing as the key of something is not a name being read, and counting keys named nine functions that turn out to read nothing of the kind";
+  let free_now = js_function_declaration_free_names(now);
+  let dropped = list_intersection(candidates, free_now);
   let without_self = list_difference(dropped, [nested, source, lifted]);
   let r = {
     lifted,
