@@ -1,3 +1,4 @@
+import { qa_gate_run_start_wanted_stale_gate_run } from "./qa_gate_run_start_wanted_stale_gate_run.mjs";
 import { qa_gates_dealt_gate_run } from "./qa_gates_dealt_gate_run.mjs";
 import { browser_secure_context_gate_run } from "./browser_secure_context_gate_run.mjs";
 import { functions_cross_app_imports_gate_run } from "./functions_cross_app_imports_gate_run.mjs";
@@ -299,6 +300,7 @@ export function qa_gates() {
     qa_gate_said_advice_remove_gate_run,
     qa_app_gates_sorted_gate_run,
     qa_gate_run_start_wanted_gate_run,
+    qa_gate_run_start_wanted_stale_gate_run,
     qa_commit_named_entry_stale_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
