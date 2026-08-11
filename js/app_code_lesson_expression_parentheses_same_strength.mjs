@@ -39,6 +39,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
   }
   function above(root) {
     "the left-to-right rule they already have, then brackets overriding it after a -, then the same thing after a /, then the rule in one line";
+    "The closing card deliberately does NOT restate the inside-before-outside rule the first parentheses lesson gave. A near-copy of a sentence a learner already has is the worst of both: too alike to be a second look at the idea, too different to be recognised and passed over, so they stop and compare two sentences and find nothing between them. Restating is only worth a card when it comes from somewhere new - so this one says the thing only THIS lesson can say, that the brackets beat working left to right. The other lessons in the family do the same: one_side says the brackets SHOW something (they change no answer there), both_sides says each side is worked out ON ITS OWN.";
     "Nothing here says strength or stronger. That word is ours, not the learner's - it appears in these docstrings and nowhere on a screen. What the plus-minus lesson actually told them is whichever one comes first, we do first, and what the precedence lessons told them is we always do * before +, even if * appears later. A card that leans on strength would be leaning on a word never defined.";
     let plus = js_operator_plus_symbol();
     let minus = js_operator_minus_symbol();
@@ -92,11 +93,11 @@ export function app_code_lesson_expression_parentheses_same_strength() {
     html_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
     let rule = app_code_container_light_blue(root);
     html_div_cycle_code(rule, [
-      "What is inside ",
+      "",
       open,
       " and ",
       close,
-      " is always solved before whatever is outside",
+      " are solved first, before working left to right",
     ]);
   }
 }
