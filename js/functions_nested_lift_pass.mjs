@@ -1,3 +1,6 @@
+import { js_binding_names_unbindable } from "./js_binding_names_unbindable.mjs";
+import { list_intersect } from "./list_intersect.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,6 +30,19 @@ export async function functions_nested_lift_pass() {
         name: f_name,
         nested,
         why: "the piece inside is not named the way this repo names things, so what it should be called once it stands on its own is for somebody reading it to choose",
+      });
+      continue;
+    }
+    let closed = property_get(row, "closed");
+    let unbindable = js_binding_names_unbindable();
+    let blocked = list_intersect(closed, unbindable);
+    let blocked_any = list_empty_not_is(blocked);
+    if (blocked_any) {
+      list_add(skipped, {
+        name: f_name,
+        nested,
+        blocked,
+        why: "the piece inside reads a word the language will not let a function bind, so moving it out would have to hand that word in through a parameter list, which is the one place the word is refused",
       });
       continue;
     }
