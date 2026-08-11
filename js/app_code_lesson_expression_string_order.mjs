@@ -1,9 +1,8 @@
+import { app_code_lesson_expression_string_order_words_source } from "./app_code_lesson_expression_string_order_words_source.mjs";
 import { app_code_lesson_expression_string_order_title_name_id } from "./app_code_lesson_expression_string_order_title_name_id.mjs";
 import { app_code_lesson_expression_string_order_question_code } from "./app_code_lesson_expression_string_order_question_code.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { text_lower_is } from "./text_lower_is.mjs";
-import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -11,7 +10,6 @@ import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -40,20 +38,9 @@ export function app_code_lesson_expression_string_order() {
       relation: "before",
     },
   ];
-  function words_source() {
-    "the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner";
-    let distinct = app_code_verse_words_clean_unique();
-    function lower_case_is(word) {
-      "whether a word is already all lower case (unchanged by lower-casing it)";
-      let same = text_lower_is(word);
-      return same;
-    }
-    let lower_only = list_filter(distinct, lower_case_is);
-    return lower_only;
-  }
   function refill() {
     "four comparisons over ONE shared pair of DIFFERENT words: each operator shown true (in its correct direction) and false (in the wrong one), pure alphabetical ordering with no equal case - the equal case now lives in the string trichotomy lesson";
-    let words = words_source();
+    let words = app_code_lesson_expression_string_order_words_source();
     let two = list_shuffle_take(words, 2);
     let ordered = list_sort_text(two);
     let earlier = list_get(ordered, 0);
