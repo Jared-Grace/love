@@ -89,11 +89,8 @@ export function app_code_lesson_expression_in_between() {
       return render;
     }
     let rights = ["in between"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_expressions(),
-      title_get,
-    );
+    let left = app_code_category_expressions();
+    let built = app_code_lesson_name_id_generic(rights, left, title_get);
     return built;
   }
   function above(root) {
@@ -106,7 +103,7 @@ export function app_code_lesson_expression_in_between() {
       "2",
       " and ",
       "8",
-      "?",
+      " ?",
     ]);
     let trap = app_code_container_light_blue(root);
     html_div_cycle_code(trap, [
