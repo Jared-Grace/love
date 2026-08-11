@@ -1,4 +1,4 @@
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -15,9 +15,6 @@ import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
-import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -187,7 +184,8 @@ export function app_code_lesson_expression_remainder_divide() {
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
-  let name_id = title_name_id();
+  let name_id =
+    app_code_lesson_expression_remainder_divide_title_name_id(percent);
   let lesson = app_code_lesson_base(
     name_id,
     above,
@@ -200,24 +198,6 @@ export function app_code_lesson_expression_remainder_divide() {
     example_answer,
   );
   return lesson;
-  function title_name_id() {
-    "the home title is console.log remainder by dividing %";
-    function title_get(lesson_name, left_upper) {
-      function render(parent) {
-        app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Remainder by dividing ");
-        html_span_text_code_dark(parent, percent);
-      }
-      return render;
-    }
-    let rights = ["remainder by dividing"];
-    let built = app_code_lesson_name_id_generic(
-      rights,
-      app_code_category_operators(),
-      title_get,
-    );
-    return built;
-  }
   function above(root) {
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
