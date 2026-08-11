@@ -1,1 +1,67 @@
-export function functions_nested_lift_all() {}
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ai_git_noted } from "./ai_git_noted.mjs";
+import { functions_lift_candidates } from "./functions_lift_candidates.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { function_exists } from "./function_exists.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { function_nested_lift } from "./function_nested_lift.mjs";
+import { list_size } from "./list_size.mjs";
+import { not } from "./not.mjs";
+export async function functions_nested_lift_all() {
+  arguments_assert(arguments, 0);
+  ("Moves out every function written inside another one that the work list already names, one at a time, each under a name worked out from the two names it has, and each committed under its own command before the next one starts.");
+  ("The list was already a list of commands and still had to be run by hand, once per row, which is the shape this repo calls a missing command. Running it by hand also breaks the record of what happened: a run of seventy cuts has no single command to name, so it would have to be filed under the bare word, and seventy behaviour-preserving moves would arrive looking like seventy hand edits.");
+  ("Nothing is caught. Every cut that has already run is already committed, so a cut that cannot be made stops the run with everything before it kept and its own reason said out loud - which is what should happen, because a shape the move cannot handle is a finding rather than a row to step over.");
+  ("The two things that can be seen coming are stepped over rather than thrown, because neither is a fault: a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Both are handed back with the reason, because each one names a file that wants a person to read it.");
+  ("It asks the list again at the end. The answer is the proof: the rows left are the functions still standing over the ceiling, and they are left because they hold a straight run of work rather than a closure, so they want the other cut.");
+  await ai_git_noted();
+  let candidates = await functions_lift_candidates();
+  let lifted = [];
+  let skipped = [];
+  for (let row of candidates) {
+    let f_name = property_get(row, "name");
+    let nested = property_get(row, "nested");
+    let f_name_new = function_nested_lift_name_or_null(f_name, nested);
+    let named_is = null_not_is(f_name_new);
+    if (not(named_is)) {
+      list_add(skipped, {
+        name: f_name,
+        nested,
+        why: "the piece inside is not named the way this repo names things, so what it should be called once it stands on its own is for somebody reading it to choose",
+      });
+      continue;
+    }
+    let search = await function_exists(f_name_new);
+    let taken = property_get(search, "exists");
+    if (taken) {
+      list_add(skipped, {
+        name: f_name,
+        nested,
+        f_name_new,
+        why: "a function already answers to the name this one would take, and whether the two are the same work is a question for somebody reading both",
+      });
+      continue;
+    }
+    await function_call_commit(function_nested_lift, [
+      f_name,
+      nested,
+      f_name_new,
+    ]);
+    list_add(lifted, {
+      name: f_name,
+      nested,
+      f_name_new,
+    });
+  }
+  let left = await functions_lift_candidates();
+  let remaining = list_size(left);
+  let r = {
+    lifted,
+    skipped,
+    remaining,
+  };
+  return r;
+}
