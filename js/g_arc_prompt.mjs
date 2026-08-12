@@ -67,7 +67,10 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "A turn is one exchange.",
     "The person says something. The player answers with a passage.",
     "The player will choose the correct passage from a list",
-    ''
+    '', "WHO TO WRITE",
+    "Start from the verses. Ask what trouble they honestly answer.",
+    "Never pick a trouble first and then hunt for a verse.",
+    "",
 ,    "LENGTH",
     joined9,
     "",
@@ -75,10 +78,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "  trouble - what is wrong, in one sentence, in their own words",
     "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
     "",
-    "WHO TO WRITE",
-    "Start from the verses. Ask what trouble they honestly answer.",
-    "Never pick a trouble first and then hunt for a verse.",
-    "",
+   
     "Give each turn:",
     joined6,
     joined7,

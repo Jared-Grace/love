@@ -23,8 +23,8 @@ export function ebible_index_flats_union(chapter_codes, lists) {
       let chapter_code = property_get(entry, "chapter_code");
       let property_name = verse_number_key();
       let verse_number = property_get(entry, property_name);
-      let digits = text_digits_is(verse_number);
-      let n = not(digits);
+      let digits_only = text_digits_is(verse_number);
+      let n = not(digits_only);
       if (n) {
         return;
       }
