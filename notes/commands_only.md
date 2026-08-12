@@ -89,3 +89,21 @@ Three things about the searching are the point rather than the implementation.
 **What comes back is records, not printed lines.** `{f_path, number, line}`. Printed text is the end of the road: the next thing that wants it has to take it apart again, and a line holding a colon takes itself apart wrongly. Records go straight into `list_filter_*`, `list_map`, a gate, or another function — which is the whole reason a command beats a pipe. The reuse runs the other way too: this got the open-files ceiling and the recursive walker for free by being written where they already live.
 
 Reading the files overlapping rather than one after the next took a repo-wide search from 18.7s to 5.7s, same answers.
+
+### Changing what you found
+
+Search without replace is half a tool: every hit ends in a hand edit, which is the thing this switch exists to remove. So prose and data are changed by command too.
+
+| function | what it does |
+|---|---|
+| `text_occurrences_count(t, s)` | how many times a run appears in a text |
+| `text_replace_once(t, from, to)` | replaces one run, refusing unless it appears exactly once |
+| `file_text_replace_once(f_path, from, to)` | the same, in a file |
+
+`file_transform_replace` was already here, and it is the unsafe shape: it replaces every occurrence and says nothing about how many that was. Two of its failures are silent. A run that appears nowhere - a mistyped letter, or text an earlier run already changed - replaces nothing, so the file is written back holding what it already held while every check downstream passes. A run in more places than the caller meant changes all of them, in parts of the file nobody was looking at.
+
+Asking for exactly one is what makes a replacement provable rather than hoped for, and it is the same promise the editing tool makes: name a run unique enough to identify one place, and either that place changes or nothing does and you are told why. A refusal is a direction rather than a wall - take in more of the line around it until the run names one place.
+
+`text_replace_once_cases_gate_run` (in `q`) pins both refusals. A replacement that succeeded wrongly leaves a changed file somebody eventually reads; a refusal that stopped being made leaves nothing at all to look at.
+
+**Do not grant `file_text_replace_once`.** Nothing in it reads as unsafe to the checker - no parameter is named for a command and nothing downstream runs one - but the third argument is written into a file, and some of the files here are executed. A standing approval would let any text be placed in any file unseen, and unlike a command, which is gone when it finishes, what this writes stays.
