@@ -1,3 +1,4 @@
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -23,7 +24,8 @@ export async function qa_gate_said_plain_is(f_name) {
   for (let call of calls) {
     let callee = property_get(call, "callee");
     let called = js_identifier_name_try(callee);
-    let asserting_is = called !== null && text_includes(called, "assert");
+    let asserting_is =
+      not_equal(called, null) && text_includes(called, "assert");
     if (asserting_is) {
       throwing_is = true;
     }
