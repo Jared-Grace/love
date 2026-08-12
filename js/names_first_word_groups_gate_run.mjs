@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { names_first_word_groups } from "./names_first_word_groups.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -15,8 +15,7 @@ export function names_first_word_groups_gate_run() {
   let names = ["day_one", "day_two", "day_three", "gospel_share", "study"];
   let minimum = 2;
   let groups = names_first_word_groups(names, minimum);
-  let one = property_get(groups, "day_one");
-  let grouped = equal(one, "day");
+  let grouped = property_equals(groups, "day_one", "day");
   assert_message(grouped, "names sharing a first word are grouped under it");
   let members = object_property_names(groups).length;
   let all_three = equal(members, 3);
