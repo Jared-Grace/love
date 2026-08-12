@@ -18,7 +18,8 @@ export async function app_g_day_convert(div_map, npc) {
   if (exists) {
     bubble.remove();
   }
-  g_icon_cross(div_map, npc);
+  let cross = g_icon_cross(div_map, npc);
+  app_g_npc_cross_set(npc, cross);
   let state = app_g_day_state();
   let talkable = property_get(state, "talkable");
   if (not(null_is(talkable))) {
@@ -33,5 +34,14 @@ export async function app_g_day_convert(div_map, npc) {
   property_set(state, "slices_done", value);
   property_set(state, "target_start", null);
   property_set(state, "target_best", null);
+  ("a new believer is now somebody to gather for baptism, because converts are baptized the SAME day. they wait where they are and the player comes back for them - except for the LAST one, who falls in behind the player right there");
+  ("the last one is the person the player has only just finished talking to and is standing next to, so asking for a tap to collect them would be a tap that means nothing. it also seeds the line with one member, which SHOWS what walking behind the player looks like before the player sets out to gather the rest");
+  let converts = property_get(state, "converts");
+  list_add(converts, npc);
+  let slices_total = property_get(state, "slices_total");
+  let last = equal(value, slices_total);
+  if (last) {
+    app_g_day_follower_add(npc);
+  }
   await app_g_day_sky_update();
 }
