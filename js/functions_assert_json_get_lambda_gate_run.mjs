@@ -13,20 +13,17 @@ export async function functions_assert_json_get_lambda_gate_run() {
   "The wrapper is still the right answer where it computes something, and this gate";
   "cannot see those - the reading it borrows refuses them, so a wrapper that earns its";
   "waiting will never turn this red.";
+  "The functions at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. Here the cure is the sweep that unwraps them all, and naming it beside the offenders made it look like one.";
   let sites = await functions_assert_json_get_lambda_sites();
-  for (let one of sites) {
-    let f_name = property_get(one, "f_name");
-    console.log("wrapper written out  " + f_name);
-  }
-  console.log("functions writing out a wrapper: " + list_size(sites));
-  if (list_empty_not_is(sites)) {
-    throw new Error(
-      "assert payload wrapper gate: " +
-        list_size(sites) +
-        " functions build a payload wrapper by hand that the eager check already builds - unwrap them with " +
-        fn_name("functions_assert_json_get_lambda_collapse"),
-    );
-  }
+  let names = list_map_property(sites, "f_name");
+  let f_name = fn_name("functions_assert_json_get_lambda_collapse");
+  let hint = text_combine_multiple([
+    "these build a payload wrapper by hand that the eager check already builds - unwrap them with ",
+    f_name,
+  ]);
+  list_empty_is_assert_json(names, {
+    hint,
+  });
   let r = {
     sites: 0,
   };
