@@ -1,4 +1,4 @@
-import { js_identifiers_rename_dir_check } from "./js_identifiers_rename_dir_check.mjs";
+import { js_name_taken_dir_check } from "./js_name_taken_dir_check.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { js_identifiers_rename_dir_lambda } from "./js_identifiers_rename_dir_lambda.mjs";
@@ -13,7 +13,7 @@ import { file_move } from "./file_move.mjs";
   fn_name("function_rename"),
   ".");
 export async function js_identifiers_rename_dir(dir, name_before, name_after) {
-  await js_identifiers_rename_dir_check(dir, name_after);
+  await js_name_taken_dir_check(dir, name_after);
   let lambda = js_identifiers_rename_dir_lambda(name_before, name_after);
   let files = await folder_read_files(dir);
   async function transform_file(file) {
