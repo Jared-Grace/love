@@ -77,7 +77,8 @@ export function app_code_lesson_expression_comparison_and() {
       "3 < 5",
       " and ",
       "2 < 4",
-      " first",
+      " before ",
+      "&&",
     ]);
     html_div_cycle_code(yes, [
       "Both are ",
@@ -95,7 +96,8 @@ export function app_code_lesson_expression_comparison_and() {
       "7 > 2",
       " and ",
       "5 > 8",
-      " first",
+      " before ",
+      "&&",
     ]);
     html_div_cycle_code(no, [
       "That is ",
