@@ -1,3 +1,4 @@
+import { functions_lift_captured_locals_gate_run } from "./functions_lift_captured_locals_gate_run.mjs";
 import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
 import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { memory_fn_reference_gate_run } from "./memory_fn_reference_gate_run.mjs";
@@ -24,6 +25,7 @@ export function qa_gates_machine() {
     daemons_gate_run,
     guard_gate_run,
     permission_reachable_gate_run,
+    functions_lift_captured_locals_gate_run,
     memory_hook_gate_run,
     memory_pointer_gate_run,
     memory_integrity_gate_run,
