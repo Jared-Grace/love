@@ -1,13 +1,13 @@
+import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
+import { app_shared_color_progress_later } from "./app_shared_color_progress_later.mjs";
 import { app_shared_text_colors_on_dark_set } from "./app_shared_text_colors_on_dark_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_shared_color_progress_next } from "./app_shared_color_progress_next.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { emoji_point_right } from "./emoji_point_right.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { not } from "./not.mjs";
@@ -35,8 +35,8 @@ export function app_shared_button_numbered_progress(
     }
   }
   if (completed) {
-    let green = app_shared_color_green_light();
-    html_style_background_color_set(button, green);
+    let done = app_shared_color_progress_complete();
+    html_style_background_color_set(button, done);
   } else {
     if (choose_this_next) {
       let blue_strong = app_shared_color_progress_next();
@@ -46,8 +46,8 @@ export function app_shared_button_numbered_progress(
       ("the title is painted into this row after this returns, and the quieter words in it - the category, the number - paint themselves their own dark colours, which on this one background are the background. So the row says here what those should be instead, and each word reads it when it is drawn");
       app_shared_text_colors_on_dark_set(button);
     } else {
-      let blue_light = app_shared_container_blue_border_color();
-      html_style_background_color_set(button, blue_light);
+      let later = app_shared_color_progress_later();
+      html_style_background_color_set(button, later);
     }
   }
   return r;
