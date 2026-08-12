@@ -1,8 +1,7 @@
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_rights_space_carrying } from "./app_code_lessons_rights_space_carrying.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export async function app_code_lessons_rights_space_gate_run() {
   "Gate: no code lesson hands over a name-word starting with a space. Throws so the dispatcher seam exits nonzero.";
   "The space had no effect on the slug a shared link is written with, because the";
@@ -13,21 +12,16 @@ export async function app_code_lessons_rights_space_gate_run() {
   "That is what makes this worth a gate rather than a sweep alone. A defect nothing";
   "shows and nothing punishes comes back the next time a lesson is copied from an old";
   "one, and the sweep would have to be rediscovered from scratch.";
+  "The lessons at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. Here the cure is one command, and naming it in the same breath as the offenders made every app that ships it look guilty.";
   let carrying = await app_code_lessons_rights_space_carrying();
-  for (let f_name of carrying) {
-    console.log("leading space in name-words  " + f_name);
-  }
-  console.log("lessons carrying a leading space: " + list_size(carrying));
-  if (list_empty_not_is(carrying)) {
-    throw new Error(
-      "code lesson name-words gate: " +
-        list_size(carrying) +
-        text_combine_multiple([
-          " lessons hand over a name-word starting with a space - take it off with ",
-          fn_name("app_code_lessons_rights_space_strip"),
-        ]),
-    );
-  }
+  let f_name = fn_name("app_code_lessons_rights_space_strip");
+  let hint = text_combine_multiple([
+    "these hand over a name-word starting with a space - take it off with ",
+    f_name,
+  ]);
+  list_empty_is_assert_json(carrying, {
+    hint,
+  });
   let r = {
     carrying: 0,
   };

@@ -1,51 +1,28 @@
-import { list_map_join_separator } from "./list_map_join_separator.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_unreachable_check_sites } from "./functions_unreachable_check_sites.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_size } from "./list_size.mjs";
-import { each } from "./each.mjs";
-import { log_console } from "./log_console.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { error } from "./error.mjs";
 export async function functions_unreachable_check_gate_run() {
   "Gate: nothing asks whether the find-one helper found nothing, because it throws instead of handing nothing back";
   "A check that can never be true is worse than no check at all - it reads as care taken, and the sentence inside it is the one the caller most needed and will never see";
   "The fix is never to delete the sentence: hand it to the finding instead, through the twin that carries the caller's own words";
+  "The functions at fault are thrown as a record rather than printed and then named again inside a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The cure and the checker each site asks are advice, and the checker is the plainest innocent of all - it is doing exactly what it says it does.";
   let sites = await functions_unreachable_check_sites();
-  function lambda(site) {
-    let f_name = property_get(site, "f_name");
-    let bound = property_get(site, "bound");
-    let checker = property_get(site, "checker");
-    let message = text_combine_multiple([
-      "UNREACHABLE CHECK  ",
-      f_name,
-      "  asks ",
-      checker,
-      " about ",
-      bound,
-    ]);
-    log_console(message);
-  }
-  each(sites, lambda);
-  let count = list_size(sites);
-  let any = greater_than(count, 0);
-  if (any) {
-    function lambda_name(site) {
-      let f_name = property_get(site, "f_name");
-      return f_name;
-    }
-    let joined = list_map_join_separator(sites, lambda_name, " ");
-    let combined = text_combine_multiple([
-      "unreachable check gate: ",
-      count,
-      " checks can never be true - hand the sentence to ",
-      fn_name("list_matching_single"),
-      " instead: ",
-      joined,
-    ]);
-    error(combined);
-  }
+  let names = list_map_property(sites, "f_name");
+  let f_name = fn_name("list_matching_single");
+  let advice = text_combine_multiple([
+    "these checks can never be true - hand the sentence to ",
+    f_name,
+    " instead",
+  ]);
+  let hint = {
+    advice,
+    sites,
+  };
+  list_empty_is_assert_json(names, {
+    hint,
+  });
   let v = {
     sites: 0,
   };

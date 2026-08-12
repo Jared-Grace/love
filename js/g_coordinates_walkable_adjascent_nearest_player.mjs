@@ -1,9 +1,6 @@
+import { g_coordinates_neighbors_walkable } from "./g_coordinates_neighbors_walkable.mjs";
+import { g_coordinates_nearest_player_try } from "./g_coordinates_nearest_player_try.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_shuffle_sort_number_mapper_first } from "./list_shuffle_sort_number_mapper_first.mjs";
-import { g_distance_curried } from "./g_distance_curried.mjs";
-import { g_coordinates_neighbors_walkable_get } from "./g_coordinates_neighbors_walkable_get.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 export function g_coordinates_walkable_adjascent_nearest_player(
   g,
   player,
@@ -17,17 +14,7 @@ export function g_coordinates_walkable_adjascent_nearest_player(
     fn_name("app_g_day_guide_pick"),
     " asks the same question of its target), so arriving lands on a tile the guide could have led to, and never past the end of its own trail");
   ("null when nothing beside it can be stood on at all - an island of water inside more water, which nobody can be baptized in and so nothing should be walked to.");
-  let neighbors_get = g_coordinates_neighbors_walkable_get(g);
-  function lambda(n) {
-    let neighbor = property_get(n, "neighbor");
-    return neighbor;
-  }
-  let neighbors = neighbors_get(coordinates).map(lambda);
-  let none = list_empty_is(neighbors);
-  if (none) {
-    return null;
-  }
-  let distance = g_distance_curried(player);
-  let nearest = list_shuffle_sort_number_mapper_first(neighbors, distance);
+  let neighbors = g_coordinates_neighbors_walkable(g, coordinates);
+  let nearest = g_coordinates_nearest_player_try(player, neighbors);
   return nearest;
 }
