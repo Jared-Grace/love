@@ -20,7 +20,7 @@ export async function function_worker_pool_run_try() {
     let got = await function_worker_pool_run(f_name, [n]);
     let crossed = [];
     if (not_equal(got, n)) {
-      let item = fn_name("function_worker_pool_run");
+      let item = function_worker_pool_run.name;
       list_add(crossed, item);
     }
     let json = json_to(got);
