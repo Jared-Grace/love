@@ -162,6 +162,7 @@ import { examples_notes_gate_run } from "./examples_notes_gate_run.mjs";
 import { claude_md_name_gate_run } from "./claude_md_name_gate_run.mjs";
 import { function_open_name_gate_run } from "./function_open_name_gate_run.mjs";
 import { memory_fn_reference_tokens_gate_run } from "./memory_fn_reference_tokens_gate_run.mjs";
+import { names_first_word_groups_gate_run } from "./names_first_word_groups_gate_run.mjs";
 import { memory_fn_reference_gate_run } from "./memory_fn_reference_gate_run.mjs";
 import { memory_link_verdict_gate_run } from "./memory_link_verdict_gate_run.mjs";
 import { memory_link_gate_run } from "./memory_link_gate_run.mjs";
@@ -210,6 +211,7 @@ export function qa_gates() {
     memory_link_gate_run,
     memory_fn_reference_tokens_gate_run,
     memory_fn_reference_gate_run,
+    names_first_word_groups_gate_run,
     text_dispatcher_command_names_gate_run,
     functions_dispatcher_commands_gate_run,
     memory_symbol_gate_run,
