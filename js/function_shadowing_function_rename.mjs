@@ -14,8 +14,7 @@ export async function function_shadowing_function_rename(
   ("The twin beside this one covers the inner kind, and the two are kept apart on");
   ("purpose: each refuses what the other is for, so neither can quietly do a job");
   ("it was not written for and report success.");
-  ("The guards are the twin's guards, asked again here because they belong to the");
-  ("edit and not to either implementation of it.");
+  ("What can go wrong with the rename itself is asked one name down, because it is the same five questions whatever the reason for renaming was. All this one adds is the reason: the name being moved is standing over a repo function.");
   let r = await function_identifier_rename_checked(f_name, name, name_after);
   return r;
 }
