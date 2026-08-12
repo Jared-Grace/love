@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_try } from "./file_read_try.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
