@@ -1,3 +1,4 @@
+import { app_g_day_water_tap_if } from "./app_g_day_water_tap_if.mjs";
 import { app_g_day_travel_blocked_is } from "./app_g_day_travel_blocked_is.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_click_npc_if } from "./app_g_click_npc_if.mjs";
@@ -12,6 +13,14 @@ export async function app_g_click_map(
 ) {
   if (app_g_day_travel_blocked_is(clicked_coordinates)) {
     app_g_discern_prevented_overlay(5000);
+    return;
+  }
+  let watered = await app_g_day_water_tap_if(
+    clicked_coordinates,
+    player_img_c,
+    div_map,
+  );
+  if (watered) {
     return;
   }
   let npcs = await app_g_npcs_get();
