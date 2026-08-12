@@ -10,6 +10,7 @@ export async function ebible_chapter_verse_numbers_with_words(
   bible_folder,
   chapter_code,
 ) {
+  "$plain chapter_code";
   "$plain bible_folder";
   arguments_assert(arguments, 2);
   ("The numbers of the verses in one chapter that have words in them, in the order the chapter reads.");
