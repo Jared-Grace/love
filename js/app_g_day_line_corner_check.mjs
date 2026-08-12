@@ -14,8 +14,7 @@ import { app_g_day_line_walked_through_is } from "./app_g_day_line_walked_throug
 export function app_g_day_line_corner_check() {
   ("deterministic REGRESSION check that a player can never be walled in by their own line. run: node scripts/ai.mjs ",
     fn_name("app_g_day_line_corner_check"));
-  ("the corner it reproduces is a corridor with two followers standing between the player and the way out, and a trail exactly as long as the line - which is every player who has gathered more people than they have walked tiles. there is no way around them, no way through them while the line stands, and no room behind the line to back it into, so before the last resort existed that player was stuck there for the rest of the day and every tap did nothing at all.");
-  ("it checks the three answers that free them, in the order they are asked: the line really is in the way, the way through it exists all the same, and the walk knows it is passing the line rather than being followed by it - which is what turns the line around at the end instead of walking it into the player.");
+  ("a corridor, two followers between the player and the way out, and a trail no longer than the line - so there is no way around, no way past while it stands, and no room to back it out.");
   let state = app_g_day_state();
   let coordinates = [];
   for (let x = 0; less_than(x, 7); x++) {

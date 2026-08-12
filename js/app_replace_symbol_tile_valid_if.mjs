@@ -6,7 +6,7 @@ import { html_data_set_test_suffix } from "./html_data_set_test_suffix.mjs";
 import { app_shared_symbol_tile_style_box_shadow } from "./app_shared_symbol_tile_style_box_shadow.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_replace_symbol_tile_background_color_valid_unsolved } from "./app_replace_symbol_tile_background_color_valid_unsolved.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
+import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { ternary } from "./ternary.mjs";
 import { html_style_background_color_set_if_else } from "./html_style_background_color_set_if_else.mjs";
 import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
@@ -24,7 +24,7 @@ export function app_replace_symbol_tile_valid_if(sb, valid, solved) {
   let suffix = app_replace_symbol_tile_valid_if_attribute();
   html_data_set_test_suffix(sb, suffix, valid);
   let glow_solved = app_shared_color_green_light();
-  let glow_unsolved = app_shared_container_blue_border_color();
+  let glow_unsolved = app_shared_color_blue_pale();
   let glow = ternary(solved, glow_solved, glow_unsolved);
   app_shared_symbol_tile_style_box_shadow(valid, sb, glow);
 }

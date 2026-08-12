@@ -52,7 +52,7 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_text_warning_color } from "./app_shared_text_warning_color.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
+import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
@@ -67,7 +67,7 @@ export async function app_g_verify_view(
   html_clear(container);
   let tokens = g_sermon_passage_words(english);
   let highlight = app_shared_verse_selected_background_color();
-  let border = app_shared_container_blue_border_color();
+  let border = app_shared_color_blue_pale();
   let serif = app_shared_font_serif();
   let small_gap = app_shared_spaced_small_gap();
   let covered = {};
