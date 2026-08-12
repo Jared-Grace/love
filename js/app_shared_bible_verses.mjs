@@ -1,3 +1,4 @@
+import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_picker_buttons_equal_width.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_picker_mark_current } from "./app_shared_bible_picker_mark_current.mjs";
@@ -21,7 +22,9 @@ export async function app_shared_bible_verses(context) {
     return;
   }
   let r = await app_shared_bible_chapters_before(context);
-  let card = property_get(r, "card");
+  let content = property_get(r, "content");
+  let book_name = property_get(r, "book_name");
+  let card = app_shared_bible_picker_card(content, book_name);
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
   let chapter_div = html_div_text_centered(card, chapter_name);
