@@ -111,6 +111,7 @@ export function examples_groups() {
         "example_expand_call_inline",
         "example_selects_functionize_local",
         "example_functionize_inside_a_loop",
+        "example_functionize_loop_name_stays_put",
         "example_function_lift_out_of_closure",
       ],
     },
