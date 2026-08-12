@@ -1,3 +1,4 @@
+import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
 import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
@@ -8,7 +9,6 @@ import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
-import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -112,8 +112,7 @@ export async function app_shared_bible_read(context, verse_action) {
     " to save that passage",
   ]);
   let hash = html_hash_object_get();
-  let key = app_shared_bible_chapter_hash_key();
-  let c = property_get_or(hash, key, "");
+  let c = app_shared_bible_chapter_hash_get_or_empty(hash);
   let b = app_shared_bible_book_hash_get(hash);
   let key3 = app_shared_bible_reference_hash_key();
   let ref = property_get_or(hash, key3, "");
