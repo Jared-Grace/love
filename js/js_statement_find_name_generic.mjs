@@ -26,7 +26,7 @@ export function js_statement_find_name_generic(ast, name, pick) {
     break;
   }
   null_not_is_assert_json(found, {
-    hint: "no line of this function's body mentions that word. Would you like to check the spelling, or pick a word the function really writes?",
+    hint: "no line of this function's body names that. Only the names count - a word standing in a piece of prose cannot be addressed by, so a word read off a sentence in the body will always be refused however plainly it is written there. Would you like to check the spelling, or pick a name the function really writes?",
     name,
   });
   return found;
