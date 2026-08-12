@@ -31,7 +31,7 @@ export function g_generation_settings() {
   let r = {
     day_matches,
     day_lines,
-    conversation_turns_low: 6,
+    conversation_turns_low: 8,
     conversation_turns_mean: 12,
     conversation_turns_high: 24,
     plant_days: 18,
