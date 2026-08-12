@@ -110,8 +110,9 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     html_div_cycle_code(never, ["", "1 === true", " is ", "false"]);
     let quotes = app_code_container_light_blue(root);
     ("Quotes, not quote marks - the first string lesson defined a string as text in quotes and every string lesson since has said quotes, so this card adds no word at all. It only points the one already there at the difference the learner is looking straight at.");
-    html_div_cycle_code(quotes, ["The quotes are what make it a string"]);
+    ("The two lines come first and the rule after them, which is the track's order everywhere - and here it is also what kills a pronoun. Said the other way round, the quotes are what make IT a string leads with a word whose antecedent is not on the card yet, so the reader meets it before the thing it stands for. With the two lines standing above, the rule needs no pronoun at all: they are what is different, and the sentence can just say so.");
     html_div_cycle_code(quotes, ["", '"1"', " is a string"]);
     html_div_cycle_code(quotes, ["", "1", " is a number"]);
+    html_div_cycle_code(quotes, ["Only the quotes are different"]);
   }
 }
