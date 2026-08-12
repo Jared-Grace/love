@@ -1,6 +1,6 @@
 import { bible_folders_sentence_end_measure } from "./bible_folders_sentence_end_measure.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
-import { file_write_json } from "./file_write_json.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 
 export async function bible_sentence_end_marks_write() {
   "Reads every bible this repo ships and writes down which of them mark where a sentence ends.";
@@ -8,6 +8,6 @@ export async function bible_sentence_end_marks_write() {
   "It is safe to run at any time and says the same thing twice, because the bibles it reads do not change under it - what changes is the list of them.";
   let measured = await bible_folders_sentence_end_measure();
   let path = bible_sentence_end_marks_path();
-  await file_write_json(path, measured);
+  await file_overwrite_json(path, measured);
   return measured;
 }
