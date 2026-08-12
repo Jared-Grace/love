@@ -1,3 +1,4 @@
+import { bible_verse_end_is_cases_gate_run } from "./bible_verse_end_is_cases_gate_run.mjs";
 import { bible_sentence_end_marks_gate_run } from "./bible_sentence_end_marks_gate_run.mjs";
 import { qa_gates_said_plain_gate_run } from "./qa_gates_said_plain_gate_run.mjs";
 import { example_files_refuses_run_gate_run } from "./example_files_refuses_run_gate_run.mjs";
@@ -311,6 +312,7 @@ export function qa_gates() {
     literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
     bible_sentence_end_marks_gate_run,
+    bible_verse_end_is_cases_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
     g_clock_sky_phase_check,
