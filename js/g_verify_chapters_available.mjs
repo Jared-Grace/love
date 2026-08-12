@@ -3,6 +3,7 @@ import { local_function_folder } from "./local_function_folder.mjs";
 import { g_sermon_write } from "./g_sermon_write.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 export async function g_verify_chapters_available() {
+  "Which chapters of the sermon already have a written file, read off the folder itself rather than from a list somebody keeps by hand.";
   let folder = local_function_folder(g_sermon_write);
   let files = null;
   try {
