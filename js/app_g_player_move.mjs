@@ -1,9 +1,9 @@
+import { app_g_player_path_choose } from "./app_g_player_path_choose.mjs";
 import { app_g_day_line_blocking_is } from "./app_g_day_line_blocking_is.mjs";
 import { app_g_day_line_back_out } from "./app_g_day_line_back_out.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
-import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
 import { app_g_player_path_animate } from "./app_g_player_path_animate.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export async function app_g_player_move(
