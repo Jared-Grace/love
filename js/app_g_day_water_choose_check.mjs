@@ -1,3 +1,4 @@
+import { g_coordinates_walkable_adjascent_nearest_player } from "./g_coordinates_walkable_adjascent_nearest_player.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_g_day_water_choose } from "./app_g_day_water_choose.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
@@ -78,8 +79,45 @@ export function app_g_day_water_choose_check() {
   assert_message(b3, "the gold guide must be able to lead to the water chosen");
   let toward = less_than(gold.y, player.y);
   assert_message(toward, "the gold guide must lead toward the water, not away");
+  ("ARRIVING is the other half, and it is checked here because it is the same question asked one step later: the chooser says which water, and this says which tile the player is left standing on when they tap it. it must be LAND every time - the nearest tile beside a tile of sea is more sea, so the answer that ignores whether anybody can stand there walks the player into the water it was leading them to the edge of");
+  let shore = g_coordinates_walkable_adjascent_nearest_player(
+    ponds,
+    player,
+    chosen,
+  );
+  let dry_shore = equal(shore.x, 6) && equal(shore.y, 4);
+  assert_message(
+    dry_shore,
+    "the tile the player is left on must be the nearest LAND beside the water, never the water",
+  );
+  let shore_cut = g_coordinates_walkable_adjascent_nearest_player(
+    cut_off,
+    player,
+    chosen_cut,
+  );
+  let dry_shore_cut = equal(shore_cut.x, 6) && equal(shore_cut.y, 7);
+  assert_message(
+    dry_shore_cut,
+    "the near side of a wall of water is the side the player is standing on",
+  );
+  let middle = {
+    x: 1,
+    y: 1,
+  };
+  let no_shore = g_coordinates_walkable_adjascent_nearest_player(
+    ponds,
+    player,
+    middle,
+  );
+  let b5 = equal(no_shore, null);
+  assert_message(
+    b5,
+    "water with nothing but water beside it leaves nowhere to stand, and must say so",
+  );
   let r = {
     chosen: [chosen.x, chosen.y],
+    shore: [shore.x, shore.y],
+    shore_cut_off: [shore_cut.x, shore_cut.y],
     chosen_cut_off: [chosen_cut.x, chosen_cut.y],
     dry: chosen_dry,
     gold: [gold.x, gold.y],
