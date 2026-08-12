@@ -1040,6 +1040,7 @@ export function permission_grant_names() {
   let spelled1021 = fn_name("bible_interlinear_caches_clear");
   let spelled1022 = fn_name("folder_lines_search");
   let spelled1023 = fn_name("folder_lines_search_args");
+  let spelled1024 = fn_name("permission_grants_writing_arguments");
   let names = [
     spelled,
     spelled2,
@@ -2064,6 +2065,7 @@ export function permission_grant_names() {
     spelled1021,
     spelled1022,
     spelled1023,
+    spelled1024,
   ];
   return names;
 }
