@@ -17,8 +17,8 @@ export function app_shared_button_numbered_progress(
   index,
   lambda,
 ) {
-  ("a numbered list row that says where the learner is: a check and green once it is finished, a pointing hand and the strong colour on the first unfinished row whose predecessor is finished, and the quiet colour on everything else. Shared, so every app's list of things to work through reads the same way");
-  ("It hands back everything the plain numbered button did rather than the title alone. A caller that has more to do to the row - a gap above it, holding on to it to scroll back to it later - was otherwise left unable to reach the button it had just made, and would have had to build its own row and lose all of this.");
+  "a numbered list row that says where the learner is: a check and green once it is finished, a pointing hand and the strong colour on the first unfinished row whose predecessor is finished, and the quiet colour on everything else. Shared, so every app's list of things to work through reads the same way";
+  "It hands back everything the plain numbered button did rather than the title alone. A caller that has more to do to the row - a gap above it, holding on to it to scroll back to it later - was otherwise left unable to reach the button it had just made, and would have had to build its own row and lose all of this.";
   let choose_this_next = not(completed) && completed_previous;
   let r = app_shared_button_numbered(root, index, lambda, true);
   let marker_slot = property_get(r, "marker");

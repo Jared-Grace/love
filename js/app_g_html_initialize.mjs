@@ -45,7 +45,8 @@ export function app_g_html_initialize(context) {
     "pointer-events": "auto",
   });
   ("this was needed instead of 100% to allow vertical scrolling");
-  let style_value = html_viewport_height_full();
+  ("and it is the VISIBLE height, not the full one. the full height is the tallest the window ever gets, which on a phone counts the strip the browser's own bar sits over - so a map built to it hangs its bottom row underneath that bar. everything that decides what the player can see is measured off this box: the centring scrolls to put the player in the middle of it, and the gold guide is laid on the furthest tile it says is wholly inside. measured too tall, both are wrong by the same strip, which is what put the gold on a tile only half on the screen");
+  let style_value = html_viewport_height_visible();
   html_style_set(div_map_container, "height", style_value);
   html_scroll_none(div_map_container);
   let i = g_icon_cross_unpositioned(root);
