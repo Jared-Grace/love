@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { app_shared_url_dev_local_named } from "./app_shared_url_dev_local_named.mjs";
 import { page_boot_cold_capture } from "./page_boot_cold_capture.mjs";
@@ -11,9 +12,11 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function apps_boot_cold_report() {
   "opens every app that has a dev build the way somebody following a link opens it - nothing after the address, nothing remembered from before - and reports the ones that never arrive.";
-  "this exists because the failure it looks for is invisible everywhere the work is done. an app is opened all day long with a hash in the address and a browser full of what yesterday left behind, so the one arrival nobody ever performs is the first one. app_next died exactly there: it put a verse on the clipboard while it was opening, a browser refuses that whenever its window is not the focused one, and the refusal threw before a single line was drawn. the page then sat on its loading message for ever. nothing was red, no test knew, and the only way it could have been found was somebody opening the page cold - which is what this does.";
-  "three ways of not arriving are all counted, because they are one fault wearing three faces: it threw while opening, it drew nothing at all, or it is still showing the loading message after it has had time to settle. the third is the quiet one and the reason a page error alone is not enough to look for - a page can hang without throwing anything, and to a reader that is the same dead page.";
-  "the sweep is deliberately one page at a time. a browser for each is already the expensive part, and this machine usually has several of these agents on it at once, so opening twenty-six at once would measure the load rather than the code.";
+  ("this exists because the failure it looks for is invisible everywhere the work is done. an app is opened all day long with a hash in the address and a browser full of what yesterday left behind, so the one arrival nobody ever performs is the first one. ",
+    fn_name("app_next"),
+    " died exactly there: it put a verse on the clipboard while it was opening, a browser refuses that whenever its window is not the focused one, and the refusal threw before a single line was drawn. the page then sat on its loading message for ever. nothing was red, no test knew, and the only way it could have been found was somebody opening the page cold - which is what this does.");
+  ("three ways of not arriving are all counted, because they are one fault wearing three faces: it threw while opening, it drew nothing at all, or it is still showing the loading message after it has had time to settle. the third is the quiet one and the reason a page error alone is not enough to look for - a page can hang without throwing anything, and to a reader that is the same dead page.");
+  ("the sweep is deliberately one page at a time. a browser for each is already the expensive part, and this machine usually has several of these agents on it at once, so opening twenty-six at once would measure the load rather than the code.");
   let app_names = await apps_names_dev();
   let loading = html_loading_message_text();
   let found = [];
@@ -25,7 +28,10 @@ export async function apps_boot_cold_report() {
     let reasons = [];
     let stuck = text_includes(body_text, loading);
     if (stuck) {
-      list_add(reasons, "still showing the loading message after it had time to settle");
+      list_add(
+        reasons,
+        "still showing the loading message after it had time to settle",
+      );
     }
     let trimmed = text_trim(body_text);
     let blank = text_empty_is(trimmed);
