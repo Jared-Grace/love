@@ -29,18 +29,13 @@ export async function example_files_command_guard_drift() {
       asserts,
       remembered,
     );
-    let command_guarded = list_empty_not_is(command_guards);
-    let core_bare = list_empty_is(core_guards);
-    if (command_guarded) {
-      if (core_bare) {
-        let one = {
-          name,
-          core: core_name,
-          command_guards,
-        };
-        list_add(drifted, one);
-      }
-    }
+    let one = {
+      name,
+      core: core_name,
+      command_guards,
+      core_guards,
+    };
+    list_add(drifted, one);
   }
   return drifted;
 }
