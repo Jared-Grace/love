@@ -62,10 +62,23 @@ export function app_code_lesson_expression_comparison_and() {
   });
   return lesson;
   function above(root) {
-    "the rule, then it worked once true and once false: each comparison is done first, and only then does && combine them";
+    "the rule, then one side changed, then both sides changed, worked once true and once false: each comparison is done first, and only then does && combine them";
+    ("The one-side form is worked first because it is the single step from the && the learner already has. They know true && false; replacing ONE operand with a comparison changes one thing. The card used to open on 3 < 5 && 2 < 4, which replaces both at once - two changes shown as one, and the header sentence says one side, so the first example contradicted the line above it.");
     let header = app_code_container_light_blue(root);
     html_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
+    let one = app_code_container_light_blue(root);
+    html_div_cycle_code(one, ["For ", "true && 1 < 2", ", we do ", "1 < 2", " first"]);
+    html_div_cycle_code(one, [
+      "That is ",
+      "true",
+      ", so ",
+      "true && true",
+      " is ",
+      "true",
+    ]);
+    html_div_cycle_code(one, ["Either side can be the comparison: ", "1 < 2 && true"]);
     let yes = app_code_container_light_blue(root);
+    html_div_cycle_code(yes, ["Both sides can be comparisons"]);
     html_div_cycle_code(yes, [
       "For ",
       "3 < 5 && 2 < 4",
