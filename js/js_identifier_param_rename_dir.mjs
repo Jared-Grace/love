@@ -21,6 +21,9 @@ export async function js_identifier_param_rename_dir(
   let marker_before = text_combine(plain_prefix, name);
   let marker_after = text_combine(plain_prefix, name_after);
   function edit(ast) {
+    let got = js_function_declaration_params_ast_get(ast);
+    let declaration = property_get(got, "declaration");
+    js_function_declaration_param_named_assert(declaration, f_name, name);
     replace(ast);
     js_strings_text_replace(ast, marker_before, marker_after);
   }
