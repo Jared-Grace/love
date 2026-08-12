@@ -1,3 +1,16 @@
+import { property_get } from "./property_get.mjs";
+import { ebible_chapter_verse_numbers_storage_try } from "./ebible_chapter_verse_numbers_storage_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { ebible_chapter_verse_code } from "./ebible_chapter_verse_code.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_sum } from "./list_sum.mjs";
 export async function bible_folder_verse_holes(bible_folder, chapters) {
   "Which of the verses a page will ask this bible for it has nothing to answer with.";
   "The asking is driven by the English index, so that is what a verse being there or not is measured against. A bible numbering its verses its own way is not wrong for doing so, but a reader who chose it beside English still gets a gap where the page asked for a number it does not use - and this counts the gaps rather than the disagreements, because the gap is what the reader sees.";
@@ -19,11 +32,11 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
       let code = ebible_chapter_verse_code(chapter_code, verse_number);
       return code;
     }
-    let holes = list_map(missing, lambda2);
+    let named = list_map(missing, lambda2);
     let measured = {
       chapter_code,
       absent,
-      holes,
+      holes: named,
     };
     return measured;
   }
@@ -36,8 +49,8 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
   let chapters_absent = list_map_property(absent_each, "chapter_code");
   list_sort_text(chapters_absent);
   function lambda4(measured) {
-    let holes = property_get(measured, "holes");
-    return holes;
+    let chapter_holes = property_get(measured, "holes");
+    return chapter_holes;
   }
   let holes_each = list_map(each_chapter, lambda4);
   let holes = lists_combine(holes_each);

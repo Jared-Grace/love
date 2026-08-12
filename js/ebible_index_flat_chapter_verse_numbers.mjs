@@ -1,3 +1,8 @@
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { verse_number_key } from "./verse_number_key.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { equal } from "./equal.mjs";
 export function ebible_index_flat_chapter_verse_numbers(list, chapter_code) {
   "The verse numbers one chapter has, read off a flat index of a whole bible.";
   "Where this is asked of the English bible the answer is the list of verse numbers a page will ask every other bible for, because that is the index a page walks. So it is the right side of the comparison rather than one guess at it.";
