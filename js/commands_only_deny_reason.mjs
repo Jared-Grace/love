@@ -36,6 +36,18 @@ export function commands_only_deny_reason(level) {
     f_name4,
     " <fn> <selector> <selector_args> <transform> <transform_args>",
   ]);
+  let f_name6 = fn_name("repo_lines_search");
+  let combined7 = text_combine_multiple([
+    "  node scripts/ai.mjs ",
+    f_name6,
+    " <word>",
+  ]);
+  let f_name7 = fn_name("file_text_replace_once");
+  let combined8 = text_combine_multiple([
+    "  node scripts/ai.mjs ",
+    f_name7,
+    " <f_path> <from> <to>",
+  ]);
   let f_name5 = fn_name("function_new_from_temp");
   let combined6 = text_combine_multiple([
     "  2. node scripts/ai.mjs ",
@@ -53,6 +65,11 @@ export function commands_only_deny_reason(level) {
     "Apply it:",
     combined5,
     "  the whole vocabulary is in notes/transforms.md - read it",
+    "",
+    "Prose and data have no tree, so they are found and changed as text:",
+    combined7,
+    combined8,
+    "  the run being replaced has to appear in that file exactly once, which is the same promise the editing tool makes - where it is refused, take in more of the line around it until it names one place.",
     "",
     "If nothing fits, the missing atom is the work, and there is a way to write one without turning the switch off:",
     "  1. draft it with the editing tool at scripts/temp/<name>.mjs, which stays open",
