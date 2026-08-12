@@ -24,6 +24,6 @@ export async function qa_commit_named_gate_forget(gate_name) {
   let named = {
     gate_name,
   };
-  let r = object_merge(named, done);
-  return r;
+  object_merge(named, done);
+  return named;
 }
