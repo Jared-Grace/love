@@ -27,20 +27,14 @@ export async function function_lift_captured_locals(
   "It asks which of the surrounding names the moved code so much as mentions, rather than which ones it truly reads. The narrow reading is the one that has been getting this wrong, so leaning on it here would hide exactly what is being looked for. What that costs is answered where the two readings meet, further down";
   let file_name = text_combine_multiple([source, ".mjs"]);
   let path = path_join(["js", file_name]);
-  async function old_lambda() {
-    let file_text = await git_file_read_at(folder, before, path);
-    return file_text;
-  }
-  let read = await catch_message_async(old_lambda);
-  let readable = property_get(read, "ok");
-  if (not(readable)) {
+  let old = await git_file_js_parse_at_or_null(folder, before, path);
+  if (null_is(old)) {
     let unreadable = {
       lifted,
       dropped: [],
     };
     return unreadable;
   }
-  let old = property_js_parse(read, "value");
   async function find_lambda() {
     let found = js_function_nested_find_named(old, nested);
     return found;
