@@ -1,3 +1,4 @@
+import { ebible_readaloud_lines_gate_run } from "./ebible_readaloud_lines_gate_run.mjs";
 import { app_g_day_line_corner_check } from "./app_g_day_line_corner_check.mjs";
 import { ebible_index_flats_union_cases_gate_run } from "./ebible_index_flats_union_cases_gate_run.mjs";
 import { text_lines_search_cases_gate_run } from "./text_lines_search_cases_gate_run.mjs";
@@ -325,6 +326,7 @@ export function qa_gates() {
     bible_verse_holes_gate_run,
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
+    ebible_readaloud_lines_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
     g_clock_sky_phase_check,
