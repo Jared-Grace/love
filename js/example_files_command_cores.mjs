@@ -1,3 +1,4 @@
+import { js_identifier_param_rename_dir } from "./js_identifier_param_rename_dir.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_identifiers_rename_dir } from "./js_identifiers_rename_dir.mjs";
 import { js_identifier_delete_unused_dir } from "./js_identifier_delete_unused_dir.mjs";
@@ -39,6 +40,10 @@ export function example_files_command_cores() {
     {
       name: fn_name("function_params_delete"),
       core: js_identifier_param_delete_dir,
+    },
+    {
+      name: fn_name("function_param_rename"),
+      core: js_identifier_param_rename_dir,
     },
     {
       name: fn_name("js_selects_functionize"),
