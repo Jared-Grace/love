@@ -1,6 +1,6 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
@@ -20,8 +20,7 @@ export async function app_g_day_line_back_step(player, player_img_c, div_map) {
   "It has to face the player before moving them, because which way they are facing is worked out from where they are standing and where they are going - and afterwards those are the same tile.";
   let state = app_g_day_state();
   let trail = property_get(state, "trail");
-  let followers = property_get(state, "followers");
-  let line = list_size(followers);
+  let line = property_list_size(state, "followers");
   let room = list_size_greater_than(trail, line);
   if (not(room)) {
     return false;
