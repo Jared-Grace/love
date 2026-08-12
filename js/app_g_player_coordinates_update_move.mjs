@@ -16,8 +16,14 @@ export async function app_g_player_coordinates_update_move(
     npc_clicked,
     clicked_coordinates,
   );
+  ("whoever was tapped is left standing where they were tapped while the crowd opens - tapping open ground names nobody");
+  let still = null;
+  if (npc_clicked) {
+    still = clicked_coordinates;
+  }
   let moved = await app_g_player_move(
     coordinates_move_to,
+    still,
     player_img_c,
     div_map,
   );
