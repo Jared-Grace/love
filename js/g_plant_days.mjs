@@ -32,11 +32,30 @@ export function g_plant_days(conversation_lists, next) {
   let budget = multiply_divide(s.day_matches, kept, 100);
   let left = list_map(conversation_lists, list_copy);
   let count = list_size(left);
+  ("The LEADER is not one of the lists and has no arc waiting to be spent. Everybody else is written once and then runs out, which is what ends a plant; the leader is whoever is discipling the player and goes on for as long as the plant does. So their conversation is DRAWN on the day rather than taken off a pile, and how many turns they come to is an outcome of the plant's length instead of a number that had to be guessed before it.");
+  ("They are placed FIRST on their days, before anybody is drawn, because a share of days is a promise and a random pick keeps no promise. Which days those are is still drawn, so the leader is not simply always the first person met.");
+  let share_low = s.leader_days_percent_minimum;
+  let share_high = s.leader_days_percent_maximum;
+  let share = divide(share_low + share_high, 2);
   let days = [];
   while (true) {
+    let remaining = list_filter_list_empty_not_is(left);
+    let spent_out = list_empty_is(remaining);
+    if (spent_out) {
+      break;
+    }
     let conversations = [];
-    let spent = 0;
     let met = [];
+    let rolled = next();
+    let comes = less_than(rolled, divide(share, 100));
+    let drawn = random_bell_low_middle_high(
+      next,
+      s.conversation_turns_low,
+      s.conversation_turns_mean,
+      s.conversation_turns_high,
+    );
+    let leader = comes ? drawn : 0;
+    let spent = leader;
     while (true) {
       let room = subtract(budget, spent);
       let fitting = [];
