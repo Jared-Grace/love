@@ -1,3 +1,17 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { ebible_languages } from "./ebible_languages.mjs";
+import { bible_folder_key } from "./bible_folder_key.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_size } from "./list_size.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { equal } from "./equal.mjs";
 export async function bible_verse_holes_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: every bible this repo ships has been asked for the verses a page will ask it for, and none of them answered with nothing throughout.");
