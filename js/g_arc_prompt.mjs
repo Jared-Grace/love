@@ -30,7 +30,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     chapter_code,
   ]);
   let joined = list_join_empty([preaching, "."]);
-  let joined9 = list_join_space(["Aim for ", turn_target, " turns."]);
+  let joined9 = list_join_space(["Aim for", turn_target, "turns."]);
   let joined6 = list_join_space([
     "  opener - for somebody who does not yet believe, one of:",
     openers_unbeliever,
@@ -62,6 +62,14 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "Here is JSON about the person:",
     json,
     '',
+    "THE TURNS",
+    "A turn is one exchange.",
+    "The person says something. The player answers with a passage.",
+    "The player's words are always God's word says, then the passage. So never write the player's line.",
+    ''
+,    "LENGTH",
+    joined9,
+    "",
     "You should choose this about the person:",
     "  trouble - what is wrong, in one sentence, in their own words",
     "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
@@ -70,11 +78,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "These facts are settled. Do not change them, and do not give a personality meant to follow from them.",
     "Start from the verses. Ask what trouble they honestly answer.",
     "Never pick a trouble first and then hunt for a verse.",
-    "",
-    "THE TURNS",
-    "A turn is one exchange.",
-    "The person says something. The player answers with a passage.",
-    "The player's words are always God's word says, then the passage. So never write the player's line.",
     "",
     "Give each turn:",
     joined6,
@@ -93,8 +96,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "You decide where each one ends.",
     "Days pass in between, so open a later conversation as somebody picking the thread back up.",
     "",
-    "LENGTH",
-    joined9,
     "This is a target, not a quota.",
     "Stop when the chapter has nothing left that honestly answers them.",
     "Never pad. Do not add a question their trouble would not make them ask.",
