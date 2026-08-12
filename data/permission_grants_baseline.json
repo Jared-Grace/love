@@ -79,6 +79,18 @@
   {
    "name": "functions_select_apply_args",
    "refusals": 1
+  },
+  {
+   "name": "functions_replace",
+   "refusals": 1
+  },
+  {
+   "name": "functions_literal_route",
+   "refusals": 1
+  },
+  {
+   "name": "functions_calls_callee_set",
+   "refusals": 1
   }
  ]
 }
