@@ -23,10 +23,10 @@ export async function app_g_player_move(
       div_map,
     );
   }
-  let path = g_coordinates_path_shortest(g, player, coordinates_move_to);
+  let path = app_g_player_path_choose(g, player, coordinates_move_to);
   let reachable = list_empty_not_is(path);
   if (reachable) {
-    await app_g_player_path_animate(player, path, player_img_c, div_map);
+    await app_g_player_path_animate(g, player, path, player_img_c, div_map);
     object_assign(player, coordinates_move_to);
   }
   return reachable;

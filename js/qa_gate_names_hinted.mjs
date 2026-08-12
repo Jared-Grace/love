@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { qa_gate_hint_nodes } from "./qa_gate_hint_nodes.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -19,7 +21,7 @@ export async function qa_gate_names_hinted(f_name) {
       list_add_unique(hinted, named);
     }
     let type = property_get(node, "type");
-    if (type === "Identifier") {
+    if (equal(type, "Identifier")) {
       let named2 = property_get(node, "name");
       list_add_unique(hinted, named2);
     }
@@ -35,11 +37,11 @@ export async function qa_gate_names_hinted(f_name) {
       let id = property_get(declarator, "id");
       let bound = property_get(id, "name");
       let bound_hinted_is = list_includes(hinted, bound);
-      if (!bound_hinted_is) {
+      if (not(bound_hinted_is)) {
         continue;
       }
       let init = property_get(declarator, "init");
-      if (init === null) {
+      if (equal(init, null)) {
         continue;
       }
       let identifiers2 = js_list_type_nodes(init, "Identifier");
