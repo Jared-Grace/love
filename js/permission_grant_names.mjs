@@ -961,6 +961,11 @@ export function permission_grant_names() {
   let spelled942 = fn_name("qa_gates_tree_git_reaching");
   let spelled943 = fn_name("functions_imports_dangling_gate_run");
   let spelled944 = fn_name("js_imports_relative_paths_cases_gate_run");
+  let spelled945 = fn_name("qa_gate_said_history_blind_is");
+  let spelled946 = fn_name("qa_gate_said_history_blind_cases_gate_run");
+  let spelled947 = fn_name("number_to_words");
+  let spelled948 = fn_name("g_plant_days_seeds_report");
+  let spelled949 = fn_name("qa_commit_beside_heads");
   let names = [
     spelled,
     spelled2,
@@ -1906,6 +1911,11 @@ export function permission_grant_names() {
     spelled942,
     spelled943,
     spelled944,
+    spelled945,
+    spelled946,
+    spelled947,
+    spelled948,
+    spelled949,
   ];
   return names;
 }
