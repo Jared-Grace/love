@@ -70,7 +70,7 @@ export function g_plant_days_report(seed) {
     return r;
   }
   let leader_days = list_filter_size(leader_each, came);
-  let r = {
+  let report = {
     npcs: s.plant_npcs_settle,
     days: list_size(days),
     leader_turns,
@@ -79,5 +79,5 @@ export function g_plant_days_report(seed) {
     met_each,
     shape,
   };
-  return r;
+  return report;
 }
