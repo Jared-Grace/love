@@ -8,14 +8,14 @@ import { function_select_multiple_apply_args } from "./function_select_multiple_
 import { function_auto_multiple } from "./function_auto_multiple.mjs";
 export async function function_functionize_generic(
   f_name,
-  word_from,
-  word_to,
+  name_from,
+  name_to,
   f_name_new,
   select_fn_name,
 ) {
   "$plain f_name";
-  "$plain word_from";
-  "$plain word_to";
+  "$plain name_from";
+  "$plain name_to";
   "$plain f_name_new";
   "$plain select_fn_name";
   arguments_assert(arguments, 5);
@@ -31,7 +31,7 @@ export async function function_functionize_generic(
     hint: "a function already answers to this name, so the run would be extracted under a name that is already spoken for - pick another, or fold onto the one that is there if it is really the same work",
     f_name_new,
   });
-  let ends = list_join_comma([word_from, word_to]);
+  let ends = list_join_comma([name_from, name_to]);
   let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
