@@ -12,7 +12,7 @@ import { example_files_materialize } from "./example_files_materialize.mjs";
   fn_name("example_rejection_run"),
   ", comparing against e.before rather than an e.after.");
 export async function example_files_refuses_run(e, lambda) {
-  "A refusal has to leave the folder exactly as it found it, and that is asked rather than assumed. Throwing is only half of refusing: a guard standing after the first file is written gives up in the middle, which reads here as a clean refusal while the folder behind it holds a change nobody asked for and no example declared. Measured on the verb next door: deleting a comma list of parameters applies them one at a time, so a bad second name lands the first deletion across every file and then throws.";
+  "A refusal has to leave the folder exactly as it found it, and that is asked rather than assumed. Throwing is only half of refusing: a guard standing after the first file is written gives up in the middle, which reads here as a clean refusal while the folder behind it holds a change nobody asked for and no example declared. Measured on the verb next door: deleting a comma list of parameters applies them one at a time, and a two-name list whose second name was a letter short stripped the first argument from the call site before giving up - the folder afterwards held a call the example never declared, and the run before this reading existed called that a clean refusal.";
   "What is compared against is the example's OWN before, so a refusal example still declares nothing extra. That is the whole shape of the check: the folder afterwards must be the folder beforehand, and the example already wrote that down.";
   async function in_sandbox(dir) {
     await example_files_materialize(dir, e.before);

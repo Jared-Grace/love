@@ -4,16 +4,26 @@ import { qa_gate_hint_nodes } from "./qa_gate_hint_nodes.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { list_add } from "./list_add.mjs";
-export async function qa_gate_names_hinted(f_name) {
-  "Every local in one function's body whose value ends up inside a hint, however many lines it took to get there. Read-only.";
+export async function qa_gate_names_hinted(f_name, remembered, depth) {
+  "Every name in one function's body whose value ends up inside a hint - its own locals, and the things it was handed. Read-only.";
   "A sentence is rarely handed straight to the hint slot. It is built into a local, out of another local holding the spelled-out name of a repair command, and only the last of those is written at the slot - so asking whether the spelling itself sits inside a hint answers no about code that is perfectly well behaved.";
-  "So it reads backwards instead. Start with the names written inside the hints, and for each one find the line that filled it and take in every name that line read; repeat until nothing new arrives. What comes out is every local the hint is made of.";
-  "Backwards rather than forwards because a hint is the destination, and the question being asked is only ever about what reaches it. Walking forward from every local would answer a larger question at a larger cost and then throw most of it away.";
-  let hints = await qa_gate_hint_nodes(f_name);
+  "So it reads backwards instead. Start with the names written inside the hints, and for each one find the line that filled it and take in every name that line read; repeat until nothing new arrives. What comes out is every name the hint is made of, and a parameter among them is how the function that called this one learns that the argument it wrote there was safe.";
+  "Backwards rather than forwards because a hint is the destination, and the question being asked is only ever about what reaches it. Walking forward from every name would answer a larger question at a larger cost and then throw most of it away.";
+  "The answer is kept in the object handed in, the same way a tree is, because the runners every gate delegates to are asked this about once per gate otherwise. The keeping is the caller's rather than this file's for the same reason it is there: a caller that only reads shares the saving, and nothing here holds state between one run and the next.";
+  let key = f_name + "@" + depth;
+  let known_is = property_exists(remembered, key);
+  if (known_is) {
+    let kept = property_get(remembered, key);
+    return kept;
+  }
   let hinted = [];
+  property_set(remembered, key, hinted);
+  let hints = await qa_gate_hint_nodes(f_name, remembered, depth);
   for (let node of hints) {
     let identifiers = js_list_type_nodes(node, "Identifier");
     for (let identifier of identifiers) {
@@ -47,8 +57,8 @@ export async function qa_gate_names_hinted(f_name) {
       let identifiers2 = js_list_type_nodes(init, "Identifier");
       for (let identifier2 of identifiers2) {
         let named3 = property_get(identifier2, "name");
-        let known_is = list_includes(hinted, named3);
-        if (known_is) {
+        let known2_is = list_includes(hinted, named3);
+        if (known2_is) {
           continue;
         }
         list_add(hinted, named3);
