@@ -1,3 +1,4 @@
+import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -23,9 +24,6 @@ import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
-import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
-import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
-import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
