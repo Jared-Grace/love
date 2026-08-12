@@ -1,8 +1,8 @@
+import { zz_probe_console } from "./zz_probe_console.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_gate_history_blind_print } from "./qa_gate_history_blind_print.mjs";
 import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
@@ -18,10 +18,10 @@ export async function qa_gate_sections_blame_print(told) {
     let known = await functions_names();
     let flying = [];
     for (let section of sections) {
-      let name = property_get(section, "name");
-      let said = property_get(section, "said");
-      console.log("\n=== who last touched what " + name + " named ===");
-      let some = await qa_gate_blame_print(said, known);
+      let r = await zz_probe_console(section, known);
+      let some = property_get(r, "some");
+      let said = property_get(r, "said");
+      let name = property_get(r, "name");
       list_add_multiple(flying, some);
       qa_gate_history_blind_print(name, said);
     }
