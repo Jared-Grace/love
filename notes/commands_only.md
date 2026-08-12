@@ -60,4 +60,28 @@ The switch covers the file-writing tools. It does **not** yet cover `Bash`, and 
 
 The goal there is different in kind from the file half — not a restriction but a **library**: one portable, natural-language API over the operating system's own commands, so a person learns `files_search_text` once instead of `grep` on one machine, `findstr` on another and `Select-String` on a third. The switch would only be what forces the migration to finish.
 
-Most of that library already exists — measured 2026-08-12: 100 `file_*`, 78 `folder_*`, 83 `git_*`, 27 `process_*`. The hole is **search**: `functions_search grep` and `functions_search ripgrep` both come back empty, and `data_texts_search` only reaches a single data folder. That is exactly why `grep` is the command that keeps getting reached for, and it is the first atom to write before a `bash` setting can mean anything.
+Most of that library already exists — measured 2026-08-12: 100 `file_*`, 78 `folder_*`, 83 `git_*`, 27 `process_*`.
+
+**Search was the hole, and is now filled** — that was the measured reason `grep` kept getting reached for:
+
+| function | what it answers |
+|---|---|
+| `text_lines_search(text, s)` | the lines of a text holding a word, each numbered from one |
+| `file_lines_search(f_path, s)` | the same for one file; a missing file and a file that was never text both answer nothing found |
+| `folder_lines_search(path_folder, s, folders_skipped)` | every line under a folder, read overlapping under the open-files ceiling |
+| `folder_lines_search_args(…)` | the same from a command line, the skipped folders joined by commas |
+| `text_binary_is(text)` | whether what was read was never text — asked of the bytes, not of the name on the end |
+
+```
+node scripts/ai.mjs folder_lines_search_args . folder_lines_search .git,node_modules,gitignore
+```
+
+Three things about it are the point rather than the implementation.
+
+**Nothing here asks the machine to search.** The files are read and the lines are looked at. So there is no per-platform version to write and none to keep in step — portable by having nothing to port, which is a stronger promise than portable by knowing every platform.
+
+**The word is looked for exactly as written, never as a pattern.** A dot is a dot. This is the one place the platforms disagree most: each machine's own searching command reads patterns by its own rules, so a pattern learned on one quietly means something else on the next. `text_lines_search_cases` (in `q`) pins that case — `a.c` must not find `abc`.
+
+**What comes back is records, not printed lines.** `{f_path, number, line}`. Printed text is the end of the road: the next thing that wants it has to take it apart again, and a line holding a colon takes itself apart wrongly. Records go straight into `list_filter_*`, `list_map`, a gate, or another function — which is the whole reason a command beats a pipe. The reuse runs the other way too: this got the open-files ceiling and the recursive walker for free by being written where they already live.
+
+Reading the files overlapping rather than one after the next took a repo-wide search from 18.7s to 5.7s, same answers.

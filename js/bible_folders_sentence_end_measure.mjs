@@ -9,10 +9,7 @@ export async function bible_folders_sentence_end_measure() {
   "Every bible rather than the ones somebody thought to check, because the list of bibles grows and nothing about adding one asks whether its sentences can be told apart. Asking the list itself is what keeps this true of the bibles that are here rather than of the bibles that were here when it was written.";
   "Sorted by the name of the folder rather than left in the order the list happens to be in, because that order is by how many people speak the language and would shuffle the whole record whenever one of those numbers is corrected.";
   "This reaches the network, so it is run by hand and its answer is kept in a file. What reads that file afterwards needs nothing but the file.";
-  let languages = ebible_languages();
-  let property_name = bible_folder_key();
-  let bible_folders = list_map_property(languages, property_name);
-  list_sort_text(bible_folders);
+  let bible_folders = ebible_bible_folders_sorted();
   let measured = await list_map_unordered_async(
     bible_folders,
     bible_folder_sentence_end_measure,
