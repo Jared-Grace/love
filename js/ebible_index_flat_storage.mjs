@@ -1,3 +1,5 @@
+import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
+import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 export async function ebible_index_flat_storage(bible_folder) {
   "Every place a bible has a verse, as one file off storage.";
   "The twin next door builds the same list by walking the chapters where it can and downloads this file where it cannot, which is how a page gets it. Here the walk is not an option - it reads folders that only the machine which uploaded the bible has - so this asks for the file and nothing else.";
