@@ -13,8 +13,8 @@ export async function ebible_readaloud_lines_measure() {
   let unmeasured = [];
   async function lambda(bible_folder) {
     async function lambda2() {
-      let measured = await ebible_readaloud_lines_differ(bible_folder);
-      return measured;
+      let counted = await ebible_readaloud_lines_differ(bible_folder);
+      return counted;
     }
     let measured = await catch_null_async(lambda2);
     let missing = null_is(measured);
