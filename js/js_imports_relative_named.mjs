@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_starts_with } from "./property_starts_with.mjs";
@@ -24,8 +25,7 @@ export function js_imports_relative_named(ast) {
         let skip = [];
         return skip;
       }
-      let imported = property_get(specifier, "imported");
-      let name = property_get(imported, "name");
+      let name = property_path_get_2(specifier, "imported", "name");
       let one = [
         {
           path,
