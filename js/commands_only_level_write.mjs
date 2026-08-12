@@ -1,12 +1,16 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commands_only_levels } from "./commands_only_levels.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { commands_only_path } from "./commands_only_path.mjs";
-import { file_overwrite_json } from "./file_write_json.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function commands_only_level_write(level) {
   "turns the commands-only switch to one of its settings, refusing any word that is not one of them";
   "a word that is not a setting would otherwise be written to the file and read back by the hook, which does not know the settings apart and would treat an unknown one as limiting nothing. A typo would then read exactly like off, and the switch would look on while doing nothing at all.";
-  "deliberately not granted, on either side. Turning it on is a decision, and turning it off is the only way out of the restriction, so a Claude that could turn it off would reach for that the first time a transform was missing - which is precisely the moment the missing transform is supposed to get written instead.";
+  "do NOT grant, on either side. Turning it on is a decision, and turning it off is the only way out of the restriction, so a Claude that could turn it off would reach for that the first time a transform was missing - which is precisely the moment the missing transform is supposed to get written instead.";
+  ("The refusal was written in prose here before it was written in the words the checker reads, and for a while it said only that this was deliberately not granted - true, and invisible. The phrase above is the one ",
+    fn_name("permission_grant_declined_phrase"),
+    " looks for, so the intent is now enforced rather than merely recorded.");
   arguments_assert(arguments, 1);
   let levels = commands_only_levels();
   list_includes_assert_json(levels, level, {
