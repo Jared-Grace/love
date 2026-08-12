@@ -56,7 +56,7 @@ export function app_code_lesson_operators_minus_generic(
     let operator_name_math_articled = text_articled_pad_space(operator_name);
     app_code_container_light_blue_cycle_code(root, [
       text_combine_multiple([
-        "In math and JavaScript, ",
+        "In math and JS, ",
         operator_name_math_articled,
         "can be used to make a number ",
         sign,

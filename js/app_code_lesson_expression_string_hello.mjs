@@ -39,7 +39,7 @@ export function app_code_lesson_expression_string_hello() {
     let code = app_code_string_code(word);
     let intro = app_code_container_light_blue(root);
     let name_line = html_div(intro);
-    html_span_text(name_line, "In JavaScript, text is called a ");
+    html_span_text(name_line, "In JS, text is called a ");
     let term = html_span_text(name_line, "string");
     html_bold(term);
     let marks = html_div(intro);
