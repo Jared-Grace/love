@@ -951,6 +951,13 @@ export function permission_grant_names() {
   let spelled936 = fn_name("js_page_serialized_imported_names_cases_gate_run");
   let spelled937 = fn_name("functions_page_serialized_imported_gate_run");
   let spelled938 = fn_name("g_plant_days_minimum_possible");
+  let spelled939 = fn_name("g_plant_days_report");
+  let spelled940 = fn_name(
+    "app_code_lesson_expression_equal_number_string_true_false",
+  );
+  let spelled941 = fn_name(
+    "app_code_lesson_expression_equal_number_string_true_false_title_name_id",
+  );
   let names = [
     spelled,
     spelled2,
@@ -1890,6 +1897,9 @@ export function permission_grant_names() {
     spelled936,
     spelled937,
     spelled938,
+    spelled939,
+    spelled940,
+    spelled941,
   ];
   return names;
 }

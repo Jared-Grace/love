@@ -16,5 +16,5 @@ export function app_shared_bible_settings(context) {
     app_shared_bible_languages,
   );
   let open_offline = app_shared_screen_later(context, app_shared_bible_offline);
-  app_shared_bible_settings_render(root, open_languages, open_offline);
+  app_shared_bible_settings_render(root, open_languages, open_offline, context);
 }

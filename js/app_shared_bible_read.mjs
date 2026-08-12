@@ -135,7 +135,7 @@ export async function app_shared_bible_read(context, verse_action) {
       books,
       primary_folder,
     );
-    app_shared_bible_settings_gear(bar, content, languages_chosen);
+    app_shared_bible_settings_gear(bar, content, languages_chosen, context);
     return;
   }
   let bible_folder = ebible_folder_english();
@@ -144,7 +144,7 @@ export async function app_shared_bible_read(context, verse_action) {
     let ref_chapters = app_shared_bible_ref_chapter_codes(ref_line, books_en);
     if (list_multiple_is(ref_chapters)) {
       app_shared_bible_ref_chapters_guard(content, ref_chapters, books_en);
-      app_shared_bible_settings_gear(bar, content, languages_chosen);
+      app_shared_bible_settings_gear(bar, content, languages_chosen, context);
       return;
     }
   }
@@ -210,7 +210,7 @@ export async function app_shared_bible_read(context, verse_action) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     app_shared_button_arrow_right(bar, chapter_next);
   }
-  app_shared_bible_settings_gear(bar, content, languages_chosen);
+  app_shared_bible_settings_gear(bar, content, languages_chosen, context);
   async function fetch_language(lc) {
     let r = await app_shared_bible_fetch_language(
       lc,
