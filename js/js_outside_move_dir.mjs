@@ -1,3 +1,4 @@
+import { js_name_taken_dir_check } from "./js_name_taken_dir_check.mjs";
 import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -29,6 +30,12 @@ export async function js_outside_move_dir(ast, dir) {
     js_declaration_movable_assert(ast, declaration);
   }
   each(declarations, lambda_movable);
+  ("Whether each name is free is asked in the same pass and for the same reason. The ambient version of this step asks it of the whole repo, and the docstring above has always said so, but here the write went straight to the folder and put the new function on top of whatever was already answering to that name. Nothing looked wrong afterwards: the file is well formed and exports the name it is called, so an extraction that deleted a function read exactly like one that added one.");
+  async function lambda_free(declaration) {
+    let f_name_declared = js_function_declaration_name(declaration);
+    await js_name_taken_dir_check(dir, f_name_declared);
+  }
+  await each_async(declarations, lambda_free);
   async function lambda_write(declaration) {
     let f_name = js_function_declaration_name(declaration);
     let code_declaration = js_unparse(declaration);
