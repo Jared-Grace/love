@@ -1,3 +1,4 @@
+import { functions_imports_dangling_gate_run } from "./functions_imports_dangling_gate_run.mjs";
 import { functions_page_serialized_imported_gate_run } from "./functions_page_serialized_imported_gate_run.mjs";
 import { js_page_serialized_imported_names_cases_gate_run } from "./js_page_serialized_imported_names_cases_gate_run.mjs";
 import { functions_lift_captured_locals_gate_run } from "./functions_lift_captured_locals_gate_run.mjs";
@@ -238,6 +239,7 @@ export function qa_gates() {
     js_identifiers_referenced_names_cases_gate_run,
     js_identifiers_rename_unused_number_suffixes_cases_gate_run,
     function_imports_gate_run,
+    functions_imports_dangling_gate_run,
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
