@@ -116,6 +116,8 @@ export function examples_notes() {
       "the same verb given a name that already has a file - the wrapper has nowhere to be written that is not already somebody's home",
     example_param_new_across_files:
       "add a parameter — every caller gets the default",
+    example_param_new_refuses_an_unknown_function:
+      "the same verb aimed at a name nothing answers to - every part of the work matches nothing, so without a refusal it succeeds silently and the typo is found much later",
     example_param_delete_across_files:
       "delete a parameter — every caller's arg is stripped",
     example_param_delete_refuses_a_missing_name:
