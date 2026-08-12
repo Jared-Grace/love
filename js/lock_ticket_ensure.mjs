@@ -4,7 +4,6 @@ import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { lock_ticket_name } from "./lock_ticket_name.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { path_join } from "./path_join.mjs";
-
 export async function lock_ticket_ensure(lock_folder, wait, who) {
   "$plain lock_folder";
   "$plain wait";

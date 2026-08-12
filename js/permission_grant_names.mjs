@@ -975,6 +975,9 @@ export function permission_grant_names() {
   let spelled956 = fn_name("app_g_day_water_choose_check");
   let spelled957 = fn_name("apps_boot_cold_report");
   let spelled958 = fn_name("js_statements_span_outputs_cases_gate_run");
+  let spelled959 = fn_name("app_g_dev_index_prefixes_check");
+  let spelled960 = fn_name("names_first_word_groups_gate_run");
+  let spelled961 = fn_name("function_param_move_first");
   let names = [
     spelled,
     spelled2,
@@ -1934,6 +1937,9 @@ export function permission_grant_names() {
     spelled956,
     spelled957,
     spelled958,
+    spelled959,
+    spelled960,
+    spelled961,
   ];
   return names;
 }

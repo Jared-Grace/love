@@ -1,9 +1,8 @@
-import { lock_waiting_folder } from "./lock_waiting_folder.mjs";
-import { lock_ticket_name } from "./lock_ticket_name.mjs";
+import { lock_release_acquire } from "./lock_release_acquire.mjs";
+import { lock_ticket_ensure } from "./lock_ticket_ensure.mjs";
 import { lock_turn_mine_is } from "./lock_turn_mine_is.mjs";
 import { lock_waiting_print } from "./lock_waiting_print.mjs";
 import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { lock_options } from "./lock_options.mjs";
 import { lock_folder_path } from "./lock_folder_path.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -20,49 +19,13 @@ export async function lock_generic(lock_name, wait, lambda, who) {
   await folder_exists_ensure(result);
   let owner_path = path_join([result, "owner"]);
   ("Those who mean to wait get in line, in the order they arrived. Whoever looks in the moment after the lock is given back would otherwise take it, so a waiter can be walked past for ever - measured with ten of us running, one wait sat through two different holders and was no nearer the front for it. Nobody who is not going to wait joins the line, because they are gone before their turn could come and their word would only stand in somebody else's way");
-  let waiting = lock_waiting_folder(result);
-  let arrival = date_now_milliseconds();
-  let ticket = lock_ticket_name(arrival, who ? who : "unknown");
-  let ticket_path = path_join([waiting, ticket]);
-  if (wait) {
-    await folder_exists_ensure(waiting);
-  }
+  let ticket_path = await lock_ticket_ensure(result, wait, who);
   let release = null;
   let r = null;
   try {
-    let locked = false;
-    let notified = false;
-    do {
-      if (wait) {
-        let mine = await lock_turn_mine_is(waiting, ticket);
-        if (not(mine)) {
-          if (not(notified)) {
-            await lock_waiting_print(owner_path, result, wait);
-            notified = true;
-          }
-          await sleep(200);
-          continue;
-        }
-      }
-      try {
-        let r3 = lock_options();
-        release = await lockfile.lock(result, r3);
-        locked = true;
-        break;
-      } catch (e) {
-        if (not_equal(e.code, "ELOCKED")) {
-          throw e;
-        }
-        if (not(notified)) {
-          await lock_waiting_print(owner_path, result, wait);
-          notified = true;
-        }
-        if (wait) {
-          await sleep(200);
-        }
-      }
-    } while (wait);
-    if (locked) {
+    ("Getting hold of it is one idea and lives under its own name. What is left here is the pair of promises this makes to everybody else: that the work only runs while the lock is held, and that both the place in the line and the lock itself are given back however this ends");
+    release = await lock_release_acquire(result, ticket_path, owner_path, wait);
+    if (release) {
       await file_overwrite(owner_path, who ? who : "unknown");
       r = await lambda();
     }
