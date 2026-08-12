@@ -10,8 +10,8 @@ export async function example_files_command_guard_drift() {
   ("Which whole-repo commands can refuse where the folder-sized twin the corpus runs cannot.");
   ("The registry next door pairs each command with a hermetic twin, and the corpus runs the twin. So a guard that stands in the command and not in the twin is a refusal no example can ever prove - the corpus demonstrates the mechanism and quietly says nothing about the one behaviour a reader most wants pinned. Measured twice in one day: the twin for the parameter rename had no guard at all, and the twin paired with the list-taking delete took a single name, so the refusal the corpus reported was a refusal of the wrong question.");
   ("Reaching is asked rather than reading each file, because a guard almost never stands in the command itself - it stands several calls down. A reading of the two files alone found one of the nine and missed the rest.");
-  let asserts_found = await functions_search("assert");
-  let asserts = properties_keys(asserts_found);
+  let f_names = await functions_names();
+  let asserts = list_filter_text_includes(f_names, "assert");
   let cores = example_files_command_cores();
   let remembered = {};
   let drifted = [];
