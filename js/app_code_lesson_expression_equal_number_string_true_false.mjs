@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_compared } from "./app_code_lesson_expression_equal_number_string_true_false_compared.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -35,17 +36,6 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function look_alike() {
-    "a value and the string spelled exactly like it: \"5\" === 5, or \"true\" === true. Always false, and the one line the lesson exists for. The word is held as its own code text from the start, so the same word serves both sides - quoted on the left, bare on the right - and the two can never drift apart";
-    let word = list_random_item(["1", "2", "5", "true", "false"]);
-    let quoted = app_code_string_code(word);
-    let code =
-      app_code_lesson_expression_equal_number_string_true_false_compared(
-        quoted,
-        word,
-      );
-    return code;
-  }
   function number_and_true_false() {
     "a number against a true or false, with no quotes anywhere: 1 === true. Also always false, and it is here so the rule cannot be read off the quotes alone - a reader who has decided that quotes mean false has nothing to go on in this line";
     let number = list_random_item(["0", "1", "2"]);
@@ -83,7 +73,8 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
   }
   function refill() {
     "four examples a screen, two true and two false, and the two false ones are the two shapes this lesson adds. The true lines are not filler - they are what stops the false ones being answerable by a rule the lesson never taught, so each false shape is shown beside a true line that looks like it";
-    let v = look_alike();
+    let v =
+      app_code_lesson_expression_equal_number_string_true_false_look_alike();
     let v2 = same_string();
     let v3 = number_and_true_false();
     let v4 = same_plain();
