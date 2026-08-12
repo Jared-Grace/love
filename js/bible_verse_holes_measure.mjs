@@ -1,3 +1,4 @@
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_index_flat_storage } from "./ebible_index_flat_storage.mjs";
 import { bible_verse_holes_book } from "./bible_verse_holes_book.mjs";
@@ -5,9 +6,6 @@ import { ebible_index_flat_book_chapter_codes } from "./ebible_index_flat_book_c
 import { list_sort_text } from "./list_sort_text.mjs";
 import { ebible_index_flat_chapter_verse_numbers } from "./ebible_index_flat_chapter_verse_numbers.mjs";
 import { list_map } from "./list_map.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { bible_folder_verse_holes } from "./bible_folder_verse_holes.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_size } from "./list_size.mjs";
