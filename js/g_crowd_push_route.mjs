@@ -1,3 +1,17 @@
+import { g_crowd_push_ways } from "./g_crowd_push_ways.mjs";
+import { g_crowd_push_most } from "./g_crowd_push_most.mjs";
+import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_pop_first } from "./list_pop_first.mjs";
+import { property_get } from "./property_get.mjs";
+import { add } from "./add.mjs";
+import { g_coordinates_toward } from "./g_coordinates_toward.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { g_crowd_push_route_back } from "./g_crowd_push_route_back.mjs";
+import { list_add } from "./list_add.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { not } from "./not.mjs";
 export function g_crowd_push_route(
   land_index,
   npc_index,
