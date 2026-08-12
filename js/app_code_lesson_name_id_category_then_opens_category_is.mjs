@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_name_id_category_then_opens_category_is(
@@ -23,7 +23,10 @@ export function app_code_lesson_name_id_category_then_opens_category_is(
   if (not_equal(callee_type, "Identifier")) {
     return false;
   }
-  let callee_name = property_get(callee, "name");
-  let opens = equal(callee_name, fn_name("app_code_lesson_name_id_category"));
+  let opens = property_equals(
+    callee,
+    "name",
+    fn_name("app_code_lesson_name_id_category"),
+  );
   return opens;
 }
