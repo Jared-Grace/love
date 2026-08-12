@@ -1,4 +1,5 @@
-import { app_g_day_discern_pool } from "./app_g_day_discern_pool.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { app_g_day_discern_target } from "./app_g_day_discern_target.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
@@ -6,7 +7,6 @@ import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_player_save } from "./app_g_player_save.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { g_distance_walk } from "./g_distance_walk.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_g_day_discern() {
