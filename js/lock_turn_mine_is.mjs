@@ -1,3 +1,4 @@
+import { list_first_is } from "./list_first_is.mjs";
 import { path_touch } from "./path_touch.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_join } from "./path_join.mjs";
@@ -10,8 +11,6 @@ import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { list_first } from "./list_first.mjs";
-import { equal } from "./equal.mjs";
 export async function lock_turn_mine_is(waiting, ticket) {
   "$plain waiting";
   "$plain ticket";
@@ -40,7 +39,6 @@ export async function lock_turn_mine_is(waiting, ticket) {
     }
   }
   list_sort_text(live);
-  let first = list_first(live);
-  let mine = equal(first, ticket);
+  let mine = list_first_is(live, ticket);
   return mine;
 }
