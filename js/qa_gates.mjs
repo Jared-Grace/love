@@ -1,3 +1,5 @@
+import { functions_page_serialized_imported_gate_run } from "./functions_page_serialized_imported_gate_run.mjs";
+import { js_page_serialized_imported_names_cases_gate_run } from "./js_page_serialized_imported_names_cases_gate_run.mjs";
 import { functions_lift_captured_locals_gate_run } from "./functions_lift_captured_locals_gate_run.mjs";
 import { js_function_declaration_free_names_cases_gate_run } from "./js_function_declaration_free_names_cases_gate_run.mjs";
 import { js_declaration_names_unbound_cases_gate_run } from "./js_declaration_names_unbound_cases_gate_run.mjs";
