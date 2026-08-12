@@ -8,7 +8,7 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
   ("The chained line is named as the maths one before it is worked. A learner who writes 2 < 5 < 8 is not making a mistake, they are writing what they were taught in maths, so the card says that first: the notation is right, the language is what differs.");
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["You might write ", "2 < 5 < 8"],
-    ["That is how we would write this in maths"],
+    ["That is how we would write this in math"],
     ["However, that is not how we write this in JS"],
   ]);
   app_code_container_light_blue_cycle_code_multiple(root, [

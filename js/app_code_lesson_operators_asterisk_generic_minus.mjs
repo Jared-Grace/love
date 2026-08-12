@@ -24,7 +24,7 @@ export function app_code_lesson_operators_asterisk_generic_minus(
   let combined4 = text_combine(minus, right);
   html_div_code_multiple(c, [combined2, combined4]);
   html_div_cycle_code(c, [
-    "However JavaScript does not have something like this for ",
+    "However JS does not have something like this for ",
     operator,
   ]);
 }
