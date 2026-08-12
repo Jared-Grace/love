@@ -1100,6 +1100,7 @@
       "Bash(node scripts/ai.mjs bible_interlinear_caches_clear:*)",
       "Bash(node scripts/ai.mjs folder_lines_search:*)",
       "Bash(node scripts/ai.mjs folder_lines_search_args:*)",
+      "Bash(node scripts/ai.mjs permission_grants_writing_arguments:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2123,6 +2124,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args bible_interlinear_caches_clear:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args folder_lines_search:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args folder_lines_search_args:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_grants_writing_arguments:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -3145,6 +3147,7 @@
       "Bash(node scripts/aig.mjs bible_interlinear_caches_clear:*)",
       "Bash(node scripts/aig.mjs folder_lines_search:*)",
       "Bash(node scripts/aig.mjs folder_lines_search_args:*)",
+      "Bash(node scripts/aig.mjs permission_grants_writing_arguments:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -4167,7 +4170,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args commands_only_level:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_interlinear_caches_clear:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args folder_lines_search:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args folder_lines_search_args:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args folder_lines_search_args:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_grants_writing_arguments:*)"
     ],
     "defaultMode": "acceptEdits"
   },
