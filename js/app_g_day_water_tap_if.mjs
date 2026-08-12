@@ -1,3 +1,4 @@
+import { g_coordinates_walkable_adjascent_nearest_player } from "./g_coordinates_walkable_adjascent_nearest_player.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_guide_clear } from "./app_g_day_guide_clear.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
@@ -5,7 +6,6 @@ import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_player_coordinates_update_move } from "./app_g_player_coordinates_update_move.mjs";
 import { g_coordinates_water_is } from "./g_coordinates_water_is.mjs";
 import { g_coordinates_same_is } from "./g_coordinates_same_is.mjs";
-import { g_coordinates_clicked_adjascent_nearest_player } from "./g_coordinates_clicked_adjascent_nearest_player.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { null_is } from "./null_is.mjs";
@@ -31,7 +31,17 @@ export async function app_g_day_water_tap_if(clicked, player_img_c, div_map) {
   }
   let g = await app_g_game_save_get();
   let player = await app_g_player_get();
-  let shore = g_coordinates_clicked_adjascent_nearest_player(g, player, target);
+  ("the shore has to be a tile somebody can STAND on, which is why this is not the neighbour helper the npc tap uses: that one takes the nearest tile beside the target whatever it is, and every tile beside a tile of sea is more sea, so it would walk the player INTO the water instead of up to it");
+  let shore = g_coordinates_walkable_adjascent_nearest_player(
+    g,
+    player,
+    target,
+  );
+  let unreachable = null_is(shore);
+  if (unreachable) {
+    ("no edge to stand on. the day stays led rather than being quietly ended, so the tap changes nothing at all");
+    return true;
+  }
   await app_g_player_coordinates_update_move(
     false,
     shore,
