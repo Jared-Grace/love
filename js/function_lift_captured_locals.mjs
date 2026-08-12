@@ -1,3 +1,4 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_function_declaration_free_names } from "./js_function_declaration_free_names.mjs";
 import { catch_message_async } from "./catch_message_async.mjs";
@@ -6,7 +7,6 @@ import { git_file_read_at } from "./git_file_read_at.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_function_nested_find_named } from "./js_function_nested_find_named.mjs";
 import { js_identifier_names_all } from "./js_identifier_names_all.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { not } from "./not.mjs";
@@ -51,8 +51,7 @@ export async function function_lift_captured_locals(
     };
     return unreadable;
   }
-  let text = property_get(read, "value");
-  let old = js_parse(text);
+  let old = property_js_parse(read, "value");
   async function find_lambda() {
     let found = js_function_nested_find_named(old, nested);
     return found;
