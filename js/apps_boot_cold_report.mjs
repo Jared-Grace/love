@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -29,7 +30,8 @@ export async function apps_boot_cold_report() {
     if (arrived) {
       told = "arrived";
     }
-    log_keep(apps_boot_cold_report.name, told);
+    let line = text_combine_multiple([app_name, ": ", told]);
+    log_keep(apps_boot_cold_report.name, line);
     if (not(arrived)) {
       let entry = {
         app_name,
