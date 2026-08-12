@@ -1,3 +1,4 @@
+import { qa_gates_said_plain_gate_run } from "./qa_gates_said_plain_gate_run.mjs";
 import { example_files_refuses_run_gate_run } from "./example_files_refuses_run_gate_run.mjs";
 import { js_statements_span_outputs_cases_gate_run } from "./js_statements_span_outputs_cases_gate_run.mjs";
 import { js_exports_names_cases_gate_run } from "./js_exports_names_cases_gate_run.mjs";
@@ -403,6 +404,7 @@ export function qa_gates() {
     js_declaration_names_unbound_cases_gate_run,
     js_function_declaration_free_names_cases_gate_run,
     functions_lift_captured_locals_gate_run,
+    qa_gates_said_plain_gate_run,
   ];
   return gates;
 }

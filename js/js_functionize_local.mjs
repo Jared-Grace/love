@@ -1,3 +1,6 @@
+import { js_statements_declared_names } from "./js_statements_declared_names.mjs";
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
+import { js_assigned_names } from "./js_assigned_names.mjs";
 import { js_global_names } from "./js_global_names.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
@@ -33,6 +36,17 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   let escapes = js_statements_escapes_unmatched(span);
   list_empty_is_assert_json(escapes, {
     hint: "this run of lines returns, breaks, or goes round again in a way that leaves the run, and a function of its own has nowhere for that to land. Would you like to choose ends that hold the whole loop, or that stop short of the jump?",
+    f_name_new,
+  });
+  ("A run of lines that writes to a name it did not itself bring into being is refused, and refused here, before a single thing has been written. Such a name belongs to the block the run is leaving. Moved into a function of its own, the writing lands on a copy that dies with the call, and everything behind goes on reading the value the name had before the run - which is the failure with no error, because the lines come out looking exactly right.");
+  ("Measured, before this stood: a mark walking through a pool of people was declared above a loop, moved along inside the run that was cut, and read at the top of every turn round. The cut left the mark standing still, so every turn drew from the top of the pool, the same faces were met again and again, and the count of people placed fell from two hundred and forty three to two hundred and thirty four. Nothing went red. It was caught only because a run of the whole thing had been written down beforehand and the two were compared by hand, which is not a thing anybody does twice.");
+  ("What is handed back covers only names the run brings into being, which is why it could not see this. The two questions look alike and are not: one asks what leaves with the run, the other asks what the run reaches back into.");
+  ("Every such write is refused rather than the ones that turn out to matter, because whether it matters cannot be decided by looking at the lines behind. A run inside a loop reads the name again through its own first line on the next turn round, so the reading is not behind the run at all - and that is exactly the case that was measured. A refusal costs a message and a second choice of ends; being wrong here costs a change nobody sees.");
+  let born = js_statements_declared_names(span);
+  let written = list_map_concat_multiple(span, js_assigned_names);
+  let carried = list_difference(written, born);
+  list_empty_is_assert_json(carried, {
+    hint: "this run of lines gives a new value to a name that was brought into being above it, and a function of its own would give that value to a copy instead - so the lines behind would carry on with the old one. Would you like to choose ends that hold the line where that name was brought into being, or to hand the name back by hand once the run is out?",
     f_name_new,
   });
   let index_max = list_max(indices);
