@@ -1,10 +1,10 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { g_direction_sides } from "./g_direction_sides.mjs";
 import { list_get } from "./list_get.mjs";
 import { g_crowd_push_chain } from "./g_crowd_push_chain.mjs";
 import { null_is } from "./null_is.mjs";
 import { and } from "./and.mjs";
 import { list_size } from "./list_size.mjs";
-import { less_than } from "./less_than.mjs";
 export function g_crowd_push_shorter(
   land_index,
   npc_index,
@@ -51,8 +51,7 @@ export function g_crowd_push_shorter(
     return push_a;
   }
   let size_a = list_size(chain_a);
-  let size_b = list_size(chain_b);
-  let b_shorter = less_than(size_b, size_a);
+  let b_shorter = list_size_less_than_value(chain_b, size_a);
   if (b_shorter) {
     let push_nearer = {
       side: side_b,
