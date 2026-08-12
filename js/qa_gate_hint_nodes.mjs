@@ -1,3 +1,4 @@
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { equal } from "./equal.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
 import { function_params_names } from "./function_params_names.mjs";
@@ -13,7 +14,7 @@ export async function qa_gate_hint_nodes(f_name) {
   let properties = await function_ast_list_type_nodes(f_name, "Property");
   for (let p of properties) {
     let key = property_get(p, "key");
-    let named = property_get(key, "name");
+    let named = js_identifier_name_try(key);
     if (equal(named, "hint")) {
       let value = property_get(p, "value");
       list_add(nodes, value);
@@ -22,7 +23,7 @@ export async function qa_gate_hint_nodes(f_name) {
   let calls = await function_ast_list_type_nodes(f_name, "CallExpression");
   for (let call of calls) {
     let callee = property_get(call, "callee");
-    let called = property_get(callee, "name");
+    let called = js_identifier_name_try(callee);
     async function lambda() {
       let names = await function_params_names(called);
       return names;
