@@ -1,3 +1,6 @@
+import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
+import { add } from "./add.mjs";
+import { each_index } from "./each_index.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { property_get } from "./property_get.mjs";
