@@ -1,9 +1,9 @@
+import { app_g_dev_links } from "./app_g_dev_links.mjs";
 import { html_hash_name_get } from "./html_hash_name_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { app_g_dev_index } from "./app_g_dev_index.mjs";
-import { app_g_dev_back_link } from "./app_g_dev_back_link.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_dev_if(div_map) {
@@ -21,6 +21,6 @@ export async function app_g_dev_if(div_map) {
   if (property_exists(routes, name)) {
     let route = property_get(routes, name);
     await route();
-    app_g_dev_back_link();
+    app_g_dev_links();
   }
 }

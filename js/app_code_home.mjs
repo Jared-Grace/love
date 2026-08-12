@@ -26,6 +26,7 @@ export async function app_code_home(context) {
   "on returning home the lesson just left (its id is remembered in lesson_id) is scrolled to the vertical center, so the learner lands back where they were";
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
+  app_code_home_settings_gear(g, context);
   let div = html_div_text_centered(g, "Lessons:");
   let value = app_shared_spaced_gap();
   html_style_margin_y(div, value);
