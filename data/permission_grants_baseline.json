@@ -67,6 +67,10 @@
   {
    "name": "permission_grants_param_plain_mark",
    "refusals": 1
+  },
+  {
+   "name": "functions_parallel_mark",
+   "refusals": 1
   }
  ]
 }
