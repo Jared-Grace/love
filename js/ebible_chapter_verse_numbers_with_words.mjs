@@ -16,9 +16,10 @@ export async function ebible_chapter_verse_numbers_with_words(
   let verses = await ebible_chapter_verse_texts(bible_folder, chapter_code);
   function lambda(item) {
     let text = property_get(item, "text");
-    let replaced = text_replace(text, "[]", "");
-    let normalized = whitespace_normalize(replaced);
-    let n = text_empty_not_is(normalized);
+    let normalized = whitespace_normalize(text);
+    let replaced = text_replace(normalized, "[]", "");
+    let trimmed = whitespace_normalize(replaced);
+    let n = text_empty_not_is(trimmed);
     return n;
   }
   let filtered = list_filter(verses, lambda);
