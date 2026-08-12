@@ -1,3 +1,4 @@
+import { js_name_missing_dir_check } from "./js_name_missing_dir_check.mjs";
 import { js_file_name } from "./js_file_name.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
@@ -18,6 +19,7 @@ export async function js_identifier_param_new_dir(
   param_name,
   default_value,
 ) {
+  await js_name_missing_dir_check(dir, f_name);
   let files = await folder_read_files(dir);
   let def_file = js_file_name(f_name);
   async function transform_file(file) {
