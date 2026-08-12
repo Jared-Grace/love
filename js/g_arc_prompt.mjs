@@ -87,7 +87,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "Belief only moves forward. Once they believe, they never go back.",
     "  utterance - what the person says",
     "  verse_numbers - the verse numbers of the passage that answer it",
-    "  after - what they say once that passage has landed",
+    "  after - what they say after player chooses correct passage",
     "",
     "In a conversation, the player first chooses an opener. Here are the openers: ",
     joined6,
