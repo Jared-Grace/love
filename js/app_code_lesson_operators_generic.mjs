@@ -53,7 +53,7 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
       let combined2 = text_combine(
-        "In JavaScript, we do not use",
+        "In JS, we do not use",
         operator_name_math_articled,
       );
       let combined3 = text_combine_multiple([" to ", verb, " numbers"]);
@@ -63,7 +63,7 @@ export function app_code_lesson_operators_generic(
     if (ne) {
       t = "Instead";
     } else {
-      t = "In JavaScript";
+      t = "In JS";
     }
     let combined4 = text_combine(t, ", the ");
     let combined5 = text_combine_multiple([
