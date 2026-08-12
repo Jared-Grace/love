@@ -129,6 +129,7 @@ export function examples_groups() {
         "example_rename_across_files",
         "example_rename_refuses_a_taken_name",
         "example_prefix_rename_across_files",
+        "example_prefix_rename_refuses_a_taken_name",
         "example_delete_unused_across_files",
         "example_delete_unused_refused",
         "example_copy_adds_file",
