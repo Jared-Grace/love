@@ -4,7 +4,7 @@ import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_shared_button_progress_next_background_color } from "./app_shared_button_progress_next_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
@@ -35,7 +35,7 @@ export function app_shared_button_numbered_progress(
     }
   }
   if (completed) {
-    let green = app_shared_color_light_green();
+    let green = app_shared_color_green_light();
     html_style_background_color_set(button, green);
   } else {
     if (choose_this_next) {
