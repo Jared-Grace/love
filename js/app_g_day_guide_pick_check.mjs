@@ -1,3 +1,4 @@
+import { app_g_day_water_choose_check } from "./app_g_day_water_choose_check.mjs";
 import { app_g_day_guide_window_check } from "./app_g_day_guide_window_check.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
@@ -64,10 +65,13 @@ export function app_g_day_guide_pick_check() {
   );
   ("the WINDOW half of the same guide is checked from here rather than from its own line in the gate list, and the reason is a gate rather than a preference. a function belonging to no app may not reach into one, and the gate list belongs to no app - so the two app-scoped checks it already names are a recorded wart it refuses to grow, and a third line was refused. it cannot be renamed to something honest about holding both, either: a rename reads as a new name, which is growth, which is refused as well. so the name stays as it was and this sentence carries what it can no longer say. the two are halves of ONE feature - the window says which tiles the player will be able to see, the picker chooses among them - so running them together is right in itself, and only the ORDER of discovery is backwards");
   let window_checked = app_g_day_guide_window_check();
+  ("the WATER the last day of believers is led to is checked from here for the same reason and by the same arrangement - it is a third thing this one name is carrying. it belongs here on its own merits too: on every other day the guide leads to a PERSON, and on that day it leads to a tile of water instead, so what is being checked is that the picker can lead to a target nobody can stand on. the choosing half asks which water, and this half asks whether the gold can reach it");
+  let water_checked = app_g_day_water_choose_check();
   let r = {
     gold: [gold.x, gold.y],
     gold_detour: [gold2.x, gold2.y],
     window: window_checked,
+    water: water_checked,
   };
   return r;
 }
