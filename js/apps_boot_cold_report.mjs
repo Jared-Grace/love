@@ -1,3 +1,5 @@
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
+import { log_keep } from "./log_keep.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { app_shared_url_dev_local_named } from "./app_shared_url_dev_local_named.mjs";
@@ -27,7 +29,7 @@ export async function apps_boot_cold_report() {
     if (arrived) {
       told = "arrived";
     }
-    log_keep(app_name, told);
+    log_keep(apps_boot_cold_report.name, told);
     if (not(arrived)) {
       let entry = {
         app_name,
