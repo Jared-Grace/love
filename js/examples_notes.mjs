@@ -204,6 +204,8 @@ export function examples_notes() {
       "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
     example_functionize_inside_a_loop:
       "the same cut addressed by the line a word is really written on - on a function whose size is all inside a loop, climbing to the top of the body first can only ever move the loop",
+    example_functionize_loop_name_stays_put:
+      "what a cut really hands back - only the names the span binds at its own level escape it, and a loop head opened inside it binds none of them, however alike the word below looks",
     example_function_lift_out_of_closure:
       "the third shape a long function comes in, and the one a span cannot reach at all - to a span a whole closure is one statement, so what the closure reached out for has to become what it receives",
   };
