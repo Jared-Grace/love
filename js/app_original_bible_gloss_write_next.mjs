@@ -30,8 +30,8 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   }
   let verse_key = list_first(missing);
   let passages = await app_original_bible_gloss_passages(chapter_code);
-  function matches(passage) {
-    let left = g_sermon_passage_verses_key(passage);
+  function matches(candidate) {
+    let left = g_sermon_passage_verses_key(candidate);
     let eq = equal(left, verse_key);
     return eq;
   }

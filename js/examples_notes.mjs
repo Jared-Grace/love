@@ -99,6 +99,8 @@ export function examples_notes() {
     example_rename_across_files: "rename a fn across every file that uses it",
     example_rename_refuses_a_taken_name:
       "the same verb aimed at a name something else already answers to - the move at the end writes one file over another, so a rename onto a taken name destroys a function rather than sharing a word",
+    example_prefix_rename_refuses_a_taken_name:
+      "the family verb stopped by one member having nowhere free to land - a migration that gives up part way leaves the family split across two prefixes, which is worse than not starting",
     example_prefix_rename_across_files:
       '...and rename a whole name-prefix family at once (same "rename" family)',
     example_delete_unused_across_files:
