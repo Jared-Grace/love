@@ -10,7 +10,10 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
       chapter_code,
     );
     let absent = null_is(held);
-    let numbers = absent ? [] : held;
+    let numbers = held;
+    if (absent) {
+      numbers = [];
+    }
     let missing = list_difference(wanted, numbers);
     function lambda2(verse_number) {
       let code = ebible_chapter_verse_code(chapter_code, verse_number);
