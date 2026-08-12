@@ -15,14 +15,7 @@ export async function function_param_rename(f_name, name, name_after) {
   ("An unpacked parameter's pieces are not offered. A piece is a key of an object the caller built, so changing its spelling here changes what the caller has to hand over - which is a different edit, reaching outside this function, and it should be asked for by a name that says so.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
-  let params = js_function_declaration_params_names_plain(declaration);
-  let named = list_includes(params, name);
-  assert_json(named, {
-    hint: "this function has no parameter of that name, and renaming a word it never binds would quietly do nothing at all - would you like to check the spelling against the list here?",
-    f_name,
-    name,
-    params,
-  });
+  js_function_declaration_param_named_assert(declaration, f_name, name);
   let r = await function_identifier_rename_checked(f_name, name, name_after);
   await function_param_plain_marker_rename(f_name, name, name_after);
   return r;
