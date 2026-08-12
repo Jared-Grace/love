@@ -16,7 +16,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 export function app_code_lesson_expression_equal_number_string_true_false() {
   "=== across a number, a string, and true or false: it is true only when both sides are the same one of those three. A number can equal a number, a string can equal a string, true and false can equal each other - but a number never equals a string, and neither ever equals true or false.";
   "The three groups are NEVER named with a word of their own - not type, not kind, not sort. Every lesson before this one taught them one at a time under the names the learner already has: number, string, true and false. A collective noun would be a fourth thing to remember on a screen whose whole content is a rule about the three, and the rule states perfectly well without it - a number, a string, and true or false are never the same as each other. The word for it can wait for the lesson that needs it, which is the one that teaches typeof.";
-  "The two look-alikes carry the lesson: \"1\" and 1, \"true\" and true. A reader who thinks those pairs are equal is exactly the reader this lesson is for, and no other example can catch them - 1 === \"hello\" they would call false already, for the wrong reason. So the quiz asks a look-alike every screen, and the closing card names the only difference between the two sides: the quotes.";
+  "The two look-alikes carry the lesson: \"1\" and 1, \"true\" and true. A reader who thinks those pairs are equal is exactly the reader this lesson is for, and no other example can catch them - 1 === \"hello\" they would call false already, for the wrong reason. So the quiz asks a look-alike every screen, and the closing card says what the quotes do: they are what settles which of the two the 1 is.";
   "This is the prerequisite the chained-=== lessons lean on. true === 5 === 5 is worked out left to right, so its second step compares a true or false to a number, and there is no honest way to say what that answers without this rule.";
   let name_id =
     app_code_lesson_expression_equal_number_string_true_false_title_name_id();
@@ -78,9 +78,14 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     html_div_cycle_code(never, ["", "1 === true", " is ", "false"]);
     let quotes = app_code_container_light_blue(root);
     ("Quotes, not quote marks - the first string lesson defined a string as text in quotes and every string lesson since has said quotes, so this card adds no word at all. It only points the one already there at the difference the learner is looking straight at.");
-    ("The two lines come first and the rule after them, which is the track's order everywhere - and here it is also what kills a pronoun. Said the other way round, the quotes are what make IT a string leads with a word whose antecedent is not on the card yet, so the reader meets it before the thing it stands for. With the two lines standing above, the rule needs no pronoun at all: they are what is different, and the sentence can just say so.");
+    ("The two lines come first and the rule after them, which is the track's order everywhere.");
+    ("The closing line says what the quotes DO, and does not say that they are the only difference. Only the quotes are different is a comparison: it hands the reader two lines, asks them to find every way the lines differ, and then asks them to trust that the one they found is the one that matters. That is a second inference on a card whose whole job is a first one. Saying that the quotes are what settles whether the 1 is a string or a number states the fact by itself - the two lines above are then an example of it rather than a puzzle it depends on.");
     html_div_cycle_code(quotes, ["", '"1"', " is a string"]);
     html_div_cycle_code(quotes, ["", "1", " is a number"]);
-    html_div_cycle_code(quotes, ["Only the quotes are different"]);
+    html_div_cycle_code(quotes, [
+      "The quotes say whether the ",
+      "1",
+      " is a string or a number",
+    ]);
   }
 }
