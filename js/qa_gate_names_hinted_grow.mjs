@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -13,8 +14,7 @@ export function qa_gate_names_hinted_grow(hinted, declarators) {
     growing = false;
     for (let declarator of declarators) {
       let id = property_get(declarator, "id");
-      let bound = property_get(id, "name");
-      let bound_hinted_is = list_includes(hinted, bound);
+      let bound_hinted_is = property_in_list(id, "name", hinted);
       if (not(bound_hinted_is)) {
         continue;
       }
