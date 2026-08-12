@@ -6,6 +6,8 @@ import { list_map_pairs } from "./list_map_pairs.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { browser_is } from "./browser_is.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
+  "$plain chapter_code";
+  "$plain bible_folder";
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     return verses;

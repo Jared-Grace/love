@@ -7,6 +7,8 @@ export async function ebible_chapter_verse_numbers_storage_try(
   bible_folder,
   chapter_code,
 ) {
+  "$plain chapter_code";
+  "$plain bible_folder";
   "The verse numbers one bible holds in one chapter, or nothing where it holds no such chapter at all.";
   "One chapter is one small file, and it names every verse in it. So this asks what a bible has by downloading a single thing, where finding out by asking for each verse in turn would be a download per verse and finding out by listing the folder took four minutes for a bible.";
   "A chapter that is not there is answered rather than thrown, because a bible missing a whole chapter is a fact this is here to measure rather than an errand that failed.";
