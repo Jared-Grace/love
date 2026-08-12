@@ -2,24 +2,17 @@ import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_co
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_in_between_card_chained(root) {
   arguments_assert(arguments, 1);
-  ("the chained line a learner reaches for, solved one replacement at a time until the number the question was about has vanished from it");
-  ("The line is solved rather than declared broken. But this does not work and not what you meant were both conclusions, stated before anything had shown them - and the reader had no way to reach either one, because nothing on the card said what the line does do. Walked in the replace-and-then-we-have steps the comparing-a-comparison lesson taught, it shows itself: the 2 and the 5 are consumed by the first comparison, so the number being asked about is not in the line any more.");
-  ("What true < 8 comes to is deliberately not said. Showing a wrong ANSWER is impossible without it: any chained line solves to a true or false against a number, so a value could only be given by first teaching that JS counts a true as 1 - a rule of this language rather than of comparing, and one that would have to be taught here only to be used once. The card shows the wrong QUESTION instead, which needs no such rule and is equally concrete: the line is asking about a true, and the 5 the reader wanted to ask about is not in it.");
+  ("the chained line a learner reaches for, named as the maths one, said to do something else in JS, and left unexplained on purpose");
+  ("The chained line is named as the maths one before anything is said against it. A learner who writes 2 < 5 < 8 is not making a mistake, they are writing what they were taught in maths, so the card says that first: the notation is right, the language is what differs.");
+  ("What 2 < 5 < 8 does in JS is deliberately not shown, not even part way. A walk through it - solve 2 < 5, replace it with true, and then we have true < 8 - was written and then removed. It derives the claim, which is worth something, but every step of it is a fact about JS alone: Java refuses the line outright, C compiles it with a warning naming it, Python chains it like maths. The habit that travels is 2 < 5 && 5 < 8, and a learner who has watched the chained line be taken apart has spent that attention on the one language's answer instead. Withholding it is also the only way to avoid teaching that JS counts a true as 1, a rule needed nowhere else in this track.");
   ("The examples that would show a wrong answer, kept here so they are not searched for twice: 2 < 5 < 3 is true although 5 is not between 2 and 3; 8 > 5 > 2 is false although 5 is between 2 and 8; -1 < 0 < 1 is false although 0 is between -1 and 1. Each still needs the counts-as-1 rule to be checkable, which is why none is used.");
-  ("The chained line is named as the maths one before it is worked. A learner who writes 2 < 5 < 8 is not making a mistake, they are writing what they were taught in maths, so the card says that first: the notation is right, the language is what differs.");
+  ("Not explaining is said out loud, with its reason. An unexplained rule the reader is told to trust reads as one the writer could not justify; naming that many languages call the line an error, and that this track is about programming rather than about JS, turns the omission from a gap into a choice.");
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["You might write ", "2 < 5 < 8"],
     ["That is how we would write this in math"],
     ["However, that is not how we write this in JS"],
-  ]);
-  app_code_container_light_blue_cycle_code_multiple(root, [
-    ["JS will solve the ", "2 < 5", " first"],
-    ["We replace the ", "2 < 5", " with ", "true"],
-    ["And then we have ", "true < 8"],
-    ["That asks whether ", "true", " is less than ", "8"],
-    ["But we wanted to ask about ", "5"],
     [
-      "So in JS, ",
+      "In JS, ",
       "2 < 5 < 8",
       " does something other than answer whether ",
       "5",
@@ -28,9 +21,6 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
       " and ",
       "8",
     ],
-  ]);
-  ("The unanswered question is answered where it is raised, rather than left standing. A reader who has just been shown true < 8 and not told what it comes to will ask, and a card that never acknowledges the question reads as one that did not notice it. Saying that many languages call the line an error also turns the omission from a gap into a reason: there is no single answer to give, and the one JS has is not the one that travels.");
-  app_code_container_light_blue_cycle_code_multiple(root, [
     [
       "Some languages like JS will solve ",
       "2 < 5 < 8",
