@@ -32,28 +32,33 @@ export async function app_next(context) {
   let fallback = app_shared_bible_verse_number_default();
   let verse_number = property_get_or(hash, property_name2, fallback);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
-  async function lambda(language) {
-    let bible_folder = ebible_language_to_bible_folder(language);
-    let d = await ebible_verse_browser(
-      bible_folder,
-      chapter_code,
-      verse_number,
-    );
-    let text = property_get(d, "text");
-    return text;
-  }
+  ("One verse at a time was the only thing a link could ask for, and reading is not done one verse at a time - somebody copying a passage out had to open this page once per verse and paste the pieces together. So the link may now say how many verses it wants, and saying nothing means one, which is what every link written before this did mean.");
+  ("Several verses are shown as the one-verse block repeated rather than as a run of text under a single reference. That way each verse still says which verse it is, and a run that crosses into the next chapter needs nothing said about it - the reference on each block already says so.");
+  let count = app_shared_bible_hash_to_verses_count(hash);
   let version_english = ebible_folder_english();
   let books = await ebible_version_books_browser(version_english);
-  let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
-    verse_number,
-  ]);
-  let mapped = await list_map_unordered_async(languages_chosen, lambda);
-  list_add_first(mapped, reference);
   let list = await ebible_index_flat(version_english);
-  let next = list_find_json_next(list, {
+  let run = ebible_index_flat_verses_run(
+    list,
     chapter_code,
     verse_number,
-  });
+    count,
+  );
+  async function lambda(verse) {
+    let chapter_code3 = property_get(verse, "chapter_code");
+    let verse_number3 = property_get(verse, verse_number_key());
+    let lines = await app_next_verse_lines(
+      chapter_code3,
+      verse_number3,
+      languages_chosen,
+      books,
+    );
+    return lines;
+  }
+  let lines_each = await list_map_unordered_async(run, lambda);
+  let mapped = lists_combine(lines_each);
+  let last = list_last(run);
+  let next = list_next(list, last);
   let chapter_code2 = property_get(next, "chapter_code");
   let property_name = verse_number_key();
   let verse_number2 = property_get(next, property_name);

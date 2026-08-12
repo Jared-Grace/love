@@ -16,7 +16,7 @@ export async function g_game_plants_report(word) {
   let turns_wanted = await g_npc_pool_convert_turns();
   let plants = await g_game_generate(word);
   let rows = [];
-  let sizes = {};
+  let npcs_each = [];
   let days_total = 0;
   let short_plants = 0;
   let elder_short_plants = 0;
