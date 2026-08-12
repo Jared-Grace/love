@@ -13,8 +13,6 @@ import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
 ("asserting ",
   fn_name("property_get"),
   ' would throw on the many rows that omit "VerseId").');
-let ORIGINAL_KEY = "WLC / Nestle Base TR RP WH NE NA SBL";
-let GLOSS_KEY = " BSB version ";
 export async function bible_interlinear_verse(reference) {
   let file_path = bible_interlinear_json_path();
   let words = await file_read_json(file_path);
@@ -39,17 +37,7 @@ export async function bible_interlinear_verse(reference) {
     return difference;
   }
   verse_words = verse_words.slice().sort(lambda3);
-  function lambda4(x) {
-    let r2 = {
-      original: (x[ORIGINAL_KEY] || "").trim(),
-      translit: (x["Translit"] || "").trim(),
-      parsing: (x["Parsing"] || "").trim(),
-      parsing_long: (x["Parsing_1"] || "").trim(),
-      gloss: (x[GLOSS_KEY] || "").trim(),
-      strong: x["Str Grk"] || x["Str Heb"] || "",
-    };
-    return r2;
-  }
+  let lambda4 = bible_interlinear_word_parts;
   function lambda5(w) {
     let neq = not_equal(w.original, "");
     return neq;
