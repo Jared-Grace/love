@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { list_map } from "./list_map.mjs";
@@ -23,8 +24,12 @@ export function g_plant_days(conversation_lists, next) {
     " - this is per-game and must come off the save.");
   ("A person's own conversations stay in the order they were written, because an arc is a story and its second conversation answers its first.");
   ("The lists are COPIED before anything is taken off them, so scheduling a plant cannot reach back and empty the caller's own arcs.");
+  ("Conversations are laid into the ARC share of a day rather than into the whole of it, and the questions take everything that share does not reach. Filling the whole day with conversations was tried and made the question percentage fiction - it fell to twelve where the settings said twenty-five, because a remainder is whatever is left rather than a share of anything. Reserving it is what makes ");
+  (fn_name("g_arc_conversations_a_day"),
+    " true of a played day and not only of the sizing sum behind it.");
   let s = g_generation_settings();
-  let budget = s.day_matches;
+  let kept = subtract(100, s.question_matches_percent);
+  let budget = multiply_divide(s.day_matches, kept, 100);
   let left = list_map(conversation_lists, list_copy);
   let count = list_size(left);
   let days = [];
@@ -73,7 +78,7 @@ export function g_plant_days(conversation_lists, next) {
     if (done) {
       break;
     }
-    let questions = subtract(budget, spent);
+    let questions = subtract(s.day_matches, spent);
     let day = {
       conversations,
       questions,

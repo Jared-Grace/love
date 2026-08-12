@@ -178,15 +178,15 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_swapping_add,
     app_code_lesson_expression_swapping_divide,
     app_code_lesson_expression_swapping_order,
+    app_code_lesson_expression_equal_true_false,
+    app_code_lesson_expression_not_equal_true_false,
+    app_code_lesson_expression_equal_number_string_true_false,
+    app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
     app_code_lesson_expression_parentheses_both_sides,
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
-    app_code_lesson_expression_equal_true_false,
-    app_code_lesson_expression_not_equal_true_false,
-    app_code_lesson_expression_equal_number_string_true_false,
-    app_code_lesson_expression_comparing_a_comparison,
   ];
   return fns;
 }
