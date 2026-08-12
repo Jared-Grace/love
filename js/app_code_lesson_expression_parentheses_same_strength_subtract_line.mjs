@@ -5,7 +5,7 @@ import { ternary } from "./ternary.mjs";
 import { add } from "./add.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { app_code_lesson_expression_parentheses_same_strength_line } from "./app_code_lesson_expression_parentheses_same_strength_line.mjs";
+import { app_code_lesson_expression_parentheses_minus_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_line.mjs";
 export function app_code_lesson_expression_parentheses_same_strength_subtract_line() {
   arguments_assert(arguments, 0);
   ("a - (b + c) or a - (b - c). For the minus form b is 5..9 and c is 2..4 so the group is never negative, and a is b + c + k so both the answer and the bracket-less wrong answer stay above zero");
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_parentheses_same_strength_subtract_li
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
   let inner_symbol = ternary(inner_plus, plus, minus);
-  let code = app_code_lesson_expression_parentheses_same_strength_line(
+  let code = app_code_lesson_expression_parentheses_minus_divide_line(
     a,
     minus,
     b,
