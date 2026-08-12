@@ -1,8 +1,7 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_last } from "./text_last.mjs";
 import { list_difference } from "./list_difference.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
 import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
@@ -51,8 +50,7 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
     return last;
   }
   let unended = list_difference(read, ended_each);
-  let ends = list_map(unended, lambda3);
-  let unrecognised = list_unique(ends);
+  let unrecognised = list_map_unique(unended, lambda3);
   list_sort_text(unrecognised);
   let measured = {
     bible_folder,
