@@ -13,6 +13,11 @@ export function app_code_lesson_complete_is(progress, lesson_id) {
   if (missing) {
     return false;
   }
+  ("a lesson the learner marked finished by hand in settings says so on its own record, and is taken at its word - they were asked whether they meant it at the time");
+  let marked = property_get_or(record, "complete", false);
+  if (marked) {
+    return true;
+  }
   let done = property_get_or(record, "quizzes_done", []);
   let total = property_get_or(record, "quizzes_total", 0);
   let any = greater_than_equal_1(total);
