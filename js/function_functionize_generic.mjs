@@ -11,18 +11,19 @@ export async function function_functionize_generic(
   name_from,
   name_to,
   f_name_new,
-  select_f_name,
+  select_fn_name,
 ) {
   "$plain f_name";
   "$plain name_from";
   "$plain name_to";
   "$plain f_name_new";
-  "$plain select_f_name";
+  "$plain select_fn_name";
   arguments_assert(arguments, 5);
-  ("Pull the run of work between the first mention of one word and the first mention of another out of the named function, into a function of its own, with the caller saying which reader picks the two lines.");
+  ("Pull the run of work between the first mention of one name and the first mention of another out of the named function, into a function of its own, with the caller saying which reader picks the two lines.");
   ("The whole of the cutting, held once. Two commands wrote these twenty lines out between them and differed in a single word - which of the two line readers to use - so both had to be edited to fix anything, and a fix made in one of them would have been silently missing from the other.");
-  ("The two ends are named by a word written somewhere in them. Line numbers would be the obvious address and they are the wrong one: they move under a peer's edit between reading the function and running the command, and they move again after the first cut.");
-  ("A word rather than a call, because the line a span starts on is usually an accumulator being opened - a list or an object with nothing in it, and so no call in it either. The word may be written at any depth inside the line, which is also the only way to address a loop, whose own line begins with a word the language chose rather than one this repo did.");
+  ("The two ends are named by a name written somewhere in them. Line numbers would be the obvious address and they are the wrong one: they move under a peer's edit between reading the function and running the command, and they move again after the first cut.");
+  ("A name rather than a call, because the line a span starts on is usually an accumulator being opened - a list or an object with nothing in it, and so no call in it either. The name may be written at any depth inside the line, which is also the only way to address a loop, whose own line begins with a word the language chose rather than one this repo did.");
+  ("A name rather than any word at all. Which of the two the reader searches is the caller's to choose, and every reader offered so far searches the names - so a word read off one of these paragraphs is refused however plainly it stands there.");
   ("It refuses a name something already answers to. The extractor would write the definition anyway, and the second thing under one name is the failure that has no error - both files load, and which one a caller reaches is decided by whichever import got written.");
   ("Which reader finds the ends is the caller's to say, and it is the only thing the two commands above this ever disagreed about. Naming it as an argument is what lets a third way of addressing a line be added later without a third copy of everything else.");
   let search = await function_exists(f_name_new);
@@ -35,7 +36,7 @@ export async function function_functionize_generic(
   let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
-    select_f_name,
+    select_fn_name,
     ends,
     apply_fn_name,
     f_name_new,
