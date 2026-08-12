@@ -1,1 +1,1 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[605],{986(){}}]);
+(self.webpackChunk=self.webpackChunk||[]).push([[605],{605(){}}]);
