@@ -1,3 +1,4 @@
+import { g_plant_day_fitting } from "./g_plant_day_fitting.mjs";
 import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
 import { error_json } from "./error_json.mjs";
 import { divide } from "./divide.mjs";
@@ -8,7 +9,6 @@ import { g_generation_settings } from "./g_generation_settings.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { random_index } from "./random_index.mjs";
@@ -16,7 +16,6 @@ import { list_remove_at } from "./list_remove_at.mjs";
 import { list_filter_list_empty_not_is } from "./list_filter_list_empty_not_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 export function g_plant_days(conversation_lists, next) {
   "Lays every npc's conversations onto the days of a plant, filling what a day cannot spend on conversations with questions - so a plant's shape is worked out from what its people are worth rather than from a day count decided in advance.";
   "A day is a TURN BUDGET and nothing else. Conversations are indivisible pieces laid into it until the next one will not fit, so how many a day holds is an OUTCOME - six on a day of short ones, two on a day of long ones. Nothing caps it, because a conversation's own low end already stops a piece being too small to be worth walking over for.";
