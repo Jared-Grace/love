@@ -93,6 +93,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "In a conversation, the player first chooses an opener. Here are the openers: ",
     joined6,
     joined7,
+    '',
     "",
     "GROUPING",
     "Group the turns into conversations.",
