@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_statements_await_any_is } from "./js_statements_await_any_is.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
@@ -8,7 +10,6 @@ import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs
 import { list_slice_from_indices } from "./list_slice_from_indices.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { js_statements_declared_names } from "./js_statements_declared_names.mjs";
 import { js_statements_referenced_names } from "./js_statements_referenced_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -40,10 +41,13 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   ("leave — the name would go with it and the reader behind would be left pointing");
   ("at nothing. Those names are the ones the new function hands back, which is the");
   ("mirror of the free names it takes in.");
+  ("Only what the span binds at its own level counts. A name bound inside a loop head or a nested block cannot be read behind the span whatever is written there, so handing it back is not a service - the call site then asks for a name nothing has bound and the function stops the moment it is reached. Measured: a span holding `for (let ms of known)` was cut out of ",
+    fn_name("qa_gates_dealt"),
+    " beside a later function whose own body opened its own `ms`, and the cut wrote `qa_gate_cost_typical(known, ms)` into a scope where ms had never existed.");
   let index_max = list_max(indices);
   let index_after = index_max + 1;
   let tail = list_skip(stack_, index_after);
-  let declared = js_statements_declared_names(span);
+  let declared = js_statements_declared_names_direct(span);
   let referenced = js_statements_referenced_names(tail);
   let outputs = list_intersection(declared, referenced);
   let outputs_any = list_empty_not_is(outputs);
