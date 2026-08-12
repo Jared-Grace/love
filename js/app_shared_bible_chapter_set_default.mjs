@@ -1,3 +1,5 @@
+import { app_shared_bible_chapter_code_default } from "./app_shared_bible_chapter_code_default.mjs";
+import { app_shared_bible_verse_number_default } from "./app_shared_bible_verse_number_default.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_chapter_verse_open } from "./app_shared_bible_chapter_verse_open.mjs";
