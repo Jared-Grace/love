@@ -14,11 +14,13 @@ export async function app_g_day_discern() {
   "the map is read off the day session rather than received, because this is prayed from the tap-yourself menu now and a menu has no map to hand over.";
   let state = app_g_day_state();
   let div_map = property_get(state, "div_map");
-  let pool = app_g_day_discern_pool();
-  let target = list_random_item(pool);
-  property_set(state, "target", target);
   let player = await app_g_player_get();
   let g = await app_g_game_save_get();
+  ("who or what is named is asked next door (",
+    fn_name("app_g_day_discern_target"),
+    "), because by the end of the day the answer is not a person any more - it is the water. the game and the player are read FIRST now, since choosing the water is a question about where the player is standing");
+  let target = app_g_day_discern_target(g, player);
+  property_set(state, "target", target);
   let distance = g_distance_walk(g, player, target);
   property_set(state, "target_start", distance);
   property_set(state, "target_best", distance);
