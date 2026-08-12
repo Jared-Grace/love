@@ -106,6 +106,8 @@ export function examples_notes() {
     example_delete_unused_refused:
       "...but refuse when a file still uses it (the guard)",
     example_copy_adds_file: "copy a fn to a new name — adds a file",
+    example_copy_refuses_a_taken_name:
+      "the same verb aimed at a name that already has a file - writing a file that is already there replaces it, so the copy would wear a name whose own function it had just destroyed",
     example_wrap_adds_delegating_file:
       "wrap a fn — adds a file that delegates to it",
     example_param_new_across_files:
