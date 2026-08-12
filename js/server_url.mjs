@@ -1,7 +1,6 @@
-import { server_port } from "./server_port.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { server_url_host } from "./server_url_host.mjs";
 export function server_url() {
-  let port = server_port();
-  let url = text_combine("http://localhost:", port);
+  "The address this repo's own web server is reached at from the machine it runs on.";
+  let url = server_url_host("localhost");
   return url;
 }
