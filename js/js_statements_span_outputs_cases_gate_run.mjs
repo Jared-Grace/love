@@ -11,8 +11,10 @@ export function js_statements_span_outputs_cases_gate_run() {
   function answer(c) {
     let span_code = property_get(c, "span");
     let tail_code = property_get(c, "tail");
-    let span = property_get(js_parse(span_code), "body");
-    let tail = property_get(js_parse(tail_code), "body");
+    let object = js_parse(span_code);
+    let span = property_get(object, "body");
+    let object2 = js_parse(tail_code);
+    let tail = property_get(object2, "body");
     let outputs = js_statements_span_outputs(span, tail);
     return outputs;
   }
