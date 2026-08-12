@@ -1,5 +1,4 @@
-import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
+import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
 export function app_g_day_follower_delay_seconds(index) {
   "how long the person standing this far back in the line waits before setting off after the player.";
   "A line of people does not move as one piece. The player steps, then the person behind them steps into the space, then the person behind THAT one - so each place further back waits one more gap than the place in front of it, and the whole line ripples instead of sliding.";
