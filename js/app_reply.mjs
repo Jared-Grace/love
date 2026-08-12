@@ -1,3 +1,4 @@
+import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -43,6 +44,7 @@ import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { multiply } from "./multiply.mjs";
 export async function app_reply(context) {
+  app_shared_app_fn_set(context, app_reply);
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");

@@ -1,3 +1,4 @@
+import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_verses_counts_refresh } from "./app_verses_counts_refresh.mjs";
 import { app_verses_display } from "./app_verses_display.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
@@ -56,6 +57,7 @@ import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_verses(context) {
+  app_shared_app_fn_set(context, app_verses);
   let r = await app_reply_initialize(context);
   let languages = property_get(r, "languages");
   let root = property_get(r, "root");
