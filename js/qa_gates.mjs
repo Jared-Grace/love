@@ -1,3 +1,4 @@
+import { ebible_index_flat_uploaded_gate_run } from "./ebible_index_flat_uploaded_gate_run.mjs";
 import { commands_only_write_denied_cases_gate_run } from "./commands_only_write_denied_cases_gate_run.mjs";
 import { commands_only_hook_path_gate_run } from "./commands_only_hook_path_gate_run.mjs";
 import { example_files_command_refusals_gate_run } from "./example_files_command_refusals_gate_run.mjs";

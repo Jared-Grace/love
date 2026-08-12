@@ -1,3 +1,4 @@
+import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
 import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
@@ -22,7 +23,6 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { hash_to_url } from "./hash_to_url.mjs";
-import { ebible_index_flat } from "./ebible_index_flat.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
