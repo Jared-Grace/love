@@ -47,16 +47,23 @@ export function app_g_day_water_choose_check() {
   let b = not_equal(chosen, null);
   assert_message(b, "a map with water in it must name some water");
   let nearest = equal(chosen.x, 6) && equal(chosen.y, 3);
-  assert_message(nearest, "the nearest water the player can walk up to is the one named");
-  let enclosed = equal(chosen.x, 1) && equal(chosen.y, 1);
   assert_message(
-    not_equal(enclosed, true),
+    nearest,
+    "the nearest water the player can walk up to is the one named",
+  );
+  let enclosed = equal(chosen.x, 1) && equal(chosen.y, 1);
+  let b4 = not_equal(enclosed, true);
+  assert_message(
+    b4,
     "water with no land beside it can never be named - nobody can stand next to it",
   );
   let cut_off = map_new(6, true);
   let chosen_cut = app_g_day_water_choose(cut_off, player);
   let b2 = not_equal(chosen_cut, null);
-  assert_message(b2, "a wall of water is still water the player can walk up to");
+  assert_message(
+    b2,
+    "a wall of water is still water the player can walk up to",
+  );
   let wall_named = equal(chosen_cut.x, 6) && equal(chosen_cut.y, 6);
   assert_message(
     wall_named,
