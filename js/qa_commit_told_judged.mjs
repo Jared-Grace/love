@@ -1,0 +1,37 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { qa_commit_named_stale_repair_names_now } from "./qa_commit_named_stale_repair_names_now.mjs";
+export async function qa_commit_told_judged(told) {
+  "$plain told";
+  arguments_assert(arguments, 1);
+  ("Turns what a run of the gates over a frozen copy said into the answer that gets written down: which gates were red, what each of them said, and which functions each of them named.");
+  ("The names are what makes the answer usable by more than one asker. A red gate on its own says only that something in the repo is wrong; the functions it named say WHAT is wrong, and any later question about whether that reaches a particular thing is then a matter of looking rather than of running the gates again.");
+  ("A gate that was red and named no function is kept as having named none, and every later reader must treat that as unproven rather than as harmless - a count thrown without names cannot be shown to miss anything.");
+  ("It is a name of its own because two different runs arrive at exactly this point. One is asked to judge a commit and freezes a copy of it on purpose; the other is the whole-repo run somebody types before committing, which freezes a copy for its own reasons and then throws the answer away. They are the same copy asked the same questions, so what is made of the answer should not be written twice - and where it is written twice, only one of them gets corrected.");
+  let green = property_get(told, "green");
+  let failed = property_get(told, "failed");
+  let printed = property_get(told, "printed");
+  let sections = qa_gate_failed_sections(printed);
+  let known = await functions_names();
+  let named = {};
+  let spoke = {};
+  for (let section of sections) {
+    let gate = property_get(section, "name");
+    let said = property_get(section, "said");
+    ("A gate's advice about how to put the matter right is not an accusation, and it is written in ordinary English - which names functions here, because this repo has atoms called not, and, or and each. Reading it as an accusation held every app out of a deployment for words a gate used while being helpful");
+    let names = qa_commit_named_stale_repair_names_now(said, known);
+    named[gate] = names;
+    ("What the gate actually said is kept beside what was read out of it, because the reading is done by whatever reader stands in the working tree and the working tree is not part of the commit being judged. A record holding only the reading cannot be corrected when the reader is: thirteen of sixteen commits went on holding words a corrected reader would never say, and the only cure was to forget them and spend fourteen minutes each judging them again");
+    ("Keeping the saying makes that a recomputation instead. It is the input the reading is a pure function of, so anything derived from it can be derived again at any time, by any later reader, without the gates being run once more");
+    spoke[gate] = said;
+  }
+  let judged = {
+    green,
+    failed,
+    named,
+    said: spoke,
+  };
+  return judged;
+}
