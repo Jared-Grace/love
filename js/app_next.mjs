@@ -40,11 +40,21 @@ export async function app_next(context) {
   let version_english = ebible_folder_english();
   let books = await ebible_version_books_browser(version_english);
   let list = await ebible_index_flat(version_english);
-  let run = ebible_index_flat_verses_run(
+  let asked = ebible_index_flat_verses_run(
     list,
     chapter_code,
     verse_number,
     count,
+  );
+  ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So what was asked for is carried on to the end of the sentence it stops in, and the number in the link is a floor rather than an exact amount.");
+  ("Every language the link asked for has to have finished, not only the first, because a reader who chose three is reading three.");
+  let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
+  let reach = app_shared_bible_passage_reach_maximum();
+  let run = await ebible_index_flat_passage_run(
+    list,
+    asked,
+    bible_folders,
+    reach,
   );
   async function lambda(verse) {
     let chapter_code3 = property_get(verse, "chapter_code");
@@ -78,7 +88,10 @@ export async function app_next(context) {
   ("The blank line between the blocks is written into the text rather than into the page, so the page has to be told to keep it. Left untold, a browser folds every run of space into one and the whole reading arrives as a single paragraph - which was survivable while there was one verse to show and is not now, because nothing then says where one verse ends and the next begins.");
   let joined = list_join_newline_2(mapped);
   let root = property_get(context, "root");
-  html_style_white_space(root, "pre-wrap");
-  html_text_set(root, joined);
+  ("The reading gets a place of its own under the page rather than being the page, so that something can stand beside it. What is copied is still only the reading - the button is on the page and not in the text - so a reader pasting this into a message sends the verses and nothing about where they came from.");
+  let reading = html_div(root);
+  html_style_white_space(reading, "pre-wrap");
+  html_text_set(reading, joined);
+  app_next_passage_more_button(root, run);
   await clipboard_copy_try(joined);
 }
