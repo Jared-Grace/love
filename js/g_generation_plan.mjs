@@ -1,3 +1,4 @@
+import { g_conversation_setup_actions } from "./g_conversation_setup_actions.mjs";
 import { g_plant_days_minimum_possible } from "./g_plant_days_minimum_possible.mjs";
 import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
 import { ceil } from "./ceil.mjs";
@@ -12,7 +13,17 @@ export function g_generation_plan() {
   "Works out every budget a plant's content generation needs, from the settings alone, so the same settings always give the same plan.";
   "It decides nothing. Every number here is a sum over numbers somebody chose, which is what makes it safe to re-run and safe to disagree with - change the setting, not this.";
   "The npc count is DERIVED and comes out as a RANGE, because one arc is one npc and the arcs may be long or short. Fewest npcs is every arc at its longest; most is every arc at its shortest.";
+  "Two RATIOS come first because they are what a change to the day has to be judged against, and neither of them was written down anywhere. Turns a day may come down - fewer conversations and more preaching is a real thing to want - but not by making a conversation cheap.";
+  "Matches a LINE is the conversation-to-sermon ratio: how much talking with people the player does for every line preached. Lower the day's matches and this falls, which is the whole point of lowering it; it is here so the fall is seen rather than discovered.";
+  "Turns a SETUP ACTION is the other one, and it is the one with a floor under it. Getting into a conversation costs a fixed price in taps whatever the conversation turns out to be worth, so a short conversation spends more of itself on the approach than on the Scripture it exists to reach. At the usual length it is comfortably over one; at the shortest a conversation may be it is under, and that is what the low end is for.";
   let s = g_generation_settings();
+  let setup_actions = g_conversation_setup_actions();
+  let matches_a_line = divide(s.day_matches, s.day_lines);
+  let turns_a_setup_action = divide(s.conversation_turns_mean, setup_actions);
+  let turns_a_setup_action_least = divide(
+    s.conversation_turns_low,
+    setup_actions,
+  );
   let conversations_per_day = g_arc_conversations_a_day();
   let plant_matches = multiply(s.day_matches, s.plant_days);
   let plant_conversations = divide(plant_matches, s.conversation_turns_mean);
@@ -55,6 +66,9 @@ export function g_generation_plan() {
     s.plant_days,
   );
   let r = {
+    matches_a_line,
+    turns_a_setup_action,
+    turns_a_setup_action_least,
     conversations_per_day,
     plant_matches,
     plant_conversations,
