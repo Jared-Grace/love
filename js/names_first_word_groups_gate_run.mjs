@@ -1,11 +1,10 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { names_first_word_groups } from "./names_first_word_groups.mjs";
 import { assert_message } from "./assert_message.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function names_first_word_groups_gate_run() {
   ("the four things ",
     fn_name("names_first_word_groups"),
@@ -23,14 +22,12 @@ export function names_first_word_groups_gate_run() {
     all_three,
     "EVERY name sharing that word is in the group, not just the first one met",
   );
-  let lonely = property_exists(groups, "gospel_share");
-  let b = not(lonely);
+  let b = property_exists_not(groups, "gospel_share");
   assert_message(
     b,
     "a first word only one name has is no group - a heading saying what the name said",
   );
-  let whole = property_exists(groups, "study");
-  let b2 = not(whole);
+  let b2 = property_exists_not(groups, "study");
   assert_message(
     b2,
     "a name with no separator is a whole word and joins nothing",
