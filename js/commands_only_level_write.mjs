@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { commands_only_levels } from "./commands_only_levels.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { commands_only_path } from "./commands_only_path.mjs";
-import { file_write_json } from "./file_write_json.mjs";
+import { file_overwrite_json } from "./file_write_json.mjs";
 export async function commands_only_level_write(level) {
   "turns the commands-only switch to one of its settings, refusing any word that is not one of them";
   "a word that is not a setting would otherwise be written to the file and read back by the hook, which does not know the settings apart and would treat an unknown one as limiting nothing. A typo would then read exactly like off, and the switch would look on while doing nothing at all.";
@@ -16,6 +16,6 @@ export async function commands_only_level_write(level) {
   let record = {
     level,
   };
-  await file_write_json(path, record);
+  await file_overwrite_json(path, record);
   return record;
 }

@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 ("The character pairs that wrap a word belonging to one edition rather than to the base");
 ("text, each given as codepoints rather than as the character itself.");
 ("Written as codepoints on purpose. These marks have near-identical twins - the guillemet");
@@ -6,7 +7,7 @@
 ("which is the answer that keeps a copyrighted reading in the shipped text. A codepoint");
 ("cannot be mistyped into a different character that still looks right.");
 ("Derived by ",
-  "bible_interlinear_sigla_report",
+  fn_name("bible_interlinear_sigla_report"),
   ", which finds the editorial marks without being told any:");
 ("a mark is editorial exactly when the tables' other base-text column drops it. That test");
 ("also cleared the marks that are NOT editorial and must survive into the text - Hebrew's");
@@ -16,13 +17,41 @@
 ("because it flags a word the base already carries, so it is stripped and the word kept.");
 export function bible_interlinear_sigla_edition_pairs() {
   let pairs = [
-    { open: 0x5b, close: 0x5d, edition: "NA" },
-    { open: 0x28, close: 0x29, edition: "WH" },
-    { open: 0x2039, close: 0x203a, edition: "SBL" },
-    { open: 0x2329, close: 0x232a, edition: "NE" },
-    { open: 0x29fc, close: 0x29fd, edition: "RP" },
-    { open: 0xab, close: 0xbb, edition: "article" },
-    { open: 0x7b, close: 0x7d, edition: "TR" },
+    {
+      open: 0x5b,
+      close: 0x5d,
+      edition: "NA",
+    },
+    {
+      open: 0x28,
+      close: 0x29,
+      edition: "WH",
+    },
+    {
+      open: 0x2039,
+      close: 0x203a,
+      edition: "SBL",
+    },
+    {
+      open: 0x2329,
+      close: 0x232a,
+      edition: "NE",
+    },
+    {
+      open: 0x29fc,
+      close: 0x29fd,
+      edition: "RP",
+    },
+    {
+      open: 0xab,
+      close: 0xbb,
+      edition: "article",
+    },
+    {
+      open: 0x7b,
+      close: 0x7d,
+      edition: "TR",
+    },
   ];
   function characters_of(pair) {
     let r = {
