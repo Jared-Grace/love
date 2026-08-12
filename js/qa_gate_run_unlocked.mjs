@@ -63,9 +63,7 @@ export async function qa_gate_run_unlocked() {
   let filing = remembered ? null : commit;
   await qa_gate_told_filed(filing, told, before);
   let at_blame = date_now_milliseconds();
-  ("Who last touched the things the copy complained about is asked out here rather than in there. A copy of the working folder is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault. Asking out here is right for the other kind of copy too, since the history a worktree can reach is this repo's own and the question is about the living folder either way");
-  ("One kind of red is diagnosed here rather than left to whoever reads the list, and it is the only one where asking again makes things look better instead of clearer: a gate whose question is about the history goes red in a copy made without any, and goes quiet when asked out here, which reads as a tear in the copy. Read that way it comes back on every run forever.");
-  ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
+  ("Who last touched what the gates complained about is asked out here rather than inside the frozen copy, and why that matters is written where the asking now lives. It is timed from here because the time belongs to this run.");
   await qa_gate_sections_blame_print(told);
   let blamed_ms = date_milliseconds_since(at_blame);
   await qa_gate_failed_assert(told, here, commit, asked_ms, blamed_ms);
