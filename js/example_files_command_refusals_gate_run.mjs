@@ -1,3 +1,8 @@
+import { example_files_command_refusals_missing } from "./example_files_command_refusals_missing.mjs";
+import { example_files_command_refusals_baseline_path } from "./example_files_command_refusals_baseline_path.mjs";
+import { example_files_command_refusals_hint } from "./example_files_command_refusals_hint.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function example_files_command_refusals_gate_run() {
   "QA gate: a whole-repo command newly paired with a folder-sized twin has to come with an example proving it refuses something.";
   "A pairing says the twin stands for the command. What that claim most easily loses is the refusal, because a guard can sit in the command and not in the twin, and then no example can reach it - the corpus shows the mechanism working and says nothing whatever about the behaviour a reader most wants pinned down.";
