@@ -40,7 +40,7 @@ export function g_generation_settings() {
     arc_conversations_maximum: 9,
     plant_npcs_maximum: 16,
     arc_turns_low: 12,
-    arc_turns_mean: 36,
+    arc_turns_mean: 30,
     arc_turns_high: 90,
     plant_npcs_first: 6,
     plant_npcs_settle: 13,
