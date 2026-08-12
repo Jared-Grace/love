@@ -5,7 +5,6 @@ export const example = {
   kind: "files",
   refuses: true,
   title: "Refuse a rename onto a name something else already answers to",
-  refusesTitle: "Refuse a rename onto a name something else already answers to",
   note: [
     { fn: function_rename.name },
     " refuses a new name that is already taken, because a rename onto a taken name does not land two things on one word — it destroys one of them. Here ",
