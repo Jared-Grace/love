@@ -13,10 +13,10 @@ import { list_map_pairs } from "./list_map_pairs.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
-  "Every verse the source page of one chapter marks, beside the words that verse holds.";
-  "Where each verse begins is written into the page, but flattening the page into words forgets it. So each verse's own mark is written over with a character no bible is written in, and the flattened chapter is then cut at that character: what lies between two marks is exactly one verse, without anything having to be searched for.";
-  "That is the difference from cutting a chapter by hunting its numbers among its words. A number can be a word of the text as easily as the mark of a verse, and the hunt has no way to tell them apart; the page's own marks are not guesses at all.";
-  "What stands before the first mark is dropped, because it is a heading or a title rather than a verse, and a chapter that opens with one would otherwise push every verse along by one.";
+  ("Every verse the source page of one chapter marks, beside the words that verse holds.");
+  ("Where each verse begins is written into the page, but flattening the page into words forgets it. So each verse's own mark is written over with a character no bible is written in, and the flattened chapter is then cut at that character: what lies between two marks is exactly one verse, without anything having to be searched for.");
+  ("That is the difference from cutting a chapter by hunting its numbers among its words. A number can be a word of the text as easily as the mark of a verse, and the hunt has no way to tell them apart; the page's own marks are not guesses at all.");
+  ("What stands before the first mark is dropped, because it is a heading or a title rather than a verse, and a chapter that opens with one would otherwise push every verse along by one.");
   let opened = await ebible_chapter_main_ready(bible_folder, chapter_code);
   let d = property_get(opened, "d");
   let main = property_get(opened, "main");
