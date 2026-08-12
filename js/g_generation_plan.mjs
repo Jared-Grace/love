@@ -1,6 +1,6 @@
+import { g_plant_days_minimum_possible } from "./g_plant_days_minimum_possible.mjs";
 import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
 import { add_1 } from "./add_1.mjs";
-import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
@@ -33,15 +33,9 @@ export function g_generation_plan() {
     2,
   );
   let leader_turns = multiply(leader_conversations, s.conversation_turns_mean);
-  ("How SHORT a plant may be is decided by the leader and by nothing else. Every other quantity scales with the plant's length, so only the leader's fixed hundred turns can fail to fit. Working the floor out here rather than writing it down is what makes it answer to the leader settings instead of drifting from them.");
-  let share_low = divide(s.leader_days_percent_minimum, 100);
-  let share_high = divide(s.leader_days_percent_maximum, 100);
-  let share_middle = divide(share_low + share_high, 2);
-  let turns_a_day = multiply(share_middle, s.conversation_turns_mean);
-  let plant_days_minimum_needed = divide_ceil(
-    s.leader_turns_minimum,
-    turns_a_day,
-  );
+  ("How SHORT a plant may be is asked elsewhere and only CHECKED here. This function reports whether the wanted minimum clears the floor; what the floor is is its own question, with its own three answers to take the largest of.");
+  ("It was worked out here, from the leader alone, on the reasoning that every other quantity scales with a plant's length so only the leader's fixed hundred turns can fail to fit. That was wrong twice over - an arc needs a day per conversation however few turns it holds, and a room needs its converts paid for out of what the leader leaves - and both of those are floors that do not move with length either.");
+  let plant_days_minimum_needed = g_plant_days_minimum_possible();
   let plant_days_minimum_fits = greater_than_equal(
     s.plant_days_minimum,
     plant_days_minimum_needed,
