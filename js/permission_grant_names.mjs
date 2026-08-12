@@ -1032,6 +1032,7 @@ export function permission_grant_names() {
   let spelled1013 = fn_name("functions_exports_names");
   let spelled1014 = fn_name("ebible_index_flat_uploaded_write");
   let spelled1015 = fn_name("text_lines_search");
+  let spelled1016 = fn_name("repo_lines_search");
   let names = [
     spelled,
     spelled2,
@@ -2048,6 +2049,7 @@ export function permission_grant_names() {
     spelled1013,
     spelled1014,
     spelled1015,
+    spelled1016,
   ];
   return names;
 }
