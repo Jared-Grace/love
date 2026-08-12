@@ -1,3 +1,10 @@
+import { list_copy_reverse } from "./list_copy_reverse.mjs";
+import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { property_get } from "./property_get.mjs";
+import { g_coordinates_toward } from "./g_coordinates_toward.mjs";
+import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
+import { property_set } from "./property_set.mjs";
+import { app_g_npc_move } from "./app_g_npc_move.mjs";
 export function app_g_crowd_push_shift(npc_index, chain, side, delay) {
   "a run of people all shuffle one tile the same way, and the tile at the head of the run is left empty.";
   "The one furthest out goes first, into the free tile the run was built to reach, and each one after that steps into the tile just vacated by the one beyond them. Going in the other order would ask somebody to step onto a tile that is still occupied.";

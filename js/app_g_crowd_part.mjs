@@ -1,3 +1,16 @@
+import { property_get } from "./property_get.mjs";
+import { g_coordinates_land_index } from "./g_coordinates_land_index.mjs";
+import { g_coordinates_index } from "./g_coordinates_index.mjs";
+import { g_path_steps } from "./g_path_steps.mjs";
+import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { g_direction } from "./g_direction.mjs";
+import { g_crowd_push_shorter } from "./g_crowd_push_shorter.mjs";
+import { null_is } from "./null_is.mjs";
+import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
+import { app_g_crowd_push_shift } from "./app_g_crowd_push_shift.mjs";
+import { each_index } from "./each_index.mjs";
+import { not } from "./not.mjs";
 export function app_g_crowd_part(g, path) {
   "the crowd standing on the way the player is about to walk opens, so the way is clear before they set off.";
   "Each person in the way shuffles to one side, and where they are standing shoulder to shoulder the whole run of them shuffles together - so a crowd several deep does not merely let one person through, it SPLITS, and a lane opens down the middle of it. Each opening further along the way waits a little longer than the one before it, so the lane runs away from the player like a wave rather than the whole crowd twitching at once.";
