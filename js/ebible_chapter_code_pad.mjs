@@ -2,6 +2,7 @@ import { number_pad } from "./number_pad.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function ebible_chapter_code_pad(book_code, chapter_name) {
+  "$plain book_code";
   let pad_count = 2;
   if (equal(book_code, "PSA")) {
     pad_count = 3;
