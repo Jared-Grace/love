@@ -150,9 +150,12 @@ export async function app_shared_bible_read(context, verse_action) {
     bar,
     help_text,
   );
-  let count_status = html_p(bar);
+  ("the count sits UNDER the chapter rather than over it. It is empty until a verse is picked, so it arrives while the reader is looking at the text - and arriving in the top bar it would take its height off the top of the reading, sliding the verse just tapped down the screen away from the thumb that tapped it. Under the body the same height comes off the bottom and nothing already on the screen moves.");
+  let foot = html_bar_foot(shell);
+  html_centered(foot);
+  let count_status = html_p(foot);
   app_shared_text_deemphasized(count_status);
-  ("this line is empty until verses are picked, and a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter's buttons sit at the top of the screen where the reader's thumb expects them");
+  ("a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter fills the screen until there is something to say");
   html_margin_0(count_status);
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
   if (ref_mode) {
