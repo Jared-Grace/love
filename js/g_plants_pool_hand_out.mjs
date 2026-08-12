@@ -43,6 +43,8 @@ export function g_plants_pool_hand_out(
     let r = g_plant_converts_take(held, cursor, pool, wanted);
     let convert_turns = property_get(r, "convert_turns");
     let converts = property_get(r, "converts");
+    ("The mark is moved on to where the taking stopped. Without this line every plant draws from the top of the pool, the same faces are met again in plant after plant, and nothing ever runs out - which is the whole of what walking the pool in order was for.");
+    cursor = property_get(r, "cursor");
     let spent = convert_turns + leader_turns;
     let npcs = converts.length + 1;
     let out_of_pool = greater_than_equal(cursor, held);
