@@ -51,7 +51,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
-    "THe setting is 1st-2nd century while Rome is persecuting Christians.",
+    "The setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate passage of Scripture.",
     "",
     "You should choose this about the person:",
