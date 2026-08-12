@@ -1,11 +1,8 @@
-import { list_concat_property } from "./list_concat_property.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_native_callback_imported } from "./functions_native_callback_imported.mjs";
 import { js_array_methods_callback } from "./js_array_methods_callback.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function functions_native_callback_gate_run() {
   "Gate: no imported name is handed straight to a native array method as its callback.";
@@ -24,38 +21,32 @@ export async function functions_native_callback_gate_run() {
   ("which passes the item and nothing else, or wrap the name in a lambda taking one thing.");
   ("The methods are printed even when nothing is wrong: a list read from somewhere else is");
   ("the one thing that could make this pass while asking nothing.");
+  ("The methods are handed back rather than printed, and that keeps the proof while");
+  ("dropping a leak. Printed, they were read back out of a failure as an accusation -");
+  ("and one of them is called each, which is a function of this repo that nearly every");
+  ("app ships. Handed back, a green run still shows them at the seam.");
+  ("The offenders are thrown as a record for the same reason. What each site passed and");
+  ("which method took it are advice, and the name passed is the innocent one: it is a");
+  ("perfectly good function being handed over the wrong way by somebody else.");
   let methods = js_array_methods_callback();
-  let joined = list_join_comma(methods);
-  console.log("methods that pass an index after the item: " + joined);
   let offenders = await functions_native_callback_imported();
-  let sites = [];
-  for (let offender of offenders) {
-    let f_name = property_get(offender, "f_name");
-    sites = list_concat_property(sites, offender, "sites");
-    for (let site of property_get(offender, "sites")) {
-      let method = property_get(site, "method");
-      let passed = property_get(site, "passed");
-      console.log(
-        "BARE CALLBACK  " + f_name + "  ." + method + "(" + passed + ")",
-      );
-    }
-  }
-  let size = list_size(sites);
-  console.log("\nbare imported callbacks " + size);
-  let any = greater_than(size, 0);
-  if (any) {
-    let f_name2 = fn_name("list_map");
-    let combined = text_combine_multiple([
-      "native callback gate: ",
-      size,
-      " places hand an imported name straight to a native array method, which passes the index and the whole list after the item - wrap it in a lambda taking one argument, or call ",
-      f_name2,
-      " and its siblings, which hand the lambda exactly one thing",
-    ]);
-    throw new Error(combined);
-  }
+  let names = list_map_property(offenders, "f_name");
+  let f_name = fn_name("list_map");
+  let advice = text_combine_multiple([
+    "these hand an imported name straight to a native array method, which passes the index and the whole list after the item - wrap it in a lambda taking one argument, or call ",
+    f_name,
+    " and its siblings, which hand the lambda exactly one thing",
+  ]);
+  let hint = {
+    advice,
+    methods,
+    offenders,
+  };
+  list_empty_is_assert_json(names, {
+    hint,
+  });
   let r = {
-    methods: list_size(methods),
+    methods,
     bare: 0,
   };
   return r;
