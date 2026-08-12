@@ -79,7 +79,7 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     html_div_cycle_code(both, [
       "Both sides of ",
       "===",
-      " can be a comparison",
+      " can be comparisons",
     ]);
     html_div_cycle_code(both, [
       "",
