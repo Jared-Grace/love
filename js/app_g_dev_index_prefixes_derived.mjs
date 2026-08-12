@@ -34,7 +34,8 @@ export function app_g_dev_index_prefixes_derived(names) {
     if (seen) {
       counted = property_get(counts, first);
     }
-    property_set(counts, first, add(counted, 1));
+    let value = add(counted, 1);
+    property_set(counts, first, value);
   }
   let prefixes = {};
   for (let name of object_property_names(firsts)) {
