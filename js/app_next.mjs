@@ -1,3 +1,5 @@
+import { list_join_newline_2 } from "./list_join_newline_2.mjs";
+import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
 import { app_shared_bible_verse_number_default } from "./app_shared_bible_verse_number_default.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -18,7 +20,6 @@ import { property_set } from "./property_set.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
@@ -64,7 +65,10 @@ export async function app_next(context) {
   let url = html_url_without_hash();
   url += h;
   list_add(mapped, url);
-  let joined = await list_join_newline_2_copy(mapped);
+  ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
+  ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
+  let joined = list_join_newline_2(mapped);
   let root = property_get(context, "root");
   html_text_set(root, joined);
+  await clipboard_copy_try(joined);
 }
