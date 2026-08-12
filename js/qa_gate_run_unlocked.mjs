@@ -50,6 +50,7 @@ export async function qa_gate_run_unlocked() {
   console.log(printed);
   let at_blame = date_now_milliseconds();
   ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
+  ("One kind of red is diagnosed here rather than left to whoever reads the list, and it is the only one where asking again makes things look better instead of clearer: a gate whose question is about the history goes red in a copy made without any, and goes quiet when asked out here, which reads as a tear in the copy. Read that way it comes back on every run forever.");
   ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
   let sections = qa_gate_failed_sections(printed);
   let any = list_size_greater_than(sections, 0);
