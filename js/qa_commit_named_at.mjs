@@ -1,9 +1,7 @@
-import { qa_commit_named_stale_repair_names_now } from "./qa_commit_named_stale_repair_names_now.mjs";
+import { qa_commit_told_judged } from "./qa_commit_told_judged.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_commit_at_generic } from "./qa_commit_at_generic.mjs";
-import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
-import { functions_names } from "./functions_names.mjs";
 import { property_get } from "./property_get.mjs";
 export async function qa_commit_named_at(commit) {
   "Judges the commit you name against a frozen copy of it, and keeps which gates were red together with the functions each of them named";
@@ -12,33 +10,13 @@ export async function qa_commit_named_at(commit) {
   "The remembering itself lives in what this calls, because its neighbour wanted exactly the same remembering and differed only in what it kept. What is left here is which record to look in, and how a run of gates is turned into the names it spoke";
   let known_named = await qa_commit_named();
   let path = qa_commit_named_path();
-  async function judge(told) {
-    let green = property_get(told, "green");
-    let failed = property_get(told, "failed");
-    let printed = property_get(told, "printed");
-    let sections = qa_gate_failed_sections(printed);
-    let known = await functions_names();
-    let named = {};
-    let spoke = {};
-    for (let section of sections) {
-      let gate = property_get(section, "name");
-      let said = property_get(section, "said");
-      ("A gate's advice about how to put the matter right is not an accusation, and it is written in ordinary English - which names functions here, because this repo has atoms called not, and, or and each. Reading it as an accusation held every app out of a deployment for words a gate used while being helpful");
-      let names = qa_commit_named_stale_repair_names_now(said, known);
-      named[gate] = names;
-      ("What the gate actually said is kept beside what was read out of it, because the reading is done by whatever reader stands in the working tree and the working tree is not part of the commit being judged. A record holding only the reading cannot be corrected when the reader is: thirteen of sixteen commits went on holding words a corrected reader would never say, and the only cure was to forget them and spend fourteen minutes each judging them again");
-      ("Keeping the saying makes that a recomputation instead. It is the input the reading is a pure function of, so anything derived from it can be derived again at any time, by any later reader, without the gates being run once more");
-      spoke[gate] = said;
-    }
-    let judged = {
-      green,
-      failed,
-      named,
-      said: spoke,
-    };
-    return judged;
-  }
-  let memo = await qa_commit_at_generic(commit, known_named, path, judge);
+  ("How a run is turned into what gets kept lives one name along, because the whole-repo run somebody types before committing arrives at exactly the same point with exactly the same answer in hand, and only one of two copies of that reading ever gets corrected.");
+  let memo = await qa_commit_at_generic(
+    commit,
+    known_named,
+    path,
+    qa_commit_told_judged,
+  );
   let r = {
     commit,
     remembered: property_get(memo, "remembered"),
