@@ -35,13 +35,14 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
-    let title = app_shared_button_numbered_progress(
+    let row = app_shared_button_numbered_progress(
       root,
       completed_all,
       completed_previous,
       index2,
       lambda,
     );
+    let title = property_get(row, "title");
     html_data_set_test(title, rule_name);
     html_text_set(title, rule_name);
     function lambda() {
