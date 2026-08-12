@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_compared } from "./app_code_lesson_expression_equal_number_string_true_false_compared.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -7,12 +8,9 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_title_name_id } from "./app_code_lesson_expression_equal_number_string_true_false_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_equal_number_string_true_false() {
@@ -49,18 +47,6 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
       );
     return code;
   }
-  function same_string() {
-    "one word from the shared verse compared with itself, quotes and all: true, because both sides are strings and the text matches. The screen needs a true line whose two sides are both strings, or every quoted example on it would be false and the quotes would look like the thing that makes an answer false";
-    let two = app_code_lesson_expression_string_concat_pair();
-    let word = list_get(two, 0);
-    let quoted = app_code_string_code(word);
-    let code =
-      app_code_lesson_expression_equal_number_string_true_false_compared(
-        quoted,
-        quoted,
-      );
-    return code;
-  }
   function same_plain() {
     "a number or a true or false compared with itself: true. The plain half of the same pairing as same_string";
     let word = list_random_item(["1", "5", "true", "false"]);
@@ -75,7 +61,8 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     "four examples a screen, two true and two false, and the two false ones are the two shapes this lesson adds. The true lines are not filler - they are what stops the false ones being answerable by a rule the lesson never taught, so each false shape is shown beside a true line that looks like it";
     let v =
       app_code_lesson_expression_equal_number_string_true_false_look_alike();
-    let v2 = same_string();
+    let v2 =
+      app_code_lesson_expression_equal_number_string_true_false_same_string();
     let v3 = number_and_true_false();
     let v4 = same_plain();
     let list = [v, v2, v3, v4];
