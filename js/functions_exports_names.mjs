@@ -21,8 +21,8 @@ export async function functions_exports_names() {
     async function read() {
       let code = await file_read(f_path);
       let ast = js_parse(code);
-      let names = js_exports_names(ast);
-      return names;
+      let exported = js_exports_names(ast);
+      return exported;
     }
     let names = await catch_null_async(read);
     let torn = equal(names, null);
