@@ -90,7 +90,7 @@ export function app_code_lesson_expression_comparison_and() {
     ]);
     let no = app_code_container_light_blue(root);
     html_div_cycle_code(no, [
-      "For ",
+      "Likewise, for ",
       "7 > 2 && 5 > 8",
       ", we do ",
       "7 > 2",

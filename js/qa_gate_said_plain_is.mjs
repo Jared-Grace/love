@@ -1,3 +1,10 @@
+import { not_equal } from "./not_equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
 import { qa_gate_hint_nodes } from "./qa_gate_hint_nodes.mjs";
 import { qa_gate_names_hinted } from "./qa_gate_names_hinted.mjs";
@@ -21,7 +28,7 @@ export async function qa_gate_said_plain_is(f_name) {
       throwing_is = true;
     }
   }
-  if (!throwing_is) {
+  if (not(throwing_is)) {
     return false;
   }
   let hints = await qa_gate_hint_nodes(f_name);
@@ -33,7 +40,7 @@ export async function qa_gate_said_plain_is(f_name) {
   for (let call2 of calls) {
     let callee2 = property_get(call2, "callee");
     let called2 = property_get(callee2, "name");
-    if (called2 !== spelling) {
+    if (not_equal(called2, spelling)) {
       continue;
     }
     let start = property_get(call2, "start");
@@ -42,7 +49,10 @@ export async function qa_gate_said_plain_is(f_name) {
     for (let hint of hints) {
       let hint_start = property_get(hint, "start");
       let hint_end = property_get(hint, "end");
-      if (start >= hint_start && end <= hint_end) {
+      if (
+        greater_than_equal(start, hint_start) &&
+        less_than_equal(end, hint_end)
+      ) {
         inside_is = true;
       }
     }
@@ -52,12 +62,12 @@ export async function qa_gate_said_plain_is(f_name) {
     let held_is = false;
     for (let declarator of declarators) {
       let init = property_get(declarator, "init");
-      if (init === null) {
+      if (equal(init, null)) {
         continue;
       }
       let init_start = property_get(init, "start");
       let init_end = property_get(init, "end");
-      if (start < init_start || end > init_end) {
+      if (less_than(start, init_start) || greater_than(end, init_end)) {
         continue;
       }
       let id = property_get(declarator, "id");
@@ -67,7 +77,7 @@ export async function qa_gate_said_plain_is(f_name) {
         held_is = true;
       }
     }
-    if (!held_is) {
+    if (not(held_is)) {
       return true;
     }
   }
