@@ -4,6 +4,8 @@ export function g_arc_prompt_becoming(leader) {
   "The part of the arc prompt that says where this person ends up, as one block of lines.";
   "A leader's arc is not a longer arc of the same kind, and the turn count alone does not say so - it hands the writing call five times the turns with no reason for them, which reads as one very long conversation instead of a discipling.";
   "The elder qualifications are asked for HERE rather than in the profile deck, because they are character proven over time and a deck of circumstances holds neither. The deck can only say who is not a teenager.";
+  "They are asked for as the arc's DESTINATION rather than as a description. Somebody who does not yet believe is not yet gentle, hospitable and proven - becoming that IS the arc, so a list handed over flat would be written as a person who was qualified from the first turn and had nowhere to go.";
+  "NOT A RECENT CONVERT (1 Timothy 3 verse 6) is the one that cannot be met as written, because in a new town everybody is a recent convert. That is the situation Titus 1 verse 5 speaks to - appoint elders in every town - and Acts 14 verse 23 has them appointed on the way back through. So the arc IS the proving, and what the prompt asks for is that it be visibly spent rather than skipped.";
   let belief = [
     "All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.",
     "Belief only moves forward. Once they believe, they never go back.",
@@ -20,11 +22,12 @@ export function g_arc_prompt_becoming(leader) {
     "So the later conversations turn outward. Early on they ask about their own trouble. Later they ask how to answer somebody else's, what to do when one of them falls away, and how to keep going once the player is gone.",
     "They still need answering from these passages. Do not write them as somebody who has outgrown Scripture.",
     "",
-    "1 Timothy 3 and Titus 1 say who an elder may be, and most of it is character rather than circumstance - so write it into what they say and do rather than into who they are.",
-    "A one-woman man (the Greek of 1 Timothy 3 verse 2 is mias gynaikos andra): faithful to one, whether they are married, widowed, or unmarried. Not somebody who has been faithless and moved on.",
-    "Proven over time, not a recent convert. Whatever household or work they have, they have kept it well - so let their trouble be one that tests that, and let them come through it.",
-    "Hospitable, gentle, not quarrelsome, not greedy, well thought of by outsiders. Sober in a hard place.",
-    "Write these as things that SHOW. Never have them announce that they are qualified.",
+    "1 Timothy 3 and Titus 1 say who an elder may be. Almost all of it is character, so none of it is settled by the JSON above - it is EARNED across the arc.",
+    "Treat it as where the arc arrives. They do not begin qualified. By the last conversations, somebody reading only what this person says should be able to see that they are - without it ever being said.",
+    "  a one-woman man - the Greek of 1 Timothy 3 verse 2 is mias gynaikos andra, faithful to one. If the JSON says married, they have ONE wife and never more than one. If it says widowed or unmarried, faithfulness to one is still what shows.",
+    "  if they are married or have children, they prove it AT HOME FIRST - 1 Timothy 3 verses 4 and 5 ask how somebody who cannot manage his own household will care for God's church. So the household is put right before the room is, never after. Let their trouble be one that tests it, and let them come through it.",
+    "  hospitable, gentle, not quarrelsome, not greedy, well thought of by outsiders. Sober in a hard place.",
+    "Write every one of these as something that SHOWS in what they say. Never have them announce that they are qualified, and never have the player tell them they are.",
   ];
   let lines = belief.concat(elder);
   let r = list_join_newline(lines);
