@@ -67,6 +67,7 @@ export async function app_shared_bible_home_generic(
   lambda$a,
   bar_extra,
   app_fn,
+  chapter_reader_is,
 ) {
   let frame = app_shared_bar_content(context);
   let content = property_get(frame, "content");
@@ -227,7 +228,10 @@ export async function app_shared_bible_home_generic(
     let mode = app_shared_bible_mode_chapter();
     await app_shared_bible_mode_switch(context, mode, app_fn);
   }
-  app_shared_button(bottom, "📖 Whole chapter", lambda3);
+  ("only the app that actually draws a whole-chapter reader offers the way into it. the others are verse-only: the button was there for all of them, and in three of the four it switched to a mode nothing renders, so the reader was handed a way to a page that does not exist. which kind an app is cannot be read from here - it is the app that knows, so it says.");
+  if (chapter_reader_is) {
+    app_shared_button(bottom, "📖 Whole chapter", lambda3);
+  }
   let component = app_shared_button_copy(bottom, noop);
   let v3 = app_shared_bible_toggle_update(
     updates,

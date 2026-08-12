@@ -36,7 +36,14 @@ export async function app_shared_bible_home_inner(context, download, app_fn) {
       }
       each(passages_downloaded, lambda2);
     }
-    r = await app_shared_bible_home_generic(context, lambda, noop, app_fn);
+    ("false at the end: every app that comes through here is verse-only. the gloss readers and the game's bible render no whole-chapter view at all, so there is nothing for a way-in button to reach. an app that grows one changes this word rather than adding a parameter nobody else would ever pass differently.");
+    r = await app_shared_bible_home_generic(
+      context,
+      lambda,
+      noop,
+      app_fn,
+      false,
+    );
   }
   let passages = await list_adder_async(lambda3);
   let v = {
