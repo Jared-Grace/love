@@ -1,6 +1,6 @@
+import { path_touch } from "./path_touch.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_join } from "./path_join.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
@@ -21,7 +21,7 @@ export async function lock_turn_mine_is(waiting, ticket) {
   ("Its own word is touched first, every time it looks. That is what tells the others it is still there, and it is why a waiter that dies stops holding the line: nothing touches its word again and the rest walk past it in a few seconds.");
   ("The lock still decides who runs. This only decides who asks. So the worst that a wrong reading here can do is cost somebody their place, and it can never let two runs happen at once - which is what the whole thing is for.");
   let path = path_join([waiting, ticket]);
-  await file_overwrite(path, "");
+  await path_touch(path);
   let names = await folder_read_files(waiting);
   let now = date_now_milliseconds();
   let live = [];
