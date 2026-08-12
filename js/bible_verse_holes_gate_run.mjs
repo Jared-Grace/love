@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -38,8 +39,7 @@ export async function bible_verse_holes_gate_run() {
   function lambda2(entry) {
     let asked = property_get(entry, "asked");
     let holes = property_get(entry, "holes");
-    let size = list_size(holes);
-    let all = equal(size, asked);
+    let all = list_size_equal(holes, asked);
     return all;
   }
   let empty = list_filter(bibles, lambda2);
