@@ -1,3 +1,4 @@
+import { g_arc_prompt_becoming } from "./g_arc_prompt_becoming.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -8,12 +9,21 @@ import { property_get } from "./property_get.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple } from "./g_openers_disciple.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
+export function g_arc_prompt(
+  chapter_code,
+  verses_text,
+  turn_target,
+  profile,
+  leader,
+) {
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
   "The profile (gender, age, etc.) is RECEIVED rather than LLM decide.";
   ("the profile is one of ", fn_name("g_profiles"), ".");
   ("turn_target is drawn for this person by ", fn_name("g_npc_pool"), ".");
+  ("leader says this is the one convert the plant is left with as its elder - one per plant, dealt from ",
+    fn_name("g_profiles_leader"),
+    ".");
   ("~Twelve turns make a conversation, and one person holds at most one conversation a day, so seventy turns is about six days this person is met on - not six days running, because the player's day holds a conversation with everybody else too.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
@@ -48,6 +58,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     turns_high,
     "turns.",
   ]);
+  let becoming = g_arc_prompt_becoming(leader);
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
@@ -83,8 +94,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "  occupation - their work, consistent with the JSON above",
     "  trouble(s) - what is wrong, briefly, in their own words",
     "",
-    "All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.",
-    "Belief only moves forward. Once they believe, they never go back.",
+    becoming,
     "  utterance - what the person says",
     "  verse_numbers - the verse numbers of the passage that answer it",
     "  after - what they say after player chooses correct passage",
