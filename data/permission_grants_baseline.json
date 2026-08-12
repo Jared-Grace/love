@@ -127,6 +127,10 @@
   {
    "name": "functions_rename_if_starts_with_replace",
    "refusals": 1
+  },
+  {
+   "name": "ai_git_command_args",
+   "refusals": 1
   }
  ]
 }
