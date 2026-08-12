@@ -37,7 +37,7 @@ That command is narrow on purpose:
 - the name must be one **the repo does not already answer to**, so an existing function still cannot be rewritten except through a transform;
 - the draft is **deleted once it lands**, so a stale second copy cannot be promoted later.
 
-It adds an atom, and it can do nothing else. Its own parameter reads as a file name, so it is not grantable either — every promotion is a refusal the human sees, which is what keeps it a last resort rather than a habit.
+It adds an atom, and it can do nothing else. Nothing *stops* it being granted — `permission_grant_refusals function_new_from_temp` comes back empty — but it is deliberately left ungranted, so `guard_check` answers `ask` and every promotion is one prompt the human sees. That is what keeps it a last resort rather than a habit, and it is also the only measurement of how much of the repo the transforms do not yet cover. **Don't grant it.**
 
 ### How it is put together
 
