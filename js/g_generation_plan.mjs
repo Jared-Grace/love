@@ -1,10 +1,7 @@
 import { g_plant_days_minimum_possible } from "./g_plant_days_minimum_possible.mjs";
 import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
-import { add_1 } from "./add_1.mjs";
-import { divide_floor } from "./divide_floor.mjs";
 import { ceil } from "./ceil.mjs";
 import { floor } from "./floor.mjs";
-import { math_max } from "./math_max.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { divide } from "./divide.mjs";
@@ -45,17 +42,12 @@ export function g_generation_plan() {
   let npcs_fewest = 1 + ceil(divided);
   let divided2 = divide(other_conversations, s.arc_conversations_minimum);
   let npcs_most = 1 + floor(divided2);
-  ("The floor on the count is a scheduling fact, not a taste. An npc is once a day, so the people holding an unplayed beat must number at least the conversations that day asks for - and one more than that, or the day is a list being cleared rather than a choice being made.");
-  ("The one more was written here and not added, and the floor still came out right, because the day's conversations were being counted with the question turns left in - a quarter of the day, which rounded up to the same answer the missing one would have given. Two faults cancelling is worse than either alone: the number agreed with the rule while answering to neither, so a change to the question share would have moved a floor that has nothing to do with questions.");
-  let per_day_whole = ceil(conversations_per_day);
-  let per_day_choice = add_1(per_day_whole);
-  let npcs_minimum = math_max(per_day_choice, s.npcs_available_minimum);
+  ("The floor on the count is a TASTE - how many people a day should offer to choose between - so it is read straight from the settings and worked out from nothing.");
+  ("It was derived, on the rule that a day needs one more person than it has conversations for. But the day's conversations are a MEAN, and a mean floors nothing: half the days ask for more than it. Taken at the worst day instead - every conversation drawn short - the same rule wants seven, which the cast does not reach.");
+  ("Neither number is the answer, because the question was wrong. A day is a turn budget, and conversations are indivisible segments laid into it until the next will not fit. The count a day asks for is an OUTCOME of that, so whether the people are there is answered by scheduling and not by arithmetic here.");
+  let npcs_minimum = s.npcs_available_minimum;
   let npcs_floor_met = greater_than_equal(npcs_fewest, npcs_minimum);
-  ("The most conversations a day may hold is set by the fewest matches one may contain. Cutting the day into more pieces than that makes each piece too small to be worth the approach it costs.");
-  let conversations_per_day_maximum = divide_floor(
-    s.day_matches,
-    s.conversation_turns_low,
-  );
+  ("There is deliberately NO cap on how many conversations a day holds. It had one, to stop a day being cut into pieces too small to be worth the approach they cost - but a conversation's own low end already says that, per conversation, and saying it twice only cost variety. A day of six short conversations and a day of two long ones are both wanted.");
   ("Arc length is the quantity that can fail to schedule, because an arc of nine conversations needs nine separate days to be spent in.");
   let days_fit = less_than_equal(s.arc_conversations_maximum, s.plant_days);
   let leader_days_fit = less_than_equal(
@@ -64,7 +56,6 @@ export function g_generation_plan() {
   );
   let r = {
     conversations_per_day,
-    conversations_per_day_maximum,
     plant_matches,
     plant_conversations,
     question_matches,
