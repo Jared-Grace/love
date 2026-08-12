@@ -12,8 +12,8 @@ export async function app_original_bible_gloss_write(
   "Save one passage's authored word explanations into the original-language gloss store, under the passage the given verses name.";
   "The passage is looked up rather than described, so its original-language wording and its English wording come from the same reading the store was built with and cannot be mistyped here.";
   let passages = await app_original_bible_gloss_passages(chapter_code);
-  function matches(passage) {
-    let left = g_sermon_passage_verses_key(passage);
+  function matches(candidate) {
+    let left = g_sermon_passage_verses_key(candidate);
     let eq = equal(left, verse_key);
     return eq;
   }
