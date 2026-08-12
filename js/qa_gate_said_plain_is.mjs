@@ -1,3 +1,5 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -10,7 +12,6 @@ import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs
 import { qa_gate_hint_nodes } from "./qa_gate_hint_nodes.mjs";
 import { qa_gate_names_hinted } from "./qa_gate_names_hinted.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function qa_gate_said_plain_is(f_name) {
