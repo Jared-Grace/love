@@ -7,9 +7,9 @@ import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export function g_plant_converts_take(held, cursor, pool, wanted) {
   arguments_assert(arguments, 4);
-  "Takes people out of the pool in the order they were written, from wherever the last plant stopped, until their turns come to about what this plant wanted.";
-  "The last one is only taken if taking it lands nearer the wanted number than stopping would, so a plant does not overspend by most of an arc rather than be a few turns short. At least one is always taken, because a plant with nobody in it is not a plant.";
-  "The place it stopped comes back out beside what it took, and a caller that does not put it back where it got it from has changed what this does. The pool is walked once across the whole game - that is what makes a face met in the first plant unable to turn up again in the fourth - so the mark is the only thing carrying that promise from one plant to the next. It arrives here as an ordinary number, which is to say a copy, and a copy moved is a copy thrown away.";
+  ("Takes people out of the pool in the order they were written, from wherever the last plant stopped, until their turns come to about what this plant wanted.");
+  ("The last one is only taken if taking it lands nearer the wanted number than stopping would, so a plant does not overspend by most of an arc rather than be a few turns short. At least one is always taken, because a plant with nobody in it is not a plant.");
+  ("The place it stopped comes back out beside what it took, and a caller that does not put it back where it got it from has changed what this does. The pool is walked once across the whole game - that is what makes a face met in the first plant unable to turn up again in the fourth - so the mark is the only thing carrying that promise from one plant to the next. It arrives here as an ordinary number, which is to say a copy, and a copy moved is a copy thrown away.");
   let converts = [];
   let convert_turns = 0;
   for (let step = 0; less_than(step, held); step++) {
