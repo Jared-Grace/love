@@ -11,10 +11,7 @@ export async function ebible_index_flat_uploaded_measure() {
   "Asked of the list of bibles rather than of a list somebody typed, because the list grows and nothing about adding a bible asks whether it has one.";
   "A bible without an index is not broken and is not refused. A page unions the indexes of the bibles somebody chose and passes over the ones that are not there, so a bible without one is shown at the verse numbers the others name - which is what every bible was shown at before there was a union at all. What this is for is that somebody knows which ones those are.";
   "Sorted by folder name so a change in the record is a change in what is there rather than a reshuffle.";
-  let languages = ebible_languages();
-  let property_name = bible_folder_key();
-  let bible_folders = list_map_property(languages, property_name);
-  list_sort_text(bible_folders);
+  let bible_folders = ebible_bible_folders_sorted();
   async function lambda(bible_folder) {
     let is = await ebible_index_flat_uploaded_is(bible_folder);
     if (is) {
