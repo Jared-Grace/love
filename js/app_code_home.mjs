@@ -1,3 +1,4 @@
+import { app_code_home_settings_gear } from "./app_code_home_settings_gear.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
