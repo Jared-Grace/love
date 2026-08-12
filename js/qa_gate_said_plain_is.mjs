@@ -37,8 +37,10 @@ export async function qa_gate_said_plain_is(f_name) {
   if (not(throwing_is)) {
     return false;
   }
-  let hints = await qa_gate_hint_nodes(f_name);
-  let hinted = await qa_gate_names_hinted(f_name);
+  let depth = qa_gate_hint_depth();
+  let remembered = {};
+  let hints = await qa_gate_hint_nodes(f_name, remembered, depth);
+  let hinted = await qa_gate_names_hinted(f_name, remembered, depth);
   let declarators = await function_ast_list_type_nodes(
     f_name,
     "VariableDeclarator",
