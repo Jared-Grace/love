@@ -16,6 +16,9 @@ export async function app_g_player_path_animate(
   player_img_c,
   div_map,
 ) {
+  ("whether this walk passes through the players own line, asked once before anybody has moved - afterwards the line has already been walked through and the answer would always be no");
+  let line_walk = app_g_day_line_walked_through_is(path);
+  let following = not(line_walk);
   let steps = g_path_steps(path);
   async function lambda(step) {
     let from = property_get(step, "from");

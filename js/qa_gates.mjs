@@ -1,3 +1,4 @@
+import { ebible_index_flats_union_cases_gate_run } from "./ebible_index_flats_union_cases_gate_run.mjs";
 import { text_lines_search_cases_gate_run } from "./text_lines_search_cases_gate_run.mjs";
 import { ebible_index_flat_uploaded_gate_run } from "./ebible_index_flat_uploaded_gate_run.mjs";
 import { commands_only_write_denied_cases_gate_run } from "./commands_only_write_denied_cases_gate_run.mjs";
@@ -322,6 +323,7 @@ export function qa_gates() {
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
     ebible_index_flat_uploaded_gate_run,
+    ebible_index_flats_union_cases_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
     g_clock_sky_phase_check,
