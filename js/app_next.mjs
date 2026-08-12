@@ -1,3 +1,9 @@
+import { app_shared_bible_hash_to_verses_count } from "./app_shared_bible_hash_to_verses_count.mjs";
+import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
+import { app_next_verse_lines } from "./app_next_verse_lines.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_next } from "./list_next.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
@@ -7,19 +13,14 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { hash_to_url } from "./hash_to_url.mjs";
-import { list_find_json_next } from "./list_find_json_next.mjs";
 import { ebible_index_flat } from "./ebible_index_flat.mjs";
-import { list_add_first } from "./list_add_first.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
@@ -46,7 +47,8 @@ export async function app_next(context) {
   );
   async function lambda(verse) {
     let chapter_code3 = property_get(verse, "chapter_code");
-    let verse_number3 = property_get(verse, verse_number_key());
+    let property_name5 = verse_number_key();
+    let verse_number3 = property_get(verse, property_name5);
     let lines = await app_next_verse_lines(
       chapter_code3,
       verse_number3,
