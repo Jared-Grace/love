@@ -82,11 +82,6 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "  occupation - their work, consistent with the JSON above",
     "  trouble - what is wrong, in one sentence, in their own words",
     "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
-    "",
-   
-    "In a conversation, the player first chooses an opener. Here are the openers: ",
-    joined6,
-    joined7,
     '',
     'All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.',
     "Belief only moves forward. Once they believe, they never go back.",
@@ -95,6 +90,11 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "  after - what they say once that passage has landed",
     "",
     "If they never believe, never use a believer opener.",
+    "",
+   
+    "In a conversation, the player first chooses an opener. Here are the openers: ",
+    joined6,
+    joined7,
     "",
     "GROUPING",
     "Group the turns into conversations.",

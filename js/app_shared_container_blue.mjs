@@ -2,7 +2,7 @@ import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border } from "./html_border.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
+import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
 export function app_shared_container_blue(parent) {
   let div = app_shared_container_base(parent);
@@ -10,10 +10,6 @@ export function app_shared_container_blue(parent) {
     div,
     app_shared_container_blue_background_color(),
   );
-  html_border(
-    div,
-    app_shared_spaced_frame_gap(),
-    app_shared_container_blue_border_color(),
-  );
+  html_border(div, app_shared_spaced_frame_gap(), app_shared_color_blue_pale());
   return div;
 }
