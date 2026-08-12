@@ -216,19 +216,7 @@ export async function app_shared_bible_home_generic(
   html_centered(bottom);
   let hidden = true;
   toggle();
-  html_button_biblehub_open_interlinear(
-    bottom,
-    chapter_name,
-    book_name,
-    verse_number,
-  );
-  html_button_biblehub_open_parallel(
-    bottom,
-    chapter_name,
-    book_name,
-    verse_number,
-  );
-  html_button_biblehub_open_commentary(
+  app_shared_bible_biblehub_buttons(
     bottom,
     chapter_name,
     book_name,
