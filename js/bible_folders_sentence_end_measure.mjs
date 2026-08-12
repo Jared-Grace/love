@@ -4,7 +4,6 @@ import { ebible_languages } from "./ebible_languages.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-
 export async function bible_folders_sentence_end_measure() {
   "Reads the opening of every bible this repo ships and counts, for each one, how many verses finish on a mark a sentence is known to end on.";
   "Every bible rather than the ones somebody thought to check, because the list of bibles grows and nothing about adding one asks whether its sentences can be told apart. Asking the list itself is what keeps this true of the bibles that are here rather than of the bibles that were here when it was written.";

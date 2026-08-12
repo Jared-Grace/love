@@ -309,6 +309,7 @@ export function qa_gates() {
     literal_duplicates_cases_gate_run,
     literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
+    bible_sentence_end_marks_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
     g_clock_sky_phase_check,

@@ -59,6 +59,14 @@
   {
    "name": "g_sermon_pull",
    "refusals": 1
+  },
+  {
+   "name": "functions_rename_if_starts_with",
+   "refusals": 1
+  },
+  {
+   "name": "permission_grants_param_plain_mark",
+   "refusals": 1
   }
  ]
 }
