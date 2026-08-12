@@ -4,7 +4,7 @@ import { html_data_set_test } from "./html_data_set_test.mjs";
 import { html_data_set_object } from "./html_data_set_object.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
-import { app_replace_goals_generic } from "./app_replace_goals_generic.mjs";
+import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
 import { app_replace_goal_completed_initialize } from "./app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_initialize } from "./app_replace_rule_sets_data_initialize.mjs";
 import { app_replace_button_home } from "./app_replace_button_home.mjs";
@@ -29,7 +29,7 @@ export function app_replace_goals(context) {
     let g = app_replace_rule_sets_data_goal(d, rule_set_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
     let choose_this_next = not(completed) && completed_previous;
-    let title = app_replace_goals_generic(
+    let title = app_shared_button_numbered_progress(
       root,
       completed,
       completed_previous,

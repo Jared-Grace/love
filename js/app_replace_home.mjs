@@ -1,7 +1,7 @@
 import { app_shared_gear_text } from "./app_shared_gear_text.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_replace_goals_generic } from "./app_replace_goals_generic.mjs";
+import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
 import { app_replace_goal_completed_initialize } from "./app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
 import { list_all } from "./list_all.mjs";
@@ -35,7 +35,7 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
-    let title = app_replace_goals_generic(
+    let title = app_shared_button_numbered_progress(
       root,
       completed_all,
       completed_previous,
