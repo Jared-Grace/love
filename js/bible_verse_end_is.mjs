@@ -1,3 +1,4 @@
+import { bible_verse_end_suffixes } from "./bible_verse_end_suffixes.mjs";
 import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
