@@ -202,6 +202,8 @@ export function examples_notes() {
       "reaching a record written straight into a call so that no name addresses it",
     example_functionize_adds_file:
       "extracting a span into a function that gets its own file",
+    example_functionize_refuses_a_taken_name:
+      "the same extraction into a folder where that name is already somebody's file - publishing writes the file, so without the check the extraction succeeds by deleting a function nobody named",
     example_argument_text_set:
       "point one argument of a call at a written word - the shape the rest of the setter family could not reach",
     example_prose_add_after_selected:
