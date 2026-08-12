@@ -30,7 +30,7 @@ export function app_code_lesson_operators_dot_numbers() {
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code(c4, [
       text_combine_multiple([
-        "In JavaScript, ",
+        "In JS, ",
         operator_name_math_articled,
         " ",
       ]),
