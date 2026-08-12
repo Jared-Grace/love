@@ -1,3 +1,4 @@
+import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
@@ -7,7 +8,6 @@ import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_comparison_side() {
   arguments_assert(arguments, 0);
   ("a comparison of two small numbers, with the true or false it works out to");
@@ -24,7 +24,7 @@ export function app_code_comparison_side() {
   let value = fn(a, b);
   let a_code = text_to(a);
   let b_code = text_to(b);
-  let code = text_combine_multiple([a_code, " ", symbol, " ", b_code]);
+  let code = app_code_operator_code(a_code, symbol, b_code);
   let r = {
     code,
     value,
