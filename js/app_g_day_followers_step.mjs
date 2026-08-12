@@ -3,7 +3,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_g_day_follower_delay_seconds } from "./app_g_day_follower_delay_seconds.mjs";
-import { app_g_day_follower_move } from "./app_g_day_follower_move.mjs";
+import { app_g_npc_move } from "./app_g_npc_move.mjs";
 import { each_index } from "./each_index.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
@@ -26,7 +26,7 @@ export function app_g_day_followers_step() {
     }
     let to = list_get(trail, index);
     let delay = app_g_day_follower_delay_seconds(index);
-    app_g_day_follower_move(npc, to, delay);
+    app_g_npc_move(npc, to, delay);
   }
   each_index(followers, step);
 }
