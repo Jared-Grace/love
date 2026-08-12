@@ -1,3 +1,4 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_verse_numbers_storage_try } from "./ebible_chapter_verse_numbers_storage_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -5,8 +6,6 @@ import { list_difference } from "./list_difference.mjs";
 import { ebible_chapter_verse_code } from "./ebible_chapter_verse_code.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { lists_combine } from "./lists_combine.mjs";
 import { list_size } from "./list_size.mjs";
@@ -45,8 +44,11 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
     let absent = property_get(measured, "absent");
     return absent;
   }
-  let absent_each = list_filter(each_chapter, lambda3);
-  let chapters_absent = list_map_property(absent_each, "chapter_code");
+  let chapters_absent = list_filter_map_property(
+    each_chapter,
+    lambda3,
+    "chapter_code",
+  );
   list_sort_text(chapters_absent);
   function lambda4(measured) {
     let chapter_holes = property_get(measured, "holes");
