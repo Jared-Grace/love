@@ -958,6 +958,9 @@ export function permission_grant_names() {
   let spelled941 = fn_name(
     "app_code_lesson_expression_equal_number_string_true_false_title_name_id",
   );
+  let spelled942 = fn_name("qa_gates_tree_git_reaching");
+  let spelled943 = fn_name("functions_imports_dangling_gate_run");
+  let spelled944 = fn_name("js_imports_relative_paths_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -1900,6 +1903,9 @@ export function permission_grant_names() {
     spelled939,
     spelled940,
     spelled941,
+    spelled942,
+    spelled943,
+    spelled944,
   ];
   return names;
 }

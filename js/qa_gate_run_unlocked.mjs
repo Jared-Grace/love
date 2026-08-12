@@ -62,6 +62,7 @@ export async function qa_gate_run_unlocked() {
       console.log("\n=== who last touched what " + name + " named ===");
       let some = await qa_gate_blame_print(said, known);
       list_add_multiple(flying, some);
+      qa_gate_history_blind_print(name, said);
     }
     qa_gate_in_flight_print(flying);
   }
