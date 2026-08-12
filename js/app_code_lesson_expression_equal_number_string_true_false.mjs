@@ -97,15 +97,17 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     html_div_cycle_code(known, ["", '"hello" === "hello"', " is ", "true"]);
     html_div_cycle_code(known, ["", "true === true", " is ", "true"]);
     let never = app_code_container_light_blue(root);
-    ("The rule names its three subjects rather than saying they - a pronoun here would point at three things that have never been gathered under one word, which is exactly the word this lesson is refusing to introduce.");
-    html_div_cycle_code(never, [
-      "But a number, a string, and ",
-      t,
-      " or ",
-      f,
-      " are never the same as each other",
-    ]);
+    ("The rule names its subjects rather than saying they - a pronoun here would point at three things that have never been gathered under one word, which is exactly the word this lesson is refusing to introduce.");
+    ("Three groups make three pairs, and the rule is stated as TWO sentences rather than one or three. Three - a number is never a string, true is never a number or a string, false is never a number or a string - repeats itself, because true and false answer alike and saying them apart invites the reader to look for the difference. One - none of the three is ever equal to another - is the tightest, and it is the one the reader has to unpack into the three pairs themselves before it says anything about the line in front of them. Two is where the factoring stops paying: it covers all three pairs, neither sentence needs unpacking, and each can stand directly above the example that shows it.");
+    html_div_cycle_code(never, ["But a number is never equal to a string"]);
     html_div_cycle_code(never, ["", '"1" === 1', " is ", "false"]);
+    html_div_cycle_code(never, [
+      "",
+      t,
+      " and ",
+      f,
+      " are never equal to a number or a string",
+    ]);
     html_div_cycle_code(never, ["", '"true" === true', " is ", "false"]);
     html_div_cycle_code(never, ["", "1 === true", " is ", "false"]);
     let quotes = app_code_container_light_blue(root);

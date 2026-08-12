@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { property_get } from "./property_get.mjs";
