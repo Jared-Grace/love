@@ -74,18 +74,26 @@ export function app_code_lesson_expression_in_between() {
     ]);
     app_code_lesson_expression_in_between_card_chained(root);
     let fix = app_code_container_light_blue(root);
+    ("The fix is given as a break into pieces rather than as repeat the middle number, because repeating a number is what the writing looks like, not what it means. Two pieces that must both hold is the meaning, and it is also what && was taught to do, so the && arrives as the thing the reader already has rather than as a trick. The last line then hands back the shorthand, once it stands for something.");
     html_div_cycle_code(fix, [
-      "Repeat the middle number with ",
-      "&&",
-      ": ",
+      "Instead of a single ",
+      "2 < 5 < 8",
+      ", we break it into two pieces: ",
+      "2 < 5",
+      " and ",
+      "5 < 8",
+    ]);
+    html_div_cycle_code(fix, [
+      "Both pieces must be ",
+      "true",
+      ", so we write ",
       "2 < 5 && 5 < 8",
     ]);
     html_div_cycle_code(fix, [
-      "Now each comparison uses ",
+      "In a sense we just replace the middle ",
       "5",
-      ", so it checks ",
-      "5",
-      " properly",
+      " with ",
+      "5 && 5",
     ]);
   }
 }
