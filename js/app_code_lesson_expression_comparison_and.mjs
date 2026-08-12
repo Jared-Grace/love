@@ -69,7 +69,7 @@ export function app_code_lesson_expression_comparison_and() {
     html_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
     app_code_lesson_expression_comparison_and_card_one_side(root);
     let yes = app_code_container_light_blue(root);
-    html_div_cycle_code(yes, ["Both sides can be comparisons"]);
+    html_div_cycle_code(yes, ["Both sides of ", "&&", " can be comparisons"]);
     html_div_cycle_code(yes, [
       "For ",
       "3 < 5 && 2 < 4",

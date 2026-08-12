@@ -1,4 +1,4 @@
-export function app_g_player_npc_swap_if(g, from, to, player_img_c) {
+export function app_g_player_npc_swap_if(g, from, to) {
   "if somebody is standing where the player is about to step, the two of them trade places - the player goes on, and that person steps back into the tile the player is leaving.";
   "It is how two people pass each other in a corridor, and it is the one way past a person that can never fail. Stepping ASIDE needs a free tile beside them, and the whole reason the player is stuck is that there is no free tile; trading places needs none, because the tile each one wants is the tile the other is giving up. So nobody can ever be walled in by people, however tightly they stand.";
   "It is only ever reached when there is no way around, so ordinary walking still goes politely around anybody in the way. Nobody is shoved aside for a shortcut.";
