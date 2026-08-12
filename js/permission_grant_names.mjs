@@ -1080,6 +1080,7 @@ export function permission_grant_names() {
   let spelled1059 = fn_name("qa_gate_timings_stale_is");
   let spelled1060 = fn_name("file_days_since_written");
   let spelled1061 = fn_name("storage_rules_gate_run");
+  let spelled1062 = fn_name("permission_grant_unsafe_param_names");
   let names = [
     spelled,
     spelled2,
@@ -2142,6 +2143,7 @@ export function permission_grant_names() {
     spelled1059,
     spelled1060,
     spelled1061,
+    spelled1062,
   ];
   return names;
 }
