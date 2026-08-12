@@ -1,0 +1,25 @@
+export function g_plant_days_minimum_possible() {
+  "The fewest days a plant could be and still hold everything a plant has to hold - a floor worked out from the parts rather than chosen.";
+  "It is not the same question as how long a plant SHOULD be. That one is a taste about pacing and lives in the settings as a wanted range; this one is arithmetic, and a plant under it is not short, it is unschedulable. Both are needed and neither can stand in for the other, which is why the wanted minimum is checked against this rather than replaced by it.";
+  "Three things can fail to fit, and the answer is the largest of them because each has to fit on its own - they do not add up, since they are spent on the same days.";
+  "The LEADER needs enough days to be formed. A hundred turns is the least an elder is made in and the leader holds one conversation a day like everybody else, so the days needed are that hundred divided by what a day gives them.";
+  "An ARC needs a day for each of its conversations, because one person is met once a day. So a plant can be no shorter than the longest arc anybody may be written with, however few turns that arc comes to.";
+  "The ROOM needs enough people to be a choice rather than a list, and their arcs have to be paid for out of what the leader leaves. Too few days and the plant can afford a leader and almost nobody else.";
+  "QUESTIONS are why the three can be taken as a plain maximum with nothing added for slack. A question is one turn and has no length floor, so whatever a day cannot spend on conversations is spent on questions instead - no plant has to come out even, and there is no remainder to leave room for.";
+  let s = g_generation_settings();
+  let share_low = divide(s.leader_days_percent_minimum, 100);
+  let share_high = divide(s.leader_days_percent_maximum, 100);
+  let share = divide(share_low + share_high, 2);
+  let leader_a_day = multiply(share, s.conversation_turns_mean);
+  let leader_days = divide_ceil(s.leader_turns_minimum, leader_a_day);
+  let arc_days = s.arc_conversations_maximum;
+  let a_day = g_arc_conversations_a_day();
+  let arc_turns_a_day = multiply(a_day, s.conversation_turns_mean);
+  let convert_turns_a_day = subtract(arc_turns_a_day, leader_a_day);
+  let converts = subtract(s.npcs_available_minimum, 1);
+  let convert_turns = multiply(converts, s.arc_turns_mean);
+  let room_days = divide_ceil(convert_turns, convert_turns_a_day);
+  let of_two = math_max(leader_days, arc_days);
+  let r = math_max(of_two, room_days);
+  return r;
+}
