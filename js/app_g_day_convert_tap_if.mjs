@@ -15,26 +15,12 @@ export async function app_g_day_convert_tap_if(div_map, npc) {
     fn_name("app_g_click_npc"),
     " stops. returns FALSE for the normal game and for any non-target tap (nobody discerned, or a different person — the blocked-gate dove handles that), so it is safe to call from the shared NPC-tap. this is how the route exercises the macro cycle (walk → conversation → sky) without playing turns; the real conversation has its own #");
   ("with NOBODY discerned, tapping any of the day's chosen converts them the same way. the stub stands in for a whole conversation, and there is no conversation to play here whether or not a prayer picked the person - leaving that one case to the real quiz meant the demo told two different stories about what a tap does, and the one it told when you had not prayed was the one that could not be finished. praying still CHANGES things: it names who is next and lays the gold guide to them, and from then on the blocked-gate dove turns you away from everybody else.");
-  let state = app_g_day_state();
-  let talkable = property_get(state, "talkable");
-  if (null_is(talkable)) {
-    return false;
+  ("which people are singled out, and how a discerned one is treated differently from a tap with no prayer behind it, is asked in one place now (",
+    fn_name("app_g_day_tap_action_if"),
+    ") - because the day asks the same question a second time, about the believers still to be gathered. what is left here is the only part that is about converting: which list, and what to do");
+  async function convert(person) {
+    await app_g_day_convert(div_map, person);
   }
-  let target = property_get(state, "target");
-  if (null_is(target)) {
-    let chosen_not = list_includes_not(talkable, npc);
-    if (chosen_not) {
-      return false;
-    }
-    await app_g_day_convert(div_map, npc);
-    return true;
-  }
-  let b = g_coordinates_same_is(npc, target);
-  if (not(b)) {
-    return false;
-  }
-  property_set(state, "target", null);
-  app_g_day_guide_clear();
-  await app_g_day_convert(div_map, npc);
-  return true;
+  let converted = await app_g_day_tap_action_if(npc, "talkable", convert);
+  return converted;
 }
