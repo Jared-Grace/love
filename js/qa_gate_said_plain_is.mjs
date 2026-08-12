@@ -20,12 +20,15 @@ export async function qa_gate_said_plain_is(f_name) {
   "Necessary rather than sufficient, and said plainly here so nobody reads a pass as a promise. A name held in a variable rather than spelled - the function whose body was copied, say - is a leak this cannot see, and one path throwing a record does not stop another path throwing a sentence. It catches the shape that stopped three deployments in a day; it does not catch every shape.";
   let calls = await function_ast_list_type_nodes(f_name, "CallExpression");
   let spelling = fn_name("fn_name");
-  let throwing_is = false;
+  let thrown = await function_ast_list_type_nodes(f_name, "ThrowStatement");
+  let throwing_is = list_empty_not_is(thrown);
   for (let call of calls) {
     let callee = property_get(call, "callee");
     let called = js_identifier_name_try(callee);
-    let asserting_is =
-      not_equal(called, null) && text_includes(called, "assert");
+    if (equal(called, null)) {
+      continue;
+    }
+    let asserting_is = text_includes_multiple_is(called, ["assert", "error"]);
     if (asserting_is) {
       throwing_is = true;
     }
