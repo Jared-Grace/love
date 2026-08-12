@@ -48,6 +48,17 @@ export function g_plant_days_report(seed) {
     ]);
     return r;
   }
+  ("How many people a day held is TALLIED rather than averaged, because the spread is the thing wanted and a mean hides it. A day of one long conversation and a day of five short ones average to three and neither of them is three.");
+  function met_of(day) {
+    let conversations = property_get(day, "conversations");
+    let leader = property_get(day, "leader");
+    let came = greater_than(leader, 0);
+    let extra = came ? 1 : 0;
+    let r = add(list_size(conversations), extra);
+    return r;
+  }
+  let met_each = list_map(days, met_of);
+  let met_tally = list_tally(met_each);
   let shape = list_map(days, shape_of);
   let leader_each = list_map_property(days, "leader");
   let leader_turns = list_sum(leader_each);
@@ -61,6 +72,7 @@ export function g_plant_days_report(seed) {
     days: list_size(days),
     leader_turns,
     leader_days,
+    met_tally,
     shape,
   };
   return r;
