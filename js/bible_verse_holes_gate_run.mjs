@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
@@ -12,7 +13,6 @@ import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { equal } from "./equal.mjs";
 export async function bible_verse_holes_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: every bible this repo ships has been asked for the verses a page will ask it for, and none of them answered with nothing throughout.");
@@ -30,8 +30,7 @@ export async function bible_verse_holes_gate_run() {
   let departed = list_difference(measured, shipped);
   ("A bible nothing was asked of is told apart from one asked and found whole, because only the second is a fact about a bible. The first is an errand that failed, and reading it as a bible without holes is the mistake a hand measurement of the same shape already made once with Urdu.");
   function lambda(entry) {
-    let asked = property_get(entry, "asked");
-    let none = equal(asked, 0);
+    let none = property_equals(entry, "asked", 0);
     return none;
   }
   let unasked = list_filter(bibles, lambda);
