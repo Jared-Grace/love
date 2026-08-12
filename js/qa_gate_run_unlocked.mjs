@@ -1,3 +1,4 @@
+import { qa_gate_history_blind_print } from "./qa_gate_history_blind_print.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { qa_gate_parts_print } from "./qa_gate_parts_print.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
