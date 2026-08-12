@@ -1028,6 +1028,10 @@ export function permission_grant_names() {
   let spelled1009 = fn_name("bible_interlinear_sigla_report");
   let spelled1010 = fn_name("machine_load_minute");
   let spelled1011 = fn_name("qa_gate_timings_write_when_quiet");
+  let spelled1012 = fn_name("bible_interlinear_base_dropped_report");
+  let spelled1013 = fn_name("functions_exports_names");
+  let spelled1014 = fn_name("ebible_index_flat_uploaded_write");
+  let spelled1015 = fn_name("text_lines_search");
   let names = [
     spelled,
     spelled2,
@@ -2040,6 +2044,10 @@ export function permission_grant_names() {
     spelled1009,
     spelled1010,
     spelled1011,
+    spelled1012,
+    spelled1013,
+    spelled1014,
+    spelled1015,
   ];
   return names;
 }
