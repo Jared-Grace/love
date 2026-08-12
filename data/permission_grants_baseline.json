@@ -75,6 +75,10 @@
   {
    "name": "functions_shadowing_rename_all",
    "refusals": 1
+  },
+  {
+   "name": "functions_select_apply_args",
+   "refusals": 1
   }
  ]
 }
