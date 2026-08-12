@@ -1,7 +1,7 @@
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_divide_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_subtract_line } from "./app_code_lesson_expression_parentheses_minus_divide_subtract_line.mjs";
-import { app_code_lesson_expression_parentheses_same_strength_title_name_id } from "./app_code_lesson_expression_parentheses_same_strength_title_name_id.mjs";
+import { app_code_lesson_expression_parentheses_minus_divide_title_name_id } from "./app_code_lesson_expression_parentheses_minus_divide_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_parentheses_same_strength() {
   "The group is always on the RIGHT of the - or the /, because that is the only side where it changes anything: (a + b) - c and a + b - c are the same line. That the position matters here, when the first lesson showed the group happily on either side of a *, is the point rather than an accident - and it is why the title names the OUTER operator.";
   "Every line is built so the answer, the group, and the wrong answer are all whole and never below zero: the subtraction shapes take a = b + c + k, and the division shape takes a = b * c * k.";
   let name_id =
-    app_code_lesson_expression_parentheses_same_strength_title_name_id();
+    app_code_lesson_expression_parentheses_minus_divide_title_name_id();
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
