@@ -16,9 +16,8 @@ export async function example_files_command_refusals_missing() {
     let refused = false;
     for (let e of examples) {
       let named = property_get(e, "fn");
-      let refuses = property_get(e, "refuses");
       if (equal(named, name)) {
-        if (refuses) {
+        if (e.refuses) {
           refused = true;
         }
       }
