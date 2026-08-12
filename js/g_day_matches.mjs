@@ -8,6 +8,7 @@ export function g_day_matches() {
     fn_name("g_game_plants_whole"),
     ", which nothing calls, and in the scheduler's own report. The generator that actually runs still fills a plant from the pool until the turns come out near the budget, so a bigger day buys more people, and at this number it buys seventeen and eighteen of them.");
   ("Nothing catches it. The over_maximum a plant reports is about DAYS, and no reading anywhere compares a plant's people against plant_npcs_maximum.");
+  ("It was answered by lengthening the arcs rather than by lowering this back down - see arc_turns_mean. A bigger day buying more people is only a fault while a person is worth too few turns to absorb it, and the turns bought are wanted; it is the headcount they were being spent on that was not.");
   let r = 56;
   return r;
 }
