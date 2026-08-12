@@ -19,7 +19,7 @@ export function g_profile_valid_is(profile) {
     return false;
   }
   ("A slave held no office and served in no legion.");
-  if (equal(servitude, "is a servant") && not_equal(government, "none")) {
+  if (equal(servitude, "is a bondservant") && not_equal(government, "none")) {
     return false;
   }
   ("Children come of a marriage, and a widow keeps the ones she bore.");
@@ -39,7 +39,7 @@ export function g_profile_valid_is(profile) {
     return false;
   }
   ("A teenager keeps no household, and manumission under thirty gave a lesser standing than this axis means by having been a servant.");
-  let settled = ["has servants", "was a servant"];
+  let settled = ["has servants", "was a bondservant"];
   if (equal(age, "teenager") && list_includes(settled, servitude)) {
     return false;
   }

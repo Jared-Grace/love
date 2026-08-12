@@ -1,8 +1,7 @@
+import { app_g_day_line_back_step_room_is } from "./app_g_day_line_back_step_room_is.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
-import { property_list_size } from "./property_list_size.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
 import { property_set } from "./property_set.mjs";
@@ -19,13 +18,12 @@ export async function app_g_day_line_back_step(player, player_img_c, div_map) {
   "It is the same walk as going forward, read the other way. Going forward, each person moves up onto the tile the one ahead has left; going back, each person moves down onto the tile the one behind them is leaving. So the trail simply loses its newest tile - the one the player is stepping into - and everybody is where the trail says they should be again, one place further down it. Nobody ever shares a tile and nobody walks through anybody.";
   "The one thing it needs is a spare tile of trail past the end of the line, or the person at the back has nowhere to go. Without that spare there is no way to back up at all, which is the case where the day simply has not been walked far enough yet to have left room.";
   "It has to face the player before moving them, because which way they are facing is worked out from where they are standing and where they are going - and afterwards those are the same tile.";
-  let state = app_g_day_state();
-  let trail = property_get(state, "trail");
-  let line = property_list_size(state, "followers");
-  let room = list_size_greater_than(trail, line);
+  let room = app_g_day_line_back_step_room_is();
   if (not(room)) {
     return false;
   }
+  let state = app_g_day_state();
+  let trail = property_get(state, "trail");
   let to = list_first(trail);
   let remaining = list_skip_1(trail);
   property_set(state, "trail", remaining);
