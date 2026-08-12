@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { equal } from "./equal.mjs";
 import { js_node_inside_any_is } from "./js_node_inside_any_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,8 +14,7 @@ export function qa_gate_declarator_holding(node, declarators) {
     if (equal(inside_is, false)) {
       continue;
     }
-    let id = property_get(declarator, "id");
-    let bound = property_get(id, "name");
+    let bound = property_path_get_2(declarator, "id", "name");
     return bound;
   }
   let missing = null;
