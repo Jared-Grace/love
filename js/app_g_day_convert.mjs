@@ -1,3 +1,7 @@
+import { app_g_npc_cross_set } from "./app_g_npc_cross_set.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_g_day_follower_add } from "./app_g_day_follower_add.mjs";
+import { equal } from "./equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { g_icon_cross } from "./g_icon_cross.mjs";
 import { app_g_day_talkable_id } from "./app_g_day_talkable_id.mjs";
@@ -22,9 +26,12 @@ export async function app_g_day_convert(div_map, npc) {
   app_g_npc_cross_set(npc, cross);
   let state = app_g_day_state();
   let talkable = property_get(state, "talkable");
-  if (not(null_is(talkable))) {
+  let b = null_is(talkable);
+  if (not(b)) {
     function keep(other) {
-      return not(g_coordinates_same_is(other, npc));
+      let b2 = g_coordinates_same_is(other, npc);
+      let n = not(b2);
+      return n;
     }
     let remaining = list_filter(talkable, keep);
     property_set(state, "talkable", remaining);
