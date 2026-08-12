@@ -1,3 +1,9 @@
+import { example_files_command_refusals_missing } from "./example_files_command_refusals_missing.mjs";
+import { example_files_command_refusals_baseline_path } from "./example_files_command_refusals_baseline_path.mjs";
+import { example_files_command_refusals_hint } from "./example_files_command_refusals_hint.mjs";
+import { baseline_growth_assert_generic } from "./baseline_growth_assert_generic.mjs";
+import { names_versus_baseline } from "./names_versus_baseline.mjs";
+import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function example_files_command_refusals_baseline_write() {
   "rewrite the ratchet on commands the corpus never proves refuse from what the corpus holds right now. For seeding it once, and for shrinking it after a refusal example has been written - never for blessing a new command that arrives without one, which is the one thing the gate exists to refuse, and the refusal is enforced here rather than left to whoever runs it.";
   let known = await example_files_command_refusals_missing();
