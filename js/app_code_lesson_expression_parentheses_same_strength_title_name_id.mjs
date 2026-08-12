@@ -25,7 +25,8 @@ export function app_code_lesson_expression_parentheses_same_strength_title_name_
       divided,
     ]);
   }
-  let rights = ["parentheses same strength"];
+  ("the words here become the lesson's id, which is both what its link says after #lesson= and the word a learner's finished-quizzes are filed under. It used to say same strength, from back when the lesson was taught as - and / being the same strength as + and *; the lesson has called itself ( and ) after - or / for a while now, and an id saying something the lesson no longer says is a name that lies to whoever reads a link.");
+  let rights = ["parentheses minus divide"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;
