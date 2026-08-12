@@ -1,3 +1,6 @@
+import { js_exports_names_cases_gate_run } from "./js_exports_names_cases_gate_run.mjs";
+import { js_imports_relative_named_cases_gate_run } from "./js_imports_relative_named_cases_gate_run.mjs";
+import { functions_imports_unexported_gate_run } from "./functions_imports_unexported_gate_run.mjs";
 import { qa_commit_entry_beside_matching_cases_gate_run } from "./qa_commit_entry_beside_matching_cases_gate_run.mjs";
 import { qa_gate_said_history_blind_cases_gate_run } from "./qa_gate_said_history_blind_cases_gate_run.mjs";
 import { js_imports_relative_paths_cases_gate_run } from "./js_imports_relative_paths_cases_gate_run.mjs";
@@ -244,6 +247,9 @@ export function qa_gates() {
     function_imports_gate_run,
     js_imports_relative_paths_cases_gate_run,
     functions_imports_dangling_gate_run,
+    js_exports_names_cases_gate_run,
+    js_imports_relative_named_cases_gate_run,
+    functions_imports_unexported_gate_run,
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
