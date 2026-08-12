@@ -1,10 +1,8 @@
+import { js_function_declaration_param_named_assert } from "./js_function_declaration_param_named_assert.mjs";
 import { function_param_plain_marker_rename } from "./function_param_plain_marker_rename.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_function_declaration_params_names_plain } from "./js_function_declaration_params_names_plain.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { function_identifier_rename_checked } from "./function_identifier_rename_checked.mjs";
 export async function function_param_rename(f_name, name, name_after) {
   arguments_assert(arguments, 3);
