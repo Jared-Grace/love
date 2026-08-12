@@ -20,7 +20,13 @@ export async function app_shared_bible_chapter_set_default(context) {
       await app_shared_screen_set(context, app_shared_bible_chapters);
       return n;
     }
-    await app_shared_bible_chapter_verse_open(context, "JHN01", "1");
+    let chapter_code = app_shared_bible_chapter_code_default();
+    let verse_number = app_shared_bible_verse_number_default();
+    await app_shared_bible_chapter_verse_open(
+      context,
+      chapter_code,
+      verse_number,
+    );
   }
   return n;
 }

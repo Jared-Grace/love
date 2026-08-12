@@ -1,3 +1,5 @@
+import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
+import { add_1 } from "./add_1.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { ceil } from "./ceil.mjs";
@@ -14,7 +16,7 @@ export function g_generation_plan() {
   "It decides nothing. Every number here is a sum over numbers somebody chose, which is what makes it safe to re-run and safe to disagree with - change the setting, not this.";
   "The npc count is DERIVED and comes out as a RANGE, because one arc is one npc and the arcs may be long or short. Fewest npcs is every arc at its longest; most is every arc at its shortest.";
   let s = g_generation_settings();
-  let conversations_per_day = divide(s.day_matches, s.conversation_turns_mean);
+  let conversations_per_day = g_arc_conversations_a_day();
   let plant_matches = multiply(s.day_matches, s.plant_days);
   let plant_conversations = divide(plant_matches, s.conversation_turns_mean);
   let top = multiply(plant_matches, s.question_matches_percent);
@@ -50,8 +52,10 @@ export function g_generation_plan() {
   let divided2 = divide(other_conversations, s.arc_conversations_minimum);
   let npcs_most = 1 + floor(divided2);
   ("The floor on the count is a scheduling fact, not a taste. An npc is once a day, so the people holding an unplayed beat must number at least the conversations that day asks for - and one more than that, or the day is a list being cleared rather than a choice being made.");
+  ("The one more was written here and not added, and the floor still came out right, because the day's conversations were being counted with the question turns left in - a quarter of the day, which rounded up to the same answer the missing one would have given. Two faults cancelling is worse than either alone: the number agreed with the rule while answering to neither, so a change to the question share would have moved a floor that has nothing to do with questions.");
   let per_day_whole = ceil(conversations_per_day);
-  let npcs_minimum = math_max(per_day_whole, s.npcs_available_minimum);
+  let per_day_choice = add_1(per_day_whole);
+  let npcs_minimum = math_max(per_day_choice, s.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs_fewest, npcs_minimum);
   ("The most conversations a day may hold is set by the fewest matches one may contain. Cutting the day into more pieces than that makes each piece too small to be worth the approach it costs.");
   let conversations_per_day_maximum = divide_floor(
