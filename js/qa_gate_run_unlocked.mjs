@@ -58,7 +58,7 @@ export async function qa_gate_run_unlocked() {
   let here = list_get(halves, 1);
   let printed = property_get(told, "printed");
   console.log(printed);
-  ("What was found is written into the shared record of judged commits, when the copy stood on one. This run already does everything a judging does and until now threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
+  ("What was found is written into the shared record of judged commits. This run already does everything a judging does and once threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
   ("An answer that came out of the record is not written back into it. It is already there, under this very commit, and re-filing it would spend a reading and a writing to leave the file exactly as it was.");
   let filing = remembered ? null : commit;
   await qa_gate_told_filed(filing, told, before);
