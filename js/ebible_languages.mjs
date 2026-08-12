@@ -1,3 +1,4 @@
+import { ebible_folder_thai } from "./ebible_folder_thai.mjs";
 import { ebible_folder_tagalog } from "./ebible_folder_tagalog.mjs";
 import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
@@ -13,7 +14,8 @@ import { ebible_language_english } from "./ebible_language_english.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function ebible_languages() {
-  text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
+  let right = fn_name("ebible_languages_add");
+  text_combine("to add an entry, run: ", right);
   let en = ebible_language_english();
   let o = ebible_language_original();
   let ur = ebible_language_urdu();

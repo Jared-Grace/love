@@ -15,7 +15,11 @@ export async function ebible_verse_languages_end_is(verse, bible_folders) {
   let verse_number = property_get(verse, property_name);
   let marked = bible_folders_sentence_end_marked(bible_folders);
   async function lambda(bible_folder) {
-    let d = await ebible_verse_browser(bible_folder, chapter_code, verse_number);
+    let d = await ebible_verse_browser(
+      bible_folder,
+      chapter_code,
+      verse_number,
+    );
     let text = property_get(d, "text");
     let ended = bible_verse_end_is(text);
     return ended;
