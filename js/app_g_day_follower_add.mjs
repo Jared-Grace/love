@@ -5,7 +5,7 @@ import { list_add } from "./list_add.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_g_day_follower_move } from "./app_g_day_follower_move.mjs";
+import { app_g_npc_move } from "./app_g_npc_move.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_g_day_follower_add(npc) {
   "a believer joins the line: they stop being somebody the player still has to go and gather, and start walking behind the player instead";
@@ -23,6 +23,6 @@ export function app_g_day_follower_add(npc) {
   let known = less_than(index, b);
   if (known) {
     let to = list_get(trail, index);
-    app_g_day_follower_move(npc, to, 0);
+    app_g_npc_move(npc, to, 0);
   }
 }
