@@ -291,19 +291,7 @@ export async function app_shared_bible_read(context, verse_action) {
     html_centered(actions);
     html_display_none(actions);
     let verse_buttons = html_div(actions);
-    html_button_biblehub_open_interlinear(
-      verse_buttons,
-      verse_chapter_name,
-      verse_book_name,
-      verse_number_v,
-    );
-    html_button_biblehub_open_parallel(
-      verse_buttons,
-      verse_chapter_name,
-      verse_book_name,
-      verse_number_v,
-    );
-    html_button_biblehub_open_commentary(
+    app_shared_bible_biblehub_buttons(
       verse_buttons,
       verse_chapter_name,
       verse_book_name,
