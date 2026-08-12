@@ -1,14 +1,14 @@
-import { app_shared_button_background_color } from "../../love/js/app_shared_button_background_color.mjs";
-import { app_replace_button_rule_selected_background_color } from "../../love/js/app_replace_button_rule_selected_background_color.mjs";
-import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
-import { ternary_nested } from "../../love/js/ternary_nested.mjs";
+import { app_shared_button_background_color } from "./app_shared_button_background_color.mjs";
+import { app_shared_button_progress_next_background_color } from "./app_shared_button_progress_next_background_color.mjs";
+import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { ternary_nested } from "./ternary_nested.mjs";
 export function app_replace_rule_set_rule_background_color(
   selected,
   enabled,
   success,
 ) {
   let button_background_color = app_shared_button_background_color();
-  let blue_strong = app_replace_button_rule_selected_background_color();
+  let blue_strong = app_shared_button_progress_next_background_color();
   let c = ternary_nested(
     selected,
     blue_strong,
