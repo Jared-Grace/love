@@ -1,3 +1,4 @@
+import { js_fold_blocks } from "./js_fold_blocks.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -11,7 +12,6 @@ import { js_flo_name } from "./js_flo_name.mjs";
 import { js_blocks_all } from "./js_blocks_all.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_fn_fold_pattern } from "./js_fn_fold_pattern.mjs";
-import { js_fold } from "./js_fold.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_fold_sites() {
@@ -90,8 +90,22 @@ export async function functions_fold_sites() {
     shapes[f_name] = read;
     return read;
   }
+  ("Which runs of statements a file holds is kept beside its shape, for the same reason and with the same care. What those runs are depends on the file alone and never on the function being paired against it, and one file is paired against many: counted 2026-08-12, 56,751 pairings over 2,790 different files, which was twenty-two and a half seconds of finding the same runs again against nine tenths of a second to find them once each.");
+  ("They are given up exactly when the shape is, because they are the runs of that tree and a fold writes the call back into it.");
+  let blocks_kept = {};
+  function blocks_of(f_name) {
+    let kept2 = blocks_kept[f_name];
+    if (not_equal(kept2, undefined)) {
+      return kept2;
+    }
+    let ast2 = shape_of(f_name);
+    let found = js_blocks_all(ast2);
+    blocks_kept[f_name] = found;
+    return found;
+  }
   function shape_forget(f_name) {
     delete shapes[f_name];
+    delete blocks_kept[f_name];
   }
   let sites = [];
   for (let x_name in entries) {
@@ -125,7 +139,8 @@ export async function functions_fold_sites() {
     for (let f_name of candidates) {
       try {
         let f_ast = shape_of(f_name);
-        let folded = js_fold(x_ast, f_ast);
+        let f_blocks = blocks_of(f_name);
+        let folded = js_fold_blocks(x_ast, f_ast, f_blocks);
         if (not_equal(folded, null)) {
           shape_forget(f_name);
           sites.push({
