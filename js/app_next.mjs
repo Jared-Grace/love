@@ -1,3 +1,4 @@
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { app_shared_bible_hash_to_verses_count } from "./app_shared_bible_hash_to_verses_count.mjs";
 import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
 import { app_next_verse_lines } from "./app_next_verse_lines.mjs";
@@ -74,8 +75,10 @@ export async function app_next(context) {
   list_add(mapped, url);
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
+  ("The blank line between the blocks is written into the text rather than into the page, so the page has to be told to keep it. Left untold, a browser folds every run of space into one and the whole reading arrives as a single paragraph - which was survivable while there was one verse to show and is not now, because nothing then says where one verse ends and the next begins.");
   let joined = list_join_newline_2(mapped);
   let root = property_get(context, "root");
+  html_style_white_space(root, "pre-wrap");
   html_text_set(root, joined);
   await clipboard_copy_try(joined);
 }
