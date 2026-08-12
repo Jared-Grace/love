@@ -1,3 +1,4 @@
+import { app_g_player_beside_is } from "./app_g_player_beside_is.mjs";
 import { app_g_day_water_tap_if } from "./app_g_day_water_tap_if.mjs";
 import { app_g_day_travel_blocked_is } from "./app_g_day_travel_blocked_is.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
@@ -32,5 +33,8 @@ export async function app_g_click_map(
     player_img_c,
     div_map,
   );
-  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, player_img_c);
+  ("a tap on somebody is two things at once: walk over to them, and speak to them once you are there. the second only happens if the first did. a walk that was refused, or one that stopped short because the way was never opened, leaves the player where they were - and a conversation opened from across the room reads as talking through whoever is standing in between");
+  let beside = await app_g_player_beside_is(clicked_coordinates);
+  let npc_reached = npc_clicked && beside;
+  await app_g_click_npc_if(npc_reached, div_map, npcs_matched, player_img_c);
 }
