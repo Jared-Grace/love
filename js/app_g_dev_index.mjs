@@ -7,7 +7,7 @@ import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
-import { app_g_dev_index_prefixes } from "./app_g_dev_index_prefixes.mjs";
+import { app_g_dev_index_prefixes_all } from "./app_g_dev_index_prefixes_all.mjs";
 import { app_g_dev_index_tree } from "./app_g_dev_index_tree.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -23,13 +23,13 @@ export function app_g_dev_index() {
   ]),
     fn_name("app_g_dev_routes"),
     " registry + ",
-    fn_name("app_g_dev_index_prefixes"),
+    fn_name("app_g_dev_index_prefixes_all"),
     ", so it never drifts. BESPOKE (recursion / closures / Object.keys) — do NOT auto-canonicalize");
   let div = app_g_dev_overlay("Dev routes");
   let routes = app_g_dev_routes(null);
   let names = properties_get(routes);
   let all = list_concat(names, ["reset", "index"]);
-  let prefixes = app_g_dev_index_prefixes();
+  let prefixes = app_g_dev_index_prefixes_all(all);
   let tree = app_g_dev_index_tree(all, prefixes);
   let open_key = app_g_dev_index_open_key();
   let app_fn = app_g_storage_app();

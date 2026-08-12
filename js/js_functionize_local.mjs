@@ -1,3 +1,4 @@
+import { js_global_names } from "./js_global_names.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_statements_await_any_is } from "./js_statements_await_any_is.mjs";
@@ -55,6 +56,10 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   list_remove(missing, f_name_new);
   let reachable = await js_module_names_reachable(ast);
   missing = list_difference(missing, reachable);
+  ("What the language itself provides is not passed in. A name like console or Error is bound everywhere already, so handing it over as a parameter binds it a second time - and a parameter wearing the name of something already in scope is the one thing this repo forbids outright, because every line under it reads the handed-in thing rather than the one it was written against.");
+  ("It reads as a missing name for the same reason a repo function would: nothing in the file binds it and nothing imports it. Only the two answers above were subtracted, so everything the language gives came through as a parameter - console and Error were both handed over that way in one afternoon's cutting. The lifting twin already asked this question; the two now agree.");
+  let provided = js_global_names();
+  missing = list_difference(missing, provided);
   js_function_declaration_params_add(declaration, missing);
   ("The count is written once the parameters are settled, so it says how many the new function really takes.");
   js_function_arguments_assert_add(declaration);
