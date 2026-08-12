@@ -20,7 +20,7 @@ export async function qa_gate_run_unlocked() {
   "The whole-repo run itself, taken as though this machine were its own";
   "It is the thing under the lock rather than the thing to call. Waiting for a turn and asking the questions are two ideas, and separating them keeps the questions readable - everything below is about gates, and nothing below has to mention that anybody else exists";
   "Asking for this by name skips the waiting, and there is one honest use for that: a machine with nobody else on it, where the wait would only be a wait. Any other use puts two full runs on the processors at once, which is the thing the lock was measured to prevent";
-  "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing - and when there is no such work, about the commit the folder already equals, which is the same code under a name anybody can ask for again";
+  "It asks about the commit the folder is at, and never about work nobody has committed. So its answer is about code under a name anybody can ask for again, which is what lets it be written down and handed to the next person who asks about the same name - and it is why the thing to do before running this is to commit";
   "A clean answer here is meant to mean the code is sound - so every question the files alone can answer is put to a frozen copy of the folder rather than to the folder itself. Asked of the living folder, neither answer could be checked: a complaint might be nothing but a neighbour saving a file, and a clean answer might be about a file broken a moment after it was read. Asked of a copy nobody can touch, both answers can be had again and come out the same";
   "The three questions about this machine and about where the folder sits are asked here, where the answer is, and their names are added to whatever the copy complained about so one complaint covers both halves";
   "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
@@ -29,7 +29,7 @@ export async function qa_gate_run_unlocked() {
   let began = date_now_milliseconds();
   let beside = await qa_commit_beside_heads();
   let before = property_get(beside, "heads");
-  ("Which way the folder is frozen is a question about the folder rather than a setting, and it lives one name along. When nobody has work in flight the copy stands on a commit, which is what makes this run's answer the same kind of thing as a judgement of that commit; otherwise it is the working folder as it stands, and belongs to no commit at all");
+  ("How the folder is frozen lives one name along. The copy stands on a commit, which is what makes this run's answer the same kind of thing as a judgement of that commit, and so a thing worth writing down");
   let frozen = await qa_gate_frozen_ensure();
   let folder = property_get(frozen, "folder");
   let commit = property_get(frozen, "commit");
