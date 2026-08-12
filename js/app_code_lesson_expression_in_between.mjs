@@ -76,7 +76,7 @@ export function app_code_lesson_expression_in_between() {
     let fix = app_code_container_light_blue(root);
     ("The fix is given as a break into pieces rather than as repeat the middle number, because repeating a number is what the writing looks like, not what it means. Two pieces that must both hold is the meaning, and it is also what && was taught to do, so the && arrives as the thing the reader already has rather than as a trick. The last line then hands back the shorthand, once it stands for something.");
     html_div_cycle_code(fix, [
-      "Instead of a single ",
+      "For JS, instead of a single ",
       "2 < 5 < 8",
       ", we break it into two pieces: ",
       "2 < 5",
