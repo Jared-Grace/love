@@ -71,7 +71,8 @@ Most of that library already exists — measured 2026-08-12: 100 `file_*`, 78 `f
 | `file_lines_search(f_path, s)` | the same for one file; a missing file and a file that was never text both answer nothing found |
 | `folder_lines_search(path_folder, s, folders_skipped)` | every line under a folder, read overlapping under the open-files ceiling |
 | `folder_lines_search_args(…)` | the same from a command line, the skipped folders joined by commas |
-| `text_binary_is(text)` | whether what was read was never text — asked of the bytes, not of the name on the end |
+| `bytes_text_try(bytes)` | the text these bytes spell, or nothing at all if they spell none — which is how a file that was never text says so |
+| `file_read_buffer_try(f_path)` | the bytes of a file, or nothing at all if there is no such file |
 
 ```
 node scripts/ai.mjs repo_lines_search <word>
@@ -80,13 +81,15 @@ node scripts/ai.mjs folder_lines_search_args <folder> <word> .git,node_modules,g
 
 `repo_lines_search` is the granted one, so it never prompts. That is the whole reason it exists as its own function: a search that *receives* a folder receives a path, and a grant covers every argument a function is ever handed — `permission_grant_refusals folder_lines_search_args` names all three parameters. Filling the folder in makes the remaining parameter a plain word, which is grantable, and a search that has to be approved every time is one nobody uses. It is also faster for skipping what it skips: 1.2s against 5.7s.
 
-Three things about the searching are the point rather than the implementation.
+Four things about the searching are the point rather than the implementation.
 
 **Nothing here asks the machine to search.** The files are read and the lines are looked at. So there is no per-platform version to write and none to keep in step — portable by having nothing to port, which is a stronger promise than portable by knowing every platform.
 
 **The word is looked for exactly as written, never as a pattern.** A dot is a dot. This is the one place the platforms disagree most: each machine's own searching command reads patterns by its own rules, so a pattern learned on one quietly means something else on the next. `text_lines_search_cases` (in `q`) pins that case — `a.c` must not find `abc`.
 
 **What comes back is records, not printed lines.** `{f_path, number, line}`. Printed text is the end of the road: the next thing that wants it has to take it apart again, and a line holding a colon takes itself apart wrongly. Records go straight into `list_filter_*`, `list_map`, a gate, or another function — which is the whole reason a command beats a pipe. The reuse runs the other way too: this got the open-files ceiling and the recursive walker for free by being written where they already live.
+
+**What counts as text is decided by reading it as text.** One attempt answers the question and hands back the thing being searched, so no file is read twice and the question is asked of the bytes rather than of anything else. The first version asked it wrongly: it looked for the stand-in character the reader leaves behind wherever a byte would not read, which is an ordinary character a text file may hold on purpose - so `js/text_binary_is.mjs`, which had to name that character to look for it, declared itself a picture and could not be found by the search it was part of. Nothing went red; the lines were simply absent. The lean is deliberate and goes the safe way: calling a picture text costs a search nothing, because a file with no words in it holds none of the word being looked for, while calling a text file a picture drops every line in it without a word.
 
 Reading the files overlapping rather than one after the next took a repo-wide search from 18.7s to 5.7s, same answers.
 
