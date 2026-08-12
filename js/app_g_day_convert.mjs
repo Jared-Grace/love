@@ -48,7 +48,7 @@ export async function app_g_day_convert(div_map, npc) {
   let slices_total = property_get(state, "slices_total");
   let last = equal(value, slices_total);
   if (last) {
-    app_g_day_follower_add(npc);
+    await app_g_day_follower_add(npc);
   }
   await app_g_day_sky_update();
 }
