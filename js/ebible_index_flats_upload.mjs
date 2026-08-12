@@ -1,8 +1,5 @@
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { ebible_index_flat_upload } from "./ebible_index_flat_upload.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";

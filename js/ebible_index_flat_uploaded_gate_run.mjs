@@ -1,11 +1,9 @@
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_index_flat_uploaded_path } from "./ebible_index_flat_uploaded_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { lists_combine } from "./lists_combine.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -22,9 +20,7 @@ export async function ebible_index_flat_uploaded_gate_run() {
   let uploaded = property_get(recorded, "uploaded");
   let absent = property_get(recorded, "absent");
   let answered = lists_combine([uploaded, absent]);
-  let languages = ebible_languages();
-  let property_name = bible_folder_key();
-  let shipped = list_map_property(languages, property_name);
+  let shipped = ebible_bible_folders_sorted();
   let unasked = list_difference(shipped, answered);
   let departed = list_difference(answered, shipped);
   let f_name = fn_name("ebible_index_flat_uploaded_write");
