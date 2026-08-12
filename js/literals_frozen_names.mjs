@@ -64,6 +64,8 @@ export function literals_frozen_names() {
   ("A sixth word a bible link stands on, added the day the link learned to ask for more than one verse at a time. It is published the moment somebody saves or sends such a link, exactly like the chapter and the verse beside it.");
   ("It is the first of these written as a frozen word at its own site rather than as a plain one, and for a reason the single letters above never had: it is an ordinary English word, so the day anything in this repo is named count, the canonicalizing pass would quietly turn the value into a reference to that function.");
   let spelled40 = fn_name("app_shared_bible_verses_count_hash_key");
+  ("The word a learner's own progress through the code lessons is kept under, on their own disk. It is the first entry here holding something a person made rather than something this repo published: retyping it would not break a link, it would lose the record of every lesson somebody has finished, and they would come back to a list saying they had done none of it.");
+  let spelled41 = fn_name("app_code_progress_storage_key");
   let names = [
     spelled,
     spelled2,
@@ -104,6 +106,7 @@ export function literals_frozen_names() {
     spelled38,
     spelled39,
     spelled40,
+    spelled41,
   ];
   return names;
 }
