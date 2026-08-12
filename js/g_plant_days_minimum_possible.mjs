@@ -1,3 +1,10 @@
+import { g_generation_settings } from "./g_generation_settings.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
+import { g_arc_conversations_a_day } from "./g_arc_conversations_a_day.mjs";
+import { math_max } from "./math_max.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 export function g_plant_days_minimum_possible() {
   "The fewest days a plant could be and still hold everything a plant has to hold - a floor worked out from the parts rather than chosen.";
   "It is not the same question as how long a plant SHOULD be. That one is a taste about pacing and lives in the settings as a wanted range; this one is arithmetic, and a plant under it is not short, it is unschedulable. Both are needed and neither can stand in for the other, which is why the wanted minimum is checked against this rather than replaced by it.";
