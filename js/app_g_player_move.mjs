@@ -1,3 +1,5 @@
+import { or } from "./or.mjs";
+import { app_g_day_followers_face } from "./app_g_day_followers_face.mjs";
 import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
 import { app_g_player_path_choose } from "./app_g_player_path_choose.mjs";
 import { app_g_day_line_blocking_is } from "./app_g_day_line_blocking_is.mjs";
@@ -33,6 +35,13 @@ export async function app_g_player_move(
     app_g_crowd_part(g, path, still);
     await app_g_player_path_animate(g, player, path, player_img_c, div_map);
     object_assign(player, coordinates_move_to);
+  }
+  ("everything has come to a stop, so the line stops facing the way it was going and each of them looks at whoever they are following");
+  ("it is here rather than inside the walk because the player's own tile is written down at the end of it - turned any sooner, the one at the front of the line would be pointed at the tile the player has just left, which is the tile that person is now standing on themselves");
+  ("a tap that reaches nowhere and moved nobody is not a stop, it is a refusal, and waiting out a slide before answering it would delay the answer for nothing");
+  let moved = or(blocking, reachable);
+  if (moved) {
+    await app_g_day_followers_face(player);
   }
   return reachable;
 }
