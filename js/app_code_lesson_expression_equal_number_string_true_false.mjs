@@ -1,8 +1,7 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_equal_number_string_true_false_same_plain } from "./app_code_lesson_expression_equal_number_string_true_false_same_plain.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_number_and_true_false } from "./app_code_lesson_expression_equal_number_string_true_false_number_and_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
-import { app_code_lesson_expression_equal_number_string_true_false_compared } from "./app_code_lesson_expression_equal_number_string_true_false_compared.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -14,7 +13,6 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_equal_number_string_true_false() {
   "=== across a number, a string, and true or false: it is true only when both sides are the same one of those three. A number can equal a number, a string can equal a string, true and false can equal each other - but a number never equals a string, and neither ever equals true or false.";
   "The three groups are NEVER named with a word of their own - not type, not kind, not sort. Every lesson before this one taught them one at a time under the names the learner already has: number, string, true and false. A collective noun would be a fourth thing to remember on a screen whose whole content is a rule about the three, and the rule states perfectly well without it - a number, a string, and true or false are never the same as each other. The word for it can wait for the lesson that needs it, which is the one that teaches typeof.";
@@ -85,14 +83,4 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     html_div_cycle_code(quotes, ["", "1", " is a number"]);
     html_div_cycle_code(quotes, ["Only the quotes are different"]);
   }
-}
-function app_code_lesson_expression_equal_number_string_true_false_same_plain() {
-  arguments_assert(arguments, 0);
-  ("a number or a true or false compared with itself: true. The plain half of the same pairing as same_string");
-  let word = list_random_item(["1", "5", "true", "false"]);
-  let code = app_code_lesson_expression_equal_number_string_true_false_compared(
-    word,
-    word,
-  );
-  return code;
 }
