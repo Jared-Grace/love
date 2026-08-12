@@ -1,3 +1,4 @@
+import { git_folder_is } from "./git_folder_is.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { path_join } from "./path_join.mjs";
@@ -27,6 +28,12 @@ export async function function_commit_last(f_name) {
   let here = folder_current_absolute();
   let folder = path_join([here, "..", repo_name]);
   let f_path = function_name_to_path_relative(f_name);
+  ("A folder beside this one holding functions need not be a repository at all, and asking git about one that is not throws rather than answering. A function nobody has ever committed and a function in a folder nobody could commit are the same answer to a reader: there is no commit to name. Real case: a folder of working notes beside the repos, whose files a gate named, killed a whole nineteen minute run at the very last step");
+  let repo = await git_folder_is(folder);
+  if (not(repo)) {
+    let uncommittable = null;
+    return uncommittable;
+  }
   let printed = await git_folder_run(folder, [
     "log",
     "-1",
