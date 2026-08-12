@@ -993,6 +993,20 @@ export function permission_grant_names() {
   let spelled974 = fn_name("qa_gate_timings_path");
   let spelled975 = fn_name("qa_apps_commit_deploy_remembered");
   let spelled976 = fn_name("qa_app_commit_deployable_remembered");
+  let spelled977 = fn_name("qa_gate_hint_depth");
+  let spelled978 = fn_name("qa_gate_names_hinted");
+  let spelled979 = fn_name("qa_gates_said_plain_baseline_write");
+  let spelled980 = fn_name("function_params_move_first_text");
+  let spelled981 = fn_name("bible_sentence_end_marks_write");
+  let spelled982 = fn_name("bible_sentence_end_marks_gate_run");
+  let spelled983 = fn_name("function_callee_seam_assert");
+  let spelled984 = fn_name("ebible_index_flat_upload_name");
+  let spelled985 = fn_name("ebible_folder_english");
+  let spelled986 = fn_name("firebase_storage_download_json_jg_decompress");
+  let spelled987 = fn_name("qa_gate_timings_read");
+  let spelled988 = fn_name("bible_verse_holes_write");
+  let spelled989 = fn_name("bible_verse_holes_gate_run");
+  let spelled990 = fn_name("bible_verse_end_is_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -1970,6 +1984,20 @@ export function permission_grant_names() {
     spelled974,
     spelled975,
     spelled976,
+    spelled977,
+    spelled978,
+    spelled979,
+    spelled980,
+    spelled981,
+    spelled982,
+    spelled983,
+    spelled984,
+    spelled985,
+    spelled986,
+    spelled987,
+    spelled988,
+    spelled989,
+    spelled990,
   ];
   return names;
 }
