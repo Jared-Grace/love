@@ -967,6 +967,8 @@ export function permission_grant_names() {
   let spelled948 = fn_name("g_plant_days_seeds_report");
   let spelled949 = fn_name("qa_commit_beside_heads");
   let spelled950 = fn_name("qa_commit_entry_beside_matching_cases_gate_run");
+  let spelled951 = fn_name("ebible_chapter_code_to_book");
+  let spelled952 = fn_name("ebible_chapter_code_pad");
   let names = [
     spelled,
     spelled2,
@@ -1918,6 +1920,8 @@ export function permission_grant_names() {
     spelled948,
     spelled949,
     spelled950,
+    spelled951,
+    spelled952,
   ];
   return names;
 }
