@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_code_lesson_expression_parentheses_moved } from "./app_code_lesson_expression_parentheses_moved.mjs";
-import { app_code_lesson_expression_parentheses_same_strength } from "./app_code_lesson_expression_parentheses_same_strength.mjs";
+import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic } from "./app_code_lesson_expression_parentheses_arithmetic.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
 import { app_code_lesson_expression_parentheses_both_sides } from "./app_code_lesson_expression_parentheses_both_sides.mjs";
@@ -144,7 +144,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_minus_divide,
     app_code_lesson_expression_exponent,
     app_code_lesson_expression_parentheses_arithmetic,
-    app_code_lesson_expression_parentheses_same_strength,
+    app_code_lesson_expression_parentheses_minus_divide,
     app_code_lesson_expression_parentheses_moved,
     app_code_lesson_expression_arithmetic_less_than,
     app_code_lesson_functions_arithmetic,

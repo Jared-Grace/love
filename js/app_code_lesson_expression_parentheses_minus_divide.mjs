@@ -12,7 +12,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_parentheses_same_strength() {
+export function app_code_lesson_expression_parentheses_minus_divide() {
   "the second parentheses lesson, and the one that answers a question the first leaves open. The first showed brackets beating a STRONGER operator: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. A learner can come away believing brackets only matter when the operators differ in strength - that they are a way of saying do the weak one first. This lesson shows them changing an answer where both operators are the SAME strength: 12 - (3 + 4) is 5 where 12 - 3 + 4 is 13, and 12 / (2 * 3) is 2 where 12 / 2 * 3 is 18. What the brackets override here is not strength but the left-to-right order the same-strength lessons taught.";
   "The group is always on the RIGHT of the - or the /, because that is the only side where it changes anything: (a + b) - c and a + b - c are the same line. That the position matters here, when the first lesson showed the group happily on either side of a *, is the point rather than an accident - and it is why the title names the OUTER operator.";
   "Every line is built so the answer, the group, and the wrong answer are all whole and never below zero: the subtraction shapes take a = b + c + k, and the division shape takes a = b * c * k.";
