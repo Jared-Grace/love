@@ -13,6 +13,11 @@ export async function app_g_click_npc(div_map, npcs_matched, player_img_c) {
   if (converted) {
     return;
   }
+  ("a believer the player has come back for is GATHERED by the tap rather than talked to - the day is past talking with them, and the group is on its way to the water");
+  let collected = await app_g_day_collect_tap_if(npc);
+  if (collected) {
+    return;
+  }
   let player = await app_g_player_get();
   let npc_img = app_g_npc_img_get(npc);
   let direction_npc = g_direction(npc, player);
