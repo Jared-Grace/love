@@ -1,30 +1,7 @@
-import { html_imgs_load_wait } from "./html_imgs_load_wait.mjs";
-import { app_g_player_img } from "./app_g_player_img.mjs";
-import { app_g_div_map_on_click } from "./app_g_div_map_on_click.mjs";
-import { app_g_game_save_get_or_refresh } from "./app_g_game_save_get_or_refresh.mjs";
-import { app_g_player_scroll_center } from "./app_g_player_scroll_center.mjs";
-import { app_g_div_map_new } from "./app_g_div_map_new.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_g_reset_if } from "./app_g_reset_if.mjs";
-import { app_g_title_hash } from "./app_g_title_hash.mjs";
-import { app_g_dev_if } from "./app_g_dev_if.mjs";
-import { app_g_view_render } from "./app_g_view_render.mjs";
-import { app_g_time_tint } from "./app_g_time_tint.mjs";
-export async function app_g_refresh(context, div_map_container) {
-  await app_g_reset_if();
-  app_g_title_hash();
-  let g = await app_g_game_save_get_or_refresh(context);
-  if (null_is(g)) {
-    return;
-  }
-  html_clear(div_map_container);
-  let div_map = await app_g_div_map_new(div_map_container);
-  let player_img_c = await app_g_player_img(div_map);
-  app_g_div_map_on_click(div_map, player_img_c);
-  await app_g_player_scroll_center(div_map, player_img_c);
-  app_g_time_tint(div_map_container, g);
-  await app_g_dev_if(div_map);
-  await app_g_view_render(div_map);
-  await html_imgs_load_wait(div_map_container);
+import { window_reload } from "./window_reload.mjs";
+export function app_g_refresh() {
+  "load the page again from the player menu, so a new build can be picked up without reaching for the browser's own reload";
+  "it keeps the screen you were on. reloading asks for the address that is already in the bar, and the hash naming a dev route is part of that address, so you come back on the same route rather than at the front door. the game itself is saved, so the world is the one you left; a route that sets a scene up runs its setup again, which is what makes it a fresh run of that scene rather than a resumed one";
+  "a phone is the reason it exists at all: the browser's reload lives behind the bar that a full-height page is hiding, so on the very screen most worth reloading it is the hardest thing to reach";
+  window_reload();
 }
