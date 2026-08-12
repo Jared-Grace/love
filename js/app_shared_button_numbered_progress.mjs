@@ -42,6 +42,10 @@ export function app_shared_button_numbered_progress(
       html_style_background_color_set(button, blue_strong);
       let white = app_shared_button_font_color();
       html_font_color_set(button, white);
+      ("the title is painted into this row after this returns, and a category word paints itself its own dark blue - which on this one background is the background. So the row says here what colour a category inside it should be, and the word reads that when it is drawn");
+      let variable = app_shared_text_category_color_variable();
+      let category_light = app_shared_text_category_color_on_dark();
+      html_style_variable_set(button, variable, category_light);
     } else {
       let blue_light = app_shared_container_blue_border_color();
       html_style_background_color_set(button, blue_light);
