@@ -1,13 +1,12 @@
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { permission_grant_refusals_names } from "./permission_grant_refusals_names.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { permission_settings_allow_drift } from "./permission_settings_allow_drift.mjs";
 import { permission_settings_allow_drift_verdict } from "./permission_settings_allow_drift_verdict.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function permission_settings_allow_assert() {
   "QA gate: the allow rules on disk are exactly the ones the JS list generates";
@@ -29,22 +28,21 @@ export async function permission_settings_allow_assert() {
   if (clean) {
     return counts;
   }
+  ("Each fault is thrown as a record and nothing is printed beside it. Whoever reads a failure next reads it for names and takes every one of them as accused, so the repair command has to sit under the hint that reader drops - and a second block of JSON printed above the complaint is worse than a sentence, because the reading takes everything from the first brace to the last and gets something it cannot parse at all, which leaves the whole of it standing.");
   let grew = equal(verdict, "addition");
   if (grew) {
-    let json = json_format_to({
-      arrived,
-      departed,
-    });
-    console.log(json);
     let f_name = fn_name("permission_grant_add");
-    let message = text_combine_multiple([
-      "permission settings gate: ",
-      arrived.length,
-      " function(s) hold an allow rule the JS list does not account for, so authority grew and no human gave it. A rule is added by naming the function to ",
-      f_name,
-      ", which asks first - never by editing the settings file or the names list directly.",
-    ]);
-    throw new Error(message);
+    let hint = {
+      advice: text_combine_multiple([
+        "these hold an allow rule the JS list does not account for, so authority grew and no human gave it. A rule is added by naming the function to ",
+        f_name,
+        ", which asks first - never by editing the settings file or the names list directly.",
+      ]),
+      departed,
+    };
+    list_empty_is_assert_json(arrived, {
+      hint,
+    });
   }
   ("A rename and a removal both leave authority where it was or narrower, so repairing them here would be safe in itself - and it is still not done here. Calling the regenerator from a gate makes every caller of the gate a writer of permission rules, and the deploy command reaches this through ",
     fn_name("firebase_deploy"),
@@ -56,32 +54,34 @@ export async function permission_settings_allow_assert() {
     return b;
   }
   let restorable = list_filter(departed, restorable_is);
-  let told = json_format_to({
+  let f_name4 = fn_name("permission_grants_departed_restore");
+  let hint_lost = {
+    advice: text_combine_multiple([
+      "these hold an allow rule on disk while the JS list no longer names them, and every one of them is still live and still grantable - so this is a lost write rather than a rename, and regenerating would throw away approvals the human already gave. Put them back with ",
+      f_name4,
+      ", which restores only names the settings file already carries.",
+    ]),
     verdict,
     arrived,
     departed,
-    restorable,
+  };
+  list_empty_is_assert_json(restorable, {
+    hint: hint_lost,
   });
-  console.log(told);
-  let lost = list_empty_not_is(restorable);
-  if (lost) {
-    let f_name4 = fn_name("permission_grants_departed_restore");
-    let message3 = text_combine_multiple([
-      "permission settings gate: ",
-      restorable.length,
-      " function(s) hold an allow rule on disk while the JS list no longer names them, and every one of them is still live and still grantable - so this is a lost write rather than a rename, and regenerating would throw away approvals the human already gave. Put them back with ",
-      f_name4,
-      ", which restores only names the settings file already carries.",
-    ]);
-    throw new Error(message3);
-  }
   let f_name2 = fn_name("permission_settings_allow_write");
-  let message2 = text_combine_multiple([
-    "permission settings gate: authority did not grow - this is a ",
+  let hint_shrank = {
+    advice: text_combine_multiple([
+      "authority did not grow - this is a ",
+      verdict,
+      ", so the standing approvals are simply following their functions. Write the rules out again with ",
+      f_name2,
+      " and this passes.",
+    ]),
     verdict,
-    ", so the standing approvals are simply following their functions. Write the rules out again with ",
-    f_name2,
-    " and this passes.",
-  ]);
-  throw new Error(message2);
+    arrived,
+  };
+  list_empty_is_assert_json(departed, {
+    hint: hint_shrank,
+  });
+  return counts;
 }
