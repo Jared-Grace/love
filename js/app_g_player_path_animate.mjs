@@ -1,3 +1,5 @@
+import { app_g_day_trail_add } from "./app_g_day_trail_add.mjs";
+import { app_g_day_followers_settle } from "./app_g_day_followers_settle.mjs";
 import { app_g_day_followers_step } from "./app_g_day_followers_step.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
 import { each_async } from "./each_async.mjs";
