@@ -33,11 +33,13 @@ export function gloss_passage_base_repair(passage, verses_base) {
     return r;
   }
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  function word_get(item) {
+  ("an explanation may name a phrase rather than a single word, so what it names is split the same way the verse is. Asking for the whole field as one word dropped every phrase in the chapter, because no single word of the verse ever equals two words joined.");
+  function words_get(item) {
     let word = property_get(item, word_key);
-    return word;
+    let words = text_split_space(word);
+    return words;
   }
-  let kept = words_multiset_keep(items, word_get, words_allowed);
+  let kept = words_multiset_keep(items, words_get, words_allowed);
   let value = json_format_to(kept);
   property_set(passage, "generated", value);
   let left = list_size(items);
