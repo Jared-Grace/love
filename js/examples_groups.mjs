@@ -127,6 +127,7 @@ export function examples_groups() {
       name: "Whole-repo changes",
       examples: [
         "example_rename_across_files",
+        "example_rename_refuses_a_taken_name",
         "example_prefix_rename_across_files",
         "example_delete_unused_across_files",
         "example_delete_unused_refused",
