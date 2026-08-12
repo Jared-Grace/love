@@ -32,6 +32,28 @@ Consequences you must author to:
 - `gloss` — the shortest honest English equivalent. One or two words. A slash is allowed when one word genuinely will not do (`with / toward`).
 - `explain` — a few plain sentences. This is the body of the work.
 
+## The grammar is GIVEN. Do not generate it.
+
+You are handed the words, already parsed. `bible_interlinear_verse(reference)` returns, in order, one record per word:
+
+```
+{ original, translit, parsing, parsing_long, gloss, strong }
+```
+
+For John 1:1 that is `ἀρχῇ` / `archē` / `N-DFS` / `Noun - Dative Feminine Singular` / `[the] beginning` / `746`.
+
+This is the Berean Study Bible interlinear table, and it settles by data what used to be guessed:
+
+- **`original` is your `word` field.** Copy it. Never retype an original-language word by hand — accents and final forms are exactly where a transcription slips.
+- **`parsing_long` is the morphology.** It is not a hint, it is the answer. **Never contradict it, never restate it in code form, never add a grammatical claim it does not make.** If it says Dative Feminine Singular, your job is to say what the dative is *doing here* — not to decide the case.
+- **`gloss` is a strong default** for your `gloss` field. Strip the square brackets the BSB uses for supplied words (`[the] beginning` → `beginning`). Override it only when it is actively misleading in this clause, and then say why in the explain.
+- **`translit` is the transliteration.** Use it when you point at an English descendant; never invent your own spelling.
+- **`strong` is the Strong's number** — the key into public-domain lexicons for meaning range and derivation.
+
+So the authoring job is **the explain field, and only the parts no dataset holds**: turning the parsing into plain English, saying what the form does in this clause, and the etymology.
+
+A passage where you find yourself deciding a case or a tense means you are not reading the data. Stop and pull it.
+
 ## Who you are writing for
 
 An English speaker with **no background in grammar at all** — someone who has not met the word "case", "dative", or "participle".
@@ -62,7 +84,7 @@ In this order, skipping what does not apply:
 
 1. **What kind of word it is** — noun, verb, preposition, conjunction, article, pronoun. In those words, not in abbreviations.
 2. **What it means** — the range, if the range matters. One meaning if it does not.
-3. **The grammar that is actually doing work here.** For a verb: person, number, tense, and what the tense shows. For a noun: case, and what the case is doing. For an article or adjective: what it agrees with. Skip grammar that changes nothing for the reader.
+3. **The grammar that is actually doing work here** — read off `parsing_long`, rendered in plain words. For a verb: person, number, tense, and what the tense *shows*. For a noun: case, and what the case is *doing*. For an article or adjective: what it agrees with. Skip any part of the parsing that changes nothing for the reader — you may leave a detail out, you may never state one the parsing does not.
 4. **How the parts build it** — prefix, root, ending — when the word visibly decomposes and the decomposition helps.
 5. **Etymology, when it is a true hook.** An English word the reader already knows, sharing the root: `ἀρχή` → archaeology, archangel. `λόγος` → logic, dialogue. `θεός` → theology.
 
@@ -98,8 +120,9 @@ Small choices, fixed once, so chapters authored months apart match:
 
 ## Before saving
 
-- [ ] One entry per word, in passage order, no word skipped.
-- [ ] Every `word` field matches the green text character for character.
+- [ ] One entry per word, in passage order, no word skipped — the count matches the interlinear record count.
+- [ ] Every `word` field is copied from `original`, not retyped.
+- [ ] No explain contradicts or exceeds its `parsing_long`.
 - [ ] No "same as above", no empty explain, no markdown, no line breaks.
 - [ ] Every grammar term used is defined somewhere in this passage before or where it is used.
 - [ ] Every etymology is one you are certain of.
