@@ -1,7 +1,6 @@
+import { g_plant_day_leader_turns } from "./g_plant_day_leader_turns.mjs";
 import { g_plant_day_fitting } from "./g_plant_day_fitting.mjs";
-import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
 import { error_json } from "./error_json.mjs";
-import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -15,7 +14,6 @@ import { random_index } from "./random_index.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { list_filter_list_empty_not_is } from "./list_filter_list_empty_not_is.mjs";
 import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
 export function g_plant_days(conversation_lists, next) {
   "Lays every npc's conversations onto the days of a plant, filling what a day cannot spend on conversations with questions - so a plant's shape is worked out from what its people are worth rather than from a day count decided in advance.";
   "A day is a TURN BUDGET and nothing else. Conversations are indivisible pieces laid into it until the next one will not fit, so how many a day holds is an OUTCOME - six on a day of short ones, two on a day of long ones. Nothing caps it, because a conversation's own low end already stops a piece being too small to be worth walking over for.";
@@ -33,7 +31,6 @@ export function g_plant_days(conversation_lists, next) {
   let kept = subtract(100, s.question_matches_percent);
   let budget = multiply_divide(s.day_matches, kept, 100);
   let left = list_map(conversation_lists, list_copy);
-  let count = list_size(left);
   ("The LEADER is not one of the lists, which is why they are drawn rather than taken off one - the reason is in ",
     fn_name("g_plant_day_leader_turns"),
     ".");
