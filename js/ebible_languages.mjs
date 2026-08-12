@@ -175,7 +175,7 @@ export function ebible_languages() {
     },
     {
       name: "Thai",
-      bible_folder: "thaKJV",
+      bible_folder: ebible_folder_thai(),
       language_code: "tha",
     },
     {
