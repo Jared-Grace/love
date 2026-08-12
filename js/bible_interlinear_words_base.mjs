@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { bible_interlinear_sigla_edition_pairs } from "./bible_interlinear_sigla_edition_pairs.mjs";
 ("One verse's interlinear rows, reduced to the words that belong to the public-domain");
 ("base text - every word that belongs to a later edition instead is dropped, span and all.");
@@ -22,7 +24,7 @@ export function bible_interlinear_words_base(rows, marked_key) {
   let open_edition = "";
   function row_read(row) {
     let value = row[marked_key];
-    let missing = value === undefined || value === null;
+    let missing = equal(value, undefined) || equal(value, null);
     let marked = missing ? "" : String(value);
     let characters = Array.from(marked);
     let opened = "";
@@ -38,11 +40,11 @@ export function bible_interlinear_words_base(rows, marked_key) {
       }
     }
     characters.forEach(character_read);
-    let inside = open_edition !== "" || opened !== "";
-    if (opened !== "") {
+    let inside = not_equal(open_edition, "") || not_equal(opened, "");
+    if (not_equal(opened, "")) {
       open_edition = opened;
     }
-    if (closed !== "") {
+    if (not_equal(closed, "")) {
       open_edition = "";
     }
     if (inside) {

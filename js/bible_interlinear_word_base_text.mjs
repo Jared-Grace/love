@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { bible_interlinear_sigla_edition_pairs } from "./bible_interlinear_sigla_edition_pairs.mjs";
 import { text_trim } from "./text_trim.mjs";
 ("One marked interlinear word with its editorial marks removed, leaving only the word.");
@@ -23,7 +24,8 @@ export function bible_interlinear_word_base_text(marked) {
   let characters = Array.from(marked);
   function keep_is(character) {
     let remove = removable[character];
-    return !remove;
+    let n = not(remove);
+    return n;
   }
   let kept = characters.filter(keep_is);
   let joined = kept.join("");
