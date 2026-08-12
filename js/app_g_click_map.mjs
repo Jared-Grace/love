@@ -33,7 +33,7 @@ export async function app_g_click_map(
     player_img_c,
     div_map,
   );
-  ("a tap on somebody is two things at once: walk over to them, and speak to them once you are there. the second only happens if the first did. a walk that was refused, or one that stopped short because the way was never opened, leaves the player where they were - and a conversation opened from across the room reads as talking through whoever is standing in between");
+  ("a tap on somebody is walk over AND speak. the second only happens if the first arrived, or the conversation reads as talking through whoever is standing in between");
   let beside = await app_g_player_beside_is(clicked_coordinates);
   let npc_reached = npc_clicked && beside;
   await app_g_click_npc_if(npc_reached, div_map, npcs_matched, player_img_c);
