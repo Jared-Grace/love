@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_equal_number_string_true_false_compared } from "./app_code_lesson_expression_equal_number_string_true_false_compared.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -10,11 +11,9 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
-import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_equal_number_string_true_false() {
   "=== across a number, a string, and true or false: it is true only when both sides are the same one of those three. A number can equal a number, a string can equal a string, true and false can equal each other - but a number never equals a string, and neither ever equals true or false.";
   "The three groups are NEVER named with a word of their own - not type, not kind, not sort. Every lesson before this one taught them one at a time under the names the learner already has: number, string, true and false. A collective noun would be a fourth thing to remember on a screen whose whole content is a rule about the three, and the rule states perfectly well without it - a number, a string, and true or false are never the same as each other. The word for it can wait for the lesson that needs it, which is the one that teaches typeof.";
@@ -36,17 +35,15 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function compared(left_code, right_code) {
-    "two pieces of code with === between them";
-    let symbol = js_operator_triple_equal_symbol();
-    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
-    return code;
-  }
   function look_alike() {
     "a value and the string spelled exactly like it: \"5\" === 5, or \"true\" === true. Always false, and the one line the lesson exists for. The word is held as its own code text from the start, so the same word serves both sides - quoted on the left, bare on the right - and the two can never drift apart";
     let word = list_random_item(["1", "2", "5", "true", "false"]);
     let quoted = app_code_string_code(word);
-    let code = compared(quoted, word);
+    let code =
+      app_code_lesson_expression_equal_number_string_true_false_compared(
+        quoted,
+        word,
+      );
     return code;
   }
   function number_and_true_false() {
@@ -55,7 +52,11 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     let t2 = js_keyword_true();
     let f2 = js_keyword_false();
     let word = list_random_item([t2, f2]);
-    let code = compared(number, word);
+    let code =
+      app_code_lesson_expression_equal_number_string_true_false_compared(
+        number,
+        word,
+      );
     return code;
   }
   function same_string() {
@@ -63,13 +64,21 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     let two = app_code_lesson_expression_string_concat_pair();
     let word = list_get(two, 0);
     let quoted = app_code_string_code(word);
-    let code = compared(quoted, quoted);
+    let code =
+      app_code_lesson_expression_equal_number_string_true_false_compared(
+        quoted,
+        quoted,
+      );
     return code;
   }
   function same_plain() {
     "a number or a true or false compared with itself: true. The plain half of the same pairing as same_string";
     let word = list_random_item(["1", "5", "true", "false"]);
-    let code = compared(word, word);
+    let code =
+      app_code_lesson_expression_equal_number_string_true_false_compared(
+        word,
+        word,
+      );
     return code;
   }
   function refill() {
