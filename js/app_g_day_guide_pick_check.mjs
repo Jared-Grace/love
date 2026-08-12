@@ -87,6 +87,7 @@ export function app_g_day_guide_pick_check() {
   let r = {
     gold: [gold.x, gold.y],
     gold_detour: [gold2.x, gold2.y],
+    gold_blocked: [gold3.x, gold3.y],
     window: window_checked,
     water: water_checked,
   };
