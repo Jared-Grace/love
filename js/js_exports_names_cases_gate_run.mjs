@@ -1,6 +1,5 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { js_exports_names_cases } from "./js_exports_names_cases.mjs";
-import { property_get } from "./property_get.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_exports_names } from "./js_exports_names.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function js_exports_names_cases_gate_run() {
@@ -9,8 +8,7 @@ export function js_exports_names_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero";
   let cases = js_exports_names_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let names = js_exports_names(ast);
     return names;
   }
