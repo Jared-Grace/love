@@ -29,8 +29,14 @@ export async function qa_gate_run_unlocked() {
   "The three questions about this machine and about where the folder sits are asked here, where the answer is, and their names are added to whatever the copy complained about so one complaint covers both halves";
   "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
   "How long each part of the run took is printed at the end, because the whole number on its own sends whoever wants it faster to the wrong place. Measured once: the gates themselves were four and a half minutes of a nineteen minute run, and the other three quarters went on what happens after them - so every reading of the gates, and every plan to make one of them faster, was aimed at a quarter of the cost. The parts are timed rather than reasoned about because the reasoning was wrong twice on the same afternoon";
+  ("Where the neighbours stand is asked before anything is frozen, because it is half of the name this run's answer would be filed under and the freezing is itself part of the window they could move in.");
   let began = date_now_milliseconds();
-  let folder = await qa_tree_ensure();
+  let beside = await qa_commit_beside_heads();
+  let before = property_get(beside, "heads");
+  ("Which way the folder is frozen is a question about the folder rather than a setting, and it lives one name along. When nobody has work in flight the copy stands on a commit, which is what makes this run's answer the same kind of thing as a judgement of that commit; otherwise it is the working folder as it stands, and belongs to no commit at all");
+  let frozen = await qa_gate_frozen_ensure();
+  let folder = property_get(frozen, "folder");
+  let commit = property_get(frozen, "commit");
   let machine = qa_gates_machine();
   async function copy_asked() {
     let asked = await qa_snapshot_gate_told(folder);
