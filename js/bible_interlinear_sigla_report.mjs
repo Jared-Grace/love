@@ -18,6 +18,10 @@ import { text_trim } from "./text_trim.mjs";
 ("counting Hebrew's vowel points and cantillation as part of the word, and the marks are");
 ("grouped by what they turn out to be. That found an undocumented");
 ("trailing asterisk the header never mentions, and counted NE's chevrons as unmarked.");
+("Each sample carries the verse it sits in. The readable reference is stamped only on a");
+("verse's FIRST word, so it is carried forward down the rows rather than read per word.");
+("A mark with no reference cannot be looked up, and a mark nobody can look up cannot be");
+("classified - which is the whole job here, since two of the marks are undocumented.");
 export async function bible_interlinear_sigla_report() {
   let path = bible_interlinear_json_path();
   let rows = await file_read_json(path);
@@ -47,7 +51,12 @@ export async function bible_interlinear_sigla_report() {
     let joined = marks.join("");
     return joined;
   }
+  let reference = "";
   function row_read(row) {
+    let stamped = row["VerseId"];
+    if (stamped) {
+      reference = String(stamped);
+    }
     let marked = text_of(row, marked_key);
     if (equal(marked, "")) {
       return;
@@ -68,6 +77,7 @@ export async function bible_interlinear_sigla_report() {
     let seen = samples[codepoints] || [];
     if (less_than(seen.length, 3)) {
       seen.push({
+        reference,
         marked,
         plain: text_of(row, plain_key),
         mark,
