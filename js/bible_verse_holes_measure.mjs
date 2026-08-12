@@ -1,3 +1,16 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_index_flat_storage } from "./ebible_index_flat_storage.mjs";
+import { bible_verse_holes_book } from "./bible_verse_holes_book.mjs";
+import { ebible_index_flat_book_chapter_codes } from "./ebible_index_flat_book_chapter_codes.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
+import { ebible_index_flat_chapter_verse_numbers } from "./ebible_index_flat_chapter_verse_numbers.mjs";
+import { list_map } from "./list_map.mjs";
+import { ebible_languages } from "./ebible_languages.mjs";
+import { bible_folder_key } from "./bible_folder_key.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { bible_folder_verse_holes } from "./bible_folder_verse_holes.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { list_size } from "./list_size.mjs";
 export async function bible_verse_holes_measure() {
   "Reads one book of every bible this repo ships and counts, for each one, how many of the verses a page will ask it for it has nothing to answer with.";
   "Every bible rather than the ones somebody thought to check, and asked of the list of bibles rather than typed, for the same reason its neighbour does it: the list grows, and nothing about adding a bible asks whether it holds every verse.";
