@@ -27,6 +27,14 @@ export async function git_push_folder(folder) {
     if (less_than(mins, 5)) {
       return;
     }
+    ("A repository with nowhere to push to is passed over here rather than pushed at and left to fail. Both endings leave the machine untouched, so nothing about what reaches the internet changes; what changes is that one of them is quiet. A push with no remote complains every five minutes for as long as the machine is on, and a log that always carries the same complaint is a log nobody reads, which costs the complaints that matter.");
+    ("Kept deliberately off the internet is a real thing for a folder to be, and this is what makes it cost nothing. A repository with no remote sits beside the others and is reached by every sweep and every transform exactly as they are - it simply never leaves. Adding a remote is a deliberate act, and this reads that act rather than a list of which folders are meant to be private, which would be right on the day it was typed and wrong afterwards.");
+    ("It is asked here and not at the top so git is only asked when a push was otherwise about to happen.");
+    let somewhere = await git_remote_origin_is(folder);
+    let nowhere = not(somewhere);
+    if (nowhere) {
+      return;
+    }
     await git_push_folder_now(folder);
     let lambda$previous = lambda_get(now_iso);
     await data_set(lambda$previous, property_name, joined);

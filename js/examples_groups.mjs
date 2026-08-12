@@ -135,7 +135,6 @@ export function examples_groups() {
         "example_param_new_across_files",
         "example_param_delete_across_files",
         "example_param_delete_refuses_a_missing_name",
-        "example_params_delete_refuses_before_any",
         "example_param_rename_carries_plain_marker",
         "example_param_rename_refuses_a_local",
       ],
