@@ -8,6 +8,7 @@ import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { each_async } from "./each_async.mjs";
 export async function ebible_readaloud_lines_differ(bible_folder) {
+  "$plain bible_folder";
   "Which chapters of one bible are written for reading aloud in a different number of lines from the number of verses its source page marks.";
   "A chapter read aloud arrives already divided, one line to a verse, and the pages mark where each verse begins. If those two counts agree everywhere then the lines are the verses and the only thing the reading aloud lacks is the numbers - which the page has. If they disagree the two cannot simply be laid against each other, and this says where.";
   "Asked of a whole bible at once rather than a chapter at a time, because one chapter agreeing proves nothing about a rule meant to hold for all of them.";
