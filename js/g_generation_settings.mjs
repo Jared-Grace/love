@@ -13,6 +13,8 @@ export function g_generation_settings() {
   "There is no number here for how many people a plant's cast holds, and the absence is deliberate. That count is worked out from what the preaching pays for once the leader is taken off the top, so writing it down here would be a second answer to a question that already has one, free to disagree with it.";
   "It WAS written here for a while, as a ten-thirteen-sixteen draw, because deriving it came out at about six however big the plant was. The fault was never the deriving: the leader's length was capped at a share of the budget, and a share grows with what it is a share of, so every extra turn a bigger plant won went back to the leader. Cutting that cap put the count back where it belongs and emptied these three keys.";
   "A hundred turns is the least the leader may be worth, and it is the ONE number here that decides how long a plant has to be. Everything else about a plant scales with its length - more days means more matches, more converts, longer arcs - so nothing else has a floor. The leader does, because an elder is formed over a fixed amount of time and a plant too short to do that has no elder to appoint at the end of it.";
+  "The day range is DESCRIPTION and not a promise. A plant ends when its arcs run out, arc turns are drawn, and nothing anywhere stops a run of short ones ending one early - so these three say what a scheduled plant comes to, and a generator that missed them would be telling the truth about itself while this file lied.";
+  "Forty seeds were scheduled at thirteen people and fifty-six matches: the mean came to seventeen and a half, the longest to twenty-one, and the shortest to thirteen. The floor was written at fifteen and two of the forty went under it, so it moved down to what was measured rather than the plants being forced up to it. Nothing was protecting anything - the floor exists so the leader can reach their hundred turns, nine days is enough for that, and the shortest plant still gave them a hundred and sixty-eight.";
   "The ceiling is every day. That is the logical bound rather than a preference - an npc holds one conversation a day, so the leader cannot be seen more often than the plant has days. Lower it if a leader who is always there stops feeling like a choice.";
   "The fewest CONVERSATIONS an arc may hold is one, and a one-conversation arc is a whole person rather than a thin one - somebody who hears and believes, and whose discipling then happens through the other believers rather than on screen. Holding the floor at three bought nothing and cost variety, because the budget then had to go into fewer, longer arcs.";
   "An arc's TURNS are drawn directly rather than counted out in conversations, because a conversation is itself a draw and multiplying two draws together says nothing either of them meant. Thirty is two and a half conversations at the usual length - long enough to hear and believe and be answered once, short enough that a room holds a dozen of them.";
@@ -31,7 +33,7 @@ export function g_generation_settings() {
     conversation_turns_mean: 12,
     conversation_turns_high: 24,
     plant_days: 18,
-    plant_days_minimum: 15,
+    plant_days_minimum: 13,
     plant_days_maximum: 21,
     leader_days_percent_minimum: 100,
     leader_days_percent_maximum: 100,
