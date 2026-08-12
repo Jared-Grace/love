@@ -70,7 +70,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     '', 
     "WHO TO WRITE",
     "Goal is each verse is used an equal number of times and closer to equality is better than further",
-    'Here are the counts of the verse text numbers and how many times they\'ve been used: TODO',
+    'Here are the counts of the verse text numbers and how many times they\'ve been used so far: TODO',
     'Relevance and appropriateness are more important than equally using each verse - do not use verses by force',
     "Never pick a trouble first and then hunt for a verse.",
     "",
