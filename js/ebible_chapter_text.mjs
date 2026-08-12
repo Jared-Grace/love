@@ -1,7 +1,6 @@
-import { ebible_chapter_main_ready } from "./ebible_chapter_main_ready.mjs";
+import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
+import { identity } from "./identity.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_parse_text } from "./html_parse_text.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
   ("One chapter as a single run of words, beside the mark the page puts at the start of each verse.");
