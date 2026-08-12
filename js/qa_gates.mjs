@@ -239,6 +239,7 @@ export function qa_gates() {
     js_identifiers_referenced_names_cases_gate_run,
     js_identifiers_rename_unused_number_suffixes_cases_gate_run,
     function_imports_gate_run,
+    js_imports_relative_paths_cases_gate_run,
     functions_imports_dangling_gate_run,
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
