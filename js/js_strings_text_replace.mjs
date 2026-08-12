@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_delete } from "./property_delete.mjs";
 import { each } from "./each.mjs";
@@ -13,8 +13,7 @@ export function js_strings_text_replace(ast, text_before, text_after) {
   let found = js_strings_generic(ast);
   let replaced = 0;
   function lambda(result) {
-    let value = property_get(result, "value");
-    let same = equal(value, text_before);
+    let same = property_equals(result, "value", text_before);
     if (same) {
       let node = property_get(result, "node");
       property_set(node, "value", text_after);
