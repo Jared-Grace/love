@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { g_npc_arc_turns } from "./g_npc_arc_turns.mjs";
@@ -11,7 +12,6 @@ import { list_join_comma } from "./list_join_comma.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sum } from "./list_sum.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -55,8 +55,7 @@ export function g_plant_days_report(seed) {
     let r = greater_than(turns, 0);
     return r;
   }
-  let list = list_filter(leader_each, came);
-  let leader_days = list_size(list);
+  let leader_days = list_filter_size(leader_each, came);
   let r = {
     npcs: s.plant_npcs_settle,
     days: list_size(days),
