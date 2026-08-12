@@ -34,7 +34,6 @@ export async function lock_waiting_print(owner_path, lock_folder, wait) {
       owner_suffix,
     ]);
   }
-  ("The name it speaks under is the caller's rather than its own, because that is the name a reader knows this waiting by, and it is written as a reference so a rename carries it - it cannot simply be imported, since the caller imports this");
-  let f_name = fn_name("lock_generic");
+  ("It speaks under its own name rather than the caller's. Naming the caller was tried and the pass that tidies these files kept turning it back, since a function's own name is the one thing it can always be sure of - and a line of log saying which piece of code spoke is better served by a name that cannot go stale than by one chosen to look familiar");
   log_keep(lock_waiting_print.name, message);
 }
