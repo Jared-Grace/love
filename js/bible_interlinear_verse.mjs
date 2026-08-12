@@ -1,3 +1,4 @@
+import { bible_interlinear_word_parts } from "./bible_interlinear_word_parts.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
