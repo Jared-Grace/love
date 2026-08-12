@@ -20,4 +20,16 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
     ["But we wanted to ask about ", "5"],
     ["So ", "2 < 5 < 8", " is not how we ask this in JS"],
   ]);
+  ("The unanswered question is answered where it is raised, rather than left standing. A reader who has just been shown true < 8 and not told what it comes to will ask, and a card that never acknowledges the question reads as one that did not notice it. Saying that many languages call the line an error also turns the omission from a gap into a reason: there is no single answer to give, and the one JS has is not the one that travels.");
+  app_code_container_light_blue_cycle_code_multiple(root, [
+    [
+      "Some languages will solve ",
+      "2 < 5 < 8",
+      ", but many will call it an error",
+    ],
+    [
+      "Our goal is to teach programming in general, not the ways JS differs from other languages",
+    ],
+    ["So we will not explain here what JS does with ", "2 < 5 < 8"],
+  ]);
 }
