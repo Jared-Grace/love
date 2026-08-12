@@ -1,3 +1,4 @@
+import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { g_prayers_conversation } from "./g_prayers_conversation.mjs";
 import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
@@ -136,6 +137,13 @@ export function app_g_dev_routes(div_map) {
     await app_g_view_set(null);
     await app_g_day_start(div_map);
   }
+  async function day_baptisms_collect() {
+    ("the #day_baptisms_collect demo (sibling of #day_unbelievers under the 'day' group): the OTHER half of a day - the same three chosen people, but two of them have already believed today, so the player finishes the last conversation and then GATHERS the day's believers and walks them to the water (",
+      fn_name("app_g_day_baptisms_collect_start"),
+      "). converts are baptized the same day, so who may be collected is exactly who believed today - nothing is stored to say so");
+    await app_g_view_set(null);
+    await app_g_day_baptisms_collect_start(div_map);
+  }
   async function day_conversation() {
     ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation as a ONE-slice day, so it spans the whole 6 AM sunrise → 7 PM dusk and the change is easy to SEE as you answer each turn (",
       fn_name("app_g_day_conversation_demo"),
@@ -162,6 +170,7 @@ export function app_g_dev_routes(div_map) {
     unbeliever,
     quick,
     day_unbelievers,
+    day_baptisms_collect,
     day_conversation,
     day_parts,
     day_hours,
