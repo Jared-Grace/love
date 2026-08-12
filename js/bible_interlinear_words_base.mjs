@@ -1,6 +1,7 @@
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { bible_interlinear_sigla_edition_pairs } from "./bible_interlinear_sigla_edition_pairs.mjs";
+import { bible_interlinear_word_base_text } from "./bible_interlinear_word_base_text.mjs";
 export function bible_interlinear_words_base(rows, marked_key) {
   "One verse's interlinear rows, reduced to the words that belong to the public-domain";
   "base text - every word that belongs to a later edition instead is dropped, span and all.";
@@ -20,6 +21,11 @@ export function bible_interlinear_words_base(rows, marked_key) {
   "verse they all have, and dropping it would delete scripture rather than a variant.";
   "Measured: this rule is what keeps Revelation 20:4 and 9:20, which are wrapped end to";
   "end and would otherwise come back empty.";
+  "The wordless rows are dropped FIRST, and that ordering is the whole of it. The tables";
+  "pad a verse with blank rows, and a blank row sits after the span's closing mark, so it";
+  "is kept - which left a wholly wrapped verse looking like a verse with something still";
+  "in it, the whole-verse rule never firing, and Revelation 20:4 coming back empty from a";
+  "function written to stop exactly that. A row with no word is not a word.";
   let pairs = bible_interlinear_sigla_edition_pairs();
   let openers = {};
   let closers = {};
@@ -28,12 +34,23 @@ export function bible_interlinear_words_base(rows, marked_key) {
     closers[pair.close] = pair.edition;
   }
   pairs.forEach(pair_note);
-  let kept = [];
-  let open_edition = "";
-  function row_read(row) {
+  function marked_of(row) {
     let value = row[marked_key];
     let missing = equal(value, undefined) || equal(value, null);
     let marked = missing ? "" : String(value);
+    return marked;
+  }
+  function word_present_is(row) {
+    let marked = marked_of(row);
+    let word = bible_interlinear_word_base_text(marked);
+    let present = not_equal(word, "");
+    return present;
+  }
+  let words = rows.filter(word_present_is);
+  let kept = [];
+  let open_edition = "";
+  function row_read(row) {
+    let marked = marked_of(row);
     let characters = Array.from(marked);
     let opened = "";
     let closed = "";
@@ -60,10 +77,10 @@ export function bible_interlinear_words_base(rows, marked_key) {
     }
     kept.push(row);
   }
-  rows.forEach(row_read);
-  let emptied = not_equal(rows.length, 0) && equal(kept.length, 0);
+  words.forEach(row_read);
+  let emptied = not_equal(words.length, 0) && equal(kept.length, 0);
   if (emptied) {
-    return rows;
+    return words;
   }
   return kept;
 }
