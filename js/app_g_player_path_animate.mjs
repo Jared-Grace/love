@@ -1,3 +1,4 @@
+import { app_g_player_npc_swap_if } from "./app_g_player_npc_swap_if.mjs";
 import { app_g_day_trail_add } from "./app_g_day_trail_add.mjs";
 import { app_g_day_followers_settle } from "./app_g_day_followers_settle.mjs";
 import { app_g_day_followers_step } from "./app_g_day_followers_step.mjs";
@@ -23,9 +24,7 @@ export async function app_g_player_path_animate(
     app_g_character_face(player, player_img_c, direction);
     ("the line walks with the player, one tile per tile, into the space the player is leaving. it is done HERE rather than once at the end of a tap because a line that teleported to the destination would not be a line");
     ("the tile being left is remembered FIRST and the line told to step second, because the line walks the remembered way - so a step that moved people before writing down where they were going would send each of them one tile short");
-    (
-      "somebody standing where the player is stepping trades places with them, so a player walled in by people can always walk out. on a way that goes AROUND everybody there is never anybody there, so this does nothing at all on an ordinary walk"
-    );
+    ("somebody standing where the player is stepping trades places with them, so a player walled in by people can always walk out. on a way that goes AROUND everybody there is never anybody there, so this does nothing at all on an ordinary walk");
     app_g_player_npc_swap_if(g, from, to);
     app_g_day_trail_add(from);
     app_g_day_followers_step();
