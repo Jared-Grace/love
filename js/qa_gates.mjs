@@ -1,3 +1,4 @@
+import { example_files_refuses_run_gate_run } from "./example_files_refuses_run_gate_run.mjs";
 import { js_statements_span_outputs_cases_gate_run } from "./js_statements_span_outputs_cases_gate_run.mjs";
 import { js_exports_names_cases_gate_run } from "./js_exports_names_cases_gate_run.mjs";
 import { js_imports_relative_named_cases_gate_run } from "./js_imports_relative_named_cases_gate_run.mjs";
