@@ -1,4 +1,4 @@
-import { app_g_refresh } from "./app_g_refresh.mjs";
+import { app_g_page_reload } from "./app_g_page_reload.mjs";
 import { app_g_day_discern_wanted_is } from "./app_g_day_discern_wanted_is.mjs";
 import { app_g_day_discern } from "./app_g_day_discern.mjs";
 import { g_prayer_discern } from "./g_prayer_discern.mjs";
@@ -69,6 +69,6 @@ export function app_g_menu(overlay, player) {
   app_g_button_uncolored(container, text, lambda7);
   app_g_study(player, container, close);
   app_g_new_game(container, player);
-  app_g_button_uncolored(container, "🔄 Refresh", app_g_refresh);
+  app_g_button_uncolored(container, "🔄 Refresh", app_g_page_reload);
   app_g_button_uncolored(container, "🛠 Dev Tools", app_g_dev_tools_open);
 }
