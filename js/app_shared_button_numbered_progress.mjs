@@ -1,3 +1,6 @@
+import { app_shared_text_category_color_variable } from "./app_shared_text_category_color_variable.mjs";
+import { app_shared_text_category_color_on_dark } from "./app_shared_text_category_color_on_dark.mjs";
+import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_span_text } from "./html_span_text.mjs";
