@@ -20,9 +20,7 @@ export function app_g_player_path_choose(g, player, to) {
   if (passed) {
     return through;
   }
-  ("nothing is left standing at all: a way through the line itself, which is the only answer when the line is what is in the way and there is no room behind it to back the line into.");
-  ("It is reached when a player has gathered more people than they have walked tiles - the trail is the room a line backs out into, and a line longer than the trail has none. Without this that player is walled in for the rest of the day by the very people following them, and no tap anywhere can ever free them.");
-  ("Passing the line is not walking it. Each of them is traded with in turn as the player reaches them, they stand still rather than walking up behind, and once the walk is over the line is turned around into the order they are now standing in.");
+  ("last resort: through the line itself, for a player who has gathered more people than they have walked tiles - the trail is the room a line backs out into, and a line longer than the trail has none. Without this they are walled in for the rest of the day by the people following them.");
   let nobody = g_game_npcs_standing(g, []);
   let past = g_coordinates_path_shortest(nobody, player, to);
   return past;
