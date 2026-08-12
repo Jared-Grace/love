@@ -18,7 +18,8 @@ export function app_g_day_follower_move(npc, to) {
   app_g_character_face(npc, img, direction);
   g_img_square_style_position_object(npc, img);
   app_g_npc_img_set(npc, img);
-  let crossed = not(null_is(cross));
+  let b = null_is(cross);
+  let crossed = not(b);
   if (crossed) {
     g_img_square_style_position_object(npc, cross);
     app_g_npc_cross_set(npc, cross);
