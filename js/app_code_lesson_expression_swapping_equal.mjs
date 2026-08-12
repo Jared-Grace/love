@@ -52,13 +52,7 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     html_div_cycle_code(same, ["So the answer will be the same"]);
     html_div_cycle_code(same, ["So we can always swap ", "==="]);
-    html_div_cycle_code(same, [
-      "Likewise, for asking if two numbers are different (",
-      "!==",
-      "), we can always swap ",
-      "!==",
-      " as well",
-    ]);
+    ("Each operator's example sits directly under its own rule. One example, placed after both rules, is read as belonging to the rule it touches - so the === example stranded under the !== sentence left === claimed four lines earlier with nothing beside it, and !== claimed with an example that was not of it.");
     html_div_cycle_code(same, [
       "For example: ",
       "3 === 5",
@@ -68,6 +62,23 @@ export function app_code_lesson_expression_swapping_equal() {
       "5 === 3",
       " is ",
       "false",
+    ]);
+    html_div_cycle_code(same, [
+      "Likewise, for asking if two numbers are different (",
+      "!==",
+      "), we can always swap ",
+      "!==",
+      " as well",
+    ]);
+    html_div_cycle_code(same, [
+      "For example: ",
+      "3 !== 5",
+      " is ",
+      "true",
+      ", and swapped: ",
+      "5 !== 3",
+      " is ",
+      "true",
     ]);
     let order_recall = app_code_container_light_blue(root);
     html_div_cycle_code(order_recall, [
