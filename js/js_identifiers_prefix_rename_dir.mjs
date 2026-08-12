@@ -42,6 +42,11 @@ export async function js_identifiers_prefix_rename_dir(
     return pair;
   }
   let pairs = list_map(matched, to_pair);
+  ("Every name the family would land on is asked about before any of them moves. A migration is one change wearing many file moves, so giving up part way through leaves the family split across two prefixes with one member written over - which is worse than either finishing or never starting.");
+  async function check(pair) {
+    await js_name_taken_dir_check(dir, pair.after);
+  }
+  await each_async(pairs, check);
   function rename_all(ast) {
     function apply(pair) {
       let lambda = js_identifiers_rename_dir_lambda(pair.before, pair.after);
