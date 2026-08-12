@@ -1,20 +1,12 @@
 import { lock_release_acquire } from "./lock_release_acquire.mjs";
 import { lock_ticket_ensure } from "./lock_ticket_ensure.mjs";
-import { lock_turn_mine_is } from "./lock_turn_mine_is.mjs";
-import { lock_waiting_print } from "./lock_waiting_print.mjs";
 import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
-import { lock_options } from "./lock_options.mjs";
 import { lock_folder_path } from "./lock_folder_path.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
-import { not } from "./not.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { path_join } from "./path_join.mjs";
-import { sleep } from "./sleep.mjs";
-import { import_install } from "./import_install.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 export async function lock_generic(lock_name, wait, lambda, who) {
-  let lockfile = await import_install("proper-lockfile");
   let result = lock_folder_path(lock_name);
   await folder_exists_ensure(result);
   let owner_path = path_join([result, "owner"]);

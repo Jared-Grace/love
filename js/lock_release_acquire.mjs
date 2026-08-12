@@ -6,7 +6,6 @@ import { lock_waiting_print } from "./lock_waiting_print.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { sleep } from "./sleep.mjs";
-
 export async function lock_release_acquire(
   lock_folder,
   ticket_path,
