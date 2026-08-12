@@ -1,3 +1,7 @@
+import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
+import { app_g_npc_walk_to } from "./app_g_npc_walk_to.mjs";
+import { app_g_player_get } from "./app_g_player_get.mjs";
+import { app_g_day_followers_face } from "./app_g_day_followers_face.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -5,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
 import { less_than } from "./less_than.mjs";
 export async function app_g_day_follower_add(npc) {
   "a believer joins the line: they stop being somebody the player still has to go and gather, and start walking behind the player instead";
