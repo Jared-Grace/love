@@ -1,3 +1,4 @@
+import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
@@ -51,7 +52,8 @@ export function app_code_lesson_expression_swapping_equal() {
       "Then we are still asking if those two numbers are the same",
     ]);
     html_div_cycle_code(same, ["So the answer will be the same"]);
-    html_div_cycle_code(same, ["So we can always swap ", "==="]);
+    ("the line before this one already opens on So. Two conclusions in a row both announcing themselves as the conclusion read as one thought stuttering, and the second one is the further step - it says what the sameness of the answer buys us");
+    html_div_cycle_code(same, ["This means we can always swap ", "==="]);
     ("Each operator's example sits directly under its own rule. One example, placed after both rules, is read as belonging to the rule it touches - so the === example stranded under the !== sentence left === claimed four lines earlier with nothing beside it, and !== claimed with an example that was not of it.");
     html_div_cycle_code(same, [
       "For example: ",
@@ -91,9 +93,7 @@ export function app_code_lesson_expression_swapping_equal() {
       " and ",
       ">=",
     ]);
-    html_div_cycle_code(order_recall, [
-      "However, we can always swap two numbers that are the same, because both numbers are the same before and after",
-    ]);
+    app_code_lesson_swapping_same_numbers_line(order_recall);
     let paren = app_code_container_light_blue(root);
     html_div_cycle_code(paren, [
       "Remember: when both sides are comparisons, we wrap each side in ",

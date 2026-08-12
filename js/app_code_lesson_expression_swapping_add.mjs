@@ -1,3 +1,4 @@
+import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
@@ -112,8 +113,6 @@ export function app_code_lesson_expression_swapping_add() {
       " are different, so we can never swap two different numbers around ",
       "-",
     ]);
-    html_div_cycle_code(minus, [
-      "However, we can always swap two numbers that are the same, because both numbers are the same before and after",
-    ]);
+    app_code_lesson_swapping_same_numbers_line(minus);
   }
 }
