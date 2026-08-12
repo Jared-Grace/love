@@ -1,3 +1,7 @@
+import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
+import { g_game_npcs_standing } from "./g_game_npcs_standing.mjs";
 export function app_g_player_path_choose(g, player, to) {
   "the way the player walks somewhere: around everybody if there is a way around, and only if there is none, straight through the people in the way - each of whom trades places with the player as they meet.";
   "Around is asked first and kept whenever it exists, so people are still walked around politely and nobody is ever moved for a shortcut. Going through is the last answer, not the first, and it is only ever a shorter walk than no walk at all.";

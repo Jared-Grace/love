@@ -1,3 +1,4 @@
+import { g_game_npcs_standing } from "./g_game_npcs_standing.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";

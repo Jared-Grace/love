@@ -1,3 +1,7 @@
+import { g_coordinates_npc_standing } from "./g_coordinates_npc_standing.mjs";
+import { null_is } from "./null_is.mjs";
+import { g_coordinates_tile } from "./g_coordinates_tile.mjs";
+import { app_g_npc_move } from "./app_g_npc_move.mjs";
 export function app_g_player_npc_swap_if(g, from, to) {
   "if somebody is standing where the player is about to step, the two of them trade places - the player goes on, and that person steps back into the tile the player is leaving.";
   "It is how two people pass each other in a corridor, and it is the one way past a person that can never fail. Stepping ASIDE needs a free tile beside them, and the whole reason the player is stuck is that there is no free tile; trading places needs none, because the tile each one wants is the tile the other is giving up. So nobody can ever be walled in by people, however tightly they stand.";
