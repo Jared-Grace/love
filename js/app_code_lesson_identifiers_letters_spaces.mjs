@@ -43,15 +43,15 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "We can give names to people, cities, countries, mountains, rivers, etc.",
     );
     html_div_cycle_bold(c2, [
-      "In JavaScript, ",
+      "In JS, ",
       "identifiers",
       " are used as names",
     ]);
     let c4 = app_code_container_light_blue(root);
     html_div_text_multiple(c4, [
       "In English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs",
-      "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
-      "In English, letters are inside of words and in JavaScript, symbols (like letters) are inside of identifiers",
+      "In English, letters are a basic building block and in JS, symbols are a basic building block",
+      "In English, letters are inside of words and in JS, symbols (like letters) are inside of identifiers",
     ]);
     let c3 = app_code_container_light_blue(root);
     html_div_text_multiple(c3, [

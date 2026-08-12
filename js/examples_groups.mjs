@@ -83,6 +83,7 @@ export function examples_groups() {
       name: "Guards",
       examples: [
         "example_move_refused_binding",
+        "example_functionize_refused_outer_assign",
         "example_single_rejects_two",
         "example_slot_set_rejects_statement",
         "example_frozen_app_refused",

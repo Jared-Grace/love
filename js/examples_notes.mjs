@@ -60,6 +60,8 @@ export function examples_notes() {
       "the previous example undone, character for character — which is how the inverse is checked",
     example_move_refused_binding:
       "the guard inside the move, asked on its own — reordering is the edit that breaks a function without changing a line",
+    example_functionize_refused_outer_assign:
+      "the second guard inside the cut — a run that moves a mark bound above it cannot leave, and asking only what the run brings into being never sees that",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
