@@ -1,7 +1,7 @@
+import { list_map_property } from "./list_map_property.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { functions_assert_json_get_lambda_sites } from "./functions_assert_json_get_lambda_sites.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function functions_assert_json_get_lambda_gate_run() {
   "Gate: no function writes out a lazy payload wrapper the eager check would have built for it. Throws so the dispatcher seam exits nonzero.";
