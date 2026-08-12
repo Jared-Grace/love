@@ -1,3 +1,6 @@
+import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
+import { qa_gate_frozen_ensure } from "./qa_gate_frozen_ensure.mjs";
+import { qa_gate_told_filed } from "./qa_gate_told_filed.mjs";
 import { qa_gate_history_blind_print } from "./qa_gate_history_blind_print.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { qa_gate_parts_print } from "./qa_gate_parts_print.mjs";
@@ -13,7 +16,6 @@ import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_asy
 import { functions_names } from "./functions_names.mjs";
 import { list_get } from "./list_get.mjs";
 import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
-import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
 import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gates_machine } from "./qa_gates_machine.mjs";
@@ -24,12 +26,12 @@ export async function qa_gate_run_unlocked() {
   "The whole-repo run itself, taken as though this machine were its own";
   "It is the thing under the lock rather than the thing to call. Waiting for a turn and asking the questions are two ideas, and separating them keeps the questions readable - everything below is about gates, and nothing below has to mention that anybody else exists";
   "Asking for this by name skips the waiting, and there is one honest use for that: a machine with nobody else on it, where the wait would only be a wait. Any other use puts two full runs on the processors at once, which is the thing the lock was measured to prevent";
-  "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing";
+  "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing - and when there is no such work, about the commit the folder already equals, which is the same code under a name anybody can ask for again";
   "A clean answer here is meant to mean the code is sound - so every question the files alone can answer is put to a frozen copy of the folder rather than to the folder itself. Asked of the living folder, neither answer could be checked: a complaint might be nothing but a neighbour saving a file, and a clean answer might be about a file broken a moment after it was read. Asked of a copy nobody can touch, both answers can be had again and come out the same";
   "The three questions about this machine and about where the folder sits are asked here, where the answer is, and their names are added to whatever the copy complained about so one complaint covers both halves";
   "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
   "How long each part of the run took is printed at the end, because the whole number on its own sends whoever wants it faster to the wrong place. Measured once: the gates themselves were four and a half minutes of a nineteen minute run, and the other three quarters went on what happens after them - so every reading of the gates, and every plan to make one of them faster, was aimed at a quarter of the cost. The parts are timed rather than reasoned about because the reasoning was wrong twice on the same afternoon";
-  ("Where the neighbours stand is asked before anything is frozen, because it is half of the name this run's answer would be filed under and the freezing is itself part of the window they could move in.");
+  "Where the neighbours stand is asked before anything is frozen, because it is half of the name this run's answer would be filed under and the freezing is itself part of the window they could move in.";
   let began = date_now_milliseconds();
   let beside = await qa_commit_beside_heads();
   let before = property_get(beside, "heads");
