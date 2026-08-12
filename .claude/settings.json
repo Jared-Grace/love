@@ -1038,6 +1038,8 @@
       "Bash(node scripts/ai.mjs app_g_dev_index_prefixes_check:*)",
       "Bash(node scripts/ai.mjs names_first_word_groups_gate_run:*)",
       "Bash(node scripts/ai.mjs function_param_move_first:*)",
+      "Bash(node scripts/ai.mjs function_param_move_last:*)",
+      "Bash(node scripts/ai.mjs function_param_rename:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1999,6 +2001,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_g_dev_index_prefixes_check:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args names_first_word_groups_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_param_move_first:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_param_move_last:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args function_param_rename:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2959,6 +2963,8 @@
       "Bash(node scripts/aig.mjs app_g_dev_index_prefixes_check:*)",
       "Bash(node scripts/aig.mjs names_first_word_groups_gate_run:*)",
       "Bash(node scripts/aig.mjs function_param_move_first:*)",
+      "Bash(node scripts/aig.mjs function_param_move_last:*)",
+      "Bash(node scripts/aig.mjs function_param_rename:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3919,7 +3925,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args js_statements_span_outputs_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_g_dev_index_prefixes_check:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args names_first_word_groups_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args function_param_move_first:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args function_param_move_first:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_param_move_last:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args function_param_rename:*)"
     ],
     "defaultMode": "acceptEdits"
   },

@@ -1,15 +1,8 @@
-import { app_g_day_state } from "./app_g_day_state.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export function app_g_day_discern_pool() {
-  "who the day's discernment prayer may name next: while anybody is still to be reached it is one of them, and once the last of them has believed it is one of the believers still waiting to be gathered for baptism";
-  "the order is the day's own order and needs nothing stored to keep it - reaching people comes first, and gathering them is what is left when there is nobody left to reach. so the same prayer serves both halves of the day, and the gold that answers it leads to a person either way";
+  "who the day's discernment prayer may name next: one of the people still to be reached, and nobody else.";
+  "GATHERING THE BELIEVERS AFTERWARDS IS NOT PRAYED FOR. They have already been found - the day found them, one prayer at a time, and each of them was told the baptism was coming. Praying again to be shown where somebody you just talked to is standing asks for something you already know, and it made the walk to the water a prayer-per-person instead of a walk.";
+  "It also cost more than a prayer. A discerned person is the ONLY person who may be tapped, so gathering behind a prayer meant the other believers turned the player away until they were named - a rule that reads as being led while there is somebody left to find, and as being held back once there is not.";
   let state = app_g_day_state();
   let talkable = property_get(state, "talkable");
-  let remaining = list_empty_not_is(talkable);
-  if (remaining) {
-    return talkable;
-  }
-  let converts = property_get(state, "converts");
-  return converts;
+  return talkable;
 }
