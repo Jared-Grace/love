@@ -66,7 +66,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "THE TURNS",
     "A turn is one exchange.",
     "The person says something. The player answers with a passage.",
-    "The player's words are always God's word says, then the passage. So never write the player's line.",
+    "The player will choose the correct passage from a list",
     ''
 ,    "LENGTH",
     joined9,
