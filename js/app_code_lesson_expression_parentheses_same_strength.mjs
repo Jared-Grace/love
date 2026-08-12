@@ -1,6 +1,6 @@
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_divide_line.mjs";
-import { app_code_lesson_expression_parentheses_same_strength_subtract_line } from "./app_code_lesson_expression_parentheses_same_strength_subtract_line.mjs";
+import { app_code_lesson_expression_parentheses_minus_divide_subtract_line } from "./app_code_lesson_expression_parentheses_minus_divide_subtract_line.mjs";
 import { app_code_lesson_expression_parentheses_same_strength_title_name_id } from "./app_code_lesson_expression_parentheses_same_strength_title_name_id.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -29,11 +29,10 @@ export function app_code_lesson_expression_parentheses_same_strength() {
   return lesson;
   function refill() {
     "four at a time, alternating a - line and a / line. The examples screen draws two, so every screen shows one of each - the two outer operators this lesson is about";
-    let v =
-      app_code_lesson_expression_parentheses_same_strength_subtract_line();
+    let v = app_code_lesson_expression_parentheses_minus_divide_subtract_line();
     let v2 = app_code_lesson_expression_parentheses_minus_divide_divide_line();
     let v3 =
-      app_code_lesson_expression_parentheses_same_strength_subtract_line();
+      app_code_lesson_expression_parentheses_minus_divide_subtract_line();
     let v4 = app_code_lesson_expression_parentheses_minus_divide_divide_line();
     let list = [v, v2, v3, v4];
     return list;
