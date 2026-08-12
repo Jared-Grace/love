@@ -1,3 +1,4 @@
+import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
@@ -6,7 +7,7 @@ export function html_bar_content(root) {
   html_style_assign(shell, {
     display: "flex",
     "flex-direction": "column",
-    height: "100dvh",
+    height: html_viewport_height_visible(),
     "box-sizing": "border-box",
   });
   let bar = html_div(shell);
