@@ -1,3 +1,4 @@
+import { function_param_plain_marker_rename } from "./function_param_plain_marker_rename.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";

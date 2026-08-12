@@ -11,13 +11,13 @@ export async function function_functionize_generic(
   name_from,
   name_to,
   f_name_new,
-  select_fn_name,
+  select_f_name,
 ) {
   "$plain f_name";
   "$plain name_from";
   "$plain name_to";
   "$plain f_name_new";
-  "$plain select_fn_name";
+  "$plain select_f_name";
   arguments_assert(arguments, 5);
   ("Pull the run of work between the first mention of one word and the first mention of another out of the named function, into a function of its own, with the caller saying which reader picks the two lines.");
   ("The whole of the cutting, held once. Two commands wrote these twenty lines out between them and differed in a single word - which of the two line readers to use - so both had to be edited to fix anything, and a fix made in one of them would have been silently missing from the other.");
@@ -35,7 +35,7 @@ export async function function_functionize_generic(
   let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
-    select_fn_name,
+    select_f_name,
     ends,
     apply_fn_name,
     f_name_new,
