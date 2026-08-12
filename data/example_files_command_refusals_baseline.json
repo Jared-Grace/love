@@ -1,7 +1,6 @@
 {
  "known": [
   "function_wrap",
-  "functions_rename_if_starts_with",
   "function_param_new",
   "js_selects_functionize"
  ]
