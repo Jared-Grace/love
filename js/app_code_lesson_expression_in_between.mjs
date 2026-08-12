@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_in_between_card_unexplained } from "./app_code_lesson_expression_in_between_card_unexplained.mjs";
 import { app_code_lesson_expression_in_between_card_chained } from "./app_code_lesson_expression_in_between_card_chained.mjs";
 import { app_code_lesson_expression_in_between_range_code } from "./app_code_lesson_expression_in_between_range_code.mjs";
 import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
@@ -14,7 +15,7 @@ import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_code_lesson_expression_in_between() {
-  "the capstone of the comparison track: to check a number is between two others you must NOT chain the comparisons (2 < 5 < 8 does not do what you mean - JavaScript works out 2 < 5 first, then compares that result with 8). The fix, taught here, is to repeat the middle number and join with && (2 < 5 && 5 < 8), which is exactly the shape the previous lesson drilled. The trap and the fix live in the intro; the quiz drills the correct idiom a < b && b < c, so the learner practises the right thing rather than predicting the broken one. Answer is the code's own true/false value, correct by construction.";
+  "the capstone of the comparison track: to check a number is between two others you must NOT chain the comparisons - 2 < 5 < 8 is the maths notation and is not how JS is written. The fix, taught here, is to break it into two pieces and join them with && (2 < 5 && 5 < 8), which is exactly the shape the previous lesson drilled. What JS does with the chained line is deliberately not explained, in an aside placed last so it can be skipped whole; the reasoning is in that card. The quiz drills the correct idiom a < b && b < c, so the learner practises the right thing rather than predicting the broken one. Answer is the code's own true/false value, correct by construction.";
   function range_true() {
     "a < b && b < c where a < b < c really holds, so it is true";
     let a = integer_random(1, 4);
@@ -95,5 +96,6 @@ export function app_code_lesson_expression_in_between() {
       " with ",
       "5 && 5",
     ]);
+    app_code_lesson_expression_in_between_card_unexplained(root);
   }
 }
