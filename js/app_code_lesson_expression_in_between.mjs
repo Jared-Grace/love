@@ -71,18 +71,27 @@ export function app_code_lesson_expression_in_between() {
       "8",
       " ?",
     ]);
+    ("The chained line is solved rather than declared broken. But this does not work and not what you meant were both conclusions, stated before anything had shown them - and the reader had no way to reach either one, because nothing on the card said what the line does do. Solved in the replace-and-then-we-have walk the comparing-a-comparison lesson taught, it shows itself: the 2 and the 5 are consumed by the first comparison, so the number the question was about is not in the line any more. What true < 8 comes to is deliberately not said - that would need comparing a true with a number, which no lesson has taught, and the vanishing 5 is the whole point and needs no such rule.");
     let trap = app_code_container_light_blue(root);
+    html_div_cycle_code(trap, ["You might write ", "2 < 5 < 8"]);
+    html_div_cycle_code(trap, ["We replace the ", "2 < 5", " with ", "true"]);
+    html_div_cycle_code(trap, ["And then we have ", "true < 8"]);
     html_div_cycle_code(trap, [
-      "You might write ",
-      "2 < 5 < 8",
-      ", but this does not work",
+      "The ",
+      "2",
+      " and the ",
+      "5",
+      " are both gone",
     ]);
     html_div_cycle_code(trap, [
-      "JavaScript works out ",
-      "2 < 5",
-      " first, then compares that with ",
+      "So ",
+      "2 < 5 < 8",
+      " does not ask whether ",
+      "5",
+      " is between ",
+      "2",
+      " and ",
       "8",
-      " - not what you meant",
     ]);
     let fix = app_code_container_light_blue(root);
     html_div_cycle_code(fix, [

@@ -218,6 +218,7 @@ export function qa_gates() {
     memory_index_size_gate_run,
     memory_index_lines_gate_run,
     examples_gate_run,
+    example_files_refuses_run_gate_run,
     permission_gate_run,
     permission_editor_open_gate_run,
     function_open_name_gate_run,
