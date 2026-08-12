@@ -3,8 +3,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function function_functionize(
   f_name,
-  word_from,
-  word_to,
+  name_from,
+  name_to,
   f_name_new,
 ) {
   arguments_assert(arguments, 4);
@@ -17,8 +17,8 @@ export async function function_functionize(
   let select_fn_name = fn_name("js_statement_find_name_body");
   let output = await function_functionize_generic(
     f_name,
-    word_from,
-    word_to,
+    name_from,
+    name_to,
     f_name_new,
     select_fn_name,
   );
