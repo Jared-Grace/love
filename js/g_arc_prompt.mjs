@@ -73,7 +73,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     'Relevance and appropriateness are more important than equally using each verse - do not use verses by force',
     "Never pick a trouble first and then hunt for a verse.",
     "",
-,    "LENGTH",
+    "LENGTH",
     joined9,
     "",
     "You should choose this about the person:",
