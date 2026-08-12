@@ -12,13 +12,7 @@ export function names_first_word_groups_gate_run() {
     " promises, asked of one made-up list of names. run: node scripts/ai.mjs ",
     fn_name("names_first_word_groups_gate_run"));
   ("made up rather than taken from anywhere real, because a real list holds the cases it happens to have today and this has to hold the ones that decide the rule. the reason it is worth holding at all is that the rule REPLACED remembering: what used to be one typed line per name is now a count, so a count that quietly changed its mind would file things silently rather than fail");
-  let names = [
-    "day_one",
-    "day_two",
-    "day_three",
-    "gospel_share",
-    "study",
-  ];
+  let names = ["day_one", "day_two", "day_three", "gospel_share", "study"];
   let minimum = 2;
   let groups = names_first_word_groups(names, minimum);
   let one = property_get(groups, "day_one");
@@ -31,13 +25,15 @@ export function names_first_word_groups_gate_run() {
     "EVERY name sharing that word is in the group, not just the first one met",
   );
   let lonely = property_exists(groups, "gospel_share");
+  let b = not(lonely);
   assert_message(
-    not(lonely),
+    b,
     "a first word only one name has is no group - a heading saying what the name said",
   );
   let whole = property_exists(groups, "study");
+  let b2 = not(whole);
   assert_message(
-    not(whole),
+    b2,
     "a name with no separator is a whole word and joins nothing",
   );
   let minimum_high = 4;
