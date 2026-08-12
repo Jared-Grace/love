@@ -1,3 +1,4 @@
+import { qa_gate_here_again_ms } from "./qa_gate_here_again_ms.mjs";
 import { qa_gate_kept_remembered } from "./qa_gate_kept_remembered.mjs";
 import { qa_gate_told_kept } from "./qa_gate_told_kept.mjs";
 import { qa_gate_told_sectioned } from "./qa_gate_told_sectioned.mjs";
@@ -11,7 +12,6 @@ import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { list_concat_property } from "./list_concat_property.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
@@ -94,13 +94,9 @@ export async function qa_gate_run_unlocked() {
   let failed = list_concat_property(failed_copy, here, "failed");
   if (greater_than(failed.length, 0)) {
     ("Every red is asked once more out here, in the folder as it stands, because the copy was taken while several of us were writing to it and a file caught half-copied answers the same way however many times it is asked in there. What that ask finds is printed and nothing else: the verdict below stays exactly what the frozen copy said, since a gate quiet out here may only be quiet because somebody is mid-edit, and a clean answer from this gate is supposed to mean the code is sound");
+    ("Whether that second ask happens at all is a question about which kind of copy was frozen, and it lives one name along. A copy standing on a commit holds no half written file, so there is nothing for the second ask to tell apart");
     let joined = list_join_comma(failed);
-    console.log(
-      "\n=== asking the red gates again, here in the living folder ===",
-    );
-    let at_again = date_now_milliseconds();
-    await qa_gates_here_failed(joined);
-    let again_ms = date_milliseconds_since(at_again);
+    let again_ms = await qa_gate_here_again_ms(joined, commit);
     qa_gate_parts_print(asked_ms, blamed_ms, again_ms);
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
