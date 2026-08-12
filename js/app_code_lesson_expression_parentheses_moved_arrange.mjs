@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_parentheses_same_strength_line } from "./app_code_lesson_expression_parentheses_same_strength_line.mjs";
+import { app_code_lesson_expression_parentheses_minus_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_line.mjs";
 import { js_code_operation } from "./js_code_operation.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_parentheses_moved_arrange(
   let inside = js_code_operation(a, plus, b);
   let sum_wrapped = js_code_wrap_parenthesis(inside);
   let grouped = js_code_operation(sum_wrapped, times, c);
-  let spread = app_code_lesson_expression_parentheses_same_strength_line(
+  let spread = app_code_lesson_expression_parentheses_minus_divide_line(
     a,
     plus,
     b,
