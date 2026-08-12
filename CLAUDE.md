@@ -79,6 +79,10 @@ A *selector* is any fn `(ast, …args) → node`; a *transform* is any fn `(ast,
 
 **Run `ao` yourself after editing a `js/*.mjs` file** — `function_auto_checked <fn>`, which checks first and so reports a broken file instead of throwing; or `functions_auto_pending_changed_repair`, which needs no name at all: it finds every uncommitted function the pass would still change and runs it over exactly those. Nothing else canonicalizes your file, and neither **commits** when Claude runs it, so always commit yourself afterwards.
 
+## The commands-only switch — **read [notes/commands_only.md](notes/commands_only.md) when a write is refused**
+
+`commands_only_level_write <off|js|files>` turns a switch that refuses the file-writing tools inside this repo, so every change goes through a named command. It is **off** by default; check `commands_only_level`. When it is on and no transform fits, the way through is **not** turning it off — draft the missing atom at `scripts/temp/<name>.mjs` (that folder stays open) and promote it with **`function_new_from_temp <name>`**, which takes nothing but one exported function named after its own file and refuses a name the repo already answers to. The note has the settings, why neither direction is granted, and the half not built yet (one portable API over the OS's own commands — the hole is text search).
+
 ## Shared constants — **read [notes/shared_constants.md](notes/shared_constants.md) before merging or revaluing one**
 
 Two files spelling the same value get one function, and you never judge up front whether they *mean* the same thing by it — a split costs nothing later, provided you never change a shared value in place. The one exception is a value that has already left this repo (a localStorage or IndexedDB key, a word in a bookmarked URL): those are frozen, and `text_frozen("word")` is what stops `ao` promoting one into a reference. The note has the migration steps, the freeze list commands, and why `text_frozen` and `fn_name` mean opposite things.
