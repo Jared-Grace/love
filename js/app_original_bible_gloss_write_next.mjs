@@ -1,3 +1,4 @@
+import { list_map_index } from "./list_map_index.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
 import { bible_interlinear_chapters_words } from "./bible_interlinear_chapters_words.mjs";
@@ -7,7 +8,6 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -56,7 +56,7 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
     };
     return r;
   }
-  let verses = list_map(verse_numbers, verse_read);
+  let verses = list_map_index(verse_numbers, verse_read);
   let file = gloss_write_file_path(chapter_code, verse_key);
   let r2 = {
     chapter_code,
