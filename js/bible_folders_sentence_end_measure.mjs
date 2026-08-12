@@ -1,8 +1,5 @@
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { bible_folder_sentence_end_measure } from "./bible_folder_sentence_end_measure.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function bible_folders_sentence_end_measure() {
   "Reads the opening of every bible this repo ships and counts, for each one, how many verses finish on a mark a sentence is known to end on.";
