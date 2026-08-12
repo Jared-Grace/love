@@ -15,26 +15,22 @@ export async function functions_module_state_shadowed_gate_run() {
   "The step that adds the word let used to write these itself, unable to see a";
   "top-level binding. That is fixed, so what this gate now watches for is the shape";
   "arriving by hand or by some other route.";
+  "The functions at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The names being hidden are advice too - a hidden name is the victim here, not the offender.";
   let offenders = await functions_module_state_shadowed();
-  for (let offender of offenders) {
-    let f_name = property_get(offender, "f_name");
-    let joined = property_list_join_comma(offender, "hidden");
-    console.log("SHARED STATE HIDDEN  " + f_name + "  " + joined);
-  }
-  let size = list_size(offenders);
-  let any = greater_than(size, 0);
-  if (any) {
-    let f_name2 = fn_name("function_shadowing_assign");
-    throw new Error(
-      "module state shadowed gate: " +
-        size +
-        text_combine_multiple([
-          " files fill a copy of their own shared state and throw it away - if the inner line was meant to write the shared name, ",
-          f_name2,
-          " takes the word let off it, and if it was not, the inner binding wants a name of its own",
-        ]),
-    );
-  }
+  let names = list_map_property(offenders, "f_name");
+  let f_name2 = fn_name("function_shadowing_assign");
+  let advice = text_combine_multiple([
+    "these fill a copy of their own shared state and throw it away - if the inner line was meant to write the shared name, ",
+    f_name2,
+    " takes the word let off it, and if it was not, the inner binding wants a name of its own",
+  ]);
+  let hint = {
+    advice,
+    offenders,
+  };
+  list_empty_is_assert_json(names, {
+    hint,
+  });
   let r = {
     hiding: 0,
   };
