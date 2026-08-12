@@ -103,6 +103,10 @@
   {
    "name": "functions_operators_raw_repair_some",
    "refusals": 1
+  },
+  {
+   "name": "functions_locals_unread_repair_some",
+   "refusals": 1
   }
  ]
 }
