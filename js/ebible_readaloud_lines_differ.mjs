@@ -1,5 +1,5 @@
 import { ebible_chapter_codes } from "./ebible_chapter_codes.mjs";
-import { ebible_chapter_verse_markers } from "./ebible_chapter_verse_markers.mjs";
+import { ebible_chapter_verse_numbers_with_words } from "./ebible_chapter_verse_numbers_with_words.mjs";
 import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
