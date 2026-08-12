@@ -1,3 +1,4 @@
+import { list_next_wrap } from "./list_next_wrap.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
 import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
 import { ebible_index_flat_passage_run } from "./ebible_index_flat_passage_run.mjs";
@@ -9,7 +10,6 @@ import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs
 import { app_next_verse_lines } from "./app_next_verse_lines.mjs";
 import { lists_combine } from "./lists_combine.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_next } from "./list_next.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
@@ -75,8 +75,10 @@ export async function app_next(context) {
   }
   let lines_each = await list_map_unordered_async(run, lambda);
   let mapped = lists_combine(lines_each);
+  ("The way onward wraps round to the first verse of the bible rather than running out at the last one. Asking for what follows the end of a list is not a question a list answers, and the refusal used to arrive as a thrown assertion - from here, which is before a single line is drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. That is the same silent hang the paragraphs below describe, arriving a third time by a third door, and each time it was a question asked in the wrong place rather than a wrong answer.");
+  ("Wrapping rather than leaving the link off, because somebody who has read to the end of the bible is somebody still reading.");
   let last = list_last(run);
-  let next = list_next(list, last);
+  let next = list_next_wrap(list, last);
   let chapter_code2 = property_get(next, "chapter_code");
   let property_name = verse_number_key();
   let verse_number2 = property_get(next, property_name);

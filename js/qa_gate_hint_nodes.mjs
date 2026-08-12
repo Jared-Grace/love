@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { equal } from "./equal.mjs";
@@ -40,7 +41,8 @@ export async function qa_gate_hint_nodes(f_name, remembered, depth) {
     let hinted = ["hint"];
     if (deeper_is) {
       async function lambda2() {
-        let inner = await qa_gate_names_hinted(called, remembered, depth - 1);
+        let depth2 = subtract(depth, 1);
+        let inner = await qa_gate_names_hinted(called, remembered, depth2);
         return inner;
       }
       let inner2 = await catch_null_async(lambda2);
