@@ -1,5 +1,5 @@
-import { property_get } from "./property_get.mjs";
-import { qa_gate_cost_typical } from "./qa_gate_cost_typical.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { divide } from "./divide.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
