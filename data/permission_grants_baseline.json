@@ -37,35 +37,11 @@
    "refusals": 1
   },
   {
-   "name": "guard_check",
-   "refusals": 1
-  },
-  {
-   "name": "git_ac_call_folder_try",
-   "refusals": 1
-  },
-  {
-   "name": "html_update_latest_promote_deploy",
-   "refusals": 1
-  },
-  {
-   "name": "g_sermon_write_lines_file",
-   "refusals": 1
-  },
-  {
-   "name": "g_sermon_write_lines_file_check",
-   "refusals": 1
-  },
-  {
-   "name": "g_sermon_pull",
-   "refusals": 1
-  },
-  {
    "name": "functions_rename_if_starts_with",
    "refusals": 1
   },
   {
-   "name": "permission_grants_param_plain_mark",
+   "name": "guard_check",
    "refusals": 1
   },
   {
@@ -129,16 +105,36 @@
    "refusals": 1
   },
   {
-   "name": "ai_git_command_args",
-   "refusals": 1
-  },
-  {
    "name": "folder_lines_search",
    "refusals": 3
   },
   {
    "name": "folder_lines_search_args",
    "refusals": 3
+  },
+  {
+   "name": "ai_git_command_args",
+   "refusals": 1
+  },
+  {
+   "name": "git_ac_call_folder_try",
+   "refusals": 1
+  },
+  {
+   "name": "html_update_latest_promote_deploy",
+   "refusals": 1
+  },
+  {
+   "name": "g_sermon_write_lines_file",
+   "refusals": 1
+  },
+  {
+   "name": "g_sermon_write_lines_file_check",
+   "refusals": 1
+  },
+  {
+   "name": "g_sermon_pull",
+   "refusals": 1
   }
  ]
 }
