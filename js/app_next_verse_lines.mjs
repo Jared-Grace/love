@@ -14,7 +14,11 @@ export async function app_next_verse_lines(
   "It stands on its own so that a page showing several verses shows each of them the way this page has always shown one - the same block, repeated - rather than growing a second way of writing a verse down for the case where there is more than one.";
   async function lambda(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
-    let d = await ebible_verse_browser(bible_folder, chapter_code, verse_number);
+    let d = await ebible_verse_browser(
+      bible_folder,
+      chapter_code,
+      verse_number,
+    );
     let text = property_get(d, "text");
     return text;
   }

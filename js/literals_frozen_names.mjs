@@ -61,6 +61,9 @@ export function literals_frozen_names() {
   let spelled38 = fn_name("firebase_prod_app_backup_namespace");
   ("A field of a page address, and the first one found by following a word one line back rather than reading only the slot it is handed to. It was set into a plain variable and passed on, which every gate over addresses called clean.");
   let spelled39 = fn_name("app_replace_animation_duration_hash_key");
+  ("A sixth word a bible link stands on, added the day the link learned to ask for more than one verse at a time. It is published the moment somebody saves or sends such a link, exactly like the chapter and the verse beside it.");
+  ("It is the first of these written as a frozen word at its own site rather than as a plain one, and for a reason the single letters above never had: it is an ordinary English word, so the day anything in this repo is named count, the canonicalizing pass would quietly turn the value into a reference to that function.");
+  let spelled40 = fn_name("app_shared_bible_verses_count_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -100,6 +103,7 @@ export function literals_frozen_names() {
     spelled37,
     spelled38,
     spelled39,
+    spelled40,
   ];
   return names;
 }
