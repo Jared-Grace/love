@@ -1,8 +1,8 @@
+import { git_file_js_parse_at_or_null } from "./git_file_js_parse_at_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { js_flo } from "./js_flo.mjs";
-import { property_js_parse } from "./property_js_parse.mjs";
 import { js_function_declaration_free_names } from "./js_function_declaration_free_names.mjs";
 import { catch_message_async } from "./catch_message_async.mjs";
-import { git_file_read_at } from "./git_file_read_at.mjs";
 import { js_binding_names } from "./js_binding_names.mjs";
 import { js_function_nested_find_named } from "./js_function_nested_find_named.mjs";
 import { js_identifier_names_all } from "./js_identifier_names_all.mjs";
@@ -58,21 +58,15 @@ export async function function_lift_captured_locals(
   ("Both sides are read out of the history, and reading the second one off the disk instead is what made this flicker. The commit before the move and the file lying in the folder are two different repositories whenever anybody is part way through an edit, so a check running against a copy taken mid-edit compared a name from one against a name from the other and called the difference a fault. Asked entirely of the history, the same question gives the same answer in a torn copy, in the folder as it stands, and in anybody else's checkout");
   let lifted_file_name = text_combine_multiple([lifted, ".mjs"]);
   let lifted_path = path_join(["js", lifted_file_name]);
-  async function now_lambda() {
-    let file_text = await git_file_read_at(folder, "HEAD", lifted_path);
-    return file_text;
-  }
   ("A moved function that has since been renamed away or deleted is answered as having captured nothing, and that is the same failure as the file not being readable - so it is one answer rather than a separate question asked of the disk beforehand. It cannot be asked about under a name that no longer answers, and guessing which name it became is worse than saying nothing");
-  let now_read = await catch_message_async(now_lambda);
-  let now_readable = property_get(now_read, "ok");
-  if (not(now_readable)) {
+  let now_ast = await git_file_js_parse_at_or_null(folder, "HEAD", lifted_path);
+  if (null_is(now_ast)) {
     let now_unreadable = {
       lifted,
       dropped: [],
     };
     return now_unreadable;
   }
-  let now_ast = property_js_parse(now_read, "value");
   let now = js_flo(now_ast);
   ("The two sides are read differently on purpose. What the function reached for back then is read widely, because the narrow reading is the one that has been dropping names and leaning on it here would hide the very thing being looked for. What it reads today is read narrowly, because a word standing as the key of something is not a name being read, and counting keys named nine functions that turn out to read nothing of the kind");
   let free_now = js_function_declaration_free_names(now);
