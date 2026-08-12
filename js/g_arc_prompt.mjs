@@ -92,7 +92,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "In a conversation, the player first chooses an opener. Here are the openers: ",
     joined6,
     joined7,
-    "Then the npc utters an answer to the player's opener. Then player chooses the corresponding passage",
+    "Then the npc utters an answer to the player's opener. Then player chooses the corresponding passage.",
     "",
     "GROUPING",
     "Group the turns into conversations.",
