@@ -1,7 +1,7 @@
+import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
-import { property_set } from "./property_set.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_review } from "./app_code_review.mjs";
@@ -11,7 +11,6 @@ import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
-import { app_code_scroll_center_faded } from "./app_code_scroll_center_faded.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -86,10 +85,5 @@ export async function app_code_home(context) {
     html_style_margin_top(review, gap);
   }
   each_index(lessons, lambda);
-  let found = null_not_is(just_left);
-  if (found) {
-    property_set(context, "scroll_handled", true);
-    ("tell the shared refresh this screen handled its own scrolling, so the refresh's scroll-to-top is skipped - otherwise it would run after this screen returns and undo the centring below");
-    await app_code_scroll_center_faded(just_left);
-  }
+  await app_code_home_just_left_center(just_left, context);
 }
