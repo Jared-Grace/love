@@ -1,3 +1,11 @@
+import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_is } from "./js_node_is.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_function_declaration_params_names_node } from "./js_function_declaration_params_names_node.mjs";
+import { list_map_squash } from "./list_map_squash.mjs";
+import { not } from "./not.mjs";
 export function js_exports_names(ast) {
   "The names a file gives out for others to import - what it writes export in front of, and what it lists in an export block";
   "A name declared inside a body is not one of these, however plainly it is declared. So the reading takes each export node and looks only at what that node itself carries, rather than asking a whole subtree what it declares - a function exported with another written inside it would otherwise appear to give out both.";
