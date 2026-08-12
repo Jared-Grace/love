@@ -1,8 +1,8 @@
+import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_g_font_size } from "./app_g_font_size.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_hide_loadable } from "./html_hide_loadable.mjs";
