@@ -30,7 +30,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     chapter_code,
   ]);
   let joined = list_join_empty([preaching, "."]);
-  let joined9 = list_join_space(["Aim at about", turn_target, "turns."]);
+  let joined9 = list_join_space(["Aim for ", turn_target, " turns."]);
   let joined6 = list_join_space([
     "  opener - for somebody who does not yet believe, one of:",
     openers_unbeliever,
@@ -54,16 +54,17 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "The setting is 1st-2nd century while Rome is persecuting Christians.",
     "The player walks up to somebody, hears what they say, and answers with a perfectly relevant and appropriate (including empathetic / affirming if loving and truthful) passage of Scripture.",
     "",
+    "THE CHAPTER",
+    joined,
+    "These verses are the only Scripture you may answer from.",
+    verses_text,
+    '',
     "Here is JSON about the person:",
     json,
     '',
     "You should choose this about the person:",
     "  trouble - what is wrong, in one sentence, in their own words",
     "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
-    "THE CHAPTER",
-    joined,
-    "These verses are the only Scripture you may answer from.",
-    verses_text,
     "",
     "WHO TO WRITE",
     "These facts are settled. Do not change them, and do not give a personality meant to follow from them.",
