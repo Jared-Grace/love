@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { bible_folders_sentence_end_unmarked } from "./bible_folders_sentence_end_unmarked.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
@@ -9,10 +10,8 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 export async function bible_sentence_end_marks_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: every bible this repo ships has been read, and the ones whose sentences cannot be found are exactly the ones named as such.");
@@ -29,14 +28,12 @@ export async function bible_sentence_end_marks_gate_run() {
   let departed = list_difference(measured, shipped);
   ("A bible nothing could be read from is told apart from one read and found to write no marks, because only the second is a fact about a language. The first is an errand that failed - a folder named wrongly, or a chapter that is not there - and reading it as a language without sentences is exactly the mistake the first hand measurement made with Urdu.");
   function lambda(entry) {
-    let read = property_get(entry, "read");
-    let none = equal(read, 0);
+    let none = property_equals(entry, "read", 0);
     return none;
   }
   let unread = list_filter(recorded, lambda);
   function lambda2(entry) {
-    let ended = property_get(entry, "ended");
-    let none = equal(ended, 0);
+    let none = property_equals(entry, "ended", 0);
     return none;
   }
   let ended_none = list_filter(recorded, lambda2);
