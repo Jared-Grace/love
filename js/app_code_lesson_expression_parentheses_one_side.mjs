@@ -116,11 +116,13 @@ export function app_code_lesson_expression_parentheses_one_side() {
     html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
     ("Solve, not work out - the childhood math word the track already runs on, decided in the arithmetic-both-sides lesson and used by every lesson that names the act. Past tense, because the two lines above it on this card have already done it: the line points back at what the reader just watched happen, rather than stating a rule they have yet to apply.");
     ("However needs an antecedent, and this line is it. Without it the word points at nothing on the card and the reader supplies the contrast themselves - or misses that there is one.");
-    ("Going from left to right names the READING motion, not an evaluation rule, which is why the phrase is safe here after being refused elsewhere. The shared inside-before-outside sentence must not say before working left to right, because that would be a claim about every operator and ** runs right to left; this line makes no claim about any operator at all - it says only where the eye lands first on this one line. The whole card turns on two different firsts, so the one meaning position on the page has to say which it is; bare comes first is the other meaning and would make the next line contradict it.");
+    ("Going from left to right names the READING motion, not an evaluation rule, which is why the phrase is safe here after being refused elsewhere. The shared inside-before-outside sentence must not say before working left to right, because that would be a claim about every operator and ** runs right to left; this line makes no claim about any operator at all - it says only what stands before what on this one line.");
+    ("The line names the === and the 3 > 8, and deliberately not the false. The false is leftmost, but it is already a value - there is nothing to solve about it, so a reader is never tempted to do it first and no contrast is set up by saying it comes first. The === is the one whose turn the brackets defer, so it is the one worth naming. Saying the === is first would be the other error: true about which operator comes first, false about the page, because the false is standing to its left. Comes before the 3 > 8 is true on both counts at once, and it hands the next line its subject.");
     html_div_cycle_code(either, [
-      "Going from left to right, ",
-      "false",
-      " is first",
+      "Going from left to right, the ",
+      "===",
+      " comes before the ",
+      "3 > 8",
     ]);
     ("The reason clause INSTANTIATES the idea card three cards up rather than repeating it. That card states the rule in its general form - whatever is inside is solved before whatever is outside - and this line says what the whatever turned out to be here. A rule and its instance differ in GENERALITY, not in wording, so this is not the near-copy the repo warns against: substituting the instance into the rule is the whole of what a worked example does, and a card that shows an instance without ever naming which rule it instances leaves the reader to guess the link.");
     ("3 > 8 is written twice rather than replaced by it. The repo kills a pronoun with the name it stands for, and here the doubled name is also what binds the two halves of the sentence together - the thing solved first and the thing inside the brackets are the SAME thing, which is the entire point.");
