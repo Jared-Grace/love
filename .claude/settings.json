@@ -1033,6 +1033,7 @@
       "Bash(node scripts/ai.mjs js_exports_names_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs js_imports_relative_named_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs app_g_day_water_choose_check:*)",
+      "Bash(node scripts/ai.mjs apps_boot_cold_report:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1989,6 +1990,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args js_exports_names_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args js_imports_relative_named_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_g_day_water_choose_check:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args apps_boot_cold_report:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2944,6 +2946,7 @@
       "Bash(node scripts/aig.mjs js_exports_names_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs js_imports_relative_named_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs app_g_day_water_choose_check:*)",
+      "Bash(node scripts/aig.mjs apps_boot_cold_report:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3899,7 +3902,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args functions_imports_unexported_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_exports_names_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_imports_relative_named_cases_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_g_day_water_choose_check:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_g_day_water_choose_check:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args apps_boot_cold_report:*)"
     ],
     "defaultMode": "acceptEdits"
   },
