@@ -4,7 +4,7 @@ import { null_is } from "./null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
@@ -295,7 +295,7 @@ export async function app_replace_rule_set(context) {
         app_replace_symbol_tile_dead(symbol_button);
       }
       each(symbol_buttons, symbol_dead);
-      let green = app_shared_color_light_green();
+      let green = app_shared_color_green_light();
       html_style_background_color_set(start_over, green);
       await html_scroll_center(start_over);
     }
