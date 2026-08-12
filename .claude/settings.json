@@ -1026,6 +1026,7 @@
       "Bash(node scripts/ai.mjs number_to_words:*)",
       "Bash(node scripts/ai.mjs g_plant_days_seeds_report:*)",
       "Bash(node scripts/ai.mjs qa_commit_beside_heads:*)",
+      "Bash(node scripts/ai.mjs qa_commit_entry_beside_matching_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1975,6 +1976,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args number_to_words:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args g_plant_days_seeds_report:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args qa_commit_beside_heads:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args qa_commit_entry_beside_matching_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2923,6 +2925,7 @@
       "Bash(node scripts/aig.mjs number_to_words:*)",
       "Bash(node scripts/aig.mjs g_plant_days_seeds_report:*)",
       "Bash(node scripts/aig.mjs qa_commit_beside_heads:*)",
+      "Bash(node scripts/aig.mjs qa_commit_entry_beside_matching_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3871,7 +3874,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args qa_gate_said_history_blind_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args number_to_words:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args g_plant_days_seeds_report:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_beside_heads:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_beside_heads:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_entry_beside_matching_cases_gate_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },

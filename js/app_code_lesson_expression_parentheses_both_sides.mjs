@@ -96,14 +96,47 @@ export function app_code_lesson_expression_parentheses_both_sides() {
       " is ",
       "true",
     ]);
+    let t = js_keyword_true();
+    let f = js_keyword_false();
     let needed = app_code_container_light_blue(root);
+    ("The flat line is not left as an assertion that it means something else - it is solved all the way through, one replacement at a time, in the exact walk the comparing-a-comparison lesson taught. Saying only that JavaScript works it out left to right asks the reader to do that walk in their head, and the walk crosses a step no lesson has ever shown them: a true or false compared with a number. They have the rule for it, from the lesson before last - but having a rule and having performed it are not the same thing, and this card is where the two would first be asked to meet without being introduced.");
     html_div_cycle_code(needed, ["Here we need the ", open, " and ", close]);
     html_div_cycle_code(needed, [
       "Without them we would write ",
       "3 === 5 === 5 === 3",
     ]);
     html_div_cycle_code(needed, [
-      "JavaScript works that out left to right, which is not what we mean",
+      "That replaces the ",
+      "3 === 5",
+      " with ",
+      f,
+      ", leaving ",
+      "false === 5 === 3",
+    ]);
+    let solved = app_code_container_light_blue(root);
+    html_div_cycle_code(solved, ["Then ", "false === 5", " is solved"]);
+    html_div_cycle_code(solved, [
+      "A ",
+      t,
+      " or ",
+      f,
+      " is never equal to a number",
+    ]);
+    html_div_cycle_code(solved, ["So ", "false === 5", " is ", f]);
+    html_div_cycle_code(solved, [
+      "Replacing leaves ",
+      "false === 3",
+      ", which is ",
+      f,
+    ]);
+    let why = app_code_container_light_blue(root);
+    html_div_cycle_code(why, [
+      "So if we want the ",
+      "5 === 3",
+      " solved first, it needs to be inside ",
+      open,
+      " and ",
+      close,
     ]);
   }
 }
