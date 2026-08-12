@@ -1,0 +1,89 @@
+import { fn_name } from "./fn_name.mjs";
+import { g_generation_settings } from "./g_generation_settings.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { random_index } from "./random_index.mjs";
+import { list_remove_at } from "./list_remove_at.mjs";
+import { list_filter_list_empty_not_is } from "./list_filter_list_empty_not_is.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+export function g_plant_days(conversation_lists, next) {
+  "Lays every npc's conversations onto the days of a plant, filling what a day cannot spend on conversations with questions - so a plant's shape is worked out from what its people are worth rather than from a day count decided in advance.";
+  "A day is a TURN BUDGET and nothing else. Conversations are indivisible pieces laid into it until the next one will not fit, so how many a day holds is an OUTCOME - six on a day of short ones, two on a day of long ones. Nothing caps it, because a conversation's own low end already stops a piece being too small to be worth walking over for.";
+  "Questions take the remainder exactly, because a question is one turn and has no floor. That is why no day has to come out even and why there is no slack to leave.";
+  "One person is met at most once a day, which is the only reason a day needs more than one person in it.";
+  ("Who is met is drawn, not ordered, so two saves of the same cast meet them in a different sequence. The generator is received for the same reason it is in ",
+    fn_name("g_arc_conversation_lengths"),
+    " - this is per-game and must come off the save.");
+  ("A person's own conversations stay in the order they were written, because an arc is a story and its second conversation answers its first.");
+  ("The lists are COPIED before anything is taken off them, so scheduling a plant cannot reach back and empty the caller's own arcs.");
+  let s = g_generation_settings();
+  let budget = s.day_matches;
+  let left = list_map(conversation_lists, list_copy);
+  let count = list_size(left);
+  let days = [];
+  while (true) {
+    let conversations = [];
+    let spent = 0;
+    let met = [];
+    while (true) {
+      let room = subtract(budget, spent);
+      let fitting = [];
+      for (let index = 0; less_than(index, count); index++) {
+        let already = list_includes(met, index);
+        if (already) {
+          continue;
+        }
+        let lengths = left[index];
+        let none = list_empty_is(lengths);
+        if (none) {
+          continue;
+        }
+        let turns = lengths[0];
+        let fits = less_than_equal(turns, room);
+        if (fits) {
+          list_add(fitting, index);
+        }
+      }
+      let nobody = list_empty_is(fitting);
+      if (nobody) {
+        break;
+      }
+      let size = list_size(fitting);
+      let at = random_index(next, size);
+      let npc = fitting[at];
+      let lengths = left[npc];
+      let turns = lengths[0];
+      list_remove_at(lengths, 0);
+      list_add(met, npc);
+      let conversation = {
+        npc,
+        turns,
+      };
+      list_add(conversations, conversation);
+      spent = spent + turns;
+    }
+    let done = list_empty_is(conversations);
+    if (done) {
+      break;
+    }
+    let questions = subtract(budget, spent);
+    let day = {
+      conversations,
+      questions,
+    };
+    list_add(days, day);
+  }
+  ("A day that places nothing ends the plant, and that is right when every arc is spent - but it reads the same as a conversation too long to fit in any day at all, which would end the plant early and drop the rest of somebody's arc without a word. So what is left over is CHECKED rather than assumed empty. It cannot happen while the longest conversation stays under a day's budget; the check is what makes that a fact rather than a hope.");
+  let leftover = list_filter_list_empty_not_is(left);
+  list_empty_is_assert_json(leftover, {
+    budget,
+  });
+  return days;
+}
