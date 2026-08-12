@@ -1,3 +1,4 @@
+import { app_g_day_collect_tap_if } from "./app_g_day_collect_tap_if.mjs";
 import { app_g_view_npc } from "./app_g_view_npc.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npc_phase_get } from "./app_g_npc_phase_get.mjs";

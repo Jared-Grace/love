@@ -1,13 +1,6 @@
-import { list_includes_not } from "./list_includes_not.mjs";
+import { app_g_day_tap_action_if } from "./app_g_day_tap_action_if.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_convert } from "./app_g_day_convert.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
-import { g_coordinates_same_is } from "./g_coordinates_same_is.mjs";
-import { app_g_day_guide_clear } from "./app_g_day_guide_clear.mjs";
 export async function app_g_day_convert_tap_if(div_map, npc) {
   ("in the #day_unbelievers stub, tapping the DISCERNED target person IS the (stubbed) conversation — short-circuit to an instant GREEN believes cross (",
     fn_name("app_g_day_convert"),

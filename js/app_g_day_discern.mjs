@@ -1,3 +1,4 @@
+import { app_g_day_discern_pool } from "./app_g_day_discern_pool.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
@@ -13,8 +14,8 @@ export async function app_g_day_discern() {
   "the map is read off the day session rather than received, because this is prayed from the tap-yourself menu now and a menu has no map to hand over.";
   let state = app_g_day_state();
   let div_map = property_get(state, "div_map");
-  let talkable = property_get(state, "talkable");
-  let target = list_random_item(talkable);
+  let pool = app_g_day_discern_pool();
+  let target = list_random_item(pool);
   property_set(state, "target", target);
   let player = await app_g_player_get();
   let g = await app_g_game_save_get();
