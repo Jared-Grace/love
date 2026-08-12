@@ -107,6 +107,18 @@
   {
    "name": "functions_locals_unread_repair_some",
    "refusals": 1
+  },
+  {
+   "name": "function_rename_commit",
+   "refusals": 1
+  },
+  {
+   "name": "ai_git_command_args_last",
+   "refusals": 1
+  },
+  {
+   "name": "functions_rename_if_starts_ends_with_prefix_change",
+   "refusals": 1
   }
  ]
 }
