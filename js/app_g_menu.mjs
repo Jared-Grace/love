@@ -54,8 +54,10 @@ export function app_g_menu(overlay, player) {
     app_g_button_green(sub, words, lambda22);
     ("on a day walk (#day_unbelievers) this screen offers a SECOND prayer under the first: one for discernment about WHO to go to next, which on answering picks the person and lays the gold guide to them. it belongs here rather than on a bar of its own across the bottom of the map, because it is a prayer, and every other prayer in the game is prayed from this screen. a bar at the bottom also read as the primary action of the whole map, which put the walking second to a button.");
     ("it is ADDED, never swapped for the conversation prayer. the two ask for different things - one for who to go to, one for the conversation once you are there - so a walk needs BOTH, and hiding the older one behind the newer took away the prayer the player prays most. the always-present one also stays FIRST, so learning where it is survives a day starting.");
-    let day_talkable = app_g_day_state_property("talkable");
-    if (null_not_is(day_talkable)) {
+    ("it comes and goes with there being something to be shown (",
+      fn_name("app_g_day_discern_wanted_is"),
+      "), not with the day being on: gathering the day's believers for baptism is walking up to people you already found, so the prayer is not offered for it");
+    if (app_g_day_discern_wanted_is()) {
       async function on_discern() {
         await app_g_day_discern();
         close();
