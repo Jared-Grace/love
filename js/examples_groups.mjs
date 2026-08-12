@@ -135,6 +135,7 @@ export function examples_groups() {
         "example_copy_adds_file",
         "example_copy_refuses_a_taken_name",
         "example_functionize_adds_file",
+        "example_functionize_refuses_a_taken_name",
         "example_wrap_adds_delegating_file",
         "example_wrap_refuses_a_taken_name",
         "example_param_new_across_files",
