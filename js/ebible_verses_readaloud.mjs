@@ -1,5 +1,4 @@
-import { ebible_chapter_verse_markers } from "./ebible_chapter_verse_markers.mjs";
-import { list_map_property } from "./list_map_property.mjs";
+import { ebible_chapter_verse_numbers_with_words } from "./ebible_chapter_verse_numbers_with_words.mjs";
 import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_map_pairs } from "./list_map_pairs.mjs";
@@ -16,7 +15,10 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   ("Cebuano 2 Kings 25 is where that showed. Verse 17 opens on the words eighteen cubits, so the cutting took that eighteen for the start of verse 18, left 17 with nothing in it, and dropped it as a verse the translation has no words for. Twenty-nine numbers were then laid against thirty lines and the reading fell off the end - the whole bible lost its index over one verse that begins with a number.");
   ("The two counts were measured against each other across every chapter of three bibles - three and a half thousand chapters - and they agreed in all of them. So a line read aloud is a verse, and what reading aloud lacks is only the number, which the page has.");
   ("Only the verses that have words are counted, not every verse the page marks. Luke 17 verse 36 and its fellows are marked in many translations and carry a footnote alone; once the footnote is cleared away nothing is left, and nothing is read aloud for them either. Counting the bare mark would push every verse after it along by one, quietly, with no error raised anywhere - which is how it was found, by a gate rather than by anything going wrong.");
-  let verse_numbers = await ebible_chapter_verse_numbers_with_words(bible_folder, chapter_code);
+  let verse_numbers = await ebible_chapter_verse_numbers_with_words(
+    bible_folder,
+    chapter_code,
+  );
   let filtered = await ebible_chapter_readaloud_lines(
     bible_folder,
     chapter_code,

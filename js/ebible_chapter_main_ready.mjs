@@ -13,9 +13,9 @@ import { html_parse_descendants_classes } from "./html_parse_descendants_classes
 import { property_get } from "./property_get.mjs";
 export async function ebible_chapter_main_ready(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
-  "One chapter's page opened and cleared of everything that is not the chapter: the parser it was read with, the element its words live in, and the mark the page puts at the start of each verse.";
-  "What is cleared away is footnotes, the notes' own popups, headings and the like - named in the two lists this asks, one of things kept and one of things dropped. A class belonging to neither list stops the reading rather than being guessed at, because a page that has started using a new kind of element is a page nobody has looked at yet.";
-  "Named apart from the readings that use it because there is more than one of them now, and clearing the page is the part they must do identically. One reading flattens what is left into a run of words; another marks each verse first and so learns which verses have words at all.";
+  ("One chapter's page opened and cleared of everything that is not the chapter: the parser it was read with, the element its words live in, and the mark the page puts at the start of each verse.");
+  ("What is cleared away is footnotes, the notes' own popups, headings and the like - named in the two lists this asks, one of things kept and one of things dropped. A class belonging to neither list stops the reading rather than being guessed at, because a page that has started using a new kind of element is a page nobody has looked at yet.");
+  ("Named apart from the readings that use it because there is more than one of them now, and clearing the page is the part they must do identically. One reading flattens what is left into a run of words; another marks each verse first and so learns which verses have words at all.");
   let opened = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
   let d = property_get(opened, "d");
   let main = property_get(opened, "main");
