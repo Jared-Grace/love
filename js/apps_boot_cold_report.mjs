@@ -13,6 +13,7 @@ export async function apps_boot_cold_report() {
     fn_name("app_next"),
     " died exactly there: it put a verse on the clipboard while it was opening, a browser refuses that whenever its window is not the focused one, and the refusal threw before a single line was drawn. the page then sat on its loading message for ever. nothing was red, no test knew, and the only way it could have been found was somebody opening the page cold - which is what this does.");
   ("the sweep is deliberately one page at a time. a browser for each is already the expensive part, and this machine usually has several of these agents on it at once, so opening twenty-six at once would measure the load rather than the code.");
+  ("each app is reported the moment it has been looked at, rather than all of them at the end. this sweep opens a real browser for each of twenty-six apps and can run past ten minutes, which is long enough that something will sometimes stop it early - and a sweep that only speaks at the end has nothing to say when that happens. it has already been killed once by a caller's own patience running out and thrown away every app it had checked. a line per app means an interrupted run is still worth exactly what it did.");
   let app_names = await apps_names_dev();
   let found = [];
   for (let app_name of app_names) {
@@ -22,6 +23,8 @@ export async function apps_boot_cold_report() {
     let body_text = property_get(capture, "body_text");
     let reasons = page_boot_reasons(body_text, errors);
     let arrived = list_empty_is(reasons);
+    let told = list_join_comma(reasons);
+    log_keep(app_name, told);
     if (not(arrived)) {
       let entry = {
         app_name,

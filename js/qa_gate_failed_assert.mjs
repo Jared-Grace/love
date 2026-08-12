@@ -11,9 +11,12 @@ export async function qa_gate_failed_assert(
   commit,
   asked_ms,
   blamed_ms,
-  Error,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 5);
+  "Throws when anything went red, naming every gate that did, and returns quietly when nothing did.";
+  "The two halves are joined first. What the frozen copy complained about and what this machine complained about are one list here, so one thrown sentence covers both and neither half can go red without being said.";
+  "Before throwing, every red is asked once more out in the folder as it stands, and what that finds is printed and nothing else. The copy was taken while several of us were writing to it, so a gate may have been shown a file caught half-written - but a gate that goes quiet out here may only be quiet because somebody is mid-edit, so the verdict stays exactly what the frozen copy said. A clean answer from the whole run is supposed to mean the code is sound.";
+  "How long the parts took is printed on the way out as well as on the way through, because a run that throws is the run whose timings somebody actually wants.";
   let failed_copy = property_get(told, "failed");
   let failed = list_concat_property(failed_copy, here, "failed");
   if (greater_than(failed.length, 0)) {
