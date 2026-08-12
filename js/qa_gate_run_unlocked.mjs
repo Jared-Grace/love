@@ -1,3 +1,6 @@
+import { qa_gate_kept_remembered } from "./qa_gate_kept_remembered.mjs";
+import { qa_gate_told_kept } from "./qa_gate_told_kept.mjs";
+import { qa_gate_told_sectioned } from "./qa_gate_told_sectioned.mjs";
 import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
 import { qa_gate_frozen_ensure } from "./qa_gate_frozen_ensure.mjs";
 import { qa_gate_told_filed } from "./qa_gate_told_filed.mjs";
@@ -11,7 +14,6 @@ import { list_join_comma } from "./list_join_comma.mjs";
 import { qa_gates_here_failed } from "./qa_gates_here_failed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
-import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_get } from "./list_get.mjs";
@@ -65,12 +67,14 @@ export async function qa_gate_run_unlocked() {
   let printed = property_get(told, "printed");
   console.log(printed);
   ("What was found is written into the shared record of judged commits, when the copy stood on one. This run already does everything a judging does and until now threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
-  await qa_gate_told_filed(commit, told, before);
+  ("An answer that came out of the record is not written back into it. It is already there, under this very commit, and re-filing it would spend a reading and a writing to leave the file exactly as it was.");
+  let filing = remembered ? null : commit;
+  await qa_gate_told_filed(filing, told, before);
   let at_blame = date_now_milliseconds();
   ("Who last touched the things the copy complained about is asked out here rather than in there. A copy of the working folder is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault. Asking out here is right for the other kind of copy too, since the history a worktree can reach is this repo's own and the question is about the living folder either way");
   ("One kind of red is diagnosed here rather than left to whoever reads the list, and it is the only one where asking again makes things look better instead of clearer: a gate whose question is about the history goes red in a copy made without any, and goes quiet when asked out here, which reads as a tear in the copy. Read that way it comes back on every run forever.");
   ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
-  let sections = qa_gate_failed_sections(printed);
+  let sections = property_get(told, "sections");
   let any = list_size_greater_than(sections, 0);
   if (any) {
     let known = await functions_names();
