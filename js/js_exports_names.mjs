@@ -28,8 +28,8 @@ export function js_exports_names(ast) {
     if (several) {
       let declarators = property_get(declaration, "declarations");
       function bound(declarator) {
-        let id = property_get(declarator, "id");
-        let inner = js_function_declaration_params_names_node(id);
+        let declarator_id = property_get(declarator, "id");
+        let inner = js_function_declaration_params_names_node(declarator_id);
         return inner;
       }
       let unpacked = list_map_squash(declarators, bound);
