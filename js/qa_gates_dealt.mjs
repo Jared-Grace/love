@@ -1,6 +1,6 @@
+import { property_get } from "./property_get.mjs";
+import { qa_gate_cost_typical } from "./qa_gate_cost_typical.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
@@ -18,17 +18,9 @@ export function qa_gates_dealt(gates, costs, count) {
     }
   }
   ("A weight of nought is not a small weight, it is the absence of one, and it breaks the dealing rather than skewing it: every share stays at nought, no share is ever lighter than the first, and all of them land together on the first. Every gate would still be asked, so nothing would go wrong and nothing would say anything - the run would simply be undivided again, which is the thing this exists to stop. So when nothing has been timed, every gate weighs the same one unit, and dealing the heaviest first onto the lightest becomes dealing them round in turn, which is exactly what this replaced and the right thing to fall back to");
-  let typical = 1;
-  if (greater_than(known.length, 0)) {
-    let added = 0;
-    for (let ms of known) {
-      added += ms;
-    }
-    let mean = divide(added, known.length);
-    if (greater_than(mean, 0)) {
-      typical = mean;
-    }
-  }
+  let r = qa_gate_cost_typical(known, ms);
+  let ms = property_get(r, "ms");
+  let typical = property_get(r, "typical");
   function cost_of(gate) {
     let ms = costs[gate.name];
     if (equal(ms, undefined)) {
