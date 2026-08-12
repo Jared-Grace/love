@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -27,7 +28,7 @@ export async function permission_grant_unsafe_param_names() {
     let plain = await function_params_plain(name);
     for (let param of params) {
       let named_is = js_identifier_is(param);
-      if (!named_is) {
+      if (not(named_is)) {
         continue;
       }
       let p_name = property_get(param, "name");
@@ -48,8 +49,10 @@ export async function permission_grant_unsafe_param_names() {
             };
             property_set(found, p_name, entry);
           }
-          list_add_if_not_includes(property_get(entry, "words"), word);
-          list_add_if_not_includes(property_get(entry, "functions"), name);
+          let list = property_get(entry, "words");
+          list_add_if_not_includes(list, word);
+          let list2 = property_get(entry, "functions");
+          list_add_if_not_includes(list2, name);
         }
       }
     }
@@ -57,7 +60,8 @@ export async function permission_grant_unsafe_param_names() {
   let entries = object_values(found);
   function functions_count(entry) {
     let functions = property_get(entry, "functions");
-    return functions.length;
+    let r = functions.length;
+    return r;
   }
   let sorted = list_sort_number_mapper_reverse(entries, functions_count);
   let report = [];
