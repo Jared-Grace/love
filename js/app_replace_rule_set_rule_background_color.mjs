@@ -1,5 +1,5 @@
 import { app_shared_button_background_color } from "./app_shared_button_background_color.mjs";
-import { app_shared_button_progress_next_background_color } from "./app_shared_button_progress_next_background_color.mjs";
+import { app_shared_color_progress_next } from "./app_shared_color_progress_next.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { ternary_nested } from "./ternary_nested.mjs";
 export function app_replace_rule_set_rule_background_color(
@@ -8,7 +8,7 @@ export function app_replace_rule_set_rule_background_color(
   success,
 ) {
   let button_background_color = app_shared_button_background_color();
-  let blue_strong = app_shared_button_progress_next_background_color();
+  let blue_strong = app_shared_color_progress_next();
   let c = ternary_nested(
     selected,
     blue_strong,
