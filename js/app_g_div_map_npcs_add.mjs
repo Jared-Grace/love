@@ -1,3 +1,4 @@
+import { app_g_npc_cross_set } from "./app_g_npc_cross_set.mjs";
 import { g_game_prefix } from "./g_game_prefix.mjs";
 import { each } from "./each.mjs";
 import { g_icon_cross } from "./g_icon_cross.mjs";
@@ -11,7 +12,9 @@ export function app_g_div_map_npcs_add(div_map, npcs) {
     app_g_npc_img_set(npc, ci);
     let christian = property_get(npc, "christian");
     if (christian) {
-      g_icon_cross(div_map, npc);
+      ("the cross is remembered under where they stand, the same as their picture, because a cross is its own element and moving the person alone would leave it behind on an empty tile");
+      let cross = g_icon_cross(div_map, npc);
+      app_g_npc_cross_set(npc, cross);
     }
   }
   each(npcs, lambda);
