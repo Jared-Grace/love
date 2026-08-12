@@ -119,6 +119,14 @@
   {
    "name": "functions_rename_if_starts_ends_with_prefix_change",
    "refusals": 1
+  },
+  {
+   "name": "functions_rename_names_prefix_change",
+   "refusals": 1
+  },
+  {
+   "name": "functions_rename_if_starts_with_replace",
+   "refusals": 1
   }
  ]
 }
