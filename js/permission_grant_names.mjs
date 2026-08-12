@@ -1040,6 +1040,36 @@ export function permission_grant_names() {
   let spelled1021 = fn_name("folder_lines_search");
   let spelled1022 = fn_name("folder_lines_search_args");
   let spelled1023 = fn_name("permission_grants_writing_arguments");
+  let spelled1024 = fn_name("app_original_bible_gloss_chapter_base_repair");
+  let spelled1025 = fn_name("firebase_storage_download_json_jg");
+  let spelled1026 = fn_name("app_original_bible_gloss_generate_upload");
+  let spelled1027 = fn_name("app_original_bible_gloss_passages");
+  let spelled1028 = fn_name("ebible_readaloud_lines_write");
+  let spelled1029 = fn_name("app_original_bible_gloss_write_coverage");
+  let spelled1030 = fn_name("storage_rules_read_prefixes");
+  let spelled1031 = fn_name("bible_interlinear_verses_upload");
+  let spelled1032 = fn_name("app_g_day_line_corner_check");
+  let spelled1033 = fn_name("bible_interlinear_verses_upload_folder");
+  let spelled1034 = fn_name("g_profiles_value_tally");
+  let spelled1035 = fn_name("firebase_storage_list");
+  let spelled1036 = fn_name("ebible_version_chapters_all_upload_path");
+  let spelled1037 = fn_name(
+    "app_original_bible_gloss_generate_upload_namespace",
+  );
+  let spelled1038 = fn_name("ebible_index_flats_union_cases_gate_run");
+  let spelled1039 = fn_name("ebible_index_flats_upload");
+  let spelled1040 = fn_name("bible_interlinear_offline_upload_overwrite");
+  let spelled1041 = fn_name("firebase_storage_download_json_decompress");
+  let spelled1042 = fn_name("ebible_readaloud_lines_differ");
+  let spelled1043 = fn_name("ebible_index_flat_upload");
+  let spelled1044 = fn_name("ebible_verses_readaloud");
+  let spelled1045 = fn_name("ebible_chapter_verse_numbers_storage_try");
+  let spelled1046 = fn_name("ebible_firebase_upload_path");
+  let spelled1047 = fn_name("uplifting_package_destination");
+  let spelled1048 = fn_name("ebible_version_download_path");
+  let spelled1049 = fn_name("local_function_path_json");
+  let spelled1050 = fn_name("ebible_verses_upload_name");
+  let spelled1051 = fn_name("firebase_storage_object_metadata");
   let names = [
     spelled,
     spelled2,
@@ -2064,6 +2094,34 @@ export function permission_grant_names() {
     spelled1021,
     spelled1022,
     spelled1023,
+    spelled1024,
+    spelled1025,
+    spelled1026,
+    spelled1027,
+    spelled1028,
+    spelled1029,
+    spelled1030,
+    spelled1031,
+    spelled1032,
+    spelled1033,
+    spelled1034,
+    spelled1035,
+    spelled1036,
+    spelled1037,
+    spelled1038,
+    spelled1039,
+    spelled1040,
+    spelled1041,
+    spelled1042,
+    spelled1043,
+    spelled1044,
+    spelled1045,
+    spelled1046,
+    spelled1047,
+    spelled1048,
+    spelled1049,
+    spelled1050,
+    spelled1051,
   ];
   return names;
 }
