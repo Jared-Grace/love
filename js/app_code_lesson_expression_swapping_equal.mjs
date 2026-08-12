@@ -40,11 +40,17 @@ export function app_code_lesson_expression_swapping_equal() {
       " asks: are the two numbers different?",
     ]);
     let same = app_code_container_light_blue(root);
+    ("One line became four, each a single step, because the original packed the supposition, the swap, the reason and the conclusion into one sentence joined by a dash - and it opened on the conclusion (doesn't matter) before the reader had been given the thing it was a conclusion about.");
     html_div_cycle_code(same, [
-      "Asking if two numbers are the same (",
+      "Suppose we ask if two numbers are the same (",
       "===",
-      ") doesn't matter if the two numbers are swapped - it's still asking if those two numbers are the same",
+      ")",
     ]);
+    html_div_cycle_code(same, ["Suppose we swap the two numbers"]);
+    html_div_cycle_code(same, [
+      "Then we are still asking if those two numbers are the same",
+    ]);
+    html_div_cycle_code(same, ["So the answer will be the same"]);
     html_div_cycle_code(same, ["So we can always swap ", "==="]);
     html_div_cycle_code(same, [
       "Likewise, for asking if two numbers are different (",
