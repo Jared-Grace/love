@@ -1,6 +1,8 @@
+import { bible_interlinear_original_keys_find } from "./bible_interlinear_original_keys_find.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
-import { bible_interlinear_original_key } from "./bible_interlinear_original_key.mjs";
-import { bible_interlinear_original_marked_key } from "./bible_interlinear_original_marked_key.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { text_trim } from "./text_trim.mjs";
 ("Which editorial sigla actually occur in the interlinear's marked base-text column, and");
@@ -14,8 +16,9 @@ import { text_trim } from "./text_trim.mjs";
 export async function bible_interlinear_sigla_report() {
   let path = bible_interlinear_json_path();
   let rows = await file_read_json(path);
-  let marked_key = bible_interlinear_original_marked_key();
-  let plain_key = bible_interlinear_original_key();
+  let keys = bible_interlinear_original_keys_find(rows);
+  let marked_key = keys.marked;
+  let plain_key = keys.plain;
   let openers = "{⧼(〈[‹";
   let counts = {};
   let samples = {};
@@ -24,32 +27,38 @@ export async function bible_interlinear_sigla_report() {
   let mismatched = 0;
   let mismatch_samples = [];
   let index = 0;
-  while (index < rows.length) {
+  while (less_than(index, rows.length)) {
     let row = rows[index];
     index = index + 1;
     let marked_value = row[marked_key];
+    let message = String(marked_value);
     let marked =
-      marked_value === undefined || marked_value === null
+      equal(marked_value, undefined) || equal(marked_value, null)
         ? ""
-        : text_trim(String(marked_value));
-    if (marked === "") {
+        : text_trim(message);
+    if (equal(marked, "")) {
       continue;
     }
     words_total = words_total + 1;
     let bare = marked.replace(/[{}⧼⧽()〈〉\[\]‹›]/g, "");
     let plain_value = row[plain_key];
+    let message2 = String(plain_value);
     let plain =
-      plain_value === undefined || plain_value === null
+      equal(plain_value, undefined) || equal(plain_value, null)
         ? ""
-        : text_trim(String(plain_value));
-    if (bare !== plain) {
+        : text_trim(message2);
+    if (not_equal(bare, plain)) {
       mismatched = mismatched + 1;
-      if (mismatch_samples.length < 8) {
-        mismatch_samples.push({ marked, bare, plain });
+      if (less_than(mismatch_samples.length, 8)) {
+        mismatch_samples.push({
+          marked,
+          bare,
+          plain,
+        });
       }
     }
     let position = 0;
-    while (position < marked.length) {
+    while (less_than(position, marked.length)) {
       let character = marked[position];
       position = position + 1;
       if (openers.includes(character)) {
@@ -57,15 +66,20 @@ export async function bible_interlinear_sigla_report() {
       }
     }
     let head = marked.slice(0, 2);
-    let kind = head === "[[" ? "[[ECM]]" : openers.includes(marked[0]) ? marked[0] : "base";
+    let kind = equal(head, "[[")
+      ? "[[ECM]]"
+      : openers.includes(marked[0])
+        ? marked[0]
+        : "base";
     counts[kind] = (counts[kind] || 0) + 1;
     let seen = samples[kind] || [];
-    if (seen.length < 4) {
+    if (less_than(seen.length, 4)) {
       seen.push(marked);
       samples[kind] = seen;
     }
   }
   let report = {
+    keys,
     words_total,
     counts,
     samples,
