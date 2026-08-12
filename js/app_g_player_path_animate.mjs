@@ -30,7 +30,9 @@ export async function app_g_player_path_animate(
     ("somebody standing where the player is stepping trades places with them, so a player walled in by people can always walk out. on a way that goes AROUND everybody there is never anybody there, so this does nothing at all on an ordinary walk");
     app_g_player_npc_swap_if(g, from, to);
     app_g_day_trail_add(from);
-    app_g_day_followers_step(g);
+    if (following) {
+      app_g_day_followers_step(g);
+    }
     await app_g_player_move_animate(to, player_img_c);
     app_g_player_center(to, player_img_c, div_map);
     await app_g_day_followers_settle();
