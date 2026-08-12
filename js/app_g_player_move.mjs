@@ -9,9 +9,11 @@ import { app_g_player_path_animate } from "./app_g_player_path_animate.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export async function app_g_player_move(
   coordinates_move_to,
+  still,
   player_img_c,
   div_map,
 ) {
+  "somebody is left standing where they are while the way opens: whoever was tapped, or nothing when the tap was on open ground. The whole point of walking up to a person is to arrive beside THAT person, so they are the one member of a crowd who must not be shuffled aside to make the way";
   "the people walking behind the player stand in the way like anybody else, so a player who walks into a dead end can be sealed in by their own line. when that is the only thing between them and where they want to go, the line backs down its own trail until the way is open - which is also what tapping somebody in your own line means: walk back down the line to them";
   let player = await app_g_player_get();
   let g = await app_g_game_save_get();
@@ -28,7 +30,7 @@ export async function app_g_player_move(
   let reachable = list_empty_not_is(path);
   if (reachable) {
     ("the way opens before the player walks it: anybody standing on it steps aside first, and the few too hemmed in to have anywhere to go are passed one at a time by trading places as the walk reaches them");
-    app_g_crowd_part(g, path);
+    app_g_crowd_part(g, path, still);
     await app_g_player_path_animate(g, player, path, player_img_c, div_map);
     object_assign(player, coordinates_move_to);
   }

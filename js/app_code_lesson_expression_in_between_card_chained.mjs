@@ -11,6 +11,9 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
     ["You might write ", "2 < 5 < 8"],
     ["That is how we would write this in math"],
     ["However, that is not how we write this in JS"],
+  ]);
+  ("The aside is its own card because it can be cut whole. What a learner has to keep is the three lines above and the fix below - the chained line is maths, JS is not written that way, so write two pieces. Everything here answers a question a curious reader asks and an incurious one does not, and grouping it apart is what lets that reader skip it without losing the thread.");
+  app_code_container_light_blue_cycle_code_multiple(root, [
     [
       "In JS, ",
       "2 < 5 < 8",

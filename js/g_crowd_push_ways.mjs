@@ -1,3 +1,6 @@
+import { g_direction_sides } from "./g_direction_sides.mjs";
+import { list_add } from "./list_add.mjs";
+import { g_direction_opposite } from "./g_direction_opposite.mjs";
 export function g_crowd_push_ways(direction) {
   "the ways somebody in the way is asked to give, in the order they are tried: the two sides first, then onward, then back.";
   "Sides first is what makes a crowd standing across a way open as a LANE - the two halves stepping apart and the walker going up the middle - rather than the whole crowd shuffling along in front of the walker like a queue. Trying the sides first does not merely allow that, it is the only reason it happens: onward and back would empty the tile just as well, and a crowd shoved onward is a crowd that never parts.";
