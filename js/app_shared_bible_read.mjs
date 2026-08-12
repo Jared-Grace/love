@@ -1,3 +1,5 @@
+import { app_shared_bible_chapter_code_default } from "./app_shared_bible_chapter_code_default.mjs";
+import { html_bar_foot } from "./html_bar_foot.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
@@ -96,6 +98,7 @@ export async function app_shared_bible_read(context, verse_action) {
   html_clear(root);
   html_margin_0(root);
   let bc = app_shared_bar_content_root(root);
+  let shell = property_get(bc, "shell");
   let content = property_get(bc, "content");
   app_shared_content_column_pad(content);
   html_flex_column_gap(content, "0");
@@ -114,8 +117,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let hash = html_hash_object_get();
   let c = app_shared_bible_chapter_hash_get_or_empty(hash);
   let b = app_shared_bible_book_hash_get(hash);
-  let key3 = app_shared_bible_reference_hash_key();
-  let ref = property_get_or(hash, key3, "");
+  let key = app_shared_bible_reference_hash_key();
+  let ref = property_get_or(hash, key, "");
   let ref_line = text_replace(ref, "+", " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
@@ -157,7 +160,9 @@ export async function app_shared_bible_read(context, verse_action) {
   app_shared_text_deemphasized(count_status);
   ("a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter fills the screen until there is something to say");
   html_margin_0(count_status);
-  let chapter_code = text_empty_is(c) ? "JHN01" : c;
+  let chapter_code = text_empty_is(c)
+    ? app_shared_bible_chapter_code_default()
+    : c;
   if (ref_mode) {
     let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
     if (null_is(ref_chapter)) {
