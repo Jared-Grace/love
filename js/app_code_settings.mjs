@@ -1,3 +1,4 @@
+import { app_code_content_cap } from "./app_code_content_cap.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_code_progress_all_complete_mark } from "./app_code_progress_all_complete_mark.mjs";
@@ -15,6 +16,8 @@ export async function app_code_settings(context) {
   arguments_assert(arguments, 1);
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
+  ("cap it to the same column the lessons are listed in, so the question below reads at the width everything else on this app is read at rather than running the full width of a desktop window");
+  app_code_content_cap(g);
   let text_home = app_shared_button_home_text();
   app_shared_screen_set_button(g, context, app_code_home, text_home);
   app_shared_font_size_buttons(g, context);

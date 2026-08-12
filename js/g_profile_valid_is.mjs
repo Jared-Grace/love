@@ -8,18 +8,18 @@ export function g_profile_valid_is(profile) {
   "Each rule below says WHY, because a rule with no reason cannot be corrected by somebody who knows better.";
   let gender = profile.gender;
   let age = profile.age;
-  let marriage = profile.marriage;
+  let marriage = profile.marital_status;
   let sons = profile.sons;
   let daughters = profile.daughters;
   let servitude = profile.servitude;
-  let government = profile.government;
+  let government = profile.government_role;
   let childless = equal(sons, "none") && equal(daughters, "none");
   ("No woman held a Roman office or served in a legion.");
-  if (equal(gender, "female") && not_equal(government, "civilian")) {
+  if (equal(gender, "female") && not_equal(government, "none")) {
     return false;
   }
   ("A slave held no office and served in no legion.");
-  if (equal(servitude, "servant") && not_equal(government, "civilian")) {
+  if (equal(servitude, "servant") && not_equal(government, "none")) {
     return false;
   }
   ("Children come of a marriage, and a widow keeps the ones she bore.");
