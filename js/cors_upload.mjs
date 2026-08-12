@@ -1,4 +1,4 @@
-import { list_first_property } from "./list_first_property.mjs";
+import { cors_bucket_rules } from "./cors_bucket_rules.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { cors_rules } from "./cors_rules.mjs";
 export async function cors_upload() {
@@ -8,8 +8,7 @@ export async function cors_upload() {
   let bucket = await firebase_bucket();
   let rules = cors_rules();
   await bucket.setCorsConfiguration(rules);
-  let got = await bucket.getMetadata();
-  let cors = list_first_property(got, "cors");
+  let cors = await cors_bucket_rules();
   let r = {
     sent: rules,
     cors,
