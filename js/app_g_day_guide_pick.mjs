@@ -1,3 +1,5 @@
+import { g_game_npcs_standing } from "./g_game_npcs_standing.mjs";
+import { g_coordinates_index } from "./g_coordinates_index.mjs";
 import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
