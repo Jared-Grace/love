@@ -272,6 +272,7 @@ export function qa_gates() {
     js_while_frozen_cases_gate_run,
     qa_gate_said_history_blind_cases_gate_run,
     qa_commit_entry_beside_matching_cases_gate_run,
+    js_statements_span_outputs_cases_gate_run,
     js_atomize_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
