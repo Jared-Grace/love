@@ -1,3 +1,4 @@
+import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,7 +31,8 @@ export async function app_g_day_line_back_step(player, player_img_c, div_map) {
   property_set(state, "trail", remaining);
   let direction = g_direction(player, to);
   app_g_character_face(player, player_img_c, direction);
-  app_g_day_followers_step();
+  let g = await app_g_game_save_get();
+  app_g_day_followers_step(g);
   object_assign(player, to);
   await app_g_player_move_animate(to, player_img_c);
   app_g_player_center(to, player_img_c, div_map);
