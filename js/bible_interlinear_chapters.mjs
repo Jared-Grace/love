@@ -1,3 +1,4 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { bible_interlinear_chapters_generic } from "./bible_interlinear_chapters_generic.mjs";
@@ -5,9 +6,7 @@ import { bible_interlinear_original_keys_find } from "./bible_interlinear_origin
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 import { bible_interlinear_word_base_text } from "./bible_interlinear_word_base_text.mjs";
 import { bible_interlinear_words_base } from "./bible_interlinear_words_base.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
 ("Every chapter's verses, each carrying its original-language text as one joined string.");
 ("The per-word columns - transliteration, parsing, Strong's number, gloss - are dropped here.");
@@ -34,8 +33,7 @@ export async function bible_interlinear_chapters() {
       let neq = not_equal(word, "");
       return neq;
     }
-    let mapped = list_map(base, word_of);
-    let present = list_filter(mapped, word_present_is);
+    let present = list_map_filter(base, word_of, word_present_is);
     let text = list_join_space(present);
     let r = {
       text,
