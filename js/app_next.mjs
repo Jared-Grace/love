@@ -44,7 +44,9 @@ export async function app_next(context) {
   let count = app_shared_bible_hash_to_verses_count(hash);
   let version_english = ebible_folder_english();
   let books = await ebible_version_books_browser(version_english);
-  let list = await ebible_index_flat(version_english);
+  ("Which verses there are to walk is asked of the bibles the link chose rather than of English alone. A bible that joins two verses into one has nothing at the second number, and a reader who chose that bible without English used to be walked past a number none of their bibles use and shown a line saying so - an apology for a gap that only existed because of a bible they were not reading.");
+  let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
+  let list = await ebible_index_flat_chosen(bible_folders);
   let asked = ebible_index_flat_verses_run(
     list,
     chapter_code,
@@ -53,7 +55,6 @@ export async function app_next(context) {
   );
   ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So what was asked for is carried on to the end of the sentence it stops in, and the number in the link is a floor rather than an exact amount.");
   ("Every language the link asked for has to have finished, not only the first, because a reader who chose three is reading three.");
-  let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
   let reach = app_shared_bible_passage_reach_maximum();
   let run = await ebible_index_flat_passage_run(
     list,
