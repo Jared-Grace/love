@@ -1,3 +1,4 @@
+import { text_lines_search_cases_gate_run } from "./text_lines_search_cases_gate_run.mjs";
 import { ebible_index_flat_uploaded_gate_run } from "./ebible_index_flat_uploaded_gate_run.mjs";
 import { commands_only_write_denied_cases_gate_run } from "./commands_only_write_denied_cases_gate_run.mjs";
 import { commands_only_hook_path_gate_run } from "./commands_only_hook_path_gate_run.mjs";
@@ -419,6 +420,7 @@ export function qa_gates() {
     qa_gates_said_plain_gate_run,
     commands_only_hook_path_gate_run,
     commands_only_write_denied_cases_gate_run,
+    text_lines_search_cases_gate_run,
   ];
   return gates;
 }

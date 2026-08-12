@@ -1,7 +1,8 @@
-import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { bible_interlinear_sigla_edition_pairs } from "./bible_interlinear_sigla_edition_pairs.mjs";
+import { equal } from "./equal.mjs";
+import { bible_interlinear_row_marked_text } from "./bible_interlinear_row_marked_text.mjs";
 import { bible_interlinear_word_base_text } from "./bible_interlinear_word_base_text.mjs";
+import { bible_interlinear_word_edition_marks } from "./bible_interlinear_word_edition_marks.mjs";
 export function bible_interlinear_words_base(rows, marked_key) {
   "One verse's interlinear rows, reduced to the words that belong to the public-domain";
   "base text - every word that belongs to a later edition instead is dropped, span and all.";
@@ -26,22 +27,8 @@ export function bible_interlinear_words_base(rows, marked_key) {
   "is kept - which left a wholly wrapped verse looking like a verse with something still";
   "in it, the whole-verse rule never firing, and Revelation 20:4 coming back empty from a";
   "function written to stop exactly that. A row with no word is not a word.";
-  let pairs = bible_interlinear_sigla_edition_pairs();
-  let openers = {};
-  let closers = {};
-  function pair_note(pair) {
-    openers[pair.open] = pair.edition;
-    closers[pair.close] = pair.edition;
-  }
-  pairs.forEach(pair_note);
-  function marked_of(row) {
-    let value = row[marked_key];
-    let missing = equal(value, undefined) || equal(value, null);
-    let marked = missing ? "" : String(value);
-    return marked;
-  }
   function word_present_is(row) {
-    let marked = marked_of(row);
+    let marked = bible_interlinear_row_marked_text(row, marked_key);
     let word = bible_interlinear_word_base_text(marked);
     let present = not_equal(word, "");
     return present;
@@ -50,26 +37,13 @@ export function bible_interlinear_words_base(rows, marked_key) {
   let kept = [];
   let open_edition = "";
   function row_read(row) {
-    let marked = marked_of(row);
-    let characters = Array.from(marked);
-    let opened = "";
-    let closed = "";
-    function character_read(character) {
-      let opens = openers[character];
-      if (opens) {
-        opened = opens;
-      }
-      let shuts = closers[character];
-      if (shuts) {
-        closed = shuts;
-      }
+    let marked = bible_interlinear_row_marked_text(row, marked_key);
+    let marks = bible_interlinear_word_edition_marks(marked);
+    let inside = not_equal(open_edition, "") || not_equal(marks.opened, "");
+    if (not_equal(marks.opened, "")) {
+      open_edition = marks.opened;
     }
-    characters.forEach(character_read);
-    let inside = not_equal(open_edition, "") || not_equal(opened, "");
-    if (not_equal(opened, "")) {
-      open_edition = opened;
-    }
-    if (not_equal(closed, "")) {
+    if (not_equal(marks.closed, "")) {
       open_edition = "";
     }
     if (inside) {
