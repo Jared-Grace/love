@@ -26,7 +26,7 @@ export function app_code_lesson_functions_console_log_statement() {
       "In English we use sentences",
     );
     html_div_cycle_bold(c2, [
-      'In JavaScript, "sentences" are called ',
+      'In JS, "sentences" are called ',
       "statements",
     ]);
     let c = app_code_container_light_blue_text(
@@ -35,11 +35,11 @@ export function app_code_lesson_functions_console_log_statement() {
     );
     let div = html_div(c);
     html_cycle_bold_code(div, [
-      "In JavaScript, instead of a period (.), we use a ",
+      "In JS, instead of a period (.), we use a ",
       "semicolon",
       " ",
       ";",
-      " to mean the end of a JavaScript statement",
+      " to mean the end of a JS statement",
     ]);
     app_code_container_light_blue_cycle_code(root, [
       "Therefore, this lesson is the same as the previous, except there is a ",
