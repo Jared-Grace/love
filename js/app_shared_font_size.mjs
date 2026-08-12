@@ -1,5 +1,5 @@
-import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
+import { app_shared_font_size_generic } from "./app_shared_font_size_generic.mjs";
 export function app_shared_font_size(context) {
-  let value = storage_local_initialize_context(context, "font_size", 20);
+  let value = app_shared_font_size_generic(context, 20);
   return value;
 }

@@ -1,3 +1,7 @@
+import { app_g_storage_app } from "./app_g_storage_app.mjs";
+import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
+import { app_g_font_size } from "./app_g_font_size.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
@@ -11,13 +15,19 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_remix_icon } from "./html_remix_icon.mjs";
 export function app_g_html_initialize(context) {
+  let app_fn = app_g_storage_app();
+  app_shared_app_fn_set(context, app_fn);
   let root = html_mobile_default(context);
   html_remix_icon();
   ("the game font is sized to MATCH the other apps' reading text (~20px), not run larger. the conversation chrome renders through the shared 1.2em control token, so it lands at 1.2 × this root; a 16px root puts it at ~19px — level with the reading apps' 20px rather than the 21.6px an 18px root gave. the map is px/vw/vh-based (",
     fn_name("g_img_square_size_css"),
     "), so this only sizes text, never the tiles.");
+  ("that 16 is where the game STARTS, not a ceiling. a player who needs bigger words has the same claim on them here as a reader does in the Bible apps, and because no tile is sized from this root, growing them cannot disturb the map — see ",
+    fn_name("app_g_font_size"),
+    ".");
+  let left = app_g_font_size(context);
   html_style_assign(root, {
-    "font-size": "16px",
+    "font-size": text_combine(left, "px"),
     margin: "0",
     padding: 0,
     height: "100%",
@@ -35,7 +45,8 @@ export function app_g_html_initialize(context) {
     "pointer-events": "auto",
   });
   ("this was needed instead of 100% to allow vertical scrolling");
-  html_style_set(div_map_container, "height", html_viewport_height_full());
+  let style_value = html_viewport_height_full();
+  html_style_set(div_map_container, "height", style_value);
   html_scroll_none(div_map_container);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);

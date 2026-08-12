@@ -62,23 +62,7 @@ export function g_plant_days(conversation_lists, next) {
     let spent = leader;
     while (true) {
       let room = subtract(budget, spent);
-      let fitting = [];
-      for (let index = 0; less_than(index, count); index++) {
-        let already = list_includes(met, index);
-        if (already) {
-          continue;
-        }
-        let lengths = left[index];
-        let none = list_empty_is(lengths);
-        if (none) {
-          continue;
-        }
-        let turns = lengths[0];
-        let fits = less_than_equal(turns, room);
-        if (fits) {
-          list_add(fitting, index);
-        }
-      }
+      let fitting = g_plant_day_fitting(left, met, room);
       let nobody = list_empty_is(fitting);
       if (nobody) {
         break;
