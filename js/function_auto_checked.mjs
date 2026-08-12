@@ -1,3 +1,6 @@
+import { property_get } from "./property_get.mjs";
+import { function_shadowing_report } from "./function_shadowing_report.mjs";
+import { property_set } from "./property_set.mjs";
 import { property_not } from "./property_not.mjs";
 import { function_auto } from "./function_auto.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
