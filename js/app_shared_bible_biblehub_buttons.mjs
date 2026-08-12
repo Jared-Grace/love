@@ -1,3 +1,6 @@
+import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
+import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
+import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 export function app_shared_bible_biblehub_buttons(
   parent,
   chapter_name,
