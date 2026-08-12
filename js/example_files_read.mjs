@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { folder_read_files } from "./folder_read_files.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_read } from "./file_read.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function example_files_read(dir) {
   arguments_assert(arguments, 1);
   ("Everything standing in a folder afterwards, read back as the same shape an example writes its files in - a name beside the text of it.");
