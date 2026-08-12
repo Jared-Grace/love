@@ -4060,6 +4060,11 @@
             "type": "command",
             "command": "node /home/j/repos/love/.claude/hooks/memory_write_allow.mjs",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "node /home/j/repos/love/.claude/hooks/commands_only_write_deny.mjs",
+            "timeout": 5
           }
         ]
       },
