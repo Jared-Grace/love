@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { null_is } from "./null_is.mjs";
+import { qa_commit_told_judged } from "./qa_commit_told_judged.mjs";
+import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
+import { qa_commit_kept_file } from "./qa_commit_kept_file.mjs";
+import { property_get } from "./property_get.mjs";
+import { json_to } from "./json_to.mjs";
 export async function qa_gate_told_filed(commit, told, before) {
   "$plain commit";
   "$plain told";
@@ -25,7 +32,10 @@ export async function qa_gate_told_filed(commit, told, before) {
     "\nnot kept for commit " +
       commit +
       ": " +
-      json_text(({ silent, moved })),
+      json_to({
+        silent,
+        moved,
+      }),
   );
   return false;
 }
