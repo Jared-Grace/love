@@ -108,6 +108,8 @@ export function examples_notes() {
       "add a parameter — every caller gets the default",
     example_param_delete_across_files:
       "delete a parameter — every caller's arg is stripped",
+    example_param_delete_refuses_a_missing_name:
+      "the same verb given a name the function never binds - it used to take the LAST parameter instead, because not-found came back as a position of minus one",
     example_nested_record_add:
       "reach a list two names deep - the first address past the top of a function",
     example_nested_record_remove: "the undo - a register is not only added to",
