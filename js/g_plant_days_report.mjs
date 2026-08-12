@@ -37,9 +37,9 @@ export function g_plant_days_report(seed) {
     let conversations = property_get(day, "conversations");
     let questions = property_get(day, "questions");
     let leader = property_get(day, "leader");
-    let each = list_map_property(conversations, "turns");
+    let turns_each = list_map_property(conversations, "turns");
     let met = list_size(conversations);
-    let result = list_join_comma(each);
+    let result = list_join_comma(turns_each);
     let r = list_join_space([
       "leader",
       leader,
