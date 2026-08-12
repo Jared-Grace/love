@@ -6,33 +6,39 @@ import { null_is } from "./null_is.mjs";
 import { each } from "./each.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
-import { greater_than } from "./greater_than.mjs";
-export function words_multiset_keep(items, word_get, words_allowed) {
-  "Keep only as many items of each word as the allowed list actually holds, in the order the items arrive.";
-  "A word that appears twice in the items and once in the allowed list keeps its first item and drops its second, which is the whole reason this counts rather than merely asking whether a word is a member. Asking membership would keep both, and the second is exactly the one that should go: it is the occurrence the allowed list does not carry.";
-  let remaining = {};
-  function word_allow(word) {
-    let count = property_get_or_null(remaining, word);
-    if (null_is(count)) {
-      count = 0;
-    }
-    let value = add(count, 1);
-    property_set(remaining, word, value);
-  }
-  each(words_allowed, word_allow);
+import { less_than } from "./less_than.mjs";
+import { words_tally } from "./words_tally.mjs";
+import { each_object } from "./each_object.mjs";
+export function words_multiset_keep(items, words_get, words_allowed) {
+  "Keep only the items whose words the allowed list still has to spare, in the order the items arrive, spending a word as it is kept.";
+  "An item may name several words at once - an explanation of a phrase names every word of the phrase - so each item is asked for a list, and it is kept only if the allowed list can cover all of them together.";
+  "Counting rather than asking whether a word is a member is what makes a repeat come out right: a word the allowed list carries once and the items name twice keeps the first and drops the second, which is the occurrence the allowed list does not carry.";
+  let remaining = words_tally(words_allowed);
   let kept = [];
   function item_read(item) {
-    let word = word_get(item);
-    let count = property_get_or_null(remaining, word);
-    if (null_is(count)) {
+    let words = words_get(item);
+    let wanted = words_tally(words);
+    let short = false;
+    function wanted_check(count, word) {
+      let have = property_get_or_null(remaining, word);
+      if (null_is(have)) {
+        have = 0;
+      }
+      let lacking = less_than(have, count);
+      if (lacking) {
+        short = true;
+      }
+    }
+    each_object(wanted, wanted_check);
+    if (short) {
       return;
     }
-    let available = greater_than(count, 0);
-    if (not(available)) {
-      return;
+    function wanted_spend(count, word) {
+      let have = property_get_or_null(remaining, word);
+      let left = subtract(have, count);
+      property_set(remaining, word, left);
     }
-    let value2 = subtract(count, 1);
-    property_set(remaining, word, value2);
+    each_object(wanted, wanted_spend);
     list_add(kept, item);
   }
   each(items, item_read);
