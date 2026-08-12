@@ -1,3 +1,4 @@
+import { app_g_day_line_corner_check } from "./app_g_day_line_corner_check.mjs";
 import { ebible_index_flats_union_cases_gate_run } from "./ebible_index_flats_union_cases_gate_run.mjs";
 import { text_lines_search_cases_gate_run } from "./text_lines_search_cases_gate_run.mjs";
 import { ebible_index_flat_uploaded_gate_run } from "./ebible_index_flat_uploaded_gate_run.mjs";
@@ -332,6 +333,7 @@ export function qa_gates() {
     app_g_day_guide_pick_check,
     app_g_map_pad_check,
     app_g_day_blocked_check,
+    app_g_day_line_corner_check,
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
     functions_names_in_text_gate_run,
