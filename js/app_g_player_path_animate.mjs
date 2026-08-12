@@ -1,3 +1,7 @@
+import { list_last } from "./list_last.mjs";
+import { app_g_day_line_walked_through_is } from "./app_g_day_line_walked_through_is.mjs";
+import { app_g_day_line_turn } from "./app_g_day_line_turn.mjs";
+import { not } from "./not.mjs";
 import { app_g_player_npc_swap_if } from "./app_g_player_npc_swap_if.mjs";
 import { app_g_day_trail_add } from "./app_g_day_trail_add.mjs";
 import { app_g_day_followers_settle } from "./app_g_day_followers_settle.mjs";
@@ -16,7 +20,7 @@ export async function app_g_player_path_animate(
   player_img_c,
   div_map,
 ) {
-  ("whether this walk passes through the players own line, asked once before anybody has moved - afterwards the line has already been walked through and the answer would always be no");
+  "whether this walk passes through the players own line, asked once before anybody has moved - afterwards the line has already been walked through and the answer would always be no";
   let line_walk = app_g_day_line_walked_through_is(path);
   let following = not(line_walk);
   let steps = g_path_steps(path);
@@ -38,4 +42,8 @@ export async function app_g_player_path_animate(
     await app_g_day_followers_settle();
   }
   await each_async(steps, lambda);
+  if (line_walk) {
+    let arrived = list_last(path);
+    app_g_day_line_turn(g, arrived);
+  }
 }
