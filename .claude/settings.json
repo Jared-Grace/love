@@ -1010,6 +1010,7 @@
       "Bash(node scripts/ai.mjs functions_inside_duplicates_baseline_path:*)",
       "Bash(node scripts/ai.mjs apps_frozen:*)",
       "Bash(node scripts/ai.mjs folder_repo_love:*)",
+      "Bash(node scripts/ai.mjs functions_lift_captured_locals_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -1943,6 +1944,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args functions_inside_duplicates_baseline_path:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args apps_frozen:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args folder_repo_love:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args functions_lift_captured_locals_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -2875,6 +2877,7 @@
       "Bash(node scripts/aig.mjs functions_inside_duplicates_baseline_path:*)",
       "Bash(node scripts/aig.mjs apps_frozen:*)",
       "Bash(node scripts/aig.mjs folder_repo_love:*)",
+      "Bash(node scripts/aig.mjs functions_lift_captured_locals_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -3807,7 +3810,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args functions_operators_raw_baseline_path:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args functions_inside_duplicates_baseline_path:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args apps_frozen:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args folder_repo_love:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args folder_repo_love:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args functions_lift_captured_locals_gate_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },
