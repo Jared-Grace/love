@@ -11,7 +11,7 @@ import { text_combine } from "./text_combine.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_replace_button_home } from "./app_replace_button_home.mjs";
-import { app_replace_font_size_adjust_curried } from "./app_replace_font_size_adjust_curried.mjs";
+import { app_shared_font_size_adjust_curried } from "./app_shared_font_size_adjust_curried.mjs";
 import { multiply_curried_right } from "./multiply_curried_right.mjs";
 import { divide_curried_right } from "./divide_curried_right.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,7 +25,7 @@ export function app_replace_settings(context) {
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
   let div = html_div(root);
-  let c = app_replace_font_size_adjust_curried(context);
+  let c = app_shared_font_size_adjust_curried(context);
   async function lambda2() {
     await c(value_get_multiply);
   }
