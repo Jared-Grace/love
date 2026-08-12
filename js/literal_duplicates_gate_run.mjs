@@ -1,7 +1,8 @@
-import { json_to } from "./json_to.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { literal_duplicates_unambiguous } from "./literal_duplicates_unambiguous.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function literal_duplicates_gate_run() {
   "QA gate: no file spells out a value that a getter in its own family already";
@@ -14,35 +15,27 @@ export async function literal_duplicates_gate_run() {
   "spelling one word, and routing either through the other invents agreement";
   "nobody wrote. A gate over that would be red forever with no honest way to clear";
   "it, which is a gate that has stopped being evidence.";
-  "The per-family lines below say which files are involved, and the one command at the end does the whole set. They are not two ways of saying the same thing: reading the lines is how a reader checks the narrowing was right before letting anything run, and copying them was only ever the way to act on it because nothing else could.";
+  "The per-family detail still travels and still lets a reader check the narrowing was right before letting anything run - it is carried inside what the gate throws instead of printed beside it, which loses a reader nothing and is the whole difference between a reader and a reading. Whatever is printed or thrown outside the hint is read back as an accusation by whoever asks which app a red gate holds, and every line here named two innocents: the getter, which is the name to route TO, and the routing command itself.";
+  "The files spelling the value out are the record, because they are the only thing here at fault.";
   let offenders = await literal_duplicates_unambiguous();
-  let verb = fn_name("functions_literal_route");
   let repair = fn_name("literal_duplicates_repair");
+  let spelling = [];
   for (let offender of offenders) {
-    let joined = list_join_comma(offender.files);
-    console.log("SPELLED OUT  " + json_to(offender.literal));
-    console.log("  named by   " + offender.f_name);
-    console.log("  spelled in " + joined);
-    console.log(
-      "  to route   node scripts/ai.mjs " +
-        verb +
-        " " +
-        joined +
-        " " +
-        offender.f_name,
-    );
+    let files = property_get(offender, "files");
+    list_add_multiple(spelling, files);
   }
-  console.log("\noffenders " + offenders.length);
-  let any = greater_than(offenders.length, 0);
-  if (any) {
-    let message =
-      "duplicated constant gate: " +
-      offenders.length +
-      " values are named by a getter and still spelled out inside that getter's own family - node scripts/ai.mjs " +
-      repair +
-      " routes every one of them and commits each under its own name; the lines above say which files each one touches";
-    throw new Error(message);
-  }
+  let advice = text_combine_multiple([
+    "these spell out a value a getter in their own family already holds - ",
+    repair,
+    " routes every one of them and commits each under its own name, and the families below say which file each one touches",
+  ]);
+  let hint = {
+    advice,
+    offenders,
+  };
+  list_empty_is_assert_json(spelling, {
+    hint,
+  });
   let result = {
     offenders: 0,
   };

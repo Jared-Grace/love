@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { g_sermon_generate_book_generic_prompts_prompt_get } from "./g_sermon_generate_book_generic_prompts_prompt_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -89,6 +90,10 @@ export async function g_sermon_generate_book_generic_prompts(
         list_add(originals, original);
         list_add_pair(texts, texts_add);
         list_add(verse_numbers, verse_number);
+        ("Where a passage ends is decided by the first bible on the list and by no other, even though the passage is carried in all of them. That is deliberate. The game preaches one language at a time, and the one it preaches is the first - so a boundary that waited for every language to finish its sentence would be shaped by languages nobody reading this is reading.");
+        ("The page that shows a reader several languages at once does wait for all of them, in ",
+          fn_name("ebible_verse_languages_end_is"),
+          ", and the two are not in disagreement: they are the same rule asked of different sets. Choosing passages across languages is its own piece of work and has not been done, so do not read this line as that work left unfinished.");
         let ei = bible_verse_end_is(text);
         let index_last = list_index_last(verses_chapter);
         if (ei || equal(index, index_last)) {
