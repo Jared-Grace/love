@@ -1,3 +1,8 @@
+import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
+import { app_g_day_follower_delay_seconds } from "./app_g_day_follower_delay_seconds.mjs";
+import { sleep_seconds } from "./sleep_seconds.mjs";
 export async function app_g_day_followers_settle() {
   "wait for the back of the line to have set off, before the player takes their next step.";
   "Without it the player's next step arrives while the people behind are still waiting their turn, and each of them is sent somewhere new before they have moved at all - so the tail of a walking line stands still the whole way and then slides across the map at the end. Waiting costs the walk the length of the ripple, which is what a procession is: it goes at the speed of the person at the back.";
