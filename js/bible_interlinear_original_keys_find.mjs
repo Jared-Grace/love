@@ -1,7 +1,6 @@
+import { equal_not } from "./equal_not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { not } from "./not.mjs";
 import { bible_interlinear_original_key } from "./bible_interlinear_original_key.mjs";
-import { equal } from "./equal.mjs";
 import { list_first } from "./list_first.mjs";
 ("The two original-language column names, found on the rows themselves rather than typed.");
 ("The tables spell the base text twice: once with the editorial sigla stripped, once with");
@@ -22,8 +21,7 @@ export function bible_interlinear_original_keys_find(rows) {
   }
   let family = names.filter(family_is);
   function marked_is(name) {
-    let same = equal(name, plain);
-    let n = not(same);
+    let n = equal_not(name, plain);
     return n;
   }
   let others = family.filter(marked_is);
