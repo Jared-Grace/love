@@ -1,5 +1,7 @@
+import { app_code_progress_read } from "./app_code_progress_read.mjs";
+import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
+import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_review } from "./app_code_review.mjs";
@@ -31,6 +33,9 @@ export async function app_code_home(context) {
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
   let just_left = null;
+  ("each row says whether that lesson is finished - every quiz in it answered right at least once - so a learner coming back can see where they got to instead of remembering it. The same row is what the replace app's list is made of, so the check, the pointing hand and the colours mean one thing across the apps");
+  let progress = app_code_progress_read(context);
+  let complete_previous = true;
   function lambda(item, index) {
     let id = property_get(item, "id");
     async function lambda3() {
@@ -41,7 +46,15 @@ export async function app_code_home(context) {
         app_code_examples,
       );
     }
-    let r = app_shared_button_numbered(g, index, lambda3, false);
+    let complete = app_code_lesson_complete_is(progress, id);
+    let r = app_shared_button_numbered_progress(
+      g,
+      complete,
+      complete_previous,
+      index,
+      lambda3,
+    );
+    complete_previous = complete;
     let button = property_get(r, "button");
     let gap = app_shared_spaced_gap();
     html_style_margin_top(button, gap);

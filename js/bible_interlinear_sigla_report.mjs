@@ -1,91 +1,87 @@
-import { bible_interlinear_original_keys_find } from "./bible_interlinear_original_keys_find.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
+import { bible_interlinear_original_keys_find } from "./bible_interlinear_original_keys_find.mjs";
 import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { text_trim } from "./text_trim.mjs";
-("Which editorial sigla actually occur in the interlinear's marked base-text column, and");
+("Which editorial marks actually occur in the interlinear's marked base-text column, and");
 ("how many words each one covers - counted off the data rather than read off the header.");
 ("The header names seven editions, but a header is a claim about the column and the");
-("counts are the column itself; a siglum that never occurs would have us writing a filter");
+("counts are the column itself; a mark that never occurs would have us writing a filter");
 ("for nothing, and one that occurs but is unnamed would have us shipping it unnoticed.");
-("Also reports every wrapping character seen, so an unlisted siglum cannot hide, and the");
-("count of rows where removing the wrappers does NOT reproduce the stripped twin - that");
-("number must be small, or the two columns are not the same text and no filter is valid.");
+("Nothing here is matched against a hand-typed mark. Typing them is what this function");
+("exists to avoid: the brace, chevron and guillemet characters have near-identical twins,");
+("a typed copy silently matches none of them, and a mark that matches nothing does not");
+("read as an error - it reads as a word with no mark on it, which is the wrong answer in");
+("the one direction that ships. So a mark is anything in the word that is not a letter,");
+("counting Hebrew's vowel points and cantillation as part of the word, and the marks are");
+("grouped by what they turn out to be. That found an undocumented");
+("trailing asterisk the header never mentions, and counted NE's chevrons as unmarked.");
 export async function bible_interlinear_sigla_report() {
   let path = bible_interlinear_json_path();
   let rows = await file_read_json(path);
   let keys = bible_interlinear_original_keys_find(rows);
   let marked_key = keys.marked;
   let plain_key = keys.plain;
-  let openers = "{⧼(〈[‹";
+  let letter = /[\p{L}\p{M}]/u;
   let counts = {};
   let samples = {};
-  let characters = {};
   let words_total = 0;
-  let mismatched = 0;
-  let mismatch_samples = [];
-  let index = 0;
-  while (less_than(index, rows.length)) {
-    let row = rows[index];
-    index = index + 1;
-    let marked_value = row[marked_key];
-    let message = String(marked_value);
-    let marked =
-      equal(marked_value, undefined) || equal(marked_value, null)
-        ? ""
-        : text_trim(message);
+  let words_marked = 0;
+  function text_of(row, key) {
+    let value = row[key];
+    let missing = equal(value, undefined) || equal(value, null);
+    let message = String(value);
+    let r = missing ? "" : text_trim(message);
+    return r;
+  }
+  function mark_of(word) {
+    let characters = Array.from(word);
+    function letter_not_is(character) {
+      let is_letter = letter.test(character);
+      let n = not(is_letter);
+      return n;
+    }
+    let marks = characters.filter(letter_not_is);
+    let joined = marks.join("");
+    return joined;
+  }
+  function row_read(row) {
+    let marked = text_of(row, marked_key);
     if (equal(marked, "")) {
-      continue;
+      return;
     }
     words_total = words_total + 1;
-    let bare = marked.replace(/[{}⧼⧽()〈〉\[\]‹›]/g, "");
-    let plain_value = row[plain_key];
-    let message2 = String(plain_value);
-    let plain =
-      equal(plain_value, undefined) || equal(plain_value, null)
-        ? ""
-        : text_trim(message2);
-    if (not_equal(bare, plain)) {
-      mismatched = mismatched + 1;
-      if (less_than(mismatch_samples.length, 8)) {
-        mismatch_samples.push({
-          marked,
-          bare,
-          plain,
-        });
-      }
+    let mark = mark_of(marked);
+    if (equal(mark, "")) {
+      return;
     }
-    let position = 0;
-    while (less_than(position, marked.length)) {
-      let character = marked[position];
-      position = position + 1;
-      if (openers.includes(character)) {
-        characters[character] = (characters[character] || 0) + 1;
-      }
+    words_marked = words_marked + 1;
+    function code_of(character) {
+      let point = character.codePointAt(0).toString(16);
+      let r2 = "U+" + point.toUpperCase();
+      return r2;
     }
-    let head = marked.slice(0, 2);
-    let kind = equal(head, "[[")
-      ? "[[ECM]]"
-      : openers.includes(marked[0])
-        ? marked[0]
-        : "base";
-    counts[kind] = (counts[kind] || 0) + 1;
-    let seen = samples[kind] || [];
-    if (less_than(seen.length, 4)) {
-      seen.push(marked);
-      samples[kind] = seen;
+    let codepoints = Array.from(mark).map(code_of).join(" ");
+    counts[codepoints] = (counts[codepoints] || 0) + 1;
+    let seen = samples[codepoints] || [];
+    if (less_than(seen.length, 3)) {
+      seen.push({
+        marked,
+        plain: text_of(row, plain_key),
+        mark,
+      });
+      samples[codepoints] = seen;
     }
   }
+  rows.forEach(row_read);
   let report = {
     keys,
     words_total,
+    words_marked,
     counts,
     samples,
-    opening_characters: characters,
-    mismatched,
-    mismatch_samples,
   };
   return report;
 }
