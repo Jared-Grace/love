@@ -1,6 +1,5 @@
 {
  "known": [
-  "function_rename",
   "function_copy",
   "function_wrap",
   "functions_rename_if_starts_with",
