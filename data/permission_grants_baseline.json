@@ -135,6 +135,10 @@
   {
    "name": "folder_lines_search",
    "refusals": 3
+  },
+  {
+   "name": "folder_lines_search_args",
+   "refusals": 3
   }
  ]
 }
