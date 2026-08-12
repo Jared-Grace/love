@@ -17,7 +17,7 @@ export function qa_gate_history_blind_print(name, said) {
         fn_name("qa_gates") +
         " and into " +
         fn_name("qa_gates_machine") +
-        ", which is where the questions about this machine are asked. " +
+        ", which is the half asked here rather than in there, and which the copy's half is whatever is left over from. It stays named in the whole roster either way. " +
         fn_name("qa_gates_tree_git_reaching") +
         " names the other gates standing where the same thing could reach them.",
     );
