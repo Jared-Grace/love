@@ -1,3 +1,4 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { add } from "./add.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
@@ -53,8 +54,7 @@ export function g_plant_days_report(seed) {
   ("How many people a day held is TALLIED rather than averaged, because the spread is the thing wanted and a mean hides it. A day of one long conversation and a day of five short ones average to three and neither of them is three.");
   function met_of(day) {
     let conversations = property_get(day, "conversations");
-    let leader = property_get(day, "leader");
-    let leader_came = greater_than(leader, 0);
+    let leader_came = property_greater_than(day, "leader", 0);
     let extra = leader_came ? 1 : 0;
     let left = list_size(conversations);
     let r = add(left, extra);
