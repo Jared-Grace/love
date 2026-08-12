@@ -16,6 +16,6 @@ export async function function_shadowing_function_rename(
   ("it was not written for and report success.");
   ("The guards are the twin's guards, asked again here because they belong to the");
   ("edit and not to either implementation of it.");
-  let r = await function_identifier_rename_checked(f_name, name_after, name);
+  let r = await function_identifier_rename_checked(f_name, name, name_after);
   return r;
 }
