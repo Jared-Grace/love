@@ -1,3 +1,4 @@
+import { js_name_taken_dir_check } from "./js_name_taken_dir_check.mjs";
 import { js_file_dir_path } from "./js_file_dir_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_read } from "./file_read.mjs";
@@ -16,6 +17,7 @@ import { file_overwrite } from "./file_overwrite.mjs";
 ("scaffold and copies params directly, so it needs NO global dictionary and runs the same in");
 ("a sandbox as in the repo.");
 export async function js_identifier_wrap_dir(dir, name_old, name_new) {
+  await js_name_taken_dir_check(dir, name_new);
   let file_path = js_file_dir_path(dir, name_old);
   let src = await file_read(file_path);
   let ast_old = js_parse(src);
