@@ -40,8 +40,15 @@ export async function qa_gate_run_unlocked() {
   let folder = property_get(frozen, "folder");
   let commit = property_get(frozen, "commit");
   let machine = qa_gates_machine();
+  ("An answer somebody else already paid for is this run's answer, now that the copy standing on a commit is the same kind of artifact a judging asks. So the record is looked in before the copy is asked, and what comes back is shaped exactly as though it had been - everything below this cannot tell which it is holding, which is the only way a saved run is safe to make.");
+  let remembered = await qa_gate_kept_remembered(commit, before);
   async function copy_asked() {
-    let asked = await qa_snapshot_gate_told(folder);
+    if (remembered) {
+      let known_already = qa_gate_told_kept(remembered);
+      return known_already;
+    }
+    let told_fresh = await qa_snapshot_gate_told(folder);
+    let asked = qa_gate_told_sectioned(told_fresh);
     return asked;
   }
   async function machine_asked() {

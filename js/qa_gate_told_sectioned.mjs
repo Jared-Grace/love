@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
+import { property_set } from "./property_set.mjs";
 export function qa_gate_told_sectioned(told) {
   "$plain told";
   arguments_assert(arguments, 1);
