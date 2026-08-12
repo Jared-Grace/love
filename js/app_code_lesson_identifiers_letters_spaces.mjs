@@ -36,6 +36,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
+    html_div_cycle_bold(c, ["JavaScript is often shortened to ", "JS"]);
     let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
