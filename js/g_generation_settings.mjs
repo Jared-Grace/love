@@ -33,7 +33,7 @@ export function g_generation_settings() {
     conversation_turns_mean: 12,
     conversation_turns_high: 24,
     plant_days: 18,
-    plant_days_minimum: 15,
+    plant_days_minimum: 13,
     plant_days_maximum: 21,
     leader_days_percent_minimum: 100,
     leader_days_percent_maximum: 100,
