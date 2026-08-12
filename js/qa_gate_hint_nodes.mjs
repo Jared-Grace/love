@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { equal } from "./equal.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
@@ -32,10 +33,11 @@ export async function qa_gate_hint_nodes(f_name) {
     if (equal(params, null)) {
       continue;
     }
-    let index = list_index_of(params, "hint");
-    if (equal(index, -1)) {
+    let hinting_is = list_includes(params, "hint");
+    if (equal(hinting_is, false)) {
       continue;
     }
+    let index = list_index_of(params, "hint");
     let args = property_get(call, "arguments");
     let arg = args[index];
     if (equal(arg, undefined)) {
