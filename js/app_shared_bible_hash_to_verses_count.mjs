@@ -18,8 +18,8 @@ export function app_shared_bible_hash_to_verses_count(hash) {
   }
   let number = catch_null(lambda);
   let count = number_from_text(fallback);
-  let at_least_1 = greater_than_equal_1(number);
-  if (at_least_1) {
+  let at_least_one = greater_than_equal_1(number);
+  if (at_least_one) {
     count = number;
   }
   let maximum = app_shared_bible_verses_count_maximum();

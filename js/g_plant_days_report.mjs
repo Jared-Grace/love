@@ -76,6 +76,7 @@ export function g_plant_days_report(seed) {
     leader_turns,
     leader_days,
     met_tally,
+    met_each,
     shape,
   };
   return r;
