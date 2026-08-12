@@ -1,7 +1,6 @@
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_hash_book_code } from "./app_shared_bible_hash_book_code.mjs";
 import { app_shared_bible_screen_content } from "./app_shared_bible_screen_content.mjs";
-import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -20,11 +19,12 @@ export async function app_shared_bible_chapters_before(context) {
   let book_code = app_shared_bible_hash_book_code(hash);
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  let card = app_shared_bible_picker_card(content, book_name);
+  ("the card is the caller's to build rather than handed back ready-made. The chapter picker gets its card and its buttons together from one place, so that the whole-chapter reader can show the identical picker without building it again; the verse picker heads the same card a second time with the chapter and so must hold it itself.");
   let r = {
     book_code,
+    book_name,
     root,
-    card,
+    content,
     verse_number,
     chapter_code,
   };

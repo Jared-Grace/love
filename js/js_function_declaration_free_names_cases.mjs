@@ -5,7 +5,6 @@ export function js_function_declaration_free_names_cases() {
   "The cases carry both directions. Some must name something, so a reading gone quiet fails here; some must name nothing, so a reading that calls every word free fails too. A reading that had stopped subtracting would pass a corpus of the first kind alone, which is exactly the fault this was written after";
   "The written-out functions are held as fixed text, because the pass that canonicalizes an edited file would otherwise read the names inside them as references and rewrite the very thing each case is written to say";
   let outer = text_frozen("outer_shade");
-  let outer2 = text_frozen("outer_shade");
   let t = text_frozen("paint");
   let cases = [
     {
@@ -53,7 +52,7 @@ export function js_function_declaration_free_names_cases() {
       code: text_frozen(
         "export function f() {\n  return { shade: outer_shade };\n}\n",
       ),
-      free: [outer2],
+      free: [outer],
     },
   ];
   return cases;
