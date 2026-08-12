@@ -1,3 +1,9 @@
+import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
+import { text_last } from "./text_last.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
 import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
 import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
@@ -9,7 +15,6 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function bible_folder_sentence_end_measure(bible_folder) {
   "Reads the opening of one bible and counts how many of its verses finish on a mark this repo knows a sentence to end on.";
   "This is the measurement everything about waiting for the end of a sentence rests on. A bible that marks its sentences can be asked whether this verse finished one; a bible that does not can only ever answer no, and anything waiting for it would wait until whatever bound it holds ran out.";
@@ -20,12 +25,12 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
   let verse_numbers = range_1(count);
   async function lambda(verse_number) {
     async function download() {
-      let verse = await ebible_verse_download(
+      let downloaded = await ebible_verse_download(
         bible_folder,
         chapter_code,
         verse_number,
       );
-      return verse;
+      return downloaded;
     }
     let verse = await catch_null_async(download);
     return verse;
@@ -38,11 +43,23 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
     return ended;
   }
   let ended_each = list_filter(read, lambda2);
+  ("What the verses this did not recognise end on is written down beside the count, because a bible reading zero has two quite different causes and the count alone cannot tell them apart. One writes no mark at all; the other writes a mark nobody here had met - and only the second is repaired by widening the set. The first time this ran it found Urdu at zero, and this line is what said the reason was a full stop shaped differently rather than a language without sentences.");
+  function lambda3(verse) {
+    let text = property_get(verse, "text");
+    let trimmed = bible_verse_trim_right(text);
+    let last = text_last(trimmed);
+    return last;
+  }
+  let unended = list_difference(read, ended_each);
+  let ends = list_map(unended, lambda3);
+  let unrecognised = list_unique(ends);
+  list_sort_text(unrecognised);
   let measured = {
     bible_folder,
     chapter_code,
     read: list_size(read),
     ended: list_size(ended_each),
+    unrecognised,
   };
   return measured;
 }
