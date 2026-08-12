@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_is } from "./js_node_is.mjs";
@@ -17,8 +18,7 @@ export function js_exports_names(ast) {
     if (not(declared)) {
       let specifiers = property_get(node, "specifiers");
       function exported_name(specifier) {
-        let exported = property_get(specifier, "exported");
-        let name = property_get(exported, "name");
+        let name = property_path_get_2(specifier, "exported", "name");
         return name;
       }
       let listed = list_map(specifiers, exported_name);
