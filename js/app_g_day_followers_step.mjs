@@ -1,37 +1,23 @@
-import { list_size_subtract } from "./list_size_subtract.mjs";
-import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
-import { app_g_day_follower_move } from "./app_g_day_follower_move.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_take } from "./list_take.mjs";
-import { list_add_first } from "./list_add_first.mjs";
-import { list_get } from "./list_get.mjs";
-import { each_index } from "./each_index.mjs";
-export function app_g_day_followers_step(from) {
+export function app_g_day_followers_step() {
   "one step of the line: everybody walking behind the player moves up one, into the tile the person ahead of them is leaving. the first of them steps into the tile the player has just left, which is what makes a line rather than a crowd";
-  "where each of them is going is read off the whole line BEFORE anybody moves, and read as a copy, because moving somebody overwrites the very place the person behind them was told to walk to";
+  "where each of them is going is read off the day's TRAIL - the tiles the player has walked, newest first - so the person at place N in the line walks to the Nth tile back. reading it from the trail rather than from where the people are standing is what lets somebody who has only just joined be in the line at all: they were put on their tile of it when they were gathered, not left to be shuffled into place";
+  "each place further back sets off a little later than the one in front, so the line ripples forward instead of sliding as one piece";
+  "a trail shorter than the line means those at the back have nowhere yet to walk to - the day has not been walked far enough to have left tiles for them - so they simply wait where they are";
   let followers = app_g_day_state_property("followers");
   let none = list_empty_is(followers);
   if (none) {
     return;
   }
-  function place(npc) {
-    let x = property_get(npc, "x");
-    let y = property_get(npc, "y");
-    let coordinates = {
-      x,
-      y,
-    };
-    return coordinates;
-  }
-  let places = list_map(followers, place);
-  let last_dropped = list_size_subtract(places, 1);
-  let destinations = list_take(places, last_dropped);
-  list_add_first(destinations, from);
+  let trail = app_g_day_state_property("trail");
+  let length = list_size(trail);
   function step(npc, index) {
-    let to = list_get(destinations, index);
-    app_g_day_follower_move(npc, to);
+    let known = less_than(index, length);
+    if (not(known)) {
+      return;
+    }
+    let to = list_get(trail, index);
+    let delay = app_g_day_follower_delay_seconds(index);
+    app_g_day_follower_move(npc, to, delay);
   }
   each_index(followers, step);
 }
