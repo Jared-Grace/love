@@ -1,10 +1,10 @@
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -22,9 +22,8 @@ export async function bible_verse_holes_gate_run() {
   let path = bible_verse_holes_path();
   let recorded = await file_read_json(path);
   let bibles = property_get(recorded, "bibles");
-  let languages = ebible_languages();
+  let shipped = ebible_bible_folders_sorted();
   let property_name = bible_folder_key();
-  let shipped = list_map_property(languages, property_name);
   let measured = list_map_property(bibles, property_name);
   let unmeasured = list_difference(shipped, measured);
   let departed = list_difference(measured, shipped);
