@@ -15,7 +15,7 @@ export function js_function_declaration_param_named_assert(
   let params = js_function_declaration_params_names_plain(declaration);
   let named = list_includes(params, name);
   assert_json(named, {
-    hint: "this function has no parameter of that name, and renaming a word it never binds would quietly do nothing at all - would you like to check the spelling against the list here?",
+    hint: "this function has no parameter of that name, and reaching for a word it never binds would quietly do nothing at all - would you like to check the spelling against the list here?",
     f_name,
     name,
     params,
