@@ -1,3 +1,5 @@
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_two_places } from "./app_code_lesson_expression_parentheses_moved_card_two_places.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_worked } from "./app_code_lesson_expression_parentheses_moved_card_worked.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_different_answer } from "./app_code_lesson_expression_parentheses_moved_card_different_answer.mjs";
@@ -62,9 +64,29 @@ export function app_code_lesson_expression_parentheses_moved() {
   }
   function above(root) {
     "the two placements worked out side by side on the same numbers, then what that means, then the placement that changes nothing";
-    app_code_lesson_expression_parentheses_moved_card_two_places(root);
+    let plus = js_operator_plus_symbol();
+    let times = js_operator_asterisk_symbol();
+    let open = js_code_parenthesis_left();
+    let close = js_code_parenthesis_right();
+    app_code_lesson_expression_parentheses_moved_card_two_places(
+      root,
+      open,
+      close,
+    );
     app_code_lesson_expression_parentheses_moved_card_worked(root);
-    app_code_lesson_expression_parentheses_moved_card_different_answer(root);
-    app_code_lesson_expression_parentheses_moved_card_changes_nothing(root);
+    app_code_lesson_expression_parentheses_moved_card_different_answer(
+      root,
+      plus,
+      times,
+      open,
+      close,
+    );
+    app_code_lesson_expression_parentheses_moved_card_changes_nothing(
+      root,
+      plus,
+      times,
+      open,
+      close,
+    );
   }
 }

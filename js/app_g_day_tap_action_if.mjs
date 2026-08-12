@@ -21,7 +21,8 @@ export async function app_g_day_tap_action_if(npc, list_name, action) {
     return false;
   }
   let target = property_get(state, "target");
-  let discerned = not(null_is(target));
+  let b = null_is(target);
+  let discerned = not(b);
   if (discerned) {
     let same = g_coordinates_same_is(npc, target);
     if (not(same)) {
