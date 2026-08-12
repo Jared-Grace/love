@@ -65,12 +65,14 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
+    ("On its own is this lesson's OWN angle and is kept deliberately - it does not reach for the shared inside-before-outside sentence, which is the wrong frame here: with a bracket on each side, neither one is outside the other, so before what has no answer. What each bracket does have is that it collapses to a single true or false by itself, which is exactly what the two lines below then show.");
+    ("Solve, not work it out. The track runs on solve - a childhood math word, decided in the arithmetic-both-sides lesson - and work out is nowhere else in learner-facing text. The comparison is also named rather than left as it, and it is the comparison that is solved rather than the brackets doing the solving: brackets do not solve anything, they say what is solved apart from the rest.");
     html_div_cycle_code(recall, [
-      "Remember: ",
+      "Remember: a comparison inside ",
       open,
       " and ",
       close,
-      " around a comparison work it out on its own",
+      " is solved on its own",
     ]);
     let both = app_code_container_light_blue(root);
     html_div_cycle_code(both, [
