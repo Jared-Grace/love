@@ -1,7 +1,6 @@
+import { js_fold_blocks } from "./js_fold_blocks.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_blocks_all } from "./js_blocks_all.mjs";
-import { js_fold_block } from "./js_fold_block.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function js_fold(x_ast, f_ast) {
   arguments_assert(arguments, 2);
@@ -14,13 +13,8 @@ export function js_fold(x_ast, f_ast) {
   (fn_name("js_fold_block"),
     " for the checks, all of which are per-run of statements");
   ("and none of which ever asked where the run sat.");
+  ("Finding the runs and asking about them are separate here, because a caller pairing one F against many x wants the finding done once. That one calls the sibling directly and keeps what it found; this stays the way to ask when there is only the one question.");
   let blocks = js_blocks_all(f_ast);
-  for (let f_block of blocks) {
-    let result = js_fold_block(x_ast, f_ast, f_block);
-    let folded = null_not_is(result);
-    if (folded) {
-      return result;
-    }
-  }
-  return null;
+  let result = js_fold_blocks(x_ast, f_ast, blocks);
+  return result;
 }
