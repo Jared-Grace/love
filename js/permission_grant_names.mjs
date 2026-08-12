@@ -1033,6 +1033,11 @@ export function permission_grant_names() {
   let spelled1014 = fn_name("ebible_index_flat_uploaded_write");
   let spelled1015 = fn_name("text_lines_search");
   let spelled1016 = fn_name("repo_lines_search");
+  let spelled1017 = fn_name("ebible_index_flat_uploaded_gate_run");
+  let spelled1018 = fn_name("text_lines_search_cases_gate_run");
+  let spelled1019 = fn_name("repo_search_folders_skipped");
+  let spelled1020 = fn_name("commands_only_level");
+  let spelled1021 = fn_name("bible_interlinear_caches_clear");
   let names = [
     spelled,
     spelled2,
@@ -2050,6 +2055,11 @@ export function permission_grant_names() {
     spelled1014,
     spelled1015,
     spelled1016,
+    spelled1017,
+    spelled1018,
+    spelled1019,
+    spelled1020,
+    spelled1021,
   ];
   return names;
 }
