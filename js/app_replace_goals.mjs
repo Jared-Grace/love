@@ -29,13 +29,14 @@ export function app_replace_goals(context) {
     let g = app_replace_rule_sets_data_goal(d, rule_set_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
     let choose_this_next = not(completed) && completed_previous;
-    let title = app_shared_button_numbered_progress(
+    let row = app_shared_button_numbered_progress(
       root,
       completed,
       completed_previous,
       index,
       lambda,
     );
+    let title = property_get(row, "title");
     html_data_set_object(title, goal);
     let v = json_to(goal);
     html_data_set_test(title, v);
