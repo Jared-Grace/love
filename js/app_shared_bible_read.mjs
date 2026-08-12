@@ -1,3 +1,4 @@
+import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
 import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
@@ -6,7 +7,6 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
-import { app_shared_bible_book_hash_key } from "./app_shared_bible_book_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
@@ -114,8 +114,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let hash = html_hash_object_get();
   let key = app_shared_bible_chapter_hash_key();
   let c = property_get_or(hash, key, "");
-  let key2 = app_shared_bible_book_hash_key();
-  let b = property_get_or(hash, key2, "");
+  let b = app_shared_bible_book_hash_get(hash);
   let key3 = app_shared_bible_reference_hash_key();
   let ref = property_get_or(hash, key3, "");
   let ref_line = text_replace(ref, "+", " ");
