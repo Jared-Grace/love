@@ -34,10 +34,7 @@ export async function bible_verse_holes_measure() {
     return chapter;
   }
   let chapters = list_map(chapter_codes, lambda);
-  let languages = ebible_languages();
-  let property_name = bible_folder_key();
-  let bible_folders = list_map_property(languages, property_name);
-  list_sort_text(bible_folders);
+  let bible_folders = ebible_bible_folders_sorted();
   async function lambda2(bible_folder) {
     let measured = await bible_folder_verse_holes(bible_folder, chapters);
     return measured;
