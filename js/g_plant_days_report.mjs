@@ -1,3 +1,5 @@
+import { add } from "./add.mjs";
+import { list_tally } from "./list_tally.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
@@ -52,9 +54,10 @@ export function g_plant_days_report(seed) {
   function met_of(day) {
     let conversations = property_get(day, "conversations");
     let leader = property_get(day, "leader");
-    let came = greater_than(leader, 0);
-    let extra = came ? 1 : 0;
-    let r = add(list_size(conversations), extra);
+    let leader_came = greater_than(leader, 0);
+    let extra = leader_came ? 1 : 0;
+    let left = list_size(conversations);
+    let r = add(left, extra);
     return r;
   }
   let met_each = list_map(days, met_of);
