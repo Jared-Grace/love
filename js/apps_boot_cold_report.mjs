@@ -23,7 +23,10 @@ export async function apps_boot_cold_report() {
     let body_text = property_get(capture, "body_text");
     let reasons = page_boot_reasons(body_text, errors);
     let arrived = list_empty_is(reasons);
-    let told = list_join_comma(reasons);
+    let told = list_join_comma_space(reasons);
+    if (arrived) {
+      told = "arrived";
+    }
     log_keep(app_name, told);
     if (not(arrived)) {
       let entry = {
