@@ -24,9 +24,9 @@ export function js_statements_span_outputs_cases() {
       outputs: [],
     },
     {
-      name: "a name opened inside a nested function is bound too deep as well",
+      name: "the function's own name is handed back, the name opened inside it is not",
       span: text_frozen("function cost() {\n  let ms = 1;\n  return ms;\n}\n"),
-      tail: text_frozen("console.log(ms);\n"),
+      tail: text_frozen("console.log(cost() + ms);\n"),
       outputs: ["cost"],
     },
     {
