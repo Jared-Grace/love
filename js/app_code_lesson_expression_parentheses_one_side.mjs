@@ -1,26 +1,19 @@
+import { app_code_lesson_expression_parentheses_one_side_expression } from "./app_code_lesson_expression_parentheses_one_side_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
-import { app_code_comparison_side } from "./app_code_comparison_side.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { equal } from "./equal.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { property_equals } from "./property_equals.mjs";
-import { property_get } from "./property_get.mjs";
-import { ternary } from "./ternary.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_parentheses_one_side() {
   "( and ) around a comparison, on the one line where they change nothing: (3 === 5) === false. The previous lesson wrote that same line flat - 3 === 5 === false - and said so deliberately, because parentheses there would have been a rule the learner could not yet see the need for. Here they are the whole lesson and nothing else moves: the same shape, the same answer, one new pair of symbols. Meeting them on a line whose value they do not change is what makes the next lesson safe, where both sides are comparisons and the parentheses decide the answer for real.";
   "Exactly ONE side is wrapped, and it is the left one on half the examples and the right one on the other half. Wrapping BOTH is the next lesson, and doing it here would put two new things in one step - brackets, and a second comparison - when only one of them is this lesson's idea. Moving the single comparison to the right adds no second thing, so it belongs here: the line still holds one bracket pair and one plain true or false.";
@@ -40,31 +33,24 @@ export function app_code_lesson_expression_parentheses_one_side() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function expression(want_true, comparison_first) {
-    "a comparison wrapped in ( and ) and a plain true or false, in whichever order comparison_first asks for, joined by === or !== picked so the whole line lands on want_true. Swapping the two sides cannot change the answer - === and !== read the same either way - so the same operator choice serves both orders";
-    let comparison = app_code_comparison_side();
-    let plain_value = list_random_item([true, false]);
-    let agree = property_equals(comparison, "value", plain_value);
-    let wanted = equal(agree, want_true);
-    let on_true = js_operator_triple_equal_symbol();
-    let on_false = js_operator_bang_double_equal_symbol();
-    let symbol = ternary(wanted, on_true, on_false);
-    let open = js_code_parenthesis_left();
-    let close = js_code_parenthesis_right();
-    let inside = property_get(comparison, "code");
-    let comparison_code = text_combine_multiple([open, inside, close]);
-    let plain_code = js_true_false_word(plain_value);
-    let left_code = ternary(comparison_first, comparison_code, plain_code);
-    let right_code = ternary(comparison_first, plain_code, comparison_code);
-    let code = text_combine_multiple([left_code, " ", symbol, " ", right_code]);
-    return code;
-  }
   function refill() {
     "four examples a screen, crossing the two things that vary so every screen shows all four: true and false alternating, and the comparison on the left then the right";
-    let v = expression(true, true);
-    let v2 = expression(false, false);
-    let v3 = expression(true, false);
-    let v4 = expression(false, true);
+    let v = app_code_lesson_expression_parentheses_one_side_expression(
+      true,
+      true,
+    );
+    let v2 = app_code_lesson_expression_parentheses_one_side_expression(
+      false,
+      false,
+    );
+    let v3 = app_code_lesson_expression_parentheses_one_side_expression(
+      true,
+      false,
+    );
+    let v4 = app_code_lesson_expression_parentheses_one_side_expression(
+      false,
+      true,
+    );
     let list = [v, v2, v3, v4];
     return list;
   }
