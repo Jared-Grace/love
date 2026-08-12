@@ -1,6 +1,4 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_statements_await_any_is } from "./js_statements_await_any_is.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
@@ -36,17 +34,6 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
     hint: "this run of lines returns, breaks, or goes round again in a way that leaves the run, and a function of its own has nowhere for that to land. Would you like to choose ends that hold the whole loop, or that stop short of the jump?",
     f_name_new,
   });
-  ("A span that declares a name the rest of the block still reads cannot simply");
-  ("leave — the name would go with it and the reader behind would be left pointing");
-  ("at nothing. Those names are the ones the new function hands back, which is the");
-  ("mirror of the free names it takes in.");
-  ("Only what the span binds at its own level counts. A name bound inside a loop head or a nested block cannot be read behind the span whatever is written there, so handing it back is not a service - the call site then asks for a name nothing has bound and the function stops the moment it is reached. Measured: a span holding `for (let ms of known)` was cut out of ",
-    fn_name("qa_gates_dealt"),
-    text_combine_multiple([
-      " beside a later function whose own body opened its own `ms`, and the cut wrote `",
-      fn_name("qa_gate_cost_typical"),
-      "(known, ms)` into a scope where ms had never existed.",
-    ]));
   let index_max = list_max(indices);
   let index_after = index_max + 1;
   let tail = list_skip(stack_, index_after);
