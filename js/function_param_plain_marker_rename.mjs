@@ -13,10 +13,10 @@ export async function function_param_plain_marker_rename(
   "Doing nothing is the ordinary case, because most parameters were never declared this way. So there is nothing to check for and nothing to report: where the declaration is absent, no piece of text says the thing being looked for and none is changed.";
   arguments_assert(arguments, 3);
   let plain_prefix = permission_plain_marker();
-  let marker = text_combine(plain_prefix, name);
+  let marker_before = text_combine(plain_prefix, name);
   let marker_after = text_combine(plain_prefix, name_after);
   function lambda$ast(ast) {
-    js_strings_text_replace(ast, marker, marker_after);
+    js_strings_text_replace(ast, marker_before, marker_after);
   }
   let r = await function_transform(f_name, lambda$ast);
   return r;
