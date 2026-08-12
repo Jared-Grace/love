@@ -17,6 +17,9 @@ export async function function_identifier_rename_checked(
   name_after,
 ) {
   arguments_assert(arguments, 3);
+  ("Give one name bound at a function's own level a different name, over the whole of that function, once every way the new name could collide has been ruled out.");
+  ("The five refusals are the whole of it, and they belong to the edit rather than to any reason for wanting it. Whether the old name was hiding a repo function, or was a parameter somebody wanted spelled better, the same five things can go wrong - so they are asked here, once, and each command above says only what it is for and what it additionally requires.");
+  ("It is deliberately not the repo-wide rename. That one moves a name nothing else can be spelled, so it follows imports, callers, aliases and the places the name is written as text. A name bound inside a function is spelled the same way in hundreds of other functions that have nothing to do with this one, so the rename stops at this function's edge - and, because the word is not the repo's to give out, has to ask whether the file already means something else by the one it is moving to.");
   let candidates = await functions_names();
   let clash = list_includes(candidates, name_after);
   not_assert_json(clash, {
