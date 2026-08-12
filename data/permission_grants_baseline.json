@@ -71,6 +71,10 @@
   {
    "name": "functions_parallel_mark",
    "refusals": 1
+  },
+  {
+   "name": "functions_shadowing_rename_all",
+   "refusals": 1
   }
  ]
 }
