@@ -74,10 +74,13 @@ Most of that library already exists — measured 2026-08-12: 100 `file_*`, 78 `f
 | `text_binary_is(text)` | whether what was read was never text — asked of the bytes, not of the name on the end |
 
 ```
-node scripts/ai.mjs folder_lines_search_args . folder_lines_search .git,node_modules,gitignore
+node scripts/ai.mjs repo_lines_search <word>
+node scripts/ai.mjs folder_lines_search_args <folder> <word> .git,node_modules,gitignore
 ```
 
-Three things about it are the point rather than the implementation.
+`repo_lines_search` is the granted one, so it never prompts. That is the whole reason it exists as its own function: a search that *receives* a folder receives a path, and a grant covers every argument a function is ever handed — `permission_grant_refusals folder_lines_search_args` names all three parameters. Filling the folder in makes the remaining parameter a plain word, which is grantable, and a search that has to be approved every time is one nobody uses. It is also faster for skipping what it skips: 1.2s against 5.7s.
+
+Three things about the searching are the point rather than the implementation.
 
 **Nothing here asks the machine to search.** The files are read and the lines are looked at. So there is no per-platform version to write and none to keep in step — portable by having nothing to port, which is a stronger promise than portable by knowing every platform.
 
