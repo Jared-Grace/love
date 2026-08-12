@@ -1,5 +1,7 @@
+import { app_shared_bible_chapter_hash_get_or_default } from "./app_shared_bible_chapter_hash_get_or_default.mjs";
+import { app_shared_bible_verse_number_default } from "./app_shared_bible_verse_number_default.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -21,8 +23,8 @@ import { html_text_set } from "./html_text_set.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next(context) {
-  ("This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.");
-  ("So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.");
+  "This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.";
+  "So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.";
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name2 = app_shared_bible_verse_hash_key();
@@ -52,7 +54,8 @@ export async function app_next(context) {
     verse_number,
   });
   let chapter_code2 = property_get(next, "chapter_code");
-  let verse_number2 = property_get(next, verse_number_key());
+  let property_name = verse_number_key();
+  let verse_number2 = property_get(next, property_name);
   let property_name3 = app_shared_bible_verse_hash_key();
   property_set(hash, property_name3, verse_number2);
   let property_name4 = app_shared_bible_chapter_hash_key();
