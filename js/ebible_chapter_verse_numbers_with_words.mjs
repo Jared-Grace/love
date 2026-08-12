@@ -10,6 +10,7 @@ export async function ebible_chapter_verse_numbers_with_words(
   bible_folder,
   chapter_code,
 ) {
+  "$plain bible_folder";
   arguments_assert(arguments, 2);
   ("The numbers of the verses in one chapter that have words in them, in the order the chapter reads.");
   ("A page can mark a verse it has nothing to say for. Luke 17 verse 36, Acts 8 verse 37 and a few others are marked in most translations and carry only a footnote explaining that some manuscripts have them, and once the footnotes are cleared away the mark is left standing over nothing. A reader shown a numbered blank would take it for a fault in the app, and any reading that lays a list against those marks is one longer than it should be.");
