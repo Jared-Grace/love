@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_number_and_true_false } from "./app_code_lesson_expression_equal_number_string_true_false_number_and_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
@@ -35,16 +36,6 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function same_plain() {
-    "a number or a true or false compared with itself: true. The plain half of the same pairing as same_string";
-    let word = list_random_item(["1", "5", "true", "false"]);
-    let code =
-      app_code_lesson_expression_equal_number_string_true_false_compared(
-        word,
-        word,
-      );
-    return code;
-  }
   function refill() {
     "four examples a screen, two true and two false, and the two false ones are the two shapes this lesson adds. The true lines are not filler - they are what stops the false ones being answerable by a rule the lesson never taught, so each false shape is shown beside a true line that looks like it";
     let v =
@@ -53,7 +44,8 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
       app_code_lesson_expression_equal_number_string_true_false_same_string();
     let v3 =
       app_code_lesson_expression_equal_number_string_true_false_number_and_true_false();
-    let v4 = same_plain();
+    let v4 =
+      app_code_lesson_expression_equal_number_string_true_false_same_plain();
     let list = [v, v2, v3, v4];
     return list;
   }
@@ -93,4 +85,14 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     html_div_cycle_code(quotes, ["", "1", " is a number"]);
     html_div_cycle_code(quotes, ["Only the quotes are different"]);
   }
+}
+function app_code_lesson_expression_equal_number_string_true_false_same_plain() {
+  arguments_assert(arguments, 0);
+  ("a number or a true or false compared with itself: true. The plain half of the same pairing as same_string");
+  let word = list_random_item(["1", "5", "true", "false"]);
+  let code = app_code_lesson_expression_equal_number_string_true_false_compared(
+    word,
+    word,
+  );
+  return code;
 }
