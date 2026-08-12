@@ -1,18 +1,3 @@
 {
- "known": [
-  "example_files_refuses_run_gate_run",
-  "permission_grants_gate_run",
-  "permission_settings_allow_assert",
-  "function_worker_pool_run_try",
-  "functions_name_only_imports_gate_run",
-  "functions_identifiers_renamed_without_naming_check_gate_run",
-  "functions_parameters_unread_computed_gate_run",
-  "literal_duplicates_gate_run",
-  "functions_native_callback_gate_run",
-  "functions_unreachable_check_gate_run",
-  "app_code_lessons_rights_space_gate_run",
-  "functions_assert_json_get_lambda_gate_run",
-  "functions_page_auto_borrowing_gate_run",
-  "functions_module_state_shadowed_gate_run"
- ]
+ "known": []
 }
