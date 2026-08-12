@@ -110,6 +110,8 @@ export function examples_notes() {
       "delete a parameter — every caller's arg is stripped",
     example_param_delete_refuses_a_missing_name:
       "the same verb given a name the function never binds - it used to take the LAST parameter instead, because not-found came back as a position of minus one",
+    example_params_delete_refuses_before_any:
+      "the list-taking verb given one good name and one bad one - refusing has to mean the good one never moved either",
     example_nested_record_add:
       "reach a list two names deep - the first address past the top of a function",
     example_nested_record_remove: "the undo - a register is not only added to",
