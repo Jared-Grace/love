@@ -1,3 +1,4 @@
+import { app_shared_bible_hash_languages_unknown_shown_is } from "./app_shared_bible_hash_languages_unknown_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -29,6 +30,15 @@ export async function app_next(context) {
   "This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.";
   "So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.";
   let hash = html_hash_object_get();
+  let root = property_get(context, "root");
+  ("A link can also be wrong rather than absent, and the two want opposite answers. A missing word is somebody who has not said, so the page says it for them. A word that names nothing is somebody who did say - they meant a language, and got a letter of it wrong - so guessing on their behalf would open a page in a language nobody asked for and never mention it. That one is said out loud, with the correction offered as something to press.");
+  let unknown_shown = app_shared_bible_hash_languages_unknown_shown_is(
+    root,
+    hash,
+  );
+  if (unknown_shown) {
+    return;
+  }
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
   let fallback = app_shared_bible_verse_number_default();
@@ -77,7 +87,6 @@ export async function app_next(context) {
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
   ("The blank line between the blocks is written into the text rather than into the page, so the page has to be told to keep it. Left untold, a browser folds every run of space into one and the whole reading arrives as a single paragraph - which was survivable while there was one verse to show and is not now, because nothing then says where one verse ends and the next begins.");
   let joined = list_join_newline_2(mapped);
-  let root = property_get(context, "root");
   ("The reading gets a place of its own under the page rather than being the page, so that something can stand beside it. What is copied is still only the reading - the button is on the page and not in the text - so a reader pasting this into a message sends the verses and nothing about where they came from.");
   let reading = html_div(root);
   html_style_white_space(reading, "pre-wrap");
