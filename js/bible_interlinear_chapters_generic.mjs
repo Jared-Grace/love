@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { each_object } from "./each_object.mjs";
 import { list_add } from "./list_add.mjs";
@@ -9,17 +10,16 @@ import { ebible_references_names } from "./ebible_references_names.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_to_lookup } from "./list_to_lookup.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
-"Walk the Berean interlinear tables once and group every word under its chapter code.";
-"The caller decides what a verse keeps: verse_parts receives that verse's rows, already";
-"sorted into reading order, and returns the object merged onto { verse_number }.";
-"Two callers want two different things from the same walk - the joined original text, and";
-"the per-word records - and the walk is the expensive half, so it lives here once.";
+("Walk the Berean interlinear tables once and group every word under its chapter code.");
+("The caller decides what a verse keeps: verse_parts receives that verse's rows, already");
+("sorted into reading order, and returns the object merged onto { verse_number }.");
+("Two callers want two different things from the same walk - the joined original text, and");
+("the per-word records - and the walk is the expensive half, so it lives here once.");
 export async function bible_interlinear_chapters_generic(verse_parts) {
   let books = await ebible_version_books(ebible_folder_english());
   let path_output = bible_interlinear_json_path();
@@ -29,8 +29,7 @@ export async function bible_interlinear_chapters_generic(verse_parts) {
   let sorts = ["Heb Sort", "Greek Sort"];
   let chapters = {};
   function verse_add(verse_words) {
-    let first = list_first(verse_words);
-    let vid = property_get(first, "VerseId");
+    let vid = list_first_property(verse_words, "VerseId");
     function sort_apply(sort) {
       function sort_value(item) {
         let value = property_get(item, sort);
