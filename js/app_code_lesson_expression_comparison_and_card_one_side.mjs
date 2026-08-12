@@ -7,6 +7,7 @@ export function app_code_lesson_expression_comparison_and_card_one_side(root) {
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["For ", "true && 1 < 2", ", we do ", "1 < 2", " before ", "&&"],
     ["That is ", "true", ", so ", "true && true", " is ", "true"],
-    ["Either side can be the comparison: ", "1 < 2 && true"],
+    ["A comparison can also be on the left side of ", "&&"],
+    ["", "1 < 2 && true"],
   ]);
 }
