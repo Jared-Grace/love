@@ -66,6 +66,7 @@ Most of that library already exists — measured 2026-08-12: 100 `file_*`, 78 `f
 
 | function | what it answers |
 |---|---|
+| `repo_lines_search(s)` | **the one to reach for** — every line in this repo holding a word |
 | `text_lines_search(text, s)` | the lines of a text holding a word, each numbered from one |
 | `file_lines_search(f_path, s)` | the same for one file; a missing file and a file that was never text both answer nothing found |
 | `folder_lines_search(path_folder, s, folders_skipped)` | every line under a folder, read overlapping under the open-files ceiling |
