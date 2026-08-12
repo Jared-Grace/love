@@ -1,3 +1,5 @@
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { node_run } from "./node_run.mjs";
@@ -12,12 +14,8 @@ export async function qa_snapshot_shard_told(folder, index, count) {
   "It is timed on the complaining path too. A share that goes red is a share that was slow for some reason, and leaving its time out would drop exactly the shares somebody is trying to account for";
   let index_word = text_combine("", index);
   let count_word = text_combine("", count);
-  let words = [
-    "scripts/ai.mjs",
-    fn_name("qa_gate_tree_shard_run"),
-    index_word,
-    count_word,
-  ];
+  let f_name = fn_name("qa_gate_tree_shard_run");
+  let words = ["scripts/ai.mjs", f_name, index_word, count_word];
   let began = date_now_milliseconds();
   try {
     let said = await node_run(folder, words);
