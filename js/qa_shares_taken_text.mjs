@@ -1,10 +1,9 @@
+import { divide_round } from "./divide_round.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { divide } from "./divide.mjs";
-import { round } from "./round.mjs";
 export function qa_shares_taken_text(
   results,
   solo_ms,
@@ -34,8 +33,7 @@ export function qa_shares_taken_text(
     lines.push(" ms");
   }
   let count = list_size(ordered);
-  let n = divide(solo_ms, count);
-  let even = round(n);
+  let even = divide_round(solo_ms, count);
   lines.push("\n  every gate on its own, added up   ");
   lines.push(solo_ms);
   lines.push(" ms");
