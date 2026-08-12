@@ -4,7 +4,7 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_green } from "./app_shared_color_green.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -16,7 +16,7 @@ export function html_progress_bar(
 ) {
   let progress_container_text = html_p(root);
   let progress_container = html_div(progress_container_text);
-  let track_color = app_shared_color_light_green();
+  let track_color = app_shared_color_green_light();
   let color_valid = app_shared_color_green();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
