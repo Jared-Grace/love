@@ -10,13 +10,14 @@ export function app_shared_bible_settings_choose(
   bar,
   content,
   languages_chosen,
+  context,
 ) {
   "the chapter reader's in-place settings hub: language choice and offline downloads, each returning here; leaving the hub reloads back to the reading";
   "clear the reading bar too, so its verse-selecting hint and chapter nav do not linger over the settings menu";
   html_clear(bar);
   app_shared_bible_panel_open(content, window_reload);
   function back() {
-    app_shared_bible_settings_choose(bar, content, languages_chosen);
+    app_shared_bible_settings_choose(bar, content, languages_chosen, context);
   }
   function on_languages() {
     let languages = ebible_languages();
@@ -31,5 +32,5 @@ export function app_shared_bible_settings_choose(
     let languages = ebible_languages_from_codes(languages_chosen);
     app_shared_bible_offline_panel(content, languages, back);
   }
-  app_shared_bible_settings_render(content, on_languages, on_offline);
+  app_shared_bible_settings_render(content, on_languages, on_offline, context);
 }

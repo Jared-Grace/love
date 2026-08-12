@@ -1,6 +1,5 @@
 {
  "known": [
-  "js_free_names_cases,js_identifiers_referenced_names_cases,js_imports_local_names_cases",
   "app_code_button_skip_lesson,app_code_lesson_quiz",
   "app_code_lesson_console_log_remainder_generic,app_code_lesson_expression_remainder_any",
   "app_code_placeholder_tile_string,app_code_string_tile",
