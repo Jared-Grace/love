@@ -1,3 +1,4 @@
+import { list_tally } from "./list_tally.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_game_generate } from "./g_game_generate.mjs";
@@ -26,9 +27,7 @@ export async function g_game_plants_report(word) {
     let days = property_get(plant, "days");
     days_total = days_total + days;
     npcs_placed = npcs_placed + npcs;
-    let seen = sizes[npcs];
-    let already = seen ? seen : 0;
-    sizes[npcs] = already + 1;
+    list_add(npcs_each, npcs);
     let short_is = property_get(plant, "leader_short");
     if (short_is) {
       short_plants = short_plants + 1;
@@ -67,7 +66,7 @@ export async function g_game_plants_report(word) {
     npcs_placed,
     plants: plants.length,
     days_total,
-    sizes,
+    sizes: list_tally(npcs_each),
     short_plants,
     elder_short_plants,
     rows,

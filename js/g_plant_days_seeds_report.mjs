@@ -1,3 +1,6 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_tally } from "./list_tally.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { number_to_words } from "./number_to_words.mjs";
@@ -23,6 +26,7 @@ export function g_plant_days_seeds_report(count) {
   let short_at = [];
   let long_at = [];
   let leader_turns = [];
+  let met_each = [];
   for (let index = 1; less_than_equal(index, count); index++) {
     let seed = number_to_words(index);
     let report = g_plant_days_report(seed);
@@ -38,9 +42,13 @@ export function g_plant_days_seeds_report(count) {
     }
     let turns = property_get(report, "leader_turns");
     list_add(leader_turns, turns);
+    let met = property_get(report, "met_each");
+    list_add_multiple(met_each, met);
   }
   let total = list_sum(lengths);
   let mean = divide(total, count);
+  let top = list_sum(met_each);
+  let bottom = list_size(met_each);
   let r = {
     wanted: s.plant_days,
     range: [s.plant_days_minimum, s.plant_days_maximum],
@@ -49,6 +57,8 @@ export function g_plant_days_seeds_report(count) {
     most: list_max(lengths),
     short_at,
     long_at,
+    met_tally: list_tally(met_each),
+    met_mean: divide(top, bottom),
     leader_least: list_min(leader_turns),
     leader_wanted: s.leader_turns_minimum,
     lengths,
