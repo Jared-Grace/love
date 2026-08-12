@@ -22,8 +22,8 @@ export async function qa_gate_said_plain_is(f_name) {
   let throwing_is = false;
   for (let call of calls) {
     let callee = property_get(call, "callee");
-    let called = property_get(callee, "name");
-    let asserting_is = text_includes(called, "assert");
+    let called = js_identifier_name_try(callee);
+    let asserting_is = called !== null && text_includes(called, "assert");
     if (asserting_is) {
       throwing_is = true;
     }
@@ -39,7 +39,7 @@ export async function qa_gate_said_plain_is(f_name) {
   );
   for (let call2 of calls) {
     let callee2 = property_get(call2, "callee");
-    let called2 = property_get(callee2, "name");
+    let called2 = js_identifier_name_try(callee2);
     if (not_equal(called2, spelling)) {
       continue;
     }
