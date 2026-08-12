@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +10,6 @@ import { list_map } from "./list_map.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { lists_combine } from "./lists_combine.mjs";
-import { list_size } from "./list_size.mjs";
 export async function bible_folder_verse_holes(bible_folder, chapters) {
   "Which of the verses a page will ask this bible for it has nothing to answer with.";
   "The asking is driven by the English index, so that is what a verse being there or not is measured against. A bible numbering its verses its own way is not wrong for doing so, but a reader who chose it beside English still gets a gap where the page asked for a number it does not use - and this counts the gaps rather than the disagreements, because the gap is what the reader sees.";
@@ -58,8 +58,7 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
   let holes = lists_combine(holes_each);
   list_sort_text(holes);
   function lambda5(chapter) {
-    let verse_numbers = property_get(chapter, "verse_numbers");
-    let size = list_size(verse_numbers);
+    let size = property_list_size(chapter, "verse_numbers");
     return size;
   }
   let asked = list_map_sum(chapters, lambda5);
