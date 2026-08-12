@@ -1,7 +1,7 @@
+import { js_identifiers_named_counts } from "./js_identifiers_named_counts.mjs";
 import { equal } from "./equal.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
-import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 export async function function_locals_unread(f_name) {
@@ -15,8 +15,10 @@ export async function function_locals_unread(f_name) {
   let declaration = property_get(parsed, "declaration");
   let body = property_get(declaration, "body");
   let declared = js_declared_names(body);
+  ("The counting is done for every name in one walk rather than a walk for each name. A function declares a handful of names and the tree was being read from the top again for each one: measured 2026-08-11, that was the whole cost of this sweep across the repo. The walk was already looking at every name; only the tallying differed.");
+  let counts = js_identifiers_named_counts(declaration);
   function unread_is(name) {
-    let count = js_identifiers_named_count(declaration, name);
+    let count = counts.get(name);
     let alone = equal(count, 1);
     return alone;
   }
