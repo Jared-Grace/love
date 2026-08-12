@@ -112,6 +112,8 @@ export function examples_notes() {
       "the same verb aimed at a name that already has a file - writing a file that is already there replaces it, so the copy would wear a name whose own function it had just destroyed",
     example_wrap_adds_delegating_file:
       "wrap a fn — adds a file that delegates to it",
+    example_wrap_refuses_a_taken_name:
+      "the same verb given a name that already has a file - the wrapper has nowhere to be written that is not already somebody's home",
     example_param_new_across_files:
       "add a parameter — every caller gets the default",
     example_param_delete_across_files:
