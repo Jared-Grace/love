@@ -21,10 +21,13 @@ import { html_text_set } from "./html_text_set.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next(context) {
+  ("This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.");
+  ("So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.");
   let hash = html_hash_object_get();
-  let chapter_code = app_shared_bible_chapter_hash_get(hash);
+  let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name2 = app_shared_bible_verse_hash_key();
-  let verse_number = property_get(hash, property_name2);
+  let fallback = app_shared_bible_verse_number_default();
+  let verse_number = property_get_or(hash, property_name2, fallback);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   async function lambda(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
