@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
 import { function_params_names } from "./function_params_names.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
@@ -13,7 +14,7 @@ export async function qa_gate_hint_nodes(f_name) {
   for (let p of properties) {
     let key = property_get(p, "key");
     let named = property_get(key, "name");
-    if (named === "hint") {
+    if (equal(named, "hint")) {
       let value = property_get(p, "value");
       list_add(nodes, value);
     }
@@ -27,16 +28,16 @@ export async function qa_gate_hint_nodes(f_name) {
       return names;
     }
     let params = await catch_null_async(lambda);
-    if (params === null) {
+    if (equal(params, null)) {
       continue;
     }
     let index = list_index_of(params, "hint");
-    if (index === -1) {
+    if (equal(index, -1)) {
       continue;
     }
     let args = property_get(call, "arguments");
     let arg = args[index];
-    if (arg === undefined) {
+    if (equal(arg, undefined)) {
       continue;
     }
     list_add(nodes, arg);

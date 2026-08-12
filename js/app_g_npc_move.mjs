@@ -10,7 +10,8 @@ import { object_assign } from "./object_assign.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 export function app_g_npc_move(npc, to, delay) {
-  "take one person walking behind the player one tile onward - they turn to face the way they are going, their picture slides there, and the cross over them goes with them";
+  "take one person one tile onward - they turn to face the way they are going, their picture slides there, and the cross over them goes with them";
+  "asked for a person walking behind the player, and asked again for a person the player is trading places with";
   "two things are remembered by WHERE the person stands, their picture and their cross, so both have to be found before the person is moved and remembered again afterwards. finding them second would be looking for them at an address they no longer live at";
   "the delay is how long they stand still first, which is what puts one member of the line after another instead of all of them at once. it is written after the picture is placed, because placing it writes the whole transition over again";
   let img = app_g_npc_img_get(npc);
