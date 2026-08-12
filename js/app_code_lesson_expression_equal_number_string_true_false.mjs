@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_equal_number_string_true_false_number_and_true_false } from "./app_code_lesson_expression_equal_number_string_true_false_number_and_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_compared } from "./app_code_lesson_expression_equal_number_string_true_false_compared.mjs";
@@ -34,19 +35,6 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function number_and_true_false() {
-    "a number against a true or false, with no quotes anywhere: 1 === true. Also always false, and it is here so the rule cannot be read off the quotes alone - a reader who has decided that quotes mean false has nothing to go on in this line";
-    let number = list_random_item(["0", "1", "2"]);
-    let t2 = js_keyword_true();
-    let f2 = js_keyword_false();
-    let word = list_random_item([t2, f2]);
-    let code =
-      app_code_lesson_expression_equal_number_string_true_false_compared(
-        number,
-        word,
-      );
-    return code;
-  }
   function same_plain() {
     "a number or a true or false compared with itself: true. The plain half of the same pairing as same_string";
     let word = list_random_item(["1", "5", "true", "false"]);
@@ -63,7 +51,8 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
       app_code_lesson_expression_equal_number_string_true_false_look_alike();
     let v2 =
       app_code_lesson_expression_equal_number_string_true_false_same_string();
-    let v3 = number_and_true_false();
+    let v3 =
+      app_code_lesson_expression_equal_number_string_true_false_number_and_true_false();
     let v4 = same_plain();
     let list = [v, v2, v3, v4];
     return list;
