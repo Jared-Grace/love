@@ -9,10 +9,10 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["You might write ", "2 < 5 < 8"],
     ["That is how we would write this in maths"],
-    ["However, that is not how we write this in JavaScript"],
+    ["However, that is not how we write this in JS"],
   ]);
   app_code_container_light_blue_cycle_code_multiple(root, [
-    ["JavaScript will solve the ", "2 < 5", " first"],
+    ["JS will solve the ", "2 < 5", " first"],
     ["We replace the ", "2 < 5", " with ", "true"],
     ["And then we have ", "true < 8"],
     ["The ", "2", " and the ", "5", " are both gone"],
