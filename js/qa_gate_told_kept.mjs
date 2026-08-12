@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function qa_gate_told_kept(kept) {
   "$plain kept";
   arguments_assert(arguments, 1);
