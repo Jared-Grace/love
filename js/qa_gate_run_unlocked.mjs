@@ -68,7 +68,7 @@ export async function qa_gate_run_unlocked() {
   ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
   await qa_gate_sections_blame_print(told);
   let blamed_ms = date_milliseconds_since(at_blame);
-  await qa_gate_failed_assert(told, here, commit, asked_ms, blamed_ms, Error);
+  await qa_gate_failed_assert(told, here, commit, asked_ms, blamed_ms);
   qa_gate_parts_print(asked_ms, blamed_ms, 0);
   console.log("\nall gates passed");
   ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then the whole-run timings live in the printed block, and one gate at a time is asked for by name instead");

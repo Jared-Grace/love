@@ -11,6 +11,7 @@ export function app_g_dev_index_prefixes() {
     believe: unbeliever,
     pray: unbeliever,
     day_unbelievers: day,
+    day_baptisms_collect: day,
     day_conversation: day,
     day_parts: day,
     day_hours: day,
