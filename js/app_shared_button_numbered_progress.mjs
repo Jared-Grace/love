@@ -47,5 +47,5 @@ export function app_shared_button_numbered_progress(
       html_style_background_color_set(button, blue_light);
     }
   }
-  return title;
+  return r;
 }
