@@ -2,7 +2,7 @@ import { text_frozen } from "./text_frozen.mjs";
 export function js_statements_span_outputs_cases() {
   "Written-out pairs of a run of lines and the lines behind it, pinning which names the run has to hand back when it leaves";
   "Each case is two pieces of a single function body, given as text: what would be cut out, and what would stay behind it. They are parsed into statements before the reading is asked, which is the shape the reading takes them in.";
-  "The cases fail both ways on purpose. A reading that handed back every name it saw declared breaks the three that hand back nothing; a reading that handed back none breaks the two that must.";
+  "The cases fail both ways on purpose. A reading that handed back every name it saw declared breaks the three that hand back nothing; a reading that handed back none breaks the three that must.";
   "The names inside are frozen text, because the pass that turns a mentioned name into a reference would otherwise rewrite them and the case would stop testing what it was written for.";
   let cases = [
     {
