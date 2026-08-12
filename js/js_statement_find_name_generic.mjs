@@ -7,7 +7,8 @@ import { not } from "./not.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 export function js_statement_find_name_generic(ast, name, pick) {
   arguments_assert(arguments, 3);
-  ("The line a word is first written on inside the function's own body, with the caller saying which line of the stack standing over that word counts as the one.");
+  ("The line a name is first written on inside the function's own body, with the caller saying which line of the stack standing over that name counts as the one.");
+  ("A name rather than any word at all. What is searched is the identifiers, so a word written inside a piece of prose or any other run of text cannot be addressed by, however plainly it stands there. That is worth saying because a function here carries as much prose as code, and a word read off the prose looks like a perfectly good address right up until it is refused.");
   ("The whole of the search, held once. Two readers wrote it out between them and differed only in which node of the stack they took, so a fix made in one of them was silently missing from the other, and the closing refusal was spelled out twice word for word.");
   ("First mention rather than only mention, because a word worth addressing by is usually written several times and demanding one would refuse most of them. That makes the address readable straight off the function: it is the earliest line the word appears on, which is the line a reader points at anyway.");
   ("Mentions outside the body do not count, and the import line is why - a called function's earliest mention in the file is the line that imports it, which is not a line of the body at all.");
