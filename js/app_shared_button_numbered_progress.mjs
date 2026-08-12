@@ -23,7 +23,6 @@ export function app_shared_button_numbered_progress(
   let choose_this_next = not(completed) && completed_previous;
   let r = app_shared_button_numbered(root, index, lambda, true);
   let marker_slot = property_get(r, "marker");
-  let title = property_get(r, "title");
   let button = property_get(r, "button");
   if (completed) {
     let e = emoji_check();
