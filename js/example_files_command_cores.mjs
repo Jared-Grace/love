@@ -1,3 +1,4 @@
+import { js_identifier_params_delete_dir } from "./js_identifier_params_delete_dir.mjs";
 import { js_identifier_param_rename_dir } from "./js_identifier_param_rename_dir.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_identifiers_rename_dir } from "./js_identifiers_rename_dir.mjs";
@@ -6,7 +7,6 @@ import { js_identifier_copy_dir } from "./js_identifier_copy_dir.mjs";
 import { js_identifier_wrap_dir } from "./js_identifier_wrap_dir.mjs";
 import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
 import { js_identifier_param_new_dir } from "./js_identifier_param_new_dir.mjs";
-import { js_identifier_param_delete_dir } from "./js_identifier_param_delete_dir.mjs";
 import { js_selects_functionize_dir } from "./js_selects_functionize_dir.mjs";
 export function example_files_command_cores() {
   "Which hermetic core proves which whole-repo command. The commands themselves read and write wherever they are pointed, so a corpus example cannot run one; each has a twin taking the folder as its first argument, and that twin is what the example actually executes inside a temporary directory.";
@@ -39,7 +39,7 @@ export function example_files_command_cores() {
     },
     {
       name: fn_name("function_params_delete"),
-      core: js_identifier_param_delete_dir,
+      core: js_identifier_params_delete_dir,
     },
     {
       name: fn_name("function_param_rename"),
