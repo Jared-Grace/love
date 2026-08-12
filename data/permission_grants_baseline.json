@@ -95,6 +95,10 @@
   {
    "name": "functions_literal_route_any",
    "refusals": 1
+  },
+  {
+   "name": "functions_rename_reachable_starts_with_replace",
+   "refusals": 1
   }
  ]
 }
