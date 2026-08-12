@@ -13,8 +13,8 @@ import { assert_json } from "./assert_json.mjs";
 import { function_identifier_replace } from "./function_identifier_replace.mjs";
 export async function function_identifier_rename_checked(
   f_name,
-  name_after,
   name,
+  name_after,
 ) {
   arguments_assert(arguments, 3);
   let candidates = await functions_names();
