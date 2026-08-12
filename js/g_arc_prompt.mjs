@@ -81,7 +81,7 @@ export function g_arc_prompt(chapter_code, verses_text, turn_target, profile) {
     "You should choose this about the person:",
     "  occupation - their work, consistent with the JSON above",
     "  trouble - what is wrong, in one sentence, in their own words",
-    "  summary - one sentence: who they are and their trouble. The player reads it when they return.",
+    "  summary - one sentence: who they are and their trouble",
     '',
     'All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.',
     "Belief only moves forward. Once they believe, they never go back.",
