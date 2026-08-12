@@ -63,6 +63,23 @@ export function app_g_day_guide_pick_check() {
     best2,
     "gold tile must be the visible tile nearest the target, not the last tile of the path still in view",
   );
+  ("STRANGER IN THE GAP: the same detour map with somebody standing in the one gap the water leaves. read with people as walls there is no way to the target at all and the guide goes out, which is what left the third person of a day unguided. people are not walls to it - the walk parts a crowd - so the answer must be the detour map's answer unchanged");
+  let blocked = map_new(6, 0);
+  blocked.npcs.push({
+    x: 0,
+    y: 6,
+  });
+  let gold3 = app_g_day_guide_pick(blocked, player, target, 0, 11, 5, 11);
+  let b4 = not_equal(gold3, null);
+  assert_message(
+    b4,
+    "a person standing in the only gap must not read as no way to the target",
+  );
+  let best3 = equal(gold3.x, 6) && equal(gold3.y, 5);
+  assert_message(
+    best3,
+    "a person in the gap costs steps, so the gold tile is the one the open detour gives",
+  );
   ("the WINDOW half of the same guide is checked from here rather than from its own line in the gate list, and the reason is a gate rather than a preference. a function belonging to no app may not reach into one, and the gate list belongs to no app - so the two app-scoped checks it already names are a recorded wart it refuses to grow, and a third line was refused. it cannot be renamed to something honest about holding both, either: a rename reads as a new name, which is growth, which is refused as well. so the name stays as it was and this sentence carries what it can no longer say. the two are halves of ONE feature - the window says which tiles the player will be able to see, the picker chooses among them - so running them together is right in itself, and only the ORDER of discovery is backwards");
   let window_checked = app_g_day_guide_window_check();
   ("the WATER the last day of believers is led to is checked from here for the same reason and by the same arrangement - it is a third thing this one name is carrying. it belongs here on its own merits too: on every other day the guide leads to a PERSON, and on that day it leads to a tile of water instead, so what is being checked is that the picker can lead to a target nobody can stand on. the choosing half asks which water, and this half asks whether the gold can reach it");
