@@ -1,10 +1,8 @@
-import { property_list_join_comma } from "./property_list_join_comma.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { functions_module_state_shadowed } from "./functions_module_state_shadowed.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { greater_than } from "./greater_than.mjs";
 export async function functions_module_state_shadowed_gate_run() {
   "Gate: no file may have its own top-level state hidden by a binding inside one of";
   "its functions.";
@@ -18,10 +16,10 @@ export async function functions_module_state_shadowed_gate_run() {
   "The functions at fault are thrown as a record rather than printed and then summed up in a sentence, because whoever reads a failure next reads it for names and cannot tell a name being accused from a name being named as the cure. The names being hidden are advice too - a hidden name is the victim here, not the offender.";
   let offenders = await functions_module_state_shadowed();
   let names = list_map_property(offenders, "f_name");
-  let f_name2 = fn_name("function_shadowing_assign");
+  let f_name = fn_name("function_shadowing_assign");
   let advice = text_combine_multiple([
     "these fill a copy of their own shared state and throw it away - if the inner line was meant to write the shared name, ",
-    f_name2,
+    f_name,
     " takes the word let off it, and if it was not, the inner binding wants a name of its own",
   ]);
   let hint = {
