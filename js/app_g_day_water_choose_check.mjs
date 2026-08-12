@@ -1,9 +1,9 @@
+import { g_map_water_wall_pond_new } from "./g_map_water_wall_pond_new.mjs";
 import { g_coordinates_walkable_adjascent_nearest_player } from "./g_coordinates_walkable_adjascent_nearest_player.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_g_day_water_choose } from "./app_g_day_water_choose.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
 import { assert_message } from "./assert_message.mjs";
-import { g_water } from "./g_water.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -20,30 +20,7 @@ export function app_g_day_water_choose_check() {
     x: 6,
     y: 10,
   };
-  function map_new(wall_row, pond_wanted) {
-    let size = 12;
-    let coordinates = [];
-    for (let y = 0; less_than(y, size); y++) {
-      for (let x = 0; less_than(x, size); x++) {
-        let wall_here = equal(y, wall_row);
-        let pond_here = pond_wanted && equal(x, 6) && equal(y, 3);
-        let block_here = pond_wanted && less_than(x, 3) && less_than(y, 3);
-        let water_here = wall_here || pond_here || block_here;
-        let item = water_here ? g_water() : "grass";
-        coordinates.push({
-          x,
-          y,
-          item,
-        });
-      }
-    }
-    let g = {
-      coordinates,
-      npcs: [],
-    };
-    return g;
-  }
-  let ponds = map_new(-1, true);
+  let ponds = g_map_water_wall_pond_new(-1, true);
   let chosen = app_g_day_water_choose(ponds, player);
   let b = not_equal(chosen, null);
   assert_message(b, "a map with water in it must name some water");
@@ -58,7 +35,7 @@ export function app_g_day_water_choose_check() {
     b4,
     "water with no land beside it can never be named - nobody can stand next to it",
   );
-  let cut_off = map_new(6, true);
+  let cut_off = g_map_water_wall_pond_new(6, true);
   let chosen_cut = app_g_day_water_choose(cut_off, player);
   let b2 = not_equal(chosen_cut, null);
   assert_message(
@@ -70,7 +47,7 @@ export function app_g_day_water_choose_check() {
     wall_named,
     "water walled off from the player must not be named, near as it looks",
   );
-  let dry = map_new(-1, false);
+  let dry = g_map_water_wall_pond_new(-1, false);
   let chosen_dry = app_g_day_water_choose(dry, player);
   let none = equal(chosen_dry, null);
   assert_message(none, "a map with no water has no water to name");
