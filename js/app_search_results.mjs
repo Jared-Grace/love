@@ -46,7 +46,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_border_radius_extra_large } from "./app_shared_border_radius_extra_large.mjs";
 import { app_shared_container_blue_medium_background_color } from "./app_shared_container_blue_medium_background_color.mjs";
 import { html_border } from "./html_border.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
+import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -328,7 +328,7 @@ export async function app_search_results(context, div_results) {
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
-    let border_color = app_shared_container_blue_border_color();
+    let border_color = app_shared_color_blue_pale();
     let border_width = app_shared_spaced_frame_gap();
     html_border(div_chapter, border_width, border_color);
     let border_radius = app_shared_border_radius_extra_large();
