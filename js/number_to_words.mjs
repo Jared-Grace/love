@@ -9,6 +9,7 @@ import { mod } from "./mod.mjs";
 import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 export function number_to_words(num) {
+  "Spells a whole number out in English words, so a count can be read aloud in a sentence instead of standing there as a numeral.";
   let a = [
     "",
     "one",
