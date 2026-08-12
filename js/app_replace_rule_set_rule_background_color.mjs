@@ -1,6 +1,6 @@
 import { app_shared_button_background_color } from "./app_shared_button_background_color.mjs";
 import { app_shared_button_progress_next_background_color } from "./app_shared_button_progress_next_background_color.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { ternary_nested } from "./ternary_nested.mjs";
 export function app_replace_rule_set_rule_background_color(
   selected,
@@ -17,7 +17,7 @@ export function app_replace_rule_set_rule_background_color(
     "#a8a8a8ff",
   );
   if (success) {
-    c = app_shared_color_light_green();
+    c = app_shared_color_green_light();
   }
   return c;
 }

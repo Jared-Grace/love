@@ -1,5 +1,5 @@
 import { app_shared_success_emoji_font_size } from "./app_shared_success_emoji_font_size.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { each } from "./each.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
@@ -39,7 +39,7 @@ export function app_shared_success_message(parent) {
   let mapped = invoke_multiple(taken);
   let joined = list_join_empty(mapped);
   let p = html_p(parent);
-  let highlight = app_shared_color_light_green();
+  let highlight = app_shared_color_green_light();
   html_style_background_color_set(p, highlight);
   app_shared_symbol_tile_style_inner(p);
   let value_em = "0.3";

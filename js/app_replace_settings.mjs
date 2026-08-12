@@ -4,7 +4,7 @@ import { app_replace_animation_duration_get } from "./app_replace_animation_dura
 import { app_shared_screen_go } from "./app_shared_screen_go.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { equal } from "./equal.mjs";
-import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_replace_animation_duration_default } from "./app_replace_animation_duration_default.mjs";
 import { each } from "./each.mjs";
 import { emoji_clock } from "./emoji_clock.mjs";
@@ -19,7 +19,7 @@ export function app_replace_settings(context) {
   app_shared_font_size_buttons(root, context);
   let div = html_div(root);
   let left = emoji_clock();
-  let highlight = app_shared_color_light_green();
+  let highlight = app_shared_color_green_light();
   let duration = app_replace_animation_duration_get(context);
   ("if not null then speed is being overwritten by hash so don't show choices");
   if (null_is(duration)) {
