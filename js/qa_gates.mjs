@@ -1,3 +1,4 @@
+import { commands_only_hook_path_gate_run } from "./commands_only_hook_path_gate_run.mjs";
 import { example_files_command_refusals_gate_run } from "./example_files_command_refusals_gate_run.mjs";
 import { bible_verse_holes_gate_run } from "./bible_verse_holes_gate_run.mjs";
 import { bible_verse_end_is_cases_gate_run } from "./bible_verse_end_is_cases_gate_run.mjs";
@@ -413,6 +414,7 @@ export function qa_gates() {
     js_function_declaration_free_names_cases_gate_run,
     functions_lift_captured_locals_gate_run,
     qa_gates_said_plain_gate_run,
+    commands_only_hook_path_gate_run,
   ];
   return gates;
 }
