@@ -1,3 +1,7 @@
+import { random_bell_low_middle_high } from "./random_bell_low_middle_high.mjs";
+import { error_json } from "./error_json.mjs";
+import { divide } from "./divide.mjs";
+import { equal } from "./equal.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
@@ -10,7 +14,6 @@ import { list_add } from "./list_add.mjs";
 import { random_index } from "./random_index.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { list_filter_list_empty_not_is } from "./list_filter_list_empty_not_is.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -47,7 +50,8 @@ export function g_plant_days(conversation_lists, next) {
     let conversations = [];
     let met = [];
     let rolled = next();
-    let comes = less_than(rolled, divide(share, 100));
+    let b = divide(share, 100);
+    let comes = less_than(rolled, b);
     let drawn = random_bell_low_middle_high(
       next,
       s.conversation_turns_low,
@@ -93,21 +97,25 @@ export function g_plant_days(conversation_lists, next) {
       list_add(conversations, conversation);
       spent = spent + turns;
     }
-    let done = list_empty_is(conversations);
-    if (done) {
-      break;
+    ("A day where the leader stayed away and nobody fit is a day that spent nothing, and arcs are still waiting - so the next day would be the same day again, forever. It cannot happen while the longest conversation a person can hold stays under a day's arc budget, and this is what makes that a fact rather than a hope. A day holding only the leader is fine and is NOT this: their conversation can take enough of the budget that nobody else fits, and the plant still moved.");
+    let none_met = list_empty_is(conversations);
+    if (none_met) {
+      let no_leader = equal(leader, 0);
+      if (no_leader) {
+        error_json({
+          hint: "no conversation fits a day, so the plant cannot move; the longest a conversation may run has passed the turns a day gives to arcs",
+          budget,
+          remaining,
+        });
+      }
     }
     let questions = subtract(s.day_matches, spent);
     let day = {
+      leader,
       conversations,
       questions,
     };
     list_add(days, day);
   }
-  ("A day that places nothing ends the plant, and that is right when every arc is spent - but it reads the same as a conversation too long to fit in any day at all, which would end the plant early and drop the rest of somebody's arc without a word. So what is left over is CHECKED rather than assumed empty. It cannot happen while the longest conversation stays under a day's budget; the check is what makes that a fact rather than a hope.");
-  let leftover = list_filter_list_empty_not_is(left);
-  list_empty_is_assert_json(leftover, {
-    budget,
-  });
   return days;
 }
