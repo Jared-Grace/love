@@ -24,16 +24,10 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let verse_numbers = await ebible_verses_numbers(bible_folder, chapter_code);
   let verse_number = ebible_verses_before();
   list_remove_if_exists(verse_numbers, verse_number);
-  let file_path = ebible_version_readaloud_download_path(bible_folder);
-  let files = await folder_read_paths_async(file_path);
-  let book_code = ebible_chapter_code_to_book(chapter_code);
-  let name_code = ebible_chapter_code_to_name_code(chapter_code);
-  let search = text_combine_multiple(["_", book_code, "_", name_code, "_"]);
-  let only = list_find_includes(files, search);
-  let contents = await file_read(only);
-  let lines = text_split_newline(contents);
-  let mapped = list_skip_map(lines, 2, text_trim);
-  let filtered = list_filter_text_empty_not_is(mapped);
+  let filtered = await ebible_chapter_readaloud_lines(
+    bible_folder,
+    chapter_code,
+  );
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
 }
