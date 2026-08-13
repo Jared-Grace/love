@@ -1,5 +1,5 @@
+import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
 import { g_leader_chapter_codes } from "./g_leader_chapter_codes.mjs";
-import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function g_arc_chapter_passages_role(chapter, leader) {
   "the passages an arc for this chapter stands on, which is not the same question for a convert and for a leader";
