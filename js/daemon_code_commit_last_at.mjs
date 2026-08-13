@@ -9,8 +9,8 @@ export async function daemon_code_commit_last_at(f_name) {
   "One question naming every file rather than one question per file, because a daemon reaches several hundred of them and only the newest answer is wanted. Git is asked for the single newest commit across the whole list, so the reading costs the same whether the daemon is made of ten files or a thousand.";
   "Counted in seconds, the same as when the daemon started, so the two can be held against each other as numbers.";
   let paths = await daemon_reachable_paths(f_name);
-  let asked = ["log", "-1", "--format=%ct", "--"];
-  let command_words = list_add_multiple(asked, paths);
+  let command_words = ["log", "-1", "--format=%ct", "--"];
+  list_add_multiple(command_words, paths);
   let folder = folder_current_absolute();
   let printed = await git_folder_run(folder, command_words);
   let trimmed = text_trim(printed);
