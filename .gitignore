@@ -38,3 +38,10 @@ Thumbs.db
 # process killed outright never gets to remove it — and every commit here sweeps
 # the whole tree, so without this one of them lands in the repo. One already did.
 *.tmp.[0-9]*
+
+# Python's compiled bytecode for the bash guard. It is generated from the .py
+# files beside it and rewritten whenever python decides the cache is stale, so
+# tracking it means the tree goes dirty on its own. The QA snapshot checks a
+# commit out into its own folder, and a dirty tree there aborts the checkout —
+# so every deploy of every app was refused, for a file nobody wrote.
+__pycache__/
