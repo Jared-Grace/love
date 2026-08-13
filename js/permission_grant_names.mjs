@@ -1095,6 +1095,10 @@ export function permission_grant_names() {
   let spelled1074 = fn_name("claude_bash_labels_ranked");
   let spelled1075 = fn_name("file_lines_search");
   let spelled1076 = fn_name("file_read");
+  let spelled1077 = fn_name("claude_bash_labels_report");
+  let spelled1078 = fn_name("local_function_folder");
+  let spelled1079 = fn_name("claude_bash_commands_labelled");
+  let spelled1080 = fn_name("app_ceb_bible_gloss_punctuation_entries_repair");
   let names = [
     spelled,
     spelled2,
@@ -2172,6 +2176,10 @@ export function permission_grant_names() {
     spelled1074,
     spelled1075,
     spelled1076,
+    spelled1077,
+    spelled1078,
+    spelled1079,
+    spelled1080,
   ];
   return names;
 }
