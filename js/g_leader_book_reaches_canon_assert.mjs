@@ -51,6 +51,14 @@ export function g_leader_book_reaches_canon_assert() {
     let end = list_last(sorted);
     let left = subtract(end, first);
     let span = add(left, 1);
+    let home_index = list_index_of(canon, home);
+    let forward = greater_than(end, home_index);
+    if (forward) {
+      list_add(problems, {
+        reach,
+        reason: "borrows from a book that comes AFTER it in the canon",
+      });
+    }
     let contiguous = equal(span, reach.length);
     if (not(contiguous)) {
       list_add(problems, {
