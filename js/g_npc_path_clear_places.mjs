@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { g_coordinates_tile } from "./g_coordinates_tile.mjs";
 import { g_coordinates_offset } from "./g_coordinates_offset.mjs";
 import { g_coordinates_turn } from "./g_coordinates_turn.mjs";
@@ -12,7 +13,6 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { each } from "./each.mjs";
-import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function g_npc_path_clear_places(situation, player, land_index) {
@@ -37,8 +37,7 @@ export function g_npc_path_clear_places(situation, player, land_index) {
     }
     let placed = list_map(offsets, tile_of);
     let tap_tile = tile_of(tap_offset);
-    let dry_tiles = list_filter(placed, land_is);
-    let standing = list_size(dry_tiles);
+    let standing = list_filter_size(placed, land_is);
     let tappable = land_is(tap_tile);
     ("a whole arrangement is worth less than the one tile there is anything to do on, so being able to tap at all is worth more than every person in it put together");
     let worth = 0;
