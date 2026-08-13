@@ -9,8 +9,8 @@ export function app_shared_hash_field_unknown(hash, field) {
   let valid_is = property_get(field, "valid_is");
   function unknown_is(value) {
     let known = valid_is(value);
-    let unknown = not(known);
-    return unknown;
+    let value_unknown = not(known);
+    return value_unknown;
   }
   let unknown = list_filter(values, unknown_is);
   return unknown;
