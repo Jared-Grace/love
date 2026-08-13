@@ -132,7 +132,7 @@ export function g_arc_prompt(
     joined9,
     "This is a target, not a quota. Turns following from the arc matter more than reaching the count.",
     "",
-    "Ask yourself before writing anything, and answer only to yourself: Ideally, what passages should I choose for equal usage? Then ask: what overall arc flow, story and summary for this person is needed to choose these passages?",
+    "Ask yourself before writing anything, and answer only to yourself: Ideally, what passages should I choose for equal usage? Then ask: what overall arc flow, story and summary for this person is needed to choose these passages? Those answers will give you a summary about this person - and that summary gets detail added when you generate turns.",
     "",
     "You should choose this about the person, once:",
     person_fields,
