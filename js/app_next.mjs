@@ -81,16 +81,19 @@ export async function app_next(context) {
   }
   let lines_each = await list_map_unordered_async(run, lambda);
   let mapped = lists_combine(lines_each);
+  ("What is copied is the reading and nothing else. The way onward is written under it on the page, where somebody carrying on can press it, but a reader who copies a passage into a message is quoting scripture - a link to the verse after the one they quoted is not part of what they said, and it used to travel with it without anything saying so.");
+  let copied = list_join_newline_2(mapped);
   let url = app_next_url_onward(hash, list, run);
-  list_add(mapped, url);
+  let shown = list_copy(mapped);
+  list_add(shown, url);
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
   ("The blank line between the blocks is written into the text rather than into the page, so the page has to be told to keep it. Left untold, a browser folds every run of space into one and the whole reading arrives as a single paragraph - which was survivable while there was one verse to show and is not now, because nothing then says where one verse ends and the next begins.");
-  let joined = list_join_newline_2(mapped);
+  let joined = list_join_newline_2(shown);
   ("The reading gets a place of its own under the page rather than being the page, so that something can stand beside it. What is copied is still only the reading - the button is on the page and not in the text - so a reader pasting this into a message sends the verses and nothing about where they came from.");
   let reading = html_div(root);
   html_style_white_space(reading, "pre-wrap");
   html_text_set(reading, joined);
   app_next_passage_more_button(root, run);
-  await clipboard_copy_try(joined);
+  await clipboard_copy_try(copied);
 }
