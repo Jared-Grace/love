@@ -22,6 +22,8 @@ import { text_split_space } from "./text_split_space.mjs";
 import { ebible_chapter_text } from "./ebible_chapter_text.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
+  "$plain chapter_code";
+  "$plain bible_folder";
   "Cuts one chapter of a Bible into its verses, each with the number it is known by.";
   "A chapter arrives as one unbroken run of words with the verse numbers standing among them as words of their own, so the cutting has to find those markers rather than read a line each. That is why this is work at all: the numbers are not a field beside the text, they are in it.";
   "The cutting runs from the end of the chapter backwards. A number's word can appear more than once in a chapter - as part of the text itself, or because the same digits come round again - and the marker is always the later one, so taking the last and then throwing away everything after it leaves a shorter chapter in which the same rule holds again. Read forwards, the first match is as likely to be a word of the verse as the mark of one.";

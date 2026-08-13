@@ -11,6 +11,8 @@ import { lists_sizes_equal_assert_json } from "./lists_sizes_equal_assert_json.m
 import { list_map_pairs } from "./list_map_pairs.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
+  "$plain chapter_code";
+  "$plain bible_folder";
   arguments_assert(arguments, 2);
   ("Every verse the source page of one chapter marks, beside the words that verse holds.");
   ("Where each verse begins is written into the page, but flattening the page into words forgets it. So each verse's own mark is written over with a character no bible is written in, and the flattened chapter is then cut at that character: what lies between two marks is exactly one verse, without anything having to be searched for.");
