@@ -1,3 +1,4 @@
+import { app_code_column_cap } from "./app_code_column_cap.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_index_by_id } from "./app_code_lesson_index_by_id.mjs";
 import { add_1_period } from "./add_1_period.mjs";
@@ -29,6 +30,8 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     "align-items": "center",
     "column-gap": column_gap,
   });
+  ("capped to the same column as everything under it, so the home button starts where the cards start. Without it the strip is as wide as the window and the button sits out in the margin beside the reading column rather than at the head of it");
+  app_code_column_cap(strip);
   let value = app_shared_spaced_gap();
   html_style_margin_y(strip, value);
   async function go_home() {
