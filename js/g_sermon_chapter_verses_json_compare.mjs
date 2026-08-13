@@ -1,5 +1,5 @@
+import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
 import { g_sermon_chapter_codes_all } from "./g_sermon_chapter_codes_all.mjs";
-import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
 import { g_sermon_chapter_verses_text } from "./g_sermon_chapter_verses_text.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { property_get } from "./property_get.mjs";

@@ -1196,6 +1196,11 @@ export function permission_grant_names() {
   let spelled1171 = fn_name("g_leader_chapter_codes");
   let spelled1172 = fn_name("app_original_bible_gloss_generate_download");
   let spelled1173 = fn_name("storage_function_path_json");
+  let spelled1174 = fn_name("gloss_back_references_baseline_write");
+  let spelled1175 = fn_name("gloss_back_references_gate_run");
+  let spelled1176 = fn_name(
+    "app_code_lesson_expression_parentheses_both_sides_title_name_id",
+  );
   let names = [
     spelled,
     spelled2,
@@ -2370,6 +2375,9 @@ export function permission_grant_names() {
     spelled1171,
     spelled1172,
     spelled1173,
+    spelled1174,
+    spelled1175,
+    spelled1176,
   ];
   return names;
 }
