@@ -1202,17 +1202,19 @@ def transparent_wrapper_skip(words):
     A transparent wrapper runs the rest of the word list as its own command
     and grants no trust of its own, so the inner command is what actually
     needs checking - both verb_of and _strip_command_prefixes look straight
-    through it. Each shape is deliberately exact: any flag form (`xargs
-    -I{}`, `timeout -k 5 30`, `time -p`) fails the check and falls through
-    to a real prompt, because a flag can change what actually gets run.
+    through it. Each shape is deliberately exact: a flag form fails the
+    check and falls through to a real prompt unless the flag is one an
+    allowlist has weighed, because a flag can change what actually gets run
+    (`xargs -I{}` moves the arguments; `/usr/bin/time -o` writes a file).
 
     Single source of truth on purpose - these three shapes were previously
     spelled out in both callers, where they could drift apart and silently
     widen one path but not the other."""
     if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
         return 1
-    if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
-        return 2
+    skip = timeout_wrapper_skip(words)
+    if skip:
+        return skip
     if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
         return 1
     # `!` inverts the exit status of what follows and nothing else - it runs
@@ -1275,6 +1277,63 @@ def time_wrapper_skip(words):
     if index >= len(words) or words[index].startswith("-"):
         return 0
     return index
+
+
+# timeout's flags, and the reason all of them are on the safe side of the
+# line rather than only some. /usr/bin/time had to be split because `-o`
+# names a file to write; git had to be split because `-c` can set a pager to
+# an arbitrary command. timeout has no member of either kind: every flag it
+# takes decides which signal is sent, how long after, whether a second one
+# follows, which process group hears it, and what exit status is reported.
+# Not one of them names a file, and not one of them changes WHICH command
+# runs - the word after the duration is the command in every form. So the
+# transparency argument for `timeout -k 5 30 CMD` is exactly the argument for
+# `timeout 30 CMD`, and refusing the first while allowing the second refused
+# a shape on the strength of a rule ("any flag form") wider than the reason
+# given for it ("a flag can change what actually gets run").
+#
+# It is still an allowlist and not "skip anything starting with -", for the
+# reason its two siblings are: an unrecognised flag is one nobody has weighed,
+# and the whole point of naming them is that the next one added upstream
+# arrives as a prompt rather than as a silent widening.
+TIMEOUT_SAFE_VALUELESS_FLAGS = {
+    "--preserve-status", "--foreground", "-v", "--verbose",
+}
+TIMEOUT_SAFE_VALUE_FLAGS = {"-k", "--kill-after", "-s", "--signal"}
+TIMEOUT_SAFE_GLUED_FLAGS = ("--kill-after=", "--signal=")
+
+
+def timeout_wrapper_skip(words):
+    """How many leading words `timeout [flags] <duration>` occupies, or 0.
+
+    The duration is the anchor, and it is what makes a parsing mistake here
+    fail safe. The skip applies only when a word matching TIMEOUT_DURATION_RE
+    sits immediately before the rest of the line, so miscounting the flags
+    can only land the verb EARLIER than the real one - on a number or a
+    signal name, which no rule trusts - never later. Landing later is the
+    dangerous direction and this shape cannot reach it: consuming too much
+    leaves a command name where a duration must match, and no command name
+    is a duration."""
+    if words[0] != "timeout":
+        return 0
+    index = 1
+    while index < len(words):
+        word = words[index]
+        if word in TIMEOUT_SAFE_VALUELESS_FLAGS:
+            index += 1
+            continue
+        if word in TIMEOUT_SAFE_VALUE_FLAGS and index + 1 < len(words):
+            index += 2
+            continue
+        if word.startswith(TIMEOUT_SAFE_GLUED_FLAGS):
+            index += 1
+            continue
+        break
+    # The duration, then at least one word for it to be limiting. A wrapper
+    # with nothing left to wrap is not a wrapper.
+    if index + 1 >= len(words) or not TIMEOUT_DURATION_RE.match(words[index]):
+        return 0
+    return index + 1
 
 
 def verb_of(words):
@@ -2389,8 +2448,9 @@ def _strip_timing_wrappers(words):
     is what the whole command is, because xargs takes further arguments from
     standard input that no template can see."""
     while words:
-        if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
-            words = words[2:]
+        skip = timeout_wrapper_skip(words)
+        if skip:
+            words = words[skip:]
             continue
         if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
             words = words[1:]
