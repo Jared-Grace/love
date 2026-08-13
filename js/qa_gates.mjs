@@ -1,3 +1,5 @@
+import { app_code_lesson_quiz_token_select_value_variations_cases_gate_run } from "./app_code_lesson_quiz_token_select_value_variations_cases_gate_run.mjs";
+import { g_tiles_window_axis_cases_gate_run } from "./g_tiles_window_axis_cases_gate_run.mjs";
 import { daemons_stale_gate_run } from "./daemons_stale_gate_run.mjs";
 import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
 import { gloss_back_references_gate_run } from "./gloss_back_references_gate_run.mjs";
@@ -473,6 +475,8 @@ export function qa_gates() {
     git_push_urls_gate_run,
     gloss_back_references_gate_run,
     daemons_stale_gate_run,
+    g_tiles_window_axis_cases_gate_run,
+    app_code_lesson_quiz_token_select_value_variations_cases_gate_run,
   ];
   return gates;
 }
