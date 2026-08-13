@@ -56,6 +56,7 @@ export function g_arc_prompt(
     chapter_code,
   ]);
   let joined = list_join_empty([preaching, "."]);
+  ("The chapter named here is the one the plant is STANDING IN, and a leader is handed more than it. The passages say which chapter each of them is from, so the line stays true as written - it says where the player is, not what the whole list is drawn from.");
   let joined9 = list_join_space(["Aim for", turn_target, "turns."]);
   let unbeliever_openers = list_join_space([
     "  openers for somebody who does not yet believe, one of:",
