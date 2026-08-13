@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_secure_context_names } from "./browser_secure_context_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -10,8 +11,14 @@ import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 export function js_secure_context_asked(ast) {
   "Which of the browser's https-only things this file ASKS ABOUT rather than simply uses - the ones it reads once as a value, which is the only reason there is to read them without calling them or looking inside them.";
-  "That is what asking looks like in every place this repo does it. uuid_browser writes `let ready = crypto.randomUUID` and then tests ready; window_share writes `b && navigator.share`; clipboard_copy_browser writes `navigator.clipboard && navigator.clipboard.writeText`. In each the pairing is read bare in one place and called or looked inside in another, and the bare read is the question.";
-  "The rule is the shape of the reading rather than where its answer travels to, because following a value from a read to the test it decides is a walk this needs no part of. The cost is that reading the thing and then ignoring the answer would pass - which is not a line anybody writes by accident, and the gate this feeds measures against what the repo already carried anyway.";
+  ("That is what asking looks like in every place this repo does it. ",
+    fn_name("uuid_browser"),
+    " writes `let ready = crypto.randomUUID` and then tests ready; ",
+    fn_name("window_share"),
+    " writes `b && navigator.share`; ",
+    fn_name("clipboard_copy_browser"),
+    " writes `navigator.clipboard && navigator.clipboard.writeText`. In each the pairing is read bare in one place and called or looked inside in another, and the bare read is the question.");
+  ("The rule is the shape of the reading rather than where its answer travels to, because following a value from a read to the test it decides is a walk this needs no part of. The cost is that reading the thing and then ignoring the answer would pass - which is not a line anybody writes by accident, and the gate this feeds measures against what the repo already carried anyway.");
   arguments_assert(arguments, 1);
   let wanted = browser_secure_context_names();
   let members = js_list_type_nodes(ast, "MemberExpression");
