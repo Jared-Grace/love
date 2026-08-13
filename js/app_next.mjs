@@ -101,7 +101,8 @@ export async function app_next(context) {
   }
   each(blocks, block_show);
   ("The copying this page does for itself is the one a browser is allowed to refuse, so the same copying stands under the reading as something to press. The paragraph above lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
-  app_next_copy_button(content, reading_text);
+  ("It goes inside the card rather than under it, because the card is exactly what it copies. Standing between the card and the link below, it sat where either could be what it takes, and the link is the one thing deliberately left out - so the edge of the card is made to be the edge of the copy, and the link is outside it where somebody can see that it is.");
+  app_next_copy_button(card, reading_text);
   app_next_url_onward_link(content, url);
   app_next_ways_onward(content, run);
   html_page_bottom_space(content);
