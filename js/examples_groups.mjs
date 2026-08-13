@@ -145,6 +145,9 @@ export function examples_groups() {
         "example_params_delete_refuses_before_any",
         "example_param_rename_carries_plain_marker",
         "example_param_rename_refuses_a_local",
+        "example_snapshot_keeps_a_copy",
+        "example_snapshot_refuses_a_taken_label",
+        "example_snapshot_refuses_a_split_build",
       ],
     },
   ];
