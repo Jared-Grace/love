@@ -1,3 +1,14 @@
+import { instructions_fenced_lines } from "./instructions_fenced_lines.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { or } from "./or.mjs";
+import { text_split } from "./text_split.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { text_regex_match } from "./text_regex_match.mjs";
+import { equal_not } from "./equal_not.mjs";
+import { text_replace_multiple_to } from "./text_replace_multiple_to.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { not } from "./not.mjs";
 export async function instructions_commands() {
   "Every command line the instructions show, made runnable: the comment cut off the end and each placeholder filled with a plain word.";
   "The instructions tell a Claude to type these, so what matters is whether the guard accepts the SHAPE - and a shape cannot be asked about while it still spells its holes as angle brackets, because the tokenizer reads a bracket as punctuation rather than as the word that will stand there.";
