@@ -17,8 +17,8 @@ export async function storage_rules_gate_run() {
   );
   function refused_is(check) {
     let readable = property_get(check, "readable");
-    let refused = false_is(readable);
-    return refused;
+    let readable_not = false_is(readable);
+    return readable_not;
   }
   let refused = list_filter(checks, refused_is);
   let hint =
