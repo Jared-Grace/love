@@ -109,7 +109,7 @@ export function g_arc_prompt(
     "",
     "GROUPING",
     "Group the turns into conversations.",
-    "One conversation is one day.",
+    "One conversation is one day in the game.",
     joined8,
     "You decide where each one ends.",
     "",
