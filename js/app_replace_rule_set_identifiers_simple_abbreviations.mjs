@@ -21,5 +21,5 @@ export function app_replace_rule_set_identifiers_simple_abbreviations(
     di: ["", "di", "git sample: a few choices of digits"],
   };
   object_merge_set(abbreviations, abbreviations2);
-  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
+  ("what an identifier itself is belongs to whoever has a rule that rewrites one - the strings set borrows these pieces without ever spelling id, and would have shown an explanation for a word its exercise never reaches");
 }
