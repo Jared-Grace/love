@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
 import { hash_key_getters_all } from "./hash_key_getters_all.mjs";
@@ -31,8 +32,7 @@ export async function apps_hash_keys_unchecked() {
     }
     let said = [];
     for (let pair of pairs) {
-      let f_name = property_get(pair, "f_name");
-      let reads = list_includes(reached, f_name);
+      let reads = property_in_list(pair, "f_name", reached);
       if (reads) {
         let getter = property_get(pair, "getter");
         let no_args = [];
