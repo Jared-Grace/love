@@ -1,6 +1,5 @@
-import { list_empty_is } from "./list_empty_is.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
@@ -36,8 +35,7 @@ export async function gloss_chapters_write_coverage_generic(fn, passages_read) {
   let all = await list_map_async(chapter_codes, chapter_read);
   function waiting_is(chapter) {
     let missing = property_get(chapter, "missing");
-    let empty = list_empty_is(missing);
-    let waiting = not(empty);
+    let waiting = list_empty_not_is(missing);
     return waiting;
   }
   let waiting = list_filter(all, waiting_is);
