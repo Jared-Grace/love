@@ -1,20 +1,12 @@
 import { app_replace_rule_set_exponent_part_rules } from "./app_replace_rule_set_exponent_part_rules.mjs";
-import { app_replace_rule_set_exponent_part_abbreviations } from "./app_replace_rule_set_exponent_part_abbreviations.mjs";
-import { app_replace_rule_set_decimals_abbreviations } from "./app_replace_rule_set_decimals_abbreviations.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_rule_set_decimals_rules } from "./app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_replace_rule_set_scientific_notation_numbers() {
   let rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, ["sn > de se", "sn > ig se"]);
   app_replace_rule_set_exponent_part_rules(rules);
-  let ad = app_replace_rule_set_decimals_abbreviations();
-  let abbreviations = {};
-  app_replace_rule_set_exponent_part_abbreviations(abbreviations);
-  object_merge_set(abbreviations, ad);
   let r = {
     name: "Scientific Notation Numbers",
-    abbreviations,
     rules,
     goals: [
       {

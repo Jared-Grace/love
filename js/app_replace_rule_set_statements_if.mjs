@@ -1,5 +1,4 @@
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_replace_rule_set_statements_if_abbreviations } from "./app_replace_rule_set_statements_if_abbreviations.mjs";
 import { app_replace_rule_set_statements_if_rules } from "./app_replace_rule_set_statements_if_rules.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -17,44 +16,48 @@ export function app_replace_rule_set_statements_if() {
     'ex > log ( "reset" )',
     "ex > y >> max",
   ]);
-  let abbreviations = {};
-  app_replace_rule_set_statements_if_abbreviations(abbreviations);
+  let left = js_keyword_if();
+  let left2 = js_keyword_if();
+  let left3 = js_keyword_if();
+  let left4 = js_keyword_if();
+  let left5 = js_keyword_if();
+  let left6 = js_keyword_if();
+  let left7 = js_keyword_if();
+  let left8 = js_keyword_if();
+  let left9 = js_keyword_if();
+  let left10 = js_keyword_if();
   let r = {
     name: "Statements If",
     rules,
-    abbreviations,
     goals: [
       {
         start: "is",
-        end: text_combine(js_keyword_if(), " ( y === null ) return ;"),
+        end: text_combine(left, " ( y === null ) return ;"),
       },
       {
         start: "is",
-        end: text_combine(js_keyword_if(), " ( x < 0 ) { smg }"),
+        end: text_combine(left2, " ( x < 0 ) { smg }"),
       },
       {
-        start: text_combine(js_keyword_if(), " ( x < 0 ) { smg }"),
-        end: text_combine(js_keyword_if(), " ( x < 0 ) { x = 1 ; }"),
+        start: text_combine(left3, " ( x < 0 ) { smg }"),
+        end: text_combine(left4, " ( x < 0 ) { x = 1 ; }"),
       },
       {
         start: "is",
-        end: text_combine(js_keyword_if(), " ( y > max ) { smg }"),
+        end: text_combine(left5, " ( y > max ) { smg }"),
       },
       {
-        start: text_combine(js_keyword_if(), " ( y > max ) { smg }"),
+        start: text_combine(left6, " ( y > max ) { smg }"),
+        end: text_combine(left7, ' ( y > max ) { y = 0 ; log ( "reset" ) ; }'),
+      },
+      {
+        start: "is",
+        end: text_combine(left8, " ( x > 0 ) sm else sm"),
+      },
+      {
+        start: text_combine(left9, " ( x > 0 ) sm else sm"),
         end: text_combine(
-          js_keyword_if(),
-          ' ( y > max ) { y = 0 ; log ( "reset" ) ; }',
-        ),
-      },
-      {
-        start: "is",
-        end: text_combine(js_keyword_if(), " ( x > 0 ) sm else sm"),
-      },
-      {
-        start: text_combine(js_keyword_if(), " ( x > 0 ) sm else sm"),
-        end: text_combine(
-          js_keyword_if(),
+          left10,
           " ( x > 0 ) positive = true ; else positive = false ;",
         ),
       },

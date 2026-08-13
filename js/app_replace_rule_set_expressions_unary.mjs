@@ -1,16 +1,12 @@
-import { app_replace_rule_set_expressions_unary_abbreviations } from "./app_replace_rule_set_expressions_unary_abbreviations.mjs";
 import { app_replace_rule_set_expressions_unary_rules } from "./app_replace_rule_set_expressions_unary_rules.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_unary() {
   let rules = [];
   app_replace_rule_set_expressions_unary_rules(rules);
   list_add(rules, "ex > ue");
-  let abbreviations = {};
-  app_replace_rule_set_expressions_unary_abbreviations(abbreviations);
   let r = {
     name: "Expressions Unary",
     rules,
-    abbreviations,
     goals: [
       {
         start: "ue",

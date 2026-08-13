@@ -1,16 +1,12 @@
-import { app_replace_rule_set_expresions_additive_abbreviations } from "./app_replace_rule_set_expresions_additive_abbreviations.mjs";
 import { app_replace_rule_set_expresions_additive_rules } from "./app_replace_rule_set_expresions_additive_rules.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_additive() {
   let rules = [];
   app_replace_rule_set_expresions_additive_rules(rules);
   list_add(rules, "ex > ade");
-  let abbreviations = {};
-  app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   let r = {
     name: "Expressions Additive",
     rules: rules,
-    abbreviations,
     goals: [
       {
         start: "ade",

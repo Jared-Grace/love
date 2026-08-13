@@ -1,16 +1,11 @@
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_replace_rule_set_statements_variable_abbreviations } from "./app_replace_rule_set_statements_variable_abbreviations.mjs";
 import { app_replace_rule_set_statements_variable_rules } from "./app_replace_rule_set_statements_variable_rules.mjs";
 import { js_code_assign } from "./js_code_assign.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
-import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "./app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_replace_rule_set_statements_variable() {
   let rules = [];
   app_replace_rule_set_statements_variable_rules(rules);
-  let abbreviations = {};
-  app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
-  app_replace_rule_set_statements_variable_abbreviations(abbreviations);
   list_add_multiple(rules, [
     "id > a",
     "id > b",
@@ -24,10 +19,9 @@ export function app_replace_rule_set_statements_variable() {
     "ex > 1",
     "ex > 2",
   ]);
-  let y_eq_2 = js_code_assign("y", "2");
+  let y_eq_ = js_code_assign("y", "2");
   let r = {
     name: "Statements Variable",
-    abbreviations,
     rules,
     goals: [
       {
@@ -52,11 +46,11 @@ export function app_replace_rule_set_statements_variable() {
       },
       {
         start: "vs",
-        end: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
+        end: text_combine_multiple(["const vdg , ", y_eq_, " ;"]),
       },
       {
-        start: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
-        end: text_combine_multiple(["const x = 1 , ", y_eq_2, " ;"]),
+        start: text_combine_multiple(["const vdg , ", y_eq_, " ;"]),
+        end: text_combine_multiple(["const x = 1 , ", y_eq_, " ;"]),
       },
     ],
     why: "The replacement rules define a context-free grammar for variable declaration statements in a JavaScript-like language, demonstrating how variable keywords, identifiers, and optional initializations can be combined and separated by commas to form valid statements.",

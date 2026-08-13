@@ -1,6 +1,4 @@
-import { object_merge_set } from "./object_merge_set.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_replace_rule_set_logical_expressions_abbreviations } from "./app_replace_rule_set_logical_expressions_abbreviations.mjs";
 import { app_replace_rule_set_logical_expressions_rules } from "./app_replace_rule_set_logical_expressions_rules.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_replace_rule_set_expressions_assignment() {
@@ -14,16 +12,9 @@ export function app_replace_rule_set_expressions_assignment() {
     "id > z",
   ]);
   list_add(rules, "ex > ase");
-  let abbreviations = {};
-  app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
-  object_merge_set(abbreviations, {
-    ase: ["", "as", "signment ", "e", "xpression"],
-    lh: ["", "l", "eft-", "h", "and expression"],
-  });
   let r = {
     name: "Expressions Assignment",
     rules,
-    abbreviations,
     goals: [
       {
         start: "ase",
