@@ -1,3 +1,9 @@
+import { instructions_text } from "./instructions_text.mjs";
+import { text_split_newline } from "./text_split_newline.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { list_add } from "./list_add.mjs";
+import { not } from "./not.mjs";
 export async function instructions_fenced_lines() {
   "Every line the instructions show inside a fenced block, across all the files they are written in.";
   "A fence is where the instructions stop describing and start showing. What is inside one is meant to be copied out and typed, so it is the half of the instructions a check can actually run - and the only half where being wrong costs the reader an attempt rather than a misunderstanding.";
