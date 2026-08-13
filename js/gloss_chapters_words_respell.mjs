@@ -20,8 +20,8 @@ export async function gloss_chapters_words_respell(fn, words_read) {
   }
   let chapters = await list_map_async(chapter_codes, chapter_read);
   function changed_is(chapter) {
-    let changed = property_list_empty_not_is(chapter, "changes");
-    return changed;
+    let chapter_changed = property_list_empty_not_is(chapter, "changes");
+    return chapter_changed;
   }
   let changed = list_filter(chapters, changed_is);
   let r2 = {
