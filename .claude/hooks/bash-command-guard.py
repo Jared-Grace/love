@@ -193,9 +193,9 @@ normal handling rather than being force-denied on a guess.
 A second exact template, `is_safe_sandboxed_node_script`, extends the
 same idea to running a *file* instead of an inline `-e` string:
 `unshare --net --map-root-user -- node --permission
---allow-fs-read=<abs path under this repo> scripts/temp/<name>.mjs`.
-Same sandboxing guarantee, same "exact shape or reject" posture, but two
-extra restrictions specific to running a file: (1) `--allow-fs-write` is
+--allow-fs-read=<abs path under this repo> scripts/temp/<name>.mjs
+[arg ...]`. Same sandboxing guarantee, same "exact shape or reject"
+posture, but two extra restrictions specific to running a file: (1) `--allow-fs-write` is
 never part of the accepted template, so these scripts can only read and
 print, never modify the repo - if a scratch script needs to write, that
 is deliberately not handled by this template; (2) the script path itself
