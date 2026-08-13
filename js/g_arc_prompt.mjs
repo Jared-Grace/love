@@ -113,7 +113,7 @@ export function g_arc_prompt(
     "So conversations after the first need to have an npc opener that naturally and concisely summarizes conversations thus far to player.",
     "",
     "What you write is a SUMMARY of this life, never a transcript of it. John 21 verse 25 says the world could not hold the books if everything Jesus did were written down, and the Gospels are short compared to the years they cover. So write the same way.",
-    "The turns are the few exchanges worth showing out of many more that happened. Between two conversations this person has gone on living, and may have changed in ways nobody watched.",
+    "The turns are the few exchanges worth showing out of many more that happened. Between two conversations this person has gone on living, and may have changed in ways the player did not see playing the game.",
     "So do not try to show every step of the change. Choose the hinges - the day the thing they were holding on to gave way, the day they asked something they would not have asked before - and let the rest be understood from the distance between them.",
     "",
     "Stop when the chapter has nothing left that honestly answers them.",
