@@ -36,7 +36,8 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
     return eq;
   }
   let passage = list_find(passages, matches);
-  let chapters = await bible_interlinear_chapters_words();
+  ("The parsed words come from the kept copy. This is asked once per passage authored, so a chapter of twenty-two passages walks the whole table twenty-two times over without it - which is the case the kept copy was written for. Reading a passage to explain it consumes the text and settles nothing about it, so a kept copy is the right thing to read here, unlike the paths that publish the text.");
+  let chapters = await bible_interlinear_chapters_words_cache();
   let verses_interlinear = property_get(chapters, chapter_code);
   let verse_numbers = property_get(passage, "verse_numbers");
   let originals = property_get(passage, "originals");
