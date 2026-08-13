@@ -9,14 +9,13 @@ import { g_profiles } from "./g_profiles.mjs";
 import { g_generation_plan } from "./g_generation_plan.mjs";
 import { g_profiles_leader } from "./g_profiles_leader.mjs";
 import { g_arc_prompt } from "./g_arc_prompt.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 export async function g_arc_prompt_chapter_role(chapter, leader) {
   "The arc prompt for one written chapter, as one string - what actually gets sent to write a person, with every argument filled from the repo rather than made up here.";
   "A prompt is read before it is trusted, and it cannot be read while its arguments live in as many different places. This gathers them and hands back the result so a change to any of them is visible in one command.";
   ("Its answer is the whole string ",
     fn_name("g_arc_prompt"),
     " returns, uncut.");
-  "It was cut into its lines once, because a JSON print writes a string as one line with every newline spelled as two characters. That read better on one seam and lost content on the other: the human's seam prints through console.log, which stops an array at a hundred items and replaces the rest with a count - and this prompt runs to 135 lines, so 35 of them were silently gone. A string prints there raw and whole.";
+  ("It was cut into its lines once, because a JSON print writes a string as one line with every newline spelled as two characters. That read better on one seam and lost content on the other: the human's seam prints through console.log, which stops an array at a hundred items and replaces the rest with a count - and this prompt runs to 135 lines, so 35 of them were silently gone. A string prints there raw and whole.");
   ("To read it as a file instead of in the terminal, ",
     fn_name("function_run_output_file_temp"),
     " writes a string to a .txt of its own and opens it.");
