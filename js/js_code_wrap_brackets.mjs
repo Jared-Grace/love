@@ -1,11 +1,7 @@
-import { js_code_bracket_close } from "./js_code_bracket_close.mjs";
-import { js_code_bracket_open } from "./js_code_bracket_open.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_wrap_brackets } from "./text_wrap_brackets.mjs";
 export function js_code_wrap_brackets(inside) {
-  let code = text_combine_multiple([
-    js_code_bracket_open(),
-    inside,
-    js_code_bracket_close(),
-  ]);
+  "A piece of JS code with square brackets round it - an index, or a property read by name.";
+  "The wrapping itself is not a thing about JS, so it is done by the text sibling and only NAMED here, where the callers are writing code and want to say so.";
+  let code = text_wrap_brackets(inside);
   return code;
 }
