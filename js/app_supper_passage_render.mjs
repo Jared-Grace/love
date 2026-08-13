@@ -15,8 +15,6 @@ export function app_supper_passage_render(card, passage, remaining, names) {
   let multiple = list_multiple_is(names);
   function lambda(v) {
     let reference = property_get(v, "reference");
-    let d = html_div_text_centered(card, reference);
-    app_shared_text_deemphasized(d);
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
@@ -32,7 +30,7 @@ export function app_supper_passage_render(card, passage, remaining, names) {
       return entry;
     }
     let entries = list_map_index(mapped, to_entry);
-    app_shared_bible_verse_texts(card, entries);
+    app_shared_bible_verse_block(card, reference, entries);
   }
   each(passage, lambda);
 }
