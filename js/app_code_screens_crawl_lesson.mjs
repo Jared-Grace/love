@@ -20,7 +20,8 @@ export async function app_code_screens_crawl_lesson(
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let v = app_code_screen_hash_key();
   let f_name = fn_name("app_code_examples");
-  let combined = text_combine_multiple(["&", v, "=", f_name]);
+  ("the pairs are joined with a comma, which is the shape the app itself now writes. A crawl that seeded a different shape would still open - both are read - but the mark it later looks for in the address would be spelled one way and the address the other, so the walk would stop after the first click and quietly capture one kind per lesson");
+  let combined = text_combine_multiple([",", v, "=", f_name]);
   let v2 = app_code_lesson_hash_key();
   let examples_url = text_combine_multiple([
     url_prefix,
@@ -42,7 +43,7 @@ export async function app_code_screens_crawl_lesson(
   let v3 = app_code_screen_hash_key();
   let f_name2 = fn_name("app_code_quiz");
   let v4 = app_code_quiz_hash_key();
-  let combined2 = text_combine_multiple(["&", v3, "=", f_name2, "&", v4, "=0"]);
+  let combined2 = text_combine_multiple([",", v3, "=", f_name2, ",", v4, "=0"]);
   let v5 = app_code_lesson_hash_key();
   let quiz_url = text_combine_multiple([
     url_prefix,
@@ -63,7 +64,7 @@ export async function app_code_screens_crawl_lesson(
   list_add(records, first);
   let v6 = app_code_screen_hash_key();
   let f_name3 = fn_name("app_code_quiz");
-  let combined3 = text_combine_multiple(["&", v6, "=", f_name3]);
+  let combined3 = text_combine_multiple([",", v6, "=", f_name3]);
   let v7 = app_code_lesson_hash_key();
   let quiz_marker = text_combine_multiple([v7, "=", id, combined3]);
   let script = app_code_screen_next_click_script();

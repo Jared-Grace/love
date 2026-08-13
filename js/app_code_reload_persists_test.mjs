@@ -30,11 +30,11 @@ export async function app_code_reload_persists_test(url_prefix) {
       let f_name = fn_name("app_code_quiz");
       let v2 = app_code_quiz_hash_key();
       let combined = text_combine_multiple([
-        "&",
+        ",",
         v,
         "=",
         f_name,
-        "&",
+        ",",
         v2,
         "=0",
       ]);

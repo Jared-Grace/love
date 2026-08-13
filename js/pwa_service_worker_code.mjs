@@ -1,6 +1,14 @@
+import { firebase_storage_host } from "./firebase_storage_host.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function pwa_service_worker_code() {
   "the service worker source (a plain browser-JS string, runs in the SW context). Strategy: SHELL (html/js/etc) = network-first so online stays fresh (the code bundle is deliberately no-cache) and offline falls back to the cached copy; DATA = stale-while-revalidate so it loads instantly, refreshes in the background, and works offline — this covers both same-origin /bible/ paths and firebase storage downloads (firebasestorage.googleapis.com), which is where the bulk bible text now lives, so the verse packages stay available offline even though they are cross-origin. One versioned cache, old versions cleaned on activate. Bump CACHE_NAME to invalidate everything. The shell fetch is bounded by SHELL_TIMEOUT_MS because a captive portal or flaky signal leaves fetch pending rather than failing, which would hang the page instead of falling back to the cached copy.";
+  let r2 = firebase_storage_host();
+  let combined = text_combine_multiple([
+    "  if (url.hostname === '",
+    r2,
+    "') {",
+  ]);
   let lines = [
     "var CACHE_NAME = 'love-cache-v2';",
     "var SHELL_TIMEOUT_MS = 4000;",
@@ -26,11 +34,7 @@ export function pwa_service_worker_code() {
     "    return;",
     "  }",
     "  var url = new URL(request.url);",
-    text_combine_multiple([
-      "  if (url.hostname === '",
-      firebase_storage_host(),
-      "') {",
-    ]),
+    combined,
     "    event.respondWith(stale_while_revalidate(request));",
     "    return;",
     "  }",

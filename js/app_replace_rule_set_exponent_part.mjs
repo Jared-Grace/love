@@ -1,3 +1,5 @@
+import { app_replace_rule_set_exponent_part_rules } from "./app_replace_rule_set_exponent_part_rules.mjs";
+import { app_replace_rule_set_exponent_part_abbreviations } from "./app_replace_rule_set_exponent_part_abbreviations.mjs";
 import { app_replace_rule_set_integers_abbreviations } from "./app_replace_rule_set_integers_abbreviations.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_rule_set_integers_rules } from "./app_replace_rule_set_integers_rules.mjs";
