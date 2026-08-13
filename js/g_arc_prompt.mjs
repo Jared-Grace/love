@@ -115,7 +115,7 @@ export function g_arc_prompt(
     "What you write is a SUMMARY of this life, never a transcript of it. John 21 verse 25 says the world could not hold the books if everything Jesus did were written down, and the Gospels are short compared to the years they cover. So write the same way.",
     "The turns are the few exchanges worth showing out of many more that happened. Between two conversations this person has gone on living, and may have changed in ways the player did not see playing the game.",
     "So do not try to show every step of a person changing. Choose significant changes - for example: the day they finally 'let go,' the day they finally asked something.",
-    "You are free to open each conversation with them further on than the player left them. The npc should not say or imply how long it has been, and you do not know; when the player starts a new game, the game decides when conversations are scheduled (and unknown right now how many actual days game days represent.",
+    "You are free to open each conversation with them further on than the player left them. The npc should not say or imply how long it has been, and you do not know; when the player starts a new game, the game decides when conversations are scheduled (and unknown right now how many actual days game days represent).",
     "",
     "Stop when the chapter has nothing left that honestly answers them.",
     "Never pad. Do not add a question their trouble would not make them ask.",
