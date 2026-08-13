@@ -4,27 +4,10 @@ import { app_replace_rule_set_integers_rules } from "./app_replace_rule_set_inte
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_replace_rule_set_exponent_part() {
   let rules = app_replace_rule_set_integers_rules();
-  list_add_multiple(rules, [
-    "sn > ig se",
-    "se > eE ex",
-    "eE > e",
-    "eE > E",
-    "ex > + ig",
-    "ex > - ig",
-    "ex > ig",
-  ]);
-  let abbreviations = {
-    eE: [
-      "lowercase ",
-      "e",
-      " or uppercase ",
-      "E",
-      ", the letter that marks an exponent",
-    ],
-    ex: ["", "ex", "ponent"],
-    se: ["", "s", "cientific notation number ", "e", "nding"],
-    sn: ["", "s", "cientific ", "n", "otation number"],
-  };
+  list_add_multiple(rules, ["sn > ig se"]);
+  app_replace_rule_set_exponent_part_rules(rules);
+  let abbreviations = {};
+  app_replace_rule_set_exponent_part_abbreviations(abbreviations);
   let from2 = app_replace_rule_set_integers_abbreviations();
   object_merge_set(abbreviations, from2);
   let r = {
