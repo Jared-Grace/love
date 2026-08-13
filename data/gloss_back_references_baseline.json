@@ -1,0 +1,12 @@
+{
+ "known": [
+  {
+   "store": "app_ceb_bible_gloss_generate",
+   "sites": 1188
+  },
+  {
+   "store": "app_original_bible_gloss_generate",
+   "sites": 18
+  }
+ ]
+}
