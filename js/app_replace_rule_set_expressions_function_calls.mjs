@@ -1,15 +1,11 @@
 import { app_replace_rule_set_expressions_function_calls_rules } from "./app_replace_rule_set_expressions_function_calls_rules.mjs";
-import { app_replace_rule_set_expressions_function_calls_abbreviations } from "./app_replace_rule_set_expressions_function_calls_abbreviations.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_function_calls() {
   let rules = [];
   app_replace_rule_set_expressions_function_calls_rules(rules);
   list_add(rules, "ex > ce");
-  let abbreviations = {};
-  app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   let r = {
     name: "Expressions Function Calls",
-    abbreviations,
     rules,
     goals: [
       {

@@ -5,7 +5,6 @@ import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
 import { app_g_player_path_choose } from "./app_g_player_path_choose.mjs";
 import { app_g_day_line_blocking_is } from "./app_g_day_line_blocking_is.mjs";
 import { app_g_day_line_back_out } from "./app_g_day_line_back_out.mjs";
-import { object_assign } from "./object_assign.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_player_path_animate } from "./app_g_player_path_animate.mjs";
@@ -37,15 +36,8 @@ export async function app_g_player_move(
   if (reachable) {
     ("the way opens before the player walks it: anybody standing on it steps aside first, and the few too hemmed in to have anywhere to go are passed one at a time by trading places as the walk reaches them");
     app_g_crowd_part(g, path, still);
-    ("the player is put where the walk actually GOT to, not where the tap asked them to go. the two are the same today, because a walk always runs to the end of its path - but reading the outcome rather than the request is what makes stopping a walk safe to add, and doing it now costs nothing while doing it afterwards means finding this line at the moment somebody notices the player teleporting to a tile they never reached");
-    let arrived = await app_g_player_path_animate(
-      g,
-      player,
-      path,
-      player_img_c,
-      div_map,
-    );
-    object_assign(player, arrived);
+    ("the player is put where the walk actually GOT to, not where the tap asked them to go - and it is the walk itself that puts them there, a tile at a time, rather than this line writing the destination down at the end. the two answers are the same today, because a walk always runs to the end of its path, but only the first of them stays true while the walk is still going on");
+    await app_g_player_path_animate(g, player, path, player_img_c, div_map);
   }
   ("everything has come to a stop, so the line stops facing the way it was going and each of them looks at whoever they are following");
   ("it is here rather than inside the walk because the player's own tile is written down at the end of it - turned any sooner, the one at the front of the line would be pointed at the tile the player has just left, which is the tile that person is now standing on themselves");

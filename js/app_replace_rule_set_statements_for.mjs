@@ -1,5 +1,4 @@
 import { app_replace_rule_set_statements_for_rules } from "./app_replace_rule_set_statements_for_rules.mjs";
-import { app_replace_rule_set_statements_for_abbreviations } from "./app_replace_rule_set_statements_for_abbreviations.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_replace_rule_set_statements_for() {
   let rules = [];
@@ -13,12 +12,9 @@ export function app_replace_rule_set_statements_for() {
     "ex > log ( i )",
     "ex > i < list . length",
   ]);
-  let abbreviations = {};
-  app_replace_rule_set_statements_for_abbreviations(abbreviations);
   let r = {
     name: "Statements For",
     rules,
-    abbreviations,
     goals: [
       {
         start: "fs",

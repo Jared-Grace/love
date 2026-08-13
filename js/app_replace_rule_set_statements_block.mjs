@@ -1,16 +1,12 @@
 import { app_replace_rule_set_statements_simple_rules_ex } from "./app_replace_rule_set_statements_simple_rules_ex.mjs";
-import { app_replace_rule_set_statements_block_abbreviations } from "./app_replace_rule_set_statements_block_abbreviations.mjs";
 import { app_replace_rule_set_statements_block_rules } from "./app_replace_rule_set_statements_block_rules.mjs";
 export function app_replace_rule_set_statements_block() {
   let rules = [];
   app_replace_rule_set_statements_block_rules(rules);
   app_replace_rule_set_statements_simple_rules_ex(rules);
-  let abbreviations = {};
-  app_replace_rule_set_statements_block_abbreviations(abbreviations);
   let r = {
     name: "Statements Block",
     rules,
-    abbreviations,
     goals: [
       {
         start: "bs",
