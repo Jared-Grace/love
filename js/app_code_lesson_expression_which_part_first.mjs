@@ -107,12 +107,16 @@ export function app_code_lesson_expression_which_part_first() {
       ", and that is valid",
     ]);
     let wrong_card = app_code_container_light_blue(root);
+    ("The card opens on the question it is answering. Without it the first line is a bare fact about a part of the line nobody has been given a reason to look at, and a learner who has just been told the 2 * 4 is solved first has to guess why the 1 + 2 is suddenly being solved instead. Naming both parts is what makes it a choice rather than a change of subject.");
+    ("A question, not the conclusion. The conclusion here is that this way is wrong, and stating that first leaves nothing to find out - the card would be watched rather than followed. The parentheses card that asks What if there were no ( and ) is the same move for the same reason.");
     html_div_cycle_code(wrong_card, [
-      "",
+      "What if we replaced the ",
       weak_part,
-      " is ",
-      wrong_inner_text,
+      " first instead of the ",
+      strong_part,
+      "?",
     ]);
+    html_div_cycle_code(wrong_card, ["", weak_part, " is ", wrong_inner_text]);
     html_div_cycle_code(wrong_card, [
       "If we replace the ",
       weak_part,
