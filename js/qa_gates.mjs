@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_which_part_first_gate_run } from "./app_code_lesson_expression_which_part_first_gate_run.mjs";
 import { app_ceb_bible_gloss_misaligned_gate_run } from "./app_ceb_bible_gloss_misaligned_gate_run.mjs";
 import { gloss_words_misaligned_cases_gate_run } from "./gloss_words_misaligned_cases_gate_run.mjs";
 import { app_shared_bible_hash_unknown_gate_run } from "./app_shared_bible_hash_unknown_gate_run.mjs";
@@ -397,6 +398,7 @@ export function qa_gates() {
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     app_code_lessons_rights_space_gate_run,
+    app_code_lesson_expression_which_part_first_gate_run,
     functions_assert_json_get_lambda_gate_run,
     permission_settings_allow_drift_cases_gate_run,
     permission_settings_local_gate_run,
