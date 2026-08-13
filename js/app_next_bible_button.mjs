@@ -1,3 +1,5 @@
+import { emoji_book_open } from "./emoji_book_open.mjs";
+import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_reverse } from "./list_reverse.mjs";
@@ -28,7 +30,9 @@ export function app_next_bible_button(parent, run) {
   let single = equal(number_first, number_last);
   let endpoints = single ? [number_first] : [number_first, number_last];
   let selection = list_join(endpoints, "-");
-  let text = "Read in the Bible";
+  ("An open book in front of it, the same sign the reader itself puts on the way into a whole chapter, so the two pages point at the bible with the same picture.");
+  let sign = emoji_book_open();
+  let text = text_combine_middle_space(sign, "Open passage in Bible");
   function lambda() {
     let hash = html_hash_object_get();
     ("A link names its languages by their short codes, and the reader is opened with the languages themselves - so the codes are looked up rather than handed on as they are. A code naming no language we have is dropped on the way, which is what lets a link written before a bible was retired still open.");
