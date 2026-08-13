@@ -1,3 +1,4 @@
+import { qa_gate_printed_print } from "./qa_gate_printed_print.mjs";
 import { qa_gate_failed_assert } from "./qa_gate_failed_assert.mjs";
 import { qa_gate_sections_blame_print } from "./qa_gate_sections_blame_print.mjs";
 import { qa_gate_kept_remembered } from "./qa_gate_kept_remembered.mjs";
@@ -56,8 +57,7 @@ export async function qa_gate_run_unlocked() {
   let asked_ms = date_milliseconds_since(began);
   let told = list_get(halves, 0);
   let here = list_get(halves, 1);
-  let printed = property_get(told, "printed");
-  console.log(printed);
+  qa_gate_printed_print(told, here);
   ("What was found is written into the shared record of judged commits. This run already does everything a judging does and once threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
   ("An answer that came out of the record is not written back into it. It is already there, under this very commit, and re-filing it would spend a reading and a writing to leave the file exactly as it was.");
   let filing = remembered ? null : commit;
@@ -69,7 +69,8 @@ export async function qa_gate_run_unlocked() {
   qa_gate_failed_assert(told, here, asked_ms, blamed_ms);
   qa_gate_parts_print(asked_ms, blamed_ms);
   console.log("\nall gates passed");
-  ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then the whole-run timings live in the printed block, and one gate at a time is asked for by name instead");
+  ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then a red run's timings live in the printed block, and one gate at a time is asked for by name instead");
+  ("A green run no longer prints that block at all. It ran to hundreds of lines that nobody read, and every reader trimmed it away by hand afterwards - a trim written beside the command rather than inside any name, so nothing could reuse it and nothing recorded that it was wanted. What is left on a green run is the two lines that are the answer.");
   let gates = qa_gates_read();
   let r = {
     gates: gates.length,
