@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
@@ -7,7 +8,6 @@ import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 export async function gloss_write_coverage_generic(
@@ -31,8 +31,7 @@ export async function gloss_write_coverage_generic(
     let stored = property_get(chapter, "passages");
     function entries_present_is(passage) {
       let entries = gloss_passage_entries(passage);
-      let empty = list_empty_is(entries);
-      let present = not(empty);
+      let present = list_empty_not_is(entries);
       return present;
     }
     let authored = list_filter(stored, entries_present_is);
