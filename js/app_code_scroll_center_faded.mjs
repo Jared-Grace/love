@@ -1,3 +1,5 @@
+import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
+import { sleep } from "./sleep.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
