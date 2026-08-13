@@ -2,6 +2,8 @@ import { g_coordinates_tile } from "./g_coordinates_tile.mjs";
 import { g_coordinates_offset } from "./g_coordinates_offset.mjs";
 import { g_coordinates_orthogonal } from "./g_coordinates_orthogonal.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { g_coordinates_index } from "./g_coordinates_index.mjs";
+import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -28,6 +30,9 @@ export function g_npc_path_clear_tiles(situation, player, land_index) {
     let b = property_exists(land_index, key);
     return b;
   }
-  let r = list_filter(asked, land_is);
+  let dry = list_filter(asked, land_is);
+  ("one tile named twice is asked for once. It costs nothing to guard and the thing it guards against is not a duplicate person - two people sent to one tile means the second takes over the first one's drawer, and the first drags somebody else's picture about from then on");
+  let index = g_coordinates_index(dry);
+  let r = object_values(index);
   return r;
 }

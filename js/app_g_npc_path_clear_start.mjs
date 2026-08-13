@@ -24,7 +24,7 @@ import { not } from "./not.mjs";
 export async function app_g_npc_path_clear_start(situation, div_map) {
   "stand the people where one named arrangement wants them, put the gold on the tile to tap, and say in one line what to watch for.";
   "It is the DOOR onto the crowd opening, never a second one of it. Nothing here moves anybody out of the player's way - it only decides who is standing where before the player taps, and everything after the tap is the game's own walk.";
-  "NEARNESS is what makes it look like a place rather than a stage. Each spot is filled by whoever is nearest to it who is not already standing where they are wanted, so the people who arrive are the ones who were nearly there anyway, and the rest of the map is left as it was.";
+  "NEARNESS is what makes it look like a place rather than a stage. The spots are filled by the people standing nearest the player, so whoever arrives was nearly there anyway and the rest of the map is left as it was.";
   "The strays are then sent AWAY rather than left standing. One person who happens to be nearby is enough to give a way round where the arrangement says there is none, and then nothing parts and the screen quietly shows the wrong thing.";
   "TWO PEOPLE MAY NEVER BE SENT TO ONE TILE, and the reason is worse than an ugly picture: a person's picture and the cross over them are remembered by where that person is standing, so a second person arriving on a tile takes over the first one's drawer, and the first one afterwards drags somebody else's picture about. So whoever is already standing where they are wanted is left alone rather than moved, spots are filled only by people standing somewhere else, and every stray is sent to a tile nobody is on.";
   let g = await app_g_game_save_get();
