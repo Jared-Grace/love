@@ -43,6 +43,10 @@
     { "command": "time timeout 30 ls", "decision": "allow", "why": "wrappers stack" },
 
     { "command": "time -p ls", "decision": "silent", "why": "flag form is not the transparent shape" },
+    { "command": "sed -n '60,66p;79,86p' js/qa_gates.mjs", "decision": "allow", "why": "reading two stretches of a file in one pass is most of the reason to reach for sed -n at all, and the template took one range only - so the ordinary spelling prompted while the rarer single-range one did not" },
+    { "command": "sed -n '1,5p;10,12p;/end/,$d' js/list_add.mjs", "decision": "allow", "why": "the list is any length and mixes the two commands that write nothing" },
+    { "command": "sed -n '1,5p;2w /etc/passwd' js/list_add.mjs", "decision": "silent", "why": "the boundary: every element must be an address followed by p or d, so a write command in the list is not a list this accepts" },
+    { "command": "sed -n '1,5p;s/a/b/w out.txt' js/list_add.mjs", "decision": "silent", "why": "a substitute is not repeatable in the list, which is where a w flag would otherwise hide" },
     { "command": "timeout -k 5 30 ls", "decision": "allow", "why": "a kill-after decides which signal is sent and when, never which command runs, so the shape is as transparent as the bare form. It read as a flag form and prompted, which meant the one spelling that reliably ends a hung command was the one spelling that always asked" },
     { "command": "timeout --kill-after=5 30 ls", "decision": "allow", "why": "the glued spelling of the same flag" },
     { "command": "timeout -s KILL 30 ls", "decision": "allow", "why": "naming the signal is the same kind of choice as naming when to send it" },

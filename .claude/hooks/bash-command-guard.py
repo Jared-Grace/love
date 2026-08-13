@@ -2063,10 +2063,21 @@ def sandbox_read_path_near_miss(words):
 # delimiters (`s#..#..#`, `s,..,..,`) are deliberately out of scope and fall
 # through to a real prompt rather than being pattern-matched loosely.
 _SED_ADDR = r"(?:\d+|\$|/(?:[^/\\\n]|\\.)+/)(?:,(?:\d+|\$|/(?:[^/\\\n]|\\.)+/))?"
+# The print/delete form repeats, joined by semicolons, because a list of
+# ranges is the ordinary way to write one - `sed -n '60,66p;79,86p' f` reads
+# two stretches of a file in one pass, and reading disjoint stretches is most
+# of why anyone reaches for `sed -n` over `head` and `tail`. Accepting one
+# and refusing two cost 49 recorded interruptions for a shape no more capable
+# than the one already accepted: `p` and `d` write nothing wherever they sit
+# in the list, and every other command stays out because each element must
+# match this same pair of letters. The substitute form is deliberately NOT
+# repeatable here - `s` carries a delimiter and its own flag letters, and a
+# list of them is where a `w` flag would hide.
+_SED_PRINT = _SED_ADDR + r"[dp]"
 SED_SCRIPT_RE = re.compile(
     r"^(?:"
     r"s/(?:[^/\\\n]|\\.)*/(?:[^/\\\n]|\\.)*/[0-9gpIiMm]*"
-    r"|" + _SED_ADDR + r"[dp]"
+    r"|" + _SED_PRINT + r"(?:;" + _SED_PRINT + r")*"
     r")$"
 )
 
