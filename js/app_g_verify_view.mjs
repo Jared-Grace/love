@@ -58,7 +58,7 @@ import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export async function app_g_verify_view(
   container,
-  english,
+  scripture,
   lines,
   chapter_code,
   verse,
