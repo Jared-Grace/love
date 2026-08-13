@@ -21,9 +21,11 @@ export function app_code_lesson_title_strip(root, context, lesson) {
     ") and is muted so it anchors 'where am I' without competing with the teaching or the quiz below, while the home button stays full-strength so it is clearly tappable");
   let strip = app_code_container_padded_x(root);
   let column_gap = app_shared_spaced_small_gap();
+  ("THREE tracks, with nothing placed in the third: the home button starts the first, the title takes the middle, and the empty one on the end is the same width as the first, so the middle track sits in the middle of the strip. The two are laid out as one centered pair otherwise, which reads centered only while the title is short - on a long lesson name the pair is wider than the column, so the button slides off to the left and the end of the title runs off the right edge, and that is what a reader sees on the longest lessons. The middle track is sized to its content and so shrinks and wraps when it has to, rather than pushing the button out of the strip");
   html_style_assign(strip, {
-    display: "flex",
-    "justify-content": "center",
+    display: "grid",
+    "grid-template-columns": "1fr auto 1fr",
+    "justify-items": "start",
     "align-items": "center",
     "column-gap": column_gap,
   });
