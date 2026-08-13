@@ -1,4 +1,4 @@
-import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
+import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -38,6 +38,7 @@ export async function app_next(context) {
   if (unknown_shown) {
     return;
   }
+  let root = property_get(context, "root");
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
   let fallback = app_shared_bible_verse_number_default();
