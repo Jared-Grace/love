@@ -2,6 +2,7 @@ import { each } from "./each.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export function gloss_back_references_counts_versus_baseline(counts, recorded) {
@@ -17,10 +18,7 @@ export function gloss_back_references_counts_versus_baseline(counts, recorded) {
     let held = list_find_property_or_null(recorded, "store", store);
     let unheld = null_is(held);
     let before = 0;
-    if (unheld) {
-      before = 0;
-    }
-    if (!unheld) {
+    if (not(unheld)) {
       before = property_get(held, "sites");
     }
     let change = {
