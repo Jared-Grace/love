@@ -120,7 +120,7 @@ export function g_arc_prompt(
     "",
     "If needed, it is okay to reuse passages in later turns, just shouldn't be forced.",
     "Every turn follows from where this person is in their arc. Early on that is their own trouble. Later it is whatever their walk with God has brought them to since.",
-    "So do not add turns to reach the number. A turn that does not follow from the arc does not belong, even if leaving it out leaves you short.",
+    "It's more important for turns to follow from the arc than meeting the target count.",
     "",
     "WHAT NOT TO WRITE",
     "No names. The game picks names when it runs.",
