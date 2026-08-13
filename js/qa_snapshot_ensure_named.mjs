@@ -1,3 +1,4 @@
+import { git_folder_worktree_add } from "./git_folder_worktree_add.mjs";
 import { qa_snapshot_siblings_freeze } from "./qa_snapshot_siblings_freeze.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { qa_snapshot_repos_folder_named } from "./qa_snapshot_repos_folder_named.mjs";
@@ -23,13 +24,12 @@ export async function qa_snapshot_ensure_named(copy_name, commit) {
   let here = folder_current_absolute();
   let folder = qa_snapshot_folder_named(copy_name);
   let made = await file_exists(folder);
-  ("Both git commands are given as lists of words, so the commit and the place the copy goes stay one word each however they are spelled");
+  ("The move is given as a list of words, so the commit stays one word however it is spelled. Laying a copy out in the first place is a named step of its own, because a throwaway copy of an earlier commit is made the very same way and the two spelling it out separately would let them drift");
   if (made) {
     let moving = ["checkout", "--detach", commit];
     await git_folder_run(folder, moving);
   } else {
-    let adding = ["worktree", "add", "--detach", folder, commit];
-    await git_folder_run(here, adding);
+    await git_folder_worktree_add(here, folder, commit);
   }
   for (let kept of qa_snapshot_uncommitted_names()) {
     let live = path_join([here, kept]);

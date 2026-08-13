@@ -3,7 +3,7 @@ import { git_folder_worktree_add } from "./git_folder_worktree_add.mjs";
 import { git_folder_worktree_remove } from "./git_folder_worktree_remove.mjs";
 import { path_base } from "./path_base.mjs";
 import { path_join } from "./path_join.mjs";
-export async function git_folder_commit_tree_run(
+export async function git_tree_folder_run_at(
   folder,
   commit,
   lambda$tree_folder,
