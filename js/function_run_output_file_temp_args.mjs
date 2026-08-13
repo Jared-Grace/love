@@ -4,5 +4,6 @@ import { function_run_output_file_temp_generic } from "./function_run_output_fil
 export async function function_run_output_file_temp_args(f_name, args_comma) {
   arguments_assert(arguments, 2);
   let args = text_split_comma(args_comma);
-  await function_run_output_file_temp_generic(f_name, args);
+  let temp_path = await function_run_output_file_temp_generic(f_name, args);
+  return temp_path;
 }
