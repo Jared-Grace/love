@@ -60,7 +60,7 @@ export async function app_next_home(context) {
     return;
   }
   ("The passage is remembered for this tab here, where it is known to be a real one, so that going off to choose another passage can be changed one's mind about. It is said by the screen that shows the passage rather than by the button that leaves it, because there is more than one way out of here and only one way in.");
-  app_shared_bible_passage_kept_set(context, chapter_code, verse_number);
+  app_shared_bible_passage_kept_set(context, chapter_code, [verse_number]);
   let asked = ebible_index_flat_verses_run(
     list,
     chapter_code,

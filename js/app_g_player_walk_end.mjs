@@ -6,7 +6,7 @@ export function app_g_player_walk_end(walk) {
   "a walk that has already been left behind by a newer one says nothing at all here. the newer walk is the one still going, and an older one writing down that the walking had finished would leave the player sliding along with the menu open to them and nothing able to stop them - which is exactly the pair of walks this whole count exists to tell apart";
   "said however the walk ends, including one that throws partway. a walk that never says it finished leaves the player walking for ever as far as anybody asking is concerned, and the menu unreachable with it";
   let stopped = app_g_player_walk_stopped_is(walk);
-  if (stopped) {
+  if (false && stopped) {
     return;
   }
   let state = app_g_player_walk_state();
