@@ -26,7 +26,11 @@ export function pwa_service_worker_code() {
     "    return;",
     "  }",
     "  var url = new URL(request.url);",
-    "  if (url.hostname === 'firebasestorage.googleapis.com') {",
+    text_combine_multiple([
+      "  if (url.hostname === '",
+      firebase_storage_host(),
+      "') {",
+    ]),
     "    event.respondWith(stale_while_revalidate(request));",
     "    return;",
     "  }",
