@@ -230,6 +230,12 @@ export function examples_notes() {
       "moving every mention of a parameter is not the whole rename - the marker written out beside them names it too, and that one decides whether the function may be auto-approved",
     example_param_rename_refuses_a_local:
       "the refusal is what the command is for - a rename that quietly moved a local instead would come back reading exactly like one that found the parameter",
+    example_snapshot_keeps_a_copy:
+      "the first transform whose subject is not source but what is already out on the internet - and the copy has to be pointed at itself, or the next build writes over the very thing that was kept",
+    example_snapshot_refuses_a_taken_label:
+      "the one thing on this climb that cannot be made again - every other transform can be run a second time, so this is where refusing rather than overwriting is the whole answer",
+    example_snapshot_refuses_a_split_build:
+      "a refusal about what the copy could not follow rather than about what it was asked for - the failure it prevents is a page that loads and shows something else",
   };
   return notes;
 }
