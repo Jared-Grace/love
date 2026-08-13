@@ -282,22 +282,32 @@ touch a file that has uncommitted local modifications stays intact as a
 real safety net rather than being bypassed), plus the same no-absolute-
 path, no-`../`-traversal checks used everywhere else in this file.
 
-A ninth exception, `is_safe_curl_status_check`, is the first one in this
-file for a tool capable of outbound network requests at all - no
-`Bash(curl:*)` rule exists, since beyond networking, curl can also write
-arbitrary files (-o/-O) or upload local file contents to a remote host
-(-T/--upload-file, -d/--data, -F). Rather than a flag blacklist, this
-recognizes exactly one 7-word template: `curl -s -o /dev/null -w FORMAT
-URL`, where the URL's host is pinned to localhost/127.0.0.1 (never a real
-network destination - this can't become a general-purpose fetch tool),
-`-o /dev/null` is required verbatim (the response body is always
-discarded, so nothing the server returns can escape via a written file),
-and FORMAT may only reference a small whitelist of curl's own read-only
-post-transfer metadata fields (is_safe_curl_write_out) - curl never
-shell-interprets that string, it only prints it, so this last check is
-narrowness for its own sake rather than a real risk closed. Any deviation
-- extra or reordered flags, a non-localhost URL, a different scheme -
-falls through to a real prompt exactly like the sandboxed-node templates.
+A ninth exception, `is_safe_curl_read`, is the first one in this file for
+a tool capable of outbound network requests at all - no `Bash(curl:*)`
+rule exists, since beyond networking, curl can also write arbitrary files
+(-o/-O) or upload local file contents to a remote host (-T/--upload-file,
+-d/--data, -F). Two things bound it, and both have to hold. The URL must
+name a host this repo published itself (CURL_READ_HOSTS, generated from
+js/curl_read_hosts.mjs, over https only) or an address that never leaves
+the building (CURL_LOCAL_HOST_RE - loopback, a private range, a `.local`
+name - recognized by shape so that no personal machine's name is written
+into a public file). And every flag must be named in an allowlist whose
+value-taking members each have their value checked: -o must be /dev/null
+or this session's scratchpad, -w may print only curl's own post-transfer
+metadata (is_safe_curl_write_out), -H may set only a caching or accept
+header, a time limit must be a number. Exactly one non-flag word is
+allowed and it is the URL.
+
+This started as one exact 7-word shape, `curl -s -o /dev/null -w FORMAT
+URL` against localhost, and was widened after measurement: over twenty
+days, 81 recorded interruptions were plain fetches of this project's own
+deployed files, written in four different flag orders. An exact shape
+cannot cover that without becoming a list of exact shapes, so the
+allowlist moved from the word order to the flags themselves. What did not
+change is the posture - a flag outside the set is not blacklisted, it is
+simply absent, so -T, -d, -F, -O, -K, -u, --cookie and -L (which would
+follow a redirect straight off the pinned host) all fall through to a real
+prompt exactly like the sandboxed-node templates.
 
 A tenth exception, `is_safe_scripts_temp_rm`, is the same shape as
 `is_safe_verify_html_rm` applied to this repo's `scripts/temp/` throwaway
@@ -1934,12 +1944,12 @@ def is_safe_curl_write_out(fmt):
     (CURL_WRITE_OUT_ALLOWED_VARS - none of which curl can populate from
     anything other than the completed request/response it already made,
     so none of them are a channel for exfiltrating anything beyond what
-    is_safe_curl_status_check already establishes is safe to request) plus
+    is_safe_curl_read already establishes is safe to request) plus
     plain literal text. There's no code-execution or file-access risk in
     the literal text itself either way - curl only ever prints this
     string, it never shell-interprets it - so this check exists for
     tidiness/narrowness rather than being load-bearing the way the URL and
-    flag-shape checks in is_safe_curl_status_check are."""
+    flag-shape checks in is_safe_curl_read are."""
     remainder = CURL_WRITE_OUT_VAR_RE.sub("", fmt)
     if not CURL_WRITE_OUT_LITERAL_RE.match(remainder):
         return False

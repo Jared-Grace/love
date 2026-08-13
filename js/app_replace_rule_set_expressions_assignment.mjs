@@ -18,6 +18,7 @@ export function app_replace_rule_set_expressions_assignment() {
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   object_merge_set(abbreviations, {
     ase: ["", "as", "signment ", "e", "xpression"],
+    lh: ["", "l", "eft-", "h", "and expression"],
   });
   let r = {
     name: "Expressions Assignment",
