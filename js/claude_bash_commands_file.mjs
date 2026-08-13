@@ -1,3 +1,5 @@
+import fs from "fs";
+import readline from "readline";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
