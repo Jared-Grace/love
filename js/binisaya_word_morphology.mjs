@@ -1,8 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { binisaya_word_morphology_marker } from "./binisaya_word_morphology_marker.mjs";
-import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { text_between } from "./text_between.mjs";
 import { text_html_tags_remove } from "./text_html_tags_remove.mjs";
@@ -26,8 +25,7 @@ export async function binisaya_word_morphology(html) {
   let text = await text_html_tags_remove(line);
   let split = text_split(text, " - ");
   let parts = list_map(split, text_trim);
-  let size = list_size(parts);
-  let three = equal(size, 3);
+  let three = list_size_equal(parts, 3);
   if (not(three)) {
     let unread = {
       analysed: false,
