@@ -307,7 +307,11 @@ allowlist moved from the word order to the flags themselves. What did not
 change is the posture - a flag outside the set is not blacklisted, it is
 simply absent, so -T, -d, -F, -O, -K, -u, --cookie and -L (which would
 follow a redirect straight off the pinned host) all fall through to a real
-prompt exactly like the sandboxed-node templates.
+prompt exactly like the sandboxed-node templates. It is also the one
+exception besides those templates that reads the word list with `timeout
+<dur>` / `time` already taken off, because a fetch is the one thing here
+that waits on somebody else and so is written with a time limit in front
+of it more often than not.
 
 A tenth exception, `is_safe_scripts_temp_rm`, is the same shape as
 `is_safe_verify_html_rm` applied to this repo's `scripts/temp/` throwaway
