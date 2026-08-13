@@ -1,9 +1,6 @@
-import { permission_prompt_events_blocked } from "./permission_prompt_events_blocked.mjs";
-import { permission_prompt_events_confirmed } from "./permission_prompt_events_confirmed.mjs";
-import { permission_prompt_events_shaped } from "./permission_prompt_events_shaped.mjs";
+import { permission_prompt_shaped_events } from "./permission_prompt_shaped_events.mjs";
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
 import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
-import { permission_allow_verbs } from "./permission_allow_verbs.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";

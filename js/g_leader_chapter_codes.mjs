@@ -59,7 +59,7 @@ export async function g_leader_chapter_codes(chapter_code) {
     }
   }
   let least = g_leader_passages_least();
-  let backward = list_reverse(kept);
+  let backward = list_copy_reverse(kept);
   let taken = [];
   let total = 0;
   for (let code of backward) {
@@ -71,6 +71,6 @@ export async function g_leader_chapter_codes(chapter_code) {
     total = add(total, its.length);
     list_add(taken, code);
   }
-  let nearest = list_reverse(taken);
+  let nearest = list_copy_reverse(taken);
   return nearest;
 }
