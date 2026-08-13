@@ -23,6 +23,8 @@ export function g_npcs_initialize(player_img, coordinates_land) {
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
   function npc_initialize(npc, index) {
+    ("given at birth as well as on loading, because a game just made is not read back before it is played - so waiting for the loading to hand out ids would leave the very first day's people with none");
+    g_npc_id_ensure(npc);
     let r = mod(index, gender_count);
     let gender = list_get(genders, r);
     let imgs = property_get(gender, "imgs");
