@@ -144,6 +144,7 @@ export async function app_shared_bible_read(context, verse_action) {
       b,
       books,
       primary_folder,
+      context,
     );
     app_shared_bible_settings_gear(bar, content, languages_chosen, context);
     return;

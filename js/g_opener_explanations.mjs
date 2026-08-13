@@ -6,7 +6,7 @@ export function g_opener_explanations() {
   "KEYED BY THE OPENER WORD so one explanation serves both lists. `how are you` is offered to a believer and an unbeliever alike, and it means the same thing at both doors - the belief state is already said by which list the opener was rendered under.";
   let r = {
     "how are you": {
-      said: "How are you?",
+      said: 'The player asks "How are you?"',
       draws:
         "The person says how life is going - whatever is weighing on them, in their own words.",
     },
