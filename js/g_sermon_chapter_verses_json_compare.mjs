@@ -35,10 +35,14 @@ export async function g_sermon_chapter_verses_json_compare() {
       if (text_includes(scripture, '"')) {
         holding_quote = add(holding_quote, 1);
       }
-      if (text_includes(scripture, newline())) {
+      let part = newline();
+      if (text_includes(scripture, part)) {
         holding_newline = add(holding_newline, 1);
       }
-      list_add(rows, { verse_numbers, scripture });
+      list_add(rows, {
+        verse_numbers,
+        scripture,
+      });
     }
     let json = json_format_to(rows);
     passages_total = add(passages_total, passages.length);
