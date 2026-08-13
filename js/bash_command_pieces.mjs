@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function bash_command_pieces(command) {
@@ -9,7 +10,7 @@ export function bash_command_pieces(command) {
   let cut = command.split(separators);
   function said(piece) {
     let trimmed = piece.trim();
-    let b = trimmed.length > 0;
+    let b = greater_than(trimmed.length, 0);
     return b;
   }
   let pieces = list_filter(cut, said);
