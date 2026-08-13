@@ -1,3 +1,4 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npc_move } from "./app_g_npc_move.mjs";
@@ -43,8 +44,7 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
   let staying_index = g_coordinates_index(staying);
   function empty_is(tile) {
     let key = g_coordinates_key(tile);
-    let b = property_exists(staying_index, key);
-    let r = not(b);
+    let r = property_exists_not(staying_index, key);
     return r;
   }
   let to_fill = list_filter(wanted, empty_is);
@@ -85,8 +85,7 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
     let d = g_coordinates_distance_squared(tile, player);
     let far = greater_than(d, near_squared);
     let key = g_coordinates_key(tile);
-    let occupied = property_exists(npc_index, key);
-    let free = not(occupied);
+    let free = property_exists_not(npc_index, key);
     let r = far && free;
     return r;
   }
