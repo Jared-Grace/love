@@ -9,6 +9,7 @@ export function app_shared_bible_hash_field_language() {
     key: app_shared_bible_language_hash_key(),
     name: "language",
     list_is: true,
+    number_is: false,
     valid_is: ebible_language_code_known_is,
     suggestions: ebible_language_code_suggestions,
     label: ebible_language_label,

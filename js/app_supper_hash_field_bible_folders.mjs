@@ -9,6 +9,7 @@ export function app_supper_hash_field_bible_folders() {
     key: app_supper_folders_hash_key(),
     name: "bible version",
     list_is: true,
+    number_is: false,
     valid_is: ebible_bible_folder_known_is,
     suggestions: ebible_bible_folder_suggestions,
     label: ebible_bible_folder_label,
