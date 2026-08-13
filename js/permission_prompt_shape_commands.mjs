@@ -1,9 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { permission_prompt_shaped_events } from "./permission_prompt_shaped_events.mjs";
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
 import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
 export async function permission_prompt_shape_commands(
   days,
   seconds_minimum,
@@ -15,8 +14,7 @@ export async function permission_prompt_shape_commands(
   let shaped = await permission_prompt_shaped_events(days, seconds_minimum);
   let matching = [];
   for (let event of shaped) {
-    let found = property_get(event, "shape");
-    let same = equal(found, shape);
+    let same = property_equals(event, "shape", shape);
     if (same) {
       list_add(matching, event);
     }
