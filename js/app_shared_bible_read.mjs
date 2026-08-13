@@ -1,3 +1,6 @@
+import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
+import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
+import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
@@ -27,7 +30,6 @@ import { app_shared_content_column_pad } from "./app_shared_content_column_pad.m
 import { html_style_justify_self } from "./html_style_justify_self.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
-import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -129,7 +131,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let b = app_shared_bible_book_hash_get(hash);
   let key = app_shared_bible_reference_hash_key();
   let ref = property_get_or(hash, key, "");
-  let ref_line = text_replace(ref, "+", " ");
+  let ref_line = app_shared_bible_reference_spaced(ref);
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let language = list_last(languages_chosen);
@@ -150,6 +152,17 @@ export async function app_shared_bible_read(context, verse_action) {
   let bible_folder = ebible_folder_english();
   let books_en = await ebible_version_books_browser(bible_folder);
   if (ref_mode) {
+    ("A reference in the link naming no book we have is answered here rather than read past. Read past, the reading of it came back with nothing, the link stopped counting as a reference, and Genesis 1 opened - so one wrong letter in a book name sent the reader to the front of the bible with nothing anywhere saying why.");
+    ("It stops the page rather than sitting above the chapter, which is what the verse correction does, because the two are not the same kind of wrong. A verse this chapter has not got still came with the chapter the reader meant, so there is something right to draw; a book we cannot find leaves no chapter at all, and any chapter drawn under the correction would be one nobody asked for.");
+    let reference_field = app_shared_bible_hash_field_reference(books_en);
+    let reference_shown = app_shared_hash_fields_unknown_shown_is(
+      content,
+      hash,
+      [reference_field],
+    );
+    if (reference_shown) {
+      return;
+    }
     let ref_chapters = app_shared_bible_ref_chapter_codes(ref_line, books_en);
     if (list_multiple_is(ref_chapters)) {
       app_shared_bible_ref_chapters_guard(content, ref_chapters, books_en);
