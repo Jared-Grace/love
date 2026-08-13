@@ -1,3 +1,4 @@
+import { text_edit_distance_gate_run } from "./text_edit_distance_gate_run.mjs";
 import { app_original_bible_gloss_misaligned_gate_run } from "./app_original_bible_gloss_misaligned_gate_run.mjs";
 import { bytes_text_try_cases_gate_run } from "./bytes_text_try_cases_gate_run.mjs";
 import { text_replace_once_cases_gate_run } from "./text_replace_once_cases_gate_run.mjs";
@@ -433,6 +434,7 @@ export function qa_gates() {
     text_replace_once_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
+    text_edit_distance_gate_run,
   ];
   return gates;
 }
