@@ -5,6 +5,7 @@ export function app_replace_rule_set_identifiers_simple() {
     idg: ["", "id", "entifier ", "g", "rower"],
   };
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
+  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
   let r = {
     name: "Identifiers Simple",
     rules: app_replace_rule_set_identifiers_simple_rules(),
