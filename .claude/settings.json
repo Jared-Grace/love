@@ -68,6 +68,7 @@
       "mcp__claude-in-chrome__find",
       "mcp__claude-in-chrome__read_console_messages",
       "mcp__claude-in-chrome__read_network_requests",
+      "WebFetch(domain:ebible.org)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
       "Read(/tmp/claude-1000/-home-j-repos-love/**)",
       "Edit(/home/j/repos/love/scripts/temp/**)",
