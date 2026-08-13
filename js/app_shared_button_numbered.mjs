@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button_numbered_gutter } from "./app_shared_button_numbered_gutter.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -47,7 +48,13 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   ("what the title has to keep clear is the number gutter, plus the marker gutter when there is a marker - and nothing when neither is asked for");
   let reserved = gutter;
   if (with_marker) {
-    reserved = text_combine_multiple(["calc(", gutter, " + ", marker_gutter, ")"]);
+    reserved = text_combine_multiple([
+      "calc(",
+      gutter,
+      " + ",
+      marker_gutter,
+      ")",
+    ]);
   }
   let title = html_span_text(button, "");
   html_centered(title);
