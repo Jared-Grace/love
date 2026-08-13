@@ -27,6 +27,7 @@ export function g_arc_prompt(
   ("~Twelve turns make a conversation, and one person holds at most one conversation a day, so seventy turns is about six days this person is met on - not six days running, because the player's day holds a conversation with everybody else too.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
+  "ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.";
   let list = g_openers_unbeliever();
   let openers_unbeliever = list_join_comma_space(list);
   let list5 = g_openers_disciple();
@@ -81,7 +82,6 @@ export function g_arc_prompt(
     "",
     "WHO TO WRITE",
     "Goal is each verse is used an equal number of times and closer to equality is better than further",
-    "Here are the counts of the verse text numbers and how many times they've been used so far: TODO",
     "Relevance and appropriateness are more important than equally using each verse - do not use passages by force",
     "There are far more turns than there are verses, so you will answer with the same verses many times over. That is expected and is not a failure.",
     "",
