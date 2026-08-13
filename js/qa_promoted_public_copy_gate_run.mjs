@@ -1,3 +1,4 @@
+import { file_overwrite } from "./file_overwrite.mjs";
 import { app_shared_prod_snapshot_folder } from "./app_shared_prod_snapshot_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
@@ -60,7 +61,7 @@ export async function qa_promoted_public_copy_gate_run() {
     let live = await copy_name("live");
     let file_name = file_name_html(live);
     let f_path3 = path_join([folder, file_name]);
-    await file_write(f_path3, page_text);
+    await file_overwrite(f_path3, page_text);
     let no_live = await asked(live);
     false_is_assert_json(no_live, {
       case: live,
@@ -70,7 +71,10 @@ export async function qa_promoted_public_copy_gate_run() {
     let later = await copy_name("later");
     let r = file_name_js(later);
     let f_path4 = path_join([folder, r]);
-    await file_write(f_path4, `console.log("replace, as it was built again");`);
+    await file_overwrite(
+      f_path4,
+      `console.log("replace, as it was built again");`,
+    );
     let no_later = await asked(later);
     false_is_assert_json(no_later, {
       case: later,
