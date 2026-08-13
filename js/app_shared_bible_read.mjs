@@ -1,9 +1,10 @@
+import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
+import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
 import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { app_shared_hash_fields_unknown_told_is } from "./app_shared_hash_fields_unknown_told_is.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
@@ -23,7 +24,6 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
-import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
@@ -88,7 +88,6 @@ import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.m
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { text_split } from "./text_split.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -194,8 +193,6 @@ export async function app_shared_bible_read(context, verse_action) {
       chapter_code = ref_chapter;
     }
   }
-  let key4 = app_shared_bible_verse_hash_key();
-  let v_hash = property_get_or(hash, key4, "");
   async function chapter_previous() {
     await app_shared_bible_change(
       chapter_code,
@@ -210,10 +207,13 @@ export async function app_shared_bible_read(context, verse_action) {
       list_next_wrap,
     );
   }
-  let separator = app_shared_bible_verses_separator();
-  let verse_numbers_chosen = text_empty_is(v_hash)
-    ? []
-    : text_split(v_hash, separator);
+  let verse_numbers_chosen = app_shared_bible_hash_verse_numbers(hash);
+  ("The passage is remembered for this tab, so that going off to choose another one can be changed one's mind about. A chapter with nothing picked in it is remembered as itself - it is still somewhere a reader was, and coming back to it is coming back to the chapter.");
+  app_shared_bible_passage_kept_set(
+    context,
+    chapter_code,
+    verse_numbers_chosen,
+  );
   let languages_verses = [];
   let updates = [];
   let verse_rows = [];
