@@ -1157,6 +1157,9 @@ export function permission_grant_names() {
   let spelled1134 = fn_name("g_sermon_chapter_verses_json_compare");
   let spelled1135 = fn_name("app_replace_tests_run_e2e_deployed_url");
   let spelled1136 = fn_name("app_replace_tests_run_e2e_next_rule_sets");
+  let spelled1137 = fn_name("firebase_prod_app_asset_file_names");
+  let spelled1138 = fn_name("data_terminal_get");
+  let spelled1139 = fn_name("pages_published_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -2294,6 +2297,9 @@ export function permission_grant_names() {
     spelled1134,
     spelled1135,
     spelled1136,
+    spelled1137,
+    spelled1138,
+    spelled1139,
   ];
   return names;
 }
