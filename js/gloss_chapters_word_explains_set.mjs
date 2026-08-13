@@ -1,13 +1,12 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { gloss_chapter_word_explains_set } from "./gloss_chapter_word_explains_set.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function gloss_chapters_word_explains_set(
   fn,
@@ -35,8 +34,7 @@ export async function gloss_chapters_word_explains_set(
   let chapters = await list_map_async(chapter_codes, chapter_set);
   function changed_is(chapter) {
     let changed = property_get(chapter, "changed");
-    let empty = list_empty_is(changed);
-    let moved = not(empty);
+    let moved = list_empty_not_is(changed);
     return moved;
   }
   let rewritten = list_filter(chapters, changed_is);
