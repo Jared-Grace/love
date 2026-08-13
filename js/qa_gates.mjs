@@ -1,3 +1,4 @@
+import { g_leader_book_groups_canon_assert } from "./g_leader_book_groups_canon_assert.mjs";
 import { apps_hash_keys_unchecked_gate_run } from "./apps_hash_keys_unchecked_gate_run.mjs";
 import { app_code_lesson_expression_which_part_first_gate_run } from "./app_code_lesson_expression_which_part_first_gate_run.mjs";
 import { app_ceb_bible_gloss_misaligned_gate_run } from "./app_ceb_bible_gloss_misaligned_gate_run.mjs";
@@ -334,6 +335,7 @@ export function qa_gates() {
     literal_duplicates_cases_gate_run,
     literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
+    g_leader_book_groups_canon_assert,
     g_profile_target_shares_assert,
     g_arc_prompt_style_assert,
     bible_sentence_end_marks_gate_run,
