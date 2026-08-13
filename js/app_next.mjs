@@ -1,4 +1,4 @@
-import { app_shared_bible_hash_languages_unknown_shown_is } from "./app_shared_bible_hash_languages_unknown_shown_is.mjs";
+import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -32,7 +32,7 @@ export async function app_next(context) {
   let hash = html_hash_object_get();
   let root = property_get(context, "root");
   ("A link can also be wrong rather than absent, and the two want opposite answers. A missing word is somebody who has not said, so the page says it for them. A word that names nothing is somebody who did say - they meant a language, and got a letter of it wrong - so guessing on their behalf would open a page in a language nobody asked for and never mention it. That one is said out loud, with the correction offered as something to press.");
-  let unknown_shown = app_shared_bible_hash_languages_unknown_shown_is(
+  let unknown_shown = app_shared_bible_hash_unknown_shown_is(
     root,
     hash,
   );
