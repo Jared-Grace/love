@@ -1,9 +1,7 @@
+import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_replace } from "./text_replace.mjs";
-import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export async function ebible_chapter_verse_numbers_with_words(
