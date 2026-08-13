@@ -1,3 +1,6 @@
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
 import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
@@ -10,6 +13,13 @@ import { app_bible_verse_switch_button } from "./app_bible_verse_switch_button.m
 import { equal } from "./equal.mjs";
 export async function app_bible(context) {
   app_shared_app_fn_set(context, app_bible);
+  ("The link is read back to the reader here, before the mode is touched, and not only in the two readers underneath. The next line writes the mode back into the address, so a word naming neither reader was rubbed out before either reader ever saw the link - the guard downstream then found a perfectly good link and said nothing, and the reader silently got the other reader.");
+  let hash = html_hash_object_get();
+  let root = property_get(context, "root");
+  let unknown_shown = app_shared_bible_hash_unknown_shown_is(root, hash);
+  if (unknown_shown) {
+    return;
+  }
   let mode = app_shared_bible_mode_get();
   ("write the mode back so the url always names the reader you are in, even on a first visit that arrived without it");
   app_shared_bible_mode_set(mode);
