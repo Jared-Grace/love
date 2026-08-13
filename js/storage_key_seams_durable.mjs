@@ -12,6 +12,6 @@ export function storage_key_seams_durable() {
   let f_name5 = fn_name("storage_local_quarantine");
   ("The one that is handed the owner name on its own rather than the owner itself. It publishes exactly what the others publish - the name is joined to the word the same way - so a reading that stopped at the calls taking a function would have missed every key written through this door.");
   let f_name6 = fn_name("storage_local_name_get");
-  let seams = [f_name, f_name2, f_name3, f_name4, f_name5, f_name6];
+  let seams = [f_name, f_name3, f_name4, f_name5, f_name6];
   return seams;
 }
