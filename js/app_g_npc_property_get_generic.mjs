@@ -1,5 +1,5 @@
+import { g_npc_id } from "./g_npc_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
 export function app_g_npc_property_get_generic(store, npc) {
   arguments_assert(arguments, 2);

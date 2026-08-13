@@ -41,7 +41,7 @@ export async function function_sweep_twin(f_name) {
     candidates.push(plural);
   }
   ("A name may carry a word after the several-word, and asking only for the candidate itself missed those: ",
-    fn_name("functions_search"),
+    fn_name("functions_search_all"),
     " is swept by ",
     fn_name("functions_search_any_word"),
     " and this answered that it had no sweep at all, in the one reading whose job is to stop a sweep being rebuilt. So a live name that begins with a candidate and then continues counts too. The underscore is required before whatever follows, so a candidate cannot reach a longer word that merely starts the same way; and only names that really live are reported, so this can still only stop missing a twin rather than invent one.");
