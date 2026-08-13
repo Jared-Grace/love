@@ -1,47 +1,13 @@
-import { playwright_test_url } from "./playwright_test_url.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
-import { each_async } from "./each_async.mjs";
-import { each_range_unordered_async } from "./each_range_unordered_async.mjs";
-import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
-import { app_replace_tests_run_e2e_goal } from "./app_replace_tests_run_e2e_goal.mjs";
-import { list_pop_first } from "./list_pop_first.mjs";
-import { list_map_squash } from "./list_map_squash.mjs";
-import { object_merge_multiple } from "./object_merge_multiple.mjs";
-import { object_wrap_multiple } from "./object_wrap_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_replace_tests_parallel_count } from "./app_replace_tests_parallel_count.mjs";
+import { app_replace_tests_run_e2e_all_rule_sets } from "./app_replace_tests_run_e2e_all_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_all(url_prefix, e2e_inner_fns) {
+  "$plain url_prefix";
+  "Walks every goal of every set of rules on a page, as the app is written today.";
+  "All this decides is which sets those are. The walking was moved next door so it could be pointed at a page built from a different day's rules.";
   let rule_sets = app_replace_rule_sets();
-  function lambda2(rule_set) {
-    let goals = property_get(rule_set, "goals");
-    let mapped = object_wrap_multiple(goals, "goal");
-    let merged = {
-      rule_set,
-    };
-    object_merge_multiple(mapped, merged);
-    return mapped;
-  }
-  let remaining = list_map_squash(rule_sets, lambda2);
-  let parallel_count = app_replace_tests_parallel_count();
-  async function lambda(index) {
-    async function on_page(page) {
-      async function while_non_empty() {
-        let next = list_pop_first(remaining);
-        let rule_set = property_get(next, "rule_set");
-        let goal = property_get(next, "goal");
-        async function each_e2e_inner_fn(e2e_inner_fn) {
-          await app_replace_tests_run_e2e_goal(
-            page,
-            goal,
-            rule_set,
-            e2e_inner_fn,
-          );
-        }
-        await each_async(e2e_inner_fns, each_e2e_inner_fn);
-      }
-      await list_empty_not_is_while_async(remaining, while_non_empty);
-    }
-    await playwright_test_url(url_prefix, on_page);
-  }
-  await each_range_unordered_async(parallel_count, lambda);
+  await app_replace_tests_run_e2e_all_rule_sets(
+    url_prefix,
+    e2e_inner_fns,
+    rule_sets,
+  );
 }

@@ -43,7 +43,6 @@ export async function app_next(context) {
   if (unknown_shown) {
     return;
   }
-  ("The page is dressed the way the bible reader is dressed: the same text size to start from on a phone, the same face, and on a wide screen the same reading column down the middle rather than a line of text run edge to edge. A verse somebody was sent should look like the bible it came out of, and every one of those is a thing the reader already knows how to do - so they are asked for by name here rather than spelled again.");
   let content = app_next_reading_column(context);
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
@@ -100,7 +99,6 @@ export async function app_next(context) {
   let reading = html_div(content);
   html_style_white_space(reading, "pre-wrap");
   html_text_set(reading, joined);
-  ("The ways onward stand together in a row of their own under the reading, centred, which is where the reader puts the buttons that belong to a verse - so the two pages put a thumb in the same place.");
   app_next_ways_onward(content, run);
   html_page_bottom_space(content);
   await clipboard_copy_try(copied);
