@@ -1,7 +1,7 @@
+import { function_commit_last_remembered } from "./function_commit_last_remembered.mjs";
 import { functions_names_in_text } from "./functions_names_in_text.mjs";
 import { probes_at_once } from "./probes_at_once.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
-import { function_commit_last } from "./function_commit_last.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 export async function qa_gate_blame_told(message, known) {
   "For every function a gate complained about, the last commit that touched it";
@@ -14,7 +14,7 @@ export async function qa_gate_blame_told(message, known) {
   let limit = probes_at_once();
   let blamed = await list_map_limited_async(
     unique,
-    function_commit_last,
+    function_commit_last_remembered,
     limit,
   );
   let found = list_filter_null_not_is(blamed);
