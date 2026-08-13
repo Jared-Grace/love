@@ -37,8 +37,15 @@ export async function app_g_player_move(
   if (reachable) {
     ("the way opens before the player walks it: anybody standing on it steps aside first, and the few too hemmed in to have anywhere to go are passed one at a time by trading places as the walk reaches them");
     app_g_crowd_part(g, path, still);
-    await app_g_player_path_animate(g, player, path, player_img_c, div_map);
-    object_assign(player, coordinates_move_to);
+    ("the player is put where the walk actually GOT to, not where the tap asked them to go. the two are the same today, because a walk always runs to the end of its path - but reading the outcome rather than the request is what makes stopping a walk safe to add, and doing it now costs nothing while doing it afterwards means finding this line at the moment somebody notices the player teleporting to a tile they never reached");
+    let arrived = await app_g_player_path_animate(
+      g,
+      player,
+      path,
+      player_img_c,
+      div_map,
+    );
+    object_assign(player, arrived);
   }
   ("everything has come to a stop, so the line stops facing the way it was going and each of them looks at whoever they are following");
   ("it is here rather than inside the walk because the player's own tile is written down at the end of it - turned any sooner, the one at the front of the line would be pointed at the tile the player has just left, which is the tile that person is now standing on themselves");
