@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -18,6 +19,7 @@ export function g_leader_book_reaches_canon_assert() {
   "every leader reach names real canon books, in one unbroken run of the canon, with the book the arcs are for named first and named by only one reach";
   "The reaches OVERLAP by design, so the check that guards the book divisions - flatten and compare to the canon - cannot be reused here. What replaces it is the three ways a hand-written reach goes wrong: a misspelt code that silently reaches nothing, a book borrowing from somewhere far away in the canon so the arcs jump books a reader never opened, and the same book named as home twice so one of its two reaches is unreachable.";
   "CONTIGUITY also catches a book named twice inside one reach: two copies of a code span less of the canon than the entry is long. So it is one comparison rather than two passes.";
+  "BACKWARD-ONLY is the fourth and it is the one with teeth. A leader arc is capped at the chapter its plant is reading, so a reach that borrows forward silently loses whatever stands past the cap - and it loses it QUIETLY, leaving a book that reads as fed and is starving. That is not hypothetical: the first three reaches written here all borrowed forward, and 2JN collapsed from 43 passages to 11 the moment a cap was applied to it. Nothing about the shape of such an entry looks wrong, which is exactly why it is asked here rather than left to whoever writes the next one.";
   let reaches = g_leader_book_reaches();
   let canon = ebible_book_codes();
   let problems = [];
@@ -75,7 +77,7 @@ export function g_leader_book_reaches_canon_assert() {
     hint: text_combine_multiple([
       "each entry of ",
       f_name,
-      " is one book followed by the neighbours it may borrow arcs from; every code must be a canon book, the entry must cover an unbroken run of the canon, and each book may be the first code of only one entry",
+      " is one book followed by the neighbours it may borrow arcs from; every code must be a canon book, every neighbour must come BEFORE that book in the canon so a capped arc loses none of them, the entry must cover an unbroken run of the canon, and each book may be the first code of only one entry",
     ]),
   });
   return clean;
