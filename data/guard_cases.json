@@ -43,7 +43,14 @@
     { "command": "time timeout 30 ls", "decision": "allow", "why": "wrappers stack" },
 
     { "command": "time -p ls", "decision": "silent", "why": "flag form is not the transparent shape" },
-    { "command": "timeout -k 5 30 ls", "decision": "silent", "why": "flag form is not the transparent shape" },
+    { "command": "timeout -k 5 30 ls", "decision": "allow", "why": "a kill-after decides which signal is sent and when, never which command runs, so the shape is as transparent as the bare form. It read as a flag form and prompted, which meant the one spelling that reliably ends a hung command was the one spelling that always asked" },
+    { "command": "timeout --kill-after=5 30 ls", "decision": "allow", "why": "the glued spelling of the same flag" },
+    { "command": "timeout -s KILL 30 ls", "decision": "allow", "why": "naming the signal is the same kind of choice as naming when to send it" },
+    { "command": "timeout --foreground --preserve-status 30 ls", "decision": "allow", "why": "value-less flags stack; both decide only how the exit status and the process group are handled" },
+    { "command": "timeout -k 5 30 rm -rf /", "decision": "silent", "why": "the flag form launders no more trust than the bare one - the boundary case, since unwrapping more of the line must not unwrap what the line is doing" },
+    { "command": "timeout -k 5 30 sed -i s/a/b/ js/list_add.mjs", "decision": "deny", "why": "the deny floor still reads the inner command after the wider unwrap" },
+    { "command": "timeout --nonesuch 30 ls", "decision": "silent", "why": "an unrecognised flag is one nobody has weighed, so the allowlist stops rather than guessing - the next flag added upstream arrives as a prompt" },
+    { "command": "timeout -k 5 ls", "decision": "silent", "why": "the duration is the anchor: with the flag taking its value there is no duration left, so nothing unwraps and no verb is read past it" },
     { "command": "xargs -I{} ls", "decision": "silent", "why": "flag form is not the transparent shape" },
     { "command": "time", "decision": "silent", "why": "wrapper with no inner command" },
 
