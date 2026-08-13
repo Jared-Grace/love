@@ -1,3 +1,4 @@
+import { text_lines_working } from "./text_lines_working.mjs";
 import { g_sermon_edited_store_name } from "./g_sermon_edited_store_name.mjs";
 import { storage_function_folder_path } from "./storage_function_folder_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -7,11 +8,7 @@ import { file_exists } from "./file_exists.mjs";
 import { list_add } from "./list_add.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { add } from "./add.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
@@ -48,9 +45,7 @@ export async function g_sermon_bible_store_convert() {
       let verse_numbers = property_get(passage, "verse_numbers");
       let scripture = property_get(passage, "text");
       let sermon = property_get(passage, "sermon");
-      let split = text_split_newline(sermon);
-      let trimmed = list_map(split, text_trim);
-      let kept = list_filter(trimmed, text_empty_not_is);
+      let kept = text_lines_working(sermon);
       function line_object(text) {
         let line = {
           text,
