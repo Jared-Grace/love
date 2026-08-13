@@ -11,6 +11,7 @@ export function functions_command_seams() {
   let f_name7 = fn_name("eval_console_log_replace");
   let f_name8 = fn_name("nearley_grammar_text_parser");
   let f_name9 = fn_name("firebase_storage_function_run_generic");
+  let f_name10 = fn_name("file_module_import");
   let names = [
     f_name,
     f_name2,
@@ -21,6 +22,7 @@ export function functions_command_seams() {
     f_name7,
     f_name8,
     f_name9,
+    f_name10,
   ];
   return names;
 }
