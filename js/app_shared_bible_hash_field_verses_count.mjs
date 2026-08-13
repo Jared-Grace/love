@@ -8,8 +8,9 @@ export function app_shared_bible_hash_field_verses_count() {
   "The row of amounts a reader is offered is deliberately not what this is checked against. Pressing for another passage writes the length of what is on the screen plus one, which is almost never one of the nine offered numbers, so a link the page wrote itself would be called wrong by its own checking.";
   let field = {
     key: app_shared_bible_verses_count_hash_key(),
-    name: "how many verses",
+    name: "verse count",
     list_is: false,
+    number_is: true,
     valid_is: text_digits_is,
     suggestions: hash_number_suggestions,
     label: hash_number_label,
