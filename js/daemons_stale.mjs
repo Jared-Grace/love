@@ -17,7 +17,10 @@ export async function daemons_stale() {
   let all = daemons_names();
   async function lambda$name(f_name) {
     let started = await daemon_started_at(f_name);
-    let pair = { f_name, started };
+    let pair = {
+      f_name,
+      started,
+    };
     return pair;
   }
   let paired = await list_map_async(all, lambda$name);

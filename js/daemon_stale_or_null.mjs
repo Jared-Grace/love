@@ -1,3 +1,4 @@
+import { seconds_day } from "./seconds_day.mjs";
 import { daemon_code_commit_last_at } from "./daemon_code_commit_last_at.mjs";
 import { daemon_stale_seconds_allowed } from "./daemon_stale_seconds_allowed.mjs";
 import { divide } from "./divide.mjs";
@@ -23,7 +24,8 @@ export async function daemon_stale_or_null(f_name, started, path_seconds) {
     return null;
   }
   ("said in days as well, because the number of seconds a daemon is behind by is exactly the shape of number a reader skips over");
-  let n = divide(behind_seconds, allowed_seconds);
+  let day_seconds = seconds_day();
+  let n = divide(behind_seconds, day_seconds);
   let behind_days = round(n);
   let record = {
     daemon: f_name,
