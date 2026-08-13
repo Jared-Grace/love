@@ -71,7 +71,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     ]);
   }
   function above(root) {
-    "first what the word comparison names, then the line the whole screen is here to solve, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the replacing rule, then two lines walked through a replacement at a time";
+    "first what the word comparison names, then the line the whole screen is here to solve, then the idea: comparisons result in true or false, so one swap is watched happening on a line the learner already writes, and only then is it said as the rule it is; then the replacing rule, then two lines walked through a replacement at a time";
     "The line comes second, before anything that solves it, because the screen used to prove its lemmas first and only then name the theorem: a learner met a comparison results in true or false, and then we can replace 3 === 5 with false, with nowhere to put either - the line those two facts were FOR had not been shown yet. Asked first, each line after it is heard as an answer, and the second walkthrough was already written this way round, so the screen now asks in one voice rather than two";
     "The idea names two operators, < and ===, and needs both. One alone was < , which marks the rule as general - a rule shown on the same symbol as the instance under it reads as a rule about that symbol - but it left the learner to carry the rule over to === on their own, and === is the one operator they need it for, because it is the one the line in front of them is made of. Naming both makes the pair read as a class rather than as a symbol, so the generality survives, and the carrying over is done for them";
     app_code_lesson_expression_comparing_a_comparison_recall(root);
@@ -102,11 +102,29 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       " or ",
       f,
     ]);
+    ("the swap is SHOWN happening on a line before it is stated as a rule. Anywhere true or false can be used, we can use a comparison is the whole idea of the lesson, and said on its own it asks the learner to picture a line nobody has written for them: they have to invent somewhere a true was standing, put a comparison there, and read back what that would leave, all in their head. Under the three lines below it the same sentence is a name for something they just watched");
+    ("true === true is the line to start from because they already write it - it is the lesson three back, on plain true and false - so the only new thing on screen is the swap itself");
+    ("1 < 2 rather than a comparison made with ===, and the first true rather than the second, for one reason each: < cannot be mistaken for the === already in the line, and the left side is where every line this lesson goes on to solve carries its comparison");
+    let plain_line = app_code_lesson_expression_comparing_a_comparison_line(
+      t,
+      same_first,
+      true,
+    );
+    html_div_cycle_code(idea, ["We can write ", plain_line]);
+    let smaller_code = "1 < 2";
     let t2 = js_keyword_true();
+    html_div_cycle_code(idea, ["", smaller_code, " is also ", t2]);
+    let swapped_line = app_code_lesson_expression_comparing_a_comparison_line(
+      smaller_code,
+      same_first,
+      true,
+    );
+    html_div_cycle_code(idea, ["So we can write ", swapped_line, " instead"]);
+    let t3 = js_keyword_true();
     let f2 = js_keyword_false();
     html_div_cycle_code(idea, [
       "So anywhere ",
-      t2,
+      t3,
       " or ",
       f2,
       " can be used, we can use a comparison",
