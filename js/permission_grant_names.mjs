@@ -1160,6 +1160,38 @@ export function permission_grant_names() {
   let spelled1137 = fn_name("firebase_prod_app_asset_file_names");
   let spelled1138 = fn_name("data_terminal_get");
   let spelled1139 = fn_name("pages_published_gate_run");
+  let spelled1140 = fn_name("app_original_bible_gloss_chapter_upload_stored");
+  let spelled1141 = fn_name("app_replace_abbreviations_baseline_write");
+  let spelled1142 = fn_name("app_replace_abbreviations_gate_run");
+  let spelled1143 = fn_name("app_replace_abbreviations_mismatches");
+  let spelled1144 = fn_name("app_replace_abbreviations_unspelled");
+  let spelled1145 = fn_name(
+    "app_replace_abbreviations_unspelled_baseline_write",
+  );
+  let spelled1146 = fn_name("app_replace_abbreviations_unspelled_gate_run");
+  let spelled1147 = fn_name("app_shared_bible_verse_hash_key");
+  let spelled1148 = fn_name("curl_read_hosts");
+  let spelled1149 = fn_name("ebible_chapter_code_known_cases_gate_run");
+  let spelled1150 = fn_name("findings_folder");
+  let spelled1151 = fn_name("firebase_storage_list_url");
+  let spelled1152 = fn_name("functions_search_multiple");
+  let spelled1153 = fn_name("g_arc_chapter_passages_role");
+  let spelled1154 = fn_name("g_arc_prompt_sandbox");
+  let spelled1155 = fn_name("git_push_urls_gate_run");
+  let spelled1156 = fn_name("g_leader_book_reaches");
+  let spelled1157 = fn_name("g_leader_chapter_codes_report");
+  let spelled1158 = fn_name("g_leader_passages_least");
+  let spelled1159 = fn_name("g_sermon_edited_store_name");
+  let spelled1160 = fn_name("g_sermon_generate_book_generic_property");
+  let spelled1161 = fn_name("js_equality_function_names");
+  let spelled1162 = fn_name("notification_log_path");
+  let spelled1163 = fn_name("pages_published_baseline_write");
+  let spelled1164 = fn_name("permission_prompt_shape_commands");
+  let spelled1165 = fn_name("permission_prompt_shape_rows");
+  let spelled1166 = fn_name("pwa_service_worker_code");
+  let spelled1167 = fn_name("qa_promoted_public_copy_gate_run");
+  let spelled1168 = fn_name("qa_promoted_public_copy_is");
+  let spelled1169 = fn_name("text_split_comma_nested_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -2300,6 +2332,36 @@ export function permission_grant_names() {
     spelled1137,
     spelled1138,
     spelled1139,
+    spelled1140,
+    spelled1141,
+    spelled1142,
+    spelled1143,
+    spelled1144,
+    spelled1145,
+    spelled1146,
+    spelled1147,
+    spelled1148,
+    spelled1149,
+    spelled1150,
+    spelled1151,
+    spelled1152,
+    spelled1153,
+    spelled1154,
+    spelled1155,
+    spelled1156,
+    spelled1157,
+    spelled1158,
+    spelled1159,
+    spelled1160,
+    spelled1161,
+    spelled1162,
+    spelled1163,
+    spelled1164,
+    spelled1165,
+    spelled1166,
+    spelled1167,
+    spelled1168,
+    spelled1169,
   ];
   return names;
 }
