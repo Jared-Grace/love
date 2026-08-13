@@ -6,6 +6,7 @@ export function app_g_game_read_curried(file_path) {
     let g = await file_read_json(file_path);
     await app_g_rows_ensure(g);
     app_g_coordinates_ensure(g);
+    app_g_npcs_ids_ensure(g);
     return g;
   }
   return app_g_game_read_curried_result;
