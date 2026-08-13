@@ -11,7 +11,7 @@ export function g_opener_explanations() {
         "The person says how life is going - whatever is weighing on them, in their own words.",
     },
     "what do you believe": {
-      said: "What do you believe?",
+      said: 'The player asks "What do you believe?"',
       draws:
         "The person says what they themselves believe, plainly, as their own settled view rather than as a problem.",
     },
@@ -25,7 +25,7 @@ export function g_opener_explanations() {
       draws: "The person asks the question, and Scripture is what answers it.",
     },
     "how is your walk with God": {
-      said: "How is your walk with God?",
+      said: 'The player asks "How is your walk with God?"',
       draws:
         "The person says where they are with God right now - what is growing, or what has gone cold.",
     },
