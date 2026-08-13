@@ -58,6 +58,8 @@ export async function qa_gate_run_unlocked() {
   let told = list_get(halves, 0);
   let here = list_get(halves, 1);
   qa_gate_printed_print(told, here);
+  ("How long each gate took is written down here rather than printed or returned. It is written before anything can throw, because a run that went red is the one whose times somebody came looking for.");
+  await qa_gate_run_timings_write(told, here);
   ("What was found is written into the shared record of judged commits. This run already does everything a judging does and once threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
   ("An answer that came out of the record is not written back into it. It is already there, under this very commit, and re-filing it would spend a reading and a writing to leave the file exactly as it was.");
   let filing = remembered ? null : commit;

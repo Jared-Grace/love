@@ -17,7 +17,7 @@ export async function qa_gates_told(gates) {
   } finally {
     console_log_restore(real);
   }
-  timings_print(results);
+  qa_gate_timings_print(results);
   let failed = await qa_gate_failures_report(results, gates);
   let quiet = equal(failed.length, 0);
   let r = {
