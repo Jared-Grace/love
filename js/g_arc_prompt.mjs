@@ -83,6 +83,7 @@ export function g_arc_prompt(
     "Goal is each verse is used an equal number of times and closer to equality is better than further",
     "Here are the counts of the verse text numbers and how many times they've been used so far: TODO",
     "Relevance and appropriateness are more important than equally using each verse - do not use passages by force",
+    "There are far more turns than there are verses, so you will answer with the same verses many times over. That is expected and is not a failure.",
     "",
     "LENGTH",
     joined9,
