@@ -66,7 +66,8 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
       "The word for a city. It came into Cebuano from Spanish, which is why it sounds unlike the older words around it.",
     nimo: "The word for ‘your’, said to one person, or for ‘by you’ when that one is the doer.",
     kang: "A small word set in front of a person's name to mark that person as the one something is done to, or belongs to, rather than the one doing it. Before a name it does the work ‘sa’ does before anything else.",
-    buhat: "The word for a work or a deed - a thing done. It is also the word for the doing of it.",
+    buhat:
+      "The word for a work or a deed - a thing done. It is also the word for the doing of it.",
     balaod: "The word for a law.",
     taliwala:
       "A word for the middle of something - ‘among’, or ‘in the midst of’. It is followed by ‘sa’, which says what the middle is of.",
@@ -78,9 +79,11 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     o,
     batok:
       "A small word setting one thing over against another - ‘against’. It is used of fighting and of speaking alike.",
-    didto: "A pointing word for a place away from both the speaker and the one spoken to - ‘there’, over there.",
+    didto:
+      "A pointing word for a place away from both the speaker and the one spoken to - ‘there’, over there.",
     kami: "The word for ‘we’, leaving out the one being spoken to. Saying it tells the hearer they are not counted in.",
-    adlaw: "The word for a day, and the word for the sun. Cebuano uses one word for both, so which is meant is carried by the sentence and not by the word.",
+    adlaw:
+      "The word for a day, and the word for the sun. Cebuano uses one word for both, so which is meant is carried by the sentence and not by the word.",
     hari,
     Hari: hari,
     ngalan: "The word for a name.",
@@ -90,33 +93,42 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
       "A word for standing higher than something else - ‘more’, ‘above’, ‘surpassing’. What it is above is named after it.",
     kaysa: "A small word joining the two sides of a comparison - ‘than’.",
     yuta: "The word for the ground - the soil, the land, and the earth taken as a whole. One word covers all three.",
-    lamang: "A small word narrowing what was said to that and no more - ‘only’, ‘just’.",
+    lamang:
+      "A small word narrowing what was said to that and no more - ‘only’, ‘just’.",
     sala: "The word for sin.",
     tingog: "The word for a voice, and for the sound of one.",
     nay: "A short word saying that something is there - ‘has’, ‘there is’. It is the everyday shortening of ‘adunay’.",
     mata: "The word for an eye.",
-    butang: "The word for a thing - any thing at all. It is also used for the putting of a thing somewhere.",
+    butang:
+      "The word for a thing - any thing at all. It is also used for the putting of a thing somewhere.",
     pulong,
     Pulong: pulong,
-    patay: "A word for dead, and for the dead one. Cebuano does not need a separate word for the person and for the state.",
+    patay:
+      "A word for dead, and for the dead one. Cebuano does not need a separate word for the person and for the state.",
     gasa: "The word for a gift - something given freely.",
-    aduna: "A word saying that something exists - ‘there is’, or ‘has’. It is the full form of the short ‘nay’.",
+    aduna:
+      "A word saying that something exists - ‘there is’, or ‘has’. It is the full form of the short ‘nay’.",
     diin,
     Diin: diin,
-    halad: "The word for an offering - something brought and given up, especially to God.",
+    halad:
+      "The word for an offering - something brought and given up, especially to God.",
     tiil: "The word for a foot.",
     ingon:
       "A word for saying. It is also the word for likeness - ‘like’, ‘as’ - and which of the two is meant is carried by the sentence.",
     maoy: "The word that points at the very one meant, with ‘-y’ on the end joining it to what follows. Its root is ‘mao’.",
     liyon: "The word for a lion. It came into Cebuano from Spanish.",
-    himaya: "The word for glory - the weight and brightness that belong to God, and the honour given for it.",
+    himaya:
+      "The word for glory - the weight and brightness that belong to God, and the honour given for it.",
     kusog:
       "The word for strength. It is used of a person's power and of the force of a sound or a wind, so it is also read as ‘loud’ or ‘strong’.",
-    angay: "A word for what fits - what is proper, or what somebody ought to do.",
+    angay:
+      "A word for what fits - what is proper, or what somebody ought to do.",
     tubig: "The word for water.",
     baba: "The word for a mouth.",
-    dalan: "The word for a road. It is also used of the way a person lives, exactly as English speaks of somebody's path.",
-    ninyo: "The word for ‘your’, said to more than one person, or for ‘by you’ when they are the doers.",
+    dalan:
+      "The word for a road. It is also used of the way a person lives, exactly as English speaks of somebody's path.",
+    ninyo:
+      "The word for ‘your’, said to more than one person, or for ‘by you’ when they are the doers.",
     usab: "A small word adding one thing to another already said - ‘also’, ‘too’, and sometimes ‘again’.",
     bisti: "The word for clothing. It came into Cebuano from Spanish.",
     gugma: "The word for love.",
@@ -124,19 +136,23 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     mira: "The word for myrrh - a costly resin burned or carried for its scent.",
     dugos: "The word for honey.",
     duha: "The word for the number two.",
-    Jerusalem: "The name of the city that was the seat of Israel's king and the place of the temple.",
+    Jerusalem:
+      "The name of the city that was the seat of Israel's king and the place of the temple.",
     espada: "The word for a sword. It came into Cebuano from Spanish.",
     ihalas: "A word for wild - living out of anybody's keeping, not tamed.",
-    nganha: "A pointing word for movement toward the one being spoken to - ‘to there’, over by you. It is the going-to form of ‘diha’.",
+    nganha:
+      "A pointing word for movement toward the one being spoken to - ‘to there’, over by you. It is the going-to form of ‘diha’.",
     bakak: "The word for a lie, and for the telling of one.",
     ulo: "The word for a head.",
     Asa: "The question word asking where something is going or where it is - ‘where’.",
     balay: "The word for a house.",
     bata: "The word for a child - a young one, spoken of by age rather than by whose child they are.",
-    kalag: "The word for a soul - the living person themself, not a part of them.",
+    kalag:
+      "The word for a soul - the living person themself, not a part of them.",
     Unya: "A word for what comes after - ‘then’, ‘afterwards’. It carries a sentence on from the one before it.",
     trono: "The word for a throne. It came into Cebuano from Spanish.",
-    Palihog: "The word set in front of a request to make it a request rather than an order - ‘please’.",
+    Palihog:
+      "The word set in front of a request to make it a request rather than an order - ‘please’.",
     tuong:
       "The word for the right-hand side, with the linker on its end. Its root is ‘tuo’, and the ‘-ng’ ties it to the word that follows.",
     karnero: "The word for a sheep. It came into Cebuano from Spanish.",
@@ -148,40 +164,56 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     langyaw: "A word for a foreigner - one living where they were not born.",
     dagat: "The word for the sea.",
     ulan: "The word for rain.",
-    lalom: "A word for deep - far down. It is used of water and of what is hard to reach in a person.",
+    lalom:
+      "A word for deep - far down. It is used of water and of what is hard to reach in a person.",
     bitin: "The word for a snake.",
-    Sheol: "The Hebrew name for the place of the dead, kept as it stands rather than turned into a Cebuano word.",
+    Sheol:
+      "The Hebrew name for the place of the dead, kept as it stands rather than turned into a Cebuano word.",
     pana: "The word for a bow, and for an arrow shot from one.",
-    panahon: "The word for time - a stretch of it, or the season a thing belongs to.",
+    panahon:
+      "The word for time - a stretch of it, or the season a thing belongs to.",
     buot: "The word for what somebody wills - their wanting, their mind on a matter.",
     daghan: "A word for many - a large number of them.",
-    laraw: "The word for a plan - what somebody has laid out to do. It is used of good plans and of schemes alike.",
+    laraw:
+      "The word for a plan - what somebody has laid out to do. It is used of good plans and of schemes alike.",
     baka: "The word for a cow.",
-    bahin: "The word for a part or a share of something. It is also used where English says ‘about’, as the part of a matter being spoken of.",
-    Israel: "The name of the people God took for his own, and of the land they were given.",
-    bisan: "A small word granting a thing and going on anyway - ‘even’, ‘although’.",
-    silang: "The word for ‘they’, with the linker on its end. Its root is ‘sila’, and the ‘-ng’ ties it to the word that follows.",
+    bahin:
+      "The word for a part or a share of something. It is also used where English says ‘about’, as the part of a matter being spoken of.",
+    Israel:
+      "The name of the people God took for his own, and of the land they were given.",
+    bisan:
+      "A small word granting a thing and going on anyway - ‘even’, ‘although’.",
+    silang:
+      "The word for ‘they’, with the linker on its end. Its root is ‘sila’, and the ‘-ng’ ties it to the word that follows.",
     bangag: "The word for a hole.",
-    panon: "The word for a company kept together - a flock, a herd, or an army drawn up.",
+    panon:
+      "The word for a company kept together - a flock, a herd, or an army drawn up.",
     plata: "The word for silver. It came into Cebuano from Spanish.",
     bino: "The word for wine. It came into Cebuano from Spanish.",
     tago: "A word for what is hidden, and for the hiding of it.",
     espiritu: "The word for a spirit. It came into Cebuano from Spanish.",
     saksi: "The word for a witness - one who says what they have seen.",
-    kaugalingon: "A word for one's own self - what belongs to a person as their own.",
-    husto: "A word for what is right - correct, and no more or less than it should be.",
+    kaugalingon:
+      "A word for one's own self - what belongs to a person as their own.",
+    husto:
+      "A word for what is right - correct, and no more or less than it should be.",
     busa: "A small word drawing what follows out of what came before - ‘therefore’, ‘so’.",
-    bunga: "The word for fruit. It is used of what a tree bears and of what a life bears.",
+    bunga:
+      "The word for fruit. It is used of what a tree bears and of what a life bears.",
     nato: "The word for ‘our’, taking in the one being spoken to, or for ‘by us’ when we are the doers.",
     Jesus: "The name of the Son of God, given him at his birth.",
     Job: "The name of the man whose testing the book of Job tells.",
-    grasya: "The word for grace - favour given to one who has not earned it. It came into Cebuano from Spanish.",
+    grasya:
+      "The word for grace - favour given to one who has not earned it. It came into Cebuano from Spanish.",
     lawas: "The word for a body.",
-    Abraham: "The name of the man God called out of his country and promised a people to.",
-    tibuok: "A word for whole - the whole of a thing with nothing of it left out.",
+    Abraham:
+      "The name of the man God called out of his country and promised a people to.",
+    tibuok:
+      "A word for whole - the whole of a thing with nothing of it left out.",
     may: "A short word saying that something is there - ‘has’, ‘there is’.",
     kabos: "A word for poor - short of what is needed.",
-    matag: "A small word taking the things named one at a time - ‘each’, ‘every’.",
+    matag:
+      "A small word taking the things named one at a time - ‘each’, ‘every’.",
   };
   return r;
 }
