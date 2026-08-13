@@ -33,7 +33,8 @@ export async function qa_promoted_public_copy_folder_is(
   let source_name = file_name_js(app_name);
   let present = await folder_app_file_names(folder, app_name);
   ("a copy is a page and its own script and nothing else - the keeping refuses an app built in more than one piece, because the extra pieces are named inside the script where nothing out here can point them at the copy");
-  let two = equal(list_size(present), 2);
+  let left = list_size(present);
+  let two = equal(left, 2);
   if (not(two)) {
     return false;
   }
@@ -45,10 +46,13 @@ export async function qa_promoted_public_copy_folder_is(
   if (not(with_source)) {
     return false;
   }
-  let page_text = await file_read(path_join([folder, page_name]));
-  let source_text = await file_read(path_join([folder, source_name]));
+  let file_path = path_join([folder, page_name]);
+  let page_text = await file_read(file_path);
+  let file_path2 = path_join([folder, source_name]);
+  let source_text = await file_read(file_path2);
   ("the page has to send for its own script exactly once. A page still sending for the live script is the failure the keeping exists to prevent, and one sending for it twice is not a shape the keeping makes");
-  let sends = equal(text_occurrences_count(page_text, source_name), 1);
+  let left2 = text_occurrences_count(page_text, source_name);
+  let sends = equal(left2, 1);
   if (not(sends)) {
     return false;
   }
@@ -64,7 +68,8 @@ export async function qa_promoted_public_copy_folder_is(
       let pointed_back = text_replace(page_text, source_name, owner_source);
       let owner_page = file_name_html(owner_name);
       let served_page = property_get_or_null(noted, owner_page);
-      let same = equal(text_hash(pointed_back), served_page);
+      let left3 = text_hash(pointed_back);
+      let same = equal(left3, served_page);
       if (same) {
         return true;
       }
