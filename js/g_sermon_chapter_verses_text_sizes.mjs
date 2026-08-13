@@ -13,7 +13,7 @@ export async function g_sermon_chapter_verses_text_sizes() {
   let chapters = [];
   let characters_total = 0;
   for (let code of codes) {
-    let passages = await g_sermon_chapter_passages(code);
+    let passages = await g_sermon_chapter_passages_chaptered(code);
     let verses_text = g_sermon_chapter_verses_text(passages);
     let characters = verses_text.length;
     characters_total = add(characters_total, characters);

@@ -26,7 +26,7 @@ export async function g_sermon_chapter_verses_json_compare() {
   let holding_quote = 0;
   let holding_newline = 0;
   for (let code of codes) {
-    let passages = await g_sermon_chapter_passages(code);
+    let passages = await g_sermon_chapter_passages_chaptered(code);
     let plain = g_sermon_chapter_verses_text(passages);
     let rows = [];
     for (let passage of passages) {
