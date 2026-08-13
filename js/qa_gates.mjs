@@ -1,3 +1,4 @@
+import { app_replace_abbreviations_disagreeing_gate_run } from "./app_replace_abbreviations_disagreeing_gate_run.mjs";
 import { gloss_back_references_gate_run } from "./gloss_back_references_gate_run.mjs";
 import { text_split_comma_nested_cases_gate_run } from "./text_split_comma_nested_cases_gate_run.mjs";
 import { app_replace_abbreviations_unspelled_gate_run } from "./app_replace_abbreviations_unspelled_gate_run.mjs";
@@ -466,6 +467,7 @@ export function qa_gates() {
     gloss_words_misaligned_cases_gate_run,
     apps_hash_keys_unchecked_gate_run,
     app_replace_abbreviations_gate_run,
+    app_replace_abbreviations_disagreeing_gate_run,
     app_replace_abbreviations_unspelled_gate_run,
     git_push_urls_gate_run,
     gloss_back_references_gate_run,
