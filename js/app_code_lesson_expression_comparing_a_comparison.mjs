@@ -92,6 +92,37 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let f = js_keyword_false();
     let smaller = js_operator_less_than_symbol();
     let same_symbol = js_operator_triple_equal_symbol();
+    let smaller_code = "1 < 2";
+    ("the card climbs from the one comparison to the rule, a step at a time, and never the other way: one comparison is true, so that one comparison may stand where a true stands, so here is a line where it does - and only then, over the top of something already watched, comparisons result in true or false, and so any of them may stand anywhere true or false may. Opening on the rule instead put the general sentence in front of a learner with nothing yet to attach it to, and left them to picture a line nobody had written for them");
+    ("true === true is the line to start from because they already write it - it is the lesson three back, on plain true and false - so the only new thing on screen is the swap itself");
+    ("1 < 2 rather than a comparison made with ===, so it cannot be mistaken for the === already in the line");
+    ("the first true is named, not left to anywhere: the line to swap into holds two of them, and a learner reading anywhere we see true across a line with two could fairly swap both and reach 1 < 2 === 1 < 2. The first one, because the left side is where every line this lesson goes on to solve carries its comparison");
+    ("write instead, then replace: the permission has nothing to name as the thing being replaced, so it says what the learner would write; the line under it does have one, and says replace. The next card says replace for the other direction, a comparison down to its answer, and that is the same word on purpose - each card names its direction, and the one verb pointing both ways is the interchangeability this lesson is about");
+    html_div_cycle_code(idea, ["", smaller_code, " is ", t]);
+    html_div_cycle_code(idea, [
+      "So anywhere we see ",
+      t,
+      ", we can write ",
+      smaller_code,
+      " instead",
+    ]);
+    let plain_line = app_code_lesson_expression_comparing_a_comparison_line(
+      t,
+      same_first,
+      true,
+    );
+    html_div_cycle_code(idea, ["Suppose we write ", plain_line]);
+    let swapped_line = app_code_lesson_expression_comparing_a_comparison_line(
+      smaller_code,
+      same_first,
+      true,
+    );
+    html_div_cycle_code(idea, [
+      "Then we replace the first ",
+      t,
+      " and have ",
+      swapped_line,
+    ]);
     html_div_cycle_code(idea, [
       "Comparisons like ",
       smaller,
@@ -102,31 +133,11 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       " or ",
       f,
     ]);
-    ("the swap is SHOWN happening on a line before it is stated as a rule. Anywhere true or false can be used, we can use a comparison is the whole idea of the lesson, and said on its own it asks the learner to picture a line nobody has written for them: they have to invent somewhere a true was standing, put a comparison there, and read back what that would leave, all in their head. Under the three lines below it the same sentence is a name for something they just watched");
-    ("true === true is the line to start from because they already write it - it is the lesson three back, on plain true and false - so the only new thing on screen is the swap itself");
-    ("1 < 2 rather than a comparison made with ===, and the first true rather than the second, for one reason each: < cannot be mistaken for the === already in the line, and the left side is where every line this lesson goes on to solve carries its comparison");
-    let plain_line = app_code_lesson_expression_comparing_a_comparison_line(
-      t,
-      same_first,
-      true,
-    );
-    html_div_cycle_code(idea, ["We can write ", plain_line]);
-    let smaller_code = "1 < 2";
-    let t2 = js_keyword_true();
-    html_div_cycle_code(idea, ["", smaller_code, " is also ", t2]);
-    let swapped_line = app_code_lesson_expression_comparing_a_comparison_line(
-      smaller_code,
-      same_first,
-      true,
-    );
-    html_div_cycle_code(idea, ["So we can write ", swapped_line, " instead"]);
-    let t3 = js_keyword_true();
-    let f2 = js_keyword_false();
     html_div_cycle_code(idea, [
       "So anywhere ",
-      t3,
+      t,
       " or ",
-      f2,
+      f,
       " can be used, we can use a comparison",
     ]);
     let same = js_operator_triple_equal();
