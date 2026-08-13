@@ -1,3 +1,4 @@
+import { app_next_copy_button } from "./app_next_copy_button.mjs";
 import { app_next_verse_block } from "./app_next_verse_block.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -99,6 +100,8 @@ export async function app_next(context) {
     app_shared_bible_verse_block(card, reference, entries);
   }
   each(blocks, block_show);
+  ("The copying this page does for itself is the one a browser is allowed to refuse, so the same copying stands under the reading as something to press. The paragraph above lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
+  app_next_copy_button(content, reading_text);
   app_next_url_onward_link(content, url);
   app_next_ways_onward(content, run);
   html_page_bottom_space(content);
