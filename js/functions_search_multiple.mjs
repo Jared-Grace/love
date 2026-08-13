@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma_nested_depth } from "./text_split_comma_nested_depth.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { functions_search } from "./functions_search.mjs";
+import { functions_search_all } from "./functions_search_all.mjs";
 import { property_set } from "./property_set.mjs";
 export async function functions_search_multiple(searches) {
   "Several name searches asked at once, each one a list of words that a name has to hold all of, and the answers kept apart under the search that found them.";
@@ -12,7 +12,7 @@ export async function functions_search_multiple(searches) {
   let found = {};
   for (let query of queries) {
     let joined = list_join_comma(query);
-    let result = await functions_search(joined);
+    let result = await functions_search_all(joined);
     property_set(found, joined, result);
   }
   return found;

@@ -12,7 +12,7 @@ export function commands_only_deny_reason(level) {
     level,
     '", so this repo is changed by named commands rather than by the editing tools.',
   ]);
-  let f_name = fn_name("functions_search");
+  let f_name = fn_name("functions_search_all");
   let combined2 = text_combine_multiple([
     "  node scripts/ai.mjs ",
     f_name,

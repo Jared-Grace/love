@@ -500,7 +500,7 @@ export function permission_grant_names() {
   let spelled497 = fn_name("functions_name_references_mixed");
   let spelled498 = fn_name("functions_name_references_mixed_strip");
   let spelled499 = fn_name("functions_operators_raw");
-  let spelled500 = fn_name("functions_search");
+  let spelled500 = fn_name("functions_search_all");
   let spelled501 = fn_name("functions_shadowing");
   let spelled502 = fn_name("functions_shape_blocks");
   let spelled503 = fn_name("functions_statements_after_return");
