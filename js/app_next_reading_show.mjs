@@ -25,10 +25,11 @@ export function app_next_reading_show(content, blocks, reading_text, url, run) {
     app_shared_bible_verse_block(card, reference, entries);
   }
   each(blocks, block_show);
-  ("The copying the page does for itself is the one a browser is allowed to refuse, so the same copying stands in the card as something to press. The page lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
-  ("It goes inside the card rather than under it, because the card is exactly what it copies. Standing between the card and the link below, it sat where either could be what it takes, and the link is the one thing deliberately left out - so the edge of the card is made to be the edge of the copy, and the link is outside it where somebody can see that it is.");
+  ("The link stands in the card with the reading because it is copied with the reading, and the card is drawn to be exactly what the copying takes. Somebody who pastes this into a message is sending both: the passage to read, and the way back here for the passage after it. Outside the card it read as something belonging to the page rather than to the message, which is the opposite of what it is for.");
+  app_next_url_onward_link(card, url);
+  ("The copying the page does for itself is the one a browser is allowed to refuse, so the same copying stands at the foot of the card as something to press. The page lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
+  ("Last inside the card, under everything it takes, so what it copies is everything above it and nothing below.");
   app_next_copy_button(card, reading_text);
-  app_next_url_onward_link(content, url);
   app_next_ways_onward(content, run);
   html_page_bottom_space(content);
   return card;
