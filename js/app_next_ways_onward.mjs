@@ -5,6 +5,7 @@ import { app_next_passage_more_button } from "./app_next_passage_more_button.mjs
 import { app_next_bible_button } from "./app_next_bible_button.mjs";
 export function app_next_ways_onward(content, run) {
   arguments_assert(arguments, 2);
+  ("The ways on from what this page shows, standing together in a row of their own under the reading, centred - which is where the reader puts the buttons that belong to a verse, so the two pages put a thumb in the same place.");
   let actions = html_div(content);
   html_centered(actions);
   app_next_passage_more_button(actions, run);
