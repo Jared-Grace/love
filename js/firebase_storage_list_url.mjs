@@ -5,8 +5,11 @@ export function firebase_storage_list_url(project_url, prefix, page_token) {
   "The address that asks a bucket what it holds under a prefix.";
   "A page token of nothing asks for the first page. The bucket names the next page itself when there is one, so the caller never counts pages and never guesses a name.";
   let size = firebase_storage_list_page_size();
+  let host = firebase_storage_host();
   let first = text_combine_multiple([
-    "https://firebasestorage.googleapis.com/v0/b/",
+    "https://",
+    host,
+    "/v0/b/",
     project_url,
     "/o?prefix=",
     prefix,
