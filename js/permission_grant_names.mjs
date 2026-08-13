@@ -1113,6 +1113,14 @@ export function permission_grant_names() {
   let spelled1092 = fn_name("ebible_bible_folders_sorted");
   let spelled1093 = fn_name("app_ceb_bible_gloss_entries_edits_apply");
   let spelled1094 = fn_name("file_read_json");
+  let spelled1095 = fn_name("g_generation_settings");
+  let spelled1096 = fn_name("binisaya_word_text");
+  let spelled1097 = fn_name("binisaya_word_read");
+  let spelled1098 = fn_name("binisaya_word_read_cache");
+  let spelled1099 = fn_name("g_sermon_book_days_all");
+  let spelled1100 = fn_name("g_sermon_chapters_passage_lines");
+  let spelled1101 = fn_name("app_ceb_bible_gloss_words_distinct");
+  let spelled1102 = fn_name("app_ceb_bible_gloss_words_gather");
   let names = [
     spelled,
     spelled2,
@@ -2208,6 +2216,14 @@ export function permission_grant_names() {
     spelled1092,
     spelled1093,
     spelled1094,
+    spelled1095,
+    spelled1096,
+    spelled1097,
+    spelled1098,
+    spelled1099,
+    spelled1100,
+    spelled1101,
+    spelled1102,
   ];
   return names;
 }
