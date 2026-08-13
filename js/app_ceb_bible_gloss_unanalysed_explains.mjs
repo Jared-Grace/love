@@ -45,6 +45,17 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     Kinsa: kinsa,
     kinsa,
     kamot: "The word for a hand.",
+    dugo: "The word for blood.",
+    luha: "The word for a tear - the water that comes from the eye in weeping.",
+    nako: "The word for ‘my’, or for ‘by me’ when I am the one doing.",
+    dulon: "The word for a locust.",
+    hapit:
+      "A word for coming close without arriving - ‘almost’. It is also used of stopping in at a place on the way to somewhere else.",
+    templo: "The word for a temple. It came into Cebuano from Spanish.",
+    salmo:
+      "The word for a psalm - a song sung to God. It came into Cebuano from Spanish.",
+    Itiel:
+      "A Hebrew name, kept as it stands rather than turned into a Cebuano word. It is one of the two names Agur speaks to at the opening of Proverbs 30. A Cebuano dictionary matches it to the word for a foot, which is a resemblance in the letters and nothing more - the name was not made from that word.",
     diha: "A pointing word for what is near the one being spoken to - ‘there’, by you. It also points at a moment rather than a place, and is then read as ‘then’.",
     na: "A small word saying that the thing has come about by now - ‘already’, or ‘now’. It is set after the word it bears on.",
     gayod:
