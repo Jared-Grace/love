@@ -442,7 +442,6 @@ export function qa_gates() {
     cors_gate_run,
     storage_rules_gate_run,
     app_shared_bible_hash_unknown_gate_run,
-    app_shared_bible_hash_unknown_gate_run,
     gloss_words_misaligned_cases_gate_run,
   ];
   return gates;
