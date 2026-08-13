@@ -13,7 +13,8 @@ export async function git_folder_commit_tree_run(
   "Lays out a repository as it stood at one commit, hands that folder to what was given, and takes the copy away afterwards however it went.";
   "The copy wears the same folder name as the repository it came from. That matters for older code here, which used to reach its neighbours by climbing out of its own folder and back in by name - under any other name those paths point at nothing, and the files load only because the copy is called what the original is called.";
   async function lambda$folder_path(folder_path) {
-    let tree_folder = path_join([folder_path, path_base(folder)]);
+    let filename = path_base(folder);
+    let tree_folder = path_join([folder_path, filename]);
     await git_folder_worktree_add(folder, tree_folder, commit);
     let result = null;
     try {
