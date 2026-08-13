@@ -1,4 +1,4 @@
-import { qa_promoted_kept_is } from "./qa_promoted_kept_is.mjs";
+import { qa_promoted_public_copy_is } from "./qa_promoted_public_copy_is.mjs";
 import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { firebase_prod_apps_unshipped } from "./firebase_prod_apps_unshipped.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -27,7 +27,7 @@ export async function qa_promoted_unjudged() {
     let unwritten = null_is(note);
     if (unwritten) {
       ("a kept copy of an app that is already being served has no commit to name, because it was copied out of what was public rather than built out of anything - so before calling a set of pieces unaccounted for, ask whether it accounts for itself by being what is already out there");
-      let kept = await qa_promoted_kept_is(app_name);
+      let kept = await qa_promoted_public_copy_is(app_name);
       if (kept) {
         continue;
       }

@@ -14,7 +14,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { text_hash } from "./text_hash.mjs";
 import { text_occurrences_count } from "./text_occurrences_count.mjs";
 import { text_replace } from "./text_replace.mjs";
-export async function qa_promoted_kept_is(app_name) {
+export async function qa_promoted_public_copy_is(app_name) {
   "$plain app_name";
   "Whether the pieces waiting to be sent under one name are a kept copy of an app that is already being served - which is an account of where they came from, and the only one a kept copy can give.";
   "A kept copy is the one thing waiting in that folder that was never built out of a commit. It is a copy of what people were being sent, taken so the next build can replace the app without the page already out there going off the internet, and asking which commit it came out of has no answer - so the check that asks every other app that question refused it forever, and refused whatever was waiting beside it too.";
