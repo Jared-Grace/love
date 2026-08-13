@@ -12,7 +12,7 @@ import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 export async function g_sermon_write(
   chapter_code,
   verse_numbers,
-  english,
+  scripture,
   lines,
 ) {
   let path = local_function_path_json(chapter_code, g_sermon_write);
