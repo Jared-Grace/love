@@ -219,10 +219,8 @@ export async function app_verses(context) {
   }
   function display_group(group) {
     let reference = property_get(group, "reference");
-    let d = html_div_text_centered(card4, reference);
-    app_shared_text_deemphasized(d);
     let entries = property_get(group, "entries");
-    app_shared_bible_verse_texts(card4, entries);
+    app_shared_bible_verse_block(card4, reference, entries);
   }
   async function copy() {
     let lines = [];
