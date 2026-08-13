@@ -19,7 +19,7 @@ export function app_shared_bible_languages_choose(
   back,
 ) {
   "back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there";
-  app_shared_bible_panel_open(content, back);
+  app_shared_bible_panel_open(content, "", back);
   function to_language(code) {
     let r = list_find_property_or_null(languages, language_code_key(), code);
     return r;
