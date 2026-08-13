@@ -65,7 +65,7 @@ export async function app_g_verify_view(
   on_approved,
 ) {
   html_clear(container);
-  let tokens = g_sermon_passage_words(english);
+  let tokens = g_sermon_passage_words(scripture);
   let highlight = app_shared_verse_selected_background_color();
   let border = app_shared_color_blue_pale();
   let serif = app_shared_font_serif();
