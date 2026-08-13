@@ -1170,6 +1170,7 @@
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_misaligned_show:*)",
       "Bash(node scripts/ai.mjs ebible_bible_folders_sorted:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_entries_edits_apply:*)",
+      "Bash(node scripts/ai.mjs file_read_json:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2263,6 +2264,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_misaligned_show:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_bible_folders_sorted:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_entries_edits_apply:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args file_read_json:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -3355,6 +3357,7 @@
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_misaligned_show:*)",
       "Bash(node scripts/aig.mjs ebible_bible_folders_sorted:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_entries_edits_apply:*)",
+      "Bash(node scripts/aig.mjs file_read_json:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -4447,7 +4450,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args claude_bash_labels_alongside:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_misaligned_show:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_bible_folders_sorted:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_entries_edits_apply:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_entries_edits_apply:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args file_read_json:*)"
     ],
     "defaultMode": "acceptEdits"
   },
