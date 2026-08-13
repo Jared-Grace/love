@@ -1,3 +1,4 @@
+import { ebible_chapter_code_known_cases_gate_run } from "./ebible_chapter_code_known_cases_gate_run.mjs";
 import { g_leader_book_reaches_canon_assert } from "./g_leader_book_reaches_canon_assert.mjs";
 import { apps_hash_keys_unchecked_gate_run } from "./apps_hash_keys_unchecked_gate_run.mjs";
 import { app_code_lesson_expression_which_part_first_gate_run } from "./app_code_lesson_expression_which_part_first_gate_run.mjs";
@@ -341,6 +342,7 @@ export function qa_gates() {
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
+    ebible_chapter_code_known_cases_gate_run,
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
     ebible_readaloud_lines_gate_run,
