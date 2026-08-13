@@ -1,6 +1,6 @@
 import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
 import { app_code_quiz_index_known_is } from "./app_code_quiz_index_known_is.mjs";
-import { app_code_quiz_index_suggestions } from "./app_code_quiz_index_suggestions.mjs";
+import { hash_number_suggestions } from "./hash_number_suggestions.mjs";
 import { app_code_quiz_index_label } from "./app_code_quiz_index_label.mjs";
 export function app_code_hash_field_quiz() {
   "The place-in-the-quiz field of a code app link, described in the shape the checking of links reads.";
@@ -10,7 +10,7 @@ export function app_code_hash_field_quiz() {
     name: "place in the quiz",
     list_is: false,
     valid_is: app_code_quiz_index_known_is,
-    suggestions: app_code_quiz_index_suggestions,
+    suggestions: hash_number_suggestions,
     label: app_code_quiz_index_label,
   };
   return field;
