@@ -39,6 +39,7 @@ export async function g_leader_chapter_codes(chapter_code) {
   }
   let ordered = list_sort_number_mapper(reach, book_index_of);
   let kept = [];
+  let later = [];
   for (let book of ordered) {
     function of_this_book(code) {
       let of_book = ebible_chapter_code_to_book(code);
@@ -53,6 +54,7 @@ export async function g_leader_chapter_codes(chapter_code) {
       let past = greater_than(number, stop);
       let after = home && past;
       if (after) {
+        list_add(later, code);
         continue;
       }
       list_add(kept, code);
@@ -72,5 +74,14 @@ export async function g_leader_chapter_codes(chapter_code) {
     list_add(taken, code);
   }
   let nearest = list_copy_reverse(taken);
+  for (let code of later) {
+    let enough = greater_than_equal(total, least);
+    if (enough) {
+      break;
+    }
+    let its = await g_sermon_chapter_passages(code);
+    total = add(total, its.length);
+    list_add(nearest, code);
+  }
   return nearest;
 }

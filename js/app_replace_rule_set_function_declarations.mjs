@@ -1,4 +1,3 @@
-import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "./app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
 import { js_keyword_function } from "./js_keyword_function.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_rule_set_statements_for_abbreviations } from "./app_replace_rule_set_statements_for_abbreviations.mjs";
@@ -9,8 +8,10 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_replace_rule_set_function_declarations() {
   let rules = [];
   app_replace_rule_set_statements_for_rules(rules);
+  let v = js_keyword_function();
+  let combined = text_combine_multiple(["fd > ", v, " id ( fdm bs"]);
   list_add_multiple(rules, [
-    text_combine_multiple(["fd > ", js_keyword_function(), " id ( fdm bs"]),
+    combined,
     "fdm > )",
     "fdm > fpg )",
     "fpg > fpg , id",
@@ -37,12 +38,30 @@ export function app_replace_rule_set_function_declarations() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
-  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
+  ("what an identifier is comes in with the statement explanations now, so asking for it again here would be setting a word twice");
   object_merge_set(abbreviations, {
     fd: ["", "f", "unction ", "d", "eclaration"],
     fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
     fpg: ["", "f", "unction ", "p", "arameter ", "g", "rower"],
   });
+  let left = js_keyword_function();
+  let left2 = js_keyword_function();
+  let left3 = js_keyword_function();
+  let left4 = js_keyword_function();
+  let left5 = js_keyword_function();
+  let left6 = js_keyword_function();
+  let left7 = js_keyword_function();
+  let left8 = js_keyword_function();
+  let left9 = js_keyword_function();
+  let left10 = js_keyword_function();
+  let left11 = js_keyword_function();
+  let left12 = js_keyword_function();
+  let left13 = js_keyword_function();
+  let left14 = js_keyword_function();
+  let left15 = js_keyword_function();
+  let left16 = js_keyword_function();
+  let left17 = js_keyword_function();
+  let left18 = js_keyword_function();
   let r = {
     name: "Function Declarations",
     rules,
@@ -50,78 +69,54 @@ export function app_replace_rule_set_function_declarations() {
     goals: [
       {
         start: "fd",
-        end: text_combine(js_keyword_function(), " empty ( ) { }"),
+        end: text_combine(left, " empty ( ) { }"),
       },
       {
         start: "fd",
-        end: text_combine(
-          js_keyword_function(),
-          " tautology ( ) { return true ; }",
-        ),
+        end: text_combine(left2, " tautology ( ) { return true ; }"),
       },
       {
         start: "fd",
-        end: text_combine(js_keyword_function(), " id ( id ) bs"),
+        end: text_combine(left3, " id ( id ) bs"),
       },
       {
-        start: text_combine(
-          js_keyword_function(),
-          " id ( id ) { return ex ; }",
-        ),
-        end: text_combine(
-          js_keyword_function(),
-          " identity ( i ) { return i ; }",
-        ),
+        start: text_combine(left4, " id ( id ) { return ex ; }"),
+        end: text_combine(left5, " identity ( i ) { return i ; }"),
       },
       {
-        start: text_combine(
-          js_keyword_function(),
-          " id ( id ) { return ex ; }",
-        ),
-        end: text_combine(
-          js_keyword_function(),
-          " invoke ( f ) { return f ( ) ; }",
-        ),
+        start: text_combine(left6, " id ( id ) { return ex ; }"),
+        end: text_combine(left7, " invoke ( f ) { return f ( ) ; }"),
       },
       {
         start: "fd",
-        end: text_combine(js_keyword_function(), " id ( fpg ) { smg }"),
+        end: text_combine(left8, " id ( fpg ) { smg }"),
       },
       {
-        start: text_combine(js_keyword_function(), " id ( fpg ) { smg }"),
-        end: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
+        start: text_combine(left9, " id ( fpg ) { smg }"),
+        end: text_combine(left10, " id ( x , y ) { smg }"),
       },
       {
-        start: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
+        start: text_combine(left11, " id ( x , y ) { smg }"),
+        end: text_combine(left12, " add ( x , y ) { return x + y ; }"),
+      },
+      {
+        start: text_combine(left13, " id ( x , y ) { smg }"),
+        end: text_combine(left14, " id ( x , y ) { vs return ex ; }"),
+      },
+      {
+        start: text_combine(left15, " id ( x , y ) { vs return ex ; }"),
         end: text_combine(
-          js_keyword_function(),
-          " add ( x , y ) { return x + y ; }",
-        ),
-      },
-      {
-        start: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
-        end: text_combine(
-          js_keyword_function(),
-          " id ( x , y ) { vs return ex ; }",
-        ),
-      },
-      {
-        start: text_combine(
-          js_keyword_function(),
-          " id ( x , y ) { vs return ex ; }",
-        ),
-        end: text_combine(
-          js_keyword_function(),
+          left16,
           " id ( x , y ) { let id = ex ; return ex ; }",
         ),
       },
       {
         start: text_combine(
-          js_keyword_function(),
+          left17,
           " id ( x , y ) { let id = ex ; return ex ; }",
         ),
         end: text_combine(
-          js_keyword_function(),
+          left18,
           " average ( x , y ) { let sum = add ( x , y ) ; return sum / 2 ; }",
         ),
       },
