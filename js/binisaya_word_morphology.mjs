@@ -11,8 +11,8 @@ import { text_trim } from "./text_trim.mjs";
 export async function binisaya_word_morphology(html) {
   "Read one binisaya.com page for the root it takes a word back to and the affixes it says were put on that root.";
   "It answers whether the page took the word apart at all, separately from what it took it apart into. The site carries the breakdown on some entries and not on others - a word plainly built out of a root and two affixes can still come back whole - so a caller must be able to tell an absent breakdown from a word that really is a root. Reading the emptiness as a verdict is exactly the wrong reading, and only the caller knows enough to refuse it.";
-  let marker = binisaya_word_morphology_marker();
-  let present = text_includes(html, marker);
+  let morphology_marker = binisaya_word_morphology_marker();
+  let present = text_includes(html, morphology_marker);
   if (not(present)) {
     let none = {
       analysed: false,
@@ -21,7 +21,7 @@ export async function binisaya_word_morphology(html) {
     };
     return none;
   }
-  let line = text_between(html, marker, "<br>");
+  let line = text_between(html, morphology_marker, "<br>");
   let text = await text_html_tags_remove(line);
   let split = text_split(text, " - ");
   let parts = list_map(split, text_trim);
