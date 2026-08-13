@@ -1,3 +1,4 @@
+import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function firebase_storage_url_metadata(storage_path, project_url) {
