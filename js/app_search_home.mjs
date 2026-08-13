@@ -35,6 +35,15 @@ import { app_search_query_hash_word_gap } from "./app_search_query_hash_word_gap
 import { text_replace_space_to } from "./text_replace_space_to.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
 export async function app_search_home(context) {
+  let hash = html_hash_object_get();
+  ("the link is read back to the reader before the page is cleared, because clearing it is what would leave a reader who mistyped a language staring at an empty screen");
+  let unknown_shown = app_shared_language_hash_unknown_page_shown_is(
+    context,
+    hash,
+  );
+  if (unknown_shown) {
+    return;
+  }
   let root = property_get(context, "root");
   html_clear(root);
   let bc = app_shared_bar_content_root_sticky(root);
@@ -42,7 +51,6 @@ export async function app_search_home(context) {
   let content = property_get(bc, "content");
   app_shared_content_column_pad(content);
   html_centered(bar);
-  let hash = html_hash_object_get();
   let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
   let languages_chosen = ebible_languages_from_codes(language_codes);
   property_set(context, "languages_chosen", languages_chosen);
