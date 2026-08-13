@@ -1,3 +1,4 @@
+import { window_open_current_workspace_setup } from "./window_open_current_workspace_setup.mjs";
 import { claude_auto_compact_window_set } from "./claude_auto_compact_window_set.mjs";
 import { list_add } from "./list_add.mjs";
 export async function machine_setup() {
@@ -6,6 +7,8 @@ export async function machine_setup() {
   let steps = [];
   let compact = await claude_auto_compact_window_set();
   list_add(steps, compact);
+  let windows = await window_open_current_workspace_setup();
+  list_add(steps, windows);
   let r = {
     steps,
   };
