@@ -8,7 +8,7 @@ export function g_sermon_study_passage(generated_passage, edited_passage) {
   let bible = {
     verse_numbers,
     original,
-    english,
+    scripture,
   };
   let sermon = {
     generated,
