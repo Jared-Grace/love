@@ -1161,6 +1161,8 @@
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_generate_upload:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_generate_download:*)",
       "Bash(node scripts/ai.mjs ebible_bibles_answered_assert:*)",
+      "Bash(node scripts/ai.mjs ebible_version_readaloud_download:*)",
+      "Bash(node scripts/ai.mjs app_ceb_bible_gloss_words_respell:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2245,6 +2247,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_generate_upload:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_generate_download:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_bibles_answered_assert:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args ebible_version_readaloud_download:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_words_respell:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -3328,6 +3332,8 @@
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_generate_upload:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_generate_download:*)",
       "Bash(node scripts/aig.mjs ebible_bibles_answered_assert:*)",
+      "Bash(node scripts/aig.mjs ebible_version_readaloud_download:*)",
+      "Bash(node scripts/aig.mjs app_ceb_bible_gloss_words_respell:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -4411,7 +4417,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args qa_gates_machine_names:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_generate_upload:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_generate_download:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args ebible_bibles_answered_assert:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_bibles_answered_assert:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_version_readaloud_download:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_words_respell:*)"
     ],
     "defaultMode": "acceptEdits"
   },
