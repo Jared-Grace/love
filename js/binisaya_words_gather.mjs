@@ -1,3 +1,4 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { binisaya_word_read_cache } from "./binisaya_word_read_cache.mjs";
 import { binisaya_words_gather_failures_allowed } from "./binisaya_words_gather_failures_allowed.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -10,7 +11,6 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_exists } from "./property_exists.mjs";
 export async function binisaya_words_gather(words) {
   "Look up every one of a list of Cebuano words on binisaya.com, skipping whatever is already held, and answer with how many were asked for, how many were already there, how many failed, and whether it gave up.";
   "Words already held are dropped before anything is asked rather than being asked and thrown away, because each asking waits several seconds out of politeness to a small site - so the difference between the two is hours, and it is what lets a run that was interrupted be started again from the top instead of from a remembered place.";
@@ -19,8 +19,7 @@ export async function binisaya_words_gather(words) {
   "It answers with the failures and with whether it stopped, because a run that reached nothing at all otherwise looks exactly like a run that found everything already held.";
   let known = await binisaya_words_known();
   function unknown_is(word) {
-    let held_already = property_exists(known, word);
-    let asking = not(held_already);
+    let asking = property_exists_not(known, word);
     return asking;
   }
   let wanted = list_filter(words, unknown_is);
