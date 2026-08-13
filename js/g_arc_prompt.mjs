@@ -43,7 +43,7 @@ export function g_arc_prompt(
     leader,
   );
   let list = g_openers_unbeliever();
-  let openers_unbeliever = list_join_comma_space(list);
+  let unbeliever_lines = g_openers_lines(list);
   ("The disciple openers arrive WITHOUT the Bible question door. A question is one turn with no floor, drawn from a pool that is subtracted from the chapter's matches before arcs are sized at all, so a question turn written into an arc is a turn already paid for elsewhere. The list not offering it is what keeps it out.");
   let list5 = g_openers_disciple_arc();
   let openers_disciple = list_join_comma_space(list5);
