@@ -8,7 +8,9 @@ export async function app_replace_abbreviations_unspelled_gate_run() {
   "Measured against what the app already carried rather than against zero, because one of the two left is a symbol standing for a letter in either case and what its bolding should be is somebody's judgement.";
   let offenders = app_replace_abbreviations_unspelled();
   let path = app_replace_abbreviations_unspelled_baseline_path();
-  let name_write = fn_name("app_replace_abbreviations_unspelled_baseline_write");
+  let name_write = fn_name(
+    "app_replace_abbreviations_unspelled_baseline_write",
+  );
   let r = await baseline_names_gate_generic(
     offenders,
     path,

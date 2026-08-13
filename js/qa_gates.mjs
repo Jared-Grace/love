@@ -1,3 +1,5 @@
+import { text_split_comma_nested_cases_gate_run } from "./text_split_comma_nested_cases_gate_run.mjs";
+import { app_replace_abbreviations_unspelled_gate_run } from "./app_replace_abbreviations_unspelled_gate_run.mjs";
 import { app_replace_abbreviations_gate_run } from "./app_replace_abbreviations_gate_run.mjs";
 import { git_push_urls_gate_run } from "./git_push_urls_gate_run.mjs";
 import { qa_promoted_public_copy_gate_run } from "./qa_promoted_public_copy_gate_run.mjs";
@@ -452,6 +454,7 @@ export function qa_gates() {
     commands_only_write_denied_cases_gate_run,
     text_lines_search_cases_gate_run,
     text_replace_once_cases_gate_run,
+    text_split_comma_nested_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,
@@ -462,6 +465,7 @@ export function qa_gates() {
     gloss_words_misaligned_cases_gate_run,
     apps_hash_keys_unchecked_gate_run,
     app_replace_abbreviations_gate_run,
+    app_replace_abbreviations_unspelled_gate_run,
     git_push_urls_gate_run,
   ];
   return gates;
