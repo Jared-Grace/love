@@ -1,7 +1,7 @@
 import { app_g_day_guide_window } from "./app_g_day_guide_window.mjs";
 import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-export function app_g_tiles_visible_window(player, div_map) {
+export function app_g_tiles_centered_window(player, div_map) {
   "which tiles are fully visible on the map right now, as the window [min_x..max_x, min_y..max_y] - the READING half, and only the reading: it takes the four measurements off the page and hands them to the pure arithmetic next door.";
   "it says 'right now' loosely - what it really answers is which tiles will be fully visible once the map has finished centring on the player, which is the same thing whenever the player is already centred, and is the useful answer while a centring scroll is still in flight.";
   "offsetLeft/offsetTop are read rather than a bounding rect because a rect has the in-flight scroll baked into it, and this is asked while the centring scroll is still animating.";
