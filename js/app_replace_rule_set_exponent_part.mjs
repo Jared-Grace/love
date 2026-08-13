@@ -14,12 +14,19 @@ export function app_replace_rule_set_exponent_part() {
     "ex > ig",
   ]);
   let abbreviations = {
-    eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
+    eE: [
+      "lowercase ",
+      "e",
+      " or uppercase ",
+      "E",
+      ", the letter that marks an exponent",
+    ],
     ex: ["", "ex", "ponent"],
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   };
-  object_merge_set(abbreviations, app_replace_rule_set_integers_abbreviations());
+  let from2 = app_replace_rule_set_integers_abbreviations();
+  object_merge_set(abbreviations, from2);
   let r = {
     name: "Exponent Part",
     abbreviations,
