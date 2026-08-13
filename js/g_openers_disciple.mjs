@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { g_opener_bible_question } from "./g_opener_bible_question.mjs";
 export function g_openers_disciple() {
   "Everything the player may open with when approaching somebody who already believes - the four discipleship doors.";
   "A Bible question is the one the DISCIPLE leads with rather than the player, and it is the door without a limit: the disciple asks and Scripture answers, so it never runs out the way a fixed repertoire does.";
