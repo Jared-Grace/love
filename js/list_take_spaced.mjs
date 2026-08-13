@@ -1,7 +1,6 @@
-import { floor } from "./floor.mjs";
+import { multiply_floor } from "./multiply_floor.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { range_map } from "./range_map.mjs";
@@ -17,8 +16,7 @@ export function list_take_spaced(list, count) {
   }
   let step_size = divide(list.length, count);
   function list_take_spaced_item(i) {
-    let p = multiply(i, step_size);
-    let place_at = floor(p);
+    let place_at = multiply_floor(i, step_size);
     let item_here = list[place_at];
     return item_here;
   }
