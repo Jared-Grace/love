@@ -1,3 +1,4 @@
+import { qa_gate_run_timings_write } from "./qa_gate_run_timings_write.mjs";
 import { qa_gate_printed_print } from "./qa_gate_printed_print.mjs";
 import { qa_gate_failed_assert } from "./qa_gate_failed_assert.mjs";
 import { qa_gate_sections_blame_print } from "./qa_gate_sections_blame_print.mjs";
