@@ -9,6 +9,7 @@ export function app_shared_bible_hash_field_book() {
     key: app_shared_bible_book_hash_key(),
     name: "book",
     list_is: false,
+    number_is: false,
     valid_is: ebible_book_code_known_is,
     suggestions: ebible_book_code_suggestions,
     label: ebible_book_code_label,
