@@ -473,6 +473,7 @@ export function qa_gates() {
     apps_hash_keys_unchecked_gate_run,
     app_replace_abbreviations_gate_run,
     app_replace_abbreviations_unspelled_gate_run,
+    app_replace_rules_used_gate_run,
     git_push_urls_gate_run,
     gloss_back_references_gate_run,
     daemons_stale_gate_run,
