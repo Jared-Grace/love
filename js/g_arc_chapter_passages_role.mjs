@@ -15,6 +15,6 @@ export async function g_arc_chapter_passages_role(chapter, leader) {
     }
     return gathered;
   }
-  let alone = await g_sermon_chapter_passages(chapter);
+  let alone = await g_sermon_chapter_passages_chaptered(chapter);
   return alone;
 }
