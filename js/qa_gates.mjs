@@ -1,3 +1,4 @@
+import { git_push_urls_gate_run } from "./git_push_urls_gate_run.mjs";
 import { qa_promoted_public_copy_gate_run } from "./qa_promoted_public_copy_gate_run.mjs";
 import { ebible_chapter_code_known_cases_gate_run } from "./ebible_chapter_code_known_cases_gate_run.mjs";
 import { g_leader_book_reaches_canon_assert } from "./g_leader_book_reaches_canon_assert.mjs";
@@ -459,6 +460,7 @@ export function qa_gates() {
     app_shared_bible_hash_unknown_gate_run,
     gloss_words_misaligned_cases_gate_run,
     apps_hash_keys_unchecked_gate_run,
+    git_push_urls_gate_run,
   ];
   return gates;
 }

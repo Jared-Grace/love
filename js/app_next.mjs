@@ -1,16 +1,9 @@
-import { app_next_copy_button } from "./app_next_copy_button.mjs";
+import { app_next_reading_show } from "./app_next_reading_show.mjs";
 import { app_next_verse_block } from "./app_next_verse_block.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
-import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
-import { each } from "./each.mjs";
-import { app_next_url_onward_link } from "./app_next_url_onward_link.mjs";
 import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { app_next_reading_column } from "./app_next_reading_column.mjs";
-import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -89,22 +82,7 @@ export async function app_next(context) {
   let url = app_next_url_onward(hash, list, run);
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
-  ("The way onward used to be written into the reading as its last line, so it was text about a link rather than a link. It stands under the reading in a piece of its own now, and what is on the screen and what is on the clipboard are one and the same words - the copying was never taking the link, so there is no longer a second version of the reading spelled out to hold it.");
-  ("Every verse stands in a card of its own, drawn by the same three lines the supper, the verses app and the search results are drawn by. This page used to write its reading out as one run of plain text, which is the one shape none of that reaches: a language could not be told from the one under it by its colour, a word could not be tapped to be looked up, and a right-to-left bible read in whichever direction the language chosen last had left behind. None of it was missing on purpose - it was missing because what arrived at the screen was a string.");
-  ("The verses asked for are one passage, so they stand in one card rather than a card each - the same way the supper holds a reading. A card apiece would draw a line between two verses that are being read as one thing.");
-  let card = app_shared_container_blue(content);
-  app_shared_spaced_small(card);
-  function block_show(block) {
-    let reference = property_get(block, "reference");
-    let entries = property_get(block, "entries");
-    app_shared_bible_verse_block(card, reference, entries);
-  }
-  each(blocks, block_show);
-  ("The copying this page does for itself is the one a browser is allowed to refuse, so the same copying stands under the reading as something to press. The paragraph above lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
-  ("It goes inside the card rather than under it, because the card is exactly what it copies. Standing between the card and the link below, it sat where either could be what it takes, and the link is the one thing deliberately left out - so the edge of the card is made to be the edge of the copy, and the link is outside it where somebody can see that it is.");
-  app_next_copy_button(card, reading_text);
-  app_next_url_onward_link(content, url);
-  app_next_ways_onward(content, run);
-  html_page_bottom_space(content);
+  ("What is drawn, and in what order, is one thing with a name of its own - this page's work is reading the link and fetching what it asks for, and everything after that is the answering.");
+  app_next_reading_show(content, blocks, reading_text, url, run);
   await clipboard_copy_try(reading_text);
 }
