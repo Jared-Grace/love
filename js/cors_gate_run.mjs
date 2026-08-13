@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_includes_all_assert_json } from "./list_includes_all_assert_json.mjs";
 import { cors_bucket_origins } from "./cors_bucket_origins.mjs";
@@ -10,7 +11,13 @@ export async function cors_gate_run() {
   let wanted = cors_origins();
   let live = await cors_bucket_origins();
   let repair = fn_name("cors_upload");
-  list_includes_all_assert_json(wanted, live, repair);
+  let hint = text_combine_multiple([
+    "the store has not been told about every address these pages are opened at, so a page opened at one of the missing ones will paint nothing and throw nothing - send them with ",
+    repair,
+  ]);
+  list_includes_all_assert_json(wanted, live, {
+    hint,
+  });
   let r = {
     wanted,
     live,
