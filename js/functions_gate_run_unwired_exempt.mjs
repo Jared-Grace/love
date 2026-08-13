@@ -30,7 +30,7 @@ export function functions_gate_run_unwired_exempt() {
     {
       name: fn_name("app_ceb_bible_gloss_misaligned_gate_run"),
       why: text_combine_multiple([
-        "the store it reads is red today and the fault is in the stored content rather than in any code: 156 of its 195 chapters carry explanations that no longer sit under the word they are about, because the writing gave a full stop an entry of its own and every explanation after one of those is painted one place along. it goes green once those entries are dropped and the chapters written out again, which changes text people have already read and so is not an unasked change. named here rather than given a list of what is wrong to measure against, because writing 156 chapters of misalignment down as expected is how it would stop being noticed. the ",
+        "the store it reads is red today and the fault is in the stored content rather than in any code. it was 156 chapters of 196; the ones whose fault was an entry of its own for a full stop have been repaired and 32 are left, and what is wrong with those cannot be swept: fifteen passages name a word misspelled where the explanation is otherwise standing in the right place, and the rest leave whole runs of words with no explanation at all, so they want authoring rather than a transform. named here rather than given a list of what is wrong to measure against, because writing 32 chapters of misalignment down as expected is how it would stop being noticed. the ",
         f_name3,
         " twin over the same code is in the list and green",
       ]),
