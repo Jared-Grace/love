@@ -10,6 +10,7 @@ import { app_next_url_onward_link } from "./app_next_url_onward_link.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 export function app_next_reading_show(
+  context,
   content,
   blocks,
   reading_text,
@@ -24,7 +25,7 @@ export function app_next_reading_show(
   "The way onward used to be written into the reading as its last line, so it was text about a link rather than a link. It stands under the reading in a piece of its own now, and what is on the screen and what is on the clipboard are one and the same words - the copying was never taking the link, so there is no longer a second version of the reading spelled out to hold it.";
   "Every verse stands in a card of its own, drawn by the same three lines the supper, the verses app and the search results are drawn by. This page used to write its reading out as one run of plain text, which is the one shape none of that reaches: a language could not be told from the one under it by its colour, a word could not be tapped to be looked up, and a right-to-left bible read in whichever direction the language chosen last had left behind. None of it was missing on purpose - it was missing because what arrived at the screen was a string.";
   "The verses asked for are one passage, so they stand in one card rather than a card each - the same way the supper holds a reading. A card apiece would draw a line between two verses that are being read as one thing.";
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
   let card = app_shared_container_blue(content);
   app_shared_spaced_small(card);
   function block_show(block) {
