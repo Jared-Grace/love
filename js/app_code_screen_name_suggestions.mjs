@@ -1,3 +1,6 @@
+import { app_code_screen_names } from "./app_code_screen_names.mjs";
+import { app_code_lesson_id_apart_maximum } from "./app_code_lesson_id_apart_maximum.mjs";
+import { texts_nearest } from "./texts_nearest.mjs";
 export function app_code_screen_name_suggestions(word) {
   "The names of the screens spelled most like what somebody wrote where a screen should be.";
   "The same limit the lesson ids are read with, and for the same reason: every one of these names carries the app's own name in front of it, so the part that can be mistyped is the short word at the end and the shared front makes every pair look close. A word that misses by more than three letters is a different word, not a mistyped one.";

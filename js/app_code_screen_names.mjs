@@ -1,3 +1,5 @@
+import { app_code_screens } from "./app_code_screens.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export function app_code_screen_names() {
   "The name each screen of the code app is remembered and linked to by.";
   "Read off the screens themselves rather than written down again, because the name a link carries is the name of the function that draws the screen - a screen renamed is a screen whose word in a link changed with it, and a second list would go on offering the old one.";

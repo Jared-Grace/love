@@ -1,12 +1,11 @@
+import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_which_part_first_expression() {
   arguments_assert(arguments, 0);
