@@ -1,3 +1,4 @@
+import { global_function_exists } from "./global_function_exists.mjs";
 import { global_function_delete } from "./global_function_delete.mjs";
 import { app_g_player_walk_state } from "./app_g_player_walk_state.mjs";
 import { app_g_player_walk_begin } from "./app_g_player_walk_begin.mjs";
@@ -15,7 +16,7 @@ export function app_g_player_walk_case_play(c) {
   "the real counters are asked rather than copies of them, because a copy of a state machine is a second thing that can be right while the first is wrong - which is the failure a gate over it exists to catch.";
   "what the counters remember is forgotten first, so a case begins where a fresh game begins and cannot be answered by whatever the case before it left behind.";
   "the numbers walks are recognised by are handed out by the beginning itself and never guessed here, so the case can name its walks in words and this still asks about the ones that really happened.";
-  ("asked whether there is anything to forget first, because forgetting refuses a thing that was never remembered - and on the first case there is nothing there, the counters not having been reached for yet");
+  "asked whether there is anything to forget first, because forgetting refuses a thing that was never remembered - and on the first case there is nothing there, the counters not having been reached for yet";
   let remembered = global_function_exists(app_g_player_walk_state);
   if (remembered) {
     global_function_delete(app_g_player_walk_state);
