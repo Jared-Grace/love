@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_which_part_first } from "./app_code_lesson_expression_which_part_first.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_code_lesson_expression_parentheses_moved } from "./app_code_lesson_expression_parentheses_moved.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
@@ -187,6 +188,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
+    app_code_lesson_expression_which_part_first,
   ];
   return fns;
 }

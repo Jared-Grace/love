@@ -7,10 +7,12 @@ export function app_code_lesson_quizzes_unscramble(params) {
   let backwards = property_get(params, "backwards");
   let unscramble_label = property_get_or(params, "unscramble_label", null);
   let backwards_code = property_get_or(params, "unscramble", true);
+  let backwards_include = property_get_or(params, "backwards_include", true);
   let quizzes_get = app_code_lesson_quizzes_generic({
     forwards,
     backwards,
     backwards_code,
+    backwards_include,
     batch_get,
     forwards_code: false,
     unscramble_label,

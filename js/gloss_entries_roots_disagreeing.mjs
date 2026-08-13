@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { text_lower_case } from "./text_lower_case.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
 import { each } from "./each.mjs";
 export function gloss_entries_roots_disagreeing(entries, known) {
   "The explanations in one passage that say nothing about the root an outside dictionary takes their word back to.";
@@ -32,8 +32,8 @@ export function gloss_entries_roots_disagreeing(entries, known) {
       return;
     }
     let explain = property_get(entry, explain_key);
-    let explain_lower = text_lower_case(explain);
-    let root_lower = text_lower_case(root);
+    let explain_lower = text_lower_to(explain);
+    let root_lower = text_lower_to(root);
     let mentioned = text_includes(explain_lower, root_lower);
     if (mentioned) {
       return;
