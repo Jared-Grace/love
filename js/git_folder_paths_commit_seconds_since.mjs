@@ -23,8 +23,8 @@ export async function git_folder_paths_commit_seconds_since(folder, since) {
   for (let line of lines) {
     let marked = text_starts_with(line, "C");
     if (marked) {
-      let digits = text_skip(line, 1);
-      commit_second = integer_to_try(digits);
+      let second_text = text_skip(line, 1);
+      commit_second = integer_to_try(second_text);
       continue;
     }
     let named = line in seconds;
