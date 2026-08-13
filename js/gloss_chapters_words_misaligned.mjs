@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { list_map } from "./list_map.mjs";
@@ -5,8 +6,6 @@ import { file_name_json_name } from "./file_name_json_name.mjs";
 import { gloss_chapter_words_misaligned } from "./gloss_chapter_words_misaligned.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function gloss_chapters_words_misaligned(fn, words_read) {
   "Every chapter in one gloss store carrying a passage whose word explanations have stopped lining up with the passage itself.";
@@ -21,8 +20,7 @@ export async function gloss_chapters_words_misaligned(fn, words_read) {
   let chapters = await list_map_async(chapter_codes, chapter_read);
   function misaligned_is(chapter) {
     let misaligned = property_get(chapter, "misaligned");
-    let empty = list_empty_is(misaligned);
-    let offending = not(empty);
+    let offending = list_empty_not_is(misaligned);
     return offending;
   }
   let offenders = list_filter(chapters, misaligned_is);
