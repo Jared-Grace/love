@@ -6,6 +6,6 @@ export function app_replace_rule_set_statements_block_abbreviations(
   app_replace_rule_set_statements_simple_abbreviations(abbreviations);
   object_merge_set(abbreviations, {
     smg: ["", "s", "tate", "m", "ent ", "g", "rower"],
-    bs: ["", "b", "lock ", "statement"],
+    bs: ["", "b", "lock ", "s", "tatement"],
   });
 }
