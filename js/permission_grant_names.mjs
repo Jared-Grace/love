@@ -1130,6 +1130,11 @@ export function permission_grant_names() {
   let spelled1107 = fn_name("app_ceb_bible_gloss_word_explains_apply");
   let spelled1108 = fn_name("app_ceb_bible_gloss_write_coverage");
   let spelled1109 = fn_name("app_ceb_bible_gloss_write_coverage_all");
+  let spelled1110 = fn_name("g_sermon_scripture_key_migrate");
+  let spelled1111 = fn_name("g_sermon_bible_store_convert");
+  let spelled1112 = fn_name("app_original_bible_gloss_write_coverage_all");
+  let spelled1113 = fn_name("qa_gate_run_timings_read");
+  let spelled1114 = fn_name("g_arc_prompt_chapter_role");
   let names = [
     spelled,
     spelled2,
@@ -2240,6 +2245,11 @@ export function permission_grant_names() {
     spelled1107,
     spelled1108,
     spelled1109,
+    spelled1110,
+    spelled1111,
+    spelled1112,
+    spelled1113,
+    spelled1114,
   ];
   return names;
 }
