@@ -17,7 +17,7 @@ export function g_arc_prompt_elder_requirements() {
     "  not a drunkard",
     "  not a lover of money, and not greedy for gain",
     "  well thought of by the people outside the church",
-    "  not a new believer - and there is room for this, because the conversations are far apart and years pass inside one arc",
+    "  not a new believer - by their last conversation they have been walking with God long enough for this to be true of them",
     "  ABLE TO TEACH - holding firmly to what they were taught, able to give sound instruction from it, and able to answer somebody who contradicts it",
     "",
     "That last one is where the arc arrives. The player has spent the whole arc answering this person from Scripture. By the end, this person answers somebody ELSE from Scripture, in what they say, without being asked to.",
