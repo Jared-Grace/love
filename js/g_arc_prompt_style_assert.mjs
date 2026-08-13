@@ -1,3 +1,5 @@
+import { json_format_to } from "./json_format_to.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_ends_with_space } from "./text_ends_with_space.mjs";
 import { text_starts_with_space } from "./text_starts_with_space.mjs";
@@ -17,13 +19,19 @@ export function g_arc_prompt_style_assert() {
   "NPC is the one worth a gate rather than a docstring. It is the word the surrounding code correctly uses for the thing being generated, so it is always at the writer's fingertips - and it is the wrong word to hand a model that is being asked to write a human being. The prompt already says person everywhere else.";
   "Trailing whitespace and a one-space indent are invisible in a JS string literal and only appear in the assembled prompt, which is the one place nobody reads. That is exactly what a gate is for.";
   "It builds the prompt from a stand-in profile because it is checking the SHAPE of the lines rather than any particular person's. The leader form is checked too, since it is a different set of lines and can drift on its own.";
+  "The profile JSON is INJECTED rather than authored, and it is skipped. It is serialized data printed at the one-space indent this repo prints JSON at everywhere, so holding it to a prose convention would be asking the formatter to be prose. What is checked is the lines somebody wrote by hand.";
   let deck = g_profiles();
   let profile = deck[0];
+  let s = json_format_to(profile);
+  let injected = text_split_newline(s);
   let faults = [];
   function check_prompt(leader) {
     let prompt = g_arc_prompt("Chapter", "verses", 36, profile, leader);
     let lines = text_split_newline(prompt);
     function check_line(line) {
+      if (list_includes(injected, line)) {
+        return;
+      }
       let lower = text_lower_to(line);
       if (text_includes(lower, "npc")) {
         list_add(faults, {
