@@ -1,3 +1,4 @@
+import { app_g_player_walk_end } from "./app_g_player_walk_end.mjs";
 import { app_g_player_walk_begin } from "./app_g_player_walk_begin.mjs";
 import { app_g_player_walk_stopped_is } from "./app_g_player_walk_stopped_is.mjs";
 import { object_assign } from "./object_assign.mjs";
