@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { not } from "./not.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { g_arc_prompt_elder_requirements } from "./g_arc_prompt_elder_requirements.mjs";
@@ -8,8 +9,12 @@ export function g_arc_prompt_becoming(leader) {
   "They are asked for as the arc's DESTINATION rather than as a description. Somebody who does not yet believe is not yet gentle, hospitable and proven - becoming that IS the arc, so a list handed over flat would be written as a person who was qualified from the first turn and had nowhere to go.";
   "NOT A RECENT CONVERT (1 Timothy 3 verse 6) looks unmeetable and is not, and how it was got wrong is worth keeping. It was first read as a rule the game breaks and then argued around, which is the wooden literalism that Jesus himself answers in Matthew 12 - David ate the bread of the Presence, the priests profane the Sabbath and are guiltless, I desire mercy and not sacrifice.";
   "The plain answer is that the GAME CLOCK IS NOT THE STORY CLOCK. A player meets this person over an hour; the person was discipled for as long as the story needs. John 21 verse 25 - the world could not hold the books - and the Gospels are a few pages, so Scripture is already the compression this is accused of. The prompt therefore asks for hinge moments rather than for every step, and the distance between two conversations is where the unwatched time goes.";
-  "Titus 1 verse 5 and Acts 14 verse 23 still stand behind it - elders were appointed in towns months old - but they are the second answer rather than the first.";
-  "The reasoning stays HERE and only the instruction goes out. A prompt that argued its own case would be handing the writing call the judgment of where a requirement stops applying, and that judgment is not the writing call's to make.";
+  ("That distance is REAL and not a licence the prompt takes. ",
+    fn_name("g_plant_days"),
+    " meets a person at most once a day and lays their conversations into whatever a day has room for, so the gap between one persons consecutive conversations falls out of the fitting rather than being chosen - measured over three seeded plants it ran from one day to twelve, commonest at one or two. The prompt can say the gap varies and is unknown because it does and it is.");
+  ("A GLOBAL DAY MULTIPLIER was drafted for this and is not wanted. Striding the calendar several days at a time buys the same room, but it fixes one number for the whole game and so quietly settles how big a game may be - whether a playthrough could hold the whole Bible. A varying gap needs no such number, so that question stays open.");
+  ("Titus 1 verse 5 and Acts 14 verse 23 still stand behind it - elders were appointed in towns months old - but they are the second answer rather than the first.");
+  ("The reasoning stays HERE and only the instruction goes out. A prompt that argued its own case would be handing the writing call the judgment of where a requirement stops applying, and that judgment is not the writing call's to make.");
   let belief = [
     "All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.",
     "Belief only moves forward. Once they believe, they never go back.",
