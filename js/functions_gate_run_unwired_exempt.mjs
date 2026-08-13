@@ -5,7 +5,6 @@ export function functions_gate_run_unwired_exempt() {
   "Named one at a time rather than spotted by shape, because a rule guessing which gate is allowed to sit outside the list would go wrong in the one direction that matters - quietly excusing the next gate somebody wrote and forgot to wire in.";
   let f_name = fn_name("app_replace");
   let f_name2 = fn_name("app_g_dev_routes_phone_gate_run");
-  let f_name3 = fn_name("app_original_bible_gloss_misaligned_gate_run");
   let f_name4 = fn_name("apps_prod_chunks_missing_gate_run");
   let exempt = [
     {
@@ -34,14 +33,6 @@ export function functions_gate_run_unwired_exempt() {
         "it asks the live site whether every piece of every app that is already being served can actually be got, so all of it is network and none of it is about the files. measured at sixty-seven seconds over twenty-seven apps, and the fault it looks for can only arrive when something is sent out - so it is asked at a sending rather than at every commit, where it would be paid for constantly and could tell nobody anything new. its twin ",
         f_name4,
         " reads the folder an app is about to be sent out of and is in the list, and the two answer different questions: that one catches the fault before it goes out, this one says whether it went out already",
-      ]),
-    },
-    {
-      name: fn_name("app_ceb_bible_gloss_misaligned_gate_run"),
-      why: text_combine_multiple([
-        "the store it reads is red today and the fault is in the stored content rather than in any code. it was 156 chapters of 196; the ones whose fault was an entry of its own for a full stop have been repaired, and fifteen more passages turned out never to have been a fault at all - the passage writes a word with its ending joined on and the explanations take it apart, siya and ng under siyang, sila and g under silag. taking a word apart into its pieces is right, so the reading now joins the pieces back up and asks whether they spell the written word exactly. counted on 2026-08-13 that leaves 14 chapters carrying 23 passages, and they want authoring rather than a transform: seven leave whole runs of words with no explanation, and the rest have drifted onto different words altogether, which only somebody who reads the language can put back. named here rather than given a list of what is wrong to measure against, because writing those chapters down as expected is how they would stop being noticed. the ",
-        f_name3,
-        " twin over the same code is in the list and green",
       ]),
     },
   ];
