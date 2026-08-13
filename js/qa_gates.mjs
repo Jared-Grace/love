@@ -1,3 +1,4 @@
+import { app_shared_bible_hash_unknown_gate_run } from "./app_shared_bible_hash_unknown_gate_run.mjs";
 import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
 import { text_edit_distance_gate_run } from "./text_edit_distance_gate_run.mjs";
@@ -439,6 +440,8 @@ export function qa_gates() {
     text_edit_distance_gate_run,
     cors_gate_run,
     storage_rules_gate_run,
+    app_shared_bible_hash_unknown_gate_run,
+    app_shared_bible_hash_unknown_gate_run,
   ];
   return gates;
 }
