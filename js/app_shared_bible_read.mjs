@@ -1,3 +1,4 @@
+import { app_shared_bible_hash_languages_unknown_shown_is } from "./app_shared_bible_hash_languages_unknown_shown_is.mjs";
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
@@ -114,6 +115,14 @@ export async function app_shared_bible_read(context, verse_action) {
     " to save that passage",
   ]);
   let hash = html_hash_object_get();
+  ("A language code in the link that names no bible we have is answered here rather than read past. Read past, it was dropped without a word and the chapter opened in whatever languages happened to be left - so somebody sent a link with one letter wrong read the wrong bible and nothing anywhere said so. It is the same screen the sent-a-verse page shows, from the same function, so a wrong link reads the same whichever bible surface it lands on.");
+  let unknown_shown = app_shared_bible_hash_languages_unknown_shown_is(
+    content,
+    hash,
+  );
+  if (unknown_shown) {
+    return;
+  }
   let c = app_shared_bible_chapter_hash_get_or_empty(hash);
   let b = app_shared_bible_book_hash_get(hash);
   let key = app_shared_bible_reference_hash_key();
