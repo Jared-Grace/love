@@ -1,3 +1,4 @@
+import { qa_gate_machine_red_print } from "./qa_gate_machine_red_print.mjs";
 import { qa_gate_run_timings_write } from "./qa_gate_run_timings_write.mjs";
 import { qa_gate_printed_print } from "./qa_gate_printed_print.mjs";
 import { qa_gate_failed_assert } from "./qa_gate_failed_assert.mjs";
@@ -68,6 +69,8 @@ export async function qa_gate_run_unlocked() {
   let at_blame = date_now_milliseconds();
   ("Who last touched what the gates complained about is asked out here rather than inside the frozen copy, and why that matters is written where the asking now lives. It is timed from here because the time belongs to this run.");
   await qa_gate_sections_blame_print(told);
+  ("Which of the reds belong to this machine rather than to the commit is said straight after the blaming, because it is the answer to the question the blaming leaves open: a gate named in the thrown sentence with no section above it looks like one nobody is at fault for, when really it was never asked of the copy at all.");
+  qa_gate_machine_red_print(here);
   let blamed_ms = date_milliseconds_since(at_blame);
   qa_gate_failed_assert(told, here, asked_ms, blamed_ms);
   qa_gate_parts_print(asked_ms, blamed_ms);

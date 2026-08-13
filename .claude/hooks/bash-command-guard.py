@@ -1889,13 +1889,36 @@ def is_safe_bare_mount(words):
     return words == ["mount"]
 
 
+# The hosts this repo published itself, generated from js/curl_read_hosts.mjs
+# so a project renamed on that side is not still trusted here under its old
+# name. Everything they serve is public already, which is the whole of why
+# fetching one of them tells nobody anything.
+from curl_read_hosts import CURL_READ_HOSTS
+
+# A host inside this building: this machine, or a device on the same network.
+# Recognized by shape and never by name - the only name that would go here is a
+# personal machine's, and this file is public. The shape is also what carries
+# the safety, because none of these addresses is routable on the internet, so a
+# request to one cannot reach anybody at all and what the URL carries stops
+# mattering.
+CURL_LOCAL_HOST_RE = re.compile(
+    r"^(?:localhost"
+    r"|127\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+    r"|10\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+    r"|192\.168\.\d{1,3}\.\d{1,3}"
+    r"|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}"
+    r"|[A-Za-z0-9-]+\.local)$"
+)
+
 # A query string and a fragment are allowed after the path: the dev pages are
-# addressed that way (`?chapter=MRK01`, `#c=JAS01,v=3`), and neither can turn a
-# status probe into a general fetch - the scheme is still fixed to plain http
-# and the host still pinned to localhost, which is what bounds this template.
-CURL_LOCALHOST_URL_RE = re.compile(
-    r"^http://(localhost|127\.0\.0\.1)(:[0-9]{1,5})?(/[A-Za-z0-9_./-]*)?"
-    r"(\?[A-Za-z0-9_.,=&%/+-]*)?(#[A-Za-z0-9_.,=&%/+-]*)?$"
+# addressed that way (`?chapter=MRK01`, `#c=JAS01,v=3`), and the store's
+# listing is (`?prefix=function/&maxResults=5`). The tail is checked by charset
+# rather than parsed - `$` is excluded so no expansion can hide in it, and so
+# is every character this file counts dangerous, which means a URL is one plain
+# word here or it is not a URL at all.
+CURL_URL_RE = re.compile(
+    r"^(https?)://([A-Za-z0-9._-]+)(?::[0-9]{1,5})?"
+    r"([/?#][A-Za-z0-9_.,:/?&=%#+~@;*-]*)?$"
 )
 
 CURL_WRITE_OUT_VAR_RE = re.compile(r"%\{[a-z_]+\}")
@@ -1926,38 +1949,148 @@ def is_safe_curl_write_out(fmt):
     )
 
 
-def is_safe_curl_status_check(words):
-    """Recognize exactly one template: `curl -s -o /dev/null -w FORMAT
-    URL`, used to probe the HTTP status of this project's own local dev
-    server rather than trusted by verb prefix - `curl` otherwise grants no
-    trust at all (no Bash(curl:*) rule exists), since it's the first tool
-    in this file capable of outbound network requests and, with other
-    flags, arbitrary file write (-o/-O) or upload (-T/--upload-file,
-    -d/--data, -F). This template closes all of those off instead of
-    trying to blacklist them individually:
+# Every flag that takes no value. The short ones are handled by the cluster
+# pattern instead, because they are written glued together (`-sI`) as often as
+# apart, and a cluster of letters that are each valueless is still valueless.
+CURL_READ_VALUELESS_FLAGS = {
+    "--silent", "--show-error", "--include", "--head", "--fail",
+    "--compressed",
+}
+CURL_READ_SHORT_CLUSTER_RE = re.compile(r"^-[sSiIf]+$")
 
-      - the URL (last word) must match CURL_LOCALHOST_URL_RE - scheme
-        fixed to plain http, host fixed to localhost/127.0.0.1 only
-        (never a real network destination), so this can never be turned
-        into a general-purpose fetch tool;
-      - '-o /dev/null' must appear verbatim - the response body is always
-        discarded, so nothing the server returns can be written to a real
-        file or otherwise escape via the response;
-      - '-w FORMAT' must appear with FORMAT passing is_safe_curl_write_out;
-      - '-s' (silent - suppresses curl's own progress meter) must appear;
-      - no other words are permitted at all - this is an exact 7-word
-        shape (curl, -s, -o, /dev/null, -w, FORMAT, URL), not a flag scan,
-        so any additional or reordered flag (-X, --data, -T,
-        --upload-file, -F, -K, a second -o pointing at a real file, etc.)
-        falls through to a real prompt rather than being pattern-matched
-        loosely."""
-    if len(words) != 7:
+# Every flag that takes a value, each of which has its value checked below.
+# A flag outside both sets is not rejected by name - it is simply not in the
+# list, which is what makes this closed rather than a blacklist to keep up.
+CURL_READ_VALUE_FLAGS = {
+    "-o", "--output", "-w", "--write-out", "-H", "--header",
+    "-m", "--max-time", "--connect-timeout", "--retry",
+}
+
+# A header that asks for a fresh copy rather than a cached one, or states what
+# the caller can read. Nothing here can carry a credential out or a body up;
+# an Authorization, Cookie or Content-Type header is absent from the set and so
+# falls through to a prompt.
+CURL_READ_HEADER_NAMES = {
+    "cache-control", "pragma", "accept", "accept-encoding",
+}
+CURL_READ_HEADER_RE = re.compile(r"^([A-Za-z-]+):[ ]?([A-Za-z0-9_,;=./ *+-]*)$")
+CURL_READ_NUMBER_RE = re.compile(r"^[0-9]+(\.[0-9]+)?$")
+
+
+def is_safe_curl_read_url(url):
+    """True iff `url` is a plain address this template may fetch: one of the
+    hosts this repo published itself, over https, or an address that never
+    leaves the building, over either scheme.
+
+    The published hosts are pinned to https because a plain-http request to a
+    real network destination can be answered by whoever is in the way; the
+    local ones are not, because the dev server only speaks http and there is no
+    way to be in between."""
+    m = CURL_URL_RE.match(url)
+    if not m:
         return False
-    if words[0:5] != ["curl", "-s", "-o", "/dev/null", "-w"]:
+    scheme, host = m.group(1), m.group(2)
+    if CURL_LOCAL_HOST_RE.match(host):
+        return True
+    return scheme == "https" and host in CURL_READ_HOSTS
+
+
+def is_safe_curl_output(path):
+    """True iff curl's -o target throws the response away or writes it inside
+    this session's own scratch tree - the two places a fetched file cannot
+    become part of the repo, and cannot become something that later runs."""
+    if path == "/dev/null":
+        return True
+    return is_safe_scratchpad_target(path)
+
+
+def is_safe_curl_header(header):
+    """True iff `header` sets one of the few headers that only ever describe
+    how the caller wants the answer, in the plain `Name: value` form."""
+    m = CURL_READ_HEADER_RE.match(header)
+    if not m:
         return False
-    if not is_safe_curl_write_out(words[5]):
+    return m.group(1).lower() in CURL_READ_HEADER_NAMES
+
+
+def is_safe_curl_flag_value(name, value):
+    """True iff `value` is one this template may hand to flag `name`. Every
+    flag in CURL_READ_VALUE_FLAGS is answered here, so a flag added to that set
+    without a case landing here is checked as a number and rejected."""
+    if name in ("-o", "--output"):
+        return is_safe_curl_output(value)
+    if name in ("-w", "--write-out"):
+        return is_safe_curl_write_out(value)
+    if name in ("-H", "--header"):
+        return is_safe_curl_header(value)
+    return bool(CURL_READ_NUMBER_RE.match(value))
+
+
+def is_safe_curl_read(words):
+    """Recognize a read-only fetch: `curl [flags] URL`, every flag named in an
+    allowlist and the URL either one this repo published itself or one that
+    never leaves the building. `curl` grants no trust at all otherwise (no
+    Bash(curl:*) rule exists), since it is the first tool in this file able to
+    make an outbound request and, with other flags, to write an arbitrary file
+    (-o/-O) or send one (-T/--upload-file, -d/--data, -F).
+
+    Unlike the sed template this is a flag scan rather than an exact word
+    shape, because the shapes actually written vary and the exact-shape version
+    of this check only ever matched one of them: measured over twenty days, 81
+    interruptions were plain fetches of this project's own deployed files, in
+    four flag orders, with the URL first about as often as last. An exact shape
+    cannot be widened to cover that without becoming a list of exact shapes.
+
+    What holds the safety instead is that the allowlist is of whole flags, and
+    every flag in it either takes no value or takes one that is checked: -o
+    must name /dev/null or this session's scratch tree, -w may print only
+    curl's own metadata about the request it already made, -H may only set a
+    caching or accept header, and a time limit must be a number. Everything
+    else curl can be asked to do arrives as a flag that is simply absent from
+    the set - -T, -d, -F and --upload-file send a body, -O writes a file the
+    server names, -K reads further flags from a file this hook never sees, -u
+    and --cookie attach credentials, and -L follows a redirect off the pinned
+    host and so out of the host allowlist altogether.
+
+    Exactly one word that is neither a flag nor a flag's value is permitted,
+    and that word is the URL. A second positional word means the line is doing
+    something this template has not read, so it falls through to a prompt."""
+    if not words or words[0] != "curl":
         return False
-    return bool(CURL_LOCALHOST_URL_RE.match(words[6]))
+    url = None
+    index = 1
+    while index < len(words):
+        word = words[index]
+        index += 1
+        if not word.startswith("-"):
+            if url is not None:
+                return False
+            url = word
+            continue
+        name, glued = word, None
+        if word.startswith("--") and "=" in word:
+            name, glued = word.split("=", 1)
+        if name in CURL_READ_VALUELESS_FLAGS:
+            if glued is not None:
+                return False
+            continue
+        if name in CURL_READ_VALUE_FLAGS:
+            if glued is not None:
+                value = glued
+            elif index < len(words):
+                value = words[index]
+                index += 1
+            else:
+                return False
+            if not is_safe_curl_flag_value(name, value):
+                return False
+            continue
+        if CURL_READ_SHORT_CLUSTER_RE.match(word):
+            continue
+        return False
+    if url is None:
+        return False
+    return is_safe_curl_read_url(url)
 
 
 def is_safe_sandboxed_node_eval(words):
@@ -2183,7 +2316,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
-            and not is_safe_curl_status_check(words)
+            and not is_safe_curl_read(words)
         ):
             return False
     return found_command
