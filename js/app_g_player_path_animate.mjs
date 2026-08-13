@@ -1,4 +1,4 @@
-import { list_last } from "./list_last.mjs";
+import { list_first } from "./list_first.mjs";
 import { app_g_day_line_walked_through_is } from "./app_g_day_line_walked_through_is.mjs";
 import { app_g_day_line_turn } from "./app_g_day_line_turn.mjs";
 import { not } from "./not.mjs";
@@ -24,6 +24,11 @@ export async function app_g_player_path_animate(
   let line_walk = app_g_day_line_walked_through_is(path);
   let following = not(line_walk);
   let steps = g_path_steps(path);
+  ("where the player has ACTUALLY got to, written down one step at a time and handed back at the end.");
+  ("it starts as the tile they are standing on rather than as the tile they asked for, and it is only ever moved forward by a step that finished. today those two agree - the walk always runs to the end - and the whole point of writing it this way is the day they stop agreeing: ",
+    each_async.name,
+    " already breaks out of the walk when the body hands back true, so a walk becomes stoppable by one line inside this body, and everything downstream is already asking where the player IS instead of where they were sent.");
+  let arrived = list_first(path);
   async function lambda(step) {
     let from = property_get(step, "from");
     let to = property_get(step, "to");
@@ -40,10 +45,12 @@ export async function app_g_player_path_animate(
     await app_g_player_move_animate(to, player_img_c);
     app_g_player_center(to, player_img_c, div_map);
     await app_g_day_followers_settle();
+    ("written after the step has finished, never before it, so a walk cut short leaves this naming the last tile the player really stood on");
+    arrived = to;
   }
   await each_async(steps, lambda);
   if (line_walk) {
-    let arrived = list_last(path);
     app_g_day_line_turn(g, arrived);
   }
+  return arrived;
 }
