@@ -33,11 +33,6 @@ export async function literal_duplicates_gate_run() {
     advice,
     offenders,
   };
-  list_empty_is_assert_json(spelling, {
-    hint,
-  });
-  let result = {
-    offenders: 0,
-  };
+  let result = qa_gate_clean_assert(spelling, hint);
   return result;
 }
