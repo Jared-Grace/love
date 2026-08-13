@@ -7,7 +7,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
-import { g_openers_disciple } from "./g_openers_disciple.mjs";
+import { g_openers_disciple_arc } from "./g_openers_disciple_arc.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 export function g_arc_prompt(
   chapter_code,
