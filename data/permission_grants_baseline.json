@@ -135,6 +135,10 @@
   {
    "name": "g_sermon_pull",
    "refusals": 1
+  },
+  {
+   "name": "file_lines_search",
+   "refusals": 1
   }
  ]
 }
