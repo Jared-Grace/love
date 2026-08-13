@@ -65,13 +65,14 @@ export function app_code_lesson_expression_swapping_equal() {
       " is ",
       "false",
     ]);
+    ("The same frame as the === opener above, word for word down to the operator and the one word that changes - same becomes different. That repetition is the point: a likewise is only readable if the thing it is like is recognisable, and the surest way to be recognisable is to be the same sentence. Suppose we ask if is also what dodges the stutter in if we ask if, without reaching for whether or not - two words of hedging in front of different, which is already the harder half to hold.");
+    ("Two lines rather than one, the same as every line in this card. The === case needed four because its reasoning was being walked for the first time; walking it again here would be a near-copy of four lines the reader has just read, so only the supposition and the conclusion are kept - and as well is what says the two steps between them are the ones already given.");
     html_div_cycle_code(same, [
-      "Likewise, for asking if two numbers are different (",
+      "Suppose we ask if two numbers are different (",
       "!==",
-      "), we can always swap ",
-      "!==",
-      " as well",
+      ")",
     ]);
+    html_div_cycle_code(same, ["Then we can always swap ", "!==", " as well"]);
     html_div_cycle_code(same, [
       "For example: ",
       "3 !== 5",
