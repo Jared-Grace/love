@@ -1,5 +1,5 @@
+import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
