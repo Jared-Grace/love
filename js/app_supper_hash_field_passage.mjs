@@ -9,6 +9,7 @@ export function app_supper_hash_field_passage() {
     key: app_supper_passage_hash_key(),
     name: "passage",
     list_is: false,
+    number_is: true,
     valid_is: text_digits_is,
     suggestions: hash_number_suggestions,
     label: hash_number_label,

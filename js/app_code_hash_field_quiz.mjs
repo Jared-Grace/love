@@ -9,6 +9,7 @@ export function app_code_hash_field_quiz() {
     key: app_code_quiz_hash_key(),
     name: "place in the quiz",
     list_is: false,
+    number_is: true,
     valid_is: text_digits_is,
     suggestions: hash_number_suggestions,
     label: hash_number_label,

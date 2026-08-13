@@ -10,7 +10,7 @@ export async function g_arc_chapter_passages_role(chapter, leader) {
     let codes = await g_leader_chapter_codes(chapter);
     let gathered = [];
     for (let code of codes) {
-      let its = await g_sermon_chapter_passages(code);
+      let its = await g_sermon_chapter_passages_chaptered(code);
       list_add_multiple(gathered, its);
     }
     return gathered;

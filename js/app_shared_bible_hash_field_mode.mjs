@@ -9,6 +9,7 @@ export function app_shared_bible_hash_field_mode() {
     key: app_shared_bible_mode_hash_key(),
     name: "way of reading",
     list_is: false,
+    number_is: false,
     valid_is: app_shared_bible_mode_known_is,
     suggestions: app_shared_bible_mode_suggestions,
     label: app_shared_bible_mode_label,

@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { app_shared_hash_field_drop_button } from "./app_shared_hash_field_drop_button.mjs";
 import { app_shared_hash_field_suggestion_button } from "./app_shared_hash_field_suggestion_button.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
@@ -29,11 +30,22 @@ export function app_shared_hash_field_unknown_row(parent, field, value) {
   let none = list_empty_is(suggestions);
   let asked = "Did you mean:";
   if (none) {
-    asked = text_combine_multiple([
-      "No ",
-      name,
-      " we have is spelled anything like it.",
-    ]);
+    ("A count with no digits anywhere in it leaves nothing to offer, and the useful thing to say is what one looks like rather than that we have not got this one. Every number is one we have; this word is simply not a number.");
+    let number_is = property_get(field, "number_is");
+    if (number_is) {
+      asked = text_combine_multiple([
+        "A ",
+        name,
+        " is written as a number, like 3.",
+      ]);
+    }
+    if (not(number_is)) {
+      asked = text_combine_multiple([
+        "No ",
+        name,
+        " we have is spelled anything like it.",
+      ]);
+    }
   }
   app_shared_text_body(row, asked);
   let buttons = html_div(row);
