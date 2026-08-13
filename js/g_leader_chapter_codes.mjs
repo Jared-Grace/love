@@ -51,5 +51,19 @@ export async function g_leader_chapter_codes(chapter_code) {
       list_add(kept, code);
     }
   }
-  return kept;
+  let least = g_leader_passages_least();
+  let backward = list_reverse(kept);
+  let taken = [];
+  let total = 0;
+  for (let code of backward) {
+    let enough = greater_than_equal(total, least);
+    if (enough) {
+      break;
+    }
+    let its = await g_sermon_chapter_passages(code);
+    total = add(total, its.length);
+    list_add(taken, code);
+  }
+  let nearest = list_reverse(taken);
+  return nearest;
 }
