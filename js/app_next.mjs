@@ -85,6 +85,6 @@ export async function app_next(context) {
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
   ("What is drawn, and in what order, is one thing with a name of its own - this page's work is reading the link and fetching what it asks for, and everything after that is the answering.");
-  app_next_reading_show(content, blocks, reading_text, url, run);
+  app_next_reading_show(content, blocks, reading_text, url, run, count);
   await clipboard_copy_try(reading_text);
 }
