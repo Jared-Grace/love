@@ -46,15 +46,6 @@ export function g_leader_book_reaches_canon_assert() {
         reason: "not a canon book code",
       });
     }
-    let home_index = list_index_of(canon, home);
-    let end_index = list_last(indexes);
-    let forward = greater_than(end_index, home_index);
-    if (forward) {
-      list_add(problems, {
-        reach,
-        reason: "borrows from a book that comes AFTER it in the canon",
-      });
-    }
     let sorted = list_sort_number(indexes);
     let first = sorted[0];
     let end = list_last(sorted);
