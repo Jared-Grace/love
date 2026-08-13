@@ -1,3 +1,4 @@
+import { qa_promoted_kept_is } from "./qa_promoted_kept_is.mjs";
 import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { firebase_prod_apps_unshipped } from "./firebase_prod_apps_unshipped.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -14,6 +15,7 @@ export async function qa_promoted_unjudged() {
   "Sending puts out the whole folder at once, so whoever sends sends every app that is waiting, not only the one they came to send. An app somebody built by hand or built out of a commit nobody judged sits there looking exactly like one that was judged, and rides out on the next sending under somebody else's name. This is the question that tells those apart, asked about all of them at once";
   "Only the apps that would actually change are asked about. An app whose waiting pieces are already the thing being served changes nothing by going out again, and demanding an account of it would hold every sending hostage to work that was finished and argued about long ago";
   "Three ways to be an offender and they are kept apart, because the thing to do about each is different: nothing was written down about where the pieces came from, or something was but the pieces have since changed, or the pieces did come out of a named commit and that commit was not sound for this app";
+  "A fourth kind is no offender at all, and it is why the first of the three is asked twice. A kept copy of an app already being served was never built out of anything - it is what was public, copied, so that the next build of that app can replace it without the page people were sent going off the internet - so no commit can be named for it and none ever will be. Held to the same question it never stops failing, and because a sending puts out the whole folder at once, one such copy standing there refuses every sending for good. What it can show instead is that its pieces ARE the public ones, which is asked next door";
   "Nothing here ever judges a commit. Judging one takes about a quarter of an hour, and a check that could quietly cost that is a check nobody can afford to put in front of a sending. A commit nobody has judged is counted as an offender rather than judged on the spot - which is also the right way round to be wrong, holding a sending rather than letting one by";
   "The pieces on disk are compared against the note rather than trusted to still match it, because the note is written once and the folder it describes is shared by all of us. A later build, a hand edit, or a stale file left behind all leave the note saying something that has stopped being true";
   let app_names = await firebase_prod_apps_unshipped();
@@ -24,6 +26,11 @@ export async function qa_promoted_unjudged() {
     let note = property_get_or_null(promoted, app_name);
     let unwritten = null_is(note);
     if (unwritten) {
+      ("a kept copy of an app that is already being served has no commit to name, because it was copied out of what was public rather than built out of anything - so before calling a set of pieces unaccounted for, ask whether it accounts for itself by being what is already out there");
+      let kept = await qa_promoted_kept_is(app_name);
+      if (kept) {
+        continue;
+      }
       list_add(offenders, {
         app: app_name,
         why: "nothing says which commit these pieces were built out of",
