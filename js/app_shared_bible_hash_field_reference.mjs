@@ -10,7 +10,8 @@ import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { list_join } from "./list_join.mjs";
-import { text_digits_any_is } from "./text_digits_any_is.mjs";
+import { text_digits_only } from "./text_digits_only.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 export function app_shared_bible_hash_field_reference(books_en) {
@@ -29,7 +30,7 @@ export function app_shared_bible_hash_field_reference(books_en) {
     ("The last word is the chapter and verse and everything before it is the book, because a book may be several words long and a chapter and verse is never more than one. 1 Jhon 3:16 splits at the right place under that rule and would not under any rule that counted from the front.");
     let words = text_split_space(app_shared_bible_reference_spaced(value));
     let tail = list_last(words);
-    let numbered = text_digits_any_is(tail);
+    let numbered = text_empty_not_is(text_digits_only(tail));
     if (!numbered) {
       ("Nothing after the book says which chapter, so there is no reference here to repair - only a book name, and offering one back with a chapter invented for it would be answering a question the reader never asked.");
       let none = [];
