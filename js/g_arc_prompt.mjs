@@ -1,3 +1,4 @@
+import { g_arc_prompt_arguments_assert } from "./g_arc_prompt_arguments_assert.mjs";
 import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
 import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
 import { g_arc_answer_field_lines } from "./g_arc_answer_field_lines.mjs";
@@ -32,6 +33,13 @@ export function g_arc_prompt(
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
   ("ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.");
+  g_arc_prompt_arguments_assert(
+    chapter_code,
+    verses_text,
+    turn_target,
+    profile,
+    leader,
+  );
   let list = g_openers_unbeliever();
   let openers_unbeliever = list_join_comma_space(list);
   ("The disciple openers arrive WITHOUT the Bible question door. A question is one turn with no floor, drawn from a pool that is subtracted from the chapter's matches before arcs are sized at all, so a question turn written into an arc is a turn already paid for elsewhere. The list not offering it is what keeps it out.");
