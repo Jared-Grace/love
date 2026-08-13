@@ -1,4 +1,4 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
@@ -9,7 +9,6 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get } from "./property_get.mjs";
 export async function gloss_chapters_roots_disagreeing(fn) {
   "Every chapter of one gloss store holding an explanation that says nothing about the root an outside dictionary takes its word back to.";
   "It reads only the words already looked up, so it answers on whatever has been gathered so far rather than waiting on a sweep to finish. That is the point: a sweep over thousands of words takes hours, and a reader should be able to see what it has found without stopping it.";
@@ -34,8 +33,7 @@ export async function gloss_chapters_roots_disagreeing(fn) {
   }
   let chapters = await list_map_async(chapter_codes, chapter_read);
   function disagreeing_is(chapter) {
-    let disagreeing = property_get(chapter, "disagreeing");
-    let offending = list_empty_not_is(disagreeing);
+    let offending = property_list_empty_not_is(chapter, "disagreeing");
     return offending;
   }
   let offenders = list_filter(chapters, disagreeing_is);
