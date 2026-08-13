@@ -7,8 +7,8 @@ export function text_codepoints_name(message) {
   let characters = Array.from(message);
   function code_of(character) {
     let point = character.codePointAt(0).toString(16);
-    let named = "U+" + point.toUpperCase();
-    return named;
+    let code_named = "U+" + point.toUpperCase();
+    return code_named;
   }
   let named = characters.map(code_of);
   let joined = named.join(" ");
