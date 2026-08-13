@@ -1,8 +1,8 @@
+import { qa_gate_timings_print } from "./qa_gate_timings_print.mjs";
 import { console_log_silence } from "./console_log_silence.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { qa_gate_result } from "./qa_gate_result.mjs";
 import { console_log_restore } from "./console_log_restore.mjs";
-import { timings_print } from "./timings_print.mjs";
 import { qa_gate_failures_report } from "./qa_gate_failures_report.mjs";
 import { equal } from "./equal.mjs";
 export async function qa_gates_told(gates) {
