@@ -7,7 +7,8 @@ export function hash_fields_all() {
   "A list written down, like the list of gates is, and for the same reason: a set of fields belongs to the surfaces that share it, and there is nothing in the shape of a field that says which set it is in. Adding a set here is the whole of making it count.";
   let bible = app_shared_bible_hash_fields();
   let supper = app_supper_hash_fields();
-  let sets = [bible, supper];
+  let code = app_code_hash_fields();
+  let sets = [bible, supper, code];
   let fields = lists_combine(sets);
   return fields;
 }
