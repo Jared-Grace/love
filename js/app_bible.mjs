@@ -15,8 +15,10 @@ export async function app_bible(context) {
   app_shared_app_fn_set(context, app_bible);
   ("The link is read back to the reader here, before the mode is touched, and not only in the two readers underneath. The next line writes the mode back into the address, so a word naming neither reader was rubbed out before either reader ever saw the link - the guard downstream then found a perfectly good link and said nothing, and the reader silently got the other reader.");
   let hash = html_hash_object_get();
-  let root = property_get(context, "root");
-  let unknown_shown = app_shared_bible_hash_unknown_shown_is(root, hash);
+  let unknown_shown = app_shared_bible_hash_unknown_page_shown_is(
+    context,
+    hash,
+  );
   if (unknown_shown) {
     return;
   }
