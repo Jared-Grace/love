@@ -139,6 +139,10 @@
   {
    "name": "file_lines_search",
    "refusals": 1
+  },
+  {
+   "name": "file_read",
+   "refusals": 2
   }
  ]
 }
