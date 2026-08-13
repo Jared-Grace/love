@@ -1,10 +1,11 @@
+import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
+import { gloss_entries_words_bare } from "./gloss_entries_words_bare.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { text_words_replaced } from "./text_words_replaced.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
@@ -24,18 +25,10 @@ export function gloss_passage_words_respell(passage, words_read) {
     let none = [];
     return none;
   }
-  let words_written = words_read(passage);
-  let line = list_join_space(words_written);
-  let written = text_punctuation_split(line);
+  let written = gloss_passage_words_bare(passage, words_read);
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let named = 0;
-  function entry_measure(entry) {
-    let word = property_get(entry, word_key);
-    let words = text_punctuation_split(word);
-    let right = list_size(words);
-    named = add(named, right);
-  }
-  each(entries, entry_measure);
+  let explained = gloss_entries_words_bare(entries);
+  let named = list_size(explained);
   let count = list_size(written);
   let counted_same = equal(named, count);
   if (not(counted_same)) {
