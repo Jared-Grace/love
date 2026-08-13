@@ -70,27 +70,33 @@ export async function app_next(context) {
     let chapter_code3 = property_get(verse, "chapter_code");
     let property_name5 = verse_number_key();
     let verse_number3 = property_get(verse, property_name5);
-    let lines = await app_next_verse_lines(
+    let block = await app_next_verse_block(
       chapter_code3,
       verse_number3,
       languages_chosen,
       books,
     );
-    return lines;
+    return block;
   }
-  let lines_each = await list_map_unordered_async(run, lambda);
+  let blocks = await list_map_unordered_async(run, lambda);
+  let lines_each = list_map_property(blocks, "lines");
   let mapped = lists_combine(lines_each);
   ("What is copied is the reading and nothing else. The way onward is written under it on the page, where somebody carrying on can press it, but a reader who copies a passage into a message is quoting scripture - a link to the verse after the one they quoted is not part of what they said, and it used to travel with it without anything saying so.");
   let reading_text = list_join_newline_2(mapped);
   let url = app_next_url_onward(hash, list, run);
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
-  ("The blank line between the blocks is written into the text rather than into the page, so the page has to be told to keep it. Left untold, a browser folds every run of space into one and the whole reading arrives as a single paragraph - which was survivable while there was one verse to show and is not now, because nothing then says where one verse ends and the next begins.");
   ("The way onward used to be written into the reading as its last line, so it was text about a link rather than a link. It stands under the reading in a piece of its own now, and what is on the screen and what is on the clipboard are one and the same words - the copying was never taking the link, so there is no longer a second version of the reading spelled out to hold it.");
-  ("The reading gets a place of its own under the page rather than being the page, so that something can stand beside it. What is copied is still only the reading - the button is on the page and not in the text - so a reader pasting this into a message sends the verses and nothing about where they came from.");
-  let reading = html_div(content);
-  html_style_white_space(reading, "pre-wrap");
-  html_text_set(reading, reading_text);
+  ("Every verse stands in a card of its own, drawn by the same three lines the supper, the verses app and the search results are drawn by. This page used to write its reading out as one run of plain text, which is the one shape none of that reaches: a language could not be told from the one under it by its colour, a word could not be tapped to be looked up, and a right-to-left bible read in whichever direction the language chosen last had left behind. None of it was missing on purpose - it was missing because what arrived at the screen was a string.");
+  ("The verses asked for are one passage, so they stand in one card rather than a card each - the same way the supper holds a reading. A card apiece would draw a line between two verses that are being read as one thing.");
+  let card = app_shared_container_blue(content);
+  app_shared_spaced_small(card);
+  function block_show(block) {
+    let reference = property_get(block, "reference");
+    let entries = property_get(block, "entries");
+    app_shared_bible_verse_block(card, reference, entries);
+  }
+  each(blocks, block_show);
   app_next_url_onward_link(content, url);
   app_next_ways_onward(content, run);
   html_page_bottom_space(content);

@@ -6,8 +6,8 @@ export function g_leader_book_reaches() {
   "The OLD TESTAMENT is not covered. Only OBA (20 passages) and HAG (28) fall under the band there; neither has a reach yet because nobody has judged which neighbour they should answer from.";
   let reaches = [
     ["PHM", "TIT"],
-    ["2JN", "3JN", "JUD"],
-    ["3JN", "2JN", "JUD"],
+    ["2JN", "1JN"],
+    ["3JN", "1JN", "2JN"],
     ["JUD", "2JN", "3JN"],
   ];
   return reaches;
