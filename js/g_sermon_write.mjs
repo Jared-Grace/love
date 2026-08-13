@@ -33,7 +33,7 @@ export async function g_sermon_write(
   let others = list_filter(passages, passage_other);
   list_add(others, {
     verse_numbers,
-    english,
+    scripture,
     lines,
   });
   let contents = json_format_to({
