@@ -31,15 +31,15 @@ export function app_shared_hash_field_unknown_row(parent, field, value) {
   let asked = "Did you mean:";
   if (none) {
     ("A count with no digits anywhere in it leaves nothing to offer, and the useful thing to say is what one looks like rather than that we have not got this one. Every number is one we have; this word is simply not a number.");
-    let number_is = property_get(field, "number_is");
-    if (number_is) {
+    let number_field_is = property_get(field, "number_is");
+    if (number_field_is) {
       asked = text_combine_multiple([
         "A ",
         name,
         " is written as a number, like 3.",
       ]);
     }
-    if (not(number_is)) {
+    if (not(number_field_is)) {
       asked = text_combine_multiple([
         "No ",
         name,
