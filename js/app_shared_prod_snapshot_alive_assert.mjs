@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { buffer_text_to } from "./buffer_text_to.mjs";
 import { file_name_html } from "./file_name_html.mjs";
