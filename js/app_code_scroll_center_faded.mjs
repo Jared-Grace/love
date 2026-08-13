@@ -20,22 +20,11 @@ export async function app_code_scroll_center_faded(component) {
     transition: "opacity 0.28s ease",
     "pointer-events": "none",
   });
-  function frame() {
-    "one animation frame, so the fully-white state is committed before we start fading it out - otherwise the browser may coalesce and skip the transition (which read as 'no fade')";
-    let r = new Promise(function lambda(resolve) {
-      requestAnimationFrame(resolve);
-    });
-    return r;
-  }
-  function wait(ms) {
-    let r2 = new Promise(function lambda(resolve) {
-      setTimeout(resolve, ms);
-    });
-    return r2;
-  }
   await html_scroll_center_now(component);
-  await frame();
+  ("one animation frame, so the fully-white state is committed before we start fading it out - otherwise the browser may coalesce and skip the transition (which read as 'no fade')");
+  ("the shared frame rather than a bare requestAnimationFrame of our own: a hidden tab is never given a frame at all, and the bare one parked this whole function there forever - the white cover stayed at full opacity over the list, and everything the refresh does after the screen returns, the url in the address bar and the contact button among it, never ran. The shared one races the frame against a short timeout, so a tab in the background finishes drawing instead of waiting to be looked at");
+  await html_request_animation_frame();
   html_style_opacity(cover, "0");
-  await wait(280);
+  await sleep(280);
   html_remove(cover);
 }
