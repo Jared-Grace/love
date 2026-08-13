@@ -67,7 +67,7 @@ export function g_arc_prompt(
     "",
     "THE CHAPTER",
     joined,
-    "These passages are the only Scripture you may answer from. (TODO: make sure this comes from passages (verse ranges), not verses)",
+    "These passages are the only Scripture you may answer from. Each line is one passage: its verse numbers, then its text.",
     verses_text,
     "",
     "Here is JSON about the person:",
@@ -133,7 +133,6 @@ export function g_arc_prompt(
     "Answer as JSON: one person, with trouble, summary, and conversations. Conversations contain turns; a turn contains before and after utterances of npc and the correct passage verse numbers; conversations also include an opener that summarizes",
     "The next conversation could be the very next day or many days later. And it may vary / not be a regular interval. You are not told which, and neither is the player.",
     "So conversations after the first need to have an npc opener that serves the purpose to concisely summarizes conversations thus far to player, but is said naturally in a conversation / not a forced summary.",
-    'TODO: Max turns per conversation',
     "Do not repeat the settled facts back. They are already known.",
     "Each conversation is a list of turns.",
   ];
