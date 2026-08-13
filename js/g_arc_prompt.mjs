@@ -1,3 +1,4 @@
+import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
 import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
 import { g_arc_answer_field_lines } from "./g_arc_answer_field_lines.mjs";
 import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
@@ -78,6 +79,17 @@ export function g_arc_prompt(
   let turn_lines = g_arc_answer_field_lines(fields4);
   let turn_fields = list_join_newline(turn_lines);
   let example = g_arc_answer_example();
+  let catch_up = g_arc_catch_up_name();
+  let catch_up_first = list_join_space([
+    "On conversations after the first, the person speaks their",
+    catch_up,
+    "before anything else.",
+  ]);
+  let catch_up_blind = list_join_space([
+    "The player picks the opener while playing, so the",
+    catch_up,
+    "cannot answer it. Write it as something the person would say whichever opener came next.",
+  ]);
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
@@ -121,12 +133,12 @@ export function g_arc_prompt(
     "",
     becoming,
     "",
-    "On conversations after the first, the person speaks their catch_up before anything else.",
+    catch_up_first,
     "Then the player chooses an opener. Here are the openers:",
     joined6,
     joined7,
     "Then the person utters an answer to the player's opener. Then the player chooses the corresponding passage.",
-    "The player picks the opener while playing, so the catch_up cannot answer it. Write the catch_up as something the person would say whichever opener came next.",
+    catch_up_blind,
     "",
     "GROUPING",
     "Group the turns into conversations.",
