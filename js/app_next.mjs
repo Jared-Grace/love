@@ -1,9 +1,9 @@
+import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
+import { null_is } from "./null_is.mjs";
 import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
 import { app_next_reading_column } from "./app_next_reading_column.mjs";
-import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -25,22 +25,17 @@ import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_k
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next(context) {
-  app_shared_app_fn_set(context, app_next);
-  ("This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.");
-  ("So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.");
-  let hash = html_hash_object_get();
-  ("A link can also be wrong rather than absent, and the two want opposite answers. A missing word is somebody who has not said, so the page says it for them. A word that names nothing is somebody who did say - they meant a language, and got a letter of it wrong - so guessing on their behalf would open a page in a language nobody asked for and never mention it. That one is said out loud, with the correction offered as something to press.");
-  let unknown_shown = app_shared_bible_hash_unknown_page_shown_is(
-    context,
-    hash,
-  );
-  if (unknown_shown) {
+  "This page is reached by a link somebody was sent, so the verse it should show is written in the link. Opening it with no link at all is somebody arriving with no request, and it used to insist on a chapter being named and stop when none was. Nothing said so: the stopping happened inside the opening, before a single line was drawn, so the page kept the words it paints while it starts and sat on One moment, please for ever. A hang says less than an error does, and this one said nothing at all.";
+  "So it starts where every other bible surface starts from nothing, and somebody who opens it bare gets a verse to read and a way onward rather than a page that never arrives.";
+  "A link can also be wrong rather than absent, and the two want opposite answers. A missing word is somebody who has not said, so the page says it for them. A word that names nothing is somebody who did say - they meant a language, and got a letter of it wrong - so guessing on their behalf would open a page in a language nobody asked for and never mention it. That one is said out loud, with the correction offered as something to press. That half is the reader's, word for word, so it is asked for by the name both pages call it by rather than opened again here.";
+  let hash = app_shared_bible_page_start_hash(context, app_next);
+  let corrected = null_is(hash);
+  if (corrected) {
     return;
   }
   let content = app_next_reading_column(context);
