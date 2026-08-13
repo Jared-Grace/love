@@ -93,10 +93,13 @@ export function app_code_lesson_expression_parentheses_both_sides() {
       "false",
     ]);
     html_div_cycle_code(both, ["Both sides of ", "===", " can be comparisons"]);
+    ("A side is a side of something, and this line has to say what. Left at on one side it leans back on the sentence above it, and the two things being placed each hold a === of their own - so the one word missing is the one that tells those apart from the one they are being put either side of. Another names it and says there is now one more of them than there was.");
     html_div_cycle_code(both, [
       "So we can put ",
       "3 === 5",
-      " on one side and ",
+      " on one side of another ",
+      "===",
+      " and ",
       "5 === 3",
       " on the other side",
     ]);

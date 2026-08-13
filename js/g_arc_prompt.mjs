@@ -21,6 +21,8 @@ export function g_arc_prompt(
   profile,
   leader,
 ) {
+  "$plain profile";
+  "$plain chapter_code";
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
   "The profile (gender, age, etc.) is RECEIVED rather than LLM decide.";
