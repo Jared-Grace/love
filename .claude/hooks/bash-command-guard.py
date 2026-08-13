@@ -117,10 +117,14 @@ separate xargs-specific entry.
 `verb_of` recurses past `timeout <DURATION>` into whatever follows only
 when DURATION matches TIMEOUT_DURATION_RE - a bare number with an
 optional single s/m/h/d suffix (`30`, `2.5`, `10m`) - so `timeout 30 git
-status` is checked as `git status`. Any leading flag (`-k`, `-s`,
-`--foreground`, `--preserve-status`, etc.) fails this exact-shape check
-and falls through to a real prompt instead, the same posture as xargs
-rejecting `-I{}`/`-0`. Also like xargs, this only ever reaches verb_of's
+status` is checked as `git status`. Its flags (`-k`/`--kill-after`,
+`-s`/`--signal`, `--foreground`, `--preserve-status`, `-v`) are unwrapped
+too, by an allowlist rather than by skipping anything spelled with a dash:
+they decide which signal is sent and when, and none of them names a file or
+changes which command runs, so `timeout -k 5 900 git status` is the same
+`git status` as the bare form. That is where timeout parts company with
+xargs rejecting `-I{}`, which moves the arguments. Like xargs, this only
+ever reaches verb_of's
 safe_verbs lookup - it does not unwrap the leading `timeout <DURATION>`
 before the exact-command check in check_simple_commands or before any of
 the is_safe_* exact-shape templates (is_safe_sed, is_safe_sandboxed_node_*,
@@ -2606,8 +2610,20 @@ SCRIPT_EVAL_PROGRAMS = ("perl", "ruby")
 # unparseable command was reported as "nothing found here".
 STDIN_PROGRAMS = PYTHON_PROGRAMS + ("node",)
 
+# The timeout prefix as this floor has to see it: the same flag forms
+# timeout_wrapper_skip accepts, spelled again because a command this fires on
+# is one the tokenizer gave up on, so there is no word list to hand that
+# parser. The two must widen together - a shape the skipper unwraps and this
+# floor does not is a shape that carries an interpreter past the floor.
+TIMEOUT_PREFIX_TEXT = (
+    r"\btimeout(?:"
+    r"\s+(?:-[ks]|--kill-after|--signal)(?:=\S+|\s+\S+)"
+    r"|\s+(?:--preserve-status|--foreground|-v|--verbose)"
+    r")*\s+\S+"
+)
+
 STDIN_PROGRAM_TEXT = re.compile(
-    r"(?:^|[;&|]|\bxargs\b|\btimeout\s+\S+)\s*"
+    r"(?:^|[;&|]|\bxargs\b|" + TIMEOUT_PREFIX_TEXT + r")\s*"
     r"(?:python3?|python2|node)\b"
     r"[^;&|]*?(?:<<<|<<|(?<=\s)-(?=\s|$))"
 )
