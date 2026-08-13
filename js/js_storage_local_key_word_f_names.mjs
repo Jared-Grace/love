@@ -1,7 +1,7 @@
+import { js_name_set_from_call_try } from "./js_name_set_from_call_try.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_storage_local_key_scan } from "./js_storage_local_key_scan.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -29,8 +29,7 @@ export function js_storage_local_key_word_f_names(ast, seams) {
     let variable = js_identifier_name_try(word_node);
     let plain = not_equal(variable, null);
     if (plain) {
-      let source = js_name_set_from_node_try(ast, variable);
-      let above = js_call_callee_name_try(source);
+      let above = js_name_set_from_call_try(ast, variable);
       let set_here = not_equal(above, null);
       if (set_here) {
         list_add(found, above);
