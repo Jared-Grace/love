@@ -1,3 +1,4 @@
+import { app_shared_bible_verses_counts } from "./app_shared_bible_verses_counts.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen_or } from "./app_shared_bible_hash_to_languages_chosen_or.mjs";
@@ -105,7 +106,7 @@ export async function app_verses(context) {
   );
   let card = app_shared_container_blue(content);
   app_shared_text_body(card, "2. How many Bible verses would you like?");
-  let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
+  let counts = app_shared_bible_verses_counts();
   let count_updates = [];
   function count_each(c) {
     let component = null;
