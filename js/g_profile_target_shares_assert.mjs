@@ -1,4 +1,4 @@
-import { list_map } from "./list_map.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
 import { not } from "./not.mjs";
 import { g_profile_axes } from "./g_profile_axes.mjs";
 import { g_profile_target_shares } from "./g_profile_target_shares.mjs";
@@ -8,7 +8,6 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function g_profile_target_shares_assert() {
@@ -48,8 +47,7 @@ export function g_profile_target_shares_assert() {
       let share = property_get(table, value);
       return share;
     }
-    let numbers = list_map(shared, share_of);
-    let total = list_sum(numbers);
+    let total = list_map_sum(shared, share_of);
     let b = equal(total, 100);
     if (not(b)) {
       list_add(faults, {
