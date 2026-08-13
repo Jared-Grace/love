@@ -40,7 +40,6 @@
       "Bash(git rev-list:*)",
       "Bash(git ls-files:*)",
       "Bash(git ls-tree:*)",
-      "Bash(git worktree list:*)",
       "Bash(git ls-remote:*)",
       "Bash(git merge-base:*)",
       "Bash(git mv:*)",
