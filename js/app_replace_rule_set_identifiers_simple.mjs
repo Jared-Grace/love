@@ -1,12 +1,5 @@
-import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "./app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
-import { app_replace_rule_set_identifiers_simple_abbreviations } from "./app_replace_rule_set_identifiers_simple_abbreviations.mjs";
 import { app_replace_rule_set_identifiers_simple_rules } from "./app_replace_rule_set_identifiers_simple_rules.mjs";
 export function app_replace_rule_set_identifiers_simple() {
-  let abbreviations = {
-    idg: ["", "id", "entifier ", "g", "rower"],
-  };
-  app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
-  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
   let r = {
     name: "Identifiers Simple",
     rules: app_replace_rule_set_identifiers_simple_rules(),
@@ -56,7 +49,6 @@ export function app_replace_rule_set_identifiers_simple() {
         end: "J 0 $ h",
       },
     ],
-    abbreviations,
     why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may include a limited set of digits and additional characters, demonstrating how identifiers are constructed from allowed starting and subsequent characters.",
   };
   return r;

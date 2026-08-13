@@ -1,3 +1,8 @@
+import { instructions_text } from "./instructions_text.mjs";
+import { text_regex_match } from "./text_regex_match.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
 export async function instructions_backtick_texts() {
   "Every text the instructions set between single backticks, across all the files they are written in.";
   "The fenced half of the instructions is the half that announces itself as something to type. This is the other half, and it carries commands too - the line that says how to commit, the one that names the repair for a stale grant, the one a note gives for promoting a scratch file. Those are as load-bearing as anything in a fence and were going unread purely because of how they are set on the page.";
@@ -5,7 +10,8 @@ export async function instructions_backtick_texts() {
   let text = await instructions_text();
   let spans = text_regex_match(text, /`[^`\n]+`/g);
   if (equal(spans, null)) {
-    return [];
+    let r = [];
+    return r;
   }
   let said = [];
   for (let span of spans) {

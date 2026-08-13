@@ -1,11 +1,8 @@
-import { app_replace_rule_set_integers_abbreviations } from "./app_replace_rule_set_integers_abbreviations.mjs";
 import { app_replace_rule_set_integers_rules } from "./app_replace_rule_set_integers_rules.mjs";
 export function app_replace_rule_set_integers() {
   let rules = app_replace_rule_set_integers_rules();
-  let abbreviations = app_replace_rule_set_integers_abbreviations();
   let r = {
     name: "Integers",
-    abbreviations,
     rules,
     goals: [
       {

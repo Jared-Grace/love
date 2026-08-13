@@ -1,36 +1,32 @@
-import { app_replace_rule_set_abbreviation_di } from "./app_replace_rule_set_abbreviation_di.mjs";
-import { app_replace_rule_set_integer_digits_abbreviations } from "./app_replace_rule_set_integer_digits_abbreviations.mjs";
 import { app_replace_rule_set_add_rights } from "./app_replace_rule_set_add_rights.mjs";
 import { digits } from "./digits.mjs";
 export function app_replace_rule_set_integer_digits() {
-  let rules = ["g > di g", "g > di"];
+  "the grower goes by ig here as it does in the integers exercise that follows, and not by the bare g, because the plain symbol games earlier in the course use g as a symbol standing for nothing - one short word cannot be a name in one exercise and a bare letter in another";
+  let rules = ["ig > di ig", "ig > di"];
   let d = digits();
   app_replace_rule_set_add_rights(rules, "di", d);
-  let abbreviations = app_replace_rule_set_integer_digits_abbreviations();
-  app_replace_rule_set_abbreviation_di(abbreviations);
   let r = {
     name: "Integer Digits",
-    abbreviations,
     rules,
     goals: [
       {
-        start: "g",
+        start: "ig",
         end: "0",
       },
       {
-        start: "g",
+        start: "ig",
         end: "2",
       },
       {
-        start: "g",
+        start: "ig",
         end: "0 3",
       },
       {
-        start: "g",
+        start: "ig",
         end: "8 9",
       },
       {
-        start: "g",
+        start: "ig",
         end: "di di di",
       },
       {
@@ -42,7 +38,7 @@ export function app_replace_rule_set_integer_digits() {
         end: "6 5 4",
       },
       {
-        start: "di di g",
+        start: "di di ig",
         end: "di di di di di",
       },
       {

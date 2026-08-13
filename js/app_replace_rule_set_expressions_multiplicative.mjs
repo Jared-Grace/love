@@ -1,16 +1,12 @@
-import { app_replace_rule_set_expressions_multiplicative_abbreviations } from "./app_replace_rule_set_expressions_multiplicative_abbreviations.mjs";
 import { app_replace_rule_set_expressions_multiplicative_rules } from "./app_replace_rule_set_expressions_multiplicative_rules.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_multiplicative() {
   let rules = [];
   app_replace_rule_set_expressions_multiplicative_rules(rules);
   list_add(rules, "ex > mue");
-  let abbreviations = {};
-  app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
   let r = {
     name: "Expressions Multiplicative",
     rules,
-    abbreviations,
     goals: [
       {
         start: "mue",

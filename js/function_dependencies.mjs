@@ -5,6 +5,7 @@ import { list_adder_unique_async } from "./list_adder_unique_async.mjs";
 import { visit_unique_async } from "./visit_unique_async.mjs";
 import { function_imports } from "./function_imports.mjs";
 export async function function_dependencies(f_names) {
+  "Every function these ones reach, whether they import it themselves or arrive at it through something they import, each one listed once.";
   async function lambda4(f_name) {
     await function_exists_assert_json(f_name, {
       hint: "each function should exist to gather its dependencies",

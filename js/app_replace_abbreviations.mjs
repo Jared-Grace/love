@@ -5,7 +5,6 @@ export function app_replace_abbreviations() {
   "In the order a learner meets them rather than in the order they sort, because that is the order the words were chosen in and it is the only reading that shows a later one being built out of an earlier one. What is shown beside a set of rules is sorted when it is drawn.";
   let r = {
     bo: ["", "bo", "olean literal"],
-    g: ["integer ", "g", "rower"],
     di: ["", "di", "git"],
     ig: ["", "i", "nteger ", "g", "rower"],
     in: ["", "in", "teger (non-negative whole number)"],
