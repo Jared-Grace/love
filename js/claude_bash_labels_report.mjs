@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { claude_bash_labels_ranked } from "./claude_bash_labels_ranked.mjs";
@@ -7,7 +8,9 @@ import { list_take } from "./list_take.mjs";
 export async function claude_bash_labels_report(days, count) {
   "What the sessions of the last so many days have reached for at the shell, split into what the repo already answers to and what it does not, with the commonest unnamed ones first";
   "The split is the reading. A dispatcher call is work that has already been taken out of the shell, so leaving it in the ranking would put the repo's own successes at the top of a list of its holes. What is left after taking those away is the honest measure of how much of this is still done by hand, and the top of that list is where the next command should be.";
-  "The window is given back with the numbers, because a count read away from the span it covers is the one mistake this reading is most likely to lead somebody into - see `claude_bash_commands`.";
+  ("The window is given back with the numbers, because a count read away from the span it covers is the one mistake this reading is most likely to lead somebody into - see `",
+    fn_name("claude_bash_commands"),
+    "`.");
   arguments_assert(arguments, 2);
   let many = Number(count);
   let ranked = await claude_bash_labels_ranked(days);
