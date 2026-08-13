@@ -7,7 +7,147 @@ export function app_ceb_bible_gloss_root_explains() {
     "A word for lasting - going on and not stopping. Its root is ‘lungtad’, endurance, and the ‘mo-’ in front points it at what has not happened yet.";
   let pasagdi =
     "A command to leave a thing alone. Its root is ‘sagdi’, to let be, with ‘pa-’ in front.";
+  let dayega =
+    "A command to praise somebody. Its root is ‘dayeg’, to praise, and the ‘-a’ on the end turns the word into an instruction.";
   let r = {
+    dayega,
+    Dayega: dayega,
+    dinuyogan:
+      "A word for being accompanied - played or sung along with. Its root is ‘duyog’, which is the going along together of one part with another, with ‘-in-’ set inside it and ‘-an’ on the end.",
+    "bisan kinsa":
+      "Two words taken together to mean ‘whoever’. Its root is ‘kinsa’, the question word ‘who’, and ‘bisan’ in front of it turns the asking into a granting - it no longer asks who, it says it does not matter who.",
+    "batan-ong":
+      "A word for one who is young, carrying the linker. Its root is ‘batan-on’, young, and the ‘-g’ at the end ties it to the word that follows.",
+    "pagkamatinud-anon":
+      "A word for faithfulness. Its root is ‘kamatinud-anon’, being true, and the ‘pagka-’ in front names the being of it rather than the one who has it.",
+    "pag-awit":
+      "A word for singing - the song and the singing of it. Its root is ‘awit’, a song, and the ‘pag-’ in front turns the singing into the name of it.",
+    kaparasan:
+      "A word for a vineyard. Its root is ‘paras’, the grapevine, and the ‘ka-’ with the ‘-an’ makes from it the whole planting of them.",
+    kamananapan:
+      "A word for the beasts taken together. Its root is ‘mananap’, an animal, and the ‘ka-’ with the ‘-an’ gathers a root into the whole of it.",
+    milukso:
+      "A word for leaping. Its root is ‘lukso’, a leap, and the ‘mi-’ in front puts the leaping in the past.",
+    awiti:
+      "A command to sing to somebody. Its root is ‘awit’, a song, and the ‘-i’ on the end turns the word into an instruction aimed at the one being sung to.",
+    manumpa:
+      "A word for swearing an oath. Its root is ‘sumpa’, an oath; its ‘s’ gives way to ‘n’ when the prefix ‘ma-’ is joined, which is why the root is hard to see in the finished word.",
+    magbalantay:
+      "A word for one who keeps watch - a guard, and the word used of a shepherd with a flock. Its root is ‘bantay’, a watch kept over something, with ‘-al-’ set inside it and ‘mag-’ in front.",
+    "gisirad-an":
+      "A word for being shut. Its root is ‘sirad-an’, to close, and the ‘gi-’ in front puts the shutting in the past and turns it toward what was shut.",
+    tanaman:
+      "A word for a garden. Its root is ‘tanom’, a plant or the planting of one, whose ending shifts before the ‘-an’ that makes from it the place the planting is done.",
+    kahumot:
+      "A word for fragrance. Its root is ‘humot’, sweet-smelling, and the ‘ka-’ in front makes from it the name of the thing itself.",
+    pagkamaanyag:
+      "A word for beauty. Its root is ‘maanyag’, beautiful, and the ‘pagka-’ in front names the being of it rather than the one who is it.",
+    kayutaan:
+      "A word for the lands taken together. Its root is ‘yuta’, the ground or a land, and the ‘ka-’ with the ‘-an’ gathers a root into the whole of it.",
+    Kabugangan:
+      "A word for a place thick with reeds. Its root is ‘bugang’, the tall wild cane that grows in wet ground, and the ‘ka-’ with the ‘-an’ makes from it the whole stand of them.",
+    gilutas:
+      "A word for having been weaned - taken off the breast. Its root is ‘lutas’, to wean, and the ‘gi-’ in front puts the weaning in the past and turns it toward the child it was done to.",
+    nagpaabot:
+      "A word for waiting for something. Its root is ‘paabot’, to await, and the ‘nag-’ in front shows the waiting as something that was going on.",
+    modapig:
+      "A word for taking a side. Its root is ‘dapig’, siding with somebody, and the ‘mo-’ in front points it at what has not happened yet.",
+    "nagtan-aw":
+      "A word for looking at something. Its root is ‘tan-aw’, a look, and the ‘nag-’ in front shows the looking as something that was going on.",
+    kabanayan:
+      "A word for the families taken together. Its root is ‘banay’, a family or kindred, and the ‘ka-’ with the ‘-an’ gathers a root into the whole of it.",
+    gilibotan:
+      "A word for being surrounded. Its root is ‘libot’, the way around a thing, with ‘gi-’ in front and ‘-an’ behind, which put the encircling in the past and turn it toward the one hemmed in.",
+    "maluloy-on":
+      "A word for one who is merciful. Its root is ‘luoy’, pitiable, with its first syllable set in front of it again and ‘ma-’ and ‘-on’ added around it - the shape Cebuano uses for a settled character rather than a passing act.",
+    masaligan:
+      "A word for one who can be trusted. Its root is ‘salig’, trust, with ‘ma-’ in front and ‘-an’ behind, which together point the trusting at the one it can safely rest on.",
+    "gisul-ob":
+      "A word for being put on and worn. Its root is ‘sul-ob’, to wear, and the ‘gi-’ in front puts the wearing in the past and turns it toward what was worn.",
+    maluoy:
+      "A word for showing mercy. Its root is ‘luoy’, pitiable - the state of one you look on with pity - and the ‘ma-’ in front turns it into the doing of what that sight calls for.",
+    pagpili:
+      "A word for choosing - the choice itself. Its root is ‘pili’, to choose, and the ‘pag-’ in front turns the choosing into the name of it.",
+    magaawit:
+      "A word for singing. Its root is ‘awit’, a song, and the ‘maga-’ in front points at singing that goes on or is still to come.",
+    itibulaag:
+      "A word for scattering something. Its root is ‘tibulaag’, to scatter, and the ‘i-’ in front points the doing at what is scattered rather than at the one scattering it.",
+    gidaot:
+      "A word for having been harmed. Its root is ‘daot’, harm, and the ‘gi-’ in front puts the harming in the past and turns it toward the one it fell on.",
+    Daygon:
+      "A word for one who is to be praised. Its root is ‘dayeg’, to praise, worn down before the ending ‘-on’, which builds a word for the one the praising is owed to.",
+    kapanganoran:
+      "A word for the clouds taken together. Its root is ‘panganod’, a cloud; the ‘d’ becomes ‘r’ before the ending, and the ‘ka-’ with the ‘-an’ gathers it into the whole sky of them.",
+    Maglakaw:
+      "A word for walking. Its root is ‘lakaw’, a walk, and the ‘mag-’ in front points at walking that is habitual or still to come.",
+    Moabot:
+      "A word for arriving. Its root is ‘abot’, arrival, and the ‘mo-’ in front points the doing at what has not happened yet.",
+    nagapanimalos:
+      "A word for taking vengeance. Its root is ‘panimalos’, revenge, and the ‘naga-’ in front shows the avenging as something going on.",
+    palamboa:
+      "A command to make something flourish. Its root is ‘lambo’, to prosper, with ‘pa-’ in front turning it into the causing of that prospering and ‘-a’ on the end making it an instruction.",
+    dinaugdaog:
+      "A word for those who are trodden down. Its root is ‘daogdaog’, to oppress, and the ‘-in-’ set inside it turns the oppressing around so the word names the ones it falls on.",
+    ubang:
+      "A word for company - the others, or those along with somebody - carrying the linker. Its root is ‘uban’, and the ‘-g’ at the end ties it to the word that follows.",
+    "madalin-as":
+      "A word for slippery ground - what a foot cannot hold on. Its root is ‘dalin-as’, to slip, and the ‘ma-’ in front builds from it a word for what carries that quality.",
+    nakong:
+      "The word for ‘my’, carrying the linker. Its root is ‘nako’, and the ‘-ng’ ties it to the word that follows.",
+    maghalad:
+      "A word for offering something up. Its root is ‘halad’, an offering, and the ‘mag-’ in front points at offering that is habitual or still to come.",
+    moawit:
+      "A word for singing. Its root is ‘awit’, a song, and the ‘mo-’ in front points it at what has not happened yet.",
+    mahuman:
+      "A word for being brought to an end. Its root is ‘human’, finished, and the ‘ma-’ in front says the finishing is what comes about.",
+    "kaloy-i":
+      "A command to show mercy to somebody. Its root is ‘luoy’, pitiable, worn down between ‘ka-’ in front and ‘-i’ behind, which turns the word into an instruction aimed at the one the mercy is for.",
+    Nahigugma:
+      "A word for loving. Its root is ‘higugma’, love, and the ‘na-’ in front says the loving is a state already come about rather than something being worked at.",
+    mipataas:
+      "A word for having raised something up. Its root is ‘taas’, high, and the ‘mipa-’ in front puts in the past the causing of a thing to be high.",
+    ituboy:
+      "A word for lifting something up. Its root is ‘tuboy’, to raise, and the ‘i-’ in front points the doing at what is lifted rather than at the one lifting it.",
+    mapaulawan:
+      "A word for being put to shame. Its root is ‘ulaw’, shame, with ‘mapa-’ in front and ‘-an’ behind, which together point the shaming at the one who comes to carry it.",
+    giwala:
+      "A word for having been done away with. Its root is ‘wala’, none or not there, and the ‘gi-’ in front puts in the past the making of a thing to be gone.",
+    maihap:
+      "A word for what can be counted. Its root is ‘ihap’, a count, and the ‘ma-’ in front says the counting is possible - which is why the word is most often met being denied.",
+    nagsultig:
+      "A word for speaking, carrying the linker. Its root is ‘nagsulti’, speaking, and the ‘-g’ at the end ties it to what is said.",
+    nahisama:
+      "A word for having become like something. Its root is ‘hisama’, likeness, and the ‘na-’ in front says the likeness has already come about.",
+    misangko:
+      "A word for having reached up to something. Its root is ‘sangko’, to reach as high as, and the ‘mi-’ in front puts the reaching in the past.",
+    Mandoan:
+      "A word for commanding somebody. Its root is ‘mando’, a command, and the ‘-an’ on the end turns the word toward the one it is given to.",
+    pagmasaligon:
+      "A word for trust - the trusting itself. Its root is ‘masaligon’, trusting, and the ‘pag-’ in front turns it into the name of the thing.",
+    nagauyog:
+      "A word for shaking something. Its root is ‘uyog’, a shaking, and the ‘naga-’ in front shows it as something going on.",
+    balosi:
+      "A command to repay somebody. Its root is ‘balos’, a repaying, and the ‘-i’ on the end turns the word into an instruction aimed at the one repaid.",
+    makagagahom:
+      "A word for the almighty one. Its root is ‘gahom’, power, with its first syllable set in front of it again and ‘maka-’ before that, which says the power is his to use.",
+    torong:
+      "A word for a bull, carrying the linker. Its root is ‘toro’, and the ‘-ng’ ties it to the word that follows.",
+    modakop:
+      "A word for seizing something. Its root is ‘dakop’, to catch, and the ‘mo-’ in front points it at what has not happened yet.",
+    kaanakan:
+      "A word for the children taken together. Its root is ‘anak’, a child, and the ‘ka-’ with the ‘-an’ gathers a root into the whole of it.",
+    "gituy-od":
+      "A word for having been stretched out. Its root is ‘tuy-od’, to straighten or extend, and the ‘gi-’ in front puts the stretching in the past and turns it toward what was stretched.",
+    "kabug-aton":
+      "A word for weight. Its root is ‘bug-at’, heavy, and the ‘ka-’ with the ‘-on’ makes from it the name of the thing itself rather than a way of describing something.",
+    "kabubut-on":
+      "A word for what somebody wills - their will. Its root is ‘buot’, the mind set on a thing, with its first syllable set in front of it again and ‘ka-’ and ‘-on’ around it.",
+    "gipanag-iyahan":
+      "A word for being owned. Its root is ‘panag-iya’, ownership, with ‘gi-’ in front and ‘-han’ behind, which turn the owning toward the thing owned.",
+    "usa ka":
+      "Two words taken together where English puts ‘a’ or ‘one’. Its root is ‘usa’, the number one, and ‘ka’ after it is the small word Cebuano sets between a count and the thing counted.",
+    "mag-ingon":
+      "A word for saying. Its root is ‘ingon’, to say, and the ‘mag-’ in front points at saying that is habitual or still to come.",
     kaliwatan:
       "A word for offspring - a generation of those descended from somebody. Its root is ‘liwat’, the passing on of a likeness from one generation to the next, and the ‘ka-’ with the ‘-an’ gathers it into the whole line of them.",
     hibaloi:
