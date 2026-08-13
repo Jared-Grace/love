@@ -9,8 +9,8 @@ export function app_shared_hash_fields_unknown_heading(findings) {
   "It names the kind when there is only one kind wrong, because that alone often tells a reader what happened - they recognise the language they meant to ask for and see the letter they missed. Two kinds wrong at once has no honest short name, so it says the general thing and leaves the naming to the rows underneath, which say it once each anyway.";
   function to_name(finding) {
     let field = property_get(finding, "field");
-    let name = property_get(field, "name");
-    return name;
+    let field_name = property_get(field, "name");
+    return field_name;
   }
   let names = list_map(findings, to_name);
   let distinct = list_unique(names);
