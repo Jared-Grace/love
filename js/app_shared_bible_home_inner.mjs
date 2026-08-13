@@ -1,5 +1,5 @@
+import { list_includes } from "./list_includes.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { integer_to_try_multiple_max_text_to } from "./integer_to_try_multiple_max_text_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
@@ -7,7 +7,6 @@ import { list_add } from "./list_add.mjs";
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_shared_bible_home_inner(context, download, app_fn) {
   let downloaded = null;
