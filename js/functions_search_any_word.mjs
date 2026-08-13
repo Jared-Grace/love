@@ -1,5 +1,5 @@
 import { text_split_comma } from "./text_split_comma.mjs";
-import { functions_search } from "./functions_search.mjs";
+import { functions_search_all } from "./functions_search_all.mjs";
 import { property_set } from "./property_set.mjs";
 export async function functions_search_any_word(searches_comma) {
   "What this repo calls things, asked several words at once - one answer per word, under the word that found it.";
@@ -8,7 +8,7 @@ export async function functions_search_any_word(searches_comma) {
   let searches = text_split_comma(searches_comma);
   let found = {};
   for (let search of searches) {
-    let names = await functions_search(search);
+    let names = await functions_search_all(search);
     property_set(found, search, names);
   }
   return found;

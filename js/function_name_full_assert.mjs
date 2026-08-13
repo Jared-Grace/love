@@ -8,7 +8,7 @@ export async function function_name_full_assert(f_name) {
   "throws unless f_name is a function's own full name — refusing both shorthands, an alias key and an acronym";
   "a permission rule is matched as literal text, so a shorthand can never be granted safely: repoint the alias and the auto-approval silently follows it elsewhere";
   "no name at all has to be refused first, and separately, because the comparison below cannot do it: unaliasing nothing gives nothing back, so it finds the two equal and agrees - a check that passes on the one input it most needs to catch. what followed was a line naming no command written into the log, and only then a complaint about something else entirely; that single line killed both readings of the log until the reader was made to survive it";
-  let name_example = fn_name("functions_search");
+  let name_example = fn_name("functions_search_all");
   text_and_empty_not_is_assert_json(f_name, {
     hint: text_combine_multiple([
       "Which function would you like to run? Name it in full after the script, like `node scripts/ai.mjs ",
