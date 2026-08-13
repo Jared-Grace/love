@@ -1,5 +1,5 @@
+import { g_arc_chapter_passages_role } from "./g_arc_chapter_passages_role.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
 import { g_sermon_chapter_verses_text } from "./g_sermon_chapter_verses_text.mjs";
 import { g_npc_pool_convert_turns } from "./g_npc_pool_convert_turns.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
@@ -21,7 +21,7 @@ export async function g_arc_prompt_chapter_role(chapter, leader) {
     " writes a string to a .txt of its own and opens it.");
   ("A leader is asked for a different prompt AND a different deck, because both of those are what being the leader means - the elder's turns come from the PLAN rather than from the pool, since the pool deliberately does not count leaders.");
   ("The profile is the first in whichever deck, and it is a stand-in. Nothing deals profiles yet, so a real prompt's profile is still an open question - what this shows is the shape of one, not which one a given person gets.");
-  let passages = await g_sermon_chapter_passages(chapter);
+  let passages = await g_arc_chapter_passages_role(chapter, leader);
   let verses_text = g_sermon_chapter_verses_text(passages);
   let turns_wanted = await g_npc_pool_convert_turns();
   let next = random_seed_generator_from_text(g_npc_pool.name);
