@@ -16,7 +16,7 @@ export async function daemon_started_at(f_name) {
   let text = await command_line_stdout(command);
   let trimmed = text_trim(text);
   ("systemd writes the count behind a mark that says a count is what it is, so the mark is stepped over before reading the number");
-  let digits = text_skip(trimmed, 1);
-  let at = integer_to_try(digits);
+  let seconds_digits = text_skip(trimmed, 1);
+  let at = integer_to_try(seconds_digits);
   return at;
 }
