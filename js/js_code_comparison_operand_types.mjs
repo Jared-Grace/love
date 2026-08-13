@@ -1,10 +1,10 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { js_operators_comparison } from "./js_operators_comparison.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { list_adder } from "./list_adder.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -33,8 +33,7 @@ export function js_code_comparison_operand_types(code) {
   }
   function collect(la) {
     function on_binary(node) {
-      let operator = property_get(node, "operator");
-      let compares = list_includes(operators, operator);
+      let compares = property_in_list(node, "operator", operators);
       if (compares) {
         let left = property_get(node, "left");
         let right = property_get(node, "right");
