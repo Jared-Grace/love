@@ -1,3 +1,5 @@
+import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -19,11 +21,19 @@ export function g_arc_prompt_style_assert() {
   "NPC is the one worth a gate rather than a docstring. It is the word the surrounding code correctly uses for the thing being generated, so it is always at the writer's fingertips - and it is the wrong word to hand a model that is being asked to write a human being. The prompt already says person everywhere else.";
   "Trailing whitespace and a one-space indent are invisible in a JS string literal and only appear in the assembled prompt, which is the one place nobody reads. That is exactly what a gate is for.";
   "It builds the prompt from a stand-in profile because it is checking the SHAPE of the lines rather than any particular person's. The leader form is checked too, since it is a different set of lines and can drift on its own.";
-  "The profile JSON is INJECTED rather than authored, and it is skipped. It is serialized data printed at the one-space indent this repo prints JSON at everywhere, so holding it to a prose convention would be asking the formatter to be prose. What is checked is the lines somebody wrote by hand.";
+  "The JSON blocks are INJECTED rather than authored, and they are skipped. Serialized data is printed at the one-space indent this repo prints JSON at everywhere, so holding it to a prose convention would be asking the formatter to be prose. What is checked is the lines somebody wrote by hand.";
+  "There are TWO such blocks and there was one, which is why they are gathered from a list rather than named singly. The profile went over from the start; the answer example arrived later and tripped this gate on its first run, correctly - it is the same kind of thing and wanted the same exemption, not a loosened rule.";
   let deck = g_profiles();
   let profile = deck[0];
   let s = json_format_to(profile);
-  let injected = text_split_newline(s);
+  let example = g_arc_answer_example();
+  let blocks = [s, example];
+  let injected = [];
+  function block_add(block) {
+    let lines = text_split_newline(block);
+    list_add_multiple(injected, lines);
+  }
+  each(blocks, block_add);
   let faults = [];
   function check_prompt(leader) {
     let prompt = g_arc_prompt("Chapter", "verses", 36, profile, leader);
