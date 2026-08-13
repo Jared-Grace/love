@@ -392,10 +392,7 @@ export async function app_search_results(context, div_results) {
           languages_chosen,
         );
         ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on");
-        let d = html_div_text_centered(div_verse, reference);
-        app_shared_text_deemphasized(d);
-        ("each language reads in its own colour along one gradient, the same way the supper app tells its versions apart");
-        app_shared_bible_verse_texts(div_verse, entries);
+        app_shared_bible_verse_block(div_verse, reference, entries);
         ("what gets copied is the reference then each language's words, in the order they are read on the page");
         list_add(bible_texts, reference);
         let texts = list_map_property(entries, "text");
