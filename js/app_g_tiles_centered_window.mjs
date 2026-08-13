@@ -6,12 +6,16 @@ export function app_g_tiles_centered_window(player, div_map) {
   "it says 'right now' loosely - what it really answers is which tiles will be fully visible once the map has finished centring on the player, which is the same thing whenever the player is already centred, and is the useful answer while a centring scroll is still in flight.";
   "where the grid sits is taken rather than where the map is scrolled to, because the scrolled position has the in-flight animation baked into it and this is asked while that animation is still running. the twin next door takes the other one, which is why the two of them want different groups out of the same measuring.";
   let measured = app_g_map_measure(div_map);
+  let tile = property_get(measured, "tile");
+  let viewport = property_get(measured, "viewport");
+  let inset = property_get(measured, "inset");
+  let content = property_get(measured, "content");
   let window_tiles = app_g_day_guide_window(
     player,
-    property_get(measured, "tile"),
-    property_get(measured, "viewport"),
-    property_get(measured, "inset"),
-    property_get(measured, "content"),
+    tile,
+    viewport,
+    inset,
+    content,
   );
   return window_tiles;
 }
