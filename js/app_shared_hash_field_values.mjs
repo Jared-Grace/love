@@ -12,8 +12,8 @@ export function app_shared_hash_field_values(hash, field) {
     let nothing = [];
     return nothing;
   }
-  let list_is = property_get(field, "list_is");
-  if (list_is) {
+  let many = property_get(field, "list_is");
+  if (many) {
     let values = text_split_plus(written);
     return values;
   }
