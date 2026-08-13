@@ -4,6 +4,7 @@ import { ebible_version_download_path } from "./ebible_version_download_path.mjs
 import { unzip } from "./unzip.mjs";
 import { http_local } from "./http_local.mjs";
 export async function ebible_version_download(bible_folder) {
+  "$plain bible_folder";
   let url = ebible_version_download_url_html(bible_folder);
   let project_url = firebase_storage_url_project_jg();
   let buffer = await http_local(url, project_url);
