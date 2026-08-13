@@ -1,3 +1,5 @@
+import { app_g_player_walking_is } from "./app_g_player_walking_is.mjs";
+import { not } from "./not.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_click_map } from "./app_g_click_map.mjs";
 import { app_g_menu_new } from "./app_g_menu_new.mjs";
