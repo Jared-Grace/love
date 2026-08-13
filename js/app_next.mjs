@@ -1,3 +1,4 @@
+import { app_next_bible_button } from "./app_next_bible_button.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
@@ -96,5 +97,7 @@ export async function app_next(context) {
   html_style_white_space(reading, "pre-wrap");
   html_text_set(reading, joined);
   app_next_passage_more_button(root, run);
+  ("Somebody who wants more than a passage at a time wants the bible, not a bigger version of this page. So the second way onward is the reader itself, opened where this reading is - which is what keeps this page from growing a chapter, a picker and a way of choosing languages that all already exist next door.");
+  app_next_bible_button(root, run);
   await clipboard_copy_try(copied);
 }

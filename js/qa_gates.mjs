@@ -1,3 +1,4 @@
+import { apps_hash_keys_unchecked_gate_run } from "./apps_hash_keys_unchecked_gate_run.mjs";
 import { app_code_lesson_expression_which_part_first_gate_run } from "./app_code_lesson_expression_which_part_first_gate_run.mjs";
 import { app_ceb_bible_gloss_misaligned_gate_run } from "./app_ceb_bible_gloss_misaligned_gate_run.mjs";
 import { gloss_words_misaligned_cases_gate_run } from "./gloss_words_misaligned_cases_gate_run.mjs";
@@ -449,6 +450,7 @@ export function qa_gates() {
     storage_rules_gate_run,
     app_shared_bible_hash_unknown_gate_run,
     gloss_words_misaligned_cases_gate_run,
+    apps_hash_keys_unchecked_gate_run,
   ];
   return gates;
 }
