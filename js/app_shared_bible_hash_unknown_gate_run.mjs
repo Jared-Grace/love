@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { app_shared_bible_hash_unknown_cases } from "./app_shared_bible_hash_unknown_cases.mjs";
 import { app_shared_bible_hash_fields } from "./app_shared_bible_hash_fields.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,10 +10,8 @@ import { list_get } from "./list_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { each_index } from "./each_index.mjs";
 import { each } from "./each.mjs";
-import { not } from "./not.mjs";
 export function app_shared_bible_hash_unknown_gate_run() {
   "Gate: a bible link is found to be wrong in exactly the places the written-down links say it is, and the correction a reader needs is among the ones offered. Throws so the dispatcher seam exits nonzero.";
   "Every part of this is silent when it breaks. A field that stops recognising its own words turns every good link into an apology; a field that starts recognising everything turns every wrong link back into the hang it used to be; and a suggestion list that quietly loses the word somebody meant still draws a screen full of buttons, none of which is theirs. None of the three colours a page red on its own.";
@@ -72,8 +71,7 @@ export function app_shared_bible_hash_unknown_gate_run() {
         }
         return;
       }
-      let offered_it = list_includes(offered, suggestion);
-      let missing = not(offered_it);
+      let missing = list_includes_not(offered, suggestion);
       if (missing) {
         note(
           one,
