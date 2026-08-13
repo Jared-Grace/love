@@ -1,3 +1,4 @@
+import { property_text_split_space } from "./property_text_split_space.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -39,8 +40,7 @@ export function gloss_passage_base_repair(passage, verses_base) {
   let word_key = app_shared_gloss_bible_generate_generic_word();
   ("an explanation may name a phrase rather than a single word, so what it names is split the same way the verse is. Asking for the whole field as one word dropped every phrase in the chapter, because no single word of the verse ever equals two words joined.");
   function words_get(item) {
-    let word = property_get(item, word_key);
-    let words = text_split_space(word);
+    let words = property_text_split_space(item, word_key);
     return words;
   }
   let kept = words_multiset_keep(items, words_get, words_allowed);
