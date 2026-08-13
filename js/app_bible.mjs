@@ -1,6 +1,5 @@
+import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
 import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
