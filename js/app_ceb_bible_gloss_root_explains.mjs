@@ -69,8 +69,7 @@ export function app_ceb_bible_gloss_root_explains() {
       "A word for faith - the believing itself. Its root is ‘tuo’, to believe, and the ‘pag-’ in front turns the believing into the name of it.",
     kaninyo:
       "The word for ‘to you’ or ‘for you’, said to more than one person. It is the form ‘ninyo’ takes when you are the ones something is done to or given to.",
-    molungtad:
-      "A word for lasting - going on and not stopping. Its root is ‘lungtad’, endurance, and the ‘mo-’ in front points it at what has not happened yet.",
+    molungtad,
     inubanan:
       "A word for being accompanied. Its root is ‘uban’, a companion or company, with ‘-in-’ set inside it and ‘-an’ on the end, which together turn the word toward the one the accompanying is done to.",
     kasabotan:
@@ -254,8 +253,7 @@ export function app_ceb_bible_gloss_root_explains() {
       "A word for the wilderness. Its root is ‘mingaw’, which is lonely or deserted - a place with nobody in it - and the ‘ka-’ with the ‘-an’ gathers it into the whole stretch of such land.",
     moluwas:
       "A word for saving. Its root is ‘luwas’, rescue, and the ‘mo-’ in front points it at what has not happened yet.",
-    Pasagdi:
-      "A command to leave a thing alone. Its root is ‘sagdi’, to let be, with ‘pa-’ in front.",
+    Pasagdi: pasagdi,
     halayo:
       "A describing word for what is far off. Its root is ‘layo’, distance, with ‘ha-’ in front.",
     migawas:
