@@ -14,10 +14,13 @@ import { text_includes } from "./text_includes.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 export function app_code_lesson_expression_which_part_first_gate_run() {
   arguments_assert(arguments, 0);
-  ("the two buttons this lesson puts in front of a learner are the two real parts of the line, the right one holding the * and the wrong one holding the weaker operator. Both are read out of the same generated line by counting tokens, and getting a count wrong does not throw - it hands back a run of characters that is still a piece of the line, so it reads as code and only a person looking at the screen can tell it is not a part");
+  ("the two buttons this lesson puts in front of a learner are the two real parts of the line, the right one holding the stronger operator and the wrong one holding the weaker. Both are read out of the same generated line by counting tokens, and getting a count wrong does not throw - it hands back a run of characters that is still a piece of the line, so it reads as code and only a person looking at the screen can tell it is not a part");
   ("that is what happened: the wrong button came back as * 8 - for the line 3 * 8 - 5. It is even a substring of the line, so asking whether the buttons are made of the line's own characters would have called it correct. What tells them apart is the operator each one is built around, which is exactly what this checks");
-  ("the lines are generated rather than listed, because the arrangement is what the counting depends on - the * falls on either side, half the time each - so a fixed list would need to be kept in step with the generator by hand. Enough of them that both arrangements and both weak operators are certain to appear");
-  let strong = js_operator_asterisk_symbol();
+  ("the lines are generated rather than listed, because the arrangement is what the counting depends on - the stronger operator falls on either side, half the time each - so a fixed list would need to be kept in step with the generator by hand. Enough of them that both arrangements and all four pairings of the two classes are certain to appear");
+  ("every pairing is also required to turn up rather than merely allowed to. A generator quietly narrowed back to one operator would still pass every check below on every line it made, because each line would be perfectly consistent - the narrowing shows only in what is missing");
+  let strong_symbols = app_code_operators_strong();
+  let weak_symbols = app_code_operators_weak();
+  let seen = [];
   let count = 200;
   for (let i = 0; less_than(i, count); i++) {
     let code = app_code_lesson_expression_which_part_first_expression();
