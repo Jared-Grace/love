@@ -3,7 +3,29 @@ export function app_ceb_bible_gloss_root_explains() {
   "Each root and each piece added to it is read off that dictionary rather than worked out here. A breakdown that looks obvious is exactly where an invented one hides, and a wrong root is worse for the reader than no root at all, because it is the part they will remember.";
   "What a piece added to a root does is said in plain words rather than named. A reader who has never met the word ‘affix’ is the one being written for, so ‘the ending -on builds a word for the one the doing falls on’ is the explanation and ‘suffix -on’ is only a label.";
   "One wording covers every place the word stands. What the word is built out of does not change from verse to verse, and that - rather than the job it is doing in one sentence - is what these places were carrying nothing at all about.";
+  let molungtad =
+    "A word for lasting - going on and not stopping. Its root is ‘lungtad’, endurance, and the ‘mo-’ in front points it at what has not happened yet.";
+  let pasagdi =
+    "A command to leave a thing alone. Its root is ‘sagdi’, to let be, with ‘pa-’ in front.";
   let r = {
+    kaliwatan:
+      "A word for offspring - a generation of those descended from somebody. Its root is ‘liwat’, the passing on of a likeness from one generation to the next, and the ‘ka-’ with the ‘-an’ gathers it into the whole line of them.",
+    hibaloi:
+      "A command to know a thing. Its root is ‘hibalo’, knowledge, and the ‘-i’ on the end turns the word into an instruction given to somebody.",
+    kinutoban:
+      "A word for the limit of a thing - how far it reaches and no further. Its root is ‘kutob’, which is the extent of something, with ‘-in-’ set inside it and ‘-an’ on the end.",
+    katahom:
+      "A word for beauty. Its root is ‘tahom’, beautiful, and the ‘ka-’ in front makes from it the name of the thing itself rather than a way of describing something.",
+    Naluya:
+      "A word for having grown weak. Its root is ‘luya’, weak, and the ‘na-’ in front says the weakness is a state already come about.",
+    nabasa:
+      "Its root is ‘basa’, which carries both being wet and reading, so which of the two is meant is decided by the sentence and not by the word. The ‘na-’ in front says the thing has already come about - it was soaked, or it was read.",
+    pagbatok:
+      "A word for opposition - the standing against something. Its root is ‘batok’, against, and the ‘pag-’ in front turns the standing against into the name of it.",
+    nakatigom:
+      "A word for having gathered something together. Its root is ‘tigom’, a gathering, and the ‘naka-’ in front says the gathering was carried through - it was managed, not merely attempted.",
+    Molungtad: molungtad,
+    pasagdi,
     tawong:
       "A word for a person, carrying the linker on its end. Its root is ‘tawo’, a human being, and the ‘-ng’ ties it to the describing word that comes after it.",
     kadtong:
