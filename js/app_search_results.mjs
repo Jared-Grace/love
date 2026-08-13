@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_search_results_book_verses_count } from "./app_search_results_book_verses_count.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
@@ -7,8 +8,6 @@ import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
