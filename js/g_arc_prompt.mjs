@@ -30,7 +30,8 @@ export function g_arc_prompt(
   "ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.";
   let list = g_openers_unbeliever();
   let openers_unbeliever = list_join_comma_space(list);
-  let list5 = g_openers_disciple();
+  ("The disciple openers arrive WITHOUT the Bible question door. A question is one turn with no floor, drawn from a pool that is subtracted from the chapter's matches before arcs are sized at all, so a question turn written into an arc is a turn already paid for elsewhere. The list not offering it is what keeps it out.");
+  let list5 = g_openers_disciple_arc();
   let openers_disciple = list_join_comma_space(list5);
   let s = g_generation_settings();
   let turns_low = property_get(s, "conversation_turns_low");
@@ -105,8 +106,6 @@ export function g_arc_prompt(
     "In a conversation, the player first chooses an opener. Here are the openers: ",
     joined6,
     joined7,
-    "A Bible question is the DISCIPLE's question, not the player's. The player opens that door and the person asks what they have been wondering, so the before IS the question and the passage the player chooses answers it. Write it as a turn like any other - there is nothing separate to generate.",
-    "It is also the one opener not tied to their trouble, so it is where a verse this person's own life would never reach can still be answered from.",
     "Then the npc utters an answer to the player's opener. Then player chooses the corresponding passage.",
     "",
     "GROUPING",
