@@ -39,7 +39,7 @@ export function app_next_reading_show(
   ("The copying the page does for itself is the one a browser is allowed to refuse, so the same copying stands at the foot of the card as something to press. The page lets that refusal pass without a word, which is right for the page and late for the reader - this is how they find out in time.");
   ("Last inside the card, under everything it takes, so what it copies is everything above it and nothing below.");
   app_next_copy_button(card, reading_text);
-  app_next_ways_onward(content, run);
+  app_next_ways_onward(context, content, run);
   ("How much to send stands last, under the reading and under the ways on from it, because it is the one thing here that is not about this passage. Somebody who opened this link came to copy what is in the card; they set the size once, when it turns out to be wrong for who they are writing to, and then never again for the rest of a book.");
   app_next_count_choose(content, count);
   html_page_bottom_space(content);
