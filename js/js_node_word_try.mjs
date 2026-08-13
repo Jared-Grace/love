@@ -17,7 +17,7 @@ export function js_node_word_try(node) {
   if (not(call)) {
     return null;
   }
-  let inside = js_call_argument_at_try(node, "0");
+  let inside = js_call_argument_at_try(node, "1");
   let word = js_literal_value_try(inside);
   return word;
 }
