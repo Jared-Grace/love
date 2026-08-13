@@ -438,6 +438,7 @@ export function qa_gates() {
     text_replace_once_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
+    app_ceb_bible_gloss_misaligned_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
     storage_rules_gate_run,
