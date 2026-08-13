@@ -41,7 +41,7 @@ export function g_arc_answer_fields() {
         name: "chapter",
         description:
           "the chapter the answering passage came from, exactly as it is written first inside that passage brackets above.",
-        examples: ["ROM08", "ROM08"],
+        examples: ["", ""],
       },
       {
         name: "verse_numbers",
