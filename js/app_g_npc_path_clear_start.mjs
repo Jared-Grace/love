@@ -3,13 +3,11 @@ import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npc_move } from "./app_g_npc_move.mjs";
 import { app_g_day_guide_highlight } from "./app_g_day_guide_highlight.mjs";
 import { app_g_toast } from "./app_g_toast.mjs";
-import { g_npc_path_clear_tiles } from "./g_npc_path_clear_tiles.mjs";
+import { g_npc_path_clear_places } from "./g_npc_path_clear_places.mjs";
 import { g_coordinates_land } from "./g_coordinates_land.mjs";
 import { g_coordinates_land_index } from "./g_coordinates_land_index.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
-import { g_coordinates_offset } from "./g_coordinates_offset.mjs";
-import { g_coordinates_tile } from "./g_coordinates_tile.mjs";
 import { g_coordinates_distance_squared } from "./g_coordinates_distance_squared.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -32,7 +30,9 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
   let land_index = g_coordinates_land_index(coordinates);
-  let wanted = g_npc_path_clear_tiles(situation, player, land_index);
+  let places = g_npc_path_clear_places(situation, player, land_index);
+  let wanted = property_get(places, "people");
+  let gold = property_get(places, "tap");
   let wanted_index = g_coordinates_index(wanted);
   function wanted_is(npc) {
     let key = g_coordinates_key(npc);
@@ -101,9 +101,6 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
     app_g_npc_move(npc, tile, 0);
   }
   each_index(strays, evacuate);
-  let place = g_coordinates_tile(player);
-  let tap = property_get(situation, "tap");
-  let gold = g_coordinates_offset(place, tap);
   app_g_day_guide_highlight(div_map, gold);
   let what = property_get(situation, "what");
   ("the line stays up long enough to tap and watch, because what it names happens once and is over in about a second");

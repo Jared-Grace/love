@@ -22,7 +22,7 @@ export function g_coordinates_turn(offset, turns) {
       y: y_back,
     },
     {
-      x,
+      x: y,
       y: x_back,
     },
   ];

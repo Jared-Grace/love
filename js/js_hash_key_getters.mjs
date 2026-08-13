@@ -1,3 +1,5 @@
+import { js_hash_key_compared_nodes } from "./js_hash_key_compared_nodes.mjs";
+import { lists_combine } from "./lists_combine.mjs";
 import { js_key_getters_generic } from "./js_key_getters_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_hash_key_nodes } from "./js_hash_key_nodes.mjs";
@@ -8,8 +10,11 @@ export function js_hash_key_getters(ast) {
   "A call handed nothing is the whole shape looked for. Anything given arguments is working something out rather than handing back a word it holds, and there is no fixed word in it to freeze.";
   "Both ways the call can stand there count, and the second is the one the repo is actually written in. The pass that canonicalizes a file lifts a call out of the place it stood and gives it a line and a name of its own, so what is left where the field goes is a name. Read only the first way, this finds nothing on every routed file in the repo - which was measured, not guessed.";
   "All that is said here is which part of the address is meant. The judging is shared with the part after the question mark, which asks the identical question of a different walk.";
+  "Three shapes reach a field and all three are asked about here. Two of them hand the field to something; the third never hands it anywhere, and asks instead whether a word taken out of the address is this field. A page that pulls its own address apart is written only the third way, so a reading with two of them reports that page as naming no fields at all.";
   arguments_assert(arguments, 1);
-  let nodes = js_hash_key_nodes(ast);
+  let handed = js_hash_key_nodes(ast);
+  let compared = js_hash_key_compared_nodes(ast);
+  let nodes = lists_combine([handed, compared]);
   let names = js_key_getters_generic(ast, nodes);
   return names;
 }
