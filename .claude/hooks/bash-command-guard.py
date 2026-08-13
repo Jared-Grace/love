@@ -2158,7 +2158,7 @@ def is_safe_sandboxed_node_script(words):
     between runs. Each argument still has to be one plain word by the same
     character allowlist the script path uses, so nothing the tokenizer read
     as a single word can carry shell punctuation into the line."""
-    if len(words) != 8:
+    if len(words) < 8:
         return False
     for argument in words[8:]:
         if not SAFE_TEMP_SCRIPT_PATH_RE.match(argument):
