@@ -25,7 +25,10 @@ export async function app_shared_bible_button_back_to_reader(parent, context) {
   let verse_numbers = app_shared_bible_hash_verse_numbers(hash);
   if (remembered) {
     chapter_code = property_get(kept, "chapter_code");
-    verse_numbers = property_get(kept, "verse_numbers");
+    let unsaid = list_empty_is(verse_numbers);
+    if (unsaid) {
+      verse_numbers = property_get(kept, "verse_numbers");
+    }
   }
   let unchosen = text_empty_is(chapter_code);
   if (unchosen) {
