@@ -1,3 +1,4 @@
+import { g_openers_lines } from "./g_openers_lines.mjs";
 import { g_arc_prompt_arguments_assert } from "./g_arc_prompt_arguments_assert.mjs";
 import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
 import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
@@ -7,7 +8,6 @@ import { g_arc_prompt_becoming } from "./g_arc_prompt_becoming.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get } from "./property_get.mjs";
@@ -46,7 +46,7 @@ export function g_arc_prompt(
   let unbeliever_lines = g_openers_lines(list);
   ("The disciple openers arrive WITHOUT the Bible question door. A question is one turn with no floor, drawn from a pool that is subtracted from the chapter's matches before arcs are sized at all, so a question turn written into an arc is a turn already paid for elsewhere. The list not offering it is what keeps it out.");
   let list5 = g_openers_disciple_arc();
-  let openers_disciple = list_join_comma_space(list5);
+  let disciple_lines = g_openers_lines(list5);
   let s = g_generation_settings();
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
@@ -58,16 +58,16 @@ export function g_arc_prompt(
   let joined = list_join_empty([preaching, "."]);
   ("The chapter named here is the one the plant is STANDING IN, and a leader is handed more than it. The passages say which chapter each of them is from, so the line stays true as written - it says where the player is, not what the whole list is drawn from.");
   let joined9 = list_join_space(["Aim for", turn_target, "turns."]);
-  let unbeliever_openers = list_join_space([
-    "  openers for somebody who does not yet believe, one of:",
-    openers_unbeliever,
+  let unbeliever_block = list_join_newline(unbeliever_lines);
+  let joined6 = list_join_newline([
+    "openers for somebody who does not yet believe, one of:",
+    unbeliever_block,
   ]);
-  let joined6 = list_join_empty([unbeliever_openers, "."]);
-  let disciple_openers = list_join_space([
-    "  openers for somebody who already believes, one of:",
-    openers_disciple,
+  let disciple_block = list_join_newline(disciple_lines);
+  let joined7 = list_join_newline([
+    "openers for somebody who already believes, one of:",
+    disciple_block,
   ]);
-  let joined7 = list_join_empty([disciple_openers, "."]);
   let joined8 = list_join_space([
     "A conversation holds about",
     turns_mean,
@@ -147,10 +147,11 @@ export function g_arc_prompt(
     becoming,
     "",
     catch_up_first,
-    "Then the player chooses an opener. Here are the openers:",
+    "Then the player chooses an opener. Each turn is one opener: choosing an opener is choosing which turn gets played, so every turn names the opener it answers.",
+    "Here are the openers. Each line gives the word to name the opener by, then what the player says with it, then what kind of thing the person says back:",
     joined6,
     joined7,
-    "Then the person utters an answer to the player's opener. Then the player chooses the corresponding passage.",
+    "Then the person utters an answer to the player's opener - an answer of the kind that opener draws out. Then the player chooses the corresponding passage.",
     catch_up_blind,
     "",
     "GROUPING",
