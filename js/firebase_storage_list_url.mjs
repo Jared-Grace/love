@@ -1,3 +1,4 @@
+import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { firebase_storage_list_page_size } from "./firebase_storage_list_page_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { null_is } from "./null_is.mjs";

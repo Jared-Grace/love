@@ -1,3 +1,4 @@
+import { google_storage_host } from "./google_storage_host.mjs";
 import { firebase_bucket_file_get } from "./firebase_bucket_file_get.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -17,10 +18,8 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     settings,
   );
   await retry_standard(lambda);
-  log_keep(
-    firebase_upload_generic.name,
-    text_combine("Uploaded data to ", destination),
-  );
+  let message = text_combine("Uploaded data to ", destination);
+  log_keep(firebase_upload_generic.name, message);
   let host = google_storage_host();
   let url = text_combine_multiple([
     "https://",
@@ -30,7 +29,8 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     "/",
     file.name,
   ]);
-  log_keep(firebase_upload_generic.name, text_combine("Accessible at:", url));
+  let message2 = text_combine("Accessible at:", url);
+  log_keep(firebase_upload_generic.name, message2);
   async function lambda() {
     await file.save(buffer, merged);
   }

@@ -1,8 +1,8 @@
+import { repos_paths_memory_map_unordered } from "./repos_paths_memory_map_unordered.mjs";
 import { git_push_urls_missing } from "./git_push_urls_missing.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { repos_paths_map_unordered } from "./repos_paths_map_unordered.mjs";
 export async function git_push_urls_gate_run() {
   "Fails when a repository meant to write to more than one place has stopped writing to one of them.";
   "Where a push goes is kept beside a repository on the machine rather than inside it, so it travels with no copy and nothing about the work itself records it. That is the reason it is worth a gate rather than the reason it cannot have one: it can be lost by a fresh copy or by one careless change, and losing it is silent, because every push afterwards succeeds and only one place receives it.";
