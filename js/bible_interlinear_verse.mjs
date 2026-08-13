@@ -24,8 +24,8 @@ export async function bible_interlinear_verse(reference) {
   let marked_key = keys.marked;
   let base = bible_interlinear_words_base(rows, marked_key);
   function parts_of(row) {
-    let parts = bible_interlinear_word_parts(row, marked_key);
-    return parts;
+    let row_parts = bible_interlinear_word_parts(row, marked_key);
+    return row_parts;
   }
   function original_present_is(w) {
     let neq = not_equal(w.original, "");

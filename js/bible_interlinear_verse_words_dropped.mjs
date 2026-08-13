@@ -22,8 +22,8 @@ export function bible_interlinear_verse_words_dropped(verse_words) {
   function word_present_is(row) {
     let marked2 = marked_of(row);
     let word = bible_interlinear_word_base_text(marked2);
-    let present = not_equal(word, "");
-    return present;
+    let word_present = not_equal(word, "");
+    return word_present;
   }
   let present = verse_words.filter(word_present_is);
   let base = bible_interlinear_words_base(present, marked_key);
