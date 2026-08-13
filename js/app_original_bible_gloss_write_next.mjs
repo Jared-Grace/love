@@ -1,7 +1,7 @@
 import { list_map_index } from "./list_map_index.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
-import { bible_interlinear_chapters_words } from "./bible_interlinear_chapters_words.mjs";
+import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
