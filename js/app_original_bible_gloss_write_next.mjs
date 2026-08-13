@@ -1,3 +1,4 @@
+import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
@@ -6,7 +7,6 @@ import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_find } from "./list_find.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -43,12 +43,12 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   let originals = property_get(passage, "originals");
   function verse_read(verse_number, index) {
     let property_name = verse_number_key();
-    let verse = list_find_property(
+    let words = list_find_property_get(
       verses_interlinear,
       property_name,
       verse_number,
+      "words",
     );
-    let words = property_get(verse, "words");
     let original = originals[index];
     let r = {
       verse_number,
