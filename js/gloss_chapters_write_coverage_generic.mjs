@@ -24,18 +24,18 @@ export async function gloss_chapters_write_coverage_generic(fn, passages_read) {
       passages_read,
     );
     let done = property_get(coverage, "done");
-    let r = {
+    let chapter_row = {
       chapter_code,
       passages: property_get(coverage, "passages"),
       written: list_size(done),
       missing: property_get(coverage, "missing"),
     };
-    return r;
+    return chapter_row;
   }
   let all = await list_map_async(chapter_codes, chapter_read);
   function waiting_is(chapter) {
-    let waiting = property_list_empty_not_is(chapter, "missing");
-    return waiting;
+    let chapter_waiting = property_list_empty_not_is(chapter, "missing");
+    return chapter_waiting;
   }
   let waiting = list_filter(all, waiting_is);
   let r = {
