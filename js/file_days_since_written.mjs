@@ -1,3 +1,4 @@
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_stamp } from "./file_stamp.mjs";
 import { null_is } from "./null_is.mjs";
@@ -16,7 +17,7 @@ export async function file_days_since_written(f_path) {
     return null;
   }
   let written = property_get(stamp, "written");
-  let now = Date.now();
+  let now = date_now_milliseconds();
   let ms = subtract(now, written);
   let hours = date_ms_to_hours(ms);
   let days = divide(hours, 24);
