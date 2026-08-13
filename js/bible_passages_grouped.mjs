@@ -1,5 +1,5 @@
 import { ebible_folders_chapters_codes_to_verses } from "./ebible_folders_chapters_codes_to_verses.mjs";
-import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
+import { bible_interlinear_chapters_cache } from "./bible_interlinear_chapters_cache.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_multiple_async } from "./each_multiple_async.mjs";
@@ -25,7 +25,7 @@ export async function bible_passages_grouped(bible_folders, chapters_codes) {
     chapters_codes,
     bible_folders,
   );
-  let chapters_interlinear = await bible_interlinear_chapters();
+  let chapters_interlinear = await bible_interlinear_chapters_cache();
   async function adder(la) {
     let originals = null;
     let verse_numbers = null;
