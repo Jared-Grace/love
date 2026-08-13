@@ -9,6 +9,7 @@ export function app_code_hash_field_lesson() {
     key: app_code_lesson_hash_key(),
     name: "lesson",
     list_is: false,
+    number_is: false,
     valid_is: app_code_lesson_id_known_is,
     suggestions: app_code_lesson_id_suggestions,
     label: app_code_lesson_id_label,
