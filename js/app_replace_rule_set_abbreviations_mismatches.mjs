@@ -40,8 +40,10 @@ export function app_replace_rule_set_abbreviations_mismatches(rs) {
       let mapped = list_map(symbols, lambda);
       return mapped;
     }
-    list_add_multiple(mismatches, named(unseen, "unseen"));
-    list_add_multiple(mismatches, named(unexplained, "unexplained"));
+    let items = named(unseen, "unseen");
+    list_add_multiple(mismatches, items);
+    let items2 = named(unexplained, "unexplained");
+    list_add_multiple(mismatches, items2);
   }
   return mismatches;
 }

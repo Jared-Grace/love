@@ -11,7 +11,7 @@ import { list_filter } from "./list_filter.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export async function g_leader_chapter_codes(chapter_code) {
-  "the written chapters a leader arc for this chapter may draw on: its book's reach, in canon order, stopping at this chapter";
+  "the written chapters a leader arc for this chapter may draw on: the nearest ones behind it, in canon order, wide enough that no passage has to answer more than about six times";
   "A leader answers 216 times over one plant, which is far more than one chapter of preaching can carry without repeating itself - so the elder draws on the whole reach of the book the plant stands in, and the reach is what makes a small book like Philemon answerable at all.";
   "IT STOPS AT THIS CHAPTER because the player has not met what comes after it. That cap costs nothing, because every reach borrows backward only - a rule the reaches gate enforces, and the reason it exists.";
   "ONLY WRITTEN CHAPTERS COUNT. The reach names books, not preaching, and most of the canon has none written yet; an unwritten chapter in the list would be a passage set nothing can be drawn from. So the reach is asked what it may draw on and the write store is asked what there is, and the answer is the overlap.";

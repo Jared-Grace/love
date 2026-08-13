@@ -10,8 +10,8 @@ import { html_cycle_bold } from "./html_cycle_bold.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_replace_rule_set_abbreviations(rs, rules_used, parent) {
-  let exists2 = property_exists(rs, "abbreviations");
-  if (exists2) {
+  let exists = property_exists(rs, "abbreviations");
+  if (exists) {
     ("only what this goal's rules actually spell is explained, and the same reading of what those rules spell is what the gate measures the explanations against - written twice, one of them could quietly start showing what the other had stopped checking");
     let unique = app_replace_rules_symbols(rules_used);
     app_shared_text_body(parent, "Abbreviations");
@@ -21,8 +21,8 @@ export function app_replace_rule_set_abbreviations(rs, rules_used, parent) {
     list_sort_text_property(list, "key");
     function lambda6(kv) {
       let key = property_get(kv, "key");
-      let includes2 = list_includes(unique, key);
-      if (includes2) {
+      let includes = list_includes(unique, key);
+      if (includes) {
         let concated = list_concat_property(["", key, ": ", ""], kv, "value");
         let component2 = html_element(component, "li");
         html_cycle_bold(component2, concated);
