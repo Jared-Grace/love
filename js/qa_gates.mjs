@@ -1,3 +1,4 @@
+import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
 import { app_replace_abbreviations_disagreeing_gate_run } from "./app_replace_abbreviations_disagreeing_gate_run.mjs";
 import { gloss_back_references_gate_run } from "./gloss_back_references_gate_run.mjs";
 import { text_split_comma_nested_cases_gate_run } from "./text_split_comma_nested_cases_gate_run.mjs";
@@ -414,6 +415,7 @@ export function qa_gates() {
     storage_function_folders_orphaned_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
+    instructions_commands_gate_run,
     app_code_lessons_rights_space_gate_run,
     app_code_lesson_expression_which_part_first_gate_run,
     functions_assert_json_get_lambda_gate_run,
