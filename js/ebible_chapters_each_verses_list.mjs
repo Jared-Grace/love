@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { list_any_starts_with } from "./list_any_starts_with.mjs";
@@ -12,22 +11,12 @@ export async function ebible_chapters_each_verses_list(
   bible_folder,
   each_chapter,
 ) {
+  "Every chapter a bible names, each with its verses.";
+  "Four chapters were once passed over here by name, because their pages were missing while the book index still linked them. That is a fault in a download rather than in a bible, and the remedy is to fetch the version again - hausa Daniel 14 was linked but never shipped, and ebible.org has since dropped the link. A chapter skipped by name is worse than the error it hides: the list goes stale in silence, and three of those four named versions this repo no longer ships at all.";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(books, "book_code");
   await each_async(chapter_codes, lambda);
   async function lambda(chapter_code) {
-    if (equal(bible_folder, "hausa") && equal(chapter_code, "DAN14")) {
-      return;
-    }
-    if (equal(bible_folder, "englxxup") && equal(chapter_code, "PRO30")) {
-      return;
-    }
-    if (equal(bible_folder, "engnna") && equal(chapter_code, "GEN05")) {
-      return;
-    }
-    if (equal(bible_folder, "engojb") && equal(chapter_code, "MAL04")) {
-      return;
-    }
     log_keep(ebible_chapters_each_verses_list.name, {
       bible_folder,
       chapter_code,
