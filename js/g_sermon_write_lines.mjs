@@ -13,11 +13,11 @@ export async function g_sermon_write_lines(chapter_code, key, lines) {
   }
   let passage = passages.find(lambda);
   let verse_numbers = property_get(passage, "verse_numbers");
-  let english = property_get(passage, "text");
+  let scripture = property_get(passage, "text");
   let r = await g_sermon_write_publish(
     chapter_code,
     verse_numbers,
-    english,
+    scripture,
     lines,
   );
   return r;
