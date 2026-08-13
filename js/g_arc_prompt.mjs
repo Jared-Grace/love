@@ -117,7 +117,7 @@ export function g_arc_prompt(
     "So do not try to show every step of a person changing. Choose significant changes - for example: the day they finally 'let go,' the day they finally asked something.",
     "You are free to open each conversation with them further on than the player left them. The npc should not say or imply how long it has been, and you do not know; when the player starts a new game, the game decides when conversations are scheduled (and unknown right now how many actual days game days represent).",
     "",
-    "Stop when the chapter has nothing left that honestly answers them.",
+    "If needed, it is okay to reuse passages in later turns, just shouldn't be forced.",
     "Never pad. Do not add a question their trouble would not make them ask.",
     "",
     "WHAT NOT TO WRITE",
