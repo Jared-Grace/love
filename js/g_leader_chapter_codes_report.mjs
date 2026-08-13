@@ -1,3 +1,4 @@
+import { list_sort_text } from "./list_sort_text.mjs";
 import { g_generation_plan } from "./g_generation_plan.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_sermon_chapter_codes_all } from "./g_sermon_chapter_codes_all.mjs";
@@ -14,7 +15,7 @@ export async function g_leader_chapter_codes_report() {
   let plan = g_generation_plan();
   let turns = property_get(plan, "leader_turns");
   let codes = await g_sermon_chapter_codes_all();
-  let ordered = list_sort(codes);
+  let ordered = list_sort_text(codes);
   let rows = [];
   let over = [];
   for (let code of ordered) {
