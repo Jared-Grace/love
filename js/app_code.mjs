@@ -1,3 +1,5 @@
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { app_code_hash_unknown_page_shown_is } from "./app_code_hash_unknown_page_shown_is.mjs";
 import { app_code_screens } from "./app_code_screens.mjs";
 import { html_margin_0_context_root } from "./html_margin_0_context_root.mjs";
 import { app_shared_initialize } from "./app_shared_initialize.mjs";
@@ -7,6 +9,12 @@ import { app_code_after_refresh } from "./app_code_after_refresh.mjs";
 import { app_code_buttons_cap_style } from "./app_code_buttons_cap_style.mjs";
 import { object_merge } from "./object_merge.mjs";
 export async function app_code(context) {
+  let hash = html_hash_object_get();
+  ("the link is read back to the reader before any of it is believed, so a lesson or a screen that does not exist is answered rather than written into this tab's memory on the way to a page that opens somewhere nobody asked for");
+  let unknown_shown = app_code_hash_unknown_page_shown_is(context, hash);
+  if (unknown_shown) {
+    return;
+  }
   let app_fn = app_code;
   html_margin_0_context_root(context);
   let screens = app_code_screens();

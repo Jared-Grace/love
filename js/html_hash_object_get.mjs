@@ -1,3 +1,4 @@
+import { text_replace } from "./text_replace.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { html_hash_symbol } from "./html_hash_symbol.mjs";
 import { object_adder } from "./object_adder.mjs";

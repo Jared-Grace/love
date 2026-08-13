@@ -1,3 +1,4 @@
+import { curl_read_hosts } from "./curl_read_hosts.mjs";
 import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -41,6 +42,15 @@ export function python_mirrors() {
       constant: "DENIED_DISPATCHER_FUNCTIONS",
       path: ".claude/hooks/denied_dispatcher_functions.py",
       source: functions_command_seams,
+    },
+    {
+      constant: "CURL_READ_HOSTS",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        curl_read_hosts.name,
+        ".py",
+      ]),
+      source: curl_read_hosts,
     },
   ];
   return mirrors;
