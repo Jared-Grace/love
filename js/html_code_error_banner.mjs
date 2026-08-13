@@ -1,3 +1,5 @@
+import { server_url_api } from "./server_url_api.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { html_error_banner_copy_button_style } from "./html_error_banner_copy_button_style.mjs";
 import { html_code_style_text } from "./html_code_style_text.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
@@ -10,6 +12,11 @@ export function html_code_error_banner() {
   "It is written as page text rather than as one of this repo's functions because it has to be standing BEFORE the app's own script runs - a handler installed by code that never got to run catches nothing, which is the exact case it exists for.";
   "A message nobody can carry away is half an answer. Reading a stack trace off a phone and typing it back out by hand is the slowest part of testing there, so the band carries a copy control - wearing the same words as every other copy control in these apps, asked for rather than written out here.";
   "The clipboard is asked for in two ways because on a phone the modern way is not there at all: these pages are reached over plain http, where a browser hands out no clipboard, so the older way is the ordinary path here rather than a rare one. If both are refused the message is selected instead, which leaves a person one press and hold from the same result.";
+  ("The same message is also sent to the dev server, which writes it down. Showing it was only half the answer: it still needed a person to read a stack trace off a phone and type it back out, and the one time that mattered - a quiz that threw at the learner on every correct press - that person was the learner. Now the error arrives without anybody carrying it, and whoever comes to fix it asks ",
+    fn_name("dev_error_log_recent"),
+    " instead of asking them.");
+  ("The address of the page goes with it, because these apps put what is on the screen into the address, so it names the lesson and the quiz that were showing.");
+  ("The send is deliberately deaf to its own outcome: it is running inside the handler for uncaught errors, so a failed send that was allowed to reject would be caught here and sent again, and again. It is also only ever reached on a /dev/ path, where the server that answers is this machine's own.");
   let attributes_none = {};
   let style =
     "position:fixed;left:0;right:0;bottom:0;max-height:60vh;overflow:auto;margin:0;padding:1rem;z-index:2147483647;background:#ffdddd;color:#900;font:0.9rem monospace;white-space:pre-wrap;border-top:0.25rem solid #900";
@@ -18,6 +25,8 @@ export function html_code_error_banner() {
   let copy_text = html_button_copy_text();
   let copied_text = html_error_banner_copied_text();
   let manual_text = html_error_banner_copy_manual_text();
+  let api_url = server_url_api();
+  let add_name = fn_name("dev_error_log_add");
   let code = text_combine_multiple([
     "if (location.pathname.indexOf('/dev/') !== -1) { ",
     "var dev_error_words = null; var dev_error_button = null; ",
@@ -57,7 +66,17 @@ export function html_code_error_banner() {
     "dev_error_words = document.createElement('span'); ",
     "box.appendChild(dev_error_button); box.appendChild(dev_error_words); ",
     "document.body.appendChild(box); }; ",
+    "var dev_error_nothing = function () {}; ",
+    "var dev_error_send = function (kind, message) { ",
+    "var body = JSON.stringify({ f_name: '",
+    add_name,
+    "', args: [kind, String(message), location.href] }); ",
+    "var asked = fetch('",
+    api_url,
+    "', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body }); ",
+    "asked.then(dev_error_nothing, dev_error_nothing); }; ",
     "var dev_error_show = function (kind, message) { ",
+    "dev_error_send(kind, message); ",
     "if (!dev_error_words) { dev_error_start(); } ",
     "dev_error_words.textContent = dev_error_words.textContent + kind + ': ' + message + '\\n'; ",
     "dev_error_said('",
