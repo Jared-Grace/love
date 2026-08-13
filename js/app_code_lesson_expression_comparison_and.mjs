@@ -99,15 +99,17 @@ export function app_code_lesson_expression_comparison_and() {
       " before ",
       "&&",
     ]);
+    ("Each comparison named beside its own value. That was singular standing for a pair, and worse, it left which of the two came out false unsaid - the card above can say Both are true because the two agree there and nothing is lost by not separating them, but here they differ, and the difference is the whole example. A learner reading That is true and false has no way to tell whether 7 > 2 was the false one.");
     html_div_cycle_code(no, [
-      "That is ",
+      "",
+      "7 > 2",
+      " is ",
       "true",
       " and ",
-      "false",
-      ", so ",
-      "true && false",
+      "5 > 8",
       " is ",
       "false",
     ]);
+    html_div_cycle_code(no, ["So ", "true && false", " is ", "false"]);
   }
 }
