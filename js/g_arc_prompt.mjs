@@ -1,3 +1,5 @@
+import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
+import { g_arc_answer_field_lines } from "./g_arc_answer_field_lines.mjs";
 import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
 import { g_arc_prompt_becoming } from "./g_arc_prompt_becoming.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -64,6 +66,17 @@ export function g_arc_prompt(
     "turns.",
   ]);
   let becoming = g_arc_prompt_becoming(leader);
+  ("The field list and the answer example are BOTH rendered from one source, so a renamed field cannot be described here and missing from the shape at the end. A prompt never fails, so that disagreement would have gone out unnoticed on every call.");
+  let fields = g_arc_answer_fields();
+  let fields2 = property_get(fields, "person");
+  let person_lines = g_arc_answer_field_lines(fields2);
+  let person_fields = list_join_newline(person_lines);
+  let fields3 = property_get(fields, "conversation");
+  let conversation_lines = g_arc_answer_field_lines(fields3);
+  let conversation_fields = list_join_newline(conversation_lines);
+  let fields4 = property_get(fields, "turn");
+  let turn_lines = g_arc_answer_field_lines(fields4);
+  let turn_fields = list_join_newline(turn_lines);
   let example = g_arc_answer_example();
   let json = json_format_to(profile);
   let lines = [
@@ -98,24 +111,22 @@ export function g_arc_prompt(
     "Ask: Ideally, what passages should I choose for equal usage? Then ask: what overall arc flow, story and summary for this person is needed to choose these passages?",
     "",
     "You should choose this about the person, once:",
-    "  occupation - their work, consistent with the JSON above.",
-    "  trouble - what is wrong, briefly, in their own words.",
-    "  summary - the whole arc in a sentence: who they are and where they end up.",
+    person_fields,
     "",
     "And this about each conversation:",
-    "  opener - on conversations after the first, what the person says at the beginning. It catches the player up on where this person has got to, said naturally rather than as a forced summary.",
+    conversation_fields,
     "",
     "And this about each turn:",
-    "  before - what the person says at the beginning of a turn.",
-    "  verse_numbers - the verse numbers of the passage that answer the before.",
-    "  after - what the person says after the player chooses the correct passage.",
+    turn_fields,
     "",
     becoming,
     "",
-    "In a conversation, the player first chooses an opener. Here are the openers:",
+    "On conversations after the first, the person speaks their catch_up before anything else.",
+    "Then the player chooses an opener. Here are the openers:",
     joined6,
     joined7,
     "Then the person utters an answer to the player's opener. Then the player chooses the corresponding passage.",
+    "The player picks the opener while playing, so the catch_up cannot answer it. Write the catch_up as something the person would say whichever opener came next.",
     "",
     "GROUPING",
     "Group the turns into conversations.",
