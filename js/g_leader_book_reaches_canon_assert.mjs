@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_leader_book_reaches } from "./g_leader_book_reaches.mjs";
@@ -34,8 +35,7 @@ export function g_leader_book_reaches_canon_assert() {
     let indexes = [];
     for (let book of reach) {
       let index = list_index_of(canon, book);
-      let b = equal(index, -1);
-      let found = not(b);
+      let found = equal_not(index, -1);
       if (found) {
         list_add(indexes, index);
         continue;
@@ -61,11 +61,12 @@ export function g_leader_book_reaches_canon_assert() {
     }
   }
   let clean = list_empty_is(problems);
+  let f_name = fn_name("g_leader_book_reaches");
   assert_json(clean, {
     problems,
     hint: text_combine_multiple([
       "each entry of ",
-      fn_name("g_leader_book_reaches"),
+      f_name,
       " is one book followed by the neighbours it may borrow arcs from; every code must be a canon book, the entry must cover an unbroken run of the canon, and each book may be the first code of only one entry",
     ]),
   });
