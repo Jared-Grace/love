@@ -1,3 +1,8 @@
+import { g_leader_passages_least } from "./g_leader_passages_least.mjs";
+import { list_reverse } from "./list_reverse.mjs";
+import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
+import { add } from "./add.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { g_leader_book_reach } from "./g_leader_book_reach.mjs";
 import { g_sermon_chapter_codes_all } from "./g_sermon_chapter_codes_all.mjs";
@@ -15,7 +20,9 @@ export async function g_leader_chapter_codes(chapter_code) {
   "A leader answers 216 times over one plant, which is far more than one chapter of preaching can carry without repeating itself - so the elder draws on the whole reach of the book the plant stands in, and the reach is what makes a small book like Philemon answerable at all.";
   "IT STOPS AT THIS CHAPTER because the player has not met what comes after it. That cap costs nothing, because every reach borrows backward only - a rule the reaches gate enforces, and the reason it exists.";
   "ONLY WRITTEN CHAPTERS COUNT. The reach names books, not preaching, and most of the canon has none written yet; an unwritten chapter in the list would be a passage set nothing can be drawn from. So the reach is asked what it may draw on and the write store is asked what there is, and the answer is the overlap.";
-  "IT WIDENS EVERY BOOK, not only the four that borrow. Sixty-two books reach just themselves, and for those this still answers with the written chapters of that book up to this one rather than the single chapter that used to be asked for - which is the same fix for the same reason. One chapter of Romans is about twenty passages against 216 leader turns, so an elder standing on it repeats each about eleven times whether or not the book is small. The four reaches are the case where widening within the book is not enough.";
+  "IT WIDENS EVERY BOOK, not only the four that borrow. Sixty-two books reach just themselves, and for those this still answers with more than the single chapter that used to be asked for. One chapter of Romans is about twenty passages against 216 leader turns, so an elder standing on it repeats each about eleven times whether or not the book is small. The four reaches are the case where widening within the book is not enough.";
+  "IT STOPS GROWING once it is wide enough, and it grows from THIS CHAPTER BACKWARD rather than from the start of the reach. Two costs bind at opposite ends and one rule settles both. Repetition binds from below - fewer than 36 passages and an elder answers one more than six times - so the pool must reach 36. Tokens bind from above: the whole reach of Romans 16 is 377 passages and a 60 KB prompt, which buys variety past the point anyone can measure. And relevance picks WHICH chapters to drop: the plant is standing in this chapter, so the text just behind it is the text the player is living in, while Romans 1 is fifteen plants ago. Nearest-first satisfies all three at once.";
+  "AN OVERSHOOT IS EXPECTED. Whole chapters are indivisible, so the one that crosses 36 is taken entire and the pool usually lands nearer 50. Undershoot is possible too and is not a defect this can fix - JUD01 has nothing written behind it, so it answers with 19 passages and 11 uses, and only a written sermon changes that.";
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let reach = g_leader_book_reach(book_code);
   let written = await g_sermon_chapter_codes_all();
