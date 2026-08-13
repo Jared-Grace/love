@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_back_references_baseline_growth_assert } from "./gloss_back_references_baseline_growth_assert.mjs";
 import { gloss_back_references_baseline_path } from "./gloss_back_references_baseline_path.mjs";
 import { gloss_back_references_measure } from "./gloss_back_references_measure.mjs";
@@ -25,8 +25,7 @@ export async function gloss_back_references_baseline_store_write(store) {
   let recorded = await baseline_known_read(path);
   list_find_property(recorded, "store", store);
   function entry_bank(entry) {
-    let name = property_get(entry, "store");
-    let named = equal(name, store);
+    let named = property_equals(entry, "store", store);
     if (named) {
       return counted;
     }
