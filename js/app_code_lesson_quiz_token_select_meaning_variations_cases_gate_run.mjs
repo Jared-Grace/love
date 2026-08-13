@@ -1,6 +1,6 @@
 import { app_code_lesson_quiz_token_select_meaning_variations_cases } from "./app_code_lesson_quiz_token_select_meaning_variations_cases.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_token_select_value_variations } from "./app_code_lesson_quiz_token_select_value_variations.mjs";
+import { app_code_lesson_quiz_token_select_meaning_variations } from "./app_code_lesson_quiz_token_select_meaning_variations.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 export function app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run() {
   "QA gate: every line the corpus writes down is offered exactly the orderings it says.";
@@ -9,7 +9,7 @@ export function app_code_lesson_quiz_token_select_meaning_variations_cases_gate_
   let cases = app_code_lesson_quiz_token_select_meaning_variations_cases();
   function answer(c) {
     let code = property_get(c, "code");
-    let variations = app_code_lesson_quiz_token_select_value_variations(code);
+    let variations = app_code_lesson_quiz_token_select_meaning_variations(code);
     return variations;
   }
   let r = cases_gate_run_generic(
