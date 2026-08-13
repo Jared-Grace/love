@@ -11,7 +11,7 @@ export function app_replace_rule_set_exponent_part_abbreviations(
       "E",
       ", the letter that marks an exponent",
     ],
-    ex: ["", "ex", "ponent"],
+    ep: ["", "e", "x", "p", "onent"],
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   });
