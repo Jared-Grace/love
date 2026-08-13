@@ -114,7 +114,7 @@ export function g_arc_prompt(
     "",
     "What you write is a SUMMARY of this life, never a transcript of it. John 21 verse 25 says the world could not hold the books if everything Jesus did were written down, and the Gospels are short compared to the years they cover. So write the same way.",
     "The turns are the few exchanges worth showing out of many more that happened. Between two conversations this person has gone on living, and may have changed in ways the player did not see playing the game.",
-    "So do not try to show every step of a person changing. Choose the hinges - the day the thing they were holding on to gave way, the day they asked something they would not have asked before.",
+    "So do not try to show every step of a person changing. Choose significant changes - for example: the day the thing they were holding on to gave way, the day they asked something they would not have asked before.",
     "Open each conversation with them further on than the player left them. You cannot say how long it has been, and you do not know; the player works that out from how far they have moved.",
     "",
     "Stop when the chapter has nothing left that honestly answers them.",
