@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen_or } from "./app_shared_bible_hash_to_languages_chosen_or.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
@@ -14,9 +15,6 @@ import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { text_combine } from "./text_combine.mjs";
