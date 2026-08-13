@@ -49,6 +49,10 @@ export function example_files_command_cores() {
       name: fn_name("js_selects_functionize"),
       core: js_selects_functionize_dir,
     },
+    {
+      name: fn_name("app_shared_prod_snapshot"),
+      core: app_shared_prod_snapshot_folder,
+    },
   ];
   return cores;
 }
