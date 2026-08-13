@@ -1,7 +1,7 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 import { list_first } from "./list_first.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -18,8 +18,7 @@ export function app_next_bible_button(parent, run) {
   "The way from a verse somebody was sent into the bible it came out of, opened at the same place and in the same languages, with the verses that were shown here already picked out there.";
   "This page hands the reading over rather than growing a reader of its own. Two pages that both show scripture are two places to mend everything about showing scripture, and somebody who wants to keep reading is better served by the one that was built for it.";
   "It goes there in the tab that is already open, so the browser's own back button is the way back to what they were sent - a second tab is one more thing to close, and on a phone that is the expensive kind of one more thing.";
-  let run_first = list_first(run);
-  let chapter_code = property_get(run_first, "chapter_code");
+  let chapter_code = list_first_property(run, "chapter_code");
   ("Only the verses lying in the chapter the reading starts in are named, because the reader shows one chapter at a time. A passage carried on into the next chapter opens at the chapter it began in, which is where somebody reading it was.");
   let same = list_filter_property(run, "chapter_code", chapter_code);
   let property_name = verse_number_key();

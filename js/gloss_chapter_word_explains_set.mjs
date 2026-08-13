@@ -13,8 +13,9 @@ export async function gloss_chapter_word_explains_set(
   chapter_code,
   fn,
   explains,
+  lambda$explain,
 ) {
-  "Give every explanation in one authored gloss chapter that is about a named word the wording written for that word, and answer with the words it rewrote.";
+  "Give every explanation in one authored gloss chapter that is about a named word, and that the caller is willing to write over, the wording written for that word - answering with the words it rewrote.";
   "$plain chapter_code";
   "the code is a chapter's name, like JAS02, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "A chapter nobody has authored yet answers with nothing, so a sweep crosses the gaps without being told where they are. A chapter holding none of the words is left on disk exactly as it was found, rather than being written back out unchanged - a store this size is read by other people at the same time, and a file whose bytes did not need to move should not move.";
@@ -28,7 +29,11 @@ export async function gloss_chapter_word_explains_set(
   let passages = property_get(chapter, "passages");
   let changes = [];
   function passage_set(passage) {
-    let changed = gloss_passage_word_explains_set(passage, explains);
+    let changed = gloss_passage_word_explains_set(
+      passage,
+      explains,
+      lambda$explain,
+    );
     list_add_multiple(changes, changed);
   }
   each(passages, passage_set);
