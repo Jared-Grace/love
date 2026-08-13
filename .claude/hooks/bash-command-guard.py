@@ -2189,6 +2189,77 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
     return found_command
 
 
+# A loop list word that may be substituted into the body. Deliberately the
+# same plain charset _literal_var_map accepts for an assignment value: it
+# admits a function name, a path, a chapter code - and excludes every
+# character that could make the substituted word into something other than
+# one plain word. `$` would be a further expansion, `*`/`?`/`[` a glob the
+# shell expands against a disk this hook cannot see, and the two sentinel
+# characters are how the tokenizer spells a separator and a substitution.
+LOOP_LIST_WORD_RE = re.compile(r"^[A-Za-z0-9_./+@:%-]+$")
+
+# More words than anyone writes in a loop by hand, and low enough that a
+# generated list cannot turn one hook run into thousands of rule lookups.
+LOOP_EXPANSION_LIMIT = 64
+
+
+def for_loop_expansions(var, list_words, body):
+    """The loop body once per word of a literal loop list, with the loop
+    variable replaced by that word - or None when the list is not literal
+    enough to do that faithfully.
+
+    This is an identity, not a widening. `for g in a b; do node
+    scripts/ai.mjs $g; done` runs exactly the two commands the semicolon
+    chain `node scripts/ai.mjs a; node scripts/ai.mjs b` runs, and that
+    chain is already approved when both names are. Checking the body
+    unexpanded could never see either name: the verb reads as `node
+    scripts/ai.mjs $g`, which no rule names and no rule could name, so a
+    loop over granted functions prompted no matter how many of them were
+    granted. Measured at 118 interruptions over twenty days, the largest
+    single cost in the record - and every one of them for a command whose
+    written-out form needed no approval at all.
+
+    Nothing is trusted here that was not trusted before. Each expansion goes
+    back through check_statements, so a word that produces an ungranted verb
+    refuses the whole loop exactly as it would on its own line.
+
+    The variable must still mean the same thing throughout the body, so a
+    body that rebinds it is refused rather than expanded. Substituting the
+    outer word into an inner loop that binds the same name would judge a
+    command the shell never runs, and in the direction that matters: an
+    inner loop over an ungranted verb would be checked as the outer word's
+    granted one. Rebinding is rare and the refusal costs only the prompt
+    that was already being paid."""
+    if not ASSIGN_RE.match(var + "="):
+        return None
+    if not list_words or len(list_words) > LOOP_EXPANSION_LIMIT:
+        return None
+    for word in list_words:
+        if not LOOP_LIST_WORD_RE.match(word):
+            return None
+    for index, token in enumerate(body):
+        if token == "read":
+            return None
+        if token == var and index > 0 and body[index - 1] == "for":
+            return None
+        assigned = ASSIGN_RE.match(token)
+        if assigned and assigned.group(1) == var:
+            return None
+    # `$gg` is the variable `gg`, not `$g` followed by a letter, so the plain
+    # form only matches when no name character follows it. Getting this wrong
+    # would substitute into a name that means something else.
+    plain = re.compile(r"\$" + re.escape(var) + r"(?![A-Za-z0-9_])")
+    braced = "${" + var + "}"
+    expansions = []
+    for word in list_words:
+        one = []
+        for token in body:
+            substituted = plain.sub(word, token.replace(braced, word))
+            one.append(substituted)
+        expansions.append(one)
+    return expansions
+
+
 def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     """Validate a single `for VAR in LIST ; do BODY done` loop. The body may
     itself contain nested for/if blocks (and break/continue), so it's handed
@@ -2225,7 +2296,14 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
         raise Unsupported("malformed for-loop: missing 'done'")
     if i + 1 != len(tokens):
         raise Unsupported("trailing content after 'done'")
-    return check_statements(tokens[body_start:i], safe_verbs, safe_exact_commands)
+    body = tokens[body_start:i]
+    expansions = for_loop_expansions(tokens[1], list_words, body)
+    if expansions is not None:
+        for one in expansions:
+            if not check_statements(one, safe_verbs, safe_exact_commands):
+                return False
+        return True
+    return check_statements(body, safe_verbs, safe_exact_commands)
 
 
 def check_while(tokens, safe_verbs, safe_exact_commands):
