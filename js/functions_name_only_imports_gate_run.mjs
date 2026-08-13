@@ -20,11 +20,6 @@ export async function functions_name_only_imports_gate_run() {
     advice,
     offenders,
   };
-  list_empty_is_assert_json(names, {
-    hint,
-  });
-  let r = {
-    offenders: 0,
-  };
+  let r = qa_gate_clean_assert(names, hint);
   return r;
 }
