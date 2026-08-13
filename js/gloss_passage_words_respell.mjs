@@ -1,3 +1,5 @@
+import { list_slice_count } from "./list_slice_count.mjs";
+import { text_words_replaced } from "./text_words_replaced.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
@@ -16,7 +18,7 @@ export function gloss_passage_words_respell(passage, words_read) {
   "Give every explanation in one passage the passage's own spelling of the word it is about, and answer with the spellings it changed.";
   "The word an explanation names is written out beside the explanation rather than pointed at, so it can be spelt differently from the word it sits under - a letter doubled, a letter dropped, an accent nobody else wrote. The reader is then shown a word the passage does not contain, next to an explanation that is otherwise standing in exactly the right place.";
   "It refuses the whole passage unless the words named come to the same number as the words there are. That is the difference between a misspelling and a real gap: where a word was never explained at all, every explanation after it is about a different word, and writing the passage's spellings over them would not correct anything - it would paint the fault over and make it unfindable.";
-  "An explanation naming more than one word is left exactly as it is, because the punctuation inside a phrase is not recoverable from the words alone and rewriting it would cost more than the misspelling does.";
+  "An explanation naming several words at once is corrected the same way, word by word: only the runs of letters are swapped, so the hyphen inside a word and the comma at the end of one stay exactly where they were written.";
   let entries = gloss_passage_entries(passage);
   if (list_empty_is(entries)) {
     let none = [];
@@ -46,14 +48,10 @@ export function gloss_passage_words_respell(passage, words_read) {
     let word = property_get(entry, word_key);
     let words = text_punctuation_split(word);
     let size = list_size(words);
-    let after = written[at];
+    let taken = list_slice_count(written, at, size);
     at = add(at, size);
-    let single = equal(size, 1);
-    if (not(single)) {
-      return;
-    }
-    let before = words[0];
-    let same = equal(before, after);
+    let after = text_words_replaced(word, taken);
+    let same = equal(word, after);
     if (same) {
       return;
     }
