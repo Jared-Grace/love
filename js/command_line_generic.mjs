@@ -1,6 +1,6 @@
 import { command_line_generic_parse_command } from "./command_line_generic_parse_command.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { file_temp_json_open } from "./file_temp_json_open.mjs";
+import { file_temp_value_open } from "./file_temp_value_open.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "./property_delete_if_exists_fn.mjs";
 import { command_line_generic_code_ignore } from "./command_line_generic_code_ignore.mjs";
@@ -58,7 +58,7 @@ export async function command_line_generic(command, extra) {
         ]);
         reject(new Error(combined));
         if (false) {
-          await file_temp_json_open({
+          await file_temp_value_open({
             code,
             stdout: printed,
             stderr,
