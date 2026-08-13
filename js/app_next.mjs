@@ -1,12 +1,7 @@
-import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { app_next_ways_onward } from "./app_next_ways_onward.mjs";
+import { app_next_reading_column } from "./app_next_reading_column.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
-import { html_margin_0 } from "./html_margin_0.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
-import { html_centered } from "./html_centered.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { app_next_bible_button } from "./app_next_bible_button.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
@@ -15,7 +10,6 @@ import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_f
 import { app_shared_bible_passage_reach_maximum } from "./app_shared_bible_passage_reach_maximum.mjs";
 import { ebible_index_flat_passage_run } from "./ebible_index_flat_passage_run.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_next_passage_more_button } from "./app_next_passage_more_button.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { app_shared_bible_hash_to_verses_count } from "./app_shared_bible_hash_to_verses_count.mjs";
 import { ebible_index_flat_verses_run } from "./ebible_index_flat_verses_run.mjs";
@@ -50,14 +44,7 @@ export async function app_next(context) {
     return;
   }
   ("The page is dressed the way the bible reader is dressed: the same text size to start from on a phone, the same face, and on a wide screen the same reading column down the middle rather than a line of text run edge to edge. A verse somebody was sent should look like the bible it came out of, and every one of those is a thing the reader already knows how to do - so they are asked for by name here rather than spelled again.");
-  let root = app_shared_mobile_default_font_size(context);
-  html_margin_0(root);
-  ("The column is held by a box made fresh for this page rather than by the page root, which outlives it - the reason is written where the padding is done.");
-  let content = html_div(root);
-  app_shared_content_column_pad(content);
-  ("The reading is held off the top and bottom edges by the same gap that holds it off the sides, so the first line is not sitting against the frame of the window. The reader has a bar over its text doing that work; this page has nothing above the reading, and left alone the first line touches the edge.");
-  let value = app_shared_content_edge_gap();
-  html_style_padding_y(content, value);
+  let content = app_next_reading_column(context);
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
   let fallback = app_shared_bible_verse_number_default();
@@ -114,11 +101,7 @@ export async function app_next(context) {
   html_style_white_space(reading, "pre-wrap");
   html_text_set(reading, joined);
   ("The ways onward stand together in a row of their own under the reading, centred, which is where the reader puts the buttons that belong to a verse - so the two pages put a thumb in the same place.");
-  let actions = html_div(content);
-  html_centered(actions);
-  app_next_passage_more_button(actions, run);
-  ("Somebody who wants more than a passage at a time wants the bible, not a bigger version of this page. So the second way onward is the reader itself, opened where this reading is - which is what keeps this page from growing a chapter, a picker and a way of choosing languages that all already exist next door.");
-  app_next_bible_button(actions, run);
+  app_next_ways_onward(content, run);
   html_page_bottom_space(content);
   await clipboard_copy_try(copied);
 }
