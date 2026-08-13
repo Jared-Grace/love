@@ -33,8 +33,7 @@ export async function app_g_player_move(
   ("a way there is not enough - it has to be a way the player could see when they tapped. the reason lives with the asking, next door");
   ("asked second and only when there is a path at all, because 'every tile of nothing is on screen' is true and would turn a tap that reaches nowhere into a walk of no steps");
   let walkable = list_empty_not_is(path);
-  let reachable =
-    walkable && app_g_player_path_onscreen_is(player, path, div_map);
+  let reachable = walkable && app_g_player_path_onscreen_is(path, div_map);
   if (reachable) {
     ("the way opens before the player walks it: anybody standing on it steps aside first, and the few too hemmed in to have anywhere to go are passed one at a time by trading places as the walk reaches them");
     app_g_crowd_part(g, path, still);
