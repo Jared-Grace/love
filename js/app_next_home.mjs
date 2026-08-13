@@ -27,8 +27,8 @@ import { property_get } from "./property_get.mjs";
 export async function app_next_home(context) {
   "The passage this page was opened for: fetched, drawn, and put on the clipboard ready to be sent.";
   "It is the screen this page comes back to. Everything else here - the book list, the chapters, the verses - is the reader's own picker borrowed whole, and each of those ends by writing a verse into the link and asking to come home, which is this.";
-  ("One verse at a time was the only thing a link could ask for, and reading is not done one verse at a time - somebody copying a passage out had to open this page once per verse and paste the pieces together. So the link may now say how many verses it wants, and saying nothing means one, which is what every link written before this did mean.");
-  ("Several verses are shown as the one-verse block repeated rather than as a run of text under a single reference. That way each verse still says which verse it is, and a run that crosses into the next chapter needs nothing said about it - the reference on each block already says so.");
+  "One verse at a time was the only thing a link could ask for, and reading is not done one verse at a time - somebody copying a passage out had to open this page once per verse and paste the pieces together. So the link may now say how many verses it wants, and saying nothing means one, which is what every link written before this did mean.";
+  "Several verses are shown as the one-verse block repeated rather than as a run of text under a single reference. That way each verse still says which verse it is, and a run that crosses into the next chapter needs nothing said about it - the reference on each block already says so.";
   let hash = html_hash_object_get();
   let content = app_next_reading_column(context);
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
@@ -79,6 +79,14 @@ export async function app_next_home(context) {
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
   ("What is drawn, and in what order, is one thing with a name of its own - this page's work is reading the link and fetching what it asks for, and everything after that is the answering.");
-  app_next_reading_show(context, content, blocks, reading_text, url, run, count);
+  app_next_reading_show(
+    context,
+    content,
+    blocks,
+    reading_text,
+    url,
+    run,
+    count,
+  );
   await clipboard_copy_try(reading_text);
 }
