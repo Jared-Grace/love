@@ -34,17 +34,23 @@ export function app_code_lesson_quizzes_generic(params) {
     answer_property: "answer",
     on_answer: mc,
   });
-  let infos = [forwards, backwards];
+  ("a lesson may drop the backwards direction entirely. Most lessons run both ways because the pair is one fact read from either end - this code has that value, that value comes from this code. It only holds while the answer names its question uniquely, and some lessons answer with a PART of the question: asked which part of 1 + 2 * 4 is solved first, the answer 2 * 4 belongs to every line that happens to contain it, so a backwards question built from it could have two right buttons and mark one of them wrong");
+  ("the backwards unscramble goes with it rather than being switched off separately, because it is the same direction wearing different clothes - offered on its own it would ask the learner to build a question the lesson has just said it will not ask");
+  let backwards_include = property_get_or(params, "backwards_include", true);
+  let infos = [forwards];
   let codes = [
     {
       include: forwards_code,
       base: forwards,
     },
-    {
+  ];
+  if (backwards_include) {
+    list_add(infos, backwards);
+    list_add(codes, {
       include: backwards_code,
       base: backwards,
-    },
-  ];
+    });
+  }
   function lambda2(c) {
     let include = property_get(c, "include");
     let base = property_get(c, "base");
