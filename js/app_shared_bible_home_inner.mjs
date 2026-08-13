@@ -22,10 +22,10 @@ export async function app_shared_bible_home_inner(context, download, app_fn) {
       chapter_code = property_get(a, "chapter_code");
       downloaded = await download(chapter_code);
       let passages_downloaded = property_get(downloaded, "passages");
+      ("a passage is shown at every verse it covers, not only at its last one. these readers show one verse at a time, so asking whether the verse is the passage's LAST left a reader standing on any earlier verse of it with nothing at all on the screen - no original text, no explanations, and nothing saying the passage carries on. john 2 is authored as 1-2 and then 3, and opening the chapter lands on verse 1, so the first thing a reader saw of a chapter that IS written was a blank one.");
       function lambda2(passage) {
         let verse_numbers = property_get(passage, "verse_numbers");
-        let s = integer_to_try_multiple_max_text_to(verse_numbers);
-        if (equal(s, verse_number)) {
+        if (list_includes(verse_numbers, verse_number)) {
           let copy = list_copy(verses);
           la({
             passage,
