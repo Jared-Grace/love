@@ -1,11 +1,10 @@
+import { divide_round } from "./divide_round.mjs";
 import { seconds_day } from "./seconds_day.mjs";
 import { daemon_code_commit_last_at } from "./daemon_code_commit_last_at.mjs";
 import { daemon_stale_seconds_allowed } from "./daemon_stale_seconds_allowed.mjs";
-import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 export async function daemon_stale_or_null(f_name, started, path_seconds) {
   "A record when this daemon is running code the repo has since moved a day past, and nothing when it is not.";
@@ -25,8 +24,7 @@ export async function daemon_stale_or_null(f_name, started, path_seconds) {
   }
   ("said in days as well, because the number of seconds a daemon is behind by is exactly the shape of number a reader skips over");
   let day_seconds = seconds_day();
-  let n = divide(behind_seconds, day_seconds);
-  let behind_days = round(n);
+  let behind_days = divide_round(behind_seconds, day_seconds);
   let record = {
     daemon: f_name,
     behind_days,
