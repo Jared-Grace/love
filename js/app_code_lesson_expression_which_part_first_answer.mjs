@@ -1,6 +1,6 @@
+import { app_code_operator_strong_in_code } from "./app_code_operator_strong_in_code.mjs";
 import { app_code_operator_part_around } from "./app_code_operator_part_around.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 export function app_code_lesson_expression_which_part_first_answer(code) {
   arguments_assert(arguments, 1);
   ("the part of the line that has to be solved first: for 1 + 2 * 4 that is 2 * 4, and for 2 * 4 + 1 it is still 2 * 4");

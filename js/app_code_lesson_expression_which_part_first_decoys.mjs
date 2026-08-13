@@ -1,8 +1,8 @@
+import { app_code_operator_strong_in_code } from "./app_code_operator_strong_in_code.mjs";
 import { change_if_equal } from "./change_if_equal.mjs";
 import { app_code_operator_part_around } from "./app_code_operator_part_around.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 export function app_code_lesson_expression_which_part_first_decoys(
