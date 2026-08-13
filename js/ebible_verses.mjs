@@ -1,14 +1,13 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_add_first } from "./list_add_first.mjs";
-import { list_map } from "./list_map.mjs";
 import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 import { ebible_verses_before } from "./ebible_verses_before.mjs";
 import { property_get } from "./property_get.mjs";
 import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { list_filter } from "./list_filter.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
@@ -33,7 +32,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     let v = ebible_verse_new_text(worded, number);
     return v;
   }
-  let mapped = list_map(all, lambda);
-  let verses = list_filter(mapped, ebible_verse_words_is);
+  let verses = list_map_filter(all, lambda, ebible_verse_words_is);
   return verses;
 }
