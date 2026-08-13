@@ -1,3 +1,4 @@
+import { permission_allow_verbs } from "./permission_allow_verbs.mjs";
 import { permission_prompt_events_blocked } from "./permission_prompt_events_blocked.mjs";
 import { permission_prompt_events_confirmed } from "./permission_prompt_events_confirmed.mjs";
 import { permission_prompt_events_shaped } from "./permission_prompt_events_shaped.mjs";
