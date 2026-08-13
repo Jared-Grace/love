@@ -1,3 +1,4 @@
+import { text_empty_is } from "./text_empty_is.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -16,7 +17,7 @@ export async function git_folder_paths_commit_seconds_since(folder, since) {
     "--name-only",
   ]);
   let lines = printed.split("\n");
-  "Each commit announces its own second on a line marked out from the file names by a letter that no path can begin with, and then lists its files. Git answers newest first, so the first mention of a path is the newest one and every later mention is older.";
+  ("Each commit announces its own second on a line marked out from the file names by a letter that no path can begin with, and then lists its files. Git answers newest first, so the first mention of a path is the newest one and every later mention is older.");
   let seconds = {};
   let commit_second = null;
   for (let line of lines) {
