@@ -1,4 +1,3 @@
-import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "./app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 export function app_replace_rule_set_identifiers_simple_abbreviations(
   abbreviations,
