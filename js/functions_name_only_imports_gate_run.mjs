@@ -1,5 +1,5 @@
+import { qa_gate_clean_assert } from "./qa_gate_clean_assert.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { functions_name_only_imports } from "./functions_name_only_imports.mjs";
