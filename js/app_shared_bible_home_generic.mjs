@@ -91,6 +91,8 @@ export async function app_shared_bible_home_generic(
   }
   let verse_number_hash = app_shared_bible_hash_v_get(hash);
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
+  ("The passage is remembered for this tab here, so that going off to choose another one can be changed one's mind about. It is said by the screen that shows the passage rather than by the button that leaves it, because there is more than one way out of here and only one way in - and said here rather than in each app, because every app that draws a verse this way draws it through this.");
+  app_shared_bible_passage_kept_set(context, chapter_code, [verse_number_hash]);
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
   let book_code = property_get(v2, "book_code");
