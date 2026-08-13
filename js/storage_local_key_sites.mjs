@@ -1,3 +1,8 @@
+import { js_storage_local_key_word_f_names } from "./js_storage_local_key_word_f_names.mjs";
+import { function_exists } from "./function_exists.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_function_word_returned_try } from "./js_function_word_returned_try.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { repo_functions_names_code_includes_multiple } from "./repo_functions_names_code_includes_multiple.mjs";
 import { js_storage_local_key_words } from "./js_storage_local_key_words.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -19,11 +24,26 @@ export async function storage_local_key_sites() {
     repo_name,
     seams,
   );
+  ("A word asked for by name is opened here rather than at the reading that found it. Spelling a published word in one place and saying its name everywhere else is the right edit to make - a key sits on disks this repo will never see again, so one spelling is the only way it cannot drift - and the moment somebody made it, the word left every storing line and the gate watching for a lost setting said the setting was lost. The reading of one file cannot follow the name, because the word is in another file; this walk already opens files, so it is the one that can.");
   let sites = [];
   for (let f_name of candidates) {
     let ast = await function_ast(f_name);
     let names = js_storage_local_key_f_names(ast, seams);
     let words = js_storage_local_key_words(ast, seams);
+    let word_f_names = js_storage_local_key_word_f_names(ast, seams);
+    for (let word_f_name of word_f_names) {
+      ("a name standing where the word goes is not certainly a function of this repo's - it may be a lambda written in the same file, or a parameter - so it is asked for rather than assumed, and one that answers to nothing is simply passed over");
+      let search = await function_exists(word_f_name);
+      let lives = property_get(search, "exists");
+      if (lives) {
+        let word_ast = await function_ast(word_f_name);
+        let word = js_function_word_returned_try(word_ast);
+        let spelled = not_equal(word, null);
+        if (spelled) {
+          list_add(words, word);
+        }
+      }
+    }
     let site = {
       f_name,
       names,
