@@ -1,6 +1,6 @@
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_suppose_line } from "./app_code_lesson_expression_comparing_a_comparison_suppose_line.mjs";
+import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
@@ -72,11 +72,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       same_first,
       false,
     );
-    app_code_lesson_expression_comparing_a_comparison_suppose_line(
-      goal,
-      "Suppose",
-      goal_line,
-    );
+    app_code_lesson_suppose_solve_line(goal, "Suppose", goal_line);
     let idea = app_code_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
