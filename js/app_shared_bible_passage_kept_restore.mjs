@@ -17,6 +17,8 @@ export function app_shared_bible_passage_kept_restore(context) {
   }
   let chapter_code = property_get(kept, "chapter_code");
   let verse_number = property_get(kept, "verse_number");
-  html_hash_property_set(app_shared_bible_chapter_hash_key(), chapter_code);
-  html_hash_property_set(app_shared_bible_verse_hash_key(), verse_number);
+  let property_name = app_shared_bible_chapter_hash_key();
+  html_hash_property_set(property_name, chapter_code);
+  let property_name2 = app_shared_bible_verse_hash_key();
+  html_hash_property_set(property_name2, verse_number);
 }
