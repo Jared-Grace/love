@@ -28,12 +28,16 @@ export async function qa_promoted_public_copy_gate_run() {
     let page_close = `"></script></body></html>`;
     let page_text = text_combine_multiple([page_open, source_name, page_close]);
     let source_text = `console.log("replace, as it was built");`;
-    await file_write(path_join([folder, page_name]), page_text);
-    await file_write(path_join([folder, source_name]), source_text);
+    let f_path = path_join([folder, page_name]);
+    await file_write(f_path, page_text);
+    let f_path2 = path_join([folder, source_name]);
+    await file_write(f_path2, source_text);
     ("what people are being sent, reduced the same way the note of the live site is reduced");
     let noted = {};
-    property_set(noted, page_name, text_hash(page_text));
-    property_set(noted, source_name, text_hash(source_text));
+    let value = text_hash(page_text);
+    property_set(noted, page_name, value);
+    let value2 = text_hash(source_text);
+    property_set(noted, source_name, value2);
     let served = {};
     property_set(served, app_name, noted);
     async function copy_name(label) {
@@ -54,7 +58,9 @@ export async function qa_promoted_public_copy_gate_run() {
     });
     ("a page still sending for the live script - the failure the keeping exists to prevent, and the one nobody would see, because the page loads and shows whatever the app has become");
     let live = await copy_name("live");
-    await file_write(path_join([folder, file_name_html(live)]), page_text);
+    let file_name = file_name_html(live);
+    let f_path3 = path_join([folder, file_name]);
+    await file_write(f_path3, page_text);
     let no_live = await asked(live);
     false_is_assert_json(no_live, {
       case: live,
@@ -62,10 +68,9 @@ export async function qa_promoted_public_copy_gate_run() {
     });
     ("a later build of the app wearing a kept name - the pieces are not the ones that were public, so nothing says anybody judged them");
     let later = await copy_name("later");
-    await file_write(
-      path_join([folder, file_name_js(later)]),
-      `console.log("replace, as it was built again");`,
-    );
+    let r = file_name_js(later);
+    let f_path4 = path_join([folder, r]);
+    await file_write(f_path4, `console.log("replace, as it was built again");`);
     let no_later = await asked(later);
     false_is_assert_json(no_later, {
       case: later,
@@ -73,9 +78,11 @@ export async function qa_promoted_public_copy_gate_run() {
     });
     ("an app built in more than one piece - the extra pieces are named inside the script, where nothing out here can point them at the copy");
     let split = await copy_name("split");
-    let chunk = text_combine("792.", file_name_js(split));
+    let right = file_name_js(split);
+    let chunk = text_combine("792.", right);
+    let f_path5 = path_join([folder, chunk]);
     await file_write(
-      path_join([folder, chunk]),
+      f_path5,
       `console.log("the rest of replace arrives separately");`,
     );
     let no_split = await asked(split);
@@ -83,8 +90,8 @@ export async function qa_promoted_public_copy_gate_run() {
       case: split,
       hint: "there is a piece beside the page and its script, so a copy of the two of them is not a copy of the app",
     });
-    let checked = [whole, live, later, split];
-    return checked;
+    let names = [whole, live, later, split];
+    return names;
   }
   let checked = await folder_temp(lambda);
   return checked;
