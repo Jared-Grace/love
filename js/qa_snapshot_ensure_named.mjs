@@ -1,3 +1,4 @@
+import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
 import { git_folder_worktree_add } from "./git_folder_worktree_add.mjs";
 import { qa_snapshot_siblings_freeze } from "./qa_snapshot_siblings_freeze.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
@@ -26,6 +27,10 @@ export async function qa_snapshot_ensure_named(copy_name, commit) {
   let made = await file_exists(folder);
   ("The move is given as a list of words, so the commit stays one word however it is spelled. Laying a copy out in the first place is a named step of its own, because a throwaway copy of an earlier commit is made the very same way and the two spelling it out separately would let them drift");
   if (made) {
+    ("Put back the way its commit had it before being moved, because a move refuses outright while anything it would write over is still changed - which is the failure the putting-back was written for and was only ever wired into the copy that gets built in. The copy that gets asked questions is written in too: running the guard inside it leaves Python's compiled caches changed, and a commit that carried those files then would not move at all. Read from outside, that looks like a commit being unshippable rather than like a copy needing tidying, and it stopped a send with two gates named that were both already green.");
+    ("Asked every time rather than when it seems needed, the same way the built-in copy asks. Knowing whether it is needed costs a check that can be wrong, and being wrong here costs a whole walk of the commits.");
+    ("Only where there is already a copy. One laid out fresh below has nothing in it to put back.");
+    await qa_snapshot_clean(folder);
     let moving = ["checkout", "--detach", commit];
     await git_folder_run(folder, moving);
   } else {
