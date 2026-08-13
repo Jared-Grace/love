@@ -1,10 +1,10 @@
+import { list_find_property_get } from "./list_find_property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { words_multiset_keep } from "./words_multiset_keep.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_size } from "./list_size.mjs";
@@ -18,8 +18,12 @@ export function gloss_passage_base_repair(passage, verses_base) {
   let verse_numbers = property_get(passage, "verse_numbers");
   function verse_text(verse_number) {
     let property_name = verse_number_key();
-    let verse = list_find_property(verses_base, property_name, verse_number);
-    let text = property_get(verse, "text");
+    let text = list_find_property_get(
+      verses_base,
+      property_name,
+      verse_number,
+      "text",
+    );
     return text;
   }
   let originals = list_map(verse_numbers, verse_text);
