@@ -1,3 +1,4 @@
+import { app_g_npcs_ids_ensure } from "./app_g_npcs_ids_ensure.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { app_g_rows_ensure } from "./app_g_rows_ensure.mjs";
 import { app_g_coordinates_ensure } from "./app_g_coordinates_ensure.mjs";
