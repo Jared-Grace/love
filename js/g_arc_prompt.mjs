@@ -94,6 +94,7 @@ export function g_arc_prompt(
     "You should choose this about the person:",
     "  occupation - their work, consistent with the JSON above",
     "  trouble(s) - what is wrong, briefly, in their own words",
+    '  opener - what the person says at the beginning of the conversation for later conversations',
     "  utterance - what the person says",
     "  verse_numbers - the verse numbers of the passage that answer it",
     "  after - what they say after player chooses correct passage",
