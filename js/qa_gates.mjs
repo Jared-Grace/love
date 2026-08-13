@@ -215,6 +215,7 @@ import { functions_unbound_gate_run } from "./functions_unbound_gate_run.mjs";
 import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
 import { g_profile_target_shares_assert } from "./g_profile_target_shares_assert.mjs";
+import { g_arc_prompt_style_assert } from "./g_arc_prompt_style_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
 import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
 import { g_clock_sky_phase_check } from "./g_clock_sky_phase_check.mjs";
@@ -334,6 +335,7 @@ export function qa_gates() {
     literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
     g_profile_target_shares_assert,
+    g_arc_prompt_style_assert,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
