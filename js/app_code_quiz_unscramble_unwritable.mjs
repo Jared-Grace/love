@@ -40,13 +40,11 @@ export function app_code_quiz_unscramble_unwritable() {
           }
           let answer_property = property_get(info, "answer_property");
           let code = property_get(exercise, answer_property);
-          let tokens = app_code_quiz_string_tokens_merge(
-            app_code_quiz_tokens(code),
-          );
+          let tokens2 = app_code_quiz_tokens(code);
+          let tokens = app_code_quiz_string_tokens_merge(tokens2);
           let written = js_tokens_to_code(tokens);
-          let back = app_code_quiz_string_tokens_merge(
-            app_code_quiz_tokens(written),
-          );
+          let tokens3 = app_code_quiz_tokens(written);
+          let back = app_code_quiz_string_tokens_merge(tokens3);
           let same = lists_equal_pair(back, tokens);
           if (not(same)) {
             list_add(names, fn.name);

@@ -1,3 +1,4 @@
+import { app_code_quiz_unscramble_gate_run } from "./app_code_quiz_unscramble_gate_run.mjs";
 import { app_code_lesson_quiz_token_select_value_variations_cases_gate_run } from "./app_code_lesson_quiz_token_select_value_variations_cases_gate_run.mjs";
 import { g_tiles_window_axis_cases_gate_run } from "./g_tiles_window_axis_cases_gate_run.mjs";
 import { daemons_stale_gate_run } from "./daemons_stale_gate_run.mjs";
@@ -477,6 +478,7 @@ export function qa_gates() {
     daemons_stale_gate_run,
     g_tiles_window_axis_cases_gate_run,
     app_code_lesson_quiz_token_select_value_variations_cases_gate_run,
+    app_code_quiz_unscramble_gate_run,
   ];
   return gates;
 }
