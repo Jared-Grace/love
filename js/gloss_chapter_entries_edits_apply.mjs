@@ -22,8 +22,8 @@ export async function gloss_chapter_entries_edits_apply(
   let passages = property_get(chapter, "passages");
   function edit_apply(edit) {
     let verses = property_get(edit, "verses");
-    function passage_is(passage) {
-      let joined = property_list_join_comma(passage, "verse_numbers");
+    function passage_is(candidate) {
+      let joined = property_list_join_comma(candidate, "verse_numbers");
       let same = equal(joined, verses);
       return same;
     }
