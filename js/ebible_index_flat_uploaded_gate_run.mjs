@@ -20,27 +20,15 @@ export async function ebible_index_flat_uploaded_gate_run() {
   let uploaded = property_get(recorded, "uploaded");
   let absent = property_get(recorded, "absent");
   let answered = lists_combine([uploaded, absent]);
-  let shipped = ebible_bible_folders_sorted();
-  let unasked = list_difference(shipped, answered);
-  let departed = list_difference(answered, shipped);
   let f_name = fn_name("ebible_index_flat_uploaded_write");
-  list_empty_is_assert_json(unasked, {
-    hint: text_combine_multiple([
-      "a bible is shipped that nobody has asked whether it has a flat index of its own, so a reader choosing it is walked past verse numbers taken from other bibles and nothing says so - ask storage again with ",
-      f_name,
-      ", which rewrites the record",
-    ]),
-    unasked,
-  });
-  let f_name2 = fn_name("ebible_index_flat_uploaded_write");
-  list_empty_is_assert_json(departed, {
-    hint: text_combine_multiple([
-      "the record holds a bible this repo no longer ships - write it again with ",
-      f_name2,
-      " so what is checked is what is here",
-    ]),
-    departed,
-  });
+  let unasked_hint = text_combine_multiple([
+    "a bible is shipped that nobody has asked whether it has a flat index of its own, so a reader choosing it is walked past verse numbers taken from other bibles and nothing says so - ask storage again with ",
+    f_name,
+    ", which rewrites the record",
+  ]);
+  let asked = ebible_bibles_answered_assert(answered, f_name, unasked_hint);
+  let unasked = property_get(asked, "unasked");
+  let departed = property_get(asked, "departed");
   let r = {
     checked: list_size(shipped),
     uploaded: list_size(uploaded),
