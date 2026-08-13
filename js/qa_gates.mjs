@@ -1,3 +1,4 @@
+import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
 import { text_edit_distance_gate_run } from "./text_edit_distance_gate_run.mjs";
 import { app_original_bible_gloss_misaligned_gate_run } from "./app_original_bible_gloss_misaligned_gate_run.mjs";
@@ -437,6 +438,7 @@ export function qa_gates() {
     app_original_bible_gloss_misaligned_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
+    storage_rules_gate_run,
   ];
   return gates;
 }
