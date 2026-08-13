@@ -8,7 +8,7 @@ export function g_arc_prompt_elder_requirements() {
     "WHAT THIS PERSON IS BY THE END",
     "This is 1 Timothy 3 verses 1 to 7 and Titus 1 verses 5 to 9. Every one of them is true of this person by their last conversation. They are not weighed against each other and none of them is left out.",
     "  above reproach - there is nothing in their life anybody could hold against them",
-    "  a one-woman man - faithful to one. If the JSON says married, they have one wife and never more than one",
+    "  a one-woman man - man faithful to (at most) one wife. If the JSON says married, they have one wife and never more than one",
     "  their household kept well - their children respected, and believing, if they have children at all",
     "  sober-minded, self-controlled, disciplined, upright, holy",
     "  respectable, and orderly in how they live",

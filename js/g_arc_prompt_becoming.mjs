@@ -27,9 +27,9 @@ export function g_arc_prompt_becoming(leader) {
   let elder = [
     "",
     "THIS PERSON IS THE LEADER.",
-    "The player will leave. This is the person the others are left with, so the arc goes further than belief: not yet believing, then a disciple, then somebody who can teach the rest and hold them together.",
-    "That is what the turns are for. It is a discipling over many days, not one long conversation.",
-    "So the later conversations turn outward. Early on they ask about their own trouble. Later they ask how to answer somebody else's, what to do when one of them falls away, and how to keep going once the player is gone.",
+    "The player is planting a house church. The player will leave the plant. Then this person will be the leader of the plant. This is the person the others are left with, so the arc goes further than belief: not yet believing, then a disciple, then somebody who can teach the rest and hold them together.",
+    "That is what turns in multiple conversations are for. It is a discipling over many days, not one long conversation.",
+    "Early on they ask about their own trouble. Later they ask how to answer somebody else's, what to do when one of them falls away, and how to keep going once the player is gone. So the later conversations turn outward.",
     "They still need answering from these passages. Do not write them as somebody who has outgrown Scripture.",
     "",
     requirements,
