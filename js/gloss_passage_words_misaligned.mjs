@@ -1,3 +1,4 @@
+import { gloss_words_misaligned } from "./gloss_words_misaligned.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
@@ -7,10 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { each } from "./each.mjs";
 import { null_is } from "./null_is.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { each_index } from "./each_index.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_size_equal } from "./list_size_equal.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 export function gloss_passage_words_misaligned(passage, words_read) {
   "Where a passage's word explanations stop lining up with the passage itself, or nothing when they line up all the way through.";
