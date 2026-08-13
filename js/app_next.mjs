@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { app_next_reading_show } from "./app_next_reading_show.mjs";
 import { app_next_verse_block } from "./app_next_verse_block.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -77,9 +78,10 @@ export async function app_next(context) {
   let blocks = await list_map_unordered_async(run, lambda);
   let lines_each = list_map_property(blocks, "lines");
   let mapped = lists_combine(lines_each);
-  ("What is copied is the reading and nothing else. The way onward is written under it on the page, where somebody carrying on can press it, but a reader who copies a passage into a message is quoting scripture - a link to the verse after the one they quoted is not part of what they said, and it used to travel with it without anything saying so.");
-  let reading_text = list_join_newline_2(mapped);
   let url = app_next_url_onward(hash, list, run);
+  ("The link is copied along with the reading, because carrying it is the whole point of this page. Somebody sending scripture a passage at a time pastes what they copied into a message and sends it; days later they open that message again, press the link sitting at the bottom of it, and are handed the passage that comes after the one they sent, ready to paste in turn. The link is what makes the message its own bookmark - drop it from the copy and the next day there is nothing to press, and they are back to finding their place by hand.");
+  list_add(mapped, url);
+  let reading_text = list_join_newline_2(mapped);
   ("the verse is put on the screen before it is put on the clipboard, and the copying is allowed to fail. both halves of that are the same bug seen twice: this page copies while it is opening rather than under a thumb, which is the one case a browser refuses, and the refusal used to throw out of the opening before a single line was drawn. so the page kept the words it paints while it starts and sat on One moment, please - the same silent hang the paragraph above describes, arriving a second time by a different door.");
   ("painting first is what makes the copy optional rather than load-bearing. somebody who was sent this link came to read a verse; having it on the clipboard as well is a kindness on top, so it goes after the reading is safely on the screen and takes nothing with it when the browser says no.");
   ("What is drawn, and in what order, is one thing with a name of its own - this page's work is reading the link and fetching what it asks for, and everything after that is the answering.");
