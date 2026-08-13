@@ -1,5 +1,5 @@
+import { equal_not } from "./equal_not.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_empty } from "./text_empty.mjs";
@@ -56,8 +56,7 @@ export function command_verb_shape(command) {
   ];
   let folds = list_includes(folding, head);
   let second = words[1];
-  let second_missing = equal(second, undefined);
-  let has_second = not(second_missing);
+  let has_second = equal_not(second, undefined);
   if (folds && has_second) {
     let parts = [];
     list_add_multiple(parts, [head, " ", second]);
