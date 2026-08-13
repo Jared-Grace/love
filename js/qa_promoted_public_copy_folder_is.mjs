@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { file_name_html } from "./file_name_html.mjs";
@@ -5,7 +6,6 @@ import { file_name_js } from "./file_name_js.mjs";
 import { file_read } from "./file_read.mjs";
 import { folder_app_file_names } from "./folder_app_file_names.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { path_join } from "./path_join.mjs";
@@ -33,8 +33,7 @@ export async function qa_promoted_public_copy_folder_is(
   let source_name = file_name_js(app_name);
   let present = await folder_app_file_names(folder, app_name);
   ("a copy is a page and its own script and nothing else - the keeping refuses an app built in more than one piece, because the extra pieces are named inside the script where nothing out here can point them at the copy");
-  let left = list_size(present);
-  let two = equal(left, 2);
+  let two = list_size_equal(present, 2);
   if (not(two)) {
     return false;
   }
