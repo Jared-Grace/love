@@ -1,8 +1,6 @@
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_spaced } from "./app_shared_button_spaced.mjs";
 import { app_shared_bible_language_swap_reload } from "./app_shared_bible_language_swap_reload.mjs";
-import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { ebible_language_to_name } from "./ebible_language_to_name.mjs";
-import { html_style_margin_x } from "./html_style_margin_x.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_shared_bible_language_suggestion_button(
   parent,
@@ -16,8 +14,6 @@ export function app_shared_bible_language_suggestion_button(
   function lambda() {
     app_shared_bible_language_swap_reload(code, suggestion);
   }
-  let component = app_shared_button(parent, text, lambda);
-  let gap = app_shared_spaced_tiny_gap();
-  html_style_margin_x(component, gap);
+  let component = app_shared_button_spaced(parent, text, lambda);
   return component;
 }
