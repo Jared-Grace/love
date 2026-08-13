@@ -8,7 +8,8 @@ import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function app_shared_bible_hash_to_verses_count(hash) {
   "How many verses in a row a link is asking for, read off the link itself.";
-  "It is read forgivingly rather than strictly, because a person types this word into an address bar by hand. A word that is not a number at all, or a number below one, is answered as one verse; a number past the ceiling is answered as the ceiling. Refusing loudly here would stop the page while it was opening, before a single line had been drawn, and a page that never arrives says less than a wrong number does.";
+  "It is read forgivingly rather than strictly, because a person types this word into an address bar by hand. A number below one is answered as one verse; a number past the ceiling is answered as the ceiling. Refusing loudly here would stop the page while it was opening, before a single line had been drawn, and a page that never arrives says less than a wrong number does.";
+  "A word that is not a number at all no longer reaches here to be shrugged at: the link is read back to the reader before the page acts on any of it, and something that could not be a count is said out loud with the number in it offered as something to press. This still answers such a word as one verse, because a page opened by code rather than by a reader can arrive by another road, and the reason for not stopping has not changed.";
   let key = app_shared_bible_verses_count_hash_key();
   let fallback = app_shared_bible_verses_count_default();
   let text = property_get_or(hash, key, fallback);

@@ -16,6 +16,7 @@ import { list_filter } from "./list_filter.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export async function g_leader_chapter_codes(chapter_code) {
+  "$plain chapter_code";
   "the written chapters a leader arc for this chapter may draw on: the nearest ones to it, behind it by preference, wide enough that no passage has to answer more than about six times";
   "A leader answers 216 times over one plant, which is far more than one chapter of preaching can carry without repeating itself - so the elder draws on the whole reach of the book the plant stands in, and the reach is what makes a small book like Philemon answerable at all.";
   "BEHIND FIRST, AHEAD ONLY IF BEHIND RUNS OUT. What lies behind this chapter is what the player has already met, so it is preferred every time. But a book has nothing behind its first chapter, and preferring is not the same as requiring: Acts 1 alone is seven passages against 216 turns, which is one passage every thirty-one turns. An elder saying the same seven things thirty-one times is a worse failure than an elder quoting a chapter the player has not reached yet, and unlike the second one it has no remedy. So when behind is exhausted and the pool is still short, this reaches forward, in order, and stops the moment it is wide enough - which for a first chapter is usually one or two chapters ahead, not the rest of the book.";
