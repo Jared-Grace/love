@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_concat_property } from "./list_concat_property.mjs";
 import { app_replace_abbreviations } from "./app_replace_abbreviations.mjs";
 import { app_replace_rules_symbols } from "./app_replace_rules_symbols.mjs";
@@ -5,7 +6,6 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_element } from "./html_element.mjs";
 import { object_to_list } from "./object_to_list.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_cycle_bold } from "./html_cycle_bold.mjs";
@@ -20,8 +20,7 @@ export function app_replace_rule_set_abbreviations(rules_used, parent) {
   let abbreviations = app_replace_abbreviations();
   let list = object_to_list(abbreviations);
   function lambda(kv) {
-    let key = property_get(kv, "key");
-    let includes = list_includes(unique, key);
+    let includes = property_in_list(kv, "key", unique);
     return includes;
   }
   let shown = list_filter(list, lambda);
