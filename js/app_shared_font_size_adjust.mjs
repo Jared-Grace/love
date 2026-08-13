@@ -4,6 +4,7 @@ import { app_shared_font_size } from "../../love/js/app_shared_font_size.mjs";
 export async function app_shared_font_size_adjust(context, value_get) {
   let value = await app_shared_font_size(context);
   value = value_get(value);
-  storage_local_set_context(context, "font_size", value);
+  let key = app_shared_font_size_key();
+  storage_local_set_context(context, key, value);
   app_shared_font_size_refresh(context);
 }
