@@ -20,8 +20,8 @@ export async function g_sermon_indices_uncovered(chapter_code) {
     if (not("lines" in passage)) {
       return;
     }
-    let english = property_get(passage, "english");
-    let tokens = g_sermon_passage_words(english);
+    let scripture = property_get(passage, "scripture");
+    let tokens = g_sermon_passage_words(scripture);
     let covered = {};
     let out_of_range = [];
     function line_check(line) {
