@@ -1,11 +1,8 @@
+import { js_file_dir_ast } from "./js_file_dir_ast.mjs";
+import { js_file_dir_ast_write } from "./js_file_dir_ast_write.mjs";
 import { js_name_taken_dir_check } from "./js_name_taken_dir_check.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { js_file_dir_path } from "./js_file_dir_path.mjs";
-import { file_read } from "./file_read.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_identifier_rename } from "./js_identifier_rename.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 ("Copy a fn to a new ./<name_new>.mjs in a flat dir: duplicate name_old's source with the");
 ("identifier renamed old->new (so the copy exports the new name), leaving the original in");
 ("place. The hermetic, sandbox-testable core of ",
@@ -14,11 +11,7 @@ import { file_overwrite } from "./file_overwrite.mjs";
 ("rename-inside-the-copy, minus the ambient path/registry work.");
 export async function js_identifier_copy_dir(dir, name_old, name_new) {
   await js_name_taken_dir_check(dir, name_new);
-  let old_path = js_file_dir_path(dir, name_old);
-  let src = await file_read(old_path);
-  let ast = js_parse(src);
+  let ast = await js_file_dir_ast(dir, name_old);
   js_identifier_rename(ast, name_old, name_new);
-  let new_src = js_unparse(ast);
-  let new_path = js_file_dir_path(dir, name_new);
-  await file_overwrite(new_path, new_src);
+  await js_file_dir_ast_write(dir, name_new, ast);
 }
