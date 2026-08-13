@@ -16,7 +16,7 @@ export function g_arc_prompt_becoming(leader) {
   ("Titus 1 verse 5 and Acts 14 verse 23 still stand behind it - elders were appointed in towns months old - but they are the second answer rather than the first.");
   ("The reasoning stays HERE and only the instruction goes out. A prompt that argued its own case would be handing the writing call the judgment of where a requirement stops applying, and that judgment is not the writing call's to make.");
   let belief = [
-    "All npcs begin not yet believing, and eventually they believe. So the arc will have unbeliever first, then disciple.",
+    "Every person begins not yet believing, and eventually believes. So the arc runs unbeliever first, then disciple.",
     "Belief only moves forward. Once they believe, they never go back.",
   ];
   if (not(leader)) {
