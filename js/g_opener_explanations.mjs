@@ -30,7 +30,7 @@ export function g_opener_explanations() {
         "The person says where they are with God right now - what is growing, or what has gone cold.",
     },
     "how is ministering to your neighbour going": {
-      said: "How is ministering to your neighbour going?",
+      said: 'The player asks "How is ministering to your neighbour going?"',
       draws:
         "The person says how serving somebody else is going - what it is costing them, or what they do not know how to do.",
     },

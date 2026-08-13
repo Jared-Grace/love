@@ -1,3 +1,5 @@
+import { tally_covers_is } from "./tally_covers_is.mjs";
+import { list_filter_index } from "./list_filter_index.mjs";
 import { js_block_callee_names } from "./js_block_callee_names.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { list_add } from "./list_add.mjs";
@@ -156,7 +158,16 @@ export async function functions_fold_sites() {
         }
         let f_ast = shape_of(f_name);
         let f_blocks = blocks_of(f_name);
-        let folded = js_fold_blocks(x_ast, f_ast, f_blocks);
+        ("Only the runs of statements that could hold the body are read for it. The counting above already answers, for each run on its own, whether that run calls everything x calls as many times as x calls it - and that is necessary for a fold, which is the whole reason it is counted at all. Asked of the file the answer is whether some run might, and the answer for each separate run was then thrown away and every run in the file read in full.");
+        ("Counted 2026-08-14 across this repo: 123,723 runs read against 31,648 that could have held anything, so three quarters of the reading was of runs already known to be hopeless.");
+        ("A count is found by where its run sits, and that is sound because both lists are the runs of one file found the same way - the same walk over the same text, so the two come out in one order.");
+        function lambda7(f_block, at) {
+          let f_tally = f_tallies[at];
+          let holds_is = tally_covers_is(f_tally, x_wanted);
+          return holds_is;
+        }
+        let f_blocks_possible = list_filter_index(f_blocks, lambda7);
+        let folded = js_fold_blocks(x_ast, f_ast, f_blocks_possible);
         if (not_equal(folded, null)) {
           shape_forget(f_name);
           sites.push({
