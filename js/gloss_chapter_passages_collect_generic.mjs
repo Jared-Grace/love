@@ -1,3 +1,9 @@
+import { local_function_path_json } from "./local_function_path_json.mjs";
+import { file_exists } from "./file_exists.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { each } from "./each.mjs";
 export async function gloss_chapter_passages_collect_generic(
   chapter_code,
   fn,
