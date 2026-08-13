@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
@@ -9,7 +10,6 @@ import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 export async function gloss_write_coverage_generic(
   chapter_code,
   fn,
@@ -42,8 +42,7 @@ export async function gloss_write_coverage_generic(
     return included;
   }
   function waiting_is(key) {
-    let included = list_includes(written, key);
-    let waiting = not(included);
+    let waiting = list_includes_not(written, key);
     return waiting;
   }
   let done = list_filter(keys, written_is);
