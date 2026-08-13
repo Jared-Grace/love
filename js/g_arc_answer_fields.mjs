@@ -33,6 +33,12 @@ export function g_arc_answer_fields() {
     ],
     turn: [
       {
+        name: "opener",
+        description:
+          "which opener the player chose to reach this turn, copied exactly as it is written before the colon in the opener lines above.",
+        examples: ["", ""],
+      },
+      {
         name: "before",
         description: "what the person says at the beginning of a turn.",
         examples: ["", ""],
