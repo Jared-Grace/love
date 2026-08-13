@@ -110,10 +110,10 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
   app_g_toast(what, 12000);
   let filled = list_size(to_fill);
   let sent = list_size(strays);
-  let r = {
+  let report = {
     filled,
     sent,
     gold,
   };
-  return r;
+  return report;
 }

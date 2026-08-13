@@ -1,3 +1,5 @@
+import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
+import { object_assign } from "./object_assign.mjs";
 import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { g_prayers_conversation } from "./g_prayers_conversation.mjs";

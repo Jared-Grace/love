@@ -11,66 +11,149 @@ export function g_npc_path_clear_situations() {
       name: "around",
       what: "Nobody should move - there is a way round.",
       hemmed: false,
-      people: [{ x: 2, y: 0 }],
+      people: [
+        {
+          x: 2,
+          y: 0,
+        },
+      ],
       tapped: false,
-      tap: { x: 4, y: 0 },
+      tap: {
+        x: 4,
+        y: 0,
+      },
     },
     {
       name: "part",
       what: "Watch the row SPLIT and a lane open down the middle.",
       hemmed: true,
       people: [
-        { x: 2, y: -1 },
-        { x: 2, y: 0 },
-        { x: 2, y: 1 },
+        {
+          x: 2,
+          y: -1,
+        },
+        {
+          x: 2,
+          y: 0,
+        },
+        {
+          x: 2,
+          y: 1,
+        },
       ],
       tapped: false,
-      tap: { x: 5, y: 0 },
+      tap: {
+        x: 5,
+        y: 0,
+      },
     },
     {
       name: "ripple",
       what: "Watch the openings run away from you, one after another.",
       hemmed: true,
       people: [
-        { x: 2, y: 0 },
-        { x: 3, y: 0 },
-        { x: 4, y: 0 },
-        { x: 5, y: 0 },
-        { x: 6, y: 0 },
+        {
+          x: 2,
+          y: 0,
+        },
+        {
+          x: 3,
+          y: 0,
+        },
+        {
+          x: 4,
+          y: 0,
+        },
+        {
+          x: 5,
+          y: 0,
+        },
+        {
+          x: 6,
+          y: 0,
+        },
       ],
       tapped: false,
-      tap: { x: 8, y: 0 },
+      tap: {
+        x: 8,
+        y: 0,
+      },
     },
     {
       name: "lane",
       what: "A crowd three deep - watch the lane open the whole way down it.",
       hemmed: true,
       people: [
-        { x: 2, y: -1 },
-        { x: 2, y: 0 },
-        { x: 2, y: 1 },
-        { x: 3, y: -1 },
-        { x: 3, y: 0 },
-        { x: 3, y: 1 },
-        { x: 4, y: -1 },
-        { x: 4, y: 0 },
-        { x: 4, y: 1 },
+        {
+          x: 2,
+          y: -1,
+        },
+        {
+          x: 2,
+          y: 0,
+        },
+        {
+          x: 2,
+          y: 1,
+        },
+        {
+          x: 3,
+          y: -1,
+        },
+        {
+          x: 3,
+          y: 0,
+        },
+        {
+          x: 3,
+          y: 1,
+        },
+        {
+          x: 4,
+          y: -1,
+        },
+        {
+          x: 4,
+          y: 0,
+        },
+        {
+          x: 4,
+          y: 1,
+        },
       ],
       tapped: false,
-      tap: { x: 6, y: 0 },
+      tap: {
+        x: 6,
+        y: 0,
+      },
     },
     {
       name: "tapped",
       what: "The gold is on a PERSON - watch the crowd open and that one stay.",
       hemmed: true,
       people: [
-        { x: 2, y: -1 },
-        { x: 2, y: 0 },
-        { x: 2, y: 1 },
-        { x: 4, y: 0 },
+        {
+          x: 2,
+          y: -1,
+        },
+        {
+          x: 2,
+          y: 0,
+        },
+        {
+          x: 2,
+          y: 1,
+        },
+        {
+          x: 4,
+          y: 0,
+        },
       ],
       tapped: true,
-      tap: { x: 4, y: 0 },
+      tap: {
+        x: 4,
+        y: 0,
+      },
     },
   ];
   return r;
