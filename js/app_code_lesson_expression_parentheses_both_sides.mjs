@@ -62,7 +62,7 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     return list;
   }
   function above(root) {
-    "recall what ( and ) do, then both sides wrapped and worked out, then why the parentheses are needed here when they were not needed before";
+    "recall what ( and ) do, then each side named as a comparison and the rule read off the pair, then the two put together and valued, then why the parentheses are needed here when they were not needed before";
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
@@ -76,23 +76,33 @@ export function app_code_lesson_expression_parentheses_both_sides() {
       " is solved on its own",
     ]);
     let both = app_code_container_light_blue(root);
-    html_div_cycle_code(both, [
-      "Both sides of ",
-      "===",
-      " can be comparisons",
-    ]);
+    ("The two comparisons first and the rule about them after, rather than the rule and then its instances. A general sentence arriving first has nothing yet to attach itself to, so the learner has to hold it until something does - the same climb from one instance up to the rule is argued at length in the comparing-a-comparison lesson, and this card used to open on the rule it now ends the first half with.");
+    ("Each side is named as a comparison before it is valued, because that is the premise the rule below rests on. The card used to state both values and leave a learner to notice for themselves that each of them came from a comparison.");
+    ("Putting the two on either side is its own line, and the line it makes is the next one, and the value of that line is the one after. One line carrying the assembly and the answer together hides the step where two false values are compared, which is the only new thing here.");
+    ("The whole line is written out again rather than referred back to, the same way the flat-line card below writes false === 5 twice. The repeated name is what ties the answer to the line it belongs to.");
     html_div_cycle_code(both, [
       "",
       "3 === 5",
-      " is ",
-      "false",
-      ", and ",
-      "5 === 3",
-      " is ",
+      " is a comparison and is ",
       "false",
     ]);
     html_div_cycle_code(both, [
-      "So ",
+      "",
+      "5 === 3",
+      " is also a comparison and is ",
+      "false",
+    ]);
+    html_div_cycle_code(both, ["Both sides of ", "===", " can be comparisons"]);
+    html_div_cycle_code(both, [
+      "So we can put ",
+      "3 === 5",
+      " on one side and ",
+      "5 === 3",
+      " on the other side",
+    ]);
+    html_div_cycle_code(both, ["Then we have ", "(3 === 5) === (5 === 3)"]);
+    html_div_cycle_code(both, [
+      "And ",
       "(3 === 5) === (5 === 3)",
       " is ",
       "true",
