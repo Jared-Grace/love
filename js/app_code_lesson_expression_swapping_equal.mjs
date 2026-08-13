@@ -96,8 +96,11 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     app_code_lesson_swapping_same_numbers_line(order_recall);
     let paren = app_code_container_light_blue(root);
+    ("Sides of a comparison, said rather than left to be worked out. A side belongs to something, and here the something is itself a comparison - which is the whole shape this recalls, so leaving it out drops the one fact the line is about. Comparison twice over is not a stumble: a comparison standing on each side of a comparison is exactly what is being named.");
+    ("Comparison rather than === or !==, even though the line below is a === one. Every comparison is wrapped the same way here, the four ordering ones included - the quiz asks about all six - so naming one operator would promise less than the rule keeps.");
+    ("Both sides is the phrasing the lesson this recalls used. A Remember: card is only recall if the words are the ones being recalled, so it is worth keeping even where another turn of phrase would read lighter.");
     html_div_cycle_code(paren, [
-      "Remember: when both sides are comparisons, we wrap each side in ",
+      "Remember: when both sides of a comparison are comparisons, we wrap each side in ",
       "(",
       " and ",
       ")",
