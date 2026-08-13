@@ -2,4 +2,4 @@
 # Source of truth: js/functions_command_seams.mjs. Regenerate with
 # `node scripts/r.mjs python_mirrors_write`; drift fails `q`
 # via python_mirrors_assert.
-DENIED_DISPATCHER_FUNCTIONS = {"command_line_generic", "command_line_interactive", "command_line_cmd", "command_line_code_ignore", "command_line_folder", "command_line_generic_code_ignore", "eval_console_log_replace", "nearley_grammar_text_parser", "firebase_storage_function_run_generic"}
+DENIED_DISPATCHER_FUNCTIONS = {"command_line_generic", "command_line_interactive", "command_line_cmd", "command_line_code_ignore", "command_line_folder", "command_line_generic_code_ignore", "eval_console_log_replace", "nearley_grammar_text_parser", "firebase_storage_function_run_generic", "file_module_import"}
