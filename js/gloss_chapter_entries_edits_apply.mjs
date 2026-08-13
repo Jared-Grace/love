@@ -1,9 +1,9 @@
+import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { gloss_passage_entries_splice } from "./gloss_passage_entries_splice.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_map } from "./list_map.mjs";
@@ -23,8 +23,7 @@ export async function gloss_chapter_entries_edits_apply(
   function edit_apply(edit) {
     let verses = property_get(edit, "verses");
     function passage_is(passage) {
-      let numbers = property_get(passage, "verse_numbers");
-      let joined = list_join_comma(numbers);
+      let joined = property_list_join_comma(passage, "verse_numbers");
       let same = equal(joined, verses);
       return same;
     }
