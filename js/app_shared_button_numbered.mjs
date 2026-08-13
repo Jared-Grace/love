@@ -17,7 +17,7 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
     position: "relative",
   });
   ("the number and the marker are LIFTED OUT of the row's flow and pinned over its left edge, and the title is the only thing left in it, so the title is centered on the row itself. Laying all three out side by side instead centers the title in what is left AFTER the gutters, which is not the middle of the row - it reads pushed right by half the gutter, and the wider the list gets the worse it looks. Mirroring the gutters on the right does re-center it, but it spends that width twice over and the longest titles start wrapping onto a second line; pinning spends none of it");
-  ("this is a trade, and the cost is real: a title long enough to reach the left gutter runs UNDER the number rather than wrapping away from it. The title is centered, so it arrives at both gutters at once, and the widest title in the code app's list today clears the number by a few pixels - close, and not guaranteed. Reserving the gutters (as padding on the title, or as mirrored empty tracks) makes the overlap impossible, and costs that width on every row instead: it wrapped titles that fit before. Reserving nothing is the better trade while the titles are this length, and a title that does collide is a title too long to read in a list row - shorten it rather than paying the width back here");
+  ("the title then keeps the gutters clear ITSELF, as equal padding on both sides, so a long one wraps rather than running under the number. Leaving that padding off was tried and it is too close to call by eye: the longest title in the code app's list cleared the number by a few pixels on one screen and touched it on another, because a ch is the width of a digit in whatever font the reader has. Equal padding on both sides also keeps the title centered on the row, which is the whole reason the number was pinned rather than given a column - it is the mirrored empty track again, but as one property on the element that has to respect it");
   ("each is given the gutter as its own WIDTH rather than being pinned by its left edge alone, because that is what lines the numbers up on their periods - the number is right-aligned inside a fixed box, so a one-digit and a three-digit number end at the same place");
   ("held to the middle of the row's own height rather than left to fall wherever a lifted-out span falls, so a row whose title runs to two lines keeps its number beside the middle of the title instead of up against the top");
   let middle = {
@@ -44,9 +44,18 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
       "text-align": "center",
     });
   }
+  ("what the title has to keep clear is the number gutter, plus the marker gutter when there is a marker - and nothing when neither is asked for");
+  let reserved = gutter;
+  if (with_marker) {
+    reserved = text_combine_multiple(["calc(", gutter, " + ", marker_gutter, ")"]);
+  }
   let title = html_span_text(button, "");
   html_centered(title);
   html_style_line_height(title, 1.5);
+  html_style_assign(title, {
+    "padding-left": reserved,
+    "padding-right": reserved,
+  });
   html_style_assign(button, {
     display: "grid",
     "grid-template-columns": "1fr",
