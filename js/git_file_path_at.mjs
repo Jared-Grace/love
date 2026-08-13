@@ -5,7 +5,7 @@ import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.m
 import { list_single_message } from "./list_single_message.mjs";
 import { path_base } from "./path_base.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-export async function git_folder_commit_file_path(folder, commit, file_name) {
+export async function git_file_path_at(folder, commit, file_name) {
   "$plain folder";
   "$plain commit";
   "$plain file_name";
