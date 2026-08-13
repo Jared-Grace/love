@@ -1,3 +1,4 @@
+import { qa_promoted_public_copy_gate_run } from "./qa_promoted_public_copy_gate_run.mjs";
 import { ebible_chapter_code_known_cases_gate_run } from "./ebible_chapter_code_known_cases_gate_run.mjs";
 import { g_leader_book_reaches_canon_assert } from "./g_leader_book_reaches_canon_assert.mjs";
 import { apps_hash_keys_unchecked_gate_run } from "./apps_hash_keys_unchecked_gate_run.mjs";
