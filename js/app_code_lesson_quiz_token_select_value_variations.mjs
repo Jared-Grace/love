@@ -1,3 +1,6 @@
+import { js_code_comparison_operand_types } from "./js_code_comparison_operand_types.mjs";
+import { lists_equal_pair } from "./lists_equal_pair.mjs";
+import { not } from "./not.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
@@ -49,16 +52,25 @@ export function app_code_lesson_quiz_token_select_value_variations(code) {
     return r5;
   }
   let perms = list_permutations(tokens);
-  function matches(perm) {
-    let value = value_of(perm);
-    let same = equal(value, target);
-    return same;
-  }
-  let good = list_filter(perms, matches);
   function join_code(perm) {
     let joined = list_join(perm, separator);
     return joined;
   }
+  ("Landing on the right value is not enough on its own, because a comparison will happily compare a number with a true or a false and answer without complaint. 3 < 1 !== true is two numbers compared and then two booleans compared; rearranged to 3 < true !== 1 it is a number against a boolean and then a boolean against a number, and it comes out to the same answer by luck. Ten orderings were accepted for that line where two say what it says. So an ordering has to compare the same kinds of thing the line already compared, in the same amounts, and nine of those ten go.");
+  ("Asked as same as the original rather than as no mixing, because mixing is a lesson of its own - there is a lesson whose whole point is that a number never equals a string, and a line written to compare across kinds must still accept its own sides the other way round.");
+  let code_types = js_code_comparison_operand_types(code);
+  function matches(perm) {
+    let value = value_of(perm);
+    let same = equal(value, target);
+    if (not(same)) {
+      return false;
+    }
+    let joined = join_code(perm);
+    let types = js_code_comparison_operand_types(joined);
+    let compared_alike = lists_equal_pair(types, code_types);
+    return compared_alike;
+  }
+  let good = list_filter(perms, matches);
   let unique = list_map_unique(good, join_code);
   return unique;
 }
