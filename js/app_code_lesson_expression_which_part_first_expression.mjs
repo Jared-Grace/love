@@ -1,4 +1,4 @@
-import { ternary } from "./ternary.mjs";
+import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { boolean_random } from "./boolean_random.mjs";
@@ -26,8 +26,11 @@ export function app_code_lesson_expression_which_part_first_expression() {
   let outer = text_to(input3);
   let inner = app_code_operator_code(inner_left, strong, inner_right);
   let strong_first = boolean_random();
-  let left = ternary(strong_first, inner, outer);
-  let right = ternary(strong_first, outer, inner);
-  let code = app_code_operator_code(left, weak, right);
+  let code = app_code_operator_code_subject_first(
+    strong_first,
+    inner,
+    outer,
+    weak,
+  );
   return code;
 }
