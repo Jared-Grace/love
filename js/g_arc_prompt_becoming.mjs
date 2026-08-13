@@ -20,8 +20,8 @@ export function g_arc_prompt_becoming(leader) {
     "Belief only moves forward. Once they believe, they never go back.",
   ];
   if (not(leader)) {
-    let r = list_join_newline(belief);
-    return r;
+    let belief_joined = list_join_newline(belief);
+    return belief_joined;
   }
   let requirements = g_arc_prompt_elder_requirements();
   let elder = [
