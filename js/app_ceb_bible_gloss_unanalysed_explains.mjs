@@ -25,7 +25,50 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     "The word for a word, and for what is said in words - a saying, a message, a promise. Where the Bible speaks of the word of God, this is the word standing there.";
   let diin =
     "The question word ‘where’. It asks after the place a thing is in, and it is also used to say ‘where’ inside a longer sentence, without a second word for it.";
+  let dagat = "The word for the sea.";
+  let silang =
+    "The word for ‘they’, with the linker on its end. Its root is ‘sila’, and the ‘-ng’ ties it to the word that follows.";
+  let awit =
+    "The word for a song, and for the singing of it. It is what stands at the head of the psalms that name themselves songs.";
   let r = {
+    among:
+      "The word for ‘our’ in the sense that leaves out the one being spoken to - ours and not yours - carrying the linker that ties it to the thing owned. Cebuano keeps two words for ‘our’ and chooses between them by whether the hearer is counted in.",
+    unta: "A small word laying a wish over what is said - ‘may it be’, ‘I wish that’. It also marks a thing that was meant or hoped for and did not come about, so the same word carries both the prayer and the regret.",
+    "kanus-a":
+      "The question word ‘when’. It asks after the time of a thing, and it is also used inside a longer sentence where English says ‘when’.",
+    Amen: "A Hebrew word kept as it stands rather than turned into a Cebuano one. It means ‘so let it be’ - the hearer setting his own agreement on what has just been said.",
+    presensiya:
+      "The word for somebody's presence - their being there. It came into Cebuano from Spanish.",
+    alpa: "The word for a harp, the stringed instrument the psalms are sung to. It came into Cebuano from Spanish.",
+    tagoangkan:
+      "The word for the womb. The Bible uses it both for the bearing of children and for the beginning of a person, before anyone else had seen them.",
+    dios: "The word for a god. Written small it stands for one of the gods the nations made for themselves, which is how it is told apart from ‘Dios’, the name Cebuano gives to God himself.",
+    shekel:
+      "A Hebrew weight, and the piece of silver weighing it, kept as it stands rather than turned into a Cebuano word.",
+    lungib: "The word for a cave - a hollow in rock.",
+    Lebanon:
+      "The name of the mountain country north of Israel, famous in the Bible for its cedar forests.",
+    Awit: awit,
+    piyangpiyang:
+      "The word for cymbals - two plates of metal struck together. The doubling in the word is the sound of them.",
+    balbas: "The word for a beard.",
+    namo: "The word for ‘our’ in the sense that leaves out the one being spoken to, in the form it takes when it follows what is being spoken about.",
+    Gawas:
+      "A word for the outside of something. Set in front of a thing named it also says ‘apart from’ or ‘except’, the outside being what is left when that thing is set aside.",
+    habog: "A word for high - standing far up.",
+    sumala:
+      "A small word measuring one thing by another - ‘according to’. It is followed by ‘sa’, which says what the measure is.",
+    sungay:
+      "The word for a horn on an animal. The Bible also uses it for strength itself, because the horn is what an animal fights with.",
+    guba: "A word for something broken down - ruined, fallen in.",
+    sambingay:
+      "The word for a parable - a story told about one thing in order to say something about another.",
+    baton:
+      "A word for holding something and keeping it - taking a thing and not letting it go.",
+    Selah:
+      "A Hebrew word left standing in the psalms rather than turned into a Cebuano one. What it directed is no longer known for certain; it is generally taken as a mark to the singers, a pause or a lifting of the music.",
+    cedro:
+      "The word for the cedar, the great tree of Lebanon whose timber built the temple. It came into Cebuano from Spanish.",
     mo: "The word for ‘you’, said to one person, in the form it takes when it follows what is being spoken about. Cebuano puts it after the word it belongs to, so it will often stand where English has ‘your’ in front.",
     ka: "The word for ‘you’, said to one person, in the form it takes when that one is the doer. It never begins a sentence in Cebuano; it leans on the word in front of it.",
     man: "A small word that softens what is being said or presses gently on it. It carries no meaning that can be lifted out on its own, and English usually says the same thing with tone rather than with a word.",
@@ -173,7 +216,8 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     balod: "The word for a wave of the sea.",
     pako: "The word for a wing.",
     langyaw: "A word for a foreigner - one living where they were not born.",
-    dagat: "The word for the sea.",
+    dagat,
+    Dagat: dagat,
     ulan: "The word for rain.",
     lalom:
       "A word for deep - far down. It is used of water and of what is hard to reach in a person.",
@@ -194,8 +238,8 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
       "The name of the people God took for his own, and of the land they were given.",
     bisan:
       "A small word granting a thing and going on anyway - ‘even’, ‘although’.",
-    silang:
-      "The word for ‘they’, with the linker on its end. Its root is ‘sila’, and the ‘-ng’ ties it to the word that follows.",
+    silang,
+    Silang: silang,
     bangag: "The word for a hole.",
     panon:
       "The word for a company kept together - a flock, a herd, or an army drawn up.",

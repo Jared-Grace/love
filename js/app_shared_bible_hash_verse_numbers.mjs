@@ -13,7 +13,8 @@ export function app_shared_bible_hash_verse_numbers(hash) {
   let written = property_get_or(hash, key, "");
   let unsaid = text_empty_is(written);
   if (unsaid) {
-    return [];
+    let r = [];
+    return r;
   }
   let separator = app_shared_bible_verses_separator();
   let verse_numbers = text_split(written, separator);
