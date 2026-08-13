@@ -16,13 +16,13 @@ export async function git_tree_folder_run_at(
     let filename = path_base(folder);
     let tree_folder = path_join([folder_path, filename]);
     await git_folder_worktree_add(folder, tree_folder, commit);
-    let result = null;
+    let answered = null;
     try {
-      result = await lambda$tree_folder(tree_folder);
+      answered = await lambda$tree_folder(tree_folder);
     } finally {
       await git_folder_worktree_remove(folder, tree_folder);
     }
-    return result;
+    return answered;
   }
   let result = await folder_temp(lambda$folder_path);
   return result;
