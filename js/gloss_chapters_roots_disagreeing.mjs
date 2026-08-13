@@ -1,14 +1,13 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { gloss_chapter_roots_disagreeing } from "./gloss_chapter_roots_disagreeing.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
-import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 export async function gloss_chapters_roots_disagreeing(fn) {
@@ -36,8 +35,7 @@ export async function gloss_chapters_roots_disagreeing(fn) {
   let chapters = await list_map_async(chapter_codes, chapter_read);
   function disagreeing_is(chapter) {
     let disagreeing = property_get(chapter, "disagreeing");
-    let empty = list_empty_is(disagreeing);
-    let offending = not(empty);
+    let offending = list_empty_not_is(disagreeing);
     return offending;
   }
   let offenders = list_filter(chapters, disagreeing_is);
