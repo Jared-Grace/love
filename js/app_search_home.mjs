@@ -44,16 +44,7 @@ export async function app_search_home(context) {
   html_centered(bar);
   let hash = html_hash_object_get();
   let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
-  let languages = ebible_languages();
-  function code_to_language(code) {
-    let property_name = language_code_key();
-    let r = list_find_property_or_null(languages, property_name, code);
-    return r;
-  }
-  let languages_chosen = list_map_filter_null_not_is(
-    language_codes,
-    code_to_language,
-  );
+  let languages_chosen = ebible_languages_from_codes(language_codes);
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
   let search_instructions =
