@@ -28,7 +28,7 @@ export async function ebible_index_flat_uploaded_gate_run() {
   let unasked = property_get(asked, "unasked");
   let departed = property_get(asked, "departed");
   let r = {
-    checked: list_size(shipped),
+    checked: list_size(answered),
     uploaded: list_size(uploaded),
     absent: list_size(absent),
     unasked,
