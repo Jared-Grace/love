@@ -9,8 +9,12 @@ import { list_size } from "./list_size.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export async function gloss_chapters_word_explains_set(fn, explains) {
-  "Give every explanation in one whole gloss store that is about a named word the wording written for that word, and answer with the chapters it rewrote.";
+export async function gloss_chapters_word_explains_set(
+  fn,
+  explains,
+  lambda$explain,
+) {
+  "Give every explanation in one whole gloss store that is about a named word, and that the caller is willing to write over, the wording written for that word - answering with the chapters it rewrote.";
   "The chapters it left alone are counted rather than listed, because a store runs to hundreds of them and a reader wanting to check the work wants the handful that moved.";
   let folder = local_function_folder(fn);
   let file_names = await folder_read_files_exists_ensure(folder);
@@ -20,6 +24,7 @@ export async function gloss_chapters_word_explains_set(fn, explains) {
       chapter_code,
       fn,
       explains,
+      lambda$explain,
     );
     let r = {
       chapter_code,
