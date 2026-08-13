@@ -392,6 +392,7 @@ export function qa_gates() {
     literals_frozen_storage_gate_run,
     storage_local_key_names_gate_run,
     storage_local_key_words_gate_run,
+    qa_promoted_public_copy_gate_run,
     storage_key_seams_gate_run,
     storage_key_seams_word_misplaced_gate_run,
     js_dot_name_object_name_cases_gate_run,
