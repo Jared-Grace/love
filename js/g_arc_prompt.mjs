@@ -1,3 +1,4 @@
+import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
 import { g_arc_prompt_becoming } from "./g_arc_prompt_becoming.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
@@ -27,7 +28,7 @@ export function g_arc_prompt(
   ("~Twelve turns make a conversation, and one person holds at most one conversation a day, so seventy turns is about six days this person is met on - not six days running, because the player's day holds a conversation with everybody else too.");
   ("LLM groups 'turn_target' turns into conversations.");
   ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
-  "ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.";
+  ("ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.");
   let list = g_openers_unbeliever();
   let openers_unbeliever = list_join_comma_space(list);
   ("The disciple openers arrive WITHOUT the Bible question door. A question is one turn with no floor, drawn from a pool that is subtracted from the chapter's matches before arcs are sized at all, so a question turn written into an arc is a turn already paid for elsewhere. The list not offering it is what keeps it out.");
@@ -63,6 +64,7 @@ export function g_arc_prompt(
     "turns.",
   ]);
   let becoming = g_arc_prompt_becoming(leader);
+  let example = g_arc_answer_example();
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
