@@ -4,23 +4,11 @@ import { app_replace_rule_set_decimals_rules } from "./app_replace_rule_set_deci
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_replace_rule_set_scientific_notation_numbers() {
   let rules = app_replace_rule_set_decimals_rules();
-  list_add_multiple(rules, [
-    "sn > de se",
-    "sn > ig se",
-    "se > eE ex",
-    "eE > e",
-    "eE > E",
-    "ex > + ig",
-    "ex > - ig",
-    "ex > ig",
-  ]);
+  list_add_multiple(rules, ["sn > de se", "sn > ig se"]);
+  app_replace_rule_set_exponent_part_rules(rules);
   let ad = app_replace_rule_set_decimals_abbreviations();
-  let abbreviations = {
-    eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
-    ex: ["", "ex", "ponent"],
-    se: ["", "s", "cientific notation number ", "e", "nding"],
-    sn: ["", "s", "cientific ", "n", "otation number"],
-  };
+  let abbreviations = {};
+  app_replace_rule_set_exponent_part_abbreviations(abbreviations);
   object_merge_set(abbreviations, ad);
   let r = {
     name: "Scientific Notation Numbers",
