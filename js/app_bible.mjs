@@ -1,6 +1,5 @@
-import { app_shared_bible_hash_unknown_page_shown_is } from "./app_shared_bible_hash_unknown_page_shown_is.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
+import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
+import { null_is } from "./null_is.mjs";
 import { app_shared_bible_read } from "./app_shared_bible_read.mjs";
 import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
 import { app_bible_screens } from "./app_bible_screens.mjs";
@@ -11,14 +10,10 @@ import { app_shared_bible_mode_verse } from "./app_shared_bible_mode_verse.mjs";
 import { app_bible_verse_switch_button } from "./app_bible_verse_switch_button.mjs";
 import { equal } from "./equal.mjs";
 export async function app_bible(context) {
-  app_shared_app_fn_set(context, app_bible);
-  ("The link is read back to the reader here, before the mode is touched, and not only in the two readers underneath. The next line writes the mode back into the address, so a word naming neither reader was rubbed out before either reader ever saw the link - the guard downstream then found a perfectly good link and said nothing, and the reader silently got the other reader.");
-  let hash = html_hash_object_get();
-  let unknown_shown = app_shared_bible_hash_unknown_page_shown_is(
-    context,
-    hash,
-  );
-  if (unknown_shown) {
+  "The link is read back to the reader here, before the mode is touched, and not only in the two readers underneath. The next line writes the mode back into the address, so a word naming neither reader was rubbed out before either reader ever saw the link - the guard downstream then found a perfectly good link and said nothing, and the reader silently got the other reader.";
+  let hash = app_shared_bible_page_start_hash(context, app_bible);
+  let corrected = null_is(hash);
+  if (corrected) {
     return;
   }
   let mode = app_shared_bible_mode_get();
