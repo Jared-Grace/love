@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
 import { app_shared_bible_ref_chapter_codes } from "./app_shared_bible_ref_chapter_codes.mjs";
@@ -27,11 +28,13 @@ export function app_shared_bible_hash_field_reference(books_en) {
     return readable;
   }
   function suggestions(value) {
-    ("The last word is the chapter and verse and everything before it is the book, because a book may be several words long and a chapter and verse is never more than one. 1 Jhon 3:16 splits at the right place under that rule and would not under any rule that counted from the front.");
-    let words = text_split_space(app_shared_bible_reference_spaced(value));
+    "The last word is the chapter and verse and everything before it is the book, because a book may be several words long and a chapter and verse is never more than one. 1 Jhon 3:16 splits at the right place under that rule and would not under any rule that counted from the front.";
+    let s = app_shared_bible_reference_spaced(value);
+    let words = text_split_space(s);
     let tail = list_last(words);
-    let numbered = text_empty_not_is(text_digits_only(tail));
-    if (!numbered) {
+    let name2 = text_digits_only(tail);
+    let numbered = text_empty_not_is(name2);
+    if (not(numbered)) {
       ("Nothing after the book says which chapter, so there is no reference here to repair - only a book name, and offering one back with a chapter invented for it would be answering a question the reader never asked.");
       let none = [];
       return none;
