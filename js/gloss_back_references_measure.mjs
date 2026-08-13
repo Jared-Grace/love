@@ -1,10 +1,10 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { each_async } from "./each_async.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { gloss_chapters_back_references } from "./gloss_chapters_back_references.mjs";
 import { gloss_stores } from "./gloss_stores.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
-import { list_size } from "./list_size.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,8 +25,7 @@ export async function gloss_back_references_measure() {
     let found = await gloss_chapters_back_references(fn);
     let offenders = property_get(found, "offenders");
     function pointing_size(chapter) {
-      let pointing = property_get(chapter, "pointing");
-      let size = list_size(pointing);
+      let size = property_list_size(chapter, "pointing");
       return size;
     }
     let sites = list_map_sum(offenders, pointing_size);
