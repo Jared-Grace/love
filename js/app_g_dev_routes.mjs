@@ -184,6 +184,9 @@ export function app_g_dev_routes(div_map) {
     pray,
     characters,
   };
+  ("the crowd-parting doors are DERIVED from the arrangements that make the way open, one route each, so a new arrangement is one entry in a list rather than a route written here and a card written somewhere else");
+  let clearing = app_g_dev_routes_npc_path_clear(div_map);
+  object_assign(routes, clearing);
   let local = localhost_is();
   if (local) {
     ("#design is the ONE route that stays localhost-only, and it is held back HERE rather than at the dispatcher because this registry is what both the dispatcher and the #index directory read — gating it once means the card cannot be listed on a screen where tapping it would do nothing. every other route ships, so the dev screens are reachable on a phone against the deployed site, where there is no localhost to develop from. design is different in kind: it is the private design notes, not a mechanic under test");

@@ -1,5 +1,5 @@
+import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { g_leader_passages_least } from "./g_leader_passages_least.mjs";
-import { list_reverse } from "./list_reverse.mjs";
 import { g_sermon_chapter_passages } from "./g_sermon_chapter_passages.mjs";
 import { add } from "./add.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
