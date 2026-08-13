@@ -1,3 +1,4 @@
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_suppose_line } from "./app_code_lesson_expression_comparing_a_comparison_suppose_line.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
@@ -72,7 +73,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   function above(root) {
     "first what the word comparison names, then the line the whole screen is here to solve, then the idea: a comparison results in true or false, so a comparison can be used anywhere a true or false can be; then the replacing rule, then two lines walked through a replacement at a time";
     "The line comes second, before anything that solves it, because the screen used to prove its lemmas first and only then name the theorem: a learner met a comparison results in true or false, and then we can replace 3 === 5 with false, with nowhere to put either - the line those two facts were FOR had not been shown yet. Asked first, each line after it is heard as an answer, and the second walkthrough was already written this way round, so the screen now asks in one voice rather than two";
-    "The idea is said with < rather than with the === the line in front of them uses, and that is the point of it: a rule shown on the same symbol as the instance under it reads as a rule about that symbol. A different one says general. It is also the only unambiguous choice here - 3 === 5 === false carries two ===, so a comparison like === asks the learner to pick which, on the very ambiguity this lesson exists to clear up, while < appears nowhere in the line. It is picked from the six the card above just listed, and it is the operator the second walkthrough runs on, so it arrives from somewhere and is used again";
+    "The idea names two operators, < and ===, and needs both. One alone was < , which marks the rule as general - a rule shown on the same symbol as the instance under it reads as a rule about that symbol - but it left the learner to carry the rule over to === on their own, and === is the one operator they need it for, because it is the one the line in front of them is made of. Naming both makes the pair read as a class rather than as a symbol, so the generality survives, and the carrying over is done for them";
     app_code_lesson_expression_comparing_a_comparison_recall(root);
     let same_first = js_operator_triple_equal();
     let goal = app_code_container_light_blue(root);
@@ -90,9 +91,12 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let t = js_keyword_true();
     let f = js_keyword_false();
     let smaller = js_operator_less_than_symbol();
+    let same_symbol = js_operator_triple_equal_symbol();
     html_div_cycle_code(idea, [
-      "A comparison like ",
+      "Comparisons like ",
       smaller,
+      " and ",
+      same_symbol,
       " will result in ",
       t,
       " or ",
