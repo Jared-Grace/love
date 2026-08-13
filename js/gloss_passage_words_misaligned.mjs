@@ -1,12 +1,8 @@
+import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
+import { gloss_entries_words_bare } from "./gloss_entries_words_bare.mjs";
 import { gloss_words_misaligned } from "./gloss_words_misaligned.mjs";
-import { list_join_space } from "./list_join_space.mjs";
-import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { each } from "./each.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
@@ -21,17 +17,8 @@ export function gloss_passage_words_misaligned(passage, words_read) {
     let none = null;
     return none;
   }
-  let words_written = words_read(passage);
-  let line = list_join_space(words_written);
-  let written = text_punctuation_split(line);
-  let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explained = [];
-  function entry_read(entry) {
-    let word = property_get(entry, word_key);
-    let bares = text_punctuation_split(word);
-    list_add_multiple(explained, bares);
-  }
-  each(entries, entry_read);
+  let written = gloss_passage_words_bare(passage, words_read);
+  let explained = gloss_entries_words_bare(entries);
   let difference = gloss_words_misaligned(written, explained);
   let matched = null_is(difference);
   if (matched) {
