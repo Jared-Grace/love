@@ -1,3 +1,4 @@
+import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen_or } from "./app_shared_bible_hash_to_languages_chosen_or.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
@@ -74,7 +75,6 @@ export async function app_verses(context) {
   );
   let default_l = list_join_plus(default_codes);
   let remembered_l = app_shared_language_codes_saved_or(default_l);
-  let hash = html_hash_object_get();
   ("a url hash wins over the remembered choice, so a shared link still opens in the languages it names");
   let language_codes = app_shared_bible_hash_to_languages_chosen_or(
     hash,
