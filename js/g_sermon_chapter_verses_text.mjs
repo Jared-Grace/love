@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { equal } from "./equal.mjs";
 import { text_wrap_brackets } from "./text_wrap_brackets.mjs";
 import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { list_copy } from "./list_copy.mjs";
@@ -38,8 +38,7 @@ export function g_sermon_chapter_verses_text(passages) {
   let lines = [];
   for (let chapter of chapters) {
     function of_this_chapter(passage) {
-      let its = property_get(passage, "chapter");
-      let same = equal(its, chapter);
+      let same = property_equals(passage, "chapter", chapter);
       return same;
     }
     let mine = list_filter(copied, of_this_chapter);
