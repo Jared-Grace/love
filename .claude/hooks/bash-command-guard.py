@@ -2339,7 +2339,14 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
-            and not is_safe_curl_read(words)
+            # `unwrapped`, like the sandboxed-node templates and unlike the
+            # rest: a fetch is the one thing here that waits on somebody else,
+            # so it is written with `timeout 30` in front of it more often than
+            # not, and reading `words` meant the wrapper this file recommends
+            # was what stopped the fetch being recognised. xargs is still not
+            # taken off, so a curl whose real arguments arrive on standard
+            # input is judged by none of this and asks.
+            and not is_safe_curl_read(unwrapped)
         ):
             return False
     return found_command
