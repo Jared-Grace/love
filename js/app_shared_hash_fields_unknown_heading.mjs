@@ -20,8 +20,8 @@ export function app_shared_hash_fields_unknown_heading(findings) {
   let name = list_first(distinct);
   let first = list_first(findings);
   ("the field is taken out of the finding and then asked, rather than reached through in one step, because the word for the property is also the name of a function - reached through in one step the canonicalizing pass reads it as a reference to that function and writes it as one, and the day that function is renamed the property this asks for is renamed with it and quietly stops being found");
-  let number_is = property_path_get_2(first, "field", "number_is");
-  if (number_is) {
+  let number_field_is = property_path_get_2(first, "field", "number_is");
+  if (number_field_is) {
     let counted = text_combine_multiple([
       "The ",
       name,
