@@ -1,10 +1,11 @@
+import { text_lower_to } from "./text_lower_to.mjs";
+import { text_ends_with_space } from "./text_ends_with_space.mjs";
+import { text_starts_with_space } from "./text_starts_with_space.mjs";
 import { g_arc_prompt } from "./g_arc_prompt.mjs";
 import { g_profiles } from "./g_profiles.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { text_lower } from "./text_lower.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_trim_end } from "./text_trim_end.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { each } from "./each.mjs";
@@ -31,15 +32,14 @@ export function g_arc_prompt_style_assert() {
           hint: "say person rather than npc - the prompt asks for a human being, not a game object",
         });
       }
-      let trimmed = text_trim_end(line);
-      if (not(equal(trimmed, line))) {
+      if (text_ends_with_space(line)) {
         list_add(faults, {
           leader,
           line,
           hint: "a line must not end in whitespace",
         });
       }
-      let one = text_starts_with(line, " ");
+      let one = text_starts_with_space(line);
       let two = text_starts_with(line, "  ");
       if (one && not(two)) {
         list_add(faults, {
@@ -53,7 +53,8 @@ export function g_arc_prompt_style_assert() {
   }
   check_prompt(false);
   check_prompt(true);
-  assert_json(equal(faults.length, 0), {
+  let b = equal(faults.length, 0);
+  assert_json(b, {
     faults,
     hint: "the arc prompt says person rather than npc, trails no whitespace, and indents by two spaces",
   });
