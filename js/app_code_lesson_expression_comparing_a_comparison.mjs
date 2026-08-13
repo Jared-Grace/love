@@ -96,7 +96,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     replacing(root, "3 === 5", false);
     app_code_lesson_expression_comparing_a_comparison_worked_example(
       root,
-      "So",
+      "Suppose",
       "3 === 5",
       false,
       same,
@@ -104,7 +104,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     );
     app_code_lesson_expression_comparing_a_comparison_worked_example(
       root,
-      "And",
+      "And suppose",
       "2 < 5",
       true,
       different,
