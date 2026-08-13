@@ -18,7 +18,7 @@ export async function app_shared_bible_choose_chapter(
   context,
 ) {
   "the whole-chapter reader's chapter picker: what it shows when the url names a book and no chapter yet, drawn in place rather than as its own screen, and otherwise the same carded numbers the verse reader shows";
-  ("no chapter is marked as current here, and truthfully so: this view is reached by clearing the chapter out of the url, so at this moment there is no chapter being read");
+  "no chapter is marked as current here, and truthfully so: this view is reached by clearing the chapter out of the url, so at this moment there is no chapter being read";
   "a way back to the chapter that was being read before any of this, named by it, because this screen is the middle of choosing rather than a place anybody meant to end up. it is the tab that remembers the chapter, not the link - the link had the chapter taken out of it to get here, which is the whole reason there was nothing to offer before.";
   "a tab that has read nothing yet is offered nothing, and rightly: somebody who opened straight onto a book has no reading to be returned to.";
   let book_name = ebible_book_code_to_name(books, book_code);
