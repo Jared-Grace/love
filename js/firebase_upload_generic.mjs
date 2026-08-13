@@ -21,8 +21,11 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     firebase_upload_generic.name,
     text_combine("Uploaded data to ", destination),
   );
+  let host = google_storage_host();
   let url = text_combine_multiple([
-    "https://storage.googleapis.com/",
+    "https://",
+    host,
+    "/",
     bucket.name,
     "/",
     file.name,

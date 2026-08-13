@@ -6,6 +6,6 @@ export function app_replace_rule_set_expressions_equality_abbreviations(
   app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
   object_merge_set(abbreviations, {
     ee: ["", "e", "quality ", "e", "xpression"],
-    eo: ["", "e", "elational ", "o", "perator"],
   });
+  ("the relational set names its operator and rewrites it, so re > re ro ade needs ro explained - equality writes === into the rule itself and never reaches for a short word, so there was nothing for a second one to explain");
 }

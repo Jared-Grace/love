@@ -19,7 +19,7 @@ export async function git_push_urls_gate_run() {
     };
     return offender;
   }
-  let answered = await repos_paths_map_unordered(each_folder);
+  let answered = await repos_paths_memory_map_unordered(each_folder);
   let offenders = list_filter_null_not_is(answered);
   list_empty_is_assert_json(offenders, {
     hint: "a repository has stopped writing to an address it is meant to write to - add it back with: git remote set-url --add --push origin <url>",
