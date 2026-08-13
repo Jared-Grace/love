@@ -41,9 +41,16 @@ export function literal_duplicates_generic(codes) {
     let quoted = json_to(getter.literal);
     let files = [];
     for (let f_name of object_property_names(codes)) {
-      let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
+      ("The two cheap questions are asked first and the file is left alone the moment either says no, because the third reads every getter there is to answer about one file. Asked of all of them it is a walk over the getters for every file in the repo for every getter - and almost none of those files hold the spelling at all, so nearly the whole of that walk was to establish something the string search had already settled. Measured: three quarters of this gate's whole cost sat in that one call.");
+      ("The stop is written as its own line rather than left to the order of an and, because the auto pass lifts a call out of an expression into a line above it, and a call lifted out of an and is a call that no longer waits for the tests in front of it.");
       let holds = codes[f_name].includes(quoted);
-      let candidate = not_equal(f_name, getter.f_name) && not(peer_is) && holds;
+      let other = not_equal(f_name, getter.f_name);
+      let looks = holds && other;
+      if (not(looks)) {
+        continue;
+      }
+      let peer_is = literal_getter_peer_is(getters, f_name, getter.literal);
+      let candidate = not(peer_is);
       if (candidate) {
         let prose_only = js_code_literal_prose_only(
           codes[f_name],
