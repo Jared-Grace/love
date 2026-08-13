@@ -1,7 +1,6 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { js_equality_operators } from "./js_equality_operators.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { null_is } from "./null_is.mjs";
@@ -12,8 +11,7 @@ export function js_equality_function_names() {
   let words = js_equality_operators();
   let names = [];
   for (let record of operators) {
-    let operator = property_get(record, "operator");
-    let asks = list_includes(words, operator);
+    let asks = property_in_list(record, "operator", words);
     if (asks) {
       let fn = property_get_or_null(record, "fn");
       let missing = null_is(fn);
