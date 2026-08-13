@@ -1,10 +1,9 @@
+import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
 import { ebible_verse_browser_try } from "./ebible_verse_browser_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_next_verse_missing_line } from "./app_next_verse_missing_line.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
-import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_add_first } from "./list_add_first.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next_verse_lines(
   chapter_code,
@@ -29,10 +28,12 @@ export async function app_next_verse_lines(
     let text = property_get(d, "text");
     return text;
   }
-  let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
+  let texts = await list_map_unordered_async(languages_chosen, lambda);
+  let lines = app_shared_bible_verse_block_lines(
+    chapter_code,
+    books,
     verse_number,
-  ]);
-  let mapped = await list_map_unordered_async(languages_chosen, lambda);
-  list_add_first(mapped, reference);
-  return mapped;
+    texts,
+  );
+  return lines;
 }
