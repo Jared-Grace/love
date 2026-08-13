@@ -143,6 +143,10 @@
   {
    "name": "file_read",
    "refusals": 2
+  },
+  {
+   "name": "file_read_json",
+   "refusals": 2
   }
  ]
 }
