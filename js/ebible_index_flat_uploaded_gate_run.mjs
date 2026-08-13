@@ -1,13 +1,11 @@
-import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
+import { ebible_bibles_answered_assert } from "./ebible_bibles_answered_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_index_flat_uploaded_path } from "./ebible_index_flat_uploaded_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { lists_combine } from "./lists_combine.mjs";
-import { list_difference } from "./list_difference.mjs";
 import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ebible_index_flat_uploaded_gate_run() {
   arguments_assert(arguments, 0);
