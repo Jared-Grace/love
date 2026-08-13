@@ -1099,6 +1099,10 @@ export function permission_grant_names() {
   let spelled1078 = fn_name("local_function_folder");
   let spelled1079 = fn_name("claude_bash_commands_labelled");
   let spelled1080 = fn_name("app_ceb_bible_gloss_punctuation_entries_repair");
+  let spelled1081 = fn_name("qa_gates_machine_names");
+  let spelled1082 = fn_name("app_ceb_bible_gloss_generate_upload");
+  let spelled1083 = fn_name("app_ceb_bible_gloss_generate_download");
+  let spelled1084 = fn_name("ebible_bibles_answered_assert");
   let names = [
     spelled,
     spelled2,
@@ -2180,6 +2184,10 @@ export function permission_grant_names() {
     spelled1078,
     spelled1079,
     spelled1080,
+    spelled1081,
+    spelled1082,
+    spelled1083,
+    spelled1084,
   ];
   return names;
 }

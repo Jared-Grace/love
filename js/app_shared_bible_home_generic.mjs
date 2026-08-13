@@ -1,4 +1,4 @@
-import { app_shared_bible_hash_languages_unknown_shown_is } from "./app_shared_bible_hash_languages_unknown_shown_is.mjs";
+import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
 import { html_button_share_text } from "./html_button_share_text.mjs";
@@ -82,7 +82,7 @@ export async function app_shared_bible_home_generic(
   }
   let hash = html_hash_object_get();
   ("The same answer the chapter reader gives to a language code naming no bible we have, from the same function, so the two readers do not disagree about what a wrong link means.");
-  let unknown_shown = app_shared_bible_hash_languages_unknown_shown_is(
+  let unknown_shown = app_shared_bible_hash_unknown_shown_is(
     content,
     hash,
   );
