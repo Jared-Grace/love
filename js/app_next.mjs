@@ -1,3 +1,5 @@
+import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
+import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
@@ -53,6 +55,9 @@ export async function app_next(context) {
   ("The column is held by a box made fresh for this page rather than by the page root, which outlives it - the reason is written where the padding is done.");
   let content = html_div(root);
   app_shared_content_column_pad(content);
+  ("The reading is held off the top and bottom edges by the same gap that holds it off the sides, so the first line is not sitting against the frame of the window. The reader has a bar over its text doing that work; this page has nothing above the reading, and left alone the first line touches the edge.");
+  let value = app_shared_content_edge_gap();
+  html_style_padding_y(content, value);
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
   let fallback = app_shared_bible_verse_number_default();
