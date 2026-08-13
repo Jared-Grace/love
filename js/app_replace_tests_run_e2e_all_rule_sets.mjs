@@ -17,7 +17,6 @@ export async function app_replace_tests_run_e2e_all_rule_sets(
   "$plain url_prefix";
   "Walks every goal of every set of rules on a page, several pages at a time so a whole run finishes in an evening rather than overnight.";
   "Which sets these are is received rather than looked up, because the page being tested is not always the page this code was built from - a copy kept from an earlier build offers the goals of its own day, and asking today's list for them names goals that page never had.";
-  let rule_sets_goals = list_map_squash(rule_sets, lambda2);
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
     let mapped = object_wrap_multiple(goals, "goal");
@@ -27,7 +26,7 @@ export async function app_replace_tests_run_e2e_all_rule_sets(
     object_merge_multiple(mapped, merged);
     return mapped;
   }
-  let remaining = rule_sets_goals;
+  let remaining = list_map_squash(rule_sets, lambda2);
   let parallel_count = app_replace_tests_parallel_count();
   async function lambda(index) {
     async function on_page(page) {
