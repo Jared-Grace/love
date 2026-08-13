@@ -1,3 +1,4 @@
+import { gloss_words_misaligned_cases_gate_run } from "./gloss_words_misaligned_cases_gate_run.mjs";
 import { app_shared_bible_hash_unknown_gate_run } from "./app_shared_bible_hash_unknown_gate_run.mjs";
 import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
@@ -442,6 +443,7 @@ export function qa_gates() {
     storage_rules_gate_run,
     app_shared_bible_hash_unknown_gate_run,
     app_shared_bible_hash_unknown_gate_run,
+    gloss_words_misaligned_cases_gate_run,
   ];
   return gates;
 }
