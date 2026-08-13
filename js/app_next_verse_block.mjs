@@ -1,3 +1,5 @@
+import { list_map } from "./list_map.mjs";
+import { ebible_language_to_name } from "./ebible_language_to_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
 import { app_shared_bible_entries_names_texts } from "./app_shared_bible_entries_names_texts.mjs";
@@ -6,7 +8,6 @@ import { ebible_verse_browser_try } from "./ebible_verse_browser_try.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { app_next_verse_missing_line } from "./app_next_verse_missing_line.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_next_verse_block(
@@ -40,7 +41,8 @@ export async function app_next_verse_block(
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
   ]);
-  let names = list_map_property(languages_chosen, "name");
+  ("A link names its languages by their short codes, and a name over a verse has to be the language's own name - so each code is looked up one at a time rather than the list being turned into languages in one go. Turning the list over drops any code naming nothing, and a shorter list of names beside a full list of verses would put every name over the wrong verse.");
+  let names = list_map(languages_chosen, ebible_language_to_name);
   let entries = app_shared_bible_entries_names_texts(names, texts);
   let lines = app_shared_bible_verse_block_lines(
     chapter_code,
