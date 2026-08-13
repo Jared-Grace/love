@@ -262,11 +262,11 @@ export async function app_g_verify_home(context) {
       selected_key = g_sermon_passage_verses_key(passage);
       sessionStorage.setItem(storage_key, selected_key);
       app_g_verify_home_highlight_selected(selected_key, verse_buttons);
-      let english = property_get(passage, "english");
+      let scripture = property_get(passage, "scripture");
       let lines = property_get(passage, "lines");
       await app_g_verify_view(
         view,
-        english,
+        scripture,
         lines,
         chapter_code,
         selected_key,

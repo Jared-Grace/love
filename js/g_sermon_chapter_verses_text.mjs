@@ -9,7 +9,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 export function g_sermon_chapter_verses_text(passages) {
   "One chapter's written passages as plain numbered text - the Scripture an arc is allowed to answer from, ready to sit in a prompt.";
   "Numbered rather than run together, because every turn an arc writes has to name the verses that answer it. A block of unnumbered text can be quoted from but not cited, so the numbers are the part that makes the answer checkable.";
-  "The ENGLISH is what goes over, not the sermon lines written from it. The lines are the game's own words and an arc that answered from them would be answering from a paraphrase of Scripture rather than from Scripture.";
+  "The SCRIPTURE is what goes over, not the sermon lines written from it. The lines are the game's own words and an arc that answered from them would be answering from a paraphrase of Scripture rather than from Scripture.";
   "A passage's verses are given together on one line because that is the unit the sermon was written against - splitting them back into single verses would offer a smaller answer than any passage actually makes.";
   "Put back into VERSE ORDER, because the order they are stored in is the order somebody wrote them in - 1 John 1 opens on verse two - and a chapter handed over out of order reads as a chapter that has been cut about. The copy is taken first so sorting cannot reach back into the caller's own list.";
   let copied = list_copy(passages);
@@ -23,8 +23,8 @@ export function g_sermon_chapter_verses_text(passages) {
   let lines = [];
   for (let passage of ordered) {
     let joined = property_list_join_comma(passage, "verse_numbers");
-    let english = property_get(passage, "english");
-    let line = list_join_space([joined, english]);
+    let scripture = property_get(passage, "scripture");
+    let line = list_join_space([joined, scripture]);
     list_add(lines, line);
   }
   let r = list_join_newline(lines);
