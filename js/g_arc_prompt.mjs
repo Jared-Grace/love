@@ -171,7 +171,7 @@ export function g_arc_prompt(
     "No time of day, no weather, no place.",
     "Nothing about the player - not their gender, family, past, or how long they have been here.",
     "Nothing about persecution or danger, and nobody else who is a soldier or a ruler, unless these verses raise it. This person is whatever the JSON above says they are, and may speak of their own work plainly.",
-    "No wrong answers. Every passage you name must be the right one - just name the passage verse numbers.",
+    "No wrong answers. Every passage you name must be the right one - just name its chapter and its verse numbers.",
     "",
     "Keep every utterance short/summarized - prefer fewest number of sentences - should be ~1-2. Do not sacrifice clarity or arc consistency.",
     "",
