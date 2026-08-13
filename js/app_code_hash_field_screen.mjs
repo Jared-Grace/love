@@ -9,6 +9,7 @@ export function app_code_hash_field_screen() {
     key: app_code_screen_hash_key(),
     name: "screen",
     list_is: false,
+    number_is: false,
     valid_is: app_code_screen_name_known_is,
     suggestions: app_code_screen_name_suggestions,
     label: app_code_screen_name_label,

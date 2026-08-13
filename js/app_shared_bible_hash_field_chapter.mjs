@@ -9,6 +9,7 @@ export function app_shared_bible_hash_field_chapter() {
     key: app_shared_bible_chapter_hash_key(),
     name: "chapter",
     list_is: false,
+    number_is: false,
     valid_is: ebible_chapter_code_known_is,
     suggestions: ebible_chapter_code_suggestions,
     label: ebible_chapter_code_label,
