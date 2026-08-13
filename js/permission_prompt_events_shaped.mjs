@@ -1,3 +1,5 @@
+import { command_verbs_all } from "./command_verbs_all.mjs";
+import { set_includes } from "./set_includes.mjs";
 import { command_verb_shape } from "./command_verb_shape.mjs";
 import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
 import { list_add } from "./list_add.mjs";
