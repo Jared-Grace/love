@@ -58,7 +58,12 @@ export async function app_g_player_path_animate(
     let stopped = app_g_player_walk_stopped_is(walk);
     return stopped;
   }
-  await each_async(steps, lambda);
+  try {
+    await each_async(steps, lambda);
+  } finally {
+    ("said however this ends, and from a finally so that a walk which throws partway still says it. what reads this is a tap landing on the player: while a walk is going that tap means stop here, and only once everything has finished does it mean the menu again - so a walk that never said it was over would leave the menu shut for the rest of the day");
+    app_g_player_walk_end(walk);
+  }
   if (line_walk) {
     app_g_day_line_turn(g, arrived);
   }
