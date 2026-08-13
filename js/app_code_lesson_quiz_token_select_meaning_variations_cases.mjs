@@ -1,4 +1,4 @@
-export function app_code_lesson_quiz_token_select_value_variations_cases() {
+export function app_code_lesson_quiz_token_select_meaning_variations_cases() {
   "Lines from the lessons beside every token ordering the unscramble should accept for each - the whole answer, so an ordering quietly appearing is as much a failure as one quietly going.";
   "What rests on this is what a learner is told is right. An ordering that should not be there marks a line the lesson never taught as a correct answer, and the learner is taught it; one that should be there and is not marks the learner wrong for something the lesson does accept. Neither is an error anywhere - the quiz simply agrees, or simply does not.";
   "The orderings are written in the order they come back, because that order is what the answer box shows while the learner is part way through building one.";
