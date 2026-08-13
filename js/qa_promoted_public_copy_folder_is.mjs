@@ -1,3 +1,4 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -60,8 +61,7 @@ export async function qa_promoted_public_copy_folder_is(
   for (let owner_name of owner_names) {
     let noted = property_get(served, owner_name);
     let owner_source = file_name_js(owner_name);
-    let served_source = property_get_or_null(noted, owner_source);
-    let copied = equal(served_source, source_hash);
+    let copied = property_get_or_null_equal(noted, owner_source, source_hash);
     if (copied) {
       ("pointed back at what it was copied from, the page has to come out as the very page being served - which is what says these pieces are that page and not a later build of it wearing an old name");
       let pointed_back = text_replace(page_text, source_name, owner_source);
