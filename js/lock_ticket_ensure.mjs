@@ -1,3 +1,4 @@
+import { lock_waiting_dead_clear } from "./lock_waiting_dead_clear.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lock_waiting_folder } from "./lock_waiting_folder.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
@@ -18,6 +19,8 @@ export async function lock_ticket_ensure(lock_folder, wait, who) {
   let ticket = lock_ticket_name(arrival, named);
   if (wait) {
     await folder_exists_ensure(waiting);
+    ("Joining the line is also when the line is tidied, because it is the one moment that happens once. Looking is the other candidate and it happens several times a second in every waiter, which would mean the same dead word being noticed and removed over and over by everybody at once, to no further effect after the first. Whoever is about to read this folder is the right one to have cleared it.");
+    await lock_waiting_dead_clear(waiting);
   }
   let ticket_path = path_join([waiting, ticket]);
   return ticket_path;
