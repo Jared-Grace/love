@@ -43,14 +43,16 @@ export function g_arc_prompt(
   ]);
   let joined = list_join_empty([preaching, "."]);
   let joined9 = list_join_space(["Aim for", turn_target, "turns."]);
-  let joined6 = list_join_space([
+  let unbeliever_openers = list_join_space([
     "  openers for somebody who does not yet believe, one of:",
     openers_unbeliever,
   ]);
-  let joined7 = list_join_space([
+  let joined6 = list_join_empty([unbeliever_openers, "."]);
+  let disciple_openers = list_join_space([
     "  openers for somebody who already believes, one of:",
     openers_disciple,
   ]);
+  let joined7 = list_join_empty([disciple_openers, "."]);
   let joined8 = list_join_space([
     "A conversation holds about",
     turns_mean,
