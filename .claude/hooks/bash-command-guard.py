@@ -2147,9 +2147,22 @@ def is_safe_sandboxed_node_script(words):
     """Sibling of is_safe_sandboxed_node_eval: same sandboxing template,
     but running a script file under scripts/temp/ instead of an inline
     -e string. See module docstring for the two extra restrictions
-    (read-only, path pinned to scripts/temp/) this adds."""
-    if len(words) != 8:
+    (read-only, path pinned to scripts/temp/) this adds.
+
+    Trailing arguments to the script ARE accepted, unlike the -e template,
+    which pins its length exactly. They cannot escalate: the sandbox blocks
+    fs-write, child_process and network whatever argv holds, and the script
+    itself is a file Claude may already write freely, so any string passed
+    in could equally have been hardcoded there. What that buys is a scratch
+    script worth rerunning over a different input instead of being edited
+    between runs. Each argument still has to be one plain word by the same
+    character allowlist the script path uses, so nothing the tokenizer read
+    as a single word can carry shell punctuation into the line."""
+    if len(words) < 8:
         return False
+    for argument in words[8:]:
+        if not SAFE_TEMP_SCRIPT_PATH_RE.match(argument):
+            return False
     if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
         return False
     if words[5] != "--permission":
