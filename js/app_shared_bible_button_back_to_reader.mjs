@@ -19,7 +19,8 @@ export async function app_shared_bible_button_back_to_reader(parent, context) {
   "there is nothing to go back to until a chapter has been chosen, so when neither the tab nor the link names one this draws no button at all. it used to insist on the chapter and stop when there was none, and because every picker screen opens by building this bar, one missing word took the book picker, the chapter picker and the verse picker down together and left a blank page. a way out that cannot be named yet is simply absent; the picker underneath is still the whole screen and still works";
   "the passage the tab remembers is asked before the link is, and it is what makes this a way of changing your mind rather than only a way of going back. the link stops saying where somebody came from the moment they tap a book, because the chapter picker is handed its book by having a chapter written into the link - so from the second screen onward the link names where they are heading, and only the tab still knows where they were. it also answers the commoner case, a page opened with no passage written in the link at all: the reader was showing one anyway, so there is somewhere to return to and it can now be named";
   let kept = app_shared_bible_passage_kept_get(context);
-  let remembered = not(null_is(kept));
+  let b = null_is(kept);
+  let remembered = not(b);
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get_or_empty(hash);
   let verse_number = app_shared_bible_hash_v_get(hash);
