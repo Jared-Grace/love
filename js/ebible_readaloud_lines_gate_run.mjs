@@ -48,26 +48,12 @@ export async function ebible_readaloud_lines_gate_run() {
   });
   let measured_names = list_map_property(bibles, "bible_folder");
   let answered = lists_combine([measured_names, unmeasured]);
-  let shipped = ebible_bible_folders_sorted();
-  let unasked = list_difference(shipped, answered);
-  let departed = list_difference(answered, shipped);
   let f_name3 = fn_name("ebible_readaloud_lines_write");
-  list_empty_is_assert_json(unasked, {
-    hint: text_combine_multiple([
-      "a bible is shipped that this record says nothing about, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
-      f_name3,
-    ]),
-    unasked,
-  });
-  let f_name4 = fn_name("ebible_readaloud_lines_write");
-  list_empty_is_assert_json(departed, {
-    hint: text_combine_multiple([
-      "the record holds a bible this repo no longer ships - write it again with ",
-      f_name4,
-      " so what is checked is what is here",
-    ]),
-    departed,
-  });
+  let unasked_hint = text_combine_multiple([
+    "a bible is shipped that this record says nothing about, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
+    f_name3,
+  ]);
+  ebible_bibles_answered_assert(answered, f_name3, unasked_hint);
   function lambda2(measured) {
     let chapters = property_get(measured, "same");
     return chapters;
