@@ -1,3 +1,4 @@
+import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
 import { app_shared_bible_book_hash_key } from "./app_shared_bible_book_hash_key.mjs";
@@ -11,7 +12,8 @@ export function app_shared_bible_code_verses_open(chapter_code, verse_numbers) {
   function transform(hash) {
     let property_name2 = app_shared_bible_chapter_hash_key();
     property_set(hash, property_name2, chapter_code);
-    let v = list_join(verse_numbers, "-");
+    let separator = app_shared_bible_verses_separator();
+    let v = list_join(verse_numbers, separator);
     let property_name3 = app_shared_bible_verse_hash_key();
     property_set(hash, property_name3, v);
     let property_name4 = app_shared_bible_book_hash_key();

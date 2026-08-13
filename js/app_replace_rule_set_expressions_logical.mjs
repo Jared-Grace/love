@@ -1,16 +1,12 @@
 import { app_replace_rule_set_logical_expressions_rules } from "./app_replace_rule_set_logical_expressions_rules.mjs";
-import { app_replace_rule_set_logical_expressions_abbreviations } from "./app_replace_rule_set_logical_expressions_abbreviations.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_logical() {
   let rules = [];
   app_replace_rule_set_logical_expressions_rules(rules);
   list_add(rules, "ex > le");
-  let abbreviations = {};
-  app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   let r = {
     name: "Expressions Logical",
     rules,
-    abbreviations,
     goals: [
       {
         start: "le",

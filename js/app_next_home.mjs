@@ -1,3 +1,6 @@
+import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
+import { ebible_index_flat_chapter_verse_numbers } from "./ebible_index_flat_chapter_verse_numbers.mjs";
+import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_next_reading_show } from "./app_next_reading_show.mjs";
@@ -42,6 +45,19 @@ export async function app_next_home(context) {
   ("Which verses there are to walk is asked of the bibles the link chose rather than of English alone. A bible that joins two verses into one has nothing at the second number, and a reader who chose that bible without English used to be walked past a number none of their bibles use and shown a line saying so - an apology for a gap that only existed because of a bible they were not reading.");
   let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
   let list = await ebible_index_flat_chosen(bible_folders);
+  ("A verse number in the link that this chapter does not have is answered here, the first moment there is anything to answer it against - the index has to be fetched before anybody can say which verses the chapter has. Unanswered, looking the number up in the index threw, and the reader was handed the words the page paints while it starts with a wall of error text under them.");
+  ("The page stops when it has said so, unlike the chapter reader next door, and the difference is what each page is for. A chapter reader asked for a verse it has not got still has the whole chapter to show. This page is the one verse and nothing else, so there is nothing left to draw underneath the answer.");
+  let verse_numbers_here = ebible_index_flat_chapter_verse_numbers(
+    list,
+    chapter_code,
+  );
+  let verse_field = app_shared_bible_hash_field_verse(verse_numbers_here);
+  let verse_shown = app_shared_hash_fields_unknown_shown_is(content, hash, [
+    verse_field,
+  ]);
+  if (verse_shown) {
+    return;
+  }
   let asked = ebible_index_flat_verses_run(
     list,
     chapter_code,

@@ -1,5 +1,4 @@
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_replace_rule_set_expressions_member_and_access_abbreviations } from "./app_replace_rule_set_expressions_member_and_access_abbreviations.mjs";
 import { app_replace_rule_set_expressions_member_and_access_rules } from "./app_replace_rule_set_expressions_member_and_access_rules.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_member_and_access() {
@@ -13,15 +12,10 @@ export function app_replace_rule_set_expressions_member_and_access() {
     "id > birthdate",
     "id > year",
   ]);
-  let abbreviations = {};
-  app_replace_rule_set_expressions_member_and_access_abbreviations(
-    abbreviations,
-  );
   list_add(rules, "ex > mae");
   let r = {
     name: "Expressions Member And Access",
     rules: rules,
-    abbreviations,
     goals: [
       {
         start: "mae",

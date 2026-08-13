@@ -1,3 +1,8 @@
+import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
+import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
+import { app_shared_hash_fields_unknown_told_is } from "./app_shared_hash_fields_unknown_told_is.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
@@ -116,10 +121,7 @@ export async function app_shared_bible_read(context, verse_action) {
   ]);
   let hash = html_hash_object_get();
   ("A language code in the link that names no bible we have is answered here rather than read past. Read past, it was dropped without a word and the chapter opened in whatever languages happened to be left - so somebody sent a link with one letter wrong read the wrong bible and nothing anywhere said so. It is the same screen the sent-a-verse page shows, from the same function, so a wrong link reads the same whichever bible surface it lands on.");
-  let unknown_shown = app_shared_bible_hash_unknown_shown_is(
-    content,
-    hash,
-  );
+  let unknown_shown = app_shared_bible_hash_unknown_shown_is(content, hash);
   if (unknown_shown) {
     return;
   }
@@ -195,9 +197,10 @@ export async function app_shared_bible_read(context, verse_action) {
       list_next_wrap,
     );
   }
+  let separator = app_shared_bible_verses_separator();
   let verse_numbers_chosen = text_empty_is(v_hash)
     ? []
-    : text_split(v_hash, "-");
+    : text_split(v_hash, separator);
   let languages_verses = [];
   let updates = [];
   let verse_rows = [];
@@ -235,6 +238,17 @@ export async function app_shared_bible_read(context, verse_action) {
   languages_verses = list_filter_null_not_is(languages_verses);
   let show_language_names = list_multiple_is(languages_verses);
   let primary_verses = list_last_property(languages_verses, "verses");
+  ("A verse number in the link that this chapter does not have is answered here and nowhere earlier, because until the chapter is fetched there is nothing to answer it against. The chapter is drawn all the same - somebody who asked for a verse that is not there still wanted this chapter - so the correction sits above the text rather than instead of it.");
+  let property_name2 = verse_number_key();
+  let verse_numbers_here = list_map_property(primary_verses, property_name2);
+  let verse_field = app_shared_bible_hash_field_verse(verse_numbers_here);
+  app_shared_hash_fields_unknown_told_is(content, hash, [verse_field]);
+  ("Having said so, the page stops treating the verse as chosen. A number this chapter does not have cannot be highlighted, cannot be counted, and cannot be scrolled to - and the scrolling was the loud one: looking for a row that is not there threw, and the reader got a wall of error text under the chapter where the answer to their link should have been.");
+  function verse_here_is(verse_number_chosen) {
+    let here = list_includes(verse_numbers_here, verse_number_chosen);
+    return here;
+  }
+  verse_numbers_chosen = list_filter(verse_numbers_chosen, verse_here_is);
   async function render_verse(v) {
     let property_name3 = verse_number_key();
     let verse_number_v = property_get(v, property_name3);

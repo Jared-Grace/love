@@ -154,7 +154,7 @@ export async function app_replace_rule_set(context) {
   } else {
     rules_used = list_get(rules_used_all, goal_index);
   }
-  app_replace_rule_set_abbreviations(rs, rules_used, div_abbreviations);
+  app_replace_rule_set_abbreviations(rules_used, div_abbreviations);
   async function refresh() {
     html_clear(div_rules_buttons);
     refresh_count_increase();

@@ -1,3 +1,6 @@
+import { app_g_player_walk_begin } from "./app_g_player_walk_begin.mjs";
+import { app_g_player_walk_stopped_is } from "./app_g_player_walk_stopped_is.mjs";
+import { object_assign } from "./object_assign.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_g_day_line_walked_through_is } from "./app_g_day_line_walked_through_is.mjs";
 import { app_g_day_line_turn } from "./app_g_day_line_turn.mjs";
@@ -24,11 +27,13 @@ export async function app_g_player_path_animate(
   let line_walk = app_g_day_line_walked_through_is(path);
   let following = not(line_walk);
   let steps = g_path_steps(path);
-  ("where the player has ACTUALLY got to, written down one step at a time and handed back at the end.");
-  ("it starts as the tile they are standing on rather than as the tile they asked for, and it is only ever moved forward by a step that finished. today those two agree - the walk always runs to the end - and the whole point of writing it this way is the day they stop agreeing: ",
+  ("where the player has ACTUALLY got to, written down one step at a time.");
+  ("it starts as the tile they are standing on rather than as the tile they asked for, and it is only ever moved forward by a step that finished - which is what makes it right on a walk that was stopped partway. ",
     each_async.name,
-    " already breaks out of the walk when the body hands back true, so a walk becomes stoppable by one line inside this body, and everything downstream is already asking where the player IS instead of where they were sent.");
+    " breaks out as soon as the body hands back true, so a walk ends here at the tile it had got to.");
   let arrived = list_first(path);
+  ("said before a single step is taken, so that any walk already going is left behind from this moment on rather than from whenever the first slide of this one happens to finish");
+  let walk = app_g_player_walk_begin();
   async function lambda(step) {
     let from = property_get(step, "from");
     let to = property_get(step, "to");
@@ -47,10 +52,15 @@ export async function app_g_player_path_animate(
     await app_g_day_followers_settle();
     ("written after the step has finished, never before it, so a walk cut short leaves this naming the last tile the player really stood on");
     arrived = to;
+    ("the player themself is moved a tile at a time, not once at the end. a walk is a long await, and a tap that lands in the middle of one reads where the player is BEFORE choosing a way there - so a player whose tile is only written at the finish is asked about while standing, on paper, on the tile they set off from, and the way chosen starts from a tile they left several seconds ago");
+    object_assign(player, to);
+    ("a tap during a walk sends the player somewhere else, and this is where the old walk lets go: it has just finished a step, the player is written down standing on a whole tile, and it simply stops rather than spending the rest of its path dragging them back the way they came");
+    let stopped = app_g_player_walk_stopped_is(walk);
+    return stopped;
   }
   await each_async(steps, lambda);
   if (line_walk) {
     app_g_day_line_turn(g, arrived);
   }
-  return arrived;
+  ("nothing is handed back, because the answer is already written where everybody reads it: the player. a returned tile would be a second copy of that, and the day one of them was updated and the other was not is the day the player is in two places");
 }

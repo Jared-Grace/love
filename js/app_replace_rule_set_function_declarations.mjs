@@ -1,6 +1,4 @@
 import { js_keyword_function } from "./js_keyword_function.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { app_replace_rule_set_statements_for_abbreviations } from "./app_replace_rule_set_statements_for_abbreviations.mjs";
 import { app_replace_rule_set_statements_for_rules } from "./app_replace_rule_set_statements_for_rules.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -36,14 +34,6 @@ export function app_replace_rule_set_function_declarations() {
     "ex > sum / 2",
     "ex > add ( x , y )",
   ]);
-  let abbreviations = {};
-  app_replace_rule_set_statements_for_abbreviations(abbreviations);
-  ("what an identifier is comes in with the statement explanations now, so asking for it again here would be setting a word twice");
-  object_merge_set(abbreviations, {
-    fd: ["", "f", "unction ", "d", "eclaration"],
-    fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
-    fpg: ["", "f", "unction ", "p", "arameter ", "g", "rower"],
-  });
   let left = js_keyword_function();
   let left2 = js_keyword_function();
   let left3 = js_keyword_function();
@@ -65,7 +55,6 @@ export function app_replace_rule_set_function_declarations() {
   let r = {
     name: "Function Declarations",
     rules,
-    abbreviations,
     goals: [
       {
         start: "fd",

@@ -1,15 +1,11 @@
-import { app_replace_rule_set_expressions_equality_abbreviations } from "./app_replace_rule_set_expressions_equality_abbreviations.mjs";
 import { app_replace_rule_set_expressions_equality_rules } from "./app_replace_rule_set_expressions_equality_rules.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_replace_rule_set_expressions_equality() {
   let rules = [];
   app_replace_rule_set_expressions_equality_rules(rules);
   list_add(rules, "ex > ee");
-  let abbreviations = {};
-  app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
   let r = {
     name: "Expressions Equality",
-    abbreviations,
     rules,
     goals: [
       {

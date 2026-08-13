@@ -1,15 +1,11 @@
 import { list_add } from "./list_add.mjs";
-import { app_replace_rule_set_expressions_relational_abbreviations } from "./app_replace_rule_set_expressions_relational_abbreviations.mjs";
 import { app_replace_rule_set_expressions_relational_rules } from "./app_replace_rule_set_expressions_relational_rules.mjs";
 export function app_replace_rule_set_expressions_relational() {
   let rules = [];
   app_replace_rule_set_expressions_relational_rules(rules);
   list_add(rules, "ex > re");
-  let abbreviations = {};
-  app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
   let r = {
     name: "Expressions Relational",
-    abbreviations,
     rules,
     goals: [
       {
