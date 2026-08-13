@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,7 +18,7 @@ export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
   ("Every verse the source page of one chapter marks, beside the words that verse holds.");
   ("Where each verse begins is written into the page, but flattening the page into words forgets it. So each verse's own mark is written over with a character no bible is written in, and the flattened chapter is then cut at that character: what lies between two marks is exactly one verse, without anything having to be searched for.");
   ("That is the difference from cutting a chapter by hunting its numbers among its words. A number can be a word of the text as easily as the mark of a verse, and the hunt has no way to tell them apart; the page's own marks are not guesses at all.");
-  ("What stands before the first mark is dropped, because it is a heading or a title rather than a verse, and a chapter that opens with one would otherwise push every verse along by one.");
+  ("What stands before the first mark is handed back on its own, under a name of its own, because it is a heading or a title rather than a verse. Numbering it with the verses would push every one of them along by one; throwing it away would lose words that are in the book, and one reading here wants it while the other does not.");
   let mark = ebible_verse_split_mark();
   function lambda(d, main) {
     let list = html_parse_find_list_to(main, ".verse");
@@ -46,5 +47,10 @@ export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
     return v;
   }
   let verses = list_map_pairs(skipped, verse_numbers, lambda2);
-  return verses;
+  let before = list_first(split);
+  let r = {
+    before,
+    verses,
+  };
+  return r;
 }
