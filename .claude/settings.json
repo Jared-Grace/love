@@ -1151,6 +1151,7 @@
       "Bash(node scripts/ai.mjs ebible_verses:*)",
       "Bash(node scripts/ai.mjs text_edit_distance_gate_run:*)",
       "Bash(node scripts/ai.mjs claude_bash_labels_ranked:*)",
+      "Bash(node scripts/ai.mjs file_lines_search:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2225,6 +2226,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_verses:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args text_edit_distance_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args claude_bash_labels_ranked:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args file_lines_search:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -3298,6 +3300,7 @@
       "Bash(node scripts/aig.mjs ebible_verses:*)",
       "Bash(node scripts/aig.mjs text_edit_distance_gate_run:*)",
       "Bash(node scripts/aig.mjs claude_bash_labels_ranked:*)",
+      "Bash(node scripts/aig.mjs file_lines_search:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -4371,7 +4374,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_verses_before:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_verses:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args text_edit_distance_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args claude_bash_labels_ranked:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args claude_bash_labels_ranked:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args file_lines_search:*)"
     ],
     "defaultMode": "acceptEdits"
   },
