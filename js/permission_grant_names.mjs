@@ -1201,6 +1201,7 @@ export function permission_grant_names() {
   let spelled1176 = fn_name(
     "app_code_lesson_expression_parentheses_both_sides_title_name_id",
   );
+  let spelled1177 = fn_name("functions_search");
   let names = [
     spelled,
     spelled2,
@@ -2378,6 +2379,7 @@ export function permission_grant_names() {
     spelled1174,
     spelled1175,
     spelled1176,
+    spelled1177,
   ];
   return names;
 }
