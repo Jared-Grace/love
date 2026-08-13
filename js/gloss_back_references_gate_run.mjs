@@ -25,10 +25,11 @@ export async function gloss_back_references_gate_run() {
     added,
   });
   let stale = property_get(change, "stale");
+  let f_name = fn_name("gloss_back_references_baseline_write");
   list_empty_is_assert_json(stale, {
     hint: text_combine_multiple([
       "these gloss stores point the reader further up in fewer places than the record holds, which is good news the record has not been told - run ",
-      fn_name("gloss_back_references_baseline_write"),
+      f_name,
       " to keep the ground that was gained",
     ]),
     stale,

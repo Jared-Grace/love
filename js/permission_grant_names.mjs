@@ -1192,6 +1192,10 @@ export function permission_grant_names() {
   let spelled1167 = fn_name("qa_promoted_public_copy_gate_run");
   let spelled1168 = fn_name("qa_promoted_public_copy_is");
   let spelled1169 = fn_name("text_split_comma_nested_cases_gate_run");
+  let spelled1170 = fn_name("g_arc_prompt");
+  let spelled1171 = fn_name("g_leader_chapter_codes");
+  let spelled1172 = fn_name("app_original_bible_gloss_generate_download");
+  let spelled1173 = fn_name("storage_function_path_json");
   let names = [
     spelled,
     spelled2,
@@ -2362,6 +2366,10 @@ export function permission_grant_names() {
     spelled1167,
     spelled1168,
     spelled1169,
+    spelled1170,
+    spelled1171,
+    spelled1172,
+    spelled1173,
   ];
   return names;
 }
