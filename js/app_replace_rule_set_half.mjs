@@ -16,7 +16,7 @@ export function app_replace_rule_set_half() {
         end: "a",
       },
     ],
-    why: "The replacement rule demonstrates a grammar that reduces any even number of 'a's to a single 'a', but cannot reduce an odd number of 'a's beyond a single 'a', as only pairs of 'a's can be replaced.",
+    why: "Two a's side by side become one, so the count halves. An a with no partner has nothing to pair with and stays as it is.",
   };
   return r;
 }
