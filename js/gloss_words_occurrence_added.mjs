@@ -1,7 +1,7 @@
 import { gloss_word_occurrence_sentence } from "./gloss_word_occurrence_sentence.mjs";
 import { list_map } from "./list_map.mjs";
 import { null_is } from "./null_is.mjs";
-import { object_merge } from "./object_merge.mjs";
+import { objects_merge } from "./objects_merge.mjs";
 
 export function gloss_words_occurrence_added(tallies, chapter_code, words) {
   "One verse's interlinear words, each given the sentence about rarity its counts have earned.";
@@ -14,9 +14,10 @@ export function gloss_words_occurrence_added(tallies, chapter_code, words) {
     if (null_is(occurrence)) {
       return word;
     }
-    let added = object_merge(word, {
+    let sentence = {
       occurrence,
-    });
+    };
+    let added = objects_merge([word, sentence]);
     return added;
   }
   let added = list_map(words, word_read);
