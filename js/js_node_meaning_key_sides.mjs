@@ -1,10 +1,7 @@
+import { js_operator_arithmetic_symbols } from "./js_operator_arithmetic_symbols.mjs";
 import { js_node_meaning_key_from_parts } from "./js_node_meaning_key_from_parts.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { js_node_meaning_key } from "./js_node_meaning_key.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,11 +16,8 @@ export function js_node_meaning_key_sides(node) {
   let sides = [plain, plain2];
   let commutative = js_code_binary_expression_commutative();
   let swappable = list_includes(commutative, operator);
-  let p = js_operator_plus_symbol();
-  let r = js_operator_minus_symbol();
-  let o = js_operator_asterisk_symbol();
-  let o2 = js_operator_division_symbol();
-  let arithmetic = list_includes([p, r, o, o2], operator);
+  let signs = js_operator_arithmetic_symbols();
+  let arithmetic = list_includes(signs, operator);
   let sortable = swappable && not(arithmetic);
   let key = js_node_meaning_key_from_parts(operator, sides, sortable);
   return key;
