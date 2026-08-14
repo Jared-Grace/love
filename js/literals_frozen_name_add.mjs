@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { literals_frozen_names } from "./literals_frozen_names.mjs";
@@ -15,7 +16,6 @@ import { js_flo_body } from "./js_flo_body.mjs";
 import { js_body_list_declaration_index } from "./js_body_list_declaration_index.mjs";
 import { function_transform_auto } from "./function_transform_auto.mjs";
 import { literals_frozen_record_new } from "./literals_frozen_record_new.mjs";
-
 export async function literals_frozen_name_add(name) {
   "Names one function in the frozen list and records what it says today, which is the whole of promising never to move a word that has left this repo.";
   "It was two steps done by hand, and the gates that ask for it named only the second. The list is written out in a file, so adding to it meant opening that file, copying the shape of the line above, and inventing a binding name nothing else had taken; then running the recorder, which reads the list and writes down what each name on it says. Run the recorder first and it answers that it added nothing, because a name not on the list yet has nothing for it to read.";
@@ -40,7 +40,9 @@ export async function literals_frozen_name_add(name) {
   function lambda(ast) {
     let elements = js_array_expression_only_elements(ast);
     ("The word is put into a string that was parsed empty rather than into one built out of the name, so nothing handed to this command can arrive as code. It is the same move the string builder itself makes, and it is what lets this be approved once instead of at every use.");
-    let call = js_parse_expression('fn_name("")');
+    let call = js_parse_expression(
+      text_combine_multiple([fn_name("fn_name"), '("")']),
+    );
     let argument = js_string(name);
     let call_arguments = property_get(call, "arguments");
     call_arguments[0] = argument;
