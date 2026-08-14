@@ -8,6 +8,7 @@ import { property_in_list } from "./property_in_list.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { app_code_lesson_quiz_token_select_meaning_variations } from "./app_code_lesson_quiz_token_select_meaning_variations.mjs";
+import { app_code_lesson_quiz_token_select_shape_variations } from "./app_code_lesson_quiz_token_select_shape_variations.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -105,8 +106,9 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   let orderable_nodes = list_adder(collect);
   let value_codes = app_code_lesson_quiz_token_select_meaning_variations(code);
+  let shape_codes = app_code_lesson_quiz_token_select_shape_variations(code);
   function generate_all_with_values(la) {
-    "the question's own wording, then the commutative-swap orderings, plus every same-tiles same-value rearrangement, into one deduplicated pool";
+    "the question's own wording, then the commutative-swap orderings, plus every same-tiles same-value rearrangement and every dealing of the tiles back into the question's own shape, into one deduplicated pool";
     "The wording the question was asked in goes in first and by hand, because neither of the two halves below is guaranteed to produce it. The swap half re-prints the line from its tree, and printing drops a bracket the line does not need - so (3 === 5) === (5 === 3) came back as 3 === 5 === (5 === 3), and the learner who copied the line the lesson had just taught them pressed an opening bracket and was told they were wrong. The same-tiles half was no help either: it declines above a small tile count, and that line has eleven.";
     "Nothing can be lost by putting it there. It is the answer the question was written to have, so it is right by construction, and everything else in the pool is only ever another way of saying it.";
     la(code);
@@ -116,6 +118,9 @@ export function app_code_lesson_quiz_token_select_variations(code) {
       orderable_nodes,
     );
     each(value_codes, la);
+    ("The dealing half is here for the orderings neither of the two above can reach. The swap half only ever exchanges the two sides of one sign, so it cannot move a sign; the same-tiles half declines above seven tiles. A line like (3 !== 2) !== (8 === 6) has eleven, and the answer that reads (8 !== 6) === (2 !== 3) needs a sign moved - so it was offered nowhere and a learner who built it was told they were wrong.");
+    ("It only deals - it never judges - so everything it offers goes through the same reading and the same two spelling checks below as everything else.");
+    each(shape_codes, la);
   }
   let codes = list_adder_unique(generate_all_with_values);
   ('Swapping the two sides of a sign that reads both ways is not always safe, because a plus is not always a sum. "He" + " gave" swapped over is a different sentence, and it was being accepted. So every ordering gathered above is asked once more whether it still says what the question says, and the ones that no longer do are dropped.');
