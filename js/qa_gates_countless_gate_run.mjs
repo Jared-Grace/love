@@ -4,7 +4,6 @@ import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gates_countless } from "./qa_gates_countless.mjs";
 import { qa_gates_countless_baseline_path } from "./qa_gates_countless_baseline_path.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function qa_gates_countless_gate_run() {
   "QA gate: a gate that passes has to say how much it reached, so that finding nothing can be told apart from looking at nothing.";
   "Every gate here is green by finding no offenders. That is also what a gate says when its sweep has been pointed at an index built a new way, at a name that has moved, or at a folder that is no longer there - the verdict is the same word, and the thing it was watching is unwatched from that day on with nobody told. A count of what was walked is the only thing that has ever separated the two, because it falls to nothing while the verdict stays green.";
