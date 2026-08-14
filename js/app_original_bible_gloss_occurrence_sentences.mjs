@@ -1,12 +1,10 @@
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
-import { bible_strong_scope_counts } from "./bible_strong_scope_counts.mjs";
-import { gloss_occurrence_sentence } from "./gloss_occurrence_sentence.mjs";
+import { gloss_word_occurrence_sentence } from "./gloss_word_occurrence_sentence.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_original_bible_gloss_occurrence_sentences(
@@ -34,12 +32,11 @@ export async function app_original_bible_gloss_occurrence_sentences(
     let verse_number = property_get(verse, property_name);
     let words = property_get(verse, "words");
     function word_read(word) {
-      let strong = property_get(word, "strong");
-      if (not(strong)) {
-        return;
-      }
-      let counts = bible_strong_scope_counts(tallies, chapter_code, strong);
-      let sentence = gloss_occurrence_sentence(counts);
+      let sentence = gloss_word_occurrence_sentence(
+        tallies,
+        chapter_code,
+        word,
+      );
       if (null_is(sentence)) {
         return;
       }
