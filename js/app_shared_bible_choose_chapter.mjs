@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
@@ -21,6 +22,7 @@ export async function app_shared_bible_choose_chapter(
   "no chapter is marked as current here, and truthfully so: this view is reached by clearing the chapter out of the url, so at this moment there is no chapter being read";
   "a way back to the chapter that was being read before any of this, named by it, because this screen is the middle of choosing rather than a place anybody meant to end up. it is the tab that remembers the chapter, not the link - the link had the chapter taken out of it to get here, which is the whole reason there was nothing to offer before.";
   "a tab that has read nothing yet is offered nothing, and rightly: somebody who opened straight onto a book has no reading to be returned to.";
+  arguments_assert(arguments, 6);
   let book_name = ebible_book_code_to_name(books, book_code);
   let kept = app_shared_bible_passage_kept_get(context);
   let nothing = null_is(kept);
