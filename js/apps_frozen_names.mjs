@@ -1,9 +1,7 @@
 import { apps_frozen } from "./apps_frozen.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_shared_name_prefix_without_fn } from "./app_shared_name_prefix_without_fn.mjs";
 export function apps_frozen_names() {
-  "The name prefix of every app that must not be changed in prod or deleted, for a check that has a name in hand rather than an entry point.";
-  let fns = apps_frozen();
-  let names = list_map(fns, app_shared_name_prefix_without_fn);
+  "The name of every app that must not be changed in prod or deleted, for a check that has a name in hand.";
+  "It used to turn entry points into names and now has nothing left to turn, because the list is spelled as names. Kept all the same: six callers ask for it by this name, and what it means to them - give me the frozen ones as names - stays true whichever way the list happens to be written. Should the list ever go back to holding entry points, this is again the one place that knows it.";
+  let names = apps_frozen();
   return names;
 }
