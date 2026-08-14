@@ -24,6 +24,9 @@ export function app_next_count_choose(parent, count) {
       function transform(hash) {
         let key = app_shared_bible_verses_count_hash_key();
         property_set(hash, key, c);
+        ("Choosing a size forgets how far the passage on the screen had been extended, because the two would otherwise argue and the extension would win: somebody who had pressed for more twice and then pressed 4 would be shown the eleven verses they were already looking at, and would read the 4 they had just pressed as having done nothing.");
+        let key2 = app_shared_bible_verses_shown_hash_key();
+        property_delete_if_exists(hash, key2);
       }
       html_hash_transform_reload(transform);
     }

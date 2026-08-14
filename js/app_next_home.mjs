@@ -41,6 +41,10 @@ export async function app_next_home(context) {
   let verse_number = property_get_or(hash, property_name, fallback);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let count = app_shared_bible_hash_to_verses_count(hash);
+  ("How many verses a message should hold and how many are on the screen are two different numbers, and only the first is the reader's own setting. A link says the second only once it has been pressed for more, so nothing is the ordinary answer and means the passage is the size that was chosen. The setting is carried on untouched to the card that offers it, which is what keeps pressing for more from quietly answering a question about messages.");
+  let shown = app_shared_bible_hash_to_verses_shown(hash);
+  let extended_none = null_is(shown);
+  let verses_wanted = extended_none ? count : shown;
   let version_english = ebible_folder_english();
   let books = await ebible_version_books_browser(version_english);
   ("Which verses there are to walk is asked of the bibles the link chose rather than of English alone. A bible that joins two verses into one has nothing at the second number, and a reader who chose that bible without English used to be walked past a number none of their bibles use and shown a line saying so - an apology for a gap that only existed because of a bible they were not reading.");
@@ -65,7 +69,7 @@ export async function app_next_home(context) {
     list,
     chapter_code,
     verse_number,
-    count,
+    verses_wanted,
   );
   ("A count of verses is a count of the places a bible was divided, and a bible was not divided where its sentences end - so a run cut to a length lands mid-thought about half the time, and somebody copying it out gets half a sentence with nothing saying the rest exists. So what was asked for is carried on to the end of the sentence it stops in, and the number in the link is a floor rather than an exact amount.");
   ("Every language the link asked for has to have finished, not only the first, because a reader who chose three is reading three.");

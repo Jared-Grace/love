@@ -21,6 +21,9 @@ export function app_next_url_onward(hash, list, run) {
   property_set(hash, property_name2, verse_number);
   let property_name3 = app_shared_bible_chapter_hash_key();
   property_set(hash, property_name3, chapter_code);
+  ("How far this passage had been extended is deliberately not carried on. Everything else about the link is kept because it is the same reader carrying on, but pressing for more is about the passage being read now, not about the reader - so the passage after it starts at the size they chose for a message, the way every other one does. Carried on, one press for more would have made every message from then on longer, and nothing on the screen would have said why.");
+  let property_name4 = app_shared_bible_verses_shown_hash_key();
+  property_delete_if_exists(hash, property_name4);
   let h = hash_to_url(hash);
   let url = html_url_without_hash();
   url += h;
