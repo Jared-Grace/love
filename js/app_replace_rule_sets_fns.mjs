@@ -1,3 +1,4 @@
+import { app_replace_rule_set_new_2 } from "./app_replace_rule_set_new_2.mjs";
 import { app_replace_rule_set_function_declarations } from "./app_replace_rule_set_function_declarations.mjs";
 import { app_replace_rule_set_statements_for } from "./app_replace_rule_set_statements_for.mjs";
 import { app_replace_rule_set_statements_while } from "./app_replace_rule_set_statements_while.mjs";
@@ -144,6 +145,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_statements_while,
     app_replace_rule_set_statements_for,
     app_replace_rule_set_function_declarations,
+    app_replace_rule_set_new_2,
   ];
   return fns;
 }
