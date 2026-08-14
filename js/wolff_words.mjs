@@ -1,6 +1,5 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_to_dictionary_keys_lists } from "./list_to_dictionary_keys_lists.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_is } from "./text_is.mjs";
@@ -22,8 +21,7 @@ export async function wolff_words() {
   let kept = list_filter(entries, headworded_is);
   function entry_keys(entry) {
     let spellings = wolff_entry_headwords(entry);
-    let keys = list_map(spellings, wolff_word_key);
-    let once = list_unique(keys);
+    let once = list_map_unique(spellings, wolff_word_key);
     return once;
   }
   let r = list_to_dictionary_keys_lists(kept, entry_keys);
