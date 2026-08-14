@@ -1,3 +1,5 @@
+import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
+import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
