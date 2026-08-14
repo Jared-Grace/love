@@ -87,12 +87,11 @@ export function app_code_lesson_expression_not_comparison() {
     let v3 = not_of(three);
     let bare = text_combine_multiple([v3, " ", equal_symbol, " ", five]);
     let not_false = not_of(false_word);
-    let pair = text_combine_multiple([open, " ", close]);
     let reach = app_code_container_light_blue(root);
     html_div_cycle_code(reach, [
       "A ",
       symbol,
-      " applies only to what's next to it",
+      " applies only to what's right after it",
     ]);
     html_div_cycle_code(reach, [
       "For example, for ",
@@ -113,12 +112,14 @@ export function app_code_lesson_expression_not_comparison() {
       close,
       " around ",
       comparison,
+      " to get ",
+      bracketed,
     ]);
     html_div_cycle_code(reach, [
       "Then we put the ",
       symbol,
-      " around the ",
-      pair,
+      " in front of the ",
+      bracketed,
     ]);
     html_div_cycle_code(reach, ["Then we have: ", whole]);
     let worked = app_code_container_light_blue(root);
