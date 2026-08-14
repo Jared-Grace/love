@@ -45,7 +45,7 @@ import { html_font_set } from "./html_font_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
+import { text_words } from "./text_words.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -65,7 +65,7 @@ export async function app_g_verify_view(
   on_approved,
 ) {
   html_clear(container);
-  let tokens = g_sermon_passage_words(scripture);
+  let tokens = text_words(scripture);
   let highlight = app_shared_verse_selected_background_color();
   let border = app_shared_color_blue_pale();
   let serif = app_shared_font_serif();
