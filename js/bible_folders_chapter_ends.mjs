@@ -8,7 +8,7 @@ export async function bible_folders_chapter_ends(
   count,
 ) {
   "Reads the same opening run of one chapter in several bibles and answers, for each of them, which of its verses finish a sentence.";
-  "The bibles are read one after another rather than all at once. Every one of them is already a run of verses fetched together, and asking forty bibles for forty verses each at the same moment is sixteen hundred questions in flight - past what the machine will lend and past what is polite to ask of a server. One bible at a time keeps the widest question this repo asks the same width as the narrowest.";
+  "The bibles are read one after another rather than all at once. Each of them is one question now - the run of verses is picked out of the chapter it arrives in - so forty bibles at once would be forty questions rather than the sixteen hundred it was when every verse was asked for by name. That is no longer past what the machine will lend, and reading them in turn is kept for the smaller reason: this is a measurement nobody is waiting on, and a server is owed the same politeness whether or not it would cope.";
   arguments_assert(arguments, 3);
   let ends_each = [];
   for (let bible_folder of bible_folders) {
