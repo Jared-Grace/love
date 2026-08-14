@@ -15,11 +15,11 @@ export async function g_sermon_lines_shared() {
     for (let line of lines) {
       let said = property_get_or(line, "text", "");
       let shared = g_sermon_line_words_shared(scripture, said);
-      let placed = object_merge(shared, {
+      object_merge(shared, {
         chapter_code: passage.chapter_code,
         verse_numbers: passage.verse_numbers,
       });
-      list_add(readings, placed);
+      list_add(readings, shared);
     }
   }
   return readings;
