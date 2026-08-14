@@ -93,6 +93,9 @@
   "expressions_swapping_equal",
   "expressions_comparison_inside_and",
   "expressions_in_between",
-  "expressions_which_part_is_solved_first"
+  "expressions_which_part_is_solved_first",
+  "operators_not_twice",
+  "expressions_not_around_a_comparison",
+  "expressions_not_equal_written_with_not"
  ]
 }
