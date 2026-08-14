@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { ebible_version_books_testament_new } from "./ebible_version_books_testament_new.mjs";
 import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.mjs";
 import { ebible_chapters_each_verses_list } from "./ebible_chapters_each_verses_list.mjs";
@@ -16,7 +17,7 @@ export async function ebible_testament_new_roots(bible_folder) {
   async function chapter_read(chapter_code, verses) {
     for (let verse of verses) {
       let said = verse;
-      if (!text_is(verse)) {
+      if (not(text_is(verse))) {
         said = property_get_or(verse, "text", "");
       }
       list_add_multiple(roots, text_word_roots(said));
