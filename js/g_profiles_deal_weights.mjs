@@ -38,7 +38,7 @@ export function g_profiles_deal_weights(remaining, owed, left) {
     list_add(weights, 1);
   }
   let passes = 4;
-  let floor = 0.000000000001;
+  let smallest = 0.000000000001;
   for (let pass = 0; less_than(pass, passes); pass++) {
     for (let name of names) {
       let by_value = property_get(groups, name);
@@ -65,7 +65,7 @@ export function g_profiles_deal_weights(remaining, owed, left) {
         let scale = divide(wanted, current);
         let satisfied = equal(scale, 0);
         if (satisfied) {
-          scale = floor;
+          scale = smallest;
         }
         for (let index of bucket) {
           weights[index] = multiply(weights[index], scale);
