@@ -33,7 +33,7 @@ export function app_replace_rule_set_statements_for() {
         end: "for ( i = 0 ; i < list . length ; i = i + 1 ) { copy [ i ] = list [ i ] ; log ( i ) ; }",
       },
     ],
-    why: "The replacement rules define a context-free grammar for JavaScript-like variable declarations, block statements, and control flow constructs (if, while, for), demonstrating how complex statements and loops are built from simpler expressions and statements.",
+    why: "Repeating while counting. Three parts go in the brackets, separated by semicolons - a starting value, the test to keep going, and the step to take each time - and then the instruction to repeat.",
   };
   return r;
 }
