@@ -51,7 +51,13 @@ export function app_g_day_water_choose_check() {
   let chosen_dry = app_g_day_water_choose(dry, player);
   let none = equal(chosen_dry, null);
   assert_message(none, "a map with no water has no water to name");
-  let gold = app_g_day_guide_pick(ponds, player, chosen, 0, 11, 5, 11);
+  let window_tiles = {
+    min_x: 0,
+    max_x: 11,
+    min_y: 5,
+    max_y: 11,
+  };
+  let gold = app_g_day_guide_pick(ponds, player, chosen, window_tiles);
   let b3 = not_equal(gold, null);
   assert_message(b3, "the gold guide must be able to lead to the water chosen");
   let toward = less_than(gold.y, player.y);

@@ -17,9 +17,11 @@ export function app_shared_bible_languages_choose(
   languages,
   languages_chosen,
   back,
+  destination,
 ) {
   "back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there";
-  app_shared_bible_panel_open(content, "", back);
+  "what that way out is called comes from the caller too, and travels with it - the two are one answer given in two halves, and only whoever chose where back leads knows what the place is called. standing on its own it leads to a reading and names it; inside the hub it leads to the hub, which is a menu rather than a passage and has nothing to name.";
+  app_shared_bible_panel_open(content, destination, back);
   function to_language(code) {
     let property_name2 = language_code_key();
     let r = list_find_property_or_null(languages, property_name2, code);
@@ -47,6 +49,7 @@ export function app_shared_bible_languages_choose(
       languages,
       languages_chosen,
       back,
+      destination,
     );
   }
   let choices_label = app_shared_languages_prompt_text();
