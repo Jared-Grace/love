@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
@@ -11,7 +12,6 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_join } from "./list_join.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -105,8 +105,7 @@ export function js_node_meaning_key(node) {
   if (call) {
     let callee = property_get(node, "callee");
     let name = js_unparse(callee);
-    let given = property_get(node, "arguments");
-    let keys = list_map(given, js_node_meaning_key);
+    let keys = property_list_map(node, "arguments", js_node_meaning_key);
     let commutative_calls = js_code_call_commutative();
     let swappable_call = list_includes(commutative_calls, name);
     if (swappable_call) {
