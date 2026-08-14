@@ -16,7 +16,7 @@ export function app_replace_rule_set_replace_left_same() {
         end: "a   a   a   a   a   a   a   a",
       },
     ],
-    why: "A b just before an a becomes an a. Same as the last one, other side.",
+    why: "A 'b' just before an 'a' becomes an 'a'. Same as the last one, other side.",
   };
   return r;
 }

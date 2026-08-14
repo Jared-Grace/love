@@ -16,7 +16,7 @@ export function app_replace_rule_set_replace_right_same() {
         end: "a   a   a   a   a   a   a   a",
       },
     ],
-    why: "A b just after an a becomes an a itself, so the pair ends up matching.",
+    why: "A 'b' just after an 'a' becomes an 'a' itself, so the pair ends up matching.",
   };
   return r;
 }
