@@ -2,11 +2,9 @@ import { each } from "./each.mjs";
 import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
 import { identity } from "./identity.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
 export async function gloss_chapters_bible_words_distinct(
   bible_folder,
