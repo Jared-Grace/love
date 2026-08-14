@@ -1,5 +1,4 @@
-import { list_unique } from "./list_unique.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_to_dictionary_keys_lists } from "./list_to_dictionary_keys_lists.mjs";
 import { wolff_entries } from "./wolff_entries.mjs";
 import { wolff_entry_derived_words } from "./wolff_entry_derived_words.mjs";
@@ -12,8 +11,7 @@ export async function wolff_derived_words() {
   let entries = await wolff_entries();
   function entry_keys(entry) {
     let words = wolff_entry_derived_words(entry);
-    let keys = list_map(words, wolff_word_key);
-    let once = list_unique(keys);
+    let once = list_map_unique(words, wolff_word_key);
     return once;
   }
   let r = list_to_dictionary_keys_lists(entries, entry_keys);
