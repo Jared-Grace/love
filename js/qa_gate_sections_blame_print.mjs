@@ -16,10 +16,14 @@ export async function qa_gate_sections_blame_print(told) {
   if (any) {
     let known = await functions_names();
     let flying = [];
+    let lately = [];
     for (let section of sections) {
       let some = await qa_gate_section_blame_print(section, known);
-      list_add_multiple(flying, some);
+      let editing = property_get(some, "flying");
+      let just = property_get(some, "lately");
+      list_add_multiple(flying, editing);
+      list_add_multiple(lately, just);
     }
-    qa_gate_in_flight_print(flying);
+    qa_gate_in_flight_print(flying, lately);
   }
 }
