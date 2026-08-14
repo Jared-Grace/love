@@ -1,3 +1,4 @@
+import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { g_openers_lines } from "./g_openers_lines.mjs";
 import { g_arc_prompt_arguments_assert } from "./g_arc_prompt_arguments_assert.mjs";
 import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
@@ -51,9 +52,10 @@ export function g_arc_prompt(
   let turns_low = property_get(s, "conversation_turns_low");
   let turns_mean = property_get(s, "conversation_turns_mean");
   let turns_high = property_get(s, "conversation_turns_high");
+  let chapter_named = ebible_chapter_code_label(chapter_code);
   let preaching = list_join_space([
     "The player is answering from",
-    chapter_code,
+    chapter_named,
   ]);
   let joined = list_join_empty([preaching, "."]);
   ("The chapter named here is the one the plant is STANDING IN, and a leader is handed more than it. The passages say which chapter each of them is from, so the line stays true as written - it says where the player is, not what the whole list is drawn from.");
