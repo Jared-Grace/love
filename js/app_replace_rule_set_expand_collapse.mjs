@@ -28,7 +28,7 @@ export function app_replace_rule_set_expand_collapse() {
         end: "a   c   b   b   c   a",
       },
     ],
-    why: "One rule opens an a into two b's; the other closes two b's into a c. Together they turn a's into c's - but you always have to open before you can close.",
+    why: "One rule opens an 'a' into two 'b's; the other closes two 'b's into a 'c'. Together they turn 'a's into 'c's - but you always have to open before you can close.",
   };
   return r;
 }

@@ -42,7 +42,7 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
         end: "d   f   =   f   =",
       },
     ],
-    why: "Five rules at once, more than any exercise so far. Together they let a d marker copy itself, spread out and step across the equals sign - the machinery the next exercise runs on.",
+    why: "Five rules at once, more than any exercise so far. Together they let a 'd' marker copy itself, spread out and step across the equals sign - the machinery the next exercise runs on.",
   };
   return r;
 }

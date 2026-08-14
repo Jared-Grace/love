@@ -20,7 +20,7 @@ export function app_replace_rule_set_grow_right() {
         end: "g   s   g   s   s   g   s   s   s",
       },
     ],
-    why: "The g stays and drops an s to its right. Use it again and the s's pile up after the g.",
+    why: "The 'g' stays and drops an 's' to its right. Use it again and the 's's pile up after the 'g'.",
   };
   return r;
 }
