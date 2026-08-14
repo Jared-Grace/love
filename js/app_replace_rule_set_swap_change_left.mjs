@@ -24,7 +24,7 @@ export function app_replace_rule_set_swap_change_left() {
         end: "a   b   a   b   a   b   a   b   a   b   a   b",
       },
     ],
-    why: "The pair b c becomes a b: the b has slid right, and a new a has appeared on the left. This is the rule before this one, read backwards.",
+    why: "The pair 'b' 'c' becomes 'a' 'b': the 'b' has slid right, and a new 'a' has appeared on the left. This is the rule before this one, read backwards.",
   };
   return r;
 }

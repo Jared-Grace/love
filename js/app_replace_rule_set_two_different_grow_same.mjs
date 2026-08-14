@@ -12,7 +12,7 @@ export function app_replace_rule_set_two_different_grow_same() {
         end: "c   c   c   c   e   b   c   c   c   c",
       },
     ],
-    why: "The same balanced growth, now with no equals sign in the middle: a c joins on each side every time.",
+    why: "The same balanced growth, now with no equals sign in the middle: a 'c' joins on each side every time.",
   };
   return r;
 }
