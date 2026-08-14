@@ -4,21 +4,66 @@ export function gloss_grammar_terms() {
   "The two sides are written out as pairs rather than read off the parsing's own wording, because they are deliberately not the same language. The table is written in grammarians' shortened English and an explanation is written for a reader who has never met the word 'case'. This is the only place the two are laid against each other.";
   "Left off on purpose: present, active, indicative, singular, plural, middle and passive. Every one of them is also an ordinary English word these explanations use of something that is not a form - a word can be present in a clause, a phrase can stand in the middle of a sentence - so asking about them would name sentences that are perfectly right. The two voices are the real loss. What is owed a form the table itself refuses to decide between is a different question from this one and wants a check of its own.";
   let terms = [
-    { term: "aorist", parsing: "Aorist" },
-    { term: "imperfect", parsing: "Imperfect" },
-    { term: "pluperfect", parsing: "Pluperfect" },
-    { term: "perfect", parsing: "Perfect" },
-    { term: "future", parsing: "Future" },
-    { term: "participle", parsing: "Participle" },
-    { term: "imperative", parsing: "Imperative" },
-    { term: "subjunctive", parsing: "Subjunctive" },
-    { term: "infinitive", parsing: "Infinitive" },
-    { term: "optative", parsing: "Optative" },
-    { term: "nominative", parsing: "Nominative" },
-    { term: "genitive", parsing: "Genitive" },
-    { term: "dative", parsing: "Dative" },
-    { term: "accusative", parsing: "Accusative" },
-    { term: "vocative", parsing: "Vocative" },
+    {
+      term: "aorist",
+      parsing: "Aorist",
+    },
+    {
+      term: "imperfect",
+      parsing: "Imperfect",
+    },
+    {
+      term: "pluperfect",
+      parsing: "Pluperfect",
+    },
+    {
+      term: "perfect",
+      parsing: "Perfect",
+    },
+    {
+      term: "future",
+      parsing: "Future",
+    },
+    {
+      term: "participle",
+      parsing: "Participle",
+    },
+    {
+      term: "imperative",
+      parsing: "Imperative",
+    },
+    {
+      term: "subjunctive",
+      parsing: "Subjunctive",
+    },
+    {
+      term: "infinitive",
+      parsing: "Infinitive",
+    },
+    {
+      term: "optative",
+      parsing: "Optative",
+    },
+    {
+      term: "nominative",
+      parsing: "Nominative",
+    },
+    {
+      term: "genitive",
+      parsing: "Genitive",
+    },
+    {
+      term: "dative",
+      parsing: "Dative",
+    },
+    {
+      term: "accusative",
+      parsing: "Accusative",
+    },
+    {
+      term: "vocative",
+      parsing: "Vocative",
+    },
   ];
   return terms;
 }

@@ -1,3 +1,4 @@
+import { bible_folder_chapter_verses_download } from "./bible_folder_chapter_verses_download.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_last } from "./text_last.mjs";
@@ -6,11 +7,7 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
 import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
-import { ebible_verse_download } from "./ebible_verse_download.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { range_1 } from "./range_1.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,20 +18,11 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
   "A verse that cannot be fetched is counted as not read rather than as not marked, so a bible missing part of a chapter says so instead of being mistaken for one that writes no marks.";
   let chapter_code = bible_sentence_end_sample_chapter();
   let count = bible_sentence_end_sample_count();
-  let verse_numbers = range_1(count);
-  async function lambda(verse_number) {
-    async function download() {
-      let downloaded = await ebible_verse_download(
-        bible_folder,
-        chapter_code,
-        verse_number,
-      );
-      return downloaded;
-    }
-    let verse = await catch_null_async(download);
-    return verse;
-  }
-  let verses = await list_map_unordered_async(verse_numbers, lambda);
+  let verses = await bible_folder_chapter_verses_download(
+    bible_folder,
+    chapter_code,
+    count,
+  );
   let read = list_filter(verses, null_not_is);
   function lambda2(verse) {
     let text = property_get(verse, "text");
