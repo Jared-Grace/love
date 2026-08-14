@@ -15,18 +15,16 @@ export function js_node_meaning_key_sides(node) {
   let operator = property_get(node, "operator");
   let left = property_get(node, "left");
   let right = property_get(node, "right");
-  let sides = [js_node_meaning_key(left), js_node_meaning_key(right)];
+  let plain = js_node_meaning_key(left);
+  let plain2 = js_node_meaning_key(right);
+  let sides = [plain, plain2];
   let commutative = js_code_binary_expression_commutative();
   let swappable = list_includes(commutative, operator);
-  let arithmetic = list_includes(
-    [
-      js_operator_plus_symbol(),
-      js_operator_minus_symbol(),
-      js_operator_asterisk_symbol(),
-      js_operator_division_symbol(),
-    ],
-    operator,
-  );
+  let p = js_operator_plus_symbol();
+  let r = js_operator_minus_symbol();
+  let o = js_operator_asterisk_symbol();
+  let o2 = js_operator_division_symbol();
+  let arithmetic = list_includes([p, r, o, o2], operator);
   let sortable = swappable && not(arithmetic);
   if (sortable) {
     list_sort_text(sides);
