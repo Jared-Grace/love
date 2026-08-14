@@ -1,11 +1,9 @@
+import { memory_index_lines_write_removed } from "./memory_index_lines_write_removed.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { subtract } from "./subtract.mjs";
 import { and } from "./and.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_last } from "./list_last.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
-import { memory_index_path } from "./memory_index_path.mjs";
 import { not } from "./not.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -32,12 +30,6 @@ export async function memory_index_heading_blank_after_remove() {
       list_add(kept, line);
     }
   }
-  let rebuilt = kept.join("\n");
-  let path = memory_index_path();
-  await file_overwrite(path, rebuilt);
-  let removed = subtract(lines.length, kept.length);
-  let r = {
-    removed,
-  };
+  let r = await memory_index_lines_write_removed(lines, kept);
   return r;
 }
