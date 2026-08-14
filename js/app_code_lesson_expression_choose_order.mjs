@@ -116,16 +116,15 @@ export function app_code_lesson_expression_choose_order() {
       let value = property_get(step, "value");
       let solved_code = app_code_expression_code(solved);
       let value_text = text_to(value);
-      html_div_cycle_code(note, [
-        "Good job! the ",
-        solved_code,
-        " becomes ",
-        value_text,
-      ]);
+      "praised in the same words the quiz praises a finished question with, taken from the one list both of them read";
+      let praise = app_shared_encouragement_exclamation();
+      let lead = text_combine(praise, "the ");
+      html_div_cycle_code(note, [lead, solved_code, " becomes ", value_text]);
       let current = property_get(step, "current");
       let more = app_code_expression_node_is(current);
       if (not(more)) {
-        html_div_cycle_code(note, ["Great! You did this correctly"]);
+        "the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished";
+        app_shared_success_message(note);
         html_div_cycle_code(note, ["Now it is your turn to choose"]);
         return;
       }

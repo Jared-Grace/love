@@ -1,3 +1,4 @@
+import { firebase_storage_list_url_cases_gate_run } from "./firebase_storage_list_url_cases_gate_run.mjs";
 import { app_shared_description_gate_run } from "./app_shared_description_gate_run.mjs";
 import { app_shared_card_gate_run } from "./app_shared_card_gate_run.mjs";
 import { bible_interlinear_base_dropped_gate_run } from "./bible_interlinear_base_dropped_gate_run.mjs";
@@ -483,6 +484,7 @@ export function qa_gates() {
     text_lines_search_cases_gate_run,
     text_replace_once_cases_gate_run,
     word_root_cases_gate_run,
+    firebase_storage_list_url_cases_gate_run,
     bible_interlinear_base_dropped_gate_run,
     text_split_comma_nested_cases_gate_run,
     bytes_text_try_cases_gate_run,
