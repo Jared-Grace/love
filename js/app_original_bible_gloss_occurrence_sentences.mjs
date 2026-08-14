@@ -9,7 +9,6 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function app_original_bible_gloss_occurrence_sentences(
   chapter_code,
 ) {
@@ -31,7 +30,8 @@ export async function app_original_bible_gloss_occurrence_sentences(
   let tallies = await bible_strong_chapter_tallies_cache();
   let sentences = [];
   function verse_read(verse) {
-    let verse_number = property_get(verse, verse_number_key());
+    let property_name = verse_number_key();
+    let verse_number = property_get(verse, property_name);
     let words = property_get(verse, "words");
     function word_read(word) {
       let strong = property_get(word, "strong");
