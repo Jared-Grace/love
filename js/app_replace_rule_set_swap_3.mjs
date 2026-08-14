@@ -16,7 +16,7 @@ export function app_replace_rule_set_swap_3() {
         end: "d   b   c   d   c   b   a   a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar for swapping the letter 'a' with any immediately following letter ('b', 'c', or 'd'), allowing 'a' to move rightward through a sequence by repeated applications.",
+    why: "A third neighbour joins, so the a can step past b, c or d. Each step moves it one place, so walking an a to the far end costs one press per symbol it passes - these are the longest goals so far.",
   };
   return r;
 }
