@@ -47,11 +47,6 @@ export function gloss_passage_word_explains_set(
     list_add(changes, word);
   }
   each(entries, entry_set);
-  let none_changed = list_empty_is(changes);
-  if (none_changed) {
-    return changes;
-  }
-  let value = json_format_to(entries);
-  property_set(passage, "generated", value);
-  return changes;
+  let r = gloss_passage_entries_changed_set(passage, entries, changes);
+  return r;
 }
