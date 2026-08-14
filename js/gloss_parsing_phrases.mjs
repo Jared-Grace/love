@@ -35,7 +35,7 @@ export function gloss_parsing_phrases() {
       word: "Adverb",
       dimension: "kind",
       phrase: "adverb",
-      gloss: "a word that qualifies a verb",
+      gloss: "a word that says how or when or where",
     },
     {
       word: "Conjunction",
