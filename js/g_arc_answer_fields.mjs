@@ -46,13 +46,13 @@ export function g_arc_answer_fields() {
       {
         name: "chapter",
         description:
-          "the chapter the answering passage came from, exactly as it is written first inside that passage brackets above.",
+          "the chapter the answering passage came from, exactly as it is written inside that passage brackets above, before the colon and without it.",
         examples: ["", ""],
       },
       {
         name: "verse_numbers",
         description:
-          "the verse numbers of the passage that answer the before, each one its own word, exactly as they are written after the chapter inside that passage brackets above.",
+          "the verse numbers of the passage that answer the before, each one its own word, exactly as they are written after the colon inside that passage brackets above.",
         examples: [["1"], ["2", "3"]],
       },
       {
