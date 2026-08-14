@@ -12,6 +12,8 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_prefix } from "./js_code_prefix.mjs";
+import { js_keyword_false } from "./js_keyword_false.mjs";
+import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang } from "./js_operator_bang.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
@@ -108,7 +110,7 @@ export function app_code_lesson_expression_not_equal_same() {
   );
   return lesson;
   function above(root) {
-    "what each of the two symbols asks, then that one gives the opposite answer to the other, then that a ! does the same thing - so the two spellings land together";
+    "what each of the two symbols asks, then that one gives the opposite answer to the other; then, on a second card, what a ! does spelled out on true and false themselves before it is called an opposite - so the word opposite is earned in both halves before the two spellings are put together";
     let three = "3";
     let five = "5";
     let short = short_form(three, five);
@@ -131,9 +133,30 @@ export function app_code_lesson_expression_not_equal_same() {
       " gives the opposite answer to ",
       same_symbol,
     ]);
+    let true_word = js_keyword_true();
+    let false_word = js_keyword_false();
     let joins = app_code_container_light_blue(root);
     html_div_cycle_code(joins, [
+      "",
+      true_word,
+      " and ",
+      false_word,
+      " are opposites",
+    ]);
+    html_div_cycle_code(joins, [
       "A ",
+      bang_symbol,
+      " changes ",
+      true_word,
+      " to ",
+      false_word,
+      " and ",
+      false_word,
+      " to ",
+      true_word,
+    ]);
+    html_div_cycle_code(joins, [
+      "So, ",
       bang_symbol,
       " gives the opposite answer too",
     ]);
