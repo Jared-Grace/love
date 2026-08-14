@@ -2,7 +2,7 @@ import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { g_sermon_generate_chapter_passages_get } from "./g_sermon_generate_chapter_passages_get.mjs";
-import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
+import { text_words } from "./text_words.mjs";
 import { bible_interlinear_verse } from "./bible_interlinear_verse.mjs";
 import { strongs_greek_definition } from "./strongs_greek_definition.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
@@ -25,7 +25,7 @@ export async function g_sermon_pull(chapter, key) {
   let v2 = p.sermon.replace(/\\r\\n/g, " / ");
   console.log("GENERATED:", v2);
   console.log("--- tokens ---");
-  let toks = g_sermon_passage_words(p.text);
+  let toks = text_words(p.text);
   function lambda2(w, i) {
     let r = i + ":" + w;
     return r;
