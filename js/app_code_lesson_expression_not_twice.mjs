@@ -41,7 +41,9 @@ export function app_code_lesson_expression_not_twice() {
     example_count: 2,
     forwards_answer_count_override: 2,
   });
-  let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
+  ("the glyph beside the title is the pair, not the single symbol. The lesson is not about what a ! does - the lesson before it is - so a title wearing one ! names its neighbour rather than itself, and the two sit next to each other on the home list where the difference is the whole point.");
+  let symbol_twice = text_combine(symbol, symbol);
+  let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol_twice);
   return lesson_symbol;
   function above(root) {
     "the rule, then the nearer ! worked out first, then the outer one, then what the pair adds up to. Worked from true, because that is the keyword the earlier ! lesson opened on.";
