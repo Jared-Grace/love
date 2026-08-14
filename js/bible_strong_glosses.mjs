@@ -28,11 +28,11 @@ export async function bible_strong_glosses(testament_name) {
     if (dash) {
       continue;
     }
-    let gathered = property_get(collected, strong);
-    if (not(gathered)) {
-      gathered = [];
-      property_set(collected, strong, gathered);
+    let started = property_exists(collected, strong);
+    if (not(started)) {
+      property_set(collected, strong, []);
     }
+    let gathered = property_get(collected, strong);
     list_add(gathered, gloss);
   }
   let ranked = {};
