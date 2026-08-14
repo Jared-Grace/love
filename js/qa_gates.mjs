@@ -1,3 +1,4 @@
+import { word_root_cases_gate_run } from "./word_root_cases_gate_run.mjs";
 import { qa_gates_countless_gate_run } from "./qa_gates_countless_gate_run.mjs";
 import { app_code_quiz_choice_pool_gate_run } from "./app_code_quiz_choice_pool_gate_run.mjs";
 import { app_code_quiz_unscramble_shortcut_gate_run } from "./app_code_quiz_unscramble_shortcut_gate_run.mjs";
@@ -478,6 +479,7 @@ export function qa_gates() {
     commands_only_write_denied_cases_gate_run,
     text_lines_search_cases_gate_run,
     text_replace_once_cases_gate_run,
+    word_root_cases_gate_run,
     text_split_comma_nested_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
