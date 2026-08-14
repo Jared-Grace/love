@@ -6,7 +6,7 @@ import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-export function g_arc_answer_chapter_code(passages, chapter_written) {
+export function g_arc_answer_chapter_code(passages, book_chapter_written) {
   ("The chapter code a written answer meant, read back out of the chapter it wrote. The prompt shows a chapter the way everyone spells one, 1 John 1, and this is the step that turns what came back into the ",
     fn_name("ebible_chapter_code_label"),
     " code the game stores.");
@@ -19,7 +19,7 @@ export function g_arc_answer_chapter_code(passages, chapter_written) {
     let squeezed = text_replace_space_to(lowered, "");
     return squeezed;
   }
-  let written = loosened(chapter_written);
+  let written = loosened(book_chapter_written);
   let codes = list_map_property_unique(passages, "chapter");
   let offered = [];
   for (let code of codes) {
@@ -37,7 +37,7 @@ export function g_arc_answer_chapter_code(passages, chapter_written) {
     }
   }
   assert_json(false, {
-    chapter_written,
+    book_chapter_written,
     offered,
     hint: "an answer may only name a chapter its own prompt handed it, so this is either a chapter that was never offered or the right one spelled a third way",
   });
