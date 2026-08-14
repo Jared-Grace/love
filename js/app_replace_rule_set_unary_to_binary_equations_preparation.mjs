@@ -42,7 +42,7 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
         end: "d   f   =   f   =",
       },
     ],
-    why: "The replacement rules demonstrate a process for transforming unary equations into a binary-like form by systematically introducing new symbols and rearranging terms, simulating the conversion of unary representations to binary equations through stepwise symbol manipulation.",
+    why: "Five rules at once, more than any exercise so far. Together they let a d marker copy itself, spread out and step across the equals sign - the machinery the next exercise runs on.",
   };
   return r;
 }

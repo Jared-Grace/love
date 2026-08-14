@@ -12,7 +12,7 @@ export function app_replace_rule_set_shrink_same_three_different() {
         end: "e   =   b",
       },
     ],
-    why: "The rules demonstrate a grammar that reduces sequences where three or more identical 'c's surround 'e = b' to just 'e = b', effectively shrinking repeated patterns of 'c' around a core expression.",
+    why: "The same rule backwards: one c comes off the left and one off the right together.",
   };
   return r;
 }
