@@ -3,6 +3,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_tally_ranked } from "./list_tally_ranked.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
