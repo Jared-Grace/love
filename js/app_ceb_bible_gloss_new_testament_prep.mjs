@@ -1,4 +1,4 @@
-import { subtract } from "./subtract.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -85,8 +85,7 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
   let sample = list_take(owed, 40);
   let owed_words = list_map(sample, word_read);
   let held = list_size(asked);
-  let left = list_size(words);
-  let asking = subtract(left, held);
+  let asking = list_size_subtract(words, held);
   let r = {
     chapters: property_get(absent, "absent"),
     words: list_size(words),
