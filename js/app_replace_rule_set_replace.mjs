@@ -24,7 +24,7 @@ export function app_replace_rule_set_replace() {
         end: "a   b   a   b   a   b   a",
       },
     ],
-    why: "Every a can turn into a b, one at a time, and you choose which one. Some goals want every a changed, some want only a few - so read the goal before you start pressing.",
+    why: "Every 'a' can turn into a 'b', one at a time, and you choose which one. Some goals want every 'a' changed, some want only a few - so read the goal before you start pressing.",
   };
   return r;
 }
