@@ -30,19 +30,20 @@ export function word_root_ending_cut(w) {
     let r = held && enough;
     return r;
   }
-  for (let ask of endings) {
+  let more = true;
+  while (more) {
+    more = false;
     let matched = list_filter(endings, ending_matches);
-    if (equal(matched.length, 0)) {
-      break;
+    if (greater_than(matched.length, 0)) {
+      let ending = list_first(matched);
+      let keep = subtract(cut.length, ending.drop);
+      let left = cut.slice(0, keep);
+      let shorter = add(left, ending.add);
+      if (not(equal(shorter, cut))) {
+        cut = shorter;
+        more = true;
+      }
     }
-    let ending = list_first(matched);
-    let keep = subtract(cut.length, ending.drop);
-    let left = cut.slice(0, keep);
-    let shorter = add(left, ending.add);
-    if (equal(shorter, cut)) {
-      break;
-    }
-    cut = shorter;
   }
   let last = cut.slice(-1);
   let before = cut.slice(-2, -1);
