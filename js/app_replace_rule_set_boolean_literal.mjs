@@ -5,12 +5,12 @@ export function app_replace_rule_set_boolean_literal() {
     rules: app_replace_rule_set_boolean_literal_rules(),
     goals: [
       {
-        start: "bo",
-        end: "true",
+        start: "b o",
+        end: "t r u e",
       },
       {
-        start: "bo",
-        end: "false",
+        start: "b o",
+        end: "f a l s e",
       },
     ],
     why: "The replacement rules define a grammar for Boolean literals, allowing the nonterminal 'bo' to be replaced by either 'true' or 'false', representing the two possible Boolean values.",

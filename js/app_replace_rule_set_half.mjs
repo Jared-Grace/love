@@ -4,15 +4,15 @@ export function app_replace_rule_set_half() {
     rules: ["a a > a"],
     goals: [
       {
-        start: "a a",
+        start: "a   a",
         end: "a",
       },
       {
-        start: "a a a",
+        start: "a   a   a",
         end: "a",
       },
       {
-        start: "a a a a a",
+        start: "a   a   a   a   a",
         end: "a",
       },
     ],
