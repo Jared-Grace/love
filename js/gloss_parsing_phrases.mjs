@@ -23,7 +23,7 @@ export function gloss_parsing_phrases() {
       word: "Article",
       dimension: "kind",
       phrase: "article",
-      gloss: "the little word English says as the",
+      gloss: "the word English puts in front of a noun",
     },
     {
       word: "Adjective",

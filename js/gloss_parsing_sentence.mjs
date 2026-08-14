@@ -87,7 +87,6 @@ export function gloss_parsing_sentence(parsing_long) {
     if (not(count)) {
       continue;
     }
-    let name_text = list_join(named, " or ");
     let glosses = [];
     for (let entry of found) {
       let gloss = property_get(entry, "gloss");
@@ -95,9 +94,11 @@ export function gloss_parsing_sentence(parsing_long) {
         list_add(glosses, gloss);
       }
     }
+    let name_text = list_join(named, " or ");
     let gloss_text = list_join_comma_space(glosses);
     let undecided = equal(count, 2);
     if (undecided) {
+      name_text = list_join(named, " or the ");
       gloss_text = "which the parsing does not decide between";
     }
     let clause_parts = ["in the ", name_text];
@@ -114,21 +115,20 @@ export function gloss_parsing_sentence(parsing_long) {
     let items3 = list_map_property(found, "phrase");
     list_add_multiple(tail_words, items3);
   }
-  let any_tail = list_size(tail_words);
-  if (any_tail) {
-    let item3 = list_join(tail_words, " and ");
-    list_add(clauses, item3);
+  let tail_count = list_size(tail_words);
+  let tail_text = list_join_comma_space(tail_words);
+  let tail_single = equal(tail_count, 1);
+  if (tail_count) {
+    if (not(tail_single)) {
+      let split = list_last_remaining(tail_words);
+      let last = property_get(split, "last");
+      let remaining = property_get(split, "remaining");
+      let leading = list_join_comma_space(remaining);
+      tail_text = text_combine_multiple([leading, " and ", last]);
+    }
+    list_add(clauses, tail_text);
   }
-  let body = list_join(clauses, ", ");
-  let clause_count = list_size(clauses);
-  let single = equal(clause_count, 1);
-  if (not(single)) {
-    let split = list_last_remaining(clauses);
-    let last = property_get(split, "last");
-    let remaining = property_get(split, "remaining");
-    let leading = list_join_comma_space(remaining);
-    body = text_combine_multiple([leading, ", and ", last]);
-  }
+  let body = list_join_comma_space(clauses);
   let sentence = text_combine_multiple(["This is ", body, "."]);
   return sentence;
 }
