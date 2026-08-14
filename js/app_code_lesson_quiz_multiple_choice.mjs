@@ -68,6 +68,8 @@ export function app_code_lesson_quiz_multiple_choice(
     }
     each(tailored, add_decoy);
   }
+  ("the wrong answers below are drawn from the lesson's other questions, and read off each one by the same property names this quiz used. A quiz that shows something OTHER than the pair its batch spells - one that works a third value out of the pair and asks about that - would otherwise draw the wrong kind of thing entirely, and could offer the learner the very line it is asking them about. Such a lesson hands over info.qa_for to remap a drawn line the same way it remapped its own; every other lesson shows the pair as it stands and needs nothing");
+  let qa_for = property_get_or(info, "qa_for", identity);
   let attempts = 0;
   let attempts_max = multiply(answer_count_max, 3);
   while (
@@ -79,8 +81,9 @@ export function app_code_lesson_quiz_multiple_choice(
     )
   ) {
     let item = next_get();
-    let answer_text = property_text_to(item, answer_property);
-    let question_text = property_text_to(item, question_property);
+    let shown = qa_for(item);
+    let answer_text = property_text_to(shown, answer_property);
+    let question_text = property_text_to(shown, question_property);
     let ambiguous = equal(question_text, quiz_question_text);
     let already = list_includes(seen, answer_text);
     let skip = or(already, ambiguous);

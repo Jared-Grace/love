@@ -122,6 +122,7 @@ export function app_code_lesson_expression_remainder_divide() {
       on_answer: app_code_lesson_quiz_multiple_choice,
       decoys: backwards_decoys,
       backwards: true,
+      qa_for: app_code_lesson_expression_remainder_divide_item_qa_for,
     };
     let infos = [recognize, build, backwards];
     function each_info(info) {
