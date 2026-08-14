@@ -1,0 +1,38 @@
+import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
+import { js_node_meaning_key } from "./js_node_meaning_key.mjs";
+import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
+import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
+import { not } from "./not.mjs";
+import { property_get } from "./property_get.mjs";
+export function js_node_meaning_key_sides(node) {
+  "What a sign standing between two things says, once each side has been asked what it says. A sign that reads the same both ways has its two sides put in a settled order, so that 3 === n and n === 3 come out as one; every other sign keeps the sides where they were written.";
+  "Adding, taking away, multiplying and dividing are held out of the settled order here on purpose. Between numbers they were answered a step earlier, where a whole run of them moves at once; and what is left over after that is a plus joining writing, which does not read the same both ways.";
+  let operator = property_get(node, "operator");
+  let left = property_get(node, "left");
+  let right = property_get(node, "right");
+  let sides = [js_node_meaning_key(left), js_node_meaning_key(right)];
+  let commutative = js_code_binary_expression_commutative();
+  let swappable = list_includes(commutative, operator);
+  let arithmetic = list_includes(
+    [
+      js_operator_plus_symbol(),
+      js_operator_minus_symbol(),
+      js_operator_asterisk_symbol(),
+      js_operator_division_symbol(),
+    ],
+    operator,
+  );
+  let sortable = swappable && not(arithmetic);
+  if (sortable) {
+    list_sort_text(sides);
+  }
+  let written = list_join(sides, ",");
+  let pieces = [operator, "(", written, ")"];
+  let key = list_join(pieces, "");
+  return key;
+}
