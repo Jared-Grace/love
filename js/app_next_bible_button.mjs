@@ -14,12 +14,12 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_bible_open_generic } from "./app_shared_bible_open_generic.mjs";
-import { window_go_app } from "./window_go_app.mjs";
+import { window_open_app } from "./window_open_app.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_next_bible_button(parent, run) {
   "The way from a verse somebody was sent into the bible it came out of, opened at the same place and in the same languages, with the verses that were shown here already picked out there.";
   "This page hands the reading over rather than growing a reader of its own. Two pages that both show scripture are two places to mend everything about showing scripture, and somebody who wants to keep reading is better served by the one that was built for it.";
-  "It goes there in the tab that is already open, so the browser's own back button is the way back to what they were sent - a second tab is one more thing to close, and on a phone that is the expensive kind of one more thing.";
+  "It opens beside what is already here rather than instead of it. Going in the same tab was meant to leave the browser's own back button as the way home, and that is not what happens: the reader writes its own words into the address as it settles - which languages, which screen - and every one of those is another step for the back button to undo, so pressing back walks through the reader's own arrivals and never reaches the message that was being read. A second tab is one more thing to close, and on a phone that is the expensive kind of one more thing; a way in with no way out is the more expensive of the two, and this was decided the other way round before anybody had pressed back from it.";
   let chapter_code = list_first_property(run, "chapter_code");
   ("Only the verses lying in the chapter the reading starts in are named, because the reader shows one chapter at a time. A passage carried on into the next chapter opens at the chapter it began in, which is where somebody reading it was.");
   let same = list_filter_property(run, "chapter_code", chapter_code);
@@ -42,7 +42,7 @@ export function app_next_bible_button(parent, run) {
     list_reverse(languages_chosen);
     let mode = app_shared_bible_mode_chapter();
     app_shared_bible_open_generic(
-      window_go_app,
+      window_open_app,
       languages_chosen,
       chapter_code,
       selection,
