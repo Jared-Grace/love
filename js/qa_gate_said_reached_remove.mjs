@@ -37,7 +37,9 @@ export function qa_gate_said_reached_remove(said) {
     let quote_found = after.indexOf(quote);
     let line_break_found = after.indexOf(line_break);
     let quote_at = less_than(quote_found, 0) ? length : quote_found;
-    let line_break_at = less_than(line_break_found, 0) ? length : line_break_found;
+    let line_break_at = less_than(line_break_found, 0)
+      ? length
+      : line_break_found;
     let end = less_than(quote_at, line_break_at) ? quote_at : line_break_at;
     rest = after.slice(end);
   }
