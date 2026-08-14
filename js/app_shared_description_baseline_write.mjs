@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_shared_description_baseline_path } from "./app_shared_description_baseline_path.mjs";
 import { app_shared_description_missing } from "./app_shared_description_missing.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
