@@ -1,3 +1,4 @@
+import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
