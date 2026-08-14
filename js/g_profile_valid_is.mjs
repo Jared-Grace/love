@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -38,12 +39,13 @@ export function g_profile_valid_is(profile) {
   ) {
     return false;
   }
-  ("A teenager has not been bearing long enough for multiple sons AND multiple daughters. Multiple means two or more on each axis, so the pair together is four children at the very least, and a girl married in her teens has had a few years rather than the eight or nine that would take. One of each, or several of one and one of the other, still fits inside those years and is left alone.");
-  ("This is the rule the sieve was missing, and it showed up in a written arc rather than in a check. A prompt was handed a teenager with multiple sons and multiple daughters, and because the profile is declared settled and unchangeable, the writing had to work around a person who could not exist - which it does by never letting her count them, so the impossibility survives as vagueness instead of as an error.");
-  let many = "multiple";
-  if (equal(age, "teenager") && equal(sons, many) && equal(daughters, many)) {
-    return false;
-  }
+  ("A TEENAGER WITH FOUR CHILDREN IS RARE, NOT IMPOSSIBLE, so nothing here withholds it. Multiple is two or more on each axis, so multiple sons with multiple daughters is four children at the least - which a girl married at thirteen and bearing about yearly reaches by eighteen or nineteen. This sieve asks whether somebody COULD have lived, and she could. A rule was written here to exclude her and then taken out again, because rare belongs in what the deal makes likely rather than in what the sieve makes possible.");
+  ("THE PLACE TO WEIGHT IT DOES NOT EXIST YET, and that is worth knowing before somebody looks for it. ",
+    fn_name("g_profiles_deal_weights"),
+    " fits a weight one axis at a time out of ",
+    fn_name("g_profile_target_shares"),
+    ", which holds a share per VALUE - so age can be made rarer and multiple can be made rarer, and the pairing of the two cannot be spoken about at all. Making this combination unlikely needs a lever for cross-axis rarity that nothing in the deal has a shape for.");
+  ("Nothing here says a teenage FATHER of four, either, and it does not need to. Children are withheld from anyone unmarried, and a teenage male is forced single or betrothed, both by the two rules just above - so every teenager with a child is a woman already - which is the marrying-earlier difference, kept in one place rather than repeated on every rule about the young.");
   ("A teenager keeps no household, and manumission under thirty gave a lesser standing than this axis means by having been a servant.");
   let settled = ["has servants", "was a bondservant"];
   if (equal(age, "teenager") && list_includes(settled, servitude)) {
