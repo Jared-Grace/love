@@ -39,7 +39,7 @@ export function app_next_count_choose(parent, count) {
   each(counts, count_each);
   app_shared_text_body(
     card,
-    "At least this many. A passage is carried on to the end of its sentence, so you may receive a verse or two more.",
+    "At least this many. A passage is carried on to the end of its sentence, so you may receive a few more.",
   );
   return card;
 }
