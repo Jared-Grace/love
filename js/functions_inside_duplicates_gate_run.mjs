@@ -11,11 +11,8 @@ export async function functions_inside_duplicates_gate_run() {
   let named = await functions_inside_duplicate_names();
   let path = functions_inside_duplicates_baseline_path();
   let name_write = fn_name("functions_inside_duplicates_baseline_write");
-  let hint = text_combine_multiple([
-    "these functions now share a run of work somewhere inside them, which is a helper waiting to be written - give the shared run its own name and call it from each, or record the group with ",
-    name_write,
-    " if they are separate ideas that merely pass through the same few lines",
-  ]);
+  let hint =
+    "these functions now share a run of work somewhere inside them, which is a helper waiting to be written - give the shared run its own name and call it from each. The record only ever shrinks, so a new group cannot be recorded as known: collapsing the run is the only way out";
   let r = await baseline_names_gate_generic(named, path, hint, name_write);
   return r;
 }
