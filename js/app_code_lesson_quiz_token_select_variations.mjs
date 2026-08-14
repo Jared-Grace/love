@@ -126,6 +126,16 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     said = list_filter(codes, said_alike_is);
   }
   let variations = list_map(said, app_code_quiz_tokens);
+  ("An arrangement may not leave out a token the question wrote. Everything above widens the pool - a sign that reads both ways, a call whose arguments come in any order, another way of saying the same value - and one of those ways is to say it with fewer symbols. Re-printing a line from its tree drops a bracket the value does not depend on, so (3 === 5) === false came back as 3 === 5 === false as well, and a lesson whose whole subject is the brackets accepted an answer with no brackets in it. The learner is told they are right without having done the thing.");
+  ("Measured across every line the course can hand out, this drops something in twenty-seven of seven hundred and sixty-one, and every one of them is a lesson losing an answer that omitted its own subject: the four bracket lessons, and the statement lesson, which was accepting console.log(5) without the semicolon it had just taught.");
+  ("The other direction is left alone on purpose. An arrangement with MORE in it than the question is not this fault - it is either a real second way of saying the line, or unbuildable for want of a button, and the caller already drops the unbuildable ones.");
+  ("This cannot empty the pool. The question's own wording is put in by hand above, and it holds its own tokens exactly.");
+  let asked = app_code_quiz_tokens(code);
+  function tokens_none_missing_is(variation) {
+    let covers = list_tally_covers_is(variation, asked);
+    return covers;
+  }
+  variations = list_filter(variations, tokens_none_missing_is);
   if (expression_is) {
     function trim_semicolon(item) {
       let expected_last = ";";
