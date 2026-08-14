@@ -1,3 +1,5 @@
+import { qa_gate_liveness_none } from "./qa_gate_liveness_none.mjs";
+import { qa_gate_names_recent } from "./qa_gate_names_recent.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { folder_history_is } from "./folder_history_is.mjs";
 import { not } from "./not.mjs";
@@ -19,24 +21,29 @@ export async function qa_gate_blame_print(message, known) {
   let folder = folder_current_absolute();
   let recorded = await folder_history_is(folder);
   if (not(recorded)) {
-    let silent = [];
+    let silent = qa_gate_liveness_none();
     return silent;
   }
   let blamed = await qa_gate_blame_told(message, known);
   let none = list_empty_is(blamed);
   if (none) {
-    let nothing = [];
+    let nothing = qa_gate_liveness_none();
     return nothing;
   }
   let named = list_map_property(blamed, "f_name");
   let flying = await qa_gate_names_in_flight(named);
+  let lately = await qa_gate_names_recent(named);
   for (let last of blamed) {
     let f_name = property_get(last, "f_name");
     let commit = property_get(last, "commit");
     let when = property_get(last, "when");
     let subject = property_get(last, "subject");
     let editing = list_includes(flying, f_name);
+    let just = list_includes(lately, f_name);
     let tier = "INHERITED";
+    if (just) {
+      tier = "JUST COMMITTED";
+    }
     if (editing) {
       tier = "IN FLIGHT";
     }
@@ -54,5 +61,9 @@ export async function qa_gate_blame_print(message, known) {
     ]);
     console.log(line);
   }
-  return flying;
+  let live = {
+    flying,
+    lately,
+  };
+  return live;
 }
