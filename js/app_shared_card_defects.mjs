@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { app_shared_card_image } from "./app_shared_card_image.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
 import { apps_names } from "./apps_names.mjs";
