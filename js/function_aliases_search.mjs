@@ -4,6 +4,7 @@ import { search_generic } from "./search_generic.mjs";
 import { function_aliases_inverted } from "./function_aliases_inverted.mjs";
 import { properties_get } from "./properties_get.mjs";
 export async function function_aliases_search(search) {
+  "The short keys the human types, for every function whose name holds the words asked about.";
   let names_to_aliases = await function_aliases_inverted();
   let names = properties_get(names_to_aliases);
   let r = property_get_curried(names_to_aliases);

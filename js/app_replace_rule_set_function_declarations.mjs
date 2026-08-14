@@ -110,7 +110,7 @@ export function app_replace_rule_set_function_declarations() {
         ),
       },
     ],
-    why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies. This is evident from the presence of rules for 'function', parameter lists, variable declarations (let, const, var), statements (return, if, while, for), and arithmetic expressions, as well as the provided example goals that match typical JavaScript function syntax.",
+    why: "Giving a name to a set of instructions so they can be used later: the word function, the name, the inputs in round brackets, then the body in curly brackets. Everything the course has covered so far can appear inside that body.",
   };
   return r;
 }
