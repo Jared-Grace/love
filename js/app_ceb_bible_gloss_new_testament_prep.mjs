@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -21,8 +22,9 @@ import { wolff_word_find } from "./wolff_word_find.mjs";
 export async function app_ceb_bible_gloss_new_testament_prep() {
   "How much dictionary reading stands between here and a Cebuano gloss of the whole New Testament, counted in words rather than in chapters.";
   "Chapters are the wrong unit for this. The same word stands in dozens of chapters and is looked up once, so the reading is far smaller than the writing, and the two have to be sized apart before either is planned.";
-  "The four counts are four different costs. A name costs nothing, because no dictionary carries a person or a place and none needs to. A word already asked about costs nothing. A word the printed dictionary carries costs nothing either, because that book is held here and answers at once. Everything else has to be asked of a website one word at a time with a wait between, which is the only part of this measured in hours.";
+  "Only one of the counts is free, and it is the words already asked about. Everything else has to be asked of a website one word at a time with a wait between, which is the only part of this measured in hours. The other three counts say what that remainder is made of - how much of it looks like names, how much of it the printed dictionary also carries - which is worth knowing while planning and is not a reason to leave any of it unasked.";
   "A word the text never once writes without a capital is taken for a name. Across this many chapters an ordinary word stands mid-sentence somewhere, so the ones left capitalised throughout are the names - a test the text answers itself, where a list of names written out here would go stale the moment a book was added.";
+  "Every one of the four is only ever counted here and never dropped from the asking. The guess about names is good enough to say roughly how much of the remaining work is names, and nowhere near good enough to decide that a particular word is one and never look it up - so it says the shape of the cost and settles nothing. What will actually be asked for is the last count, which is everything not yet asked about whatever else is true of it.";
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let bible_folder = list_first(bible_folders);
   let absent = await app_ceb_bible_gloss_chapters_absent();
@@ -82,13 +84,17 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
   }
   let sample = list_take(owed, 40);
   let owed_words = list_map(sample, word_read);
+  let held = list_size(asked);
+  let left = list_size(words);
+  let asking = subtract(left, held);
   let r = {
     chapters: property_get(absent, "absent"),
     words: list_size(words),
     named: list_size(named),
-    asked: list_size(asked),
+    asked: held,
     printed: list_size(printed),
     owed: list_size(owed),
+    asking,
     owed_words,
   };
   return r;
