@@ -24,7 +24,7 @@ export function app_replace_rule_set_replace() {
         end: "a   b   a   b   a   b   a",
       },
     ],
-    why: "The rules demonstrate a grammar where every 'a' in the input can be independently replaced by 'b', allowing any combination of 'a's and 'b's in the output, as shown by the varied goal examples.",
+    why: "Every a can turn into a b, one at a time, and you choose which one. Some goals want every a changed, some want only a few - so read the goal before you start pressing.",
   };
   return r;
 }
