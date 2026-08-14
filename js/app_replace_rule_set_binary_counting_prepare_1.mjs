@@ -24,7 +24,7 @@ export function app_replace_rule_set_binary_counting_prepare_1() {
         end: "a   0   0   0",
       },
     ],
-    why: "The rules demonstrate binary counting by simulating the process of incrementing a binary number, where '1' acts as a carry and 'a' as a digit, showing how binary addition propagates carries and extends the number.",
+    why: "The slide from the last exercise, plus a rule that turns one 1 into two. Now you can build a row of 1's first and then send the marker through it.",
   };
   return r;
 }
