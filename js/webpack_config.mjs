@@ -11,6 +11,7 @@ import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export async function webpack_config() {
+  "The one settings object every bundle in this repo is built from. What differs between one build and another arrives in four values and nothing else: where to start reading, what to call what comes out, which folder to put it in, and whether that folder is one whose builds may keep what they compiled. Everything below those four is the same for the bundle a person is working on and the bundle that goes out to readers, which is why a change made here is felt everywhere at once.";
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let filename = process_env_get(webpack_config_filename);
