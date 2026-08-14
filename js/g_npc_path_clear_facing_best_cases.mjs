@@ -63,8 +63,8 @@ export function g_npc_path_clear_facing_best_cases() {
         },
       ],
       tap: {
-        x: 0,
-        y: 2,
+        x: 2,
+        y: 0,
       },
     },
     {

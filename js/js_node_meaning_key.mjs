@@ -52,38 +52,12 @@ export function js_node_meaning_key(node) {
       let key = list_join(pieces, empty);
       return key;
     }
-    let plain2 = js_node_meaning_key(left);
-    let plain3 = js_node_meaning_key(right);
-    let sides = [plain2, plain3];
-    let commutative = js_code_binary_expression_commutative();
-    let swappable = list_includes(commutative, operator);
-    let arithmetic = list_includes(
-      [plus_sign, minus_sign, times_sign, over_sign],
-      operator,
-    );
-    let sortable = swappable && not(arithmetic);
-    if (sortable) {
-      ("A plus and a times are left out here on purpose. Between numbers they were answered above; anywhere else they are joining writing, and joined writing does not read the same both ways.");
-      list_sort_text(sides);
-    }
-    let written_sides = list_join(sides, comma);
-    let binary_pieces = [operator, open, written_sides, close];
-    let binary_key = list_join(binary_pieces, empty);
+    let binary_key = js_node_meaning_key_sides(node);
     return binary_key;
   }
   let call = equal(type, "CallExpression");
   if (call) {
-    let callee = property_get(node, "callee");
-    let name = js_unparse(callee);
-    let keys = property_list_map(node, "arguments", js_node_meaning_key);
-    let commutative_calls = js_code_call_commutative();
-    let swappable_call = list_includes(commutative_calls, name);
-    if (swappable_call) {
-      list_sort_text(keys);
-    }
-    let written_keys = list_join(keys, comma);
-    let call_pieces = [name, open, written_keys, close];
-    let call_key = list_join(call_pieces, empty);
+    let call_key = js_node_meaning_key_call(node);
     return call_key;
   }
   let unary = equal(type, "UnaryExpression");
