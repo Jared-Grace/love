@@ -9,7 +9,7 @@ export function app_code_lessons_exercises_each(rounds, on_exercise) {
   for (let fn of fns) {
     let lesson = fn();
     let batch_get = property_get(lesson, "batch");
-    for (let round = 0; less_than(round, rounds); round++) {
+    for (let round_index = 0; less_than(round_index, rounds); round_index++) {
       let batch = batch_get();
       for (let qa of batch) {
         let exercises = property_get(qa, "exercises");
