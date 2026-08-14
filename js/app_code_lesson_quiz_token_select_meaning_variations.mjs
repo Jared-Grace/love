@@ -1,5 +1,4 @@
-import { js_code_comparison_operand_types } from "./js_code_comparison_operand_types.mjs";
-import { lists_equal_pair } from "./lists_equal_pair.mjs";
+import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { not } from "./not.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -15,7 +14,7 @@ import { list_permutations } from "./list_permutations.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function app_code_lesson_quiz_token_select_meaning_variations(code) {
-  "Every rearrangement of the SAME tiles that computes the SAME value - so the unscramble accepts any valid ordering, not just the one it was written in. `1 < 3 - 1` and `1 - 1 < 3` are built from the identical tiles and both are true, so both are right. The commutative-swap variations only move sides of a commutative node; this moves any tile anywhere. Every ordering is the same multiset of tiles, so it can never accept an answer the learner could not have built, and a wrong VALUE is rejected by the value check.";
+  "Every rearrangement of the SAME tiles that says the SAME thing - so the unscramble accepts any right ordering, not just the one it was written in. `1 < 3 - 1` and `1 - 1 < 3` are built from the identical tiles and say the same thing, so both are right. The commutative-swap variations only move sides of a commutative node; this moves any tile anywhere. Every ordering is the same multiset of tiles, so it can never accept an answer the learner could not have built.";
   "Bounded by permuting all tiles (n!) and evaluating each: cheap because these are flat 3-operand expressions (5 tiles, 120 orderings), most of which do not parse and are dropped. Above a small tile cap it declines rather than blow the factorial up, and a code that does not itself evaluate (an identifier, a call, anything with side effects) yields no target and so no variations.";
   let tokens = app_code_quiz_tokens(code);
   let semicolon = ";";
@@ -56,9 +55,8 @@ export function app_code_lesson_quiz_token_select_meaning_variations(code) {
     let joined = list_join(perm, separator);
     return joined;
   }
-  ("Landing on the right value is not enough on its own, because a comparison will happily compare a number with a true or a false and answer without complaint. 3 < 1 !== true is two numbers compared and then two booleans compared; rearranged to 3 < true !== 1 it is a number against a boolean and then a boolean against a number, and it comes out to the same answer by luck. Ten orderings were accepted for that line where two say what it says. So an ordering has to compare the same kinds of thing the line already compared, in the same amounts, and nine of those ten go.");
-  ("Asked as same as the original rather than as no mixing, because mixing is a lesson of its own - there is a lesson whose whole point is that a number never equals a string, and a line written to compare across kinds must still accept its own sides the other way round.");
-  let code_types = js_code_comparison_operand_types(code);
+  ("Landing on the right value is not enough on its own, and a line that comes out false is where it fails worst. 11 - 3 === 44 / 4 is false, and so are 11 - 3 === 4 / 44 and 11 === 3 - 44 / 4 and a hundred and forty others built from the same tiles - every one of them was being marked right, because every one of them is false. What the learner was asked to build is a sentence, so the sentence is what is checked.");
+  ("The value is still asked first, and only as the cheap half of the pair. Two lines that say the same thing always come out the same, so an ordering that comes out differently can be dropped before anything is read of it, and the reading is left with the few that got that far.");
   function matches(perm) {
     let value = value_of(perm);
     let same = equal(value, target);
@@ -66,9 +64,8 @@ export function app_code_lesson_quiz_token_select_meaning_variations(code) {
       return false;
     }
     let joined = join_code(perm);
-    let types = js_code_comparison_operand_types(joined);
-    let compared_alike = lists_equal_pair(types, code_types);
-    return compared_alike;
+    let said_alike = js_code_same_meaning_is(code, joined);
+    return said_alike;
   }
   let good = list_filter(perms, matches);
   let unique = list_map_unique(good, join_code);
