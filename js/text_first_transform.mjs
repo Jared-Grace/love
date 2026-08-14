@@ -9,6 +9,10 @@ export function text_first_transform(s, transform) {
   let r = list_first_remaining(split);
   let remaining = property_get(r, "remaining");
   let first = property_get(r, "first");
+  if (null_is(first)) {
+    ("an empty text has no first character to hand the transform, and every transform here reads its argument as text - so give the empty text straight back rather than passing nothing on");
+    return s;
+  }
   let lower = transform(first);
   if (null_is(remaining)) {
     remaining = [];
