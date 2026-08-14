@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { list_filter } from "./list_filter.mjs";
