@@ -10,13 +10,16 @@ import { list_includes } from "./list_includes.mjs";
 export function js_free_names_scoped(ast) {
   "the same question the twin without the suffix answers — which mentions nothing in this file binds — but asked mention by mention instead of name by name. A name bound in one function and used in another is bound for the first and free for the second; the twin sees the binding, calls the name covered, and misses the ReferenceError in the second. Here a mention counts as covered only when a scope around that mention binds it.";
   "Four things once made it over-report and are now closed: a catch clause is a scope, a named function expression binds its own name inside itself, the list of language and host globals it forgives covers the ones the repo actually reaches for, and an import counts however it was written rather than only in the repo's own relative shape. What is left is a name nothing supplies, which is what a runtime would call an error. Anything it still names beyond that is a global this list has not met yet, so add it there rather than teaching a caller to ignore it.";
-  let names = js_identifiers_referenced_names(ast);
+  ("Which mentions read a value is worked out once here and both readings below are given it. The names are only those same nodes' names, and the sweep for mentions nothing binds needs the nodes themselves - asked separately that was the same walk over the same tree twice, measured 2026-08-14 across this repo at four and a third seconds.");
+  let referenced_nodes = js_identifiers_referenced_nodes(ast);
+  let names = list_map_property_unique(referenced_nodes, "name");
+  let referenced = list_unique_set(referenced_nodes);
   let imports = js_imports_local_names(ast);
   let globals = js_global_names();
   let name = js_flo_name(ast);
   let supplied = list_concat_multiple([imports, globals, [name]]);
   ("Which names have a mention nothing binds is asked once for the whole file rather than once for each name. Asking name by name walked the whole tree again every time, and a file binds seven or eight names of its own: measured 2026-08-11 across this repo that was sixty-four seconds, the largest single thing in the gate for names nothing supplies. One walk knows about all of them, because the walk is already holding the scopes around each mention.");
-  let unbound = js_names_unbound_mentioned(ast);
+  let unbound = js_names_unbound_mentioned_referenced(ast, referenced);
   function free_is(candidate) {
     let covered = list_includes(supplied, candidate);
     if (covered) {
