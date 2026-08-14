@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_different() {
         end: "a   a   b   c   a",
       },
     ],
-    why: "The rules demonstrate a grammar where every occurrence of the sequence ['b', 'c'] can be replaced by 'a', effectively shrinking repeated ['b', 'c'] pairs into 'a's, as shown by the transformation of longer sequences of ['b', 'c'] into fewer 'a's.",
+    why: "A b next to a c closes back into a single a. This is the rule before this one, read backwards - growing becomes shrinking.",
   };
   return r;
 }
