@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_different_2() {
         end: "a   a   a   a",
       },
     ],
-    why: "The rules demonstrate how sequences of 'd','e' can be replaced by 'b', and then 'b','c' by 'a', allowing reduction of complex strings to simpler forms, ultimately transforming specific starting sequences into one or more 'a's.",
+    why: "Both rules run the other way now: d e closes into b, and b c closes into a. Work from the inside out to get back to a single a.",
   };
   return r;
 }
