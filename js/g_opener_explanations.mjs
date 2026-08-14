@@ -20,7 +20,7 @@ export function g_opener_explanations() {
     "the gospel": {
       said: gospel_said,
       draws:
-        "The person answers the gospel just shared - a question about it, or an objection to it. Somebody new to it asks plainly; somebody who already knows a good deal says it in more informed terms. Their answer reflects their current knowledge - whatever they answer, one of the passages above has to be its plain and obvious player answer to the person's answer.",
+        "The person answers the gospel just shared - a question about it, or an objection to it. Somebody new to it asks plainly; somebody who already knows a good deal says it in more informed terms. Their answer reflects their current knowledge.",
     },
     "a Bible question": {
       said: "The believer asks the player a question about Scripture.",
