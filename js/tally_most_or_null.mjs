@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_map } from "./list_map.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { number_is } from "./number_is.mjs";
+import { list_max_or_null } from "./list_max_or_null.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function tally_most_or_null(tally) {
   "The largest number a tally counted, or nothing where it counted none.";
   "A tally's property names are exactly the values that turned up in it, so the largest of them is the largest value - no different from taking the largest of the list itself, and still there long after that list has been let go. They come back as text, because that is what a property name is, so they are read as numbers again here.";
