@@ -1,4 +1,15 @@
+import { app_replace_why_symbol_tile } from "./app_replace_why_symbol_tile.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 export function app_replace_rule_set_replace() {
+  function why(parent) {
+    html_span_text(parent, "Every ");
+    app_replace_why_symbol_tile(parent, "a");
+    html_span_text(parent, " can turn into a ");
+    app_replace_why_symbol_tile(parent, "b");
+    html_span_text(parent, ", one at a time, and you choose which one. Some goals want every ");
+    app_replace_why_symbol_tile(parent, "a");
+    html_span_text(parent, " changed, some want only a few - so read the goal before you start pressing.");
+  }
   let r = {
     name: "Replace",
     rules: ["a > b"],
@@ -24,7 +35,7 @@ export function app_replace_rule_set_replace() {
         end: "a   b   a   b   a   b   a",
       },
     ],
-    why: "Every 'a' can turn into a 'b', one at a time, and you choose which one. Some goals want every 'a' changed, some want only a few - so read the goal before you start pressing.",
+    why,
   };
   return r;
 }
