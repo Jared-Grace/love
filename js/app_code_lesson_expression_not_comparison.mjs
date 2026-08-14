@@ -121,7 +121,7 @@ export function app_code_lesson_expression_not_comparison() {
       " in front of the ",
       bracketed,
     ]);
-    html_div_cycle_code(reach, ["Then we have: ", whole]);
+    html_div_cycle_code(reach, ["And then we have: ", whole]);
     let worked = app_code_container_light_blue(root);
     html_div_cycle_code(worked, [
       "For ",
