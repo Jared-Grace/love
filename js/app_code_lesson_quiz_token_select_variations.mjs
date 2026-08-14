@@ -103,7 +103,10 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   let orderable_nodes = list_adder(collect);
   let value_codes = app_code_lesson_quiz_token_select_meaning_variations(code);
   function generate_all_with_values(la) {
-    "the commutative-swap orderings, plus every same-tiles same-value rearrangement, into one deduplicated pool";
+    "the question's own wording, then the commutative-swap orderings, plus every same-tiles same-value rearrangement, into one deduplicated pool";
+    "The wording the question was asked in goes in first and by hand, because neither of the two halves below is guaranteed to produce it. The swap half re-prints the line from its tree, and printing drops a bracket the line does not need - so (3 === 5) === (5 === 3) came back as 3 === 5 === (5 === 3), and the learner who copied the line the lesson had just taught them pressed an opening bracket and was told they were wrong. The same-tiles half was no help either: it declines above a small tile count, and that line has eleven.";
+    "Nothing can be lost by putting it there. It is the answer the question was written to have, so it is right by construction, and everything else in the pool is only ever another way of saying it.";
+    la(code);
     app_code_lesson_quiz_token_select_variations_generate_all(
       la,
       tree,
