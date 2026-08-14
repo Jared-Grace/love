@@ -20,7 +20,7 @@ export function app_replace_rule_set_shrink_left() {
         end: "a   a   a",
       },
     ],
-    why: "The rules demonstrate a left-shrinking process where every occurrence of 'b' immediately followed by 'a' is replaced by 'a', effectively removing leading 'b's before each 'a' and reducing the sequence to only 'a's.",
+    why: "Now it is the b just before an a that disappears. Same idea as the last one, other side.",
   };
   return r;
 }

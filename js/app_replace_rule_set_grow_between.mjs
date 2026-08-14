@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_between() {
         end: "a   b   a   a   b   a   a   b   a",
       },
     ],
-    why: "The rules demonstrate an insertion grammar where every occurrence of two consecutive 'a's is replaced by 'a', 'b', 'a', effectively growing the string by inserting 'b' between each pair of 'a's.",
+    why: "A b is slipped in between two a's. Both a's stay where they are; the line gets one longer.",
   };
   return r;
 }
