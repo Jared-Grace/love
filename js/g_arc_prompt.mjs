@@ -101,6 +101,8 @@ export function g_arc_prompt(
     catch_up,
     "cannot answer it. Write it as something the person would say whichever opener came next.",
   ]);
+  "THE OPENERS SIT IN THE TURN SECTION because the turn field describing 'opener' tells the writer to copy the word from the opener lines above it. They used to be rendered after that field list, so 'above' named something not yet shown - and the three numbered steps that stood here instead said what the opener lines say anyway, with less in them.";
+  "The catch_up pair stays BELOW the field list, because those two lines name a field, and moving them up with the openers would only trade one forward reference for another.";
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
