@@ -1,6 +1,6 @@
+import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -57,8 +57,7 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
       return r2;
     }
     let answer = await wolff_word_find(word);
-    let found = property_get(answer, "found");
-    let carried = equal_not(found, "none");
+    let carried = property_equals_not(answer, "found", "none");
     if (carried) {
       let r3 = {
         word,
