@@ -12,15 +12,15 @@ export function app_code_quiz_choice_pool_unremapped(rounds) {
   "Each lesson is asked several rounds' worth because a lesson varies what it asks, and a quiz is reported once under the label it wears however many times it comes up.";
   let seen = [];
   let found = [];
-  function on_exercise(visit) {
-    let qa = property_get(visit, "qa");
-    let exercise = property_get(visit, "exercise");
+  function on_exercise(exercise_visit) {
+    let qa = property_get(exercise_visit, "qa");
+    let exercise = property_get(exercise_visit, "exercise");
     let said = app_code_quiz_choice_pool_exercise_unremapped(qa, exercise);
     let agrees = null_is(said);
     if (agrees) {
       return;
     }
-    let lesson = property_get(visit, "lesson");
+    let lesson = property_get(exercise_visit, "lesson");
     let answer_label = property_get(said, "answer_label");
     let key = text_combine_multiple([lesson, " ", answer_label]);
     let already = list_includes(seen, key);
