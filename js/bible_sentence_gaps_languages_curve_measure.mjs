@@ -27,11 +27,11 @@ export async function bible_sentence_gaps_languages_curve_measure() {
   let every = list_size(bible_folders);
   let sizes = lists_combine([counts, [every]]);
   function lambda(size) {
-    let measured = bible_chapters_ends_subsets_sentence_gaps(
+    let measured_size = bible_chapters_ends_subsets_sentence_gaps(
       chapters_ends,
       size,
     );
-    return measured;
+    return measured_size;
   }
   let curve = list_map(sizes, lambda);
   let measured = {
