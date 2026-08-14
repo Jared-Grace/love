@@ -1,9 +1,7 @@
-import { each } from "./each.mjs";
+import { lists_combine_unique } from "./lists_combine_unique.mjs";
 import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
 import { identity } from "./identity.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 export async function gloss_chapters_bible_words_distinct(
@@ -27,11 +25,6 @@ export async function gloss_chapters_bible_words_distinct(
     return bare;
   }
   let chapters = await list_map_async(chapter_codes, chapter_words);
-  let words = [];
-  function chapter_add(chapter) {
-    list_add_multiple(words, chapter);
-  }
-  each(chapters, chapter_add);
-  let distinct = list_unique(words);
+  let distinct = lists_combine_unique(chapters);
   return distinct;
 }
