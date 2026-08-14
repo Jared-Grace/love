@@ -147,7 +147,7 @@ export function g_arc_prompt(
     becoming,
     "",
     catch_up_first,
-    "Then the player chooses an opener. Each turn is one opener: choosing an opener is choosing which turn gets played, so every turn names the opener it answers.",
+    "Then the player chooses an opener. A conversation uses each opener at most once, and the turns under one opener sit together: the player opens a topic once, and the person carries it until it is done, before the player opens another.",
     "Here are the openers. Each line gives the word to name the opener by, then what the player says with it, then what kind of thing the person says back:",
     joined6,
     joined7,
