@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
@@ -13,9 +14,7 @@ import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { list_map } from "./list_map.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_not_equal_same() {
   "the derivation the curriculum promised out loud and had not kept: a !== b is the same line as !(a === b). When !== was first taught it was deliberately framed as asking whether two sides are DIFFERENT - an everyday primitive standing beside SAME - and not as the negation of ===, because that reading needs a ! around a whole comparison and there was no lesson for one. There is now, immediately before this, so the promise can be paid.";
   "The quiz matches the two forms against each other rather than asking for a value, because what is being taught is that the two spellings mean one thing. A value question would be answered correctly by a learner who never noticed they were the same line.";
@@ -40,10 +39,8 @@ export function app_code_lesson_expression_not_equal_same() {
     let wants = [false, true, false, true];
     function to_pair(want_same) {
       let sides = pair(want_same);
-      let input = property_get(sides, "left");
-      let left = text_to(input);
-      let input2 = property_get(sides, "right");
-      let right = text_to(input2);
+      let left = property_text_to(sides, "left");
+      let right = property_text_to(sides, "right");
       let question = short_form(left, right);
       let answer = long_form(left, right);
       let built = {
