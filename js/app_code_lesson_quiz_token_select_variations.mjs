@@ -1,4 +1,4 @@
-import { js_tokens_parenthesis_groups } from "./js_tokens_parenthesis_groups.mjs";
+import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { list_tally_covers_is } from "./list_tally_covers_is.mjs";
 import { app_code_lesson_quiz_token_select_variations_set_args } from "./app_code_lesson_quiz_token_select_variations_set_args.mjs";
@@ -139,12 +139,13 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     return covers;
   }
   variations = list_filter(variations, tokens_none_missing_is);
-  ("Brackets have to gather what the question's brackets gathered. Leaving them out is only the loud half of the same fault; the quiet half keeps every tile and moves the brackets somewhere they change nothing, so (3 === 5) === false was also accepting (3) === 5 === false and (3 === 5 === false). Those are the same line by value - which is exactly why every check that goes by value calls them right - and they are not the same answer to a lesson whose subject is which part the brackets are around.");
+  ("Brackets have to gather as much as the question's brackets gathered. Leaving them out is only the loud half of the same fault; the quiet half keeps every tile and moves the brackets somewhere they change nothing, so (3 === 5) === false was also accepting (3) === 5 === false and (3 === 5 === false). Those are the same line by value - which is exactly why every check that goes by value calls them right - and they are not the same answer to a lesson whose subject is which part the brackets are around.");
   ("This is asked of the whole pool rather than of the half it came from, because both halves can produce it: the free rearrangement of tiles is where these came from today, and a swap that re-prints from the tree is free to bracket a different side tomorrow.");
-  ("A genuine swap survives, because the groups are compared as a set of contents and not by where they fall - (4 < 5) === (5 < 4) swapped over still gathers a 4 < 5 and a 5 < 4. A question with no brackets is unaffected: it has no bracket button, so nothing bracketed was ever buildable.");
-  let asked_groups = js_tokens_parenthesis_groups(asked);
+  ("How much each bracket gathered is asked, and not which tiles it gathered. Rearranging the tiles is the whole of what the learner is doing, so a bracket holding a different comparison is not a bracket that moved - (3 !== 2) !== (8 === 6) and (8 !== 6) === (2 !== 3) put a comparison inside each bracket either way. Whether the rearranged line still says what the question said is asked separately, by the reading above.");
+  ("A genuine swap survives, because the amounts are compared as a set and not by where they fall - (4 < 5) === (5 < 4) swapped over still gathers three tiles on each side. A question with no brackets is unaffected: it has no bracket button, so nothing bracketed was ever buildable.");
+  let asked_groups = js_tokens_parenthesis_group_sizes(asked);
   function brackets_alike_is(variation) {
-    let groups = js_tokens_parenthesis_groups(variation);
+    let groups = js_tokens_parenthesis_group_sizes(variation);
     let alike = lists_equal_pair(groups, asked_groups);
     return alike;
   }

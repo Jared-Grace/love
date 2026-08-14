@@ -1,3 +1,4 @@
+import { list_slice_count } from "./list_slice_count.mjs";
 import { not } from "./not.mjs";
 import { list_slice_from } from "./list_slice_from.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -30,7 +31,7 @@ export function text_roots_unjoined_tails(unjoined) {
     return {
       tail,
       count: counts[tail],
-      examples: list_slice_from(examples[tail], 0, 4),
+      examples: list_slice_count(examples[tail], 0, 4),
     };
   }
   let read = list_map(object_property_names(counts), tail_read);
