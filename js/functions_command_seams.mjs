@@ -12,7 +12,11 @@ export function functions_command_seams() {
   let f_name8 = fn_name("nearley_grammar_text_parser");
   let f_name9 = fn_name("firebase_storage_function_run_generic");
   let f_name10 = fn_name("file_module_import");
-  ("The functions that run a repo function their argument NAMES are deliberately not here - they are listed in functions_dispatch_seams, and both lists meet at the floor in functions_dispatcher_denied. Reaching one of those from source is not a reason to refuse anything, which is the whole difference: this list is asked reachability questions, and that one is not.");
+  ("The functions that run a repo function their argument NAMES are deliberately not here - they are listed in ",
+    fn_name("functions_dispatch_seams"),
+    ", and both lists meet at the floor in ",
+    fn_name("functions_dispatcher_denied"),
+    ". Reaching one of those from source is not a reason to refuse anything, which is the whole difference: this list is asked reachability questions, and that one is not.");
   let names = [
     f_name,
     f_name2,

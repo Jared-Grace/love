@@ -14,14 +14,14 @@ export async function command_seams_agree_gate_run() {
   list_empty_is_assert_json(guard_only, {
     hint: text_combine_multiple([
       "the guard denies these names but ",
-      functions_command_seams.name,
+      functions_dispatcher_denied.name,
       " does not list them — add them there",
     ]),
     guard_only,
   });
   list_empty_is_assert_json(seams_only, {
     hint: text_combine_multiple([
-      functions_command_seams.name,
+      functions_dispatcher_denied.name,
       " lists these names but the guard does not deny them — add them to the guard's floor",
     ]),
     seams_only,
