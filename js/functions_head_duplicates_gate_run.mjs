@@ -11,11 +11,8 @@ export async function functions_head_duplicates_gate_run() {
   let named = await functions_head_duplicate_names();
   let path = functions_head_duplicates_baseline_path();
   let name_write = fn_name("functions_head_duplicates_baseline_write");
-  let hint = text_combine_multiple([
-    "these functions now begin with the same run of work, which is a helper waiting to be written - give the shared opening its own name and call it from each, or record the group with ",
-    name_write,
-    " if they are two ideas that merely start alike",
-  ]);
+  let hint =
+    "these functions now begin with the same run of work, which is a helper waiting to be written - give the shared opening its own name and call it from each. The record only ever shrinks, so a new group cannot be recorded as known: collapsing the opening is the only way out";
   let r = await baseline_names_gate_generic(named, path, hint, name_write);
   return r;
 }
