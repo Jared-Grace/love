@@ -157,7 +157,7 @@ export function app_replace_rule_set_unary_to_binary_equations() {
         end: "b   1   1   +   b   1   0   0   =   b   1   1   1   d",
       },
     ],
-    why: "These replacement rules demonstrate the conversion of unary addition equations into binary addition equations, as shown by the transformation of sequences of 'a' (unary digits) into binary digits ('1', '0') and the systematic rewriting of expressions involving addition and equality.",
+    why: "Everything so far comes together: the marker walks and converts as it passes, and the carry slides and lands. The job is to take a sum counted in marks and end up with the same sum written in binary. There are many goals here because this is the one worth repeating.",
   };
   return r;
 }
