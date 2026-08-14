@@ -48,7 +48,7 @@ export async function bible_folder_chapters_sentence_gaps(
   let counted = list_size(gaps);
   let measured = {
     bible_folder,
-    chapter_codes,
+    chapters,
     counted,
     tally,
     most,
