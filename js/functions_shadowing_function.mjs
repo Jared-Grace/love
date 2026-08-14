@@ -1,5 +1,5 @@
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { functions_shadowing } from "./functions_shadowing.mjs";
+import { functions_shadowing_remembered } from "./functions_shadowing_remembered.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export async function functions_shadowing_function() {
@@ -11,7 +11,7 @@ export async function functions_shadowing_function() {
   "fails the same way for the same reason - a call that reads as reaching the";
   "repo and reaches a local instead. The difference is only which names, so the";
   "wider set is worth holding at the same zero the narrow one is held at.";
-  let offenders = await functions_shadowing();
+  let offenders = await functions_shadowing_remembered();
   let found = [];
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
