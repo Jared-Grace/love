@@ -536,7 +536,7 @@ export function permission_grant_names() {
   let spelled533 = fn_name("literals_frozen_fused_all");
   let spelled534 = fn_name("literals_frozen_fused_gate_run");
   let spelled535 = fn_name("literals_frozen_storage_gate_run");
-  let spelled536 = fn_name("literals_frozen_storage_unfrozen");
+  let spelled536 = fn_name("literals_frozen_storage_walked");
   let spelled537 = fn_name("memory_note_stems");
   let spelled538 = fn_name("memory_notes_word_rename");
   let spelled539 = fn_name("path_pattern_covers_cases_gate_run");

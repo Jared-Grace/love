@@ -13,7 +13,7 @@ export function app_replace_rule_set_boolean_literal() {
         end: "false",
       },
     ],
-    why: "The replacement rules define a grammar for Boolean literals, allowing the nonterminal 'bo' to be replaced by either 'true' or 'false', representing the two possible Boolean values.",
+    why: "From here on the short words stand for places where a value goes, and the list above says what each one means. bo is a place that holds one of only two values: true or false. Pick the one the goal asks for.",
   };
   return r;
 }
