@@ -19,12 +19,14 @@ import { log } from "./log.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
+  "Works out which of a rule set rules each of its goals actually leant on, and writes the answer back into a function of its own so nothing has to work it out again.";
   async function lambda3(oad) {
     async function lambda(a) {
       let f_name = property_get(a, "name");
       let rs = await function_run_args_none(f_name);
       let name = property_get(rs, "name");
-      log(fn_name("app_replace_rule_sets_fns_rules_used_generate"), {
+      let f_name3 = fn_name("app_replace_rule_sets_fns_rules_used_generate");
+      log(app_replace_rule_sets_fns_rules_used_generate.name, {
         rs,
       });
       let rules = property_get(rs, "rules");
