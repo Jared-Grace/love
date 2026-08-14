@@ -15,6 +15,7 @@ import { equal } from "./equal.mjs";
 export async function app_original_bible_gloss_write_next(chapter_code) {
   "Everything needed to author the next passage of a chapter that has no word explanations yet: its English wording, and each of its verses with every original-language word already parsed.";
   "The parsing, the transliteration and the Strong's number are handed over rather than worked out, so an explanation says what a form is doing in its clause and never has to decide what the form is. The rubric for what an explanation owes the reader is notes/gloss_method.md.";
+  "A word rare enough to be worth remarking on also arrives carrying the sentence that says so, already written out of the counts. That claim used to be the author's to make and was the one kind they could not check: nobody remembers how many times a word stands in a testament, and a sentence saying it stands only here reads exactly the same whether or not it is true. Handing it over puts it in the same class as the parsing - given, not generated - so the author is left with the part no dataset holds.";
   "It also answers with the file to write the explanations into, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
@@ -41,14 +42,16 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   let verses_interlinear = property_get(chapters, chapter_code);
   let verse_numbers = property_get(passage, "verse_numbers");
   let originals = property_get(passage, "originals");
+  let tallies = await bible_strong_chapter_tallies_cache();
   function verse_read(verse_number, index) {
     let property_name = verse_number_key();
-    let words = list_find_property_get(
+    let found = list_find_property_get(
       verses_interlinear,
       property_name,
       verse_number,
       "words",
     );
+    let words = gloss_words_occurrence_added(tallies, chapter_code, found);
     let original = originals[index];
     let r = {
       verse_number,
