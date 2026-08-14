@@ -1,12 +1,10 @@
+import { bible_sentence_gaps_join } from "./bible_sentence_gaps_join.mjs";
+import { bible_sentence_gaps_tally } from "./bible_sentence_gaps_tally.mjs";
+import { property_set } from "./property_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_max_or_null } from "./list_max_or_null.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { lists_combine } from "./lists_combine.mjs";
-import { list_sum } from "./list_sum.mjs";
-import { list_tally } from "./list_tally.mjs";
-import { list_size } from "./list_size.mjs";
 export function bible_chapters_sentence_gaps_combine(
   chapter_codes,
   each_chapter,
