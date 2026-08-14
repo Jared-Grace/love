@@ -46,7 +46,7 @@ export function app_replace_rule_set_integers() {
         end: "5 6 7 8",
       },
     ],
-    why: "The replacement rules define a context-free grammar for non-negative integers, allowing for the generation of single-digit and multi-digit numbers by recursively combining digits, with special handling for leading digits to avoid leading zeros except for the number zero itself.",
+    why: "The same digits as before, with one restriction added: a number of more than one digit cannot begin with 0. That is what pi is for - a first digit from 1 to 9.",
   };
   return r;
 }

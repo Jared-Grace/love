@@ -49,7 +49,7 @@ export function app_replace_rule_set_identifiers_simple() {
         end: "J 0 $ h",
       },
     ],
-    why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may include a limited set of digits and additional characters, demonstrating how identifiers are constructed from allowed starting and subsequent characters.",
+    why: "An identifier is a name you choose for something. It may start with a letter, a $ or an _ - but never a digit - and after that first symbol digits are allowed too. That is why there are two placeholders: idf for the first symbol, ida for any later one.",
   };
   return r;
 }
