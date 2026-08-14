@@ -1,9 +1,8 @@
+import { list_join_comma_space_and } from "./list_join_comma_space_and.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gospel_share_parts } from "./g_gospel_share_parts.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_last_remaining } from "./list_last_remaining.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
@@ -27,11 +26,7 @@ export function app_g_conversation_label_for(turn, pronouns) {
     let together = list_join_space([said, emoji]);
     list_add(pictured, together);
   }
-  let split = list_last_remaining(pictured);
-  let last = property_get(split, "last");
-  let remaining = property_get(split, "remaining");
-  let leading = list_join_comma_space(remaining);
-  let all = list_join_space([leading, "and", last]);
+  let all = list_join_comma_space_and(pictured);
   let labels = {
     gospel_share_objection: text_combine_multiple([
       "Tell ",
