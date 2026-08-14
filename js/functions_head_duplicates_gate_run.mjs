@@ -1,7 +1,6 @@
 import { functions_head_duplicate_names } from "./functions_head_duplicate_names.mjs";
 import { functions_head_duplicates_baseline_path } from "./functions_head_duplicates_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function functions_head_duplicates_gate_run() {
   "QA gate: no new group of functions may begin with the same run of work. Throws so the dispatcher seam exits nonzero.";
