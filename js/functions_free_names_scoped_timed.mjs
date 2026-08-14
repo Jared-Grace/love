@@ -12,6 +12,7 @@ export async function functions_free_names_scoped_timed() {
   ("Both halves are counted in the one pass on purpose. Wall time on this machine is unusable for comparing two runs - the same gate measured five times over ten minutes came back between ten and twenty-six seconds, with the fastest run at a higher load than one of the slowest - so a number is only worth having beside another number taken in the same run. What survives that is the share, never the seconds.");
   ("Finding each function's file by name is counted too, by asking for it a second time rather than by taking the reading apart. Asking again is the honest way round: the reading below would have to be rewritten here to be split, and a rewritten copy of it stops being what the gate actually runs the moment somebody improves one of the two. What the second asking costs is what the first one cost, so the number is a fair share of the reading even though it is not a part of it.");
   ("It is not the gate. There is no baseline here and nothing is compared to anything, so it can be asked freely without a red answer meaning anything. It is also not a copy of the gate's loop for the same reason - what it leaves out is exactly what makes the gate a gate.");
+  function_paths_frozen_enable();
   let love = await repo_functions_names("love");
   let path_ms = 0;
   let parse_ms = 0;
