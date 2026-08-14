@@ -12,7 +12,7 @@ export function list_max_by(list, number_of) {
     }
     let number = number_of(item);
     let number_best = number_of(best);
-    let better = greater_than(number, number_best) || true;
+    let better = greater_than(number, number_best);
     let kept = better ? item : best;
     return kept;
   }
