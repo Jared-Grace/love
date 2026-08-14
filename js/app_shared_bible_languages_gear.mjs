@@ -15,7 +15,7 @@ export function app_shared_bible_languages_gear(
   if (multiple) {
     function on_gear() {
       "standing on its own, so back is a plain reload to the reading it came from";
-      ("and unnamed, because the pages that offer this gear are a search and a list of saved verses rather than a passage - there is a page to go back to but no reference to call it by, and naming one would name somewhere the reader was not");
+      "and unnamed, because the pages that offer this gear are a search and a list of saved verses rather than a passage - there is a page to go back to but no reference to call it by, and naming one would name somewhere the reader was not";
       let unnamed = "";
       app_shared_bible_languages_choose(
         content,

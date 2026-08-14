@@ -1,3 +1,4 @@
+import { app_shared_bible_reference_english } from "./app_shared_bible_reference_english.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_passage_kept_get } from "./app_shared_bible_passage_kept_get.mjs";
@@ -5,9 +6,6 @@ import { app_shared_bible_passage_kept_restore } from "./app_shared_bible_passag
 import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
 import { app_shared_bible_screen_home_set } from "./app_shared_bible_screen_home_set.mjs";
 import { app_shared_button_back_to } from "./app_shared_button_back_to.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { null_is } from "./null_is.mjs";

@@ -1,7 +1,7 @@
 import { equal } from "./equal.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
-import { js_node_number_is } from "./js_node_number_is.mjs";
+import { js_node_writing_inside_is } from "./js_node_writing_inside_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -37,7 +37,8 @@ export function js_node_meaning_key(node) {
     let adds = list_includes([plus_sign, minus_sign], operator);
     let scales = list_includes([times_sign, over_sign], operator);
     let run = adds || scales;
-    let numbers = js_node_number_is(node);
+    let writing = js_node_writing_inside_is(node);
+    let numbers = not(writing);
     if (run && numbers) {
       let straight = plus_sign;
       let opposite = minus_sign;
