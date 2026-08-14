@@ -1,3 +1,13 @@
+import { local_function_path_json } from "./local_function_path_json.mjs";
+import { file_exists } from "./file_exists.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_add } from "./list_add.mjs";
+import { json_format_to } from "./json_format_to.mjs";
+import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function chapter_passage_write(chapter_code, fn, passage) {
   "Save one passage into a chapter's store, replacing whatever passage covered the same verses and leaving every other passage of the chapter exactly as it was.";
   "$plain chapter_code";
