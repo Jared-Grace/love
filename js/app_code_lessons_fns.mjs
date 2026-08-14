@@ -92,6 +92,9 @@ import { app_code_lesson_expression_swapping_order } from "./app_code_lesson_exp
 import { app_code_lesson_expression_swapping_equal } from "./app_code_lesson_expression_swapping_equal.mjs";
 import { app_code_lesson_expression_comparison_and } from "./app_code_lesson_expression_comparison_and.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
+import { app_code_lesson_expression_not_twice } from "./app_code_lesson_expression_not_twice.mjs";
+import { app_code_lesson_expression_not_comparison } from "./app_code_lesson_expression_not_comparison.mjs";
+import { app_code_lesson_expression_not_equal_same } from "./app_code_lesson_expression_not_equal_same.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   let fns = [
@@ -189,6 +192,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
     app_code_lesson_expression_which_part_first,
+    app_code_lesson_expression_not_twice,
+    app_code_lesson_expression_not_comparison,
+    app_code_lesson_expression_not_equal_same,
   ];
   return fns;
 }
