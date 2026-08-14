@@ -52,13 +52,13 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["0"],
-          right: ["1"],
-          original: "0 > 1",
+          right: ["0", "0"],
+          original: "0 > 0 0",
         },
         {
           left: ["0"],
-          right: ["0", "0"],
-          original: "0 > 0 0",
+          right: ["1"],
+          original: "0 > 1",
         },
       ],
       [
@@ -78,40 +78,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-      ],
-      [
-        {
-          left: ["b"],
           right: ["0"],
           original: "b > 0",
         },
@@ -129,13 +95,13 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
+          right: ["1"],
+          original: "b > 1",
         },
         {
           left: ["b"],
-          right: ["1"],
-          original: "b > 1",
+          right: ["b", "b"],
+          original: "b > b b",
         },
         {
           left: ["b"],
@@ -163,8 +129,8 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["b"],
-          right: ["1"],
-          original: "b > 1",
+          right: ["0"],
+          original: "b > 0",
         },
         {
           left: ["b"],
@@ -173,8 +139,42 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
           right: ["0"],
           original: "b > 0",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
         },
       ],
     ],
@@ -186,9 +186,65 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b > 0",
         },
         {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
+        },
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+      ],
+      [
+        {
           left: ["b"],
           right: ["1"],
           original: "b > 1",
+        },
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
         },
         {
           left: ["g"],
@@ -212,6 +268,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["b"],
           original: "g > b",
         },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
+        },
       ],
       [
         {
@@ -220,45 +281,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b > 0",
         },
         {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["g"],
-          right: ["b", "g"],
-          original: "g > b g",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-      ],
-      [
-        {
-          left: ["g"],
-          right: ["b", "g"],
-          original: "g > b g",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-      ],
-      [
-        {
-          left: ["g"],
-          right: ["b", "g"],
-          original: "g > b g",
-        },
-        {
           left: ["g"],
           right: ["b"],
           original: "g > b",
@@ -269,31 +291,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b > 1",
         },
         {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-      ],
-      [
-        {
           left: ["g"],
           right: ["b", "g"],
           original: "g > b g",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
         },
       ],
     ],
@@ -329,32 +329,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Boolean Literal": [
-      [
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-      [
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-    ],
     "Two Different Grow Same": [
       [
         {
@@ -368,6 +342,32 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["e", "b"],
           right: ["c", "e", "b", "c"],
           original: "e b > c e b c",
+        },
+      ],
+    ],
+    "Boolean Literal": [
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
         },
       ],
     ],
@@ -532,29 +532,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Replace Left Same": [
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-    ],
     "Right Change": [
       [
         {
@@ -575,6 +552,29 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["a", "b"],
           right: ["a", "c"],
           original: "a b > a c",
+        },
+      ],
+    ],
+    "Replace Left Same": [
+      [
+        {
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
         },
       ],
     ],
@@ -731,14 +731,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["b"],
-          right: ["d", "e"],
-          original: "b > d e",
-        },
-        {
           left: ["a"],
           right: ["b", "c"],
           original: "a > b c",
+        },
+        {
+          left: ["b"],
+          right: ["d", "e"],
+          original: "b > d e",
         },
       ],
       [
@@ -769,26 +769,26 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
-        },
-        {
           left: ["b", "c"],
           right: ["a"],
           original: "b c > a",
+        },
+        {
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
-        },
-        {
           left: ["d", "e"],
           right: ["b"],
           original: "d e > b",
+        },
+        {
+          left: ["b", "c"],
+          right: ["a"],
+          original: "b c > a",
         },
       ],
     ],
@@ -833,6 +833,23 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Swap 3": [
       [
         {
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
+        },
+        {
+          left: ["a", "d"],
+          right: ["d", "a"],
+          original: "a d > d a",
+        },
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+          original: "a c > c a",
+        },
+      ],
+      [
+        {
           left: ["a", "d"],
           right: ["d", "a"],
           original: "a d > d a",
@@ -855,37 +872,37 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "a c > c a",
         },
         {
-          left: ["a", "d"],
-          right: ["d", "a"],
-          original: "a d > d a",
-        },
-        {
           left: ["a", "b"],
           right: ["b", "a"],
           original: "a b > b a",
         },
-      ],
-      [
         {
           left: ["a", "d"],
           right: ["d", "a"],
           original: "a d > d a",
-        },
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-          original: "a c > c a",
-        },
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
         },
       ],
     ],
     "Binary Counting Prepare 2": [
       [
         {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+      ],
+      [
+        {
           left: ["1"],
           right: ["1", "1"],
           original: "1 > 1 1",
@@ -903,36 +920,19 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
-        },
-        {
           left: ["0", "a"],
           right: ["1"],
           original: "0 a > 1",
         },
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
           left: ["1"],
           right: ["1", "1"],
           original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
         },
       ],
     ],
@@ -1056,6 +1056,56 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
+    "Replace 2": [
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
+        },
+      ],
+    ],
     Swap: [
       [
         {
@@ -1086,56 +1136,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Replace 2": [
-      [
-        {
-          left: ["c"],
-          right: ["d"],
-          original: "c > d",
-        },
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["c"],
-          right: ["d"],
-          original: "c > d",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["c"],
-          right: ["d"],
-          original: "c > d",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["c"],
-          right: ["d"],
-          original: "c > d",
-        },
-      ],
-    ],
     "Replace Flow": [
       [
         {
@@ -1151,14 +1151,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
           left: ["b"],
           right: ["c"],
           original: "b > c",
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
         },
       ],
       [
@@ -1219,6 +1219,11 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Add One": [
       [
         {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
           left: ["0", "a"],
           right: ["1"],
           original: "0 a > 1",
@@ -1228,10 +1233,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["a", "0"],
           original: "1 a > a 0",
         },
+      ],
+      [
         {
           left: ["c"],
           right: ["a", "c"],
           original: "c > a c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
         },
       ],
       [
@@ -1241,22 +1258,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "0 a > 1",
         },
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
           left: ["c"],
           right: ["a", "c"],
           original: "c > a c",
         },
-      ],
-      [
         {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
         },
+      ],
+      [
         {
           left: ["0", "a"],
           right: ["1"],
@@ -1267,45 +1279,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["a", "c"],
           original: "c > a c",
         },
-      ],
-      [
         {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
         },
       ],
     ],
     "Binary Counting": [
       [
         {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
@@ -1323,11 +1306,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
           left: ["b", "a"],
           right: ["b", "1"],
           original: "b a > b 1",
@@ -1336,10 +1314,20 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["c"],
           right: ["a", "c"],
           original: "c > a c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
         },
       ],
       [
         {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
@@ -1349,71 +1337,88 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["b", "1"],
           original: "b a > b 1",
         },
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
+      ],
+      [
         {
           left: ["0", "a"],
           right: ["1"],
           original: "0 a > 1",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
         },
       ],
     ],
     "Statements Simple": [
       [
         {
+          left: ["ex"],
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
           left: ["sm"],
           right: [";"],
           original: "sm > ;",
         },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
       ],
       [
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
-        },
-      ],
-      [
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
         {
           left: ["ex"],
           right: ["update", "(", ")"],
           original: "ex > update ( )",
         },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+          original: "sm > return ;",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
       ],
       [
+        {
+          left: ["ex"],
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
+        },
         {
           left: ["sm"],
           right: ["return", "ex", ";"],
@@ -1421,23 +1426,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
-        {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
     ],
     "Statements Block": [
       [
-        {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
-        },
         {
           left: ["bs"],
           right: ["{", "}"],
@@ -1445,16 +1440,16 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["sm"],
-          right: ["bs"],
-          original: "sm > bs",
-        },
-      ],
-      [
-        {
-          left: ["sm"],
           right: [";"],
           original: "sm > ;",
         },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+      ],
+      [
         {
           left: ["smg"],
           right: ["sm"],
@@ -1465,40 +1460,35 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["{", "smg", "}"],
           original: "bs > { smg }",
         },
+        {
+          left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
+        },
       ],
       [
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
         {
           left: ["sm"],
           right: ["ex", ";"],
           original: "sm > ex ;",
         },
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
           left: ["ex"],
           right: ["update", "(", ")"],
           original: "ex > update ( )",
         },
       ],
       [
-        {
-          left: ["ex"],
-          right: ["update", "(", ")"],
-          original: "ex > update ( )",
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
-        },
         {
           left: ["smg"],
           right: ["smg", "sm"],
@@ -1510,33 +1500,43 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "smg > sm",
         },
         {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
-        },
-        {
           left: ["sm"],
           right: ["ex", ";"],
           original: "sm > ex ;",
+        },
+        {
+          left: ["ex"],
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
         },
         {
           left: ["bs"],
           right: ["{", "smg", "}"],
           original: "bs > { smg }",
         },
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
+        },
       ],
     ],
     "Statements While": [
       [
         {
-          left: ["ex"],
-          right: ["x", "<", "3"],
-          original: "ex > x < 3",
-        },
-        {
           left: ["ws"],
           right: ["while", "(", "ex", ")", "sm"],
           original: "ws > while ( ex ) sm",
+        },
+        {
+          left: ["ex"],
+          right: ["x", "<", "3"],
+          original: "ex > x < 3",
         },
         {
           left: ["ex"],
@@ -1551,26 +1551,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["sm"],
-          right: ["bs"],
-          original: "sm > bs",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["ex"],
-          right: ["y", "=", "y", "-", "1"],
-          original: "ex > y = y - 1",
-        },
-        {
           left: ["ex"],
           right: ["y", ">", "0"],
           original: "ex > y > 0",
@@ -1581,33 +1561,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ws > while ( ex ) sm",
         },
         {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-      ],
-      [
-        {
-          left: ["ws"],
-          right: ["while", "(", "ex", ")", "sm"],
-          original: "ws > while ( ex ) sm",
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["smg"],
-          right: ["smg", "sm"],
-          original: "smg > smg sm",
-        },
-        {
-          left: ["ex"],
-          right: ["!", "found", "(", "door", ")"],
-          original: "ex > ! found ( door )",
-        },
-        {
           left: ["sm"],
           right: ["bs"],
           original: "sm > bs",
@@ -1617,12 +1570,59 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["sm"],
           original: "smg > sm",
         },
-      ],
-      [
+        {
+          left: ["ex"],
+          right: ["y", "=", "y", "-", "1"],
+          original: "ex > y = y - 1",
+        },
         {
           left: ["sm"],
           right: ["ex", ";"],
           original: "sm > ex ;",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+      ],
+      [
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["ex"],
+          right: ["!", "found", "(", "door", ")"],
+          original: "ex > ! found ( door )",
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
+        {
+          left: ["ws"],
+          right: ["while", "(", "ex", ")", "sm"],
+          original: "ws > while ( ex ) sm",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["seek", "(", ")"],
+          original: "ex > seek ( )",
         },
         {
           left: ["ex"],
@@ -1630,9 +1630,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > ask ( )",
         },
         {
-          left: ["ex"],
-          right: ["seek", "(", ")"],
-          original: "ex > seek ( )",
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
     ],
@@ -1640,8 +1640,8 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["ex"],
-          right: ["i", "<", "12"],
-          original: "ex > i < 12",
+          right: ["i", "=", "0"],
+          original: "ex > i = 0",
         },
         {
           left: ["fs"],
@@ -1655,8 +1655,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["ex"],
-          right: ["i", "=", "0"],
-          original: "ex > i = 0",
+          right: ["i", "<", "12"],
+          original: "ex > i < 12",
         },
       ],
       [
@@ -1666,17 +1666,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > ex ;",
         },
         {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-        {
           left: ["ex"],
           right: ["log", "(", "apostle", "[", "i", "]", ")"],
           original: "ex > log ( apostle [ i ] )",
         },
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
       ],
       [
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+          original: "ex > i = 0",
+        },
         {
           left: ["ex"],
           right: ["i", "=", "i", "+", "1"],
@@ -1686,11 +1691,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["fs"],
           right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
           original: "fs > for ( ex ; ex ; ex ) sm",
-        },
-        {
-          left: ["ex"],
-          right: ["i", "=", "0"],
-          original: "ex > i = 0",
         },
         {
           left: ["ex"],
@@ -1700,9 +1700,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
+        },
+        {
+          left: ["ex"],
+          right: ["copy", "[", "i", "]", "=", "list", "[", "i", "]"],
+          original: "ex > copy [ i ] = list [ i ]",
         },
         {
           left: ["bs"],
@@ -1710,19 +1715,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "bs > { smg }",
         },
         {
-          left: ["ex"],
-          right: ["log", "(", "i", ")"],
-          original: "ex > log ( i )",
-        },
-        {
           left: ["smg"],
           right: ["sm"],
           original: "smg > sm",
         },
         {
-          left: ["smg"],
-          right: ["smg", "sm"],
-          original: "smg > smg sm",
+          left: ["ex"],
+          right: ["log", "(", "i", ")"],
+          original: "ex > log ( i )",
         },
         {
           left: ["sm"],
@@ -1730,83 +1730,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > bs",
         },
         {
-          left: ["ex"],
-          right: ["copy", "[", "i", "]", "=", "list", "[", "i", "]"],
-          original: "ex > copy [ i ] = list [ i ]",
-        },
-      ],
-    ],
-    Replace: [
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-    ],
-    "Swap Change Left": [
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
     ],
@@ -1847,6 +1773,43 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
+    "Swap Change Left": [
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+    ],
     "Binary Counting Prepare 1": [
       [
         {
@@ -1862,30 +1825,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
-        },
-      ],
-      [
-        {
           left: ["1"],
           right: ["1", "1"],
           original: "1 > 1 1",
@@ -1906,36 +1845,36 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
         },
       ],
     ],
     "Expand Collapse": [
       [
         {
-          left: ["b", "b"],
-          right: ["c"],
-          original: "b b > c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "b"],
-          original: "a > b b",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["c"],
-          original: "b b > c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "b"],
-          original: "a > b b",
-        },
-      ],
-      [
-        {
           left: ["a"],
           right: ["b", "b"],
           original: "a > b b",
@@ -1982,78 +1921,28 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b b > c",
         },
       ],
-    ],
-    "Grow Left Pair Change Right": [
-      [
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
-        },
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-      ],
       [
         {
           left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
+          right: ["c"],
+          original: "b b > c",
         },
         {
           left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
+          right: ["b", "b"],
+          original: "a > b b",
         },
       ],
       [
         {
           left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
+          right: ["b", "b"],
+          original: "a > b b",
         },
         {
           left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
+          right: ["c"],
+          original: "b b > c",
         },
       ],
     ],
@@ -2072,14 +1961,26 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["b", "a"],
+          right: ["a"],
+          original: "b a > a",
+        },
+        {
           left: ["b", "c"],
           right: ["b", "b"],
           original: "b c > b b",
         },
+      ],
+      [
         {
           left: ["b", "a"],
           right: ["a"],
           original: "b a > a",
+        },
+        {
+          left: ["b", "c"],
+          right: ["b", "b"],
+          original: "b c > b b",
         },
       ],
       [
@@ -2118,16 +2019,78 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b a > a",
         },
       ],
+    ],
+    "Grow Left Pair Change Right": [
       [
         {
-          left: ["b", "c"],
-          right: ["b", "b"],
-          original: "b c > b b",
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
         },
         {
-          left: ["b", "a"],
-          right: ["a"],
-          original: "b a > a",
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
         },
       ],
     ],
@@ -2146,18 +2109,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
           left: ["="],
           right: ["1", "=", "1"],
           original: "= > 1 = 1",
@@ -2202,6 +2153,18 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["="],
           right: ["1", "=", "1"],
           original: "= > 1 = 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
         },
       ],
     ],
@@ -2220,14 +2183,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
           left: ["d", "b"],
           right: ["b", "d"],
           original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
         },
       ],
       [
@@ -2282,16 +2245,6 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Exponent Part": [
       [
         {
-          left: ["se"],
-          right: ["eE", "ep"],
-          original: "se > eE ep",
-        },
-        {
-          left: ["ep"],
-          right: ["ig"],
-          original: "ep > ig",
-        },
-        {
           left: ["sn"],
           right: ["ig", "se"],
           original: "sn > ig se",
@@ -2301,6 +2254,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["e"],
           original: "eE > e",
         },
+        {
+          left: ["se"],
+          right: ["eE", "ep"],
+          original: "se > eE ep",
+        },
+        {
+          left: ["ep"],
+          right: ["ig"],
+          original: "ep > ig",
+        },
       ],
       [
         {
@@ -2309,9 +2272,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ig > di",
         },
         {
-          left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
         },
         {
           left: ["pi"],
@@ -2326,22 +2289,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pi > 2",
         },
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
           left: ["pi"],
           right: ["5"],
           original: "pi > 5",
         },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
       ],
       [
-        {
-          left: ["sn"],
-          right: ["ig", "se"],
-          original: "sn > ig se",
-        },
         {
           left: ["se"],
           right: ["eE", "ep"],
@@ -2357,12 +2315,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["+", "ig"],
           original: "ep > + ig",
         },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
       ],
       [
         {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["pi"],
@@ -2370,9 +2333,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pi > 3",
         },
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
         },
         {
           left: ["ig"],
@@ -2387,9 +2350,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "eE > E",
         },
         {
-          left: ["ep"],
-          right: ["-", "ig"],
-          original: "ep > - ig",
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
         },
         {
           left: ["se"],
@@ -2397,16 +2360,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "se > eE ep",
         },
         {
-          left: ["sn"],
-          right: ["ig", "se"],
-          original: "sn > ig se",
+          left: ["ep"],
+          right: ["-", "ig"],
+          original: "ep > - ig",
         },
       ],
       [
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
         },
         {
           left: ["pi"],
@@ -2419,23 +2382,60 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > pi",
         },
         {
-          left: ["pi"],
-          right: ["6"],
-          original: "pi > 6",
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+      ],
+    ],
+    Replace: [
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
         },
       ],
     ],
     "Statements Variable": [
       [
         {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-        {
           left: ["vk"],
           right: ["let"],
           original: "vk > let",
+        },
+        {
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
         {
           left: ["vd"],
@@ -2448,26 +2448,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > i",
         },
         {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
       ],
       [
-        {
-          left: ["vk"],
-          right: ["let"],
-          original: "vk > let",
-        },
         {
           left: ["ex"],
           right: ["0"],
           original: "ex > 0",
         },
         {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
+        },
+        {
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
           left: ["id"],
@@ -2475,14 +2475,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > j",
         },
         {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
+          left: ["vk"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
       ],
       [
@@ -2492,14 +2492,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "vs > vk vdg ;",
         },
         {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
-        },
-        {
-          left: ["vk"],
-          right: ["var"],
-          original: "vk > var",
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
         {
           left: ["vdg"],
@@ -2512,26 +2507,36 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > x",
         },
         {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
         },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-      ],
-      [
         {
           left: ["vk"],
           right: ["var"],
           original: "vk > var",
         },
         {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
+        },
+      ],
+      [
+        {
           left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
+          right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["vk"],
+          right: ["var"],
+          original: "vk > var",
+        },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
         {
           left: ["vs"],
@@ -2539,43 +2544,38 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "vs > vk vdg ;",
         },
         {
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
+        },
+        {
           left: ["id"],
           right: ["a"],
           original: "id > a",
         },
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
       ],
       [
-        {
-          left: ["id"],
-          right: ["c"],
-          original: "id > c",
-        },
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
         {
           left: ["id"],
           right: ["b"],
           original: "id > b",
         },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
+        },
+        {
+          left: ["id"],
+          right: ["c"],
+          original: "id > c",
+        },
       ],
       [
         {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
         {
           left: ["vk"],
@@ -2583,14 +2583,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "vk > const",
         },
         {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
         },
         {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
         {
           left: ["ex"],
@@ -2598,9 +2598,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > 2",
         },
         {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
       ],
       [
@@ -2608,6 +2608,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["vdg"],
           right: ["vd"],
           original: "vdg > vd",
+        },
+        {
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
         {
           left: ["id"],
@@ -2619,15 +2624,15 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["1"],
           original: "ex > 1",
         },
-        {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
-        },
       ],
     ],
     "Statements If": [
       [
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
+        },
         {
           left: ["ex"],
           right: ["y", "===", "null"],
@@ -2638,17 +2643,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["return", ";"],
           original: "sm > return ;",
         },
-        {
-          left: ["is"],
-          right: ["if", "(", "ex", ")", "sm"],
-          original: "is > if ( ex ) sm",
-        },
       ],
       [
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
         },
         {
           left: ["ex"],
@@ -2656,14 +2656,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > x < 0",
         },
         {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
           left: ["is"],
           right: ["if", "(", "ex", ")", "sm"],
           original: "is > if ( ex ) sm",
-        },
-        {
-          left: ["sm"],
-          right: ["bs"],
-          original: "sm > bs",
         },
       ],
       [
@@ -2673,14 +2673,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > ex ;",
         },
         {
-          left: ["ex"],
-          right: ["x", "=", "1"],
-          original: "ex > x = 1",
-        },
-        {
           left: ["smg"],
           right: ["sm"],
           original: "smg > sm",
+        },
+        {
+          left: ["ex"],
+          right: ["x", "=", "1"],
+          original: "ex > x = 1",
         },
       ],
       [
@@ -2708,18 +2708,8 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
-          left: ["ex"],
-          right: ["log", "(", '"reset"', ")"],
-          original: 'ex > log ( "reset" )',
-        },
-        {
-          left: ["ex"],
-          right: ["y", "=", "0"],
-          original: "ex > y = 0",
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
         },
         {
           left: ["sm"],
@@ -2728,15 +2718,25 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["smg"],
-          right: ["smg", "sm"],
-          original: "smg > smg sm",
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["ex"],
+          right: ["y", "=", "0"],
+          original: "ex > y = 0",
+        },
+        {
+          left: ["ex"],
+          right: ["log", "(", '"reset"', ")"],
+          original: 'ex > log ( "reset" )',
         },
       ],
       [
         {
-          left: ["sm"],
-          right: ["bs"],
-          original: "sm > bs",
+          left: ["ex"],
+          right: ["x", ">", "0"],
+          original: "ex > x > 0",
         },
         {
           left: ["is"],
@@ -2744,17 +2744,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "is > if ( ex ) sm else sm",
         },
         {
-          left: ["ex"],
-          right: ["x", ">", "0"],
-          original: "ex > x > 0",
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
         },
       ],
       [
-        {
-          left: ["ex"],
-          right: ["positive", "=", "false"],
-          original: "ex > positive = false",
-        },
         {
           left: ["sm"],
           right: ["ex", ";"],
@@ -2765,11 +2760,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["positive", "=", "true"],
           original: "ex > positive = true",
         },
+        {
+          left: ["ex"],
+          right: ["positive", "=", "false"],
+          original: "ex > positive = false",
+        },
       ],
     ],
     "Unary To Binary Equations Preparation": [
       [
         {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
           left: ["d"],
           right: ["d", "d"],
           original: "d > d d",
@@ -2779,10 +2784,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["d", "f", "="],
           original: "= d > d f =",
         },
+      ],
+      [
         {
           left: ["d", "d"],
           right: ["d", "e", "d"],
           original: "d d > d e d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
         },
       ],
       [
@@ -2804,70 +2821,53 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
         },
         {
           left: ["d"],
           right: ["d", "d"],
           original: "d > d d",
-        },
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
-        },
-      ],
-      [
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
         },
       ],
       [
@@ -2897,6 +2897,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["d", "d"],
           right: ["d", "e", "d"],
           original: "d d > d e d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
         },
         {
           left: ["d"],
@@ -2907,25 +2917,20 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["e", "d"],
           right: ["e", "="],
           original: "e d > e =",
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
         },
       ],
     ],
     "Expressions Unary": [
       [
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
         },
         {
           left: ["pe"],
@@ -2934,30 +2939,25 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
         {
-          left: ["uo"],
-          right: ["-"],
-          original: "uo > -",
-        },
-        {
           left: ["in"],
           right: ["2"],
           original: "in > 2",
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+          original: "uo > -",
         },
         {
           left: ["li"],
@@ -2972,11 +2972,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
           left: ["bo"],
           right: ["true"],
           original: "bo > true",
@@ -2986,17 +2981,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["!"],
           original: "uo > !",
         },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
       ],
       [
         {
           left: ["uo"],
           right: ["+"],
           original: "uo > +",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
         },
         {
           left: ["nu"],
@@ -3007,6 +3002,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
       ],
       [
@@ -3021,26 +3021,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > null",
         },
         {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
         },
       ],
       [
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["uo"],
@@ -3057,23 +3052,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["mae"],
           original: "ce > mae",
         },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
         {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
         },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
+      ],
+      [
         {
           left: ["uo"],
           right: ["-"],
@@ -3085,14 +3070,29 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
+          left: ["ex"],
+          right: ["ue"],
+          original: "ex > ue",
+        },
+        {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
         },
         {
-          left: ["ex"],
-          right: ["ue"],
-          original: "ex > ue",
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
@@ -3127,11 +3127,16 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["3"],
-          original: "di > 3",
+          right: ["6"],
+          original: "di > 6",
         },
       ],
       [
+        {
+          left: ["di"],
+          right: ["2"],
+          original: "di > 2",
+        },
         {
           left: ["ig"],
           right: ["di"],
@@ -3139,92 +3144,87 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["7"],
-          original: "di > 7",
+          right: ["4"],
+          original: "di > 4",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+          original: "di > 3",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["9"],
+          original: "di > 9",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["di"],
+          right: ["8"],
+          original: "di > 8",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
         },
         {
           left: ["di"],
           right: ["2"],
           original: "di > 2",
         },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
         {
           left: ["ig"],
           right: ["di"],
           original: "ig > di",
         },
-        {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
+      ],
+      [
         {
           left: ["di"],
           right: ["3"],
           original: "di > 3",
         },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["8"],
-          original: "di > 8",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["di"],
-          right: ["9"],
-          original: "di > 9",
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
         {
           left: ["di"],
           right: ["4"],
           original: "di > 4",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["8"],
-          original: "di > 8",
         },
         {
           left: ["di"],
           right: ["7"],
           original: "di > 7",
         },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
       ],
       [
         {
@@ -3234,16 +3234,21 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["6"],
-          original: "di > 6",
-        },
-        {
-          left: ["di"],
           right: ["5"],
           original: "di > 5",
         },
+        {
+          left: ["di"],
+          right: ["6"],
+          original: "di > 6",
+        },
       ],
       [
+        {
+          left: ["di"],
+          right: ["8"],
+          original: "di > 8",
+        },
         {
           left: ["ig"],
           right: ["di", "ig"],
@@ -3254,18 +3259,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
-        {
-          left: ["di"],
-          right: ["3"],
-          original: "di > 3",
-        },
       ],
       [
-        {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
         {
           left: ["di"],
           right: ["1"],
@@ -3276,32 +3271,32 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["2"],
           original: "di > 2",
         },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
       ],
       [
-        {
-          left: ["di"],
-          right: ["3"],
-          original: "di > 3",
-        },
-        {
-          left: ["di"],
-          right: ["5"],
-          original: "di > 5",
-        },
         {
           left: ["di"],
           right: ["4"],
           original: "di > 4",
         },
+        {
+          left: ["di"],
+          right: ["2"],
+          original: "di > 2",
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+          original: "di > 3",
+        },
       ],
     ],
     Integers: [
       [
-        {
-          left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
         {
           left: ["di"],
           right: ["0"],
@@ -3309,20 +3304,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["pi"],
-          right: ["8"],
-          original: "pi > 8",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["2"],
-          original: "pi > 2",
+          right: ["7"],
+          original: "pi > 7",
         },
         {
           left: ["in"],
@@ -3332,24 +3315,41 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
+          right: ["di"],
+          original: "in > di",
         },
+        {
+          left: ["pi"],
+          right: ["2"],
+          original: "pi > 2",
+        },
+      ],
+      [
         {
           left: ["di"],
           right: ["pi"],
           original: "di > pi",
         },
         {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
           left: ["pi"],
           right: ["1"],
           original: "pi > 1",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
         },
         {
           left: ["pi"],
@@ -3359,14 +3359,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
-        {
           left: ["pi"],
           right: ["7"],
           original: "pi > 7",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["di"],
@@ -3374,9 +3374,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > pi",
         },
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
         },
       ],
       [
@@ -3384,6 +3384,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["ig"],
           right: ["di"],
           original: "ig > di",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
         {
           left: ["pi"],
@@ -3395,13 +3400,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["pi", "ig"],
           original: "in > pi ig",
         },
-        {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
       ],
       [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
         {
           left: ["in"],
           right: ["pi", "ig"],
@@ -3412,24 +3417,19 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
       ],
       [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
         {
           left: ["pi"],
           right: ["9"],
           original: "pi > 9",
         },
         {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
           left: ["pi"],
           right: ["6"],
           original: "pi > 6",
@@ -3438,8 +3438,8 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
+          right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["in"],
@@ -3448,20 +3448,20 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          right: ["di", "ig"],
+          original: "ig > di ig",
         },
       ],
       [
         {
-          left: ["pi"],
-          right: ["6"],
-          original: "pi > 6",
-        },
-        {
           left: ["di"],
           right: ["pi"],
           original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
         },
         {
           left: ["pi"],
@@ -3471,14 +3471,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
           left: ["pi"],
           right: ["7"],
           original: "pi > 7",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["pi"],
@@ -3490,14 +3490,14 @@ export function app_replace_rule_sets_fns_rules_used() {
     Decimals: [
       [
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
           left: ["in"],
           right: ["di"],
           original: "in > di",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
         {
           left: ["de"],
@@ -3506,6 +3506,11 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
       [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
         {
           left: ["de"],
           right: [".", "ig"],
@@ -3521,11 +3526,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["5"],
           original: "pi > 5",
         },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
       ],
       [
         {
@@ -3534,9 +3534,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pi > 2",
         },
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
         },
         {
           left: ["de"],
@@ -3544,45 +3544,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "de > in .",
         },
         {
-          left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["de"],
-          right: ["in", ".", "ig"],
-          original: "de > in . ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
-        },
-        {
-          left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-        {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
-        },
-        {
           left: ["di"],
           right: ["pi"],
           original: "di > pi",
@@ -3590,14 +3551,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
         {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
         },
         {
           left: ["de"],
@@ -3607,19 +3568,58 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
         },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+      ],
+      [
         {
           left: ["ig"],
           right: ["di"],
           original: "ig > di",
         },
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          left: ["de"],
+          right: ["in", ".", "ig"],
+          original: "de > in . ig",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
       ],
       [
@@ -3642,11 +3642,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["pi"],
-          right: ["5"],
-          original: "pi > 5",
-        },
-        {
-          left: ["pi"],
           right: ["8"],
           original: "pi > 8",
         },
@@ -3655,17 +3650,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["pi"],
           original: "di > pi",
         },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
       ],
       [
         {
           left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
+          right: ["6"],
+          original: "pi > 6",
         },
         {
           left: ["pi"],
-          right: ["6"],
-          original: "pi > 6",
+          right: ["7"],
+          original: "pi > 7",
         },
         {
           left: ["di"],
@@ -3683,13 +3683,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["h"],
-          original: "idf > h",
-        },
-        {
-          left: ["idf"],
           right: ["_"],
           original: "idf > _",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
       ],
       [
@@ -3714,19 +3714,29 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["ida"],
           right: ["di"],
           original: "ida > di",
-        },
-        {
-          left: ["idf"],
-          right: ["$"],
-          original: "idf > $",
         },
         {
           left: ["di"],
           right: ["1"],
           original: "di > 1",
         },
+        {
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
       ],
       [
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+          original: "id > idf idg",
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
         {
           left: ["idg"],
           right: ["ida"],
@@ -3738,31 +3748,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > t",
         },
         {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
-        },
-        {
           left: ["di"],
           right: ["3"],
           original: "di > 3",
         },
+      ],
+      [
         {
           left: ["id"],
           right: ["idf", "idg"],
           original: "id > idf idg",
         },
-      ],
-      [
         {
           left: ["idg"],
           right: ["ida"],
           original: "idg > ida",
-        },
-        {
-          left: ["id"],
-          right: ["idf", "idg"],
-          original: "id > idf idg",
         },
         {
           left: ["idg"],
@@ -3794,6 +3794,11 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["idg"],
+          right: ["ida", "idg"],
+          original: "idg > ida idg",
+        },
+        {
           left: ["id"],
           right: ["idf", "idg"],
           original: "id > idf idg",
@@ -3803,17 +3808,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ida"],
           original: "idg > ida",
         },
-        {
-          left: ["idg"],
-          right: ["ida", "idg"],
-          original: "idg > ida idg",
-        },
       ],
       [
         {
-          left: ["idg"],
-          right: ["ida"],
-          original: "idg > ida",
+          left: ["idf"],
+          right: ["l"],
+          original: "idf > l",
         },
         {
           left: ["ida"],
@@ -3821,12 +3821,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ida > idf",
         },
         {
-          left: ["di"],
-          right: ["1"],
-          original: "di > 1",
+          left: ["idf"],
+          right: ["B"],
+          original: "idf > B",
         },
       ],
       [
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
         {
           left: ["idf"],
           right: ["A"],
@@ -3837,34 +3842,29 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["B"],
           original: "idf > B",
         },
-        {
-          left: ["idg"],
-          right: ["ida", "idg"],
-          original: "idg > ida idg",
-        },
       ],
       [
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
-        },
         {
           left: ["ida"],
           right: ["di"],
           original: "ida > di",
         },
         {
-          left: ["id"],
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
+        {
+          left: ["ida"],
           right: ["idf"],
-          original: "id > idf",
+          original: "ida > idf",
         },
       ],
       [
         {
           left: ["idf"],
-          right: ["h"],
-          original: "idf > h",
+          right: ["J"],
+          original: "idf > J",
         },
         {
           left: ["idf"],
@@ -3878,18 +3878,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["J"],
-          original: "idf > J",
+          right: ["h"],
+          original: "idf > h",
         },
       ],
     ],
     "Expressions Multiplicative": [
       [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
         {
           left: ["mue"],
           right: ["ue"],
@@ -3905,8 +3900,18 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ce"],
           original: "ue > ce",
         },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
       ],
       [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
         {
           left: ["mae"],
           right: ["pe"],
@@ -3917,17 +3922,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["li"],
           original: "pe > li",
         },
+      ],
+      [
         {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
         },
         {
           left: ["pe"],
@@ -3935,21 +3935,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
         {
           left: ["in"],
-          right: ["2"],
-          original: "in > 2",
+          right: ["1"],
+          original: "in > 1",
         },
         {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["mo"],
@@ -3957,16 +3957,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mo > /",
         },
         {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
       ],
       [
         {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["nu"],
@@ -3974,19 +3974,19 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "nu > in",
         },
         {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
         },
         {
           left: ["de"],
           right: ["3.14"],
           original: "de > 3.14",
-        },
-        {
-          left: ["mo"],
-          right: ["*"],
-          original: "mo > *",
         },
       ],
       [
@@ -3996,14 +3996,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
+        },
+        {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
         },
       ],
       [
@@ -4018,9 +4018,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mue > mue mo ue",
         },
         {
-          left: ["uo"],
-          right: ["!"],
-          original: "uo > !",
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
       ],
       [
@@ -4028,38 +4028,28 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
         },
         {
           left: ["mue"],
           right: ["ue"],
           original: "mue > ue",
         },
-      ],
-      [
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
         },
+      ],
+      [
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
         },
         {
           left: ["ce"],
@@ -4071,22 +4061,32 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["li"],
           original: "pe > li",
         },
-      ],
-      [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
         {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
         {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
+        },
+        {
+          left: ["id"],
+          right: ["list"],
+          original: "id > list",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
       ],
       [
@@ -4097,13 +4097,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
+          right: ["in"],
+          original: "nu > in",
         },
         {
           left: ["mo"],
@@ -4112,8 +4107,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["mo"],
@@ -4147,14 +4147,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["fdm"],
-          right: [")"],
-          original: "fdm > )",
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
         },
         {
           left: ["sm"],
@@ -4162,14 +4157,19 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > return ex ;",
         },
         {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
+          left: ["fdm"],
+          right: [")"],
+          original: "fdm > )",
         },
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-          original: "fd > function id ( fdm bs",
+          left: ["id"],
+          right: ["tautology"],
+          original: "id > tautology",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
         },
         {
           left: ["bs"],
@@ -4177,16 +4177,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "bs > { smg }",
         },
         {
-          left: ["id"],
-          right: ["tautology"],
-          original: "id > tautology",
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
         },
       ],
       [
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-          original: "fd > function id ( fdm bs",
+          left: ["fdm"],
+          right: ["fpg", ")"],
+          original: "fdm > fpg )",
         },
         {
           left: ["fpg"],
@@ -4194,16 +4194,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "fpg > id",
         },
         {
-          left: ["fdm"],
-          right: ["fpg", ")"],
-          original: "fdm > fpg )",
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
         },
       ],
       [
         {
           left: ["id"],
-          right: ["identity"],
-          original: "id > identity",
+          right: ["i"],
+          original: "id > i",
         },
         {
           left: ["ex"],
@@ -4212,11 +4212,16 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["id"],
-          right: ["i"],
-          original: "id > i",
+          right: ["identity"],
+          original: "id > identity",
         },
       ],
       [
+        {
+          left: ["id"],
+          right: ["f"],
+          original: "id > f",
+        },
         {
           left: ["id"],
           right: ["invoke"],
@@ -4227,17 +4232,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["f", "(", ")"],
           original: "ex > f ( )",
         },
-        {
-          left: ["id"],
-          right: ["f"],
-          original: "id > f",
-        },
       ],
       [
         {
-          left: ["fdm"],
-          right: ["fpg", ")"],
-          original: "fdm > fpg )",
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
         },
         {
           left: ["fd"],
@@ -4245,16 +4245,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "fd > function id ( fdm bs",
         },
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
+          left: ["fdm"],
+          right: ["fpg", ")"],
+          original: "fdm > fpg )",
         },
       ],
       [
         {
-          left: ["fpg"],
-          right: ["fpg", ",", "id"],
-          original: "fpg > fpg , id",
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
         },
         {
           left: ["id"],
@@ -4262,9 +4262,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > y",
         },
         {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
+          left: ["fpg"],
+          right: ["fpg", ",", "id"],
+          original: "fpg > fpg , id",
         },
         {
           left: ["fpg"],
@@ -4273,11 +4273,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
       [
-        {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
-        },
         {
           left: ["sm"],
           right: ["return", "ex", ";"],
@@ -4293,12 +4288,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["sm"],
           original: "smg > sm",
         },
+        {
+          left: ["id"],
+          right: ["add"],
+          original: "id > add",
+        },
       ],
       [
         {
           left: ["sm"],
-          right: ["vs"],
-          original: "sm > vs",
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
         {
           left: ["smg"],
@@ -4306,14 +4306,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "smg > sm",
         },
         {
+          left: ["sm"],
+          right: ["vs"],
+          original: "sm > vs",
+        },
+        {
           left: ["smg"],
           right: ["smg", "sm"],
           original: "smg > smg sm",
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
         },
       ],
       [
@@ -4323,9 +4323,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "vdg > vd",
         },
         {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
+          left: ["vk"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
           left: ["vd"],
@@ -4333,22 +4333,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "vd > id = ex",
         },
         {
-          left: ["vk"],
-          right: ["let"],
-          original: "vk > let",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
       ],
       [
-        {
-          left: ["id"],
-          right: ["sum"],
-          original: "id > sum",
-        },
-        {
-          left: ["id"],
-          right: ["average"],
-          original: "id > average",
-        },
         {
           left: ["ex"],
           right: ["add", "(", "x", ",", "y", ")"],
@@ -4359,10 +4349,40 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["sum", "/", "2"],
           original: "ex > sum / 2",
         },
+        {
+          left: ["id"],
+          right: ["sum"],
+          original: "id > sum",
+        },
+        {
+          left: ["id"],
+          right: ["average"],
+          original: "id > average",
+        },
       ],
     ],
     "Scientific Notation Numbers": [
       [
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ep"],
+          right: ["ig"],
+          original: "ep > ig",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
+        },
         {
           left: ["se"],
           right: ["eE", "ep"],
@@ -4373,55 +4393,30 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
-        {
-          left: ["ep"],
-          right: ["ig"],
-          original: "ep > ig",
-        },
-        {
-          left: ["de"],
-          right: ["in", "."],
-          original: "de > in .",
-        },
-        {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
-        },
-        {
-          left: ["eE"],
-          right: ["e"],
-          original: "eE > e",
-        },
       ],
       [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
         {
           left: ["in"],
           right: ["di"],
           original: "in > di",
         },
         {
-          left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-        {
           left: ["di"],
           right: ["0"],
           original: "di > 0",
         },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
       ],
       [
-        {
-          left: ["se"],
-          right: ["eE", "ep"],
-          original: "se > eE ep",
-        },
         {
           left: ["de"],
           right: ["in", "."],
@@ -4442,18 +4437,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["de", "se"],
           original: "sn > de se",
         },
+        {
+          left: ["se"],
+          right: ["eE", "ep"],
+          original: "se > eE ep",
+        },
       ],
       [
-        {
-          left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
         {
           left: ["ig"],
           right: ["di"],
@@ -4468,6 +4458,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["pi"],
           right: ["2"],
           original: "pi > 2",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
         },
       ],
       [
@@ -4489,14 +4489,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["se"],
-          right: ["eE", "ep"],
-          original: "se > eE ep",
-        },
-        {
-          left: ["ep"],
-          right: ["-", "ig"],
-          original: "ep > - ig",
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["sn"],
@@ -4504,9 +4499,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sn > de se",
         },
         {
-          left: ["de"],
-          right: [".", "ig"],
-          original: "de > . ig",
+          left: ["se"],
+          right: ["eE", "ep"],
+          original: "se > eE ep",
         },
         {
           left: ["eE"],
@@ -4514,92 +4509,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "eE > e",
         },
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-        {
-          left: ["pi"],
-          right: ["5"],
-          original: "pi > 5",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["8"],
-          original: "pi > 8",
-        },
-      ],
-      [
-        {
-          left: ["se"],
-          right: ["eE", "ep"],
-          original: "se > eE ep",
+          left: ["de"],
+          right: [".", "ig"],
+          original: "de > . ig",
         },
         {
           left: ["ep"],
-          right: ["ig"],
-          original: "ep > ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["de"],
-          right: ["in", ".", "ig"],
-          original: "de > in . ig",
-        },
-        {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
-        },
-        {
-          left: ["eE"],
-          right: ["E"],
-          original: "eE > E",
+          right: ["-", "ig"],
+          original: "ep > - ig",
         },
       ],
       [
         {
           left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
+          right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          right: ["di", "ig"],
+          original: "ig > di ig",
         },
         {
           left: ["di"],
@@ -4610,14 +4539,75 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["pi"],
+          right: ["8"],
+          original: "pi > 8",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
           right: ["1"],
           original: "pi > 1",
         },
         {
           left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
+          right: ["5"],
+          original: "pi > 5",
         },
+      ],
+      [
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["ep"],
+          right: ["ig"],
+          original: "ep > ig",
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+          original: "de > in . ig",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ep"],
+          original: "se > eE ep",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+      ],
+      [
         {
           left: ["di"],
           right: ["pi"],
@@ -4627,6 +4617,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["in"],
           right: ["di"],
           original: "in > di",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
         },
       ],
       [
@@ -4641,15 +4641,20 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > pi",
         },
         {
-          left: ["eE"],
-          right: ["E"],
-          original: "eE > E",
+          left: ["pi"],
+          right: ["9"],
+          original: "pi > 9",
         },
       ],
     ],
     "Strings Simple": [
       [
         {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+        {
           left: ["stg"],
           right: ["ida"],
           original: "stg > ida",
@@ -4659,27 +4664,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ['"', "stg", '"'],
           original: 'st > " stg "',
         },
-        {
-          left: ["di"],
-          right: ["3"],
-          original: "di > 3",
-        },
       ],
       [
+        {
+          left: ["idf"],
+          right: ["_"],
+          original: "idf > _",
+        },
         {
           left: ["ida"],
           right: ["idf"],
           original: "ida > idf",
         },
         {
-          left: ["idf"],
-          right: ["A"],
-          original: "idf > A",
-        },
-        {
-          left: ["idf"],
-          right: ["_"],
-          original: "idf > _",
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
       ],
       [
@@ -4687,23 +4687,23 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["st"],
           right: ['"', "stg", '"'],
           original: 'st > " stg "',
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+          original: "stg > ida",
         },
         {
           left: ["stg"],
           right: ["ida", "stg"],
           original: "stg > ida stg",
         },
-        {
-          left: ["stg"],
-          right: ["ida"],
-          original: "stg > ida",
-        },
       ],
       [
         {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
         },
         {
           left: ["di"],
@@ -4711,9 +4711,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > 1",
         },
         {
-          left: ["idf"],
-          right: ["$"],
-          original: "idf > $",
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
         },
         {
           left: ["ida"],
@@ -4724,6 +4724,11 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["ida"],
           right: ["idf"],
           original: "ida > idf",
         },
@@ -4731,11 +4736,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["di"],
           right: ["3"],
           original: "di > 3",
-        },
-        {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
         },
         {
           left: ["idf"],
@@ -4763,13 +4763,8 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["idf"],
-          right: ["l"],
-          original: "idf > l",
-        },
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
+          right: ["u"],
+          original: "idf > u",
         },
         {
           left: ["idf"],
@@ -4778,8 +4773,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["u"],
-          original: "idf > u",
+          right: ["l"],
+          original: "idf > l",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
         },
       ],
       [
@@ -4789,21 +4789,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "stg > ida",
         },
         {
-          left: ["stg"],
-          right: ["ida", "stg"],
-          original: "stg > ida stg",
-        },
-        {
           left: ["st"],
           right: ['"', "stg", '"'],
           original: 'st > " stg "',
         },
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+          original: "stg > ida stg",
+        },
       ],
       [
         {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
+          left: ["stg"],
+          right: ["ida"],
+          original: "stg > ida",
         },
         {
           left: ["ida"],
@@ -4811,9 +4811,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ida > di",
         },
         {
-          left: ["st"],
-          right: ['"', "stg", '"'],
-          original: 'st > " stg "',
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
         },
       ],
       [
@@ -4823,43 +4823,43 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > B",
         },
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
           left: ["idf"],
           right: ["A"],
           original: "idf > A",
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
         },
       ],
       [
         {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
-        },
-        {
-          left: ["idf"],
-          right: ["A"],
-          original: "idf > A",
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
         {
           left: ["ida"],
           right: ["idf"],
           original: "ida > idf",
         },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
       ],
       [
         {
           left: ["idf"],
-          right: ["J"],
-          original: "idf > J",
+          right: ["$"],
+          original: "idf > $",
         },
         {
           left: ["idf"],
-          right: ["h"],
-          original: "idf > h",
+          right: ["J"],
+          original: "idf > J",
         },
         {
           left: ["di"],
@@ -4868,18 +4868,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["$"],
-          original: "idf > $",
+          right: ["h"],
+          original: "idf > h",
         },
       ],
     ],
     "Expressions Logical": [
       [
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
         {
           left: ["le"],
           right: ["ee"],
@@ -4890,34 +4885,39 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["le", "lo", "ee"],
           original: "le > le lo ee",
         },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
       ],
       [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
         {
           left: ["re"],
           right: ["ade"],
           original: "re > ade",
         },
         {
-          left: ["uo"],
-          right: ["!"],
-          original: "uo > !",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
+          left: ["st"],
+          right: ['"luv"'],
+          original: 'st > "luv"',
         },
       ],
       [
         {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
         },
         {
           left: ["mue"],
@@ -4927,86 +4927,76 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
         },
         {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
       ],
       [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
         {
           left: ["lo"],
           right: ["&&"],
           original: "lo > &&",
         },
         {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
           left: ["li"],
           right: ["bo"],
           original: "li > bo",
         },
       ],
       [
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
         {
           left: ["lo"],
           right: ["||"],
           original: "lo > ||",
         },
         {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
         },
-      ],
-      [
         {
           left: ["li"],
           right: ["bo"],
           original: "li > bo",
         },
-        {
-          left: ["lo"],
-          right: ["&&"],
-          original: "lo > &&",
-        },
+      ],
+      [
         {
           left: ["pe"],
           right: ["li"],
@@ -5016,6 +5006,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
         },
         {
           left: ["ex"],
@@ -5023,39 +5023,34 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > le",
         },
         {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
+          left: ["lo"],
+          right: ["&&"],
+          original: "lo > &&",
         },
       ],
       [
-        {
-          left: ["lo"],
-          right: ["||"],
-          original: "lo > ||",
-        },
         {
           left: ["ee"],
           right: ["re"],
           original: "ee > re",
         },
         {
-          left: ["le"],
-          right: ["le", "lo", "ee"],
-          original: "le > le lo ee",
+          left: ["lo"],
+          right: ["||"],
+          original: "lo > ||",
         },
         {
           left: ["le"],
           right: ["ee"],
           original: "le > ee",
         },
+        {
+          left: ["le"],
+          right: ["le", "lo", "ee"],
+          original: "le > le lo ee",
+        },
       ],
       [
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
         {
           left: ["ade"],
           right: ["mue"],
@@ -5063,8 +5058,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["id"],
-          right: ["building"],
-          original: "id > building",
+          right: ["knock"],
+          original: "id > knock",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
         },
       ],
       [
@@ -5091,9 +5091,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
         },
         {
           left: ["pe"],
@@ -5109,52 +5109,57 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
+          right: ["true"],
+          original: "bo > true",
         },
         {
           left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
+          right: ["false"],
+          original: "bo > false",
         },
       ],
     ],
     "Expressions Primary": [
       [
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
           left: ["pe"],
           right: ["id"],
           original: "pe > id",
         },
         {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
       ],
       [
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
         {
           left: ["id"],
           right: ["x"],
           original: "id > x",
         },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
       ],
       [
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
         {
           left: ["pe"],
           right: ["li"],
@@ -5165,22 +5170,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["true"],
           original: "bo > true",
         },
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
       ],
       [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
         {
           left: ["bo"],
           right: ["false"],
           original: "bo > false",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["li"],
@@ -5195,6 +5195,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "in > 1",
         },
         {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
           left: ["nu"],
           right: ["in"],
           original: "nu > in",
@@ -5204,18 +5209,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["li"],
           original: "pe > li",
         },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
       ],
       [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
         {
           left: ["li"],
           right: ["nu"],
@@ -5231,12 +5226,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["3.14"],
           original: "de > 3.14",
         },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
       ],
       [
         {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["st"],
@@ -5244,16 +5244,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: 'st > "luv"',
         },
         {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["li"],
+          right: ["st"],
+          original: "li > st",
         },
       ],
       [
         {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
         },
         {
           left: ["li"],
@@ -5262,28 +5262,16 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
+          right: ["li"],
+          original: "pe > li",
         },
       ],
       [
         {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
+          left: ["st"],
+          right: ['"luv"'],
+          original: 'st > "luv"',
         },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-      ],
-      [
         {
           left: ["ex"],
           right: ["pe"],
@@ -5294,18 +5282,25 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
         },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
       ],
       [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
         },
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
+        },
+      ],
+      [
         {
           left: ["ex"],
           right: ["pe"],
@@ -5316,44 +5311,49 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["id"],
           original: "pe > id",
         },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
         },
+      ],
+      [
         {
-          left: ["ex"],
-          right: ["pe"],
-          original: "ex > pe",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
         {
           left: ["id"],
           right: ["y"],
           original: "id > y",
         },
-      ],
-      [
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
         {
           left: ["ex"],
           right: ["pe"],
           original: "ex > pe",
         },
+      ],
+      [
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
         },
         {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
         },
       ],
     ],
@@ -5365,11 +5365,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
           left: ["nu"],
           right: ["in"],
           original: "nu > in",
@@ -5379,54 +5374,49 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["nu"],
           original: "li > nu",
         },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
       ],
       [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
         {
           left: ["id"],
           right: ["x"],
           original: "id > x",
         },
         {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
           left: ["mae"],
           right: ["mle"],
           original: "mae > mle",
         },
         {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
         },
         {
           left: ["pe"],
           right: ["id"],
           original: "pe > id",
         },
-      ],
-      [
         {
           left: ["id"],
-          right: ["prop"],
-          original: "id > prop",
+          right: ["y"],
+          original: "id > y",
         },
+      ],
+      [
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
         },
         {
           left: ["mae"],
@@ -5434,12 +5424,27 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > mle",
         },
         {
+          left: ["id"],
+          right: ["prop"],
+          original: "id > prop",
+        },
+        {
           left: ["pe"],
           right: ["(", "ex", ")"],
           original: "pe > ( ex )",
         },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
       ],
       [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
         {
           left: ["pe"],
           right: ["id"],
@@ -5452,25 +5457,20 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          right: ["mle"],
+          original: "mae > mle",
         },
         {
           left: ["mle"],
           right: ["mae", ".", "id"],
           original: "mle > mae . id",
         },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
       ],
       [
         {
           left: ["id"],
-          right: ["name"],
-          original: "id > name",
+          right: ["human"],
+          original: "id > human",
         },
         {
           left: ["id"],
@@ -5479,33 +5479,38 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["id"],
-          right: ["human"],
-          original: "id > human",
+          right: ["name"],
+          original: "id > name",
         },
       ],
       [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
         {
           left: ["pe"],
           right: ["id"],
           original: "pe > id",
         },
         {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
           left: ["mle"],
           right: ["mae", ".", "id"],
           original: "mle > mae . id",
         },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
       ],
       [
+        {
+          left: ["id"],
+          right: ["birthdate"],
+          original: "id > birthdate",
+        },
         {
           left: ["id"],
           right: ["year"],
@@ -5516,27 +5521,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["human"],
           original: "id > human",
         },
-        {
-          left: ["id"],
-          right: ["birthdate"],
-          original: "id > birthdate",
-        },
       ],
       [
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
         },
         {
           left: ["pe"],
@@ -5544,17 +5534,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > id",
         },
         {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
         },
       ],
       [
-        {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
         {
           left: ["pe"],
           right: ["li"],
@@ -5565,13 +5560,57 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ['"luv"'],
           original: 'st > "luv"',
         },
+        {
+          left: ["li"],
+          right: ["st"],
+          original: "li > st",
+        },
       ],
       [
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
+        },
         {
           left: ["mae"],
           right: ["mle"],
           original: "mae > mle",
         },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
         {
           left: ["ex"],
           right: ["mae"],
@@ -5581,6 +5620,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
         },
         {
           left: ["mle"],
@@ -5594,45 +5638,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["in"],
           original: "nu > in",
         },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
-        },
-      ],
-      [
         {
           left: ["pe"],
           right: ["li"],
@@ -5648,24 +5653,19 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["2"],
           original: "in > 2",
         },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
       ],
     ],
     "Expressions Equality": [
       [
         {
-          left: ["ee"],
-          right: ["ee", "===", "re"],
-          original: "ee > ee === re",
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
         },
         {
           left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
+          right: ["ee", "===", "re"],
+          original: "ee > ee === re",
         },
         {
           left: ["re"],
@@ -5673,16 +5673,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "re > ade",
         },
         {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
         },
       ],
       [
         {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
         },
         {
           left: ["ce"],
@@ -5690,33 +5690,33 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ce > mae",
         },
         {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
         },
       ],
       [
         {
-          left: ["id"],
-          right: ["door"],
-          original: "id > door",
+          left: ["ee"],
+          right: ["ee", "===", "re"],
+          original: "ee > ee === re",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
         },
-        {
-          left: ["id"],
-          right: ["all"],
-          original: "id > all",
-        },
       ],
       [
         {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["li"],
@@ -5724,65 +5724,65 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > st",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
       ],
       [
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["id"],
-          right: ["update"],
-          original: "id > update",
-        },
         {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
+        },
       ],
       [
         {
-          left: ["ex"],
-          right: ["ee"],
-          original: "ex > ee",
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
         {
           left: ["in"],
           right: ["1"],
           original: "in > 1",
         },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
       ],
       [
-        {
-          left: ["ex"],
-          right: ["ee"],
-          original: "ex > ee",
-        },
         {
           left: ["ee"],
           right: ["re"],
           original: "ee > re",
         },
         {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
+          left: ["ex"],
+          right: ["ee"],
+          original: "ex > ee",
         },
         {
           left: ["re"],
           right: ["ade"],
           original: "re > ade",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
         },
         {
           left: ["pe"],
@@ -5792,14 +5792,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-        {
           left: ["ade"],
           right: ["mue"],
           original: "ade > mue",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
         },
         {
           left: ["mue"],
@@ -5814,9 +5814,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ce > mae",
         },
         {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
+          left: ["id"],
+          right: ["fn"],
+          original: "id > fn",
         },
         {
           left: ["ue"],
@@ -5826,14 +5826,167 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["id"],
-          right: ["all"],
-          original: "id > all",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["id"],
+          right: ["add"],
+          original: "id > add",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+          original: "ao > +",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+      ],
+    ],
+    "Expressions Relational": [
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["ro"],
+          right: ["<"],
+          original: "ro > <",
+        },
+        {
+          left: ["re"],
+          right: ["re", "ro", "ade"],
+          original: "re > re ro ade",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["in"],
@@ -5843,43 +5996,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-      ],
-      [
-        {
-          left: ["ro"],
-          right: ["<"],
-          original: "ro > <",
-        },
-        {
-          left: ["id"],
-          right: ["all"],
-          original: "id > all",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["in"],
@@ -5891,132 +6010,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["in"],
           original: "nu > in",
         },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
       ],
       [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-      ],
-    ],
-    "Expressions Relational": [
-      [
-        {
-          left: ["ro"],
-          right: ["<"],
-          original: "ro > <",
-        },
-        {
-          left: ["re"],
-          right: ["re", "ro", "ade"],
-          original: "re > re ro ade",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-      ],
-      [
-        {
-          left: ["re"],
-          right: ["re", "ro", "ade"],
-          original: "re > re ro ade",
-        },
         {
           left: ["ade"],
           right: ["mue"],
@@ -6024,14 +6019,19 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
+          right: ["re", "ro", "ade"],
+          original: "re > re ro ade",
         },
         {
           left: ["ro"],
           right: [">"],
           original: "ro > >>",
         },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
       ],
       [
         {
@@ -6052,14 +6052,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", "ag", ")"],
+          original: "ce > ce ( ag )",
         },
         {
           left: ["mae"],
@@ -6069,26 +6069,26 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
+          left: ["re"],
+          right: ["re", "ro", "ade"],
+          original: "re > re ro ade",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
         {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
       ],
       [
         {
           left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
+          right: ["in"],
+          original: "nu > in",
         },
         {
           left: ["de"],
@@ -6102,15 +6102,15 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
+          right: ["de"],
+          original: "nu > de",
         },
       ],
       [
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["pe"],
@@ -6123,26 +6123,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
       ],
       [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
         {
           left: ["ade"],
           right: ["ade", "ao", "mue"],
           original: "ade > ade ao mue",
         },
         {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
+          left: ["ex"],
+          right: ["re"],
+          original: "ex > re",
         },
         {
           left: ["re"],
@@ -6150,12 +6145,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "re > ade",
         },
         {
-          left: ["ex"],
-          right: ["re"],
-          original: "ex > re",
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
         },
       ],
       [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
         {
           left: ["mue"],
           right: ["ue"],
@@ -6166,27 +6171,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["+"],
           original: "ao > +",
         },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
       ],
       [
         {
-          left: ["st"],
-          right: ['"luv"'],
-          original: 'st > "luv"',
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["id"],
+          right: ["refresh"],
+          original: "id > refresh",
         },
         {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
         },
       ],
       [
@@ -6196,53 +6196,53 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
         },
+        {
+          left: ["li"],
+          right: ["null"],
+          original: "li > null",
+        },
       ],
       [
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
         {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
       ],
       [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
         {
           left: ["nu"],
           right: ["in"],
           original: "nu > in",
         },
         {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
           left: ["de"],
           right: ["3.14"],
           original: "de > 3.14",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
         },
       ],
     ],
@@ -6266,9 +6266,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["id"],
@@ -6276,22 +6281,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > fn",
         },
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
         {
           left: ["ce"],
           right: ["ce", "(", ")"],
           original: "ce > ce ( )",
         },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
       ],
       [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
         {
           left: ["pe"],
           right: ["id"],
@@ -6303,14 +6308,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mle > mae . id",
         },
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
         },
         {
           left: ["mae"],
@@ -6318,29 +6318,39 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
         },
       ],
       [
         {
-          left: ["id"],
-          right: ["list"],
-          original: "id > list",
-        },
-        {
-          left: ["id"],
-          right: ["page"],
-          original: "id > page",
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
         {
           left: ["id"],
           right: ["refresh"],
           original: "id > refresh",
         },
+        {
+          left: ["id"],
+          right: ["page"],
+          original: "id > page",
+        },
       ],
       [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
         {
           left: ["ce"],
           right: ["ce", "(", "ag", ")"],
@@ -6356,22 +6366,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["mae"],
           original: "ce > mae",
         },
+      ],
+      [
         {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
         },
         {
           left: ["pe"],
@@ -6379,14 +6384,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
         },
       ],
       [
@@ -6401,9 +6401,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > nu",
         },
         {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
         },
       ],
       [
@@ -6413,15 +6413,15 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ag > ex",
         },
         {
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
+        },
+        {
           left: ["ag"],
           right: ["ex", ",", "ag"],
           original: "ag > ex , ag",
         },
-        {
-          left: ["id"],
-          right: ["door"],
-          original: "id > door",
-        },
       ],
       [
         {
@@ -6430,15 +6430,27 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ce > mae",
         },
         {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
         },
+      ],
+      [
         {
           left: ["li"],
           right: ["nu"],
@@ -6449,17 +6461,10 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ce"],
           original: "ex > ce",
         },
-      ],
-      [
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
         },
         {
           left: ["pe"],
@@ -6467,17 +6472,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
         {
           left: ["id"],
           right: ["add"],
@@ -6488,18 +6498,18 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["2"],
           original: "in > 2",
         },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
       ],
       [
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
         {
           left: ["mae"],
           right: ["pe"],
@@ -6511,36 +6521,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > id",
         },
         {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["ex"],
           right: ["ce"],
           original: "ex > ce",
         },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
       ],
       [
         {
           left: ["id"],
-          right: ["door"],
-          original: "id > door",
+          right: ["building"],
+          original: "id > building",
         },
         {
           left: ["id"],
-          right: ["building"],
-          original: "id > building",
+          right: ["door"],
+          original: "id > door",
         },
         {
           left: ["id"],
@@ -6550,9 +6550,24 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["mle"],
@@ -6560,41 +6575,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mle > mae [ ex ]",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
         },
       ],
       [
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
           left: ["ex"],
           right: ["ce"],
           original: "ex > ce",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["pe"],
@@ -6602,22 +6602,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["0"],
-          original: "in > 0",
-        },
         {
           left: ["id"],
           right: ["list"],
@@ -6628,12 +6618,32 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["double"],
           original: "id > double",
         },
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
       ],
       [
         {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
           left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
         {
           left: ["ex"],
@@ -6642,35 +6652,25 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
         },
       ],
       [
-        {
-          left: ["id"],
-          right: ["love"],
-          original: "id > love",
-        },
         {
           left: ["id"],
           right: ["all"],
           original: "id > all",
         },
         {
-          left: ["st"],
-          right: ['"luv"'],
-          original: 'st > "luv"',
+          left: ["id"],
+          right: ["double"],
+          original: "id > double",
+        },
+        {
+          left: ["id"],
+          right: ["love"],
+          original: "id > love",
         },
       ],
     ],
@@ -6687,9 +6687,19 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ase > lh = ase",
         },
         {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+        {
           left: ["re"],
           right: ["ade"],
           original: "re > ade",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
         },
         {
           left: ["id"],
@@ -6701,15 +6711,120 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ee"],
           original: "le > ee",
         },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
         {
           left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
+          right: ["lh", "=", "ase"],
+          original: "ase > lh = ase",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["lh"],
+          right: ["mle"],
+          original: "lh > mle",
         },
         {
           left: ["ee"],
           right: ["re"],
           original: "ee > re",
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
@@ -6719,14 +6834,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mue > ue",
         },
         {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
           left: ["ade"],
           right: ["mue"],
           original: "ade > mue",
+        },
+        {
+          left: ["id"],
+          right: ["fn"],
+          original: "id > fn",
         },
       ],
       [
@@ -6757,116 +6872,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["in"],
           original: "nu > in",
         },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["lh"],
-          right: ["mle"],
-          original: "lh > mle",
-        },
-        {
-          left: ["ase"],
-          right: ["lh", "=", "ase"],
-          original: "ase > lh = ase",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
         {
           left: ["li"],
           right: ["nu"],
@@ -6877,17 +6882,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["2"],
           original: "in > 2",
         },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
       ],
       [
         {
-          left: ["ex"],
-          right: ["ase"],
-          original: "ex > ase",
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
         },
         {
           left: ["mle"],
@@ -6895,14 +6895,31 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mle > mae [ ex ]",
         },
         {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
+          left: ["ex"],
+          right: ["ase"],
+          original: "ex > ase",
         },
         {
           left: ["le"],
           right: ["ee"],
           original: "le > ee",
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
         },
       ],
       [
@@ -6917,51 +6934,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ade > mue",
         },
         {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-      ],
-      [
-        {
-          left: ["ee"],
-          right: ["ee", "===", "re"],
-          original: "ee > ee === re",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["id"],
-          right: ["refresh"],
-          original: "id > refresh",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
           left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
+          right: ["mue", "mo", "ue"],
+          original: "mue > mue mo ue",
         },
       ],
       [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
         {
           left: ["ue"],
           right: ["ce"],
@@ -6972,22 +6950,44 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ue"],
           original: "mue > ue",
         },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
       ],
       [
         {
-          left: ["lh"],
-          right: ["id"],
-          original: "lh > id",
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
         },
         {
-          left: ["id"],
-          right: ["update"],
-          original: "id > update",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
       ],
       [
@@ -6997,22 +6997,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
       ],
       [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
         {
           left: ["in"],
           right: ["0"],
@@ -7022,6 +7017,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["id"],
           right: ["y"],
           original: "id > y",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
         {
           left: ["id"],
@@ -7036,26 +7036,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "lh > id",
         },
         {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
           left: ["ase"],
           right: ["lh", "=", "ase"],
           original: "ase > lh = ase",
         },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
       ],
       [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
         {
           left: ["id"],
           right: ["y"],
           original: "id > y",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
         },
         {
           left: ["id"],
@@ -7065,53 +7065,48 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
           left: ["le"],
           right: ["ee"],
           original: "le > ee",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
         },
         {
           left: ["re"],
           right: ["ade"],
           original: "re > ade",
         },
-      ],
-      [
         {
           left: ["ase"],
           right: ["le"],
           original: "ase > le",
         },
         {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
         },
         {
           left: ["ade"],
           right: ["mue"],
           original: "ade > mue",
         },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
       ],
       [
         {
-          left: ["in"],
-          right: ["0"],
-          original: "in > 0",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["mae"],
@@ -7119,9 +7114,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
         },
         {
           left: ["ue"],
@@ -7129,9 +7129,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ue > ce",
         },
         {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["nu"],
@@ -7143,11 +7143,6 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Expressions Additive": [
       [
         {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
           left: ["mue"],
           right: ["ue"],
           original: "mue > ue",
@@ -7162,6 +7157,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["mue"],
           original: "ade > mue",
         },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
       ],
       [
         {
@@ -7170,9 +7170,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > nu",
         },
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["pe"],
@@ -7180,9 +7180,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
@@ -7192,14 +7192,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ce > mae",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["li"],
@@ -7214,9 +7214,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "in > 1",
         },
         {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
         },
         {
           left: ["nu"],
@@ -7224,12 +7224,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "nu > in",
         },
         {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
       ],
       [
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
         {
           left: ["ao"],
           right: ["+"],
@@ -7241,22 +7251,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "nu > in",
         },
         {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
           left: ["nu"],
           right: ["de"],
           original: "nu > de",
         },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
       ],
       [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
         {
           left: ["ce"],
           right: ["mae"],
@@ -7267,28 +7272,23 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["pe"],
           original: "mae > pe",
         },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
       ],
       [
         {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["ex"],
           right: ["ade"],
           original: "ex > ade",
         },
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
       ],
       [
         {
@@ -7300,17 +7300,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
         },
         {
           left: ["ade"],
           right: ["mue"],
           original: "ade > mue",
         },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
       ],
       [
         {
@@ -7319,21 +7319,26 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > nu",
         },
         {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
         },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
       ],
       [
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["ue"],
@@ -7341,22 +7346,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ue > ce",
         },
         {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
           left: ["li"],
           right: ["nu"],
           original: "li > nu",
         },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
       ],
       [
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
         {
           left: ["de"],
           right: ["3.14"],
@@ -7364,8 +7369,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["ao"],
@@ -7377,60 +7387,72 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["-"],
           original: "ao > -",
         },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
       ],
       [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
         {
           left: ["mue"],
           right: ["mue", "mo", "ue"],
           original: "mue > mue mo ue",
         },
         {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
           left: ["mue"],
           right: ["ue"],
           original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
         },
         {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
         },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
       ],
       [
         {
@@ -7456,27 +7478,10 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
         },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
         {
           left: ["li"],
           right: ["nu"],
@@ -7488,6 +7493,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
@@ -7497,12 +7509,10 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["li"],
           original: "pe > li",
         },
-      ],
-      [
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
         {
           left: ["ao"],
@@ -7510,19 +7520,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ao > -",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
       ],
       [
@@ -7532,14 +7532,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mo > /",
         },
         {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
         },
         {
-          left: ["in"],
-          right: ["0"],
-          original: "in > 0",
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
       ],
       [
@@ -7554,6 +7554,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "nu > in",
         },
         {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
           left: ["de"],
           right: ["3.14"],
           original: "de > 3.14",
@@ -7563,18 +7568,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["de"],
           original: "nu > de",
         },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
       ],
       [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
         {
           left: ["mue"],
           right: ["ue"],
@@ -7585,6 +7580,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["mue"],
           original: "ade > mue",
         },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
       ],
       [
         {
@@ -7593,17 +7593,22 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ce > ce ( ag )",
         },
         {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
-        },
-        {
           left: ["ex"],
           right: ["ade"],
           original: "ex > ade",
         },
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
       ],
       [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
         {
           left: ["ce"],
           right: ["mae"],
@@ -7614,13 +7619,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["id"],
           original: "pe > id",
         },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
       ],
       [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
         {
           left: ["ade"],
           right: ["ade", "ao", "mue"],
@@ -7631,61 +7636,56 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["mue"],
           original: "ade > mue",
         },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
       ],
       [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
         {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
         },
         {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
-        },
-      ],
-      [
-        {
-          left: ["uo"],
-          right: ["-"],
-          original: "uo > -",
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
         },
         {
           left: ["li"],
-          right: ["st"],
-          original: "li > st",
+          right: ["bo"],
+          original: "li > bo",
         },
+      ],
+      [
         {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
         },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["id"],
+          right: ["knock"],
+          original: "id > knock",
+        },
       ],
       [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
         },
         {
-          left: ["id"],
-          right: ["double"],
-          original: "id > double",
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
       ],
       [
@@ -7700,22 +7700,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > nu",
         },
         {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
       ],
       [
-        {
-          left: ["id"],
-          right: ["double"],
-          original: "id > double",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
         {
           left: ["in"],
           right: ["1"],
@@ -7725,6 +7715,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["nu"],
           right: ["in"],
           original: "nu > in",
+        },
+        {
+          left: ["id"],
+          right: ["double"],
+          original: "id > double",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
         {
           left: ["ao"],
@@ -7736,153 +7736,14 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Unary To Binary Equations": [
       [
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
           left: ["b", "a"],
           right: ["b", "1"],
           original: "b a > b 1",
         },
         {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
           left: ["d", "e", "="],
           right: ["=", "d"],
           original: "d e = > = d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
         },
         {
           left: ["d", "b"],
@@ -7902,6 +7763,145 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "d b > b d",
         },
         {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
           original: "e = b > c e = b c",
@@ -7914,14 +7914,65 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "e = b > c e = b c",
         },
         {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
           left: ["d", "c"],
           right: ["a", "d"],
           original: "d c > a d",
         },
         {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
         },
       ],
       [
@@ -7943,14 +7994,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
         },
         {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
         },
         {
           left: ["d", "+"],
@@ -7960,9 +8011,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
         },
         {
           left: ["c", "c"],
@@ -7994,14 +8045,138 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
         },
         {
           left: ["d", "e", "="],
           right: ["=", "d"],
           original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
         },
         {
           left: ["b", "a"],
@@ -8011,9 +8186,60 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
           original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
         },
         {
           left: ["0", "a"],
@@ -8021,12 +8247,51 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "0 a > 1",
         },
         {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
         },
       ],
       [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
         {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
@@ -8037,45 +8302,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["c", "e", "=", "b", "c"],
           original: "e = b > c e = b c",
         },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
       ],
       [
         {
@@ -8084,35 +8310,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "d + > + d",
         },
         {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
           left: ["0", "a"],
           right: ["1"],
           original: "0 a > 1",
@@ -8121,203 +8318,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["1", "a"],
           right: ["a", "0"],
           original: "1 a > a 0",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
         },
       ],
     ],
