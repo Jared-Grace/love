@@ -10,7 +10,7 @@ import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
-export async function literals_frozen_storage_unfrozen() {
+export async function literals_frozen_storage_walked() {
   "Every written word that a browser database is opened with and that nothing has frozen - each answer naming the function that opens the database and the word it opened it with.";
   "A word handed to the opening of a browser database is published by that one act. From then on it is written on somebody else's disk, and their browser looks under it and under nothing else, so changing it here leaves every future read looking for the new word while every past write still holds the old one. Renaming the function that holds it is safe; changing what it hands back is not, and no later repair can reach the data.";
   "That is why this can be asked at all, where whether a word has escaped is otherwise a judgement nobody here can make. Nothing is being guessed from a name or a meaning: the word was passed to the opening of a database, which is what escaping IS.";
