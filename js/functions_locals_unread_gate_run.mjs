@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_locals_unread_baseline_path } from "./functions_locals_unread_baseline_path.mjs";
@@ -9,7 +10,10 @@ export async function functions_locals_unread_gate_run() {
   "The one that prompted it dropped a whole publish. A deploy bound what the sending answered to a name nothing read, so the function handed back the answer of the step before it, and thirteen refused deploys in one afternoon each looked from the outside exactly like a clean one.";
   "The repair already existed and nothing was calling it. A transform that turns a binding nobody reads back into the plain step it was written from has been in this repo the whole time, reachable only by somebody who already knew which function needed it - which is precisely what could not be known without this sweep.";
   "Measured against what was already here, because most of these are honest. Building a page names each piece as it is made and lets the making do the work, and a step kept only for what it does along the way is fine. Two hundred and thirty five names stood on the day this was written, and arguing each one again every run is what stops a gate being kept.";
-  let names = await functions_locals_unread_names();
+  "How many functions were opened travels out with the verdict. Green here means no new offender, and that is also what green means when nothing at all was read, so the count is the only part of the answer that tells the two apart.";
+  let swept = await functions_locals_unread_names();
+  let walked = property_get(swept, "walked");
+  let names = property_get(swept, "names");
   let path = functions_locals_unread_baseline_path();
   let name_write = fn_name("functions_locals_unread_baseline_write");
   let hint = text_combine_multiple([
@@ -17,6 +21,13 @@ export async function functions_locals_unread_gate_run() {
     name_write,
     " if the binding is only there to name a step as it passes",
   ]);
-  let r = await baseline_names_gate_generic(names, path, hint, name_write);
+  let told = await baseline_names_gate_generic(names, path, hint, name_write);
+  let added = property_get(told, "added");
+  let stale = property_get(told, "stale");
+  let r = {
+    walked,
+    added,
+    stale,
+  };
   return r;
 }
