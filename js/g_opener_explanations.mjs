@@ -20,7 +20,7 @@ export function g_opener_explanations() {
     "the gospel": {
       said: gospel_said,
       draws:
-        "The person answers the gospel just shared - a question about it, or an objection to it. Somebody new to it asks plainly; somebody who already knows a good deal says it in more informed terms. That shows in how they say it, not in how far it reaches - whatever they raise, one of the passages above has to be its plain and obvious answer.",
+        "The person answers the gospel just shared - a question about it, or an objection to it. Somebody new to it asks plainly; somebody who already knows a good deal says it in more informed terms. Their answer reflects their current knowledge - whatever they answer, one of the passages above has to be its plain and obvious player answer to the person's answer.",
     },
     "a Bible question": {
       said: "The believer asks the player a question about Scripture.",
@@ -34,7 +34,7 @@ export function g_opener_explanations() {
     "how is ministering to your neighbour going": {
       said: 'The player asks "How is ministering to your neighbour going?"',
       draws:
-        "The person says how serving somebody else is going - what it is costing them, or what they do not know how to do.",
+        "The person says how serving somebody else is going - what it is costing them, or what they do not know how to do or a praise/gratitude for fruitfulness.",
     },
   };
   return r;
