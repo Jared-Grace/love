@@ -70,7 +70,7 @@ export function app_code_lesson_expression_not_comparison() {
   });
   return lesson;
   function above(root) {
-    "how far a ! reaches, then what that costs without brackets, then the brackets, then one worked example carried all the way to its value";
+    "how far a ! applies, then the same thing shown on one instance, then the target line built a piece at a time - brackets around the comparison, then the ! in front of them, then the finished line - and finally one worked example carried all the way to its value. Built rather than presented, so the finished shape arrives as the last step of something the reader watched happen rather than as a new thing to take on trust.";
     let true_word = js_keyword_true();
     let false_word = js_keyword_false();
     let equal_operator = js_operator_triple_equal();
@@ -84,29 +84,40 @@ export function app_code_lesson_expression_not_comparison() {
     let whole = not_of(bracketed);
     let bare = text_combine_multiple([not_of(three), " ", equal_symbol, " ", five]);
     let not_false = not_of(false_word);
+    let pair = text_combine_multiple([open, " ", close]);
     let reach = app_code_container_light_blue(root);
     html_div_cycle_code(reach, [
       "A ",
       symbol,
-      " takes only the thing standing next to it",
+      " applies only to what's next to it",
     ]);
     html_div_cycle_code(reach, [
-      "In ",
+      "For example, for ",
       bare,
       ", the ",
       symbol,
-      " takes only the ",
+      " only applies to the ",
       three,
     ]);
     html_div_cycle_code(reach, [
-      "To give the ",
+      "To apply the ",
       symbol,
-      " the whole comparison, we put ",
+      " to ",
+      comparison,
+      ", first we put ",
       open,
       " and ",
       close,
-      " around it",
+      " around ",
+      comparison,
     ]);
+    html_div_cycle_code(reach, [
+      "Then we put the ",
+      symbol,
+      " around the ",
+      pair,
+    ]);
+    html_div_cycle_code(reach, ["Then we have: ", whole]);
     let worked = app_code_container_light_blue(root);
     html_div_cycle_code(worked, ["For ", whole, ", we do ", comparison, " first"]);
     html_div_cycle_code(worked, [
