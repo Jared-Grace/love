@@ -1,3 +1,4 @@
+import { retry_standard } from "./retry_standard.mjs";
 import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
 import { git_folder_worktree_add } from "./git_folder_worktree_add.mjs";
 import { qa_snapshot_siblings_freeze } from "./qa_snapshot_siblings_freeze.mjs";
@@ -31,8 +32,12 @@ export async function qa_snapshot_ensure_named(copy_name, commit) {
     ("Asked every time rather than when it seems needed, the same way the built-in copy asks. Knowing whether it is needed costs a check that can be wrong, and being wrong here costs a whole walk of the commits.");
     ("Only where there is already a copy. One laid out fresh below has nothing in it to put back.");
     await qa_snapshot_clean(folder);
-    let moving = ["checkout", "--detach", commit];
-    await git_folder_run(folder, moving);
+    ("Asked again while it keeps failing, because the lock this move takes lives in the living repo rather than in the copy, and everybody here commits into that repo all day. A peer holding it for the fraction of a second a commit takes is enough for the move to refuse, and the refusal is not local: it comes back up through a walk that spends about a quarter of an hour on every commit it judges, so one collision throws away hours. Measured on 2026-08-14: a walk of the commits died on its ninth with the lock file already there. Five attempts with the wait doubling covers a commit many times over, and a commit that genuinely cannot be moved to still complains, only fifteen seconds later");
+    async function lambda() {
+      let moving = ["checkout", "--detach", commit];
+      await git_folder_run(folder, moving);
+    }
+    await retry_standard(lambda);
   } else {
     await git_folder_worktree_add(here, folder, commit);
   }
