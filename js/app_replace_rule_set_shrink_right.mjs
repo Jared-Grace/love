@@ -4,20 +4,20 @@ export function app_replace_rule_set_shrink_right() {
     rules: ["a b > a"],
     goals: [
       {
-        start: "a b b",
+        start: "a   b   b",
         end: "a",
       },
       {
-        start: "a b b a b",
-        end: "a a",
+        start: "a   b   b   a   b",
+        end: "a   a",
       },
       {
-        start: "a b b a b b b",
-        end: "a a",
+        start: "a   b   b   a   b   b   b",
+        end: "a   a",
       },
       {
-        start: "a b a b b a b b b",
-        end: "a a a",
+        start: "a   b   a   b   b   a   b   b   b",
+        end: "a   a   a",
       },
     ],
     why: "The rules demonstrate a grammar that repeatedly replaces any occurrence of ['a','b'] with ['a'], effectively shrinking sequences by removing 'b's that follow 'a's, which simplifies the input to a sequence of 'a's only.",
