@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_max } from "./list_max.mjs";
@@ -19,8 +20,7 @@ export function app_replace_rule_sets_steepness() {
     let name = property_get(rs, "name");
     let rules = property_get(rs, "rules");
     let goals = property_get(rs, "goals");
-    let shown = property_get(rules_useds, name);
-    let sizes = list_map(shown, list_size);
+    let sizes = property_list_map(rules_useds, name, list_size);
     let buttons = list_max(sizes);
     let rules_parsed = app_replace_rules_parse(rules);
     function lambda2(g) {
