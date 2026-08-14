@@ -116,7 +116,6 @@ export function app_replace_rule_sets_v_1() {
     r34,
     r35,
     r36,
-    r37,
     r38,
     r39,
   ];
