@@ -7,6 +7,7 @@ import { list_add } from "./list_add.mjs";
 export async function functions_statements_after_return() {
   "Every love function carrying work below the line that already left it.";
   "Nothing else here can see this. The body parses, every name in it is bound and imported, and each statement is perfectly good code - it simply never runs, so a function can read like it does the work while doing none of it. That is worse than an empty one: an empty function is visibly unfinished, and this one is not.";
+  "How many functions were opened travels out beside what was wrong with them, because finding nothing here is written exactly the same way as reading nothing at all.";
   let love = await repo_functions_names("love");
   let offenders = [];
   for (let name of love) {
@@ -18,5 +19,10 @@ export async function functions_statements_after_return() {
       list_add(offenders, name);
     }
   }
-  return offenders;
+  let walked = list_size(love);
+  let r = {
+    walked,
+    offenders,
+  };
+  return r;
 }
