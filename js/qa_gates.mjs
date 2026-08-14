@@ -487,6 +487,7 @@ export function qa_gates() {
     g_tiles_window_axis_cases_gate_run,
     app_g_player_walk_cases_gate_run,
     g_npc_path_clear_facing_best_cases_gate_run,
+    g_npc_path_clear_places_cases_gate_run,
     app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run,
     js_code_same_meaning_is_cases_gate_run,
     app_shared_bible_hash_field_reference_cases_gate_run,
