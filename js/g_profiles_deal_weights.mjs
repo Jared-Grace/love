@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { g_profile_target_shares } from "./g_profile_target_shares.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -61,8 +62,7 @@ export function g_profiles_deal_weights(remaining, owed, left) {
           still = 0;
         }
         let share = divide(still, left);
-        let wanted = multiply(share, total);
-        let scale = divide(wanted, current);
+        let scale = multiply_divide(share, total, current);
         let satisfied = equal(scale, 0);
         if (satisfied) {
           scale = smallest;
