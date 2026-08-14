@@ -12,7 +12,7 @@ export function app_replace_rule_set_three_different_grow_same() {
         end: "c   c   c   c   e   =   b   c   c   c   c",
       },
     ],
-    why: "The replacement rule demonstrates a grammar where each application of the rule grows the string by adding a 'c' to both the beginning and end, showing symmetric expansion around the core 'e = b' structure.",
+    why: "One c joins on the left and one on the right, in a single move, with e = b held in the middle. The two sides always grow together.",
   };
   return r;
 }
