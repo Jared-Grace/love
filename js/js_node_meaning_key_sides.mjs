@@ -1,3 +1,4 @@
+import { js_node_meaning_key_from_parts } from "./js_node_meaning_key_from_parts.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
 import { js_node_meaning_key } from "./js_node_meaning_key.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -5,8 +6,6 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_join } from "./list_join.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_node_meaning_key_sides(node) {
@@ -26,11 +25,6 @@ export function js_node_meaning_key_sides(node) {
   let o2 = js_operator_division_symbol();
   let arithmetic = list_includes([p, r, o, o2], operator);
   let sortable = swappable && not(arithmetic);
-  if (sortable) {
-    list_sort_text(sides);
-  }
-  let written = list_join(sides, ",");
-  let pieces = [operator, "(", written, ")"];
-  let key = list_join(pieces, "");
+  let key = js_node_meaning_key_from_parts(operator, sides, sortable);
   return key;
 }

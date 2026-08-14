@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_map_index } from "./list_map_index.mjs";
 export function list_indexes(list) {
   "Where each item of a list sits, counted from zero.";
   "It is the list itself turned into the places in it, which is what anything choosing a few items out of many by position needs. The places are what get passed around rather than the items, because the same choice then means the same thing when made against a second list of the same length.";

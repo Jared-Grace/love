@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_skip_1 } from "./list_skip_1.mjs";
+import { subtract_1 } from "./subtract_1.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { list_map } from "./list_map.mjs";
+import { equal } from "./equal.mjs";
 export function list_subsets_size(list, size) {
   "Every way of choosing that many items out of a list, each choice keeping the order the items were already in.";
   "Choosing is not ordering: the two ways of naming the same pair are one answer here, not two. That is what makes this the right thing to ask when a question is about a group rather than about a sequence - which languages someone reads together, say, where reading them in a different order is not a different reader.";
@@ -17,7 +25,8 @@ export function list_subsets_size(list, size) {
   let first = list_first(list);
   let rest = list_skip_1(list);
   let without_first = list_subsets_size(rest, size);
-  let smaller = list_subsets_size(rest, subtract_1(size));
+  let size2 = subtract_1(size);
+  let smaller = list_subsets_size(rest, size2);
   function lambda(subset) {
     let grown = lists_combine([[first], subset]);
     return grown;
