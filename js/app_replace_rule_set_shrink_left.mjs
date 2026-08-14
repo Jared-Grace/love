@@ -20,7 +20,7 @@ export function app_replace_rule_set_shrink_left() {
         end: "a   a   a",
       },
     ],
-    why: "Now it is the b just before an a that disappears. Same idea as the last one, other side.",
+    why: "Now it is the 'b' just before an 'a' that disappears. Same idea as the last one, other side.",
   };
   return r;
 }

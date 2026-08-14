@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_different_2() {
         end: "a   a   a   a",
       },
     ],
-    why: "Both rules run the other way now: d e closes into b, and b c closes into a. Work from the inside out to get back to a single a.",
+    why: "Both rules run the other way now: 'd' 'e' closes into a 'b', and 'b' 'c' closes into an 'a'. Work from the inside out to get back to a single 'a'.",
   };
   return r;
 }
