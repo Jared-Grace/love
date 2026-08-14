@@ -16,7 +16,7 @@ export function app_replace_rule_set_same_replace_left() {
         end: "b   a   a   b   a   a   b   a",
       },
     ],
-    why: "Two a's side by side again, but this time the left one turns into a b.",
+    why: "Two 'a's side by side again, but this time the left one turns into a 'b'.",
   };
   return r;
 }

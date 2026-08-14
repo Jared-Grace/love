@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_both_same() {
         end: "a   b   a",
       },
     ],
-    why: "A b with an a on each side loses both of them at once. The b survives alone.",
+    why: "A 'b' with an 'a' on each side loses both of them at once. The 'b' survives alone.",
   };
   return r;
 }

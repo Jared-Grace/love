@@ -28,7 +28,7 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
         end: "a   a",
       },
     ],
-    why: "A b before an a is swallowed; a b before a c turns that c into another b. So c's become b's, and b's get eaten from the left.",
+    why: "A 'b' before an 'a' is swallowed; a 'b' before a 'c' turns that 'c' into another 'b'. So 'c's become 'b's, and 'b's get eaten from the left.",
   };
   return r;
 }

@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_between() {
         end: "a   a   a   a   a   a",
       },
     ],
-    why: "The b between two a's is taken out again. This is the rule before this one, read backwards.",
+    why: "The 'b' between two 'a's is taken out again. This is the rule before this one, read backwards.",
   };
   return r;
 }

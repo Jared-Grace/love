@@ -20,7 +20,7 @@ export function app_replace_rule_set_swap() {
         end: "b   a   a   a",
       },
     ],
-    why: "An a and the b after it trade places. Use it over and over and an a walks all the way to the right, one step per b it passes.",
+    why: "An 'a' and the 'b' after it trade places. Use it over and over and an 'a' walks all the way to the right, one step per 'b' it passes.",
   };
   return r;
 }

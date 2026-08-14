@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_different() {
         end: "a   a   b   c   a",
       },
     ],
-    why: "A b next to a c closes back into a single a. This is the rule before this one, read backwards - growing becomes shrinking.",
+    why: "A 'b' next to a 'c' closes back into a single 'a'. This is the rule before this one, read backwards - growing becomes shrinking.",
   };
   return r;
 }

@@ -16,7 +16,7 @@ export function app_replace_rule_set_right_change() {
         end: "a   c   a   a   c   a   a   a   c   a   a   a   a   c",
       },
     ],
-    why: "A b turns into a c only when there is an a on its left. What a symbol may become can depend on its neighbour.",
+    why: "A 'b' turns into a 'c' only when there is an 'a' on its left. What a symbol may become can depend on its neighbour.",
   };
   return r;
 }
