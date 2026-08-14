@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { ebible_verse_browser_try } from "./ebible_verse_browser_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { bible_folders_sentence_end_marked } from "./bible_folders_sentence_end_marked.mjs";
@@ -14,7 +15,7 @@ export async function ebible_verse_languages_end_is(verse, bible_folders) {
   ("The counting is a command of its own, ",
     fn_name("bible_sentence_gaps_languages_curve_measure"),
     ", so this can be checked again rather than believed.");
-  "A language whose sentences carry no mark is not asked, so it neither finishes the sentence nor holds it open. With nothing left to ask, the verse counts as finished - which is what the page did before it learned to wait at all.";
+  ("A language whose sentences carry no mark is not asked, so it neither finishes the sentence nor holds it open. With nothing left to ask, the verse counts as finished - which is what the page did before it learned to wait at all.");
   let chapter_code = property_get(verse, "chapter_code");
   let property_name = verse_number_key();
   let verse_number = property_get(verse, property_name);
