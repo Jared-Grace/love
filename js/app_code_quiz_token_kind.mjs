@@ -13,8 +13,8 @@ export function app_code_quiz_token_kind(token) {
   let value = "value";
   let sign = "sign";
   let placed = "placed";
-  let digits = text_digits_is(token);
-  if (digits) {
+  let token_digits = text_digits_is(token);
+  if (token_digits) {
     return value;
   }
   let words = js_keywords_true_false();
