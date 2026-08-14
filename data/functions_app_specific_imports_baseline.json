@@ -13,6 +13,7 @@
   "qa_gates -> app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
   "qa_gates -> app_code_lessons_rights_space_gate_run",
   "qa_gates -> app_code_quiz_unscramble_gate_run",
+  "qa_gates -> app_code_quiz_unscramble_own_wording_gate_run",
   "qa_gates -> app_g_day_blocked_check",
   "qa_gates -> app_g_day_fraction_check",
   "qa_gates -> app_g_day_guide_pick_check",
