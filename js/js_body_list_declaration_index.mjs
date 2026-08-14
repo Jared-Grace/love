@@ -6,7 +6,6 @@ import { js_declare_init_get } from "./js_declare_init_get.mjs";
 import { add } from "./add.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-
 export function js_body_list_declaration_index(body) {
   "Where among a function's statements the one that writes out a list is, counted from the first, so something can be put in just above it.";
   "It is the place a register grows at. A function that answers a list of names holds a run of bindings and then the list that gathers them, and a new name belongs at the end of that run - which is to say immediately before this statement, and nowhere else that would still work.";
