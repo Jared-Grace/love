@@ -67,6 +67,7 @@ import { function_paths_frozen_gate_run } from "./function_paths_frozen_gate_run
 import { functions_calls_unawaited_gate_run } from "./functions_calls_unawaited_gate_run.mjs";
 import { functions_unreachable_statements_gate_run } from "./functions_unreachable_statements_gate_run.mjs";
 import { hash_reading_names_word_gate_run } from "./hash_reading_names_word_gate_run.mjs";
+import { app_code_lesson_ids_gate_run } from "./app_code_lesson_ids_gate_run.mjs";
 import { pages_published_gate_run } from "./pages_published_gate_run.mjs";
 import { folder_gitignore_absolute_gate_run } from "./folder_gitignore_absolute_gate_run.mjs";
 import { js_hash_object_word_calls_unknown_cases_gate_run } from "./js_hash_object_word_calls_unknown_cases_gate_run.mjs";
@@ -400,6 +401,7 @@ export function qa_gates() {
     firebase_folder_gate_run,
     hash_key_literals_gate_run,
     hash_reading_names_word_gate_run,
+    app_code_lesson_ids_gate_run,
     pages_published_gate_run,
     folder_gitignore_absolute_gate_run,
     hash_object_word_calls_unknown_gate_run,
