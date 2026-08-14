@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -21,11 +22,12 @@ export async function functions_statements_after_return_gate_run() {
   let walked = property_get(swept, "walked");
   let offenders = property_get(swept, "offenders");
   let path = functions_statements_after_return_baseline_path();
+  let name_write = fn_name("functions_statements_after_return_baseline_write");
   let told = await baseline_names_gate_generic(
     offenders,
     path,
     "these functions carry statements below a return - delete the dead lines, or move them above the return if they were meant to run",
-    fn_name("functions_statements_after_return_baseline_write"),
+    name_write,
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");

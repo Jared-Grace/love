@@ -109,6 +109,8 @@ export function g_arc_prompt(
   ("The catch_up pair stays BELOW the field list, because those two lines name a field, and moving them up with the openers would only trade one forward reference for another.");
   ("NEVER ON ONE WORD is there to keep an answer off ground a translation could move. Where translations disagree they disagree about SINGLE WORDS - monogenes is only begotten or one and only, and both are defensible readings of a contested root - while the sentence around the word says the same thing either way. So an answer resting on one word's precise sense is an answer resting on a translator's choice, and the player is reading one translation and cannot see that a choice was made.");
   ("IT NOW NAMES THE ORIGINAL, and that was decided rather than drifted into. The line first said only 'never on the precise sense of a single word', which asked for no knowledge of which words are contested - a flat ban avoids every contested word without knowing which they are, at the cost of banning uncontested ones too. It now bars a word's English sense only where that sense disagrees with the Greek, Hebrew or Aramaic, which is narrower and truer and does ask the writer to know where the two differ. Where it does not know, the sentence around the word still has to carry the answer, because the line above already wants a fit plain to somebody who has never read the Bible.");
+  ("THE TOWNSPEOPLE BAN NAMES WHO IT MEANS NOW, because as written it took away somebody the openers ask about. It said only 'no other townspeople - this person knows none of them', while one of the three doors to a believer asks how ministering to their NEIGHBOUR is going. A person whose profile gives them a husband and children can send those turns through their household; one dealt single and childless has nobody left, and the only way to answer is to invent the person the line just forbade.");
+  ("What the ban was ever protecting is the people the player can walk up to. Each of those is written by a call that never sees this one, so this person saying what the potter believes can contradict the potter's own arc with nothing to catch it. Somebody invented and attached to this person alone cannot collide with anything, because no other arc knows they exist - so the ban is now spelled as the people the player meets, and the making-up is allowed out loud beside it.");
   ("It also asks for nothing new. The line above it already wants an answer plain to somebody who has never read the Bible, and an answer turning on one word's precise sense already fails that - so this says out loud what the fit test was already asking for.");
   let json = json_format_to(profile);
   let lines = [
@@ -180,7 +182,8 @@ export function g_arc_prompt(
     "",
     "WHAT NOT TO WRITE",
     "No names. The game picks names when it runs.",
-    "No other townspeople. This person knows none of them.",
+    "No townspeople the player can walk up to. The game holds people the player sees and talks to, and this person knows none of them.",
+    "Anybody else is yours to make up - the neighbour they are serving, somebody in their household. That person belongs to this person alone: the player never meets them, and nobody else in the game knows them.",
     "No time of day, no weather, no place.",
     "Nothing about the player - not their gender, family, marital status, past, or how long they have been here.",
     "Nothing about persecution* or danger*.",

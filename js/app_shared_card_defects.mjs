@@ -40,5 +40,10 @@ export async function app_shared_card_defects() {
     }
   }
   await each_async(unique, each_name);
-  return defects;
+  let walked = list_size(unique);
+  let r = {
+    walked,
+    defects,
+  };
+  return r;
 }

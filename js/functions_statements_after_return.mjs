@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_function_statements_after_return } from "./js_function_statements_after_return.mjs";
