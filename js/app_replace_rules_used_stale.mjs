@@ -11,8 +11,9 @@ import { list_map } from "./list_map.mjs";
 import { each } from "./each.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_replace_rules_used_stale() {
-  "Every rule the saved list of rules-for-a-goal offers that its own exercise no longer has.";
+  "Every way the saved list of rules-for-a-goal has fallen behind the exercise it belongs to: a rule offered that the exercise no longer has, and a count of goals that no longer matches.";
   "The rules a goal shows are read from a saved list rather than worked out as the page draws, so renaming a symbol in an exercise leaves that list spelling the old one - and the player is then offered a rule that matches nothing, with the rule they need missing, on a page that looks perfectly well. Nothing else notices: the solver reads the exercise, so it still finds a path, and the explanations list reads the saved rules, so it quietly drops the renamed word too.";
+  "The count is asked separately because the list is reached by the number of the goal being played, so a goal added to an exercise reaches past the end of it and that goal draws with no rules at all - a break the rules themselves can never show, there being nothing there to read.";
   let rule_sets = app_replace_rule_sets();
   let saved = app_replace_rule_sets_fns_rules_used();
   let offenders = [];
@@ -21,6 +22,20 @@ export function app_replace_rules_used_stale() {
     let of_goals = property_get_or_null(saved, name);
     let present = null_not_is(of_goals);
     if (present) {
+      let goals = property_get(rule_set, "goals");
+      let goals_size = list_size(goals);
+      let saved_size = list_size(of_goals);
+      let counts_differ = equal_not(goals_size, saved_size);
+      if (counts_differ) {
+        let text = text_combine_multiple([
+          name,
+          " goals ",
+          goals_size,
+          " saved ",
+          saved_size,
+        ]);
+        list_add(offenders, text);
+      }
       let of_set = app_replace_rule_set_rules_get(rule_set);
       let originals = list_map_property(of_set, "original");
       function lambda2(of_goal) {
