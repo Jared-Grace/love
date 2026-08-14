@@ -4,7 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
 import { dispatcher_commands_fn_named } from "./dispatcher_commands_fn_named.mjs";
-import { functions_command_seams } from "./functions_command_seams.mjs";
+import { functions_dispatcher_denied } from "./functions_dispatcher_denied.mjs";
 export function python_mirrors() {
   arguments_assert(arguments, 0);
   ("Every list of names the python guard needs, together with where its generated");
@@ -41,7 +41,7 @@ export function python_mirrors() {
     {
       constant: "DENIED_DISPATCHER_FUNCTIONS",
       path: ".claude/hooks/denied_dispatcher_functions.py",
-      source: functions_command_seams,
+      source: functions_dispatcher_denied,
     },
     {
       constant: "CURL_READ_HOSTS",
