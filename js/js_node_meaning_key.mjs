@@ -1,6 +1,6 @@
+import { js_node_meaning_key_run } from "./js_node_meaning_key_run.mjs";
 import { js_node_meaning_key_sides } from "./js_node_meaning_key_sides.mjs";
 import { js_node_meaning_key_call } from "./js_node_meaning_key_call.mjs";
-import { js_node_meaning_key_terms } from "./js_node_meaning_key_terms.mjs";
 import { equal } from "./equal.mjs";
 import { js_node_writing_inside_is } from "./js_node_writing_inside_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
@@ -22,7 +22,6 @@ export function js_node_meaning_key(node) {
   let minus_sign = js_operator_minus_symbol();
   let times_sign = js_operator_asterisk_symbol();
   let over_sign = js_operator_division_symbol();
-  let comma = ",";
   let empty = "";
   let open = "(";
   let close = ")";
@@ -36,16 +35,7 @@ export function js_node_meaning_key(node) {
     let writing = js_node_writing_inside_is(node);
     let numbers = not(writing);
     if (run && numbers) {
-      let straight = plus_sign;
-      let opposite = minus_sign;
-      if (scales) {
-        straight = times_sign;
-        opposite = over_sign;
-      }
-      let terms = js_node_meaning_key_terms(node, straight, opposite);
-      let written = list_join(terms, comma);
-      let pieces = ["run", straight, open, written, close];
-      let key = list_join(pieces, empty);
+      let key = js_node_meaning_key_run(node, scales);
       return key;
     }
     let binary_key = js_node_meaning_key_sides(node);
