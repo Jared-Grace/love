@@ -20,7 +20,7 @@ export function app_replace_rule_set_replace_flow() {
         end: "c   c   a   b   c   c   c",
       },
     ],
-    why: "The rules demonstrate a sequential symbol replacement system where 'a' is replaced by 'b', and then 'b' is replaced by 'c', showing a stepwise transformation of input strings towards a uniform output of 'c' symbols wherever possible.",
+    why: "Two rules that feed each other: an a becomes a b, and a b becomes a c. So an a can travel all the way to c, but only by passing through b.",
   };
   return r;
 }
