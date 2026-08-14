@@ -2,7 +2,6 @@ import { gloss_word_occurrence_sentence } from "./gloss_word_occurrence_sentence
 import { list_map } from "./list_map.mjs";
 import { null_is } from "./null_is.mjs";
 import { objects_merge } from "./objects_merge.mjs";
-
 export function gloss_words_occurrence_added(tallies, chapter_code, words) {
   "One verse's interlinear words, each given the sentence about rarity its counts have earned.";
   "$plain chapter_code";
@@ -10,15 +9,19 @@ export function gloss_words_occurrence_added(tallies, chapter_code, words) {
   "The sentence is handed over already written, in the same breath as the parsing and the transliteration, because it belongs to the same class as those: a fact about the word that was worked out for the author rather than by them. An author who is given the sentence cannot get the number wrong, and one who is given the counts still can.";
   "A word that has earned nothing comes back exactly as it arrived, with no empty field standing in for the sentence it did not get. An author reading the passage should see a sentence where there is one to see and nothing at all where there is not, rather than having to tell an absence from a blank.";
   function word_read(word) {
-    let occurrence = gloss_word_occurrence_sentence(tallies, chapter_code, word);
+    let occurrence = gloss_word_occurrence_sentence(
+      tallies,
+      chapter_code,
+      word,
+    );
     if (null_is(occurrence)) {
       return word;
     }
     let sentence = {
       occurrence,
     };
-    let added = objects_merge([word, sentence]);
-    return added;
+    let with_sentence = objects_merge([word, sentence]);
+    return with_sentence;
   }
   let added = list_map(words, word_read);
   return added;
