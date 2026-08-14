@@ -1,3 +1,7 @@
+import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
+import { noop } from "./noop.mjs";
+import { list_first } from "./list_first.mjs";
+import { null_is } from "./null_is.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -40,7 +44,8 @@ export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
   "Every lesson before this asks for the answer to a whole line at once, so a learner who knows the rule and slips on the arithmetic, and one who does the arithmetic and does not know the rule, are marked the same. Here the two are separated: the arithmetic is done FOR the learner and the only thing asked is the order.";
   "One quiz kind, not three. Backwards asks what code produces this value, and here the value is not what is being asked for; unscramble asks the learner to build the line, and the line is given. Both would be questions about something the lesson is not teaching.";
-  "Two operators a line, so two buttons - the smallest number that is still a choice. A wrong press dims that button and leaves the other live, so a wrong first press is followed by a forced right one; that is why the review now requeues twice rather than once. Three operators is the next step, and it belongs after this shape has been met, not inside it.";
+  "Two operators a line - the smallest number that is still a choice. A wrong press refuses that operator and leaves the other pressable, so a wrong first press is followed by a forced right one; that is why the review now requeues twice rather than once. Three operators is the next step, and it belongs after this shape has been met, not inside it.";
+  "The front page and the quiz press the same line, built by the one unit both of them call. What the front page adds is words: which operator to press, and what the press just did. Two copies of the pressing, one of them narrated, would drift the moment either was touched.";
   let name_id = app_code_lesson_expression_choose_order_title_name_id();
   let trees = {};
   let first_done = false;
@@ -84,91 +89,79 @@ export function app_code_lesson_expression_choose_order() {
     let list = [item];
     return list;
   }
-  function on_answer(parent, info, qa, on_success, on_wrong) {
-    "the choosing quiz: the line as it stands now, and one button for each operator still in it. Pressing a ready operator works that one out and redraws the shorter line; pressing one that is not ready dims it and leaves the other live.";
-    "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
+  function tree_of(qa, info) {
+    "the shape behind a question, found again from the writing it was printed as - the quiz hands its question over as text, and the step-at-a-time working needs the shape it came from";
     let answer_property = property_get(info, "answer_property");
     let question_property =
       app_code_lesson_quiz_qa_property_other(answer_property);
     let question = property_get(qa, question_property);
     let tree = property_get(trees, question);
-    let line = html_div(parent);
-    let buttons = html_div(parent);
-    draw(tree);
-    function draw(current) {
-      html_clear(line);
-      let code = app_code_expression_code(current);
-      html_text_set_code_dark(line, code);
-      html_clear(buttons);
-      let nodes = app_code_expression_nodes(current);
-      let ready = app_code_expression_nodes_ready(current);
-      function each_node(node) {
-        let symbol = property_get(node, "operator");
-        let b = app_shared_button_wide(buttons, symbol, on_click);
-        let background = app_shared_color_gray_light();
-        html_style_background_color_set(b, background);
-        html_style_margin_top(b, "0.2em");
-        async function on_click() {
-          let ready_is = list_includes(ready, node);
-          if (not(ready_is)) {
-            ("a press on an operator whose sides are not both worked out yet: dim just this one, leave the other live, and mark the attempt so the review asks again");
-            on_wrong();
-            app_code_lesson_quiz_wrong_set(b);
-            html_style_set(b, "pointer-events", "none");
-            html_style_opacity(b, "0.5");
-            return;
-          }
-          app_shared_button_screen_green_style_assign(b);
-          let stepped = app_code_expression_solved(current, node);
-          let more = app_code_expression_node_is(stepped);
-          if (more) {
-            draw(stepped);
-            return;
-          }
-          ("nothing is left but a value, so the line is finished and the learner is done with it");
-          html_clear(buttons);
-          let last = text_to(stepped);
-          html_text_set_code_dark(line, last);
-          await on_success();
-        }
-        return b;
-      }
-      each(nodes, each_node);
-    }
+    return tree;
+  }
+  function on_answer(parent, info, qa, on_success, on_wrong) {
+    "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
+    "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
+    let tree = tree_of(qa, info);
+    app_code_expression_choose_line(parent, tree, noop, on_wrong, on_success);
   }
   function on_question_example(parent, question) {
-    "the lesson's own front page: the line, with the operator that may be worked out next pressable inside the code itself. Pressing it works that one out and the line becomes the shorter one - 1 + 2 * 3 pressed on the times becomes 1 + 6 - so a learner walks the whole thing through before being asked to do it.";
-    "Only the operator that may go next is pressable. One that still holds another underneath it is left as plain code, because a press that has to be turned down teaches the rule by refusal, and the front page is where the rule is being SHOWN.";
+    "the lesson's front page: the same line to press as the quiz, and beneath it a walkthrough saying what to press at each step and what the press just did";
+    "Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.";
     "Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.";
     let tree = property_get(trees, question);
-    let line = html_div(parent);
-    html_style_code_dark(line);
+    let line_holder = html_div(parent);
     let note = html_div(parent);
-    draw_example(tree);
-    function draw_example(current) {
-      html_clear(line);
-      let ready = app_code_expression_nodes_ready(current);
-      function on_operator(node, span) {
-        let ready_is = list_includes(ready, node);
-        if (not(ready_is)) {
-          return;
-        }
-        app_code_expression_operator_pressable(span);
-        function on_click() {
-          let stepped = app_code_expression_solved(current, node);
-          draw_example(stepped);
-        }
-        html_on_click(span, on_click);
-      }
-      app_code_expression_paint(line, current, on_operator);
+    function say_choose(ready, lead) {
+      "name the one operator that may go next, so the walkthrough tells rather than asks";
+      let first = list_first(ready);
+      let symbol = property_get(first, "operator");
+      html_div_cycle_code(note, [lead, symbol]);
+    }
+    function on_change(step) {
+      "after every press, say what that press did and what to press next";
       html_clear(note);
-      let more = app_code_expression_node_is(current);
-      if (not(more)) {
-        html_div_cycle_code(note, ["That is the whole line worked out"]);
+      let solved = property_get(step, "solved");
+      let ready = property_get(step, "ready");
+      if (null_is(solved)) {
+        say_choose(ready, "First, choose the ");
         return;
       }
-      html_div_cycle_code(note, ["Press the operator to work out next"]);
+      let value = property_get(step, "value");
+      let solved_code = app_code_expression_code(solved);
+      let value_text = text_to(value);
+      html_div_cycle_code(note, [
+        "Good job! the ",
+        solved_code,
+        " becomes ",
+        value_text,
+      ]);
+      let current = property_get(step, "current");
+      let more = app_code_expression_node_is(current);
+      if (not(more)) {
+        html_div_cycle_code(note, ["Great! You did this correctly"]);
+        html_div_cycle_code(note, ["Now it is your turn to choose"]);
+        return;
+      }
+      let current_code = app_code_expression_code(current);
+      html_div_cycle_code(note, ["So now we have ", current_code]);
+      say_choose(ready, "Now, choose the ");
     }
+    function on_wrong_example(node) {
+      "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
+      let symbol = property_get(node, "operator");
+      html_div_cycle_code(note, [
+        "Not yet - the ",
+        symbol,
+        " still has an operator on one of its sides",
+      ]);
+    }
+    app_code_expression_choose_line(
+      line_holder,
+      tree,
+      on_change,
+      on_wrong_example,
+      noop,
+    );
   }
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
