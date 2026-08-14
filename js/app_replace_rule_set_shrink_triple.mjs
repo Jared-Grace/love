@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_triple() {
         end: "a",
       },
     ],
-    why: "The rules demonstrate a grammar that reduces any sequence of three or more consecutive 'a's to a single 'a' by repeatedly replacing 'a a a' with 'a', showing a shrinking or compression process.",
+    why: "Three a's in a row become one, so each use removes two. This is the rule before this one, read backwards.",
   };
   return r;
 }

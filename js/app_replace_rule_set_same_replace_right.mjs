@@ -16,7 +16,7 @@ export function app_replace_rule_set_same_replace_right() {
         end: "a   b   a   a   b   a   a   b",
       },
     ],
-    why: "The rules demonstrate a grammar where every occurrence of two consecutive 'a's can be replaced by 'a','b', allowing the transformation of any even-length sequence of 'a's into a sequence where each original pair is replaced, showing a systematic rightward replacement pattern.",
+    why: "Two a's side by side: the right one turns into a b. The left one is left alone.",
   };
   return r;
 }

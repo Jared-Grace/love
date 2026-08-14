@@ -16,7 +16,7 @@ export function app_replace_rule_set_replace_left_same() {
         end: "a   a   a   a   a   a   a   a",
       },
     ],
-    why: "The rules demonstrate a grammar that replaces every occurrence of 'b' immediately followed by 'a' with 'a' followed by 'a', effectively converting all 'b's that are followed by 'a' into 'a's, while preserving the sequence length.",
+    why: "A b just before an a becomes an a. Same as the last one, other side.",
   };
   return r;
 }

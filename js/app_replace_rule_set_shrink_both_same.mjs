@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_both_same() {
         end: "a   b   a",
       },
     ],
-    why: "The rules demonstrate a grammar that reduces any occurrence of 'a b a' to 'b', effectively shrinking sequences by removing matching 'a's on both sides of a 'b'.",
+    why: "A b with an a on each side loses both of them at once. The b survives alone.",
   };
   return r;
 }

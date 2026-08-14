@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_triple() {
         end: "a   a   a   a   a   a   a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar where each 'a' is replaced by three 'a's, showing exponential growth (tripling) of 'a's with each application, which explains how the goals with 3, 5, and 7 'a's can be derived from a single 'a' through repeated rule applications.",
+    why: "One a becomes three, so each use adds two. Starting from one a you can reach 3, 5 or 7 - but never an even number, because you only ever add two at a time.",
   };
   return r;
 }

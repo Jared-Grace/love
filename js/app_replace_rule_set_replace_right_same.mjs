@@ -16,7 +16,7 @@ export function app_replace_rule_set_replace_right_same() {
         end: "a   a   a   a   a   a   a   a",
       },
     ],
-    why: "The rules demonstrate a grammar that replaces every occurrence of 'a b' with 'a a', effectively transforming all 'b's that follow an 'a' into 'a's, resulting in sequences where 'a's replace 'b's in those specific contexts.",
+    why: "A b just after an a becomes an a itself, so the pair ends up matching.",
   };
   return r;
 }

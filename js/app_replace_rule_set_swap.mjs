@@ -20,7 +20,7 @@ export function app_replace_rule_set_swap() {
         end: "b   a   a   a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar for swapping adjacent 'a' and 'b' symbols, effectively moving all 'a's to the end of the sequence by repeatedly swapping any 'a' that appears before a 'b'.",
+    why: "An a and the b after it trade places. Use it over and over and an a walks all the way to the right, one step per b it passes.",
   };
   return r;
 }
