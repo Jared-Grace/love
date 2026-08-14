@@ -6,7 +6,10 @@ export async function functions_locals_unread_names() {
   "Every name bound and never read in this repo, written as the function it sits in and then the name, one line each.";
   "The function alone would not be enough to measure against a record. A function already known to bind one name nothing reads could quietly start binding a second, and a record holding only the function would call that already known - so the pair is what is written down, and a new name in an old offender fails like any other new one.";
   "A space joins the two because neither half may contain one, so the pair can always be read back apart. That matters more than it looks: the record is compared as text, and a joiner that could appear inside either half would make two different pairs share one line.";
-  let offenders = await functions_locals_unread();
+  "How many functions were opened comes through unchanged, because this is only a way of writing down what the sweep found and changing the shape of the answer would lose the one thing that tells a clean run from a blind one.";
+  let swept = await functions_locals_unread();
+  let walked = property_get(swept, "walked");
+  let offenders = property_get(swept, "offenders");
   let names = [];
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
@@ -16,5 +19,9 @@ export async function functions_locals_unread_names() {
       list_add(names, pair);
     }
   }
-  return names;
+  let r = {
+    walked,
+    names,
+  };
+  return r;
 }
