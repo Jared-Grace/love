@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_triple() {
         end: "a",
       },
     ],
-    why: "Three a's in a row become one, so each use removes two. This is the rule before this one, read backwards.",
+    why: "Three 'a's in a row become one, so each use removes two. This is the rule before this one, read backwards.",
   };
   return r;
 }

@@ -16,7 +16,7 @@ export function app_replace_rule_set_double() {
         end: "a   a   a   a   a",
       },
     ],
-    why: "Each use turns one a into two, so the line grows by one. Do it to every a in the line and the count doubles.",
+    why: "Each use turns one 'a' into two, so the line grows by one. Do it to every 'a' in the line and the count doubles.",
   };
   return r;
 }
