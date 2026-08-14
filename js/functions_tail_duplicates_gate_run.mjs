@@ -22,12 +22,8 @@ export async function functions_tail_duplicates_gate_run() {
   "where that judgment is written down rather than argued again every run.";
   let named = await functions_tail_duplicate_names();
   let path = functions_tail_duplicates_baseline_path();
-  let f_name = fn_name("functions_tail_duplicates_baseline_write");
-  let hint = text_combine_multiple([
-    "these functions now end in the same run of work, which is a helper waiting to be written - give the shared ending its own name and call it from each, or record the group with ",
-    f_name,
-    " if they are two ideas that merely finish alike",
-  ]);
+  let hint =
+    "these functions now end in the same run of work, which is a helper waiting to be written - give the shared ending its own name and call it from each. The record only ever shrinks, so a new group cannot be recorded as known: collapsing the ending is the only way out";
   let name_write = fn_name("functions_tail_duplicates_baseline_write");
   let r = await baseline_names_gate_generic(named, path, hint, name_write);
   return r;

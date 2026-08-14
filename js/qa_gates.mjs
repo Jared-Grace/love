@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_unlisted_gate_run } from "./app_replace_rule_sets_unlisted_gate_run.mjs";
 import { g_npc_path_clear_facing_best_cases_gate_run } from "./g_npc_path_clear_facing_best_cases_gate_run.mjs";
 import { js_code_same_meaning_is_cases_gate_run } from "./js_code_same_meaning_is_cases_gate_run.mjs";
 import { app_g_player_walk_cases_gate_run } from "./app_g_player_walk_cases_gate_run.mjs";
@@ -479,6 +480,7 @@ export function qa_gates() {
     app_replace_abbreviations_gate_run,
     app_replace_abbreviations_unspelled_gate_run,
     app_replace_rules_used_gate_run,
+    app_replace_rule_sets_unlisted_gate_run,
     git_push_urls_gate_run,
     gloss_back_references_gate_run,
     daemons_stale_gate_run,

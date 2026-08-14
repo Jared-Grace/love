@@ -41,6 +41,7 @@ export function bible_strong_scope_counts(tallies, chapter_code, strong) {
   }
   let r = {
     strong,
+    testament_name,
     chapter,
     book,
     testament,
