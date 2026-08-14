@@ -25,7 +25,7 @@ The human's reading time is the scarcest thing here, and with ~10 Claudes runnin
 
 **Topics partition by concern, but DRY doesn't partition by file** — a duplication sweep is global by nature, and the files worth collapsing hardest are the ones peers are editing right now. So split it: a **DRY-topic Claude takes the widest, coldest duplications**, where a sweep can't collide; and **whoever is already editing a hot file collapses the duplication in it there**, as part of that work. Nobody sweeps hot files from the outside.
 
-**Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit. That's investment — it repays in the currency it spends.
+**Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit; a perf fix stops every future run paying the same waste. That's investment — it repays in the currency it spends.
 
 **Picking nothing is a real option.** Idling is free and low-value work is not, so usage spent now isn't there for the high-value task that arrives later. Once the budget is tight, **idling beats low-value work** — if nothing on the list clears the bar, stop.
 
@@ -33,7 +33,7 @@ The human's reading time is the scarcest thing here, and with ~10 Claudes runnin
 
 Two rules keep this from backfiring:
 
-- **Admission test.** Only work that's safe to start unasked belongs here: it preserves behavior (a refactor, a rename, a codemod), or it only adds a new named unit nothing calls yet. Total, idempotent, independent — the same bar as an auto transform.
+- **Admission test.** Only work that's safe to start unasked belongs here: it preserves behavior (a refactor, a rename, a codemod), or it only adds a new named unit nothing calls yet. Total, idempotent, independent — the same bar as an auto transform. **"Preserves behavior" is settled by reasoning, not by a passing diff:** reasoning answers for every input, a diff only for the ones you ran. Diff both paths over the same real input — the **results**, never the counts — as a *check* on the reasoning, never as a substitute for it. Where the code can't be reasoned about, **simplify it first, as its own commit**; that cost is the price of the proof, not overhead.
 - **Hard stop on judgment.** The moment the next step needs a decision that's genuinely the human's, **stop and report**. Don't guess in order to stay busy — that regenerates exactly the reading load this is removing.
 
 **Report on a macro cadence, commit on a micro one.** Micro-commits stay: one atomic idea per commit, `ao` and `q` between them, refactors isolated. But "check yourself often" was never the same rule as "check *with the human* often" — make many small commits, then report **once**, or immediately on a real interrupt: a decision that's theirs, a peer collision, something broke.
