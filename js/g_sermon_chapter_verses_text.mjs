@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { list_join_colon } from "./list_join_colon.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -17,11 +19,14 @@ export function g_sermon_chapter_verses_text(passages) {
   "The SCRIPTURE is what goes over, not the sermon lines written from it. The lines are the game's own words and an arc that answered from them would be answering from a paraphrase of Scripture rather than from Scripture.";
   "A passage's verses are given together on one line because that is the unit the sermon was written against - splitting them back into single verses would offer a smaller answer than any passage actually makes.";
   "The numbers are BRACKETED, which is the whole of what handing this over as JSON would have bought. Measured over every written chapter, JSON cost 41 percent more characters to repeat the same two keys 835 times, and the escaping that would have argued for it never arises - this translation writes speech with curly quotes, so not one passage in 835 holds a quote JSON would escape.";
-  "THE CHAPTER IS INSIDE THE BRACKET, always, even when only one chapter was handed over. A conditional citation would be two conventions, and the prompt would have to say which one is in force this call - so the one case that needs it would be the one case nobody had practised. Written [ROM08:1] it also makes an answer self-checking: a reference names the chapter it came from, so an answer drawn from the wrong chapter can be caught instead of read as a verse number that happens to exist in both.";
+  "THE CHAPTER IS INSIDE THE BRACKET, always, even when only one chapter was handed over. A conditional citation would be two conventions, and the prompt would have to say which one is in force this call - so the one case that needs it would be the one case nobody had practised. Written [Romans 8:1] it also makes an answer self-checking: a reference names the chapter it came from, so an answer drawn from the wrong chapter can be caught instead of read as a verse number that happens to exist in both.";
   "What the brackets buy is the boundary. Without them the rule separating the citation from the Scripture is FIRST SPACE, which is left to be inferred and is invisible where it matters most - the words the reading call has to quote back. Bracketed verse numbers are also how plain-text Scripture is written nearly everywhere, so it is a convention already known rather than one being taught. It costs two characters a passage against JSON's forty-one percent.";
   "A COLON separates the chapter from its verses, not a space. Every verse reference a reader has ever met is written that way, and the repo itself already reads them that way - its own parser splits 3:1-7 on the colon. A space made this the one place where a reference was spelled in a form that appears nowhere else, so the shape had to be learned from the sentence introducing it rather than recognised on sight. It is the same argument the brackets are here for, applied to the character between the two numbers.";
-  "The colon also parts two runs of DIGITS. A chapter code ends in its own number, so a space left 1JN01 and 1 side by side with nothing between them but a gap - which is the weakest boundary available exactly where the answer has to copy one and not the other.";
-  "Put back into VERSE ORDER WITHIN EACH CHAPTER, because the order they are stored in is the order somebody wrote them in - 1 John 1 opens on verse two - and a chapter handed over out of order reads as a chapter that has been cut about. The chapters themselves keep the order the caller gathered them in, which is why the sort is per chapter and not over the whole list: sorting everything together interleaved Romans 7 and Romans 8 verse by verse, and a reader cannot follow an argument dealt like a pack of cards. The copy is taken first so sorting cannot reach back into the caller's own list.";
+  "The colon also parts two runs of DIGITS - the chapter number and the verse number - where a space is the weakest boundary available at exactly the point the answer has to copy one and not the other.";
+  ("The book is SPELLED OUT rather than coded: Romans 8, never ROM08. The code is the game's own shorthand and is a spelling of a book name that exists nowhere outside this repo, so a prompt written in it asks the writer to work in a private notation for the one thing it most needs recognised. What comes back is turned into the code by ",
+    fn_name("g_arc_answer_chapter_code"),
+    ", which reads it against the chapters actually handed over - so the translation costs one lookup and cannot resolve a book the arc was never offered.");
+  ("Put back into VERSE ORDER WITHIN EACH CHAPTER, because the order they are stored in is the order somebody wrote them in - 1 John 1 opens on verse two - and a chapter handed over out of order reads as a chapter that has been cut about. The chapters themselves keep the order the caller gathered them in, which is why the sort is per chapter and not over the whole list: sorting everything together interleaved Romans 7 and Romans 8 verse by verse, and a reader cannot follow an argument dealt like a pack of cards. The copy is taken first so sorting cannot reach back into the caller's own list.");
   let copied = list_copy(passages);
   function first_verse(passage) {
     let numbers = property_get(passage, "verse_numbers");
@@ -48,7 +53,8 @@ export function g_sermon_chapter_verses_text(passages) {
     let ordered = list_sort_number_mapper(mine, first_verse);
     for (let passage of ordered) {
       let joined = property_list_join_comma(passage, "verse_numbers");
-      let reference = list_join_colon([chapter, joined]);
+      let named = ebible_chapter_code_label(chapter);
+      let reference = list_join_colon([named, joined]);
       let cited = text_wrap_brackets(reference);
       let scripture = property_get(passage, "scripture");
       let line = list_join_space([cited, scripture]);
