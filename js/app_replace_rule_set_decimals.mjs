@@ -46,7 +46,7 @@ export function app_replace_rule_set_decimals() {
         end: "7 9 . 5 8 6 7",
       },
     ],
-    why: "The replacement rules define a context-free grammar for decimal numbers, including integers and numbers with fractional parts, by specifying how digits and decimal points can be combined to form valid decimal representations.",
+    why: "A decimal is a whole number, then a dot, then more digits. The whole of the last exercise is reused unchanged; the dot and what follows it are the only new part.",
   };
   return r;
 }

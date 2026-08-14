@@ -12,7 +12,10 @@ export async function literals_frozen_storage_gate_run() {
   ("Measured against zero rather than against a record of what was already wrong, because the set was clear when this was written: two names were missing on the day it was built, both put right in the same breath, and there is nothing left to grandfather.");
   ("What it does not reach: the words that escape into local storage, which arrive at their seam as a key computed far from it rather than as a getter the opening imports. Those stay a judgement, and stay on the list by hand.");
   ("Half of that gap has since been closed from the other side. A local storage key is a function's own NAME with a word after it, so what escapes there is a name rather than a value, and a gate over values could never have watched it, and the sibling that does keeps a record of its own. The word after the name is the half still standing here: it is written out at the call rather than held by a getter, so nothing reads it off a name.");
-  let offenders = await literals_frozen_storage_walked();
+  ("How many openings were walked is carried out with the verdict, and it is the half this stood without for a while. What came back said checked and held the number of offenders, so a clean run answered nothing checked - which is also exactly what a walk that had stopped reaching any opening would answer, and there was no number anywhere that could tell those apart.");
+  let walked = await literals_frozen_storage_walked();
+  let openers = property_get(walked, "openers");
+  let offenders = property_get(walked, "offenders");
   let f_name = fn_name("literals_frozen_name_add");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([

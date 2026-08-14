@@ -4,7 +4,7 @@ export function app_replace_rule_set_binary_numbers() {
     name: "Binary Numbers",
     rules: ["g > b g", "g > b", "b > 0", "b > 1"],
     goals: app_replace_rule_set_binary_numbers_goals("g"),
-    why: "The replacement rules generate all non-empty binary numbers by recursively expanding 'g' into sequences of '0's and '1's, demonstrating the construction of binary strings of any length.",
+    why: "Two jobs, now split between two placeholders: g adds one more digit and then finishes, and each b settles as a 0 or a 1. Keeping the growing apart from the settling is what makes longer numbers easy to build.",
   };
   return r;
 }

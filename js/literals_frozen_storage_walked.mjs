@@ -11,7 +11,7 @@ import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
 export async function literals_frozen_storage_walked() {
-  "Every written word that a browser database is opened with and that nothing has frozen - each answer naming the function that opens the database and the word it opened it with.";
+  "Every written word that a browser database is opened with and that nothing has frozen - each answer naming the function that opens the database and the word it opened it with - and how many openings were walked to find them.";
   "A word handed to the opening of a browser database is published by that one act. From then on it is written on somebody else's disk, and their browser looks under it and under nothing else, so changing it here leaves every future read looking for the new word while every past write still holds the old one. Renaming the function that holds it is safe; changing what it hands back is not, and no later repair can reach the data.";
   "That is why this can be asked at all, where whether a word has escaped is otherwise a judgement nobody here can make. Nothing is being guessed from a name or a meaning: the word was passed to the opening of a database, which is what escaping IS.";
   "The pair is the answer rather than the word alone, so a database opened with two unfrozen words reads as two things to fix rather than one.";
@@ -41,5 +41,10 @@ export async function literals_frozen_storage_walked() {
     }
   }
   offenders.sort();
-  return offenders;
+  ("How many openings were walked comes back with what was found in them, because finding nothing and reaching nothing say exactly the same word. The two ways in are read off an index of the whole repo, so a change to how that index is built - or to what the shared opener is called - can leave this walking an empty set, and every opening in the repo would then be unwatched while the answer stayed the same as on the day it was clean.");
+  let walked = {
+    openers: list_size(openers),
+    offenders,
+  };
+  return walked;
 }
