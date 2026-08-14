@@ -1,12 +1,13 @@
+import { app_replace_rule_set_why_draw } from "./app_replace_rule_set_why_draw.mjs";
 import { html_draw_lambda_text } from "./html_draw_lambda_text.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_is } from "./text_is.mjs";
 export function app_replace_rule_set_why_text(rule_set) {
-  "The explanation of a set of rules as plain words, whichever way it was written: a sentence comes back as it stands, and a drawing program is run against stand-in elements to see what it would have said.";
+  "The words a learner reads under the title of a set of rules, whichever way the explanation was written.";
+  "It is drawn against stand-in elements and read back rather than taken from the source, so the answer is what the page says and not what the source spells - the quote marks around a symbol never reach the page, and a drawing program has no source to read at all.";
   let why = property_get(rule_set, "why");
-  if (text_is(why)) {
-    return why;
+  function draw(parent) {
+    app_replace_rule_set_why_draw(parent, why);
   }
-  let r = html_draw_lambda_text(why);
+  let r = html_draw_lambda_text(draw);
   return r;
 }
