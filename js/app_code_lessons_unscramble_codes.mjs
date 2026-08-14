@@ -12,8 +12,8 @@ export function app_code_lessons_unscramble_codes(rounds) {
   "The lines are generated rather than listed for the same reason, and each lesson is asked several rounds' worth, because a lesson varies what it asks and only some of what it can ask may be worth reporting.";
   let seen = [];
   let found = [];
-  function on_exercise(visit) {
-    let exercise = property_get(visit, "exercise");
+  function on_exercise(exercise_visit) {
+    let exercise = property_get(exercise_visit, "exercise");
     let unscramble = app_code_exercise_on_answer_is(
       exercise,
       app_code_lesson_quiz_token_select,
@@ -21,7 +21,7 @@ export function app_code_lessons_unscramble_codes(rounds) {
     if (not(unscramble)) {
       return;
     }
-    let lesson = property_get(visit, "lesson");
+    let lesson = property_get(exercise_visit, "lesson");
     let info = property_get(exercise, "info");
     let answer_property = property_get(info, "answer_property");
     let code = property_get(exercise, answer_property);
