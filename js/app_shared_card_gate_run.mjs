@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_shared_card_defects } from "./app_shared_card_defects.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function app_shared_card_gate_run() {
