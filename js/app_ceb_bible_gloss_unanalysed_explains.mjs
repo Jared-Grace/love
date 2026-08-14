@@ -25,6 +25,8 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
     "The word for a word, and for what is said in words - a saying, a message, a promise. Where the Bible speaks of the word of God, this is the word standing there.";
   let diin =
     "The question word ‘where’. It asks after the place a thing is in, and it is also used to say ‘where’ inside a longer sentence, without a second word for it.";
+  let oo =
+    "The word for ‘yes’ - the answer that grants what was asked or agrees with what was said.";
   let dagat = "The word for the sea.";
   let silang =
     "The word for ‘they’, with the linker on its end. Its root is ‘sila’, and the ‘-ng’ ties it to the word that follows.";
@@ -33,7 +35,8 @@ export function app_ceb_bible_gloss_unanalysed_explains() {
   let r = {
     among:
       "The word for ‘our’ in the sense that leaves out the one being spoken to - ours and not yours - carrying the linker that ties it to the thing owned. Cebuano keeps two words for ‘our’ and chooses between them by whether the hearer is counted in.",
-    oo: "The word for ‘yes’ - the answer that grants what was asked or agrees with what was said.",
+    oo,
+    Oo: oo,
     unta: "A small word laying a wish over what is said - ‘may it be’, ‘I wish that’. It also marks a thing that was meant or hoped for and did not come about, so the same word carries both the prayer and the regret.",
     "kanus-a":
       "The question word ‘when’. It asks after the time of a thing, and it is also used inside a longer sentence where English says ‘when’.",
