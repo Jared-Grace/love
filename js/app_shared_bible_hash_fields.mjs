@@ -1,3 +1,4 @@
+import { app_shared_bible_hash_field_verses_shown } from "./app_shared_bible_hash_field_verses_shown.mjs";
 import { app_shared_bible_hash_field_verses_count } from "./app_shared_bible_hash_field_verses_count.mjs";
 import { app_shared_bible_hash_field_book } from "./app_shared_bible_hash_field_book.mjs";
 import { app_shared_bible_hash_field_chapter } from "./app_shared_bible_hash_field_chapter.mjs";
@@ -11,6 +12,7 @@ export function app_shared_bible_hash_fields() {
   let book = app_shared_bible_hash_field_book();
   let mode = app_shared_bible_hash_field_mode();
   let verses_count = app_shared_bible_hash_field_verses_count();
-  let fields = [language, chapter, book, mode, verses_count];
+  let verses_shown = app_shared_bible_hash_field_verses_shown();
+  let fields = [language, chapter, book, mode, verses_count, verses_shown];
   return fields;
 }

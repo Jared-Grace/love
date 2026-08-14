@@ -4,6 +4,7 @@ export function g_opener_explanations() {
   "WITHOUT IT A WRITER IS ANSWERING A SENTENCE IT WAS NEVER SHOWN. Five of the openers read close enough to speech to guess at, but `the gospel` is an ACT rather than an utterance - the player shares it, and nothing anywhere said what was shared. A person cannot object to words that were never given.";
   "AND THE OPENER DECIDES THE KIND OF ANSWER, which is the half nobody would infer. Asked how they are, somebody names a trouble. Asked what they believe, they state their own belief - `I believe people are reincarnated` - which is not a trouble at all. Told the gospel, they answer the gospel itself, with a question about it or an objection to it. Three openers, three different shapes of reply, and a prompt that says only `the person utters an answer` gets one shape three times.";
   "KEYED BY THE OPENER WORD so one explanation serves both lists. `how are you` is offered to a believer and an unbeliever alike, and it means the same thing at both doors - the belief state is already said by which list the opener was rendered under.";
+  let gospel_said = g_gospel_share_said();
   let r = {
     "how are you": {
       said: 'The player asks "How are you?"',
@@ -16,9 +17,9 @@ export function g_opener_explanations() {
         "The person says what they themselves believe, plainly, as their own settled view rather than as a problem.",
     },
     "the gospel": {
-      said: "The player tells them the gospel: who Jesus is, that he died for their sin and rose again.",
+      said: gospel_said,
       draws:
-        "The person answers the gospel itself - a question about it, or an objection to it.",
+        "The person answers the gospel just shared - a question about it, or an objection to it. Somebody new to it asks plainly; somebody who already knows a good deal says it in more informed terms. That shows in how they say it, not in how far it reaches - whatever they raise, one of the passages above has to be its plain and obvious answer.",
     },
     "a Bible question": {
       said: "The believer asks the player a question about Scripture.",
