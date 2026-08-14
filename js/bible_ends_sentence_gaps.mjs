@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_copy_reverse } from "./list_copy_reverse.mjs";
+import { null_is } from "./null_is.mjs";
+import { add_1 } from "./add_1.mjs";
+import { bible_end_sentence_ahead } from "./bible_end_sentence_ahead.mjs";
+import { list_add } from "./list_add.mjs";
 export function bible_ends_sentence_gaps(ends) {
   "Given, for each place a passage could stop, whether the sentence finished there, how far on it does finish - the count of extra verses a passage cut there would be carried on by.";
   "This is the measurement behind the number a reader is shown. A passage asked for as four verses is carried on to the end of the sentence it stops in, and both the wording that warns them and the bound that stops the carrying were written against a guess: that a sentence finishes within a verse or two of where the counting stopped. Nobody had counted, and a guess about how OFTEN something happens cannot be checked against a range - only against a tally.";
@@ -24,6 +30,10 @@ export function bible_ends_sentence_gaps(ends) {
     }
     list_add(gaps, ahead);
   }
-  let measured = { gaps, unread, unfinished };
+  let measured = {
+    gaps,
+    unread,
+    unfinished,
+  };
   return measured;
 }

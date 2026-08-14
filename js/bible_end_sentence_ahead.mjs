@@ -1,6 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { null_is } from "./null_is.mjs";
 import { add_1 } from "./add_1.mjs";
 export function bible_end_sentence_ahead(ended, ahead_after) {
