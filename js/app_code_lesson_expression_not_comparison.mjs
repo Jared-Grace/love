@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { app_code_lesson_expression_not_comparison_intro } from "./app_code_lesson_expression_not_comparison_intro.mjs";
 import { app_code_lesson_expression_not_comparison_title_name_id } from "./app_code_lesson_expression_not_comparison_title_name_id.mjs";
@@ -10,7 +11,6 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { invoke_until } from "./invoke_until.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_last } from "./list_last.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_not_comparison() {
   "the step from ! on another ! (already learned) to ! on a whole comparison: !(3 === 5). One new idea, and it is the brackets - a ! applies only to what is next to it, so the comparison has to be gathered into one thing before the ! can apply to all of it.";
@@ -20,8 +20,7 @@ export function app_code_lesson_expression_not_comparison() {
   function wrapped_wanted(want) {
     "a bracketed comparison that works out to want, drawn again until it does";
     function matches(side) {
-      let value = property_get(side, "value");
-      let same = equal(value, want);
+      let same = property_equals(side, "value", want);
       return same;
     }
     let drawn = invoke_until(app_code_comparison_side_wrapped, matches);
