@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { function_getter_literal_try } from "./function_getter_literal_try.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { fn_name } from "./fn_name.mjs";
