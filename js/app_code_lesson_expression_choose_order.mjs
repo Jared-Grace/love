@@ -135,7 +135,7 @@ export function app_code_lesson_expression_choose_order() {
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
     let info = {
-      question_label: "",
+      question_label: "The line to work out: ",
       on_question: html_text_set_code_dark,
       answer_label: "Choose the operator to work out first: ",
       on_answer,
