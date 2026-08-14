@@ -89,8 +89,8 @@ export function app_code_lesson_expression_choose_order() {
     let tree = tree_of(qa, info);
     app_code_expression_choose_line(parent, tree, noop, on_wrong, on_success);
   }
-  function on_question_example(parent, question) {
-    "the lesson's front page: the same line to press as the quiz, and beneath it a walkthrough saying what to press at each step and what the press just did";
+  function on_question_example(parent, question, card) {
+    "the lesson's front page: the same line to press as the quiz, and above it a walkthrough saying what to press at each step and what the press just did";
     "Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.";
     "Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.";
     let tree = property_get(trees, question);
