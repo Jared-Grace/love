@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { number_times_text } from "./number_times_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,18 +21,21 @@ export function gloss_occurrence_sentence(counts) {
   }
   let alone_testament = equal(testament, 1);
   if (alone_testament) {
+    let right = text_combine(testament_name, ".");
     let only = text_combine(
       "This is the only place this word stands in the ",
-      text_combine(testament_name, "."),
+      right,
     );
     return only;
   }
   let alone_book = equal(book, 1);
   if (alone_book) {
     let elsewhere = number_times_text(testament);
+    let right2 = text_combine(" in the ", testament_name);
+    let b = text_combine(elsewhere, right2);
     let sentence = text_combine_3(
       "This is the only place this word stands in this book, though it stands ",
-      text_combine(elsewhere, text_combine(" in the ", testament_name)),
+      b,
       ".",
     );
     return sentence;
@@ -39,26 +43,21 @@ export function gloss_occurrence_sentence(counts) {
   let kept_to_book = equal(book, testament);
   if (kept_to_book) {
     let here = number_times_text(book);
-    let sentence = text_combine_3(
-      "This word stands ",
-      text_combine(here, " in the "),
-      text_combine(testament_name, ", every one of them in this book."),
-    );
+    let b2 = text_combine(here, " in the ");
+    let c = text_combine(testament_name, ", every one of them in this book.");
+    let sentence = text_combine_3("This word stands ", b2, c);
     return sentence;
   }
-  let rare_testament = testament < 6;
+  let rare_testament = less_than(testament, 6);
   if (rare_testament) {
     let across = number_times_text(testament);
     let inside = number_times_text(book);
     let opening = text_combine("This word stands ", across);
-    let middle = text_combine(
-      text_combine(" in the ", testament_name),
-      text_combine(", ", inside),
-    );
-    let sentence = text_combine(
-      opening,
-      text_combine(middle, " in this book."),
-    );
+    let left = text_combine(" in the ", testament_name);
+    let right3 = text_combine(", ", inside);
+    let middle = text_combine(left, right3);
+    let right4 = text_combine(middle, " in this book.");
+    let sentence = text_combine(opening, right4);
     return sentence;
   }
   let unremarkable = null;

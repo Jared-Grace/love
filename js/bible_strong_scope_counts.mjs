@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -20,21 +21,24 @@ export function bible_strong_scope_counts(tallies, chapter_code, strong) {
   for (let code of object_property_names(tallies)) {
     let tally = property_get(tallies, code);
     let seen = tally[strong];
-    if (!seen) {
+    if (not(seen)) {
       continue;
     }
     let code_book = ebible_chapter_code_to_book(code);
     let code_division = ebible_book_code_to_division(code_book);
     let code_testament = property_get(code_division, "testament");
-    if (!equal(code_testament, testament_name)) {
+    let b = equal(code_testament, testament_name);
+    if (not(b)) {
       continue;
     }
     testament = add(testament, seen);
-    if (!equal(code_book, book_code)) {
+    let b2 = equal(code_book, book_code);
+    if (not(b2)) {
       continue;
     }
     book = add(book, seen);
-    if (!equal(code, chapter_code)) {
+    let b3 = equal(code, chapter_code);
+    if (not(b3)) {
       continue;
     }
     chapter = add(chapter, seen);

@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,7 +18,7 @@ export async function bible_strong_chapter_tallies() {
       let words = property_get(verse, "words");
       for (let word of words) {
         let strong = property_get(word, "strong");
-        if (!strong) {
+        if (not(strong)) {
           continue;
         }
         list_add(strongs, strong);
