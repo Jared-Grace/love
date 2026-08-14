@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { null_is } from "./null_is.mjs";
 import { add_1 } from "./add_1.mjs";
-import { bible_verse_sentence_ahead } from "./bible_verse_sentence_ahead.mjs";
+import { bible_end_sentence_ahead } from "./bible_end_sentence_ahead.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_verses_sentence_gaps(verses) {
   "For each verse in a run, how many verses on the sentence it sits in finishes - the count of extra verses a passage cut there would be carried on by.";
@@ -22,7 +22,7 @@ export function bible_verses_sentence_gaps(verses) {
       unread = add_1(unread);
       continue;
     }
-    ahead = bible_verse_sentence_ahead(verse, ahead);
+    ahead = bible_end_sentence_ahead(verse, ahead);
     let unfinished_is = null_is(ahead);
     if (unfinished_is) {
       unfinished = add_1(unfinished);
