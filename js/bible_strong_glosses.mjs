@@ -6,7 +6,6 @@ import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
-
 export async function bible_strong_glosses(testament_name) {
   "Every English wording the interlinear gives each Strong's number inside one testament, keyed by the number, commonest wording first and counted.";
   "$plain testament_name";

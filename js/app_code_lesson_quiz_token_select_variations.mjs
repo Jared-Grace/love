@@ -137,6 +137,16 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     return covers;
   }
   variations = list_filter(variations, tokens_none_missing_is);
+  ("Brackets have to gather what the question's brackets gathered. Leaving them out is only the loud half of the same fault; the quiet half keeps every tile and moves the brackets somewhere they change nothing, so (3 === 5) === false was also accepting (3) === 5 === false and (3 === 5 === false). Those are the same line by value - which is exactly why every check that goes by value calls them right - and they are not the same answer to a lesson whose subject is which part the brackets are around.");
+  ("This is asked of the whole pool rather than of the half it came from, because both halves can produce it: the free rearrangement of tiles is where these came from today, and a swap that re-prints from the tree is free to bracket a different side tomorrow.");
+  ("A genuine swap survives, because the groups are compared as a set of contents and not by where they fall - (4 < 5) === (5 < 4) swapped over still gathers a 4 < 5 and a 5 < 4. A question with no brackets is unaffected: it has no bracket button, so nothing bracketed was ever buildable.");
+  let asked_groups = js_tokens_parenthesis_groups(asked);
+  function brackets_alike_is(variation) {
+    let groups = js_tokens_parenthesis_groups(variation);
+    let alike = lists_equal_pair(groups, asked_groups);
+    return alike;
+  }
+  variations = list_filter(variations, brackets_alike_is);
   if (expression_is) {
     function trim_semicolon(item) {
       let expected_last = ";";
