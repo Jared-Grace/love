@@ -14,21 +14,10 @@ export async function gloss_chapter_punctuation_entries_repair(
   "The whole chapter is written back out whether or not anything was dropped, so a chapter that was already clean comes back with nothing removed and a file that reads the same.";
   "$plain chapter_code";
   "the code is a chapter's name, like JAS01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
-  let path = local_function_path_json(chapter_code, fn);
-  let chapter = await file_read_json(path);
-  let passages = property_get(chapter, "passages");
-  let removed = 0;
-  function passage_read(passage) {
-    let count = gloss_passage_punctuation_entries_repair(passage);
-    removed = add(removed, count);
-  }
-  each(passages, passage_read);
-  let contents = json_format_to(chapter);
-  await file_overwrite_uncached(path, contents);
-  let r = {
+  let r = await gloss_chapter_passages_repair_generic(
     chapter_code,
-    path,
-    removed,
-  };
+    fn,
+    gloss_passage_punctuation_entries_repair,
+  );
   return r;
 }
