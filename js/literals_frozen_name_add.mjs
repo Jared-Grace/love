@@ -1,3 +1,6 @@
+import { folder_repo_love } from "./folder_repo_love.mjs";
+import { node_run } from "./node_run.mjs";
+import { json_from } from "./json_from.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
@@ -15,7 +18,6 @@ import { list_add } from "./list_add.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
 import { js_body_list_declaration_index } from "./js_body_list_declaration_index.mjs";
 import { function_transform_auto } from "./function_transform_auto.mjs";
-import { literals_frozen_record_new } from "./literals_frozen_record_new.mjs";
 export async function literals_frozen_name_add(name) {
   "Names one function in the frozen list and records what it says today, which is the whole of promising never to move a word that has left this repo.";
   "It was two steps done by hand, and the gates that ask for it named only the second. The list is written out in a file, so adding to it meant opening that file, copying the shape of the line above, and inventing a binding name nothing else had taken; then running the recorder, which reads the list and writes down what each name on it says. Run the recorder first and it answers that it added nothing, because a name not on the list yet has nothing for it to read.";
@@ -40,9 +42,9 @@ export async function literals_frozen_name_add(name) {
   function lambda(ast) {
     let elements = js_array_expression_only_elements(ast);
     ("The word is put into a string that was parsed empty rather than into one built out of the name, so nothing handed to this command can arrive as code. It is the same move the string builder itself makes, and it is what lets this be approved once instead of at every use.");
-    let call = js_parse_expression(
-      text_combine_multiple([fn_name("fn_name"), '("")']),
-    );
+    let f_name3 = fn_name("fn_name");
+    let code_expression = text_combine_multiple([f_name3, '("")']);
+    let call = js_parse_expression(code_expression);
     let argument = js_string(name);
     let call_arguments = property_get(call, "arguments");
     call_arguments[0] = argument;
@@ -57,7 +59,12 @@ export async function literals_frozen_name_add(name) {
   }
   await function_transform_auto(f_name, lambda);
   ("Recording follows in the same breath, because the two halves are one promise and a list naming a word nothing has read is a promise nobody is keeping. It is also what the gates check, so stopping halfway would leave them exactly as red as before.");
-  let recorded = await literals_frozen_record_new();
+  ("It is asked for in a process of its own, and that is not carelessness about what a process costs - it is the only way it can see the line just written. The list is a function, and a run that has already loaded it goes on holding the version it loaded; the file changing underneath it changes nothing about what is in hand. Asked for directly from here it answered that it had added nothing, which reads exactly like the trap this exists to close.");
+  let folder = folder_repo_love();
+  let f_name2 = fn_name("literals_frozen_record_new");
+  let words = ["scripts/ai.mjs", f_name2];
+  let printed = await node_run(folder, words);
+  let recorded = json_from(printed);
   let report = {
     name,
     added: true,
