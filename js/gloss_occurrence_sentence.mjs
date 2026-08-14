@@ -61,6 +61,6 @@ export function gloss_occurrence_sentence(counts) {
     );
     return sentence;
   }
-  let nothing = null;
-  return nothing;
+  let unremarkable = null;
+  return unremarkable;
 }
