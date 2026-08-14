@@ -25,7 +25,8 @@ export async function wolff_binisaya_roots_agreement() {
     }
     let root = property_get(entry, "root");
     let blank = text_empty_is(root);
-    return not(blank);
+    let n = not(blank);
+    return n;
   }
   let rooted = list_filter(entries, analysed_is);
   function root_read(entry) {
@@ -37,7 +38,8 @@ export async function wolff_binisaya_roots_agreement() {
   async function root_find(root) {
     let answer = await wolff_word_find(root);
     let found = property_get(answer, "found");
-    let carried = not(equal(found, "none"));
+    let b = equal(found, "none");
+    let carried = not(b);
     let item = {
       root,
       carried,
@@ -45,13 +47,13 @@ export async function wolff_binisaya_roots_agreement() {
     return item;
   }
   let asked = await list_map_async(roots, root_find);
-  let carried = list_filter_property(asked, "carried", true);
+  let answered = list_filter_property(asked, "carried", true);
   let absent = list_filter_property(asked, "carried", false);
   let sample = list_take(absent, 40);
   let unanswered = list_map(sample, root_read);
   let r = {
     roots: list_size(roots),
-    carried: list_size(carried),
+    carried: list_size(answered),
     absent: list_size(absent),
     unanswered,
   };
