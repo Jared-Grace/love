@@ -33,6 +33,7 @@
   "bundle_size_gate_run",
   "literal_duplicates_gate_run",
   "ebible_book_divisions_canon_assert",
+  "gloss_parsing_sentence_gate_run",
   "g_leader_book_reaches_canon_assert",
   "g_profile_target_shares_assert",
   "g_arc_prompt_style_assert",
