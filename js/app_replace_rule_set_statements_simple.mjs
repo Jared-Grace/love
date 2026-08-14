@@ -36,7 +36,7 @@ export function app_replace_rule_set_statements_simple() {
         end: text_combine_multiple([v3, " ", t, " ", v4]),
       },
     ],
-    why: "The replacement rules define a simple grammar for statements that can be empty, a return statement, an expression statement, or a return with an expression, where expressions are limited to the literals 'true' or the function call 'update()'.",
+    why: "An expression stands for a value; a statement is one whole instruction, ending in a semicolon. It can be empty, it can hand a value back with return, or it can be an expression on its own.",
   };
   return r;
 }

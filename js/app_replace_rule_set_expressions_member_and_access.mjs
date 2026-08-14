@@ -70,7 +70,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "mae [ 2 ] [ 1 ]",
       },
     ],
-    why: "The replacement rules define a grammar for member access and indexing expressions (like object.property and object[index]) in a programming language, supporting nested property access, array-style indexing, and various literal and identifier forms, demonstrating how complex expressions are constructed from simpler components.",
+    why: "Two ways to reach inside something: a dot and a name, as in human.name, or square brackets, as in list[1]. Either can be done again on the result, so you can reach in and then reach in again.",
   };
   return r;
 }

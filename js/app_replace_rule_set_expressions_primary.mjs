@@ -64,7 +64,7 @@ export function app_replace_rule_set_expressions_primary() {
         end: "( ( ex ) )",
       },
     ],
-    why: "These replacement rules define the syntax for primary expressions in a simple expression grammar, allowing identifiers, literals (numbers, strings, booleans, null), and parenthesized expressions, demonstrating how basic building blocks of expressions are constructed and nested.",
+    why: "An expression is any piece of code that stands for a value. The simplest ones are a name, a number, some text, true, false, null - or any expression wrapped in round brackets. Everything in the rest of the course is built out of these.",
   };
   return r;
 }

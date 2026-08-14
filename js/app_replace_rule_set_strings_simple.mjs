@@ -66,7 +66,7 @@ export function app_replace_rule_set_strings_simple() {
         end: '" J 0 $ h "',
       },
     ],
-    why: "The replacement rules define a grammar for simple string literals consisting of double quotes surrounding a sequence of identifier characters (letters, $, or _), possibly interleaved with a few digits (0, 1, 3), demonstrating how identifiers and digits can be combined to form the contents of quoted strings.",
+    why: "A string is text inside quote marks. The two quotes are fixed and always there; what goes between them is built the same way a name was built in the last exercise.",
   };
   return r;
 }

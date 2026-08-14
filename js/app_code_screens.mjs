@@ -4,6 +4,7 @@ import { app_code_quiz } from "./app_code_quiz.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 export function app_code_screens() {
+  "Every screen the code app has, in the order they are offered.";
   let s = [
     app_code_home,
     app_code_quiz,

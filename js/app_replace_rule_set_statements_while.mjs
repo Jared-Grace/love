@@ -43,7 +43,7 @@ export function app_replace_rule_set_statements_while() {
         ),
       },
     ],
-    why: "The replacement rules define a grammar for parsing JavaScript-like while statements, including variable declarations, assignments, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",
+    why: "The same shape as the last exercise, with one word changed: while repeats the instruction for as long as the test holds, instead of running it once.",
   };
   return r;
 }

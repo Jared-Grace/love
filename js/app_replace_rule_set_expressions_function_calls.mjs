@@ -81,7 +81,7 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "love ( all ( ) )",
       },
     ],
-    why: "These replacement rules define a grammar for parsing function calls and member access expressions, including identifiers, literals, and nested function calls, demonstrating how complex expressions like method calls, property access, and argument lists are constructed in a programming language.",
+    why: "A call is a name with round brackets after it, like refresh(). Values handed to it go inside the brackets, separated by commas. Only the brackets and the list inside them are new - the rest you have already met.",
   };
   return r;
 }

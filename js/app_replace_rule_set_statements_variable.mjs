@@ -53,7 +53,7 @@ export function app_replace_rule_set_statements_variable() {
         end: text_combine_multiple(["const x = 1 , ", y_eq_, " ;"]),
       },
     ],
-    why: "The replacement rules define a context-free grammar for variable declaration statements in a JavaScript-like language, demonstrating how variable keywords, identifiers, and optional initializations can be combined and separated by commas to form valid statements.",
+    why: "Making a new name and giving it a starting value: the word let, const or var, then the name, then = and the value. Several names can share one instruction, separated by commas.",
   };
   return r;
 }

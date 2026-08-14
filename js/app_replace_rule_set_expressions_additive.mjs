@@ -121,7 +121,7 @@ export function app_replace_rule_set_expressions_additive() {
         end: "double ( 1 + 2 )",
       },
     ],
-    why: "The replacement rules define a context-free grammar for parsing additive expressions, including identifiers, literals (numbers, strings, booleans, null), member access, function calls, unary and binary operations (addition, subtraction, multiplication, division), and grouping with parentheses, demonstrating the structure and precedence of expressions similar to those in programming languages like JavaScript.",
+    why: "Adding and subtracting: the signs + and -. Notice where they sit in the rules - multiplying is reached first, which is how a + b * c ends up doing the multiplication before the addition.",
   };
   return r;
 }

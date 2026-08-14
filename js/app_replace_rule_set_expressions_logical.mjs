@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_logical() {
         end: "( true || false ) && true",
       },
     ],
-    why: "These replacement rules define a context-free grammar for logical and arithmetic expressions, demonstrating how identifiers, literals, operators, and grouping can be combined to form valid expressions similar to those in programming languages like JavaScript, including support for operator precedence and associativity.",
+    why: "Joining two questions into one: && means both must hold, || means either one will do.",
   };
   return r;
 }

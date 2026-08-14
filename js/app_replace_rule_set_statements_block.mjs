@@ -25,7 +25,7 @@ export function app_replace_rule_set_statements_block() {
         end: "{ update ( ) ; return true ; }",
       },
     ],
-    why: "The replacement rules define a grammar for a block of statements in a programming language, supporting empty blocks, sequences of statements, return statements, expression statements, and nested blocks, demonstrating basic block and statement structure typical in imperative languages.",
+    why: "Curly brackets gather several instructions into one. A block can hold none, one, or many - and because a block is itself an instruction, a block can sit inside another block.",
   };
   return r;
 }
