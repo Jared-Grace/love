@@ -2,7 +2,6 @@ import { bible_interlinear_testament_words } from "./bible_interlinear_testament
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
-
 export async function bible_interlinear_parsings_list(testament_name) {
   "The spelled-out parsing of every word inside one testament, one entry per word and repeats kept, in the order the text runs.";
   "$plain testament_name";
