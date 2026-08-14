@@ -1,3 +1,5 @@
+import { qa_promoted_public_copy_case_app_write } from "./qa_promoted_public_copy_case_app_write.mjs";
+import { property_get } from "./property_get.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { app_shared_prod_snapshot_folder } from "./app_shared_prod_snapshot_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -8,11 +10,8 @@ import { file_write } from "./file_write.mjs";
 import { folder_temp } from "./folder_temp.mjs";
 import { list_join_underscore } from "./list_join_underscore.mjs";
 import { path_join } from "./path_join.mjs";
-import { property_set } from "./property_set.mjs";
 import { qa_promoted_public_copy_folder_is } from "./qa_promoted_public_copy_folder_is.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_hash } from "./text_hash.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 export async function qa_promoted_public_copy_gate_run() {
   "Checks that the reading which lets a copy of something already public go out says yes to a real copy and no to each of the ways one can be false.";
@@ -22,25 +21,10 @@ export async function qa_promoted_public_copy_gate_run() {
   "Nothing here touches the folder the site is served out of, and nothing it does is remembered. The whole point of the reading having been split in two is that this half can be handed a folder made up for the asking.";
   arguments_assert(arguments, 0);
   async function lambda(folder) {
-    let app_name = "replace";
-    let page_name = file_name_html(app_name);
-    let source_name = file_name_js(app_name);
-    let page_open = `<!doctype html><html><head><title>replace</title></head><body><script src="`;
-    let page_close = `"></script></body></html>`;
-    let page_text = text_combine_multiple([page_open, source_name, page_close]);
-    let source_text = `console.log("replace, as it was built");`;
-    let f_path = path_join([folder, page_name]);
-    await file_write(f_path, page_text);
-    let f_path2 = path_join([folder, source_name]);
-    await file_write(f_path2, source_text);
-    ("what people are being sent, reduced the same way the note of the live site is reduced");
-    let noted = {};
-    let value = text_hash(page_text);
-    property_set(noted, page_name, value);
-    let value2 = text_hash(source_text);
-    property_set(noted, source_name, value2);
-    let served = {};
-    property_set(served, app_name, noted);
+    let built = await qa_promoted_public_copy_case_app_write(folder);
+    let app_name = property_get(built, "app_name");
+    let page_text = property_get(built, "page_text");
+    let served = property_get(built, "served");
     async function copy_name(label) {
       await app_shared_prod_snapshot_folder(folder, app_name, label);
       let kept = list_join_underscore([app_name, label]);
@@ -60,8 +44,8 @@ export async function qa_promoted_public_copy_gate_run() {
     ("a page still sending for the live script - the failure the keeping exists to prevent, and the one nobody would see, because the page loads and shows whatever the app has become");
     let live = await copy_name("live");
     let file_name = file_name_html(live);
-    let f_path3 = path_join([folder, file_name]);
-    await file_overwrite(f_path3, page_text);
+    let f_path = path_join([folder, file_name]);
+    await file_overwrite(f_path, page_text);
     let no_live = await asked(live);
     false_is_assert_json(no_live, {
       case: live,
