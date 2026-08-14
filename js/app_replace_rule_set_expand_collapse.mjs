@@ -28,7 +28,7 @@ export function app_replace_rule_set_expand_collapse() {
         end: "a   c   b   b   c   a",
       },
     ],
-    why: "The rules demonstrate a grammar where 'a' expands to two 'b's, and any pair of 'b's collapses into a 'c', modeling a process of binary expansion and reduction; this is evident from the way the goals transform sequences of 'a's and 'b's into sequences with 'c's via these rules.",
+    why: "One rule opens an a into two b's; the other closes two b's into a c. Together they turn a's into c's - but you always have to open before you can close.",
   };
   return r;
 }
