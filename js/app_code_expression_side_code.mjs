@@ -5,7 +5,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
+import { or } from "./or.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 export function app_code_expression_side_code(side, rank_least) {
   arguments_assert(arguments, 2);
   ("the code for one side of an operator, gathered into brackets when the operator on that side is weaker than rank_least");
@@ -15,10 +17,12 @@ export function app_code_expression_side_code(side, rank_least) {
   if (not(node_is)) {
     return code;
   }
+  let written = property_get_or(side, "bracketed", false);
   let symbol = property_get(side, "operator");
   let rank = app_code_operator_rank(symbol);
   let weaker = less_than(rank, rank_least);
-  if (weaker) {
+  let bracket = or(written, weaker);
+  if (bracket) {
     let wrapped = js_code_wrap_parenthesis(code);
     return wrapped;
   }

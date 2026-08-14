@@ -14,7 +14,7 @@ import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
-import { list_add } from "./list_add.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { add } from "./add.mjs";
 import { add_1 } from "./add_1.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
@@ -136,10 +136,12 @@ export function app_code_review(context) {
       list_remove_at(queue, index_front);
       passed = add_1(passed);
       if (not(clean)) {
+        ("two fresh copies go to the end rather than one, so answering it right once more is not enough to clear it. A single copy can be cleared by a guess - the choices narrow as wrong ones are dimmed, so the last pick left is right whether or not the learner knows why. Two consecutive copies cannot both be luck.");
         let lesson_id = property_get(seed, "lesson_id");
         let kind_index = property_get(seed, "kind_index");
         let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
-        list_add(queue, requeued);
+        let requeued_again = app_code_review_seed_fresh(lesson_id, kind_index);
+        list_add_multiple(queue, [requeued, requeued_again]);
       }
       app_code_review_persist(context, key, passed, queue);
       present();

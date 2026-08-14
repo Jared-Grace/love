@@ -9,7 +9,7 @@ import { list_first } from "./list_first.mjs";
 import { word_root_endings } from "./word_root_endings.mjs";
 export function word_root_ending_cut(w) {
   "The word left when a plain English ending is cut off it - the plural s, the past ed, the ing, the ly.";
-  "An ending is only cut where three letters or more are left standing, because two letters are no longer a word at all.";
+  "An ending is only cut where enough of the word is left standing, and how much is enough is the ending's own business - it is carried beside it as keep.";
   "What is measured is what REMAINS, not what went in, and that is the whole of the correction made on 2026-08-14. The guard used to ask whether the word was five letters long, which is a different question and got both halves wrong: acts is four letters and keeps its s, never meeting act, while thing is five and gives up ing to become th. Asking after the remainder answers both at once - acts loses its s and thing keeps everything, because th is not a word and act is.";
   "The remainder is the reason an ending can be passed over for a shorter one. Lies is not cut back by ies, which would leave one letter, so it falls through to the plain s and reaches lie.";
   "One ending is cut, never two. The endings are read longest first and the first that matches is the one taken, so witnesses gives up sses rather than s.";
@@ -23,7 +23,7 @@ export function word_root_ending_cut(w) {
   function ending_matches(ending) {
     let held = cut.endsWith(ending.end);
     let keep = subtract(cut.length, ending.drop);
-    let enough = greater_than(keep, 2);
+    let enough = not(greater_than(ending.keep, keep));
     return held && enough;
   }
   let matched = list_filter(endings, ending_matches);
