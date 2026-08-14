@@ -1,9 +1,9 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
-
 export function bible_strong_scope_counts(tallies, chapter_code, strong) {
   "How many times one Strong's number stands in a given chapter, in the book that chapter belongs to, and in that book's testament.";
   "$plain chapter_code";
@@ -17,7 +17,7 @@ export function bible_strong_scope_counts(tallies, chapter_code, strong) {
   let chapter = 0;
   let book = 0;
   let testament = 0;
-  for (let code of Object.keys(tallies)) {
+  for (let code of object_property_names(tallies)) {
     let tally = property_get(tallies, code);
     let seen = tally[strong];
     if (!seen) {
