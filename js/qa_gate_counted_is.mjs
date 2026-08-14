@@ -1,16 +1,14 @@
+import { qa_gate_object_counted_is } from "./qa_gate_object_counted_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { js_ast_declarator_init_named } from "./js_ast_declarator_init_named.mjs";
-import { qa_gate_asserted_empty_names } from "./qa_gate_asserted_empty_names.mjs";
-import { qa_gate_count_hollow_is } from "./qa_gate_count_hollow_is.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -69,41 +67,6 @@ export async function qa_gate_counted_is(f_name, depth) {
   if (not(recorded_is)) {
     return false;
   }
-  let asserted = qa_gate_asserted_empty_names(ast);
-  let properties = property_get(answer, "properties");
-  for (let property of properties) {
-    let plain_is = js_node_type_is(property, "Property");
-    if (not(plain_is)) {
-      continue;
-    }
-    let value = property_get(property, "value");
-    let written_is = js_node_type_is(value, "Literal");
-    if (written_is) {
-      continue;
-    }
-    let field = js_identifier_name_try(value);
-    let field_named_is = null_not_is(field);
-    if (field_named_is) {
-      let refused_is = list_includes(asserted, field);
-      if (refused_is) {
-        continue;
-      }
-      let filled = js_ast_declarator_init_named(ast, field);
-      let outside_is = equal(filled, null);
-      if (outside_is) {
-        return true;
-      }
-      let hollow_is = qa_gate_count_hollow_is(filled, asserted);
-      if (hollow_is) {
-        continue;
-      }
-      return true;
-    }
-    let worked_hollow_is = qa_gate_count_hollow_is(value, asserted);
-    if (worked_hollow_is) {
-      continue;
-    }
-    return true;
-  }
-  return false;
+  let counted_is = qa_gate_object_counted_is(ast, answer);
+  return counted_is;
 }
