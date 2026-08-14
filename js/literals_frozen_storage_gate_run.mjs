@@ -13,14 +13,12 @@ export async function literals_frozen_storage_gate_run() {
   ("What it does not reach: the words that escape into local storage, which arrive at their seam as a key computed far from it rather than as a getter the opening imports. Those stay a judgement, and stay on the list by hand.");
   ("Half of that gap has since been closed from the other side. A local storage key is a function's own NAME with a word after it, so what escapes there is a name rather than a value, and a gate over values could never have watched it, and the sibling that does keeps a record of its own. The word after the name is the half still standing here: it is written out at the call rather than held by a getter, so nothing reads it off a name.");
   let offenders = await literals_frozen_storage_unfrozen();
-  let f_name = fn_name("literals_frozen_names");
-  let f_name2 = fn_name("literals_frozen_record_new");
+  let f_name = fn_name("literals_frozen_name_add");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
-      "a browser database is opened with a word nothing has frozen, so it could be changed here while readers' browsers go on looking under the old one - add the name to ",
+      "a browser database is opened with a word nothing has frozen, so it could be changed here while readers' browsers go on looking under the old one - name it with ",
       f_name,
-      " and record what it says today with ",
-      f_name2,
+      ", which puts it on the frozen list and records what it says today in one go, and then write the paragraph above the line it added saying how the word escaped",
     ]),
     offenders,
   });
