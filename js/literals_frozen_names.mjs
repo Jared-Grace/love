@@ -69,6 +69,7 @@ export function literals_frozen_names() {
   ("A seventh word a bible link stands on, and the mate of the sixth. How many verses a reader wants each message to hold and how many are on the screen right now were one word until they were split, so this one is published from the day it is written and the one beside it keeps the meaning it always had.");
   ("It is an ordinary English word like its mate, and frozen for the same reason: the day anything here is named shown, the canonicalizing pass would read the value as a reference to that function and every link already sent would start following a rename.");
   let spelled42 = fn_name("app_shared_bible_verses_shown_hash_key");
+  let spelled3 = fn_name("folder_js");
   let names = [
     spelled,
     spelled2,
@@ -111,6 +112,7 @@ export function literals_frozen_names() {
     spelled40,
     spelled41,
     spelled42,
+    spelled3,
   ];
   return names;
 }
