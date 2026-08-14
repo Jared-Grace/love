@@ -1,9 +1,9 @@
+import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_storage_walked } from "./literals_frozen_storage_walked.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_size } from "./list_size.mjs";
 export async function literals_frozen_storage_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: every word a browser database is opened with is one this repo has promised not to move.");
@@ -26,7 +26,7 @@ export async function literals_frozen_storage_gate_run() {
     offenders,
   });
   let r = {
-    checked: list_size(offenders),
+    openers,
     offenders,
   };
   return r;
