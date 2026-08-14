@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_code_quiz_unscramble_shortcut_accepted } from "./app_code_quiz_unscramble_shortcut_accepted.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export function app_code_quiz_unscramble_shortcut_gate_run() {
