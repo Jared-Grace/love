@@ -26,22 +26,8 @@ export function bible_chapters_sentence_gaps_combine(
     return named;
   }
   let chapters = list_map_index(each_chapter, lambda);
-  let gaps_each = list_map_property(each_chapter, "gaps");
-  let gaps = lists_combine(gaps_each);
-  let unread_each = list_map_property(each_chapter, "unread");
-  let unread = list_sum(unread_each);
-  let unfinished_each = list_map_property(each_chapter, "unfinished");
-  let unfinished = list_sum(unfinished_each);
-  let tally = list_tally(gaps);
-  let most = list_max_or_null(gaps);
-  let counted = list_size(gaps);
-  let measured = {
-    chapters,
-    counted,
-    tally,
-    most,
-    unread,
-    unfinished,
-  };
+  let joined = bible_sentence_gaps_join(each_chapter);
+  let measured = bible_sentence_gaps_tally(joined);
+  property_set(measured, "chapters", chapters);
   return measured;
 }
