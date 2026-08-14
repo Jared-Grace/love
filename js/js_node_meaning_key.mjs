@@ -82,10 +82,15 @@ export function js_node_meaning_key(node) {
       let key = list_join(pieces, empty);
       return key;
     }
-    let sides = [js_node_meaning_key(left), js_node_meaning_key(right)];
+    let plain2 = js_node_meaning_key(left);
+    let plain3 = js_node_meaning_key(right);
+    let sides = [plain2, plain3];
     let commutative = js_code_binary_expression_commutative();
     let swappable = list_includes(commutative, operator);
-    let arithmetic = list_includes([plus_sign, minus_sign, times_sign, over_sign], operator);
+    let arithmetic = list_includes(
+      [plus_sign, minus_sign, times_sign, over_sign],
+      operator,
+    );
     let sortable = swappable && not(arithmetic);
     if (sortable) {
       ("A plus and a times are left out here on purpose. Between numbers they were answered above; anywhere else they are joining writing, and joined writing does not read the same both ways.");
