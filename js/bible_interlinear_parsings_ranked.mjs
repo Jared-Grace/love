@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -5,7 +6,6 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_tally_ranked } from "./list_tally_ranked.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function bible_interlinear_parsings_ranked(testament_name) {
   "Every spelled-out parsing the interlinear uses inside one testament, commonest first, each beside the number of words carrying it.";
@@ -20,8 +20,7 @@ export async function bible_interlinear_parsings_ranked(testament_name) {
   for (let chapter_code of object_property_names(chapters)) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let division = ebible_book_code_to_division(book_code);
-    let name = property_get(division, "testament");
-    let b = equal(name, testament_name);
+    let b = property_equals(division, "testament", testament_name);
     if (not(b)) {
       continue;
     }
