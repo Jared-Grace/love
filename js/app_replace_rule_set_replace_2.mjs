@@ -20,7 +20,7 @@ export function app_replace_rule_set_replace_2() {
         end: "d   b   a   b   a   b   d",
       },
     ],
-    why: "The replacement rules demonstrate a simple substitution grammar where every 'a' is replaced by 'b' and every 'c' is replaced by 'd', as shown by the transformation of each start sequence into its corresponding end sequence by applying these rules to each symbol independently.",
+    why: "Two rules to choose between for the first time, and they never get in each other's way: a's become b's, c's become d's.",
   };
   return r;
 }
