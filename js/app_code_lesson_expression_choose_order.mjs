@@ -93,9 +93,10 @@ export function app_code_lesson_expression_choose_order() {
     "the lesson's front page: the same line to press as the quiz, and above it a walkthrough saying what to press at each step and what the press just did";
     "Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.";
     "Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.";
+    "The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.";
     let tree = property_get(trees, question);
     let line_holder = html_div(parent);
-    let note = html_div(parent);
+    let note = html_div_first(card);
     function say_choose(ready, lead) {
       "name the one operator that may go next, so the walkthrough tells rather than asks";
       let first = list_first(ready);
