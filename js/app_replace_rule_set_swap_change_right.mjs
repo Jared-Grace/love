@@ -24,7 +24,7 @@ export function app_replace_rule_set_swap_change_right() {
         end: "a   b   b   c   a   b   b   c   b   c   b   c",
       },
     ],
-    why: "The pair a b becomes b c: the a is gone, the b has slid left, and a new c has appeared on the right.",
+    why: "The pair 'a' 'b' becomes 'b' 'c': the 'a' is gone, the 'b' has slid left, and a new 'c' has appeared on the right.",
   };
   return r;
 }

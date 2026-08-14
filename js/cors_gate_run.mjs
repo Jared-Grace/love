@@ -1,6 +1,6 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_includes_all_assert_json } from "./list_includes_all_assert_json.mjs";
+import { list_included_in_assert_json } from "./list_included_in_assert_json.mjs";
 import { cors_bucket_origins } from "./cors_bucket_origins.mjs";
 import { cors_origins } from "./cors_origins.mjs";
 export async function cors_gate_run() {
@@ -15,7 +15,7 @@ export async function cors_gate_run() {
     "the store has not been told about every address these pages are opened at, so a page opened at one of the missing ones will paint nothing and throw nothing - send them with ",
     repair,
   ]);
-  list_includes_all_assert_json(wanted, live, {
+  list_included_in_assert_json(wanted, live, {
     hint,
   });
   let r = {

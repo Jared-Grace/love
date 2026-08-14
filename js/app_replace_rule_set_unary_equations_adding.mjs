@@ -28,7 +28,7 @@ export function app_replace_rule_set_unary_equations_adding() {
         end: "1   +   1   +   1   1   1   =   1   1   1   1   1",
       },
     ],
-    why: "The equals sign still grows both sides together. The new rule splits two 1's apart with a plus sign, so the same count can be written as a sum.",
+    why: "The equals sign still grows both sides together. The new rule splits two '1's apart with a plus sign, so the same count can be written as a sum.",
   };
   return r;
 }

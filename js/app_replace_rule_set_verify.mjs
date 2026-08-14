@@ -3,7 +3,7 @@ import { list_map_properties_unique } from "./list_map_properties_unique.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_difference } from "./list_difference.mjs";
-import { list_includes_all_assert_json } from "./list_includes_all_assert_json.mjs";
+import { list_included_in_assert_json } from "./list_included_in_assert_json.mjs";
 import { app_replace_rule_set_verify_path_get } from "./app_replace_rule_set_verify_path_get.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { app_replace_rule_set_verify_goal_curried_right } from "./app_replace_rule_set_verify_goal_curried_right.mjs";
@@ -33,7 +33,7 @@ export function app_replace_rule_set_verify(rule_set) {
   if (null_not_is(value)) {
     rules = list_difference(rules, value);
   }
-  list_includes_all_assert_json(rules, unique, {
+  list_included_in_assert_json(rules, unique, {
     hint: "every rule used across the paths should be one of the rule set's rules",
   });
 }
