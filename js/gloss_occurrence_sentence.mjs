@@ -15,8 +15,8 @@ export function gloss_occurrence_sentence(counts) {
   let testament_name = property_get(counts, "testament_name");
   let unseen = equal(chapter, 0);
   if (unseen) {
-    let nothing = null;
-    return nothing;
+    let no_sentence = null;
+    return no_sentence;
   }
   let alone_testament = equal(testament, 1);
   if (alone_testament) {
