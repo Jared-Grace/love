@@ -1,8 +1,11 @@
+import { fn_name } from "./fn_name.mjs";
 export function g_npc_path_clear_facing_best_cases() {
   "every way a turning can be decided, written down as a patch of dry land and the tile the winning turn puts the tap on.";
   "the player stands at 0,0 and the arrangement is one person one step east with the tap two steps east - the smallest shape that still has a person and a tap to disagree about. The four turns then put the tap at 2,0 east, 0,2 south, -2,0 west and 0,-2 north, so naming the tap names which turn won.";
   "LAND IS LISTED RATHER THAN WATER, because a case that says where the dry land is can be read without holding a map in mind, and everything not listed is sea.";
-  "only the tap is checked, not the whole arrangement. Each turn puts its tap somewhere no other turn does, so the tap alone says which way the shape ended up pointing - and the people follow from the turn, so checking them too would only be checking g_coordinates_turn a second time.";
+  ("only the tap is checked, not the whole arrangement. Each turn puts its tap somewhere no other turn does, so the tap alone says which way the shape ended up pointing - and the people follow from the turn, so checking them too would only be checking ",
+    fn_name("g_coordinates_turn"),
+    " a second time.");
   let situation = {
     people: [
       {
