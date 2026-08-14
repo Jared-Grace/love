@@ -7,7 +7,8 @@ export function app_code_lesson_above(parent, label, question, on_question) {
   let container = app_code_container_medium_blue(parent);
   app_code_label_text(container, label);
   let container_question = html_div(container);
-  on_question(container_question, question);
+  ("the whole card is handed over as well as the place the question goes, so a lesson that needs to say something ABOVE the label has somewhere to put it; every lesson that does not need it simply takes two arguments and never sees the third");
+  on_question(container_question, question, container);
   let r = {
     container,
     container_question,
