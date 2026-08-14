@@ -35,7 +35,7 @@ export function g_arc_answer_fields() {
       {
         name: "opener",
         description:
-          "which opener the player chose to reach this turn, copied exactly as it is written before the colon in the opener lines above.",
+          "which opener the player chose to reach this turn, copied exactly as it is written on its own line in the opener lines above.",
         examples: ["", ""],
       },
       {
@@ -58,7 +58,7 @@ export function g_arc_answer_fields() {
       {
         name: "after",
         description:
-          "what the person says after the player chooses the correct passage. Leave it empty when the person carries straight on to what they say next, because then their next before is their answer to the passage and an after in front of it would only delay them. Write one when the passage changed something for them: they soften, they grant a point, or they are given something to think about. Never let them grant more than the passage earned. On the last turn under an opener there is always one, because that is where the person hands the topic back or takes their leave.",
+          "what the person says after the player chooses the correct passage. Leave it empty when the person carries straight on to what they say next, because then their next before is their answer to the passage and an after in front of it would only delay them. Write one when the passage changed something for them: they soften, they grant a point, or they are given something to think about. Never let them grant more than the passage earned.",
         examples: ["", ""],
       },
     ],
