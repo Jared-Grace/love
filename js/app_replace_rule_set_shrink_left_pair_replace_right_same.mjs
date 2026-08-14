@@ -28,7 +28,7 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
         end: "a   a",
       },
     ],
-    why: "The rules demonstrate a grammar that reduces specific left-side pairs ('b','a' to 'a' and 'b','c' to 'b','b'), effectively shrinking sequences by replacing certain pairs, which allows transformation of longer sequences into shorter target forms by repeated application.",
+    why: "A b before an a is swallowed; a b before a c turns that c into another b. So c's become b's, and b's get eaten from the left.",
   };
   return r;
 }
