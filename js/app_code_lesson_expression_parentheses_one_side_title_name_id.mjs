@@ -16,7 +16,7 @@ export function app_code_lesson_expression_parentheses_one_side_title_name_id() 
       " draws from all four. It used to read === / !== inside ( and ), which was wrong twice over: those two are the OUTER operator, sitting between the brackets and never in them, and the two it left out are half the operators the lesson actually shows");
     html_cycle_code(parent, ["a comparison inside ", open, " and ", close]);
   }
-  let rights = ["parentheses one sided"];
+  let rights = ["parentheses one side"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;
