@@ -16,7 +16,7 @@ export function app_replace_rule_set_right_change() {
         end: "a   c   a   a   c   a   a   a   c   a   a   a   a   c",
       },
     ],
-    why: "The replacement rules demonstrate a context-sensitive grammar where every occurrence of 'a b' can be replaced with 'a c', allowing selective transformation of 'b's that are immediately preceded by 'a' into 'c's, as shown by the progression from the start to end strings in the goals.",
+    why: "A b turns into a c only when there is an a on its left. What a symbol may become can depend on its neighbour.",
   };
   return r;
 }
