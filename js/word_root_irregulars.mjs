@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 export function word_root_irregulars() {
   "Every English word whose root cannot be reached by cutting an ending off it, paired with the root it belongs to.";
@@ -75,6 +76,6 @@ export function word_root_irregulars() {
     forms.forEach(form_take);
     roots[root] = root;
   }
-  Object.keys(groups).forEach(group_take);
+  object_property_names(groups).forEach(group_take);
   return roots;
 }
