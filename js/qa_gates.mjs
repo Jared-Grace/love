@@ -1,3 +1,4 @@
+import { app_shared_card_gate_run } from "./app_shared_card_gate_run.mjs";
 import { bible_interlinear_base_dropped_gate_run } from "./bible_interlinear_base_dropped_gate_run.mjs";
 import { word_root_cases_gate_run } from "./word_root_cases_gate_run.mjs";
 import { qa_gates_countless_gate_run } from "./qa_gates_countless_gate_run.mjs";
@@ -496,6 +497,7 @@ export function qa_gates() {
     app_replace_abbreviations_unspelled_gate_run,
     app_replace_rules_used_gate_run,
     app_replace_rule_sets_unlisted_gate_run,
+    app_shared_card_gate_run,
     git_push_urls_gate_run,
     gloss_back_references_gate_run,
     daemons_stale_gate_run,
