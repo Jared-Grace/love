@@ -10,7 +10,6 @@ import { app_sandbox_choose } from "./app_sandbox_choose.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 export async function app_sandbox(context) {
-  ("cache invalidation probe, removed in the same minute it was added");
   let root = property_get(context, "root");
   html_reload_on_hash_change();
   html_clear(root);
