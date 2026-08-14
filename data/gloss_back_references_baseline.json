@@ -2,11 +2,11 @@
  "known": [
   {
    "store": "app_ceb_bible_gloss_generate",
-   "sites": 6
+   "sites": 1
   },
   {
    "store": "app_original_bible_gloss_generate",
-   "sites": 15
+   "sites": 0
   }
  ]
 }
