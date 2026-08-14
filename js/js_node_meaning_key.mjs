@@ -1,13 +1,11 @@
+import { js_operator_adding_symbols } from "./js_operator_adding_symbols.mjs";
+import { js_operator_scaling_symbols } from "./js_operator_scaling_symbols.mjs";
 import { js_node_meaning_key_run } from "./js_node_meaning_key_run.mjs";
 import { js_node_meaning_key_sides } from "./js_node_meaning_key_sides.mjs";
 import { js_node_meaning_key_call } from "./js_node_meaning_key_call.mjs";
 import { equal } from "./equal.mjs";
 import { js_node_writing_inside_is } from "./js_node_writing_inside_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_join } from "./list_join.mjs";
@@ -18,10 +16,8 @@ export function js_node_meaning_key(node) {
   "Landing on the same answer was what used to be asked instead, and it is not the same question. A line that comes out false has a great many rearrangements that also come out false - 142 of them for one arithmetic question - and every one was being marked right. What a reader is asked to build is a sentence, not a number, so what is checked is the sentence.";
   "Three things are allowed to move, and they are the three that leave the sentence alone. Two sides of a sign that reads the same both ways may swap. A run of numbers added and taken away may be written in any order, since each number keeps the sign standing in front of it. A run of numbers multiplied and divided may likewise, for the same reason.";
   "Adding is only free like that between numbers, which is why the run is asked whether it is one first. Joined writing keeps the order it was joined in.";
-  let plus_sign = js_operator_plus_symbol();
-  let minus_sign = js_operator_minus_symbol();
-  let times_sign = js_operator_asterisk_symbol();
-  let over_sign = js_operator_division_symbol();
+  let adding = js_operator_adding_symbols();
+  let scaling = js_operator_scaling_symbols();
   let empty = "";
   let open = "(";
   let close = ")";
@@ -29,8 +25,8 @@ export function js_node_meaning_key(node) {
   let binary = list_includes(["BinaryExpression", "LogicalExpression"], type);
   if (binary) {
     let operator = property_get(node, "operator");
-    let adds = list_includes([plus_sign, minus_sign], operator);
-    let scales = list_includes([times_sign, over_sign], operator);
+    let adds = list_includes(adding, operator);
+    let scales = list_includes(scaling, operator);
     let run = adds || scales;
     let writing = js_node_writing_inside_is(node);
     let numbers = not(writing);

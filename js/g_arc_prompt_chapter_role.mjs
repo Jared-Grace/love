@@ -1,3 +1,4 @@
+import { g_profiles_dealt } from "./g_profiles_dealt.mjs";
 import { g_arc_chapter_passages_role } from "./g_arc_chapter_passages_role.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_sermon_chapter_verses_text } from "./g_sermon_chapter_verses_text.mjs";
@@ -20,7 +21,7 @@ export async function g_arc_prompt_chapter_role(chapter, leader) {
     fn_name("function_run_output_file_temp"),
     " writes a string to a .txt of its own and opens it.");
   ("A leader is asked for a different prompt AND a different deck, because both of those are what being the leader means - the elder's turns come from the PLAN rather than from the pool, since the pool deliberately does not count leaders.");
-  ("The profile is the first in whichever deck, and it is a stand-in. Nothing deals profiles yet, so a real prompt's profile is still an open question - what this shows is the shape of one, not which one a given person gets.");
+  ("The WHOLE cast is dealt to get ONE profile, and that is not waste. The deal is weighted by who the cast is still short of, so who lands in any one position depends on every card drawn around it - ask for a single person alone and the spread that decides who they are was never formed. So the same deal a real run makes is made here, and the card at the npc's own position is the one taken.");
   let passages = await g_arc_chapter_passages_role(chapter, leader);
   let verses_text = g_sermon_chapter_verses_text(passages);
   let turns_wanted = await g_npc_pool_convert_turns();
@@ -28,13 +29,17 @@ export async function g_arc_prompt_chapter_role(chapter, leader) {
   let pool = g_npc_pool(turns_wanted, next);
   let npc = pool[0];
   let turn_target = property_get(npc, "turns");
-  let profiles = g_profiles();
+  let deck = g_profiles();
+  let cast = pool.length;
   if (leader) {
     let plan = g_generation_plan();
     turn_target = property_get(plan, "leader_turns");
-    profiles = g_profiles_leader();
+    deck = g_profiles_leader();
+    cast = 1;
   }
-  let profile = profiles[0];
+  let deal_next = random_seed_generator_from_text(g_profiles_dealt.name);
+  let dealt = g_profiles_dealt(deck, cast, deal_next);
+  let profile = dealt[0];
   let prompt = g_arc_prompt(chapter, verses_text, turn_target, profile, leader);
   return prompt;
 }
