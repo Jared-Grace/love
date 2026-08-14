@@ -38,6 +38,12 @@ export function g_profile_valid_is(profile) {
   ) {
     return false;
   }
+  ("A teenager has not been bearing long enough for multiple sons AND multiple daughters. Multiple means two or more on each axis, so the pair together is four children at the very least, and a girl married in her teens has had a few years rather than the eight or nine that would take. One of each, or several of one and one of the other, still fits inside those years and is left alone.");
+  ("This is the rule the sieve was missing, and it showed up in a written arc rather than in a check. A prompt was handed a teenager with multiple sons and multiple daughters, and because the profile is declared settled and unchangeable, the writing had to work around a person who could not exist - which it does by never letting her count them, so the impossibility survives as vagueness instead of as an error.");
+  let many = "multiple";
+  if (equal(age, "teenager") && equal(sons, many) && equal(daughters, many)) {
+    return false;
+  }
   ("A teenager keeps no household, and manumission under thirty gave a lesser standing than this axis means by having been a servant.");
   let settled = ["has servants", "was a bondservant"];
   if (equal(age, "teenager") && list_includes(settled, servitude)) {
