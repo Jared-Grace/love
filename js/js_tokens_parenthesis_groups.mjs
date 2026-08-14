@@ -42,7 +42,8 @@ export function js_tokens_parenthesis_groups(tokens) {
           list_add(inside, token);
         }
       }
-      let sorted = list_sort_text(list_copy(inside));
+      let list = list_copy(inside);
+      let sorted = list_sort_text(list);
       let separator = " ";
       let key = list_join(sorted, separator);
       list_add(groups, key);

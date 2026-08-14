@@ -1,6 +1,6 @@
 import { functions_shadowing_offender_hidden } from "./functions_shadowing_offender_hidden.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { functions_shadowing } from "./functions_shadowing.mjs";
+import { functions_shadowing_remembered } from "./functions_shadowing_remembered.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -16,7 +16,7 @@ export async function functions_shadowing_operator() {
   "bound over an outer binding both leave the word meaning something else where";
   "the pass writes it.";
   let names = js_operator_function_names();
-  let offenders = await functions_shadowing();
+  let offenders = await functions_shadowing_remembered();
   let found = [];
   for (let offender of offenders) {
     let f_name = property_get(offender, "name");
