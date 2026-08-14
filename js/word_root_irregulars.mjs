@@ -77,6 +77,9 @@ export function word_root_irregulars() {
     shelf: "shelves",
     self: "selves",
     staff: "staves",
+    brother: "brethren",
+    die: "died dying",
+    lie: "lied lying",
   };
   let roots = {};
   function group_take(root) {
