@@ -1,3 +1,7 @@
+import { global_function_property_exists } from "./global_function_property_exists.mjs";
+import { global_function_property_get } from "./global_function_property_get.mjs";
+import { qa_gate_recent_paths } from "./qa_gate_recent_paths.mjs";
+import { global_function_property_set } from "./global_function_property_set.mjs";
 export async function qa_gate_recent_paths_remembered() {
   "Every file in this folder committed inside the recent window, asked once and then kept for as long as this process lives.";
   "The run that wants this asks gate by gate, and each ask is a whole program that reads the history. A red run of sixteen gates paid for sixteen walks over the same hour of commits to learn the same thing every time.";
