@@ -10,7 +10,7 @@ export async function file_temp_value_keep_open(value) {
   "The file is KEPT, so it is still there to be read again, and it is on somebody to clear it later.";
   ("Its twin ",
     fn_name("file_temp_value_open"),
-    " deletes it the moment the editor has it, which is the one to reach for: the editor holds the contents in a buffer of its own from then on, so the human keeps the window and the temp folder keeps nothing.");
+    " deletes it the moment the editor has been launched, which races the editor's own read and intermittently shows the human a blank buffer. This is the one to reach for; a file left behind costs a little disk, and the other one costs the output.");
   ("What a value becomes as a file is not decided here - ",
     fn_name("value_file_contents_extension"),
     " is asked, so every fn that writes a value out writes it the same way.");
