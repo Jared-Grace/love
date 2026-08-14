@@ -113,15 +113,23 @@
    "refusals": 3
   },
   {
+   "name": "file_lines_search",
+   "refusals": 1
+  },
+  {
+   "name": "file_read",
+   "refusals": 2
+  },
+  {
+   "name": "file_read_json",
+   "refusals": 2
+  },
+  {
    "name": "ai_git_command_args",
    "refusals": 1
   },
   {
    "name": "git_ac_call_folder_try",
-   "refusals": 1
-  },
-  {
-   "name": "html_update_latest_promote_deploy",
    "refusals": 1
   },
   {
@@ -135,18 +143,6 @@
   {
    "name": "g_sermon_pull",
    "refusals": 1
-  },
-  {
-   "name": "file_lines_search",
-   "refusals": 1
-  },
-  {
-   "name": "file_read",
-   "refusals": 2
-  },
-  {
-   "name": "file_read_json",
-   "refusals": 2
   }
  ]
 }
