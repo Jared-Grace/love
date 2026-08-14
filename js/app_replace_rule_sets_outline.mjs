@@ -1,6 +1,6 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
@@ -11,8 +11,7 @@ export function app_replace_rule_sets_outline() {
   function lambda(rs) {
     let name = property_get(rs, "name");
     let rules = property_get(rs, "rules");
-    let goals = property_get(rs, "goals");
-    let size = list_size(goals);
+    let size = property_list_size(rs, "goals");
     let joined = list_join_comma_space(rules);
     let line = text_combine_multiple([name, "  |  ", joined, "  |  ", size]);
     return line;
