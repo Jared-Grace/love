@@ -33,6 +33,21 @@ Thumbs.db
 
 /scripts/temp/
 
+# A history rewrite clones the repo bare and works on the clone. Four of those
+# clones were done inside this working tree, and every commit here sweeps the
+# whole tree — so all four landed in the repo. Their packfiles are already
+# compressed, so git cannot shrink them again: 106.9 MiB of the 360 MiB pack is
+# four copies of an attempt to make the pack smaller. Do the rewrite outside the
+# working tree; this line is only the second net.
+*-clean-*.git/
+
+# Bundler output. Nothing tracks it now, but 6.8 MiB of history is one stray
+# source map from when something did.
+/dist/
+
+# An installer downloaded into the tree and swept in by a commit.
+*.exe
+
 # A file is written beside its destination and then renamed onto it, so that a
 # reader never sees half of one. The temp is removed when the write fails, but a
 # process killed outright never gets to remove it — and every commit here sweeps
