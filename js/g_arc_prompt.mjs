@@ -111,7 +111,7 @@ export function g_arc_prompt(
     "",
     "THE CHAPTER",
     joined,
-    "These passages are the only Scripture you may answer from. Each line is one passage: in square brackets its chapter and then its verse numbers, then its text.",
+    "These passages are the only Scripture you may answer from. Each line is one passage: in square brackets its chapter, a colon, and its verse numbers, then its text.",
     "More than one chapter may be listed. Two passages can carry the same verse numbers, so a passage is only named once its chapter is named with it.",
     verses_text,
     "",
