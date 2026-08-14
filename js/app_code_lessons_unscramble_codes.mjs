@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_code_exercise_on_answer_is } from "./app_code_exercise_on_answer_is.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
@@ -22,8 +23,11 @@ export function app_code_lessons_unscramble_codes(rounds) {
       return;
     }
     let lesson = property_get(exercise_visit, "lesson");
-    let info = property_get(exercise, "info");
-    let answer_property = property_get(info, "answer_property");
+    let answer_property = property_path_get_2(
+      exercise,
+      "info",
+      "answer_property",
+    );
     let code = property_get(exercise, answer_property);
     let key = text_combine_multiple([lesson, " ", code]);
     let already = list_includes(seen, key);
