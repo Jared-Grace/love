@@ -11,7 +11,8 @@ import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_name_is } from "./property_name_is.mjs";
+import { null_is } from "./null_is.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { wolff_word_find } from "./wolff_word_find.mjs";
 export async function app_ceb_bible_gloss_new_testament_prep() {
   "How much dictionary reading stands between here and a Cebuano gloss of the whole New Testament, counted in words rather than in chapters.";
@@ -27,18 +28,31 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
   );
   let known = await binisaya_words_known();
   async function word_place(word) {
-    let asked = property_name_is(known, word);
-    if (asked) {
-      return { word, place: "asked" };
+    let entry = property_get_or_null(known, word);
+    let unasked = null_is(entry);
+    if (not(unasked)) {
+      let r2 = {
+        word,
+        place: "asked",
+      };
+      return r2;
     }
     let answer = await wolff_word_find(word);
     let found = property_get(answer, "found");
     let absent_is = equal(found, "none");
     let carried = not(absent_is);
     if (carried) {
-      return { word, place: "printed" };
+      let r3 = {
+        word,
+        place: "printed",
+      };
+      return r3;
     }
-    return { word, place: "owed" };
+    let r4 = {
+      word,
+      place: "owed",
+    };
+    return r4;
   }
   let placed = await list_map_async(words, word_place);
   let asked = list_filter_property(placed, "place", "asked");
