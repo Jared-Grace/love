@@ -14,7 +14,7 @@ export async function gloss_chapters_bible_words_distinct(
 ) {
   "Every different word the named chapters are written with in one bible, each counted once however many times and places it stands.";
   "This is what says the size of the reading a set of chapters will need before any of it is begun. A chapter store can only be asked about chapters somebody has already authored, so the chapters nobody has started - which are the whole of the work left - can be counted no other way than from the bible itself.";
-  "The words come back cut at their punctuation and lowered, which is the shape a dictionary is asked about them in. Left as the page writes them, a word standing at the start of a sentence and the same word inside one are two things to look up.";
+  "The words come back cut at their punctuation and spelled exactly as the page spells them, capitals and all. Lowering them is what a dictionary wants and is done by whoever asks one, but it is not done here, because which words the text only ever writes with a capital is the one way a name can be told from a word - and a reading that lowered them first could never ask.";
   "$plain bible_folder";
   "the folder is a bible's name, like cebulb, chosen from the bibles this repo already holds. It names text to read and nothing that runs.";
   async function chapter_words(chapter_code) {
@@ -25,8 +25,7 @@ export async function gloss_chapters_bible_words_distinct(
     );
     let text = property_get(prepared, "text");
     let bare = text_punctuation_split(text);
-    let lowered = list_map(bare, text_lower_to);
-    return lowered;
+    return bare;
   }
   let chapters = await list_map_async(chapter_codes, chapter_words);
   let words = [];
