@@ -63,8 +63,14 @@ export async function g_sermon_lines_shared_report() {
   let lowest = list_map(list_slice_count(by_share, 0, 8), named);
   let by_share_down = list_sort_number_mapper_reverse(counted, share_of);
   let highest = list_map(list_slice_count(by_share_down, 0, 5), named);
+  function serving_held(reading) {
+    let some = greater_than(reading.serving_count, 0);
+    return some;
+  }
+  let serving_lines = list_filter(counted, serving_held);
   let report = {
     lines: counted.length,
+    serving_lines: serving_lines.length,
     shared: spread_of(share_of),
     shared_and_serving: spread_of(serving_share_of),
     lowest,
