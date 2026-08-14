@@ -45,6 +45,18 @@ export function js_code_same_meaning_is_cases() {
       why: "the reported fault. Two numbers compared and then two booleans, rearranged into a number against a boolean and then a boolean against a number - a different sentence that lands on the same answer by luck",
     },
     {
+      before: "(3 !== 2) !== (8 === 6)",
+      after: "(8 !== 6) === (2 !== 3)",
+      same: true,
+      why: "one statement signed two ways. Both lines ask whether 3 and 2 are the same and whether 8 and 6 are, and both deny that pair of questions twice - the first on a side and on the sign between the sides, the second on both sides. Two denials cancel, so neither line is the other's opposite and there is nothing left to tell them apart",
+    },
+    {
+      before: "(3 !== 2) !== (8 === 6)",
+      after: "(3 !== 2) === (8 === 6)",
+      same: false,
+      why: "the case that keeps the rule above from being read as any signing at all. The same two questions again, denied once between them rather than twice, which is exactly the other line's opposite - one comes out true and the other false",
+    },
+    {
       before: '"He" + " gave"',
       after: '" gave" + "He"',
       same: false,
