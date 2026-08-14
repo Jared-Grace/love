@@ -1,3 +1,7 @@
+import { app_shared_title } from "./app_shared_title.mjs";
+import { app_shared_description } from "./app_shared_description.mjs";
+import { html_code_head_social_items } from "./html_code_head_social_items.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { html_code_error_notice } from "./html_code_error_notice.mjs";
 import { html_code_error_banner } from "./html_code_error_banner.mjs";
 import { apps_service_worker_is } from "./apps_service_worker_is.mjs";
@@ -20,7 +24,8 @@ import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 export function html_code(name, body) {
   let attributes_none = {};
   let indent = html_code_indent();
-  let title = html_code_element("title", attributes_none, name);
+  let title_text = app_shared_title(name);
+  let title = html_code_element("title", attributes_none, title_text);
   let emoji = app_shared_icon_emoji(name);
   let favicon = html_code_favicon_emoji(emoji);
   ("offering to install and keeping a copy on disk are two separate opt-ins, asked separately. an app that only wants a return visit to open at once registers the worker and never shows an install banner; an app that wants installing gets both, because a home-screen copy with no cached files would open to a blank page the first time it is opened offline");
@@ -40,6 +45,9 @@ export function html_code(name, body) {
     title,
     manifest_link,
   ]);
+  let description = app_shared_description(name);
+  let social_items = html_code_head_social_items(title_text, description);
+  list_add_multiple(head_items, social_items);
   let head_children = html_code_children(head_items, indent);
   let head = html_code_element("head", attributes_none, head_children);
   let splash = html_code_loading_splash();
