@@ -16,7 +16,7 @@ export function app_replace_rule_set_unary_equations() {
         end: "1   1   1   1   1   =   1   1   1   1   1",
       },
     ],
-    why: "The replacement rules demonstrate the generation of unary equations where the number of '1's on each side of the '=' is kept equal, modeling the concept of equality in unary arithmetic by expanding both sides symmetrically.",
+    why: "The equals sign grows a 1 on each side at once, so the two sides can never fall out of step. Counting with one mark per unit like this is called unary.",
   };
   return r;
 }

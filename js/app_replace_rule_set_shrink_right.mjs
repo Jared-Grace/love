@@ -20,7 +20,7 @@ export function app_replace_rule_set_shrink_right() {
         end: "a   a   a",
       },
     ],
-    why: "The rules demonstrate a grammar that repeatedly replaces any occurrence of ['a','b'] with ['a'], effectively shrinking sequences by removing 'b's that follow 'a's, which simplifies the input to a sequence of 'a's only.",
+    why: "A b sitting just after an a disappears. A b anywhere else has nothing to lean on and cannot go.",
   };
   return r;
 }
