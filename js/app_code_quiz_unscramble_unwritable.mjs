@@ -17,8 +17,8 @@ export function app_code_quiz_unscramble_unwritable() {
   let rounds = 20;
   let names = [];
   let found = [];
-  function on_exercise(visit) {
-    let exercise = property_get(visit, "exercise");
+  function on_exercise(exercise_visit) {
+    let exercise = property_get(exercise_visit, "exercise");
     let unscramble = app_code_exercise_on_answer_is(
       exercise,
       app_code_lesson_quiz_token_select,
@@ -26,7 +26,7 @@ export function app_code_quiz_unscramble_unwritable() {
     if (not(unscramble)) {
       return;
     }
-    let lesson = property_get(visit, "lesson");
+    let lesson = property_get(exercise_visit, "lesson");
     let already = list_includes(names, lesson);
     if (already) {
       return;
