@@ -1,7 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_g_tiles_centered_window } from "./app_g_tiles_centered_window.mjs";
 import { g_coordinates_window_inside_is } from "./g_coordinates_window_inside_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
 export function app_g_day_guide_tile(g, player, target, div_map) {
   ("the GOLD guide tile toward the discerned person. ",
@@ -18,10 +17,6 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
     };
     return r;
   }
-  let minX = property_get(window_tiles, "min_x");
-  let maxX = property_get(window_tiles, "max_x");
-  let minY = property_get(window_tiles, "min_y");
-  let maxY = property_get(window_tiles, "max_y");
-  let gold = app_g_day_guide_pick(g, player, target, minX, maxX, minY, maxY);
+  let gold = app_g_day_guide_pick(g, player, target, window_tiles);
   return gold;
 }

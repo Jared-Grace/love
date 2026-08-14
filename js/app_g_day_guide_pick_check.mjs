@@ -40,8 +40,15 @@ export function app_g_day_guide_pick_check() {
     };
     return g;
   }
+  ("the window every case here is judged against, written once. the checks below still spell the four edges out again by hand rather than asking the repo's own inside test, on purpose: a check that judged the answer with the very predicate the picker uses would agree with it about a wrong edge and say nothing.");
+  let window_tiles = {
+    min_x: 0,
+    max_x: 11,
+    min_y: 5,
+    max_y: 11,
+  };
   let open = map_new(-1, -1);
-  let gold = app_g_day_guide_pick(open, player, target, 0, 11, 5, 11);
+  let gold = app_g_day_guide_pick(open, player, target, window_tiles);
   let b = not_equal(gold, null);
   assert_message(b, "guide should return a gold tile for an off-screen target");
   let in_window =
@@ -55,7 +62,7 @@ export function app_g_day_guide_pick_check() {
   let best = equal(gold.x, 6) && equal(gold.y, 5);
   assert_message(best, "gold tile must be the visible tile nearest the target");
   let detour = map_new(6, 0);
-  let gold2 = app_g_day_guide_pick(detour, player, target, 0, 11, 5, 11);
+  let gold2 = app_g_day_guide_pick(detour, player, target, window_tiles);
   let b3 = not_equal(gold2, null);
   assert_message(b3, "guide should return a gold tile across a water detour");
   let best2 = equal(gold2.x, 6) && equal(gold2.y, 5);
@@ -69,7 +76,7 @@ export function app_g_day_guide_pick_check() {
     x: 0,
     y: 6,
   });
-  let gold3 = app_g_day_guide_pick(blocked, player, target, 0, 11, 5, 11);
+  let gold3 = app_g_day_guide_pick(blocked, player, target, window_tiles);
   let b4 = not_equal(gold3, null);
   assert_message(
     b4,
