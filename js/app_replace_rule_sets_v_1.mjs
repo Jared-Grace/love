@@ -1,6 +1,5 @@
 import { app_replace_rule_set_unary_to_binary_equations } from "./app_replace_rule_set_unary_to_binary_equations.mjs";
 import { app_replace_rule_set_unary_to_binary_equations_preparation } from "./app_replace_rule_set_unary_to_binary_equations_preparation.mjs";
-import { app_replace_rule_set_grow_same_three_different } from "./app_replace_rule_set_grow_same_three_different.mjs";
 import { app_replace_rule_set_two_different_grow_same } from "./app_replace_rule_set_two_different_grow_same.mjs";
 import { app_replace_rule_set_shrink_same_three_different } from "./app_replace_rule_set_shrink_same_three_different.mjs";
 import { app_replace_rule_set_three_different_grow_same } from "./app_replace_rule_set_three_different_grow_same.mjs";
@@ -77,7 +76,6 @@ export function app_replace_rule_sets_v_1() {
   let r34 = app_replace_rule_set_three_different_grow_same();
   let r35 = app_replace_rule_set_shrink_same_three_different();
   let r36 = app_replace_rule_set_two_different_grow_same();
-  let r37 = app_replace_rule_set_grow_same_three_different();
   let r38 = app_replace_rule_set_unary_to_binary_equations_preparation();
   let r39 = app_replace_rule_set_unary_to_binary_equations();
   let rs = [
