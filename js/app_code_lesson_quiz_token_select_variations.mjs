@@ -112,7 +112,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     each(value_codes, la);
   }
   let codes = list_adder_unique(generate_all_with_values);
-  ("Swapping the two sides of a sign that reads both ways is not always safe, because a plus is not always a sum. \"He\" + \" gave\" swapped over is a different sentence, and it was being accepted. So every ordering gathered above is asked once more whether it still says what the question says, and the ones that no longer do are dropped.");
+  ('Swapping the two sides of a sign that reads both ways is not always safe, because a plus is not always a sum. "He" + " gave" swapped over is a different sentence, and it was being accepted. So every ordering gathered above is asked once more whether it still says what the question says, and the ones that no longer do are dropped.');
   ("Only lines that stand for a value are asked. Anything else - a whole statement, say - has no sides to weigh against each other, and asking would throw away the very ordering it was written in.");
   function said_alike_is(candidate) {
     let said_alike = js_code_same_meaning_is(code, candidate);
