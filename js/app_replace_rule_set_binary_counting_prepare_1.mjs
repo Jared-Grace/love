@@ -4,24 +4,24 @@ export function app_replace_rule_set_binary_counting_prepare_1() {
     rules: ["1 a > a 0", "1 > 1 1"],
     goals: [
       {
-        start: "1 a",
-        end: "1 1 a",
+        start: "1   a",
+        end: "1   1   a",
       },
       {
-        start: "1 a",
-        end: "1 a 0",
+        start: "1   a",
+        end: "1   a   0",
       },
       {
-        start: "1 a",
-        end: "1 1 a 0",
+        start: "1   a",
+        end: "1   1   a   0",
       },
       {
-        start: "1 a",
-        end: "a 0 0",
+        start: "1   a",
+        end: "a   0   0",
       },
       {
-        start: "1 a",
-        end: "a 0 0 0",
+        start: "1   a",
+        end: "a   0   0   0",
       },
     ],
     why: "The rules demonstrate binary counting by simulating the process of incrementing a binary number, where '1' acts as a carry and 'a' as a digit, showing how binary addition propagates carries and extends the number.",
