@@ -1,3 +1,4 @@
+import { app_g_overlay_verse_add } from "./app_g_overlay_verse_add.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -8,12 +9,10 @@ import { html_style_head } from "./html_style_head.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-import { app_g_scripture_verse } from "./app_g_scripture_verse.mjs";
 import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 import { g_verse_waiting_next } from "./g_verse_waiting_next.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
 import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_g_prayer_overlay() {
   ("full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered. font sizes from ",
     app_g_overlay_fonts.name,
@@ -56,23 +55,7 @@ export function app_g_prayer_overlay() {
     "text-align": "center",
   });
   let drawn = g_verse_waiting_next();
-  let text2 = property_get(drawn, "text");
-  let verse = html_p_text(card, text2);
-  html_style_assign(verse, {
-    "font-size": fonts.verse,
-    margin: "0",
-    "max-width": "80vw",
-    "text-align": "center",
-  });
-  app_g_scripture_verse(verse);
-  let text3 = property_get(drawn, "reference");
-  let reference = html_p_text(card, text3);
-  html_style_assign(reference, {
-    color: "white",
-    "font-size": fonts.reference,
-    margin: "0",
-    "text-align": "center",
-  });
+  app_g_overlay_verse_add(card, drawn);
   html_reflow_force(div);
   html_style_opacity(div, "1");
   return div;
