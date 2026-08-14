@@ -163,7 +163,7 @@ export function g_arc_prompt(
     "",
     "These conversations are a SUMMARY of this person's life, never a transcript of it. John 21 verse 25 says the world could not hold the books if everything Jesus did were written down, and the Gospels are short compared to the years they cover. So write the same way.",
     "The turns are the few exchanges worth showing out of many more that happened. Between two conversations this person has gone on living, and may have changed in ways the player did not see playing the game.",
-    "So do not try to show every step of a person changing. Choose significant changes - for example: the day they finally 'let go', the day they finally asked something.",
+    "So do not try to show every step of a person changing. Choose the changes that mattered - the ones after which this person was not the same as before.",
     "You are free to open each conversation with them further on than the player left them. The next one could be the very next day or many days later, and the gaps need not be regular. You are not told which and neither is the player, so the person must not say or imply how long it has been - the game decides when conversations are scheduled when a player starts a new game, and how many actual days a game day stands for is not decided yet.",
     "",
     "Every turn follows from where this person is in their arc (consistent, on topic). Early on that is their own trouble. Later it is whatever their walk with God has brought them to since.",
