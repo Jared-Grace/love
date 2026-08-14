@@ -12,21 +12,14 @@ export async function gloss_chapter_base_repair(chapter_code, fn) {
   "The stored wording of each verse and the list of words explained were both copied from the text as it stood when the chapter was authored, so a correction to that text leaves them behind: the file goes on carrying words the base does not carry, and goes on publishing them. This rewrites the wording and drops the stranded explanations, and leaves every explanation of a word the base still carries exactly as it was authored.";
   let chapters = await bible_interlinear_chapters();
   let verses_base = property_get(chapters, chapter_code);
-  let path = local_function_path_json(chapter_code, fn);
-  let chapter = await file_read_json(path);
-  let passages = property_get(chapter, "passages");
-  let removed = 0;
   function passage_read(passage) {
     let count = gloss_passage_base_repair(passage, verses_base);
-    removed = add(removed, count);
+    return count;
   }
-  each(passages, passage_read);
-  let contents = json_format_to(chapter);
-  await file_overwrite_uncached(path, contents);
-  let r = {
+  let r = await gloss_chapter_passages_repair_generic(
     chapter_code,
-    path,
-    removed,
-  };
+    fn,
+    passage_read,
+  );
   return r;
 }
