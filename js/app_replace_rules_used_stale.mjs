@@ -10,7 +10,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 import { each } from "./each.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_replace_rules_used_unknown() {
+export function app_replace_rules_used_stale() {
   "Every rule the saved list of rules-for-a-goal offers that its own exercise no longer has.";
   "The rules a goal shows are read from a saved list rather than worked out as the page draws, so renaming a symbol in an exercise leaves that list spelling the old one - and the player is then offered a rule that matches nothing, with the rule they need missing, on a page that looks perfectly well. Nothing else notices: the solver reads the exercise, so it still finds a path, and the explanations list reads the saved rules, so it quietly drops the renamed word too.";
   let rule_sets = app_replace_rule_sets();
