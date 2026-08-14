@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
@@ -10,10 +9,8 @@ import { not } from "./not.mjs";
 export function qa_gate_count_hollow_is(node, asserted) {
   "Whether a value a gate reports is worked out from nothing but the lists it refuses to have anything in - which makes it nothing on every run that passes.";
   "This is the shape that reads as a reading and is not one. A gate answering how much it checked, where how much it checked is the length of its offenders, says nothing checked every single time it is green - and a gate whose sweep had stopped reaching anything at all would answer with that same word. There is then no number anywhere that could tell a clean repo from a blind one.";
-  ("A call is judged by what it was given rather than by everything written in it, because the name of the call is always there and is never one of the lists in question. Asked the other way round, every count would look like a reading, since ",
-    fn_name("list_size"),
-    " is spelled in all of them.");
-  ("A value mentioning no name at all - a nought written out - is not hollow by this reading and is refused a step earlier, where a written-down answer is recognised for what it is.");
+  "A call is judged by what it was given rather than by everything written in it, because the name being called is always there and is never one of the lists in question. Asked the other way round, every count would look like a reading, since the same one name for taking a length is spelled in all of them.";
+  "A value mentioning no name at all - a nought written out - is not hollow by this reading and is refused a step earlier, where a written-down answer is recognised for what it is.";
   arguments_assert(arguments, 2);
   let call_is = js_node_type_is(node, "CallExpression");
   let read = [];
