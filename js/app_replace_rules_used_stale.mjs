@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -25,8 +26,7 @@ export function app_replace_rules_used_stale() {
     let of_goals = property_get_or_null(saved, name);
     let present = null_not_is(of_goals);
     if (present) {
-      let goals = property_get(rule_set, "goals");
-      let goals_size = list_size(goals);
+      let goals_size = property_list_size(rule_set, "goals");
       let saved_size = list_size(of_goals);
       let counts_differ = equal_not(goals_size, saved_size);
       if (counts_differ) {
