@@ -36,11 +36,8 @@ export async function app_shared_bible_button_back_to_reader(parent, context) {
   if (unchosen) {
     return null;
   }
-  let e = ebible_folder_english();
-  let books = await ebible_version_books_browser(e);
-  let reference = ebible_parts_chapter_code_to_reference(
+  let reference = await app_shared_bible_reference_english(
     chapter_code,
-    books,
     verse_numbers,
   );
   async function lambda() {
