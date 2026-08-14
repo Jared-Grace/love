@@ -30,7 +30,7 @@ export function g_npc_path_clear_places(situation, player, land_index) {
     ("the tap lands on a PERSON, so that person has to be one of the people standing - the arrangement names their tile twice and the next line makes it one");
     list_add(wanted, tap);
   }
-  let dry = wanted;
+  let dry = list_filter(wanted, land_is);
   ("one tile named twice is asked for once. What it guards against is not a duplicate person: a person's picture and the cross over them are remembered by where they are standing, so a second person arriving on a tile takes over the first one's drawer and the first drags somebody else's picture about from then on");
   let index = g_coordinates_index(dry);
   let people = object_values(index);
