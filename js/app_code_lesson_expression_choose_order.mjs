@@ -126,8 +126,8 @@ export function app_code_lesson_expression_choose_order() {
       let more = app_code_expression_node_is(current);
       if (not(more)) {
         ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
+        ("Nothing is said about going on. The learner has just chosen three times over - the walkthrough only named which operator, the choosing was already theirs - so a parting line handing them their turn takes back what they just did, and the button underneath is the only thing that has to say where the turn is.");
         app_shared_success_message(note);
-        html_div_cycle_code(note, ["Now it is your turn to choose"]);
         return;
       }
       let current_code = app_code_expression_code(current);
