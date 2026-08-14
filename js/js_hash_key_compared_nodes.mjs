@@ -1,3 +1,4 @@
+import { js_node_bare_call_name } from "./js_node_bare_call_name.mjs";
 import { js_hash_read_is } from "./js_hash_read_is.mjs";
 import { js_equality_function_names } from "./js_equality_function_names.mjs";
 import { hash_read_names } from "./hash_read_names.mjs";
@@ -5,9 +6,7 @@ import { js_bare_call_names } from "./js_bare_call_names.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_or_null } from "./property_or_null.mjs";
 import { property_in_list } from "./property_in_list.mjs";
-import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
@@ -26,48 +25,25 @@ export function js_hash_key_compared_nodes(ast) {
   let readers = hash_read_names();
   let lifted = js_bare_call_names(ast);
   let sites = [];
-  function getter_name(arg) {
-    let called = js_node_type_is(arg, "CallExpression");
-    if (called) {
-      let callee = property_get(arg, "callee");
-      let plain = js_node_type_is(callee, "Identifier");
-      if (not(plain)) {
-        return null;
-      }
-      let bare = property_list_empty_is(arg, "arguments");
-      if (not(bare)) {
-        return null;
-      }
-      let name = property_get(callee, "name");
-      return name;
-    }
-    let named = js_node_type_is(arg, "Identifier");
-    if (not(named)) {
-      return null;
-    }
-    let word = property_get(arg, "name");
-    let stood = property_or_null(lifted, word);
-    return stood;
-  }
   function lambda(v) {
     let node = property_get(v, "node");
-    let callee2 = property_get(node, "callee");
-    let plain2 = js_node_type_is(callee2, "Identifier");
-    if (not(plain2)) {
+    let callee = property_get(node, "callee");
+    let plain = js_node_type_is(callee, "Identifier");
+    if (not(plain)) {
       return;
     }
-    let asks = property_in_list(callee2, "name", questions);
+    let asks = property_in_list(callee, "name", questions);
     if (not(asks)) {
       return;
     }
-    let asked = property_get(callee2, "name");
+    let asked = property_get(callee, "name");
     let args = property_get(node, "arguments");
     for (let arg of args) {
-      let name2 = getter_name(arg);
-      if (null_is(name2)) {
+      let name = js_node_bare_call_name(arg, lifted);
+      if (null_is(name)) {
         continue;
       }
-      let reader = list_includes(readers, name2);
+      let reader = list_includes(readers, name);
       if (reader) {
         continue;
       }
