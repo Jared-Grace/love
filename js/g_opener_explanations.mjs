@@ -1,3 +1,4 @@
+import { g_gospel_share_said } from "./g_gospel_share_said.mjs";
 export function g_opener_explanations() {
   "For every opener the player may approach with: what the player actually says, and what kind of thing the person says back.";
   "THE OPENER LISTS ARE TAGS, NOT SPEECH. A written arc marks each turn with the opener it answers, and that mark has to be one fixed word to be matched on - so the lists hold `how are you`, unpunctuated, and cannot also carry the sentence a player hears. This is where the sentence lives, and a tag stays a tag.";
