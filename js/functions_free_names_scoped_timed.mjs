@@ -1,3 +1,4 @@
+import { function_paths_frozen_enable } from "./function_paths_frozen_enable.mjs";
 import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
