@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
+import { bible_folders_sentence_end_marked } from "./bible_folders_sentence_end_marked.mjs";
+import { bible_sentence_gaps_sample_chapters } from "./bible_sentence_gaps_sample_chapters.mjs";
+import { bible_sentence_gaps_sample_count } from "./bible_sentence_gaps_sample_count.mjs";
+import { bible_folders_chapters_sentence_gaps } from "./bible_folders_chapters_sentence_gaps.mjs";
 export async function bible_sentence_gaps_languages_measure() {
   "Runs the measurement for a reader of every bible at once: how far a passage is carried on when the sentence has to have finished in all of them.";
   "Every bible rather than a chosen few, because a chosen few is a guess about which languages disagree and that guess is the thing being tested. Reading all of them at once is nobody's actual setting - it is the worst any setting could be, since adding a bible can only ever hold the sentence open longer. So this answers a bound on every reader rather than a story about one.";
