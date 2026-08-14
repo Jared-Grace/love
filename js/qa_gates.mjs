@@ -497,6 +497,7 @@ export function qa_gates() {
     app_shared_bible_hash_field_reference_cases_gate_run,
     app_code_quiz_unscramble_gate_run,
     app_code_quiz_unscramble_own_wording_gate_run,
+    app_code_quiz_choice_pool_gate_run,
   ];
   return gates;
 }
