@@ -127,6 +127,7 @@ export function g_arc_prompt(
     "Goal is each passage is used an equal number of times, and closer to equality is better than further.",
     "Relevance and appropriateness are more important than equally using each passage - do not use passages by force.",
     "There are far more turns than there are passages, so you will answer with the same passages many times over. That is expected and is not a failure.",
+    "One passage answers one turn, and the fit has to be obvious. Somebody who has never read the Bible plays this game. So write each thing the person says so that a single passage above is plainly the answer to it - not true-but-sideways, and not an answer that corrects how they are reasoning rather than what they said.",
     "",
     "LENGTH",
     joined9,
