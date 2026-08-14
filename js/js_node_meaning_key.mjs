@@ -1,3 +1,4 @@
+import { js_node_meaning_key_terms } from "./js_node_meaning_key_terms.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
@@ -9,7 +10,6 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -46,37 +46,7 @@ export function js_node_meaning_key(node) {
         straight = times_sign;
         opposite = over_sign;
       }
-      let terms = [];
-      function gather(piece, facing) {
-        let piece_type = js_node_type(piece);
-        let piece_binary = equal(piece_type, "BinaryExpression");
-        if (piece_binary) {
-          let piece_operator = property_get(piece, "operator");
-          let onward = equal(piece_operator, straight);
-          let turned = equal(piece_operator, opposite);
-          if (onward || turned) {
-            let piece_left = property_get(piece, "left");
-            let piece_right = property_get(piece, "right");
-            gather(piece_left, facing);
-            let facing_after = facing;
-            if (turned) {
-              let flipped = equal(facing, straight);
-              facing_after = straight;
-              if (flipped) {
-                facing_after = opposite;
-              }
-            }
-            gather(piece_right, facing_after);
-            return;
-          }
-        }
-        let inside = js_node_meaning_key(piece);
-        let parts = [facing, inside];
-        let term = list_join(parts, empty);
-        list_add(terms, term);
-      }
-      gather(node, straight);
-      list_sort_text(terms);
+      let terms = js_node_meaning_key_terms(node, straight, opposite);
       let written = list_join(terms, comma);
       let pieces = ["run", straight, open, written, close];
       let key = list_join(pieces, empty);
