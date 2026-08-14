@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -10,7 +11,6 @@ import { list_take } from "./list_take.mjs";
 import { not } from "./not.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { wolff_word_find } from "./wolff_word_find.mjs";
 export async function wolff_binisaya_roots_agreement() {
   "How often the roots one Cebuano dictionary gives are words the other one carries - counted over every root already gathered, with a sample of the ones the second book does not answer.";
@@ -24,8 +24,7 @@ export async function wolff_binisaya_roots_agreement() {
       return false;
     }
     let root = property_get(entry, "root");
-    let blank = text_empty_is(root);
-    let n = not(blank);
+    let n = text_empty_not_is(root);
     return n;
   }
   let rooted = list_filter(entries, analysed_is);
