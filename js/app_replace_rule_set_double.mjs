@@ -16,7 +16,7 @@ export function app_replace_rule_set_double() {
         end: "a   a   a   a   a",
       },
     ],
-    why: "The replacement rule demonstrates a grammar that doubles the symbol 'a' each time the rule is applied, as each 'a' is replaced by two 'a's, leading to exponential growth in the number of 'a's.",
+    why: "Each use turns one a into two, so the line grows by one. Do it to every a in the line and the count doubles.",
   };
   return r;
 }
