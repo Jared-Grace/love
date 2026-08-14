@@ -4,6 +4,7 @@ export function gloss_parsing_phrases() {
   "The list is answerable to a count rather than to memory. Asking the interlinear for the words its New Testament parsings are made of gives fifty-six of them, and every one has an entry here; a word appearing in the text with no entry is a hole the composer refuses to write around rather than one it quietly skips.";
   "The dimension is what lets a sentence be composed rather than concatenated. A parsing hands over its words in the order a grammarian writes them, and an explanation wants them in the order a reader can follow, so the composer sorts by dimension and needs to be told which is which.";
   "The name and its explanation are kept apart because one of them moves and the other does not. A sort is an adjective that has to stand in front of the kind it describes - demonstrative in front of pronoun - and a name welded to its own explanation cannot be put anywhere but at the end of a clause. Split, the same entry serves a sentence that names it plainly and a sentence that builds a longer phrase around it.";
+  "A case is glossed by what the form most often does and never by what it is doing here, and the hedge is load-bearing. A dative names the one something is given to, and it also names when something happened, and what a thing was done with; a genitive shows belonging, and it also marks a stretch of time and follows half the prepositions. A sentence composed from this table has read no context and cannot know which, so a gloss stated flatly would be a claim about the word that the parsing never made - true most of the time, and quietly false the rest. Saying most often is the whole of what the table is entitled to say.";
   "A phrase may be empty, and that is a decision rather than a gap. The indicative and the active voice are what a reader assumes unless told otherwise, and glossing them would spend a clause on saying nothing - so the word is known, placed, and then left unsaid.";
   "The infinitive and the participle are given a dimension of their own rather than sitting with the moods, because a reader meets them as a thing a word is rather than as a way a verb stands. A sentence says this is a participle where it would say a verb, and putting them with the other moods would make it say both.";
   let phrases = [
@@ -144,25 +145,25 @@ export function gloss_parsing_phrases() {
       word: "Nominative",
       dimension: "case",
       phrase: "nominative",
-      gloss: "the form for the one doing something",
+      gloss: "the form for the one a sentence is about",
     },
     {
       word: "Genitive",
       dimension: "case",
       phrase: "genitive",
-      gloss: "the form that shows belonging",
+      gloss: "the form Greek most often uses to show belonging",
     },
     {
       word: "Dative",
       dimension: "case",
       phrase: "dative",
-      gloss: "the form for the one something is done to or given to",
+      gloss: "the form Greek most often uses for the one something is given to",
     },
     {
       word: "Accusative",
       dimension: "case",
       phrase: "accusative",
-      gloss: "the form for what a sentence acts on",
+      gloss: "the form Greek most often uses for what a sentence acts on",
     },
     {
       word: "Vocative",
