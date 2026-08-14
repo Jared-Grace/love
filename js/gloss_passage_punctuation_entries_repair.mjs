@@ -21,10 +21,6 @@ export function gloss_passage_punctuation_entries_repair(passage) {
     return wordy;
   }
   let kept = list_filter(entries, word_is);
-  let value = json_format_to(kept);
-  property_set(passage, "generated", value);
-  let left = list_size(entries);
-  let right = list_size(kept);
-  let removed = subtract(left, right);
+  let removed = gloss_passage_entries_kept_set(passage, entries, kept);
   return removed;
 }
