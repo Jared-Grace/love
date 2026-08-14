@@ -1,3 +1,4 @@
+import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
@@ -26,8 +27,6 @@ import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_all } from "./list_all.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
 import { log } from "./log.mjs";
@@ -57,11 +56,7 @@ export function app_code_lesson_quiz_token_select(
   let tokens_unique = list_unique(normalized);
   function variation_buildable(variation) {
     "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
-    function is_button(token) {
-      let includes = list_includes(tokens_unique, token);
-      return includes;
-    }
-    let a = list_all(variation, is_button);
+    let a = app_code_quiz_variation_buildable_is(variation, tokens_unique);
     return a;
   }
   variations = list_filter(variations, variation_buildable);
