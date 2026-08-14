@@ -1,12 +1,14 @@
+import { g_coordinates_apart } from "./g_coordinates_apart.mjs";
+import { add } from "./add.mjs";
 import { abs } from "./abs.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { subtract } from "./subtract.mjs";
 export function g_distance(coordinates, item) {
-  let x1 = property_get(coordinates, "x");
-  let y1 = property_get(coordinates, "y");
-  let x2 = property_get(item, "x");
-  let y2 = property_get(item, "y");
-  let distance = text_combine(abs(subtract(x2, x1)), abs(subtract(y2, y1)));
+  "How many steps apart two places are when a step goes along one axis at a time, which is the only way anything moves on this grid.";
+  let apart = g_coordinates_apart(coordinates, item);
+  let x_apart = property_get(apart, "x");
+  let y_apart = property_get(apart, "y");
+  let x_away = abs(x_apart);
+  let y_away = abs(y_apart);
+  let distance = add(x_away, y_away);
   return distance;
 }
