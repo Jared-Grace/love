@@ -1,3 +1,4 @@
+import { text_url_encode } from "./text_url_encode.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { firebase_storage_list_page_size } from "./firebase_storage_list_page_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -22,6 +23,7 @@ export function firebase_storage_list_url(project_url, prefix, page_token) {
   if (none) {
     return first;
   }
-  let url = text_combine_multiple([first, "&pageToken=", page_token]);
+  let spelled = text_url_encode(page_token);
+  let url = text_combine_multiple([first, "&pageToken=", spelled]);
   return url;
 }
