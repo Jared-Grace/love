@@ -1,5 +1,5 @@
+import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_locals_unread_baseline_path } from "./functions_locals_unread_baseline_path.mjs";
 import { functions_locals_unread_names } from "./functions_locals_unread_names.mjs";
@@ -21,13 +21,12 @@ export async function functions_locals_unread_gate_run() {
     name_write,
     " if the binding is only there to name a step as it passes",
   ]);
-  let told = await baseline_names_gate_generic(names, path, hint, name_write);
-  let added = property_get(told, "added");
-  let stale = property_get(told, "stale");
-  let r = {
+  let r = await baseline_names_gate_walked_generic(
     walked,
-    added,
-    stale,
-  };
+    names,
+    path,
+    hint,
+    name_write,
+  );
   return r;
 }
