@@ -5,10 +5,8 @@ export function gloss_back_reference_markers() {
   "Each one has to be a phrase that can only be pointing somewhere else. ‘Same as’ on its own is not on the list and must not be: an explanation is free to say a word means the same as another word, and that is the explanation, not a refusal to give one.";
   let markers = [
     " see above",
-    " as above",
     " see previous",
     " as previous",
-    " as before",
     " noted above",
     " stated above",
     " explained above",
