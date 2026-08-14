@@ -1,6 +1,6 @@
 import { object_property_names } from "./object_property_names.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-export function word_root_irregulars() {
+export function word_root_irregulars_built() {
   "Every English word whose root cannot be reached by cutting an ending off it, paired with the root it belongs to.";
   "Written the readable way round - one root, then the forms that belong to it - and turned inside out before it is handed back, because every reader of this wants to go from a form to its root.";
   "It is deliberately small. What it serves is one closed body of text, the Bible passages being written on, so the forms worth carrying are the ones those passages actually use. A whole-of-English lemma list answers a general problem this does not have, and would put a third party's data file, under terms that are not plainly ours to publish, into a public repository.";
