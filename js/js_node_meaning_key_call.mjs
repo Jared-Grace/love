@@ -1,9 +1,8 @@
+import { js_node_meaning_key_from_parts } from "./js_node_meaning_key_from_parts.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_node_meaning_key } from "./js_node_meaning_key.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_join } from "./list_join.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 export function js_node_meaning_key_call(node) {
@@ -14,11 +13,6 @@ export function js_node_meaning_key_call(node) {
   let keys = property_list_map(node, "arguments", js_node_meaning_key);
   let commutative_calls = js_code_call_commutative();
   let swappable = list_includes(commutative_calls, name);
-  if (swappable) {
-    list_sort_text(keys);
-  }
-  let written = list_join(keys, ",");
-  let pieces = [name, "(", written, ")"];
-  let key = list_join(pieces, "");
+  let key = js_node_meaning_key_from_parts(name, keys, swappable);
   return key;
 }
