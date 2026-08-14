@@ -13,7 +13,7 @@ export async function app_shared_card_defects() {
   "A picture named with no file behind it is the worse of the two, since the program building the card asks for the file, is refused, and shows a torn frame to everybody the link was ever sent to.";
   "A picture named with no sentence beside it is dead rather than broken: no card tags are written at all without a sentence, so the picture is never asked for and the work of making it bought nothing.";
   "Answers a list rather than throwing, so that the same reading can be taken by anything wanting to know without also stopping.";
-  let names = apps_names();
+  let names = await apps_names();
   let unique = list_unique(names);
   let defects = [];
   async function each_name(app_name) {
