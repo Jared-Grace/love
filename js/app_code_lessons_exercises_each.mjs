@@ -14,12 +14,12 @@ export function app_code_lessons_exercises_each(rounds, on_exercise) {
       for (let qa of batch) {
         let exercises = property_get(qa, "exercises");
         for (let exercise of exercises) {
-          let visit = {
+          let exercise_visit = {
             lesson: fn.name,
             qa,
             exercise,
           };
-          on_exercise(visit);
+          on_exercise(exercise_visit);
         }
       }
     }
