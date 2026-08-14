@@ -1,5 +1,4 @@
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
 import { list_map_squash } from "./list_map_squash.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_is } from "./js_node_is.mjs";
@@ -14,10 +13,9 @@ export function js_declared_names(ast) {
   "might have to go and import. The reading that already knows every unpacking";
   "shape - object, list, rest, default, and a skipped slot - is the one a parameter";
   "list is read with, and it is asked here too rather than written again.";
-  let functions = js_list_type_nodes(ast, "FunctionDeclaration");
-  let classes = js_list_type_nodes(ast, "ClassDeclaration");
-  let declarators = js_list_type_nodes(ast, "VariableDeclarator");
-  let binding_nodes = list_concat_multiple([functions, classes, declarators]);
+  "The three kinds are asked for together, so the tree is walked once rather than three times over. The answer is the same list in the same order - kind by kind, in the order named - and this reading is one of the four the free-name question is built on, which is asked of every file in the repo.";
+  let types = ["FunctionDeclaration", "ClassDeclaration", "VariableDeclarator"];
+  let binding_nodes = js_list_types_nodes(ast, types);
   function names_of(node) {
     let id = property_get(node, "id");
     let bound = js_node_is(id);
