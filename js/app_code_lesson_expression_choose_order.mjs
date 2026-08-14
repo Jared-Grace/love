@@ -1,3 +1,7 @@
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_code_expression_nodes } from "./app_code_expression_nodes.mjs";
@@ -132,6 +136,40 @@ export function app_code_lesson_expression_choose_order() {
       each(nodes, each_node);
     }
   }
+  function on_question_example(parent, question) {
+    "the lesson's own front page: the line, with the operator that may be worked out next pressable inside the code itself. Pressing it works that one out and the line becomes the shorter one - 1 + 2 * 3 pressed on the times becomes 1 + 6 - so a learner walks the whole thing through before being asked to do it.";
+    "Only the operator that may go next is pressable. One that still holds another underneath it is left as plain code, because a press that has to be turned down teaches the rule by refusal, and the front page is where the rule is being SHOWN.";
+    "Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.";
+    let tree = property_get(trees, question);
+    let line = html_div(parent);
+    html_style_code_dark(line);
+    let note = html_div(parent);
+    draw_example(tree);
+    function draw_example(current) {
+      html_clear(line);
+      let ready = app_code_expression_nodes_ready(current);
+      function on_operator(node, span) {
+        let ready_is = list_includes(ready, node);
+        if (not(ready_is)) {
+          return;
+        }
+        app_code_expression_operator_pressable(span);
+        function on_click() {
+          let stepped = app_code_expression_solved(current, node);
+          draw_example(stepped);
+        }
+        html_on_click(span, on_click);
+      }
+      app_code_expression_paint(line, current, on_operator);
+      html_clear(note);
+      let more = app_code_expression_node_is(current);
+      if (not(more)) {
+        html_div_cycle_code(note, ["That is the whole line worked out"]);
+        return;
+      }
+      html_div_cycle_code(note, ["Press the operator to work out next"]);
+    }
+  }
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
     let info = {
@@ -206,7 +244,7 @@ export function app_code_lesson_expression_choose_order() {
     above,
     1,
     batch_get,
-    html_text_set_code_dark,
+    on_question_example,
     "Value of code: ",
     quizzes_get,
     "Code: ",
