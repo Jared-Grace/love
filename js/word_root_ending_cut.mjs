@@ -25,8 +25,10 @@ export function word_root_ending_cut(w) {
   function ending_matches(ending) {
     let held = cut.endsWith(ending.end);
     let keep = subtract(cut.length, ending.drop);
-    let enough = not(greater_than(ending.keep, keep));
-    return held && enough;
+    let b = greater_than(ending.keep, keep);
+    let enough = not(b);
+    let r = held && enough;
+    return r;
   }
   for (let ask of endings) {
     let matched = list_filter(endings, ending_matches);
@@ -35,7 +37,8 @@ export function word_root_ending_cut(w) {
     }
     let ending = list_first(matched);
     let keep = subtract(cut.length, ending.drop);
-    let shorter = add(cut.slice(0, keep), ending.add);
+    let left = cut.slice(0, keep);
+    let shorter = add(left, ending.add);
     if (equal(shorter, cut)) {
       break;
     }

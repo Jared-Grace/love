@@ -36,7 +36,7 @@ export function g_arc_prompt_style_assert() {
   each(blocks, block_add);
   let faults = [];
   function check_prompt(leader) {
-    let prompt = g_arc_prompt("Chapter", "verses", 36, profile, leader);
+    let prompt = g_arc_prompt("JHN04", "verses", 36, profile, leader);
     let lines = text_split_newline(prompt);
     function check_line(line) {
       if (list_includes(injected, line)) {
