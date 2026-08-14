@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
@@ -26,8 +27,7 @@ export function bible_strong_scope_counts(tallies, chapter_code, strong) {
     }
     let code_book = ebible_chapter_code_to_book(code);
     let code_division = ebible_book_code_to_division(code_book);
-    let code_testament = property_get(code_division, "testament");
-    let b = equal(code_testament, testament_name);
+    let b = property_equals(code_division, "testament", testament_name);
     if (not(b)) {
       continue;
     }
