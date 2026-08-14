@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { storage_function_path } from "./storage_function_path.mjs";
 import { g_sermon_edited_store_name } from "./g_sermon_edited_store_name.mjs";
@@ -49,9 +50,12 @@ export async function g_sermon_words_unjoined() {
   while (greater_than(sorted.length, index)) {
     let shorter = sorted[index];
     let ahead = add(index, 1);
-    while (greater_than(shorter.length, 2) && greater_than(sorted.length, ahead)) {
+    while (
+      greater_than(shorter.length, 2) &&
+      greater_than(sorted.length, ahead)
+    ) {
       let longer = sorted[ahead];
-      if (!longer.startsWith(shorter)) {
+      if (not(longer.startsWith(shorter))) {
         break;
       }
       let grew = subtract(longer.length, shorter.length);
