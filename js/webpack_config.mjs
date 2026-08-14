@@ -1,3 +1,4 @@
+import { webpack_config_cache } from "./webpack_config_cache.mjs";
 import { log } from "./log.mjs";
 import { webpack_config_folder } from "./webpack_config_folder.mjs";
 import { path_resolve } from "./path_resolve.mjs";
@@ -15,9 +16,12 @@ export async function webpack_config() {
   let filename = process_env_get(webpack_config_filename);
   let folder = process_env_get(webpack_config_folder);
   let path = await path_resolve(folder);
+  let cache = webpack_config_cache(folder);
+  let plugin = webpack_config_node_scheme_strip_plugin();
   let r = {
     mode: "production",
     entry,
+    cache,
     output: {
       filename,
       path,
@@ -40,7 +44,7 @@ export async function webpack_config() {
       new webpack.IgnorePlugin({
         resourceRegExp: /module-name-to-ignore/,
       }),
-      webpack_config_node_scheme_strip_plugin(),
+      plugin,
     ],
   };
   log(webpack_config.name, {
