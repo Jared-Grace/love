@@ -1233,7 +1233,7 @@ export function permission_grant_names() {
   let spelled1204 = fn_name("daemons_stale_restart");
   let spelled1205 = fn_name("app_replace_rule_sets_fns_rules_used_generate");
   let spelled1206 = fn_name("daemon_stale_seconds_allowed");
-  let spelled1207 = fn_name("app_replace_rules_used_unknown");
+  let spelled1207 = fn_name("app_replace_rules_used_stale");
   let spelled1208 = fn_name("gloss_words_back_referenced");
   let spelled1209 = fn_name("gloss_chapters_back_references");
   let spelled1210 = fn_name("function_shadowing_findings");
