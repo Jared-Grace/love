@@ -44,8 +44,12 @@ export function app_code_lesson_base(
             on_question,
           );
           let container = property_get(a, "container");
-          app_code_example_answer_label(container, example_answer_label);
-          on_example_answer(container, answer);
+          let answer_shown = null_not_is(example_answer_label);
+          ("no label means the example has no answer to show - a lesson whose example is worked through on the page has already shown the answer by the time it is finished, and printing it beside the line gives it away before anybody has pressed anything");
+          if (answer_shown) {
+            app_code_example_answer_label(container, example_answer_label);
+            on_example_answer(container, answer);
+          }
           let r = {
             container,
           };
