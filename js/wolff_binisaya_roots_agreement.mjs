@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -6,7 +7,6 @@ import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { not } from "./not.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,8 +33,7 @@ export async function wolff_binisaya_roots_agreement() {
     let root = property_get(entry, "root");
     return root;
   }
-  let named = list_map(rooted, root_read);
-  let roots = list_unique(named);
+  let roots = list_map_unique(rooted, root_read);
   async function root_find(root) {
     let answer = await wolff_word_find(root);
     let found = property_get(answer, "found");
