@@ -4,7 +4,7 @@ export function app_replace_rule_set_binary_numbers_simple() {
     name: "Binary Numbers Simple",
     rules: ["0 > 0 0", "0 > 1"],
     goals: app_replace_rule_set_binary_numbers_goals("0"),
-    why: "The rules generate all binary numbers starting with '1' by repeatedly doubling the length of zeros and then replacing the last zero with a one, demonstrating a simple binary counting system.",
+    why: "A 0 can split into two 0's, or settle as a 1. Splitting makes room for more digits; settling fixes a digit in place. Binary writes numbers with only these two digits.",
   };
   return r;
 }
