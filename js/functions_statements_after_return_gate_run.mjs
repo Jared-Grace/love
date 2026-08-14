@@ -14,13 +14,25 @@ export async function functions_statements_after_return_gate_run() {
   ("rule binds what is written today instead of waiting on a judgement about each");
   ("one already here. Some of those are a body deliberately switched off at the top,");
   ("which is a different decision from an accident and is not this gate's to make.");
-  let offenders = await functions_statements_after_return();
+  ("How many functions were opened travels out with the verdict, because green here");
+  ("means no new offender, and that is also what green looks like when the sweep");
+  ("read nothing at all.");
+  let swept = await functions_statements_after_return();
+  let walked = property_get(swept, "walked");
+  let offenders = property_get(swept, "offenders");
   let path = functions_statements_after_return_baseline_path();
-  let r = await baseline_names_gate_generic(
+  let told = await baseline_names_gate_generic(
     offenders,
     path,
     "these functions carry statements below a return - delete the dead lines, or move them above the return if they were meant to run",
     fn_name("functions_statements_after_return_baseline_write"),
   );
+  let added = property_get(told, "added");
+  let stale = property_get(told, "stale");
+  let r = {
+    walked,
+    added,
+    stale,
+  };
   return r;
 }
