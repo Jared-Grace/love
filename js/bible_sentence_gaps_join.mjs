@@ -2,15 +2,15 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { lists_combine } from "./lists_combine.mjs";
 import { list_sum } from "./list_sum.mjs";
-export function bible_sentence_gaps_join(each) {
+export function bible_sentence_gaps_join(countings) {
   "Several countings of how far sentences carried on, poured into one.";
   "The gaps are pooled rather than averaged because a gap is one real place someone could have stopped reading, and every one of them counts the same however few its chapter had. What could not be counted is carried along beside them - verses that never arrived, and places where the sentence had not finished by the end of what was read - so that a small pool is visibly small rather than quietly confident.";
   arguments_assert(arguments, 1);
-  let gaps_each = list_map_property(each, "gaps");
+  let gaps_each = list_map_property(countings, "gaps");
   let gaps = lists_combine(gaps_each);
-  let unread_each = list_map_property(each, "unread");
+  let unread_each = list_map_property(countings, "unread");
   let unread = list_sum(unread_each);
-  let unfinished_each = list_map_property(each, "unfinished");
+  let unfinished_each = list_map_property(countings, "unfinished");
   let unfinished = list_sum(unfinished_each);
   let joined = {
     gaps,
