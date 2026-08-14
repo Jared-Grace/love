@@ -1,5 +1,5 @@
 import { text_lower_to } from "./text_lower_to.mjs";
-import { word_root_irregulars } from "./word_root_irregulars.mjs";
+import { word_root_irregulars_built } from "./word_root_irregulars_built.mjs";
 import { word_root_ending_cut } from "./word_root_ending_cut.mjs";
 export function word_root(w) {
   "The root one English word belongs to, so that two spellings of the same word can be met as one - formed and forms both reach form, and was reaches be.";
@@ -8,7 +8,7 @@ export function word_root(w) {
   "This is the one seam its callers know. Whatever works out the root behind it can be replaced - by the Porter algorithm, or by a lemma list - without a caller changing.";
   let lower = text_lower_to(w);
   let letters = lower.replace(/[^a-z]+/g, "");
-  let irregulars = word_root_irregulars();
+  let irregulars = word_root_irregulars_built();
   let known = irregulars[letters];
   if (known) {
     return known;
