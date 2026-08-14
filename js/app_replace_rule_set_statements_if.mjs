@@ -62,7 +62,7 @@ export function app_replace_rule_set_statements_if() {
         ),
       },
     ],
-    why: "The replacement rules define a grammar for JavaScript-like variable declarations, expressions, statements, and if/else control flow, demonstrating how these constructs can be recursively composed and expanded to form valid program fragments.",
+    why: "Do something only when a test holds. The test goes in round brackets, the instruction follows it, and else adds what to do when the test does not hold.",
   };
   return r;
 }

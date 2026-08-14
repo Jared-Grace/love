@@ -65,7 +65,7 @@ export function app_replace_rule_set_expressions_equality() {
         end: "( 2 - 1 ) === 1",
       },
     ],
-    why: "The replacement rules define a grammar for parsing and evaluating equality expressions involving identifiers, literals, arithmetic, member access, function calls, and various data types, demonstrating how complex expressions can be reduced to simpler forms and ultimately compared for equality. This is shown by the progressive breakdown of expressions into their components and the explicit handling of the '===' equality operator in the grammar.",
+    why: "Asking whether two things are the same, written ===. Three equals signs, not one - a single equals sign means something quite different, and it is coming up shortly.",
   };
   return r;
 }

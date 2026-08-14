@@ -53,7 +53,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
         end: "3.14 / ( 2 * 2 )",
       },
     ],
-    why: "The replacement rules define a grammar for parsing multiplicative expressions, including identifiers, literals (numbers, strings, booleans, null), member access, function calls, unary and multiplicative operators, demonstrating how complex expressions are constructed from simpler components in a programming language.",
+    why: "Multiplying and dividing: the signs * and /. Two expressions with one of those signs between them.",
   };
   return r;
 }
