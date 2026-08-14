@@ -44,9 +44,9 @@ export function g_arc_answer_fields() {
         examples: ["", ""],
       },
       {
-        name: "chapter",
+        name: "book_chapter",
         description:
-          "the chapter the answering passage came from, exactly as it is written inside that passage brackets above, before the colon and without it.",
+          "the book and chapter the answering passage came from, together as one, exactly as they are written inside that passage brackets above, before the colon and without it.",
         examples: ["", ""],
       },
       {
