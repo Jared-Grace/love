@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_max_or_null } from "./list_max_or_null.mjs";
+import { list_map_index } from "./list_map_index.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { list_sum } from "./list_sum.mjs";
+import { list_tally } from "./list_tally.mjs";
+import { list_size } from "./list_size.mjs";
 export function bible_chapters_sentence_gaps_combine(
   chapter_codes,
   each_chapter,
@@ -10,7 +19,10 @@ export function bible_chapters_sentence_gaps_combine(
     let chapter_code = property_get(chapter_codes, at);
     let chapter_gaps = property_get(chapter_measured, "gaps");
     let furthest = list_max_or_null(chapter_gaps);
-    let named = { chapter_code, furthest };
+    let named = {
+      chapter_code,
+      furthest,
+    };
     return named;
   }
   let chapters = list_map_index(each_chapter, lambda);
@@ -23,6 +35,13 @@ export function bible_chapters_sentence_gaps_combine(
   let tally = list_tally(gaps);
   let most = list_max_or_null(gaps);
   let counted = list_size(gaps);
-  let measured = { chapters, counted, tally, most, unread, unfinished };
+  let measured = {
+    chapters,
+    counted,
+    tally,
+    most,
+    unread,
+    unfinished,
+  };
   return measured;
 }
