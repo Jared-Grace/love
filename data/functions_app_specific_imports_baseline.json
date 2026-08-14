@@ -1,6 +1,10 @@
 {
  "known": [
   "apps_frozen -> app_replace",
+  "gloss_stores -> app_ceb_bible_gloss_generate",
+  "gloss_stores -> app_original_bible_gloss_generate",
+  "hash_fields_all -> app_code_hash_fields",
+  "hash_fields_all -> app_supper_hash_fields",
   "karate_tests -> app_karate",
   "karate_tests -> app_karate_main_title",
   "karate_tests -> app_replace_url_dev",
