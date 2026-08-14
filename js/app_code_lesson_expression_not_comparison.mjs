@@ -22,9 +22,9 @@ import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_not_comparison() {
-  "the step from ! on another ! (already learned) to ! on a whole comparison: !(3 === 5). One new idea, and it is the brackets - a ! takes only the thing standing next to it, so the comparison has to be gathered into one thing before the ! can take all of it.";
+  "the step from ! on another ! (already learned) to ! on a whole comparison: !(3 === 5). One new idea, and it is the brackets - a ! applies only to what is next to it, so the comparison has to be gathered into one thing before the ! can apply to all of it.";
   "That the thing under a ! can be something which works out to true or false is NOT new here; the lesson before this put a ! under a ! and made exactly that point. Splitting the two is what leaves this lesson with a single idea in it.";
-  "The intro says what the ! would take without the brackets and stops there. It does not say what !3 works out to, because that answer needs a number counted as true or false, which no lesson has taught and this one is not the place to teach. Naming the reach of the ! is enough to motivate the brackets, and it is true.";
+  "The intro says what the ! would apply to without the brackets and stops there. It does not say what !3 works out to, because that answer needs a number counted as true or false, which no lesson has taught and this one is not the place to teach. Naming what the ! applies to is enough to motivate the brackets, and it is true.";
   "The comparisons vary over < > === !== - every comparison the learner already owns - so the only thing being learned is the bracket. One screen shows an inner comparison that is true and one that is false, so neither the inner nor the outer value can be guessed from habit.";
   let operator = js_operator_bang();
   let symbol = property_get(operator, "operator");
@@ -51,7 +51,9 @@ export function app_code_lesson_expression_not_comparison() {
   }
   function refill() {
     "two questions a screen, one with a true comparison inside and one with a false one";
-    let list = [not_of_wanted(true), not_of_wanted(false)];
+    let v = not_of_wanted(true);
+    let v2 = not_of_wanted(false);
+    let list = [v, v2];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -82,7 +84,8 @@ export function app_code_lesson_expression_not_comparison() {
     let close = js_code_parenthesis_right();
     let bracketed = text_combine_multiple([open, comparison, close]);
     let whole = not_of(bracketed);
-    let bare = text_combine_multiple([not_of(three), " ", equal_symbol, " ", five]);
+    let v3 = not_of(three);
+    let bare = text_combine_multiple([v3, " ", equal_symbol, " ", five]);
     let not_false = not_of(false_word);
     let pair = text_combine_multiple([open, " ", close]);
     let reach = app_code_container_light_blue(root);
@@ -119,7 +122,13 @@ export function app_code_lesson_expression_not_comparison() {
     ]);
     html_div_cycle_code(reach, ["Then we have: ", whole]);
     let worked = app_code_container_light_blue(root);
-    html_div_cycle_code(worked, ["For ", whole, ", we do ", comparison, " first"]);
+    html_div_cycle_code(worked, [
+      "For ",
+      whole,
+      ", we do ",
+      comparison,
+      " first",
+    ]);
     html_div_cycle_code(worked, [
       "",
       comparison,
