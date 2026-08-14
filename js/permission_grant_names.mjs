@@ -438,7 +438,7 @@ export function permission_grant_names() {
   let spelled435 = fn_name("g_game_plants_seeds_report");
   let spelled436 = fn_name("g_sermon_indices_uncovered");
   let spelled437 = fn_name("g_sermon_passage_verses_key");
-  let spelled438 = fn_name("g_sermon_passage_words");
+  let spelled438 = fn_name("text_words");
   let spelled439 = fn_name("indexeddb_name_doors");
   let spelled440 = fn_name("indexeddb_name_literals_gate_run");
   let spelled441 = fn_name("js_indexeddb_name_literals_cases_gate_run");

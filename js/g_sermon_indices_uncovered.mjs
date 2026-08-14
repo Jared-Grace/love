@@ -5,7 +5,7 @@ import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { not } from "./not.mjs";
 import { g_sermon_write } from "./g_sermon_write.mjs";
-import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
+import { text_words } from "./text_words.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 export async function g_sermon_indices_uncovered(chapter_code) {
   "$plain chapter_code";
@@ -21,7 +21,7 @@ export async function g_sermon_indices_uncovered(chapter_code) {
       return;
     }
     let scripture = property_get(passage, "scripture");
-    let tokens = g_sermon_passage_words(scripture);
+    let tokens = text_words(scripture);
     let covered = {};
     let out_of_range = [];
     function line_check(line) {
