@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -16,8 +17,6 @@ import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { wolff_word_find } from "./wolff_word_find.mjs";
 export async function app_ceb_bible_gloss_new_testament_prep() {
   "How much dictionary reading stands between here and a Cebuano gloss of the whole New Testament, counted in words rather than in chapters.";
@@ -49,8 +48,7 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
       };
       return r1;
     }
-    let entry = property_get_or_null(known, word);
-    let unasked = null_is(entry);
+    let unasked = property_null_is(known, word);
     if (not(unasked)) {
       let r2 = {
         word,
