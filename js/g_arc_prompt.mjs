@@ -105,6 +105,9 @@ export function g_arc_prompt(
   ]);
   ("THE OPENERS SIT IN THE TURN SECTION because the turn field describing 'opener' tells the writer to copy the word from the opener lines above it. They used to be rendered after that field list, so 'above' named something not yet shown - and the three numbered steps that stood here instead said what the opener lines say anyway, with less in them.");
   ("The catch_up pair stays BELOW the field list, because those two lines name a field, and moving them up with the openers would only trade one forward reference for another.");
+  ("NEVER ON ONE WORD is there to keep an answer off ground a translation could move. Where translations disagree they disagree about SINGLE WORDS - monogenes is only begotten or one and only, and both are defensible readings of a contested root - while the sentence around the word says the same thing either way. So an answer resting on one word's precise sense is an answer resting on a translator's choice, and the player is reading one translation and cannot see that a choice was made.");
+  ("It asks for NO knowledge of which words are contested, which is why it is written this way. A writing call told to prefer the original would have to know where the two differ, and it does not - it would flag sound words and miss real ones with equal confidence. Told instead to stay off single words, it avoids every contested one without needing to know which they are.");
+  ("It also asks for nothing new. The line above it already wants an answer plain to somebody who has never read the Bible, and an answer turning on one word's precise sense already fails that - so this says out loud what the fit test was already asking for.");
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
@@ -137,6 +140,7 @@ export function g_arc_prompt(
     "Relevance and appropriateness are more important than equally using each passage - do not use passages by force.",
     "There are far more turns than there are passages, so you will answer with the same passages many times over. That is expected and is not a failure.",
     "One passage answers one turn, and the fit has to be obvious. Somebody who has never read the Bible plays this game. So write each thing the person says so that a single passage above is plainly the answer to it - not true-but-sideways, and not an answer that corrects how they are reasoning rather than what they said.",
+    "Rest each answer on what the passage plainly says, never on the precise sense of a single word.",
     "",
     "LENGTH",
     joined9,
