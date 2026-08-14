@@ -39,10 +39,55 @@ let REASON =
   "recommendation - if nothing on the list is worth the budget, say so and " +
   "say why, rather than inventing work to look useful.";
 
-function assistant_text_last(transcript_path) {
+// A tool_result is carried on an entry typed "user", so the newest entry of
+// that type is not the newest thing the user actually typed. Only a genuine
+// prompt marks where this turn began.
+function user_prompt_is(entry) {
+  if (entry?.type !== "user") {
+    return false;
+  }
+  let content = entry?.message?.content;
+  if (typeof content === "string") {
+    return true;
+  }
+  if (!Array.isArray(content)) {
+    return false;
+  }
+  return !content.some((part) => part?.type === "tool_result");
+}
+
+function assistant_text(entry) {
+  if (entry?.type !== "assistant") {
+    return null;
+  }
+  let content = entry?.message?.content;
+  if (!Array.isArray(content)) {
+    return null;
+  }
+  let said = content
+    .filter((part) => part?.type === "text")
+    .map((part) => part.text)
+    .join("\n")
+    .trim();
+  return said || null;
+}
+
+// The closing message is appended to the transcript around the same moment
+// this hook runs, so a single read can find only the PREVIOUS turn's text and
+// judge that instead. It cost a false block the first time it ever fired: the
+// message being judged had a numbered list and a recommendation, and the one
+// actually read was two turns old.
+//
+// So the read is anchored rather than trusted. Whatever it finds has to sit
+// AFTER the last thing the user typed, which is the only proof it belongs to
+// the turn now ending. Until it does, the message is still being written.
+function assistant_text_closing(transcript_path) {
   let text = readFileSync(transcript_path, "utf8");
   let lines = text.split("\n");
-  for (let i = lines.length - 1; i >= 0; i--) {
+  let prompt_at = -1;
+  let said_at = -1;
+  let said = null;
+  for (let i = 0; i < lines.length; i++) {
     let line = lines[i].trim();
     if (!line) {
       continue;
@@ -53,21 +98,35 @@ function assistant_text_last(transcript_path) {
     } catch {
       continue;
     }
-    if (entry?.type !== "assistant") {
+    if (user_prompt_is(entry)) {
+      prompt_at = i;
       continue;
     }
-    let content = entry?.message?.content;
-    if (!Array.isArray(content)) {
-      continue;
+    let text_said = assistant_text(entry);
+    if (text_said) {
+      said_at = i;
+      said = text_said;
     }
-    let said = content
-      .filter((part) => part?.type === "text")
-      .map((part) => part.text)
-      .join("\n")
-      .trim();
+  }
+  if (said_at < prompt_at) {
+    return null;
+  }
+  return said;
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Fails open at the end of the window on purpose. A closing message that never
+// arrives is a reason to say nothing, not a reason to block a turn on a guess.
+async function assistant_text_closing_await(transcript_path) {
+  for (let attempt = 0; attempt < 12; attempt++) {
+    let said = assistant_text_closing(transcript_path);
     if (said) {
       return said;
     }
+    await sleep(250);
   }
   return null;
 }
@@ -77,13 +136,13 @@ process.stdin.setEncoding("utf8");
 process.stdin.on("data", (chunk) => {
   input += chunk;
 });
-process.stdin.on("end", () => {
+process.stdin.on("end", async () => {
   try {
     let event = JSON.parse(input);
     if (event.stop_hook_active) {
       process.exit(0);
     }
-    let said = assistant_text_last(event.transcript_path);
+    let said = await assistant_text_closing_await(event.transcript_path);
     if (!said) {
       process.exit(0);
     }
