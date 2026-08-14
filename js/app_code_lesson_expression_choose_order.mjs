@@ -1,3 +1,6 @@
+import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { noop } from "./noop.mjs";
@@ -14,7 +17,6 @@ import { app_code_lesson_expression_choose_order_title_name_id } from "./app_cod
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
@@ -116,14 +118,14 @@ export function app_code_lesson_expression_choose_order() {
       let value = property_get(step, "value");
       let solved_code = app_code_expression_code(solved);
       let value_text = text_to(value);
-      "praised in the same words the quiz praises a finished question with, taken from the one list both of them read";
+      ("praised in the same words the quiz praises a finished question with, taken from the one list both of them read");
       let praise = app_shared_encouragement_exclamation();
       let lead = text_combine(praise, "the ");
       html_div_cycle_code(note, [lead, solved_code, " becomes ", value_text]);
       let current = property_get(step, "current");
       let more = app_code_expression_node_is(current);
       if (not(more)) {
-        "the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished";
+        ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
         app_shared_success_message(note);
         html_div_cycle_code(note, ["Now it is your turn to choose"]);
         return;
@@ -134,11 +136,12 @@ export function app_code_lesson_expression_choose_order() {
     }
     function on_wrong_example(node) {
       "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
+      "Said as an order of turns rather than as a shape - an operator sitting on one SIDE of another is a thing a learner can only see by picturing the line as a tree, and no lesson has drawn one. Which operator has to go first is a question the line itself answers.";
       let symbol = property_get(node, "operator");
       html_div_cycle_code(note, [
         "Not yet - the ",
         symbol,
-        " still has an operator on one of its sides",
+        " cannot be chosen because another operator must be chosen first",
       ]);
     }
     app_code_expression_choose_line(
@@ -224,10 +227,10 @@ export function app_code_lesson_expression_choose_order() {
     1,
     batch_get,
     on_question_example,
-    "Value of code: ",
+    null,
     quizzes_get,
     "Code: ",
-    app_code_style_normal_text,
+    noop,
   );
   return lesson;
 }
