@@ -27,7 +27,7 @@ export async function app_replace_tests_run_e2e_all_rule_sets(
     return mapped;
   }
   let remaining = list_map_squash(rule_sets, lambda2);
-  let parallel_count = app_replace_tests_parallel_count();
+  let parallel_count = app_replace_tests_parallel_count(url_prefix);
   async function lambda(index) {
     async function on_page(page) {
       async function while_non_empty() {
