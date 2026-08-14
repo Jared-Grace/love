@@ -1,8 +1,7 @@
+import { js_node_meaning_key_sides } from "./js_node_meaning_key_sides.mjs";
+import { js_node_meaning_key_call } from "./js_node_meaning_key_call.mjs";
 import { js_node_meaning_key_terms } from "./js_node_meaning_key_terms.mjs";
-import { property_list_map } from "./property_list_map.mjs";
 import { equal } from "./equal.mjs";
-import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
-import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
 import { js_node_writing_inside_is } from "./js_node_writing_inside_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -12,7 +11,6 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_join } from "./list_join.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_node_meaning_key(node) {
@@ -32,8 +30,6 @@ export function js_node_meaning_key(node) {
   let binary = list_includes(["BinaryExpression", "LogicalExpression"], type);
   if (binary) {
     let operator = property_get(node, "operator");
-    let left = property_get(node, "left");
-    let right = property_get(node, "right");
     let adds = list_includes([plus_sign, minus_sign], operator);
     let scales = list_includes([times_sign, over_sign], operator);
     let run = adds || scales;
