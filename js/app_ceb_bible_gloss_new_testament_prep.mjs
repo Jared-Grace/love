@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -60,8 +61,7 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
     }
     let answer = await wolff_word_find(word);
     let found = property_get(answer, "found");
-    let absent_is = equal(found, "none");
-    let carried = not(absent_is);
+    let carried = equal_not(found, "none");
     if (carried) {
       let r3 = {
         word,
