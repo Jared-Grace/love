@@ -1,13 +1,14 @@
+import { app_replace_why_words_draw } from "./app_replace_why_words_draw.mjs";
 import { html_p } from "./html_p.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { text_is } from "./text_is.mjs";
 export function app_replace_rule_set_why_draw(root, why) {
-  "A lesson's explanation put on the page, written either as plain words or as a little program that draws its own - a program, so that a symbol can appear as the tile it names instead of as a letter in quotes.";
+  "A lesson's explanation put on the page, written either as plain words or as a little program that draws its own.";
+  "A sentence gets its quoted symbols drawn as the tiles they name, which is what the whole set of lessons is written as; a drawing program is for the lesson that wants a shape a sentence has no way of holding.";
+  let p = html_p(root);
   if (text_is(why)) {
-    let words = html_p_text(root, why);
-    return words;
+    app_replace_why_words_draw(p, why);
+    return p;
   }
-  let drawn = html_p(root);
-  why(drawn);
-  return drawn;
+  why(p);
+  return p;
 }
