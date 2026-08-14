@@ -1,3 +1,4 @@
+import { app_shared_card_image_url } from "./app_shared_card_image_url.mjs";
 import { app_shared_title } from "./app_shared_title.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
 import { html_code_head_social_items } from "./html_code_head_social_items.mjs";
@@ -46,7 +47,12 @@ export function html_code(name, body) {
     manifest_link,
   ]);
   let description = app_shared_description(name);
-  let social_items = html_code_head_social_items(title_text, description);
+  let image_url = app_shared_card_image_url(name);
+  let social_items = html_code_head_social_items(
+    title_text,
+    description,
+    image_url,
+  );
   list_add_multiple(head_items, social_items);
   let head_children = html_code_children(head_items, indent);
   let head = html_code_element("head", attributes_none, head_children);
