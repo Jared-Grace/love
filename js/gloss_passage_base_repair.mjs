@@ -1,18 +1,16 @@
+import { gloss_passage_entries_kept_set } from "./gloss_passage_entries_kept_set.mjs";
 import { property_text_split_space } from "./property_text_split_space.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { words_multiset_keep } from "./words_multiset_keep.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { null_is } from "./null_is.mjs";
-import { subtract } from "./subtract.mjs";
 export function gloss_passage_base_repair(passage, verses_base) {
   "Bring one passage of a gloss chapter back in line with the base text: its stored verse wording is rewritten from the base, and any word explained that the base does not carry is dropped.";
   "It answers with how many explanations it removed, so a caller can report a number rather than a claim.";
@@ -44,10 +42,6 @@ export function gloss_passage_base_repair(passage, verses_base) {
     return words;
   }
   let kept = words_multiset_keep(items, words_get, words_allowed);
-  let value = json_format_to(kept);
-  property_set(passage, "generated", value);
-  let left = list_size(items);
-  let right = list_size(kept);
-  let removed = subtract(left, right);
+  let removed = gloss_passage_entries_kept_set(passage, items, kept);
   return removed;
 }

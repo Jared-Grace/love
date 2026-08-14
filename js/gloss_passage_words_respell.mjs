@@ -56,11 +56,6 @@ export function gloss_passage_words_respell(passage, words_read) {
     list_add(changes, change);
   }
   each(entries, entry_respell);
-  let none_changed = list_empty_is(changes);
-  if (none_changed) {
-    return changes;
-  }
-  let value = json_format_to(entries);
-  property_set(passage, "generated", value);
-  return changes;
+  let r = gloss_passage_entries_changed_set(passage, entries, changes);
+  return r;
 }
