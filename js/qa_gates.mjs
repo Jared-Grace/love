@@ -381,6 +381,7 @@ export function qa_gates() {
     qa_gates_dealt_gate_run,
     process_line_sleep_loop_is_gate_run,
     qa_gate_said_advice_remove_gate_run,
+    qa_gate_said_reached_remove_gate_run,
     qa_app_gates_sorted_gate_run,
     qa_gate_run_start_wanted_gate_run,
     qa_gate_run_start_wanted_stale_gate_run,
