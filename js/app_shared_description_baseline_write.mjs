@@ -5,7 +5,8 @@ import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_shared_description_baseline_write() {
   "Rewrite the record of apps saying nothing about themselves from what the repo carries right now. For seeding it once, and for shrinking it after an app has been given its sentence.";
   "Never for taking in a new one, which is the single thing the gate exists to refuse. A new app with nothing to say is the case worth stopping, because it is the moment somebody is about to hand the address out.";
-  let known = await app_shared_description_missing();
+  let swept = await app_shared_description_missing();
+  let known = property_get(swept, "names");
   let path = app_shared_description_baseline_path();
   await baseline_known_growth_assert(
     known,
