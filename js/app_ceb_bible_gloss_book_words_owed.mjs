@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -8,8 +9,6 @@ import { equal } from "./equal.mjs";
 import { gloss_chapters_bible_words_distinct } from "./gloss_chapters_bible_words_distinct.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 export async function app_ceb_bible_gloss_book_words_owed(book_code) {
@@ -44,8 +43,7 @@ export async function app_ceb_bible_gloss_book_words_owed(book_code) {
     bible_folder,
     chapter_codes,
   );
-  let lowered_all = list_map(written, text_lower_to);
-  let words = list_unique(lowered_all);
+  let words = list_map_unique(written, text_lower_to);
   let known = await binisaya_words_known();
   function owed_is(word) {
     let named = list_includes_not(uncapitalised, word);
