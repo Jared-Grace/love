@@ -1,6 +1,6 @@
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { object_merge } from "./object_merge.mjs";
+import { objects_merge } from "./objects_merge.mjs";
 export function app_code_expression_node_bracketed(left, symbol, right) {
   arguments_assert(arguments, 3);
   ("the same shape as an ordinary operator with a side on each of it, marked as one the lesson wrote brackets around - so it keeps them however it is printed");
