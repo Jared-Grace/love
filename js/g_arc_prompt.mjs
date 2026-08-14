@@ -143,6 +143,7 @@ export function g_arc_prompt(
     "LENGTH",
     joined9,
     "This is a target, not a quota. Turns following from the arc matter more than reaching the count.",
+    "A short arc is fine. Not every person needs a long story.",
     "",
     "Ask yourself before writing anything: what passages should I choose for equal usage? Then ask: what arc and story for this person is needed to choose those passages?",
     "Keep that reasoning to yourself. What it settles is the summary you write below, and the turns are that same arc lived out in detail.",
