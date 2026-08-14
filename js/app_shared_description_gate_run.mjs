@@ -1,8 +1,8 @@
+import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_description_baseline_path } from "./app_shared_description_baseline_path.mjs";
 import { app_shared_description_missing } from "./app_shared_description_missing.mjs";
-import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_shared_description_gate_run() {
   "QA gate: no app newly arrives with nothing to say about itself in its page head. Read-only.";
@@ -14,19 +14,19 @@ export async function app_shared_description_gate_run() {
   let walked = property_get(swept, "walked");
   let missing = property_get(swept, "names");
   let path = app_shared_description_baseline_path();
+  let f_name = fn_name("app_shared_description");
   let hint = text_combine_multiple([
     "these apps say nothing about themselves, so anywhere their address is pasted it arrives bare - write a sentence in ",
-    fn_name("app_shared_description"),
+    f_name,
     ", or record the silence on purpose",
   ]);
   let name_write = fn_name("app_shared_description_baseline_write");
-  let told = await baseline_names_gate_generic(missing, path, hint, name_write);
-  let added = property_get(told, "added");
-  let stale = property_get(told, "stale");
-  let r = {
+  let r = await baseline_names_gate_walked_generic(
     walked,
-    added,
-    stale,
-  };
+    missing,
+    path,
+    hint,
+    name_write,
+  );
   return r;
 }
