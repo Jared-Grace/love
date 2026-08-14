@@ -6,6 +6,8 @@ import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { app_code_lesson_quiz_token_select_meaning_variations } from "./app_code_lesson_quiz_token_select_meaning_variations.mjs";
 import { js_code_call_commutative } from "./js_code_call_commutative.mjs";
+import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { list_permutations } from "./list_permutations.mjs";
@@ -110,7 +112,17 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     each(value_codes, la);
   }
   let codes = list_adder_unique(generate_all_with_values);
-  let variations = list_map(codes, app_code_quiz_tokens);
+  ("Swapping the two sides of a sign that reads both ways is not always safe, because a plus is not always a sum. \"He\" + \" gave\" swapped over is a different sentence, and it was being accepted. So every ordering gathered above is asked once more whether it still says what the question says, and the ones that no longer do are dropped.");
+  ("Only lines that stand for a value are asked. Anything else - a whole statement, say - has no sides to weigh against each other, and asking would throw away the very ordering it was written in.");
+  function said_alike_is(candidate) {
+    let said_alike = js_code_same_meaning_is(code, candidate);
+    return said_alike;
+  }
+  let said = codes;
+  if (expression_is) {
+    said = list_filter(codes, said_alike_is);
+  }
+  let variations = list_map(said, app_code_quiz_tokens);
   if (expression_is) {
     function trim_semicolon(item) {
       let expected_last = ";";
