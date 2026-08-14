@@ -12,7 +12,7 @@ export function app_replace_rule_set_shrink_same_three_different() {
         end: "e   =   b",
       },
     ],
-    why: "The same rule backwards: one c comes off the left and one off the right together.",
+    why: "The same rule backwards: one 'c' comes off the left and one off the right together.",
   };
   return r;
 }

@@ -16,7 +16,7 @@ export function app_replace_rule_set_swap_3() {
         end: "d   b   c   d   c   b   a   a",
       },
     ],
-    why: "A third neighbour joins, so the a can step past b, c or d. Each step moves it one place, so walking an a to the far end costs one press per symbol it passes - these are the longest goals so far.",
+    why: "A third neighbour joins, so the 'a' can step past 'b', 'c' or 'd'. Each step moves it one place, so walking an 'a' to the far end costs one press per symbol it passes - these are the longest goals so far.",
   };
   return r;
 }

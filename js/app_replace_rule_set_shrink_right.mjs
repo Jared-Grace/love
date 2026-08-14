@@ -20,7 +20,7 @@ export function app_replace_rule_set_shrink_right() {
         end: "a   a   a",
       },
     ],
-    why: "A b sitting just after an a disappears. A b anywhere else has nothing to lean on and cannot go.",
+    why: "A 'b' sitting just after an 'a' disappears. A 'b' anywhere else has nothing to lean on and cannot go.",
   };
   return r;
 }

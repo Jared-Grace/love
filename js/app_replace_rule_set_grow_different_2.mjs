@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_different_2() {
         end: "d   e   c   b   c   b   c   d   e   c",
       },
     ],
-    why: "An a opens into b c, and a b opens further into d e. Use both and one a becomes d e c.",
+    why: "An 'a' opens into a 'b' and a 'c', and a 'b' opens further into a 'd' and an 'e'. Use both and one 'a' becomes 'd' 'e' 'c'.",
   };
   return r;
 }

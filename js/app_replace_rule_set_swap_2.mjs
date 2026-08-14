@@ -16,7 +16,7 @@ export function app_replace_rule_set_swap_2() {
         end: "c   b   c   c   a   a",
       },
     ],
-    why: "An a can now step right past a b or past a c. Two rules, the same move, a different neighbour each time.",
+    why: "An 'a' can now step right past a 'b' or past a 'c'. Two rules, the same move, a different neighbour each time.",
   };
   return r;
 }

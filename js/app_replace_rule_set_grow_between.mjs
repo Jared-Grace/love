@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_between() {
         end: "a   b   a   a   b   a   a   b   a",
       },
     ],
-    why: "A b is slipped in between two a's. Both a's stay where they are; the line gets one longer.",
+    why: "A 'b' is slipped in between two 'a's. Both 'a's stay where they are; the line gets one longer.",
   };
   return r;
 }

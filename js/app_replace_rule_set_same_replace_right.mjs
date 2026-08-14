@@ -16,7 +16,7 @@ export function app_replace_rule_set_same_replace_right() {
         end: "a   b   a   a   b   a   a   b",
       },
     ],
-    why: "Two a's side by side: the right one turns into a b. The left one is left alone.",
+    why: "Two 'a's side by side: the right one turns into a 'b'. The left one is left alone.",
   };
   return r;
 }
