@@ -55,8 +55,7 @@ export function gloss_occurrence_sentence(counts) {
     let opening = text_combine("This word stands ", across);
     let left = text_combine(" in the ", testament_name);
     let right3 = text_combine(", ", inside);
-    let middle = text_combine(left, right3);
-    let right4 = text_combine(middle, " in this book.");
+    let right4 = text_combine_3(left, right3, " in this book.");
     let sentence = text_combine(opening, right4);
     return sentence;
   }
