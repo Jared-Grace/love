@@ -8,7 +8,7 @@ export function g_arc_answer_fields() {
     person: [
       {
         name: "occupation",
-        description: "their work, consistent with the JSON above.",
+        description: "their work.",
         examples: [""],
       },
       {
@@ -19,7 +19,7 @@ export function g_arc_answer_fields() {
       {
         name: "summary",
         description:
-          "the whole arc in a sentence: who they are and where they end up.",
+          "the whole arc, briefly in up to a few sentences: who they are and where they end up.",
         examples: [""],
       },
     ],
