@@ -16,7 +16,7 @@ export function app_replace_rule_set_swap_2() {
         end: "c   b   c   c   a   a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar for swapping the first 'a' in a sequence with the next 'b' or 'c' to its right, effectively moving 'a' rightward past 'b' or 'c' one step at a time.",
+    why: "An a can now step right past a b or past a c. Two rules, the same move, a different neighbour each time.",
   };
   return r;
 }
