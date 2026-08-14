@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_identifiers_referenced_nodes } from "./js_identifiers_referenced_nodes.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_scope_binder_nearest } from "./js_scope_binder_nearest.mjs";
+import { js_scope_binder_nearest_remembered } from "./js_scope_binder_nearest_remembered.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { set_includes } from "./set_includes.mjs";
