@@ -4,18 +4,15 @@
   "a",
   "apps_all",
   "autopray",
-  "bible",
   "calendar",
   "calendar_paste",
   "ceb_bible",
   "chapter",
-  "code",
   "designs_universal",
   "examples",
   "g",
   "g_bible",
   "g_verify",
-  "index",
   "karate",
   "message",
   "next",
@@ -26,7 +23,6 @@
   "sandbox",
   "search",
   "supper",
-  "supper_tl",
-  "verses"
+  "supper_tl"
  ]
 }
