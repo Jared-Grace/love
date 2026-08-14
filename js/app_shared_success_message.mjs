@@ -50,17 +50,7 @@ export function app_shared_success_message(parent) {
   let value = app_shared_success_emoji_font_size();
   html_style_font_size(p_emojis, value);
   let p_encouragement = html_div(p);
-  let encouragements_choices = [
-    "Congratulations",
-    "Success",
-    "Good job",
-    "Great job",
-    "Well done",
-    "Keep it up",
-    "Amazing",
-    "Way to go",
-    "Awesome",
-  ];
+  let encouragements_choices = app_shared_encouragement_words();
   let encouragements = list_shuffle_take(encouragements_choices, 2);
   html_bold(p_encouragement);
   function lambda(encouragement) {

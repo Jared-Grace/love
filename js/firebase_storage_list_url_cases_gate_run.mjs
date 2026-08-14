@@ -19,6 +19,10 @@ export function firebase_storage_list_url_cases_gate_run() {
     let url = firebase_storage_list_url("bucket", "bible/guz/", page_token);
     let parts = text_split(url, field);
     let carried = parts[1];
+    let missing = equal(parts.length, 1);
+    if (missing) {
+      return false;
+    }
     let read_back = text_url_decode(carried);
     let same = equal(read_back, page_token);
     return same;
