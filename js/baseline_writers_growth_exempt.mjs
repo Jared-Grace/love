@@ -17,6 +17,10 @@ export function baseline_writers_growth_exempt() {
       why: "a new page is a new address, and there is nothing wrong with a new address. what its record is for is the opposite direction: that an address already typed into somebody's bar, kept in a bookmark, or sent to another person goes on answering. refusing growth here would make adding a page a fight with a gate, and would teach people to clear the record wholesale, which is exactly how a name that went missing gets written away",
     },
     {
+      f_name: fn_name("app_code_lesson_ids_baseline_write"),
+      why: "a new lesson is a new id, and there is nothing wrong with a new id. what its record is for is the opposite direction: that an id a learner's finished-lessons record is already keyed by goes on naming a lesson. refusing growth here would make adding a lesson a fight with a gate, and would teach people to clear the record wholesale - which is exactly how an id somebody's progress hangs on gets written away",
+    },
+    {
       f_name: fn_name("baseline_known_write"),
       why: "the one writer every ratchet ends at, and the one the refusal itself would have to call. putting the check here would put it inside the thing it checks",
     },
