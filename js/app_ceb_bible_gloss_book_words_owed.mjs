@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_book_words_owed(book_code) {
   "Every Cebuano word one book of the New Testament is written with that the dictionary has not been asked about yet, names left out.";
   "$plain book_code";
   "the code is a book's name, like MAT, chosen from the Bible's own book numbering. It names text to read and nothing that runs.";
-  "This is a book's worth of asking rather than the whole Testament's, which is the difference between an hour of waiting before a book can be authored and several nights of it. The words a later book adds are asked for when that book is reached, and the ones it shares with this one are already held by then.";
+  "This is a book's worth of asking rather than the whole Testament's, so the writing of one book overlaps the asking for the next instead of waiting behind all of them. The books are not equal shares of the work either: the first one asked for carries the common words the whole Testament is written in and is far the longest, and every book after it is cheaper than the one before by everything the two share.";
   "Whether a word is a name is decided across the whole New Testament and not across this book alone. One book is too little text for the test - an ordinary word may happen to stand only at the openings of sentences in a single book, and it would be dropped as a name and never looked up.";
   "A word the printed dictionary already carries is asked for all the same. That book gives an entry and this asking gives what the word is built from, which are different things, and a word the printed one appears to carry may be a different word that is merely spelled the same.";
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
