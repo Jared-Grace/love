@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
 import { functions_statements_after_return_baseline_path } from "./functions_statements_after_return_baseline_path.mjs";

@@ -59,5 +59,10 @@ export function app_code_quiz_unscramble_shortcut_accepted(rounds) {
       }
     }
   }
-  return found;
+  let walked = list_size(asked);
+  let r = {
+    walked,
+    found,
+  };
+  return r;
 }
