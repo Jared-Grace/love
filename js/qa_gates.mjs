@@ -238,6 +238,7 @@ import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs
 import { functions_unbound_gate_run } from "./functions_unbound_gate_run.mjs";
 import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
+import { gloss_parsing_sentence_gate_run } from "./gloss_parsing_sentence_gate_run.mjs";
 import { g_profile_target_shares_assert } from "./g_profile_target_shares_assert.mjs";
 import { g_arc_prompt_style_assert } from "./g_arc_prompt_style_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
@@ -358,6 +359,7 @@ export function qa_gates() {
     literal_duplicates_cases_gate_run,
     literal_duplicates_gate_run,
     ebible_book_divisions_canon_assert,
+    gloss_parsing_sentence_gate_run,
     g_leader_book_reaches_canon_assert,
     g_profile_target_shares_assert,
     g_arc_prompt_style_assert,
