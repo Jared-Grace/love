@@ -35,16 +35,7 @@ export function app_code_lesson_quiz_token_select_meaning_variations(code) {
     return r2;
   }
   let separator = " ";
-  function value_of(token_list) {
-    function run() {
-      let source = list_join(token_list, separator);
-      let r3 = eval(source);
-      return r3;
-    }
-    let r4 = catch_null(run);
-    return r4;
-  }
-  let target = value_of(tokens);
+  let target = app_code_quiz_tokens_value(tokens);
   let no_target = null_is(target);
   if (no_target) {
     let r5 = [];
