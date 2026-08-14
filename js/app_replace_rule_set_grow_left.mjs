@@ -20,7 +20,7 @@ export function app_replace_rule_set_grow_left() {
         end: "s   s   s   g   s   s   g   s   g",
       },
     ],
-    why: "The replacement rules demonstrate a left-growing grammar where each 'g' can be replaced by 's g', allowing the sequence to expand by adding 's' to the left of each 'g', which explains the patterns in the goals.",
+    why: "The same move, but the new s lands on the left instead. The g is carried rightward as the s's build up behind it.",
   };
   return r;
 }
