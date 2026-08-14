@@ -1,5 +1,5 @@
+import { equal_not } from "./equal_not.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -38,8 +38,7 @@ export async function wolff_binisaya_roots_agreement() {
   async function root_find(root) {
     let answer = await wolff_word_find(root);
     let found = property_get(answer, "found");
-    let b = equal(found, "none");
-    let carried = not(b);
+    let carried = equal_not(found, "none");
     let item = {
       root,
       carried,
