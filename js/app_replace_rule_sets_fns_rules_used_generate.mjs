@@ -25,7 +25,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let f_name = property_get(a, "name");
       let rs = await function_run_args_none(f_name);
       let name = property_get(rs, "name");
-      let f_name3 = fn_name("app_replace_rule_sets_fns_rules_used_generate");
       log(app_replace_rule_sets_fns_rules_used_generate.name, {
         rs,
       });
