@@ -1,3 +1,6 @@
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_map } from "./list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_chapter_sentence_gaps } from "./bible_folder_chapter_sentence_gaps.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -33,7 +36,10 @@ export async function bible_folder_chapters_sentence_gaps(
   function lambda2(chapter_measured2) {
     let chapter_code2 = property_get(chapter_measured2, "chapter_code");
     let furthest2 = property_get(chapter_measured2, "furthest");
-    let named = { chapter_code: chapter_code2, furthest: furthest2 };
+    let named = {
+      chapter_code: chapter_code2,
+      furthest: furthest2,
+    };
     return named;
   }
   let chapters = list_map(each_chapter, lambda2);
