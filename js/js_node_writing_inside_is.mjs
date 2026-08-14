@@ -6,8 +6,8 @@ export function js_node_writing_inside_is(node) {
   "The question is put this way round - is there writing in here - rather than as is this all numbers, because a name is the common case and nobody can say what a name holds until the line runs. Read the hopeful way a name would have to count as writing, and n + 1 would stop being the same sum as 1 + n, which is a right answer a learner would be marked wrong for. Read this way a name is let through, and the only thing that shuts the door is writing actually present in the line.";
   let writing = false;
   function on_literal(found) {
-    let text_is = js_literal_text_is(found);
-    if (text_is) {
+    let written_out = js_literal_text_is(found);
+    if (written_out) {
       writing = true;
     }
   }
