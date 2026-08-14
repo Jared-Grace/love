@@ -1,8 +1,8 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { number_times_text } from "./number_times_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { equal } from "./equal.mjs";
-
 export function gloss_occurrence_sentence(counts) {
   "The sentence a word explanation gets about how rare its word is, written out of the counts themselves - or nothing, when the counts say nothing worth a reader's time.";
   "This is the whole point of the thing: the sentence is not written and then checked, it is produced by the arithmetic, so it cannot disagree with the arithmetic. An author cannot mistype a number here, cannot remember a word as rarer than it is, and cannot carry a claim from one chapter into another where it stopped being true.";
@@ -29,22 +29,19 @@ export function gloss_occurrence_sentence(counts) {
   let alone_book = equal(book, 1);
   if (alone_book) {
     let elsewhere = number_times_text(testament);
-    let only_here = text_combine(
+    let sentence = text_combine_3(
       "This is the only place this word stands in this book, though it stands ",
       text_combine(elsewhere, text_combine(" in the ", testament_name)),
+      ".",
     );
-    let sentence = text_combine(only_here, ".");
     return sentence;
   }
   let kept_to_book = equal(book, testament);
   if (kept_to_book) {
     let here = number_times_text(book);
-    let kept = text_combine(
+    let sentence = text_combine_3(
       "This word stands ",
       text_combine(here, " in the "),
-    );
-    let sentence = text_combine(
-      kept,
       text_combine(testament_name, ", every one of them in this book."),
     );
     return sentence;
@@ -58,7 +55,10 @@ export function gloss_occurrence_sentence(counts) {
       text_combine(" in the ", testament_name),
       text_combine(", ", inside),
     );
-    let sentence = text_combine(opening, text_combine(middle, " in this book."));
+    let sentence = text_combine(
+      opening,
+      text_combine(middle, " in this book."),
+    );
     return sentence;
   }
   let nothing = null;
