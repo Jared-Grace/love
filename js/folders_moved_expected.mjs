@@ -1,3 +1,4 @@
+import { git_mirrors_folder } from "./git_mirrors_folder.mjs";
 import { folder_memory_backup } from "./folder_memory_backup.mjs";
 import { g_content_backup_folder } from "./g_content_backup_folder.mjs";
 export function folders_moved_expected() {
@@ -21,6 +22,10 @@ export function folders_moved_expected() {
     {
       before: "/home/j/backup/love/g_content",
       after: g_content_backup_folder(),
+    },
+    {
+      before: "/media/j/JPM/git_mirrors",
+      after: git_mirrors_folder(),
     },
   ];
   return expected;
