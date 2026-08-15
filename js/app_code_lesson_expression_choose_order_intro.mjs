@@ -1,3 +1,5 @@
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
+import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -12,9 +14,12 @@ export function app_code_lesson_expression_choose_order_intro(
   html_div_cycle_code(parent, [
     "Eventually we will teach you to solve this all at once",
   ]);
-  html_div_cycle_code(parent, [
-    "But, for now, we will teach you to solve this step-by-step",
+  ("ends on a colon and stands off from what follows, because it is the last of the saying and what comes after it is the thing said - the rule, and then the line to press");
+  let step_by_step = html_div_cycle_code(parent, [
+    "But, for now, we will teach you to solve this step-by-step:",
   ]);
+  let gap = app_shared_spaced_gap();
+  html_style_margin_bottom(step_by_step, gap);
   let rule = app_code_lesson_expression_choose_order_rule_parts(
     "In ",
     whole_line,
