@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_half_adder } from "./integer_factorization_to_sat_half_adder.mjs";
 import { integer_factorization_to_sat_full_adder } from "./integer_factorization_to_sat_full_adder.mjs";
 import { integer_factorization_to_sat_compress_columns } from "./integer_factorization_to_sat_compress_columns.mjs";
 import { integer_factorization_to_sat_finalize_sum } from "./integer_factorization_to_sat_finalize_sum.mjs";
@@ -60,10 +61,14 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r11;
   }
   function halfAdder(cnf, a, b) {
-    let sum = xorGate(cnf, a, b);
-    let carry = andGate(cnf, a, b);
-    let r3 = [sum, carry];
-    return r3;
+    let r4 = integer_factorization_to_sat_half_adder(
+      cnf,
+      a,
+      b,
+      xorGate,
+      andGate,
+    );
+    return r4;
   }
   function fullAdder(cnf, a, b, cin) {
     let r6 = integer_factorization_to_sat_full_adder(
