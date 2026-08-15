@@ -26,7 +26,7 @@ export function permission_rule_probe_cases() {
       why: "the flag between the verb and the folder is the whole point of this one - the second place has to be built from the last word alone, or the verb and its flag land in the middle of the command",
     },
     {
-      rule: "Read(/home/j/backup/love_claude_memory/memory/**)",
+      rule: "Read(/home/j/backup/love/claude_memory/memory/**)",
       command: "",
       why: "a grant for another tool names no shell command, and answering with its text would ask the guard about a path as though someone had typed it",
     },

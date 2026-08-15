@@ -4,9 +4,9 @@ export function permission_rule_file_cases() {
   "the star cases are the pair that has to be kept together. a trailing star names a folder and becomes a leaf inside it, while a star anywhere else resolves nowhere, so probing it would ask the hook about a path no one can hold and read the abstention as if the rule had earned it.";
   let cases = [
     {
-      rule: "Read(/home/j/backup/love_claude_memory/memory/**)",
+      rule: "Read(/home/j/backup/love/claude_memory/memory/**)",
       tool: "Read",
-      path: "/home/j/backup/love_claude_memory/memory/probe_leaf.md",
+      path: "/home/j/backup/love/claude_memory/memory/probe_leaf.md",
       why: "the deep glob is the shape most file rules take, and the folder it names is the only real thing in it, so the probe has to put a leaf inside that folder",
     },
     {
@@ -34,7 +34,7 @@ export function permission_rule_file_cases() {
       why: "a bare tool name has no parentheses to read a path out of, and it is also the first thing the sweep discards, so both readings have to agree that there is nothing here",
     },
     {
-      rule: "Read(/home/j/backup/love_claude_memory/memory/**",
+      rule: "Read(/home/j/backup/love/claude_memory/memory/**",
       tool: "Read",
       path: "",
       why: "a rule that opens and never closes names a tool plainly enough while naming no path at all, which is what keeps the two readings from being written as one",
