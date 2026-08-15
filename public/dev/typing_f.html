@@ -9,6 +9,8 @@
   <div style="padding: 1rem">
     <h2>F: four boxes, and the page tells the machine itself</h2>
     <p>Type one letter in each box, top to bottom. Nothing to read back - the page sends what it saw.</p>
+    <p style="background: #ffe9b0; padding: 0.5rem">First, please check the plain page still takes typing:
+      <a href="typing_b.html">open B</a>, type a letter there, come back here.</p>
 
     <p>1. plain box, nothing done to it</p>
     <input id="box1" placeholder="box 1">
@@ -46,7 +48,8 @@
     function screen_line() {
       var v = window.visualViewport;
       var visual = v ? (Math.round(v.width) + "x" + Math.round(v.height) + " top " + Math.round(v.offsetTop) + " scale " + v.scale) : "none";
-      return "window " + window.innerWidth + "x" + window.innerHeight + " | visual " + visual;
+      return "window " + window.innerWidth + "x" + window.innerHeight + " | visual " + visual
+        + " | page has focus: " + document.hasFocus() + " | " + document.visibilityState;
     }
     function values() {
       var out = [];
@@ -90,7 +93,8 @@
       send();
     }
     var types = ["focus", "blur", "keydown", "keyup", "keypress", "beforeinput", "input",
-      "compositionstart", "compositionupdate", "compositionend", "change", "resize", "scroll"];
+      "compositionstart", "compositionupdate", "compositionend", "change", "resize",
+      "visibilitychange", "pagehide", "pageshow"];
     var t = 0;
     while (t < types.length) {
       window.addEventListener(types[t], note, true);
@@ -99,6 +103,31 @@
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", note, true);
     }
+    var was = ["", "", "", ""];
+    function watch() {
+      "the boxes are read straight off the page every quarter second, so a letter that arrives without any event still shows up. Without this, 'nothing was typed' and 'something was typed and the page was never told' read exactly alike.";
+      var i = 0;
+      var changed = false;
+      while (i < boxes.length) {
+        var b = document.getElementById(boxes[i]);
+        if (b.value !== was[i]) {
+          lines.push(stamp() + " VALUE CHANGED " + boxes[i] + " to [" + b.value + "] with no event");
+          was[i] = b.value;
+          changed = true;
+        }
+        i = i + 1;
+      }
+      if (changed) { send(); }
+    }
+    setInterval(watch, 250);
+    var beats = 0;
+    function beat() {
+      "a line every three seconds, so the report shows a timeline even when nothing at all is happening - which is itself the finding here.";
+      beats = beats + 1;
+      lines.push(stamp() + " still here (" + beats + ") | " + screen_line());
+      send();
+    }
+    setInterval(beat, 3000);
     lines.push(stamp() + " page ready | " + screen_line());
     send_now();
   </script>
