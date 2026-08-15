@@ -18,5 +18,5 @@ export async function app_calendar(context) {
   } else {
     app_calendar_booking(root, user);
   }
-  app_shared_contact_button(root, app_calendar);
+  app_shared_contact_button(root);
 }

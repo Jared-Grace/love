@@ -1,5 +1,4 @@
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
-import { app_autopray } from "./app_autopray.mjs";
 import { text_may_the_lord } from "./text_may_the_lord.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { prayer_start } from "./prayer_start.mjs";
@@ -21,7 +20,7 @@ export async function app_autopray_verse_show(root, reference, verse_text) {
     v3,
   ]);
   ("add the way to reach the developer while this verse is on screen — it is drawn fresh each verse because the page is cleared every time, so it stays visible through the pause below rather than flickering");
-  app_shared_contact_button(root, app_autopray);
+  app_shared_contact_button(root);
   let c = isaiah_chapters_count();
   await sleep(c);
 }

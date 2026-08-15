@@ -5,7 +5,6 @@ import { app_shared_content_column_pad } from "./app_shared_content_column_pad.m
 import { html_focus } from "./html_focus.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
-import { app_search } from "./app_search.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
 import { html_on_enter } from "./html_on_enter.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
@@ -90,5 +89,5 @@ export async function app_search_home(context) {
     await search();
   }
   ("this screen clears root each time it draws, so re-add the way to reach the developer here; named from the search app so the note reads 'search app: '");
-  app_shared_contact_button(content, app_search);
+  app_shared_contact_button(content);
 }

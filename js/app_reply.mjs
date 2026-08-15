@@ -226,5 +226,5 @@ export async function app_reply(context) {
   function typed_reset() {
     typed = "";
   }
-  app_shared_contact_button(root, app_reply);
+  app_shared_contact_button(root);
 }
