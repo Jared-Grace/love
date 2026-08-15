@@ -16,7 +16,9 @@ import { html_div_first } from "./html_div_first.mjs";
 import { noop } from "./noop.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { promise_wrap } from "./promise_wrap.mjs";
+import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
+import { html_height_change_animate } from "./html_height_change_animate.mjs";
+import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order_walkthrough(
@@ -33,6 +35,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("what the lesson is for is said of the very line the learner is about to press, so it stands inside the example rather than in a card of its own above it");
   ("It used to be said above the example, of a line built for the saying. That put two different lines of the same shape one under the other, and a learner comparing them for what had changed was reading a difference the lesson never meant to draw.");
   let head = html_div_first(card);
+  let duration = app_shared_animation_duration();
   let intro = html_div(head);
   let note = html_div(head);
   let whole_line = app_code_expression_code(tree);
@@ -46,11 +49,11 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     html_remove_if_not_null(rule_line);
     rule_line = null;
   }
-  function head_said(change) {
+  async function head_said(change) {
     "say something new in the walkthrough, and let the walkthrough grow or shrink to fit it slowly rather than at once";
     "Every one of these presses changes how much there is to read above the line, and the line is what the learner is looking at. Changed at once, the line is somewhere else by the time they look back at it and they have to find it again; grown to slowly, it slides to its new place under their eyes and is never lost.";
     "The whole head moves, not the line, because the line is only one of the things standing under the words - the labels and the buttons are under them too, and a line sliding while everything around it jumped would read as the line coming loose from the page.";
-    let promise = html_height_change_animate(head, change, duration);
+    let promise = await html_height_change_animate(head, change, duration);
     return promise;
   }
   async function on_chosen(node, value) {
@@ -84,23 +87,32 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     let solved = property_get(step, "solved");
     let ready = property_get(step, "ready");
     if (null_is(solved)) {
+      ("the opening words are simply there when the page arrives, with nothing slowed: nothing has been pressed yet, so there is no place the learner was looking that a change could take them away from");
+      html_clear(note);
       app_code_expression_choose_say(note, ready, "So first, choose ");
       return;
     }
-    let more = app_code_expression_node_is(current);
-    if (not(more)) {
-      ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
-      ("Nothing is said about going on. The learner has just chosen every operator in the line for themselves - the walkthrough only named which one, the pressing was already theirs - so a parting line handing them their turn takes back what they just did, and the button underneath is the only thing that has to say where the turn is.");
-      app_shared_success_message(note);
-      return;
+    function change() {
+      html_clear(note);
+      let more = app_code_expression_node_is(current);
+      if (not(more)) {
+        ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
+        ("Nothing is said about going on. The learner has just chosen every operator in the line for themselves - the walkthrough only named which one, the pressing was already theirs - so a parting line handing them their turn takes back what they just did, and the button underneath is the only thing that has to say where the turn is.");
+        app_shared_success_message(note);
+        return;
+      }
+      html_div_cycle_code(note, ["So now we have ", line_code]);
+      app_code_expression_choose_say(note, ready, "Now, choose ");
     }
-    html_div_cycle_code(note, ["So now we have ", line_code]);
-    app_code_expression_choose_say(note, ready, "Now, choose ");
+    head_said(change);
   }
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
     "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
-    app_code_lesson_expression_choose_order_wrong_say(note, node, line_code);
+    function change() {
+      app_code_lesson_expression_choose_order_wrong_say(note, node, line_code);
+    }
+    head_said(change);
   }
   app_code_expression_choose_line(
     line_holder,
