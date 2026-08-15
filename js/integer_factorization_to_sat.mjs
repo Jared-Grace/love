@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_three_sat } from "./integer_factorization_to_sat_three_sat.mjs";
 import { integer_factorization_to_sat_factorization_cnf } from "./integer_factorization_to_sat_factorization_cnf.mjs";
 import { integer_factorization_to_sat_multiplier_csa_build } from "./integer_factorization_to_sat_multiplier_csa_build.mjs";
 import { integer_factorization_to_sat_full_adder_csa } from "./integer_factorization_to_sat_full_adder_csa.mjs";
@@ -11,11 +12,8 @@ import { add } from "./add.mjs";
 import { ceil } from "./ceil.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { subtract } from "./subtract.mjs";
 export async function integer_factorization_to_sat(integer_to_factor) {
   class CNF {
     constructor() {
@@ -132,30 +130,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r7;
   }
   function to3SAT(cnf) {
-    let out = new CNF();
-    out.varCount = cnf.varCount;
-    for (let clause of cnf.clauses) {
-      if (less_than_equal(clause.length, 3)) {
-        out.clauses.push(clause);
-      } else {
-        let prev = clause[0];
-        let b2 = subtract(clause.length, 2);
-        for (let i = 1; less_than(i, b2); i++) {
-          let v = out.newVar();
-          out.addClause(prev, clause[i], v);
-          prev = -v;
-        }
-        out.addClause(
-          prev,
-          clause[subtract(clause.length, 2)],
-          clause[subtract(clause.length, 1)],
-        );
-      }
-    }
-    return out;
+    let r8 = integer_factorization_to_sat_three_sat(cnf, CNF);
+    return r8;
   }
-  let v4 = Math.sqrt(integer_to_factor);
-  let v5 = Math.log(v4);
+  let v = Math.sqrt(integer_to_factor);
+  let v5 = Math.log(v);
   let left2 = ceil(v5);
   let bits_count = add(left2, 1);
   let cnf_built = factorizationCNF(integer_to_factor, bits_count);
