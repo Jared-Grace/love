@@ -15,7 +15,7 @@ import { function_nested_lift_name_or_null } from "./function_nested_lift_name_o
 import { function_nested_lift_wrapper } from "./function_nested_lift_wrapper.mjs";
 import { js_binding_names_unbindable } from "./js_binding_names_unbindable.mjs";
 import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
-export async function function_nested_lift_wrapper_pass(f_name) {
+export async function function_nested_lift_pass(f_name) {
   arguments_assert(arguments, 1);
   ("One walk through the named function, moving out the body of every piece written inside it that can be moved, each under a name worked out from the two names it already has, and each committed under its own command before the next one starts.");
   ("A long function here is nearly always long because of what is written inside it rather than because of what is written down its middle, and the pieces inside come out one at a time under the same rule. Running that rule by hand once per piece leaves nothing behind and files the whole batch under one message that names none of them, so the walk is the command and the pieces are its work.");
