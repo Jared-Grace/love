@@ -1,34 +1,19 @@
-import { list_first_property } from "./list_first_property.mjs";
+import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
+import { app_code_lesson_expression_choose_order_above } from "./app_code_lesson_expression_choose_order_above.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { html_div_first } from "./html_div_first.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { noop } from "./noop.mjs";
-import { null_is } from "./null_is.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
-import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { boolean_random } from "./boolean_random.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
   "Every lesson before this asks for the answer to a whole line at once, so a learner who knows the rule and slips on the arithmetic, and one who does the arithmetic and does not know the rule, are marked the same. Here the two are separated: the arithmetic is done FOR the learner and the only thing asked is the order.";
@@ -54,24 +39,12 @@ export function app_code_lesson_expression_choose_order() {
     let tree = tree_new();
     let question = app_code_expression_code(tree);
     property_set(trees, question, tree);
-    let answer = tree_value(tree);
+    let answer = app_code_expression_value(tree);
     let item = {
       question,
       answer,
     };
     return item;
-  }
-  function tree_value(item) {
-    "what the whole line comes to, worked out the same way the learner will work it out - one ready operator at a time - so the answer shown can never disagree with the steps";
-    let node_is = app_code_expression_node_is(item);
-    if (not(node_is)) {
-      return item;
-    }
-    let ready = app_code_expression_nodes_ready(item);
-    let first = ready[0];
-    let stepped = app_code_expression_solved(item, first);
-    let value = tree_value(stepped);
-    return value;
   }
   function batch_get() {
     "one line a screen";
@@ -93,63 +66,9 @@ export function app_code_lesson_expression_choose_order() {
     app_code_expression_choose_line(parent, tree, noop, on_wrong, on_success);
   }
   function on_question_example(parent, question, card) {
-    "the lesson's front page: the same line to press as the quiz, and above it a walkthrough saying what to press at each step and what the press just did";
-    "Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.";
-    "Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.";
-    "The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.";
+    "the lesson's front page, which is the walkthrough next door: all this end of it has to do is find the shape the question was printed from, because that is the one thing kept here and nowhere else";
     let tree = property_get(trees, question);
-    let line_holder = html_div(parent);
-    let note = html_div_first(card);
-    function say_choose(ready, lead) {
-      "name the one operator that may go next, so the walkthrough tells rather than asks";
-      let symbol = list_first_property(ready, "operator");
-      html_div_cycle_code(note, [lead, symbol]);
-    }
-    function on_change(step) {
-      "after every press, say what that press did and what to press next";
-      html_clear(note);
-      let solved = property_get(step, "solved");
-      let ready = property_get(step, "ready");
-      if (null_is(solved)) {
-        say_choose(ready, "First, choose the ");
-        return;
-      }
-      let value = property_get(step, "value");
-      let solved_code = app_code_expression_code(solved);
-      let value_text = text_to(value);
-      ("praised in the same words the quiz praises a finished question with, taken from the one list both of them read");
-      let praise = app_shared_encouragement_exclamation();
-      let lead = text_combine(praise, "the ");
-      html_div_cycle_code(note, [lead, solved_code, " becomes ", value_text]);
-      let current = property_get(step, "current");
-      let more = app_code_expression_node_is(current);
-      if (not(more)) {
-        ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
-        ("Nothing is said about going on. The learner has just chosen three times over - the walkthrough only named which operator, the choosing was already theirs - so a parting line handing them their turn takes back what they just did, and the button underneath is the only thing that has to say where the turn is.");
-        app_shared_success_message(note);
-        return;
-      }
-      let current_code = app_code_expression_code(current);
-      html_div_cycle_code(note, ["So now we have ", current_code]);
-      say_choose(ready, "Now, choose the ");
-    }
-    function on_wrong_example(node) {
-      "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
-      "Said as an order of turns rather than as a shape - an operator sitting on one SIDE of another is a thing a learner can only see by picturing the line as a tree, and no lesson has drawn one. Which operator has to go first is a question the line itself answers.";
-      let symbol = property_get(node, "operator");
-      html_div_cycle_code(note, [
-        "Not yet - the ",
-        symbol,
-        " cannot be chosen because another operator must be chosen first",
-      ]);
-    }
-    app_code_expression_choose_line(
-      line_holder,
-      tree,
-      on_change,
-      on_wrong_example,
-      noop,
-    );
+    app_code_lesson_expression_choose_order_walkthrough(parent, card, tree);
   }
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
@@ -191,39 +110,10 @@ export function app_code_lesson_expression_choose_order() {
     };
     return quizzes_exercises;
   }
-  function above(root) {
-    "what the new quiz is for, and what it does that the earlier ones did not";
-    let times = js_operator_asterisk_symbol();
-    let plus = js_operator_plus_symbol();
-    let card = app_code_container_light_blue(root);
-    let item2 = app_code_lesson_expression_choose_order_expression(true);
-    let line = app_code_expression_code(item2);
-    app_code_lesson_suppose_solve_line(card, "Suppose", line);
-    html_div_cycle_code(card, [
-      "This time we do not answer the whole line at once",
-    ]);
-    html_div_cycle_code(card, ["We choose which operator to solve first"]);
-    html_div_cycle_code(card, [
-      "The quiz solves that one for us, and shows what is left",
-    ]);
-    html_div_cycle_code(card, ["Then we choose the next one"]);
-    let rule_card = app_code_container_light_blue(root);
-    html_div_cycle_code(rule_card, [
-      "An operator can be solved when both of its sides are numbers already",
-    ]);
-    html_div_cycle_code(rule_card, [
-      "So in ",
-      "1 + 2 * 3",
-      " we solve the ",
-      times,
-      " before the ",
-      plus,
-    ]);
-  }
   let example_question_label = app_code_label_code_question();
   let lesson = app_code_lesson_base(
     name_id,
-    above,
+    app_code_lesson_expression_choose_order_above,
     1,
     batch_get,
     on_question_example,
