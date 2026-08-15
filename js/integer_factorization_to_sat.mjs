@@ -1,3 +1,4 @@
+import { integer_factorization_and_gate } from "./integer_factorization_and_gate.mjs";
 import { integer_factorization_xor_gate } from "./integer_factorization_xor_gate.mjs";
 import { add } from "./add.mjs";
 import { ceil } from "./ceil.mjs";
@@ -49,11 +50,8 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
   }
   function andGate(cnf, a, b) {
-    let z = cnf.newVar();
-    cnf.addClause(-a, -b, z);
-    cnf.addClause(a, -z);
-    cnf.addClause(b, -z);
-    return z;
+    let r12 = integer_factorization_and_gate(cnf, a, b);
+    return r12;
   }
   function xorGate(cnf, a, b) {
     let r11 = integer_factorization_xor_gate(cnf, a, b);
