@@ -1,5 +1,4 @@
-import { html_style_padding } from "./html_style_padding.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
+import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,6 +12,5 @@ export function app_code_expression_operator_pressable(span) {
   html_style_background_color_set(span, background);
   let font = app_shared_color_code_background();
   html_style_set(span, "color", font);
-  html_style_padding(span, "0 0.35em");
-  html_border_radius(span, "0.2em");
+  app_code_expression_chip_style(span);
 }
