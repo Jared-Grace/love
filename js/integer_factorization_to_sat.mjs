@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_multiplier_csa_build } from "./integer_factorization_to_sat_multiplier_csa_build.mjs";
 import { integer_factorization_to_sat_full_adder_csa } from "./integer_factorization_to_sat_full_adder_csa.mjs";
 import { integer_factorization_to_sat_half_adder } from "./integer_factorization_to_sat_half_adder.mjs";
 import { integer_factorization_to_sat_full_adder } from "./integer_factorization_to_sat_full_adder.mjs";
@@ -14,7 +15,6 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 export async function integer_factorization_to_sat(integer_to_factor) {
   class CNF {
@@ -103,31 +103,14 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r14;
   }
   function buildMultiplierCSA(cnf, x, y) {
-    let bits = x.length;
-    function lambda7() {
-      let r7 = [];
-      return r7;
-    }
-    let columns = Array.from(
-      {
-        length: multiply(2, bits),
-      },
-      lambda7,
+    let r5 = integer_factorization_to_sat_multiplier_csa_build(
+      cnf,
+      x,
+      y,
+      andGate,
+      compressColumns,
     );
-    for (let i = 0; less_than(i, bits); i++) {
-      for (let j = 0; less_than(j, bits); j++) {
-        let p = andGate(cnf, x[i], y[j]);
-        columns[text_combine(i, j)].push(p);
-      }
-    }
-    function lambda8(col) {
-      let r8 = greater_than(col.length, 2);
-      return r8;
-    }
-    while (columns.some(lambda8)) {
-      columns = compressColumns(cnf, columns);
-    }
-    return columns;
+    return r5;
   }
   function finalizeSum(cnf, columns) {
     let r13 = integer_factorization_to_sat_finalize_sum(
