@@ -21,7 +21,7 @@ export function permission_tool_unmatched_cases() {
       why: "a working folder outside the repo, granted in the local settings file rather than the shared one, so the class crosses both files",
     },
     {
-      rule: "Write(/home/j/backup/love_claude_memory/memory/**)",
+      rule: "Write(/home/j/backup/love/claude_memory/memory/**)",
       unmatched: true,
       why: "the memory realpath, the spelling every Claude is told to use, and it was granted to a tool nothing consults",
     },
