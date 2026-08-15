@@ -1,11 +1,10 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { machine_path_literals_allowed } from "./machine_path_literals_allowed.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { machine_path_literals_all } from "./machine_path_literals_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -25,8 +24,7 @@ export async function machine_path_literals_gate_run() {
   let sites = property_get(walked, "sites");
   function allowed_not_is(site) {
     let held = property_get(site, "f_name");
-    let listed = list_includes(names, held);
-    let b = not(listed);
+    let b = list_includes_not(names, held);
     return b;
   }
   let left = list_filter(sites, allowed_not_is);
