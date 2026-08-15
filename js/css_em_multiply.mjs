@@ -9,8 +9,10 @@ export function css_em_multiply(outer, inner) {
   ("For the case where a piece of styling has to be moved from one font to another and come out the same size. An em in every property except font-size is measured against the element's OWN font, so a control that keeps its padding while dropping its enlarged font quietly loses padding with it - the number has to be carried across rather than copied.");
   let unit = "em";
   let unit_count = unit.length;
-  let outer_number = number_from_text(text_remove_end(outer, unit_count));
-  let inner_number = number_from_text(text_remove_end(inner, unit_count));
+  let text = text_remove_end(outer, unit_count);
+  let outer_number = number_from_text(text);
+  let text2 = text_remove_end(inner, unit_count);
+  let inner_number = number_from_text(text2);
   let product = multiply(outer_number, inner_number);
   let length = text_combine(product, unit);
   return length;
