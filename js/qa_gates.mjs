@@ -1,3 +1,4 @@
+import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
 import { machine_path_literals_gate_run } from "./machine_path_literals_gate_run.mjs";
 import { hook_memory_root_gate_run } from "./hook_memory_root_gate_run.mjs";
 import { firebase_storage_list_url_cases_gate_run } from "./firebase_storage_list_url_cases_gate_run.mjs";
@@ -507,6 +508,7 @@ export function qa_gates() {
     app_shared_card_gate_run,
     app_shared_description_gate_run,
     git_push_urls_gate_run,
+    git_history_heavy_absent_gate_run,
     gloss_back_references_gate_run,
     daemons_stale_gate_run,
     g_tiles_window_axis_cases_gate_run,
