@@ -1,3 +1,4 @@
+import { app_g_day_guide_pick_check_map_new } from "./app_g_day_guide_pick_check_map_new.mjs";
 import { app_g_day_water_choose_check } from "./app_g_day_water_choose_check.mjs";
 import { app_g_day_guide_window_check } from "./app_g_day_guide_window_check.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -7,7 +8,6 @@ import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { assert_message } from "./assert_message.mjs";
-import { g_water } from "./g_water.mjs";
 import { app_g_day_guide_pick } from "./app_g_day_guide_pick.mjs";
 export function app_g_day_guide_pick_check() {
   ("deterministic REGRESSION check of the pure gold-guide picker on synthetic 12x12 maps, with the player at the BOTTOM (6,10), the target at the TOP (6,1) and only the bottom half 'visible' (window y 5..11). OPEN MAP: the gold tile must be a real tile inside the window and closer to the target than the player (it caught the neighbours-are-wrapped bug where guide returned null), and it must be the exact best tile (6,5) — the top-middle of what the player can see. DETOUR MAP: a wall of water across y=6 with its only gap at x=0 makes the shortest path leave the window on the far left, so the last path tile still in view is (0,5), nine steps from the target, while the visible tile actually nearest the target is (6,5) at three. it must pick (6,5) — that is the 'sometimes it chooses a tile nearby' bug, and asking every visible tile instead of only the path's tiles is what fixes it. asserts, so it can join the qa gate — run: node scripts/ai.mjs ",
@@ -20,26 +20,6 @@ export function app_g_day_guide_pick_check() {
     x: 6,
     y: 10,
   };
-  function map_new(water_row, water_gap_x) {
-    let size = 12;
-    let coordinates = [];
-    for (let y = 0; less_than(y, size); y++) {
-      for (let x = 0; less_than(x, size); x++) {
-        let water_here = equal(y, water_row) && not_equal(x, water_gap_x);
-        let item = water_here ? g_water() : "grass";
-        coordinates.push({
-          x,
-          y,
-          item,
-        });
-      }
-    }
-    let g = {
-      coordinates,
-      npcs: [target],
-    };
-    return g;
-  }
   ("the window every case here is judged against, written once. the checks below still spell the four edges out again by hand rather than asking the repo's own inside test, on purpose: a check that judged the answer with the very predicate the picker uses would agree with it about a wrong edge and say nothing.");
   let window_tiles = {
     min_x: 0,
@@ -47,7 +27,7 @@ export function app_g_day_guide_pick_check() {
     min_y: 5,
     max_y: 11,
   };
-  let open = map_new(-1, -1);
+  let open = app_g_day_guide_pick_check_map_new(-1, -1, target);
   let gold = app_g_day_guide_pick(open, player, target, window_tiles);
   let b = not_equal(gold, null);
   assert_message(b, "guide should return a gold tile for an off-screen target");
@@ -61,7 +41,7 @@ export function app_g_day_guide_pick_check() {
   assert_message(b2, "gold tile must lead toward the target (upward)");
   let best = equal(gold.x, 6) && equal(gold.y, 5);
   assert_message(best, "gold tile must be the visible tile nearest the target");
-  let detour = map_new(6, 0);
+  let detour = app_g_day_guide_pick_check_map_new(6, 0, target);
   let gold2 = app_g_day_guide_pick(detour, player, target, window_tiles);
   let b3 = not_equal(gold2, null);
   assert_message(b3, "guide should return a gold tile across a water detour");
@@ -71,7 +51,7 @@ export function app_g_day_guide_pick_check() {
     "gold tile must be the visible tile nearest the target, not the last tile of the path still in view",
   );
   ("STRANGER IN THE GAP: the same detour map with somebody standing in the one gap the water leaves. read with people as walls there is no way to the target at all and the guide goes out, which is what left the third person of a day unguided. people are not walls to it - the walk parts a crowd - so the answer must be the detour map's answer unchanged");
-  let blocked = map_new(6, 0);
+  let blocked = app_g_day_guide_pick_check_map_new(6, 0, target);
   blocked.npcs.push({
     x: 0,
     y: 6,
