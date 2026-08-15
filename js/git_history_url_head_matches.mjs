@@ -16,7 +16,9 @@ export async function git_history_url_head_matches(url, commit) {
     url,
     "refs/heads/main",
   ]);
-  let found = text_split_first(text_trim(printed), text_tab());
+  let item = text_trim(printed);
+  let s = text_tab();
+  let found = text_split_first(item, s);
   let matches = equal(found, commit);
   let r = {
     url,
