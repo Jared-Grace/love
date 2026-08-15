@@ -7,8 +7,6 @@ import { app_shared_button_uncolored_background_color } from "./app_shared_butto
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_contact_message_add } from "./app_shared_contact_message_add.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
-import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -35,17 +33,18 @@ export function app_shared_contact_overlay() {
     position: "fixed",
     top: "0",
     left: "0",
-    width: html_viewport_width_full(),
-    height: html_viewport_height_full(),
+    right: "0",
+    bottom: "0",
     background: "rgba(0, 0, 0, 0.6)",
     display: "flex",
     "flex-direction": "column",
-    "justify-content": "center",
     "align-items": "center",
+    "overflow-y": "auto",
     padding: "1.5rem",
     "box-sizing": "border-box",
     "z-index": "1000",
   });
+  ("sized by its four edges rather than by the viewport's height, and the one thing that scrolls. A height in viewport units moves when the soft keyboard opens, and a box being typed into that sits inside a second scrolling box within that height is the shape that has twice left a phone keyboard up with the letters going nowhere");
   let card = html_div(backdrop);
   html_style_assign(card, {
     background: "white",
@@ -54,7 +53,6 @@ export function app_shared_contact_overlay() {
     padding: "1.5rem",
     width: "100%",
     "max-width": "32rem",
-    "max-height": "100%",
     "box-sizing": "border-box",
     display: "flex",
     "flex-direction": "column",
@@ -63,13 +61,11 @@ export function app_shared_contact_overlay() {
   function close() {
     html_remove(backdrop);
   }
-  ("the thread sits above the box they write in, the way a conversation does, and scrolls on its own so a long one cannot push the box off the screen");
+  ("the thread sits above the box they write in, the way a conversation does. It is deliberately not a scrolling box of its own - the panel behind it scrolls as one piece, so the box being typed into never sits inside something that can re-lay-out under it");
   let thread = html_div(card);
   html_style_assign(thread, {
     display: "flex",
     "flex-direction": "column",
-    "overflow-y": "auto",
-    "max-height": "40vh",
   });
   thread_render();
   form();
@@ -98,7 +94,7 @@ export function app_shared_contact_overlay() {
     let textarea = html_textarea(card);
     html_placeholder(textarea, "Please write your message here");
     app_shared_input_style(textarea);
-    html_focus(textarea);
+    ("the box is deliberately not focused as the panel opens. Taking focus in the same moment the panel is built and laid out asks the phone to raise its keyboard against a layout that is still settling, which is the same race that has left keys going nowhere before - so the person taps the box themselves, the way every ordinary page works");
     async function on_send() {
       let message = html_value_get(textarea);
       let nothing = text_empty_is(message);
