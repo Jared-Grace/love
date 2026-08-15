@@ -19,22 +19,22 @@ export function error_where_cases() {
     {
       thrown: {
         stack: text_frozen(
-          "ReferenceError: property_get is not defined\n    at file_write_import (file:///home/j/repos/love/js/file_write_import.mjs:14:12)\n    at data_get (file:///home/j/repos/love/js/data_get.mjs:9:3)\n",
+          "ReferenceError: property_get is not defined\n    at file_write_import (file:///home/j/a/repos/love/js/file_write_import.mjs:14:12)\n    at data_get (file:///home/j/a/repos/love/js/data_get.mjs:9:3)\n",
         ),
       },
       where: text_frozen(
-        "at file_write_import (file:///home/j/repos/love/js/file_write_import.mjs:14:12)",
+        "at file_write_import (file:///home/j/a/repos/love/js/file_write_import.mjs:14:12)",
       ),
       why: "the case the reader exists for - a name that is not defined, whose words name the name and not the file, so the first line of the trail is the whole answer",
     },
     {
       thrown: {
         stack: text_frozen(
-          "Error: broken\n    at node:internal/process/task_queues:95:5\n    at async run (file:///home/j/repos/love/js/run.mjs:3:1)\n",
+          "Error: broken\n    at node:internal/process/task_queues:95:5\n    at async run (file:///home/j/a/repos/love/js/run.mjs:3:1)\n",
         ),
       },
       where: text_frozen(
-        "at async run (file:///home/j/repos/love/js/run.mjs:3:1)",
+        "at async run (file:///home/j/a/repos/love/js/run.mjs:3:1)",
       ),
       why: "the runtime's own machinery sits above the code that was written here, and is passed over",
     },

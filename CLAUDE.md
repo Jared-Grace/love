@@ -125,12 +125,12 @@ Raw `node -e '...'` **always prompts the human** (arbitrary JS can shell out / h
 
 - **One-off computation / inspection** — wrap it:
   ```
-  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e '<script>'
+  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/repos/love -e '<script>'
   ```
   (`--net` blocks network, `--permission --allow-fs-read=<repo>` gives read-only repo access and blocks fs-write + child_process. The read path must be this exact absolute repo path.)
 - **Anything bigger, or that you'd rerun** — write `scripts/temp/<name>.mjs` and run it the same sandboxed way:
   ```
-  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love scripts/temp/<name>.mjs [arg …]
+  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/a/repos/love scripts/temp/<name>.mjs [arg …]
   ```
   Each argument must be one plain word (letters, digits, `_./-`); that is what lets a scratch script be rerun over a different input instead of edited between runs, and it cannot escalate — the sandbox blocks writes, child processes and the network whatever argv holds, and the script is a file you may write anyway. **Create that file with the `Write` tool, never `cat > … <<'EOF'`.** `Write`/`Edit` on `scripts/temp/**` are allow-listed (the folder is gitignored, and `scripts_temp_delete` clears it), so the write costs nothing — while a heredoc has no bash-guard parse at all and prompts the human every single time. Both halves are then prompt-free.
 
@@ -148,7 +148,7 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 ## Memory: write it by realpath, not through `~/.claude/`
 
-Your memory dir `~/.claude/projects/-home-j-repos-love/memory` is a **symlink** to `/home/j/a/backup/love/claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
+Your memory dir `~/.claude/projects/-home-j-a-repos-love/memory` is a **symlink** to `/home/j/a/backup/love/claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
 
 ## Memory: mark live pointers as `$fn name`
 
