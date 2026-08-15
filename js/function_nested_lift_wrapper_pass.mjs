@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -28,8 +28,8 @@ export async function function_nested_lift_wrapper_pass(f_name) {
   let skipped = [];
   for (let nested of names) {
     let rows = await function_lift_wrapper_candidates(f_name);
-    let names_now = list_map_property(rows, "name");
-    let there_is = list_includes(names_now, nested);
+    let row = list_find_property_or_null(rows, "name", nested);
+    let there_is = null_not_is(row);
     if (not(there_is)) {
       continue;
     }
@@ -42,7 +42,6 @@ export async function function_nested_lift_wrapper_pass(f_name) {
       });
       continue;
     }
-    let row = property_get(rows, "0");
     let closed = property_get(row, "closed");
     let unbindable = js_binding_names_unbindable();
     let blocked = list_intersect(closed, unbindable);
