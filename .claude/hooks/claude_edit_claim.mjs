@@ -16,6 +16,14 @@
 // is watch transforming a file Claude just wrote — noisy, not destructive.
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+// The repo is worked out from where this file sits rather than written down: it
+// lives at <repo>/.claude/hooks/, so the repo is three steps up. A hook is handed
+// whatever working directory happens to be current, but never a wrong idea of
+// its own place, so this keeps working after a move and on anybody else's machine.
+const hooks_folder = path.dirname(fileURLToPath(import.meta.url));
+const repo_root = path.dirname(path.dirname(hooks_folder));
 
 async function main() {
   let payload = "";
@@ -32,9 +40,8 @@ async function main() {
   if (!file_path) {
     return;
   }
-  const repoRoot = "/home/j/repos/love";
   const { claude_edit_claim_path } = await import(
-    path.join(repoRoot, "js/claude_edit_claim_path.mjs")
+    path.join(repo_root, "js/claude_edit_claim_path.mjs")
   );
   const claim = claude_edit_claim_path(file_path);
   fs.mkdirSync(path.dirname(claim), { recursive: true });
