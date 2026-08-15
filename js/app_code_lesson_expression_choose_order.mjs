@@ -1,3 +1,4 @@
+import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
 import { app_code_lesson_expression_choose_order_above } from "./app_code_lesson_expression_choose_order_above.mjs";
@@ -9,7 +10,6 @@ import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { property_get } from "./property_get.mjs";
