@@ -10,9 +10,9 @@ export function permission_rule_file_cases() {
       why: "the deep glob is the shape most file rules take, and the folder it names is the only real thing in it, so the probe has to put a leaf inside that folder",
     },
     {
-      rule: "Read(/media/j/JPM/user/storage/*)",
+      rule: "Read(/media/j/JPM/a/user/storage/*)",
       tool: "Read",
-      path: "/media/j/JPM/user/storage/probe_leaf.md",
+      path: "/media/j/JPM/a/user/storage/probe_leaf.md",
       why: "a flat glob names a folder just as a deep one does, and a reader that only knew the deep spelling would quietly skip every rule written the shorter way",
     },
     {

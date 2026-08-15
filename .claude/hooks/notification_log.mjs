@@ -22,7 +22,7 @@ report reads. Never blocks a session: no output, no nonzero exit, no throw. */
 
 import { appendFileSync, readFileSync } from "node:fs";
 
-const log_path = "/tmp/claude-1000/-home-j-repos-love/notifications.jsonl";
+const log_path = "/tmp/claude-1000/-home-j-a-repos-love/notifications.jsonl";
 
 function kind_of(message) {
   if (typeof message !== "string") return "unknown";

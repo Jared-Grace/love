@@ -61,7 +61,7 @@ export function permission_self_settings_cases() {
       why: "the realpath spelling, which is the one Claudes are told to use, and it sits outside the config folder entirely",
     },
     {
-      rule: "Edit(/home/j/repos/love/js/**)",
+      rule: "Edit(/home/j/a/repos/love/js/**)",
       blocked: false,
       why: "an ordinary repo path, nowhere near the guard",
     },

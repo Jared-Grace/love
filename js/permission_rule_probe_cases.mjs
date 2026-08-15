@@ -14,15 +14,15 @@ export function permission_rule_probe_cases() {
       why: "a rule with no trailing arguments marker grants exactly one command, and that command is the whole of what sits inside the parentheses",
     },
     {
-      rule: "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
+      rule: "Bash(mv /tmp/claude-1000/-home-j-a-repos-love/:*)",
       command:
-        "mv /tmp/claude-1000/-home-j-repos-love/probe_leaf /tmp/claude-1000/-home-j-repos-love/probe_leaf_second",
+        "mv /tmp/claude-1000/-home-j-a-repos-love/probe_leaf /tmp/claude-1000/-home-j-a-repos-love/probe_leaf_second",
       why: "a prefix ending in a separator names a folder, and a verb that moves rather than acts in place needs a second place to move to, so probing it with one path reports a prompt the real command never sees",
     },
     {
-      rule: "Bash(mkdir -p /tmp/claude-1000/-home-j-repos-love/:*)",
+      rule: "Bash(mkdir -p /tmp/claude-1000/-home-j-a-repos-love/:*)",
       command:
-        "mkdir -p /tmp/claude-1000/-home-j-repos-love/probe_leaf /tmp/claude-1000/-home-j-repos-love/probe_leaf_second",
+        "mkdir -p /tmp/claude-1000/-home-j-a-repos-love/probe_leaf /tmp/claude-1000/-home-j-a-repos-love/probe_leaf_second",
       why: "the flag between the verb and the folder is the whole point of this one - the second place has to be built from the last word alone, or the verb and its flag land in the middle of the command",
     },
     {
