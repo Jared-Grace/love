@@ -6,17 +6,17 @@ export function permission_tool_unmatched_cases() {
   "the ones that must answer no carry the weight the yes cases cannot. an Edit rule is the live spelling every one of those four had to become, and condemning it would delete working grants wholesale. a Read rule is matched and does grant reading. a command rule and a domain rule name no file tool at all";
   let cases = [
     {
-      rule: "Write(/tmp/claude-1000/-home-j-repos-love/**)",
+      rule: "Write(/tmp/claude-1000/-home-j-a-repos-love/**)",
       unmatched: true,
       why: "the scratchpad grant, which was dead until its Edit twin was proven to cover it",
     },
     {
-      rule: "Write(/home/j/repos/love/scripts/temp/**)",
+      rule: "Write(/home/j/a/repos/love/scripts/temp/**)",
       unmatched: true,
       why: "the throwaway-script folder, the one place a Claude is told writing costs nothing",
     },
     {
-      rule: "Write(/media/j/JPM/user/storage/**)",
+      rule: "Write(/media/j/JPM/a/user/storage/**)",
       unmatched: true,
       why: "a working folder outside the repo, granted in the local settings file rather than the shared one, so the class crosses both files",
     },
@@ -26,22 +26,22 @@ export function permission_tool_unmatched_cases() {
       why: "the memory realpath, the spelling every Claude is told to use, and it was granted to a tool nothing consults",
     },
     {
-      rule: "MultiEdit(/home/j/repos/love/js/**)",
+      rule: "MultiEdit(/home/j/a/repos/love/js/**)",
       unmatched: true,
       why: "nobody has written this one, and that is the point: the class is the tool name, not the four rules that happened to exist",
     },
     {
-      rule: "NotebookEdit(/home/j/repos/love/js/**)",
+      rule: "NotebookEdit(/home/j/a/repos/love/js/**)",
       unmatched: true,
       why: "the third member, dead for the same reason and by the same rule",
     },
     {
-      rule: "Edit(/home/j/repos/love/js/**)",
+      rule: "Edit(/home/j/a/repos/love/js/**)",
       unmatched: false,
       why: "the live spelling, and the one every offender above has to be rewritten as. a yes here would condemn the grants the repo actually runs on",
     },
     {
-      rule: "Read(/home/j/repos/love/js/**)",
+      rule: "Read(/home/j/a/repos/love/js/**)",
       unmatched: false,
       why: "reading is matched on its own rules and is granted by them, so only the editing tools collapse onto Edit",
     },
