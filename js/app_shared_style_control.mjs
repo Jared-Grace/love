@@ -6,7 +6,7 @@ export function app_shared_style_control(component) {
   let border_radius = app_shared_border_radius_large();
   html_style_assign(component, {
     "border-radius": border_radius,
-    padding: "0.55em",
+    padding: app_shared_style_control_padding(),
     width: "100%",
     "border-width": "0px",
     "font-size": app_shared_style_control_font_size(),
