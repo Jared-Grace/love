@@ -12,7 +12,7 @@ import { list_previous } from "./list_previous.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
-import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
+import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
@@ -43,9 +43,10 @@ export async function js_selects_function_lift_wrapper(
     hint: "this function writes to a name it reached out for, and a parameter would only be a copy of it, so the write would stop reaching the line waiting to read it. Would you like it to hand the new value back instead?",
     name_old,
   });
-  let unbound = js_declaration_names_unbound(declaration);
-  let itself_is = list_includes(unbound, name_old);
-  false_is_assert_json(itself_is, {
+  ("Asked of the body alone rather than of the whole declaration, because the name is written once at the head of every function and a reading that counted that would call every function one that calls itself.");
+  let block = property_get(declaration, "body");
+  let itself = js_identifiers_named(block, name_old);
+  list_empty_is_assert_json(itself, {
     hint: "this function calls itself, and the name it calls itself by would be left behind on the line that calls the moved body, where the moved body cannot see it. Would you like to hand it in as one more thing it is given?",
     name_old,
   });

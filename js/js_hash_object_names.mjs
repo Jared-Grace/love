@@ -1,4 +1,4 @@
-import { hash_object_read_name } from "./hash_object_read_name.mjs";
+import { js_hash_object_names_declared } from "./js_hash_object_names_declared.mjs";
 import { hash_object_made_name } from "./hash_object_made_name.mjs";
 import { hash_object_transform_names } from "./hash_object_transform_names.mjs";
 import { property_in_list } from "./property_in_list.mjs";
@@ -20,43 +20,19 @@ export function js_hash_object_names(ast) {
   arguments_assert(arguments, 1);
   let names = [];
   function declared(v) {
-    let node = property_get(v, "node");
-    let init = property_get_or_null(node, "init");
-    if (null_is(init)) {
-      return;
-    }
-    let call = js_node_type_is(init, "CallExpression");
-    if (not(call)) {
-      return;
-    }
-    let callee = property_get(init, "callee");
-    let plain = js_node_type_is(callee, "Identifier");
-    if (not(plain)) {
-      return;
-    }
-    let property_value = hash_object_read_name();
-    let reads = property_equals(callee, "name", property_value);
-    if (not(reads)) {
-      return;
-    }
-    let id = property_get(node, "id");
-    let simple = js_node_type_is(id, "Identifier");
-    if (not(simple)) {
-      return;
-    }
-    let held = property_get(id, "name");
-    list_add(names, held);
+    let r = js_hash_object_names_declared(v, names);
+    return r;
   }
   js_visit_type(ast, "VariableDeclarator", declared);
   let handed = [];
   function handled(v2) {
-    let node2 = property_get(v2, "node");
-    let callee2 = property_get(node2, "callee");
-    let plain2 = js_node_type_is(callee2, "Identifier");
-    if (not(plain2)) {
+    let node = property_get(v2, "node");
+    let callee = property_get(node, "callee");
+    let plain = js_node_type_is(callee, "Identifier");
+    if (not(plain)) {
       return;
     }
-    let args = property_get(node2, "arguments");
+    let args = property_get(node, "arguments");
     if (list_empty_is(args)) {
       return;
     }
@@ -67,14 +43,14 @@ export function js_hash_object_names(ast) {
     }
     let word = property_get(first, "name");
     ("A third way, and the one that does not look like an address at all while it is being built. A link opened in a new tab is put together from an empty object, filled field by field, and only turned into an address at the end. Nothing before that last line says what the object is for, so the turning is what says it, and every field written into it was written into somebody's link.");
-    let property_value2 = hash_object_made_name();
-    let made = property_equals(callee2, "name", property_value2);
+    let property_value = hash_object_made_name();
+    let made = property_equals(callee, "name", property_value);
     if (made) {
       list_add(names, word);
       return;
     }
     let transforms = hash_object_transform_names();
-    let changes = property_in_list(callee2, "name", transforms);
+    let changes = property_in_list(callee, "name", transforms);
     if (not(changes)) {
       return;
     }
@@ -83,11 +59,11 @@ export function js_hash_object_names(ast) {
   js_visit_type(ast, "CallExpression", handled);
   function written(v3) {
     let node3 = property_get(v3, "node");
-    let id2 = property_get_or_null(node3, "id");
-    if (null_is(id2)) {
+    let id = property_get_or_null(node3, "id");
+    if (null_is(id)) {
       return;
     }
-    let hands = property_in_list(id2, "name", handed);
+    let hands = property_in_list(id, "name", handed);
     if (not(hands)) {
       return;
     }
@@ -96,12 +72,12 @@ export function js_hash_object_names(ast) {
       return;
     }
     let param = list_first(params);
-    let simple2 = js_node_type_is(param, "Identifier");
-    if (not(simple2)) {
+    let simple = js_node_type_is(param, "Identifier");
+    if (not(simple)) {
       return;
     }
-    let held2 = property_get(param, "name");
-    list_add(names, held2);
+    let held = property_get(param, "name");
+    list_add(names, held);
   }
   js_visit_type(ast, "FunctionDeclaration", written);
   return names;
