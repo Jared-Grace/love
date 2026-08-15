@@ -1,4 +1,4 @@
-import { app_g_dev_index_hash_name } from "./app_g_dev_index_hash_name.mjs";
+import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
 import { app_g_dev_links } from "./app_g_dev_links.mjs";
 import { html_hash_name_get } from "./html_hash_name_get.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -14,7 +14,7 @@ export async function app_g_dev_if(div_map) {
     fn_name("app_g_dev_routes"),
     " omits it off localhost), so off localhost it is neither listed by the directory nor reachable by typing its hash.");
   let name = html_hash_name_get();
-  if (equal(name, app_g_dev_index_hash_name())) {
+  if (equal(name, app_shared_g_dev_index_hash_name())) {
     app_g_dev_index();
     return;
   }
