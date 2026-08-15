@@ -1,3 +1,5 @@
+import { folder_spellings } from "./folder_spellings.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -12,19 +14,23 @@ export async function folder_moved_stale(before) {
   "Everything that still spells one folder's old place: the files that write it out, and the copies of repositories that still pull from it.";
   "The copies are asked separately from the files because where a copy pulls from is not written in any file this can read - it is kept inside the copy itself. That is the one that goes wrong quietly: a copy pointed at a folder that is gone simply stops being brought up to date, and looks exactly like a copy that had nothing to bring.";
   "The one file left out is the list of moves itself, which writes the old place down on purpose, because that is where the old place is remembered. Counting it would mean this could never answer empty, and an answer that is never empty cannot be the thing that says a move is finished.";
+  "Every way of writing the folder is looked for, not only the one that looks like a folder. The other has had all its separators turned into dashes, so a hunt for the folder's own letters walks straight past it, and a file that writes both is answered once rather than twice.";
+  "The copies are asked about the folder alone, because where a copy pulls from is an address and an address is written the one way.";
   "A link is not a file and is not answered here. The only one that matters is the one the assistant's memory is reached through, and that one fails loudly and at once, which is the kind of mistake nobody needs a list to find.";
   let folders = folders_moved_stale_folders();
-  let register = text_combine_multiple([
-    fn_name("folders_moved_expected"),
-    ".mjs",
-  ]);
+  let f_name = fn_name("folders_moved_expected");
+  let register = text_combine_multiple([f_name, ".mjs"]);
+  let spellings = folder_spellings(before);
   let files = [];
   for (let folder of folders) {
-    let hits = await folder_files_with_text(folder, before);
-    for (let hit of hits) {
-      let itself = text_ends_with(hit, register);
-      if (not(itself)) {
-        files.push(hit);
+    for (let spelling of spellings) {
+      let hits = await folder_files_with_text(folder, spelling);
+      for (let hit of hits) {
+        let itself = text_ends_with(hit, register);
+        let already = list_includes(files, hit);
+        if (not(itself) && not(already)) {
+          files.push(hit);
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+import { folder_moved_spellings } from "./folder_moved_spellings.mjs";
 import { folders_moved_expected } from "./folders_moved_expected.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_moved_stale } from "./folder_moved_stale.mjs";
@@ -10,6 +11,7 @@ export async function folders_moved_stale_repair() {
   "Rewrites every place that still names a folder's old home so that it names the new one, and then asks again to show that nothing is left.";
   "It finds its own set rather than being handed one. The list of what is stale is asked for, repaired, and asked for again, so the command cannot drift away from what is actually broken and cannot claim to have finished while something it never looked at still points at a folder that is gone.";
   "The copies of repositories are repaired too, by pointing each one at where it now pulls from. That is the repair nobody would think to do by hand, because a copy pointed at a folder that is gone does not complain - it simply stops being brought up to date.";
+  "Every way of writing the folder is rewritten in each file, not only the one that looks like a folder, because the other way has had its separators turned into dashes and a file may well write both.";
   "What it answers is what it changed and what is left. A repair that says only that it ran cannot be told apart from one that found nothing and did nothing, and those are the two answers that must never look the same.";
   let expected = folders_moved_expected();
   let files = [];
@@ -19,9 +21,15 @@ export async function folders_moved_stale_repair() {
     let after = property_get(pair, "after");
     let stale = await folder_moved_stale(before);
     let stale_files = property_get(stale, "files");
+    let pairs = folder_moved_spellings(before, after);
     for (let one_path of stale_files) {
       let text = await file_read(one_path);
-      let replaced = text_replace(text, before, after);
+      let replaced = text;
+      for (let spelling of pairs) {
+        let one_before = property_get(spelling, "before");
+        let one_after = property_get(spelling, "after");
+        replaced = text_replace(replaced, one_before, one_after);
+      }
       await file_overwrite(one_path, replaced);
       files.push(one_path);
     }
