@@ -1,0 +1,227 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
+import { list_get_end_2 } from "./list_get_end_2.mjs";
+import { app_a_overlay_container_centered } from "./app_a_overlay_container_centered.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_a_overlay_on_enter } from "./app_a_overlay_on_enter.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { ternary } from "./ternary.mjs";
+import { app_a_textarea } from "./app_a_textarea.mjs";
+import { app_a_input } from "./app_a_input.mjs";
+import { html_rows_set } from "./html_rows_set.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { html_value_set } from "./html_value_set.mjs";
+import { html_select } from "./html_select.mjs";
+import { html_value_get } from "./html_value_get.mjs";
+import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
+import { app_a_button_wide } from "./app_a_button_wide.mjs";
+import { object_merge_set } from "./object_merge_set.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
+import { clipboard_copy } from "./clipboard_copy.mjs";
+import { html_on_enter_lambda } from "./html_on_enter_lambda.mjs";
+import { app_a_overlay_keydown } from "./app_a_overlay_keydown.mjs";
+import { app_a_input_integer } from "./app_a_input_integer.mjs";
+import { app_a_node_index } from "./app_a_node_index.mjs";
+import { list_remove_at_count } from "./list_remove_at_count.mjs";
+import { clipboard_paste } from "./clipboard_paste.mjs";
+import { text_is_assert_json } from "./text_is_assert_json.mjs";
+import { app_a_functionize_choices_add } from "./app_a_functionize_choices_add.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { app_a_function_on_keydown_remove } from "./app_a_function_on_keydown_remove.mjs";
+import { app_a_function_select } from "./app_a_function_select.mjs";
+import { list_add } from "./list_add.mjs";
+import { data_identifiers_search } from "./data_identifiers_search.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { app_a_functions_overlay_generic } from "./app_a_functions_overlay_generic.mjs";
+import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { log } from "./log.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { js_return_name } from "./js_return_name.mjs";
+import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
+import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
+import { js_declare } from "./js_declare.mjs";
+import { object_replace } from "./object_replace.mjs";
+import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
+import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
+import { function_param_delete } from "./function_param_delete.mjs";
+import { app_a_function_overlay_refresh } from "./app_a_function_overlay_refresh.mjs";
+export async function app_a_identifier_generic_choices_get(
+  o3,
+  choices,
+  a,
+  name,
+  lines_multiple,
+  c,
+  replace,
+) {
+  arguments_assert(arguments, 7);
+  let node = property_get(a, "node");
+  let ast = property_get(a, "ast");
+  let stack = js_node_to_visitor_stack(ast, node);
+  let e = list_get_end_2(stack);
+  let overlay_close = property_get(o3, "overlay_close");
+  let overlay = property_get(o3, "overlay");
+  let oc = app_a_overlay_container_centered(overlay);
+  html_div_text(oc, name);
+  let context = property_get(a, "context");
+  let change = {
+    fn: async function lambda15() {
+      let r = app_a_overlay_on_enter(on_enter, o3, a);
+      let o = property_get(r, "overlay_result");
+      let overlay_change = property_get(o, "overlay");
+      let oc_change = property_get(r, "container");
+      let text = property_get(change, "text");
+      let text2 = text_combine(text, " from:");
+      html_div_text(oc_change, text2);
+      html_div_text(oc_change, name);
+      let text3 = text_combine(text, " to:");
+      html_div_text(oc_change, text3);
+      let fn = null;
+      fn = ternary(lines_multiple, app_a_textarea, app_a_input);
+      let input = fn(overlay_change);
+      if (lines_multiple) {
+        let row_count = 20;
+        html_rows_set(input, row_count);
+      } else {
+        html_centered(input);
+      }
+      html_value_set(input, name);
+      await html_select(input);
+      async function on_enter() {
+        let value_new = html_value_get(input);
+        let on_change = property_get(change, "on_change");
+        await on_change(value_new);
+        await app_a_function_on_change(a, o);
+      }
+      let component = app_a_button_wide(overlay_change, text, on_enter);
+    },
+  };
+  object_merge_set(change, c);
+  list_add_multiple(choices, [
+    {
+      shortcut: "c",
+      text: html_button_copy_text(),
+      fn: async function lambda2() {
+        await clipboard_copy(name);
+        overlay_close();
+      },
+    },
+    change,
+    {
+      shortcut: "d",
+      text: "Delete",
+      fn: async function lambda2() {
+        let lambda22 = html_on_enter_lambda(lambda23);
+        overlay_close();
+        let o2 = app_a_overlay_keydown(a, lambda22);
+        let overlay_delete = property_get(o2, "overlay");
+        let oc_delete = app_a_overlay_container_centered(overlay_delete);
+        html_div_text(oc_delete, "How many statements do you want to delete?");
+        let input = app_a_input_integer(overlay_delete);
+        html_centered(input);
+        html_value_set(input, 1);
+        await html_select(input);
+        async function lambda23() {
+          let value_new = html_value_get(input);
+          let v = app_a_node_index(a);
+          let index = property_get(v, "index");
+          let list = property_get(v, "list");
+          list_remove_at_count(list, index, value_new);
+          await app_a_function_on_change(a, o2);
+        }
+        let component = app_a_button_wide(overlay_delete, "Delete", lambda23);
+      },
+    },
+    {
+      shortcut: "v",
+      text: "Paste replace",
+      fn: async function lambda2() {
+        let name_new = await clipboard_paste();
+        text_is_assert_json(name_new, {
+          hint: "the pasted replacement should be text — is there text on the clipboard to paste?",
+          name,
+          name_new,
+        });
+        replace(name_new);
+        await app_a_function_on_change(a, o3);
+      },
+    },
+  ]);
+  app_a_functionize_choices_add(choices, a, o3);
+  let f_names = await functions_names();
+  let includes = list_includes(f_names, name);
+  if (includes) {
+    let choice_function_open = {
+      shortcut: "o",
+      text: "Open",
+      fn: async function lambda() {
+        overlay_close();
+        app_a_function_on_keydown_remove(a);
+        await app_a_function_select(context, name);
+      },
+    };
+    list_add(choices, choice_function_open);
+    let references = {
+      shortcut: "s",
+      text: "References",
+      fn: async function lambda() {
+        let result = await data_identifiers_search(name);
+        let properties = properties_get(result);
+        async function lambda3(f_name) {
+          await app_a_function_select(context, f_name);
+        }
+        overlay_close();
+        let r = app_a_functions_overlay_generic(a, properties, lambda3);
+      },
+    };
+    list_add(choices, references);
+  }
+  async function lambda6() {
+    let e1 = list_get_end_1(stack);
+    log(app_a_identifier_generic_choices_get.name, {
+      e1,
+    });
+    function lambda7() {
+      let choice_assign = {
+        shortcut: "g",
+        text: "Assign result",
+        fn: async function lambda() {
+          let return_name = null;
+          if (includes) {
+            let v2 = await function_parse_declaration(name);
+            let ast_call = property_get(v2, "ast");
+            return_name = js_return_name(ast_call);
+          } else {
+            let property_name = js_return_identifier_name();
+            return_name = js_identifier_unique_ast(ast, property_name);
+          }
+          let assign = js_declare(return_name, e1);
+          log(app_a_identifier_generic_choices_get.name, {
+            assign,
+          });
+          object_replace(e, assign);
+          await app_a_function_on_change(a, o3);
+        },
+      };
+      list_add(choices, choice_assign);
+    }
+    js_node_type_is_if(e1, "CallExpression", lambda7);
+  }
+  js_node_type_is_if(e, "ExpressionStatement", lambda6);
+  function lambda4() {
+    let choice_param_delete = {
+      shortcut: "q",
+      text: "Param delete",
+      fn: async function lambda() {
+        let f_name = app_a_function_name_selected(context);
+        await function_param_delete(f_name, name);
+        await app_a_function_overlay_refresh(a, o3);
+      },
+    };
+    list_add(choices, choice_param_delete);
+  }
+  js_node_type_is_if(e, "FunctionDeclaration", lambda4);
+}
