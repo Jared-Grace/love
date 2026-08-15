@@ -1,0 +1,16 @@
+import { app_g_dev_index_hash_name } from "./app_g_dev_index_hash_name.mjs";
+import { app_index_card } from "./app_index_card.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { window_open_app_hash_name } from "./window_open_app_hash_name.mjs";
+export function app_index_dev_g_card(root) {
+  "the card on the index page that opens the game's dev tools - the directory listing every test screen the game has";
+  "it is here because a phone has no localhost to develop from, so the dev screens are reached on the deployed site or not at all, and the only way in was the Dev Tools button inside the game itself - which means starting a game to look at a screen that has nothing to do with playing one";
+  function opened() {
+    let a_name = fn_name("app_g");
+    let hash_name = app_g_dev_index_hash_name();
+    window_open_app_hash_name(a_name, hash_name);
+  }
+  let label = "g dev tools";
+  let text = "Opens the game's test screens - every dev route in one directory";
+  app_index_card(root, label, text, opened);
+}
