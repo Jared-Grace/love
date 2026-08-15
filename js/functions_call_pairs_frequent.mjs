@@ -37,11 +37,6 @@ export async function functions_call_pairs_frequent() {
   list_map(entries, file_scan);
   let atom_by_key = functions_call_pairs_atoms_by_key(file_keys);
   let rows = functions_call_pairs_rows(tally, atom_by_key);
-  ("Ranked by how many files the pair could actually be collapsed in, not by how many");
-  ("hold it. The two differ badly and in the direction that wastes work: a pair whose");
-  ("middle name is used again everywhere reads as a top row and folds nowhere, and");
-  ("the only way to learn that used to be to write the atom, run the fold, get");
-  ("nothing, and delete it again - which was paid twice before this column existed.");
   let top = functions_call_pairs_top(rows);
   for (let row of top) {
     let composed = function_name_pair_composed(row.left, row.right);
