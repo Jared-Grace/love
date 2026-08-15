@@ -14,13 +14,14 @@ import { function_lift_wrapper_candidates } from "./function_lift_wrapper_candid
 import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
 import { function_nested_lift_wrapper } from "./function_nested_lift_wrapper.mjs";
 import { js_binding_names_unbindable } from "./js_binding_names_unbindable.mjs";
+import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
 export async function function_nested_lift_wrapper_pass(f_name) {
   arguments_assert(arguments, 1);
   ("One walk through the named function, moving out the body of every piece written inside it that can be moved, each under a name worked out from the two names it already has, and each committed under its own command before the next one starts.");
   ("A long function here is nearly always long because of what is written inside it rather than because of what is written down its middle, and the pieces inside come out one at a time under the same rule. Running that rule by hand once per piece leaves nothing behind and files the whole batch under one message that names none of them, so the walk is the command and the pieces are its work.");
   ("Which function to walk is still somebody's choice, and deliberately so. A walk of the whole repo would rewrite files other people have open, and the pieces worth naming well are the ones in the file the person walking it has just read.");
   ("The list is asked again before each move rather than read once at the start, because a piece written inside another piece leaves with the one that holds it, and a walk working from a list made before the first move would then ask for something that is no longer there.");
-  ("Two things are stepped over rather than thrown, because neither is a fault: a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Both are handed back with the reason, because each one names a file that wants a person to read it.");
+  ("What is stepped over rather than thrown is stepped over because none of it is a fault: a piece that was never named by anybody, a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Each is handed back with its reason, because each one names a file that wants a person to read it.");
   await ai_git_noted();
   let ranked = await function_lift_wrapper_candidates(f_name);
   let names = list_map_property(ranked, "name");
@@ -31,6 +32,14 @@ export async function function_nested_lift_wrapper_pass(f_name) {
     let row = list_find_property_or_null(rows, "name", nested);
     let there_is = null_not_is(row);
     if (not(there_is)) {
+      continue;
+    }
+    let handed_out_is = js_name_lambda_is(nested);
+    if (handed_out_is) {
+      list_add(skipped, {
+        nested,
+        why: "this piece was never given a name by anybody - a pass named it, and carried out under that name joined to its holder's it would stand in the repo as a name no search for what it does could ever reach. Would you like to name it for what it does first?",
+      });
       continue;
     }
     let f_name_new = function_nested_lift_name_or_null(f_name, nested);
