@@ -1,3 +1,6 @@
+import { git_history_push_forced } from "./git_history_push_forced.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { equal } from "./equal.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { daemons_stop } from "./daemons_stop.mjs";
@@ -8,15 +11,8 @@ import { git_folder_worktree_remove } from "./git_folder_worktree_remove.mjs";
 import { git_history_paths_drop_rehearse } from "./git_history_paths_drop_rehearse.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { git_folder_head_tree } from "./git_folder_head_tree.mjs";
-import { git_push_urls } from "./git_push_urls.mjs";
-import { git_history_url_head_matches } from "./git_history_url_head_matches.mjs";
-import { git_folder_head_commit } from "./git_folder_head_commit.mjs";
 import { each_async } from "./each_async.mjs";
-import { list_map_async } from "./list_map_async.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { not } from "./not.mjs";
 export async function git_history_paths_drop(folder, paths_text, bundle_path) {
   "$plain folder";
   "$plain paths_text";
@@ -25,7 +21,7 @@ export async function git_history_paths_drop(folder, paths_text, bundle_path) {
   "Everything here past the rehearsal is hard to take back, so it is deliberately one command rather than a list of steps to follow. The list was followed once by hand and three of its steps were not on it: copies of the repository laid out elsewhere held the old history alive, the record of where the branch had been held it alive again, and neither was noticed until the space failed to come back. A step nobody wrote down is a step that gets missed, and the way to stop missing it is to stop writing it down.";
   "Never granted standing approval and never called by anything. It forces every address it writes to onto a new history, which is the one thing around here that another person's copy cannot simply catch up with.";
   "The undo is written first, before anything moves, and is proved before the rewrite begins. The rehearsal's copy is left where it is afterwards rather than cleaned up - it is the fastest way back if something is noticed in the next few minutes.";
-  "The push is allowed to fail and its complaint is kept rather than thrown. One address taking the new history while another refuses it is the ordinary outcome here, not a surprise, and git reports that mixed result as a plain failure. Thrown, it ends the command before the two things that must still happen: asking each address what it is actually standing on, which is the only real answer, and starting the machine's background work again, which was stopped for the rewrite and would otherwise stay stopped. That happened on the first real run.";
+  "The sending is allowed to fail and its complaint is held back rather than thrown, so that the machine's background work is started again first. That work was stopped for the rewrite, and a failure at the last step left it stopped on the first real run. What could not be sent is then reported, once everything here is back to normal, and is answered on its own with the sending command rather than by doing the whole rewrite again.";
   arguments_assert(arguments, 3);
   let stopped = await daemons_stop();
   let bundle = await git_history_bundle_write(folder, bundle_path);
@@ -44,37 +40,23 @@ export async function git_history_paths_drop(folder, paths_text, bundle_path) {
   });
   await git_folder_run(folder, ["reflog", "expire", "--expire=now", "--all"]);
   await git_folder_run(folder, ["gc", "--prune=now"]);
-  async function push_forced() {
-    await git_folder_run(folder, ["push", "--force", "origin", "main"]);
+  let sent = null;
+  async function pushed_forced() {
+    sent = await git_history_push_forced(folder);
   }
-  let push_trouble = await catch_error_text_or_null_async(push_forced);
-  let commit = await git_folder_head_commit(folder);
-  let urls = await git_push_urls(folder);
-  async function url_matches(url) {
-    let matches = await git_history_url_head_matches(url, commit);
-    return matches;
-  }
-  let answered = await list_map_async(urls, url_matches);
-  function url_behind_is(answer) {
-    let stale = not(answer.matches);
-    return stale;
-  }
-  let behind = list_filter(answered, url_behind_is);
+  let trouble = await catch_error_text_or_null_async(pushed_forced);
   await daemons_ensure();
-  list_empty_is_assert_json(behind, {
-    hint: "these addresses are still on the old history, most likely because the branch is protected there — unprotect it, push again by hand, and protect it back",
-    behind,
-    commit,
-    push_trouble,
+  let none = equal(trouble, null);
+  assert_json(none, {
+    hint: "the rewrite itself is done and the machine's background work is running again, but not every address ended up standing on the new history — the message below says which one and why",
+    trouble,
   });
   let r = {
-    commit,
     bundle,
     stopped,
     worktrees,
     rehearsed,
-    urls: answered,
-    push_trouble,
+    sent,
   };
   return r;
 }
