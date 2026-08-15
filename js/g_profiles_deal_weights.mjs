@@ -1,15 +1,10 @@
-import { multiply_divide } from "./multiply_divide.mjs";
+import { g_profiles_deal_weights_fit } from "./g_profiles_deal_weights_fit.mjs";
 import { g_profile_target_shares } from "./g_profile_target_shares.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_sum } from "./list_sum.mjs";
-import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 export function g_profiles_deal_weights(remaining, owed, left) {
   "One weight per person still in the deck, fitted so that the next card drawn moves every axis at once toward what the cast is still owed.";
   "Fitted rather than calculated, because the axes are NOT independent. A share can be written for gender and a share for age, but the deck holds no row for every pairing of them - the sieve withholds Roman office from women, and marriage and children from the young - so a weight worked out one axis at a time lands right on that axis and wrong on the next. Rescaling each axis in turn, over and over, is what lets all seven come out near their share together.";
@@ -40,38 +35,14 @@ export function g_profiles_deal_weights(remaining, owed, left) {
   }
   let passes = 4;
   let smallest = 0.000000000001;
-  for (let pass = 0; less_than(pass, passes); pass++) {
-    for (let name of names) {
-      let by_value = property_get(groups, name);
-      let axis_owed = property_get(owed, name);
-      let values = object_property_names(by_value);
-      let total = list_sum(weights);
-      for (let value of values) {
-        let bucket = property_get(by_value, value);
-        let current = 0;
-        for (let index of bucket) {
-          current = add(current, weights[index]);
-        }
-        let gone = equal(current, 0);
-        if (gone) {
-          continue;
-        }
-        let still = property_get(axis_owed, value);
-        let overdrawn = less_than(still, 0);
-        if (overdrawn) {
-          still = 0;
-        }
-        let share = divide(still, left);
-        let scale = multiply_divide(share, total, current);
-        let satisfied = equal(scale, 0);
-        if (satisfied) {
-          scale = smallest;
-        }
-        for (let index of bucket) {
-          weights[index] = multiply(weights[index], scale);
-        }
-      }
-    }
-  }
+  g_profiles_deal_weights_fit(
+    passes,
+    names,
+    groups,
+    owed,
+    weights,
+    left,
+    smallest,
+  );
   return weights;
 }
