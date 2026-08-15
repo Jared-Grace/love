@@ -1,3 +1,4 @@
+import { app_a_identifier_generic_choices_get_on_enter } from "./app_a_identifier_generic_choices_get_on_enter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
@@ -91,10 +92,13 @@ export async function app_a_identifier_generic_choices_get(
       html_value_set(input, name);
       await html_select(input);
       async function on_enter() {
-        let value_new = html_value_get(input);
-        let on_change = property_get(change, "on_change");
-        await on_change(value_new);
-        await app_a_function_on_change(a, o);
+        let r2 = await app_a_identifier_generic_choices_get_on_enter(
+          input,
+          change,
+          a,
+          o,
+        );
+        return r2;
       }
       let component = app_a_button_wide(overlay_change, text, on_enter);
     },
