@@ -1,23 +1,22 @@
+import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
+import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_shared_button_green_font_inherit } from "./app_shared_button_green_font_inherit.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_first } from "./html_div_first.mjs";
-import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { noop } from "./noop.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order_walkthrough(
   parent,
@@ -30,8 +29,25 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.");
   ("The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.");
   let line_holder = html_div(parent);
-  let note = html_div_first(card);
-  let line_code = "";
+  ("what the lesson is for is said of the very line the learner is about to press, so it stands inside the example rather than in a card of its own above it");
+  ("It used to be said above the example, of a line built for the saying. That put two different lines of the same shape one under the other, and a learner comparing them for what had changed was reading a difference the lesson never meant to draw.");
+  let head = html_div_first(card);
+  let intro = html_div(head);
+  let note = html_div(head);
+  let whole_line = app_code_expression_code(tree);
+  let line_code = whole_line;
+  app_code_lesson_suppose_solve_line(intro, "Suppose", whole_line);
+  html_div_cycle_code(intro, [
+    "Eventually we will teach you to solve this all at once",
+  ]);
+  html_div_cycle_code(intro, [
+    "But, for now, we will teach you to solve this step-by-step",
+  ]);
+  let rule = app_code_lesson_expression_choose_order_rule_parts(
+    "In ",
+    whole_line,
+  );
+  html_div_cycle_code(intro, rule);
   function say_choose(ready, lead) {
     "name the one operator that may go next, so the walkthrough tells rather than asks";
     let symbol = list_first_property(ready, "operator");
@@ -39,28 +55,10 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   }
   async function on_chosen(node, value) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
-    "Said with === rather than becomes, because that is how the track has written what a line comes to since the very first lesson that printed an answer, and the learner is looking at the green block the same words are about.";
     html_clear(note);
     let solved_code = app_code_expression_code(node);
     let value_text = text_to(value);
-    let equals = js_operator_triple_equal_symbol();
-    let worked_out = text_combine_multiple([
-      solved_code,
-      " ",
-      equals,
-      " ",
-      value_text,
-    ]);
-    ("praised in the same words the quiz praises a finished question with, taken from the one list both of them read");
-    let praise = app_shared_encouragement_exclamation();
-    html_div_cycle_code(note, [
-      praise,
-      worked_out,
-      ", so we replace the ",
-      solved_code,
-      " with ",
-      value_text,
-    ]);
+    app_code_expression_replace_say(note, solved_code, value_text);
     ("the line above has already said WHAT is being swapped for what and WHY it comes to that, so the button is left with the one thing still to be decided - when to let it happen");
     ("Short on purpose. A button repeating the pieces the sentence above it just named would be the same sentence twice, and the learner would read it twice to find out it says nothing new.");
     let asked = "Click here to replace";
@@ -94,7 +92,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   }
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
-    "Answered with the rule the card above stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
+    "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
     let symbol = property_get(node, "operator");
     html_div_cycle_code(note, ["Not yet - the ", symbol, " cannot go first"]);
     let parts = app_code_lesson_expression_choose_order_rule_parts(

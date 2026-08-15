@@ -1,8 +1,7 @@
-import { sleep_success_color } from "./sleep_success_color.mjs";
+import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
-import { app_code_lesson_expression_choose_order_above } from "./app_code_lesson_expression_choose_order_above.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
@@ -60,11 +59,6 @@ export function app_code_lesson_expression_choose_order() {
     let tree = property_get(trees, question);
     return tree;
   }
-  async function on_chosen_quiz() {
-    "a right press is held green for a moment before the line works it out, the same moment long as every other success in the app";
-    "No replace to press here. Pressing replace is the front page teaching what the step IS, and the quiz asks for the choice alone - a button that only ever has one thing to do would be a press that marks nothing.";
-    await sleep_success_color();
-  }
   function on_answer(parent, info, qa, on_success, on_wrong) {
     "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
     "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
@@ -74,7 +68,7 @@ export function app_code_lesson_expression_choose_order() {
       tree,
       noop,
       on_wrong,
-      on_chosen_quiz,
+      app_code_expression_chosen_pause,
       on_success,
     );
   }
@@ -102,9 +96,10 @@ export function app_code_lesson_expression_choose_order() {
     return quizzes_exercises;
   }
   let example_question_label = app_code_label_code_question();
+  ("nothing stands above the example, because what this lesson is for is said INSIDE it, about the line the learner is about to press rather than about a line built to be read");
   let lesson = app_code_lesson_base(
     name_id,
-    app_code_lesson_expression_choose_order_above,
+    noop,
     1,
     batch_get,
     on_question_example,
