@@ -6,6 +6,7 @@ import { file_name_json } from "./file_name_json.mjs";
 import { file_path_safe_to } from "./file_path_safe_to.mjs";
 import { invoke_cache_key } from "./invoke_cache_key.mjs";
 export function invoke_cache_file_key_get(fn, args) {
+  "Hands back a way of working out which file one call's remembered answer is kept in, from the function that was called and the arguments it was given.";
   let g = async function lambda() {
     let json = invoke_cache_key(fn, args);
     let tl = file_path_too_long(json);
