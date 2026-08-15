@@ -45,7 +45,7 @@ export function process_line_sleep_loop_is_cases() {
     {
       name: "a run of this repo's own",
       line: text_combine_multiple([
-        "node /home/j/repos/love/scripts/ai.mjs ",
+        "node /home/j/a/repos/love/scripts/ai.mjs ",
         fn_name("qa_gate_run"),
       ]),
       sleep_loop: false,

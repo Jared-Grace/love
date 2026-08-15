@@ -69,12 +69,12 @@ exceptions that are parsed and allowed inline regardless of the target
 verb's trust level: redirecting to `/dev/null` (e.g. `2>/dev/null`,
 `>/dev/null`, `>>/dev/null`), fd-dup redirects (`&1`/`&2`, e.g.
 `2>&1`, `1>&2`), and redirecting into this project's Bash-writable
-scratchpad (SCRATCHPAD_PREFIX, e.g. `> /tmp/claude-1000/-home-j-repos-love/x/scratchpad/out.txt`).
+scratchpad (SCRATCHPAD_PREFIX, e.g. `> /tmp/claude-1000/-home-j-a-repos-love/x/scratchpad/out.txt`).
 The first two are safe by construction - neither can write to an
 arbitrary file. The scratchpad case is safe for a different reason: it
 doesn't grant a new capability at all, it just extends a capability the
 Bash/Write/Edit tools already have unconditionally in that directory
-(see permissions.allow's `Write(/tmp/claude-1000/-home-j-repos-love/**)`
+(see permissions.allow's `Write(/tmp/claude-1000/-home-j-a-repos-love/**)`
 etc.) to the shell-redirect surface too. The target path is validated
 with a strict character allowlist (no `$`, backticks, `(`, `<`, spaces,
 quotes, etc. can sneak through) plus an exact-prefix + normpath-equality
@@ -388,7 +388,7 @@ SETTINGS_PATHS = [
 ]
 
 # Mirrors the Write/Edit/Read/rm/mkdir/mv scratchpad rules already granted
-# in permissions.allow (e.g. "Write(/tmp/claude-1000/-home-j-repos-love/**)").
+# in permissions.allow (e.g. "Write(/tmp/claude-1000/-home-j-a-repos-love/**)").
 # Derived, not hardcoded, so it tracks the repo path and uid automatically.
 SCRATCHPAD_PREFIX = f"/tmp/claude-{os.getuid()}/{REPO_ROOT.replace(os.sep, '-')}/"
 
@@ -1150,7 +1150,7 @@ def dispatcher_script_canonical(word):
     path to it; otherwise `word` unchanged.
 
     An allow rule is matched as literal text, so Bash(node scripts/ai.mjs
-    <fn>:*) never matched `node /home/j/repos/love/scripts/ai.mjs <fn>` - the
+    <fn>:*) never matched `node /home/j/a/repos/love/scripts/ai.mjs <fn>` - the
     same program running the same function with the same arguments, spelled
     the other way. Every such call fell through to a prompt. Folding the two
     spellings together here is what lets one generated rule cover both,
@@ -1662,7 +1662,7 @@ def is_safe_claude_temp_mv(words):
     destination alike) sit strictly inside a Claude-owned /tmp directory.
     That two-sided check is the whole point: a one-sided version would let
     `mv <scratchpad file> /etc/cron.d/x` plant a file anywhere, or
-    `mv /home/j/repos/love/js/bible.mjs <scratchpad>` quietly remove real
+    `mv /home/j/a/repos/love/js/bible.mjs <scratchpad>` quietly remove real
     source from the repo. Requiring both ends keeps the move contained to
     a directory nothing but Claude Code tooling writes to.
 
@@ -3918,7 +3918,7 @@ def git_repo_root_directed_subcommand(words):
     The `-C` form is otherwise left alone, so that a floor can never override an
     exact `git -C ...` rule the human granted. That reasoning holds for the
     commit subcommands and fails for the discarding ones: no such rule exists,
-    and `git -C /home/j/repos/love checkout .` throws away every peer's
+    and `git -C /home/j/a/repos/love checkout .` throws away every peer's
     uncommitted work exactly as the bare spelling does - the `-C` only changes
     where it is typed from. Only this repo's root is named, so a worktree
     somewhere else, which is a throwaway by construction, keeps the answer it

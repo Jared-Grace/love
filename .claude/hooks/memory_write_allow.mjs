@@ -1,7 +1,7 @@
 /* PreToolUse hook: auto-allow Read/Edit/Write inside the memory repo.
 
 Why this exists: the memory dir is a symlink
-  ~/.claude/projects/-home-j-repos-love/memory -> /home/j/a/backup/love/claude_memory/memory
+  ~/.claude/projects/-home-j-a-repos-love/memory -> /home/j/a/backup/love/claude_memory/memory
 and the ~/.claude/... spelling lands inside Claude Code's own config
 directory, which trips a BUILT-IN self-settings guard ("allow Claude to edit
 its own settings for this session"). No permissions.allow entry overrides
@@ -33,7 +33,7 @@ lists are: a read that can fail would fail on the side of allowing. It was a
 written-down folder until 2026-08-15, when the folder moved and this hook did
 not error -- it simply stopped matching, and nothing anywhere went red. */
 import { memory_root } from "./memory_root.mjs";
-const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
+const log_path = "/tmp/claude-1000/-home-j-a-repos-love/memory_write_allow.log";
 /* The self-settings guard is about EDITING Claude's own config, so only the
 write tools need the deny-and-redirect. Read is left to the normal permission
 engine (allow-listed on both spellings), because a deny on Read would cost a

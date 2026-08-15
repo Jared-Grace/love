@@ -10,7 +10,7 @@
 #
 # Install (root; the activation lives outside git by necessity -- systemd only
 # runs hooks owned by root under /usr/lib/systemd/system-sleep/):
-#   sudo ln -sfn /home/j/repos/love/linux/xfce-workspaces-resume-hook \
+#   sudo ln -sfn /home/j/a/repos/love/linux/xfce-workspaces-resume-hook \
 #        /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
 # Uninstall:
 #   sudo rm /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
