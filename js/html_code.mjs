@@ -1,3 +1,4 @@
+import { html_code_recorder_include } from "./html_code_recorder_include.mjs";
 import { app_shared_card_image_url } from "./app_shared_card_image_url.mjs";
 import { app_shared_title } from "./app_shared_title.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
@@ -61,10 +62,12 @@ export function html_code(name, body) {
   let notice = html_code_error_notice();
   ("the banner and the notice both stand BEFORE the app's own script on purpose - a handler installed by code that never got to run catches nothing, and a boot that dies is exactly when they are wanted");
   ("they are two answers to the same moment, told apart by who is looking. the banner is the dev path only and shows the error, the file and the line, which is what the person FIXING it needs; the notice ships everywhere and says only that it did not load, with a way to try again, because a white screen tells a person neither what happened nor what to do and looks exactly like a page that is still coming");
+  let recorder = html_code_recorder_include();
   let body_items = list_filter_null_not_is([
     splash,
     banner,
     notice,
+    recorder,
     body,
     service_worker,
   ]);
