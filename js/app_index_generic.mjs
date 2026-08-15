@@ -1,10 +1,7 @@
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { app_index_card } from "./app_index_card.mjs";
 import { window_open_app_curried_right } from "./window_open_app_curried_right.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_index_generic(context, entries) {
@@ -18,13 +15,8 @@ export function app_index_generic(context, entries) {
     function lambda2() {
       open(fn);
     }
-    let card = app_shared_container_blue(root);
-    app_shared_button_wide(card, without, lambda2);
     let text = property_get(entry, "text");
-    let has_text = text_empty_not_is(text);
-    if (has_text) {
-      html_div_text_centered(card, text);
-    }
+    app_index_card(root, without, text, lambda2);
   }
   each(entries, lambda3);
 }
