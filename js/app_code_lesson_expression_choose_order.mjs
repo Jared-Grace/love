@@ -79,35 +79,13 @@ export function app_code_lesson_expression_choose_order() {
       on_answer,
       answer_property: "answer",
     };
-    let qa = {
-      question,
-      answer,
-    };
-    function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz(
-        container,
-        qa,
-        parent,
-        context,
-        refresh,
-        info,
-        batch_get,
-        quizzes,
-        next_get,
-      );
-    }
-    let quizzes = [quiz];
-    let exercise = {
-      info,
-      question,
-      answer,
+    let infos = [info];
+    let quizzes_exercises = app_code_lesson_quizzes_exercises(
+      infos,
       batch_get,
-    };
-    let exercises = [exercise];
-    let quizzes_exercises = {
-      quizzes,
-      exercises,
-    };
+      question,
+      answer,
+    );
     return quizzes_exercises;
   }
   let example_question_label = app_code_label_code_question();
