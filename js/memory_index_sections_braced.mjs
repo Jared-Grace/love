@@ -1,3 +1,4 @@
+import { memory_index_lines_brace_stripped } from "./memory_index_lines_brace_stripped.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { list_add } from "./list_add.mjs";
@@ -5,7 +6,6 @@ import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_index_path } from "./memory_index_path.mjs";
 import { not } from "./not.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export async function memory_index_sections_braced() {
   "Marks each section of the memory index with a brace: the heading gains an opening one at its end, and the last entry under that heading gains a closing one. Answers how many sections were marked.";
@@ -16,19 +16,7 @@ export async function memory_index_sections_braced() {
   let hash = "#";
   let open = " {";
   let close = " }";
-  let bare = [];
-  for (let line of lines) {
-    let opened = text_ends_with(line, open);
-    let closed = text_ends_with(line, close);
-    let stripped = line;
-    if (opened) {
-      stripped = line.slice(0, -2);
-    }
-    if (closed) {
-      stripped = line.slice(0, -2);
-    }
-    list_add(bare, stripped);
-  }
+  let bare = memory_index_lines_brace_stripped(lines, open, close);
   ("the closing brace goes on the last entry of a section, which is only known once the next heading arrives or the file ends - so the ends are collected first and the lines are written afterwards");
   let ends = [];
   let last = -1;
