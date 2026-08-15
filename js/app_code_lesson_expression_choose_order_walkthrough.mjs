@@ -1,26 +1,20 @@
+import { app_code_expression_replace_await } from "./app_code_expression_replace_await.mjs";
+import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
 import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
 import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
-import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
-import { app_shared_button_green_ordinary } from "./app_shared_button_green_ordinary.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { noop } from "./noop.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order_walkthrough(
   parent,
   card,
@@ -58,25 +52,13 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   }
   async function on_chosen(node, value) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
-    let solved_code = app_code_expression_code(node);
-    let value_text = text_to(value);
-    let press = noop;
-    function lambda$resolve(resolve) {
-      press = resolve;
-    }
-    ("the waiting is opened BEFORE the button is made, because the button is made inside the change whose height is being measured and it has to be given the thing to do at the moment it is made");
-    let pressed = promise_wrap_unawait(lambda$resolve);
-    function change() {
-      app_code_expression_replace_ask(
-        note,
-        solved_code,
-        value_text,
-        rule_line_retire,
-        press,
-      );
-    }
-    await head_said(change);
-    await pressed;
+    await app_code_expression_replace_await(
+      note,
+      node,
+      value,
+      rule_line_retire,
+      head_said,
+    );
   }
   function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";

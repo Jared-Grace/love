@@ -1,3 +1,4 @@
+import { js_node_self_read_is } from "./js_node_self_read_is.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -40,6 +41,18 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   if (given_is) {
     list_add(refusals, {
       why: "this function reads the whole list of what it was given, under the one word that always means that list. Moved out it is given more than it used to be - everything it reached out for arrives as one more thing handed in - so that word would answer with a longer list than the one the body was written to read. Would you like it to name what it is given instead?",
+    });
+  }
+  let self_is = js_node_self_read_is(block);
+  if (self_is) {
+    list_add(refusals, {
+      why: "this function reads the word for whatever it was called on, and that word is answered by the call rather than by where the function is written. A function written as a value under a name is called on the thing holding it, and the same body standing on its own is called on nothing, so the word would quietly change what it means. Would you like it to be handed what it needs by name instead?",
+    });
+  }
+  let generator_is = property_get(declaration, "generator");
+  if (generator_is) {
+    list_add(refusals, {
+      why: "this function hands its answers back one at a time as they are asked for, and the line left behind would call the moved body once and hand back the whole thing that does the handing rather than being it. Moving one of these needs the line left behind to pass every request along, which is not what this move writes.",
     });
   }
   let params = property_get(declaration, "params");
