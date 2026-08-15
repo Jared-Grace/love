@@ -1,3 +1,4 @@
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -8,6 +9,6 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   ("The operator's own pale chip is taken off at the same moment. A chip left standing inside the green still reads as something to press, and the pressing is already done.");
   app_shared_button_screen_green_style_assign(node_span);
   app_code_expression_chip_style(node_span);
-  html_style_set(operator_span, "background-color", "transparent");
+  html_style_background_color_set(operator_span, "transparent");
   html_style_set(operator_span, "color", "inherit");
 }
