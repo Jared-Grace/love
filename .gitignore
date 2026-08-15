@@ -54,6 +54,23 @@ Thumbs.db
 # the whole tree, so without this one of them lands in the repo. One already did.
 *.tmp.[0-9]*
 
+# What a reading turned up on one day. Nothing in the present depends on any of
+# it — every file here is written by a command that can be run again — and it is
+# rewritten wholesale each time one is. Measured 2026-08-15: 16.97 MB of packed
+# history, of which 16.26 MB is versions no commit holds any more. Second
+# heaviest folder in the repo, and the second fastest growing, for content the
+# repo does not read.
+/findings/
+
+# The development build. It is made out of js/ by webpack_build_dev and is
+# remade whenever anything under js/ moves, so every one of the ten of us
+# committing here writes a fresh copy of all of it. Measured 2026-08-15: 21.64 MB
+# of packed history, of which 20.18 MB — 93% — is builds superseded within the
+# hour. Nothing reads it out of a commit; the phone and the browser read it off
+# this disk, and the frozen QA copy is given this same folder by
+# qa_snapshot_uncommitted_names, the way it is already given node_modules.
+/public/dev/
+
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so
 # tracking it means the tree goes dirty on its own. The QA snapshot checks a
