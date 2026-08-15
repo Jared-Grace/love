@@ -11,16 +11,15 @@ export async function git_history_folder_bytes(folder) {
   "What each folder in this repository's history weighs, heaviest first, and how much of that weight the present no longer has any use for.";
   "The reading to open when the question is what to stop keeping. A list of files is too long to look at and too fine to decide from; a folder is the thing somebody actually has an opinion about, because a folder is what a rule can be written against. Anything built rather than written is a folder, and so is anything downloaded.";
   "Each file counts towards every folder above it, so an outer folder holds the whole of what is inside it and the numbers are read down a branch rather than added across the list. They will not sum to the whole repository for that reason, which is on purpose - both questions are wanted, and only one of them can be answered by a flat list.";
-  "The gone weight is the half that can be acted on. What the present still tracks has to stay, whatever it weighs; what the present has let go of is being carried for nothing, and the difference between those two is exactly the decision being made.";
+  "The gone weight is the half that can be acted on. What the present still holds has to stay, whatever it weighs; every earlier version of it is being carried for nothing, and the difference between those two is exactly the decision being made.";
+  "Whether the present still holds a file is asked of the file itself and never of its name. Its neighbour asks by name, rightly, because a rewrite is told which names to drop - but a folder that is rebuilt keeps every one of its names forever while replacing what is under them, so asking by name there answers that the whole of it is still wanted when almost none of it is. Asked that way, the folder holding this repository's builds reported one twenty-fourth of its weight as dead; asked of the files, nearly two thirds of it is.";
   arguments_assert(arguments, 1);
   let tracked = await git_head_tracked(folder);
   let blobs = await git_history_blobs(folder);
   let held = {};
   let dropped = {};
   for (let blob of blobs) {
-    let alive_path = tracked.paths[blob.path];
-    let alive_blob = tracked.blob_names[blob.name];
-    let alive = alive_path || alive_blob;
+    let alive = tracked.blob_names[blob.name];
     let tally = alive ? held : dropped;
     for (let name of path_folders_containing(blob.path)) {
       tally_number_add(held, name, 0);
