@@ -1402,6 +1402,7 @@ export function permission_grant_names() {
   let spelled1369 = fn_name("g_sermon_roots");
   let spelled1370 = fn_name("bible_sentence_gaps_sample");
   let spelled1371 = fn_name("server_url_api");
+  let spelled1372 = fn_name("ai_finish");
   let names = [
     spelled,
     spelled2,
@@ -2774,6 +2775,7 @@ export function permission_grant_names() {
     spelled1369,
     spelled1370,
     spelled1371,
+    spelled1372,
   ];
   return names;
 }
