@@ -1,3 +1,4 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,8 +6,6 @@ import { git_history_paths_absent_at_head } from "./git_history_paths_absent_at_
 import { findings_folder } from "./findings_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
 export async function git_history_paths_absent_at_head_report(folder) {
@@ -19,8 +18,10 @@ export async function git_history_paths_absent_at_head_report(folder) {
     let n = row.bytes;
     return n;
   }
-  let every = list_map(ranked, git_history_paths_absent_at_head_report_bytes);
-  let bytes = list_sum(every);
+  let bytes = list_map_sum(
+    ranked,
+    git_history_paths_absent_at_head_report_bytes,
+  );
   let paths = list_size(ranked);
   let v = findings_folder();
   let file_path = path_join([
