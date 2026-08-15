@@ -1,18 +1,18 @@
+import { gloss_parsing_entries } from "./gloss_parsing_entries.mjs";
+import { gloss_parsing_head_named } from "./gloss_parsing_head_named.mjs";
+import { gloss_parsing_head_clause } from "./gloss_parsing_head_clause.mjs";
+import { gloss_parsing_tail_clause_add } from "./gloss_parsing_tail_clause_add.mjs";
+import { gloss_parsing_dimension_clauses_add } from "./gloss_parsing_dimension_clauses_add.mjs";
 import { gloss_parsing_phrases } from "./gloss_parsing_phrases.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_last_remaining } from "./list_last_remaining.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-import { text_articled } from "./text_articled.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function gloss_parsing_sentence(parsing_long) {
   "One word's spelled-out parsing said as a plain English sentence, and nothing when the parsing holds a word the phrase table has no entry for.";
@@ -24,17 +24,9 @@ export function gloss_parsing_sentence(parsing_long) {
   "Two names in one dimension mean the source did not decide, and the sentence says so rather than choosing. Middle or Passive is what the table knows, and a sentence naming one of them would be inventing the half the source withheld.";
   let phrases = gloss_parsing_phrases();
   let words = text_split_space(parsing_long);
-  let entries = [];
-  for (let word of words) {
-    let entry = list_find_property(phrases, "word", word);
-    if (not(entry)) {
-      return null;
-    }
-    let phrase = property_get(entry, "phrase");
-    if (not(phrase)) {
-      continue;
-    }
-    list_add(entries, entry);
+  let entries = gloss_parsing_entries(phrases, words);
+  if (not(entries)) {
+    return null;
   }
   let kinds = list_filter_property(entries, "dimension", "kind");
   let sorts = list_filter_property(entries, "dimension", "sort");
@@ -44,16 +36,13 @@ export function gloss_parsing_sentence(parsing_long) {
   if (any_sorts) {
     head_entries = sorts;
   }
-  let head_words = [];
-  let items = list_map_property(sorts, "phrase");
-  list_add_multiple(head_words, items);
-  let head_named = list_join(head_words, " or ");
+  let head_named = gloss_parsing_head_named(sorts);
   let head_parts = [];
   if (head_named) {
     list_add(head_parts, head_named);
   }
-  let items2 = list_map_property(kinds, "phrase");
-  list_add_multiple(head_parts, items2);
+  let items = list_map_property(kinds, "phrase");
+  list_add_multiple(head_parts, items);
   let any_mood_heads = list_size(mood_heads);
   if (any_mood_heads) {
     head_entries = mood_heads;
@@ -64,70 +53,10 @@ export function gloss_parsing_sentence(parsing_long) {
     return null;
   }
   let clauses = [];
-  let head_glosses = [];
-  for (let entry of head_entries) {
-    let gloss = property_get(entry, "gloss");
-    if (gloss) {
-      list_add(head_glosses, gloss);
-    }
-  }
-  let articled = text_articled(head_text);
-  let head_clause_parts = [articled];
-  let head_gloss_text = list_join_comma_space(head_glosses);
-  if (head_gloss_text) {
-    list_add_multiple(head_clause_parts, [", ", head_gloss_text]);
-  }
-  let item = text_combine_multiple(head_clause_parts);
+  let item = gloss_parsing_head_clause(head_entries, head_text);
   list_add(clauses, item);
-  let dimensions = ["tense", "mood", "voice", "case", "degree"];
-  for (let dimension of dimensions) {
-    let found = list_filter_property(entries, "dimension", dimension);
-    let named = list_map_property(found, "phrase");
-    let count = list_size(named);
-    if (not(count)) {
-      continue;
-    }
-    let glosses = [];
-    for (let entry of found) {
-      let gloss = property_get(entry, "gloss");
-      if (gloss) {
-        list_add(glosses, gloss);
-      }
-    }
-    let name_text = list_join(named, " or ");
-    let gloss_text = list_join_comma_space(glosses);
-    let undecided = equal(count, 2);
-    if (undecided) {
-      name_text = list_join(named, " or the ");
-      gloss_text = "which the parsing does not decide between";
-    }
-    let clause_parts = ["in the ", name_text];
-    if (gloss_text) {
-      list_add_multiple(clause_parts, [", ", gloss_text]);
-    }
-    let item2 = text_combine_multiple(clause_parts);
-    list_add(clauses, item2);
-  }
-  let tail_words = [];
-  let tail_dimensions = ["person", "gender", "number"];
-  for (let dimension of tail_dimensions) {
-    let found = list_filter_property(entries, "dimension", dimension);
-    let items3 = list_map_property(found, "phrase");
-    list_add_multiple(tail_words, items3);
-  }
-  let tail_count = list_size(tail_words);
-  let tail_text = list_join_comma_space(tail_words);
-  let tail_single = equal(tail_count, 1);
-  if (tail_count) {
-    if (not(tail_single)) {
-      let split = list_last_remaining(tail_words);
-      let last = property_get(split, "last");
-      let remaining = property_get(split, "remaining");
-      let leading = list_join_comma_space(remaining);
-      tail_text = text_combine_multiple([leading, " and ", last]);
-    }
-    list_add(clauses, tail_text);
-  }
+  gloss_parsing_dimension_clauses_add(entries, clauses);
+  gloss_parsing_tail_clause_add(entries, clauses);
   let body = list_join_comma_space(clauses);
   let sentence = text_combine_multiple(["This is ", body, "."]);
   return sentence;
