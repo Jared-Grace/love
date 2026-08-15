@@ -15,6 +15,7 @@ export function git_push_urls_expected() {
       push_urls: [
         "https://github.com/Jared-Grace/love_claude_memory.git",
         "git@gitlab.com:JESUSrosetolife/love_claude_memory.git",
+        "git@bitbucket.org:jesusrosetolife/love_claude_memory.git",
       ],
     },
   ];
