@@ -92,7 +92,10 @@ In this order, skipping what does not apply:
 4. **How the parts build it** — prefix, root, ending — when the word visibly decomposes and the decomposition helps.
 5. **Etymology, when it is a true hook.** An English word the reader already knows, sharing the root: `ἀρχή` → archaeology, archangel. `λόγος` → logic, dialogue. `θεός` → theology.
 
-On etymology: it is the best tool in the box and the easiest to fake. **Never invent one.** If a word has no English descendant the reader would recognise, say nothing about etymology — do not reach for a distant or folk connection to fill the slot. "Its origin is uncertain" is a real and honest answer. A wrong etymology is worse than none, because the reader will remember it.
+On etymology: it is the best tool in the box and the easiest to fake. **Never invent one — and now you never have to.** `lexicon.derivation` gives the word's own origin, and `lexicon.lemma` gives the dictionary form to name it by. Two rules still hold:
+
+- **The English descendant is still yours to supply, and it is still the half that can be wrong.** `derivation` says where the Greek word came from; it does not say which English word shares the root. `ἀρχή` → archaeology is yours to assert. If no English descendant would be recognised, say nothing — do not reach for a distant or folk connection to fill the slot.
+- **A wrong etymology is worse than none**, because the reader will remember it. Where `derivation` is absent, "its origin is uncertain" is a real and honest answer.
 
 ## Length
 
