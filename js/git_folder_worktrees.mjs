@@ -13,7 +13,11 @@ export async function git_folder_worktrees(folder) {
   "A rewrite has to know about these because each of them stands on a commit, and a commit something stands on cannot be let go of. Three of them were what kept a finished rewrite from giving any space back on 2026-08-15 - the history was already replaced, and the old one stayed reachable through copies nobody was looking at. They come back on their own afterwards, so the answer here is a list to take away rather than anything to preserve.";
   "Git names the copy being asked first and the rest after it, so dropping the first is what leaves the others.";
   arguments_assert(arguments, 1);
-  let printed = await git_folder_run(folder, ["worktree", "list", "--porcelain"]);
+  let printed = await git_folder_run(folder, [
+    "worktree",
+    "list",
+    "--porcelain",
+  ]);
   let lines = text_lines_working(printed);
   function worktree_line_is(line) {
     let named = text_starts_with(line, "worktree ");
@@ -22,9 +26,11 @@ export async function git_folder_worktrees(folder) {
   let named_lines = list_filter(lines, worktree_line_is);
   function worktree_line_folder(line) {
     let entry = git_object_name_path(line);
-    return entry.path;
+    let r = entry.path;
+    return r;
   }
   let folders = list_map(named_lines, worktree_line_folder);
-  let others = list_slice(folders, 1, list_size(folders));
+  let index_b = list_size(folders);
+  let others = list_slice(folders, 1, index_b);
   return others;
 }

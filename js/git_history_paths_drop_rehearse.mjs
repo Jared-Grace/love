@@ -1,9 +1,9 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
@@ -25,14 +25,15 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   arguments_assert(arguments, 2);
   let paths = text_split_comma(paths_text);
   let none = list_empty_is(paths);
-  assert_json(not(none), {
+  let b = not(none);
+  assert_json(b, {
     hint: "no paths were named to drop from the history — would you like to pass them as one comma-joined word?",
     paths_text,
   });
   let tracked = await git_head_tracked(folder);
   function tracked_still_is(path) {
-    let alive = tracked.paths[path];
-    return alive;
+    let held = tracked.paths[path];
+    return held;
   }
   let alive = list_filter(paths, tracked_still_is);
   list_empty_is_assert_json(alive, {
@@ -42,7 +43,8 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   let tree_before = await git_folder_head_tree(folder);
   let commits_before = await git_folder_commits_count(folder);
   let name = await uuid();
-  let clone_folder = path_join([await folder_machine_temp(), name]);
+  let folder2 = await folder_machine_temp();
+  let clone_folder = path_join([folder2, name]);
   await git_folder_run(folder, [
     "clone",
     "--no-hardlinks",
@@ -52,8 +54,7 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   ]);
   let asked = ["filter-repo", "--force", "--invert-paths"];
   for (let path of paths) {
-    list_add(asked, "--path");
-    list_add(asked, path);
+    list_add_multiple(asked, ["--path", path]);
   }
   await git_folder_run(clone_folder, asked);
   let tree_after = await git_folder_head_tree(clone_folder);

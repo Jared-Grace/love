@@ -1,10 +1,8 @@
+import { g_sermon_write_chapter_passages } from "./g_sermon_write_chapter_passages.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { local_function_path_json } from "./local_function_path_json.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { not } from "./not.mjs";
-import { g_sermon_write } from "./g_sermon_write.mjs";
 import { text_words } from "./text_words.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 export async function g_sermon_indices_uncovered(chapter_code) {
@@ -12,9 +10,7 @@ export async function g_sermon_indices_uncovered(chapter_code) {
   ("a token the g_verify page draws with a dashed warning underline is one no line claims",
     "so this reports, per passage, every token position no line's indices cover",
     "and it words the passage the same way the page does, so the two cannot disagree");
-  let write_path = local_function_path_json(chapter_code, g_sermon_write);
-  let write_chapter = await file_read_json(write_path);
-  let passages = property_get(write_chapter, "passages");
+  let passages = await g_sermon_write_chapter_passages(chapter_code);
   let reports = [];
   function passage_check(passage) {
     if (not("lines" in passage)) {
