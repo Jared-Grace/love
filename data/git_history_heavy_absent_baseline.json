@@ -1,0 +1,20 @@
+{
+ "known": [
+  "data/data.json",
+  "data.json",
+  "public/src/kjv.mjs",
+  "public/latest/app_index_main.js",
+  "public/dev/514.g.js",
+  "public/src/sandbox.mjs",
+  "output.png",
+  "public/src/app_replace_rule_set.mjs",
+  ".claude/hooks/__pycache__/bash-command-guard.cpython-313.pyc",
+  "data/backups/data.2025-09-28T17-50-05-876.json",
+  "data/propmts.json",
+  "data/prompts.json",
+  "public/src/app_reply_main.mjs",
+  "public/dev/chapter.js",
+  "public/src/app_replace_rule_sets_fns_rules_used.mjs",
+  "public/src/app_g_main.mjs"
+ ]
+}
