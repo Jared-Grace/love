@@ -139,7 +139,7 @@ export async function app_verses(context) {
   app_shared_button_copy(card3, copy);
   let card4 = app_shared_container_blue(content);
   app_verses_card4_refresh(verse_groups, card4);
-  app_shared_contact_button(content, app_verses);
+  app_shared_contact_button(content);
   await draw_restore();
   async function draw_restore() {
     "reopening the app (or changing language, which reloads the page) brings back the last verses, re-rendered in the current languages, until New verses is tapped";
