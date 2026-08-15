@@ -8,7 +8,8 @@ export function app_shared_contact_messages() {
   let stored = storage_local_get(app_shared_contact_messages, key);
   let missing = null_is(stored);
   if (missing) {
-    return [];
+    let r = [];
+    return r;
   }
   return stored;
 }
