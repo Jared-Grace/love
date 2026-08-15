@@ -1,3 +1,4 @@
+import { app_shared_contact_received_text } from "./app_shared_contact_received_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
@@ -34,7 +35,8 @@ export async function app_message_refresh(
       let e = list_empty_is(results);
       html_clear(right);
       if (e) {
-        html_text_set(right, app_shared_contact_received_text());
+        let text = app_shared_contact_received_text();
+        html_text_set(right, text);
       } else {
         let outputs = list_first_property(results, "outputs");
         html_div_text_multiple(right, outputs);
