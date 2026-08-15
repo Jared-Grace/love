@@ -398,6 +398,10 @@ SAFE_SCRATCHPAD_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 # relative script path accepted by is_safe_sandboxed_node_script.
 SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 SCRIPTS_TEMP_PREFIX = "scripts/temp/"
+# The same throwaway directory spelled from the root, so a redirect target
+# written either way is recognized. Derived from REPO_ROOT for the same
+# reason SCRATCHPAD_PREFIX is - a written-down path goes stale silently.
+SCRIPTS_TEMP_PREFIX_ABSOLUTE = os.path.join(REPO_ROOT, SCRIPTS_TEMP_PREFIX)
 
 # Directories that only Claude Code's own tooling writes into - never a
 # real project path a user would mind losing a file from. Used by
