@@ -1,5 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { folders_moved_expected } from "./folders_moved_expected.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { not } from "./not.mjs";
 import { folders_moved_stale_folders } from "./folders_moved_stale_folders.mjs";
@@ -14,7 +14,10 @@ export async function folder_moved_stale(before) {
   "The one file left out is the list of moves itself, which writes the old place down on purpose, because that is where the old place is remembered. Counting it would mean this could never answer empty, and an answer that is never empty cannot be the thing that says a move is finished.";
   "A link is not a file and is not answered here. The only one that matters is the one the assistant's memory is reached through, and that one fails loudly and at once, which is the kind of mistake nobody needs a list to find.";
   let folders = folders_moved_stale_folders();
-  let register = text_combine_multiple([folders_moved_expected.name, ".mjs"]);
+  let register = text_combine_multiple([
+    fn_name("folders_moved_expected"),
+    ".mjs",
+  ]);
   let files = [];
   for (let folder of folders) {
     let hits = await folder_files_with_text(folder, before);
