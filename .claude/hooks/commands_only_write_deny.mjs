@@ -26,14 +26,25 @@ itself ON because a read failed would stop every Claude in the folder at once
 with the reason nowhere on screen, and the repo it would be protecting is the
 same repo whose breakage caused it.
 
-The repo folder is spelled out here because a hook runs with whatever working
-directory it is handed. commands_only_hook_path_gate_run (in q) checks this
-file still spells the place the switch is kept. */
+The repo folder is worked out from where this file itself sits, because a hook
+runs with whatever working directory it is handed. It cannot trust the working
+directory, but it is never handed a wrong idea of where it is: this file lives
+at <repo>/.claude/hooks/, so the repo is three steps up. Written down instead,
+the same words would have to be kept true by hand on every machine and after
+every move, and a stale spelling does not fail here - it stops matching, every
+path reads as outside the repo, and nothing is refused.
+
+Worked out with plain text only, and deliberately without resolving links: for
+a module that has already loaded, this cannot throw, and a hook that throws on
+the way in refuses nothing at all. commands_only_hook_path_gate_run (in q)
+checks this file still spells the place the switch is kept. */
 
 import { readFileSync, realpathSync } from "node:fs";
 import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const repo_root = "/home/j/repos/love";
+const hooks_folder = dirname(fileURLToPath(import.meta.url));
+const repo_root = dirname(dirname(hooks_folder));
 const switch_path = `${repo_root}/data/commands_only.json`;
 const tools_writing = new Set(["Edit", "Write", "NotebookEdit", "MultiEdit"]);
 

@@ -8,11 +8,14 @@
 # text is the reliable discriminator.
 #
 # Each hook command gets its own copy of stdin, so consuming it here does not
-# starve the sibling toast hook. Delegates the actual paint to tmux_window_mark.sh.
+# starve the sibling toast hook. Delegates the actual paint to tmux_window_mark.sh,
+# found beside this file rather than by a written-down path: they are siblings, and
+# siblings stay siblings through any move and on anybody else's machine.
 payload=$(cat)
+mark="$(dirname "$0")/tmux_window_mark.sh"
 if printf '%s' "$payload" | grep -q "needs your permission"; then
-  sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=white,bg=red,bold'
+  sh "$mark" 'fg=white,bg=red,bold'
 else
-  sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=colour226,bold'
+  sh "$mark" 'fg=black,bg=colour226,bold'
 fi
 exit 0
