@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_full_adder_csa } from "./integer_factorization_to_sat_full_adder_csa.mjs";
 import { integer_factorization_to_sat_half_adder } from "./integer_factorization_to_sat_half_adder.mjs";
 import { integer_factorization_to_sat_full_adder } from "./integer_factorization_to_sat_full_adder.mjs";
 import { integer_factorization_to_sat_compress_columns } from "./integer_factorization_to_sat_compress_columns.mjs";
@@ -82,18 +83,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r6;
   }
   function fullAdderCSA(cnf, a, b, c) {
-    let v2 = xorGate(cnf, a, b);
-    let s = xorGate(cnf, v2, c);
-    let ab = andGate(cnf, a, b);
-    let ac = andGate(cnf, a, c);
-    let bc = andGate(cnf, b, c);
-    let carry = cnf.newVar();
-    cnf.addClause(-ab, carry);
-    cnf.addClause(-ac, carry);
-    cnf.addClause(-bc, carry);
-    cnf.addClause(-carry, ab, ac, bc);
-    let r5 = [s, carry];
-    return r5;
+    let r3 = integer_factorization_to_sat_full_adder_csa(
+      cnf,
+      a,
+      b,
+      c,
+      xorGate,
+      andGate,
+    );
+    return r3;
   }
   function compressColumns(cnf, columns) {
     let r14 = integer_factorization_to_sat_compress_columns(
