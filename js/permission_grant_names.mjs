@@ -1363,6 +1363,41 @@ export function permission_grant_names() {
   let spelled1330 = fn_name("firebase_project_url_jg");
   let spelled1331 = fn_name("app_replace_card_image_write");
   let spelled1332 = fn_name("app_shared_card_gate_run");
+  let spelled1333 = fn_name("firebase_storage_list_url_cases_gate_run");
+  let spelled1334 = fn_name("firebase_storage_prefix_names");
+  let spelled1335 = fn_name("daemons_stop");
+  let spelled1336 = fn_name("daemons_restart");
+  let spelled1337 = fn_name("daemon_unit_path");
+  let spelled1338 = fn_name("git_mirrors_folders");
+  let spelled1339 = fn_name("git_mirrors_folder");
+  let spelled1340 = fn_name("git_mirrors_refresh");
+  let spelled1341 = fn_name("folders_moved_ensure");
+  let spelled1342 = fn_name("folders_moved_stale");
+  let spelled1343 = fn_name("folders_moved_stale_repair");
+  let spelled1344 = fn_name("folder_moved_spellings");
+  let spelled1345 = fn_name("claude_running_count");
+  let spelled1346 = fn_name("folder_home");
+  let spelled1347 = fn_name("folder_home_repo");
+  let spelled1348 = fn_name("folder_user_path");
+  let spelled1349 = fn_name("folder_user_path_previous");
+  let spelled1350 = fn_name("folder_user_storage_function_path");
+  let spelled1351 = fn_name("folder_memory_backup");
+  let spelled1352 = fn_name("folder_alarm_sync");
+  let spelled1353 = fn_name("folder_drive_removable");
+  let spelled1354 = fn_name("openai_key_folder");
+  let spelled1355 = fn_name("messenger_reply_user_data_path");
+  let spelled1356 = fn_name("commands_only_path");
+  let spelled1357 = fn_name("hook_memory_root_write");
+  let spelled1358 = fn_name("hook_memory_root_gate_run");
+  let spelled1359 = fn_name("machine_path_literals_all");
+  let spelled1360 = fn_name("machine_path_literals_gate_run");
+  let spelled1361 = fn_name("claude_project_folder");
+  let spelled1362 = fn_name("claude_sessions_folder");
+  let spelled1363 = fn_name("git_push_urls_expected");
+  let spelled1364 = fn_name("git_push_auto_seconds");
+  let spelled1365 = fn_name("app_ceb_bible_gloss_new_testament_gather");
+  let spelled1366 = fn_name("invoke_cache_file_key_get");
+  let spelled1367 = fn_name("workspace_shortcuts_ensure");
   let names = [
     spelled,
     spelled2,
@@ -2696,6 +2731,41 @@ export function permission_grant_names() {
     spelled1330,
     spelled1331,
     spelled1332,
+    spelled1333,
+    spelled1334,
+    spelled1335,
+    spelled1336,
+    spelled1337,
+    spelled1338,
+    spelled1339,
+    spelled1340,
+    spelled1341,
+    spelled1342,
+    spelled1343,
+    spelled1344,
+    spelled1345,
+    spelled1346,
+    spelled1347,
+    spelled1348,
+    spelled1349,
+    spelled1350,
+    spelled1351,
+    spelled1352,
+    spelled1353,
+    spelled1354,
+    spelled1355,
+    spelled1356,
+    spelled1357,
+    spelled1358,
+    spelled1359,
+    spelled1360,
+    spelled1361,
+    spelled1362,
+    spelled1363,
+    spelled1364,
+    spelled1365,
+    spelled1366,
+    spelled1367,
   ];
   return names;
 }
