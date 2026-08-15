@@ -2,4 +2,4 @@
 // Source of truth: js/folder_memory_backup.mjs. Regenerate with
 // `node scripts/ai.mjs hook_memory_root_write`; drift fails `q`
 // via hook_memory_root_gate_run.
-export const memory_root = "/home/j/backup/love/claude_memory/memory";
+export const memory_root = "/home/j/a/backup/love/claude_memory/memory";
