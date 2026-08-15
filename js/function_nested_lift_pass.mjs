@@ -1,3 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
+import { function_lift_candidates } from "./function_lift_candidates.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { function_nested_lift } from "./function_nested_lift.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,6 +26,10 @@ export async function function_nested_lift_pass(f_name) {
   ("Which function to walk is still somebody's choice, and deliberately so. A walk of the whole repo would rewrite files other people have open, and the pieces worth naming well are the ones in the file the person walking it has just read.");
   ("The list is asked again before each move rather than read once at the start, because a piece written inside another piece leaves with the one that holds it, and a walk working from a list made before the first move would then ask for something that is no longer there.");
   ("What is stepped over rather than thrown is stepped over because none of it is a fault: a piece that was never named by anybody, a piece whose name is spelled in another way, and a piece whose new name is already spoken for. Each is handed back with its reason, because each one names a file that wants a person to read it.");
+  ("Two moves can make each cut, and the narrower one is taken wherever it will go. It takes the name away with the body and rewrites every call, so nothing is left behind; the wider one leaves the name standing on a line that calls the moved body, which is the only way to move a piece that is handed on as a value rather than called.");
+  ("Which one is not a preference, it is the difference between a walk that finishes and one that does not. A name left standing is still a name the pieces beside it reach out for, so each of them still has to be handed it, and the walk hands out one more parameter per cut instead of one fewer. Taking the name away frees every sibling that reached for it at once, which is exactly what the order these are walked in was built to exploit - leaves first, so that the big one they serve comes out with nothing left to be handed. Measured on ",
+    fn_name("integer_factorization_to_sat"),
+    ": walked with the wider move alone, eleven pieces came out and the eleven lines left behind hand each other five functions by name.");
   await ai_git_noted();
   let ranked = await function_lift_wrapper_candidates(f_name);
   let names = list_map_property(ranked, "name");
@@ -73,14 +81,19 @@ export async function function_nested_lift_pass(f_name) {
       });
       continue;
     }
-    await function_call_commit(function_nested_lift_wrapper, [
-      f_name,
-      nested,
-      f_name_new,
-    ]);
+    let plain = await function_lift_candidates(f_name);
+    let plain_names = list_map_property(plain, "name");
+    let plain_is = list_includes(plain_names, nested);
+    let lift = function_nested_lift_wrapper;
+    if (plain_is) {
+      lift = function_nested_lift;
+    }
+    await function_call_commit(lift, [f_name, nested, f_name_new]);
+    let by = lift.name;
     list_add(lifted, {
       nested,
       f_name_new,
+      by,
     });
   }
   let r = {
