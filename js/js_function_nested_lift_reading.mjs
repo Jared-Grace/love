@@ -10,7 +10,6 @@ import { list_add } from "./list_add.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
-import { list_remove } from "./list_remove.mjs";
 import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 export async function js_function_nested_lift_reading(ast, declaration) {
@@ -27,8 +26,9 @@ export async function js_function_nested_lift_reading(ast, declaration) {
   let mentions = js_identifiers_named(ast, name_old);
   let stray = list_difference(mentions, callees);
   let stray_at = list_map_property(stray, "start");
-  let unbound = js_declaration_names_unbound(declaration);
-  list_remove(unbound, name_old);
+  let free = js_declaration_names_unbound(declaration);
+  ("A function written on a line of its own lists its own name among the names nothing binds it; a function written as a value does not, because a name given to a value is bound inside the value itself. Taking the name out when it is there rather than always is what lets one reading answer for both.");
+  let unbound = list_difference(free, [name_old]);
   let reachable = await js_module_names_reachable(ast);
   ("What the language and the page supply is already there wherever the function is moved to, so it is not something the function has to be handed. Left in, every throw in a moved function grew the parameter list by the two names it threw with, and the caller then passed the language its own words back.");
   let globals = js_global_names();
