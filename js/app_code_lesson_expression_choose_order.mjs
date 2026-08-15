@@ -1,3 +1,4 @@
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
@@ -229,7 +230,7 @@ export function app_code_lesson_expression_choose_order() {
     on_question_example,
     null,
     quizzes_get,
-    "Code: ",
+    app_code_label_code_question(),
     noop,
   );
   return lesson;
