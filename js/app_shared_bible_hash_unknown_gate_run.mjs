@@ -1,8 +1,8 @@
+import { app_shared_bible_hash_unknown_gate_run_note } from "./app_shared_bible_hash_unknown_gate_run_note.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { app_shared_bible_hash_unknown_cases } from "./app_shared_bible_hash_unknown_cases.mjs";
 import { app_shared_bible_hash_fields } from "./app_shared_bible_hash_fields.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_shared_hash_fields_unknown_findings } from "./app_shared_hash_fields_unknown_findings.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -18,14 +18,6 @@ export function app_shared_bible_hash_unknown_gate_run() {
   let cases = app_shared_bible_hash_unknown_cases();
   let fields = app_shared_bible_hash_fields();
   let defects = [];
-  function note(one, said) {
-    let defect = {
-      hash: property_get(one, "hash"),
-      said,
-    };
-    list_add(defects, defect);
-    console.log("bible link  " + said);
-  }
   function check(one) {
     let hash = property_get(one, "hash");
     let wanted = property_get(one, "findings");
@@ -34,7 +26,11 @@ export function app_shared_bible_hash_unknown_gate_run() {
     let count_found = list_size(found);
     let counted_wrong = equal_not(count_found, count_wanted);
     if (counted_wrong) {
-      note(one, "wanted " + count_wanted + " wrong, found " + count_found);
+      app_shared_bible_hash_unknown_gate_run_note(
+        one,
+        "wanted " + count_wanted + " wrong, found " + count_found,
+        defects,
+      );
       return;
     }
     function compare(want, index) {
@@ -46,12 +42,20 @@ export function app_shared_bible_hash_unknown_gate_run() {
       let value_wanted = property_get(want, "value");
       let named_wrong = equal_not(name, name_wanted);
       if (named_wrong) {
-        note(one, "wanted the " + name_wanted + " wrong, found the " + name);
+        app_shared_bible_hash_unknown_gate_run_note(
+          one,
+          "wanted the " + name_wanted + " wrong, found the " + name,
+          defects,
+        );
         return;
       }
       let valued_wrong = equal_not(value, value_wanted);
       if (valued_wrong) {
-        note(one, 'wanted "' + value_wanted + '", found "' + value + '"');
+        app_shared_bible_hash_unknown_gate_run_note(
+          one,
+          'wanted "' + value_wanted + '", found "' + value + '"',
+          defects,
+        );
         return;
       }
       let suggest = property_get(field, "suggestions");
@@ -61,19 +65,20 @@ export function app_shared_bible_hash_unknown_gate_run() {
       if (nothing_wanted) {
         let offered_anyway = list_empty_not_is(offered);
         if (offered_anyway) {
-          note(
+          app_shared_bible_hash_unknown_gate_run_note(
             one,
             'nothing is spelled like "' +
               value +
               '", yet it offered ' +
               list_join_comma(offered),
+            defects,
           );
         }
         return;
       }
       let missing = list_includes_not(offered, suggestion);
       if (missing) {
-        note(
+        app_shared_bible_hash_unknown_gate_run_note(
           one,
           'wanted "' +
             suggestion +
@@ -81,6 +86,7 @@ export function app_shared_bible_hash_unknown_gate_run() {
             value +
             '", got ' +
             list_join_comma(offered),
+          defects,
         );
       }
     }
