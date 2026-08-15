@@ -1,11 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { git_folder_run } from "./git_folder_run.mjs";
 import { git_head_tracked } from "./git_head_tracked.mjs";
-import { git_history_blob_bytes } from "./git_history_blob_bytes.mjs";
-import { git_object_name_path } from "./git_object_name_path.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
-import { not } from "./not.mjs";
+import { git_history_blobs } from "./git_history_blobs.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,29 +12,18 @@ export async function git_history_paths_absent_at_head(folder) {
   "One line of git's object listing names one object once, at the first path it was reached by, so nothing here is counted twice.";
   arguments_assert(arguments, 1);
   let tracked = await git_head_tracked(folder);
-  let bytes = await git_history_blob_bytes(folder);
-  let printed = await git_folder_run(folder, ["rev-list", "--objects", "--all"]);
+  let blobs = await git_history_blobs(folder);
   let tally = {};
-  for (let line of text_split_newline(printed)) {
-    let entry = git_object_name_path(line);
-    let pathless = text_empty_is(entry.path);
-    if (pathless) {
-      continue;
-    }
-    let blob_bytes = bytes[entry.name];
-    let other_kind = not(blob_bytes);
-    if (other_kind) {
-      continue;
-    }
-    let alive_path = tracked.paths[entry.path];
+  for (let blob of blobs) {
+    let alive_path = tracked.paths[blob.path];
     if (alive_path) {
       continue;
     }
-    let alive_blob = tracked.blob_names[entry.name];
+    let alive_blob = tracked.blob_names[blob.name];
     if (alive_blob) {
       continue;
     }
-    tally_number_add(tally, entry.path, blob_bytes);
+    tally_number_add(tally, blob.path, blob.bytes);
   }
   let rows = [];
   for (let path of object_property_names(tally)) {
