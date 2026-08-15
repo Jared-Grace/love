@@ -10,7 +10,11 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-export async function ai_finish(baseline, f_name, args_comma) {
+export async function ai_finish_baseline_command_args(
+  baseline,
+  f_name,
+  args_comma,
+) {
   "The end of a piece of work, asked for once: settle the files being edited, say what landed underneath you, commit, and put the whole-repo question. Name the commit you started from, or give nothing for that; name the command that made the change, or give nothing and it is filed as hand-made.";
   "These four are already what everybody does after every task, in this order, every time. Asked separately they are four turns of a conversation, and a turn does not cost what it prints - it costs sending everything said so far all over again. Measured on the two files that load into every session before any work starts: thirty seven thousand characters of instructions and twenty three thousand of notes, riding along on each one. So three of the four turns here were being paid for repeatedly to arrange steps that never vary.";
   "Committing comes before the whole-repo question rather than after it, and that is the one place where doing this by hand had it backwards. The question is put to a frozen copy standing on the commit the folder is at, never on the folder itself - so asked before committing it answers about the previous commit, and a clean answer means the work in flight was not looked at. It says so itself, where it freezes. Run in this order the answer is about the code that was just written.";
