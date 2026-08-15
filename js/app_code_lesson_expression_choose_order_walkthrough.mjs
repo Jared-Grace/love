@@ -46,11 +46,6 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     html_remove_if_not_null(rule_line);
     rule_line = null;
   }
-  function say_choose(ready, lead) {
-    "name the one operator that may go next, so the walkthrough tells rather than asks";
-    let symbol = list_first_property(ready, "operator");
-    html_div_cycle_code(note, [lead, symbol]);
-  }
   async function on_chosen(node, value) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     html_clear(note);
@@ -76,7 +71,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     let solved = property_get(step, "solved");
     let ready = property_get(step, "ready");
     if (null_is(solved)) {
-      say_choose(ready, "So first, choose ");
+      app_code_expression_choose_say(note, ready, "So first, choose ");
       return;
     }
     let more = app_code_expression_node_is(current);
@@ -87,7 +82,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       return;
     }
     html_div_cycle_code(note, ["So now we have ", line_code]);
-    say_choose(ready, "Now, choose ");
+    app_code_expression_choose_say(note, ready, "Now, choose ");
   }
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
