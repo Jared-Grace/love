@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -16,7 +17,6 @@ import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -81,9 +81,7 @@ export function app_code_lesson_expression_choose_order() {
   function tree_of(qa, info) {
     "the shape behind a question, found again from the writing it was printed as - the quiz hands its question over as text, and the step-at-a-time working needs the shape it came from";
     let answer_property = property_get(info, "answer_property");
-    let question_property =
-      app_code_lesson_quiz_qa_property_other(answer_property);
-    let question = property_get(qa, question_property);
+    let question = app_code_lesson_quiz_qa_question(qa, answer_property);
     let tree = property_get(trees, question);
     return tree;
   }
