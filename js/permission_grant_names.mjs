@@ -1397,6 +1397,11 @@ export function permission_grant_names() {
   let spelled1364 = fn_name("app_ceb_bible_gloss_new_testament_gather");
   let spelled1365 = fn_name("invoke_cache_file_key_get");
   let spelled1366 = fn_name("workspace_shortcuts_ensure");
+  let spelled1367 = fn_name("git_history_paths_drop_rehearse");
+  let spelled1368 = fn_name("g_sermon_stores_passages");
+  let spelled1369 = fn_name("g_sermon_roots");
+  let spelled1370 = fn_name("bible_sentence_gaps_sample");
+  let spelled1371 = fn_name("server_url_api");
   let names = [
     spelled,
     spelled2,
@@ -2764,6 +2769,11 @@ export function permission_grant_names() {
     spelled1364,
     spelled1365,
     spelled1366,
+    spelled1367,
+    spelled1368,
+    spelled1369,
+    spelled1370,
+    spelled1371,
   ];
   return names;
 }
