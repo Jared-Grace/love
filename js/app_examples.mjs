@@ -60,7 +60,7 @@ export async function app_examples(context) {
       examples_menu_dom(page, examples, select);
     }
     ("render() clears root each time, so re-add the contact button here to keep it present on every view");
-    app_shared_contact_button(page, app_examples);
+    app_shared_contact_button(page);
   }
   render();
 }

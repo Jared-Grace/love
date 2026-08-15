@@ -57,7 +57,7 @@ export async function app_message(context) {
     let ei = list_empty_is(results);
     if (ei) {
       ("no canned reply matched, so this is something for the developer to read — send it to the inbox tagged as coming from the message app");
-      await app_shared_contact_send("message", message);
+      await app_shared_contact_send(message);
     }
     let messages = app_message_messages_get(context, messages_property);
     list_add(messages, message);
