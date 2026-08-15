@@ -18,8 +18,20 @@ the decision to the normal permission engine. */
 
 import { appendFileSync, readFileSync, realpathSync } from "node:fs";
 import { basename, dirname } from "node:path";
+/* The memory folder is the one place here that cannot be worked out from where
+this file sits, because it is outside the repo altogether. So it is GENERATED
+into the sibling beside this one from js/folder_memory_backup.mjs -- see
+hook_memory_root_code -- and hook_memory_root_gate_run (in q) fails the build
+if the two ever disagree.
 
-const memory_root = "/home/j/backup/love/claude_memory/memory";
+A sibling that imports nothing, rather than reaching into the repo's own
+functions: that chain is rewritten by the transforms all day, and a file
+half-written in the middle of it would stop this hook loading at all. Generated
+rather than read while the hook runs, for the same reason the python guard's
+lists are: a read that can fail would fail on the side of allowing. It was a
+written-down folder until 2026-08-15, when the folder moved and this hook did
+not error -- it simply stopped matching, and nothing anywhere went red. */
+import { memory_root } from "./memory_root.mjs";
 const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
 /* The self-settings guard is about EDITING Claude's own config, so only the
 write tools need the deny-and-redirect. Read is left to the normal permission
