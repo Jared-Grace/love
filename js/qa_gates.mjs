@@ -1,3 +1,4 @@
+import { hook_memory_root_gate_run } from "./hook_memory_root_gate_run.mjs";
 import { firebase_storage_list_url_cases_gate_run } from "./firebase_storage_list_url_cases_gate_run.mjs";
 import { app_shared_description_gate_run } from "./app_shared_description_gate_run.mjs";
 import { app_shared_card_gate_run } from "./app_shared_card_gate_run.mjs";
@@ -480,6 +481,7 @@ export function qa_gates() {
     functions_lift_captured_locals_gate_run,
     qa_gates_said_plain_gate_run,
     commands_only_hook_path_gate_run,
+    hook_memory_root_gate_run,
     commands_only_write_denied_cases_gate_run,
     text_lines_search_cases_gate_run,
     text_replace_once_cases_gate_run,
