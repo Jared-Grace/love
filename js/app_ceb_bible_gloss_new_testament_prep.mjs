@@ -1,4 +1,4 @@
-import { list_size_subtract } from "./list_size_subtract.mjs";
+import { app_ceb_bible_gloss_new_testament_prep_counted } from "./app_ceb_bible_gloss_new_testament_prep_counted.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -10,12 +10,8 @@ import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bi
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_chapters_bible_words_distinct } from "./gloss_chapters_bible_words_distinct.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_take } from "./list_take.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { wolff_word_find } from "./wolff_word_find.mjs";
@@ -74,27 +70,6 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
     return r4;
   }
   let placed = await list_map_async(words, word_place);
-  let named = list_filter_property(placed, "place", "named");
-  let asked = list_filter_property(placed, "place", "asked");
-  let printed = list_filter_property(placed, "place", "printed");
-  let owed = list_filter_property(placed, "place", "owed");
-  function word_read(item) {
-    let word = property_get(item, "word");
-    return word;
-  }
-  let sample = list_take(owed, 40);
-  let owed_words = list_map(sample, word_read);
-  let held = list_size(asked);
-  let asking = list_size_subtract(words, held);
-  let r = {
-    chapters: property_get(absent, "absent"),
-    words: list_size(words),
-    named: list_size(named),
-    asked: held,
-    printed: list_size(printed),
-    owed: list_size(owed),
-    asking,
-    owed_words,
-  };
+  let r = app_ceb_bible_gloss_new_testament_prep_counted(placed, words, absent);
   return r;
 }
