@@ -59,11 +59,23 @@ export function app_code_lesson_expression_choose_order() {
     let tree = property_get(trees, question);
     return tree;
   }
+  async function on_chosen_quiz() {
+    "a right press is held green for a moment before the line works it out, the same moment long as every other success in the app";
+    "No replace to press here. Pressing replace is the front page teaching what the step IS, and the quiz asks for the choice alone - a button that only ever has one thing to do would be a press that marks nothing.";
+    await sleep_success_color();
+  }
   function on_answer(parent, info, qa, on_success, on_wrong) {
     "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
     "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
     let tree = tree_of(qa, info);
-    app_code_expression_choose_line(parent, tree, noop, on_wrong, on_success);
+    app_code_expression_choose_line(
+      parent,
+      tree,
+      noop,
+      on_wrong,
+      on_chosen_quiz,
+      on_success,
+    );
   }
   function on_question_example(parent, question, card) {
     "the lesson's front page, which is the walkthrough next door: all this end of it has to do is find the shape the question was printed from, because that is the one thing kept here and nowhere else";
