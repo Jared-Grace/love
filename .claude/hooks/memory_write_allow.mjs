@@ -1,7 +1,7 @@
 /* PreToolUse hook: auto-allow Read/Edit/Write inside the memory repo.
 
 Why this exists: the memory dir is a symlink
-  ~/.claude/projects/-home-j-repos-love/memory -> /home/j/backup/love/claude_memory/memory
+  ~/.claude/projects/-home-j-repos-love/memory -> /home/j/a/backup/love/claude_memory/memory
 and the ~/.claude/... spelling lands inside Claude Code's own config
 directory, which trips a BUILT-IN self-settings guard ("allow Claude to edit
 its own settings for this session"). No permissions.allow entry overrides

@@ -148,7 +148,7 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 ## Memory: write it by realpath, not through `~/.claude/`
 
-Your memory dir `~/.claude/projects/-home-j-repos-love/memory` is a **symlink** to `/home/j/backup/love/claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
+Your memory dir `~/.claude/projects/-home-j-repos-love/memory` is a **symlink** to `/home/j/a/backup/love/claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
 
 ## Memory: mark live pointers as `$fn name`
 
