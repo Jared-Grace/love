@@ -1,3 +1,4 @@
+import { memory_index_lines_brace_marked } from "./memory_index_lines_brace_marked.mjs";
 import { memory_index_lines_brace_stripped } from "./memory_index_lines_brace_stripped.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -41,20 +42,7 @@ export async function memory_index_sections_braced() {
   if (greater_than_equal(last, 0)) {
     list_add(ends, last);
   }
-  let marked = [];
-  let at = 0;
-  for (let line of bare) {
-    let heading = text_starts_with(line, hash);
-    let written = line;
-    if (heading) {
-      written = line + open;
-    }
-    if (ends.includes(at)) {
-      written = line + close;
-    }
-    list_add(marked, written);
-    at = at + 1;
-  }
+  let marked = memory_index_lines_brace_marked(bare, hash, open, ends, close);
   let rebuilt = marked.join("\n");
   let path = memory_index_path();
   await file_overwrite(path, rebuilt);
