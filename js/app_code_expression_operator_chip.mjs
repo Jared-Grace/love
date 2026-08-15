@@ -1,6 +1,7 @@
+import { html_box_shadow_inset_value } from "./html_box_shadow_inset_value.mjs";
+import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
-import { html_border } from "./html_border.mjs";
 import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
@@ -16,7 +17,9 @@ export function app_code_expression_operator_chip(span) {
   app_code_expression_chip_style(span);
   ("edged the way the screen's own pale buttons are edged, because the fill was chosen to stand out against a dark line of code and this chip is also said in a sentence on a white card, where a pale fill on a pale ground has no edge of its own");
   ("Drawn stronger than a button's edge - the darker of the two grays, and thicker - because a button is the width of the screen and a chip is one character, so the same edge that outlines the one barely marks the other.");
+  ("Drawn inside its own edge rather than as a border, because a border grows the box it is put on and this box sits in a line of code: grown, it stood taller than the black around it and the edge showed above and below the line.");
   let border_color = app_shared_color_gray();
   let border_width = app_code_expression_chip_border_width();
-  html_border(span, border_width, border_color);
+  let edge = html_box_shadow_inset_value(border_color, border_width);
+  html_box_shadow_set(span, edge);
 }

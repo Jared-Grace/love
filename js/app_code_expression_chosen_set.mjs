@@ -1,3 +1,4 @@
+import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
@@ -11,4 +12,6 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   app_code_expression_chip_style(node_span);
   html_style_background_color_set(operator_span, "transparent");
   html_style_set(operator_span, "color", "inherit");
+  ("its edge goes with its fill, in the same breath: an edge left drawn round the operator keeps it marked out as one thing inside the green, and the whole point of the green is that the operator and its two sides have just become one thing");
+  html_box_shadow_set(operator_span, "none");
 }
