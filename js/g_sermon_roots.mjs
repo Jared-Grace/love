@@ -13,11 +13,13 @@ export async function g_sermon_roots() {
     let passages = property_get_or(chapter, "passages", []);
     for (let passage of passages) {
       let scripture = property_get_or(passage, "scripture", "");
-      list_add_multiple(roots, text_word_roots(scripture));
+      let items = text_word_roots(scripture);
+      list_add_multiple(roots, items);
       let lines = property_get_or(passage, "lines", []);
       for (let line of lines) {
         let said = property_get_or(line, "text", "");
-        list_add_multiple(roots, text_word_roots(said));
+        let items2 = text_word_roots(said);
+        list_add_multiple(roots, items2);
       }
     }
   }
