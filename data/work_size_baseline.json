@@ -1,6 +1,5 @@
 {
  "known": [
-  "permission_grant_names",
   "app_g_verify_home",
   "app_search_results",
   "app_g_verify_view",
@@ -21,23 +20,22 @@
   "app_code_lesson_expression_round_generic",
   "app_code_lesson_console_log_remainder_generic",
   "app_code_lesson_expression_string_concat",
-  "functions_facts_all",
   "app_code_review",
+  "functions_facts_all",
   "week_calendar",
   "markdown_render",
   "app_code_lesson_quiz",
   "app_g_dev_routes",
+  "app_code_lesson_quiz_token_select_variations",
   "js_hash_object_names",
   "app_code_lesson_expression_whole_part_formula",
   "app_code_lesson_expression_whole_part_both",
-  "app_reply_main_shortcuts",
-  "app_code_lesson_quiz_token_select",
   "app_code_lesson_quiz_multiple_choice",
+  "app_reply_main_shortcuts",
   "commit_edit_kind",
   "app_code_lesson_expression_min_max_of_three",
-  "example_command_lambda",
+  "app_code_lesson_quiz_token_select",
   "http_generic",
-  "app_code_lesson_quiz_token_select_variations",
   "qa_gate_failed_sections",
   "js_expand_generic",
   "file_stamps_copied_gate_run",
@@ -86,9 +84,7 @@
   "command_line_generic",
   "app_code_lesson_expression_arithmetic_equality",
   "app_a_function_declaration",
-  "literals_frozen_names",
   "literals_frozen_gate_run",
-  "app_replace_rule_sets_v_1",
   "app_replace_rule_set_proof_show",
   "app_message_reply_choices",
   "app_code_lesson_identifiers_underscores_generic",
@@ -99,7 +95,6 @@
   "app_calendar_booking",
   "app_a_body_inner",
   "server",
-  "bible_passages_grouped",
-  "app_code_lesson_expression_comparing_a_comparison"
+  "bible_passages_grouped"
  ]
 }

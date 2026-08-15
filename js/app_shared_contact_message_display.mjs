@@ -3,7 +3,11 @@ import { app_shared_container } from "./app_shared_container.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-export function app_message_message_display(direction, message, div_messages) {
+export function app_shared_contact_message_display(
+  direction,
+  message,
+  div_messages,
+) {
   arguments_assert(arguments, 3);
   let div_message = app_shared_container(div_messages);
   html_style_assign(div_message, {
