@@ -16,20 +16,16 @@ export function app_code_lesson_expression_choose_order_above(root) {
   let line = app_code_expression_code(item);
   app_code_lesson_suppose_solve_line(card, "Suppose", line);
   html_div_cycle_code(card, [
-    "This time we do not answer the whole line at once",
+    "Eventually we will teach you to solve this all at once",
   ]);
-  html_div_cycle_code(card, ["We choose which operator to solve first"]);
   html_div_cycle_code(card, [
-    "The quiz solves that one for us, and shows what is left",
+    "But, for now, we will teach you to solve this step-by-step",
   ]);
-  html_div_cycle_code(card, ["Then we choose the next one"]);
   let rule_card = app_code_container_light_blue(root);
+  ("the rule said of the very line the card above supposed, rather than of a line invented for the saying - the same words read twice about two different lines would set a learner comparing them for what changed");
   html_div_cycle_code(rule_card, [
-    "An operator can be solved when both of its sides are numbers already",
-  ]);
-  html_div_cycle_code(rule_card, [
-    "So in ",
-    "1 + 2 * 3",
+    "In ",
+    line,
     " we solve the ",
     times,
     " before the ",
