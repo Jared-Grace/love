@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
-import { app_message_message_display } from "./app_message_message_display.mjs";
+import { app_shared_contact_message_display } from "./app_shared_contact_message_display.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { reply_messages_matches } from "./reply_messages_matches.mjs";
@@ -21,8 +21,8 @@ export async function app_message_refresh(
   html_clear(div_messages);
   let messages = app_message_messages_get(context, messages_property);
   function lambda(message) {
-    app_message_message_display("left", message, div_messages);
-    let right = app_message_message_display(
+    app_shared_contact_message_display("left", message, div_messages);
+    let right = app_shared_contact_message_display(
       "right",
       "(Loading...)",
       div_messages,
@@ -34,10 +34,7 @@ export async function app_message_refresh(
       let e = list_empty_is(results);
       html_clear(right);
       if (e) {
-        html_text_set(
-          right,
-          "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
-        );
+        html_text_set(right, app_shared_contact_received_text());
       } else {
         let outputs = list_first_property(results, "outputs");
         html_div_text_multiple(right, outputs);
