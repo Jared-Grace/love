@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
@@ -6,7 +7,6 @@ import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { noop } from "./noop.mjs";
-import { list_first } from "./list_first.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -101,8 +101,7 @@ export function app_code_lesson_expression_choose_order() {
     let note = html_div_first(card);
     function say_choose(ready, lead) {
       "name the one operator that may go next, so the walkthrough tells rather than asks";
-      let first = list_first(ready);
-      let symbol = property_get(first, "operator");
+      let symbol = list_first_property(ready, "operator");
       html_div_cycle_code(note, [lead, symbol]);
     }
     function on_change(step) {
