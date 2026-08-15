@@ -1,5 +1,5 @@
-import { app_shared_color_gray_medium } from "./app_shared_color_gray_medium.mjs";
-import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
+import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
 import { html_border } from "./html_border.mjs";
 import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -14,8 +14,9 @@ export function app_code_expression_operator_chip(span) {
   let font = app_shared_color_code_background();
   html_style_code_generic_unshadowed(span, background, font);
   app_code_expression_chip_style(span);
-  ("edged the way the screen's own buttons are edged, in the same width and the same gray, because the pale fill was chosen to stand out against a dark line of code and this chip is also said in a sentence on a white card, where a pale fill on a pale ground has no edge of its own");
-  let border_color = app_shared_color_gray_medium();
-  let border_width = app_shared_button_border_width();
+  ("edged the way the screen's own pale buttons are edged, because the fill was chosen to stand out against a dark line of code and this chip is also said in a sentence on a white card, where a pale fill on a pale ground has no edge of its own");
+  ("Drawn stronger than a button's edge - the darker of the two grays, and thicker - because a button is the width of the screen and a chip is one character, so the same edge that outlines the one barely marks the other.");
+  let border_color = app_shared_color_gray();
+  let border_width = app_code_expression_chip_border_width();
   html_border(span, border_width, border_color);
 }
