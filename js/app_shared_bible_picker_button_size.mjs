@@ -1,3 +1,4 @@
+import { app_shared_style_control_padding } from "./app_shared_style_control_padding.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
@@ -11,7 +12,7 @@ export function app_shared_bible_picker_button_size(count) {
     let large = {
       font: "1.3em",
       pad_x: app_shared_font_size_label(),
-      pad_y: "0.55em",
+      pad_y: app_shared_style_control_padding(),
       margin_x: "0.2em",
       margin_y: app_shared_content_edge_gap(),
     };
