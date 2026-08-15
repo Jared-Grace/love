@@ -13,8 +13,8 @@ export function integer_factorization_to_sat_factorization_cnf(
   arguments_assert(arguments, 5);
   let cnf = new CNF();
   function lambda9() {
-    let r9 = cnf.newVar();
-    return r9;
+    let r = cnf.newVar();
+    return r;
   }
   let x = Array.from(
     {
