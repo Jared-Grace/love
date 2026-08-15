@@ -1,21 +1,10 @@
-import { gloss_words_parsing_sentence_added } from "./gloss_words_parsing_sentence_added.mjs";
-import { gloss_words_lexicon_added } from "./gloss_words_lexicon_added.mjs";
-import { list_map_index_async } from "./list_map_index_async.mjs";
-import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
-import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
-import { list_find_property_get } from "./list_find_property_get.mjs";
-import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
+import { app_original_bible_gloss_write_passage } from "./app_original_bible_gloss_write_passage.mjs";
+import { objects_merge } from "./objects_merge.mjs";
 import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
-import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
-import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
-import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
-import { list_find } from "./list_find.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export async function app_original_bible_gloss_write_next(chapter_code) {
   "Everything needed to author the next passage of a chapter that has no word explanations yet: its English wording, and each of its verses with every original-language word already parsed.";
   "The parsing, the transliteration and the Strong's number are handed over rather than worked out, so an explanation says what a form is doing in its clause and never has to decide what the form is. The rubric for what an explanation owes the reader is notes/gloss_method.md.";
@@ -43,6 +32,6 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   let left = {
     remaining: list_size(missing),
   };
-  let r2 = objects_merge([handed, left]);
-  return r2;
+  let r = objects_merge([handed, left]);
+  return r;
 }
