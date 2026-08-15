@@ -1,7 +1,9 @@
+import { gloss_words_parsing_sentence_added } from "./gloss_words_parsing_sentence_added.mjs";
+import { gloss_words_lexicon_added } from "./gloss_words_lexicon_added.mjs";
+import { list_map_index_async } from "./list_map_index_async.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
-import { list_map_index } from "./list_map_index.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
@@ -21,6 +23,7 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   "It also answers with the file to write the explanations into, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
+  "Each word also arrives with its parsing already said as a plain English sentence, and with what the lexicon holds under its Strong's number - the dictionary form, where the word comes from, and its range of meaning. Both belong to the same class as the parsing and the rarity: worked out for the author rather than by them. Where a word comes from was the last part being produced from memory, and it is the one part nothing downstream can check, because a wrong origin reads exactly like a right one and is the sentence a reader is most likely to carry away.";
   let coverage = await app_original_bible_gloss_write_coverage(chapter_code);
   let missing = property_get(coverage, "missing");
   if (list_empty_is(missing)) {
@@ -45,7 +48,7 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   let verse_numbers = property_get(passage, "verse_numbers");
   let originals = property_get(passage, "originals");
   let tallies = await bible_strong_chapter_tallies_cache();
-  function verse_read(verse_number, index) {
+  async function verse_read(verse_number, index) {
     let property_name = verse_number_key();
     let found = list_find_property_get(
       verses_interlinear,
@@ -53,7 +56,9 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
       verse_number,
       "words",
     );
-    let words = gloss_words_occurrence_added(tallies, chapter_code, found);
+    let counted = gloss_words_occurrence_added(tallies, chapter_code, found);
+    let said = gloss_words_parsing_sentence_added(counted);
+    let words = await gloss_words_lexicon_added(chapter_code, said);
     let original = originals[index];
     let r = {
       verse_number,
@@ -62,7 +67,7 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
     };
     return r;
   }
-  let verses = list_map_index(verse_numbers, verse_read);
+  let verses = await list_map_index_async(verse_numbers, verse_read);
   let file = gloss_write_file_path(chapter_code, verse_key);
   let r2 = {
     chapter_code,
