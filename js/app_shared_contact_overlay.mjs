@@ -1,10 +1,4 @@
-import { app_shared_contact_messages } from "./app_shared_contact_messages.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { app_shared_contact_message_display } from "./app_shared_contact_message_display.mjs";
-import { each } from "./each.mjs";
-import { app_shared_contact_received_text } from "./app_shared_contact_received_text.mjs";
-import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_contact_overlay_thread_render } from "./app_shared_contact_overlay_thread_render.mjs";
 import { app_shared_contact_message_add } from "./app_shared_contact_message_add.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -16,7 +10,6 @@ import { html_placeholder } from "./html_placeholder.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_focus } from "./html_focus.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
@@ -67,25 +60,8 @@ export function app_shared_contact_overlay() {
     display: "flex",
     "flex-direction": "column",
   });
-  thread_render();
+  app_shared_contact_overlay_thread_render(thread);
   form();
-  function thread_render() {
-    html_clear(thread);
-    let messages = app_shared_contact_messages();
-    let none = list_empty_is(messages);
-    if (none) {
-      ("nobody has written yet, so there is nothing to show back and the panel is just the box");
-      return;
-    }
-    function lambda(message) {
-      app_shared_contact_message_display("left", message, thread);
-    }
-    each(messages, lambda);
-    let received = app_shared_contact_received_text();
-    let right = app_shared_contact_message_display("right", received, thread);
-    let background = app_shared_button_uncolored_background_color();
-    html_style_background_color_set(right, background);
-  }
   function form() {
     html_p_text(
       card,
@@ -106,7 +82,7 @@ export function app_shared_contact_overlay() {
       ("their copy is kept only once the send has gone through, so the thread shows what actually reached the developer rather than what was typed");
       app_shared_contact_message_add(message);
       html_value_set(textarea, "");
-      thread_render();
+      app_shared_contact_overlay_thread_render(thread);
       html_focus(textarea);
     }
     let left2 = emoji_email();
