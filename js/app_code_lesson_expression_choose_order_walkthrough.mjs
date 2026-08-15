@@ -1,4 +1,4 @@
-import { app_shared_button_green_cycle_code } from "./app_shared_button_green_cycle_code.mjs";
+import { app_shared_button_green_font_inherit } from "./app_shared_button_green_font_inherit.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -59,16 +59,12 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       " with ",
       value_text,
     ]);
-    ("the asking and the button are one thing: the button says what it will do to this line, so there is nothing to read and then hunt for");
-    let asked = [
-      "Click here to replace the ",
-      solved_code,
-      " with ",
-      value_text,
-    ];
+    ("the line above has already said WHAT is being swapped for what and WHY it comes to that, so the button is left with the one thing still to be decided - when to let it happen");
+    ("Short on purpose. A button repeating the pieces the sentence above it just named would be the same sentence twice, and the learner would read it twice to find out it says nothing new.");
+    let asked = "Click here to replace";
     let holder = html_div(note);
     function lambda$resolve(resolve) {
-      app_shared_button_green_cycle_code(holder, asked, resolve);
+      app_shared_button_green_font_inherit(holder, asked, resolve);
     }
     await promise_wrap(lambda$resolve);
   }
