@@ -64,24 +64,34 @@ matching actual shell quoting rules - so a quoted regex alternation
 pattern containing a literal pipe character doesn't get misidentified
 as an unparsed shell pipe.
 
-Redirection is unsupported in general (see above), with three narrow
+Redirection is unsupported in general (see above), with four narrow
 exceptions that are parsed and allowed inline regardless of the target
 verb's trust level: redirecting to `/dev/null` (e.g. `2>/dev/null`,
 `>/dev/null`, `>>/dev/null`), fd-dup redirects (`&1`/`&2`, e.g.
-`2>&1`, `1>&2`), and redirecting into this project's Bash-writable
-scratchpad (SCRATCHPAD_PREFIX, e.g. `> /tmp/claude-1000/-home-j-a-repos-love/x/scratchpad/out.txt`).
+`2>&1`, `1>&2`), redirecting into this project's Bash-writable
+scratchpad (SCRATCHPAD_PREFIX, e.g. `> /tmp/claude-1000/-home-j-a-repos-love/x/scratchpad/out.txt`),
+and redirecting into this project's gitignored throwaway directory
+(SCRIPTS_TEMP_PREFIX, e.g. `> scripts/temp/out.json`, or the same
+folder spelled from the root).
 The first two are safe by construction - neither can write to an
-arbitrary file. The scratchpad case is safe for a different reason: it
-doesn't grant a new capability at all, it just extends a capability the
+arbitrary file. The last two are safe for a different reason: neither
+grants a new capability at all, each just extends a capability the
 Bash/Write/Edit tools already have unconditionally in that directory
 (see permissions.allow's `Write(/tmp/claude-1000/-home-j-a-repos-love/**)`
-etc.) to the shell-redirect surface too. The target path is validated
-with a strict character allowlist (no `$`, backticks, `(`, `<`, spaces,
-quotes, etc. can sneak through) plus an exact-prefix + normpath-equality
-check that rejects `../` traversal and double slashes - so this can't be
-abused to redirect outside the scratchpad. None of these three
-exceptions weakens the guarantee that every *other* write-capable
-construct still forces a real prompt.
+and `Edit(<repo>/scripts/temp/**)`) to the shell-redirect surface too.
+Both target paths are validated with a strict character allowlist
+(no `$`, backticks, `(`, `<`, spaces, quotes, etc. can sneak through)
+plus an exact-prefix + normpath-equality check that rejects `../`
+traversal and double slashes - so this can't be abused to redirect
+outside those two directories. None of these four exceptions weakens
+the guarantee that every *other* write-capable construct still forces
+a real prompt.
+
+The two writable directories are deliberately not the same thing. The
+scratchpad is the general one and nothing else can reach it; scripts/temp/
+is inside the repo, which is exactly why it earns its place here - the
+sandboxed throwaway node can only read under the repo, so output a scratch
+script has to read back cannot live in the scratchpad at all.
 
   - If the whole command parses into that narrow shape AND every simple
     command's verb is already in permissions.allow: emit "allow" (closes
@@ -660,6 +670,33 @@ def is_safe_scratchpad_target(path):
     return True
 
 
+def is_safe_scripts_temp_target(path):
+    """True iff `path` is a plain, already-normalized path strictly inside
+    this project's scripts/temp/ throwaway directory - written either as the
+    bare relative `scripts/temp/<name>` or as this repo's own absolute path.
+
+    The same three checks as is_safe_scratchpad_target (character allowlist,
+    exact prefix, normpath equality), applied to a second directory, and safe
+    for the same reason: it hands over no new capability, it only extends to
+    the redirect surface a write the Write/Edit tools already hold there
+    unconditionally (permissions.allow's `Edit(<repo>/scripts/temp/**)`).
+    The directory is gitignored and `scripts_temp_delete` clears it, so a
+    file landing here can be lost without anybody minding.
+
+    No .mjs requirement, unlike is_safe_temp_script_path: what a redirect
+    leaves here is a command's own output, not a script anything will run.
+    """
+    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
+        return False
+    relative = path.startswith(SCRIPTS_TEMP_PREFIX)
+    absolute = path.startswith(SCRIPTS_TEMP_PREFIX_ABSOLUTE)
+    if not relative and not absolute:
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    return True
+
+
 def load_safe_verbs():
     verbs = set()
     for path in SETTINGS_PATHS:
@@ -906,13 +943,17 @@ def tokenize(command, subst_validator=None, outer_vars=None):
                     path = command[path_start:k]
                     path = _redirect_target_unquoted(path)
                     path = _resolve_leading_var(path, var_map)
-                    if path and is_safe_scratchpad_target(path):
+                    if path and (
+                        is_safe_scratchpad_target(path)
+                        or is_safe_scripts_temp_target(path)
+                    ):
                         word.clear()
                         i = k
                         continue
             raise Unsupported(
                 "unsupported operator '>' (redirection, except >/dev/null, "
-                "fd dup &1/&2, or a path inside this project's scratchpad)"
+                "fd dup &1/&2, or a path inside this project's scratchpad "
+                "or scripts/temp/)"
             )
         if c == "{" and word and word[-1] == "$":
             # `${NAME}` - the braced spelling of `$NAME`, and the ONLY
