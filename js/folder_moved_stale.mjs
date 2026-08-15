@@ -1,3 +1,5 @@
+import { folder_home } from "./folder_home.mjs";
+import { folder_links_with_text } from "./folder_links_with_text.mjs";
 import { folder_spellings } from "./folder_spellings.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -16,7 +18,7 @@ export async function folder_moved_stale(before) {
   "The one file left out is the list of moves itself, which writes the old place down on purpose, because that is where the old place is remembered. Counting it would mean this could never answer empty, and an answer that is never empty cannot be the thing that says a move is finished.";
   "Every way of writing the folder is looked for, not only the one that looks like a folder. The other has had all its separators turned into dashes, so a hunt for the folder's own letters walks straight past it, and a file that writes both is answered once rather than twice.";
   "The copies are asked about the folder alone, because where a copy pulls from is an address and an address is written the one way.";
-  "A link is not a file and is not answered here. The only one that matters is the one the assistant's memory is reached through, and that one fails loudly and at once, which is the kind of mistake nobody needs a list to find.";
+  "The links are asked for too, and this line used to say they were not worth asking about - that only the one reaching the assistant's memory mattered, and that it would fail loudly. Both halves were wrong. A move left two links pointing into the old place, one starting the desktop's keyboard shortcuts at login and one standing in the folder of programs; neither failed loudly, and what they did instead was stop happening.";
   let folders = folders_moved_stale_folders();
   let f_name = fn_name("folders_moved_expected");
   let register = text_combine_multiple([f_name, ".mjs"]);
@@ -49,10 +51,13 @@ export async function folder_moved_stale(before) {
       }
     }
   }
+  let home = folder_home();
+  let links = await folder_links_with_text(home, before);
   let stale = {
     before,
     files,
     mirrors,
+    links,
   };
   return stale;
 }
