@@ -8,6 +8,7 @@ export async function git_folder_commits_count(folder) {
   "Read beside the tree a rewrite is checked against, never instead of it. A count that fell says only that something went, and the whole question is whether what went was what was asked for - a rewrite drops any commit whose entire content was a removed path, so a small fall is expected and a big one is the thing worth stopping for.";
   arguments_assert(arguments, 1);
   let printed = await git_folder_run(folder, ["rev-list", "--count", "--all"]);
-  let count = number_from_text(text_trim(printed));
+  let text = text_trim(printed);
+  let count = number_from_text(text);
   return count;
 }
