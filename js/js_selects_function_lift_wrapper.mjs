@@ -5,15 +5,10 @@ import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { list_replace } from "./list_replace.mjs";
-import { list_previous } from "./list_previous.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
 import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
-import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_return } from "./js_code_return.mjs";
@@ -25,9 +20,9 @@ export async function js_selects_function_lift_wrapper(
   f_name_new,
 ) {
   arguments_assert(arguments, 3);
-  ("Move the body of a function written inside another one out to stand under a name of its own, and leave the name behind holding a single line that calls it. What it reached out of itself for becomes its parameters, and the line left behind hands it those same things.");
-  ("The twin of the lift next door, for the closure that lift refuses. That one takes the name away with the body, so everywhere the name was used has to be handed the closed-over names as well - and where the name is handed on as a value rather than called, there is nowhere to put them. Leaving the name where it stands answers that at a stroke: nothing that used it changes at all, because what it names still takes exactly the arguments it always took and still reaches exactly what it always reached.");
-  ("What this costs is one call's worth of indirection. What it buys is a whole body out of a long function, in the shape that long functions here actually have - a callback handed to a visitor or a renderer, which is precisely what the other lift cannot take.");
+  ("Move the body of a function written inside another one out to stand under a name of its own, and leave the function itself where it is holding a single line that calls it. What it reached out of itself for becomes its parameters, and the line left behind hands it those same things.");
+  ("The twin of the lift next door, for the closure that lift refuses. That one takes the name away with the body, so everywhere the name was used has to be handed the closed-over names as well - and where the name is handed on as a value rather than called, there is nowhere to put them. Leaving the function where it stands answers that at a stroke: nothing that used it changes at all, because what it names still takes exactly the arguments it always took and still reaches exactly what it always reached.");
+  ("Only the body is swapped, and nothing is moved out of the place it was written in. That is what lets this reach a function written as a value - handed to a visitor, or sitting under a name in a table of cases - which is the shape most of a long function's length has here and the one shape the other lift can never take, because a value has no line of its own to be lifted off.");
   ("Reaching out is still read at the moment of the call, not the moment of the writing, because the line left behind reads those names where it stands and passes on what it finds. That is what makes this the same function it was.");
   ("Why it would not go ahead is read next door, so the report of what could be moved and the move itself cannot disagree about a single function.");
   let declaration = list_single(selects);
@@ -40,26 +35,30 @@ export async function js_selects_function_lift_wrapper(
   });
   let params = property_get(declaration, "params");
   let param_names = list_map(params, js_identifier_name_try);
-  let stack = js_node_to_visitor_stack(ast, declaration);
-  let container = list_previous(stack, declaration);
-  let at = list_index_of(container, declaration);
   let passed = list_concat(param_names, closed);
+  let async_is = property_get(declaration, "async");
+  let block = property_get(declaration, "body");
+  let moved_code = js_code_function_declaration_args(
+    async_is,
+    f_name_new,
+    passed,
+    "",
+  );
+  let moved = js_parse_statement(moved_code);
+  property_set(moved, "body", block);
+  ("The count is written once the parameters are settled, because it has to say how many the function takes after everything it reached out for has become one.");
+  js_function_arguments_assert_add(moved);
   let call_code = js_code_call_args(f_name_new, passed);
   let inside = js_code_return(call_code);
-  let async_is = property_get(declaration, "async");
-  let wrapper_code = js_code_function_declaration_args(
+  let stub_code = js_code_function_declaration_args(
     async_is,
     name_old,
     param_names,
     inside,
   );
-  let wrapper = js_parse_statement(wrapper_code);
-  let id = property_get(declaration, "id");
-  property_set(id, "name", f_name_new);
-  js_function_declaration_params_add(declaration, closed);
-  ("The count is written once the parameters are settled, because it has to say how many the function takes after everything it reached out for has become one.");
-  js_function_arguments_assert_add(declaration);
-  list_replace(container, at, wrapper);
+  let stub = js_parse_statement(stub_code);
+  let stub_block = property_get(stub, "body");
+  property_set(declaration, "body", stub_block);
   let body = property_get(ast, "body");
-  list_add(body, declaration);
+  list_add(body, moved);
 }

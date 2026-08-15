@@ -22,7 +22,7 @@ export async function function_nested_lift_wrapper(
     hint: "a function already answers to this name, so the body would be moved out under a name that is already spoken for - pick another, or fold onto the one that is there if it is really the same work",
     f_name_new,
   });
-  let select_fn_name = fn_name("js_function_nested_find_named");
+  let select_fn_name = fn_name("js_function_nested_find_named_any");
   let apply_fn_name = fn_name("js_selects_function_lift_wrapper");
   let output = await function_select_apply_args_auto(
     f_name,
