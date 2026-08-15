@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { html_div } from "./html_div.mjs";
@@ -6,10 +7,14 @@ import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_scroll_tail_height } from "./html_scroll_tail_height.mjs";
 export function app_g_dev_overlay(title_text) {
   "the full-screen panel a dev screen draws itself into: fixed over the whole viewport in the page background colour, scrolling on its own, with a bold title at the top. shared by every #route that shows a PAGE of its own rather than acting on the map, so the directory and the design reader cannot drift apart in look. BESPOKE (style object literal) — do NOT auto-canonicalize";
   "its height is the VISIBLE height, not the full one. This is a page to be read and scrolled, so every part of it has to be reachable - and on a phone the full height counts the strip the browser's own bar sits over, so the last stretch of a panel built to it hangs underneath that bar and its own scroll bottoms out with that stretch still hidden. #characters showed it plainly: the sheet ends in a row of characters, and the last row could not be scrolled to. A backdrop may use the full height because it is only covering things; this one is not.";
   ("the tail padding is on the CONTENT rather than on this panel, because a scrolling box's own bottom padding is left out of how far it can scroll - measured here as a scrollHeight of exactly the top padding plus the content, with the bottom sixteen pixels simply absent. Padding that only exists when there is nothing to scroll is not padding.");
+  ("that tail is a whole browser bar tall, not one line - #characters was STILL cut off at the bottom on a phone after the visible height went in. A line of breathing room only helps if the panel's own bottom is on the screen, and a height that tracks the bar cannot promise that: the bar comes and goes, and the height it is asked for is answered once. So the content carries the bar's own height as tail (",
+    fn_name("html_scroll_tail_height"),
+    "), and then the last row can be scrolled clear of the bar wherever the bar happens to be. On a desktop the two viewport heights are the same number, so the tail is exactly the one line it always was.");
   let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
@@ -42,7 +47,7 @@ export function app_g_dev_overlay(title_text) {
     width: "100%",
     "max-width": app_shared_column_max_width(),
     margin: "0 auto",
-    "padding-bottom": "1rem",
+    "padding-bottom": html_scroll_tail_height(),
   });
   return column;
 }
