@@ -1,3 +1,4 @@
+import { js_name_lambda } from "./js_name_lambda.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
@@ -9,7 +10,8 @@ export function js_function_id_add(ast) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
     if (equal(id, null)) {
-      let unique = js_identifier_unique_ast(ast, "lambda");
+      let word = js_name_lambda();
+      let unique = js_identifier_unique_ast(ast, word);
       let value = js_parse_expression(unique);
       property_set(node, "id", value);
     }

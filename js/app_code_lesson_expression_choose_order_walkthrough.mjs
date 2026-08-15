@@ -46,25 +46,38 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     html_remove_if_not_null(rule_line);
     rule_line = null;
   }
+  function head_said(change) {
+    "say something new in the walkthrough, and let the walkthrough grow or shrink to fit it slowly rather than at once";
+    "Every one of these presses changes how much there is to read above the line, and the line is what the learner is looking at. Changed at once, the line is somewhere else by the time they look back at it and they have to find it again; grown to slowly, it slides to its new place under their eyes and is never lost.";
+    "The whole head moves, not the line, because the line is only one of the things standing under the words - the labels and the buttons are under them too, and a line sliding while everything around it jumped would read as the line coming loose from the page.";
+    let promise = html_height_change_animate(head, change, duration);
+    return promise;
+  }
   async function on_chosen(node, value) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
-    html_clear(note);
-    rule_line_retire();
     let solved_code = app_code_expression_code(node);
     let value_text = text_to(value);
-    app_code_expression_replace_say(note, solved_code, value_text);
     ("the line above has already said WHAT is being swapped for what and WHY it comes to that, so the button is left with the one thing still to be decided - when to let it happen");
     ("Short on purpose. A button repeating the pieces the sentence above it just named would be the same sentence twice, and the learner would read it twice to find out it says nothing new.");
     let asked = "Click here to replace";
-    let holder = html_div(note);
+    let press = noop;
     function lambda$resolve(resolve) {
-      app_shared_button_green_ordinary(holder, asked, resolve);
+      press = resolve;
     }
-    await promise_wrap(lambda$resolve);
+    ("the waiting is opened BEFORE the button is made, because the button is made inside the change whose height is being measured and it has to be given the thing to do at the moment it is made");
+    let pressed = promise_wrap_unawait(lambda$resolve);
+    function change() {
+      html_clear(note);
+      rule_line_retire();
+      app_code_expression_replace_say(note, solved_code, value_text);
+      let holder = html_div(note);
+      app_shared_button_green_ordinary(holder, asked, press);
+    }
+    await head_said(change);
+    await pressed;
   }
   function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";
-    html_clear(note);
     let current = property_get(step, "current");
     ("kept as the line is drawn again, so a refused press can be answered about the line as it stands rather than about the one the lesson opened with");
     line_code = app_code_expression_code(current);
