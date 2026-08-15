@@ -1,3 +1,4 @@
+import { folder_drive_user } from "./folder_drive_user.mjs";
 import { folder_home_repo } from "./folder_home_repo.mjs";
 import { git_mirrors_folder } from "./git_mirrors_folder.mjs";
 import { folder_memory_backup } from "./folder_memory_backup.mjs";
@@ -33,6 +34,10 @@ export function folders_moved_expected() {
     {
       before: "/home/j/repos/love",
       after: folder_home_repo("love"),
+    },
+    {
+      before: "/media/j/JPM/user",
+      after: folder_drive_user(),
     },
   ];
   return expected;
