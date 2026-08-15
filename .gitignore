@@ -63,17 +63,31 @@ Thumbs.db
 # committed on purpose — judging a commit costs minutes and the answer is the
 # same for all ten of us, so one of us paying it is all of us knowing. Ignoring
 # the folder would have thrown that away and had everybody pay it again.
+#
+# Only the small one. Its neighbour is 401 KB, and see below for why that
+# matters more than its size.
 /findings/git_history_folder_bytes.json
-/findings/git_history_paths_absent_at_head.json
 
-# The development build. It is made out of js/ by webpack_build_dev and is
-# remade whenever anything under js/ moves, so every one of the ten of us
-# committing here writes a fresh copy of all of it. Measured 2026-08-15: 21.64 MB
-# of packed history, of which 20.18 MB — 93% — is builds superseded within the
-# hour. Nothing reads it out of a commit; the phone and the browser read it off
-# this disk, and the frozen QA copy is given this same folder by
-# qa_snapshot_uncommitted_names, the way it is already given node_modules.
-/public/dev/
+# NOT ignored yet, on purpose, and this is the trap to know about before adding
+# any large generated folder to this file.
+#
+# /public/dev/ was ignored and untracked on 2026-08-15 — 21.64 MB of packed
+# history, 93% of it builds that were superseded within the hour. It was put
+# back within the hour, because untracking a large file is only half an
+# operation. The other half is taking it out of the history, and between the
+# two halves the repo is in a state that stops every deploy:
+# git_history_heavy_absent_gate_run goes red on every file over 50 KB that the
+# history carries and HEAD no longer has, and a red gate that names paths rather
+# than functions cannot be placed against any one app — so qa_app_gates_sorted
+# counts it against all of them.
+#
+# So ignore-and-untrack and drop-from-the-history are ONE change, not two, and
+# the second half force-pushes both remotes and needs GitLab's branch protection
+# taken off by hand. Do not start it without that in place.
+#
+# When it is done: the rules go here, git_folder_ignored_tracked_remove stops the
+# recording, git_history_paths_drop takes them out of the past, and
+# git_history_heavy_absent_baseline_write shrinks the ratchet afterwards.
 
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so
