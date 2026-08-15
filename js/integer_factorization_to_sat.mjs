@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_finalize_sum } from "./integer_factorization_to_sat_finalize_sum.mjs";
 import { integer_factorization_and_gate } from "./integer_factorization_and_gate.mjs";
 import { integer_factorization_xor_gate } from "./integer_factorization_xor_gate.mjs";
 import { add } from "./add.mjs";
@@ -150,40 +151,13 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return columns;
   }
   function finalizeSum(cnf, columns) {
-    let result = [];
-    let carry = null;
-    for (let i = 0; less_than(i, columns.length); i++) {
-      let col = columns[i];
-      let a = col[0] || null;
-      let b = col[1] || null;
-      if (a && b) {
-        if (equal(carry, null)) {
-          [result[i], carry] = halfAdder(cnf, a, b);
-        } else {
-          [result[i], carry] = fullAdder(cnf, a, b, carry);
-        }
-      } else if (a) {
-        if (equal(carry, null)) {
-          result[i] = a;
-        } else {
-          [result[i], carry] = halfAdder(cnf, a, carry);
-        }
-      } else if (b) {
-        if (equal(carry, null)) {
-          result[i] = b;
-        } else {
-          [result[i], carry] = halfAdder(cnf, b, carry);
-        }
-      } else {
-        if (equal(carry, null)) {
-          result[i] = null;
-        } else {
-          result[i] = carry;
-          carry = null;
-        }
-      }
-    }
-    return result;
+    let r13 = integer_factorization_to_sat_finalize_sum(
+      cnf,
+      columns,
+      halfAdder,
+      fullAdder,
+    );
+    return r13;
   }
   function factorizationCNF(N, bits) {
     let cnf = new CNF();
