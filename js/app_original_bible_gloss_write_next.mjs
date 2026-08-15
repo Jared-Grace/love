@@ -35,47 +35,14 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
     return finished;
   }
   let verse_key = list_first(missing);
-  let passages = await app_original_bible_gloss_passages(chapter_code);
-  function matches(candidate) {
-    let left = g_sermon_passage_verses_key(candidate);
-    let eq = equal(left, verse_key);
-    return eq;
-  }
-  let passage = list_find(passages, matches);
-  ("The parsed words come from the kept copy. This is asked once per passage authored, so a chapter of twenty-two passages walks the whole table twenty-two times over without it - which is the case the kept copy was written for. Reading a passage to explain it consumes the text and settles nothing about it, so a kept copy is the right thing to read here, unlike the paths that publish the text.");
-  let chapters = await bible_interlinear_chapters_words_cache();
-  let verses_interlinear = property_get(chapters, chapter_code);
-  let verse_numbers = property_get(passage, "verse_numbers");
-  let originals = property_get(passage, "originals");
-  let tallies = await bible_strong_chapter_tallies_cache();
-  async function verse_read(verse_number, index) {
-    let property_name = verse_number_key();
-    let found = list_find_property_get(
-      verses_interlinear,
-      property_name,
-      verse_number,
-      "words",
-    );
-    let counted = gloss_words_occurrence_added(tallies, chapter_code, found);
-    let said = gloss_words_parsing_sentence_added(counted);
-    let words = await gloss_words_lexicon_added(chapter_code, said);
-    let original = originals[index];
-    let r = {
-      verse_number,
-      original,
-      words,
-    };
-    return r;
-  }
-  let verses = await list_map_index_async(verse_numbers, verse_read);
-  let file = gloss_write_file_path(chapter_code, verse_key);
-  let r2 = {
+  ("Which passage is next is the whole of this function's own work. Everything the author is handed for it is the same whether the passage has been written before or not, so it is read by the one that takes a passage by name.");
+  let handed = await app_original_bible_gloss_write_passage(
     chapter_code,
     verse_key,
+  );
+  let left = {
     remaining: list_size(missing),
-    file,
-    texts: property_get(passage, "texts"),
-    verses,
   };
+  let r2 = objects_merge([handed, left]);
   return r2;
 }
