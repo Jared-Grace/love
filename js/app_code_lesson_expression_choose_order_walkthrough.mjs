@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_shared_button_green_font_inherit } from "./app_shared_button_green_font_inherit.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.");
   let line_holder = html_div(parent);
   let note = html_div_first(card);
+  let line_code = "";
   function say_choose(ready, lead) {
     "name the one operator that may go next, so the walkthrough tells rather than asks";
     let symbol = list_first_property(ready, "operator");
@@ -71,13 +73,15 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";
     html_clear(note);
+    let current = property_get(step, "current");
+    ("kept as the line is drawn again, so a refused press can be answered about the line as it stands rather than about the one the lesson opened with");
+    line_code = app_code_expression_code(current);
     let solved = property_get(step, "solved");
     let ready = property_get(step, "ready");
     if (null_is(solved)) {
       say_choose(ready, "So first, choose ");
       return;
     }
-    let current = property_get(step, "current");
     let more = app_code_expression_node_is(current);
     if (not(more)) {
       ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
@@ -85,19 +89,19 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       app_shared_success_message(note);
       return;
     }
-    let current_code = app_code_expression_code(current);
-    html_div_cycle_code(note, ["So now we have ", current_code]);
+    html_div_cycle_code(note, ["So now we have ", line_code]);
     say_choose(ready, "Now, choose ");
   }
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
-    "Said as an order of turns rather than as a shape - an operator sitting on one SIDE of another is a thing a learner can only see by picturing the line as a tree, and no lesson has drawn one. Which operator has to go first is a question the line itself answers.";
+    "Answered with the rule the card above stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
     let symbol = property_get(node, "operator");
-    html_div_cycle_code(note, [
-      "Not yet - the ",
-      symbol,
-      " cannot be chosen because another operator must be chosen first",
-    ]);
+    html_div_cycle_code(note, ["Not yet - the ", symbol, " cannot go first"]);
+    let parts = app_code_lesson_expression_choose_order_rule_parts(
+      "Remember: In ",
+      line_code,
+    );
+    html_div_cycle_code(note, parts);
   }
   app_code_expression_choose_line(
     line_holder,
