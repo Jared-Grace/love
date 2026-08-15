@@ -18,6 +18,7 @@ the decision to the normal permission engine. */
 
 import { appendFileSync, readFileSync, realpathSync } from "node:fs";
 import { basename, dirname } from "node:path";
+import { homedir } from "node:os";
 /* The memory folder is the one place here that cannot be worked out from where
 this file sits, because it is outside the repo altogether. So it is GENERATED
 into the sibling beside this one from js/folder_memory_backup.mjs -- see
@@ -64,7 +65,11 @@ function is_under_memory(file_path) {
   return resolved === memory_root || resolved.startsWith(`${memory_root}/`);
 }
 
-const claude_config_root = "/home/j/.claude/";
+/* Asked of the machine rather than written down. This is the assistant's own
+config folder, which always sits directly in whoever's home folder is running
+it, so there is nothing here that a second machine or a second person would
+have to come and edit. */
+const claude_config_root = `${homedir()}/.claude/`;
 
 function claude_config_spelling_is(file_path) {
   /* True when the path as WRITTEN goes through Claude Code's own config
@@ -89,7 +94,7 @@ function deny_redirect_reason(file_path) {
   const realpath = realpath_for_retry(file_path);
   return "Use the memory realpath, not the ~/.claude/ spelling. Retry this "
     + `exact edit against: ${realpath}\n\n`
-    + "Why: a path under /home/j/.claude/ lands inside Claude Code's own "
+    + `Why: a path under ${claude_config_root} lands inside Claude Code's own `
     + "config directory and trips a built-in self-settings guard, which "
     + "prompts the human with a grant that only lasts one session. No "
     + "permissions.allow entry overrides that guard, and neither does a "
