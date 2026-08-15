@@ -3,7 +3,7 @@ import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
-import { app_shared_button_green_font_inherit } from "./app_shared_button_green_font_inherit.mjs";
+import { app_shared_button_green_ordinary } from "./app_shared_button_green_ordinary.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     let asked = "Click here to replace";
     let holder = html_div(note);
     function lambda$resolve(resolve) {
-      app_shared_button_green_font_inherit(holder, asked, resolve);
+      app_shared_button_green_ordinary(holder, asked, resolve);
     }
     await promise_wrap(lambda$resolve);
   }

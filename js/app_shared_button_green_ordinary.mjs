@@ -1,7 +1,7 @@
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_shared_button_green_font_inherit(div, text, lambda) {
+export function app_shared_button_green_ordinary(div, text, lambda) {
   arguments_assert(arguments, 3);
   ("an ordinary button of the screen, painted green: for a button that stands inside something being read rather than at the foot of the screen");
   ("Built from the button every other button on the screen is built from, so its size, its spacing and its corners are not matched to theirs but ARE theirs, and cannot come apart from them later.");
