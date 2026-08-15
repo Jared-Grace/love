@@ -1,3 +1,4 @@
+import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
@@ -41,7 +42,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     whole_line,
   );
   function rule_line_retire() {
-    ("the rule goes as soon as it has been used: the learner has just done the thing it asked for, and a sentence still telling them to do it reads as another turn to take rather than as the one they have taken");
+    "the rule goes as soon as it has been used: the learner has just done the thing it asked for, and a sentence still telling them to do it reads as another turn to take rather than as the one they have taken";
     html_remove_if_not_null(rule_line);
     rule_line = null;
   }
