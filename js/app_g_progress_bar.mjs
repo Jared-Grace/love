@@ -1,3 +1,4 @@
+import { app_shared_style_control_padding } from "./app_shared_style_control_padding.mjs";
 import { html_progress_caption } from "./html_progress_caption.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -27,7 +28,7 @@ export function app_g_progress_bar(root, count, total, name) {
   html_style_assign(fill, {
     "border-radius": "9999px",
     "background-color": app_shared_button_background(),
-    height: "0.55em",
+    height: app_shared_style_control_padding(),
     width,
   });
   html_progress_caption(container, count, total, name);
