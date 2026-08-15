@@ -1,3 +1,4 @@
+import { js_special_arguments } from "./js_special_arguments.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -30,6 +31,15 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   if (itself_is) {
     list_add(refusals, {
       why: "this function calls itself, and the name it calls itself by would be left behind on the line that calls the moved body, where the moved body cannot see it. Would you like to hand it in as one more thing it is given?",
+    });
+  }
+  ("Asked of the body alone for the same reason as the name above: the word stands at the head of every function this repo writes, where it names that function's own list and not this one's.");
+  let word = js_special_arguments();
+  let given = js_identifiers_named(block, word);
+  let given_is = list_empty_not_is(given);
+  if (given_is) {
+    list_add(refusals, {
+      why: "this function reads the whole list of what it was given, under the one word that always means that list. Moved out it is given more than it used to be - everything it reached out for arrives as one more thing handed in - so that word would answer with a longer list than the one the body was written to read. Would you like it to name what it is given instead?",
     });
   }
   let params = property_get(declaration, "params");
