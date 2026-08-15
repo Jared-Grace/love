@@ -220,6 +220,7 @@ export function app_code_lesson_expression_choose_order() {
       plus,
     ]);
   }
+  let example_question_label = app_code_label_code_question();
   let lesson = app_code_lesson_base(
     name_id,
     above,
@@ -228,7 +229,7 @@ export function app_code_lesson_expression_choose_order() {
     on_question_example,
     null,
     quizzes_get,
-    app_code_label_code_question(),
+    example_question_label,
     noop,
   );
   return lesson;
