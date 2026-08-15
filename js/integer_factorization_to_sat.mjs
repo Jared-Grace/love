@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_full_adder } from "./integer_factorization_to_sat_full_adder.mjs";
 import { integer_factorization_to_sat_compress_columns } from "./integer_factorization_to_sat_compress_columns.mjs";
 import { integer_factorization_to_sat_finalize_sum } from "./integer_factorization_to_sat_finalize_sum.mjs";
 import { integer_factorization_and_gate } from "./integer_factorization_and_gate.mjs";
@@ -65,18 +66,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r3;
   }
   function fullAdder(cnf, a, b, cin) {
-    let s1 = xorGate(cnf, a, b);
-    let sum = xorGate(cnf, s1, cin);
-    let c1 = andGate(cnf, a, b);
-    let c2 = andGate(cnf, a, cin);
-    let c3 = andGate(cnf, b, cin);
-    let cout = cnf.newVar();
-    cnf.addClause(-c1, cout);
-    cnf.addClause(-c2, cout);
-    cnf.addClause(-c3, cout);
-    cnf.addClause(-cout, c1, c2, c3);
-    let r4 = [sum, cout];
-    return r4;
+    let r6 = integer_factorization_to_sat_full_adder(
+      cnf,
+      a,
+      b,
+      cin,
+      xorGate,
+      andGate,
+    );
+    return r6;
   }
   function fullAdderCSA(cnf, a, b, c) {
     let v2 = xorGate(cnf, a, b);
