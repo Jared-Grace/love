@@ -1,6 +1,6 @@
+import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
+import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_code_expression_replace_say } from "./app_code_expression_replace_say.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_shared_button_green_font_inherit } from "./app_shared_button_green_font_inherit.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -36,18 +36,15 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   let note = html_div(head);
   let whole_line = app_code_expression_code(tree);
   let line_code = whole_line;
-  app_code_lesson_suppose_solve_line(intro, "Suppose", whole_line);
-  html_div_cycle_code(intro, [
-    "Eventually we will teach you to solve this all at once",
-  ]);
-  html_div_cycle_code(intro, [
-    "But, for now, we will teach you to solve this step-by-step",
-  ]);
-  let rule = app_code_lesson_expression_choose_order_rule_parts(
-    "In ",
+  let rule_line = app_code_lesson_expression_choose_order_intro(
+    intro,
     whole_line,
   );
-  html_div_cycle_code(intro, rule);
+  function rule_line_retire() {
+    ("the rule goes as soon as it has been used: the learner has just done the thing it asked for, and a sentence still telling them to do it reads as another turn to take rather than as the one they have taken");
+    html_remove_if_not_null(rule_line);
+    rule_line = null;
+  }
   function say_choose(ready, lead) {
     "name the one operator that may go next, so the walkthrough tells rather than asks";
     let symbol = list_first_property(ready, "operator");
@@ -56,6 +53,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   async function on_chosen(node, value) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     html_clear(note);
+    rule_line_retire();
     let solved_code = app_code_expression_code(node);
     let value_text = text_to(value);
     app_code_expression_replace_say(note, solved_code, value_text);
@@ -93,13 +91,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
     "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
-    let symbol = property_get(node, "operator");
-    html_div_cycle_code(note, ["Not yet - the ", symbol, " cannot go first"]);
-    let parts = app_code_lesson_expression_choose_order_rule_parts(
-      "Remember: In ",
-      line_code,
-    );
-    html_div_cycle_code(note, parts);
+    app_code_lesson_expression_choose_order_wrong_say(note, node, line_code);
   }
   app_code_expression_choose_line(
     line_holder,
