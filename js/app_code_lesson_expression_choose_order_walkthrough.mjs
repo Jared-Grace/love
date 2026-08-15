@@ -60,9 +60,6 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     let solved_code = app_code_expression_code(node);
     let value_text = text_to(value);
-    ("the line above has already said WHAT is being swapped for what and WHY it comes to that, so the button is left with the one thing still to be decided - when to let it happen");
-    ("Short on purpose. A button repeating the pieces the sentence above it just named would be the same sentence twice, and the learner would read it twice to find out it says nothing new.");
-    let asked = "Click here to replace";
     let press = noop;
     function lambda$resolve(resolve) {
       press = resolve;
@@ -70,11 +67,13 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     ("the waiting is opened BEFORE the button is made, because the button is made inside the change whose height is being measured and it has to be given the thing to do at the moment it is made");
     let pressed = promise_wrap_unawait(lambda$resolve);
     function change() {
-      html_clear(note);
-      rule_line_retire();
-      app_code_expression_replace_say(note, solved_code, value_text);
-      let holder = html_div(note);
-      app_shared_button_green_ordinary(holder, asked, press);
+      app_code_expression_replace_ask(
+        note,
+        solved_code,
+        value_text,
+        rule_line_retire,
+        press,
+      );
     }
     await head_said(change);
     await pressed;
@@ -93,16 +92,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       return;
     }
     function change() {
-      html_clear(note);
-      let more = app_code_expression_node_is(current);
-      if (not(more)) {
-        ("the line is finished, so the walkthrough ends with the very thing the quiz shows when a question is finished");
-        ("Nothing is said about going on. The learner has just chosen every operator in the line for themselves - the walkthrough only named which one, the pressing was already theirs - so a parting line handing them their turn takes back what they just did, and the button underneath is the only thing that has to say where the turn is.");
-        app_shared_success_message(note);
-        return;
-      }
-      html_div_cycle_code(note, ["So now we have ", line_code]);
-      app_code_expression_choose_say(note, ready, "Now, choose ");
+      app_code_expression_step_say(note, current, ready, line_code);
     }
     head_said(change);
   }
