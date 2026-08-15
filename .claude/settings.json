@@ -1469,6 +1469,8 @@
       "Bash(node scripts/ai.mjs app_shared_color_gray_light:*)",
       "Bash(node scripts/ai.mjs app_shared_color_code_background:*)",
       "Bash(node scripts/ai.mjs git_history_folder_bytes_report:*)",
+      "Bash(node scripts/ai.mjs git_history_paths_absent_at_head_report_love:*)",
+      "Bash(node scripts/ai.mjs git_files_changed_since_love:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2852,6 +2854,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_shared_color_gray_light:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_shared_color_code_background:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args git_history_folder_bytes_report:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args git_history_paths_absent_at_head_report_love:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args git_files_changed_since_love:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4234,6 +4238,8 @@
       "Bash(node scripts/aig.mjs app_shared_color_gray_light:*)",
       "Bash(node scripts/aig.mjs app_shared_color_code_background:*)",
       "Bash(node scripts/aig.mjs git_history_folder_bytes_report:*)",
+      "Bash(node scripts/aig.mjs git_history_paths_absent_at_head_report_love:*)",
+      "Bash(node scripts/aig.mjs git_files_changed_since_love:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5616,7 +5622,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args git_history_heavy_absent_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_shared_color_gray_light:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_shared_color_code_background:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args git_history_folder_bytes_report:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args git_history_folder_bytes_report:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args git_history_paths_absent_at_head_report_love:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args git_files_changed_since_love:*)"
     ],
     "defaultMode": "acceptEdits"
   },
