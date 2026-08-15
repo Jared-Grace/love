@@ -1,3 +1,4 @@
+import { integer_factorization_to_sat_factorization_cnf } from "./integer_factorization_to_sat_factorization_cnf.mjs";
 import { integer_factorization_to_sat_multiplier_csa_build } from "./integer_factorization_to_sat_multiplier_csa_build.mjs";
 import { integer_factorization_to_sat_full_adder_csa } from "./integer_factorization_to_sat_full_adder_csa.mjs";
 import { integer_factorization_to_sat_half_adder } from "./integer_factorization_to_sat_half_adder.mjs";
@@ -11,7 +12,6 @@ import { ceil } from "./ceil.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -122,43 +122,14 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return r13;
   }
   function factorizationCNF(N, bits) {
-    let cnf = new CNF();
-    function lambda9() {
-      let r9 = cnf.newVar();
-      return r9;
-    }
-    let x = Array.from(
-      {
-        length: bits,
-      },
-      lambda9,
+    let r7 = integer_factorization_to_sat_factorization_cnf(
+      N,
+      bits,
+      CNF,
+      buildMultiplierCSA,
+      finalizeSum,
     );
-    function lambda10() {
-      let r10 = cnf.newVar();
-      return r10;
-    }
-    let y = Array.from(
-      {
-        length: bits,
-      },
-      lambda10,
-    );
-    cnf.addClause(...x);
-    cnf.addClause(...y);
-    if (greater_than(bits, 1)) {
-      cnf.addClause(...x.slice(1));
-      cnf.addClause(...y.slice(1));
-    }
-    cnf.addClause(-x[subtract(bits, 1)], y[subtract(bits, 1)]);
-    let columns = buildMultiplierCSA(cnf, x, y);
-    let result = finalizeSum(cnf, columns);
-    for (let i = 0; less_than(i, result.length); i++) {
-      let bit = (N >> i) & 1;
-      if (not_equal(result[i], null)) {
-        cnf.addClause(bit ? result[i] : -result[i]);
-      }
-    }
-    return cnf;
+    return r7;
   }
   function to3SAT(cnf) {
     let out = new CNF();
