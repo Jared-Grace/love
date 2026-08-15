@@ -1,8 +1,7 @@
-import { app_code_button_replace_text } from "./app_code_button_replace_text.mjs";
+import { app_shared_button_green_cycle_code } from "./app_shared_button_green_cycle_code.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -60,12 +59,16 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       " with ",
       value_text,
     ]);
-    let label = app_code_button_replace_text();
-    let asked = text_combine_multiple(["Click [", label, "] to replace the "]);
-    html_div_cycle_code(note, [asked, solved_code, " with ", value_text]);
+    ("the asking and the button are one thing: the button says what it will do to this line, so there is nothing to read and then hunt for");
+    let asked = [
+      "Click here to replace the ",
+      solved_code,
+      " with ",
+      value_text,
+    ];
     let holder = html_div(note);
     function lambda$resolve(resolve) {
-      app_shared_button_green(holder, label, resolve);
+      app_shared_button_green_cycle_code(holder, asked, resolve);
     }
     await promise_wrap(lambda$resolve);
   }
