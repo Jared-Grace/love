@@ -1,3 +1,4 @@
+import { integer_factorization_xor_gate } from "./integer_factorization_xor_gate.mjs";
 import { add } from "./add.mjs";
 import { ceil } from "./ceil.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -55,12 +56,8 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return z;
   }
   function xorGate(cnf, a, b) {
-    let z = cnf.newVar();
-    cnf.addClause(-a, -b, -z);
-    cnf.addClause(a, b, -z);
-    cnf.addClause(a, -b, z);
-    cnf.addClause(-a, b, z);
-    return z;
+    let r11 = integer_factorization_xor_gate(cnf, a, b);
+    return r11;
   }
   function halfAdder(cnf, a, b) {
     let sum = xorGate(cnf, a, b);
