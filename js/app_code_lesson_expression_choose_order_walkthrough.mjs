@@ -47,7 +47,13 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     "say something new in the walkthrough, and let the walkthrough grow or shrink to fit it slowly rather than at once";
     "Every one of these presses changes how much there is to read above the line, and the line is what the learner is looking at. Changed at once, the line is somewhere else by the time they look back at it and they have to find it again; grown to slowly, it slides to its new place under their eyes and is never lost.";
     "The whole head moves, not the line, because the line is only one of the things standing under the words - the labels and the buttons are under them too, and a line sliding while everything around it jumped would read as the line coming loose from the page.";
-    let promise = await html_height_change_animate(head, change, duration);
+    "The words themselves are hidden while the head is moving, and shown again once it has arrived, so nothing is read while anything is sliding.";
+    let promise = await html_height_change_animate(
+      head,
+      note,
+      change,
+      duration,
+    );
     return promise;
   }
   async function on_chosen(node, value) {
