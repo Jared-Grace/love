@@ -1,5 +1,5 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { object_property_names } from "./object_property_names.mjs";
+import { functions_call_pairs_rows } from "./functions_call_pairs_rows.mjs";
+import { functions_call_pairs_atoms_by_key } from "./functions_call_pairs_atoms_by_key.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
@@ -19,8 +19,6 @@ import { property_set } from "./property_set.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { function_name_pair_composed } from "./function_name_pair_composed.mjs";
 import { function_exists } from "./function_exists.mjs";
-import { function_path_to_name } from "./function_path_to_name.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
@@ -147,81 +145,8 @@ export async function functions_call_pairs_frequent() {
     }
   }
   list_map(entries, file_scan);
-  ("A function whose whole body IS one of these pairs is the atom the pair is asking");
-  ("for, already written under a name the composed one never guesses: the pair");
-  let f_name2 = fn_name("list_size");
-  (text_combine_multiple([f_name2, " then equal-to-zero is called "]),
-    fn_name("list_empty_is"),
-    " here.");
-  ("Whole body means the file holds one wired pair, that pair's result is what the");
-  ("function hands back, and there is no third worked-out value - which is what tells");
-  ("an atom apart from a long function that happens to hold one wired pair in the");
-  ("middle of it.");
-  let atom_by_key = {};
-  for (let file in file_keys) {
-    let scanned = property_get(file_keys, file);
-    let keys_here = property_get(scanned, "keys");
-    let calls = property_get(scanned, "calls");
-    let alone = equal(keys_here.length, 1);
-    let bare = less_than(calls, 4);
-    let atom_is = alone && bare;
-    if (not(atom_is)) {
-      continue;
-    }
-    let single = keys_here[0];
-    let b2 = property_get(single, "returned");
-    if (not(b2)) {
-      continue;
-    }
-    let only_key = property_get(single, "key");
-    let f_name = function_path_to_name(file);
-    let seen_names = property_get_or_null(atom_by_key, only_key);
-    if (not(seen_names)) {
-      seen_names = [];
-      property_set(atom_by_key, only_key, seen_names);
-    }
-    seen_names.push(f_name);
-  }
-  let rows = [];
-  for (let key in tally) {
-    let record = tally[key];
-    if (not(record.wired)) {
-      continue;
-    }
-    let file_count = object_property_names(record.files).length;
-    let atom_names = property_get_or_null(atom_by_key, key);
-    ("A function whose whole body IS the pair cannot be collapsed into itself, so its");
-    ("own file is not a place the pair could be folded. Counting it held rows at the");
-    ("top of the list that no atom could ever close - three of the five promised by");
-    ("the ",
-      fn_name("list_size"),
-      "-then-equal row were ",
-      fn_name("list_empty_is"),
-      ", ",
-      fn_name("list_size_1"),
-      " and ",
-      fn_name("list_size_2"));
-    ("themselves - which is the same wasted work this column exists to remove, one");
-    ("level up.");
-    let closed_names = object_property_names(record.closed_files);
-    let closed_count = 0;
-    for (let closed_file of closed_names) {
-      let closed_name = function_path_to_name(closed_file);
-      let already_atom = atom_names && list_includes(atom_names, closed_name);
-      if (not(already_atom)) {
-        closed_count = closed_count + 1;
-      }
-    }
-    rows.push({
-      foldable: closed_count,
-      files: file_count,
-      count: record.count,
-      pair: record.example,
-      left: record.left,
-      right: record.right,
-      atoms: atom_names,
-    });
-  }
+  let atom_by_key = functions_call_pairs_atoms_by_key(file_keys);
+  let rows = functions_call_pairs_rows(tally, atom_by_key);
   ("Ranked by how many files the pair could actually be collapsed in, not by how many");
   ("hold it. The two differ badly and in the direction that wastes work: a pair whose");
   ("middle name is used again everywhere reads as a top row and folds nowhere, and");
