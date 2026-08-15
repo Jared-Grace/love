@@ -34,13 +34,14 @@ Consequences you must author to:
 
 ## The grammar is GIVEN. Do not generate it.
 
-You are handed the words, already parsed. `bible_interlinear_verse(reference)` returns, in order, one record per word:
+You are handed the words, already parsed. `app_original_bible_gloss_write_next(chapter_code)` returns, in order, one record per word:
 
 ```
-{ original, translit, parsing, parsing_long, gloss, strong }
+{ original, translit, parsing, parsing_long, gloss, strong,
+  parsing_sentence, occurrence, lexicon: { lemma, translit, derivation, strongs_def, kjv_def } }
 ```
 
-For John 1:1 that is `ἀρχῇ` / `archē` / `N-DFS` / `Noun - Dative Feminine Singular` / `[the] beginning` / `746`.
+For John 1:1 the first six are `ἀρχῇ` / `archē` / `N-DFS` / `Noun - Dative Feminine Singular` / `[the] beginning` / `746`. (`bible_interlinear_verse(reference)` gives those six alone, without the three that are composed for you.)
 
 This is the Berean Study Bible interlinear table, and it settles by data what used to be guessed:
 
@@ -48,9 +49,12 @@ This is the Berean Study Bible interlinear table, and it settles by data what us
 - **`parsing_long` is the morphology.** It is not a hint, it is the answer. **Never contradict it, never restate it in code form, never add a grammatical claim it does not make.** If it says Dative Feminine Singular, your job is to say what the dative is *doing here* — not to decide the case.
 - **`gloss` is a strong default** for your `gloss` field. Strip the square brackets the BSB uses for supplied words (`[the] beginning` → `beginning`). Override it only when it is actively misleading in this clause, and then say why in the explain.
 - **`translit` is the transliteration.** Use it when you point at an English descendant; never invent your own spelling.
-- **`strong` is the Strong's number** — the key into public-domain lexicons for meaning range and derivation.
+- **`strong` is the Strong's number** — the key the two fields below are looked up under.
+- **`parsing_sentence` is the parsing already said in plain English**, composed by `gloss_parsing_sentence` and gated across the whole Greek NT. "This is a demonstrative pronoun, a word that points, in the accusative, the form Greek most often uses for what a sentence acts on, neuter and plural." Build on it; do not re-render the parsing yourself.
+- **`occurrence` is the rarity sentence**, already written out of the counts — present only when the counts earned one.
+- **`lexicon` is Strong's own entry** (1890, public domain), present only for Greek. `lemma` is the dictionary form — the word as a lexicon lists it, which the inflected `original` is not. **`derivation` is the etymology**: `ἀπέρχομαι` comes back as "from G575 (ἀπό) and G2064 (ἔρχομαι)". `strongs_def` is the meaning range and `kjv_def` is how the KJV rendered it. A word whose entry has no `derivation` simply has no `derivation` field — that absence is the lexicon declining to say, not a word without an origin.
 
-So the authoring job is **the explain field, and only the parts no dataset holds**: turning the parsing into plain English, saying what the form does in this clause, and the etymology.
+So the authoring job is **the explain field, and only the parts no dataset holds**: saying what the form is doing *in this clause*, and choosing which of the given facts this reader needs.
 
 A passage where you find yourself deciding a case or a tense means you are not reading the data. Stop and pull it.
 
