@@ -1,6 +1,6 @@
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { equal } from "./equal.mjs";
-import { claude_transcripts_folder } from "./claude_transcripts_folder.mjs";
+import { claude_project_folder } from "./claude_project_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
@@ -17,7 +17,7 @@ export async function p_commands_repeated() {
   "candidates that never surfaced as a permission prompt - a re-run build, a";
   "re-typed workflow. The permission-prompt reports cover the prompt-sourced";
   "half; this covers repetition in the command stream itself. Read-only.";
-  let folder = claude_transcripts_folder();
+  let folder = claude_project_folder();
   let names = await folder_read_files(folder);
   function is_jsonl(name) {
     let ew = text_ends_with(name, ".jsonl");
