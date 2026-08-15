@@ -143,6 +143,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_nested_divide,
     app_code_lesson_expression_plus_minus,
     app_code_lesson_expression_times_divide,
+    app_code_lesson_expression_choose_order,
     app_code_lesson_expression_plus_times,
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
@@ -196,7 +197,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_not_comparison,
     app_code_lesson_expression_not_equal_same,
-    app_code_lesson_expression_choose_order,
   ];
   return fns;
 }
