@@ -11,8 +11,8 @@ export function integer_factorization_to_sat_compress_columns(
 ) {
   arguments_assert(arguments, 4);
   function lambda6() {
-    let r6 = [];
-    return r6;
+    let r = [];
+    return r;
   }
   let next = Array.from(
     {
