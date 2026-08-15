@@ -1,3 +1,4 @@
+import { ebible_testament_new_name } from "./ebible_testament_new_name.mjs";
 export function ebible_book_divisions() {
   "the 66-book canon grouped into its traditional genre sections, each a contiguous run of the canonical order and tagged with its testament, so the book picker can nest section cards under an Old or New Testament card while the section names live in this one place";
   let divisions = [
@@ -54,12 +55,12 @@ export function ebible_book_divisions() {
     },
     {
       name: "Gospels & Acts (history)",
-      testament: "New Testament",
+      testament: ebible_testament_new_name(),
       book_codes: ["MAT", "MRK", "LUK", "JHN", "ACT"],
     },
     {
       name: "Letters",
-      testament: "New Testament",
+      testament: ebible_testament_new_name(),
       book_codes: [
         "ROM",
         "1CO",
@@ -86,7 +87,7 @@ export function ebible_book_divisions() {
     },
     {
       name: "Revelation",
-      testament: "New Testament",
+      testament: ebible_testament_new_name(),
       book_codes: ["REV"],
     },
   ];
