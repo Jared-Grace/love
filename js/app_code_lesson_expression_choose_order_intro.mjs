@@ -19,5 +19,7 @@ export function app_code_lesson_expression_choose_order_intro(
     "In ",
     whole_line,
   );
-  html_div_cycle_code(parent, rule);
+  ("the rule is handed back because it is the one line here that stops being true: it is said of the whole line as written, and the first choice leaves a shorter line it no longer describes, so the caller takes it away at that moment");
+  let rule_line = html_div_cycle_code(parent, rule);
+  return rule_line;
 }
