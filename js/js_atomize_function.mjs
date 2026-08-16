@@ -1,5 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { js_block_insert } from "./js_block_insert.mjs";
+import { js_block_name_taken_is } from "./js_block_name_taken_is.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -15,13 +16,18 @@ export async function js_atomize_function(ast) {
   let fes = js_list_type(ast, "FunctionExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
-    let stack_1 = list_get_end_1(stack);
-    if (list_is(stack_1)) {
+    let stack_ = list_get_end_1(stack);
+    if (list_is(stack_)) {
       let stack_2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack_2, "CallExpression");
       if (type_is) {
         let node = property_get(v, "node");
         let name = js_function_declaration_name(node);
+        let taken = js_block_name_taken_is(stack, name);
+        if (taken) {
+          ("a function of that name is already declared in the block this one would land in. as an argument the name belongs to the function alone and two of them cannot see each other; side by side in one block they are two declarations of one name, both hoisted, and the later one answers to it everywhere - so the call that meant the first would quietly run the second. left where it stands it is still the code that was written");
+          return;
+        }
         let copy = object_copy(node);
         ("the copy is retyped before it is inserted: it is being lifted out of an argument list into a block, and a function used as a value and a function declared as a statement are two different node types even though they read the same");
         js_node_type_set(copy, "FunctionDeclaration");
