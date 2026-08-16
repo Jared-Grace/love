@@ -1,3 +1,4 @@
+import { bible_interlinear_verses_words } from "./bible_interlinear_verses_words.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_finding_elsewhere_empty_is } from "./gloss_finding_elsewhere_empty_is.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
@@ -7,14 +8,11 @@ import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_entries_parsings_exceeding } from "./gloss_entries_parsings_exceeding.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
 import { each } from "./each.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
@@ -55,18 +53,10 @@ export async function app_original_bible_gloss_parsings_exceeding(
     }
     let verses = g_sermon_passage_verses_key(passage);
     let verse_numbers = property_get(passage, "verse_numbers");
-    let records = [];
-    function verse_read(verse_number) {
-      let property_name = verse_number_key();
-      let words = list_find_property_get(
-        verses_interlinear,
-        property_name,
-        verse_number,
-        "words",
-      );
-      list_add_multiple(records, words);
-    }
-    each(verse_numbers, verse_read);
+    let records = bible_interlinear_verses_words(
+      verses_interlinear,
+      verse_numbers,
+    );
     let found = gloss_entries_parsings_exceeding(entries, records);
     if (null_is(found)) {
       let unlooked = {
