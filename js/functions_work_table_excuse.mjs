@@ -1,8 +1,8 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { functions_work_size_ceiling } from "./functions_work_size_ceiling.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 export function functions_work_table_excuse(reading) {
   arguments_assert(arguments, 1);
@@ -16,8 +16,7 @@ export function functions_work_table_excuse(reading) {
   if (not(rest_small_is)) {
     return null;
   }
-  let inside = property_get(reading, "inside");
-  let mostly_is = greater_than(inside, outside);
+  let mostly_is = property_greater_than(reading, "inside", outside);
   if (not(mostly_is)) {
     return null;
   }
