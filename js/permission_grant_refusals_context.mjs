@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { permission_plain_marker } from "./permission_plain_marker.mjs";
-import { equal } from "./equal.mjs";
 import { function_command_seams_reached_paths_memo } from "./function_command_seams_reached_paths_memo.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -110,8 +110,7 @@ export async function permission_grant_refusals_context(unaliased, context) {
   let plain = function_params_plain_ast(ast);
   let plain_prefix = permission_plain_marker();
   for (let p of params) {
-    let kind = property_get(p, "type");
-    let named = equal(kind, "Identifier");
+    let named = property_equals(p, "type", "Identifier");
     if (not(named)) {
       list_add(
         refusals,
