@@ -1,9 +1,8 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { js_name_lambda } from "./js_name_lambda.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_size } from "./text_size.mjs";
-import { text_skip } from "./text_skip.mjs";
 import { text_digits_is } from "./text_digits_is.mjs";
 import { not } from "./not.mjs";
 export function js_name_lambda_is(name) {
@@ -20,8 +19,7 @@ export function js_name_lambda_is(name) {
   if (not(starts_is)) {
     return false;
   }
-  let count = text_size(word);
-  let after = text_skip(name, count);
+  let after = text_prefix_without_inner(name, word);
   let numbered_is = text_digits_is(after);
   return numbered_is;
 }
