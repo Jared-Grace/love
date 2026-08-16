@@ -1,3 +1,4 @@
+import { app_search_results_book_card_collapsed_set } from "./app_search_results_book_card_collapsed_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -15,11 +16,6 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
-import { html_display_none } from "./html_display_none.mjs";
-import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_style_margin_x } from "./html_style_margin_x.mjs";
-import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
-import { html_display_block } from "./html_display_block.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
 import { list_single } from "./list_single.mjs";
@@ -73,19 +69,14 @@ export function app_search_results_book_card(
     collapsed: false,
   };
   function collapsed_set(value) {
-    card.collapsed = value;
-    if (card.collapsed) {
-      html_display_none(div_body);
-      html_display_inline_block(div_book);
-      let value3 = app_shared_spaced_neighbor_gap();
-      html_style_margin_x(div_book, value3);
-      html_style_margin_bottom(header, "0");
-    } else {
-      html_display_block(div_body);
-      html_display_block(div_book);
-      html_style_margin_x(div_book, "0");
-      html_style_margin_bottom(header, "0.3em");
-    }
+    let r = app_search_results_book_card_collapsed_set(
+      value,
+      card,
+      div_body,
+      div_book,
+      header,
+    );
+    return r;
   }
   async function chapters_single_expand() {
     "a book holding one chapter offers no choice of chapter, so opening the book opens that chapter with it rather than asking for a second click that could only go one way";
