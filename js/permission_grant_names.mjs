@@ -1438,6 +1438,10 @@ export function permission_grant_names() {
   let spelled1405 = fn_name("ebible_verse_download");
   let spelled1406 = fn_name("ebible_version_books_testament_new");
   let spelled1407 = fn_name("function_prose_replace");
+  let spelled1408 = fn_name(
+    "app_original_bible_gloss_parsings_exceeding_chapters",
+  );
+  let spelled1409 = fn_name("app_original_bible_gloss_passage_entries");
   let names = [
     spelled,
     spelled2,
@@ -2846,6 +2850,8 @@ export function permission_grant_names() {
     spelled1405,
     spelled1406,
     spelled1407,
+    spelled1408,
+    spelled1409,
   ];
   return names;
 }
