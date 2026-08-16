@@ -1,3 +1,4 @@
+import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
 import { app_shared_bible_home_bar_buttons } from "./app_shared_bible_home_bar_buttons.mjs";
 import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
@@ -8,7 +9,6 @@ import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
 import { html_button_share_text } from "./html_button_share_text.mjs";
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
@@ -21,16 +21,12 @@ import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
-import { noop } from "./noop.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { list_add } from "./list_add.mjs";
-import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
@@ -146,8 +142,8 @@ export async function app_shared_bible_home_generic(
   if (chapter_reader_is) {
     app_shared_button(bottom, "📖 Whole chapter", lambda3);
   }
-  let component = app_shared_button_copy(bottom, noop);
-  let v3 = app_shared_bible_toggle_update(
+  app_shared_bible_home_copy_button(
+    bottom,
     updates,
     verse_numbers_chosen,
     verse_number,
@@ -155,10 +151,6 @@ export async function app_shared_bible_home_generic(
     languages_verses,
     p_verse,
   );
-  let choose = property_get(v3, "choose");
-  html_on_click(component, choose);
-  let update = property_get(v3, "update");
-  list_add(updates, update);
   ("a link to this one verse, the same button the whole-chapter reader has carried on the end of this row - a reader looking at a single verse is the reader most likely to want to hand it to somebody, and until now the only way to was to open the whole chapter first. the verse numbers are a list because the chapter reader can have several picked at once; here there is exactly one, so it goes in on its own.");
   ("the languages have to be read again rather than taken from the languages_chosen already standing here: that one holds whole language objects and the share link wants the codes that go in the hash, which is what the chapter reader's variable of the same name holds. two shapes, one word - so the shape is named here instead.");
   let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
