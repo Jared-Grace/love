@@ -4,7 +4,8 @@ export function app_code_expression_chosen_background_color() {
   arguments_assert(arguments, 0);
   ("the colour a piece of a line wears while it is the piece being worked out: the block a learner has just chosen, the words naming it, and what it comes to on its way down");
   ("Blue rather than green. Green is what this app says well done in - every button, every finish, every right answer - so a block turning green in the middle of a line reads as the line being finished rather than as the line being pointed at. Nothing has been finished at that moment; one piece has been singled out, and the next thing the learner does is watch it change.");
-  ("The deepest step of the shared blue is what it reads from, so it is the same blue the rest of the app is built in rather than a colour chosen here, and white lettering is legible on it.");
-  let color = app_shared_color_blue_dark();
+  ("The blue the pages lead with is what it reads from, so it is the same blue the rest of the app is built in rather than a colour chosen here, and white lettering is legible on it.");
+  ("A lighter blue than the deep one the labels on blue cards are written in. The block sits on a black line and inside a pale blue card, and the deep one read as a dark shape on a dark line - near enough to the line under it that the thing being pointed at had to be looked for.");
+  let color = app_shared_color_brand_blue();
   return color;
 }

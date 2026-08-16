@@ -14,6 +14,6 @@ export function color_between(t, start, end) {
   let r = channel(0);
   let g = channel(1);
   let b = channel(2);
-  let color = text_combine_multiple(["rgb(", r, ", ", g, ", ", b, ")"]);
+  let color = color_rgb([r, g, b]);
   return color;
 }
