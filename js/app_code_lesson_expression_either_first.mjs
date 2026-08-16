@@ -1,3 +1,4 @@
+import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
@@ -69,7 +70,7 @@ export function app_code_lesson_expression_either_first() {
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
     let info = {
-      question_label: "The line to work out: ",
+      question_label: app_code_label_line_to_solve(),
       on_question: html_text_set_code_dark,
       answer_label: "Choose an operator to work out first: ",
       on_answer,

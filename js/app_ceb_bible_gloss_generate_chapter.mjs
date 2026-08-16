@@ -26,6 +26,6 @@ export async function app_ceb_bible_gloss_generate_chapter(
     fn,
     chapter_code_specified,
     passage_reference,
-    language_reader,
+    "English",
   );
 }
