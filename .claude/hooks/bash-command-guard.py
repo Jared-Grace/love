@@ -4515,6 +4515,14 @@ def main():
     if grep_word is not None:
         return decide("deny", repo_plain_recursive_grep_deny_reason(grep_word))
 
+    # The same shape aimed at the memory notes, which are their own folder
+    # outside this repo and have their own named search. Worth its own redirect
+    # rather than none: searching the notes before re-deriving something is the
+    # habit the instructions ask for, and it should not cost a folder typed out.
+    memory_word = find_memory_plain_recursive_grep(command)
+    if memory_word is not None:
+        return decide("deny", memory_plain_recursive_grep_deny_reason(memory_word))
+
     # Same floor-instead-of-prompt reasoning again, applied to a loop that sits
     # and waits for a background task's output file to fill: the harness
     # re-invokes the caller when that command exits, so the loop is answering a
