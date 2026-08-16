@@ -10,6 +10,8 @@ export function app_code_expression_replace_button(parent, press) {
   ("Everything about to move on the line is blue - the block chosen, the words naming it, and the value on its way down into its room. So the word for the thing that starts all that is blue too, and a learner who has been watching the blue reads what the button does before reading the sentence on it.");
   ("The rest of the sentence stays as it was. It says where to press and nothing more, and a whole button in the colour would have said that the pressing is the thing the colour is about rather than the swap.");
   ("Weighted a little heavier as well as coloured, because the colour alone is asked to be legible on the button's own grey - and a word carrying the meaning of the button ought to be the word the eye lands on first whatever it is standing on.");
+  ("the same wide grey button every other button on this screen is, filling the line it has to itself rather than standing in the middle of it");
+  ("Wide because that is the shape of a button here: See another example, Next and Home all fill their line, and a smaller button among them reads as a different kind of thing to press rather than as the next one. Grey for the same reason - green is what this app says well done in, and a button offering the swap is asking for it, not praising it.");
   let button = app_shared_button_wide(parent, "Click here to ", press);
   let word = html_span_text(button, "replace");
   let color = app_code_expression_chosen_background_color();
