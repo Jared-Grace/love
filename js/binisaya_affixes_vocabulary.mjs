@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { each } from "./each.mjs";
@@ -6,7 +7,6 @@ import { list_tally } from "./list_tally.mjs";
 import { not } from "./not.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split } from "./text_split.mjs";
 export async function binisaya_affixes_vocabulary() {
   "Every distinct piece of the shorthand binisaya.com writes a word's construction in, and how many words each piece was seen on.";
@@ -26,8 +26,7 @@ export async function binisaya_affixes_vocabulary() {
   }
   each(held, word_read);
   function empty_not_is(piece) {
-    let empty = text_empty_is(piece);
-    let readable = not(empty);
+    let readable = text_empty_not_is(piece);
     return readable;
   }
   let kept = list_filter(pieces, empty_not_is);
