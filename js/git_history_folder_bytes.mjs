@@ -14,14 +14,11 @@ export async function git_history_folder_bytes(folder) {
   "The gone weight is the half that can be acted on. What the present still holds has to stay, whatever it weighs; every earlier version of it is being carried for nothing, and the difference between those two is exactly the decision being made.";
   "Whether the present still holds a file is asked of the file itself and never of its name. Its neighbour asks by name, rightly, because a rewrite is told which names to drop - but a folder that is rebuilt keeps every one of its names forever while replacing what is under them, so asking by name there answers that the whole of it is still wanted when almost none of it is. Asked that way, the folder holding this repository's builds reported one twenty-fourth of its weight as dead; asked of the files, nearly two thirds of it is.";
   arguments_assert(arguments, 1);
-  let r = await git_history_tracked_blobs(folder);
-  let blobs = property_get(r, "blobs");
-  let tracked = property_get(r, "tracked");
+  let blobs = await git_history_blobs_marked(folder);
   let held = {};
   let dropped = {};
   for (let blob of blobs) {
-    let alive = tracked.blob_names[blob.name];
-    let tally = alive ? held : dropped;
+    let tally = blob.alive_blob ? held : dropped;
     for (let name of path_folders_containing(blob.path)) {
       tally_number_add(held, name, 0);
       tally_number_add(dropped, name, 0);

@@ -11,17 +11,13 @@ export async function git_history_paths_absent_at_head(folder) {
   "Only paths absent at HEAD, because a path the present still tracks is not a candidate for anything, and only blobs the present does not hold either, because a blob living at both a live path and a dead one survives whatever the dead path does.";
   "One line of git's object listing names one object once, at the first path it was reached by, so nothing here is counted twice.";
   arguments_assert(arguments, 1);
-  let r = await git_history_tracked_blobs(folder);
-  let blobs = property_get(r, "blobs");
-  let tracked = property_get(r, "tracked");
+  let blobs = await git_history_blobs_marked(folder);
   let tally = {};
   for (let blob of blobs) {
-    let alive_path = tracked.paths[blob.path];
-    if (alive_path) {
+    if (blob.alive_path) {
       continue;
     }
-    let alive_blob = tracked.blob_names[blob.name];
-    if (alive_blob) {
+    if (blob.alive_blob) {
       continue;
     }
     tally_number_add(tally, blob.path, blob.bytes);
