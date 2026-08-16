@@ -40,7 +40,6 @@ export function app_g_verify_view_suggest_box_new(
   html_style_font_size(suggest_area, value8);
   html_style_line_height(suggest_area, "1.5");
   html_style_margin_top(suggest_area, small_gap);
-  ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
   let r = {
     suggest_area,
     value4,
