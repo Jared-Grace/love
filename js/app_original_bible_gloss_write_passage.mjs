@@ -1,3 +1,4 @@
+import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
 import { gloss_words_parsing_sentence_added } from "./gloss_words_parsing_sentence_added.mjs";
@@ -6,12 +7,9 @@ import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_map_index_async } from "./list_map_index_async.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
-import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { list_find } from "./list_find.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export async function app_original_bible_gloss_write_passage(
   chapter_code,
   verse_key,
@@ -23,12 +21,7 @@ export async function app_original_bible_gloss_write_passage(
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again. Everything asked for here is read out of the text and the tables, so it says nothing about whether the passage has been written before and is the same hand-off either way.";
   "That matters because the first chapters were generated rather than authored, and generated content cannot be repaired in place - an explanation that names a case the parsing does not give is wrong from its first word, not in one clause of it. Until this existed the only hand-off was the one that finds the next unwritten passage, so a written passage could be overwritten but not read for.";
   let passages = await app_original_bible_gloss_passages(chapter_code);
-  function matches(candidate) {
-    let left = g_sermon_passage_verses_key(candidate);
-    let eq = equal(left, verse_key);
-    return eq;
-  }
-  let passage = list_find(passages, matches);
+  let passage = gloss_passages_verses_key_find(passages, verse_key);
   ("The parsed words come from the kept copy. This is asked once per passage authored, so a chapter of twenty-two passages walks the whole table twenty-two times over without it - which is the case the kept copy was written for. Reading a passage to explain it consumes the text and settles nothing about it, so a kept copy is the right thing to read here, unlike the paths that publish the text.");
   let chapters = await bible_interlinear_chapters_words_cache();
   let verses_interlinear = property_get(chapters, chapter_code);
