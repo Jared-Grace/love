@@ -1,3 +1,4 @@
+import { list_tally_ranked_top } from "./list_tally_ranked_top.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { claude_bash_commands } from "./claude_bash_commands.mjs";
 import { bash_command_labelled_is } from "./bash_command_labelled_is.mjs";
@@ -6,8 +7,6 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_tally_ranked } from "./list_tally_ranked.mjs";
-import { list_take } from "./list_take.mjs";
 export async function claude_bash_labels_alongside(days, label, count) {
   "What one named program is run beside, counted and commonest first, over the sessions of the last so many days";
   "A ranking says how often something is reached for. What it cannot say is whose output it was reaching for, and for the programs that only ever trim or reshape what came before them that is the whole question: the same count means the repo has a hole to fill if the thing being trimmed is the repo's own answer, and means nothing at all if it is some other program's printing, which no seam of ours can shorten.";

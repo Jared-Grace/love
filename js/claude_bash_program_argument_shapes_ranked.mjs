@@ -1,11 +1,10 @@
+import { list_tally_ranked_top } from "./list_tally_ranked_top.mjs";
 import { claude_bash_commands } from "./claude_bash_commands.mjs";
 import { bash_command_program_arguments } from "./bash_command_program_arguments.mjs";
 import { path_shape } from "./path_shape.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_tally_ranked } from "./list_tally_ranked.mjs";
-import { list_take } from "./list_take.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function claude_bash_program_argument_shapes_ranked(
   days,
