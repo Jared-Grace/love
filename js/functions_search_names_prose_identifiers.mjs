@@ -1,3 +1,4 @@
+import { catch_null_async } from "./catch_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_search } from "./functions_search.mjs";
 import { functions_search_any_word } from "./functions_search_any_word.mjs";
@@ -20,7 +21,12 @@ export async function functions_search_names_prose_identifiers(words_comma) {
   let names = await functions_search(words_comma);
   let names_any_word = await functions_search_any_word(words_comma);
   let purpose = await functions_prose_search(words_comma);
-  let identifiers = await data_identifiers_search(words_comma);
+  async function identifiers_attempt() {
+    "The identifier search refuses a word no function mentions, and refusing is right for it on its own - somebody asking who calls a name has misspelt the name. Here it is the ordinary case rather than a mistake, because the whole question is whether the thing exists at all, and the channel most likely to find nothing must not be the one that ends the run. So a refusal is kept as nothing found, and the three answers already paid for survive it.";
+    let found = await data_identifiers_search(words_comma);
+    return found;
+  }
+  let identifiers = await catch_null_async(identifiers_attempt);
   function names_found_none_is() {
     "Empty means empty in both name channels at once. One word answering is enough to say the asker's words reach this repo, so the vocabulary would be answering a question nobody has.";
     let count_all = property_get(names, "found");
