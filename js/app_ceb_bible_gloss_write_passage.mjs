@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_passage_verses_read } from "./app_ceb_bible_gloss_passage_verses_read.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { gloss_words_capitalised_always } from "./gloss_words_capitalised_always.mjs";
@@ -6,15 +7,7 @@ import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_index } from "./list_map_index.mjs";
-import { not } from "./not.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 export async function app_ceb_bible_gloss_write_passage(
   chapter_code,
   verse_key,
@@ -31,10 +24,6 @@ export async function app_ceb_bible_gloss_write_passage(
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again. That matters here more than on the Greek side, because every Cebuano chapter now in the store was generated rather than authored, so re-authoring is not the exception but the whole of the work.";
   let passages = await app_ceb_bible_gloss_passages(chapter_code);
   let passage = gloss_passages_verses_key_find(passages, verse_key);
-  let verse_numbers = property_get(passage, "verse_numbers");
-  let texts = property_get(passage, "texts");
-  let cebuano_texts = list_first(texts);
-  let english_texts = list_get(texts, 1);
   let known = await binisaya_words_known();
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let bible_folder = list_first(bible_folders);
@@ -43,54 +32,21 @@ export async function app_ceb_bible_gloss_write_passage(
     bible_folder,
     book_code,
   );
-  ("The words are cut exactly as the gathering cut them, so what was looked up and what is handed over are the same list. Cut differently here, a word would arrive saying nothing was ever asked about it while its answer sat in the cache under a spelling this never asks for.");
-  function word_read(word) {
-    let key = text_lower_to(word);
-    let capitalised_always = property_exists(capitalised, key);
-    let held = property_exists(known, key);
-    if (not(held)) {
-      let absent = {
-        word,
-        capitalised_always,
-        looked_up: false,
-      };
-      return absent;
-    }
-    let entry = property_get(known, key);
-    let r = {
-      word,
-      capitalised_always,
-      looked_up: true,
-      analysed: property_get(entry, "analysed"),
-      root: property_get(entry, "root"),
-      affixes: property_get(entry, "affixes"),
-    };
-    return r;
-  }
-  function verse_read(verse_number, index) {
-    let cebuano = list_get(cebuano_texts, index);
-    let english = list_get(english_texts, index);
-    let bare = text_punctuation_dash_kept_split(cebuano);
-    let words = list_map(bare, word_read);
-    let r = {
-      verse_number,
-      cebuano,
-      english,
-      words,
-    };
-    return r;
-  }
-  let verses = list_map_index(verse_numbers, verse_read);
+  let verses = app_ceb_bible_gloss_passage_verses_read(
+    passage,
+    known,
+    capitalised,
+  );
   let file = gloss_write_file_path(
     chapter_code,
     verse_key,
     app_ceb_bible_gloss_generate,
   );
-  let r2 = {
+  let r = {
     chapter_code,
     verse_key,
     file,
     verses,
   };
-  return r2;
+  return r;
 }

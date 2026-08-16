@@ -1,3 +1,4 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_list_type } from "./js_list_type.mjs";
@@ -16,10 +17,11 @@ export function js_function_parameter_call_sizes(node, index) {
   "Handing the given function on to somebody else is refused rather than followed, because the number of arguments would then be decided somewhere this reading never looks. Counting every mention of the name and comparing that with the number of calls is what catches it: a mention that is not a call is a use this reading cannot account for.";
   "A name bound again inside the body is refused for the same reason. The mentions below it would belong to the new binding, and this counts by name alone.";
   let params = property_get(node, "params");
-  let param = list_get(params, index);
-  if (equal(param, null)) {
+  let past_end_is = list_index_past_end_is(params, index);
+  if (past_end_is) {
     return null;
   }
+  let param = list_get(params, index);
   let param_is = js_node_type_is(param, "Identifier");
   if (not(param_is)) {
     return null;
