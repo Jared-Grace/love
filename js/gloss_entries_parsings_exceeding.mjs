@@ -1,3 +1,4 @@
+import { gloss_words_parsing_carrying_other } from "./gloss_words_parsing_carrying_other.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_grammar_terms } from "./gloss_grammar_terms.mjs";
@@ -6,7 +7,6 @@ import { each } from "./each.mjs";
 import { each_index } from "./each_index.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -42,11 +42,7 @@ export function gloss_entries_parsings_exceeding(entries, records) {
       if (carried) {
         return;
       }
-      let elsewhere = gloss_words_parsing_carrying_other(
-        records,
-        index,
-        term2,
-      );
+      let elsewhere = gloss_words_parsing_carrying_other(records, index, term2);
       let finding = {
         word: property_get(entry, word_key),
         parsing,
