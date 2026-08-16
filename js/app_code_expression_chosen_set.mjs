@@ -13,6 +13,9 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   ("one block in the page's own reckoning too, not merely in colour: kept whole so it can never be broken across two lines halfway through its working out, and so that it can be moved as a piece when the swap is shown happening");
   ("A run of lettering left as plain text has no shape of its own to move - it is only the letters where the sentence happens to have reached - so anything asking it to travel is quietly ignored and the swap is read as having simply appeared.");
   html_display_inline_block(node_span);
+  ("the green comes up rather than appearing, and the chip goes down over the very same while, so the two of them read as one thing turning into another instead of two things swapped between frames");
+  app_code_expression_colored_slowly(node_span);
+  app_code_expression_colored_slowly(operator_span);
   app_shared_button_screen_green_style_assign(node_span);
   app_code_expression_chip_style(node_span);
   html_style_background_color_set(operator_span, "transparent");

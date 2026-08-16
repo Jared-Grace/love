@@ -3,7 +3,7 @@ import { app_shared_animation_duration } from "./app_shared_animation_duration.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-import { html_style_clear } from "./html_style_clear.mjs";
+import { app_code_expression_chosen_clear } from "./app_code_expression_chosen_clear.mjs";
 import { not } from "./not.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 export async function app_code_expression_replaced_settle(
@@ -22,7 +22,7 @@ export async function app_code_expression_replaced_settle(
     ("where the swap was watched arriving, the green has nothing left to say and comes off in the same movement, so the line settles in one go all the way to how it is about to be drawn");
     ("Held back, the line would settle twice over: once for the value being shorter than its working, and again a moment later for the green's own room going.");
     if (watched) {
-      html_style_clear(node_span);
+      app_code_expression_chosen_clear(node_span);
     }
   }
   let duration = app_shared_animation_duration();
