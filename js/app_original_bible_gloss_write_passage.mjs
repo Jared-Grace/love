@@ -1,3 +1,4 @@
+import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
@@ -48,7 +49,11 @@ export async function app_original_bible_gloss_write_passage(
     return r;
   }
   let verses = await list_map_index_async(verse_numbers, verse_read);
-  let file = gloss_write_file_path(chapter_code, verse_key);
+  let file = gloss_write_file_path(
+    chapter_code,
+    verse_key,
+    app_original_bible_gloss_generate,
+  );
   let r2 = {
     chapter_code,
     verse_key,
