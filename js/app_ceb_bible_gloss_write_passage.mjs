@@ -46,18 +46,12 @@ export async function app_ceb_bible_gloss_write_passage(
   ("The words are cut exactly as the gathering cut them, so what was looked up and what is handed over are the same list. Cut differently here, a word would arrive saying nothing was ever asked about it while its answer sat in the cache under a spelling this never asks for.");
   function word_read(word) {
     let key = text_lower_to(word);
-    let named = property_exists(capitalised, key);
-    if (named) {
-      let name = {
-        word,
-        capitalised_always: true,
-      };
-      return name;
-    }
+    let capitalised_always = property_exists(capitalised, key);
     let held = property_exists(known, key);
     if (not(held)) {
       let absent = {
         word,
+        capitalised_always,
         looked_up: false,
       };
       return absent;
@@ -65,6 +59,7 @@ export async function app_ceb_bible_gloss_write_passage(
     let entry = property_get(known, key);
     let r = {
       word,
+      capitalised_always,
       looked_up: true,
       analysed: property_get(entry, "analysed"),
       root: property_get(entry, "root"),

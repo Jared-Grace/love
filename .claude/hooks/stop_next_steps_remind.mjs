@@ -40,9 +40,16 @@ let NEXT_STEPS_MARKERS = [
 // Both halves are required. "waiting" alone would excuse any report that
 // happens to use the word; the promise to report back is what makes the
 // closing complete, because it is what tells the user no reply is wanted.
+//
+// The promise is matched by the promise itself, never by the pronoun in
+// front of it. The first attempt asked for "I'll", spelled with a straight
+// apostrophe, and blocked a closing that said exactly the right thing -
+// because the apostrophe that reached the transcript was the typographic
+// one. A marker that turns on a character nobody chose deliberately is a
+// marker that fails at random.
 let WAITING_MARKERS = [
   /\bwaiting (on|for)\b/i,
-  /\b(I'll|I will) (say|let you know|tell you|report|come back|update you)\b/i,
+  /\b(let you know|say when|tell you when|report back|come back to you|update you)\b/i,
 ];
 
 let REASON =
