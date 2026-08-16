@@ -1497,6 +1497,8 @@
       "Bash(node scripts/ai.mjs ebible_verse_download:*)",
       "Bash(node scripts/ai.mjs ebible_version_books_testament_new:*)",
       "Bash(node scripts/ai.mjs function_prose_replace:*)",
+      "Bash(node scripts/ai.mjs app_original_bible_gloss_parsings_exceeding_chapters:*)",
+      "Bash(node scripts/ai.mjs app_original_bible_gloss_passage_entries:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2904,6 +2906,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_verse_download:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_version_books_testament_new:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_prose_replace:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_parsings_exceeding_chapters:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_passage_entries:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4310,6 +4314,8 @@
       "Bash(node scripts/aig.mjs ebible_verse_download:*)",
       "Bash(node scripts/aig.mjs ebible_version_books_testament_new:*)",
       "Bash(node scripts/aig.mjs function_prose_replace:*)",
+      "Bash(node scripts/aig.mjs app_original_bible_gloss_parsings_exceeding_chapters:*)",
+      "Bash(node scripts/aig.mjs app_original_bible_gloss_passage_entries:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5716,7 +5722,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args firebase_storage_download_ebible:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_verse_download:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_version_books_testament_new:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args function_prose_replace:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args function_prose_replace:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_parsings_exceeding_chapters:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_passage_entries:*)"
     ],
     "defaultMode": "acceptEdits"
   },
