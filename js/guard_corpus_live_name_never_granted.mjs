@@ -2,7 +2,10 @@ export function guard_corpus_live_name_never_granted() {
   "A function that exists so the guard corpus has a stand-in for the shape it";
   "keeps needing: a name the dispatcher really answers to, which no allow rule";
   "covers, taking no arguments.";
-  "It must never be granted and must never be called. Every case testing what the";
+  "do NOT grant this, and never call it. Saying so in the words the refusal check";
+  "reads is the point: this said the same thing in its own wording, the check";
+  "matches one exact phrase, and so a grant that three cases depend on the absence";
+  "of was written without anything standing in the way. Every case testing what the";
   "guard does with an untrusted piece of a chain needs such a name, and until this";
   "each of them borrowed an ordinary helper - so the day somebody granted that";
   "helper for its own sake, cases about chaining would start failing about";
