@@ -1,3 +1,6 @@
+import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
 import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
 import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
@@ -9,9 +12,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { app_shared_hash_fields_unknown_told_is } from "./app_shared_hash_fields_unknown_told_is.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { app_shared_bible_chapter_code_default } from "./app_shared_bible_chapter_code_default.mjs";
-import { html_bar_foot } from "./html_bar_foot.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
@@ -20,8 +21,6 @@ import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
-import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { equal } from "./equal.mjs";
@@ -35,13 +34,7 @@ import { promise_later } from "./promise_later.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
 import { list_map_add_async } from "./list_map_add_async.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
-import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
-import { number_to_words } from "./number_to_words.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { html_margin_0 } from "./html_margin_0.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_p } from "./html_p.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -50,15 +43,11 @@ import { list_map_property } from "./list_map_property.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
 import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
@@ -68,32 +57,17 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_dismissable_message } from "./app_shared_dismissable_message.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_change } from "./app_shared_bible_change.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_shared_bible_read(context, verse_action) {
-  let root = app_shared_mobile_default_font_size(context);
-  ("clear first so this reader can re-render in place (mode switch) instead of only on a fresh page load");
-  html_clear(root);
-  html_margin_0(root);
-  let bc = app_shared_bar_content_root(root);
-  let shell = property_get(bc, "shell");
-  let content = property_get(bc, "content");
-  app_shared_content_column_pad(content);
-  html_flex_column_gap(content, "0");
-  let bar = property_get(bc, "bar");
-  let t = html_button_copy_text();
-  let max = app_shared_bible_chosen_max();
-  let v2 = number_to_words(max);
-  let padded = text_pad_space_quote_double(t);
-  let help_text = text_combine_multiple([
-    "Tap up to ",
-    v2,
-    " verse numbers, then ",
-    padded,
-    " to save that passage",
-  ]);
+  let r3 = app_shared_bible_read_frame(context);
+  let help_text = property_get(r3, "help_text");
+  let max = property_get(r3, "max");
+  let t = property_get(r3, "t");
+  let bar = property_get(r3, "bar");
+  let content = property_get(r3, "content");
+  let shell = property_get(r3, "shell");
   let hash = html_hash_object_get();
   ("A language code in the link that names no bible we have is answered here rather than read past. Read past, it was dropped without a word and the chapter opened in whatever languages happened to be left - so somebody sent a link with one letter wrong read the wrong bible and nothing anywhere said so. It is the same screen the sent-a-verse page shows, from the same function, so a wrong link reads the same whichever bible surface it lands on.");
   let unknown_shown = app_shared_bible_hash_unknown_shown_is(content, hash);
@@ -150,13 +124,7 @@ export async function app_shared_bible_read(context, verse_action) {
     bar,
     help_text,
   );
-  ("the count sits UNDER the chapter rather than over it. It is empty until a verse is picked, so it arrives while the reader is looking at the text - and arriving in the top bar it would take its height off the top of the reading, sliding the verse just tapped down the screen away from the thumb that tapped it. Under the body the same height comes off the bottom and nothing already on the screen moves.");
-  let foot = html_bar_foot(shell);
-  html_centered(foot);
-  let count_status = html_p(foot);
-  app_shared_text_deemphasized(count_status);
-  ("a paragraph carries a blank line's worth of margin whether or not it says anything - so with no margin an empty count costs no height at all, and the chapter fills the screen until there is something to say");
-  html_margin_0(count_status);
+  let count_status = app_shared_bible_read_count_foot(shell);
   let chapter_code = text_empty_is(c)
     ? app_shared_bible_chapter_code_default()
     : c;
