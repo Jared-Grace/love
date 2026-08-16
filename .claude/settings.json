@@ -1544,6 +1544,7 @@
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_chapters_rewrite:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_affix_kinds_wrong_count:*)",
       "Bash(node scripts/ai.mjs app_original_bible_gloss_lexicons_named_gate_run:*)",
+      "Bash(node scripts/ai.mjs qa_gates_red_results:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2997,6 +2998,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_chapters_rewrite:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_affix_kinds_wrong_count:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_lexicons_named_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args qa_gates_red_results:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4449,6 +4451,7 @@
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_chapters_rewrite:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_affix_kinds_wrong_count:*)",
       "Bash(node scripts/aig.mjs app_original_bible_gloss_lexicons_named_gate_run:*)",
+      "Bash(node scripts/aig.mjs qa_gates_red_results:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5901,7 +5904,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args permission_grant_word_params:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_chapters_rewrite:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_affix_kinds_wrong_count:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_lexicons_named_gate_run:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_lexicons_named_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args qa_gates_red_results:*)"
     ],
     "defaultMode": "acceptEdits"
   },
