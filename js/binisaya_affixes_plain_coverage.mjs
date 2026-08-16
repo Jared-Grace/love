@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { binisaya_affix_piece_plain_is } from "./binisaya_affix_piece_plain_is.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { each } from "./each.mjs";
