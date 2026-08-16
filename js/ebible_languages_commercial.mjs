@@ -17,12 +17,18 @@ export async function ebible_languages_commercial() {
     let versions = property_get(group, "items");
     let language_code = property_get(group, "key");
     let fullest = list_first(versions);
-    let language_name = property_get(fullest, "language_name");
-    ("A translation whose copyright page names no language falls back to what the translation calls itself, because a language with no name at all cannot be offered to anybody.");
-    let unnamed = null_is(language_name);
-    let name = language_name;
-    if (unnamed) {
-      name = property_get(fullest, "name");
+    "The name is taken from whichever of the translations names the language, not from the fullest one, because being the fullest and naming the language are unrelated - the World English Bible holds all sixty six books and names no language at all, and it would have left English called The World English Bible.";
+    function named_is(version) {
+      let written = property_get(version, "language_name");
+      let names = null_not_is(written);
+      return names;
+    }
+    let naming = list_find(versions, named_is);
+    "Where not one of them names it, the language is called what its first translation calls itself, because a language with no name at all cannot be offered to anybody.";
+    let nameless = null_is(naming);
+    let name = property_get(fullest, "name");
+    if (not(nameless)) {
+      name = property_get(naming, "language_name");
     }
     let language = {
       name,
