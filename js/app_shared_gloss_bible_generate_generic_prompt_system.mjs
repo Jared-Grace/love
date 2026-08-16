@@ -1,9 +1,11 @@
+import { app_shared_gloss_bible_generate_generic_prompt_rules } from "./app_shared_gloss_bible_generate_generic_prompt_rules.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_shared_gloss_bible_generate_generic_prompt_system(
   language,
   word,
   last,
 ) {
+  let r2 = app_shared_gloss_bible_generate_generic_prompt_rules();
   let r = text_combine_multiple([
     "You will be given a Bible passage and its context in ",
     language,
@@ -11,7 +13,9 @@ export function app_shared_gloss_bible_generate_generic_prompt_system(
     language,
     " word, output an English gloss.\nAlso output a full explanation of each ",
     language,
-    ' word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. \nExplanations should include any etymology.\nExplanations should be easy to understand. Explain as simply as possible.\n\nOutput format:\n[{"',
+    " word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. \nExplanations should be easy to understand. Explain as simply as possible.\n\n",
+    r2,
+    '\n\nOutput format:\n[{"',
     word,
     '":"',
     language,
