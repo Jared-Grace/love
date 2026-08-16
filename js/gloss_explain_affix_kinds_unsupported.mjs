@@ -1,6 +1,6 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { binisaya_affix_kinds } from "./binisaya_affix_kinds.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -15,8 +15,7 @@ export function gloss_explain_affix_kinds_unsupported(explain, kinds) {
     if (not(said)) {
       return false;
     }
-    let given = list_includes(kinds, kind);
-    let unsupported = not(given);
+    let unsupported = list_includes_not(kinds, kind);
     return unsupported;
   }
   let r = list_filter(named, unsupported_is);
