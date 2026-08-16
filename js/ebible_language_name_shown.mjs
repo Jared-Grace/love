@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -18,7 +19,7 @@ export function ebible_language_name_shown(language_name) {
     return trimmed;
   }
   let size = text_size(trimmed);
-  let last = size - 1;
+  let last = subtract(size, 1);
   let inside = text_slice(trimmed, 1, last);
   return inside;
 }
