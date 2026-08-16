@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { permission_grant_context } from "./permission_grant_context.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_ast_memo } from "./function_ast_memo.mjs";
+import { js_flo_params_get } from "./js_flo_params_get.mjs";
+import { function_params_plain_ast } from "./function_params_plain_ast.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_size } from "./list_size.mjs";
 export async function permission_grant_word_params(word) {
   "$plain word";
   "Every function whose parameter carries one of the words that block a permission grant, without having said the parameter is ordinary data - the ones a person has to look at and judge one way or the other.";
