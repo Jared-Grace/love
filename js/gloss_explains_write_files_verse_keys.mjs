@@ -3,7 +3,6 @@ import { gloss_explains_write_files_named } from "./gloss_explains_write_files_n
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function gloss_explains_write_files_verse_keys(chapter_code, fn) {
   "The verses of every passage of one chapter that has new wording waiting to be written into it, read off the names of the files the wording was handed over in.";
   "$plain chapter_code";
