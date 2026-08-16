@@ -1,4 +1,4 @@
-import { permission_grant_names } from "./permission_grant_names.mjs";
+import { permission_run_names } from "./permission_run_names.mjs";
 import { permission_grant_context } from "./permission_grant_context.mjs";
 import { functions_delete_seams } from "./functions_delete_seams.mjs";
 import { function_seams_reached_paths_memo } from "./function_seams_reached_paths_memo.mjs";
@@ -15,7 +15,8 @@ export async function permission_grants_deleting() {
   "It reports and never changes anything, because what it finds is not a fault to repair. Each answer is a grant a person weighed and wanted, and the chain is the evidence for weighing it again - so the reading has to arrive before any decision rather than instead of one.";
   "It is not a gate on purpose, and the reason is arithmetic rather than caution. Thirty-six standing grants answer to this today, every one of them a deliberate approval whose deleting is the thing the function is for: renaming a function removes the file the old name lived in, building clears the stale output first, freezing a tree for a commit starts the copy from nothing. Making it fail the build would turn all thirty-six red at once, and the only way back to green is typing thirty-six blessings by hand - which the blessing command insists on, for a good reason of its own. That is a bill somebody has to agree to before it is run up, not a thing to spring on a folder ten of us are working in.";
   "What it exists for is the case the other readings cannot see. Every other reason a grant is refused is read off a name - a parameter spelled like a path, a seam that runs commands, a seam that writes rules - and the folder copier has none of those while removing its target folder and everything under it. Asked whether it could be granted, the check said yes. So the gap is real and this is what shows it, whether or not it is ever wired into a refusal.";
-  let names = permission_grant_names();
+  "The names are read off the rules that stand rather than off the list they are generated from, because the two are not the same set and the smaller one is the wrong one to ask. The generated list holds the names somebody granted through the granting command; the rules hold those and the ones written before it existed. Asked the first way this found eight, asked the second it finds thirty-six, and the twenty-eight in between - renaming a function, clearing the scratch folder, freezing a tree for a commit - are exactly the deliberate old grants a reader most needs to see.";
+  let names = await permission_run_names();
   let context = await permission_grant_context();
   let remembered = property_get(context, "remembered");
   let parsed = property_get(context, "parsed");
