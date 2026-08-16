@@ -19,17 +19,13 @@ export async function app_code_expression_replace_fly(
   let green_value = list_get(greens, 1);
   ("where the block stands is read BEFORE it leaves, because that is the place the value has to arrive at and by the time it is travelling there is nothing standing there to ask");
   let rect_from = html_bounding_client_rect(node_span);
+  ("lifted in front of the page before it sets off, because it crosses the line it came from and the words above it, and a block travelling behind them is a block nobody watches arrive");
+  html_raised_flying(node_span);
   await html_move_animate(node_span, green_solved, duration);
-  ("hidden rather than removed, and only then untranslated: it keeps its room so the line under it does not close up, and the untranslating is unseen because there is nothing left to see move");
+  ("hidden rather than removed, and only then untranslated and set back down: it keeps its room so the line under it does not close up, and neither undoing is seen because there is nothing left to see");
   html_visibility_hidden(node_span);
   html_translation_transition_clear(node_span);
-  ("the green comes off the block while it is hidden, at once and unseen, because the copy on its way down is the one carrying the green now and the block is only the room it lands in");
-  app_code_expression_green_uncolored(node_span);
-  ("and the copy loses its green over the whole of its journey, so what sets out is the value the sentence is holding up and what arrives is the value as the line spells it - one piece becoming part of the code rather than a green one landing and turning plain afterwards");
-  await html_copy_fly_rect_changed(
-    green_value,
-    rect_from,
-    duration,
-    app_code_expression_green_uncolored,
-  );
+  html_raised_clear(node_span);
+  ("both beats stay green the whole way. The green is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
+  await html_copy_fly_rect(green_value, rect_from, duration);
 }
