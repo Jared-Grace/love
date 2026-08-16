@@ -60,14 +60,34 @@
     ].join("\n");
   }
 
+  // A mark you can see, so the person holding the phone knows the watcher is
+  // awake and that what it sees is arriving. It never takes a tap.
+  var mark = null;
+  var sent = 0;
+  function mark_said(words) {
+    if (!mark) {
+      if (!document.body) { return; }
+      mark = document.createElement("div");
+      mark.setAttribute("style", "position:fixed;top:0;right:0;z-index:2147483647;background:#900;color:white;font:0.7rem monospace;padding:0.15rem 0.4rem;border-bottom-left-radius:0.4rem;pointer-events:none");
+      document.body.appendChild(mark);
+    }
+    mark.textContent = words;
+  }
+
   function send_now() {
     pending = null;
     var body = JSON.stringify({ f_name: "phone_report_write", args: [report()] });
+    mark_said("rec …");
     fetch("/api", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: body
-    }).catch(function () { });
+    }).then(function () {
+      sent = sent + 1;
+      mark_said("rec " + sent);
+    }, function () {
+      mark_said("rec ✗ no reach");
+    });
   }
 
   function send() {
