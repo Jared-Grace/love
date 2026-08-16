@@ -1,6 +1,6 @@
+import { function_work_size_excuse } from "./function_work_size_excuse.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_work_chain } from "./function_work_chain.mjs";
-import { functions_work_chain_excuse } from "./functions_work_chain_excuse.mjs";
 import { functions_work_size_ceiling } from "./functions_work_size_ceiling.mjs";
 import { functions_work_sizes } from "./functions_work_sizes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -24,7 +24,8 @@ export async function functions_work_oversize_measured() {
     let name = property_get(entry, "name");
     let size = property_get(entry, "size");
     let chain = await function_work_chain(name);
-    let excuse = functions_work_chain_excuse(chain);
+    ("The whole excuse is asked for rather than the flat half of it. This asked the depth reading directly while a function beside it was already the one place that knows every excuse there is, so a function excused as a table or as a walk still arrived here unexcused and went into the record as a job somebody had to do. The depth stays in the answer because a reader wants the number whichever way the word came out.");
+    let excuse = await function_work_size_excuse(name);
     let item = {
       name,
       size,
