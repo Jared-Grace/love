@@ -24,6 +24,11 @@ export function app_code_lesson_statement_name_value_above(root) {
   let word = app_code_lesson_statement_name_value_word();
   let grape = emoji_grape();
   let nothing = text_empty();
+  ("a reminder rather than a new fact: the identifier lessons already said identifiers are used as names, and this is the first screen where one actually names something. Saying it again here is what joins the two, and it costs nothing to read because a learner has met every word of it.");
+  let box_remember = app_code_container_light_blue(root);
+  html_div_cycle_code(box_remember, [
+    "Remember, in JS, identifiers are used as names",
+  ]);
   let box_cup = app_code_container_light_blue(root);
   html_div_cycle_code(box_cup, ["Suppose you had a cup"]);
   app_code_cup(box_cup, nothing, nothing);
