@@ -20,5 +20,6 @@ export async function app_original_bible_gloss_generate_chapter(
     fn,
     chapter_code_specified,
     text_empty,
+    language_reader,
   );
 }
