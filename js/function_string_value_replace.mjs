@@ -32,16 +32,16 @@ export async function function_string_value_replace(
     let prose = js_prose_statement_nodes(ast);
     let accounted = list_map_property(prose, "expression");
     let strings = js_strings_generic(ast);
-    function holds(found) {
-      let node = property_get(found, "node");
-      let plain_is = js_node_type_is(node, "Literal");
+    function holds(candidate) {
+      let candidate_node = property_get(candidate, "node");
+      let plain_is = js_node_type_is(candidate_node, "Literal");
       if (plain_is) {
-        let accounted_is = list_includes(accounted, node);
+        let accounted_is = list_includes(accounted, candidate_node);
         if (accounted_is) {
           return false;
         }
-        let value = property_get(found, "value");
-        let holds_is = text_includes(value, text_before);
+        let candidate_value = property_get(candidate, "value");
+        let holds_is = text_includes(candidate_value, text_before);
         return holds_is;
       }
       return false;
