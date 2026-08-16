@@ -10,15 +10,20 @@ export async function app_shared_gloss_bible_generate_generic(
   fn,
   chapter_code_specified,
   passage_reference,
+  language_reader,
 ) {
   let word = app_shared_gloss_bible_generate_generic_word();
   let prompt_system = app_shared_gloss_bible_generate_generic_prompt_system(
     language,
     word,
     last,
+    language_reader,
   );
   let prompt_user_middle =
-    app_shared_gloss_bible_generate_generic_prompt_user_middle(language);
+    app_shared_gloss_bible_generate_generic_prompt_user_middle(
+      language,
+      language_reader,
+    );
   await g_sermon_generate_book_generic(
     bible_folders,
     book_code,
