@@ -5,7 +5,10 @@ import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
-export async function gloss_chapters_offenders_generic(fn, lambda_chapter_code) {
+export async function gloss_chapters_offenders_generic(
+  fn,
+  lambda_chapter_code,
+) {
   "Every chapter of one gloss store the caller's question finds something in, each named beside what was found in it.";
   "Two sweeps over a whole store were the same seven lines apart from the one call in the middle - list what the store holds, turn each file name back into a chapter's name, ask the question of every chapter at once, then drop the chapters that answered with nothing. The part that differed was the question and the part that agreed was everything else, which is what this is for.";
   "Chapters that found nothing are dropped rather than listed empty, because a sweep over two hundred chapters is read by a human and a page of empty entries buries the handful that matter.";
