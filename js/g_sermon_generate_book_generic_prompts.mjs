@@ -19,7 +19,10 @@ export async function g_sermon_generate_book_generic_prompts(
   fn,
   prompt_user_middle,
   prompt_system,
+  passage_reference,
 ) {
+  "The reference is asked for one passage at a time, because what a passage needs in front of it is about the words that passage holds. Handed the same block for a whole book it would be mostly about words that are not there, which costs on every call and buries the lines that matter.";
+  "A caller with nothing to add hands over the function that answers with empty text. That is not a placeholder standing in for work not done - most of what generates from here is prose about a passage rather than an account of its words, and there is no outside answer such a thing could be shown.";
   let bible_folder_first = list_first(bible_folders);
   let chapters_codes = await ebible_chapters_codes_or_specified(
     bible_folder_first,
@@ -46,12 +49,14 @@ export async function g_sermon_generate_book_generic_prompts(
         [passage],
         bible_folders,
       );
+      let reference = await passage_reference(passage);
       let prompt_user = text_combine_multiple([
         "Here is the context: ",
         user_prompt_before,
         " :::: ",
         prompt_user_middle,
         user_prompt_after,
+        reference,
       ]);
       text_combine_multiple([
         g_sermon_generate,

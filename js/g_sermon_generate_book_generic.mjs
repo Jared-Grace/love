@@ -15,6 +15,7 @@ export async function g_sermon_generate_book_generic(
   prompt_user_middle,
   prompt_system,
   chapter_code_specified,
+  passage_reference,
 ) {
   let chapters = await g_sermon_generate_book_generic_prompts(
     bible_folders,
@@ -23,6 +24,7 @@ export async function g_sermon_generate_book_generic(
     fn,
     prompt_user_middle,
     prompt_system,
+    passage_reference,
   );
   async function lambda2(c) {
     let chapter_code = property_get(c, "chapter_code");
