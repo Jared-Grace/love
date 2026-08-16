@@ -1,4 +1,4 @@
-import { app_shared_encouragement_exclamation } from "./app_shared_encouragement_exclamation.mjs";
+import { app_shared_encouragement_step_exclamation } from "./app_shared_encouragement_step_exclamation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
@@ -19,7 +19,7 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
     value_text,
   ]);
   ("praised in the same words the quiz praises a finished question with, taken from the one list both of them read");
-  let praise = app_shared_encouragement_exclamation();
+  let praise = app_shared_encouragement_step_exclamation();
   ("the working out is dark, and the two pieces named after it are green: the first is the block standing green on the line at this very moment, and the second is what that block is about to say instead - so the sentence points at the line rather than merely describing it");
   ("The working out stays dark on purpose. It is arithmetic being shown, not a piece of the line being pointed at, and green on all three would leave nothing for the green to mean.");
   let cycles = [
