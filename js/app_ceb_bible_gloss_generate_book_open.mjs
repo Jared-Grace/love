@@ -31,6 +31,11 @@ export async function app_ceb_bible_gloss_generate_book_open() {
   let prompt_user_middle =
     app_shared_gloss_bible_generate_generic_prompt_user_middle(language);
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
+  let known = await binisaya_words_known();
+  function passage_reference(passage) {
+    let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
+    return reference;
+  }
   let chapters = await g_sermon_generate_book_generic_prompts(
     bible_folders,
     null,
@@ -38,6 +43,7 @@ export async function app_ceb_bible_gloss_generate_book_open() {
     app_ceb_bible_gloss_generate,
     prompt_user_middle,
     prompt_system,
+    passage_reference,
   );
   let passages = list_single_property(chapters, "passages");
   let e = list_get_end(passages, 4);
