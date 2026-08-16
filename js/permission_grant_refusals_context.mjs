@@ -1,3 +1,6 @@
+import { function_command_seams_reached_paths_memo } from "./function_command_seams_reached_paths_memo.mjs";
+import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { function_grant_declined_is } from "./function_grant_declined_is.mjs";
 import { function_ast_memo } from "./function_ast_memo.mjs";
 import { js_flo_params_get } from "./js_flo_params_get.mjs";
@@ -5,7 +8,6 @@ import { function_params_plain_ast } from "./function_params_plain_ast.mjs";
 import { functions_permission_seams } from "./functions_permission_seams.mjs";
 import { function_seams_reached_memo } from "./function_seams_reached_memo.mjs";
 import { and } from "./and.mjs";
-import { function_command_seams_reached_memo } from "./function_command_seams_reached_memo.mjs";
 import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -65,7 +67,12 @@ export async function permission_grant_refusals_context(unaliased, context) {
   let ast = await function_ast_memo(unaliased, parsed);
   let params = js_flo_params_get(ast);
   let takes_arguments = greater_than(params.length, 0);
-  let seams = await function_command_seams_reached_memo(unaliased, remembered);
+  ("What is reached is asked for with the chain that reaches it, rather than as a bare list of names. A name on its own cannot be judged: the reader cannot tell whether running commands is what the function is for or something four names down that nobody meant, so the refusal had to be believed instead of weighed, and the one place that most needs weighing is a grant somebody is about to write. The walk is the same walk either way and already carries the path it took, so the chain costs nothing that was not being paid.");
+  let seam_paths = await function_command_seams_reached_paths_memo(
+    unaliased,
+    remembered,
+  );
+  let seams = object_property_names(seam_paths);
   let reaches = greater_than(seams.length, 0);
   ("Reaching a command-running function is only a reason to refuse when there are arguments that could steer it there. The refusal is a sentence about arguments, and a function declaring none cannot have it be true: a rule covers every argument the function is ever handed, and handing arguments to a function that declares none changes nothing it does. That is exactly the condition this repo already states for granting at all - behaviour fixed regardless of the arguments - so an empty parameter list proves it rather than estimating it. Without this the gates and reports, which take nothing and are the most worth granting, were the ones refused.");
   ("What the refusal says is what was measured, and no more. Two things are known here - the function declares arguments, and something it reaches runs commands - and the third thing, whether an argument can travel from one to the other, is exactly what is not looked at. Saying outright that the arguments CAN become a command line reads as that third thing having been found, and a reader who then goes and traces it finds it is not so: on the promote-and-deploy command the argument reaches no command runner at all, and the branch that does takes no arguments. The refusal is still right to stand, because not-looked-at is not the same as ruled-out. It is the sentence that has to stop claiming more than the check did.");
@@ -75,7 +82,7 @@ export async function permission_grant_refusals_context(unaliased, context) {
       refusals,
       unaliased +
         " declares arguments and reaches a command-running function, so nothing here can rule out an argument steering one: " +
-        list_join_comma(seams),
+        permission_grant_seam_chains_text(seam_paths),
     );
   }
   ("Reaching a function that writes the permission rules is the one refusal about escalation rather than about damage. A grant here does not merely let something run unasked, it lets something decide what else runs unasked, so approving it approves whatever it goes on to approve. Without this the one tool standing between a bad grant and the settings file was blind to the single category that matters most, and the function that grants rules straight from the prompt record passed it clean.");
