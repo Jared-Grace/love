@@ -1,3 +1,4 @@
+import { js_selects_functionize_rest_returning } from "./js_selects_functionize_rest_returning.mjs";
 import { js_selects_function_lift } from "./js_selects_function_lift.mjs";
 import { js_shadowing_rename_in } from "./js_shadowing_rename_in.mjs";
 import { js_call_arguments_same_names_set } from "./js_call_arguments_same_names_set.mjs";
@@ -84,6 +85,7 @@ export function example_transforms() {
     js_object_property_text_add_after,
     js_object_property_text_add_before,
     js_selects_functionize_local,
+    js_selects_functionize_rest_returning,
     js_selects_span_move_after,
     js_call_argument_named_getter_set,
     js_object_property_getter_set,
