@@ -16,6 +16,9 @@ export function html_clone_over(component) {
   let rect = html_bounding_client_rect(component);
   let clone = html_clone(component);
   html_style_position_fixed(clone);
+  ("and it is held in front of the whole page, because the copy exists to be watched crossing it and a copy passing behind the words it is crossing is a copy nobody sees");
+  let z_index = html_z_index_flying();
+  html_style_z_index(clone, z_index);
   let left = property_get(rect, "left");
   let style_value = html_pixels_text(left);
   html_style_left(clone, style_value);
