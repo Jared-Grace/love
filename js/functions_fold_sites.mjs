@@ -1,22 +1,9 @@
-import { functions_fold_shape_forget } from "./functions_fold_shape_forget.mjs";
-import { functions_fold_blocks_of } from "./functions_fold_blocks_of.mjs";
-import { functions_fold_shape_of } from "./functions_fold_shape_of.mjs";
+import { functions_fold_sites_pairs } from "./functions_fold_sites_pairs.mjs";
 import { functions_fold_sites_file_load } from "./functions_fold_sites_file_load.mjs";
-import { tally_covers_is } from "./tally_covers_is.mjs";
-import { list_filter_index } from "./list_filter_index.mjs";
-import { list_tally } from "./list_tally.mjs";
-import { null_is } from "./null_is.mjs";
-import { tallies_any_covers_is } from "./tallies_any_covers_is.mjs";
-import { js_fold_blocks } from "./js_fold_blocks.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
-import { property_get } from "./property_get.mjs";
 export async function functions_fold_sites() {
   "Auto-DRY linter: report every site where a fn's body was hand-written inline instead of calling an";
   ("existing fn that already does it — i.e. every place `",
@@ -44,13 +31,13 @@ export async function functions_fold_sites() {
   ("What each run of statements calls, counted, is kept per file beside the index of who calls what. The index answers WHETHER a file calls a name and this answers HOW OFTEN, within a single run - which is the question a fold actually asks, because a body is folded into one run and not gathered across a file.");
   let block_tallies = {};
   function file_load(record) {
-    let r2 = functions_fold_sites_file_load(
+    let r = functions_fold_sites_file_load(
       record,
       entries,
       block_tallies,
       callee_index,
     );
-    return r2;
+    return r;
   }
   list_map(records, file_load);
   ("A file is read into its shape once and kept, because the pairing asks about the same files over and over. Counted 2026-08-11 across this repo: 57,709 readings of 2,772 different files, twenty-one times each, and this was the second slowest gate there is.");
@@ -59,82 +46,12 @@ export async function functions_fold_sites() {
   ("Which runs of statements a file holds is kept beside its shape, for the same reason and with the same care. What those runs are depends on the file alone and never on the function being paired against it, and one file is paired against many: counted 2026-08-12, 56,751 pairings over 2,790 different files, which was twenty-two and a half seconds of finding the same runs again against nine tenths of a second to find them once each.");
   ("They are given up exactly when the shape is, because they are the runs of that tree and a fold writes the call back into it.");
   let blocks_kept = {};
-  let sites = [];
-  for (let x_name in entries) {
-    let pattern = entries[x_name].pattern;
-    if (not(pattern)) {
-      continue;
-    }
-    function lambda2(s) {
-      let r = s.callee;
-      return r;
-    }
-    let x_callees = property_get(pattern, "pattern_sigs").map(lambda2);
-    function lambda3(c) {
-      let r3 = callee_index[c] || {};
-      return r3;
-    }
-    let candidate_sets = x_callees.map(lambda3);
-    if (equal(candidate_sets.length, 0)) {
-      continue;
-    }
-    function lambda5(name) {
-      function lambda4(set) {
-        let r4 = set[name];
-        return r4;
-      }
-      let r5 = not_equal(name, x_name) && candidate_sets.every(lambda4);
-      return r5;
-    }
-    let candidates = object_property_names(candidate_sets[0]).filter(lambda5);
-    ("What x wants, counted. Reading a candidate's shape and trying the fold against it was ninety-two percent of this gate, measured 2026-08-12, and nearly all of it was spent on files that could not have held the body however hard they were read.");
-    ("The cheap question asked first is whether some single run of the candidate calls everything x calls, as many times as x calls it. That is necessary for a fold and nothing like sufficient, which is the right shape for a question asked before an expensive one: it can only ever send work away that was going to come back empty.");
-    ("Counted rather than merely present, and per run rather than per file, because both weaker forms let through exactly the files that are slowest to read - the large ones, which call everything somewhere.");
-    ("Measured over the whole repo: 65,677 pairings fell to 25,728 for two tenths of a second of counting, and every site found without it was still found with it.");
-    function lambda6(c) {
-      let missing = null_is(c);
-      let r6 = not(missing);
-      return r6;
-    }
-    let list = x_callees.filter(lambda6);
-    let x_wanted = list_tally(list);
-    let x_ast = functions_fold_shape_of(x_name, shapes, entries);
-    for (let f_name of candidates) {
-      try {
-        let f_tallies = block_tallies[f_name];
-        let possible = tallies_any_covers_is(f_tallies, x_wanted);
-        let hopeless = not(possible);
-        if (hopeless) {
-          continue;
-        }
-        let f_ast = functions_fold_shape_of(f_name, shapes, entries);
-        let f_blocks = functions_fold_blocks_of(
-          f_name,
-          blocks_kept,
-          shapes,
-          entries,
-        );
-        ("Only the runs of statements that could hold the body are read for it. The counting above already answers, for each run on its own, whether that run calls everything x calls as many times as x calls it - and that is necessary for a fold, which is the whole reason it is counted at all. Asked of the file the answer is whether some run might, and the answer for each separate run was then thrown away and every run in the file read in full.");
-        ("Counted 2026-08-14 across this repo: 123,723 runs read against 31,648 that could have held anything, so three quarters of the reading was of runs already known to be hopeless.");
-        ("A count is found by where its run sits, and that is sound because both lists are the runs of one file found the same way - the same walk over the same text, so the two come out in one order.");
-        function lambda7(f_block, at) {
-          let f_tally = f_tallies[at];
-          let holds_is = tally_covers_is(f_tally, x_wanted);
-          return holds_is;
-        }
-        let f_blocks_possible = list_filter_index(f_blocks, lambda7);
-        let folded = js_fold_blocks(x_ast, f_ast, f_blocks_possible);
-        if (not_equal(folded, null)) {
-          functions_fold_shape_forget(f_name, shapes, blocks_kept);
-          sites.push({
-            x: x_name,
-            f: f_name,
-          });
-        }
-      } catch (e) {
-        continue;
-      }
-    }
-  }
+  let sites = functions_fold_sites_pairs(
+    entries,
+    callee_index,
+    shapes,
+    block_tallies,
+    blocks_kept,
+  );
   return sites;
 }
