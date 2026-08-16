@@ -1,6 +1,6 @@
+import { git_history_tracked_blobs } from "./git_history_tracked_blobs.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { git_head_tracked } from "./git_head_tracked.mjs";
-import { git_history_blobs } from "./git_history_blobs.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,8 +11,9 @@ export async function git_history_paths_absent_at_head(folder) {
   "Only paths absent at HEAD, because a path the present still tracks is not a candidate for anything, and only blobs the present does not hold either, because a blob living at both a live path and a dead one survives whatever the dead path does.";
   "One line of git's object listing names one object once, at the first path it was reached by, so nothing here is counted twice.";
   arguments_assert(arguments, 1);
-  let tracked = await git_head_tracked(folder);
-  let blobs = await git_history_blobs(folder);
+  let r = await git_history_tracked_blobs(folder);
+  let blobs = property_get(r, "blobs");
+  let tracked = property_get(r, "tracked");
   let tally = {};
   for (let blob of blobs) {
     let alive_path = tracked.paths[blob.path];
