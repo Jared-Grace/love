@@ -1,14 +1,13 @@
+import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_transform_auto } from "./function_transform_auto.mjs";
-import { js_prose_statement_nodes } from "./js_prose_statement_nodes.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { text_replace_once } from "./text_replace_once.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_get } from "./list_get.mjs";
@@ -29,8 +28,7 @@ export async function function_string_value_replace(
   "Written with backticks so a name can stand in a gap, it is out of reach too. Such a piece of text is built from parts rather than typed out whole, and setting a value on it would leave the parts standing and be quietly ignored.";
   arguments_assert(arguments, 3);
   function lambda(ast) {
-    let prose = js_prose_statement_nodes(ast);
-    let accounted = list_map_property(prose, "expression");
+    let accounted = js_prose_literal_nodes(ast);
     let strings = js_strings_generic(ast);
     function holds(candidate) {
       let candidate_node = property_get(candidate, "node");
