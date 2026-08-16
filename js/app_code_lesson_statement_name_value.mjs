@@ -74,13 +74,7 @@ export function app_code_lesson_statement_name_value() {
     return codes;
   }
   function batch_get() {
-    "four questions whose four answers are all different, so no two buttons are right at once";
-    let max = app_code_lesson_operators_value_max();
-    let numbers = range_map(max, number_of);
-    let taken = list_shuffle_take(numbers, 4);
-    let pairs = list_chunk(taken, 2);
-    let codes = list_map_concat_multiple(pairs, pair_to_codes);
-    return codes;
+    return app_code_lesson_statement_name_value_batch(number_of, pair_to_codes);
   }
   let batch = app_code_batch_question_answer_fns(
     batch_get,
@@ -108,4 +102,14 @@ export function app_code_lesson_statement_name_value() {
     forwards_answer_count_override: null,
   });
   return lesson;
+}
+function app_code_lesson_statement_name_value_batch(number_of, pair_to_codes) {
+  arguments_assert(arguments, 2);
+  ("four questions whose four answers are all different, so no two buttons are right at once");
+  let max = app_code_lesson_operators_value_max();
+  let numbers = range_map(max, number_of);
+  let taken = list_shuffle_take(numbers, 4);
+  let pairs = list_chunk(taken, 2);
+  let codes = list_map_concat_multiple(pairs, pair_to_codes);
+  return codes;
 }
