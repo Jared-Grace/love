@@ -1,8 +1,7 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_self_roots } from "./gloss_chapters_self_roots.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_ceb_bible_gloss_self_roots_count() {
   "How many Cebuano explanations across the whole store give their own word as the root it is built from, and how many chapters they are spread over.";
@@ -15,8 +14,7 @@ export async function app_ceb_bible_gloss_self_roots_count() {
     let size = list_size(found);
     return size;
   }
-  let sizes = list_map(offenders, chapter_count);
-  let count = list_sum(sizes);
+  let count = list_map_sum(offenders, chapter_count);
   let r = {
     chapters,
     count,
