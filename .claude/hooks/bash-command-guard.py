@@ -4267,6 +4267,29 @@ def repo_plain_recursive_grep_deny_reason(word):
 
 
 JS_SOURCE_PATH_PATTERN = re.compile(r"^js/([A-Za-z][A-Za-z0-9_]*)\.mjs$")
+ECHO_SEPARATOR_CHARACTERS = set(
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-=.: "
+)
+
+
+def echo_separator_is(words):
+    """Whether a statement is an `echo` of plain words and nothing else - the
+    hand-rolled label people put between two cats so the sources that follow
+    can be told apart.
+
+    It counts as part of the cat shape rather than as another program, because
+    it is there to answer the same question the named command answers by
+    recording each source under its own name. Anything an echo could do beyond
+    saying a word - a flag, a path, a redirection, anything the shell would
+    expand - falls outside, and takes the whole line out of the slice."""
+    if not words or words[0] != "echo":
+        return False
+    for word in words[1:]:
+        if not word:
+            return False
+        if not set(word) <= ECHO_SEPARATOR_CHARACTERS:
+            return False
+    return True
 
 
 def cat_js_source_function_names(command):
@@ -4286,6 +4309,8 @@ def cat_js_source_function_names(command):
     stand in for a trimmed or filtered read."""
     names = []
     for words in statements_words(command):
+        if echo_separator_is(words):
+            continue
         if not words or words[0] != "cat":
             return None
         if len(words) < 2:
