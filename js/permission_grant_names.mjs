@@ -1502,6 +1502,7 @@ export function permission_grant_names() {
   let spelled1465 = fn_name("ebible_versions_commercial");
   let spelled1466 = fn_name("js_block_statements_after_return_remove");
   let spelled1467 = fn_name("ebible_language_to_bible_folder");
+  let spelled1468 = fn_name("js_page_serialized_import_uses_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -2970,6 +2971,7 @@ export function permission_grant_names() {
     spelled1465,
     spelled1466,
     spelled1467,
+    spelled1468,
   ];
   return names;
 }
