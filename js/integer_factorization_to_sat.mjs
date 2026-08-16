@@ -1,7 +1,6 @@
 import { integer_factorization_to_sat_three_sat } from "./integer_factorization_to_sat_three_sat.mjs";
 import { integer_factorization_to_sat_factorization_cnf } from "./integer_factorization_to_sat_factorization_cnf.mjs";
 import { integer_factorization_to_sat_multiplier_csa_build } from "./integer_factorization_to_sat_multiplier_csa_build.mjs";
-import { integer_factorization_to_sat_full_adder_csa } from "./integer_factorization_to_sat_full_adder_csa.mjs";
 import { integer_factorization_to_sat_half_adder } from "./integer_factorization_to_sat_half_adder.mjs";
 import { integer_factorization_to_sat_full_adder } from "./integer_factorization_to_sat_full_adder.mjs";
 import { integer_factorization_to_sat_compress_columns } from "./integer_factorization_to_sat_compress_columns.mjs";
@@ -80,22 +79,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     );
     return r6;
   }
-  function fullAdderCSA(cnf, a, b, c) {
-    let r3 = integer_factorization_to_sat_full_adder_csa(
-      cnf,
-      a,
-      b,
-      c,
-      xorGate,
-      andGate,
-    );
-    return r3;
-  }
   function compressColumns(cnf, columns) {
     let r14 = integer_factorization_to_sat_compress_columns(
       cnf,
       columns,
-      fullAdderCSA,
+      fullAdder,
       halfAdder,
     );
     return r14;
