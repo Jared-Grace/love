@@ -1,10 +1,9 @@
+import { app_g_verify_view_draft_restore } from "./app_g_verify_view_draft_restore.mjs";
 import { app_g_verify_view_suggest_box_new } from "./app_g_verify_view_suggest_box_new.mjs";
 import { app_g_verify_view_approve_bar } from "./app_g_verify_view_approve_bar.mjs";
 import { app_g_verify_view_line_lists } from "./app_g_verify_view_line_lists.mjs";
 import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_panel.mjs";
 import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
-import { app_g_verify_storage_app } from "./app_g_verify_storage_app.mjs";
-import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
@@ -15,7 +14,6 @@ import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -123,20 +121,14 @@ export async function app_g_verify_view(
   let value = property_get(r2, "value4");
   let suggest_area = property_get(r2, "suggest_area");
   ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
-  let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
-  let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
-  ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
-  let app_fn = app_g_verify_storage_app();
-  let saved_draft = storage_session_get(app_fn, draft_key);
-  let app_fn2 = app_g_verify_storage_app();
-  let saved_base = storage_session_get(app_fn2, base_key);
-  let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value);
-  if (draft_fresh) {
-    html_value_set(suggest_area, saved_draft);
-  } else {
-    app_g_verify_view_draft_drop(draft_key, base_key);
-  }
-  ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
+  let r3 = app_g_verify_view_draft_restore(
+    chapter_code,
+    verse,
+    value,
+    suggest_area,
+  );
+  let base_key = property_get(r3, "base_key");
+  let draft_key = property_get(r3, "draft_key");
   function autosize() {
     if (native_sizing) {
       return;
