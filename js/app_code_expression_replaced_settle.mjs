@@ -1,10 +1,12 @@
+import { app_code_expression_chosen_room_clear } from "./app_code_expression_chosen_room_clear.mjs";
+import { app_code_expression_green_uncolored } from "./app_code_expression_green_uncolored.mjs";
+import { app_shared_animation_sleep } from "./app_shared_animation_sleep.mjs";
 import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-import { app_code_expression_chosen_clear } from "./app_code_expression_chosen_clear.mjs";
 import { not } from "./not.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 export async function app_code_expression_replaced_settle(
@@ -17,19 +19,26 @@ export async function app_code_expression_replaced_settle(
   ("swap the working out for what it came to, and let the rest of the line slide along into the room that frees up rather than jumping into it");
   ("A value is nearly always shorter than the working it replaces, so everything standing to the right of it has to close up by the difference. Closed up at once, the learner looks back at a line whose pieces are all somewhere else and has to find their place in it again; slid, they watch the same pieces arrive.");
   ("Every innermost piece of the line is offered, not only the ones expected to move - the ones that stay put are measured to the same place twice and simply do not move, so nothing here has to work out which side of the swap anything is on.");
-  let pieces = html_descendants_innermost(line);
   function change() {
     app_code_expression_replaced_set(node_span, value);
-    ("where the swap was watched arriving, the green has nothing left to say and comes off in the same movement, so the line settles in one go all the way to how it is about to be drawn");
-    ("Held back, the line would settle twice over: once for the value being shorter than its working, and again a moment later for the green's own room going.");
-    if (watched) {
-      ("the fading is asked for again here rather than being carried over from when the green was given, because the travelling wiped it: a piece is told once what may be slowed about it, and being told to move slowly threw the earlier telling away");
-      app_code_expression_colored_slowly(node_span);
-      app_code_expression_chosen_clear(node_span);
-    }
+  }
+  function room_clear() {
+    app_code_expression_chosen_room_clear(node_span);
   }
   let duration = app_shared_animation_duration();
+  let pieces = html_descendants_innermost(line);
   await html_move_animate_settle(pieces, change, duration);
+  ("where the swap was watched arriving, the green has nothing left to say and is let go - on its own, with nothing moving under it, and only then the room it was holding");
+  ("Three things want to happen at this moment and the learner can follow one at a time: the value arriving in the room its working was holding, the green leaving, and the line closing up. So they are given one after another rather than together. Read together, the block is watched narrowing while it is still half green, and a colour that goes as its block shrinks reads as having been squeezed out - where the same colour, gone before anything moves, reads as having finished.");
+  if (watched) {
+    ("the fading is asked for again here rather than being carried over from when the green was given, because both the travelling and the settling wiped it: a piece is told once what may be slowed about it, and being told to move slowly throws the earlier telling away");
+    app_code_expression_colored_slowly(node_span);
+    app_code_expression_green_uncolored(node_span);
+    await app_shared_animation_sleep();
+    ("and the line is measured afresh before it closes up, because every piece of it has just slid and where they were read the first time is where none of them is standing now");
+    let pieces_faded = html_descendants_innermost(line);
+    await html_move_animate_settle(pieces_faded, room_clear, duration);
+  }
   ("and where it was not watched arriving, the value is held green once it is standing still, the same moment long as every other success in the app");
   if (not(watched)) {
     await sleep_success_color();
