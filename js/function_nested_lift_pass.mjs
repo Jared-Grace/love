@@ -1,24 +1,16 @@
+import { function_nested_lift_skip_or_null } from "./function_nested_lift_skip_or_null.mjs";
+import { function_nested_lift_or_wrapper } from "./function_nested_lift_or_wrapper.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { function_lift_candidates } from "./function_lift_candidates.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { function_nested_lift } from "./function_nested_lift.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_intersect } from "./list_intersect.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
-import { function_exists } from "./function_exists.mjs";
 import { function_lift_wrapper_candidates } from "./function_lift_wrapper_candidates.mjs";
 import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
-import { function_nested_lift_wrapper } from "./function_nested_lift_wrapper.mjs";
-import { js_binding_names_unbindable } from "./js_binding_names_unbindable.mjs";
-import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
 export async function function_nested_lift_pass(f_name) {
   arguments_assert(arguments, 1);
   ("One walk through the named function, moving out the body of every piece written inside it that can be moved, each under a name worked out from the two names it already has, and each committed under its own command before the next one starts.");
@@ -42,52 +34,14 @@ export async function function_nested_lift_pass(f_name) {
     if (not(there_is)) {
       continue;
     }
-    let handed_out_is = js_name_lambda_is(nested);
-    if (handed_out_is) {
-      list_add(skipped, {
-        nested,
-        why: "this piece was never given a name by anybody - a pass named it, and carried out under that name joined to its holder's it would stand in the repo as a name no search for what it does could ever reach. Would you like to name it for what it does first?",
-      });
+    let skip = await function_nested_lift_skip_or_null(f_name, nested, row);
+    let stepped_over_is = null_not_is(skip);
+    if (stepped_over_is) {
+      list_add(skipped, skip);
       continue;
     }
     let f_name_new = function_nested_lift_name_or_null(f_name, nested);
-    let named_is = null_not_is(f_name_new);
-    if (not(named_is)) {
-      list_add(skipped, {
-        nested,
-        why: "the piece inside is not named the way this repo names things, so what it should be called once it stands on its own is for somebody reading it to choose",
-      });
-      continue;
-    }
-    let closed = property_get(row, "closed");
-    let unbindable = js_binding_names_unbindable();
-    let blocked = list_intersect(closed, unbindable);
-    let blocked_any = list_empty_not_is(blocked);
-    if (blocked_any) {
-      list_add(skipped, {
-        nested,
-        blocked,
-        why: "the piece inside reads a word the language will not let a function bind, so moving it out would have to hand that word in through a parameter list, which is the one place the word is refused",
-      });
-      continue;
-    }
-    let search = await function_exists(f_name_new);
-    let taken = property_get(search, "exists");
-    if (taken) {
-      list_add(skipped, {
-        nested,
-        f_name_new,
-        why: "a function already answers to the name this one would take, and whether the two are the same work is a question for somebody reading both",
-      });
-      continue;
-    }
-    let plain = await function_lift_candidates(f_name);
-    let plain_names = list_map_property(plain, "name");
-    let plain_is = list_includes(plain_names, nested);
-    let lift = function_nested_lift_wrapper;
-    if (plain_is) {
-      lift = function_nested_lift;
-    }
+    let lift = await function_nested_lift_or_wrapper(f_name, nested);
     await function_call_commit(lift, [f_name, nested, f_name_new]);
     let by = lift.name;
     list_add(lifted, {
