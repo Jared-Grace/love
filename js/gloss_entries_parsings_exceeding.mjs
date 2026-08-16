@@ -31,7 +31,6 @@ export function gloss_entries_parsings_exceeding(entries, records) {
     let record = records[index];
     let parsing = property_get(record, "parsing_long");
     let explain = property_get(entry, explain_key);
-    let named = [];
     function term_read(pair) {
       let term = property_get(pair, "term");
       let written = gloss_term_written_is(explain, term);
@@ -43,19 +42,21 @@ export function gloss_entries_parsings_exceeding(entries, records) {
       if (carried) {
         return;
       }
-      list_add(named, term);
+      let elsewhere = gloss_words_parsing_carrying_other(
+        records,
+        index,
+        term2,
+      );
+      let finding = {
+        word: property_get(entry, word_key),
+        parsing,
+        term,
+        elsewhere,
+        explain,
+      };
+      list_add(exceeding, finding);
     }
     each(terms, term_read);
-    if (list_empty_is(named)) {
-      return;
-    }
-    let finding = {
-      word: property_get(entry, word_key),
-      parsing,
-      named,
-      explain,
-    };
-    list_add(exceeding, finding);
   }
   each_index(entries, entry_read);
   return exceeding;
