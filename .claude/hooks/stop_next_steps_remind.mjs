@@ -106,10 +106,33 @@ function assistant_text(entry) {
 // So the read is anchored rather than trusted. Whatever it finds has to sit
 // AFTER the last thing the user typed, which is the only proof it belongs to
 // the turn now ending. Until it does, the message is still being written.
+//
+// That anchor alone is not enough, and the gap cost a second false block.
+// A turn may open with a text block, run tools, then close with another text
+// block - and a preamble sits after the user's prompt exactly as the closing
+// does. Measured 2026-08-16 against a real transcript: the turn said "You're
+// right to push -" at entry 983, ran tools through entry 1021, and closed at
+// 1023 with a numbered list AND a recommendation. The reader returned 983 on
+// its first look, found no markers there, and blocked a turn that had already
+// complied. The user then read two next-steps lists in one turn and said so.
+//
+// So the candidate must also sit after the last tool call. Tool activity is
+// the only thing in the transcript that proves a text block was mid-turn.
+function tool_activity_is(entry) {
+  let content = entry?.message?.content;
+  if (!Array.isArray(content)) {
+    return false;
+  }
+  return content.some(
+    (part) => part?.type === "tool_use" || part?.type === "tool_result",
+  );
+}
+
 function assistant_text_closing(transcript_path) {
   let text = readFileSync(transcript_path, "utf8");
   let lines = text.split("\n");
   let prompt_at = -1;
+  let tool_at = -1;
   let said_at = -1;
   let said = null;
   for (let i = 0; i < lines.length; i++) {
@@ -123,6 +146,13 @@ function assistant_text_closing(transcript_path) {
     } catch {
       continue;
     }
+    // One entry can carry text AND a tool call together, and that text is a
+    // preamble, never a closing. So an entry with tool activity is skipped
+    // whole rather than merely dated.
+    if (tool_activity_is(entry)) {
+      tool_at = i;
+      continue;
+    }
     if (user_prompt_is(entry)) {
       prompt_at = i;
       continue;
@@ -133,7 +163,7 @@ function assistant_text_closing(transcript_path) {
       said = text_said;
     }
   }
-  if (said_at < prompt_at) {
+  if (said_at < prompt_at || said_at < tool_at) {
     return null;
   }
   return said;

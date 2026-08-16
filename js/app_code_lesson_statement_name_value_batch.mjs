@@ -54,8 +54,8 @@ export function app_code_lesson_statement_name_value_batch() {
     let second = list_second(pair);
     let alone = one_name(first);
     let beside = two_names(first, second);
-    let codes = [alone, beside];
-    return codes;
+    let pair_codes = [alone, beside];
+    return pair_codes;
   }
   let max = app_code_lesson_operators_value_max();
   let numbers = range_map(max, number_of);
