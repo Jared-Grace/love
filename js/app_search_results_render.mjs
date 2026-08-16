@@ -1,3 +1,4 @@
+import { app_search_results_bible_order_key } from "./app_search_results_bible_order_key.mjs";
 import { app_search_results_division_card } from "./app_search_results_division_card.mjs";
 import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
 import { app_search_results_chapter_card } from "./app_search_results_chapter_card.mjs";
@@ -12,12 +13,6 @@ import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
-import { property_get } from "./property_get.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { ebible_book_code_to_division_index } from "./ebible_book_code_to_division_index.mjs";
-import { number_pad } from "./number_pad.mjs";
-import { list_index_of_property } from "./list_index_of_property.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
@@ -64,21 +59,8 @@ export function app_search_results_render(
   );
   html_br_2(div_results);
   function bible_order_key(vk) {
-    "the genre section comes before the book so every section stays one unbroken run, which is what lets a section card be opened as the results cross into it; for the 66-book canon that is the canonical order anyway, since each section is a contiguous run of it";
-    let chapter_code = property_get(vk, "key");
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let division_index = ebible_book_code_to_division_index(book_code);
-    let division_index_padded = number_pad(division_index, 2);
-    let book_index = list_index_of_property(books, "book_code", book_code);
-    let book_index_padded = number_pad(book_index, 2);
-    let key = text_combine_multiple([
-      division_index_padded,
-      "-",
-      book_index_padded,
-      "-",
-      chapter_code,
-    ]);
-    return key;
+    let r3 = app_search_results_bible_order_key(vk, books);
+    return r3;
   }
   list_sort_text_mapper(results, bible_order_key);
   function result_verses_count(vk) {
