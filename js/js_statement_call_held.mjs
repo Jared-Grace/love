@@ -22,14 +22,14 @@ export function js_statement_call_held(statement) {
     return null;
   }
   let init = property_get(declared, "init");
-  let call_is = js_node_type_is(init, "CallExpression");
-  if (not(call_is)) {
+  let call = js_expression_call_only(init);
+  if (equal(call, null)) {
     return null;
   }
   let name = property_get(id, "name");
   let held = {
     name,
-    call: init,
+    call,
   };
   return held;
 }
