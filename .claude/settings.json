@@ -1526,6 +1526,7 @@
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_chapter_roots_disagreeing:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_chapter_self_roots:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_self_roots_count:*)",
+      "Bash(node scripts/ai.mjs app_ceb_bible_gloss_chapter_roots_prompts:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2962,6 +2963,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_chapter_roots_disagreeing:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_chapter_self_roots:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_self_roots_count:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_chapter_roots_prompts:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4397,6 +4399,7 @@
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_chapter_roots_disagreeing:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_chapter_self_roots:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_self_roots_count:*)",
+      "Bash(node scripts/aig.mjs app_ceb_bible_gloss_chapter_roots_prompts:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5832,7 +5835,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args app_shared_gloss_bible_generate_generic_prompt_system:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_chapter_roots_disagreeing:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_chapter_self_roots:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_self_roots_count:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_self_roots_count:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_chapter_roots_prompts:*)"
     ],
     "defaultMode": "acceptEdits"
   },

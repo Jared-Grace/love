@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
@@ -12,13 +11,15 @@ export async function function_functionize_generic(
   name_to,
   f_name_new,
   select_fn_name,
+  apply_fn_name,
 ) {
   "$plain f_name";
   "$plain name_from";
   "$plain name_to";
   "$plain f_name_new";
   "$plain select_fn_name";
-  arguments_assert(arguments, 5);
+  "$plain apply_fn_name";
+  arguments_assert(arguments, 6);
   ("Pull the run of work between the first mention of one name and the first mention of another out of the named function, into a function of its own, with the caller saying which reader picks the two lines.");
   ("The whole of the cutting, held once. Two commands wrote these twenty lines out between them and differed in a single word - which of the two line readers to use - so both had to be edited to fix anything, and a fix made in one of them would have been silently missing from the other.");
   ("The two ends are named by a name written somewhere in them. Line numbers would be the obvious address and they are the wrong one: they move under a peer's edit between reading the function and running the command, and they move again after the first cut.");
@@ -26,6 +27,7 @@ export async function function_functionize_generic(
   ("A name rather than any word at all. Which of the two the reader searches is the caller's to choose, and every reader offered so far searches the names - so a word read off one of these paragraphs is refused however plainly it stands there.");
   ("It refuses a name something already answers to. The extractor would write the definition anyway, and the second thing under one name is the failure that has no error - both files load, and which one a caller reaches is decided by whichever import got written.");
   ("Which reader finds the ends is the caller's to say, and it is the only thing the two commands above this ever disagreed about. Naming it as an argument is what lets a third way of addressing a line be added later without a third copy of everything else.");
+  ("Which cutter turns the two chosen lines into a run is the caller's to say for the same reason. Both chosen lines are inside the run for one caller and the second one stands just outside it for another, and that is a difference of one number - far too small a thing to be worth a second copy of the refusal, the two-name join and the tidying that surround it.");
   let search = await function_exists(f_name_new);
   let taken = property_get(search, "exists");
   false_is_assert_json(taken, {
@@ -33,7 +35,6 @@ export async function function_functionize_generic(
     f_name_new,
   });
   let ends = list_join_comma([name_from, name_to]);
-  let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_select_multiple_apply_args(
     f_name,
     select_fn_name,
