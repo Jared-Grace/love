@@ -22,8 +22,8 @@ export function app_search_results_book_card_header(
   arguments_assert(arguments, 5);
   let book_padding = app_shared_spaced_tiny_gap();
   html_style_padding(div_book, book_padding);
-  let value2 = app_shared_spaced_neighbor_gap();
-  html_style_margin_y(div_book, value2);
+  let value = app_shared_spaced_neighbor_gap();
+  html_style_margin_y(div_book, value);
   html_text_align_left(div_book);
   let book_name = ebible_book_code_to_name(books, book_code);
   let verses_count = app_search_results_book_verses_count(
