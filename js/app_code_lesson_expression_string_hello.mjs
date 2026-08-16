@@ -17,7 +17,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_string_hello() {
   "practice a string - text written inside quotes, the first value that is not a number. A quoted word evaluates to the text WITHOUT the quotes: the quotes are how you write it, not part of the value; the answer is the text with no quotes. The word source is the fruits of the Spirit.";
-  let quote = '"';
+  let quote = js_string_quote();
   function decoys(question, answer) {
     "the classic mistake is thinking the quotes are part of the value, so the tailored wrong answer is the same text WITH the quotes still around it";
     let quoted = app_code_string_code(answer);
