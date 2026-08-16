@@ -1,7 +1,7 @@
+import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
 import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
 import { app_search_results_render } from "./app_search_results_render.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
-import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -11,13 +11,9 @@ import { html_page_scrolls } from "./html_page_scrolls.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { object_to_list } from "./object_to_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_book_exists } from "./ebible_book_exists.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { text_to_words } from "./text_to_words.mjs";
 export async function app_search_results(context, div_results) {
@@ -36,20 +32,7 @@ export async function app_search_results(context, div_results) {
     app_shared_text_body(div_results, missing_text);
     return;
   }
-  let results_all = object_to_list(dictionary);
-  function result_verses_exist(vk) {
-    "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
-    let e = property_list_empty_not_is(vk, "value");
-    return e;
-  }
-  let results_verses = list_filter(results_all, result_verses_exist);
-  function result_book_exists(vk) {
-    let chapter_code = property_get(vk, "key");
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let e = ebible_book_exists(books, book_code);
-    return e;
-  }
-  let results = list_filter(results_verses, result_book_exists);
+  let results = app_search_results_with_verses_and_books(dictionary, books);
   let none = list_empty_is(results);
   if (none) {
     ("nothing to expand and nothing to copy, so say so instead of leaving a bare Expand all button over an empty page");
