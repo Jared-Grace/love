@@ -34,6 +34,8 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   let note = html_div(head);
   let whole_line = app_code_expression_code(tree);
   let line_code = whole_line;
+  ("which operators may go next is kept alongside the line itself, for the same reason: a refused press is answered about the line as it stands, and the answer names the operator that may go instead of the one just pressed");
+  let ready_now = [];
   let rule_line = app_code_lesson_expression_choose_order_intro(
     intro,
     whole_line,
@@ -76,6 +78,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     line_code = app_code_expression_code(current);
     let solved = property_get(step, "solved");
     let ready = property_get(step, "ready");
+    ready_now = ready;
     if (null_is(solved)) {
       ("the opening words are simply there when the page arrives, with nothing slowed: nothing has been pressed yet, so there is no place the learner was looking that a change could take them away from");
       html_clear(note);
@@ -91,7 +94,12 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
     "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
     function change() {
-      app_code_lesson_expression_choose_order_wrong_say(note, node, line_code);
+      app_code_lesson_expression_choose_order_wrong_say(
+        note,
+        node,
+        ready_now,
+        line_code,
+      );
     }
     head_said(change);
   }
