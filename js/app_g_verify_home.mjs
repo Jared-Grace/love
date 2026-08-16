@@ -1,3 +1,4 @@
+import { app_g_verify_home_verse_bar } from "./app_g_verify_home_verse_bar.mjs";
 import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
@@ -13,16 +14,12 @@ import { api_read } from "./api_read.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { not } from "./not.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_centered } from "./html_div_centered.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { property_get } from "./property_get.mjs";
@@ -32,13 +29,11 @@ import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { app_g_verify_view } from "./app_g_verify_view.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
@@ -136,8 +131,8 @@ export async function app_g_verify_home(context) {
     let busy = property_get(status_shown, "busy");
     let status_verse = property_get(status_shown, "verse");
     function lambda2(p) {
-      let key2 = g_sermon_passage_verses_key(p);
-      return key2;
+      let key = g_sermon_passage_verses_key(p);
+      return key;
     }
     let real_keys = passages.map(lambda2);
     let approved_key = property_get(chapter_state_shown, "approved");
@@ -188,30 +183,16 @@ export async function app_g_verify_home(context) {
       html_style_font_size(msg, value);
       html_style_margin_top(msg, "1em");
     }
-    let bar = html_div_centered(wrap);
-    let value4 = app_shared_spaced_small_gap();
-    html_style_margin_top(bar, value4);
-    function lambda10(passage) {
-      let key = g_sermon_passage_verses_key(passage);
-      let a2 = real_keys.indexOf(key);
-      let is_approved =
-        greater_than_equal(approved_index, 0) &&
-        less_than_equal(a2, approved_index);
-      let label = is_approved ? "v" + key + " ✓" : "v" + key;
-      function lambda9() {
-        open_passage(passage);
-      }
-      verse_buttons[key] = app_shared_button(bar, label, lambda9);
-    }
-    passages.forEach(lambda10);
-    if (not_equal(pending, null)) {
-      function lambda11() {
-        open_pending(pending);
-      }
-      let pb = app_shared_button(bar, "v" + pending, lambda11);
-      html_style_opacity(pb, "0.5");
-      verse_buttons[pending] = pb;
-    }
+    app_g_verify_home_verse_bar(
+      wrap,
+      real_keys,
+      approved_index,
+      open_passage,
+      verse_buttons,
+      passages,
+      pending,
+      open_pending,
+    );
     view = html_div(wrap);
     if (equal(passages.length, 0)) {
       if (not_equal(pending, null)) {
