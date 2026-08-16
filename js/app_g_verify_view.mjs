@@ -122,6 +122,7 @@ export async function app_g_verify_view(
   let native_sizing = property_get(r2, "native_sizing");
   let value = property_get(r2, "value4");
   let suggest_area = property_get(r2, "suggest_area");
+  ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
   let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
   ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
