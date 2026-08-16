@@ -1,8 +1,7 @@
 import { noop } from "./noop.mjs";
 import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
+import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 export function app_code_expression_choose_say(note, ready, lead) {
@@ -16,6 +15,5 @@ export function app_code_expression_choose_say(note, ready, lead) {
   let cycles = [noop, app_code_expression_operator_chip];
   let parts = [lead, symbol, " below:"];
   let line = html_div_cycle(note, cycles, parts);
-  let gap = app_shared_spaced_gap();
-  html_style_margin_bottom(line, gap);
+  app_shared_spaced_below(line);
 }
