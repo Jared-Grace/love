@@ -1,3 +1,5 @@
+import { list_filter } from "./list_filter.mjs";
+import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { span_worst_piece } from "./span_worst_piece.mjs";
 import { span_row_better } from "./span_row_better.mjs";
 import { less_than } from "./less_than.mjs";
@@ -18,7 +20,9 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
   if (null_is(address_from)) {
     return null;
   }
-  let count = list_size(statements);
+  ("The prose is left out of both counts. A body here is mostly paragraphs explaining itself, and counting those as length makes a run covering every line of work look as though it left a good deal behind - which is how a cut that moves the whole body and gains nothing came to be offered first.");
+  let work = list_filter(statements, js_statement_work_is);
+  let count = list_size(work);
   let held = null;
   for (let to = from; less_than(to, count); to++) {
     let address_to = list_get(addresses, to);
@@ -30,7 +34,8 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     if (not(cuttable)) {
       continue;
     }
-    let size = list_size(span);
+    let span_work = list_filter(span, js_statement_work_is);
+    let size = list_size(span_work);
     let worst = span_worst_piece(count, size);
     let offered = {
       from,
