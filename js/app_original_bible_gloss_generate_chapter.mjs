@@ -1,3 +1,4 @@
+import { text_empty } from "./text_empty.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
