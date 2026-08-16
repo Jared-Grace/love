@@ -40,9 +40,7 @@ export async function claude_bash_labels_alongside(days, label, count) {
       lines_dispatcher = add(lines_dispatcher, 1);
     }
   }
-  let ranked = list_tally_ranked(others);
-  let many = Number(count);
-  let top = list_take(ranked, many);
+  let top = list_tally_ranked_top(others, count);
   let found = {
     days,
     label,
