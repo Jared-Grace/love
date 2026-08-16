@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_transform_auto } from "./function_transform_auto.mjs";
@@ -22,8 +23,7 @@ export async function function_prose_replace(f_name, text_before, text_after) {
   function lambda(ast) {
     let statements = js_prose_statement_nodes(ast);
     function holds(prose) {
-      let prose_expression = property_get(prose, "expression");
-      let prose_said = property_get(prose_expression, "value");
+      let prose_said = property_path_get_2(prose, "expression", "value");
       let holds_is = text_includes(prose_said, text_before);
       return holds_is;
     }
@@ -41,8 +41,7 @@ export async function function_prose_replace(f_name, text_before, text_after) {
       ]),
     });
     let statement = list_get(matched, 0);
-    let expression = property_get(statement, "expression");
-    let said = property_get(expression, "value");
+    let said = property_path_get_2(statement, "expression", "value");
     let after = text_replace_once(said, text_before, text_after);
     let written = js_prose_statement(after);
     let written_expression = property_get(written, "expression");
