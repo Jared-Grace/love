@@ -32,7 +32,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -49,7 +48,6 @@ export async function app_shared_bible_home_generic(
   let bar = property_get(frame, "bar");
   html_centered(bar);
   bar_extra(bar);
-  let e = ebible_folder_english();
   if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }
@@ -66,7 +64,7 @@ export async function app_shared_bible_home_generic(
   let v = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v, "chapter_name");
   let book_code = property_get(v, "book_code");
-  let r = await app_shared_bible_books_verses_fetch(e, chapter_code);
+  let r = await app_shared_bible_books_verses_fetch(chapter_code);
   let verses = property_get(r, "verses");
   let books = property_get(r, "books");
   let book_name = ebible_book_code_to_name(books, book_code);
