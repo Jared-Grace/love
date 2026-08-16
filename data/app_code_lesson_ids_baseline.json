@@ -44,6 +44,7 @@
   "expressions_nested_divide",
   "expressions_plus_minus",
   "expressions_times_divide",
+  "expressions_choosing_the_order_to_solve_in",
   "expressions_plus_times",
   "expressions_plus_divide",
   "expressions_minus_times",
@@ -80,6 +81,7 @@
   "functions_smaller_of_two",
   "functions_larger_of_two",
   "functions_more_than_two_numbers",
+  "expressions_when_either_operator_can_go_first",
   "expressions_arithmetic_both_sides",
   "expressions_swapping_plus_times",
   "expressions_swapping_divide_power",
@@ -96,7 +98,6 @@
   "expressions_which_part_is_solved_first",
   "operators_not_twice",
   "expressions_not_around_a_comparison",
-  "expressions_not_equal_written_with_not",
-  "expressions_choosing_the_order_to_solve_in"
+  "expressions_not_equal_written_with_not"
  ]
 }
