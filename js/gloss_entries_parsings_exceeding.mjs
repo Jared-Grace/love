@@ -11,8 +11,10 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function gloss_entries_parsings_exceeding(entries, records) {
-  "Every word explanation in one passage that names a tense, a mood or a form its own word's parsing does not carry, or nothing when none of them does.";
+  "Every place in one passage where a word explanation names a tense, a mood or a form its own word's parsing does not carry, or nothing when none of them does.";
   "This reports a disagreement and never a verdict. An explanation is free to name a tense while talking about a different word - saying that a form is not the aorist used earlier, or that a present tense is telling a past story - and every one of those lands here. What comes back is a list of places for a reader to look, in the order they were written.";
+  "One place is one explanation set against one term, so an explanation naming two of them lands twice. Each place says which term it is about rather than gathering them, because the reader's verdict is on the term and not on the explanation as a whole.";
+  "Each place also carries the other words of the passage whose own parsing does hold that term. Where that list is not empty the explanation had somewhere to point - a word does not agree with the genitive words just before it, an article has a participle after it - and where it is empty the explanation names a form nothing in the passage has, which is the stronger finding of the two. Sorting on that is the caller's to do; this only hands over what it found.";
   "The two sides are lined up by their place in the passage, which is what the page itself does when it paints an explanation under a word. When the two do not have the same length that lining up is a guess, so nothing is compared at all and the answer is that it could not be looked at, which is a different answer from finding nothing wrong.";
   let left = list_size(entries);
   let right = list_size(records);
