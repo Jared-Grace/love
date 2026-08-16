@@ -9,7 +9,6 @@ import { list_is } from "./list_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function gloss_entries_explains_standing_is(entries, explains) {
   "Whether a passage already says, word for word and in the same standings, everything a piece of waiting wording would write into it - so that writing it again would change nothing at all.";
   "The wording is handed over in a file and the file is never removed by the writing, so the same sentences are written again every time the chapter is mended. That is harmless while nothing has moved on, and it silently undoes later work once something has. Asking whether the file still says what the passage says is what tells a spent hand-off from one still waiting, and it is the only question whose yes makes the file safe to remove.";
@@ -19,7 +18,8 @@ export function gloss_entries_explains_standing_is(entries, explains) {
   let size = list_size(entries);
   let whole = list_is(explains);
   if (whole) {
-    let agreed = equal(list_size(explains), size);
+    let left = list_size(explains);
+    let agreed = equal(left, size);
     if (not(agreed)) {
       return false;
     }
