@@ -9,9 +9,9 @@ export async function app_ceb_bible_gloss_write_file(chapter_code, verse_key) {
   ("Where the file sits is answered by ",
     fn_name("gloss_write_file_path"),
     ", which is also what tells an author where to write it.");
-  "$plain chapter_code";
-  "$plain verse_key";
-  "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
+  ("$plain chapter_code");
+  ("$plain verse_key");
+  ("both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.");
   let path = gloss_write_file_path(
     chapter_code,
     verse_key,
