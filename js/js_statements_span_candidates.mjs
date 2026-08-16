@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_candidate_longest } from "./js_statements_span_candidate_longest.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,13 +19,13 @@ export function js_statements_span_candidates(statements, addresses) {
   ("Nothing is written and nothing is moved. Whether a run listed here is a good function is a judgement about meaning, which this cannot make - it says only that the cut would not go silently wrong.");
   let count = list_size(statements);
   let rows = [];
-  for (let from = 0; from < count; from++) {
+  for (let from = 0; less_than(from, count); from++) {
     let row = js_statements_span_candidate_longest(statements, addresses, from);
     if (null_is(row)) {
       continue;
     }
     let size = property_get(row, "size");
-    let single = size < 2;
+    let single = less_than(size, 2);
     if (single) {
       continue;
     }
