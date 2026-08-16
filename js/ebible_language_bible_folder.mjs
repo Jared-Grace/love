@@ -1,6 +1,6 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
-import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { versions_key } from "./versions_key.mjs";
@@ -16,7 +16,6 @@ export function ebible_language_bible_folder(language) {
     let own = property_get(language, property_name);
     return own;
   }
-  let first = list_first(versions);
-  let bible_folder = property_get(first, property_name);
+  let bible_folder = list_first_property(versions, property_name);
   return bible_folder;
 }
