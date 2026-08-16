@@ -1,8 +1,7 @@
+import { functions_fold_sites_file_load } from "./functions_fold_sites_file_load.mjs";
 import { tally_covers_is } from "./tally_covers_is.mjs";
 import { list_filter_index } from "./list_filter_index.mjs";
-import { js_block_callee_names } from "./js_block_callee_names.mjs";
 import { list_tally } from "./list_tally.mjs";
-import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
 import { tallies_any_covers_is } from "./tallies_any_covers_is.mjs";
 import { js_fold_blocks } from "./js_fold_blocks.mjs";
@@ -14,9 +13,7 @@ import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { js_flo_name } from "./js_flo_name.mjs";
 import { js_blocks_all } from "./js_blocks_all.mjs";
-import { js_fn_fold_pattern } from "./js_fn_fold_pattern.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_fold_sites() {
@@ -46,36 +43,13 @@ export async function functions_fold_sites() {
   ("What each run of statements calls, counted, is kept per file beside the index of who calls what. The index answers WHETHER a file calls a name and this answers HOW OFTEN, within a single run - which is the question a fold actually asks, because a body is folded into one run and not gathered across a file.");
   let block_tallies = {};
   function file_load(record) {
-    let text = property_get(record, "text");
-    let name = null;
-    let pattern = null;
-    let callees = [];
-    let tallies = [];
-    try {
-      let ast = js_parse(text);
-      name = js_flo_name(ast);
-      let blocks = js_blocks_all(ast);
-      for (let block of blocks) {
-        let block_names = js_block_callee_names(block);
-        let item = list_tally(block_names);
-        list_add(tallies, item);
-        callees = callees.concat(block_names);
-      }
-      pattern = js_fn_fold_pattern(ast);
-    } catch (e) {
-      return;
-    }
-    entries[name] = {
-      text: text,
-      pattern: pattern,
-    };
-    block_tallies[name] = tallies;
-    for (let callee of callees) {
-      if (not(callee_index[callee])) {
-        callee_index[callee] = {};
-      }
-      callee_index[callee][name] = true;
-    }
+    let r2 = functions_fold_sites_file_load(
+      record,
+      entries,
+      block_tallies,
+      callee_index,
+    );
+    return r2;
   }
   list_map(records, file_load);
   ("A file is read into its shape once and kept, because the pairing asks about the same files over and over. Counted 2026-08-11 across this repo: 57,709 readings of 2,772 different files, twenty-one times each, and this was the second slowest gate there is.");
@@ -99,8 +73,8 @@ export async function functions_fold_sites() {
     if (not_equal(kept2, undefined)) {
       return kept2;
     }
-    let ast2 = shape_of(f_name);
-    let found = js_blocks_all(ast2);
+    let ast = shape_of(f_name);
+    let found = js_blocks_all(ast);
     blocks_kept[f_name] = found;
     return found;
   }
