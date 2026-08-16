@@ -8,11 +8,11 @@ export async function permission_grant_names_settings_write(names) {
   "the two writes are one act and never two. the list is the source and the settings file is generated from it, so a run that writes one and not the other leaves Claude's approvals disagreeing with the record of them - which is the drift the restore command exists to repair, and it has been repaired by hand more than once.";
   "every function that changes the granted names did these same three lines, and each one was a place the pair could come apart. saying it once means a fifth writer gets the pairing by calling this rather than by remembering it.";
   "the write is read back before the count is handed over, so a caller that is told how many rules it wrote has been told the truth about the file. Every writer of the names passes through here, which is why the check lives here and not in the adder - a removal and a rename owe the same answer.";
-  "a name spelled twice is dropped to one before anything is written. It grants exactly what one spelling grants, so this takes nothing away - but two Claudes granting at once put the same name in twice through a caller that could not see the other, and the list is a record a human reads as well as a source a file is generated from.";
-  let unique = list_unique(names);
-  await permission_grant_names_write(unique);
-  let written = await permission_settings_allow_write_from(unique);
-  await permission_grant_names_written_assert(unique);
+  "the rules are generated from the names the list writer says it wrote, never from the ones it was handed, because it drops a name spelled twice - and a settings file generated from the longer list would carry a rule the list no longer accounts for, which is the drift this function exists to prevent";
+  let listed = await permission_grant_names_write(names);
+  let spelled = property_get(listed, "spelled");
+  let written = await permission_settings_allow_write_from(spelled);
+  await permission_grant_names_written_assert(spelled);
   let allow = property_get(written, "allow");
   return allow;
 }

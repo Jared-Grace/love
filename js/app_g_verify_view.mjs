@@ -1,3 +1,4 @@
+import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
 import { app_g_verify_storage_app } from "./app_g_verify_storage_app.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
@@ -28,10 +29,6 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { html_button_bible_chapter_open } from "./html_button_bible_chapter_open.mjs";
-import { html_buttons_biblehub_verse_group } from "./html_buttons_biblehub_verse_group.mjs";
-import { html_buttons_biblehub_verse_grid } from "./html_buttons_biblehub_verse_grid.mjs";
-import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -217,53 +214,7 @@ export async function app_g_verify_view(
     order_comps[li] = row;
   }
   lines.forEach(lambda16);
-  let links_bar = html_div(container);
-  html_style_margin_top(links_bar, small_gap);
-  html_centered(links_bar);
-  let v = chapter_code.slice(3);
-  let v2 = Number(v);
-  let bh_chapter = String(v2);
-  let book_code = chapter_code.slice(0, 3);
-  let bh_book = g_verify_book_name(book_code);
-  let verse_list = verse.split(",");
-  html_button_bible_chapter_open(
-    links_bar,
-    chapter_code,
-    verse,
-    "Whole Chapter",
-  );
-  ("Commentary / Parallel / Interlinear each as a verse-group: one button for a single verse, or (multi-verse) a row of per-verse buttons in a shared centered grid so the verse numbers line up across the three kinds (a single button reaches only the first verse)");
-  let multi_verse = greater_than_equal(verse_list.length, 2);
-  let links_target = multi_verse
-    ? html_buttons_biblehub_verse_grid(links_bar)
-    : links_bar;
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
-    verse_list,
-    "Commentary",
-    "",
-    "#commentary",
-  );
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
-    verse_list,
-    "Parallel",
-    "",
-    "",
-  );
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
-    verse_list,
-    "Interlinear",
-    "interlinear/",
-    "",
-  );
+  app_g_verify_view_links_bar(container, small_gap, chapter_code, verse);
   let approve_bar = html_div(container);
   html_style_margin_top(approve_bar, small_gap);
   html_centered(approve_bar);
