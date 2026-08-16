@@ -6,7 +6,6 @@ import { property_delete_if_exists_fn } from "./property_delete_if_exists_fn.mjs
 import { command_line_generic_code_ignore } from "./command_line_generic_code_ignore.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
@@ -73,16 +72,4 @@ export async function command_line_generic(command, extra) {
     child.on("close", lambda4);
   });
   return result;
-  return;
-  let c = await import("child_process");
-  let exec = property_get(c, "exec");
-  let u = await import("util");
-  let promisify = property_get(u, "promisify");
-  let execAsync = promisify(exec);
-  let options = {
-    encoding: "utf8",
-  };
-  object_merge_set(options, extra);
-  let stdout = await execAsync(command, options);
-  return stdout;
 }
