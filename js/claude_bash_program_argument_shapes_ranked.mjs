@@ -31,9 +31,7 @@ export async function claude_bash_program_argument_shapes_ranked(
       list_add(shapes, shape);
     }
   }
-  let ranked = list_tally_ranked(shapes);
-  let many = Number(count);
-  let top = list_take(ranked, many);
+  let top = list_tally_ranked_top(shapes, count);
   let found = {
     days,
     program,
