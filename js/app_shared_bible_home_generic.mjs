@@ -56,9 +56,7 @@ export async function app_shared_bible_home_generic(
     chapter_name,
     verse_number_hash,
   );
-  let verse_numbers_chosen = [];
   let languages_verses = [];
-  let updates = [];
   let r2 = await app_shared_bible_home_verse_current_languages(
     verses,
     verse_number_hash,
@@ -86,8 +84,6 @@ export async function app_shared_bible_home_generic(
   );
   app_shared_bible_home_copy_button(
     bottom,
-    updates,
-    verse_numbers_chosen,
     verse_number,
     chapter_code,
     languages_verses,
