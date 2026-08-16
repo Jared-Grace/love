@@ -60,14 +60,9 @@ export function app_code_expression_choose_line(
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
         ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
-        let watched = await on_chosen(node, node_value, node_span);
-        ("whether the learner watched the swap arrive is asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows what it showed");
-        await app_code_expression_replaced_settle(
-          line,
-          node_span,
-          node_value,
-          watched,
-        );
+        await on_chosen(node, node_value, node_span);
+        ("and the settling that follows is the same on both, so nothing is asked of the answerer about what it showed - the front page flies the value down and the quiz simply writes it, and either way what is left to do is let the blue go and close the line up");
+        await app_code_expression_replaced_settle(line, node_span, node_value);
         let stepped = app_code_expression_solved(current, node);
         draw(stepped, node, node_value);
         let more = app_code_expression_node_is(stepped);
