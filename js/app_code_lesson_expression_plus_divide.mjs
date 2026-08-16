@@ -35,16 +35,17 @@ export function app_code_lesson_expression_plus_divide() {
     return triples;
   }
   function above(root) {
+    "the numbers are picked so no number is said twice inside one worked line: 2 + 6 / 3 would come to 2 + 2, and a learner reading that has to work out which 2 was already there and which one the division just made";
     app_code_lesson_cross_precedence_intro({
       root,
       weak: plus,
       strong: divided,
       later_inner_left: 6,
       later_inner_right: 3,
-      later_outer: 2,
+      later_outer: 5,
       first_inner_left: 8,
       first_inner_right: 2,
-      first_outer: 5,
+      first_outer: 9,
     });
   }
   let lesson = app_code_lesson_expression_pair_generic({
