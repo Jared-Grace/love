@@ -1,3 +1,4 @@
+import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_book_row } from "./app_g_verify_home_book_row.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
@@ -8,7 +9,6 @@ import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
 import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
 import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
 import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
-import { app_g_verify_banner_font_size } from "./app_g_verify_banner_font_size.mjs";
 import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { api_read } from "./api_read.mjs";
@@ -27,9 +27,6 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_margin_em } from "./html_margin_em.mjs";
@@ -48,8 +45,6 @@ import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.m
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
-import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
-import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
@@ -205,27 +200,7 @@ export async function app_g_verify_home(context) {
     let value8 = app_g_verify_hint_font_size();
     html_style_font_size(hint, value8);
     html_margin_em(hint, "0");
-    if (busy) {
-      let note = property_get(status_shown, "note");
-      let text = "Claude is writing v" + status_verse + "…";
-      if (note) {
-        text = text + "  " + note;
-      }
-      let banner = html_p_text(wrap, text);
-      let background = app_shared_milestone_background_color();
-      html_style_background_color_set(banner, background);
-      html_font_color_set(banner, "white");
-      let border_radius = app_shared_border_radius();
-      html_border_radius(banner, border_radius);
-      html_style_padding_x(banner, "0.7em");
-      let value5 = app_shared_spaced_small_gap();
-      html_style_padding_y(banner, value5);
-      html_margin_em(banner, "0");
-      let value3 = app_shared_spaced_small_gap();
-      html_style_margin_top(banner, value3);
-      let value9 = app_g_verify_banner_font_size();
-      html_style_font_size(banner, value9);
-    }
+    app_g_verify_home_busy_banner(busy, status_shown, status_verse, wrap);
     view = null;
     let verse_buttons = {};
     async function on_approved(v) {
