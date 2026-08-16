@@ -1,14 +1,13 @@
+import { words_capitalised_always } from "./words_capitalised_always.mjs";
+import { property_exists } from "./property_exists.mjs";
 import { app_ceb_bible_gloss_new_testament_prep_counted } from "./app_ceb_bible_gloss_new_testament_prep_counted.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_ceb_bible_gloss_chapters_absent } from "./app_ceb_bible_gloss_chapters_absent.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_chapters_bible_words_distinct } from "./gloss_chapters_bible_words_distinct.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -29,17 +28,12 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
     bible_folder,
     chapter_codes,
   );
-  function lower_is(word) {
-    let lowered = text_lower_to(word);
-    let same = equal(lowered, word);
-    return same;
-  }
-  let uncapitalised = list_filter(written, lower_is);
+  let capitalised = words_capitalised_always(written);
   let words = list_map_unique(written, text_lower_to);
   let known = await binisaya_words_known();
   async function word_place(word) {
-    let ever = list_includes(uncapitalised, word);
-    if (not(ever)) {
+    let named = property_exists(capitalised, word);
+    if (named) {
       let r1 = {
         word,
         place: "named",
