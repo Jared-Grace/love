@@ -53,6 +53,7 @@ export async function permission_grant_word_params(word) {
   let r = {
     word,
     checked: list_size(live),
+    unnamed,
     found,
   };
   return r;
