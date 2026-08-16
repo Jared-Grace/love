@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { boolean_random } from "./boolean_random.mjs";
+import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
+import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { property_set } from "./property_set.mjs";
+import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 export function app_code_lesson_expression_choose_order_questions() {
   arguments_assert(arguments, 0);
   ("the question bank a press-the-operators lesson draws on: lines built as shapes, handed out one a screen, and findable again from the writing they were printed as");

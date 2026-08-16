@@ -1,23 +1,18 @@
+import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
-import { boolean_random } from "./boolean_random.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
   "Every lesson before this asks for the answer to a whole line at once, so a learner who knows the rule and slips on the arithmetic, and one who does the arithmetic and does not know the rule, are marked the same. Here the two are separated: the arithmetic is done FOR the learner and the only thing asked is the order.";
@@ -63,7 +58,7 @@ export function app_code_lesson_expression_choose_order() {
   }
   function on_question_example(parent, question, card) {
     "the lesson's front page, which is the walkthrough next door: all this end of it has to do is find the shape the question was printed from, because that is the one thing kept here and nowhere else";
-    let tree = property_get(trees, question);
+    let tree = tree_for(question);
     app_code_lesson_expression_choose_order_walkthrough(parent, card, tree);
   }
   function quizzes_get(question, answer) {
