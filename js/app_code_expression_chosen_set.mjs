@@ -14,4 +14,7 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   html_style_set(operator_span, "color", "inherit");
   ("its edge goes with its fill, in the same breath: an edge left drawn round the operator keeps it marked out as one thing inside the green, and the whole point of the green is that the operator and its two sides have just become one thing");
   html_box_shadow_set(operator_span, "none");
+  ("and the room it was holding either side of itself goes too, so the block spells its working out at the width the same working out is spelled at in the sentence naming it, rather than a chip's worth wider");
+  ("The room was there to keep the fill and the edge off the lettering. With neither of them left there is nothing for it to hold off, and all it does is push the two sides of the working apart - which reads as the block being about something slightly different from the thing the sentence says it is.");
+  html_style_padding_x(operator_span, "0");
 }
