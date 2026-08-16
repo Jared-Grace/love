@@ -1,3 +1,4 @@
+import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
 import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
 import { functions_lift_captured_locals_gate_run } from "./functions_lift_captured_locals_gate_run.mjs";
@@ -17,7 +18,8 @@ import { guard_gate_run } from "./guard_gate_run.mjs";
 export function qa_gates_machine() {
   "The gates whose answer is about this machine and this folder rather than about the code";
   "One asks the operating system whether the background services are alive, which no copy of the files can answer";
-  "Two put commands to the real hook and read its answer, and the hook builds this project's scratch folder name out of where the project sits - so a rule naming that folder is rightly not honoured from anywhere else, and both were measured failing on a frozen copy for exactly that reason and no other";
+  "Three put commands to the real hook and read its answer, and the hook works out where the project sits from its own place on disk - so a command naming this folder, or a rule naming the scratch folder built out of it, is rightly not honoured from anywhere else, and all three were measured failing on a frozen copy for exactly that reason and no other";
+  "The third is the one that reads the commands written in the instructions and asks the hook whether each still runs. The instructions spell this folder out in full, because a Claude at the keyboard has to type the line as written; the hook inside a copy is deciding for the copy, so it refuses every one of those lines and the gate calls the instructions broken while they are exactly right. Measured 2026-08-16: it was the only red left in a whole-folder run, and it passed on its own out here in the same minute";
   "One asks the history rather than the disk - which moves were made and what each one dropped - and the frozen copy is made without the history on purpose, so that gate could never pass in there. It failed on every single run with git saying the folder was not a repository, was believed, and sent the whole run into asking the red ones again; a permanent red reads exactly like a real one, and the cost of it was a phase of the run rather than a wrong answer";
   "The rest read the notes we keep, and those live somewhere else on this machine entirely - the path to them is worked out from a folder outside this repo, so a copy of the repo does not contain them and cannot";
   "Naming them is what lets a verdict be kept against a commit: everything else is a question the files alone answer, so the same commit gives the same answer tomorrow, while these can change without a single line changing";
@@ -29,6 +31,7 @@ export function qa_gates_machine() {
     storage_rules_gate_run,
     daemons_gate_run,
     guard_gate_run,
+    instructions_commands_gate_run,
     permission_reachable_gate_run,
     functions_lift_captured_locals_gate_run,
     memory_hook_gate_run,
