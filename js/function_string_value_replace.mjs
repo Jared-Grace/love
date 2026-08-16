@@ -48,13 +48,14 @@ export async function function_string_value_replace(
     }
     let matched = list_filter(strings, holds);
     let places = list_size(matched);
+    let f_name2 = fn_name("function_prose_replace");
     equal_assert_json(places, 1, {
       f_name,
       text_before,
       places,
       hint: text_combine_multiple([
         "a change to one place asks for text that sits in exactly one of them. If the run is a line the function says about itself rather than something the program uses, ask ",
-        fn_name("function_prose_replace"),
+        f_name2,
         " instead. None at all can also mean the text has already been changed, or a character differs - a stray space, a different kind of quote. More than one means the run is not yet unique, and taking in a little more of the words around it is usually enough to tell the places apart",
       ]),
     });
