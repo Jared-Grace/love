@@ -1,3 +1,4 @@
+import { ebible_version_language_code } from "./ebible_version_language_code.mjs";
 import { ebible_version_downloaded_books_count } from "./ebible_version_downloaded_books_count.mjs";
 import { ebible_versions_commercial } from "./ebible_versions_commercial.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -14,7 +15,7 @@ export async function ebible_versions_commercial_ranked() {
   async function counted(version) {
     let bible_folder = property_get(version, "bible_folder");
     let books_count = await ebible_version_downloaded_books_count(bible_folder);
-    "The language is settled here rather than left as the page happened to give it, because everything downstream groups on it and eleven pages name none. Left alone those eleven gather into one nameless language nobody can be offered.";
+    ("The language is settled here rather than left as the page happened to give it, because everything downstream groups on it and eleven pages name none. Left alone those eleven gather into one nameless language nobody can be offered.");
     let language_code = ebible_version_language_code(version);
     let entry = object_copy(version);
     object_merge(entry, {
