@@ -28,5 +28,8 @@ export async function app_code_expression_replace_fly(
   html_translation_transition_clear(node_span);
   html_raised_clear(node_span);
   ("both beats stay blue the whole way. The blue is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
-  await html_copy_fly_rect(piece_value, rect_from, duration);
+  ("the value comes down quicker than the block went up, because by now there is nothing left to work out about it: the sentence has already named it, the learner has already read it standing there, and all this beat says is which room it is going into");
+  ("The beat before is the one carrying the news - a block leaving the line for the words that named it - and it keeps the full while. Given the same while, the second beat reads as a second thing to work out rather than as the answer being put where it belongs, and a learner who has already read the value spends it waiting.");
+  let duration_quick = app_shared_animation_duration_quick();
+  await html_copy_fly_rect(piece_value, rect_from, duration_quick);
 }
