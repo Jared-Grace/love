@@ -4,7 +4,7 @@ import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-export function js_statements_span_outputs_written_names(span, tail) {
+export function js_statements_span_outputs_closure_names(span, tail) {
   arguments_assert(arguments, 2);
   ("The names a run of lines would hand back that somebody goes on writing to afterwards - the ones a cut would quietly turn into two separate values.");
   ("What a run hands back is handed back once, as a value. A name that is only ever given its value and then read keeps working perfectly across a cut, because there is nothing later for the two sides to disagree about. A name that is written to again does not: the line doing the writing is on one side of the cut and something reading it is on the other, and from the moment of the first write the two are looking at different things.");
