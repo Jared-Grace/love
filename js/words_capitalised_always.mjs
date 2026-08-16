@@ -1,5 +1,5 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
@@ -10,8 +10,7 @@ export function words_capitalised_always(words) {
   "How much text to hand in is the caller's to decide and it is the whole of the accuracy. The evidence is the times a word was written in small letters, so the more text, the fewer ordinary words come back looking like names - and asked of one chapter, a common word that opens every sentence it appears in comes back looking exactly like one.";
   let lowered = {};
   function lower_note(word) {
-    let lower = text_lower_to(word);
-    let same = equal(word, lower);
+    let same = text_lower_is(word);
     if (same) {
       property_set(lowered, word, true);
     }
