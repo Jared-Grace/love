@@ -19,23 +19,23 @@ export async function app_original_bible_gloss_parsings_exceeding_chapters() {
   let file_names = await folder_read_files_exists_ensure(folder);
   let chapter_codes = list_map(file_names, file_name_json_name);
   async function chapter_read(chapter_code) {
-    let r = await app_original_bible_gloss_parsings_exceeding(chapter_code);
-    return r;
+    let found = await app_original_bible_gloss_parsings_exceeding(chapter_code);
+    return found;
   }
-  let chapters = await list_map_async(chapter_codes, chapter_read);
+  let answers = await list_map_async(chapter_codes, chapter_read);
   function exceeding_is(chapter) {
     let offending = property_list_empty_not_is(chapter, "exceeding");
     return offending;
   }
-  let offenders = list_filter(chapters, exceeding_is);
+  let offenders = list_filter(answers, exceeding_is);
   function offender_shown(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
     let exceeding = property_get(chapter, "exceeding");
-    let r = {
+    let place = {
       chapter_code,
       exceeding,
     };
-    return r;
+    return place;
   }
   let shown = list_map(offenders, offender_shown);
   let r = {
