@@ -1,8 +1,7 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { js_visit_nodes } from "./js_visit_nodes.mjs";
 import { js_node_types_written_out } from "./js_node_types_written_out.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_node_written_out_all(node) {
   arguments_assert(arguments, 1);
@@ -11,8 +10,7 @@ export function js_node_written_out_all(node) {
   let found = [];
   let types = js_node_types_written_out();
   function note(inner) {
-    let type = property_get(inner, "type");
-    let listed_is = list_includes(types, type);
+    let listed_is = property_in_list(inner, "type", types);
     if (listed_is) {
       list_add(found, inner);
     }
