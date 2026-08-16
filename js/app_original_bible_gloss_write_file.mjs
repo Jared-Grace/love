@@ -1,3 +1,4 @@
+import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { app_original_bible_gloss_write } from "./app_original_bible_gloss_write.mjs";
@@ -14,7 +15,11 @@ export async function app_original_bible_gloss_write_file(
   ("$plain chapter_code");
   ("$plain verse_key");
   ("both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.");
-  let path = gloss_write_file_path(chapter_code, verse_key);
+  let path = gloss_write_file_path(
+    chapter_code,
+    verse_key,
+    app_original_bible_gloss_generate,
+  );
   let entries = await file_read_json(path);
   let r = await app_original_bible_gloss_write(
     chapter_code,
