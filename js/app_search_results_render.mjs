@@ -1,3 +1,4 @@
+import { app_search_results_top_buttons } from "./app_search_results_top_buttons.mjs";
 import { app_search_results_bible_order_key } from "./app_search_results_bible_order_key.mjs";
 import { app_search_results_division_card } from "./app_search_results_division_card.mjs";
 import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
@@ -6,13 +7,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
-import { html_br_2 } from "./html_br_2.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
@@ -44,20 +38,12 @@ export function app_search_results_render(
     await list_join_newline_2_copy(squashed);
   }
   ("the three buttons stand in one row, so each wears a picture for the same reason the copying one always has: a reader picks the one they want by its picture before they have read any of the words");
-  let down = emoji_triangle_down();
-  let expand_all_text = text_combine(down, " Expand all");
-  app_shared_button_wide(div_results, expand_all_text, expand_all_lambda);
-  let up = emoji_triangle_up();
-  let collapse_all_text = text_combine(up, " Collapse all");
-  app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
-  let left = html_button_copy_text();
-  app_shared_button_wide_text_combine(
+  app_search_results_top_buttons(
     div_results,
-    left,
-    " all",
+    expand_all_lambda,
+    collapse_all_lambda,
     copy_all_lambda,
   );
-  html_br_2(div_results);
   function bible_order_key(vk) {
     let r3 = app_search_results_bible_order_key(vk, books);
     return r3;
