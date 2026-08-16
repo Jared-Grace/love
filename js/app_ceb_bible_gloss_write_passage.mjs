@@ -22,6 +22,7 @@ export async function app_ceb_bible_gloss_write_passage(
   "both name text to read: a chapter of the Bible, and the verses one passage of it covers. Neither names anything that runs.";
   "The root and the affixes are handed over rather than worked out, for the same reason the Greek parsing is: a root is a claim about a language, and a word's shape is exactly the evidence that misleads. Cebuano builds a word by putting sounds inside it as well as around it, and a prefix that changes the sound it lands on leaves a root nobody can see - so a root read off the letters is a guess dressed as a fact, and it reads the same as a true one.";
   "A word the dictionary was never asked about is said to be so, rather than arriving looking like a word it had nothing to say about. The two are opposite instructions to an author: one is a gap in the gathering and is somebody's to fill, and the other is the dictionary's own silence and is to be respected.";
+  "A word the book never once writes in small letters arrives as a name and carries no root at all, even where the dictionary offered one. The dictionary answers about the letters it is given rather than about the word meant by them, so a place name that happens to be spelled like a built Cebuano word comes back taken apart: Galilea was handed over as a root lili wearing a prefix and a suffix. Nothing about that answer looks wrong, which is the whole of the problem - an author who does not already know the place would pass it on, and a made-up origin is the sentence a reader is likeliest to keep.";
   "It also answers with the file to write the explanations into, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again. That matters here more than on the Greek side, because every Cebuano chapter now in the store was generated rather than authored, so re-authoring is not the exception but the whole of the work.";
   let passages = await app_ceb_bible_gloss_passages(chapter_code);
@@ -31,9 +32,24 @@ export async function app_ceb_bible_gloss_write_passage(
   let cebuano_texts = list_first(texts);
   let english_texts = list_get(texts, 1);
   let known = await binisaya_words_known();
+  let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
+  let bible_folder = list_first(bible_folders);
+  let book_code = ebible_chapter_code_to_book(chapter_code);
+  let capitalised = await gloss_words_capitalised_always(
+    bible_folder,
+    book_code,
+  );
   ("The words are cut exactly as the gathering cut them, so what was looked up and what is handed over are the same list. Cut differently here, a word would arrive saying nothing was ever asked about it while its answer sat in the cache under a spelling this never asks for.");
   function word_read(word) {
     let key = text_lower_to(word);
+    let named = property_exists(capitalised, key);
+    if (named) {
+      let name = {
+        word,
+        capitalised_always: true,
+      };
+      return name;
+    }
     let held = property_exists(known, key);
     if (not(held)) {
       let absent = {
