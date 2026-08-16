@@ -1,7 +1,6 @@
+import { list_find_item_property } from "./list_find_item_property.mjs";
 import { ebible_language_bible_folders } from "./ebible_language_bible_folders.mjs";
-import { list_find } from "./list_find.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { property_get } from "./property_get.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 export function ebible_bible_folder_to_name(bible_folder) {
   "What the language of a bible is called, from the name of the folder its chapters are kept in.";
@@ -13,7 +12,6 @@ export function ebible_bible_folder_to_name(bible_folder) {
     let holds = list_includes(bible_folders, bible_folder);
     return holds;
   }
-  let found = list_find(languages_list, holds_is);
-  let name = property_get(found, "name");
+  let name = list_find_item_property(languages_list, holds_is, "name");
   return name;
 }
