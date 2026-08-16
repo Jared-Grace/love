@@ -1,5 +1,4 @@
-import { git_history_tracked_blobs } from "./git_history_tracked_blobs.mjs";
-import { property_get } from "./property_get.mjs";
+import { git_history_blobs_marked } from "./git_history_blobs_marked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_folders_containing } from "./path_folders_containing.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
