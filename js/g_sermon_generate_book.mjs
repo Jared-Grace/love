@@ -19,5 +19,6 @@ export async function g_sermon_generate_book(bible_folder, book_code) {
     prompt_user_middle,
     prompt_system,
     null,
+    text_empty,
   );
 }

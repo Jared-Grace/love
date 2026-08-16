@@ -11,6 +11,11 @@ export async function app_ceb_bible_gloss_generate_chapter(
   let fn = app_ceb_bible_gloss_generate;
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let last = "original language and English are";
+  let known = await binisaya_words_known();
+  function passage_reference(passage) {
+    let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
+    return reference;
+  }
   await app_shared_gloss_bible_generate_generic(
     language,
     last,
@@ -18,5 +23,6 @@ export async function app_ceb_bible_gloss_generate_chapter(
     book_code,
     fn,
     chapter_code_specified,
+    passage_reference,
   );
 }
