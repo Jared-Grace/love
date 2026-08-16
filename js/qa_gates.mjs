@@ -232,6 +232,7 @@ import { memory_link_gate_run } from "./memory_link_gate_run.mjs";
 import { memory_frontmatter_gate_run } from "./memory_frontmatter_gate_run.mjs";
 import { permission_rule_file_gate_run } from "./permission_rule_file_gate_run.mjs";
 import { permission_rule_probe_gate_run } from "./permission_rule_probe_gate_run.mjs";
+import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { memory_pointer_gate_run } from "./memory_pointer_gate_run.mjs";
 import { memory_integrity_gate_run } from "./memory_integrity_gate_run.mjs";
@@ -269,6 +270,7 @@ export function qa_gates() {
   let gates = [
     guard_gate_run,
     memory_hook_gate_run,
+    stop_next_steps_hook_gate_run,
     memory_pointer_gate_run,
     memory_integrity_gate_run,
     memory_frontmatter_gate_run,
