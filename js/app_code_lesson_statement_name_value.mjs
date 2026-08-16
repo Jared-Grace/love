@@ -1,15 +1,12 @@
+import { app_code_lesson_statement_name_value_above } from "./app_code_lesson_statement_name_value_above.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
-import { html_div_code } from "./html_div_code.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -90,40 +87,15 @@ export function app_code_lesson_statement_name_value() {
     eval_console_log_to_list,
   );
   function above(root) {
-    let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, ["We can give a value a name"]);
-    let code2 = held_of(name_a, 3);
-    html_div_code(box, code2);
-    html_div_cycle_code(box, [
-      "This gives the name ",
+    let r = app_code_lesson_statement_name_value_above(
+      root,
+      held_of,
       name_a,
-      " the value ",
-      "3",
-    ]);
-    html_div_cycle_code(box, ["Now writing ", name_a, " gives back ", "3"]);
-    let box_logged = app_code_container_light_blue(root);
-    html_div_cycle_code(box_logged, [
-      "So we can put ",
-      name_a,
-      " inside ",
       log_name,
-    ]);
-    let v8 = held_of(name_a, 3);
-    let v9 = log_of(name_a);
-    html_div_code_multiple(box_logged, [v8, v9]);
-    html_div_cycle_code(box_logged, ["This writes out ", "3"]);
-    let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["We can give more than one value a name"]);
-    let v10 = held_of(name_a, 3);
-    let v11 = held_of(name_b, 5);
-    let v12 = log_of(name_b);
-    html_div_code_multiple(box_two, [v10, v11, v12]);
-    html_div_cycle_code(box_two, [
-      "Only the name inside ",
-      log_name,
-      " is written out",
-    ]);
-    html_div_cycle_code(box_two, ["So this writes out ", "5", ", not ", "3"]);
+      log_of,
+      name_b,
+    );
+    return r;
   }
   let lesson = app_code_lesson_code_logged({
     above,
