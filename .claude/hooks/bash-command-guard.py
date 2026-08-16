@@ -4285,7 +4285,7 @@ def echo_separator_is(words):
     if not words or words[0] != "echo":
         return False
     for word in words[1:]:
-        if not word:
+        if not word or word.startswith("-"):
             return False
         if not set(word) <= ECHO_SEPARATOR_CHARACTERS:
             return False
@@ -4301,8 +4301,9 @@ def cat_js_source_function_names(command):
     of a function by typing out where its file sits - and the repo has answered
     it by name since function_read_multiple was written.
 
-    Narrow on purpose. Every statement on the line has to be a bare `cat`, and
-    every word it receives has to name a source file in js/. A pipe into head
+    Narrow on purpose. Every statement on the line has to be a bare `cat` or an
+    echo_separator_is label, and every word a cat receives has to name a source
+    file in js/. A pipe into head
     or grep, a flag, a redirection, a file anywhere else, or any other program
     along the line takes the whole line out of the slice, because the named
     command answers with whole sources recorded under their names and cannot
