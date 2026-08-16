@@ -1,3 +1,4 @@
+import { app_shared_bible_books_verses_fetch } from "./app_shared_bible_books_verses_fetch.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
@@ -23,8 +24,6 @@ import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previo
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
-import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
@@ -36,9 +35,6 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
-import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_second } from "./list_second.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -70,20 +66,9 @@ export async function app_shared_bible_home_generic(
   let v = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v, "chapter_name");
   let book_code = property_get(v, "book_code");
-  async function lambda_books_en() {
-    let r = await ebible_version_books_browser(e);
-    return r;
-  }
-  async function lambda_verses_en() {
-    let r = await ebible_verses_browser(e, chapter_code);
-    return r;
-  }
-  let fetched_en = await invoke_multiple_unordered_async([
-    lambda_books_en,
-    lambda_verses_en,
-  ]);
-  let books = list_first(fetched_en);
-  let verses = list_second(fetched_en);
+  let r = await app_shared_bible_books_verses_fetch(e, chapter_code);
+  let verses = property_get(r, "verses");
+  let books = property_get(r, "books");
   let book_name = ebible_book_code_to_name(books, book_code);
   app_shared_bible_home_bar_buttons(
     bar,
