@@ -1,10 +1,9 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { folder_machine_temp } from "./folder_machine_temp.mjs";
@@ -24,8 +23,7 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   "The copy is made on the machine's own scratch folder and never inside the repository. Making it inside was how four copies of this repository once ended up committed into it, and they were the largest thing in its history for the better part of a year.";
   arguments_assert(arguments, 2);
   let paths = text_split_comma(paths_text);
-  let none = list_empty_is(paths);
-  let b = not(none);
+  let b = list_empty_not_is(paths);
   assert_json(b, {
     hint: "no paths were named to drop from the history — would you like to pass them as one comma-joined word?",
     paths_text,
