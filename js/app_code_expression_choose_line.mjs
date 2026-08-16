@@ -24,7 +24,7 @@ export function app_code_expression_choose_line(
 ) {
   arguments_assert(arguments, 6);
   ("a line of code whose operators are pressed one at a time until nothing is left but a value: every operator in it is pressable, pressing the one that may go next works it out and the line becomes the shorter one, and pressing one that may not is refused and stays refused");
-  ("A right press is answered in three beats rather than one. The operator and both its sides turn green together, so what is about to go is seen whole; on_chosen is waited on, which is where the front page says what the green comes to and holds for a press of replace; then the green turns into its value where it stood and stays green for as long as any other success does, before the line is drawn again plain. A line that changed the instant it was pressed asked the learner to find what had moved.");
+  ("A right press is answered in three beats rather than one. The operator and both its sides turn blue together, so what is about to go is seen whole; on_chosen is waited on, which is where the front page says what the blue comes to and holds for a press of replace; then the blue turns into its value where it stood and stays blue for as long as any other success does, before the line is drawn again plain. A line that changed the instant it was pressed asked the learner to find what had moved.");
   ("The one place this behaviour lives. The lesson's front page and its quiz are the same thing to press - what the front page adds is that it SAYS what to press at each step, which it does from on_change rather than by being a second copy of the pressing.");
   ("Every operator is pressable on both, including the front page. A page that only offers the right one teaches nothing about the wrong one, and a learner who has never been allowed to pick the leftmost has never found out that the leftmost is not the rule.");
   let line = html_div(parent);
@@ -52,7 +52,7 @@ export function app_code_expression_choose_line(
         chosen = true;
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
-        ("the green block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
+        ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
         let watched = await on_chosen(node, node_value, node_span);
         ("whether the learner watched the swap arrive is asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows what it showed");
         await app_code_expression_replaced_settle(
