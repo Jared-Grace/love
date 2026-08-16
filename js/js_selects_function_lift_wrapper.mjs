@@ -1,12 +1,11 @@
+import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
 import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
@@ -25,11 +24,11 @@ export async function js_selects_function_lift_wrapper(
   ("Only the body is swapped, and nothing is moved out of the place it was written in. That is what lets this reach a function written as a value - handed to a visitor, or sitting under a name in a table of cases - which is the shape most of a long function's length has here and the one shape the other lift can never take, because a value has no line of its own to be lifted off.");
   ("Reaching out is still read at the moment of the call, not the moment of the writing, because the line left behind reads those names where it stands and passes on what it finds. That is what makes this the same function it was.");
   ("Why it would not go ahead is read next door, so the report of what could be moved and the move itself cannot disagree about a single function.");
-  let declaration = list_single(selects);
-  let reading = await js_function_nested_lift_reading(ast, declaration);
+  let reading = await js_selects_function_lift_reading(ast, selects);
+  let declaration = property_get(reading, "declaration");
+  let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
   let name_old = property_get(reading, "name_old");
   let closed = property_get(reading, "closed");
-  let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
   list_empty_is_assert_json(refusals, {
     name_old,
   });
