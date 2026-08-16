@@ -10,6 +10,10 @@ export async function app_ceb_bible_gloss_passage_entries(
   "$plain verse_key";
   "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
   let fn = app_ceb_bible_gloss_generate;
-  let entries = await gloss_chapter_passage_entries(chapter_code, verse_key, fn);
+  let entries = await gloss_chapter_passage_entries(
+    chapter_code,
+    verse_key,
+    fn,
+  );
   return entries;
 }
