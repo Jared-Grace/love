@@ -26,10 +26,10 @@ export async function app_code_expression_replace_await(
   }
   ("the waiting is opened BEFORE the button is made, because the button is made inside the change whose height is being measured and it has to be given the thing to do at the moment it is made");
   let pressed = promise_wrap_unawait(lambda$resolve);
-  ("the two green pieces the words are said with are caught as they are made, because the swap is shown travelling between them and the block on the line once the button is pressed");
-  let greens = [];
+  ("the two chosen pieces the words are said with are caught as they are made, because the swap is shown travelling between them and the block on the line once the button is pressed");
+  let chosen_pieces = [];
   function change() {
-    greens = app_code_expression_replace_ask(
+    chosen_pieces = app_code_expression_replace_ask(
       note,
       solved_code,
       value_text,
@@ -41,7 +41,7 @@ export async function app_code_expression_replace_await(
   await pressed;
   ("and only then does anything on the line move: the words said what is about to happen, the press said when, and this is the happening");
   let duration = app_shared_animation_duration();
-  await app_code_expression_replace_fly(node_span, greens, duration);
-  ("and the line is told the swap was watched, so it does not hold the value green afterwards for the learner to look at - they have just followed it the whole way down and watched it land");
+  await app_code_expression_replace_fly(node_span, chosen_pieces, duration);
+  ("and the line is told the swap was watched, so it does not hold the value blue afterwards for the learner to look at - they have just followed it the whole way down and watched it land");
   return true;
 }
