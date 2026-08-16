@@ -1,3 +1,5 @@
+import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
+import { text_split_outside_quotes_cases_gate_run } from "./text_split_outside_quotes_cases_gate_run.mjs";
 import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
 import { app_original_bible_gloss_parsings_gate_run } from "./app_original_bible_gloss_parsings_gate_run.mjs";
 import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
@@ -341,6 +343,7 @@ export function qa_gates() {
     qa_gate_said_history_blind_cases_gate_run,
     qa_commit_entry_beside_matching_cases_gate_run,
     js_statements_span_outputs_cases_gate_run,
+    js_span_cuttable_cases_gate_run,
     js_atomize_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
