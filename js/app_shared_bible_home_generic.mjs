@@ -1,3 +1,4 @@
+import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { app_shared_bible_verse_buttons_row } from "./app_shared_bible_verse_buttons_row.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { app_shared_bible_verse_frame } from "./app_shared_bible_verse_frame.mjs";
@@ -12,8 +13,6 @@ import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_ke
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
-import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
@@ -23,7 +22,6 @@ import { html_p } from "./html_p.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
@@ -33,12 +31,9 @@ export async function app_shared_bible_home_generic(
   app_fn,
   chapter_reader_is,
 ) {
-  let frame = app_shared_bar_content(context);
-  let content = property_get(frame, "content");
-  app_shared_content_column_pad(content);
-  let bar = property_get(frame, "bar");
-  html_centered(bar);
-  bar_extra(bar);
+  let r4 = app_shared_bible_home_frame(context, bar_extra);
+  let bar = property_get(r4, "bar");
+  let content = property_get(r4, "content");
   if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }
