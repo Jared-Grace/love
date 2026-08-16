@@ -1,3 +1,4 @@
+import { memory_folder_spellings } from "./memory_folder_spellings.mjs";
 import { curl_read_hosts } from "./curl_read_hosts.mjs";
 import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -42,6 +43,15 @@ export function python_mirrors() {
       constant: "DENIED_DISPATCHER_FUNCTIONS",
       path: ".claude/hooks/denied_dispatcher_functions.py",
       source: functions_dispatcher_denied,
+    },
+    {
+      constant: "MEMORY_FOLDER_SPELLINGS",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        memory_folder_spellings.name,
+        ".py",
+      ]),
+      source: memory_folder_spellings,
     },
     {
       constant: "CURL_READ_HOSTS",
