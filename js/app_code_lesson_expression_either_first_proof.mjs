@@ -1,4 +1,6 @@
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
+import { app_shared_spaced_above } from "./app_shared_spaced_above.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_lines_after } from "./app_code_expression_lines_after.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
@@ -15,11 +17,13 @@ export function app_code_lesson_expression_either_first_proof(parent, tree) {
   ("Worked, not asserted. A sentence saying the order does not matter is something to believe; the two orders written out one under the other, ending on one value, is something to check - and checking it is how a learner comes to trust a choice they made themselves rather than waiting to be told which one was meant.");
   ("Every ready operator gets a row, read from the shape rather than from a count, so the rows say what is true of the line standing there instead of what was true of the line this was written for.");
   ("Each row names its operator by the little line it is - Take 2 * 3 first - rather than by which side it is on. The learner has to find that operator on the line below to press it, and a name they can read off the line is one they can find; left and right is a second reading to do first.");
+  ("a plain block rather than a card of its own, because it already stands inside the example's card and a card drawn inside a card reads as a second thing beside the line rather than as what is being said about it");
   let ready = app_code_expression_nodes_ready(tree);
-  let card = app_code_container_light_blue(parent);
-  html_div_cycle_code(card, [
+  let card = html_div(parent);
+  let heading = html_div_cycle_code(card, [
     "Two operators are ready here, so either one can go first",
   ]);
+  app_shared_spaced_below(heading);
   function each_ready(node) {
     let head = app_code_expression_code(node);
     let lines = app_code_expression_lines_after(tree, node);
@@ -31,5 +35,9 @@ export function app_code_lesson_expression_either_first_proof(parent, tree) {
   each(ready, each_ready);
   let value = app_code_expression_value(tree);
   let value_code = text_to(value);
-  html_div_cycle_code(card, ["Either way, the line comes to ", value_code]);
+  let landed = html_div_cycle_code(card, [
+    "Either way, the line comes to ",
+    value_code,
+  ]);
+  app_shared_spaced_above(landed);
 }
