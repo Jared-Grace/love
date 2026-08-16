@@ -19,7 +19,8 @@ export async function permission_grant_names_write(names) {
   await function_auto(f_name);
   let report = {
     path,
-    names: names.length,
+    names: unique.length,
+    spelled: unique,
   };
   return report;
 }
