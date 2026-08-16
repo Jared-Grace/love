@@ -1,3 +1,6 @@
+import { functions_fold_shape_forget } from "./functions_fold_shape_forget.mjs";
+import { functions_fold_blocks_of } from "./functions_fold_blocks_of.mjs";
+import { functions_fold_shape_of } from "./functions_fold_shape_of.mjs";
 import { functions_fold_sites_file_load } from "./functions_fold_sites_file_load.mjs";
 import { tally_covers_is } from "./tally_covers_is.mjs";
 import { list_filter_index } from "./list_filter_index.mjs";
@@ -12,8 +15,6 @@ import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { js_blocks_all } from "./js_blocks_all.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_fold_sites() {
@@ -55,33 +56,9 @@ export async function functions_fold_sites() {
   ("A file is read into its shape once and kept, because the pairing asks about the same files over and over. Counted 2026-08-11 across this repo: 57,709 readings of 2,772 different files, twenty-one times each, and this was the second slowest gate there is.");
   ("What is kept has to be given up the moment a fold succeeds, and only then. Folding writes the call back into the shape it was given - that is how the folded version is handed back - so the kept shape is no longer the file after a success, and the next function pairing against it would be pairing against somebody else's fold. A fold that finds nothing changes nothing, which is every reading but a handful, so almost nothing is ever given up.");
   let shapes = {};
-  function shape_of(f_name) {
-    let kept = shapes[f_name];
-    if (not_equal(kept, undefined)) {
-      return kept;
-    }
-    let text2 = property_get(entries, f_name).text;
-    let read = js_parse(text2);
-    shapes[f_name] = read;
-    return read;
-  }
   ("Which runs of statements a file holds is kept beside its shape, for the same reason and with the same care. What those runs are depends on the file alone and never on the function being paired against it, and one file is paired against many: counted 2026-08-12, 56,751 pairings over 2,790 different files, which was twenty-two and a half seconds of finding the same runs again against nine tenths of a second to find them once each.");
   ("They are given up exactly when the shape is, because they are the runs of that tree and a fold writes the call back into it.");
   let blocks_kept = {};
-  function blocks_of(f_name) {
-    let kept2 = blocks_kept[f_name];
-    if (not_equal(kept2, undefined)) {
-      return kept2;
-    }
-    let ast = shape_of(f_name);
-    let found = js_blocks_all(ast);
-    blocks_kept[f_name] = found;
-    return found;
-  }
-  function shape_forget(f_name) {
-    delete shapes[f_name];
-    delete blocks_kept[f_name];
-  }
   let sites = [];
   for (let x_name in entries) {
     let pattern = entries[x_name].pattern;
@@ -121,7 +98,7 @@ export async function functions_fold_sites() {
     }
     let list = x_callees.filter(lambda6);
     let x_wanted = list_tally(list);
-    let x_ast = shape_of(x_name);
+    let x_ast = functions_fold_shape_of(x_name, shapes, entries);
     for (let f_name of candidates) {
       try {
         let f_tallies = block_tallies[f_name];
@@ -130,8 +107,13 @@ export async function functions_fold_sites() {
         if (hopeless) {
           continue;
         }
-        let f_ast = shape_of(f_name);
-        let f_blocks = blocks_of(f_name);
+        let f_ast = functions_fold_shape_of(f_name, shapes, entries);
+        let f_blocks = functions_fold_blocks_of(
+          f_name,
+          blocks_kept,
+          shapes,
+          entries,
+        );
         ("Only the runs of statements that could hold the body are read for it. The counting above already answers, for each run on its own, whether that run calls everything x calls as many times as x calls it - and that is necessary for a fold, which is the whole reason it is counted at all. Asked of the file the answer is whether some run might, and the answer for each separate run was then thrown away and every run in the file read in full.");
         ("Counted 2026-08-14 across this repo: 123,723 runs read against 31,648 that could have held anything, so three quarters of the reading was of runs already known to be hopeless.");
         ("A count is found by where its run sits, and that is sound because both lists are the runs of one file found the same way - the same walk over the same text, so the two come out in one order.");
@@ -143,7 +125,7 @@ export async function functions_fold_sites() {
         let f_blocks_possible = list_filter_index(f_blocks, lambda7);
         let folded = js_fold_blocks(x_ast, f_ast, f_blocks_possible);
         if (not_equal(folded, null)) {
-          shape_forget(f_name);
+          functions_fold_shape_forget(f_name, shapes, blocks_kept);
           sites.push({
             x: x_name,
             f: f_name,
