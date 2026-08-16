@@ -20,11 +20,7 @@ export async function functions_rename_generic(filter, name_change) {
     hint: "the filter should match at least one function to rename — did nothing match?",
   });
   let dictionary = list_to_dictionary_value(filtered, name_change);
-  function lambda(f_name_before, f_name_after) {
-    let ne = equal_not(f_name_before, f_name_after);
-    return ne;
-  }
-  let different = object_filter(dictionary, lambda);
+  let different = object_filter(dictionary, equal_not);
   let identifiers = await data_identifiers_get();
   function lambda2(f_name_after) {
     text_is_assert_json(f_name_after, {
