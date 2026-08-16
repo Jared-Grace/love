@@ -1,3 +1,6 @@
+import { list_filter } from "./list_filter.mjs";
+import { gloss_finding_elsewhere_empty_is } from "./gloss_finding_elsewhere_empty_is.mjs";
+import { list_filter_not } from "./list_filter_not.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
@@ -24,6 +27,7 @@ export async function app_original_bible_gloss_parsings_exceeding(
   "the code is a chapter's name, like JHN04, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "The parsing is the one thing in a word explanation that was handed to its author instead of being worked out, so it is the one thing a reader can be held to without anybody having to know Greek. Everything else an explanation says - what a form is doing in its clause, what the word is built from, what it echoes elsewhere - is outside what this can see, and a chapter that comes back clean here has been checked on one claim and not on the rest.";
   "A chapter nobody has authored yet has nothing to look at and comes back empty, and a passage whose explanations and words will not line up is named as unlooked-at rather than counted as clean. Which passages are still waiting to be written is a separate question with its own reader.";
+  "What comes back is sorted into two, and nothing is dropped out of either. A place lands under the exceeding ones when no word in its passage carries the form the explanation names, which leaves the explanation nothing to have meant; it lands under the elsewhere ones when some other word does carry it, which is what an explanation saying a word does not agree with the genitive words before it looks like from here. The second sort is far the commoner and is read by skimming; the first is short and every one of them wants an answer.";
   let fn = app_original_bible_gloss_generate;
   let path = local_function_path_json(chapter_code, fn);
   let exists = await file_exists(path);
@@ -32,6 +36,7 @@ export async function app_original_bible_gloss_parsings_exceeding(
       chapter_code,
       passages: 0,
       exceeding: [],
+      elsewhere: [],
       unpaired: [],
     };
     return none;
@@ -41,6 +46,7 @@ export async function app_original_bible_gloss_parsings_exceeding(
   let chapters = await bible_interlinear_chapters_words_cache();
   let verses_interlinear = property_get(chapters, chapter_code);
   let exceeding = [];
+  let elsewhere = [];
   let unpaired = [];
   function passage_read(passage) {
     let entries = gloss_passage_entries(passage);
@@ -71,20 +77,27 @@ export async function app_original_bible_gloss_parsings_exceeding(
       list_add(unpaired, unlooked);
       return;
     }
-    if (list_empty_is(found)) {
-      return;
+    function place_add(places, findings) {
+      if (list_empty_is(findings)) {
+        return;
+      }
+      let place = {
+        verses,
+        findings,
+      };
+      list_add(places, place);
     }
-    let place = {
-      verses,
-      findings: found,
-    };
-    list_add(exceeding, place);
+    let alone = list_filter(found, gloss_finding_elsewhere_empty_is);
+    let nearby = list_filter_not(found, gloss_finding_elsewhere_empty_is);
+    place_add(exceeding, alone);
+    place_add(elsewhere, nearby);
   }
   each(passages, passage_read);
   let r = {
     chapter_code,
     passages: list_size(passages),
     exceeding,
+    elsewhere,
     unpaired,
   };
   return r;
