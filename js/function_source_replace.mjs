@@ -4,9 +4,11 @@ import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function function_source_replace(f_name, from, to) {
   "replaces a run of text inside one function's file with another run of text, given the function's name rather than its path";
-  ("do NOT grant. Nothing here reads as unsafe to the check, because no parameter is named for a command and nothing downstream runs one - but the third argument is source code, and it is written into a file this repo then executes. A standing approval would let any code at all be placed inside any function without anybody seeing it, which is what a grant on a command-runner is refused for. For a line a function says about itself, ask ",
+  ("do NOT grant. Nothing here reads as unsafe to the check, because no parameter is named for a command and nothing downstream runs one - but the third argument is source code, and it is written into a file this repo then executes. A standing approval would let any code at all be placed inside any function without anybody seeing it, which is what a grant on a command-runner is refused for, only lasting longer: the command-runner's code is gone when it finishes, and this one stays in the file. For a line a function says about itself, ask ",
     fn_name("function_prose_replace"),
-    " instead - it takes the same before-and-after text, is confined to the prose, and is granted, only lasting longer: the command-runner's code is gone when it finishes, and this one stays in the file.");
+    " instead, and for a piece of written-out text the program uses, ask ",
+    fn_name("function_string_value_replace"),
+    " - both take the same before-and-after text, both are confined to somewhere nothing handed in can arrive as code, and both are granted.");
   arguments_assert(arguments, 3);
   let f_path = await function_name_to_path_found(f_name);
   await file_transform_replace(f_path, from, to);
