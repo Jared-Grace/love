@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_solve } from "./app_code_lesson_expression_choose_order_solve.mjs";
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
@@ -147,6 +148,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_plus_minus,
     app_code_lesson_expression_times_divide,
     app_code_lesson_expression_choose_order,
+    app_code_lesson_expression_choose_order_solve,
     app_code_lesson_expression_plus_times,
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
