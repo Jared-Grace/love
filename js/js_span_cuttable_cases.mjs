@@ -5,6 +5,7 @@ export function js_span_cuttable_cases() {
   "The runs that must be let through are as much of the corpus as the runs that must be refused, and cost more thought. A refusal that is too eager is safe and quiet, and would sit here for a year taking the good cuts away one at a time with nobody the wiser.";
   "Each case is frozen text, because the words inside are ordinary repo names and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests.";
   "Lines are counted from the top of the body and both ends are included, the same counting the proposer walks by.";
+  "Writing to a name and writing through a dot or a bracket are two different things here, and three of these cases are about nothing else. Pointing a name somewhere else splits it in two across a cut, because each side then holds its own; filling a slot of a list or setting something on an object changes the one thing both sides are looking at, and survives. Reading them the same way is safe and quiet and refused a whole screen of drawing for no reason at all, so the cases that must be let through are here to keep that from coming back.";
   let cases = [
     {
       name: "a plain run of work, whose one handed-back name is only ever read",
@@ -67,6 +68,33 @@ export function js_span_cuttable_cases() {
       ),
       from: 0,
       to: 1,
+      cuttable: true,
+    },
+    {
+      name: "a run filling a slot of a list brought into being above it",
+      code: text_frozen(
+        "function f() {\n  let spans = [];\n  let token = one();\n  spans[0] = token;\n  report(spans);\n}\n",
+      ),
+      from: 1,
+      to: 2,
+      cuttable: true,
+    },
+    {
+      name: "a run whose function fills a slot of a list the run hands back",
+      code: text_frozen(
+        "function f() {\n  let spans = [];\n  function step(i) {\n    spans[i] = one(i);\n  }\n  attach(step);\n  report(spans);\n}\n",
+      ),
+      from: 0,
+      to: 2,
+      cuttable: true,
+    },
+    {
+      name: "a run whose function sets something on an object the run hands back",
+      code: text_frozen(
+        "function f() {\n  let covered = {};\n  function step(i) {\n    covered.seen = i;\n  }\n  attach(step);\n  report(covered);\n}\n",
+      ),
+      from: 0,
+      to: 2,
       cuttable: true,
     },
   ];
