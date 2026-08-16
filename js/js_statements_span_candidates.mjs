@@ -1,4 +1,4 @@
-import { list_filter } from "./list_filter.mjs";
+import { list_filter_size } from "./list_filter_size.mjs";
 import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { not } from "./not.mjs";
 import { property_get_curried_right } from "./property_get_curried_right.mjs";
@@ -19,8 +19,7 @@ export function js_statements_span_candidates(statements, addresses) {
   ("A run that would gain nothing is not offered either, and that is the same test written once rather than a second rule: a cut is worth something exactly when the longer of the two pieces is shorter than what stood there before. A run covering every line of work fails it, because the function it makes is the function it came out of.");
   ("Nothing is written and nothing is moved. Whether a run listed here is a good function is a judgement about meaning, which this cannot make - it says only that the cut would not go silently wrong, and how much of the length it would take away.");
   let count = list_size(statements);
-  let work = list_filter(statements, js_statement_work_is);
-  let count_work = list_size(work);
+  let count_work = list_filter_size(statements, js_statement_work_is);
   let rows = [];
   for (let from = 0; less_than(from, count); from++) {
     let row = js_statements_span_candidate_best(statements, addresses, from);
