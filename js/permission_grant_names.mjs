@@ -1482,6 +1482,12 @@ export function permission_grant_names() {
   let spelled1445 = fn_name("list_join_comma_space_and");
   let spelled1446 = fn_name("claude_bash_program_argument_shapes_ranked");
   let spelled1447 = fn_name("qa_commit_named_red_report");
+  let spelled1448 = fn_name("qa_commit_named_head");
+  let spelled1449 = fn_name("app_ceb_bible_gloss_chapter_affix_kinds_wrong");
+  let spelled1450 = fn_name("permission_grant_word_params");
+  let spelled1451 = fn_name("app_ceb_bible_gloss_chapters_rewrite");
+  let spelled1452 = fn_name("app_ceb_bible_gloss_affix_kinds_wrong_count");
+  let spelled1453 = fn_name("app_original_bible_gloss_lexicons_named_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -2930,6 +2936,12 @@ export function permission_grant_names() {
     spelled1445,
     spelled1446,
     spelled1447,
+    spelled1448,
+    spelled1449,
+    spelled1450,
+    spelled1451,
+    spelled1452,
+    spelled1453,
   ];
   return names;
 }
