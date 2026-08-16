@@ -1,8 +1,8 @@
+import { app_code_expression_colored_quickly } from "./app_code_expression_colored_quickly.mjs";
+import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { app_code_expression_chosen_room_clear } from "./app_code_expression_chosen_room_clear.mjs";
 import { app_code_expression_chosen_uncolored } from "./app_code_expression_chosen_uncolored.mjs";
-import { app_shared_animation_sleep } from "./app_shared_animation_sleep.mjs";
-import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -37,9 +37,10 @@ export async function app_code_expression_replaced_settle(
   ("the blue is let go on its own, with nothing moving under it, and only then the room it needed");
   ("Three things want to happen at this moment and the learner can follow one at a time: the value arriving in the room its working was holding, the blue leaving, and the line closing up. So they are given one after another rather than together. Read together, the block is watched narrowing while it is still half blue, and a colour that goes as its block shrinks reads as having been squeezed out - where the same colour, gone before anything moves, reads as having finished.");
   ("the fading is asked for here rather than being carried over from when the blue was given, because both the travelling and the settling wiped it: a piece is told once what may be slowed about it, and being told to move slowly throws the earlier telling away");
-  app_code_expression_colored_slowly(node_span);
+  ("and it is asked for over the SHORT while, not the whole one. The blue coming up was news and was watched; the blue going says only that the news has been read, and the learner is by then looking at the next thing to press. Fading it over the whole while made the two ends of one step feel like two steps.");
+  app_code_expression_colored_quickly(node_span);
   app_code_expression_chosen_uncolored(node_span);
-  await app_shared_animation_sleep();
+  await app_shared_animation_sleep_quick();
   ("and the line is measured afresh before it closes up, because every piece of it has just slid and where they were read the first time is where none of them is standing now");
   let pieces_faded = html_descendants_innermost(line);
   ("closing up is given the short while rather than the full one: it is the only thing left moving, it moves by the width of a little padding, and there is nothing in it the learner has not already been shown");

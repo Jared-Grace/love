@@ -1,4 +1,3 @@
-import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { html_raised_flying } from "./html_raised_flying.mjs";
 import { html_raised_clear } from "./html_raised_clear.mjs";
 import { html_copy_fly_rect } from "./html_copy_fly_rect.mjs";
