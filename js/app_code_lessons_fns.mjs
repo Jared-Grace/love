@@ -199,6 +199,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_not_comparison,
     app_code_lesson_expression_not_equal_same,
+    app_code_lesson_statement_name_value,
   ];
   return fns;
 }
