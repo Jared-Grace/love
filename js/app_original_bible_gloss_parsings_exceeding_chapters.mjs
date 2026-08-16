@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { app_original_bible_gloss_parsings_exceeding } from "./app_original_bible_gloss_parsings_exceeding.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
@@ -9,9 +10,10 @@ import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 export async function app_original_bible_gloss_parsings_exceeding_chapters() {
-  "Every authored chapter of the original-language gloss holding an explanation that names a tense, a mood or a form no word of its own passage carries.";
+  "How many chapters of the original-language gloss have been authored, and which of them hold an explanation that names a tense, a mood or a form no word of its own passage carries.";
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is checked from the moment it is written and nobody has to remember to name it anywhere.";
   "Only the places with nowhere to point are carried back. The far commoner sort, where the named form does stand on some other word of the passage, is what an explanation comparing one word with its neighbours looks like from here, and gathering those would bury the few that want an answer.";
+  "How many chapters were walked travels out beside them, because finding nothing and looking at nothing are the same word otherwise, and a store read out of a folder is exactly the sweep that can quietly start reading an empty one.";
   let fn = app_original_bible_gloss_generate;
   let folder = local_function_folder(fn);
   let file_names = await folder_read_files_exists_ensure(folder);
@@ -36,5 +38,9 @@ export async function app_original_bible_gloss_parsings_exceeding_chapters() {
     return r;
   }
   let shown = list_map(offenders, offender_shown);
-  return shown;
+  let r = {
+    chapters: list_size(chapter_codes),
+    offenders: shown,
+  };
+  return r;
 }

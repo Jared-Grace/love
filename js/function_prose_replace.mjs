@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { function_transform_auto } from "./function_transform_auto.mjs";
 import { js_prose_statement_nodes } from "./js_prose_statement_nodes.mjs";
 import { js_prose_statement } from "./js_prose_statement.mjs";
@@ -27,11 +29,16 @@ export async function function_prose_replace(f_name, text_before, text_after) {
     }
     let matched = list_filter(statements, holds);
     let lines = list_size(matched);
+    let f_name2 = fn_name("function_string_value_replace");
     equal_assert_json(lines, 1, {
       f_name,
       text_before,
       lines,
-      hint: "a change to one line asks for text that sits in exactly one of them. None at all usually means the text has already been changed, or a character differs - a stray space, a different kind of quote. More than one means the run is not yet unique, and taking in a little more of the sentence around it is usually enough to tell the lines apart",
+      hint: text_combine_multiple([
+        "a change to one line asks for text that sits in exactly one of them. If the run is a piece of text the program uses rather than a line the function says about itself, ask ",
+        f_name2,
+        " instead. None at all usually means the text has already been changed, or a character differs - a stray space, a different kind of quote. More than one means the run is not yet unique, and taking in a little more of the sentence around it is usually enough to tell the lines apart",
+      ]),
     });
     let statement = list_get(matched, 0);
     let expression = property_get(statement, "expression");
