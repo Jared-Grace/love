@@ -1,3 +1,4 @@
+import { js_identifier_name_add } from "./js_identifier_name_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -6,8 +7,6 @@ import { property_in_list } from "./property_in_list.mjs";
 import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_add } from "./list_add.mjs";
 export function js_hash_object_names_written(v, handed, names) {
   arguments_assert(arguments, 3);
   let node = property_get(v, "node");
