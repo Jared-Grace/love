@@ -1,8 +1,9 @@
 import { each } from "./each.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { text_edit_distance } from "./text_edit_distance.mjs";
-import { text_length } from "./text_length.mjs";
+import { text_size } from "./text_size.mjs";
+import { text_size_greater_than_1 } from "./text_size_greater_than_1.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 import { text_replace } from "./text_replace.mjs";
