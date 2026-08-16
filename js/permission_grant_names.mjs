@@ -1471,6 +1471,7 @@ export function permission_grant_names() {
   let spelled1434 = fn_name("app_ceb_bible_gloss_chapter_self_roots");
   let spelled1435 = fn_name("app_ceb_bible_gloss_self_roots_count");
   let spelled1436 = fn_name("app_ceb_bible_gloss_chapter_roots_prompts");
+  let spelled1437 = fn_name("function_command_seams_reached_paths");
   let names = [
     spelled,
     spelled2,
@@ -2908,6 +2909,7 @@ export function permission_grant_names() {
     spelled1434,
     spelled1435,
     spelled1436,
+    spelled1437,
   ];
   return names;
 }
