@@ -1,5 +1,5 @@
+import { app_g_verify_home_chapter_grid } from "./app_g_verify_home_chapter_grid.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
-import { app_g_verify_home_book_row } from "./app_g_verify_home_book_row.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
@@ -43,7 +43,6 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
@@ -161,33 +160,10 @@ export async function app_g_verify_home(context) {
     let edge_gap = app_shared_content_edge_gap();
     html_style_padding_x(wrap, edge_gap);
     html_style_padding_y(wrap, "2em");
-    let cbar = html_div(wrap);
-    let value = app_shared_spaced_small_gap();
-    html_style_margin_bottom(cbar, value);
-    let book_order = [];
-    let book_chapters = {};
-    function lambda3(code) {
-      let book = code.slice(0, 3);
-      if (not(book_chapters[book])) {
-        book_chapters[book] = [];
-        book_order.push(book);
-      }
-      book_chapters[book].push(code);
-    }
-    chapter_codes.forEach(lambda3);
-    function book_row(book) {
-      let r = app_g_verify_home_book_row(
-        book,
-        cbar,
-        chapter_code,
-        book_chapters,
-      );
-      return r;
-    }
-    book_order.forEach(book_row);
+    app_g_verify_home_chapter_grid(wrap, chapter_codes, chapter_code);
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
-    let value2 = app_shared_font_serif();
-    html_font_set(title, value2);
+    let value = app_shared_font_serif();
+    html_font_set(title, value);
     let value7 = app_g_verify_title_font_size();
     html_style_font_size(title, value7);
     html_bold_semi(title);
