@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { binisaya_affix_piece_plain_is } from "./binisaya_affix_piece_plain_is.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -8,7 +9,6 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split } from "./text_split.mjs";
 export async function binisaya_affixes_plain_coverage() {
   "How many of the words binisaya.com has taken apart could have their construction described using only the part of its shorthand that is plainly readable, and how many carry something nobody here has decoded.";
@@ -27,8 +27,7 @@ export async function binisaya_affixes_plain_coverage() {
     let affixes = property_get(entry, "affixes");
     let split = text_split(affixes, "~");
     function readable_is(piece) {
-      let empty = text_empty_is(piece);
-      let kept = not(empty);
+      let kept = text_empty_not_is(piece);
       return kept;
     }
     let pieces = list_filter(split, readable_is);
