@@ -30,6 +30,21 @@ let NEXT_STEPS_MARKERS = [
   /\bI would\b/,
 ];
 
+// The one closing that is complete WITHOUT a list. Established 2026-08-16:
+// a list of options is something to choose between now, so if the answer is
+// "keep waiting" there is nothing to choose and the list is noise. Three
+// turns in a row offered "wait for the check" as item 1, the user picked it
+// each time, and each pick cost a reply to say "wait" again about a thing
+// that announces itself on its own.
+//
+// Both halves are required. "waiting" alone would excuse any report that
+// happens to use the word; the promise to report back is what makes the
+// closing complete, because it is what tells the user no reply is wanted.
+let WAITING_MARKERS = [
+  /\bwaiting (on|for)\b/i,
+  /\b(I'll|I will) (say|let you know|tell you|report|come back|update you)\b/i,
+];
+
 let REASON =
   "This turn is a stopping point, so it carries the user's standing \"n\" " +
   "plus \"s?\" - and the closing message shows no sign of either. Do not " +
