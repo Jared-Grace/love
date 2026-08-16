@@ -1,3 +1,4 @@
+import { qa_gate_red_again_print } from "./qa_gate_red_again_print.mjs";
 import { qa_gate_quiet_is } from "./qa_gate_quiet_is.mjs";
 import { or } from "./or.mjs";
 import { qa_gate_failed_said } from "./qa_gate_failed_said.mjs";
@@ -20,6 +21,8 @@ export function qa_gate_failed_assert(told, here, asked_ms, blamed_ms) {
   let red = or(named_any, unhappy);
   if (red) {
     qa_gate_parts_print(asked_ms, blamed_ms);
+    ("How to ask the same gates again is said here rather than left to be found, because this is the moment the reader wants it and the command that answers it takes no arguments - so the one thing they must not have to do is type the names back in.");
+    qa_gate_red_again_print(failed);
     let said = qa_gate_failed_said(failed);
     throw new Error("qa gate: " + said + " failed");
   }
