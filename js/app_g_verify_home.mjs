@@ -1,4 +1,4 @@
-import { app_g_verify_home_chapter_grid } from "./app_g_verify_home_chapter_grid.mjs";
+import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
@@ -7,8 +7,6 @@ import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
 import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
-import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
-import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
 import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { api_read } from "./api_read.mjs";
@@ -24,12 +22,9 @@ import { html_div } from "./html_div.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_font_set } from "./html_font_set.mjs";
-import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_margin_em } from "./html_margin_em.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -43,7 +38,6 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
@@ -160,22 +154,7 @@ export async function app_g_verify_home(context) {
     let edge_gap = app_shared_content_edge_gap();
     html_style_padding_x(wrap, edge_gap);
     html_style_padding_y(wrap, "2em");
-    app_g_verify_home_chapter_grid(wrap, chapter_codes, chapter_code);
-    let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
-    let value = app_shared_font_serif();
-    html_font_set(title, value);
-    let value7 = app_g_verify_title_font_size();
-    html_style_font_size(title, value7);
-    html_bold_semi(title);
-    html_margin_em(title, "0");
-    let hint = html_p_text(
-      wrap,
-      "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
-    );
-    app_shared_text_deemphasized(hint);
-    let value8 = app_g_verify_hint_font_size();
-    html_style_font_size(hint, value8);
-    html_margin_em(hint, "0");
+    app_g_verify_home_header(wrap, chapter_codes, chapter_code);
     app_g_verify_home_busy_banner(busy, status_shown, status_verse, wrap);
     view = null;
     let verse_buttons = {};
@@ -205,8 +184,8 @@ export async function app_g_verify_home(context) {
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
       app_shared_text_deemphasized(msg);
-      let value10 = app_g_verify_waiting_font_size();
-      html_style_font_size(msg, value10);
+      let value = app_g_verify_waiting_font_size();
+      html_style_font_size(msg, value);
       html_style_margin_top(msg, "1em");
     }
     let bar = html_div_centered(wrap);
