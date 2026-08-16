@@ -59,6 +59,7 @@
   "functions_console_log",
   "functions_console_log_statement",
   "operators_console_log_arithmetic",
+  "functions_console_log_string",
   "operators_remainder_by_2",
   "operators_remainder_by_3",
   "operators_remainder_by_4",
