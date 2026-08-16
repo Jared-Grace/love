@@ -66,11 +66,12 @@
   var sent = 0;
   function mark_said(words) {
     if (!mark) {
-      if (!document.body) { return; }
       mark = document.createElement("div");
       mark.setAttribute("style", "position:fixed;top:0;right:0;z-index:2147483647;background:#900;color:white;font:0.7rem monospace;padding:0.15rem 0.4rem;border-bottom-left-radius:0.4rem;pointer-events:none");
-      document.body.appendChild(mark);
     }
+    // it hangs off the page itself, not the body, and puts itself back if it
+    // goes: an app that redraws the whole body would otherwise take it away.
+    if (!mark.isConnected) { document.documentElement.appendChild(mark); }
     mark.textContent = words;
   }
 
