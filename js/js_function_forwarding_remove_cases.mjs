@@ -2,7 +2,7 @@ import { text_frozen } from "./text_frozen.mjs";
 export function js_function_forwarding_remove_cases() {
   "Written-out code before and after every function that is only a second name for another one has been dropped.";
   "The first case is the whole point: a function handed to a repo function that calls it with exactly the arguments it takes is a name standing in the way, and the function it calls can be handed over instead.";
-  "Every case after it is a keeping, and each names a different reason a wrapper is doing real work. A receiver reached through a property cannot be read, so how many arguments it hands over is unknown. A receiver that hands over fewer than the wrapper takes is the reason the wrapper was written. A wrapper handed over in two places has to agree with both. A name given to a variable is not ready until its line has run, and the place it would be handed over may sit above that line.";
+  "Every case after it is a keeping, and each names a different reason a wrapper is doing real work. A receiver reached through a property cannot be read, so how many arguments it hands over is unknown. A receiver that hands over fewer than the wrapper takes is the reason the wrapper was written. A wrapper handed over in two places has to agree with both. A name given to a variable is not ready until its line has run, and the place it would be handed over may sit above that line. A wrapper that waits hands back a promise, so the one it calls has to wait as well. A wrapper that throws the answer away hands back nothing, so the one it calls is not the same function however the arguments line up.";
   "Each piece of code is frozen text, because the names inside it are real repo names and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests.";
   let cases = [
     {
@@ -37,6 +37,31 @@ export function js_function_forwarding_remove_cases() {
       ),
       after: text_frozen(
         "function lambda(v) {\n  return ok(v);\n}\neach_async(xs, lambda);\neach_async(ys, lambda);\n",
+      ),
+    },
+    {
+      name: "waits, and the one it calls waits too, so both hand back a promise for the same answer",
+      code: text_frozen(
+        "async function lambda(v) {\n  return await function_read(v);\n}\neach_async(xs, lambda);\n",
+      ),
+      after: text_frozen("each_async(xs, function_read);\n"),
+    },
+    {
+      name: "waits while the one it calls does not, so it hands back a promise where that one hands back a value",
+      code: text_frozen(
+        "async function lambda(v) {\n  return await list_size(v);\n}\neach_async(xs, lambda);\n",
+      ),
+      after: text_frozen(
+        "async function lambda(v) {\n  return await list_size(v);\n}\neach_async(xs, lambda);\n",
+      ),
+    },
+    {
+      name: "throws the answer away, so it hands back nothing where the one it calls hands back an answer",
+      code: text_frozen(
+        "function lambda(v) {\n  ok(v);\n}\neach_async(xs, lambda);\n",
+      ),
+      after: text_frozen(
+        "function lambda(v) {\n  ok(v);\n}\neach_async(xs, lambda);\n",
       ),
     },
     {
