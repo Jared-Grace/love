@@ -1,7 +1,7 @@
-import { js_selects_functionize_rest_returning } from "../../js/js_selects_functionize_rest_returning.mjs";
+import { js_selects_functionize_rest_returning_local } from "../../js/js_selects_functionize_rest_returning_local.mjs";
 import { js_statement_find_name_body } from "../../js/js_statement_find_name_body.mjs";
 export const example = {
-  fn: js_selects_functionize_rest_returning.name,
+  fn: js_selects_functionize_rest_returning_local.name,
   select: js_statement_find_name_body.name,
   select_args_multiple: ["small"],
   args: ["size_word"],
