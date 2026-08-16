@@ -1,6 +1,6 @@
-import { html_style_code_unfonted } from "./html_style_code_unfonted.mjs";
+import { app_code_style_normal } from "./app_code_style_normal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 export function app_code_style_normal_text(container, answer) {
   let answer_div = html_div_text(container, answer);
-  html_style_code_unfonted(answer_div, "white", "black");
+  app_code_style_normal(answer_div);
 }

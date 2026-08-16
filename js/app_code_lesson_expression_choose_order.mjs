@@ -1,3 +1,6 @@
+import { null_is } from "./null_is.mjs";
+import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
+import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
@@ -60,14 +63,31 @@ export function app_code_lesson_expression_choose_order() {
     let tree = property_get(trees, question);
     return tree;
   }
-  function on_answer(parent, info, qa, on_success, on_wrong) {
+  function on_answer(
+    parent,
+    info,
+    qa,
+    on_success,
+    on_wrong,
+    batch_get_unused,
+    answer_label_set,
+  ) {
     "the quiz: the same line to press as the front page, with nothing said about which operator to press - that is the whole of what is being asked";
     "Drawn wholly inside the answers area rather than partly in the question area above it, because the line CHANGES as it is worked out and the question area is redrawn only when the whole question changes.";
+    "The only thing said as the line is worked out is the asking itself, which moves from first to next once a part has been solved. The front page next door says what to press; here nothing does, and what changes is only the word that would otherwise be wrong.";
     let tree = tree_of(qa, info);
+    function on_change(step) {
+      let solved = property_get(step, "solved");
+      if (null_is(solved)) {
+        return;
+      }
+      let said = app_code_label_solve_next();
+      answer_label_set(said);
+    }
     app_code_expression_choose_line(
       parent,
       tree,
-      noop,
+      on_change,
       on_wrong,
       app_code_expression_chosen_pause,
       on_success,
@@ -83,7 +103,7 @@ export function app_code_lesson_expression_choose_order() {
     let info = {
       question_label: app_code_label_line_to_solve(),
       on_question: html_text_set_code_dark,
-      answer_label: "Choose what to solve next: ",
+      answer_label: app_code_label_solve_first(),
       on_answer,
       answer_property: "answer",
     };
