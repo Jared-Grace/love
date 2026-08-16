@@ -1,6 +1,5 @@
 import { js_code_call_parse_expression } from "./js_code_call_parse_expression.mjs";
 import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
-import { equal } from "./equal.mjs";
 import { js_call_argument_add } from "./js_call_argument_add.mjs";
 import { invoke_multiple_arg } from "./invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "./js_statement_if_alternate_get.mjs";
@@ -76,8 +75,8 @@ export async function js_ternary_replace(ast) {
     js_call_argument_add(e, test_node);
     js_call_arguments_add(e, rights);
     js_left_right_set(assignment, expression, e);
-    let c2 = js_code_statement("a");
-    let statement = js_parse_statement(c2);
+    let c = js_code_statement("a");
+    let statement = js_parse_statement(c);
     property_set(statement, "expression", assignment);
     object_replace(node, statement);
     replaced = true;
@@ -86,10 +85,4 @@ export async function js_ternary_replace(ast) {
   if (replaced) {
     await js_imports_missing_add_all(ast);
   }
-  return;
-  let result = null;
-  let test = equal(b, 1);
-  let b = 2;
-  let c = 1;
-  result = ternary(test, b, c);
 }
