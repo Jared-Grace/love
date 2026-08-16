@@ -35,11 +35,13 @@ export async function functions_span_candidates() {
     let address_from = property_get(longest, "address_from");
     let address_to = property_get(longest, "address_to");
     let size = property_get(longest, "size");
+    let worst = property_get(longest, "worst");
     list_add(rows, {
       name,
       address_from,
       address_to,
       size,
+      worst,
     });
   }
   let ranked = list_sort_size_reverse(rows);
