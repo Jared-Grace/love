@@ -1,3 +1,4 @@
+import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
 import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,6 +23,8 @@ export async function app_code_expression_replaced_settle(
     ("where the swap was watched arriving, the green has nothing left to say and comes off in the same movement, so the line settles in one go all the way to how it is about to be drawn");
     ("Held back, the line would settle twice over: once for the value being shorter than its working, and again a moment later for the green's own room going.");
     if (watched) {
+      ("the fading is asked for again here rather than being carried over from when the green was given, because the travelling wiped it: a piece is told once what may be slowed about it, and being told to move slowly threw the earlier telling away");
+      app_code_expression_colored_slowly(node_span);
       app_code_expression_chosen_clear(node_span);
     }
   }
