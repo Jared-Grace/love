@@ -1489,6 +1489,9 @@ export function permission_grant_names() {
   let spelled1452 = fn_name("app_ceb_bible_gloss_affix_kinds_wrong_count");
   let spelled1453 = fn_name("app_original_bible_gloss_lexicons_named_gate_run");
   let spelled1454 = fn_name("qa_gates_red_results");
+  let spelled1455 = fn_name("text_lines_ends_kept_cases_gate_run");
+  let spelled1456 = fn_name("bible_folder_key");
+  let spelled1457 = fn_name("result_lines_claude");
   let names = [
     spelled,
     spelled2,
@@ -2944,6 +2947,9 @@ export function permission_grant_names() {
     spelled1452,
     spelled1453,
     spelled1454,
+    spelled1455,
+    spelled1456,
+    spelled1457,
   ];
   return names;
 }
