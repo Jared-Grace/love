@@ -23,8 +23,10 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
   ("The prose is left out of both counts. A body here is mostly paragraphs explaining itself, and counting those as length makes a run covering every line of work look as though it left a good deal behind - which is how a cut that moves the whole body and gains nothing came to be offered first.");
   let work = list_filter(statements, js_statement_work_is);
   let count = list_size(work);
+  ("The walk still goes over every line, prose and all, because a run is addressed by where it stands in the body rather than by where it stands among the lines of work. Only the counting leaves the prose out.");
+  let count_lines = list_size(statements);
   let held = null;
-  for (let to = from; less_than(to, count); to++) {
+  for (let to = from; less_than(to, count_lines); to++) {
     let address_to = list_get(addresses, to);
     if (null_is(address_to)) {
       continue;
