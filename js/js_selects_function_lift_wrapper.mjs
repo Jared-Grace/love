@@ -1,9 +1,9 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
@@ -32,8 +32,11 @@ export async function js_selects_function_lift_wrapper(
   list_empty_is_assert_json(refusals, {
     name_old,
   });
-  let params = property_get(declaration, "params");
-  let param_names = list_map(params, js_identifier_name_try);
+  let param_names = property_list_map(
+    declaration,
+    "params",
+    js_identifier_name_try,
+  );
   let passed = list_concat(param_names, closed);
   let async_is = property_get(declaration, "async");
   let block = property_get(declaration, "body");
