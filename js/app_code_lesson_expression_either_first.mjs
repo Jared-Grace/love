@@ -1,3 +1,4 @@
+import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -62,6 +63,7 @@ export function app_code_lesson_expression_either_first() {
     "the line, and under it the same line worked out both ways round to the same value";
     let tree = property_get(trees, question);
     html_text_set_code_dark(parent, question);
+    app_shared_spaced_below(parent);
     app_code_lesson_expression_either_first_proof(card, tree);
   }
   function quizzes_get(question, answer) {
