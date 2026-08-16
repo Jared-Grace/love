@@ -18,5 +18,6 @@ export async function app_original_bible_gloss_generate_chapter(
     book_code,
     fn,
     chapter_code_specified,
+    text_empty,
   );
 }
