@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_cuttable_is } from "./js_statements_span_cuttable_is.mjs";
 import { list_get } from "./list_get.mjs";
@@ -21,7 +22,7 @@ export function js_statements_span_candidate_longest(
   }
   let count = list_size(statements);
   let longest = null;
-  for (let to = from; to < count; to++) {
+  for (let to = from; less_than(to, count); to++) {
     let address_to = list_get(addresses, to);
     if (null_is(address_to)) {
       continue;

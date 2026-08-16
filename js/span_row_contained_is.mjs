@@ -1,3 +1,5 @@
+import { less_than_equal } from "./less_than_equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { and } from "./and.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -16,8 +18,8 @@ export function span_row_contained_is(rows, row) {
     }
     let other_from = property_get(other, "from");
     let other_to = property_get(other, "to");
-    let starts_at_or_before = other_from <= from;
-    let ends_at_or_after = other_to >= to;
+    let starts_at_or_before = less_than_equal(other_from, from);
+    let ends_at_or_after = greater_than_equal(other_to, to);
     let holds = and(starts_at_or_before, ends_at_or_after);
     if (holds) {
       return true;

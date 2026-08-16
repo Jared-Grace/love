@@ -1,0 +1,28 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
+import { html_clone } from "./html_clone.mjs";
+import { html_document_body } from "./html_document_body.mjs";
+import { html_parent_append } from "./html_parent_append.mjs";
+import { html_pixels_text } from "./html_pixels_text.mjs";
+import { html_style_left } from "./html_style_left.mjs";
+import { html_style_position_fixed } from "./html_style_position_fixed.mjs";
+import { html_style_top } from "./html_style_top.mjs";
+import { property_get } from "./property_get.mjs";
+export function html_clone_over(component) {
+  arguments_assert(arguments, 1);
+  ("a copy of a thing laid exactly on top of the thing itself, out of the flow of the page, and handed back so it can be sent somewhere");
+  ("The copy is what travels and the thing stays where it stands, so a word can be shown going somewhere without the sentence it came from losing it.");
+  ("It hangs off the body rather than off the thing's own parent, because a parent that hides what overflows it would cut the copy off the moment it left, and the copy's whole purpose is to leave.");
+  let rect = html_bounding_client_rect(component);
+  let clone = html_clone(component);
+  html_style_position_fixed(clone);
+  let left = property_get(rect, "left");
+  let style_value = html_pixels_text(left);
+  html_style_left(clone, style_value);
+  let top = property_get(rect, "top");
+  let style_value2 = html_pixels_text(top);
+  html_style_top(clone, style_value2);
+  let body = html_document_body();
+  html_parent_append(body, clone);
+  return clone;
+}
