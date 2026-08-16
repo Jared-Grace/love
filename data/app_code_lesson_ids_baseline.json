@@ -98,6 +98,7 @@
   "expressions_which_part_is_solved_first",
   "operators_not_twice",
   "expressions_not_around_a_comparison",
-  "expressions_not_equal_written_with_not"
+  "expressions_not_equal_written_with_not",
+  "statements_giving_a_value_a_name"
  ]
 }
