@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { property_get } from "./property_get.mjs";
+import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
@@ -12,8 +11,8 @@ export async function app_shared_bible_language_chapter_fetch(
   chapter_code,
 ) {
   arguments_assert(arguments, 2);
-  let property_name = bible_folder_key();
-  let bible_folder = property_get(lc, property_name);
+  ("A language is asked for its folder rather than read for one, so that a language listing several translations is fetched in the first of them, and a single translation handed in on its own is still fetched in itself.");
+  let bible_folder = ebible_language_bible_folder(lc);
   async function get() {
     async function lambda_verses_l() {
       let r_verses = await ebible_verses_browser(bible_folder, chapter_code);

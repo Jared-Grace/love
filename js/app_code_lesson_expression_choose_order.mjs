@@ -1,3 +1,4 @@
+import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -80,9 +81,9 @@ export function app_code_lesson_expression_choose_order() {
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
     let info = {
-      question_label: "The line to work out: ",
+      question_label: app_code_label_line_to_solve(),
       on_question: html_text_set_code_dark,
-      answer_label: "Choose the operator to work out first: ",
+      answer_label: "Choose what to solve next: ",
       on_answer,
       answer_property: "answer",
     };
