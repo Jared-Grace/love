@@ -52,7 +52,10 @@ let REASON =
   "short prioritized list in plain words, no jargon, ending with ONE " +
   'recommendation and a sentence saying why. "Stop" is a real ' +
   "recommendation - if nothing on the list is worth the budget, say so and " +
-  "say why, rather than inventing work to look useful.";
+  "say why, rather than inventing work to look useful. The one exception is " +
+  "waiting: if the honest answer is that something already running has to " +
+  "finish first, close with only that - what is being waited on, and that " +
+  "you will say when it is over. No list, because there is nothing to choose.";
 
 // A tool_result is carried on an entry typed "user", so the newest entry of
 // that type is not the newest thing the user actually typed. Only a genuine
@@ -163,6 +166,10 @@ process.stdin.on("end", async () => {
     }
     let has_next_steps = NEXT_STEPS_MARKERS.some((re) => re.test(said));
     if (has_next_steps) {
+      process.exit(0);
+    }
+    let waiting_is = WAITING_MARKERS.every((re) => re.test(said));
+    if (waiting_is) {
       process.exit(0);
     }
     process.stdout.write(
