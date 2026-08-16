@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_grant_context } from "./permission_grant_context.mjs";
@@ -30,8 +30,7 @@ export async function permission_grant_word_params(word) {
     let plain = function_params_plain_ast(ast);
     for (let p of params) {
       ("A parameter written as a pattern rather than a name has no single name to read a word out of, so it is counted and passed over rather than guessed at. It is counted because passing over in silence is how a whole shape of parameter stops being looked at without anybody deciding that it should be.");
-      let kind = property_get(p, "type");
-      let named = equal(kind, "Identifier");
+      let named = property_equals(p, "type", "Identifier");
       if (not(named)) {
         unnamed = add(unnamed, 1);
         continue;
