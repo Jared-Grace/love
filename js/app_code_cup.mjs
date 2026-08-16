@@ -14,9 +14,13 @@ export function app_code_cup(parent, inside, name) {
   let dark = app_shared_color_blue_dark();
   let border = text_combine("0.16em solid ", dark);
   let cup = html_div(parent);
+  ("centered in whatever it is put in - a picture is looked at rather than read, so it does not begin where a line of writing begins. Centred two ways over, because the boxes it is drawn in stand their contents in a column and a plain page would not.");
   html_style_assign(cup, {
     width: "3.4em",
     height: "3.4em",
+    "align-self": "center",
+    "margin-left": "auto",
+    "margin-right": "auto",
     "border-top": "none",
     "border-left": border,
     "border-right": border,
