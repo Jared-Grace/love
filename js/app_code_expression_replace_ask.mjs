@@ -28,12 +28,12 @@ export function app_code_expression_replace_ask(
   );
   let asked = "Click here to replace";
   let holder = html_div(note);
-  ("the button stands in the middle of the line it has to itself, because it is the one thing to do here and a thing standing alone against the left edge reads as the start of a list of them");
-  html_centered(holder);
-  ("and it stands off from the sentence ABOVE it, not from the label below, by the same gap the sentence that hands a learner over to the line stands off by, read from the one place both of them read it");
-  ("Underneath, the centring is already doing the separating: the button sits in the middle of the width and the label under it starts at the left edge, so nothing has to be added to tell the two of them apart. Above, they are one after the other in the same reading, and only a gap says that the reading has finished and something to press has begun.");
+  ("it stands off from the sentence ABOVE it, not from the label below, by the same gap the sentence that hands a learner over to the line stands off by, read from the one place both of them read it");
+  ("Underneath, the width is already doing the separating: the button fills its own line and the label under it starts at the left edge, so nothing has to be added to tell the two of them apart. Above, they are one after the other in the same reading, and only a gap says that the reading has finished and something to press has begun.");
   let gap = app_shared_spaced_gap();
   html_style_margin_top(holder, gap);
-  app_shared_button_green_ordinary(holder, asked, press);
+  ("the same wide grey button every other button on this screen is, filling the line it has to itself rather than standing in the middle of it");
+  ("Wide because that is the shape of a button here: See another example, Next and Home all fill their line, and a smaller button among them reads as a different kind of thing to press rather than as the next one. Grey for the same reason - green is what this app says well done in, and a button offering the swap is asking for it, not praising it.");
+  app_shared_button_wide(holder, asked, press);
   return chosen_pieces;
 }
