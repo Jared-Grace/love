@@ -44,17 +44,16 @@ export async function permission_rule_grant_checked_context(
     };
     return refused;
   }
-  ("the repo-shared settings file rather than the per-machine one, so peers and the gates see the grant");
-  let settings_path = permission_settings_shared_path();
-  let settings = await file_read_json(settings_path);
-  let allow = property_path_get_2(settings, "permissions", "allow");
-  list_add(allow, rule);
-  ("the width this file is already kept at — rewriting it at another turns a one-line addition into a whole-file diff");
-  let spaces = 2;
-  let json = json_format_to_spaces(settings, spaces);
-  ("the file ends in a newline and every other tool that touches it keeps one — dropping it makes the last line read as changed in every later diff");
-  let json_line = text_combine(json, "\n");
-  await file_overwrite(settings_path, json_line);
+  ("the granted names are what a grant is written to, and the settings file is generated from them. This used to append the rule to the settings file alone and never open the names list at all, which is why grants made from the prompt record went missing: a rule the list does not account for is thrown away by the next thing that regenerates the file, and the regeneration is a gate anybody may run. Three approvals the human had already given departed that way before the cause was found, and it was never a race - a writer that never writes the source loses every time.");
+  ("read off the file rather than out of memory, because the safety check above walks the whole repo and a peer granting during that walk has rewritten the list since");
+  let names_now = await permission_grant_names_fresh();
+  ("asked again against the list as it stands now, because a name spelled twice renders the same rule twice");
+  let arrived = list_includes(names_now, unaliased);
+  if (not(arrived)) {
+    list_add(names_now, unaliased);
+  }
+  await permission_grant_names_settings_write(names_now);
+  ("the one rule handed back is the one for this seam, out of the several the generator writes for a name. It is the one the guard is asked about below, so it is the one worth reporting.");
   ("the guard reads the settings file on every call, so it can answer for the rule right away — Claude's own permission engine cannot, and will keep prompting until the session restarts");
   let command = permission_rule_command_probe(rule);
   let verdict = await guard_check(command);
