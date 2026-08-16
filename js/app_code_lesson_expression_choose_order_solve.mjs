@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
-import { app_code_label_comes_to } from "./app_code_label_comes_to.mjs";
+import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
 import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_expression_choose_order_solve() {
     }
     async function on_chosen(node, value, node_span) {
       "a right press is answered by asking what that part comes to, and the line does not move until the right value is pressed";
-      let said = app_code_label_comes_to();
+      let said = app_code_label_solve_choice();
       answer_label_set(said);
       let decoys = app_code_expression_value_decoys(current, node);
       await app_code_expression_value_choose_await(
