@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -16,9 +17,7 @@ import { js_code_statement } from "./js_code_statement.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { list_chunk } from "./list_chunk.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_map } from "./range_map.mjs";
@@ -83,8 +82,7 @@ export function app_code_lesson_statement_name_value() {
     let numbers = range_map(max, number_of);
     let taken = list_shuffle_take(numbers, 4);
     let pairs = list_chunk(taken, 2);
-    let nested = list_map(pairs, pair_to_codes);
-    let codes = list_concat_multiple(nested);
+    let codes = list_map_concat_multiple(pairs, pair_to_codes);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
