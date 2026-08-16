@@ -1,3 +1,4 @@
+import { app_shared_bible_home_verse_current_languages } from "./app_shared_bible_home_verse_current_languages.mjs";
 import { app_shared_bible_home_chapter_data } from "./app_shared_bible_home_chapter_data.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { app_shared_bible_verse_buttons_row } from "./app_shared_bible_verse_buttons_row.mjs";
@@ -8,16 +9,13 @@ import { app_shared_bible_home_share_button } from "./app_shared_bible_home_shar
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
 import { app_shared_bible_home_bar_buttons } from "./app_shared_bible_home_bar_buttons.mjs";
-import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -61,24 +59,16 @@ export async function app_shared_bible_home_generic(
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
-  let property_name = verse_number_key();
-  let verse_current = list_find_property(
+  let r2 = await app_shared_bible_home_verse_current_languages(
     verses,
-    property_name,
     verse_number_hash,
-  );
-  let property_name2 = verse_number_key();
-  let verse_number = property_get(verse_current, property_name2);
-  let text = property_get(verse_current, "text");
-  let r2 = await app_shared_bible_home_languages(
     chapter_code,
-    verse_number_hash,
-    verses,
     books,
-    text,
   );
-  let text_languages = property_get(r2, "text_languages");
   let languages_available = property_get(r2, "languages_available");
+  let text_languages = property_get(r2, "text_languages");
+  let verse_number = property_get(r2, "verse_number");
+  let verse_current = property_get(r2, "verse_current");
   let r3 = app_shared_bible_verse_frame(content, text_languages);
   let top = property_get(r3, "top");
   let p_verse = property_get(r3, "p_verse");
