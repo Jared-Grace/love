@@ -1,7 +1,7 @@
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join } from "./list_join.mjs";
-import { list_map } from "./list_map.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 export function permission_grant_seam_chains_text(paths) {
   "The chains of calls behind a refusal, written out as one line a person can read - each one starting at the function being judged and ending at the thing that runs commands.";
@@ -14,7 +14,6 @@ export function permission_grant_seam_chains_text(paths) {
     let text = list_join(chain, " -> ");
     return text;
   }
-  let texts = list_map(names, chain_text);
-  let r = list_join(texts, "; ");
+  let r = list_map_join_separator(names, chain_text, "; ");
   return r;
 }
