@@ -1,3 +1,4 @@
+import { js_rebound_names } from "./js_rebound_names.mjs";
 import { js_global_names } from "./js_global_names.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
@@ -10,7 +11,6 @@ import { list_add } from "./list_add.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
-import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 export async function js_function_nested_lift_reading(ast, declaration) {
   arguments_assert(arguments, 2);
@@ -34,7 +34,9 @@ export async function js_function_nested_lift_reading(ast, declaration) {
   let globals = js_global_names();
   let supplied = list_concat(reachable, globals);
   let closed = list_difference(unbound, supplied);
-  let written = js_assigned_names(declaration);
+  ("Written means pointed somewhere else, and never a write that goes through a dot. The lift hands every closed-over name over as a value, so the question is which of them a parameter would fork: pointing a name somewhere else does fork it, because the parameter and the name outside stop being the same name from that write onwards, while setting something on the thing a name points at changes the one thing the caller is looking at too.");
+  ("The broader reading was asked here at first, which counted a name as written when only a piece hanging off it was. That turned down a function keeping its place on an object - the very shape somebody reaches for to make a lift possible - and the wording next door already says this narrower one is the one to ask wherever a name is handed on as a value.");
+  let written = js_rebound_names(declaration);
   let written_closed = list_intersection(closed, written);
   let reading = {
     name_old,
