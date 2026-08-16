@@ -68,10 +68,13 @@ export function app_search_results_book_card(
   html_cursor_pointer(header);
   let div_body = html_div_centered(div_book);
   book_current.body = div_body;
-  let collapsed = false;
+  ("whether this card is shut is kept on an object rather than under a name of its own, because one function writes it and another reads it: the setter below records it, and the click that flips the card reads it to know which way to flip. A name would give each of them its own copy the moment these two were pulled apart, and the card would then flip only on every other click.");
+  let card = {
+    collapsed: false,
+  };
   function collapsed_set(value) {
-    collapsed = value;
-    if (collapsed) {
+    card.collapsed = value;
+    if (card.collapsed) {
       html_display_none(div_body);
       html_display_inline_block(div_book);
       let value3 = app_shared_spaced_neighbor_gap();
@@ -94,7 +97,7 @@ export function app_search_results_book_card(
     await only();
   }
   async function toggle() {
-    let next = not(collapsed);
+    let next = not(card.collapsed);
     collapsed_set(next);
     let expanded = not(next);
     if (expanded) {
