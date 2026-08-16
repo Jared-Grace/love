@@ -1506,6 +1506,7 @@
       "Bash(node scripts/ai.mjs ai_log_entries_recent:*)",
       "Bash(node scripts/ai.mjs function_aliases:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_names_rooted:*)",
+      "Bash(node scripts/ai.mjs memory_lines_search:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2922,6 +2923,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_entries_recent:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args function_aliases:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_names_rooted:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args memory_lines_search:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4337,6 +4339,7 @@
       "Bash(node scripts/aig.mjs ai_log_entries_recent:*)",
       "Bash(node scripts/aig.mjs function_aliases:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_names_rooted:*)",
+      "Bash(node scripts/aig.mjs memory_lines_search:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5752,7 +5755,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args function_span_candidates:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_entries_recent:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args function_aliases:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_names_rooted:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_names_rooted:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args memory_lines_search:*)"
     ],
     "defaultMode": "acceptEdits"
   },
