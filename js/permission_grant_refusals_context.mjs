@@ -1,3 +1,5 @@
+import { permission_plain_marker } from "./permission_plain_marker.mjs";
+import { equal } from "./equal.mjs";
 import { function_command_seams_reached_paths_memo } from "./function_command_seams_reached_paths_memo.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
 import { object_property_names } from "./object_property_names.mjs";

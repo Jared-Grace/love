@@ -52,8 +52,9 @@ export async function app_shared_bible_home_languages(
       },
     ];
   }
-  return {
+  let r = {
     languages_available,
     text_languages,
   };
+  return r;
 }
