@@ -15,6 +15,9 @@ export function permission_grant_refusals_parameters(
   unaliased,
 ) {
   arguments_assert(arguments, 4);
+  ("Every reason to refuse a grant that is read off the function's own parameter list, added to the list of reasons already gathered.");
+  ("A word inside a parameter's name is a guess about what the parameter holds, and the guess is wrong often enough to matter - chapter_code holds a Bible chapter identifier, not source text. Reading the shape of the name instead would loosen the check for every function nobody has looked at, so the function declares the exception itself and an unmarked parameter is still refused.");
+  ("A parameter can be written as a pattern rather than as a name, and reading a name off one threw rather than answering. Twenty-eight live functions are written that way, so asking whether any of them may be granted crashed the one tool that stands before a rule is written - and a crash is not a refusal, it is no answer at all. What is taken apart inside a pattern cannot be read off the parameter list, so the honest answer is that this check cannot see what the parameter holds, which is a reason to refuse rather than a reason to pass.");
   let plain = function_params_plain_ast(ast);
   let plain_prefix = permission_plain_marker();
   for (let p of params) {
