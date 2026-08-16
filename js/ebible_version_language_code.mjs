@@ -1,7 +1,6 @@
 import { ebible_version_folder_language_code } from "./ebible_version_folder_language_code.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function ebible_version_language_code(copyright_read) {
   "Which language a translation is in - what its copyright page says, and where the page says nothing, what the name of its folder says.";
   "The page is believed first because it says so on purpose: eBible links each one to the entry for that language, and a link is a statement. The folder name is a filing word and only stood in for the statement where there is none.";
