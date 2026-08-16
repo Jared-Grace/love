@@ -59,7 +59,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   async function on_chosen(node, value, node_span) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     "the green block itself is handed over too, because once the button is pressed the swap is shown travelling between that block and the two green pieces of the sentence naming it";
-    await app_code_expression_replace_await(
+    let watched = await app_code_expression_replace_await(
       note,
       node,
       node_span,
@@ -67,6 +67,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       rule_line_retire,
       head_said,
     );
+    return watched;
   }
   function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";
