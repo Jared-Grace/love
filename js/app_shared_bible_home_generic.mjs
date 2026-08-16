@@ -1,3 +1,4 @@
+import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { app_shared_bible_books_verses_fetch } from "./app_shared_bible_books_verses_fetch.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
@@ -16,8 +17,6 @@ import { fn_name } from "./fn_name.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
-import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
@@ -27,7 +26,6 @@ import { list_find_property } from "./list_find_property.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -114,14 +112,12 @@ export async function app_shared_bible_home_generic(
     book_name,
     verse_number,
   );
-  async function lambda3() {
-    let mode = app_shared_bible_mode_chapter();
-    await app_shared_bible_mode_switch(context, mode, app_fn);
-  }
-  ("only the app that actually draws a whole-chapter reader offers the way into it. the others are verse-only: the button was there for all of them, and in three of the four it switched to a mode nothing renders, so the reader was handed a way to a page that does not exist. which kind an app is cannot be read from here - it is the app that knows, so it says.");
-  if (chapter_reader_is) {
-    app_shared_button(bottom, "📖 Whole chapter", lambda3);
-  }
+  app_shared_bible_home_chapter_button(
+    context,
+    app_fn,
+    chapter_reader_is,
+    bottom,
+  );
   app_shared_bible_home_copy_button(
     bottom,
     updates,
