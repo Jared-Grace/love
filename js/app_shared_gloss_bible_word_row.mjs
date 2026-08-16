@@ -1,0 +1,30 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_hr } from "./html_hr.mjs";
+import { html_div } from "./html_div.mjs";
+import { property_get } from "./property_get.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_bold_mild } from "./html_bold_mild.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_span_colon_2 } from "./html_span_colon_2.mjs";
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
+export function app_shared_gloss_bible_word_row(e, p, word_property) {
+  arguments_assert(arguments, 3);
+  html_hr(p);
+  let div = html_div(p);
+  let word = property_get(e, word_property);
+  let gloss = property_get(e, "gloss");
+  let explain = property_get(e, "explain");
+  let span = html_span_text(div, word);
+  html_bold_mild(span);
+  html_font_color_set(span, "#b91c1cff");
+  let c = html_span_colon_2(div);
+  let color = app_shared_color_gray();
+  html_font_color_set(c, color);
+  let span2 = html_span_text(div, gloss);
+  html_font_color_set(span2, "#1d4ed8ff");
+  let c2 = html_span_colon_2(div);
+  let color2 = app_shared_color_gray();
+  html_font_color_set(c2, color2);
+  let span3 = html_span_text(div, explain);
+  html_font_color_set(span3, "#a21cafff");
+}
