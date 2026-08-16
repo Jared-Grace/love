@@ -1449,6 +1449,7 @@ export function permission_grant_names() {
   let spelled1414 = fn_name("ai_log_entries_recent");
   let spelled1415 = fn_name("function_aliases");
   let spelled1416 = fn_name("app_ceb_bible_gloss_names_rooted");
+  let spelled1417 = fn_name("memory_lines_search");
   let names = [
     spelled,
     spelled2,
@@ -2866,6 +2867,7 @@ export function permission_grant_names() {
     spelled1414,
     spelled1415,
     spelled1416,
+    spelled1417,
   ];
   return names;
 }
