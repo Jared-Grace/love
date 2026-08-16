@@ -1,3 +1,7 @@
+import { js_statement_returned_call } from "./js_statement_returned_call.mjs";
+import { js_statement_call_alone } from "./js_statement_call_alone.mjs";
+import { js_statement_call_held } from "./js_statement_call_held.mjs";
+import { js_statement_returned_name } from "./js_statement_returned_name.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
