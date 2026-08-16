@@ -69,7 +69,11 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   let container_question = property_get(a, "container_question");
-  app_code_example_answer_label(a_container, answer_label);
+  let answer_label_div = app_code_example_answer_label(a_container, answer_label);
+  function answer_label_set(said) {
+    "let a quiz say something new over its answers, for the quizzes whose question is worked out in steps and whose asking changes as the steps go";
+    app_code_label_text_set(answer_label_div, said);
+  }
   let answers_div = html_div(a_container);
   let parent_container = html_div(parent);
   ("one feedback slot holds the success message and the correction overlapped in a single grid cell, so it is always as tall as the taller of the two and nothing shifts when Show me the answer swaps one for the other");
@@ -148,12 +152,22 @@ export function app_code_lesson_quiz(
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
+    ("the label is put back to what the lesson wrote before every question, because a quiz that changed it while working the last one out would otherwise open the next one still asking the question it finished on");
+    answer_label_set(answer_label);
     app_code_lesson_quiz_render_correction(
       container_correction,
       correction_render,
       qa,
     );
-    on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
+    on_answer(
+      answers_div,
+      info,
+      qa,
+      on_success,
+      on_wrong,
+      batch_get,
+      answer_label_set,
+    );
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
