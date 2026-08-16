@@ -20,11 +20,10 @@ export function gloss_root_explain_nearest(root, explain) {
   let explain_lower = text_lower_to(explain);
   let words = text_punctuation_dash_kept_split(explain_lower);
   let nearest = "";
-  let edits = text_length(root_bare);
+  let edits = text_size(root_bare);
   function word_read(word) {
-    let length = text_length(word);
-    let single = less_than(length, 2);
-    if (single) {
+    let long_enough = text_size_greater_than_1(word);
+    if (not(long_enough)) {
       return;
     }
     let bare = text_replace(word, "-", "");
