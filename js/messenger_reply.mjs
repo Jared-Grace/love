@@ -7,7 +7,6 @@ import { property_set } from "./property_set.mjs";
 import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
 import { messenger_reply_messages_message } from "./messenger_reply_messages_message.mjs";
 import { messenger_reply_unreplied } from "./messenger_reply_unreplied.mjs";
-import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
@@ -16,8 +15,6 @@ import { messenger_reply_messages_urls_transform } from "./messenger_reply_messa
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_puppeteer } from "./messenger_reply_puppeteer.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
-import { bind_property } from "./bind_property.mjs";
-import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function messenger_reply() {
   async function lambda2(page) {
@@ -50,11 +47,4 @@ export async function messenger_reply() {
     await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
-  return;
-  await messenger_reply_wait(page);
-  await p.focus();
-  let fn = bind_property(page.keyboard, "type");
-  await keyboard_type_delay("Greetings!", fn);
-  return;
-  await page.keyboard.press("Enter");
 }
