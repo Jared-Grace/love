@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
@@ -140,32 +141,7 @@ export async function app_shared_bible_home_generic(
   let text = property_get(verse_current, "text");
   let languages_chosen = app_shared_bible_languages_chosen_get();
   async function lambda_language(lc) {
-    let property_name3 = bible_folder_key();
-    let bible_folder = property_get(lc, property_name3);
-    async function get() {
-      async function lambda_verses_l() {
-        let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
-        return r_verses;
-      }
-      async function lambda_books_l() {
-        let r_books = await ebible_version_books_browser(bible_folder);
-        return r_books;
-      }
-      let fetched_l = await invoke_multiple_unordered_async([
-        lambda_verses_l,
-        lambda_books_l,
-      ]);
-      let verses_l = list_first(fetched_l);
-      let books_l = list_second(fetched_l);
-      let v = {
-        language: lc,
-        verses: verses_l,
-        books: books_l,
-      };
-      return v;
-    }
-    let r = await catch_null_async(get);
-    return r;
+    return app_shared_bible_language_chapter_fetch(lc, chapter_code);
   }
   let fetched = [];
   await list_map_unordered_add_async(
@@ -314,4 +290,33 @@ export async function app_shared_bible_home_generic(
     bar,
   };
   return v4;
+}
+async function app_shared_bible_language_chapter_fetch(lc, chapter_code) {
+  arguments_assert(arguments, 2);
+  let property_name3 = bible_folder_key();
+  let bible_folder = property_get(lc, property_name3);
+  async function get() {
+    async function lambda_verses_l() {
+      let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
+      return r_verses;
+    }
+    async function lambda_books_l() {
+      let r_books = await ebible_version_books_browser(bible_folder);
+      return r_books;
+    }
+    let fetched_l = await invoke_multiple_unordered_async([
+      lambda_verses_l,
+      lambda_books_l,
+    ]);
+    let verses_l = list_first(fetched_l);
+    let books_l = list_second(fetched_l);
+    let v = {
+      language: lc,
+      verses: verses_l,
+      books: books_l,
+    };
+    return v;
+  }
+  let r = await catch_null_async(get);
+  return r;
 }
