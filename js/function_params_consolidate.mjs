@@ -10,11 +10,7 @@ export async function function_params_consolidate(f_name) {
   async function lambda(ast) {
     let params = js_flo_params_get(ast);
     let params_names = js_identifiers_to_names(params);
-    function lambda2(param_name) {
-      let v = js_property_identifier(param_name);
-      return v;
-    }
-    let properties = list_map(params_names, lambda2);
+    let properties = list_map(params_names, js_property_identifier);
     let arg_new = {
       type: "ObjectPattern",
       properties,
