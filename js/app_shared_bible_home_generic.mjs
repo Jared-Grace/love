@@ -15,13 +15,10 @@ import { app_shared_content_column_pad } from "./app_shared_content_column_pad.m
 import { fn_name } from "./fn_name.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
-import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
-import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -29,8 +26,6 @@ import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previo
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
-import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";
-import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -40,7 +35,6 @@ import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
-import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
@@ -99,22 +93,14 @@ export async function app_shared_bible_home_generic(
   let books = list_first(fetched_en);
   let verses = list_second(fetched_en);
   let book_name = ebible_book_code_to_name(books, book_code);
-  app_shared_bible_home_bar_buttons(bar, context, chapter_code, book_name);
-  app_shared_screen_set_button(
+  app_shared_bible_home_bar_buttons(
     bar,
     context,
-    app_shared_bible_chapters,
+    chapter_code,
+    book_name,
     chapter_name,
-  );
-  app_shared_bible_button_chapter_next(bar, context, chapter_code);
-  app_shared_screen_set_button(
-    bar,
-    context,
-    app_shared_bible_verses,
     verse_number_hash,
   );
-  let text2 = app_shared_gear_settings_text();
-  app_shared_screen_set_button(bar, context, app_shared_bible_settings, text2);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
