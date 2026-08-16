@@ -1,16 +1,13 @@
+import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
 import { app_search_results_render } from "./app_search_results_render.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_single_property } from "./list_single_property.mjs";
-import { bible_search_word_download } from "./bible_search_word_download.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
-import { null_is } from "./null_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_page_scrolls } from "./html_page_scrolls.mjs";
-import { list_add } from "./list_add.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -22,12 +19,6 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_book_exists } from "./ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_intersect_multiple } from "./list_intersect_multiple.mjs";
-import { properties_get } from "./properties_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { text_to_words } from "./text_to_words.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
@@ -35,31 +26,9 @@ export async function app_search_results(context, div_results) {
   let books = await ebible_version_books_browser(en);
   let query = property_get(context, "query");
   let words = text_to_words(query);
-  let words_missing = [];
-  async function lambda(word) {
-    async function get() {
-      let o = await bible_search_word_download(word);
-      return o;
-    }
-    ("the index keeps one file per word it has seen, so a word appearing nowhere has no file and the download fails; catch it and carry on, rather than letting one unknown word reject the whole search and leave a blank page");
-    let r = await catch_null_async(get);
-    let n = null_is(r);
-    if (n) {
-      list_add(words_missing, word);
-      let r2 = {};
-      return r2;
-    }
-    return r;
-  }
-  let mapped = await list_map_unordered_async(words, lambda);
-  let keys = list_map(mapped, properties_get);
-  let chapter_codes_match = list_intersect_multiple(keys);
-  function value_get(chapter_code) {
-    let mapped3 = list_map_property(mapped, chapter_code);
-    let i = list_intersect_multiple(mapped3);
-    return i;
-  }
-  let dictionary = list_to_dictionary_value(chapter_codes_match, value_get);
+  let r = await app_search_chapter_verses_matching(words);
+  let dictionary = property_get(r, "dictionary");
+  let words_missing = property_get(r, "words_missing");
   html_clear(div_results);
   let missing = list_empty_not_is(words_missing);
   if (missing) {
