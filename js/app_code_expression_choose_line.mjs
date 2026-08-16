@@ -48,10 +48,13 @@ export function app_code_expression_choose_line(
           ("an operator still holding another one underneath it: refuse just this one and leave the rest of the line as it was, so the next press is a fresh choice rather than a forced one");
           app_code_lesson_quiz_wrong_set(span);
           html_style_set(span, "pointer-events", "none");
+          list_add(refused, span);
           on_wrong(node);
           return;
         }
         chosen = true;
+        ("the reds go before anything else happens, so what the learner watches from here is one block being worked out rather than a working out with a refusal still standing beside it");
+        app_code_expression_refusals_clear(refused);
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
         ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
