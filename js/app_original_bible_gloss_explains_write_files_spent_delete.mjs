@@ -11,7 +11,6 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function app_original_bible_gloss_explains_write_files_spent_delete() {
   "Clear away every piece of waiting wording for the original-language gloss that its passage already says word for word, and answer with what was cleared and what is still waiting.";
   "Writing a chapter's waiting wording into it never removed the files it came out of, so the folder keeps every hand-off ever made and each one is written again on the next mending of that chapter. A passage improved since then is quietly returned to the older sentence, and nothing on the page says so - the chapter reports the same passages mended either way.";
