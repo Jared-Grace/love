@@ -1,3 +1,4 @@
+import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
 import { app_original_bible_gloss_parsings_gate_run } from "./app_original_bible_gloss_parsings_gate_run.mjs";
 import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
 import { machine_path_literals_gate_run } from "./machine_path_literals_gate_run.mjs";
@@ -497,6 +498,7 @@ export function qa_gates() {
     app_original_bible_gloss_misaligned_gate_run,
     app_original_bible_gloss_parsings_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,
+    gloss_write_root_files_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
     storage_rules_gate_run,
