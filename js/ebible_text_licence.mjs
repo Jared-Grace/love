@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { ebible_licence_marks } from "./ebible_licence_marks.mjs";
 import { ebible_licence_public_domain } from "./ebible_licence_public_domain.mjs";
 import { ebible_licence_public_domain_sentences } from "./ebible_licence_public_domain_sentences.mjs";
@@ -25,7 +26,7 @@ export function ebible_text_licence(copyright_page) {
   let owned_sentences = ebible_licence_reservation_sentences();
   let said_free = text_includes_multiple_is(lowered, free_sentences);
   let said_owned = text_includes_multiple_is(lowered, owned_sentences);
-  if (said_free && !said_owned) {
+  if (said_free && not(said_owned)) {
     let free = ebible_licence_public_domain();
     return free;
   }
