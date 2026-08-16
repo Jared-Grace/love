@@ -1,5 +1,4 @@
-import { app_shared_bible_home_verse_text_entry } from "./app_shared_bible_home_verse_text_entry.mjs";
-import { app_shared_bible_language_chapter_fetch } from "./app_shared_bible_language_chapter_fetch.mjs";
+import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
@@ -10,7 +9,6 @@ import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -51,16 +49,11 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
-import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -136,43 +129,15 @@ export async function app_shared_bible_home_generic(
   let property_name2 = verse_number_key();
   let verse_number = property_get(verse_current, property_name2);
   let text = property_get(verse_current, "text");
-  let languages_chosen = app_shared_bible_languages_chosen_get();
-  async function lambda_language(lc) {
-    let r2 = await app_shared_bible_language_chapter_fetch(lc, chapter_code);
-    return r2;
-  }
-  let fetched = [];
-  await list_map_unordered_add_async(
-    languages_chosen,
-    lambda_language,
-    fetched,
+  let r2 = await app_shared_bible_home_languages(
+    chapter_code,
+    verse_number_hash,
+    verses,
+    books,
+    text,
   );
-  let languages_available = list_filter_null_not_is(fetched);
-  function lambda_text_map(item) {
-    let r3 = app_shared_bible_home_verse_text_entry(item, verse_number_hash);
-    return r3;
-  }
-  let text_languages = list_map_filter_null_not_is(
-    languages_available,
-    lambda_text_map,
-  );
-  if (list_empty_is(languages_available)) {
-    languages_available = [
-      {
-        language: ebible_language_english(),
-        verses,
-        books,
-      },
-    ];
-  }
-  if (list_empty_is(text_languages)) {
-    text_languages = [
-      {
-        language: ebible_language_english(),
-        text,
-      },
-    ];
-  }
+  let text_languages = property_get(r2, "text_languages");
+  let languages_available = property_get(r2, "languages_available");
   let p_verse = html_p(content);
   let top = html_div(p_verse);
   ("when the spine (last-chosen) language reads right-to-left, mirror the verse frame: the number moves to the right and the lines right-align, matching the chapter reader");
