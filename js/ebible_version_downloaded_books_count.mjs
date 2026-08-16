@@ -1,9 +1,8 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { ebible_book_codes } from "./ebible_book_codes.mjs";
 import { ebible_version_download_path } from "./ebible_version_download_path.mjs";
 import { folder_read } from "./folder_read.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { path_name } from "./path_name.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -25,7 +24,6 @@ export async function ebible_version_downloaded_books_count(bible_folder) {
     let named = list_includes(book_codes, stem);
     return named;
   }
-  let books = list_filter(file_names, book_is);
-  let count = list_size(books);
+  let count = list_filter_size(file_names, book_is);
   return count;
 }
