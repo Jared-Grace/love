@@ -1,19 +1,16 @@
+import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
 import { app_shared_gloss_bible_home_generic_scroll } from "./app_shared_gloss_bible_home_generic_scroll.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { json_from_try } from "./json_from_try.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_nbsp } from "./html_span_nbsp.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
-import { html_span_colon_2 } from "./html_span_colon_2.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_bold_mild } from "./html_bold_mild.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { each } from "./each.mjs";
@@ -70,24 +67,8 @@ export async function app_shared_gloss_bible_home_generic(
   }
   let word_property = app_shared_gloss_bible_generate_generic_word();
   function lambda(e) {
-    html_hr(p);
-    let div2 = html_div(p);
-    let word = property_get(e, word_property);
-    let gloss = property_get(e, "gloss");
-    let explain = property_get(e, "explain");
-    let span = html_span_text(div2, word);
-    html_bold_mild(span);
-    html_font_color_set(span, "#b91c1cff");
-    let c = html_span_colon_2(div2);
-    let color = app_shared_color_gray();
-    html_font_color_set(c, color);
-    let span2 = html_span_text(div2, gloss);
-    html_font_color_set(span2, "#1d4ed8ff");
-    let c2 = html_span_colon_2(div2);
-    let color2 = app_shared_color_gray();
-    html_font_color_set(c2, color2);
-    let span3 = html_span_text(div2, explain);
-    html_font_color_set(span3, "#a21cafff");
+    let r = app_shared_gloss_bible_word_row(e, p, word_property);
+    return r;
   }
   each(explains, lambda);
   async function lambda6() {
