@@ -18,7 +18,8 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
     " ",
     value_text,
   ]);
-  ("praised in the same words the quiz praises a finished question with, taken from the one list both of them read");
+  ("praised from the words said DURING a piece of work rather than the ones said at the end of it, because there is more of the same line still to solve underneath this sentence");
+  ("It used to read from the one list every place in the app praised from, and so a learner one step into three was told Congratulations - which is what a person is told when they have arrived, so the two steps still to come read as something having gone wrong rather than as the rest of the work.");
   let praise = app_shared_encouragement_step_exclamation();
   ("the working out is dark, and the two pieces named after it are green: the first is the block standing green on the line at this very moment, and the second is what that block is about to say instead - so the sentence points at the line rather than merely describing it");
   ("The working out stays dark on purpose. It is arithmetic being shown, not a piece of the line being pointed at, and green on all three would leave nothing for the green to mean.");
