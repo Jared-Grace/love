@@ -15,7 +15,7 @@ export function app_shared_gloss_bible_generate_generic_prompt_system(
     language,
     " word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. \nExplanations should be easy to understand. Explain as simply as possible.\n\n",
     r2,
-    '\n\nOutput format:\n[{"',
+    '\n\nOutput ONLY a JSON array, in this format:\n[{"',
     word,
     '":"',
     language,
