@@ -1,10 +1,6 @@
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_affix_kinds_wrong } from "./gloss_entries_affix_kinds_wrong.mjs";
-export async function gloss_chapter_affix_kinds_wrong(
-  chapter_code,
-  fn,
-  known,
-) {
+export async function gloss_chapter_affix_kinds_wrong(chapter_code, fn, known) {
   "Every explanation in one gloss chapter that calls a piece of its word by a name the dictionary gives no piece of.";
   "$plain chapter_code";
   "the code is a chapter's name, like PSA136, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
