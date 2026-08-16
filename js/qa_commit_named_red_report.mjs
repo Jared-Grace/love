@@ -1,4 +1,5 @@
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
+import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -15,18 +16,7 @@ export async function qa_commit_named_red_report() {
   let report = await qa_commit_named_report();
   let head = property_get(report, "head");
   let looked = property_get(report, "looked");
-  ("An entry naming a commit this folder no longer holds has nothing for its distance, so it cannot be placed against the others and is left out rather than sorted as though it were nearest.");
-  function placed_is(one) {
-    let counted = property_get_or_null(one, "behind");
-    let b = number_is(counted);
-    return b;
-  }
-  let placed = list_filter(looked, placed_is);
-  function behind_of(one) {
-    let counted = property_get_or_null(one, "behind");
-    return counted;
-  }
-  list_sort_number_mapper(placed, behind_of);
+  let placed = qa_commit_looked_nearest_first(looked);
   let newest = list_get_or_null(placed, 0);
   ("A record holding nothing about any commit this folder still has answers with the folder's own commit and no judgement, rather than throwing. Having judged nothing yet is the ordinary state of a thing that has just begun, and it is also what a reader sees on a machine where the record was cleared.");
   let nothing = null_is(newest);
