@@ -23,12 +23,13 @@ export async function ebible_languages_commercial() {
       let names = null_not_is(written);
       return names;
     }
-    let naming = list_find(versions, named_is);
+    let naming = list_filter(versions, named_is);
     "Where not one of them names it, the language is called what its first translation calls itself, because a language with no name at all cannot be offered to anybody.";
-    let nameless = null_is(naming);
+    let nameless = list_empty_is(naming);
     let name = property_get(fullest, "name");
     if (not(nameless)) {
-      name = property_get(naming, "language_name");
+      let first_naming = list_first(naming);
+      name = property_get(first_naming, "language_name");
     }
     let language = {
       name,
