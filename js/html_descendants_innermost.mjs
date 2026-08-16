@@ -13,8 +13,8 @@ export function html_descendants_innermost(component) {
   let all = Array.from(v);
   function innermost_is(inner) {
     let count = inner.children.length;
-    let innermost = equal(count, 0);
-    return innermost;
+    let childless = equal(count, 0);
+    return childless;
   }
   let innermost = list_filter(all, innermost_is);
   let components = list_map(innermost, html_component_wrap);
