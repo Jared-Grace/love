@@ -1472,6 +1472,15 @@ export function permission_grant_names() {
   let spelled1435 = fn_name("app_ceb_bible_gloss_self_roots_count");
   let spelled1436 = fn_name("app_ceb_bible_gloss_chapter_roots_prompts");
   let spelled1437 = fn_name("function_command_seams_reached_paths");
+  let spelled1438 = fn_name("app_original_bible_gloss_words_unicode_repair");
+  let spelled1439 = fn_name("function_functionize_before");
+  let spelled1440 = fn_name("function_functionize_rest");
+  let spelled1441 = fn_name("app_original_bible_gloss_explains_text_passages");
+  let spelled1442 = fn_name("app_original_bible_gloss_explains_write_chapter");
+  let spelled1443 = fn_name("binisaya_affixes_vocabulary");
+  let spelled1444 = fn_name("binisaya_affixes_plain_coverage");
+  let spelled1445 = fn_name("list_join_comma_space_and");
+  let spelled1446 = fn_name("claude_bash_program_argument_shapes_ranked");
   let names = [
     spelled,
     spelled2,
@@ -2910,6 +2919,15 @@ export function permission_grant_names() {
     spelled1435,
     spelled1436,
     spelled1437,
+    spelled1438,
+    spelled1439,
+    spelled1440,
+    spelled1441,
+    spelled1442,
+    spelled1443,
+    spelled1444,
+    spelled1445,
+    spelled1446,
   ];
   return names;
 }
