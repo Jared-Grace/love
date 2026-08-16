@@ -14,14 +14,14 @@ export function app_code_lesson_expression_choose_order_intro(
   html_div_cycle_code(parent, [
     "Eventually we will teach you to solve this all at once",
   ]);
-  ("ends on a colon and stands off from what follows, because it is the last of the saying and what comes after it is the thing said - the rule, and then the line to press");
-  let step_by_step = html_div_cycle_code(parent, [
+  ("ends on a colon, because it is the last of the saying and what comes after it is the thing said - the rule, and then the line to press");
+  html_div_cycle_code(parent, [
     "But, for now, we will teach you to solve this step-by-step:",
   ]);
-  app_shared_spaced_below(step_by_step);
   ("and a line is drawn right across underneath it, because what follows is not more of the saying - it is the working itself starting, and the two want telling apart by something a learner can see rather than by a gap they have to notice");
   ("A gap alone says the next thing is a little further off. It reads as a paragraph break, which is what stands between the first of these lines and the second, so the same mark cannot also say that the reading has finished and the doing has begun.");
-  html_hr(parent);
+  ("The room the saying used to stand off by is the room the line stands in, shared out above it and below it rather than left above it - so the saying, the line and the rule are evenly apart and the line reads as belonging to neither side.");
+  app_shared_hr_spaced(parent);
   let rule = app_code_lesson_expression_choose_order_rule_parts(
     "In ",
     whole_line,
