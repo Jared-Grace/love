@@ -124,51 +124,48 @@ export function app_search_results_render(
     return count;
   }
   let div_books = html_div_centered(div_results);
-  let book_code_shown = null;
-  let div_book_body = null;
-  let book_chapter_expands = null;
+  ("the two places the page keeps as it walks down the results - which book card is open, and which section card that book belongs in - are each held on an object rather than under names of their own. Both are written in one function and read in another, and a plain name would hand each of those functions its own copy the moment they were ever pulled apart, so the reader would go on filling in the card that was open several books ago. Setting something on an object changes the one thing they are both looking at, so they stay agreed however the code around them is divided up.");
+  let book_current = {};
   let book_collapse_setters = [];
   let testament_collapse_setters = [];
   let book_chapter_single_expanders = [];
-  let testament_name_shown = null;
-  let division_name_shown = null;
-  let div_testament_body = null;
-  let div_division_body = null;
+  let division_current = {};
   function book_group_div(book_code) {
     "which section card this book's own card belongs in, nesting the results the same way choosing a book does: a testament card holding section cards holding the books. the results arrive sorted by section, so crossing into a new one is exactly when its card is opened - no card is opened twice and none is opened for a section nothing matched";
     let division = ebible_book_code_to_division(book_code);
     let testament_name = property_get(division, "testament");
     let division_name = property_get(division, "name");
-    let testament_same = equal(testament_name, testament_name_shown);
+    let testament_same = equal(testament_name, division_current.testament_name);
     if (not(testament_same)) {
-      testament_name_shown = testament_name;
-      division_name_shown = null;
+      division_current.testament_name = testament_name;
+      division_current.division_name = null;
       let collapsible = app_shared_container_blue_collapsible(
         div_books,
         testament_name,
       );
-      div_testament_body = property_get(collapsible, "body");
+      division_current.testament_body = property_get(collapsible, "body");
       let testament_collapsed_set = property_get(collapsible, "collapsed_set");
       list_add(testament_collapse_setters, testament_collapsed_set);
     }
-    let division_same = equal(division_name, division_name_shown);
+    let division_same = equal(division_name, division_current.division_name);
     if (not(division_same)) {
-      division_name_shown = division_name;
-      div_division_body = app_shared_container_blue_medium_titled(
-        div_testament_body,
+      division_current.division_name = division_name;
+      division_current.division_body = app_shared_container_blue_medium_titled(
+        division_current.testament_body,
         division_name,
       );
     }
-    return div_division_body;
+    let r3 = division_current.division_body;
+    return r3;
   }
   function book_card_add(book_code) {
-    let same = equal(book_code, book_code_shown);
+    let same = equal(book_code, book_current.book_code);
     if (same) {
       return;
     }
-    book_code_shown = book_code;
+    book_current.book_code = book_code;
     let chapter_expands = [];
-    book_chapter_expands = chapter_expands;
+    book_current.chapter_expands = chapter_expands;
     let div_group = book_group_div(book_code);
     let div_book = app_shared_container_blue(div_group);
     ("this is the third of four cards nested one inside the next, and the two outside it already trim to this one named amount; it used to write its own number a twentieth of a letter away from that, which no reader could have told apart and no line of the file explained");
@@ -192,7 +189,7 @@ export function app_search_results_render(
     app_shared_text_deemphasized(counted_div);
     html_cursor_pointer(header);
     let div_body = html_div_centered(div_book);
-    div_book_body = div_body;
+    book_current.body = div_body;
     let collapsed = false;
     function collapsed_set(value) {
       collapsed = value;
@@ -239,7 +236,7 @@ export function app_search_results_render(
     let book_code = ebible_chapter_code_to_book(chapter_code);
     book_card_add(book_code);
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
-    let div_chapter = html_div(div_book_body);
+    let div_chapter = html_div(book_current.body);
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
@@ -279,7 +276,7 @@ export function app_search_results_render(
       "everything this chapter matched, opened together";
       await app_search_results_buttons_expand(bs);
     }
-    list_add(book_chapter_expands, chapter_expand);
+    list_add(book_current.chapter_expands, chapter_expand);
     return bs;
   }
   let button_lists = list_map(results, each_result);
