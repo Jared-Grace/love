@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_buttons_row } from "./app_shared_bible_verse_buttons_row.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { app_shared_bible_verse_frame } from "./app_shared_bible_verse_frame.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
@@ -9,7 +10,6 @@ import { app_shared_bible_home_bar_buttons } from "./app_shared_bible_home_bar_b
 import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
-import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
@@ -19,7 +19,6 @@ import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
-import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { html_p } from "./html_p.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
@@ -92,12 +91,8 @@ export async function app_shared_bible_home_generic(
   let r3 = app_shared_bible_verse_frame(content, text_languages);
   let top = property_get(r3, "top");
   let p_verse = property_get(r3, "p_verse");
-  let bottom = html_p(p_verse);
-  html_centered(bottom);
-  ("the row under the verse is simply shown. It was reached through a name holding whether it was hidden and a function flipping that name, but the flipping was asked for exactly once and nothing else ever read the name, so the pair could only ever end one way - hidden set to true and immediately turned over. Whatever once turned it back has gone, and until it returns the machinery said nothing the one line does not.");
-  html_display_none_or_block(false, bottom);
-  app_shared_bible_biblehub_buttons(
-    bottom,
+  let bottom = app_shared_bible_verse_buttons_row(
+    p_verse,
     chapter_name,
     book_name,
     verse_number,
