@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
 import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
 import { app_code_lesson_expression_which_part_first } from "./app_code_lesson_expression_which_part_first.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
@@ -180,6 +181,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
+    app_code_lesson_expression_either_first,
     app_code_lesson_expression_arithmetic_equality,
     app_code_lesson_expression_swapping_add,
     app_code_lesson_expression_swapping_divide,
