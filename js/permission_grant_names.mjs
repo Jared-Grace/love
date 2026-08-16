@@ -1503,6 +1503,20 @@ export function permission_grant_names() {
   let spelled1466 = fn_name("js_block_statements_after_return_remove");
   let spelled1467 = fn_name("ebible_language_to_bible_folder");
   let spelled1468 = fn_name("js_page_serialized_import_uses_cases_gate_run");
+  let spelled1469 = fn_name("functions_statements_after_return_split");
+  let spelled1470 = fn_name("ebible_version_downloaded_books_count");
+  let spelled1471 = fn_name(
+    "app_original_bible_gloss_explains_write_files_spent_delete",
+  );
+  let spelled1472 = fn_name("ebible_languages_commercial");
+  let spelled1473 = fn_name("ebible_versions_language_code_disagreements");
+  let spelled1474 = fn_name("app_ceb_bible_gloss_generate_upload_namespace");
+  let spelled1475 = fn_name("functions_unreachable_statements_baseline_write");
+  let spelled1476 = fn_name("js_function_forwarding_cases_gate_run");
+  let spelled1477 = fn_name("js_function_parameter_call_sizes_cases_gate_run");
+  let spelled1478 = fn_name("js_function_forwarding_remove_cases_gate_run");
+  let spelled1479 = fn_name("app_ceb_bible_gloss_affix_kinds_wrong_chapters");
+  let spelled1480 = fn_name("app_ceb_bible_gloss_write_passages");
   let names = [
     spelled,
     spelled2,
@@ -2972,6 +2986,18 @@ export function permission_grant_names() {
     spelled1466,
     spelled1467,
     spelled1468,
+    spelled1469,
+    spelled1470,
+    spelled1471,
+    spelled1472,
+    spelled1473,
+    spelled1474,
+    spelled1475,
+    spelled1476,
+    spelled1477,
+    spelled1478,
+    spelled1479,
+    spelled1480,
   ];
   return names;
 }

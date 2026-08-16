@@ -7,10 +7,6 @@ export async function function_read_multiple(names_comma) {
   "Answered under the name rather than in a bare list, because a run of sources read straight through is the one shape where losing which is which costs the most - every one of them opens with its imports and they all look alike.";
   "A name nothing in the repo answers to is reported as nothing rather than thrown on, and that is the difference between a sweep and a loop. The single form refuses an unknown name, which is the useful answer when it is the only name asked about; over a list it would throw away every source already read because one name was misspelt.";
   let names = text_split_comma_dot_trim(names_comma);
-  async function read_one(f_name) {
-    let contents_one = await function_read(f_name);
-    return contents_one;
-  }
-  let found = await list_map_async_record_try(names, read_one);
+  let found = await list_map_async_record_try(names, function_read);
   return found;
 }
