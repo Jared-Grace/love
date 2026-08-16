@@ -14,7 +14,11 @@
     "MACHINE-DEPENDENT: the rm cases hard-code the scratchpad prefix, which",
     "the hook derives as /tmp/claude-<uid>/<repo-root-with-dashes>/. On a",
     "different uid or checkout path those three cases go red for an",
-    "environmental reason, not a real regression - update the paths."
+    "environmental reason, not a real regression - update the paths.",
+    "The memory-notes grep cases hard-code both spellings of the notes folder",
+    "for the same reason. Those come from js/memory_folder_spellings.mjs via",
+    "the generated .claude/hooks/memory_folder_spellings.py, so if the notes",
+    "move, regenerate with python_mirrors_write and update these four."
   ],
   "cases": [
     { "command": "ls", "decision": "allow", "reason_includes": "already in permissions.allow", "why": "trusted verb, bare - and the allow says which rule carried it" },
@@ -343,6 +347,10 @@
     { "command": "grep -rn supper ../other/", "decision": "allow", "why": "a relative path climbing out of the repo is the same case wearing a different spelling" },
     { "command": "grep -n supper js/ai_git.mjs", "decision": "allow", "why": "reading one named file is not a walk, and the named search would answer about every file instead" },
     { "command": "grep -rn --include=*.mjs supper js/", "decision": "allow", "why": "any option beyond the few that change only how matches are printed takes the command out of this floor, because the named search has no answer for it" },
+    { "command": "grep -rn compact /home/j/a/backup/love/claude_memory/memory", "decision": "deny", "reason_includes": "memory_lines_search", "why": "the memory notes are their own folder with their own named search, so the same shape aimed there gets its own redirect" },
+    { "command": "grep -rn compact /home/j/.claude/projects/-home-j-a-repos-love/memory", "decision": "deny", "reason_includes": "memory_lines_search", "why": "the notes can be spelled through the link as well as with the link followed, and a check knowing only one spelling would let the other past while looking as though it had checked" },
+    { "command": "grep -rni compact /home/j/a/backup/love/claude_memory/memory", "decision": "allow", "why": "the notes floor is drawn as narrowly as the repo one - a case-insensitive match is not what the named search does" },
+    { "command": "grep -rn compact /home/j/a/backup/love", "decision": "allow", "why": "the folder holding the notes is not the notes: only what sits at or under a spelled folder is claimed" },
 
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
