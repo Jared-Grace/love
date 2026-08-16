@@ -40,7 +40,7 @@ export function app_code_cup(parent, inside, name) {
   html_style_assign(bowl, {
     "box-sizing": "border-box",
     width: "3.5em",
-    height: "3.1em",
+    height: "3.6em",
     "margin-top": "-0.45em",
     "border-top": "none",
     "border-left": border,
@@ -49,7 +49,7 @@ export function app_code_cup(parent, inside, name) {
     "border-bottom-left-radius": "1.75em",
     "border-bottom-right-radius": "1.75em",
     "background-color": "transparent",
-    "padding-top": "0.55em",
+    "padding-top": "0.95em",
     display: "flex",
     "flex-direction": "column",
     "align-items": "center",
