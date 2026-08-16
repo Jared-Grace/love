@@ -352,6 +352,18 @@
     { "command": "grep -rni compact /home/j/a/backup/love/claude_memory/memory", "decision": "allow", "why": "the notes floor is drawn as narrowly as the repo one - a case-insensitive match is not what the named search does" },
     { "command": "grep -rn compact /home/j/a/backup/love", "decision": "allow", "why": "the folder holding the notes is not the notes: only what sits at or under a spelled folder is claimed" },
 
+    { "command": "cat js/file_read.mjs", "decision": "deny", "reason_includes": "function_read_multiple", "why": "reading a function's source by typing out where its file sits is three quarters of everything cat was handed, and the repo answers it by the function's own name" },
+    { "command": "cat js/file_read.mjs js/not.mjs", "decision": "deny", "reason_includes": "function_read_multiple", "why": "several sources at once is the same shape, and the named command was written for exactly it" },
+    { "command": "cat js/a.mjs; cat js/b.mjs", "decision": "deny", "reason_includes": "function_read_multiple", "why": "joined statements are one line reaching for the same thing twice" },
+    { "command": "cat js/a.mjs; echo ===; cat js/b.mjs", "decision": "deny", "reason_includes": "function_read_multiple", "why": "the echoed label between two sources is hand-rolling what the named command does by recording each source under its own name" },
+    { "command": "cat /home/j/a/repos/love/js/not.mjs", "decision": "deny", "reason_includes": "function_read_multiple", "why": "the absolute spelling of a file this repo holds is the same command written the long way" },
+    { "command": "cat js/x.mjs | head -20", "decision": "allow", "why": "a trimmed read is not what the named command answers - this floor turns an allow into a deny and may only do it where the redirect is true" },
+    { "command": "cat -n js/x.mjs", "decision": "allow", "why": "a flag asks for something the named command does not print" },
+    { "command": "cat js/a.mjs; echo -n x; cat js/b.mjs", "decision": "allow", "why": "an echo carrying a flag is doing something beyond labelling, so it is another program rather than part of the shape" },
+    { "command": "cat notes/transforms.md", "decision": "allow", "why": "a note is not a function, and no name reaches it" },
+    { "command": "cat data/examples/x.mjs", "decision": "allow", "why": "only js/ holds the functions the named command can find; anything else is left alone" },
+    { "command": "cat js/a.mjs; ls js", "decision": "allow", "why": "another program along the line takes the whole line out, because the redirect would drop what that program was there for" },
+
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
     { "command": "while true; do ls; done", "decision": "allow", "why": "while blocks are modelled like for/if" },
