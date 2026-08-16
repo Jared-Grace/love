@@ -494,6 +494,7 @@ export function qa_gates() {
     firebase_storage_list_url_cases_gate_run,
     bible_interlinear_base_dropped_gate_run,
     text_split_comma_nested_cases_gate_run,
+    text_split_outside_quotes_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
     app_original_bible_gloss_parsings_gate_run,
