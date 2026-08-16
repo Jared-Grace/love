@@ -1,66 +1,30 @@
-import { add } from "./add.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { list_chunk } from "./list_chunk.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-import { list_second } from "./list_second.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { range_map } from "./range_map.mjs";
-import { text_to } from "./text_to.mjs";
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 export function app_code_lesson_statement_name_value_batch() {
   arguments_assert(arguments, 0);
-  ("the four programs a screen of this lesson asks about: two that give one value a name and write it out, and two that give two values names and write out only the second");
-  ("The four answers are all different, because the wrong answers a question offers are the other questions' answers, and two questions coming out the same would put two right buttons on one screen.");
-  ("Each pair of numbers is used twice over - once asked on its own, once as the name that is NOT written out. So the value a learner lands on by reading the wrong line is always sitting there as a button, which is the only way this lesson can be got wrong on purpose rather than by luck.");
+  ("the four programs a screen of this lesson asks about: each gives one word a name and then writes that name out");
+  ("All four are the same two lines with a different word in them, because the one thing being asked is whether a name hands back what was put under it. A second shape on the same screen would be a second question.");
+  ("The four words are different from each other, because the wrong answers a question offers are the other questions' answers, and two questions coming out the same would put two right buttons on one screen.");
+  ("The words are the ones the string lessons draw from, so the only thing here a learner has not met is the name.");
   let names = app_code_lesson_statement_name_value_names();
-  let name_first = list_first(names);
-  let name_second = list_second(names);
-  function held_of(name, value) {
-    "the line that gives a value a name";
-    let right = text_to(value);
-    let code = js_code_let_statement(name, right);
-    return code;
-  }
-  function one_name(value) {
-    "a name given a value, and that same name written out";
-    let held = held_of(name_first, value);
-    let logged = js_code_console_log_statement(name_first);
+  let name = list_first(names);
+  function program_of(word) {
+    "the two lines that give one word a name and write that name out";
+    let quoted = app_code_string_code(word);
+    let held = js_code_let_statement(name, quoted);
+    let logged = js_code_console_log_statement(name);
     let lines = [held, logged];
     let code = list_join_newline(lines);
     return code;
   }
-  function two_names(other, value) {
-    "two names given values, and only the second of them written out";
-    let held_other = held_of(name_first, other);
-    let held = held_of(name_second, value);
-    let logged = js_code_console_log_statement(name_second);
-    let lines = [held_other, held, logged];
-    let code = list_join_newline(lines);
-    return code;
-  }
-  function number_of(index) {
-    "the numbers a value may be, one through the largest this course uses";
-    let number = add(index, 1);
-    return number;
-  }
-  function pair_to_codes(pair) {
-    "the two questions a pair of numbers makes";
-    let first = list_first(pair);
-    let second = list_second(pair);
-    let alone = one_name(first);
-    let beside = two_names(first, second);
-    let pair_codes = [alone, beside];
-    return pair_codes;
-  }
-  let max = app_code_lesson_operators_value_max();
-  let numbers = range_map(max, number_of);
-  let taken = list_shuffle_take(numbers, 4);
-  let pairs = list_chunk(taken, 2);
-  let codes = list_map_concat_multiple(pairs, pair_to_codes);
+  let words = fruits_of_the_spirit();
+  let codes = list_shuffle_take_map(words, 4, program_of);
   return codes;
 }

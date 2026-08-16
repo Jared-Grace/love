@@ -54,11 +54,7 @@ export function app_code_lesson_functions_console_log_string() {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["", f_name, " can be given a string too"]);
     html_div_code(c, code);
-    ("what is written out is not code and is not shown as code - it wears the very look the worked example below gives its own answer, so the sentence and the example are plainly saying the same thing");
-    ("a colon before the word, because what follows is the output itself rather than the rest of the sentence - the same shape the example uses when it labels its own output");
-    let d = html_div(c);
-    html_span_text(d, "This writes out: ");
-    app_code_style_normal_span(d, word);
+    app_code_writes_out_line(c, word);
     let quote = js_string_quote();
     html_div_cycle_code(c, ["The quote marks ", quote, " are not written out"]);
   }

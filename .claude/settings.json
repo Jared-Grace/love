@@ -1558,6 +1558,7 @@
       "Bash(node scripts/ai.mjs ebible_versions_commercial:*)",
       "Bash(node scripts/ai.mjs js_block_statements_after_return_remove:*)",
       "Bash(node scripts/ai.mjs ebible_language_to_bible_folder:*)",
+      "Bash(node scripts/ai.mjs js_page_serialized_import_uses_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3025,6 +3026,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_versions_commercial:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args js_block_statements_after_return_remove:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_language_to_bible_folder:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args js_page_serialized_import_uses_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4491,6 +4493,7 @@
       "Bash(node scripts/aig.mjs ebible_versions_commercial:*)",
       "Bash(node scripts/aig.mjs js_block_statements_after_return_remove:*)",
       "Bash(node scripts/aig.mjs ebible_language_to_bible_folder:*)",
+      "Bash(node scripts/aig.mjs js_page_serialized_import_uses_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5957,7 +5960,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args js_object_property_text_add_after:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_versions_commercial:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_block_statements_after_return_remove:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args ebible_language_to_bible_folder:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_language_to_bible_folder:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args js_page_serialized_import_uses_cases_gate_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },
