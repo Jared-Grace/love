@@ -4266,6 +4266,63 @@ def repo_plain_recursive_grep_deny_reason(word):
     )
 
 
+JS_SOURCE_PATH_PATTERN = re.compile(r"^js/([A-Za-z][A-Za-z0-9_]*)\.mjs$")
+
+
+def cat_js_source_function_names(command):
+    """The function names of a command line that is nothing but `cat` handed
+    this repo's own sources, or None when the line is anything else.
+
+    Measured over fourteen days: `cat` received 8238 words, and 6324 of them
+    were a js/*.mjs path. That is one shape, not a program - reading the source
+    of a function by typing out where its file sits - and the repo has answered
+    it by name since function_read_multiple was written.
+
+    Narrow on purpose. Every statement on the line has to be a bare `cat`, and
+    every word it receives has to name a source file in js/. A pipe into head
+    or grep, a flag, a redirection, a file anywhere else, or any other program
+    along the line takes the whole line out of the slice, because the named
+    command answers with whole sources recorded under their names and cannot
+    stand in for a trimmed or filtered read."""
+    names = []
+    for words in statements_words(command):
+        if not words or words[0] != "cat":
+            return None
+        if len(words) < 2:
+            return None
+        for word in words[1:]:
+            inside = word
+            if os.path.isabs(inside):
+                normalized = os.path.normpath(inside)
+                if not normalized.startswith(REPO_ROOT + os.sep):
+                    return None
+                inside = normalized[len(REPO_ROOT) + 1 :]
+            match = JS_SOURCE_PATH_PATTERN.match(inside)
+            if match is None:
+                return None
+            names.append(match.group(1))
+    if not names:
+        return None
+    return names
+
+
+def cat_js_source_deny_reason(names):
+    asked = ",".join(names)
+    return (
+        "Reading this repo's own sources by typing out where their files sit "
+        f"is refused: run `node scripts/ai.mjs function_read_multiple {asked}` "
+        "instead. It asks by the function's own name rather than by a path, so "
+        "an alias reaches it and a moved file still answers; it hands back one "
+        "source per name, recorded under the name it belongs to, which is the "
+        "one thing a run of sources read straight through otherwise loses; and "
+        "it reports a name nothing answers to as nothing rather than throwing "
+        "away every source already read. Only this one shape is refused - a "
+        "read of anything outside js/, a flag, a redirection, or a cat piped "
+        "into something that trims or searches it is untouched, because the "
+        "named command has no answer for those."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
@@ -4522,6 +4579,16 @@ def main():
     memory_word = find_memory_plain_recursive_grep(command)
     if memory_word is not None:
         return decide("deny", memory_plain_recursive_grep_deny_reason(memory_word))
+
+    # A line that is nothing but `cat` handed this repo's own sources - three
+    # quarters of everything cat received over the last fortnight. Like the two
+    # greps above and unlike the floors before them, cat IS allow-listed, so
+    # this converts an 'allow' into a 'deny'; the slice is drawn to the one
+    # shape function_read_multiple answers exactly, and the corpus pins the
+    # reads that must still go through.
+    cat_names = cat_js_source_function_names(command)
+    if cat_names is not None:
+        return decide("deny", cat_js_source_deny_reason(cat_names))
 
     # Same floor-instead-of-prompt reasoning again, applied to a loop that sits
     # and waits for a background task's output file to fill: the harness
