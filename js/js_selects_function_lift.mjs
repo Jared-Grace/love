@@ -1,8 +1,7 @@
+import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { js_function_declaration_params_add } from "./js_function_declaration_params_add.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
-import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_single } from "./list_single.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -20,13 +19,13 @@ export async function js_selects_function_lift(ast, selects, f_name_new) {
   ("This is the second half of paying down the size record, and the half a span cannot do. A span reaches the lines at the top of a body; most of a long function's size is folded inside a closure written beside the lines that use it, and to a span that closure is one statement, so extracting it only wraps it up again.");
   ("It refuses a name handed on as a value rather than called. A value carries nowhere to put the extra arguments, so the function would arrive at its new home missing exactly what it used to reach for - a file that parses, imports cleanly, and throws the first time it runs. What to do there is a real decision, and guessing it is worse than saying so.");
   ("It refuses just as firmly when the function writes to something it closed over. A parameter is a copy of what was passed, so the write would land on the copy and the line that was waiting to read it would go on reading the old value. Nothing about the file would look wrong.");
-  let declaration = list_single(selects);
   ("Everything this needs to know about the function it is moving is read once, next door, and the report that lists what could be lifted asks that same reading. Two copies would drift, and the drift would show as a report promising a lift that then refuses.");
-  let reading = await js_function_nested_lift_reading(ast, declaration);
+  let reading = await js_selects_function_lift_reading(ast, selects);
+  let stray_at = property_get(reading, "stray_at");
   let name_old = property_get(reading, "name_old");
   let calls = property_get(reading, "calls");
   let closed = property_get(reading, "closed");
-  let stray_at = property_get(reading, "stray_at");
+  let declaration = property_get(reading, "declaration");
   let id = property_get(declaration, "id");
   list_empty_is_assert_json(stray_at, {
     hint: "this function is handed on as a value somewhere rather than called, so there is no call to hand its closed-over names to. Nothing is lost - the span cut that takes a line where it is actually written reaches inside a closure like this one, so a run of lines within it can still come out. Would you like to cut a run out of it that way, or give the value's receiver those names another way first?",
