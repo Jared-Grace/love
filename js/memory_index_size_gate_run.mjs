@@ -28,7 +28,7 @@ export async function memory_index_size_gate_run() {
     size,
     " bytes and may be ",
     ceiling,
-    " - shorten the longest lines, whose hooks the notes they link to already carry: ",
+    " - shorten these, the entries carrying the most weight, whose hooks the notes they link to already carry: ",
     v,
   ]);
   throw new Error(message);
