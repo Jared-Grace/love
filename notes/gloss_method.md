@@ -129,7 +129,7 @@ Small choices, fixed once, so chapters authored months apart match:
 
 - [ ] One entry per word, in passage order, no word skipped — the count matches the interlinear record count.
 - [ ] Every `word` field is copied from `original`, not retyped.
-- [ ] No explain contradicts or exceeds its `parsing_long`.
+- [ ] No explain contradicts or exceeds its `parsing_long`. `app_original_bible_gloss_parsings_gate_run` (in `q`) settles the half of this a machine can: an explain naming a tense, mood or case that **no word of its passage** carries fails the build. Naming one that a *neighbouring* word carries is fine and expected — that is the comparison this rubric asks for — but it must still be a term you defined in this passage, because the passage is all the reader can see.
 - [ ] No "same as above", no empty explain, no markdown, no line breaks.
 - [ ] Every grammar term used is defined somewhere in this passage before or where it is used.
 - [ ] Every etymology is one you are certain of.
