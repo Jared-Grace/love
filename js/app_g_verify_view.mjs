@@ -1,13 +1,11 @@
+import { app_g_verify_view_line_lists } from "./app_g_verify_view_line_lists.mjs";
 import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_panel.mjs";
 import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
 import { app_g_verify_storage_app } from "./app_g_verify_storage_app.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
-import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
-import { app_g_verify_view_panel_flush } from "./app_g_verify_view_panel_flush.mjs";
-import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -16,14 +14,12 @@ import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
-import { html_style_flex } from "./html_style_flex.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -100,80 +96,19 @@ export async function app_g_verify_view(
     order_comps,
     tokens,
   );
-  app_g_verify_view_label_new("BY PASSAGE ORDER", container, small_gap);
-  let cov = app_g_verify_view_panel_flush(container);
-  function lambda10(l, li) {
-    return li;
-  }
-  let order = lines.map(lambda10);
-  function lambda11(a, b) {
-    let value2 = property_get(lines[a], "indices");
-    let ma = Math.min.apply(null, value2);
-    let value3 = property_get(lines[b], "indices");
-    let mb = Math.min.apply(null, value3);
-    let r2 = subtract(ma, mb) || subtract(a, b);
-    return r2;
-  }
-  order.sort(lambda11);
-  function lambda14(li, k) {
-    let l = lines[li];
-    let eq = equal(k, 0);
-    let row = app_g_verify_view_row_new(cov, eq, small_gap, border);
-    function lambda12(i) {
-      let r3 = tokens[i];
-      return r3;
-    }
-    let words = property_get(l, "indices").map(lambda12).join(" ");
-    let words_el = html_span_text(row, words);
-    html_font_set(words_el, serif);
-    html_style_flex(words_el, "0 0 42%");
-    app_shared_text_deemphasized(words_el);
-    let text = property_get(l, "text");
-    html_span_text(row, text);
-    function lambda13() {
-      app_g_verify_view_highlight_lines(
-        [li],
-        clear_all,
-        token_spans,
-        highlight,
-        lines,
-        row_comps,
-        order_comps,
-      );
-    }
-    html_on(row, "mouseenter", lambda13);
-    html_on(row, "mouseleave", clear_all);
-    row_comps[li] = row;
-  }
-  order.forEach(lambda14);
-  app_g_verify_view_label_new("IN SERMON ORDER", container, small_gap);
-  let ord = app_g_verify_view_panel_flush(container);
-  function lambda16(l, li) {
-    let eq2 = equal(li, 0);
-    let row = app_g_verify_view_row_new(ord, eq2, small_gap, border);
-    let text2 = String(li + 1);
-    let n = html_span_text(row, text2);
-    app_shared_text_deemphasized(n);
-    html_style_flex(n, "0 0 1.2em");
-    html_style_set(n, "font-variant-numeric", "tabular-nums");
-    let text3 = property_get(l, "text");
-    html_span_text(row, text3);
-    function lambda15() {
-      app_g_verify_view_highlight_lines(
-        [li],
-        clear_all,
-        token_spans,
-        highlight,
-        lines,
-        row_comps,
-        order_comps,
-      );
-    }
-    html_on(row, "mouseenter", lambda15);
-    html_on(row, "mouseleave", clear_all);
-    order_comps[li] = row;
-  }
-  lines.forEach(lambda16);
+  app_g_verify_view_line_lists(
+    container,
+    small_gap,
+    lines,
+    border,
+    tokens,
+    serif,
+    clear_all,
+    token_spans,
+    highlight,
+    row_comps,
+    order_comps,
+  );
   app_g_verify_view_links_bar(container, small_gap, chapter_code, verse);
   let approve_bar = html_div(container);
   html_style_margin_top(approve_bar, small_gap);

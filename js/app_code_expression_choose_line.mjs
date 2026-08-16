@@ -1,4 +1,3 @@
-import { app_code_expression_leaves_before } from "./app_code_expression_leaves_before.mjs";
 import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
 import { app_code_expression_chosen_set } from "./app_code_expression_chosen_set.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -30,8 +29,8 @@ export function app_code_expression_choose_line(
   ("Every operator is pressable on both, including the front page. A page that only offers the right one teaches nothing about the wrong one, and a learner who has never been allowed to pick the leftmost has never found out that the leftmost is not the rule.");
   let line = html_div(parent);
   html_style_code_dark(line);
-  draw(tree, null, null, null);
-  function draw(current, solved, value, value_index) {
+  draw(tree, null, null);
+  function draw(current, solved, value) {
     html_clear(line);
     let ready = app_code_expression_nodes_ready(current);
     ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");
@@ -53,8 +52,6 @@ export function app_code_expression_choose_line(
         chosen = true;
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
-        ("which number of the line the block is about to become is worked out HERE, while the line it is being read against is still the one holding the block - afterwards there is only the shorter line, where the value looks like every other number in it");
-        let node_index = app_code_expression_leaves_before(current, node);
         ("the green block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
         let watched = await on_chosen(node, node_value, node_span);
         ("whether the learner watched the swap arrive is asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows what it showed");
@@ -65,7 +62,7 @@ export function app_code_expression_choose_line(
           watched,
         );
         let stepped = app_code_expression_solved(current, node);
-        draw(stepped, node, node_value, node_index);
+        draw(stepped, node, node_value);
         let more = app_code_expression_node_is(stepped);
         if (more) {
           return;
@@ -80,7 +77,6 @@ export function app_code_expression_choose_line(
       ready,
       solved,
       value,
-      value_index,
     };
     on_change(step);
   }
