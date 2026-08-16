@@ -1,3 +1,5 @@
+import { js_function_answer_dropped_is } from "./js_function_answer_dropped_is.mjs";
+import { function_async_is } from "./function_async_is.mjs";
 import { js_function_forwarding_target } from "./js_function_forwarding_target.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";

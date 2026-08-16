@@ -182,7 +182,7 @@ export async function app_g_verify_home(context) {
       book_chapters[book].push(code);
     }
     chapter_codes.forEach(lambda3);
-    function lambda7(book) {
+    function book_row(book) {
       let row = html_div_centered(cbar);
       let text2 = g_verify_book_name(book);
       let book_label = html_p_text(row, text2);
@@ -215,7 +215,7 @@ export async function app_g_verify_home(context) {
       }
       book_chapters[book].forEach(lambda6);
     }
-    book_order.forEach(lambda7);
+    book_order.forEach(book_row);
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     let value2 = app_shared_font_serif();
     html_font_set(title, value2);
