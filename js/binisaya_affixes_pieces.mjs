@@ -6,10 +6,6 @@ export function binisaya_affixes_pieces(affixes) {
   "They come apart at the tilde because that is what the site puts between them, and the empty piece a trailing tilde leaves behind is dropped - it is punctuation running out, not a piece with nothing in it.";
   "Three readers were splitting this same string the same two ways before answering three different questions about it, so the splitting is here and the questions are elsewhere.";
   let split = text_split(affixes, "~");
-  function readable_is(piece) {
-    let kept = text_empty_not_is(piece);
-    return kept;
-  }
-  let r = list_filter(split, readable_is);
+  let r = list_filter(split, text_empty_not_is);
   return r;
 }
