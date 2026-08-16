@@ -4,31 +4,29 @@ import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_cross_precedence_intro(params) {
-  "the shared intro for a cross-precedence pair lesson (mixing a WEAK operator with a STRONG one that binds tighter): the rule 'we always do STRONG before WEAK, even if STRONG appears later', then the SAME strong sub-expression worked twice - once with the strong part appearing LATER, once appearing FIRST - both doing the strong part first; every result is COMPUTED from the operators' own fns, so nothing is hand-typed and no arrangement can silently disagree";
+  "the shared intro for a cross-precedence pair lesson (mixing a WEAK operator with a STRONG one that binds tighter): the rule 'we always do STRONG before WEAK, even if STRONG appears later', then TWO worked examples - one with the strong part appearing LATER, one appearing FIRST - both doing the strong part first; every result is COMPUTED from the operators' own fns, so nothing is hand-typed and no arrangement can silently disagree";
+  "The two examples are built from DIFFERENT numbers, and each one brings its own. They used to share a single strong sub-expression, on the reasoning that holding it still leaves the position as the only difference and so proves the position is what does not matter.";
+  "That reasoning cost more than it bought. Sharing the sub-expression made the second example the first one with its two sides swapped - the same three numbers, in the same lesson, one line apart - so a learner had a near-copy to compare rather than a second case to read. Worse, where the two outer numbers also matched, both examples came out at the SAME value, and a value arrived at twice reads as the thing being shown; the lesson would have been teaching that the order does not change the answer, which is a different fact about a different pair of operators.";
   let root = property_get(params, "root");
   let weak = property_get(params, "weak");
   let strong = property_get(params, "strong");
-  let inner_left = property_get(params, "inner_left");
-  let inner_right = property_get(params, "inner_right");
+  let later_inner_left = property_get(params, "later_inner_left");
+  let later_inner_right = property_get(params, "later_inner_right");
   let later_outer = property_get(params, "later_outer");
+  let first_inner_left = property_get(params, "first_inner_left");
+  let first_inner_right = property_get(params, "first_inner_right");
   let first_outer = property_get(params, "first_outer");
   let weak_symbol = property_get(weak, "operator");
   let strong_symbol = property_get(strong, "operator");
   let weak_fn = property_get(weak, "fn");
   let strong_fn = property_get(strong, "fn");
-  let inner = strong_fn(inner_left, inner_right);
   function binary(left, op, right) {
     "the code x op y, e.g. 3 * 4 or 10 - 6";
-    let code = text_combine_multiple([
-      text_to(left),
-      " ",
-      op,
-      " ",
-      text_to(right),
-    ]);
+    let t = text_to(left);
+    let t2 = text_to(right);
+    let code = text_combine_multiple([t, " ", op, " ", t2]);
     return code;
   }
-  let sub = binary(inner_left, strong_symbol, inner_right);
   let header = app_code_container_light_blue(root);
   html_div_cycle_code(header, [
     "We always do ",
@@ -39,46 +37,47 @@ export function app_code_lesson_cross_precedence_intro(params) {
     strong_symbol,
     " appears later",
   ]);
-  function worked_example(expression, combined, final) {
-    "one example: the whole expression, doing the strong sub-expression first (which is the shared inner), then combining with the weak operator to the final value";
+  function example_say(expression, sub, inner, combined, final) {
+    "one example said in two lines: the whole expression and the strong sub-expression taken out of it with its value, then what is left of the line and what that comes to";
     let box = app_code_container_light_blue(root);
+    let t3 = text_to(inner);
     html_div_cycle_code(box, [
       "For ",
       expression,
       ", we do ",
       sub,
       " first, which is ",
-      text_to(inner),
+      t3,
     ]);
-    html_div_cycle_code(box, [
-      "Now we have ",
-      combined,
-      ", which is ",
-      text_to(final),
-    ]);
+    let t4 = text_to(final);
+    html_div_cycle_code(box, ["Now we have ", combined, ", which is ", t4]);
   }
+  ("the strong part LATER: the line opens with the weak operator, and the rule is what sends the learner past it to the end of the line");
+  let later_sub = binary(later_inner_left, strong_symbol, later_inner_right);
+  let later_inner = strong_fn(later_inner_left, later_inner_right);
+  let t5 = text_to(later_outer);
   let later_expression = text_combine_multiple([
-    text_to(later_outer),
+    t5,
     " ",
     weak_symbol,
     " ",
-    sub,
+    later_sub,
   ]);
-  worked_example(
-    later_expression,
-    binary(later_outer, weak_symbol, inner),
-    weak_fn(later_outer, inner),
-  );
+  let v = binary(later_outer, weak_symbol, later_inner);
+  let v2 = weak_fn(later_outer, later_inner);
+  example_say(later_expression, later_sub, later_inner, v, v2);
+  ("and the strong part FIRST, where doing it first is also what reading left to right would have done - so the two together say the rule holds whichever end of the line it is at, rather than only where it is surprising");
+  let first_sub = binary(first_inner_left, strong_symbol, first_inner_right);
+  let first_inner = strong_fn(first_inner_left, first_inner_right);
+  let t6 = text_to(first_outer);
   let first_expression = text_combine_multiple([
-    sub,
+    first_sub,
     " ",
     weak_symbol,
     " ",
-    text_to(first_outer),
+    t6,
   ]);
-  worked_example(
-    first_expression,
-    binary(inner, weak_symbol, first_outer),
-    weak_fn(inner, first_outer),
-  );
+  let v3 = binary(first_inner, weak_symbol, first_outer);
+  let v4 = weak_fn(first_inner, first_outer);
+  example_say(first_expression, first_sub, first_inner, v3, v4);
 }
