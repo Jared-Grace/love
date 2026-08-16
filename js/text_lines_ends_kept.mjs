@@ -1,5 +1,4 @@
-import { floor } from "./floor.mjs";
-import { divide } from "./divide.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
