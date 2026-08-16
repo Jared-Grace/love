@@ -23,5 +23,7 @@ export function app_code_lesson_expression_choose_order_wrong_say(
     "Remember: In ",
     line_code,
   );
-  html_div_cycle_code(note, parts);
+  ("stands off from what follows by the same gap that stands above it, because a refusal is said between the sentence that hands the learner to the line and the line itself - so it now sits where that sentence was and owes the line underneath the same room the sentence gave it");
+  let rule_line = html_div_cycle_code(note, parts);
+  app_shared_spaced_below(rule_line);
 }
