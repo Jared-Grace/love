@@ -1,4 +1,5 @@
 import { qa_commit_named } from "./qa_commit_named.mjs";
+import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
 import { git_commit_behind_count } from "./git_commit_behind_count.mjs";
 import { properties_get } from "./properties_get.mjs";
@@ -34,20 +35,14 @@ export async function qa_commit_named_report() {
       failed,
     });
   }
-  function shippable_is(one) {
+  ("Nearest to the folder first, and only the commits the folder still holds, both of which the reading one name along does. The green ones are picked out afterwards, because sorting first leaves the front of whatever is kept meaning freshest either way - and the other reader of this record wants the same run of work without the picking out.");
+  let nearest = qa_commit_looked_nearest_first(looked);
+  function green_is(one) {
     let entry_green = property_get_or_null(one, "green");
-    let counted = property_get_or_null(one, "behind");
-    let placed = number_is(counted);
-    let both = and(entry_green, placed);
-    return both;
+    let b = true_is(entry_green);
+    return b;
   }
-  let sound = list_filter(looked, shippable_is);
-  ("Nearest to the folder first, so the freshest sound commit is the one at the front. Which order the record itself was written in says nothing about which of its commits is newest");
-  function behind_of(one) {
-    let counted = property_get_or_null(one, "behind");
-    return counted;
-  }
-  list_sort_number_mapper(sound, behind_of);
+  let sound = list_filter(nearest, green_is);
   let freshest = list_get_or_null(sound, 0);
   let report = {
     head,
