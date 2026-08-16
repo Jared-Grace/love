@@ -1,3 +1,4 @@
+import { app_g_verify_view_suggest_box_new } from "./app_g_verify_view_suggest_box_new.mjs";
 import { app_g_verify_view_approve_bar } from "./app_g_verify_view_approve_bar.mjs";
 import { app_g_verify_view_line_lists } from "./app_g_verify_view_line_lists.mjs";
 import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_panel.mjs";
@@ -7,31 +8,25 @@ import { storage_session_get } from "./storage_session_get.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
 import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
-import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
-import { html_style_line_height } from "./html_style_line_height.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { html_width_full } from "./html_width_full.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { html_textarea } from "./html_textarea.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { html_font_set } from "./html_font_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words } from "./text_words.mjs";
@@ -118,30 +113,15 @@ export async function app_g_verify_view(
     verse,
     on_approved,
   );
-  app_g_verify_view_label_new("SUGGEST AN EDIT", container, small_gap);
-  let suggest_area = html_textarea(container);
-  function lambda17(l) {
-    let value = property_get(l, "text");
-    return value;
-  }
-  let value4 = lines.map(lambda17).join("\n");
-  html_value_set(suggest_area, value4);
-  html_width_full(suggest_area);
-  html_style_set(suggest_area, "min-height", "6em");
-  html_style_set(suggest_area, "box-sizing", "border-box");
-  ("prefer the browser's NATIVE content-sizing (field-sizing) — it grows the box to fit with zero JS and, crucially, zero FORCED REFLOW per keystroke; the JS height fallback below reads scrollHeight on every input, thrashing layout, which lags typing. Fall back to the JS path only where field-sizing is unsupported");
-  let native_sizing = window.CSS.supports("field-sizing", "content");
-  if (native_sizing) {
-    html_style_set(suggest_area, "field-sizing", "content");
-  } else {
-    html_style_set(suggest_area, "overflow-y", "hidden");
-  }
-  html_font_set(suggest_area, serif);
-  let value8 = app_g_verify_suggestion_font_size();
-  html_style_font_size(suggest_area, value8);
-  html_style_line_height(suggest_area, "1.5");
-  html_style_margin_top(suggest_area, small_gap);
-  ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
+  let r2 = app_g_verify_view_suggest_box_new(
+    container,
+    small_gap,
+    lines,
+    serif,
+  );
+  let native_sizing = property_get(r2, "native_sizing");
+  let value = property_get(r2, "value4");
+  let suggest_area = property_get(r2, "suggest_area");
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
   let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
   ("the store is reached through the repo's own storing functions rather than spoken to directly, so every word this app leaves in a reader's browser is visible to a reading of the code. dropping a draft is storing null under it - the getter answers null for a word that was never written and for one written as null alike, so the two are the same thing to every reader here.");
@@ -149,7 +129,7 @@ export async function app_g_verify_view(
   let saved_draft = storage_session_get(app_fn, draft_key);
   let app_fn2 = app_g_verify_storage_app();
   let saved_base = storage_session_get(app_fn2, base_key);
-  let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value4);
+  let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value);
   if (draft_fresh) {
     html_value_set(suggest_area, saved_draft);
   } else {
@@ -169,7 +149,7 @@ export async function app_g_verify_view(
     html_style_set(suggest_area, "height", h + "px");
   }
   function on_suggest_input() {
-    app_g_verify_view_draft_save(suggest_area, draft_key, base_key, value4);
+    app_g_verify_view_draft_save(suggest_area, draft_key, base_key, value);
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
@@ -181,7 +161,7 @@ export async function app_g_verify_view(
   html_style_margin_top(reset_bar, small_gap);
   html_centered(reset_bar);
   function reset_to_current() {
-    html_value_set(suggest_area, value4);
+    html_value_set(suggest_area, value);
     app_g_verify_view_draft_drop(draft_key, base_key);
     autosize();
   }
@@ -246,7 +226,7 @@ export async function app_g_verify_view(
         let applied = await app_g_verify_view_suggestion_applied_is(
           chapter_code,
           verse,
-          value4,
+          value,
         );
         if (applied) {
           text =
@@ -276,7 +256,7 @@ export async function app_g_verify_view(
     suggest_area,
     draft_key,
     base_key,
-    value4,
+    value,
     autosize,
   );
 }
