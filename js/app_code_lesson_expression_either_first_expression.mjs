@@ -1,3 +1,5 @@
+import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { equal } from "./equal.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -11,12 +13,20 @@ export function app_code_lesson_expression_either_first_expression() {
   ("Numbers up to five rather than up to nine, because two products are added here instead of one. Nine times eight plus seven times six lands past a hundred, and that puts arithmetic in front of the learner where the only thing being asked about is the order.");
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
-  let left_number = integer_random(2, 5);
-  let left_other = integer_random(2, 5);
-  let right_number = integer_random(2, 5);
-  let right_other = integer_random(2, 5);
-  let left = app_code_expression_node(left_number, times, left_other);
-  let right = app_code_expression_node(right_number, times, right_other);
+  function side_new() {
+    "one of the two multiplications";
+    let number = integer_random(2, 5);
+    let other = integer_random(2, 5);
+    let side = app_code_expression_node(number, times, other);
+    return side;
+  }
+  let left = side_new();
+  let left_code = app_code_expression_code(left);
+  let right = side_new();
+  ("the two multiplications are never written the same, because the lesson names each of them by the little line it is - Take 4 * 2 first - and two rows saying that of the same three symbols name nothing at all");
+  while (equal(left_code, app_code_expression_code(right))) {
+    right = side_new();
+  }
   let tree = app_code_expression_node(left, plus, right);
   return tree;
 }
