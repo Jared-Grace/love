@@ -38,17 +38,17 @@ export async function app_code_settings(context) {
   let combined2 = text_combine(check, " Yes, mark lessons complete");
   progress_button(
     combined,
-    "Are you sure you want to mark every lesson as complete? You can still open any lesson you like afterwards.",
+    "Are you sure you want to mark every lesson as complete? You can still open any completed lesson you like.",
     combined2,
     app_code_progress_all_complete_mark,
     app_shared_button_confirm,
   );
   let cross = emoji_x_red();
-  let combined3 = text_combine(cross, " Clear all progress");
-  let combined4 = text_combine(cross, " Yes, clear my progress");
+  let combined3 = text_combine(cross, " Mark all lessons incomplete");
+  let combined4 = text_combine(cross, " Yes, mark lessons incomplete");
   progress_button(
     combined3,
-    "Are you sure you want to forget everything you have answered? The lesson list goes back to how it looked on your first day, and every lesson is yours to do again. Nothing else on this device is touched.",
+    "Are you sure you want to mark all lessons as incomplete? The lesson list goes back to how it looked on your first day, and every lesson is yours to complete again. This only affects whether or not you've completed the lessons.",
     combined4,
     app_code_progress_all_clear,
     app_shared_button_confirm_red,
