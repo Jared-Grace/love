@@ -1,3 +1,4 @@
+import { app_shared_bible_home_verse_text_entry } from "./app_shared_bible_home_verse_text_entry.mjs";
 import { app_shared_bible_language_chapter_fetch } from "./app_shared_bible_language_chapter_fetch.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
@@ -56,11 +57,9 @@ import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_asy
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_shared_bible_home_generic(
@@ -90,9 +89,9 @@ export async function app_shared_bible_home_generic(
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
   ("The passage is remembered for this tab here, so that going off to choose another one can be changed one's mind about. It is said by the screen that shows the passage rather than by the button that leaves it, because there is more than one way out of here and only one way in - and said here rather than in each app, because every app that draws a verse this way draws it through this.");
   app_shared_bible_passage_kept_set(context, chapter_code, [verse_number_hash]);
-  let v2 = ebible_chapter_code_parse(chapter_code);
-  let chapter_name = property_get(v2, "chapter_name");
-  let book_code = property_get(v2, "book_code");
+  let v = ebible_chapter_code_parse(chapter_code);
+  let chapter_name = property_get(v, "chapter_name");
+  let book_code = property_get(v, "book_code");
   async function lambda_books_en() {
     let r = await ebible_version_books_browser(e);
     return r;
@@ -150,24 +149,8 @@ export async function app_shared_bible_home_generic(
   );
   let languages_available = list_filter_null_not_is(fetched);
   function lambda_text_map(item) {
-    let verses_l = property_get(item, "verses");
-    let property_name4 = verse_number_key();
-    let verse_current_l = list_find_property_or_null(
-      verses_l,
-      property_name4,
-      verse_number_hash,
-    );
-    let nn = null_not_is(verse_current_l);
-    if (nn) {
-      let language = property_get(item, "language");
-      let text_l = property_get(verse_current_l, "text");
-      let v = {
-        language,
-        text: text_l,
-      };
-      return v;
-    }
-    return null;
+    let r3 = app_shared_bible_home_verse_text_entry(item, verse_number_hash);
+    return r3;
   }
   let text_languages = list_map_filter_null_not_is(
     languages_available,
