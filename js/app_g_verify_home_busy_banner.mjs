@@ -19,6 +19,7 @@ export function app_g_verify_home_busy_banner(
   status_verse,
   wrap,
 ) {
+  "The strip across the top of the verify screen saying Claude is at work on a verse right now, painted only while that is true and leaving nothing behind when it is not. Whatever short word the writing step is reporting about itself is set beside the verse number.";
   arguments_assert(arguments, 4);
   if (busy) {
     let note = property_get(status_shown, "note");
