@@ -1,3 +1,4 @@
+import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { js_statements_span_outputs_closure_assert } from "./js_statements_span_outputs_closure_assert.mjs";
 import { js_statements_outer_assign_assert } from "./js_statements_outer_assign_assert.mjs";
 import { js_global_names } from "./js_global_names.mjs";
