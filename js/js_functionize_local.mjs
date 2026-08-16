@@ -1,4 +1,4 @@
-import { js_statements_span_outputs_written_assert } from "./js_statements_span_outputs_written_assert.mjs";
+import { js_statements_span_outputs_closure_assert } from "./js_statements_span_outputs_closure_assert.mjs";
 import { js_statements_outer_assign_assert } from "./js_statements_outer_assign_assert.mjs";
 import { js_global_names } from "./js_global_names.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
@@ -43,7 +43,7 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   let index_after = index_max + 1;
   let tail = list_skip(stack_, index_after);
   ("A run of lines that hands back a name somebody goes on writing to is refused here, as late as this because it is the first place the lines behind the run are known. The other two refusals only had to look at the run itself.");
-  js_statements_span_outputs_written_assert(span, tail, f_name_new);
+  js_statements_span_outputs_closure_assert(span, tail, f_name_new);
   let outputs = js_statements_span_outputs(span, tail);
   let outputs_any = list_empty_not_is(outputs);
   let async_is = js_statements_await_any_is(span);
