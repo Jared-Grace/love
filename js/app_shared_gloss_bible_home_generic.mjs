@@ -1,3 +1,4 @@
+import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
 import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
 import { app_shared_gloss_bible_home_generic_scroll } from "./app_shared_gloss_bible_home_generic_scroll.mjs";
 import { property_list_first } from "./property_list_first.mjs";
@@ -7,20 +8,15 @@ import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
-import { html_span_nbsp } from "./html_span_nbsp.mjs";
-import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { each } from "./each.mjs";
-import { html_font_color_set_green } from "./html_font_color_set_green.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
-import { html_span_space } from "./html_span_space.mjs";
 export async function app_shared_gloss_bible_home_generic(
   context,
   download,
@@ -56,12 +52,8 @@ export async function app_shared_gloss_bible_home_generic(
   if (false) {
     let div3 = html_div(p);
     function lambda2(e) {
-      let span = html_span_text_nbsp_replace_property_from(div3, e, generated);
-      html_font_color_set_green(span);
-      html_span_nbsp(div3);
-      let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
-      html_font_color_set_white(span2);
-      html_span_space(div3);
+      let r2 = app_shared_gloss_bible_generated_gloss_span(e, div3, generated);
+      return r2;
     }
     each(explains, lambda2);
   }
