@@ -16,7 +16,8 @@ export function app_code_lesson_expression_plus_divide() {
   let left_transform = property_get(divided, "left_transform");
   function outer_of(index) {
     "the possible outer answers 2 through 5 (distinct across the four questions, so they never repeat)";
-    return add(index, 2);
+    let sum = add(index, 2);
+    return sum;
   }
   function triple_of(outer) {
     "work backwards with the division operator's inverse: b divides evenly by c (b = inner * c), and a divides evenly by b (a = outer * b)";
@@ -24,11 +25,13 @@ export function app_code_lesson_expression_plus_divide() {
     let inner = integer_random(2, 3);
     let b = left_transform(inner, c);
     let a = left_transform(outer, b);
-    return [a, b, c];
+    let r = [a, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT outer answers, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(4, outer_of), 4, triple_of);
+    let list = range_map(4, outer_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -36,10 +39,12 @@ export function app_code_lesson_expression_plus_divide() {
       root,
       weak: plus,
       strong: divided,
-      inner_left: 6,
-      inner_right: 3,
+      later_inner_left: 6,
+      later_inner_right: 3,
       later_outer: 2,
-      first_outer: 2,
+      first_inner_left: 8,
+      first_inner_right: 2,
+      first_outer: 5,
     });
   }
   let lesson = app_code_lesson_expression_pair_generic({

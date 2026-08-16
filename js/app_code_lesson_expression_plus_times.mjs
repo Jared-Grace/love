@@ -8,23 +8,26 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_plus_times() {
-  "mixing + and * in one expression: a + b * c and a * b + c; unlike + and -, these are NOT the same strength - * is stronger, so we always do it first, even when it comes later in the line; the intro shows the SAME multiplication in both positions to prove position does not change what we do first; only + and * here, so every value is a whole number";
+  "mixing + and * in one expression: a + b * c and a * b + c; unlike + and -, these are NOT the same strength - * is stronger, so we always do it first, even when it comes later in the line; the intro works a multiplication in each position, on its own numbers; only + and * here, so every value is a whole number";
   let plus = js_operator_plus();
   let times = js_operator_asterisk();
   let plus_symbol = property_get(plus, "operator");
   let times_symbol = property_get(times, "operator");
   function first_of(index) {
     "the possible first numbers 2 through 5 (distinct across the four questions, so they never repeat)";
-    return add(index, 2);
+    let sum = add(index, 2);
+    return sum;
   }
   function triple_of(first) {
     let b = integer_random(2, 3);
     let c = integer_random(2, 3);
-    return [first, b, c];
+    let r = [first, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT first numbers, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(4, first_of), 4, triple_of);
+    let list = range_map(4, first_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -32,10 +35,12 @@ export function app_code_lesson_expression_plus_times() {
       root,
       weak: plus,
       strong: times,
-      inner_left: 3,
-      inner_right: 4,
+      later_inner_left: 3,
+      later_inner_right: 4,
       later_outer: 2,
-      first_outer: 2,
+      first_inner_left: 5,
+      first_inner_right: 3,
+      first_outer: 6,
     });
   }
   let lesson = app_code_lesson_expression_pair_generic({

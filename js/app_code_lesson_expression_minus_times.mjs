@@ -17,7 +17,8 @@ export function app_code_lesson_expression_minus_times() {
   let times_symbol = property_get(times, "operator");
   function result_of(index) {
     "the possible results 2 through 5 (distinct across the four questions, so they never repeat)";
-    return add(index, 2);
+    let sum = add(index, 2);
+    return sum;
   }
   function triple_of(result) {
     "work backwards with the minus operator's inverse: a = result + b * c, so a - b * c is exactly result and never goes below 0";
@@ -25,11 +26,13 @@ export function app_code_lesson_expression_minus_times() {
     let c = integer_random(2, 3);
     let product = multiply(b, c);
     let a = left_transform(result, product);
-    return [a, b, c];
+    let r = [a, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT results, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(4, result_of), 4, triple_of);
+    let list = range_map(4, result_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -37,10 +40,12 @@ export function app_code_lesson_expression_minus_times() {
       root,
       weak: minus,
       strong: times,
-      inner_left: 2,
-      inner_right: 3,
+      later_inner_left: 2,
+      later_inner_right: 3,
       later_outer: 10,
-      first_outer: 4,
+      first_inner_left: 5,
+      first_inner_right: 3,
+      first_outer: 2,
     });
   }
   let lesson = app_code_lesson_expression_pair_generic({
