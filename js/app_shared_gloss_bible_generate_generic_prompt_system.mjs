@@ -5,6 +5,7 @@ export function app_shared_gloss_bible_generate_generic_prompt_system(
   language,
   word,
   last,
+  language_reader,
 ) {
   "The instructions handed to an assistant ahead of a Bible passage, asking it for an English gloss of every word in the passage's own language and a plain explanation of that word's meaning and grammar, answered as one JSON object.";
   let r2 = app_shared_gloss_bible_generate_generic_prompt_rules();
