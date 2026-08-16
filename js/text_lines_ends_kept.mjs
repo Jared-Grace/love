@@ -19,8 +19,7 @@ export function text_lines_ends_kept(text, count) {
   if (too_few || short) {
     return text;
   }
-  let p = divide(count, 2);
-  let each_end = floor(p);
+  let each_end = divide_floor(count, 2);
   let first = lines.slice(0, each_end);
   let difference = subtract(lines.length, each_end);
   let last = lines.slice(difference);
