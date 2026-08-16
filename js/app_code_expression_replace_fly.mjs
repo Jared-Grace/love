@@ -22,11 +22,11 @@ export async function app_code_expression_replace_fly(
   let rect_from = html_bounding_client_rect(node_span);
   ("lifted in front of the page before it sets off, because it crosses the line it came from and the words above it, and a block travelling behind them is a block nobody watches arrive");
   html_raised_flying(node_span);
-  await html_move_animate(node_span, green_solved, duration);
+  await html_move_animate(node_span, piece_solved, duration);
   ("hidden rather than removed, and only then untranslated and set back down: it keeps its room so the line under it does not close up, and neither undoing is seen because there is nothing left to see");
   html_visibility_hidden(node_span);
   html_translation_transition_clear(node_span);
   html_raised_clear(node_span);
-  ("both beats stay green the whole way. The green is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
-  await html_copy_fly_rect(green_value, rect_from, duration);
+  ("both beats stay blue the whole way. The blue is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
+  await html_copy_fly_rect(piece_value, rect_from, duration);
 }
