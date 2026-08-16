@@ -28,20 +28,20 @@ export function app_code_lesson_statement_name_value_above(root) {
   app_code_cup(box_cup, nothing, nothing);
   html_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
   app_code_cup(box_cup, nothing, name);
-  html_div_cycle_code(box_cup, ["Then suppose you put a grape in the cup"]);
+  html_div_cycle_code(box_cup, ["Then suppose you put some grapes in the cup"]);
   app_code_cup(box_cup, grape, name);
   html_div_cycle_code(box_cup, [
     "Now if someone asked you what is inside the cup called ",
     name,
   ]);
-  html_div_cycle_code(box_cup, ["You could answer grape"]);
+  html_div_cycle_code(box_cup, ["You could answer grapes"]);
+  ("the word is bolded here and nowhere else, because this is the one place it is being given a meaning rather than used");
   let box_word = app_code_container_light_blue(root);
-  html_div_cycle_code(box_word, [
-    "In computers, cups like this are called variables",
+  html_div_cycle_bold(box_word, [
+    "In computers, cups like this are called ",
+    "variables",
   ]);
-  html_div_cycle_code(box_word, [
-    "A variable has a name, and holds one value",
-  ]);
+  html_div_cycle_code(box_word, ["A variable has a name, and holds one value"]);
   ("the code box says the same three things the story said, in the same order: the cup is made and filled, then it is asked what is inside it, then the answer comes out");
   let quoted = app_code_string_code(word);
   let held = js_code_let_statement(name, quoted);
