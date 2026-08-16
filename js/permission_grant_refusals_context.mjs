@@ -1,3 +1,5 @@
+import { functions_delete_seams } from "./functions_delete_seams.mjs";
+import { function_seams_reached_paths_memo } from "./function_seams_reached_paths_memo.mjs";
 import { permission_grant_refusals_parameters } from "./permission_grant_refusals_parameters.mjs";
 import { function_command_seams_reached_paths_memo } from "./function_command_seams_reached_paths_memo.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
@@ -99,6 +101,25 @@ export async function permission_grant_refusals_context(unaliased, context) {
       unaliased +
         " reaches a function that writes Claude's own permission rules, so approving it approves whatever it goes on to approve: " +
         list_join_comma(rules_written),
+    );
+  }
+  ("Reaching a function that erases what its argument names is the refusal about damage that cannot be handed back, and it is here because every other reading here is about names. The folder copier was asked whether it may be granted and came back with no refusal at all, while removing its target folder and everything under it before copying - pointed at this repo it would erase the repo. Its parameters are called source and target, which carry no word that reads as a path, and it reaches no shell and writes no rule, so all three existing readings were true and all three were silent.");
+  ("The same argument condition as the two above, and for the same reason. A rule covers every argument the function is ever handed, so what is dangerous is that the caller chooses what gets deleted; a function declaring no arguments deletes whatever its committed source says and nothing a rule could change. That keeps the gates and the reports, which take nothing, out of this.");
+  let delete_seams = functions_delete_seams();
+  let delete_paths = await function_seams_reached_paths_memo(
+    unaliased,
+    delete_seams,
+    remembered,
+  );
+  let deleters = object_property_names(delete_paths);
+  let erases = greater_than(deleters.length, 0);
+  let destructive = and(erases, takes_arguments);
+  if (destructive) {
+    list_add(
+      refusals,
+      unaliased +
+        " declares arguments and reaches a function that erases what its argument names, so nothing here can rule out an argument choosing what gets deleted: " +
+        permission_grant_seam_chains_text(delete_paths),
     );
   }
   permission_grant_refusals_parameters(ast, params, refusals, unaliased);
