@@ -39,7 +39,13 @@ export function app_code_lesson_code_generic(params) {
   let backwards_question_label = text_first_upper_to(s2);
   let example_question_label = app_code_label_code_question();
   let example_count = property_get(params, "example_count");
-  let on_question = html_text_set_code_dark;
+  ("a lesson whose code stands on more than one line may say how its code is painted, so the line breaks survive the drawing; absent, code is painted as the single-line chip every other lesson has always used");
+  ("It is handed to every place this lesson draws code - the worked example, the question of the forwards quiz, and the buttons of the backwards quiz, which hold code too - because a lesson whose code needs more than one line needs all of them, and a lesson painted two ways would show the same program in two shapes on one screen.");
+  let on_question = property_get_or(
+    params,
+    "on_question",
+    html_text_set_code_dark,
+  );
   let decoys = property_get_or(params, "decoys", null);
   ("a lesson may override the forwards quiz labels (the question shown and the answer prompt); absent, they fall back to the generic Code: / What is the value of this code? wording");
   let forwards_question_label_override = property_get_or(
