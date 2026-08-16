@@ -2,7 +2,7 @@ import { text_frozen } from "./text_frozen.mjs";
 export function js_function_forwarding_cases() {
   "Written-out functions pinning which ones count as a second name for the function they call, and which ones do something of their own.";
   "A function that counts can be dropped, and the function it calls passed in its place. So every case that answers with a name is a licence to delete code, and a case that answers with nothing is the reading refusing to give that licence.";
-  "The refusals are the point of the corpus. Each one names a way a function can look like a hand-off while doing something the hand-off would lose: a different order, an argument of its own, a wait, a name that means nothing outside, an answer that is not the call's.";
+  "The refusals are the point of the corpus. Each one names a way a function can look like a hand-off while doing something the hand-off would lose: a different order, an argument of its own, a name that means nothing outside, an answer that is not the call's.";
   let cases = [
     {
       name: "returns the call it was given the arguments for",
@@ -39,11 +39,18 @@ export function js_function_forwarding_cases() {
       target: null,
     },
     {
-      name: "waits for the answer, so it hands back a promise where the other hands back a value",
+      name: "waits for the answer of the one call it makes, and hands that answer back",
       code: text_frozen(
         "async function lambda(v) {\n  let r = await ok(v);\n  return r;\n}\n",
       ),
-      target: null,
+      target: "ok",
+    },
+    {
+      name: "waits and returns in one step",
+      code: text_frozen(
+        "async function lambda(v) {\n  return await ok(v);\n}\n",
+      ),
+      target: "ok",
     },
     {
       name: "calls a name it was handed, which means nothing anywhere else",
