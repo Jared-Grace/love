@@ -25,6 +25,19 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (equal(id, null)) {
     return;
   }
+  ("this one hands back nothing while the one it calls hands back an answer, so they are not the same function");
+  let dropped_is = js_function_answer_dropped_is(node);
+  if (dropped_is) {
+    return;
+  }
+  ("this one waits, so it hands back a promise. the one it calls has to wait as well for the two to hand back the same kind of thing");
+  let waits_is = property_get(node, "async");
+  if (waits_is) {
+    let target_waits_is = await function_async_is(target);
+    if (not(target_waits_is)) {
+      return;
+    }
+  }
   let name = property_get(id, "name");
   ("its own name where it is declared, and one other place. anything more is a use this does not look at");
   let mentions = js_identifiers_named_count(ast, name);
