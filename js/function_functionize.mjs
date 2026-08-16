@@ -15,12 +15,14 @@ export async function function_functionize(
   ("A name rather than any word at all, and the difference is worth spelling out because every function here carries as much prose as code. Only the names are searched, so a word read off a sentence in the body is refused however plainly it stands there - and it reads as a spelling mistake when it is nothing of the kind. Measured: two attempts in a row were spent addressing a span by words picked out of the paragraphs above it.");
   ("All of the cutting is held one name down, and the only thing said here is which reader finds the two ends. That is the single word this and its twin ever disagreed about, and while both wrote the work out in full a fix made in one of them was silently missing from the other.");
   let select_fn_name = fn_name("js_statement_find_name_body");
+  let apply_fn_name = fn_name("js_selects_functionize");
   let output = await function_functionize_generic(
     f_name,
     name_from,
     name_to,
     f_name_new,
     select_fn_name,
+    apply_fn_name,
   );
   return output;
 }
