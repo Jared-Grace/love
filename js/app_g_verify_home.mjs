@@ -1,3 +1,4 @@
+import { api_read_or } from "./api_read_or.mjs";
 import { app_g_verify_home_verse_bar } from "./app_g_verify_home_verse_bar.mjs";
 import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
@@ -60,43 +61,29 @@ export async function app_g_verify_home(context) {
   let chapter_codes = null;
   let view = null;
   async function initial_load() {
-    try {
-      let f_name = fn_name("g_sermon_write_read");
-      chapter = await api_read(f_name, [chapter_code]);
-    } catch (missing) {
-      chapter = {
-        chapter_code,
-        passages: [],
-      };
-    }
-    try {
-      let f_name2 = fn_name("g_verify_status_read");
-      status = await api_read(f_name2, [chapter_code]);
-    } catch (missing) {
-      status = {
-        busy: false,
-        verse: "",
-        note: "",
-      };
-    }
-    try {
-      let f_name3 = fn_name("g_verify_chapter_next");
-      chapter_state = await api_read(f_name3, [chapter_code]);
-    } catch (missing) {
-      chapter_state = {
-        approved: "",
-        latest: null,
-        next: null,
-        action: "wait",
-      };
-    }
-    try {
-      let f_name4 = fn_name("g_verify_chapters_available");
-      let object = await api_read(f_name4, []);
-      chapter_codes = property_get(object, "chapters");
-    } catch (missing) {
-      chapter_codes = [];
-    }
+    let f_name = fn_name("g_sermon_write_read");
+    chapter = await api_read_or(f_name, [chapter_code], {
+      chapter_code,
+      passages: [],
+    });
+    let f_name2 = fn_name("g_verify_status_read");
+    status = await api_read_or(f_name2, [chapter_code], {
+      busy: false,
+      verse: "",
+      note: "",
+    });
+    let f_name3 = fn_name("g_verify_chapter_next");
+    chapter_state = await api_read_or(f_name3, [chapter_code], {
+      approved: "",
+      latest: null,
+      next: null,
+      action: "wait",
+    });
+    let f_name4 = fn_name("g_verify_chapters_available");
+    let object = await api_read_or(f_name4, [], {
+      chapters: [],
+    });
+    chapter_codes = property_get(object, "chapters");
   }
   await html_loading(initial_load);
   let b2 = list_includes(chapter_codes, chapter_code);
