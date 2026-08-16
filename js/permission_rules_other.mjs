@@ -12,6 +12,7 @@ export function permission_rules_other() {
   "two of the three are a published word list being read as its authors published it, one an English stemmer and one a university's word database, both of which this repo reads while measuring how much of a passage a line of English shares. The third hosts other people's repositories and is granted for the same reason its neighbour above is, and with the same reservation: what comes back is whatever those people wrote about their own work, so it is the resources kept there that are wanted rather than any vouching by the site.";
   "the search is the widest thing in this list and is named as such. Every other entry here is one site, and a page from it can be judged before it is asked for; a search hands back pages nobody picked, so any site's words can enter a reading through it. It is granted because it was already granted where nothing watched it, and being watched is strictly better than the alternative that was actually in force - not because it is small. Nothing it returns is run or written, and it should be the first thing questioned if this list is ever narrowed.";
   "four more verbs belong beside the readers already here for the same one reason: none of them has a flag that writes. Two answer questions about the storage this repo is spread across - which devices are attached, and whether a folder is a mount rather than an empty stand-in for one - and both were asked in a session where the external drive had gone away and nothing on the list could say so. The third prints bytes the way its neighbours print text, and it is what settles whether a word is the letters it looks like. The fourth is the short spelling of a check already granted in its long form, and reads a file without running it; leaving only the long spelling granted asks a reader to know which of two names for one thing was written down.";
+  "one more Bible site was added for the licence statements it publishes rather than for its text. The question this repo keeps asking of it is who holds the rights to a translation and on what terms, which is the one thing a reader here has to get right before shipping anybody's words, and the answer is only ever on the publisher's own page. It reads as a widening and is not one: a search over the whole web is already granted above, so any page this could return was already reachable, and naming the site narrows what arrives rather than adding to it. Nothing fetched is run or written.";
   let f_name = fn_name("qa_gate_run");
   let combined = text_combine_multiple(["Bash(pkill -f ai.mjs ", f_name, ")"]);
   let f_name2 = fn_name("examples_gate_run");
@@ -100,6 +101,7 @@ export function permission_rules_other() {
     "WebFetch(domain:snowballstem.org)",
     "WebFetch(domain:wordnet.princeton.edu)",
     "WebFetch(domain:github.com)",
+    "WebFetch(domain:www.bible.com)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",

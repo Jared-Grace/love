@@ -80,6 +80,7 @@
       "WebFetch(domain:snowballstem.org)",
       "WebFetch(domain:wordnet.princeton.edu)",
       "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.bible.com)",
       "WebSearch",
       "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
       "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",
