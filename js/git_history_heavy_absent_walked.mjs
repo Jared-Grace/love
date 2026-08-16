@@ -1,9 +1,8 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_folder_love } from "./git_folder_love.mjs";
 import { git_history_paths_absent_at_head } from "./git_history_paths_absent_at_head.mjs";
 import { git_history_heavy_row_is } from "./git_history_heavy_row_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
 export async function git_history_heavy_absent_walked() {
   "The paths this repo's history is still carrying that the present no longer has, big enough to be worth someone's attention - and how many paths were looked at to find them.";
@@ -13,8 +12,7 @@ export async function git_history_heavy_absent_walked() {
   arguments_assert(arguments, 0);
   let folder = await git_folder_love();
   let rows = await git_history_paths_absent_at_head(folder);
-  let heavy = list_filter(rows, git_history_heavy_row_is);
-  let paths = list_map_property(heavy, "path");
+  let paths = list_filter_map_property(rows, git_history_heavy_row_is, "path");
   let walked = list_size(rows);
   let r = {
     walked,
