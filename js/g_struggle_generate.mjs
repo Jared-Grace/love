@@ -1,3 +1,4 @@
+import { text_empty } from "./text_empty.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.mjs";
 export async function g_struggle_generate() {
