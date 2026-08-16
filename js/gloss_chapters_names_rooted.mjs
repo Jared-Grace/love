@@ -34,7 +34,11 @@ export async function gloss_chapters_names_rooted(fn, bible_folder) {
   async function chapter_read(chapter_code) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let capitalised = property_get(capitalised_by_book, book_code);
-    let rooted = await gloss_chapter_names_rooted(chapter_code, fn, capitalised);
+    let rooted = await gloss_chapter_names_rooted(
+      chapter_code,
+      fn,
+      capitalised,
+    );
     let chapter_row = {
       chapter_code,
       rooted,
