@@ -16,10 +16,10 @@ import { list_first } from "./list_first.mjs";
 import { text_empty } from "./text_empty.mjs";
 export function app_code_lesson_statement_name_value_above(root) {
   arguments_assert(arguments, 1);
-  ("the boxes read before the first question: a cup with a grape in it, the word for such a cup, and the same thing written as code");
+  ("the boxes read before the first question: what a learner has already been told about names, a cup with grapes in it, the word for such a cup, and the same thing written as code");
   ("The story comes first and the code second, because a name holding a value is not something a learner can be shown by more code - every line up to here has been read left to right and come out as a value, and this one puts a value somewhere and leaves it. A cup is the everyday thing that already behaves that way, so the code is met as a second way of saying something already understood.");
   ("The picture is drawn three times over, empty, then named, then filled, because the story is a change and one picture cannot be a change.");
-  ("The grape is a real fruit rather than one of the words the string lessons use, because it has to be something that can be inside a cup. What the quizzes hold are those same words as before, which is the point: the value in the cup can be any of them.");
+  ("The grapes are a real fruit rather than one of the words the string lessons use, because what goes in the cup has to be something that can be inside a cup. What the quizzes hold are those same words as before, which is the point: the value in the cup can be any of them.");
   let names = app_code_lesson_statement_name_value_names();
   let name = list_first(names);
   let word = app_code_lesson_statement_name_value_word();
