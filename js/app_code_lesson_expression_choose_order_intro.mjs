@@ -1,5 +1,4 @@
-import { html_hr } from "./html_hr.mjs";
-import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
+import { app_shared_hr_spaced } from "./app_shared_hr_spaced.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
