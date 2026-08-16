@@ -8,9 +8,6 @@ export function js_statement_call_alone(statement) {
     return null;
   }
   let expression = property_get(statement, "expression");
-  let call_is = js_node_type_is(expression, "CallExpression");
-  if (not(call_is)) {
-    return null;
-  }
-  return expression;
+  let call = js_expression_call_only(expression);
+  return call;
 }
