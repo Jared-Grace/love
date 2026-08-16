@@ -1,3 +1,4 @@
+import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_panel.mjs";
 import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
 import { app_g_verify_storage_app } from "./app_g_verify_storage_app.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
@@ -10,24 +11,19 @@ import { app_g_verify_view_row_new } from "./app_g_verify_view_row_new.mjs";
 import { app_g_verify_view_label_new } from "./app_g_verify_view_label_new.mjs";
 import { app_g_verify_view_suggestion_applied_is } from "./app_g_verify_view_suggestion_applied_is.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_g_verify_passage_font_size } from "./app_g_verify_passage_font_size.mjs";
 import { app_g_verify_suggestion_font_size } from "./app_g_verify_suggestion_font_size.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
-import { html_style_padding } from "./html_style_padding.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -40,17 +36,13 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words } from "./text_words.mjs";
-import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_text_warning_color } from "./app_shared_text_warning_color.mjs";
 import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
-import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export async function app_g_verify_view(
@@ -96,50 +88,18 @@ export async function app_g_verify_view(
     }
     order_comps.forEach(lambda4);
   }
-  let passage_panel = app_shared_container_base(container);
-  html_font_set(passage_panel, serif);
-  let value7 = app_g_verify_passage_font_size();
-  html_style_font_size(passage_panel, value7);
-  html_style_line_height(passage_panel, "1.95");
-  function lambda9(t, i) {
-    let span = html_span_text(passage_panel, t);
-    let border_radius = app_shared_border_radius();
-    html_border_radius(span, border_radius);
-    html_style_padding(span, "0 0.06em");
-    html_style_set(span, "transition", "background-color .12s");
-    if (not(covered[i])) {
-      html_style_set(
-        span,
-        "text-decoration",
-        "underline dashed " + app_shared_text_warning_color(),
-      );
-      html_style_set(span, "text-underline-offset", "0.2em");
-    }
-    function lambda8() {
-      let lis = [];
-      function lambda7(l, li) {
-        let a2 = property_get(l, "indices").indexOf(i);
-        if (greater_than_equal(a2, 0)) {
-          lis.push(li);
-        }
-      }
-      lines.forEach(lambda7);
-      app_g_verify_view_highlight_lines(
-        lis,
-        clear_all,
-        token_spans,
-        highlight,
-        lines,
-        row_comps,
-        order_comps,
-      );
-    }
-    html_on(span, "mouseenter", lambda8);
-    html_on(span, "mouseleave", clear_all);
-    token_spans[i] = span;
-    html_span_space(passage_panel);
-  }
-  tokens.forEach(lambda9);
+  app_g_verify_view_passage_panel(
+    container,
+    serif,
+    covered,
+    lines,
+    clear_all,
+    token_spans,
+    highlight,
+    row_comps,
+    order_comps,
+    tokens,
+  );
   app_g_verify_view_label_new("BY PASSAGE ORDER", container, small_gap);
   let cov = app_g_verify_view_panel_flush(container);
   function lambda10(l, li) {
