@@ -28,12 +28,12 @@ export async function function_prose_replace(f_name, text_before, text_after) {
       return holds_is;
     }
     let matched = list_filter(statements, holds);
-    let lines = list_size(matched);
+    let lines_found = list_size(matched);
     let f_name2 = fn_name("function_string_value_replace");
-    equal_assert_json(lines, 1, {
+    equal_assert_json(lines_found, 1, {
       f_name,
       text_before,
-      lines,
+      lines: lines_found,
       hint: text_combine_multiple([
         "a change to one line asks for text that sits in exactly one of them. If the run is a piece of text the program uses rather than a line the function says about itself, ask ",
         f_name2,
