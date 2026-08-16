@@ -1,6 +1,6 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { span_worst_piece } from "./span_worst_piece.mjs";
 import { span_row_better } from "./span_row_better.mjs";
@@ -23,8 +23,7 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     return null;
   }
   ("The prose is left out of both counts. A body here is mostly paragraphs explaining itself, and counting those as length makes a run covering every line of work look as though it left a good deal behind - which is how a cut that moves the whole body and gains nothing came to be offered first.");
-  let work = list_filter(statements, js_statement_work_is);
-  let count = list_size(work);
+  let count = list_filter_size(statements, js_statement_work_is);
   ("The walk still goes over every line, prose and all, because a run is addressed by where it stands in the body rather than by where it stands among the lines of work. Only the counting leaves the prose out.");
   let count_lines = list_size(statements);
   let held = null;
@@ -41,8 +40,7 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     if (not(cuttable)) {
       continue;
     }
-    let span_work = list_filter(span, js_statement_work_is);
-    let size = list_size(span_work);
+    let size = list_filter_size(span, js_statement_work_is);
     let worst = span_worst_piece(count, size);
     let offered = {
       from,
