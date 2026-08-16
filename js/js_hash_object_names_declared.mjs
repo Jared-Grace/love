@@ -29,10 +29,5 @@ export function js_hash_object_names_declared(v, names) {
     return;
   }
   let id = property_get(node, "id");
-  let simple = js_node_type_is(id, "Identifier");
-  if (not(simple)) {
-    return;
-  }
-  let held = property_get(id, "name");
-  list_add(names, held);
+  js_identifier_name_add(id, names);
 }
