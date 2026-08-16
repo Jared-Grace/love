@@ -4216,9 +4216,36 @@ def find_plain_recursive_grep(command, inside_is):
         if not set(pattern) <= GREP_PLAIN_PATTERN_CHARACTERS:
             continue
         paths = positional[1:]
-        if all(grep_word_inside_repo_is(path) for path in paths):
+        if all(inside_is(path) for path in paths):
             return pattern
     return None
+
+
+def find_repo_plain_recursive_grep(command):
+    """The same shape asked about this repo's own files."""
+    return find_plain_recursive_grep(command, grep_word_inside_repo_is)
+
+
+def find_memory_plain_recursive_grep(command):
+    """The same shape asked about the memory notes, which are their own folder
+    outside this repo and have their own named search."""
+    return find_plain_recursive_grep(command, grep_word_inside_memory_is)
+
+
+def memory_plain_recursive_grep_deny_reason(word):
+    return (
+        f"Walking the memory notes for `{word}` with grep is refused: the notes "
+        f"have a named search too. Run `node scripts/ai.mjs memory_lines_search "
+        f"{word}` instead - it hands every matching line back as records, each "
+        "carrying the note it came from and the place it sits at, and it takes a "
+        "word and nothing else, which is what lets it hold a standing approval. "
+        "Searching the notes before re-deriving something is the habit worth "
+        "keeping; typing the folder out by hand is not. For this repo's own "
+        "files the same shape is `node scripts/ai.mjs repo_lines_search <word>`. "
+        "Only this one shape is refused - a real pattern, a case-insensitive or "
+        "inverted or word-bounded match, or a read of a single note is untouched, "
+        "because the named search has no answer for those."
+    )
 
 
 def repo_plain_recursive_grep_deny_reason(word):
