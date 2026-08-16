@@ -20,11 +20,19 @@ export async function permission_grant_word_params(word) {
   let live = property_get(context, "live");
   let parsed = property_get(context, "parsed");
   let found = [];
+  let unnamed = 0;
   for (let name of live) {
     let ast = await function_ast_memo(name, parsed);
     let params = js_flo_params_get(ast);
     let plain = function_params_plain_ast(ast);
     for (let p of params) {
+      ("A parameter written as a pattern rather than a name has no single name to read a word out of, so it is counted and passed over rather than guessed at. It is counted because passing over in silence is how a whole shape of parameter stops being looked at without anybody deciding that it should be.");
+      let kind = property_get(p, "type");
+      let named = equal(kind, "Identifier");
+      if (not(named)) {
+        unnamed = add(unnamed, 1);
+        continue;
+      }
       let p_name = property_get(p, "name");
       let declared = list_includes(plain, p_name);
       if (declared) {
