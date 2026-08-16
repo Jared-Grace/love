@@ -11,11 +11,12 @@ import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
-import { js_code_let_assign } from "./js_code_let_assign.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_statement } from "./js_code_statement.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { list_chunk } from "./list_chunk.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_flat } from "./list_flat.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_second } from "./list_second.mjs";
@@ -35,27 +36,30 @@ export function app_code_lesson_statement_name_value() {
   let name_b = "b";
   function log_of(name) {
     "the line that writes a name out";
-    let code = js_code_call_arg(log_name, name);
+    let call = js_code_call_arg(log_name, name);
+    let code = js_code_statement(call);
     return code;
   }
   function held_of(name, value) {
     "the line that gives a value a name";
-    let code = js_code_let_assign(name, text_to(value));
+    let right = text_to(value);
+    let code = js_code_let_statement(name, right);
     return code;
   }
   function one_name(value) {
     "a name given a value, and that same name written out";
-    let lines = [held_of(name_a, value), log_of(name_a)];
+    let v = held_of(name_a, value);
+    let v2 = log_of(name_a);
+    let lines = [v, v2];
     let code = list_join_newline(lines);
     return code;
   }
   function two_names(other, value) {
     "two names given values, and only the second of them written out - the first is there to be read past";
-    let lines = [
-      held_of(name_a, other),
-      held_of(name_b, value),
-      log_of(name_b),
-    ];
+    let v3 = held_of(name_a, other);
+    let v4 = held_of(name_b, value);
+    let v5 = log_of(name_b);
+    let lines = [v3, v4, v5];
     let code = list_join_newline(lines);
     return code;
   }
@@ -65,20 +69,22 @@ export function app_code_lesson_statement_name_value() {
     return number;
   }
   function pair_to_codes(pair) {
-    ("the two questions a pair of numbers makes: the first number asked on its own, and then asked again as the name that is NOT written out, so the value a learner would give by reading the wrong line is the answer of the question standing beside it");
+    "the two questions a pair of numbers makes: the first number asked on its own, and then asked again as the name that is NOT written out, so the value a learner would give by reading the wrong line is the answer of the question standing beside it";
     let first = list_first(pair);
     let second = list_second(pair);
-    let codes = [one_name(first), two_names(first, second)];
+    let v6 = one_name(first);
+    let v7 = two_names(first, second);
+    let codes = [v6, v7];
     return codes;
   }
   function batch_get() {
-    ("four questions whose four answers are all different, so no two buttons are right at once");
+    "four questions whose four answers are all different, so no two buttons are right at once";
     let max = app_code_lesson_operators_value_max();
     let numbers = range_map(max, number_of);
     let taken = list_shuffle_take(numbers, 4);
     let pairs = list_chunk(taken, 2);
     let nested = list_map(pairs, pair_to_codes);
-    let codes = list_flat(nested);
+    let codes = list_concat_multiple(nested);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
@@ -88,7 +94,8 @@ export function app_code_lesson_statement_name_value() {
   function above(root) {
     let box = app_code_container_light_blue(root);
     html_div_cycle_code(box, ["We can give a value a name"]);
-    html_div_code(box, held_of(name_a, 3));
+    let code2 = held_of(name_a, 3);
+    html_div_code(box, code2);
     html_div_cycle_code(box, [
       "This gives the name ",
       name_a,
@@ -103,15 +110,16 @@ export function app_code_lesson_statement_name_value() {
       " inside ",
       log_name,
     ]);
-    html_div_code_multiple(box_logged, [held_of(name_a, 3), log_of(name_a)]);
+    let v8 = held_of(name_a, 3);
+    let v9 = log_of(name_a);
+    html_div_code_multiple(box_logged, [v8, v9]);
     html_div_cycle_code(box_logged, ["This writes out ", "3"]);
     let box_two = app_code_container_light_blue(root);
     html_div_cycle_code(box_two, ["We can give more than one value a name"]);
-    html_div_code_multiple(box_two, [
-      held_of(name_a, 3),
-      held_of(name_b, 5),
-      log_of(name_b),
-    ]);
+    let v10 = held_of(name_a, 3);
+    let v11 = held_of(name_b, 5);
+    let v12 = log_of(name_b);
+    html_div_code_multiple(box_two, [v10, v11, v12]);
     html_div_cycle_code(box_two, [
       "Only the name inside ",
       log_name,
