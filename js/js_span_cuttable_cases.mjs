@@ -6,6 +6,7 @@ export function js_span_cuttable_cases() {
   "Each case is frozen text, because the words inside are ordinary repo names and the pass that turns a mentioned name into a reference would rewrite them into something the case no longer tests.";
   "Lines are counted from the top of the body and both ends are included, the same counting the proposer walks by.";
   "Writing to a name and writing through a dot or a bracket are two different things here, and three of these cases are about nothing else. Pointing a name somewhere else splits it in two across a cut, because each side then holds its own; filling a slot of a list or setting something on an object changes the one thing both sides are looking at, and survives. Reading them the same way is safe and quiet and refused a whole screen of drawing for no reason at all, so the cases that must be let through are here to keep that from coming back.";
+  "Which side of the cut a name was born on decides how it is weighed, and the last two cases are the ones that say so. A name made above the run is in two places whichever way it is read, because the run receives a copy and the lines behind keep the original - so a function inside the run reading one, with the lines behind pointing it somewhere else, disagrees forever, even though the run hands nothing back at all. Weighing only what is handed back let that straight through.";
   let cases = [
     {
       name: "a plain run of work, whose one handed-back name is only ever read",
@@ -95,6 +96,24 @@ export function js_span_cuttable_cases() {
       ),
       from: 0,
       to: 2,
+      cuttable: true,
+    },
+    {
+      name: "a run whose function reads a name made above the run that the lines behind go on writing",
+      code: text_frozen(
+        "function f() {\n  let badge = null;\n  let bar = one();\n  function send() {\n    hide(badge);\n  }\n  attach(send);\n  badge = make();\n}\n",
+      ),
+      from: 1,
+      to: 3,
+      cuttable: false,
+    },
+    {
+      name: "the same shape where the lines behind only read that name",
+      code: text_frozen(
+        "function f() {\n  let badge = null;\n  let bar = one();\n  function send() {\n    hide(badge);\n  }\n  attach(send);\n  report(badge);\n}\n",
+      ),
+      from: 1,
+      to: 3,
       cuttable: true,
     },
   ];
