@@ -1,3 +1,6 @@
+import { property_equals_not } from "./property_equals_not.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_search } from "./functions_search.mjs";
@@ -7,10 +10,7 @@ import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { functions_name_vocabulary } from "./functions_name_vocabulary.mjs";
 import { functions_search_shown_count } from "./functions_search_shown_count.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function functions_search_names_prose_identifiers(words_comma) {
   "Ask the whole repo whether a capability is already here, in every way the asking can miss differently, from one set of words and one command.";
   "The four searches under this each fail at a different thing. A name search only works for somebody who already half knows the name. The any-word search catches the guess that was right about one word and wrong about the rest. The purpose search reaches a function whose name shares not one word with the question, and is the only one that can. The identifier search answers who already mentions the thing, which is what says whether a capability is reached or merely present.";
@@ -29,18 +29,14 @@ export async function functions_search_names_prose_identifiers(words_comma) {
   let identifiers = await catch_null_async(identifiers_attempt);
   function names_found_none_is() {
     "Empty means empty in both name channels at once. One word answering is enough to say the asker's words reach this repo, so the vocabulary would be answering a question nobody has.";
-    let count_all = property_get(names, "found");
-    let b = equal(count_all, 0);
-    let some = not(b);
+    let some = property_equals_not(names, "found", 0);
     if (some) {
       return false;
     }
     let words_asked = object_property_names(names_any_word);
     for (let word_asked of words_asked) {
-      let per_word = property_get(names_any_word, word_asked);
-      let count_word = property_get(per_word, "found");
-      let b2 = equal(count_word, 0);
-      let any = not(b2);
+      let count_word = property_path_get_2(names_any_word, word_asked, "found");
+      let any = equal_not(count_word, 0);
       if (any) {
         return false;
       }
