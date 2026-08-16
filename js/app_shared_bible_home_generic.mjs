@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_bible_language_chapter_fetch } from "./app_shared_bible_language_chapter_fetch.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
@@ -6,7 +6,6 @@ import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
 import { html_button_share_text } from "./html_button_share_text.mjs";
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -62,7 +61,6 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_shared_bible_home_generic(
@@ -141,7 +139,8 @@ export async function app_shared_bible_home_generic(
   let text = property_get(verse_current, "text");
   let languages_chosen = app_shared_bible_languages_chosen_get();
   async function lambda_language(lc) {
-    return app_shared_bible_language_chapter_fetch(lc, chapter_code);
+    let r2 = await app_shared_bible_language_chapter_fetch(lc, chapter_code);
+    return r2;
   }
   let fetched = [];
   await list_map_unordered_add_async(
@@ -290,33 +289,4 @@ export async function app_shared_bible_home_generic(
     bar,
   };
   return v4;
-}
-async function app_shared_bible_language_chapter_fetch(lc, chapter_code) {
-  arguments_assert(arguments, 2);
-  let property_name3 = bible_folder_key();
-  let bible_folder = property_get(lc, property_name3);
-  async function get() {
-    async function lambda_verses_l() {
-      let r_verses = await ebible_verses_browser(bible_folder, chapter_code);
-      return r_verses;
-    }
-    async function lambda_books_l() {
-      let r_books = await ebible_version_books_browser(bible_folder);
-      return r_books;
-    }
-    let fetched_l = await invoke_multiple_unordered_async([
-      lambda_verses_l,
-      lambda_books_l,
-    ]);
-    let verses_l = list_first(fetched_l);
-    let books_l = list_second(fetched_l);
-    let v = {
-      language: lc,
-      verses: verses_l,
-      books: books_l,
-    };
-    return v;
-  }
-  let r = await catch_null_async(get);
-  return r;
 }
