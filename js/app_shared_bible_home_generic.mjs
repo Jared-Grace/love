@@ -1,3 +1,4 @@
+import { app_shared_bible_home_bar_buttons } from "./app_shared_bible_home_bar_buttons.mjs";
 import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
@@ -20,7 +21,6 @@ import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
-import { app_shared_bible_button_chapter_previous } from "./app_shared_bible_button_chapter_previous.mjs";
 import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
@@ -41,7 +41,6 @@ import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
-import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
@@ -100,8 +99,7 @@ export async function app_shared_bible_home_generic(
   let books = list_first(fetched_en);
   let verses = list_second(fetched_en);
   let book_name = ebible_book_code_to_name(books, book_code);
-  app_shared_bible_button_chapter_previous(bar, context, chapter_code);
-  app_shared_screen_set_button(bar, context, app_shared_bible_books, book_name);
+  app_shared_bible_home_bar_buttons(bar, context, chapter_code, book_name);
   app_shared_screen_set_button(
     bar,
     context,
