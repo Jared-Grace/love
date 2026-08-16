@@ -4,7 +4,6 @@ import { list_map_index } from "./list_map_index.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function gloss_explains_placed(explains) {
   "The wording waiting for one passage of a gloss, said as a flat list of pairs - where an explanation stands, and what it is to say - whichever of the two shapes it was handed over in.";
   "Wording arrives either as a whole passage in order or as the few explanations being mended, named by their standing. Both say the same thing about the same passage, so a reading that only wants to know which standings are spoken for should not have to be written twice; the difference belongs here and nowhere above it.";
