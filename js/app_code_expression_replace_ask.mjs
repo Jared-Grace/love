@@ -20,8 +20,12 @@ export function app_code_expression_replace_ask(
   ("Short on purpose. A button repeating the pieces the sentence above it just named would be the same sentence twice, and the learner would read it twice to find out it says nothing new.");
   html_clear(note);
   retire();
-  ("the two green pieces the sentence made are handed on, because the swap is shown travelling between them once the button is pressed");
-  let greens = app_code_expression_replace_say(note, solved_code, value_text);
+  ("the two chosen pieces the sentence made are handed on, because the swap is shown travelling between them once the button is pressed");
+  let chosen_pieces = app_code_expression_replace_say(
+    note,
+    solved_code,
+    value_text,
+  );
   let asked = "Click here to replace";
   let holder = html_div(note);
   ("the button stands in the middle of the line it has to itself, because it is the one thing to do here and a thing standing alone against the left edge reads as the start of a list of them");
@@ -31,5 +35,5 @@ export function app_code_expression_replace_ask(
   let gap = app_shared_spaced_gap();
   html_style_margin_top(holder, gap);
   app_shared_button_green_ordinary(holder, asked, press);
-  return greens;
+  return chosen_pieces;
 }
