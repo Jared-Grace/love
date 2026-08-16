@@ -7,10 +7,6 @@ export async function daemons_restart() {
   "Every daemon rather than the ones that look stale, because the reading that decides staleness waits a day before saying so. That wait is right for an ordinary change and wrong for a move: the folder is gone now, and a day of looking in the wrong place is a day of backups nobody took.";
   "Asked of the one list the daemons are created from, so this cannot come to know a different set of daemons than the one that made them.";
   let names = daemons_names();
-  async function lambda(f_name) {
-    let status = await daemon_restart(f_name);
-    return status;
-  }
-  let restarted = await list_map_async(names, lambda);
+  let restarted = await list_map_async(names, daemon_restart);
   return restarted;
 }
