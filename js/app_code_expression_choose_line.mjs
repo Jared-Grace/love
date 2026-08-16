@@ -1,13 +1,12 @@
+import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
 import { app_code_expression_chosen_set } from "./app_code_expression_chosen_set.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_operator_pressable } from "./app_code_expression_operator_pressable.mjs";
 import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
-import { app_code_expression_replaced_set } from "./app_code_expression_replaced_set.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -55,12 +54,13 @@ export function app_code_expression_choose_line(
         let node_value = app_code_expression_solved(node, node);
         ("the green block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
         let watched = await on_chosen(node, node_value, node_span);
-        app_code_expression_replaced_set(node_span, node_value);
-        ("the value is held green afterwards only when the learner did not watch it arrive: a value that simply appeared needs a moment to be found, and one that was followed the whole way down has been looked at already");
-        ("Asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows whether it showed anything.");
-        if (not(watched)) {
-          await sleep_success_color();
-        }
+        ("whether the learner watched the swap arrive is asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows what it showed");
+        await app_code_expression_replaced_settle(
+          line,
+          node_span,
+          node_value,
+          watched,
+        );
         let stepped = app_code_expression_solved(current, node);
         draw(stepped, node, node_value);
         let more = app_code_expression_node_is(stepped);
