@@ -1,3 +1,4 @@
+import { list_sort_size_reverse } from "./list_sort_size_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,10 +6,8 @@ import { js_statements_span_candidate_longest } from "./js_statements_span_candi
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_get_curried_right } from "./property_get_curried_right.mjs";
 import { span_row_contained_is } from "./span_row_contained_is.mjs";
 export function js_statements_span_candidates(statements, addresses) {
   arguments_assert(arguments, 2);
@@ -37,7 +36,6 @@ export function js_statements_span_candidates(statements, addresses) {
     return keep;
   }
   let kept = list_filter(rows, kept_is);
-  let sizer = property_get_curried_right("size");
-  let ranked = list_sort_number_mapper_reverse(kept, sizer);
+  let ranked = list_sort_size_reverse(kept);
   return ranked;
 }

@@ -42,4 +42,6 @@ export async function app_code_expression_replace_await(
   ("and only then does anything on the line move: the words said what is about to happen, the press said when, and this is the happening");
   let duration = app_shared_animation_duration();
   await app_code_expression_replace_fly(node_span, greens, duration);
+  ("and the line is told the swap was watched, so it does not hold the value green afterwards for the learner to look at - they have just followed it the whole way down and watched it land");
+  return true;
 }
