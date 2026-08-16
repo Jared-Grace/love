@@ -66,6 +66,10 @@ export async function js_functionize_local(stack_, indices, f_name_new, ast) {
   ("It reads as a missing name for the same reason a repo function would: nothing in the file binds it and nothing imports it. Only the two answers above were subtracted, so everything the language gives came through as a parameter - console and Error were both handed over that way in one afternoon's cutting. The lifting twin already asked this question; the two now agree.");
   let provided = js_global_names();
   missing = list_difference(missing, provided);
+  ("A name the run declares for itself is never handed in either. A parameter and a top-level let of the same name in one function body are the same name declared twice, which the language refuses outright - the new function would not even parse. A run holding a small function that reads a name declared further down that same run did exactly this: the reading of what is bound gathers a block's lets only as far as the line doing the reading, so the name read as bound by nothing and was handed over, and the new function both took it and declared it.");
+  ("Dropping it is right rather than only a way past the error. A mention standing before the let in straight-line code would have thrown in the file as it was, so the only mentions this touches are the ones inside a function within the run - and there the name reaches the run's own declaration, which travels with the run. Same binding before the cut, same binding after.");
+  let declared = js_statements_declared_names_direct(span);
+  missing = list_difference(missing, declared);
   js_function_declaration_params_add(declaration, missing);
   ("The count is written once the parameters are settled, so it says how many the new function really takes.");
   js_function_arguments_assert_add(declaration);
