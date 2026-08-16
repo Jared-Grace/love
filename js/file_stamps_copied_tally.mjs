@@ -15,6 +15,8 @@ export async function file_stamps_copied_tally(
   copied,
 ) {
   arguments_assert(arguments, 5);
+  ("Walks a set of files beside their copies and counts three things: how many were looked at, how many sit in the half of a millisecond that rounds upward, and which ones stand differently in the copy than where they came from.");
+  ("The second count is what makes the gate a gate rather than a check. Every file has to be told apart from every other only by the pair it says about itself, so the ones that round upward are exactly the ones where cutting the fraction away and rounding it part company; without any of them the gate passes over both answers alike and says nothing.");
   let differing_so_far = [];
   let rounding_up_so_far = 0;
   let checked_so_far = 0;

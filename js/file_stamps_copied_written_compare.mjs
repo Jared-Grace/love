@@ -11,6 +11,8 @@ import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
 import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
 export async function file_stamps_copied_written_compare(folder_path, wanted) {
   arguments_assert(arguments, 2);
+  ("Inside a folder of its own: writes the asked-for number of small files, spreads the moment each one was written evenly across a single millisecond, takes the whole lot across into a second folder, and hands back what the two folders say about the same files.");
+  ("It is given a folder rather than finding one, because the gate that asks this has to be able to ask it anywhere - and most of all inside the frozen copy it works in, where every file already sitting there arrived by being copied.");
   let fs = await import("fs");
   let source = path_join([folder_path, "written"]);
   let target = path_join([folder_path, "copied"]);
