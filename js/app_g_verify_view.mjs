@@ -1,3 +1,4 @@
+import { app_g_verify_view_highlight_state } from "./app_g_verify_view_highlight_state.mjs";
 import { app_g_verify_view_suggest_and_reviewed_bars } from "./app_g_verify_view_suggest_and_reviewed_bars.mjs";
 import { app_g_verify_view_draft_restore } from "./app_g_verify_view_draft_restore.mjs";
 import { app_g_verify_view_suggest_box_new } from "./app_g_verify_view_suggest_box_new.mjs";
@@ -18,7 +19,6 @@ import { html_value_set } from "./html_value_set.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words } from "./text_words.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
@@ -40,35 +40,12 @@ export async function app_g_verify_view(
   let border = app_shared_color_blue_pale();
   let serif = app_shared_font_serif();
   let small_gap = app_shared_spaced_small_gap();
-  let covered = {};
-  function lambda2(l) {
-    function lambda(i) {
-      covered[i] = true;
-    }
-    property_get(l, "indices").forEach(lambda);
-  }
-  lines.forEach(lambda2);
-  let token_spans = [];
-  let row_comps = [];
-  let order_comps = [];
-  function background_clear(component) {
-    html_style_background_color_set(component, "");
-  }
-  function clear_all() {
-    token_spans.forEach(background_clear);
-    function lambda3(r) {
-      if (r) {
-        background_clear(r);
-      }
-    }
-    row_comps.forEach(lambda3);
-    function lambda4(r) {
-      if (r) {
-        background_clear(r);
-      }
-    }
-    order_comps.forEach(lambda4);
-  }
+  let r = app_g_verify_view_highlight_state(lines);
+  let clear_all = property_get(r, "clear_all");
+  let order_comps = property_get(r, "order_comps");
+  let row_comps = property_get(r, "row_comps");
+  let token_spans = property_get(r, "token_spans");
+  let covered = property_get(r, "covered");
   app_g_verify_view_passage_panel(
     container,
     serif,
