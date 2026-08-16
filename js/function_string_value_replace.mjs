@@ -1,3 +1,4 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -5,7 +6,6 @@ import { function_transform_auto } from "./function_transform_auto.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { text_replace_once } from "./text_replace_once.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -38,8 +38,7 @@ export async function function_string_value_replace(
         if (accounted_is) {
           return false;
         }
-        let candidate_value = property_get(candidate, "value");
-        let holds_is = text_includes(candidate_value, text_before);
+        let holds_is = property_text_includes(candidate, "value", text_before);
         return holds_is;
       }
       return false;
