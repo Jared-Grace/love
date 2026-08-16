@@ -15,10 +15,9 @@ export async function machine_path_literals_all() {
     repo_name,
     prefixes,
   );
-  function read(tree) {
-    let found = js_machine_path_literals(tree);
-    return found;
-  }
-  let walked = await key_literals_all_generic(candidates, read);
+  let walked = await key_literals_all_generic(
+    candidates,
+    js_machine_path_literals,
+  );
   return walked;
 }
