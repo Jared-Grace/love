@@ -8,6 +8,7 @@ export function file_stamps_copied_answer_assert(
   rounding_up,
 ) {
   arguments_assert(arguments, 3);
+  ("Says what was found and refuses two ways. A file standing differently in a copy than where it came from is the failure the gate exists for; not one file sitting in the half that rounds upward is the quieter failure, where the gate ran and proved nothing.");
   for (let one of differing) {
     console.log("stamp differs after copy  " + json_to(one));
   }
