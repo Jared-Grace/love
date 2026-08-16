@@ -1,3 +1,5 @@
+import { ebible_versions_preferred_first } from "./ebible_versions_preferred_first.mjs";
+import { ebible_language_name_shown } from "./ebible_language_name_shown.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -19,6 +21,8 @@ export async function ebible_languages_commercial() {
   function language_of(group) {
     let versions = property_get(group, "items");
     let language_code = property_get(group, "key");
+    ("How full each translation is has ordered them by here, which is the whole of the order wherever a language offers only one real choice. Where it offers several the human's rule decides instead - modern ahead of archaic, close to the original ahead of retold - and that rule is not measurable from anything on disk, so it is written down per language and applied here.");
+    ebible_versions_preferred_first(versions, language_code);
     let fullest = list_first(versions);
     ("The name is taken from whichever of the translations names the language, not from the fullest one, because being the fullest and naming the language are unrelated - the World English Bible holds all sixty six books and names no language at all, and it would have left English called The World English Bible.");
     function named_is(version) {
@@ -29,11 +33,13 @@ export async function ebible_languages_commercial() {
     let naming = list_filter(versions, named_is);
     ("Where not one of them names it, the language is called what its first translation calls itself, because a language with no name at all cannot be offered to anybody.");
     let nameless = list_empty_is(naming);
-    let name = property_get(fullest, "name");
+    let as_eBible_wrote_it = property_get(fullest, "name");
     if (not(nameless)) {
       let first_naming = list_first(naming);
-      name = property_get(first_naming, "language_name");
+      as_eBible_wrote_it = property_get(first_naming, "language_name");
     }
+    ("eBible writes a language's name as what its speakers call it followed by what English calls it in brackets, and seventy five of them have nothing before the bracket. Left as written those reach a reader as an empty bracket, so the name is read rather than taken.");
+    let name = ebible_language_name_shown(as_eBible_wrote_it);
     let language = {
       name,
       language_code,
