@@ -33,10 +33,6 @@ export function function_params_declared(fn) {
   }
   let parts = text_split_comma(trimmed);
   let names = list_map(parts, text_trim);
-  function named_is(name) {
-    let b = text_empty_not_is(name);
-    return b;
-  }
-  let declared = list_filter(names, named_is);
+  let declared = list_filter(names, text_empty_not_is);
   return declared;
 }
