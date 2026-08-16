@@ -1,3 +1,4 @@
+import { app_search_results_chapters_single_expand } from "./app_search_results_chapters_single_expand.mjs";
 import { app_search_results_book_card_collapsed_set } from "./app_search_results_book_card_collapsed_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -16,9 +17,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
-import { list_single } from "./list_single.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { list_add } from "./list_add.mjs";
@@ -79,13 +78,8 @@ export function app_search_results_book_card(
     return r;
   }
   async function chapters_single_expand() {
-    "a book holding one chapter offers no choice of chapter, so opening the book opens that chapter with it rather than asking for a second click that could only go one way";
-    let one = list_size_1(chapter_expands);
-    if (not(one)) {
-      return;
-    }
-    let only = list_single(chapter_expands);
-    await only();
+    let r2 = await app_search_results_chapters_single_expand(chapter_expands);
+    return r2;
   }
   async function toggle() {
     let next = not(card.collapsed);
