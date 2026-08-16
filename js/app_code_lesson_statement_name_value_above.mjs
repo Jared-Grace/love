@@ -1,46 +1,63 @@
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { emoji_grape } from "./emoji_grape.mjs";
 import { html_div_code } from "./html_div_code.mjs";
-import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_console_log_name } from "./js_console_log_name.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_second } from "./list_second.mjs";
-import { text_to } from "./text_to.mjs";
+import { text_empty } from "./text_empty.mjs";
 export function app_code_lesson_statement_name_value_above(root) {
   arguments_assert(arguments, 1);
-  ("the three boxes read before the first question: a name given a value, that same name handed to console.log, and two names of which only one is written out");
-  ("Each number is written once and used both in the code and in the sentence beside it, so the two can never come apart.");
+  ("the boxes read before the first question: a cup with a grape in it, the word for such a cup, and the same thing written as code");
+  ("The story comes first and the code second, because a name holding a value is not something a learner can be shown by more code - every line up to here has been read left to right and come out as a value, and this one puts a value somewhere and leaves it. A cup is the everyday thing that already behaves that way, so the code is met as a second way of saying something already understood.");
+  ("The picture is drawn three times over, empty, then named, then filled, because the story is a change and one picture cannot be a change.");
+  ("The grape is a real fruit rather than one of the words the string lessons use, because it has to be something that can be inside a cup. What the quizzes hold are those same words as before, which is the point: the value in the cup can be any of them.");
   let names = app_code_lesson_statement_name_value_names();
-  let name_first = list_first(names);
-  let name_second = list_second(names);
-  let log_name = js_console_log_name();
-  let held = text_to(3);
-  let other = text_to(5);
-  function held_of(name, value) {
-    "the line that gives a value a name";
-    let code = js_code_let_statement(name, value);
-    return code;
-  }
-  let first_held = held_of(name_first, held);
-  let first_logged = js_code_console_log_statement(name_first);
-  let box = app_code_container_light_blue(root);
-  html_div_cycle_code(box, ["We can give a value a name"]);
-  html_div_code(box, first_held);
-  html_div_cycle_code(box, ["This gives the name ", name_first, " the value ", held]);
-  html_div_cycle_code(box, ["Now writing ", name_first, " gives back ", held]);
-  let box_logged = app_code_container_light_blue(root);
-  html_div_cycle_code(box_logged, ["So we can put ", name_first, " inside ", log_name]);
-  html_div_code_multiple(box_logged, [first_held, first_logged]);
-  html_div_cycle_code(box_logged, ["This writes out ", held]);
-  let box_two = app_code_container_light_blue(root);
-  html_div_cycle_code(box_two, ["We can give more than one value a name"]);
-  let second_held = held_of(name_second, other);
-  let second_logged = js_code_console_log_statement(name_second);
-  html_div_code_multiple(box_two, [first_held, second_held, second_logged]);
-  html_div_cycle_code(box_two, ["Only the name inside ", log_name, " is written out"]);
-  html_div_cycle_code(box_two, ["So this writes out ", other, ", not ", held]);
+  let name = list_first(names);
+  let word = app_code_lesson_statement_name_value_word();
+  let grape = emoji_grape();
+  let nothing = text_empty();
+  let box_cup = app_code_container_light_blue(root);
+  html_div_cycle_code(box_cup, ["Suppose you had a cup"]);
+  app_code_cup(box_cup, nothing, nothing);
+  html_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
+  app_code_cup(box_cup, nothing, name);
+  html_div_cycle_code(box_cup, ["Then suppose you put a grape in the cup"]);
+  app_code_cup(box_cup, grape, name);
+  html_div_cycle_code(box_cup, [
+    "Now if someone asked you what is inside the cup called ",
+    name,
+  ]);
+  html_div_cycle_code(box_cup, ["You could answer grape"]);
+  let box_word = app_code_container_light_blue(root);
+  html_div_cycle_code(box_word, [
+    "In computers, cups like this are called variables",
+  ]);
+  html_div_cycle_code(box_word, [
+    "A variable has a name, and holds one value",
+  ]);
+  ("the code box says the same three things the story said, in the same order: the cup is made and filled, then it is asked what is inside it, then the answer comes out");
+  let quoted = app_code_string_code(word);
+  let held = js_code_let_statement(name, quoted);
+  let logged = js_code_console_log_statement(name);
+  let box_code = app_code_container_light_blue(root);
+  html_div_cycle_code(box_code, [
+    "In JS we make a cup called ",
+    name,
+    " and put ",
+    quoted,
+    " in it like this",
+  ]);
+  html_div_code(box_code, held);
+  html_div_cycle_code(box_code, [
+    "Then we can write out whatever is inside the cup like this",
+  ]);
+  html_div_code(box_code, logged);
+  app_code_writes_out_line(box_code, word);
 }
