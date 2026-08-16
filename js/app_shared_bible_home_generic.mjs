@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { app_shared_bible_verse_frame } from "./app_shared_bible_verse_frame.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { app_shared_bible_books_verses_fetch } from "./app_shared_bible_books_verses_fetch.mjs";
@@ -15,10 +16,7 @@ import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
-import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
-import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
@@ -141,13 +139,7 @@ export async function app_shared_bible_home_generic(
     chapter_code,
     verse_number,
   });
-  async function lambda() {
-    await app_shared_bible_verse_previous(context, chapter_code, verse_current);
-  }
-  async function lambda7() {
-    await app_shared_bible_verse_next(context, chapter_code, verse_current);
-  }
-  app_shared_arrows_wide_unit(content, "verse", lambda, lambda7);
+  app_shared_bible_verse_arrows(context, chapter_code, verse_current, content);
   html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
   let v4 = {
