@@ -4131,24 +4131,53 @@ def grep_word_inside_repo_is(path):
     return ".." not in parts
 
 
-def find_repo_plain_recursive_grep(command):
-    """If any statement/pipe segment in `command` walks this repo's files for a
-    plain word with grep, return that word so main() can DENY it with a pointer
-    at the named search. Else None.
+# The two ways the memory notes can be written down, generated from
+# js/memory_folder_spellings.mjs, because one of them goes through a link in the
+# assistant's own settings folder and the other has the link already followed.
+# A decider knowing only one would let the other straight past while looking as
+# though it had checked.
+from memory_folder_spellings import MEMORY_FOLDER_SPELLINGS
+
+
+def grep_word_inside_memory_is(path):
+    """True when `path` names the memory notes, either spelling, so the named
+    notes search can answer for it.
+
+    Absolute only. A relative path here is read as repo-relative everywhere else
+    in this file, and guessing that a bare word meant the notes because somebody
+    might have changed directory first would deny a repo search by mistake."""
+    if not os.path.isabs(path):
+        return False
+    normalized = os.path.normpath(path)
+    for folder in MEMORY_FOLDER_SPELLINGS:
+        root = os.path.normpath(folder)
+        if normalized == root or normalized.startswith(root + os.sep):
+            return True
+    return False
+
+
+def find_plain_recursive_grep(command, inside_is):
+    """If any statement/pipe segment in `command` walks a folder `inside_is`
+    claims, for a plain word, with grep, return that word so main() can DENY it
+    with a pointer at whichever named search answers for that folder. Else None.
 
     This is the shape the sessions ran by hand more than any other: a recursive
-    grep for one ordinary word over the repo, ending in a pipe because the answer
-    came back as printed lines rather than as records. `repo_lines_search` gives
-    the same matches back as records - the file, the place, the line - and holds
-    a standing approval, which the raw command cannot, because it takes a word
-    and can only ever look in one folder.
+    grep for one ordinary word, ending in a pipe because the answer came back as
+    printed lines rather than as records. The named searches give the same
+    matches back as records - the file, the place, the line - and each holds a
+    standing approval, which the raw command cannot, because each takes a word
+    and can only ever look in the one folder filled in for it.
+
+    Which folder is the only thing that differs between the repo floor and the
+    notes floor, so it is the only thing received - everything about reading a
+    grep line is the same either way and is written here once.
 
     Deliberately narrow, and every narrowing is a case the named search cannot
     answer. The program must be exactly grep; the walk must be recursive; every
     flag must be one that changes only how matches are printed; the pattern must
     be a single plain word with no regular-expression character in it, since the
     named search matches the text as written; and every path given must be one
-    this repo holds. A command failing any of those falls through untouched.
+    the predicate claims. A command failing any of those falls through untouched.
 
     Unlike the other floors here, grep IS auto-approved, so this one converts an
     'allow' into a 'deny' rather than an 'ask' into one. That is why the slice is
