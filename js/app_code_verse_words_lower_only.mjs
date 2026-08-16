@@ -6,11 +6,6 @@ export function app_code_verse_words_lower_only() {
   arguments_assert(arguments, 0);
   ("the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner");
   let distinct = app_code_verse_words_clean_unique();
-  function lower_case_is(word) {
-    "whether a word is already all lower case (unchanged by lower-casing it)";
-    let same = text_lower_is(word);
-    return same;
-  }
-  let lower_only = list_filter(distinct, lower_case_is);
+  let lower_only = list_filter(distinct, text_lower_is);
   return lower_only;
 }
