@@ -25,5 +25,6 @@ export async function g_dialogue_generate() {
     prompt_user_middle,
     prompt_system,
     chapter_code_specified,
+    text_empty,
   );
 }
