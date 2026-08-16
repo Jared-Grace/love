@@ -18,7 +18,8 @@ export async function ebible_versions_commercial_ranked() {
     ("The language is settled here rather than left as the page happened to give it, because everything downstream groups on it and eleven pages name none. Left alone those eleven gather into one nameless language nobody can be offered.");
     let language_code = ebible_version_language_code(version);
     let entry = object_copy(version);
-    object_merge(entry, {
+    "Set rather than merged, because the language is already there on all but eleven of them and merging refuses to write over what is already written. Settling a value that is usually already settled is the whole job here.";
+    object_merge_set(entry, {
       books_count,
       language_code,
     });
