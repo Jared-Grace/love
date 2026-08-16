@@ -2,7 +2,7 @@ import { list_sort_size_reverse } from "./list_sort_size_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_statements_span_candidate_longest } from "./js_statements_span_candidate_longest.mjs";
+import { js_statements_span_candidate_best } from "./js_statements_span_candidate_best.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -19,7 +19,7 @@ export function js_statements_span_candidates(statements, addresses) {
   let count = list_size(statements);
   let rows = [];
   for (let from = 0; less_than(from, count); from++) {
-    let row = js_statements_span_candidate_longest(statements, addresses, from);
+    let row = js_statements_span_candidate_best(statements, addresses, from);
     if (null_is(row)) {
       continue;
     }

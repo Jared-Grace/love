@@ -6,11 +6,7 @@ import { list_size } from "./list_size.mjs";
 import { list_slice_include } from "./list_slice_include.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-export function js_statements_span_candidate_longest(
-  statements,
-  addresses,
-  from,
-) {
+export function js_statements_span_candidate_best(statements, addresses, from) {
   arguments_assert(arguments, 3);
   ("The longest run of lines that could be cut out starting at the given line, or nothing when no run starting there could be.");
   ("Longest rather than first, because a shorter run inside a longer one buys less and leaves the longer one still to find. The list of starts is walked separately, so every run that begins anywhere is still offered - only the shortenings of each are left out.");
