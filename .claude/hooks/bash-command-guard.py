@@ -4448,6 +4448,17 @@ def main():
     if daemon_unit is not None:
         return decide("deny", journalctl_daemon_unit_deny_reason(daemon_unit))
 
+    # A recursive grep of this repo for one plain word, which the log says is the
+    # commonest hand-run shape there is. The named search answers it as records
+    # rather than as printed lines, so the redirect removes the pipe as well as
+    # the command. Unlike the floors above, grep IS allow-listed, so this one
+    # converts an 'allow' into a 'deny' - which is why the slice is drawn as
+    # narrowly as find_repo_plain_recursive_grep draws it, and why the guard
+    # corpus pins the commands that must still be allowed.
+    grep_word = find_repo_plain_recursive_grep(command)
+    if grep_word is not None:
+        return decide("deny", repo_plain_recursive_grep_deny_reason(grep_word))
+
     # Same floor-instead-of-prompt reasoning again, applied to a loop that sits
     # and waits for a background task's output file to fill: the harness
     # re-invokes the caller when that command exits, so the loop is answering a
