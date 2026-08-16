@@ -50,7 +50,14 @@ export function app_code_lesson_functions_console_log_string() {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["", f_name, " can be given a string too"]);
     html_div_code(c, code);
-    html_div_cycle_code(c, ["This writes out ", word]);
-    html_div_cycle_code(c, ["The quote marks are not written out"]);
+    ("what is written out is not code and is not shown as code - it is the same plain text the worked example prints under Logged output, and dressing it as code would say it was something to type");
+    let written = text_combine("This writes out ", word);
+    html_div_cycle_code(c, [written]);
+    let quote = js_string_quote();
+    html_div_cycle_code(c, [
+      "The quote marks ",
+      quote,
+      " are not written out",
+    ]);
   }
 }
