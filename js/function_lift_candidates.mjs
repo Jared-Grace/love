@@ -18,23 +18,7 @@ export async function function_lift_candidates(f_name) {
   let read = await function_ast_nested(f_name);
   let ast = property_get(read, "ast");
   let nested = property_get(read, "nested");
-  let names_nested = list_map(nested, js_function_declaration_name);
-  let rows = [];
-  for (let declaration of nested) {
-    let reading = await js_function_nested_lift_reading(ast, declaration);
-    let passed_is = property_list_empty_not_is(reading, "stray_at");
-    let writes_is = property_list_empty_not_is(reading, "written_closed");
-    let refused_is = or(passed_is, writes_is);
-    if (refused_is) {
-      continue;
-    }
-    let row = function_lift_candidate_row(reading, declaration, names_nested);
-    let small_is = null_is(row);
-    if (small_is) {
-      continue;
-    }
-    list_add(rows, row);
-  }
-  let ranked = lift_candidates_cut_order(rows);
+  let readings = await function_lift_nested_readings(ast, nested);
+  let ranked = function_lift_candidate_rows(nested, readings);
   return ranked;
 }
