@@ -1,3 +1,4 @@
+import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
 import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
@@ -8,18 +9,12 @@ import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { app_shared_hash_fields_unknown_told_is } from "./app_shared_hash_fields_unknown_told_is.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
-import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
-import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
-import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { app_shared_bible_chapter_code_default } from "./app_shared_bible_chapter_code_default.mjs";
 import { html_bar_foot } from "./html_bar_foot.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
-import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_number_gutter.mjs";
-import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
-import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -27,55 +22,37 @@ import { app_shared_bible_reference_hash_key } from "./app_shared_bible_referenc
 import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
-import { html_style_justify_self } from "./html_style_justify_self.mjs";
-import { text_rtl_is } from "./text_rtl_is.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
 import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
-import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
 import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
 import { app_shared_bible_ref_chapter_codes } from "./app_shared_bible_ref_chapter_codes.mjs";
 import { app_shared_bible_ref_chapters_guard } from "./app_shared_bible_ref_chapters_guard.mjs";
-import { html_button_share_text } from "./html_button_share_text.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { promise_later } from "./promise_later.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
 import { list_map_add_async } from "./list_map_add_async.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
-import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
 import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
 import { number_to_words } from "./number_to_words.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_p } from "./html_p.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-import { html_display_none } from "./html_display_none.mjs";
-import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
-import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -88,9 +65,6 @@ import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.m
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { html_display_grid } from "./html_display_grid.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_dismissable_message } from "./app_shared_dismissable_message.mjs";
@@ -264,103 +238,25 @@ export async function app_shared_bible_read(context, verse_action) {
   }
   verse_numbers_chosen = list_filter(verse_numbers_chosen, verse_here_is);
   async function render_verse(v) {
-    let property_name3 = verse_number_key();
-    let verse_number_v = property_get(v, property_name3);
-    let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
-    let verse_book_code = ebible_chapter_code_to_book(verse_chapter_code);
-    let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
-    let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
-    let p = html_p(content);
-    html_display_grid(p);
-    let left = app_shared_bible_verse_number_gutter();
-    let columns = text_combine(left, " 1fr");
-    html_style_set(p, "grid-template-columns", columns);
-    let style_value = app_shared_spaced_small_gap();
-    html_style_set(p, "column-gap", style_value);
-    ("when the primary (spine) language reads right-to-left, mirror the whole verse row: direction rtl moves the number gutter to the right and flows the row right-to-left, matching the verse text's own detected direction, so an RTL reader gets RTL numbers too");
-    let primary_text = property_get_or(v, "text", "");
-    let row_rtl = text_rtl_is(primary_text);
-    if (row_rtl) {
-      html_style_set(p, "direction", "rtl");
-    }
-    let r = app_shared_bible_toggle_update(
+    let r2 = await app_shared_bible_read_verse_row(
+      v,
+      chapter_code,
+      books_en,
+      content,
       updates,
       verse_numbers_chosen,
-      verse_number_v,
-      verse_chapter_code,
       languages_verses,
-      p,
-    );
-    let select = property_get(r, "select");
-    function select_persist() {
-      select();
-      app_shared_bible_read_persist_selection(verse_numbers_chosen);
-      dismiss_help();
-      app_shared_bible_read_count_refresh(
-        verse_numbers_chosen,
-        max,
-        count_status,
-      );
-    }
-    let number = app_shared_button(p, verse_number_v, select_persist);
-    ("each verse row is its own grid, so the number gutter is a fixed track and the button inside it used to size itself to its digits - a one-digit button came out narrower than a two-digit one. Stretching the button across the whole track is what makes every verse number button the same width, zero side padding keeps a three-digit number (Psalm 119) inside that width, and centering puts the digits in the middle of the button");
-    html_style_justify_self(number, "stretch");
-    html_style_padding_x(number, "0");
-    html_centered(number);
-    let text_cell = html_div(p);
-    let entries = app_shared_bible_verse_entries(
-      languages_verses,
-      verse_number_v,
+      dismiss_help,
+      max,
+      count_status,
       show_language_names,
+      verse_action,
+      context,
+      t,
+      languages_chosen,
+      verse_rows,
     );
-    app_shared_bible_verse_texts(text_cell, entries);
-    html_margin_0(p);
-    ("a verse row's own inset, and the two directions are deliberately not the same number. Down the page the padding is a separation - it is what holds one verse apart from the next - so it keeps a gap the eye can read. Left and right it is an edge, sitting on top of the reading column's own edge gap and pushing the verse number away from the side of the screen twice over, which is the narrowest thing on a phone made narrower for nothing. The row above the first verse is the same padding worn against the chapter bar, so a smaller number closes that band too.");
-    let value = app_shared_spaced_neighbor_gap();
-    html_style_padding_y(p, value);
-    let value2 = app_shared_spaced_frame_gap();
-    html_style_padding_x(p, value2);
-    let update = property_get(r, "update");
-    let copy = property_get(r, "copy");
-    let actions = html_div(content);
-    html_centered(actions);
-    html_display_none(actions);
-    let verse_buttons = html_div(actions);
-    app_shared_bible_biblehub_buttons(
-      verse_buttons,
-      verse_chapter_name,
-      verse_book_name,
-      verse_number_v,
-    );
-    ("the switch to the other reader stands right after the reference buttons and before copy, in the order the single-verse view puts the same row in, so moving between the two readers does not move the buttons under your thumb");
-    verse_action(context, actions, verse_chapter_code, verse_number_v);
-    app_shared_button(actions, t, copy);
-    async function share() {
-      await app_shared_bible_share(
-        verse_book_name,
-        verse_chapter_name,
-        verse_numbers_chosen,
-        languages_chosen,
-      );
-    }
-    let text = html_button_share_text();
-    app_shared_button(actions, text, share);
-    function row_update() {
-      update();
-      let right = app_shared_bible_read_selection_last(verse_numbers_chosen);
-      let is_last = equal(verse_number_v, right);
-      let hidden = not(is_last);
-      html_display_none_or_block(hidden, actions);
-      let b2 = list_multiple_is(verse_numbers_chosen);
-      let single = is_last && not(b2);
-      let hidden2 = not(single);
-      html_display_none_or_block(hidden2, verse_buttons);
-    }
-    list_add(verse_rows, {
-      verse_number: verse_number_v,
-      p,
-    });
-    return row_update;
+    return r2;
   }
   await list_map_add_async(primary_verses, render_verse, updates);
   html_page_bottom_space(content);

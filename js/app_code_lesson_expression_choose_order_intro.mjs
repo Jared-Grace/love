@@ -1,3 +1,4 @@
+import { html_hr } from "./html_hr.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
@@ -18,6 +19,9 @@ export function app_code_lesson_expression_choose_order_intro(
     "But, for now, we will teach you to solve this step-by-step:",
   ]);
   app_shared_spaced_below(step_by_step);
+  ("and a line is drawn right across underneath it, because what follows is not more of the saying - it is the working itself starting, and the two want telling apart by something a learner can see rather than by a gap they have to notice");
+  ("A gap alone says the next thing is a little further off. It reads as a paragraph break, which is what stands between the first of these lines and the second, so the same mark cannot also say that the reading has finished and the doing has begun.");
+  html_hr(parent);
   let rule = app_code_lesson_expression_choose_order_rule_parts(
     "In ",
     whole_line,
