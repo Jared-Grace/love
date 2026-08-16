@@ -53,7 +53,8 @@ export function app_code_expression_choose_line(
         chosen = true;
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
-        await on_chosen(node, node_value);
+        ("the green block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
+        await on_chosen(node, node_value, node_span);
         app_code_expression_replaced_set(node_span, node_value);
         await sleep_success_color();
         let stepped = app_code_expression_solved(current, node);
