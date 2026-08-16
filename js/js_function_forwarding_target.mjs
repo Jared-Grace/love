@@ -13,12 +13,8 @@ export function js_function_forwarding_target(node) {
   "The name of the function this one hands its arguments to and does nothing else with, or nothing when this function does anything more than that.";
   "A function whose whole body is one call, given every argument it received, in the order it received them, is a second name for the function it calls. Wherever it is passed, the function it calls can be passed instead.";
   "Three shapes count as that one call, because the pass writes the same thing three ways: a return of the call, the call alone, and a name given the call followed by a return of that name.";
-  "Waiting is refused rather than handled. A function marked async hands back a promise even when the function it calls hands back a plain value, so a caller that does not wait would receive different things before and after. That is a real case and it needs the caller read as well, which this reading does not do.";
+  "A function that waits for the answer of that one call counts too, and this reading hands back the name it calls the same way. Whether the two are interchangeable then rests on the function called being one that waits as well, which is a reading of another file and belongs to the caller of this one.";
   "The name called is refused when it is one of the parameters, because a parameter has no meaning outside the function, and refused when it is this function's own name, because the call is then part of the function rather than a hand-off.";
-  let async_is = property_get(node, "async");
-  if (async_is) {
-    return null;
-  }
   let params = property_get(node, "params");
   function plain_is(param) {
     let type_is = js_node_type_is(param, "Identifier");
