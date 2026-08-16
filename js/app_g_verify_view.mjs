@@ -1,3 +1,4 @@
+import { app_g_verify_view_approve_bar } from "./app_g_verify_view_approve_bar.mjs";
 import { app_g_verify_view_line_lists } from "./app_g_verify_view_line_lists.mjs";
 import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_panel.mjs";
 import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
@@ -110,27 +111,13 @@ export async function app_g_verify_view(
     order_comps,
   );
   app_g_verify_view_links_bar(container, small_gap, chapter_code, verse);
-  let approve_bar = html_div(container);
-  html_style_margin_top(approve_bar, small_gap);
-  html_centered(approve_bar);
-  async function on_approve() {
-    try {
-      await app_shared_api({
-        f_name: fn_name("g_verify_approval_set"),
-        args: [chapter_code, verse],
-      });
-      html_clear(approve_bar);
-      let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
-      app_shared_text_deemphasized(done);
-      on_approved(verse);
-    } catch (failed) {
-      html_clear(approve_bar);
-      let msg = html_p_text(approve_bar, "Couldn't save — please try again.");
-      app_shared_text_deemphasized(msg);
-      app_shared_button(approve_bar, "Approve v" + verse, on_approve);
-    }
-  }
-  app_shared_button(approve_bar, "Approve v" + verse, on_approve);
+  app_g_verify_view_approve_bar(
+    container,
+    small_gap,
+    chapter_code,
+    verse,
+    on_approved,
+  );
   app_g_verify_view_label_new("SUGGEST AN EDIT", container, small_gap);
   let suggest_area = html_textarea(container);
   function lambda17(l) {
