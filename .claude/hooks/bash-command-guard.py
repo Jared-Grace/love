@@ -4100,6 +4100,116 @@ def journalctl_daemon_unit_deny_reason(unit):
     )
 
 
+GREP_PLAIN_PATTERN_CHARACTERS = set(
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
+)
+
+# The only short flags kept: r/R ask for the recursive walk this floor is about,
+# and n/l/h/c only change how the same matches are printed - a line number, the
+# file names alone, no file name, a count - every one of which is already in the
+# records the named search hands back. Anything else (-i, -w, -v, -E, -P, -F,
+# -A/-B/-C, --include ...) changes WHICH lines match, and the named search has no
+# answer for it, so its presence takes the whole command out of this floor.
+GREP_PLAIN_FLAG_LETTERS = set("rRnlhc")
+GREP_RECURSIVE_FLAG_LETTERS = set("rR")
+
+
+def grep_word_inside_repo_is(path):
+    """True when `path` names something this repo holds, so the named search can
+    answer for it. An absolute path must sit at or under REPO_ROOT; a relative
+    one must not climb out with `..`, and is read as repo-relative because that
+    is where these commands are run from. A `~` or a variable is not resolvable
+    here and so is never claimed."""
+    if path.startswith("~") or "$" in path:
+        return False
+    if os.path.isabs(path):
+        normalized = os.path.normpath(path)
+        return normalized == REPO_ROOT or normalized.startswith(REPO_ROOT + os.sep)
+    if path.startswith("-"):
+        return False
+    parts = os.path.normpath(path).split(os.sep)
+    return ".." not in parts
+
+
+def find_repo_plain_recursive_grep(command):
+    """If any statement/pipe segment in `command` walks this repo's files for a
+    plain word with grep, return that word so main() can DENY it with a pointer
+    at the named search. Else None.
+
+    This is the shape the sessions ran by hand more than any other: a recursive
+    grep for one ordinary word over the repo, ending in a pipe because the answer
+    came back as printed lines rather than as records. `repo_lines_search` gives
+    the same matches back as records - the file, the place, the line - and holds
+    a standing approval, which the raw command cannot, because it takes a word
+    and can only ever look in one folder.
+
+    Deliberately narrow, and every narrowing is a case the named search cannot
+    answer. The program must be exactly grep; the walk must be recursive; every
+    flag must be one that changes only how matches are printed; the pattern must
+    be a single plain word with no regular-expression character in it, since the
+    named search matches the text as written; and every path given must be one
+    this repo holds. A command failing any of those falls through untouched.
+
+    Unlike the other floors here, grep IS auto-approved, so this one converts an
+    'allow' into a 'deny' rather than an 'ask' into one. That is why the slice is
+    drawn where it is: inside it the named search returns the same matches, so
+    the cost of being wrong is one redirect Claude can answer in the loop, and
+    the guard corpus pins both directions."""
+    for words in statements_words(command):
+        if not words or words[0] != "grep":
+            continue
+        recursive = False
+        flags_plain = True
+        positional = []
+        for word in words[1:]:
+            if word == "--recursive":
+                recursive = True
+                continue
+            if word.startswith("--"):
+                flags_plain = False
+                break
+            if word.startswith("-") and len(word) > 1:
+                letters = set(word[1:])
+                if not letters <= GREP_PLAIN_FLAG_LETTERS:
+                    flags_plain = False
+                    break
+                if letters & GREP_RECURSIVE_FLAG_LETTERS:
+                    recursive = True
+                continue
+            positional.append(word)
+        if not flags_plain or not recursive:
+            continue
+        if len(positional) < 2:
+            continue
+        pattern = positional[0]
+        if not pattern:
+            continue
+        if not set(pattern) <= GREP_PLAIN_PATTERN_CHARACTERS:
+            continue
+        paths = positional[1:]
+        if all(grep_word_inside_repo_is(path) for path in paths):
+            return pattern
+    return None
+
+
+def repo_plain_recursive_grep_deny_reason(word):
+    return (
+        f"Walking this repo for `{word}` with grep is refused: the repo already "
+        f"has a named search for it. Run `node scripts/ai.mjs repo_lines_search "
+        f"{word}` instead - it hands every matching line back as records, each "
+        "carrying the file it came from and the place it sits at, so the answer "
+        "needs no pipe to be read. It takes a word and nothing else, which is "
+        "what lets it hold a standing approval where a search that receives a "
+        "folder never could. For the memory notes rather than the code, the "
+        "same shape is `node scripts/ai.mjs memory_lines_search <word>`; for "
+        "which functions mention a name, `node scripts/ai.mjs "
+        "data_identifiers_search <name>`. Only this one shape is refused - a "
+        "grep with a real pattern, a case-insensitive or inverted or "
+        "word-bounded match, a folder outside this repo, or a read of a single "
+        "file is untouched, because the named search has no answer for those."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
