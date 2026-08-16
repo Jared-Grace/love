@@ -1,9 +1,9 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { js_node_self_read_is } from "./js_node_self_read_is.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
@@ -55,8 +55,11 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
       why: "this function hands its answers back one at a time as they are asked for, and the line left behind would call the moved body once and hand back the whole thing that does the handing rather than being it. Moving one of these needs the line left behind to pass every request along, which is not what this move writes.",
     });
   }
-  let params = property_get(declaration, "params");
-  let param_names = list_map(params, js_identifier_name_try);
+  let param_names = property_list_map(
+    declaration,
+    "params",
+    js_identifier_name_try,
+  );
   let pattern_is = list_includes(param_names, null);
   if (pattern_is) {
     list_add(refusals, {
