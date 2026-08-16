@@ -1,9 +1,10 @@
+import { app_code_lesson_statement_name_value_two_names } from "./app_code_lesson_statement_name_value_two_names.mjs";
+import { app_code_lesson_statement_name_value_pair_codes } from "./app_code_lesson_statement_name_value_pair_codes.mjs";
+import { app_code_lesson_statement_name_value_batch } from "./app_code_lesson_statement_name_value_batch.mjs";
 import { app_code_lesson_statement_name_value_above } from "./app_code_lesson_statement_name_value_above.mjs";
-import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -12,12 +13,7 @@ import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
-import { list_chunk } from "./list_chunk.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_second } from "./list_second.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { range_map } from "./range_map.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_statement_name_value() {
   arguments_assert(arguments, 0);
@@ -51,13 +47,15 @@ export function app_code_lesson_statement_name_value() {
     return code;
   }
   function two_names(other, value) {
-    "two names given values, and only the second of them written out - the first is there to be read past";
-    let v3 = held_of(name_a, other);
-    let v4 = held_of(name_b, value);
-    let v5 = log_of(name_b);
-    let lines = [v3, v4, v5];
-    let code = list_join_newline(lines);
-    return code;
+    let r4 = app_code_lesson_statement_name_value_two_names(
+      other,
+      value,
+      held_of,
+      name_a,
+      name_b,
+      log_of,
+    );
+    return r4;
   }
   function number_of(index) {
     "the numbers a value may be, one through the largest this course uses";
@@ -65,16 +63,19 @@ export function app_code_lesson_statement_name_value() {
     return number;
   }
   function pair_to_codes(pair) {
-    "the two questions a pair of numbers makes: the first number asked on its own, and then asked again as the name that is NOT written out, so the value a learner would give by reading the wrong line is the answer of the question standing beside it";
-    let first = list_first(pair);
-    let second = list_second(pair);
-    let v6 = one_name(first);
-    let v7 = two_names(first, second);
-    let codes = [v6, v7];
-    return codes;
+    let r3 = app_code_lesson_statement_name_value_pair_codes(
+      pair,
+      one_name,
+      two_names,
+    );
+    return r3;
   }
   function batch_get() {
-    return app_code_lesson_statement_name_value_batch(number_of, pair_to_codes);
+    let r2 = app_code_lesson_statement_name_value_batch(
+      number_of,
+      pair_to_codes,
+    );
+    return r2;
   }
   let batch = app_code_batch_question_answer_fns(
     batch_get,
@@ -102,14 +103,4 @@ export function app_code_lesson_statement_name_value() {
     forwards_answer_count_override: null,
   });
   return lesson;
-}
-function app_code_lesson_statement_name_value_batch(number_of, pair_to_codes) {
-  arguments_assert(arguments, 2);
-  ("four questions whose four answers are all different, so no two buttons are right at once");
-  let max = app_code_lesson_operators_value_max();
-  let numbers = range_map(max, number_of);
-  let taken = list_shuffle_take(numbers, 4);
-  let pairs = list_chunk(taken, 2);
-  let codes = list_map_concat_multiple(pairs, pair_to_codes);
-  return codes;
 }
