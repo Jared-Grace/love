@@ -18,11 +18,10 @@ export async function app_original_bible_gloss_parsings_exceeding_chapters() {
   let folder = local_function_folder(fn);
   let file_names = await folder_read_files_exists_ensure(folder);
   let chapter_codes = list_map(file_names, file_name_json_name);
-  async function chapter_read(chapter_code) {
-    let found = await app_original_bible_gloss_parsings_exceeding(chapter_code);
-    return found;
-  }
-  let answers = await list_map_async(chapter_codes, chapter_read);
+  let answers = await list_map_async(
+    chapter_codes,
+    app_original_bible_gloss_parsings_exceeding,
+  );
   function exceeding_is(chapter) {
     let offending = property_list_empty_not_is(chapter, "exceeding");
     return offending;
