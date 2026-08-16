@@ -1,3 +1,5 @@
+import { js_expression_call_only } from "./js_expression_call_only.mjs";
+import { equal } from "./equal.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
