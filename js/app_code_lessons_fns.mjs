@@ -1,3 +1,4 @@
+import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
 import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
@@ -160,6 +161,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log,
     app_code_lesson_functions_console_log_statement,
     app_code_lesson_functions_console_log_arithmetic,
+    app_code_lesson_functions_console_log_string,
     app_code_lesson_expression_remainder_2,
     app_code_lesson_expression_remainder_3,
     app_code_lesson_expression_remainder_4,
