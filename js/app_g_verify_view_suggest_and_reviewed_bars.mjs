@@ -27,7 +27,8 @@ export function app_g_verify_view_suggest_and_reviewed_bars(
   value,
 ) {
   arguments_assert(arguments, 8);
-  let reviewed_badge = null;
+  ("the badge is held on an object rather than under a name of its own because two buttons share it: the one below writes it when the loop's answer comes back, and the Send button above reads it to hide a badge a fresh suggestion has superseded. A name would give each of them its own copy the moment these two halves were ever pulled apart; setting something on an object changes the one thing both are looking at, so they go on agreeing.");
+  let reviewed = {};
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
   html_centered(suggest_bar);
@@ -60,8 +61,8 @@ export function app_g_verify_view_suggest_and_reviewed_bars(
       } catch (ignore_clear) {
         ignore_clear;
       }
-      if (reviewed_badge) {
-        html_display_none(reviewed_badge);
+      if (reviewed.badge) {
+        html_display_none(reviewed.badge);
       }
     } catch (failed) {
       html_clear(suggest_bar);
@@ -101,12 +102,11 @@ export function app_g_verify_view_suggest_and_reviewed_bars(
         let value9 = app_shared_font_size_label();
         html_style_font_size(badge, value9);
         html_style_margin_top(badge, small_gap);
-        reviewed_badge = badge;
+        reviewed.badge = badge;
       }
     } catch (ignore) {
       ignore;
     }
   }
   reviewed_show();
-  ("show the reviewer their own past suggestions for this verse; Load drops one back into the box to view or build on");
 }
