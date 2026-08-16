@@ -1,6 +1,6 @@
+import { git_history_tracked_blobs } from "./git_history_tracked_blobs.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { git_head_tracked } from "./git_head_tracked.mjs";
-import { git_history_blobs } from "./git_history_blobs.mjs";
 import { path_folders_containing } from "./path_folders_containing.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -14,8 +14,9 @@ export async function git_history_folder_bytes(folder) {
   "The gone weight is the half that can be acted on. What the present still holds has to stay, whatever it weighs; every earlier version of it is being carried for nothing, and the difference between those two is exactly the decision being made.";
   "Whether the present still holds a file is asked of the file itself and never of its name. Its neighbour asks by name, rightly, because a rewrite is told which names to drop - but a folder that is rebuilt keeps every one of its names forever while replacing what is under them, so asking by name there answers that the whole of it is still wanted when almost none of it is. Asked that way, the folder holding this repository's builds reported one twenty-fourth of its weight as dead; asked of the files, nearly two thirds of it is.";
   arguments_assert(arguments, 1);
-  let tracked = await git_head_tracked(folder);
-  let blobs = await git_history_blobs(folder);
+  let r = await git_history_tracked_blobs(folder);
+  let blobs = property_get(r, "blobs");
+  let tracked = property_get(r, "tracked");
   let held = {};
   let dropped = {};
   for (let blob of blobs) {
