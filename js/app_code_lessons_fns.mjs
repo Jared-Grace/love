@@ -1,3 +1,4 @@
+import { app_code_lesson_console_log_string } from "./app_code_lesson_console_log_string.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
 import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
@@ -200,6 +201,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_not_comparison,
     app_code_lesson_expression_not_equal_same,
+    app_code_lesson_console_log_string,
     app_code_lesson_statement_name_value,
   ];
   return fns;
