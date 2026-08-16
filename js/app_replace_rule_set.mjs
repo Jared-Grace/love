@@ -1,3 +1,4 @@
+import { app_replace_rule_set_header } from "./app_replace_rule_set_header.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
@@ -8,17 +9,13 @@ import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs
 import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
-import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { app_replace_rule_set_refresh_rb } from "./app_replace_rule_set_refresh_rb.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
-import { html_progress_bar } from "./html_progress_bar.mjs";
-import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
@@ -38,8 +35,6 @@ import { list_take } from "./list_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_to_indices } from "./list_to_indices.mjs";
 import { equal } from "./equal.mjs";
-import { emoji_question } from "./emoji_question.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "./app_replace_rule_set_rules_get.mjs";
 import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
 import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
@@ -125,17 +120,15 @@ export async function app_replace_rule_set(context) {
       button_rule_on_click_inner(index_rule);
     }
   }
-  let left = emoji_question();
-  let hint_text = text_combine(left, "Hint");
-  let hint_button = app_shared_button(root, hint_text, on_hint);
-  let value4 = app_replace_rule_set_attribute_hint();
-  html_data_set_test(hint_button, value4);
-  app_replace_rule_set_title(context);
-  let progress = html_progress_bar(root, goal_index, goals_count, "goal");
-  let container = property_get(progress, "container");
-  html_style_margin_top(container, "0");
-  let div_abbreviations = html_div(root);
-  let label_rules = html_p(root);
+  let r = app_replace_rule_set_header(
+    root,
+    on_hint,
+    context,
+    goal_index,
+    goals_count,
+  );
+  let label_rules = property_get(r, "label_rules");
+  let div_abbreviations = property_get(r, "div_abbreviations");
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
