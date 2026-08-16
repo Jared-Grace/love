@@ -1,3 +1,4 @@
+import { app_g_verify_home_book_row } from "./app_g_verify_home_book_row.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
@@ -5,7 +6,6 @@ import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
 import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs";
 import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
 import { app_g_verify_banner_font_size } from "./app_g_verify_banner_font_size.mjs";
@@ -49,12 +49,10 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
-import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
-import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
@@ -183,37 +181,13 @@ export async function app_g_verify_home(context) {
     }
     chapter_codes.forEach(lambda3);
     function book_row(book) {
-      let row = html_div_centered(cbar);
-      let text2 = g_verify_book_name(book);
-      let book_label = html_p_text(row, text2);
-      app_shared_text_deemphasized(book_label);
-      let value6 = app_shared_font_size_label();
-      html_style_font_size(book_label, value6);
-      html_margin_em(book_label, "0");
-      function lambda4(code) {
-        let v4 = code.slice(3);
-        let v5 = Number(v4);
-        let r = String(v5);
-        return r;
-      }
-      function lambda5(code) {
-        if (not_equal(code, chapter_code)) {
-          location.href = g_verify_chapter_url(location.pathname, code);
-        }
-      }
-      let buttons = app_shared_button_list_centered(
-        row,
-        book_chapters[book],
-        lambda4,
-        lambda5,
+      let r = app_g_verify_home_book_row(
+        book,
+        cbar,
+        chapter_code,
+        book_chapters,
       );
-      function lambda6(code, i) {
-        if (equal(code, chapter_code)) {
-          let background = app_shared_verse_selected_background_color();
-          html_style_background_color_set(buttons[i], background);
-        }
-      }
-      book_chapters[book].forEach(lambda6);
+      return r;
     }
     book_order.forEach(book_row);
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
@@ -238,8 +212,8 @@ export async function app_g_verify_home(context) {
         text = text + "  " + note;
       }
       let banner = html_p_text(wrap, text);
-      let background2 = app_shared_milestone_background_color();
-      html_style_background_color_set(banner, background2);
+      let background = app_shared_milestone_background_color();
+      html_style_background_color_set(banner, background);
       html_font_color_set(banner, "white");
       let border_radius = app_shared_border_radius();
       html_border_radius(banner, border_radius);
