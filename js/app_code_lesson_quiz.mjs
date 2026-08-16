@@ -1,3 +1,4 @@
+import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
@@ -69,7 +70,10 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   let container_question = property_get(a, "container_question");
-  let answer_label_div = app_code_example_answer_label(a_container, answer_label);
+  let answer_label_div = app_code_example_answer_label(
+    a_container,
+    answer_label,
+  );
   function answer_label_set(said) {
     "let a quiz say something new over its answers, for the quizzes whose question is worked out in steps and whose asking changes as the steps go";
     app_code_label_text_set(answer_label_div, said);

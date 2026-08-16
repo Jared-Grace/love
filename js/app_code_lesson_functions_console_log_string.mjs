@@ -1,7 +1,6 @@
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_style_normal_span } from "./app_code_style_normal_span.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
