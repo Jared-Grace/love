@@ -25,11 +25,7 @@ export async function binisaya_affixes_vocabulary() {
     list_add_multiple(pieces, split);
   }
   each(held, word_read);
-  function empty_not_is(piece) {
-    let readable = text_empty_not_is(piece);
-    return readable;
-  }
-  let kept = list_filter(pieces, empty_not_is);
+  let kept = list_filter(pieces, text_empty_not_is);
   let r = list_tally(kept);
   return r;
 }
