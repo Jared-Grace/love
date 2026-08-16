@@ -1422,6 +1422,8 @@ export function permission_grant_names() {
   let spelled1389 = fn_name("lift_candidate_size_least");
   let spelled1390 = fn_name("bible_chapter_testament_name");
   let spelled1391 = fn_name("app_original_bible_gloss_write_passage");
+  let spelled1392 = fn_name("webpack_build");
+  let spelled1393 = fn_name("guard_corpus_live_name_never_granted");
   let names = [
     spelled,
     spelled2,
@@ -2814,6 +2816,8 @@ export function permission_grant_names() {
     spelled1389,
     spelled1390,
     spelled1391,
+    spelled1392,
+    spelled1393,
   ];
   return names;
 }

@@ -1477,6 +1477,8 @@
       "Bash(node scripts/ai.mjs lift_candidate_size_least:*)",
       "Bash(node scripts/ai.mjs bible_chapter_testament_name:*)",
       "Bash(node scripts/ai.mjs app_original_bible_gloss_write_passage:*)",
+      "Bash(node scripts/ai.mjs webpack_build:*)",
+      "Bash(node scripts/ai.mjs guard_corpus_live_name_never_granted:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -2868,6 +2870,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args lift_candidate_size_least:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_chapter_testament_name:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_write_passage:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args webpack_build:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args guard_corpus_live_name_never_granted:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4258,6 +4262,8 @@
       "Bash(node scripts/aig.mjs lift_candidate_size_least:*)",
       "Bash(node scripts/aig.mjs bible_chapter_testament_name:*)",
       "Bash(node scripts/aig.mjs app_original_bible_gloss_write_passage:*)",
+      "Bash(node scripts/aig.mjs webpack_build:*)",
+      "Bash(node scripts/aig.mjs guard_corpus_live_name_never_granted:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -5648,7 +5654,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args function_lift_wrapper_candidates:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args lift_candidate_size_least:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_chapter_testament_name:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_write_passage:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_write_passage:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args webpack_build:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args guard_corpus_live_name_never_granted:*)"
     ],
     "defaultMode": "acceptEdits"
   },
