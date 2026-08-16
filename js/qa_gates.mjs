@@ -1,3 +1,4 @@
+import { app_original_bible_gloss_parsings_gate_run } from "./app_original_bible_gloss_parsings_gate_run.mjs";
 import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
 import { machine_path_literals_gate_run } from "./machine_path_literals_gate_run.mjs";
 import { hook_memory_root_gate_run } from "./hook_memory_root_gate_run.mjs";
@@ -494,6 +495,7 @@ export function qa_gates() {
     text_split_comma_nested_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
+    app_original_bible_gloss_parsings_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
