@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { app_shared_encouragement_step_exclamation } from "./app_shared_encouragement_step_exclamation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
@@ -23,14 +24,14 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
   let praise = app_shared_encouragement_step_exclamation();
   ("the working out is dark, and the two pieces named after it are green: the first is the block standing green on the line at this very moment, and the second is what that block is about to say instead - so the sentence points at the line rather than merely describing it");
   ("The working out stays dark on purpose. It is arithmetic being shown, not a piece of the line being pointed at, and green on all three would leave nothing for the green to mean.");
-  let cycles = [
-    noop,
-    html_style_code_dark_nowrap,
-    noop,
-    html_style_code_green_nowrap,
-    noop,
-    html_style_code_green_nowrap,
-  ];
+  ("the two green pieces are kept as they are made and handed back, because the swap on the line is shown travelling to the first of them and the second one travelling back down to the line - so the caller needs the very pieces of the page, not another copy of the words in them");
+  let greens = [];
+  function green(span) {
+    "style a piece green and remember it, in the one pass that makes it";
+    html_style_code_green_nowrap(span);
+    list_add(greens, span);
+  }
+  let cycles = [noop, html_style_code_dark_nowrap, noop, green, noop, green];
   html_div_cycle(note, cycles, [
     praise,
     worked_out,
@@ -39,4 +40,5 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
     " with ",
     value_text,
   ]);
+  return greens;
 }
