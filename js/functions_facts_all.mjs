@@ -1,21 +1,16 @@
+import { functions_facts_remembered_write } from "./functions_facts_remembered_write.mjs";
 import { functions_facts_entry } from "./functions_facts_entry.mjs";
-import { properties_size } from "./properties_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_paths } from "./functions_paths.mjs";
 import { functions_facts_cache_path } from "./functions_facts_cache_path.mjs";
 import { file_stamps_by_path } from "./file_stamps_by_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { each } from "./each.mjs";
 export async function functions_facts_all() {
   arguments_assert(arguments, 0);
   ("What every function file says about itself, reading only the ones that have");
@@ -50,38 +45,11 @@ export async function functions_facts_all() {
     return r2;
   }
   let entries = await list_map_unordered_async(f_paths, entry_of);
-  let keeping = {};
-  let read_again_count = 0;
-  function record(entry) {
-    let stamp = property_get(entry, "stamp");
-    let facts = property_get(entry, "facts");
-    if (null_is(stamp)) {
-      return;
-    }
-    let kept = {
-      written: property_get(stamp, "written"),
-      size: property_get(stamp, "size"),
-      facts,
-    };
-    let property_name = property_get(entry, "f_path");
-    property_set(keeping, property_name, kept);
-    let read_again = property_get(entry, "read_again");
-    if (read_again) {
-      read_again_count = read_again_count + 1;
-    }
-  }
-  each(entries, record);
-  let counted_before = properties_size(remembered);
-  let counted_now = properties_size(keeping);
-  let count_changed = not_equal(counted_before, counted_now);
-  let any_read_again = not_equal(read_again_count, 0);
-  let write_wanted = any_read_again || count_changed;
-  if (write_wanted) {
-    async function remembered_write() {
-      await file_overwrite_json(cache_path, keeping);
-    }
-    await catch_null_async(remembered_write);
-  }
+  let write_wanted = await functions_facts_remembered_write(
+    entries,
+    remembered,
+    cache_path,
+  );
   function facts_of(entry) {
     let facts = property_get(entry, "facts");
     return facts;
@@ -100,10 +68,10 @@ export async function functions_facts_all() {
   ("The stat pass has to happen either way - that is what makes the answer true -");
   ("but folding a hundred and forty thousand names into lookups does not.");
   let changed = write_wanted;
-  ("The whole-repo list is named apart from the one-file facts that three inner");
-  ("readings each bind, so neither hides the other. The word given up is the outer");
-  ("one because it is bound once and read once, while the inner three are each the");
-  ("plain word for what they hold.");
+  ("The whole-repo list is named apart from the one-file facts that the inner");
+  ("reading binds, so neither hides the other. The word given up is the outer one");
+  ("because it is bound once and read once, while the inner one is the plain word");
+  ("for what it holds.");
   let r = {
     facts: facts_all,
     changed,
