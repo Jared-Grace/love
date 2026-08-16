@@ -2,10 +2,7 @@ import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
 import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { number_is } from "./number_is.mjs";
 import { null_is } from "./null_is.mjs";
 export async function qa_commit_named_red_report() {
   "Which gates are red as of the last commit anybody judged - the commit itself, how far behind the folder it has fallen, and the gates it named. Asks no gates, so it costs about a second.";
