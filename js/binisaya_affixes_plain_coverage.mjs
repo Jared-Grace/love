@@ -26,11 +26,7 @@ export async function binisaya_affixes_plain_coverage() {
     analysed = analysed + 1;
     let affixes = property_get(entry, "affixes");
     let split = text_split(affixes, "~");
-    function readable_is(piece) {
-      let kept = text_empty_not_is(piece);
-      return kept;
-    }
-    let pieces = list_filter(split, readable_is);
+    let pieces = list_filter(split, text_empty_not_is);
     let none = list_size(pieces);
     if (equal(none, 0)) {
       return;
