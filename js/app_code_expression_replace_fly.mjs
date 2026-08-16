@@ -1,6 +1,7 @@
+import { app_code_expression_green_uncolored } from "./app_code_expression_green_uncolored.mjs";
+import { html_copy_fly_rect_changed } from "./html_copy_fly_rect_changed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
-import { html_copy_fly_rect } from "./html_copy_fly_rect.mjs";
 import { html_move_animate } from "./html_move_animate.mjs";
 import { html_translation_transition_clear } from "./html_translation_transition_clear.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -22,5 +23,13 @@ export async function app_code_expression_replace_fly(
   ("hidden rather than removed, and only then untranslated: it keeps its room so the line under it does not close up, and the untranslating is unseen because there is nothing left to see move");
   html_visibility_hidden(node_span);
   html_translation_transition_clear(node_span);
-  await html_copy_fly_rect(green_value, rect_from, duration);
+  ("the green comes off the block while it is hidden, at once and unseen, because the copy on its way down is the one carrying the green now and the block is only the room it lands in");
+  app_code_expression_green_uncolored(node_span);
+  ("and the copy loses its green over the whole of its journey, so what sets out is the value the sentence is holding up and what arrives is the value as the line spells it - one piece becoming part of the code rather than a green one landing and turning plain afterwards");
+  await html_copy_fly_rect_changed(
+    green_value,
+    rect_from,
+    duration,
+    app_code_expression_green_uncolored,
+  );
 }
