@@ -1,3 +1,4 @@
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_div } from "./html_div.mjs";
@@ -16,7 +17,8 @@ export function app_shared_gloss_bible_word_row(e, p, word_property) {
   let explain = property_get(e, "explain");
   let span = html_span_text(div, word);
   html_bold_mild(span);
-  html_font_color_set(span, "#b91c1cff");
+  let color3 = app_shared_color_red();
+  html_font_color_set(span, color3);
   let c = html_span_colon_2(div);
   let color = app_shared_color_gray();
   html_font_color_set(c, color);
