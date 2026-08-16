@@ -1,3 +1,4 @@
+import { app_shared_bible_verse_frame } from "./app_shared_bible_verse_frame.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { app_shared_bible_books_verses_fetch } from "./app_shared_bible_books_verses_fetch.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
@@ -10,12 +11,9 @@ import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_
 import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { app_shared_bible_chapter_hash_get } from "./app_shared_bible_chapter_hash_get.mjs";
-import { list_last_property } from "./list_last_property.mjs";
 import { app_shared_bar_content } from "./app_shared_bar_content.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { text_rtl_is } from "./text_rtl_is.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
@@ -24,7 +22,6 @@ import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
@@ -94,14 +91,9 @@ export async function app_shared_bible_home_generic(
   );
   let text_languages = property_get(r2, "text_languages");
   let languages_available = property_get(r2, "languages_available");
-  let p_verse = html_p(content);
-  let top = html_div(p_verse);
-  ("when the spine (last-chosen) language reads right-to-left, mirror the verse frame: the number moves to the right and the lines right-align, matching the chapter reader");
-  let spine_text = list_last_property(text_languages, "text");
-  let frame_rtl = text_rtl_is(spine_text);
-  if (frame_rtl) {
-    html_style_set(top, "direction", "rtl");
-  }
+  let r3 = app_shared_bible_verse_frame(content, text_languages);
+  let top = property_get(r3, "top");
+  let p_verse = property_get(r3, "p_verse");
   let bottom = html_p(p_verse);
   html_centered(bottom);
   ("the row under the verse is simply shown. It was reached through a name holding whether it was hidden and a function flipping that name, but the flipping was asked for exactly once and nothing else ever read the name, so the pair could only ever end one way - hidden set to true and immediately turned over. Whatever once turned it back has gone, and until it returns the machinery said nothing the one line does not.");
