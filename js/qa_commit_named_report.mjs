@@ -9,9 +9,6 @@ import { list_size } from "./list_size.mjs";
 import { true_is } from "./true_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { number_is } from "./number_is.mjs";
-import { and } from "./and.mjs";
 export async function qa_commit_named_report() {
   "What the record of judged commits currently holds, and how far behind the folder its freshest sound commit has fallen. Asks no gates and ships nothing, so it costs about a second.";
   "It answers the one question the per-app shipping path leaves a reader to work out by hand: can anything be sent out right now. The pieces were all there - the record says which commits were judged, git says how far each has fallen behind - and putting them together took a read of the record and one git call per entry, done by eye. That is the shape of a missing name, so here it is.";
