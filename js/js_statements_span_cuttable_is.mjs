@@ -1,10 +1,9 @@
-import { and } from "./and.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_escapes_unmatched } from "./js_statements_escapes_unmatched.mjs";
 import { js_statements_outer_assign_names } from "./js_statements_outer_assign_names.mjs";
 import { js_statements_span_outputs_written_names } from "./js_statements_span_outputs_written_names.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_empty_is_multiple } from "./list_empty_is_multiple.mjs";
 export function js_statements_span_cuttable_is(statements, tail) {
   arguments_assert(arguments, 2);
   (
