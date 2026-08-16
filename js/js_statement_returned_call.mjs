@@ -8,9 +8,6 @@ export function js_statement_returned_call(statement) {
     return null;
   }
   let argument = property_get(statement, "argument");
-  let call_is = js_node_type_is(argument, "CallExpression");
-  if (not(call_is)) {
-    return null;
-  }
-  return argument;
+  let call = js_expression_call_only(argument);
+  return call;
 }
