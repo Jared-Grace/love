@@ -1,3 +1,4 @@
+import { app_code_expression_arrived_green } from "./app_code_expression_arrived_green.mjs";
 import { app_code_expression_replace_await } from "./app_code_expression_replace_await.mjs";
 import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
 import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
@@ -69,7 +70,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     );
     return watched;
   }
-  function on_change(step) {
+  async function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";
     let current = property_get(step, "current");
     ("kept as the line is drawn again, so a refused press can be answered about the line as it stands rather than about the one the lesson opened with");
@@ -82,10 +83,17 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       app_code_expression_choose_say(note, ready, "So first, choose ");
       return;
     }
+    let value_index = property_get(step, "value_index");
+    let arrived = null;
     function change() {
-      app_code_expression_step_say(note, current, ready, line_code);
+      arrived = app_code_expression_step_say(note, current, ready, value_index);
     }
-    head_said(change);
+    await head_said(change);
+    ("the number that just arrived is picked out only once the words around it have stopped moving, because nothing here is read while anything is sliding - a colour coming up under a sentence still finding its place is a colour nobody sees arrive");
+    if (null_is(arrived)) {
+      return;
+    }
+    app_code_expression_arrived_green(arrived);
   }
   function on_wrong_example(node) {
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";

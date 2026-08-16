@@ -1,3 +1,4 @@
+import { permission_grant_names_fresh } from "./permission_grant_names_fresh.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { permission_grant_names_settings_write } from "./permission_grant_names_settings_write.mjs";
@@ -34,17 +35,19 @@ export async function permission_grant_add_multiple(names_comma) {
   list_empty_is_assert_json(refused, {
     hint: "these functions must not be given a standing approval, for the reasons listed against each - drop them from the batch, narrow each one until its reasons go away, or leave it asking",
   });
+  ("the list is read a second time here, off the file rather than out of memory, and the names are added to that. The check above spends a walk of the whole repo, and another Claude granting during that walk has rewritten the file since - so writing back the list this process started with drops whatever they added. That happened: seven grants a human had just approved were gone a minute later, with every gate still green, because the two files are regenerated together and so never disagree with each other.");
+  let names_now = await permission_grant_names_fresh();
   for (let unaliased of missing) {
-    let already = list_includes(names, unaliased);
+    let already = list_includes(names_now, unaliased);
     if (already) {
       continue;
     }
-    list_add(names, unaliased);
+    list_add(names_now, unaliased);
   }
-  let allow = await permission_grant_names_settings_write(names);
+  let allow = await permission_grant_names_settings_write(names_now);
   let report = {
     asked: asked.length,
-    names: names.length,
+    names: names_now.length,
     allow,
   };
   return report;

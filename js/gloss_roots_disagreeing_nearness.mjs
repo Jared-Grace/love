@@ -16,7 +16,7 @@ export function gloss_roots_disagreeing_nearness(offenders, sample_size) {
   let findings = [];
   function chapter_read(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
-    let disagreeing = property_get(chapter, "disagreeing");
+    let disagreeing = property_get(chapter, "found");
     function finding_read(finding) {
       let root = property_get(finding, "root");
       let explain = property_get(finding, "explain");

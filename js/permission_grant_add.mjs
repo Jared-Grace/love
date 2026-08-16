@@ -1,3 +1,5 @@
+import { permission_grant_names_fresh } from "./permission_grant_names_fresh.mjs";
+import { not } from "./not.mjs";
 import { permission_grant_names_settings_write } from "./permission_grant_names_settings_write.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -25,12 +27,18 @@ export async function permission_grant_add(unaliased) {
     unaliased,
     refusals,
   });
-  list_add(names, unaliased);
-  let allow = await permission_grant_names_settings_write(names);
+  ("the list is read a second time here, off the file rather than out of memory, because the check above spends a walk of the whole repo and another Claude granting during that walk has rewritten the file since. The batch adder says the rest of why.");
+  let names_now = await permission_grant_names_fresh();
+  ("asked again against the list as it is now, because the peer whose write this is merging into may have been granting this very name - and a name spelled twice renders the same rule twice");
+  let arrived = list_includes(names_now, unaliased);
+  if (not(arrived)) {
+    list_add(names_now, unaliased);
+  }
+  let allow = await permission_grant_names_settings_write(names_now);
   let report = {
     name: unaliased,
     added: true,
-    names: names.length,
+    names: names_now.length,
     allow,
   };
   return report;
