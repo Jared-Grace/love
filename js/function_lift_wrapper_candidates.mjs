@@ -1,15 +1,8 @@
+import { function_lift_wrapper_nested_readings } from "./function_lift_wrapper_nested_readings.mjs";
+import { function_lift_candidate_rows } from "./function_lift_candidate_rows.mjs";
 import { function_ast_nested_named } from "./function_ast_nested_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { null_is } from "./null_is.mjs";
-import { function_lift_candidate_row } from "./function_lift_candidate_row.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
-import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
-import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
-import { lift_candidates_cut_order } from "./lift_candidates_cut_order.mjs";
 export async function function_lift_wrapper_candidates(f_name) {
   arguments_assert(arguments, 1);
   ("Every function written inside the named one whose body could be moved out with its name left behind, with how many lines of work it holds and what it would have to be handed. Biggest first.");
@@ -18,22 +11,7 @@ export async function function_lift_wrapper_candidates(f_name) {
   let read = await function_ast_nested_named(f_name);
   let ast = property_get(read, "ast");
   let nested = property_get(read, "nested");
-  let names_nested = list_map(nested, js_function_declaration_name);
-  let rows = [];
-  for (let declaration of nested) {
-    let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
-    let refused_is = list_empty_not_is(refusals);
-    if (refused_is) {
-      continue;
-    }
-    let reading = await js_function_nested_lift_reading(ast, declaration);
-    let row = function_lift_candidate_row(reading, declaration, names_nested);
-    let small_is = null_is(row);
-    if (small_is) {
-      continue;
-    }
-    list_add(rows, row);
-  }
-  let ranked = lift_candidates_cut_order(rows);
+  let readings = await function_lift_wrapper_nested_readings(ast, nested);
+  let ranked = function_lift_candidate_rows(nested, readings);
   return ranked;
 }
