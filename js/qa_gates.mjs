@@ -1,3 +1,4 @@
+import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
 import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
 import { text_split_outside_quotes_cases_gate_run } from "./text_split_outside_quotes_cases_gate_run.mjs";
 import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
@@ -503,6 +504,7 @@ export function qa_gates() {
     bible_interlinear_base_dropped_gate_run,
     text_split_comma_nested_cases_gate_run,
     text_split_outside_quotes_cases_gate_run,
+    text_lines_ends_kept_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
     app_original_bible_gloss_parsings_gate_run,
