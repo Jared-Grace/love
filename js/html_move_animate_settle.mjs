@@ -18,6 +18,7 @@ export async function html_move_animate_settle(components, change, duration) {
   ("let a change of shape be watched happening rather than arriving finished: every piece that is still on the page afterwards is held where it was standing, and then let go so it slides to where it now belongs");
   ("Nothing here is told where anything goes. The page works the new shape out by its own rules and this only takes the difference between the two, so the same three lines carry any change at all - a word growing, a piece leaving, a line rewrapping.");
   ("Pieces the change threw away are left out, because a piece that is no longer anywhere has nowhere to slide to and everything measured of it reads as a corner of the screen.");
+  ("Held away from their places rather than drawn shifted, because most of what settles here is lettering inside a sentence - a number, a symbol, the space between them - and lettering cannot be drawn shifted at all. Asked to be, it stays exactly where it was and says nothing, so the whole settling reads as the jump it was written to remove.");
   let rects_from = list_map(components, html_bounding_client_rect);
   change();
   function held(component, index) {
@@ -29,7 +30,7 @@ export async function html_move_animate_settle(components, change, duration) {
     let rect_to = html_bounding_client_rect(component);
     let x = subtract(rect_from.left, rect_to.left);
     let y = subtract(rect_from.top, rect_to.top);
-    html_translation_set(component, x, y);
+    html_offset_set(component, x, y);
     return component;
   }
   let placed = list_map_index(components, held);
@@ -38,10 +39,10 @@ export async function html_move_animate_settle(components, change, duration) {
   each(moved, html_reflow_force);
   function released(component) {
     "let this piece take the whole while to come back to where it belongs";
-    html_transition_transform_set(component, duration);
-    html_translation_set(component, 0, 0);
+    html_transition_offset_set(component, duration);
+    html_offset_set(component, 0, 0);
   }
   each(moved, released);
   await sleep(duration);
-  html_translation_transition_clear_multiple(moved);
+  html_offset_transition_clear_multiple(moved);
 }
