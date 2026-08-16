@@ -1,4 +1,6 @@
-import { object_merge_set } from "./object_merge_set.mjs";
+import { object_merge } from "./object_merge.mjs";
+import { language_code_key } from "./language_code_key.mjs";
+import { property_set } from "./property_set.mjs";
 import { ebible_version_language_code } from "./ebible_version_language_code.mjs";
 import { ebible_version_downloaded_books_count } from "./ebible_version_downloaded_books_count.mjs";
 import { ebible_versions_commercial } from "./ebible_versions_commercial.mjs";
@@ -18,11 +20,13 @@ export async function ebible_versions_commercial_ranked() {
     ("The language is settled here rather than left as the page happened to give it, because everything downstream groups on it and eleven pages name none. Left alone those eleven gather into one nameless language nobody can be offered.");
     let language_code = ebible_version_language_code(version);
     let entry = object_copy(version);
-    ("Set rather than merged, because the language is already there on all but eleven of them and merging refuses to write over what is already written. Settling a value that is usually already settled is the whole job here.");
-    object_merge_set(entry, {
+    ("The count is merged, because it is new and merging refuses a name already taken - which is the check worth keeping.");
+    object_merge(entry, {
       books_count,
-      language_code,
     });
+    ("The language is written over on its own line, because on all but eleven of them it is already there and writing over it is the deliberate act rather than an accident merging would have caught.");
+    let property_name = language_code_key();
+    property_set(entry, property_name, language_code);
     return entry;
   }
   let versions = await list_map_async(commercial, counted);
