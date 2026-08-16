@@ -1,3 +1,4 @@
+import { app_search_results_verse_button } from "./app_search_results_verse_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
@@ -55,18 +56,6 @@ import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { html_border } from "./html_border.mjs";
 import { app_shared_border_radius_extra_large } from "./app_shared_border_radius_extra_large.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
-import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { html_remove } from "./html_remove.mjs";
-import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
-import { app_shared_bible_open } from "./app_shared_bible_open.mjs";
-import { emoji_book_open } from "./emoji_book_open.mjs";
-import { app_shared_bible_reference_entries } from "./app_shared_bible_reference_entries.mjs";
-import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_map } from "./list_map.mjs";
@@ -104,10 +93,10 @@ export function app_search_results_render(
   let up = emoji_triangle_up();
   let collapse_all_text = text_combine(up, " Collapse all");
   app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
-  let left2 = html_button_copy_text();
+  let left = html_button_copy_text();
   app_shared_button_wide_text_combine(
     div_results,
-    left2,
+    left,
     " all",
     copy_all_lambda,
   );
@@ -275,61 +264,14 @@ export function app_search_results_render(
     let chapter_header = html_div_text_bold(div_chapter, chapter_header_text);
     html_style_margin_bottom(chapter_header, "0.3em");
     function each_verse_number(verse_number) {
-      let div_verse = html_div(div_chapter);
-      html_display_inline_block(div_verse);
-      let reference = ebible_parts_chapter_code_to_reference(
+      let r2 = app_search_results_verse_button(
+        verse_number,
+        div_chapter,
         chapter_code,
         books,
-        [verse_number],
+        languages_chosen,
       );
-      let b = null;
-      async function click() {
-        let already_expanded = property_exists(b, "bible_texts");
-        if (already_expanded) {
-          return;
-        }
-        let bible_texts = [];
-        property_set_exists_not(b, "bible_texts", bible_texts);
-        html_display_block(div_verse);
-        html_remove(b);
-        let cb_text = html_button_copy_text();
-        let cb = app_shared_button_wide(div_verse, cb_text, copy);
-        html_style_margin_y(cb, "0.2em");
-        function lambda3() {
-          "this button offers the whole chapter, so land in the chapter reader with this verse in view";
-          let mode = app_shared_bible_mode_chapter();
-          app_shared_bible_open(
-            languages_chosen,
-            chapter_code,
-            verse_number,
-            mode,
-          );
-        }
-        let left = emoji_book_open();
-        let oc = app_shared_button_wide_text_combine(
-          div_verse,
-          left,
-          " Open chapter",
-          lambda3,
-        );
-        html_style_margin_y(oc, "0.2em");
-        let entries = await app_shared_bible_reference_entries(
-          reference,
-          languages_chosen,
-        );
-        ("the reference heads the verse the way it does in the supper and verses apps, set back so the words of the verse are what the eye lands on");
-        app_shared_bible_verse_block(div_verse, reference, entries);
-        ("what gets copied is the reference then each language's words, in the order they are read on the page");
-        list_add(bible_texts, reference);
-        let texts = list_map_property(entries, "text");
-        list_add_multiple(bible_texts, texts);
-        async function copy() {
-          await list_join_newline_2_copy(bible_texts);
-        }
-      }
-      b = app_shared_button_inline(div_verse, verse_number, click);
-      property_set_exists_not(b, "click", click);
-      return b;
+      return r2;
     }
     list_sort_number_mapper(verse_numbers, integer_to_try);
     let bs = list_map(verse_numbers, each_verse_number);
