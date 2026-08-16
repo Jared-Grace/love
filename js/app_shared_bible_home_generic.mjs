@@ -1,9 +1,9 @@
+import { app_shared_bible_home_chapter_data } from "./app_shared_bible_home_chapter_data.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { app_shared_bible_verse_buttons_row } from "./app_shared_bible_verse_buttons_row.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { app_shared_bible_verse_frame } from "./app_shared_bible_verse_frame.mjs";
 import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
-import { app_shared_bible_books_verses_fetch } from "./app_shared_bible_books_verses_fetch.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
@@ -19,8 +19,6 @@ import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { html_p } from "./html_p.mjs";
-import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
-import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -47,13 +45,11 @@ export async function app_shared_bible_home_generic(
   let chapter_code = app_shared_bible_chapter_hash_get(hash);
   ("The passage is remembered for this tab here, so that going off to choose another one can be changed one's mind about. It is said by the screen that shows the passage rather than by the button that leaves it, because there is more than one way out of here and only one way in - and said here rather than in each app, because every app that draws a verse this way draws it through this.");
   app_shared_bible_passage_kept_set(context, chapter_code, [verse_number_hash]);
-  let v = ebible_chapter_code_parse(chapter_code);
-  let chapter_name = property_get(v, "chapter_name");
-  let book_code = property_get(v, "book_code");
-  let r = await app_shared_bible_books_verses_fetch(chapter_code);
-  let verses = property_get(r, "verses");
+  let r = await app_shared_bible_home_chapter_data(chapter_code);
+  let book_name = property_get(r, "book_name");
   let books = property_get(r, "books");
-  let book_name = ebible_book_code_to_name(books, book_code);
+  let verses = property_get(r, "verses");
+  let chapter_name = property_get(r, "chapter_name");
   app_shared_bible_home_bar_buttons(
     bar,
     context,
@@ -132,8 +128,8 @@ export async function app_shared_bible_home_generic(
   app_shared_bible_verse_arrows(context, chapter_code, verse_current, content);
   html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
-  let v4 = {
+  let v = {
     bar,
   };
-  return v4;
+  return v;
 }
