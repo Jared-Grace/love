@@ -1427,6 +1427,10 @@ export function permission_grant_names() {
   let spelled1394 = fn_name("lock_waiting_dead_clear");
   let spelled1395 = fn_name("app_shared_latest_build");
   let spelled1396 = fn_name("git_commit_full");
+  let spelled1397 = fn_name("phone_report_write");
+  let spelled1398 = fn_name("function_work_table");
+  let spelled1399 = fn_name("function_work_size_excuse");
+  let spelled1400 = fn_name("functions_work_size_baseline_hand_over");
   let names = [
     spelled,
     spelled2,
@@ -2824,6 +2828,10 @@ export function permission_grant_names() {
     spelled1394,
     spelled1395,
     spelled1396,
+    spelled1397,
+    spelled1398,
+    spelled1399,
+    spelled1400,
   ];
   return names;
 }
