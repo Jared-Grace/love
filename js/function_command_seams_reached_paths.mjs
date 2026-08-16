@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_command_seams } from "./functions_command_seams.mjs";
+import { function_seams_reached_paths_memo } from "./function_seams_reached_paths_memo.mjs";
 export async function function_command_seams_reached_paths(f_name) {
   "For each command-running function this one can reach, the chain of calls that gets there - the evidence behind a refused permission grant, in the shape of names.";
   "An empty answer is the clean one, and it is the same clean answer its neighbour gives; what this adds is the other case. A refusal says a function reaches a shell or an eval and stops there, so the reader is left to guess whether the reach is what the function is for or something three names deep that nobody meant. Guessing is what this removes.";

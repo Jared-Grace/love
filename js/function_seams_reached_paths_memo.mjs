@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_exists_assert_json } from "./function_exists_assert_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { property_set } from "./property_set.mjs";
+import { function_imports_beyond_infrastructure_memo } from "./function_imports_beyond_infrastructure_memo.mjs";
+import { visit_unique_async } from "./visit_unique_async.mjs";
+import { not } from "./not.mjs";
 export async function function_seams_reached_paths_memo(
   f_name,
   seams,
