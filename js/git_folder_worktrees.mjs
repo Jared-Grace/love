@@ -1,3 +1,4 @@
+import { list_skip } from "./list_skip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
@@ -5,8 +6,6 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { git_object_name_path } from "./git_object_name_path.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { list_size } from "./list_size.mjs";
 export async function git_folder_worktrees(folder) {
   "$plain folder";
   "The other copies of this repository laid out elsewhere on the machine, not counting the one being asked.";
@@ -30,7 +29,6 @@ export async function git_folder_worktrees(folder) {
     return r;
   }
   let folders = list_map(named_lines, worktree_line_folder);
-  let index_b = list_size(folders);
-  let others = list_slice(folders, 1, index_b);
+  let others = list_skip(folders, 1);
   return others;
 }
