@@ -1,3 +1,5 @@
+import { text_combine } from "./text_combine.mjs";
+import { js_string_quote } from "./js_string_quote.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
@@ -14,7 +16,7 @@ import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_string() {
   arguments_assert(arguments, 0);
-  ("console.log given a string: console.log(\"joy\"); writes out joy");
+  ('console.log given a string: console.log("joy"); writes out joy');
   ("Both halves are already known - a string is lesson twenty and console.log is lesson fifty-seven - but they have never been put together, because every console.log so far has been given a number. So this is the one step between them, and it has to be taken on its own: the lesson that gives a value a name writes out a name holding a word, and a learner meeting a written-out word for the first time THERE would be learning two things at once.");
   ("The words are the fruits of the Spirit, the same source the lesson that introduced strings drew from, so the words themselves are not a third new thing.");
   function refill() {
@@ -54,10 +56,6 @@ export function app_code_lesson_functions_console_log_string() {
     let written = text_combine("This writes out ", word);
     html_div_cycle_code(c, [written]);
     let quote = js_string_quote();
-    html_div_cycle_code(c, [
-      "The quote marks ",
-      quote,
-      " are not written out",
-    ]);
+    html_div_cycle_code(c, ["The quote marks ", quote, " are not written out"]);
   }
 }
