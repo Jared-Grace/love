@@ -1,8 +1,9 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
+import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { not } from "./not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -22,8 +23,8 @@ export function app_ceb_bible_gloss_passage_verses_read(
   function word_read(word) {
     let key = text_lower_to(word);
     let capitalised_always = property_exists(capitalised, key);
-    let held = property_exists(known, key);
-    if (not(held)) {
+    let entry = binisaya_words_known_get(known, word);
+    if (null_is(entry)) {
       let absent = {
         word,
         capitalised_always,
@@ -31,7 +32,6 @@ export function app_ceb_bible_gloss_passage_verses_read(
       };
       return absent;
     }
-    let entry = property_get(known, key);
     let r = {
       word,
       capitalised_always,
