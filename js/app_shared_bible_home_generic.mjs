@@ -1,3 +1,4 @@
+import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
 import { app_shared_bible_home_bar_buttons } from "./app_shared_bible_home_bar_buttons.mjs";
 import { app_shared_bible_home_languages } from "./app_shared_bible_home_languages.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
@@ -24,7 +25,6 @@ import { noop } from "./noop.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
-import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
@@ -46,8 +46,6 @@ import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_asy
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_shared_bible_home_generic(
   context,
   lambda$a,
@@ -185,22 +183,7 @@ export async function app_shared_bible_home_generic(
     " and ",
     fn_name("app_g_bible"),
     ", so both single-verse views drop the duplicate together.");
-  let show_language_names = list_multiple_is(text_languages);
-  function to_entry(item) {
-    let name = "";
-    if (show_language_names) {
-      let language = property_get(item, "language");
-      name = property_get(language, "name");
-    }
-    let text_l = property_get(item, "text");
-    let entry = {
-      name,
-      text: text_l,
-    };
-    return entry;
-  }
-  let entries = list_map(text_languages, to_entry);
-  app_shared_bible_verse_texts(top, entries);
+  app_shared_bible_home_verse_texts(text_languages, top);
   let p = html_p(content);
   await lambda$a({
     p_verse,
