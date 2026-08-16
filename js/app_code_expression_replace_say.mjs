@@ -3,7 +3,7 @@ import { app_shared_encouragement_step_exclamation } from "./app_shared_encourag
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
-import { html_style_code_green_nowrap } from "./html_style_code_green_nowrap.mjs";
+import { app_code_expression_chosen_code_nowrap } from "./app_code_expression_chosen_code_nowrap.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { noop } from "./noop.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -28,7 +28,7 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
   let greens = [];
   function green(span) {
     "style a piece green and remember it, in the one pass that makes it";
-    html_style_code_green_nowrap(span);
+    app_code_expression_chosen_code_nowrap(span);
     list_add(greens, span);
   }
   let cycles = [noop, html_style_code_dark_nowrap, noop, green, noop, green];

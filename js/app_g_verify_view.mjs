@@ -1,3 +1,4 @@
+import { app_g_verify_view_autosize_new } from "./app_g_verify_view_autosize_new.mjs";
 import { app_g_verify_view_highlight_state } from "./app_g_verify_view_highlight_state.mjs";
 import { app_g_verify_view_suggest_and_reviewed_bars } from "./app_g_verify_view_suggest_and_reviewed_bars.mjs";
 import { app_g_verify_view_draft_restore } from "./app_g_verify_view_draft_restore.mjs";
@@ -8,16 +9,10 @@ import { app_g_verify_view_passage_panel } from "./app_g_verify_view_passage_pan
 import { app_g_verify_view_links_bar } from "./app_g_verify_view_links_bar.mjs";
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { app_g_verify_view_history_show } from "./app_g_verify_view_history_show.mjs";
-import { app_g_verify_view_draft_save } from "./app_g_verify_view_draft_save.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { invoke_now_and_later } from "./invoke_now_and_later.mjs";
-import { subtract } from "./subtract.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { html_on } from "./html_on.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words } from "./text_words.mjs";
@@ -97,27 +92,13 @@ export async function app_g_verify_view(
   );
   let base_key = property_get(r3, "base_key");
   let draft_key = property_get(r3, "draft_key");
-  function autosize() {
-    if (native_sizing) {
-      return;
-    }
-    ("suggest_area is a COMPONENT wrapper, not the DOM element — the style setter unwraps it internally, but layout MEASUREMENTS (scrollHeight, offsetHeight, clientHeight) must be read off the real element, else they are undefined and the height math is NaN, silently ignored, so the box stays at its min-height floor. Under box-sizing border-box, height=scrollHeight lands one border short, so add the border difference (measured while overflow-y is hidden) to fit exactly");
-    let element = html_component_element_get(suggest_area);
-    html_style_set(suggest_area, "height", "auto");
-    let content = element.scrollHeight;
-    let chrome = subtract(element.offsetHeight, element.clientHeight);
-    let h = content + chrome;
-    html_style_set(suggest_area, "height", h + "px");
-  }
-  function on_suggest_input() {
-    app_g_verify_view_draft_save(suggest_area, draft_key, base_key, value);
-    autosize();
-  }
-  html_on(suggest_area, "input", on_suggest_input);
-  ("fit the content now and again after this tick; then once more after the serif font loads, whose metrics change the height");
-  invoke_now_and_later(autosize);
-  document.fonts.ready.then(autosize);
-  ("a Reset control that restores the box to the CURRENT saved lines (value4) and drops any in-progress draft — so the reviewer can start over from exactly what Claude has now, having edited the box away from it");
+  let autosize = app_g_verify_view_autosize_new(
+    native_sizing,
+    suggest_area,
+    draft_key,
+    base_key,
+    value,
+  );
   let reset_bar = html_div(container);
   html_style_margin_top(reset_bar, small_gap);
   html_centered(reset_bar);
