@@ -1,11 +1,14 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-export async function app_shared_bible_books_verses_fetch(e, chapter_code) {
-  arguments_assert(arguments, 2);
+export async function app_shared_bible_books_verses_fetch(chapter_code) {
+  arguments_assert(arguments, 1);
+  ("the English bible is named here rather than handed in, because every caller of this would have to name the same one: the books and the verse numbering both come from it, and a caller free to name another would be free to pair a book list with verses that do not belong to it.");
+  let e = ebible_folder_english();
   async function lambda_books_en() {
     let r = await ebible_version_books_browser(e);
     return r;
