@@ -9,6 +9,7 @@ export function app_g_verify_home_chapter_grid(
   chapter_codes,
   chapter_code,
 ) {
+  "The band of chapter buttons across the top of the verify screen, one row for each book that has any sermon written in it, in the order the chapters were first met. Every chapter that has been written is reachable from every other, so a reviewer moves around the whole body of work without going back anywhere first.";
   arguments_assert(arguments, 3);
   let cbar = html_div(wrap);
   let value = app_shared_spaced_small_gap();
