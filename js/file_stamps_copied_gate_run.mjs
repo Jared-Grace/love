@@ -1,3 +1,4 @@
+import { file_stamps_copied_answer_assert } from "./file_stamps_copied_answer_assert.mjs";
 import { undefined_not_is_assert_json } from "./undefined_not_is_assert_json.mjs";
 import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -11,11 +12,8 @@ import { property_get } from "./property_get.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { folder_temp } from "./folder_temp.mjs";
-import { json_to } from "./json_to.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { round } from "./round.mjs";
 import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 export async function file_stamps_copied_gate_run() {
   "Gate: a file taken across into a copy of a folder still stands the same way it stood where it came from. What a file says about itself here is when it was written and how long it is, and everything remembered about a file is remembered against exactly that pair.";
   "This is the one thing the whole gate rests on and the one thing that breaks in silence. The gate freezes the working folder into a copy and asks its questions there, and every answer it has ever worked out about a file it keeps against that file's stamp. Where a copy says a file was written a hair away from when the original says it, nothing is wrong and nothing is reported - every file in the copy simply reads as freshly changed, so every question reads and parses the entire repo again, several runs at once, every time it is asked. Measured before it was fixed: six and a half seconds against one, on the first question alone.";
@@ -88,30 +86,6 @@ export async function file_stamps_copied_gate_run() {
   let checked = property_get(answer, "checked");
   let rounding_up = property_get(answer, "rounding_up");
   let differing = property_get(answer, "differing");
-  for (let one of differing) {
-    console.log("stamp differs after copy  " + json_to(one));
-  }
-  console.log("stamps checked across a copy: " + checked);
-  if (list_empty_not_is(differing)) {
-    throw new Error(
-      "file stamps copied gate: " +
-        differing.length +
-        " of " +
-        checked +
-        " files stand differently in a copy than where they came from - is the moment a file was written being asked for more finely than taking a folder across can carry?",
-    );
-  }
-  if (equal(rounding_up, 0)) {
-    throw new Error(
-      "file stamps copied gate: not one of the " +
-        checked +
-        " files here sits in the half of a millisecond that rounds upward, so cutting the fraction away and rounding it would have given the same answer everywhere and this passed without telling them apart. Are the moments being set as asked for?",
-    );
-  }
-  let r = {
-    checked,
-    rounding_up,
-    differing: 0,
-  };
+  let r = file_stamps_copied_answer_assert(differing, checked, rounding_up);
   return r;
 }
