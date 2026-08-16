@@ -25,7 +25,6 @@ import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
 import { app_shared_bible_hash_v_get } from "./app_shared_bible_hash_v_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
-import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -107,8 +106,8 @@ export async function app_shared_bible_home_generic(
   }
   let bottom = html_p(p_verse);
   html_centered(bottom);
-  let hidden = true;
-  toggle();
+  ("the row under the verse is simply shown. It was reached through a name holding whether it was hidden and a function flipping that name, but the flipping was asked for exactly once and nothing else ever read the name, so the pair could only ever end one way - hidden set to true and immediately turned over. Whatever once turned it back has gone, and until it returns the machinery said nothing the one line does not.");
+  html_display_none_or_block(false, bottom);
   app_shared_bible_biblehub_buttons(
     bottom,
     chapter_name,
@@ -139,10 +138,6 @@ export async function app_shared_bible_home_generic(
     verse_number,
     bottom,
   );
-  function toggle() {
-    hidden = not(hidden);
-    html_display_none_or_block(hidden, bottom);
-  }
   ("the verse NUMBER is not printed above the text here: the bar already carries it as the verse-picker button, so a single-verse view would show it twice. the WHOLE-CHAPTER reader is different — it prints each verse's number inline (",
     fn_name("app_shared_bible_read"),
     ") because that is the only place the number appears there. shared by ",
