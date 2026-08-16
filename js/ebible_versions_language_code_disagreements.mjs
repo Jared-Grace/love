@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { ebible_version_folder_language_code } from "./ebible_version_folder_language_code.mjs";
 import { ebible_versions_copyrights } from "./ebible_versions_copyrights.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function ebible_versions_language_code_disagreements() {
@@ -19,8 +18,7 @@ export async function ebible_versions_language_code_disagreements() {
     }
     let bible_folder = property_get(copyright_read, "bible_folder");
     let filed = ebible_version_folder_language_code(bible_folder);
-    let agrees = equal(filed, stated);
-    let disagrees = not(agrees);
+    let disagrees = equal_not(filed, stated);
     return disagrees;
   }
   let disagreeing = list_filter(copyrights, disagrees_is);
