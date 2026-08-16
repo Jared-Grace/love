@@ -54,9 +54,13 @@ export function app_code_expression_choose_line(
         app_code_expression_chosen_set(node_span, span);
         let node_value = app_code_expression_solved(node, node);
         ("the green block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
-        await on_chosen(node, node_value, node_span);
+        let watched = await on_chosen(node, node_value, node_span);
         app_code_expression_replaced_set(node_span, node_value);
-        await sleep_success_color();
+        ("the value is held green afterwards only when the learner did not watch it arrive: a value that simply appeared needs a moment to be found, and one that was followed the whole way down has been looked at already");
+        ("Asked of whatever answered the press rather than decided here, because this is the one place both the front page and the quiz are pressed and only the answerer knows whether it showed anything.");
+        if (not(watched)) {
+          await sleep_success_color();
+        }
         let stepped = app_code_expression_solved(current, node);
         draw(stepped, node, node_value);
         let more = app_code_expression_node_is(stepped);
