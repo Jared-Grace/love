@@ -1,7 +1,6 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { each } from "./each.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 export function gloss_entries_explains_text_count(entries, text) {
   "How many of a passage's word explanations say a named piece of text somewhere in their wording.";
   "$plain text";
@@ -10,8 +9,7 @@ export function gloss_entries_explains_text_count(entries, text) {
   let key = gloss_entry_explain_key();
   let count = 0;
   function entry_read(entry) {
-    let explain = property_get(entry, key);
-    let found = text_includes(explain, text);
+    let found = property_text_includes(entry, key, text);
     if (found) {
       count = count + 1;
     }
