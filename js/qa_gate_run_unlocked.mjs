@@ -29,6 +29,10 @@ export async function qa_gate_run_unlocked() {
   "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
   "How long each part of the run took is printed at the end, because the whole number on its own sends whoever wants it faster to the wrong place. Measured once: the gates themselves were four and a half minutes of a nineteen minute run, and the other three quarters went on what happens after them - so every reading of the gates, and every plan to make one of them faster, was aimed at a quarter of the cost. The parts are timed rather than reasoned about because the reasoning was wrong twice on the same afternoon";
   "Where the neighbours stand is asked before anything is frozen, because it is half of the name this run's answer would be filed under and the freezing is itself part of the window they could move in.";
+  "The list of gates is read here, first of everything, and only its length is kept. Building it brings in every gate's file, so a neighbour part way through saving one throws - and this is the single place where that throw says something true, because at this line no gate has been asked and stopping costs nobody anything. It used to be read twice more, both times after both halves had answered, where the same throw destroyed a finished verdict and told the reader no gate ran. Measured 2026-08-16: a run where every gate was asked and none complained ended that way, fourteen minutes gone to a file saved in its last seconds.";
+  "Keeping the length rather than the list is deliberate. Nothing below runs these; the copy half asks its own frozen list and the half asked here has its own name for what it asks. What is wanted downstream is one number - how many gates the repo has - and a number cannot go stale under anybody's keystroke.";
+  let gates = qa_gates_read();
+  let gates_count = gates.length;
   let began = date_now_milliseconds();
   let beside = await qa_commit_beside_heads();
   let before = property_get(beside, "heads");
@@ -61,7 +65,7 @@ export async function qa_gate_run_unlocked() {
   let here = list_get(halves, 1);
   qa_gate_printed_print(told, here);
   ("How long each gate took is written down here rather than printed or returned. It is written before anything can throw, because a run that went red is the one whose times somebody came looking for.");
-  await qa_gate_run_timings_write(told, here);
+  await qa_gate_run_timings_write(told, here, gates_count);
   ("What was found is written into the shared record of judged commits. This run already does everything a judging does and once threw the answer away, leaving the next person to ask about the same commit to pay a quarter of an hour for the same questions.");
   ("An answer that came out of the record is not written back into it. It is already there, under this very commit, and re-filing it would spend a reading and a writing to leave the file exactly as it was.");
   let filing = remembered ? null : commit;
@@ -78,9 +82,8 @@ export async function qa_gate_run_unlocked() {
   ("How long each gate took is still deliberately NOT returned here, and the reason has changed. It used to be that it could not be: the half asked of this machine had its timings in hand, the half asked of the copy is several separate processes whose only channel back is the text they printed, and returning the half in hand would have handed back three gates' numbers in a shape that reads like all of them - a number that looks complete and is not being worse than no number. That is answered now. Each share prints one marked line per gate, the way it already printed one per complaining gate, and both halves are read back into one list.");
   ("What is left is a question of size rather than of truth. A hundred gates is not a verdict, and a run whose answer is a hundred rows is one nobody can read at a glance - so the list is written down and the verdict comes back. Whoever wants the rows asks for them by name.");
   ("A green run no longer prints that block at all. It ran to hundreds of lines that nobody read, and every reader trimmed it away by hand afterwards - a trim written beside the command rather than inside any name, so nothing could reuse it and nothing recorded that it was wanted. What is left on a green run is the two lines that are the answer.");
-  let gates = qa_gates_read();
   let r = {
-    gates: gates.length,
+    gates: gates_count,
     failed: 0,
     frozen: folder,
   };
