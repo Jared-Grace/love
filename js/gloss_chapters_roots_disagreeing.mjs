@@ -19,9 +19,9 @@ export async function gloss_chapters_roots_disagreeing(fn) {
     return disagreeing;
   }
   let offenders = await gloss_chapters_offenders_generic(fn, chapter_read);
-  let r2 = {
+  let r = {
     consulted,
     offenders,
   };
-  return r2;
+  return r;
 }
