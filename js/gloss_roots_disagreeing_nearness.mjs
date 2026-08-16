@@ -44,8 +44,8 @@ export function gloss_roots_disagreeing_nearness(offenders, sample_size) {
   let counted = list_tally(distances);
   function far_is(finding) {
     let edits = property_get(finding, "edits");
-    let far = greater_than_equal(edits, 3);
-    return far;
+    let apart = greater_than_equal(edits, 3);
+    return apart;
   }
   let far = list_filter(findings, far_is);
   let farthest = list_spread_take(far, sample_size);
