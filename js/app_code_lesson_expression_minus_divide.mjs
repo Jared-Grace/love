@@ -16,7 +16,8 @@ export function app_code_lesson_expression_minus_divide() {
   let minus_symbol = property_get(minus, "operator");
   function gap_of(index) {
     "the possible gaps 1 through 4 - the answer of the a / b - c arrangement (distinct across the four questions, so they never repeat)";
-    return add(index, 1);
+    let sum = add(index, 1);
+    return sum;
   }
   function triple_of(gap) {
     "work backwards: b = inner * c so b / c is whole, a = outer * b so a / b is whole, and outer = c + gap so a / b - c is exactly gap and never goes below 0";
@@ -25,11 +26,13 @@ export function app_code_lesson_expression_minus_divide() {
     let outer = add(c, gap);
     let b = left_transform(inner, c);
     let a = left_transform(outer, b);
-    return [a, b, c];
+    let r = [a, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT gaps, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(4, gap_of), 4, triple_of);
+    let list = range_map(4, gap_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -37,9 +40,11 @@ export function app_code_lesson_expression_minus_divide() {
       root,
       weak: minus,
       strong: divided,
-      inner_left: 6,
-      inner_right: 3,
+      later_inner_left: 6,
+      later_inner_right: 3,
       later_outer: 10,
+      first_inner_left: 8,
+      first_inner_right: 2,
       first_outer: 1,
     });
   }
