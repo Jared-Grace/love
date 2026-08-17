@@ -63,11 +63,11 @@ export function bible_glyph_roots() {
     },
     {
       root: "christos",
-      gloss: "Christ",
+      gloss: "Christ, anointed one",
       words: [
         {
           strong: "5547",
-          glyph: "crown",
+          glyph: "oil",
         },
       ],
     },
