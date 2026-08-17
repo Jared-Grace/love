@@ -46,23 +46,7 @@ export function app_code_lesson_statement_name_identifier_above(root) {
     " is an identifier, so it can be a name",
   ]);
   ("the code box gives a cup a word for a name and a word for a value, so the two are the same kind of thing on the page and only where they stand tells them apart - which is exactly the reading the questions ask for");
-  let quoted = app_code_string_code(word);
-  let held = js_code_let_statement(name, quoted);
-  let logged = js_code_console_log_statement(name);
-  let box_code = app_code_container_light_blue(root);
-  html_div_cycle_code(box_code, [
-    "In JS we make a cup called ",
-    name,
-    " and put ",
-    quoted,
-    " in it like this",
-  ]);
-  html_div_code(box_code, held);
-  html_div_cycle_code(box_code, [
-    "Then we can write out whatever is inside the cup like this",
-  ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word);
+  app_code_lesson_cup_code_box(root, name, word);
   let box_care = app_code_container_light_blue(root);
   html_div_cycle_code(box_care, [
     "What comes out is what is inside the cup, not the name on it",
