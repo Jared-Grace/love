@@ -1,3 +1,4 @@
+import { app_g_conversation_close_now } from "./app_g_conversation_close_now.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render_farewell } from "./app_g_conversation_render_farewell.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
@@ -36,14 +37,12 @@ import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
 import { noop } from "./noop.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
-import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
 import { app_g_conversation_sky_target } from "./app_g_conversation_sky_target.mjs";
-import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -154,14 +153,14 @@ export async function app_g_conversation(
     done: 0,
   };
   async function close_now() {
-    if (converts) {
-      if (prayed.done) {
-        property_set(npc, "christian", true);
-        g_icon_cross(div_map, npc);
-      }
-    }
-    await app_g_sky_snap();
-    overlay_close();
+    let r = app_g_conversation_close_now(
+      converts,
+      prayed,
+      npc,
+      div_map,
+      overlay_close,
+    );
+    return r;
   }
   async function goodbye() {
     "the final parting after the prayer is itself an advancing step — it ticks the day to its close (dusk) before snapping shut, so 'saying goodbye' spends the last of the slice rather than closing at whatever time the prayer left.";
