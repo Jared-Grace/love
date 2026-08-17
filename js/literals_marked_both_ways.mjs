@@ -1,3 +1,4 @@
+import { literals_marked_both_ways_conflicts } from "./literals_marked_both_ways_conflicts.mjs";
 import { literals_marked_both_ways_words_frozen } from "./literals_marked_both_ways_words_frozen.mjs";
 import { literals_marked_both_ways_entries } from "./literals_marked_both_ways_entries.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
@@ -22,12 +23,13 @@ export async function literals_marked_both_ways() {
   let repo_name = repo_love_name();
   let r = await literals_marked_both_ways_entries(repo_name);
   let r2 = await literals_marked_both_ways_words_frozen(r);
-  let words_frozen = property_get(r2, "words_frozen");
-  let entries = property_get(r2, "entries");
-  let reference_marker = property_get(r2, "reference_marker");
-  let reference_prefix = property_get(r2, "reference_prefix");
-  let frozen_sites = property_get(r2, "frozen_sites");
-  let conflicts = [];
+  let r3 = literals_marked_both_ways_conflicts(r2);
+  let conflicts = property_get(r3, "conflicts");
+  let frozen_sites = property_get(r3, "frozen_sites");
+  let reference_prefix = property_get(r3, "reference_prefix");
+  let reference_marker = property_get(r3, "reference_marker");
+  let entries = property_get(r3, "entries");
+  let words_frozen = property_get(r3, "words_frozen");
   for (let word of words_frozen) {
     let needle = text_combine_multiple([reference_prefix, word, '")']);
     let referenced_in = [];
