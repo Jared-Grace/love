@@ -134,7 +134,7 @@ import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
 import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
-import { storage_function_folders_orphaned_gate_run } from "./storage_function_folders_orphaned_gate_run.mjs";
+import { folders_function_named_orphaned_gate_run } from "./folders_function_named_orphaned_gate_run.mjs";
 import { js_code_getter_literal_cases_gate_run } from "./js_code_getter_literal_cases_gate_run.mjs";
 import { functions_gate_run_unwired_gate_run } from "./functions_gate_run_unwired_gate_run.mjs";
 import { js_code_literal_site_none_cases_gate_run } from "./js_code_literal_site_none_cases_gate_run.mjs";
@@ -463,7 +463,7 @@ export function qa_gates() {
     app_shared_imports_gate_run,
     functions_app_specific_imports_gate_run,
     functions_cross_app_imports_gate_run,
-    storage_function_folders_orphaned_gate_run,
+    folders_function_named_orphaned_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     instructions_commands_gate_run,
@@ -553,6 +553,7 @@ export function qa_gates() {
     app_code_quiz_choice_pool_gate_run,
     qa_gates_countless_gate_run,
     bundles_names_missing_gate_run,
+    app_ceb_bible_gloss_punctuation_words_gate_run,
   ];
   return gates;
 }

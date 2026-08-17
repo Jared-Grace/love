@@ -4,7 +4,7 @@ import { fn_name } from "./fn_name.mjs";
 import { list_size } from "./list_size.mjs";
 import { storage_function_folders_orphaned } from "./storage_function_folders_orphaned.mjs";
 import { folders_function_named_orphaned_baseline_path } from "./folders_function_named_orphaned_baseline_path.mjs";
-export async function storage_function_folders_orphaned_gate_run() {
+export async function folders_function_named_orphaned_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no stored data is left sitting under the name of a function that has been renamed away.");
   ("This is the one place a rename is not free. A rename is behavior-preserving by construction and so it is the safe edit here, done unasked and auto-approved - but a function handed to ",
