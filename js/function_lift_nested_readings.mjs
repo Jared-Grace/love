@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { js_functions_named_ambiguous_is } from "./js_functions_named_ambiguous_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
@@ -15,6 +17,12 @@ export async function function_lift_nested_readings(ast, nested) {
     let writes_is = property_list_empty_not_is(reading, "written_closed");
     let refused_is = or(passed_is, writes_is);
     if (refused_is) {
+      continue;
+    }
+    ("A third thing is turned down, and it is the one the lift's own finder stops on rather than refuses: a word that more than one function written inside answers to, which leaves no way to say which was meant. Read from the same list the finder reads, so a name standing on this list is never a name the move then puts the walk down over.");
+    let name_old = property_get(reading, "name_old");
+    let ambiguous_is = js_functions_named_ambiguous_is(nested, name_old);
+    if (ambiguous_is) {
       continue;
     }
     let taken = {
