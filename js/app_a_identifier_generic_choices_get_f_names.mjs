@@ -65,9 +65,9 @@ export async function app_a_identifier_generic_choices_get_f_names(
       shortcut: "d",
       text: "Delete",
       fn: async function lambda2() {
-        let lambda22 = html_on_enter_lambda(lambda23);
+        let lambda = html_on_enter_lambda(lambda23);
         overlay_close();
-        let o2 = app_a_overlay_keydown(a, lambda22);
+        let o2 = app_a_overlay_keydown(a, lambda);
         let overlay_delete = property_get(o2, "overlay");
         let oc_delete = app_a_overlay_container_centered(overlay_delete);
         html_div_text(oc_delete, "How many statements do you want to delete?");
@@ -103,10 +103,11 @@ export async function app_a_identifier_generic_choices_get_f_names(
   ]);
   app_a_functionize_choices_add(choices, a, o);
   let f_names = await functions_names();
-  return {
+  let r = {
     e,
     overlay_close,
     context,
     f_names,
   };
+  return r;
 }
