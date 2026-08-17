@@ -1,4 +1,4 @@
-import { js_fold_block_no_match } from "./js_fold_block_no_match.mjs";
+import { js_fold_block_f_statements } from "./js_fold_block_f_statements.mjs";
 import { js_fold_block_partial_is } from "./js_fold_block_partial_is.mjs";
 import { js_fold_block_any_unbound } from "./js_fold_block_any_unbound.mjs";
 import { js_fold_block_x_name } from "./js_fold_block_x_name.mjs";
@@ -24,11 +24,11 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (empty) {
     return null;
   }
-  let r3 = js_fold_block_no_match(f_block, pattern_sigs, params);
-  let no_match = property_get(r3, "no_match");
-  let match = property_get(r3, "match");
-  let target_sigs = property_get(r3, "target_sigs");
+  let r3 = js_fold_block_f_statements(f_block, pattern_sigs, params);
   let f_statements = property_get(r3, "f_statements");
+  let target_sigs = property_get(r3, "target_sigs");
+  let match = property_get(r3, "match");
+  let no_match = property_get(r3, "no_match");
   if (no_match) {
     return null;
   }
