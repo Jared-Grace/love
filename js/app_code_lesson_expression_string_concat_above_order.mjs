@@ -24,10 +24,11 @@ export function app_code_lesson_expression_string_concat_above_order(root) {
   let name_term = html_span_text(name_line, "concatenation");
   html_bold(name_term);
   let order = app_code_container_light_blue(root);
-  return {
+  let r2 = {
     code_a,
     code_b,
     joined_value,
     order,
   };
+  return r2;
 }
