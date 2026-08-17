@@ -4582,6 +4582,14 @@ def main():
     if find_in_place_edit(command):
         return decide("deny", IN_PLACE_EDIT_DENY_REASON)
 
+    # The mildest member of the same family: not "there is a safer tool" but
+    # "there is an already-trusted spelling of this exact thing". `cmp` is as
+    # read-only as `diff` and does no more, so the choice was between widening
+    # the trusted verb set for no new capability and redirecting to the verb
+    # already in it. See find_cmp_command.
+    if find_cmp_command(command):
+        return decide("deny", CMP_DENY_REASON)
+
     # A floor of a different kind: not "there is a better tool" but "this
     # cannot work". A pgrep-conditioned sleep loop self-matches through the
     # bash -c line it is written in, so it never terminates and takes a whole
