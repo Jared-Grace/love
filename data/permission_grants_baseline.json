@@ -167,6 +167,18 @@
   {
    "name": "scripts_temp_delete",
    "refusals": 1
+  },
+  {
+   "name": "app_shared_dev_build_multiple",
+   "refusals": 1
+  },
+  {
+   "name": "function_rename",
+   "refusals": 1
+  },
+  {
+   "name": "function_delete",
+   "refusals": 1
   }
  ]
 }
