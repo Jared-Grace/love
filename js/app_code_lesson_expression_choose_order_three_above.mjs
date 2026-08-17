@@ -20,18 +20,10 @@ import { list_first } from "./list_first.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order_three_above(root) {
   arguments_assert(arguments, 1);
-  (
-    "what stands above the card: which operators are the stronger ones put back in front of the learner, then one whole line of this lesson's own kind taken all the way down, then the one sentence saying what is different here"
-  );
-  (
-    "The same three-part shape as the lessons on either side of it - recall, run, hinge - because a learner arriving here has read that shape on the screens behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on this screen is how far the line goes."
-  );
-  (
-    "The run is walked by the same reading the learner is about to be asked for rather than by a telling written out beside it: at each turn the line is asked which of its parts has a number on each side, and the answer is the part the sentence names. A run written by hand could say a step the line does not take."
-  );
-  (
-    "Every step says the same thing in the same words, because they ARE the same step - that is the whole point being made. A step worded three different ways would read as three rules where the lesson is showing one rule holding three times."
-  );
+  ("what stands above the card: which operators are the stronger ones put back in front of the learner, then one whole line of this lesson's own kind taken all the way down, then the one sentence saying what is different here");
+  ("The same three-part shape as the lessons on either side of it - recall, run, hinge - because a learner arriving here has read that shape on the screens behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on this screen is how far the line goes.");
+  ("The run is walked by the same reading the learner is about to be asked for rather than by a telling written out beside it: at each turn the line is asked which of its parts has a number on each side, and the answer is the part the sentence names. A run written by hand could say a step the line does not take.");
+  ("Every step says the same thing in the same words, because they ARE the same step - that is the whole point being made. A step worded three different ways would read as three rules where the lesson is showing one rule holding three times.");
   let times = js_operator_asterisk_symbol();
   let divide = js_operator_division_symbol();
   let plus = js_operator_plus_symbol();
