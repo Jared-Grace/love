@@ -1,0 +1,76 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
+import { js_await_if_unwrap } from "./js_await_if_unwrap.mjs";
+import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { list_next_try } from "./list_next_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { equal_by } from "./equal_by.mjs";
+import { not } from "./not.mjs";
+import { js_call_new } from "./js_call_new.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { js_code_brackets_empty } from "./js_code_brackets_empty.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
+export async function js_calls_to_each_lambda(v, ast) {
+  arguments_assert(arguments, 2);
+  let stack = property_get(v, "stack");
+  let node = property_get(v, "node");
+  let expression = js_statement_expression_get(node);
+  let r2 = js_await_if_unwrap(expression);
+  let call = property_get(r2, "argument");
+  let async_is = property_get(r2, "async_is");
+  let e = list_get_end_1(stack);
+  let next = list_next_try(e, node);
+  if (null_is(next)) {
+    return;
+  }
+  let nti = js_node_type_not_is(next, "ExpressionStatement");
+  if (nti) {
+    return;
+  }
+  let expression2 = js_statement_expression_get(next);
+  let call2 = null;
+  if (async_is) {
+    let nti2 = js_node_type_not_is(expression2, "AwaitExpression");
+    if (nti2) {
+      return;
+    }
+    call2 = property_get(expression2, "argument");
+  } else {
+    call2 = expression2;
+  }
+  let name = js_call_callee_name_try(call2);
+  let n = null_is(name);
+  if (n) {
+    return;
+  }
+  function lambda6(c) {
+    let jin = js_node_type_not_is(c, "CallExpression");
+    if (jin) {
+      return name;
+    }
+    let callee = property_get(c, "callee");
+    let code = js_unparse(callee);
+    return code;
+  }
+  let eq = equal_by(call, call2, lambda6);
+  if (not(eq)) {
+    return;
+  }
+  let f_name_call = fn_name("each_async");
+  let r = await js_call_new(f_name_call, ast);
+  let expression3 = property_path_get_2(r, "parsed", "expression");
+  if (async_is) {
+    expression3 = property_get(expression3, "argument");
+  }
+  js_call_arguments_get(expression3);
+  let code2 = js_code_brackets_empty();
+  let array_expression = js_parse_expression(code2);
+  property_get(array_expression, "elements");
+  ("the shape being matched is two awaited calls standing one after the other on the same callee, differing only in their argument");
+}
