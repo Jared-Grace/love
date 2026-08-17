@@ -1,10 +1,10 @@
+import { app_reply_main_shortcuts_r_ar_base } from "./app_reply_main_shortcuts_r_ar_base.mjs";
 import { app_reply_main_shortcuts_ar } from "./app_reply_main_shortcuts_ar.mjs";
 import { app_reply_main_shortcuts_r_bn_ } from "./app_reply_main_shortcuts_r_bn_.mjs";
 import { app_reply_main_shortcuts_r_bn_base } from "./app_reply_main_shortcuts_r_bn_base.mjs";
 import { app_reply_main_shortcuts_gl } from "./app_reply_main_shortcuts_gl.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_main_shortcuts_shortcut_each } from "./app_reply_main_shortcuts_shortcut_each.mjs";
-import { app_reply_main_shortcuts_languages_default_concat_single } from "./app_reply_main_shortcuts_languages_default_concat_single.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
@@ -27,32 +27,24 @@ export function app_reply_main_shortcuts(
   let r3 = app_reply_main_shortcuts_r_bn_base(r2, languages_chosen_default);
   let r4 = app_reply_main_shortcuts_r_bn_(r3);
   let r5 = app_reply_main_shortcuts_ar(r4);
-  let ar = property_get(r5, "ar");
-  let r_te_ = property_get(r5, "r_te_");
-  let r_default = property_get(r5, "r_default");
-  let r_ke_40 = property_get(r5, "r_ke_40");
-  let r_ug_40 = property_get(r5, "r_ug_40");
-  let r_ug_ = property_get(r5, "r_ug_");
-  let r_ke_ = property_get(r5, "r_ke_");
-  let r_pk_40 = property_get(r5, "r_pk_40");
-  let r_pk_20 = property_get(r5, "r_pk_20");
-  let r_pk_10_glory = property_get(r5, "r_pk_10_glory");
-  let r_pk_1_w = property_get(r5, "r_pk_1_w");
-  let r_pk_1_m = property_get(r5, "r_pk_1_m");
-  let r_pk_1_c = property_get(r5, "r_pk_1_c");
-  let r_pk_10_h = property_get(r5, "r_pk_10_h");
-  let r_pk_10_gh = property_get(r5, "r_pk_10_gh");
-  let r_pk_10_g = property_get(r5, "r_pk_10_g");
-  let r_bn_ = property_get(r5, "r_bn_");
-  let r_ar_base = {
-    name: "AR",
-    languages: app_reply_main_shortcuts_languages_default_concat_single(
-      ar,
-      languages_chosen_default,
-    ),
-    count: 0,
-    responses: [],
-  };
+  let r6 = app_reply_main_shortcuts_r_ar_base(r5, languages_chosen_default);
+  let r_ar_base = property_get(r6, "r_ar_base");
+  let r_bn_ = property_get(r6, "r_bn_");
+  let r_pk_10_g = property_get(r6, "r_pk_10_g");
+  let r_pk_10_gh = property_get(r6, "r_pk_10_gh");
+  let r_pk_10_h = property_get(r6, "r_pk_10_h");
+  let r_pk_1_c = property_get(r6, "r_pk_1_c");
+  let r_pk_1_m = property_get(r6, "r_pk_1_m");
+  let r_pk_1_w = property_get(r6, "r_pk_1_w");
+  let r_pk_10_glory = property_get(r6, "r_pk_10_glory");
+  let r_pk_20 = property_get(r6, "r_pk_20");
+  let r_pk_40 = property_get(r6, "r_pk_40");
+  let r_ke_ = property_get(r6, "r_ke_");
+  let r_ug_ = property_get(r6, "r_ug_");
+  let r_ug_40 = property_get(r6, "r_ug_40");
+  let r_ke_40 = property_get(r6, "r_ke_40");
+  let r_default = property_get(r6, "r_default");
+  let r_te_ = property_get(r6, "r_te_");
   let r_ar_ = app_reply_main_shortcuts_shortcut_extend_count(r_ar_base, 10);
   let r_yt = app_reply_main_shortcuts_shortcut_extend_count(r_default, 2);
   r_yt = app_reply_main_shortcuts_shortcut_extend(r_yt, "yt");
