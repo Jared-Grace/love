@@ -26,7 +26,7 @@ export function app_g_dev_routes_characters(r6) {
     await app_g_view_set(null);
     app_g_characters();
   }
-  return {
+  let r = {
     believe,
     gospel_share,
     quick,
@@ -43,4 +43,5 @@ export function app_g_dev_routes_characters(r6) {
     disciple,
     characters,
   };
+  return r;
 }
