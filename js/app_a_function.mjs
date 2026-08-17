@@ -1,8 +1,7 @@
+import { app_a_function_upload } from "./app_a_function_upload.mjs";
 import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
-import { app_shared_api } from "./app_shared_api.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { app_a_history } from "./app_a_history.mjs";
@@ -27,10 +26,7 @@ import { storage_session_exists } from "./storage_session_exists.mjs";
 import { app_a } from "./app_a.mjs";
 import { app_a_apps } from "./app_a_apps.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
-import { each_async } from "./each_async.mjs";
 import { app_a_function_on_keydown_remove } from "./app_a_function_on_keydown_remove.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { properties_from_empty } from "./properties_from_empty.mjs";
 import { html_pre_text } from "./html_pre_text.mjs";
 import { app_a_overlay_container } from "./app_a_overlay_container.mjs";
 import { app_a_choice_close } from "./app_a_choice_close.mjs";
@@ -43,14 +39,8 @@ import { emoji_sync } from "./emoji_sync.mjs";
 import { indexeddb_store_clear } from "./indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
 import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { json_decompress } from "./json_decompress.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
-import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
 import { app_a_function_node } from "./app_a_function_node.mjs";
@@ -71,32 +61,8 @@ export async function app_a_function(context) {
   let root = property_get(context, "root");
   html_clear(root);
   async function upload() {
-    let store = browser_files_store();
-    let all = await indexeddb_get_all(browser_files_database_initialize, store);
-    async function lambda(item) {
-      let compressed = property_get(item, "compressed");
-      let f = await json_decompress(compressed);
-      let versions = property_get(f, "versions");
-      property_set_exists_not(item, "versions", versions);
-      let m = list_multiple_is(versions);
-      property_set_exists_not(item, "changed", m);
-    }
-    await each_async(all, lambda);
-    let filtered = list_filter_property(all, "changed", true);
-    function lambda2(item2) {
-      let o = properties_from_empty(item2, ["key", "versions"]);
-      return o;
-    }
-    let deltas = list_map(filtered, lambda2);
-    let ne = list_empty_not_is(deltas);
-    if (ne) {
-      ("The server runs this one, so its name crosses the wire rather than the function itself.");
-      ("Importing it to read a name told the import graph a page could reach git and the shell.");
-      let r = await app_shared_api({
-        f_name: fn_name("app_a_upload"),
-        args: [deltas],
-      });
-    }
+    let r2 = await app_a_function_upload();
+    return r2;
   }
   async function download() {
     let store = browser_files_store();
