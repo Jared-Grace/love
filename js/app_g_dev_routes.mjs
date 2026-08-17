@@ -1,6 +1,5 @@
+import { app_g_dev_routes_gratitude } from "./app_g_dev_routes_gratitude.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_dev_routes_day_unbelievers } from "./app_g_dev_routes_day_unbelievers.mjs";
-import { app_g_dev_routes_day_hours } from "./app_g_dev_routes_day_hours.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
@@ -10,36 +9,21 @@ import { app_g_design } from "./app_g_design.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
-import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 export function app_g_dev_routes(div_map) {
-  ("registry of dev-only hash routes for ",
-    fn_name("app_g"),
-    " (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — ",
-    fn_name("app_g_dev_if"),
-    " dispatches from it and ",
-    fn_name("app_g_dev_index"),
-    " lists its keys, so the #index directory can never drift from the real routes");
-  async function study() {
-    let view = {
-      kind: app_g_view_kind_study(),
-      text: "Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds",
-      word_index: 0,
-    };
-    await app_g_view_set(view);
-  }
-  let r = app_g_dev_routes_day_hours();
-  let r2 = app_g_dev_routes_day_unbelievers(r, div_map);
-  let day_unbelievers = property_get(r2, "day_unbelievers");
-  let unbeliever = property_get(r2, "unbeliever");
-  let quick = property_get(r2, "quick");
-  let gospel_share = property_get(r2, "gospel_share");
-  let hru = property_get(r2, "hru");
-  let believe = property_get(r2, "believe");
-  let disciple = property_get(r2, "disciple");
-  let discern = property_get(r2, "discern");
-  let dove = property_get(r2, "dove");
-  let gratitude = property_get(r2, "gratitude");
+  let r = app_g_dev_routes_gratitude(div_map);
+  let gratitude = property_get(r, "gratitude");
+  let dove = property_get(r, "dove");
+  let discern = property_get(r, "discern");
+  let disciple = property_get(r, "disciple");
+  let believe = property_get(r, "believe");
+  let hru = property_get(r, "hru");
+  let gospel_share = property_get(r, "gospel_share");
+  let quick = property_get(r, "quick");
+  let unbeliever = property_get(r, "unbeliever");
+  let day_unbelievers = property_get(r, "day_unbelievers");
+  let r2 = property_get(r, "r2");
+  let study = property_get(r, "study");
   let pray = property_get(r2, "pray");
   let day_parts = property_get(r2, "day_parts");
   let day_hours = property_get(r2, "day_hours");
