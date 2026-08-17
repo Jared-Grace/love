@@ -63,7 +63,7 @@ export async function app_verses_counts(r, hash) {
   let card = app_shared_container_blue(content);
   app_shared_text_body(card, "2. How many Bible verses would you like?");
   let counts = app_shared_bible_verses_counts();
-  return {
+  let r2 = {
     languages_chosen,
     verse_groups,
     verse_count,
@@ -75,4 +75,5 @@ export async function app_verses_counts(r, hash) {
     card,
     counts,
   };
+  return r2;
 }
