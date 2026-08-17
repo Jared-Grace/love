@@ -1,8 +1,6 @@
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_code_lesson_statement_let_title_name_id } from "./app_code_lesson_statement_let_title_name_id.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_statement_name_value_title_name_id() {
   arguments_assert(arguments, 0);
@@ -12,8 +10,6 @@ export function app_code_lesson_statement_name_value_title_name_id() {
   let words = "giving a value a name";
   let names = app_code_lesson_statement_name_value_names();
   let name = list_first(names);
-  let any = app_code_string_any_code();
-  let code = js_code_let_statement(name, any);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_code_lesson_statement_let_title_name_id(words, name);
   return built;
 }

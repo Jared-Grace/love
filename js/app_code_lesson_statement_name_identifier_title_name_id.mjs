@@ -1,7 +1,5 @@
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_code_lesson_statement_let_title_name_id } from "./app_code_lesson_statement_let_title_name_id.mjs";
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
-import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_statement_name_identifier_title_name_id() {
   arguments_assert(arguments, 0);
@@ -10,8 +8,6 @@ export function app_code_lesson_statement_name_identifier_title_name_id() {
   ("Only what is painted changes; the id is built from the words below. The note on the lesson before says why that matters.");
   let words = "any identifier as a name";
   let name = app_code_lesson_statement_name_identifier_name();
-  let any = app_code_string_any_code();
-  let code = js_code_let_statement(name, any);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_code_lesson_statement_let_title_name_id(words, name);
   return built;
 }
