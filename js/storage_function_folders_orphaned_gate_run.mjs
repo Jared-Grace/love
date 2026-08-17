@@ -14,7 +14,7 @@ export async function storage_function_folders_orphaned_gate_run() {
   ("Measured against what was already lying about when this was written rather than against zero, because two of the three entries are hand-made copies rather than anything a rename did. The record only shrinks, so clearing one means moving the folder onto the live name or deleting it on purpose.");
   let offenders = await storage_function_folders_orphaned();
   let path = folders_function_named_orphaned_baseline_path();
-  let name_write = fn_name("storage_function_folders_orphaned_baseline_write");
+  let name_write = fn_name("folders_function_named_orphaned_baseline_write");
   await baseline_names_gate_generic(
     offenders,
     path,
