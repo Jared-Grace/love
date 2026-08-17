@@ -1,3 +1,5 @@
+import { functions_delete_seams } from "./functions_delete_seams.mjs";
+import { function_seams_reached_paths_memo } from "./function_seams_reached_paths_memo.mjs";
 import { permission_grant_refusals_parameters } from "./permission_grant_refusals_parameters.mjs";
 import { function_command_seams_reached_paths_memo } from "./function_command_seams_reached_paths_memo.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
@@ -99,6 +101,26 @@ export async function permission_grant_refusals_context(unaliased, context) {
       unaliased +
         " reaches a function that writes Claude's own permission rules, so approving it approves whatever it goes on to approve: " +
         list_join_comma(rules_written),
+    );
+  }
+  ("Reaching a function that erases what its argument names is the refusal about damage nobody can hand back, and it is here because every other reading here is read off a name. The folder copier was asked whether it may be granted and came back with nothing at all against it, while removing its target folder and everything under it before it copies - pointed at this repo it would erase the repo. Its parameters are called source and target, which carry no word that reads as a path; it reaches no shell and it writes no rule. All three readings above were true of it and all three were silent.");
+  ("The same argument condition as the two above, and for the same reason. What is dangerous here is that the caller chooses what gets deleted, and a rule covers every argument the function is ever handed; a function declaring none deletes whatever its committed source says and nothing a rule could change. That is what keeps the gates and the reports out of this.");
+  ("Overwriting a file is deliberately not asked about here, and the division is the useful half. Every function that replaces a file's contents takes the path as a parameter, and a parameter spelled that way is already refused below by name - so that whole family is covered exactly, and this covers only what no name can reach.");
+  let delete_seams = functions_delete_seams();
+  let delete_paths = await function_seams_reached_paths_memo(
+    unaliased,
+    delete_seams,
+    remembered,
+  );
+  let deleters = object_property_names(delete_paths);
+  let erases = greater_than(deleters.length, 0);
+  let destructive = and(erases, takes_arguments);
+  if (destructive) {
+    list_add(
+      refusals,
+      unaliased +
+        " declares arguments and reaches a function that erases what its argument names, so nothing here can rule out an argument choosing what gets deleted: " +
+        permission_grant_seam_chains_text(delete_paths),
     );
   }
   permission_grant_refusals_parameters(ast, params, refusals, unaliased);
