@@ -1,3 +1,4 @@
+import { list_join_empty } from "./list_join_empty.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -42,15 +43,15 @@ export function app_code_lesson_statement_name_copy_above(root) {
     [nothing, name_first],
     [nothing, name_last],
   ]);
+  ("the words for what is in a cup are joined into the writing around them rather than given as parts of their own. The parts alternate between plain writing and code, one and then the other all the way along, so a part standing in an odd place comes out dressed as code - and grapes is not code, it is what is in the cup. Only the names on the cups are code here.");
+  let has_first = list_join_empty([" has ", word_first, " and cup "]);
+  let has_last = list_join_empty([" has ", word_last]);
   html_div_cycle_code(box_have, [
     "Suppose cup ",
     name_first,
-    " has ",
-    word_first,
-    " and cup ",
+    has_first,
     name_last,
-    " has ",
-    word_last,
+    has_last,
   ]);
   app_code_lesson_cups_row_holding(box_have, [cup_first, cup_last]);
   let box_new = app_code_container_light_blue(root);
@@ -68,8 +69,7 @@ export function app_code_lesson_statement_name_copy_above(root) {
     ", also put some in cup ",
     name_copy,
   ]);
-  html_div_cycle_code(box_new, [
-    name_first,
+  let found = list_join_empty([
     " has ",
     word_first,
     ", so suppose they found some more ",
@@ -77,31 +77,27 @@ export function app_code_lesson_statement_name_copy_above(root) {
     " and put those ",
     word_first,
     " in cup ",
-    name_copy,
   ]);
+  html_div_cycle_code(box_new, ["Cup ", name_first, found, name_copy]);
   app_code_lesson_cups_row_holding(box_new, [
     cup_first,
     cup_last,
     [word_first, name_copy],
   ]);
+  let both = list_join_empty([" both have ", word_first, " in them"]);
   html_div_cycle_code(box_new, [
     "So now cups ",
     name_first,
     " and ",
     name_copy,
-    " both have ",
-    word_first,
-    " in them",
+    both,
   ]);
-  html_div_cycle_code(box_new, [
-    "No ",
-    word_first,
-    " were removed from cup ",
-    name_first,
+  let removed = list_join_empty(["No ", word_first, " were removed from cup "]);
+  let other = list_join_empty([
     ", they found some other ",
     word_first,
     " to put in cup ",
-    name_copy,
   ]);
+  html_div_cycle_code(box_new, [removed, name_first, other, name_copy]);
   app_code_lesson_statement_name_copy_code_box(root);
 }
