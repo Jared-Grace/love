@@ -21,11 +21,12 @@ export function bible_glyph_chapter(chapter_code) {
     }
   }
   let b = not_equal(found, null);
+  let f_name = fn_name("bible_glyph_chapters");
   assert_json(b, {
     chapter_code,
     hint: text_combine_multiple([
       "no picture Bible chapter answers to that code yet - ask ",
-      fn_name("bible_glyph_chapters"),
+      f_name,
       " for the ones that have been written",
     ]),
   });
@@ -41,9 +42,9 @@ export function bible_glyph_chapter(chapter_code) {
       words,
     });
   }
-  let chapter = {
+  let chapter_parsed = {
     chapter_code: found.chapter_code,
     verses,
   };
-  return chapter;
+  return chapter_parsed;
 }
