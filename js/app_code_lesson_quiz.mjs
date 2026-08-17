@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_quiz_question } from "./app_code_lesson_quiz_quiz_question.mjs";
 import { app_code_lesson_quiz_container_question } from "./app_code_lesson_quiz_container_question.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { list_size } from "./list_size.mjs";
@@ -42,21 +43,22 @@ export function app_code_lesson_quiz(
     quizzes,
     refresh,
   );
-  let container_question = property_get(r, "container_question");
-  let answer_label_set = property_get(r, "answer_label_set");
-  let answers_div = property_get(r, "answers_div");
-  let parent_container = property_get(r, "parent_container");
-  let container_correction = property_get(r, "container_correction");
-  let container_success_message = property_get(r, "container_success_message");
-  let quiz_index = property_get(r, "quiz_index");
-  let answer_label = property_get(r, "answer_label");
-  let qli = property_get(r, "qli");
-  let on_reveal = property_get(r, "on_reveal");
-  let r3 = property_get(r, "r3");
-  let correction_render = property_get(r, "correction_render");
-  let on_answer = property_get(r, "on_answer");
-  let on_question = property_get(r, "on_question");
-  let quiz_question = property_get(r3, "quiz_question");
+  let r4 = app_code_lesson_quiz_quiz_question(r);
+  let quiz_question = property_get(r4, "quiz_question");
+  let on_question = property_get(r4, "on_question");
+  let on_answer = property_get(r4, "on_answer");
+  let correction_render = property_get(r4, "correction_render");
+  let r3 = property_get(r4, "r3");
+  let on_reveal = property_get(r4, "on_reveal");
+  let qli = property_get(r4, "qli");
+  let answer_label = property_get(r4, "answer_label");
+  let quiz_index = property_get(r4, "quiz_index");
+  let container_success_message = property_get(r4, "container_success_message");
+  let container_correction = property_get(r4, "container_correction");
+  let parent_container = property_get(r4, "parent_container");
+  let answers_div = property_get(r4, "answers_div");
+  let answer_label_set = property_get(r4, "answer_label_set");
+  let container_question = property_get(r4, "container_question");
   let qa_for = property_get(r3, "qa_for");
   let answer_property = property_get(r3, "answer_property");
   let left2 = emoji_light_bulb();
