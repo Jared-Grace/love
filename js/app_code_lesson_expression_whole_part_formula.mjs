@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_whole_part_formula_recognize_decoys } from "./app_code_lesson_expression_whole_part_formula_recognize_decoys.mjs";
 import { app_code_lesson_expression_whole_part_formula_above } from "./app_code_lesson_expression_whole_part_formula_above.mjs";
 import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
@@ -7,9 +8,7 @@ import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { text_to } from "./text_to.mjs";
-import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -35,18 +34,11 @@ export function app_code_lesson_expression_whole_part_formula() {
   let example_answer_label = "Whole part formula: ";
   let example_question_label = app_code_label_code_question();
   function recognize_decoys(question, answer) {
-    "tempting wrong rewrites of a / b: Math.floor(a / b) alone (forgot to multiply back by the divisor), a * b (multiplied the two numbers instead), and a / b * b (forgot to round down). Built from the division's numbers so they stay tied to the question";
-    let nums = text_integers(question);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
-    let no_multiply = text_combine_multiple(["Math.floor(", question, ")"]);
-    let t2 = text_to(dividend);
-    let t3 = text_to(divisor);
-    let times = text_combine_multiple([t2, " * ", t3]);
-    let t4 = text_to(divisor);
-    let no_floor = text_combine_multiple([question, " * ", t4]);
-    let r2 = [no_multiply, times, no_floor];
-    return r2;
+    let r4 = app_code_lesson_expression_whole_part_formula_recognize_decoys(
+      question,
+      answer,
+    );
+    return r4;
   }
   function quizzes_get(question, answer) {
     "two quiz kinds: first RECOGNISE the whole-part formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens - recognise before produce";
