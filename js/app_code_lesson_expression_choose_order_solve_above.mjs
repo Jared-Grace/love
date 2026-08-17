@@ -51,11 +51,12 @@ export function app_code_lesson_expression_choose_order_solve_above(root) {
     solved,
     ")",
   ]);
-  ("the swap is said in the very words the button that made it said, out of the one place both of them read, so the learner is told about the press they made in the words they made it in - and the two pieces wear the colour they wore on the line");
+  ("the swap is said in the very words the button that made it said, out of the one place both of them read, so the learner is told about the press they made in the words they made it in - and the word for the swap and its two pieces all wear the colour they wore on the line");
   let swap_line = html_div(recap);
   app_code_expression_replace_swap_say(
     swap_line,
-    "Then you replaced the ",
+    "Then you ",
+    "replaced",
     step_code,
     step_text,
   );
@@ -64,4 +65,8 @@ export function app_code_lesson_expression_choose_order_solve_above(root) {
     final_text,
     ")",
   ]);
+  ("A line drawn right across before the last sentence, for the reason it is drawn in the lesson before: what is above it is the run the learner already knows, and what is below it is the one thing this lesson changes about that run.");
+  ("It is said here rather than on the card because it only means anything beside the run it changes. On the card it stood alone, a step away from the four steps it names, and a learner reading it there had to carry the run back down to it from above.");
+  app_shared_hr_spaced(recap);
+  app_code_lesson_expression_choose_order_solve_intro(recap);
 }
