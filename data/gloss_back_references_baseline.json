@@ -2,10 +2,14 @@
  "known": [
   {
    "store": "app_ceb_bible_gloss_generate",
-   "sites": 1
+   "sites": 0
   },
   {
    "store": "app_original_bible_gloss_generate",
+   "sites": 0
+  },
+  {
+   "store": "app_en_learn_bible_gloss_urdu_generate",
    "sites": 0
   }
  ]
