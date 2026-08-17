@@ -51,9 +51,10 @@ export function g_greeting_remark(words, met, christian, time) {
   }
   ("about half of greetings also say something ABOUT the time of day, as its own sentence between the name and the rest. it is drawn independently of the opening word, so the time can show up as good morning, or as hoping your morning goes well, or as both, or as neither — which is the difference between an NPC who knows what time it is and one reading a clock aloud");
   let remark = g_time_remark(time, christian);
-  return {
+  let r10 = {
     v,
     meet_message,
     remark,
   };
+  return r10;
 }
