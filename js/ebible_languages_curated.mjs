@@ -8,7 +8,6 @@ import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
 import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { ebible_languages_sort_speakers } from "./ebible_languages_sort_speakers.mjs";
 import { ebible_language_original } from "./ebible_language_original.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { fn_name } from "./fn_name.mjs";
