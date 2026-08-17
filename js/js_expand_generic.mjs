@@ -1,3 +1,4 @@
+import { js_expand_generic_lambda } from "./js_expand_generic_lambda.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_node_atomize_name } from "./js_node_atomize_name.mjs";
@@ -6,8 +7,6 @@ import { each_index_async } from "./each_index_async.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove_all_multiple } from "./list_remove_all_multiple.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -20,9 +19,6 @@ import { list_insert } from "./list_insert.mjs";
 import { each_reverse } from "./each_reverse.mjs";
 import { noop } from "./noop.mjs";
 import { js_return_on } from "./js_return_on.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_declare } from "./js_declare.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
@@ -74,22 +70,8 @@ export async function js_expand_generic(next, stack_, ast) {
     let body_block = js_function_declaration_to_block_body(declaration);
     let last = list_last(body_block);
     function lambda() {
-      list_remove(body_block, last);
-      let argument = property_get(last, "argument");
-      let declaration_call = property_get(v, "declaration");
-      let nnd = null_not_is(declaration_call);
-      if (nnd) {
-        let name_declared = js_function_declaration_name(declaration_call);
-        let assign = js_declare(name_declared, argument);
-        list_add(body_block, assign);
-      } else {
-        let assignment = property_get(v, "assignment");
-        let nna = null_not_is(assignment);
-        if (nna) {
-          property_set(assignment, "right", argument);
-          list_add(body_block, assignment);
-        }
-      }
+      let r = js_expand_generic_lambda(body_block, last, v);
+      return r;
     }
     js_return_on(last, lambda, noop);
     list_remove(stack_, next);
