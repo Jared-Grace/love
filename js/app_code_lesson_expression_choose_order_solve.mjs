@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_quizzes } from "./app_code_lesson_expression_choose_order_quizzes.mjs";
 import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
@@ -10,10 +11,6 @@ import { app_code_expression_value_decoys } from "./app_code_expression_value_de
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
-import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { noop } from "./noop.mjs";
@@ -81,17 +78,9 @@ export function app_code_lesson_expression_choose_order_solve() {
     app_code_lesson_expression_choose_order_solve_example(parent, card, tree);
   }
   function quizzes_get(question, answer) {
-    "one kind, so one quiz";
-    let info = {
-      question_label: app_code_label_line_to_solve(),
-      on_question: html_text_set_code_dark,
-      answer_label: app_code_label_solve_first(),
+    "the quiz is the one both press-the-operators lessons ask, out of the one place it is written; what this lesson adds to it is what happens after each press";
+    let quizzes_exercises = app_code_lesson_expression_choose_order_quizzes(
       on_answer,
-      answer_property: "answer",
-    };
-    let infos = [info];
-    let quizzes_exercises = app_code_lesson_quizzes_exercises(
-      infos,
       batch_get,
       question,
       answer,
