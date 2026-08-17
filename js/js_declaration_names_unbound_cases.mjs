@@ -10,6 +10,7 @@ export function js_declaration_names_unbound_cases() {
   let t = text_frozen("paint");
   let t2 = text_frozen("risky");
   let t3 = text_frozen("take");
+  let t4 = text_frozen("map");
   let cases = [
     {
       name: "the name after the colon in a pair is read, and is bound outside",
@@ -50,6 +51,13 @@ export function js_declaration_names_unbound_cases() {
         "export function f(items) {\n  for (let item of items) {\n    take(item);\n  }\n}\n",
       ),
       unbound: [own, t3],
+    },
+    {
+      name: "a name declared further down the block, read inside a function written above it",
+      code: text_frozen(
+        "export function f(items) {\n  function each(i) {\n    return take(i, held);\n  }\n  let held = map(items, each);\n  return held;\n}\n",
+      ),
+      unbound: [own, t3, t4],
     },
   ];
   return cases;

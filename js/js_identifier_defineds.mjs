@@ -1,3 +1,4 @@
+import { js_identifier_defineds_block_index } from "./js_identifier_defineds_block_index.mjs";
 import { js_identifier_defineds_each_statement_up_to } from "./js_identifier_defineds_each_statement_up_to.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { js_identifiers_naming_nodes } from "./js_identifiers_naming_nodes.mjs";
@@ -7,7 +8,6 @@ import { js_loop_declared_names } from "./js_loop_declared_names.mjs";
 import { js_types_loop_node } from "./js_types_loop_node.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { list_index_of_next_outside } from "./list_index_of_next_outside.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_types_function_node } from "./js_types_function_node.mjs";
 import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
@@ -46,7 +46,7 @@ export function js_identifier_defineds(v) {
     function lambda3(bs) {
       let bs_list = list_next(stack, bs);
       let item = list_next(stack, bs_list);
-      let index = list_index_of_next_outside(bs_list, item);
+      let index = js_identifier_defineds_block_index(stack, bs_list, item);
       function each_statement_up_to(i) {
         let r = js_identifier_defineds_each_statement_up_to(i, bs_list, la);
         return r;
