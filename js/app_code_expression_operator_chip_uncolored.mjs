@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export function app_code_expression_operator_chip_uncolored(span) {
   arguments_assert(arguments, 1);

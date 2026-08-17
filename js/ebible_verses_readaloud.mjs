@@ -23,6 +23,15 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     bible_folder,
     chapter_code,
   );
+  ("Nothing at all is answered for a chapter whose two counts disagree, because there is no honest way to lay one against the other there and both of the dishonest ways are worse than saying nothing. Laying them against each other from the front gives every verse after the disagreement somebody else's words, and the reader has no way of telling - it reads as scripture. Stopping instead loses the whole bible over one chapter, which is what used to happen.");
+  ("Measured here rather than looked up in a list, so it cannot go stale: the counts are already in hand at this point, and a chapter that gets put right starts being answered for again with nothing else edited. What the record and its gate are for is knowing how many there are and watching that number only fall.");
+  let marks = list_size(verse_numbers);
+  let lines = list_size(filtered);
+  let paired = equal(marks, lines);
+  let unpaired = not(paired);
+  if (unpaired) {
+    return null;
+  }
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
 }
