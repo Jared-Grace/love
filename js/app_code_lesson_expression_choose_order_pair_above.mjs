@@ -17,8 +17,8 @@ export function app_code_lesson_expression_choose_order_pair_above(root) {
   ("The same three-part shape as the two lessons before it - recall, run, hinge - because a learner arriving here has read that shape on both of the screens behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on this screen is that TWO parts can go first.");
   ("The run says of each side in turn that it may go first, and then says outright that either order comes to the same answer. That last line is the whole lesson: a learner who has only ever had one right press at a time will read two pressable parts as a trap unless they are told plainly that it is not one.");
   ("Every piece of the telling comes from that one line - both sides, what each comes to, what is left when both are done, and what that comes to. Numbers borrowed from nowhere in particular would be things to take on trust; one line worked from top to bottom is a run a learner can follow.");
-  let recall_card = app_code_container_light_blue(root);
-  app_code_lesson_expression_comparing_a_comparison_recall(recall_card);
+  ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
+  app_code_lesson_expression_comparing_a_comparison_recall(root);
   let want_true = true;
   let tree = app_code_lesson_expression_choose_order_pair_expression(want_true);
   let whole_line = app_code_expression_code(tree);

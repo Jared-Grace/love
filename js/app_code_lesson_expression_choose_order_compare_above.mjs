@@ -22,8 +22,8 @@ export function app_code_lesson_expression_choose_order_compare_above(root) {
   ("The recall card is the one the comparison lessons already share, not a copy of it. This lesson leans on the word comparison in every line it draws, and a learner who met the word two lessons ago is owed it again; a second wording of it would leave the word taught twice, differently, on screens next door to each other.");
   ("The comparison is put on the RIGHT of the line, for the reason the first question of the bank puts it there: the part that may be solved first is then not the leftmost thing on the line, so a learner following the run learns to read the line rather than the position.");
   ("Every piece of the telling comes from that one line - which part cannot go yet, which part goes first, what it comes to, what is left, and what that comes to. Numbers borrowed from nowhere in particular would be five things to take on trust; one line worked from top to bottom is a run a learner can follow.");
-  let recall_card = app_code_container_light_blue(root);
-  app_code_lesson_expression_comparing_a_comparison_recall(recall_card);
+  ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
+  app_code_lesson_expression_comparing_a_comparison_recall(root);
   let want_true = true;
   let comparison_left = false;
   let tree = app_code_lesson_expression_choose_order_compare_expression(
