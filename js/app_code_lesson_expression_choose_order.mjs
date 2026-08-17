@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
@@ -36,13 +37,15 @@ export function app_code_lesson_expression_choose_order() {
       on_success,
     );
   }
-  ("everything else this lesson is made of - the bank of lines, the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson after it, and is written once for the two of them");
+  ("everything else this lesson is made of - the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson after it, and is written once for the two of them");
   ("nothing stands above the example, because what this lesson is for is said INSIDE it, about the line the learner is about to press rather than about a line built to be read");
+  let bank = app_code_lesson_expression_choose_order_questions();
   let lesson = app_code_lesson_expression_choose_order_generic(
     name_id,
     noop,
     answer_draw,
     app_code_lesson_expression_choose_order_walkthrough,
+    bank,
   );
   return lesson;
 }
