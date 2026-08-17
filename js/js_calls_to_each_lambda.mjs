@@ -1,6 +1,6 @@
+import { js_calls_to_each_lambda_eq } from "./js_calls_to_each_lambda_eq.mjs";
 import { js_calls_to_each_lambda_name } from "./js_calls_to_each_lambda_name.mjs";
 import { js_calls_to_each_lambda_array_expression } from "./js_calls_to_each_lambda_array_expression.mjs";
-import { js_calls_to_each_lambda_lambda6 } from "./js_calls_to_each_lambda_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
@@ -9,7 +9,6 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_next_try } from "./list_next_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { equal_by } from "./equal_by.mjs";
 import { not } from "./not.mjs";
 export async function js_calls_to_each_lambda(v, ast) {
   arguments_assert(arguments, 2);
@@ -45,11 +44,7 @@ export async function js_calls_to_each_lambda(v, ast) {
   if (n) {
     return;
   }
-  function lambda6(c) {
-    let r3 = js_calls_to_each_lambda_lambda6(c, name);
-    return r3;
-  }
-  let eq = equal_by(call, call2, lambda6);
+  let eq = js_calls_to_each_lambda_eq(name, call, call2);
   if (not(eq)) {
     return;
   }
