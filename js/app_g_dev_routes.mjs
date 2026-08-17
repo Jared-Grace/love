@@ -1,3 +1,4 @@
+import { app_g_dev_routes_characters } from "./app_g_dev_routes_characters.mjs";
 import { app_g_dev_routes_day_conversation } from "./app_g_dev_routes_day_conversation.mjs";
 import { app_g_dev_routes_disciple } from "./app_g_dev_routes_disciple.mjs";
 import { app_g_dev_routes_believe } from "./app_g_dev_routes_believe.mjs";
@@ -7,7 +8,6 @@ import { app_g_dev_routes_gratitude } from "./app_g_dev_routes_gratitude.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
-import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -22,27 +22,22 @@ export function app_g_dev_routes(div_map) {
   let r2 = app_g_dev_routes_disciple(r5);
   let r6 = app_g_dev_routes_day_conversation(r2);
   let day_conversation = property_get(r6, "day_conversation");
-  let believe = property_get(r6, "believe");
-  let gospel_share = property_get(r6, "gospel_share");
-  let quick = property_get(r6, "quick");
-  let unbeliever = property_get(r6, "unbeliever");
-  let day_unbelievers = property_get(r6, "day_unbelievers");
-  let study = property_get(r6, "study");
-  let pray = property_get(r6, "pray");
-  let day_parts = property_get(r6, "day_parts");
-  let day_hours = property_get(r6, "day_hours");
-  let day_baptisms_collect = property_get(r6, "day_baptisms_collect");
-  let discern = property_get(r6, "discern");
-  let dove = property_get(r6, "dove");
-  let gratitude = property_get(r6, "gratitude");
-  let disciple = property_get(r6, "disciple");
-  async function characters() {
-    ("the #characters contact sheet: every character sprite the game owns, each turning once all the way round (",
-      fn_name("app_g_characters"),
-      "). a sibling of #design in kind - it shows you what the game is MADE of rather than putting a mechanic under test - and it ships, because a rotation that came out wrong is a thing to check against the deployed art on a phone");
-    await app_g_view_set(null);
-    app_g_characters();
-  }
+  let r7 = app_g_dev_routes_characters(r6);
+  let characters = property_get(r7, "characters");
+  let disciple = property_get(r7, "disciple");
+  let gratitude = property_get(r7, "gratitude");
+  let dove = property_get(r7, "dove");
+  let discern = property_get(r7, "discern");
+  let day_baptisms_collect = property_get(r7, "day_baptisms_collect");
+  let day_hours = property_get(r7, "day_hours");
+  let day_parts = property_get(r7, "day_parts");
+  let pray = property_get(r7, "pray");
+  let study = property_get(r7, "study");
+  let day_unbelievers = property_get(r7, "day_unbelievers");
+  let unbeliever = property_get(r7, "unbeliever");
+  let quick = property_get(r7, "quick");
+  let gospel_share = property_get(r7, "gospel_share");
+  let believe = property_get(r7, "believe");
   async function design() {
     ("the #design reader: every memory note about this game's design, gathered and shown as collapsible cards (",
       fn_name("app_g_design"),
