@@ -1,3 +1,4 @@
+import { app_g_dev_routes_day_parts } from "./app_g_dev_routes_day_parts.mjs";
 import { app_g_dev_routes_quick } from "./app_g_dev_routes_quick.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
@@ -13,7 +14,6 @@ import { app_g_design } from "./app_g_design.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_sky_choices } from "./app_g_sky_choices.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
@@ -27,8 +27,6 @@ import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
 import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
-import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
-import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 export function app_g_dev_routes(div_map) {
@@ -98,15 +96,8 @@ export function app_g_dev_routes(div_map) {
     app_g_pray_turn(prayer_texts, noop, done);
   }
   async function day_parts() {
-    ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (",
-      fn_name("app_g_sky_step"),
-      ") and jumping (",
-      fn_name("app_g_sky_jump"),
-      ") now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
-    app_g_sky_demo_enable();
-    await app_g_view_set(null);
-    await app_g_sky_choices();
-    await app_g_sky_snap();
+    let r2 = await app_g_dev_routes_day_parts();
+    return r2;
   }
   async function day_hours() {
     ("the #day_hours previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
