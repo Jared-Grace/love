@@ -18,41 +18,25 @@ export function app_code_lesson_expression_choose_order_solve() {
   "The same two operators and the same digits as the lesson before, because the only new thing here is being asked for the value. A line that changed shape at the same time would be two new things at once, and a learner who got it wrong would not know which of them they had missed.";
   "The wrong values offered are worked out from the line itself rather than typed, so no line can be printed beside choices that do not belong to it.";
   let name_id = app_code_lesson_expression_choose_order_solve_title_name_id();
+  ("the quiz and the front page are both written once for every lesson on this engine, and take the one thing that differs between them - which wrong values to offer - handed in");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
-    "the quiz: the same line to press as the front page, and after every press the values it could come to";
-    "The line and the values stand in two places set aside before either is drawn, so the buttons are always UNDER the line - built as they are needed they would land wherever the line had left off.";
-    "What is being asked changes twice a step and the asking says so: choose what to solve, then what it comes to, then what to solve next.";
-    let line_holder = html_div(parent);
-    let choices_holder = html_div(parent);
-    let current = tree;
-    function on_change(step) {
-      current = property_get(step, "current");
-      let solved = property_get(step, "solved");
-      if (null_is(solved)) {
-        return;
-      }
-      let said = app_code_label_solve_next();
-      answer_label_set(said);
-    }
-    async function on_chosen(node, value, node_span) {
-      "a right press is answered by asking what that part comes to, and the line does not move until the right value is pressed";
-      let said = app_code_label_solve_choice();
-      answer_label_set(said);
-      let decoys = app_code_expression_value_decoys(current, node);
-      await app_code_expression_value_choose_await(
-        choices_holder,
-        value,
-        decoys,
-        on_wrong,
-      );
-    }
-    app_code_expression_choose_line(
-      line_holder,
+    "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
+    app_code_lesson_expression_choose_order_solve_answer_draw(
+      parent,
       tree,
-      on_change,
-      on_wrong,
-      on_chosen,
       on_success,
+      on_wrong,
+      answer_label_set,
+      app_code_expression_value_decoys,
+    );
+  }
+  function example_draw(parent, card, tree) {
+    "the front page, with the same wrong values the quiz offers";
+    app_code_lesson_expression_choose_order_solve_example(
+      parent,
+      card,
+      tree,
+      app_code_expression_value_decoys,
     );
   }
   ("everything else this lesson is made of - the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson before it, and is written once for the two of them");
@@ -62,7 +46,7 @@ export function app_code_lesson_expression_choose_order_solve() {
     name_id,
     app_code_lesson_expression_choose_order_solve_above,
     answer_draw,
-    app_code_lesson_expression_choose_order_solve_example,
+    example_draw,
     bank,
   );
   return lesson;

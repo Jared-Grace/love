@@ -26,6 +26,7 @@ export function ebible_verses_exclude() {
     "io2",
     "ip",
     "ipi",
+    "ipq",
     "is",
     "k",
     "mt",
