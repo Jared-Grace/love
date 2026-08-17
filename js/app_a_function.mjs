@@ -1,9 +1,9 @@
+import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
 import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
 import { app_a_function_upload } from "./app_a_function_upload.mjs";
 import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
-import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
@@ -14,7 +14,6 @@ import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.m
 import { html_bar_content } from "./html_bar_content.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
-import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { app_a_app_run } from "./app_a_app_run.mjs";
 import { list_add } from "./list_add.mjs";
@@ -194,15 +193,8 @@ export async function app_a_function(context) {
   });
   let f_names = await functions_names();
   function lambda8(la) {
-    js_visit_type_node(ast, "FunctionDeclaration", on_node);
-    function on_node(n) {
-      let id = property_get(n, "id");
-      function lambda9() {
-        let name = property_get(id, "name");
-        la(name);
-      }
-      js_node_type_is_if(id, "Identifier", lambda9);
-    }
+    let r4 = app_a_function_lambda8(la, ast);
+    return r4;
   }
   let fds = list_adder_unique(lambda8);
   let f_names_local = list_difference(fds, f_names);
