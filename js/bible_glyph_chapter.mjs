@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -18,9 +20,14 @@ export function bible_glyph_chapter(chapter_code) {
       found = chapter;
     }
   }
-  assert_json(not_equal(found, null), {
+  let b = not_equal(found, null);
+  assert_json(b, {
     chapter_code,
-    hint: "no picture Bible chapter answers to that code yet - ask bible_glyph_chapters for the ones that have been written",
+    hint: text_combine_multiple([
+      "no picture Bible chapter answers to that code yet - ask ",
+      fn_name("bible_glyph_chapters"),
+      " for the ones that have been written",
+    ]),
   });
   let verses = [];
   for (let verse of found.verses) {
