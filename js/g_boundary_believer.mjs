@@ -1,6 +1,5 @@
-import { g_boundary_believer_combined } from "./g_boundary_believer_combined.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_boundary_believer_neighbor } from "./g_boundary_believer_neighbor.mjs";
+import { g_boundary_believer_armour } from "./g_boundary_believer_armour.mjs";
 import { g_boundary_know_better } from "./g_boundary_know_better.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,12 +12,9 @@ export function g_boundary_believer(met, door) {
   "The armour differs by which door was opened. Asked how they ARE, they answer with blessing or with how busy the church keeps them. Asked about their WALK, they answer with what they do and with what is true of them in Christ - or they hand back a question about the Bible, which is the safest door and the one they can open themselves. Asked about their NEIGHBOUR, they answer in the general, because a particular would name somebody.";
   "The deepest wall is the walk, and it is HIGHEST in the person who has believed longest - a new convert admits not knowing how to pray at no cost, while forty years of everyone assuming you are fine is a reputation to lose.";
   let softener = g_boundary_softener();
-  let r2 = g_boundary_believer_neighbor(softener);
-  let neighbor = property_get(r2, "neighbor");
-  let heart = property_get(r2, "heart");
-  let r3 = g_boundary_believer_combined(r2, heart, neighbor, door);
-  let combined = property_get(r3, "combined");
-  let armour = property_get(r3, "armour");
+  let r2 = g_boundary_believer_armour(softener, door);
+  let armour = property_get(r2, "armour");
+  let combined = property_get(r2, "combined");
   let contextual = [combined];
   if (not(met)) {
     let r28 = list_random_item([
