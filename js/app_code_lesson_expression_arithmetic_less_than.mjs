@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_arithmetic_less_than_op_divide } from "./app_code_lesson_expression_arithmetic_less_than_op_divide.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_add } from "./app_code_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_above } from "./app_code_lesson_expression_arithmetic_less_than_above.mjs";
@@ -61,17 +62,8 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return r3;
   }
   function op_divide() {
-    "the / arithmetic piece: the top is a multiple of the bottom so the result is a small whole number";
-    let bottom = integer_random(2, 4);
-    let value = integer_random(2, 5);
-    let top = multiply(value, bottom);
-    let r4 = {
-      left: top,
-      right: bottom,
-      symbol: "/",
-      value,
-    };
-    return r4;
+    let r6 = app_code_lesson_expression_arithmetic_less_than_op_divide();
+    return r6;
   }
   function op_exponent() {
     let r8 = app_code_lesson_expression_arithmetic_less_than_op_exponent();
