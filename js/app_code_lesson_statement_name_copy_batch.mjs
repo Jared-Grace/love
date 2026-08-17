@@ -2,7 +2,6 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_name_copy_name } from "./app_code_lesson_statement_name_copy_name.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
@@ -10,10 +9,8 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_get_wrap } from "./list_get_wrap.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_last } from "./list_last.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { ternary } from "./ternary.mjs";
