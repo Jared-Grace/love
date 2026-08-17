@@ -1,3 +1,4 @@
+import { app_search_home_search } from "./app_search_home_search.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
@@ -12,8 +13,6 @@ import { html_div } from "./html_div.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_search_results } from "./app_search_results.mjs";
-import { html_value_get } from "./html_value_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -24,12 +23,10 @@ import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_ge
 import { emoji_search } from "./emoji_search.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { html_hash_object_property_set } from "./html_hash_object_property_set.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { app_search_query_hash_key } from "./app_search_query_hash_key.mjs";
 import { app_search_query_hash_word_gap } from "./app_search_query_hash_word_gap.mjs";
-import { text_replace_space_to } from "./text_replace_space_to.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
 export async function app_search_home(context) {
   let hash = html_hash_object_get();
@@ -72,13 +69,8 @@ export async function app_search_home(context) {
   html_br_2(content);
   let div_results = html_div(content);
   async function search() {
-    let query = html_value_get(input);
-    property_set(context, "query", query);
-    let key = app_search_query_hash_key();
-    let plus = app_search_query_hash_word_gap();
-    let query_hash_written = text_replace_space_to(query, plus);
-    html_hash_object_property_set(key, query_hash_written);
-    await app_search_results(context, div_results);
+    let r = await app_search_home_search(input, context, div_results);
+    return r;
   }
   let property = app_search_query_hash_key();
   let query_hash = property_get_or_null(hash, property);
