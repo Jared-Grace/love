@@ -1,3 +1,4 @@
+import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -57,7 +58,7 @@ export function app_code_cup(parent, inside, name) {
     "flex-direction": "column",
     "align-items": "center",
     "justify-content": "center",
-    gap: "0.05em",
+    gap: app_shared_button_border_width(),
   });
   ("what is in the cup is drawn larger than the writing around it, because it is the thing being looked at rather than something said about it");
   ("Given a box of its own size and stood in the middle of it, rather than laid out as a line of writing would be. What goes in the cup is an emoji, and every make of phone draws its own: they are not the same width, not the same height, and do not sit the same distance below the top of the line. Left as writing, the picture would come out with a different amount of glass above it on every device, and on some of them the grapes would touch the rim.");
