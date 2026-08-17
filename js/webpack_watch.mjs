@@ -1,3 +1,4 @@
+import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
 import { webpack_watch_affected_get } from "./webpack_watch_affected_get.mjs";
 import { webpack_watch_build_run } from "./webpack_watch_build_run.mjs";
 import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
@@ -11,14 +12,11 @@ import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { import_install } from "./import_install.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
-import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { function_dependencies } from "./function_dependencies.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -28,17 +26,7 @@ export async function webpack_watch() {
   let dev_relative = folder_public_join(f_path);
   let a_names = await apps_names_dev();
   async function app_deps_get(a_name) {
-    async function lambda() {
-      let main = await app_shared_name_main(a_name);
-      let f_name2 = fn_name("app_shared_context_initialize");
-      let deps = await function_dependencies([main, f_name2]);
-      let r2 = {
-        a_name,
-        deps,
-      };
-      return r2;
-    }
-    let r = await catch_null_async(lambda);
+    let r = await webpack_watch_app_deps_get(a_name);
     return r;
   }
   let built = await list_map_async(a_names, app_deps_get);
