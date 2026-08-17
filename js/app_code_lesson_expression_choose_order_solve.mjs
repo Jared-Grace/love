@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { property_get } from "./property_get.mjs";
@@ -98,9 +99,10 @@ export function app_code_lesson_expression_choose_order_solve() {
     return quizzes_exercises;
   }
   let example_question_label = app_code_label_code_question();
+  ("what the learner already knows stands above the card, worked through on a line of its own, because it is the telling and the card is the doing");
   let lesson = app_code_lesson_base(
     name_id,
-    noop,
+    app_code_lesson_expression_choose_order_solve_above,
     1,
     batch_get,
     on_question_example,

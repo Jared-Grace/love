@@ -1,3 +1,4 @@
+import { app_code_definition_term } from "./app_code_definition_term.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -7,7 +8,6 @@ import { list_concat } from "./list_concat.mjs";
 import { list_to_or_list_word } from "./list_to_or_list_word.mjs";
 import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
-import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_arithmetic_less_than_above(
     js_operator_symbol,
   );
   html_span_text(line, " before any ");
-  html_span_text_bold(line, "comparison");
+  app_code_definition_term(line, "comparison");
   html_span_text(line, ": ");
   app_code_operators_comparison_or_list(line);
   let sum = add(2, 3);
