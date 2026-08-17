@@ -15,18 +15,10 @@ import { range_from } from "./range_from.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_code_expression_step_operands(value, symbol, value_left) {
   arguments_assert(arguments, 3);
-  (
-    "every number that may stand on the other side of one operator so that the step comes out a whole number within the allowed range: 6 with a divide and the 6 on the left gives 2 and 3, because 6 / 2 and 6 / 3 both land on a whole number, while 6 / 4 and 6 / 5 do not"
-  );
-  (
-    "A line is grown one operator at a time, and this is what keeps every step of it answerable. Choosing the numbers first and checking the line afterwards would have to throw away the lines that failed, and a lesson that draws until it gets a good one has no promise it will ever get one."
-  );
-  (
-    "An empty answer is a real answer and not a fault: 8 has nothing that may be added to it, because every number allowed would carry the step past 9. The caller reads emptiness as this operator not being available here and reaches for another one."
-  );
-  (
-    "The side matters for the two operators that read differently each way round. 9 with a minus on the left may have 2 through 7 taken FROM it; the same 9 on the right needs something bigger than itself in front of it, which no allowed number is."
-  );
+  ("every number that may stand on the other side of one operator so that the step comes out a whole number within the allowed range: 6 with a divide and the 6 on the left gives 2 and 3, because 6 / 2 and 6 / 3 both land on a whole number, while 6 / 4 and 6 / 5 do not");
+  ("A line is grown one operator at a time, and this is what keeps every step of it answerable. Choosing the numbers first and checking the line afterwards would have to throw away the lines that failed, and a lesson that draws until it gets a good one has no promise it will ever get one.");
+  ("An empty answer is a real answer and not a fault: 8 has nothing that may be added to it, because every number allowed would carry the step past 9. The caller reads emptiness as this operator not being available here and reaches for another one.");
+  ("The side matters for the two operators that read differently each way round. 9 with a minus on the left may have 2 through 7 taken FROM it; the same 9 on the right needs something bigger than itself in front of it, which no allowed number is.");
   let least = app_code_expression_step_value_least();
   let most = app_code_expression_step_value_most();
   function exact_is(candidate) {
