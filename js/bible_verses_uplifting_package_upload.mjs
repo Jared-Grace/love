@@ -1,6 +1,5 @@
+import { bible_verses_uplifting_package_upload_chapter_normalize } from "./bible_verses_uplifting_package_upload_chapter_normalize.mjs";
 import { bible_verses_uplifting_package_upload_verse_get } from "./bible_verses_uplifting_package_upload_verse_get.mjs";
-import { verse_number_key } from "./verse_number_key.mjs";
-import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
 import { uplifting_package_destination } from "./uplifting_package_destination.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
@@ -19,7 +18,6 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { each_async } from "./each_async.mjs";
-import { each } from "./each.mjs";
 import { each_object } from "./each_object.mjs";
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
@@ -31,13 +29,9 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
   if (is_interlinear) {
     interlinear_chapters = await bible_interlinear_chapters();
     function chapter_normalize(chapter_verses) {
-      function verse_normalize(verse) {
-        let property_name = verse_number_key();
-        let value = property_text_to(verse, property_name);
-        let property_name2 = verse_number_key();
-        property_set(verse, property_name2, value);
-      }
-      each(chapter_verses, verse_normalize);
+      let r2 =
+        bible_verses_uplifting_package_upload_chapter_normalize(chapter_verses);
+      return r2;
     }
     each_object(interlinear_chapters, chapter_normalize);
   }
