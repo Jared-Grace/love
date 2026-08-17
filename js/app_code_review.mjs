@@ -1,3 +1,4 @@
+import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
@@ -113,13 +114,8 @@ export function app_code_review(context) {
       storage_local_remove_context(context, key);
       app_code_review_complete(c);
       function render_continue(continue_parent) {
-        "the continue-to-the-next-lesson button";
-        let arrow = emoji_arrow_right();
-        let continue_text = text_combine_middle_space_nb(
-          arrow,
-          "Continue to the next lesson",
-        );
-        app_shared_button_wide(continue_parent, continue_text, go_next);
+        let r = app_code_review_render_continue(continue_parent, go_next);
+        return r;
       }
       app_code_advance_or_no_more(c, has_next, render_continue);
       return;
