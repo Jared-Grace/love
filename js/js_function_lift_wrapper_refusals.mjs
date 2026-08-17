@@ -16,6 +16,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   ("Every reason there is not to move this function's body out and leave its name behind holding one line that calls it. Empty means there is none.");
   ("One judgement, asked by two askers. The move asks it to decide whether to go ahead or say why not; the report of what could be moved asks the same question of every function written inside another one, without moving anything. Two copies of this would drift, and the drift would show up as a report promising a move that then refuses - the worst kind of list, because acting on it costs a whole command to learn it was wrong.");
   ("Nothing here is a fault. Each one is a shape this move cannot keep the meaning of, and each says what somebody could do first to make it one that can.");
+  ("Each one carries a short word for its shape alongside the sentence. The sentence is for whoever is turned down and reads it once; the word is for counting one shape across the whole repo, which a sentence cannot be counted by - a reading that tallied prose would come apart the first time a sentence was made kinder.");
   let refusals = [];
   let reading = await js_function_nested_lift_reading(ast, declaration);
   let name_old = property_get(reading, "name_old");
@@ -23,6 +24,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let written_is = list_empty_not_is(written_closed);
   if (written_is) {
     list_add(refusals, {
+      reason: text_frozen("written_closed"),
       why: "this function writes to a name it reached out for, and a parameter would only be a copy of it, so the write would stop reaching the line waiting to read it. Would you like it to hand the new value back instead?",
       written_closed,
     });

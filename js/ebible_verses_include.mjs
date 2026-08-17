@@ -4,6 +4,7 @@ export function ebible_verses_include() {
     "bd",
     "bk",
     "char",
+    "cls",
     "d",
     "em",
     "fk",
