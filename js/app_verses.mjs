@@ -1,6 +1,6 @@
+import { app_verses_display_group } from "./app_verses_display_group.mjs";
 import { app_verses_copy } from "./app_verses_copy.mjs";
 import { app_shared_bible_verses_counts } from "./app_shared_bible_verses_counts.mjs";
-import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { app_shared_bible_hash_to_languages_chosen_or } from "./app_shared_bible_hash_to_languages_chosen_or.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
@@ -216,9 +216,8 @@ export async function app_verses(context) {
     await app_verses_draw_fresh(true, order, verse_count, references_show);
   }
   function display_group(group) {
-    let reference = property_get(group, "reference");
-    let entries = property_get(group, "entries");
-    app_shared_bible_verse_block(card4, reference, entries);
+    let r3 = app_verses_display_group(group, card4);
+    return r3;
   }
   async function copy() {
     let r2 = await app_verses_copy(verse_groups);
