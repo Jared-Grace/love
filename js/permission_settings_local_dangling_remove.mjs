@@ -1,4 +1,4 @@
-import { permission_settings_local_dangling_remove_held } from "./permission_settings_local_dangling_remove_held.mjs";
+import { permission_settings_local_dangling_remove_settings } from "./permission_settings_local_dangling_remove_settings.mjs";
 import { permission_settings_local_dangling_remove_r } from "./permission_settings_local_dangling_remove_r.mjs";
 import { permission_settings_local_dangling_remove_f_names } from "./permission_settings_local_dangling_remove_f_names.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
@@ -26,9 +26,9 @@ export async function permission_settings_local_dangling_remove() {
     };
     return none;
   }
-  let r3 = await permission_settings_local_dangling_remove_held(path);
-  let held = property_get(r3, "held");
+  let r3 = await permission_settings_local_dangling_remove_settings(path);
   let settings = property_get(r3, "settings");
+  let held = property_get(r3, "held");
   if (not(held)) {
     let none2 = {
       path,
