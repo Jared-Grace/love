@@ -3673,11 +3673,22 @@ def dead_dispatcher_deny_reason(name, live_names):
             "repointed. See CLAUDE.md - 'Two seams'.)"
         )
     near = function_name_near_misses(name, live_names or set())
-    suggestion = (
-        "Closest live names: " + ", ".join(near) + "."
-        if near
-        else "Find the real name with `node scripts/ai.mjs functions_search "
-        "<substrings>` (AND-of-substrings over function names)."
+    # The search advice is now said in BOTH cases, not only when there are no
+    # neighbours, because the neighbours can be present and still be the wrong
+    # direction. Measured over recent transcripts: `function_source` was called
+    # 20-odd times and every call meant "show me this function's source", while
+    # its only two-word-sharing neighbours are `function_source_remove` and
+    # `function_source_replace` - both WRITERS. The reader is `function_read`,
+    # which shares one word and so can never be offered. A dead name that is a
+    # strict subset of live names gets neighbours that merely extend it, and
+    # that is exactly the case where a guess by symmetry went wrong. Naming the
+    # search keeps the next move stated when the list does not hold the answer.
+    suggestion = "Closest live names: " + ", ".join(near) + ". " if near else ""
+    suggestion += (
+        "Find the real name with `node scripts/ai.mjs functions_search "
+        "<substrings>` (AND-of-substrings over function names), or "
+        "`node scripts/ai.mjs functions_prose_search <words>` to search what "
+        "functions say they are for rather than what they are called."
     )
     return (
         f"No function named `{name}` exists in any repo, so this command would "
