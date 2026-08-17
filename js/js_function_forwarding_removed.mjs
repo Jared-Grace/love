@@ -1,4 +1,4 @@
-import { js_function_forwarding_removed_mentions } from "./js_function_forwarding_removed_mentions.mjs";
+import { js_function_forwarding_removed_name } from "./js_function_forwarding_removed_name.mjs";
 import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
 import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
 import { js_function_forwarding_removed_callee } from "./js_function_forwarding_removed_callee.mjs";
@@ -39,9 +39,7 @@ export async function js_function_forwarding_removed(ast, node, stack) {
       return;
     }
   }
-  let r2 = js_function_forwarding_removed_mentions(id, ast);
-  let mentions = property_get(r2, "mentions");
-  let name = property_get(r2, "name");
+  let { mentions, name } = js_function_forwarding_removed_name(id, ast);
   if (equal_not(mentions, 2)) {
     return;
   }
