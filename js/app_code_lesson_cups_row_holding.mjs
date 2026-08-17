@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_cups_row_fruits(parent, pairs) {
+export function app_code_lesson_cups_row_holding(parent, pairs) {
   arguments_assert(arguments, 2);
   ("a row of cups standing side by side, each one drawn from what is in it and the name written on it");
   ("A row and the cups in it are one thing on a screen and were two in the code, so a screen wanting three cups wrote four lines and a screen wanting two wrote three. What a screen actually has to say is the list of cups, and the row is what a list of cups is drawn as.");
