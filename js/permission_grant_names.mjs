@@ -1565,7 +1565,7 @@ export function permission_grant_names() {
   let spelled1526 = fn_name(
     "app_en_learn_bible_gloss_urdu_misaligned_gate_run",
   );
-  let spelled1527 = fn_name("urdu_bible_gloss_passages");
+  let spelled1527 = fn_name("app_en_learn_bible_gloss_urdu_passages");
   let spelled1528 = fn_name("urdu_bible_gloss_write_chapter_file");
   let spelled1529 = fn_name("url_available_is");
   let spelled1530 = fn_name("g_verify_queue_advance");
