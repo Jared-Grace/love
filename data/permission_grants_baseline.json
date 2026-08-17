@@ -251,6 +251,10 @@
   {
    "name": "function_new_from_temp",
    "refusals": 1
+  },
+  {
+   "name": "qa_app_commit_deployable",
+   "refusals": 1
   }
  ]
 }
