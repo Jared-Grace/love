@@ -3,7 +3,7 @@ import { list_intersect } from "./list_intersect.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
+import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { function_exists } from "./function_exists.mjs";
@@ -25,7 +25,7 @@ export async function functions_nested_lift_pass_generic(
   for (let row of candidates) {
     let f_name = property_get(row, "name");
     let nested = property_get(row, "nested");
-    let f_name_new = function_nested_lift_name_or_null(f_name, nested);
+    let f_name_new = function_part_name_or_null(f_name, nested);
     let named_is = null_not_is(f_name_new);
     if (not(named_is)) {
       list_add(skipped, {

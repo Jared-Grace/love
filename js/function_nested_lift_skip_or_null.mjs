@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
-import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
+import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +23,7 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
     };
     return unnamed;
   }
-  let f_name_new = function_nested_lift_name_or_null(f_name, nested);
+  let f_name_new = function_part_name_or_null(f_name, nested);
   let named_is = null_not_is(f_name_new);
   if (not(named_is)) {
     let unspelled = {

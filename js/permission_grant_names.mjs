@@ -867,7 +867,7 @@ export function permission_grant_names() {
   let spelled854 = fn_name("folder_user_mounted_is");
   let spelled855 = fn_name("folder_gitignore_absolute_gate_run");
   let spelled856 = fn_name("functions_nested_lift_all");
-  let spelled857 = fn_name("function_nested_lift_name_or_null");
+  let spelled857 = fn_name("function_part_name_or_null");
   let spelled858 = fn_name("functions_asts");
   let spelled859 = fn_name("folder_user_root");
   let spelled860 = fn_name("qa_promoted");

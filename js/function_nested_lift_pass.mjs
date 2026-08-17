@@ -10,7 +10,7 @@ import { not } from "./not.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_lift_wrapper_candidates } from "./function_lift_wrapper_candidates.mjs";
-import { function_nested_lift_name_or_null } from "./function_nested_lift_name_or_null.mjs";
+import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
 export async function function_nested_lift_pass(f_name) {
   arguments_assert(arguments, 1);
   ("One walk through the named function, moving out the body of every piece written inside it that can be moved, each under a name worked out from the two names it already has, and each committed under its own command before the next one starts.");
@@ -40,7 +40,7 @@ export async function function_nested_lift_pass(f_name) {
       list_add(skipped, skip);
       continue;
     }
-    let f_name_new = function_nested_lift_name_or_null(f_name, nested);
+    let f_name_new = function_part_name_or_null(f_name, nested);
     let lift = await function_nested_lift_or_wrapper(f_name, nested);
     await function_call_commit(lift, [f_name, nested, f_name_new]);
     let by = lift.name;
