@@ -1,17 +1,13 @@
-import { identity } from "./identity.mjs";
+import { app_code_lesson_quiz_quiz_index } from "./app_code_lesson_quiz_quiz_index.mjs";
 import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
-import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
-import { app_code_content_cap } from "./app_code_content_cap.mjs";
-import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
-import { app_code_feedback_cell } from "./app_code_feedback_cell.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { not } from "./not.mjs";
@@ -19,20 +15,14 @@ import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
-import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_light_bulb } from "./emoji_light_bulb.mjs";
 import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
@@ -50,46 +40,28 @@ export function app_code_lesson_quiz(
   next_get,
 ) {
   let question_label = property_get(info, "question_label");
-  let on_question = property_get(info, "on_question");
-  let answer_label = property_get(info, "answer_label");
-  let on_answer = property_get(info, "on_answer");
-  let correction_render = property_get_or(
+  let r4 = app_code_lesson_quiz_quiz_index(
     info,
-    "correction",
-    app_code_quiz_correction,
-  );
-  let answer_property = property_get(info, "answer_property");
-  ("a batch line spells one pair, and a quiz that asks about something worked out from that pair rather than about the pair itself remaps every line it draws. Its wrong answers are already drawn through this remap; the line it moves on to after a right answer is drawn the same way, or the quiz would open its next question showing the pair as the batch spells it - the very thing it does not ask about. Every other quiz shows the pair as it stands, and identity leaves it alone");
-  let qa_for = property_get_or(info, "qa_for", identity);
-  let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
-  let a = app_code_lesson_above(
+    qa,
     container_blue_light,
     question_label,
-    quiz_question,
-    on_question,
+    parent,
+    context,
   );
-  let a_container = property_get(a, "container");
-  let container_question = property_get(a, "container_question");
-  let answer_label_div = app_code_example_answer_label(
-    a_container,
-    answer_label,
-  );
-  function answer_label_set(said) {
-    "let a quiz say something new over its answers, for the quizzes whose question is worked out in steps and whose asking changes as the steps go";
-    app_code_label_text_set(answer_label_div, said);
-  }
-  let answers_div = html_div(a_container);
-  let parent_container = html_div(parent);
-  ("one feedback slot holds the success message and the correction overlapped in a single grid cell, so it is always as tall as the taller of the two and nothing shifts when Show me the answer swaps one for the other");
-  let feedback_slot = html_div(parent_container);
-  app_code_feedback_slot_style(feedback_slot);
-  let container_correction = html_div(feedback_slot);
-  let container_success_message = html_div(feedback_slot);
-  app_code_feedback_cell(container_correction);
-  app_code_feedback_cell(container_success_message);
-  app_code_content_cap(container_success_message);
-  app_shared_success_message(container_success_message);
-  let quiz_index = app_code_quiz_index_get(context);
+  let quiz_index = property_get(r4, "quiz_index");
+  let container_success_message = property_get(r4, "container_success_message");
+  let container_correction = property_get(r4, "container_correction");
+  let parent_container = property_get(r4, "parent_container");
+  let answers_div = property_get(r4, "answers_div");
+  let answer_label_set = property_get(r4, "answer_label_set");
+  let container_question = property_get(r4, "container_question");
+  let quiz_question = property_get(r4, "quiz_question");
+  let qa_for = property_get(r4, "qa_for");
+  let answer_property = property_get(r4, "answer_property");
+  let correction_render = property_get(r4, "correction_render");
+  let on_answer = property_get(r4, "on_answer");
+  let answer_label = property_get(r4, "answer_label");
+  let on_question = property_get(r4, "on_question");
   let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_code_lesson_current_number(context);
   let has_review = app_code_review_due_is(number);
