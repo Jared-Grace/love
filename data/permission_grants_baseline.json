@@ -247,6 +247,10 @@
   {
    "name": "qa_app_commit_deployable_remembered",
    "refusals": 1
+  },
+  {
+   "name": "function_new_from_temp",
+   "refusals": 1
   }
  ]
 }
