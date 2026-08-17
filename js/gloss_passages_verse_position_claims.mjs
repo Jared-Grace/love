@@ -17,7 +17,7 @@ export function gloss_passages_verse_position_claims(
   "$plain text_index";
   "the index says which of a passage's texts is the wording being explained, and it names a place in a list rather than anything that runs.";
   "The two readings beside this one both ask about verses - which verse a word is named in, and how many verses it stands in. Neither can see the order of words inside one line, and that is where the error this reading was built for lived: a word called the one just before another, with a third word standing between them.";
-  "So what comes back names the place: how far along the passage the explanation sits, how many words the passage holds, and the word on each side of it. A sentence claiming to open a line is settled by seeing the place is not the first, and a sentence naming the word before is settled by reading it.";
+  "So what comes back names the place: how far along the passage the explanation sits, how many words the passage holds, the word on each side of it, and the word at each end of the passage. A sentence claiming to open a line is settled by seeing the place is not the first, a sentence naming the word before is settled by reading it, and a sentence saying its word is the same as the first word is settled by having the first word to compare it with.";
   "Nothing here is called wrong. A word's own parts stand in an order too, so an explanation about a prefix and a root is caught by the same phrases; a reader tells the two apart at a glance and no machine can.";
   "An explanation that says its word joins onto its neighbour is passed over even where it does use one of these phrases. Cebuano hangs a describing word onto what it describes, so such an explanation has to mention the neighbour in order to say anything at all, and what it then says is true however the line runs. Left in, they were the great bulk of everything this reading found.";
   let markers = gloss_position_claim_markers();
@@ -41,6 +41,8 @@ export function gloss_passages_verse_position_claims(
     let index = subtract(at, 1);
     let before = list_get_or(words, index, "");
     let after = list_get_or(words, at + 1, "");
+    let first = list_get_or(words, 0, "");
+    let last = list_get_or(words, subtract(of, 1), "");
     let finding = {
       verses_key,
       word,
@@ -49,6 +51,8 @@ export function gloss_passages_verse_position_claims(
       of,
       before,
       after,
+      first,
+      last,
       explain,
     };
     let one = [finding];
