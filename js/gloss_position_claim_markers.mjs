@@ -4,6 +4,7 @@ export function gloss_position_claim_markers() {
   "They are matched against wording already lowered, so each is written in lower case here. Each one carries the space that has to stand before it, and the wording it is matched against is given a space at the front, so a phrase opening a sentence still finds one.";
   "The reading beside this one asks how often a word stands in its chapter. This one asks where it stands in its own line, and neither can answer the other's question: a word may stand in the right verses and still be said to open a line it closes.";
   "This is a net and not a verdict. A word's own parts sit in an order too, so 'the prefix just before the root' is caught here as well - a reader sees at once that it is not about the line, and the cost of catching it is one glance.";
+  "'The next word' and 'the previous word' were here and have been taken out. They name no word - they mean whatever happens to stand there - so what is said of them holds however the line runs, and no line can settle them. They were also the wording the machine-written explanations reached for constantly: two thousand seven hundred and thirty-four findings out of three thousand and sixty-five across the whole corpus, which is a reading nobody would ever reach the end of.";
   let markers = [
     " just before",
     " just after",

@@ -1,12 +1,10 @@
-import { property_get } from "./property_get.mjs";
+import { g_arc_lengths_npcs } from "./g_arc_lengths_npcs.mjs";
 import { g_arc_lengths_attempt } from "./g_arc_lengths_attempt.mjs";
 import { g_arc_lengths_count } from "./g_arc_lengths_count.mjs";
 import { g_arc_lengths_next } from "./g_arc_lengths_next.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { math_max } from "./math_max.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { identity } from "./identity.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 export async function g_arc_lengths(chapter) {
   "Works out how long each arc in one chapter should be, from the settings and the chapter's own sermon lines - so the npc count falls out as the length of the list rather than being chosen.";
@@ -19,15 +17,16 @@ export async function g_arc_lengths(chapter) {
   let r2 = await g_arc_lengths_next(chapter, settings);
   let r3 = g_arc_lengths_count(r2);
   let r4 = g_arc_lengths_attempt(r3, settings);
-  let lines = property_get(r4, "lines");
-  let matches = property_get(r4, "matches");
-  let question_turns = property_get(r4, "question_turns");
-  let arc_turns = property_get(r4, "arc_turns");
-  let cap = property_get(r4, "cap");
-  let lengths = property_get(r4, "lengths");
-  let turns_unspent = property_get(r4, "turns_unspent");
-  list_sort_number_mapper_reverse(lengths, identity);
-  let npcs = lengths.length;
+  let {
+    lines,
+    matches,
+    question_turns,
+    arc_turns,
+    cap,
+    lengths,
+    turns_unspent,
+    npcs,
+  } = g_arc_lengths_npcs(r4);
   let v = divide_ceil(settings.day_matches, settings.conversation_turns_mean);
   let npcs_minimum = math_max(v, settings.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs, npcs_minimum);

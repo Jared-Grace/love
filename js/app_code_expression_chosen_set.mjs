@@ -18,13 +18,8 @@ export function app_code_expression_chosen_set(node_span, operator_span) {
   app_code_expression_colored_slowly(node_span);
   ("the operator's own chip is not faded with it - it goes plain in the very frame it narrows, because the narrowing cannot be slowed and a chip still wearing its grey while it closes up is read as the grey itself shrinking");
   ("Faded, the two are seen out of step: the room goes between one frame and the next, the colour takes half a second to follow, and for that half second there is a grey standing at a width it never had.");
-  html_style_background_color_set(operator_span, "transparent");
-  html_style_set(operator_span, "color", "inherit");
-  ("its edge goes with its fill, in the same breath: an edge left drawn round the operator keeps it marked out as one thing inside the blue, and the whole point of the blue is that the operator and its two sides have just become one thing");
-  html_box_shadow_set(operator_span, "none");
-  ("and the room it was holding either side of itself goes too, so the block spells its working out at the width the same working out is spelled at in the sentence naming it, rather than a chip's worth wider");
-  ("The room was there to keep the fill and the edge off the lettering. With neither of them left there is nothing for it to hold off, and all it does is push the two sides of the working apart - which reads as the block being about something slightly different from the thing the sentence says it is.");
-  html_style_padding_x(operator_span, "0");
+  ("its edge and the room it was holding go with its fill, in the same breath, out of the one unit that takes a chip off anywhere: an edge left drawn round the operator keeps it marked out as one thing inside the blue, and the whole point of the blue is that the operator and its two sides have just become one thing");
+  app_code_expression_operator_chip_clear(operator_span);
   ("the blue is given last, once the operator is already plain and already narrow, so what rises is a block of one colour rather than a blue closing in around a grey");
   app_code_expression_chosen_style_assign(node_span);
   app_code_expression_chip_style(node_span);
