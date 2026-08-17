@@ -41,7 +41,7 @@ import { g_leader_book_reaches_canon_assert } from "./g_leader_book_reaches_cano
 import { apps_hash_keys_unchecked_gate_run } from "./apps_hash_keys_unchecked_gate_run.mjs";
 import { app_code_lesson_expression_which_part_first_gate_run } from "./app_code_lesson_expression_which_part_first_gate_run.mjs";
 import { app_ceb_bible_gloss_misaligned_gate_run } from "./app_ceb_bible_gloss_misaligned_gate_run.mjs";
-import { urdu_bible_gloss_misaligned_gate_run } from "./urdu_bible_gloss_misaligned_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_misaligned_gate_run } from "./app_en_learn_bible_gloss_urdu_misaligned_gate_run.mjs";
 import { gloss_words_misaligned_cases_gate_run } from "./gloss_words_misaligned_cases_gate_run.mjs";
 import { app_shared_bible_hash_unknown_gate_run } from "./app_shared_bible_hash_unknown_gate_run.mjs";
 import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
@@ -522,7 +522,7 @@ export function qa_gates() {
     app_original_bible_gloss_parsings_gate_run,
     app_original_bible_gloss_lexicons_named_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,
-    urdu_bible_gloss_misaligned_gate_run,
+    app_en_learn_bible_gloss_urdu_misaligned_gate_run,
     gloss_write_root_files_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
