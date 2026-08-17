@@ -1,7 +1,5 @@
-import { app_search_home_div_results } from "./app_search_home_div_results.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_search_home_left } from "./app_search_home_left.mjs";
-import { app_search_home_search } from "./app_search_home_search.mjs";
+import { app_search_home_r } from "./app_search_home_r.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
@@ -21,16 +19,10 @@ export async function app_search_home(context) {
   if (unknown_shown) {
     return;
   }
-  let r2 = app_search_home_left(context, hash, search);
-  let left = property_get(r2, "left");
-  let r3 = app_search_home_div_results(r2, left, search);
-  let div_results = property_get(r3, "div_results");
-  let content = property_get(r3, "content");
-  let input = property_get(r3, "input");
-  async function search() {
-    let r = await app_search_home_search(input, context, div_results);
-    return r;
-  }
+  let r = app_search_home_r(context, hash);
+  let search = property_get(r, "search");
+  let input = property_get(r, "input");
+  let content = property_get(r, "content");
   let property = app_search_query_hash_key();
   let query_hash = property_get_or_null(hash, property);
   if (not_equal_loose(query_hash, null)) {
