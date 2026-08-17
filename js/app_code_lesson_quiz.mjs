@@ -45,25 +45,24 @@ export function app_code_lesson_quiz(
     quizzes,
     refresh,
   );
-  let {
-    answer_label,
-    r3,
-    has_next_step,
-    render_next,
-    quiz_index,
-    container_success_message,
-    container_correction,
-    parent_container,
-    answers_div,
-    answer_label_set,
-    container_question,
-    quiz_question,
-    qa_for,
-    answer_property,
-    correction_render,
-    on_answer,
-    on_question,
-  } = app_code_lesson_quiz_on_question(r);
+  let r4 = app_code_lesson_quiz_on_question(r);
+  let on_question = property_get(r4, "on_question");
+  let on_answer = property_get(r4, "on_answer");
+  let correction_render = property_get(r4, "correction_render");
+  let answer_property = property_get(r4, "answer_property");
+  let qa_for = property_get(r4, "qa_for");
+  let quiz_question = property_get(r4, "quiz_question");
+  let container_question = property_get(r4, "container_question");
+  let answer_label_set = property_get(r4, "answer_label_set");
+  let answers_div = property_get(r4, "answers_div");
+  let parent_container = property_get(r4, "parent_container");
+  let container_correction = property_get(r4, "container_correction");
+  let container_success_message = property_get(r4, "container_success_message");
+  let quiz_index = property_get(r4, "quiz_index");
+  let render_next = property_get(r4, "render_next");
+  let has_next_step = property_get(r4, "has_next_step");
+  let r3 = property_get(r4, "r3");
+  let answer_label = property_get(r4, "answer_label");
   let qli = property_get(r3, "qli");
   app_code_advance_or_no_more(parent_container, has_next_step, render_next);
   function on_reveal() {
