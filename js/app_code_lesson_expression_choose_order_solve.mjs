@@ -1,15 +1,9 @@
+import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_div } from "./html_div.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
-import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
 import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
-import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
-import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 export function app_code_lesson_expression_choose_order_solve() {
   "choosing which part of a line to solve, and then working that part out: 1 + 2 * 3, choose the times, choose 6 out of what it could come to, see 1 + 6, choose the plus, choose 7";
