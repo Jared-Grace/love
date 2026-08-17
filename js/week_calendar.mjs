@@ -1,21 +1,17 @@
+import { property_get } from "./property_get.mjs";
+import { week_calendar_day } from "./week_calendar_day.mjs";
 import { week_calendar_handle } from "./week_calendar_handle.mjs";
 import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
-import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
-import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_range_label } from "./week_range_label.mjs";
@@ -30,32 +26,18 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   let slots = numbers_up_to(48);
   let ranges = initial_ranges;
   let anchor = null;
-  let records = [];
-  let root = app_shared_container_blue(parent);
-  let heading = html_div_text(root, "Selected times");
-  html_style_assign(heading, {
-    "font-weight": "bold",
-    "margin-bottom": "0.25rem",
-  });
-  let summary = html_div(root);
-  html_style_assign(summary, {
-    "margin-bottom": "0.75rem",
-  });
-  let grid = html_div(root);
-  html_style_assign(grid, {
-    display: "grid",
-    width: "100%",
-    "grid-template-columns": "auto repeat(7, 1fr)",
-    gap: "0",
-  });
-  html_div_text(grid, "");
-  each(days, header_cell);
-  each(slots, slot_row);
-  week_calendar_paint(records, paint_record, summary, ranges, summary_line);
-  function header_cell(day) {
-    let r = week_calendar_header_cell(day, grid);
-    return r;
-  }
+  let r = week_calendar_day(
+    parent,
+    days,
+    slots,
+    slot_row,
+    paint_record,
+    ranges,
+    summary_line,
+  );
+  let grid = property_get(r, "grid");
+  let summary = property_get(r, "summary");
+  let records = property_get(r, "records");
   function slot_row(slot) {
     let r2 = week_calendar_slot_row(slot, grid, cell_pressed, records, days);
     return r2;
