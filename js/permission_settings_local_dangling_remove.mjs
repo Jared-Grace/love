@@ -1,4 +1,4 @@
-import { permission_settings_local_dangling_remove_cleared } from "./permission_settings_local_dangling_remove_cleared.mjs";
+import { permission_settings_local_dangling_remove_f_names } from "./permission_settings_local_dangling_remove_f_names.mjs";
 import { permission_settings_local_dangling_remove_dangling_is } from "./permission_settings_local_dangling_remove_dangling_is.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
@@ -49,12 +49,12 @@ export async function permission_settings_local_dangling_remove() {
     };
     return none3;
   }
-  let r2 = await permission_settings_local_dangling_remove_cleared(permissions);
-  let cleared = property_get(r2, "cleared");
-  let kept = property_get(r2, "kept");
-  let removed = property_get(r2, "removed");
-  let aliases = property_get(r2, "aliases");
+  let r2 = await permission_settings_local_dangling_remove_f_names(permissions);
   let f_names = property_get(r2, "f_names");
+  let aliases = property_get(r2, "aliases");
+  let removed = property_get(r2, "removed");
+  let kept = property_get(r2, "kept");
+  let cleared = property_get(r2, "cleared");
   if (cleared) {
     let nothing = {
       path,
