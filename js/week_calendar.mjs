@@ -1,7 +1,6 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
 import { week_calendar_paint } from "./week_calendar_paint.mjs";
-import { week_calendar_day_cell } from "./week_calendar_day_cell.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
@@ -14,13 +13,11 @@ import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
-import { slot_hour_label } from "./slot_hour_label.mjs";
 import { week_range_label } from "./week_range_label.mjs";
 import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { each } from "./each.mjs";
@@ -60,7 +57,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     return r;
   }
   function slot_row(slot) {
-    return week_calendar_slot_row(slot, grid, cell_pressed, records, days);
+    let r2 = week_calendar_slot_row(slot, grid, cell_pressed, records, days);
+    return r2;
   }
   function paint_record(record) {
     let color = week_calendar_record_color(record, anchor, ranges);
@@ -145,19 +143,4 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       };
     }
   }
-}
-function week_calendar_slot_row(slot, grid, cell_pressed, records, days) {
-  arguments_assert(arguments, 5);
-  let text = slot_hour_label(slot);
-  let label = html_div_text(grid, text);
-  app_shared_text_deemphasized(label);
-  html_style_assign(label, {
-    "font-size": "0.75rem",
-    "text-align": "right",
-    padding: "0 0.4rem",
-  });
-  function day_of_slot(day) {
-    week_calendar_day_cell(day, slot, grid, cell_pressed, records);
-  }
-  each(days, day_of_slot);
 }
