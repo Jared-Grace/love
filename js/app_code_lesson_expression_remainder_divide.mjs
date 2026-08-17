@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_remainder_divide_backwards_decoys } from "./app_code_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
@@ -57,15 +58,11 @@ export function app_code_lesson_expression_remainder_divide() {
     return r5;
   }
   function backwards_decoys(shown_formula, answer_percent) {
-    "for the backwards kind (given the remainder formula, pick the % it equals): tempting wrong matches. The DIVISION a / b (it sits right inside the formula, but that is the division, not its remainder), the SWAPPED remainder b % a, and the QUOTIENT part Math.floor(a / b) (only a piece of the formula). Dividend is the formula's first integer, divisor the third (inside Math.floor)";
-    let nums = text_integers(shown_formula);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 2);
-    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
-    let swapped = js_code_binary_spaced_nb(divisor, "%", dividend);
-    let floored = text_combine_multiple(["Math.floor(", division, ")"]);
-    let r3 = [division, swapped, floored];
-    return r3;
+    let r2 = app_code_lesson_expression_remainder_divide_backwards_decoys(
+      shown_formula,
+      answer_percent,
+    );
+    return r2;
   }
   function quizzes_get(question, answer) {
     "three quiz kinds: RECOGNISE the remainder formula among wrong rewrites (multiple choice), BUILD it from tokens (unscramble), then BACKWARDS - given the formula, pick the % it equals (14 - Math.floor(14 / 4) * 4 is 14 % 4). Forwards recognise then produce, then connect the long formula to the % shorthand";
