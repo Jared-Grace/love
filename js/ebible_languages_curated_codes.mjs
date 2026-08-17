@@ -18,7 +18,11 @@ export async function ebible_languages_curated_codes() {
   let code_key = language_code_key();
   function code_or_null(language) {
     let bible_folder = ebible_language_bible_folder(language);
-    let found = list_find_property_or_null(copyrights, folder_key, bible_folder);
+    let found = list_find_property_or_null(
+      copyrights,
+      folder_key,
+      bible_folder,
+    );
     let missing = null_is(found);
     if (missing) {
       return null;
