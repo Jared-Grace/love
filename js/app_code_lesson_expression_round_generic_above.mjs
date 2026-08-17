@@ -1,10 +1,10 @@
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_expression_round_generic_above_v } from "./app_code_lesson_expression_round_generic_above_v.mjs";
 import { app_code_lesson_expression_round_generic_above_rounds } from "./app_code_lesson_expression_round_generic_above_rounds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_between_two_wholes } from "./app_code_between_two_wholes.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 export function app_code_lesson_expression_round_generic_above(
   root,
@@ -28,24 +28,17 @@ export function app_code_lesson_expression_round_generic_above(
     metaphor_render,
     introduce_whole_number,
   );
-  let rounds = property_get(r, "rounds");
-  let decimal = property_get(r, "decimal");
-  let extreme_decimal = property_get(r, "extreme_decimal");
-  let whole_up = property_get(r, "whole_up");
-  let whole_stays = property_get(r, "whole_stays");
-  let chosen_whole = property_get(r, "chosen_whole");
-  let other_whole = property_get(r, "other_whole");
-  let whole_text = property_get(r, "whole_text");
-  app_code_between_two_wholes(rounds, extreme_decimal, whole_text, whole_up);
-  let chooses_suffix = text_combine_multiple([", the ", superlative, " one"]);
-  html_div_cycle_code(rounds, [
-    "So ",
+  let r2 = app_code_lesson_expression_round_generic_above_v(
+    r,
+    superlative,
     called_name,
-    " chooses ",
-    chosen_whole,
-    chooses_suffix,
-  ]);
-  let v = app_code_lesson_expression_round_generic_code(decimal, called_name);
+  );
+  let v = property_get(r2, "v");
+  let other_whole = property_get(r2, "other_whole");
+  let chosen_whole = property_get(r2, "chosen_whole");
+  let whole_stays = property_get(r2, "whole_stays");
+  let extreme_decimal = property_get(r2, "extreme_decimal");
+  let rounds = property_get(r2, "rounds");
   html_div_cycle_code(rounds, ["", v, " is ", chosen_whole]);
   let v2 = app_code_lesson_expression_round_generic_code(
     extreme_decimal,
