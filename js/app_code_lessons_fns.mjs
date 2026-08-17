@@ -200,8 +200,10 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_equal_true_false,
     app_code_lesson_expression_not_equal_true_false,
     app_code_lesson_expression_equal_number_string_true_false,
+    app_code_lesson_expression_choose_order_compare,
     app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
+    app_code_lesson_expression_choose_order_pair,
     app_code_lesson_expression_parentheses_both_sides,
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_comparison_and,
@@ -215,8 +217,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_two,
     app_code_lesson_statement_name_again,
     app_code_lesson_statement_name_copy,
-    app_code_lesson_expression_choose_order_compare,
-    app_code_lesson_expression_choose_order_pair,
   ];
   return fns;
 }
