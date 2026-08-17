@@ -1,3 +1,4 @@
+import { app_a_identifier_generic_choices_get_lambda23 } from "./app_a_identifier_generic_choices_get_lambda23.mjs";
 import { app_a_identifier_generic_choices_get_lambda6 } from "./app_a_identifier_generic_choices_get_lambda6.mjs";
 import { app_a_identifier_generic_choices_get_lambda15 } from "./app_a_identifier_generic_choices_get_lambda15.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -9,7 +10,6 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_select } from "./html_select.mjs";
-import { html_value_get } from "./html_value_get.mjs";
 import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { app_a_button_wide } from "./app_a_button_wide.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -19,8 +19,6 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { html_on_enter_lambda } from "./html_on_enter_lambda.mjs";
 import { app_a_overlay_keydown } from "./app_a_overlay_keydown.mjs";
 import { app_a_input_integer } from "./app_a_input_integer.mjs";
-import { app_a_node_index } from "./app_a_node_index.mjs";
-import { list_remove_at_count } from "./list_remove_at_count.mjs";
 import { clipboard_paste } from "./clipboard_paste.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { app_a_functionize_choices_add } from "./app_a_functionize_choices_add.mjs";
@@ -93,12 +91,12 @@ export async function app_a_identifier_generic_choices_get(
         html_value_set(input, 1);
         await html_select(input);
         async function lambda23() {
-          let value_new = html_value_get(input);
-          let v = app_a_node_index(a);
-          let index = property_get(v, "index");
-          let list = property_get(v, "list");
-          list_remove_at_count(list, index, value_new);
-          await app_a_function_on_change(a, o2);
+          let r4 = await app_a_identifier_generic_choices_get_lambda23(
+            input,
+            a,
+            o2,
+          );
+          return r4;
         }
         let component = app_a_button_wide(overlay_delete, "Delete", lambda23);
       },
