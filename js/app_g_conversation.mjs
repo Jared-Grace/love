@@ -1,20 +1,17 @@
+import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
 import { app_g_conversation_render_openers } from "./app_g_conversation_render_openers.mjs";
 import { app_g_conversation_pray_together } from "./app_g_conversation_pray_together.mjs";
 import { app_g_conversation_close_now } from "./app_g_conversation_close_now.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render_farewell } from "./app_g_conversation_render_farewell.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
-import { app_g_conversation_topic_for } from "./app_g_conversation_topic_for.mjs";
 import { g_phase_time } from "./g_phase_time.mjs";
 import { multiply_add } from "./multiply_add.mjs";
-import { g_something_else } from "./g_something_else.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { add } from "./add.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
-import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
-import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_day_talkable_is } from "./app_g_day_talkable_is.mjs";
@@ -44,8 +41,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { positive_is } from "./positive_is.mjs";
-import { g_boundary } from "./g_boundary.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -225,37 +220,21 @@ export async function app_g_conversation(
     );
   }
   function render_boundary(turn) {
-    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a PAUSE (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the pause makes guessing slower than praying for discernment, so prayer stays the best path — while the correct opener itself is FIXED, so guessing always terminates and nobody is walled in";
-    html_clear(overlay);
-    app_g_npc_typing(npc, overlay);
-    function reveal() {
-      html_clear(overlay);
-      let topic = app_g_conversation_topic_for(turn);
-      let message = g_boundary(meet, topic);
-      app_g_npc_says(npc, overlay, message);
-      let container = app_g_container_player(overlay);
-      app_g_p_text(container, "What would you like to say?");
-      let text = g_boundary_acknowledge();
-      function acknowledged() {
-        "the NPC has just declined a topic, so the prompt waiting back at the openers must invite something ELSE — the usual continue-prompt is open half the time ('what's on your mind?'), and an open invitation from the same person who just said no reads as taking the limit back. carried as the pending intro so it replaces that prompt.";
-        pending.text = g_something_else();
-        app_g_conversation_render(
-          overlay,
-          remaining,
-          render_openers,
-          leave,
-          prayed,
-          render_pray,
-          converts,
-          npc,
-          goodbye,
-        );
-      }
-      app_g_button_green(container, text, acknowledged);
-      app_g_button_conversation_end(container, leave);
-    }
-    let delay = list_random_item([2500, 3000, 3500]);
-    setTimeout(reveal, delay);
+    let r4 = app_g_conversation_render_boundary(
+      turn,
+      overlay,
+      npc,
+      meet,
+      pending,
+      remaining,
+      render_openers,
+      leave,
+      prayed,
+      render_pray,
+      converts,
+      goodbye,
+    );
+    return r4;
   }
   function render_openers() {
     let r3 = app_g_conversation_render_openers(
