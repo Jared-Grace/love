@@ -12,8 +12,6 @@ export function gloss_position_claim_markers() {
     " the word just",
     " the words before",
     " the words after",
-    " next word",
-    " previous word",
     " word earlier",
     " words earlier",
     " word later",
