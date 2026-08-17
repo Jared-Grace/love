@@ -1,8 +1,7 @@
+import { js_fold_block_no_match } from "./js_fold_block_no_match.mjs";
 import { js_fold_block_partial_is } from "./js_fold_block_partial_is.mjs";
 import { js_fold_block_any_unbound } from "./js_fold_block_any_unbound.mjs";
 import { js_fold_block_x_name } from "./js_fold_block_x_name.mjs";
-import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
-import { js_fold_match_block } from "./js_fold_match_block.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
 import { js_fold_body_splice } from "./js_fold_body_splice.mjs";
@@ -10,8 +9,6 @@ import { js_fold_plan } from "./js_fold_plan.mjs";
 import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_map } from "./list_map.mjs";
-import { null_is } from "./null_is.mjs";
 export function js_fold_block(x_ast, f_ast, f_block) {
   let partial_is = js_fold_block_partial_is(x_ast);
   if (partial_is) {
@@ -27,10 +24,11 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (empty) {
     return null;
   }
-  let f_statements = property_get(f_block, "body");
-  let target_sigs = list_map(f_statements, js_atomic_statement_signature);
-  let match = js_fold_match_block(pattern_sigs, target_sigs, params);
-  let no_match = null_is(match);
+  let r3 = js_fold_block_no_match(f_block, pattern_sigs, params);
+  let no_match = property_get(r3, "no_match");
+  let match = property_get(r3, "match");
+  let target_sigs = property_get(r3, "target_sigs");
+  let f_statements = property_get(r3, "f_statements");
   if (no_match) {
     return null;
   }
