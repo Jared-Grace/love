@@ -1,3 +1,4 @@
+import { app_g_dev_routes_unbeliever } from "./app_g_dev_routes_unbeliever.mjs";
 import { app_g_dev_routes_discern } from "./app_g_dev_routes_discern.mjs";
 import { app_g_dev_routes_dove } from "./app_g_dev_routes_dove.mjs";
 import { app_g_dev_routes_pray } from "./app_g_dev_routes_pray.mjs";
@@ -7,8 +8,6 @@ import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_cle
 import { object_assign } from "./object_assign.mjs";
 import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
 import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
-import { app_g_npc_unconverted_random } from "./app_g_npc_unconverted_random.mjs";
-import { app_g_dev_routes_npc_view_of } from "./app_g_dev_routes_npc_view_of.mjs";
 import { app_g_day_start } from "./app_g_day_start.mjs";
 import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
@@ -17,7 +16,6 @@ import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
-import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
 import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
@@ -42,17 +40,16 @@ export function app_g_dev_routes(div_map) {
     await app_g_view_set(view);
   }
   async function unbeliever() {
-    let npc = await app_g_npc_unconverted_random();
-    let result = app_g_view_phase_conversation();
-    await app_g_dev_routes_npc_view_of(npc, result);
+    let r6 = await app_g_dev_routes_unbeliever();
+    return r6;
   }
   async function quick() {
     let r = await app_g_dev_routes_quick();
     return r;
   }
   async function gospel_share() {
-    let result2 = app_g_view_phase_gospel();
-    await app_g_dev_routes_npc_view(result2);
+    let result = app_g_view_phase_gospel();
+    await app_g_dev_routes_npc_view(result);
   }
   async function hru() {
     let result3 = app_g_view_phase_how();
