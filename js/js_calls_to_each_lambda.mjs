@@ -1,3 +1,4 @@
+import { js_calls_to_each_lambda_lambda6 } from "./js_calls_to_each_lambda_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
@@ -7,7 +8,6 @@ import { list_next_try } from "./list_next_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_unparse } from "./js_unparse.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { not } from "./not.mjs";
 import { js_call_new } from "./js_call_new.mjs";
@@ -50,13 +50,8 @@ export async function js_calls_to_each_lambda(v, ast) {
     return;
   }
   function lambda6(c) {
-    let jin = js_node_type_not_is(c, "CallExpression");
-    if (jin) {
-      return name;
-    }
-    let callee = property_get(c, "callee");
-    let code = js_unparse(callee);
-    return code;
+    let r3 = js_calls_to_each_lambda_lambda6(c, name);
+    return r3;
   }
   let eq = equal_by(call, call2, lambda6);
   if (not(eq)) {
@@ -69,8 +64,8 @@ export async function js_calls_to_each_lambda(v, ast) {
     expression3 = property_get(expression3, "argument");
   }
   js_call_arguments_get(expression3);
-  let code2 = js_code_brackets_empty();
-  let array_expression = js_parse_expression(code2);
+  let code = js_code_brackets_empty();
+  let array_expression = js_parse_expression(code);
   property_get(array_expression, "elements");
   ("the shape being matched is two awaited calls standing one after the other on the same callee, differing only in their argument");
 }
