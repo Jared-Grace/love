@@ -1,4 +1,5 @@
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_expression_string_concat_above_after_line } from "./app_code_lesson_expression_string_concat_above_after_line.mjs";
 import { app_code_lesson_expression_string_concat_above_right_line } from "./app_code_lesson_expression_string_concat_above_right_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -9,13 +10,10 @@ export function app_code_lesson_expression_string_concat_above(root) {
   arguments_assert(arguments, 1);
   ("anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.");
   let r = app_code_lesson_expression_string_concat_above_right_line(root);
-  let right_line = property_get(r, "right_line");
-  let code_b = property_get(r, "code_b");
-  let joined_value = property_get(r, "joined_value");
-  let order = property_get(r, "order");
-  html_span_text(right_line, "The right string is ");
-  html_span_text_code_dark(right_line, code_b);
-  let after_line = html_div(order);
+  let r2 = app_code_lesson_expression_string_concat_above_after_line(r);
+  let after_line = property_get(r2, "after_line");
+  let order = property_get(r2, "order");
+  let joined_value = property_get(r2, "joined_value");
   html_span_text_code_dark(after_line, "+");
   html_span_text(
     after_line,
