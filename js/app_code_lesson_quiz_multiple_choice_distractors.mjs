@@ -21,15 +21,15 @@ export function app_code_lesson_quiz_multiple_choice_distractors(
   let quiz_question = property_get(qa, question_property);
   let quiz_question_text = text_to(quiz_question);
   let answer_count_max = app_code_answer_count_max();
-  let nn2 = null_not_is(answer_count_override);
-  if (nn2) {
+  let nn = null_not_is(answer_count_override);
+  if (nn) {
     answer_count_max = answer_count_override;
   }
   let next_get = list_iterator_refillable(batch_get);
   let distractor_count = subtract(answer_count_max, 1);
   let seen = [quiz_answer_text];
   let distractors = [];
-  return {
+  let r = {
     answer_property,
     quiz_answer,
     quiz_answer_text,
@@ -42,4 +42,5 @@ export function app_code_lesson_quiz_multiple_choice_distractors(
     seen,
     distractors,
   };
+  return r;
 }
