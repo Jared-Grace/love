@@ -1,13 +1,10 @@
+import { property_get } from "./property_get.mjs";
+import { app_g_dev_tools_open_verify_engine } from "./app_g_dev_tools_open_verify_engine.mjs";
 import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open_verify_console_each.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { server_url } from "./server_url.mjs";
-import { app_shared_url_dev } from "./app_shared_url_dev.mjs";
-import { app_g } from "./app_g.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { playwright_firefox } from "./playwright_firefox.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_g_dev_tools_open_verify() {
@@ -15,13 +12,9 @@ export async function app_g_dev_tools_open_verify() {
   ("walk the reported path in a real headless Firefox: boot the game, tap your own character, press the dev-tools button in the menu that opens, and hand back what the page showed at each of those three moments together with every console line and uncaught error along the way");
   ("It walks the path rather than loading the destination directly because loading the destination directly already worked - so the fault, if there is one, is in the CROSSING: a hash written from a click, a reload triggered by that hash, and a boot that has to read the hash back. Only a run that makes the click can see any of that.");
   ("NOT a member of the repo-wide gate: it needs the dev server up and a browser engine on disk, so a red run would mean 'the server is down' as often as 'the app is broken', and a gate that cries wolf is read as noise. Run it by name when the dev surface is in question.");
-  let url_prefix = server_url();
-  let url_suffix = await app_shared_url_dev(app_g);
-  let url = text_combine(url_prefix, url_suffix);
-  let launcher = await playwright_firefox();
-  let engine = await launcher.launch({
-    headless: true,
-  });
+  let r2 = await app_g_dev_tools_open_verify_engine();
+  let engine = property_get(r2, "engine");
+  let url = property_get(r2, "url");
   let lines = [];
   let told = {};
   try {
