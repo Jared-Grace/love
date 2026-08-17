@@ -82,7 +82,7 @@
   },
   {
    "name": "functions_locals_unread_repair_some",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "function_rename_commit",
