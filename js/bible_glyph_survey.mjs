@@ -1,18 +1,13 @@
-import { bible_glyph_survey_sense_spread } from "./bible_glyph_survey_sense_spread.mjs";
+import { bible_glyph_survey_occurrences_descending } from "./bible_glyph_survey_occurrences_descending.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
 import { round } from "./round.mjs";
-import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
-import { bible_glyph_gloss_normalized } from "./bible_glyph_gloss_normalized.mjs";
 import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
 export async function bible_glyph_survey(testament_name) {
   "What the seed glyph table gets wrong, measured against every word the interlinear actually uses in one testament.";
   "$plain testament_name";
@@ -22,85 +17,24 @@ export async function bible_glyph_survey(testament_name) {
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
   let table_testament = bible_glyph_roots_testament();
-  let r = await bible_glyph_survey_sense_spread(
+  let r = await bible_glyph_survey_occurrences_descending(
     table_testament,
     testament_name,
   );
-  let sense_spread = property_get(r, "sense_spread");
-  let occurrences_mapped = property_get(r, "occurrences_mapped");
-  let occurrences_total = property_get(r, "occurrences_total");
-  let glyph_collisions = property_get(r, "glyph_collisions");
-  let glyph_missing = property_get(r, "glyph_missing");
-  let mapped = property_get(r, "mapped");
+  let occurrences_descending = property_get(r, "occurrences_descending");
+  let unmapped = property_get(r, "unmapped");
   let roots = property_get(r, "roots");
-  let glosses = property_get(r, "glosses");
-  let unmapped = [];
-  for (let strong of object_property_names(glosses)) {
-    let tally = property_get(glosses, strong);
-    let occurrences = 0;
-    let senses = [];
-    let rolled = {};
-    for (let entry of tally) {
-      occurrences = occurrences + entry.count;
-      let placeholder = bible_glyph_gloss_placeholder_is(entry.value);
-      if (not(placeholder)) {
-        list_add(senses, entry);
-        let plain = bible_glyph_gloss_normalized(entry.value);
-        let seen = property_exists(rolled, plain);
-        let running = seen ? property_get(rolled, plain) : 0;
-        property_set(rolled, plain, running + entry.count);
-      }
-    }
-    let senses_plain = [];
-    for (let plain of object_property_names(rolled)) {
-      list_add(senses_plain, {
-        value: plain,
-        count: property_get(rolled, plain),
-      });
-    }
-    function count_descending(a, b) {
-      let n = subtract(b.count, a.count);
-      return n;
-    }
-    senses_plain.sort(count_descending);
-    occurrences_total = occurrences_total + occurrences;
-    let entry_mapped = property_exists(mapped, strong);
-    if (entry_mapped) {
-      occurrences_mapped = occurrences_mapped + occurrences;
-      let seat = property_get(mapped, strong);
-      list_add(sense_spread, {
-        strong,
-        root: seat.root,
-        glyph: seat.glyph,
-        occurrences,
-        senses_count: senses.length,
-        senses_plain_count: senses_plain.length,
-        senses_plain_top: senses_plain.slice(0, 8),
-      });
-      continue;
-    }
-    list_add(unmapped, {
-      strong,
-      occurrences,
-      senses_plain_count: senses_plain.length,
-      senses_plain_top: senses_plain.slice(0, 4),
-    });
-  }
-  function occurrences_of(row) {
-    let n = row.occurrences;
-    return n;
-  }
-  function occurrences_descending(a, b) {
-    let left = occurrences_of(b);
-    let right = occurrences_of(a);
-    let n = subtract(left, right);
-    return n;
-  }
+  let mapped = property_get(r, "mapped");
+  let glyph_missing = property_get(r, "glyph_missing");
+  let glyph_collisions = property_get(r, "glyph_collisions");
+  let occurrences_total = property_get(r, "occurrences_total");
+  let occurrences_mapped = property_get(r, "occurrences_mapped");
+  let sense_spread = property_get(r, "sense_spread");
   sense_spread.sort(occurrences_descending);
   unmapped.sort(occurrences_descending);
-  let left2 = divide(occurrences_mapped, occurrences_total);
-  let n2 = multiply(left2, 1000);
-  let top = round(n2);
+  let left = divide(occurrences_mapped, occurrences_total);
+  let n = multiply(left, 1000);
+  let top = round(n);
   let percent = divide(top, 10);
   let referents = bible_glyph_referents();
   let referent_reach = [];
