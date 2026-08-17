@@ -1,3 +1,5 @@
+import { app_code_settings_clear_confirm } from "./app_code_settings_clear_confirm.mjs";
+import { app_code_settings_complete_confirm } from "./app_code_settings_complete_confirm.mjs";
 import { app_code_settings } from "./app_code_settings.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
@@ -11,6 +13,8 @@ export function app_code_screens() {
     app_code_examples,
     app_code_review,
     app_code_settings,
+    app_code_settings_complete_confirm,
+    app_code_settings_clear_confirm,
   ];
   return s;
 }
