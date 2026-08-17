@@ -17,12 +17,6 @@ export function app_code_lesson_statement_name_value_title_name_id() {
   let name = list_first(names);
   let any = app_code_string_any_code();
   let code = js_code_let_statement(name, any);
-  let spaced = text_combine(words, " ");
-  function paint(parent) {
-    html_cycle_code(parent, [spaced, code]);
-  }
-  let rights = [words];
-  let left = app_code_category_statements();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
 }
