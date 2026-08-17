@@ -1,6 +1,6 @@
+import { app_shared_bible_read_chapter_code } from "./app_shared_bible_read_chapter_code.mjs";
 import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
-import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
 import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
@@ -10,7 +10,6 @@ import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_f
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
-import { app_shared_bible_chapter_code_default } from "./app_shared_bible_chapter_code_default.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
@@ -35,7 +34,6 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { app_shared_dismissable_message } from "./app_shared_dismissable_message.mjs";
 import { app_shared_bible_change } from "./app_shared_bible_change.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
@@ -97,16 +95,10 @@ export async function app_shared_bible_read(context, verse_action) {
       return;
     }
   }
-  let dismiss_help = app_shared_dismissable_message(
-    app_shared_bible_read,
-    "chapter_help_dismissed",
-    bar,
-    help_text,
-  );
-  let count_status = app_shared_bible_read_count_foot(shell);
-  let chapter_code = text_empty_is(c)
-    ? app_shared_bible_chapter_code_default()
-    : c;
+  let r5 = app_shared_bible_read_chapter_code(bar, help_text, shell, c);
+  let chapter_code = property_get(r5, "chapter_code");
+  let count_status = property_get(r5, "count_status");
+  let dismiss_help = property_get(r5, "dismiss_help");
   if (ref_mode) {
     let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
     if (null_is(ref_chapter)) {
