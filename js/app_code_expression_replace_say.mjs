@@ -22,7 +22,8 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
   html_cycle(line, cycles, [praise, worked_out]);
   let chosen_pieces = app_code_expression_replace_swap_say(
     line,
-    ", so now we replace the ",
+    ", so now we ",
+    "replace",
     solved_code,
     value_text,
   );
