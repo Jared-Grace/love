@@ -1,3 +1,4 @@
+import { app_code_expression_step_operands_minus_is } from "./app_code_expression_step_operands_minus_is.mjs";
 import { app_code_expression_step_operands_dividends } from "./app_code_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
@@ -6,7 +7,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { equal } from "./equal.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { modulo } from "./modulo.mjs";
@@ -39,8 +39,7 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let sums = range_from(least, sum_most);
     return sums;
   }
-  let minus = js_operator_minus_symbol();
-  let minus_is = equal(symbol, minus);
+  let minus_is = app_code_expression_step_operands_minus_is(symbol);
   if (minus_is) {
     if (value_left) {
       let taken_most = subtract(value, least);
