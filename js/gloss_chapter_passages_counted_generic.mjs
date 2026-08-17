@@ -8,7 +8,6 @@ import { list_add } from "./list_add.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function gloss_chapter_passages_counted_generic(
   chapter_code,
   fn,

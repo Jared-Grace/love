@@ -7,7 +7,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
-
 export async function app_original_bible_gloss_placeholders_chapters() {
   "How many chapters of the original-language gloss have been authored, and which of them show a reader a marker where the short English under a word ought to be.";
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is measured from the moment it is written and nobody has to remember to name it anywhere.";
