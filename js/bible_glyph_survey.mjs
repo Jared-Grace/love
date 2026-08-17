@@ -23,6 +23,13 @@ export async function bible_glyph_survey(testament_name) {
   "A collision is reported and not resolved. Two roots wanting one glyph may be a mistake, or it may be the truth - two words a reader should feel the kinship between can be drawn alike on purpose - and nothing mechanical can tell those two cases apart. The report says where to look.";
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
+  let table_testament = bible_glyph_roots_testament();
+  let table_reads = equal(table_testament, testament_name);
+  assert_json(table_reads, {
+    testament_name,
+    table_testament,
+    hint: "the root table is written for one testament and a Strong's number means a different word in the other, so surveying the wrong testament would report the numbers that happen to collide as coverage - survey the testament the table is for, or write a table for this one",
+  });
   let glosses = await bible_strong_glosses(testament_name);
   let characters = bible_glyph_characters();
   let character_names = {};
