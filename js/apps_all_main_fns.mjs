@@ -10,6 +10,7 @@ export function apps_all_main_fns() {
     "app_ceb_bible",
     "app_code",
     "app_designs_universal",
+    "app_emoji_bible",
     "app_en_learn_bible",
     "app_examples",
     "app_g",
