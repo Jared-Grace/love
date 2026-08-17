@@ -1,6 +1,5 @@
 import { text_empty } from "./text_empty.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
+import { urdu_bible_gloss_bible_folders } from "./urdu_bible_gloss_bible_folders.mjs";
 import { urdu_bible_gloss_generate } from "./urdu_bible_gloss_generate.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
@@ -15,9 +14,7 @@ export async function urdu_bible_gloss_generate_chapter(
   let language = "English";
   let language_reader = "Urdu";
   let fn = urdu_bible_gloss_generate;
-  let bible_folder_english = ebible_folder_english();
-  let bible_folder_urdu = ebible_folder_urdu();
-  let bible_folders = [bible_folder_english, bible_folder_urdu];
+  let bible_folders = urdu_bible_gloss_bible_folders();
   let last = "Urdu and the original language are";
   await app_shared_gloss_bible_generate_generic(
     language,
