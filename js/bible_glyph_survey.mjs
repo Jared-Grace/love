@@ -1,10 +1,9 @@
-import { bible_glyph_survey_referent } from "./bible_glyph_survey_referent.mjs";
+import { bible_glyph_survey_report } from "./bible_glyph_survey_report.mjs";
 import { bible_glyph_survey_referent_reach } from "./bible_glyph_survey_referent_reach.mjs";
 import { bible_glyph_survey_referents } from "./bible_glyph_survey_referents.mjs";
 import { bible_glyph_survey_glyph_collisions } from "./bible_glyph_survey_glyph_collisions.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
 import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 export async function bible_glyph_survey(testament_name) {
   "What the seed glyph table gets wrong, measured against every word the interlinear actually uses in one testament.";
   "$plain testament_name";
@@ -23,29 +22,12 @@ export async function bible_glyph_survey(testament_name) {
   let r2 = bible_glyph_survey_referents(r);
   let r3 = bible_glyph_survey_referent_reach(r2);
   let referent_reach = property_get(r3, "referent_reach");
-  let r4 = bible_glyph_survey_referent(r3, referent_reach);
-  let occurrences_mapped = property_get(r4, "occurrences_mapped");
-  let sense_spread = property_get(r4, "sense_spread");
-  let unmapped = property_get(r4, "unmapped");
-  let glyph_missing = property_get(r4, "glyph_missing");
-  let mapped = property_get(r4, "mapped");
-  let roots = property_get(r4, "roots");
-  let percent = property_get(r4, "percent");
-  let report = {
-    testament: testament_name,
+  let report = bible_glyph_survey_report(
+    r3,
     referent_reach,
-    roots_count: roots.length,
-    words_count: object_property_names(mapped).length,
-    coverage: {
-      occurrences_mapped,
-      occurrences_total,
-      percent,
-    },
-    glyph_missing,
+    testament_name,
+    occurrences_total,
     glyph_collisions,
-    sense_spread,
-    unmapped_count: unmapped.length,
-    unmapped_frequent: unmapped.slice(0, 150),
-  };
+  );
   return report;
 }
