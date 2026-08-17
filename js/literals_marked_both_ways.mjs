@@ -1,4 +1,4 @@
-import { literals_marked_both_ways_frozen_sites } from "./literals_marked_both_ways_frozen_sites.mjs";
+import { literals_marked_both_ways_entries } from "./literals_marked_both_ways_entries.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_text_includes } from "./property_text_includes.mjs";
@@ -19,13 +19,13 @@ export async function literals_marked_both_ways() {
   "The same spelling in two files is not always a contradiction. A lesson may teach a word as its subject while a gate names a function that happens to share it, and neither is wrong. So this only reports; what refuses is the ratchet beside it, which lets the ones already here stand one at a time and stops a new one appearing.";
   "The frozen words are gathered first and each is then looked for by its own exact spelling, rather than reading every tree in the repo. Nearly every file in the repo names a function somewhere, so a sweep keyed on the reference marker would open all of them - which is the reading measured at thirteen minutes on the check beside this one.";
   let repo_name = repo_love_name();
-  let r = await literals_marked_both_ways_frozen_sites(repo_name);
-  let frozen_sites = property_get(r, "frozen_sites");
-  let reference_prefix = property_get(r, "reference_prefix");
-  let frozen_needle = property_get(r, "frozen_needle");
-  let reference_marker = property_get(r, "reference_marker");
-  let frozen_marker = property_get(r, "frozen_marker");
+  let r = await literals_marked_both_ways_entries(repo_name);
   let entries = property_get(r, "entries");
+  let frozen_marker = property_get(r, "frozen_marker");
+  let reference_marker = property_get(r, "reference_marker");
+  let frozen_needle = property_get(r, "frozen_needle");
+  let reference_prefix = property_get(r, "reference_prefix");
+  let frozen_sites = property_get(r, "frozen_sites");
   for (let entry of entries) {
     let candidate = property_get(entry, "name");
     let freezes = property_text_includes(entry, "code", frozen_needle);
