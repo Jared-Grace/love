@@ -24,7 +24,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let written_is = list_empty_not_is(written_closed);
   if (written_is) {
     list_add(refusals, {
-      reason: text_frozen("written_closed"),
+      reason: "written_closed",
       why: "this function writes to a name it reached out for, and a parameter would only be a copy of it, so the write would stop reaching the line waiting to read it. Would you like it to hand the new value back instead?",
       written_closed,
     });
@@ -34,6 +34,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let ambiguous_is = js_functions_named_ambiguous_is(named, name_old);
   if (ambiguous_is) {
     list_add(refusals, {
+      reason: "name_ambiguous",
       why: "more than one function written inside this one answers to the same word, so there is no way to say which of them was meant. Would you like to give the one you mean a name of its own first?",
       name_old,
     });
@@ -44,6 +45,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let itself_is = list_empty_not_is(itself);
   if (itself_is) {
     list_add(refusals, {
+      reason: "calls_itself",
       why: "this function calls itself, and the name it calls itself by would be left behind on the line that calls the moved body, where the moved body cannot see it. Would you like to hand it in as one more thing it is given?",
     });
   }
@@ -53,6 +55,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let given_is = list_empty_not_is(given);
   if (given_is) {
     list_add(refusals, {
+      reason: "arguments_read",
       why: "this function reads the whole list of what it was given, under the one word that always means that list. Moved out it is given more than it used to be - everything it reached out for arrives as one more thing handed in - so that word would answer with a longer list than the one the body was written to read. Would you like it to name what it is given instead?",
     });
   }
