@@ -8,8 +8,9 @@ export function integer_factorization_to_sat_cnf(CNF, integer_to_factor) {
   let to3SAT = property_get(r3, "to3SAT");
   let bits_count = property_get(r3, "bits_count");
   let cnf = to3SAT(cnf_built);
-  return {
+  let r = {
     bits_count,
     cnf,
   };
+  return r;
 }

@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { integer_factorization_to_sat_cnf } from "./integer_factorization_to_sat_cnf.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -40,10 +41,9 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       return out;
     }
   }
-  let { bits_count, cnf } = integer_factorization_to_sat_cnf(
-    CNF,
-    integer_to_factor,
-  );
+  let r3 = integer_factorization_to_sat_cnf(CNF, integer_to_factor);
+  let cnf = property_get(r3, "cnf");
+  let bits_count = property_get(r3, "bits_count");
   cnf.bits = bits_count;
   cnf.dimacs = cnf.toDimacs();
   return cnf;
