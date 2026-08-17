@@ -42,7 +42,10 @@ export function app_code_lesson_expression_choose_order_solve_example(
     current = property_get(step, "current");
     let more = app_code_expression_node_is(current);
     if (not(more)) {
+      ("the line is finished, so where the asking stood the learner is told well done - in the very words and the very green the walkthrough of the lesson before ends in, and the quiz ends every question in, out of the one place all three of them read");
+      ("It replaces the asking rather than standing under it, because the asking was the only thing on the card that was ever about what to do next, and there is nothing to do next.");
       html_clear(asking);
+      app_shared_success_message(asking);
       return;
     }
     let solved = property_get(step, "solved");
