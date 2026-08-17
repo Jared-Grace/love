@@ -1,16 +1,7 @@
-import { ebible_folder_thai } from "./ebible_folder_thai.mjs";
-import { ebible_folder_tagalog } from "./ebible_folder_tagalog.mjs";
-import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
-import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
-import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
-import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
-import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
-import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
-import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
+import { ebible_languages_curated } from "./ebible_languages_curated.mjs";
+import { ebible_languages_more } from "./ebible_languages_more.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { ebible_languages_sort_speakers } from "./ebible_languages_sort_speakers.mjs";
-import { ebible_language_original } from "./ebible_language_original.mjs";
-import { ebible_language_english } from "./ebible_language_english.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function ebible_languages() {
