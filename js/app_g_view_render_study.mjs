@@ -1,3 +1,4 @@
+import { app_g_view_render_study_close } from "./app_g_view_render_study_close.mjs";
 import { app_g_view_render_study_render_pray_gate } from "./app_g_view_render_study_render_pray_gate.mjs";
 import { app_g_view_render_study_render_thank_gate } from "./app_g_view_render_study_render_thank_gate.mjs";
 import { app_g_view_render_study_style_word } from "./app_g_view_render_study_style_word.mjs";
@@ -20,7 +21,6 @@ import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -57,9 +57,8 @@ export async function app_g_view_render_study(div_map) {
     save_pending = setTimeout(persist, 1500);
   }
   async function close() {
-    persist_cancel();
-    await app_g_view_set(null);
-    html_remove(overlay);
+    let r = await app_g_view_render_study_close(persist_cancel, overlay);
+    return r;
   }
   app_g_button_back(overlay, close);
   let container = app_g_container(overlay);
