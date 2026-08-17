@@ -20,7 +20,7 @@ export function app_code_review_go_restart(r3, context) {
     storage_local_remove_context(context, key);
     await app_shared_screen_set(context, app_code_review);
   }
-  return {
+  let r = {
     back_button,
     has_next,
     c,
@@ -34,4 +34,5 @@ export function app_code_review_go_restart(r3, context) {
     skip_button,
     go_restart,
   };
+  return r;
 }
