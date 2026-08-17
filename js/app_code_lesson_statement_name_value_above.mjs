@@ -28,7 +28,11 @@ export function app_code_lesson_statement_name_value_above(root) {
   app_code_cup(box_cup, nothing, nothing);
   html_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
   app_code_cup(box_cup, nothing, name);
-  html_div_cycle_code(box_cup, ["Then suppose you put some grapes in the cup"]);
+  html_div_cycle_code(box_cup, [
+    "Then suppose you put some ",
+    word,
+    " in the cup",
+  ]);
   app_code_lesson_cup_fruit(box_cup, word, name);
   html_div_cycle_code(box_cup, [
     "Now if someone asked you what is inside the cup called ",
