@@ -39,7 +39,7 @@ export function app_code_lesson_quiz_container_question(
   let answers_div = property_get(r3, "answers_div");
   let answer_label_set = property_get(r3, "answer_label_set");
   let container_question = property_get(r3, "container_question");
-  return {
+  let r2 = {
     on_question,
     on_answer,
     correction_render,
@@ -55,4 +55,5 @@ export function app_code_lesson_quiz_container_question(
     answer_label_set,
     container_question,
   };
+  return r2;
 }
