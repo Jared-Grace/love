@@ -64,18 +64,16 @@ export function app_code_cup(parent, inside, name) {
   ("what is in the cup is drawn larger than the writing around it, because it is the thing being looked at rather than something said about it");
   ("Given a box of its own size and stood in the middle of it, rather than laid out as a line of writing would be. What goes in the cup is an emoji, and every make of phone draws its own: they are not the same width, not the same height, and do not sit the same distance below the top of the line. Left as writing, the picture would come out with a different amount of glass above it on every device, and on some of them the grapes would touch the rim.");
   ("This pins where it SITS, which is what the drawing depends on. It cannot pin what it LOOKS like - that is the maker's drawing and there is no reaching it from here. An image shipped with the app is the only thing that would.");
-  let filled = text_empty_not_is(inside);
-  if (filled) {
-    let held = html_div_text(bowl, inside);
-    html_style_assign(held, {
-      "font-size": "1.4em",
-      "line-height": "1",
-      height: "1em",
-      display: "flex",
-      "align-items": "center",
-      "justify-content": "center",
-    });
-  }
+  ("The box is drawn whether anything has been put in the cup or not, and stands empty when nothing has. The name is written under it, so a box that came and went would carry the name up and down the glass with it - and the story this picture tells is one cup being filled, where the label stays exactly where somebody wrote it. Its height is set rather than left to its contents, so an empty one takes the same room as a full one.");
+  let held = html_div_text(bowl, inside);
+  html_style_assign(held, {
+    "font-size": "1.4em",
+    "line-height": "1",
+    height: "1em",
+    display: "flex",
+    "align-items": "center",
+    "justify-content": "center",
+  });
   ("the name is written ON the cup rather than beside it - a label somebody wrote on the side, which is the whole of what a name is here");
   ("Written heavier than the words around it. Most names here are a single letter, and a single letter at reading weight, standing on its own with nothing either side of it to be read against, is the hardest thing on the screen to make out - a lower-case a inside a glass is a smudge. It is also the one thing on the picture that has to be read, since it is what the code will say.");
   let named = text_empty_not_is(name);
