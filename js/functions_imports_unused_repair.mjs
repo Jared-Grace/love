@@ -1,7 +1,6 @@
 import { text_split_comma } from "./text_split_comma.mjs";
 import { function_transform_result } from "./function_transform_result.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_transform } from "./function_transform.mjs";
 import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
 export async function functions_imports_unused_repair(f_names) {
   arguments_assert(arguments, 1);
