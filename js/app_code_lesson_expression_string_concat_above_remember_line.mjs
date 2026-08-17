@@ -48,7 +48,7 @@ export function app_code_lesson_expression_string_concat_above_remember_line(
   html_span_text(same_line, " of ");
   app_code_string_colored(same_line, joined_value);
   let remember_line = html_div(derive);
-  return {
+  let r = {
     code_a,
     code_b,
     join_code,
@@ -58,4 +58,5 @@ export function app_code_lesson_expression_string_concat_above_remember_line(
     derive,
     remember_line,
   };
+  return r;
 }
