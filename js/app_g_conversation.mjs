@@ -1,17 +1,15 @@
+import { app_g_conversation_goodbye } from "./app_g_conversation_goodbye.mjs";
 import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
 import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
 import { app_g_conversation_render_openers } from "./app_g_conversation_render_openers.mjs";
 import { app_g_conversation_pray_together } from "./app_g_conversation_pray_together.mjs";
-import { app_g_conversation_close_now } from "./app_g_conversation_close_now.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
 import { g_phase_time } from "./g_phase_time.mjs";
-import { multiply_add } from "./multiply_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
-import { add } from "./add.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
@@ -26,20 +24,14 @@ import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { g_greeting } from "./g_greeting.mjs";
-import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
 import { app_g_conversation_sky_target } from "./app_g_conversation_sky_target.mjs";
-import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { positive_is } from "./positive_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -92,59 +84,19 @@ export async function app_g_conversation(
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
-  let property_name2 = g_conversation_key();
-  let has = property_exists(npc, property_name2);
-  if (not(has)) {
-    let value = g_conversation_generate(pronouns);
-    let property_name3 = g_conversation_key();
-    property_set(npc, property_name3, value);
-  }
-  let property_name4 = g_conversation_key();
-  let conversation = property_get(npc, property_name4);
-  let turns = property_get(conversation, "turns");
-  let converts = property_get(conversation, "converts");
-  let remaining = list_copy(turns);
-  let prayed = {
-    done: false,
-  };
-  let greeted = {
-    done: false,
-  };
-  let pending = {
-    text: null,
-  };
-  function present(t) {
-    let neq3 = not_equal(t, null);
-    return neq3;
-  }
-  let prayer_texts_all = list_map_property(turns, "prayer_text");
-  let some_prayers = list_filter(prayer_texts_all, present);
-  let prayer_parts = 4;
-  let some_count = list_size(some_prayers);
-  if (positive_is(some_count)) {
-    prayer_parts = some_count;
-  }
-  let right = list_size(turns);
-  let left = multiply_add(2, right, prayer_parts);
-  let steps_total = add(left, 2);
-  let steps = {
-    done: 0,
-  };
-  async function close_now() {
-    let r = await app_g_conversation_close_now(
-      converts,
-      prayed,
-      npc,
-      div_map,
-      overlay_close,
-    );
-    return r;
-  }
-  async function goodbye() {
-    "the final parting after the prayer is itself an advancing step — it ticks the day to its close (dusk) before snapping shut, so 'saying goodbye' spends the last of the slice rather than closing at whatever time the prayer left.";
-    await app_g_conversation_advance(steps, steps_total);
-    await close_now();
-  }
+  let {
+    turns,
+    converts,
+    remaining,
+    prayed,
+    greeted,
+    pending,
+    some_prayers,
+    steps_total,
+    steps,
+    close_now,
+    goodbye,
+  } = app_g_conversation_goodbye(npc, pronouns, div_map, overlay_close);
   async function leave() {
     let r5 = await app_g_conversation_leave(
       remaining,
