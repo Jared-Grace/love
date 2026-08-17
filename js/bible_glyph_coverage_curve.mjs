@@ -1,3 +1,5 @@
+import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
+import { equal } from "./equal.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { property_set } from "./property_set.mjs";
@@ -21,10 +23,14 @@ export async function bible_glyph_coverage_curve(testament_name) {
   "The curve is reported alongside HOW MUCH OF EACH STEP IS ALREADY DRAWN, because the two numbers answer different questions. The curve says how big the job is; the drawn count says where in it the current table stands.";
   let glosses = await bible_strong_glosses(testament_name);
   let roots = bible_glyph_roots();
+  let table_testament = bible_glyph_roots_testament();
+  let table_reads = equal(table_testament, testament_name);
   let drawn = {};
-  for (let root of roots) {
-    for (let word of root.words) {
-      property_set(drawn, word.strong, true);
+  if (table_reads) {
+    for (let root of roots) {
+      for (let word of root.words) {
+        property_set(drawn, word.strong, true);
+      }
     }
   }
   let counted = [];
@@ -72,7 +78,7 @@ export async function bible_glyph_coverage_curve(testament_name) {
     let share_drawn = divide(reached_drawn, occurrences_total);
     let n3 = multiply(share_drawn, 1000);
     let tenths_drawn = round(n3);
-    let percent_drawn = divide(tenths_drawn, 10);
+    let percent_drawn = table_reads ? divide(tenths_drawn, 10) : null;
     list_add(curve, {
       words: step,
       occurrences: reached,
