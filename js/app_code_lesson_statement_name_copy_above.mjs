@@ -93,5 +93,10 @@ export function app_code_lesson_statement_name_copy_above(root) {
     " to put in cup ",
   ]);
   html_div_cycle_code(box_new, [removed, name_first, other, name_copy]);
-  app_code_lesson_statement_name_copy_code_box(root);
+  app_code_lesson_statement_name_copy_code_box(
+    root,
+    cup_first,
+    cup_last,
+    name_copy,
+  );
 }
