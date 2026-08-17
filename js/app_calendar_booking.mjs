@@ -1,22 +1,12 @@
+import { app_calendar_booking_on_book } from "./app_calendar_booking_on_book.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
-import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { html_input_date } from "./html_input_date.mjs";
 import { html_input_time } from "./html_input_time.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { text_split } from "./text_split.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_second } from "./list_second.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { booking_send } from "./booking_send.mjs";
-import { date_now_iso } from "./date_now_iso.mjs";
 export function app_calendar_booking(parent, user) {
   "the booking form a visitor fills in to request a preaching visit: their name, the day, the time, and their WhatsApp or Facebook link, written to Firebase and stamped with their signed-in identity so my phone turns it into an alarm";
   let card = app_shared_container(parent);
@@ -44,48 +34,14 @@ export function app_calendar_booking(parent, user) {
   let status = html_div_text(card, "");
   app_shared_button_green(card, "Book preaching", on_book);
   async function on_book() {
-    let name_value = html_value_get(name);
-    let day_value = html_value_get(day);
-    let time_value = html_value_get(time);
-    let link_value = html_value_get(link);
-    let named = text_empty_not_is(name_value);
-    let dayed = text_empty_not_is(day_value);
-    let timed = text_empty_not_is(time_value);
-    let linked = text_empty_not_is(link_value);
-    let ready = named && dayed && timed && linked;
-    if (not(ready)) {
-      html_text_set(
-        status,
-        "Please fill in your name, the day, the time, and your link",
-      );
-      return;
-    }
-    let parts = text_split(time_value, ":");
-    let first = list_first(parts);
-    let second = list_second(parts);
-    let booking = {
-      label: text_combine_multiple(["Preaching with ", name_value]),
-      date: day_value,
-      hour: Number(first),
-      minute: Number(second),
-      link: link_value,
-      when: date_now_iso(),
-      uid: user.uid,
-      email: user.email,
-    };
-    await booking_send(booking);
-    html_value_set(name, "");
-    html_value_set(day, "");
-    html_value_set(time, "");
-    html_value_set(link, "");
-    let text = text_combine_multiple([
-      "Thank you, ",
-      name_value,
-      " — you are booked for ",
-      day_value,
-      " at ",
-      time_value,
-    ]);
-    html_text_set(status, text);
+    let r = await app_calendar_booking_on_book(
+      name,
+      day,
+      time,
+      link,
+      status,
+      user,
+    );
+    return r;
   }
 }
