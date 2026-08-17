@@ -1,5 +1,4 @@
-import { app_code_lesson_quiz_multiple_choice_has_decoys } from "./app_code_lesson_quiz_multiple_choice_has_decoys.mjs";
-import { app_code_lesson_quiz_multiple_choice_decoy_fn } from "./app_code_lesson_quiz_multiple_choice_decoy_fn.mjs";
+import { app_code_lesson_quiz_multiple_choice_quiz_answer } from "./app_code_lesson_quiz_multiple_choice_quiz_answer.mjs";
 import { app_code_lesson_quiz_multiple_choice_add_decoy } from "./app_code_lesson_quiz_multiple_choice_add_decoy.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
@@ -35,19 +34,23 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let r2 = app_code_lesson_quiz_multiple_choice_decoy_fn(info, qa, batch_get);
-  let r3 = app_code_lesson_quiz_multiple_choice_has_decoys(r2);
-  let has_decoys = property_get(r3, "has_decoys");
-  let distractors = property_get(r3, "distractors");
-  let seen = property_get(r3, "seen");
-  let distractor_count = property_get(r3, "distractor_count");
-  let next_get = property_get(r3, "next_get");
-  let answer_count_max = property_get(r3, "answer_count_max");
-  let quiz_question_text = property_get(r3, "quiz_question_text");
-  let quiz_question = property_get(r3, "quiz_question");
-  let question_property = property_get(r3, "question_property");
-  let quiz_answer_text = property_get(r3, "quiz_answer_text");
-  let quiz_answer = property_get(r3, "quiz_answer");
+  let r2 = app_code_lesson_quiz_multiple_choice_quiz_answer(
+    info,
+    qa,
+    batch_get,
+  );
+  let quiz_answer = property_get(r2, "quiz_answer");
+  let quiz_answer_text = property_get(r2, "quiz_answer_text");
+  let question_property = property_get(r2, "question_property");
+  let quiz_question = property_get(r2, "quiz_question");
+  let quiz_question_text = property_get(r2, "quiz_question_text");
+  let answer_count_max = property_get(r2, "answer_count_max");
+  let next_get = property_get(r2, "next_get");
+  let distractor_count = property_get(r2, "distractor_count");
+  let seen = property_get(r2, "seen");
+  let distractors = property_get(r2, "distractors");
+  let has_decoys = property_get(r2, "has_decoys");
+  let r3 = property_get(r2, "r3");
   let answer_property = property_get(r3, "answer_property");
   let decoy_fn = property_get(r3, "decoy_fn");
   if (has_decoys) {
