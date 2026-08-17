@@ -5,10 +5,10 @@ import { html_query_property_get } from "./html_query_property_get.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 export function app_g_verify_home_chapter_state() {
   arguments_assert(arguments, 0);
-  let v6 = g_verify_chapter_query_key();
+  let v = g_verify_chapter_query_key();
   let v7 = g_verify_chapter_storage_key();
   let chapter_code =
-    html_query_property_get(v6) || localStorage.getItem(v7) || "1JN01";
+    html_query_property_get(v) || localStorage.getItem(v7) || "1JN01";
   let book_code = chapter_code.slice(0, 3);
   let v2 = chapter_code.slice(3);
   let v3 = Number(v2);
@@ -23,7 +23,7 @@ export function app_g_verify_home_chapter_state() {
   let chapter = null;
   let status = null;
   let chapter_state = null;
-  return {
+  let r = {
     chapter_code,
     storage_key,
     selected_key,
@@ -35,4 +35,5 @@ export function app_g_verify_home_chapter_state() {
     status,
     chapter_state,
   };
+  return r;
 }
