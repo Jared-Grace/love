@@ -1,3 +1,4 @@
+import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
 import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
@@ -25,7 +26,6 @@ import { list_map_add_async } from "./list_map_add_async.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { null_is } from "./null_is.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -74,8 +74,7 @@ export async function app_shared_bible_read(context, verse_action) {
     app_shared_bible_settings_gear(bar, content, languages_chosen, context);
     return;
   }
-  let bible_folder = ebible_folder_english();
-  let books_en = await ebible_version_books_browser(bible_folder);
+  let books_en = await app_shared_bible_read_books_en();
   if (ref_mode) {
     ("A reference in the link naming no book we have is answered here rather than read past. Read past, the reading of it came back with nothing, the link stopped counting as a reference, and Genesis 1 opened - so one wrong letter in a book name sent the reader to the front of the bible with nothing anywhere saying why.");
     ("It stops the page rather than sitting above the chapter, which is what the verse correction does, because the two are not the same kind of wrong. A verse this chapter has not got still came with the chapter the reader meant, so there is something right to draw; a book we cannot find leaves no chapter at all, and any chapter drawn under the correction would be one nobody asked for.");
