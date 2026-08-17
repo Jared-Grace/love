@@ -1,17 +1,19 @@
-import { server_data_endpoints } from "../../love/js/server_data_endpoints.mjs";
-import { promise_resolved } from "../../love/js/promise_resolved.mjs";
-import { server_url_api_ordered } from "../../love/js/server_url_api_ordered.mjs";
-import { server_url } from "../../love/js/server_url.mjs";
-import { server_port } from "../../love/js/server_port.mjs";
-import { server_url_api } from "../../love/js/server_url_api.mjs";
-import { function_worker_pool_run } from "../../love/js/function_worker_pool_run.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { log } from "../../love/js/log.mjs";
-import { log_keep } from "../../love/js/log_keep.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { server_cache_headers } from "./server_cache_headers.mjs";
+import { server_data_endpoints } from "./server_data_endpoints.mjs";
+import { promise_resolved } from "./promise_resolved.mjs";
+import { server_url_api_ordered } from "./server_url_api_ordered.mjs";
+import { server_url } from "./server_url.mjs";
+import { server_port } from "./server_port.mjs";
+import { server_url_api } from "./server_url_api.mjs";
+import { function_worker_pool_run } from "./function_worker_pool_run.mjs";
+import { property_get } from "./property_get.mjs";
+import { log } from "./log.mjs";
+import { log_keep } from "./log_keep.mjs";
 import express from "express";
 import { module_repos_resolve } from "./module_repos_resolve.mjs";
 import { module_public_resolve } from "./module_public_resolve.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
+import { text_combine } from "./text_combine.mjs";
 export async function server() {
   let app = express();
   let v3 = express.json({
@@ -21,14 +23,8 @@ export async function server() {
   let port = server_port();
   let result = await module_repos_resolve(import.meta);
   function cache_headers(res, file_path) {
-    "stale-while-revalidate caching for the game's static art (img/game/**): a dev RELOAD serves the cached sprite INSTANTLY (never blocks on the HTTP/1.1 6-connection cap → no 'did not load' flood) AND revalidates in the background, so an EDITED sprite is picked up on the next normal reload — no hard-reload needed. html/js keep default freshness (the dev bundle is already ?v= busted)";
-    let asset = file_path.includes("/img/game/");
-    if (asset) {
-      res.setHeader(
-        "Cache-Control",
-        "public, max-age=0, stale-while-revalidate=31536000",
-      );
-    }
+    let r = server_cache_headers(res, file_path);
+    return r;
   }
   let static_options = {
     setHeaders: cache_headers,
@@ -39,7 +35,9 @@ export async function server() {
   let v_public = express.static(folder_public_resolved, static_options);
   let u = server_url_api();
   async function api_generic(req, res) {
-    "run the call on a warm pooled worker rather than spawning a node process per request: startup was costing ~1.3 CPU-seconds every call, so a single page polling 3 endpoints every 4 seconds burned a whole core. function_worker_pool_run still retires its workers on any file change, so dev hot reload is unchanged";
+    ("run the call on a warm pooled worker rather than spawning a node process per request: startup was costing ~1.3 CPU-seconds every call, so a single page polling 3 endpoints every 4 seconds burned a whole core. ",
+      fn_name("function_worker_pool_run"),
+      " still retires its workers on any file change, so dev hot reload is unchanged");
     let body = property_get(req, "body");
     let f_name = property_get(body, "f_name");
     let args = property_get(body, "args");
@@ -50,8 +48,9 @@ export async function server() {
       });
     } catch (caught) {
       ("express does not catch a rejection from an async handler, so without this the browser waits forever instead of failing — the page's own catch can only run once a response actually arrives");
-      let failed = String(property_get(caught, "message"));
-      log(api_generic.name, {
+      let value = property_get(caught, "message");
+      let failed = String(value);
+      log(server.name, {
         f_name,
         failed,
       });
@@ -79,10 +78,9 @@ export async function server() {
   app.use(v);
   app.use(v_public);
   function lambda() {
-    log_keep(
-      server.name,
-      text_combine("Static server running at: ", server_url()),
-    );
+    let right = server_url();
+    let message = text_combine("Static server running at: ", right);
+    log_keep(server.name, message);
   }
   app.listen(port, lambda);
 }
