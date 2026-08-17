@@ -1,3 +1,4 @@
+import { memory_orphans_is_indexed } from "./memory_orphans_is_indexed.mjs";
 import { text_ends_with_not } from "./text_ends_with_not.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { memory_index_name } from "./memory_index_name.mjs";
@@ -7,7 +8,6 @@ import { folder_read } from "./folder_read.mjs";
 import { file_read } from "./file_read.mjs";
 import { path_join } from "./path_join.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function memory_orphans() {
@@ -19,23 +19,8 @@ export async function memory_orphans() {
   let index_text = await file_read(index_path);
   let ignores = [index_name];
   function is_indexed(name) {
-    let is_not_md = text_ends_with_not(name, ".md");
-    if (is_not_md) {
-      return false;
-    }
-    let is_the_index = list_includes(ignores, name);
-    if (is_the_index) {
-      return false;
-    }
-    let pointer = "](" + name;
-    let has_pointer = text_includes(index_text, pointer);
-    if (has_pointer) {
-      return true;
-    }
-    let stem = text_suffix_without(name, ".md");
-    let wikilink = "[[" + stem + "]]";
-    let has_wikilink = text_includes(index_text, wikilink);
-    return has_wikilink;
+    let r = memory_orphans_is_indexed(name, ignores, index_text);
+    return r;
   }
   let indexed = list_filter(names, is_indexed);
   let declared = [];
