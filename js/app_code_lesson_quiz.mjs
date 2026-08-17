@@ -1,6 +1,4 @@
-import { app_code_lesson_quiz_answer_property } from "./app_code_lesson_quiz_answer_property.mjs";
-import { app_code_lesson_quiz_qa_for } from "./app_code_lesson_quiz_qa_for.mjs";
-import { app_code_lesson_quiz_quiz_question } from "./app_code_lesson_quiz_quiz_question.mjs";
+import { app_code_lesson_quiz_parent_container } from "./app_code_lesson_quiz_parent_container.mjs";
 import { app_code_lesson_quiz_container_question } from "./app_code_lesson_quiz_container_question.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { list_size } from "./list_size.mjs";
@@ -45,22 +43,21 @@ export function app_code_lesson_quiz(
     quizzes,
     refresh,
   );
-  let r4 = app_code_lesson_quiz_quiz_question(r);
-  let r5 = app_code_lesson_quiz_qa_for(r4);
-  let qa_for = property_get(r5, "qa_for");
-  let r3 = app_code_lesson_quiz_answer_property(r5);
-  let answer_property = property_get(r3, "answer_property");
-  let quiz_question = property_get(r3, "quiz_question");
-  let on_question = property_get(r3, "on_question");
-  let on_answer = property_get(r3, "on_answer");
-  let correction_render = property_get(r3, "correction_render");
-  let on_reveal = property_get(r3, "on_reveal");
-  let qli = property_get(r3, "qli");
-  let answer_label = property_get(r3, "answer_label");
-  let quiz_index = property_get(r3, "quiz_index");
-  let container_success_message = property_get(r3, "container_success_message");
-  let container_correction = property_get(r3, "container_correction");
-  let parent_container = property_get(r3, "parent_container");
+  let r4 = app_code_lesson_quiz_parent_container(r);
+  let parent_container = property_get(r4, "parent_container");
+  let container_correction = property_get(r4, "container_correction");
+  let container_success_message = property_get(r4, "container_success_message");
+  let quiz_index = property_get(r4, "quiz_index");
+  let answer_label = property_get(r4, "answer_label");
+  let qli = property_get(r4, "qli");
+  let on_reveal = property_get(r4, "on_reveal");
+  let correction_render = property_get(r4, "correction_render");
+  let on_answer = property_get(r4, "on_answer");
+  let on_question = property_get(r4, "on_question");
+  let quiz_question = property_get(r4, "quiz_question");
+  let answer_property = property_get(r4, "answer_property");
+  let r3 = property_get(r4, "r3");
+  let qa_for = property_get(r4, "qa_for");
   let answers_div = property_get(r3, "answers_div");
   let answer_label_set = property_get(r3, "answer_label_set");
   let container_question = property_get(r3, "container_question");
