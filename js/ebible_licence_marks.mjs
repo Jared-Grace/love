@@ -1,3 +1,4 @@
+import { ebible_licence_gfdl } from "./ebible_licence_gfdl.mjs";
 import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
 import { ebible_licence_cc_by_sa } from "./ebible_licence_cc_by_sa.mjs";
 import { ebible_licence_public_domain } from "./ebible_licence_public_domain.mjs";
