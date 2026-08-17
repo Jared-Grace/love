@@ -1,10 +1,7 @@
+import { html_checkboxes_on_click } from "./html_checkboxes_on_click.mjs";
 import { html_checkboxes_validate } from "./html_checkboxes_validate.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
-import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { app_shared_button_background_invalid } from "./app_shared_button_background_invalid.mjs";
-import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_map } from "./list_map.mjs";
@@ -14,10 +11,6 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { html_rgba_to_rgb } from "./html_rgba_to_rgb.mjs";
-import { each } from "./each.mjs";
-import { html_checked_set } from "./html_checked_set.mjs";
-import { property_get } from "./property_get.mjs";
 import { html_input_type } from "./html_input_type.mjs";
 import { html_font_size_1em } from "./html_font_size_1em.mjs";
 import { app_shared_style_control } from "./app_shared_style_control.mjs";
@@ -28,7 +21,6 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_checkboxes(
   context,
   container_main_get,
@@ -60,27 +52,14 @@ export function html_checkboxes(
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     async function on_click() {
-      function lambda2(r) {
-        let container2 = property_get(r, "container");
-        html_box_shadow_set(container2, "none");
-        html_checked_set(r, false);
-      }
-      each(checkboxes, lambda2);
-      html_checked_set(checkbox, true);
-      let selected = "#5ffb84ff";
-      html_style_background_color_set(container, selected);
-      await sleep_0();
-      let valid = valid_get(checkboxes);
-      html_checkboxes_validate(valid, checkboxes, bn);
-      let ci = app_shared_button_background_invalid();
-      let c = valid ? "#4ad66bff" : ci;
-      let taken = html_rgba_to_rgb(c);
-      let style_value = text_combine_multiple([
-        "inset 0 0 0 .15em ",
-        taken,
-        ", inset 0 0 0 .3em white",
-      ]);
-      html_box_shadow_set(container, style_value);
+      let r = await html_checkboxes_on_click(
+        checkboxes,
+        checkbox,
+        container,
+        valid_get,
+        bn,
+      );
+      return r;
     }
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
