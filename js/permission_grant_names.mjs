@@ -1582,6 +1582,13 @@ export function permission_grant_names() {
   );
   let spelled1538 = fn_name("functions_forwarding_whole");
   let spelled1539 = fn_name("app_ceb_bible_gloss_chapters_verse_claims_wrong");
+  let spelled1540 = fn_name("app_ceb_bible_gloss_punctuation_words_gate_run");
+  let spelled1541 = fn_name(
+    "app_original_bible_gloss_punctuation_words_gate_run",
+  );
+  let spelled1542 = fn_name(
+    "app_en_learn_bible_gloss_urdu_punctuation_words_gate_run",
+  );
   let names = [
     spelled,
     spelled2,
@@ -3122,6 +3129,9 @@ export function permission_grant_names() {
     spelled1537,
     spelled1538,
     spelled1539,
+    spelled1540,
+    spelled1541,
+    spelled1542,
   ];
   return names;
 }
