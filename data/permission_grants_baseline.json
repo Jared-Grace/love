@@ -227,6 +227,22 @@
   {
    "name": "qa_app_commit_promote",
    "refusals": 1
+  },
+  {
+   "name": "webpack_build_dev",
+   "refusals": 1
+  },
+  {
+   "name": "qa_commit_named_at_when_wanted",
+   "refusals": 1
+  },
+  {
+   "name": "qa_snapshot_ensure_named",
+   "refusals": 1
+  },
+  {
+   "name": "qa_apps_commit_deploy_remembered",
+   "refusals": 1
   }
  ]
 }
