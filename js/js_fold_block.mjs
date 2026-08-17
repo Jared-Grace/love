@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { js_fold_block_start } from "./js_fold_block_start.mjs";
 import { js_fold_block_f_statements } from "./js_fold_block_f_statements.mjs";
 import { js_fold_block_partial_is } from "./js_fold_block_partial_is.mjs";
@@ -10,6 +11,14 @@ import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export function js_fold_block(x_ast, f_ast, f_block) {
+  arguments_assert(arguments, 3);
+  ("One fold, in one named run of statements, rather than in whatever run a function");
+  ("happens to open with.");
+  ("Every check that made this safe is here unchanged - the same contiguous match,");
+  ("the same escape gate, the same equivalence assert. The only thing that moved is");
+  ("which statements are being looked at, and that is safe to move because a name");
+  ("declared between braces cannot be read outside them, so a run that is sound to");
+  ("collapse under an if is sound for exactly the reason it is sound at the top.");
   let partial_is = js_fold_block_partial_is(x_ast);
   if (partial_is) {
     return null;
