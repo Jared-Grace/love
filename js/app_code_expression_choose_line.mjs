@@ -37,10 +37,13 @@ export function app_code_expression_choose_line(
     let ready = app_code_expression_nodes_ready(current);
     ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");
     let chosen = false;
+    ("every operator drawn on this line is kept, because the moment one of them is chosen the rest have to be SEEN to stop answering - a chip left standing on an operator that no longer answers is a control that swallows the press, and a learner pressing it is told nothing at all");
+    let pressable = [];
     ("every operator refused on this drawing of the line is kept, because a refusal is answered again the moment the right one is pressed - and by then the line is holding the marks rather than the presses that made them");
     let refused = [];
     function on_operator(node, span, node_span) {
       app_code_expression_operator_pressable(span);
+      list_add(pressable, span);
       async function on_click() {
         if (chosen) {
           return;
