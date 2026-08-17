@@ -1,7 +1,5 @@
+import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_integers } from "./text_integers.mjs";
-import { list_get } from "./list_get.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
@@ -20,10 +18,8 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
 ) {
   arguments_assert(arguments, 5);
   ("three quiz kinds: RECOGNISE the remainder formula among wrong rewrites (multiple choice), BUILD it from tokens (unscramble), then BACKWARDS - given the formula, pick the % it equals (14 - Math.floor(14 / 4) * 4 is 14 % 4). Forwards recognise then produce, then connect the long formula to the % shorthand");
-  let nums = text_integers(question);
-  let dividend = list_get(nums, 0);
-  let divisor = list_get(nums, 1);
-  let percent_expression = js_code_binary_spaced_nb(dividend, "%", divisor);
+  let percent_expression =
+    app_code_lesson_expression_remainder_divide_percent_expression(question);
   let recognize = {
     question_label: app_code_label_code_question(),
     on_question: html_text_set_code_dark,
