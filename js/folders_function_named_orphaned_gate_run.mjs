@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_size } from "./list_size.mjs";
-import { storage_function_folders_orphaned } from "./storage_function_folders_orphaned.mjs";
+import { folders_function_named_orphaned } from "./folders_function_named_orphaned.mjs";
 import { folders_function_named_orphaned_baseline_path } from "./folders_function_named_orphaned_baseline_path.mjs";
 export async function folders_function_named_orphaned_gate_run() {
   arguments_assert(arguments, 0);
@@ -12,7 +12,7 @@ export async function folders_function_named_orphaned_gate_run() {
     " has its own name written into a folder path on user storage, and a path on a disk follows nothing. The code moves and the data does not.");
   ("So the check runs the other way round from the rest: rather than reading the code and asking what it depends on, it reads the disk and asks whether the repo still answers to what is written there. A name that has stopped answering is data nobody is reading any more.");
   ("Measured against what was already lying about when this was written rather than against zero, because two of the three entries are hand-made copies rather than anything a rename did. The record only shrinks, so clearing one means moving the folder onto the live name or deleting it on purpose.");
-  let offenders = await storage_function_folders_orphaned();
+  let offenders = await folders_function_named_orphaned();
   let path = folders_function_named_orphaned_baseline_path();
   let name_write = fn_name("folders_function_named_orphaned_baseline_write");
   await baseline_names_gate_generic(

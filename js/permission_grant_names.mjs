@@ -675,7 +675,7 @@ export function permission_grant_names() {
   let spelled668 = fn_name("baselines_watched_gate_run");
   let spelled669 = fn_name("functions_gate_run_unwired");
   let spelled670 = fn_name("baseline_paths_names");
-  let spelled671 = fn_name("storage_function_folders_orphaned");
+  let spelled671 = fn_name("folders_function_named_orphaned");
   let spelled672 = fn_name("functions_condition_bodies_empty_gate_run");
   let spelled673 = fn_name("functions_cases_ungated_gate_run");
   let spelled674 = fn_name("functions_cases_ungated");
