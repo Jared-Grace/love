@@ -1,3 +1,4 @@
+import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
 import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
 import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
