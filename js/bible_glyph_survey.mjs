@@ -8,6 +8,7 @@ import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
 import { bible_glyph_gloss_normalized } from "./bible_glyph_gloss_normalized.mjs";
+import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -73,6 +74,7 @@ export async function bible_glyph_survey(testament_name) {
   let occurrences_mapped = 0;
   let sense_spread = [];
   let unmapped = [];
+  let rolled_by_strong = {};
   for (let strong of object_property_names(glosses)) {
     let tally = property_get(glosses, strong);
     let occurrences = 0;
@@ -101,6 +103,7 @@ export async function bible_glyph_survey(testament_name) {
       return n;
     }
     senses_plain.sort(count_descending);
+    property_set(rolled_by_strong, strong, rolled);
     occurrences_total = occurrences_total + occurrences;
     let entry_mapped = property_exists(mapped, strong);
     if (entry_mapped) {
@@ -140,8 +143,33 @@ export async function bible_glyph_survey(testament_name) {
   let n2 = multiply(left2, 1000);
   let top = round(n2);
   let percent = divide(top, 10);
+  let referents = bible_glyph_referents();
+  let referent_reach = [];
+  for (let referent of referents) {
+    let rolled = property_exists(rolled_by_strong, referent.strong)
+      ? property_get(rolled_by_strong, referent.strong)
+      : {};
+    let caught = 0;
+    let missing = [];
+    for (let gloss of referent.glosses) {
+      let present = property_exists(rolled, gloss);
+      if (not(present)) {
+        list_add(missing, gloss);
+        continue;
+      }
+      caught = caught + property_get(rolled, gloss);
+    }
+    list_add(referent_reach, {
+      strong: referent.strong,
+      root: referent.root,
+      glyphs: referent.glyphs,
+      occurrences_split_off: caught,
+      glosses_absent: missing,
+    });
+  }
   let report = {
     testament: testament_name,
+    referent_reach,
     roots_count: roots.length,
     words_count: object_property_names(mapped).length,
     coverage: {
