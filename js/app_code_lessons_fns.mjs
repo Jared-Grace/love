@@ -159,6 +159,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order,
     app_code_lesson_expression_choose_order_solve,
     app_code_lesson_expression_choose_order_operators,
+    app_code_lesson_expression_choose_order_three,
     app_code_lesson_expression_plus_times,
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
