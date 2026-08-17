@@ -1,8 +1,8 @@
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
@@ -14,15 +14,13 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { list_first } from "./list_first.mjs";
 export function app_code_lesson_statement_name_again_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
   ("The same cup twice over rather than two cups side by side. The lesson before put two cups next to each other and asked which one was meant; this one has to say the opposite - there is only ever one cup here, and it is the SAME cup in both pictures. Drawn side by side they would read as two, which is the answer to the wrong lesson.");
   ("The two pictures are the two lines. Everything a learner has to work out is that the second picture happened after the first, so the pictures are shown in the order the lines are written and the words between them say which came first.");
   ("What was in the cup is said to be gone, in as many words. A cup can hold more than one thing in life, and nothing on the screen rules that out; the code does, and it is the one thing a picture of a cup cannot say by itself.");
-  let names = app_code_lesson_statement_name_value_names();
-  let name = list_first(names);
+  let name = app_code_lesson_statement_name_value_name();
   let word_before = app_code_lesson_statement_name_value_word();
   let word_after = app_code_lesson_statement_name_two_word();
   let grape = emoji_grape();
