@@ -1,3 +1,4 @@
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -9,7 +10,6 @@ import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_cups_row } from "./app_code_cups_row.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
@@ -18,8 +18,6 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { emoji_grape } from "./emoji_grape.mjs";
-import { emoji_olive } from "./emoji_olive.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -37,8 +35,6 @@ export function app_code_lesson_statement_name_two_above(root) {
   let name_last = list_last(names);
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
-  let grape = emoji_grape();
-  let olive = emoji_olive();
   let box_two = app_code_container_light_blue(root);
   html_div_cycle_code(box_two, ["You can have more than one cup"]);
   html_div_cycle_code(box_two, [
@@ -48,8 +44,8 @@ export function app_code_lesson_statement_name_two_above(root) {
     name_last,
   ]);
   let row = app_code_cups_row(box_two);
-  app_code_cup(row, grape, name_first);
-  app_code_cup(row, olive, name_last);
+  app_code_lesson_cup_fruit(row, word_first, name_first);
+  app_code_lesson_cup_fruit(row, word_last, name_last);
   ("asked one at a time, and answered one at a time, because the name is what picks which of the two is being talked about and that is the only new thing on this screen");
   let box_ask = app_code_container_light_blue(root);
   html_div_cycle_code(box_ask, [
