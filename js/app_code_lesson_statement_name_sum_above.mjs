@@ -37,16 +37,20 @@ export function app_code_lesson_statement_name_sum_above(root) {
     "Remember, we can put a sum inside ",
     log_name,
   ]);
-  html_div_code(box_remember, js_code_console_log_statement(remind_sum));
+  let code = js_code_console_log_statement(remind_sum);
+  html_div_code(box_remember, code);
   app_code_writes_out_line(box_remember, remind_total);
   let box_names = app_code_container_light_blue(root);
   html_div_cycle_code(box_names, ["Suppose we give two numbers names"]);
-  html_div_code(box_names, js_code_let_statement(name_first, number_first));
-  html_div_code(box_names, js_code_let_statement(name_last, number_last));
+  let code2 = js_code_let_statement(name_first, number_first);
+  html_div_code(box_names, code2);
+  let code3 = js_code_let_statement(name_last, number_last);
+  html_div_code(box_names, code3);
   html_div_cycle_code(box_names, [
     "Now we can write the names where the numbers were",
   ]);
-  html_div_code(box_names, js_code_console_log_statement(names_sum));
+  let code4 = js_code_console_log_statement(names_sum);
+  html_div_code(box_names, code4);
   ("the numbers a name is holding are joined into the writing around them rather than given as parts of their own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
   let holds_first = list_join_empty([" holds ", number_first, " and "]);
   let holds_last = list_join_empty([
@@ -62,6 +66,7 @@ export function app_code_lesson_statement_name_sum_above(root) {
     name_last,
     holds_last,
   ]);
-  html_div_code(box_same, js_code_console_log_statement(numbers_sum));
+  let code5 = js_code_console_log_statement(numbers_sum);
+  html_div_code(box_same, code5);
   app_code_writes_out_line(box_same, total);
 }
