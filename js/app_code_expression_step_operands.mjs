@@ -1,3 +1,4 @@
+import { app_code_expression_step_operands_dividends } from "./app_code_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
 import { app_code_expression_step_value_most } from "./app_code_expression_step_value_most.mjs";
 import { add } from "./add.mjs";
@@ -8,7 +9,6 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { modulo } from "./modulo.mjs";
 import { multiply } from "./multiply.mjs";
 import { range_from } from "./range_from.mjs";
@@ -65,8 +65,11 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let divisors = list_filter(candidates, exact_is);
     return divisors;
   }
-  let multiplier_most = divide_floor(most, value);
-  let multipliers = range_from(least, multiplier_most);
-  let dividends = list_map(multipliers, dividend_of);
+  let dividends = app_code_expression_step_operands_dividends(
+    most,
+    value,
+    least,
+    dividend_of,
+  );
   return dividends;
 }
