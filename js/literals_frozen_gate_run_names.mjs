@@ -8,7 +8,7 @@ export function literals_frozen_gate_run_names(r2) {
   let arrived = property_get(r2, "arrived");
   let r3 = property_get(r2, "r3");
   let names = property_get(r3, "names");
-  return {
+  let r = {
     fresh,
     gone,
     moved,
@@ -16,4 +16,5 @@ export function literals_frozen_gate_run_names(r2) {
     r3,
     names,
   };
+  return r;
 }
