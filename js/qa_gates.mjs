@@ -1,3 +1,4 @@
+import { app_original_bible_gloss_punctuation_words_gate_run } from "./app_original_bible_gloss_punctuation_words_gate_run.mjs";
 import { app_ceb_bible_gloss_punctuation_words_gate_run } from "./app_ceb_bible_gloss_punctuation_words_gate_run.mjs";
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
@@ -555,6 +556,7 @@ export function qa_gates() {
     qa_gates_countless_gate_run,
     bundles_names_missing_gate_run,
     app_ceb_bible_gloss_punctuation_words_gate_run,
+    app_original_bible_gloss_punctuation_words_gate_run,
   ];
   return gates;
 }
