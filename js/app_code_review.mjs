@@ -1,3 +1,4 @@
+import { app_code_review_home_text } from "./app_code_review_home_text.mjs";
 import { app_code_review_restart_button } from "./app_code_review_restart_button.mjs";
 import { app_code_review_progress } from "./app_code_review_progress.mjs";
 import { app_code_review_g } from "./app_code_review_g.mjs";
@@ -25,7 +26,6 @@ import { html_clear } from "./html_clear.mjs";
 import { app_code_review_complete } from "./app_code_review_complete.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { not } from "./not.mjs";
@@ -40,19 +40,19 @@ export function app_code_review(context) {
   let g = property_get(r5, "g");
   let r3 = app_code_review_progress(r5);
   let r6 = app_code_review_restart_button(r3, g);
-  let restart_button = property_get(r6, "restart_button");
-  let passed = property_get(r6, "passed");
-  let queue = property_get(r6, "queue");
-  let go_next = property_get(r6, "go_next");
-  let skip_button = property_get(r6, "skip_button");
-  let has_next = property_get(r6, "has_next");
-  let back_button = property_get(r6, "back_button");
-  let success_container = property_get(r6, "success_container");
-  let c = property_get(r6, "c");
-  let key = property_get(r6, "key");
-  let progress = property_get(r6, "progress");
-  app_shared_button_gap_above(restart_button);
-  let home_text = app_shared_button_home_text();
+  let r7 = app_code_review_home_text(r6);
+  let home_text = property_get(r7, "home_text");
+  let progress = property_get(r7, "progress");
+  let key = property_get(r7, "key");
+  let c = property_get(r7, "c");
+  let success_container = property_get(r7, "success_container");
+  let back_button = property_get(r7, "back_button");
+  let has_next = property_get(r7, "has_next");
+  let skip_button = property_get(r7, "skip_button");
+  let go_next = property_get(r7, "go_next");
+  let queue = property_get(r7, "queue");
+  let passed = property_get(r7, "passed");
+  let restart_button = property_get(r7, "restart_button");
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
   }
