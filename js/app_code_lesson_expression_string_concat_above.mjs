@@ -1,45 +1,22 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_expression_string_concat_above_remember_line } from "./app_code_lesson_expression_string_concat_above_remember_line.mjs";
-import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
+import { app_code_lesson_expression_string_concat_above_so_value } from "./app_code_lesson_expression_string_concat_above_so_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
-import { list_get } from "./list_get.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_lesson_expression_string_concat_value_word } from "./app_code_lesson_expression_string_concat_value_word.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold } from "./html_bold.mjs";
 export function app_code_lesson_expression_string_concat_above(root) {
   arguments_assert(arguments, 1);
   ("anchor on the plus the learner already knows (it adds numbers), then reveal it does something different for strings - it combines them. The value is derived by reducing the combination to a plain string literal they already understand (the value of the two joined is the same as the value of one string written out), then the proper name is attached. Finally the order is made concrete with left and right rather than abstract firsts, and the absence of any space is stated outright.");
-  let two = app_code_lesson_expression_string_concat_pair();
-  let a = list_get(two, 0);
-  let r = app_code_lesson_expression_string_concat_above_remember_line(
-    two,
-    a,
-    root,
-  );
-  let remember_line = property_get(r, "remember_line");
-  let derive = property_get(r, "derive");
-  let on_light = property_get(r, "on_light");
-  let color = property_get(r, "color");
-  let joined_value = property_get(r, "joined_value");
-  let join_code = property_get(r, "join_code");
-  let code_b = property_get(r, "code_b");
+  let r = app_code_lesson_expression_string_concat_above_so_value(root);
+  let so_value = property_get(r, "so_value");
   let code_a = property_get(r, "code_a");
-  html_span_text(remember_line, "Remember, the ");
-  app_code_lesson_expression_string_concat_value_word(remember_line, on_light);
-  app_code_string_value_of_is_say(remember_line, joined_value);
-  let so_line = html_div(derive);
-  html_span_text(so_line, "So the ");
-  app_code_lesson_expression_string_concat_value_word(so_line, on_light);
-  html_span_text(so_line, " of ");
-  html_span_text_code_dark(so_line, join_code);
-  html_span_text(so_line, " is ");
-  let so_value = html_span_text_code_dark(so_line, joined_value);
+  let code_b = property_get(r, "code_b");
+  let joined_value = property_get(r, "joined_value");
+  let color = property_get(r, "color");
   html_font_color_set(so_value, color);
   let name_box = app_code_container_light_blue(root);
   let name_line = html_div(name_box);
