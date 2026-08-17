@@ -1,17 +1,14 @@
+import { app_code_lesson_expression_choose_order_quizzes } from "./app_code_lesson_expression_choose_order_quizzes.mjs";
 import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
-import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
-import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
-import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_lesson_expression_choose_order_walkthrough } from "./app_code_lesson_expression_choose_order_walkthrough.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_choose_order_title_name_id } from "./app_code_lesson_expression_choose_order_title_name_id.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_choose_order() {
   "choosing which operator to work out first, and then the next, with the quiz working each one out as it is chosen: 1 + 2 * 3, choose the times, see 1 + 6, choose the plus";
@@ -62,17 +59,9 @@ export function app_code_lesson_expression_choose_order() {
     app_code_lesson_expression_choose_order_walkthrough(parent, card, tree);
   }
   function quizzes_get(question, answer) {
-    "one kind, so one quiz";
-    let info = {
-      question_label: app_code_label_line_to_solve(),
-      on_question: html_text_set_code_dark,
-      answer_label: app_code_label_solve_first(),
+    "the quiz is the one both press-the-operators lessons ask, out of the one place it is written; what this lesson adds to it is what happens after each press";
+    let quizzes_exercises = app_code_lesson_expression_choose_order_quizzes(
       on_answer,
-      answer_property: "answer",
-    };
-    let infos = [info];
-    let quizzes_exercises = app_code_lesson_quizzes_exercises(
-      infos,
       batch_get,
       question,
       answer,
