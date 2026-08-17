@@ -1,5 +1,4 @@
-import { property_get } from "./property_get.mjs";
-import { bible_glyph_coverage_curve_step } from "./bible_glyph_coverage_curve_step.mjs";
+import { bible_glyph_coverage_curve_report } from "./bible_glyph_coverage_curve_report.mjs";
 import { bible_glyph_coverage_curve_curve } from "./bible_glyph_coverage_curve_curve.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
@@ -14,15 +13,6 @@ export async function bible_glyph_coverage_curve(testament_name) {
   let glosses = await bible_strong_glosses(testament_name);
   let roots = bible_glyph_roots();
   let r = bible_glyph_coverage_curve_curve(testament_name, roots, glosses);
-  let r2 = bible_glyph_coverage_curve_step(r);
-  let counted = property_get(r2, "counted");
-  let occurrences_total = property_get(r2, "occurrences_total");
-  let curve = property_get(r2, "curve");
-  let report = {
-    testament: testament_name,
-    words_total: counted.length,
-    occurrences_total,
-    curve,
-  };
+  let report = bible_glyph_coverage_curve_report(r, testament_name);
   return report;
 }
