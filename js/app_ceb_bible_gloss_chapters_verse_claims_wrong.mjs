@@ -1,3 +1,5 @@
+import { app_ceb_bible_gloss_chapters_claims_generic } from "./app_ceb_bible_gloss_chapters_claims_generic.mjs";
+import { gloss_passages_verse_claims_wrong } from "./gloss_passages_verse_claims_wrong.mjs";
 export async function app_ceb_bible_gloss_chapters_verse_claims_wrong() {
   "Every authored Cebuano chapter holding a word explanation that names a verse where no word built on the same root stands.";
   "This is the reading that settles a claim outright. A sentence naming a verse can be checked against that verse, so what comes back here is wrong rather than merely worth reading.";

@@ -1,3 +1,5 @@
+import { gloss_chapter_claims_generic } from "./gloss_chapter_claims_generic.mjs";
+import { gloss_chapters_offenders_generic } from "./gloss_chapters_offenders_generic.mjs";
 export async function gloss_chapters_claims_generic(
   fn,
   text_index,
