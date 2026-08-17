@@ -25,7 +25,12 @@ export function app_code_lesson_statement_name_copy_above(root) {
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   let box_have = app_code_container_light_blue(root);
-  html_div_cycle_code(box_have, ["Remember, you can have more than one cup"]);
+  html_div_cycle_code(box_have, [
+    "Suppose you had two cups, one called ",
+    name_first,
+    " and one called ",
+    name_last,
+  ]);
   app_code_lesson_cups_row_fruits(box_have, [
     [word_first, name_first],
     [word_last, name_last],
