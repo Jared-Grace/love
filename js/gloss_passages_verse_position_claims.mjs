@@ -1,3 +1,6 @@
+import { gloss_position_claim_joining_markers } from "./gloss_position_claim_joining_markers.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { subtract } from "./subtract.mjs";
 import { gloss_passages_entries_collect_generic } from "./gloss_passages_entries_collect_generic.mjs";
 import { gloss_position_claim_markers } from "./gloss_position_claim_markers.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -16,7 +19,9 @@ export function gloss_passages_verse_position_claims(
   "The two readings beside this one both ask about verses - which verse a word is named in, and how many verses it stands in. Neither can see the order of words inside one line, and that is where the error this reading was built for lived: a word called the one just before another, with a third word standing between them.";
   "So what comes back names the place: how far along the passage the explanation sits, how many words the passage holds, and the word on each side of it. A sentence claiming to open a line is settled by seeing the place is not the first, and a sentence naming the word before is settled by reading it.";
   "Nothing here is called wrong. A word's own parts stand in an order too, so an explanation about a prefix and a root is caught by the same phrases; a reader tells the two apart at a glance and no machine can.";
+  "An explanation that says its word joins onto its neighbour is passed over even where it does use one of these phrases. Cebuano hangs a describing word onto what it describes, so such an explanation has to mention the neighbour in order to say anything at all, and what it then says is true however the line runs. Left in, they were the great bulk of everything this reading found.";
   let markers = gloss_position_claim_markers();
+  let joining = gloss_position_claim_joining_markers();
   function entry_read(context) {
     let explain = property_get(context, "explain");
     let verses_key = property_get(context, "verses_key");
@@ -24,13 +29,17 @@ export function gloss_passages_verse_position_claims(
     let at = property_get(context, "at");
     let words = property_get(context, "words");
     let placing = text_markers_found(explain, markers);
-    let none = list_empty_is(placing);
-    if (none) {
+    let joined = text_markers_found(explain, joining);
+    let nothing_placed = list_empty_is(placing);
+    let about_joining = list_empty_not_is(joined);
+    let pass_over = nothing_placed || about_joining;
+    if (pass_over) {
       let quiet = [];
       return quiet;
     }
     let of = list_size(words);
-    let before = list_get_or(words, at - 1, "");
+    let index = subtract(at, 1);
+    let before = list_get_or(words, index, "");
     let after = list_get_or(words, at + 1, "");
     let finding = {
       verses_key,
