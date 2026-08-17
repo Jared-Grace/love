@@ -1,26 +1,14 @@
+import { property_get } from "./property_get.mjs";
+import { app_search_home_left } from "./app_search_home_left.mjs";
 import { app_search_home_search } from "./app_search_home_search.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
-import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
-import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_focus } from "./html_focus.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
-import { html_on_enter } from "./html_on_enter.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
 import { html_div } from "./html_div.mjs";
-import { property_set } from "./property_set.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { html_input_text } from "./html_input_text.mjs";
-import { app_shared_input_style } from "./app_shared_input_style.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { html_centered } from "./html_centered.mjs";
-import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
-import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
-import { emoji_search } from "./emoji_search.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -38,24 +26,10 @@ export async function app_search_home(context) {
   if (unknown_shown) {
     return;
   }
-  let root = property_get(context, "root");
-  html_clear(root);
-  let bc = app_shared_bar_content_root_sticky(root);
-  let bar = property_get(bc, "bar");
-  let content = property_get(bc, "content");
-  app_shared_content_column_pad(content);
-  html_centered(bar);
-  let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
-  let languages_chosen = ebible_languages_from_codes(language_codes);
-  property_set(context, "languages_chosen", languages_chosen);
-  app_shared_bible_languages_gear(bar, content, language_codes);
-  let search_instructions =
-    "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
-  app_shared_text_body(content, search_instructions);
-  let input = html_input_text(content, search_instructions);
-  app_shared_input_style(input);
-  html_on_enter(input, search);
-  let left = emoji_search();
+  let r2 = app_search_home_left(context, hash, search);
+  let left = property_get(r2, "left");
+  let input = property_get(r2, "input");
+  let content = property_get(r2, "content");
   let text = text_combine(left, " Search");
   app_shared_button_wide(content, text, search);
   function query_clear() {
