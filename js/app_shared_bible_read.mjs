@@ -1,4 +1,4 @@
-import { app_shared_bible_read_chapter_code } from "./app_shared_bible_read_chapter_code.mjs";
+import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
 import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
 import { property_get } from "./property_get.mjs";
@@ -95,10 +95,10 @@ export async function app_shared_bible_read(context, verse_action) {
       return;
     }
   }
-  let r5 = app_shared_bible_read_chapter_code(bar, help_text, shell, c);
-  let chapter_code = property_get(r5, "chapter_code");
-  let count_status = property_get(r5, "count_status");
+  let r5 = app_shared_bible_read_dismiss_help(bar, help_text, shell, c);
   let dismiss_help = property_get(r5, "dismiss_help");
+  let count_status = property_get(r5, "count_status");
+  let chapter_code = property_get(r5, "chapter_code");
   if (ref_mode) {
     let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
     if (null_is(ref_chapter)) {
