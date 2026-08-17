@@ -1,5 +1,5 @@
+import { app_g_conversation_meet } from "./app_g_conversation_meet.mjs";
 import { app_g_conversation_turns } from "./app_g_conversation_turns.mjs";
-import { app_g_conversation_pronouns } from "./app_g_conversation_pronouns.mjs";
 import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
 import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
@@ -48,11 +48,11 @@ export async function app_g_conversation(
     app_g_discern_prevented_overlay(5000);
     return;
   }
-  let r7 = await app_g_conversation_pronouns(prayer, npc);
-  let pronouns = property_get(r7, "pronouns");
-  let greeting = property_get(r7, "greeting");
-  let christian = property_get(r7, "christian");
+  let r7 = await app_g_conversation_meet(prayer, npc);
   let meet = property_get(r7, "meet");
+  let christian = property_get(r7, "christian");
+  let greeting = property_get(r7, "greeting");
+  let pronouns = property_get(r7, "pronouns");
   if (christian) {
     ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
