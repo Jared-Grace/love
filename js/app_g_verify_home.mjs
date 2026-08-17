@@ -1,18 +1,16 @@
+import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
 import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
 import { api_read_or } from "./api_read_or.mjs";
 import { app_g_verify_home_verse_bar } from "./app_g_verify_home_verse_bar.mjs";
 import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
-import { app_g_verify_home_editing_now } from "./app_g_verify_home_editing_now.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_query_property_get } from "./html_query_property_get.mjs";
-import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
 import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
 import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
-import { api_read } from "./api_read.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -36,7 +34,6 @@ import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
-import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
@@ -225,51 +222,13 @@ export async function app_g_verify_home(context) {
   }
   ("do NOT re-render while the reviewer is typing in the suggest box — a poll that lands mid-edit would rebuild the textarea and wipe their in-progress draft. Defer: shown_json is left stale, so the next poll after they click away or submit renders the fresh lines");
   async function refresh() {
-    if (document.hidden) {
-      poll();
-      return;
-    }
-    try {
-      let f_name5 = fn_name("g_sermon_write_read");
-      let fresh_chapter = await api_read(f_name5, [chapter_code]);
-      let f_name6 = fn_name("g_verify_status_read");
-      let fresh_status = await api_read(f_name6, [chapter_code]);
-      let f_name7 = fn_name("g_verify_chapter_next");
-      let fresh_state = await api_read(f_name7, [chapter_code]);
-      if (chapter_advance_armed) {
-        let latest_key = property_get(fresh_state, "latest");
-        let left2 = property_get(fresh_state, "action");
-        let left3 = property_get(fresh_state, "approved");
-        let fully_approved =
-          equal(left2, "done") &&
-          not_equal(latest_key, null) &&
-          equal(left3, latest_key);
-        if (fully_approved) {
-          let next_chapter = g_chapter_code_next(chapter_code);
-          let f_name8 = fn_name("g_verify_chapters_available");
-          let object2 = await api_read(f_name8, []);
-          let codes = property_get(object2, "chapters");
-          if (list_includes(codes, next_chapter)) {
-            location.href = g_verify_chapter_url(
-              location.pathname,
-              next_chapter,
-            );
-            return;
-          }
-        }
-      }
-      let fresh_json = json_to({
-        chapter: fresh_chapter,
-        status: fresh_status,
-        chapter_state: fresh_state,
-      });
-      let b4 = app_g_verify_home_editing_now(document);
-      if (not_equal(fresh_json, shown_json) && not(b4)) {
-        render(fresh_chapter, fresh_status, fresh_state);
-      }
-    } catch (ignore) {
-      ignore;
-    }
-    poll();
+    let r2 = await app_g_verify_home_refresh(
+      poll,
+      chapter_code,
+      chapter_advance_armed,
+      shown_json,
+      render,
+    );
+    return r2;
   }
 }
