@@ -20,6 +20,11 @@ export function app_code_lesson_statement_name_identifier_batch() {
     ("the two lines that put one word under the next word along as a name, and write that name out");
     let next = add(index, 1);
     let name = list_get_wrap(picked, next);
+    ("the name and the value are never the same word, and the screen is unreadable if they ever are");
+    ("A program reading let joy = \"joy\"; console.log(joy); comes out joy whichever of the two a learner thought was written out, so it teaches the mistake it was built to catch and cannot mark anybody wrong. Four different words each named after the next one along makes it impossible - but that is two decisions away from the line that would break it, so it is said here rather than left to be reasoned out.");
+    equal_not_assert_json(name, word, {
+      hint: "a program on this screen would give a value its own word as a name, which would let the name look like the thing written out",
+    });
     let quoted = app_code_string_code(word);
     let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);

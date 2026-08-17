@@ -1,4 +1,9 @@
-import { html_remove } from "./html_remove.mjs";
+import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
+import { list_first_property } from "./list_first_property.mjs";
+import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { html_div_first } from "./html_div_first.mjs";
+import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { null_is } from "./null_is.mjs";
@@ -7,7 +12,6 @@ import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
@@ -16,19 +20,32 @@ import { noop } from "./noop.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 export function app_code_lesson_expression_choose_order_solve_example(
   parent,
+  card,
   tree,
 ) {
-  arguments_assert(arguments, 2);
-  ("the lesson's front page: the same two presses the quiz asks for, with what to do NOW said above them - the part is chosen the way it was chosen before, and then what it comes to is chosen too");
+  arguments_assert(arguments, 3);
+  ("the lesson's front page: the same two presses the quiz asks for, with what the lesson is for said above them and then what to do NOW - the operator is chosen the way it was chosen before, and then what it comes to is chosen too");
+  ("Laid out exactly as the walkthrough of the lesson before it: the words at the top of the card above the Code label, and the line to press underneath. The two screens are one screen with one thing changed, so a learner arriving at the second finds every part of it where they left it, and the one difference is the only thing they have to find.");
+  ("Nothing stands in a box of its own. The lesson before says all of its words as plain lines at the top of the card, and a box drawn around the same words here would read as a different kind of saying rather than as the same saying carried on.");
   ("One asking at a time, and always the one for the press that is wanted right now. Both of them standing together is a plan to hold in the head before starting; one at a time, each is only ever about the press being made, and the words arrive as the learner reaches them rather than having to be remembered from the top of the screen.");
   ("The words are the quiz's own three askings, out of the same three functions the quiz sets its label from. The front page IS the quiz with nothing counted against you, so a second wording of the same three instructions would be two sets of words to keep in step, and the screen next door would be asking in words the learner had never been shown.");
-  ("Nothing else is narrated. The lesson before this one walked the learner through a line a step at a time and said what every press had just done; all that is new here is that the value is asked for instead of given, so a whole walkthrough said again would be teaching what has already been taught.");
-  ("The asking goes when the line is down to a value, because there is nothing left to press and an instruction still standing there would be asking for a press that cannot be made.");
+  ("The asking goes when the line is down to a value, because there is nothing left to press and an instruction still standing there would be asking for a press that cannot be made. What was said ABOVE it stays, because it is what the lesson is for rather than what to do next.");
   ("A wrong press is answered by the line itself, in red, the same way it is in the quiz. Being stopped from getting it wrong is not this page's job.");
-  let head = app_code_container_light_blue(parent);
-  let asking = html_div(head);
   let line_holder = html_div(parent);
   let choices_holder = html_div(parent);
+  ("the two operators of the line, in the order the line itself says they go, because the telling names them and a hand-written pair would be right only for as long as the bank kept printing the same shape");
+  let ready = app_code_expression_nodes_ready(tree);
+  let first_symbol = list_first_property(ready, "operator");
+  let next_symbol = property_get(tree, "operator");
+  let whole_line = app_code_expression_code(tree);
+  let head = html_div_first(card);
+  app_code_lesson_expression_choose_order_solve_intro(
+    head,
+    whole_line,
+    first_symbol,
+    next_symbol,
+  );
+  let asking = html_div(head);
   let current = tree;
   function ask(words) {
     "the one place the asking is written, so the three askings take turns in it instead of standing beside each other";
@@ -39,8 +56,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
     current = property_get(step, "current");
     let more = app_code_expression_node_is(current);
     if (not(more)) {
-      ("the whole band goes rather than only the words in it, because a blue box with nothing written in it is a place the eye keeps going back to for something that is never coming");
-      html_remove(head);
+      html_clear(asking);
       return;
     }
     let solved = property_get(step, "solved");

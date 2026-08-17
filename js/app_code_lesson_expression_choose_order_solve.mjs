@@ -77,7 +77,7 @@ export function app_code_lesson_expression_choose_order_solve() {
   function on_question_example(parent, question, card) {
     "the lesson's front page, which is the rehearsal next door: all this end of it has to do is find the shape the question was printed from";
     let tree = tree_for(question);
-    app_code_lesson_expression_choose_order_solve_example(parent, tree);
+    app_code_lesson_expression_choose_order_solve_example(parent, card, tree);
   }
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
