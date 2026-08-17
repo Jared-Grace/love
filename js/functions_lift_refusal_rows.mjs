@@ -14,8 +14,8 @@ export async function functions_lift_refusal_rows() {
   let rows = [];
   for (let name of named) {
     async function lambda() {
-      let read = await function_lift_refusal_rows(name);
-      return read;
+      let nested_rows = await function_lift_refusal_rows(name);
+      return nested_rows;
     }
     let read = await catch_null_async(lambda);
     let missing = null_is(read);
