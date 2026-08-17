@@ -1,3 +1,4 @@
+import { app_g_conversation_pray_together } from "./app_g_conversation_pray_together.mjs";
 import { app_g_conversation_close_now } from "./app_g_conversation_close_now.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render_farewell } from "./app_g_conversation_render_farewell.mjs";
@@ -14,7 +15,6 @@ import { list_first } from "./list_first.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
-import { g_prayers_believer } from "./g_prayers_believer.mjs";
 import { add } from "./add.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
@@ -101,12 +101,8 @@ export async function app_g_conversation(
     let container_believer = app_g_container_player(overlay);
     app_g_p_text(container_believer, "What would you like to do?");
     function pray_together() {
-      function on_part() {}
-      async function on_prayed() {
-        await overlay_close();
-      }
-      let believer_prayers = g_prayers_believer(pronouns);
-      app_g_pray_turn(believer_prayers, on_part, on_prayed);
+      let r2 = app_g_conversation_pray_together(overlay_close, pronouns);
+      return r2;
     }
     let pray_emoji = emoji_pray();
     let pray_label = text_combine(pray_emoji, " Pray together");
