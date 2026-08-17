@@ -5,7 +5,13 @@ import { list_map } from "./list_map.mjs";
 import { function_name_to_parts } from "./function_name_to_parts.mjs";
 import { error_json } from "./error_json.mjs";
 export function function_name_to_acronym(f_name) {
-  let parts = function_name_to_parts(f_name);
+  ("A name ending in the separator leaves an empty part behind, and an empty part");
+  ("has no first letter. Such a name is real - a function made out of a variable");
+  ("named r_ar_ carries the trailing mark into its own name - and one of them used");
+  ("to stop the whole table being built, which stopped every reading that asks the");
+  ("table a question. An empty part contributes no letter instead.");
+  let parts_all = function_name_to_parts(f_name);
+  let parts = list_filter(parts_all, text_empty_not_is);
   let letters = null;
   try {
     letters = list_map(parts, list_first);
