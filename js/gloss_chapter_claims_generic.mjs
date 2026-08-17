@@ -1,3 +1,6 @@
+import { gloss_chapter_read } from "./gloss_chapter_read.mjs";
+import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
 export async function gloss_chapter_claims_generic(
   chapter_code,
   fn,

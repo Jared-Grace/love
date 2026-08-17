@@ -1,3 +1,9 @@
+import { binisaya_words_known } from "./binisaya_words_known.mjs";
+import { binisaya_word_root_key_reader } from "./binisaya_word_root_key_reader.mjs";
+import { app_ceb_bible_gloss_text_index } from "./app_ceb_bible_gloss_text_index.mjs";
+import { gloss_chapter_claims_generic } from "./gloss_chapter_claims_generic.mjs";
+import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_chapter_claims_generic(
   chapter_code,
   lambda_claims,

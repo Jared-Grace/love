@@ -2432,6 +2432,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_claude_temp_rm(words)
             and not is_safe_claude_temp_mkdir(words)
             and not is_safe_claude_temp_mv(words)
+            and not is_safe_claude_temp_cp(words)
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
