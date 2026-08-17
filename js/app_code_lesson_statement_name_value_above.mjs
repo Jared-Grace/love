@@ -6,13 +6,8 @@ import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { text_empty } from "./text_empty.mjs";
 export function app_code_lesson_statement_name_value_above(root) {
   arguments_assert(arguments, 1);
