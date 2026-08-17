@@ -1,3 +1,4 @@
+import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
@@ -6,9 +7,6 @@ import { html_bold } from "./html_bold.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
-import { app_code_string_colored } from "./app_code_string_colored.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_string_hello_define(root, word) {
   arguments_assert(arguments, 2);
@@ -28,11 +26,6 @@ export function app_code_lesson_expression_string_hello_define(root, word) {
   let value_word = html_span_text(example, "value");
   let color4 = app_code_string_value_color_on_light();
   html_font_color_set(value_word, color4);
-  html_span_text(example, " of ");
-  app_code_string_colored(example, word);
-  html_span_text(example, " is ");
-  let value_out = html_span_text_code_dark(example, word);
-  let color2 = app_code_string_value_color();
-  html_font_color_set(value_out, color2);
+  app_code_string_value_of_is_say(example, word);
   html_div_cycle_code(define, ["A string's value does not include its quotes"]);
 }
