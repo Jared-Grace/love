@@ -1,3 +1,5 @@
+import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
+import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_expression_integer_division_title_name_id } from "./app_code_lesson_expression_integer_division_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -6,11 +8,9 @@ import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_diviso
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_get } from "./list_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
-import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -32,9 +32,8 @@ export function app_code_lesson_expression_integer_division() {
     let list = [];
     let item = add(answer, 1);
     list_add(list, item);
-    let nums = text_integers(question);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
+    let dividend = app_code_division_dividend(question);
+    let divisor = app_code_division_divisor(question);
     let unfloored = divide(dividend, divisor);
     let unfloored_text = text_to(unfloored);
     let clean = text_regex_match(unfloored_text, /^[0-9]+(\.[0-9]{1,3})?$/);
