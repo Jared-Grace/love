@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
@@ -229,6 +230,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_total,
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_one_more,
+    app_code_lesson_statement_name_copy_kept,
   ];
   return fns;
 }
