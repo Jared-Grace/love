@@ -1,14 +1,9 @@
+import { bible_glyph_survey_sense_spread } from "./bible_glyph_survey_sense_spread.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { equal } from "./equal.mjs";
 import { round } from "./round.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
-import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
-import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
 import { bible_glyph_gloss_normalized } from "./bible_glyph_gloss_normalized.mjs";
 import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
@@ -27,62 +22,18 @@ export async function bible_glyph_survey(testament_name) {
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
   let table_testament = bible_glyph_roots_testament();
-  let table_reads = equal(table_testament, testament_name);
-  assert_json(table_reads, {
-    testament_name,
+  let r = await bible_glyph_survey_sense_spread(
     table_testament,
-    hint: "the root table is written for one testament and a Strong's number means a different word in the other, so surveying the wrong testament would report the numbers that happen to collide as coverage - survey the testament the table is for, or write a table for this one",
-  });
-  let glosses = await bible_strong_glosses(testament_name);
-  let characters = bible_glyph_characters();
-  let character_names = {};
-  for (let character of characters) {
-    property_set(character_names, character.name, true);
-  }
-  let roots = bible_glyph_roots();
-  let glyph_roots = {};
-  let mapped = {};
-  let glyph_missing = [];
-  for (let root of roots) {
-    for (let word of root.words) {
-      let glyph = word.glyph;
-      let known = property_exists(character_names, glyph);
-      if (not(known)) {
-        list_add(glyph_missing, {
-          root: root.root,
-          strong: word.strong,
-          glyph,
-        });
-      }
-      let started = property_exists(glyph_roots, glyph);
-      if (not(started)) {
-        property_set(glyph_roots, glyph, []);
-      }
-      let sharers = property_get(glyph_roots, glyph);
-      let already = sharers.includes(root.root);
-      if (not(already)) {
-        list_add(sharers, root.root);
-      }
-      property_set(mapped, word.strong, {
-        root: root.root,
-        glyph,
-      });
-    }
-  }
-  let glyph_collisions = [];
-  for (let glyph of object_property_names(glyph_roots)) {
-    let sharers = property_get(glyph_roots, glyph);
-    let shared = greater_than(sharers.length, 1);
-    if (shared) {
-      list_add(glyph_collisions, {
-        glyph,
-        roots: sharers,
-      });
-    }
-  }
-  let occurrences_total = 0;
-  let occurrences_mapped = 0;
-  let sense_spread = [];
+    testament_name,
+  );
+  let sense_spread = property_get(r, "sense_spread");
+  let occurrences_mapped = property_get(r, "occurrences_mapped");
+  let occurrences_total = property_get(r, "occurrences_total");
+  let glyph_collisions = property_get(r, "glyph_collisions");
+  let glyph_missing = property_get(r, "glyph_missing");
+  let mapped = property_get(r, "mapped");
+  let roots = property_get(r, "roots");
+  let glosses = property_get(r, "glosses");
   let unmapped = [];
   for (let strong of object_property_names(glosses)) {
     let tally = property_get(glosses, strong);
