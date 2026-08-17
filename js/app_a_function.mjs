@@ -1,3 +1,4 @@
+import { app_a_function_sync } from "./app_a_function_sync.mjs";
 import { app_a_function_lambda3 } from "./app_a_function_lambda3.mjs";
 import { app_a_function_download } from "./app_a_function_download.mjs";
 import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
@@ -11,7 +12,6 @@ import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
-import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.mjs";
 import { html_bar_content } from "./html_bar_content.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
@@ -22,7 +22,6 @@ import { storage_session_exists } from "./storage_session_exists.mjs";
 import { app_a } from "./app_a.mjs";
 import { app_a_apps } from "./app_a_apps.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
-import { app_a_function_on_keydown_remove } from "./app_a_function_on_keydown_remove.mjs";
 import { emoji_run } from "./emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "./app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
@@ -64,13 +63,14 @@ export async function app_a_function(context) {
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
   async function sync() {
-    await upload();
-    await download();
-    app_a_function_on_keydown_remove({
+    let r2 = await app_a_function_sync(
+      upload,
+      download,
       context,
       app_a_function_on_keydown,
-    });
-    await app_a_function_refresh_scroll(content, context);
+      content,
+    );
+    return r2;
   }
   let preview_app = {
     shortcut: "p",
