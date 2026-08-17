@@ -1,5 +1,5 @@
 import { storage_function_folder_rename_check } from "./storage_function_folder_rename_check.mjs";
-import { storage_function_folder_rename } from "./storage_function_folder_rename.mjs";
+import { folders_function_named_rename } from "./folders_function_named_rename.mjs";
 import { storage_local_key_names_rename_report } from "./storage_local_key_names_rename_report.mjs";
 import { permission_settings_allow_rename_report } from "./permission_settings_allow_rename_report.mjs";
 import { memory_fn_references_rename_report } from "./memory_fn_references_rename_report.mjs";
@@ -23,6 +23,6 @@ export async function function_rename(f_name_before, f_name_after) {
   ("a browser storage key is the owning function's own name, so this is the one rename that loses data, and it loses it where no gate can see until somebody runs one");
   await storage_local_key_names_rename_report(f_name_before, f_name_after);
   ("a store on this disk is reachable, so it is moved rather than reported - the sentence a browser key gets is only a sentence because nothing here can reach that disk");
-  await storage_function_folder_rename(f_name_before, f_name_after);
+  await folders_function_named_rename(f_name_before, f_name_after);
   return f_name_before;
 }
