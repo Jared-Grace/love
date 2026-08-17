@@ -1,3 +1,4 @@
+import { app_code_lesson_name_quoted_letter_line } from "./app_code_lesson_name_quoted_letter_line.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -17,9 +18,7 @@ export function app_code_lesson_name_no_quotes_box(
   ("The whole lesson turns on one pair of characters, and a learner who has only ever seen quote marks as decoration round a word will read the line without them as the same line. So the line is shown both ways, one under the other, and what each one does is said in the same breath.");
   ("The wrong one is shown last rather than first. Shown first it is the shape a learner carries down the screen, and every question after it is read through the mistake; shown last it is met as something already ruled out.");
   ("The word inside wears the coloured tile, as it does on the screen about which name comes out, because it is the same distinction said again - what is being talked about is the thing in the cup and not the writing on the cup.");
-  (
-    "What is actually in the cup is named at the end of the second line rather than left to be remembered. Everything else on the line is said in names - the cup called this gets what is inside the cup called that - and a learner can follow all of it without once holding in mind what that cup has in it, which is the one thing the line is about."
-  );
+  ("What is actually in the cup is named at the end of the second line rather than left to be remembered. Everything else on the line is said in names - the cup called this gets what is inside the cup called that - and a learner can follow all of it without once holding in mind what that cup has in it, which is the one thing the line is about.");
   let box = app_code_container_light_blue(root);
   let quoted_word = app_code_string_code(word_source);
   let line_plain = js_code_let_statement(name_copy, name_source);
