@@ -2,11 +2,9 @@ import { functions_imports_unused_repair } from "./functions_imports_unused_repa
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { function_transform } from "./function_transform.mjs";
 import { functions_names_changed } from "./functions_names_changed.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { js_imports_unused } from "./js_imports_unused.mjs";
-import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_imports_unused_changed_repair() {
