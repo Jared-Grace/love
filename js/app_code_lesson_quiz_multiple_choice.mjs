@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_multiple_choice_add_decoy } from "./app_code_lesson_quiz_multiple_choice_add_decoy.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
@@ -60,12 +61,12 @@ export function app_code_lesson_quiz_multiple_choice(
     ("seed the TAILORED wrong answers first (the tempting mistakes for this question, e.g. the rounded-UP value), so they are guaranteed to appear; the loop below then fills any remaining slots with random distractors from other questions. Opt-in via info.decoys - lessons without it behave exactly as before");
     let tailored = decoy_fn(quiz_question, quiz_answer);
     function add_decoy(decoy) {
-      let decoy_text = text_to(decoy);
-      let dup = list_includes(seen, decoy_text);
-      if (not(dup)) {
-        list_add(seen, decoy_text);
-        list_add(distractors, decoy_text);
-      }
+      let r = app_code_lesson_quiz_multiple_choice_add_decoy(
+        decoy,
+        seen,
+        distractors,
+      );
+      return r;
     }
     each(tailored, add_decoy);
   }
