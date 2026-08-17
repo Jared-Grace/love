@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { bible_glyph_coverage_curve_steps } from "./bible_glyph_coverage_curve_steps.mjs";
+import { bible_glyph_coverage_curve_curve } from "./bible_glyph_coverage_curve_curve.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,12 +18,12 @@ export async function bible_glyph_coverage_curve(testament_name) {
   "The curve is reported alongside HOW MUCH OF EACH STEP IS ALREADY DRAWN, because the two numbers answer different questions. The curve says how big the job is; the drawn count says where in it the current table stands.";
   let glosses = await bible_strong_glosses(testament_name);
   let roots = bible_glyph_roots();
-  let r = bible_glyph_coverage_curve_steps(testament_name, roots, glosses);
-  let steps = property_get(r, "steps");
-  let table_reads = property_get(r, "table_reads");
-  let counted = property_get(r, "counted");
+  let r = bible_glyph_coverage_curve_curve(testament_name, roots, glosses);
+  let curve = property_get(r, "curve");
   let occurrences_total = property_get(r, "occurrences_total");
-  let curve = [];
+  let counted = property_get(r, "counted");
+  let table_reads = property_get(r, "table_reads");
+  let steps = property_get(r, "steps");
   for (let step of steps) {
     let past = greater_than(step, counted.length);
     if (past) {
