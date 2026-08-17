@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_whole_part_both_above } from "./app_code_lesson_expression_whole_part_both_above.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
 import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
@@ -14,11 +15,6 @@ import { noop } from "./noop.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_arrow } from "./app_code_arrow.mjs";
-import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
   function make(divisor, quotient) {
@@ -127,30 +123,7 @@ export function app_code_lesson_expression_whole_part_both() {
   );
   return lesson;
   function above(root) {
-    let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, [
-      "Now find the whole part of a division in one go:",
-    ]);
-    let steps = app_code_container_light_blue(root);
-    html_div_cycle_code(steps, ["Rewrite the division with the formula:"]);
-    let rewrite = app_code_row_flex_center(steps);
-    html_span_text_code_dark(rewrite, "14 / 4");
-    app_code_arrow(rewrite);
-    html_span_text_code_dark(rewrite, "Math.floor(14 / 4) * 4");
-    html_div_cycle_code(steps, ["Then solve:"]);
-    html_div_cycle_code(steps, [
-      "",
-      "Math.floor(14 / 4) * 4",
-      " is ",
-      "3 * 4",
-      " is ",
-      "12",
-    ]);
-    html_div_cycle_code(steps, [
-      "So the whole part of ",
-      "14 / 4",
-      " is ",
-      "12",
-    ]);
+    let r2 = app_code_lesson_expression_whole_part_both_above(root);
+    return r2;
   }
 }
