@@ -1,3 +1,4 @@
+import { app_reply_main_shortcuts_shortcut_each } from "./app_reply_main_shortcuts_shortcut_each.mjs";
 import { app_reply_main_shortcuts_languages_default_concat_single } from "./app_reply_main_shortcuts_languages_default_concat_single.mjs";
 import { app_reply_main_shortcuts_languages_default_concat } from "./app_reply_main_shortcuts_languages_default_concat.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
@@ -13,13 +14,7 @@ import { ebible_language_english } from "./ebible_language_english.mjs";
 import { app_reply_called_why } from "./app_reply_called_why.mjs";
 import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
-import { property_get_invoke } from "./property_get_invoke.mjs";
-import { list_find_property } from "./list_find_property.mjs";
-import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
 import { app_reply_greetings } from "./app_reply_greetings.mjs";
 import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
@@ -203,21 +198,16 @@ export function app_reply_main_shortcuts(
     r_yt,
   ];
   function shortcut_each(s) {
-    let name = property_get(s, "name");
-    let languages2 = property_get(s, "languages");
-    let count2 = property_get(s, "count");
-    let responses = property_get(s, "responses");
-    async function lambda5() {
-      app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
-      await update(count2);
-      list_map_property_invoke(buttons_languages, "update");
-      function lambda7(r) {
-        let b = list_find_property(buttons_responses, "text", r);
-        property_get_invoke(b, "click");
-      }
-      each(responses, lambda7);
-    }
-    app_shared_button(root, name, lambda5);
+    let r = app_reply_main_shortcuts_shortcut_each(
+      s,
+      languages_chosen,
+      languages,
+      update,
+      buttons_languages,
+      buttons_responses,
+      root,
+    );
+    return r;
   }
   each(shortcuts, shortcut_each);
 }
