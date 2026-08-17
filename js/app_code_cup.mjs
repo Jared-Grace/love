@@ -74,12 +74,14 @@ export function app_code_cup(parent, inside, name) {
     });
   }
   ("the name is written ON the cup rather than beside it - a label somebody wrote on the side, which is the whole of what a name is here");
+  ("Written heavier than the words around it. Most names here are a single letter, and a single letter at reading weight, standing on its own with nothing either side of it to be read against, is the hardest thing on the screen to make out - a lower-case a inside a glass is a smudge. It is also the one thing on the picture that has to be read, since it is what the code will say.");
   let named = text_empty_not_is(name);
   if (named) {
     let written = html_div_text(bowl, name);
     html_font_color_set(written, dark);
+    html_bold(written);
     html_style_assign(written, {
-      "font-size": "0.95em",
+      "font-size": "1.05em",
       "line-height": "1",
     });
   }
