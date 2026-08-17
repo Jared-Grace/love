@@ -1,6 +1,6 @@
+import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
 import { app_a_function_upload } from "./app_a_function_upload.mjs";
 import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
@@ -8,11 +8,7 @@ import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
-import { js_unparse } from "./js_unparse.mjs";
 import { app_a_function_import } from "./app_a_function_import.mjs";
-import { function_new_js_name } from "./function_new_js_name.mjs";
-import { app_a_functions_overlay } from "./app_a_functions_overlay.mjs";
-import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.mjs";
 import { html_bar_content } from "./html_bar_content.mjs";
@@ -158,17 +154,8 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
-        let v6 = await app_a_functions_overlay(a, lambda11);
-        let overlay_result = property_get(v6, "overlay_result");
-        let input_set = property_path_get_2(v6, "chooser_result", "input_set");
-        let combined = function_new_js_name("");
-        input_set(combined);
-        async function lambda11(f_name_call) {
-          let fn = await app_a_function_import(f_name_call);
-          await fn(ast);
-          js_unparse(ast);
-          await app_a_function_on_change(a, overlay_result);
-        }
+        let r3 = await app_a_function_lambda10(a, ast);
+        return r3;
       },
     },
     {
