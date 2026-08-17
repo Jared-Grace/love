@@ -46,8 +46,9 @@ export function app_code_lesson_quiz_multiple_choice_choices(
     attempts = add(attempts, 1);
   }
   let choices = list_concat(distractors, [quiz_answer_text]);
-  return {
+  let r = {
     quiz_answer_text,
     choices,
   };
+  return r;
 }
