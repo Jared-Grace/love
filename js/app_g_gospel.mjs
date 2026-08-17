@@ -1,16 +1,13 @@
+import { app_g_gospel_build_wrong } from "./app_g_gospel_build_wrong.mjs";
 import { firebase_storage_download_json_jg } from "./firebase_storage_download_json_jg.mjs";
 import { property_set } from "./property_set.mjs";
-import { invoke_once } from "./invoke_once.mjs";
-import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_doxology } from "./app_g_doxology.mjs";
 import { app_g_objection_random } from "./app_g_objection_random.mjs";
-import { app_g_bible_passage_button_direct } from "./app_g_bible_passage_button_direct.mjs";
 import { g_verses_off_topic } from "./g_verses_off_topic.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_g_main_books } from "./app_g_main_books.mjs";
 import { app_g_chapter_code } from "./app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "./global_function_property_nested_lambda.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_bible_passage_button } from "./app_g_bible_passage_button.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
@@ -63,41 +60,25 @@ export async function app_g_gospel(
         property_transform(npc, "objections", subtract_1);
         await app_g_gospel(overlay, npc, overlay_close, player, div_map);
       }
-      let b2 = app_g_bible_passage_button(
+      let b = app_g_bible_passage_button(
         passage,
         chapter_code,
         books,
         container,
         lambda,
       );
-      return b2;
+      return b;
     }
     function build_wrong(container) {
-      let lambda2 = invoke_once(lambda3);
-      function on_wrong() {
-        if (app_g_discern_prevent(discern)) {
-          return;
-        }
-        lambda2();
-      }
-      let reference = property_get(verse_wrong, "reference");
-      let verse_text = property_get(verse_wrong, "text");
-      let b = app_g_bible_passage_button_direct(
-        reference,
-        verse_text,
+      let r = app_g_gospel_build_wrong(
         container,
-        on_wrong,
+        discern,
+        verse_wrong,
+        player,
+        passage,
+        chapter_code,
       );
-      function lambda3() {
-        app_g_button_wrong(b);
-        let review = property_get(player, "review");
-        let verse_numbers = property_get(passage, "verse_numbers");
-        list_add(review, {
-          chapter_code,
-          verse_numbers,
-        });
-      }
-      return b;
+      return r;
     }
     function on_end() {
       if (app_g_discern_prevent(discern)) {
