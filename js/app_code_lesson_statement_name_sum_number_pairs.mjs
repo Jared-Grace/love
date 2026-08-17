@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { add } from "./add.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_map_index } from "./list_map_index.mjs";
 export function app_code_lesson_statement_name_sum_number_pairs() {
   arguments_assert(arguments, 0);
   ("the four pairs of numbers the lessons about adding what two names hold give their two names, one pair to a program");
