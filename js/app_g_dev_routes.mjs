@@ -1,3 +1,4 @@
+import { app_g_dev_routes_design } from "./app_g_dev_routes_design.mjs";
 import { app_g_dev_routes_characters } from "./app_g_dev_routes_characters.mjs";
 import { app_g_dev_routes_day_conversation } from "./app_g_dev_routes_day_conversation.mjs";
 import { app_g_dev_routes_disciple } from "./app_g_dev_routes_disciple.mjs";
@@ -9,10 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { localhost_is } from "./localhost_is.mjs";
-import { app_g_design } from "./app_g_design.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_view_set } from "./app_g_view_set.mjs";
 export function app_g_dev_routes(div_map) {
   let r = app_g_dev_routes_gratitude(div_map);
   let r3 = app_g_dev_routes_gospel_share(r, div_map);
@@ -23,28 +21,23 @@ export function app_g_dev_routes(div_map) {
   let r6 = app_g_dev_routes_day_conversation(r2);
   let day_conversation = property_get(r6, "day_conversation");
   let r7 = app_g_dev_routes_characters(r6);
-  let characters = property_get(r7, "characters");
-  let disciple = property_get(r7, "disciple");
-  let gratitude = property_get(r7, "gratitude");
-  let dove = property_get(r7, "dove");
-  let discern = property_get(r7, "discern");
-  let day_baptisms_collect = property_get(r7, "day_baptisms_collect");
-  let day_hours = property_get(r7, "day_hours");
-  let day_parts = property_get(r7, "day_parts");
-  let pray = property_get(r7, "pray");
-  let study = property_get(r7, "study");
-  let day_unbelievers = property_get(r7, "day_unbelievers");
-  let unbeliever = property_get(r7, "unbeliever");
-  let quick = property_get(r7, "quick");
-  let gospel_share = property_get(r7, "gospel_share");
-  let believe = property_get(r7, "believe");
-  async function design() {
-    ("the #design reader: every memory note about this game's design, gathered and shown as collapsible cards (",
-      fn_name("app_g_design"),
-      "). not a mechanic under test like its siblings — it is the DESIGN behind them, kept in the game so it can be read where the work happens");
-    await app_g_view_set(null);
-    await app_g_design();
-  }
+  let r8 = app_g_dev_routes_design(r7);
+  let design = property_get(r8, "design");
+  let believe = property_get(r8, "believe");
+  let gospel_share = property_get(r8, "gospel_share");
+  let quick = property_get(r8, "quick");
+  let unbeliever = property_get(r8, "unbeliever");
+  let day_unbelievers = property_get(r8, "day_unbelievers");
+  let study = property_get(r8, "study");
+  let pray = property_get(r8, "pray");
+  let day_parts = property_get(r8, "day_parts");
+  let day_hours = property_get(r8, "day_hours");
+  let day_baptisms_collect = property_get(r8, "day_baptisms_collect");
+  let discern = property_get(r8, "discern");
+  let dove = property_get(r8, "dove");
+  let gratitude = property_get(r8, "gratitude");
+  let disciple = property_get(r8, "disciple");
+  let characters = property_get(r8, "characters");
   let routes = {
     study,
     unbeliever,
