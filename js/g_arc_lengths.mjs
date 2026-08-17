@@ -1,17 +1,12 @@
 import { property_get } from "./property_get.mjs";
+import { g_arc_lengths_attempt } from "./g_arc_lengths_attempt.mjs";
 import { g_arc_lengths_count } from "./g_arc_lengths_count.mjs";
 import { g_arc_lengths_next } from "./g_arc_lengths_next.mjs";
-import { multiply_floor } from "./multiply_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { math_max } from "./math_max.mjs";
-import { equal_not } from "./equal_not.mjs";
-import { add } from "./add.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { identity } from "./identity.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 export async function g_arc_lengths(chapter) {
   "Works out how long each arc in one chapter should be, from the settings and the chapter's own sermon lines - so the npc count falls out as the length of the list rather than being chosen.";
@@ -23,35 +18,14 @@ export async function g_arc_lengths(chapter) {
   let settings = g_generation_settings();
   let r2 = await g_arc_lengths_next(chapter, settings);
   let r3 = g_arc_lengths_count(r2);
-  let count = property_get(r3, "count");
-  let turns_unspent = property_get(r3, "turns_unspent");
-  let lengths = property_get(r3, "lengths");
-  let shortest = property_get(r3, "shortest");
-  let cap = property_get(r3, "cap");
-  let arc_turns = property_get(r3, "arc_turns");
-  let question_turns = property_get(r3, "question_turns");
-  let matches = property_get(r3, "matches");
-  let lines = property_get(r3, "lines");
-  let next = property_get(r3, "next");
-  for (
-    let attempt = 0;
-    less_than(attempt, settings.arc_length_swaps);
-    attempt++
-  ) {
-    let left = next();
-    let giver = multiply_floor(left, count);
-    let left2 = next();
-    let taker = multiply_floor(left2, count);
-    let given = subtract(lengths[giver], 1);
-    let taken = add(lengths[taker], 1);
-    let stays_above = greater_than_equal(given, shortest);
-    let stays_below = less_than_equal(taken, cap);
-    let different = equal_not(giver, taker);
-    if (stays_above && stays_below && different) {
-      lengths[giver] = given;
-      lengths[taker] = taken;
-    }
-  }
+  let r4 = g_arc_lengths_attempt(r3, settings);
+  let lines = property_get(r4, "lines");
+  let matches = property_get(r4, "matches");
+  let question_turns = property_get(r4, "question_turns");
+  let arc_turns = property_get(r4, "arc_turns");
+  let cap = property_get(r4, "cap");
+  let lengths = property_get(r4, "lengths");
+  let turns_unspent = property_get(r4, "turns_unspent");
   list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
   let v = divide_ceil(settings.day_matches, settings.conversation_turns_mean);
