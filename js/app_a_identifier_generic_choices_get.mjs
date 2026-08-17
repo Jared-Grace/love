@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_a_identifier_generic_choices_get_e } from "./app_a_identifier_generic_choices_get_e.mjs";
+import { app_a_identifier_generic_choices_get_ast } from "./app_a_identifier_generic_choices_get_ast.mjs";
 import { app_a_identifier_generic_choices_get_lambda4 } from "./app_a_identifier_generic_choices_get_lambda4.mjs";
 import { app_a_identifier_generic_choices_get_lambda6 } from "./app_a_identifier_generic_choices_get_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,7 +21,7 @@ export async function app_a_identifier_generic_choices_get(
   replace,
 ) {
   arguments_assert(arguments, 7);
-  let r3 = await app_a_identifier_generic_choices_get_e(
+  let r3 = await app_a_identifier_generic_choices_get_ast(
     a,
     o,
     name,
@@ -30,12 +30,12 @@ export async function app_a_identifier_generic_choices_get(
     choices,
     replace,
   );
-  let e = property_get(r3, "e");
-  let overlay_close = property_get(r3, "overlay_close");
-  let context = property_get(r3, "context");
-  let f_names = property_get(r3, "f_names");
-  let stack = property_get(r3, "stack");
   let ast = property_get(r3, "ast");
+  let stack = property_get(r3, "stack");
+  let f_names = property_get(r3, "f_names");
+  let context = property_get(r3, "context");
+  let overlay_close = property_get(r3, "overlay_close");
+  let e = property_get(r3, "e");
   let includes = list_includes(f_names, name);
   if (includes) {
     let choice_function_open = {
