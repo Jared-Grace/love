@@ -1,6 +1,7 @@
+import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
+import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { app_code_screens_no_lesson } from "./app_code_screens_no_lesson.mjs";
 import { app_code_screens_crawl_screen } from "./app_code_screens_crawl_screen.mjs";
-import { playwright_test_url } from "./playwright_test_url.mjs";
 import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
 import { app_code_screens_crawl_lesson } from "./app_code_screens_crawl_lesson.mjs";
 import { each_async } from "./each_async.mjs";
@@ -17,6 +18,10 @@ export async function app_code_screens_records(url_prefix) {
       list_add(errors, text);
     }
     page.on("pageerror", on_error);
+    ("every screen is opened with the same seed already sitting on the page, so the words and numbers a lesson draws for itself come out the same on every crawl - a screen that reads differently the next time round reads differently because somebody changed it");
+    let seed_script = app_code_screens_seed_script();
+    await page.addInitScript(seed_script);
+    await page.goto(url_prefix);
     async function crawl_one(id) {
       await app_code_screens_crawl_lesson(page, url_prefix, id, records);
     }
@@ -26,7 +31,7 @@ export async function app_code_screens_records(url_prefix) {
     }
     await each_async(screens, crawl_screen);
   }
-  await playwright_test_url(url_prefix, on_page);
+  await playwright_test_blank(on_page);
   let collected = {
     records,
     errors,
