@@ -39,7 +39,9 @@ export async function js_function_forwarding_removed(ast, node, stack) {
       return;
     }
   }
-  let { mentions, name } = js_function_forwarding_removed_name(id, ast);
+  let r2 = js_function_forwarding_removed_name(id, ast);
+  let name = property_get(r2, "name");
+  let mentions = property_get(r2, "mentions");
   if (equal_not(mentions, 2)) {
     return;
   }
