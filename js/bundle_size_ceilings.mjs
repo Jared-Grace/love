@@ -7,6 +7,7 @@ export function bundle_size_ceilings() {
   "Most functional apps are ABSENT — they are legitimately large. One exception: a functional";
   "app joins this list once a MEASURED size win is worth protecting, with its ceiling set just";
   "above the measured size, so the win cannot silently regress.";
+  "reply_local went from 176 to 192 on the day the languages list grew from thirty nine hand-picked languages to two hundred and seventy seven. That page carries a language picker, so it carries the list, and the list is nine and a half KiB larger than it was. That is the feature rather than an accidental import, which is the only reason a ceiling here is ever raised.";
   let ceilings = [
     {
       name: "index",
@@ -30,7 +31,7 @@ export function bundle_size_ceilings() {
     },
     {
       name: "reply_local",
-      kib: 176,
+      kib: 192,
     },
   ];
   return ceilings;
