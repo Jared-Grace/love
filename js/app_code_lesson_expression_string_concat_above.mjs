@@ -1,3 +1,4 @@
+import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_string_concat_pair } from "./app_code_lesson_expression_string_concat_pair.mjs";
 import { list_get } from "./list_get.mjs";
@@ -52,11 +53,7 @@ export function app_code_lesson_expression_string_concat_above(root) {
   let remember_line = html_div(derive);
   html_span_text(remember_line, "Remember, the ");
   app_code_lesson_expression_string_concat_value_word(remember_line, on_light);
-  html_span_text(remember_line, " of ");
-  app_code_string_colored(remember_line, joined_value);
-  html_span_text(remember_line, " is ");
-  let remember_value = html_span_text_code_dark(remember_line, joined_value);
-  html_font_color_set(remember_value, color);
+  app_code_string_value_of_is_say(remember_line, joined_value);
   let so_line = html_div(derive);
   html_span_text(so_line, "So the ");
   app_code_lesson_expression_string_concat_value_word(so_line, on_light);

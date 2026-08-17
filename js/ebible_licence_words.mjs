@@ -2,7 +2,7 @@ import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
 import { ebible_licence_cc_by_sa } from "./ebible_licence_cc_by_sa.mjs";
 import { ebible_licence_gfdl } from "./ebible_licence_gfdl.mjs";
 import { ebible_licence_public_domain } from "./ebible_licence_public_domain.mjs";
-import { list_find_property } from "./list_find_property.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export function ebible_licence_words(licence) {
@@ -44,7 +44,7 @@ export function ebible_licence_words(licence) {
       words: "All rights reserved",
     },
   ];
-  let found = list_find_property(named, "licence", licence);
+  let found = list_find_property_or_null(named, "licence", licence);
   let missing = null_is(found);
   if (missing) {
     let r = "Terms not read";
