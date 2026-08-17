@@ -31,13 +31,17 @@ export async function function_span_cut_pass(f_name) {
       if (over_is) {
         continue;
       }
-      let skip = await function_span_cut_skip_or_null(f_name, address_to);
+      let address_from = property_get(row, "address_from");
+      let skip = await function_span_cut_skip_or_null(
+        f_name,
+        address_from,
+        address_to,
+      );
       let stepped_over_is = null_not_is(skip);
       if (stepped_over_is) {
         list_add(skipped, skip);
         continue;
       }
-      let address_from = property_get(row, "address_from");
       let f_name_new = function_part_name_or_null(f_name, address_to);
       await function_call_commit(function_functionize, [
         f_name,
