@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_arithmetic_less_than_op_add } from "./app_code_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_above } from "./app_code_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_one } from "./app_code_lesson_expression_arithmetic_less_than_one.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
@@ -30,16 +31,7 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   let triple_equal_operator = js_operator_triple_equal();
   let bang_double_equal_operator = js_operator_bang_double_equal();
   function op_add() {
-    "the + arithmetic piece: two small addends and their sum, sum always at least 2";
-    let x = integer_random(1, 4);
-    let y = integer_random(1, 4);
-    let value = add(x, y);
-    let r = {
-      left: x,
-      right: y,
-      symbol: "+",
-      value,
-    };
+    let r = app_code_lesson_expression_arithmetic_less_than_op_add();
     return r;
   }
   function op_subtract() {
