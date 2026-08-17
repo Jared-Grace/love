@@ -38,7 +38,7 @@ export function app_code_lesson_quiz_answer_label(
   let has_next_step = property_get(r, "has_next_step");
   let r3 = property_get(r, "r3");
   let answer_label = property_get(r3, "answer_label");
-  return {
+  let r2 = {
     on_answer,
     correction_render,
     answer_property,
@@ -56,4 +56,5 @@ export function app_code_lesson_quiz_answer_label(
     r3,
     answer_label,
   };
+  return r2;
 }
