@@ -1,3 +1,4 @@
+import { bible_glyph_word_parse_plain } from "./bible_glyph_word_parse_plain.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_word_parse_inside } from "./bible_glyph_word_parse_inside.mjs";
 import { bible_glyph_name_character_is } from "./bible_glyph_name_character_is.mjs";
@@ -67,8 +68,7 @@ export function bible_glyph_word_parse(text) {
     index = index + 1;
   }
   buffer_flush();
-  let single = equal(parts.length, 1);
-  let plain = single && equal(typeof parts[0], "string");
+  let plain = bible_glyph_word_parse_plain(parts);
   if (plain) {
     let r = parts[0];
     return r;
