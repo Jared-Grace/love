@@ -1,7 +1,6 @@
 import { property_get } from "./property_get.mjs";
-import { memory_index_hooks_compress_line } from "./memory_index_hooks_compress_line.mjs";
+import { memory_index_hooks_compress_path } from "./memory_index_hooks_compress_path.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
-import { memory_index_path } from "./memory_index_path.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function memory_index_hooks_compress() {
   "Shortens every over-long index line to its own hook plus the bare links it was carrying, and answers which lines changed and by how much.";
@@ -13,11 +12,10 @@ export async function memory_index_hooks_compress() {
   "A rebuilt line is only kept when it is genuinely shorter than the one it replaces. Shortening is the whole reason this runs, so a line that came back the same length or longer has nothing to offer and every chance of having lost something on the way.";
   "An answer of no lines is an ordinary answer. It says the index holds nothing this can shorten without taking something out of it, which is the state a well-kept index is in most of the time, and the remedy left over is the one this cannot make: moving a hub's children into the hub's own note.";
   let lines = await memory_index_lines();
-  let r2 = memory_index_hooks_compress_line(lines);
+  let r2 = memory_index_hooks_compress_path(lines);
+  let path = property_get(r2, "path");
+  let rebuilt = property_get(r2, "rebuilt");
   let shortened = property_get(r2, "shortened");
-  let kept = property_get(r2, "kept");
-  let rebuilt = kept.join("\n");
-  let path = memory_index_path();
   await file_overwrite(path, rebuilt);
   let r = {
     lines: shortened.length,
