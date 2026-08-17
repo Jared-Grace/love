@@ -48,10 +48,6 @@ export function bible_glyph_characters() {
       character: "🏷️",
     },
     {
-      name: "master",
-      character: "🧑‍💼",
-    },
-    {
       name: "person",
       character: "🧍",
     },
@@ -86,6 +82,190 @@ export function bible_glyph_characters() {
     {
       name: "footprints",
       character: "👣",
+    },
+    {
+      name: "person_other",
+      character: "🧑",
+    },
+    {
+      name: "man_beard",
+      character: "🧔",
+    },
+    {
+      name: "woman",
+      character: "👩",
+    },
+    {
+      name: "family",
+      character: "👪",
+    },
+    {
+      name: "crowd",
+      character: "👥",
+    },
+    {
+      name: "king",
+      character: "🤴",
+    },
+    {
+      name: "kneeling",
+      character: "🧎",
+    },
+    {
+      name: "walking",
+      character: "🚶",
+    },
+    {
+      name: "learner",
+      character: "🎓",
+    },
+    {
+      name: "angel",
+      character: "👼",
+    },
+    {
+      name: "mouth",
+      character: "👄",
+    },
+    {
+      name: "voice",
+      character: "🗣️",
+    },
+    {
+      name: "ear",
+      character: "👂",
+    },
+    {
+      name: "eye",
+      character: "👁️",
+    },
+    {
+      name: "eyes",
+      character: "👀",
+    },
+    {
+      name: "hand",
+      character: "✋",
+    },
+    {
+      name: "hands_giving",
+      character: "🤲",
+    },
+    {
+      name: "hand_receiving",
+      character: "🫴",
+    },
+    {
+      name: "hands_praying",
+      character: "🙏",
+    },
+    {
+      name: "thumbs_up",
+      character: "👍",
+    },
+    {
+      name: "heart_organ",
+      character: "🫀",
+    },
+    {
+      name: "meat",
+      character: "🥩",
+    },
+    {
+      name: "skull",
+      character: "💀",
+    },
+    {
+      name: "sprout",
+      character: "🌱",
+    },
+    {
+      name: "earth",
+      character: "🌍",
+    },
+    {
+      name: "globe",
+      character: "🌐",
+    },
+    {
+      name: "map",
+      character: "🗺️",
+    },
+    {
+      name: "city",
+      character: "🏙️",
+    },
+    {
+      name: "castle",
+      character: "🏰",
+    },
+    {
+      name: "house",
+      character: "🏠",
+    },
+    {
+      name: "church",
+      character: "⛪",
+    },
+    {
+      name: "menorah",
+      character: "🕎",
+    },
+    {
+      name: "scroll",
+      character: "📜",
+    },
+    {
+      name: "megaphone",
+      character: "📣",
+    },
+    {
+      name: "bow",
+      character: "🏹",
+    },
+    {
+      name: "star",
+      character: "🌟",
+    },
+    {
+      name: "gift",
+      character: "🎁",
+    },
+    {
+      name: "anchor",
+      character: "⚓",
+    },
+    {
+      name: "hourglass",
+      character: "⏳",
+    },
+    {
+      name: "lightning",
+      character: "⚡",
+    },
+    {
+      name: "key",
+      character: "🔑",
+    },
+    {
+      name: "lightbulb",
+      character: "💡",
+    },
+    {
+      name: "check",
+      character: "✅",
+    },
+    {
+      name: "hammer",
+      character: "🔨",
+    },
+    {
+      name: "tools",
+      character: "🛠️",
+    },
+    {
+      name: "road",
+      character: "🛣️",
     },
   ];
   return characters;

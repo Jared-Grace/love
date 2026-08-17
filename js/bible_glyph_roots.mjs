@@ -160,11 +160,19 @@ export function bible_glyph_roots() {
       ],
     },
     {
-      root: "logos",
-      gloss: "word",
+      root: "lego",
+      gloss: "say, said, a saying",
       words: [
         {
           strong: "3056",
+          glyph: "speech",
+        },
+        {
+          strong: "3004",
+          glyph: "speech",
+        },
+        {
+          strong: "2036",
           glyph: "speech",
         },
       ],

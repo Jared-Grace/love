@@ -172,7 +172,7 @@ export async function bible_glyph_survey(testament_name) {
     glyph_collisions,
     sense_spread,
     unmapped_count: unmapped.length,
-    unmapped_frequent: unmapped.slice(0, 40),
+    unmapped_frequent: unmapped.slice(0, 150),
   };
   return report;
 }
