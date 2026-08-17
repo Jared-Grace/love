@@ -1,6 +1,6 @@
+import { html_remove } from "./html_remove.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
@@ -39,7 +39,8 @@ export function app_code_lesson_expression_choose_order_solve_example(
     current = property_get(step, "current");
     let more = app_code_expression_node_is(current);
     if (not(more)) {
-      html_clear(asking);
+      ("the whole band goes rather than only the words in it, because a blue box with nothing written in it is a place the eye keeps going back to for something that is never coming");
+      html_remove(head);
       return;
     }
     let solved = property_get(step, "solved");
