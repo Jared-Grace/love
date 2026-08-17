@@ -36,7 +36,12 @@ export function app_code_lesson_statement_name_again_above(root) {
   html_div_cycle_code(box_after, [swap]);
   app_code_lesson_cup_fruit(box_after, word_after, name);
   html_div_cycle_code(box_after, ["It is the same cup, still called ", name]);
-  let gone = list_join_empty(["The ", word_before, " are not in it any more"]);
+  ("the line begins with a however, because the line above it has just said that nothing about the cup changed - same cup, same name - and this one says the one thing that did. Without the however the two lines read as two more facts about a cup, and the second is the whole lesson.");
+  let gone = list_join_empty([
+    "However, the ",
+    word_before,
+    " are not in it any more",
+  ]);
   html_div_cycle_code(box_after, [gone]);
   ("the code box says the no-let part before the second line rather than after it, because a learner reading the line first will read the missing word as a mistake");
   let box_code = app_code_container_light_blue(root);
