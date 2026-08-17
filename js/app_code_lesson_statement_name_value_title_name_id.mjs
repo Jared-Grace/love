@@ -3,11 +3,7 @@ import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_st
 import { list_first } from "./list_first.mjs";
 import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 export function app_code_lesson_statement_name_value_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: giving a value a name, the first Statements lesson, followed by the shape of the line it teaches");

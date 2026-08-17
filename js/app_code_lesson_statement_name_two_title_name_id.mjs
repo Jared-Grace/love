@@ -1,12 +1,8 @@
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_last } from "./list_last.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_statement_name_two_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: two names at once, the third Statements lesson, followed by the line that makes it different");

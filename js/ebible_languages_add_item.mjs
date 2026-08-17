@@ -7,9 +7,12 @@ import { js_object_to_expression } from "./js_object_to_expression.mjs";
 import { js_array_expression_single_elements } from "./js_array_expression_single_elements.mjs";
 import { function_transform } from "./function_transform.mjs";
 export async function ebible_languages_add_item(bible_folder) {
-  let f_name = fn_name("ebible_languages");
+  "Writes one more language into the hand-kept list, as an entry in the array that list is written as.";
+  "The hand-kept list rather than the whole one, because the whole one is no longer written as an array - it joins the hand-kept list to a generated one, and a generated list is thrown away and written again from what is on disk, so anything added there would not survive the next writing.";
+  let f_name = fn_name("ebible_languages_curated");
   let r = await ebible_languages_add_item_info(bible_folder);
-  let language_code = property_get(r, language_code_key());
+  let property_name = language_code_key();
+  let language_code = property_get(r, property_name);
   let name = property_get(r, "name");
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);

@@ -1,13 +1,9 @@
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { app_code_string_any_code } from "./app_code_string_any_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { list_first } from "./list_first.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_statement_name_again_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: giving a name a new value, the fourth Statements lesson, followed by the line nobody has written yet");
