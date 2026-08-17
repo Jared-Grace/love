@@ -1,20 +1,17 @@
+import { app_replace_rule_set_rules_used_all } from "./app_replace_rule_set_rules_used_all.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
-import { app_replace_rule_set_header } from "./app_replace_rule_set_header.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
-import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -56,7 +53,6 @@ import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { html_p } from "./html_p.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_button } from "./html_button.mjs";
@@ -118,28 +114,29 @@ export async function app_replace_rule_set(context) {
       button_rule_on_click_inner(index_rule);
     }
   }
-  let r = app_replace_rule_set_header(
+  let r = app_replace_rule_set_rules_used_all(
     root,
     on_hint,
     context,
     goal_index,
     goals_count,
+    end,
+    rule_set_name,
   );
-  let label_rules = property_get(r, "label_rules");
+  let rules_used_all = property_get(r, "rules_used_all");
+  let refresh_count = property_get(r, "refresh_count");
+  let duration = property_get(r, "duration");
+  let rule_buttons = property_get(r, "rule_buttons");
+  let symbol_buttons = property_get(r, "symbol_buttons");
+  let success = property_get(r, "success");
+  let div_below = property_get(r, "div_below");
+  let goal_list_symbols = property_get(r, "goal_list_symbols");
+  let div_refresh = property_get(r, "div_refresh");
+  let label_symbols = property_get(r, "label_symbols");
+  let div_rules_buttons = property_get(r, "div_rules_buttons");
+  let symbols_invalid_chosen = property_get(r, "symbols_invalid_chosen");
   let div_abbreviations = property_get(r, "div_abbreviations");
-  let symbols_invalid_chosen = {};
-  let div_rules_buttons = html_div(root);
-  let label_symbols = html_p(root);
-  let div_refresh = html_div(root);
-  let goal_list_symbols = app_replace_rule_set_goal_show(root, end);
-  let div_below = html_div(root);
-  let success = false;
-  let symbol_buttons = null;
-  let rule_buttons = null;
-  let duration = app_replace_animation_duration_get(context);
-  let refresh_count = 0;
-  let rules_useds = app_replace_rule_sets_fns_rules_used();
-  let rules_used_all = property_get_or_null(rules_useds, rule_set_name);
+  let label_rules = property_get(r, "label_rules");
   if (null_is(rules_used_all)) {
     rules_used = rules_parsed;
   } else {
