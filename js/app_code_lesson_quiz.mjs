@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { list_size } from "./list_size.mjs";
@@ -10,7 +11,6 @@ import { app_code_content_cap } from "./app_code_content_cap.mjs";
 import { app_code_feedback_slot_style } from "./app_code_feedback_slot_style.mjs";
 import { app_code_feedback_cell } from "./app_code_feedback_cell.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
-import { app_code_hash_write } from "./app_code_hash_write.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
@@ -23,8 +23,6 @@ import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
-import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
-import { subtract_1 } from "./subtract_1.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -126,9 +124,8 @@ export function app_code_lesson_quiz(
   }
   if (greater_than_equal_1(quiz_index)) {
     let on_back = function lambda() {
-      app_code_quiz_index_transform(context, quizzes, subtract_1);
-      refresh();
-      app_code_hash_write(context);
+      let r2 = app_code_lesson_quiz_lambda(context, quizzes, refresh);
+      return r2;
     };
     let left = app_shared_button_back_text();
     let back_text = text_combine(left, " to the previous quiz");
