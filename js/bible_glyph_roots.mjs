@@ -232,6 +232,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "ginosko",
+      gloss: "come to know",
+      words: [
+        {
+          strong: "1097",
+          glyph: "lightbulb",
+        },
+      ],
+    },
+    {
       root: "blepo",
       gloss: "look at",
       words: [
