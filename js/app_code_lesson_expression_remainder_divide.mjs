@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
@@ -17,11 +18,6 @@ import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
-import { app_code_arrow } from "./app_code_arrow.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
@@ -195,81 +191,7 @@ export function app_code_lesson_expression_remainder_divide() {
   );
   return lesson;
   function above(root) {
-    let setup = app_code_container_light_blue(root);
-    html_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
-    html_div_cycle_code(setup, ["", "14", " is the dividend"]);
-    html_div_cycle_code(setup, ["", "4", " is the divisor"]);
-    html_div_cycle_code(setup, [
-      "",
-      "Math.floor(14 / 4) === 3",
-      ", so the quotient is ",
-      "3",
-    ]);
-    let step = app_code_row_flex_center(setup);
-    html_span_text_code_dark(step, "quotient * divisor");
-    app_code_arrow(step);
-    html_span_text_code_dark(step, "3 * 4 === 12");
-    html_div_cycle_code(setup, ["So the whole part is ", "12"]);
-    let properties = app_code_container_light_blue(root);
-    html_div_cycle_code(properties, [
-      "Notice that ",
-      "4",
-      " evenly divides into ",
-      "12",
-    ]);
-    html_div_cycle_code(properties, [
-      "The divisor (",
-      "4",
-      ") always evenly divides into the whole part (",
-      "12",
-      ")",
-    ]);
-    html_div_cycle_code(properties, [
-      "However ",
-      "4",
-      " does not evenly divide into ",
-      "14",
-    ]);
-    html_div_cycle_code(properties, [
-      "The divisor (",
-      "4",
-      ") may or may not evenly divide into the dividend (",
-      "14",
-      ")",
-    ]);
-    html_div_cycle_code(properties, [
-      "The whole part (",
-      "12",
-      ") cannot be larger than the dividend (",
-      "14",
-      ")",
-    ]);
-    html_div_cycle_code(properties, [
-      "The whole part (",
-      "12",
-      ") is always the largest number, that can be evenly divided by the divisor, that is not larger than the dividend (",
-      "14",
-      ")",
-    ]);
-    let result = app_code_container_light_blue(root);
-    html_div_cycle_code(result, [
-      "Now we will subtract the whole part (",
-      "12",
-      ") from the dividend (",
-      "14",
-      ") to find what is left over:",
-    ]);
-    html_div_cycle_code(result, ["", "14 - 12 === 2"]);
-    html_div_cycle_code(result, ["So ", "2", " is the remainder"]);
-    html_div_cycle_code(result, ["This is the same as ", "14 % 4", " :"]);
-    html_div_cycle_code(result, ["", "14 % 4 === 2"]);
-    let summary = app_code_container_light_blue(root);
-    html_div_cycle_code(summary, ["So for ", "14 % 4"]);
-    html_div_cycle_code(summary, [
-      "We use this formula: ",
-      "14 - Math.floor(14 / 4) * 4",
-    ]);
-    html_div_cycle_code(summary, ["And here is the answer: ", "2"]);
-    html_div_cycle_code(summary, ["So we know ", "14 % 4 === 2"]);
+    let r4 = app_code_lesson_expression_remainder_divide_above(root);
+    return r4;
   }
 }
