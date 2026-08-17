@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
@@ -213,6 +214,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_two,
     app_code_lesson_statement_name_again,
     app_code_lesson_statement_name_copy,
+    app_code_lesson_expression_choose_order_compare,
   ];
   return fns;
 }
