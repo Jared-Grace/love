@@ -1,6 +1,6 @@
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_cups_row_fruits } from "./app_code_lesson_cups_row_fruits.mjs";
+import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 import { app_code_lesson_statement_name_copy_name } from "./app_code_lesson_statement_name_copy_name.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_copy_above(root) {
     " and one called ",
     name_last,
   ]);
-  app_code_lesson_cups_row_fruits(box_have, [
+  app_code_lesson_cups_row_holding(box_have, [
     [word_first, name_first],
     [word_last, name_last],
   ]);
@@ -44,7 +44,7 @@ export function app_code_lesson_statement_name_copy_above(root) {
     "And you put in it whatever is inside the cup called ",
     name_first,
   ]);
-  app_code_lesson_cups_row_fruits(box_new, [
+  app_code_lesson_cups_row_holding(box_new, [
     [word_first, name_first],
     [word_last, name_last],
     [word_first, name_copy],
