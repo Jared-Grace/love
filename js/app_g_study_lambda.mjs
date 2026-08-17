@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_g_study_lambda_div } from "./app_g_study_lambda_div.mjs";
 import { app_g_study_lambda_c } from "./app_g_study_lambda_c.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -18,7 +19,11 @@ import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 export async function app_g_study_lambda(overlay, player, review, close) {
   arguments_assert(arguments, 4);
   let r3 = await app_g_study_lambda_c(overlay, player, review);
-  let { passage, passages, r, div } = app_g_study_lambda_div(r3, overlay);
+  let r4 = app_g_study_lambda_div(r3, overlay);
+  let div = property_get(r4, "div");
+  let r = property_get(r4, "r");
+  let passages = property_get(r4, "passages");
+  let passage = property_get(r4, "passage");
   let property = "sermon";
   let sermon_correct_list = g_openai_split_property(passage, property);
   let sermon_index = 0;
