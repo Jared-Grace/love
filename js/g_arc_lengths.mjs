@@ -1,3 +1,4 @@
+import { g_arc_lengths_r } from "./g_arc_lengths_r.mjs";
 import { g_arc_lengths_npcs_floor_met } from "./g_arc_lengths_npcs_floor_met.mjs";
 import { g_arc_lengths_npcs_minimum } from "./g_arc_lengths_npcs_minimum.mjs";
 import { g_arc_lengths_v } from "./g_arc_lengths_v.mjs";
@@ -19,26 +20,6 @@ export async function g_arc_lengths(chapter) {
   let r4 = g_arc_lengths_npcs_minimum(r3, settings);
   let r6 = g_arc_lengths_npcs_floor_met(r4);
   let npcs_floor_met = property_get(r6, "npcs_floor_met");
-  let lines = property_get(r6, "lines");
-  let matches = property_get(r6, "matches");
-  let arc_turns = property_get(r6, "arc_turns");
-  let cap = property_get(r6, "cap");
-  let lengths = property_get(r6, "lengths");
-  let turns_unspent = property_get(r6, "turns_unspent");
-  let npcs = property_get(r6, "npcs");
-  let npcs_minimum = property_get(r6, "npcs_minimum");
-  let r = {
-    chapter,
-    lines,
-    matches,
-    question_turns,
-    arc_turns,
-    cap,
-    lengths,
-    turns_unspent,
-    npcs,
-    npcs_minimum,
-    npcs_floor_met,
-  };
+  let r = g_arc_lengths_r(r6, chapter, question_turns, npcs_floor_met);
   return r;
 }
