@@ -1,5 +1,4 @@
-import { property_get } from "./property_get.mjs";
-import { bible_glyph_gate_run_referents } from "./bible_glyph_gate_run_referents.mjs";
+import { bible_glyph_gate_run_referent } from "./bible_glyph_gate_run_referent.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { list_is } from "./list_is.mjs";
@@ -9,7 +8,6 @@ import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { bible_glyph_characters_orthodox } from "./bible_glyph_characters_orthodox.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 export function bible_glyph_gate_run() {
   "QA gate: prove the picture Bible's glyph tables agree with each other, so a root, a referent rule or a tradition naming a glyph that does not exist fails the build instead of rendering as a blank where a picture should be.";
@@ -18,37 +16,7 @@ export function bible_glyph_gate_run() {
   "EVERY GLYPH AN AUTHORED CHAPTER NAMES is checked the same way, and that check earned itself the day it was written: the first chapter authored by hand spelled God followed by a full stop as one run, so five of its six verses stored a glyph named fire with a full stop welded on. Nothing failed. The verse simply drew the name in angle brackets where the picture should have been, and the only reader who could ever have caught it is a person looking at the page.";
   "A tradition may only REPLACE, never invent. An Orthodox cross is the same word drawn differently, so its name has to be a name the base vocabulary already carries; a tradition naming a new one would be a glyph no verse could ever reference, since verses are written against the base names.";
   let characters = bible_glyph_characters();
-  let r = bible_glyph_gate_run_referents(characters);
-  let referents = property_get(r, "referents");
-  let seated = property_get(r, "seated");
-  let known = property_get(r, "known");
-  for (let referent of referents) {
-    let named = property_exists(seated, referent.strong);
-    assert_json(named, {
-      strong: referent.strong,
-      hint: "a referent rule overrides a word no root seats, so there is nothing to override - seat the word first",
-    });
-    for (let glyph of referent.glyphs) {
-      let drawn = property_exists(known, glyph);
-      let f_name = fn_name("bible_glyph_characters");
-      assert_json(drawn, {
-        strong: referent.strong,
-        glyph,
-        hint: text_combine_multiple([
-          "a referent rule names a glyph the vocabulary does not carry - add it to ",
-          f_name,
-          " or fix the spelling",
-        ]),
-      });
-    }
-    let by_verses = property_exists(referent, "verses");
-    let by_phrase = property_exists(referent, "phrase");
-    let one = not_equal(by_verses, by_phrase);
-    assert_json(one, {
-      strong: referent.strong,
-      hint: "a referent rule says WHERE it applies by naming verses or by naming a phrase, and must name exactly one of the two",
-    });
-  }
+  let known = bible_glyph_gate_run_referent(characters);
   let chapters = bible_glyph_chapters();
   for (let chapter of chapters) {
     let parsed = bible_glyph_chapter(chapter.chapter_code);
@@ -70,14 +38,14 @@ export function bible_glyph_gate_run() {
           }
           for (let name of piece) {
             let drawn = property_exists(known, name);
-            let f_name3 = fn_name("bible_glyph_characters");
+            let f_name = fn_name("bible_glyph_characters");
             assert_json(drawn, {
               chapter_code: chapter.chapter_code,
               verse_number: verse.verse_number,
               name,
               hint: text_combine_multiple([
                 "an authored verse names a glyph the vocabulary does not carry, so it draws as its own name in angle brackets - add it to ",
-                f_name3,
+                f_name,
                 " or fix the spelling",
               ]),
             });
