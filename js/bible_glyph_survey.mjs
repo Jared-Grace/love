@@ -23,15 +23,14 @@ export async function bible_glyph_survey(testament_name) {
   let r2 = bible_glyph_survey_referents(r);
   let r3 = bible_glyph_survey_referent_reach(r2);
   let referent_reach = property_get(r3, "referent_reach");
-  let {
-    percent,
-    roots,
-    mapped,
-    glyph_missing,
-    unmapped,
-    sense_spread,
-    occurrences_mapped,
-  } = bible_glyph_survey_referent(r3, referent_reach);
+  let r4 = bible_glyph_survey_referent(r3, referent_reach);
+  let occurrences_mapped = property_get(r4, "occurrences_mapped");
+  let sense_spread = property_get(r4, "sense_spread");
+  let unmapped = property_get(r4, "unmapped");
+  let glyph_missing = property_get(r4, "glyph_missing");
+  let mapped = property_get(r4, "mapped");
+  let roots = property_get(r4, "roots");
+  let percent = property_get(r4, "percent");
   let report = {
     testament: testament_name,
     referent_reach,
