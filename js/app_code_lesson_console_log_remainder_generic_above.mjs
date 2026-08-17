@@ -1,3 +1,4 @@
+import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_legend_part } from "./app_code_lesson_console_log_remainder_generic_above_legend_part.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_row } from "./app_code_lesson_console_log_remainder_generic_above_row.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,7 +22,6 @@ import { multiply_add } from "./multiply_add.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 export function app_code_lesson_console_log_remainder_generic_above(
   root,
@@ -107,15 +107,12 @@ export function app_code_lesson_console_log_remainder_generic_above(
   if (has_insight) {
     let insight_box = app_code_container_light_blue(root);
     function insight_line(line) {
-      let insight_row = html_div(insight_box);
-      let text = property_get(line, "text");
-      html_span_text(insight_row, text);
-      let value = property_get(line, "remainder");
-      app_code_lesson_console_log_remainder_generic_remainder_chip(
-        insight_row,
-        value,
+      let r3 = app_code_lesson_console_log_remainder_generic_above_insight_line(
+        line,
+        insight_box,
         divisor,
       );
+      return r3;
     }
     each(insight, insight_line);
   }
