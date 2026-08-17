@@ -1,8 +1,8 @@
+import { webpack_watch_schedule_if_stale } from "./webpack_watch_schedule_if_stale.mjs";
 import { webpack_watch_deps_refresh } from "./webpack_watch_deps_refresh.mjs";
 import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
 import { webpack_watch_affected_get } from "./webpack_watch_affected_get.mjs";
 import { webpack_watch_build_run } from "./webpack_watch_build_run.mjs";
-import { webpack_watch_bundle_stale_is } from "./webpack_watch_bundle_stale_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { log } from "./log.mjs";
 import { identity } from "./identity.mjs";
@@ -78,15 +78,13 @@ export async function webpack_watch() {
   watcher.on("change", on_change).on("add", on_change);
   ("on startup rebuild only STALE apps (bundle missing, or older than one of its source files) so a watcher (re)start refreshes what changed while it was down, while skipping apps that are already current");
   async function schedule_if_stale(ad) {
-    let stale = await webpack_watch_bundle_stale_is(
+    let r3 = await webpack_watch_schedule_if_stale(
       ad,
       a_name_of,
       dev_relative,
+      build_schedule,
     );
-    if (stale) {
-      let a_name = a_name_of(ad);
-      build_schedule(a_name);
-    }
+    return r3;
   }
   await list_map_unordered_async(app_deps, schedule_if_stale);
   fn_name("webpack_watch");
