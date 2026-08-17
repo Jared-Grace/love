@@ -1,3 +1,4 @@
+import { app_verses_copy } from "./app_verses_copy.mjs";
 import { app_shared_bible_verses_counts } from "./app_shared_bible_verses_counts.mjs";
 import { app_shared_bible_verse_block } from "./app_shared_bible_verse_block.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
@@ -13,7 +14,6 @@ import { app_verses_order_standalone_first } from "./app_verses_order_standalone
 import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
-import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -42,7 +42,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -222,14 +221,7 @@ export async function app_verses(context) {
     app_shared_bible_verse_block(card4, reference, entries);
   }
   async function copy() {
-    let lines = [];
-    function group_each(group) {
-      let reference = property_get(group, "reference");
-      list_add(lines, reference);
-      let texts = property_list_map_property(group, "entries", "text");
-      list_add_multiple(lines, texts);
-    }
-    each(verse_groups, group_each);
-    await list_join_newline_2_copy(lines);
+    let r2 = await app_verses_copy(verse_groups);
+    return r2;
   }
 }
