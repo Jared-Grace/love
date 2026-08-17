@@ -1,19 +1,12 @@
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_console_log_remainder_generic_above_row_count } from "./app_code_lesson_console_log_remainder_generic_above_row_count.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_remainder_texts } from "./app_code_lesson_console_log_remainder_generic_above_remainder_texts.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_legend_part } from "./app_code_lesson_console_log_remainder_generic_above_legend_part.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_row } from "./app_code_lesson_console_log_remainder_generic_above_row.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
-import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
-import { each_index } from "./each_index.mjs";
-import { html_style_gap } from "./html_style_gap.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { multiply_add } from "./multiply_add.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -35,35 +28,15 @@ export function app_code_lesson_console_log_remainder_generic_above(
     divisor_text,
     percent,
   );
-  let remainder_texts = property_get(r4, "remainder_texts");
-  let legend = property_get(r4, "legend");
-  let or_parts = list_to_or_list_generic(remainder_texts, "or");
-  function legend_part(part, index) {
-    let r2 = app_code_lesson_console_log_remainder_generic_above_legend_part(
-      part,
-      index,
-      modulo_fn,
-      legend,
-      divisor,
-    );
-    return r2;
-  }
-  each_index(or_parts, legend_part);
-  let table = app_code_container_light_blue(root);
-  html_style_gap(table, "0");
-  html_style_padding_x(table, "0");
-  html_style_padding_y(table, "0");
-  function row(n) {
-    let r = app_code_lesson_console_log_remainder_generic_above_row(
-      n,
-      percent,
-      divisor,
-      modulo_fn,
-      table,
-    );
-    return r;
-  }
-  let row_count = multiply_add(2, divisor, 1);
+  let r = app_code_lesson_console_log_remainder_generic_above_row_count(
+    r4,
+    modulo_fn,
+    divisor,
+    root,
+    percent,
+  );
+  let row_count = property_get(r, "row_count");
+  let row = property_get(r, "row");
   let list = range(row_count);
   each(list, row);
   let has_insight = list_empty_not_is(insight);
