@@ -1,10 +1,9 @@
-import { app_reply_lambda2 } from "./app_reply_lambda2.mjs";
+import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
@@ -20,7 +19,6 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
@@ -28,8 +26,6 @@ import { text_take_less_1 } from "./text_take_less_1.mjs";
 import { equal } from "./equal.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_clear } from "./list_clear.mjs";
-import { each_range_from } from "./each_range_from.mjs";
-import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
@@ -37,7 +33,6 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { multiply } from "./multiply.mjs";
 export async function app_reply(context) {
   app_shared_app_fn_set(context, app_reply);
   let r = await app_reply_initialize(context);
@@ -77,34 +72,17 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  app_shared_button(card, "❤️", love);
-  let buttons_languages = app_reply_buttons_languages(
-    languages_chosen,
+  let r3 = app_reply_visible_count(
     card,
+    love,
+    languages_chosen,
     languages,
+    root,
+    update,
   );
-  let card2 = app_shared_container_blue(root);
-  app_shared_text_body(
-    card2,
-    "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
-  );
-  let choices_verse_count = [];
-  function lambda10(item2) {
-    list_add(choices_verse_count, item2);
-  }
-  each_range_from(1, 4, lambda10);
-  function lambda4(item) {
-    let c = multiply(item, 2);
-    list_add(choices_verse_count, c);
-  }
-  each_range_from(3, 6, lambda4);
-  list_add_multiple(choices_verse_count, [20, 40]);
-  function lambda2(c) {
-    let r3 = app_reply_lambda2(c, update, card2);
-    return r3;
-  }
-  each(choices_verse_count, lambda2);
-  let visible_count = null;
+  let visible_count = property_get(r3, "visible_count");
+  let card2 = property_get(r3, "card2");
+  let buttons_languages = property_get(r3, "buttons_languages");
   async function update(verse_count) {
     list_clear(bible_texts);
     list_clear(responses);
