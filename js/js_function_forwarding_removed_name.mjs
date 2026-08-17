@@ -6,8 +6,9 @@ export function js_function_forwarding_removed_name(id, ast) {
   let r2 = js_function_forwarding_removed_mentions(id, ast);
   let mentions = property_get(r2, "mentions");
   let name = property_get(r2, "name");
-  return {
+  let r = {
     mentions,
     name,
   };
+  return r;
 }
