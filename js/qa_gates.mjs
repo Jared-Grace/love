@@ -1,3 +1,4 @@
+import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
 import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
 import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
 import { text_split_outside_quotes_cases_gate_run } from "./text_split_outside_quotes_cases_gate_run.mjs";
@@ -545,6 +546,7 @@ export function qa_gates() {
     app_code_quiz_unscramble_own_wording_gate_run,
     app_code_quiz_choice_pool_gate_run,
     qa_gates_countless_gate_run,
+    bundles_names_missing_gate_run,
   ];
   return gates;
 }
