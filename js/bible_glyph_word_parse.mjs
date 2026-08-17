@@ -1,3 +1,4 @@
+import { bible_glyph_name_character_is } from "./bible_glyph_name_character_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
