@@ -1,6 +1,6 @@
+import { g_arc_lengths_v } from "./g_arc_lengths_v.mjs";
 import { g_arc_lengths_question_turns } from "./g_arc_lengths_question_turns.mjs";
 import { property_get } from "./property_get.mjs";
-import { divide_ceil } from "./divide_ceil.mjs";
 import { math_max } from "./math_max.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -15,14 +15,15 @@ export async function g_arc_lengths(chapter) {
   let r2 = await g_arc_lengths_question_turns(chapter, settings);
   let question_turns = property_get(r2, "question_turns");
   let r5 = property_get(r2, "r5");
-  let npcs = property_get(r2, "npcs");
-  let turns_unspent = property_get(r2, "turns_unspent");
-  let lengths = property_get(r2, "lengths");
-  let cap = property_get(r2, "cap");
-  let arc_turns = property_get(r2, "arc_turns");
-  let matches = property_get(r5, "matches");
-  let lines = property_get(r5, "lines");
-  let v = divide_ceil(settings.day_matches, settings.conversation_turns_mean);
+  let r3 = g_arc_lengths_v(r2, r5, settings);
+  let v = property_get(r3, "v");
+  let lines = property_get(r3, "lines");
+  let matches = property_get(r3, "matches");
+  let arc_turns = property_get(r3, "arc_turns");
+  let cap = property_get(r3, "cap");
+  let lengths = property_get(r3, "lengths");
+  let turns_unspent = property_get(r3, "turns_unspent");
+  let npcs = property_get(r3, "npcs");
   let npcs_minimum = math_max(v, settings.npcs_available_minimum);
   let npcs_floor_met = greater_than_equal(npcs, npcs_minimum);
   let r = {
