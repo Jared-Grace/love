@@ -1,10 +1,7 @@
-import { functions_shape_blocks_keys } from "./functions_shape_blocks_keys.mjs";
+import { functions_shape_blocks_key } from "./functions_shape_blocks_key.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
 export async function functions_shape_blocks(line_count) {
   "Runs of work that more than one function writes out - the sets of functions that";
   "share a block of that many lines, biggest saving first.";
@@ -25,23 +22,7 @@ export async function functions_shape_blocks(line_count) {
   "Reads and changes nothing. Whether a shared block is one idea or two that happen to";
   "be written alike is a judgment, and so is what to call the unit that would hold it.";
   let love = await repo_functions_names("love");
-  let r = await functions_shape_blocks_keys(love, line_count);
-  let keys = property_get(r, "keys");
-  let by_names = property_get(r, "by_names");
-  let groups = [];
-  for (let key of keys) {
-    let found = property_get(by_names, key);
-    let names = property_get(found, "names");
-    let windows = property_get(found, "windows");
-    let left = subtract(names.length, 1);
-    let saving = multiply(left, windows.length);
-    list_add(groups, {
-      names,
-      windows: windows.length,
-      saving,
-      sample: windows[0],
-    });
-  }
+  let groups = await functions_shape_blocks_key(love, line_count);
   function saving_of(group) {
     let saving = property_get(group, "saving");
     return saving;
