@@ -1,3 +1,4 @@
+import { bible_verses_uplifting_package_upload_verse_get } from "./bible_verses_uplifting_package_upload_verse_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { equal } from "./equal.mjs";
@@ -5,17 +6,12 @@ import { uplifting_package_destination } from "./uplifting_package_destination.m
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
-import { ebible_verses } from "./ebible_verses.mjs";
 import { ebible_references_parse_lines_generic } from "./ebible_references_parse_lines_generic.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { object_copy } from "./object_copy.mjs";
 import { null_is } from "./null_is.mjs";
 import { object_values } from "./object_values.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -36,8 +32,10 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
     interlinear_chapters = await bible_interlinear_chapters();
     function chapter_normalize(chapter_verses) {
       function verse_normalize(verse) {
-        let value = property_text_to(verse, verse_number_key());
-        property_set(verse, verse_number_key(), value);
+        let property_name = verse_number_key();
+        let value = property_text_to(verse, property_name);
+        let property_name2 = verse_number_key();
+        property_set(verse, property_name2, value);
       }
       each(chapter_verses, verse_normalize);
     }
@@ -54,31 +52,15 @@ export async function bible_verses_uplifting_package_upload(bible_folder) {
   }
   let chapter_cache = {};
   async function verse_get(folder, chapter_code, verse_number) {
-    let chapter_verses = null;
-    if (is_interlinear) {
-      chapter_verses = property_get_or_null(interlinear_chapters, chapter_code);
-      if (null_is(chapter_verses)) {
-        return null;
-      }
-    } else {
-      let exists = property_exists(chapter_cache, chapter_code);
-      if (exists) {
-        chapter_verses = property_get(chapter_cache, chapter_code);
-      } else {
-        chapter_verses = await ebible_verses(folder, chapter_code);
-        property_set(chapter_cache, chapter_code, chapter_verses);
-      }
-    }
-    let found = list_find_property_or_null(
-      chapter_verses,
-      verse_number_key(),
+    let r = await bible_verses_uplifting_package_upload_verse_get(
+      folder,
+      chapter_code,
       verse_number,
+      is_interlinear,
+      interlinear_chapters,
+      chapter_cache,
     );
-    if (null_is(found)) {
-      return null;
-    }
-    let copy = object_copy(found);
-    return copy;
+    return r;
   }
   let bible_folders = [bible_folder];
   let map = {};
