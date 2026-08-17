@@ -1,13 +1,8 @@
-import { app_g_dev_routes_unbeliever } from "./app_g_dev_routes_unbeliever.mjs";
-import { app_g_dev_routes_discern } from "./app_g_dev_routes_discern.mjs";
-import { app_g_dev_routes_dove } from "./app_g_dev_routes_dove.mjs";
-import { app_g_dev_routes_pray } from "./app_g_dev_routes_pray.mjs";
-import { app_g_dev_routes_day_parts } from "./app_g_dev_routes_day_parts.mjs";
-import { app_g_dev_routes_quick } from "./app_g_dev_routes_quick.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_g_dev_routes_day_hours } from "./app_g_dev_routes_day_hours.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
-import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
 import { app_g_day_start } from "./app_g_day_start.mjs";
 import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
@@ -16,12 +11,6 @@ import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
-import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
-import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
-import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
-import { app_g_view_phase_disciple } from "./app_g_view_phase_disciple.mjs";
-import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
-import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
@@ -39,57 +28,19 @@ export function app_g_dev_routes(div_map) {
     };
     await app_g_view_set(view);
   }
-  async function unbeliever() {
-    let r6 = await app_g_dev_routes_unbeliever();
-    return r6;
-  }
-  async function quick() {
-    let r = await app_g_dev_routes_quick();
-    return r;
-  }
-  async function gospel_share() {
-    let result = app_g_view_phase_gospel();
-    await app_g_dev_routes_npc_view(result);
-  }
-  async function hru() {
-    let result3 = app_g_view_phase_how();
-    await app_g_dev_routes_npc_view(result3);
-  }
-  async function believe() {
-    let result4 = app_g_view_phase_believe();
-    await app_g_dev_routes_npc_view(result4);
-  }
-  async function disciple() {
-    let result5 = app_g_view_phase_disciple();
-    await app_g_dev_routes_npc_view(result5);
-  }
-  async function discern() {
-    let r5 = await app_g_dev_routes_discern();
-    return r5;
-  }
-  async function dove() {
-    let r4 = await app_g_dev_routes_dove();
-    return r4;
-  }
-  async function gratitude() {
-    await app_g_view_set(null);
-    app_g_gratitude_overlay();
-  }
-  async function pray() {
-    let r3 = await app_g_dev_routes_pray();
-    return r3;
-  }
-  async function day_parts() {
-    let r2 = await app_g_dev_routes_day_parts();
-    return r2;
-  }
-  async function day_hours() {
-    ("the #day_hours previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (",
-      fn_name("g_clock_sky_phase"),
-      ") the real day uses, so what you pick here IS what the day will show");
-    await app_g_view_set(null);
-    await app_g_hour_choices();
-  }
+  let r = app_g_dev_routes_day_hours();
+  let day_hours = property_get(r, "day_hours");
+  let day_parts = property_get(r, "day_parts");
+  let pray = property_get(r, "pray");
+  let gratitude = property_get(r, "gratitude");
+  let dove = property_get(r, "dove");
+  let discern = property_get(r, "discern");
+  let disciple = property_get(r, "disciple");
+  let believe = property_get(r, "believe");
+  let hru = property_get(r, "hru");
+  let gospel_share = property_get(r, "gospel_share");
+  let quick = property_get(r, "quick");
+  let unbeliever = property_get(r, "unbeliever");
   async function day_unbelievers() {
     "the #day_unbelievers demo: 3 nearby unbelievers become today's ONLY talkable people (chosen close together so the walk between them is short). each gets a soft speech-bubble marker; every OTHER npc gives a randomized 'busy' line instead of a conversation (the gate lives in the conversation entry, reading the day session). foundation for the discernment-walk + slice-time day mechanic";
     "there is no button on the map for the discernment prayer. it is prayed from the tap-yourself menu, under Pray, where every other prayer in the game is prayed - so the map here holds only the world and the people in it, and the demo reaches its one mechanic through the door the real game already has.";
