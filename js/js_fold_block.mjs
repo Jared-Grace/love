@@ -1,6 +1,6 @@
+import { js_fold_block_start } from "./js_fold_block_start.mjs";
 import { js_fold_block_f_statements } from "./js_fold_block_f_statements.mjs";
 import { js_fold_block_partial_is } from "./js_fold_block_partial_is.mjs";
-import { js_fold_block_any_unbound } from "./js_fold_block_any_unbound.mjs";
 import { js_fold_block_x_name } from "./js_fold_block_x_name.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
@@ -32,10 +32,10 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (no_match) {
     return null;
   }
-  let r2 = js_fold_block_any_unbound(match, params, return_local);
-  let any_unbound = property_get(r2, "any_unbound");
-  let binding = property_get(r2, "binding");
+  let r2 = js_fold_block_start(match, params, return_local);
   let start = property_get(r2, "start");
+  let binding = property_get(r2, "binding");
+  let any_unbound = property_get(r2, "any_unbound");
   if (any_unbound) {
     return null;
   }
