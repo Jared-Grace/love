@@ -47,22 +47,5 @@ export function app_code_lesson_statement_name_value_above(root) {
     "variables",
   ]);
   html_div_cycle_code(box_word, ["A variable has a name, and holds one value"]);
-  ("the code box says the same three things the story said, in the same order: the cup is made and filled, then it is asked what is inside it, then the answer comes out");
-  let quoted = app_code_string_code(word);
-  let held = js_code_let_statement(name, quoted);
-  let logged = js_code_console_log_statement(name);
-  let box_code = app_code_container_light_blue(root);
-  html_div_cycle_code(box_code, [
-    "In JS we make a cup called ",
-    name,
-    " and put ",
-    quoted,
-    " in it like this",
-  ]);
-  html_div_code(box_code, held);
-  html_div_cycle_code(box_code, [
-    "Then we can write out whatever is inside the cup like this",
-  ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word);
+  app_code_lesson_cup_code_box(root, name, word);
 }
