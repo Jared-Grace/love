@@ -1562,7 +1562,9 @@ export function permission_grant_names() {
   let spelled1523 = fn_name("functions_nested_lift_wrapper_all");
   let spelled1524 = fn_name("functions_nested_lift_wrapper_pass");
   let spelled1525 = fn_name("gloss_write_root_folder");
-  let spelled1526 = fn_name("urdu_bible_gloss_misaligned_gate_run");
+  let spelled1526 = fn_name(
+    "app_en_learn_bible_gloss_urdu_misaligned_gate_run",
+  );
   let spelled1527 = fn_name("urdu_bible_gloss_passages");
   let spelled1528 = fn_name("urdu_bible_gloss_write_chapter_file");
   let spelled1529 = fn_name("url_available_is");
