@@ -1,5 +1,5 @@
+import { app_a_body_inner_lambda3 } from "./app_a_body_inner_lambda3.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
-import { ternary } from "./ternary.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -10,7 +10,6 @@ import { app_a_button_wide } from "./app_a_button_wide.mjs";
 import { not } from "./not.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { each } from "./each.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,10 +30,8 @@ export function app_a_body_inner(parent, body, a, indent) {
         let buttons = null;
         function imports_refresh() {
           function lambda3(b2) {
-            let text = null;
-            text = ternary(hidden, "Show", "Hide");
-            text += " imports";
-            html_text_set(b2, text);
+            let r = app_a_body_inner_lambda3(b2, hidden);
+            return r;
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
