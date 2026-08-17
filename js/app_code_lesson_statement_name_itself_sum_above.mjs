@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   ("The two reminders are the two lessons this line is made of, and neither of them is new. What is new is only that they may happen in the same line, which is why the third box is the only one that says anything a learner has not been told.");
   ("The order of the reminders is the order the line is read in. The sum is worked out first and the name is filled second, so the box about filling a name comes first and the box about the sum comes second, and the third box does them in that same order with nothing left over.");
   ("The one thing a learner can get wrong here is thinking the line means the name equals the sum forever - that filling the cup and reading it are the same act. So the third box does not say what the line means; it shows the sum already worked out and the line rewritten with the answer standing where the sum stood, and lets a learner check that the two say the same thing.");
-  ("The names hold the same two numbers all the way down, so the three boxes read as one program growing a line at a time rather than as three separate ones.");
+  ("Each box is its own small program, and the two names are given the same two numbers in every one of them. A reminder shown with a different pair would put arithmetic a learner has to do afresh in front of the one line the screen is actually about.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
