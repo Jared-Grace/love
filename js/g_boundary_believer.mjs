@@ -1,7 +1,6 @@
+import { g_boundary_believer_combined } from "./g_boundary_believer_combined.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_boundary_believer_neighbor } from "./g_boundary_believer_neighbor.mjs";
-import { g_boundary_seen_again } from "./g_boundary_seen_again.mjs";
-import { g_boundary_rather_not } from "./g_boundary_rather_not.mjs";
 import { g_boundary_know_better } from "./g_boundary_know_better.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -17,24 +16,9 @@ export function g_boundary_believer(met, door) {
   let r2 = g_boundary_believer_neighbor(softener);
   let neighbor = property_get(r2, "neighbor");
   let heart = property_get(r2, "heart");
-  let soul = property_get(r2, "soul");
-  let by_door = {
-    heart,
-    soul,
-    neighbor,
-  };
-  let armour = by_door[door];
-  if (not(armour)) {
-    armour = heart;
-  }
-  let r30 = g_boundary_seen_again();
-  let r26 = list_random_item([r30, "Always good to see you. "]);
-  let r31 = g_boundary_rather_not();
-  let r27 = list_random_item([
-    r31,
-    "That one I'd like to keep to myself a while longer.",
-  ]);
-  let combined = text_combine_multiple([r26, r27]);
+  let r3 = g_boundary_believer_combined(r2, heart, neighbor, door);
+  let combined = property_get(r3, "combined");
+  let armour = property_get(r3, "armour");
   let contextual = [combined];
   if (not(met)) {
     let r28 = list_random_item([
