@@ -1,3 +1,4 @@
+import { object_merge_set } from "./object_merge_set.mjs";
 import { ebible_bibles_answered_assert } from "./ebible_bibles_answered_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_readaloud_lines_path } from "./ebible_readaloud_lines_path.mjs";
@@ -19,6 +20,7 @@ export async function ebible_readaloud_lines_gate_run() {
   ("The two ways of breaking it are not equally loud. Where the lines outnumber the marks the pairing runs off the end and throws, which is how a bible losing its whole index over one verse was found. Where the marks outnumber the lines the chapter is quietly cut short instead: the verses at its end are dropped, every verse before them is right, and no error is raised anywhere. That silent half is what this is for.");
   ("A bible whose pages are not on this machine is named apart in the record rather than refused, because not having the files is a fact about a machine and not a fault in a bible.");
   ("This reads only the file. The measuring opens every chapter of every bible and is a command somebody runs.");
+  ("Each disagreeing chapter is named with the bible it belongs to before they are gathered together. The record keeps them under their bible, and gathering them loses that - which left an answer telling somebody to go and look at Mark 9 without saying whose Mark 9, in a folder holding a Mark 9 for every translation there is.");
   let path = ebible_readaloud_lines_path();
   let recorded = await file_read_json(path);
   let bibles = property_get(recorded, "bibles");
