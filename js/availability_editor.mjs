@@ -1,3 +1,4 @@
+import { availability_editor_line } from "./availability_editor_line.mjs";
 import { availability_editor_render_grid } from "./availability_editor_render_grid.mjs";
 import { availability_editor_add_button } from "./availability_editor_add_button.mjs";
 import { availability_editor_render_preview } from "./availability_editor_render_preview.mjs";
@@ -14,10 +15,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { busy_item_build } from "./busy_item_build.mjs";
-import { busy_item_label } from "./busy_item_label.mjs";
 export function availability_editor(parent) {
   "owner screen: pick a week with the arrows or the date field, select time ranges on that week's real dates, then choose how they repeat (daily, weekly, monthly, one time); the chosen button highlights and the preview refreshes to show the busy items that choice would create";
   let ranges = [];
@@ -130,8 +128,7 @@ export function availability_editor(parent) {
     availability_editor_render_preview(preview, ranges, chosen, line);
   }
   function line(span) {
-    let item = busy_item_build(chosen, span);
-    let text = busy_item_label(item);
-    app_shared_text_body(preview, text);
+    let r = availability_editor_line(span, chosen, preview);
+    return r;
   }
 }
