@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
@@ -19,7 +20,6 @@ import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
@@ -98,10 +98,8 @@ export function app_code_lesson_quiz(
   }
   let last_lesson_end = qli && no_more;
   function render_next(next_parent) {
-    "the Next button with the standard top gap; shown only while there is still somewhere to go";
-    let next_button = app_shared_button_wide_next(next_parent, on_next);
-    let value = app_shared_spaced_gap();
-    html_style_margin_top(next_button, value);
+    let r3 = app_code_lesson_quiz_render_next(next_parent, on_next);
+    return r3;
   }
   let has_next_step = not(last_lesson_end);
   app_code_advance_or_no_more(parent_container, has_next_step, render_next);
@@ -117,8 +115,8 @@ export function app_code_lesson_quiz(
     " Show me the answer",
     on_reveal,
   );
-  let value2 = app_shared_spaced_gap();
-  html_style_margin_top(reveal_button, value2);
+  let value = app_shared_spaced_gap();
+  html_style_margin_top(reveal_button, value);
   if (not(qli)) {
     app_code_button_skip_lesson(context, parent_container);
   }
