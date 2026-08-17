@@ -1,3 +1,4 @@
+import { app_verses_draw_restore } from "./app_verses_draw_restore.mjs";
 import { app_verses_count_updates } from "./app_verses_count_updates.mjs";
 import { app_verses_display_group } from "./app_verses_display_group.mjs";
 import { app_verses_copy } from "./app_verses_copy.mjs";
@@ -6,13 +7,9 @@ import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_verses_counts_refresh } from "./app_verses_counts_refresh.mjs";
 import { app_verses_display } from "./app_verses_display.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
-import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
 import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
-import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { uplifting_package_get } from "./uplifting_package_get.mjs";
 import { app_shared_message_overlay } from "./app_shared_message_overlay.mjs";
 import { browser_online_is } from "./browser_online_is.mjs";
@@ -21,11 +18,8 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -33,7 +27,6 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_verses_draw_save } from "./app_verses_draw_save.mjs";
 import { app_verses_draw_get } from "./app_verses_draw_get.mjs";
-import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_verses(context) {
@@ -74,24 +67,15 @@ export async function app_verses(context) {
     list_add(count_updates, update);
     update();
   }
-  each(counts, count_each);
-  let card3 = app_shared_container_blue(content);
-  app_shared_text_body(
-    card3,
-    "3. Whenever you would like a different set, tap the button below. Your verses are lovingly copied for you each time.",
+  let card4 = await app_verses_draw_restore(
+    counts,
+    count_each,
+    content,
+    reroll,
+    copy,
+    verse_groups,
+    draw_restore,
   );
-  let left = emoji_arrows_crossed();
-  let text = text_combine(left, " New verses");
-  app_shared_button(card3, text, reroll);
-  app_shared_text_body(
-    card3,
-    "If the copy did not work, this button will gently copy them again.",
-  );
-  app_shared_button_copy(card3, copy);
-  let card4 = app_shared_container_blue(content);
-  app_verses_card4_refresh(verse_groups, card4);
-  app_shared_contact_button(content);
-  await draw_restore();
   async function draw_restore() {
     "reopening the app (or changing language, which reloads the page) brings back the last verses, re-rendered in the current languages, until New verses is tapped";
     let saved = app_verses_draw_get();
