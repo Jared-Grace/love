@@ -1,4 +1,4 @@
-import { js_function_forwarding_removed_callee_is } from "./js_function_forwarding_removed_callee_is.mjs";
+import { js_function_forwarding_removed_callee } from "./js_function_forwarding_removed_callee.mjs";
 import { js_function_answer_dropped_is } from "./js_function_answer_dropped_is.mjs";
 import { function_async_is } from "./function_async_is.mjs";
 import { js_function_forwarding_target } from "./js_function_forwarding_target.mjs";
@@ -55,9 +55,9 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (equal(site, null)) {
     return;
   }
-  let r = js_function_forwarding_removed_callee_is(site);
-  let callee_is = property_get(r, "callee_is");
+  let r = js_function_forwarding_removed_callee(site);
   let callee = property_get(r, "callee");
+  let callee_is = property_get(r, "callee_is");
   if (not(callee_is)) {
     return;
   }
