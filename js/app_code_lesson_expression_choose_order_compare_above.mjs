@@ -58,7 +58,10 @@ export function app_code_lesson_expression_choose_order_compare_above(root) {
     " has a number on each side, so it goes first",
   ]);
   let solved = app_code_expression_equals_text(step_code, step_text);
-  html_div_cycle_code(run, ["And a comparison comes to true or false, so ", solved]);
+  html_div_cycle_code(run, [
+    "And a comparison comes to true or false, so ",
+    solved,
+  ]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
   app_code_expression_replace_swap_say(

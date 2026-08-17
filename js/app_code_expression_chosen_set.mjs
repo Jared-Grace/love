@@ -1,12 +1,9 @@
+import { app_code_expression_operator_chip_clear } from "./app_code_expression_operator_chip_clear.mjs";
 import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
 import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_code_expression_chip_style } from "./app_code_expression_chip_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 export function app_code_expression_chosen_set(node_span, operator_span) {
   arguments_assert(arguments, 2);
   ("the operator a learner has just chosen, together with the two sides it is going to be worked out from, coloured blue as one block - so what is about to be replaced is seen as one thing rather than as a symbol with numbers standing either side of it");
