@@ -1,8 +1,8 @@
+import { html_checkboxes_lambda6 } from "./html_checkboxes_lambda6.mjs";
 import { html_checkboxes_on_click } from "./html_checkboxes_on_click.mjs";
 import { html_checkboxes_validate } from "./html_checkboxes_validate.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -82,11 +82,8 @@ export function html_checkboxes(
   }
   checkboxes = list_map(choices, lambda);
   function lambda6() {
-    let value_checked = html_checkboxes_checked_value_get(checkboxes);
-    let v = on_next({
-      value_checked,
-    });
-    return v;
+    let r2 = html_checkboxes_lambda6(checkboxes, on_next);
+    return r2;
   }
   bn = button_next(container_main, lambda6);
   html_checkboxes_validate(false, checkboxes, bn);
