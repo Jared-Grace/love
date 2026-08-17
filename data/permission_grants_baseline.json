@@ -147,6 +147,10 @@
   {
    "name": "app_shared_dev_build",
    "refusals": 1
+  },
+  {
+   "name": "functions_merge",
+   "refusals": 1
   }
  ]
 }
