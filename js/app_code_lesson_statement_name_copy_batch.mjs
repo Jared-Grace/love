@@ -23,9 +23,8 @@ export function app_code_lesson_statement_name_copy_batch() {
   ("Which of the two names is copied swaps every other program. Left always the second, a learner would find the answer by taking the last word above the copying line and never read the name on it at all, which is the reading this lesson exists to end.");
   ("The value on the copying line is a name with no quote marks round it, and that is the only new thing here. Every other line on the screen is a line a learner has already been reading.");
   ("The words are the fruits of the Spirit as the string lessons have them; no word here is used as a name.");
-  let names = app_code_lesson_statement_name_value_names();
-  let name_first = list_first(names);
-  let name_last = list_last(names);
+  let name_first = app_code_lesson_statement_name_value_name();
+  let name_last = app_code_lesson_statement_name_two_name();
   let name_copy = app_code_lesson_statement_name_copy_name();
   equal_not_assert_json(name_copy, name_first, {
     hint: "the name that gets filled from another cup is spelled the same as the first cup, so the copying line would be giving a name what is already inside it",
