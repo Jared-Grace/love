@@ -1,5 +1,5 @@
+import { app_g_conversation_turns } from "./app_g_conversation_turns.mjs";
 import { app_g_conversation_pronouns } from "./app_g_conversation_pronouns.mjs";
-import { app_g_conversation_goodbye } from "./app_g_conversation_goodbye.mjs";
 import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
 import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
@@ -68,18 +68,18 @@ export async function app_g_conversation(
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
-  let r = app_g_conversation_goodbye(npc, pronouns, div_map, overlay_close);
-  let goodbye = property_get(r, "goodbye");
-  let close_now = property_get(r, "close_now");
-  let steps = property_get(r, "steps");
-  let steps_total = property_get(r, "steps_total");
-  let some_prayers = property_get(r, "some_prayers");
-  let pending = property_get(r, "pending");
-  let greeted = property_get(r, "greeted");
-  let prayed = property_get(r, "prayed");
-  let remaining = property_get(r, "remaining");
-  let converts = property_get(r, "converts");
+  let r = app_g_conversation_turns(npc, pronouns, div_map, overlay_close);
   let turns = property_get(r, "turns");
+  let converts = property_get(r, "converts");
+  let remaining = property_get(r, "remaining");
+  let prayed = property_get(r, "prayed");
+  let greeted = property_get(r, "greeted");
+  let pending = property_get(r, "pending");
+  let some_prayers = property_get(r, "some_prayers");
+  let steps_total = property_get(r, "steps_total");
+  let steps = property_get(r, "steps");
+  let close_now = property_get(r, "close_now");
+  let goodbye = property_get(r, "goodbye");
   async function leave() {
     let r5 = await app_g_conversation_leave(
       remaining,
