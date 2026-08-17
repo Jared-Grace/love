@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
+import { app_g_study_lambda_sermon_correct_list } from "./app_g_study_lambda_sermon_correct_list.mjs";
 import { app_g_study_lambda_property } from "./app_g_study_lambda_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_openai_split_property } from "./g_openai_split_property.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_g_wrong } from "./app_g_wrong.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -18,12 +18,13 @@ import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 export async function app_g_study_lambda(overlay, player, review, close) {
   arguments_assert(arguments, 4);
   let r3 = await app_g_study_lambda_property(overlay, player, review);
-  let property = property_get(r3, "property");
-  let passage = property_get(r3, "passage");
-  let passages = property_get(r3, "passages");
-  let r = property_get(r3, "r");
-  let div = property_get(r3, "div");
-  let sermon_correct_list = g_openai_split_property(passage, property);
+  let r4 = app_g_study_lambda_sermon_correct_list(r3);
+  let sermon_correct_list = property_get(r4, "sermon_correct_list");
+  let div = property_get(r4, "div");
+  let r = property_get(r4, "r");
+  let passages = property_get(r4, "passages");
+  let passage = property_get(r4, "passage");
+  let property = property_get(r4, "property");
   let sermon_index = 0;
   let mistakes = false;
   refresh();
