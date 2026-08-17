@@ -20,7 +20,7 @@ export async function bible_glyph_survey(testament_name) {
   "$plain testament_name";
   "the name is a testament's own, spelled as the book divisions spell it. It names a stretch of text to read and nothing that runs.";
   "This is reconnaissance and not a Bible. Choosing a glyph for every word by hand, one at a time, is a guess repeated thousands of times, and a guess cannot be checked. Running the seed table over the whole text instead turns the question into a measurement: these two roots are asking for the same picture, this one glyph is being asked to carry senses that have nothing to do with each other, and this word is common enough that leaving it undrawn matters. Only where the report names a problem does anyone have to judge anything.";
-  "A collision is reported and not resolved. Two roots wanting one glyph may be a mistake, or it may be the truth - Lord and Christ share a crown here on purpose, because a reader meeting both should feel the kinship - and nothing mechanical can tell those two cases apart. The report says where to look.";
+  "A collision is reported and not resolved. Two roots wanting one glyph may be a mistake, or it may be the truth - two words a reader should feel the kinship between can be drawn alike on purpose - and nothing mechanical can tell those two cases apart. The report says where to look.";
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
   let glosses = await bible_strong_glosses(testament_name);
@@ -74,7 +74,6 @@ export async function bible_glyph_survey(testament_name) {
   let occurrences_mapped = 0;
   let sense_spread = [];
   let unmapped = [];
-  let rolled_by_strong = {};
   for (let strong of object_property_names(glosses)) {
     let tally = property_get(glosses, strong);
     let occurrences = 0;
@@ -103,7 +102,6 @@ export async function bible_glyph_survey(testament_name) {
       return n;
     }
     senses_plain.sort(count_descending);
-    property_set(rolled_by_strong, strong, rolled);
     occurrences_total = occurrences_total + occurrences;
     let entry_mapped = property_exists(mapped, strong);
     if (entry_mapped) {
@@ -146,25 +144,18 @@ export async function bible_glyph_survey(testament_name) {
   let referents = bible_glyph_referents();
   let referent_reach = [];
   for (let referent of referents) {
-    let rolled = property_exists(rolled_by_strong, referent.strong)
-      ? property_get(rolled_by_strong, referent.strong)
-      : {};
-    let caught = 0;
-    let missing = [];
-    for (let gloss of referent.glosses) {
-      let present = property_exists(rolled, gloss);
-      if (not(present)) {
-        list_add(missing, gloss);
-        continue;
-      }
-      caught = caught + property_get(rolled, gloss);
-    }
+    let overrides = property_exists(mapped, referent.strong)
+      ? property_get(mapped, referent.strong).glyph
+      : null;
+    let by_verses = property_exists(referent, "verses");
+    let kind = by_verses ? "verses" : "phrase";
     list_add(referent_reach, {
       strong: referent.strong,
       root: referent.root,
+      kind,
+      glyph_usually: overrides,
       glyphs: referent.glyphs,
-      occurrences_split_off: caught,
-      glosses_absent: missing,
+      because: referent.because,
     });
   }
   let report = {
