@@ -1,3 +1,4 @@
+import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { app_code_lesson_expression_round_nearest_above } from "./app_code_lesson_expression_round_nearest_above.mjs";
 import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
 import { app_code_lesson_expression_round_nearest_title_name_id } from "./app_code_lesson_expression_round_nearest_title_name_id.mjs";
@@ -9,8 +10,6 @@ import { add } from "./add.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
-import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_round_nearest() {
   "practice Math.round, the third rounding sibling after Math.floor and Math.ceil: Math.round rounds a number to the NEAREST whole number - down when the first decimal digit is less than 5 (Math.round(3.2) is 3) and up when it is 5 or more (Math.round(3.8) is 4, Math.round(3.5) is 4); the answer is that nearest whole number; whole part 2..7, one decimal digit so there is always a real decimal to round";
   function make(whole, index) {
@@ -22,9 +21,7 @@ export function app_code_lesson_expression_round_nearest() {
     } else {
       digit = integer_random(5, 9);
     }
-    let t = text_to(whole);
-    let t2 = text_to(digit);
-    let inner = text_combine_multiple([t, ".", t2]);
+    let inner = text_decimal_combine(whole, digit);
     let r = app_code_lesson_expression_round_nearest_round_code(inner);
     return r;
   }

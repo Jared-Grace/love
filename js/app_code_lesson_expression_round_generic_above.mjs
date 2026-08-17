@@ -1,3 +1,4 @@
+import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
@@ -31,13 +32,11 @@ export function app_code_lesson_expression_round_generic_above(
   let ordinary_low = list_get(ordinary_digits, 0);
   let ordinary_high = list_get(ordinary_digits, 1);
   let digit = integer_random(ordinary_low, ordinary_high);
-  let t = text_to(digit);
-  let decimal = text_combine_multiple([whole_text, ".", t]);
+  let decimal = text_decimal_combine(whole_text, digit);
   let extreme_low = list_get(extreme_digits, 0);
   let extreme_high = list_get(extreme_digits, 1);
   let extreme_digit = integer_random(extreme_low, extreme_high);
-  let t4 = text_to(extreme_digit);
-  let extreme_decimal = text_combine_multiple([whole_text, ".", t4]);
+  let extreme_decimal = text_decimal_combine(whole_text, extreme_digit);
   let input = add(whole, 1);
   let whole_up = text_to(input);
   let input2 = integer_random(2, 7);
