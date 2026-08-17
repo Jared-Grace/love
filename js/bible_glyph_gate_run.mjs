@@ -88,6 +88,11 @@ export function bible_glyph_gate_run() {
   let chapters = bible_glyph_chapters();
   for (let chapter of chapters) {
     let parsed = bible_glyph_chapter(chapter.chapter_code);
+    let referenced = property_exists(parsed, "reference");
+    assert_json(referenced, {
+      chapter_code: chapter.chapter_code,
+      hint: "a chapter says where it is in words as well as in its code, because the code is what a machine addresses it by and the reference is what a reader is shown - add a reference beside the chapter code",
+    });
     for (let verse of parsed.verses) {
       for (let word of verse.words) {
         let group = list_is(word);

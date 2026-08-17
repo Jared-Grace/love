@@ -17,22 +17,27 @@ export async function folders_function_named_orphaned() {
     " carried on beside it.");
   ("Asking the disk rather than keeping a list is what makes this stay true. A new store writes its folder the first time it runs, so it is watched from then on without anybody remembering to record it, and the question is asked of what actually escaped rather than of what somebody believed had.");
   ("Nothing to report when the storage folder is not mounted, which is the honest answer there - a machine holding none of the data has no data to walk away from.");
-  let path = folder_user_storage_function_path_function();
-  let present = await file_exists(path);
-  if (not(present)) {
-    let none = [];
-    return none;
-  }
-  let names = await folder_read(path);
+  ("Every folder whose children are named after a function is walked, not only the store of remembered answers. The handover folder somebody authors chapters into by hand is named the same way and was watched by nothing, so a rename walking away from an authored chapter reported clean - which is the one failure this exists to refuse.");
+  ("What comes back is the folder it sits in and then the name, so two folders holding the same dead name are two things to clear rather than one, and whoever reads the answer is told where to go without having to guess which folder it means.");
+  let roots = folders_function_named_roots();
   let orphaned = [];
-  for (let name of names) {
-    let searched = await function_exists(name);
-    ("the answer is a record of the search rather than a yes or no, and the record itself is always there - so reading it as a yes is a check that passes on every name, which is what this did before the property was read");
-    let live = property_get(searched, "exists");
-    if (live) {
+  for (let root of roots) {
+    let present = await file_exists(root);
+    if (not(present)) {
       continue;
     }
-    list_add(orphaned, name);
+    let names = await folder_read(root);
+    let folder_said = path_base(root);
+    for (let name of names) {
+      let searched = await function_exists(name);
+      ("the answer is a record of the search rather than a yes or no, and the record itself is always there - so reading it as a yes is a check that passes on every name, which is what this did before the property was read");
+      let live = property_get(searched, "exists");
+      if (live) {
+        continue;
+      }
+      let spelled = path_join([folder_said, name]);
+      list_add(orphaned, spelled);
+    }
   }
   orphaned.sort();
   return orphaned;
