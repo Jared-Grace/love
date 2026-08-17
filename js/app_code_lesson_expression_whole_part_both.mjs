@@ -1,5 +1,5 @@
+import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
 import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_code_lesson_expression_whole_part_both_title_name_id.mjs";
-import { divide_floor } from "./divide_floor.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,15 +9,10 @@ import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_mul
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
-import { text_regex_match } from "./text_regex_match.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { noop } from "./noop.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -44,26 +39,15 @@ export function app_code_lesson_expression_whole_part_both() {
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 division (whose whole part is 0)";
-    let list2 = app_code_lesson_divisor_quotient_batch(make);
-    return list2;
+    let list = app_code_lesson_divisor_quotient_batch(make);
+    return list;
   }
   function decoys(question, answer) {
-    "tempting partial answers: the QUOTIENT (Math.floor(a / b) - rounded down but forgot to multiply by the divisor), the REMAINDER (a - whole part), and the raw decimal a / b when it is short and clean (skipped when it repeats, like 2 / 3)";
-    let nums = text_integers(question);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
-    let list = [];
-    let item = divide_floor(dividend, divisor);
-    list_add(list, item);
-    let item2 = subtract(dividend, answer);
-    list_add(list, item2);
-    let raw = divide(dividend, divisor);
-    let raw_text = text_to(raw);
-    let clean = text_regex_match(raw_text, /^[0-9]+(\.[0-9]{1,3})?$/);
-    if (null_not_is(clean)) {
-      list_add(list, raw_text);
-    }
-    return list;
+    let r4 = app_code_lesson_expression_whole_part_both_decoys(
+      question,
+      answer,
+    );
+    return r4;
   }
   function decoys_backwards(whole_part_text, division) {
     "backwards decoys (given a whole part value, pick the division that has it): two tempting wrong divisions. The QUOTIENT trap is a division whose Math.floor is the shown value - (2 * w + 1) / 2 floors to w - so a learner who thinks the whole part is just the quotient (forgot to multiply back by the divisor) is tempted; its real whole part is 2 * w. The VALUE trap is a division that evaluates exactly to the shown value (3 * w / 3), tempting a learner who confuses the whole part with the plain division result; its real whole part is 3 * w. Both are skipped when the whole part is 0, where a floor-0 or value-0 division genuinely has whole part 0 and would be a real answer, not a decoy";
