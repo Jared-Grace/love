@@ -7,6 +7,7 @@ import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
+import { bible_glyph_gloss_normalized } from "./bible_glyph_gloss_normalized.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -76,13 +77,30 @@ export async function bible_glyph_survey(testament_name) {
     let tally = property_get(glosses, strong);
     let occurrences = 0;
     let senses = [];
+    let rolled = {};
     for (let entry of tally) {
       occurrences = occurrences + entry.count;
       let placeholder = bible_glyph_gloss_placeholder_is(entry.value);
       if (not(placeholder)) {
         list_add(senses, entry);
+        let plain = bible_glyph_gloss_normalized(entry.value);
+        let seen = property_exists(rolled, plain);
+        let running = seen ? property_get(rolled, plain) : 0;
+        property_set(rolled, plain, running + entry.count);
       }
     }
+    let senses_plain = [];
+    for (let plain of object_property_names(rolled)) {
+      list_add(senses_plain, {
+        value: plain,
+        count: property_get(rolled, plain),
+      });
+    }
+    function count_descending(a, b) {
+      let n = subtract(b.count, a.count);
+      return n;
+    }
+    senses_plain.sort(count_descending);
     occurrences_total = occurrences_total + occurrences;
     let entry_mapped = property_exists(mapped, strong);
     if (entry_mapped) {
@@ -94,14 +112,16 @@ export async function bible_glyph_survey(testament_name) {
         glyph: seat.glyph,
         occurrences,
         senses_count: senses.length,
-        senses_top: senses.slice(0, 8),
+        senses_plain_count: senses_plain.length,
+        senses_plain_top: senses_plain.slice(0, 8),
       });
       continue;
     }
     list_add(unmapped, {
       strong,
       occurrences,
-      senses_top: senses.slice(0, 4),
+      senses_plain_count: senses_plain.length,
+      senses_plain_top: senses_plain.slice(0, 4),
     });
   }
   function occurrences_of(row) {
