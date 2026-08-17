@@ -1,9 +1,9 @@
+import { permission_settings_local_dangling_remove_held } from "./permission_settings_local_dangling_remove_held.mjs";
 import { permission_settings_local_dangling_remove_r } from "./permission_settings_local_dangling_remove_r.mjs";
 import { permission_settings_local_dangling_remove_f_names } from "./permission_settings_local_dangling_remove_f_names.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { list_second } from "./list_second.mjs";
 import { file_exists_not } from "./file_exists_not.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -26,8 +26,9 @@ export async function permission_settings_local_dangling_remove() {
     };
     return none;
   }
-  let settings = await file_read_json(path);
-  let held = property_exists(settings, "permissions");
+  let r3 = await permission_settings_local_dangling_remove_held(path);
+  let held = property_get(r3, "held");
+  let settings = property_get(r3, "settings");
   if (not(held)) {
     let none2 = {
       path,
