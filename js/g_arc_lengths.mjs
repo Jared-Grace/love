@@ -1,4 +1,4 @@
-import { property_get } from "./property_get.mjs";
+import { g_arc_lengths_count } from "./g_arc_lengths_count.mjs";
 import { g_arc_lengths_next } from "./g_arc_lengths_next.mjs";
 import { multiply_floor } from "./multiply_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
@@ -21,16 +21,18 @@ export async function g_arc_lengths(chapter) {
   "A one-conversation arc is wanted, not tolerated. It is somebody who hears and believes, and whose discipling happens through the other believers rather than on screen - and it always fits, which is what makes deriving the npc count safe rather than merely convenient.";
   let settings = g_generation_settings();
   let r2 = await g_arc_lengths_next(chapter, settings);
-  let next = property_get(r2, "next");
-  let lines = property_get(r2, "lines");
-  let matches = property_get(r2, "matches");
-  let question_turns = property_get(r2, "question_turns");
-  let arc_turns = property_get(r2, "arc_turns");
-  let cap = property_get(r2, "cap");
-  let shortest = property_get(r2, "shortest");
-  let lengths = property_get(r2, "lengths");
-  let turns_unspent = property_get(r2, "turns_unspent");
-  let count = lengths.length;
+  let {
+    next,
+    lines,
+    matches,
+    question_turns,
+    arc_turns,
+    cap,
+    shortest,
+    lengths,
+    turns_unspent,
+    count,
+  } = g_arc_lengths_count(r2);
   for (
     let attempt = 0;
     less_than(attempt, settings.arc_length_swaps);
