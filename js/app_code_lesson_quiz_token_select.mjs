@@ -1,4 +1,5 @@
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_quiz_token_select_buttons } from "./app_code_lesson_quiz_token_select_buttons.mjs";
 import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
@@ -8,7 +9,6 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -45,12 +45,10 @@ export function app_code_lesson_quiz_token_select(
     qa,
     answer_div,
   );
-  let variation_buildable = property_get(r, "variation_buildable");
-  let tokens_unique = property_get(r, "tokens_unique");
-  let variations = property_get(r, "variations");
-  variations = list_filter(variations, variation_buildable);
-  list_sort_text(tokens_unique);
-  let buttons = null;
+  let r2 = app_code_lesson_quiz_token_select_buttons(r);
+  let buttons = property_get(r2, "buttons");
+  let variations = property_get(r2, "variations");
+  let tokens_unique = property_get(r2, "tokens_unique");
   let chosen = [];
   function lambda(token) {
     let b = app_shared_button(parent, token, on_click);
