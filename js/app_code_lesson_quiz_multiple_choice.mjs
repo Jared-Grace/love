@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_multiple_choice_attempts_max } from "./app_code_lesson_quiz_multiple_choice_attempts_max.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
@@ -18,7 +19,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
@@ -33,17 +33,16 @@ export function app_code_lesson_quiz_multiple_choice(
   let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
-  let seen = property_get(r, "seen");
-  let distractors = property_get(r, "distractors");
-  let answer_property = property_get(r, "answer_property");
-  let quiz_answer_text = property_get(r, "quiz_answer_text");
-  let question_property = property_get(r, "question_property");
-  let attempts = property_get(r, "attempts");
-  let r3 = property_get(r, "r3");
-  let answer_count_max = property_get(r3, "answer_count_max");
-  let quiz_question_text = property_get(r3, "quiz_question_text");
-  let qa_for = property_get(r3, "qa_for");
-  let attempts_max = multiply(answer_count_max, 3);
+  let r2 = app_code_lesson_quiz_multiple_choice_attempts_max(r);
+  let attempts_max = property_get(r2, "attempts_max");
+  let qa_for = property_get(r2, "qa_for");
+  let quiz_question_text = property_get(r2, "quiz_question_text");
+  let attempts = property_get(r2, "attempts");
+  let question_property = property_get(r2, "question_property");
+  let quiz_answer_text = property_get(r2, "quiz_answer_text");
+  let answer_property = property_get(r2, "answer_property");
+  let distractors = property_get(r2, "distractors");
+  let seen = property_get(r2, "seen");
   while (
     app_code_lesson_quiz_multiple_choice_need_more(
       distractors,
