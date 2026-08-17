@@ -1,7 +1,6 @@
-import { app_code_lesson_expression_choose_order_quizzes } from "./app_code_lesson_expression_choose_order_quizzes.mjs";
+import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_questions } from "./app_code_lesson_expression_choose_order_questions.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { null_is } from "./null_is.mjs";
@@ -11,9 +10,6 @@ import { app_code_expression_value_decoys } from "./app_code_expression_value_de
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { noop } from "./noop.mjs";
 export function app_code_lesson_expression_choose_order_solve() {
   "choosing which part of a line to solve, and then working that part out: 1 + 2 * 3, choose the times, choose 6 out of what it could come to, see 1 + 6, choose the plus, choose 7";
   "The lesson before this one chooses the order and is GIVEN each value; the lessons after it ask for the answer to a whole two-operator line in one go. Between those two stands one step, and this is it: the order is still chosen the same way, and the value that was handed over is now asked for.";
@@ -21,24 +17,10 @@ export function app_code_lesson_expression_choose_order_solve() {
   "The same two operators and the same digits as the lesson before, because the only new thing here is being asked for the value. A line that changed shape at the same time would be two new things at once, and a learner who got it wrong would not know which of them they had missed.";
   "The wrong values offered are worked out from the line itself rather than typed, so no line can be printed beside choices that do not belong to it.";
   let name_id = app_code_lesson_expression_choose_order_solve_title_name_id();
-  ("the same bank of lines as the lesson before, asked for again so this lesson has its own - which is what makes ITS first line one whose multiplication is not the leftmost part");
-  let bank = app_code_lesson_expression_choose_order_questions();
-  let batch_get = property_get(bank, "batch_get");
-  let tree_for = property_get(bank, "tree_for");
-  let tree_of = property_get(bank, "tree_of");
-  function on_answer(
-    parent,
-    info,
-    qa,
-    on_success,
-    on_wrong,
-    batch_get_unused,
-    answer_label_set,
-  ) {
+  function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz: the same line to press as the front page, and after every press the values it could come to";
     "The line and the values stand in two places set aside before either is drawn, so the buttons are always UNDER the line - built as they are needed they would land wherever the line had left off.";
     "What is being asked changes twice a step and the asking says so: choose what to solve, then what it comes to, then what to solve next.";
-    let tree = tree_of(qa, info);
     let line_holder = html_div(parent);
     let choices_holder = html_div(parent);
     let current = tree;
@@ -72,33 +54,13 @@ export function app_code_lesson_expression_choose_order_solve() {
       on_success,
     );
   }
-  function on_question_example(parent, question, card) {
-    "the lesson's front page, which is the rehearsal next door: all this end of it has to do is find the shape the question was printed from";
-    let tree = tree_for(question);
-    app_code_lesson_expression_choose_order_solve_example(parent, card, tree);
-  }
-  function quizzes_get(question, answer) {
-    "the quiz is the one both press-the-operators lessons ask, out of the one place it is written; what this lesson adds to it is what happens after each press";
-    let quizzes_exercises = app_code_lesson_expression_choose_order_quizzes(
-      on_answer,
-      batch_get,
-      question,
-      answer,
-    );
-    return quizzes_exercises;
-  }
-  let example_question_label = app_code_label_code_question();
+  ("everything else this lesson is made of - the bank of lines, the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson before it, and is written once for the two of them");
   ("what the learner already knows stands above the card, worked through on a line of its own, because it is the telling and the card is the doing");
-  let lesson = app_code_lesson_base(
+  let lesson = app_code_lesson_expression_choose_order_generic(
     name_id,
     app_code_lesson_expression_choose_order_solve_above,
-    1,
-    batch_get,
-    on_question_example,
-    null,
-    quizzes_get,
-    example_question_label,
-    noop,
+    answer_draw,
+    app_code_lesson_expression_choose_order_solve_example,
   );
   return lesson;
 }
