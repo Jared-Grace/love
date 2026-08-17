@@ -1,3 +1,4 @@
+import { app_g_verify_home_chapter_state } from "./app_g_verify_home_chapter_state.mjs";
 import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
 import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
 import { api_read_or } from "./api_read_or.mjs";
@@ -6,9 +7,6 @@ import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
-import { html_query_property_get } from "./html_query_property_get.mjs";
-import { g_verify_chapter_query_key } from "./g_verify_chapter_query_key.mjs";
-import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs";
 import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -33,28 +31,20 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let v6 = g_verify_chapter_query_key();
-  let v7 = g_verify_chapter_storage_key();
-  let chapter_code =
-    html_query_property_get(v6) || localStorage.getItem(v7) || "1JN01";
-  let book_code = chapter_code.slice(0, 3);
-  let v2 = chapter_code.slice(3);
-  let v3 = Number(v2);
-  document.title = g_verify_book_name(book_code) + " " + String(v3);
-  let storage_key = "g_verify_selected_" + chapter_code;
-  ("which verse you are looking at is this tab's, so two chapters can be open side by side; the chapter override above stays shared on purpose");
-  let selected_key = sessionStorage.getItem(storage_key);
-  let advanced_for = null;
-  let chapter_advance_armed = false;
-  let shown_json = null;
-  let poll_timer = null;
-  let chapter = null;
-  let status = null;
-  let chapter_state = null;
+  let r3 = app_g_verify_home_chapter_state();
+  let chapter_state = property_get(r3, "chapter_state");
+  let status = property_get(r3, "status");
+  let chapter = property_get(r3, "chapter");
+  let poll_timer = property_get(r3, "poll_timer");
+  let shown_json = property_get(r3, "shown_json");
+  let chapter_advance_armed = property_get(r3, "chapter_advance_armed");
+  let advanced_for = property_get(r3, "advanced_for");
+  let selected_key = property_get(r3, "selected_key");
+  let storage_key = property_get(r3, "storage_key");
+  let chapter_code = property_get(r3, "chapter_code");
   let chapter_codes = null;
   let view = null;
   async function initial_load() {
