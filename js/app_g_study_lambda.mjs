@@ -1,3 +1,4 @@
+import { app_g_study_lambda_refresh } from "./app_g_study_lambda_refresh.mjs";
 import { app_g_study_lambda_mistakes } from "./app_g_study_lambda_mistakes.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_study_lambda_sermon_index } from "./app_g_study_lambda_sermon_index.mjs";
@@ -24,14 +25,14 @@ export async function app_g_study_lambda(overlay, player, review, close) {
   let r5 = app_g_study_lambda_sermon_index(r4);
   let sermon_index = property_get(r5, "sermon_index");
   let r6 = app_g_study_lambda_mistakes(r5);
-  let mistakes = property_get(r6, "mistakes");
-  let sermon_correct_list = property_get(r6, "sermon_correct_list");
-  let div = property_get(r6, "div");
-  let r = property_get(r6, "r");
-  let passages = property_get(r6, "passages");
-  let passage = property_get(r6, "passage");
-  let property = property_get(r6, "property");
-  refresh();
+  let r7 = app_g_study_lambda_refresh(r6, refresh);
+  let property = property_get(r7, "property");
+  let passage = property_get(r7, "passage");
+  let passages = property_get(r7, "passages");
+  let r = property_get(r7, "r");
+  let div = property_get(r7, "div");
+  let sermon_correct_list = property_get(r7, "sermon_correct_list");
+  let mistakes = property_get(r7, "mistakes");
   function refresh() {
     html_clear(div);
     let v = app_g_wrong(passage, passages, property);
