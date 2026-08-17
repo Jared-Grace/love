@@ -1,8 +1,8 @@
+import { app_code_review_back } from "./app_code_review_back.mjs";
 import { app_code_review_next_lesson } from "./app_code_review_next_lesson.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
-import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
@@ -26,7 +26,6 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
@@ -34,31 +33,21 @@ import { not } from "./not.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
-import { list_get } from "./list_get.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let r2 = app_code_review_next_lesson(context, root);
-  let next_lesson = property_get(r2, "next_lesson");
-  let has_next = property_get(r2, "has_next");
-  let next_index = property_get(r2, "next_index");
-  let go_previous = property_get(r2, "go_previous");
-  let lessons = property_get(r2, "lessons");
-  let c = property_get(r2, "c");
-  let success_container = property_get(r2, "success_container");
-  let progress = property_get(r2, "progress");
-  let g = property_get(r2, "g");
-  let key = property_get(r2, "key");
-  let passed = property_get(r2, "passed");
-  let queue = property_get(r2, "queue");
-  if (has_next) {
-    next_lesson = list_get(lessons, next_index);
-  }
-  async function go_next() {
-    await app_code_review_go_to_lesson(next_lesson, context);
-  }
-  app_code_review_persist(context, key, passed, queue);
-  ("every one of the four ways off this screen stands off from the one above it by the app's own gap, the same as the buttons at the foot of a lesson - four buttons touching read as one block of text to get past rather than as four things to choose between");
-  let back = app_shared_button_back_text();
+  let r3 = app_code_review_back(r2, context);
+  let back = property_get(r3, "back");
+  let go_next = property_get(r3, "go_next");
+  let queue = property_get(r3, "queue");
+  let passed = property_get(r3, "passed");
+  let key = property_get(r3, "key");
+  let g = property_get(r3, "g");
+  let progress = property_get(r3, "progress");
+  let success_container = property_get(r3, "success_container");
+  let c = property_get(r3, "c");
+  let go_previous = property_get(r3, "go_previous");
+  let has_next = property_get(r3, "has_next");
   let back_button = app_shared_button_wide_text_combine(
     g,
     back,
