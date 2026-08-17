@@ -1,17 +1,12 @@
+import { g_arc_lengths_turns_unspent } from "./g_arc_lengths_turns_unspent.mjs";
 import { multiply_floor } from "./multiply_floor.mjs";
-import { multiply_divide_round } from "./multiply_divide_round.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
-import { divide_floor } from "./divide_floor.mjs";
-import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { add } from "./add.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-import { g_sermon_chapter_lines } from "./g_sermon_chapter_lines.mjs";
-import { g_passage_match_count } from "./g_passage_match_count.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { identity } from "./identity.mjs";
 import { subtract } from "./subtract.mjs";
@@ -25,34 +20,16 @@ export async function g_arc_lengths(chapter) {
   "Lengths descend by one mean conversation at a time, and when the next step would fall under the shortest a conversation may be, the descent STARTS AGAIN from the ceiling. That spreads the budget across the whole range instead of pouring its remainder into a tail of the smallest arcs. The finished list is sorted longest first, because a long arc is the hardest thing to place and should be placed while the space is still empty.";
   "A one-conversation arc is wanted, not tolerated. It is somebody who hears and believes, and whose discipling happens through the other believers rather than on screen - and it always fits, which is what makes deriving the npc count safe rather than merely convenient.";
   let settings = g_generation_settings();
-  let lines = await g_sermon_chapter_lines(chapter);
-  let matches = g_passage_match_count(lines);
-  let question_turns = multiply_divide_round(
+  let {
+    lines,
     matches,
-    settings.question_matches_percent,
-    100,
-  );
-  let arc_turns = subtract(matches, question_turns);
-  let cap = divide_floor(arc_turns, 4);
-  let shortest = settings.conversation_turns_low;
-  let step = settings.conversation_turns_mean;
-  let lengths = [];
-  let remaining = arc_turns;
-  let length = cap;
-  for (let emitted = 0; less_than(emitted, arc_turns); emitted++) {
-    if (less_than(remaining, shortest)) {
-      break;
-    }
-    let take = math_min(length, remaining);
-    list_add(lengths, take);
-    remaining = subtract(remaining, take);
-    length = subtract(length, step);
-    if (less_than(length, shortest)) {
-      length = cap;
-    }
-  }
-  ("Whatever is left is under the shortest conversation, so it cannot be an arc. It goes to the question pool, which has no length floor because a question is one turn.");
-  let turns_unspent = remaining;
+    question_turns,
+    arc_turns,
+    cap,
+    shortest,
+    lengths,
+    turns_unspent,
+  } = await g_arc_lengths_turns_unspent(chapter, settings);
   ("Now nudge the lengths, so a cast does not read as an arithmetic sequence. Each nudge picks two arcs and moves ONE turn between them, which conserves the budget exactly and cannot change how many people there are - the two properties the descent had and would be a shame to lose. A move that would push either arc outside the range is simply skipped, which is why the count is a number of ATTEMPTS rather than a promise.");
   ("Seeded on the chapter code, so this chapter always lands the same way. Authored content is worked out once and reused by every playthrough, so a run that differed each time would make a change in the output impossible to read.");
   let next = random_seed_generator_from_text(chapter);
