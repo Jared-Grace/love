@@ -1,5 +1,5 @@
+import { app_code_lesson_quiz_has_next_step } from "./app_code_lesson_quiz_has_next_step.mjs";
 import { app_code_lesson_quiz_r } from "./app_code_lesson_quiz_r.mjs";
-import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
@@ -47,27 +47,24 @@ export function app_code_lesson_quiz(
   );
   let r = property_get(r4, "r");
   let last_lesson_end = property_get(r4, "last_lesson_end");
-  let on_next = property_get(r4, "on_next");
-  let qli = property_get(r4, "qli");
-  let on_question = property_get(r4, "on_question");
-  let answer_label = property_get(r4, "answer_label");
-  let on_answer = property_get(r4, "on_answer");
-  let correction_render = property_get(r4, "correction_render");
-  let answer_property = property_get(r4, "answer_property");
-  let qa_for = property_get(r4, "qa_for");
-  let quiz_question = property_get(r4, "quiz_question");
-  let container_question = property_get(r4, "container_question");
-  let answer_label_set = property_get(r4, "answer_label_set");
-  let answers_div = property_get(r4, "answers_div");
-  let parent_container = property_get(r4, "parent_container");
-  let container_correction = property_get(r4, "container_correction");
-  let container_success_message = property_get(r4, "container_success_message");
-  let quiz_index = property_get(r, "quiz_index");
-  function render_next(next_parent) {
-    let r3 = app_code_lesson_quiz_render_next(next_parent, on_next);
-    return r3;
-  }
-  let has_next_step = not(last_lesson_end);
+  let r3 = app_code_lesson_quiz_has_next_step(r4, r, last_lesson_end);
+  let has_next_step = property_get(r3, "has_next_step");
+  let render_next = property_get(r3, "render_next");
+  let quiz_index = property_get(r3, "quiz_index");
+  let container_success_message = property_get(r3, "container_success_message");
+  let container_correction = property_get(r3, "container_correction");
+  let parent_container = property_get(r3, "parent_container");
+  let answers_div = property_get(r3, "answers_div");
+  let answer_label_set = property_get(r3, "answer_label_set");
+  let container_question = property_get(r3, "container_question");
+  let quiz_question = property_get(r3, "quiz_question");
+  let qa_for = property_get(r3, "qa_for");
+  let answer_property = property_get(r3, "answer_property");
+  let correction_render = property_get(r3, "correction_render");
+  let on_answer = property_get(r3, "on_answer");
+  let answer_label = property_get(r3, "answer_label");
+  let on_question = property_get(r3, "on_question");
+  let qli = property_get(r3, "qli");
   app_code_advance_or_no_more(parent_container, has_next_step, render_next);
   function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
