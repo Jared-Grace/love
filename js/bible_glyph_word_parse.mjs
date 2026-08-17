@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { bible_glyph_word_parse_index } from "./bible_glyph_word_parse_index.mjs";
+import { bible_glyph_word_parse_inside } from "./bible_glyph_word_parse_inside.mjs";
 import { bible_glyph_name_character_is } from "./bible_glyph_name_character_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,9 +16,9 @@ export function bible_glyph_word_parse(text) {
   "The shorthand exists for the KEYBOARD and nowhere else. What gets stored and shipped is the parsed word, because a stored shorthand would make every reader of this Bible write a parser, and readers written later by other people would each write a slightly different one. There is one parser, it is this, and it runs while a person is typing.";
   let parts = [];
   let buffer = "";
-  let r2 = bible_glyph_word_parse_index();
-  let index = property_get(r2, "index");
+  let r2 = bible_glyph_word_parse_inside();
   let inside = property_get(r2, "inside");
+  let index = property_get(r2, "index");
   function buffer_flush() {
     let empty = equal(buffer, "");
     if (empty) {
