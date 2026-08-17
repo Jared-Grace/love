@@ -1,16 +1,10 @@
-import { app_a_identifier_generic_choices_get_on_enter } from "./app_a_identifier_generic_choices_get_on_enter.mjs";
+import { app_a_identifier_generic_choices_get_lambda15 } from "./app_a_identifier_generic_choices_get_lambda15.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { app_a_overlay_container_centered } from "./app_a_overlay_container_centered.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_a_overlay_on_enter } from "./app_a_overlay_on_enter.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { ternary } from "./ternary.mjs";
-import { app_a_textarea } from "./app_a_textarea.mjs";
-import { app_a_input } from "./app_a_input.mjs";
-import { html_rows_set } from "./html_rows_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_select } from "./html_select.mjs";
@@ -50,7 +44,7 @@ import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs
 import { function_param_delete } from "./function_param_delete.mjs";
 import { app_a_function_overlay_refresh } from "./app_a_function_overlay_refresh.mjs";
 export async function app_a_identifier_generic_choices_get(
-  o3,
+  o,
   choices,
   a,
   name,
@@ -63,44 +57,21 @@ export async function app_a_identifier_generic_choices_get(
   let ast = property_get(a, "ast");
   let stack = js_node_to_visitor_stack(ast, node);
   let e = list_get_end_2(stack);
-  let overlay_close = property_get(o3, "overlay_close");
-  let overlay = property_get(o3, "overlay");
+  let overlay_close = property_get(o, "overlay_close");
+  let overlay = property_get(o, "overlay");
   let oc = app_a_overlay_container_centered(overlay);
   html_div_text(oc, name);
   let context = property_get(a, "context");
   let change = {
     fn: async function lambda15() {
-      let r = app_a_overlay_on_enter(on_enter, o3, a);
-      let o = property_get(r, "overlay_result");
-      let overlay_change = property_get(o, "overlay");
-      let oc_change = property_get(r, "container");
-      let text = property_get(change, "text");
-      let text2 = text_combine(text, " from:");
-      html_div_text(oc_change, text2);
-      html_div_text(oc_change, name);
-      let text3 = text_combine(text, " to:");
-      html_div_text(oc_change, text3);
-      let fn = null;
-      fn = ternary(lines_multiple, app_a_textarea, app_a_input);
-      let input = fn(overlay_change);
-      if (lines_multiple) {
-        let row_count = 20;
-        html_rows_set(input, row_count);
-      } else {
-        html_centered(input);
-      }
-      html_value_set(input, name);
-      await html_select(input);
-      async function on_enter() {
-        let r2 = await app_a_identifier_generic_choices_get_on_enter(
-          input,
-          change,
-          a,
-          o,
-        );
-        return r2;
-      }
-      let component = app_a_button_wide(overlay_change, text, on_enter);
+      let r3 = await app_a_identifier_generic_choices_get_lambda15(
+        o,
+        a,
+        change,
+        name,
+        lines_multiple,
+      );
+      return r3;
     },
   };
   object_merge_set(change, c);
@@ -150,11 +121,11 @@ export async function app_a_identifier_generic_choices_get(
           name_new,
         });
         replace(name_new);
-        await app_a_function_on_change(a, o3);
+        await app_a_function_on_change(a, o);
       },
     },
   ]);
-  app_a_functionize_choices_add(choices, a, o3);
+  app_a_functionize_choices_add(choices, a, o);
   let f_names = await functions_names();
   let includes = list_includes(f_names, name);
   if (includes) {
@@ -207,7 +178,7 @@ export async function app_a_identifier_generic_choices_get(
             assign,
           });
           object_replace(e, assign);
-          await app_a_function_on_change(a, o3);
+          await app_a_function_on_change(a, o);
         },
       };
       list_add(choices, choice_assign);
@@ -222,7 +193,7 @@ export async function app_a_identifier_generic_choices_get(
       fn: async function lambda() {
         let f_name = app_a_function_name_selected(context);
         await function_param_delete(f_name, name);
-        await app_a_function_overlay_refresh(a, o3);
+        await app_a_function_overlay_refresh(a, o);
       },
     };
     list_add(choices, choice_param_delete);
