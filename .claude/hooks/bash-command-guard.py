@@ -1734,6 +1734,53 @@ def is_safe_claude_temp_mv(words):
     return all(is_safe_claude_temp_path(p) for p in paths)
 
 
+CP_SAFE_FLAG_CHARS = set("vfnrR")
+
+
+def is_safe_claude_temp_cp(words):
+    """Exact-shape exception for `cp`, the sibling of is_safe_claude_temp_mv
+    and held to the same two-sided rule: at least TWO non-flag arguments,
+    and EVERY one of them (sources and destination alike) strictly inside a
+    Claude-owned /tmp directory.
+
+    Both ends are required for a reason `mv`'s docstring only half covers.
+    For `mv` the danger of a one-sided check is symmetric - either end loose
+    lets a file be planted anywhere or quietly taken out of the repo. For
+    `cp` the destination-only version looks safe (the write lands nowhere
+    but Claude's own temp dir) and is not: it would let ANY readable file on
+    the machine be staged into a directory this hook then reads freely, so a
+    verb that writes only to the scratchpad becomes a way around every
+    read-side prompt on paths outside the repo. The source end carries the
+    trust here, not just the destination.
+
+    `-r`/`-R` are permitted where is_safe_claude_temp_rm refuses them,
+    because recursion changes nothing once both ends are already contained -
+    a recursive copy inside the scratchpad can still only write inside the
+    scratchpad, whereas a recursive DELETE is what turns one wrong path into
+    many. Remaining flags are checked a token at a time against
+    CP_SAFE_FLAG_CHARS ('v', 'f', 'n', 'r', 'R') and any long option fails
+    closed - notably `-t <dir>` and `--parents`, which move or rewrite the
+    destination outside the positional list this function checks.
+
+    Known residual, deliberately not chased: `cp` dereferences a symlink in
+    the source, so a scratchpad symlink pointing outside would copy the
+    target's contents in. Planting one needs `ln`, which is not a trusted
+    verb and prompts on its own."""
+    if not words or words[0] != "cp":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in CP_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if len(paths) < 2:
+        return False
+    return all(is_safe_claude_temp_path(p) for p in paths)
+
+
 VERIFY_HTML_DIR = os.path.join(REPO_ROOT, "public") + os.sep
 VERIFY_HTML_BASENAME_RE = re.compile(r"^tmp_verify_[A-Za-z0-9_-]+\.html$")
 
