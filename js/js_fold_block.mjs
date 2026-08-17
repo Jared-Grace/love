@@ -1,17 +1,10 @@
+import { js_fold_block_empty } from "./js_fold_block_empty.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_fold_pattern_dropped } from "./js_fold_pattern_dropped.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_map_filter } from "./list_map_filter.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
-import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_flo } from "./js_flo.mjs";
-import { js_flo_name } from "./js_flo_name.mjs";
-import { js_flo_body } from "./js_flo_body.mjs";
-import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
-import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
-import { js_signature_has_callee } from "./js_signature_has_callee.mjs";
 import { js_fold_match_block } from "./js_fold_match_block.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
@@ -19,15 +12,11 @@ import { js_fold_body_splice } from "./js_fold_body_splice.mjs";
 import { js_fold_plan } from "./js_fold_plan.mjs";
 import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_name } from "./property_get_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 export function js_fold_block(x_ast, f_ast, f_block) {
   arguments_assert(arguments, 3);
   ("One fold, in one named run of statements, rather than in whatever run a function");
@@ -50,21 +39,13 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (partial_is) {
     return null;
   }
-  let x_name = js_flo_name(x_ast);
-  let x_declaration = js_flo(x_ast);
-  let params = js_function_declaration_params_names(x_declaration);
-  let x_statements = js_flo_body(x_ast);
-  let body_statements = list_take_less_1(x_statements);
-  let return_statement = list_last(x_statements);
-  let return_argument = js_return_argument_get(return_statement);
-  let return_local = property_get_name(return_argument);
-  let pattern_sigs = list_map_filter(
-    body_statements,
-    js_atomic_statement_signature,
-    js_signature_has_callee,
-  );
-  let k = list_size(pattern_sigs);
-  let empty = equal(k, 0);
+  let r = js_fold_block_empty(x_ast);
+  let empty = property_get(r, "empty");
+  let k = property_get(r, "k");
+  let pattern_sigs = property_get(r, "pattern_sigs");
+  let return_local = property_get(r, "return_local");
+  let params = property_get(r, "params");
+  let x_name = property_get(r, "x_name");
   if (empty) {
     return null;
   }
