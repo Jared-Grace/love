@@ -1,15 +1,12 @@
+import { app_code_lesson_expression_round_generic_make } from "./app_code_lesson_expression_round_generic_make.mjs";
 import { app_code_lesson_expression_round_generic_above } from "./app_code_lesson_expression_round_generic_above.mjs";
-import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 import { app_code_lesson_expression_round_generic_title_name_id } from "./app_code_lesson_expression_round_generic_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { integer_even_is } from "./integer_even_is.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_round_generic(params) {
@@ -30,18 +27,11 @@ export function app_code_lesson_expression_round_generic(params) {
     preposition = "above";
   }
   function make(whole, index) {
-    "alternate down the batch, the DECIMAL first because rounding is the main use: even positions are a decimal to round, odd positions are an already-whole number (nothing to round) - so the batch leads with the main rounding case and still drills the no-change edge case";
-    let decimal_question = integer_even_is(index);
-    let inner = null;
-    if (decimal_question) {
-      let digit = integer_random(1, 9);
-      let t = text_to(whole);
-      let t2 = text_to(digit);
-      inner = text_combine_multiple([t, ".", t2]);
-    } else {
-      inner = text_to(whole);
-    }
-    let r = app_code_lesson_expression_round_generic_code(inner, called_name);
+    let r = app_code_lesson_expression_round_generic_make(
+      whole,
+      index,
+      called_name,
+    );
     return r;
   }
   function refill() {
