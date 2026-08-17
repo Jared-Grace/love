@@ -38,5 +38,14 @@ export async function bundles_names_missing() {
     return any;
   }
   let offenders = list_filter(asked, short_is);
-  return offenders;
+  ("A file that looked short is read once more before it is named, because a build writing that same file while this was reading it hands over half of one - and half a bundle is short of names the finished one carries. Measured 2026-08-17, three files came back short during a minute in which peers were rebuilding four apps, and every one of them read clean minutes later with its bytes never having changed since.");
+  ("Only the ones that looked short are read again, so the second reading costs nothing on the ordinary green run and the gate stops going red at whoever happened to be building at the time.");
+  async function again(answer) {
+    let name = property_get(answer, "name");
+    let asked_again = await ask(name);
+    return asked_again;
+  }
+  let answered_again = await list_map_unordered_async(offenders, again);
+  let still = list_filter(answered_again, short_is);
+  return still;
 }
