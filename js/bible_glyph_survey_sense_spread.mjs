@@ -1,0 +1,86 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
+import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
+import { property_set } from "./property_set.mjs";
+import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_get } from "./property_get.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { greater_than } from "./greater_than.mjs";
+export async function bible_glyph_survey_sense_spread(
+  table_testament,
+  testament_name,
+) {
+  arguments_assert(arguments, 2);
+  let table_reads = equal(table_testament, testament_name);
+  assert_json(table_reads, {
+    testament_name,
+    table_testament,
+    hint: "the root table is written for one testament and a Strong's number means a different word in the other, so surveying the wrong testament would report the numbers that happen to collide as coverage - survey the testament the table is for, or write a table for this one",
+  });
+  let glosses = await bible_strong_glosses(testament_name);
+  let characters = bible_glyph_characters();
+  let character_names = {};
+  for (let character of characters) {
+    property_set(character_names, character.name, true);
+  }
+  let roots = bible_glyph_roots();
+  let glyph_roots = {};
+  let mapped = {};
+  let glyph_missing = [];
+  for (let root of roots) {
+    for (let word of root.words) {
+      let glyph = word.glyph;
+      let known = property_exists(character_names, glyph);
+      if (not(known)) {
+        list_add(glyph_missing, {
+          root: root.root,
+          strong: word.strong,
+          glyph,
+        });
+      }
+      let started = property_exists(glyph_roots, glyph);
+      if (not(started)) {
+        property_set(glyph_roots, glyph, []);
+      }
+      let sharers = property_get(glyph_roots, glyph);
+      let already = sharers.includes(root.root);
+      if (not(already)) {
+        list_add(sharers, root.root);
+      }
+      property_set(mapped, word.strong, {
+        root: root.root,
+        glyph,
+      });
+    }
+  }
+  let glyph_collisions = [];
+  for (let glyph of object_property_names(glyph_roots)) {
+    let sharers = property_get(glyph_roots, glyph);
+    let shared = greater_than(sharers.length, 1);
+    if (shared) {
+      list_add(glyph_collisions, {
+        glyph,
+        roots: sharers,
+      });
+    }
+  }
+  let occurrences_total = 0;
+  let occurrences_mapped = 0;
+  let sense_spread = [];
+  let r = {
+    glosses,
+    roots,
+    mapped,
+    glyph_missing,
+    glyph_collisions,
+    occurrences_total,
+    occurrences_mapped,
+    sense_spread,
+  };
+  return r;
+}
