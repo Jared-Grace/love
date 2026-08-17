@@ -1,15 +1,10 @@
+import { app_search_home_div_results } from "./app_search_home_div_results.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_home_left } from "./app_search_home_left.mjs";
 import { app_search_home_search } from "./app_search_home_search.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
-import { html_focus } from "./html_focus.mjs";
-import { emoji_x_red } from "./emoji_x_red.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
-import { html_br_2 } from "./html_br_2.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -28,20 +23,10 @@ export async function app_search_home(context) {
   }
   let r2 = app_search_home_left(context, hash, search);
   let left = property_get(r2, "left");
-  let input = property_get(r2, "input");
-  let content = property_get(r2, "content");
-  let text = text_combine(left, " Search");
-  app_shared_button_wide(content, text, search);
-  function query_clear() {
-    "empty the box and put the writing cursor back in it - on a phone the keyboard only opens for a focused box, so clearing without focusing leaves the reader tapping at an empty box to start typing again";
-    html_value_set(input, "");
-    html_focus(input);
-  }
-  let clear_left = emoji_x_red();
-  let clear_text = text_combine(clear_left, " Clear");
-  app_shared_button_wide(content, clear_text, query_clear);
-  html_br_2(content);
-  let div_results = html_div(content);
+  let r3 = app_search_home_div_results(r2, left, search);
+  let div_results = property_get(r3, "div_results");
+  let content = property_get(r3, "content");
+  let input = property_get(r3, "input");
   async function search() {
     let r = await app_search_home_search(input, context, div_results);
     return r;
