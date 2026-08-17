@@ -255,6 +255,18 @@
   {
    "name": "qa_app_commit_deployable",
    "refusals": 1
+  },
+  {
+   "name": "qa_gate_timings_write_when_quiet",
+   "refusals": 1
+  },
+  {
+   "name": "ebible_version_download_zip_delete",
+   "refusals": 1
+  },
+  {
+   "name": "qa_app_commit_deploy_remembered",
+   "refusals": 1
   }
  ]
 }
