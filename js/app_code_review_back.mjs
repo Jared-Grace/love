@@ -27,7 +27,7 @@ export function app_code_review_back(r2, context) {
   app_code_review_persist(context, key, passed, queue);
   ("every one of the four ways off this screen stands off from the one above it by the app's own gap, the same as the buttons at the foot of a lesson - four buttons touching read as one block of text to get past rather than as four things to choose between");
   let back = app_shared_button_back_text();
-  return {
+  let r = {
     has_next,
     go_previous,
     c,
@@ -40,4 +40,5 @@ export function app_code_review_back(r2, context) {
     go_next,
     back,
   };
+  return r;
 }
