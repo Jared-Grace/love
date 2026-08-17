@@ -1,10 +1,10 @@
+import { app_code_lesson_quiz_reveal_button } from "./app_code_lesson_quiz_reveal_button.mjs";
 import { app_code_lesson_quiz_parent_container } from "./app_code_lesson_quiz_parent_container.mjs";
 import { app_code_lesson_quiz_container_question } from "./app_code_lesson_quiz_container_question.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
-import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
@@ -17,7 +17,6 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { emoji_light_bulb } from "./emoji_light_bulb.mjs";
 import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -47,27 +46,20 @@ export function app_code_lesson_quiz(
   let parent_container = property_get(r4, "parent_container");
   let container_correction = property_get(r4, "container_correction");
   let container_success_message = property_get(r4, "container_success_message");
-  let quiz_index = property_get(r4, "quiz_index");
-  let answer_label = property_get(r4, "answer_label");
-  let qli = property_get(r4, "qli");
-  let on_reveal = property_get(r4, "on_reveal");
-  let correction_render = property_get(r4, "correction_render");
-  let on_answer = property_get(r4, "on_answer");
-  let on_question = property_get(r4, "on_question");
-  let quiz_question = property_get(r4, "quiz_question");
-  let answer_property = property_get(r4, "answer_property");
-  let r3 = property_get(r4, "r3");
-  let qa_for = property_get(r4, "qa_for");
-  let answers_div = property_get(r3, "answers_div");
-  let answer_label_set = property_get(r3, "answer_label_set");
+  let r3 = app_code_lesson_quiz_reveal_button(r4, parent_container);
+  let reveal_button = property_get(r3, "reveal_button");
   let container_question = property_get(r3, "container_question");
-  let left2 = emoji_light_bulb();
-  let reveal_button = app_shared_button_wide_text_combine(
-    parent_container,
-    left2,
-    " Show me the answer",
-    on_reveal,
-  );
+  let answer_label_set = property_get(r3, "answer_label_set");
+  let answers_div = property_get(r3, "answers_div");
+  let qa_for = property_get(r3, "qa_for");
+  let answer_property = property_get(r3, "answer_property");
+  let quiz_question = property_get(r3, "quiz_question");
+  let on_question = property_get(r3, "on_question");
+  let on_answer = property_get(r3, "on_answer");
+  let correction_render = property_get(r3, "correction_render");
+  let qli = property_get(r3, "qli");
+  let answer_label = property_get(r3, "answer_label");
+  let quiz_index = property_get(r3, "quiz_index");
   let value = app_shared_spaced_gap();
   html_style_margin_top(reveal_button, value);
   if (not(qli)) {
