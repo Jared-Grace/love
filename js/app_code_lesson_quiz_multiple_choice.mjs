@@ -1,11 +1,8 @@
+import { app_code_lesson_quiz_multiple_choice_choices } from "./app_code_lesson_quiz_multiple_choice_choices.mjs";
 import { app_code_lesson_quiz_multiple_choice_attempts_max } from "./app_code_lesson_quiz_multiple_choice_attempts_max.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
-import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
-import { property_text_to } from "./property_text_to.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { not } from "./not.mjs";
-import { or } from "./or.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -14,11 +11,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_text_to } from "./list_sort_text_to.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_add } from "./list_add.mjs";
-import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
@@ -35,36 +28,14 @@ export function app_code_lesson_quiz_multiple_choice(
   let distractor_count = property_get(r, "distractor_count");
   let r2 = app_code_lesson_quiz_multiple_choice_attempts_max(r);
   let attempts_max = property_get(r2, "attempts_max");
-  let qa_for = property_get(r2, "qa_for");
-  let quiz_question_text = property_get(r2, "quiz_question_text");
-  let attempts = property_get(r2, "attempts");
-  let question_property = property_get(r2, "question_property");
-  let quiz_answer_text = property_get(r2, "quiz_answer_text");
-  let answer_property = property_get(r2, "answer_property");
-  let distractors = property_get(r2, "distractors");
-  let seen = property_get(r2, "seen");
-  while (
-    app_code_lesson_quiz_multiple_choice_need_more(
-      distractors,
-      distractor_count,
-      attempts,
-      attempts_max,
-    )
-  ) {
-    let item = next_get();
-    let shown = qa_for(item);
-    let answer_text = property_text_to(shown, answer_property);
-    let question_text = property_text_to(shown, question_property);
-    let ambiguous = equal(question_text, quiz_question_text);
-    let already = list_includes(seen, answer_text);
-    let skip = or(already, ambiguous);
-    if (not(skip)) {
-      list_add(seen, answer_text);
-      list_add(distractors, answer_text);
-    }
-    attempts = add(attempts, 1);
-  }
-  let choices = list_concat(distractors, [quiz_answer_text]);
+  let r3 = app_code_lesson_quiz_multiple_choice_choices(
+    r2,
+    distractor_count,
+    attempts_max,
+    next_get,
+  );
+  let choices = property_get(r3, "choices");
+  let quiz_answer_text = property_get(r3, "quiz_answer_text");
   list_sort_text_to(choices);
   let answered = false;
   function each_button(quiz_choice) {
