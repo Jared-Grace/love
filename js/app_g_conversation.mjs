@@ -1,10 +1,10 @@
+import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render_farewell } from "./app_g_conversation_render_farewell.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
 import { app_g_conversation_topic_for } from "./app_g_conversation_topic_for.mjs";
 import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
 import { g_phase_time } from "./g_phase_time.mjs";
-import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { g_something_else } from "./g_something_else.mjs";
 import { list_min } from "./list_min.mjs";
@@ -14,11 +14,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_prayers_believer } from "./g_prayers_believer.mjs";
-import { app_g_conversation_day_fraction } from "./app_g_conversation_day_fraction.mjs";
-import { g_day_clock } from "./g_day_clock.mjs";
-import { g_clock_label } from "./g_clock_label.mjs";
-import { emoji_clock } from "./emoji_clock.mjs";
-import { app_g_toast } from "./app_g_toast.mjs";
 import { add } from "./add.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
@@ -47,11 +42,9 @@ import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
-import { app_g_sky_to } from "./app_g_sky_to.mjs";
 import { app_g_conversation_sky_target } from "./app_g_conversation_sky_target.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -67,7 +60,6 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_g_conversation(
@@ -161,22 +153,6 @@ export async function app_g_conversation(
   let steps = {
     done: 0,
   };
-  async function advance() {
-    "one advancing step of the conversation moves the day forward: every forward choice — each opener chosen, each objection answered, choosing to pray, each prayer prayed, the final goodbye — ticks the shared step counter and drifts the sky to steps.done / steps_total of this conversation's slice, so the whole minimum path (not just the gospel turns) spans the slice and the goodbye lands at its end. wrong openers do NOT tick — guessing costs no daylight, so discernment stays the fast path.";
-    steps.done = add(steps.done, 1);
-    let fraction = divide(steps.done, steps_total);
-    let target = app_g_conversation_sky_target(fraction);
-    await app_g_sky_to(target);
-    let show_toast = app_g_day_state_property("sky_toast");
-    if (show_toast) {
-      let day_fraction = app_g_conversation_day_fraction(fraction);
-      let clock = g_day_clock(day_fraction);
-      let label = g_clock_label(clock);
-      let r = emoji_clock();
-      let text = text_combine_multiple([r, " ", label]);
-      app_g_toast(text, 1400);
-    }
-  }
   async function close_now() {
     if (converts) {
       if (prayed.done) {
@@ -189,7 +165,7 @@ export async function app_g_conversation(
   }
   async function goodbye() {
     "the final parting after the prayer is itself an advancing step — it ticks the day to its close (dusk) before snapping shut, so 'saying goodbye' spends the last of the slice rather than closing at whatever time the prayer left.";
-    await advance();
+    await app_g_conversation_advance(steps, steps_total);
     await close_now();
   }
   async function leave() {
@@ -230,7 +206,7 @@ export async function app_g_conversation(
         fn_name("g_response"),
         " for this turn's after_kind — carried as the pending intro so render_openers / render_pray say it in place of the usual continue-prompt: 'npc says the after, then asks what to talk about next'. one turn per opener in the demo, so the after always leads to the menu; a multi-turn thread would instead chain into the next turn's before.");
       remaining = list_filter(remaining, keep);
-      await advance();
+      await app_g_conversation_advance(steps, steps_total);
       let after_kind = property_get_or_null(turn, "after_kind");
       if (after_kind) {
         pending.text = g_response(after_kind);
@@ -330,7 +306,7 @@ export async function app_g_conversation(
           render_boundary(turn);
           return;
         }
-        await advance();
+        await app_g_conversation_advance(steps, steps_total);
         run_turn(turn);
       }
       let choice = {
@@ -359,9 +335,9 @@ export async function app_g_conversation(
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What do you want to do?");
     async function pray() {
-      await advance();
-      function on_part() {
-        advance();
+      await app_g_conversation_advance(steps, steps_total);
+      async function on_part() {
+        await app_g_conversation_advance(steps, steps_total);
       }
       function on_prayed() {
         prayed.done = true;
