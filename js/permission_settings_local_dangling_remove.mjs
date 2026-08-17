@@ -1,4 +1,4 @@
-import { permission_settings_local_dangling_remove_listed } from "./permission_settings_local_dangling_remove_listed.mjs";
+import { permission_settings_local_dangling_remove_permissions } from "./permission_settings_local_dangling_remove_permissions.mjs";
 import { permission_settings_local_dangling_remove_settings } from "./permission_settings_local_dangling_remove_settings.mjs";
 import { permission_settings_local_dangling_remove_r } from "./permission_settings_local_dangling_remove_r.mjs";
 import { permission_settings_local_dangling_remove_f_names } from "./permission_settings_local_dangling_remove_f_names.mjs";
@@ -37,9 +37,9 @@ export async function permission_settings_local_dangling_remove() {
     };
     return none2;
   }
-  let r4 = permission_settings_local_dangling_remove_listed(settings);
-  let listed = property_get(r4, "listed");
+  let r4 = permission_settings_local_dangling_remove_permissions(settings);
   let permissions = property_get(r4, "permissions");
+  let listed = property_get(r4, "listed");
   if (not(listed)) {
     let none3 = {
       path,
