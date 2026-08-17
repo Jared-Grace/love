@@ -7,7 +7,7 @@ import { folder_user_storage_function_path_function } from "./folder_user_storag
 import { function_exists } from "./function_exists.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
-export async function storage_function_folders_orphaned() {
+export async function folders_function_named_orphaned() {
   arguments_assert(arguments, 0);
   ("Every folder of stored data named after a function that no function answers to any more.");
   ("A function handed to ",
