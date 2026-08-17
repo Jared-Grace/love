@@ -1,3 +1,4 @@
+import { app_g_conversation_pronouns } from "./app_g_conversation_pronouns.mjs";
 import { app_g_conversation_goodbye } from "./app_g_conversation_goodbye.mjs";
 import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
@@ -6,13 +7,9 @@ import { app_g_conversation_render_openers } from "./app_g_conversation_render_o
 import { app_g_conversation_pray_together } from "./app_g_conversation_pray_together.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
-import { g_phase_time } from "./g_phase_time.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
-import { g_conversation_key } from "./g_conversation_key.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_day_talkable_is } from "./app_g_day_talkable_is.mjs";
 import { app_g_day_blocked_is } from "./app_g_day_blocked_is.mjs";
 import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
@@ -23,15 +20,12 @@ import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
-import { g_greeting } from "./g_greeting.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
-import { app_g_conversation_sky_target } from "./app_g_conversation_sky_target.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -54,21 +48,11 @@ export async function app_g_conversation(
     app_g_discern_prevented_overlay(5000);
     return;
   }
-  let player = await app_g_player_get();
-  property_set(player, "conversed", true);
-  let property_name = g_conversation_key();
-  property_set(prayer, property_name, false);
-  let meet = property_get(npc, "meet");
-  if (not(meet)) {
-    property_set(npc, "meet", true);
-  }
-  let name_player = property_get(player, "name");
-  let phase_open = app_g_conversation_sky_target(0);
-  let time_open = g_phase_time(phase_open);
-  let christian = property_get(npc, "christian");
-  let greeting = g_greeting(meet, name_player, time_open, christian);
-  let npc_gender = property_get(npc, "gender");
-  let pronouns = g_gender_pronouns(npc_gender);
+  let r7 = await app_g_conversation_pronouns(prayer, npc);
+  let pronouns = property_get(r7, "pronouns");
+  let greeting = property_get(r7, "greeting");
+  let christian = property_get(r7, "christian");
+  let meet = property_get(r7, "meet");
   if (christian) {
     ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
