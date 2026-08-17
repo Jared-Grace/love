@@ -1,8 +1,7 @@
+import { app_g_study_lambda_lambda5 } from "./app_g_study_lambda_lambda5.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_menu_clear_back } from "./app_g_menu_clear_back.mjs";
 import { app_g_chapter_code } from "./app_g_chapter_code.mjs";
-import { g_sermon_generate_upload_path } from "./g_sermon_generate_upload_path.mjs";
-import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
 import { global_function_property_nested_lambda } from "./global_function_property_nested_lambda.mjs";
 import { app_g_gospel } from "./app_g_gospel.mjs";
 import { list_first } from "./list_first.mjs";
@@ -33,9 +32,8 @@ export async function app_g_study_lambda(overlay, player, review, close) {
   app_g_menu_clear_back(overlay, player);
   let chapter_code = app_g_chapter_code();
   async function lambda5() {
-    let destination = g_sermon_generate_upload_path(chapter_code);
-    let o = await firebase_storage_download_json_jg_decompress(destination);
-    return o;
+    let r3 = await app_g_study_lambda_lambda5(chapter_code);
+    return r3;
   }
   let sermons = await global_function_property_nested_lambda(
     app_g_gospel,
