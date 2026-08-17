@@ -1,4 +1,4 @@
-import { js_function_forwarding_removed_holder_is } from "./js_function_forwarding_removed_holder_is.mjs";
+import { js_function_forwarding_removed_holder } from "./js_function_forwarding_removed_holder.mjs";
 import { js_function_forwarding_removed_name } from "./js_function_forwarding_removed_name.mjs";
 import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
 import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
@@ -67,9 +67,9 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (not(agreed_is)) {
     return;
   }
-  let r3 = js_function_forwarding_removed_holder_is(stack);
-  let holder_is = property_get(r3, "holder_is");
+  let r3 = js_function_forwarding_removed_holder(stack);
   let holder = property_get(r3, "holder");
+  let holder_is = property_get(r3, "holder_is");
   if (not(holder_is)) {
     return;
   }
