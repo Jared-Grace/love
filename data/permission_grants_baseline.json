@@ -86,23 +86,23 @@
   },
   {
    "name": "function_rename_commit",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "ai_git_command_args_last",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_rename_if_starts_ends_with_prefix_change",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_rename_names_prefix_change",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_rename_if_starts_with_replace",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "folder_lines_search",
@@ -126,7 +126,7 @@
   },
   {
    "name": "ai_git_command_args",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "git_ac_call_folder_try",
@@ -134,15 +134,15 @@
   },
   {
    "name": "g_sermon_write_lines_file",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "g_sermon_write_lines_file_check",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "g_sermon_pull",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "app_shared_dev_build",

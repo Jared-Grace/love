@@ -50,6 +50,7 @@ import { app_original_bible_gloss_misaligned_gate_run } from "./app_original_bib
 import { bytes_text_try_cases_gate_run } from "./bytes_text_try_cases_gate_run.mjs";
 import { text_replace_once_cases_gate_run } from "./text_replace_once_cases_gate_run.mjs";
 import { ebible_readaloud_lines_gate_run } from "./ebible_readaloud_lines_gate_run.mjs";
+import { ebible_languages_licences_gate_run } from "./ebible_languages_licences_gate_run.mjs";
 import { app_g_day_line_corner_check } from "./app_g_day_line_corner_check.mjs";
 import { ebible_index_flats_union_cases_gate_run } from "./ebible_index_flats_union_cases_gate_run.mjs";
 import { text_lines_search_cases_gate_run } from "./text_lines_search_cases_gate_run.mjs";
@@ -399,6 +400,7 @@ export function qa_gates() {
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
     ebible_readaloud_lines_gate_run,
+    ebible_languages_licences_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
     g_clock_sky_phase_check,

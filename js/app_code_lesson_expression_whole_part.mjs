@@ -1,3 +1,5 @@
+import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
+import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
@@ -7,8 +9,6 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { list_get } from "./list_get.mjs";
-import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -32,9 +32,8 @@ export function app_code_lesson_expression_whole_part() {
   }
   function decoys(question, answer) {
     "tailored wrong answers: the QUOTIENT alone (answer / divisor - forgot to multiply back by the divisor) and the REMAINDER (dividend - answer - the leftover, confused with the whole part). Both fall out of the question's numbers Math.floor(dividend / divisor) * divisor";
-    let nums = text_integers(question);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
+    let dividend = app_code_division_dividend(question);
+    let divisor = app_code_division_divisor(question);
     let quotient = divide(answer, divisor);
     let remainder = subtract(dividend, answer);
     let r = [quotient, remainder];
@@ -61,11 +60,8 @@ export function app_code_lesson_expression_whole_part() {
       html_span_text(parent, "Whole part");
     }
     let rights = ["whole part"];
-    let built = app_code_lesson_name_id_category_then(
-      rights,
-      app_code_category_operators(),
-      paint,
-    );
+    let left = app_code_category_operators();
+    let built = app_code_lesson_name_id_category_then(rights, left, paint);
     return built;
   }
   function above(root) {
