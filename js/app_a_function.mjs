@@ -1,3 +1,4 @@
+import { app_a_function_lambda3 } from "./app_a_function_lambda3.mjs";
 import { app_a_function_download } from "./app_a_function_download.mjs";
 import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
 import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
@@ -9,7 +10,6 @@ import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
-import { app_a_function_import } from "./app_a_function_import.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.mjs";
 import { html_bar_content } from "./html_bar_content.mjs";
@@ -23,11 +23,6 @@ import { app_a } from "./app_a.mjs";
 import { app_a_apps } from "./app_a_apps.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
 import { app_a_function_on_keydown_remove } from "./app_a_function_on_keydown_remove.mjs";
-import { html_pre_text } from "./html_pre_text.mjs";
-import { app_a_overlay_container } from "./app_a_overlay_container.mjs";
-import { app_a_choice_close } from "./app_a_choice_close.mjs";
-import { app_a_overlay_keydown } from "./app_a_overlay_keydown.mjs";
-import { html_loading } from "./html_loading.mjs";
 import { emoji_run } from "./emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "./app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
@@ -44,7 +39,6 @@ import { app_a_functions } from "./app_a_functions.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
   let f_name = app_a_function_name_selected(context);
@@ -53,8 +47,8 @@ export async function app_a_function(context) {
   let root = property_get(context, "root");
   html_clear(root);
   async function upload() {
-    let r2 = await app_a_function_upload();
-    return r2;
+    let r = await app_a_function_upload();
+    return r;
   }
   async function download() {
     let r5 = await app_a_function_download();
@@ -109,30 +103,13 @@ export async function app_a_function(context) {
       shortcut: "r",
       text: emoji_run(),
       fn: async function lambda3() {
-        async function lambda5() {
-          let o = app_a_overlay_keydown(
-            {
-              root: content,
-              app_a_function_on_keydown,
-              context,
-            },
-            on_keydown,
-          );
-          let overlay_close = property_get(o, "overlay_close");
-          let overlay = property_get(o, "overlay");
-          let v = app_a_choice_close(overlay_close);
-          let choices_overlay = [v];
-          function on_keydown(e) {
-            app_a_on_keydown(e, choices_overlay);
-          }
-          let div = app_a_overlay_container(overlay);
-          let fn = await app_a_function_import(f_name);
-          let r = await fn();
-          let j = json_format_to(r);
-          html_pre_text(div, j);
-          app_a_buttons_shortcuts(overlay, choices_overlay);
-        }
-        await html_loading(lambda5);
+        let r6 = await app_a_function_lambda3(
+          content,
+          app_a_function_on_keydown,
+          context,
+          f_name,
+        );
+        return r6;
       },
     },
     {
@@ -208,8 +185,8 @@ export async function app_a_function(context) {
     f_names_local,
   };
   app_a_function_node(a);
-  let v5 = {
+  let v = {
     a,
   };
-  return v5;
+  return v;
 }
