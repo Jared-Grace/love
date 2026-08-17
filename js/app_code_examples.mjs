@@ -1,3 +1,4 @@
+import { app_code_examples_on_batch_item } from "./app_code_examples_on_batch_item.mjs";
 import { app_code_examples_lambda } from "./app_code_examples_lambda.mjs";
 import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
@@ -13,7 +14,6 @@ import { app_code_lesson_first_id } from "./app_code_lesson_first_id.mjs";
 import { app_code_next } from "./app_code_next.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { each } from "./each.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
 import { app_code_batch_item_get } from "./app_code_batch_item_get.mjs";
@@ -59,11 +59,8 @@ export function app_code_examples(context) {
     false,
   );
   function on_batch_item(container, bs) {
-    function lambda2(b) {
-      let ex = property_get(b, "example");
-      ex(container);
-    }
-    each(bs, lambda2);
+    let r2 = app_code_examples_on_batch_item(container, bs);
+    return r2;
   }
   async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
@@ -114,7 +111,7 @@ export function app_code_examples(context) {
   let g = app_code_container_padded_x(root);
   app_code_button_skip_lesson(context, g);
   let text = app_shared_button_home_text();
-  let b2 = app_shared_button_screen_wide(context, app_code_home, g, text);
+  let b = app_shared_button_screen_wide(context, app_code_home, g, text);
   let value = app_shared_spaced_gap();
-  html_style_margin_top(b2, value);
+  html_style_margin_top(b, value);
 }
