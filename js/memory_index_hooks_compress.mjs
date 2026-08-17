@@ -1,7 +1,7 @@
+import { memory_index_hooks_compress_r } from "./memory_index_hooks_compress_r.mjs";
 import { property_get } from "./property_get.mjs";
 import { memory_index_hooks_compress_path } from "./memory_index_hooks_compress_path.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 export async function memory_index_hooks_compress() {
   "Shortens every over-long index line to its own hook plus the bare links it was carrying, and answers which lines changed and by how much.";
   "What is dropped is the second hook a line writes about a note it merely links to. That note already carries the same sentence in its own header, so the index was holding a copy - and it is the copy that overflows the budget the index is read within.";
@@ -14,12 +14,6 @@ export async function memory_index_hooks_compress() {
   let lines = await memory_index_lines();
   let r2 = memory_index_hooks_compress_path(lines);
   let path = property_get(r2, "path");
-  let rebuilt = property_get(r2, "rebuilt");
-  let shortened = property_get(r2, "shortened");
-  await file_overwrite(path, rebuilt);
-  let r = {
-    lines: shortened.length,
-    shortened,
-  };
+  let r = await memory_index_hooks_compress_r(r2, path);
   return r;
 }
