@@ -1,3 +1,4 @@
+import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
 import { week_calendar_paint } from "./week_calendar_paint.mjs";
@@ -11,7 +12,6 @@ import { subtract } from "./subtract.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -107,13 +107,19 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     }
   }
   function cell_pressed(day, slot) {
-    let has_anchor = not_equal(anchor, null);
-    if (has_anchor) {
-      anchor_click(day, slot);
-    } else {
-      free_click(day, slot);
-    }
-    week_calendar_paint(records, paint_record, summary, ranges, summary_line);
+    let r3 = week_calendar_cell_pressed(
+      day,
+      slot,
+      anchor,
+      anchor_click,
+      free_click,
+      records,
+      paint_record,
+      summary,
+      ranges,
+      summary_line,
+    );
+    return r3;
   }
   function anchor_click(day, slot) {
     let same_piece = equal(anchor.day, day) && equal(anchor.slot, slot);
