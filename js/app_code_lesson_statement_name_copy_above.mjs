@@ -1,3 +1,5 @@
+import { text_empty } from "./text_empty.mjs";
+import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
@@ -15,15 +17,20 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 export function app_code_lesson_statement_name_copy_above(root) {
   arguments_assert(arguments, 1);
-  ("the boxes read before the first question: two cups with different things in them, a third cup filled from one of the two, and the same thing written as code");
-  ("The cups are drawn twice over, and the second row is the first row with a cup added to the end of it. Everything a learner has to see is what changed between the two pictures, so nothing that did not change is allowed to move.");
-  ("Both of the first two cups still hold what they held. A cup filled from another cup is the one place a learner will expect something to have been poured out, and the picture answers that before the code raises it - the row says it, and the words under the row say it again for anyone who read the row as decoration.");
+  ("the cup boxes read before the first question: two cups got and then filled, a third cup got and then filled from one of them, and nothing taken out of anything");
+  ("Every cup is drawn empty before it is drawn full, and the two are said in two sentences. Getting a cup and putting something in it are two things a person does, and the whole lesson is about the second one happening to a cup that already exists - so a row of full cups appearing at the word suppose would be the two steps shown as one, and the one being taught is the one that got hidden.");
+  ("Nothing that has already been drawn moves. Each row is the row above it with one cup changed, standing in the same place, so what a learner has to see is the only thing that is different - and a cup that shifted along would be a second difference with nothing to say.");
+  ("The filling is done by a person who is asked to go and look. A cup cannot be poured into another cup without emptying, which is exactly the reading the lesson has to prevent, so the story never pours: someone looks inside one cup, sees what is there, and fetches more of the same. That is what the code does, said in a way a learner can watch.");
+  ("It is said twice that the first cup lost nothing - once in what the person did, and once flatly afterwards. This is the one thing every learner gets wrong here, and it is worth the second line.");
   ("The third cup is a new cup rather than one of the two, so the screen never has to say that a name was given something twice. That was the lesson before, it is settled, and putting it here would give a learner two reasons for a word to have moved.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let name_copy = app_code_lesson_statement_name_copy_name();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
+  let nothing = text_empty();
+  let cup_first = [word_first, name_first];
+  let cup_last = [word_last, name_last];
   let box_have = app_code_container_light_blue(root);
   html_div_cycle_code(box_have, [
     "Suppose you had two cups, one called ",
@@ -32,54 +39,69 @@ export function app_code_lesson_statement_name_copy_above(root) {
     name_last,
   ]);
   app_code_lesson_cups_row_holding(box_have, [
-    [word_first, name_first],
-    [word_last, name_last],
+    [nothing, name_first],
+    [nothing, name_last],
   ]);
+  html_div_cycle_code(box_have, [
+    "Suppose cup ",
+    name_first,
+    " has ",
+    word_first,
+    " and cup ",
+    name_last,
+    " has ",
+    word_last,
+  ]);
+  app_code_lesson_cups_row_holding(box_have, [cup_first, cup_last]);
   let box_new = app_code_container_light_blue(root);
+  html_div_cycle_code(box_new, ["Suppose you have a third cup ", name_copy]);
+  app_code_lesson_cups_row_holding(box_new, [
+    cup_first,
+    cup_last,
+    [nothing, name_copy],
+  ]);
   html_div_cycle_code(box_new, [
-    "Now suppose you got another cup and called it ",
+    "Suppose you asked someone to look inside cup ",
+    name_first,
+    ", and whatever was in cup ",
+    name_first,
+    ", also put some in cup ",
     name_copy,
   ]);
   html_div_cycle_code(box_new, [
-    "And you put in it whatever is inside the cup called ",
     name_first,
+    " has ",
+    word_first,
+    ", so suppose they found some more ",
+    word_first,
+    " and put those ",
+    word_first,
+    " in cup ",
+    name_copy,
   ]);
   app_code_lesson_cups_row_holding(box_new, [
-    [word_first, name_first],
-    [word_last, name_last],
+    cup_first,
+    cup_last,
     [word_first, name_copy],
   ]);
   html_div_cycle_code(box_new, [
-    "So both of them have ",
+    "So now cups ",
+    name_first,
+    " and ",
+    name_copy,
+    " both have ",
     word_first,
-    " in them now",
+    " in them",
   ]);
   html_div_cycle_code(box_new, [
-    "Nothing came out of the cup called ",
+    "No ",
+    word_first,
+    " were removed from cup ",
     name_first,
-  ]);
-  let box_code = app_code_container_light_blue(root);
-  let quoted_first = app_code_string_code(word_first);
-  let held_first = js_code_let_statement(name_first, quoted_first);
-  let quoted_last = app_code_string_code(word_last);
-  let held_last = js_code_let_statement(name_last, quoted_last);
-  let copied = js_code_let_statement(name_copy, name_first);
-  let logged = js_code_console_log_statement(name_copy);
-  html_div_cycle_code(box_code, ["In JS we make the two cups like this"]);
-  html_div_code(box_code, held_first);
-  html_div_code(box_code, held_last);
-  html_div_cycle_code(box_code, [
-    "Then we make ",
-    name_copy,
-    " and fill it from ",
-    name_first,
-  ]);
-  html_div_code(box_code, copied);
-  html_div_cycle_code(box_code, [
-    "Then we write out what is inside ",
+    ", they found some other ",
+    word_first,
+    " to put in cup ",
     name_copy,
   ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word_first);
-  app_code_lesson_name_no_quotes_box(root, name_first, name_copy);
+  app_code_lesson_statement_name_copy_code_box(root);
 }
