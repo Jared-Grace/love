@@ -1,3 +1,4 @@
+import { app_calendar_paste_convert_lambda } from "./app_calendar_paste_convert_lambda.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { country_philippines } from "./country_philippines.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -6,15 +7,12 @@ import { list_add } from "./list_add.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { date_time_zone_format_to } from "./date_time_zone_format_to.mjs";
 import { date_time_zone_format_date_day_first } from "./date_time_zone_format_date_day_first.mjs";
-import { date_time_zone_format_to_time_space } from "./date_time_zone_format_to_time_space.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_skip_end_count } from "./text_skip_end_count.mjs";
 import { integer_to_try_is } from "./integer_to_try_is.mjs";
 import { text_last } from "./text_last.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { date_time_zone_set_zone } from "./date_time_zone_set_zone.mjs";
 import { date_time_zone_future_is_assert_multiple } from "./date_time_zone_future_is_assert_multiple.mjs";
 import { app_calendar_paste_convert_parse } from "./app_calendar_paste_convert_parse.mjs";
 import { text_split_dash_en } from "./text_split_dash_en.mjs";
@@ -62,24 +60,8 @@ export function app_calendar_paste_convert(input, country) {
   object_merge(speaker_info, speaker_country);
   let formats = [converted_info, speaker_info];
   function lambda(item) {
-    let start_inner = property_get(item, "start");
-    let zone_inner = property_get(item, "zone");
-    let name = property_get(item, "name");
-    let parenthesis = property_get(item, "parenthesis");
-    let flag = property_get(item, "flag");
-    let start_zoned = date_time_zone_set_zone(start_inner, zone_inner);
-    let start_formatted = date_time_zone_format_to_time_space(start_zoned);
-    let t = text_combine_multiple([
-      name,
-      " Meeting start time: ",
-      start_formatted,
-      " ",
-      flag,
-    ]);
-    if (parenthesis) {
-      t = text_wrap_parenthesis(t);
-    }
-    return t;
+    let r6 = app_calendar_paste_convert_lambda(item);
+    return r6;
   }
   let list = list_map(formats, lambda);
   let r = date_time_zone_format_date_day_first();
