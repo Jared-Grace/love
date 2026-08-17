@@ -39,7 +39,7 @@ export function app_code_lesson_quiz_r(
   let on_next = property_get(r4, "on_next");
   let last_lesson_end = property_get(r4, "last_lesson_end");
   let r = property_get(r4, "r");
-  return {
+  let r2 = {
     container_success_message,
     container_correction,
     parent_container,
@@ -58,4 +58,5 @@ export function app_code_lesson_quiz_r(
     last_lesson_end,
     r,
   };
+  return r2;
 }
