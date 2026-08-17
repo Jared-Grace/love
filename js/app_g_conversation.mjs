@@ -1,3 +1,4 @@
+import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
 import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
 import { app_g_conversation_render_openers } from "./app_g_conversation_render_openers.mjs";
@@ -24,7 +25,6 @@ import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
-import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
@@ -245,25 +245,21 @@ export async function app_g_conversation(
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What do you want to do?");
     async function pray() {
-      await app_g_conversation_advance(steps, steps_total);
-      async function on_part() {
-        await app_g_conversation_advance(steps, steps_total);
-      }
-      function on_prayed() {
-        prayed.done = true;
-        app_g_conversation_render(
-          overlay,
-          remaining,
-          render_openers,
-          leave,
-          prayed,
-          render_pray,
-          converts,
-          npc,
-          goodbye,
-        );
-      }
-      app_g_pray_turn(some_prayers, on_part, on_prayed);
+      let r6 = await app_g_conversation_pray(
+        steps,
+        steps_total,
+        prayed,
+        overlay,
+        remaining,
+        render_openers,
+        leave,
+        render_pray,
+        converts,
+        npc,
+        goodbye,
+        some_prayers,
+      );
+      return r6;
     }
     let left5 = emoji_pray();
     let text2 = text_combine(left5, " Pray");
