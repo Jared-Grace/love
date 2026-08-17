@@ -1,3 +1,4 @@
+import { app_g_dev_routes_dove } from "./app_g_dev_routes_dove.mjs";
 import { app_g_dev_routes_pray } from "./app_g_dev_routes_pray.mjs";
 import { app_g_dev_routes_day_parts } from "./app_g_dev_routes_day_parts.mjs";
 import { app_g_dev_routes_quick } from "./app_g_dev_routes_quick.mjs";
@@ -21,10 +22,8 @@ import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
 import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
 import { app_g_view_phase_disciple } from "./app_g_view_phase_disciple.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
-import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
 import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
-import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 export function app_g_dev_routes(div_map) {
@@ -74,10 +73,8 @@ export function app_g_dev_routes(div_map) {
     app_g_prayer_overlay();
   }
   async function dove() {
-    await app_g_view_set(null);
-    await g_verses_hs_warning_prepare();
-    let stays = null;
-    app_g_discern_prevented_overlay(stays);
+    let r4 = await app_g_dev_routes_dove();
+    return r4;
   }
   async function gratitude() {
     await app_g_view_set(null);
