@@ -19,7 +19,9 @@ export function app_code_lesson_name_no_quotes_box(
   ("The wrong one is shown last rather than first. Shown first it is the shape a learner carries down the screen, and every question after it is read through the mistake; shown last it is met as something already ruled out.");
   ("The word inside wears the coloured tile, as it does on the screen about which name comes out, because it is the same distinction said again - what is being talked about is the thing in the cup and not the writing on the cup.");
   ("What is actually in the cup is named at the end of the second line rather than left to be remembered. Everything else on the line is said in names - the cup called this gets what is inside the cup called that - and a learner can follow all of it without once holding in mind what that cup has in it, which is the one thing the line is about.");
+  ("The mark itself is shown on the line that says it is missing. A reader who has met quote marks only as something a word is written between has no picture to go with the phrase, and the one being talked about here is absent from the line being pointed at - so the words alone leave them looking for a thing that is not there. Shown the character, they know what they are failing to find. It is the same mark, shown the same way, on the last line of the box where the line does have it, so the two lines differ in what they say and not in how they say it.");
   let box = app_code_container_light_blue(root);
+  let quote = js_string_quote();
   let quoted_word = app_code_string_code(word_source);
   let line_plain = js_code_let_statement(name_copy, name_source);
   let line_one = html_div(box);
@@ -27,7 +29,9 @@ export function app_code_lesson_name_no_quotes_box(
   html_span_text_code_dark(line_one, name_source);
   html_span_text(line_one, " in ");
   html_span_text_code_dark(line_one, line_plain);
-  html_span_text(line_one, " has no quote marks round it");
+  html_span_text(line_one, " has no quote marks ");
+  html_span_text_code_dark(line_one, quote);
+  html_span_text(line_one, " around it");
   let line_two = html_div(box);
   html_span_text(line_two, "So the cup called ");
   html_span_text_code_dark(line_two, name_copy);
