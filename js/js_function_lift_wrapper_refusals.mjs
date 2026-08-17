@@ -1,3 +1,5 @@
+import { js_functions_nested_named } from "./js_functions_nested_named.mjs";
+import { js_functions_named_ambiguous_is } from "./js_functions_named_ambiguous_is.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { js_node_self_read_is } from "./js_node_self_read_is.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
@@ -23,6 +25,15 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
     list_add(refusals, {
       why: "this function writes to a name it reached out for, and a parameter would only be a copy of it, so the write would stop reaching the line waiting to read it. Would you like it to hand the new value back instead?",
       written_closed,
+    });
+  }
+  ("Read from the same list the move's own finder will read, so the two cannot disagree about a word. Three functions inside one of these answered to lambda2 at once - names handed out to nameless functions are kept apart only within the file as it stood when each was handed out - and the finder stopped the whole walk on the first of them rather than this saying so first.");
+  let named = js_functions_nested_named(ast);
+  let ambiguous_is = js_functions_named_ambiguous_is(named, name_old);
+  if (ambiguous_is) {
+    list_add(refusals, {
+      why: "more than one function written inside this one answers to the same word, so there is no way to say which of them was meant. Would you like to give the one you mean a name of its own first?",
+      name_old,
     });
   }
   ("Asked of the body alone rather than of the whole function, because a name is written once at the head of every function and a reading that counted that would call every one of them a function that calls itself.");
