@@ -1,3 +1,4 @@
+import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
 import { api_read_or } from "./api_read_or.mjs";
 import { app_g_verify_home_verse_bar } from "./app_g_verify_home_verse_bar.mjs";
 import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
@@ -12,7 +13,6 @@ import { g_verify_chapter_storage_key } from "./g_verify_chapter_storage_key.mjs
 import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { api_read } from "./api_read.mjs";
-import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -109,10 +109,8 @@ export async function app_g_verify_home(context) {
     html_clear(root);
     let passages = property_get(chapter_shown, "passages");
     function lambda(a, b) {
-      let na = Number(property_get(a, "verse_numbers")[0]);
-      let nb = Number(property_get(b, "verse_numbers")[0]);
-      let difference = subtract(na, nb);
-      return difference;
+      let r = app_g_verify_home_lambda(a, b);
+      return r;
     }
     passages = passages.slice().sort(lambda);
     let busy = property_get(status_shown, "busy");
