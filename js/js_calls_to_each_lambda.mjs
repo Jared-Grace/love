@@ -1,4 +1,4 @@
-import { js_calls_to_each_lambda_n } from "./js_calls_to_each_lambda_n.mjs";
+import { js_calls_to_each_lambda_name } from "./js_calls_to_each_lambda_name.mjs";
 import { js_calls_to_each_lambda_array_expression } from "./js_calls_to_each_lambda_array_expression.mjs";
 import { js_calls_to_each_lambda_lambda6 } from "./js_calls_to_each_lambda_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -39,9 +39,9 @@ export async function js_calls_to_each_lambda(v, ast) {
   } else {
     call2 = expression2;
   }
-  let r2 = js_calls_to_each_lambda_n(call2);
-  let n = property_get(r2, "n");
+  let r2 = js_calls_to_each_lambda_name(call2);
   let name = property_get(r2, "name");
+  let n = property_get(r2, "n");
   if (n) {
     return;
   }
