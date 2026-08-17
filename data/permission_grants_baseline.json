@@ -155,6 +155,18 @@
   {
    "name": "function_delete_unused_multiple",
    "refusals": 1
+  },
+  {
+   "name": "function_delete_unused",
+   "refusals": 1
+  },
+  {
+   "name": "html_public_from_latest",
+   "refusals": 1
+  },
+  {
+   "name": "scripts_temp_delete",
+   "refusals": 1
   }
  ]
 }
