@@ -16,6 +16,7 @@ export function ebible_versions_preferred() {
     deu: "deu1951",
     ukr: "ukrfb",
     srp: "srponspc",
+    nld: "nldnbg",
   };
   ("eng - the Berean Standard Bible. Modern English, word for word rather than thought for thought, and in the public domain. It also settles a second thing nothing else could: the interlinear this repo already ships is the Berean, so the English a reader is shown and the original words underneath it are the same translators' work. The twenty five others holding all sixty six books are either from before 1900 - King James, Geneva, Darby, Douay-Rheims, Young, Webster, Tyndale, Wycliffe, the American Standard of 1901 - or say in their own titles that they retell rather than translate: Basic English, Translation for Translators, the Free Bible Version.");
   ("spa - Santa Biblia libre para el mundo. The five it beats name their own case: Español Sencillo is simplified, Nueva Biblia Viva is a living bible, Palabra de Dios para ti is written for a reader rather than from a text, and Reina Valera here is the 1909 printing.");
@@ -29,5 +30,6 @@ export function ebible_versions_preferred() {
   ("deu - Schlachter 1951, the only one of the four later than 1920. Luther 1912, the unrevised Elberfelder and the Textbibel are all older German still.");
   ("ukr - Bibliia svobody, which holds all sixty six books. The one it beats dates itself 1905 in its own title.");
   ("srp - Biblica's Novi srpski prevod in Cyrillic, the script Serbian is official in. The one it beats is the Danicic and Karadzic of 1865, which is further from spoken Serbian than any of the others here are from theirs.");
+  ("nld - the NBG-vertaling of 1951, which holds all sixty six books and is the one this repo already shipped. The two complete Dutch texts it beats date themselves 1917 and 1939 in their own titles, and the third is a New Testament only. It is here rather than left to how full each one is because three of the four are complete and would tie.");
   return preferred;
 }
