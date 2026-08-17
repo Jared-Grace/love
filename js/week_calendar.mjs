@@ -1,10 +1,10 @@
+import { week_calendar_handle } from "./week_calendar_handle.mjs";
 import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
 import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
-import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
@@ -82,12 +82,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   function endpoint_back_up(day, slot) {
     let next = [];
     function handle(span) {
-      let covers = week_calendar_range_covers(span, day, slot);
-      if (not(covers)) {
-        list_add(next, span);
-      } else {
-        far_anchor_set(span, slot);
-      }
+      let r4 = week_calendar_handle(span, day, slot, next, far_anchor_set);
+      return r4;
     }
     each(ranges, handle);
     ranges = next;
