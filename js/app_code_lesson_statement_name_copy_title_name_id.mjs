@@ -1,4 +1,4 @@
-import { app_code_lesson_statement_name_copy_name } from "./app_code_lesson_statement_name_copy_name.mjs";
+import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +11,7 @@ export function app_code_lesson_statement_name_copy_title_name_id() {
   ("Only what is painted changes; the id is built from the words below.");
   let words = "giving a name what another name holds";
   let name_source = app_code_lesson_statement_name_value_name();
-  let name_copy = app_code_lesson_statement_name_copy_name();
+  let name_copy = app_code_lesson_statement_name_third();
   let code = js_code_let_statement(name_copy, name_source);
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;

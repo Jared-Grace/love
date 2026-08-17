@@ -5,7 +5,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_lesson_statement_name_copy_name } from "./app_code_lesson_statement_name_copy_name.mjs";
+import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_copy_above(root) {
   ("The third cup is a new cup rather than one of the two, so the screen never has to say that a name was given something twice. That was the lesson before, it is settled, and putting it here would give a learner two reasons for a word to have moved.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let name_copy = app_code_lesson_statement_name_copy_name();
+  let name_copy = app_code_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   let nothing = text_empty();
