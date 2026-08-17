@@ -13,6 +13,7 @@ export async function ebible_chapters_each_verses_list(
 ) {
   "Every chapter a bible names, each with its verses.";
   "Four chapters were once passed over here by name, because their pages were missing while the book index still linked them. That is a fault in a download rather than in a bible, and the remedy is to fetch the version again - hausa Daniel 14 was linked but never shipped, and ebible.org has since dropped the link. A chapter skipped by name is worse than the error it hides: the list goes stale in silence, and three of those four named versions this repo no longer ships at all.";
+  "A chapter that answers with nothing is passed over here, and that is not the skipping the paragraph above refuses. That one worked from a list of names written by hand, which is what let it go stale. This one asks the chapter itself every time: a chapter is passed over only while its own two readings disagree about how many verses it has, and it comes back on its own the moment they agree. How many are being passed over is written down and gated, so the number is watched rather than forgotten.";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(books, "book_code");
   await each_async(chapter_codes, lambda);
