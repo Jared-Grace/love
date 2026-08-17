@@ -1,38 +1,24 @@
+import { app_verses_counts } from "./app_verses_counts.mjs";
 import { app_verses_display_group } from "./app_verses_display_group.mjs";
 import { app_verses_copy } from "./app_verses_copy.mjs";
-import { app_shared_bible_verses_counts } from "./app_shared_bible_verses_counts.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
-import { app_shared_bible_hash_to_languages_chosen_or } from "./app_shared_bible_hash_to_languages_chosen_or.mjs";
-import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_verses_counts_refresh } from "./app_verses_counts_refresh.mjs";
 import { app_verses_display } from "./app_verses_display.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
 import { app_verses_references_to_groups } from "./app_verses_references_to_groups.mjs";
-import { app_verses_order_standalone_first } from "./app_verses_order_standalone_first.mjs";
-import { language_code_key } from "./language_code_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
-import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
 import { uplifting_package_get } from "./uplifting_package_get.mjs";
 import { app_shared_message_overlay } from "./app_shared_message_overlay.mjs";
 import { browser_online_is } from "./browser_online_is.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { uplifting_references_get } from "./uplifting_references_get.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { list_copy } from "./list_copy.mjs";
-import { html_centered } from "./html_centered.mjs";
-import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
-import { app_shared_language_codes_saved_or } from "./app_shared_language_codes_saved_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { list_join_plus } from "./list_join_plus.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
@@ -41,7 +27,6 @@ import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -64,48 +49,18 @@ export async function app_verses(context) {
     return;
   }
   let r = await app_reply_initialize(context);
-  let root = property_get(r, "root");
-  let languages_chosen_default = app_reply_languages_chosen_default();
-  let property_name = language_code_key();
-  let default_codes = list_map_property(
-    languages_chosen_default,
-    property_name,
-  );
-  let default_l = list_join_plus(default_codes);
-  let remembered_l = app_shared_language_codes_saved_or(default_l);
-  ("a url hash wins over the remembered choice, so a shared link still opens in the languages it names");
-  let language_codes = app_shared_bible_hash_to_languages_chosen_or(
-    hash,
-    remembered_l,
-  );
-  let languages_chosen = ebible_languages_from_codes(language_codes);
-  let verse_groups = [];
-  let verse_count = 1;
-  let offline_notified = false;
-  let apply_seq = 0;
-  let chosen_references = [];
-  ("the list of which verses to draw from lives in firebase as data, not baked into this app, so it can change without a rebuild; until it loads (or if offline with a cold cache) order stays empty and a returning reader still sees their last saved draw");
-  let order = [];
-  let references_source = await uplifting_references_get();
-  let have_references = null_not_is(references_source);
-  if (have_references) {
-    order = list_copy(references_source);
-    list_shuffle(order);
-    app_verses_order_standalone_first(order);
-  }
-  let bc = app_shared_bar_content_root(root);
-  let bar = property_get(bc, "bar");
-  let content = property_get(bc, "content");
-  app_shared_content_column_pad(content);
-  html_centered(bar);
-  app_shared_bible_languages_gear(bar, content, language_codes);
-  app_shared_text_body(
+  let {
+    languages_chosen,
+    verse_groups,
+    verse_count,
+    offline_notified,
+    apply_seq,
+    chosen_references,
+    order,
     content,
-    "1. Tap the ⚙️ button above to choose which language or languages your verses appear in.",
-  );
-  let card = app_shared_container_blue(content);
-  app_shared_text_body(card, "2. How many Bible verses would you like?");
-  let counts = app_shared_bible_verses_counts();
+    card,
+    counts,
+  } = await app_verses_counts(r, hash);
   let count_updates = [];
   function count_each(c) {
     let component = null;
