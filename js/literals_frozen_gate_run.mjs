@@ -1,3 +1,4 @@
+import { literals_frozen_gate_run_recorded } from "./literals_frozen_gate_run_recorded.mjs";
 import { literals_frozen_gate_run_moved } from "./literals_frozen_gate_run_moved.mjs";
 import { literals_frozen_gate_run_r } from "./literals_frozen_gate_run_r.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,12 +12,11 @@ export async function literals_frozen_gate_run() {
   let r2 = await literals_frozen_gate_run_moved();
   let moved = property_get(r2, "moved");
   let arrived = property_get(r2, "arrived");
-  let r3 = property_get(r2, "r3");
-  let names = property_get(r2, "names");
-  let r4 = property_get(r2, "r4");
-  let gone = property_get(r4, "gone");
-  let fresh = property_get(r4, "fresh");
+  let r3 = literals_frozen_gate_run_recorded(r2);
   let recorded = property_get(r3, "recorded");
+  let fresh = property_get(r3, "fresh");
+  let gone = property_get(r3, "gone");
+  let names = property_get(r3, "names");
   let r = literals_frozen_gate_run_r(
     recorded,
     arrived,
