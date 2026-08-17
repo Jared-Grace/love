@@ -1,3 +1,4 @@
+import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
 import { js_function_forwarding_removed_callee } from "./js_function_forwarding_removed_callee.mjs";
 import { js_function_answer_dropped_is } from "./js_function_answer_dropped_is.mjs";
 import { function_async_is } from "./function_async_is.mjs";
@@ -9,7 +10,6 @@ import { equal_not } from "./equal_not.mjs";
 import { js_name_variable_declared_is } from "./js_name_variable_declared_is.mjs";
 import { js_call_argument_site } from "./js_call_argument_site.mjs";
 import { not } from "./not.mjs";
-import { function_parameter_call_sizes } from "./function_parameter_call_sizes.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_all_equal_to } from "./list_all_equal_to.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -61,9 +61,7 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (not(callee_is)) {
     return;
   }
-  let receiver = property_get(callee, "name");
-  let index = property_get(site, "index");
-  let sizes = await function_parameter_call_sizes(receiver, index);
+  let sizes = await js_function_forwarding_removed_sizes(callee, site);
   if (equal(sizes, null)) {
     return;
   }
