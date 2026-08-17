@@ -1,6 +1,5 @@
+import { literals_marked_both_ways_frozen_sites } from "./literals_marked_both_ways_frozen_sites.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
-import { repo_functions_code } from "./repo_functions_code.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_text_includes } from "./property_text_includes.mjs";
 import { function_ast } from "./function_ast.mjs";
@@ -20,12 +19,13 @@ export async function literals_marked_both_ways() {
   "The same spelling in two files is not always a contradiction. A lesson may teach a word as its subject while a gate names a function that happens to share it, and neither is wrong. So this only reports; what refuses is the ratchet beside it, which lets the ones already here stand one at a time and stops a new one appearing.";
   "The frozen words are gathered first and each is then looked for by its own exact spelling, rather than reading every tree in the repo. Nearly every file in the repo names a function somewhere, so a sweep keyed on the reference marker would open all of them - which is the reading measured at thirteen minutes on the check beside this one.";
   let repo_name = repo_love_name();
-  let entries = await repo_functions_code(repo_name);
-  let frozen_marker = fn_name("text_frozen");
-  let reference_marker = fn_name("fn_name");
-  let frozen_needle = text_combine_multiple([frozen_marker, "("]);
-  let reference_prefix = text_combine_multiple([reference_marker, '("']);
-  let frozen_sites = [];
+  let r = await literals_marked_both_ways_frozen_sites(repo_name);
+  let frozen_sites = property_get(r, "frozen_sites");
+  let reference_prefix = property_get(r, "reference_prefix");
+  let frozen_needle = property_get(r, "frozen_needle");
+  let reference_marker = property_get(r, "reference_marker");
+  let frozen_marker = property_get(r, "frozen_marker");
+  let entries = property_get(r, "entries");
   for (let entry of entries) {
     let candidate = property_get(entry, "name");
     let freezes = property_text_includes(entry, "code", frozen_needle);
