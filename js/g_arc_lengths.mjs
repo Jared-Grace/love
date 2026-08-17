@@ -1,9 +1,9 @@
+import { g_arc_lengths_npcs_floor_met } from "./g_arc_lengths_npcs_floor_met.mjs";
 import { g_arc_lengths_npcs_minimum } from "./g_arc_lengths_npcs_minimum.mjs";
 import { g_arc_lengths_v } from "./g_arc_lengths_v.mjs";
 import { g_arc_lengths_question_turns } from "./g_arc_lengths_question_turns.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 export async function g_arc_lengths(chapter) {
   "Works out how long each arc in one chapter should be, from the settings and the chapter's own sermon lines - so the npc count falls out as the length of the list rather than being chosen.";
   "Lengths are in TURNS, and this function deliberately says nothing about days or conversations. It CANNOT: which leader arcs are running and whether extra preaching has pushed the chapter out of sync are both unknown here, and both decide how the turns fall across days. So generation hands over turns, and a later scheduling pass - which knows those things - cuts them into conversations and places them.";
@@ -17,15 +17,16 @@ export async function g_arc_lengths(chapter) {
   let r5 = property_get(r2, "r5");
   let r3 = g_arc_lengths_v(r2, r5, settings);
   let r4 = g_arc_lengths_npcs_minimum(r3, settings);
-  let npcs_minimum = property_get(r4, "npcs_minimum");
-  let npcs = property_get(r4, "npcs");
-  let turns_unspent = property_get(r4, "turns_unspent");
-  let lengths = property_get(r4, "lengths");
-  let cap = property_get(r4, "cap");
-  let arc_turns = property_get(r4, "arc_turns");
-  let matches = property_get(r4, "matches");
-  let lines = property_get(r4, "lines");
-  let npcs_floor_met = greater_than_equal(npcs, npcs_minimum);
+  let r6 = g_arc_lengths_npcs_floor_met(r4);
+  let npcs_floor_met = property_get(r6, "npcs_floor_met");
+  let lines = property_get(r6, "lines");
+  let matches = property_get(r6, "matches");
+  let arc_turns = property_get(r6, "arc_turns");
+  let cap = property_get(r6, "cap");
+  let lengths = property_get(r6, "lengths");
+  let turns_unspent = property_get(r6, "turns_unspent");
+  let npcs = property_get(r6, "npcs");
+  let npcs_minimum = property_get(r6, "npcs_minimum");
   let r = {
     chapter,
     lines,
