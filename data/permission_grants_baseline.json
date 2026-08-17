@@ -143,6 +143,10 @@
   {
    "name": "g_sermon_pull",
    "refusals": 1
+  },
+  {
+   "name": "app_shared_dev_build",
+   "refusals": 1
   }
  ]
 }
