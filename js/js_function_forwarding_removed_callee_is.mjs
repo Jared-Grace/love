@@ -6,8 +6,9 @@ export function js_function_forwarding_removed_callee_is(site) {
   let call = property_get(site, "call");
   let callee = property_get(call, "callee");
   let callee_is = js_node_type_is(callee, "Identifier");
-  return {
+  let r = {
     callee,
     callee_is,
   };
+  return r;
 }

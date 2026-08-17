@@ -55,7 +55,9 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (equal(site, null)) {
     return;
   }
-  let { callee, callee_is } = js_function_forwarding_removed_callee_is(site);
+  let r = js_function_forwarding_removed_callee_is(site);
+  let callee_is = property_get(r, "callee_is");
+  let callee = property_get(r, "callee");
   if (not(callee_is)) {
     return;
   }
