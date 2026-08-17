@@ -1,10 +1,9 @@
-import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 export function app_code_lesson_statement_name_value_batch() {
@@ -13,8 +12,7 @@ export function app_code_lesson_statement_name_value_batch() {
   ("All four are the same two lines with a different word in them, because the one thing being asked is whether a name hands back what was put under it. A second shape on the same screen would be a second question.");
   ("The four words are different from each other, because the wrong answers a question offers are the other questions' answers, and two questions coming out the same would put two right buttons on one screen.");
   ("The words are the ones the string lessons draw from, so the only thing here a learner has not met is the name.");
-  let names = app_code_lesson_statement_name_value_names();
-  let name = list_first(names);
+  let name = app_code_lesson_statement_name_value_name();
   function program_of(word) {
     "the two lines that give one word a name and write that name out";
     let quoted = app_code_string_code(word);
