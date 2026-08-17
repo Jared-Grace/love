@@ -36,6 +36,8 @@ export function app_code_cup(parent, inside, name) {
   });
   ("the bowl hangs from the widest line of the rim, which is halfway down the ellipse - so it is pulled up by half the rim's height and its sides carry on from exactly where the rim is widest. It has no top edge of its own, because the rim is its top edge.");
   ("It stands taller than what is in it, so there is glass above the grapes. A cup filled level with its own rim reads as a bowl.");
+  ("The wall curves nearly the whole way down rather than dropping straight and then turning. The corner it is rounded by is half the cup wide and almost the whole cup tall, so the two arcs run from just under the rim right down to where they meet in the middle of the base - which is a chalice, widest where you drink from it and narrowing all the way. A round corner as tall as it is wide gives the other thing entirely: a straight-sided tumbler with a half-circle stuck on the bottom.");
+  ("A little of the wall is left straight just under the rim, which is what reads as the flare. Curved from the very first pixel, the cup closes in immediately and looks like a bud.");
   let bowl = html_div(cup);
   html_style_assign(bowl, {
     "box-sizing": "border-box",
@@ -46,8 +48,8 @@ export function app_code_cup(parent, inside, name) {
     "border-left": border,
     "border-right": border,
     "border-bottom": border,
-    "border-bottom-left-radius": "1.75em",
-    "border-bottom-right-radius": "1.75em",
+    "border-bottom-left-radius": "1.75em 3.2em",
+    "border-bottom-right-radius": "1.75em 3.2em",
     "background-color": "transparent",
     "padding-top": "0.95em",
     display: "flex",
