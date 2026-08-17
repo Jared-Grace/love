@@ -1,6 +1,6 @@
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
 import { app_code_lesson_statement_name_identifier_word } from "./app_code_lesson_statement_name_identifier_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
@@ -8,7 +8,6 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { emoji_grape } from "./emoji_grape.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -23,7 +22,6 @@ export function app_code_lesson_statement_name_identifier_above(root) {
   let name = app_code_lesson_statement_name_identifier_name();
   let word = app_code_lesson_statement_name_identifier_word();
   let grapes = app_code_lesson_statement_name_value_word();
-  let grape = emoji_grape();
   let box_before = app_code_container_light_blue(root);
   html_div_cycle_code(box_before, [
     "Remember, a variable has a name, and holds one value",
@@ -32,12 +30,12 @@ export function app_code_lesson_statement_name_identifier_above(root) {
     "So far every cup has been called ",
     name_before,
   ]);
-  app_code_cup(box_before, grape, name_before);
+  app_code_lesson_cup_fruit(box_before, grapes, name_before);
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
   let box_any = app_code_container_light_blue(root);
   html_div_cycle_code(box_any, ["But you can call a cup whatever you like"]);
   html_div_cycle_code(box_any, ["Suppose you called this one ", name]);
-  app_code_cup(box_any, grape, name);
+  app_code_lesson_cup_fruit(box_any, grapes, name);
   html_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);
   let box_id = app_code_container_light_blue(root);
