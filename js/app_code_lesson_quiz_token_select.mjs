@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_token_select_buttons } from "./app_code_lesson_quiz_token_select_buttons.mjs";
+import { app_code_lesson_quiz_token_select_chosen } from "./app_code_lesson_quiz_token_select_chosen.mjs";
 import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
@@ -45,11 +45,11 @@ export function app_code_lesson_quiz_token_select(
     qa,
     answer_div,
   );
-  let r2 = app_code_lesson_quiz_token_select_buttons(r);
-  let buttons = property_get(r2, "buttons");
-  let variations = property_get(r2, "variations");
+  let r2 = app_code_lesson_quiz_token_select_chosen(r);
+  let chosen = property_get(r2, "chosen");
   let tokens_unique = property_get(r2, "tokens_unique");
-  let chosen = [];
+  let variations = property_get(r2, "variations");
+  let buttons = property_get(r2, "buttons");
   function lambda(token) {
     let b = app_shared_button(parent, token, on_click);
     html_style_code_dark(b);
