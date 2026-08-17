@@ -1,14 +1,9 @@
-import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
-import { equal } from "./equal.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_glyph_coverage_curve_occurrences_descending } from "./bible_glyph_coverage_curve_occurrences_descending.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { round } from "./round.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { divide } from "./divide.mjs";
@@ -23,35 +18,15 @@ export async function bible_glyph_coverage_curve(testament_name) {
   "The curve is reported alongside HOW MUCH OF EACH STEP IS ALREADY DRAWN, because the two numbers answer different questions. The curve says how big the job is; the drawn count says where in it the current table stands.";
   let glosses = await bible_strong_glosses(testament_name);
   let roots = bible_glyph_roots();
-  let table_testament = bible_glyph_roots_testament();
-  let table_reads = equal(table_testament, testament_name);
-  let drawn = {};
-  if (table_reads) {
-    for (let root of roots) {
-      for (let word of root.words) {
-        property_set(drawn, word.strong, true);
-      }
-    }
-  }
-  let counted = [];
-  let occurrences_total = 0;
-  for (let strong of object_property_names(glosses)) {
-    let tally = property_get(glosses, strong);
-    let occurrences = 0;
-    for (let entry of tally) {
-      occurrences = occurrences + entry.count;
-    }
-    occurrences_total = occurrences_total + occurrences;
-    list_add(counted, {
-      strong,
-      occurrences,
-      drawn: property_exists(drawn, strong),
-    });
-  }
-  function occurrences_descending(a, b) {
-    let n = subtract(b.occurrences, a.occurrences);
-    return n;
-  }
+  let r = bible_glyph_coverage_curve_occurrences_descending(
+    testament_name,
+    roots,
+    glosses,
+  );
+  let occurrences_descending = property_get(r, "occurrences_descending");
+  let occurrences_total = property_get(r, "occurrences_total");
+  let counted = property_get(r, "counted");
+  let table_reads = property_get(r, "table_reads");
   counted.sort(occurrences_descending);
   let steps = [10, 25, 50, 100, 200, 400, 800, 1600];
   let curve = [];
@@ -72,8 +47,8 @@ export async function bible_glyph_coverage_curve(testament_name) {
       index = index + 1;
     }
     let share = divide(reached, occurrences_total);
-    let n2 = multiply(share, 1000);
-    let tenths = round(n2);
+    let n = multiply(share, 1000);
+    let tenths = round(n);
     let percent = divide(tenths, 10);
     let share_drawn = divide(reached_drawn, occurrences_total);
     let n3 = multiply(share_drawn, 1000);
