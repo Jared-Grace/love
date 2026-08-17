@@ -1,4 +1,4 @@
-import { app_g_verify_home_on_visible } from "./app_g_verify_home_on_visible.mjs";
+import { app_g_verify_home_document } from "./app_g_verify_home_document.mjs";
 import { app_g_verify_home_view } from "./app_g_verify_home_view.mjs";
 import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
 import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
@@ -77,7 +77,7 @@ export async function app_g_verify_home(context) {
   if (not(b2)) {
     chapter_codes = chapter_codes.concat([chapter_code]).sort();
   }
-  let on_visible = await app_g_verify_home_on_visible(
+  await app_g_verify_home_document(
     render,
     chapter,
     status,
@@ -86,7 +86,6 @@ export async function app_g_verify_home(context) {
     poll,
     refresh,
   );
-  document.addEventListener("visibilitychange", on_visible);
   function render(chapter_shown, status_shown, chapter_state_shown) {
     shown_json = json_to({
       chapter: chapter_shown,
