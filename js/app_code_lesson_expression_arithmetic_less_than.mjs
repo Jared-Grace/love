@@ -1,17 +1,8 @@
+import { app_code_lesson_expression_arithmetic_less_than_above } from "./app_code_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_one } from "./app_code_lesson_expression_arithmetic_less_than_one.mjs";
-import { list_to_or_list_word } from "./list_to_or_list_word.mjs";
-import { js_operator_symbol } from "./js_operator_symbol.mjs";
-import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
-import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_title_name_id } from "./app_code_lesson_expression_arithmetic_less_than_title_name_id.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_container_light_blue_div } from "./app_code_container_light_blue_div.mjs";
-import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
-import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -28,7 +19,6 @@ import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_arithmetic_less_than() {
   "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison itself also VARIES across the examples over all six the student has met (< > <= >= === !==), because the rule - arithmetic first, then compare - is identical for every one of them, so they belong in this one lesson too rather than six near-identical copies. The true/false answer is forced per example by RUNNING the example's own comparison fn against candidate numbers (below/above/equal to the arithmetic value) and keeping the one that gives the wanted answer, so no answer can be mis-derived operator by operator. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Eight refreshable examples vary the operator across the already-learned number binary operators (+ - * / **), put the arithmetic on the left and the right, and show true and false; the right side is emphasised because arithmetic on the right of the < is where the rule actually bites - left-to-right alone would put the < first and be wrong - whereas on the left, plain left-to-right already lands on the right answer. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; the equal case appears only where the operator needs it (=== and its like), while < and > stay strict. Placed right after the arithmetic precedence pair lessons and the exponent lesson, as the first step that lets a comparison's sides be expressions, so the jump is small - the learner just finished building arithmetic and now wraps a comparison around it. Remainder (%) is deliberately left out: it is not taught until the later remainder lessons, and keeping it out is what lets this lesson sit this early, right on top of the arithmetic it compares.";
   let less_than_operator = js_operator_less_than();
@@ -165,49 +155,12 @@ export function app_code_lesson_expression_arithmetic_less_than() {
   }
   let next_arg = list_iterator_refillable(refill);
   function above(root) {
-    "the intro: the one rule, then it worked twice with DIFFERENT arithmetic and on opposite sides of the <, every result computed from the < comparison so nothing is hand-typed";
-    "The word comparison is BOLD here and followed by a colon, because this is where the learner first meets it and this line already lists the six operators it names. Bolding a term at its first mention is what the repo does for a word it is defining, and the colon is what turns the six symbols from a continuation of the rule into what the word means. Without it the word was used for thirty-nine lessons before the comparing-a-comparison lesson finally named it - which its own naming card admits: used since the arithmetic-comparison lesson, but only ever alongside its operators in passing. That card stays where it is and now reads as the recall it always was.";
-    let line = app_code_container_light_blue_div(root);
-    html_span_text(line, "We always do the ");
-    let four = js_operators_arithmetic();
-    let o = js_operator_double_asterisk();
-    let more = [o];
-    let operators = list_concat(four, more);
-    let word_relationship = list_to_or_list_word();
-    app_code_operators_word_list(
-      line,
-      operators,
-      word_relationship,
-      js_operator_symbol,
-    );
-    html_span_text(line, " before any ");
-    html_span_text_bold(line, "comparison");
-    html_span_text(line, ": ");
-    app_code_operators_comparison_or_list(line);
-    let sum = add(2, 3);
-    app_code_lesson_expression_arithmetic_less_than_worked_example(
-      9,
-      true,
-      2,
-      "+",
-      3,
-      sum,
-      less_than_fn,
+    let r7 = app_code_lesson_expression_arithmetic_less_than_above(
       root,
+      less_than_fn,
       less_than_symbol,
     );
-    let p = multiply(3, 2);
-    app_code_lesson_expression_arithmetic_less_than_worked_example(
-      7,
-      false,
-      3,
-      "*",
-      2,
-      p,
-      less_than_fn,
-      root,
-      less_than_symbol,
-    );
+    return r7;
   }
   let name_id = app_code_lesson_expression_arithmetic_less_than_title_name_id();
   let lesson = app_code_lesson_expression_generic({
