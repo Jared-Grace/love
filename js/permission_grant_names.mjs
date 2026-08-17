@@ -1517,6 +1517,55 @@ export function permission_grant_names() {
   let spelled1478 = fn_name("js_function_forwarding_remove_cases_gate_run");
   let spelled1479 = fn_name("app_ceb_bible_gloss_affix_kinds_wrong_chapters");
   let spelled1480 = fn_name("app_ceb_bible_gloss_write_passages");
+  let spelled1481 = fn_name("app_ceb_bible_gloss_chapter_upload_stored");
+  let spelled1482 = fn_name("app_ceb_bible_gloss_chapter_verse_claims_wrong");
+  let spelled1483 = fn_name("app_ceb_bible_gloss_passage_entries");
+  let spelled1484 = fn_name("app_ceb_bible_gloss_write_chapter_file");
+  let spelled1485 = fn_name("app_code_lesson_statement_name_copy_batch");
+  let spelled1486 = fn_name("app_shared_bible_hash_field_chapter");
+  let spelled1487 = fn_name("app_shared_bible_hash_field_mode");
+  let spelled1488 = fn_name("bible_glyph_survey");
+  let spelled1489 = fn_name("binisaya_word_morphology");
+  let spelled1490 = fn_name("bundles_names_missing");
+  let spelled1491 = fn_name("bundles_names_missing_gate_run");
+  let spelled1492 = fn_name("ebible_credits_upload");
+  let spelled1493 = fn_name("ebible_languages_chapters_upload");
+  let spelled1494 = fn_name("ebible_languages_commercial_chapters_count");
+  let spelled1495 = fn_name("ebible_languages_commercial_single");
+  let spelled1496 = fn_name("ebible_languages_credits");
+  let spelled1497 = fn_name("ebible_languages_licences_ambiguous");
+  let spelled1498 = fn_name("ebible_languages_licences_baseline_write");
+  let spelled1499 = fn_name("ebible_languages_licences_commercial_not");
+  let spelled1500 = fn_name("ebible_languages_licences_gate_run");
+  let spelled1501 = fn_name("ebible_languages_more_write");
+  let spelled1502 = fn_name("ebible_languages_readaloud_download");
+  let spelled1503 = fn_name("ebible_languages_readaloud_download_missing");
+  let spelled1504 = fn_name("ebible_languages_readaloud_missing");
+  let spelled1505 = fn_name("ebible_languages_without_original_bible_folders");
+  let spelled1506 = fn_name("ebible_licence_words");
+  let spelled1507 = fn_name("ebible_version_credit");
+  let spelled1508 = fn_name("ebible_version_downloaded_chapters_count");
+  let spelled1509 = fn_name("ebible_version_licence");
+  let spelled1510 = fn_name("ebible_versions_copyrights");
+  let spelled1511 = fn_name("function_forwarding_remove");
+  let spelled1512 = fn_name("function_functionize_holder");
+  let spelled1513 = fn_name("function_functionize_through");
+  let spelled1514 = fn_name("function_nested_lift_or_wrapper");
+  let spelled1515 = fn_name("function_nested_lift_or_wrapper_run");
+  let spelled1516 = fn_name("function_nested_rename");
+  let spelled1517 = fn_name("function_parameter_call_sizes");
+  let spelled1518 = fn_name("functions_forwarding_names");
+  let spelled1519 = fn_name("functions_forwarding_remove_all");
+  let spelled1520 = fn_name("functions_imports_unused_changed_repair");
+  let spelled1521 = fn_name("functions_imports_unused_repair");
+  let spelled1522 = fn_name("functions_inside_duplicates_size");
+  let spelled1523 = fn_name("functions_nested_lift_wrapper_all");
+  let spelled1524 = fn_name("functions_nested_lift_wrapper_pass");
+  let spelled1525 = fn_name("gloss_write_root_folder");
+  let spelled1526 = fn_name("urdu_bible_gloss_misaligned_gate_run");
+  let spelled1527 = fn_name("urdu_bible_gloss_passages");
+  let spelled1528 = fn_name("urdu_bible_gloss_write_chapter_file");
+  let spelled1529 = fn_name("url_available_is");
   let names = [
     spelled,
     spelled2,
@@ -2998,6 +3047,55 @@ export function permission_grant_names() {
     spelled1478,
     spelled1479,
     spelled1480,
+    spelled1481,
+    spelled1482,
+    spelled1483,
+    spelled1484,
+    spelled1485,
+    spelled1486,
+    spelled1487,
+    spelled1488,
+    spelled1489,
+    spelled1490,
+    spelled1491,
+    spelled1492,
+    spelled1493,
+    spelled1494,
+    spelled1495,
+    spelled1496,
+    spelled1497,
+    spelled1498,
+    spelled1499,
+    spelled1500,
+    spelled1501,
+    spelled1502,
+    spelled1503,
+    spelled1504,
+    spelled1505,
+    spelled1506,
+    spelled1507,
+    spelled1508,
+    spelled1509,
+    spelled1510,
+    spelled1511,
+    spelled1512,
+    spelled1513,
+    spelled1514,
+    spelled1515,
+    spelled1516,
+    spelled1517,
+    spelled1518,
+    spelled1519,
+    spelled1520,
+    spelled1521,
+    spelled1522,
+    spelled1523,
+    spelled1524,
+    spelled1525,
+    spelled1526,
+    spelled1527,
+    spelled1528,
+    spelled1529,
   ];
   return names;
 }

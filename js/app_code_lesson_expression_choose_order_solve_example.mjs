@@ -32,6 +32,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
   ("The words are the quiz's own three askings, out of the same three functions the quiz sets its label from. The front page IS the quiz with nothing counted against you, so a second wording of the same three instructions would be two sets of words to keep in step, and the screen next door would be asking in words the learner had never been shown.");
   ("The asking goes when the line is down to a value, because there is nothing left to press and an instruction still standing there would be asking for a press that cannot be made. What was said ABOVE it stays, because it is what the lesson is for rather than what to do next.");
   ("A wrong press is answered by the line itself, in red, the same way it is in the quiz. Being stopped from getting it wrong is not this page's job.");
+  ("Which wrong values are offered is handed in, because it is the one thing the lessons on this page differ by. A line of numbers and a line of comparisons are pressed the same way, laid out the same way and finished the same way; what a learner could plausibly press INSTEAD is the only place the two part company, and a second copy of this page would leave one lesson's habits to be repaired in two files.");
   let line_holder = html_div(parent);
   let choices_holder = html_div(parent);
   let head = html_div_first(card);
@@ -72,7 +73,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
     "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
     let said = app_code_label_solve_choice();
     ask(said);
-    let decoys = app_code_expression_value_decoys(current, node);
+    let decoys = decoys_get(current, node);
     await app_code_expression_value_choose_await(
       choices_holder,
       value,
