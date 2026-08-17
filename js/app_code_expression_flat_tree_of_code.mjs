@@ -43,7 +43,8 @@ export function app_code_expression_flat_tree_of_code(code) {
   }
   function operator_take(index) {
     "the operator at this place on the line, with the number that follows it";
-    let symbol_at = add(multiply(index, 2), 1);
+    let doubled = multiply(index, 2);
+    let symbol_at = add_1(doubled);
     let symbol = list_get(pieces, symbol_at);
     let number_at = add_1(index);
     let number = list_get(numbers, number_at);

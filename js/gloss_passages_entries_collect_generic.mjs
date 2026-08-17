@@ -1,3 +1,5 @@
+import { list_map } from "./list_map.mjs";
+import { each_index } from "./each_index.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { each } from "./each.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
@@ -19,6 +21,7 @@ export function gloss_passages_entries_collect_generic(
   "Two readings of a chapter's explanations were the same fifteen lines apart from the few in the middle - lay out the chapter's verses, walk its passages, open each passage's explanations, find the word and the wording and the key. The part that differed was what each one then asked, and the part that agreed was all the rest.";
   "The chapter is laid out whole before any single explanation is looked at, because an explanation in the first passage may well be talking about the last verse in the chapter, and a reading that had only got as far as its own passage could not answer it.";
   "Each explanation arrives as one thing rather than as five arguments, so a reading that wants three of them names three and a reading that wants one names one. What it gives back is a list, since one explanation can make more than one claim and can make none.";
+  "Where the explanation stands among its own passage's words comes with it, and so do those words in order, because an explanation that says which word comes just before it cannot be settled by the chapter's verses at all - only by the line it is standing in.";
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
   let verse_numbers = gloss_passages_verse_numbers(passages);
@@ -31,7 +34,12 @@ export function gloss_passages_entries_collect_generic(
   function passage_read(passage) {
     let verses_key = g_sermon_passage_verses_key(passage);
     let entries = gloss_passage_entries(passage);
-    function entry_read(entry) {
+    function entry_word(entry) {
+      let spelling = property_get(entry, word_key);
+      return spelling;
+    }
+    let words = list_map(entries, entry_word);
+    function entry_read(entry, at) {
       let word = property_get(entry, word_key);
       let explain = property_get(entry, explain_key);
       let key = word_key_read(word);
@@ -42,11 +50,13 @@ export function gloss_passages_entries_collect_generic(
         key,
         verse_numbers,
         verse_keys,
+        at,
+        words,
       };
       let given = lambda_entry(context);
       list_add_multiple(found, given);
     }
-    each(entries, entry_read);
+    each_index(entries, entry_read);
   }
   each(passages, passage_read);
   return found;
