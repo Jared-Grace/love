@@ -195,6 +195,10 @@
   {
    "name": "lock_force_release",
    "refusals": 1
+  },
+  {
+   "name": "app_shared_dev_build_multiple_prompt",
+   "refusals": 1
   }
  ]
 }
