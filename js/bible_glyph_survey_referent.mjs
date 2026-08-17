@@ -27,7 +27,7 @@ export function bible_glyph_survey_referent(r3, referent_reach) {
       because: referent.because,
     });
   }
-  return {
+  let r = {
     percent,
     roots,
     mapped,
@@ -36,4 +36,5 @@ export function bible_glyph_survey_referent(r3, referent_reach) {
     sense_spread,
     occurrences_mapped,
   };
+  return r;
 }
