@@ -1,10 +1,8 @@
+import { app_code_examples_lambda } from "./app_code_examples_lambda.mjs";
 import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
-import { list_first_property } from "./list_first_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
-import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
-import { list_index_last } from "./list_index_last.mjs";
 import { app_code_lesson_previous_set } from "./app_code_lesson_previous_set.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_button_screen_wide } from "./app_shared_button_screen_wide.mjs";
@@ -106,14 +104,8 @@ export function app_code_examples(context) {
         emoji: emoji_arrow_left(),
         text: "Previous lesson's last quiz",
         on_click: async function lambda() {
-          app_code_lesson_previous_set(context);
-          let lesson_previous = app_code_lesson_current(context);
-          let batch = property_get(lesson_previous, "batch");
-          let list = batch();
-          let quizzes = list_first_property(list, "quizzes");
-          let index_last = list_index_last(quizzes);
-          app_code_quiz_index_set(context, index_last);
-          await app_shared_screen_set(context, app_code_quiz);
+          let r = await app_code_examples_lambda(context);
+          return r;
         },
       },
     ]);
