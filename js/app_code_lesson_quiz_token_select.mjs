@@ -1,7 +1,7 @@
-import { app_code_quiz_variation_buildable_is } from "./app_code_quiz_variation_buildable_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -10,13 +10,11 @@ import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { text_space_nb } from "./text_space_nb.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { text_index_of_from_start } from "./text_index_of_from_start.mjs";
 import { text_take } from "./text_take.mjs";
 import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { list_first } from "./list_first.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { list_any } from "./list_any.mjs";
@@ -28,12 +26,9 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
-import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
 import { log } from "./log.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_reduce } from "./list_reduce.mjs";
 export function app_code_lesson_quiz_token_select(
@@ -45,20 +40,14 @@ export function app_code_lesson_quiz_token_select(
   batch_get,
 ) {
   let answer_div = html_div_code_dark(parent);
-  let answer_property = property_get(info, "answer_property");
-  app_code_lesson_quiz_qa_question(qa, answer_property);
-  let code = property_get(qa, answer_property);
-  ("ensures div is visible from beginning");
-  let text = text_space_nb();
-  html_text_set(answer_div, text);
-  let variations = app_code_lesson_quiz_token_select_variations(code);
-  let normalized = app_code_quiz_tokens(code);
-  let tokens_unique = list_unique(normalized);
-  function variation_buildable(variation) {
-    "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
-    let a = app_code_quiz_variation_buildable_is(variation, tokens_unique);
-    return a;
-  }
+  let r = app_code_lesson_quiz_token_select_variation_buildable(
+    info,
+    qa,
+    answer_div,
+  );
+  let variation_buildable = property_get(r, "variation_buildable");
+  let tokens_unique = property_get(r, "tokens_unique");
+  let variations = property_get(r, "variations");
   variations = list_filter(variations, variation_buildable);
   list_sort_text(tokens_unique);
   let buttons = null;
@@ -81,13 +70,13 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         let variation_first = list_first(variations);
         let merged = app_code_quiz_string_tokens_merge(variation_first);
-        let code2 = js_tokens_to_code(merged);
+        let code = js_tokens_to_code(merged);
         function lambda5(index, token_each) {
-          let sum = text_index_of_from_start(code2, token_each, index);
+          let sum = text_index_of_from_start(code, token_each, index);
           return sum;
         }
         let reduced = list_reduce(chosen, lambda5, 0);
-        let taken = text_take(code2, reduced);
+        let taken = text_take(code, reduced);
         html_clear(answer_div);
         html_span_text(answer_div, taken);
         function lambda4(variation) {
