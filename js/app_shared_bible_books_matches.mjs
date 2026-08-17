@@ -1,3 +1,4 @@
+import { app_shared_bible_books_matches_is_uncategorized } from "./app_shared_bible_books_matches_is_uncategorized.mjs";
 import { app_shared_bible_books_matches_match_book } from "./app_shared_bible_books_matches_match_book.mjs";
 import { app_shared_bible_books_matches_has_any } from "./app_shared_bible_books_matches_has_any.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
@@ -6,7 +7,6 @@ import { ebible_book_division_uncategorized } from "./ebible_book_division_uncat
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
@@ -64,9 +64,8 @@ export function app_shared_bible_books_matches(query, books) {
   let known_codes = list_concat_multiple(per_division);
   let matching_books = list_filter(books, match_book);
   function is_uncategorized(book) {
-    let code = property_get(book, "book_code");
-    let unknown = list_includes_not(known_codes, code);
-    return unknown;
+    let r2 = app_shared_bible_books_matches_is_uncategorized(book, known_codes);
+    return r2;
   }
   let leftovers = list_filter(matching_books, is_uncategorized);
   let has_leftovers = list_empty_not_is(leftovers);
