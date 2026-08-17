@@ -1,18 +1,9 @@
+import { literals_marked_both_ways_word } from "./literals_marked_both_ways_word.mjs";
 import { literals_marked_both_ways_conflicts } from "./literals_marked_both_ways_conflicts.mjs";
 import { literals_marked_both_ways_words_frozen } from "./literals_marked_both_ways_words_frozen.mjs";
 import { literals_marked_both_ways_entries } from "./literals_marked_both_ways_entries.mjs";
 import { repo_love_name } from "./repo_love_name.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_text_includes } from "./property_text_includes.mjs";
-import { function_ast } from "./function_ast.mjs";
-import { js_marker_call_words } from "./js_marker_call_words.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_map_property_unique } from "./list_map_property_unique.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
-import { not } from "./not.mjs";
 export async function literals_marked_both_ways() {
   "Every word this repo marks both ways at once - frozen in one place and spelled as a reference in another - as {word, frozen_in, referenced_in}. Read-only.";
   "The two markers mean opposite things about the same word. Frozen says the word only looks like a name, so a rename must walk straight past it; a reference says the word is a name, so a rename must carry it along. A word wearing both is a flat contradiction, and one of the two sites is wrong.";
@@ -25,40 +16,6 @@ export async function literals_marked_both_ways() {
   let r2 = await literals_marked_both_ways_words_frozen(r);
   let r3 = literals_marked_both_ways_conflicts(r2);
   let conflicts = property_get(r3, "conflicts");
-  let frozen_sites = property_get(r3, "frozen_sites");
-  let reference_prefix = property_get(r3, "reference_prefix");
-  let reference_marker = property_get(r3, "reference_marker");
-  let entries = property_get(r3, "entries");
-  let words_frozen = property_get(r3, "words_frozen");
-  for (let word of words_frozen) {
-    let needle = text_combine_multiple([reference_prefix, word, '")']);
-    let referenced_in = [];
-    for (let entry of entries) {
-      let candidate = property_get(entry, "name");
-      let mentions = property_text_includes(entry, "code", needle);
-      if (not(mentions)) {
-        continue;
-      }
-      let tree = await function_ast(candidate);
-      let words_referenced = js_marker_call_words(tree, reference_marker);
-      let refers = list_includes(words_referenced, word);
-      if (not(refers)) {
-        continue;
-      }
-      list_add(referenced_in, candidate);
-    }
-    let clean = list_empty_is(referenced_in);
-    if (clean) {
-      continue;
-    }
-    let same_word = list_filter_property(frozen_sites, "word", word);
-    let frozen_in = list_map_property_unique(same_word, "f_name");
-    let conflict = {
-      word,
-      frozen_in,
-      referenced_in,
-    };
-    list_add(conflicts, conflict);
-  }
+  await literals_marked_both_ways_word(r3, conflicts);
   return conflicts;
 }
