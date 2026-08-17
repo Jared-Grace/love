@@ -1,3 +1,4 @@
+import { js_function_forwarding_removed_callee_is } from "./js_function_forwarding_removed_callee_is.mjs";
 import { js_function_answer_dropped_is } from "./js_function_answer_dropped_is.mjs";
 import { function_async_is } from "./function_async_is.mjs";
 import { js_function_forwarding_target } from "./js_function_forwarding_target.mjs";
@@ -7,7 +8,6 @@ import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { js_name_variable_declared_is } from "./js_name_variable_declared_is.mjs";
 import { js_call_argument_site } from "./js_call_argument_site.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { function_parameter_call_sizes } from "./function_parameter_call_sizes.mjs";
 import { list_size } from "./list_size.mjs";
@@ -55,9 +55,7 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (equal(site, null)) {
     return;
   }
-  let call = property_get(site, "call");
-  let callee = property_get(call, "callee");
-  let callee_is = js_node_type_is(callee, "Identifier");
+  let { callee, callee_is } = js_function_forwarding_removed_callee_is(site);
   if (not(callee_is)) {
     return;
   }
