@@ -15,7 +15,7 @@ export function bible_glyph_chapter_1jn04() {
       {
         verse_number: 7,
         words: [
-          "Be$heart_red$d,",
+          "Be$heart_redx$d,",
           "let",
           "us",
           "$heart_red",
