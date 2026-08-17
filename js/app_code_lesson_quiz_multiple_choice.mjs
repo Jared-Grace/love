@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_multiple_choice_quiz_question_text } from "./app_code_lesson_quiz_multiple_choice_quiz_question_text.mjs";
+import { app_code_lesson_quiz_multiple_choice_question_property } from "./app_code_lesson_quiz_multiple_choice_question_property.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
@@ -32,21 +32,20 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let r2 = app_code_lesson_quiz_multiple_choice_quiz_question_text(
+  let r = app_code_lesson_quiz_multiple_choice_question_property(
     info,
     qa,
     batch_get,
   );
-  let quiz_question_text = property_get(r2, "quiz_question_text");
-  let answer_count_max = property_get(r2, "answer_count_max");
-  let next_get = property_get(r2, "next_get");
-  let distractor_count = property_get(r2, "distractor_count");
-  let seen = property_get(r2, "seen");
-  let distractors = property_get(r2, "distractors");
-  let answer_property = property_get(r2, "answer_property");
-  let r = property_get(r2, "r");
-  let quiz_answer_text = property_get(r2, "quiz_answer_text");
   let question_property = property_get(r, "question_property");
+  let quiz_answer_text = property_get(r, "quiz_answer_text");
+  let answer_property = property_get(r, "answer_property");
+  let distractors = property_get(r, "distractors");
+  let seen = property_get(r, "seen");
+  let distractor_count = property_get(r, "distractor_count");
+  let next_get = property_get(r, "next_get");
+  let answer_count_max = property_get(r, "answer_count_max");
+  let quiz_question_text = property_get(r, "quiz_question_text");
   ("the wrong answers below are drawn from the lesson's other questions, and read off each one by the same property names this quiz used. A quiz that shows something OTHER than the pair its batch spells - one that works a third value out of the pair and asks about that - would otherwise draw the wrong kind of thing entirely, and could offer the learner the very line it is asking them about. Such a lesson hands over info.qa_for to remap a drawn line the same way it remapped its own; every other lesson shows the pair as it stands and needs nothing");
   let qa_for = property_get_or(info, "qa_for", identity);
   let attempts = 0;
