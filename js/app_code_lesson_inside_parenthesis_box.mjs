@@ -31,14 +31,21 @@ export function app_code_lesson_inside_parenthesis_box(
   let paren_left = js_code_parenthesis_left();
   let paren_right = js_code_parenthesis_right();
   let semicolon = js_code_semicolon();
-  let opened = list_join_empty([log_name, paren_left, " "]);
-  let closed = list_join_empty([" ", paren_right, semicolon]);
-  let parens = list_join_empty([paren_left, " ", paren_right]);
+  (
+    "The two outer pieces are written exactly as they would be typed, with no room left inside the parenthesis. A space put there to hold the name apart is dark, because it is inside the chip, so it comes out as a bar of code colour between the parenthesis and the name - which reads as something written rather than as a gap. The chips have room of their own at their edges and that is all the parting the name needs."
+  );
+  let opened = list_join_empty([log_name, paren_left]);
+  let closed = list_join_empty([paren_right, semicolon]);
+  (
+    "The pair of parenthesis in the sentence is two chips with a plain space between them, not one chip reading \"( )\". There is no such thing in code as an open and a close written together; they are two characters that stand at the two ends of something, and one chip round both says they are a single mark - which is the reading this whole box exists to undo."
+  );
   let line_only = html_div(box_care);
   html_span_text(line_only, "Only the name ");
   app_code_span_text_highlight(line_only, "inside");
   html_span_text(line_only, " the parenthesis ");
-  html_span_text_code_dark(line_only, parens);
+  html_span_text_code_dark(line_only, paren_left);
+  html_span_text(line_only, " ");
+  html_span_text_code_dark(line_only, paren_right);
   html_span_text(line_only, " is written out:");
   let line_call = html_div(box_care);
   html_span_text_code_dark(line_call, opened);
@@ -47,7 +54,9 @@ export function app_code_lesson_inside_parenthesis_box(
   let line_other = html_div(box_care);
   html_span_text(line_other, "The other cup ");
   html_span_text_code_dark(line_other, name_other);
-  html_span_text(line_other, " is still there, and is not written out because ");
+  html_span_text(line_other, " is still there, but ");
+  html_span_text_code_dark(line_other, name_other);
+  html_span_text(line_other, " is not written out because ");
   html_span_text_code_dark(line_other, name_other);
   html_span_text(line_other, " is not ");
   app_code_span_text_highlight(line_other, "inside");
