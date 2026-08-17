@@ -1,3 +1,4 @@
+import { js_calls_to_each_lambda_array_expression } from "./js_calls_to_each_lambda_array_expression.mjs";
 import { js_calls_to_each_lambda_lambda6 } from "./js_calls_to_each_lambda_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,20 +11,14 @@ import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { not } from "./not.mjs";
-import { js_call_new } from "./js_call_new.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { js_code_brackets_empty } from "./js_code_brackets_empty.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function js_calls_to_each_lambda(v, ast) {
   arguments_assert(arguments, 2);
   let stack = property_get(v, "stack");
   let node = property_get(v, "node");
   let expression = js_statement_expression_get(node);
-  let r2 = js_await_if_unwrap(expression);
-  let call = property_get(r2, "argument");
-  let async_is = property_get(r2, "async_is");
+  let r = js_await_if_unwrap(expression);
+  let call = property_get(r, "argument");
+  let async_is = property_get(r, "async_is");
   let e = list_get_end_1(stack);
   let next = list_next_try(e, node);
   if (null_is(next)) {
@@ -57,15 +52,10 @@ export async function js_calls_to_each_lambda(v, ast) {
   if (not(eq)) {
     return;
   }
-  let f_name_call = fn_name("each_async");
-  let r = await js_call_new(f_name_call, ast);
-  let expression3 = property_path_get_2(r, "parsed", "expression");
-  if (async_is) {
-    expression3 = property_get(expression3, "argument");
-  }
-  js_call_arguments_get(expression3);
-  let code = js_code_brackets_empty();
-  let array_expression = js_parse_expression(code);
+  let array_expression = await js_calls_to_each_lambda_array_expression(
+    ast,
+    async_is,
+  );
   property_get(array_expression, "elements");
   ("the shape being matched is two awaited calls standing one after the other on the same callee, differing only in their argument");
 }
