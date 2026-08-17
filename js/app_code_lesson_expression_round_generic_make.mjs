@@ -1,8 +1,8 @@
+import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 export function app_code_lesson_expression_round_generic_make(
   whole,
@@ -15,9 +15,7 @@ export function app_code_lesson_expression_round_generic_make(
   let inner = null;
   if (decimal_question) {
     let digit = integer_random(1, 9);
-    let t = text_to(whole);
-    let t2 = text_to(digit);
-    inner = text_combine_multiple([t, ".", t2]);
+    inner = text_decimal_combine(whole, digit);
   } else {
     inner = text_to(whole);
   }

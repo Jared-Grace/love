@@ -191,6 +191,10 @@
   {
    "name": "qa_app_commit_deployable_generic",
    "refusals": 1
+  },
+  {
+   "name": "lock_force_release",
+   "refusals": 1
   }
  ]
 }

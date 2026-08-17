@@ -1,9 +1,9 @@
+import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
@@ -24,11 +24,9 @@ export function app_code_lesson_expression_round_nearest_above(root) {
   let color_low = app_code_lesson_chip_color(3);
   let color_high = app_code_lesson_chip_color(2);
   let low_digit = integer_random(1, 4);
-  let t = text_to(low_digit);
-  let low_decimal = text_combine_multiple([whole_text, ".", t]);
+  let low_decimal = text_decimal_combine(whole_text, low_digit);
   let high_digit = integer_random(5, 9);
-  let t4 = text_to(high_digit);
-  let high_decimal = text_combine_multiple([whole_text, ".", t4]);
+  let high_decimal = text_decimal_combine(whole_text, high_digit);
   let input = add(whole, 1);
   let whole_up = text_to(input);
   ("examples first, then name it, then explain how it decides");
