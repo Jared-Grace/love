@@ -1,11 +1,8 @@
+import { js_expand_generic_lambda5 } from "./js_expand_generic_lambda5.mjs";
 import { js_expand_generic_lambda } from "./js_expand_generic_lambda.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { js_node_atomize_name } from "./js_node_atomize_name.mjs";
-import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { each_index_async } from "./each_index_async.mjs";
-import { js_node_atomize } from "./js_node_atomize.mjs";
-import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_remove_all_multiple } from "./list_remove_all_multiple.mjs";
@@ -37,13 +34,8 @@ export async function js_expand_generic(next, stack_, ast) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
     async function lambda5(arg, arg_index) {
-      let jin = js_identifier_not_is(arg);
-      if (jin) {
-        let offset = 0;
-        let arg_v = js_node_to_visitor(ast, arg);
-        let variable_name = js_node_atomize_name();
-        await js_node_atomize(ast, arg_v, variable_name, offset);
-      }
+      let r2 = await js_expand_generic_lambda5(arg, arg_index, ast);
+      return r2;
     }
     await each_index_async(arguments2, lambda5);
     let index = list_index_of(stack_, next);
