@@ -54,7 +54,6 @@ export function app_code_lesson_quiz_on_qa_change(
     html_style_margin_top(back_button, value3);
   }
   html_visibility_hidden(container_success_message);
-  on_qa_change();
   let r = {
     correction_render,
     on_answer,
