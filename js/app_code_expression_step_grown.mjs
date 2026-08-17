@@ -1,11 +1,9 @@
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_rank } from "./app_code_expression_rank.mjs";
+import { app_code_expression_step_choice_grown } from "./app_code_expression_step_choice_grown.mjs";
 import { app_code_expression_step_choices } from "./app_code_expression_step_choices.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { property_get } from "./property_get.mjs";
-import { ternary } from "./ternary.mjs";
 export function app_code_expression_step_grown(item) {
   arguments_assert(arguments, 1);
   (
@@ -21,12 +19,6 @@ export function app_code_expression_step_grown(item) {
   let rank_most = app_code_expression_rank(item);
   let choices = app_code_expression_step_choices(value, rank_most);
   let choice = list_random_item(choices);
-  let symbol = property_get(choice, "symbol");
-  let value_left = property_get(choice, "value_left");
-  let operands = property_get(choice, "operands");
-  let other = list_random_item(operands);
-  let left = ternary(value_left, item, other);
-  let right = ternary(value_left, other, item);
-  let grown = app_code_expression_node(left, symbol, right);
+  let grown = app_code_expression_step_choice_grown(item, choice);
   return grown;
 }
