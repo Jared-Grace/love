@@ -1,7 +1,7 @@
+import { app_g_dev_routes_quick } from "./app_g_dev_routes_quick.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
-import { property_list_get } from "./property_list_get.mjs";
 import { g_prayers_conversation } from "./g_prayers_conversation.mjs";
 import { app_g_dev_routes_npc_view } from "./app_g_dev_routes_npc_view.mjs";
 import { app_g_npc_unconverted_random } from "./app_g_npc_unconverted_random.mjs";
@@ -10,9 +10,6 @@ import { app_g_day_start } from "./app_g_day_start.mjs";
 import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
-import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
-import { g_conversation_generate } from "./g_conversation_generate.mjs";
-import { g_conversation_key } from "./g_conversation_key.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { noop } from "./noop.mjs";
 import { property_set } from "./property_set.mjs";
@@ -32,7 +29,6 @@ import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { app_g_day_conversation_demo } from "./app_g_day_conversation_demo.mjs";
 export function app_g_dev_routes(div_map) {
@@ -57,19 +53,8 @@ export function app_g_dev_routes(div_map) {
     await app_g_dev_routes_npc_view_of(npc, result);
   }
   async function quick() {
-    "the #quick dev route: open an unbeliever whose conversation is trimmed to ONLY the gospel-share turn, so answering that one objection lands straight on the closing prayer that converts — the fast path to test convert-on-gospel-share without walking the how-are-you and believe turns first.";
-    let npc = await app_g_npc_unconverted_random();
-    let gender = property_get(npc, "gender");
-    let pronouns = g_gender_pronouns(gender);
-    let full = g_conversation_generate(pronouns);
-    let gospel = property_list_get(full, "turns", 0);
-    ("the conversation the game generated is NARROWED here, never rebuilt. it used to be replaced with a fresh object spelling out the two fields this route cares about, which made this the second place that knew what a conversation is made of - so a field the generator started adding was simply absent here, and the screen under test was one the game could no longer produce.");
-    property_set(full, "turns", [gospel]);
-    property_set(full, "converts", true);
-    let key = g_conversation_key();
-    property_set(npc, key, full);
-    let phase = app_g_view_phase_conversation();
-    await app_g_dev_routes_npc_view_of(npc, phase);
+    let r = await app_g_dev_routes_quick();
+    return r;
   }
   async function gospel_share() {
     let result2 = app_g_view_phase_gospel();
