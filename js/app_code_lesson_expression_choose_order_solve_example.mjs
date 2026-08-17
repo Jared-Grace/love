@@ -1,5 +1,4 @@
 import { html_div_first } from "./html_div_first.mjs";
-import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -23,7 +22,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
   arguments_assert(arguments, 3);
   ("the lesson's front page: the same two presses the quiz asks for, with what the lesson is for said above them and then what to do NOW - the operator is chosen the way it was chosen before, and then what it comes to is chosen too");
   ("Laid out exactly as the walkthrough of the lesson before it: the words at the top of the card above the Code label, and the line to press underneath. The two screens are one screen with one thing changed, so a learner arriving at the second finds every part of it where they left it, and the one difference is the only thing they have to find.");
-  ("What the lesson is FOR is said above the card and not here, so nothing on the card is about a line other than the one on it. The card holds one sentence of telling - the one naming what is different - and then the asking, and then the line.");
+  ("What the lesson is FOR is said above the card and not here, so nothing on the card is about a line other than the one on it. All the card holds is the asking and the line it is asking about.");
   ("Nothing stands in a box of its own. The lesson before says all of its words as plain lines at the top of the card, and a box drawn around the same words here would read as a different kind of saying rather than as the same saying carried on.");
   ("One asking at a time, and always the one for the press that is wanted right now. Both of them standing together is a plan to hold in the head before starting; one at a time, each is only ever about the press being made, and the words arrive as the learner reaches them rather than having to be remembered from the top of the screen.");
   ("The words are the quiz's own three askings, out of the same three functions the quiz sets its label from. The front page IS the quiz with nothing counted against you, so a second wording of the same three instructions would be two sets of words to keep in step, and the screen next door would be asking in words the learner had never been shown.");
@@ -32,7 +31,6 @@ export function app_code_lesson_expression_choose_order_solve_example(
   let line_holder = html_div(parent);
   let choices_holder = html_div(parent);
   let head = html_div_first(card);
-  app_code_lesson_expression_choose_order_solve_intro(head);
   let asking = html_div(head);
   let current = tree;
   function ask(words) {
