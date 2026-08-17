@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_g_dev_tools_open_verify_engine } from "./app_g_dev_tools_open_verify_engine.mjs";
+import { app_g_dev_tools_open_verify_lines } from "./app_g_dev_tools_open_verify_lines.mjs";
 import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open_verify_console_each.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
@@ -12,10 +12,10 @@ export async function app_g_dev_tools_open_verify() {
   ("walk the reported path in a real headless Firefox: boot the game, tap your own character, press the dev-tools button in the menu that opens, and hand back what the page showed at each of those three moments together with every console line and uncaught error along the way");
   ("It walks the path rather than loading the destination directly because loading the destination directly already worked - so the fault, if there is one, is in the CROSSING: a hash written from a click, a reload triggered by that hash, and a boot that has to read the hash back. Only a run that makes the click can see any of that.");
   ("NOT a member of the repo-wide gate: it needs the dev server up and a browser engine on disk, so a red run would mean 'the server is down' as often as 'the app is broken', and a gate that cries wolf is read as noise. Run it by name when the dev surface is in question.");
-  let r2 = await app_g_dev_tools_open_verify_engine();
-  let engine = property_get(r2, "engine");
+  let r2 = await app_g_dev_tools_open_verify_lines();
+  let lines = property_get(r2, "lines");
   let url = property_get(r2, "url");
-  let lines = [];
+  let engine = property_get(r2, "engine");
   let told = {};
   try {
     let page = await engine.newPage();
