@@ -1,3 +1,4 @@
+import { app_code_expression_step_operands_times_is } from "./app_code_expression_step_operands_times_is.mjs";
 import { app_code_expression_step_operands_minus_is } from "./app_code_expression_step_operands_minus_is.mjs";
 import { app_code_expression_step_operands_dividends } from "./app_code_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
@@ -6,7 +7,6 @@ import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { equal } from "./equal.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { modulo } from "./modulo.mjs";
@@ -50,8 +50,7 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let wholes = range_from(whole_least, most);
     return wholes;
   }
-  let times = js_operator_asterisk_symbol();
-  let times_is = equal(symbol, times);
+  let times_is = app_code_expression_step_operands_times_is(symbol);
   if (times_is) {
     let factor_most = divide_floor(most, value);
     let factors = range_from(least, factor_most);
