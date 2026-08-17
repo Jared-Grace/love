@@ -1,8 +1,6 @@
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_code_lesson_expression_choose_order_expression_digits } from "./app_code_lesson_expression_choose_order_expression_digits.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 export function app_code_lesson_expression_choose_order_expression(
   strong_right,
 ) {
