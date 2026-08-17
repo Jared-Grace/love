@@ -3265,6 +3265,47 @@ PYTHON_EVAL_DENY_REASON = (
 from denied_dispatcher_functions import DENIED_DISPATCHER_FUNCTIONS
 
 
+def find_cmp_command(command):
+    """True iff `command` runs `cmp`, so main() can DENY it with a redirect to
+    `diff -q` instead of handing the human a prompt.
+
+    A floor of the mildest kind: `cmp` is not dangerous, it is redundant.
+    Reading two files and reporting whether they differ is exactly what the
+    already-trusted `diff` does, and `diff -q a b` carries the same exit
+    status as `cmp -s a b` (0 identical, 1 differ) - including on binary
+    input, where it prints "Binary files a and b differ" and still exits 1.
+    So the reword is total, and the choice is between adding a second verb to
+    the trusted set for no new capability or teaching the one spelling that
+    is already trusted. This takes the second.
+
+    Why deny rather than leave it to prompt: `cmp` is never allow-listed, so
+    a deny can only ever convert a prompt into a redirect Claude acts on
+    itself - the same reasoning as the sed -i floor above it, and the same
+    reason the trusted-verb-plus-cmp chain (`ls -l x && cmp -s a b && echo`)
+    was reaching a human at all. Nothing here is protective; the prompt was
+    pure friction.
+
+    Quote-aware like find_raw_node_eval, so `grep 'cmp -s' file` is not
+    matched - only an actual `cmp` command word - and leading assignments /
+    timeout prefixes are unwrapped the same way. An unparseable command
+    falls through to normal handling rather than being denied on a guess."""
+    for words in statements_words(command):
+        if words and words[0] == "cmp":
+            return True
+    return False
+
+
+CMP_DENY_REASON = (
+    "`cmp` isn't approved here, and it doesn't need to be - please don't "
+    "hand the human a prompt for it. Use `diff` instead, which is already "
+    "auto-approved:\n"
+    "  cmp -s a b   ->   diff -q a b >/dev/null\n"
+    "Both exit 0 when the files are identical and 1 when they differ, so a "
+    "`&& echo SAME || echo DIFFERENT` chain behaves identically - and with "
+    "`diff` the whole chain auto-approves instead of asking."
+)
+
+
 def find_denied_dispatcher_function(command):
     """If `command` directly invokes `node <dispatcher> <fn>` (any script in
     NODE_DISPATCHER_SCRIPTS, relative or absolute path) with <fn> in
