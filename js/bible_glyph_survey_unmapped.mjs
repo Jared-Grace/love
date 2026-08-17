@@ -12,7 +12,7 @@ export function bible_glyph_survey_unmapped(r) {
   let left = property_get(r, "left");
   let r2 = property_get(r, "r2");
   let unmapped = property_get(r2, "unmapped");
-  return {
+  let r3 = {
     roots,
     mapped,
     glyph_missing,
@@ -23,4 +23,5 @@ export function bible_glyph_survey_unmapped(r) {
     left,
     unmapped,
   };
+  return r3;
 }
