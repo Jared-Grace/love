@@ -1,10 +1,6 @@
-import { property_get } from "./property_get.mjs";
+import { app_g_study_lambda_div } from "./app_g_study_lambda_div.mjs";
 import { app_g_study_lambda_c } from "./app_g_study_lambda_c.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_container_text } from "./app_g_container_text.mjs";
-import { html_bold_mild } from "./html_bold_mild.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_div } from "./html_div.mjs";
 import { g_openai_split_property } from "./g_openai_split_property.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_g_wrong } from "./app_g_wrong.mjs";
@@ -22,17 +18,7 @@ import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 export async function app_g_study_lambda(overlay, player, review, close) {
   arguments_assert(arguments, 4);
   let r3 = await app_g_study_lambda_c(overlay, player, review);
-  let c = property_get(r3, "c");
-  let passage = property_get(r3, "passage");
-  let passages = property_get(r3, "passages");
-  let r = property_get(r3, "r");
-  html_bold_mild(c);
-  html_style_background_color_set(c, "#ffffffcd");
-  app_g_container_text(
-    overlay,
-    "If you were preaching from this Bible passage, what would you say?",
-  );
-  let div = html_div(overlay);
+  let { passage, passages, r, div } = app_g_study_lambda_div(r3, overlay);
   let property = "sermon";
   let sermon_correct_list = g_openai_split_property(passage, property);
   let sermon_index = 0;
