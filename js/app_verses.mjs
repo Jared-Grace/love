@@ -49,18 +49,17 @@ export async function app_verses(context) {
     return;
   }
   let r = await app_reply_initialize(context);
-  let {
-    languages_chosen,
-    verse_groups,
-    verse_count,
-    offline_notified,
-    apply_seq,
-    chosen_references,
-    order,
-    content,
-    card,
-    counts,
-  } = await app_verses_counts(r, hash);
+  let r4 = await app_verses_counts(r, hash);
+  let counts = property_get(r4, "counts");
+  let card = property_get(r4, "card");
+  let content = property_get(r4, "content");
+  let order = property_get(r4, "order");
+  let chosen_references = property_get(r4, "chosen_references");
+  let apply_seq = property_get(r4, "apply_seq");
+  let offline_notified = property_get(r4, "offline_notified");
+  let verse_count = property_get(r4, "verse_count");
+  let verse_groups = property_get(r4, "verse_groups");
+  let languages_chosen = property_get(r4, "languages_chosen");
   let count_updates = [];
   function count_each(c) {
     let component = null;
@@ -116,8 +115,8 @@ export async function app_verses(context) {
       offline_notified = false;
       return false;
     }
-    let property_name3 = bible_folder_key();
-    let folders = list_map_property(languages_chosen, property_name3);
+    let property_name = bible_folder_key();
+    let folders = list_map_property(languages_chosen, property_name);
     let packages = await list_map_unordered_async(
       folders,
       uplifting_package_get,
