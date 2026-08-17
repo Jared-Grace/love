@@ -1,3 +1,4 @@
+import { app_code_lesson_console_log_remainder_generic_above_legend_part } from "./app_code_lesson_console_log_remainder_generic_above_legend_part.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_row } from "./app_code_lesson_console_log_remainder_generic_above_row.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -12,8 +13,6 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_to } from "./text_to.mjs";
 import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
-import { equal_0 } from "./equal_0.mjs";
-import { divide } from "./divide.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -77,20 +76,14 @@ export function app_code_lesson_console_log_remainder_generic_above(
   let remainder_texts = range_map(divisor, text_to);
   let or_parts = list_to_or_list_generic(remainder_texts, "or");
   function legend_part(part, index) {
-    (list_to_or_list_generic.name,
-      " interleaves item, separator, item, ...; the items land on even indices, so render those as colored chips and the odd separators (', ' and ' or ') as plain text");
-    let item = modulo_fn(index, 2);
-    let is_item = equal_0(item);
-    if (is_item) {
-      let remainder = divide(index, 2);
-      app_code_lesson_console_log_remainder_generic_remainder_chip(
-        legend,
-        remainder,
-        divisor,
-      );
-    } else {
-      html_span_text(legend, part);
-    }
+    let r2 = app_code_lesson_console_log_remainder_generic_above_legend_part(
+      part,
+      index,
+      modulo_fn,
+      legend,
+      divisor,
+    );
+    return r2;
   }
   each_index(or_parts, legend_part);
   let table = app_code_container_light_blue(root);
