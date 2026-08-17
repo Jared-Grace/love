@@ -1,3 +1,6 @@
+import { property_get_or } from "./property_get_or.mjs";
+import { list_concat_single } from "./list_concat_single.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_screens_diff_key_of } from "./app_code_screens_diff_key_of.mjs";
 import { json_from } from "./json_from.mjs";
 import { property_equals } from "./property_equals.mjs";
@@ -15,9 +18,13 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   let current_json = await file_read(current_path);
   let baseline = json_from(baseline_json);
   let current = json_from(current_json);
+  ("what is compared is the text plus, where the crawl captured them, the words on the buttons - the app's own screens are made almost entirely of buttons, so comparing their text alone would watch a settings screen change its every word and call it unchanged. A lesson screen carries no buttons here, because a quiz button holds a randomly sampled wrong answer and would look changed on every crawl");
   function masked_of(record) {
     let text = property_get(record, "text");
-    let masked = app_code_screen_text_normalize(text);
+    let buttons = property_get_or(record, "buttons", []);
+    let lines = list_concat_single(text, buttons);
+    let joined = list_join_newline(lines);
+    let masked = app_code_screen_text_normalize(joined);
     return masked;
   }
   let baseline_map = {};
