@@ -31,15 +31,20 @@ export function app_code_lesson_statement_name_total_above(root) {
   html_div_cycle_code(box_remember, [
     "Remember, we can add what two names hold",
   ]);
-  html_div_code(box_remember, js_code_let_statement(name_first, number_first));
-  html_div_code(box_remember, js_code_let_statement(name_last, number_last));
-  html_div_code(box_remember, js_code_console_log_statement(names_sum));
+  let code = js_code_let_statement(name_first, number_first);
+  html_div_code(box_remember, code);
+  let code2 = js_code_let_statement(name_last, number_last);
+  html_div_code(box_remember, code2);
+  let code3 = js_code_console_log_statement(names_sum);
+  html_div_code(box_remember, code3);
   app_code_writes_out_line(box_remember, total);
   let box_named = app_code_container_light_blue(root);
   html_div_cycle_code(box_named, ["We can give that sum a name too"]);
-  html_div_code(box_named, js_code_let_statement(name_total, names_sum));
+  let code4 = js_code_let_statement(name_total, names_sum);
+  html_div_code(box_named, code4);
   html_div_cycle_code(box_named, ["Now we can write that name on its own"]);
-  html_div_code(box_named, js_code_console_log_statement(name_total));
+  let code5 = js_code_console_log_statement(name_total);
+  html_div_code(box_named, code5);
   app_code_writes_out_line(box_named, total);
   ("the total is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
   let comes_to = list_join_empty([
@@ -49,5 +54,6 @@ export function app_code_lesson_statement_name_total_above(root) {
   ]);
   let box_same = app_code_container_light_blue(root);
   html_div_cycle_code(box_same, ["", names_sum, comes_to]);
-  html_div_code(box_same, js_code_let_statement(name_total, total));
+  let code6 = js_code_let_statement(name_total, total);
+  html_div_code(box_same, code6);
 }
