@@ -1625,6 +1625,8 @@
       "Bash(node scripts/ai.mjs g_verify_suggest_clear:*)",
       "Bash(node scripts/ai.mjs g_verify_status_set:*)",
       "Bash(node scripts/ai.mjs local_function_folder_backup:*)",
+      "Bash(node scripts/ai.mjs app_original_bible_gloss_punctuation_entries_repair:*)",
+      "Bash(node scripts/ai.mjs app_original_bible_gloss_words_distinct:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3159,6 +3161,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args g_verify_suggest_clear:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args g_verify_status_set:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args local_function_folder_backup:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_punctuation_entries_repair:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args app_original_bible_gloss_words_distinct:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4692,6 +4696,8 @@
       "Bash(node scripts/aig.mjs g_verify_suggest_clear:*)",
       "Bash(node scripts/aig.mjs g_verify_status_set:*)",
       "Bash(node scripts/aig.mjs local_function_folder_backup:*)",
+      "Bash(node scripts/aig.mjs app_original_bible_gloss_punctuation_entries_repair:*)",
+      "Bash(node scripts/aig.mjs app_original_bible_gloss_words_distinct:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -6225,7 +6231,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args g_verify_suggest_read:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args g_verify_suggest_clear:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args g_verify_status_set:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args local_function_folder_backup:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args local_function_folder_backup:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_punctuation_entries_repair:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args app_original_bible_gloss_words_distinct:*)"
     ],
     "defaultMode": "acceptEdits"
   },
