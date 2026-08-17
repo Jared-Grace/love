@@ -44,6 +44,7 @@ export function bible_glyph_chapter(chapter_code) {
   }
   let chapter_parsed = {
     chapter_code: found.chapter_code,
+    reference: found.reference,
     verses,
   };
   return chapter_parsed;

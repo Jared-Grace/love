@@ -7,8 +7,10 @@ export function bible_glyph_chapter_1jn04() {
     fn_name("bible_glyph_chapter"),
     " is the one place the parsing happens, so no reader of this Bible ever writes a parser.");
   ("A verse is its words in order, one shorthand word per entry, and a word may hold English and glyphs together - Beloved is written as Be, the heart, and d, which draws as Be with a heart and a d. That is what lets the root stay visible through an English ending.");
+  ("The reference is written out beside the code rather than worked out from it, because working it out needs the book list, the book list is downloaded, and a page that cannot say where it is until the network answers is a page that says nothing offline. It is also the thing a picture Bible will one day want to DRAW rather than spell, and a drawn reference will be authored beside the verses exactly as this one is.");
   let chapter = {
     chapter_code: "1JN04",
+    reference: "1 John 4:7-12",
     verses: [
       {
         verse_number: 7,
