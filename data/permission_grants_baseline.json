@@ -151,6 +151,10 @@
   {
    "name": "functions_merge",
    "refusals": 1
+  },
+  {
+   "name": "function_delete_unused_multiple",
+   "refusals": 1
   }
  ]
 }
