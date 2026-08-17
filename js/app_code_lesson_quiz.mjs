@@ -58,6 +58,8 @@ export function app_code_lesson_quiz(
     app_code_quiz_correction,
   );
   let answer_property = property_get(info, "answer_property");
+  ("a batch line spells one pair, and a quiz that asks about something worked out from that pair rather than about the pair itself remaps every line it draws. Its wrong answers are already drawn through this remap; the line it moves on to after a right answer is drawn the same way, or the quiz would open its next question showing the pair as the batch spells it - the very thing it does not ask about. Every other quiz shows the pair as it stands, and identity leaves it alone");
+  let qa_for = property_get_or(info, "qa_for", identity);
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let a = app_code_lesson_above(
     container_blue_light,
@@ -173,7 +175,8 @@ export function app_code_lesson_quiz(
     app_shared_success_message(container_success_message);
     html_visibility_visible(container_success_message);
     await sleep_success_color();
-    qa = next_get();
+    let item = next_get();
+    qa = qa_for(item);
     on_qa_change();
   }
 }
