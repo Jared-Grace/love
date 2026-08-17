@@ -1,4 +1,4 @@
-import { fn_name } from "./fn_name.mjs";
+import { server_api_generic } from "./server_api_generic.mjs";
 import { server_cache_headers } from "./server_cache_headers.mjs";
 import { server_data_endpoints } from "./server_data_endpoints.mjs";
 import { promise_resolved } from "./promise_resolved.mjs";
@@ -6,9 +6,6 @@ import { server_url_api_ordered } from "./server_url_api_ordered.mjs";
 import { server_url } from "./server_url.mjs";
 import { server_port } from "./server_port.mjs";
 import { server_url_api } from "./server_url_api.mjs";
-import { function_worker_pool_run } from "./function_worker_pool_run.mjs";
-import { property_get } from "./property_get.mjs";
-import { log } from "./log.mjs";
 import { log_keep } from "./log_keep.mjs";
 import express from "express";
 import { module_repos_resolve } from "./module_repos_resolve.mjs";
@@ -34,34 +31,8 @@ export async function server() {
   let folder_public_resolved = await module_public_resolve(import.meta);
   let v_public = express.static(folder_public_resolved, static_options);
   let u = server_url_api();
-  async function api_generic(req, res) {
-    ("run the call on a warm pooled worker rather than spawning a node process per request: startup was costing ~1.3 CPU-seconds every call, so a single page polling 3 endpoints every 4 seconds burned a whole core. ",
-      fn_name("function_worker_pool_run"),
-      " still retires its workers on any file change, so dev hot reload is unchanged");
-    let body = property_get(req, "body");
-    let f_name = property_get(body, "f_name");
-    let args = property_get(body, "args");
-    try {
-      let result_inner = await function_worker_pool_run(f_name, args);
-      res.json({
-        result: result_inner,
-      });
-    } catch (caught) {
-      ("express does not catch a rejection from an async handler, so without this the browser waits forever instead of failing — the page's own catch can only run once a response actually arrives");
-      let value = property_get(caught, "message");
-      let failed = String(value);
-      log(server.name, {
-        f_name,
-        failed,
-      });
-      res.status(500).json({
-        result: null,
-        failed,
-      });
-    }
-  }
   async function api(req, res) {
-    await api_generic(req, res);
+    await server_api_generic(req, res);
   }
   app.post(u, api);
   let ordering = promise_resolved();
@@ -69,7 +40,7 @@ export async function server() {
   app.post(uo, api_ordered);
   async function api_ordered(req, res) {
     async function lambda2() {
-      await api_generic(req, res);
+      await server_api_generic(req, res);
     }
     ordering = ordering.then(lambda2);
     await ordering;
