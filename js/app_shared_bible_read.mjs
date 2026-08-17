@@ -1,3 +1,4 @@
+import { app_shared_bible_read_view_whole_chapter } from "./app_shared_bible_read_view_whole_chapter.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
 import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,10 +21,8 @@ import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_cou
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
-import { app_shared_bible_code_verses_open } from "./app_shared_bible_code_verses_open.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { equal } from "./equal.mjs";
 import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
 import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
 import { app_shared_bible_ref_chapter_codes } from "./app_shared_bible_ref_chapter_codes.mjs";
@@ -34,7 +33,6 @@ import { list_map_add_async } from "./list_map_add_async.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -158,12 +156,11 @@ export async function app_shared_bible_read(context, verse_action) {
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
-      let property_name = verse_number_key();
-      let verse_numbers = list_map_property(primary_verses, property_name);
-      let first = list_first(verse_numbers);
-      let last = list_last(verse_numbers);
-      let endpoints = equal(first, last) ? [first] : [first, last];
-      app_shared_bible_code_verses_open(chapter_code, endpoints);
+      let r5 = app_shared_bible_read_view_whole_chapter(
+        primary_verses,
+        chapter_code,
+      );
+      return r5;
     }
     app_shared_button(bar, "View whole chapter", view_whole_chapter);
   } else {
@@ -190,8 +187,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let show_language_names = list_multiple_is(languages_verses);
   let primary_verses = list_last_property(languages_verses, "verses");
   ("A verse number in the link that this chapter does not have is answered here and nowhere earlier, because until the chapter is fetched there is nothing to answer it against. The chapter is drawn all the same - somebody who asked for a verse that is not there still wanted this chapter - so the correction sits above the text rather than instead of it.");
-  let property_name2 = verse_number_key();
-  let verse_numbers_here = list_map_property(primary_verses, property_name2);
+  let property_name = verse_number_key();
+  let verse_numbers_here = list_map_property(primary_verses, property_name);
   let verse_field = app_shared_bible_hash_field_verse(verse_numbers_here);
   app_shared_hash_fields_unknown_told_is(content, hash, [verse_field]);
   ("Having said so, the page stops treating the verse as chosen. A number this chapter does not have cannot be highlighted, cannot be counted, and cannot be scrolled to - and the scrolling was the loud one: looking for a row that is not there threw, and the reader got a wall of error text under the chapter where the answer to their link should have been.");
