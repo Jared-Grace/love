@@ -1,13 +1,12 @@
+import { app_code_lesson_quiz_on_reveal } from "./app_code_lesson_quiz_on_reveal.mjs";
 import { app_code_lesson_quiz_on_question } from "./app_code_lesson_quiz_on_question.mjs";
 import { app_code_lesson_quiz_answer_label } from "./app_code_lesson_quiz_answer_label.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
-import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
-import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -49,27 +48,20 @@ export function app_code_lesson_quiz(
   let on_question = property_get(r4, "on_question");
   let on_answer = property_get(r4, "on_answer");
   let correction_render = property_get(r4, "correction_render");
-  let answer_property = property_get(r4, "answer_property");
-  let qa_for = property_get(r4, "qa_for");
-  let quiz_question = property_get(r4, "quiz_question");
-  let container_question = property_get(r4, "container_question");
-  let answer_label_set = property_get(r4, "answer_label_set");
-  let answers_div = property_get(r4, "answers_div");
-  let parent_container = property_get(r4, "parent_container");
-  let container_correction = property_get(r4, "container_correction");
-  let container_success_message = property_get(r4, "container_success_message");
-  let quiz_index = property_get(r4, "quiz_index");
-  let render_next = property_get(r4, "render_next");
-  let has_next_step = property_get(r4, "has_next_step");
-  let r3 = property_get(r4, "r3");
-  let answer_label = property_get(r4, "answer_label");
+  let r3 = app_code_lesson_quiz_on_reveal(r4);
+  let on_reveal = property_get(r3, "on_reveal");
   let qli = property_get(r3, "qli");
-  app_code_advance_or_no_more(parent_container, has_next_step, render_next);
-  function on_reveal() {
-    "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
-    html_visibility_hidden(container_success_message);
-    app_code_lesson_quiz_show_correction(container_correction);
-  }
+  let answer_label = property_get(r3, "answer_label");
+  let quiz_index = property_get(r3, "quiz_index");
+  let container_success_message = property_get(r3, "container_success_message");
+  let container_correction = property_get(r3, "container_correction");
+  let parent_container = property_get(r3, "parent_container");
+  let answers_div = property_get(r3, "answers_div");
+  let answer_label_set = property_get(r3, "answer_label_set");
+  let container_question = property_get(r3, "container_question");
+  let quiz_question = property_get(r3, "quiz_question");
+  let qa_for = property_get(r3, "qa_for");
+  let answer_property = property_get(r3, "answer_property");
   let left2 = emoji_light_bulb();
   let reveal_button = app_shared_button_wide_text_combine(
     parent_container,
