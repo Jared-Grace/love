@@ -17,10 +17,11 @@ export function app_g_study_lambda_div(r3, overlay) {
     "If you were preaching from this Bible passage, what would you say?",
   );
   let div = html_div(overlay);
-  return {
+  let r2 = {
     passage,
     passages,
     r,
     div,
   };
+  return r2;
 }
