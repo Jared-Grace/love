@@ -62,12 +62,14 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let self_is = js_node_self_read_is(block);
   if (self_is) {
     list_add(refusals, {
+      reason: "self_read",
       why: "this function reads the word for whatever it was called on, and that word is answered by the call rather than by where the function is written. A function written as a value under a name is called on the thing holding it, and the same body standing on its own is called on nothing, so the word would quietly change what it means. Would you like it to be handed what it needs by name instead?",
     });
   }
   let generator_is = property_get(declaration, "generator");
   if (generator_is) {
     list_add(refusals, {
+      reason: "generator",
       why: "this function hands its answers back one at a time as they are asked for, and the line left behind would call the moved body once and hand back the whole thing that does the handing rather than being it. Moving one of these needs the line left behind to pass every request along, which is not what this move writes.",
     });
   }
@@ -79,6 +81,7 @@ export async function js_function_lift_wrapper_refusals(ast, declaration) {
   let pattern_is = list_includes(param_names, null);
   if (pattern_is) {
     list_add(refusals, {
+      reason: "parameter_pattern",
       why: "one of this function's parameters pulls a value apart rather than naming it, and the line left behind has to spell every parameter out to pass it on. Would you like to give that parameter a plain name first?",
     });
   }
