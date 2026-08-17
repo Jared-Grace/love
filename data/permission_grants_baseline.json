@@ -267,6 +267,10 @@
   {
    "name": "qa_app_commit_deploy_remembered",
    "refusals": 1
+  },
+  {
+   "name": "qa_app_commit_promote_judged",
+   "refusals": 1
   }
  ]
 }
