@@ -1,4 +1,5 @@
 import { property_get } from "./property_get.mjs";
+import { app_g_dev_tools_open_verify_told } from "./app_g_dev_tools_open_verify_told.mjs";
 import { app_g_dev_tools_open_verify_lines } from "./app_g_dev_tools_open_verify_lines.mjs";
 import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open_verify_console_each.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -13,10 +14,11 @@ export async function app_g_dev_tools_open_verify() {
   ("It walks the path rather than loading the destination directly because loading the destination directly already worked - so the fault, if there is one, is in the CROSSING: a hash written from a click, a reload triggered by that hash, and a boot that has to read the hash back. Only a run that makes the click can see any of that.");
   ("NOT a member of the repo-wide gate: it needs the dev server up and a browser engine on disk, so a red run would mean 'the server is down' as often as 'the app is broken', and a gate that cries wolf is read as noise. Run it by name when the dev surface is in question.");
   let r2 = await app_g_dev_tools_open_verify_lines();
-  let lines = property_get(r2, "lines");
-  let url = property_get(r2, "url");
-  let engine = property_get(r2, "engine");
-  let told = {};
+  let r3 = app_g_dev_tools_open_verify_told(r2);
+  let told = property_get(r3, "told");
+  let engine = property_get(r3, "engine");
+  let url = property_get(r3, "url");
+  let lines = property_get(r3, "lines");
   try {
     let page = await engine.newPage();
     function error_each(err) {
