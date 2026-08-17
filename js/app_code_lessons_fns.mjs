@@ -225,6 +225,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_copy,
     app_code_lesson_statement_name_sum,
     app_code_lesson_statement_name_total,
+    app_code_lesson_statement_name_itself_sum,
   ];
   return fns;
 }
