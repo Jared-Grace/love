@@ -69,6 +69,19 @@ That single fact governs everything:
 - Never use a term you did not define and would not define. If a distinction cannot be explained in one clause, it is not carrying its weight — cut it.
 - Say what the grammar **is doing here**, not what it can do in general. "Imperfect tense" is a label. "The imperfect tense shows continuous action in the past — it was going on, not finished" is an explanation.
 
+### The same rule, widened past grammar: every word you name a thing by
+
+The rule above is usually read as being about grammar terms. It is not. **An explain may only name a thing by a word the reader has already been given** — and the only words this reader has been given are the glosses in this passage, plus ordinary English.
+
+Two ways to break it, both found in Proverbs 31 and both flagged by the human:
+
+- **A word lifted from the English rendering that is never one of your glosses.** The English line sitting beside the Cebuano is *not* the reader's vocabulary. Verse 1's `ang` was explained as pointing at "the burden they carry" — but "burden" appears nowhere as a gloss, so the reader meets a word nobody defined and cannot tell whether it is the meaning or a figure of speech. Check it mechanically: take every word your explains use, keep the ones that appear in the English rendering, and drop the ones that appear in your own glosses. What is left is what the reader was never told.
+- **A figure of speech stacked on a figure of speech.** "The burden they carry" is a metaphor about a word that was itself glossed with a metaphor ("oracle"). A beginner has to unwind two before reaching anything real. One figure, glossed plainly, or none.
+
+The repair for the first is nearly always the same: **say the plain thing the word points at** — "first the words, and now what those words are." The repair for the second is to make the *gloss* plain first ("oracle" → "prophecy"), because every explain that mentions it then inherits the plainer word for free.
+
+**A gloss changed here changes every explain that quotes it.** When you replace a gloss, sweep the chapter for the old word — that is one edit's worth of work and it is how the chapter stays internally consistent.
+
 ## Every word gets a real entry
 
 **Author an entry for every word in the passage, including repeats.** The list must line up with the green text above it. A missing word breaks that alignment.
@@ -132,6 +145,7 @@ Small choices, fixed once, so chapters authored months apart match:
 - [ ] No explain contradicts or exceeds its `parsing_long`. `app_original_bible_gloss_parsings_gate_run` (in `q`) settles the half of this a machine can: an explain naming a tense, mood or case that **no word of its passage** carries fails the build. Naming one that a *neighbouring* word carries is fine and expected — that is the comparison this rubric asks for — but it must still be a term you defined in this passage, because the passage is all the reader can see.
 - [ ] No "same as above", no empty explain, no markdown, no line breaks.
 - [ ] Every grammar term used is defined somewhere in this passage before or where it is used.
+- [ ] No explain names a thing by a word borrowed from the English rendering that is never one of your own glosses, and no explain stacks a figure of speech on a figure of speech.
 - [ ] Every etymology is one you are certain of.
 - [ ] Valid JSON — it is stored as a string, so a stray quote is silent until it reaches a reader.
 
