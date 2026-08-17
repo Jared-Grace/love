@@ -1,6 +1,4 @@
-import { app_code_review_go_restart } from "./app_code_review_go_restart.mjs";
-import { app_code_review_arrow } from "./app_code_review_arrow.mjs";
-import { app_code_review_skip_button } from "./app_code_review_skip_button.mjs";
+import { app_code_review_c } from "./app_code_review_c.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
@@ -33,19 +31,19 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
-  let r2 = app_code_review_skip_button(context, root);
-  let r3 = app_code_review_arrow(r2);
-  let r4 = app_code_review_go_restart(r3, context);
-  let go_restart = property_get(r4, "go_restart");
-  let skip_button = property_get(r4, "skip_button");
-  let go_next = property_get(r4, "go_next");
-  let queue = property_get(r4, "queue");
-  let passed = property_get(r4, "passed");
-  let key = property_get(r4, "key");
-  let g = property_get(r4, "g");
-  let progress = property_get(r4, "progress");
-  let success_container = property_get(r4, "success_container");
-  let c = property_get(r4, "c");
+  let {
+    r4,
+    go_restart,
+    skip_button,
+    go_next,
+    queue,
+    passed,
+    key,
+    g,
+    progress,
+    success_container,
+    c,
+  } = app_code_review_c(context, root);
   let has_next = property_get(r4, "has_next");
   let back_button = property_get(r4, "back_button");
   let restart_text = app_shared_button_restart_text("Restart review");
