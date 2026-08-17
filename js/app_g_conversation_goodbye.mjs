@@ -22,8 +22,8 @@ export function app_g_conversation_goodbye(
   overlay_close,
 ) {
   arguments_assert(arguments, 4);
-  let property_name2 = g_conversation_key();
-  let has = property_exists(npc, property_name2);
+  let property_name = g_conversation_key();
+  let has = property_exists(npc, property_name);
   if (not(has)) {
     let value = g_conversation_generate(pronouns);
     let property_name3 = g_conversation_key();
@@ -44,8 +44,8 @@ export function app_g_conversation_goodbye(
     text: null,
   };
   function present(t) {
-    let neq3 = not_equal(t, null);
-    return neq3;
+    let neq = not_equal(t, null);
+    return neq;
   }
   let prayer_texts_all = list_map_property(turns, "prayer_text");
   let some_prayers = list_filter(prayer_texts_all, present);
@@ -75,7 +75,7 @@ export function app_g_conversation_goodbye(
     await app_g_conversation_advance(steps, steps_total);
     await close_now();
   }
-  return {
+  let r2 = {
     turns,
     converts,
     remaining,
@@ -88,4 +88,5 @@ export function app_g_conversation_goodbye(
     close_now,
     goodbye,
   };
+  return r2;
 }
