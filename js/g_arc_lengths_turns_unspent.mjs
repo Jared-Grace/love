@@ -37,7 +37,7 @@ export async function g_arc_lengths_turns_unspent(chapter, settings) {
   }
   ("Whatever is left is under the shortest conversation, so it cannot be an arc. It goes to the question pool, which has no length floor because a question is one turn.");
   let turns_unspent = remaining;
-  return {
+  let r = {
     lines,
     matches,
     question_turns,
@@ -47,4 +47,5 @@ export async function g_arc_lengths_turns_unspent(chapter, settings) {
     lengths,
     turns_unspent,
   };
+  return r;
 }
