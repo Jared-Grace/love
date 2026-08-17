@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { g_arc_lengths_turns_unspent } from "./g_arc_lengths_turns_unspent.mjs";
 import { multiply_floor } from "./multiply_floor.mjs";
 import { random_seed_generator_from_text } from "./random_seed_generator_from_text.mjs";
@@ -20,16 +21,15 @@ export async function g_arc_lengths(chapter) {
   "Lengths descend by one mean conversation at a time, and when the next step would fall under the shortest a conversation may be, the descent STARTS AGAIN from the ceiling. That spreads the budget across the whole range instead of pouring its remainder into a tail of the smallest arcs. The finished list is sorted longest first, because a long arc is the hardest thing to place and should be placed while the space is still empty.";
   "A one-conversation arc is wanted, not tolerated. It is somebody who hears and believes, and whose discipling happens through the other believers rather than on screen - and it always fits, which is what makes deriving the npc count safe rather than merely convenient.";
   let settings = g_generation_settings();
-  let {
-    lines,
-    matches,
-    question_turns,
-    arc_turns,
-    cap,
-    shortest,
-    lengths,
-    turns_unspent,
-  } = await g_arc_lengths_turns_unspent(chapter, settings);
+  let r2 = await g_arc_lengths_turns_unspent(chapter, settings);
+  let turns_unspent = property_get(r2, "turns_unspent");
+  let lengths = property_get(r2, "lengths");
+  let shortest = property_get(r2, "shortest");
+  let cap = property_get(r2, "cap");
+  let arc_turns = property_get(r2, "arc_turns");
+  let question_turns = property_get(r2, "question_turns");
+  let matches = property_get(r2, "matches");
+  let lines = property_get(r2, "lines");
   ("Now nudge the lengths, so a cast does not read as an arithmetic sequence. Each nudge picks two arcs and moves ONE turn between them, which conserves the budget exactly and cannot change how many people there are - the two properties the descent had and would be a shame to lose. A move that would push either arc outside the range is simply skipped, which is why the count is a number of ATTEMPTS rather than a promise.");
   ("Seeded on the chapter code, so this chapter always lands the same way. Authored content is worked out once and reused by every playthrough, so a run that differed each time would make a change in the output impossible to read.");
   let next = random_seed_generator_from_text(chapter);
