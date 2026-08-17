@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
 import { app_code_lesson_statement_name_identifier } from "./app_code_lesson_statement_name_identifier.mjs";
 import { app_code_lesson_expression_choose_order_solve } from "./app_code_lesson_expression_choose_order_solve.mjs";
@@ -209,6 +210,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_value,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
+    app_code_lesson_statement_name_again,
   ];
   return fns;
 }
