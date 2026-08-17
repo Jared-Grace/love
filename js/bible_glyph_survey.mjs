@@ -1,7 +1,4 @@
-import { bible_glyph_survey_top } from "./bible_glyph_survey_top.mjs";
-import { bible_glyph_survey_n } from "./bible_glyph_survey_n.mjs";
-import { bible_glyph_survey_unmapped } from "./bible_glyph_survey_unmapped.mjs";
-import { bible_glyph_survey_roots } from "./bible_glyph_survey_roots.mjs";
+import { bible_glyph_survey_glyph_collisions } from "./bible_glyph_survey_glyph_collisions.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
 import { divide } from "./divide.mjs";
 import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
@@ -18,16 +15,17 @@ export async function bible_glyph_survey(testament_name) {
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
   let table_testament = bible_glyph_roots_testament();
-  let r = await bible_glyph_survey_roots(table_testament, testament_name);
-  let r2 = bible_glyph_survey_unmapped(r);
-  let r3 = bible_glyph_survey_n(r2);
-  let r4 = bible_glyph_survey_top(r3);
-  let top = property_get(r4, "top");
-  let unmapped = property_get(r4, "unmapped");
-  let sense_spread = property_get(r4, "sense_spread");
-  let occurrences_mapped = property_get(r4, "occurrences_mapped");
-  let occurrences_total = property_get(r4, "occurrences_total");
-  let glyph_collisions = property_get(r4, "glyph_collisions");
+  let r = await bible_glyph_survey_glyph_collisions(
+    table_testament,
+    testament_name,
+  );
+  let glyph_collisions = property_get(r, "glyph_collisions");
+  let occurrences_total = property_get(r, "occurrences_total");
+  let occurrences_mapped = property_get(r, "occurrences_mapped");
+  let sense_spread = property_get(r, "sense_spread");
+  let unmapped = property_get(r, "unmapped");
+  let top = property_get(r, "top");
+  let r4 = property_get(r, "r4");
   let glyph_missing = property_get(r4, "glyph_missing");
   let mapped = property_get(r4, "mapped");
   let roots = property_get(r4, "roots");
