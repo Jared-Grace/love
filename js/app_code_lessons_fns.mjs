@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_operators } from "./app_code_lesson_expression_choose_order_operators.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { app_code_lesson_expression_choose_order_pair } from "./app_code_lesson_expression_choose_order_pair.mjs";
@@ -157,6 +158,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_times_divide,
     app_code_lesson_expression_choose_order,
     app_code_lesson_expression_choose_order_solve,
+    app_code_lesson_expression_choose_order_operators,
     app_code_lesson_expression_plus_times,
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
