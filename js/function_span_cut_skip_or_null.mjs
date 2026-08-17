@@ -1,3 +1,4 @@
+import { function_span_opening_is } from "./function_span_opening_is.mjs";
 import { text_digits_only } from "./text_digits_only.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,15 +8,29 @@ import { function_exists } from "./function_exists.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export async function function_span_cut_skip_or_null(f_name, address_to) {
+export async function function_span_cut_skip_or_null(
+  f_name,
+  address_from,
+  address_to,
+) {
   "$plain f_name";
+  "$plain address_from";
   "$plain address_to";
-  arguments_assert(arguments, 2);
+  arguments_assert(arguments, 3);
   ("Why a run of lines is being stepped over rather than cut out, or nothing at all when there is no reason to step over it.");
   ("The twin of the one beside it, for the other shape of cut, and three of its four reasons over again. A run has no name of its own to be asked about, so it borrows the name at the end of it - which is why the reading about a word the language will not let a function bind is missing here and only there: that one is asked of what a piece reaches out for, and what a run reaches out for is worked out by the cut itself rather than carried on the row.");
   ("Two more are asked here that are asked nowhere else, and both are about the borrowing rather than the cut. A closure carries a name somebody chose for it, so the lift can take that name and be sure of it; a run carries whatever word its last line happens to mention first, and that word is a good name for the run only sometimes. Measured over every run in the repo standing over the ceiling, sixteen of fifty-one borrowed a word that named the run wrongly - so these two are the difference between a walk that names thirty-five runs well and one that names fifty-one runs half well.");
   ("Every one of them is stepped over rather than thrown, because none is a fault. Each names a run somebody could name well in a moment, and a walk that stopped at the first would leave every later run uncut for a reason that had nothing to do with it.");
   ("They are asked in this order because each rests on the one before. The first three ask about the word itself and can be asked straight away; the last two ask about the name built out of it, and there is no name to ask about until the word is one this repo can spell a name from.");
+  let opening_is = await function_span_opening_is(f_name, address_from);
+  if (opening_is) {
+    let preamble = {
+      address_from,
+      address_to,
+      why: "the run starts on the first line of work in the body, which is where the function keeps the things that are about itself rather than about the work - how many arguments it was called with, and the prose saying what it is for. A cut from there carries all of that away with it, so the function left behind stands with no count of its own arguments and nothing said about it, and the piece cut out is explained as though it were the whole. Would you like to start the run one line lower?",
+    };
+    return preamble;
+  }
   let handed_out_is = js_name_lambda_is(address_to);
   if (handed_out_is) {
     let unnamed = {
