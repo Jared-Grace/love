@@ -1,3 +1,4 @@
+import { app_a_function_download } from "./app_a_function_download.mjs";
 import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
 import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
 import { app_a_function_upload } from "./app_a_function_upload.mjs";
@@ -31,11 +32,7 @@ import { emoji_run } from "./emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "./app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
-import { indexeddb_store_clear } from "./indexeddb_store_clear.mjs";
-import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
 import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
-import { browser_files_store } from "./browser_files_store.mjs";
-import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
 import { app_a_function_node } from "./app_a_function_node.mjs";
@@ -60,9 +57,8 @@ export async function app_a_function(context) {
     return r2;
   }
   async function download() {
-    let store = browser_files_store();
-    await indexeddb_store_clear(browser_files_database_initialize, store);
-    await app_a_file_system_initialize_download();
+    let r5 = await app_a_function_download();
+    return r5;
   }
   if (false) {
     let a2 = emoji_arrow_up();
