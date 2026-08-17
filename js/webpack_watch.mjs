@@ -1,4 +1,4 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { webpack_watch_deps_refresh } from "./webpack_watch_deps_refresh.mjs";
 import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
 import { webpack_watch_affected_get } from "./webpack_watch_affected_get.mjs";
 import { webpack_watch_build_run } from "./webpack_watch_build_run.mjs";
@@ -16,8 +16,6 @@ import { import_install } from "./import_install.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -51,7 +49,8 @@ export async function webpack_watch() {
     return a_name;
   }
   async function deps_refresh(a_name) {
-    return webpack_watch_deps_refresh(a_name, app_deps, app_deps_get);
+    let r2 = await webpack_watch_deps_refresh(a_name, app_deps, app_deps_get);
+    return r2;
   }
   function build_schedule(a_name) {
     let existing = property_get_or_null(pending, a_name);
@@ -94,20 +93,4 @@ export async function webpack_watch() {
   log(webpack_watch.name, {
     watching: folders,
   });
-}
-async function webpack_watch_deps_refresh(a_name, app_deps, app_deps_get) {
-  arguments_assert(arguments, 3);
-  ("re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart");
-  let ad = list_find_property_or_null(app_deps, "a_name", a_name);
-  let known_not = null_is(ad);
-  if (known_not) {
-    return;
-  }
-  let fresh = await app_deps_get(a_name);
-  let failed = null_is(fresh);
-  if (failed) {
-    return;
-  }
-  let value = property_get(fresh, "deps");
-  property_set(ad, "deps", value);
 }
