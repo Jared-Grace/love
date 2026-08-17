@@ -1,4 +1,4 @@
-import { g_game_plants_whole_held } from "./g_game_plants_whole_held.mjs";
+import { g_game_plants_whole_spare } from "./g_game_plants_whole_spare.mjs";
 import { g_plant_matches } from "./g_plant_matches.mjs";
 import { floor } from "./floor.mjs";
 import { round } from "./round.mjs";
@@ -17,11 +17,11 @@ export function g_game_plants_whole(next, days_total) {
   "Extra days are days the arcs did not need, so a plant that receives them holds the same people a little longer. That lowers the leader's SHARE of the days rather than the leader's turns, which is the harmless direction - a floor of half the days is a long way below where these land.";
   "Shared out in PROPORTION to how long each plant already is, and the whole days go first with what is left over landing on the longest. A day each all round was tried and fell hardest on the small early plants, which have the fewest days to dilute: a nine-day plant taking two spare days dropped its leader from three days in four to three in five, while a twenty-three-day plant hardly noticed. Proportion means the plants with room take the days, which is where the room is.";
   let s = g_generation_settings();
-  let r = g_game_plants_whole_held(days_total, s, next);
-  let held = property_get(r, "held");
-  let days_spent = property_get(r, "days_spent");
+  let r = g_game_plants_whole_spare(days_total, s, next);
+  let spare = property_get(r, "spare");
   let plants = property_get(r, "plants");
-  let spare = subtract(days_total, days_spent);
+  let days_spent = property_get(r, "days_spent");
+  let held = property_get(r, "held");
   let any = greater_than(held, 0);
   if (any) {
     let given = 0;
