@@ -19,7 +19,7 @@ export function app_code_lesson_quiz_on_question(r) {
   let correction_render = property_get(r, "correction_render");
   let on_answer = property_get(r, "on_answer");
   let on_question = property_get(r3, "on_question");
-  return {
+  let r2 = {
     answer_label,
     r3,
     has_next_step,
@@ -38,4 +38,5 @@ export function app_code_lesson_quiz_on_question(r) {
     on_answer,
     on_question,
   };
+  return r2;
 }
