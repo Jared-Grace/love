@@ -1,13 +1,12 @@
+import { app_code_lesson_quiz_multiple_choice_distractors } from "./app_code_lesson_quiz_multiple_choice_distractors.mjs";
 import { app_code_lesson_quiz_multiple_choice_add_decoy } from "./app_code_lesson_quiz_multiple_choice_add_decoy.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { not } from "./not.mjs";
 import { or } from "./or.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -18,17 +17,14 @@ import { list_map } from "./list_map.mjs";
 import { list_sort_text_to } from "./list_sort_text_to.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
-import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { each } from "./each.mjs";
-import { subtract } from "./subtract.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
   info,
@@ -38,23 +34,19 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let answer_count_override = property_get(info, "answer_count_override");
-  let answer_property = property_get(info, "answer_property");
-  let quiz_answer = property_get(qa, answer_property);
-  let quiz_answer_text = text_to(quiz_answer);
-  let question_property =
-    app_code_lesson_quiz_qa_property_other(answer_property);
-  let quiz_question = property_get(qa, question_property);
-  let quiz_question_text = text_to(quiz_question);
-  let answer_count_max = app_code_answer_count_max();
-  let nn2 = null_not_is(answer_count_override);
-  if (nn2) {
-    answer_count_max = answer_count_override;
-  }
-  let next_get = list_iterator_refillable(batch_get);
-  let distractor_count = subtract(answer_count_max, 1);
-  let seen = [quiz_answer_text];
-  let distractors = [];
+  let {
+    answer_property,
+    quiz_answer,
+    quiz_answer_text,
+    question_property,
+    quiz_question,
+    quiz_question_text,
+    answer_count_max,
+    next_get,
+    distractor_count,
+    seen,
+    distractors,
+  } = app_code_lesson_quiz_multiple_choice_distractors(info, qa, batch_get);
   let decoy_fn = property_get_or(info, "decoys", null);
   let has_decoys = null_not_is(decoy_fn);
   if (has_decoys) {
