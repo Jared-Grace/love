@@ -1,3 +1,6 @@
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_code_lesson_cups_row_fruits } from "./app_code_lesson_cups_row_fruits.mjs";
 import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -21,9 +24,8 @@ export function app_code_lesson_statement_name_two_above(root) {
   ("Two cups rather than one, drawn next to each other rather than one under the other, because a picture read downwards says what happened next and this has to say what is standing there at the same time.");
   ("They hold different things, and the things are pictures rather than words. Two cups holding two words would put four words on the screen and a learner would be sorting words; two cups holding two fruits can be told apart at a glance, so the only thing left to work out is which cup was asked about.");
   ("Both cups are asked about, in turn, and each answer is the other cup's wrong answer. That is the shape of every question that follows, said first in a story where nobody can get it wrong.");
-  let names = app_code_lesson_statement_name_value_names();
-  let name_first = list_first(names);
-  let name_last = list_last(names);
+  let name_first = app_code_lesson_statement_name_value_name();
+  let name_last = app_code_lesson_statement_name_two_name();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   let box_two = app_code_container_light_blue(root);
@@ -34,9 +36,10 @@ export function app_code_lesson_statement_name_two_above(root) {
     " and one called ",
     name_last,
   ]);
-  let row = app_code_cups_row(box_two);
-  app_code_lesson_cup_fruit(row, word_first, name_first);
-  app_code_lesson_cup_fruit(row, word_last, name_last);
+  app_code_lesson_cups_row_fruits(box_two, [
+    [word_first, name_first],
+    [word_last, name_last],
+  ]);
   ("asked one at a time, and answered one at a time, because the name is what picks which of the two is being talked about and that is the only new thing on this screen");
   let box_ask = app_code_container_light_blue(root);
   html_div_cycle_code(box_ask, [
