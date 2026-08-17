@@ -1,4 +1,4 @@
-import { g_arc_lengths_arc_turns } from "./g_arc_lengths_arc_turns.mjs";
+import { g_arc_lengths_question_turns } from "./g_arc_lengths_question_turns.mjs";
 import { property_get } from "./property_get.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
 import { math_max } from "./math_max.mjs";
@@ -12,14 +12,14 @@ export async function g_arc_lengths(chapter) {
   "Lengths descend by one mean conversation at a time, and when the next step would fall under the shortest a conversation may be, the descent STARTS AGAIN from the ceiling. That spreads the budget across the whole range instead of pouring its remainder into a tail of the smallest arcs. The finished list is sorted longest first, because a long arc is the hardest thing to place and should be placed while the space is still empty.";
   "A one-conversation arc is wanted, not tolerated. It is somebody who hears and believes, and whose discipling happens through the other believers rather than on screen - and it always fits, which is what makes deriving the npc count safe rather than merely convenient.";
   let settings = g_generation_settings();
-  let r2 = await g_arc_lengths_arc_turns(chapter, settings);
-  let arc_turns = property_get(r2, "arc_turns");
-  let cap = property_get(r2, "cap");
-  let lengths = property_get(r2, "lengths");
-  let turns_unspent = property_get(r2, "turns_unspent");
-  let npcs = property_get(r2, "npcs");
+  let r2 = await g_arc_lengths_question_turns(chapter, settings);
+  let question_turns = property_get(r2, "question_turns");
   let r5 = property_get(r2, "r5");
-  let question_turns = property_get(r5, "question_turns");
+  let npcs = property_get(r2, "npcs");
+  let turns_unspent = property_get(r2, "turns_unspent");
+  let lengths = property_get(r2, "lengths");
+  let cap = property_get(r2, "cap");
+  let arc_turns = property_get(r2, "arc_turns");
   let matches = property_get(r5, "matches");
   let lines = property_get(r5, "lines");
   let v = divide_ceil(settings.day_matches, settings.conversation_turns_mean);
