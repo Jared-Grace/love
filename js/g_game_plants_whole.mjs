@@ -1,13 +1,6 @@
-import { g_game_plants_whole_given } from "./g_game_plants_whole_given.mjs";
-import { g_game_plants_whole_any } from "./g_game_plants_whole_any.mjs";
+import { g_game_plants_whole_plant } from "./g_game_plants_whole_plant.mjs";
 import { g_game_plants_whole_spare } from "./g_game_plants_whole_spare.mjs";
-import { g_plant_matches } from "./g_plant_matches.mjs";
-import { round } from "./round.mjs";
-import { divide } from "./divide.mjs";
-import { less_than } from "./less_than.mjs";
-import { multiply_divide } from "./multiply_divide.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
-import { property_get } from "./property_get.mjs";
 export function g_game_plants_whole(next, days_total) {
   "Every plant of a whole game, each one whole, together filling exactly the days of preaching there are.";
   "Plants are drawn at the size they mean to be until one of them would not fit in the days that are left. That one is not made at all - the days it would have taken are handed back to the plants that already exist, a day at a time round the whole game.";
@@ -16,20 +9,6 @@ export function g_game_plants_whole(next, days_total) {
   "Shared out in PROPORTION to how long each plant already is, and the whole days go first with what is left over landing on the longest. A day each all round was tried and fell hardest on the small early plants, which have the fewest days to dilute: a nine-day plant taking two spare days dropped its leader from three days in four to three in five, while a twenty-three-day plant hardly noticed. Proportion means the plants with room take the days, which is where the room is.";
   let s = g_generation_settings();
   let r = g_game_plants_whole_spare(days_total, s, next);
-  let r2 = g_game_plants_whole_any(r);
-  let plants = g_game_plants_whole_given(r2);
-  for (let plant of plants) {
-    let leader_turns = property_get(plant, "leader_turns");
-    let days = property_get(plant, "days");
-    let conversations = divide(leader_turns, s.conversation_turns_mean);
-    let reached = multiply_divide(conversations, 100, days);
-    plant.leader_days_percent = round(reached);
-    plant.leader_short = less_than(leader_turns, s.leader_turns_minimum);
-    let arc_turns = property_get(plant, "arc_turns");
-    let split = g_plant_matches(days, arc_turns);
-    plant.matches = property_get(split, "matches");
-    plant.question_matches = property_get(split, "question_matches");
-    plant.question_percent = property_get(split, "question_percent");
-  }
+  let plants = g_game_plants_whole_plant(r, s);
   return plants;
 }
