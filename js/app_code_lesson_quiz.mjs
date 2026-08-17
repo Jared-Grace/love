@@ -1,3 +1,4 @@
+import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_render_next } from "./app_code_lesson_quiz_render_next.mjs";
 import { app_code_lesson_quiz_lambda } from "./app_code_lesson_quiz_lambda.mjs";
 import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
