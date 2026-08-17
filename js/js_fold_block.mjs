@@ -1,4 +1,4 @@
-import { js_fold_block_empty } from "./js_fold_block_empty.mjs";
+import { js_fold_block_x_name } from "./js_fold_block_x_name.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_fold_pattern_dropped } from "./js_fold_pattern_dropped.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -39,13 +39,13 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (partial_is) {
     return null;
   }
-  let r = js_fold_block_empty(x_ast);
-  let empty = property_get(r, "empty");
-  let k = property_get(r, "k");
-  let pattern_sigs = property_get(r, "pattern_sigs");
-  let return_local = property_get(r, "return_local");
-  let params = property_get(r, "params");
+  let r = js_fold_block_x_name(x_ast);
   let x_name = property_get(r, "x_name");
+  let params = property_get(r, "params");
+  let return_local = property_get(r, "return_local");
+  let pattern_sigs = property_get(r, "pattern_sigs");
+  let k = property_get(r, "k");
+  let empty = property_get(r, "empty");
   if (empty) {
     return null;
   }
