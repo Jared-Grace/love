@@ -1,8 +1,6 @@
-import { property_get } from "./property_get.mjs";
+import { bible_glyph_gate_run_character } from "./bible_glyph_gate_run_character.mjs";
 import { bible_glyph_gate_run_orthodox } from "./bible_glyph_gate_run_orthodox.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { assert_json } from "./assert_json.mjs";
 export function bible_glyph_gate_run() {
   "QA gate: prove the picture Bible's glyph tables agree with each other, so a root, a referent rule or a tradition naming a glyph that does not exist fails the build instead of rendering as a blank where a picture should be.";
   "The tables are three separate files on purpose - the vocabulary of glyphs, the roots that use them, and the traditions that swap one - and separating them is what lets a tradition be added without touching a single verse. The cost of that separation is that nothing but this gate holds the names together. A misspelled glyph name is invisible everywhere else: the survey happily reports it as missing, the renderer happily draws nothing, and the reader is the first to notice.";
@@ -11,13 +9,5 @@ export function bible_glyph_gate_run() {
   "A tradition may only REPLACE, never invent. An Orthodox cross is the same word drawn differently, so its name has to be a name the base vocabulary already carries; a tradition naming a new one would be a glyph no verse could ever reference, since verses are written against the base names.";
   let characters = bible_glyph_characters();
   let r = bible_glyph_gate_run_orthodox(characters);
-  let orthodox = property_get(r, "orthodox");
-  let known = property_get(r, "known");
-  for (let character of orthodox) {
-    let replaces = property_exists(known, character.name);
-    assert_json(replaces, {
-      name: character.name,
-      hint: "a tradition may only redraw a glyph the base vocabulary already names, because verses are written against the base names",
-    });
-  }
+  bible_glyph_gate_run_character(r);
 }
