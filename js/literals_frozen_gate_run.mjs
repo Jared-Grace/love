@@ -1,6 +1,6 @@
+import { literals_frozen_gate_run_lambda2 } from "./literals_frozen_gate_run_lambda2.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -63,9 +63,8 @@ export async function literals_frozen_gate_run() {
   }
   let arrived = list_map(fresh, lambda);
   function lambda2(f_name) {
-    let was = property_get(recorded, f_name);
-    let n = list_includes_not(arrived, was);
-    return n;
+    let r2 = literals_frozen_gate_run_lambda2(f_name, recorded, arrived);
+    return r2;
   }
   let orphaned = list_filter(gone, lambda2);
   for (let f_name of orphaned) {
@@ -77,26 +76,29 @@ export async function literals_frozen_gate_run() {
     });
   }
   ("All three still fail, because a record out of step with the code cannot catch the next value that moves - a gate that passed here would be trading a loud complaint for a silent blind spot. What differs is the repair each one names, and only the first of them is a decision.");
+  let f_name2 = fn_name("literals_frozen_write");
   list_empty_is_assert_json(moved, {
     hint: text_combine_multiple([
       "a frozen value is not what the record says - if the change was meant, write the record again with ",
-      fn_name("literals_frozen_write"),
+      f_name2,
       " so it stands in the commit; if it was not, put the old value back",
     ]),
     moved,
   });
+  let f_name3 = fn_name("literals_frozen_record_new");
   list_empty_is_assert_json(fresh, {
     hint: text_combine_multiple([
       "a frozen constant the record has never held - nothing has moved, so record it with ",
-      fn_name("literals_frozen_record_new"),
+      f_name3,
       " which only ever adds a name the record is missing and cannot touch a value it already holds",
     ]),
     fresh,
   });
+  let f_name4 = fn_name("literals_frozen_record_new");
   list_empty_is_assert_json(gone, {
     hint: text_combine_multiple([
       "a frozen constant the code no longer has, whose value arrived under another name in the same breath - a rename, so nothing published has changed. Clear the old name with ",
-      fn_name("literals_frozen_record_new"),
+      f_name4,
       " which drops it only because that value is being recorded under its new name",
     ]),
     gone,
