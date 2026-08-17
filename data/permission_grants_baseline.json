@@ -243,6 +243,10 @@
   {
    "name": "qa_apps_commit_deploy_remembered",
    "refusals": 1
+  },
+  {
+   "name": "qa_app_commit_deployable_remembered",
+   "refusals": 1
   }
  ]
 }
