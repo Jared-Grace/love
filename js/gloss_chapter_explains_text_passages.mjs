@@ -1,6 +1,5 @@
 import { gloss_chapter_passages_counted_generic } from "./gloss_chapter_passages_counted_generic.mjs";
 import { gloss_entries_explains_text_count } from "./gloss_entries_explains_text_count.mjs";
-
 export async function gloss_chapter_explains_text_passages(
   chapter_code,
   fn,
