@@ -1,0 +1,59 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { app_code_lesson_statement_name_copy_name } from "./app_code_lesson_statement_name_copy_name.mjs";
+import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div_code } from "./html_div_code.mjs";
+import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
+import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
+export function app_code_lesson_statement_name_copy_code_box(root) {
+  arguments_assert(arguments, 1);
+  ("the last two boxes read before the first question: the cup story written out as code, and then what the quote marks would have done to it");
+  ("The story is told first in cups and then again in code, and the code box says nothing the cups did not say. A learner arrives at it already knowing what happens; all that is left is which line says which part, which is the only thing code can be learnt by.");
+  ("The line that fills the third cup says in the same breath that nothing leaves the cup it was filled from. That is the one thing a learner will doubt - a cup story can be watched, and a line of code cannot - so it is said where the line is, and not left to the picture three boxes higher up.");
+  let name_first = app_code_lesson_statement_name_value_name();
+  let name_last = app_code_lesson_statement_name_two_name();
+  let name_copy = app_code_lesson_statement_name_copy_name();
+  let word_first = app_code_lesson_statement_name_value_word();
+  let word_last = app_code_lesson_statement_name_two_word();
+  let box_code = app_code_container_light_blue(root);
+  let quoted_first = app_code_string_code(word_first);
+  let held_first = js_code_let_statement(name_first, quoted_first);
+  let quoted_last = app_code_string_code(word_last);
+  let held_last = js_code_let_statement(name_last, quoted_last);
+  let copied = js_code_let_statement(name_copy, name_first);
+  let logged = js_code_console_log_statement(name_copy);
+  html_div_cycle_code(box_code, [
+    "In JS we make cups ",
+    name_first,
+    " and ",
+    name_last,
+    " like this",
+  ]);
+  html_div_code(box_code, held_first);
+  html_div_code(box_code, held_last);
+  html_div_cycle_code(box_code, [
+    "Then we make ",
+    name_copy,
+    " and fill it with whatever is in ",
+    name_first,
+    " (and this does not remove it from ",
+    name_first,
+    ")",
+  ]);
+  html_div_code(box_code, copied);
+  html_div_cycle_code(box_code, [
+    "Then we write out what is inside ",
+    name_copy,
+  ]);
+  html_div_code(box_code, logged);
+  app_code_writes_out_line(box_code, word_first);
+  app_code_lesson_name_no_quotes_box(root, name_first, name_copy, word_first);
+  return box_code;
+}
