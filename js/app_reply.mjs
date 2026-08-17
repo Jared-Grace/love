@@ -1,6 +1,5 @@
+import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
-import { language_code_key } from "./language_code_key.mjs";
-import { list_copy } from "./list_copy.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
@@ -26,11 +25,6 @@ import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
 import { text_take_less_1 } from "./text_take_less_1.mjs";
 import { equal } from "./equal.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { each_range_from } from "./each_range_from.mjs";
@@ -178,19 +172,12 @@ export async function app_reply(context) {
   }
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
-    let v = prayer_blessing_expand();
-    ("the languages are named in the order they were chosen, matching the order their verses were just read in");
-    let copy = list_copy(languages_chosen);
-    let property_name = language_code_key();
-    let mapped = list_map_property(copy, property_name);
-    let result = list_join_comma(mapped);
-    let concated = list_concat_multiple([
+    let r2 = await app_reply_copy_refresh(
+      languages_chosen,
       responses,
-      [v],
       bible_texts,
-      [result],
-    ]);
-    await list_join_newline_2_copy(concated);
+    );
+    return r2;
   }
   function lambda6(event) {
     let key = property_get(event, "key");
