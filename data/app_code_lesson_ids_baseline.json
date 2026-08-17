@@ -105,6 +105,8 @@
   "statements_any_identifier_as_a_name",
   "statements_two_names_at_once",
   "statements_giving_a_name_a_new_value",
-  "statements_giving_a_name_what_another_name_holds"
+  "statements_giving_a_name_what_another_name_holds",
+  "expressions_solving_a_comparison_step_by_step",
+  "expressions_solving_two_comparisons_step_by_step"
  ]
 }
