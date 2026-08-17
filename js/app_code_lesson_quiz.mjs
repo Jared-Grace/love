@@ -43,17 +43,7 @@ export function app_code_lesson_quiz(
   let quiz_index = property_get(r3, "quiz_index");
   let answer_label = property_get(r3, "answer_label");
   let qli = property_get(r3, "qli");
-  let {
-    correction_render,
-    on_answer,
-    on_question,
-    quiz_question,
-    answer_property,
-    qa_for,
-    answers_div,
-    answer_label_set,
-    container_question,
-  } = app_code_lesson_quiz_on_qa_change(
+  let r2 = app_code_lesson_quiz_on_qa_change(
     r3,
     value,
     qli,
@@ -65,6 +55,15 @@ export function app_code_lesson_quiz(
     container_success_message,
     on_qa_change,
   );
+  let container_question = property_get(r2, "container_question");
+  let answer_label_set = property_get(r2, "answer_label_set");
+  let answers_div = property_get(r2, "answers_div");
+  let qa_for = property_get(r2, "qa_for");
+  let answer_property = property_get(r2, "answer_property");
+  let quiz_question = property_get(r2, "quiz_question");
+  let on_question = property_get(r2, "on_question");
+  let on_answer = property_get(r2, "on_answer");
+  let correction_render = property_get(r2, "correction_render");
   function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
