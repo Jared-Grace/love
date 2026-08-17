@@ -1,4 +1,4 @@
-import { app_code_review_back_button } from "./app_code_review_back_button.mjs";
+import { app_code_review_skip_button } from "./app_code_review_skip_button.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
@@ -33,19 +33,18 @@ import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
-  let r2 = app_code_review_back_button(context, root);
-  let back_button = property_get(r2, "back_button");
-  let has_next = property_get(r2, "has_next");
-  let c = property_get(r2, "c");
-  let success_container = property_get(r2, "success_container");
-  let progress = property_get(r2, "progress");
-  let g = property_get(r2, "g");
-  let key = property_get(r2, "key");
-  let passed = property_get(r2, "passed");
-  let queue = property_get(r2, "queue");
+  let r2 = app_code_review_skip_button(context, root);
+  let skip_button = property_get(r2, "skip_button");
   let go_next = property_get(r2, "go_next");
-  app_shared_button_gap_above(back_button);
-  let skip_button = null;
+  let queue = property_get(r2, "queue");
+  let passed = property_get(r2, "passed");
+  let key = property_get(r2, "key");
+  let g = property_get(r2, "g");
+  let progress = property_get(r2, "progress");
+  let success_container = property_get(r2, "success_container");
+  let c = property_get(r2, "c");
+  let has_next = property_get(r2, "has_next");
+  let back_button = property_get(r2, "back_button");
   if (has_next) {
     let arrow = emoji_arrow_right();
     let next_text = text_combine_middle_space_nb(
