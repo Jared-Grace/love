@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
@@ -49,29 +50,11 @@ export function app_code_lesson_expression_remainder_divide() {
   let example_answer_label = "Remainder formula: ";
   let example_question_label = app_code_label_code_question();
   function recognize_decoys(question, answer) {
-    "tempting wrong remainder rewrites of a / b: the WHOLE PART alone Math.floor(a / b) * b (forgot to subtract it from the dividend), the no-floor a - a / b * b (forgot to round the division down), and a - Math.floor(a / b) (forgot to multiply the quotient back by the divisor). Built from the division's numbers so they stay tied to the question";
-    let nums = text_integers(question);
-    let dividend = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
-    let t3 = text_to(divisor);
-    let whole_part = text_combine_multiple([
-      "Math.floor(",
+    let r5 = app_code_lesson_expression_remainder_divide_recognize_decoys(
       question,
-      ") * ",
-      t3,
-    ]);
-    let t4 = text_to(dividend);
-    let t5 = text_to(divisor);
-    let no_floor = text_combine_multiple([t4, " - ", question, " * ", t5]);
-    let t6 = text_to(dividend);
-    let no_multiply = text_combine_multiple([
-      t6,
-      " - Math.floor(",
-      question,
-      ")",
-    ]);
-    let r2 = [whole_part, no_floor, no_multiply];
-    return r2;
+      answer,
+    );
+    return r5;
   }
   function backwards_decoys(shown_formula, answer_percent) {
     "for the backwards kind (given the remainder formula, pick the % it equals): tempting wrong matches. The DIVISION a / b (it sits right inside the formula, but that is the division, not its remainder), the SWAPPED remainder b % a, and the QUOTIENT part Math.floor(a / b) (only a piece of the formula). Dividend is the formula's first integer, divisor the third (inside Math.floor)";
