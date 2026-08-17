@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_remainder_divide_make } from "./app_code_lesson_expression_remainder_divide_make.mjs";
 import { app_code_lesson_expression_remainder_divide_backwards_decoys } from "./app_code_lesson_expression_remainder_divide_backwards_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_recognize_decoys } from "./app_code_lesson_expression_remainder_divide_recognize_decoys.mjs";
 import { app_code_lesson_expression_remainder_divide_above } from "./app_code_lesson_expression_remainder_divide_above.mjs";
@@ -5,16 +6,13 @@ import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_c
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_title_name_id } from "./app_code_lesson_expression_remainder_divide_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_integers } from "./text_integers.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -25,22 +23,7 @@ export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
   let percent = js_operator_percent_sign();
   function make(divisor, quotient) {
-    "given a / b, the answer to BUILD is the remainder formula a - Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven and the remainder is real";
-    let dividend = app_code_uneven_dividend_only(quotient, divisor);
-    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
-    let t = text_to(divisor);
-    let whole_part = text_combine_multiple([
-      "Math.floor(",
-      division,
-      ") * ",
-      t,
-    ]);
-    let t2 = text_to(dividend);
-    let formula = text_combine_multiple([t2, " - ", whole_part]);
-    let r = {
-      question: division,
-      answer: formula,
-    };
+    let r = app_code_lesson_expression_remainder_divide_make(divisor, quotient);
     return r;
   }
   function batch_get() {
