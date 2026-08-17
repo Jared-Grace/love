@@ -21,8 +21,11 @@ export async function literals_marked_both_ways() {
   "The frozen words are gathered first and each is then looked for by its own exact spelling, rather than reading every tree in the repo. Nearly every file in the repo names a function somewhere, so a sweep keyed on the reference marker would open all of them - which is the reading measured at thirteen minutes on the check beside this one.";
   let repo_name = repo_love_name();
   let r = await literals_marked_both_ways_entries(repo_name);
-  let { entries, reference_marker, reference_prefix, frozen_sites } =
-    await literals_marked_both_ways_entry(r);
+  let r2 = await literals_marked_both_ways_entry(r);
+  let frozen_sites = property_get(r2, "frozen_sites");
+  let reference_prefix = property_get(r2, "reference_prefix");
+  let reference_marker = property_get(r2, "reference_marker");
+  let entries = property_get(r2, "entries");
   let words_frozen = list_map_property_unique(frozen_sites, "word");
   let conflicts = [];
   for (let word of words_frozen) {

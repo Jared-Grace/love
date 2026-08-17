@@ -29,10 +29,11 @@ export async function literals_marked_both_ways_entry(r) {
       list_add(frozen_sites, site);
     }
   }
-  return {
+  let r2 = {
     entries,
     reference_marker,
     reference_prefix,
     frozen_sites,
   };
+  return r2;
 }
