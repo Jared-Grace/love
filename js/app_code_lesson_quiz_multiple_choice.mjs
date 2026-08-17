@@ -1,16 +1,6 @@
-import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
+import { app_code_lesson_quiz_multiple_choice_each_button } from "./app_code_lesson_quiz_multiple_choice_each_button.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
@@ -24,42 +14,16 @@ export function app_code_lesson_quiz_multiple_choice(
   let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
-  let r2 = app_code_lesson_quiz_multiple_choice_answered(
+  let r2 = app_code_lesson_quiz_multiple_choice_each_button(
     r,
     distractor_count,
     next_get,
+    parent,
+    on_success,
+    on_wrong,
+    answer_on_button,
   );
-  let answered = property_get(r2, "answered");
-  let quiz_answer_text = property_get(r2, "quiz_answer_text");
+  let each_button = property_get(r2, "each_button");
   let choices = property_get(r2, "choices");
-  function each_button(quiz_choice) {
-    let b = app_shared_button_wide(parent, quiz_choice, on_click);
-    let background = app_shared_color_gray_light();
-    html_style_background_color_set(b, background);
-    html_style_margin_top(b, "0.2em");
-    async function on_click() {
-      if (answered) {
-        ("locked once the correct choice is chosen");
-        return;
-      }
-      let eq = equal(quiz_choice, quiz_answer_text);
-      if (eq) {
-        answered = true;
-        app_shared_button_screen_green_style_assign(b);
-        await on_success();
-      } else {
-        ("a wrong pick disables just THIS choice (dimmed) and leaves the others live, so the learner narrows down to the answer without it being revealed; on_wrong marks the attempt so the review requeues it");
-        on_wrong();
-        app_code_lesson_quiz_wrong_set(b);
-        html_style_set(b, "pointer-events", "none");
-        html_style_opacity(b, "0.5");
-      }
-    }
-    let nn = null_not_is(answer_on_button);
-    if (nn) {
-      answer_on_button(b, quiz_choice);
-    }
-    return b;
-  }
   list_map(choices, each_button);
 }
