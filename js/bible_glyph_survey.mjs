@@ -1,3 +1,8 @@
+import { round } from "./round.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
@@ -55,7 +60,7 @@ export async function bible_glyph_survey(testament_name) {
   let glyph_collisions = [];
   for (let glyph of object_property_names(glyph_roots)) {
     let sharers = property_get(glyph_roots, glyph);
-    let shared = sharers.length > 1;
+    let shared = greater_than(sharers.length, 1);
     if (shared) {
       list_add(glyph_collisions, {
         glyph,
@@ -104,12 +109,17 @@ export async function bible_glyph_survey(testament_name) {
     return n;
   }
   function occurrences_descending(a, b) {
-    let n = occurrences_of(b) - occurrences_of(a);
+    let left = occurrences_of(b);
+    let right = occurrences_of(a);
+    let n = subtract(left, right);
     return n;
   }
   sense_spread.sort(occurrences_descending);
   unmapped.sort(occurrences_descending);
-  let percent = Math.round((occurrences_mapped / occurrences_total) * 1000) / 10;
+  let left2 = divide(occurrences_mapped, occurrences_total);
+  let n2 = multiply(left2, 1000);
+  let top = round(n2);
+  let percent = divide(top, 10);
   let report = {
     testament: testament_name,
     roots_count: roots.length,
