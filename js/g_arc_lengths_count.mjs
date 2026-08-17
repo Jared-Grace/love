@@ -12,7 +12,7 @@ export function g_arc_lengths_count(r2) {
   let lengths = property_get(r2, "lengths");
   let turns_unspent = property_get(r2, "turns_unspent");
   let count = lengths.length;
-  return {
+  let r = {
     next,
     lines,
     matches,
@@ -24,4 +24,5 @@ export function g_arc_lengths_count(r2) {
     turns_unspent,
     count,
   };
+  return r;
 }
