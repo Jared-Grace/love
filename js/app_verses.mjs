@@ -1,4 +1,4 @@
-import { app_verses_counts } from "./app_verses_counts.mjs";
+import { app_verses_count_updates } from "./app_verses_count_updates.mjs";
 import { app_verses_display_group } from "./app_verses_display_group.mjs";
 import { app_verses_copy } from "./app_verses_copy.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
@@ -21,7 +21,6 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -48,19 +47,18 @@ export async function app_verses(context) {
   if (unknown_shown) {
     return;
   }
-  let r = await app_reply_initialize(context);
-  let r4 = await app_verses_counts(r, hash);
-  let counts = property_get(r4, "counts");
-  let card = property_get(r4, "card");
-  let content = property_get(r4, "content");
-  let order = property_get(r4, "order");
-  let chosen_references = property_get(r4, "chosen_references");
-  let apply_seq = property_get(r4, "apply_seq");
-  let offline_notified = property_get(r4, "offline_notified");
-  let verse_count = property_get(r4, "verse_count");
-  let verse_groups = property_get(r4, "verse_groups");
-  let languages_chosen = property_get(r4, "languages_chosen");
-  let count_updates = [];
+  let r = await app_verses_count_updates(context, hash);
+  let count_updates = property_get(r, "count_updates");
+  let languages_chosen = property_get(r, "languages_chosen");
+  let verse_groups = property_get(r, "verse_groups");
+  let verse_count = property_get(r, "verse_count");
+  let offline_notified = property_get(r, "offline_notified");
+  let apply_seq = property_get(r, "apply_seq");
+  let chosen_references = property_get(r, "chosen_references");
+  let order = property_get(r, "order");
+  let content = property_get(r, "content");
+  let card = property_get(r, "card");
+  let counts = property_get(r, "counts");
   function count_each(c) {
     let component = null;
     async function on_click() {
