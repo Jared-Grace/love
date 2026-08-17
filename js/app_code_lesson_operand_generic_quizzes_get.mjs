@@ -1,3 +1,4 @@
+import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -5,8 +6,6 @@ import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choo
 import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
-import { list_map } from "./list_map.mjs";
 export function app_code_lesson_operand_generic_quizzes_get(
   question,
   answer,
@@ -42,39 +41,12 @@ export function app_code_lesson_operand_generic_quizzes_get(
     };
     list_add(infos, build);
   }
-  function each_info(info) {
-    function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz(
-        container,
-        {
-          question,
-          answer,
-        },
-        parent,
-        context,
-        refresh,
-        info,
-        batch_get,
-        quizzes,
-        next_get,
-      );
-    }
-    return quiz;
-  }
-  let quizzes = list_map(infos, each_info);
-  function each_exercise(info) {
-    let exercise = {
-      info,
-      question,
-      answer,
-      batch_get,
-    };
-    return exercise;
-  }
-  let exercises = list_map(infos, each_exercise);
-  let quizzes_exercises = {
-    quizzes,
-    exercises,
-  };
+  ("the wiring from here on is the same for every lesson - one quiz and one exercise for each kind, all of them reading the one question, the one answer and the one batch - and it is written in the one place the other lessons already go through");
+  let quizzes_exercises = app_code_lesson_quizzes_exercises(
+    infos,
+    batch_get,
+    question,
+    answer,
+  );
   return quizzes_exercises;
 }
