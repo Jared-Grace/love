@@ -21,15 +21,15 @@
   100% { transform: rotate(-360deg); }
 }
 @keyframes html_loading_breath {
-  0% { transform: scale(1.1510596633714498); }
-  12.5% { transform: scale(0.8050830708484836); }
-  25% { transform: scale(1.2370139921058565); }
-  37.5% { transform: scale(0.8249254684431117); }
-  50% { transform: scale(1.1170967231464846); }
-  62.5% { transform: scale(0.835466039041429); }
-  75% { transform: scale(1.1210853857471401); }
-  87.5% { transform: scale(0.9496639217484144); }
-  100% { transform: scale(1.1510596633714498); }
+  0% { transform: scale(1.3275125559425913); }
+  12.5% { transform: scale(0.8264488604719065); }
+  25% { transform: scale(1.285003915138031); }
+  37.5% { transform: scale(0.8143559232752771); }
+  50% { transform: scale(1.0668573623951856); }
+  62.5% { transform: scale(0.8312991529034913); }
+  75% { transform: scale(1.0968960847778053); }
+  87.5% { transform: scale(0.8487933258815923); }
+  100% { transform: scale(1.3275125559425913); }
 }
 @keyframes html_loading_core {
   0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }
@@ -39,7 +39,7 @@
   <script>if (location.pathname.indexOf('/dev/') !== -1) { var dev_error_words = null; var dev_error_button = null; var dev_error_said = function (words) { dev_error_button.textContent = words; }; var dev_error_select = function () { var range = document.createRange(); range.selectNodeContents(dev_error_words); var selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range); }; var dev_error_copy_older = function () { var area = document.createElement('textarea'); area.value = dev_error_words.textContent; area.setAttribute('style', 'position:fixed;top:0;left:0;opacity:0'); document.body.appendChild(area); area.select(); var done = false; try { done = document.execCommand('copy'); } catch (e) { done = false; } area.parentNode.removeChild(area); if (done) { dev_error_said('📋 Copied'); return; } dev_error_select(); dev_error_said('Hold to copy'); }; var dev_error_copy = function () { var said_copied = function () { dev_error_said('📋 Copied'); }; if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(dev_error_words.textContent).then(said_copied, dev_error_copy_older); return; } dev_error_copy_older(); }; var dev_error_start = function () { var box = document.createElement('pre'); box.id = 'dev-error-banner'; box.setAttribute('style', 'position:fixed;left:0;right:0;bottom:0;max-height:60vh;overflow:auto;margin:0;padding:1rem;z-index:2147483647;background:#ffdddd;color:#900;font:0.9rem monospace;white-space:pre-wrap;border-top:0.25rem solid #900'); dev_error_button = document.createElement('button'); dev_error_button.setAttribute('style', 'display:block;font:inherit;color:#900;background:white;border:0.0625rem solid #900;border-radius:0.5rem;padding:0.5rem 1rem;margin-bottom:0.5rem;cursor:pointer'); dev_error_button.onclick = dev_error_copy; dev_error_words = document.createElement('span'); box.appendChild(dev_error_button); box.appendChild(dev_error_words); document.body.appendChild(box); }; var dev_error_nothing = function () {}; var dev_error_send = function (kind, message) { var body = JSON.stringify({ f_name: 'dev_error_log_add', args: [kind, String(message), location.href] }); var asked = fetch('/api', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body }); asked.then(dev_error_nothing, dev_error_nothing); }; var dev_error_show = function (kind, message) { dev_error_send(kind, message); if (!dev_error_words) { dev_error_start(); } dev_error_words.textContent = dev_error_words.textContent + kind + ': ' + message + '\n'; dev_error_said('📋 Copy'); }; window.addEventListener('error', function (e) { dev_error_show('error', (e.message || e.error) + ' @ ' + e.filename + ':' + e.lineno); }); window.addEventListener('unhandledrejection', function (e) { var reason = e.reason; dev_error_show('unhandled', (reason && reason.stack) || reason); }); }</script>
   <div id="app-error" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.8);z-index:1001;display:none;color:white;font-family:sans-serif;font-size:1.5rem;text-align:center;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:1.5rem;box-sizing:border-box"><p>Sorry — this didn't finish loading.</p><button style="font:inherit;color:black;background:white;border:none;border-radius:0.5rem;padding:0.75rem 2rem;cursor:pointer" onclick="location.reload()">Try again</button></div><script>var app_error_box = document.getElementById('app-error'); if (app_error_box) { document.documentElement.appendChild(app_error_box); } var app_error_show = function () { if (!app_error_box) { return; } app_error_box.style.display = 'flex'; var splash = document.getElementById('app-loading'); if (splash) { splash.remove(); } }; window.addEventListener('error', app_error_show); window.addEventListener('unhandledrejection', app_error_show);</script>
   <script>if (location.pathname.indexOf('/dev/') !== -1) { var recorder_remembers = 'dev_record'; if (location.search.indexOf('record=0') !== -1) { localStorage.removeItem(recorder_remembers); } else if (location.search.indexOf('record') !== -1) { localStorage.setItem(recorder_remembers, '1'); } if (localStorage.getItem(recorder_remembers) === '1') { var page_recorder = document.createElement('script'); page_recorder.src = 'recorder.js'; document.head.appendChild(page_recorder); } }</script>
-  <script src="g.js?v=1786973834905"> 
+  <script src="g.js?v=1786973873995"> 
     
   </script>
   <script>if ('serviceWorker' in navigator) { if (location.pathname.indexOf('/dev/') !== -1) { navigator.serviceWorker.getRegistrations().then(function (registrations) { registrations.forEach(function (registration) { registration.unregister(); }); }); } }</script>
