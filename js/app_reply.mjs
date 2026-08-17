@@ -1,3 +1,4 @@
+import { app_reply_lambda2 } from "./app_reply_lambda2.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
@@ -99,10 +100,8 @@ export async function app_reply(context) {
   each_range_from(3, 6, lambda4);
   list_add_multiple(choices_verse_count, [20, 40]);
   function lambda2(c) {
-    async function lambda3() {
-      await update(c);
-    }
-    app_shared_button(card2, c, lambda3);
+    let r3 = app_reply_lambda2(c, update, card2);
+    return r3;
   }
   each(choices_verse_count, lambda2);
   let visible_count = null;
