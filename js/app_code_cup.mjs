@@ -1,3 +1,4 @@
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
@@ -89,7 +90,7 @@ export function app_code_cup(parent, inside, name) {
   }
   let stem = html_div(cup);
   html_style_assign(stem, {
-    width: "0.45em",
+    width: app_shared_spaced_small_gap(),
     height: "0.7em",
     "background-color": dark,
   });
