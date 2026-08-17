@@ -104,6 +104,7 @@
   "statements_giving_a_value_a_name",
   "statements_any_identifier_as_a_name",
   "statements_two_names_at_once",
-  "statements_giving_a_name_a_new_value"
+  "statements_giving_a_name_a_new_value",
+  "statements_giving_a_name_what_another_name_holds"
  ]
 }
