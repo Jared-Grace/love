@@ -33,7 +33,15 @@ export async function ebible_readaloud_lines_gate_run() {
   });
   function lambda(measured) {
     let uneven = property_get(measured, "differ");
-    return uneven;
+    let bible_folder = property_get(measured, "bible_folder");
+    function lambda_bible_folder_name(counts) {
+      let counts_named = object_merge_set(counts, {
+        bible_folder,
+      });
+      return counts_named;
+    }
+    let named = list_map(uneven, lambda_bible_folder_name);
+    return named;
   }
   let differ_each = list_map(bibles, lambda);
   let differ = lists_combine(differ_each);
