@@ -34,19 +34,22 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let {
-    answer_property,
-    quiz_answer,
-    quiz_answer_text,
-    question_property,
-    quiz_question,
-    quiz_question_text,
-    answer_count_max,
-    next_get,
-    distractor_count,
-    seen,
-    distractors,
-  } = app_code_lesson_quiz_multiple_choice_distractors(info, qa, batch_get);
+  let r2 = app_code_lesson_quiz_multiple_choice_distractors(
+    info,
+    qa,
+    batch_get,
+  );
+  let distractors = property_get(r2, "distractors");
+  let seen = property_get(r2, "seen");
+  let distractor_count = property_get(r2, "distractor_count");
+  let next_get = property_get(r2, "next_get");
+  let answer_count_max = property_get(r2, "answer_count_max");
+  let quiz_question_text = property_get(r2, "quiz_question_text");
+  let quiz_question = property_get(r2, "quiz_question");
+  let question_property = property_get(r2, "question_property");
+  let quiz_answer_text = property_get(r2, "quiz_answer_text");
+  let quiz_answer = property_get(r2, "quiz_answer");
+  let answer_property = property_get(r2, "answer_property");
   let decoy_fn = property_get_or(info, "decoys", null);
   let has_decoys = null_not_is(decoy_fn);
   if (has_decoys) {
