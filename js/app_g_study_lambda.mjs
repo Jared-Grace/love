@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_g_study_lambda_sermon_index } from "./app_g_study_lambda_sermon_index.mjs";
 import { app_g_study_lambda_sermon_correct_list } from "./app_g_study_lambda_sermon_correct_list.mjs";
 import { app_g_study_lambda_property } from "./app_g_study_lambda_property.mjs";
@@ -19,15 +20,14 @@ export async function app_g_study_lambda(overlay, player, review, close) {
   arguments_assert(arguments, 4);
   let r3 = await app_g_study_lambda_property(overlay, player, review);
   let r4 = app_g_study_lambda_sermon_correct_list(r3);
-  let {
-    sermon_correct_list,
-    div,
-    r,
-    passages,
-    passage,
-    property,
-    sermon_index,
-  } = app_g_study_lambda_sermon_index(r4);
+  let r5 = app_g_study_lambda_sermon_index(r4);
+  let sermon_index = property_get(r5, "sermon_index");
+  let property = property_get(r5, "property");
+  let passage = property_get(r5, "passage");
+  let passages = property_get(r5, "passages");
+  let r = property_get(r5, "r");
+  let div = property_get(r5, "div");
+  let sermon_correct_list = property_get(r5, "sermon_correct_list");
   let mistakes = false;
   refresh();
   function refresh() {
