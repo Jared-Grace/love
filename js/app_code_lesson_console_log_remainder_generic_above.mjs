@@ -1,15 +1,11 @@
-import { property_get } from "./property_get.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_row_count } from "./app_code_lesson_console_log_remainder_generic_above_row_count.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_remainder_texts } from "./app_code_lesson_console_log_remainder_generic_above_remainder_texts.mjs";
+import { app_code_lesson_console_log_remainder_generic_above_has_insight } from "./app_code_lesson_console_log_remainder_generic_above_has_insight.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
-import { range } from "./range.mjs";
 import { each } from "./each.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
 export function app_code_lesson_console_log_remainder_generic_above(
   root,
@@ -21,34 +17,25 @@ export function app_code_lesson_console_log_remainder_generic_above(
 ) {
   arguments_assert(arguments, 6);
   let intro = app_code_container_light_blue(root);
-  let r4 = app_code_lesson_console_log_remainder_generic_above_remainder_texts(
-    divisor,
-    intro,
-    root,
-    divisor_text,
-    percent,
-  );
-  let r = app_code_lesson_console_log_remainder_generic_above_row_count(
-    r4,
-    modulo_fn,
-    divisor,
-    root,
-    percent,
-  );
-  let row_count = property_get(r, "row_count");
-  let row = property_get(r, "row");
-  let list = range(row_count);
-  each(list, row);
-  let has_insight = list_empty_not_is(insight);
+  let has_insight =
+    app_code_lesson_console_log_remainder_generic_above_has_insight(
+      divisor,
+      intro,
+      root,
+      divisor_text,
+      percent,
+      modulo_fn,
+      insight,
+    );
   if (has_insight) {
     let insight_box = app_code_container_light_blue(root);
     function insight_line(line) {
-      let r3 = app_code_lesson_console_log_remainder_generic_above_insight_line(
+      let r = app_code_lesson_console_log_remainder_generic_above_insight_line(
         line,
         insight_box,
         divisor,
       );
-      return r3;
+      return r;
     }
     each(insight, insight_line);
   }
