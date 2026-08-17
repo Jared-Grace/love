@@ -1,3 +1,5 @@
+import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
+import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -34,19 +36,25 @@ export function app_code_lesson_expression_choose_order_solve_example(
   let head = html_div_first(card);
   let asking = html_div(head);
   let current = tree;
+  let duration = app_shared_animation_duration();
   function ask(words) {
     "the one place the asking is written, so the three askings take turns in it instead of standing beside each other";
     html_text_set(asking, words);
   }
-  function on_change(step) {
+  function finished_say() {
+    "the line is finished, so where the asking stood the learner is told well done - in the very words and the very green the walkthrough of the lesson before ends in, and the quiz ends every question in, out of the one place all three of them read";
+    "It replaces the asking rather than standing under it, because the asking was the only thing on the card that was ever about what to do next, and there is nothing to do next.";
+    html_clear(asking);
+    app_shared_success_message(asking);
+  }
+  async function on_change(step) {
     "the line as it now stands is kept, because the wrong values offered for a part are worked out from the line the part is standing in";
     current = property_get(step, "current");
     let more = app_code_expression_node_is(current);
     if (not(more)) {
-      ("the line is finished, so where the asking stood the learner is told well done - in the very words and the very green the walkthrough of the lesson before ends in, and the quiz ends every question in, out of the one place all three of them read");
-      ("It replaces the asking rather than standing under it, because the asking was the only thing on the card that was ever about what to do next, and there is nothing to do next.");
-      html_clear(asking);
-      app_shared_success_message(asking);
+      ("the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.");
+      ("Everything under the card - the line, the buttons, the whole rest of the page - slides down as the room is made, rather than being somewhere else by the time the learner looks back. Taken at once it was a jump, and the well done arrived in the middle of it, so the one thing on the screen worth reading was the thing hardest to catch.");
+      await html_height_change_animate(head, asking, finished_say, duration);
       return;
     }
     let solved = property_get(step, "solved");
