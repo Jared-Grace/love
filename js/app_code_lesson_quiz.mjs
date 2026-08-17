@@ -1,8 +1,8 @@
+import { app_code_lesson_quiz_on_next } from "./app_code_lesson_quiz_on_next.mjs";
 import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
-import { app_code_lesson_quiz_on_move_on } from "./app_code_lesson_quiz_on_move_on.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
@@ -24,7 +24,6 @@ import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
 import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
-import { add_1 } from "./add_1.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
@@ -96,15 +95,8 @@ export function app_code_lesson_quiz(
   let lcli = app_code_lesson_current_last_is(context);
   let no_more = lcli && not(has_review);
   async function on_next() {
-    "Next moves to the next quiz KIND (forwards, backwards, unscramble...); on the last kind it goes to the next lesson, same as Skip";
-    if (qli) {
-      await app_code_lesson_quiz_on_move_on(context);
-    } else {
-      app_code_quiz_index_transform(context, quizzes, add_1);
-      refresh();
-      ("the Next/Back buttons redraw only the quiz area (a local refresh), which does not run the app-level after_refresh, so mirror the new quiz position into the url here - otherwise a browser reload re-seeds the OLD quiz index from a stale hash and drops back to the first quiz");
-      app_code_hash_write(context);
-    }
+    let r = await app_code_lesson_quiz_on_next(qli, context, quizzes, refresh);
+    return r;
   }
   let last_lesson_end = qli && no_more;
   function render_next(next_parent) {
