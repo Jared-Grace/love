@@ -1,3 +1,4 @@
+import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open_verify_console_each.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { divide } from "./divide.mjs";
@@ -31,10 +32,8 @@ export async function app_g_dev_tools_open_verify() {
     }
     page.on("pageerror", error_each);
     function console_each(message) {
-      let type_word = message.type();
-      let message_text = message.text();
-      let line = text_combine_multiple([type_word, "  ", message_text]);
-      list_add(lines, line);
+      let r = app_g_dev_tools_open_verify_console_each(message, lines);
+      return r;
     }
     page.on("console", console_each);
     await page.goto(url);
