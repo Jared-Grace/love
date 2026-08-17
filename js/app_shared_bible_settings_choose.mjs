@@ -7,6 +7,7 @@ import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 import { app_shared_bible_offline_panel } from "./app_shared_bible_offline_panel.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
+import { app_shared_bible_about_panel } from "./app_shared_bible_about_panel.mjs";
 export async function app_shared_bible_settings_choose(
   bar,
   content,
@@ -43,5 +44,14 @@ export async function app_shared_bible_settings_choose(
     let languages = ebible_languages_from_codes(languages_chosen);
     app_shared_bible_offline_panel(content, languages, back);
   }
-  app_shared_bible_settings_render(content, on_languages, on_offline, context);
+  function on_about() {
+    app_shared_bible_about_panel(content, back);
+  }
+  app_shared_bible_settings_render(
+    content,
+    on_languages,
+    on_offline,
+    on_about,
+    context,
+  );
 }
