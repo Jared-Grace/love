@@ -1,4 +1,4 @@
-import { app_shared_bible_read_verse_here_is } from "./app_shared_bible_read_verse_here_is.mjs";
+import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
 import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 import { property_get } from "./property_get.mjs";
@@ -131,7 +131,7 @@ export async function app_shared_bible_read(context, verse_action) {
   }
   let verse_numbers_chosen = app_shared_bible_hash_verse_numbers(hash);
   ("The passage is remembered for this tab, so that going off to choose another one can be changed one's mind about. A chapter with nothing picked in it is remembered as itself - it is still somewhere a reader was, and coming back to it is coming back to the chapter.");
-  let r = await app_shared_bible_read_verse_here_is(
+  let r = await app_shared_bible_read_languages_verses(
     context,
     chapter_code,
     verse_numbers_chosen,
@@ -145,12 +145,12 @@ export async function app_shared_bible_read(context, verse_action) {
     ref_line,
     hash,
   );
-  let verse_here_is = property_get(r, "verse_here_is");
-  let primary_verses = property_get(r, "primary_verses");
-  let show_language_names = property_get(r, "show_language_names");
-  let verse_rows = property_get(r, "verse_rows");
-  let updates = property_get(r, "updates");
   let languages_verses = property_get(r, "languages_verses");
+  let updates = property_get(r, "updates");
+  let verse_rows = property_get(r, "verse_rows");
+  let show_language_names = property_get(r, "show_language_names");
+  let primary_verses = property_get(r, "primary_verses");
+  let verse_here_is = property_get(r, "verse_here_is");
   verse_numbers_chosen = list_filter(verse_numbers_chosen, verse_here_is);
   async function render_verse(v) {
     let r2 = await app_shared_bible_read_verse_row(
