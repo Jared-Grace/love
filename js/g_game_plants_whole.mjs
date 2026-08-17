@@ -1,10 +1,8 @@
+import { g_game_plants_whole_given } from "./g_game_plants_whole_given.mjs";
 import { g_game_plants_whole_any } from "./g_game_plants_whole_any.mjs";
 import { g_game_plants_whole_spare } from "./g_game_plants_whole_spare.mjs";
 import { g_plant_matches } from "./g_plant_matches.mjs";
-import { floor } from "./floor.mjs";
 import { round } from "./round.mjs";
-import { modulo } from "./modulo.mjs";
-import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
@@ -19,29 +17,7 @@ export function g_game_plants_whole(next, days_total) {
   let s = g_generation_settings();
   let r = g_game_plants_whole_spare(days_total, s, next);
   let r2 = g_game_plants_whole_any(r);
-  let any = property_get(r2, "any");
-  let held = property_get(r2, "held");
-  let days_spent = property_get(r2, "days_spent");
-  let plants = property_get(r2, "plants");
-  let spare = property_get(r2, "spare");
-  if (any) {
-    let given = 0;
-    for (let plant of plants) {
-      let days = property_get(plant, "days_drawn");
-      let part = multiply_divide(spare, days, days_spent);
-      let whole = floor(part);
-      plant.days = plant.days + whole;
-      given = given + whole;
-    }
-    let residue = subtract(spare, given);
-    for (let step = 0; less_than(step, residue); step++) {
-      let along = modulo(step, held);
-      let left = subtract(held, 1);
-      let at = subtract(left, along);
-      let plant = plants[at];
-      plant.days = plant.days + 1;
-    }
-  }
+  let plants = g_game_plants_whole_given(r2);
   for (let plant of plants) {
     let leader_turns = property_get(plant, "leader_turns");
     let days = property_get(plant, "days");
