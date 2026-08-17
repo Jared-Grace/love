@@ -1,5 +1,5 @@
+import { app_code_lesson_quiz_multiple_choice_tailored } from "./app_code_lesson_quiz_multiple_choice_tailored.mjs";
 import { app_code_lesson_quiz_multiple_choice_quiz_answer } from "./app_code_lesson_quiz_multiple_choice_quiz_answer.mjs";
-import { app_code_lesson_quiz_multiple_choice_add_decoy } from "./app_code_lesson_quiz_multiple_choice_add_decoy.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
@@ -24,7 +24,6 @@ import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { each } from "./each.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
   info,
@@ -41,31 +40,15 @@ export function app_code_lesson_quiz_multiple_choice(
   );
   let quiz_answer = property_get(r2, "quiz_answer");
   let quiz_answer_text = property_get(r2, "quiz_answer_text");
-  let question_property = property_get(r2, "question_property");
-  let quiz_question = property_get(r2, "quiz_question");
-  let quiz_question_text = property_get(r2, "quiz_question_text");
-  let answer_count_max = property_get(r2, "answer_count_max");
-  let next_get = property_get(r2, "next_get");
-  let distractor_count = property_get(r2, "distractor_count");
-  let seen = property_get(r2, "seen");
-  let distractors = property_get(r2, "distractors");
-  let has_decoys = property_get(r2, "has_decoys");
-  let r3 = property_get(r2, "r3");
-  let answer_property = property_get(r3, "answer_property");
-  let decoy_fn = property_get(r3, "decoy_fn");
-  if (has_decoys) {
-    ("seed the TAILORED wrong answers first (the tempting mistakes for this question, e.g. the rounded-UP value), so they are guaranteed to appear; the loop below then fills any remaining slots with random distractors from other questions. Opt-in via info.decoys - lessons without it behave exactly as before");
-    let tailored = decoy_fn(quiz_question, quiz_answer);
-    function add_decoy(decoy) {
-      let r = app_code_lesson_quiz_multiple_choice_add_decoy(
-        decoy,
-        seen,
-        distractors,
-      );
-      return r;
-    }
-    each(tailored, add_decoy);
-  }
+  let r = app_code_lesson_quiz_multiple_choice_tailored(r2, quiz_answer);
+  let answer_property = property_get(r, "answer_property");
+  let distractors = property_get(r, "distractors");
+  let seen = property_get(r, "seen");
+  let distractor_count = property_get(r, "distractor_count");
+  let next_get = property_get(r, "next_get");
+  let answer_count_max = property_get(r, "answer_count_max");
+  let quiz_question_text = property_get(r, "quiz_question_text");
+  let question_property = property_get(r, "question_property");
   ("the wrong answers below are drawn from the lesson's other questions, and read off each one by the same property names this quiz used. A quiz that shows something OTHER than the pair its batch spells - one that works a third value out of the pair and asks about that - would otherwise draw the wrong kind of thing entirely, and could offer the learner the very line it is asking them about. Such a lesson hands over info.qa_for to remap a drawn line the same way it remapped its own; every other lesson shows the pair as it stands and needs nothing");
   let qa_for = property_get_or(info, "qa_for", identity);
   let attempts = 0;
