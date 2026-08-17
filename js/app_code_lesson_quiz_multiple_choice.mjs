@@ -1,5 +1,4 @@
-import { app_code_lesson_quiz_multiple_choice_choices } from "./app_code_lesson_quiz_multiple_choice_choices.mjs";
-import { app_code_lesson_quiz_multiple_choice_attempts_max } from "./app_code_lesson_quiz_multiple_choice_attempts_max.mjs";
+import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
@@ -10,7 +9,6 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_sort_text_to } from "./list_sort_text_to.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,18 +24,14 @@ export function app_code_lesson_quiz_multiple_choice(
   let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
-  let r2 = app_code_lesson_quiz_multiple_choice_attempts_max(r);
-  let attempts_max = property_get(r2, "attempts_max");
-  let r3 = app_code_lesson_quiz_multiple_choice_choices(
-    r2,
+  let r2 = app_code_lesson_quiz_multiple_choice_answered(
+    r,
     distractor_count,
-    attempts_max,
     next_get,
   );
-  let choices = property_get(r3, "choices");
-  let quiz_answer_text = property_get(r3, "quiz_answer_text");
-  list_sort_text_to(choices);
-  let answered = false;
+  let answered = property_get(r2, "answered");
+  let quiz_answer_text = property_get(r2, "quiz_answer_text");
+  let choices = property_get(r2, "choices");
   function each_button(quiz_choice) {
     let b = app_shared_button_wide(parent, quiz_choice, on_click);
     let background = app_shared_color_gray_light();
