@@ -18,7 +18,7 @@ export function app_code_review_c(context, root) {
   let progress = property_get(r4, "progress");
   let success_container = property_get(r4, "success_container");
   let c = property_get(r4, "c");
-  return {
+  let r = {
     r4,
     go_restart,
     skip_button,
@@ -31,4 +31,5 @@ export function app_code_review_c(context, root) {
     success_container,
     c,
   };
+  return r;
 }
