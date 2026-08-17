@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 export function permission_grant_names() {
   "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
-  let spelled1 = fn_name("ai_git");
+  let spelled = fn_name("ai_git");
   let spelled2 = fn_name("ai_log_add");
   let spelled3 = fn_name("work_options");
   let spelled4 = fn_name("work_items");
@@ -685,7 +685,7 @@ export function permission_grant_names() {
   let spelled678 = fn_name("folder_user_storage_function_path_function");
   let spelled679 = fn_name("functions_names_untracked");
   let spelled680 = fn_name("qa_commit_named_path");
-  let spelled681 = fn_name("folders_function_named_rename");
+  let spelled681 = fn_name("storage_function_folder_rename");
   let spelled682 = fn_name("functions_operators_raw_repair_some");
   let spelled683 = fn_name("firebase_prod_apps_unshipped");
   let spelled684 = fn_name("firebase_prod_hashes");
@@ -1583,7 +1583,7 @@ export function permission_grant_names() {
   let spelled1538 = fn_name("functions_forwarding_whole");
   let spelled1539 = fn_name("app_ceb_bible_gloss_chapters_verse_claims_wrong");
   let names = [
-    spelled1,
+    spelled,
     spelled2,
     spelled3,
     spelled4,

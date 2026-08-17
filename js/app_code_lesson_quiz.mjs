@@ -53,7 +53,6 @@ export function app_code_lesson_quiz(
     quizzes,
     refresh,
     container_success_message,
-    on_qa_change,
   );
   let container_question = property_get(r2, "container_question");
   let answer_label_set = property_get(r2, "answer_label_set");
@@ -64,6 +63,8 @@ export function app_code_lesson_quiz(
   let on_question = property_get(r2, "on_question");
   let on_answer = property_get(r2, "on_answer");
   let correction_render = property_get(r2, "correction_render");
+  ("the first question is painted here, below everything it reads, and not up where the pieces are gathered");
+  on_qa_change();
   function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
