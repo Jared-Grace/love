@@ -108,6 +108,7 @@
   "statements_two_names_at_once",
   "statements_giving_a_name_a_new_value",
   "statements_giving_a_name_what_another_name_holds",
-  "statements_adding_what_two_names_hold"
+  "statements_adding_what_two_names_hold",
+  "statements_giving_a_name_what_two_names_add_up_to"
  ]
 }
