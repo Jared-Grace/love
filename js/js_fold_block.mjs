@@ -1,8 +1,8 @@
+import { js_fold_block_any_unbound } from "./js_fold_block_any_unbound.mjs";
 import { js_fold_block_x_name } from "./js_fold_block_x_name.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_fold_pattern_dropped } from "./js_fold_pattern_dropped.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
 import { js_fold_match_block } from "./js_fold_match_block.mjs";
@@ -13,8 +13,6 @@ import { js_fold_plan } from "./js_fold_plan.mjs";
 import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_any } from "./list_any.mjs";
 import { list_map } from "./list_map.mjs";
 import { null_is } from "./null_is.mjs";
 export function js_fold_block(x_ast, f_ast, f_block) {
@@ -56,14 +54,10 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (no_match) {
     return null;
   }
-  let start = property_get(match, "start");
-  let binding = property_get(match, "binding");
-  let needed = list_concat(params, [return_local]);
-  function unbound_is(name) {
-    let missing = property_exists_not(binding, name);
-    return missing;
-  }
-  let any_unbound = list_any(needed, unbound_is);
+  let r2 = js_fold_block_any_unbound(match, params, return_local);
+  let any_unbound = property_get(r2, "any_unbound");
+  let binding = property_get(r2, "binding");
+  let start = property_get(r2, "start");
   if (any_unbound) {
     return null;
   }
