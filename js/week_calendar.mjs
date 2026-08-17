@@ -1,3 +1,4 @@
+import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
 import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_day_cell } from "./week_calendar_day_cell.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
@@ -6,9 +7,6 @@ import { week_calendar_range_covers } from "./week_calendar_range_covers.mjs";
 import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
-import { date_weekday_short } from "./date_weekday_short.mjs";
-import { date_month_day } from "./date_month_day.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { equal } from "./equal.mjs";
@@ -57,16 +55,8 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   each(slots, slot_row);
   week_calendar_paint(records, paint_record, summary, ranges, summary_line);
   function header_cell(day) {
-    let weekday = date_weekday_short(day);
-    let month_day = date_month_day(day);
-    let text = text_combine_multiple([weekday, " ", month_day]);
-    let head = html_div_text(grid, text);
-    html_style_assign(head, {
-      "font-weight": "bold",
-      "text-align": "center",
-      padding: "0.2rem 0.3rem",
-      "font-size": "0.8rem",
-    });
+    let r = week_calendar_header_cell(day, grid);
+    return r;
   }
   function slot_row(slot) {
     let text = slot_hour_label(slot);
