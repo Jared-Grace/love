@@ -1,8 +1,8 @@
+import { app_g_dev_routes_day_baptisms_collect } from "./app_g_dev_routes_day_baptisms_collect.mjs";
 import { app_g_dev_routes_gratitude } from "./app_g_dev_routes_gratitude.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_dev_routes_npc_path_clear } from "./app_g_dev_routes_npc_path_clear.mjs";
 import { object_assign } from "./object_assign.mjs";
-import { app_g_day_baptisms_collect_start } from "./app_g_day_baptisms_collect_start.mjs";
 import { app_g_characters } from "./app_g_characters.mjs";
 import { localhost_is } from "./localhost_is.mjs";
 import { app_g_design } from "./app_g_design.mjs";
@@ -15,25 +15,19 @@ export function app_g_dev_routes(div_map) {
   let gratitude = property_get(r, "gratitude");
   let dove = property_get(r, "dove");
   let discern = property_get(r, "discern");
-  let disciple = property_get(r, "disciple");
-  let believe = property_get(r, "believe");
-  let hru = property_get(r, "hru");
-  let gospel_share = property_get(r, "gospel_share");
-  let quick = property_get(r, "quick");
-  let unbeliever = property_get(r, "unbeliever");
-  let day_unbelievers = property_get(r, "day_unbelievers");
-  let r2 = property_get(r, "r2");
-  let study = property_get(r, "study");
-  let pray = property_get(r2, "pray");
-  let day_parts = property_get(r2, "day_parts");
+  let r2 = app_g_dev_routes_day_baptisms_collect(r, div_map);
+  let day_baptisms_collect = property_get(r2, "day_baptisms_collect");
   let day_hours = property_get(r2, "day_hours");
-  async function day_baptisms_collect() {
-    ("the #day_baptisms_collect demo (sibling of #day_unbelievers under the 'day' group): the OTHER half of a day - the same three chosen people, but two of them have already believed today, so the player finishes the last conversation and then GATHERS the day's believers and walks them to the water (",
-      fn_name("app_g_day_baptisms_collect_start"),
-      "). converts are baptized the same day, so who may be collected is exactly who believed today - nothing is stored to say so");
-    await app_g_view_set(null);
-    await app_g_day_baptisms_collect_start(div_map);
-  }
+  let day_parts = property_get(r2, "day_parts");
+  let pray = property_get(r2, "pray");
+  let study = property_get(r2, "study");
+  let day_unbelievers = property_get(r2, "day_unbelievers");
+  let unbeliever = property_get(r2, "unbeliever");
+  let quick = property_get(r2, "quick");
+  let gospel_share = property_get(r2, "gospel_share");
+  let hru = property_get(r2, "hru");
+  let believe = property_get(r2, "believe");
+  let disciple = property_get(r2, "disciple");
   async function day_conversation() {
     ("the #day_conversation demo (sibling of #day_unbelievers under the 'day' group): open a REAL unbeliever conversation as a ONE-slice day, so it spans the whole 6 AM sunrise → 7 PM dusk and the change is easy to SEE as you answer each turn (",
       fn_name("app_g_day_conversation_demo"),
