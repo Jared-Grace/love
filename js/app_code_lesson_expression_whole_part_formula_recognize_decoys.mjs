@@ -1,6 +1,6 @@
+import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
+import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_integers } from "./text_integers.mjs";
-import { list_get } from "./list_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_whole_part_formula_recognize_decoys(
@@ -9,9 +9,8 @@ export function app_code_lesson_expression_whole_part_formula_recognize_decoys(
 ) {
   arguments_assert(arguments, 2);
   ("tempting wrong rewrites of a / b: Math.floor(a / b) alone (forgot to multiply back by the divisor), a * b (multiplied the two numbers instead), and a / b * b (forgot to round down). Built from the division's numbers so they stay tied to the question");
-  let nums = text_integers(question);
-  let dividend = list_get(nums, 0);
-  let divisor = list_get(nums, 1);
+  let dividend = app_code_division_dividend(question);
+  let divisor = app_code_division_divisor(question);
   let no_multiply = text_combine_multiple(["Math.floor(", question, ")"]);
   let t = text_to(dividend);
   let t3 = text_to(divisor);

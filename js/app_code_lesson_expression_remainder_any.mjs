@@ -1,3 +1,5 @@
+import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
+import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_expression_remainder_any_title_name_id } from "./app_code_lesson_expression_remainder_any_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { divide_floor } from "./divide_floor.mjs";
@@ -12,8 +14,6 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
-import { list_get } from "./list_get.mjs";
-import { text_integers } from "./text_integers.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_any() {
@@ -38,9 +38,8 @@ export function app_code_lesson_expression_remainder_any() {
   }
   function decoys(question, answer) {
     "three tempting wrong values, matching the mistakes the formula makes visible: the QUOTIENT floor(n / d) (how many whole times the divisor fits - stopped before finding what is left over), the WHOLE PART floor(n / d) * d (the part that divides evenly - forgot to subtract it from the dividend), and the RAW division n / d (never rounded down)";
-    let nums = text_integers(question);
-    let number = list_get(nums, 0);
-    let divisor = list_get(nums, 1);
+    let number = app_code_division_dividend(question);
+    let divisor = app_code_division_divisor(question);
     let quotient = divide_floor(number, divisor);
     let whole_part = multiply(quotient, divisor);
     let raw = divide(number, divisor);
