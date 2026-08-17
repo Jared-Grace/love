@@ -1,13 +1,8 @@
 import { property_get } from "./property_get.mjs";
+import { bible_glyph_coverage_curve_step } from "./bible_glyph_coverage_curve_step.mjs";
 import { bible_glyph_coverage_curve_curve } from "./bible_glyph_coverage_curve_curve.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
-import { list_add } from "./list_add.mjs";
-import { round } from "./round.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { less_than } from "./less_than.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 export async function bible_glyph_coverage_curve(testament_name) {
   "How much of a testament's page a picture Bible covers as its vocabulary grows, measured at a spread of vocabulary sizes.";
   "$plain testament_name";
@@ -19,42 +14,10 @@ export async function bible_glyph_coverage_curve(testament_name) {
   let glosses = await bible_strong_glosses(testament_name);
   let roots = bible_glyph_roots();
   let r = bible_glyph_coverage_curve_curve(testament_name, roots, glosses);
-  let curve = property_get(r, "curve");
-  let occurrences_total = property_get(r, "occurrences_total");
-  let counted = property_get(r, "counted");
-  let table_reads = property_get(r, "table_reads");
-  let steps = property_get(r, "steps");
-  for (let step of steps) {
-    let past = greater_than(step, counted.length);
-    if (past) {
-      continue;
-    }
-    let reached = 0;
-    let reached_drawn = 0;
-    let index = 0;
-    while (less_than(index, step)) {
-      let row = counted[index];
-      reached = reached + row.occurrences;
-      if (row.drawn) {
-        reached_drawn = reached_drawn + row.occurrences;
-      }
-      index = index + 1;
-    }
-    let share = divide(reached, occurrences_total);
-    let n = multiply(share, 1000);
-    let tenths = round(n);
-    let percent = divide(tenths, 10);
-    let share_drawn = divide(reached_drawn, occurrences_total);
-    let n3 = multiply(share_drawn, 1000);
-    let tenths_drawn = round(n3);
-    let percent_drawn = table_reads ? divide(tenths_drawn, 10) : null;
-    list_add(curve, {
-      words: step,
-      occurrences: reached,
-      percent,
-      percent_drawn,
-    });
-  }
+  let r2 = bible_glyph_coverage_curve_step(r);
+  let counted = property_get(r2, "counted");
+  let occurrences_total = property_get(r2, "occurrences_total");
+  let curve = property_get(r2, "curve");
   let report = {
     testament: testament_name,
     words_total: counted.length,
