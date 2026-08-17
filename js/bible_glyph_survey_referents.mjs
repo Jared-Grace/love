@@ -13,7 +13,7 @@ export function bible_glyph_survey_referents(r) {
   let sense_spread = property_get(r2, "sense_spread");
   let occurrences_mapped = property_get(r2, "occurrences_mapped");
   let referents = bible_glyph_referents();
-  return {
+  let r3 = {
     percent,
     roots,
     mapped,
@@ -23,4 +23,5 @@ export function bible_glyph_survey_referents(r) {
     occurrences_mapped,
     referents,
   };
+  return r3;
 }
