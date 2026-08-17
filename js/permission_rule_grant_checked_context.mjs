@@ -51,7 +51,7 @@ export async function permission_rule_grant_checked_context(
   }
   await permission_grant_names_settings_write(names_now);
   ("the one rule handed back is the one for this seam, out of the several the generator writes for a name. It is the one the guard is asked about below, so it is the one worth reporting.");
-  ("the guard reads the settings file on every call, so it can answer for the rule right away — Claude's own permission engine cannot, and will keep prompting until the session restarts");
+  ("the guard reads the settings file on every call, so the rule is live the moment it is written — and because a hook answering allow settles the call before Claude's own permission engine is consulted, that engine's stale copy never gets a say. This used to report that a restart was needed, which was reasoned from the engine caching its settings and never tested; running a freshly granted command straight afterwards showed no prompt at all. The restart matters only for tools this guard does not front.");
   let command = permission_rule_command_probe(rule);
   let verdict = await guard_check(command);
   let written = {
@@ -60,7 +60,7 @@ export async function permission_rule_grant_checked_context(
     action: "granted",
     refusals: [],
     guard: property_get(verdict, "decision"),
-    note: "the guard sees it now; Claude's permission engine only after a session restart",
+    note: "live now — the guard reads the settings file on every call and answers before Claude's own permission engine is asked, so no restart is wanted",
   };
   return written;
 }

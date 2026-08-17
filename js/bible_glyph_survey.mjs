@@ -1,7 +1,6 @@
-import { bible_glyph_survey_percent } from "./bible_glyph_survey_percent.mjs";
+import { bible_glyph_survey_referents } from "./bible_glyph_survey_referents.mjs";
 import { bible_glyph_survey_glyph_collisions } from "./bible_glyph_survey_glyph_collisions.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
-import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -21,15 +20,15 @@ export async function bible_glyph_survey(testament_name) {
   );
   let glyph_collisions = property_get(r, "glyph_collisions");
   let occurrences_total = property_get(r, "occurrences_total");
-  let r2 = bible_glyph_survey_percent(r);
-  let percent = property_get(r2, "percent");
-  let roots = property_get(r2, "roots");
-  let mapped = property_get(r2, "mapped");
-  let glyph_missing = property_get(r2, "glyph_missing");
-  let unmapped = property_get(r2, "unmapped");
-  let sense_spread = property_get(r2, "sense_spread");
+  let r2 = bible_glyph_survey_referents(r);
+  let referents = property_get(r2, "referents");
   let occurrences_mapped = property_get(r2, "occurrences_mapped");
-  let referents = bible_glyph_referents();
+  let sense_spread = property_get(r2, "sense_spread");
+  let unmapped = property_get(r2, "unmapped");
+  let glyph_missing = property_get(r2, "glyph_missing");
+  let mapped = property_get(r2, "mapped");
+  let roots = property_get(r2, "roots");
+  let percent = property_get(r2, "percent");
   let referent_reach = [];
   for (let referent of referents) {
     let overrides = property_exists(mapped, referent.strong)
