@@ -183,6 +183,14 @@
   {
    "name": "qa_app_commit_gate_run_at",
    "refusals": 1
+  },
+  {
+   "name": "qa_commit_named_at",
+   "refusals": 1
+  },
+  {
+   "name": "qa_app_commit_deployable_generic",
+   "refusals": 1
   }
  ]
 }
