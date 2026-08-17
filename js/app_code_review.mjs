@@ -1,3 +1,4 @@
+import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
@@ -73,6 +74,7 @@ export function app_code_review(context) {
     await app_code_review_go_to_lesson(next_lesson, context);
   }
   app_code_review_persist(context, key, passed, queue);
+  ("every one of the four ways off this screen stands off from the one above it by the app's own gap, the same as the buttons at the foot of a lesson - four buttons touching read as one block of text to get past rather than as four things to choose between");
   let back = app_shared_button_back_text();
   let back_button = app_shared_button_wide_text_combine(
     g,
@@ -80,6 +82,7 @@ export function app_code_review(context) {
     " to the previous lesson",
     go_previous,
   );
+  app_shared_button_gap_above(back_button);
   let skip_button = null;
   if (has_next) {
     let arrow = emoji_arrow_right();
@@ -88,6 +91,7 @@ export function app_code_review(context) {
       "Skip this review and go to the next lesson",
     );
     skip_button = app_shared_button_wide(g, next_text, go_next);
+    app_shared_button_gap_above(skip_button);
   }
   async function go_restart() {
     storage_local_remove_context(context, key);
@@ -95,11 +99,13 @@ export function app_code_review(context) {
   }
   let restart_text = app_shared_button_restart_text("Restart review");
   let restart_button = app_shared_button_wide(g, restart_text, go_restart);
+  app_shared_button_gap_above(restart_button);
   let home_text = app_shared_button_home_text();
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
   }
-  app_shared_button_wide(g, home_text, go_home);
+  let home_button = app_shared_button_wide(g, home_text, go_home);
+  app_shared_button_gap_above(home_button);
   function present() {
     html_clear(progress);
     html_clear(c);

@@ -38,8 +38,10 @@ export function app_code_lesson_expression_choose_order_solve_above(root) {
   let step_text = text_to(step_value);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);
+  ("The line itself gets a card to itself, and so does the one sentence at the end saying what changes. Between them stands the run: four steps, each one a thing that happened, and the card around them is what says they are one run rather than four remarks. The line is not a step of the run - it is what the run was done to - and the sentence at the end is not a step either, it is what the next screen does instead.");
+  let line_card = app_code_container_light_blue(root);
+  app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let recap = app_code_container_light_blue(root);
-  app_code_lesson_suppose_solve_line(recap, "Suppose", whole_line);
   html_div_cycle_code(recap, [
     "Before, you chose each operator in order (",
     first_symbol,
@@ -67,8 +69,8 @@ export function app_code_lesson_expression_choose_order_solve_above(root) {
     final_text,
     ")",
   ]);
-  ("A line drawn right across before the last sentence, for the reason it is drawn in the lesson before: what is above it is the run the learner already knows, and what is below it is the one thing this lesson changes about that run.");
-  ("It is said here rather than on the card because it only means anything beside the run it changes. On the card it stood alone, a step away from the four steps it names, and a learner reading it there had to carry the run back down to it from above.");
-  app_shared_hr_spaced(recap);
-  app_code_lesson_expression_choose_order_solve_intro(recap);
+  ("The one sentence that says what changes stands in a card of its own. It used to stand at the foot of the run with a rule drawn above it, and a rule inside a card is a second boundary doing what the edge of a card already does - so the run ended, then ended again, and the gap the rule needed either side of it left the sentence adrift at the bottom of a box it was not part of. The edge of its own card says the same thing in no space at all.");
+  ("It is said here rather than on the card below because it only means anything beside the run it changes. On that card it stood alone, a screen away from the four steps it names, and a learner reading it there had to carry the run back down to it from above.");
+  let change_card = app_code_container_light_blue(root);
+  app_code_lesson_expression_choose_order_solve_intro(change_card);
 }
