@@ -1,3 +1,4 @@
+import { js_function_forwarding_removed_holder_is } from "./js_function_forwarding_removed_holder_is.mjs";
 import { js_function_forwarding_removed_name } from "./js_function_forwarding_removed_name.mjs";
 import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
 import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
@@ -11,8 +12,6 @@ import { equal_not } from "./equal_not.mjs";
 import { js_name_variable_declared_is } from "./js_name_variable_declared_is.mjs";
 import { js_call_argument_site } from "./js_call_argument_site.mjs";
 import { not } from "./not.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { list_is } from "./list_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -68,8 +67,9 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (not(agreed_is)) {
     return;
   }
-  let holder = list_get_end_1(stack);
-  let holder_is = list_is(holder);
+  let r3 = js_function_forwarding_removed_holder_is(stack);
+  let holder_is = property_get(r3, "holder_is");
+  let holder = property_get(r3, "holder");
   if (not(holder_is)) {
     return;
   }
