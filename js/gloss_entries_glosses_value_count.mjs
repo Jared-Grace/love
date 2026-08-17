@@ -2,7 +2,6 @@ import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_entry_gloss_key } from "./gloss_entry_gloss_key.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function gloss_entries_glosses_value_count(entries, value) {
   "How many words of a passage carry a named wording, exactly and entirely, as the short English standing under them.";
   "$plain value";

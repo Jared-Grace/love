@@ -1,11 +1,10 @@
+import { bible_glyph_survey_referent } from "./bible_glyph_survey_referent.mjs";
 import { bible_glyph_survey_referent_reach } from "./bible_glyph_survey_referent_reach.mjs";
 import { bible_glyph_survey_referents } from "./bible_glyph_survey_referents.mjs";
 import { bible_glyph_survey_glyph_collisions } from "./bible_glyph_survey_glyph_collisions.mjs";
 import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { list_add } from "./list_add.mjs";
 export async function bible_glyph_survey(testament_name) {
   "What the seed glyph table gets wrong, measured against every word the interlinear actually uses in one testament.";
   "$plain testament_name";
@@ -24,29 +23,15 @@ export async function bible_glyph_survey(testament_name) {
   let r2 = bible_glyph_survey_referents(r);
   let r3 = bible_glyph_survey_referent_reach(r2);
   let referent_reach = property_get(r3, "referent_reach");
-  let percent = property_get(r3, "percent");
-  let roots = property_get(r3, "roots");
-  let mapped = property_get(r3, "mapped");
-  let glyph_missing = property_get(r3, "glyph_missing");
-  let unmapped = property_get(r3, "unmapped");
-  let sense_spread = property_get(r3, "sense_spread");
-  let occurrences_mapped = property_get(r3, "occurrences_mapped");
-  let referents = property_get(r3, "referents");
-  for (let referent of referents) {
-    let overrides = property_exists(mapped, referent.strong)
-      ? property_get(mapped, referent.strong).glyph
-      : null;
-    let by_verses = property_exists(referent, "verses");
-    let kind = by_verses ? "verses" : "phrase";
-    list_add(referent_reach, {
-      strong: referent.strong,
-      root: referent.root,
-      kind,
-      glyph_usually: overrides,
-      glyphs: referent.glyphs,
-      because: referent.because,
-    });
-  }
+  let {
+    percent,
+    roots,
+    mapped,
+    glyph_missing,
+    unmapped,
+    sense_spread,
+    occurrences_mapped,
+  } = bible_glyph_survey_referent(r3, referent_reach);
   let report = {
     testament: testament_name,
     referent_reach,
