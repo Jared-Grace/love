@@ -1,3 +1,4 @@
+import { app_g_verify_home_on_visible } from "./app_g_verify_home_on_visible.mjs";
 import { app_g_verify_home_view } from "./app_g_verify_home_view.mjs";
 import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
 import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
@@ -31,7 +32,6 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_scroll_generic } from "./html_scroll_generic.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let r3 = app_g_verify_home_view();
@@ -77,15 +77,15 @@ export async function app_g_verify_home(context) {
   if (not(b2)) {
     chapter_codes = chapter_codes.concat([chapter_code]).sort();
   }
-  render(chapter, status, chapter_state);
-  ("on page load/refresh scroll the passage to the top of the viewport, past the chapter-grid, title and hint — the reviewer wants to read the passage immediately. Only here (the one-time initial render), NOT on the 4s poll re-renders, which would yank the page mid-read");
-  await html_scroll_generic(view, "auto", "start");
-  poll();
-  function on_visible() {
-    if (not(document.hidden)) {
-      refresh();
-    }
-  }
+  let on_visible = await app_g_verify_home_on_visible(
+    render,
+    chapter,
+    status,
+    chapter_state,
+    view,
+    poll,
+    refresh,
+  );
   document.addEventListener("visibilitychange", on_visible);
   function render(chapter_shown, status_shown, chapter_state_shown) {
     shown_json = json_to({
