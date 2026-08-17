@@ -275,6 +275,22 @@
   {
    "name": "app_shared_build",
    "refusals": 1
+  },
+  {
+   "name": "webpack_build",
+   "refusals": 1
+  },
+  {
+   "name": "lock_waiting_dead_clear",
+   "refusals": 1
+  },
+  {
+   "name": "app_shared_latest_build",
+   "refusals": 1
+  },
+  {
+   "name": "example_check",
+   "refusals": 1
   }
  ]
 }
