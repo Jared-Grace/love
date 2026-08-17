@@ -1,3 +1,4 @@
+import { js_lesson_rights_space_strip_declared_each } from "./js_lesson_rights_space_strip_declared_each.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -6,7 +7,6 @@ import { js_string } from "./js_string.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_is } from "./text_is.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { text_starts_with_space } from "./text_starts_with_space.mjs";
 import { text_skip_while } from "./text_skip_while.mjs";
 import { each } from "./each.mjs";
@@ -71,21 +71,8 @@ export function js_lesson_rights_space_strip(ast) {
     list_strip(value);
   }
   function declared_each(v) {
-    "the shape where the words stand under a name of their own beside the call";
-    let node = property_get(v, "node");
-    let id = property_get(node, "id");
-    let named = js_node_type_is(id, "Identifier");
-    if (not(named)) {
-      return;
-    }
-    let id_name = property_get(id, "name");
-    ("a numbered second one counts too, since a file holding two lessons names them apart that way");
-    let wanted = text_starts_with(id_name, "rights");
-    if (not(wanted)) {
-      return;
-    }
-    let init = property_get(node, "init");
-    list_strip(init);
+    let r = js_lesson_rights_space_strip_declared_each(v, list_strip);
+    return r;
   }
   js_visit_types(ast, ["Property"], entry_each);
   js_visit_types(ast, ["VariableDeclarator"], declared_each);
