@@ -1,0 +1,54 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
+import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
+import { app_code_quiz_hash_key } from "./app_code_quiz_hash_key.mjs";
+export async function app_code_screens_crawl_lesson_quiz_url(
+  v,
+  url_prefix,
+  id,
+  page,
+  records,
+) {
+  arguments_assert(arguments, 5);
+  let f_name = fn_name("app_code_examples");
+  ("the pairs are joined with a comma, which is the shape the app itself now writes. A crawl that seeded a different shape would still open - both are read - but the mark it later looks for in the address would be spelled one way and the address the other, so the walk would stop after the first click and quietly capture one kind per lesson");
+  let combined = text_combine_multiple([",", v, "=", f_name]);
+  let v2 = app_code_lesson_hash_key();
+  let examples_url = text_combine_multiple([
+    url_prefix,
+    "?s=",
+    id,
+    "_e#",
+    v2,
+    "=",
+    id,
+    combined,
+  ]);
+  await page.goto(examples_url);
+  await page.waitForTimeout(180);
+  let examples = await app_code_screen_capture(page);
+  examples.id = id;
+  examples.screen = "examples";
+  examples.kind = 0;
+  list_add(records, examples);
+  let v3 = app_code_screen_hash_key();
+  let f_name2 = fn_name("app_code_quiz");
+  let v4 = app_code_quiz_hash_key();
+  let combined2 = text_combine_multiple([",", v3, "=", f_name2, ",", v4, "=0"]);
+  let v5 = app_code_lesson_hash_key();
+  let quiz_url = text_combine_multiple([
+    url_prefix,
+    "?s=",
+    id,
+    "_q#",
+    v5,
+    "=",
+    id,
+    combined2,
+  ]);
+  return quiz_url;
+}
