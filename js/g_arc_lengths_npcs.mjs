@@ -13,7 +13,7 @@ export function g_arc_lengths_npcs(r4) {
   let turns_unspent = property_get(r4, "turns_unspent");
   list_sort_number_mapper_reverse(lengths, identity);
   let npcs = lengths.length;
-  return {
+  let r = {
     lines,
     matches,
     question_turns,
@@ -23,4 +23,5 @@ export function g_arc_lengths_npcs(r4) {
     turns_unspent,
     npcs,
   };
+  return r;
 }
