@@ -1,14 +1,12 @@
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_cup } from "./app_code_cup.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { emoji_grape } from "./emoji_grape.mjs";
-import { emoji_olive } from "./emoji_olive.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -23,12 +21,10 @@ export function app_code_lesson_statement_name_again_above(root) {
   let name = app_code_lesson_statement_name_value_name();
   let word_before = app_code_lesson_statement_name_value_word();
   let word_after = app_code_lesson_statement_name_two_word();
-  let grape = emoji_grape();
-  let olive = emoji_olive();
   let box_before = app_code_container_light_blue(root);
   let has = list_join_empty([" has ", word_before, " in it"]);
   html_div_cycle_code(box_before, ["Remember, the cup called ", name, has]);
-  app_code_cup(box_before, grape, name);
+  app_code_lesson_cup_fruit(box_before, word_before, name);
   let box_after = app_code_container_light_blue(root);
   let swap = list_join_empty([
     "Now take the ",
@@ -38,7 +34,7 @@ export function app_code_lesson_statement_name_again_above(root) {
     " in",
   ]);
   html_div_cycle_code(box_after, [swap]);
-  app_code_cup(box_after, olive, name);
+  app_code_lesson_cup_fruit(box_after, word_after, name);
   html_div_cycle_code(box_after, ["It is the same cup, still called ", name]);
   let gone = list_join_empty(["The ", word_before, " are not in it any more"]);
   html_div_cycle_code(box_after, [gone]);
