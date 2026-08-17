@@ -21,8 +21,9 @@ export function app_code_lesson_expression_choose_order_solve_example(
   parent,
   card,
   tree,
+  decoys_get,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 4);
   ("the lesson's front page: the same two presses the quiz asks for, with what the lesson is for said above them and then what to do NOW - the operator is chosen the way it was chosen before, and then what it comes to is chosen too");
   ("Laid out exactly as the walkthrough of the lesson before it: the words at the top of the card above the Code label, and the line to press underneath. The two screens are one screen with one thing changed, so a learner arriving at the second finds every part of it where they left it, and the one difference is the only thing they have to find.");
   ("What the lesson is FOR is said above the card and not here, so nothing on the card is about a line other than the one on it. All the card holds is the asking and the line it is asking about.");

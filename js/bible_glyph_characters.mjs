@@ -40,6 +40,18 @@ export function bible_glyph_characters() {
       character: "👑",
     },
     {
+      name: "oil",
+      character: "🫗",
+    },
+    {
+      name: "name_tag",
+      character: "🏷️",
+    },
+    {
+      name: "master",
+      character: "🧑‍💼",
+    },
+    {
       name: "person",
       character: "🧍",
     },
