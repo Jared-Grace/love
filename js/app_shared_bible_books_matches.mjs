@@ -1,3 +1,4 @@
+import { app_shared_bible_books_matches_testament_matches } from "./app_shared_bible_books_matches_testament_matches.mjs";
 import { app_shared_bible_books_matches_is_uncategorized } from "./app_shared_bible_books_matches_is_uncategorized.mjs";
 import { app_shared_bible_books_matches_match_book } from "./app_shared_bible_books_matches_match_book.mjs";
 import { app_shared_bible_books_matches_has_any } from "./app_shared_bible_books_matches_has_any.mjs";
@@ -37,19 +38,11 @@ export function app_shared_bible_books_matches(query, books) {
     return section;
   }
   function testament_matches(testament) {
-    let name = property_get(testament, "name");
-    let divisions = property_get(testament, "divisions");
-    let divisions_mapped = list_map(divisions, division_matches);
-    function section_has_books(section) {
-      let any = app_shared_bible_books_matches_has_any(section, "books");
-      return any;
-    }
-    let sections = list_filter(divisions_mapped, section_has_books);
-    let filled = {
-      name,
-      divisions: sections,
-    };
-    return filled;
+    let r3 = app_shared_bible_books_matches_testament_matches(
+      testament,
+      division_matches,
+    );
+    return r3;
   }
   let testaments = ebible_book_testaments();
   let mapped = list_map(testaments, testament_matches);
