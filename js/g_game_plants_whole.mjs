@@ -1,3 +1,4 @@
+import { g_game_plants_whole_any } from "./g_game_plants_whole_any.mjs";
 import { g_game_plants_whole_spare } from "./g_game_plants_whole_spare.mjs";
 import { g_plant_matches } from "./g_plant_matches.mjs";
 import { floor } from "./floor.mjs";
@@ -6,7 +7,6 @@ import { modulo } from "./modulo.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { g_generation_settings } from "./g_generation_settings.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,11 +18,12 @@ export function g_game_plants_whole(next, days_total) {
   "Shared out in PROPORTION to how long each plant already is, and the whole days go first with what is left over landing on the longest. A day each all round was tried and fell hardest on the small early plants, which have the fewest days to dilute: a nine-day plant taking two spare days dropped its leader from three days in four to three in five, while a twenty-three-day plant hardly noticed. Proportion means the plants with room take the days, which is where the room is.";
   let s = g_generation_settings();
   let r = g_game_plants_whole_spare(days_total, s, next);
-  let spare = property_get(r, "spare");
-  let plants = property_get(r, "plants");
-  let days_spent = property_get(r, "days_spent");
-  let held = property_get(r, "held");
-  let any = greater_than(held, 0);
+  let r2 = g_game_plants_whole_any(r);
+  let any = property_get(r2, "any");
+  let held = property_get(r2, "held");
+  let days_spent = property_get(r2, "days_spent");
+  let plants = property_get(r2, "plants");
+  let spare = property_get(r2, "spare");
   if (any) {
     let given = 0;
     for (let plant of plants) {
