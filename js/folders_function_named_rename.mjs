@@ -4,7 +4,7 @@ import { file_move } from "./file_move.mjs";
 import { not } from "./not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { storage_function_folder_path } from "./storage_function_folder_path.mjs";
-export async function storage_function_folder_rename(
+export async function folders_function_named_rename(
   f_name_before,
   f_name_after,
 ) {
