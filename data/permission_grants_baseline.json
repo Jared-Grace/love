@@ -38,7 +38,7 @@
   },
   {
    "name": "functions_rename_if_starts_with",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "guard_check",
