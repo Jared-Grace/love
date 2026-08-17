@@ -681,7 +681,7 @@ export function permission_grant_names() {
   let spelled674 = fn_name("functions_cases_ungated");
   let spelled675 = fn_name("baselines_unwatched");
   let spelled676 = fn_name("permission_settings_allow_drift");
-  let spelled677 = fn_name("storage_function_folders_orphaned_gate_run");
+  let spelled677 = fn_name("folders_function_named_orphaned_gate_run");
   let spelled678 = fn_name("folder_user_storage_function_path_function");
   let spelled679 = fn_name("functions_names_untracked");
   let spelled680 = fn_name("qa_commit_named_path");
