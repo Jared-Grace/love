@@ -50,19 +50,19 @@
   },
   {
    "name": "functions_shadowing_rename_all",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_select_apply_args",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_replace",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_literal_route",
-   "refusals": 1
+   "refusals": 2
   },
   {
    "name": "functions_calls_callee_set",
