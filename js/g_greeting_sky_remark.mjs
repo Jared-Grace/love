@@ -7,10 +7,11 @@ export function g_greeting_sky_remark(r, time, christian) {
   let v = property_get(r3, "v");
   let meet_message = property_get(r3, "meet_message");
   let sky_remark = property_get(r3, "sky_remark");
-  return {
+  let r2 = {
     r3,
     v,
     meet_message,
     sky_remark,
   };
+  return r2;
 }
