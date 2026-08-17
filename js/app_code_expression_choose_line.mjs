@@ -1,5 +1,4 @@
-import { each } from "./each.mjs";
-import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
+import { app_code_expression_chips_settle } from "./app_code_expression_chips_settle.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
 import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
@@ -62,10 +61,12 @@ export function app_code_expression_choose_line(
         chosen = true;
         ("the reds go before anything else happens, so what the learner watches from here is one block being worked out rather than a working out with a refusal still standing beside it");
         app_code_expression_refusals_clear(refused);
-        ("and then every chip on the line goes, the chosen one's among them, so the line stops offering presses it will not answer while the value question is open");
-        ("This is the whole of the fix for a learner pressing a second operator and being met with nothing. The press was already refused - it was the LOOK of the thing that lied, and a screen that looks pressable and is not reads as broken rather than as finished with.");
-        each(pressable, app_code_expression_operator_chip_uncolored);
+        ("the blue block is the first thing that happens, in the frame the press is made, so the press is answered before anything else on the line is asked to change");
         app_code_expression_chosen_set(node_span, span);
+        ("and only then do the other chips go, so the line stops offering presses it will not answer while the value question is open");
+        ("This is the whole of the fix for a learner pressing a second operator and being met with nothing. The press was already refused - it was the LOOK of the thing that lied, and a screen that looks pressable and is not reads as broken rather than as finished with.");
+        ("They go in two beats rather than one: plain where they stand, a pause, and then the room they were holding closes up and the rest of the line slides along into it. Together it is two changes in one frame and the operators are read as having been moved rather than as having stopped answering.");
+        await app_code_expression_chips_settle(line, pressable);
         let node_value = app_code_expression_solved(node, node);
         ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
         await on_chosen(node, node_value, node_span);

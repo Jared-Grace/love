@@ -27,6 +27,10 @@ export async function ebible_chapters_each_verses_list(
     ("ebible website says canon only, but seems apocrypha included?");
     ebible_verses_get = ebible_verses_readaloud;
     let verses = await ebible_verses_get(bible_folder, chapter_code);
+    let unpaired = null_is(verses);
+    if (unpaired) {
+      return;
+    }
     await each_chapter(chapter_code, verses);
   }
 }

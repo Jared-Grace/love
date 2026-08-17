@@ -1,3 +1,4 @@
+import { app_code_expression_operator_chip_room_clear } from "./app_code_expression_operator_chip_room_clear.mjs";
 import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
 import { app_code_expression_chosen_style_assign } from "./app_code_expression_chosen_style_assign.mjs";
 import { app_code_expression_colored_slowly } from "./app_code_expression_colored_slowly.mjs";
