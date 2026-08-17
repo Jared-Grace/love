@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_arithmetic_less_than_op_exponent } from "./app_code_lesson_expression_arithmetic_less_than_op_exponent.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_op_add } from "./app_code_lesson_expression_arithmetic_less_than_op_add.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_above } from "./app_code_lesson_expression_arithmetic_less_than_above.mjs";
 import { app_code_lesson_expression_arithmetic_less_than_one } from "./app_code_lesson_expression_arithmetic_less_than_one.mjs";
@@ -18,7 +19,6 @@ import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
-import { exponent } from "./exponent.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_arithmetic_less_than() {
   "the first expression mixing arithmetic with a comparison, and it covers ALL the arithmetic at once - not one lesson per operator. The single new idea: the two sides of a comparison can themselves be arithmetic, and we always do the arithmetic FIRST (a comparison needs two numbers), then compare, giving true or false. That one rule is uniform - every arithmetic operator binds tighter than the comparison - so + < , - < , * < are the SAME idea, taught together by VARYING the arithmetic across examples rather than split into separate lessons. The comparison itself also VARIES across the examples over all six the student has met (< > <= >= === !==), because the rule - arithmetic first, then compare - is identical for every one of them, so they belong in this one lesson too rather than six near-identical copies. The true/false answer is forced per example by RUNNING the example's own comparison fn against candidate numbers (below/above/equal to the arithmetic value) and keeping the one that gives the wanted answer, so no answer can be mis-derived operator by operator. The intro states the rule and works it twice with DIFFERENT arithmetic (9 < 2 + 3 false, 3 * 2 < 7 true), each doing the arithmetic first, and with the arithmetic on the right then the left to prove position does not change what we do first. Eight refreshable examples vary the operator across the already-learned number binary operators (+ - * / **), put the arithmetic on the left and the right, and show true and false; the right side is emphasised because arithmetic on the right of the < is where the rule actually bites - left-to-right alone would put the < first and be wrong - whereas on the left, plain left-to-right already lands on the right answer. Small whole numbers only; subtraction never goes negative (the larger number is on the left) and multiplication uses small factors; the equal case appears only where the operator needs it (=== and its like), while < and > stay strict. Placed right after the arithmetic precedence pair lessons and the exponent lesson, as the first step that lets a comparison's sides be expressions, so the jump is small - the learner just finished building arithmetic and now wraps a comparison around it. Remainder (%) is deliberately left out: it is not taught until the later remainder lessons, and keeping it out is what lets this lesson sit this early, right on top of the arithmetic it compares.";
@@ -74,17 +74,8 @@ export function app_code_lesson_expression_arithmetic_less_than() {
     return r4;
   }
   function op_exponent() {
-    "the ** arithmetic piece: a small base to a small power so the result stays small";
-    let base = integer_random(2, 3);
-    let power = integer_random(2, 3);
-    let value = exponent(base, power);
-    let r6 = {
-      left: base,
-      right: power,
-      symbol: "**",
-      value,
-    };
-    return r6;
+    let r8 = app_code_lesson_expression_arithmetic_less_than_op_exponent();
+    return r8;
   }
   let combos = [
     {
