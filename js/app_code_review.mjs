@@ -1,3 +1,4 @@
+import { app_code_review_arrow } from "./app_code_review_arrow.mjs";
 import { app_code_review_skip_button } from "./app_code_review_skip_button.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
@@ -24,8 +25,6 @@ import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
-import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { not } from "./not.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -34,26 +33,18 @@ import { html_progress_bar } from "./html_progress_bar.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let r2 = app_code_review_skip_button(context, root);
-  let skip_button = property_get(r2, "skip_button");
-  let go_next = property_get(r2, "go_next");
-  let queue = property_get(r2, "queue");
-  let passed = property_get(r2, "passed");
-  let key = property_get(r2, "key");
-  let g = property_get(r2, "g");
-  let progress = property_get(r2, "progress");
-  let success_container = property_get(r2, "success_container");
-  let c = property_get(r2, "c");
-  let has_next = property_get(r2, "has_next");
-  let back_button = property_get(r2, "back_button");
-  if (has_next) {
-    let arrow = emoji_arrow_right();
-    let next_text = text_combine_middle_space_nb(
-      arrow,
-      "Skip this review and go to the next lesson",
-    );
-    skip_button = app_shared_button_wide(g, next_text, go_next);
-    app_shared_button_gap_above(skip_button);
-  }
+  let r3 = app_code_review_arrow(r2);
+  let back_button = property_get(r3, "back_button");
+  let has_next = property_get(r3, "has_next");
+  let c = property_get(r3, "c");
+  let success_container = property_get(r3, "success_container");
+  let progress = property_get(r3, "progress");
+  let g = property_get(r3, "g");
+  let key = property_get(r3, "key");
+  let passed = property_get(r3, "passed");
+  let queue = property_get(r3, "queue");
+  let go_next = property_get(r3, "go_next");
+  let skip_button = property_get(r3, "skip_button");
   async function go_restart() {
     storage_local_remove_context(context, key);
     await app_shared_screen_set(context, app_code_review);
