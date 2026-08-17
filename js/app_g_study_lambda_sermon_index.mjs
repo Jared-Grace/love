@@ -9,7 +9,7 @@ export function app_g_study_lambda_sermon_index(r4) {
   let passage = property_get(r4, "passage");
   let property = property_get(r4, "property");
   let sermon_index = 0;
-  return {
+  let r2 = {
     sermon_correct_list,
     div,
     r,
@@ -18,4 +18,5 @@ export function app_g_study_lambda_sermon_index(r4) {
     property,
     sermon_index,
   };
+  return r2;
 }
