@@ -1,10 +1,6 @@
-import { property_get } from "./property_get.mjs";
+import { g_boundary_believer_options } from "./g_boundary_believer_options.mjs";
 import { g_boundary_believer_armour } from "./g_boundary_believer_armour.mjs";
-import { g_boundary_know_better } from "./g_boundary_know_better.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { not } from "./not.mjs";
 import { g_boundary_softener } from "./g_boundary_softener.mjs";
 export function g_boundary_believer(met, door) {
   "What a believer says instead of answering - the same beat as the unbeliever boundary, with different armour.";
@@ -13,20 +9,7 @@ export function g_boundary_believer(met, door) {
   "The deepest wall is the walk, and it is HIGHEST in the person who has believed longest - a new convert admits not knowing how to pray at no cost, while forty years of everyone assuming you are fine is a reputation to lose.";
   let softener = g_boundary_softener();
   let r2 = g_boundary_believer_armour(softener, door);
-  let armour = property_get(r2, "armour");
-  let combined = property_get(r2, "combined");
-  let contextual = [combined];
-  if (not(met)) {
-    let r28 = list_random_item([
-      "It's good to meet another believer. ",
-      "Praise God, a brother in the Lord. ",
-    ]);
-    let r32 = g_boundary_know_better();
-    let r29 = list_random_item([r32, "Give me a little time on that one."]);
-    let combined13 = text_combine_multiple([r28, r29]);
-    contextual = [combined13];
-  }
-  let options = list_concat(armour, contextual);
+  let options = g_boundary_believer_options(r2, met);
   let r = list_random_item(options);
   return r;
 }
