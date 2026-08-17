@@ -1,6 +1,4 @@
-import { app_code_lesson_quiz_multiple_choice_attempts } from "./app_code_lesson_quiz_multiple_choice_attempts.mjs";
-import { app_code_lesson_quiz_multiple_choice_qa_for } from "./app_code_lesson_quiz_multiple_choice_qa_for.mjs";
-import { app_code_lesson_quiz_multiple_choice_question_property } from "./app_code_lesson_quiz_multiple_choice_question_property.mjs";
+import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
 import { app_code_lesson_quiz_multiple_choice_need_more } from "./app_code_lesson_quiz_multiple_choice_need_more.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
@@ -32,21 +30,16 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let r = app_code_lesson_quiz_multiple_choice_question_property(
-    info,
-    qa,
-    batch_get,
-  );
-  let r2 = app_code_lesson_quiz_multiple_choice_qa_for(r, info);
-  let r3 = app_code_lesson_quiz_multiple_choice_attempts(r2);
-  let attempts = property_get(r3, "attempts");
-  let question_property = property_get(r3, "question_property");
-  let quiz_answer_text = property_get(r3, "quiz_answer_text");
-  let answer_property = property_get(r3, "answer_property");
-  let distractors = property_get(r3, "distractors");
-  let seen = property_get(r3, "seen");
-  let distractor_count = property_get(r3, "distractor_count");
-  let next_get = property_get(r3, "next_get");
+  let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
+  let next_get = property_get(r, "next_get");
+  let distractor_count = property_get(r, "distractor_count");
+  let seen = property_get(r, "seen");
+  let distractors = property_get(r, "distractors");
+  let answer_property = property_get(r, "answer_property");
+  let quiz_answer_text = property_get(r, "quiz_answer_text");
+  let question_property = property_get(r, "question_property");
+  let attempts = property_get(r, "attempts");
+  let r3 = property_get(r, "r3");
   let answer_count_max = property_get(r3, "answer_count_max");
   let quiz_question_text = property_get(r3, "quiz_question_text");
   let qa_for = property_get(r3, "qa_for");
