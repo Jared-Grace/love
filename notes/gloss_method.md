@@ -110,6 +110,17 @@ On etymology: it is the best tool in the box and the easiest to fake. **Never in
 - **The English descendant is still yours to supply, and it is still the half that can be wrong.** `derivation` says where the Greek word came from; it does not say which English word shares the root. `ἀρχή` → archaeology is yours to assert. If no English descendant would be recognised, say nothing — do not reach for a distant or folk connection to fill the slot.
 - **A wrong etymology is worse than none**, because the reader will remember it. Where `derivation` is absent, "its origin is uncertain" is a real and honest answer.
 
+## Minimum additional meaning
+
+Every explain has one point. Whatever it says beyond that point is additional meaning, and additional meaning can usually be dropped.
+
+The test is not "is this shorter". It is **"does this word carry the point, or only decorate it?"** Two failures from one entry in Proverbs 31, both named by the human:
+
+- *"a short word in front of a noun to show the job that noun does"* → *"to show what the noun does"*. The word **job** carried nothing. Because it was there, somebody could argue **purpose** was the better word — and that argument exists only because a word was chosen that made no point.
+- *"It opens the book's last chapter by pointing straight at what follows: the words themselves."* — cut whole. It was reported as hard to understand on a first read, and it was hard because it made no new point: the sentence before it had already said which noun is marked. **A sentence that adds no meaning is the easiest to cut and the hardest to read.**
+
+This does not soften the rule that an unfamiliar term must be explained. Spend freely on the point. Spend nothing beside it.
+
 ## Length
 
 Two to five sentences for a content word. One or two for an article, a conjunction, a common preposition.
