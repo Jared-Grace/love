@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_code_lesson_expression_round_generic_above_term } from "./app_code_lesson_expression_round_generic_above_term.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -27,16 +28,7 @@ export function app_code_lesson_expression_round_generic_above(
   let whole_text = text_to(whole);
   let ordinary_low = list_get(ordinary_digits, 0);
   let ordinary_high = list_get(ordinary_digits, 1);
-  let {
-    decimal,
-    extreme_decimal,
-    whole_up,
-    whole_stays,
-    chosen_whole,
-    other_whole,
-    define,
-    term,
-  } = app_code_lesson_expression_round_generic_above_term(
+  let r = app_code_lesson_expression_round_generic_above_term(
     ordinary_low,
     ordinary_high,
     whole_text,
@@ -46,6 +38,14 @@ export function app_code_lesson_expression_round_generic_above(
     root,
     metaphor_render,
   );
+  let term = property_get(r, "term");
+  let define = property_get(r, "define");
+  let other_whole = property_get(r, "other_whole");
+  let chosen_whole = property_get(r, "chosen_whole");
+  let whole_stays = property_get(r, "whole_stays");
+  let whole_up = property_get(r, "whole_up");
+  let extreme_decimal = property_get(r, "extreme_decimal");
+  let decimal = property_get(r, "decimal");
   if (introduce_whole_number) {
     html_bold(term);
   }

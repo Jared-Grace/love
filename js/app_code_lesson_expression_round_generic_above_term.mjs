@@ -46,7 +46,7 @@ export function app_code_lesson_expression_round_generic_above_term(
   html_span_text_code_dark(no_decimal, whole_text);
   html_span_text(no_decimal, " is a ");
   let term = html_span_text(no_decimal, "whole number");
-  return {
+  let r = {
     decimal,
     extreme_decimal,
     whole_up,
@@ -56,4 +56,5 @@ export function app_code_lesson_expression_round_generic_above_term(
     define,
     term,
   };
+  return r;
 }
