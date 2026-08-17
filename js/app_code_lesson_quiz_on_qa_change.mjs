@@ -55,7 +55,7 @@ export function app_code_lesson_quiz_on_qa_change(
   }
   html_visibility_hidden(container_success_message);
   on_qa_change();
-  return {
+  let r = {
     correction_render,
     on_answer,
     on_question,
@@ -66,4 +66,5 @@ export function app_code_lesson_quiz_on_qa_change(
     answer_label_set,
     container_question,
   };
+  return r;
 }
