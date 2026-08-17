@@ -1,3 +1,4 @@
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
@@ -7,7 +8,6 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { emoji_grape } from "./emoji_grape.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -21,7 +21,6 @@ export function app_code_lesson_statement_name_value_above(root) {
   ("The grapes are a real fruit rather than one of the words the string lessons use, because what goes in the cup has to be something that can be inside a cup. What the quizzes hold are those same words as before, which is the point: the value in the cup can be any of them.");
   let name = app_code_lesson_statement_name_value_name();
   let word = app_code_lesson_statement_name_value_word();
-  let grape = emoji_grape();
   let nothing = text_empty();
   ("a reminder rather than a new fact: the identifier lessons already said identifiers are used as names, and this is the first screen where one actually names something. Saying it again here is what joins the two, and it costs nothing to read because a learner has met every word of it.");
   let box_remember = app_code_container_light_blue(root);
@@ -34,7 +33,7 @@ export function app_code_lesson_statement_name_value_above(root) {
   html_div_cycle_code(box_cup, ["Suppose you called the cup ", name]);
   app_code_cup(box_cup, nothing, name);
   html_div_cycle_code(box_cup, ["Then suppose you put some grapes in the cup"]);
-  app_code_cup(box_cup, grape, name);
+  app_code_lesson_cup_fruit(box_cup, word, name);
   html_div_cycle_code(box_cup, [
     "Now if someone asked you what is inside the cup called ",
     name,
