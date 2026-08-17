@@ -153,7 +153,7 @@ export async function app_g_conversation(
     done: 0,
   };
   async function close_now() {
-    let r = app_g_conversation_close_now(
+    let r = await app_g_conversation_close_now(
       converts,
       prayed,
       npc,
