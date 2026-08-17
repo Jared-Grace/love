@@ -1,3 +1,4 @@
+import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
 import { app_replace_rule_set_header } from "./app_replace_rule_set_header.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -15,7 +16,6 @@ import { app_shared_button_restart_text } from "./app_shared_button_restart_text
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
-import { app_replace_rule_set_refresh_rb } from "./app_replace_rule_set_refresh_rb.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
@@ -174,17 +174,13 @@ export async function app_replace_rule_set(context) {
     }
     rule_buttons = list_map_index(rules_used, each_rule);
     function rbs_each(rule_button, rule_index) {
-      refresh_rb();
-      object_merge_set(rule_button, {
-        refresh_rb,
-      });
-      function refresh_rb() {
-        let state = {
-          index_selected,
-          success,
-        };
-        app_replace_rule_set_refresh_rb(rule_button, rule_index, state);
-      }
+      let r3 = app_replace_rule_set_rbs_each(
+        rule_button,
+        rule_index,
+        index_selected,
+        success,
+      );
+      return r3;
     }
     each_index(rule_buttons, rbs_each);
     html_clear(div_refresh);
