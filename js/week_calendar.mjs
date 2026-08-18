@@ -1,9 +1,9 @@
+import { week_calendar_endpoint_back_up } from "./week_calendar_endpoint_back_up.mjs";
 import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
 import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
 import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { week_calendar_day } from "./week_calendar_day.mjs";
-import { week_calendar_handle } from "./week_calendar_handle.mjs";
 import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
@@ -12,7 +12,6 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_range_label } from "./week_range_label.mjs";
-import { each } from "./each.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
   let days = dates;
@@ -53,13 +52,13 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     ranges = property_get(week_calendar_range_add_answer, "ranges");
   }
   function endpoint_back_up(day, slot) {
-    let next = [];
-    function handle(span) {
-      let r4 = week_calendar_handle(span, day, slot, next, far_anchor_set);
-      return r4;
-    }
-    each(ranges, handle);
-    ranges = next;
+    let week_calendar_endpoint_back_up_answer = week_calendar_endpoint_back_up(
+      day,
+      slot,
+      far_anchor_set,
+      ranges,
+    );
+    ranges = property_get(week_calendar_endpoint_back_up_answer, "ranges");
   }
   function far_anchor_set(span, slot) {
     let week_calendar_far_anchor_set_answer = week_calendar_far_anchor_set(
