@@ -34,8 +34,10 @@ export function app_g_bless_street(rows, player) {
   let last_y = subtract(height, 1);
   let wanted_x = subtract(x, 3);
   let wanted_y = subtract(y, 3);
-  let inside_x = math_max(0, math_min(wanted_x, last_x));
-  let inside_y = math_max(0, math_min(wanted_y, last_y));
+  let b = math_min(wanted_x, last_x);
+  let inside_x = math_max(0, b);
+  let b2 = math_min(wanted_y, last_y);
+  let inside_y = math_max(0, b2);
   let street = bless_street(inside_x, inside_y, "east", length);
   return street;
 }
