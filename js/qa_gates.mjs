@@ -1,3 +1,4 @@
+import { functions_repack_only_gate_run } from "./functions_repack_only_gate_run.mjs";
 import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate_run.mjs";
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
@@ -450,6 +451,7 @@ export function qa_gates() {
     query_key_literals_gate_run,
     query_key_getters_frozen_gate_run,
     storage_browser_direct_gate_run,
+    functions_repack_only_gate_run,
     browser_secure_context_gate_run,
     indexeddb_name_literals_gate_run,
     literals_frozen_fused_gate_run,
