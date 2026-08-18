@@ -29,7 +29,27 @@ export function app_code_review_present(r, home_button, context) {
     passed,
   };
   let r3 = r5;
-  let r4 = app_code_review_present_restart_button(r3, r);
+  let passed2 = property_get(r3, "passed");
+  let progress2 = property_get(r3, "progress");
+  let go_next2 = property_get(r3, "go_next");
+  let skip_button2 = property_get(r3, "skip_button");
+  let queue2 = property_get(r3, "queue");
+  let key2 = property_get(r3, "key");
+  let c2 = property_get(r3, "c");
+  let success_container3 = property_get(r3, "success_container");
+  let restart_button2 = property_get(r, "restart_button");
+  let r6 = {
+    passed: passed2,
+    progress: progress2,
+    go_next: go_next2,
+    skip_button: skip_button2,
+    queue: queue2,
+    key: key2,
+    c: c2,
+    success_container: success_container3,
+    restart_button: restart_button2,
+  };
+  let r4 = r6;
   let restart_button = property_get(r4, "restart_button");
   let success_container = property_get(r4, "success_container");
   let present = app_code_review_present_present(
