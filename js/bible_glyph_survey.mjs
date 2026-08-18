@@ -14,7 +14,7 @@ export async function bible_glyph_survey(testament_name) {
   let r = await bible_glyph_survey_glyph_collisions(testament_name);
   let glyph_collisions = property_get(r, "glyph_collisions");
   let occurrences_total = property_get(r, "occurrences_total");
-  let r2 = bible_glyph_survey_referents(r);
+  let r2 = bible_glyph_survey_referents(r, testament_name);
   let r3 = bible_glyph_survey_referent_reach(r2);
   let referent_reach = property_get(r3, "referent_reach");
   let report = bible_glyph_survey_report(
