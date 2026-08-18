@@ -1,3 +1,5 @@
+import { functions_repack_only_deliberate } from "./functions_repack_only_deliberate.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_size } from "./list_size.mjs";
@@ -11,10 +13,16 @@ export async function functions_repack_only_all() {
   "Every function in this repo whose whole product is a record it took apart and put back together, and how many functions were read to find them. Read-only.";
   "The count of what was walked travels out with the answer because the answer is empty on a clean run, and an empty answer is what a reading that has quietly stopped reaching anything says too. The two are told apart by the number beside them and by nothing else.";
   "Every tree in the repo is opened, with no cheap test on the text first. The siblings that sweep for a written word can narrow the walk to the files that say it; this asks about a shape, and a shape has no word in it to look for.";
+  "The ones written this way on purpose are left out by name rather than by shape, because what makes them different is a claim about meaning that no reading of a tree could make.";
   arguments_assert(arguments, 0);
   let f_names = await functions_names();
   let walked = list_size(f_names);
+  let deliberate = functions_repack_only_deliberate();
   async function repack_only_name_try(f_name) {
+    let allowed = list_includes(deliberate, f_name);
+    if (allowed) {
+      return null;
+    }
     let parsed = await function_parse_declaration(f_name);
     let declaration = property_get(parsed, "declaration");
     let repack_is = js_repack_only_is(declaration);
