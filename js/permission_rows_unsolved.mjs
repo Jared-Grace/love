@@ -1,3 +1,7 @@
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function permission_rows_unsolved(rows) {
   "The ranked rows that today's rules would still stop somebody on — everything except the ones a verdict of allow has already answered.";
   "The record of interruptions is a record of the past, and a week of it holds prompts that were paid once and then granted away. Ranking those alongside the standing ones puts the loudest solved thing at the top of a list meant to say what to work on next: measured on the week to 2026-08-18, 305 of 656 proved prompts had already stopped happening.";

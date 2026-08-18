@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { js_identifier_defineds_includes } from "./js_identifier_defineds_includes.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { not } from "./not.mjs";
@@ -18,7 +18,7 @@ export function js_let_add(ast) {
     "anywhere else - handed over as an argument, or sitting inside a larger sum -";
     "is a part of something else, and there is no place in front of it for the word";
     "to go.";
-    let statement = property_list_get_end_1(v, "stack");
+    let statement = js_visit_above(v);
     let statement_is = js_expression_statement_is(statement);
     if (not(statement_is)) {
       return;
