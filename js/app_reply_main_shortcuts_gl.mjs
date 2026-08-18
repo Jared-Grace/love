@@ -4,9 +4,6 @@ import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_reply_main_shortcuts_r_ke_ } from "./app_reply_main_shortcuts_r_ke_.mjs";
 import { app_reply_main_shortcuts_r_default } from "./app_reply_main_shortcuts_r_default.mjs";
-import { app_reply_main_shortcuts_r_te_base } from "./app_reply_main_shortcuts_r_te_base.mjs";
-import { app_reply_main_shortcuts_r_te_ } from "./app_reply_main_shortcuts_r_te_.mjs";
-import { app_reply_main_shortcuts_bn } from "./app_reply_main_shortcuts_bn.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
   arguments_assert(arguments, 2);
