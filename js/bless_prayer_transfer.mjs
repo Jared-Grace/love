@@ -5,7 +5,11 @@ export function bless_prayer_transfer() {
   "an ending prayer would mean everyone who stopped early prayed for nobody. Said first,";
   "every blessing after it is already real while it is being prayed.";
   "The words are the player's own, moved only from having-prayed into about-to-pray.";
+  "The amen is NOT in these words. It is the button, so saying it is something the player";
+  "does rather than something they read - a prayer read to the end and left unanswered on";
+  "the screen has not been prayed, and a button pressed is the one part of this a person";
+  "cannot do by accident.";
   let prayer =
-    "God, as I pray for people in this video game, may it be as if I pray this prayer for everyone in the world I live in. Amen";
+    "God, as I pray for people in this video game, may it be as if I pray this prayer for everyone in the world I live in";
   return prayer;
 }

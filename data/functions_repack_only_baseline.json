@@ -1,10 +1,6 @@
 {
  "known": [
-  "app_a_function_content",
-  "app_a_function_f_names",
-  "app_a_function_f_names_local",
   "app_a_function_on_keydown_remove",
-  "app_a_function_root",
   "app_a_identifier_generic_choices_get_ast",
   "app_a_identifier_generic_choices_get_choice_function_open",
   "app_a_identifier_generic_choices_get_e",
