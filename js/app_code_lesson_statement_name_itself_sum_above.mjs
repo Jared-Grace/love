@@ -21,12 +21,11 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   ("Each box is its own small program, and the two names are given the same two numbers in every one of them. A reminder shown with a different pair would put arithmetic a learner has to do afresh in front of the one line the screen is actually about.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let plus = js_operator_plus_symbol();
   let number_first = 2;
   let number_last = 3;
   let number_new = 9;
   let total = add(number_first, number_last);
-  let names_sum = js_code_binary_spaced_nb(name_first, plus, name_last);
+  let names_sum = app_code_lesson_statement_names_added();
   let box_again = app_code_container_light_blue(root);
   html_div_cycle_code(box_again, ["Remember, we can give a name a new value"]);
   ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
