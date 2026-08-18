@@ -14,12 +14,21 @@ export function app_g_view_render_study_r(view, text, div_map) {
   let left = emoji_book_open();
   let text2 = text_combine(left, " Study: Tap each word in order");
   app_g_container_text(overlay, text2);
-  let r3 = app_g_view_render_study_fresh_container(
+  let r4 = app_g_view_render_study_fresh_fresh(
     word_index,
     text,
     overlay,
     words,
   );
+  let fresh2 = property_get(r4, "fresh");
+  let render_words2 = property_get(r4, "render_words");
+  let container2 = property_get(r4, "container");
+  let r22 = {
+    fresh: fresh2,
+    render_words: render_words2,
+    container: container2,
+  };
+  let r3 = r22;
   let container = property_get(r3, "container");
   let render_words = property_get(r3, "render_words");
   let fresh = property_get(r3, "fresh");
