@@ -7,7 +7,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function app_code_lesson_statement_name_sum_batch() {
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_sum_batch() {
     let last = list_last(pair);
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let summed = js_code_binary(name_first, plus, name_last);
+    let summed = js_code_binary_spaced_nb(name_first, plus, name_last);
     let logged = js_code_console_log_statement(summed);
     let lines = [held_first, held_last, logged];
     let code = list_join_newline(lines);

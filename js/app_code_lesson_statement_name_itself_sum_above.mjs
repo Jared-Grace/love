@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let number_last = 3;
   let number_new = 9;
   let total = add(number_first, number_last);
-  let names_sum = js_code_binary(name_first, plus, name_last);
+  let names_sum = js_code_binary_spaced_nb(name_first, plus, name_last);
   let box_again = app_code_container_light_blue(root);
   html_div_cycle_code(box_again, ["Remember, we can give a name a new value"]);
   let code = js_code_let_statement(name_first, number_first);
