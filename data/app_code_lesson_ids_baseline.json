@@ -114,6 +114,7 @@
   "statements_giving_a_name_what_two_names_add_up_to",
   "statements_giving_a_name_what_it_and_another_name_add_up_to",
   "statements_giving_a_name_one_more_than_it_holds",
-  "statements_changing_a_name_after_another_was_given_what_it_held"
+  "statements_changing_a_name_after_another_was_given_what_it_held",
+  "statements_comparing_what_two_names_hold"
  ]
 }
