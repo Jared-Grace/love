@@ -6,11 +6,14 @@ export function bible_glyph_gate_run_character(r) {
   arguments_assert(arguments, 1);
   let orthodox = property_get(r, "orthodox");
   let known = property_get(r, "known");
+  let walked = 0;
   for (let character of orthodox) {
+    walked = walked + 1;
     let replaces = property_exists(known, character.name);
     assert_json(replaces, {
       name: character.name,
       hint: "a tradition may only redraw a glyph the base vocabulary already names, because verses are written against the base names",
     });
   }
+  return walked;
 }

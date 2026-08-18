@@ -12,7 +12,9 @@ export function bible_glyph_gate_run_chapter(characters) {
   arguments_assert(arguments, 1);
   let known = bible_glyph_gate_run_referent(characters);
   let chapters = bible_glyph_chapters();
+  let walked = 0;
   for (let chapter of chapters) {
+    walked = walked + 1;
     let parsed = bible_glyph_chapter(chapter.chapter_code);
     let referenced = property_exists(parsed, "reference");
     assert_json(referenced, {
@@ -48,5 +50,10 @@ export function bible_glyph_gate_run_chapter(characters) {
       }
     }
   }
-  return known;
+  ("How many chapters were walked is counted in the loop rather than off the list, so it is the number of chapters this actually looked at and falls the moment the walk stops reaching them.");
+  let r = {
+    known,
+    walked,
+  };
+  return r;
 }

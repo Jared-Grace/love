@@ -7,7 +7,14 @@ export function bible_glyph_gate_run() {
   "A word may belong to only ONE root, and that is checked too. A Strong's number appearing under two roots would give the same word two glyphs with nothing to say which wins, and the winner would then depend on the order the table happens to be written in - a bug that looks like an opinion.";
   "EVERY GLYPH AN AUTHORED CHAPTER NAMES is checked the same way, and that check earned itself the day it was written: the first chapter authored by hand spelled God followed by a full stop as one run, so five of its six verses stored a glyph named fire with a full stop welded on. Nothing failed. The verse simply drew the name in angle brackets where the picture should have been, and the only reader who could ever have caught it is a person looking at the page.";
   "A tradition may only REPLACE, never invent. An Orthodox cross is the same word drawn differently, so its name has to be a name the base vocabulary already carries; a tradition naming a new one would be a glyph no verse could ever reference, since verses are written against the base names.";
+  "How many chapters and how many tradition glyphs were walked comes back with the verdict. Every check here passes by finding nothing wrong, and so does a run whose tables have been emptied or whose chapters have moved - the two counts are the only part of this answer that falls in the second case.";
   let characters = bible_glyph_characters();
-  let r = bible_glyph_gate_run_orthodox(characters);
-  bible_glyph_gate_run_character(r);
+  let checked = bible_glyph_gate_run_orthodox(characters);
+  let walked = property_get(checked, "walked");
+  let traditions = bible_glyph_gate_run_character(checked);
+  let r = {
+    chapters: walked,
+    traditions,
+  };
+  return r;
 }
