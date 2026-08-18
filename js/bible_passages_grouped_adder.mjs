@@ -7,7 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_pair } from "./list_add_pair.mjs";
 import { fn_name } from "./fn_name.mjs";
