@@ -1,3 +1,12 @@
+import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
+import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
+import { bible_glyph_artwork_absent } from "./bible_glyph_artwork_absent.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
 export function bible_glyph_artwork_gate_run() {
   "Checks that every glyph in the vocabulary has been decided about: either the artwork set has a name for it, or the set is recorded as having no picture for it.";
   "A GLYPH ADDED WITHOUT A DECISION IS INVISIBLE OTHERWISE. Adding one is a small edit to the vocabulary, and the fetching run simply never asks for it - so the new glyph reaches readers drawn by the font while every glyph around it is drawn by the artwork, and nothing anywhere says which of those was intended.";
