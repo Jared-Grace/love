@@ -2,7 +2,7 @@ import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_bible_languages_text } from "./app_shared_bible_languages_text.mjs";
 import { app_shared_bible_offline_text } from "./app_shared_bible_offline_text.mjs";
-import { app_shared_bible_about_text } from "./app_shared_bible_about_text.mjs";
+import { app_shared_about_text } from "./app_shared_about_text.mjs";
 export function app_shared_bible_settings_render(
   container,
   open_languages,
@@ -17,6 +17,6 @@ export function app_shared_bible_settings_render(
   app_shared_button(container, languages_text, open_languages);
   let offline_text = app_shared_bible_offline_text();
   app_shared_button(container, offline_text, open_offline);
-  let about_text = app_shared_bible_about_text();
+  let about_text = app_shared_about_text();
   app_shared_button(container, about_text, open_about);
 }
