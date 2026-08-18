@@ -22,20 +22,24 @@ export function app_code_lesson_statement_name_compare_above(root) {
   ("The second box's line shows both ways in it rather than naming only the new one, and says the old way first inside the line as well as first on the screen - written the same way as the sixth Statements lesson, which is the screen this one changes one symbol of.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let less_than = js_operator_less_than_symbol();
+  let smaller_than = js_operator_less_than_symbol();
   let number_first = 3;
   let number_last = 5;
   let numbers_compared = js_code_binary_spaced_nb(
     number_first,
-    less_than,
+    smaller_than,
     number_last,
   );
   let names_compared = js_code_binary_spaced_nb(
     name_first,
-    less_than,
+    smaller_than,
     name_last,
   );
-  let names_turned = js_code_binary_spaced_nb(name_last, less_than, name_first);
+  let names_turned = js_code_binary_spaced_nb(
+    name_last,
+    smaller_than,
+    name_first,
+  );
   ("the symbol is a part of its own, so it comes out dressed as code. The parts alternate between plain writing and code all the way along, and a symbol standing in an odd place is what makes a symbol callout - the same device the Operators lessons name their symbol with, and the same one the sixth Statements lesson names its plus with. The numbers in the third box's line are not callouts and stay joined into the writing: they are being counted, not named.");
   let turned_line = list_join_empty([
     "Asked the other way round the answer is different, because ",
@@ -46,7 +50,7 @@ export function app_code_lesson_statement_name_compare_above(root) {
   let box_remember = app_code_container_light_blue(root);
   html_div_cycle_code(box_remember, [
     "Remember, we can ask whether one number is smaller (",
-    less_than,
+    smaller_than,
     ") than another",
   ]);
   let code = js_code_console_log_statement(numbers_compared);
