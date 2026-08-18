@@ -1586,6 +1586,10 @@ export function permission_grant_names() {
   let spelled1541 = fn_name("gloss_stores_punctuation_entries_repair");
   let spelled1542 = fn_name("permission_replay_rows");
   let spelled1543 = fn_name("permission_replay_write");
+  let spelled1544 = fn_name("apps_boot_cold_gate_run");
+  let spelled1545 = fn_name("bible_glyph_gate_run");
+  let spelled1546 = fn_name("js_await_add_cases_gate_run");
+  let spelled1547 = fn_name("js_let_add_cases_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -3130,6 +3134,10 @@ export function permission_grant_names() {
     spelled1541,
     spelled1542,
     spelled1543,
+    spelled1544,
+    spelled1545,
+    spelled1546,
+    spelled1547,
   ];
   return names;
 }
