@@ -1,3 +1,4 @@
+import { permission_grant_delete_paths_steerable } from "./permission_grant_delete_paths_steerable.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_grant_refusals_context_escalates } from "./permission_grant_refusals_context_escalates.mjs";
 import { property_get } from "./property_get.mjs";
@@ -47,13 +48,15 @@ export async function permission_grant_refusals_context_destructive(
     delete_seams,
     remembered,
   );
-  let deleters = object_property_names(delete_paths);
+  ("A reach whose last hop takes nothing is dropped before it is counted. The chain says where an argument stops being able to travel, and the function that calls the deleter is the one that names what is deleted - so when that one declares nothing, the near-end reading above has already answered the whole question and counting the reach again refuses on a ground that is not there.");
+  let steerable = await permission_grant_delete_paths_steerable(delete_paths);
+  let deleters = object_property_names(steerable);
   let erases = greater_than(deleters.length, 0);
   let destructive = and(erases, takes_arguments);
   let r2 = {
     params,
     ast,
-    delete_paths,
+    delete_paths: steerable,
     destructive,
   };
   return r2;

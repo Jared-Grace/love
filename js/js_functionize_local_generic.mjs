@@ -1,3 +1,6 @@
+import { list_take } from "./list_take.mjs";
+import { js_statements_span_read_above_assert } from "./js_statements_span_read_above_assert.mjs";
+import { js_statements_span_made_below_assert } from "./js_statements_span_made_below_assert.mjs";
 import { js_functionize_params_missing_add } from "./js_functionize_params_missing_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_outputs_closure_assert } from "./js_statements_span_outputs_closure_assert.mjs";
@@ -52,6 +55,11 @@ export async function js_functionize_local_generic(
   let tail = list_skip(stack_, index_after);
   ("A run of lines that hands back a name somebody goes on writing to is refused here, as late as this because it is the first place the lines behind the run are known. The other two refusals only had to look at the run itself.");
   js_statements_span_outputs_closure_assert(span, tail, f_name_new);
+  let index_min = list_min(indices);
+  let head = list_take(stack_, index_min);
+  ("Two more refusals, and they are one idea seen from both ends: a run of lines may not be read before it is made. Every refusal above this reads the run and the lines behind it, because in a body read straight down nothing ahead can depend on the run and nothing in the run can depend on what is behind. The language breaks that twice - a function declaration is made before the first line runs, and a function made in the run is read whenever something later calls it - and both were being cut straight through.");
+  js_statements_span_read_above_assert(span, head, f_name_new);
+  js_statements_span_made_below_assert(span, tail, f_name_new);
   let outputs = js_statements_span_outputs(span, tail);
   let outputs_any = list_empty_not_is(outputs);
   let async_is = js_statements_await_any_is(span);
@@ -87,6 +95,5 @@ export async function js_functionize_local_generic(
   let parsed = returning
     ? js_statement_return(code_call)
     : js_parse_statement(code_statement);
-  let m = list_min(indices);
-  list_insert(stack_, m, parsed);
+  list_insert(stack_, index_min, parsed);
 }
