@@ -48,7 +48,8 @@ export function app_g_bless_people_step(world) {
     }
     let chosen = list_random_item(open);
     let to = property_get(chosen, "neighbor");
-    let delay = multiply(random(), 0.5);
+    let left = random();
+    let delay = multiply(left, 0.5);
     app_g_npc_move(person, to, delay);
   }
   each(npcs, person_step);

@@ -3,10 +3,8 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_one_more_above_start } from "./app_code_lesson_statement_name_one_more_above_start.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 export function app_code_lesson_statement_name_one_more_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: the line the screen before this one ended on, the same line with a written 1 where the second name was, and then that line written twice");

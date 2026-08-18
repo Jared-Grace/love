@@ -11,8 +11,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_statement_name_compare_above(root) {
   arguments_assert(arguments, 1);

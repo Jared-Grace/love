@@ -9,9 +9,7 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_code } from "./html_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
