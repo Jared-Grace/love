@@ -1,14 +1,12 @@
-import { app_g_bless_overlay_render } from "./app_g_bless_overlay_render.mjs";
-import { app_g_bless_overlay_player } from "./app_g_bless_overlay_player.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_g_bless_overlay_turned } from "./app_g_bless_overlay_turned.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
 import { app_g_bless_transfer_overlay } from "./app_g_bless_transfer_overlay.mjs";
 import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
-import { app_g_character_face } from "./app_g_character_face.mjs";
 import { app_g_event_target_closest_tile } from "./app_g_event_target_closest_tile.mjs";
 import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
@@ -31,20 +29,15 @@ export function app_g_bless_overlay(container_map) {
   ("The map is drawn once and never again. Only the wash, the readout and the button are");
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
-  let r = app_g_bless_overlay_player(container_map);
+  let r = app_g_bless_overlay_turned(container_map);
+  let turned = property_get(r, "turned");
+  let div_map = property_get(r, "div_map");
+  let player_img_c = property_get(r, "player_img_c");
+  let bar = property_get(r, "bar");
+  let world = property_get(r, "world");
+  let walking = property_get(r, "walking");
+  let render = property_get(r, "render");
   let player = property_get(r, "player");
-  let npcs = property_get(r, "npcs");
-  let r2 = app_g_bless_overlay_render(r, npcs);
-  let render = property_get(r2, "render");
-  let walking = property_get(r2, "walking");
-  let world = property_get(r2, "world");
-  let bar = property_get(r2, "bar");
-  let player_img_c = property_get(r2, "player_img_c");
-  let div_map = property_get(r2, "div_map");
-  function turned(way) {
-    app_g_character_face(player, player_img_c, way);
-    render();
-  }
   app_g_bless_arrows(bar, turned);
   async function tapped(e) {
     "a tap while already walking is ignored rather than queued. the player can see where they are going, and a second destination taken mid-walk would send them somewhere they chose before they knew what the first walk would show them";
