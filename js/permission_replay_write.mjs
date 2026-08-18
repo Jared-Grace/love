@@ -30,13 +30,16 @@ export async function permission_replay_write() {
   ("the proved rows are named here rather than where they were grouped, because they were grouped by the label a rule would wear and a grant is written to a function. The one row can want both readings at once.");
   let confirmed_rows = property_get(confirmed, "rows");
   permission_rows_run_named(confirmed_rows);
+  ("the proved rows are then read under today's rules, because a week of interruptions holds prompts somebody has already granted away and a ranking that counted those would send the next reader at work already done");
+  let live_rows = permission_rows_unsolved(confirmed_rows);
+  property_set(r, "confirmed_live", live_rows.length);
   let candidates = property_get(r, "candidates");
   let replay_grants = await permission_rows_grant_verdicts(
     candidates,
     "run_name",
   );
   let proved_grants = await permission_rows_grant_verdicts(
-    confirmed_rows,
+    live_rows,
     "run_name",
   );
   property_set(r, "replay_grants", replay_grants);
@@ -51,6 +54,7 @@ export async function permission_replay_write() {
     shapes: property_get(r, "shapes"),
     candidates: property_get(r, "candidates").length,
     proved: property_get(confirmed, "counted"),
+    proved_live: live_rows.length,
     grantable_replay: permission_grants_grouped_open_names(replay_grants),
     grantable_proved: permission_grants_grouped_open_names(proved_grants),
     path,

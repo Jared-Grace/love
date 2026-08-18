@@ -1,5 +1,5 @@
 import { equal } from "./equal.mjs";
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { not } from "./not.mjs";
 import { set_on_first } from "./set_on_first.mjs";
 import { object_properties_equal } from "./object_properties_equal.mjs";
@@ -14,7 +14,7 @@ export function js_node_to_visitors(ast, node_search) {
         let node = property_get(v, "node");
         if (equal(node, node_search)) {
           let add_to_list = true;
-          let e = property_list_get_end_1(v, "stack");
+          let e = js_visit_above(v);
           let type_is = js_import_specifier_is(e);
           if (type_is) {
             let eq = object_properties_equal(e, ["imported", "imported"]);

@@ -1,5 +1,5 @@
 import { not_equal } from "./not_equal.mjs";
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
@@ -28,7 +28,7 @@ export function js_function_declaration_unused_remove(ast) {
     if (not_equal(count, 1)) {
       return;
     }
-    let e = property_list_get_end_1(v, "stack");
+    let e = js_visit_above(v);
     let nl = list_not_is(e);
     if (nl) {
       return;

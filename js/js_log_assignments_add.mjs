@@ -2,7 +2,7 @@ import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_visit_declarations } from "./js_visit_declarations.mjs";
 import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
@@ -33,7 +33,7 @@ export async function js_log_assignments_add(ast) {
   function lambda(la) {
     function lambda_visit(v) {
       let node = property_get(v, "node");
-      let list = property_list_get_end_1(v, "stack");
+      let list = js_visit_above(v);
       let declarators = js_declaration_declarators_get(node);
       let names = list_map_filter(
         declarators,
