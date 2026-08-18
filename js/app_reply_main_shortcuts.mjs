@@ -1,17 +1,28 @@
-import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
-import { app_reply_main_shortcuts_r_ar_ } from "./app_reply_main_shortcuts_r_ar_.mjs";
-import { app_reply_main_shortcuts_r_ar_base } from "./app_reply_main_shortcuts_r_ar_base.mjs";
-import { app_reply_main_shortcuts_ar } from "./app_reply_main_shortcuts_ar.mjs";
-import { app_reply_main_shortcuts_r_bn_ } from "./app_reply_main_shortcuts_r_bn_.mjs";
-import { app_reply_main_shortcuts_r_bn_base } from "./app_reply_main_shortcuts_r_bn_base.mjs";
-import { app_reply_main_shortcuts_gl } from "./app_reply_main_shortcuts_gl.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_reply_main_shortcuts_shortcut_each } from "./app_reply_main_shortcuts_shortcut_each.mjs";
+import { app_reply_main_shortcuts_languages_default_concat_single } from "./app_reply_main_shortcuts_languages_default_concat_single.mjs";
+import { app_reply_main_shortcuts_languages_default_concat } from "./app_reply_main_shortcuts_languages_default_concat.mjs";
+import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
+import { app_reply_choices_whatsapp } from "./app_reply_choices_whatsapp.mjs";
+import { emoji_fire } from "./emoji_fire.mjs";
+import { app_reply_glory } from "./app_reply_glory.mjs";
+import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
+import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
+import { app_reply_give } from "./app_reply_give.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
+import { app_reply_called_why } from "./app_reply_called_why.mjs";
+import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
 import { each } from "./each.mjs";
+import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
+import { app_reply_greetings } from "./app_reply_greetings.mjs";
+import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
+import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
+import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
+import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
+import { app_reply_greetings_live } from "./app_reply_greetings_live.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 export function app_reply_main_shortcuts(
   root,
   languages_chosen,
@@ -21,37 +32,136 @@ export function app_reply_main_shortcuts(
   buttons_responses,
 ) {
   let languages_chosen_default = app_reply_languages_chosen_default();
-  let r2 = app_reply_main_shortcuts_gl(root, languages_chosen_default);
-  let gl = property_get(r2, "gl");
-  let r_pk_ = property_get(r2, "r_pk_");
-  let r_pk_10 = property_get(r2, "r_pk_10");
-  let r3 = app_reply_main_shortcuts_r_bn_base(r2, languages_chosen_default);
-  let r4 = app_reply_main_shortcuts_r_bn_(r3);
-  let r5 = app_reply_main_shortcuts_ar(r4);
-  let r6 = app_reply_main_shortcuts_r_ar_base(r5, languages_chosen_default);
-  let r7 = app_reply_main_shortcuts_r_ar_(r6);
-  let r_bn_ = property_get(r7, "r_bn_");
-  let r_pk_10_g = property_get(r7, "r_pk_10_g");
-  let r_pk_10_gh = property_get(r7, "r_pk_10_gh");
-  let r_pk_10_h = property_get(r7, "r_pk_10_h");
-  let r_pk_1_c = property_get(r7, "r_pk_1_c");
-  let r_pk_1_m = property_get(r7, "r_pk_1_m");
-  let r_pk_1_w = property_get(r7, "r_pk_1_w");
-  let r_pk_10_glory = property_get(r7, "r_pk_10_glory");
-  let r_pk_20 = property_get(r7, "r_pk_20");
-  let r_pk_40 = property_get(r7, "r_pk_40");
-  let r_ke_ = property_get(r7, "r_ke_");
-  let r_ug_ = property_get(r7, "r_ug_");
-  let r_ug_40 = property_get(r7, "r_ug_40");
-  let r_ke_40 = property_get(r7, "r_ke_40");
-  let r_default = property_get(r7, "r_default");
-  let r_te_ = property_get(r7, "r_te_");
-  let r_ar_ = property_get(r7, "r_ar_");
-  let r_yt_counted = app_reply_main_shortcuts_shortcut_extend_count(
-    r_default,
-    2,
+  app_shared_text_body(
+    root,
+    "3. (Optional) Or, instead of 1 or 2, choose shortcuts:",
   );
-  let r_yt = app_reply_main_shortcuts_shortcut_extend(r_yt_counted, "yt");
+  let gl = app_reply_greetings_live();
+  let ur = ebible_language_urdu();
+  let pa = ebible_language_punjabi();
+  let lug = ebible_language_luganda();
+  let ke = ebible_language_kenya();
+  let te = ebible_language_telugu();
+  let languages_pk = app_reply_main_shortcuts_languages_default_concat(
+    [pa, ur],
+    languages_chosen_default,
+  );
+  let r_pk_base = {
+    name: "PK",
+    languages: languages_pk,
+    count: 0,
+    responses: [],
+  };
+  let r_pk_ = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 1);
+  let r_pk_10 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 10);
+  let g = app_reply_greetings();
+  let r_pk_10_g = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    "g",
+    g,
+  );
+  let h = app_reply_how_r_u();
+  let r_pk_10_gh = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10_g,
+    "h",
+    h,
+  );
+  let r_pk_10_h = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    "h",
+    h,
+  );
+  let c = app_reply_called_why();
+  let r_pk_1_c = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "c",
+    c,
+  );
+  let m = app_reply_give();
+  let r_pk_1_m = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "m",
+    m,
+  );
+  let w = app_reply_choices_whatsapp();
+  let r_pk_1_w = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_,
+    "w",
+    w,
+  );
+  let glory = app_reply_glory();
+  let v = emoji_fire();
+  let r_pk_10_glory = app_reply_main_shortcuts_shortcut_extend_response(
+    r_pk_10,
+    v,
+    glory,
+  );
+  let r_pk_20 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 20);
+  let r_pk_40 = app_reply_main_shortcuts_shortcut_extend_count(r_pk_base, 40);
+  let languages_ug = app_reply_main_shortcuts_languages_default_concat_single(
+    lug,
+    languages_chosen_default,
+  );
+  let r_ug_base = {
+    name: "UG",
+    languages: languages_ug,
+    count: 0,
+    responses: [],
+  };
+  let r_ug_ = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 10);
+  let r_ug_40 = app_reply_main_shortcuts_shortcut_extend_count(r_ug_base, 40);
+  let languages_ke = app_reply_main_shortcuts_languages_default_concat_single(
+    ke,
+    languages_chosen_default,
+  );
+  let r_ke_base = {
+    name: "KE",
+    languages: languages_ke,
+    count: 0,
+    responses: [],
+  };
+  let r_ke_ = app_reply_main_shortcuts_shortcut_extend_count(r_ke_base, 10);
+  let r_ke_40 = app_reply_main_shortcuts_shortcut_extend_count(r_ke_base, 40);
+  let r_default = {
+    name: "",
+    languages: languages_chosen_default,
+    count: 1,
+    responses: [],
+  };
+  let r_te_base = {
+    name: "TE",
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      te,
+      languages_chosen_default,
+    ),
+    count: 0,
+    responses: [],
+  };
+  let r_te_ = app_reply_main_shortcuts_shortcut_extend_count(r_te_base, 10);
+  let bn = ebible_language_bengali();
+  let r_bn_base = {
+    name: "BN",
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      bn,
+      languages_chosen_default,
+    ),
+    count: 0,
+    responses: [],
+  };
+  let r_bn_ = app_reply_main_shortcuts_shortcut_extend_count(r_bn_base, 10);
+  let ar = ebible_language_arabic();
+  let r_ar_base = {
+    name: "AR",
+    languages: app_reply_main_shortcuts_languages_default_concat_single(
+      ar,
+      languages_chosen_default,
+    ),
+    count: 0,
+    responses: [],
+  };
+  let r_ar_ = app_reply_main_shortcuts_shortcut_extend_count(r_ar_base, 10);
+  let r_yt = app_reply_main_shortcuts_shortcut_extend_count(r_default, 2);
+  r_yt = app_reply_main_shortcuts_shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
   let r_en_ = {
     name: "en40",
