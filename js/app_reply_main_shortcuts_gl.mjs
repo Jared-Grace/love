@@ -1,3 +1,6 @@
+import { app_reply_main_shortcuts_languages_default_concat_single } from "./app_reply_main_shortcuts_languages_default_concat_single.mjs";
+import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
+import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_reply_main_shortcuts_r_ke_ } from "./app_reply_main_shortcuts_r_ke_.mjs";
 import { app_reply_main_shortcuts_r_default } from "./app_reply_main_shortcuts_r_default.mjs";
