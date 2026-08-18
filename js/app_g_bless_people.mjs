@@ -1,0 +1,44 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { each_index } from "./each_index.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { list_remove_end } from "./list_remove_end.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_without } from "./list_without.mjs";
+import { mod } from "./mod.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_transform_multiple } from "./property_transform_multiple.mjs";
+import { g_genders_get } from "./g_genders_get.mjs";
+import { app_g_bless_people_count } from "./app_g_bless_people_count.mjs";
+export function app_g_bless_people(player_img, coordinates_land) {
+  arguments_assert(arguments, 2);
+  ("The people standing about the world - a tile to stand on, a picture, and a way they are");
+  ("facing, and nothing else at all.");
+  ("The gospel game's own people carry a name, a gender, a conversation and a record of");
+  ("what has been said to them, because that game is a conversation. Nobody is spoken to");
+  ("here. A person you pray for needs only to be somewhere and be seen, so giving them a");
+  ("scripted conversation would be generating content the game can never reach.");
+  ("Their pictures come from the same list the walking art is drawn from, so a person here");
+  ("looks exactly like a person there - and the player's own picture is taken out of it, so");
+  ("nobody in the crowd is the player's twin.");
+  let genders = g_genders_get();
+  function lambda$imgs(imgs) {
+    let filtered = list_without(imgs, player_img);
+    return filtered;
+  }
+  property_transform_multiple(genders, "imgs", lambda$imgs);
+  let gender_count = list_size(genders);
+  let count = app_g_bless_people_count();
+  let people = list_remove_end(coordinates_land, count);
+  function person_initialize(person, index) {
+    let r = mod(index, gender_count);
+    let gender = list_get(genders, r);
+    let imgs = property_get(gender, "imgs");
+    let img = list_random_item(imgs);
+    property_set(person, "img", img);
+    property_set(person, "direction", "south");
+  }
+  each_index(people, person_initialize);
+  return people;
+}
