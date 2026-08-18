@@ -1,3 +1,5 @@
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
@@ -70,8 +72,8 @@ export function app_code_lesson_statement_name_copy_kept_above(root) {
     name_copy,
     " from it",
   ]);
-  html_div_code(box_code, held);
-  html_div_code(box_code, copied);
+  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  html_div_code_lines(box_code, [held, copied]);
   let puts = list_join_empty(["Then we put ", word_last, " in cup "]);
   html_div_cycle_code(box_code, [puts, name_first]);
   html_div_code(box_code, changed);
@@ -79,8 +81,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root) {
     "Then we write out what is inside ",
     name_copy,
   ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word_first);
+  app_code_code_lines_writes_out(box_code, [logged], word_first);
   html_div_cycle_code(box_code, [
     "Cup ",
     name_copy,
