@@ -203,6 +203,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_larger,
     app_code_lesson_expression_min_max_of_three,
     app_code_lesson_expression_either_first,
+    app_code_lesson_expression_choose_order_both_sides,
     app_code_lesson_expression_arithmetic_equality,
     app_code_lesson_expression_swapping_add,
     app_code_lesson_expression_swapping_divide,
