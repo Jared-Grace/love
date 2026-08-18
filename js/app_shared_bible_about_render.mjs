@@ -1,5 +1,5 @@
 import { app_shared_bible_licences_text } from "./app_shared_bible_licences_text.mjs";
-import { app_shared_bible_money_text } from "./app_shared_bible_money_text.mjs";
+import { app_shared_money_text } from "./app_shared_money_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_shared_bible_about_render(
   container,
@@ -11,6 +11,6 @@ export function app_shared_bible_about_render(
   "the credits come first, because they are owed to somebody. what happens with money is a promise about us and can wait one line.";
   let licences_text = app_shared_bible_licences_text();
   app_shared_button(container, licences_text, open_licences);
-  let money_text = app_shared_bible_money_text();
+  let money_text = app_shared_money_text();
   app_shared_button(container, money_text, open_money);
 }
