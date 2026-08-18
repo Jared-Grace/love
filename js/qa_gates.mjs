@@ -365,6 +365,7 @@ export function qa_gates() {
     js_function_parameter_call_sizes_cases_gate_run,
     js_function_forwarding_remove_cases_gate_run,
     js_let_add_cases_gate_run,
+    js_await_add_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
     js_identifiers_renamed_without_naming_check_cases_gate_run,
