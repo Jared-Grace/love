@@ -1,7 +1,7 @@
+import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_glyph_coverage_curve_report } from "./bible_glyph_coverage_curve_report.mjs";
 import { bible_glyph_coverage_curve_curve } from "./bible_glyph_coverage_curve_curve.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
-import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 export async function bible_glyph_coverage_curve(testament_name) {
   "How much of a testament's page a picture Bible covers as its vocabulary grows, measured at a spread of vocabulary sizes.";
   "$plain testament_name";
@@ -11,8 +11,8 @@ export async function bible_glyph_coverage_curve(testament_name) {
   "Every word is counted, whether the seed table draws it or not, so this is the ceiling rather than the progress. What the seed table has actually reached is the survey's coverage, and the gap between the two is the work left.";
   "The curve is reported alongside HOW MUCH OF EACH STEP IS ALREADY DRAWN, because the two numbers answer different questions. The curve says how big the job is; the drawn count says where in it the current table stands.";
   let glosses = await bible_strong_glosses(testament_name);
-  let roots = bible_glyph_roots();
-  let r = bible_glyph_coverage_curve_curve(testament_name, roots, glosses);
+  let roots = bible_glyph_roots_testament_table(testament_name);
+  let r = bible_glyph_coverage_curve_curve(roots, glosses);
   let report = bible_glyph_coverage_curve_report(r, testament_name);
   return report;
 }
