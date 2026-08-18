@@ -1,3 +1,4 @@
+import { app_g_bless_overlay_blessings } from "./app_g_bless_overlay_blessings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_overlay_walking } from "./app_g_bless_overlay_walking.mjs";
 import { app_g_bless_overlay_cone_get } from "./app_g_bless_overlay_cone_get.mjs";
