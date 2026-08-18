@@ -29,23 +29,20 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let names_sum = js_code_binary_spaced_nb(name_first, plus, name_last);
   let box_again = app_code_container_light_blue(root);
   html_div_cycle_code(box_again, ["Remember, we can give a name a new value"]);
-  let code = js_code_let_statement(name_first, number_first);
-  html_div_code(box_again, code);
-  let code2 = js_code_assign_statement(name_first, number_new);
-  html_div_code(box_again, code2);
-  let code3 = js_code_console_log_statement(name_first);
-  html_div_code(box_again, code3);
-  app_code_writes_out_line(box_again, number_new);
+  ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  let held_again = js_code_let_statement(name_first, number_first);
+  let given_again = js_code_assign_statement(name_first, number_new);
+  let logged_again = js_code_console_log_statement(name_first);
+  let lines_again = [held_again, given_again, logged_again];
+  app_code_code_lines_writes_out(box_again, lines_again, number_new);
   html_div_cycle_code(box_again, ["The value it held before is gone"]);
   let box_sum = app_code_container_light_blue(root);
   html_div_cycle_code(box_sum, ["Remember, we can add what two names hold"]);
-  let code4 = js_code_let_statement(name_first, number_first);
-  html_div_code(box_sum, code4);
-  let code5 = js_code_let_statement(name_last, number_last);
-  html_div_code(box_sum, code5);
-  let code6 = js_code_console_log_statement(names_sum);
-  html_div_code(box_sum, code6);
-  app_code_writes_out_line(box_sum, total);
+  let held_first = js_code_let_statement(name_first, number_first);
+  let held_last = js_code_let_statement(name_last, number_last);
+  let logged_sum = js_code_console_log_statement(names_sum);
+  let lines_sum = [held_first, held_last, logged_sum];
+  app_code_code_lines_writes_out(box_sum, lines_sum, total);
   let box_itself = app_code_container_light_blue(root);
   html_div_cycle_code(box_itself, [
     "So we can give a name what it and another name add up to",

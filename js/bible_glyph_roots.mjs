@@ -3,7 +3,9 @@ export function bible_glyph_roots() {
   "The table is keyed by ROOT and not by Strong's number, because a number-keyed table hides the very kinship the picture Bible exists to show. Love the noun, love the verb and beloved the adjective carry three different numbers and are one root, and a reader who sees one glyph across all three has been told something true that no English translation can tell them without a footnote.";
   "Each word inside a root still names its own glyph rather than inheriting the root's. That is deliberate: a root is a family and not a promise that every member means the same thing, so a word whose sense has travelled far from its relatives can be drawn differently without leaving the family. Where they agree, they simply repeat the same glyph, and the repetition is the statement.";
   "A Strong's number is a testament's own. Greek 3056 and Hebrew 3056 are different words wearing one key, so this table is Greek and any Hebrew table is a separate one.";
-  "THE LAST FOUR ROOTS ARE RELATIONS and not things, and they were added because of what they cost to leave out. Four words - and, in, out of, and that - are eleven and a half thousand of the New Testament's hundred and twenty three thousand, so nine words in every hundred on the page were blank while every content word around them was drawn. A page of pictures with the joints missing does not read as a page with gaps; it reads as a list.";
+  "THE LAST EIGHT ROOTS ARE RELATIONS and not things, and they were added because of what they cost to leave out. The first four - and, in, out of, and that - are eleven and a half thousand of the New Testament's hundred and twenty three thousand, so nine words in every hundred on the page were blank while every content word around them was drawn. A page of pictures with the joints missing does not read as a page with gaps; it reads as a list.";
+  "The second four - he, is, and the two words for not - came from LOOKING AT THE FIRST FOUR ON A PAGE rather than from reading the frequency table again. A chapter drawn from the table showed which gaps still broke a sentence, and those were the ones: a sentence can survive a missing noun and be guessed at, and it cannot survive a missing NOT, which inverts it silently.";
+  "The copula is drawn as an EQUALS SIGN, and that is the clearest case in the table of a relation being easier to draw than a thing. God is love comes out as fire, equals, heart - which is not a translation of the sentence but a diagram of it, and the diagram is what a reader with no shared language can actually read.";
   "HOTI KEEPS ONE GLYPH THOUGH IT GLOSSES TWO WAYS, and the survey will report the spread, so this is the answer to that report rather than an oversight. The word is that five hundred times and because a hundred and eighty, and Greek marked no difference between the two - one word did both jobs and a Greek reader met the same word each time. Splitting it by which English word the interlinear reached for would draw a distinction the writer never drew, which is the rule the referent table already states: SPLIT ON A DIFFERENT REFERENT, NEVER ON A DIFFERENT WORDING.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
@@ -752,6 +754,46 @@ export function bible_glyph_roots() {
         {
           strong: "3754",
           glyph: "pointing",
+        },
+      ],
+    },
+    {
+      root: "autos",
+      gloss: "he, him, his, them",
+      words: [
+        {
+          strong: "846",
+          glyph: "pointing_back",
+        },
+      ],
+    },
+    {
+      root: "eimi",
+      gloss: "is, are, was",
+      words: [
+        {
+          strong: "1510",
+          glyph: "equals",
+        },
+      ],
+    },
+    {
+      root: "ou",
+      gloss: "not, no",
+      words: [
+        {
+          strong: "3756",
+          glyph: "no_entry",
+        },
+      ],
+    },
+    {
+      root: "me",
+      gloss: "not, do not",
+      words: [
+        {
+          strong: "3361",
+          glyph: "no_entry",
         },
       ],
     },
