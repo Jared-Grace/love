@@ -11,7 +11,47 @@ export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
   let r3 = app_reply_main_shortcuts_r_default(r2, languages_chosen_default);
   let r4 = app_reply_main_shortcuts_r_te_base(r3, languages_chosen_default);
   let r5 = app_reply_main_shortcuts_r_te_(r4);
-  let r6 = app_reply_main_shortcuts_bn(r5);
+  let r_te_ = property_get(r5, "r_te_");
+  let r_default = property_get(r5, "r_default");
+  let r_ke_40 = property_get(r5, "r_ke_40");
+  let r_ug_40 = property_get(r5, "r_ug_40");
+  let r_ug_ = property_get(r5, "r_ug_");
+  let gl2 = property_get(r5, "gl");
+  let r_pk_2 = property_get(r5, "r_pk_");
+  let r_pk_102 = property_get(r5, "r_pk_10");
+  let r_pk_10_g2 = property_get(r5, "r_pk_10_g");
+  let r_pk_10_gh2 = property_get(r5, "r_pk_10_gh");
+  let r_pk_10_h2 = property_get(r5, "r_pk_10_h");
+  let r_pk_1_c2 = property_get(r5, "r_pk_1_c");
+  let r_pk_1_m2 = property_get(r5, "r_pk_1_m");
+  let r_pk_1_w2 = property_get(r5, "r_pk_1_w");
+  let r_pk_10_glory2 = property_get(r5, "r_pk_10_glory");
+  let r_pk_202 = property_get(r5, "r_pk_20");
+  let r_pk_402 = property_get(r5, "r_pk_40");
+  let r_ke_2 = property_get(r5, "r_ke_");
+  let bn2 = ebible_language_bengali();
+  let r7 = {
+    r_te_,
+    r_default,
+    r_ke_40,
+    r_ug_40,
+    r_ug_,
+    gl: gl2,
+    r_pk_: r_pk_2,
+    r_pk_10: r_pk_102,
+    r_pk_10_g: r_pk_10_g2,
+    r_pk_10_gh: r_pk_10_gh2,
+    r_pk_10_h: r_pk_10_h2,
+    r_pk_1_c: r_pk_1_c2,
+    r_pk_1_m: r_pk_1_m2,
+    r_pk_1_w: r_pk_1_w2,
+    r_pk_10_glory: r_pk_10_glory2,
+    r_pk_20: r_pk_202,
+    r_pk_40: r_pk_402,
+    r_ke_: r_ke_2,
+    bn: bn2,
+  };
+  let r6 = r7;
   let bn = property_get(r6, "bn");
   let r_ke_ = property_get(r6, "r_ke_");
   let r_pk_40 = property_get(r6, "r_pk_40");
