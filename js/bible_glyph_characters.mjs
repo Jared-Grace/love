@@ -267,6 +267,22 @@ export function bible_glyph_characters() {
       name: "road",
       character: "🛣️",
     },
+    {
+      name: "plus",
+      character: "➕",
+    },
+    {
+      name: "tray_in",
+      character: "📥",
+    },
+    {
+      name: "tray_out",
+      character: "📤",
+    },
+    {
+      name: "pointing",
+      character: "👉",
+    },
   ];
   return characters;
 }
