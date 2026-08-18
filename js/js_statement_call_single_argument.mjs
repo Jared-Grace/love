@@ -13,6 +13,7 @@ export function js_statement_call_single_argument(statement) {
   "The one call this statement amounts to when the whole statement is a call to a plain name given exactly one argument, as that name, that argument, and whether the call is waited for. Nothing, when the statement is anything else.";
   "Several of these standing side by side, all naming the same function, are what a single walk over a list of their arguments can take the place of.";
   "A call reached through a property is left out, because there is no plain name to hand to the walk.";
+  "The statement itself is handed back along with its parts, so a caller gathering these can put one back where it stood when the gathering comes to nothing.";
   let statement_is = js_expression_statement_is(statement);
   if (not(statement_is)) {
     return null;
@@ -35,6 +36,7 @@ export function js_statement_call_single_argument(statement) {
     name,
     argument,
     waited_is,
+    statement,
   };
   return r;
 }
