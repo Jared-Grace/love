@@ -6,6 +6,7 @@ import { messenger_reply_messages_me } from "./messenger_reply_messages_me.mjs";
 import { messenger_reply_messages_name } from "./messenger_reply_messages_name.mjs";
 import { messenger_reply_messages_message } from "./messenger_reply_messages_message.mjs";
 export async function messenger_reply_messages_lambda6(la, conversation) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   arguments_assert(arguments, 2);
   let children = await conversation.$$('[data-virtualized="false"]');
   for (let c of children) {
