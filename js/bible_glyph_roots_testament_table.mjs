@@ -10,6 +10,7 @@ export function bible_glyph_roots_testament_table(testament_name) {
   "The seed glyph table written for one testament.";
   "A Strong's number is a TESTAMENT'S OWN, so there is one table per testament and this is the one place that says which is which. Every reader of a table asks here rather than naming one, so a reader cannot pick the wrong one up.";
   "AN UNKNOWN TESTAMENT IS REFUSED rather than answered with an empty table. An empty table surveys perfectly happily and reports that nought per cent of the text is drawn, which is indistinguishable from a testament nobody has started - so the mistake would look like honest work left to do.";
+  "This replaced a GUARD, and what it replaced is worth remembering. Every reader used to name the Greek table itself and then a check further down asked whether the table and the testament agreed, refusing if they did not. The check existed because reading the Greek table against Hebrew words did not fail - it quietly reported that one and a half per cent of the Old Testament was already drawn, which was sixty-three Greek roots landing on whatever Hebrew words happened to share their numbers. Choosing the table BY the testament makes that mistake unconstructible instead of caught, which is the better of the two every time it is available.";
   let old_name = ebible_testament_old_name();
   let older = equal(testament_name, old_name);
   if (older) {
