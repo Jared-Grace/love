@@ -1,4 +1,4 @@
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,7 +33,7 @@ export function js_calls_unawaited(functions, ast) {
     if (not(async_is)) {
       continue;
     }
-    let parent = property_list_get_end_1(visited, "stack");
+    let parent = js_visit_above(visited);
     let waited_is = js_node_type_is(parent, "AwaitExpression");
     if (waited_is) {
       continue;

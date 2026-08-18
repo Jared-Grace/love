@@ -1,4 +1,4 @@
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_prose_statement_nodes } from "./js_prose_statement_nodes.mjs";
 import { list_get } from "./list_get.mjs";
@@ -17,7 +17,7 @@ export function js_prose_statement_remove(ast, index) {
   function lambda(la) {
     function lambda_visit(v) {
       let node = property_get(v, "node");
-      let body = property_list_get_end_1(v, "stack");
+      let body = js_visit_above(v);
       let found = equal(node, target);
       if (found) {
         function lambda_remove() {
