@@ -15,7 +15,7 @@ export function ebible_licence_marks() {
       mark: "creativecommons.org/licenses/by-nc-nd/",
     },
     {
-      licence: "cc_by_nc",
+      licence: ebible_licence_cc_by_nc(),
       mark: "creativecommons.org/licenses/by-nc/",
     },
     {
@@ -23,7 +23,7 @@ export function ebible_licence_marks() {
       mark: "creativecommons.org/licenses/by-nd/",
     },
     {
-      licence: "all_rights_reserved",
+      licence: ebible_licence_all_rights_reserved(),
       mark: "all rights reserved",
     },
     {
