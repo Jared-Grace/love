@@ -1,12 +1,10 @@
+import { app_g_bless_overlay_transfer } from "./app_g_bless_overlay_transfer.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_overlay_tapped } from "./app_g_bless_overlay_tapped.mjs";
 import { app_g_bless_overlay_turned } from "./app_g_bless_overlay_turned.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_on } from "./html_on.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_g_bless_transfer_overlay } from "./app_g_bless_transfer_overlay.mjs";
-import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
-import { app_g_player_center } from "./app_g_player_center.mjs";
 export function app_g_bless_overlay(container_map) {
   arguments_assert(arguments, 1);
   ("The praying game: a world seen from above and filling the screen, the player standing in");
@@ -28,15 +26,7 @@ export function app_g_bless_overlay(container_map) {
   let r = app_g_bless_overlay_turned(container_map);
   let r2 = app_g_bless_overlay_tapped(r);
   let tapped = property_get(r2, "tapped");
-  let player = property_get(r2, "player");
-  let render = property_get(r2, "render");
-  let player_img_c = property_get(r2, "player_img_c");
-  let div_map = property_get(r2, "div_map");
-  html_on(div_map, "click", tapped);
-  render();
-  app_g_player_center(player, player_img_c, div_map);
-  ("the world is built and drawn behind this before it is covered, so the first thing after the amen is a world already standing rather than a wait");
-  let transfer = app_g_overlay_container(container_map);
+  let transfer = app_g_bless_overlay_transfer(r2, tapped, container_map);
   function begun() {
     html_remove(transfer);
   }
