@@ -7,11 +7,10 @@ import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { html_style_head } from "./html_style_head.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
 import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
-import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
+import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
 export function app_g_message_overlay(
   emoji_text,
   message,
