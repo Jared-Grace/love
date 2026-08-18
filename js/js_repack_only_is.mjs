@@ -46,7 +46,14 @@ export function js_repack_only_is(declaration) {
   if (not(record_is)) {
     return false;
   }
-  let r3 = js_repack_only_is_properties(answer);
+  let r32 = js_repack_only_is_few_is(answer);
+  let few_is2 = property_get(r32, "few_is");
+  let properties2 = property_get(r32, "properties");
+  let r6 = {
+    few_is: few_is2,
+    properties: properties2,
+  };
+  let r3 = r6;
   let properties = property_get(r3, "properties");
   let few_is = property_get(r3, "few_is");
   if (few_is) {
