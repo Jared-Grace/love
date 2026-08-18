@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
@@ -25,9 +25,9 @@ export function app_code_lesson_statement_name_one_more_above(root) {
   let number_first = 2;
   let number_last = 3;
   let total = add(number_first, number_last);
-  let names_sum = js_code_binary(name, plus, name_last);
+  let names_sum = js_code_binary_spaced_nb(name, plus, name_last);
   let start = 7;
-  let more = js_code_binary(name, plus, 1);
+  let more = js_code_binary_spaced_nb(name, plus, 1);
   let once = add(start, 1);
   let twice = add(once, 1);
   let box_sum = app_code_container_light_blue(root);
