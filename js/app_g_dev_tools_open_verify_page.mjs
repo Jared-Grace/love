@@ -4,7 +4,17 @@ import { app_g_dev_tools_open_verify_page_engine } from "./app_g_dev_tools_open_
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function app_g_dev_tools_open_verify_page(r) {
   arguments_assert(arguments, 1);
-  let r4 = app_g_dev_tools_open_verify_page_engine(r);
+  let r22 = app_g_dev_tools_open_verify_page_lines(r);
+  let lines = property_get(r22, "lines");
+  let url = property_get(r22, "url");
+  let engine = property_get(r22, "engine");
+  let r5 = {
+    r2: r22,
+    lines,
+    url,
+    engine,
+  };
+  let r4 = r5;
   let r2 = app_g_dev_tools_open_verify_page_told(r4);
   let told = await app_g_dev_tools_open_verify_page_page(r2);
   return told;
