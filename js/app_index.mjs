@@ -1,4 +1,4 @@
-import { app_index_about_card } from "./app_index_about_card.mjs";
+import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
 import { app_index_about_open } from "./app_index_about_open.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
@@ -15,7 +15,7 @@ export function app_index(context) {
   let entries = app_index_main_fns();
   app_index_generic(context, entries);
   ("about comes after the apps and before the dev tools: it is not an app either, but it is the one thing on this page addressed to whoever is reading it rather than to whoever is working on it.");
-  app_index_about_card(root, lambda_about);
+  app_index_dev_about_card(root, lambda_about);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
   function lambda_about() {
