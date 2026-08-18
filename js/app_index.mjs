@@ -12,10 +12,10 @@ export function app_index(context) {
   let root = property_get(context, "root");
   ("the working links come before the apps, and only on a machine on this same network: while something is being worked on they are the reason this page was opened, and the top is the part a phone shows without scrolling");
   app_index_dev_links_show(root);
+  ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
+  app_index_dev_about_card(root, lambda_about);
   let entries = app_index_main_fns();
   app_index_generic(context, entries);
-  ("about comes after the apps and before the dev tools: it is not an app either, but it is the one thing on this page addressed to whoever is reading it rather than to whoever is working on it.");
-  app_index_dev_about_card(root, lambda_about);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
   function lambda_about() {
