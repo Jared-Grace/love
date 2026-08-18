@@ -7,7 +7,7 @@ import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
 export async function js_function_names_return_own_not(names) {
   "Of these names, the ones a repo function answers to whose body hands no answer back of its own.";
-  ("A name nothing in the repo answers to is left out, because there is no body to look at and no way to say what it does. So is a name whose function hands something back, however rarely - ");
+  "A name nothing in the repo answers to is left out, because there is no body to look at and no way to say what it does. So is a name whose function hands something back, however rarely - ";
   (fn_name("js_function_return_own_is"),
     " counts a bare handing back with nothing after it too, which errs toward leaving a name out, and leaving one out only means a change is not made.");
   let kept = [];
