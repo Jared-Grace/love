@@ -6,7 +6,6 @@ import { app_g_overlay } from "./app_g_overlay.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
-import { app_g_view_render_study_fresh } from "./app_g_view_render_study_fresh.mjs";
 export function app_g_view_render_study_r(view, text, div_map) {
   arguments_assert(arguments, 3);
   let word_index = property_get(view, "word_index");
