@@ -1,3 +1,6 @@
+import { null_is } from "./null_is.mjs";
+import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
+import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { app_code_expression_chips_settle } from "./app_code_expression_chips_settle.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
@@ -38,6 +41,13 @@ export function app_code_expression_choose_line(
     let ready = app_code_expression_nodes_ready(current);
     ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");
     let chosen = false;
+    ("whatever is waiting on the learner while the line has stopped answering, handed over by whoever put the question up - because a press made on the line after that is not a mistake about the line, it is a learner who has not found where the asking moved to");
+    ("Held here rather than known here. The line has no idea what a value question looks like, and the page that drew one has no idea a press was made on the line, so the one of them that can see the press is told by the one of them that can see the question.");
+    let waiting = null;
+    function waiting_on(component) {
+      "what to point at if a press is made on the line while this question is open";
+      waiting = component;
+    }
     ("every operator drawn on this line is kept, because the moment one of them is chosen the rest have to be SEEN to stop answering - a chip left standing on an operator that no longer answers is a control that swallows the press, and a learner pressing it is told nothing at all");
     let pressable = [];
     ("every operator refused on this drawing of the line is kept, because a refusal is answered again the moment the right one is pressed - and by then the line is holding the marks rather than the presses that made them");
@@ -47,6 +57,14 @@ export function app_code_expression_choose_line(
       list_add(pressable, span);
       async function on_click() {
         if (chosen) {
+          ("the line has already been pressed and is waiting on an answer somewhere else, so this press is spent saying where: the question glows rather than the press being swallowed");
+          ("Swallowed, the press teaches a learner that the screen is broken - which is what a control that answers nothing means everywhere else they have ever pressed one. Answered by the real question lighting up, the same press teaches them where to look, and it costs them one glance.");
+          ("Nothing at all happens if nobody said what is waiting. A page that answers its own presses some other way is not made to invent a glow it never asked for.");
+          let waiting_is = null_is(waiting);
+          if (waiting_is) {
+            return;
+          }
+          app_shared_glow_look_here(waiting);
           return;
         }
         let ready_is = list_includes(ready, node);
@@ -69,7 +87,12 @@ export function app_code_expression_choose_line(
         await app_code_expression_chips_settle(line, pressable);
         let node_value = app_code_expression_solved(node, node);
         ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
-        await on_chosen(node, node_value, node_span);
+        await on_chosen(node, node_value, node_span, waiting_on);
+        ("the pointing is over the moment the question it pointed at is answered, and it is put out here rather than by whoever lit it, because it is lit from here and only ever while this one await is open");
+        let waiting_was = null_is(waiting);
+        if (not(waiting_was)) {
+          app_shared_glow_clear(waiting);
+        }
         ("and the settling that follows is the same on both, so nothing is asked of the answerer about what it showed - the front page flies the value down and the quiz simply writes it, and either way what is left to do is let the blue go and close the line up");
         await app_code_expression_replaced_settle(line, node_span, node_value);
         let stepped = app_code_expression_solved(current, node);

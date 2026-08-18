@@ -13,7 +13,6 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
@@ -69,10 +68,12 @@ export function app_code_lesson_expression_choose_order_solve_example(
     let next = app_code_label_solve_next();
     ask(next);
   }
-  async function on_chosen(node, value, node_span) {
+  async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
+    "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
     let said = app_code_label_solve_choice();
     ask(said);
+    waiting_on(choices_holder);
     let decoys = decoys_get(current, node);
     await app_code_expression_value_choose_await(
       choices_holder,

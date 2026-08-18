@@ -31,10 +31,12 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
     let said = app_code_label_solve_next();
     answer_label_set(said);
   }
-  async function on_chosen(node, value, node_span_unused) {
+  async function on_chosen(node, value, node_span_unused, waiting_on) {
     "a right press is answered by asking what that part comes to, and the line does not move until the right value is pressed";
+    "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
     let said = app_code_label_solve_choice();
     answer_label_set(said);
+    waiting_on(choices_holder);
     let decoys = decoys_get(current, node);
     await app_code_expression_value_choose_await(
       choices_holder,
