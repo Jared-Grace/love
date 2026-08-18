@@ -2,7 +2,6 @@ import { bible_glyph_referents_testament_table } from "./bible_glyph_referents_t
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_survey_percent } from "./bible_glyph_survey_percent.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
 export function bible_glyph_survey_referents(r, testament_name) {
   arguments_assert(arguments, 2);
   let r2 = bible_glyph_survey_percent(r);
