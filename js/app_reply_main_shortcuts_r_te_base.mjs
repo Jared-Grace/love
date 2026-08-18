@@ -33,7 +33,7 @@ export function app_reply_main_shortcuts_r_te_base(
     count: 0,
     responses: [],
   };
-  return {
+  let r = {
     r_default,
     r_ke_40,
     r_ug_40,
@@ -53,4 +53,5 @@ export function app_reply_main_shortcuts_r_te_base(
     r_ke_,
     r_te_base,
   };
+  return r;
 }
