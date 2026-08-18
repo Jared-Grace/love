@@ -33,7 +33,6 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
     let b = app_shared_button_wide(parent, quiz_choice, on_click);
     let background = app_shared_color_gray_light();
     html_style_background_color_set(b, background);
-    html_style_margin_top(b, "0.2em");
     async function on_click() {
       if (answered) {
         ("locked once the correct choice is chosen");
