@@ -11,6 +11,7 @@ import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
 import { number_to_words } from "./number_to_words.mjs";
 import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 export function app_shared_bible_read_frame(context) {
   arguments_assert(arguments, 1);
   let root = app_shared_mobile_default_font_size(context);
@@ -23,6 +24,8 @@ export function app_shared_bible_read_frame(context) {
   app_shared_content_column_pad(content);
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
+  ("the count of chosen verses is part of the frame, made here with the bar and the body rather than later on beside the chapter. It says nothing until a verse is picked, so making it early costs no height - and made here it is something every screen this frame carries can reach, which is what lets the settings hub empty it on the way in instead of leaving a line about the reading standing under the settings.");
+  let count_status = app_shared_bible_read_count_foot(shell);
   let t = html_button_copy_text();
   let max = app_shared_bible_chosen_max();
   let v = number_to_words(max);
@@ -35,7 +38,7 @@ export function app_shared_bible_read_frame(context) {
     " to save that passage",
   ]);
   let r = {
-    shell,
+    count_status,
     content,
     bar,
     t,
