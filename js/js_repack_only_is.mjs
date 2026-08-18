@@ -1,4 +1,4 @@
-import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
+import { js_repack_only_is_properties } from "./js_repack_only_is_properties.mjs";
 import { js_repack_only_is_answer } from "./js_repack_only_is_answer.mjs";
 import { js_repack_only_is_getter } from "./js_repack_only_is_getter.mjs";
 import { property_get } from "./property_get.mjs";
@@ -39,9 +39,9 @@ export function js_repack_only_is(declaration) {
   if (not(record_is)) {
     return false;
   }
-  let r3 = js_repack_only_is_few_is(answer);
-  let few_is = property_get(r3, "few_is");
+  let r3 = js_repack_only_is_properties(answer);
   let properties = property_get(r3, "properties");
+  let few_is = property_get(r3, "few_is");
   if (few_is) {
     return false;
   }
