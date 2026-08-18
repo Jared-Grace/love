@@ -9,13 +9,8 @@ export function app_index_dev_about_card(root, opened) {
   arguments_assert(arguments, 2);
   let wanted = host_local_network_is();
   if (wanted) {
-    app_index_dev_about_card_show(root, opened);
+    let label = app_shared_about_text();
+    let text = "Why everything here is free, and what happens with a gift";
+    app_index_card(root, label, text, opened);
   }
-}
-export function app_index_dev_about_card_show(root, opened) {
-  "the card itself, drawn once it is settled that it should be.";
-  arguments_assert(arguments, 2);
-  let label = app_shared_about_text();
-  let text = "Why everything here is free, and what happens with a gift";
-  app_index_card(root, label, text, opened);
 }
