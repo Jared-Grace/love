@@ -3,6 +3,8 @@ export function bible_glyph_roots() {
   "The table is keyed by ROOT and not by Strong's number, because a number-keyed table hides the very kinship the picture Bible exists to show. Love the noun, love the verb and beloved the adjective carry three different numbers and are one root, and a reader who sees one glyph across all three has been told something true that no English translation can tell them without a footnote.";
   "Each word inside a root still names its own glyph rather than inheriting the root's. That is deliberate: a root is a family and not a promise that every member means the same thing, so a word whose sense has travelled far from its relatives can be drawn differently without leaving the family. Where they agree, they simply repeat the same glyph, and the repetition is the statement.";
   "A Strong's number is a testament's own. Greek 3056 and Hebrew 3056 are different words wearing one key, so this table is Greek and any Hebrew table is a separate one.";
+  "THE LAST FOUR ROOTS ARE RELATIONS and not things, and they were added because of what they cost to leave out. Four words - and, in, out of, and that - are eleven and a half thousand of the New Testament's hundred and twenty three thousand, so nine words in every hundred on the page were blank while every content word around them was drawn. A page of pictures with the joints missing does not read as a page with gaps; it reads as a list.";
+  "HOTI KEEPS ONE GLYPH THOUGH IT GLOSSES TWO WAYS, and the survey will report the spread, so this is the answer to that report rather than an oversight. The word is that five hundred times and because a hundred and eighty, and Greek marked no difference between the two - one word did both jobs and a Greek reader met the same word each time. Splitting it by which English word the interlinear reached for would draw a distinction the writer never drew, which is the rule the referent table already states: SPLIT ON A DIFFERENT REFERENT, NEVER ON A DIFFERENT WORDING.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -710,6 +712,46 @@ export function bible_glyph_roots() {
         {
           strong: "281",
           glyph: "hands_praying",
+        },
+      ],
+    },
+    {
+      root: "kai",
+      gloss: "and, also",
+      words: [
+        {
+          strong: "2532",
+          glyph: "plus",
+        },
+      ],
+    },
+    {
+      root: "en",
+      gloss: "in, within",
+      words: [
+        {
+          strong: "1722",
+          glyph: "tray_in",
+        },
+      ],
+    },
+    {
+      root: "ek",
+      gloss: "out of, from",
+      words: [
+        {
+          strong: "1537",
+          glyph: "tray_out",
+        },
+      ],
+    },
+    {
+      root: "hoti",
+      gloss: "that, because",
+      words: [
+        {
+          strong: "3754",
+          glyph: "pointing",
         },
       ],
     },
