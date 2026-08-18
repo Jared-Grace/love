@@ -1,10 +1,10 @@
+import { list_find_property_get_or } from "./list_find_property_get_or.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lists_to_news } from "./lists_to_news.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -42,11 +42,14 @@ export async function bible_passages_grouped_adder(
       let verse_number = property_get(verse, property_name);
       function mapper(verses_chapter_folder) {
         let property_find = verse_number_key();
-        let words = list_find_property_get(
+        ("Which verses a passage covers is settled by the first bible alone, and a bible further down the list is allowed to be missing one of them. It happens all through the New Testament: a verse one translation prints is a footnote in another, kept out of the running text, so the number is simply not there to find.");
+        ("So the wording comes back empty for that bible rather than stopping the chapter. The first bible is the one being read and it never loses a verse; a reader following it sees every line it has, and the line beside it stands blank where the other bible has nothing to show.");
+        let words = list_find_property_get_or(
           verses_chapter_folder,
           property_find,
           verse_number,
           "text",
+          "",
         );
         return words;
       }
