@@ -29,8 +29,9 @@ export async function app_shared_bible_read_verse_here_is(
   languages_chosen,
   ref_line,
   hash,
+  count_status,
 ) {
-  arguments_assert(arguments, 12);
+  arguments_assert(arguments, 13);
   app_shared_bible_passage_kept_set(
     context,
     chapter_code,
@@ -54,7 +55,13 @@ export async function app_shared_bible_read_verse_here_is(
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     app_shared_button_arrow_right(bar, chapter_next);
   }
-  app_shared_bible_settings_gear(bar, content, languages_chosen, context);
+  app_shared_bible_settings_gear(
+    bar,
+    content,
+    languages_chosen,
+    context,
+    count_status,
+  );
   async function fetch_language(lc) {
     let r = await app_shared_bible_fetch_language(
       lc,
