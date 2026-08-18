@@ -1,10 +1,8 @@
+import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { property_text_to } from "./property_text_to.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
@@ -31,9 +29,7 @@ export function app_code_lesson_quiz_choose_operand(
   list_shuffle(choices);
   let answered = false;
   function each_button(choice) {
-    let b = app_shared_button_wide(parent, choice, on_click);
-    let background = app_shared_color_gray_light();
-    html_style_background_color_set(b, background);
+    let b = app_code_quiz_choice_button(parent, choice, on_click);
     async function on_click() {
       if (answered) {
         ("locked once the correct choice is chosen");

@@ -1,9 +1,7 @@
+import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
@@ -29,9 +27,7 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
   let quiz_answer_text = property_get(r2, "quiz_answer_text");
   let choices = property_get(r2, "choices");
   function each_button(quiz_choice) {
-    let b = app_shared_button_wide(parent, quiz_choice, on_click);
-    let background = app_shared_color_gray_light();
-    html_style_background_color_set(b, background);
+    let b = app_code_quiz_choice_button(parent, quiz_choice, on_click);
     async function on_click() {
       if (answered) {
         ("locked once the correct choice is chosen");
