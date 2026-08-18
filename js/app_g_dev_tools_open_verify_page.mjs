@@ -25,7 +25,18 @@ export async function app_g_dev_tools_open_verify_page(r) {
     engine,
   };
   let r4 = r5;
-  let r2 = app_g_dev_tools_open_verify_page_told(r4);
+  let engine3 = property_get(r4, "engine");
+  let url3 = property_get(r4, "url");
+  let lines3 = property_get(r4, "lines");
+  let r23 = property_get(r4, "r2");
+  let told3 = property_get(r23, "told");
+  let r3 = {
+    engine: engine3,
+    url: url3,
+    lines: lines3,
+    told: told3,
+  };
+  let r2 = r3;
   let told = await app_g_dev_tools_open_verify_page_page(r2);
   return told;
 }
