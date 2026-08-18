@@ -1,3 +1,4 @@
+import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
 import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
@@ -14,7 +15,6 @@ import { app_shared_button_restart_text } from "./app_shared_button_restart_text
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
-import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
@@ -298,9 +298,15 @@ export async function app_replace_rule_set(context) {
   ("first render happens here, after start_over and div_proof exist, so a resumed goal's success flow can draw the proof into them");
   await refresh();
   function refresh_count_increase() {
-    refresh_count++;
-    let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
-    html_data_set_test(div_rules_buttons, value3);
+    let app_replace_rule_set_refresh_count_increase_answer =
+      app_replace_rule_set_refresh_count_increase(
+        refresh_count,
+        div_rules_buttons,
+      );
+    refresh_count = property_get(
+      app_replace_rule_set_refresh_count_increase_answer,
+      "refresh_count",
+    );
   }
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
