@@ -14,8 +14,9 @@ export async function app_shared_bible_read_languages_verses(
   languages_chosen,
   ref_line,
   hash,
+  count_status,
 ) {
-  arguments_assert(arguments, 12);
+  arguments_assert(arguments, 13);
   let r = await app_shared_bible_read_verse_here_is(
     context,
     chapter_code,
@@ -29,6 +30,7 @@ export async function app_shared_bible_read_languages_verses(
     languages_chosen,
     ref_line,
     hash,
+    count_status,
   );
   let verse_here_is = property_get(r, "verse_here_is");
   let primary_verses = property_get(r, "primary_verses");
