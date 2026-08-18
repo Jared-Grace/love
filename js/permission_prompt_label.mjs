@@ -1,3 +1,4 @@
+import { permission_prompt_fetch_tool } from "./permission_prompt_fetch_tool.mjs";
 import { url_host } from "./url_host.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
@@ -17,8 +18,11 @@ export function permission_prompt_label(tool_name, tool_input) {
     return file;
   }
   ("a fetch is granted one site at a time, so a row saying only that a fetch happened names nothing anybody could write a rule for. the site is the whole of what the rule holds, and it is the one thing the bare tool name drops.");
+  ("only this one tool is read that way. plenty of others carry an address too, and a browser is granted whole rather than site by site, so wearing a site there would name a rule that cannot be written and split one grantable row into a hundred ungrantable ones.");
+  let right = permission_prompt_fetch_tool();
+  let fetching = equal(tool_name, right);
   let url = tool_input.url;
-  if (equal(typeof url, "string")) {
+  if (fetching && equal(typeof url, "string")) {
     let host = url_host(url);
     let sited = text_empty_not_is(host);
     if (sited) {
