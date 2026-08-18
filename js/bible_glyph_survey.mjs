@@ -2,7 +2,6 @@ import { bible_glyph_survey_report } from "./bible_glyph_survey_report.mjs";
 import { bible_glyph_survey_referent_reach } from "./bible_glyph_survey_referent_reach.mjs";
 import { bible_glyph_survey_referents } from "./bible_glyph_survey_referents.mjs";
 import { bible_glyph_survey_glyph_collisions } from "./bible_glyph_survey_glyph_collisions.mjs";
-import { bible_glyph_roots_testament } from "./bible_glyph_roots_testament.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_glyph_survey(testament_name) {
   "What the seed glyph table gets wrong, measured against every word the interlinear actually uses in one testament.";
