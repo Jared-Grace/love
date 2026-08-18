@@ -1,4 +1,4 @@
-import { app_reply_main_shortcuts_r_yt } from "./app_reply_main_shortcuts_r_yt.mjs";
+import { app_reply_main_shortcuts_shortcut_extend_count } from "./app_reply_main_shortcuts_shortcut_extend_count.mjs";
 import { app_reply_main_shortcuts_r_ar_ } from "./app_reply_main_shortcuts_r_ar_.mjs";
 import { app_reply_main_shortcuts_r_ar_base } from "./app_reply_main_shortcuts_r_ar_base.mjs";
 import { app_reply_main_shortcuts_ar } from "./app_reply_main_shortcuts_ar.mjs";
@@ -30,7 +30,6 @@ export function app_reply_main_shortcuts(
   let r5 = app_reply_main_shortcuts_ar(r4);
   let r6 = app_reply_main_shortcuts_r_ar_base(r5, languages_chosen_default);
   let r7 = app_reply_main_shortcuts_r_ar_(r6);
-  arguments_assert(arguments, 1);
   let r_ar_2 = property_get(r7, "r_ar_");
   let r_te_2 = property_get(r7, "r_te_");
   let r_default2 = property_get(r7, "r_default");
