@@ -38,8 +38,8 @@ export function app_code_lesson_statement_name_copy_code_box(
     name_last,
     " like this",
   ]);
-  html_div_code(box_code, held_first);
-  html_div_code(box_code, held_last);
+  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  html_div_code_lines(box_code, [held_first, held_last]);
   html_div_cycle_code(box_code, [
     "Then we make ",
     name_copy,
@@ -54,8 +54,7 @@ export function app_code_lesson_statement_name_copy_code_box(
     "Then we write out what is inside ",
     name_copy,
   ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word_first);
+  app_code_code_lines_writes_out(box_code, [logged], word_first);
   app_code_lesson_name_no_quotes_box(root, name_first, name_copy, word_first);
   return box_code;
 }
