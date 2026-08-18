@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_total_above(root) {
   let number_first = 2;
   let number_last = 3;
   let total = add(number_first, number_last);
-  let names_sum = js_code_binary_spaced_nb(name_first, plus, name_last);
+  let names_sum = app_code_lesson_statement_names_added();
   let box_remember = app_code_container_light_blue(root);
   html_div_cycle_code(box_remember, ["Remember, we can give a number a name"]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
