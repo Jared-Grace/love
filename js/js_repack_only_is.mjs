@@ -55,6 +55,7 @@ export function js_repack_only_is(declaration) {
   let getter = fn_name("property_get");
   let assigned = js_assigned_names(declaration);
   let lifted = 0;
+  let made = 0;
   for (let property of properties) {
     let short_is = property_or_null(property, "shorthand");
     if (not(short_is)) {
@@ -74,21 +75,26 @@ export function js_repack_only_is(declaration) {
     }
     ("An entry set to nothing and never set again is carried along with the rest rather than counted against them. A cut moves a name out whether or not the name held anything yet, so a record put back together after one arrives with some entries empty - and refusing those would be refusing exactly the shape this is here to find. Never set again is the whole of what makes it safe: a name set to nothing and filled in further down is a decision being made, which is work.");
     let written_is = js_node_type_is(source, "Literal");
-    if (not(written_is)) {
-      return false;
-    }
     let value = property_or_null(source, "value");
     let blank_is = null_is(value);
-    if (not(blank_is)) {
-      return false;
+    if (written_is) {
+      if (blank_is) {
+        let filled_is = list_includes(assigned, key);
+        if (filled_is) {
+          return false;
+        }
+        continue;
+      }
     }
-    let filled_is = list_includes(assigned, key);
-    if (filled_is) {
-      return false;
-    }
+    made = add(made, 1);
   }
   let empty_is = equal(lifted, 0);
   if (empty_is) {
+    return false;
+  }
+  ("One entry may be something genuinely new, matching the one call the body is allowed. That is the shape a cut leaves when it takes a run of lines holding a single piece of work: the work becomes one line and everything around it becomes lifting and putting back. Eighteen lines of lifting to carry one new value through is the same waste as eighteen carrying none, and refusing to see it would leave the worst of them unnamed.");
+  let mixed_is = greater_than(made, 1);
+  if (mixed_is) {
     return false;
   }
   let block = property_get(declaration, "body");
