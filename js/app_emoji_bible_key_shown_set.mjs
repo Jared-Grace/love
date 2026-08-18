@@ -1,3 +1,5 @@
+import { storage_local_set } from "./storage_local_set.mjs";
+import { app_emoji_bible_key_shown_get } from "./app_emoji_bible_key_shown_get.mjs";
 export function app_emoji_bible_key_shown_set(shown) {
   "$plain shown";
   "the answer says whether the reader wants the key under each verse. It is a yes or a no to remember and nothing that runs.";
