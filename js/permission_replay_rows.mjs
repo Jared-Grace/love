@@ -1,4 +1,6 @@
-import { permission_rows_run_named } from "./permission_rows_run_named.mjs";
+import { permission_replay_events_function_keys } from "./permission_replay_events_function_keys.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { claude_transcript_paths_recent } from "./claude_transcript_paths_recent.mjs";
 import { permission_prompt_events_paths } from "./permission_prompt_events_paths.mjs";
@@ -23,12 +25,19 @@ export async function permission_replay_rows(days, count) {
   let checking = list_slice_count(rows, 0, count2);
   await permission_prompt_rows_verdicts(checking);
   let unchecked = list_slice(rows, checking.length, rows.length);
-  ("each checked shape is told which dispatcher function it runs, by the one reader the proved ranking uses, so a candidate named here and a candidate named there mean the same thing");
-  permission_rows_run_named(checking);
+  ("a shape keyed by a function name is a shape one grant could answer, so the name is written onto the row for the grant reading to pick up. A shape keyed by a command line gets no name: no rule naming a function covers it, and offering one would promise a prompt gone that goes on happening.");
+  let function_keys = permission_replay_events_function_keys(keyed);
   let already_allowed = [];
   let denied = [];
   let candidates = [];
   for (let row of checking) {
+    let label = property_get(row, "label");
+    let run_name = text_empty();
+    let named = function_keys.has(label);
+    if (named) {
+      run_name = label;
+    }
+    property_set(row, "run_name", run_name);
     let verdict = property_get(row, "verdict");
     let allowed = equal(verdict, "allow");
     if (allowed) {

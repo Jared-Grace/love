@@ -1,3 +1,4 @@
+import { html_centered } from "./html_centered.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -35,6 +36,8 @@ export function app_search_results_book_card_header(
   ("the book's name is the thing being chosen between, so it is the only part in bold; how many verses it holds is there to weigh it by, and setting that in the same weight made every card read as two equally loud things");
   ("the count sits on its own line under the name rather than trailing it in brackets: shut cards stand side by side, so a name followed by its count made each card as wide as two things and fewer of them fit across a phone. stacked, a card is as wide as the longer of the two");
   let header = html_div(div_book);
+  ("the name and its count stand in the middle, the way the testament above this card and the section above that one both name themselves. These three are the headings a reader runs down looking for a place, and a heading that lines up differently from the ones either side of it reads as a different kind of thing. The verses inside the card keep to the left, because those are read rather than scanned.");
+  html_centered(header);
   html_div_text_bold(header, book_name);
   let counted_div = html_div_text(header, verses_counted);
   app_shared_text_deemphasized(counted_div);
