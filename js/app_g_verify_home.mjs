@@ -33,7 +33,82 @@ import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.m
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let r4 = app_g_verify_home_shown_json();
+  let r32 = app_g_verify_home_view();
+  let view2 = property_get(r32, "view");
+  let chapter_codes2 = property_get(r32, "chapter_codes");
+  let chapter_code2 = property_get(r32, "chapter_code");
+  let storage_key2 = property_get(r32, "storage_key");
+  let selected_key2 = property_get(r32, "selected_key");
+  let advanced_for2 = property_get(r32, "advanced_for");
+  let chapter_advance_armed2 = property_get(r32, "chapter_advance_armed");
+  let shown_json2 = property_get(r32, "shown_json");
+  let poll_timer3 = property_get(r32, "poll_timer");
+  let chapter3 = property_get(r32, "chapter");
+  let r22 = {
+    r3: r32,
+    view: view2,
+    chapter_codes: chapter_codes2,
+    chapter_code: chapter_code2,
+    storage_key: storage_key2,
+    selected_key: selected_key2,
+    advanced_for: advanced_for2,
+    chapter_advance_armed: chapter_advance_armed2,
+    shown_json: shown_json2,
+    poll_timer: poll_timer3,
+    chapter: chapter3,
+  };
+  let r42 = r22;
+  let chapter2 = property_get(r42, "chapter");
+  let poll_timer2 = property_get(r42, "poll_timer");
+  let shown_json3 = property_get(r42, "shown_json");
+  let chapter_advance_armed3 = property_get(r42, "chapter_advance_armed");
+  let advanced_for3 = property_get(r42, "advanced_for");
+  let selected_key3 = property_get(r42, "selected_key");
+  let storage_key3 = property_get(r42, "storage_key");
+  let chapter_code3 = property_get(r42, "chapter_code");
+  let chapter_codes3 = property_get(r42, "chapter_codes");
+  let view3 = property_get(r42, "view");
+  let r33 = property_get(r42, "r3");
+  let status2 = property_get(r33, "status");
+  let r6 = {
+    chapter: chapter2,
+    poll_timer: poll_timer2,
+    shown_json: shown_json3,
+    chapter_advance_armed: chapter_advance_armed3,
+    advanced_for: advanced_for3,
+    selected_key: selected_key3,
+    storage_key: storage_key3,
+    chapter_code: chapter_code3,
+    chapter_codes: chapter_codes3,
+    view: view3,
+    r3: r33,
+    status: status2,
+  };
+  let r52 = r6;
+  let status3 = property_get(r52, "status");
+  let r34 = property_get(r52, "r3");
+  let view4 = property_get(r52, "view");
+  let chapter_codes4 = property_get(r52, "chapter_codes");
+  let chapter_code4 = property_get(r52, "chapter_code");
+  let storage_key4 = property_get(r52, "storage_key");
+  let selected_key4 = property_get(r52, "selected_key");
+  let advanced_for4 = property_get(r52, "advanced_for");
+  let chapter_advance_armed4 = property_get(r52, "chapter_advance_armed");
+  let shown_json4 = property_get(r52, "shown_json");
+  let r7 = {
+    r5: r52,
+    status: status3,
+    r3: r34,
+    view: view4,
+    chapter_codes: chapter_codes4,
+    chapter_code: chapter_code4,
+    storage_key: storage_key4,
+    selected_key: selected_key4,
+    advanced_for: advanced_for4,
+    chapter_advance_armed: chapter_advance_armed4,
+    shown_json: shown_json4,
+  };
+  let r4 = r7;
   let shown_json = property_get(r4, "shown_json");
   let chapter_advance_armed = property_get(r4, "chapter_advance_armed");
   let advanced_for = property_get(r4, "advanced_for");
