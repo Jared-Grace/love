@@ -1,4 +1,4 @@
-import { app_reply_lambda6 } from "./app_reply_lambda6.mjs";
+import { app_reply_key_down } from "./app_reply_key_down.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
@@ -153,14 +153,14 @@ export async function app_reply(context) {
     return r2;
   }
   function lambda6(event) {
-    let app_reply_lambda6_answer = app_reply_lambda6(
+    let app_reply_key_down_answer = app_reply_key_down(
       event,
       typed,
       visible_count,
       buttons_refresh,
     );
-    typed = property_get(app_reply_lambda6_answer, "typed");
-    visible_count = property_get(app_reply_lambda6_answer, "visible_count");
+    typed = property_get(app_reply_key_down_answer, "typed");
+    visible_count = property_get(app_reply_key_down_answer, "visible_count");
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {

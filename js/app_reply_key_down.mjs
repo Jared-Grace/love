@@ -6,7 +6,7 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_take_less_1 } from "./text_take_less_1.mjs";
 import { text_alphabet_includes } from "./text_alphabet_includes.mjs";
 import { greater_than } from "./greater_than.mjs";
-export function app_reply_lambda6(
+export function app_reply_key_down(
   event,
   typed,
   visible_count,
