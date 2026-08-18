@@ -25,7 +25,7 @@ export function app_code_lesson_expression_choose_order_three_above(root) {
   ("The run is walked by the same reading the learner is about to be asked for rather than by a telling written out beside it: at each turn the line is asked which of its parts has a number on each side, and the answer is the part the sentence names. A run written by hand could say a step the line does not take.");
   ("Every step says the same thing in the same words, because they ARE the same step - that is the whole point being made. A step worded three different ways would read as three rules where the lesson is showing one rule holding three times.");
   let times = js_operator_asterisk_symbol();
-  let divide = js_operator_division_symbol();
+  let divided_by = js_operator_division_symbol();
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
   let recall_card = app_code_container_light_blue(root);
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_three_above(root) {
     "Remember: ",
     times,
     " and ",
-    divide,
+    divided_by,
     " are worked out before ",
     plus,
     " and ",
