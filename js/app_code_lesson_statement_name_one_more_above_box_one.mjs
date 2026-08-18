@@ -28,15 +28,13 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   html_div_cycle_code(box_sum, [
     "Remember, we can give a name what it and another name add up to",
   ]);
-  let code = js_code_let_statement(name, number_first);
-  html_div_code(box_sum, code);
-  let code2 = js_code_let_statement(name_last, number_last);
-  html_div_code(box_sum, code2);
-  let code3 = js_code_assign_statement(name, names_sum);
-  html_div_code(box_sum, code3);
-  let code4 = js_code_console_log_statement(name);
-  html_div_code(box_sum, code4);
-  app_code_writes_out_line(box_sum, total);
+  ("the lines are handed over together rather than one at a time, because nothing is said between them: the box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  let held_first = js_code_let_statement(name, number_first);
+  let held_last = js_code_let_statement(name_last, number_last);
+  let given_sum = js_code_assign_statement(name, names_sum);
+  let logged = js_code_console_log_statement(name);
+  let lines = [held_first, held_last, given_sum, logged];
+  app_code_code_lines_writes_out(box_sum, lines, total);
   let box_one = app_code_container_light_blue(root);
   let r = {
     name,

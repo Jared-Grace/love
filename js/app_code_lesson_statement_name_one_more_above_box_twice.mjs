@@ -21,10 +21,10 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
   html_div_cycle_code(box_one, [
     "The other name can be a written number instead",
   ]);
-  let code = js_code_let_statement(name, start);
-  html_div_code(box_one, code);
+  ("lines with nothing said between them are handed over together, because they are one program - the shape the quiz and the worked example of this same lesson have always drawn a program in.");
+  let held = js_code_let_statement(name, start);
   let code6 = js_code_assign_statement(name, more);
-  html_div_code(box_one, code6);
+  html_div_code_lines(box_one, [held, code6]);
   ("the answer is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the sum is code.");
   let comes_to = list_join_empty([
     " comes to ",
@@ -32,11 +32,9 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
     ", so this is the same line",
   ]);
   html_div_cycle_code(box_one, ["", more, comes_to]);
-  let code7 = js_code_assign_statement(name, once);
-  html_div_code(box_one, code7);
-  let code8 = js_code_console_log_statement(name);
-  html_div_code(box_one, code8);
-  app_code_writes_out_line(box_one, once);
+  let given_once = js_code_assign_statement(name, once);
+  let logged = js_code_console_log_statement(name);
+  app_code_code_lines_writes_out(box_one, [given_once, logged], once);
   let box_twice = app_code_container_light_blue(root);
   let r2 = {
     start,
