@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_binary } from "./js_code_binary.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_statement_name_total_title_name_id() {
@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_total_title_name_id() {
   let name_last = app_code_lesson_statement_name_two_name();
   let name_total = app_code_lesson_statement_name_third();
   let plus = js_operator_plus_symbol();
-  let sum = js_code_binary_spaced_nb(name_first, plus, name_last);
+  let sum = js_code_binary(name_first, plus, name_last);
   let code = js_code_let_statement(name_total, sum);
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
