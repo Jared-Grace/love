@@ -115,9 +115,18 @@
     pending = setTimeout(send_now, 400);
   }
 
+  // What the browser says about the key matters as much as which key it was. A
+  // number of 229 is the browser saying "the keyboard is still making up its
+  // mind", which is a different fault from a key that simply never arrived, and
+  // the two look identical without it.
   function note(e) {
     var key = e.key ? " key=" + e.key : "";
+    if (e.type.indexOf("key") === 0 && e.keyCode !== undefined) { key = key + " number=" + e.keyCode; }
+    if (e.isComposing) { key = key + " still being made up"; }
+    if (e.isTrusted === false) { key = key + " not from a finger"; }
     var data = e.data ? " data=" + e.data : "";
+    if (e.inputType) { data = data + " how=" + e.inputType; }
+    if (e.type === "pageshow" && e.persisted) { data = data + " kept from before"; }
     lines.push(stamp() + " " + e.type + " on " + describe(e.target) + key + data + " | " + screen_line());
     send();
   }

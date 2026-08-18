@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+<title>typing</title>
+</head>
+<body style="font: 1rem system-ui; padding: 1rem">
+<!--
+  A page with one writing box and nothing else, kept by hand rather than
+  generated, so that a phone that cannot type into an app has somewhere to try
+  the same thing with none of that app on the page. If the letters land here,
+  the fault is ours and can be looked for in our own code; if they do not, no
+  amount of reading our code will find it, because none of it is running.
+
+  It watches itself the same way every other dev page can, so the run is written
+  down here rather than read aloud off a small screen.
+-->
+<p>Tap the box and type. Whatever you type should appear twice: once in the box, once under it.</p>
+<input id="box" placeholder="type here" style="font: 1.2rem system-ui; padding: 0.6rem; width: 100%; box-sizing: border-box">
+<p>The box now holds: <b id="echo">nothing</b></p>
+<script>
+  var box = document.getElementById("box");
+  var echo = document.getElementById("echo");
+  setInterval(function () { echo.textContent = box.value === "" ? "nothing" : box.value; }, 200);
+</script>
+<script src="recorder.js?v=typing"></script>
+</body>
+</html>
