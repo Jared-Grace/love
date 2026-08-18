@@ -7,22 +7,70 @@ export function app_g_bless_crowd() {
   "ladder has, so the first thing the screen shows is a prayer the ladder can actually grow";
   "into. The other eight stand outside it, so turning away visibly costs you people.";
   let people = [
-    { x: -3, y: -3 },
-    { x: -2, y: -3 },
-    { x: 0, y: -3 },
-    { x: 1, y: -3 },
-    { x: 3, y: -3 },
-    { x: -1, y: -2 },
-    { x: 2, y: -2 },
-    { x: 0, y: -1 },
-    { x: -4, y: -4 },
-    { x: 4, y: -3 },
-    { x: -4, y: -1 },
-    { x: 4, y: 0 },
-    { x: -2, y: 1 },
-    { x: 3, y: 2 },
-    { x: 0, y: 3 },
-    { x: 1, y: 5 },
+    {
+      x: -3,
+      y: -3,
+    },
+    {
+      x: -2,
+      y: -3,
+    },
+    {
+      x: 0,
+      y: -3,
+    },
+    {
+      x: 1,
+      y: -3,
+    },
+    {
+      x: 3,
+      y: -3,
+    },
+    {
+      x: -1,
+      y: -2,
+    },
+    {
+      x: 2,
+      y: -2,
+    },
+    {
+      x: 0,
+      y: -1,
+    },
+    {
+      x: -4,
+      y: -4,
+    },
+    {
+      x: 4,
+      y: -3,
+    },
+    {
+      x: -4,
+      y: -1,
+    },
+    {
+      x: 4,
+      y: 0,
+    },
+    {
+      x: -2,
+      y: 1,
+    },
+    {
+      x: 3,
+      y: 2,
+    },
+    {
+      x: 0,
+      y: 3,
+    },
+    {
+      x: 1,
+      y: 5,
+    },
   ];
   return people;
 }
