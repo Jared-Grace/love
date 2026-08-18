@@ -1,4 +1,4 @@
-export function app_shared_bible_money_sections() {
+export function app_shared_money_sections() {
   "What this app does with money, said plainly, each part under the question it answers.";
   "Written down where a reader can see it rather than kept as an understanding among the people running it, because a promise nobody can read is not one anybody can hold you to.";
   "The scriptures are named rather than quoted, because this app is a bible - a reader who wants the words can go and read them here, in whichever translation is theirs.";

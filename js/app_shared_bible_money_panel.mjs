@@ -1,4 +1,4 @@
-import { app_shared_bible_money_body } from "./app_shared_bible_money_body.mjs";
+import { app_shared_money_body } from "./app_shared_money_body.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -9,5 +9,5 @@ export function app_shared_bible_money_panel(content, back) {
   let unnamed = "";
   app_shared_bible_panel_open(content, unnamed, back);
   let container = html_div(content);
-  app_shared_bible_money_body(container);
+  app_shared_money_body(container);
 }
