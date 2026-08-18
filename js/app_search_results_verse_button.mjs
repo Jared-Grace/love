@@ -8,7 +8,6 @@ import { html_display_block } from "./html_display_block.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_bible_open } from "./app_shared_bible_open.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
@@ -45,20 +44,18 @@ export function app_search_results_verse_button(
     html_remove(b);
     let cb_text = html_button_copy_text();
     let cb = app_shared_button_wide(div_verse, cb_text, copy);
-    html_style_margin_y(cb, "0.2em");
     function lambda3() {
       "this button offers the whole chapter, so land in the chapter reader with this verse in view";
       let mode = app_shared_bible_mode_chapter();
       app_shared_bible_open(languages_chosen, chapter_code, verse_number, mode);
     }
     let left = emoji_book_open();
-    let oc = app_shared_button_wide_text_combine(
+    app_shared_button_wide_text_combine(
       div_verse,
       left,
       " Open chapter",
       lambda3,
     );
-    html_style_margin_y(oc, "0.2em");
     let entries = await app_shared_bible_reference_entries(
       reference,
       languages_chosen,

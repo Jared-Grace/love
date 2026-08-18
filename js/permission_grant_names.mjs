@@ -1585,6 +1585,7 @@ export function permission_grant_names() {
   let spelled1540 = fn_name("gloss_punctuation_words_gate_run");
   let spelled1541 = fn_name("gloss_stores_punctuation_entries_repair");
   let spelled1542 = fn_name("permission_replay_rows");
+  let spelled1543 = fn_name("permission_replay_write");
   let names = [
     spelled,
     spelled2,
@@ -3128,6 +3129,7 @@ export function permission_grant_names() {
     spelled1540,
     spelled1541,
     spelled1542,
+    spelled1543,
   ];
   return names;
 }

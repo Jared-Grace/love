@@ -17,7 +17,7 @@ import { app_g_bless_world } from "./app_g_bless_world.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
-import { app_g_overlay } from "./app_g_overlay.mjs";
+import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { bless_blessing } from "./bless_blessing.mjs";
 import { bless_cone } from "./bless_cone.mjs";
 import { bless_cone_view } from "./bless_cone_view.mjs";
@@ -25,7 +25,7 @@ import { bless_depth_start } from "./bless_depth_start.mjs";
 import { bless_prayer_text } from "./bless_prayer_text.mjs";
 import { bless_summary_earned } from "./bless_summary_earned.mjs";
 import { bless_view_count } from "./bless_view_count.mjs";
-export function app_g_bless_overlay(div_map) {
+export function app_g_bless_overlay(container_map) {
   arguments_assert(arguments, 1);
   ("The prayer game, small enough to look at: a patch of ground seen from above, the cone the");
   ("player is looking down washed lighter, and one button that prays for everybody in it.");
@@ -39,7 +39,7 @@ export function app_g_bless_overlay(div_map) {
   ("Praying lights the people it covers with the gold glow, and only them. The glow is the");
   ("proof the count was honest - a player can see two people lit and know that both are who");
   ("the words just named.");
-  let overlay = app_g_overlay(div_map);
+  let overlay = app_g_overlay_container(container_map);
   let people = app_g_bless_crowd();
   let street = app_g_bless_street();
   let direction = "north";
