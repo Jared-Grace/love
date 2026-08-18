@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_compare_batch() {
   ("The order the two numbers are written in is what settles the answer, and the pair itself is drawn separately from that order. So the same numbers can appear on a screen answering either way, and nothing about the numbers a program shows says which way it will answer.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let less_than = js_operator_less_than_symbol();
+  let smaller_than = js_operator_less_than_symbol();
   let pairs = list_shuffle_take(
     [
       [2, 9],
@@ -45,7 +45,11 @@ export function app_code_lesson_statement_name_compare_batch() {
     }
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let compared = js_code_binary_spaced_nb(name_first, less_than, name_last);
+    let compared = js_code_binary_spaced_nb(
+      name_first,
+      smaller_than,
+      name_last,
+    );
     let logged = js_code_console_log_statement(compared);
     let lines = [held_first, held_last, logged];
     let code = list_join_newline(lines);
