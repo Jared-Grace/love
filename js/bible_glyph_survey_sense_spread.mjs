@@ -11,24 +11,15 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { greater_than } from "./greater_than.mjs";
-export async function bible_glyph_survey_sense_spread(
-  table_testament,
-  testament_name,
-) {
-  arguments_assert(arguments, 2);
-  let table_reads = equal(table_testament, testament_name);
-  assert_json(table_reads, {
-    testament_name,
-    table_testament,
-    hint: "the root table is written for one testament and a Strong's number means a different word in the other, so surveying the wrong testament would report the numbers that happen to collide as coverage - survey the testament the table is for, or write a table for this one",
-  });
+export async function bible_glyph_survey_sense_spread(testament_name) {
+  arguments_assert(arguments, 1);
   let glosses = await bible_strong_glosses(testament_name);
   let characters = bible_glyph_characters();
   let character_names = {};
   for (let character of characters) {
     property_set(character_names, character.name, true);
   }
-  let roots = bible_glyph_roots();
+  let roots = bible_glyph_roots_testament_table(testament_name);
   let glyph_roots = {};
   let mapped = {};
   let glyph_missing = [];
