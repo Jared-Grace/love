@@ -75,9 +75,28 @@
     mark.textContent = words;
   }
 
+  // Who is sending, in three plain words, so every page that is watching keeps a
+  // file of its own. One shared file loses the report that matters: a page left
+  // open on the machine writes every three seconds, and the phone's one account
+  // of the fault is overwritten long before anybody reads it.
+  function sender() {
+    var ua = navigator.userAgent;
+    var device = "computer";
+    if (/Android/.test(ua)) { device = "android"; }
+    if (/iPhone|iPad|iPod/.test(ua)) { device = "iphone"; }
+    var browser = "browser";
+    if (/Safari/.test(ua)) { browser = "safari"; }
+    if (/Chrome|CriOS/.test(ua)) { browser = "chrome"; }
+    if (/Edg/.test(ua)) { browser = "edge"; }
+    if (/Firefox|FxiOS/.test(ua)) { browser = "firefox"; }
+    var parts = location.pathname.split("/");
+    var page = parts[parts.length - 1].replace(/\.html$/, "");
+    return device + " " + browser + " " + page;
+  }
+
   function send_now() {
     pending = null;
-    var body = JSON.stringify({ f_name: "phone_report_write", args: [report()] });
+    var body = JSON.stringify({ f_name: "phone_report_write", args: [sender(), report()] });
     mark_said("rec …");
     fetch("/api", {
       method: "POST",
