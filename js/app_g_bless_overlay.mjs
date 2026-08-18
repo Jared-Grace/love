@@ -1,19 +1,16 @@
+import { app_g_bless_overlay_pray } from "./app_g_bless_overlay_pray.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { list_add } from "./list_add.mjs";
 import { math_min } from "./math_min.mjs";
-import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
 import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
-import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
 import { app_g_bless_map } from "./app_g_bless_map.mjs";
 import { app_g_bless_readout } from "./app_g_bless_readout.mjs";
 import { app_g_bless_transfer_overlay } from "./app_g_bless_transfer_overlay.mjs";
@@ -26,12 +23,10 @@ import { app_g_event_target_closest_tile } from "./app_g_event_target_closest_ti
 import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
 import { app_g_tile_coordinates_get } from "./app_g_tile_coordinates_get.mjs";
-import { bless_blessing } from "./bless_blessing.mjs";
 import { bless_cone } from "./bless_cone.mjs";
 import { bless_cone_view } from "./bless_cone_view.mjs";
 import { bless_depth_start } from "./bless_depth_start.mjs";
 import { bless_prayer_text } from "./bless_prayer_text.mjs";
-import { bless_summary_earned } from "./bless_summary_earned.mjs";
 import { bless_view_count } from "./bless_view_count.mjs";
 export function app_g_bless_overlay(container_map) {
   arguments_assert(arguments, 1);
@@ -88,20 +83,15 @@ export function app_g_bless_overlay(container_map) {
     let count = math_min(unlocked, visible);
     app_g_bless_readout(told, cone, street, visible, count);
     function pray() {
-      "the glow goes on first and the screen is left alone for a moment, because a redraw would replace the very elements that are glowing - the blessing has to be watched landing before the board can move on";
-      app_g_bless_glows(glows, view);
-      let at = date_now_milliseconds();
-      let blessing = bless_blessing(count, at);
-      list_add(blessings, blessing);
-      let earned = bless_summary_earned(blessings);
-      if (earned) {
-        unlocked = multiply(unlocked, 2);
-      }
-      function done() {
-        html_clear(glows);
-        render();
-      }
-      setTimeout(done, 1800);
+      let app_g_bless_overlay_pray_answer = app_g_bless_overlay_pray(
+        glows,
+        view,
+        count,
+        blessings,
+        unlocked,
+        render,
+      );
+      unlocked = property_get(app_g_bless_overlay_pray_answer, "unlocked");
     }
     let anybody = greater_than(count, 0);
     if (anybody) {
