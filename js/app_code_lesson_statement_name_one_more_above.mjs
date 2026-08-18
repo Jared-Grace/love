@@ -1,14 +1,12 @@
+import { app_code_lesson_statement_name_one_more_above_box_twice } from "./app_code_lesson_statement_name_one_more_above_box_twice.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_one_more_above_box_one } from "./app_code_lesson_statement_name_one_more_above_box_one.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_statement_name_one_more_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: the line the screen before this one ended on, the same line with a written 1 where the second name was, and then that line written twice");
@@ -21,35 +19,24 @@ export function app_code_lesson_statement_name_one_more_above(root) {
   let twice = property_get(r, "twice");
   let once = property_get(r, "once");
   let more = property_get(r, "more");
-  let start = property_get(r, "start");
-  let name = property_get(r, "name");
-  html_div_cycle_code(box_one, [
-    "The other name can be a written number instead",
-  ]);
-  let code = js_code_let_statement(name, start);
-  html_div_code(box_one, code);
-  let code6 = js_code_assign_statement(name, more);
-  html_div_code(box_one, code6);
-  ("the answer is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the sum is code.");
-  let comes_to = list_join_empty([
-    " comes to ",
+  let r2 = app_code_lesson_statement_name_one_more_above_box_twice(
+    r,
+    box_one,
+    more,
     once,
-    ", so this is the same line",
-  ]);
-  html_div_cycle_code(box_one, ["", more, comes_to]);
-  let code7 = js_code_assign_statement(name, once);
-  html_div_code(box_one, code7);
-  let code8 = js_code_console_log_statement(name);
-  html_div_code(box_one, code8);
-  app_code_writes_out_line(box_one, once);
-  let box_twice = app_code_container_light_blue(root);
+    root,
+  );
+  let box_twice = property_get(r2, "box_twice");
+  let code = property_get(r2, "code6");
+  let name = property_get(r2, "name");
+  let start = property_get(r2, "start");
   html_div_cycle_code(box_twice, [
     "Say that line twice and the name goes up twice",
   ]);
   let code9 = js_code_let_statement(name, start);
   html_div_code(box_twice, code9);
-  html_div_code(box_twice, code6);
-  html_div_code(box_twice, code6);
+  html_div_code(box_twice, code);
+  html_div_code(box_twice, code);
   let code10 = js_code_console_log_statement(name);
   html_div_code(box_twice, code10);
   app_code_writes_out_line(box_twice, twice);
