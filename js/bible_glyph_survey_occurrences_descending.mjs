@@ -10,14 +10,10 @@ import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
 import { subtract } from "./subtract.mjs";
 export async function bible_glyph_survey_occurrences_descending(
-  table_testament,
   testament_name,
 ) {
-  arguments_assert(arguments, 2);
-  let r = await bible_glyph_survey_sense_spread(
-    table_testament,
-    testament_name,
-  );
+  arguments_assert(arguments, 1);
+  let r = await bible_glyph_survey_sense_spread(testament_name);
   let sense_spread = property_get(r, "sense_spread");
   let occurrences_mapped = property_get(r, "occurrences_mapped");
   let occurrences_total = property_get(r, "occurrences_total");
