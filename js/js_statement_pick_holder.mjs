@@ -11,8 +11,8 @@ export function js_statement_pick_holder(stack) {
   ("The two readers that ask this share it, and they differ only in which mention of the word they hand over - the earliest one or the latest. Written out in each of them, a fix made in one would be silently missing from the other, which is the failure the search below them was already gathered into one place to avoid.");
   let nearest = list_copy_reverse(stack);
   for (let node of nearest) {
-    let function_is = js_node_function_is(node);
-    if (not(function_is)) {
+    let function_node_is = js_node_function_is(node);
+    if (not(function_node_is)) {
       continue;
     }
     let body = js_function_declaration_to_block_body(node);
