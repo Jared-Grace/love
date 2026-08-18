@@ -1,6 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_punctuation_words_gate_run } from "./app_en_learn_bible_gloss_urdu_punctuation_words_gate_run.mjs";
-import { app_original_bible_gloss_punctuation_words_gate_run } from "./app_original_bible_gloss_punctuation_words_gate_run.mjs";
-import { app_ceb_bible_gloss_punctuation_words_gate_run } from "./app_ceb_bible_gloss_punctuation_words_gate_run.mjs";
+import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate_run.mjs";
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
 import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
@@ -558,9 +556,7 @@ export function qa_gates() {
     app_code_quiz_choice_pool_gate_run,
     qa_gates_countless_gate_run,
     bundles_names_missing_gate_run,
-    app_ceb_bible_gloss_punctuation_words_gate_run,
-    app_original_bible_gloss_punctuation_words_gate_run,
-    app_en_learn_bible_gloss_urdu_punctuation_words_gate_run,
+    gloss_punctuation_words_gate_run,
   ];
   return gates;
 }
