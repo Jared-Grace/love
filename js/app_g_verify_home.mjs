@@ -1,3 +1,4 @@
+import { app_g_verify_home_status } from "./app_g_verify_home_status.mjs";
 import { app_g_verify_home_chapter } from "./app_g_verify_home_chapter.mjs";
 import { app_g_verify_home_open_pending } from "./app_g_verify_home_open_pending.mjs";
 import { app_g_verify_home_document } from "./app_g_verify_home_document.mjs";
@@ -34,18 +35,19 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let r4 = app_g_verify_home_chapter();
-  let chapter = property_get(r4, "chapter");
-  let poll_timer = property_get(r4, "poll_timer");
-  let shown_json = property_get(r4, "shown_json");
-  let chapter_advance_armed = property_get(r4, "chapter_advance_armed");
-  let advanced_for = property_get(r4, "advanced_for");
-  let selected_key = property_get(r4, "selected_key");
-  let storage_key = property_get(r4, "storage_key");
-  let chapter_code = property_get(r4, "chapter_code");
-  let chapter_codes = property_get(r4, "chapter_codes");
-  let view = property_get(r4, "view");
-  let r3 = property_get(r4, "r3");
-  let status = property_get(r3, "status");
+  let r5 = app_g_verify_home_status(r4);
+  let status = property_get(r5, "status");
+  let r3 = property_get(r5, "r3");
+  let view = property_get(r5, "view");
+  let chapter_codes = property_get(r5, "chapter_codes");
+  let chapter_code = property_get(r5, "chapter_code");
+  let storage_key = property_get(r5, "storage_key");
+  let selected_key = property_get(r5, "selected_key");
+  let advanced_for = property_get(r5, "advanced_for");
+  let chapter_advance_armed = property_get(r5, "chapter_advance_armed");
+  let shown_json = property_get(r5, "shown_json");
+  let poll_timer = property_get(r5, "poll_timer");
+  let chapter = property_get(r5, "chapter");
   let chapter_state = property_get(r3, "chapter_state");
   async function initial_load() {
     let f_name = fn_name("g_sermon_write_read");
