@@ -9,7 +9,16 @@ export function html_scroll_animate_animate(
   from_left,
 ) {
   arguments_assert(arguments, 5);
-  let r = html_scroll_animate_animate_from_top(element);
+  let r3 = html_scroll_animate_animate_start(element);
+  let start = property_get(r3, "start");
+  let token = property_get(r3, "token");
+  let from_top = property_get(r3, "from_top");
+  let r2 = {
+    start,
+    token,
+    from_top,
+  };
+  let r = r2;
   let animate = html_scroll_animate_animate_animate(
     r,
     element,
