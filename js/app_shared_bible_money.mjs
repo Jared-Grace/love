@@ -1,5 +1,5 @@
 import { app_shared_bible_about } from "./app_shared_bible_about.mjs";
-import { app_shared_bible_money_body } from "./app_shared_bible_money_body.mjs";
+import { app_shared_money_body } from "./app_shared_money_body.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { html_div } from "./html_div.mjs";
@@ -10,5 +10,5 @@ export function app_shared_bible_money(context) {
   }
   let root = app_shared_bible_screen_open(context, lambda_back);
   let container = html_div(root);
-  app_shared_bible_money_body(container);
+  app_shared_money_body(container);
 }
