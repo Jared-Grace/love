@@ -1,3 +1,4 @@
+import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
