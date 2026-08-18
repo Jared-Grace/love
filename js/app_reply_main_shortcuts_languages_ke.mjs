@@ -41,7 +41,7 @@ export function app_reply_main_shortcuts_languages_ke(
     ke,
     languages_chosen_default,
   );
-  return {
+  let r = {
     r_pk_40,
     r_pk_20,
     r_pk_10_glory,
@@ -59,4 +59,5 @@ export function app_reply_main_shortcuts_languages_ke(
     r_ug_40,
     languages_ke,
   };
+  return r;
 }
