@@ -1,3 +1,4 @@
+import { app_g_bless_overlay_cone_get } from "./app_g_bless_overlay_cone_get.mjs";
 import { app_g_bless_overlay_walking } from "./app_g_bless_overlay_walking.mjs";
 import { app_g_bless_overlay_pray } from "./app_g_bless_overlay_pray.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -19,9 +20,7 @@ import { app_g_event_target_closest_tile } from "./app_g_event_target_closest_ti
 import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
 import { app_g_tile_coordinates_get } from "./app_g_tile_coordinates_get.mjs";
-import { bless_cone } from "./bless_cone.mjs";
 import { bless_cone_view } from "./bless_cone_view.mjs";
-import { bless_depth_start } from "./bless_depth_start.mjs";
 import { bless_prayer_text } from "./bless_prayer_text.mjs";
 import { bless_view_count } from "./bless_view_count.mjs";
 export function app_g_bless_overlay(container_map) {
@@ -43,27 +42,21 @@ export function app_g_bless_overlay(container_map) {
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
   let r = app_g_bless_overlay_walking(container_map);
-  let walking = property_get(r, "walking");
-  let world = property_get(r, "world");
-  let player = property_get(r, "player");
-  let npcs = property_get(r, "npcs");
-  let street = property_get(r, "street");
-  let div_map = property_get(r, "div_map");
-  let wash = property_get(r, "wash");
-  let player_img_c = property_get(r, "player_img_c");
-  let glows = property_get(r, "glows");
-  let bar = property_get(r, "bar");
-  let told = property_get(r, "told");
-  let unlocked = property_get(r, "unlocked");
-  let blessings = property_get(r, "blessings");
-  function cone_get() {
-    let x = property_get(player, "x");
-    let y = property_get(player, "y");
-    let direction = property_get(player, "direction");
-    let depth = bless_depth_start();
-    let cone = bless_cone(x, y, direction, depth);
-    return cone;
-  }
+  let r2 = app_g_bless_overlay_cone_get(r);
+  let cone_get = property_get(r2, "cone_get");
+  let blessings = property_get(r2, "blessings");
+  let unlocked = property_get(r2, "unlocked");
+  let told = property_get(r2, "told");
+  let bar = property_get(r2, "bar");
+  let glows = property_get(r2, "glows");
+  let player_img_c = property_get(r2, "player_img_c");
+  let wash = property_get(r2, "wash");
+  let div_map = property_get(r2, "div_map");
+  let street = property_get(r2, "street");
+  let npcs = property_get(r2, "npcs");
+  let player = property_get(r2, "player");
+  let world = property_get(r2, "world");
+  let walking = property_get(r2, "walking");
   function render() {
     let cone = cone_get();
     app_g_bless_wash(wash, cone);
