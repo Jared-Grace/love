@@ -2322,15 +2322,29 @@ _SED_ADDR = r"(?:\d+|\$|/(?:[^/\\\n]|\\.)+/)(?:,(?:\d+|\$|/(?:[^/\\\n]|\\.)+/))?
 # and refusing two cost 49 recorded interruptions for a shape no more capable
 # than the one already accepted: `p` and `d` write nothing wherever they sit
 # in the list, and every other command stays out because each element must
-# match this same pair of letters. The substitute form is deliberately NOT
-# repeatable here - `s` carries a delimiter and its own flag letters, and a
-# list of them is where a `w` flag would hide.
+# match this same pair of letters.
+#
+# The substitute form repeats the same way, and for the same reason: two
+# trims in one pass (`s/.*: "//;s/[0-9]*"$//`) is the ordinary spelling, and
+# refusing it cost 54 recorded interruptions in the week to 2026-08-18. The
+# earlier worry - that a list of substitutes is where a `w` flag would hide -
+# is answered by the flag class rather than by the count: `w` is not in
+# `[0-9gpIiMm]`, so an element carrying one fails to match and takes the
+# whole script with it, whether it sits first, last or alone. Nor can a `w`
+# hide by being read as something else: sed parses an `s` command by taking
+# the delimiter after `s`, the pattern to the next unescaped delimiter, the
+# replacement to the one after that, then flags until `;` or end - which is
+# exactly what each element here matches, so a script that matches has only
+# one decomposition and it is sed's own. The two lists stay homogeneous - a
+# print list and a substitute list are separate branches, never mixed - so
+# nothing is accepted here that neither branch would accept by itself.
 _SED_PRINT = _SED_ADDR + r"[dp]"
+_SED_SUBST = r"s/(?:[^/\\\n]|\\.)*/(?:[^/\\\n]|\\.)*/[0-9gpIiMm]*"
 SED_SCRIPT_RE = re.compile(
     r"^(?:"
-    r"s/(?:[^/\\\n]|\\.)*/(?:[^/\\\n]|\\.)*/[0-9gpIiMm]*"
-    r"|" + _SED_PRINT + r"(?:;" + _SED_PRINT + r")*"
-    r")$"
+    + _SED_SUBST + r"(?:;" + _SED_SUBST + r")*"
+    + r"|" + _SED_PRINT + r"(?:;" + _SED_PRINT + r")*"
+    + r")$"
 )
 
 

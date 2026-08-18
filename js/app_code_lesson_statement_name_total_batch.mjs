@@ -19,7 +19,7 @@ export function app_code_lesson_statement_name_total_batch() {
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let name_total = app_code_lesson_statement_name_third();
-  let plus = js_operator_plus_symbol();
+  let summed = app_code_lesson_statement_names_added();
   let pairs = app_code_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {
     "the four lines that give two numbers two names, give a third name what the two add up to, and write out what the third one holds";
@@ -27,7 +27,6 @@ export function app_code_lesson_statement_name_total_batch() {
     let last = list_last(pair);
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let summed = js_code_binary_spaced_nb(name_first, plus, name_last);
     let held_total = js_code_let_statement(name_total, summed);
     let logged = js_code_console_log_statement(name_total);
     let lines = [held_first, held_last, held_total, logged];

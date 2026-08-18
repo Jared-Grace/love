@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_itself_sum_batch() {
   ("The number thrown away is the one the first name was given, and the line that throws it away is the one the question turns on. A learner who reads the last line, finds the first line that filled that name, and answers with the number written there gets a number that is not the answer - which is what makes the wrong reading show up as a wrong answer rather than as a right one.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let plus = js_operator_plus_symbol();
+  let summed = app_code_lesson_statement_names_added();
   let pairs = app_code_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {
     "the four lines that give two numbers two names, give the first name what the two add up to, and write out what the first one holds now";
@@ -28,7 +28,6 @@ export function app_code_lesson_statement_name_itself_sum_batch() {
     let last = list_last(pair);
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let summed = js_code_binary_spaced_nb(name_first, plus, name_last);
     let grown = js_code_assign_statement(name_first, summed);
     let logged = js_code_console_log_statement(name_first);
     let lines = [held_first, held_last, grown, logged];
