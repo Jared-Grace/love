@@ -1,10 +1,12 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 export function app_g_dev_index_index_card(parent) {
   arguments_assert(arguments, 1);
-  ("a search-style blue card, but with the shared 10px margin-y overridden to a TIGHTER 0.15rem so the #index choices sit close together (the search results want the room; a dev directory does not)");
+  ("a search-style blue card, but standing at the neighbor gap instead of the small gap a shared card wears, so the #index choices read as one list rather than as separate cards (the search results want the room; a dev directory does not)");
   let card = app_shared_container_blue(parent);
-  html_style_margin_y(card, "0.15rem");
+  let gap = app_shared_spaced_neighbor_gap();
+  html_style_margin_y(card, gap);
   return card;
 }
