@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_sum_above(root) {
   let number_last = 3;
   let total = add(number_first, number_last);
   let numbers_sum = js_code_binary_spaced_nb(number_first, plus, number_last);
-  let names_sum = js_code_binary_spaced_nb(name_first, plus, name_last);
+  let names_sum = app_code_lesson_statement_names_added();
   ("the plus is a part of its own, so it comes out dressed as code. The parts alternate between plain writing and code all the way along, and a symbol standing in an odd place is what makes a symbol callout - the same device the Operators lessons name their symbol with. Named as plain writing it would only be repeating what the line below it already shows.");
   let box_remember = app_code_container_light_blue(root);
   html_div_cycle_code(box_remember, [

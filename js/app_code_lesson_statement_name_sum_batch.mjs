@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_sum_batch() {
   ("Which numbers a program gets is settled where the lesson after this one settles it too, because that lesson asks these same four programs with one more line on each.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let plus = js_operator_plus_symbol();
+  let summed = app_code_lesson_statement_names_added();
   let pairs = app_code_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {
     "the three lines that give two numbers two names and write out what the two names add up to";
@@ -25,7 +25,6 @@ export function app_code_lesson_statement_name_sum_batch() {
     let last = list_last(pair);
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let summed = js_code_binary_spaced_nb(name_first, plus, name_last);
     let logged = js_code_console_log_statement(summed);
     let lines = [held_first, held_last, logged];
     let code = list_join_newline(lines);
