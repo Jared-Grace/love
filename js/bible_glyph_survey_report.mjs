@@ -1,3 +1,4 @@
+import { bible_glyph_survey_settled } from "./bible_glyph_survey_settled.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_survey_referent } from "./bible_glyph_survey_referent.mjs";
 import { property_get } from "./property_get.mjs";
