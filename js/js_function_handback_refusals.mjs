@@ -1,3 +1,7 @@
+import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
+import { list_size } from "./list_size.mjs";
+import { add } from "./add.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { js_statement_await_own_is } from "./js_statement_await_own_is.mjs";
 import { and } from "./and.mjs";
 import { js_function_rebound_names_deferred } from "./js_function_rebound_names_deferred.mjs";
@@ -35,6 +39,20 @@ export async function js_function_handback_refusals(ast, declaration) {
     list_add(kept, {
       reason: "nothing_written",
       why: "this function writes to nothing it reached out for, so there is nothing for it to hand back and these lines would only be a longer way of saying what the plain move next door says in one. Would you like that one instead?",
+    });
+  }
+  ("What the move costs is fixed and knowable before it runs: the lines left behind are one call and one taking for each write, so a body of a given length comes back as one plus however many names it writes. A body no longer than that is replaced by something the same length or longer, and the only thing that has happened is that a reader now has two files to open instead of one. The first thing this move leaves behind is a body of exactly that shape, so without this the walk offers its own leavings back to itself for ever, and the only thing stopping it is the name already being spoken for.");
+  let deep = js_function_declaration_statements_deep(declaration);
+  let size = list_size(deep);
+  let written_count = list_size(written_closed);
+  let left_behind = add(written_count, 1);
+  let shorter_not_is = less_than_equal(size, left_behind);
+  if (shorter_not_is) {
+    list_add(kept, {
+      reason: "nothing_shorter",
+      why: "what this move leaves behind is one call and one line for each name written, and this function is already no longer than that - so moving it would trade a short piece here for a piece the same length somewhere else, and leave a reader two files to open where there was one.",
+      size,
+      left_behind,
     });
   }
   let deferred = js_function_rebound_names_deferred(declaration);
