@@ -1,6 +1,10 @@
 {
  "known": [
   {
+   "name": "app_shared_dev_build",
+   "refusals": 1
+  },
+  {
    "name": "app_code_screens_crawl",
    "refusals": 1
   },
@@ -21,6 +25,14 @@
    "refusals": 1
   },
   {
+   "name": "functions_merge",
+   "refusals": 1
+  },
+  {
+   "name": "function_delete_unused_multiple",
+   "refusals": 1
+  },
+  {
    "name": "function_node_only_is",
    "refusals": 1
   },
@@ -37,127 +49,11 @@
    "refusals": 1
   },
   {
-   "name": "functions_rename_if_starts_with",
-   "refusals": 2
+   "name": "function_delete_unused",
+   "refusals": 1
   },
   {
    "name": "guard_check",
-   "refusals": 1
-  },
-  {
-   "name": "functions_parallel_mark",
-   "refusals": 2
-  },
-  {
-   "name": "functions_shadowing_rename_all",
-   "refusals": 2
-  },
-  {
-   "name": "functions_select_apply_args",
-   "refusals": 2
-  },
-  {
-   "name": "functions_replace",
-   "refusals": 2
-  },
-  {
-   "name": "functions_literal_route",
-   "refusals": 2
-  },
-  {
-   "name": "functions_calls_callee_set",
-   "refusals": 2
-  },
-  {
-   "name": "functions_literal_route_any",
-   "refusals": 2
-  },
-  {
-   "name": "functions_rename_reachable_starts_with_replace",
-   "refusals": 2
-  },
-  {
-   "name": "functions_operators_raw_repair_some",
-   "refusals": 2
-  },
-  {
-   "name": "functions_locals_unread_repair_some",
-   "refusals": 2
-  },
-  {
-   "name": "function_rename_commit",
-   "refusals": 2
-  },
-  {
-   "name": "ai_git_command_args_last",
-   "refusals": 2
-  },
-  {
-   "name": "functions_rename_if_starts_ends_with_prefix_change",
-   "refusals": 2
-  },
-  {
-   "name": "functions_rename_names_prefix_change",
-   "refusals": 2
-  },
-  {
-   "name": "functions_rename_if_starts_with_replace",
-   "refusals": 2
-  },
-  {
-   "name": "folder_lines_search",
-   "refusals": 3
-  },
-  {
-   "name": "folder_lines_search_args",
-   "refusals": 3
-  },
-  {
-   "name": "file_lines_search",
-   "refusals": 1
-  },
-  {
-   "name": "file_read",
-   "refusals": 2
-  },
-  {
-   "name": "file_read_json",
-   "refusals": 2
-  },
-  {
-   "name": "ai_git_command_args",
-   "refusals": 2
-  },
-  {
-   "name": "git_ac_call_folder_try",
-   "refusals": 1
-  },
-  {
-   "name": "g_sermon_write_lines_file",
-   "refusals": 2
-  },
-  {
-   "name": "g_sermon_write_lines_file_check",
-   "refusals": 2
-  },
-  {
-   "name": "g_sermon_pull",
-   "refusals": 2
-  },
-  {
-   "name": "app_shared_dev_build",
-   "refusals": 1
-  },
-  {
-   "name": "functions_merge",
-   "refusals": 1
-  },
-  {
-   "name": "function_delete_unused_multiple",
-   "refusals": 1
-  },
-  {
-   "name": "function_delete_unused",
    "refusals": 1
   },
   {
@@ -261,6 +157,26 @@
    "refusals": 1
   },
   {
+   "name": "folder_lines_search",
+   "refusals": 3
+  },
+  {
+   "name": "folder_lines_search_args",
+   "refusals": 3
+  },
+  {
+   "name": "file_lines_search",
+   "refusals": 1
+  },
+  {
+   "name": "file_read",
+   "refusals": 2
+  },
+  {
+   "name": "file_read_json",
+   "refusals": 2
+  },
+  {
    "name": "ebible_version_download_zip_delete",
    "refusals": 1
   },
@@ -291,6 +207,22 @@
   {
    "name": "example_check",
    "refusals": 1
+  },
+  {
+   "name": "git_ac_call_folder_try",
+   "refusals": 1
+  },
+  {
+   "name": "g_sermon_write_lines_file",
+   "refusals": 2
+  },
+  {
+   "name": "g_sermon_write_lines_file_check",
+   "refusals": 2
+  },
+  {
+   "name": "g_sermon_pull",
+   "refusals": 2
   }
  ]
 }
