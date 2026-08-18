@@ -22,7 +22,7 @@ export function app_reply_main_shortcuts_bn(r5) {
   let r_pk_40 = property_get(r5, "r_pk_40");
   let r_ke_ = property_get(r5, "r_ke_");
   let bn = ebible_language_bengali();
-  return {
+  let r = {
     r_te_,
     r_default,
     r_ke_40,
@@ -43,4 +43,5 @@ export function app_reply_main_shortcuts_bn(r5) {
     r_ke_,
     bn,
   };
+  return r;
 }
