@@ -1,3 +1,4 @@
+import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
 import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
 import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
@@ -309,11 +310,22 @@ export async function app_replace_rule_set(context) {
     );
   }
   function button_rule_on_click_inner(index) {
-    symbols_invalid_chosen = {};
-    let condition = equal(index_selected, index);
-    index_selected = ternary(condition, null, index);
-    list_map_property_invoke(symbol_buttons, "refresh_sb");
-    list_map_property_invoke(rule_buttons, "refresh_rb");
-    refresh_count_increase();
+    let app_replace_rule_set_button_rule_on_click_inner_answer =
+      app_replace_rule_set_button_rule_on_click_inner(
+        index,
+        symbols_invalid_chosen,
+        index_selected,
+        symbol_buttons,
+        rule_buttons,
+        refresh_count_increase,
+      );
+    symbols_invalid_chosen = property_get(
+      app_replace_rule_set_button_rule_on_click_inner_answer,
+      "symbols_invalid_chosen",
+    );
+    index_selected = property_get(
+      app_replace_rule_set_button_rule_on_click_inner_answer,
+      "index_selected",
+    );
   }
 }
