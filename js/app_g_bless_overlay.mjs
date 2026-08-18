@@ -1,22 +1,18 @@
+import { app_g_bless_overlay_blessings } from "./app_g_bless_overlay_blessings.mjs";
 import { app_g_bless_overlay_pray } from "./app_g_bless_overlay_pray.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { math_min } from "./math_min.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
-import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
-import { app_g_bless_map } from "./app_g_bless_map.mjs";
 import { app_g_bless_readout } from "./app_g_bless_readout.mjs";
 import { app_g_bless_transfer_overlay } from "./app_g_bless_transfer_overlay.mjs";
 import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
 import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
-import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_character_face } from "./app_g_character_face.mjs";
 import { app_g_event_target_closest_tile } from "./app_g_event_target_closest_tile.mjs";
@@ -46,25 +42,19 @@ export function app_g_bless_overlay(container_map) {
   ("The map is drawn once and never again. Only the wash, the readout and the button are");
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
-  let world = app_g_bless_world_new();
-  let player = property_get(world, "player");
-  let npcs = property_get(world, "npcs");
-  let street = property_get(world, "street");
-  let scroller = html_div(container_map);
-  html_style_assign(scroller, {
-    position: "absolute",
-    inset: "0",
-    overflow: "auto",
-  });
-  let drawn = app_g_bless_map(scroller, world);
-  let div_map = property_get(drawn, "div_map");
-  let wash = property_get(drawn, "wash");
-  let player_img_c = property_get(drawn, "player_img_c");
-  let glows = html_div(div_map);
-  let bar = app_g_bless_bar(container_map);
-  let told = html_div(bar);
-  let unlocked = 1;
-  let blessings = [];
+  let r = app_g_bless_overlay_blessings(container_map);
+  let blessings = property_get(r, "blessings");
+  let unlocked = property_get(r, "unlocked");
+  let told = property_get(r, "told");
+  let bar = property_get(r, "bar");
+  let glows = property_get(r, "glows");
+  let player_img_c = property_get(r, "player_img_c");
+  let wash = property_get(r, "wash");
+  let div_map = property_get(r, "div_map");
+  let street = property_get(r, "street");
+  let npcs = property_get(r, "npcs");
+  let player = property_get(r, "player");
+  let world = property_get(r, "world");
   let walking = false;
   function cone_get() {
     let x = property_get(player, "x");
