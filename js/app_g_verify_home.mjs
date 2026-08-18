@@ -1,6 +1,6 @@
+import { app_g_verify_home_chapter } from "./app_g_verify_home_chapter.mjs";
 import { app_g_verify_home_open_pending } from "./app_g_verify_home_open_pending.mjs";
 import { app_g_verify_home_document } from "./app_g_verify_home_document.mjs";
-import { app_g_verify_home_view } from "./app_g_verify_home_view.mjs";
 import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
 import { app_g_verify_home_lambda } from "./app_g_verify_home_lambda.mjs";
 import { api_read_or } from "./api_read_or.mjs";
@@ -33,17 +33,18 @@ import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.m
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let r3 = app_g_verify_home_view();
-  let view = property_get(r3, "view");
-  let chapter_codes = property_get(r3, "chapter_codes");
-  let chapter_code = property_get(r3, "chapter_code");
-  let storage_key = property_get(r3, "storage_key");
-  let selected_key = property_get(r3, "selected_key");
-  let advanced_for = property_get(r3, "advanced_for");
-  let chapter_advance_armed = property_get(r3, "chapter_advance_armed");
-  let shown_json = property_get(r3, "shown_json");
-  let poll_timer = property_get(r3, "poll_timer");
-  let chapter = property_get(r3, "chapter");
+  let r4 = app_g_verify_home_chapter();
+  let chapter = property_get(r4, "chapter");
+  let poll_timer = property_get(r4, "poll_timer");
+  let shown_json = property_get(r4, "shown_json");
+  let chapter_advance_armed = property_get(r4, "chapter_advance_armed");
+  let advanced_for = property_get(r4, "advanced_for");
+  let selected_key = property_get(r4, "selected_key");
+  let storage_key = property_get(r4, "storage_key");
+  let chapter_code = property_get(r4, "chapter_code");
+  let chapter_codes = property_get(r4, "chapter_codes");
+  let view = property_get(r4, "view");
+  let r3 = property_get(r4, "r3");
   let status = property_get(r3, "status");
   let chapter_state = property_get(r3, "chapter_state");
   async function initial_load() {
