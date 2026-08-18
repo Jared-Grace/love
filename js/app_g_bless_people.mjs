@@ -1,3 +1,4 @@
+import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_get } from "./list_get.mjs";
@@ -40,5 +41,11 @@ export function app_g_bless_people(player_img, coordinates_land) {
     property_set(person, "direction", "south");
   }
   each_index(people, person_initialize);
+  ("Everybody is given the gospel game's own id before they are handed over, because that is");
+  ("what a person's picture is filed under, and a person whose picture cannot be found again");
+  ("is a person the crowd can never take a step for. The tile they were set down on is what");
+  ("becomes the id, which is why this is asked here and not later: once they start walking,");
+  ("where they are standing is no longer where they began.");
+  g_npcs_ids_ensure(people);
   return people;
 }

@@ -44,6 +44,15 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
     };
     return refused;
   }
+  let repeated_is = function_name_word_repeated_is(f_name_new);
+  if (repeated_is) {
+    let doubled = {
+      nested,
+      f_name_new,
+      why: "the piece inside is called the word its holder is already called, so the joined name would say that one word twice running and the second telling would narrow nothing. Would you like to name the piece for what it does first?",
+    };
+    return doubled;
+  }
   let search = await function_exists(f_name_new);
   let taken = property_get(search, "exists");
   if (taken) {
