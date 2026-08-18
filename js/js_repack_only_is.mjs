@@ -25,8 +25,8 @@ export function js_repack_only_is(declaration) {
   "A function like this reads as work and is none. It is handed a record, or calls one thing that makes one, lifts each entry out under a name of its own, and builds an equal record out of those names. Whoever called it could have read the entries where they already were. What the file buys is a line count and a name.";
   "It is not free. Each entry costs a line to lift and a word to put back, so a body of this shape grows with the number of entries rather than with the amount of work, and the growth lands in whatever page ships the caller. One of these went in beside seven others in a single sweep and carried the page it was on past the size it is allowed to be.";
   "Six things must all hold, and each is there to keep an honest function out. Exactly one place hands a value back, which also means no lambda anywhere - a tree with a lambda in it is doing something this reading has no opinion about. What it hands back is a record written out, reached through one name if it was set on a line of its own. Two entries at least, because one entry is not a repack. Every entry written short, because an entry given a value at the brace is a value being made rather than moved. At least one entry set, in this same function, from a call to the getter - that is the whole of the claim, and it is what makes this a repack rather than merely a function returning a record. And at most one entry that is neither lifted nor left empty.";
-  "At most one other call, matching that one entry, so that a function which really does something and happens to hand back some of what it was given is left alone. Nought means the thing was taken apart and put back with nothing done to it at all; one means a single piece of work with lifting and putting back on either side of it, which is the shape a cut leaves behind.";
-  "What this cannot see: a line that changes something outside itself without binding a name. Every entry handed back is still an unpack under this reading, so such a function is named here even though it does work. That direction was chosen because the alternative - counting statements - is a reading of what a body looks like rather than of what it produces, and this exists to ask about the product.";
+  "At most one other thing done, matching that one entry, so that a function which really does something and happens to hand back some of what it was given is left alone. Nought means the thing was taken apart and put back with nothing done to it at all; one means a single piece of work with lifting and putting back on either side of it, which is the shape a cut leaves behind.";
+  "A thing done is looked for in two shapes, because a body works in two. A line binding a plain name to a plain call is one. A line doing something and binding no name at all is the other - painting a screen, walking a list, asking a question about what was handed in. Reading only the first called a page painter and a list walker pure repacks, which is the opposite of what this is for. Lifting a name out, and the one line handing the record back, are the product rather than work, so neither is counted.";
   arguments_assert(arguments, 1);
   let node = js_find_return_try(declaration);
   let silent_is = null_is(node);
@@ -103,6 +103,22 @@ export function js_repack_only_is(declaration) {
   for (let callee of callees) {
     let unpack_is = equal(callee, getter);
     if (unpack_is) {
+      continue;
+    }
+    others = add(others, 1);
+  }
+  let statements = property_get(block, "body");
+  for (let statement of statements) {
+    let bind_is = js_node_type_is(statement, "VariableDeclaration");
+    if (bind_is) {
+      continue;
+    }
+    let hand_back_is = js_node_type_is(statement, "ReturnStatement");
+    if (hand_back_is) {
+      continue;
+    }
+    let work_is = js_statement_work_is(statement);
+    if (not(work_is)) {
       continue;
     }
     others = add(others, 1);

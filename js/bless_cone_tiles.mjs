@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { each_range_from } from "./each_range_from.mjs";
@@ -7,7 +8,9 @@ import { subtract } from "./subtract.mjs";
 import { bless_cone_holds } from "./bless_cone_holds.mjs";
 export function bless_cone_tiles(cone) {
   arguments_assert(arguments, 1);
-  ("Every tile the player can see, listed - the same answer bless_cone_holds gives one tile");
+  ("Every tile the player can see, listed - the same answer ",
+    fn_name("bless_cone_holds"),
+    " gives one tile");
   ("at a time, asked of all of them at once.");
   ("A drawing needs the list, because it has to put something on each of those tiles; the");
   ("brain only ever needed the predicate. Rather than write the cone's shape out a second");
