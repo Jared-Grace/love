@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
 import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,6 +11,8 @@ export async function qa_commit_named_red_report() {
   "Its sibling asks the opposite question - which judged commit is sound enough to ship from - and so keeps only the green ones. The reds are the entries that reading throws away, and they are the whole of this answer.";
   "The freshest judged commit is taken whatever colour it came out, because a green one is an answer too: it says nothing was red as of then. Keeping only the red entries would find a red commit from days ago and present it as today.";
   "How far behind is said alongside and is the whole of how much to trust this. A judgement several hundred commits back is about code nobody is running, and the reader has to be able to see that rather than be told a number with no age on it.";
+  "The reds come back as one flat list, and that list hides the difference that matters: measured 2026-08-17, three of thirty-three had just broken and the other thirty had been red for about five hundred commits. Read flat, the thirty look like today's problem and bury the three that are, so the name of the reading that ages them travels out beside them.";
+  let hint = fn_name("qa_commit_named_red_since");
   let report = await qa_commit_named_report();
   let head = property_get(report, "head");
   let looked = property_get(report, "looked");
@@ -24,6 +27,7 @@ export async function qa_commit_named_red_report() {
       behind: null,
       green: null,
       red: [],
+      hint,
     };
     return empty;
   }
@@ -33,6 +37,7 @@ export async function qa_commit_named_red_report() {
     behind: property_get(newest, "behind"),
     green: property_get(newest, "green"),
     red: property_get_or_null(newest, "failed"),
+    hint,
   };
   return r;
 }
