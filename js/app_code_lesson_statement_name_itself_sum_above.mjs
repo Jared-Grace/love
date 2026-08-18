@@ -1,3 +1,4 @@
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
@@ -47,8 +48,8 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   html_div_cycle_code(box_itself, [
     "So we can give a name what it and another name add up to",
   ]);
-  let code7 = js_code_assign_statement(name_first, names_sum);
-  html_div_code(box_itself, code7);
+  let given_sum = js_code_assign_statement(name_first, names_sum);
+  html_div_code(box_itself, given_sum);
   ("the total is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
   let comes_to = list_join_empty([
     " comes to ",
@@ -56,10 +57,9 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
     ", so this is the same line",
   ]);
   html_div_cycle_code(box_itself, ["", names_sum, comes_to]);
-  let code8 = js_code_assign_statement(name_first, total);
-  html_div_code(box_itself, code8);
+  let given_total = js_code_assign_statement(name_first, total);
+  html_div_code(box_itself, given_total);
   html_div_cycle_code(box_itself, ["Now we can write that name on its own"]);
-  let code9 = js_code_console_log_statement(name_first);
-  html_div_code(box_itself, code9);
-  app_code_writes_out_line(box_itself, total);
+  let logged_total = js_code_console_log_statement(name_first);
+  app_code_code_lines_writes_out(box_itself, [logged_total], total);
 }
