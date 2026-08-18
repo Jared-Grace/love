@@ -1,3 +1,5 @@
+import { bible_glyph_artwork_urls } from "./bible_glyph_artwork_urls.mjs";
+import { http_text_first_or_null } from "./http_text_first_or_null.mjs";
 import { bible_glyph_artwork_folder } from "./bible_glyph_artwork_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { bible_glyph_artwork_source } from "./bible_glyph_artwork_source.mjs";
@@ -8,7 +10,6 @@ import { assert_json } from "./assert_json.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
-import { bible_glyph_artwork_url } from "./bible_glyph_artwork_url.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { not } from "./not.mjs";
@@ -34,8 +35,8 @@ export async function bible_glyph_artwork_download() {
   let missing = [];
   let written = [];
   for (let entry of names) {
-    let url = bible_glyph_artwork_url(entry.asset);
-    let svg = await http_text_or_null(url);
+    let urls = bible_glyph_artwork_urls(entry.asset);
+    let svg = await http_text_first_or_null(urls);
     let absent = null_is(svg);
     if (absent) {
       list_add(missing, entry);
