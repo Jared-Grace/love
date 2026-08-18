@@ -53,16 +53,15 @@ export function app_code_lesson_statement_name_compare_above(root) {
     smaller_than,
     ") than another",
   ]);
-  let code = js_code_console_log_statement(numbers_compared);
-  html_div_code(box_remember, code);
+  let logged_numbers = js_code_console_log_statement(numbers_compared);
   let value = js_keyword_true();
-  app_code_writes_out_line(box_remember, value);
+  app_code_code_lines_writes_out(box_remember, [logged_numbers], value);
   let box_names = app_code_container_light_blue(root);
   html_div_cycle_code(box_names, ["Suppose we give two numbers names"]);
-  let code2 = js_code_let_statement(name_first, number_first);
-  html_div_code(box_names, code2);
-  let code3 = js_code_let_statement(name_last, number_last);
-  html_div_code(box_names, code3);
+  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  let held_first = js_code_let_statement(name_first, number_first);
+  let held_last = js_code_let_statement(name_last, number_last);
+  html_div_code_lines(box_names, [held_first, held_last]);
   html_div_cycle_code(box_names, [
     "Instead of writing out the numbers themselves (",
     numbers_compared,
@@ -70,16 +69,13 @@ export function app_code_lesson_statement_name_compare_above(root) {
     names_compared,
     "):",
   ]);
-  let code4 = js_code_console_log_statement(names_compared);
-  html_div_code(box_names, code4);
+  let logged_names = js_code_console_log_statement(names_compared);
   let value2 = js_keyword_true();
-  app_code_writes_out_line(box_names, value2);
+  app_code_code_lines_writes_out(box_names, [logged_names], value2);
   let box_turned = app_code_container_light_blue(root);
   html_div_cycle_code(box_turned, [turned_line]);
-  html_div_code(box_turned, code2);
-  html_div_code(box_turned, code3);
-  let code5 = js_code_console_log_statement(names_turned);
-  html_div_code(box_turned, code5);
+  let logged_turned = js_code_console_log_statement(names_turned);
+  let lines_turned = [held_first, held_last, logged_turned];
   let value3 = js_keyword_false();
-  app_code_writes_out_line(box_turned, value3);
+  app_code_code_lines_writes_out(box_turned, lines_turned, value3);
 }
