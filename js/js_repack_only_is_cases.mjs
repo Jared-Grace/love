@@ -5,6 +5,7 @@ export function js_repack_only_is_cases() {
   "The two allowances are the reason this exists rather than a shorter list of the plain shapes. Each was added because the strict rule missed something real, and each is one sentence away from letting a function that does work through, so a corpus that only held the obvious cases would let either be dropped without a word.";
   "The bodies are written as text because the reading takes a parsed function and there is nowhere else to say what was parsed. The one real name among them is the getter the reading looks for, joined in rather than spelled, so that renaming the getter carries the corpus with it; every other name they call is one nothing answers to, because what is being asked is the shape of the lines.";
   let getter = fn_name("property_get");
+  let arity_line = fn_name("arguments_assert");
   let cases = [
     {
       code: text_combine_multiple([
@@ -123,6 +124,41 @@ export function js_repack_only_is_cases() {
       ]),
       repack_is: false,
       why: "what is handed back is a list, so the names were dropped and only their order kept - a real change to how the caller has to read it",
+    },
+    {
+      code: text_combine_multiple([
+        "function a(r) { let x = ",
+        getter,
+        '(r, "x"); let y = ',
+        getter,
+        '(r, "y"); paint(x); return { x, y }; }',
+      ]),
+      repack_is: true,
+      why: "the one thing allowed, wearing the shape that binds no name. A line may do something and hand nothing back, and it costs the same one out of the allowance as a line that names what it got - otherwise the allowance would depend on whether the answer was wanted",
+    },
+    {
+      code: text_combine_multiple([
+        "function a(r) { let x = ",
+        getter,
+        '(r, "x"); let y = ',
+        getter,
+        '(r, "y"); paint(x); let z = made_here(); return { x, y, z }; }',
+      ]),
+      repack_is: false,
+      why: "two things done, one of them binding no name. Reading only the lines that bind a name saw one here and called this a pure repack, which named page painters and list walkers alongside the real ones. It is the case that pays for the second walk",
+    },
+    {
+      code: text_combine_multiple([
+        "function a(r) { ",
+        arity_line,
+        "(arguments, 1); let x = ",
+        getter,
+        '(r, "x"); let y = ',
+        getter,
+        '(r, "y"); let z = made_here(); return { x, y, z }; }',
+      ]),
+      repack_is: true,
+      why: "the line counting the arguments is not a thing done. It stands in every function here because the canonical pass writes it, so spending the allowance on it would spend the same allowance in every body alike and hide every repack that does its one thing besides",
     },
   ];
   return cases;

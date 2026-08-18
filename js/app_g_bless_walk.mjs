@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
+import { object_assign } from "./object_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_character_face } from "./app_g_character_face.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
@@ -35,17 +35,14 @@ export async function app_g_bless_walk(
   }
   let steps = g_path_steps(path);
   for (let step of steps) {
+    let from = property_get(step, "from");
     let to = property_get(step, "to");
-    let direction = g_direction(player, to);
+    let direction = g_direction(from, to);
     app_g_character_face(player, player_img_c, direction);
-    let x = property_get(to, "x");
-    let y = property_get(to, "y");
-    object_merge_set(player, {
-      x: x,
-      y: y,
-    });
-    app_g_player_center(player, player_img_c, div_map);
-    await app_g_player_move_animate(player, player_img_c);
+    await app_g_player_move_animate(to, player_img_c);
+    app_g_player_center(to, player_img_c, div_map);
+    ("the player is written down on the tile they reached, the same way the gospel game writes it: everything the tile knows is copied onto them. Writing only the two numbers would be the smaller change and it is the wrong one - the tile carries what it is made of, and the player standing on it is standing on that.");
+    object_assign(player, to);
     on_arrive();
   }
 }
