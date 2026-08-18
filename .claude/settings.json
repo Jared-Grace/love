@@ -6400,6 +6400,18 @@
         ]
       }
     ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/j/a/repos/love; node scripts/ai.mjs permission_replay_sentence",
+            "timeout": 20,
+            "statusMessage": "Reading today's prompt record"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "hooks": [
