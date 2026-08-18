@@ -1,3 +1,4 @@
+import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { week_calendar_day } from "./week_calendar_day.mjs";
 import { week_calendar_handle } from "./week_calendar_handle.mjs";
@@ -5,9 +6,6 @@ import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
-import { week_calendar_ranges_merged } from "./week_calendar_ranges_merged.mjs";
-import { math_min } from "./math_min.mjs";
-import { math_max } from "./math_max.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -15,10 +13,7 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_range_label } from "./week_range_label.mjs";
-import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { each } from "./each.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
@@ -51,15 +46,13 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     app_shared_text_body(summary, text);
   }
   function range_add(day, a, b) {
-    let start = math_min(a, b);
-    let end = math_max(a, b);
-    list_add(ranges, {
-      day: day,
-      start: start,
-      end: end,
-    });
-    list_sort_number_mapper(ranges, week_range_sort_key);
-    ranges = week_calendar_ranges_merged(ranges);
+    let week_calendar_range_add_answer = week_calendar_range_add(
+      day,
+      a,
+      b,
+      ranges,
+    );
+    ranges = property_get(week_calendar_range_add_answer, "ranges");
   }
   function endpoint_back_up(day, slot) {
     let next = [];
