@@ -30,7 +30,7 @@ export function app_g_bless_world_new() {
   let player_img = g_player_img_get();
   let player = g_player_initialize(player_img, coordinates_land);
   let npcs = app_g_bless_people(player_img, coordinates_land);
-  let street = app_g_bless_street(player);
+  let street = app_g_bless_street(rows, player);
   app_g_bless_street_pave(rows, street);
   let coordinates = g_coordinates(rows);
   let world = app_g_bless_world(rows, coordinates, player, npcs, street);
