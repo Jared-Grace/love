@@ -1,3 +1,4 @@
+import { bible_glyph_artwork_gate_run } from "./bible_glyph_artwork_gate_run.mjs";
 import { js_repack_only_is_cases_gate_run } from "./js_repack_only_is_cases_gate_run.mjs";
 import { functions_repack_only_gate_run } from "./functions_repack_only_gate_run.mjs";
 import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate_run.mjs";
@@ -404,6 +405,7 @@ export function qa_gates() {
     g_profile_target_shares_assert,
     g_arc_prompt_style_assert,
     bible_glyph_gate_run,
+    bible_glyph_artwork_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
