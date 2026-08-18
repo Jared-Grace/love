@@ -12,11 +12,7 @@ export async function bible_glyph_survey(testament_name) {
   "A collision is reported and not resolved. Two roots wanting one glyph may be a mistake, or it may be the truth - two words a reader should feel the kinship between can be drawn alike on purpose - and nothing mechanical can tell those two cases apart. The report says where to look.";
   "Sense spread is the honest measure of whether one picture can stand for one word. A word the interlinear renders the same way almost everywhere has one plain meaning and one glyph will do. A word split evenly between wordings that are not synonyms is a word whose glyph is lying somewhere, and the count says which.";
   "Coverage is counted in OCCURRENCES and not in words, because a table covering five hundred rare words leaves the page looking untranslated while a table covering thirty common ones fills it. The reader meets occurrences.";
-  let table_testament = bible_glyph_roots_testament();
-  let r = await bible_glyph_survey_glyph_collisions(
-    table_testament,
-    testament_name,
-  );
+  let r = await bible_glyph_survey_glyph_collisions(testament_name);
   let glyph_collisions = property_get(r, "glyph_collisions");
   let occurrences_total = property_get(r, "occurrences_total");
   let r2 = bible_glyph_survey_referents(r);
