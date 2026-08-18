@@ -15,7 +15,7 @@ import { each } from "./each.mjs";
 export function js_statements_calls_to_each(statements, names) {
   "Puts a single walk in the place of every run of two or more calls standing one after another in this list of statements, where all of them name the same function from the given names and each is given one argument.";
   "The list is changed where it stands, because a statement list belongs to the block that holds it and handing a new one back would leave that block pointing at the old.";
-  ("Only the names handed in are collapsed. A walk stops early when what it calls hands back true, so the run and the walk say the same thing only for a function that can never hand that back - and which functions those are is a question about the repo, settled by the caller in ");
+  "Only the names handed in are collapsed. A walk stops early when what it calls hands back true, so the run and the walk say the same thing only for a function that can never hand that back - and which functions those are is a question about the repo, settled by the caller in ";
   (fn_name("js_calls_to_each"), " rather than here.");
   let after = [];
   let run = [];

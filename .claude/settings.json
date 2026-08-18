@@ -1653,6 +1653,7 @@
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_chapter_upload_stored:*)",
       "Bash(node scripts/ai.mjs data_path:*)",
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_passage_verses_read:*)",
+      "Bash(node scripts/ai.mjs permission_replay_report:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3215,6 +3216,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapter_upload_stored:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args data_path:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_passage_verses_read:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_replay_report:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4776,6 +4778,7 @@
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_chapter_upload_stored:*)",
       "Bash(node scripts/aig.mjs data_path:*)",
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_passage_verses_read:*)",
+      "Bash(node scripts/aig.mjs permission_replay_report:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -6337,7 +6340,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args gloss_glosses_write_file_path:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapter_upload_stored:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args data_path:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_passage_verses_read:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_passage_verses_read:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_replay_report:*)"
     ],
     "defaultMode": "acceptEdits"
   },

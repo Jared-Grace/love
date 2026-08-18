@@ -132,6 +132,7 @@ import { js_function_parameter_call_sizes_cases_gate_run } from "./js_function_p
 import { js_function_forwarding_remove_cases_gate_run } from "./js_function_forwarding_remove_cases_gate_run.mjs";
 import { js_let_add_cases_gate_run } from "./js_let_add_cases_gate_run.mjs";
 import { js_await_add_cases_gate_run } from "./js_await_add_cases_gate_run.mjs";
+import { js_calls_to_each_cases_gate_run } from "./js_calls_to_each_cases_gate_run.mjs";
 import { js_page_serialized_import_uses_cases_gate_run } from "./js_page_serialized_import_uses_cases_gate_run.mjs";
 import { functions_page_auto_borrowing_gate_run } from "./functions_page_auto_borrowing_gate_run.mjs";
 import { functions_locals_unread_gate_run } from "./functions_locals_unread_gate_run.mjs";
@@ -368,6 +369,7 @@ export function qa_gates() {
     js_function_forwarding_remove_cases_gate_run,
     js_let_add_cases_gate_run,
     js_await_add_cases_gate_run,
+    js_calls_to_each_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
     js_identifiers_renamed_without_naming_check_cases_gate_run,

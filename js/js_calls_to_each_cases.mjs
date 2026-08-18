@@ -64,7 +64,9 @@ export function js_calls_to_each_cases() {
       name: "a waited call standing beside a plain one is left alone",
       code: text_frozen("async function f() {\n  await log(1);\n  log(2);\n}"),
       names: ["log"],
-      after: text_frozen("async function f() {\n  await log(1);\n  log(2);\n}\n"),
+      after: text_frozen(
+        "async function f() {\n  await log(1);\n  log(2);\n}\n",
+      ),
     },
     {
       name: "a call reached through a property is left alone",
