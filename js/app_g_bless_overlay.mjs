@@ -1,9 +1,7 @@
-import { app_g_bless_overlay_transfer } from "./app_g_bless_overlay_transfer.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_overlay_tapped } from "./app_g_bless_overlay_tapped.mjs";
+import { app_g_bless_overlay_begun } from "./app_g_bless_overlay_begun.mjs";
 import { app_g_bless_overlay_turned } from "./app_g_bless_overlay_turned.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_remove } from "./html_remove.mjs";
 import { app_g_bless_transfer_overlay } from "./app_g_bless_transfer_overlay.mjs";
 export function app_g_bless_overlay(container_map) {
   arguments_assert(arguments, 1);
@@ -24,12 +22,9 @@ export function app_g_bless_overlay(container_map) {
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
   let r = app_g_bless_overlay_turned(container_map);
-  let r2 = app_g_bless_overlay_tapped(r);
-  let tapped = property_get(r2, "tapped");
-  let transfer = app_g_bless_overlay_transfer(r2, tapped, container_map);
-  function begun() {
-    html_remove(transfer);
-  }
+  let r2 = app_g_bless_overlay_begun(r, container_map);
+  let begun = property_get(r2, "begun");
+  let transfer = property_get(r2, "transfer");
   app_g_bless_transfer_overlay(transfer, begun);
   return transfer;
 }
