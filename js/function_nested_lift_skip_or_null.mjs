@@ -1,3 +1,4 @@
+import { function_name_word_repeated_is } from "./function_name_word_repeated_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
 import { function_part_name_or_null } from "./function_part_name_or_null.mjs";

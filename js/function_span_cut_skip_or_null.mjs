@@ -1,3 +1,4 @@
+import { function_name_word_repeated_is } from "./function_name_word_repeated_is.mjs";
 import { function_span_opening_is } from "./function_span_opening_is.mjs";
 import { text_digits_only } from "./text_digits_only.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
