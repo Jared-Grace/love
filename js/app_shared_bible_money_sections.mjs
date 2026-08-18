@@ -4,17 +4,20 @@ export function app_shared_bible_money_sections() {
   "The scriptures are named rather than quoted, because this app is a bible - a reader who wants the words can go and read them here, in whichever translation is theirs.";
   let sections = [
     {
-      title: "It is free, and it stays free",
+      title: "Everything is free, and everything always will be",
       lines: [
-        "Nothing here is behind a payment. Nothing here is ever going to ask you for one before it will work.",
-        "If you cannot give anything, you have lost nothing at all. That is the intended case, not the exception.",
+        "Nothing requires payment.",
+        "You will never be forced to pay to use anything.",
+        "If you have no money to give, you still have access to everything.",
+        "We expect that most people will give nothing, and this was built for them first.",
       ],
     },
     {
-      title: "Giving is welcome and never asked for",
+      title: "Gifts are welcome and there is never pressure to give",
       lines: [
-        "You are welcome to give, and just as welcome not to. Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
-        "There is no reminder, no nagging, and no page you have to get past.",
+        "You are asked after the tutorial, once you have had the chance to try this and have chosen to keep using it. You are asked again at the end of a game long enough to have been worth your time.",
+        "Reminders after that are infrequent, and they are never nagging.",
+        "Give as you have decided in your own heart, not reluctantly and not because you were pressed (2 Corinthians 9:7).",
       ],
     },
     {
