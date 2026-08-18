@@ -26,7 +26,7 @@ export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
   let r_pk_10 = property_get(r6, "r_pk_10");
   let r_pk_ = property_get(r6, "r_pk_");
   let gl = property_get(r6, "gl");
-  return {
+  let r = {
     r6,
     bn,
     r_ke_,
@@ -43,4 +43,5 @@ export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
     r_pk_,
     gl,
   };
+  return r;
 }
