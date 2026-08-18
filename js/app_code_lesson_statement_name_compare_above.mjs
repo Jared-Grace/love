@@ -35,12 +35,7 @@ export function app_code_lesson_statement_name_compare_above(root) {
     name_last,
   );
   let names_turned = js_code_binary_spaced_nb(name_last, less_than, name_first);
-  ("the symbol is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and a symbol inside a bracket in the middle of a sentence is being named, not shown.");
-  let smaller_line = list_join_empty([
-    "Remember, we can ask whether one number is smaller (",
-    less_than,
-    ") than another",
-  ]);
+  ("the symbol is a part of its own, so it comes out dressed as code. The parts alternate between plain writing and code all the way along, and a symbol standing in an odd place is what makes a symbol callout - the same device the Operators lessons name their symbol with, and the same one the sixth Statements lesson names its plus with. The numbers in the third box's line are not callouts and stay joined into the writing: they are being counted, not named.");
   let turned_line = list_join_empty([
     "Asked the other way round the answer is different, because ",
     number_last,
@@ -48,7 +43,11 @@ export function app_code_lesson_statement_name_compare_above(root) {
     number_first,
   ]);
   let box_remember = app_code_container_light_blue(root);
-  html_div_cycle_code(box_remember, [smaller_line]);
+  html_div_cycle_code(box_remember, [
+    "Remember, we can ask whether one number is smaller (",
+    less_than,
+    ") than another",
+  ]);
   let code = js_code_console_log_statement(numbers_compared);
   html_div_code(box_remember, code);
   let value = js_keyword_true();
@@ -60,7 +59,11 @@ export function app_code_lesson_statement_name_compare_above(root) {
   let code3 = js_code_let_statement(name_last, number_last);
   html_div_code(box_names, code3);
   html_div_cycle_code(box_names, [
-    "However, we can also ask the same question using their names, instead of writing out the numbers themselves",
+    "Instead of writing out the numbers themselves (",
+    numbers_compared,
+    "), we can also ask the same question using their names (",
+    names_compared,
+    "):",
   ]);
   let code4 = js_code_console_log_statement(names_compared);
   html_div_code(box_names, code4);
