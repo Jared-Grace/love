@@ -5,8 +5,9 @@ export function permission_rows_run_named(rows) {
   for (let row of rows) {
     let sample = property_get(row, "sample");
     let run_name = text_empty();
-    let wordless = text_empty_is(sample);
-    if (not(wordless)) {
+    ("a row grouped on something other than the command carries no command at all where the call was a file edit or a fetch, so the sample is asked whether it is text before it is read as one");
+    let worded = equal(typeof sample, "string");
+    if (worded) {
       let single = command_single_is(sample);
       if (single) {
         run_name = dispatcher_run_name(sample);
