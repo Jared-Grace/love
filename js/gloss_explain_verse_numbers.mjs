@@ -30,8 +30,8 @@ export function gloss_explain_verse_numbers(explain, verse_numbers) {
   let named = [];
   let inside = false;
   function token_read(token) {
-    let marker = list_includes(markers, token);
-    if (marker) {
+    let marker_is = list_includes(markers, token);
+    if (marker_is) {
       inside = true;
       return;
     }
