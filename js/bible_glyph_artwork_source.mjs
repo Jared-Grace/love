@@ -14,6 +14,8 @@ export function bible_glyph_artwork_source() {
       "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/LICENSE",
     assets_url:
       "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets",
+    tree_url:
+      "https://api.github.com/repos/microsoft/fluentui-emoji/git/trees/main",
     style: "Flat",
   };
   return source;
