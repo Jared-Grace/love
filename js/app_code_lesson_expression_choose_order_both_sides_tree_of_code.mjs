@@ -26,10 +26,11 @@ export function app_code_lesson_expression_choose_order_both_sides_tree_of_code(
     symbol: list_get(words, 5),
     right: list_get(numbers, 3),
   };
-  let tree = app_code_lesson_expression_choose_order_both_sides_expression_parts(
-    left_parts,
-    outer_symbol,
-    right_parts,
-  );
+  let tree =
+    app_code_lesson_expression_choose_order_both_sides_expression_parts(
+      left_parts,
+      outer_symbol,
+      right_parts,
+    );
   return tree;
 }

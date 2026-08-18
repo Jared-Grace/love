@@ -36,10 +36,11 @@ export function app_code_lesson_expression_choose_order_both_sides_expression(
     right_code = code_of(right_parts);
   }
   let outer_symbol = js_operator_triple_equal_symbol();
-  let tree = app_code_lesson_expression_choose_order_both_sides_expression_parts(
-    left_parts,
-    outer_symbol,
-    right_parts,
-  );
+  let tree =
+    app_code_lesson_expression_choose_order_both_sides_expression_parts(
+      left_parts,
+      outer_symbol,
+      right_parts,
+    );
   return tree;
 }
