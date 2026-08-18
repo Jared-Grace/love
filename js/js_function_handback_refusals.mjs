@@ -1,0 +1,43 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
+import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
+import { js_function_return_own_is } from "./js_function_return_own_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+export async function js_function_handback_refusals(ast, declaration) {
+  arguments_assert(arguments, 2);
+  ("Every reason there is not to move this function's body out and have it hand its writes back, leaving the name behind on a few lines that call it and put what comes back where the writes used to go. Empty means there is none.");
+  ("The move next door turns a function down for writing to a name it reached out for, because a parameter would only be a copy and the write would stop reaching the line waiting to read it. This is the answer to that refusal rather than another way of making it, so the one thing that stops the move next door is the one thing this needs in order to have anything to do - and a function with no such write is turned down here and sent there.");
+  ("Measured across the whole repo on 2026-08-18, that one refusal was fifty-nine of the sixty-seven a walk of the oversize functions ran into. Every other shape the move next door cannot keep the meaning of, this one cannot either, so they are asked for once and kept rather than written out a second time - a second copy would drift, and the drift would read as this move promising something the other one knows better about.");
+  ("One reason is asked here and nowhere else. What comes back has to carry the writes, so the line left behind can only put them where they go once it has been handed them - and a body that hands an answer back part way through never reaches the handing back at all. The writes would then be made on a copy and lost, silently, which is the whole failure this move exists to avoid. A body like that can still be moved; somebody has to decide what its answer and its writes should look like arriving together.");
+  let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
+  function written_closed_not_is(refusal) {
+    let reason = property_get(refusal, "reason");
+    let write_is = equal(reason, "written_closed");
+    let other_is = not(write_is);
+    return other_is;
+  }
+  let kept = list_filter(refusals, written_closed_not_is);
+  let reading = await js_function_nested_lift_reading(ast, declaration);
+  let written_closed = property_get(reading, "written_closed");
+  let nothing_written_is = list_empty_is(written_closed);
+  if (nothing_written_is) {
+    list_add(kept, {
+      reason: "nothing_written",
+      why: "this function writes to nothing it reached out for, so there is nothing for it to hand back and these lines would only be a longer way of saying what the plain move next door says in one. Would you like that one instead?",
+    });
+  }
+  let handed_back_is = js_function_return_own_is(declaration);
+  if (handed_back_is) {
+    list_add(kept, {
+      reason: "returns_own",
+      why: "this function hands an answer back of its own, and what comes back has to carry the writes as well, so the two would have to travel together and be taken apart again by the line left behind. That is a shape somebody should choose rather than one this should choose for them.",
+      written_closed,
+    });
+  }
+  return kept;
+}
