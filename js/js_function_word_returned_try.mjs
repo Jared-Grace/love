@@ -1,4 +1,6 @@
-import { js_find_return } from "./js_find_return.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { js_find_return_try } from "./js_find_return_try.mjs";
+import { null_is } from "./null_is.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_word_try } from "./js_node_word_try.mjs";
@@ -9,7 +11,14 @@ export function js_function_word_returned_try(ast) {
   "Asked by a reading that has arrived at a name and needs the word behind it. A word that has already left this repo - a key on somebody's disk, a word in an address people have kept - is spelled in one place on purpose, and every user of it then says the name rather than the word. A reading that stops at the call site therefore sees a call and learns nothing, and the word it was watching reads as gone while it is still spelled, plainly, one file away.";
   "Two shapes, because a one-word function is written both ways here: the word handed back where it stands, and the word set on the line above and handed back by name. Either may be wearing the marker that says it is frozen, which is what the node reading beside this one sees through.";
   "One step, like the reading of a name it sits beside: a word set from a name set from a name reads here as coming from nowhere, which is the safe way for a reading like this to be wrong.";
-  let node = js_find_return(ast);
+  ("A tree that hands a value back in more than one place answers nothing, rather than stopping. This is asked about whatever name happened to be standing where a word goes, and most names in this repo answer to an ordinary function holding a lambda - two returns, no word anywhere near either. Insisting on one return here stopped a gate on the day a storing line was written with ",
+    fn_name("property_get"),
+    " inside it, and the reading that was watching for a lost setting reported a walk of a tree instead of an answer.");
+  let node = js_find_return_try(ast);
+  let missing = null_is(node);
+  if (missing) {
+    return null;
+  }
   let returned = js_return_argument_get(node);
   let name = js_identifier_name_try(returned);
   let named = not_equal(name, null);
