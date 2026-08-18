@@ -29,14 +29,7 @@ export function js_repack_only_is(declaration) {
   if (silent_is) {
     return false;
   }
-  let r4 = js_repack_only_is_unfound_is(node, declaration);
-  let unfound_is2 = property_get(r4, "unfound_is");
-  let answer2 = property_get(r4, "answer");
-  let r22 = {
-    unfound_is: unfound_is2,
-    answer: answer2,
-  };
-  let r = r22;
+  let r = js_repack_only_is_unfound_is(node, declaration);
   let answer = property_get(r, "answer");
   let unfound_is = property_get(r, "unfound_is");
   if (unfound_is) {
@@ -46,31 +39,13 @@ export function js_repack_only_is(declaration) {
   if (not(record_is)) {
     return false;
   }
-  let r32 = js_repack_only_is_few_is(answer);
-  let few_is2 = property_get(r32, "few_is");
-  let properties2 = property_get(r32, "properties");
-  let r6 = {
-    few_is: few_is2,
-    properties: properties2,
-  };
-  let r3 = r6;
+  let r3 = js_repack_only_is_few_is(answer);
   let properties = property_get(r3, "properties");
   let few_is = property_get(r3, "few_is");
   if (few_is) {
     return false;
   }
-  let r23 = js_repack_only_is_made(declaration);
-  let made2 = property_get(r23, "made");
-  let lifted2 = property_get(r23, "lifted");
-  let assigned2 = property_get(r23, "assigned");
-  let getter2 = property_get(r23, "getter");
-  let r5 = {
-    made: made2,
-    lifted: lifted2,
-    assigned: assigned2,
-    getter: getter2,
-  };
-  let r2 = r5;
+  let r2 = js_repack_only_is_made(declaration);
   let getter = property_get(r2, "getter");
   let assigned = property_get(r2, "assigned");
   let lifted = property_get(r2, "lifted");
