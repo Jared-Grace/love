@@ -1,3 +1,4 @@
+import { app_g_verify_home_open_pending } from "./app_g_verify_home_open_pending.mjs";
 import { app_g_verify_home_document } from "./app_g_verify_home_document.mjs";
 import { app_g_verify_home_view } from "./app_g_verify_home_view.mjs";
 import { app_g_verify_home_refresh } from "./app_g_verify_home_refresh.mjs";
@@ -8,7 +9,6 @@ import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
-import { app_g_verify_waiting_font_size } from "./app_g_verify_waiting_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -29,7 +29,6 @@ import { html_loading } from "./html_loading.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { app_g_verify_view } from "./app_g_verify_view.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export async function app_g_verify_home(context) {
@@ -144,15 +143,18 @@ export async function app_g_verify_home(context) {
       );
     }
     function open_pending(verse) {
-      selected_key = verse;
-      sessionStorage.setItem(storage_key, verse);
-      app_g_verify_home_highlight_selected(selected_key, verse_buttons);
-      html_clear(view);
-      let msg = html_p_text(view, "Claude is writing v" + verse + "…");
-      app_shared_text_deemphasized(msg);
-      let value = app_g_verify_waiting_font_size();
-      html_style_font_size(msg, value);
-      html_style_margin_top(msg, "1em");
+      let app_g_verify_home_open_pending_answer =
+        app_g_verify_home_open_pending(
+          verse,
+          selected_key,
+          storage_key,
+          verse_buttons,
+          view,
+        );
+      selected_key = property_get(
+        app_g_verify_home_open_pending_answer,
+        "selected_key",
+      );
     }
     app_g_verify_home_verse_bar(
       wrap,
