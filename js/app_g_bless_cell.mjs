@@ -20,18 +20,21 @@ import { app_g_bless_marker } from "./app_g_bless_marker.mjs";
 import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 export function app_g_bless_cell(grid, world, x, y) {
   arguments_assert(arguments, 4);
-  "One tile of the prayer grid: the ground, a wash over it if the player is looking this";
-  "way, and everybody standing on it.";
-  "Hands back the markers of the people here that the player can SEE, and only those, so a";
-  "caller wanting to show a blessing landing gets exactly the people the blessing covers.";
-  "The two answers come from the same call to the cone, which is what stops the glow and the";
-  "count ever disagreeing about who was blessed.";
+  ("One tile of the prayer grid: the ground, a wash over it if the player is looking this");
+  ("way, and everybody standing on it.");
+  ("Hands back the markers of the people here that the player can SEE, and only those, so a");
+  ("caller wanting to show a blessing landing gets exactly the people the blessing covers.");
+  ("The two answers come from the same call to the cone, which is what stops the glow and the");
+  ("count ever disagreeing about who was blessed.");
   let cone = property_get(world, "cone");
   let people = property_get(world, "people");
   let street = property_get(world, "street");
   let size = app_g_bless_tile_size();
   let cell = html_div(grid);
-  html_style_assign(cell, { position: "relative", "line-height": "0" });
+  html_style_assign(cell, {
+    position: "relative",
+    "line-height": "0",
+  });
   let on_street = bless_tiles_hold(street, x, y);
   let tile_name = "grass";
   if (on_street) {
@@ -40,7 +43,9 @@ export function app_g_bless_cell(grid, world, x, y) {
   let src = g_tile_path(tile_name);
   let ground = html_img(cell, src);
   html_style_size_square(ground, size);
-  html_style_assign(ground, { display: "block" });
+  html_style_assign(ground, {
+    display: "block",
+  });
   let looking = bless_cone_holds(cone, x, y);
   if (looking) {
     let wash = html_div(cell);
@@ -51,8 +56,10 @@ export function app_g_bless_cell(grid, world, x, y) {
       "pointer-events": "none",
     });
   }
-  let same_x = equal(property_get(cone, "x"), x);
-  let same_y = equal(property_get(cone, "y"), y);
+  let left = property_get(cone, "x");
+  let same_x = equal(left, x);
+  let left2 = property_get(cone, "y");
+  let same_y = equal(left2, y);
   let player_here = and(same_x, same_y);
   if (player_here) {
     let praying = emoji_pray();
