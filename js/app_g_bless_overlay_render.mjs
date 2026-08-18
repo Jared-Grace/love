@@ -50,7 +50,7 @@ export function app_g_bless_overlay_render(r, npcs) {
       app_g_button_green(told, prayer, pray);
     }
   }
-  return {
+  let r3 = {
     div_map,
     player_img_c,
     bar,
@@ -58,4 +58,5 @@ export function app_g_bless_overlay_render(r, npcs) {
     walking,
     render,
   };
+  return r3;
 }
