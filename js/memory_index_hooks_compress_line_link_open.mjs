@@ -18,7 +18,21 @@ export function memory_index_hooks_compress_line_link_open() {
     ceiling,
   };
   let r2 = r4;
-  let r3 = memory_index_hooks_compress_line_shortened(r2);
+  let ceiling2 = property_get(r2, "ceiling");
+  let opener2 = property_get(r2, "opener");
+  let link_open3 = property_get(r2, "link_open");
+  let dash3 = property_get(r2, "dash");
+  let kept3 = property_get(r2, "kept");
+  let shortened2 = [];
+  let r5 = {
+    ceiling: ceiling2,
+    opener: opener2,
+    link_open: link_open3,
+    dash: dash3,
+    kept: kept3,
+    shortened: shortened2,
+  };
+  let r3 = r5;
   let shortened = property_get(r3, "shortened");
   let kept = property_get(r3, "kept");
   let dash = property_get(r3, "dash");
