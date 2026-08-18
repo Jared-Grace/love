@@ -1,3 +1,4 @@
+import { permission_rows_run_named } from "./permission_rows_run_named.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { claude_transcript_paths_recent } from "./claude_transcript_paths_recent.mjs";
 import { permission_prompt_events_paths } from "./permission_prompt_events_paths.mjs";
@@ -5,11 +6,9 @@ import { permission_replay_events_keyed } from "./permission_replay_events_keyed
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
 import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
 import { permission_replay_summary } from "./permission_replay_summary.mjs";
-import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
 export async function permission_replay_rows(days, count) {
   "every shape of command the transcripts show being run, ranked by how often, with what the rules as they stand today would decide about each — the shapes still answering ask or silent are the ones a grant could still take off the human";
