@@ -8,14 +8,16 @@ export function bless_people_phrase(count) {
   "for one, and 'those two people', 'those sixty-four people' for more.";
   "It is spelled in words rather than digits because the player READS the prayer aloud,";
   "and a numeral is a thing you look at rather than something you say.";
+  let b = greater_than(count, 0);
   assert_message(
-    greater_than(count, 0),
+    b,
     "a blessing was asked for with nobody in sight - the ladder's lowest rung is one person, so the caller should not offer a prayer until at least one is visible",
   );
   if (equal(count, 1)) {
     let one = "that person";
     return one;
   }
-  let many = text_combine_multiple(["those ", number_to_words(count), " people"]);
+  let v = number_to_words(count);
+  let many = text_combine_multiple(["those ", v, " people"]);
   return many;
 }
