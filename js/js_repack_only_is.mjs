@@ -1,3 +1,4 @@
+import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
 import { js_repack_only_is_answer } from "./js_repack_only_is_answer.mjs";
 import { js_repack_only_is_getter } from "./js_repack_only_is_getter.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,8 +9,6 @@ import { js_find_return_try } from "./js_find_return_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
-import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { js_property_key_name_try } from "./js_property_key_name_try.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
@@ -40,8 +39,9 @@ export function js_repack_only_is(declaration) {
   if (not(record_is)) {
     return false;
   }
-  let properties = js_object_expression_properties(answer);
-  let few_is = list_size_less_than_value(properties, 2);
+  let r3 = js_repack_only_is_few_is(answer);
+  let few_is = property_get(r3, "few_is");
+  let properties = property_get(r3, "properties");
   if (few_is) {
     return false;
   }
