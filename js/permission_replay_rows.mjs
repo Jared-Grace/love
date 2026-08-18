@@ -24,13 +24,12 @@ export async function permission_replay_rows(days, count) {
   let checking = list_slice_count(rows, 0, count2);
   await permission_prompt_rows_verdicts(checking);
   let unchecked = list_slice(rows, checking.length, rows.length);
+  ("each checked shape is told which dispatcher function it runs, by the one reader the proved ranking uses, so a candidate named here and a candidate named there mean the same thing");
+  permission_rows_run_named(checking);
   let already_allowed = [];
   let denied = [];
   let candidates = [];
   for (let row of checking) {
-    let sample = property_get(row, "sample");
-    let run_name = dispatcher_run_name(sample);
-    property_set(row, "run_name", run_name);
     let verdict = property_get(row, "verdict");
     let allowed = equal(verdict, "allow");
     if (allowed) {
