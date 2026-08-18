@@ -6,12 +6,12 @@ import { bless_place_seen } from "./bless_place_seen.mjs";
 import { bless_prayer_place } from "./bless_prayer_place.mjs";
 export function app_g_bless_readout(container, cone, street, visible, count) {
   arguments_assert(arguments, 5);
-  "What the player is told about what they can see: how many people are in front of them,";
-  "how many of those the prayer they have unlocked so far actually reaches, and whether a";
-  "whole street has come into sight.";
-  "The second line only appears when the two numbers differ, and it is where the player";
-  "learns the rule the game runs on - sight and the unlock are two different limits, and";
-  "seeing more people does not by itself let you pray for more of them.";
+  ("What the player is told about what they can see: how many people are in front of them,");
+  ("how many of those the prayer they have unlocked so far actually reaches, and whether a");
+  ("whole street has come into sight.");
+  ("The second line only appears when the two numbers differ, and it is where the player");
+  ("learns the rule the game runs on - sight and the unlock are two different limits, and");
+  ("seeing more people does not by itself let you pray for more of them.");
   let seeing = text_combine_multiple(["You can see ", visible, " people"]);
   app_g_p_text(container, seeing);
   let short = less_than(count, visible);
