@@ -36,6 +36,7 @@ export function app_g_bless_overlay_tapped(r) {
     player_img_c,
     render,
     player,
+    world,
     tapped,
   };
   return r2;
