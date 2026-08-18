@@ -26,6 +26,10 @@ export async function ebible_readaloud_lines_differ(bible_folder) {
         bible_folder,
         chapter_code,
       );
+      let unread_is = null_is(lines);
+      if (unread_is) {
+        return null;
+      }
       let measured = {
         chapter_code,
         markers: list_size(markers),

@@ -34,15 +34,14 @@ export function app_code_lesson_statement_name_sum_above(root) {
     plus,
     ") two numbers together by their value",
   ]);
-  let code = js_code_console_log_statement(numbers_sum);
-  html_div_code(box_remember, code);
-  app_code_writes_out_line(box_remember, total);
+  let logged_numbers = js_code_console_log_statement(numbers_sum);
+  app_code_code_lines_writes_out(box_remember, [logged_numbers], total);
   let box_names = app_code_container_light_blue(root);
   html_div_cycle_code(box_names, ["Suppose we give two numbers names"]);
-  let code2 = js_code_let_statement(name_first, number_first);
-  html_div_code(box_names, code2);
-  let code3 = js_code_let_statement(name_last, number_last);
-  html_div_code(box_names, code3);
+  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  let held_first = js_code_let_statement(name_first, number_first);
+  let held_last = js_code_let_statement(name_last, number_last);
+  html_div_code_lines(box_names, [held_first, held_last]);
   html_div_cycle_code(box_names, [
     "Instead of writing out the numbers themselves (",
     numbers_sum,
@@ -50,7 +49,6 @@ export function app_code_lesson_statement_name_sum_above(root) {
     names_sum,
     "):",
   ]);
-  let code4 = js_code_console_log_statement(names_sum);
-  html_div_code(box_names, code4);
-  app_code_writes_out_line(box_names, total);
+  let logged_names = js_code_console_log_statement(names_sum);
+  app_code_code_lines_writes_out(box_names, [logged_names], total);
 }

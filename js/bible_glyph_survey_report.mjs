@@ -18,6 +18,8 @@ export function bible_glyph_survey_report(
   let mapped = property_get(r4, "mapped");
   let roots = property_get(r4, "roots");
   let percent = property_get(r4, "percent");
+  let settled = bible_glyph_survey_settled(unmapped, occurrences_total);
+  let outstanding = property_get(settled, "outstanding");
   let report = {
     testament: testament_name,
     referent_reach,
@@ -28,11 +30,12 @@ export function bible_glyph_survey_report(
       occurrences_total,
       percent,
     },
+    undrawn_deliberate: settled,
     glyph_missing,
     glyph_collisions,
     sense_spread,
-    unmapped_count: unmapped.length,
-    unmapped_frequent: unmapped.slice(0, 150),
+    unmapped_count: outstanding.length,
+    unmapped_frequent: outstanding.slice(0, 150),
   };
   return report;
 }
