@@ -45,7 +45,6 @@ export async function app_code_expression_value_choose_await(
     let b = app_shared_button_wide(box, choice_text, on_click);
     let background = app_shared_color_gray_light();
     html_style_background_color_set(b, background);
-    html_style_margin_top(b, "0.2em");
     async function on_click() {
       if (answered) {
         return;
