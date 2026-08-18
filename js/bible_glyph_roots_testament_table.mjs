@@ -1,3 +1,9 @@
+import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
+import { equal } from "./equal.mjs";
+import { bible_glyph_roots_hebrew } from "./bible_glyph_roots_hebrew.mjs";
+import { ebible_testament_new_name } from "./ebible_testament_new_name.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 export function bible_glyph_roots_testament_table(testament_name) {
   "$plain testament_name";
   "the name is a testament's own, spelled as the book divisions spell it. It names which table to hand back and nothing that runs.";
