@@ -1632,6 +1632,7 @@
       "Bash(node scripts/ai.mjs app_ceb_bible_gloss_chapters_verse_claims_wrong:*)",
       "Bash(node scripts/ai.mjs gloss_punctuation_words_gate_run:*)",
       "Bash(node scripts/ai.mjs gloss_stores_punctuation_entries_repair:*)",
+      "Bash(node scripts/ai.mjs permission_replay_rows:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3173,6 +3174,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args app_ceb_bible_gloss_chapters_verse_claims_wrong:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args gloss_punctuation_words_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args gloss_stores_punctuation_entries_repair:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_replay_rows:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4713,6 +4715,7 @@
       "Bash(node scripts/aig.mjs app_ceb_bible_gloss_chapters_verse_claims_wrong:*)",
       "Bash(node scripts/aig.mjs gloss_punctuation_words_gate_run:*)",
       "Bash(node scripts/aig.mjs gloss_stores_punctuation_entries_repair:*)",
+      "Bash(node scripts/aig.mjs permission_replay_rows:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -6253,7 +6256,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args functions_forwarding_whole:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_chapters_verse_claims_wrong:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args gloss_punctuation_words_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args gloss_stores_punctuation_entries_repair:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args gloss_stores_punctuation_entries_repair:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_replay_rows:*)"
     ],
     "defaultMode": "acceptEdits"
   },
