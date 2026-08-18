@@ -31,7 +31,7 @@ export function app_reply_main_shortcuts_r_ke_(root, languages_chosen_default) {
     responses: [],
   };
   let r_ke_ = app_reply_main_shortcuts_shortcut_extend_count(r_ke_base, 10);
-  return {
+  let r = {
     r_ug_40,
     r_ug_,
     gl,
@@ -50,4 +50,5 @@ export function app_reply_main_shortcuts_r_ke_(root, languages_chosen_default) {
     r_ke_base,
     r_ke_,
   };
+  return r;
 }
