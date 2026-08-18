@@ -11,7 +11,7 @@ export function app_code_review_present_progress(r3) {
   let go_next = property_get(r3, "go_next");
   let r2 = property_get(r3, "r2");
   let progress = property_get(r2, "progress");
-  return {
+  let r = {
     key,
     c,
     success_container,
@@ -21,4 +21,5 @@ export function app_code_review_present_progress(r3) {
     go_next,
     progress,
   };
+  return r;
 }
