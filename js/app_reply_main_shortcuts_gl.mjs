@@ -10,7 +10,46 @@ export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
   let r2 = app_reply_main_shortcuts_r_ke_(root, languages_chosen_default);
   let r3 = app_reply_main_shortcuts_r_default(r2, languages_chosen_default);
   let r4 = app_reply_main_shortcuts_r_te_base(r3, languages_chosen_default);
-  let r5 = app_reply_main_shortcuts_r_te_(r4);
+  let r_te_base = property_get(r4, "r_te_base");
+  let r_ke_3 = property_get(r4, "r_ke_");
+  let r_pk_403 = property_get(r4, "r_pk_40");
+  let r_pk_203 = property_get(r4, "r_pk_20");
+  let r_pk_10_glory3 = property_get(r4, "r_pk_10_glory");
+  let r_pk_1_w3 = property_get(r4, "r_pk_1_w");
+  let r_pk_1_m3 = property_get(r4, "r_pk_1_m");
+  let r_pk_1_c3 = property_get(r4, "r_pk_1_c");
+  let r_pk_10_h3 = property_get(r4, "r_pk_10_h");
+  let r_pk_10_gh3 = property_get(r4, "r_pk_10_gh");
+  let r_pk_10_g3 = property_get(r4, "r_pk_10_g");
+  let r_pk_103 = property_get(r4, "r_pk_10");
+  let r_pk_3 = property_get(r4, "r_pk_");
+  let gl3 = property_get(r4, "gl");
+  let r_ug_2 = property_get(r4, "r_ug_");
+  let r_ug_402 = property_get(r4, "r_ug_40");
+  let r_ke_402 = property_get(r4, "r_ke_40");
+  let r_default2 = property_get(r4, "r_default");
+  let r_te_2 = app_reply_main_shortcuts_shortcut_extend_count(r_te_base, 10);
+  let r8 = {
+    r_ke_: r_ke_3,
+    r_pk_40: r_pk_403,
+    r_pk_20: r_pk_203,
+    r_pk_10_glory: r_pk_10_glory3,
+    r_pk_1_w: r_pk_1_w3,
+    r_pk_1_m: r_pk_1_m3,
+    r_pk_1_c: r_pk_1_c3,
+    r_pk_10_h: r_pk_10_h3,
+    r_pk_10_gh: r_pk_10_gh3,
+    r_pk_10_g: r_pk_10_g3,
+    r_pk_10: r_pk_103,
+    r_pk_: r_pk_3,
+    gl: gl3,
+    r_ug_: r_ug_2,
+    r_ug_40: r_ug_402,
+    r_ke_40: r_ke_402,
+    r_default: r_default2,
+    r_te_: r_te_2,
+  };
+  let r5 = r8;
   let r_te_ = property_get(r5, "r_te_");
   let r_default = property_get(r5, "r_default");
   let r_ke_40 = property_get(r5, "r_ke_40");
