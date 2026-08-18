@@ -62,7 +62,27 @@ export function app_code_review_present_has_next(r9) {
     progress: progress2,
   };
   let r2 = r6;
-  let r4 = app_code_review_present_queue(r2, r9);
+  let progress3 = property_get(r2, "progress");
+  let go_next4 = property_get(r2, "go_next");
+  let skip_button4 = property_get(r2, "skip_button");
+  let has_next5 = property_get(r2, "has_next");
+  let back_button5 = property_get(r2, "back_button");
+  let success_container5 = property_get(r2, "success_container");
+  let c5 = property_get(r2, "c");
+  let key5 = property_get(r2, "key");
+  let queue2 = property_get(r9, "queue");
+  let r7 = {
+    progress: progress3,
+    go_next: go_next4,
+    skip_button: skip_button4,
+    has_next: has_next5,
+    back_button: back_button5,
+    success_container: success_container5,
+    c: c5,
+    key: key5,
+    queue: queue2,
+  };
+  let r4 = r7;
   let queue = property_get(r4, "queue");
   let key = property_get(r4, "key");
   let c = property_get(r4, "c");
