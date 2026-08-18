@@ -1,4 +1,4 @@
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_add_call_try } from "./js_list_add_call_try.mjs";
@@ -19,7 +19,7 @@ export function js_list_add_combine(ast) {
     if (null_is(add_call)) {
       return;
     }
-    let e = property_list_get_end_1(v, "stack");
+    let e = js_visit_above(v);
     let l = list_is(e);
     if (not(l)) {
       return;

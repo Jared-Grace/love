@@ -1,4 +1,4 @@
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
@@ -13,7 +13,7 @@ export function js_object_expression_named_generic(ast, node_type, search) {
   "It went unseen because both callers happen to stand in front of it. One file holds a single named record, so selecting all of them and selecting the right one are the same answer; the other asks for exactly one back and would have raised rather than gone wrong. Neither would have stayed true of the next caller.";
   function lambda2(la) {
     function lambda(v) {
-      let e = property_list_get_end_1(v, "stack");
+      let e = js_visit_above(v);
       function lambda3() {
         let id = property_get(e, "id");
         function lambda4() {
