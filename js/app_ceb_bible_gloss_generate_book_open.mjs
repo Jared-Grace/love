@@ -29,12 +29,12 @@ export async function app_ceb_bible_gloss_generate_book_open() {
     language,
     word,
     last,
-    language_reader,
+    "English",
   );
   let prompt_user_middle =
     app_shared_gloss_bible_generate_generic_prompt_user_middle(
       language,
-      English,
+      "English",
     );
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let known = await binisaya_words_known();
