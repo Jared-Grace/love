@@ -4,12 +4,9 @@ import { bible_glyph_survey_unmapped } from "./bible_glyph_survey_unmapped.mjs";
 import { bible_glyph_survey_n } from "./bible_glyph_survey_n.mjs";
 import { bible_glyph_survey_top } from "./bible_glyph_survey_top.mjs";
 import { property_get } from "./property_get.mjs";
-export async function bible_glyph_survey_glyph_collisions(
-  table_testament,
-  testament_name,
-) {
-  arguments_assert(arguments, 2);
-  let r = await bible_glyph_survey_roots(table_testament, testament_name);
+export async function bible_glyph_survey_glyph_collisions(testament_name) {
+  arguments_assert(arguments, 1);
+  let r = await bible_glyph_survey_roots(testament_name);
   let r2 = bible_glyph_survey_unmapped(r);
   let r3 = bible_glyph_survey_n(r2);
   let r4 = bible_glyph_survey_top(r3);
