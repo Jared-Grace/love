@@ -1,15 +1,9 @@
-import { arguments_assert } from "./arguments_assert.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { property_set } from "./property_set.mjs";
-import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { bible_glyph_referents } from "./bible_glyph_referents.mjs";
 export function bible_glyph_gate_run_referents(characters) {
   arguments_assert(arguments, 1);
+  "Every seed glyph table checked against the vocabulary of pictures, one testament at a time.";
+  "$plain characters";
+  "BOTH TABLES ARE WALKED, and only one of them used to be. The Greek table was gated from the day it was written and the Hebrew one arrived ungated, which is the quiet half of adding a second table: the new file is the one nobody has proved anything about yet, and it is exactly as able to name a misspelled glyph as the old one. Nothing would have failed - the reader would have met a blank.";
+  "The SEATED map handed back is the Greek one, because the referent rules that consume it are Greek. The Hebrew map is built, checked and dropped: the checking is the point, not the map.";
   let known = {};
   for (let character of characters) {
     let repeated = property_exists(known, character.name);
@@ -20,33 +14,10 @@ export function bible_glyph_gate_run_referents(characters) {
     });
     property_set(known, character.name, character.character);
   }
-  let roots = bible_glyph_roots();
-  let seated = {};
-  for (let root of roots) {
-    for (let word of root.words) {
-      let drawn = property_exists(known, word.glyph);
-      let f_name = fn_name("bible_glyph_characters");
-      assert_json(drawn, {
-        root: root.root,
-        strong: word.strong,
-        glyph: word.glyph,
-        hint: text_combine_multiple([
-          "a root names a glyph the vocabulary does not carry - add it to ",
-          f_name,
-          " or fix the spelling",
-        ]),
-      });
-      let taken = property_exists(seated, word.strong);
-      let b2 = not(taken);
-      let value = property_get_or_null(seated, word.strong);
-      assert_json(b2, {
-        strong: word.strong,
-        roots: [value, root.root],
-        hint: "one word is seated under two roots, so which glyph it gets depends on table order - give the word to one root",
-      });
-      property_set(seated, word.strong, root.root);
-    }
-  }
+  let greek = bible_glyph_roots();
+  let seated = bible_glyph_gate_run_referents_table(greek, known);
+  let hebrew = bible_glyph_roots_hebrew();
+  bible_glyph_gate_run_referents_table(hebrew, known);
   let referents = bible_glyph_referents();
   let r = {
     known,
