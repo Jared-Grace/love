@@ -29,11 +29,11 @@ export function ebible_licence_words(licence) {
       words: "Creative Commons Attribution No-Derivatives",
     },
     {
-      licence: "cc_by_nc",
+      licence: ebible_licence_cc_by_nc(),
       words: "Creative Commons Attribution Non-Commercial",
     },
     {
-      licence: "cc_by_nc_nd",
+      licence: ebible_licence_cc_by_nc_nd(),
       words: "Creative Commons Attribution Non-Commercial No-Derivatives",
     },
     {
@@ -41,7 +41,7 @@ export function ebible_licence_words(licence) {
       words: "GNU Free Documentation License",
     },
     {
-      licence: "all_rights_reserved",
+      licence: ebible_licence_all_rights_reserved(),
       words: "All rights reserved",
     },
   ];
