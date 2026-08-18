@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { html_scroll_animate_animate_start } from "./html_scroll_animate_animate_start.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -15,10 +17,10 @@ export function html_scroll_animate_animate(
   from_left,
 ) {
   arguments_assert(arguments, 5);
-  let from_top = element.scrollTop;
-  let token = (element.scroll_animation_token || 0) + 1;
-  element.scroll_animation_token = token;
-  let start = null;
+  let r = html_scroll_animate_animate_start(element);
+  let start = property_get(r, "start");
+  let token = property_get(r, "token");
+  let from_top = property_get(r, "from_top");
   function animate(settled) {
     let done = false;
     function finish() {
