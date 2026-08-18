@@ -14,8 +14,8 @@ export function app_code_lesson_statement_name_compare_title_name_id() {
   let words = "comparing what two names hold";
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let less_than = js_operator_less_than_symbol();
-  let compared = js_code_binary_spaced_nb(name_first, less_than, name_last);
+  let smaller_than = js_operator_less_than_symbol();
+  let compared = js_code_binary_spaced_nb(name_first, smaller_than, name_last);
   let code = js_code_console_log_statement(compared);
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
