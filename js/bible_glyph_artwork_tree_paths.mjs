@@ -28,7 +28,8 @@ export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
   let paths = [];
   for (let entry of entries) {
     let name = property_get(entry, "path");
-    let joined = text_combine(prefix, "/", name);
+    let walked = text_combine(prefix, "/");
+    let joined = text_combine(walked, name);
     let type = property_get(entry, "type");
     let folder = equal(type, "tree");
     if (folder) {
