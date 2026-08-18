@@ -21,7 +21,7 @@ export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
   let read = not(b);
   assert_json(read, {
     tree_url,
-    hint: "a folder of the artwork set could not be listed - has the service refused to answer for now?",
+    hint: "a folder of the artwork set could not be listed. the listing service allows only about sixty requests an hour from a caller it does not know, and walking down through folders spends several - waiting an hour is the usual remedy.",
   });
   let listed = json_from(text);
   let entries = property_get(listed, "tree");

@@ -38,6 +38,7 @@ export async function function_span_cut_or_undo(
   await function_source_overwrite(f_name, before);
   await function_delete(f_name_new);
   let undone = {
+    address_to,
     f_name_new,
     cut_is: false,
     why: "everything the run does is lift a name out of a record and hand it on, so the piece that came out held no work at all - each of its lines carried one name from one side of it to the other, and whoever called it could have read those names where they already were. Would you like to look at what the run is actually for, and cut a smaller one that does it?",
