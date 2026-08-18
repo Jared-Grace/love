@@ -18,6 +18,7 @@ export async function app_code_reload_persists_test_on_page(
   results,
   lesson_ids,
 ) {
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   arguments_assert(arguments, 4);
   async function check(id) {
     "the three words this address stands on are frozen, so each is read off the function holding it rather than spelled into the joined-up text - a word fused into a separator is invisible to everything that watches for a wording change";
