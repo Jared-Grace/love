@@ -1,3 +1,6 @@
+import { permission_rows_run_named } from "./permission_rows_run_named.mjs";
+import { permission_rows_grant_verdicts } from "./permission_rows_grant_verdicts.mjs";
+import { permission_grants_grouped_open_names } from "./permission_grants_grouped_open_names.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { permission_prompt_confirmed_rows } from "./permission_prompt_confirmed_rows.mjs";
 import { property_set } from "./property_set.mjs";
@@ -41,12 +44,15 @@ export async function permission_replay_write() {
   let path = permission_replay_path();
   ("The reading is written over rather than written fresh. It is a photograph of the last week and there is only ever one worth having, so the second run of a thing meant to run every day must replace yesterday's and not refuse because yesterday's is there.");
   await file_overwrite_json(path, r);
+  ("the names themselves rather than a count of them, because this is the one line that answers the question the whole reading exists for, and a number would only send the reader back to the file");
   let said = {
     days,
     transcripts: property_get(r, "transcripts"),
     shapes: property_get(r, "shapes"),
     candidates: property_get(r, "candidates").length,
     proved: property_get(confirmed, "counted"),
+    grantable_replay: permission_grants_grouped_open_names(replay_grants),
+    grantable_proved: permission_grants_grouped_open_names(proved_grants),
     path,
   };
   log(permission_replay_write.name, said);

@@ -1,3 +1,9 @@
+import { property_get } from "./property_get.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { command_single_is } from "./command_single_is.mjs";
+import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
+import { property_set } from "./property_set.mjs";
+import { equal } from "./equal.mjs";
 export function permission_rows_run_named(rows) {
   "Writes onto each ranked row the dispatcher function its sample command runs, or empty text where no rule naming a function would answer that row.";
   "Empty rather than absent, because a row that no grant reaches has to stay in the ranking. It cost the human the same minute as the rest, and dropping it would leave a report that reads as if everything expensive were grantable.";
