@@ -63,10 +63,11 @@ export async function app_shared_gloss_bible_home_generic(
     return r;
   }
   each(explains, lambda);
+  ("the way back to the top sits BELOW the closing line, not above it. everything between the two lines is the reading - the verse, its wording, its words explained - and a way out standing inside that block reads as one more thing to read. under the line it lands next to the previous-verse and next-verse arrows the screen adds straight after, so a reader looking to move has one place to look rather than two.");
+  html_hr(p);
   async function lambda6() {
     await app_shared_gloss_bible_home_generic_scroll(verses);
   }
   let text = emoji_arrow_up();
   app_shared_button_wide(p, text, lambda6);
-  html_hr(p);
 }
