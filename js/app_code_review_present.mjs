@@ -1,3 +1,4 @@
+import { app_code_review_present_progress } from "./app_code_review_present_progress.mjs";
 import { app_code_review_present_key } from "./app_code_review_present_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,15 +28,16 @@ import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 export function app_code_review_present(r9, home_button, context) {
   arguments_assert(arguments, 3);
   let r3 = app_code_review_present_key(r9);
-  let key = property_get(r3, "key");
-  let c = property_get(r3, "c");
-  let success_container = property_get(r3, "success_container");
-  let back_button = property_get(r3, "back_button");
-  let has_next = property_get(r3, "has_next");
-  let skip_button = property_get(r3, "skip_button");
-  let go_next = property_get(r3, "go_next");
-  let r2 = property_get(r3, "r2");
-  let progress = property_get(r2, "progress");
+  let {
+    key,
+    c,
+    success_container,
+    back_button,
+    has_next,
+    skip_button,
+    go_next,
+    progress,
+  } = app_code_review_present_progress(r3);
   let queue = property_get(r9, "queue");
   let passed = property_get(r9, "passed");
   let restart_button = property_get(r9, "restart_button");
