@@ -35,5 +35,5 @@ export async function app_g_bless(context) {
   });
   let height = html_viewport_height_visible();
   html_style_set(container, "height", height);
-  app_g_bless_overlay(container);
+  await app_g_bless_overlay(container);
 }

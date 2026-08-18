@@ -22,7 +22,8 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("arrows glowing faintly through the prayer would be the game asking to be played while the");
   ("player is being asked to pray, and the prayer would lose - so the first thing on the");
   ("screen is the player's own words and nothing else at all.");
-  html_style_background_color_set(overlay, app_shared_color_page_background());
+  let background = app_shared_color_page_background();
+  html_style_background_color_set(overlay, background);
   let container = app_g_container_player(overlay);
   let prayer = bless_prayer_transfer();
   app_g_p_text(container, prayer);
