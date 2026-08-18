@@ -5,9 +5,10 @@ export function html_code_recorder_include() {
   "The phone remembers the answer, so the address only has to carry it once. Asking through the address alone failed in practice: a phone offers the address it already knows as you type, so the part that turns the watcher on quietly went missing and the page came up silent while looking exactly like the one that was asked for. record=0 in the address is how the phone forgets again.";
   "Silent unless asked, because it sends what it sees every few seconds for as long as the page is open: useful while chasing something, and pure noise the rest of the time.";
   "It stands before the app's own script, like the error band next to it, so it is already watching while the app is still starting - which is when a boot that goes wrong goes wrong.";
+  "The watcher is asked for afresh every time, with the moment written into the address it is fetched from. A phone holds on to a small script like this one, and a watcher improved here but not there is worse than none: it reports in the old way and the machine reads it as the new way, so the fix looks like it did not work rather than like it did not arrive.";
   let attributes_none = {};
   let code =
-    "if (location.pathname.indexOf('/dev/') !== -1) { var recorder_remembers = 'dev_record'; if (location.search.indexOf('record=0') !== -1) { localStorage.removeItem(recorder_remembers); } else if (location.search.indexOf('record') !== -1) { localStorage.setItem(recorder_remembers, '1'); } if (localStorage.getItem(recorder_remembers) === '1') { var page_recorder = document.createElement('script'); page_recorder.src = 'recorder.js'; document.head.appendChild(page_recorder); } }";
+    "if (location.pathname.indexOf('/dev/') !== -1) { var recorder_remembers = 'dev_record'; if (location.search.indexOf('record=0') !== -1) { localStorage.removeItem(recorder_remembers); } else if (location.search.indexOf('record') !== -1) { localStorage.setItem(recorder_remembers, '1'); } if (localStorage.getItem(recorder_remembers) === '1') { var page_recorder = document.createElement('script'); page_recorder.src = 'recorder.js?v=' + Date.now(); document.head.appendChild(page_recorder); } }";
   let r = html_code_element("script", attributes_none, code);
   return r;
 }
