@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_one_more_title_name_id() {
   let words = "giving a name one more than it holds";
   let name = app_code_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
-  let more = js_code_binary(name, plus, 1);
+  let more = js_code_binary_spaced_nb(name, plus, 1);
   let code = js_code_assign_statement(name, more);
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
