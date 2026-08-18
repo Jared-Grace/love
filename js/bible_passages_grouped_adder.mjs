@@ -57,12 +57,15 @@ export async function bible_passages_grouped_adder(
       let original = null;
       if (not_equal(verse_number, "0")) {
         let property_name2 = verse_number_key();
-        let original_verse = list_find_property(
+        ("The original-language wording can be missing for the same reason a second bible's can, and for one reason more. Where two translations cut the same words into a different number of verses, the numbering underneath follows one of them, so the last verse of a chapter can have no number to find at all - the third letter of John and the twelfth chapter of the Revelation both end that way.");
+        ("Nothing is left standing on it, because a verse already comes through here with no original wording whenever it is numbered zero. The passage keeps the verse and carries no original for it.");
+        original = list_find_property_get_or(
           interlinear,
           property_name2,
           verse_number,
+          "text",
+          null,
         );
-        original = property_get(original_verse, "text");
       }
       list_add(originals, original);
       list_add_pair(texts, texts_add);
