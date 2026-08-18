@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { qa_commit_named_red_since_nothing } from "./qa_commit_named_red_since_nothing.mjs";
+import { qa_commit_named_red_since_head } from "./qa_commit_named_red_since_head.mjs";
 import { qa_commit_named_red_since_r } from "./qa_commit_named_red_since_r.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
@@ -9,11 +9,11 @@ export async function qa_commit_named_red_since() {
   "Freshest breakage first, because that is the one still cheap to fix and the one whose cause is still on the screen of whoever caused it. The long-standing ones sort to the end together, which is also where they belong in a reader's attention.";
   "A run is counted in judged commits rather than in the commits between them, because the record only has an opinion about the ones somebody ran the gates on. A gate green at the second newest judgement and red at the newest has a run of one however many hundred commits sit in the gap.";
   let report = await qa_commit_named_report();
-  let r2 = qa_commit_named_red_since_nothing(report);
-  let nothing = property_get(r2, "nothing");
-  let newest = property_get(r2, "newest");
-  let placed = property_get(r2, "placed");
+  let r2 = qa_commit_named_red_since_head(report);
   let head = property_get(r2, "head");
+  let placed = property_get(r2, "placed");
+  let newest = property_get(r2, "newest");
+  let nothing = property_get(r2, "nothing");
   if (nothing) {
     let empty = {
       head,
