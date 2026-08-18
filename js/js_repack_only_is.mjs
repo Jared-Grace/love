@@ -1,4 +1,4 @@
-import { js_repack_only_is_made } from "./js_repack_only_is_made.mjs";
+import { js_repack_only_is_getter } from "./js_repack_only_is_getter.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
@@ -45,11 +45,11 @@ export function js_repack_only_is(declaration) {
   if (few_is) {
     return false;
   }
-  let r2 = js_repack_only_is_made(declaration);
-  let made = property_get(r2, "made");
-  let lifted = property_get(r2, "lifted");
-  let assigned = property_get(r2, "assigned");
+  let r2 = js_repack_only_is_getter(declaration);
   let getter = property_get(r2, "getter");
+  let assigned = property_get(r2, "assigned");
+  let lifted = property_get(r2, "lifted");
+  let made = property_get(r2, "made");
   for (let property of properties) {
     let short_is = property_or_null(property, "shorthand");
     if (not(short_is)) {
