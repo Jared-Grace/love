@@ -36,7 +36,6 @@ export function bible_glyph_coverage_curve_occurrences_descending(
     return n;
   }
   let r = {
-    table_reads,
     counted,
     occurrences_total,
     occurrences_descending,
