@@ -1,5 +1,6 @@
-import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_g_dev_tools_open_verify_page_lines } from "./app_g_dev_tools_open_verify_page_lines.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open_verify_console_each.mjs";
@@ -8,10 +9,11 @@ import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 export async function app_g_dev_tools_open_verify_page(r3) {
   arguments_assert(arguments, 1);
-  let told = property_get(r3, "told");
-  let engine = property_get(r3, "engine");
-  let url = property_get(r3, "url");
-  let lines = property_get(r3, "lines");
+  let r2 = app_g_dev_tools_open_verify_page_lines(r3);
+  let lines = property_get(r2, "lines");
+  let url = property_get(r2, "url");
+  let engine = property_get(r2, "engine");
+  let told = property_get(r2, "told");
   try {
     let page = await engine.newPage();
     function error_each(err) {
