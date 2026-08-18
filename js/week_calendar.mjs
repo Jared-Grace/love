@@ -1,3 +1,4 @@
+import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
 import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
 import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +8,6 @@ import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
-import { equal } from "./equal.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { numbers_up_to } from "./numbers_up_to.mjs";
@@ -85,20 +85,15 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     return r3;
   }
   function anchor_click(day, slot) {
-    let same_piece = equal(anchor.day, day) && equal(anchor.slot, slot);
-    let same_day = equal(anchor.day, day);
-    if (same_piece) {
-      anchor = null;
-    } else if (same_day) {
-      range_add(day, anchor.slot, slot);
-      anchor = null;
-      on_ranges(ranges);
-    } else {
-      anchor = {
-        day: day,
-        slot: slot,
-      };
-    }
+    let week_calendar_anchor_click_answer = week_calendar_anchor_click(
+      day,
+      slot,
+      anchor,
+      range_add,
+      on_ranges,
+      ranges,
+    );
+    anchor = property_get(week_calendar_anchor_click_answer, "anchor");
   }
   function free_click(day, slot) {
     let selected = week_calendar_selected_is(day, slot, ranges);
