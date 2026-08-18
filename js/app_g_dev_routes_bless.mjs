@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
 export function app_g_dev_routes_bless(routes, div_map) {
@@ -12,7 +13,8 @@ export function app_g_dev_routes_bless(routes, div_map) {
   ("promoted to make that true, and what does eventually need promoting is now readable off");
   ("this screen's imports rather than guessed at in advance.");
   function bless() {
-    app_g_bless_overlay(div_map);
+    let container = property_get(div_map, "container");
+    app_g_bless_overlay(container);
   }
   property_set(routes, "bless", bless);
 }

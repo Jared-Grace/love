@@ -1,0 +1,92 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_find_return_try } from "./js_find_return_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_return_argument_get } from "./js_return_argument_get.mjs";
+import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { property_or_null } from "./property_or_null.mjs";
+import { js_property_key_name_try } from "./js_property_key_name_try.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { add } from "./add.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_block_callee_names } from "./js_block_callee_names.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
+export function js_repack_only_is(declaration) {
+  "Whether a function's whole product is a record it took apart and put back together - every name it hands back lifted out of something else with the getter, and at most one thing actually done besides.";
+  "A function like this reads as work and is none. It is handed a record, or calls one thing that makes one, lifts each entry out under a name of its own, and builds an equal record out of those names. Whoever called it could have read the entries where they already were. What the file buys is a line count and a name.";
+  "It is not free. Each entry costs a line to lift and a word to put back, so a body of this shape grows with the number of entries rather than with the amount of work, and the growth lands in whatever page ships the caller. One of these went in beside seven others in a single sweep and carried the page it was on past the size it is allowed to be.";
+  "Five things must all hold, and each is there to keep an honest function out. Exactly one place hands a value back, which also means no lambda anywhere - a tree with a lambda in it is doing something this reading has no opinion about. What it hands back is a record written out, reached through one name if it was set on a line of its own. Two entries at least, because one entry is not a repack. Every entry written short, because an entry given a value at the brace is a value being made rather than moved. And every one of those names set, in this same function, from a call to the getter - that is the whole of the claim, and it is what makes this a repack rather than merely a function returning a record.";
+  "At most one other call, so that a function which really does something and happens to hand back some of what it was given is left alone. Nought means the thing was taken apart and put back with nothing done to it at all; one means a single call made the record it then unpacked, which is the shape a cut leaves behind.";
+  "What this cannot see: a line that changes something outside itself without binding a name. Every entry handed back is still an unpack under this reading, so such a function is named here even though it does work. That direction was chosen because the alternative - counting statements - is a reading of what a body looks like rather than of what it produces, and this exists to ask about the product.";
+  arguments_assert(arguments, 1);
+  let node = js_find_return_try(declaration);
+  let silent_is = null_is(node);
+  if (silent_is) {
+    return false;
+  }
+  let answer = js_return_argument_get(node);
+  let named = js_identifier_name_try(answer);
+  let bound_is = null_not_is(named);
+  if (bound_is) {
+    answer = js_name_set_from_node_try(declaration, named);
+  }
+  let unfound_is = null_is(answer);
+  if (unfound_is) {
+    return false;
+  }
+  let record_is = js_node_type_is(answer, "ObjectExpression");
+  if (not(record_is)) {
+    return false;
+  }
+  let properties = js_object_expression_properties(answer);
+  let few_is = list_size_less_than_value(properties, 2);
+  if (few_is) {
+    return false;
+  }
+  let getter = fn_name("property_get");
+  let lifted = 0;
+  for (let property of properties) {
+    let short_is = property_or_null(property, "shorthand");
+    if (not(short_is)) {
+      return false;
+    }
+    let key = js_property_key_name_try(property);
+    let source = js_name_set_from_node_try(declaration, key);
+    let unset_is = null_is(source);
+    if (unset_is) {
+      return false;
+    }
+    let called = js_call_callee_name_try(source);
+    let unpack_is = equal(called, getter);
+    if (not(unpack_is)) {
+      return false;
+    }
+    lifted = add(lifted, 1);
+  }
+  let empty_is = equal(lifted, 0);
+  if (empty_is) {
+    return false;
+  }
+  let block = property_get(declaration, "body");
+  let callees = js_block_callee_names(block);
+  let others = 0;
+  for (let callee of callees) {
+    let unpack_is = equal(callee, getter);
+    if (unpack_is) {
+      continue;
+    }
+    others = add(others, 1);
+  }
+  let busy_is = greater_than(others, 1);
+  if (busy_is) {
+    return false;
+  }
+  return true;
+}
