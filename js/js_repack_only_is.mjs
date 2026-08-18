@@ -1,7 +1,7 @@
+import { js_repack_only_is_made } from "./js_repack_only_is_made.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
-import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_find_return_try } from "./js_find_return_try.mjs";
@@ -10,7 +10,6 @@ import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { js_property_key_name_try } from "./js_property_key_name_try.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
@@ -46,10 +45,11 @@ export function js_repack_only_is(declaration) {
   if (few_is) {
     return false;
   }
-  let getter = fn_name("property_get");
-  let assigned = js_assigned_names(declaration);
-  let lifted = 0;
-  let made = 0;
+  let r2 = js_repack_only_is_made(declaration);
+  let made = property_get(r2, "made");
+  let lifted = property_get(r2, "lifted");
+  let assigned = property_get(r2, "assigned");
+  let getter = property_get(r2, "getter");
   for (let property of properties) {
     let short_is = property_or_null(property, "shorthand");
     if (not(short_is)) {
