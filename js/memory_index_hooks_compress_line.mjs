@@ -1,7 +1,5 @@
 import { memory_index_hooks_compress_line_kept } from "./memory_index_hooks_compress_line_kept.mjs";
 import { memory_index_hooks_compress_line_line } from "./memory_index_hooks_compress_line_line.mjs";
-import { memory_index_hooks_compress_line_r } from "./memory_index_hooks_compress_line_r.mjs";
-import { memory_index_hooks_compress_line_link_open } from "./memory_index_hooks_compress_line_link_open.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function memory_index_hooks_compress_line(lines) {
