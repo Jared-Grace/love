@@ -1,3 +1,6 @@
+import { js_statement_arguments_assert_is } from "./js_statement_arguments_assert_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { not } from "./not.mjs";
 import { js_expand_generic_lambda5 } from "./js_expand_generic_lambda5.mjs";
 import { js_expand_generic_lambda } from "./js_expand_generic_lambda.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -59,7 +62,14 @@ export async function js_expand_generic(next, stack_, ast) {
     function lambda3(param_name, a_name) {
       js_identifier_rename(ast_call, param_name, a_name);
     }
-    let body_block = js_function_declaration_to_block_body(declaration);
+    let body_block_written = js_function_declaration_to_block_body(declaration);
+    ("The line counting the child's arguments is about the child. Once the lines stand in the caller they are inside a function with its own count, so the check reads that one instead - and a child taking one thing, inlined into a caller taking six, refuses every call. It is dropped rather than rewritten because the caller already carries its own.");
+    function statement_kept_is(statement) {
+      let guard_is = js_statement_arguments_assert_is(statement);
+      let r3 = not(guard_is);
+      return r3;
+    }
+    let body_block = list_filter(body_block_written, statement_kept_is);
     let last = list_last(body_block);
     function lambda() {
       let r = js_expand_generic_lambda(body_block, last, v);
