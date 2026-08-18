@@ -29,7 +29,33 @@ export function app_g_verify_home_shown_json() {
     chapter,
   };
   let r4 = r2;
-  let r5 = app_g_verify_home_status(r4);
+  let chapter2 = property_get(r4, "chapter");
+  let poll_timer2 = property_get(r4, "poll_timer");
+  let shown_json3 = property_get(r4, "shown_json");
+  let chapter_advance_armed3 = property_get(r4, "chapter_advance_armed");
+  let advanced_for3 = property_get(r4, "advanced_for");
+  let selected_key3 = property_get(r4, "selected_key");
+  let storage_key3 = property_get(r4, "storage_key");
+  let chapter_code3 = property_get(r4, "chapter_code");
+  let chapter_codes3 = property_get(r4, "chapter_codes");
+  let view3 = property_get(r4, "view");
+  let r33 = property_get(r4, "r3");
+  let status2 = property_get(r33, "status");
+  let r6 = {
+    chapter: chapter2,
+    poll_timer: poll_timer2,
+    shown_json: shown_json3,
+    chapter_advance_armed: chapter_advance_armed3,
+    advanced_for: advanced_for3,
+    selected_key: selected_key3,
+    storage_key: storage_key3,
+    chapter_code: chapter_code3,
+    chapter_codes: chapter_codes3,
+    view: view3,
+    r3: r33,
+    status: status2,
+  };
+  let r5 = r6;
   let status = property_get(r5, "status");
   let r3 = property_get(r5, "r3");
   let view = property_get(r5, "view");
