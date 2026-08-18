@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_glyph_artwork_url } from "./bible_glyph_artwork_url.mjs";
+import { bible_glyph_artwork_url_default_tone } from "./bible_glyph_artwork_url_default_tone.mjs";
 export function bible_glyph_artwork_urls(asset_name) {
   "Every address one glyph's drawn file could be at, in the order they are worth asking.";
   "$plain asset_name";
