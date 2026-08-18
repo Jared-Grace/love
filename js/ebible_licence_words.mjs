@@ -1,3 +1,6 @@
+import { ebible_licence_cc_by_nc } from "./ebible_licence_cc_by_nc.mjs";
+import { ebible_licence_cc_by_nc_nd } from "./ebible_licence_cc_by_nc_nd.mjs";
+import { ebible_licence_all_rights_reserved } from "./ebible_licence_all_rights_reserved.mjs";
 import { ebible_licence_cc_by_nd } from "./ebible_licence_cc_by_nd.mjs";
 import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
 import { ebible_licence_cc_by_sa } from "./ebible_licence_cc_by_sa.mjs";
