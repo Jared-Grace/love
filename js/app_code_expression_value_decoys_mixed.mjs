@@ -14,7 +14,10 @@ export function app_code_expression_value_decoys_mixed(current, node) {
   let symbol = property_get(node, "operator");
   let comparison_is = app_code_operator_comparison_is(symbol);
   if (comparison_is) {
-    let boolean_decoys = app_code_expression_value_decoys_boolean(current, node);
+    let boolean_decoys = app_code_expression_value_decoys_boolean(
+      current,
+      node,
+    );
     return boolean_decoys;
   }
   let candidates = app_code_expression_value_decoys(current, node);
