@@ -1,3 +1,4 @@
+import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_g_design_note_body } from "./app_g_design_note_body.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { markdown_render } from "./markdown_render.mjs";
@@ -39,7 +40,8 @@ export async function app_g_design() {
   }
   function note_card(note) {
     let card = app_shared_container_blue(div);
-    html_style_margin_y(card, "0.15rem");
+    let card_gap = app_shared_spaced_neighbor_gap();
+    html_style_margin_y(card, card_gap);
     let header = html_div_text_bold(card, note.name);
     html_cursor_pointer(header);
     let description = html_div_text(card, note.description);
