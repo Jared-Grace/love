@@ -23,6 +23,21 @@ export async function permission_replay_write() {
     count,
   );
   property_set(r, "confirmed", confirmed);
+  ("both rankings are then put to the same safety check, so the file answers what can be removed today rather than only what still stops the human. The check writes nothing: a reading that granted as it read would be an unattended thing editing the file that decides what may run unattended.");
+  ("the proved rows are named here rather than where they were grouped, because they were grouped by the label a rule would wear and a grant is written to a function. The one row can want both readings at once.");
+  let confirmed_rows = property_get(confirmed, "rows");
+  permission_rows_run_named(confirmed_rows);
+  let candidates = property_get(r, "candidates");
+  let replay_grants = await permission_rows_grant_verdicts(
+    candidates,
+    "run_name",
+  );
+  let proved_grants = await permission_rows_grant_verdicts(
+    confirmed_rows,
+    "run_name",
+  );
+  property_set(r, "replay_grants", replay_grants);
+  property_set(r, "proved_grants", proved_grants);
   let path = permission_replay_path();
   ("The reading is written over rather than written fresh. It is a photograph of the last week and there is only ever one worth having, so the second run of a thing meant to run every day must replace yesterday's and not refuse because yesterday's is there.");
   await file_overwrite_json(path, r);
