@@ -118,6 +118,13 @@ export function js_repack_only_is(declaration) {
     if (hand_back_is) {
       continue;
     }
+    (
+      "The line counting the arguments is written by the canonical pass into every function here, so counting it as work would count a thing nobody chose against every body alike - and since the allowance is one, it would hide every repack that does a single thing besides."
+    );
+    let counting_is = js_statement_arguments_assert_is(statement);
+    if (counting_is) {
+      continue;
+    }
     let work_is = js_statement_work_is(statement);
     if (not(work_is)) {
       continue;
