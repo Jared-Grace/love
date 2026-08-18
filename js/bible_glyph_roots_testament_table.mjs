@@ -4,13 +4,13 @@ export function bible_glyph_roots_testament_table(testament_name) {
   "The seed glyph table written for one testament.";
   "A Strong's number is a TESTAMENT'S OWN, so there is one table per testament and this is the one place that says which is which. Every reader of a table asks here rather than naming one, so a reader cannot pick the wrong one up.";
   "AN UNKNOWN TESTAMENT IS REFUSED rather than answered with an empty table. An empty table surveys perfectly happily and reports that nought per cent of the text is drawn, which is indistinguishable from a testament nobody has started - so the mistake would look like honest work left to do.";
-  let old_name = ebible_testament_name_old();
+  let old_name = ebible_testament_old_name();
   let older = equal(testament_name, old_name);
   if (older) {
     let hebrew = bible_glyph_roots_hebrew();
     return hebrew;
   }
-  let new_name = ebible_testament_name_new();
+  let new_name = ebible_testament_new_name();
   let newer = equal(testament_name, new_name);
   assert_json(newer, {
     testament_name,
