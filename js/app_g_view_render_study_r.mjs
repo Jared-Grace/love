@@ -14,6 +14,20 @@ export function app_g_view_render_study_r(view, text, div_map) {
   let left = emoji_book_open();
   let text2 = text_combine(left, " Study: Tap each word in order");
   app_g_container_text(overlay, text2);
-  let r = app_g_view_render_study_fresh(word_index, text, overlay, words);
+  let r3 = app_g_view_render_study_fresh_container(
+    word_index,
+    text,
+    overlay,
+    words,
+  );
+  let container = property_get(r3, "container");
+  let render_words = property_get(r3, "render_words");
+  let fresh = property_get(r3, "fresh");
+  let r2 = {
+    container,
+    render_words,
+    fresh,
+  };
+  let r = r2;
   return r;
 }
