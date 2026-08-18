@@ -3,6 +3,7 @@ export function bible_glyph_artwork_names() {
   "TWO VOCABULARIES DESCRIBE THE SAME PICTURES and neither is computable from the other. This repo names a glyph by what it is FOR in a verse - heart_red, heart_orange, person_other - and the artwork set names it by that emoji's common name in the Unicode data - Red heart, Orange heart, Person. The two agree on the picture and on nothing else, so the bridge has to be written by a person looking at both, once, and this is it.";
   "THE NAME HERE IS ONLY USED TO FETCH, and never to draw. A file lands under this repo's own glyph name, so every page addresses a glyph the way it already does and no page ever learns the artwork set's vocabulary. That is what makes the artwork replaceable: swapping sets means rewriting this one table and running the fetch again, and nothing else in the repo notices.";
   "A NAME HERE IS A GUESS UNTIL IT IS CHECKED, which is why the fetch reports the ones it could not find rather than failing on the first. These names were written from knowing the emoji, and the artwork set spells a few of them its own way; the report is what turns the guesses into facts, and it costs one run.";
+  "A GLYPH MISSING FROM THIS TABLE IS NOT AN OVERSIGHT. Two of them are named next door instead, in the list of pictures the set simply does not have, because no spelling would have found them. This table is the glyphs that can be fetched, and that list is the glyphs that cannot - together they are all of them.";
   let names = [
     {
       glyph: "cross",
@@ -57,10 +58,6 @@ export function bible_glyph_artwork_names() {
       asset: "Boy",
     },
     {
-      glyph: "brother",
-      asset: "Men holding hands",
-    },
-    {
       glyph: "speech",
       asset: "Speech balloon",
     },
@@ -91,10 +88,6 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "woman",
       asset: "Woman",
-    },
-    {
-      glyph: "family",
-      asset: "Family",
     },
     {
       glyph: "crowd",

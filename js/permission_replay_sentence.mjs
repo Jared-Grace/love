@@ -30,6 +30,8 @@ export async function permission_replay_sentence() {
   let named = list_join_comma_space(grantable);
   let arguments_text = list_join_comma(grantable);
   let command = `node scripts/ai.mjs ${permission_grant_add_multiple.name} ${arguments_text}`;
-  let r4 = `${counted}. These can safely stop asking: ${named}. To grant them: ${command}`;
+  ("the line is spoken into a session rather than to the human, so it says who to pass it to. A finding that reaches a reader who is not the one who decides has travelled the whole way and stopped one step short.");
+  let relayed = "Say this line to the human in your first reply, because the grant is theirs to approve.";
+  let r4 = `${counted}. These can safely stop asking: ${named}. To grant them: ${command} - ${relayed}`;
   return r4;
 }
