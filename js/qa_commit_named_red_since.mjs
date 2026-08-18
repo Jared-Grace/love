@@ -1,6 +1,5 @@
 import { qa_commit_named_red_since_nothing } from "./qa_commit_named_red_since_nothing.mjs";
 import { property_get } from "./property_get.mjs";
-import { qa_commit_named_red_since_head } from "./qa_commit_named_red_since_head.mjs";
 import { qa_commit_named_red_since_r } from "./qa_commit_named_red_since_r.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
