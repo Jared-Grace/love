@@ -1,3 +1,4 @@
+import { js_repack_only_is_cases_gate_run } from "./js_repack_only_is_cases_gate_run.mjs";
 import { functions_repack_only_gate_run } from "./functions_repack_only_gate_run.mjs";
 import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate_run.mjs";
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
@@ -561,6 +562,7 @@ export function qa_gates() {
     qa_gates_countless_gate_run,
     bundles_names_missing_gate_run,
     gloss_punctuation_words_gate_run,
+    js_repack_only_is_cases_gate_run,
   ];
   return gates;
 }
