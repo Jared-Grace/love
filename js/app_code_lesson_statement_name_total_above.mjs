@@ -46,8 +46,7 @@ export function app_code_lesson_statement_name_total_above(root) {
   html_div_code(box_named, code_total);
   html_div_cycle_code(box_named, ["Now we can write that name on its own"]);
   let logged = js_code_console_log_statement(name_total);
-  html_div_code(box_named, logged);
-  app_code_writes_out_line(box_named, total);
+  app_code_code_lines_writes_out(box_named, [logged], total);
   ("the total is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
   let comes_to = list_join_empty([
     " comes to ",
