@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_itself_sum_batch() {
     let last = list_last(pair);
     let held_first = js_code_let_statement(name_first, first);
     let held_last = js_code_let_statement(name_last, last);
-    let summed = js_code_binary(name_first, plus, name_last);
+    let summed = js_code_binary_spaced_nb(name_first, plus, name_last);
     let grown = js_code_assign_statement(name_first, summed);
     let logged = js_code_console_log_statement(name_first);
     let lines = [held_first, held_last, grown, logged];
