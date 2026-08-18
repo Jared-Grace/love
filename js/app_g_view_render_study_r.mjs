@@ -1,3 +1,4 @@
+import { app_g_view_render_study_fresh_fresh } from "./app_g_view_render_study_fresh_fresh.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_space } from "./text_split_space.mjs";
