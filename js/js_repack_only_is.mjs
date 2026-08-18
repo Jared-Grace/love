@@ -52,7 +52,18 @@ export function js_repack_only_is(declaration) {
   if (few_is) {
     return false;
   }
-  let r2 = js_repack_only_is_getter(declaration);
+  let r23 = js_repack_only_is_made(declaration);
+  let made2 = property_get(r23, "made");
+  let lifted2 = property_get(r23, "lifted");
+  let assigned2 = property_get(r23, "assigned");
+  let getter2 = property_get(r23, "getter");
+  let r5 = {
+    made: made2,
+    lifted: lifted2,
+    assigned: assigned2,
+    getter: getter2,
+  };
+  let r2 = r5;
   let getter = property_get(r2, "getter");
   let assigned = property_get(r2, "assigned");
   let lifted = property_get(r2, "lifted");
