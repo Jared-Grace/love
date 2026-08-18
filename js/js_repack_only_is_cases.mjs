@@ -3,32 +3,15 @@ import { fn_name } from "./fn_name.mjs";
 export function js_repack_only_is_cases() {
   "Functions written out, each beside the answer the reading of them owes. The sweep built on that reading walks the whole repo, where every answer is a name in a long list and a reading that had quietly started saying no to everything would leave the sweep looking clean. So the reading is pinned here, on functions small enough to check by eye.";
   "The two allowances are the reason this exists rather than a shorter list of the plain shapes. Each was added because the strict rule missed something real, and each is one sentence away from letting a function that does work through, so a corpus that only held the obvious cases would let either be dropped without a word.";
-  "The bodies are written as text because the reading takes a parsed function and there is nowhere else to say what was parsed. They call names nothing answers to on purpose - what is being asked is the shape of the lines, and a real name would tie the case to a function that may be renamed under it.";
-  let f_name = fn_name("property_get");
-  let f_name2 = fn_name("property_get");
-  let f_name3 = fn_name("property_get");
-  let f_name4 = fn_name("property_get");
-  let f_name5 = fn_name("property_get");
-  let f_name6 = fn_name("property_get");
-  let f_name7 = fn_name("property_get");
-  let f_name8 = fn_name("property_get");
-  let f_name9 = fn_name("property_get");
-  let f_name10 = fn_name("property_get");
-  let f_name11 = fn_name("property_get");
-  let f_name12 = fn_name("property_get");
-  let f_name13 = fn_name("property_get");
-  let f_name14 = fn_name("property_get");
-  let f_name15 = fn_name("property_get");
-  let f_name16 = fn_name("property_get");
-  let f_name17 = fn_name("property_get");
-  let f_name18 = fn_name("property_get");
+  "The bodies are written as text because the reading takes a parsed function and there is nowhere else to say what was parsed. The one real name among them is the getter the reading looks for, joined in rather than spelled, so that renaming the getter carries the corpus with it; every other name they call is one nothing answers to, because what is being asked is the shape of the lines.";
+  let getter = fn_name("property_get");
   let cases = [
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name,
+        getter,
         '(r, "x"); let y = ',
-        f_name2,
+        getter,
         '(r, "y"); let v = { x, y }; return v; }',
       ]),
       repack_is: true,
@@ -37,9 +20,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name3,
+        getter,
         '(r, "x"); let y = ',
-        f_name4,
+        getter,
         '(r, "y"); return { x, y }; }',
       ]),
       repack_is: true,
@@ -48,9 +31,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name5,
+        getter,
         '(r, "x"); let y = ',
-        f_name6,
+        getter,
         '(r, "y"); let z = made_here(); return { x, y, z }; }',
       ]),
       repack_is: true,
@@ -59,7 +42,7 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name7,
+        getter,
         '(r, "x"); let y = null; return { x, y }; }',
       ]),
       repack_is: true,
@@ -68,7 +51,7 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name8,
+        getter,
         '(r, "x"); let y = null; if (x) { y = 1; } return { x, y }; }',
       ]),
       repack_is: false,
@@ -77,7 +60,7 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name9,
+        getter,
         '(r, "x"); let y = 1; let z = 2; return { x, y, z }; }',
       ]),
       repack_is: false,
@@ -91,7 +74,7 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name10,
+        getter,
         '(r, "x"); return { x }; }',
       ]),
       repack_is: false,
@@ -100,9 +83,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name11,
+        getter,
         '(r, "x"); let y = ',
-        f_name12,
+        getter,
         '(r, "y"); return { x, z: y }; }',
       ]),
       repack_is: false,
@@ -111,9 +94,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name13,
+        getter,
         '(r, "x"); let y = ',
-        f_name14,
+        getter,
         '(r, "y"); let p = work_one(x); let q = work_two(y); return { x, y }; }',
       ]),
       repack_is: false,
@@ -122,9 +105,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name15,
+        getter,
         '(r, "x"); let y = ',
-        f_name16,
+        getter,
         '(r, "y"); function inner() { return x; } return { x, y, inner }; }',
       ]),
       repack_is: false,
@@ -133,9 +116,9 @@ export function js_repack_only_is_cases() {
     {
       code: text_combine_multiple([
         "function a(r) { let x = ",
-        f_name17,
+        getter,
         '(r, "x"); let y = ',
-        f_name18,
+        getter,
         '(r, "y"); return [x, y]; }',
       ]),
       repack_is: false,
