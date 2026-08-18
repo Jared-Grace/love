@@ -1,13 +1,6 @@
 import { app_g_rows_get } from "./app_g_rows_get.mjs";
-import { each_index } from "./each_index.mjs";
-import { app_g_tile } from "./app_g_tile.mjs";
+import { app_g_div_map_tiles_add_rows } from "./app_g_div_map_tiles_add_rows.mjs";
 export async function app_g_div_map_tiles_add(div_map) {
   let rows = await app_g_rows_get();
-  function lambda2(columns, y) {
-    function lambda(r, x) {
-      app_g_tile(div_map, r, x, y);
-    }
-    each_index(columns, lambda);
-  }
-  each_index(rows, lambda2);
+  app_g_div_map_tiles_add_rows(div_map, rows);
 }
