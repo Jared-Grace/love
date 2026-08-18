@@ -40,14 +40,12 @@ export function app_g_message_overlay(
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
-  let style_text = app_g_emoji_glow_keyframe();
-  html_style_head(style_text);
   let emoji = html_p_text(div, emoji_text);
   html_style_assign(emoji, {
     "font-size": fonts.emoji,
     margin: "0",
-    animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
+  app_g_emoji_glow_apply(emoji);
   let card = html_div(div);
   app_g_overlay_card_style(card);
   let message_p = html_p_text(card, message);

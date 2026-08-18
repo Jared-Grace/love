@@ -36,15 +36,13 @@ export function app_g_prayer_overlay() {
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
-  let style_text = app_g_emoji_glow_keyframe();
-  html_style_head(style_text);
   let text = emoji_pray();
   let emoji = html_p_text(div, text);
   html_style_assign(emoji, {
     "font-size": fonts.emoji,
     margin: "0",
-    animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
+  app_g_emoji_glow_apply(emoji);
   let card = html_div(div);
   app_g_overlay_card_style(card);
   let waiting_text = html_p_text(card, "Waiting on the Lord...");
