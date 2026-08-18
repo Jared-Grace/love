@@ -1,0 +1,22 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+export function app_code_lesson_statement_name_compare_title_name_id() {
+  arguments_assert(arguments, 0);
+  ("the home title: comparing what two names hold, the eleventh Statements lesson, followed by the line that does it");
+  ("The line shown is the whole lesson, and the one thing that makes it this line rather than the sixth lesson's is the symbol in the middle. The names stand in the same two places; only what is being asked of them has changed.");
+  ("The less than symbol rather than any of the other five, because it is the comparison a learner met first and the one every later comparison lesson was written against.");
+  ("Only what is painted changes; the id is built from the words below.");
+  let words = "comparing what two names hold";
+  let name_first = app_code_lesson_statement_name_value_name();
+  let name_last = app_code_lesson_statement_name_two_name();
+  let less_than = js_operator_less_than_symbol();
+  let compared = js_code_binary_spaced_nb(name_first, less_than, name_last);
+  let code = js_code_console_log_statement(compared);
+  let built = app_code_lesson_statement_title_name_id(words, code);
+  return built;
+}
