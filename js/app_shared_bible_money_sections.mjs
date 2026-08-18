@@ -28,23 +28,34 @@ export function app_shared_bible_money_sections() {
       ],
     },
     {
+      title: "A gift here can be your tithe",
+      lines: [
+        "If you tithe, you are welcome to give it here. This is work of the word, and it is provided for the same way.",
+        "What is received here is tithed from in turn. The Levites lived on the tithe and were commanded to give a tenth of what they received (Numbers 18:26).",
+      ],
+    },
+    {
       title: "What a gift is never used for",
       lines: [
-        "Profit. Money that would be profit here belongs instead to somebody who is hungry today, and kindness to the poor is a loan to the Lord (Proverbs 19:17).",
-        "So there is a ceiling. If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference.",
+        "Never profit.",
+        "Scripture says not to be greedy for money (1 Timothy 3:3), so our purpose is not to make ourselves rich. There are too many people hungry and in urgent need today for us to store up profit for ourselves.",
+        "It is also not our purpose to receive your gift and give it away for some other purpose on your behalf.",
+        "If more comes in than the work needs, we stop receiving gifts, or we widen who is paid among the people contributing. We do not keep the difference, and we do not send your money somewhere you did not choose.",
       ],
     },
     {
       title: "Then why receive anything at all",
       lines: [
         "Do not muzzle the ox while it treads out the grain (Deuteronomy 25:4, and Paul says it again of workers in 1 Timothy 5:18).",
-        "The ox is not fed so that it can rest. It is fed so that it can keep producing for others. That is the whole of it, and it is only ever an offer.",
+        "The ox is fed so it can keep producing for others.",
+        "Freely given gifts, never demanded ones, can provide for ministers of God.",
       ],
     },
     {
-      title: "The point is not the money",
+      title: "Our purpose is love, not profit",
       lines: [
-        "It is that the word is shared and taught. Everything above exists to keep that from being sold.",
+        "Our purpose is sharing the word of God.",
+        "The word of God has been freely given to us. So we freely give to you (Matthew 10:8).",
       ],
     },
     {
