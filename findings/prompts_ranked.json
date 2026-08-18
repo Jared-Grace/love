@@ -1,0 +1,166 @@
+{
+ "days": 7,
+ "transcripts": 60,
+ "calls": 44841,
+ "shell_calls": 29254,
+ "shapes": 1733,
+ "checked": 120,
+ "already_allowed": {
+  "shapes": 106,
+  "runs": 23831
+ },
+ "denied": {
+  "shapes": 2,
+  "runs": 128
+ },
+ "unchecked": {
+  "shapes": 1613,
+  "runs": 4666
+ },
+ "candidates": [
+  {
+   "label": "git show",
+   "count": 121,
+   "seconds_total": 472,
+   "seconds_mean": 3.9,
+   "seconds_worst": 257,
+   "milliseconds_total": 472198,
+   "latest": "2026-08-18T06:44:45.606Z",
+   "sample": "git show HEAD:js/permission_grant_names.mjs | grep -oE 'fn_name\\(\"[a-z0-9_]+\"\\)' | sed 's/fn_name(\"//;s/\")//' | sort > /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/head_names.txt; grep -oE 'fn_name\\(\"[a-z0-9_]+\"\\)' js/permission_grant_names.mjs | sed 's/fn_name(\"//;s/\")//' | sort > /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/now_names.txt; wc -l < /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/head_names.txt; wc -l < /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/now_names.txt; echo \"=== added since HEAD:\"; comm -13 /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/head_names.txt /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/now_names.txt; echo \"=== lost since HEAD:\"; comm -23 /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/head_names.txt /tmp/claude-1000/-home-j-a-repos-love/02d4c4a0-5577-4c1f-bcb6-ece1d6a39eba/scratchpad/now_names.txt",
+   "verdict": "ask",
+   "run_name": ""
+  },
+  {
+   "label": "node scripts/ai.mjs function_source_replace",
+   "count": 107,
+   "seconds_total": 5953,
+   "seconds_mean": 55.6,
+   "seconds_worst": 401,
+   "milliseconds_total": 5953081,
+   "latest": "2026-08-14T08:13:00.287Z",
+   "sample": "node scripts/ai.mjs function_source_replace app_g_click_map '  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, player_img_c);' '  (\"a tap on somebody is two things at once: walk over to them, and speak to them once you are there. the second only happens if the first did. a walk that was refused, or one that stopped short because the way was never opened, leaves the player where they were - and a conversation opened from across the room reads as talking through whoever is standing in between\");\n  let beside = await app_g_player_beside_is(clicked_coordinates);\n  let npc_reached = npc_clicked && beside;\n  await app_g_click_npc_if(npc_reached, div_map, npcs_matched, player_img_c);' 2>&1 | tail -5",
+   "verdict": "silent",
+   "run_name": "function_source_replace"
+  },
+  {
+   "label": "node /home/j/repos/love/scripts/ai.mjs g_verify_queue_advance",
+   "count": 79,
+   "seconds_total": 87,
+   "seconds_mean": 1.1,
+   "seconds_worst": 4,
+   "milliseconds_total": 86709,
+   "latest": "2026-08-14T06:24:26.868Z",
+   "sample": "node /home/j/repos/love/scripts/ai.mjs g_verify_queue_advance >/dev/null 2>&1; node /home/j/repos/love/scripts/ai.mjs g_verify_loop_check_line 2>&1 | tail -20",
+   "verdict": "silent",
+   "run_name": "g_verify_queue_advance"
+  },
+  {
+   "label": "node scripts/ai.mjs ai_git_command_args",
+   "count": 78,
+   "seconds_total": 3782,
+   "seconds_mean": 48.5,
+   "seconds_worst": 2250,
+   "milliseconds_total": 3781609,
+   "latest": "2026-08-17T23:43:14.608Z",
+   "sample": "node scripts/ai.mjs ai_git_command_args permission_grant_add_multiple app_ceb_bible_gloss_write_next,app_ceb_bible_gloss_write_file,app_original_bible_gloss_parsings_gate_run,gloss_write_root_files_gate_run,ai_log_triples_frequent,function_write_seams_reached,gloss_write_folder 2>&1 | tail -25",
+   "verdict": "ask",
+   "run_name": "ai_git_command_args"
+  },
+  {
+   "label": "node scripts/ai.mjs examples_gate_run",
+   "count": 50,
+   "seconds_total": 415,
+   "seconds_mean": 8.3,
+   "seconds_worst": 34,
+   "milliseconds_total": 414623,
+   "latest": "2026-08-16T13:43:21.005Z",
+   "sample": "node scripts/ai.mjs examples_gate_run > /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/eg2.txt 2>&1; echo \"exit=$?\"; tail -5 /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/eg2.txt",
+   "verdict": "ask",
+   "run_name": "examples_gate_run"
+  },
+  {
+   "label": "cp",
+   "count": 38,
+   "seconds_total": 1140,
+   "seconds_mean": 30,
+   "seconds_worst": 347,
+   "milliseconds_total": 1140303,
+   "latest": "2026-08-18T07:30:16.963Z",
+   "sample": "cp /tmp/claude-1000/-home-j-a-repos-love/14022d50-7244-483a-bae8-b6aa720867f0/scratchpad/roots.json /home/j/a/repos/love/scripts/temp/roots.json && wc -c /home/j/a/repos/love/scripts/temp/roots.json",
+   "verdict": "silent",
+   "run_name": ""
+  },
+  {
+   "label": "node /home/j/repos/love/scripts/ai.mjs ai_git",
+   "count": 34,
+   "seconds_total": 93,
+   "seconds_mean": 2.7,
+   "seconds_worst": 23,
+   "milliseconds_total": 92505,
+   "latest": "2026-08-14T04:00:05.790Z",
+   "sample": "node /home/j/repos/love/scripts/ai.mjs ai_git 2>&1 | tail -6; git -C /home/j/backup/love_claude_memory status --porcelain | head",
+   "verdict": "silent",
+   "run_name": "ai_git"
+  },
+  {
+   "label": "node scripts/ai.mjs file_text_replace_once",
+   "count": 32,
+   "seconds_total": 1192,
+   "seconds_mean": 37.2,
+   "seconds_worst": 165,
+   "milliseconds_total": 1191956,
+   "latest": "2026-08-13T06:21:36.428Z",
+   "sample": "node scripts/ai.mjs file_text_replace_once scripts/temp/replace_probe.txt repeated ONCE 2>&1 | head -12",
+   "verdict": "silent",
+   "run_name": "file_text_replace_once"
+  },
+  {
+   "label": "function_source_replace",
+   "count": 27,
+   "seconds_total": 1127,
+   "seconds_mean": 41.7,
+   "seconds_worst": 180,
+   "milliseconds_total": 1127006,
+   "latest": "2026-08-14T08:18:24.370Z",
+   "sample": "node scripts/ai.mjs function_source_replace g_arc_prompt_elder_requirements '      \"  not a new believer - and there is room for this, because the conversations are far apart and years pass inside one arc\",' '      \"  not a new believer - by their last conversation they have been walking with God long enough for this to be true of them\",'",
+   "verdict": "silent",
+   "run_name": "function_source_replace"
+  },
+  {
+   "label": "node scripts/ai.mjs permission_grant_add_multiple",
+   "count": 23,
+   "seconds_total": 2728,
+   "seconds_mean": 118.6,
+   "seconds_worst": 548,
+   "milliseconds_total": 2728015,
+   "latest": "2026-08-16T22:53:40.889Z",
+   "sample": "node scripts/ai.mjs permission_grant_add_multiple app_ceb_bible_gloss_write_next,app_ceb_bible_gloss_write_passage,app_ceb_bible_gloss_write_file,app_original_bible_gloss_parsings_gate_run,gloss_write_root_files_gate_run,functions_span_candidates,function_span_candidates,ai_log_triples_frequent,function_write_seams_reached,gloss_write_folder 2>&1 | tail -30",
+   "verdict": "silent",
+   "run_name": "permission_grant_add_multiple"
+  },
+  {
+   "label": "node scripts/ai.mjs qa_app_commit_deploy",
+   "count": 20,
+   "seconds_total": 115,
+   "seconds_mean": 5.7,
+   "seconds_worst": 109,
+   "milliseconds_total": 114712,
+   "latest": "2026-08-18T07:37:43.422Z",
+   "sample": "node scripts/ai.mjs qa_app_commit_deploy replace 79a437c49e > /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/deploy.txt 2>&1; echo \"exit=$?\"; tail -40 /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/deploy.txt",
+   "verdict": "ask",
+   "run_name": "qa_app_commit_deploy"
+  },
+  {
+   "label": "node scripts/ai.mjs app_code_lesson_ids_gate_run",
+   "count": 20,
+   "seconds_total": 1936,
+   "seconds_mean": 96.8,
+   "seconds_worst": 1494,
+   "milliseconds_total": 1935763,
+   "latest": "2026-08-17T10:58:38.256Z",
+   "sample": "node scripts/ai.mjs app_code_lesson_ids_gate_run > /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/lesson_ids.txt 2>&1; echo \"exit=$?\"; tail -25 /tmp/claude-1000/-home-j-repos-love/1b8103ab-2a8e-41ea-b113-22c1cc4f6ed5/scratchpad/lesson_ids.txt",
+   "verdict": "ask",
+   "run_name": "app_code_lesson_ids_gate_run"
+  }
+ ]
+}
