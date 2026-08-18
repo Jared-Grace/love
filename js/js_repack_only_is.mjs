@@ -29,7 +29,14 @@ export function js_repack_only_is(declaration) {
   if (silent_is) {
     return false;
   }
-  let r = js_repack_only_is_answer(node, declaration);
+  let r4 = js_repack_only_is_unfound_is(node, declaration);
+  let unfound_is2 = property_get(r4, "unfound_is");
+  let answer2 = property_get(r4, "answer");
+  let r22 = {
+    unfound_is: unfound_is2,
+    answer: answer2,
+  };
+  let r = r22;
   let answer = property_get(r, "answer");
   let unfound_is = property_get(r, "unfound_is");
   if (unfound_is) {
