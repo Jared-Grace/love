@@ -1,7 +1,8 @@
+import { app_g_view_render_study_fresh_persist_cancel } from "./app_g_view_render_study_fresh_persist_cancel.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { app_g_view_render_study_close } from "./app_g_view_render_study_close.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_g_container } from "./app_g_container.mjs";
@@ -38,10 +39,12 @@ export function app_g_view_render_study_fresh(
     });
   }
   function persist_cancel() {
-    if (not_equal(save_pending, null)) {
-      clearTimeout(save_pending);
-      save_pending = null;
-    }
+    let app_g_view_render_study_fresh_persist_cancel_answer =
+      app_g_view_render_study_fresh_persist_cancel(save_pending);
+    save_pending = property_get(
+      app_g_view_render_study_fresh_persist_cancel_answer,
+      "save_pending",
+    );
   }
   function persist_soon() {
     persist_cancel();
