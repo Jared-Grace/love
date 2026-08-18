@@ -1,3 +1,4 @@
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
@@ -59,8 +60,7 @@ export function app_code_lesson_statement_name_again_above(root) {
   ]);
   html_div_code(box_code, again);
   html_div_cycle_code(box_code, ["Then we write out what is in the cup"]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word_after);
+  app_code_code_lines_writes_out(box_code, [logged], word_after);
   let box_care = app_code_container_light_blue(root);
   html_div_cycle_code(box_care, [
     "The lines happen in the order they are written",
