@@ -1,3 +1,10 @@
+import { property_exists } from "./property_exists.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { not } from "./not.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_set } from "./property_set.mjs";
 export function bible_glyph_gate_run_referents_table(roots, known) {
   "The two checks every seed glyph table owes, run over ONE table.";
   "$plain roots";
