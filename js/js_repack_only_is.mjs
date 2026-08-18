@@ -1,6 +1,6 @@
+import { js_repack_only_is_answer } from "./js_repack_only_is_answer.mjs";
 import { js_repack_only_is_getter } from "./js_repack_only_is_getter.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -30,9 +30,9 @@ export function js_repack_only_is(declaration) {
   if (silent_is) {
     return false;
   }
-  let r = js_repack_only_is_unfound_is(node, declaration);
-  let unfound_is = property_get(r, "unfound_is");
+  let r = js_repack_only_is_answer(node, declaration);
   let answer = property_get(r, "answer");
+  let unfound_is = property_get(r, "unfound_is");
   if (unfound_is) {
     return false;
   }
