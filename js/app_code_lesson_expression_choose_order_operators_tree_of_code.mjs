@@ -22,9 +22,9 @@ export function app_code_lesson_expression_choose_order_operators_tree_of_code(
   let second_piece = list_get(pieces, 1);
   let fourth_piece = list_get(pieces, 3);
   let times = js_operator_asterisk_symbol();
-  let divide = js_operator_division_symbol();
+  let divided_by = js_operator_division_symbol();
   let times_is = equal(fourth_piece, times);
-  let divide_is = equal(fourth_piece, divide);
+  let divide_is = equal(fourth_piece, divided_by);
   let strong_right = or(times_is, divide_is);
   let strong_symbol = ternary(strong_right, fourth_piece, second_piece);
   let weak_symbol = ternary(strong_right, second_piece, fourth_piece);
