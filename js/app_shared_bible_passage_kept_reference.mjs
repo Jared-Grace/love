@@ -1,5 +1,5 @@
 import { app_shared_bible_passage_kept_get } from "./app_shared_bible_passage_kept_get.mjs";
-import { app_shared_bible_reference_english } from "./app_shared_bible_reference_english.mjs";
+import { app_shared_bible_reference_reading } from "./app_shared_bible_reference_reading.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export async function app_shared_bible_passage_kept_reference(context) {
   }
   let chapter_code = property_get(kept, "chapter_code");
   let verse_numbers = property_get(kept, "verse_numbers");
-  let reference = await app_shared_bible_reference_english(
+  let reference = await app_shared_bible_reference_reading(
     chapter_code,
     verse_numbers,
   );
