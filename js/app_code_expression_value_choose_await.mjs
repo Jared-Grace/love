@@ -1,3 +1,4 @@
+import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -5,9 +6,6 @@ import { list_sort_number } from "./list_sort_number.mjs";
 import { noop } from "./noop.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -41,9 +39,7 @@ export async function app_code_expression_value_choose_await(
   let answered = false;
   function each_button(choice) {
     let choice_text = text_to(choice);
-    let b = app_shared_button_wide(box, choice_text, on_click);
-    let background = app_shared_color_gray_light();
-    html_style_background_color_set(b, background);
+    let b = app_code_quiz_choice_button(box, choice_text, on_click);
     async function on_click() {
       if (answered) {
         return;
