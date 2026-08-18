@@ -1,4 +1,4 @@
-import { property_list_get_end_1 } from "./property_list_get_end_1.mjs";
+import { js_visit_above } from "./js_visit_above.mjs";
 import { js_declare_single_identifier_is_if } from "./js_declare_single_identifier_is_if.mjs";
 import { js_identifiers_names_equal_not } from "./js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "./js_literal_is_if.mjs";
@@ -15,7 +15,7 @@ export function js_return_above_combine(ast) {
   "this refactors two sequential statements to be one return statement";
   js_visit_returns_identifiers(ast, lambda2);
   function lambda2({ v, node, argument }) {
-    let e = property_list_get_end_1(v, "stack");
+    let e = js_visit_above(v);
     let l = list_is(e);
     if (not(l)) {
       return;
