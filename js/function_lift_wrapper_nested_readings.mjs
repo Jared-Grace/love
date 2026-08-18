@@ -1,8 +1,6 @@
+import { function_lift_nested_readings_unrefused } from "./function_lift_nested_readings_unrefused.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
-import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_add } from "./list_add.mjs";
 export async function function_lift_wrapper_nested_readings(ast, nested) {
   "Of the functions written inside one function, those whose body the move that leaves the name behind would take, each with the reading that says what it must be given.";
   "The twin of the one beside it, and the wider of the two: this move can take a function written as a value, which is where most of a long function's length here actually sits.";

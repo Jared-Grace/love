@@ -1,8 +1,8 @@
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { permission_prompt_confirmed_rows } from "./permission_prompt_confirmed_rows.mjs";
 import { property_set } from "./property_set.mjs";
 import { permission_replay_rows } from "./permission_replay_rows.mjs";
 import { permission_replay_path } from "./permission_replay_path.mjs";
-import { file_write_json } from "./file_write_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { log } from "./log.mjs";
 export async function permission_replay_write() {
@@ -24,7 +24,8 @@ export async function permission_replay_write() {
   );
   property_set(r, "confirmed", confirmed);
   let path = permission_replay_path();
-  await file_write_json(path, r);
+  ("The reading is written over rather than written fresh. It is a photograph of the last week and there is only ever one worth having, so the second run of a thing meant to run every day must replace yesterday's and not refuse because yesterday's is there.");
+  await file_overwrite_json(path, r);
   let said = {
     days,
     transcripts: property_get(r, "transcripts"),
