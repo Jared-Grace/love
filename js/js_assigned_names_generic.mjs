@@ -1,7 +1,6 @@
+import { js_assigned_target } from "./js_assigned_target.mjs";
+import { js_assigned_visit } from "./js_assigned_visit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { js_node_type } from "./js_node_type.mjs";
-import { js_visit_types } from "./js_visit_types.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_assigned_names_generic(node, target_names) {
@@ -12,14 +11,10 @@ export function js_assigned_names_generic(node, target_names) {
   let names = [];
   function lambda(v) {
     let visited = property_get(v, "node");
-    let type = js_node_type(visited);
-    let stepped_is = equal(type, "UpdateExpression");
-    let target = stepped_is
-      ? property_get(visited, "argument")
-      : property_get(visited, "left");
+    let target = js_assigned_target(visited);
     let found = target_names(target);
     list_add_multiple(names, found);
   }
-  js_visit_types(node, ["AssignmentExpression", "UpdateExpression"], lambda);
+  js_assigned_visit(node, lambda);
   return names;
 }
