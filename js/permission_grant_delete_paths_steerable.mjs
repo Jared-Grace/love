@@ -8,7 +8,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { function_params_names } from "./function_params_names.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { function_params_names } from "./function_params_names.mjs";
+import { not } from "./not.mjs";
 export async function permission_grant_delete_paths_steerable(delete_paths) {
   arguments_assert(arguments, 1);
   ("Of the chains by which a function reaches something that erases, the ones an argument handed to it could actually steer.");
@@ -23,8 +23,9 @@ export async function permission_grant_delete_paths_steerable(delete_paths) {
     let seam_before = subtract(chain.length, 1);
     let callers = list_slice(chain, 0, seam_before);
     let alone = list_empty_is(callers);
+    let called = not(alone);
     let keep = true;
-    if (!alone) {
+    if (called) {
       let caller = list_last(callers);
       let params = await function_params_names(caller);
       keep = greater_than(params.length, 0);
