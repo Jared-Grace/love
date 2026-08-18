@@ -1,4 +1,3 @@
-import { app_code_lesson_quiz_container_correction } from "./app_code_lesson_quiz_container_correction.mjs";
 import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
