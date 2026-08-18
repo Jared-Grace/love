@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { bless_people_phrase } from "./bless_people_phrase.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function bless_prayer_text(count) {
@@ -5,8 +6,11 @@ export function bless_prayer_text(count) {
   "'God bless those two people'.";
   "It is deliberately SHORT, because it is prayed once every few seconds for the whole";
   "game and a long prayer said that often stops being prayed and starts being skipped.";
-  "The fuller `prayer_blessing` form belongs to the two prayers said once a session - the";
-  "one up front that gives the whole game to real people, and the amen that closes it.";
-  let text = text_combine("God bless ", bless_people_phrase(count));
+  ("The fuller `",
+    fn_name("prayer_blessing"),
+    "` form belongs to the two prayers said once a session - the");
+  ("one up front that gives the whole game to real people, and the amen that closes it.");
+  let right = bless_people_phrase(count);
+  let text = text_combine("God bless ", right);
   return text;
 }
