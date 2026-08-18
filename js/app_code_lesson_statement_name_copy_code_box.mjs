@@ -9,7 +9,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
-import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_code_box(
   root,
