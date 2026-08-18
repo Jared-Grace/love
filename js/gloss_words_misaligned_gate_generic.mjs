@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { gloss_chapters_words_misaligned } from "./gloss_chapters_words_misaligned.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -11,7 +12,10 @@ export async function gloss_words_misaligned_gate_generic(
   "Gate over one gloss store: no authored chapter may carry a passage whose word explanations have stopped lining up with the passage itself. Throws so the dispatcher seam exits nonzero.";
   "The page paints the explanations under the passage in order and nothing on it repeats which word each one is about, so the reader takes the third explanation to be about the third word. One word skipped therefore does not read as a gap - it reads as every later word being explained wrongly, and it reads that way to somebody studying scripture, which is the whole reason this is worth a gate rather than a note.";
   "It starts at nothing and there is no baseline beside it, because a list to add offenders to would turn a red light into a place to write things down. A store that is not clean today therefore stays out of the whole-repo list until it is, named in the exempt list with what is wrong, rather than having its faults written down as expected.";
-  let offenders = await gloss_chapters_words_misaligned(fn, words_read);
+  "How many chapters were read travels out with the verdict, because finding nothing wrong and reading nothing at all are the same word otherwise - and these stores sit on a drive that is not always mounted, which is the ordinary way a sweep here stops reaching anything.";
+  let found = await gloss_chapters_words_misaligned(fn, words_read);
+  let offenders = property_get(found, "offenders");
+  let chapters = property_get(found, "chapters");
   let count = list_size(offenders);
   let any = greater_than(count, 0);
   if (any) {
@@ -26,6 +30,7 @@ export async function gloss_words_misaligned_gate_generic(
     throw new Error(message);
   }
   let r = {
+    chapters,
     offenders: 0,
   };
   return r;
