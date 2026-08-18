@@ -1,3 +1,5 @@
+import { text_slash_forward } from "./text_slash_forward.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { app_shared_page_dev_build_is } from "./app_shared_page_dev_build_is.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
@@ -24,7 +26,10 @@ export function app_index_dev_build_card(root) {
     let name2 = fn_name("app_index");
     let name = app_shared_name_prefix_without(name2);
     let file = file_name_html(name);
-    let url = list_join_slash_forward([folder, file]);
+    let path = list_join_slash_forward([folder, file]);
+    ("counted from the top of the site rather than from the page asking, because the dev folder sits at the top and nowhere else. Asked relatively it would be right from the page people see and wrong from the checked-over copy one folder in, which would look for a dev folder inside that copy and find nothing.");
+    let root_mark = text_slash_forward();
+    let url = text_combine(root_mark, path);
     function opened() {
       "gone to in this tab rather than opened beside it, so the browser's own back button is the way back and a phone is not left with tabs to close";
       window_go(url);

@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_lift_nested_readings_unrefused } from "./function_lift_nested_readings_unrefused.mjs";
+import { js_function_handback_refusals } from "./js_function_handback_refusals.mjs";
 export async function function_lift_handback_nested_readings(ast, nested) {
   arguments_assert(arguments, 2);
   ("Of the functions written inside one function, those whose body the move that hands its writes back would take, each with the reading that says what it must be given.");
