@@ -47,5 +47,10 @@ export async function bundles_names_missing() {
   }
   let answered_again = await list_map_unordered_async(offenders, again);
   let still = list_filter(answered_again, short_is);
-  return still;
+  ("How many built files were read travels out beside what was found. A folder that has been emptied, renamed or never built answers with no offenders, which is the same word a clean set of builds answers with, and the count of files read is the only part that falls in the first case.");
+  let r = {
+    bundles: list_size(built),
+    offenders: still,
+  };
+  return r;
 }
