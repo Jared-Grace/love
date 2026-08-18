@@ -1,9 +1,10 @@
+import { function_span_cut_or_undo } from "./function_span_cut_or_undo.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_span_candidates } from "./function_span_candidates.mjs";
 import { function_span_cut_skip_or_null } from "./function_span_cut_skip_or_null.mjs";
 import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
-import { function_functionize } from "./function_functionize.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
