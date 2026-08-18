@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_ast_nested_named } from "./function_ast_nested_named.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_lift_handback_nested_readings } from "./function_lift_handback_nested_readings.mjs";
+import { function_lift_candidate_rows } from "./function_lift_candidate_rows.mjs";
 export async function function_lift_handback_candidates(f_name) {
   arguments_assert(arguments, 1);
   ("Every function written inside the named one whose body could be moved out to hand its writes back, with how many lines of work it holds and what it would have to be handed. Biggest first.");
