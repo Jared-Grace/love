@@ -15,6 +15,7 @@ export function apps_all_main_fns() {
     "app_examples",
     "app_g",
     "app_g_bible",
+    "app_g_bless",
     "app_g_verify",
     "app_index",
     "app_karate",

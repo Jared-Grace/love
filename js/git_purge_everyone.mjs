@@ -1,5 +1,8 @@
-import { command_line_git_multiple } from "./command_line_git_multiple.mjs";
+import { git_current_run_multiple } from "./git_current_run_multiple.mjs";
 export async function git_purge_everyone() {
-  let commands_everyone = ["fetch origin", "reset --hard origin/main"];
-  await command_line_git_multiple(commands_everyone);
+  let commands_everyone = [
+    ["fetch", "origin"],
+    ["reset", "--hard", "origin/main"],
+  ];
+  await git_current_run_multiple(commands_everyone);
 }
