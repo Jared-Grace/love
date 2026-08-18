@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   let number_first = 2;
   let number_last = 3;
   let total = add(number_first, number_last);
-  let names_sum = js_code_binary_spaced_nb(name, plus, name_last);
+  let names_sum = app_code_lesson_statement_names_added();
   let start = 7;
   let more = js_code_binary_spaced_nb(name, plus, 1);
   let once = add(start, 1);
