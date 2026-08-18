@@ -11,7 +11,7 @@ export function ebible_licence_marks() {
   "The GNU documentation licence sits under all rights reserved rather than over it, because it is one of the terms this repo may ship on and the refusing marks all come first. The one page carrying it carries nothing else, so where it sits changes no verdict today; it sits where it does so that a page carrying both would be refused rather than allowed.";
   let marks = [
     {
-      licence: "cc_by_nc_nd",
+      licence: ebible_licence_cc_by_nc_nd(),
       mark: "creativecommons.org/licenses/by-nc-nd/",
     },
     {
