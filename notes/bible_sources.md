@@ -69,23 +69,41 @@ The gloss corpus (`app_original_bible`, `app_ceb_bible`) inserts nothing into th
 verse either, but before shipping an ND text into a glossing app, check that the
 renderer for it holds notes apart from the words.
 
-### The ND change rescues nobody currently shipped
+### What accepting ND actually changes
 
-Measured 2026-08-18. All three translations the licence gate refuses are refused
-for **non-commercial**, not for ND:
+`ebible_languages_licences_commercial_not_bible_folders` answers **six** today.
+Measured 2026-08-18, with the licence each page states:
 
-| folder | language | terms | why refused |
+| folder | language | licence as read | freed by accepting ND? |
 | --- | --- | --- | --- |
-| `thaKJV` | Thai | CC BY-NC-ND 4.0 — "You do not sell this work for a profit" | non-commercial |
-| `wolmbs` | Wolof | CC BY-NC-ND 4.0 (stated in French) | non-commercial |
-| `amh` | Amharic | UBS — "Every commercial use … needs written permission" | non-commercial |
+| `turytc` | Turkish | `cc_by_nd` | **yes** |
+| `zlmKSZI` | Malay | `cc_by_nd` | **yes** |
+| `polubg` | Polish (Updated Gdańsk) | `cc_by_nd` | **yes** |
+| `thaKJV` | Thai | `cc_by_nc_nd` | no — non-commercial |
+| `wolmbs` | Wolof | `cc_by_nc_nd` | no — non-commercial |
+| `amh` | Amharic | `unknown` | no — prose terms, no readable grant |
 
-Accepting ND *adds* three translations that were previously refused, all CC BY-ND
-4.0 with no non-commercial clause: `turytc` (Turkish), `zlmKSZI` (Malay),
-`polubg` (Polish, Updated Gdańsk).
+So accepting ND takes the offenders from six to three, and the three that remain
+are refused for reasons the ND ruling does not touch. Amharic's page states its
+terms in prose the mark-reader cannot classify, which counts as refused: an unread
+page has granted nothing that can be pointed at.
 
 Thai and Wolof therefore need a source that is not eBible, or they come out of the
 shipped list. Amharic has one: see below.
+
+### The unit that has to exist before ND is switched on
+
+`ebible_licence_derivatives_forbidden_is` and
+`ebible_languages_derivatives_forbidden_bible_folders` answer which shipped
+translations have frozen words. They are deliberately **separate** from the
+shippable question, because the two answers come apart: ND is shippable *and*
+frozen; NC is unfrozen *and* refused. Folding them together is what kept ND
+refused for a reason that belonged to NC.
+
+Adding `ebible_licence_cc_by_nd()` to `ebible_licences_commercial` is a one-line
+change and has **not** been made. What it waits on is a renderer that keeps a note
+beside a frozen verse rather than inside it, and something that stops an ND text
+reaching a path that rewrites words.
 
 ## Other sources, and how each states its terms
 
