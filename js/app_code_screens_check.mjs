@@ -1,4 +1,4 @@
-import { app_code_screens_baseline_path } from "./app_code_screens_baseline_path.mjs";
+import { app_code_screens_accepted_path } from "./app_code_screens_accepted_path.mjs";
 import { app_code_screens_records_summary } from "./app_code_screens_records_summary.mjs";
 import { app_code_screens_manifest_records_write } from "./app_code_screens_manifest_records_write.mjs";
 import { app_code_screens_diff } from "./app_code_screens_diff.mjs";
@@ -11,7 +11,7 @@ export async function app_code_screens_check(url_prefix, current_path) {
   let mechanical = property_get(both, "summary");
   await app_code_screens_manifest_records_write(records, current_path);
   let reload = await app_code_reload_persists_test(url_prefix);
-  let baseline_path = app_code_screens_baseline_path();
+  let baseline_path = app_code_screens_accepted_path();
   let diff = await app_code_screens_diff(baseline_path, current_path);
   let report = {
     mechanical,
