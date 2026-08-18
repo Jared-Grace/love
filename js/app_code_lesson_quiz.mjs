@@ -1,7 +1,4 @@
-import { app_code_lesson_quiz_on_qa_change } from "./app_code_lesson_quiz_on_qa_change.mjs";
-import { app_code_lesson_quiz_value } from "./app_code_lesson_quiz_value.mjs";
-import { app_code_lesson_quiz_parent_container } from "./app_code_lesson_quiz_parent_container.mjs";
-import { app_code_lesson_quiz_container_question } from "./app_code_lesson_quiz_container_question.mjs";
+import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
@@ -24,7 +21,7 @@ export function app_code_lesson_quiz(
   next_get,
 ) {
   let question_label = property_get(info, "question_label");
-  let r = app_code_lesson_quiz_container_question(
+  let r = app_code_lesson_quiz_answer_label_set(
     info,
     qa,
     container_blue_light,
@@ -34,28 +31,13 @@ export function app_code_lesson_quiz(
     quizzes,
     refresh,
   );
-  let r4 = app_code_lesson_quiz_parent_container(r);
-  let parent_container = property_get(r4, "parent_container");
-  let container_correction = property_get(r4, "container_correction");
-  let container_success_message = property_get(r4, "container_success_message");
-  let r3 = app_code_lesson_quiz_value(r4, parent_container);
-  let value = property_get(r3, "value");
-  let quiz_index = property_get(r3, "quiz_index");
-  let answer_label = property_get(r3, "answer_label");
-  let qli = property_get(r3, "qli");
-  let r2 = app_code_lesson_quiz_on_qa_change(
-    r3,
-    value,
-    qli,
-    context,
-    parent_container,
-    quiz_index,
-    quizzes,
-    refresh,
-    container_success_message,
-  );
-  let container_question = property_get(r2, "container_question");
-  let answer_label_set = property_get(r2, "answer_label_set");
+  let answer_label_set = property_get(r, "answer_label_set");
+  let container_question = property_get(r, "container_question");
+  let r2 = property_get(r, "r2");
+  let answer_label = property_get(r, "answer_label");
+  let quiz_index = property_get(r, "quiz_index");
+  let container_success_message = property_get(r, "container_success_message");
+  let container_correction = property_get(r, "container_correction");
   let answers_div = property_get(r2, "answers_div");
   let qa_for = property_get(r2, "qa_for");
   let answer_property = property_get(r2, "answer_property");
