@@ -1,3 +1,4 @@
+import { ebible_licence_cc_by_nd } from "./ebible_licence_cc_by_nd.mjs";
 import { ebible_licence_gfdl } from "./ebible_licence_gfdl.mjs";
 import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
 import { ebible_licence_cc_by_sa } from "./ebible_licence_cc_by_sa.mjs";
@@ -18,7 +19,7 @@ export function ebible_licence_marks() {
       mark: "creativecommons.org/licenses/by-nc/",
     },
     {
-      licence: "cc_by_nd",
+      licence: ebible_licence_cc_by_nd(),
       mark: "creativecommons.org/licenses/by-nd/",
     },
     {
