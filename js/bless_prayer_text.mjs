@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { bless_people_phrase } from "./bless_people_phrase.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { bless_prayer_of } from "./bless_prayer_of.mjs";
 export function bless_prayer_text(count) {
   "The prayer the player reads for the people in front of them - 'God bless that person',";
   "'God bless those two people'.";
@@ -11,6 +11,6 @@ export function bless_prayer_text(count) {
     "` form belongs to the two prayers said once a session - the");
   ("one up front that gives the whole game to real people, and the amen that closes it.");
   let right = bless_people_phrase(count);
-  let text = text_combine("God bless ", right);
+  let text = bless_prayer_of(right);
   return text;
 }
