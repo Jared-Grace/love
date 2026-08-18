@@ -1,28 +1,24 @@
+import { app_reply_lambda6 } from "./app_reply_lambda6.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
 import { log } from "./log.mjs";
 import { list_map_existing } from "./list_map_existing.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { text_alphabet_includes } from "./text_alphabet_includes.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
-import { text_take_less_1 } from "./text_take_less_1.mjs";
 import { equal } from "./equal.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_clear } from "./list_clear.mjs";
@@ -157,22 +153,14 @@ export async function app_reply(context) {
     return r2;
   }
   function lambda6(event) {
-    let key = property_get(event, "key");
-    key = text_lower_to(key);
-    if (equal(key, "backspace")) {
-      let ne = text_empty_not_is(typed);
-      if (ne) {
-        typed = text_take_less_1(typed);
-      }
-    } else {
-      let includes = text_alphabet_includes(key);
-      if (includes) {
-        if (greater_than(visible_count, 0)) {
-          typed += key;
-        }
-      }
-    }
-    visible_count = buttons_refresh();
+    let app_reply_lambda6_answer = app_reply_lambda6(
+      event,
+      typed,
+      visible_count,
+      buttons_refresh,
+    );
+    typed = property_get(app_reply_lambda6_answer, "typed");
+    visible_count = property_get(app_reply_lambda6_answer, "visible_count");
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
