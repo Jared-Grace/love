@@ -1,6 +1,6 @@
-import { js_repack_only_is_properties } from "./js_repack_only_is_properties.mjs";
-import { js_repack_only_is_answer } from "./js_repack_only_is_answer.mjs";
-import { js_repack_only_is_getter } from "./js_repack_only_is_getter.mjs";
+import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
+import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
+import { js_repack_only_is_made } from "./js_repack_only_is_made.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
 import { list_includes } from "./list_includes.mjs";
