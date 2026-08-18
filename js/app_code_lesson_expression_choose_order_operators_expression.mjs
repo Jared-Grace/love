@@ -20,10 +20,10 @@ export function app_code_lesson_expression_choose_order_operators_expression(
   ("The weak operator's number is then drawn to fit what the strong step already came to. On a minus line it is drawn at or below that value when the minus takes it away, and at or above it when it is what the value is taken from, so no line this lesson prints can fall below zero. On a plus line nothing has to be avoided and it is drawn freely.");
   ("Numbers from 2 up, never 0 or 1, because a line that multiplies or divides by 1 comes out the same as the line without it, and a learner reading such a line learns nothing about which operator went first.");
   let times = js_operator_asterisk_symbol();
-  let divide = js_operator_division_symbol();
+  let divided_by = js_operator_division_symbol();
   let plus = js_operator_plus_symbol();
   let minus = js_operator_minus_symbol();
-  let strong_symbols = [times, divide];
+  let strong_symbols = [times, divided_by];
   let weak_symbols = [plus, minus];
   let strong_symbol = list_random_item(strong_symbols);
   let weak_symbol = list_random_item(weak_symbols);
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_choose_order_operators_expression(
   let pair_first = list_get(pair, 0);
   let pair_second = list_get(pair, 1);
   let product = app_code_operator_solve(pair_first, times, pair_second);
-  let divide_is = equal(strong_symbol, divide);
+  let divide_is = equal(strong_symbol, divided_by);
   ("for times the pair is the two numbers as drawn; for divide the number being divided is their product, so that dividing by the second gives the first back exactly");
   let strong_first = ternary(divide_is, product, pair_first);
   let strong_value = app_code_operator_solve(
