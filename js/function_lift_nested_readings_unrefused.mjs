@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_function_nested_lift_reading } from "./js_function_nested_lift_reading.mjs";
+import { list_add } from "./list_add.mjs";
 export async function function_lift_nested_readings_unrefused(
   ast,
   nested,
