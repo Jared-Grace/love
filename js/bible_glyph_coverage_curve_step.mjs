@@ -11,7 +11,6 @@ export function bible_glyph_coverage_curve_step(r) {
   let curve = property_get(r, "curve");
   let occurrences_total = property_get(r, "occurrences_total");
   let counted = property_get(r, "counted");
-  let table_reads = property_get(r, "table_reads");
   let steps = property_get(r, "steps");
   for (let step of steps) {
     let past = greater_than(step, counted.length);
@@ -36,7 +35,7 @@ export function bible_glyph_coverage_curve_step(r) {
     let share_drawn = divide(reached_drawn, occurrences_total);
     let n3 = multiply(share_drawn, 1000);
     let tenths_drawn = round(n3);
-    let percent_drawn = table_reads ? divide(tenths_drawn, 10) : null;
+    let percent_drawn = divide(tenths_drawn, 10);
     list_add(curve, {
       words: step,
       occurrences: reached,
