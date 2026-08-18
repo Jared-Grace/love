@@ -11,6 +11,7 @@ export function daemons_names() {
   let f_name4 = fn_name("g_content_backup_auto");
   let f_name5 = fn_name("qa_commit_named_auto");
   let f_name6 = fn_name("qa_gate_timings_write_when_quiet_auto");
-  let v = [f_name, f_name2, f_name3, f_name4, f_name5, f_name6];
+  let f_name7 = fn_name("permission_replay_write_auto");
+  let v = [f_name, f_name2, f_name3, f_name4, f_name5, f_name6, f_name7];
   return v;
 }
