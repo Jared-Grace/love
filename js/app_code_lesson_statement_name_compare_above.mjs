@@ -19,6 +19,7 @@ export function app_code_lesson_statement_name_compare_above(root) {
   ("The third box exists because only two answers are possible here. A learner who left this screen having seen true come out twice would have been given no reason to believe the line can say anything else, and the questions would then be answerable by habit.");
   ("It turns the question around rather than changing the numbers, which is the smallest change that gets the other answer. New numbers would have moved two things at once and left it open which of them the answer followed.");
   ("The reason the third box answers differently is said in the line that introduces it, not underneath it. A learner reads the code with the reason already in hand, instead of reading it, being surprised, and then being told.");
+  ("The second box's line shows both ways in it rather than naming only the new one, and says the old way first inside the line as well as first on the screen - written the same way as the sixth Statements lesson, which is the screen this one changes one symbol of.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let less_than = js_operator_less_than_symbol();

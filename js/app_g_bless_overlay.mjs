@@ -27,18 +27,18 @@ import { bless_summary_earned } from "./bless_summary_earned.mjs";
 import { bless_view_count } from "./bless_view_count.mjs";
 export function app_g_bless_overlay(div_map) {
   arguments_assert(arguments, 1);
-  "The prayer game, small enough to look at: a patch of ground seen from above, the cone the";
-  "player is looking down washed lighter, and one button that prays for everybody in it.";
-  "The whole loop is here and nothing else is - no walking, no travel, no world. What it";
-  "exists to answer is the one question no reasoning settles: how a cone FEELS. Whether";
-  "three tiles deep is a crowd or an empty field, and whether turning to find people is a";
-  "pleasure or a chore, are judgements that need eyes on a screen.";
-  "The prayer is on the button rather than beside it, so the player reads the words as they";
-  "pray them. Reading the prayer is the player's part of this game; a label they skipped";
-  "would leave the game praying by itself, which is the one thing it must never do.";
-  "Praying lights the people it covers with the gold glow, and only them. The glow is the";
-  "proof the count was honest - a player can see two people lit and know that both are who";
-  "the words just named.";
+  ("The prayer game, small enough to look at: a patch of ground seen from above, the cone the");
+  ("player is looking down washed lighter, and one button that prays for everybody in it.");
+  ("The whole loop is here and nothing else is - no walking, no travel, no world. What it");
+  ("exists to answer is the one question no reasoning settles: how a cone FEELS. Whether");
+  ("three tiles deep is a crowd or an empty field, and whether turning to find people is a");
+  ("pleasure or a chore, are judgements that need eyes on a screen.");
+  ("The prayer is on the button rather than beside it, so the player reads the words as they");
+  ("pray them. Reading the prayer is the player's part of this game; a label they skipped");
+  ("would leave the game praying by itself, which is the one thing it must never do.");
+  ("Praying lights the people it covers with the gold glow, and only them. The glow is the");
+  ("proof the count was honest - a player can see two people lit and know that both are who");
+  ("the words just named.");
   let overlay = app_g_overlay(div_map);
   let people = app_g_bless_crowd();
   let street = app_g_bless_street();
@@ -63,7 +63,7 @@ export function app_g_bless_overlay(div_map) {
     }
     app_g_bless_turn_buttons(container, turned);
     function pray() {
-      ("the glow goes on first and the screen is left alone for a moment, because a redraw would replace the very elements that are glowing - the blessing has to be watched landing before the board can move on");
+      "the glow goes on first and the screen is left alone for a moment, because a redraw would replace the very elements that are glowing - the blessing has to be watched landing before the board can move on";
       each(markers, app_g_emoji_glow_apply);
       let at = date_now_milliseconds();
       let blessing = bless_blessing(count, at);
