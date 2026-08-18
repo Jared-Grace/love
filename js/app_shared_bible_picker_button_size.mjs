@@ -1,3 +1,5 @@
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { app_shared_style_control_padding } from "./app_shared_style_control_padding.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
@@ -13,17 +15,19 @@ export function app_shared_bible_picker_button_size(count) {
       font: "1.3em",
       pad_x: app_shared_font_size_label(),
       pad_y: app_shared_style_control_padding(),
-      margin_x: "0.2em",
+      margin_x: app_shared_spaced_tiny_gap(),
       margin_y: app_shared_content_edge_gap(),
     };
     return large;
   }
+  ("the crowded set holds itself apart by the thinnest measure the shared scale names, which is what it was already doing to within a fifth of a pixel before the measure had a name here");
+  let tight = app_shared_spaced_frame_gap();
   let standard = {
     font: "1em",
     pad_x: "0.3em",
     pad_y: "0.3em",
-    margin_x: "0.12em",
-    margin_y: "0.12em",
+    margin_x: tight,
+    margin_y: tight,
   };
   return standard;
 }
