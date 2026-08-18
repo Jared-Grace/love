@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { bible_glyph_gate_run_character } from "./bible_glyph_gate_run_character.mjs";
 import { bible_glyph_gate_run_orthodox } from "./bible_glyph_gate_run_orthodox.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
