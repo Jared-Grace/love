@@ -1,12 +1,11 @@
+import { property_get } from "./property_get.mjs";
+import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
 import { js_assigned_names } from "./js_assigned_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_find_return_try } from "./js_find_return_try.mjs";
 import { null_is } from "./null_is.mjs";
-import { js_return_argument_get } from "./js_return_argument_get.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
@@ -32,13 +31,9 @@ export function js_repack_only_is(declaration) {
   if (silent_is) {
     return false;
   }
-  let answer = js_return_argument_get(node);
-  let named = js_identifier_name_try(answer);
-  let bound_is = null_not_is(named);
-  if (bound_is) {
-    answer = js_name_set_from_node_try(declaration, named);
-  }
-  let unfound_is = null_is(answer);
+  let r = js_repack_only_is_unfound_is(node, declaration);
+  let unfound_is = property_get(r, "unfound_is");
+  let answer = property_get(r, "answer");
   if (unfound_is) {
     return false;
   }
