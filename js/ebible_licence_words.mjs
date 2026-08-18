@@ -1,3 +1,4 @@
+import { ebible_licence_cc_by_nd } from "./ebible_licence_cc_by_nd.mjs";
 import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
 import { ebible_licence_cc_by_sa } from "./ebible_licence_cc_by_sa.mjs";
 import { ebible_licence_gfdl } from "./ebible_licence_gfdl.mjs";
@@ -24,7 +25,7 @@ export function ebible_licence_words(licence) {
       words: "Creative Commons Attribution Share-Alike",
     },
     {
-      licence: "cc_by_nd",
+      licence: ebible_licence_cc_by_nd(),
       words: "Creative Commons Attribution No-Derivatives",
     },
     {
