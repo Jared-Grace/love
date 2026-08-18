@@ -10,6 +10,7 @@ export async function bible_glyph_artwork_assets_tree() {
   "The artwork set's own listing of the folder holding its pictures - one entry per picture, each carrying the name it is kept under and the address of what is inside it.";
   "THE ADDRESS OF WHAT IS INSIDE IS THE HALF WORTH KEEPING, and it is why this answers entries rather than names. The names alone say whether the set has a picture at all; the addresses are what lets somebody go one level further and see how that particular picture is arranged, which is the question when a name is right and the file still cannot be found.";
   "It is read from the set every time rather than kept in a file, because a copy of somebody else's listing is stale the day their set grows and nothing here would notice.";
+  "THE LISTING SERVICE IS RATIONED where the fetching one is not: about sixty requests an hour from a caller it does not know. That is ample for the job - correcting a handful of names is a few requests and is done rarely - but it is why nothing in the fetching path ever asks it. A run that downloads seventy pictures must not be able to run out of listing.";
   let source = bible_glyph_artwork_source();
   let tree_url = property_get(source, "tree_url");
   let top_text = await http_text_or_null(tree_url);
@@ -17,7 +18,7 @@ export async function bible_glyph_artwork_assets_tree() {
   let top_read = not(b);
   assert_json(top_read, {
     tree_url,
-    hint: "the artwork set's listing could not be read - has the address moved, or is the service refusing to answer for now?",
+    hint: "the artwork set's listing could not be read. the listing service allows only about sixty requests an hour from a caller it does not know, so the usual cause is having asked too much of it recently rather than the address being wrong - waiting an hour is the whole remedy.",
   });
   let top = json_from(top_text);
   let top_entries = property_get(top, "tree");
