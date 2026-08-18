@@ -66,6 +66,15 @@ export async function function_span_cut_skip_or_null(
     };
     return unspelled;
   }
+  let repeated_is = function_name_word_repeated_is(f_name_new);
+  if (repeated_is) {
+    let doubled = {
+      address_to,
+      f_name_new,
+      why: "the word the run ends on is the word its holder is already called, so the name would say that one word twice running and the second telling would narrow nothing. Would you like to choose the name yourself?",
+    };
+    return doubled;
+  }
   let search = await function_exists(f_name_new);
   let taken = property_get(search, "exists");
   if (taken) {
