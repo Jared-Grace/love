@@ -25,7 +25,8 @@ export function app_search_results_render(
     "the testament cards open ahead of the books inside them, since a reader who folded one away would otherwise press this and watch nothing happen there";
     app_search_results_collapse_setters_set(testament_collapse_setters, false);
     app_search_results_collapse_setters_set(book_collapse_setters, false);
-    await app_search_results_collect_all_texts(button_list);
+    let squashed = await app_search_results_collect_all_texts(button_list);
+    return squashed;
   }
   function collapse_all_lambda() {
     "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
@@ -33,8 +34,8 @@ export function app_search_results_render(
     app_search_results_collapse_setters_set(book_collapse_setters, true);
   }
   async function copy_all_lambda() {
-    "let the reader copy every matching verse in one click, without first expanding them all on screen";
-    let squashed = await app_search_results_collect_all_texts(button_list);
+    "copying is opening and then taking a copy of what was opened: the reader is left looking at the very verses now on their clipboard, so they can see what they have got rather than trust that something happened. It is the opening button's own work, called rather than written again, so the two can never come to open different things";
+    let squashed = await expand_all_lambda();
     await list_join_newline_2_copy(squashed);
   }
   ("the three buttons stand in one row, so each wears a picture for the same reason the copying one always has: a reader picks the one they want by its picture before they have read any of the words");
