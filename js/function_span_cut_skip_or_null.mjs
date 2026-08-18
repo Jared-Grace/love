@@ -1,3 +1,4 @@
+import { text_size_1 } from "./text_size_1.mjs";
 import { function_name_word_repeated_is } from "./function_name_word_repeated_is.mjs";
 import { function_span_opening_is } from "./function_span_opening_is.mjs";
 import { text_digits_only } from "./text_digits_only.mjs";
@@ -49,6 +50,14 @@ export async function function_span_cut_skip_or_null(
       why: "the run ends on a word with a number counted into it, which is how somebody writes a second one of something rather than how they say what it is, so a function named after it would say only that it was the eighteenth. Would you like to name that line for what it holds first?",
     };
     return serial;
+  }
+  let letter_is = text_size_1(address_to);
+  if (letter_is) {
+    let placeholder = {
+      address_to,
+      why: "the run ends on a word of one letter, which is what somebody writes when they have nothing to call a thing yet rather than what they write when they do. A function named after it would carry that emptiness into the repo under a name that reads as chosen. Would you like to name that line for what it holds first?",
+    };
+    return placeholder;
   }
   let known = await function_exists(address_to);
   let answered_to_is = property_get(known, "exists");
