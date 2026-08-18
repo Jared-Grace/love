@@ -1,3 +1,8 @@
+import { app_emoji_bible_key_shown_get } from "./app_emoji_bible_key_shown_get.mjs";
+import { app_emoji_bible_key_shown_toggle } from "./app_emoji_bible_key_shown_toggle.mjs";
+import { app_emoji_bible_key_shown_button_text } from "./app_emoji_bible_key_shown_button_text.mjs";
+import { bible_glyph_chapter_rosetta_verses } from "./bible_glyph_chapter_rosetta_verses.mjs";
+import { app_emoji_bible_verse_key_draw } from "./app_emoji_bible_verse_key_draw.mjs";
 import { app_emoji_bible_tradition_get } from "./app_emoji_bible_tradition_get.mjs";
 import { app_emoji_bible_tradition_toggle } from "./app_emoji_bible_tradition_toggle.mjs";
 import { app_emoji_bible_tradition_button_text } from "./app_emoji_bible_tradition_button_text.mjs";
@@ -20,6 +25,9 @@ export async function app_emoji_bible(context) {
   "The page opens at the size the reader already chose in the bible reader next door, because a picture Bible is read the way scripture is read and a person who made the words bigger there did not mean only there. There is no size control of its own here yet, so borrowing theirs is the only size the page could honestly open at.";
   "The reader chooses how the cross is drawn, and nothing about any verse changes when they do. A verse names glyphs and never characters, so an Orthodox reader and a Western reader are reading the same stored Bible drawn two ways - which is the whole reason the vocabulary and the verses were separated in the first place.";
   "The page is drawn again from the top when that choice changes, rather than the crosses already on the screen being hunted down and swapped. Drawing it again is one call and cannot miss one; hunting them down is a search that silently leaves behind any cross reached by a path nobody thought of.";
+  "The reader may put a KEY under every verse, and the key is where the pictures are actually taught. Under the pictures go the same verse in the language it was written in and the same verse word for word in English, and NOBODY IS TOLD WHAT ANY PICTURE MEANS anywhere on the page. A reader who knows one of the two known lines works the pictures out from it, which is how the Rosetta stone was read - and everyone who does that arrives at the same meanings, because a picture is keyed to the original word rather than to anybody's translation.";
+  "The key opens DOWN. The picture Bible is the thing being offered, and a page that printed the English under every verse before being asked would have quietly become an English Bible with pictures over it - which is the exact failure this whole project exists to avoid.";
+  "A verse the picture chapter has not reached yet has no key, because the key is built by matching the hand-written chapter against the downloaded interlinear verse by verse. Half-written chapters are the normal state of this work and must not stop the verses that ARE written from being read.";
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
   let root = app_shared_mobile_default_bible_font_size(context);
@@ -36,10 +44,27 @@ export async function app_emoji_bible(context) {
   }
   let button_text = app_emoji_bible_tradition_button_text(tradition);
   app_shared_button(bar, button_text, lambda_tradition);
+  let key_shown = app_emoji_bible_key_shown_get();
+  async function lambda_key() {
+    app_emoji_bible_key_shown_toggle();
+    await app_emoji_bible(context);
+  }
+  let key_text = app_emoji_bible_key_shown_button_text(key_shown);
+  app_shared_button(bar, key_text, lambda_key);
   let chapters = bible_glyph_chapters();
   let traditions = app_emoji_bible_traditions(tradition);
   for (let chapter of chapters) {
     html_div_text_bold(content, chapter.reference);
+    if (key_shown) {
+      let rows = await bible_glyph_chapter_rosetta_verses(
+        chapter.chapter_code,
+        traditions,
+      );
+      for (let row of rows) {
+        app_emoji_bible_verse_key_draw(content, row);
+      }
+      continue;
+    }
     let lines = bible_glyph_chapter_lines(chapter.chapter_code, traditions);
     html_p_text_multiple(content, lines);
   }
