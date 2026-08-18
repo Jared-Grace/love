@@ -1,3 +1,8 @@
+import { app_emoji_bible_tradition_get } from "./app_emoji_bible_tradition_get.mjs";
+import { app_emoji_bible_tradition_toggle } from "./app_emoji_bible_tradition_toggle.mjs";
+import { app_emoji_bible_tradition_button_text } from "./app_emoji_bible_tradition_button_text.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
@@ -13,7 +18,8 @@ export async function app_emoji_bible(context) {
   "The page shows EVERY authored chapter at once rather than asking the reader to pick one, and that is right while there is one chapter and wrong once there are fifty. A picker is what the reader needs when choosing costs them something; today choosing would cost them a tap to see the only thing there is. The moment a second book appears this grows the same book and chapter picker every other bible app here already shares.";
   "There is no language setting and there is nothing to translate, which is the entire point of the app: a reader who has never met English still meets the heart, the fire and the seed. What English is left on the page is the grammar, and that is the honest state of the project rather than a decision that has been made.";
   "The page opens at the size the reader already chose in the bible reader next door, because a picture Bible is read the way scripture is read and a person who made the words bigger there did not mean only there. There is no size control of its own here yet, so borrowing theirs is the only size the page could honestly open at.";
-  "No tradition is laid over the vocabulary here, so the base glyphs are what is drawn. The lookup takes the traditions so that an Orthodox reader can one day be given the cross their own churches draw without a single verse being rewritten.";
+  "The reader chooses how the cross is drawn, and nothing about any verse changes when they do. A verse names glyphs and never characters, so an Orthodox reader and a Western reader are reading the same stored Bible drawn two ways - which is the whole reason the vocabulary and the verses were separated in the first place.";
+  "The page is drawn again from the top when that choice changes, rather than the crosses already on the screen being hunted down and swapped. Drawing it again is one call and cannot miss one; hunting them down is a search that silently leaves behind any cross reached by a path nobody thought of.";
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
   let root = app_shared_mobile_default_bible_font_size(context);
@@ -23,8 +29,15 @@ export async function app_emoji_bible(context) {
   app_shared_content_column_pad(bar);
   app_shared_content_column_pad(content);
   html_div_text_bold(bar, "The Bible in pictures");
+  let tradition = app_emoji_bible_tradition_get();
+  async function lambda_tradition() {
+    app_emoji_bible_tradition_toggle();
+    await app_emoji_bible(context);
+  }
+  let button_text = app_emoji_bible_tradition_button_text(tradition);
+  app_shared_button(bar, button_text, lambda_tradition);
   let chapters = bible_glyph_chapters();
-  let traditions = [];
+  let traditions = app_emoji_bible_traditions(tradition);
   for (let chapter of chapters) {
     html_div_text_bold(content, chapter.reference);
     let lines = bible_glyph_chapter_lines(chapter.chapter_code, traditions);
