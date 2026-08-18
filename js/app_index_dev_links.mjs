@@ -6,8 +6,16 @@ export function app_index_dev_links() {
   "Add a line when you want the human to look at something, and take it away once they have. It is meant to be short: a list long enough to need reading has stopped saving the taps it exists to save.";
   let r = [
     {
+      app_fn: fn_name("app_g_bless"),
+      hash: {},
+      label: "Praying game",
+      text: "The praying game's first screen - look a way, see who is standing in front of you, and pray for them. Nothing is saved and there is nowhere to walk yet",
+    },
+    {
       app_fn: fn_name("app_ceb_bible"),
-      hash: { c: "PRO31" },
+      hash: {
+        c: "PRO31",
+      },
       label: "Cebuano Proverbs 31",
       text: "The first Cebuano chapter with word explanations written by hand rather than generated",
     },
