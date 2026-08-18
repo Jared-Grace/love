@@ -22,12 +22,10 @@ export function app_code_lesson_statement_name_one_more_above(root) {
   html_div_cycle_code(box_twice, [
     "Say that line twice and the name goes up twice",
   ]);
-  let code9 = js_code_let_statement(name, start);
-  html_div_code(box_twice, code9);
-  html_div_code(box_twice, code);
-  html_div_code(box_twice, code);
-  let code10 = js_code_console_log_statement(name);
-  html_div_code(box_twice, code10);
-  app_code_writes_out_line(box_twice, twice);
+  ("the four lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the two middle lines being the same line twice is the whole of what this box shows.");
+  let held = js_code_let_statement(name, start);
+  let logged = js_code_console_log_statement(name);
+  let lines = [held, code, code, logged];
+  app_code_code_lines_writes_out(box_twice, lines, twice);
   html_div_cycle_code(box_twice, ["This is how a program counts"]);
 }

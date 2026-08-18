@@ -56,14 +56,13 @@ export function app_code_lesson_statement_name_two_above(root) {
   let logged = js_code_console_log_statement(name_last);
   let box_code = app_code_container_light_blue(root);
   html_div_cycle_code(box_code, ["In JS we make both cups like this"]);
-  html_div_code(box_code, held_first);
-  html_div_code(box_code, held_last);
+  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
+  html_div_code_lines(box_code, [held_first, held_last]);
   html_div_cycle_code(box_code, [
     "Then we write out whatever is inside the cup called ",
     name_last,
   ]);
-  html_div_code(box_code, logged);
-  app_code_writes_out_line(box_code, word_last);
+  app_code_code_lines_writes_out(box_code, [logged], word_last);
   ("the last box says which of the two names comes out, and says it by colour rather than by words - the name written out and the word inside wear the same coloured tile a line apart");
   app_code_lesson_inside_parenthesis_box(root, name_last, name_first);
 }
