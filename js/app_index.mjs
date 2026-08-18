@@ -1,3 +1,4 @@
+import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
 import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
 import { app_index_about_open } from "./app_index_about_open.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -10,6 +11,8 @@ import { property_get } from "./property_get.mjs";
 export function app_index(context) {
   app_shared_app_fn_set(context, app_index);
   let root = property_get(context, "root");
+  ("the way into the dev builds comes before even the working links, because it is not a place to go but a choice of which copy of everything below it the rest of this page leads to");
+  app_index_dev_build_card(root);
   ("the working links come before the apps, and only on a machine on this same network: while something is being worked on they are the reason this page was opened, and the top is the part a phone shows without scrolling");
   app_index_dev_links_show(root);
   ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
