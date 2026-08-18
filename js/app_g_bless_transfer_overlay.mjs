@@ -4,6 +4,8 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { bless_prayer_transfer } from "./bless_prayer_transfer.mjs";
 export function app_g_bless_transfer_overlay(overlay, on_amen) {
   arguments_assert(arguments, 2);
@@ -13,8 +15,14 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("stopped early never prayed - and they are the majority. Prayed first, it is already true");
   ("of every blessing that follows while that blessing is being said, and a player who closes");
   ("the tab after two minutes has still prayed for the world they live in.");
-  ("Nothing is drawn behind it yet. The first thing on the screen is the player's own words,");
-  ("which is the game admitting what it actually is.");
+  ("The world is standing behind it, and is covered over solid rather than dimmed. The panel");
+  ("every other g screen puts up is a see-through wash, because those panels interrupt a game");
+  ("the player is already inside and the world showing through is what says the game is still");
+  ("there. This one is not an interruption; it is the door. A street and a crowd and a row of");
+  ("arrows glowing faintly through the prayer would be the game asking to be played while the");
+  ("player is being asked to pray, and the prayer would lose - so the first thing on the");
+  ("screen is the player's own words and nothing else at all.");
+  html_style_background_color_set(overlay, app_shared_color_page_background());
   let container = app_g_container_player(overlay);
   let prayer = bless_prayer_transfer();
   app_g_p_text(container, prayer);
