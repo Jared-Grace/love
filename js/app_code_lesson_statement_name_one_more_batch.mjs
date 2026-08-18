@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_statement_name_one_more_batch() {
   function program_of(start) {
     "the three lines that give a name a number, give it one more than it holds, and write out what it holds now";
     let held = js_code_let_statement(name, start);
-    let more = js_code_binary(name, plus, 1);
+    let more = js_code_binary_spaced_nb(name, plus, 1);
     let grown = js_code_assign_statement(name, more);
     let logged = js_code_console_log_statement(name);
     let lines = [held, grown, logged];
