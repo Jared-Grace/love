@@ -8,8 +8,8 @@ export function text_markers_found(text, markers) {
   "The wording is given a space at the front before anything is looked for in it, because every phrase looked for carries the space that has to stand before it and one opening a sentence has nothing in front of it to find.";
   let lower = text_lower_to(text);
   let padded = text_combine(" ", lower);
-  function marker_found(marker) {
-    let found = text_includes(padded, marker);
+  function marker_found(phrase) {
+    let found = text_includes(padded, phrase);
     return found;
   }
   let standing = list_filter(markers, marker_found);
