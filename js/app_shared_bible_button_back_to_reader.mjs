@@ -1,4 +1,4 @@
-import { app_shared_bible_reference_english } from "./app_shared_bible_reference_english.mjs";
+import { app_shared_bible_reference_reading } from "./app_shared_bible_reference_reading.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_passage_kept_get } from "./app_shared_bible_passage_kept_get.mjs";
@@ -34,7 +34,7 @@ export async function app_shared_bible_button_back_to_reader(parent, context) {
   if (unchosen) {
     return null;
   }
-  let reference = await app_shared_bible_reference_english(
+  let reference = await app_shared_bible_reference_reading(
     chapter_code,
     verse_numbers,
   );
