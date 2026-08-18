@@ -17,7 +17,8 @@ export function js_calls_to_each_apply(ast, names) {
     let body = property_get(node, "body");
     let list_of_statements_is = list_is(body);
     let known_is = list_includes(bodies, body);
-    let wanted_is = and(list_of_statements_is, not(known_is));
+    let right = not(known_is);
+    let wanted_is = and(list_of_statements_is, right);
     if (wanted_is) {
       list_add(bodies, body);
     }

@@ -1,3 +1,5 @@
+import { app_index_dev_pages } from "./app_index_dev_pages.mjs";
+import { app_index_dev_page_card } from "./app_index_dev_page_card.mjs";
 import { app_index_dev_link_card } from "./app_index_dev_link_card.mjs";
 import { app_index_dev_links } from "./app_index_dev_links.mjs";
 import { each } from "./each.mjs";
@@ -13,5 +15,11 @@ export function app_index_dev_links_show(root) {
       app_index_dev_link_card(root, link);
     }
     each(links, link_show);
+    ("A page kept by hand is listed here too, after the working links. It is reached by its file name rather than by an app's name, so it is a different kind of card, but it is wanted in the same place and for the same reason: it exists to be tapped rather than typed.");
+    let pages = app_index_dev_pages();
+    function page_show(page) {
+      app_index_dev_page_card(root, page);
+    }
+    each(pages, page_show);
   }
 }

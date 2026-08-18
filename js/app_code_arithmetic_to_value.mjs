@@ -1,40 +1,13 @@
-import { integer_random_below } from "./integer_random_below.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { add } from "./add.mjs";
-import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_code_arithmetic_to_value_parts } from "./app_code_arithmetic_to_value_parts.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_to } from "./text_to.mjs";
 export function app_code_arithmetic_to_value(value) {
-  "a random small arithmetic expression that evaluates to value (value at least 2), returned as { code, symbol }: code is the expression string, symbol is its operator (+, - or /) so a caller can vary the operator across examples. Each of +, - and / always has a form for any such value - so a true equality can pair two different-looking expressions of the same value (3 + 4 === 5 + 2), and the learner sees the two sides are worked out first and only then compared. No * form, because a small product needs a factor pair the value may not have; the three chosen forms need no such luck.";
-  function form_add() {
-    "value split into two addends, both at least 1";
-    let a = integer_random_below(value);
-    let b = subtract(value, a);
-    let r = [a, "+", b];
-    return r;
-  }
-  function form_subtract() {
-    "a larger number minus a small one, landing on value";
-    let b = integer_random(1, 4);
-    let a = add(value, b);
-    let r2 = [a, "-", b];
-    return r2;
-  }
-  function form_divide() {
-    "a multiple of a small divisor, divided back down to value";
-    let b = integer_random(2, 4);
-    let a = multiply(value, b);
-    let r3 = [a, "/", b];
-    return r3;
-  }
-  let forms = [form_add, form_subtract, form_divide];
-  let chosen = list_random_item(forms);
-  let parts = chosen();
-  let left = text_to(parts[0]);
-  let symbol = parts[1];
-  let right = text_to(parts[2]);
+  ("a random small arithmetic expression that comes to the value asked for (value at least 2), written out: { code, symbol } - code is the line, symbol is its operator, so a caller can vary the operator across examples");
+  ("The writing of what the piece maker made. Which forms exist and which numbers they use is decided in one place, so a lesson that prints the line and a lesson that presses it a step at a time can never be shown two different sets of lines.");
+  let parts = app_code_arithmetic_to_value_parts(value);
+  let left = text_to(parts.left);
+  let symbol = parts.symbol;
+  let right = text_to(parts.right);
   let code = text_combine_multiple([left, " ", symbol, " ", right]);
   let result = {
     code,
