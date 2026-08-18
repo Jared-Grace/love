@@ -9,7 +9,26 @@ export function app_code_review_present(r, home_button, context) {
   let r2 = app_code_review_present_has_next(r);
   let has_next = property_get(r2, "has_next");
   let back_button = property_get(r2, "back_button");
-  let r3 = app_code_review_present_passed(r2, r);
+  let success_container2 = property_get(r2, "success_container");
+  let c = property_get(r2, "c");
+  let key = property_get(r2, "key");
+  let queue = property_get(r2, "queue");
+  let r42 = property_get(r2, "r4");
+  let skip_button = property_get(r42, "skip_button");
+  let go_next = property_get(r42, "go_next");
+  let progress = property_get(r42, "progress");
+  let passed = property_get(r, "passed");
+  let r5 = {
+    success_container: success_container2,
+    c,
+    key,
+    queue,
+    skip_button,
+    go_next,
+    progress,
+    passed,
+  };
+  let r3 = r5;
   let r4 = app_code_review_present_restart_button(r3, r);
   let restart_button = property_get(r4, "restart_button");
   let success_container = property_get(r4, "success_container");
