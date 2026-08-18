@@ -1,3 +1,4 @@
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { g_genders_get } from "./g_genders_get.mjs";
@@ -24,12 +25,14 @@ export function app_g_characters() {
   let genders = g_genders_get();
   let directions = g_directions_all();
   let sheet = html_div(column);
+  ("the room between two character blocks and the room above the whole sheet are one measure, taken from the shared scale");
+  let sheet_gap = app_shared_spaced_gap();
   html_style_assign(sheet, {
     display: "flex",
     "flex-wrap": "wrap",
-    gap: "0.75rem",
+    gap: sheet_gap,
     "justify-content": "center",
-    "margin-top": "0.75rem",
+    "margin-top": sheet_gap,
   });
   function character_block(img) {
     let block = html_div(sheet);
