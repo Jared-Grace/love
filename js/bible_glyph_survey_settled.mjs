@@ -1,3 +1,10 @@
+import { bible_glyph_undrawn_deliberate } from "./bible_glyph_undrawn_deliberate.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { add } from "./add.mjs";
+import { list_add } from "./list_add.mjs";
+import { multiply_divide_round } from "./multiply_divide_round.mjs";
+import { divide } from "./divide.mjs";
 export function bible_glyph_survey_settled(unmapped, occurrences_total) {
   "The undrawn words split into the two piles that mean opposite things: the ones nobody has chosen a picture for yet, and the ones a picture was refused on purpose.";
   "$plain unmapped";
@@ -20,7 +27,11 @@ export function bible_glyph_survey_settled(unmapped, occurrences_total) {
     }
     list_add(outstanding, word);
   }
-  let tenths = multiply_divide_round(occurrences_refused, 1000, occurrences_total);
+  let tenths = multiply_divide_round(
+    occurrences_refused,
+    1000,
+    occurrences_total,
+  );
   let percent_refused = divide(tenths, 10);
   let r = {
     outstanding,
