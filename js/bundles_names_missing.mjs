@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
@@ -10,7 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { bundle_names_missing } from "./bundle_names_missing.mjs";
 export async function bundles_names_missing() {
-  "Every built file under the dev folder that reads a name of this repo's own it never defines, answered as the file and the names it is short of.";
+  "Every built file under the dev folder that reads a name of this repo's own it never defines, answered as the file and the names it is short of, beside how many built files were read to find them.";
   "Every file rather than the entry points alone, because a lazily loaded piece is a page's boot just as much as the file naming it - it simply fails later, when the reader reaches whatever needed it.";
   "Which files exist is asked of the folder rather than written down, so a newly built app is covered the day it is built and nobody has to remember to add it here.";
   let f_path2 = app_shared_name_dev_text();
