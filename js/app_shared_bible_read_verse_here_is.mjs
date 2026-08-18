@@ -55,13 +55,7 @@ export async function app_shared_bible_read_verse_here_is(
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     app_shared_button_arrow_right(bar, chapter_next);
   }
-  app_shared_bible_settings_gear(
-    bar,
-    content,
-    languages_chosen,
-    context,
-    count_status,
-  );
+  app_shared_bible_settings_gear(bar, content, context, count_status);
   async function fetch_language(lc) {
     let r = await app_shared_bible_fetch_language(
       lc,
