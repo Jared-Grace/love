@@ -34,7 +34,30 @@ export function app_code_lesson_quiz(
   );
   let answer_label_set = property_get(r, "answer_label_set");
   let container_question = property_get(r, "container_question");
-  let r2 = app_code_lesson_quiz_container_correction(r);
+  let r22 = property_get(r, "r2");
+  let answer_label2 = property_get(r, "answer_label");
+  let r32 = app_code_lesson_quiz_correction_render(r, r22);
+  let correction_render2 = property_get(r32, "correction_render");
+  let on_answer2 = property_get(r32, "on_answer");
+  let on_question2 = property_get(r32, "on_question");
+  let quiz_question2 = property_get(r32, "quiz_question");
+  let answer_property2 = property_get(r32, "answer_property");
+  let qa_for2 = property_get(r32, "qa_for");
+  let answers_div2 = property_get(r32, "answers_div");
+  let container_correction2 = property_get(r32, "container_correction");
+  let r4 = {
+    answer_label: answer_label2,
+    r3: r32,
+    correction_render: correction_render2,
+    on_answer: on_answer2,
+    on_question: on_question2,
+    quiz_question: quiz_question2,
+    answer_property: answer_property2,
+    qa_for: qa_for2,
+    answers_div: answers_div2,
+    container_correction: container_correction2,
+  };
+  let r2 = r4;
   let container_correction = property_get(r2, "container_correction");
   let answers_div = property_get(r2, "answers_div");
   let qa_for = property_get(r2, "qa_for");
