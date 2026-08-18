@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_g_bless_glows_follow } from "./app_g_bless_glows_follow.mjs";
 import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { bless_cone_view } from "./bless_cone_view.mjs";
@@ -27,6 +28,9 @@ export function app_g_bless_overlay_render(r, npcs) {
   let walking = property_get(r2, "walking");
   function render() {
     let cone = cone_get();
+    ("any light still burning is laid again before anything else, because the street steps");
+    ("between one of these and the next and the people it was prayed over have moved");
+    app_g_bless_glows_follow(glows);
     app_g_bless_wash(wash, cone);
     html_clear(told);
     let view = bless_cone_view(cone, npcs);
