@@ -1,3 +1,6 @@
+import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
+import { bible_interlinear_verse_original_text } from "./bible_interlinear_verse_original_text.mjs";
+import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapter_original_lines(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter to read. It names a stretch of text and nothing that runs.";
@@ -9,11 +12,7 @@ export async function bible_glyph_chapter_original_lines(chapter_code) {
   let verse_number = 0;
   for (let verse of verses) {
     verse_number = verse_number + 1;
-    let originals = [];
-    for (let word of verse.words) {
-      list_add(originals, word.original);
-    }
-    let joined = list_join_space(originals);
+    let joined = bible_interlinear_verse_original_text(verse);
     let line = verse_number + " " + joined;
     list_add(lines, line);
   }
