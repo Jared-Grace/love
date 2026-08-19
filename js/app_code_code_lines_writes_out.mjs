@@ -4,7 +4,7 @@ import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function app_code_code_lines_writes_out(parent, lines, value) {
   arguments_assert(arguments, 3);
