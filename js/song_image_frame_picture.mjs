@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -13,7 +14,7 @@ export function song_image_frame_picture(frame, state, candidate) {
     html_style_set(picture, "width", wide ? "50%" : "100%");
     html_style_set(picture, "height", wide ? "100%" : "50%");
     html_style_set(picture, "left", wide && state.flip ? "50%" : "0");
-    html_style_set(picture, "top", !wide && state.flip ? "50%" : "0");
+    html_style_set(picture, "top", not(wide) && state.flip ? "50%" : "0");
     return picture;
   }
   html_style_set(picture, "width", "100%");
