@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_operators_expression_parts(
@@ -17,7 +18,13 @@ export function app_code_lesson_expression_choose_order_operators_expression_par
     let tree_right = app_code_expression_node(left, weak_symbol, inner_right);
     return tree_right;
   }
-  let inner_left = app_code_expression_node(left, strong_symbol, middle);
-  let tree_left = app_code_expression_node(inner_left, weak_symbol, right);
+  let tree_left =
+    app_code_lesson_expression_choose_order_and_before_or_expression_parts(
+      left,
+      strong_symbol,
+      middle,
+      weak_symbol,
+      right,
+    );
   return tree_left;
 }
