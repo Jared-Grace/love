@@ -49,10 +49,7 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("the reach is asked for AFTER the prayer is written down, because what was just prayed");
       ("is what might have finished the place off - asking first would always be one blessing");
       ("behind and the last unit of a block would never be the one that earned it");
-      let earned = bless_rung_earned_is(blessed, person, rung);
-      if (earned) {
-        rung = bless_rung_after(rung);
-      }
+      rung = bless_rung_climbed(blessed, person, rung);
       render();
     }
     app_g_bless_pray_overlay(container_map, rung, amen);
