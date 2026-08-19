@@ -38,6 +38,15 @@ export function app_g_bless_person_step(world, person) {
   ("about and the player is not one of them. Left in, somebody would eventually walk onto");
   ("the square the player is standing on and the player would be inside the crowd instead");
   ("of among it.");
+  ("Nobody walks out of their own life. A tile too far from home is refused before the");
+  ("directions are even looked at, which is what keeps the people who live at a door near");
+  ("that door and the people out walking on the pavement. Without it every address in the");
+  ("game would be true for about a minute and then be a lie, because the twelve people the");
+  ("prayer calls one building would have wandered off in twelve directions.");
+  ("Somebody standing outside their own reach is let go anywhere instead, because that");
+  ("person can only have got there by being set down there when their doorstep was full -");
+  ("and held to a rule they already break, they would never take a step again. Loose, they");
+  ("wander until they meet the street they belong to, and are kept from then on.");
   let player = property_get(world, "player");
   let taken = g_coordinates_key(player);
   let neighbors_get = g_coordinates_neighbors_walkable_get(world);
@@ -49,13 +58,29 @@ export function app_g_bless_person_step(world, person) {
     return free;
   }
   let open = list_filter(neighbors, open_is);
+  let home = property_get(person, "home");
+  let roam = property_get(person, "roam");
+  function home_is(neighbor) {
+    let tile = property_get(neighbor, "neighbor");
+    let near = bless_home_reaches(home, roam, tile);
+    return near;
+  }
+  let near = list_filter(open, home_is);
+  let nowhere = list_empty_is(near);
+  let inside = bless_home_reaches(home, roam, person);
+  let strayed = not(inside);
+  let lost = and(nowhere, strayed);
+  let choices = near;
+  if (lost) {
+    choices = open;
+  }
   let tiles = {};
   function tile_note(neighbor) {
     let tile = property_get(neighbor, "neighbor");
     let direction = g_direction(person, tile);
     property_set(tiles, direction, tile);
   }
-  each(open, tile_note);
+  each(choices, tile_note);
   let heading = property_get(person, "heading");
   let ways = bless_walk_ways(heading);
   function way_open_is(option) {
