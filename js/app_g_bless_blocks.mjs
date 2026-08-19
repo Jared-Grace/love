@@ -1,7 +1,7 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_max } from "./list_max.mjs";
@@ -34,8 +34,7 @@ export function app_g_bless_blocks(rows) {
   ("is drawn as nothing, so the failure would be a street that visibly stops.");
   let measured = bless_block(0, 0);
   let walls = property_get(measured, "walls");
-  let sidewalk = property_get(measured, "sidewalk");
-  let tiles = list_concat(walls, sidewalk);
+  let tiles = list_concat_property(walls, measured, "sidewalk");
   function x_of(tile) {
     let tile_x = property_get(tile, "x");
     return tile_x;
