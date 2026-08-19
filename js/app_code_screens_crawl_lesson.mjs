@@ -1,3 +1,4 @@
+import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
@@ -26,13 +27,7 @@ export async function app_code_screens_crawl_lesson(
     page,
     records,
   );
-  await page.goto(quiz_url);
-  await page.waitForTimeout(180);
-  let first = await app_code_screen_capture(page);
-  first.id = id;
-  first.screen = "quiz";
-  first.kind = 0;
-  list_add(records, first);
+  await app_code_screen_capture_record(page, quiz_url, id, "quiz", 0, records);
   let v6 = app_code_screen_hash_key();
   let f_name = fn_name("app_code_quiz");
   let combined = text_combine_multiple([",", v6, "=", f_name]);
