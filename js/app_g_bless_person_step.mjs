@@ -58,8 +58,8 @@ export function app_g_bless_person_step(world, person) {
   each(open, tile_note);
   let heading = property_get(person, "heading");
   let ways = bless_walk_ways(heading);
-  function way_open_is(way) {
-    let is = property_exists(tiles, way);
+  function way_open_is(option) {
+    let is = property_exists(tiles, option);
     return is;
   }
   let ways_open = list_filter(ways, way_open_is);
