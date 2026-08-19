@@ -43,8 +43,8 @@ export async function qa_app_bible_folders(reach, f_name) {
   }
   let folders = [];
   for (let language of languages) {
-    let each = ebible_language_bible_folders(language);
-    list_add_multiple(folders, each);
+    let language_folders = ebible_language_bible_folders(language);
+    list_add_multiple(folders, language_folders);
   }
   let prefix = "ebible_folder_";
   for (let name of reach) {
