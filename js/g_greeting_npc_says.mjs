@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -15,8 +16,7 @@ export function g_greeting_npc_says(
   arguments_assert(arguments, 5);
   let sky_maybe = property_get(r, "sky_maybe");
   let b = property_get(r, "b");
-  let r2 = property_get(r, "r2");
-  let remark_maybe = property_get(r2, "remark_maybe");
+  let remark_maybe = property_path_get_2(r, "r2", "remark_maybe");
   if (not(b)) {
     let rare = boolean_random_n(6);
     if (rare) {
