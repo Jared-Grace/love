@@ -11,6 +11,7 @@ export async function ebible_languages_curated_codes() {
   "Which languages the hand-written list already covers, named the way eBible names them rather than the way this repo stores them.";
   "Asked so that the generated list beside it can leave those languages alone. The two lists spell the same language differently - this repo has Turkish under two letters and eBible has it under three - so they cannot be compared as they are written, and comparing what they were written about is the only join that holds.";
   "Each entry is looked up by the folder it names, because a folder is one translation and one translation is in one language. The original-language entry is not a downloaded translation at all, so it is looked up, found missing, and left out.";
+  "A folder with no eBible page is asked of the other catalogue before being given up on. Left out, it would say a language is uncovered while a reader is already being offered it, and the generated list beside this one would then add that language a second time from a different translation. So the fallback is not politeness towards a second source - it is what keeps this answer from being wrong the moment one exists.";
   let copyrights = await ebible_versions_copyrights();
   let curated = ebible_languages_curated();
   let folder_key = bible_folder_key();
@@ -24,7 +25,13 @@ export async function ebible_languages_curated_codes() {
     );
     let missing = null_is(found);
     if (missing) {
-      return null;
+      let carried = door43_version_or_null(bible_folder);
+      let unknown = null_is(carried);
+      if (unknown) {
+        return null;
+      }
+      let code = property_get(carried, code_key);
+      return code;
     }
     let language_code = property_get(found, code_key);
     return language_code;
