@@ -1,28 +1,28 @@
 export function bless_marks_climbed_cases() {
-  ("What following the marks is supposed to get a player, for crowds small enough that the");
-  ("answer can be argued to rather than run.");
-  ("Every answer here is worked out from the ladder's sizes on paper. That is the whole");
-  ("point of a case: an expected value copied back out of the function it is checking says");
-  ("only that the code still does what it did, which is exactly what it does after it has");
-  ("been broken. How far the player climbs and whether anybody is left behind can both be");
-  ("reasoned, so both are written down and nothing else is.");
-  ("The crowds are whole containers, because a part-filled one has no interesting answer.");
-  ("Three people are a household, twelve are a building, sixty are a block - so each of");
-  ("those crowds ends one rung higher than the last, and the three answers differ from one");
-  ("another rather than agreeing by luck.");
-  ("Nobody is left dark in any of them, and that is a claim rather than a hope. The player");
-  ("meets every person and prays for the ones who are dark, so a person can only finish");
-  ("dark by never being met - and a stride sharing no factor with the crowd reaches all of");
-  ("them exactly once.");
-  ("A rung is reached because the LAST prayer earns it. When the final dark face is lit,");
-  ("every person in the crowd is done, so every household is, so every building is - and");
-  ("the rung after the largest whole container is not earned, because that one needs more");
-  ("people than the crowd holds. Sixty people are one block of a neighbourhood of twelve,");
-  ("so the climb stops at the block whatever order the crowd is met in.");
-  ("The scattered strides are the ones that matter. Met one after another, a household");
-  ("arrives whole and finishes itself by accident, which is the easy case and the one a");
-  ("real pavement never gives; a stride steps across households and buildings, so the game");
-  ("has to add up part-finished places that were started a long time apart.");
+  "What following the marks is supposed to get a player, for crowds small enough that the";
+  "answer can be argued to rather than run.";
+  "Every answer here is worked out from the ladder's sizes on paper. That is the whole";
+  "point of a case: an expected value copied back out of the function it is checking says";
+  "only that the code still does what it did, which is exactly what it does after it has";
+  "been broken. How far the player climbs and whether anybody is left behind can both be";
+  "reasoned, so both are written down and nothing else is.";
+  "The crowds are whole containers, because a part-filled one has no interesting answer.";
+  "Three people are a household, twelve are a building, sixty are a block - so each of";
+  "those crowds ends one rung higher than the last, and the three answers differ from one";
+  "another rather than agreeing by luck.";
+  "Nobody is left dark in any of them, and that is a claim rather than a hope. The player";
+  "meets every person and prays for the ones who are dark, so a person can only finish";
+  "dark by never being met - and a stride sharing no factor with the crowd reaches all of";
+  "them exactly once.";
+  "A rung is reached because the LAST prayer earns it. When the final dark face is lit,";
+  "every person in the crowd is done, so every household is, so every building is - and";
+  "the rung after the largest whole container is not earned, because that one needs more";
+  "people than the crowd holds. Sixty people are one block of a neighbourhood of twelve,";
+  "so the climb stops at the block whatever order the crowd is met in.";
+  "The scattered strides are the ones that matter. Met one after another, a household";
+  "arrives whole and finishes itself by accident, which is the easy case and the one a";
+  "real pavement never gives; a stride steps across households and buildings, so the game";
+  "has to add up part-finished places that were started a long time apart.";
   let cases = [
     {
       count: 3,
