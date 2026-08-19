@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
@@ -15,6 +16,7 @@ import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 export function app_code_lesson_statement_name_total_above(root) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: naming a number, then naming what an operator between two names comes to, and then the reason that name may be written wherever the sum was");
   ("One idea said twice. The line this lesson teaches is built of two halves a learner already has - the giving of a name, and a sum of two names - and only the giving is repeated here, with the sum slotted into the place a written-out value used to stand. So the reminder shows the half that repeats, not the half being slotted in.");
