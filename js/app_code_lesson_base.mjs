@@ -38,19 +38,16 @@ export function app_code_lesson_base(
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
-          let a = app_code_lesson_above(
+          ("the card is the one this app draws code beside its output in everywhere, so the worked example wears exactly what a box read before the questions wears. What the example adds is the button beside it, which is why the button is not part of the card.");
+          let container = app_code_code_output(
             parent,
             example_question_label,
             question,
             on_question,
+            example_answer_label,
+            answer,
+            on_example_answer,
           );
-          let container = property_get(a, "container");
-          let answer_shown = null_not_is(example_answer_label);
-          ("no label means the example has no answer to show - a lesson whose example is worked through on the page has already shown the answer by the time it is finished, and printing it beside the line gives it away before anybody has pressed anything");
-          if (answer_shown) {
-            app_code_example_answer_label(container, example_answer_label);
-            on_example_answer(container, answer);
-          }
           let r = {
             container,
           };
