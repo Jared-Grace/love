@@ -24,6 +24,7 @@ export function js_hash_key_getters_cases() {
         'let hash = html_hash_object_get();\nlet property_name = app_shared_bible_verse_hash_key();\nproperty_set(hash, property_name, "");',
       ),
       getters: [f_name2],
+      own: [f_name2],
       why: "the same call lifted onto a line of its own, which is what the canonicalizing pass leaves behind and what nearly every file here holds",
     },
     {
