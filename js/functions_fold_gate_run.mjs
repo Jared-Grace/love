@@ -1,4 +1,4 @@
-import { fold_pairs_mutual_unmarked } from "./fold_pairs_mutual_unmarked.mjs";
+import { functions_duplicates_groups_unmarked } from "./functions_duplicates_groups_unmarked.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -21,7 +21,7 @@ export async function functions_fold_gate_run() {
   let split = fold_pairs_split(sites);
   let soundable = property_get(split, "soundable");
   let mutual = property_get(split, "mutual");
-  let unmarked = await fold_pairs_mutual_unmarked(mutual);
+  let unmarked = await functions_duplicates_groups_unmarked(mutual);
   let meant = subtract(mutual.length, unmarked.length);
   let inside = list_map_property(soundable, "f");
   let copied = list_map_property(soundable, "x");
