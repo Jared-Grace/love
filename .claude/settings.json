@@ -6405,7 +6405,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/j/a/repos/love; node scripts/ai.mjs permission_replay_sentence",
+            "command": "cd /home/j/a/repos/love; node scripts/ai.mjs permission_replay_sentence_once",
             "timeout": 20,
             "statusMessage": "Reading today's prompt record"
           }
