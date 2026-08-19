@@ -1,3 +1,4 @@
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -6,7 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { json_from } from "./json_from.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
@@ -23,8 +23,7 @@ export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
     tree_url,
     hint: "a folder of the artwork set could not be listed. the listing service allows only about sixty requests an hour from a caller it does not know, and walking down through folders spends several - waiting an hour is the usual remedy.",
   });
-  let listed = json_from(text);
-  let entries = property_get(listed, "tree");
+  let entries = json_from_property_get(text, "tree");
   let paths = [];
   for (let entry of entries) {
     let name = property_get(entry, "path");
