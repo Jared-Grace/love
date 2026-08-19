@@ -24,6 +24,7 @@ export async function ai_finish_baseline_command_args(
   "A red answer is caught rather than thrown, because everything worth reading about it has already been printed by the time it throws. Thrown, that detail arrives buried under a stack; caught, it stands above a plain verdict.";
   "What the red answer said is carried back out as well, and not only printed. Printing is enough while somebody is watching the run go by, and it is nothing at all the moment the run is put in the background or sent through anything that keeps only the end of it - which is the ordinary way this gets called. Caught into nothing, the whole verdict was one word saying no, and the names of the gates that complained had to be bought again for the quarter of an hour the run costs. Measured 2026-08-19.";
   "The sentence is kept beside the answer rather than in place of it. A run that came back green has a result and nothing to say; a run that went red has a sentence and no result; and a run that fell over for some reason of its own - a lock it could not take, a file it could not load - now says which, where before it was indistinguishable from a red suite.";
+  "The early stop hands back the same keys with nothing in the sentence, because the one thing worth reading about it is already there under its own name: the files it could not settle.";
   arguments_assert(arguments, 3);
   let repair = await functions_auto_pending_changed_repair();
   let repaired = property_get(repair, "repaired");
@@ -38,6 +39,7 @@ export async function ai_finish_baseline_command_args(
       peers: null,
       committed: null,
       gate: null,
+      said: "",
     };
     return unsettled;
   }
