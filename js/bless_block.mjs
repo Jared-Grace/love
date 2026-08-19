@@ -1,8 +1,8 @@
+import { bless_block_door_at } from "./bless_block_door_at.mjs";
 import { bless_block_walls } from "./bless_block_walls.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 export function bless_block(x, y) {
   arguments_assert(arguments, 2);
   ("One block, given as the tiles it covers - a row of buildings facing south, a pavement");
@@ -36,26 +36,10 @@ export function bless_block(x, y) {
   let r = bless_block_walls(x, y);
   let walls = property_get(r, "walls");
   let buildings = property_get(r, "buildings");
-  let sidewalk_y = property_get(r, "sidewalk_y");
-  let block_width = property_get(r, "block_width");
-  let sidewalk_depth = property_get(r, "sidewalk_depth");
-  let r2 = property_get(r, "r2");
+  let r2 = bless_block_door_at(r, x);
+  let door_at = property_get(r2, "door_at");
+  let sidewalk = property_get(r2, "sidewalk");
   let alleys = property_get(r2, "alleys");
-  let sidewalk = bless_tiles_rectangle(
-    x,
-    sidewalk_y,
-    block_width,
-    sidewalk_depth,
-  );
-  function door_at(building) {
-    let doorway = property_get(building, "doorway");
-    let at = property_get(doorway, "x");
-    let door = {
-      x: at,
-      y: sidewalk_y,
-    };
-    return door;
-  }
   let doors = list_map(buildings, door_at);
   let block = {
     buildings: buildings,
