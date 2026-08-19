@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_statements_calls_to_each } from "./js_statements_calls_to_each.mjs";
@@ -16,8 +17,7 @@ export function js_calls_to_each_apply(ast, names) {
     let node = property_get(v, "node");
     let body = property_get(node, "body");
     let list_of_statements_is = list_is(body);
-    let known_is = list_includes(bodies, body);
-    let right = not(known_is);
+    let right = list_includes_not(bodies, body);
     let wanted_is = and(list_of_statements_is, right);
     if (wanted_is) {
       list_add(bodies, body);
