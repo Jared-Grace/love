@@ -2,7 +2,7 @@ import { worker_exit_if_idle } from "./worker_exit_if_idle.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-export function pool_retire() {
+export function function_worker_pool_retire() {
   let held = function_worker_pool_holder();
   let current = property_get(held, "current");
   if (equal(current, null)) {
