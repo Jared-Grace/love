@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_lesson_expression_choose_order_strong_card.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -12,10 +13,6 @@ import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_so
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
-import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
