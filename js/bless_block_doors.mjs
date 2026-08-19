@@ -10,10 +10,11 @@ export function bless_block_doors(r, x) {
   let sidewalk = property_get(r2, "sidewalk");
   let alleys = property_get(r2, "alleys");
   let doors = list_map(buildings, door_at);
-  return {
+  let r3 = {
     buildings,
     sidewalk,
     alleys,
     doors,
   };
+  return r3;
 }
