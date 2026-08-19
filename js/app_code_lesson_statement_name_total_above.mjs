@@ -14,7 +14,6 @@ import { html_div_code } from "./html_div_code.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_statement_name_total_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: naming a number, then naming what an operator between two names comes to, and then the reason that name may be written wherever the sum was");
@@ -52,11 +51,8 @@ export function app_code_lesson_statement_name_total_above(root) {
   ("Then rather than now, because the two lines happen one after the other and that order is the whole of what a program is. Now says only that the second line is available; then says it comes after.");
   ("The total is a code chip wherever it stands, here and in the line that follows. A number written in a program is code, and it is drawn as code everywhere else on this screen, so a total set in plain writing would be the one number on the screen dressed as prose.");
   ("The reason under the two lines is written as code a learner can already read, not as a claim about the code. A sum standing equal to its value is what the equals lesson of the Operators course taught, so nothing new has to be introduced to justify the swap.");
-  let equality = js_code_binary_spaced_nb(
-    names_sum,
-    js_operator_triple_equal_symbol(),
-    total,
-  );
+  let operator = js_operator_triple_equal_symbol();
+  let equality = js_code_binary_spaced_nb(names_sum, operator, total);
   let box_same = app_code_container_light_blue(root);
   html_div_cycle_code(box_same, [
     "When we solve ",
