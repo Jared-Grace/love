@@ -20,20 +20,25 @@ export async function permission_file_hook_live_cases() {
   "A reading grant is preferred over a writing one for the same reason: the commands-only switch can refuse a write inside this repo, and a corpus that went red when somebody turned that switch on would be reporting the switch rather than the hook.";
   let rules = await permission_settings_allow_every();
   let tools = permission_file_tools();
-  let config_folder = text_combine(claude_config_folder(), "/");
+  let left = claude_config_folder();
+  let config_folder = text_combine(left, "/");
   let candidates = [];
   for (let rule of rules) {
     let tool = permission_rule_tool_name(rule);
-    if (not(list_includes(tools, tool))) {
+    let b = list_includes(tools, tool);
+    if (not(b)) {
       continue;
     }
     let inner = permission_rule_inner(rule);
     let deep = "/**";
-    if (not(text_ends_with(inner, deep))) {
+    let b2 = text_ends_with(inner, deep);
+    if (not(b2)) {
       continue;
     }
-    let folder = inner.slice(0, subtract(inner.length, deep.length));
-    if (not(text_starts_with(folder, "/"))) {
+    let difference = subtract(inner.length, deep.length);
+    let folder = inner.slice(0, difference);
+    let b3 = text_starts_with(folder, "/");
+    if (not(b3)) {
       continue;
     }
     if (text_includes(folder, "*")) {
@@ -43,7 +48,8 @@ export async function permission_file_hook_live_cases() {
       continue;
     }
     let real = await path_real_or_null(folder);
-    if (not(equal(real, folder))) {
+    let b4 = equal(real, folder);
+    if (not(b4)) {
       continue;
     }
     candidates.push({
