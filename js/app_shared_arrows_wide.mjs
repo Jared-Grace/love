@@ -4,7 +4,7 @@ import { html_display_flex } from "./html_display_flex.mjs";
 import { app_shared_button_arrow_previous } from "./app_shared_button_arrow_previous.mjs";
 import { app_shared_button_arrow_next } from "./app_shared_button_arrow_next.mjs";
 import { html_flex_grow_1_multiple } from "./html_flex_grow_1_multiple.mjs";
-export function app_shared_arrows_wide_unit(
+export function app_shared_arrows_wide(
   parent,
   text_previous,
   text_next,
