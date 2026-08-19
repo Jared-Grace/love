@@ -28,7 +28,6 @@
   "functions_parameters_unread_gate_run",
   "functions_parameters_unread_computed_gate_run",
   "functions_duplicates_gate_run",
-  "functions_fold_gate_run",
   "bundle_size_gate_run",
   "literal_duplicates_gate_run",
   "ebible_book_divisions_canon_assert",
