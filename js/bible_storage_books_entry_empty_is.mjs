@@ -1,10 +1,10 @@
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 export function bible_storage_books_entry_empty_is(entry) {
-  "Whether storage holds no file at all for one bible in the storage record.";
-  "IT IS THE ONE FINDING THAT IS ALWAYS A FAULT HERE. A bible holding some books and not others is a real translation published in parts, and there are hundreds of those - a gospel on its own, a New Testament on its own, an Old Testament on its own. A bible holding nothing is a reader being offered a language that will answer every verse with an apology, and it is either an upload that never ran or a folder spelled here differently from how it was spelled there.";
-  "COUNTED IN FILES AND NOT IN BOOKS, because a file whose name says nothing about a book still proves that something is there. A bible uploaded under an older layout has thousands of files and no book name readable off any of them, and calling that empty would send somebody to upload what is already uploaded.";
-  let files = property_get(entry, "files");
-  let none = equal(files, 0);
+  "Whether storage holds no book at all for one bible in the storage record.";
+  "IT IS THE ONE FINDING THAT IS ALWAYS A FAULT HERE. A bible holding some books and not others is a real translation published in parts, and there are hundreds of those - a gospel on its own, a New Testament on its own, an Old Testament on its own. A bible holding no books is a reader being offered a language that will answer every verse with an apology, and it is either an upload that never ran or a folder spelled here differently from how it was spelled there.";
+  "COUNTED IN BOOKS AND NOT IN FILES, and it was written the other way first. Counting files reads a folder holding one index of what is in it as a folder with something in it, which is exactly backwards - an index of nothing is what an empty bible looks like from the outside. Two of these had an index uploaded to them between one sweep and the next, and the file count went quietly from refusing them to passing them with nothing changed about what a reader would get.";
+  let book_codes = property_get(entry, "book_codes");
+  let none = list_empty_is(book_codes);
   return none;
 }
