@@ -4,11 +4,14 @@ import { buffer_to_json } from "./buffer_to_json.mjs";
 import { json_to } from "./json_to.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { youtube_innertube_context } from "./youtube_innertube_context.mjs";
+import { youtube_innertube_key } from "./youtube_innertube_key.mjs";
 export async function youtube_innertube_browse(ask) {
   "One question put to the same private address youtube's own pages ask, answered as the reading youtube sent back.";
   "Nobody is signed in here, so this only ever sees what a stranger with the address would see. That is enough for a public playlist and is deliberately not enough for anything else: a change to somebody's channel cannot be made by accident from a reader.";
   arguments_assert(arguments, 1);
-  let url = "https://www.youtube.com/youtubei/v1/browse?prettyPrint=false";
+  let key = youtube_innertube_key();
+  let url =
+    "https://www.youtube.com/youtubei/v1/browse?prettyPrint=false&key=" + key;
   let body = {};
   object_merge_set(body, ask);
   let context = youtube_innertube_context();

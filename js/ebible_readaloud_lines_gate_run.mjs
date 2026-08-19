@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { ebible_readaloud_lines_record_assert } from "./ebible_readaloud_lines_record_assert.mjs";
 import { ebible_readaloud_lines_offered_unchecked_names } from "./ebible_readaloud_lines_offered_unchecked_names.mjs";
 import { ebible_readaloud_lines_offered_unchecked_baseline_path } from "./ebible_readaloud_lines_offered_unchecked_baseline_path.mjs";
@@ -54,8 +55,7 @@ export async function ebible_readaloud_lines_gate_run() {
   }
   let same_each = list_map(bibles, lambda2);
   function lambda3(measured) {
-    let chapters_unread = property_get(measured, "unread");
-    let count = list_size(chapters_unread);
+    let count = property_list_size(measured, "unread");
     return count;
   }
   let unread_each = list_map(bibles, lambda3);

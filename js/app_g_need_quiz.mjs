@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
@@ -24,8 +25,7 @@ export function app_g_need_quiz(
     ", a doubt for ",
     fn_name("app_g_believe"),
     ") and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after the turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]. NOTE: turn_count caps at 2 (a STUB — meant to grow) but is CLAMPED to the pool sizes, so a short pool (e.g. a 1-item disciple pool) still runs");
-  list_shuffle(needs);
-  list_shuffle(off);
+  each([needs, off], list_shuffle);
   function turn_spec(index) {
     let c = list_get(needs, index);
     let spec = {
