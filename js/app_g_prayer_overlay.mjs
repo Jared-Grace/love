@@ -1,11 +1,10 @@
+import { html_reflow_opacity_full } from "./html_reflow_opacity_full.mjs";
 import { app_g_overlay_verse_add } from "./app_g_overlay_verse_add.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
-import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
