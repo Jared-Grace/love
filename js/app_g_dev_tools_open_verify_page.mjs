@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_dev_tools_open_verify_page_page } from "./app_g_dev_tools_open_verify_page_page.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -27,8 +28,7 @@ export async function app_g_dev_tools_open_verify_page(r) {
   let engine3 = property_get(r4, "engine");
   let url3 = property_get(r4, "url");
   let lines3 = property_get(r4, "lines");
-  let r23 = property_get(r4, "r2");
-  let told3 = property_get(r23, "told");
+  let told3 = property_path_get_2(r4, "r2", "told");
   let r3 = {
     engine: engine3,
     url: url3,
