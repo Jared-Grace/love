@@ -38,6 +38,7 @@ export async function function_span_cut_skip_or_null(
   let handed_out_is = js_name_lambda_is(address_to);
   if (handed_out_is) {
     let unnamed = {
+      about: "name",
       address_to,
       why: "the run ends on a word a pass handed out rather than one anybody chose, so a function carrying that word in its name would stand in the repo where no search for what it does could reach it. Would you like to name that line for what it holds first?",
     };
@@ -46,6 +47,7 @@ export async function function_span_cut_skip_or_null(
   let counted_is = text_numbered_is(address_to);
   if (counted_is) {
     let serial = {
+      about: "name",
       address_to,
       why: "the run ends on a word with a number counted into it, which is how somebody writes a second one of something rather than how they say what it is, so a function named after it would say only that it was the eighteenth. Would you like to name that line for what it holds first?",
     };
@@ -54,6 +56,7 @@ export async function function_span_cut_skip_or_null(
   let letter_is = text_size_1(address_to);
   if (letter_is) {
     let placeholder = {
+      about: "name",
       address_to,
       why: "the run ends on a word of one letter, which is what somebody writes when they have nothing to call a thing yet rather than what they write when they do. A function named after it would carry that emptiness into the repo under a name that reads as chosen. Would you like to name that line for what it holds first?",
     };
@@ -63,6 +66,7 @@ export async function function_span_cut_skip_or_null(
   let answered_to_is = property_get(known, "exists");
   if (answered_to_is) {
     let borrowed = {
+      about: "name",
       address_to,
       why: "the word the run ends on is one this repo already answers to, so the name would say what the run calls on its last line rather than what the run is for. Would you like to choose the name yourself?",
     };
@@ -72,6 +76,7 @@ export async function function_span_cut_skip_or_null(
   let named_is = null_not_is(f_name_new);
   if (not(named_is)) {
     let unspelled = {
+      about: "name",
       address_to,
       why: "the word the run ends on is not spelled the way this repo spells names, so what the run should be called once it stands on its own is for somebody reading it to choose",
     };
@@ -80,6 +85,7 @@ export async function function_span_cut_skip_or_null(
   let repeated_is = function_name_word_repeated_is(f_name_new);
   if (repeated_is) {
     let doubled = {
+      about: "name",
       address_to,
       f_name_new,
       why: "the word the run ends on is the word its holder is already called, so the name would say that one word twice running and the second telling would narrow nothing. Would you like to choose the name yourself?",
@@ -90,6 +96,7 @@ export async function function_span_cut_skip_or_null(
   let taken = property_get(search, "exists");
   if (taken) {
     let spoken_for = {
+      about: "name",
       address_to,
       f_name_new,
       why: "a function already answers to the name this run would take, and whether the two are the same work is a question for somebody reading both",
