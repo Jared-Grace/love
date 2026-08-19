@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_digits_only } from "./text_digits_only.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-
 export function text_numbered_is(word) {
   arguments_assert(arguments, 1);
   ("Whether a word has a number counted into it, which is how somebody writes a second one of something rather than how they say what it is.");
