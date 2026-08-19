@@ -47,8 +47,8 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   let total = list_size(findings);
   function claimed_is(finding) {
     let kind = property_get(finding, "kind");
-    let claiming = equal(kind, "claimed");
-    return claiming;
+    let names_a_root = equal(kind, "claimed");
+    return names_a_root;
   }
   let claiming = list_filter(findings, claimed_is);
   let claimed_total = list_size(claiming);
@@ -56,19 +56,21 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
     let edits = property_get(finding, "edits");
     return edits;
   }
-  let by_edits = list_tally(list_map(claiming, edits_read));
+  let list = list_map(claiming, edits_read);
+  let by_edits = list_tally(list);
   let grouped = list_group_by_property(claiming, "pair");
   function group_read(group) {
     let items = property_get(group, "items");
     let first = list_get(items, 0);
     let words = list_map_property_unique(items, "word");
+    let list2 = list_map_property_unique(items, "chapter_code");
     let r2 = {
       root: property_get(first, "root"),
       claimed: property_get(first, "claimed_nearest"),
       edits: property_get(first, "edits"),
       count: list_size(items),
       words: list_spread_take(words, 5),
-      chapters: list_spread_take(list_map_property_unique(items, "chapter_code"), 3),
+      chapters: list_spread_take(list2, 3),
     };
     return r2;
   }
@@ -80,7 +82,8 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   list_sort_number_mapper_reverse(classes, count_read);
   let classes_total = list_size(classes);
   let silent_total = subtract(total, claimed_total);
-  let shown = list_take(classes, Number(sample_size));
+  let count2 = Number(sample_size);
+  let shown = list_take(classes, count2);
   let r = {
     total,
     claimed_total,
