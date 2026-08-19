@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
@@ -42,13 +43,10 @@ export function app_code_review_present_present(
   let passed = property_get(r4, "passed");
   app_shared_button_gap_above(home_button);
   function present() {
-    html_clear(progress);
-    html_clear(c);
+    each([progress, c], html_clear);
     let done = list_empty_is(queue);
     if (done) {
-      html_remove(success_container);
-      html_remove(back_button);
-      html_remove(restart_button);
+      each([success_container, back_button, restart_button], html_remove);
       if (has_next) {
         html_remove(skip_button);
       }
