@@ -8,7 +8,7 @@ import { function_span_cut_skip_or_null } from "./function_span_cut_skip_or_null
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-export async function functions_span_skipped_counts() {
+export async function functions_oversize_blockers() {
   arguments_assert(arguments, 0);
   ("For every function still standing over the ceiling, how many of the runs offered in it the cut would take, how many it steps over for the name they would carry, and how many it steps over for the line they start on.");
   ("What the sweep leaves behind is a count of functions and nothing about why, and the two reasons it steps over a run want completely different things done about them. A run stepped over for its name waits on somebody to choose one, which is a person's work and cannot be automated at all. A run stepped over for where it starts waits on nothing: the walk goes straight on to the next run offered in the same function, so that reason costs a cut only where every other run in that function was stepped over too.");

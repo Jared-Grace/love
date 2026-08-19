@@ -13,7 +13,7 @@ export async function app_shared_gloss_bible_generate_generic(
   passage_reference,
   language_reader,
 ) {
-  ("Every gloss written anywhere in this repo passes through here, so this is the one place that can owe the text its terms. A translation whose words may not be altered is refused a gloss at all, because a gloss is written from the verse and shown against it.");
+  "Every gloss written anywhere in this repo passes through here, so this is the one place that can owe the text its terms. A translation whose words may not be altered is refused a gloss at all, because a gloss is written from the verse and shown against it.";
   await ebible_bible_folders_derivatives_allowed_assert(bible_folders);
   let word = app_shared_gloss_bible_generate_generic_word();
   let prompt_system = app_shared_gloss_bible_generate_generic_prompt_system(
