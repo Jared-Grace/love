@@ -1,15 +1,13 @@
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { binisaya_affixes_pieces } from "./binisaya_affixes_pieces.mjs";
 import { equal } from "./equal.mjs";
 import { binisaya_affix_piece_plain_is } from "./binisaya_affix_piece_plain_is.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { each } from "./each.mjs";
 import { list_all } from "./list_all.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_split } from "./text_split.mjs";
 export async function binisaya_affixes_plain_coverage() {
   "How many of the words binisaya.com has taken apart could have their construction described using only the part of its shorthand that is plainly readable, and how many carry something nobody here has decoded.";
   "This is the number that says what telling a reader how a word is built would cost. If nearly every word is plain prefixes and suffixes, the shorthand can be passed on today and the small remainder passed over in silence; if half of it carries sound changes, then decoding the notation is the work and it has to be done before anything is sent.";
@@ -25,8 +23,7 @@ export async function binisaya_affixes_plain_coverage() {
     }
     analysed = analysed + 1;
     let affixes = property_get(entry, "affixes");
-    let split = text_split(affixes, "~");
-    let pieces = list_filter(split, text_empty_not_is);
+    let pieces = binisaya_affixes_pieces(affixes);
     let none = list_size(pieces);
     if (equal(none, 0)) {
       return;
