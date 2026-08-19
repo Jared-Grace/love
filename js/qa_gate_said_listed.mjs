@@ -1,9 +1,7 @@
-import { property_get } from "./property_get.mjs";
-import { qa_gate_said_listed_unparsed } from "./qa_gate_said_listed_unparsed.mjs";
+import { qa_gate_said_record_or_null } from "./qa_gate_said_record_or_null.mjs";
 import { qa_gate_said_listed_unique } from "./qa_gate_said_listed_unique.mjs";
-import { json_from } from "./json_from.mjs";
-import { object_is } from "./object_is.mjs";
 import { list_is } from "./list_is.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 export function qa_gate_said_listed(said) {
@@ -14,22 +12,12 @@ export function qa_gate_said_listed(said) {
   "The tokens are taken exactly rather than matched against the words, because several of them are ordinary English. Two translations here are called hat and fin. Looking for those in a sentence would accuse every app carrying them of whatever the sentence happened to mention, which is the fault that once made every gate name something every app ships.";
   "An offender written as a record rather than as a bare word is read for every word it holds, because no two gates agree on what to call the property it is written under.";
   "Saying nothing parseable is an ordinary answer and never an error. A gate is free to complain in English, and where it does, this hands back nothing and the sentence reader is the one with the answer.";
-  "The whole of what was said is parsed, rather than a record being hunted for inside it. Its neighbour that goes hunting is built for pulling a record out of a larger piece of writing, and it finds the end of one by counting from the front - which stops early on the nested record every one of these gates throws, so all twelve of them read as having said nothing parseable at all.";
-  function said_parsed() {
-    let result = json_from(said);
-    return result;
-  }
-  let r4 = qa_gate_said_listed_unparsed(said_parsed);
-  let unparsed = property_get(r4, "unparsed");
-  let parsed = property_get(r4, "parsed");
+  "Which stretch of what was said holds the record is asked one name along, because a gate is free to print as it goes and several do. Reading the whole as one record was right until the first such gate threw one: its two printed lines sit in front of the record, the parse fails on them, and the gate comes back naming nobody.";
+  let parsed = qa_gate_said_record_or_null(said);
+  let unparsed = null_is(parsed);
   if (unparsed) {
     let r = [];
     return r;
-  }
-  let record = object_is(parsed);
-  if (not(record)) {
-    let r2 = [];
-    return r2;
   }
   let list = property_get_or_null(parsed, "list");
   let listed = list_is(list);
