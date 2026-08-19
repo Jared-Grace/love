@@ -26,10 +26,23 @@ export async function js_await_add_inner(functions, ast, visited) {
       if (not(waits_is)) {
         return;
       }
+      let stack = property_get(v, "stack");
+      ("A name a scope around this call binds is not the repo function of that name");
+      ("at all - it is a parameter, a variable, or a function written inside this");
+      ("one - and the table was asked by the name alone, so what it said is about the");
+      ("repo function and says nothing whatever about the local one. Given the word");
+      ("here, the function holding the call would be made to wait, and would hand");
+      ("back a promise where it used to hand back an answer, to every caller it has.");
+      ("An import is not such a binding, which is the one case where the name does");
+      ("mean what the table was asked about.");
+      let bound = js_scopes_enclosing_binding_names(stack, node);
+      let local_is = list_includes(bound, name);
+      if (local_is) {
+        return;
+      }
       ("The word is only allowed inside a function that waits, so the function");
       ("holding this call is made to wait first, and the files calling that one are");
       ("opened so their calls get the word as well.");
-      let stack = property_get(v, "stack");
       await js_function_last_asyncify(stack, waits_is, ast, functions, visited);
       let above = list_get_end_1(stack);
       let awaited_is = js_node_type_is(above, "AwaitExpression");
