@@ -3,7 +3,7 @@ import { app_shared_bible_verse_next_text_get } from "./app_shared_bible_verse_n
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_verse_previous } from "./app_shared_bible_verse_previous.mjs";
 import { app_shared_bible_verse_next } from "./app_shared_bible_verse_next.mjs";
-import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
+import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
 export function app_shared_bible_verse_arrows(
   context,
   chapter_code,
@@ -19,11 +19,5 @@ export function app_shared_bible_verse_arrows(
   }
   let text_previous = app_shared_bible_verse_previous_text_get();
   let text_next = app_shared_bible_verse_next_text_get();
-  app_shared_arrows_wide_unit(
-    content,
-    text_previous,
-    text_next,
-    lambda,
-    lambda7,
-  );
+  app_shared_arrows_wide(content, text_previous, text_next, lambda, lambda7);
 }
