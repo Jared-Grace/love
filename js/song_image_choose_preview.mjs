@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -8,9 +7,8 @@ import { storage_local_specify_set } from "./storage_local_specify_set.mjs";
 import { song_image_choose_render } from "./song_image_choose_render.mjs";
 import { song_image_state_repair } from "./song_image_state_repair.mjs";
 export function song_image_choose_preview() {
-  ("choose an image for each couplet of the hymn video, on the sandbox app at #",
-    fn_name("song_image_choose"),
-    "; every candidate is shown as it will actually appear - darkened, at video aspect ratio, with the real lyric text over it - because a bright thumbnail says nothing about how a picture reads at low opacity behind words on a phone");
+  ("choose an image for each couplet of the hymn video, on the sandbox app at the hash song_image_choose; every candidate is shown as it will actually appear - darkened, at video aspect ratio, with the real lyric text over it - because a bright thumbnail says nothing about how a picture reads at low opacity behind words on a phone");
+  ("The hash is written as plain words rather than as a spelled function name, because that is what it is - a key in the previews registry, which nothing answers to as a function. Spelled as a name it read as a reference to code that had never existed.");
   let root = html_body_div();
   html_style_set(root, "background", "#0b0b0b");
   html_style_set(root, "color", "#ffffff");
