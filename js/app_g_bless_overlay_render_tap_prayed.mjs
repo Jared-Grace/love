@@ -58,11 +58,12 @@ export function app_g_bless_overlay_render_tap_prayed(
     app_g_bless_pray_overlay(container_map, rung, amen);
     return true;
   }
-  return {
+  let r = {
     walking,
     world,
     bar,
     render,
     tap_prayed,
   };
+  return r;
 }
