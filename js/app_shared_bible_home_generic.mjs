@@ -45,6 +45,7 @@ export async function app_shared_bible_home_generic(
   app_shared_bible_passage_kept_set(context, chapter_code, [verse_number_hash]);
   let r = await app_shared_bible_home_chapter_data(chapter_code);
   let book_name = property_get(r, "book_name");
+  let book_name_reading = property_get(r, "book_name_reading");
   let books = property_get(r, "books");
   let verses = property_get(r, "verses");
   let chapter_name = property_get(r, "chapter_name");
@@ -52,7 +53,7 @@ export async function app_shared_bible_home_generic(
     bar,
     context,
     chapter_code,
-    book_name,
+    book_name_reading,
     chapter_name,
     verse_number_hash,
   );
