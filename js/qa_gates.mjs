@@ -1,3 +1,4 @@
+import { ebible_languages_curated_codes_gate_run } from "./ebible_languages_curated_codes_gate_run.mjs";
 import { js_statements_grouping_worthless_cases_gate_run } from "./js_statements_grouping_worthless_cases_gate_run.mjs";
 import { app_shared_gloss_bible_derivatives_gate_run } from "./app_shared_gloss_bible_derivatives_gate_run.mjs";
 import { bless_marks_climbed_cases_gate_run } from "./bless_marks_climbed_cases_gate_run.mjs";
@@ -429,6 +430,7 @@ export function qa_gates() {
     ebible_index_flats_union_cases_gate_run,
     ebible_readaloud_lines_gate_run,
     ebible_languages_licences_gate_run,
+    ebible_languages_curated_codes_gate_run,
     app_shared_gloss_bible_derivatives_gate_run,
     usfm_chapters_verses_cases_gate_run,
     examples_data_gate_run,
