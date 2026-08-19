@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { function_parse_strict_declaration } from "./function_parse_strict_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,7 +12,6 @@ export async function function_async_is(f_name) {
     return null;
   }
   let parsed = await function_parse_strict_declaration(f_name);
-  let declaration = property_get(parsed, "declaration");
-  let async_is = property_get(declaration, "async");
+  let async_is = property_path_get_2(parsed, "declaration", "async");
   return async_is;
 }
