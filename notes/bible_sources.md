@@ -97,6 +97,39 @@ classify, which counts as refused: an unread page has granted nothing that can b
 pointed at. It was replaced rather than dropped, because Door43 carries the same
 language under CC BY-SA — see below.
 
+### The seventeen unread pages, and what reading them found
+
+`ebible_versions_licences_unknown` names every downloaded translation whose page
+states terms no machine here could classify — seventeen on 2026-08-19. An unread
+page is **not** a refusal: a page granting nothing and a page granting everything
+in prose look identical from here, so the set is a reading list.
+
+`ebible_versions_licences_unknown_language_new` narrows it to the ones worth
+reading first — those in a language this app offers nothing in. Seven, and all
+seven were read on 2026-08-19:
+
+| folder | language | what the page states | verdict |
+| --- | --- | --- | --- |
+| `thantv` | Thai (New Thai Version) | bare copyright notice, no grant | refused |
+| `swef` | Swedish (Folkbibeln) | bare copyright notice, no grant | refused |
+| `bod` | Tibetan (Central) | bare copyright notice, no grant; NT+ only | refused |
+| `hwc` | Hawai'i Pidgin | no grant; names a contact for permissions | refused — **ask** |
+| `apyNT` | *(page is wrong — see below)* | Khmer notice, quotation limited to under 1,000 verses without written permission | refused |
+| `dan1931` | Danish (OT 1931, NT 1907) | Project Gutenberg "Small Print": distribution allowed, **20% of net profits** owed as royalty, plus indemnity | **the human's call** |
+| `amh` | Amharic | prose terms, no readable grant | replaced by `am_ulb` |
+
+So no language is unlocked by the unread set today. Two follow-ups came out of it:
+
+- **Danish is the only one that grants anything.** It permits distribution and does
+  not forbid earning — it taxes it, at 20% of net profits payable to the Project
+  Gutenberg Association at Carnegie Mellon, and adds an indemnity. That is not the
+  non-commercial refusal, so the rule does not decide it. It is a duty nobody here
+  is set up to keep, aimed at an arrangement that has long since been superseded,
+  and whether to take it on is a decision for the human rather than for a gate.
+- **`apyNT`'s copyright page carries the wrong translation's notice.** The title is
+  Aparai (Brazil); the body is the Khmer Standard Version's. That is a third defect
+  to tell eBible about — add it to `letters/ebible_letter.md` before sending.
+
 ### Why Thai and Wolof were dropped rather than replaced
 
 Both were searched for before being dropped, and the search is recorded here so
