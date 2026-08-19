@@ -1,4 +1,4 @@
-import { watching_ensure } from "./watching_ensure.mjs";
+import { function_worker_watching_ensure } from "./function_worker_watching_ensure.mjs";
 import { function_worker_pool_ready } from "./function_worker_pool_ready.mjs";
 import { worker_job_run } from "./worker_job_run.mjs";
 import { modulo } from "./modulo.mjs";
@@ -33,7 +33,7 @@ import { property_get } from "./property_get.mjs";
 ("the pool are handed back as boxes rather than as their contents, because what");
 ("crosses a file boundary is a copy unless it is a thing.");
 export async function function_worker_pool_run(f_name, args) {
-  await watching_ensure();
+  await function_worker_watching_ensure();
   let ready = function_worker_pool_ready();
   let broken = property_get(ready, "broken");
   if (broken) {
