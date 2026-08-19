@@ -1,4 +1,4 @@
-import { list_includes_not } from "./list_includes_not.mjs";
+import { literals_frozen_gate_run_lambda2 } from "./literals_frozen_gate_run_lambda2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { machine_path_literals_allowed } from "./machine_path_literals_allowed.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -23,8 +23,7 @@ export async function machine_path_literals_gate_run() {
   let files = property_get(walked, "files");
   let sites = property_get(walked, "sites");
   function allowed_not_is(site) {
-    let held = property_get(site, "f_name");
-    let b = list_includes_not(names, held);
+    let b = literals_frozen_gate_run_lambda2("f_name", site, names);
     return b;
   }
   let left = list_filter(sites, allowed_not_is);
