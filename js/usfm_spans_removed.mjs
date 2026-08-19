@@ -11,7 +11,7 @@ import { text_take } from "./text_take.mjs";
 export function usfm_spans_removed(text, note_mark) {
   arguments_assert(arguments, 2);
   ("$plain text");
-  ("$plain marker");
+  ("$plain note_mark");
   ("One kind of note taken out of a passage of usfm, leaving the scripture around it exactly as it was.");
   ("A note in usfm is written between a mark and the same mark with a star after it - a footnote between f and f star, a cross reference between x and x star - and everything in between belongs to the note rather than to the verse. So the whole run goes, not the marks alone: keeping the marks' contents would put the footnote's own words into the middle of the sentence they are a note on.");
   ("The opening mark is looked for with a space after it, because the marks are not a set of separate words. Taking f alone would also match the mark that opens a picture, fig, and the picture's caption would then be cut away as though it were a footnote.");
