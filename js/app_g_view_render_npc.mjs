@@ -1,4 +1,4 @@
-import { app_g_view_render_npc_right } from "./app_g_view_render_npc_right.mjs";
+import { app_g_view_render_npc_phase } from "./app_g_view_render_npc_phase.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_conversation } from "./app_g_conversation.mjs";
@@ -18,13 +18,8 @@ import { app_g_disciple } from "./app_g_disciple.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
-  let r = await app_g_view_render_npc_right(view, div_map);
-  let right = property_get(r, "right");
-  let overlay_close = property_get(r, "overlay_close");
-  let overlay = property_get(r, "overlay");
-  let player = property_get(r, "player");
-  let npc = property_get(r, "npc");
-  let phase = property_get(r, "phase");
+  let { right, overlay_close, overlay, player, npc, phase } =
+    await app_g_view_render_npc_phase(view, div_map);
   if (equal(phase, right)) {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
     return;
