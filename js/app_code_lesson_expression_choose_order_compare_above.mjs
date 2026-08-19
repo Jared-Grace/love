@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
@@ -16,6 +17,7 @@ import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_choose_order_compare_above(root) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("what stands above the card: the word comparison put back in front of the learner, then one whole line of this lesson's own kind worked all the way through, then the one sentence saying what is different here");
   ("The same three-part shape as the lesson before it - recall, run, hinge - because a learner arriving here has just read that shape on the screen behind them. A run laid out a second way would be read as a second thing to learn, when the only new thing on this screen is what the operators ARE.");
