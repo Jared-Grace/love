@@ -9,7 +9,12 @@ import { subtract } from "./subtract.mjs";
 import { bless_sidewalk_depth } from "./bless_sidewalk_depth.mjs";
 export function app_g_bless_player_place(player, block) {
   arguments_assert(arguments, 2);
-  ("Stands the player on the pavement outside the middle building, looking at it.");
+  ("Stands the player on the pavement outside the middle building of a block, looking at");
+  ("it.");
+  ("Which block is the caller's to say, and it is always the first. The crowd is numbered");
+  ("from the beginning of the line and the first sixty of them live on the first block, so");
+  ("that is where the ladder starts; the blocks further along are what the reach earned");
+  ("there is spent on.");
   ("The game opens on a street with people on it, rather than on a field with a street");
   ("somewhere in it. Set down at random the player's first minute would be spent walking to");
   ("find anybody, and the first thing this game asks of them - look at a person and pray for");

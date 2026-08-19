@@ -60,7 +60,7 @@ export function app_g_bless_overlay_player(container_map) {
     player_img_c,
     wash,
     div_map,
-    block,
+    blocks,
     npcs,
     player,
   };
