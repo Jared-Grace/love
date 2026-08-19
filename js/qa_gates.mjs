@@ -191,6 +191,7 @@ import { js_address_fused_words_cases_gate_run } from "./js_address_fused_words_
 import { literals_frozen_fused_gate_run } from "./literals_frozen_fused_gate_run.mjs";
 import { js_hash_key_getters_cases_gate_run } from "./js_hash_key_getters_cases_gate_run.mjs";
 import { js_hash_key_getters_own_cases_gate_run } from "./js_hash_key_getters_own_cases_gate_run.mjs";
+import { g_verify_chapter_asked_cases_gate_run } from "./g_verify_chapter_asked_cases_gate_run.mjs";
 import { hash_key_getters_frozen_gate_run } from "./hash_key_getters_frozen_gate_run.mjs";
 import { js_hash_key_literals_cases_gate_run } from "./js_hash_key_literals_cases_gate_run.mjs";
 import { hash_key_literals_gate_run } from "./hash_key_literals_gate_run.mjs";
@@ -375,6 +376,7 @@ export function qa_gates() {
     js_hash_object_word_calls_unknown_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
     js_hash_key_getters_own_cases_gate_run,
+    g_verify_chapter_asked_cases_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
     js_storage_browser_objects_cases_gate_run,
