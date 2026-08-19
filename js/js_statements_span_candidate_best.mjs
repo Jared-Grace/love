@@ -1,4 +1,7 @@
+import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { js_statements_work_deep } from "./js_statements_work_deep.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_take } from "./list_take.mjs";
@@ -21,6 +24,14 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
   ("Both ends have to be lines a name reaches, because that is how the cut is told where to start and stop. A line no name reaches is skipped as an end and passed straight over in the middle, where it needs no address at all.");
   let address_from = list_get(addresses, from);
   if (null_is(address_from)) {
+    return null;
+  }
+  ("A run starting on the body's very first line of work is not offered at all, because the cut refuses it and always has. The count of arguments and the prose saying what a function is for both sit at the top and belong to whatever name is on the door, so a run starting there takes them out through it - and the count lands in a function of a different arity and is quietly rewritten to match.");
+  ("Refused here rather than only at the cut, because a list promising a run the cut will turn down costs a walk its whole answer about that function. This is the third reading found to have that shape in one day, and each one only ever takes an offer away - so the list can lose a good run to it and can never gain a bad one.");
+  let above = list_take(statements, from);
+  let above_work = list_filter(above, js_statement_work_is);
+  let opening_is = list_empty_is(above_work);
+  if (opening_is) {
     return null;
   }
   ("The prose is left out of both counts. A body here is mostly paragraphs explaining itself, and counting those as length makes a run covering every line of work look as though it left a good deal behind - which is how a cut that moves the whole body and gains nothing came to be offered first.");
