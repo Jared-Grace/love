@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { bible_glyph_word_draw_html } from "./bible_glyph_word_draw_html.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
@@ -13,7 +14,7 @@ export function bible_glyph_verse_draw_html(parent, words, lookup) {
   ("The space is written as a piece of text rather than left to the page's own spacing between elements, because a page collapses and re-flows the gaps between elements by its own rules and would be free to put a line break where this Bible put a word boundary - or to put none where it put a space.");
   let first = true;
   for (let word of words) {
-    if (!first) {
+    if (not(first)) {
       html_span_text_content(parent, " ");
     }
     first = false;
