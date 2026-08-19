@@ -1,4 +1,4 @@
-import { app_replace_rule_set_goals } from "./app_replace_rule_set_goals.mjs";
+import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
 import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
 import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
 import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
@@ -54,23 +54,22 @@ import { list_get } from "./list_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
-  let {
-    start_indices,
-    div_proof,
-    history,
-    start,
-    resumed,
-    end,
-    rule_set_name,
-    rules_used,
-    start_over,
-    index_selected,
-    rules_parsed,
-    goal,
-    goal_index,
-    goals_count,
-    goals,
-  } = app_replace_rule_set_goals(context, root);
+  let r4 = app_replace_rule_set_start_indices(context, root);
+  let start_indices = property_get(r4, "start_indices");
+  let div_proof = property_get(r4, "div_proof");
+  let history = property_get(r4, "history");
+  let start = property_get(r4, "start");
+  let resumed = property_get(r4, "resumed");
+  let end = property_get(r4, "end");
+  let rule_set_name = property_get(r4, "rule_set_name");
+  let rules_used = property_get(r4, "rules_used");
+  let start_over = property_get(r4, "start_over");
+  let index_selected = property_get(r4, "index_selected");
+  let rules_parsed = property_get(r4, "rules_parsed");
+  let goal = property_get(r4, "goal");
+  let goal_index = property_get(r4, "goal_index");
+  let goals_count = property_get(r4, "goals_count");
+  let goals = property_get(r4, "goals");
   async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
