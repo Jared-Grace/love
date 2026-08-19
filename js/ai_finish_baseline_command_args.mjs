@@ -1,14 +1,14 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_auto_pending_changed_repair } from "./functions_auto_pending_changed_repair.mjs";
 import { git_folder_files_changed_since } from "./git_folder_files_changed_since.mjs";
 import { git_folder_love } from "./git_folder_love.mjs";
 import { ai_finish_commit } from "./ai_finish_commit.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
+import { catch_message_async } from "./catch_message_async.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { qa_gate_run } from "./qa_gate_run.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 export async function ai_finish_baseline_command_args(
   baseline,
@@ -22,6 +22,8 @@ export async function ai_finish_baseline_command_args(
   "What landed underneath you is read before the commit and only reported, never judged. Whether a neighbour's change breaks yours is a question about what you read to make your decision, and nothing here knows that - so it hands over the files and stops. It is read before rather than after so that it is about the span you actually worked in.";
   "The pass that settles files being edited is the one thing that does stop everything. A file it could not settle is one it found half written, and committing it would put a broken file under somebody's name and then ask the whole repo about it.";
   "A red answer is caught rather than thrown, because everything worth reading about it has already been printed by the time it throws. Thrown, that detail arrives buried under a stack; caught, it stands above a plain verdict.";
+  "What the red answer said is carried back out as well, and not only printed. Printing is enough while somebody is watching the run go by, and it is nothing at all the moment the run is put in the background or sent through anything that keeps only the end of it - which is the ordinary way this gets called. Caught into nothing, the whole verdict was one word saying no, and the names of the gates that complained had to be bought again for the quarter of an hour the run costs. Measured 2026-08-19.";
+  "The sentence is kept beside the answer rather than in place of it. A run that came back green has a result and nothing to say; a run that went red has a sentence and no result; and a run that fell over for some reason of its own - a lock it could not take, a file it could not load - now says which, where before it was indistinguishable from a red suite.";
   arguments_assert(arguments, 3);
   let repair = await functions_auto_pending_changed_repair();
   let repaired = property_get(repair, "repaired");
@@ -50,8 +52,8 @@ export async function ai_finish_baseline_command_args(
     let asked = await qa_gate_run();
     return asked;
   }
-  let told = await catch_null_async(gate);
-  let red = null_is(told);
+  let told = await catch_message_async(gate);
+  let red = property_not(told, "ok");
   let r = {
     ok: not(red),
     stopped_at: red ? qa_gate_run.name : "",
@@ -59,7 +61,8 @@ export async function ai_finish_baseline_command_args(
     remaining,
     peers,
     committed,
-    gate: told,
+    gate: property_get(told, "value"),
+    said: property_get(told, "message"),
   };
   return r;
 }
