@@ -15,13 +15,7 @@ export async function app_shared_bible_reference_reading(
   "English is still the answer when nothing is chosen, which is what a reader who has chosen nothing is being shown anyway.";
   "The book names have to be fetched to be spelled, which is why this is the kind of thing that has to be waited for rather than simply worked out.";
   arguments_assert(arguments, 2);
-  let folder = ebible_folder_english();
-  let languages = app_shared_bible_languages_chosen_get();
-  let chosen_any = list_empty_not_is(languages);
-  if (chosen_any) {
-    let language = list_last(languages);
-    folder = ebible_language_bible_folder(language);
-  }
+  let folder = app_shared_bible_folder_reading();
   let books = await ebible_version_books_browser(folder);
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code,
