@@ -12,11 +12,10 @@ export function app_code_lesson_statement_name_compare_title_name_id() {
   ("The less than symbol rather than any of the other five, because it is the comparison a learner met first and the one every later comparison lesson was written against.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "comparing what two names hold";
-  let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
   let smaller_than = js_operator_less_than_symbol();
-  let compared = js_code_binary(name_first, smaller_than, name_last);
-  let code = js_code_console_log_statement(compared);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_code_lesson_statement_names_binary_title_name_id(
+    words,
+    smaller_than,
+  );
   return built;
 }
