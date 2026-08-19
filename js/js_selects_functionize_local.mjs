@@ -1,8 +1,10 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_functionize_range } from "./js_selects_functionize_range.mjs";
 import { js_functionize_local } from "./js_functionize_local.mjs";
 export async function js_selects_functionize_local(ast, selects, f_name_new) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 3);
   ("Pulls a span out into a function of its own and leaves it where it lands - in");
   ("the same file, beside the one it came out of. The twin next door goes on to");
