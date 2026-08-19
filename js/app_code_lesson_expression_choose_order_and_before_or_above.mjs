@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_intro } from "./app_code_lesson_expression_choose_order_and_before_or_intro.mjs";
@@ -17,14 +17,13 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
   let or_symbol = js_operator_or_symbol();
   let both = [true, false];
   let middle_truth = list_random_item(both);
-  let tree =
-    app_code_lesson_expression_choose_order_and_before_or_expression_parts(
-      false,
-      and_symbol,
-      middle_truth,
-      or_symbol,
-      true,
-    );
+  let tree = app_code_expression_node_left_operator_first(
+    false,
+    and_symbol,
+    middle_truth,
+    or_symbol,
+    true,
+  );
   app_code_lesson_expression_choose_order_steps_above_generic(
     root,
     app_code_lesson_expression_choose_order_and_before_or_recall,

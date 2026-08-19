@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_brackets_expression_parts } from "./app_code_lesson_expression_choose_order_brackets_expression_parts.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_operators_expression_parts(
   left,
@@ -24,13 +24,12 @@ export function app_code_lesson_expression_choose_order_operators_expression_par
       );
     return tree_right;
   }
-  let tree_left =
-    app_code_lesson_expression_choose_order_and_before_or_expression_parts(
-      left,
-      strong_symbol,
-      middle,
-      weak_symbol,
-      right,
-    );
+  let tree_left = app_code_expression_node_left_operator_first(
+    left,
+    strong_symbol,
+    middle,
+    weak_symbol,
+    right,
+  );
   return tree_left;
 }

@@ -3,7 +3,7 @@ import { text_split_space } from "./text_split_space.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { equal } from "./equal.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_tree_of_code(
   code,
@@ -28,13 +28,12 @@ export function app_code_lesson_expression_choose_order_and_before_or_tree_of_co
   let middle_truth = truth_of(2);
   let or_symbol = list_get(words, 3);
   let right_truth = truth_of(4);
-  let tree =
-    app_code_lesson_expression_choose_order_and_before_or_expression_parts(
-      left_truth,
-      and_symbol,
-      middle_truth,
-      or_symbol,
-      right_truth,
-    );
+  let tree = app_code_expression_node_left_operator_first(
+    left_truth,
+    and_symbol,
+    middle_truth,
+    or_symbol,
+    right_truth,
+  );
   return tree;
 }
