@@ -105,6 +105,7 @@
   "expressions_solving_both_sides_of_or",
   "expressions_and_before_or",
   "expressions_solving_inside_not",
+  "expressions_solving_inside_brackets",
   "expressions_comparison_inside_and",
   "expressions_in_between",
   "expressions_which_part_is_solved_first",
