@@ -12,11 +12,17 @@ export async function app_shared_bible_home_chapter_data(chapter_code) {
   let verses = property_get(r, "verses");
   let books = property_get(r, "books");
   let book_name = ebible_book_code_to_name(books, book_code);
+  ("Two names for the one book, because the screen puts them to two different uses. What the reader is shown says the book the way the verses under it say it. What is handed to biblehub has to be the English name whatever the reading is in, because that is the only name that site answers to - a localized one there sends the reader to a page that does not exist.");
+  let book_name_reading = await app_shared_bible_book_name_reading(
+    book_code,
+    book_name,
+  );
   let r2 = {
     chapter_name,
     verses,
     books,
     book_name,
+    book_name_reading,
   };
   return r2;
 }
