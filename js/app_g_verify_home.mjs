@@ -84,12 +84,16 @@ export async function app_g_verify_home(context) {
   if (not(b2)) {
     chapter_codes = chapter_codes.concat([chapter_code2]).sort();
   }
+  ("asked for rather than handed over, because the passage does not exist yet - the render this starts is what makes it, and a value read here is the nothing that was standing in for it");
+  function view_get() {
+    return view;
+  }
   await app_g_verify_home_document(
     render,
     chapter,
     status,
     chapter_state,
-    view,
+    view_get,
     poll,
     refresh,
   );
