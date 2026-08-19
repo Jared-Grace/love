@@ -1,6 +1,6 @@
+import { fn_name } from "./fn_name.mjs";
 import { permission_replay_path } from "./permission_replay_path.mjs";
 import { file_exists } from "./file_exists.mjs";
-import { permission_replay_write } from "./permission_replay_write.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { permission_rows_unsolved } from "./permission_rows_unsolved.mjs";
@@ -22,7 +22,7 @@ export async function permission_replay_reading() {
     let none = {
       path,
       written: false,
-      write_with: permission_replay_write.name,
+      write_with: fn_name("permission_replay_write"),
     };
     return none;
   }
