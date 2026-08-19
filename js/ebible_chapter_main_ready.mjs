@@ -30,7 +30,14 @@ export async function ebible_chapter_main_ready(bible_folder, chapter_code) {
   let list = list_difference(classes, include);
   let extra = list_difference(list, exclude);
   let dictionary = html_parse_classes_preview(main, d, extra);
+  ("The refusal names the page it happened on, because what it asks for is that somebody go and look at that page, and it used to say only which kind of element was new. One word with no address is a question nobody can answer: three hundred translations were being read, any of them could have been the one, and finding out meant reading them again until it stopped in the same place.");
+  ("The page is spelled as a path rather than as the two names it is made of, so that going to look is opening what is written down rather than working out where it lives first.");
+  let page_path = ebible_version_download_path_combine(bible_folder, chapter_code);
   list_empty_is_assert_json(extra, {
+    hint: "this page uses a kind of element neither list has an answer for, so reading it stopped rather than guessing whether those are part of the chapter or furniture around it - open the page, see what they hold, and add each one to the kept list or the dropped list",
+    bible_folder,
+    chapter_code,
+    page_path,
     extra,
     dictionary,
   });
