@@ -21,6 +21,7 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   "A count of findings does not say how much is wrong, because one word repeated is one fault and reads as hundreds. kahangtoran alone accounts for ninety-nine of them, every one explained from hangtud where the dictionary writes hangtod - a single disagreement about how to spell a vowel, met once per verse. Gathering the findings by the pair of words that disagree turns the count of sightings into a count of faults, which is the number a reader is actually asking for.";
   "The distance in edits is what separates a spelling from a mistake, and it is reported at every distance rather than cut at a line, because where the line belongs is the reader's judgment and a report that has already made it cannot be argued with.";
   "How the two roots stand to one another is counted beside the distance, and it is the reading that matters more. Most of these findings are not a wrong origin at all: the explanation named a word the dictionary's root is built from, or one built out of it, which is a disagreement about how far back to stop rather than a mistake about where the word came from. A count of edits cannot tell that apart from an invention two letters off, and a reader deciding whether to repair or to regenerate has to know which of the two they are looking at.";
+  "The distances are counted again over the findings standing apart on their own, because that is the only place the question is open. Where one root sits inside the other the disagreement is already named and the distance adds nothing; where neither does, one edit is very likely the two sources spelling a vowel differently and five is an origin somebody made up, and only these findings need the line drawn.";
   "How many classes to show is said as text as readily as as a number, because this is reached for from the command line, where every argument arrives as text and a count read straight would take none of them.";
   "Only findings that name a root are gathered. An explanation saying nothing about where its word comes from has no claim to be grouped by, so those are counted apart and left to the weaker test that found them.";
   let findings = [];
@@ -67,6 +68,12 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   }
   let relations = list_map(claiming, relation_read);
   let by_relation = list_tally(relations);
+  function apart_is(finding) {
+    let standing_apart = property_equals(finding, "relation", "apart");
+    return standing_apart;
+  }
+  let apart = list_filter(claiming, apart_is);
+  let apart_by_edits = list_tally(list_map(apart, edits_read));
   let grouped = list_group_by_property(claiming, "pair");
   function group_read(group) {
     let items = property_get(group, "items");
@@ -101,6 +108,7 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
     classes_total,
     by_relation,
     by_edits,
+    apart_by_edits,
     classes: shown,
   };
   return r;

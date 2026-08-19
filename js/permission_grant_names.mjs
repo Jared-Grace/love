@@ -1616,6 +1616,14 @@ export function permission_grant_names() {
   let spelled1563 = fn_name("permission_replay_report");
   let spelled1564 = fn_name("js_repack_only_is_cases_gate_run");
   let spelled1565 = fn_name("storage_function_folder_backup");
+  let spelled1566 = fn_name("functions_repack_only_gate_run");
+  let spelled1567 = fn_name("bible_glyph_artwork_gate_run");
+  let spelled1568 = fn_name("function_rename_examples_check");
+  let spelled1569 = fn_name("qa_trees_processes_orphaned_end");
+  let spelled1570 = fn_name("qa_commit_named_red_since");
+  let spelled1571 = fn_name("functions_repack_only_all");
+  let spelled1572 = fn_name("bible_glyph_artwork_names_unknown");
+  let spelled1573 = fn_name("bible_glyph_artwork_asset_files");
   let names = [
     spelled,
     spelled2,
@@ -3182,6 +3190,14 @@ export function permission_grant_names() {
     spelled1563,
     spelled1564,
     spelled1565,
+    spelled1566,
+    spelled1567,
+    spelled1568,
+    spelled1569,
+    spelled1570,
+    spelled1571,
+    spelled1572,
+    spelled1573,
   ];
   return names;
 }
