@@ -3,7 +3,6 @@ import { list_map_sum } from "./list_map_sum.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_verse_numbers_storage_outcome } from "./ebible_chapter_verse_numbers_storage_outcome.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { ebible_chapter_verse_code } from "./ebible_chapter_verse_code.mjs";
 import { list_map } from "./list_map.mjs";
@@ -14,31 +13,32 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
   "Which of the verses a page will ask this bible for it has nothing to answer with.";
   "The asking is driven by the English index, so that is what a verse being there or not is measured against. A bible numbering its verses its own way is not wrong for doing so, but a reader who chose it beside English still gets a gap where the page asked for a number it does not use - and this counts the gaps rather than the disagreements, because the gap is what the reader sees.";
   "A chapter that is missing entirely counts as every one of its verses missing, and is named on its own as well. The two readings are the same fact at different sizes: the holes tell a reader how much is unreachable, the absent chapters tell whoever fixes it where to start.";
-  "THIS CANNOT TELL A MISSING CHAPTER FROM A FETCH THAT FAILED, and until it can, a whole record written by a wide run should not be believed. The reader below returns nothing for both cases, and nothing is read here as absent - so every network error a run collects is written down as a fact about a bible, in a shape that looks exactly like a real gap and that no gate refuses.";
-  "IT IS MEASURED RATHER THAN SUSPECTED. A run over every shipped bible - two hundred and seventy seven of them, twenty four chapters each, all asked at once because both loops here are unordered and unbounded - came back saying the English Berean Bible is missing sixteen of the twenty four chapters of Luke. Asked again for one of those chapters on its own, that same bible answered with all fifty two verses. So the run was measuring how many of six and a half thousand simultaneous fetches survived, and calling the answer a property of the bibles.";
-  "TWO THINGS HAVE TO CHANGE TOGETHER and neither one alone is enough. Slowing the run down makes failures rarer and still records the ones that happen as absence; telling a failure apart from an absence needs the reader to say WHICH it met, and needs the record to carry a third state - asked, and could not be told - that the gate then treats as work outstanding rather than as a fact. That third state is a change to what this record means, so it is written here as a finding for somebody to decide on rather than guessed at.";
-  "THE TELLING APART IS NOT MISSING, IT IS DISCARDED, which makes this a small change rather than a large one and is worth knowing before anybody starts. Followed all the way down, the two cases are already distinct where they happen: a chapter that is genuinely not there comes back as a refusal carrying the status the far end gave, and a fetch that failed comes back as a socket error carrying a code and no status at all. They stay distinct until the reader below catches every throw alike and answers nothing for both. So what has to be built is a reader that passes on WHICH of the two it met, not a way of finding out - the finding out is already done and then dropped.";
+  "A CHAPTER THAT COULD NOT BE ASKED IS NAMED ON ITS OWN AND CONTRIBUTES NO HOLES, which is the difference between a record of what bibles hold and a record of how a run went. An ask that got no answer taught nobody anything about that bible, so counting its verses as missing would be writing this program's failure down as somebody else's gap - and it would look exactly like a real gap, which is what makes it worse than leaving it out.";
+  "IT WAS DOING PRECISELY THAT UNTIL IT WAS MEASURED. A run over every shipped bible - two hundred and seventy seven of them, twenty four chapters each - came back saying the English Berean Bible is missing sixteen of the twenty four chapters of Luke. Asked again for one of those chapters on its own, that same bible answered with all fifty two verses. The run had been measuring how many of six thousand simultaneous fetches survived and calling the answer a property of the bibles.";
+  "THE UNREACHABLE ARE LEFT FOR THE GATE TO REFUSE rather than quietly dropped, and that is what stops the fix trading one silence for another. Holes are a fact somebody has to read and decide about, so they stand. A chapter nobody could reach is not a fact yet, so it stands too, in its own list, where a gate can say the measuring is unfinished and name the command that finishes it.";
   async function lambda(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
     let wanted = property_get(chapter, "verse_numbers");
-    let held = await ebible_chapter_verse_numbers_storage_outcome(
+    let outcome = await ebible_chapter_verse_numbers_storage_outcome(
       bible_folder,
       chapter_code,
     );
-    let absent = null_is(held);
-    let numbers = held;
-    if (absent) {
-      numbers = [];
-    }
+    let absent = property_get(outcome, "absent");
+    let unreachable = property_get(outcome, "unreachable");
+    let numbers = property_get(outcome, "verse_numbers");
     let missing = list_difference(wanted, numbers);
     function lambda2(verse_number) {
       let code = ebible_chapter_verse_code(chapter_code, verse_number);
       return code;
     }
     let named = list_map(missing, lambda2);
+    if (unreachable) {
+      named = [];
+    }
     let measured = {
       chapter_code,
       absent,
+      unreachable,
       holes: named,
     };
     return measured;
@@ -54,6 +54,16 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
     "chapter_code",
   );
   list_sort_text(chapters_absent);
+  function lambda6(measured) {
+    let unreachable = property_get(measured, "unreachable");
+    return unreachable;
+  }
+  let chapters_unreachable = list_filter_map_property(
+    each_chapter,
+    lambda6,
+    "chapter_code",
+  );
+  list_sort_text(chapters_unreachable);
   function lambda4(measured) {
     let chapter_holes = property_get(measured, "holes");
     return chapter_holes;
@@ -70,6 +80,7 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
     bible_folder,
     asked,
     chapters_absent,
+    chapters_unreachable,
     holes,
   };
   return r;
