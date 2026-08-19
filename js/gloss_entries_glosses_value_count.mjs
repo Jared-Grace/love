@@ -1,7 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_entry_gloss_key } from "./gloss_entry_gloss_key.mjs";
-import { property_get } from "./property_get.mjs";
 export function gloss_entries_glosses_value_count(entries, value) {
   "How many words of a passage carry a named wording, exactly and entirely, as the short English standing under them.";
   "$plain value";
@@ -10,8 +9,7 @@ export function gloss_entries_glosses_value_count(entries, value) {
   let key = gloss_entry_gloss_key();
   let count = 0;
   function entry_read(entry) {
-    let gloss = property_get(entry, key);
-    let same = equal(gloss, value);
+    let same = property_equals(entry, key, value);
     if (same) {
       count = count + 1;
     }
