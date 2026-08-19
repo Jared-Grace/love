@@ -1,7 +1,11 @@
 import { gloss_roots_disagreeing_classes_shown } from "./gloss_roots_disagreeing_classes_shown.mjs";
 import { gloss_roots_disagreeing_classes_claimed_total } from "./gloss_roots_disagreeing_classes_claimed_total.mjs";
 import { property_get } from "./property_get.mjs";
-export function gloss_roots_disagreeing_classes(offenders, sample_size) {
+export function gloss_roots_disagreeing_classes(
+  offenders,
+  relation_wanted,
+  sample_size,
+) {
   "Findings that an explanation named the wrong root, gathered by which root it named instead: how many findings stand at each distance from the dictionary, and the commonest wrong roots with the words they were claimed for.";
   "A count of findings does not say how much is wrong, because one word repeated is one fault and reads as hundreds. kahangtoran alone accounts for ninety-nine of them, every one explained from hangtud where the dictionary writes hangtod - a single disagreement about how to spell a vowel, met once per verse. Gathering the findings by the pair of words that disagree turns the count of sightings into a count of faults, which is the number a reader is actually asking for.";
   "The distance in edits is what separates a spelling from a mistake, and it is reported at every distance rather than cut at a line, because where the line belongs is the reader's judgment and a report that has already made it cannot be argued with.";
