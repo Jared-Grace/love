@@ -1,3 +1,4 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
@@ -18,8 +19,13 @@ export function g_coordinates_path_shortest_crowd(g, start, target) {
   ("Walking past somebody is a thing people do, and it is what a crowd is - a wall is not.");
   ("The people are left standing where they stand either way; only this reading is blind to");
   ("them.");
+  ("No way at all comes back as an EMPTY list rather than as nothing, which is worth saying");
+  ("out loud because the obvious test for it is wrong: an empty list is a perfectly true");
+  ("value, so asking whether there is a path at all answers yes and hands a walk of no steps");
+  ("to somebody who will take it silently. That is exactly how a street where nobody could");
+  ("move looked like a street where every tap was ignored.");
   let path = g_coordinates_path_shortest(g, start, target);
-  let hemmed = not(path);
+  let hemmed = list_empty_is(path);
   if (hemmed) {
     let alone = g_world_without_npcs(g);
     let through = g_coordinates_path_shortest(alone, start, target);
