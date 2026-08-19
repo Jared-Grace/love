@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_selects_functionize_range } from "./js_selects_functionize_range.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,6 +6,7 @@ import { greater_than_equal_assert_json } from "./greater_than_equal_assert_json
 import { js_functionize } from "./js_functionize.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 export async function js_selects_functionize_before(ast, selects, f_name_new) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 3);
   ("Pulls everything from the first chosen statement up to the line before the second one out into a function of its own, so the second choice marks where the run stops rather than the last line in it.");
   ("The twin of the cut that takes both chosen lines, and the difference is one number. It is worth a whole verb because of what a block of work actually looks like here: it opens on a name of its own and closes on a call that reuses names introduced further up, so its last line usually carries no name that is written there for the first time and cannot be pointed at. The line after it almost always can - a new block opens by naming something new - so a run that had no address at all gains one by being asked for as everything before the next block begins.");
