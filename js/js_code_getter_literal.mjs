@@ -1,7 +1,7 @@
+import { js_code_getter_literal_frozen_texts } from "./js_code_getter_literal_frozen_texts.mjs";
 import { js_code_body_one_return_only_is } from "./js_code_body_one_return_only_is.mjs";
 import { not } from "./not.mjs";
 import { json_from } from "./json_from.mjs";
-import { list_map_unique } from "./list_map_unique.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
@@ -48,12 +48,7 @@ export function js_code_getter_literal(code, f_name) {
   ("anybody else spells that word. Measured across the repo: exactly four functions");
   ("freeze more than one word and every one of them is a corpus, so no watched value");
   ("stops being watched by asking this.");
-  let frozen = [...body.matchAll(/text_frozen\(\s*("(?:[^"\\]|\\.)*")\s*\)/g)];
-  function frozen_text(found) {
-    let text = json_from(found[1]);
-    return text;
-  }
-  let texts = list_map_unique(frozen, frozen_text);
+  let texts = js_code_getter_literal_frozen_texts(body);
   if (equal(texts.length, 1)) {
     let frozen_direct = body.match(
       /return\s+text_frozen\(\s*("(?:[^"\\]|\\.)*")\s*\)\s*;/,
