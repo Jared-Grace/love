@@ -1,3 +1,15 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { ebible_versions_copyrights } from "./ebible_versions_copyrights.mjs";
+import { ebible_languages_curated } from "./ebible_languages_curated.mjs";
+import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
+import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
+import { ebible_bible_folder_language_code_or_null } from "./ebible_bible_folder_language_code_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
 export async function ebible_languages_curated_codes_gate_run() {
   "Fails when a language this app already offers a reader cannot be named back - when the folder it is read from belongs to no catalogue here, so nothing can say what language it is in.";
   "The offered list and the covered-languages answer are worked out separately, and the second one drops whatever it cannot place. A drop is silent by construction: the answer is shorter and every entry in it is still correct. So the only way the hole shows itself is a language being offered twice - once from the entry that was already there, and once again by the generated list, which was told that language was still missing.";
@@ -23,8 +35,13 @@ export async function ebible_languages_curated_codes_gate_run() {
     return bible_folder;
   }
   let unplaced = list_map_filter_null_not_is(curated, unplaced_or_null);
+  let f_name = fn_name("ebible_bible_folder_language_code_or_null");
   list_empty_is_assert_json(unplaced, {
-    hint: "these offered bible folders belong to no catalogue this app carries, so nothing can say what language they are in and the covered-languages answer drops them — was one added by hand without a catalogue entry beside it, or does it come from a third source that ebible_bible_folder_language_code_or_null has not been taught yet?",
+    hint: text_combine_multiple([
+      "these offered bible folders belong to no catalogue this app carries, so nothing can say what language they are in and the covered-languages answer drops them — was one added by hand without a catalogue entry beside it, or does it come from a third source that ",
+      f_name,
+      " has not been taught yet?",
+    ]),
     unplaced,
   });
   let checked = list_size(curated);
