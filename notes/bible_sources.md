@@ -120,12 +120,15 @@ seven were read on 2026-08-19:
 
 So no language is unlocked by the unread set today. Two follow-ups came out of it:
 
-- **Danish is the only one that grants anything.** It permits distribution and does
-  not forbid earning — it taxes it, at 20% of net profits payable to the Project
-  Gutenberg Association at Carnegie Mellon, and adds an indemnity. That is not the
-  non-commercial refusal, so the rule does not decide it. It is a duty nobody here
-  is set up to keep, aimed at an arrangement that has long since been superseded,
-  and whether to take it on is a decision for the human rather than for a gate.
+- **Danish was the only one that granted anything, and it was refused on
+  2026-08-19.** It permits distribution and does not forbid earning — it taxes it,
+  at 20% of net profits payable to the Project Gutenberg Association at Carnegie
+  Mellon, and adds an indemnity. So the non-commercial rule did not decide it; a
+  person did, and the answer was **no royalty**. That is now a standing rule rather
+  than one page's verdict: terms that make somebody else a partner in what this
+  repo earns are refused, whatever fraction they name. The mission is to earn and
+  give away what is earned, and a royalty redirects part of the giving. Do not
+  re-litigate `dan1931`, and refuse the next royalty page on this line.
 - **`apyNT`'s copyright page carries the wrong translation's notice.** The title is
   Aparai (Brazil); the body is the Khmer Standard Version's. That is a third defect
   to tell eBible about — add it to `letters/ebible_letter.md` before sending.
