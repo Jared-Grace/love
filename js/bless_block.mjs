@@ -1,9 +1,8 @@
+import { bless_block_sidewalk_depth } from "./bless_block_sidewalk_depth.mjs";
 import { bless_block_fronts } from "./bless_block_fronts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
-import { bless_sidewalk_depth } from "./bless_sidewalk_depth.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 export function bless_block(x, y) {
   arguments_assert(arguments, 2);
@@ -36,14 +35,13 @@ export function bless_block(x, y) {
   ("also the only way through the row, so paving them is what keeps the ground north of the");
   ("block reachable from the pavement in front of it.");
   let r = bless_block_fronts(x, y);
-  let fronts = property_get(r, "fronts");
-  let alleys = property_get(r, "alleys");
-  let walls = property_get(r, "walls");
-  let buildings = property_get(r, "buildings");
-  let gap = property_get(r, "gap");
-  let sidewalk_y = property_get(r, "sidewalk_y");
-  let block_width = subtract(fronts, gap);
-  let sidewalk_depth = bless_sidewalk_depth();
+  let r2 = bless_block_sidewalk_depth(r);
+  let sidewalk_depth = property_get(r2, "sidewalk_depth");
+  let block_width = property_get(r2, "block_width");
+  let sidewalk_y = property_get(r2, "sidewalk_y");
+  let buildings = property_get(r2, "buildings");
+  let walls = property_get(r2, "walls");
+  let alleys = property_get(r2, "alleys");
   let sidewalk = bless_tiles_rectangle(
     x,
     sidewalk_y,
