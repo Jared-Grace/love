@@ -1,7 +1,9 @@
 import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
 import { qa_commit_named_at } from "./qa_commit_named_at.mjs";
-import { qa_app_reachable_names } from "./qa_app_reachable_names.mjs";
+import { qa_app_shipped_names } from "./qa_app_shipped_names.mjs";
+import { qa_gates_named_listed } from "./qa_gates_named_listed.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function qa_app_commit_gate_run_at(search, commit) {
   "Whether one app is sound at one commit: every gate that was red there, sorted into the ones that reach what this app ships and the ones that cannot";
@@ -14,9 +16,12 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   let green = property_get(judged, "green");
   let failed = property_get(judged, "failed");
   let named = property_get(judged, "named");
-  let reach = await qa_app_reachable_names(search);
+  ("what each gate said is kept beside what was read out of it, so the offenders it wrote down are read here too - most of them are apps, pages, files and translations rather than functions, and read for functions alone they name nobody");
+  let said = property_get_or_null(judged, "said");
+  let listed = qa_gates_named_listed(named, said);
+  let reach = await qa_app_shipped_names(search);
   ("The sorting itself is pure and lives on its own, where it can be asked a question without a commit being judged first. Every fault found in it so far was found by hand on a real afternoon, because reaching it meant spending fourteen minutes here.");
-  let sorted = qa_app_gates_sorted(green, failed, named, reach);
+  let sorted = qa_app_gates_sorted(green, failed, listed, reach);
   let blocking = property_get(sorted, "blocking");
   let elsewhere = property_get(sorted, "elsewhere");
   let clear = list_empty_is(blocking);
