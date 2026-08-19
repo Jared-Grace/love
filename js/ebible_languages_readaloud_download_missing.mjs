@@ -1,4 +1,4 @@
-import { ebible_languages_without_original_bible_folders } from "./ebible_languages_without_original_bible_folders.mjs";
+import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
 import { ebible_version_readaloud_download_path } from "./ebible_version_readaloud_download_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { list_map_async } from "./list_map_async.mjs";
