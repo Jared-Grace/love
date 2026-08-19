@@ -1,3 +1,4 @@
+import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
 import { js_repack_only_is_made } from "./js_repack_only_is_made.mjs";
@@ -11,7 +12,6 @@ import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { js_property_key_name_try } from "./js_property_key_name_try.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -61,8 +61,7 @@ export function js_repack_only_is(declaration) {
     if (unset_is) {
       return false;
     }
-    let called = js_call_callee_name_try(source);
-    let unpack_is = equal(called, getter);
+    let unpack_is = js_call_callee_name_equal(source, getter);
     if (unpack_is) {
       lifted = add(lifted, 1);
       continue;
