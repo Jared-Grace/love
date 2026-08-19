@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
@@ -5,10 +6,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each_range } from "./each_range.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
 import { null_is } from "./null_is.mjs";
-import { subtract } from "./subtract.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 export function app_code_expression_flat_tree_of_code(code) {
@@ -48,8 +47,7 @@ export function app_code_expression_flat_tree_of_code(code) {
     sum_symbol = symbol;
     term = number;
   }
-  let number_count = list_size(numbers);
-  let operator_count = subtract(number_count, 1);
+  let operator_count = list_size_subtract(numbers, 1);
   each_range(operator_count, operator_take);
   let none = null_is(sum);
   if (none) {
