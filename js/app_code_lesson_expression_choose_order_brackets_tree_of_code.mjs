@@ -8,7 +8,7 @@ import { list_size_assert } from "./list_size_assert.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_expression_choose_order_brackets_expression_parts } from "./app_code_lesson_expression_choose_order_brackets_expression_parts.mjs";
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_brackets_tree_of_code(
   code,
 ) {
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_choose_order_brackets_tree_of_code(
   let inner_left_truth = truth_of(2);
   let or_symbol = list_get(words, 3);
   let inner_right_truth = truth_of(4);
-  let tree = app_code_lesson_expression_choose_order_brackets_expression_parts(
+  let tree = app_code_expression_node_right_operator_first(
     left_truth,
     and_symbol,
     inner_left_truth,
