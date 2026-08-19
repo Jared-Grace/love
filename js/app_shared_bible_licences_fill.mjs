@@ -1,5 +1,5 @@
+import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_shared_bible_licences_body } from "./app_shared_bible_licences_body.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_credits_browser } from "./ebible_credits_browser.mjs";
 import { html_clear } from "./html_clear.mjs";
