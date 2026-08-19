@@ -1,8 +1,4 @@
-import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_last } from "./list_last.mjs";
-import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { app_shared_bible_folder_reading } from "./app_shared_bible_folder_reading.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
