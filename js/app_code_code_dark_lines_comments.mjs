@@ -1,3 +1,4 @@
+import { html_text_align_left } from "./html_text_align_left.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -16,8 +17,10 @@ export function app_code_code_dark_lines_comments(component, code) {
   "The count of arguments is deliberately not asserted, because this stands in the slot a lesson paints its code with, and that slot is called with three arguments by the worked example and with two by the quiz - the same reason its plain twin has never asserted either.";
   "The chip is emptied before anything is put in it, because what goes in is a run of spans rather than a single piece of text, and a chip drawn twice would otherwise keep the first drawing underneath the second.";
   "The line is trimmed only to decide what it is, never to decide what is shown. A note indented under the line above it is still a note, and the space in front of it is part of how the program looks.";
+  "The lines are pulled to the left edge, for the reason the plain multi-line writer beside this one gives: a button centres what is written on it, and two lines of code centred are two lines starting in different places, which is part of how code is read.";
   html_style_code_dark(component);
   html_style_white_space(component, "pre-wrap");
+  html_text_align_left(component);
   let nothing = text_empty();
   html_text_set(component, nothing);
   let lines = text_split_newline(code);
