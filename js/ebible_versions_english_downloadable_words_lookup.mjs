@@ -40,12 +40,13 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     async function lambda(chapter_code, verses) {
       function lambda4(verse) {
         let text = property_get(verse, "text");
-        let verse_number = property_get(verse, verse_number_key());
+        let property_name = verse_number_key();
+        let verse_number = property_get(verse, property_name);
         let replaced = text_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
         let split = text_split_space(n);
-        function lambda5(s2) {
-          let lower = text_lower_to(s2);
+        function lambda5(s) {
+          let lower = text_lower_to(s);
           word_add(lower);
           let t = text_transform_lookup(lower, normalize);
           if (equal_not(t, lower)) {

@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { folder_home } from "./folder_home.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
@@ -18,8 +19,7 @@ export async function workspace_shortcuts_ensure() {
   let entry = path_join([repo, "linux", "xfce-workspace-shortcuts.desktop"]);
   let programs = path_join([home, ".local", "bin"]);
   let startup = path_join([home, ".config", "autostart"]);
-  await folder_exists_ensure(programs);
-  await folder_exists_ensure(startup);
+  await each_async([programs, startup], folder_exists_ensure);
   let program_link = path_join([programs, "xfce-workspace-shortcuts"]);
   let startup_link = path_join([startup, "xfce-workspace-shortcuts.desktop"]);
   await link_destination_set(program_link, script);
