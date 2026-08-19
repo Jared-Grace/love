@@ -1,4 +1,4 @@
-import { app_shared_bible_home_generic_hash } from "./app_shared_bible_home_generic_hash.mjs";
+import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
@@ -25,7 +25,9 @@ export async function app_shared_bible_home_generic(
   if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }
-  let { unknown_shown, hash } = app_shared_bible_home_generic_hash(content);
+  let r3 = app_shared_bible_home_generic_unknown_shown(content);
+  let unknown_shown = property_get(r3, "unknown_shown");
+  let hash = property_get(r3, "hash");
   if (unknown_shown) {
     return null;
   }
