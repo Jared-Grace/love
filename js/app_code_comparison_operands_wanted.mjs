@@ -14,9 +14,9 @@ export function app_code_comparison_operands_wanted(symbol, want_true) {
   ("Both numbers stay at 2 or above, because each of them is about to be written out as a small piece of arithmetic and there is no arithmetic on small whole numbers that comes to less than 2.");
   let left = integer_random(3, 9);
   let candidates = range_from(2, 12);
-  function lambda(right) {
+  function lambda(second) {
     "a second number is a fitting one when the operator itself says the pair answers the way the caller asked";
-    let value = app_code_operator_solve(left, symbol, right);
+    let value = app_code_operator_solve(left, symbol, second);
     let wanted = equal(value, want_true);
     return wanted;
   }
