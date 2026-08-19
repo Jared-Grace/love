@@ -34,34 +34,34 @@ export function app_code_lesson_quiz(
   let answer_label_set = property_get(r, "answer_label_set");
   let container_question = property_get(r, "container_question");
   let r22 = property_get(r, "r2");
-  let answer_label2 = property_get(r, "answer_label");
-  let quiz_index2 = property_get(r, "quiz_index");
-  let container_success_message2 = property_get(r, "container_success_message");
-  let container_correction3 = property_get(r, "container_correction");
-  let answers_div3 = property_get(r22, "answers_div");
-  let qa_for3 = property_get(r22, "qa_for");
-  let answer_property3 = property_get(r22, "answer_property");
+  let answer_label = property_get(r, "answer_label");
+  let quiz_index = property_get(r, "quiz_index");
+  let container_success_message = property_get(r, "container_success_message");
+  let container_correction = property_get(r, "container_correction");
+  let answers_div = property_get(r22, "answers_div");
+  let qa_for = property_get(r22, "qa_for");
+  let answer_property = property_get(r22, "answer_property");
   let quiz_question3 = property_get(r22, "quiz_question");
-  let on_question3 = property_get(r22, "on_question");
-  let on_answer3 = property_get(r22, "on_answer");
-  let correction_render3 = property_get(r22, "correction_render");
+  let on_question = property_get(r22, "on_question");
+  let on_answer = property_get(r22, "on_answer");
+  let correction_render = property_get(r22, "correction_render");
   let quiz_question = quiz_question3;
   ("the first question is painted here, below everything it reads, and not up where the pieces are gathered");
   on_qa_change();
   function on_qa_change() {
-    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property3);
+    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
-    on_question3(container_question, quiz_question);
-    html_clear(answers_div3);
+    on_question(container_question, quiz_question);
+    html_clear(answers_div);
     ("the label is put back to what the lesson wrote before every question, because a quiz that changed it while working the last one out would otherwise open the next one still asking the question it finished on");
-    answer_label_set(answer_label2);
+    answer_label_set(answer_label);
     app_code_lesson_quiz_render_correction(
-      container_correction3,
-      correction_render3,
+      container_correction,
+      correction_render,
       qa,
     );
-    on_answer3(
-      answers_div3,
+    on_answer(
+      answers_div,
       info,
       qa,
       on_success,
@@ -72,19 +72,19 @@ export function app_code_lesson_quiz(
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
-    html_visibility_hidden(container_success_message2);
+    html_visibility_hidden(container_success_message);
   }
   async function on_success() {
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     "the correct answer is written down here, at the one place that knows both which quiz of the lesson this is and how many the lesson has - the list screen shows a lesson as finished once every one of them has been answered right at least once";
     let quizzes_total = list_size(quizzes);
-    app_code_progress_quiz_correct_record(context, quiz_index2, quizzes_total);
-    html_clear(container_success_message2);
-    app_shared_success_message(container_success_message2);
-    html_visibility_visible(container_success_message2);
+    app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
+    html_clear(container_success_message);
+    app_shared_success_message(container_success_message);
+    html_visibility_visible(container_success_message);
     await sleep_success_color();
     let item = next_get();
-    qa = qa_for3(item);
+    qa = qa_for(item);
     on_qa_change();
   }
 }
