@@ -10,6 +10,12 @@ export async function ebible_version_credit(bible_folder) {
   "Read off the copy on disk rather than off the web, so the credit a reader is shown is the credit that came with the very text they are reading. A page fetched later could have changed under it, and then the app would be crediting a text nobody has.";
   "Opening the page and reading its terms and its own name off it is done next door, because the language reader alongside starts from exactly the same three. What is this one's own is the English description and the credit block.";
   "A translation nobody has downloaded is answered with nothing rather than refused, so a sweep over a part-finished download runs to the end instead of stopping at the first gap.";
+  ("A bible from the Door43 catalogue keeps its credit beside itself rather than on a page here, and is answered from there. The shape that comes back is the same either way, so whatever credits a translation or reads its terms never has to ask where it came from.");
+  let door43 = door43_version_credit(bible_folder);
+  let elsewhere = null_not_is(door43);
+  if (elsewhere) {
+    return door43;
+  }
   let page = await ebible_version_copyright_page_read(bible_folder);
   let missing = null_is(page);
   if (missing) {
