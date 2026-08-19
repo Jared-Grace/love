@@ -119,7 +119,7 @@ for terms.
   after fifty years, but in the United States a 1940 work is protected until about
   2036, so it cannot be treated as public domain here.
 
-### The unit that has to exist before ND is switched on
+### ND is on, and what holds the words frozen
 
 `ebible_licence_derivatives_forbidden_is` and
 `ebible_languages_derivatives_forbidden_bible_folders` answer which shipped
@@ -128,10 +128,30 @@ shippable question, because the two answers come apart: ND is shippable *and*
 frozen; NC is unfrozen *and* refused. Folding them together is what kept ND
 refused for a reason that belonged to NC.
 
-Adding `ebible_licence_cc_by_nd()` to `ebible_licences_commercial` is a one-line
-change and has **not** been made. What it waits on is a renderer that keeps a note
-beside a frozen verse rather than inside it, and something that stops an ND text
-reaching a path that rewrites words.
+`ebible_licence_cc_by_nd()` is now in `ebible_licences_commercial`, and the
+licence baseline is at zero — no shipped translation offends any more. Three
+ND translations are shipped: `turytc`, `zlmKSZI`, `polubg`.
+
+The words are held frozen by one check at one door, not by a rule anybody has to
+remember. `ebible_bible_folders_derivatives_allowed_assert` refuses a list of
+folders if any of them forbids a derivative, and
+`app_shared_gloss_bible_generate_generic` — the single function every gloss in
+this repo is written through — asks it before doing anything else. Guarding the
+choke point is total over present *and* future gloss apps, where a gate that
+hand-listed callers would go stale the first time somebody added one.
+
+`app_shared_gloss_bible_derivatives_gate_run` proves the two are joined, by
+knocking on the **door** rather than on the check behind it: a check nothing
+calls passes every time it is asked and protects nothing, which is exactly what
+this repo left `ebible_languages_derivatives_forbidden_bible_folders` as for as
+long as it existed — an answer computed and never acted on. The gate asserts the
+door throws for a frozen folder and does not throw for `engbsb`.
+
+What is *not* forbidden by ND is format. eBible's own wording grants sharing "in
+any format" and forbids only "derivative works that change any of the actual
+words or punctuation of the Scriptures". So colour, layout, circling a word, and
+a note **beside** the verse are all free; only characters inserted into the verse
+itself — a `*`, a bracket, an inline gloss — are not.
 
 ## Other sources, and how each states its terms
 
