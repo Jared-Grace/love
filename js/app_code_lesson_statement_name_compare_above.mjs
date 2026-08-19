@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,6 +14,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_statement_name_compare_above(root) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: the comparison a learner already knows written with two numbers, the same comparison written with two names instead, and then the same two names asked the other way round");
   ("The first box uses this lesson's own two numbers, so both of the first two boxes come out true. That is what lets a learner check the new form against the old one rather than be told it works - the answer they already know is sitting one box above the answer they are being shown.");
