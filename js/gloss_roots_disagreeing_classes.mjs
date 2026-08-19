@@ -1,10 +1,8 @@
+import { gloss_roots_disagreeing_classes_silent_total } from "./gloss_roots_disagreeing_classes_silent_total.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_roots_disagreeing_classes_count_read } from "./gloss_roots_disagreeing_classes_count_read.mjs";
 import { gloss_roots_disagreeing_classes_grouped } from "./gloss_roots_disagreeing_classes_grouped.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_take } from "./list_take.mjs";
-import { subtract } from "./subtract.mjs";
 export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   "Findings that an explanation named the wrong root, gathered by which root it named instead: how many findings stand at each distance from the dictionary, and the commonest wrong roots with the words they were claimed for.";
   "A count of findings does not say how much is wrong, because one word repeated is one fault and reads as hundreds. kahangtoran alone accounts for ninety-nine of them, every one explained from hangtud where the dictionary writes hangtod - a single disagreement about how to spell a vowel, met once per verse. Gathering the findings by the pair of words that disagree turns the count of sightings into a count of faults, which is the number a reader is actually asking for.";
@@ -17,15 +15,15 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   let r3 = gloss_roots_disagreeing_classes_grouped(findings, offenders);
   let r2 = gloss_roots_disagreeing_classes_count_read(r3);
   let count_read = property_get(r2, "count_read");
-  let classes = property_get(r2, "classes");
-  let by_relation = property_get(r2, "by_relation");
-  let by_edits = property_get(r2, "by_edits");
-  let claimed_total = property_get(r2, "claimed_total");
-  let total = property_get(r2, "total");
-  let apart_by_edits = property_get(r2, "apart_by_edits");
-  list_sort_number_mapper_reverse(classes, count_read);
-  let classes_total = list_size(classes);
-  let silent_total = subtract(total, claimed_total);
+  let r4 = gloss_roots_disagreeing_classes_silent_total(r2, count_read);
+  let silent_total = property_get(r4, "silent_total");
+  let classes_total = property_get(r4, "classes_total");
+  let apart_by_edits = property_get(r4, "apart_by_edits");
+  let total = property_get(r4, "total");
+  let claimed_total = property_get(r4, "claimed_total");
+  let by_edits = property_get(r4, "by_edits");
+  let by_relation = property_get(r4, "by_relation");
+  let classes = property_get(r4, "classes");
   let count = Number(sample_size);
   let shown = list_take(classes, count);
   let r = {
