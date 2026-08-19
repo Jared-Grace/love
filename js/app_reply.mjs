@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { app_reply_key_down } from "./app_reply_key_down.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
@@ -80,9 +81,7 @@ export async function app_reply(context) {
   let card2 = property_get(r3, "card2");
   let buttons_languages = property_get(r3, "buttons_languages");
   async function update(verse_count) {
-    list_clear(bible_texts);
-    list_clear(responses);
-    list_clear(responses_buttons);
+    each([bible_texts, responses, responses_buttons], list_clear);
     let e = encouragement;
     if (equal(verse_count, 1)) {
       e = encouragement_singles;
