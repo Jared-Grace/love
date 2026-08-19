@@ -1,3 +1,4 @@
+import { app_g_verify_hint_p } from "./app_g_verify_hint_p.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_verify_home_chapter_grid } from "./app_g_verify_home_chapter_grid.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -7,8 +8,6 @@ import { app_g_verify_title_font_size } from "./app_g_verify_title_font_size.mjs
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_margin_em } from "./html_margin_em.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
 export function app_g_verify_home_header(wrap, chapter_codes, chapter_code) {
   "Everything above the passage on the verify screen: the band of chapter buttons, the line naming which chapter is open, and the sentence telling a reviewer what hovering a line or a word will show them.";
   arguments_assert(arguments, 3);

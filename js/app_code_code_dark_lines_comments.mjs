@@ -5,6 +5,7 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
+import { newline } from "./newline.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -22,7 +23,7 @@ export function app_code_code_dark_lines_comments(component, code) {
   let lines = text_split_newline(code);
   let slashes = js_comment_start();
   let dim = app_shared_color_gray();
-  let separator = "\n";
+  let separator = newline();
   let separated = false;
   for (let line of lines) {
     if (separated) {

@@ -1,3 +1,5 @@
+import { ebible_readaloud_lines_offered_unchecked } from "./ebible_readaloud_lines_offered_unchecked.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
 import { ebible_readaloud_lines_differ_names } from "./ebible_readaloud_lines_differ_names.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
@@ -37,6 +39,21 @@ export async function ebible_readaloud_lines_gate_run() {
       ", which rewrites the record",
     ]),
   });
+  ("Being named in the record is not the same as having been read, and until now only the first of those was checked. A bible whose reading-aloud text never reached this machine is written down with every chapter unread and nothing disagreeing, which counts here exactly like a bible read end to end and found right - so the number below said three hundred and forty-seven bibles while seventy-nine of them had not had a single chapter looked at.");
+  ("Refused only for the bibles a reader can choose. The rest are a job still to do and saying so every time would make this red for a reason nobody is going to act on; an offered one is a reader being told a chapter is fine when nobody looked, which is the thing this gate exists to stop.");
+  ("Asked before anything is measured from the record rather than after, because everything below reads that record as though it were the answer. An offered bible with no chapter read contributes nothing disagreeing, so the list of disagreements below is short by however much of it was never looked at - and comparing that short list against what the repo already carried is a comparison between an answer and a guess. What makes a reading untrustworthy has to be refused before the reading is taken, not after it has been reported.");
+  let unchecked = ebible_readaloud_lines_offered_unchecked(recorded);
+  let f_name_download = fn_name("ebible_languages_readaloud_download");
+  let f_name_measure = fn_name("ebible_readaloud_lines_write");
+  list_empty_is_assert_json(unchecked, {
+    hint: text_combine_multiple([
+      "a bible a reader can choose has chapters nobody has read, so this gate would pass it without having compared a single one of them - fetch what is missing for it with ",
+      f_name_download,
+      ", then measure again with ",
+      f_name_measure,
+    ]),
+    unchecked,
+  });
   function lambda(measured) {
     let uneven = property_get(measured, "differ");
     let bible_folder = property_get(measured, "bible_folder");
@@ -74,9 +91,16 @@ export async function ebible_readaloud_lines_gate_run() {
     return chapters;
   }
   let same_each = list_map(bibles, lambda2);
+  function lambda3(measured) {
+    let chapters_unread = property_get(measured, "unread");
+    let count = list_size(chapters_unread);
+    return count;
+  }
+  let unread_each = list_map(bibles, lambda3);
   let r = {
     bibles: list_size(bibles),
     chapters: list_sum(same_each),
+    unread: list_sum(unread_each),
     unmeasured: list_size(unmeasured),
     differ,
   };
