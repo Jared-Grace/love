@@ -5,7 +5,6 @@ import { date_now_file } from "./date_now_file.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
-import { list_empty } from "./list_empty.mjs";
 import { not } from "./not.mjs";
 export async function storage_function_folder_backup(f_name) {
   "Takes a copy of one function's stored files before anything rewrites them, because that folder is not in git and a sweep that goes wrong there has nothing to go back to.";
@@ -30,7 +29,7 @@ export async function storage_function_folder_backup(f_name) {
   let stamp = date_now_file();
   let inside = path_join(["storage_backup", f_name, stamp]);
   let backup = folder_gitignore_join(inside);
-  let skipped = list_empty();
+  let skipped = [];
   await folder_copy_fresh(source, backup, skipped);
   let names = await folder_read_files(backup);
   let r = {
