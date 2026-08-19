@@ -1,6 +1,5 @@
+import { g_genders_without_img } from "./g_genders_without_img.mjs";
 import { g_npc_id_ensure } from "./g_npc_id_ensure.mjs";
-import { list_without } from "./list_without.mjs";
-import { property_transform_multiple } from "./property_transform_multiple.mjs";
 import { g_gender_pronouns } from "./g_gender_pronouns.mjs";
 import { g_conversation_key } from "./g_conversation_key.mjs";
 import { each_index } from "./each_index.mjs";
@@ -11,15 +10,9 @@ import { list_get } from "./list_get.mjs";
 import { mod } from "./mod.mjs";
 import { list_remove_end } from "./list_remove_end.mjs";
 import { list_size } from "./list_size.mjs";
-import { g_genders_get } from "./g_genders_get.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
-  let genders = g_genders_get();
-  function lambda2(imgs) {
-    let filtered = list_without(imgs, player_img);
-    return filtered;
-  }
-  property_transform_multiple(genders, "imgs", lambda2);
+  let genders = g_genders_without_img(player_img);
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
