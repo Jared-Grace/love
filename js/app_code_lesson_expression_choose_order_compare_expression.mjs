@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_compare_expression_parts } from "./app_code_lesson_expression_choose_order_compare_expression_parts.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -14,6 +15,7 @@ export function app_code_lesson_expression_choose_order_compare_expression(
   want_true,
   comparison_left,
 ) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 2);
   ("a comparison of two numbers standing beside a plain true or false, built as a shape so the quiz can work one operator out at a time: 3 < 5 === true, or false !== (7 > 2)");
   ("Two operators a line, the same count the arithmetic lessons on this engine use, so the only new thing is what the operators ARE. The learner has already compared a comparison against a true or false and been asked for the answer whole; here the same line is taken apart a press at a time.");
