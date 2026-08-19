@@ -1,12 +1,11 @@
+import { gloss_findings_edits_tally } from "./gloss_findings_edits_tally.mjs";
 import { each } from "./each.mjs";
 import { gloss_root_explain_nearest } from "./gloss_root_explain_nearest.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_spread_take } from "./list_spread_take.mjs";
-import { list_tally } from "./list_tally.mjs";
 import { property_get } from "./property_get.mjs";
 export function gloss_roots_disagreeing_nearness(offenders, sample_size) {
   "Findings that an explanation missed its word's root, sorted by how far the explanation came from saying it: how many stand at each distance, and an evenly spread sample of the ones standing furthest away.";
@@ -36,12 +35,7 @@ export function gloss_roots_disagreeing_nearness(offenders, sample_size) {
   }
   each(offenders, chapter_read);
   let total = list_size(findings);
-  function edits_read(finding) {
-    let edits = property_get(finding, "edits");
-    return edits;
-  }
-  let distances = list_map(findings, edits_read);
-  let counted = list_tally(distances);
+  let counted = gloss_findings_edits_tally(findings);
   function far_is(finding) {
     let edits = property_get(finding, "edits");
     let apart = greater_than_equal(edits, 3);
