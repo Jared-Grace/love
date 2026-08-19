@@ -52,11 +52,21 @@ export function js_declarations_name_only_collapse(ast) {
       if (not(single_to_is)) {
         continue;
       }
-      js_identifier_rename(ast, name, name_to);
+      let kept = name_to;
+      let dropped = name;
+      let counted_is = text_numbered_is(name);
+      let counted_to_is = text_numbered_is(name_to);
+      if (counted_to_is) {
+        if (not(counted_is)) {
+          kept = name;
+          dropped = name_to;
+        }
+      }
+      js_identifier_rename(ast, dropped, kept);
       let list = property_get(row, "list");
       let declaration = property_get(row, "declaration");
       list_remove(list, declaration);
-      list_add(collapsed, name);
+      list_add(collapsed, dropped);
       going = true;
       break;
     }
