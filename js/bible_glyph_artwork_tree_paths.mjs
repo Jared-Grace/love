@@ -1,3 +1,4 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,7 +6,6 @@ import { http_text_or_null } from "./http_text_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
@@ -27,8 +27,7 @@ export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
   let paths = [];
   for (let entry of entries) {
     let name = property_get(entry, "path");
-    let walked = text_combine(prefix, "/");
-    let joined = text_combine(walked, name);
+    let joined = text_combine_3(prefix, "/", name);
     let folder = property_equals(entry, "type", "tree");
     if (folder) {
       let url = property_get(entry, "url");
