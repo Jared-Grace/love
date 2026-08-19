@@ -1,5 +1,5 @@
-import { ebible_readaloud_lines_offered_unchecked } from "./ebible_readaloud_lines_offered_unchecked.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { ebible_readaloud_lines_offered_unchecked_names } from "./ebible_readaloud_lines_offered_unchecked_names.mjs";
+import { ebible_readaloud_lines_offered_unchecked_baseline_path } from "./ebible_readaloud_lines_offered_unchecked_baseline_path.mjs";
 import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
 import { ebible_readaloud_lines_differ_names } from "./ebible_readaloud_lines_differ_names.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
@@ -40,20 +40,27 @@ export async function ebible_readaloud_lines_gate_run() {
     ]),
   });
   ("Being named in the record is not the same as having been read, and until now only the first of those was checked. A bible whose reading-aloud text never reached this machine is written down with every chapter unread and nothing disagreeing, which counts here exactly like a bible read end to end and found right - so the number below said three hundred and forty-seven bibles while seventy-nine of them had not had a single chapter looked at.");
-  ("Refused only for the bibles a reader can choose. The rest are a job still to do and saying so every time would make this red for a reason nobody is going to act on; an offered one is a reader being told a chapter is fine when nobody looked, which is the thing this gate exists to stop.");
+  ("Asked only of the bibles a reader can choose. A bible sitting in storage that nobody is offered yet being unread is a job not started; an offered one being unread is somebody told a chapter is fine when nobody looked, and only the second of those is this gate's business.");
   ("Asked before anything is measured from the record rather than after, because everything below reads that record as though it were the answer. An offered bible with no chapter read contributes nothing disagreeing, so the list of disagreements below is short by however much of it was never looked at - and comparing that short list against what the repo already carried is a comparison between an answer and a guess. What makes a reading untrustworthy has to be refused before the reading is taken, not after it has been reported.");
-  let unchecked = ebible_readaloud_lines_offered_unchecked(recorded);
+  ("Measured against what the repo already carried rather than against zero, and for the same reason the disagreements below are: seventy-nine of the offered bibles were already like this when it was first asked, so refusing them outright would leave this red for a fact about which files happen to sit on one machine. The gate's own rule, written above, is that files not being here is a fact about a machine and not a fault in a bible. What must not happen is the number going up - a bible newly offered whose chapters nobody has read is a reader newly told that something was checked when it was not.");
+  let unchecked_names = await ebible_readaloud_lines_offered_unchecked_names();
+  let unchecked_path = ebible_readaloud_lines_offered_unchecked_baseline_path();
+  let unchecked_write = fn_name(
+    "ebible_readaloud_lines_offered_unchecked_baseline_write",
+  );
   let f_name_download = fn_name("ebible_languages_readaloud_download");
-  let f_name_measure = fn_name("ebible_readaloud_lines_write");
-  list_empty_is_assert_json(unchecked, {
-    hint: text_combine_multiple([
-      "a bible a reader can choose has chapters nobody has read, so this gate would pass it without having compared a single one of them - fetch what is missing for it with ",
-      f_name_download,
-      ", then measure again with ",
-      f_name_measure,
-    ]),
-    unchecked,
-  });
+  let unchecked_hint = text_combine_multiple([
+    "a bible a reader can choose has no chapter of it read, so nothing here has compared a single one of them and the answer below passes over it in silence - fetch what is missing for it with ",
+    f_name_download,
+    ", then measure again with ",
+    f_name,
+  ]);
+  await baseline_names_gate_generic(
+    unchecked_names,
+    unchecked_path,
+    unchecked_hint,
+    unchecked_write,
+  );
   function lambda(measured) {
     let uneven = property_get(measured, "differ");
     let bible_folder = property_get(measured, "bible_folder");
