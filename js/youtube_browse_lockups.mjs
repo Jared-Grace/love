@@ -5,11 +5,12 @@ import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function youtube_browse_lockups(answer) {
-  "The videos youtube named anywhere inside one of its answers, each as its watch code and its title, together with the token that asks for the page after them.";
-  "The answer is searched all the way through rather than read down a path, because youtube moves where a list of videos sits between one of its own releases and the next, and a path written today is a silent empty answer after that move. What a video is called in the answer has changed too; what has not changed is that the video's own record carries the watch code, so the record is what is looked for.";
-  "The token comes back beside the videos rather than from a second search, because a page and the way to ask for the next one are one fact: read apart, a caller can hold the videos of one page and the token of another and never notice.";
+  "Everything youtube named anywhere inside one of its answers, each as the word youtube knows that thing by and the title it wears, together with the token that asks for the page after them.";
+  "A video and a playlist are written down the same way in an answer, so both are read the same way here and the caller says which it asked for. Making one reader for each would have been two copies of the same walk, differing only in the word they put on what they found.";
+  "The answer is searched all the way through rather than read down a path, because youtube moves where a list sits between one of its own releases and the next, and a path written today is a silent empty answer after that move. What the entries are called in the answer has changed too; what has not changed is that an entry's own record carries the word it is known by, so the record is what is looked for.";
+  "The token comes back beside the entries rather than from a second search, because a page and the way to ask for the next one are one fact: read apart, a caller can hold the entries of one page and the token of another and never notice.";
   arguments_assert(arguments, 1);
-  let videos = [];
+  let items = [];
   let continuation = null;
   let waiting = [answer];
   while (greater_than(waiting.length, 0)) {
@@ -21,8 +22,8 @@ export function youtube_browse_lockups(answer) {
     let lockup = node.lockupViewModel;
     if (lockup) {
       let title = lockup?.metadata?.lockupMetadataViewModel?.title?.content;
-      videos.push({
-        video_id: lockup.contentId,
+      items.push({
+        content_id: lockup.contentId,
         title: title || "",
       });
     }
@@ -32,8 +33,8 @@ export function youtube_browse_lockups(answer) {
       let watch = shorts?.onTap?.innertubeCommand?.watchEndpoint?.videoId;
       let spoken = shorts?.accessibilityText || "";
       let title = spoken.replace(/, [\d,.KM]+ views? - play Short$/, "");
-      videos.push({
-        video_id: reel || watch || "",
+      items.push({
+        content_id: reel || watch || "",
         title: title,
       });
     }
@@ -60,7 +61,7 @@ export function youtube_browse_lockups(answer) {
     }
   }
   let r = {
-    videos: videos,
+    items: items,
     continuation: continuation,
   };
   return r;
