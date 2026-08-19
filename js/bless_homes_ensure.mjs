@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { list_get } from "./list_get.mjs";
@@ -41,8 +42,7 @@ export function bless_homes_ensure(people, blocks) {
     }
     let building = property_get(places, "building");
     let within = bless_place_within("building", building);
-    let doors = property_get(block, "doors");
-    let door = list_get(doors, within);
+    let door = property_list_get(block, "doors", within);
     property_set(person, "home", [door]);
     property_set(person, "roam", roam_resident);
   }
