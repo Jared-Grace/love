@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
-import { app_code_screen_settle_wait } from "./app_code_screen_settle_wait.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_code_screen_capture_record(
   page,
