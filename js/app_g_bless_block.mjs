@@ -30,8 +30,8 @@ export function app_g_bless_block(rows) {
   let sidewalk = property_get(measured, "sidewalk");
   let tiles = list_concat(walls, sidewalk);
   function x_of(tile) {
-    let x = property_get(tile, "x");
-    return x;
+    let tile_x = property_get(tile, "x");
+    return tile_x;
   }
   function y_of(tile) {
     let y = property_get(tile, "y");
