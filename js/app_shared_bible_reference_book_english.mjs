@@ -1,3 +1,5 @@
+import { text_upper_to } from "./text_upper_to.mjs";
+import { list_map } from "./list_map.mjs";
 import { app_shared_bible_folder_reading } from "./app_shared_bible_folder_reading.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -25,7 +27,20 @@ export async function app_shared_bible_reference_book_english(ref_line) {
     return ref_line;
   }
   let books = await ebible_version_books_browser(folder);
-  let v = ebible_references_names(books, [ref_line]);
+  ("The books are matched in capitals on both sides, because the bibles do not agree about how a book name is written down - the Tagalog one spells John JUAN, the English one John. A reader typing what the screen in front of them says would otherwise be told there is no such book by the very translation that just printed it.");
+  function upper_of(book) {
+    let s = property_get(book, "text");
+    let text = text_upper_to(s);
+    let book_code = property_get(book, "book_code");
+    let uppered = {
+      text,
+      book_code,
+    };
+    return uppered;
+  }
+  let books_upper = list_map(books, upper_of);
+  let line_upper = text_upper_to(ref_line);
+  let v = ebible_references_names(books_upper, [line_upper]);
   let book_names = property_get(v, "book_names");
   let placed_not = list_empty_is(book_names);
   if (placed_not) {
@@ -34,7 +49,12 @@ export async function app_shared_bible_reference_book_english(ref_line) {
   let book_name = list_first(book_names);
   let chapter_verses_list = property_get(v, "chapter_verses_list");
   let chapter_verses = list_first(chapter_verses_list);
-  let book_code = list_find_property_get(books, "text", book_name, "book_code");
+  let book_code = list_find_property_get(
+    books_upper,
+    "text",
+    book_name,
+    "book_code",
+  );
   let books_en = await app_shared_bible_read_books_en();
   let book_name_english = list_find_property_get_or(
     books_en,
