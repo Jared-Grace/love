@@ -90,7 +90,11 @@ export async function app_shared_bible_read(context, verse_action) {
     }
     let ref_chapters = app_shared_bible_ref_chapter_codes(ref_line, books_en);
     if (list_multiple_is(ref_chapters)) {
-      app_shared_bible_ref_chapters_guard(content, ref_chapters, books_en);
+      await app_shared_bible_ref_chapters_guard(
+        content,
+        ref_chapters,
+        books_en,
+      );
       app_shared_bible_settings_gear(bar, content, context, count_status);
       return;
     }
