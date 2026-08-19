@@ -1,3 +1,4 @@
+import { bless_places_ensure } from "./bless_places_ensure.mjs";
 import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_index } from "./each_index.mjs";
