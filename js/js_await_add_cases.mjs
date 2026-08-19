@@ -85,7 +85,9 @@ export function js_await_add_cases() {
           async: true,
         },
       },
-      after: text_frozen('async function f(file_read) {\n  file_read("a");\n}\n'),
+      after: text_frozen(
+        'async function f(file_read) {\n  file_read("a");\n}\n',
+      ),
     },
     {
       name: "a variable of that name is left alone",
