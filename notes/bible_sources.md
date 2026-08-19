@@ -115,7 +115,7 @@ seven were read on 2026-08-19:
 | `bod` | Tibetan (Central) | bare copyright notice, no grant; NT+ only | refused |
 | `hwc` | Hawai'i Pidgin | no grant; names a contact for permissions | refused — **ask** |
 | `apyNT` | *(page is wrong — see below)* | Khmer notice, quotation limited to under 1,000 verses without written permission | refused |
-| `dan1931` | Danish (OT 1931, NT 1907) | Project Gutenberg "Small Print": distribution allowed, **20% of net profits** owed as royalty, plus indemnity | **the human's call** |
+| `dan1931` | Danish (OT 1931, NT 1907) | Project Gutenberg "Small Print": distribution allowed, **20% of net profits** owed as royalty, plus indemnity | **refused** 2026-08-19 |
 | `amh` | Amharic | prose terms, no readable grant | replaced by `am_ulb` |
 
 So no language is unlocked by the unread set today. Two follow-ups came out of it:
