@@ -1,3 +1,4 @@
+import { text_numbered_is } from "./text_numbered_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
@@ -11,8 +12,6 @@ import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { list_join } from "./list_join.mjs";
-import { text_digits_only } from "./text_digits_only.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 export function app_shared_bible_hash_field_reference(books_en) {
@@ -33,8 +32,7 @@ export function app_shared_bible_hash_field_reference(books_en) {
     let s = app_shared_bible_reference_spaced(value);
     let words = text_split_space(s);
     let tail = list_last(words);
-    let name2 = text_digits_only(tail);
-    let numbered = text_empty_not_is(name2);
+    let numbered = text_numbered_is(tail);
     if (not(numbered)) {
       ("Nothing after the book says which chapter, so there is no reference here to repair - only a book name, and offering one back with a chapter invented for it would be answering a question the reader never asked.");
       let none = [];
