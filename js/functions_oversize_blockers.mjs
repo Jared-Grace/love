@@ -1,3 +1,6 @@
+import { function_lift_candidates } from "./function_lift_candidates.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_work_oversize_names } from "./functions_work_oversize_names.mjs";
 import { function_span_candidates } from "./function_span_candidates.mjs";
@@ -52,11 +55,22 @@ export async function functions_oversize_blockers() {
       }
       naming = add(naming, 1);
     }
+    async function lambda_lift() {
+      let read = await function_lift_candidates(f_name);
+      return read;
+    }
+    let lifts = await catch_null_async(lambda_lift);
+    let liftable = 0;
+    let lifts_read_is = null_not_is(lifts);
+    if (lifts_read_is) {
+      liftable = list_size(lifts);
+    }
     list_add(rows, {
       f_name,
       cuttable,
       starting,
       naming,
+      liftable,
     });
   }
   return rows;
