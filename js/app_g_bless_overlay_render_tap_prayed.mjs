@@ -7,7 +7,8 @@ import { bless_view_person_at } from "./bless_view_person_at.mjs";
 import { not } from "./not.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { bless_blessed_add } from "./bless_blessed_add.mjs";
-import { bless_rung_climbed } from "./bless_rung_climbed.mjs";
+import { bless_rung_earned_is } from "./bless_rung_earned_is.mjs";
+import { bless_rung_after } from "./bless_rung_after.mjs";
 import { app_g_bless_pray_overlay } from "./app_g_bless_pray_overlay.mjs";
 export function app_g_bless_overlay_render_tap_prayed(
   r2,
@@ -48,7 +49,15 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("the reach is asked for AFTER the prayer is written down, because what was just prayed");
       ("is what might have finished the place off - asking first would always be one blessing");
       ("behind and the last unit of a block would never be the one that earned it");
-      rung = bless_rung_climbed(blessed, person, rung);
+      ("one prayer can never finish two rungs at once, so the reach is taken a single step");
+      ("and no loop is wanted. The rung climbs the moment any place one size up is finished,");
+      ("and that place always holds the person just prayed for - so before a block could be");
+      ("completed, one of its buildings was completed earlier and handed the player the");
+      ("building rung already. A step is therefore always the last one available");
+      let earned = bless_rung_earned_is(blessed, person, rung);
+      if (earned) {
+        rung = bless_rung_after(rung);
+      }
       render();
     }
     app_g_bless_pray_overlay(container_map, rung, amen);

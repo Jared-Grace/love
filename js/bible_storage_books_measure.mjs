@@ -12,9 +12,8 @@ export async function bible_storage_books_measure() {
   "This reaches the network, so it is run by hand and its answer is kept in a file. What reads that file afterwards needs nothing but the file.";
   let bible_folders = ebible_bible_folders_sorted();
   async function lambda(bible_folder) {
-    let listed = await ebible_bible_folder_storage_books_first_page(
-      bible_folder,
-    );
+    let listed =
+      await ebible_bible_folder_storage_books_first_page(bible_folder);
     return listed;
   }
   let at_once = bible_folders_at_once();
