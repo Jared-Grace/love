@@ -1,3 +1,5 @@
+import { list_add } from "./list_add.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gate_said_record_or_null } from "./qa_gate_said_record_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -6,7 +8,6 @@ import { list_is } from "./list_is.mjs";
 import { object_is } from "./object_is.mjs";
 import { text_is_if_or_null } from "./text_is_if_or_null.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { list_add_unique } from "./list_add_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 export function qa_gate_said_accused_or_null(said) {
@@ -41,11 +42,16 @@ export function qa_gate_said_accused_or_null(said) {
     if (blank) {
       return null;
     }
-    list_add_unique(apps, word);
+    list_add(apps, word);
   }
-  let none = list_empty_is(apps);
+  ("An app answering for several faults is named once, in the place it was first");
+  ("named, because the order a gate wrote its offenders down in is the order it");
+  ("found them and a reader that moved a name to the end of the list every time it");
+  ("came up again would hand back an order nothing chose.");
+  let unique = list_unique(apps);
+  let none = list_empty_is(unique);
   if (none) {
     return null;
   }
-  return apps;
+  return unique;
 }
