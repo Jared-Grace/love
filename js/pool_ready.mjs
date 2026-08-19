@@ -1,3 +1,5 @@
+import { pool_retire } from "./pool_retire.mjs";
+import { pool_start } from "./pool_start.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_worker_generation_holder } from "./function_worker_generation_holder.mjs";
