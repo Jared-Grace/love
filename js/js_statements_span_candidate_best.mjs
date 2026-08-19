@@ -1,6 +1,7 @@
 import { js_statements_work_deep } from "./js_statements_work_deep.mjs";
 import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
+import { list_take } from "./list_take.mjs";
 import { span_worst_piece } from "./span_worst_piece.mjs";
 import { span_row_better } from "./span_row_better.mjs";
 import { less_than } from "./less_than.mjs";
@@ -34,10 +35,11 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
       continue;
     }
     let span = list_slice_include(statements, from, to);
-    ("What is behind the run is handed over with it, because one of the three readings is about what the run would have to give back and that is decided by what the lines behind still read.");
+    ("What stands on either side of the run is handed over with it, because two of the readings are about what the run would have to give back and one is about what it makes that the lines above already read - and none of the three can be answered from the run alone.");
     let after = add(to, 1);
     let tail = list_skip(statements, after);
-    let cuttable = js_statements_span_cuttable_is(span, tail);
+    let head = list_take(statements, from);
+    let cuttable = js_statements_span_cuttable_is(head, span, tail);
     if (not(cuttable)) {
       continue;
     }
