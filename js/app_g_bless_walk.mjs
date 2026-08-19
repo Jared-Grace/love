@@ -6,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { app_g_character_face } from "./app_g_character_face.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
-import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
 export async function app_g_bless_walk(
