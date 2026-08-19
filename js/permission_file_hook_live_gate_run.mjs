@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { cases_checked_gate_run_generic } from "./cases_checked_gate_run_generic.mjs";
 import { permission_file_hook_live_case_check } from "./permission_file_hook_live_case_check.mjs";
 import { permission_file_hook_live_cases } from "./permission_file_hook_live_cases.mjs";
@@ -9,7 +11,11 @@ export async function permission_file_hook_live_gate_run() {
     cases,
     permission_file_hook_live_case_check,
     "permission file hook live",
-    " - the hook is meant to fail quiet, so a case that wanted allow and got silent means it stopped answering rather than that it answered wrongly; start it by hand with permission_file_hook_check to see what it does",
+    text_combine_multiple([
+      " - the hook is meant to fail quiet, so a case that wanted allow and got silent means it stopped answering rather than that it answered wrongly; start it by hand with ",
+      fn_name("permission_file_hook_check"),
+      " to see what it does",
+    ]),
   );
   return r;
 }
