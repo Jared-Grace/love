@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { permission_rule_grant_verdict_context } from "./permission_rule_grant_verdict_context.mjs";
-import { equal } from "./equal.mjs";
 import { permission_grant_names_fresh } from "./permission_grant_names_fresh.mjs";
 import { permission_grant_names_settings_write } from "./permission_grant_names_settings_write.mjs";
 import { not } from "./not.mjs";
@@ -20,8 +20,7 @@ export async function permission_rule_grant_checked_context(
     unaliased,
     context,
   );
-  let action_first = property_get(verdict_first, "action");
-  let open = equal(action_first, "grantable");
+  let open = property_equals(verdict_first, "action", "grantable");
   if (not(open)) {
     return verdict_first;
   }
