@@ -1,13 +1,11 @@
-import { property_equals } from "./property_equals.mjs";
+import { function_span_cut_one } from "./function_span_cut_one.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { function_span_cut_or_undo } from "./function_span_cut_or_undo.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_span_candidates } from "./function_span_candidates.mjs";
-import { function_span_cut_skip_or_null } from "./function_span_cut_skip_or_null.mjs";
-import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
-import { function_call_commit } from "./function_call_commit.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -43,33 +41,29 @@ export async function function_span_cut_pass(f_name) {
       if (put_back_is) {
         continue;
       }
-      let skip = await function_span_cut_skip_or_null(
+      let outcome = await function_span_cut_one(
         f_name,
         address_from,
         address_to,
       );
-      let stepped_over_is = null_not_is(skip);
+      ("A reason not to have cut is told apart from the outcome of a cut by whether it says what it is about. Only a reason carries that, because only a reason has anything to be about - once the cut has been made what comes back is about the cut itself.");
+      let about = property_get_or_null(outcome, "about");
+      let stepped_over_is = null_not_is(about);
       if (stepped_over_is) {
-        list_add(skipped, skip);
-        let start_is = property_equals(skip, "about", "start");
+        list_add(skipped, outcome);
+        let start_is = equal(about, "start");
         if (not(start_is)) {
           list_add(stepped, address_to);
         }
         continue;
       }
-      let f_name_new = function_part_name_or_null(f_name, address_to);
-      let outcome = await function_call_commit(function_span_cut_or_undo, [
-        f_name,
-        address_from,
-        address_to,
-        f_name_new,
-      ]);
       let cut_is = property_get(outcome, "cut_is");
       if (not(cut_is)) {
         list_add(skipped, outcome);
         list_add(runs, run);
         continue;
       }
+      let f_name_new = property_get(outcome, "f_name_new");
       list_add(cut, {
         address_from,
         address_to,
