@@ -370,6 +370,7 @@ export function qa_gates() {
     js_hash_key_literals_cases_gate_run,
     js_hash_object_word_calls_unknown_cases_gate_run,
     js_hash_key_getters_cases_gate_run,
+    js_hash_key_getters_own_cases_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
     js_storage_browser_objects_cases_gate_run,
