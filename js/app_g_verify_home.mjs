@@ -10,6 +10,7 @@ import { api_read_or } from "./api_read_or.mjs";
 import { app_g_verify_home_verse_bar } from "./app_g_verify_home_verse_bar.mjs";
 import { app_g_verify_home_header } from "./app_g_verify_home_header.mjs";
 import { app_g_verify_home_busy_banner } from "./app_g_verify_home_busy_banner.mjs";
+import { app_g_verify_home_asked_banner } from "./app_g_verify_home_asked_banner.mjs";
 import { app_g_verify_home_highlight_selected } from "./app_g_verify_home_highlight_selected.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
@@ -127,6 +128,7 @@ export async function app_g_verify_home(context) {
     html_style_padding_x(wrap, edge_gap);
     html_style_padding_y(wrap, "2em");
     app_g_verify_home_header(wrap, chapter_codes, chapter_code2);
+    app_g_verify_home_asked_banner(wrap);
     app_g_verify_home_busy_banner(busy, status_shown, status_verse, wrap);
     view = null;
     let verse_buttons = {};
