@@ -1,30 +1,14 @@
-import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
-import { firebase_deploy_bypass_unchanged } from "./firebase_deploy_bypass_unchanged.mjs";
-import { apps_frozen_names } from "./apps_frozen_names.mjs";
-import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { qa_gate_run } from "./qa_gate_run.mjs";
-import { lock_error } from "./lock_error.mjs";
-import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
+import { firebase_deploy_promote_generic } from "./firebase_deploy_promote_generic.mjs";
+import { property_get } from "./property_get.mjs";
 export async function firebase_deploy() {
-  "Puts this repo's pages live, but only after the whole check passes and every frozen app is proved unchanged, and only one such deploy may run on this machine at a time.";
-  async function lambda() {
-    await qa_gate_run();
-    let app_names = apps_frozen_names();
-    await list_map_unordered_async(
-      app_names,
-      firebase_prod_app_unchanged_assert,
-    );
-    let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
-    let stdout = await firebase_deploy_bypass_unchanged(confirm);
-    return stdout;
+  "Puts this repo's pages live, but only after the whole check passes and every frozen app is proved unchanged, and only one such deploy may run on this machine at a time. Sends what is already waiting and puts nothing new there.";
+  "Its pair puts one more build into the folder on the way past, between the check and the sending, and everything else about the two is the same. Written out twice, the copy without the build was the one that stayed right, and the one with it kept the older order - asking after it had already written - which is how a refused run still changed what would go out next time.";
+  async function promote() {
+    "nothing is put in place by this one, and the sending is told so rather";
+    "than left to work it out from an absent answer";
+    return null;
   }
-  let message = firebase_deploy_locked_message();
-  let r = await lock_error(
-    firebase_deploy.name,
-    lambda,
-    firebase_deploy.name,
-    message,
-  );
-  return r;
+  let done = await firebase_deploy_promote_generic(promote);
+  let published = property_get(done, "published");
+  return published;
 }
