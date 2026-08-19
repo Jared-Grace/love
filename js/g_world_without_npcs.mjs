@@ -9,8 +9,11 @@ export function g_world_without_npcs(g) {
   "in the road, the way a person crossing a busy pavement does.";
   "It is a reading of the world rather than a change to it. The crowd is left exactly where";
   "it was standing - only this answer is blind to it.";
-  let coordinates = g.coordinates;
+  let coordinates = property_get(g, "coordinates");
   let nobody = [];
-  let world = { coordinates: coordinates, npcs: nobody };
+  let world = {
+    coordinates: coordinates,
+    npcs: nobody,
+  };
   return world;
 }
