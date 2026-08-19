@@ -10,13 +10,19 @@ export function g_tiles_wall_faces_groups() {
   "borrow whatever its indices landed on and the two could come out sharing most of a";
   "palette.";
   "The first group is cool - pale plaster, pink brick, grey stone - and the second is warm";
-  "- cream plaster, brown tile, rose stone. Read as wholes rather than tile by tile, which";
-  "is how a street is actually seen, warm and cool is the difference that survives being";
-  "glanced at from the far end of a road.";
+  "- cream plaster, rose stone, apricot plaster. Read as wholes rather than tile by tile,";
+  "which is how a street is actually seen, warm and cool is the difference that survives";
+  "being glanced at from the far end of a road.";
   "Every one of them is pale against the dark wood the rest of a building is made of, so a";
   "front reads as a front and not as a different building standing behind.";
+  "A group also has to stand out from the GROUND its own street is paved with, and that is";
+  "the harder test - a neighbour is one tile away, but the pavement runs the whole length";
+  "of the front and meets it along an edge. Seen in a browser, a grey speckled front on the";
+  "cobbled street disappeared into the cobbles below it: two buildings in five lost their";
+  "fronts and the row read as one long shed. So the warm group is kept warm all through,";
+  "against the grey the second street is paved with.";
   let cool = ["clay", "quartzite_tile", "granite_tile"];
-  let warm = ["sand_white", "stone_tile", "quartzite_floor"];
+  let warm = ["sand_white", "quartzite_floor", "sand_orange"];
   let groups = [cool, warm];
   return groups;
 }
