@@ -1,30 +1,23 @@
 {
  "known": [
-  "app_g_verify_home",
   "app_replace_rule_set",
+  "app_g_verify_home",
   "app_reply",
-  "app_reply_main_shortcuts_gl",
   "app_g_conversation",
-  "app_code_review_present",
   "app_verses_group",
   "app_shared_bible_read",
-  "app_code_lesson_quiz",
   "js_repack_only_is",
   "app_code_lesson_quiz_token_select",
-  "app_a_function",
   "bible_glyph_word_parse",
   "app_code_expression_choose_line",
   "app_code_review_present_present",
   "app_g_view_render_study_fresh_fresh",
-  "literals_unnamed_generic_found_found",
-  "js_expand_generic",
   "js_ternary_replace",
   "js_function_forwarding_removed",
+  "js_expand_generic",
   "memory_index_hooks_compress_line_line",
   "app_replace_rule_set_proof_show",
-  "app_g_view_render_npc",
   "app_g_study_lambda",
-  "html_scroll_animate_animate_animate",
   "app_g_dev_tools_open_verify_page_page"
  ]
 }
