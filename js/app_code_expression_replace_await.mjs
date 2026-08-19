@@ -36,6 +36,7 @@ export async function app_code_expression_replace_await(
       value_text,
       retire,
       press,
+      waiting_on,
     );
   }
   await settle(change);
