@@ -13,7 +13,7 @@ export function app_g_bless_overlay_blessed(container_map) {
   let world = app_g_bless_world_new();
   let player = property_get(world, "player");
   let npcs = property_get(world, "npcs");
-  let block = property_get(world, "block");
+  let blocks = property_get(world, "blocks");
   let scroller = html_div(container_map);
   html_style_assign(scroller, {
     position: "absolute",
@@ -38,7 +38,7 @@ export function app_g_bless_overlay_blessed(container_map) {
     world,
     player,
     npcs,
-    block,
+    blocks,
     div_map,
     wash,
     player_img_c,

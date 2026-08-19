@@ -8,7 +8,7 @@ export function app_g_bless_overlay_cone_get(r) {
   let world = property_get(r, "world");
   let player = property_get(r, "player");
   let npcs = property_get(r, "npcs");
-  let block = property_get(r, "block");
+  let blocks = property_get(r, "blocks");
   let div_map = property_get(r, "div_map");
   let wash = property_get(r, "wash");
   let player_img_c = property_get(r, "player_img_c");
