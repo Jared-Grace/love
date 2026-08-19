@@ -64,8 +64,8 @@ export function bless_marks_climbed(count, stride) {
   }
   function dark_is(person) {
     let lit = bless_person_blessed_is(blessed, person);
-    let dark = not(lit);
-    return dark;
+    let unlit = not(lit);
+    return unlit;
   }
   let dark = list_filter_size(people, dark_is);
   let climbed = {
