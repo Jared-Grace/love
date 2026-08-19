@@ -1,18 +1,16 @@
+import { property_get } from "./property_get.mjs";
+import { app_a_function_parsed_bar_content } from "./app_a_function_parsed_bar_content.mjs";
 import { app_a_function_sync } from "./app_a_function_sync.mjs";
 import { app_a_function_lambda3 } from "./app_a_function_lambda3.mjs";
-import { app_a_function_download } from "./app_a_function_download.mjs";
 import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
 import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
-import { app_a_function_upload } from "./app_a_function_upload.mjs";
 import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
-import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
-import { html_bar_content } from "./html_bar_content.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -26,42 +24,23 @@ import { emoji_run } from "./emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "./app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
-import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
-import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
 import { app_a_function_node } from "./app_a_function_node.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
-import { app_a_button } from "./app_a_button.mjs";
 import { emoji_search } from "./emoji_search.mjs";
 import { app_a_functions } from "./app_a_functions.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { property_get } from "./property_get.mjs";
-import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
-  let f_name = app_a_function_name_selected(context);
-  let parsed = await function_parse_unaliased(f_name);
-  let ast = property_get(parsed, "ast");
-  let root = property_get(context, "root");
-  html_clear(root);
-  async function upload() {
-    let r = await app_a_function_upload();
-    return r;
-  }
-  async function download() {
-    let r5 = await app_a_function_download();
-    return r5;
-  }
-  if (false) {
-    let a2 = emoji_arrow_up();
-    app_a_button(content, a2, upload);
-    let text = emoji_arrow_down();
-    app_a_button(content, text, download);
-  }
-  let bc = html_bar_content(root);
-  let content = property_get(bc, "content");
-  let bar = property_get(bc, "bar");
+  let r = await app_a_function_parsed_bar_content(context);
+  let bar = property_get(r, "bar");
+  let content = property_get(r, "content");
+  let download = property_get(r, "download");
+  let upload = property_get(r, "upload");
+  let root = property_get(r, "root");
+  let ast = property_get(r, "ast");
+  let parsed = property_get(r, "parsed");
+  let f_name = property_get(r, "f_name");
   async function sync() {
     let r2 = await app_a_function_sync(
       upload,
