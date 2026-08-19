@@ -3,7 +3,6 @@ import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { noop } from "./noop.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
