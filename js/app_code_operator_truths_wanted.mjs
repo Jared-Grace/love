@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { equal } from "./equal.mjs";
 export function app_code_operator_truths_wanted(symbol, want_true) {
   arguments_assert(arguments, 2);
   ("a pair of truth values to stand either side of a given operator so that it comes out true, or comes out false, whichever was asked for: || with false asked for gives back false and false");
