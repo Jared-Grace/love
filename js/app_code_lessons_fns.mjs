@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_and_before_or } from "./app_code_lesson_expression_choose_order_and_before_or.mjs";
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_expression_choose_order_or } from "./app_code_lesson_expression_choose_order_or.mjs";
 import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
