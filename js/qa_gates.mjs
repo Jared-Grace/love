@@ -18,6 +18,7 @@ import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
 import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
+import { js_relabel_only_cases_gate_run } from "./js_relabel_only_cases_gate_run.mjs";
 import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
 import { text_split_outside_quotes_cases_gate_run } from "./text_split_outside_quotes_cases_gate_run.mjs";
 import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
@@ -385,6 +386,7 @@ export function qa_gates() {
     qa_commit_entry_beside_matching_cases_gate_run,
     js_statements_span_outputs_cases_gate_run,
     js_span_cuttable_cases_gate_run,
+    js_relabel_only_cases_gate_run,
     js_atomize_cases_gate_run,
     js_atomize_function_cases_gate_run,
     js_function_forwarding_cases_gate_run,
