@@ -1,6 +1,5 @@
+import { app_code_expression_parts_code } from "./app_code_expression_parts_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_comparison_operands_wanted } from "./app_code_comparison_operands_wanted.mjs";
 import { app_code_arithmetic_to_value_parts } from "./app_code_arithmetic_to_value_parts.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
@@ -15,20 +14,14 @@ export function app_code_lesson_expression_choose_order_both_sides_expression_ge
   ("The comparison is handed in rather than chosen here, because the two lessons built on this differ in that one thing and in nothing else: the first says the shape with === alone so the shape is the only new thing on the screen, and the second says the same shape with any of the other five.");
   ("Both sides are made by the same maker, from a value asked for rather than from numbers drawn and then added up. That is what lets a line hold two sides that look nothing alike and still land where the comparison needs them - which is the one thing a learner cannot read off the writing, and so the one thing worth solving for.");
   ("A side is drawn again while the two sides come out written the same way. Written the same, the line answers itself: a learner who has seen that both sides say 3 + 4 knows the answer without solving either, and the lesson has asked them nothing.");
-  function code_of(parts) {
-    "one side written out, which is how two sides are told apart - the numbers alone would call 3 + 4 and 4 + 3 the same side";
-    let node = app_code_expression_node(parts.left, parts.symbol, parts.right);
-    let code = app_code_expression_code(node);
-    return code;
-  }
   let operands = app_code_comparison_operands_wanted(outer_symbol, want_true);
   let left_parts = app_code_arithmetic_to_value_parts(operands.left);
-  let left_code = code_of(left_parts);
+  let left_code = app_code_expression_parts_code(left_parts);
   let right_parts = app_code_arithmetic_to_value_parts(operands.right);
-  let right_code = code_of(right_parts);
+  let right_code = app_code_expression_parts_code(right_parts);
   while (equal(left_code, right_code)) {
     right_parts = app_code_arithmetic_to_value_parts(operands.right);
-    right_code = code_of(right_parts);
+    right_code = app_code_expression_parts_code(right_parts);
   }
   let tree =
     app_code_lesson_expression_choose_order_both_sides_expression_parts(
