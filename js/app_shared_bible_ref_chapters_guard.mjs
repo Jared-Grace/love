@@ -1,7 +1,8 @@
+import { app_shared_bible_book_name_reading } from "./app_shared_bible_book_name_reading.mjs";
+import { each_async } from "./each_async.mjs";
 import { html_p_text_centered } from "./html_p_text_centered.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -13,7 +14,7 @@ export async function app_shared_bible_ref_chapters_guard(
   ref_chapters,
   books_en,
 ) {
-  ("Each chapter is offered under the name the reading itself uses - Juan over Tagalog verses, John over English ones. A link may spell its book in either language and is written down in English whichever was typed, so the English name here is the one the address carries and not one the reader ever chose. Offered back at them it names a book they are about to be shown under another name, on the one screen whose whole job is to ask which of these they meant.");
+  "Each chapter is offered under the name the reading itself uses - Juan over Tagalog verses, John over English ones. A link may spell its book in either language and is written down in English whichever was typed, so the English name here is the one the address carries and not one the reader ever chose. Offered back at them it names a book they are about to be shown under another name, on the one screen whose whole job is to ask which of these they meant.";
   let message =
     "This reading spans more than one chapter — which would you like to open?";
   html_p_text_centered(content, message);
