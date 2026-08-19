@@ -1,6 +1,5 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { add } from "./add.mjs";
-import { list_index_of } from "./list_index_of.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { bless_rungs } from "./bless_rungs.mjs";
 export function bless_rung_after(rung) {
@@ -14,8 +13,7 @@ export function bless_rung_after(rung) {
   ("gap. There is nowhere further out than everyone alive, so a player who has reached it");
   ("has nothing left to earn - which is the game being finished, not a case to guard.");
   let rungs = bless_rungs();
-  let here = list_index_of(rungs, rung);
-  let above = add(here, 1);
+  let above = list_index_of_add(rungs, rung, 1);
   let next = list_get_or_null(rungs, above);
   return next;
 }
