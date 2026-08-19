@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_brackets } from "./app_code_lesson_expression_choose_order_brackets.mjs";
 import { app_code_lesson_expression_choose_order_not } from "./app_code_lesson_expression_choose_order_not.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or } from "./app_code_lesson_expression_choose_order_and_before_or.mjs";
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
@@ -230,6 +231,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order_or,
     app_code_lesson_expression_choose_order_and_before_or,
     app_code_lesson_expression_choose_order_not,
+    app_code_lesson_expression_choose_order_brackets,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
     app_code_lesson_expression_which_part_first,
