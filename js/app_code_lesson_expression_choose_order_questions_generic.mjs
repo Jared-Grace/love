@@ -5,7 +5,7 @@ import { app_code_lesson_expression_choose_order_both_sides_tree_of_code } from 
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_questions_generic(
+export function app_code_lesson_expression_choose_order_questions_generic(
   expression,
 ) {
   arguments_assert(arguments, 1);
