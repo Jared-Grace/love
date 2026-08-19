@@ -1,7 +1,7 @@
-# Letter to eBible.org — two translations with missing text
+# Letter to eBible.org — three published files with faults
 
-Written 2026-08-19. Not sent yet. Send it as one letter; both findings are small
-and neither needs a reply.
+Written 2026-08-19. Not sent yet. Send it as one letter; all three findings are
+small and none needs a reply.
 
 The facts below were each checked against the files on disk before writing. If you
 send this after a fresh download, check them again first — a corrected file would
@@ -9,16 +9,16 @@ make the letter wrong.
 
 ---
 
-Subject: Two published translations with missing text — Bangwinji (bsj) Mark, Bugun (bgg) Matthew
+Subject: Three small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page
 
 Hello,
 
 Thank you for eBible.org. I run a free Bible reading app that gets almost all of
 its translations from you, and it exists because you give them away.
 
-While checking every translation we carry, two came up with text missing from the
-published files. Both look like faults in the published output rather than in the
-translations, so I thought you would want to know.
+While checking every translation we carry, three came up with faults in the
+published files. All three look like faults in the published output rather than in
+the translations, so I thought you would want to know.
 
 **1. Bangwinji (bsj) — Mark, in the read-aloud edition**
 
@@ -55,8 +55,19 @@ One possible clue: the last thing before the text stops is a footnote marker at
 The footnotes at the foot of those chapters are empty too — `<span class="ft"></span>`
 with nothing inside them.
 
-No reply needed. We pass those chapters over rather than show anyone a chapter we
-cannot read, and we will pick them up on their own whenever a corrected download
-appears.
+**3. Apalaí (apyNT) — the copyright page belongs to a different translation**
+
+`apyNT/copr.htm` opens with the Apalaí title, and then the copyright block on the
+same page is the Khmer Standard Version's: it names that translation, the Bible
+Society in Cambodia, and Khmer quotation terms. Nothing on the page states terms
+for the Apalaí text itself.
+
+Because of that we cannot tell what the Apalaí New Testament is offered on, and we
+carry only translations whose terms we can read, so it sits unused. A corrected
+page would be enough on its own.
+
+No reply needed. We pass the affected chapters over rather than show anyone a
+chapter we cannot read, and we will pick them up on their own whenever a corrected
+download appears.
 
 Thank you again for the work.
