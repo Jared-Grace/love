@@ -8,7 +8,8 @@ export async function ebible_languages_readaloud_download_missing() {
   "Read aloud is how a chapter is cut into verses, so a translation without one on disk stops the chapter build the moment it is reached. Asking first turns that into a list to finish rather than a run that dies part way through.";
   "This is about what is here, not about what eBible publishes - a translation can have a read-aloud edition and still be missing locally, which is exactly the case a half-finished download leaves behind.";
   "Counting the folders on disk cannot answer this, because a count says how many arrived and never which ones.";
-  let bible_folders = await ebible_languages_without_original_bible_folders();
+  "Asked only of the bibles read-aloud is how the verses are cut for. A bible from the other catalogue would sit in this list for ever, because what it is waiting for is not published anywhere and downloading it is not a thing anybody can do.";
+  let bible_folders = ebible_readaloud_bible_folders();
   async function missing_or_null(bible_folder) {
     let folder_path = ebible_version_readaloud_download_path(bible_folder);
     let present = await file_exists(folder_path);
