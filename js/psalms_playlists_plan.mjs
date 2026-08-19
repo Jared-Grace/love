@@ -45,7 +45,7 @@ export async function psalms_playlists_plan(channel_id) {
       order_wanted.push(song.video_id);
       let b = holds.includes(song.video_id);
       if (not(b)) {
-        add.push({
+        songs_to_add.push({
           video_id: song.video_id,
           title: song.title,
         });
