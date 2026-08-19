@@ -16,6 +16,7 @@ export function js_hash_key_getters_cases() {
         "html_hash_property_set(app_shared_bible_chapter_hash_key(), chapter_code);",
       ),
       getters: [f_name],
+      own: [f_name],
       why: "the short door with the call standing where the field goes, which is how a person writes it",
     },
     {
