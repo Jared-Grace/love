@@ -34,8 +34,8 @@ export function app_g_bless_block(rows) {
     return tile_x;
   }
   function y_of(tile) {
-    let y = property_get(tile, "y");
-    return y;
+    let tile_y = property_get(tile, "y");
+    return tile_y;
   }
   let xs = list_map(tiles, x_of);
   let ys = list_map(tiles, y_of);
