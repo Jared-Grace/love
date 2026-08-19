@@ -38,8 +38,8 @@ export function app_g_bless_people_step(world) {
       let tile = property_get(neighbor, "neighbor");
       let key = g_coordinates_key(tile);
       let occupied = equal(key, taken);
-      let open = not(occupied);
-      return open;
+      let free = not(occupied);
+      return free;
     }
     let open = list_filter(neighbors, open_is);
     let nowhere = list_empty_is(open);
