@@ -1,10 +1,10 @@
+import { json_from_property_get } from "./json_from_property_get.mjs";
 import { bible_glyph_artwork_source } from "./bible_glyph_artwork_source.mjs";
 import { property_get } from "./property_get.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_find_property_json } from "./list_find_property_json.mjs";
-import { json_from } from "./json_from.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_artwork_assets_tree() {
   "The artwork set's own listing of the folder holding its pictures - one entry per picture, each carrying the name it is kept under and the address of what is inside it.";
@@ -20,8 +20,7 @@ export async function bible_glyph_artwork_assets_tree() {
     tree_url,
     hint: "the artwork set's listing could not be read. the listing service allows only about sixty requests an hour from a caller it does not know, so the usual cause is having asked too much of it recently rather than the address being wrong - waiting an hour is the whole remedy.",
   });
-  let top = json_from(top_text);
-  let top_entries = property_get(top, "tree");
+  let top_entries = json_from_property_get(top_text, "tree");
   let assets = list_find_property_json(top_entries, "path", "assets");
   let b2 = null_is(assets);
   let assets_found = not(b2);
@@ -37,7 +36,6 @@ export async function bible_glyph_artwork_assets_tree() {
     assets_url,
     hint: "the folder of pictures could not be listed - has the service refused to answer for now?",
   });
-  let listed = json_from(assets_text);
-  let entries = property_get(listed, "tree");
+  let entries = json_from_property_get(assets_text, "tree");
   return entries;
 }
