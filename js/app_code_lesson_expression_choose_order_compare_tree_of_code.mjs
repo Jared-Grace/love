@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_compare_expression_parts } from "./app_code_lesson_expression_choose_order_compare_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -12,6 +13,7 @@ import { text_split_space } from "./text_split_space.mjs";
 export function app_code_lesson_expression_choose_order_compare_tree_of_code(
   code,
 ) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the shape behind a line this lesson printed, worked out again from the line itself: 3 < 5 === true gives back the shape whose comparison is on the left, and true === (3 < 5) the one whose comparison is on the right");
   ("The quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.");
