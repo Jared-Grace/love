@@ -1,3 +1,5 @@
+import { js_scopes_enclosing_binding_names } from "./js_scopes_enclosing_binding_names.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_call_function_if } from "./js_call_function_if.mjs";
