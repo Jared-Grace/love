@@ -1,3 +1,4 @@
+import { gloss_roots_disagreeing_classes_count } from "./gloss_roots_disagreeing_classes_count.mjs";
 import { gloss_roots_disagreeing_classes_claimed_total } from "./gloss_roots_disagreeing_classes_claimed_total.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_take } from "./list_take.mjs";
@@ -13,14 +14,14 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   let r2 = gloss_roots_disagreeing_classes_claimed_total(findings, offenders);
   let claimed_total = property_get(r2, "claimed_total");
   let total = property_get(r2, "total");
-  let apart_by_edits = property_get(r2, "apart_by_edits");
-  let classes_total = property_get(r2, "classes_total");
-  let silent_total = property_get(r2, "silent_total");
-  let r4 = property_get(r2, "r4");
-  let by_edits = property_get(r4, "by_edits");
-  let by_relation = property_get(r4, "by_relation");
-  let classes = property_get(r4, "classes");
-  let count = Number(sample_size);
+  let r3 = gloss_roots_disagreeing_classes_count(r2, sample_size);
+  let count = property_get(r3, "count");
+  let classes = property_get(r3, "classes");
+  let by_relation = property_get(r3, "by_relation");
+  let by_edits = property_get(r3, "by_edits");
+  let silent_total = property_get(r3, "silent_total");
+  let classes_total = property_get(r3, "classes_total");
+  let apart_by_edits = property_get(r3, "apart_by_edits");
   let shown = list_take(classes, count);
   let r = {
     total,
