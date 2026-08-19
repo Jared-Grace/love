@@ -1,3 +1,4 @@
+import { app_a_function_choices_finish_draw } from "./app_a_function_choices_finish_draw.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_a_function_parsed_bar_content } from "./app_a_function_parsed_bar_content.mjs";
 import { app_a_function_sync } from "./app_a_function_sync.mjs";
@@ -5,23 +6,16 @@ import { app_a_function_lambda3 } from "./app_a_function_lambda3.mjs";
 import { app_a_function_lambda8 } from "./app_a_function_lambda8.mjs";
 import { app_a_function_lambda10 } from "./app_a_function_lambda10.mjs";
 import { app_a_function_screen_choose } from "./app_a_function_screen_choose.mjs";
-import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
-import { function_delete } from "./function_delete.mjs";
-import { emoji_x_red } from "./emoji_x_red.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { app_a_app_run } from "./app_a_app_run.mjs";
-import { list_add } from "./list_add.mjs";
-import { storage_session_exists } from "./storage_session_exists.mjs";
-import { app_a } from "./app_a.mjs";
 import { app_a_apps } from "./app_a_apps.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
 import { emoji_run } from "./emoji_run.mjs";
-import { app_a_buttons_shortcuts } from "./app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "./app_a_on_keydown.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
 import { app_a_on_keydown_add } from "./app_a_on_keydown_add.mjs";
@@ -120,20 +114,13 @@ export async function app_a_function(context) {
       ),
     },
   ];
-  let key = app_a_app_selected_key();
-  let selected_exists = storage_session_exists(app_a, key);
-  if (selected_exists) {
-    list_add(choices, preview_app);
-  }
-  list_add(choices, {
-    shortcut: "d",
-    text: emoji_x_red(),
-    fn: async function lambda4() {
-      await function_delete(f_name);
-      await screen_choose_open();
-    },
-  });
-  app_a_buttons_shortcuts(bar, choices);
+  app_a_function_choices_finish_draw(
+    choices,
+    preview_app,
+    f_name,
+    screen_choose_open,
+    bar,
+  );
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
