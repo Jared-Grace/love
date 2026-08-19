@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-export function app_code_lesson_expression_choose_order_brackets_expression_parts(
+export function app_code_expression_node_right_operator_first(
   left_truth,
   and_symbol,
   inner_left_truth,
