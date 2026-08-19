@@ -62,10 +62,11 @@ export async function app_shared_bible_home_generic_lambda$a(
     chapter_code,
     verse_number,
   });
-  return {
+  let r2 = {
     verse_current,
     languages_available,
     languages_verses,
     chapter_code,
   };
+  return r2;
 }
