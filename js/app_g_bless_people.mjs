@@ -1,14 +1,13 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { bless_places_ensure } from "./bless_places_ensure.mjs";
 import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_index } from "./each_index.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_remove_end } from "./list_remove_end.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_without } from "./list_without.mjs";
 import { mod } from "./mod.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_transform_multiple } from "./property_transform_multiple.mjs";
 import { g_genders_get } from "./g_genders_get.mjs";
@@ -35,8 +34,7 @@ export function app_g_bless_people(player_img, coordinates_land) {
   let people = list_remove_end(coordinates_land, count);
   function person_initialize(person, index) {
     let r = mod(index, gender_count);
-    let gender = list_get(genders, r);
-    let imgs = property_get(gender, "imgs");
+    let imgs = list_get_property(genders, r, "imgs");
     let img = list_random_item(imgs);
     property_set(person, "img", img);
     property_set(person, "direction", "south");
