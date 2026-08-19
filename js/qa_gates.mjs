@@ -1,3 +1,4 @@
+import { js_delegate_only_cases_gate_run } from "./js_delegate_only_cases_gate_run.mjs";
 import { ebible_languages_curated_codes_gate_run } from "./ebible_languages_curated_codes_gate_run.mjs";
 import { js_statements_grouping_worthless_cases_gate_run } from "./js_statements_grouping_worthless_cases_gate_run.mjs";
 import { app_shared_gloss_bible_derivatives_gate_run } from "./app_shared_gloss_bible_derivatives_gate_run.mjs";
@@ -387,6 +388,7 @@ export function qa_gates() {
     js_statements_span_outputs_cases_gate_run,
     js_span_cuttable_cases_gate_run,
     js_relabel_only_cases_gate_run,
+    js_delegate_only_cases_gate_run,
     js_atomize_cases_gate_run,
     js_atomize_function_cases_gate_run,
     js_function_forwarding_cases_gate_run,
