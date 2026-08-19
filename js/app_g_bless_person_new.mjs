@@ -1,8 +1,7 @@
+import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { list_size } from "./list_size.mjs";
-import { mod } from "./mod.mjs";
 import { random } from "./random.mjs";
 import { bless_headings } from "./bless_headings.mjs";
 import { bless_pace_ms } from "./bless_pace_ms.mjs";
@@ -23,8 +22,7 @@ export function app_g_bless_person_new(index, genders) {
   ("fast they walk, or about whether they live here, would be nobody in particular.");
   ("Everybody is set facing south, which is where the player is. Where each of them is");
   ("going is their own business from their first step.");
-  let gender_count = list_size(genders);
-  let turn = mod(index, gender_count);
+  let turn = list_get_wrap_index(genders, index);
   let imgs = list_get_property(genders, turn, "imgs");
   let img = list_random_item(imgs);
   let fraction_pace = random();
