@@ -1,5 +1,4 @@
-import { list_map } from "./list_map.mjs";
-import { list_sum } from "./list_sum.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
 import { property_get } from "./property_get.mjs";
 export function permission_replay_summary(rows) {
   "how many distinct command shapes a group of replayed rows holds and how many runs those shapes account for between them";
@@ -8,8 +7,7 @@ export function permission_replay_summary(rows) {
     let n = property_get(row, "count");
     return n;
   }
-  let counts = list_map(rows, runs_of);
-  let runs = list_sum(counts);
+  let runs = list_map_sum(rows, runs_of);
   let summary = {
     shapes: rows.length,
     runs,
