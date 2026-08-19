@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { js_code_call_parse_expression } from "./js_code_call_parse_expression.mjs";
 import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
 import { js_call_argument_add } from "./js_call_argument_add.mjs";
@@ -6,7 +7,6 @@ import { js_statement_if_alternate_get } from "./js_statement_if_alternate_get.m
 import { js_statement_if_consequent_get } from "./js_statement_if_consequent_get.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { js_statement_if_test_get } from "./js_statement_if_test_get.mjs";
-import { ternary } from "./ternary.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_list_type_each } from "./js_list_type_each.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -69,7 +69,7 @@ export async function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let assignment = js_assign_default();
-    let e = js_code_call_parse_expression(ternary.name);
+    let e = js_code_call_parse_expression(fn_name("ternary"));
     let rights = list_map_property(ess, "right");
     let test_node = js_statement_if_test_get(node);
     js_call_argument_add(e, test_node);
