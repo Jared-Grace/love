@@ -1,3 +1,4 @@
+import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
@@ -23,8 +24,7 @@ export function app_code_lesson_code_generic(params) {
     params,
     "forwards_answer_count_override",
   );
-  let s = text_combine(value, " of code: ");
-  let example_answer_label_default = text_first_upper_to(s);
+  let example_answer_label_default = app_code_label_of_code(value);
   let quiz_label = text_combine_multiple([
     "What is the ",
     value,
