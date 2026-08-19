@@ -17,12 +17,8 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
   ("a null colour means read in the page's default text colour, so leave the property alone rather than writing one in");
   let colored = null_not_is(color);
   html_font_color_set_or_remove(colored, line, color);
-  ("every line says its own direction out loud, both ways round, so the label sits at that language's reading start and its words run that language's natural way. saying it only for a right-to-left line is not enough: the frame holding these lines is mirrored by whichever language was chosen last, so a line that stayed silent inherited that mirror - an English verse under an Urdu one right-aligned itself and pushed its label to the far right, reading as though English ran backwards");
-  let rtl = text_rtl_is(text);
-  let direction = ternary(rtl, "rtl", "ltr");
-  let alignment = ternary(rtl, "right", "left");
-  html_style_set(line, "direction", direction);
-  html_text_align(line, alignment);
+  ("every line says its own direction out loud, both ways round, so the label sits at that language's reading start and its words run that language's natural way");
+  html_text_direction_set(line, text);
   let has_name = text_empty_not_is(name);
   if (has_name) {
     ("color the language name with the language color so it matches its verse text");

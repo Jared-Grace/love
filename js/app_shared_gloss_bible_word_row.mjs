@@ -22,11 +22,7 @@ export function app_shared_gloss_bible_word_row(e, p, word_property) {
   let explain = property_get(e, "explain");
   ("the row runs the way the explanation runs, because the explanation is the reader's own language and the rest of the row is what they came here not knowing. read right to left an urdu row gives the english word first, then what it means, then why - the same three steps an english row gives read left to right.");
   ("without this the row ran left to right whatever was in it, and the browser gathered every urdu piece into one backwards run: the meaning came out AFTER the explanation of it, so the one word a beginner needed first was the last thing on the line.");
-  let rtl = text_rtl_is(explain);
-  let direction = ternary(rtl, "rtl", "ltr");
-  let alignment = ternary(rtl, "right", "left");
-  html_style_set(div, "direction", direction);
-  html_text_align(div, alignment);
+  html_text_direction_set(div, explain);
   let span = html_span_text(div, word);
   html_bold_mild(span);
   ("each piece is held in its own run, detected from itself, so an english word inside an urdu row reads forwards and does not turn the row around it");
