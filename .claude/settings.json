@@ -1663,6 +1663,7 @@
       "Bash(node scripts/ai.mjs functions_repack_only_all:*)",
       "Bash(node scripts/ai.mjs bible_glyph_artwork_names_unknown:*)",
       "Bash(node scripts/ai.mjs bible_glyph_artwork_asset_files:*)",
+      "Bash(node scripts/ai.mjs git_commit_files:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3235,6 +3236,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args functions_repack_only_all:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_artwork_names_unknown:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_artwork_asset_files:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args git_commit_files:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4806,6 +4808,7 @@
       "Bash(node scripts/aig.mjs functions_repack_only_all:*)",
       "Bash(node scripts/aig.mjs bible_glyph_artwork_names_unknown:*)",
       "Bash(node scripts/aig.mjs bible_glyph_artwork_asset_files:*)",
+      "Bash(node scripts/aig.mjs git_commit_files:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -6377,7 +6380,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args qa_commit_named_red_since:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args functions_repack_only_all:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_artwork_names_unknown:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_artwork_asset_files:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_artwork_asset_files:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args git_commit_files:*)"
     ],
     "defaultMode": "acceptEdits"
   },
