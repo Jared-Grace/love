@@ -1,17 +1,12 @@
-import { app_g_bless_person_step_tiles } from "./app_g_bless_person_step_tiles.mjs";
+import { app_g_bless_person_step_ways_open } from "./app_g_bless_person_step_ways_open.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { not } from "./not.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_npc_move } from "./app_g_npc_move.mjs";
-import { g_direction } from "./g_direction.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
-import { bless_walk_ways } from "./bless_walk_ways.mjs";
 export function app_g_bless_person_step(world, person) {
   arguments_assert(arguments, 2);
   ("One person takes one step - onward if they can, round whoever is in the way if they");
@@ -45,22 +40,10 @@ export function app_g_bless_person_step(world, person) {
   ("person can only have got there by being set down there when their doorstep was full -");
   ("and held to a rule they already break, they would never take a step again. Loose, they");
   ("wander until they meet the street they belong to, and are kept from then on.");
-  let r = app_g_bless_person_step_tiles(world, person);
+  let r = app_g_bless_person_step_ways_open(world, person);
+  let ways_open = property_get(r, "ways_open");
+  let heading = property_get(r, "heading");
   let tiles = property_get(r, "tiles");
-  let choices = property_get(r, "choices");
-  function tile_note(neighbor) {
-    let tile = property_get(neighbor, "neighbor");
-    let direction = g_direction(person, tile);
-    property_set(tiles, direction, tile);
-  }
-  each(choices, tile_note);
-  let heading = property_get(person, "heading");
-  let ways = bless_walk_ways(heading);
-  function way_open_is(option) {
-    let is = property_exists(tiles, option);
-    return is;
-  }
-  let ways_open = list_filter(ways, way_open_is);
   let way = list_get_or_null(ways_open, 0);
   let boxed = not(way);
   if (boxed) {
