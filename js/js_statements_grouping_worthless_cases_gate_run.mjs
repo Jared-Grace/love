@@ -1,9 +1,9 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_statements_grouping_worthless_cases } from "./js_statements_grouping_worthless_cases.mjs";
 import { js_statements_grouping_worthless_is } from "./js_statements_grouping_worthless_is.mjs";
-import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_statements_grouping_worthless_cases_gate_run() {
   "QA gate: the judgment that decides whether a run of lines would be worth acting on answers the corpus exactly the way the corpus says.";
@@ -16,8 +16,7 @@ export function js_statements_grouping_worthless_cases_gate_run() {
     let code = property_get(c, "code");
     let ast = js_parse(code);
     let program = property_get(ast, "body");
-    let declaration = list_get(program, 0);
-    let block = property_get(declaration, "body");
+    let block = list_get_property(program, 0, "body");
     let statements = property_get(block, "body");
     let worthless = js_statements_grouping_worthless_is(statements);
     return worthless;
