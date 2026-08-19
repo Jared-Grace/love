@@ -1,10 +1,9 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_log_twice_batch() {
   arguments_assert(arguments, 0);
@@ -53,7 +52,6 @@ export function app_code_lesson_log_twice_batch() {
     let code = list_join_newline(lines);
     return code;
   }
-  let ordered = list_shuffle_take(cases, 4);
-  let codes = list_map(ordered, program_of);
+  let codes = list_shuffle_take_map(cases, 4, program_of);
   return codes;
 }
