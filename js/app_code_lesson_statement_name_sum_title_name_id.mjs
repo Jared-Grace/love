@@ -12,11 +12,7 @@ export function app_code_lesson_statement_name_sum_title_name_id() {
   ("Real names rather than a stand-in for a value, because what is being added has to be names for the line to say anything at all.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "adding what two names hold";
-  let name_first = app_code_lesson_statement_name_value_name();
-  let name_last = app_code_lesson_statement_name_two_name();
   let plus = js_operator_plus_symbol();
-  let sum = js_code_binary(name_first, plus, name_last);
-  let code = js_code_console_log_statement(sum);
-  let built = app_code_lesson_statement_title_name_id(words, code);
+  let built = app_code_lesson_statement_names_binary_title_name_id(words, plus);
   return built;
 }
