@@ -1,4 +1,4 @@
-import { worker_results_read } from "./worker_results_read.mjs";
+import { function_worker_results_read } from "./function_worker_results_read.mjs";
 import { function_worker_exited } from "./function_worker_exited.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -23,7 +23,7 @@ export async function function_worker_child_start(worker) {
   started.stdio[3].unref();
   started.stdio[4].unref();
   function lambda(chunk) {
-    worker_results_read(worker, chunk);
+    function_worker_results_read(worker, chunk);
   }
   started.stdio[4].on("data", lambda);
   function lambda2(code) {
