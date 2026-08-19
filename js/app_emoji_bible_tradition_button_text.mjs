@@ -1,9 +1,7 @@
-import { app_emoji_bible_tradition_base } from "./app_emoji_bible_tradition_base.mjs";
-import { app_emoji_bible_tradition_orthodox } from "./app_emoji_bible_tradition_orthodox.mjs";
+import { app_emoji_bible_tradition_other } from "./app_emoji_bible_tradition_other.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export function app_emoji_bible_tradition_button_text(name) {
   "$plain name";
   "the name says which way of drawing the glyphs the reader is on now. It is a word to look up and nothing that runs.";
