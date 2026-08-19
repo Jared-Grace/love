@@ -2,6 +2,7 @@ import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roo
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_ceb_bible_gloss_roots_disagreeing_classes(
+  relation_wanted,
   sample_size,
 ) {
   "Every Cebuano explanation that named a root binisaya.com disagrees with, gathered by which root it named instead, commonest first.";
