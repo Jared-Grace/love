@@ -19,7 +19,7 @@ export function bible_glyph_image_draw(parent, glyph_name, character) {
   let image = html_img(parent, src);
   html_attribute_set(image, "alt", character);
   html_style_set(image, "height", "1em");
-  html_style_set(image, "width", "1em");
+  html_style_set(image, "width", "auto");
   html_style_set(image, "verticalAlign", "-0.15em");
   function on_missing() {
     html_style_set(image, "display", "none");
