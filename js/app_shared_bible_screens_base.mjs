@@ -8,7 +8,7 @@ import { app_shared_bible_about } from "./app_shared_bible_about.mjs";
 import { app_shared_bible_licences } from "./app_shared_bible_licences.mjs";
 import { app_shared_bible_money } from "./app_shared_bible_money.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_bible_screens_base(a) {
+export function app_shared_bible_screens_base(a) {
   let concated = list_concat(a, [
     app_shared_bible_books,
     app_shared_bible_chapters,
