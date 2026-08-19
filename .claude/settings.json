@@ -6395,6 +6395,11 @@
             "type": "command",
             "command": "node /home/j/a/repos/love/.claude/hooks/commands_only_write_deny.mjs",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "node /home/j/a/repos/love/.claude/hooks/permission_rule_file_allow.mjs",
+            "timeout": 5
           }
         ]
       },
