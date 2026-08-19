@@ -18,8 +18,13 @@ import { bless_rung_climbed } from "./bless_rung_climbed.mjs";
 export function bless_marks_climbed(count, stride) {
   arguments_assert(arguments, 2);
   ("Plays a whole crowd the way the game asks the player to play it - pray for every dark");
-  ("face, never for a lit one - and says how far up the ladder that got, how many prayers");
-  ("it took, and whether anybody was left dark at the end.");
+  ("face, never for a lit one - and says how far up the ladder that got and whether anybody");
+  ("was left dark at the end.");
+  ("How MANY prayers it took is deliberately not answered. It is a measure of tidiness and");
+  ("not a promise the game makes, and it cannot be worked out on paper for a crowd met in");
+  ("a scattered order - so a caller writing it down would be copying this function's own");
+  ("output back at it and calling the agreement a check. The two facts kept are the ones");
+  ("that can be argued to from the ladder alone.");
   ("It is the player's own rule and nothing else. The mark over somebody's head is the only");
   ("guidance this game gives, so a lit face is a face the game has told the player to leave");
   ("alone; playing any other way would be measuring a player the game never described.");
@@ -42,7 +47,6 @@ export function bless_marks_climbed(count, stride) {
   let blessed = set_new();
   let rungs = bless_rungs();
   let rung = list_first(rungs);
-  let prayers = 0;
   let steps = range(count);
   for (let step of steps) {
     let reach = multiply(step, stride);
@@ -52,7 +56,6 @@ export function bless_marks_climbed(count, stride) {
     if (not(lit)) {
       let place = bless_person_place(person, rung);
       bless_blessed_add(blessed, rung, place);
-      prayers = add(prayers, 1);
       rung = bless_rung_climbed(blessed, person, rung);
     }
   }
