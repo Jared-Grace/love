@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { each } from "./each.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_get } from "./list_get.mjs";
@@ -18,8 +19,7 @@ export function gloss_passages_verse_word_keys(
   let verse_keys = {};
   function passage_read(passage) {
     let verse_numbers = property_get(passage, "verse_numbers");
-    let texts = property_get(passage, "texts");
-    let explained_texts = list_get(texts, text_index);
+    let explained_texts = property_list_get(passage, "texts", text_index);
     function verse_read(verse_number, index) {
       let text = list_get(explained_texts, index);
       let bare = text_punctuation_dash_kept_split(text);
