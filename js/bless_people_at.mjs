@@ -1,8 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { and } from "./and.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { property_get } from "./property_get.mjs";
 export function bless_people_at(people, x, y) {
   arguments_assert(arguments, 3);
   ("Everybody standing on one tile.");
@@ -10,10 +9,8 @@ export function bless_people_at(people, x, y) {
   ("a doorway, and a crowd is what the top of the ladder is made of, so a drawing that could");
   ("only show one per tile would put a ceiling on the game inside the renderer.");
   function lambda$person(person) {
-    let left2 = property_get(person, "x");
-    let left = equal(left2, x);
-    let left3 = property_get(person, "y");
-    let right = equal(left3, y);
+    let left = property_equals(person, "x", x);
+    let right = property_equals(person, "y", y);
     let same = and(left, right);
     return same;
   }
