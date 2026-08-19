@@ -1,3 +1,4 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { ebible_versions_preferred_first } from "./ebible_versions_preferred_first.mjs";
 import { ebible_language_name_shown } from "./ebible_language_name_shown.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -16,8 +17,15 @@ export async function ebible_languages_commercial() {
   "Not the list the apps show. That list is what somebody chose to ship, and shipping a language means its chapters were uploaded first - a language listed without them is an entry that opens onto nothing. This is the list to choose from.";
   "Grouped by the language code eBible's own copyright page links to, because that is the one word two translations of the same tongue are certain to agree on. Their folder names never agree and their written names agree only sometimes.";
   let ranked = await ebible_versions_commercial_ranked();
+  ("A package holding not one of the sixty six books is dropped before anything is grouped, because it is not a translation of the bible and offering its language opens a reader onto nothing at all. eBible ships some: Bau is an introduction page and a copyright notice with no book behind it, and Gamilaraay is fifteen chapters of an 1856 instruction booklet filed where no book code goes.");
+  ("Counted next door and merely read here, and the count is trustworthy because a translation that was never downloaded cannot answer zero - the folder is not there and the listing throws. So none of the sixty six on disk means none of the sixty six, and never means nobody looked.");
+  function scripture_is(version) {
+    let holds = property_greater_than(version, "books_count", 0);
+    return holds;
+  }
+  let scripture = list_filter(ranked, scripture_is);
   let property_name = language_code_key();
-  let groups = list_group_by_property(ranked, property_name);
+  let groups = list_group_by_property(scripture, property_name);
   function language_of(group) {
     let versions = property_get(group, "items");
     let language_code = property_get(group, "key");
