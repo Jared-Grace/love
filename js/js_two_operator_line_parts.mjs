@@ -6,11 +6,14 @@ export function js_two_operator_line_parts(words, value_of) {
   "Reading them by name rather than by counting is what this is for. Three places were each writing out the same five reads, and the fourth and fifth of those - the ones furthest from the eye - are exactly where an index typed one out is silently a different line rather than an error.";
   "Nothing is said here about how many words there are. A caller that only accepts a five-word line says so where the line arrives, so a line of the wrong shape is refused with the caller's own words rather than quietly losing whatever sat past the fifth.";
   arguments_assert(arguments, 2);
-  let left = value_of(list_get(words, 0));
+  let item = list_get(words, 0);
+  let left = value_of(item);
   let first_operator = list_get(words, 1);
-  let middle = value_of(list_get(words, 2));
+  let item2 = list_get(words, 2);
+  let middle = value_of(item2);
   let second_operator = list_get(words, 3);
-  let right = value_of(list_get(words, 4));
+  let item3 = list_get(words, 4);
+  let right = value_of(item3);
   let r = {
     left,
     first_operator,
