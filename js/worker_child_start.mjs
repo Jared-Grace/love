@@ -1,3 +1,5 @@
+import { worker_results_read } from "./worker_results_read.mjs";
+import { worker_exited } from "./worker_exited.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function worker_child_start(worker) {
