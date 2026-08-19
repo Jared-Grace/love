@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -42,8 +43,7 @@ export function js_function_parameter_call_sizes(node, index) {
     if (callee_is) {
       let callee_name = property_get(callee, "name");
       if (equal(callee_name, name)) {
-        let args = property_get(call, "arguments");
-        let size = list_size(args);
+        let size = property_list_size(call, "arguments");
         list_add(sizes, size);
       }
     }
