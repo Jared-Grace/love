@@ -5,7 +5,6 @@ import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_
 import { firebase_storage_list_page } from "./firebase_storage_list_page.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_slash_forward } from "./text_split_slash_forward.mjs";
-import { list_last } from "./list_last.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
