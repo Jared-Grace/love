@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { worker_child_ensure } from "./worker_child_ensure.mjs";
+import { function_worker_child_ensure } from "./function_worker_child_ensure.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { json_to } from "./json_to.mjs";
 export async function worker_job_run(worker, f_name, args) {
@@ -15,7 +15,7 @@ export async function worker_job_run(worker, f_name, args) {
       reject,
     };
   });
-  let child = await worker_child_ensure(worker);
+  let child = await function_worker_child_ensure(worker);
   ("A reply is now genuinely pending, so the loop must stay alive to receive it.");
   child.stdio[4].ref();
   let job = {
