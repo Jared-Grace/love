@@ -46,12 +46,15 @@ export function app_g_bless_blocks(rows) {
   }
   let xs = list_map(tiles, x_of);
   let ys = list_map(tiles, y_of);
-  let width = add(list_max(xs), 1);
-  let depth = add(list_max(ys), 1);
+  let left = list_max(xs);
+  let width = add(left, 1);
+  let left2 = list_max(ys);
+  let depth = add(left2, 1);
   let count = bless_blocks_count();
   let gap = bless_blocks_gap();
   let stride = add(depth, gap);
-  let spans = multiply(subtract(count, 1), stride);
+  let left3 = subtract(count, 1);
+  let spans = multiply(left3, stride);
   let column = add(spans, depth);
   let row_first = list_first(rows);
   let world_width = list_size(row_first);
