@@ -1,3 +1,4 @@
+import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { each } from "./each.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
@@ -15,8 +16,7 @@ export function gloss_root_explain_nearest(root, explain) {
   "$plain root";
   "$plain explain";
   "both name text to read: a word a dictionary gives, and prose written about another word. Neither names anything that runs.";
-  let root_lower = text_lower_to(root);
-  let root_bare = text_replace(root_lower, "-", "");
+  let root_bare = gloss_word_bare(root);
   let explain_lower = text_lower_to(explain);
   let words = text_punctuation_dash_kept_split(explain_lower);
   let nearest = "";
