@@ -33,20 +33,19 @@ import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.m
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let {
-    r32,
-    view2,
-    chapter_codes2,
-    chapter_code2,
-    storage_key,
-    poll_timer3,
-    chapter3,
-    status2,
-    shown_json,
-    chapter_advance_armed,
-    advanced_for,
-    selected_key,
-  } = app_g_verify_home_selected_key();
+  let r3 = app_g_verify_home_selected_key();
+  let selected_key = property_get(r3, "selected_key");
+  let advanced_for = property_get(r3, "advanced_for");
+  let chapter_advance_armed = property_get(r3, "chapter_advance_armed");
+  let shown_json = property_get(r3, "shown_json");
+  let status2 = property_get(r3, "status2");
+  let chapter3 = property_get(r3, "chapter3");
+  let poll_timer3 = property_get(r3, "poll_timer3");
+  let storage_key = property_get(r3, "storage_key");
+  let chapter_code2 = property_get(r3, "chapter_code2");
+  let chapter_codes2 = property_get(r3, "chapter_codes2");
+  let view2 = property_get(r3, "view2");
+  let r32 = property_get(r3, "r32");
   let chapter_codes = chapter_codes2;
   let view = view2;
   let status = status2;
