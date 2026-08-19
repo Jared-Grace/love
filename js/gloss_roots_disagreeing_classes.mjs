@@ -12,14 +12,20 @@ export function gloss_roots_disagreeing_classes(
   "How the two roots stand to one another is counted beside the distance, and it is the reading that matters more. Most of these findings are not a wrong origin at all: the explanation named a word the dictionary's root is built from, or one built out of it, which is a disagreement about how far back to stop rather than a mistake about where the word came from. A count of edits cannot tell that apart from an invention two letters off, and a reader deciding whether to repair or to regenerate has to know which of the two they are looking at.";
   "The distances are counted again over the findings standing apart on their own, because that is the only place the question is open. Every other answer has already named the disagreement - one word is the other spelled differently, or sits inside it, or shares a run of it too long to be chance - and a distance adds nothing to any of those. Where none of them holds, one edit is very likely two sources spelling a vowel differently and five is an origin somebody made up, and only these findings need the line drawn.";
   "How many classes to show is said as text as readily as as a number, because this is reached for from the command line, where every argument arrives as text and a count read straight would take none of them.";
+  "One reading of the pairs can be asked for on its own, because the readings are not equally worth a person's time and the numbers say so. Naming a root the dictionary's is built from tells a reader more than the dictionary does; naming one built out of it hands them an affixed form as though it were the root, which is the single thing these explanations exist to prevent. Asking for all of them together buries the second under four times its own number of the first.";
   "Only findings that name a root are gathered. An explanation saying nothing about where its word comes from has no claim to be grouped by, so those are counted apart and left to the weaker test that found them.";
   let findings = [];
   let r2 = gloss_roots_disagreeing_classes_claimed_total(findings, offenders);
   let claimed_total = property_get(r2, "claimed_total");
   let total = property_get(r2, "total");
   let apart_by_edits = property_get(r2, "apart_by_edits");
-  let r3 = gloss_roots_disagreeing_classes_shown(r2, sample_size);
+  let r3 = gloss_roots_disagreeing_classes_shown(
+    r2,
+    relation_wanted,
+    sample_size,
+  );
   let shown = property_get(r3, "shown");
+  let selected_total = property_get(r3, "selected_total");
   let by_relation = property_get(r3, "by_relation");
   let by_edits = property_get(r3, "by_edits");
   let silent_total = property_get(r3, "silent_total");
@@ -29,6 +35,7 @@ export function gloss_roots_disagreeing_classes(
     claimed_total,
     silent_total,
     classes_total,
+    selected_total,
     by_relation,
     by_edits,
     apart_by_edits,
