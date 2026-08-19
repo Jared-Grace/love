@@ -1,9 +1,8 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { app_code_expression_step_choices } from "./app_code_expression_step_choices.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_code_expression_step_choices_strong(value, rank_most) {
   arguments_assert(arguments, 2);
   ("the ways of growing a line by one operator that use a stronger operator - a times or a divide - and leave out the adding ones");
@@ -12,8 +11,7 @@ export function app_code_expression_step_choices_strong(value, rank_most) {
   let strong = app_code_operators_strong();
   function strong_is(choice) {
     "a choice whose operator is one of the stronger pair";
-    let symbol = property_get(choice, "symbol");
-    let included = list_includes(strong, symbol);
+    let included = property_in_list(choice, "symbol", strong);
     return included;
   }
   let strongest = list_filter(choices, strong_is);
