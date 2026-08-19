@@ -1,7 +1,7 @@
 import { function_worker_exit_if_idle } from "./function_worker_exit_if_idle.mjs";
 import { json_from } from "./json_from.mjs";
 import { property_get } from "./property_get.mjs";
-export function worker_reply_take(worker, line) {
+export function function_worker_reply_take(worker, line) {
   let reply = json_from(line);
   let id = property_get(reply, "id");
   let waiting = property_get(worker, "waiting");
