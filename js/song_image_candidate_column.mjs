@@ -1,3 +1,4 @@
+import { song_image_luma_badge } from "./song_image_luma_badge.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_img } from "./html_img.mjs";
