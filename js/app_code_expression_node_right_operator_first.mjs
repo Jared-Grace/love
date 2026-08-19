@@ -1,22 +1,19 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 export function app_code_expression_node_right_operator_first(
-  left_truth,
-  and_symbol,
-  inner_left_truth,
-  or_symbol,
-  inner_right_truth,
+  left,
+  first_symbol,
+  middle,
+  second_symbol,
+  right,
 ) {
   arguments_assert(arguments, 5);
-  ("three given trues and falses with a given && after the first and a given || between the last two, built into the shape the brackets lesson asks about: false && (true || true)");
-  ("Nothing here decides anything - every piece is handed in - because the same shape is arrived at two ways: built fresh for a new question, and read back off a line printed earlier. A builder that drew its own trues and falses could only serve the first, and the two would be free to mean different things by the same five words.");
-  ("The || holds the last two and the && holds what that comes to, which is the other way round from the lesson before it. Written as five words the two lessons print the same words in the same order, so the shape is the only place the difference lives and it is settled here.");
-  ("No brackets are written here either, and the printed line still comes out with them: || is weaker than && , so a || standing on the right of an && can only mean what it says with brackets round it, and the same helper that decides every other bracket in the run puts them there. Written by hand they could disagree with the shape, and the line a learner presses would be a different line from the one being solved.");
-  let or_node = app_code_expression_node(
-    inner_left_truth,
-    or_symbol,
-    inner_right_truth,
-  );
-  let tree = app_code_expression_node(left_truth, and_symbol, or_node);
+  ("three given values with a given operator after the first and a given operator between the last two, built into the shape where the RIGHT of the two operators gathers its sides first: false && (true || true), or 8 - 2 * 3");
+  ("Nothing here decides anything - every piece is handed in - because the same shape is arrived at two ways: built fresh for a new question, and read back off a line printed earlier. A builder that drew its own values could only serve the first, and the two would be free to mean different things by the same five words.");
+  ("The second operator holds the last two values and the first holds what that comes to, which is the other way round from the sibling beside it. Written as five words the two shapes print the same words in the same order, so the shape is the only place the difference lives and it is settled here.");
+  ("It is told nothing about which operators these are, and it must not be. Two lessons build this same shape out of two different alphabets - one out of && and ||, one out of the four arithmetic signs - and each of them has already sorted its own two operators into the one that gathers first and the one that waits before it arrives here. A builder that knew && from * would be a builder the other lesson had to write out again, which is exactly what it used to be.");
+  ("Brackets are never written here. Whether the printed line needs any is read off the shape by the same helper that decides every other bracket in the run, so this builder is free to nest the way it is told and the line a learner presses is still the line being solved.");
+  let second_node = app_code_expression_node(middle, second_symbol, right);
+  let tree = app_code_expression_node(left, first_symbol, second_node);
   return tree;
 }
