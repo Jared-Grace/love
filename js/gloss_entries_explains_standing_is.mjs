@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
@@ -18,8 +19,7 @@ export function gloss_entries_explains_standing_is(entries, explains) {
   let size = list_size(entries);
   let whole = list_is(explains);
   if (whole) {
-    let left = list_size(explains);
-    let agreed = equal(left, size);
+    let agreed = list_size_equal(explains, size);
     if (not(agreed)) {
       return false;
     }
