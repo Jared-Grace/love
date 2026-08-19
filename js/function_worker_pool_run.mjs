@@ -1,6 +1,6 @@
 import { function_worker_watching_ensure } from "./function_worker_watching_ensure.mjs";
 import { function_worker_pool_ready } from "./function_worker_pool_ready.mjs";
-import { worker_job_run } from "./worker_job_run.mjs";
+import { function_worker_job_run } from "./function_worker_job_run.mjs";
 import { modulo } from "./modulo.mjs";
 import { property_get } from "./property_get.mjs";
 ("Run a function on a warm worker instead of spawning a node process per call.");
@@ -46,6 +46,6 @@ export async function function_worker_pool_run(f_name, args) {
   ("event loop for everyone — several processes keep that blast radius small.");
   let worker = workers[modulo(next, workers.length)];
   ready.next = next + 1;
-  let r = await worker_job_run(worker, f_name, args);
+  let r = await function_worker_job_run(worker, f_name, args);
   return r;
 }
