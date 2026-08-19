@@ -1,10 +1,10 @@
+import { app_g_bless_overlay_render_view_now } from "./app_g_bless_overlay_render_view_now.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
 import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
 import { app_g_bless_pray_overlay } from "./app_g_bless_pray_overlay.mjs";
-import { bless_cone_view } from "./bless_cone_view.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { bless_view_person_at } from "./bless_view_person_at.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
@@ -20,21 +20,15 @@ export function app_g_bless_overlay_render(r, npcs) {
   let wash = property_get(r, "wash");
   let player_img_c = property_get(r, "player_img_c");
   let glows = property_get(r, "glows");
-  let bar = property_get(r, "bar");
-  let container_map = property_get(r, "container_map");
-  let rung = property_get(r, "rung");
-  let blessed = property_get(r, "blessed");
-  let cone_get = property_get(r, "cone_get");
-  let r2 = property_get(r, "r2");
-  let world = property_get(r2, "world");
+  let r2 = app_g_bless_overlay_render_view_now(r, npcs);
+  let view_now = property_get(r2, "view_now");
   let walking = property_get(r2, "walking");
-  function view_now() {
-    "who the player can see AT THIS MOMENT, asked again rather than remembered, because the";
-    "crowd walks between one question and the next";
-    let cone = cone_get();
-    let view = bless_cone_view(cone, npcs);
-    return view;
-  }
+  let world = property_get(r2, "world");
+  let cone_get = property_get(r2, "cone_get");
+  let blessed = property_get(r2, "blessed");
+  let rung = property_get(r2, "rung");
+  let container_map = property_get(r2, "container_map");
+  let bar = property_get(r2, "bar");
   function render() {
     let view = view_now();
     ("the marks are worked out from the record on every step rather than left where they were");
