@@ -1,11 +1,10 @@
-import { fn_name } from "./fn_name.mjs";
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { function_worker_generation_holder } from "./function_worker_generation_holder.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { function_worker_pool_run } from "./function_worker_pool_run.mjs";
 import { identity } from "./identity.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { log } from "./log.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -35,11 +34,13 @@ export async function function_worker_pool_retire_try() {
   if (after === before) {
     list_add(crossed, "the pool, which was not replaced");
   }
-  let workers_before = property_get(before, "workers");
-  let retirements = list_map_property(workers_before, "retired");
+  let retirements = property_list_map_property(before, "workers", "retired");
   for (let retired of retirements) {
     if (not_equal(retired, true)) {
-      list_add(crossed, "a worker of the replaced pool, which was never told to drain");
+      list_add(
+        crossed,
+        "a worker of the replaced pool, which was never told to drain",
+      );
     }
   }
   let hint = {
