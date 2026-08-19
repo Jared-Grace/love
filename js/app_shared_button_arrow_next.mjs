@@ -1,8 +1,18 @@
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
-import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
-export function app_shared_button_arrow_next(parent, unit, lambda) {
-  let text = text_combine_multiple(["Next ", unit, " ", emoji_arrow_right()]);
-  let component = app_shared_button(parent, text, lambda);
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_button_notext } from "./app_shared_button_notext.mjs";
+import { html_flex_row_center } from "./html_flex_row_center.mjs";
+import { html_style_gap_em } from "./html_style_gap_em.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
+export function app_shared_button_arrow_next(parent, text, lambda) {
+  "A wide button on to whatever comes after, wearing an arrow beside the words handed to it.";
+  "Its neighbour going the other way says why the arrow and the words are kept as two pieces. The one difference here is which of them comes first, and that is what puts each arrow on the outer edge of the pair.";
+  arguments_assert(arguments, 3);
+  let component = app_shared_button_notext(parent, lambda);
+  html_flex_row_center(component);
+  html_style_gap_em(component, "0.3");
+  let arrow = emoji_arrow_right();
+  html_span_text(component, text);
+  html_span_text(component, arrow);
   return component;
 }

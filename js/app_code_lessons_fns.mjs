@@ -251,6 +251,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_compare,
     app_code_lesson_comment_note,
     app_code_lesson_log_twice,
+    app_code_lesson_comment_skip_line,
   ];
   return fns;
 }
