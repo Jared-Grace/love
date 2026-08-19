@@ -1,3 +1,7 @@
+import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
+import { and } from "./and.mjs";
+import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
+import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_node_bracketed } from "./app_code_expression_node_bracketed.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
@@ -12,6 +16,16 @@ export function app_code_expression_solved(item, node) {
   ("the same expression with one of its operators worked out and standing there as its value - the step a learner sees after picking that operator: picking the * in 1 + 2 * 3 gives back 1 + 6");
   ("One step, not the answer. A learner who is shown the whole line collapse at once has watched something happen; a learner who picks and is answered, and then picks again, has done every step of it, and the step they get wrong is the one thing they did not know.");
   let same = equal(item, node);
+  let node_before_is = app_code_expression_node_before_is(node);
+  if (and(same, node_before_is)) {
+    let symbol_before = property_get(node, "operator");
+    let acted_on_of_node = property_get(node, "right");
+    let value_before = app_code_operator_solve_before(
+      symbol_before,
+      acted_on_of_node,
+    );
+    return value_before;
+  }
   if (same) {
     let left_of_node = property_get(node, "left");
     let symbol_of_node = property_get(node, "operator");
@@ -26,6 +40,14 @@ export function app_code_expression_solved(item, node) {
   let node_is = app_code_expression_node_is(item);
   if (not(node_is)) {
     return item;
+  }
+  let item_before_is = app_code_expression_node_before_is(item);
+  if (item_before_is) {
+    let symbol_of_item = property_get(item, "operator");
+    let acted_on = property_get(item, "right");
+    let acted_on_new = app_code_expression_solved(acted_on, node);
+    let rebuilt = app_code_expression_node_before(symbol_of_item, acted_on_new);
+    return rebuilt;
   }
   let left = property_get(item, "left");
   let left_new = app_code_expression_solved(left, node);
