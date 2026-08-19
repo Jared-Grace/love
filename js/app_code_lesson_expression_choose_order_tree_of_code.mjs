@@ -1,7 +1,6 @@
+import { app_code_expression_step_operands_times_is } from "./app_code_expression_step_operands_times_is.mjs";
 import { app_code_lesson_expression_choose_order_expression_digits } from "./app_code_lesson_expression_choose_order_expression_digits.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_assert } from "./list_size_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
@@ -20,8 +19,7 @@ export function app_code_lesson_expression_choose_order_tree_of_code(code) {
   let middle = number_from_text(middle_text);
   let right = number_from_text(right_text);
   let second_symbol = list_get(pieces, 3);
-  let times = js_operator_asterisk_symbol();
-  let strong_right = equal(second_symbol, times);
+  let strong_right = app_code_expression_step_operands_times_is(second_symbol);
   let tree = app_code_lesson_expression_choose_order_expression_digits(
     left,
     middle,
