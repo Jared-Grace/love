@@ -70,6 +70,22 @@ export function js_code_getter_literal_cases() {
       why: "a body freezing several words is a corpus of written-out cases, and reading the first of them would file the whole corpus under whichever word happens to come first",
     },
     {
+      code: text_frozen(
+        'export function f() {\n  if (missing) {\n    return "none";\n  }\n  return "chosen";\n}\n',
+      ),
+      f_name: text_frozen("f"),
+      literal: "",
+      why: "two ways out means this is not a getter, and reading the first of them reported the word it gives up with as the word it exists to hand back",
+    },
+    {
+      code: text_frozen(
+        'export function f() {\n  "a sentence saying what this is for.";\n  let v = "chosen";\n  return v;\n}\n',
+      ),
+      f_name: text_frozen("f"),
+      literal: "chosen",
+      why: "one return standing on its own line below a sentence of prose is the shape of every real getter here, and the refusal over several returns must not reach it",
+    },
+    {
       code: text_frozen('export function g() {\n  return "chosen";\n}\n'),
       f_name: text_frozen("f"),
       literal: "",
