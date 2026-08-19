@@ -63,7 +63,7 @@ export function ebible_languages_curated() {
     },
     {
       name: "Amharic",
-      bible_folder: "amh",
+      bible_folder: "am_ulb",
       language_code: "am",
     },
     {
