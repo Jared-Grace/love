@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function youtube_browse_videos(answer) {
+export function youtube_browse_lockups(answer) {
   "The videos youtube named anywhere inside one of its answers, each as its watch code and its title, together with the token that asks for the page after them.";
   "The answer is searched all the way through rather than read down a path, because youtube moves where a list of videos sits between one of its own releases and the next, and a path written today is a silent empty answer after that move. What a video is called in the answer has changed too; what has not changed is that the video's own record carries the watch code, so the record is what is looked for.";
   "The token comes back beside the videos rather than from a second search, because a page and the way to ask for the next one are one fact: read apart, a caller can hold the videos of one page and the token of another and never notice.";
