@@ -8,7 +8,7 @@ export async function app_ceb_bible_gloss_misaligned_gate_run() {
   let words_read = gloss_passage_words_text_first;
   let r = await gloss_words_misaligned_gate_generic(
     fn,
-    "ceb bible",
+    "ceb_bible",
     words_read,
   );
   return r;

@@ -8,7 +8,7 @@ export async function app_en_learn_bible_gloss_urdu_misaligned_gate_run() {
   let words_read = gloss_passage_words_text_first;
   let r = await gloss_words_misaligned_gate_generic(
     fn,
-    "urdu bible",
+    "en_learn_bible",
     words_read,
   );
   return r;
