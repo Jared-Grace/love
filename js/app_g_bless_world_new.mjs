@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_map_generate } from "./app_g_map_generate.mjs";
@@ -40,11 +41,13 @@ export function app_g_bless_world_new() {
   let rows = app_g_map_generate();
   let block = app_g_bless_block(rows);
   let walls = property_get(block, "walls");
+  let alleys = property_get(block, "alleys");
   let sidewalk = property_get(block, "sidewalk");
   let item_wall = g_tile_wall();
   app_g_bless_tiles_pave(rows, walls, item_wall);
   let item_pavement = bless_tile_pavement();
-  app_g_bless_tiles_pave(rows, sidewalk, item_pavement);
+  let paved = list_concat(alleys, sidewalk);
+  app_g_bless_tiles_pave(rows, paved, item_pavement);
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_reachable_get(coordinates);
   let player_img = g_player_img_get();
