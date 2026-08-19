@@ -1,10 +1,9 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_span_candidates } from "./functions_span_candidates.mjs";
 import { function_span_cut_pass } from "./function_span_cut_pass.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
@@ -17,8 +16,7 @@ export async function functions_span_cut_all() {
   ("A function that cannot be read at all is passed over rather than allowed to end the sweep, because one unreadable file should not cost the answer about all the others. A run that the cut refuses is a different thing and is not caught: everything before it is already committed, and the refusal is a finding.");
   ("It asks the list once more at the end. The rows left are the functions still standing over the ceiling with a run in them nobody could name, which is the work this cannot do and a person can.");
   let ranked = await functions_span_candidates();
-  let named = list_map_property(ranked, "name");
-  let walked = list_unique(named);
+  let walked = list_map_property_unique(ranked, "name");
   let cut = [];
   let skipped = [];
   for (let f_name of walked) {
