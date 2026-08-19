@@ -1,3 +1,4 @@
+import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest_crowd.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { object_assign } from "./object_assign.mjs";
