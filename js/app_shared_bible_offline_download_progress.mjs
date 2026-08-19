@@ -1,5 +1,5 @@
+import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_offline_download } from "./ebible_offline_download.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -13,8 +13,8 @@ export async function app_shared_bible_offline_download_progress(
   "null comes back when it did not finish, and the caller decides what to say about that - a single row offers that one again, a whole-set save gathers the names and offers them together";
   arguments_assert(arguments, 2);
   let name = property_get(language, "name");
-  let property_name = bible_folder_key();
-  let bible_folder = property_get(language, property_name);
+  ("which folder a language is read from is asked of the one place that answers it, so what is saved here is exactly what the reading will look for");
+  let bible_folder = ebible_language_bible_folder(language);
   function on_progress(done, total) {
     let text = text_combine_multiple([
       "Saving ",

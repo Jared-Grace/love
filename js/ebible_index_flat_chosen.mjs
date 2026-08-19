@@ -12,12 +12,12 @@ export async function ebible_index_flat_chosen(bible_folders) {
   "A bible with no index uploaded yet is passed over rather than waited for, and where that leaves nothing at all the walk is English's, exactly as it was. So this can be true before a single index has been uploaded, and each one that is uploaded afterwards makes it truer for the readers who chose that bible - there is no day on which it has to change over.";
   "English's list and the chosen bibles' lists are asked for in the same breath rather than one after the other. English is wanted for the chapter order whoever is reading, so a reader who did not choose it used to wait out a whole download of English before the first of their own bibles was even asked for - two waits, one after the other, for two things that have nothing to say to each other. Measured on a phone-shaped connection, the first of those was the longer.";
   let version_english = ebible_folder_english();
-  let english_asked = ebible_index_flat(version_english);
+  let english_asked = await ebible_index_flat(version_english);
   async function lambda(bible_folder) {
     let list = await ebible_index_flat_try(bible_folder);
     return list;
   }
-  let chosen_asked = list_map_unordered_async_filter_null_not_is(
+  let chosen_asked = await list_map_unordered_async_filter_null_not_is(
     bible_folders,
     lambda,
   );

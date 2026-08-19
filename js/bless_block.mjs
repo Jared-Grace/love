@@ -30,6 +30,12 @@ export function bless_block(x, y) {
   ("Buildings face SOUTH because the player is set down on the pavement looking north: the");
   ("fronts, the doors and the people standing at them are then all in view at once, and a");
   ("row seen from behind would be a wall.");
+  ("The gaps between the buildings are named as ALLEYS and given back, so that whoever lays");
+  ("the block down lays them too. Left out, they are whatever the world already had there -");
+  ("and a world generated fresh each time puts a lake behind the row as readily as grass, so");
+  ("the street would open every few games with water standing between the houses. They are");
+  ("also the only way through the row, so paving them is what keeps the ground north of the");
+  ("block reachable from the pavement in front of it.");
   let shape = bless_building_shape();
   let width = property_get(shape, "width");
   let depth = property_get(shape, "depth");
@@ -50,6 +56,16 @@ export function bless_block(x, y) {
   }
   let buildings = list_map(indexes, building_tiles);
   let walls = list_flat(buildings);
+  let gaps = subtract(count, 1);
+  let indexes_gap = range(gaps);
+  function alley_tiles(index) {
+    let at = building_x(index);
+    let alley_x = add(at, width);
+    let tiles = bless_tiles_rectangle(alley_x, y, gap, depth);
+    return tiles;
+  }
+  let alleys_each = list_map(indexes_gap, alley_tiles);
+  let alleys = list_flat(alleys_each);
   let sidewalk_y = add(y, depth);
   let fronts = multiply(count, stride);
   let block_width = subtract(fronts, gap);
@@ -67,6 +83,7 @@ export function bless_block(x, y) {
   let doors = list_map(indexes, door_at);
   let block = {
     walls: walls,
+    alleys: alleys,
     sidewalk: sidewalk,
     doors: doors,
   };
