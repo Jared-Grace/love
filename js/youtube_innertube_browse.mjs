@@ -16,12 +16,11 @@ export async function youtube_innertube_browse(ask) {
   object_merge_set(body, ask);
   let context = youtube_innertube_context();
   object_merge_set(body, { context: context });
-  let text = json_to(body);
   let options_extra = {
     headers: { "Content-Type": "application/json" },
     sleep: false,
   };
-  let buffer = await http_post_options(url, text, options_extra);
+  let buffer = await http_post_options(url, body, options_extra);
   let answer = buffer_to_json(buffer);
   return answer;
 }
