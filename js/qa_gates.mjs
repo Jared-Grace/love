@@ -1,3 +1,4 @@
+import { app_shared_gloss_bible_derivatives_gate_run } from "./app_shared_gloss_bible_derivatives_gate_run.mjs";
 import { bless_marks_climbed_cases_gate_run } from "./bless_marks_climbed_cases_gate_run.mjs";
 import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs";
 import { usfm_chapters_verses_cases_gate_run } from "./usfm_chapters_verses_cases_gate_run.mjs";
@@ -424,6 +425,7 @@ export function qa_gates() {
     ebible_index_flats_union_cases_gate_run,
     ebible_readaloud_lines_gate_run,
     ebible_languages_licences_gate_run,
+    app_shared_gloss_bible_derivatives_gate_run,
     usfm_chapters_verses_cases_gate_run,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
