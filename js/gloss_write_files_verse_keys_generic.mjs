@@ -1,4 +1,4 @@
-import { equal } from "./equal.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { gloss_write_files_named_generic } from "./gloss_write_files_named_generic.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
@@ -17,8 +17,7 @@ export async function gloss_write_files_verse_keys_generic(
   "The whole folder is read and this chapter kept, rather than the chapter's own files being looked for. The two answer alike, and the walk that names every waiting passage is wanted whole elsewhere, so it is the one that exists and this is a reading of it.";
   let named = await gloss_write_files_named_generic(fn, opening);
   function mine_is(pair) {
-    let left = property_get(pair, "chapter_code");
-    let eq = equal(left, chapter_code);
+    let eq = property_equals(pair, "chapter_code", chapter_code);
     return eq;
   }
   let matched = list_filter(named, mine_is);
