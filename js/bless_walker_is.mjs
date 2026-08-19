@@ -1,6 +1,8 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { less_than } from "./less_than.mjs";
 export function bless_walker_is(fraction) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("Whether somebody is out walking the pavement rather than standing about outside their");
   ("own front door, drawn from a number between nought and one.");
