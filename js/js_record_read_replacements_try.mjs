@@ -9,6 +9,7 @@ export function js_record_read_replacements_try(entries, reads, uses) {
   ("This is the whole question of whether a record can be taken away. It can when the record is never looked at as a thing in itself - never handed to anything, never given back, never compared - but only ever asked for one of the entries it was written with. Each such asking has a known answer, so each can be replaced by that answer and nothing is left needing the record.");
   ("One mention that is not a reading of a known entry stops all of it, not just itself. Half the mentions answered and half still reaching for a record that is no longer there is worse than leaving the record alone.");
   ("Nothing is written here. The list handed back is a plan, so that whoever asked can look at every part of it before any of it happens.");
+  ("A reading that carries on one step past the entry keeps that step beside it in the plan. It is not answerable by a name on its own, and whoever carries the plan out has to know that about it.");
   let replacements = [];
   for (let use of uses) {
     let read = list_find_property_or_null(reads, "target", use);
@@ -21,10 +22,12 @@ export function js_record_read_replacements_try(entries, reads, uses) {
       return null;
     }
     let call = property_get(read, "call");
+    let after = property_get(read, "after");
     let name = property_get(entry, "name");
     list_add(replacements, {
       call,
       name,
+      after,
     });
   }
   return replacements;

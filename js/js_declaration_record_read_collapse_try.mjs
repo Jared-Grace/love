@@ -4,7 +4,8 @@ import { equal_not } from "./equal_not.mjs";
 import { js_identifiers_referenced_named_nodes } from "./js_identifiers_referenced_named_nodes.mjs";
 import { js_name_fixed_is } from "./js_name_fixed_is.mjs";
 import { js_node_identifier_replace } from "./js_node_identifier_replace.mjs";
-import { js_property_get_rows } from "./js_property_get_rows.mjs";
+import { js_property_path_get_2_step_replace } from "./js_property_path_get_2_step_replace.mjs";
+import { js_record_read_rows } from "./js_record_read_rows.mjs";
 import { js_record_name_entries_try } from "./js_record_name_entries_try.mjs";
 import { js_record_read_replacements_try } from "./js_record_read_replacements_try.mjs";
 import { list_add } from "./list_add.mjs";
@@ -41,7 +42,7 @@ export function js_declaration_record_read_collapse_try(ast, rebound, row) {
     return other_is;
   }
   let uses = list_filter(mentions, use_is);
-  let reads = js_property_get_rows(ast);
+  let reads = js_record_read_rows(ast);
   let replacements = js_record_read_replacements_try(entries, reads, uses);
   if (null_is(replacements)) {
     return false;
@@ -49,7 +50,13 @@ export function js_declaration_record_read_collapse_try(ast, rebound, row) {
   function replacement_each(replacement) {
     let call = property_get(replacement, "call");
     let to = property_get(replacement, "name");
-    js_node_identifier_replace(call, to);
+    let after = property_get(replacement, "after");
+    let stops_is = null_is(after);
+    if (stops_is) {
+      js_node_identifier_replace(call, to);
+      return;
+    }
+    js_property_path_get_2_step_replace(call, to);
   }
   each(replacements, replacement_each);
   let list = property_get(row, "list");
