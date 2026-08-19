@@ -16,6 +16,14 @@ export function bless_place_sizes() {
   ("stored, which is what lets a world be generated without being written down. Variety");
   ("belongs to what a place LOOKS like, not to how many of them there are.");
   ("There is no entry for a person, because a person is the bottom and holds nobody.");
+  ("They were chosen for BRANCHING and not for population, and above a county they get the");
+  ("population plainly wrong - multiplied out, a country here holds over a billion people");
+  ("and the world holds three hundred billion. That is the wrong thing to tune them by:");
+  ("what these numbers actually decide is how many stops the player must travel to at each");
+  ("rung, and every one of them sits under the fifty the ladder asks for. A world is");
+  ("generated from an index rather than written down, so an oversized upper rung costs");
+  ("nothing but a number nobody counts. Tune them by playing the journey, not by");
+  ("multiplying them out.");
   let sizes = {
     household: 3,
     building: 4,
