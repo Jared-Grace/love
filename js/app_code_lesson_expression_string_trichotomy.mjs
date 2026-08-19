@@ -1,9 +1,8 @@
+import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_code_lesson_expression_string_trichotomy_title_name_id } from "./app_code_lesson_expression_string_trichotomy_title_name_id.mjs";
 import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { text_lower_is } from "./text_lower_is.mjs";
-import { app_code_verse_words_clean_unique } from "./app_code_verse_words_clean_unique.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
@@ -12,7 +11,6 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -49,8 +47,7 @@ export function app_code_lesson_expression_string_trichotomy() {
   ];
   function words_source() {
     "the verse words that are already all lower case, made distinct - the only ones whose character-code order matches alphabetical order, so a capital never sorts ahead of a small letter in front of the learner";
-    let distinct = app_code_verse_words_clean_unique();
-    let lower_only = list_filter(distinct, text_lower_is);
+    let lower_only = app_code_verse_words_lower_only();
     return lower_only;
   }
   function refill() {
