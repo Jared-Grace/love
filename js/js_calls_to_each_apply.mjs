@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -14,8 +15,7 @@ export function js_calls_to_each_apply(ast, names) {
   "The lists are gathered first and rewritten afterwards, because the gathering is a walk over the very lists being changed, and changing one part way through would leave the walk reading a list that no longer holds what it was counting on.";
   let bodies = [];
   function body_gather(v) {
-    let node = property_get(v, "node");
-    let body = property_get(node, "body");
+    let body = property_path_get_2(v, "node", "body");
     let list_of_statements_is = list_is(body);
     let right = list_includes_not(bodies, body);
     let wanted_is = and(list_of_statements_is, right);
