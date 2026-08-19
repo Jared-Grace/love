@@ -45,21 +45,21 @@ export function app_code_lesson_comment_skip_line_above(root) {
     slashes,
     ") in front of the second line",
   ]);
-  app_code_code_lines_writes_out(
-    box_last_off,
-    [first_line, last_noted],
-    text_to(first_total),
-  );
-  html_div_cycle_code(box_last_off, ["That line is a note now, so it is skipped"]);
+  let value = text_to(first_total);
+  app_code_code_lines_writes_out(box_last_off, [first_line, last_noted], value);
+  html_div_cycle_code(box_last_off, [
+    "That line is a note now, so it is skipped",
+  ]);
   html_div_cycle_code(box_last_off, ["Its answer is gone"]);
   let box_first_off = app_code_container_light_blue(root);
   html_div_cycle_code(box_first_off, [
     "If we put the slashes in front of the first line instead",
   ]);
+  let value2 = text_to(last_total);
   app_code_code_lines_writes_out(
     box_first_off,
     [first_noted, last_line],
-    text_to(last_total),
+    value2,
   );
   html_div_cycle_code(box_first_off, [
     "Only the line without the slashes writes anything out",
