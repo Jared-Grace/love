@@ -5,6 +5,7 @@ import { html_button } from "./html_button.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { song_image_candidates_get } from "./song_image_candidates_get.mjs";
+import { song_image_chosen_map } from "./song_image_chosen_map.mjs";
 import { song_image_commons_url } from "./song_image_commons_url.mjs";
 export function song_image_candidate_column(parent, state, on_change) {
   "the right column: every candidate for this couplet as a numbered row, clicked to look at it in frame; deciding is a separate button from looking, so comparing several never commits by accident";
@@ -14,7 +15,8 @@ export function song_image_candidate_column(parent, state, on_change) {
   let looking = equal(state.looking[state.couplet], undefined)
     ? 0
     : state.looking[state.couplet];
-  let chosen = state.chosen[state.couplet];
+  let map = song_image_chosen_map(state);
+  let chosen = map[state.couplet];
   let number = 0;
   for (let candidate of candidates) {
     let index = number;
@@ -57,7 +59,11 @@ export function song_image_candidate_column(parent, state, on_change) {
         "</span>",
     );
     function lambda2() {
-      state.chosen[state.couplet] = index;
+      if (equal(map[state.couplet], index)) {
+        delete map[state.couplet];
+      } else {
+        map[state.couplet] = index;
+      }
       on_change();
     }
     let decide = html_button(
