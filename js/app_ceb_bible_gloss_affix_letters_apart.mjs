@@ -1,13 +1,12 @@
+import { equal_not } from "./equal_not.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_chapters_affix_letters_wrong } from "./gloss_chapters_affix_letters_wrong.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_ceb_bible_gloss_affix_letters_apart() {
@@ -27,8 +26,7 @@ export async function app_ceb_bible_gloss_affix_letters_apart() {
       let word = property_get(finding, "word");
       function claim_read(claim) {
         let relation = property_get(claim, "relation");
-        let standing_apart = equal(relation, "apart");
-        let near = not(standing_apart);
+        let near = equal_not(relation, "apart");
         if (near) {
           return;
         }
