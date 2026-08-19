@@ -118,6 +118,71 @@ export function song_image_candidates() {
         title: "Broken chain-link fence around a wetland in North Lynnwood.jpg",
         licence: "CC BY-SA 4.0",
       },
+      {
+        title: "Broken Chains 3.jpg",
+        licence: "Public domain",
+      },
+      {
+        title: "Broken Chains 4.jpg",
+        licence: "Public domain",
+      },
+      {
+        title: "Broken Chain..... (18042300649).jpg",
+        licence: "CC BY 2.0",
+      },
+      {
+        title: "Broken Chain (239950715).jpeg",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title: "Nemini teneri-The broken chain (Casali)-01.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title: "Broken link.png",
+        licence: "CC0",
+      },
+    ],
+    17: [
+      {
+        title:
+          "Agnus Dei (The Lamb of God), by Francisco de Zurbaran, c. 1635-1640 - San Diego Museum of Art - DSC06627.JPG",
+        licence: "Public domain",
+      },
+      {
+        title:
+          "Agnus Dei (The Lamb of God) by Zurbarán, San Diego Museum of Art.JPG",
+        licence: "Public domain",
+      },
+      {
+        title: "Agnus dei - San Vitale, Ravenna.jpg",
+        licence: "Public domain",
+      },
+      {
+        title: "Basilica of San Vitale - Lamb of God mosaic.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title: "Agnus Dei Prophets Florence Baptistery.jpg",
+        licence: "CC0",
+      },
+      {
+        title: "AGNUS DEI.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title: "Agnus Dei - geograph.org.uk - 1343828.jpg",
+        licence: "CC BY-SA 2.0",
+      },
+      {
+        title: "Agnus Dei Foucauld 3.jpg",
+        licence: "Public domain",
+      },
+      {
+        title:
+          "Maiestas Domini, mosaic, Agnus Dei — Basilica dei Santi Cosma e Damiano, Rome.jpg",
+        licence: "Public domain",
+      },
     ],
     21: [
       {
@@ -158,6 +223,27 @@ export function song_image_candidates() {
         title: "Weisenau type helmets, Carnuntum.jpg",
         licence: "CC BY 2.5",
       },
+      {
+        title: "14th century document with seal (FindID 68492).jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title:
+          "Parchment Document and Seal of Philip of Alsace, Count of Flanders (1168–91) and of Vermondois (1155–91) MET 54698.jpg",
+        licence: "CC0",
+      },
+      {
+        title: "Sealing wax on letters.jpg",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title: "Wax seal with impression of uppercase letter A.jpg",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title: "Carnforth, Lancs., Wax Seal (FindID 97837).jpg",
+        licence: "CC BY-SA 2.0",
+      },
     ],
     32: [
       {
@@ -173,6 +259,38 @@ export function song_image_candidates() {
       {
         title: "B Facundus 254.jpg",
         licence: "Public domain",
+      },
+      {
+        title:
+          "Jacobello Alberegno. The Heavenly Jerusalem, 1375-1397, State Hermitage Museum, Sanct Petersburg, RF.jpg",
+        licence: "Public domain",
+      },
+      {
+        title: "Trees on the Bank of River with low light.jpg",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title: "Trees on the banks of the River Wye - geograph.org.uk - 5977061.jpg",
+        licence: "CC BY-SA 2.0",
+      },
+      {
+        title:
+          "Matley Heath's ancient earthworks and trees alongside the Beaulieu River, New Forest - geograph.org.uk - 24957.jpg",
+        licence: "CC BY-SA 2.0",
+      },
+      {
+        title:
+          "River Ching footpath 12, river bank trees, South Chingford, London, England.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title:
+          "River Ching footpath 13, river bank trees, South Chingford, London, England.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title: "River Avon below Huntingdon Warren.jpg",
+        licence: "CC BY-SA 3.0",
       },
     ],
     35: [
@@ -299,6 +417,36 @@ export function song_image_candidates() {
       {
         title: "Gustave Dore - Crucifixion of Jesus.jpg",
         licence: "Public domain",
+      },
+      {
+        title:
+          "Albrecht Dürer, Calvary with the Three Crosses, c. 1504-1505, NGA 6712.jpg",
+        licence: "CC0",
+      },
+      {
+        title: "Calvary with the Three Crosses MET DP816060.jpg",
+        licence: "CC0",
+      },
+      {
+        title: "Calvary with the Three Crosses MET DP816061.jpg",
+        licence: "CC0",
+      },
+      {
+        title: "Smlednik calvary, three crosses at the top.jpg",
+        licence: "CC BY-SA 4.0",
+      },
+      {
+        title: "Nagytétény-Diósd Calvary. Three crosses.JPG",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title:
+          "Remete Calvary Hill, three Crosses at Station of the Cross, 2016 Szekszard.jpg",
+        licence: "CC BY-SA 3.0",
+      },
+      {
+        title: "Krizna gora, Calvary scene at the Holy Cross church.jpg",
+        licence: "CC0",
       },
     ],
     11: [
@@ -455,6 +603,13 @@ export function song_image_candidates() {
       { title: "Water Drop 03.jpg", licence: "CC BY-SA 3.0" },
       { title: "Water drop on feather.jpg", licence: "CC BY-SA 4.0" },
       { title: "Water Drop Impact.jpg", licence: "CC BY-SA 3.0" },
+    ],
+    30: [
+      { title: "Egyptian - Pair of Leather Sandals - Walters 73110.jpg", licence: "Public domain" },
+      { title: "Pair of sandals from the Burial of Amenhotep MET EG102.jpg", licence: "CC0" },
+      { title: "Egyptian sandals, leather, 400-600 AD - Bata Shoe Museum - DSC00012.JPG", licence: "CC0" },
+      { title: "Sandals, Adindan, Nubia, Cemetery T, tomb 166, C-Group III, 1600-1550 BC, leather - Oriental Institute Museum, University of Chicago - DSC08031.JPG", licence: "CC0" },
+      { title: "Pair of sandals MET LC-36 3 235 EGDP025303.jpg", licence: "CC0" },
     ],
     34: [
       { title: "The Hetoimasia - St George Church 113-PRIZREN 3 IMG 3246-2.jpg", licence: "CC BY 4.0" },
