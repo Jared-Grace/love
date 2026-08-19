@@ -1,9 +1,7 @@
-import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
-import { app_shared_button_style } from "../../love/js/app_shared_button_style.mjs";
-import { html_button } from "../../love/js/html_button.mjs";
+import { app_shared_button_notext } from "./app_shared_button_notext.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 export function app_shared_button(parent, text, lambda) {
-  let b = html_button(parent, text, lambda);
-  app_shared_button_style(b);
-  html_style_padding_em(b, "0.3");
+  let b = app_shared_button_notext(parent, lambda);
+  html_text_set(b, text);
   return b;
 }
