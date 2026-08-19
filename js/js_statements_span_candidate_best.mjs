@@ -1,7 +1,6 @@
-import { list_filter_size } from "./list_filter_size.mjs";
+import { js_statements_work_deep } from "./js_statements_work_deep.mjs";
 import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { js_statement_work_is } from "./js_statement_work_is.mjs";
 import { span_worst_piece } from "./span_worst_piece.mjs";
 import { span_row_better } from "./span_row_better.mjs";
 import { less_than } from "./less_than.mjs";
@@ -23,7 +22,9 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     return null;
   }
   ("The prose is left out of both counts. A body here is mostly paragraphs explaining itself, and counting those as length makes a run covering every line of work look as though it left a good deal behind - which is how a cut that moves the whole body and gains nothing came to be offered first.");
-  let count = list_filter_size(statements, js_statement_work_is);
+  ("Counted at every depth rather than over the top level, because that is the scale the ceiling judges by and these two numbers are the ones a cut is chosen with. Over the top level a body of one loop holding twenty lines answers one, so a run holding the loop reads as a single line and the piece left behind reads as nearly the whole - the exact reverse of the truth.");
+  let list = js_statements_work_deep(statements);
+  let count = list_size(list);
   ("The walk still goes over every line, prose and all, because a run is addressed by where it stands in the body rather than by where it stands among the lines of work. Only the counting leaves the prose out.");
   let count_lines = list_size(statements);
   let held = null;
@@ -40,7 +41,8 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     if (not(cuttable)) {
       continue;
     }
-    let size = list_filter_size(span, js_statement_work_is);
+    let list2 = js_statements_work_deep(span);
+    let size = list_size(list2);
     let worst = span_worst_piece(count, size);
     let offered = {
       from,

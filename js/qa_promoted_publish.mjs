@@ -1,11 +1,7 @@
-import { apps_frozen_names } from "./apps_frozen_names.mjs";
-import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
-import { firebase_deploy_bypass_unchanged } from "./firebase_deploy_bypass_unchanged.mjs";
+import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
 import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
-import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { lock_error } from "./lock_error.mjs";
 import { qa_promoted_unjudged } from "./qa_promoted_unjudged.mjs";
 export async function qa_promoted_publish() {
@@ -17,21 +13,11 @@ export async function qa_promoted_publish() {
   "It belongs to this way of sending and not to the one that gates the whole tree first. That one has already asked whether everything standing in the folder is sound, which is a different warrant for the same conclusion - and asking this of it as well would refuse a build it had every right to send";
   let unaccounted = await qa_promoted_unjudged();
   list_empty_is_assert_json(unaccounted, unaccounted);
-  async function lambda() {
-    let app_names = apps_frozen_names();
-    await list_map_unordered_async(
-      app_names,
-      firebase_prod_app_unchanged_assert,
-    );
-    let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
-    let stdout = await firebase_deploy_bypass_unchanged(confirm);
-    return stdout;
-  }
   let message = firebase_deploy_locked_message();
   let lock_name = fn_name("firebase_deploy");
   let published = await lock_error(
     lock_name,
-    lambda,
+    firebase_apps_frozen_unchanged_assert_deploy,
     qa_promoted_publish.name,
     message,
   );
