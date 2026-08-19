@@ -1,3 +1,7 @@
+import { g_genders_without_img } from "./g_genders_without_img.mjs";
+import { random } from "./random.mjs";
+import { bless_pace_ms } from "./bless_pace_ms.mjs";
+import { g_directions } from "./g_directions.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { bless_places_ensure } from "./bless_places_ensure.mjs";
 import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
@@ -6,11 +10,8 @@ import { each_index } from "./each_index.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_remove_end } from "./list_remove_end.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_without } from "./list_without.mjs";
 import { mod } from "./mod.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_transform_multiple } from "./property_transform_multiple.mjs";
-import { g_genders_get } from "./g_genders_get.mjs";
 import { app_g_bless_people_count } from "./app_g_bless_people_count.mjs";
 export function app_g_bless_people(player_img, coordinates_land) {
   arguments_assert(arguments, 2);
@@ -23,12 +24,16 @@ export function app_g_bless_people(player_img, coordinates_land) {
   ("Their pictures come from the same list the walking art is drawn from, so a person here");
   ("looks exactly like a person there - and the player's own picture is taken out of it, so");
   ("nobody in the crowd is the player's twin.");
-  let genders = g_genders_get();
-  function lambda$imgs(imgs) {
-    let filtered = list_without(imgs, player_img);
-    return filtered;
-  }
-  property_transform_multiple(genders, "imgs", lambda$imgs);
+  ("A speed and a heading are given out here, one draw each, because they are what a person");
+  ("IS rather than what they are doing - two people side by side walking at different rates");
+  ("in different directions is the whole of what makes this a street. Drawn later, at the");
+  ("moment of a step, everybody would walk at the same average speed and wander rather than");
+  ("go anywhere.");
+  ("Heading is where somebody is trying to go and is not the same thing as the way they are");
+  ("facing, which is wherever they last stepped. Everybody is set down facing south so the");
+  ("crowd is looking at the player when the game opens; where each of them is going is their");
+  ("own business from the first step.");
+  let genders = g_genders_without_img(player_img);
   let gender_count = list_size(genders);
   let count = app_g_bless_people_count();
   let people = list_remove_end(coordinates_land, count);
@@ -38,6 +43,12 @@ export function app_g_bless_people(player_img, coordinates_land) {
     let img = list_random_item(imgs);
     property_set(person, "img", img);
     property_set(person, "direction", "south");
+    let fraction = random();
+    let pace = bless_pace_ms(fraction);
+    property_set(person, "pace", pace);
+    let directions = g_directions();
+    let heading = list_random_item(directions);
+    property_set(person, "heading", heading);
   }
   each_index(people, person_initialize);
   ("Everybody is given the gospel game's own id before they are handed over, because that is");
