@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { bible_verse_holes_empty_folders } from "./bible_verse_holes_empty_folders.mjs";
 import { bible_folders_at_once } from "./bible_folders_at_once.mjs";
 import { ebible_bible_folder_storage_books_first_page } from "./ebible_bible_folder_storage_books_first_page.mjs";
@@ -5,7 +6,6 @@ import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_verse_holes_empty_storage_report() {
   "Asks storage what it actually holds for every bible the hole record found empty, and sorts them into the two things they turn out to be.";
@@ -29,8 +29,7 @@ export async function bible_verse_holes_empty_storage_report() {
   let nothing_uploaded = list_filter(each, lambda2);
   function lambda3(listed) {
     let count = property_get(listed, "files");
-    let none = equal(count, 0);
-    let some = not(none);
+    let some = equal_not(count, 0);
     return some;
   }
   let holds_books = list_filter(each, lambda3);
