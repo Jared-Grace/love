@@ -10,17 +10,20 @@ export async function ebible_index_flat_chosen(bible_folders) {
   "It used to walk English and no other, whoever was reading. A bible that joins two verses into one then has nothing at the second number, and the page said so - which is right for a reader who chose English beside it, and is an apology for nothing at all for a reader who did not. Asking the bibles somebody actually chose turns that second reader's gap into no gap, because the number was never one their bibles use.";
   "English still says what order the chapters come in, whether or not anybody chose it. That is a fact about the bible rather than about a version of it, and only the index knows it.";
   "A bible with no index uploaded yet is passed over rather than waited for, and where that leaves nothing at all the walk is English's, exactly as it was. So this can be true before a single index has been uploaded, and each one that is uploaded afterwards makes it truer for the readers who chose that bible - there is no day on which it has to change over.";
+  "English's list and the chosen bibles' lists are asked for in the same breath rather than one after the other. English is wanted for the chapter order whoever is reading, so a reader who did not choose it used to wait out a whole download of English before the first of their own bibles was even asked for - two waits, one after the other, for two things that have nothing to say to each other. Measured on a phone-shaped connection, the first of those was the longer.";
   let version_english = ebible_folder_english();
-  let list_english = await ebible_index_flat(version_english);
-  let chapter_codes = ebible_index_flat_chapter_codes(list_english);
+  let english_asked = ebible_index_flat(version_english);
   async function lambda(bible_folder) {
     let list = await ebible_index_flat_try(bible_folder);
     return list;
   }
-  let lists = await list_map_unordered_async_filter_null_not_is(
+  let chosen_asked = list_map_unordered_async_filter_null_not_is(
     bible_folders,
     lambda,
   );
+  let list_english = await english_asked;
+  let chapter_codes = ebible_index_flat_chapter_codes(list_english);
+  let lists = await chosen_asked;
   let none = list_empty_is(lists);
   if (none) {
     return list_english;
