@@ -86,6 +86,32 @@ export function js_calls_to_each_cases() {
       names: ["log"],
       after: text_frozen("function f() {\n  each([g(1), g(2)], log);\n}\n"),
     },
+    {
+      name: "a function of that name written in the file is left alone",
+      code: text_frozen(
+        "function f() {\n  function log(x) {\n    return x;\n  }\n  log(1);\n  log(2);\n}",
+      ),
+      names: ["log"],
+      after: text_frozen(
+        "function f() {\n  function log(x) {\n    return x;\n  }\n  log(1);\n  log(2);\n}\n",
+      ),
+    },
+    {
+      name: "a parameter of that name is left alone",
+      code: text_frozen("function f(log) {\n  log(1);\n  log(2);\n}"),
+      names: ["log"],
+      after: text_frozen("function f(log) {\n  log(1);\n  log(2);\n}\n"),
+    },
+    {
+      name: "a variable of that name is left alone",
+      code: text_frozen(
+        "function f() {\n  let log = pick();\n  log(1);\n  log(2);\n}",
+      ),
+      names: ["log"],
+      after: text_frozen(
+        "function f() {\n  let log = pick();\n  log(1);\n  log(2);\n}\n",
+      ),
+    },
   ];
   return cases;
 }
