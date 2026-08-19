@@ -51,11 +51,11 @@ export async function ebible_readaloud_lines_record_assert(
   let names = await ebible_readaloud_lines_differ_names();
   let baseline_path = ebible_readaloud_lines_baseline_path();
   let name_write = fn_name("ebible_readaloud_lines_baseline_write");
-  let hint2 = text_combine_multiple([
+  let hint = text_combine_multiple([
     "a chapter is written for reading aloud in a different number of lines from the number of verses its page marks, so its verses cannot be laid against their numbers and nobody is shown that chapter at all. Look at the chapter itself; when it is put right, measure again with ",
     f_name2,
   ]);
-  await baseline_names_gate_generic(names, baseline_path, hint2, name_write);
+  await baseline_names_gate_generic(names, baseline_path, hint, name_write);
   let measured_names = list_map_property(bibles, "bible_folder");
   let answered = lists_combine([measured_names, unmeasured]);
   let f_name3 = fn_name("ebible_readaloud_lines_write");
