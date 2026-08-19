@@ -18,7 +18,7 @@ export function literals_frozen_gate_run_r(
 ) {
   arguments_assert(arguments, 6);
   function lambda2(f_name) {
-    let r2 = property_in_list_not(f_name, recorded, arrived);
+    let r2 = property_in_list_not(recorded, f_name, arrived);
     return r2;
   }
   let orphaned = list_filter(gone, lambda2);

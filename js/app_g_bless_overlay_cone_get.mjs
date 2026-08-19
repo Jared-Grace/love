@@ -15,8 +15,9 @@ export function app_g_bless_overlay_cone_get(r) {
   let glows = property_get(r, "glows");
   let bar = property_get(r, "bar");
   let told = property_get(r, "told");
-  let unlocked = property_get(r, "unlocked");
-  let blessings = property_get(r, "blessings");
+  let rung = property_get(r, "rung");
+  let blessed = property_get(r, "blessed");
+  let container_map = property_get(r, "container_map");
   function cone_get() {
     let x = property_get(player, "x");
     let y = property_get(player, "y");
@@ -37,8 +38,9 @@ export function app_g_bless_overlay_cone_get(r) {
     glows,
     bar,
     told,
-    unlocked,
-    blessings,
+    rung,
+    blessed,
+    container_map,
     cone_get,
   };
   return r2;
