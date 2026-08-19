@@ -8,7 +8,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { song_image_candidates_get } from "./song_image_candidates_get.mjs";
 import { song_image_chosen_map } from "./song_image_chosen_map.mjs";
 import { song_image_commons_url } from "./song_image_commons_url.mjs";
-export function song_image_candidate_column(parent, state, on_change) {
+export async function song_image_candidate_column(parent, state, on_change) {
   "the right column: every candidate for this couplet as a numbered row, clicked to look at it in frame; deciding is a separate button from looking, so comparing several never commits by accident";
   let column = html_div(parent);
   html_style_set(column, "width", "300px");
@@ -59,7 +59,7 @@ export function song_image_candidate_column(parent, state, on_change) {
         candidate.licence +
         "</span>",
     );
-    song_image_luma_badge(row, src);
+    await song_image_luma_badge(row, candidate.title);
     function lambda2() {
       if (equal(map[state.couplet], index)) {
         delete map[state.couplet];
