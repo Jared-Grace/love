@@ -15,11 +15,11 @@ export function song_image_frame_words(frame, state, couplet) {
   html_style_set(words, "padding", "0 5%");
   html_style_set(words, "box-sizing", "border-box");
   html_style_set(words, "transform", "translateY(-50%)");
-  let half = equal(state.placement, "half");
-  html_style_set(words, "width", half && wide ? "50%" : "100%");
-  html_style_set(words, "left", half && wide && !state.flip ? "50%" : "0");
+  let half_is = equal(state.placement, "half");
+  html_style_set(words, "width", half_is && wide ? "50%" : "100%");
+  html_style_set(words, "left", half_is && wide && !state.flip ? "50%" : "0");
   let tall_top = state.flip ? "25%" : "75%";
-  html_style_set(words, "top", half && !wide ? tall_top : "50%");
+  html_style_set(words, "top", half_is && !wide ? tall_top : "50%");
   html_text_set(words, couplet.first + "<br>" + couplet.second);
   return words;
 }
