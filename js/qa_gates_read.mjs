@@ -10,19 +10,22 @@ export function qa_gates_read() {
   try {
     let gates = qa_gates();
     return gates;
-  } catch (error) {
-    let cause = property_get(error, "message");
+  } catch (caught) {
+    let cause = property_get(caught, "message");
+    let f_name = fn_name("file_imports_repair");
+    let f_name2 = fn_name("qa_gates");
+    let combined2 = text_combine_multiple([
+      " - repair it with ",
+      f_name,
+      " on js/",
+      f_name2,
+      ".mjs, then run the gate again",
+    ]);
     let combined = text_combine_multiple([
       "the gate list itself could not be built, so no gate ran: ",
       cause,
-      text_combine_multiple([
-        " - repair it with ",
-        fn_name("file_imports_repair"),
-        " on js/",
-        fn_name("qa_gates"),
-        ".mjs, then run the gate again",
-      ]),
+      combined2,
     ]);
-    throw new Error(combined);
+    error(combined);
   }
 }
