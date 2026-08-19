@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
