@@ -1,7 +1,7 @@
+import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
 import { app_shared_bible_offline_download_progress } from "./app_shared_bible_offline_download_progress.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_offline_folder_delete } from "./ebible_offline_folder_delete.mjs";
 import { ebible_offline_folder_downloaded_is } from "./ebible_offline_folder_downloaded_is.mjs";
@@ -9,7 +9,6 @@ import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
