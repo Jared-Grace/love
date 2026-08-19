@@ -8,7 +8,7 @@ import { text_index_of_try } from "./text_index_of_try.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
 import { text_take } from "./text_take.mjs";
-export function usfm_spans_removed(text, marker) {
+export function usfm_spans_removed(text, note_mark) {
   arguments_assert(arguments, 2);
   ("$plain text");
   ("$plain marker");
@@ -16,8 +16,8 @@ export function usfm_spans_removed(text, marker) {
   ("A note in usfm is written between a mark and the same mark with a star after it - a footnote between f and f star, a cross reference between x and x star - and everything in between belongs to the note rather than to the verse. So the whole run goes, not the marks alone: keeping the marks' contents would put the footnote's own words into the middle of the sentence they are a note on.");
   ("The opening mark is looked for with a space after it, because the marks are not a set of separate words. Taking f alone would also match the mark that opens a picture, fig, and the picture's caption would then be cut away as though it were a footnote.");
   ("A note left open by a page that never closed it stops the taking rather than swallowing the rest of the book. Half a verse with a stray mark in it is a thing a reader can see is wrong; a chapter that quietly ends early is not.");
-  let opener = text_combine_multiple(["\\", marker, " "]);
-  let closer = text_combine_multiple(["\\", marker, "*"]);
+  let opener = text_combine_multiple(["\\", note_mark, " "]);
+  let closer = text_combine_multiple(["\\", note_mark, "*"]);
   let closer_size = text_size(closer);
   let kept = [];
   let rest = text;
