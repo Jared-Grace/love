@@ -1,8 +1,8 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_gather } from "./binisaya_words_gather.mjs";
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_gather() {
   "Look up on binisaya.com every root a Cebuano explanation named that the dictionary disagreed with, so that whether the dictionary knows the word can be asked rather than guessed at.";
@@ -20,8 +20,7 @@ export async function app_ceb_bible_gloss_roots_claimed_gather() {
     "all",
     selected_total,
   );
-  let classes = property_get(gathered, "classes");
-  let claimed = list_map_property(classes, "claimed");
+  let claimed = property_list_map_property(gathered, "classes", "claimed");
   let r = await binisaya_words_gather(claimed);
   return r;
 }
