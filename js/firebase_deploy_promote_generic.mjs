@@ -1,10 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gate_run } from "./qa_gate_run.mjs";
-import { apps_frozen_names } from "./apps_frozen_names.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
-import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
-import { firebase_deploy_bypass_unchanged } from "./firebase_deploy_bypass_unchanged.mjs";
+import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
 import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { lock_error } from "./lock_error.mjs";
@@ -17,13 +13,7 @@ export async function firebase_deploy_promote_generic(promote) {
   async function lambda() {
     await qa_gate_run();
     let promoted = await promote();
-    let app_names = apps_frozen_names();
-    await list_map_unordered_async(
-      app_names,
-      firebase_prod_app_unchanged_assert,
-    );
-    let confirm = firebase_deploy_bypass_unchaged_assert_confirm();
-    let published = await firebase_deploy_bypass_unchanged(confirm);
+    let published = await firebase_apps_frozen_unchanged_assert_deploy();
     let done = {
       promoted,
       published,

@@ -1,6 +1,7 @@
 import { js_statements_grouping_worthless_cases_gate_run } from "./js_statements_grouping_worthless_cases_gate_run.mjs";
 import { app_shared_gloss_bible_derivatives_gate_run } from "./app_shared_gloss_bible_derivatives_gate_run.mjs";
 import { bless_marks_climbed_cases_gate_run } from "./bless_marks_climbed_cases_gate_run.mjs";
+import { bless_block_materials_gate_run } from "./bless_block_materials_gate_run.mjs";
 import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs";
 import { usfm_chapters_verses_cases_gate_run } from "./usfm_chapters_verses_cases_gate_run.mjs";
 import { permission_rule_path_allowed_gate_run } from "./permission_rule_path_allowed_gate_run.mjs";
@@ -576,6 +577,7 @@ export function qa_gates() {
     g_tiles_window_axis_cases_gate_run,
     app_g_player_walk_cases_gate_run,
     bless_marks_climbed_cases_gate_run,
+    bless_block_materials_gate_run,
     g_npc_path_clear_facing_best_cases_gate_run,
     g_npc_path_clear_places_cases_gate_run,
     app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run,
