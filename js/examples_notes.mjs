@@ -141,6 +141,10 @@ export function examples_notes() {
       "add a name to a register of functions — the twin that writes a word looks identical afterwards and runs nothing",
     example_expand_call_inline:
       "put a called function's body where the call was — the only verb that reads a second function to do its work",
+    example_second_name_collapse:
+      "take out a line that only gives a value a second name — the undoing of the verb above, and the one place a numbered word loses to a chosen one",
+    example_record_read_collapse:
+      "take out a record packed and unpacked in the one place — the other half of what a fold leaves behind, and the half that has to prove no mention wanted the record itself",
     example_call_callee_set:
       "point one call at a different function — the commonest hand edit a verb could have made, chosen by reading the history rather than guessing",
     example_array_text_remove:
