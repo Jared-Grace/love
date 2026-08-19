@@ -1,9 +1,9 @@
+import { property_get } from "./property_get.mjs";
+import { qa_gate_said_listed_unparsed } from "./qa_gate_said_listed_unparsed.mjs";
 import { qa_gate_said_listed_unique } from "./qa_gate_said_listed_unique.mjs";
-import { catch_null } from "./catch_null.mjs";
 import { json_from } from "./json_from.mjs";
 import { object_is } from "./object_is.mjs";
 import { list_is } from "./list_is.mjs";
-import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 export function qa_gate_said_listed(said) {
@@ -19,8 +19,9 @@ export function qa_gate_said_listed(said) {
     let result = json_from(said);
     return result;
   }
-  let parsed = catch_null(said_parsed);
-  let unparsed = null_is(parsed);
+  let r4 = qa_gate_said_listed_unparsed(said_parsed);
+  let unparsed = property_get(r4, "unparsed");
+  let parsed = property_get(r4, "parsed");
   if (unparsed) {
     let r = [];
     return r;
