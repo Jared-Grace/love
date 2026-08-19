@@ -1,8 +1,7 @@
+import { js_types_function_includes } from "./js_types_function_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type } from "./js_node_type.mjs";
-import { js_types_function_node } from "./js_types_function_node.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 export function js_node_function_is(node) {
   arguments_assert(arguments, 1);
@@ -14,7 +13,6 @@ export function js_node_function_is(node) {
     return false;
   }
   let type = js_node_type(node);
-  let types = js_types_function_node();
-  let is = list_includes(types, type);
+  let is = js_types_function_includes(type);
   return is;
 }
