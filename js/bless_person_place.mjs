@@ -1,5 +1,5 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 export function bless_person_place(person, rung) {
   arguments_assert(arguments, 2);
   ("Which place a prayer at this rung would cover, given who it is being prayed over.");
@@ -13,7 +13,6 @@ export function bless_person_place(person, rung) {
   ("It is deliberately not the id their picture is filed under. That id is the tile they");
   ("were first set down on, and a person walks; what belongs in a record of who has been");
   ("prayed for is the one number about them that never moves.");
-  let places = property_get(person, "places");
-  let place = property_get(places, rung);
+  let place = property_path_get_2(person, "places", rung);
   return place;
 }
