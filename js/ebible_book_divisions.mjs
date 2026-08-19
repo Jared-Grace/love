@@ -1,15 +1,16 @@
+import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
 import { ebible_testament_new_name } from "./ebible_testament_new_name.mjs";
 export function ebible_book_divisions() {
   "the 66-book canon grouped into its traditional genre sections, each a contiguous run of the canonical order and tagged with its testament, so the book picker can nest section cards under an Old or New Testament card while the section names live in this one place";
   let divisions = [
     {
       name: "Law",
-      testament: "Old Testament",
+      testament: ebible_testament_old_name(),
       book_codes: ["GEN", "EXO", "LEV", "NUM", "DEU"],
     },
     {
       name: "History",
-      testament: "Old Testament",
+      testament: ebible_testament_old_name(),
       book_codes: [
         "JOS",
         "JDG",
@@ -27,12 +28,12 @@ export function ebible_book_divisions() {
     },
     {
       name: "Poetry",
-      testament: "Old Testament",
+      testament: ebible_testament_old_name(),
       book_codes: ["JOB", "PSA", "PRO", "ECC", "SNG"],
     },
     {
       name: "Prophets",
-      testament: "Old Testament",
+      testament: ebible_testament_old_name(),
       book_codes: [
         "ISA",
         "JER",
