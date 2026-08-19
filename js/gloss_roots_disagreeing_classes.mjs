@@ -1,6 +1,6 @@
+import { gloss_roots_disagreeing_classes_shown } from "./gloss_roots_disagreeing_classes_shown.mjs";
 import { gloss_roots_disagreeing_classes_claimed_total } from "./gloss_roots_disagreeing_classes_claimed_total.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_take } from "./list_take.mjs";
 export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   "Findings that an explanation named the wrong root, gathered by which root it named instead: how many findings stand at each distance from the dictionary, and the commonest wrong roots with the words they were claimed for.";
   "A count of findings does not say how much is wrong, because one word repeated is one fault and reads as hundreds. kahangtoran alone accounts for ninety-nine of them, every one explained from hangtud where the dictionary writes hangtod - a single disagreement about how to spell a vowel, met once per verse. Gathering the findings by the pair of words that disagree turns the count of sightings into a count of faults, which is the number a reader is actually asking for.";
@@ -14,14 +14,12 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   let claimed_total = property_get(r2, "claimed_total");
   let total = property_get(r2, "total");
   let apart_by_edits = property_get(r2, "apart_by_edits");
-  let classes_total = property_get(r2, "classes_total");
-  let silent_total = property_get(r2, "silent_total");
-  let r4 = property_get(r2, "r4");
-  let by_edits = property_get(r4, "by_edits");
-  let by_relation = property_get(r4, "by_relation");
-  let classes = property_get(r4, "classes");
-  let count = Number(sample_size);
-  let shown = list_take(classes, count);
+  let r3 = gloss_roots_disagreeing_classes_shown(r2, sample_size);
+  let shown = property_get(r3, "shown");
+  let by_relation = property_get(r3, "by_relation");
+  let by_edits = property_get(r3, "by_edits");
+  let silent_total = property_get(r3, "silent_total");
+  let classes_total = property_get(r3, "classes_total");
   let r = {
     total,
     claimed_total,
