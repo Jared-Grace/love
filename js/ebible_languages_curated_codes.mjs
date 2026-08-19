@@ -1,11 +1,10 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
 import { ebible_languages_curated } from "./ebible_languages_curated.mjs";
 import { ebible_versions_copyrights } from "./ebible_versions_copyrights.mjs";
 import { language_code_key } from "./language_code_key.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { list_map } from "./list_map.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function ebible_languages_curated_codes() {
@@ -30,7 +29,6 @@ export async function ebible_languages_curated_codes() {
     let language_code = property_get(found, code_key);
     return language_code;
   }
-  let codes = list_map(curated, code_or_null);
-  let covered = list_filter_null_not_is(codes);
+  let covered = list_map_filter_null_not_is(curated, code_or_null);
   return covered;
 }
