@@ -8,7 +8,7 @@ export async function ebible_languages_curated_codes_gate_run() {
   let original = bible_interlinear_verses_upload_folder();
   function unplaced_or_null(language) {
     let bible_folder = ebible_language_bible_folder(language);
-    let interlinear = text_equals(bible_folder, original);
+    let interlinear = equal(bible_folder, original);
     if (interlinear) {
       return null;
     }
@@ -16,7 +16,7 @@ export async function ebible_languages_curated_codes_gate_run() {
       copyrights,
       bible_folder,
     );
-    let placed = null_is_not(language_code);
+    let placed = null_not_is(language_code);
     if (placed) {
       return null;
     }
