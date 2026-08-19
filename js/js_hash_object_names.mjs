@@ -2,7 +2,6 @@ import { js_hash_object_names_pair } from "./js_hash_object_names_pair.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
-
 export function js_hash_object_names(ast) {
   "The names this file gives to the object a page's address is read into, so a reading can tell a word written into somebody's link apart from a word written into any other object.";
   "Asked of the code rather than of a naming habit. Every one of these is called hash today, and a reading that trusted the word would go on agreeing with itself right up until somebody chose a different one - which is the moment it would matter.";
