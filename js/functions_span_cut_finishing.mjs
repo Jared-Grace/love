@@ -1,3 +1,4 @@
+import { functions_span_cut_report } from "./functions_span_cut_report.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_span_cut_one } from "./function_span_cut_one.mjs";
@@ -38,12 +39,6 @@ export async function functions_span_cut_finishing() {
     }
     list_add(skipped, outcome);
   }
-  let left = await functions_span_candidates();
-  let remaining = list_size(left);
-  let r = {
-    cut,
-    skipped,
-    remaining,
-  };
+  let r = await functions_span_cut_report(cut, skipped);
   return r;
 }
