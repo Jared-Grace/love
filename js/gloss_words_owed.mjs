@@ -1,3 +1,4 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_words_back_referenced } from "./gloss_words_back_referenced.mjs";
 import { list_add } from "./list_add.mjs";
@@ -5,7 +6,6 @@ import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function gloss_words_owed(fn) {
   "Every word in one gloss store still owed an explanation, commonest first, each one carrying what the dictionary was able to say about it.";
   "This is the worklist an explanation gets written from. The two halves are useless apart: the store says which words are owed something and nothing about what they are, the dictionary says what a word is built from and nothing about whether anybody is waiting on it.";
