@@ -8,7 +8,6 @@ import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_take } from "./list_take.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 export function js_delegate_only_is(declaration) {
   arguments_assert(arguments, 1);
