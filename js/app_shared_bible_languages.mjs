@@ -1,6 +1,6 @@
 import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
+import { app_shared_bible_languages_offered } from "./app_shared_bible_languages_offered.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
@@ -12,7 +12,8 @@ import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
 export function app_shared_bible_languages(context) {
-  let languages = ebible_languages();
+  ("the choices are the ones this app can serve a reader in, which for most of them is every translation there is");
+  let languages = app_shared_bible_languages_offered(context);
   let languages_chosen = app_shared_bible_languages_chosen_get();
   function on_change() {
     "write the chosen languages back to the url hash (key l) so the choice is shareable, survives a reload, and matches the chapter reader";
