@@ -1,3 +1,15 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
+import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { text_to } from "./text_to.mjs";
+import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_above_generic(
   root,
   tree,
