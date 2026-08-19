@@ -176,7 +176,6 @@ export function ebible_languages_curated() {
       bible_folder: "zlmKSZI",
       language_code: "zlm",
     },
-    {
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
