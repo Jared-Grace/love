@@ -13,10 +13,12 @@ export function app_code_code_lines_writes_out(parent, lines, value) {
   ("A program of one line is handed over as a list of one. The pair is the same pair whether the program is one line or four, and a caller choosing between two functions by counting its own lines would be choosing between them by something that is not the difference.");
   ("The code is painted by the writer that dims a note, which for a program holding no note draws exactly what the plain writer drew. It is the one used here rather than the plain one so that a note is dimmed wherever a program is shown, instead of only on the screen that happens to teach notes - a note drawn as ordinary code in a later lesson would be telling a learner the thing was different only that once.");
   let code = list_join_newline(lines);
-  let output_label = app_code_label_of_code(app_code_value_logged_output());
+  let value2 = app_code_value_logged_output();
+  let output_label = app_code_label_of_code(value2);
+  let code_label = app_code_label_code_question();
   let container = app_code_code_output(
     parent,
-    app_code_label_code_question(),
+    code_label,
     code,
     app_code_code_dark_lines_comments,
     output_label,
