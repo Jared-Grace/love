@@ -22,6 +22,6 @@ export async function app_ceb_bible_gloss_roots_disagreeing_classes(
   let known = await binisaya_words_known();
   let classes = property_get(gathered, "classes");
   let marked = gloss_classes_claimed_known_mark(classes, known);
-  let r = object_merge_replace(gathered, { classes: marked });
-  return r;
+  object_merge_replace(gathered, { classes: marked });
+  return gathered;
 }
