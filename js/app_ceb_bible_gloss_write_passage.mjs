@@ -1,13 +1,10 @@
+import { app_ceb_bible_gloss_chapter_known_capitalised } from "./app_ceb_bible_gloss_chapter_known_capitalised.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_passage_verses_read } from "./app_ceb_bible_gloss_passage_verses_read.mjs";
-import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { gloss_words_capitalised_always } from "./gloss_words_capitalised_always.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
-import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
-import { list_first } from "./list_first.mjs";
 export async function app_ceb_bible_gloss_write_passage(
   chapter_code,
   verse_key,
@@ -24,14 +21,10 @@ export async function app_ceb_bible_gloss_write_passage(
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again. That matters here more than on the Greek side, because every Cebuano chapter now in the store was generated rather than authored, so re-authoring is not the exception but the whole of the work.";
   let passages = await app_ceb_bible_gloss_passages(chapter_code);
   let passage = gloss_passages_verses_key_find(passages, verse_key);
-  let known = await binisaya_words_known();
-  let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
-  let bible_folder = list_first(bible_folders);
-  let book_code = ebible_chapter_code_to_book(chapter_code);
-  let capitalised = await gloss_words_capitalised_always(
-    bible_folder,
-    book_code,
-  );
+  let sources =
+    await app_ceb_bible_gloss_chapter_known_capitalised(chapter_code);
+  let known = property_get(sources, "known");
+  let capitalised = property_get(sources, "capitalised");
   let verses = app_ceb_bible_gloss_passage_verses_read(
     passage,
     known,
