@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_comparison_symbols } from "./app_code_comparison_symbols.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { app_code_comparison_operands_wanted } from "./app_code_comparison_operands_wanted.mjs";
 export function app_code_lesson_expression_choose_order_and_side(want_true) {
   arguments_assert(arguments, 1);
   ("one side of an && line: a comparison drawn at random, with two numbers chosen so that it comes out true, or comes out false, whichever was asked for");

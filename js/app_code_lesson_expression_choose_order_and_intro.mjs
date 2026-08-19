@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_and_intro(parent) {
   arguments_assert(arguments, 1);
   ("the one sentence that says what is different about this lesson, in a card of its own");
