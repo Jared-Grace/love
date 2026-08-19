@@ -21,7 +21,7 @@ export function binisaya_words_roots_prompt(words, known) {
   let lines = [];
   function word_read(word) {
     let key = text_lower_to(word);
-    let held = property_get_or_null(known, key);
+    let held = binisaya_words_known_get(known, word);
     if (null_is(held)) {
       return;
     }
