@@ -25,13 +25,14 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
   let held = js_code_let_statement(name, start);
   let code6 = js_code_assign_statement(name, more);
   html_div_code_lines(box_one, [held, code6]);
-  ("the answer is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the sum is code.");
-  let comes_to = list_join_empty([
+  ("the answer is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so an answer set in plain writing would be the one number here dressed as prose.");
+  html_div_cycle_code(box_one, [
+    "",
+    more,
     " comes to ",
     once,
     ", so this is the same line",
   ]);
-  html_div_cycle_code(box_one, ["", more, comes_to]);
   let given_once = js_code_assign_statement(name, once);
   let logged = js_code_console_log_statement(name);
   app_code_code_lines_writes_out(box_one, [given_once, logged], once);
