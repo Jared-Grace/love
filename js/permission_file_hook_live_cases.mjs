@@ -1,7 +1,6 @@
-import { property_get } from "./property_get.mjs";
+import { permission_file_hook_live_cases_granted } from "./permission_file_hook_live_cases_granted.mjs";
 import { permission_file_hook_live_cases_reading } from "./permission_file_hook_live_cases_reading.mjs";
 import { permission_settings_allow_every } from "./permission_settings_allow_every.mjs";
-import { text_combine } from "./text_combine.mjs";
 export async function permission_file_hook_live_cases() {
   "What the hook that grants the file tools from the settings rules must decide when it is actually started: one path a rule really does grant, which it has to allow, and one path no rule mentions, which it has to leave alone.";
   "The granted path is worked out from the rules in force rather than written down here, because which folders are granted differs from one machine to the next, and a path spelled in this file would be a second copy of a rule - green while the rule it copies is gone, red on a machine that never had it. So the corpus asks the settings what is granted and then asks the hook about that.";
@@ -10,19 +9,7 @@ export async function permission_file_hook_live_cases() {
   "A reading grant is preferred over a writing one for the same reason: the commands-only switch can refuse a write inside this repo, and a corpus that went red when somebody turned that switch on would be reporting the switch rather than the hook.";
   let rules = await permission_settings_allow_every();
   let r = await permission_file_hook_live_cases_reading(rules);
-  let reading = property_get(r, "reading");
-  let candidates = property_get(r, "candidates");
-  let preferred = reading.length ? reading : candidates;
-  let cases = [];
-  for (let granted of preferred.slice(0, 1)) {
-    let leaf = "/permission_file_hook_live_probe.txt";
-    cases.push({
-      label: "a path a rule in force really grants",
-      tool_name: granted.tool,
-      file_path: text_combine(granted.folder, leaf),
-      decision: "allow",
-    });
-  }
+  let cases = permission_file_hook_live_cases_granted(r);
   cases.push({
     label: "a path no rule mentions",
     tool_name: "Edit",

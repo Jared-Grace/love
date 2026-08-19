@@ -22,14 +22,17 @@ export async function app_g_bless_walk(
   ("water, the way a path becomes single steps, the facing a step implies, the slide, and");
   ("keeping the player in the middle of the screen. Walking is the same act in both games,");
   ("so there is one implementation of it and this is the caller.");
-  ("A tap on ground there is no way to - across water, or onto somebody standing still -");
-  ("simply does nothing. Refusing out loud would be scolding the player for a guess the map");
-  ("invited, and the map already tells the truth: they can see the water.");
+  ("A tap on ground there is no way to - across water, or behind a wall - simply does");
+  ("nothing. Refusing out loud would be scolding the player for a guess the map invited, and");
+  ("the map already tells the truth: they can see the water.");
+  ("A crowd is not one of those. The pavement here holds a whole block's worth of people, so");
+  ("the way round somebody is often taken by somebody else, and treating that as no way at");
+  ("all would leave the player standing still on a street they can plainly walk down.");
   ("The caller is told after every step rather than at the end, because what the player can");
   ("see changes with each one - the cone travels with them, and a readout that only caught");
   ("up on arrival would spend the whole walk lying.");
   let player = property_get(world, "player");
-  let path = g_coordinates_path_shortest(world, player, target);
+  let path = g_coordinates_path_shortest_crowd(world, player, target);
   if (not(path)) {
     return;
   }
