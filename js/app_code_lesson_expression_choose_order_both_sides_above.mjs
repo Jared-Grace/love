@@ -1,6 +1,6 @@
+import { app_code_lesson_expression_choose_order_both_sides_above_arithmetic } from "./app_code_lesson_expression_choose_order_both_sides_above_arithmetic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression } from "./app_code_lesson_expression_choose_order_both_sides_expression.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_above_generic } from "./app_code_lesson_expression_choose_order_both_sides_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_intro } from "./app_code_lesson_expression_choose_order_both_sides_intro.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_above(root) {
   arguments_assert(arguments, 1);
@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above(root) {
   let want_true = true;
   let tree =
     app_code_lesson_expression_choose_order_both_sides_expression(want_true);
-  app_code_lesson_expression_choose_order_both_sides_above_generic(
+  app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
     root,
     tree,
     app_code_lesson_expression_choose_order_both_sides_intro,
