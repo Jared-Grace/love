@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { ebible_reference_parts } from "./ebible_reference_parts.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
@@ -20,8 +21,7 @@ export async function app_shared_bible_reference_chapter_verse_or_null(
     return null;
   }
   let book_name = list_first(book_names);
-  let chapter_verses_list = property_get(v, "chapter_verses_list");
-  let chapter_verses = list_first(chapter_verses_list);
+  let chapter_verses = property_list_first(v, "chapter_verses_list");
   let v2 = ebible_reference_parts(books_en, book_name, chapter_verses);
   let chapter_code = property_get(v2, "chapter_code");
   let verse_number = property_get(v2, "verse_start");
