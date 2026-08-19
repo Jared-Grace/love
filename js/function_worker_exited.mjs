@@ -4,7 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export function worker_exited(worker, code) {
+export function function_worker_exited(worker, code) {
   let waiting = property_get(worker, "waiting");
   let ids = object_property_names(waiting);
   let message = text_combine_multiple([
