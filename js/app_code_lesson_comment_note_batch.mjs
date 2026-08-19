@@ -1,11 +1,10 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_comment_note_batch() {
   arguments_assert(arguments, 0);
@@ -16,10 +15,26 @@ export function app_code_lesson_comment_note_batch() {
   ("Four different pairs, so the four answers are four different numbers and no question ever offers the same answer twice.");
   let plus = js_operator_plus_symbol();
   let cases = [
-    { words: "add the two numbers", first: 3, last: 4 },
-    { words: "write out the answer", first: 2, last: 6 },
-    { words: "the computer skips this line", first: 5, last: 6 },
-    { words: "notes are for people to read", first: 4, last: 9 },
+    {
+      words: "add the two numbers",
+      first: 3,
+      last: 4,
+    },
+    {
+      words: "write out the answer",
+      first: 2,
+      last: 6,
+    },
+    {
+      words: "the computer skips this line",
+      first: 5,
+      last: 6,
+    },
+    {
+      words: "notes are for people to read",
+      first: 4,
+      last: 9,
+    },
   ];
   function program_of(one) {
     "the two lines that write a note, and then write out what two numbers add up to";
@@ -33,7 +48,6 @@ export function app_code_lesson_comment_note_batch() {
     let code = list_join_newline(lines);
     return code;
   }
-  let ordered = list_shuffle_take(cases, 4);
-  let codes = list_map(ordered, program_of);
+  let codes = list_shuffle_take_map(cases, 4, program_of);
   return codes;
 }
