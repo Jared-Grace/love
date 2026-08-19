@@ -10,9 +10,11 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
 export function app_g_bless_glows(glows, view) {
   arguments_assert(arguments, 2);
-  ("Lights everybody a prayer just covered with the gold breathing glow, and nobody else.");
-  ("This is the proof the count was honest. A player told they prayed for eight people can");
-  ("see eight lit up, and can check that each one is somebody they were actually looking at.");
+  ("Lights everybody who has been prayed for with the gold breathing glow, and nobody else.");
+  ("The mark does not fade, and that is what makes it the map. A prayer that reached a whole");
+  ("block lights every person on it, so the player walks to the edge of their own work and");
+  ("sees the crowd go dark - which is where to pray next, told without a list of chores ever");
+  ("being put in front of them.");
   ("Drawn behind the person rather than on them, so it reads as light around somebody rather");
   ("than as a change to who they are - and their face is never covered by it.");
   ("Gold to white is God's presence, which is why it is spent here and on nothing else on");

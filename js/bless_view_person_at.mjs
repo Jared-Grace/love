@@ -19,7 +19,9 @@ export function bless_view_person_at(view, x, y) {
   function person_here(person) {
     let px = property_get(person, "x");
     let py = property_get(person, "y");
-    let here = and(equal(px, x), equal(py, y));
+    let left = equal(px, x);
+    let right = equal(py, y);
+    let here = and(left, right);
     return here;
   }
   let standing = list_filter(people, person_here);
