@@ -1,8 +1,7 @@
+import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
 import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
 import { ebible_version_readaloud_download_url } from "./ebible_version_readaloud_download_url.mjs";
 import { url_available_is } from "./url_available_is.mjs";
-import { list_map_async } from "./list_map_async.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 export async function ebible_languages_readaloud_missing() {
   "Every translation this app ships that eBible publishes no read-aloud edition for.";
   "Read aloud is how a chapter is cut into verses, so a translation without one can offer a reader nothing. This says which of the shipped ones those are, before anything is fetched.";
@@ -17,7 +16,9 @@ export async function ebible_languages_readaloud_missing() {
     }
     return bible_folder;
   }
-  let asked = await list_map_async(bible_folders, missing_or_null);
-  let missing = list_filter_null_not_is(asked);
+  let missing = await list_map_async_filter_null_not_is(
+    bible_folders,
+    missing_or_null,
+  );
   return missing;
 }
