@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 export function image_luma_pixels_mean(pixels) {
   "the average brightness of a run of red green blue alpha bytes, from 0 for black to 255 for white, weighting the three colours the way an eye weighs them rather than equally";
   let total = 0;
