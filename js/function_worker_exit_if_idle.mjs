@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { not } from "./not.mjs";
-export function worker_exit_if_idle(worker) {
+export function function_worker_exit_if_idle(worker) {
   let waiting = property_get(worker, "waiting");
   let idle = equal(object_property_names(waiting).length, 0);
   let child = property_get(worker, "child");
