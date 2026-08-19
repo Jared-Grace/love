@@ -1,4 +1,4 @@
-import { equal_not } from "./equal_not.mjs";
+import { property_equals_not } from "./property_equals_not.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -25,8 +25,7 @@ export async function app_ceb_bible_gloss_affix_letters_apart() {
     function finding_read(finding) {
       let word = property_get(finding, "word");
       function claim_read(claim) {
-        let relation = property_get(claim, "relation");
-        let near = equal_not(relation, "apart");
+        let near = property_equals_not(claim, "relation", "apart");
         if (near) {
           return;
         }
