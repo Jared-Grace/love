@@ -1,4 +1,4 @@
-import { equal_not } from "./equal_not.mjs";
+import { property_equals_not } from "./property_equals_not.mjs";
 import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
@@ -25,8 +25,7 @@ export async function js_function_handback_refusals(ast, declaration) {
   ("One reason is asked here and nowhere else. What comes back has to carry the writes, so the line left behind can only put them where they go once it has been handed them - and a body that hands an answer back part way through never reaches the handing back at all. The writes would then be made on a copy and lost, silently, which is the whole failure this move exists to avoid. A body like that can still be moved; somebody has to decide what its answer and its writes should look like arriving together.");
   let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
   function written_closed_not_is(refusal) {
-    let reason = property_get(refusal, "reason");
-    let other_is = equal_not(reason, "written_closed");
+    let other_is = property_equals_not(refusal, "reason", "written_closed");
     return other_is;
   }
   let kept = list_filter(refusals, written_closed_not_is);
