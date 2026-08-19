@@ -1,9 +1,8 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { ebible_licence_marks } from "./ebible_licence_marks.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function ebible_text_licences(copyright_page) {
   "Every set of terms a licence page names, strictest first, rather than only the one that binds.";
@@ -20,8 +19,7 @@ export function ebible_text_licences(copyright_page) {
     }
     return null;
   }
-  let named = list_map(marks, marked_licence_or_null);
-  let found = list_filter_null_not_is(named);
+  let found = list_map_filter_null_not_is(marks, marked_licence_or_null);
   let licences = list_unique(found);
   return licences;
 }
