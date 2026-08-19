@@ -1,3 +1,4 @@
+import { js_delegate_only_is } from "./js_delegate_only_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_read } from "./function_read.mjs";
 import { function_functionize } from "./function_functionize.mjs";
@@ -35,7 +36,13 @@ export async function function_span_cut_or_undo(
   let repack_holder_is = js_repack_only_is(declaration_holder);
   ("A holder handing back one thing rather than a record escapes that reading entirely, because it wants a record written out and there is none. So the same question is asked a second way, and the two together cover both kinds of product a holder can have.");
   let relabel_holder_is = js_relabel_only_is(declaration_holder);
+  ("A holder handing back nothing at all escapes both of those, because each wants something handed back and this one keeps none of what it makes. So the question is asked a third way, and the three together cover a holder whose product is a record, a holder whose product is one answer, and a holder with no product of its own.");
+  let delegate_holder_is = js_delegate_only_is(declaration_holder);
   let why = null;
+  if (delegate_holder_is) {
+    why =
+      "the run was the whole of what its holder still did, so what stands there now is a handful of names being set and the call they are all for - the piece's own arguments, made a line early, and nothing kept. The lines moved and nothing got shorter. Would you like to cut a smaller run, and leave the holder something of its own to do?";
+  }
   if (relabel_holder_is) {
     why =
       "the run was the whole of what its holder still did, so what stands there now is the call to the piece and the one thing it hands back - a second name for that piece rather than work of its own. The lines moved and nothing got shorter. Would you like to cut a smaller run, and leave the holder something of its own to do?";
