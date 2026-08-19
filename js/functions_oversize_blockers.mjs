@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { function_lift_candidates } from "./function_lift_candidates.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_size } from "./list_size.mjs";
@@ -9,7 +10,6 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_span_cut_skip_or_null } from "./function_span_cut_skip_or_null.mjs";
 import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 export async function functions_oversize_blockers() {
   arguments_assert(arguments, 0);
@@ -47,8 +47,7 @@ export async function functions_oversize_blockers() {
         cuttable = add(cuttable, 1);
         continue;
       }
-      let about = property_get(skip, "about");
-      let start_is = equal(about, "start");
+      let start_is = property_equals(skip, "about", "start");
       if (start_is) {
         starting = add(starting, 1);
         continue;
