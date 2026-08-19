@@ -14,12 +14,10 @@ export function app_shared_bible_licence_card(parent, credit) {
   let name = property_get(credit, "name");
   html_div_text_bold(card, name);
   let description = property_get(credit, "description");
-  let said = html_div_text(card, description);
-  app_shared_text_deemphasized(said);
+  app_shared_text_quiet(card, description);
   let lines = property_get(credit, "credit");
   function lambda(line) {
-    let shown = html_div_text(card, line);
-    app_shared_text_deemphasized(shown);
+    app_shared_text_quiet(card, line);
   }
   each(lines, lambda);
   let licence = property_get(credit, "licence");
