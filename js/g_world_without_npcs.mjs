@@ -1,4 +1,5 @@
 export function g_world_without_npcs(g) {
+  arguments_assert(arguments, 1);
   "The same world with nobody standing in it - the ground alone.";
   "Anything that asks a world where somebody may walk treats a person as a wall, which is";
   "right while a street holds a handful of people and wrong once it holds a crowd. A crowd";
