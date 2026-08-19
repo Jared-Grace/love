@@ -1,8 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_visit_returns } from "./js_visit_returns.mjs";
 import { list_adder } from "./list_adder.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 export function js_find_return_try(ast) {
@@ -13,8 +12,7 @@ export function js_find_return_try(ast) {
     js_visit_returns(ast, la);
   }
   let nodes = list_adder(lambda);
-  let size = list_size(nodes);
-  let one = equal(size, 1);
+  let one = list_size_equal(nodes, 1);
   if (not(one)) {
     return null;
   }
