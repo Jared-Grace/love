@@ -1,7 +1,7 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_statements_grouping_worthless_cases } from "./js_statements_grouping_worthless_cases.mjs";
 import { js_statements_grouping_worthless_is } from "./js_statements_grouping_worthless_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,8 +13,7 @@ export function js_statements_grouping_worthless_cases_gate_run() {
   arguments_assert(arguments, 0);
   let cases = js_statements_grouping_worthless_cases();
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let program = property_get(ast, "body");
     let block = list_get_property(program, 0, "body");
     let statements = property_get(block, "body");
