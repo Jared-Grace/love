@@ -1,3 +1,7 @@
+import { door43_version_or_null } from "./door43_version_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { language_code_key } from "./language_code_key.mjs";
+import { not } from "./not.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
@@ -18,12 +22,24 @@ export async function ebible_languages_add_item_info(bible_folder) {
     hint: "the bible folder should be text so its language info can be fetched — did an empty or non-text value arrive?",
     bible_folder,
   });
+  ("The other catalogue is asked first, because a bible carried from it has no page on eBible at all - fetching one would reach a page about some other translation or none, and either way the language written down would not be this bible's. Its entry already spells the language, so nothing has to be fetched for those.");
+  let carried = door43_version_or_null(bible_folder);
+  let unknown = null_is(carried);
+  if (not(unknown)) {
+    let code_key = language_code_key();
+    let language_code_carried = property_get(carried, code_key);
+    let name_carried = property_get(carried, "language_name");
+    let told = {
+      name: name_carried,
+      language_code: language_code_carried,
+    };
+    return told;
+  }
   let prefix = ebible_url_details();
   let project_url = firebase_storage_url_project_jg();
-  let r = await http_local_html_parse(
-    text_combine_multiple([ebible_url(), prefix, bible_folder]),
-    project_url,
-  );
+  let r2 = ebible_url();
+  let url = text_combine_multiple([r2, prefix, bible_folder]);
+  let r = await http_local_html_parse(url, project_url);
   let root = property_get(r, "root");
   let d = property_get(r, "d");
   let url_language_prefix = "http://www.ethnologue.com/language/";
