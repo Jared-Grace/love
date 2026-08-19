@@ -78,7 +78,7 @@ export function usfm_chapters_verses_cases() {
       why: "a cross reference goes the same way a footnote does - it is a translator writing to the reader rather than the book speaking",
     },
     {
-      usfm: "\\c 1\n\\v 1 \\w Jesus|strong=\"G2424\"\\w* wept.\n",
+      usfm: '\\c 1\n\\v 1 \\w Jesus|strong="G2424"\\w* wept.\n',
       chapters: [
         {
           chapter_number: "1",

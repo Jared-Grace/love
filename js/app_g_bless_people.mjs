@@ -14,8 +14,8 @@ import { g_genders_get } from "./g_genders_get.mjs";
 import { app_g_bless_people_count } from "./app_g_bless_people_count.mjs";
 export function app_g_bless_people(player_img, coordinates_land) {
   arguments_assert(arguments, 2);
-  ("The people standing about the world - a tile to stand on, a picture, and a way they are");
-  ("facing, and nothing else at all.");
+  ("The people standing about the world - a tile to stand on, a picture, a way they are");
+  ("facing, a speed of their own and a way they are trying to go, and nothing else at all.");
   ("The gospel game's own people carry a name, a gender, a conversation and a record of");
   ("what has been said to them, because that game is a conversation. Nobody is spoken to");
   ("here. A person you pray for needs only to be somewhere and be seen, so giving them a");
