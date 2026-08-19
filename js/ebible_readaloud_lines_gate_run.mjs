@@ -19,7 +19,7 @@ export async function ebible_readaloud_lines_gate_run() {
   ("So what this watches is no longer whether such a chapter exists but how many there are, and it is measured against what the repo already carried rather than against zero. Seventy-two chapters across thirteen bibles were already like this when it was first asked, each needing its own look, and the list only shrinks: a new one fails, and one left in the record after it has been put right fails too. A chapter in the list is a chapter of the Bible nobody can read here, so the number going up is the app quietly offering less than it did.");
   ("A bible whose pages are not on this machine is named apart in the record rather than refused, because not having the files is a fact about a machine and not a fault in a bible.");
   ("This reads only the file. The measuring opens every chapter of every bible and is a command somebody runs.");
-  ("Each disagreeing chapter is named with the bible it belongs to before they are gathered together. The record keeps them under their bible, and gathering them loses that - which left an answer telling somebody to go and look at Mark 9 without saying whose Mark 9, in a folder holding a Mark 9 for every translation there is.");
+  ("What the record has to be true of before any of it is believed is asked next door, in one call, and the chapters found disagreeing come back from it. Three questions live in there and they are worth reading together rather than one at a time, which is why they are not here.");
   let path = ebible_readaloud_lines_path();
   let recorded = await file_read_json(path);
   let bibles = property_get(recorded, "bibles");
@@ -32,10 +32,7 @@ export async function ebible_readaloud_lines_gate_run() {
       ", which rewrites the record",
     ]),
   });
-  ("Being named in the record is not the same as having been read, and until now only the first of those was checked. A bible whose reading-aloud text never reached this machine is written down with every chapter unread and nothing disagreeing, which counts here exactly like a bible read end to end and found right - so the number below said three hundred and forty-seven bibles while seventy-nine of them had not had a single chapter looked at.");
-  ("Asked only of the bibles a reader can choose. A bible sitting in storage that nobody is offered yet being unread is a job not started; an offered one being unread is somebody told a chapter is fine when nobody looked, and only the second of those is this gate's business.");
-  ("Asked before anything is measured from the record rather than after, because everything below reads that record as though it were the answer. An offered bible with no chapter read contributes nothing disagreeing, so the list of disagreements below is short by however much of it was never looked at - and comparing that short list against what the repo already carried is a comparison between an answer and a guess. What makes a reading untrustworthy has to be refused before the reading is taken, not after it has been reported.");
-  ("Measured against what the repo already carried rather than against zero, and for the same reason the disagreements below are: seventy-nine of the offered bibles were already like this when it was first asked, so refusing them outright would leave this red for a fact about which files happen to sit on one machine. The gate's own rule, written above, is that files not being here is a fact about a machine and not a fault in a bible. What must not happen is the number going up - a bible newly offered whose chapters nobody has read is a reader newly told that something was checked when it was not.");
+  ("The four things the call below needs are gathered here rather than fetched in there, because three of them are the whereabouts of a record and the name of the command that rewrites it - facts about this repo's own filing, which is what this gate is the keeper of.");
   let unchecked_names = await ebible_readaloud_lines_offered_unchecked_names();
   let unchecked_path = ebible_readaloud_lines_offered_unchecked_baseline_path();
   let unchecked_write = fn_name(

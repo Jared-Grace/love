@@ -7,9 +7,9 @@ import { list_filter_starts_with_https_prefix } from "./list_filter_starts_with_
 export async function app_calendar_url_ids() {
   let filtered = await app_calendar_preaching_ask_entries();
   let urls = list_filter_starts_with_https_prefix(filtered);
-  let p1 = "https://www.facebook.com/profile.php?id=";
+  let p = "https://www.facebook.com/profile.php?id=";
   let p2 = "https://www.facebook.com/";
-  let prefixes = [p1, p2];
+  let prefixes = [p, p2];
   urls = list_map_prefix_without_try_multiple(urls, prefixes);
   let suffixes = ["#", "?"];
   urls = list_map_suffix_without_try_multiple(urls, suffixes);

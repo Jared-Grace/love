@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -57,8 +58,10 @@ export function app_code_lesson_quiz_quiz_index(
   app_code_feedback_slot_style(feedback_slot);
   let container_correction = html_div(feedback_slot);
   let container_success_message = html_div(feedback_slot);
-  app_code_feedback_cell(container_correction);
-  app_code_feedback_cell(container_success_message);
+  each(
+    [container_correction, container_success_message],
+    app_code_feedback_cell,
+  );
   app_code_content_cap(container_success_message);
   app_shared_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
