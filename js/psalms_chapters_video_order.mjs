@@ -1,3 +1,10 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_title_passage } from "./psalms_title_passage.mjs";
 export function psalms_chapters_video_order(videos) {
@@ -7,8 +14,8 @@ export function psalms_chapters_video_order(videos) {
   arguments_assert(arguments, 1);
   let oldest_first = [];
   let at = videos.length;
-  while (at > 0) {
-    at = at - 1;
+  while (greater_than(at, 0)) {
+    at = subtract(at, 1);
     oldest_first.push(videos[at]);
   }
   let chapters = {};
@@ -16,10 +23,10 @@ export function psalms_chapters_video_order(videos) {
   for (let video of oldest_first) {
     let passage = psalms_title_passage(video.title);
     index = index + 1;
-    if (passage === null) {
+    if (equal(passage, null)) {
       continue;
     }
-    if (!chapters[passage.chapter]) {
+    if (not(chapters[passage.chapter])) {
       chapters[passage.chapter] = [];
     }
     chapters[passage.chapter].push({
@@ -30,16 +37,20 @@ export function psalms_chapters_video_order(videos) {
       uploaded: index,
     });
   }
-  for (let chapter of Object.keys(chapters)) {
-    chapters[chapter].sort(function lambda(one, other) {
-      if (one.verse_first !== other.verse_first) {
-        return one.verse_first - other.verse_first;
+  for (let chapter of object_property_names(chapters)) {
+    function lambda(one, other) {
+      if (not_equal(one.verse_first, other.verse_first)) {
+        let difference = subtract(one.verse_first, other.verse_first);
+        return difference;
       }
-      if (one.mark !== other.mark) {
-        return one.mark < other.mark ? -1 : 1;
+      if (not_equal(one.mark, other.mark)) {
+        let r = less_than(one.mark, other.mark) ? -1 : 1;
+        return r;
       }
-      return one.uploaded - other.uploaded;
-    });
+      let difference2 = subtract(one.uploaded, other.uploaded);
+      return difference2;
+    }
+    chapters[chapter].sort(lambda);
   }
   return chapters;
 }
