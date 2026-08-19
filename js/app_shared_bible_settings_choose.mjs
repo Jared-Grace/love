@@ -1,10 +1,10 @@
+import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_passage_kept_reference.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
-import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 import { app_shared_bible_offline_panel } from "./app_shared_bible_offline_panel.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
@@ -34,8 +34,7 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
     );
   }
   function on_offline() {
-    let languages_chosen = app_shared_bible_language_codes_chosen();
-    let languages = ebible_languages_from_codes(languages_chosen);
+    let languages = app_shared_bible_languages_chosen_get();
     app_shared_bible_offline_panel(content, languages, back);
   }
   function on_about() {
