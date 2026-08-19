@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 export function image_luma_band(luma) {
   "how a measured brightness reads to somebody choosing a picture to sit behind gold words: the text to show and the colour to show it in; the bands are set where they are because a picture above about 150 goes on reading as a grey slab even at low opacity, and one below about 80 leaves the words their whole contrast";
   if (equal(luma, null)) {
