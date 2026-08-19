@@ -1,3 +1,8 @@
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function youtube_browse_videos(answer) {
   "The videos youtube named anywhere inside one of its answers, each as its watch code and its title, together with the token that asks for the page after them.";
@@ -7,16 +12,19 @@ export function youtube_browse_videos(answer) {
   let videos = [];
   let continuation = null;
   let waiting = [answer];
-  while (waiting.length > 0) {
+  while (greater_than(waiting.length, 0)) {
     let node = waiting.pop();
-    let is_object = node !== null && typeof node === "object";
-    if (!is_object) {
+    let is_object = not_equal(node, null) && equal(typeof node, "object");
+    if (not(is_object)) {
       continue;
     }
     let lockup = node.lockupViewModel;
     if (lockup) {
       let title = lockup?.metadata?.lockupMetadataViewModel?.title?.content;
-      videos.push({ video_id: lockup.contentId, title: title || "" });
+      videos.push({
+        video_id: lockup.contentId,
+        title: title || "",
+      });
     }
     let shorts = node.shortsLockupViewModel;
     if (shorts) {
@@ -24,7 +32,10 @@ export function youtube_browse_videos(answer) {
       let watch = shorts?.onTap?.innertubeCommand?.watchEndpoint?.videoId;
       let spoken = shorts?.accessibilityText || "";
       let title = spoken.replace(/, [\d,.KM]+ views? - play Short$/, "");
-      videos.push({ video_id: reel || watch || "", title: title });
+      videos.push({
+        video_id: reel || watch || "",
+        title: title,
+      });
     }
     let next = node.continuationItemViewModel;
     if (next) {
@@ -43,10 +54,14 @@ export function youtube_browse_videos(answer) {
     }
     let values = Object.values(node);
     let at = values.length;
-    while (at > 0) {
-      at = at - 1;
+    while (greater_than(at, 0)) {
+      at = subtract(at, 1);
       waiting.push(values[at]);
     }
   }
-  return { videos: videos, continuation: continuation };
+  let r = {
+    videos: videos,
+    continuation: continuation,
+  };
+  return r;
 }
