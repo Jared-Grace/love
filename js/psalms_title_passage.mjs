@@ -2,8 +2,9 @@ import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function psalms_title_passage(title) {
-  "The chapter and the first and last verse a sung Psalm names itself after, or nothing when the name of the video does not name a passage at all.";
+  "The chapter and the first and last verse a sung Psalm names itself after, together with the letter it marks the part of that first verse by, or nothing when the name of the video does not name a passage at all.";
   "Every number after the chapter is read and only the first and the last of them are kept, so a name that marks half a verse with a letter, or that carries a stray mark between the verse and the one it runs to, still says the same thing it says to a person reading it. The alternative was a shape for each way a name has been written, and each new way of writing one would then be read as no passage at all rather than as the passage it plainly is.";
+  "The letter is kept even though it names no verse of its own, because two songs can open on the same verse and only the letter says which half comes first. Where there is none it comes back as nothing, which sorts before every letter - and that is right, since a whole verse is sung before anyone splits one.";
   arguments_assert(arguments, 1);
   let found = title.match(/^Psalms? (\d+):(.+)$/);
   if (not(found)) {
@@ -15,12 +16,18 @@ export function psalms_title_passage(title) {
   if (not(numbers)) {
     return null;
   }
+  let marked = rest.match(/^\d+([a-z])/);
+  let mark = "";
+  if (marked) {
+    mark = marked[1];
+  }
   let verse_first = Number(numbers[0]);
   let verse_last = Number(numbers[subtract(numbers.length, 1)]);
   let passage = {
     chapter: chapter,
     verse_first: verse_first,
     verse_last: verse_last,
+    mark: mark,
   };
   return passage;
 }
