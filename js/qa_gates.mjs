@@ -1,5 +1,6 @@
 import { permission_rule_path_allowed_gate_run } from "./permission_rule_path_allowed_gate_run.mjs";
 import { permission_file_hook_registered_gate_run } from "./permission_file_hook_registered_gate_run.mjs";
+import { permission_file_hook_live_gate_run } from "./permission_file_hook_live_gate_run.mjs";
 import { permission_grant_param_scripture_code_gate_run } from "./permission_grant_param_scripture_code_gate_run.mjs";
 import { bible_glyph_artwork_gate_run } from "./bible_glyph_artwork_gate_run.mjs";
 import { js_repack_only_is_cases_gate_run } from "./js_repack_only_is_cases_gate_run.mjs";
@@ -575,6 +576,7 @@ export function qa_gates() {
     permission_grant_param_scripture_code_gate_run,
     permission_rule_path_allowed_gate_run,
     permission_file_hook_registered_gate_run,
+    permission_file_hook_live_gate_run,
   ];
   return gates;
 }
