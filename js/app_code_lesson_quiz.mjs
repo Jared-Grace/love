@@ -45,68 +45,23 @@ export function app_code_lesson_quiz(
   let on_question3 = property_get(r22, "on_question");
   let on_answer3 = property_get(r22, "on_answer");
   let correction_render3 = property_get(r22, "correction_render");
-  let r33 = {
-    quiz_index: quiz_index2,
-    container_success_message: container_success_message2,
-    container_correction: container_correction3,
-    answers_div: answers_div3,
-    qa_for: qa_for3,
-    answer_property: answer_property3,
-    quiz_question: quiz_question3,
-    on_question: on_question3,
-    on_answer: on_answer3,
-    correction_render: correction_render3,
-  };
-  let r32 = r33;
-  let correction_render2 = property_get(r32, "correction_render");
-  let on_answer2 = property_get(r32, "on_answer");
-  let on_question2 = property_get(r32, "on_question");
-  let quiz_question2 = property_get(r32, "quiz_question");
-  let answer_property2 = property_get(r32, "answer_property");
-  let qa_for2 = property_get(r32, "qa_for");
-  let answers_div2 = property_get(r32, "answers_div");
-  let container_correction2 = property_get(r32, "container_correction");
-  let r4 = {
-    answer_label: answer_label2,
-    r3: r32,
-    correction_render: correction_render2,
-    on_answer: on_answer2,
-    on_question: on_question2,
-    quiz_question: quiz_question2,
-    answer_property: answer_property2,
-    qa_for: qa_for2,
-    answers_div: answers_div2,
-    container_correction: container_correction2,
-  };
-  let r2 = r4;
-  let container_correction = property_get(r2, "container_correction");
-  let answers_div = property_get(r2, "answers_div");
-  let qa_for = property_get(r2, "qa_for");
-  let answer_property = property_get(r2, "answer_property");
-  let quiz_question = property_get(r2, "quiz_question");
-  let on_question = property_get(r2, "on_question");
-  let on_answer = property_get(r2, "on_answer");
-  let correction_render = property_get(r2, "correction_render");
-  let r3 = property_get(r2, "r3");
-  let answer_label = property_get(r2, "answer_label");
-  let container_success_message = property_get(r3, "container_success_message");
-  let quiz_index = property_get(r3, "quiz_index");
+  let quiz_question = quiz_question3;
   ("the first question is painted here, below everything it reads, and not up where the pieces are gathered");
   on_qa_change();
   function on_qa_change() {
-    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property3);
     html_clear(container_question);
-    on_question(container_question, quiz_question);
-    html_clear(answers_div);
+    on_question3(container_question, quiz_question);
+    html_clear(answers_div3);
     ("the label is put back to what the lesson wrote before every question, because a quiz that changed it while working the last one out would otherwise open the next one still asking the question it finished on");
-    answer_label_set(answer_label);
+    answer_label_set(answer_label2);
     app_code_lesson_quiz_render_correction(
-      container_correction,
-      correction_render,
+      container_correction3,
+      correction_render3,
       qa,
     );
-    on_answer(
-      answers_div,
+    on_answer3(
+      answers_div3,
       info,
       qa,
       on_success,
@@ -117,19 +72,19 @@ export function app_code_lesson_quiz(
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
-    html_visibility_hidden(container_success_message);
+    html_visibility_hidden(container_success_message2);
   }
   async function on_success() {
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     "the correct answer is written down here, at the one place that knows both which quiz of the lesson this is and how many the lesson has - the list screen shows a lesson as finished once every one of them has been answered right at least once";
     let quizzes_total = list_size(quizzes);
-    app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
-    html_clear(container_success_message);
-    app_shared_success_message(container_success_message);
-    html_visibility_visible(container_success_message);
+    app_code_progress_quiz_correct_record(context, quiz_index2, quizzes_total);
+    html_clear(container_success_message2);
+    app_shared_success_message(container_success_message2);
+    html_visibility_visible(container_success_message2);
     await sleep_success_color();
     let item = next_get();
-    qa = qa_for(item);
+    qa = qa_for3(item);
     on_qa_change();
   }
 }
