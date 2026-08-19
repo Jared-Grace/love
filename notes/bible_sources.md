@@ -33,6 +33,13 @@ repo may ship on, and `ebible_licence_commercial_is` answers for one translation
 list of allowed folder names by hand — it goes stale the next time eBible
 regenerates a page.
 
+Two of their published translations are missing text, and a letter telling them so
+is drafted and **not yet sent**: `letters/ebible_letter.md`. Read it before writing
+to them about anything else, so they get one letter rather than two. It lives outside
+`notes/` because it is a thing to send, not an instruction to follow — `notes/` holds
+only what a Claude reads before acting, and `instructions_notes_gate_run` enforces
+that by refusing any note `CLAUDE.md` does not link.
+
 ### What the four refusals actually forbid
 
 - **Non-commercial.** Refused. The mission is to earn and give away what is earned,
