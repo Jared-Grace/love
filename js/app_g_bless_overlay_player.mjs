@@ -13,7 +13,7 @@ export function app_g_bless_overlay_player(container_map) {
   let player_img_c2 = property_get(r4, "player_img_c");
   let wash2 = property_get(r4, "wash");
   let div_map2 = property_get(r4, "div_map");
-  let block2 = property_get(r4, "block");
+  let blocks2 = property_get(r4, "blocks");
   let npcs2 = property_get(r4, "npcs");
   let player2 = property_get(r4, "player");
   let world = property_get(r4, "world");
@@ -28,7 +28,7 @@ export function app_g_bless_overlay_player(container_map) {
     player_img_c: player_img_c2,
     wash: wash2,
     div_map: div_map2,
-    block: block2,
+    blocks: blocks2,
     npcs: npcs2,
     player: player2,
     world,

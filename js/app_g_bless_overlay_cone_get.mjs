@@ -31,7 +31,7 @@ export function app_g_bless_overlay_cone_get(r) {
     world,
     player,
     npcs,
-    block,
+    blocks,
     div_map,
     wash,
     player_img_c,
