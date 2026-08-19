@@ -86,6 +86,8 @@
   "functions_larger_of_two",
   "functions_more_than_two_numbers",
   "expressions_when_either_operator_can_go_first",
+  "expressions_solving_both_sides_step_by_step",
+  "expressions_solving_both_sides_with_any_comparison",
   "expressions_arithmetic_both_sides",
   "expressions_swapping_plus_times",
   "expressions_swapping_divide_power",
@@ -99,6 +101,7 @@
   "expressions_solving_two_comparisons_step_by_step",
   "expressions_parentheses_both_sides",
   "expressions_swapping_equal",
+  "expressions_solving_both_sides_of_and",
   "expressions_comparison_inside_and",
   "expressions_in_between",
   "expressions_which_part_is_solved_first",
@@ -115,6 +118,7 @@
   "statements_giving_a_name_what_it_and_another_name_add_up_to",
   "statements_giving_a_name_one_more_than_it_holds",
   "statements_changing_a_name_after_another_was_given_what_it_held",
-  "statements_comparing_what_two_names_hold"
+  "statements_comparing_what_two_names_hold",
+  "statements_writing_a_note_in_the_code"
  ]
 }
