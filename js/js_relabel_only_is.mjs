@@ -2,7 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
-import { js_name_set_from_call_try } from "./js_name_set_from_call_try.mjs";
+import { js_await_if_unwrap } from "./js_await_if_unwrap.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -38,7 +40,11 @@ export function js_relabel_only_is(declaration) {
   }
   let name = property_get_name(handed);
   ("The name handed back has to have been set from a call inside this same body. A parameter handed straight back is set nowhere here and reads as nothing, which is the answer that shape deserves.");
-  let called = js_name_set_from_call_try(declaration, name);
+  let set_from = js_name_set_from_node_try(declaration, name);
+  ("A wait is stepped over before the call is looked for. The reading next door that asks which function set a name stops at the wait and answers nothing, so asked through it every holder that waits on its piece came back as honest work - which is most of them, and exactly the case this was built for.");
+  let r = js_await_if_unwrap(set_from);
+  let waited = property_get(r, "argument");
+  let called = js_call_callee_name_try(waited);
   let missing = null_is(called);
   let relabel_only_is = not(missing);
   return relabel_only_is;
