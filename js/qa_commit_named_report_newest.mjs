@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-export function qa_commit_named_red_since_nothing(report) {
+export function qa_commit_named_report_newest(report) {
   arguments_assert(arguments, 1);
   let head = property_get(report, "head");
   let looked = property_get(report, "looked");
