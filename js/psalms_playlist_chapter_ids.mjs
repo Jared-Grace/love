@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function psalms_playlist_chapter_ids(playlists) {
   "Which playlist belongs to which chapter of the Psalms, read off the names the playlists wear.";
@@ -6,7 +7,7 @@ export function psalms_playlist_chapter_ids(playlists) {
   let chapter_ids = {};
   for (let playlist of playlists) {
     let found = playlist.title.match(/^Psalm (\d+)$/);
-    if (!found) {
+    if (not(found)) {
       continue;
     }
     let chapter = Number(found[1]);
