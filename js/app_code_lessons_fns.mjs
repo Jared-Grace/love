@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_or } from "./app_code_lesson_expression_choose_order_or.mjs";
 import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
 import { app_code_lesson_expression_choose_order_and } from "./app_code_lesson_expression_choose_order_and.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
@@ -223,6 +224,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_parentheses_both_sides,
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_choose_order_and,
+    app_code_lesson_expression_choose_order_or,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
     app_code_lesson_expression_which_part_first,
