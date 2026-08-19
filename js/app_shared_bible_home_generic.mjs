@@ -1,3 +1,4 @@
+import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
 import { app_shared_bible_home_verse_current_languages } from "./app_shared_bible_home_verse_current_languages.mjs";
 import { app_shared_bible_home_chapter_data } from "./app_shared_bible_home_chapter_data.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
@@ -30,6 +31,10 @@ export async function app_shared_bible_home_generic(
   let r4 = app_shared_bible_home_frame(context, bar_extra);
   let bar = property_get(r4, "bar");
   let content = property_get(r4, "content");
+  ("A passage asked for by name is answered before the page falls back on somewhere to start, because a link carrying a reference has said where to open and the falling back is for links that have not.");
+  if (await app_shared_bible_home_reference_shown_is(context, content)) {
+    return null;
+  }
   if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }

@@ -11,6 +11,7 @@ import { text_split_outside_quotes_cases_gate_run } from "./text_split_outside_q
 import { gloss_write_root_files_gate_run } from "./gloss_write_root_files_gate_run.mjs";
 import { app_original_bible_gloss_parsings_gate_run } from "./app_original_bible_gloss_parsings_gate_run.mjs";
 import { app_original_bible_gloss_lexicons_named_gate_run } from "./app_original_bible_gloss_lexicons_named_gate_run.mjs";
+import { app_original_bible_gloss_placeholders_gate_run } from "./app_original_bible_gloss_placeholders_gate_run.mjs";
 import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
 import { machine_path_literals_gate_run } from "./machine_path_literals_gate_run.mjs";
 import { hook_memory_root_gate_run } from "./hook_memory_root_gate_run.mjs";
@@ -534,6 +535,7 @@ export function qa_gates() {
     app_original_bible_gloss_misaligned_gate_run,
     app_original_bible_gloss_parsings_gate_run,
     app_original_bible_gloss_lexicons_named_gate_run,
+    app_original_bible_gloss_placeholders_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,
     app_en_learn_bible_gloss_urdu_misaligned_gate_run,
     gloss_write_root_files_gate_run,
