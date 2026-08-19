@@ -1,3 +1,4 @@
+import { app_g_bless_buildings_raise } from "./app_g_bless_buildings_raise.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { g_coordinates } from "./g_coordinates.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
 import { g_player_img_get } from "./g_player_img_get.mjs";
 import { g_player_initialize } from "./g_player_initialize.mjs";
-import { g_tile_wall } from "./g_tile_wall.mjs";
 import { app_g_bless_block } from "./app_g_bless_block.mjs";
 import { app_g_bless_people } from "./app_g_bless_people.mjs";
 import { app_g_bless_player_place } from "./app_g_bless_player_place.mjs";
@@ -40,11 +40,10 @@ export function app_g_bless_world_new() {
   ("belongs to which building, and that is what a rung is asked against.");
   let rows = app_g_map_generate();
   let block = app_g_bless_block(rows);
-  let walls = property_get(block, "walls");
+  let buildings = property_get(block, "buildings");
   let alleys = property_get(block, "alleys");
   let sidewalk = property_get(block, "sidewalk");
-  let item_wall = g_tile_wall();
-  app_g_bless_tiles_pave(rows, walls, item_wall);
+  app_g_bless_buildings_raise(rows, buildings);
   let item_pavement = bless_tile_pavement();
   let paved = list_concat(alleys, sidewalk);
   app_g_bless_tiles_pave(rows, paved, item_pavement);

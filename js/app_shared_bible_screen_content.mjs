@@ -9,11 +9,9 @@ export async function app_shared_bible_screen_content(context) {
   "the bar is the sticky kind, not the twin that gives the body its own scrolling box: the book list is searched by typing, and the twin's own note says why a box like that loses what is typed on a phone";
   "bar and body are both made fresh here and the padding goes on them, never on the persistent context root - the reason is written where the padding is done";
   let root = html_clear_context(context);
-  let frame = app_shared_bar_content_root_sticky(root);
+  let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
-  app_shared_content_column_pad(bar);
-  app_shared_content_column_pad(content);
   await app_shared_bible_button_back_to_reader(bar, context);
   let r = {
     root,

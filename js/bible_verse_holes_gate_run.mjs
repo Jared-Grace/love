@@ -1,8 +1,8 @@
+import { bible_verse_holes_entry_empty_is } from "./bible_verse_holes_entry_empty_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { property_equals } from "./property_equals.mjs";
-import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -36,13 +36,7 @@ export async function bible_verse_holes_gate_run() {
   }
   let unasked = list_filter(bibles, lambda);
   ("A bible that answered nothing anywhere is a different thing again from one with holes in it. Every verse of a whole book missing is a folder named wrongly or a bible that was never uploaded, not a bible that counts its verses differently, and it would leave a reader who chose it reading apologies.");
-  function lambda2(entry) {
-    let asked = property_get(entry, "asked");
-    let holes = property_get(entry, "holes");
-    let all = list_size_equal(holes, asked);
-    return all;
-  }
-  let empty = list_filter(bibles, lambda2);
+  let empty = list_filter(bibles, bible_verse_holes_entry_empty_is);
   ("A chapter nobody could get an answer about is refused outright, and it is the only one of these that says nothing at all about a bible. The other findings are facts somebody has to read and decide about; this one is the measuring itself being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
   ("It is refused rather than reported because the alternative was tried by accident and is what this whole check now exists to prevent. An ask that failed used to be recorded as a chapter the bible does not hold, which is a wrong fact in the shape of a right one - believed for as long as nobody happens to check an entry by hand.");
   function lambda3(entry) {
