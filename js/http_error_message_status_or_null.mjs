@@ -1,8 +1,7 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { json_from } from "./json_from.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function http_error_message_status_or_null(message) {
   "$plain message";
@@ -19,8 +18,7 @@ export function http_error_message_status_or_null(message) {
   if (unparsed) {
     return null;
   }
-  let carried = property_exists(object, "statusCode");
-  let uncarried = not(carried);
+  let uncarried = property_exists_not(object, "statusCode");
   if (uncarried) {
     return null;
   }
