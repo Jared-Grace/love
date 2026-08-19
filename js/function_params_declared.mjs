@@ -1,10 +1,9 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { list_map } from "./list_map.mjs";
 import { add } from "./add.mjs";
 export function function_params_declared(fn) {
   arguments_assert(arguments, 1);
@@ -32,7 +31,6 @@ export function function_params_declared(fn) {
     return none;
   }
   let parts = text_split_comma(trimmed);
-  let names = list_map(parts, text_trim);
-  let declared = list_filter(names, text_empty_not_is);
+  let declared = list_map_filter(parts, text_trim, text_empty_not_is);
   return declared;
 }
