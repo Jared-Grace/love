@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { modulo } from "./modulo.mjs";
 import { not } from "./not.mjs";
@@ -67,7 +66,6 @@ export function bless_marks_climbed(count, stride) {
   let dark = list_filter_size(people, dark_is);
   let climbed = {
     rung: rung,
-    prayers: prayers,
     dark: dark,
   };
   return climbed;
