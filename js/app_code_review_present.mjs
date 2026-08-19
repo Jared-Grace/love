@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_code_review_present_present } from "./app_code_review_present_present.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -47,8 +48,7 @@ export function app_code_review_present(r, home_button, context) {
   let has_next4 = property_get(r33, "has_next");
   let skip_button3 = property_get(r33, "skip_button");
   let go_next3 = property_get(r33, "go_next");
-  let r23 = property_get(r33, "r2");
-  let progress22 = property_get(r23, "progress");
+  let progress22 = property_path_get_2(r33, "r2", "progress");
   let r62 = {
     key: key4,
     c: c4,
