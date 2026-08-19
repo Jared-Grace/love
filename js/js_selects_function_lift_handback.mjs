@@ -1,12 +1,8 @@
+import { js_selects_function_lift_checked } from "./js_selects_function_lift_checked.mjs";
 import { js_function_lift_stub_swap } from "./js_function_lift_stub_swap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_function_handback_refusals } from "./js_function_handback_refusals.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { property_list_map } from "./property_list_map.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { js_code_handback_object } from "./js_code_handback_object.mjs";
 import { js_code_return } from "./js_code_return.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
@@ -26,23 +22,17 @@ export async function js_selects_function_lift_handback(
   ("What it reached out for is handed in exactly as the plain move next door hands it in, writes and reads alike. A name it writes to still has to arrive holding what it held, because a body may read it before it writes it, or write it only down one branch and leave it alone down the other. Handing it in and handing it back is what makes those two cases the same as they were.");
   ("The lines left behind wait for the call when the body waits, take each write off what comes back, and hand nothing on themselves - which is why a body handing an answer back of its own is turned down next door rather than guessed at here.");
   ("Why it would not go ahead is read next door, so the report of what could be moved this way and the move itself cannot disagree about a single function.");
-  let reading = await js_selects_function_lift_reading(ast, selects);
-  let declaration = property_get(reading, "declaration");
-  let refusals = await js_function_handback_refusals(ast, declaration);
-  let name_old = property_get(reading, "name_old");
-  let closed = property_get(reading, "closed");
-  let written_closed = property_get(reading, "written_closed");
-  list_empty_is_assert_json(refusals, {
-    name_old,
-  });
-  let param_names = property_list_map(
-    declaration,
-    "params",
-    js_identifier_name_try,
+  let checked = await js_selects_function_lift_checked(
+    ast,
+    selects,
+    js_function_handback_refusals,
   );
-  let passed = list_concat(param_names, closed);
-  let async_is = property_get(declaration, "async");
-  let block = property_get(declaration, "body");
+  let declaration = property_get(checked, "declaration");
+  let name_old = property_get(checked, "name_old");
+  let written_closed = property_get(checked, "written_closed");
+  let passed = property_get(checked, "passed");
+  let async_is = property_get(checked, "async_is");
+  let block = property_get(checked, "block");
   let handed_back = js_code_handback_object(written_closed);
   let returning = js_code_return(handed_back);
   let handback_statement = js_code_statement(returning);
