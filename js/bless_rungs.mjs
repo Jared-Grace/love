@@ -2,11 +2,11 @@ export function bless_rungs() {
   "The prayer ladder, lowest first - how far a blessing reaches out from the one person";
   "the player can see.";
   "Every prayer is the SAME act: look at somebody and pray for them. A rung never changes";
-  "what the player does, only how far it carries - 'God bless this person and everyone in";
-  "their block', then 'in their city', then 'in their country'. The place is reached";
-  "THROUGH the person, and is named as belonging to them, so the player never has to see";
-  "it, stand in it, or be able to name it. That is why a continent is prayable without a";
-  "view from orbit, and why sight is owed to a face and to nothing else.";
+  "what the player does, only how far it carries - 'God save and bless this person and";
+  "everyone in their block', then 'in their city', then 'in their country'. The place is";
+  "reached THROUGH the person, and is named as belonging to them, so the player never has";
+  "to see it, stand in it, or be able to name it. That is why a continent is prayable";
+  "without a view from orbit, and why sight is owed to a face and to nothing else.";
   "The list is the whole rule. Each rung is made of the rung below it, so containment is";
   "the ORDER and is not written down twice - the one above a name is what a place of that";
   "name belongs to.";
