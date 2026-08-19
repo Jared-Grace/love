@@ -33,7 +33,6 @@ export function html_loading_overlay() {
     html_style_opacity(div, "1");
     return div;
   }
-  html_reflow_force(div);
-  html_style_opacity(div, "1");
+  html_reflow_opacity_full(div);
   return div;
 }
