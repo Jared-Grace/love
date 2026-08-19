@@ -16,6 +16,9 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
   ("The line counting the arguments is not part of a run, because the pass wrote");
   ("it and every function of the same arity carries the same one - counting it");
   ("would let three lines of real agreement be reported as four.");
+  ("A run nothing could be done about is answered with nothing too, by the same");
+  ("reader the search over shared middles asks - so all three readings agree about");
+  ("which runs are worth reporting.");
   ("Which end the run is taken from is the only difference between asking about a");
   ("shared ending and asking about a shared opening, so it is the only thing a");
   ("caller passes - everything else here would otherwise have been written twice,");
