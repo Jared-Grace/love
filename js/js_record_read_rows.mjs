@@ -1,6 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
@@ -11,7 +11,6 @@ import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_record_read_rows(ast) {
@@ -35,8 +34,7 @@ export function js_record_read_rows(ast) {
     each(plain, plain_each);
     function step_each(node) {
       let args = js_call_arguments_get(node);
-      let size = list_size(args);
-      let three_is = equal(size, 3);
+      let three_is = list_size_equal(args, 3);
       if (not(three_is)) {
         return;
       }
