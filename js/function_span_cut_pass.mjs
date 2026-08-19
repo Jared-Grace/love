@@ -58,6 +58,7 @@ export async function function_span_cut_pass(f_name) {
       let cut_is = property_get(outcome, "cut_is");
       if (not(cut_is)) {
         list_add(skipped, outcome);
+        list_add(stepped, address_to);
         continue;
       }
       list_add(cut, {
