@@ -571,6 +571,8 @@ export function qa_gates() {
     gloss_punctuation_words_gate_run,
     js_repack_only_is_cases_gate_run,
     permission_grant_param_scripture_code_gate_run,
+    permission_rule_path_allowed_gate_run,
+    permission_file_hook_registered_gate_run,
   ];
   return gates;
 }
