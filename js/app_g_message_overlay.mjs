@@ -20,32 +20,9 @@ export function app_g_message_overlay(
   "centring is asked for SAFELY and the cover may be scrolled, which together are the floor under the sizes: plain centring puts half of anything too tall ABOVE the top of the screen, where no scrolling can ever reach it, so a long verse would lose its opening words with nothing to show anything was missing. safe centring gives that up and packs from the top the moment the content stops fitting, and the scrolling then makes the rest reachable";
   "a full-screen prayer moment: dims the world, floats a glowing emoji above a message on a dark CARD, fades in, then auto-dismisses after dismiss_ms. `color` sets the message color — GOLD when the words are God's leading (His word), white when they are the player's own prayer. RETURNS the card (a flex column) so a caller can add more onto the same black surface — e.g. the dove appends a verse + reference. dismiss_ms null = stays until removed (used by the #dove dev route to inspect it). shared by the discernment-prevented dove and the thanksgiving prayer";
   let fonts = app_g_overlay_fonts();
-  let div = html_body_div();
-  html_style_assign(div, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: html_viewport_width_full(),
-    height: html_viewport_height_full(),
-    background: "rgba(0, 0, 0, 0.6)",
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "safe center",
-    "align-items": "center",
-    "overflow-y": "auto",
-    gap: "1.5rem",
-    "z-index": "1000",
-    opacity: "0",
-    transition: "opacity 0.3s ease",
-  });
-  let emoji = html_p_text(div, emoji_text);
-  html_style_assign(emoji, {
-    "font-size": fonts.emoji,
-    margin: "0",
-  });
-  app_g_emoji_glow_apply(emoji);
-  let card = html_div(div);
-  app_g_overlay_card_style(card);
+  let cover = app_g_overlay_cover_emoji_card("rgba(0, 0, 0, 0.6)", emoji_text);
+  let div = property_get(cover, "div");
+  let card = property_get(cover, "card");
   let message_p = html_p_text(card, message);
   html_style_assign(message_p, {
     color,
