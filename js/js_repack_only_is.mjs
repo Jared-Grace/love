@@ -1,4 +1,4 @@
-import { js_repack_only_is_silent_is } from "./js_repack_only_is_silent_is.mjs";
+import { js_repack_only_is_node } from "./js_repack_only_is_node.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
@@ -24,9 +24,9 @@ export function js_repack_only_is(declaration) {
   "At most one other thing done, matching that one entry, so that a function which really does something and happens to hand back some of what it was given is left alone. Nought means the thing was taken apart and put back with nothing done to it at all; one means a single piece of work with lifting and putting back on either side of it, which is the shape a cut leaves behind.";
   "A thing done is looked for in two shapes, because a body works in two. A line binding a plain name to a plain call is one. A line doing something and binding no name at all is the other - painting a screen, walking a list, asking a question about what was handed in. Reading only the first called a page painter and a list walker pure repacks, which is the opposite of what this is for. Lifting a name out, and the one line handing the record back, are the product rather than work, so neither is counted.";
   arguments_assert(arguments, 1);
-  let r4 = js_repack_only_is_silent_is(declaration);
-  let silent_is = property_get(r4, "silent_is");
+  let r4 = js_repack_only_is_node(declaration);
   let node = property_get(r4, "node");
+  let silent_is = property_get(r4, "silent_is");
   if (silent_is) {
     return false;
   }
