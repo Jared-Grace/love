@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { app_code_comparison_symbols } from "./app_code_comparison_symbols.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function app_code_comparison_symbols_not_equality() {
   arguments_assert(arguments, 0);
   ("the five comparison symbols that are not ===, which is to say <, >, <= , >= and !==");
@@ -13,8 +12,7 @@ export function app_code_comparison_symbols_not_equality() {
   let equality = js_operator_triple_equal_symbol();
   function lambda(symbol) {
     "every symbol except the one that asks whether two values are the same";
-    let same = equal(symbol, equality);
-    let other = not(same);
+    let other = equal_not(symbol, equality);
     return other;
   }
   let others = list_filter(symbols, lambda);
