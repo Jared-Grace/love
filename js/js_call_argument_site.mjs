@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +16,7 @@ export function js_call_argument_site(ast, name) {
     let args = property_get(call, "arguments");
     let size = list_size(args);
     let index = 0;
-    while (index < size) {
+    while (less_than(index, size)) {
       let arg = list_get(args, index);
       let name_is = js_node_type_is(arg, "Identifier");
       if (name_is) {
