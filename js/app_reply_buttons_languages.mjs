@@ -21,7 +21,8 @@ export function app_reply_buttons_languages(languages_chosen, root, languages) {
   );
   let by_code = {};
   function pair(language, index) {
-    let code = property_get(language, language_code_key());
+    let property_name = language_code_key();
+    let code = property_get(language, property_name);
     let button = property_get(buttons, index);
     property_set(by_code, code, button);
   }

@@ -1,5 +1,5 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_await_if_unwrap } from "./js_await_if_unwrap.mjs";
@@ -7,7 +7,6 @@ import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,8 +22,7 @@ export function js_relabel_only_is(declaration) {
     js_function_declaration_statements_working_without_arguments_assert(
       declaration,
     );
-  let count = list_size(working);
-  let two_is = equal(count, 2);
+  let two_is = list_size_equal(working, 2);
   if (not(two_is)) {
     return false;
   }
