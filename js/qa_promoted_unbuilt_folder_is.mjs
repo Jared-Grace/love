@@ -1,10 +1,9 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read } from "./file_read.mjs";
 import { folder_app_file_names } from "./folder_app_file_names.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { path_join } from "./path_join.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 export async function qa_promoted_unbuilt_folder_is(folder, app_name) {
   "$plain folder";
   "$plain app_name";
@@ -22,8 +21,7 @@ export async function qa_promoted_unbuilt_folder_is(folder, app_name) {
   for (let file_name of present) {
     let file_path = path_join([folder, file_name]);
     let text = await file_read(file_path);
-    let blank = text_empty_is(text);
-    let written = not(blank);
+    let written = text_empty_not_is(text);
     if (written) {
       return false;
     }
