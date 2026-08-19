@@ -32,13 +32,15 @@ export function js_hash_key_getters_cases() {
         "let hash = {};\nlet property_name = app_supper_passage_hash_key();\nproperty_set(hash, property_name, index);\nlet url = hash_to_url(hash);",
       ),
       getters: [f_name3],
-      why: "a link built for another tab, which is an address only because of what is done with it at the end",
+      own: [],
+      why: "a link built for another tab, which is an address only because of what is done with it at the end, and the one case where the two readings part - the page publishing the word never reads it back",
     },
     {
       code: text_frozen(
         "let hash = html_hash_get();\nlet key = list_get(kv, 0);\nlet is_lesson = equal(key, app_code_lesson_hash_key());",
       ),
       getters: [f_name4],
+      own: [f_name4],
       why: "the third shape, where a page pulling its own address apart never hands the field anywhere and asks instead whether a word out of the address is this field",
     },
     {
@@ -46,11 +48,13 @@ export function js_hash_key_getters_cases() {
         "let key = list_get(kv, 0);\nlet is_lesson = equal(key, app_code_lesson_hash_key());",
       ),
       getters: [],
+      own: [],
       why: "the same question in a file that never touches the address, which is an ordinary comparison and not a link being read",
     },
     {
       code: text_frozen('html_hash_property_set("c", chapter_code);'),
       getters: [],
+      own: [],
       why: "a word written out is the broken shape and is read elsewhere, not here",
     },
     {
@@ -58,6 +62,7 @@ export function js_hash_key_getters_cases() {
         "let hash = html_hash_object_get();\nlet property_name = app_shared_bible_key_for(kind);\nproperty_set(hash, property_name, value);",
       ),
       getters: [],
+      own: [],
       why: "a call given something works a field name out rather than holding one, so there is no fixed word in it to freeze",
     },
     {
@@ -65,6 +70,7 @@ export function js_hash_key_getters_cases() {
         "let record = {};\nlet property_name = app_g_conversation_key();\nproperty_set(record, property_name, held);",
       ),
       getters: [],
+      own: [],
       why: "an ordinary object names its fields the same way and nothing here goes into anybody's link",
     },
   ];
