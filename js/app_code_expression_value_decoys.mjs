@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
@@ -8,7 +9,6 @@ import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function app_code_expression_value_decoys(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values to offer beside the right one when a learner is asked what the operator they just chose comes to: the value the OTHER operator would have given on the same two numbers, and the value the whole line comes to");
@@ -27,8 +27,7 @@ export function app_code_expression_value_decoys(current, node) {
   let whole = app_code_expression_value(current);
   let candidates = [slipped, whole];
   function wrong_is(candidate) {
-    let same = equal(candidate, value);
-    let differs = not(same);
+    let differs = equal_not(candidate, value);
     return differs;
   }
   let wrong = list_filter(candidates, wrong_is);
