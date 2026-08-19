@@ -1,4 +1,4 @@
-import { worker_exit_if_idle } from "./worker_exit_if_idle.mjs";
+import { function_worker_exit_if_idle } from "./function_worker_exit_if_idle.mjs";
 import { json_from } from "./json_from.mjs";
 import { property_get } from "./property_get.mjs";
 export function worker_reply_take(worker, line) {
@@ -13,5 +13,5 @@ export function worker_reply_take(worker, line) {
   } else {
     settle.resolve(property_get(reply, "result"));
   }
-  worker_exit_if_idle(worker);
+  function_worker_exit_if_idle(worker);
 }

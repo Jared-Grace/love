@@ -1,4 +1,4 @@
-import { worker_exit_if_idle } from "./worker_exit_if_idle.mjs";
+import { function_worker_exit_if_idle } from "./function_worker_exit_if_idle.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -13,7 +13,7 @@ export function function_worker_pool_retire() {
   let workers = property_get(current, "workers");
   function lambda(worker) {
     worker.retired = true;
-    worker_exit_if_idle(worker);
+    function_worker_exit_if_idle(worker);
   }
   workers.forEach(lambda);
 }
