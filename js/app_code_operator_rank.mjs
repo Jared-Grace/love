@@ -1,4 +1,4 @@
-import { app_code_operators_weakest } from "./app_code_operators_weakest.mjs";
+import { app_code_operators_weaker } from "./app_code_operators_weaker.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -20,7 +20,7 @@ export function app_code_operator_rank(symbol) {
     return r2;
   }
   ("&& is asked about before the comparisons rather than after, because the comparisons are what is left when nothing else matched, and a class that is only reached by falling through cannot be told apart from an operator nobody has classed at all");
-  let weakest = app_code_operators_weakest();
+  let weakest = app_code_operators_weaker();
   let weakest_is = list_includes(weakest, symbol);
   if (weakest_is) {
     let r3 = 0;
