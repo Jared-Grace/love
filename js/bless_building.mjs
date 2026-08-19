@@ -1,7 +1,7 @@
+import { property_equals_not } from "./property_equals_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
@@ -41,8 +41,7 @@ export function bless_building(x, y) {
     y: y_front,
   };
   function face_is(tile) {
-    let at = property_get(tile, "x");
-    let beside = equal_not(at, x_door);
+    let beside = property_equals_not(tile, "x", x_door);
     return beside;
   }
   let face = list_filter(front, face_is);
