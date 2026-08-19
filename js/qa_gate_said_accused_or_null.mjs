@@ -1,3 +1,14 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { qa_gate_said_record_or_null } from "./qa_gate_said_record_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_is } from "./list_is.mjs";
+import { object_is } from "./object_is.mjs";
+import { text_is_if_or_null } from "./text_is_if_or_null.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { list_add_unique } from "./list_add_unique.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
 export function qa_gate_said_accused_or_null(said) {
   "$plain said";
   "Who a gate said is at fault, in the one case where it wrote that down itself: every offender in the record it threw names an app. Nothing where it did not say, and then the ordinary readers are the ones with the answer. Read-only, pure.";

@@ -10,12 +10,7 @@ export function app_emoji_bible_tradition_button_text(name) {
   "What the button offering the other way of drawing should say, shown as the cross it would draw.";
   "The button shows the cross the reader would GET rather than the one they already have, because a control that shows the state it is in reads as a label and a control that shows what it does reads as an offer, and a reader meeting this page for the first time has nothing to compare a label against.";
   "The cross itself is looked up rather than written out here, so this button cannot come to disagree with the page beneath it. A control that promised one drawing and delivered another would be a small lie told at the exact moment a reader was deciding whether to trust the page with something they care about.";
-  let right = app_emoji_bible_tradition_base();
-  let base = equal(name, right);
-  let next = app_emoji_bible_tradition_base();
-  if (base) {
-    next = app_emoji_bible_tradition_orthodox();
-  }
+  let next = app_emoji_bible_tradition_other(name);
   let traditions = app_emoji_bible_traditions(next);
   let lookup = bible_glyph_characters_lookup(traditions);
   let character = property_get(lookup, "cross");
