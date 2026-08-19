@@ -126,6 +126,7 @@ import { qa_app_gates_sorted_gate_run } from "./qa_app_gates_sorted_gate_run.mjs
 import { qa_gate_failed_sections_gate_run } from "./qa_gate_failed_sections_gate_run.mjs";
 import { qa_gate_said_advice_remove_gate_run } from "./qa_gate_said_advice_remove_gate_run.mjs";
 import { qa_gate_said_reached_remove_gate_run } from "./qa_gate_said_reached_remove_gate_run.mjs";
+import { qa_gate_said_steps_remove_gate_run } from "./qa_gate_said_steps_remove_gate_run.mjs";
 import { qa_gate_said_listed_cases_gate_run } from "./qa_gate_said_listed_cases_gate_run.mjs";
 import { functions_work_size_gate_run } from "./functions_work_size_gate_run.mjs";
 import { literals_marked_both_ways_gate_run } from "./literals_marked_both_ways_gate_run.mjs";
@@ -440,6 +441,7 @@ export function qa_gates() {
     process_line_sleep_loop_is_gate_run,
     qa_gate_said_advice_remove_gate_run,
     qa_gate_said_reached_remove_gate_run,
+    qa_gate_said_steps_remove_gate_run,
     qa_gate_said_listed_cases_gate_run,
     qa_app_gates_sorted_gate_run,
     qa_gate_run_start_wanted_gate_run,
