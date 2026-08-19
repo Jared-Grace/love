@@ -20,6 +20,7 @@ export function app_shared_bible_hash_field_reference(books_en) {
   "It cannot be described before the page has fetched something, because whether a word is a book of the bible is a question about the book list, and the book list is fetched. That is why it is not among the fields checked before the page starts.";
   "A reference is one thing, not several, even though it is written as a book and a number with a space between them. A reader who wrote the book wrong is offered the whole reference back with the book fixed and their own chapter and verse still in it, in one press.";
   "What went wrong is nearly always the book name, so that is the only part a correction moves. The number after it is what the reader meant whatever they spelled the book as, and a page that offered to change it too would be guessing at the half that was never in doubt.";
+  ("Two wordings that happen to be the same function here, and are not the same thing. One words a reference we have, for the correction offered; the other words one we have not, for saying back what the link asked for. A reference reads the same way either way - the plus goes back to being a space and nothing is looked up - which is exactly why the field that cannot do that for a word it does not know says nothing rather than lending this one.");
   let key = app_shared_bible_reference_hash_key();
   function valid_is(value) {
     let ref_line = app_shared_bible_reference_spaced(value);
