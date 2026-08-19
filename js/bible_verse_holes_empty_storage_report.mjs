@@ -1,5 +1,5 @@
 import { bible_verse_holes_empty_folders } from "./bible_verse_holes_empty_folders.mjs";
-import { bible_verse_holes_bibles_at_once } from "./bible_verse_holes_bibles_at_once.mjs";
+import { bible_folders_at_once } from "./bible_folders_at_once.mjs";
 import { ebible_bible_folder_storage_books_first_page } from "./ebible_bible_folder_storage_books_first_page.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -19,7 +19,7 @@ export async function bible_verse_holes_empty_storage_report() {
       await ebible_bible_folder_storage_books_first_page(bible_folder);
     return listed;
   }
-  let at_once = bible_verse_holes_bibles_at_once();
+  let at_once = bible_folders_at_once();
   let each = await list_map_limited_async(folders, lambda, at_once);
   function lambda2(listed) {
     let count = property_get(listed, "files");

@@ -1,4 +1,4 @@
-import { bible_verse_holes_bibles_at_once } from "./bible_verse_holes_bibles_at_once.mjs";
+import { bible_folders_at_once } from "./bible_folders_at_once.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -40,7 +40,7 @@ export async function bible_verse_holes_measure() {
     let measured = await bible_folder_verse_holes(bible_folder, chapters);
     return measured;
   }
-  let at_once = bible_verse_holes_bibles_at_once();
+  let at_once = bible_folders_at_once();
   let measured_each = await list_map_limited_async(
     bible_folders,
     lambda2,
