@@ -10,7 +10,6 @@ import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { not } from "./not.mjs";
-
 export function js_property_get_rows(ast) {
   arguments_assert(arguments, 1);
   ("Every place in this file that reads one named entry out of a plain name, read out as the reading itself, the name being read from, and the entry being asked for.");
@@ -34,7 +33,11 @@ export function js_property_get_rows(ast) {
         return;
       }
       let key = js_literal_value_get(key_node);
-      emit({ call: node, target, key });
+      emit({
+        call: node,
+        target,
+        key,
+      });
     }
     let f_name = fn_name("property_get");
     js_visit_calls_named_nodes(ast, f_name, call_each);
