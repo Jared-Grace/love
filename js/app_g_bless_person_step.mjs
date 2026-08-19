@@ -1,8 +1,6 @@
-import { app_g_bless_person_step_ways_open } from "./app_g_bless_person_step_ways_open.mjs";
+import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { list_get_or_null } from "./list_get_or_null.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_npc_move } from "./app_g_npc_move.mjs";
@@ -40,12 +38,10 @@ export function app_g_bless_person_step(world, person) {
   ("person can only have got there by being set down there when their doorstep was full -");
   ("and held to a rule they already break, they would never take a step again. Loose, they");
   ("wander until they meet the street they belong to, and are kept from then on.");
-  let r = app_g_bless_person_step_ways_open(world, person);
-  let ways_open = property_get(r, "ways_open");
-  let heading = property_get(r, "heading");
-  let tiles = property_get(r, "tiles");
-  let way = list_get_or_null(ways_open, 0);
-  let boxed = not(way);
+  let { heading, tiles, way, boxed } = app_g_bless_person_step_boxed(
+    world,
+    person,
+  );
   if (boxed) {
     return;
   }
