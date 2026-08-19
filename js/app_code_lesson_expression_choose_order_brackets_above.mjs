@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_brackets_expression_parts } from "./app_code_lesson_expression_choose_order_brackets_expression_parts.mjs";
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_above_generic } from "./app_code_lesson_expression_choose_order_sides_settled_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
 import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_brackets_above(root) {
   app_code_lesson_expression_choose_order_sides_settled_above_generic(
     root,
     app_code_lesson_expression_choose_order_brackets_recall,
-    app_code_lesson_expression_choose_order_brackets_expression_parts,
+    app_code_expression_node_right_operator_first,
     app_code_lesson_expression_choose_order_brackets_intro,
   );
 }
