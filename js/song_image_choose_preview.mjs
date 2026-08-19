@@ -6,6 +6,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { storage_local_specify_get } from "./storage_local_specify_get.mjs";
 import { storage_local_specify_set } from "./storage_local_specify_set.mjs";
 import { song_image_choose_render } from "./song_image_choose_render.mjs";
+import { song_image_state_repair } from "./song_image_state_repair.mjs";
 export function song_image_choose_preview() {
   ("choose an image for each couplet of the hymn video, on the sandbox app at #",
     fn_name("song_image_choose"),
@@ -18,9 +19,8 @@ export function song_image_choose_preview() {
   html_style_set(root, "padding", "16px");
   let key = "song_image_choose_state";
   let saved = storage_local_specify_get(key);
-  let state = equal(saved, null)
-    ? { couplet: 1, looking: {}, chosen: {}, vertical: true, treated: true }
-    : saved;
+  let stored = equal(saved, null) ? { couplet: 1, vertical: true } : saved;
+  let state = song_image_state_repair(stored);
   function on_change() {
     storage_local_specify_set(key, state);
     html_clear(root);

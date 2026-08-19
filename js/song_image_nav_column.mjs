@@ -5,6 +5,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
+import { song_image_couplet_mark } from "./song_image_couplet_mark.mjs";
 export function song_image_nav_column(parent, state, on_change) {
   "the left column: one numbered button per couplet, grouped by verse, with the couplet now open shown in the video's own words underneath; a couplet already decided is marked, so what is left to do is readable at a glance";
   let column = html_div(parent);
@@ -14,9 +15,7 @@ export function song_image_nav_column(parent, state, on_change) {
   html_style_set(grid, "grid-template-columns", "repeat(9, 1fr)");
   html_style_set(grid, "gap", "3px");
   for (let couplet of song_image_couplets()) {
-    let label = equal(state.chosen[couplet.n], undefined)
-      ? String(couplet.n)
-      : String(couplet.n) + "✓";
+    let label = String(couplet.n) + song_image_couplet_mark(state, couplet.n);
     function lambda() {
       state.couplet = couplet.n;
       on_change();
