@@ -1,4 +1,4 @@
-import { list_includes_not } from "./list_includes_not.mjs";
+import { literals_frozen_gate_run_lambda2 } from "./literals_frozen_gate_run_lambda2.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ebible_languages_commercial_single } from "./ebible_languages_commercial_single.mjs";
 import { ebible_languages_curated_codes } from "./ebible_languages_curated_codes.mjs";
@@ -7,7 +7,6 @@ import { function_delete } from "./function_delete.mjs";
 import { function_new_getter } from "./function_new_getter.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { property_get } from "./property_get.mjs";
 export async function ebible_languages_more_write() {
   "Writes out the generated half of the languages list - every language eBible gives away on terms this repo may ship, less the ones the hand-written half already carries.";
   "Derived and thrown away rather than added to, so that a licence changing on eBible's side or a choice changing on ours shows up as this file being written differently rather than as a list nobody remembers to correct.";
@@ -16,8 +15,7 @@ export async function ebible_languages_more_write() {
   let covered = await ebible_languages_curated_codes();
   let code_key = language_code_key();
   function uncovered_is(language) {
-    let language_code = property_get(language, code_key);
-    let unknown = list_includes_not(covered, language_code);
+    let unknown = literals_frozen_gate_run_lambda2(code_key, language, covered);
     return unknown;
   }
   let more = list_filter(singles, uncovered_is);
