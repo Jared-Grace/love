@@ -11,6 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export function gloss_entries_affix_kinds_wrong(entries, known) {
   "The explanations in one passage that call a piece of their word by a name the dictionary gives no piece of.";
+  "A word that opens its sentence is asked for under both spellings, because the dictionary is keyed by the spelling each word wore where it was gathered. Asked under one spelling only, this check simply never looked at the words a sentence begins with.";
   "A word the dictionary says nothing about, or takes apart in a shorthand nobody here has read, is passed over rather than judged. Neither was ever told to the explaining machine, so an explanation of one is its own guess and this is not the place that guessing is answered - the sentence beside the list already tells it to say nothing it is not certain of.";
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
