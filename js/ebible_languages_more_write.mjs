@@ -1,4 +1,4 @@
-import { literals_frozen_gate_run_lambda2 } from "./literals_frozen_gate_run_lambda2.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ebible_languages_commercial_single } from "./ebible_languages_commercial_single.mjs";
 import { ebible_languages_curated_codes } from "./ebible_languages_curated_codes.mjs";
@@ -15,7 +15,7 @@ export async function ebible_languages_more_write() {
   let covered = await ebible_languages_curated_codes();
   let code_key = language_code_key();
   function uncovered_is(language) {
-    let unknown = literals_frozen_gate_run_lambda2(code_key, language, covered);
+    let unknown = property_in_list_not(code_key, language, covered);
     return unknown;
   }
   let more = list_filter(singles, uncovered_is);
