@@ -16,6 +16,15 @@ export function bless_rung_phrase(rung) {
   ("everywhere would come out wrong at exactly the moment the player is reading the words");
   ("aloud, so the two that differ are named here instead of derived.");
   let word = bless_rung_word(rung);
+  ("The top rung drops the possessive, and it is the only one that may. Everywhere else");
+  ("'their' is doing work - it is what carries the prayer out from the person instead of");
+  ("out from the ground. Nobody has a world of their own, so at the last rung the word");
+  ("stops distinguishing anything and only sounds wrong in the mouth.");
+  let all = equal(word, "world");
+  if (all) {
+    let shared = "in the world";
+    return shared;
+  }
   let upon = ["block", "continent"];
   let atop = list_includes(upon, word);
   if (atop) {
