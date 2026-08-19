@@ -53,7 +53,7 @@ export async function app_shared_bible_home_generic_bottom(
     book_name,
     verse_number,
   );
-  return {
+  let r4 = {
     chapter_code,
     book_name,
     chapter_name,
@@ -66,4 +66,5 @@ export async function app_shared_bible_home_generic_bottom(
     p_verse,
     bottom,
   };
+  return r4;
 }
