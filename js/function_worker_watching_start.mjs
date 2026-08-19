@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { log } from "./log.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_worker_pool_quiet_milliseconds } from "./function_worker_pool_quiet_milliseconds.mjs";
-export async function watching_start() {
+export async function function_worker_watching_start() {
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
   let chokidar = (await import_install("chokidar")).default;
