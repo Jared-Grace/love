@@ -73,7 +73,8 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
     return standing_apart;
   }
   let apart = list_filter(claiming, apart_is);
-  let apart_by_edits = list_tally(list_map(apart, edits_read));
+  let list3 = list_map(apart, edits_read);
+  let apart_by_edits = list_tally(list3);
   let grouped = list_group_by_property(claiming, "pair");
   function group_read(group) {
     let items = property_get(group, "items");
