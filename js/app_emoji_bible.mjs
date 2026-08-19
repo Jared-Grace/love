@@ -31,11 +31,9 @@ export async function app_emoji_bible(context) {
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
   let root = app_shared_mobile_default_bible_font_size(context);
-  let frame = app_shared_bar_content_root_sticky(root);
+  let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
-  app_shared_content_column_pad(bar);
-  app_shared_content_column_pad(content);
   html_div_text_bold(bar, "The Bible in pictures");
   let tradition = app_emoji_bible_tradition_get();
   async function lambda_tradition() {

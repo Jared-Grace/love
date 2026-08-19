@@ -24,9 +24,11 @@ export async function function_span_cut_skip_or_null(
   ("Every one of them is stepped over rather than thrown, because none is a fault. Each names a run somebody could name well in a moment, and a walk that stopped at the first would leave every later run uncut for a reason that had nothing to do with it.");
   ("A third about the borrowing was added on 2026-08-18, after a walk of the whole repo cut sixty-seven runs and six of them came out under a name saying one word twice running. That one is asked of the name rather than of the word, because a word can only be seen to repeat once it stands beside the name it is joining.");
   ("They are asked in this order because each rests on the one before. The first ones ask about the word itself and can be asked straight away; the last ones ask about the name built out of it, and there is no name to ask about until the word is one this repo can spell a name from.");
+  ("Every reason says what it is about, and only one of them answers anything other than the name. A walk stepping over a run remembers it by the word it ends on, which is the right memory for a reason about that word - a word does not become spellable by being asked twice. The first reason here is about where the run starts instead, and remembering that one by its end word throws away the very run it is asking for: the run one line lower ends on the same word, so the reader offering it is turned away by an answer that was never about it. Measured over the whole repo on 2026-08-19, that was thirty-two runs refused for a reason none of them had.");
   let opening_is = await function_span_opening_is(f_name, address_from);
   if (opening_is) {
     let preamble = {
+      about: "start",
       address_from,
       address_to,
       why: "the run starts on the first line of work in the body, which is where the function keeps the things that are about itself rather than about the work - how many arguments it was called with, and the prose saying what it is for. A cut from there carries all of that away with it, so the function left behind stands with no count of its own arguments and nothing said about it, and the piece cut out is explained as though it were the whole. Would you like to start the run one line lower?",
