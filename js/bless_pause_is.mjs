@@ -1,6 +1,8 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { less_than } from "./less_than.mjs";
 export function bless_pause_is(fraction) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("Whether this is a moment somebody stands still instead of taking their step, drawn");
   ("from a number between nought and one.");
