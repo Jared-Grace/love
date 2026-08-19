@@ -1,3 +1,4 @@
+import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to_chapter_codes_browser.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_hash_book_code } from "./app_shared_bible_hash_book_code.mjs";
@@ -22,13 +23,16 @@ export async function app_shared_bible_chapters(context) {
   let book_name = property_get(r, "book_name");
   let book_code = property_get(r, "book_code");
   let e = ebible_folder_english();
-  let oc = app_shared_bible_chapter_open_curried(context);
-  let current = property_get(r, "chapter_code");
-  await app_shared_bible_chapters_card(
-    content,
-    book_name,
+  let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
     e,
     book_code,
+  );
+  let oc = app_shared_bible_chapter_open_curried(context);
+  let current = property_get(r, "chapter_code");
+  app_shared_bible_chapters_card(
+    content,
+    book_name,
+    chapter_codes,
     oc,
     current,
   );

@@ -1,3 +1,4 @@
+import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to_chapter_codes_browser.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
@@ -50,11 +51,15 @@ export async function app_shared_bible_choose_chapter(
   }
   async function chapters() {
     let current_chapter_code = "";
-    await app_shared_bible_chapters_card(
-      content,
-      book_name,
+    ("this reader is reading one version, so the chapters it offers are that version's own");
+    let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
       folder,
       book_code,
+    );
+    app_shared_bible_chapters_card(
+      content,
+      book_name,
+      chapter_codes,
       app_shared_bible_code_open,
       current_chapter_code,
     );
