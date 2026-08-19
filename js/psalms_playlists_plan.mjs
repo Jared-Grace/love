@@ -71,7 +71,7 @@ export async function psalms_playlists_plan(channel_id) {
       playlist_id: playlist_id,
       songs_wanted: order_wanted,
       songs_held: holds.length,
-      add: add,
+      add: songs_to_add,
       strangers: subtract(holds.length, kept.length),
       out_of_order: out_of_order,
     };
