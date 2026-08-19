@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_space } from "./text_split_space.mjs";
+import { list_size_assert } from "./list_size_assert.mjs";
+import { js_keyword_true } from "./js_keyword_true.mjs";
+import { list_get } from "./list_get.mjs";
+import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
+import { equal } from "./equal.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_tree_of_code(
   code,
 ) {
@@ -16,13 +23,18 @@ export function app_code_lesson_expression_choose_order_and_before_or_tree_of_co
     let truth = equal(word, word_true);
     return truth;
   }
+  let left_truth = truth_of(0);
+  let and_symbol = list_get(words, 1);
+  let middle_truth = truth_of(2);
+  let or_symbol = list_get(words, 3);
+  let right_truth = truth_of(4);
   let tree =
     app_code_lesson_expression_choose_order_and_before_or_expression_parts(
-      truth_of(0),
-      list_get(words, 1),
-      truth_of(2),
-      list_get(words, 3),
-      truth_of(4),
+      left_truth,
+      and_symbol,
+      middle_truth,
+      or_symbol,
+      right_truth,
     );
   return tree;
 }
