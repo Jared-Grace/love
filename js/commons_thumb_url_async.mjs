@@ -1,3 +1,4 @@
+import { object_property_names } from "./object_property_names.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 export async function commons_thumb_url_async(title, width) {
   "the address Wikimedia Commons serves a scaled copy of a named picture from, asked for over its own interface, or null when it will not say; the round trip is worth making because that address sits on the upload host, which grants a page permission to read the pixels back, whereas the Special:FilePath shortcut only redirects there and the permission is lost on the way";
@@ -15,7 +16,7 @@ export async function commons_thumb_url_async(title, width) {
     let response = await fetch(address);
     let body = await response.json();
     let pages = body.query.pages;
-    let keys = Object.keys(pages);
+    let keys = object_property_names(pages);
     let page = pages[keys[0]];
     let url = page.imageinfo[0].thumburl;
     return url;
