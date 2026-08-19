@@ -1,11 +1,10 @@
-import { bless_block_gaps } from "./bless_block_gaps.mjs";
+import { bless_block_alley_tiles } from "./bless_block_alley_tiles.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_map } from "./list_map.mjs";
 import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
-import { range } from "./range.mjs";
 import { subtract } from "./subtract.mjs";
 import { bless_sidewalk_depth } from "./bless_sidewalk_depth.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
@@ -39,23 +38,15 @@ export function bless_block(x, y) {
   ("the street would open every few games with water standing between the houses. They are");
   ("also the only way through the row, so paving them is what keeps the ground north of the");
   ("block reachable from the pavement in front of it.");
-  let r = bless_block_gaps(x, y);
-  let gaps = property_get(r, "gaps");
-  let walls = property_get(r, "walls");
-  let buildings = property_get(r, "buildings");
-  let building_x = property_get(r, "building_x");
-  let stride = property_get(r, "stride");
-  let count = property_get(r, "count");
-  let gap = property_get(r, "gap");
+  let r = bless_block_alley_tiles(x, y);
+  let alley_tiles = property_get(r, "alley_tiles");
+  let indexes_gap = property_get(r, "indexes_gap");
   let depth = property_get(r, "depth");
-  let width = property_get(r, "width");
-  let indexes_gap = range(gaps);
-  function alley_tiles(index) {
-    let at = building_x(index);
-    let alley_x = add(at, width);
-    let tiles = bless_tiles_rectangle(alley_x, y, gap, depth);
-    return tiles;
-  }
+  let gap = property_get(r, "gap");
+  let count = property_get(r, "count");
+  let stride = property_get(r, "stride");
+  let buildings = property_get(r, "buildings");
+  let walls = property_get(r, "walls");
   let alleys_each = list_map(indexes_gap, alley_tiles);
   let alleys = list_flat(alleys_each);
   let sidewalk_y = add(y, depth);
