@@ -20,12 +20,8 @@ export function app_g_verify_home_header(wrap, chapter_codes, chapter_code) {
   html_style_font_size(title, value7);
   html_bold_semi(title);
   html_margin_em(title, "0");
-  let hint = html_p_text(
+  app_g_verify_hint_p(
     wrap,
     "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
   );
-  app_shared_text_deemphasized(hint);
-  let value8 = app_g_verify_hint_font_size();
-  html_style_font_size(hint, value8);
-  html_margin_em(hint, "0");
 }

@@ -30,9 +30,5 @@ export function app_g_verify_home_asked_banner(wrap) {
     asked,
     ", which is not a chapter this bible has, so the chapter above is the one that was open last. A chapter is three letters for the book and two digits for the number, as in 1JN01.",
   ]);
-  let note = html_p_text(wrap, text);
-  app_shared_text_deemphasized(note);
-  let value = app_g_verify_hint_font_size();
-  html_style_font_size(note, value);
-  html_margin_em(note, "0");
+  app_g_verify_hint_p(wrap, text);
 }
