@@ -1,12 +1,11 @@
+import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
 import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
 import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
 import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
-import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
@@ -26,9 +25,9 @@ export async function app_shared_bible_home_generic(
   if (await app_shared_bible_chapter_set_default(context)) {
     return null;
   }
-  let hash = html_hash_object_get();
-  ("The same answer the chapter reader gives to a language code naming no bible we have, from the same function, so the two readers do not disagree about what a wrong link means.");
-  let unknown_shown = app_shared_bible_hash_unknown_shown_is(content, hash);
+  let r3 = app_shared_bible_home_generic_unknown_shown(content);
+  let unknown_shown = property_get(r3, "unknown_shown");
+  let hash = property_get(r3, "hash");
   if (unknown_shown) {
     return null;
   }
