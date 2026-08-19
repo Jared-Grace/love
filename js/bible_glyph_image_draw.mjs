@@ -13,6 +13,7 @@ export function bible_glyph_image_draw(parent, glyph_name, character) {
   "ONE MECHANISM COVERS TWO DIFFERENT FAILURES and that is why it is worth having rather than being a nicety. A glyph nobody has drawn artwork for yet has no file to fetch, and a phone whose emoji font is older than the character draws a blank box for it. The first is fixed by falling back to the font; the second is fixed by not needing the font at all. Between them they are most of the ways a reader loses a word.";
   "THE FALLBACK IS HIDDEN RATHER THAN ADDED AFTERWARDS, because a character added once the load has already failed appears a moment after the reader started reading the line, and every word after it moves. Both are in place before anything is fetched, so nothing on the page ever shifts.";
   "The picture is sized in EMS rather than pixels, so it grows with the text around it - the reader who made this Bible bigger meant the pictures too, and a picture fixed in pixels would be the one word on the page that ignored them.";
+  "ONLY THE HEIGHT IS SET AND THE WIDTH FOLLOWS IT, because the artwork is not promised to be square and nothing here knows the shape of a file it has not fetched. Setting both would silently stretch any picture that is not, and a stretched picture is worse than a missing one: it still reads as the word, so nobody looks twice at it.";
   let fallback = html_span_text_content(parent, character);
   html_style_set(fallback, "display", "none");
   let src = bible_glyph_image_source(glyph_name);
