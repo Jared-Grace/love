@@ -1,10 +1,9 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than } from "./less_than.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { round } from "./round.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_glyph_coverage_curve_step(r) {
   arguments_assert(arguments, 1);
@@ -29,12 +28,10 @@ export function bible_glyph_coverage_curve_step(r) {
       index = index + 1;
     }
     let share = divide(reached, occurrences_total);
-    let n = multiply(share, 1000);
-    let tenths = round(n);
+    let tenths = multiply_round(share, 1000);
     let percent = divide(tenths, 10);
     let share_drawn = divide(reached_drawn, occurrences_total);
-    let n3 = multiply(share_drawn, 1000);
-    let tenths_drawn = round(n3);
+    let tenths_drawn = multiply_round(share_drawn, 1000);
     let percent_drawn = divide(tenths_drawn, 10);
     list_add(curve, {
       words: step,
