@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { permission_replay_rows_split } from "./permission_replay_rows_split.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -30,7 +31,9 @@ export async function permission_replay_reading_checked() {
     written: true,
     days: property_get(split, "days"),
     checked: shown.length + shown_replayed.length,
-    solved_since: shown.length - standing.length + (shown_replayed.length - standing_replayed.length),
+    solved_since:
+      subtract(shown.length, standing.length) +
+      subtract(shown_replayed.length, standing_replayed.length),
     replayed: list_map(standing_replayed, permission_replay_report_row),
     proved_rows: list_map(standing, permission_replay_report_row),
   };

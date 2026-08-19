@@ -53,7 +53,6 @@ export function app_g_prayer_overlay() {
   });
   let drawn = g_verse_waiting_next();
   app_g_overlay_verse_add(card, drawn);
-  html_reflow_force(div);
-  html_style_opacity(div, "1");
+  html_reflow_opacity_full(div);
   return div;
 }
