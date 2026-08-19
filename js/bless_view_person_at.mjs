@@ -16,9 +16,9 @@ export function bless_view_person_at(view, x, y) {
   ("Nobody there is the ordinary answer rather than a fault. Most of the ground is empty,");
   ("and a tap on empty ground is how the player walks.");
   let people = bless_view_people(view);
-  function person_here(person) {
-    let px = property_get(person, "x");
-    let py = property_get(person, "y");
+  function person_here(someone) {
+    let px = property_get(someone, "x");
+    let py = property_get(someone, "y");
     let left = equal(px, x);
     let right = equal(py, y);
     let here = and(left, right);
