@@ -43,7 +43,7 @@ export function app_search_results_verse_button(
     html_display_block(div_verse);
     html_remove(b);
     let cb_text = html_button_copy_text();
-    let cb = app_shared_button_wide(div_verse, cb_text, copy);
+    app_shared_button_wide(div_verse, cb_text, copy);
     function lambda3() {
       "this button offers the whole chapter, so land in the chapter reader with this verse in view";
       let mode = app_shared_bible_mode_chapter();
