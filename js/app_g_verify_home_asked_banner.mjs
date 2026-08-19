@@ -1,13 +1,9 @@
+import { app_g_verify_hint_p } from "./app_g_verify_hint_p.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_verify_chapter_asked } from "./g_verify_chapter_asked.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_g_verify_hint_font_size } from "./app_g_verify_hint_font_size.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_margin_em } from "./html_margin_em.mjs";
 export function app_g_verify_home_asked_banner(wrap) {
   "The line above the passage saying the address named a chapter this bible could not have, so the page opened the last one instead. Painted only when that happened, and leaving nothing behind when it did not.";
   "A page that quietly opened something else would be the failure rather than the repair. The reader asked for one chapter and is looking at another, and without a word here the only thing they can conclude is that the tool is broken - which is worse than the wrong chapter, because a broken tool is not something they can fix and a mistyped link is.";
