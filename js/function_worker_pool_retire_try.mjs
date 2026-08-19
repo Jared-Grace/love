@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { function_worker_generation_holder } from "./function_worker_generation_holder.mjs";
@@ -31,7 +32,7 @@ export async function function_worker_pool_retire_try() {
   if (not_equal(second, 2)) {
     list_add(crossed, "the answer after the count went up");
   }
-  if (after === before) {
+  if (equal(after, before)) {
     list_add(crossed, "the pool, which was not replaced");
   }
   let retirements = property_list_map_property(before, "workers", "retired");
