@@ -1,11 +1,11 @@
 {
  "known": [
-  "app_bible",
-  "app_calendar",
   "app_ceb_bible_gloss_generate_upload",
   "app_original_bible_gloss_generate_upload",
   "list_add",
   "list_map",
-  "property_get"
+  "property_get",
+  "app_calendar",
+  "app_bible"
  ]
 }
