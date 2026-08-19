@@ -17,7 +17,7 @@ export async function function_inside_shapes(f_name, size) {
   ("The two neighbours over openings and endings ask a function for one shape each, which is what lets a whole repo be grouped by it. The cost is that they can only see a run touching an end. A run of four lines sitting in the middle of a long function touches neither, so a screen carrying the same four lines as another screen reads as two functions with nothing in common - and a long function is exactly where a run is most likely to be in the middle.");
   ("A function with less work in it than the run asked for has no run of this length and answers with nothing, the same way its neighbours do.");
   ("The line counting the arguments is left out of the work a run is taken from, the same way the two neighbours leave it out. The pass wrote it and every function of the same arity carries the same one, so a window holding it reports agreement nobody authored.");
-  ("A run that reads no name is passed over rather than answered for. Four tallies each set to zero are four tallies and not a helper - the names are what said which tally was which, and a shape has taken them away, so the only thing two such runs can be found to have in common is that both were written out. That is not a finding, and it cannot be acted on either: the run cannot be collapsed onto a name because there is nothing in it to name, and the record of known groups only ever shrinks, so a group like this once reported could never be got rid of.");
+  ("A run nothing could be done about is passed over rather than answered for. Four tallies each set to zero are four tallies and not a helper - the names are what said which tally was which, and a shape has taken them away, so the only thing two such runs can be found to have in common is that both were written out. That is not a finding, and it cannot be acted on either: the run cannot be collapsed onto a name because there is nothing in it to name, and the record of known groups only ever shrinks, so a group like this once reported could never be got rid of. Which runs those are is decided next door, because the two neighbours over openings and endings have to pass over exactly the same ones.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
   let working =
@@ -34,8 +34,8 @@ export async function function_inside_shapes(f_name, size) {
       break;
     }
     let run = list_slice_count(working, index, size);
-    let nameless = js_statements_names_outside_none_is(run);
-    if (nameless) {
+    let worthless = js_statements_grouping_worthless_is(run);
+    if (worthless) {
       index = add_1(index);
       continue;
     }
