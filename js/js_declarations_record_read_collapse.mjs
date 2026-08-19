@@ -4,7 +4,6 @@ import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
 import { js_rebound_names } from "./js_rebound_names.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function js_declarations_record_read_collapse(ast) {
   arguments_assert(arguments, 1);
   ("Take out every line that gathers names into a record which nothing then wants except to read those same names back out again, and answer with the records that went.");
