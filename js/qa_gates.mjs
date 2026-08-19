@@ -23,6 +23,7 @@ import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_ga
 import { machine_path_literals_gate_run } from "./machine_path_literals_gate_run.mjs";
 import { hook_memory_root_gate_run } from "./hook_memory_root_gate_run.mjs";
 import { firebase_storage_list_url_cases_gate_run } from "./firebase_storage_list_url_cases_gate_run.mjs";
+import { http_error_message_absent_is_cases_gate_run } from "./http_error_message_absent_is_cases_gate_run.mjs";
 import { app_shared_description_gate_run } from "./app_shared_description_gate_run.mjs";
 import { app_shared_card_gate_run } from "./app_shared_card_gate_run.mjs";
 import { bible_interlinear_base_dropped_gate_run } from "./bible_interlinear_base_dropped_gate_run.mjs";
@@ -540,6 +541,7 @@ export function qa_gates() {
     text_replace_once_cases_gate_run,
     word_root_cases_gate_run,
     firebase_storage_list_url_cases_gate_run,
+    http_error_message_absent_is_cases_gate_run,
     bible_interlinear_base_dropped_gate_run,
     text_split_comma_nested_cases_gate_run,
     text_split_outside_quotes_cases_gate_run,
