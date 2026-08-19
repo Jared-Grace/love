@@ -9,8 +9,8 @@ export async function function_lift_candidates_generic(f_name, fn_readings) {
   arguments_assert(arguments, 2);
   async function ranked_of(ast, nested) {
     let readings = await fn_readings(ast, nested);
-    let ranked = function_lift_candidate_rows(nested, readings);
-    return ranked;
+    let ordered = function_lift_candidate_rows(nested, readings);
+    return ordered;
   }
   let ranked = await function_ast_nested_named_generic(f_name, ranked_of);
   return ranked;
