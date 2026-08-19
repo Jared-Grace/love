@@ -1,3 +1,7 @@
+import { app_code_lesson_expression_choose_order_both_sides_title_name_id } from "./app_code_lesson_expression_choose_order_both_sides_title_name_id.mjs";
+import { app_code_lesson_expression_choose_order_both_sides_questions } from "./app_code_lesson_expression_choose_order_both_sides_questions.mjs";
+import { app_code_lesson_expression_choose_order_mixed_generic } from "./app_code_lesson_expression_choose_order_mixed_generic.mjs";
+import { app_code_lesson_expression_choose_order_both_sides_above } from "./app_code_lesson_expression_choose_order_both_sides_above.mjs";
 export function app_code_lesson_expression_choose_order_both_sides() {
   "choosing which part of a line to solve and then what that part comes to, on a line with arithmetic on each side of a comparison: 3 + 4 === 5 + 2, choose the 3 + 4, choose 7, then the 5 + 2, choose 7, then the ===, choose true";
   "The same two presses on the same engine as the step-at-a-time lessons behind it, with one thing changed: the line holds both kinds of operator at once. A learner has pressed a line of arithmetic and been answered with numbers; here two presses are answered with numbers and the third with a true or a false.";
