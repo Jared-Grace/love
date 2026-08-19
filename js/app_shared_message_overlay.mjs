@@ -52,8 +52,7 @@ export function app_shared_message_overlay(emoji_text, message) {
     "text-align": "center",
     "line-height": "1.5",
   });
-  html_reflow_force(div);
-  html_style_opacity(div, "1");
+  html_reflow_opacity_full(div);
   function dismiss() {
     html_remove(div);
   }
