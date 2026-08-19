@@ -1,3 +1,4 @@
+import { html_style_width_fit_content } from "./html_style_width_fit_content.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -14,7 +15,7 @@ export function html_buttons_biblehub_verse_grid(parent) {
   html_display_grid(grid);
   html_style_set(grid, "grid-template-columns", "auto auto");
   html_align_items_center(grid);
-  html_style_set(grid, "width", "fit-content");
+  html_style_width_fit_content(grid);
   let gap = app_shared_spaced_small_gap();
   html_style_gap(grid, gap);
   html_style_margin(grid, "0 auto");
