@@ -1,3 +1,4 @@
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_statements_call_only } from "./js_statements_call_only.mjs";
 import { js_call_arguments_named_in_order_is } from "./js_call_arguments_named_in_order_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -40,12 +41,10 @@ export function js_function_forwarding_target(node) {
   if (equal(call, null)) {
     return null;
   }
-  let callee = property_get(call, "callee");
-  let callee_is = js_node_type_is(callee, "Identifier");
-  if (not(callee_is)) {
+  let target = js_call_callee_name_try(call);
+  if (equal(target, null)) {
     return null;
   }
-  let target = property_get(callee, "name");
   let param_is = list_includes(param_names, target);
   if (param_is) {
     return null;
