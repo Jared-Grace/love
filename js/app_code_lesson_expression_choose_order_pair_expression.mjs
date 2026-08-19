@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_pair_expression_parts } from "./app_code_lesson_expression_choose_order_pair_expression_parts.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -12,6 +13,7 @@ import { ternary } from "./ternary.mjs";
 export function app_code_lesson_expression_choose_order_pair_expression(
   want_true,
 ) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("two comparisons of two numbers each, compared against one another, built as a shape so the quiz can work one operator out at a time: (3 === 5) === (5 === 3)");
   ("Three operators, and the first line in this track to have TWO parts that may be solved first. Everything before it had one right press at every moment; here either comparison may go, in either order, and the line comes to the same answer whichever way it is taken. That is the new thing, and it is why this line comes after the one with a comparison beside a true or false rather than instead of it.");
