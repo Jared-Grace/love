@@ -1,7 +1,6 @@
-import { round } from "./round.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { less_than } from "./less_than.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 export function image_luma_pixels_mean(pixels) {
   "the average brightness of a run of red green blue alpha bytes, from 0 for black to 255 for white, weighting the three colours the way an eye weighs them rather than equally";
@@ -20,7 +19,6 @@ export function image_luma_pixels_mean(pixels) {
     let r = 0;
     return r;
   }
-  let n = divide(total, count);
-  let mean = round(n);
+  let mean = divide_round(total, count);
   return mean;
 }
