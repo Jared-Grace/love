@@ -28,12 +28,13 @@ export function app_code_lesson_operators_dot_numbers() {
   function above(root) {
     let operator_name_math_articled = text_articled_pad_space(operator_name);
     let c4 = app_code_container_light_blue(root);
+    let combined = text_combine_multiple([
+      "In JS, ",
+      operator_name_math_articled,
+      " ",
+    ]);
     html_div_cycle_code(c4, [
-      text_combine_multiple([
-        "In JS, ",
-        operator_name_math_articled,
-        " ",
-      ]),
+      combined,
       operator,
       " can be used in numbers as a decimal point:",
     ]);
