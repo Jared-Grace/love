@@ -1,3 +1,4 @@
+import { app_shared_bible_read_unknown_shown } from "./app_shared_bible_read_unknown_shown.mjs";
 import { app_shared_bible_reference_hash_english } from "./app_shared_bible_reference_hash_english.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
@@ -10,7 +11,6 @@ import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_ver
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_shared_bible_hash_unknown_shown_is } from "./app_shared_bible_hash_unknown_shown_is.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
@@ -28,7 +28,6 @@ import { null_is } from "./null_is.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
@@ -39,15 +38,15 @@ import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_shared_bible_read(context, verse_action) {
   let r3 = app_shared_bible_read_frame(context);
-  let help_text = property_get(r3, "help_text");
-  let max = property_get(r3, "max");
-  let t = property_get(r3, "t");
-  let bar = property_get(r3, "bar");
-  let content = property_get(r3, "content");
-  let count_status = property_get(r3, "count_status");
-  let hash = html_hash_object_get();
-  ("A language code in the link that names no bible we have is answered here rather than read past. Read past, it was dropped without a word and the chapter opened in whatever languages happened to be left - so somebody sent a link with one letter wrong read the wrong bible and nothing anywhere said so. It is the same screen the sent-a-verse page shows, from the same function, so a wrong link reads the same whichever bible surface it lands on.");
-  let unknown_shown = app_shared_bible_hash_unknown_shown_is(content, hash);
+  let r6 = app_shared_bible_read_unknown_shown(r3);
+  let unknown_shown = property_get(r6, "unknown_shown");
+  let hash = property_get(r6, "hash");
+  let count_status = property_get(r6, "count_status");
+  let content = property_get(r6, "content");
+  let bar = property_get(r6, "bar");
+  let t = property_get(r6, "t");
+  let max = property_get(r6, "max");
+  let help_text = property_get(r6, "help_text");
   if (unknown_shown) {
     return;
   }
