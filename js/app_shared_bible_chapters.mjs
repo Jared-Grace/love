@@ -1,10 +1,12 @@
-import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to_chapter_codes_browser.mjs";
+import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
+import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
+import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
+import { ebible_index_flat_book_chapter_codes } from "./ebible_index_flat_book_chapter_codes.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_hash_book_code } from "./app_shared_bible_hash_book_code.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { app_shared_bible_screen_home_set } from "./app_shared_bible_screen_home_set.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_chapters_before } from "./app_shared_bible_chapters_before.mjs";
 import { app_shared_bible_chapter_open_curried } from "./app_shared_bible_chapter_open_curried.mjs";
@@ -22,11 +24,11 @@ export async function app_shared_bible_chapters(context) {
   let content = property_get(r, "content");
   let book_name = property_get(r, "book_name");
   let book_code = property_get(r, "book_code");
-  let e = ebible_folder_english();
-  let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
-    e,
-    book_code,
-  );
+  ("only the chapters of this book the reader's own bibles have between them, on the same footing as the book list before it: one of the chosen bibles holding a chapter is enough to offer it, and a chapter none of them holds is left off rather than opened on nothing.");
+  let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
+  let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
+  let list = await ebible_index_flat_chosen(bible_folders);
+  let chapter_codes = ebible_index_flat_book_chapter_codes(list, book_code);
   let oc = app_shared_bible_chapter_open_curried(context);
   let current = property_get(r, "chapter_code");
   app_shared_bible_chapters_card(
