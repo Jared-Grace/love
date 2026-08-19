@@ -11,11 +11,12 @@ export function gloss_roots_disagreeing_classes_shown(r2, sample_size) {
   let classes = property_get(r4, "classes");
   let count = Number(sample_size);
   let shown = list_take(classes, count);
-  return {
+  let r = {
     classes_total,
     silent_total,
     by_edits,
     by_relation,
     shown,
   };
+  return r;
 }
