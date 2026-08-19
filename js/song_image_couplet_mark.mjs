@@ -10,10 +10,13 @@ export function song_image_couplet_mark(state, n) {
     done = done + 1;
   }
   if (equal(done, 0)) {
-    return "";
+    let r = "";
+    return r;
   }
   if (equal(done, 1)) {
-    return "·";
+    let r2 = "·";
+    return r2;
   }
-  return "✓";
+  let r3 = "✓";
+  return r3;
 }
