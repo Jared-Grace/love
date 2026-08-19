@@ -50,7 +50,7 @@ export function app_replace_rule_set_start_indices(context, root) {
   ]);
   let div_proof = null;
   let start_indices = list_to_indices(start);
-  return {
+  let r = {
     goals,
     goals_count,
     goal_index,
@@ -67,4 +67,5 @@ export function app_replace_rule_set_start_indices(context, root) {
     div_proof,
     start_indices,
   };
+  return r;
 }
