@@ -22,7 +22,8 @@ export async function qa_gate_timings_write() {
     let timed = await qa_snapshot_timed_solo_told();
     return timed;
   }
-  let told = await lock_wait(fn_name("qa_gate_run_unlocked"), lambda, who);
+  let lock_name = fn_name("qa_gate_run_unlocked");
+  let told = await lock_wait(lock_name, lambda, who);
   let said = property_get(told, "said");
   let began = said.lastIndexOf("\n{");
   if (less_than(began, 0)) {
