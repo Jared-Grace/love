@@ -6,7 +6,6 @@ import { function_span_cut_pass } from "./function_span_cut_pass.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function functions_span_cut_all() {
