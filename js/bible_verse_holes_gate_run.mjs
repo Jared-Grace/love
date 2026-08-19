@@ -1,14 +1,10 @@
+import { bible_shipped_record_checked } from "./bible_shipped_record_checked.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { bible_verse_holes_entry_empty_is } from "./bible_verse_holes_entry_empty_is.mjs";
-import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_holes_path } from "./bible_verse_holes_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_difference } from "./list_difference.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -21,13 +17,16 @@ export async function bible_verse_holes_gate_run() {
   ("So the answer is measured for every bible on the list and kept in a file, and this refuses a bible that is on the list and not in the file. The holes themselves are left in the record rather than refused, because a bible numbering its verses its own way is not a fault to be fixed by failing a build - it is a thing somebody has to read and decide about. What is refused is not knowing.");
   ("This reads only the file. The measuring reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run.");
   let path = bible_verse_holes_path();
-  let recorded = await file_read_json(path);
-  let bibles = property_get(recorded, "bibles");
-  let shipped = ebible_bible_folders_sorted();
-  let property_name = bible_folder_key();
-  let measured = list_map_property(bibles, property_name);
-  let unmeasured = list_difference(shipped, measured);
-  let departed = list_difference(measured, shipped);
+  let f_name = fn_name("bible_verse_holes_write");
+  let record = await bible_shipped_record_checked(
+    path,
+    f_name,
+    "whether it holds the verses a page will ask it for",
+  );
+  let bibles = property_get(record, "bibles");
+  let shipped = property_get(record, "shipped");
+  let unmeasured = property_get(record, "unmeasured");
+  let departed = property_get(record, "departed");
   ("A bible nothing was asked of is told apart from one asked and found whole, because only the second is a fact about a bible. The first is an errand that failed, and reading it as a bible without holes is the mistake a hand measurement of the same shape already made once with Urdu.");
   function lambda(entry) {
     let none = property_equals(entry, "asked", 0);
@@ -44,24 +43,6 @@ export async function bible_verse_holes_gate_run() {
     return any;
   }
   let unreachable = list_filter(bibles, lambda3);
-  let f_name = fn_name("bible_verse_holes_write");
-  list_empty_is_assert_json(unmeasured, {
-    hint: text_combine_multiple([
-      "a bible is shipped that has never been asked whether it holds the verses a page will ask it for - ask them all with ",
-      f_name,
-      ", which reaches the network and rewrites the record",
-    ]),
-    unmeasured,
-  });
-  let f_name2 = fn_name("bible_verse_holes_write");
-  list_empty_is_assert_json(departed, {
-    hint: text_combine_multiple([
-      "the record holds a bible this repo no longer ships - write it again with ",
-      f_name2,
-      " so what is checked is what is here",
-    ]),
-    departed,
-  });
   let f_name3 = fn_name("ebible_folder_english");
   let f_name4 = fn_name("bible_verse_holes_write");
   list_empty_is_assert_json(unasked, {
