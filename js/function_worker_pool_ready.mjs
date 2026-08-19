@@ -1,4 +1,4 @@
-import { pool_retire } from "./pool_retire.mjs";
+import { function_worker_pool_retire } from "./function_worker_pool_retire.mjs";
 import { pool_start } from "./pool_start.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ export function function_worker_pool_ready() {
   if (stale) {
     ("Retired before the new one is put in place, because retiring reads which");
     ("pool is current and it is the OLD one that has to be drained.");
-    pool_retire();
+    function_worker_pool_retire();
     current = pool_start();
     held.current = current;
   }
