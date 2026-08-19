@@ -1,10 +1,9 @@
+import { list_single_or_null } from "./list_single_or_null.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_chapter_code_to_name_code } from "./ebible_chapter_code_to_name_code.mjs";
 import { ebible_version_readaloud_download_path } from "./ebible_version_readaloud_download_path.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter_text_includes } from "./list_filter_text_includes.mjs";
-import { list_single } from "./list_single.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ebible_chapter_readaloud_file_or_null(
   bible_folder,
@@ -21,10 +20,6 @@ export async function ebible_chapter_readaloud_file_or_null(
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = text_combine_multiple(["_", book_code, "_", name_code, "_"]);
   let found = list_filter_text_includes(files, search);
-  let unread = list_empty_is(found);
-  if (unread) {
-    return null;
-  }
-  let only = list_single(found);
+  let only = list_single_or_null(found);
   return only;
 }
