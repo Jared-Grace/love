@@ -16,33 +16,10 @@ export function app_g_prayer_overlay() {
     app_g_overlay_fonts.name,
     " (shared with the dove)");
   let fonts = app_g_overlay_fonts();
-  let div = html_body_div();
-  html_style_assign(div, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: html_viewport_width_full(),
-    height: html_viewport_height_full(),
-    background: "rgba(0, 0, 0, 0.82)",
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "safe center",
-    "align-items": "center",
-    "overflow-y": "auto",
-    gap: "1.5rem",
-    "z-index": "1000",
-    opacity: "0",
-    transition: "opacity 0.3s ease",
-  });
   let text = emoji_pray();
-  let emoji = html_p_text(div, text);
-  html_style_assign(emoji, {
-    "font-size": fonts.emoji,
-    margin: "0",
-  });
-  app_g_emoji_glow_apply(emoji);
-  let card = html_div(div);
-  app_g_overlay_card_style(card);
+  let cover = app_g_overlay_cover_emoji_card("rgba(0, 0, 0, 0.82)", text);
+  let div = property_get(cover, "div");
+  let card = property_get(cover, "card");
   let waiting_text = html_p_text(card, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
     color: "white",
