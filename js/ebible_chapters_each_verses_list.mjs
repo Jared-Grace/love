@@ -1,3 +1,5 @@
+import { ebible_chapter_page_exists } from "./ebible_chapter_page_exists.mjs";
+import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
@@ -23,6 +25,13 @@ export async function ebible_chapters_each_verses_list(
       bible_folder,
       chapter_code,
     });
+    ("A chapter the book index links but the download never shipped a page for is passed over here too, and for the same reason as the paragraph above allows: it is asked of the disk each time rather than read off a list, so the chapter comes back on its own the moment its page is there. What is refused is a name written down, not a gap noticed.");
+    ("The gap itself is not lost by passing over it. A chapter with no page is counted among the unread ones by the reading that lays lines against marks, and that number is written down and watched, so a download that arrived short shows up as a number rising rather than as silence.");
+    let shipped = await ebible_chapter_page_exists(bible_folder, chapter_code);
+    let unshipped = not(shipped);
+    if (unshipped) {
+      return;
+    }
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
     ebible_verses_get = ternary(any, ebible_verses, ebible_verses_readaloud);
