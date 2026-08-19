@@ -28,8 +28,8 @@ export function app_code_expression_value_decoys(current, node) {
   let candidates = [slipped, whole];
   function wrong_is(candidate) {
     let same = equal(candidate, value);
-    let wrong = not(same);
-    return wrong;
+    let differs = not(same);
+    return differs;
   }
   let wrong = list_filter(candidates, wrong_is);
   let decoys = list_unique(wrong);
