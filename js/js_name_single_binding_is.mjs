@@ -20,6 +20,8 @@ export function js_name_single_binding_is(ast, name) {
   let binder = list_first(scopes);
   let mine = js_identifier_nodes_bound_by(ast, name, binder);
   let mentions = js_identifiers_referenced_named_nodes(ast, name);
-  let same_is = equal(list_size(mine), list_size(mentions));
+  let left = list_size(mine);
+  let right = list_size(mentions);
+  let same_is = equal(left, right);
   return same_is;
 }

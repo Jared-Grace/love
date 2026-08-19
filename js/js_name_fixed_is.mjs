@@ -2,7 +2,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_single_binding_is } from "./js_name_single_binding_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-
 export function js_name_fixed_is(ast, rebound, name) {
   arguments_assert(arguments, 3);
   ("Whether this name means one thing everywhere the file spells it and is never afterwards pointed at something else.");

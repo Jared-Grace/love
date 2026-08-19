@@ -8,7 +8,6 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function js_record_name_entries_try(node) {
   arguments_assert(arguments, 1);
   ("The entries of a record written out right here, each read as a fixed name it is filed under and the plain name standing as its value, and nothing at all when even one entry is not that shape.");
@@ -40,7 +39,10 @@ export function js_record_name_entries_try(node) {
       return;
     }
     list_add(keys, key);
-    list_add(rows, { key, name });
+    list_add(rows, {
+      key,
+      name,
+    });
   }
   each(entries, entry_each);
   if (not(plain_is)) {
