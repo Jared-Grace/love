@@ -1,3 +1,5 @@
+import { folder_exists } from "./folder_exists.mjs";
+import { not } from "./not.mjs";
 import { list_single_or_null } from "./list_single_or_null.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_chapter_code_to_name_code } from "./ebible_chapter_code_to_name_code.mjs";
@@ -14,7 +16,12 @@ export async function ebible_chapter_readaloud_file_or_null(
   "Where one chapter of a bible is written out for reading aloud, or nothing when that bible is not read aloud there.";
   "Nothing is a real answer here rather than a fault. A read-aloud edition is one gift per translation and it need not cover every chapter: the Romanian bible is read aloud everywhere except in a hundred and seventeen of the psalms, which are simply not in it. Insisting on a file stopped the reading of every remaining translation at that psalm.";
   "Asked of the folder rather than of a list of what is expected, so a translation that gains chapters later starts answering for them with nothing edited.";
+  "A TRANSLATION READ ALOUD NOWHERE HAS NO FOLDER AT ALL, and that is the fullest form of the nothing this promises rather than the one exception to it. Most of what eBible gives away was never recorded by anybody. Reading the folder anyway threw, so the whole of a rebuild stopped at the first such translation - and the ones behind it were never reached, which is the failure the paragraph above already describes one chapter at a time.";
   let folder_path = ebible_version_readaloud_download_path(bible_folder);
+  let recorded = await folder_exists(folder_path);
+  if (not(recorded)) {
+    return null;
+  }
   let files = await folder_read_paths_async(folder_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
