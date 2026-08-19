@@ -11,12 +11,13 @@ import { list_remove } from "./list_remove.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { text_numbered_is } from "./text_numbered_is.mjs";
 export function js_declarations_name_only_collapse(ast) {
   arguments_assert(arguments, 1);
   ("Take out every line that gives a second name to something already named, and point everything that read the second name at the first.");
   ("A line of this shape says nothing. It is what a piece moved out and then put back leaves behind - the piece hands its answer back, the line receiving it binds a name, and the name the piece itself used is still standing beside it. Two names for one value, and a reader has to hold both to follow either.");
   ("Three things are asked before a line goes, and each one is a way this could be silently wrong. Neither name may ever be pointed somewhere else, or the two would stop meaning the same thing partway down. Each name must mean one thing everywhere the file spells it, because the change is made wherever the word appears and a word spelled in two scopes is two words. And the two must not already be the same word, which is a line nothing can be learned from.");
-  ("The name kept is the one the value already had, not the one the line was giving it. That one is older, so every mention of it is untouched and the change lands only on the mentions of the name going away.");
+  ("The name kept is the one the value already had, not the one the line was giving it, because that one is older and every mention of it is then untouched. The one exception is a word with a number counted into it standing beside a word without one. A number in a word was put there by a pass that needed the word not to clash, so it says which one this is and nothing else, and keeping it over a word somebody chose would trade a line away for a name nothing can be learned from. Either direction is as safe as the other - both names were already asked the same three questions - so the choice is free and is made on which name reads better.");
   ("The list is asked again after each line goes, because taking one out can make the next one askable - a name that meant two things while both lines stood may mean one thing once the first has gone. It stops when a whole pass moves nothing.");
   let collapsed = [];
   let going = true;
