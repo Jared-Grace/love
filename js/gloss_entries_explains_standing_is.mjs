@@ -2,7 +2,7 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_explains_placed } from "./gloss_explains_placed.mjs";
+import { gloss_values_placed } from "./gloss_values_placed.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_all_is } from "./list_all_is.mjs";
@@ -35,7 +35,7 @@ export function gloss_entries_explains_standing_is(entries, explains) {
     let same = equal(held, explain);
     return same;
   }
-  let placed_list = gloss_explains_placed(explains);
+  let placed_list = gloss_values_placed(explains);
   let r = list_all_is(placed_list, placed_standing_is);
   return r;
 }
