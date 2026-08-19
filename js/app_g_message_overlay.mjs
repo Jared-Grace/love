@@ -56,8 +56,7 @@ export function app_g_message_overlay(
     "text-align": "center",
     "text-shadow": "0 0 0.2em rgba(255, 255, 255, 0.7)",
   });
-  html_reflow_force(div);
-  html_style_opacity(div, "1");
+  html_reflow_opacity_full(div);
   function dismiss() {
     html_remove(div);
     on_dismiss();
