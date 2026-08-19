@@ -23,7 +23,7 @@ export async function machine_path_literals_gate_run() {
   let files = property_get(walked, "files");
   let sites = property_get(walked, "sites");
   function allowed_not_is(site) {
-    let b = property_in_list_not("f_name", site, names);
+    let b = property_in_list_not(site, "f_name", names);
     return b;
   }
   let left = list_filter(sites, allowed_not_is);
