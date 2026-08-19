@@ -37,106 +37,38 @@ export async function app_g_verify_home(context) {
   let view2 = property_get(r32, "view");
   let chapter_codes2 = property_get(r32, "chapter_codes");
   let chapter_code2 = property_get(r32, "chapter_code");
-  let storage_key2 = property_get(r32, "storage_key");
+  let storage_key = property_get(r32, "storage_key");
   let selected_key2 = property_get(r32, "selected_key");
   let advanced_for2 = property_get(r32, "advanced_for");
   let chapter_advance_armed2 = property_get(r32, "chapter_advance_armed");
   let shown_json2 = property_get(r32, "shown_json");
   let poll_timer3 = property_get(r32, "poll_timer");
   let chapter3 = property_get(r32, "chapter");
-  let r22 = {
-    r3: r32,
-    view: view2,
-    chapter_codes: chapter_codes2,
-    chapter_code: chapter_code2,
-    storage_key: storage_key2,
-    selected_key: selected_key2,
-    advanced_for: advanced_for2,
-    chapter_advance_armed: chapter_advance_armed2,
-    shown_json: shown_json2,
-    poll_timer: poll_timer3,
-    chapter: chapter3,
-  };
-  let r42 = r22;
-  let chapter2 = property_get(r42, "chapter");
-  let poll_timer2 = property_get(r42, "poll_timer");
-  let shown_json3 = property_get(r42, "shown_json");
-  let chapter_advance_armed3 = property_get(r42, "chapter_advance_armed");
-  let advanced_for3 = property_get(r42, "advanced_for");
-  let selected_key3 = property_get(r42, "selected_key");
-  let storage_key3 = property_get(r42, "storage_key");
-  let chapter_code3 = property_get(r42, "chapter_code");
-  let chapter_codes3 = property_get(r42, "chapter_codes");
-  let view3 = property_get(r42, "view");
-  let r33 = property_get(r42, "r3");
-  let status2 = property_get(r33, "status");
-  let r6 = {
-    chapter: chapter2,
-    poll_timer: poll_timer2,
-    shown_json: shown_json3,
-    chapter_advance_armed: chapter_advance_armed3,
-    advanced_for: advanced_for3,
-    selected_key: selected_key3,
-    storage_key: storage_key3,
-    chapter_code: chapter_code3,
-    chapter_codes: chapter_codes3,
-    view: view3,
-    r3: r33,
-    status: status2,
-  };
-  let r52 = r6;
-  let status3 = property_get(r52, "status");
-  let r34 = property_get(r52, "r3");
-  let view4 = property_get(r52, "view");
-  let chapter_codes4 = property_get(r52, "chapter_codes");
-  let chapter_code4 = property_get(r52, "chapter_code");
-  let storage_key4 = property_get(r52, "storage_key");
-  let selected_key4 = property_get(r52, "selected_key");
-  let advanced_for4 = property_get(r52, "advanced_for");
-  let chapter_advance_armed4 = property_get(r52, "chapter_advance_armed");
-  let shown_json4 = property_get(r52, "shown_json");
-  let r7 = {
-    r5: r52,
-    status: status3,
-    r3: r34,
-    view: view4,
-    chapter_codes: chapter_codes4,
-    chapter_code: chapter_code4,
-    storage_key: storage_key4,
-    selected_key: selected_key4,
-    advanced_for: advanced_for4,
-    chapter_advance_armed: chapter_advance_armed4,
-    shown_json: shown_json4,
-  };
-  let r4 = r7;
-  let shown_json = property_get(r4, "shown_json");
-  let chapter_advance_armed = property_get(r4, "chapter_advance_armed");
-  let advanced_for = property_get(r4, "advanced_for");
-  let selected_key = property_get(r4, "selected_key");
-  let storage_key = property_get(r4, "storage_key");
-  let chapter_code = property_get(r4, "chapter_code");
-  let chapter_codes = property_get(r4, "chapter_codes");
-  let view = property_get(r4, "view");
-  let r3 = property_get(r4, "r3");
-  let status = property_get(r4, "status");
-  let r5 = property_get(r4, "r5");
-  let poll_timer = property_get(r5, "poll_timer");
-  let chapter = property_get(r5, "chapter");
-  let chapter_state = property_get(r3, "chapter_state");
+  let status2 = property_get(r32, "status");
+  let shown_json = shown_json2;
+  let chapter_advance_armed = chapter_advance_armed2;
+  let advanced_for = advanced_for2;
+  let selected_key = selected_key2;
+  let chapter_codes = chapter_codes2;
+  let view = view2;
+  let status = status2;
+  let poll_timer = poll_timer3;
+  let chapter = chapter3;
+  let chapter_state = property_get(r32, "chapter_state");
   async function initial_load() {
     let f_name = fn_name("g_sermon_write_read");
-    chapter = await api_read_or(f_name, [chapter_code], {
-      chapter_code,
+    chapter = await api_read_or(f_name, [chapter_code2], {
+      chapter_code: chapter_code2,
       passages: [],
     });
     let f_name2 = fn_name("g_verify_status_read");
-    status = await api_read_or(f_name2, [chapter_code], {
+    status = await api_read_or(f_name2, [chapter_code2], {
       busy: false,
       verse: "",
       note: "",
     });
     let f_name3 = fn_name("g_verify_chapter_next");
-    chapter_state = await api_read_or(f_name3, [chapter_code], {
+    chapter_state = await api_read_or(f_name3, [chapter_code2], {
       approved: "",
       latest: null,
       next: null,
@@ -149,9 +81,9 @@ export async function app_g_verify_home(context) {
     chapter_codes = property_get(object, "chapters");
   }
   await html_loading(initial_load);
-  let b2 = list_includes(chapter_codes, chapter_code);
+  let b2 = list_includes(chapter_codes, chapter_code2);
   if (not(b2)) {
-    chapter_codes = chapter_codes.concat([chapter_code]).sort();
+    chapter_codes = chapter_codes.concat([chapter_code2]).sort();
   }
   await app_g_verify_home_document(
     render,
@@ -196,7 +128,7 @@ export async function app_g_verify_home(context) {
     let edge_gap = app_shared_content_edge_gap();
     html_style_padding_x(wrap, edge_gap);
     html_style_padding_y(wrap, "2em");
-    app_g_verify_home_header(wrap, chapter_codes, chapter_code);
+    app_g_verify_home_header(wrap, chapter_codes, chapter_code2);
     app_g_verify_home_busy_banner(busy, status_shown, status_verse, wrap);
     view = null;
     let verse_buttons = {};
@@ -214,7 +146,7 @@ export async function app_g_verify_home(context) {
         view,
         scripture,
         lines,
-        chapter_code,
+        chapter_code2,
         selected_key,
         on_approved,
       );
@@ -292,7 +224,7 @@ export async function app_g_verify_home(context) {
   async function refresh() {
     let r2 = await app_g_verify_home_refresh(
       poll,
-      chapter_code,
+      chapter_code2,
       chapter_advance_armed,
       shown_json,
       render,
