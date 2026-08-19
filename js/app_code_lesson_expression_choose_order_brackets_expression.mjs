@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_expression_choose_order_brackets_expression_parts } from "./app_code_lesson_expression_choose_order_brackets_expression_parts.mjs";
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_brackets_expression(
   want_true,
 ) {
@@ -19,7 +19,7 @@ export function app_code_lesson_expression_choose_order_brackets_expression(
   let inner = app_code_operator_truths_wanted(or_symbol, or_value);
   let inner_left_truth = list_get(inner, 0);
   let inner_right_truth = list_get(inner, 1);
-  let tree = app_code_lesson_expression_choose_order_brackets_expression_parts(
+  let tree = app_code_expression_node_right_operator_first(
     left_truth,
     and_symbol,
     inner_left_truth,
