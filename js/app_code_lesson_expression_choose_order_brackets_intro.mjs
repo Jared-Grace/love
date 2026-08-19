@@ -7,7 +7,8 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_brackets_intro(parent) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
-  ("Three sentences and no more: the brackets can now go round a || , that puts the || first, and putting it first is a change rather than a restatement. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");
+  ("Four sentences and no more: the brackets can now go round a || , that puts the || first, putting it first is a change rather than a restatement, and the pair can sit at either end. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");
+  ("The last says in words what the questions do anyway, and it is worth saying because a learner who met the brackets at one end first would otherwise have every reason to think that is where they live. It is the sentence the first brackets lesson ended on, in the same words, about a * rather than an && .");
   ("Neither of the two recalled rules is said again here. This card is only ever read straight after them, and a card that repeated them would be asking the learner to check whether the words had changed.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
@@ -28,4 +29,12 @@ export function app_code_lesson_expression_choose_order_brackets_intro(parent) {
     and_symbol,
   ]);
   html_div_cycle_code(parent, ["So the brackets change which one goes first"]);
+  html_div_cycle_code(parent, [
+    "The ",
+    left_bracket,
+    " and ",
+    right_bracket,
+    " can be on either side of the ",
+    and_symbol,
+  ]);
 }

@@ -1,8 +1,4 @@
 import { error_json } from "./error_json.mjs";
-import { or } from "./or.mjs";
-import { null_is } from "./null_is.mjs";
-import { undefined_is } from "./undefined_is.mjs";
-import { error_json } from "./error_json.mjs";
 import { less_than } from "./less_than.mjs";
 import { null_is } from "./null_is.mjs";
 import { or } from "./or.mjs";
@@ -23,7 +19,9 @@ export function path_join(segments) {
   let isAbsolute = false;
   for (let i = 0; less_than(i, segments.length); i++) {
     let seg = segments[i];
-    let absent = or(null_is(seg), undefined_is(seg));
+    let left = null_is(seg);
+    let right = undefined_is(seg);
+    let absent = or(left, right);
     if (absent) {
       error_json({
         hint: "one of the pieces this path is to be built out of is nothing at all, so the path would have come back naming a real place that is not the one asked for. the piece at the position below is the one to work out before calling - a function's name read off a piece of text rather than off the function is the usual way it comes to be missing",
