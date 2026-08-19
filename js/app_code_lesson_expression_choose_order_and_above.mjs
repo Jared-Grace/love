@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_choose_order_and_expression } from "./app_code_lesson_expression_choose_order_and_expression.mjs";
+import { app_code_lesson_expression_choose_order_both_sides_above_generic } from "./app_code_lesson_expression_choose_order_both_sides_above_generic.mjs";
+import { app_code_lesson_expression_choose_order_and_intro } from "./app_code_lesson_expression_choose_order_and_intro.mjs";
 export function app_code_lesson_expression_choose_order_and_above(root) {
   arguments_assert(arguments, 1);
   ("what stands above the card on the press-at-a-time && lesson: one such line worked all the way through, and then the sentence saying what is new");
