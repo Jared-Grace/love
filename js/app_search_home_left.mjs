@@ -18,10 +18,9 @@ export function app_search_home_left(context, hash, search) {
   let root = property_get(context, "root");
   html_clear(root);
   let bc = app_shared_bar_content_root_sticky(root);
+  app_shared_bar_center_content_pad(bc);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
-  app_shared_content_column_pad(content);
-  html_centered(bar);
   let language_codes = app_shared_bible_hash_to_languages_chosen(hash);
   let languages_chosen = ebible_languages_from_codes(language_codes);
   property_set(context, "languages_chosen", languages_chosen);

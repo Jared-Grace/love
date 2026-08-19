@@ -51,10 +51,9 @@ export async function app_verses_counts(r, hash) {
     app_verses_order_standalone_first(order);
   }
   let bc = app_shared_bar_content_root(root);
+  app_shared_bar_center_content_pad(bc);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
-  app_shared_content_column_pad(content);
-  html_centered(bar);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_text_body(
     content,
