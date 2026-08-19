@@ -9,6 +9,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function gloss_words_owed(fn) {
   "Every word in one gloss store still owed an explanation, commonest first, each one carrying what the dictionary was able to say about it.";
   "This is the worklist an explanation gets written from. The two halves are useless apart: the store says which words are owed something and nothing about what they are, the dictionary says what a word is built from and nothing about whether anybody is waiting on it.";
+  "A word that opens its sentence is asked for under both spellings. The dictionary is keyed by the spelling each word wore where it was gathered, so asking under one spelling only reported a word it knows perfectly well as one it had never been asked about - and the explanation was then written with no root and no affixes in front of it.";
   "A word the dictionary has not been asked about yet, and a word it was asked about and could not take apart, are both carried here rather than dropped. The first is waiting on the sweep and the second never will be - one is a gap that closes by itself and the other is a word somebody has to know, and a list that dropped them both would look finished while neither was true.";
   let ranked = await gloss_words_back_referenced(fn);
   let known = await binisaya_words_known();
@@ -16,7 +17,7 @@ export async function gloss_words_owed(fn) {
   function word_read(row) {
     let word = property_get(row, "value");
     let sites = property_get(row, "count");
-    let entry = property_get_or_null(known, word);
+    let entry = binisaya_words_known_get(known, word);
     let unasked = null_is(entry);
     let analysed = false;
     let root = "";
