@@ -112,6 +112,8 @@ export function examples_groups() {
         "example_fold_all_two",
         "example_fold_auto_discover",
         "example_expand_call_inline",
+        "example_second_name_collapse",
+        "example_record_read_collapse",
         "example_selects_functionize_local",
         "example_functionize_rest_returning",
         "example_functionize_inside_a_loop",
