@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { equal } from "./equal.mjs";
 import { function_span_cut_or_undo } from "./function_span_cut_or_undo.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -51,8 +51,7 @@ export async function function_span_cut_pass(f_name) {
       let stepped_over_is = null_not_is(skip);
       if (stepped_over_is) {
         list_add(skipped, skip);
-        let about = property_get(skip, "about");
-        let start_is = equal(about, "start");
+        let start_is = property_equals(skip, "about", "start");
         if (not(start_is)) {
           list_add(stepped, address_to);
         }
