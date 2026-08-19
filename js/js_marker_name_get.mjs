@@ -1,3 +1,4 @@
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
@@ -26,12 +27,7 @@ export function js_marker_name_get(v) {
     return null;
   }
   let node = property_get(v, "node");
-  let callee = property_get(node, "callee");
-  let a3 = js_node_type_is(callee, "Identifier");
-  if (not(a3)) {
-    return null;
-  }
-  let name = property_get(callee, "name");
+  let name = js_call_callee_name_try(node);
   let right = fn_name("marker");
   if (not_equal(name, right)) {
     return null;
