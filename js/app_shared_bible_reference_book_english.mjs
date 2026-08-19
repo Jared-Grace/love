@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_shared_bible_folder_reading } from "./app_shared_bible_folder_reading.mjs";
@@ -47,8 +48,7 @@ export async function app_shared_bible_reference_book_english(ref_line) {
     return ref_line;
   }
   let book_name = list_first(book_names);
-  let chapter_verses_list = property_get(v, "chapter_verses_list");
-  let chapter_verses = list_first(chapter_verses_list);
+  let chapter_verses = property_list_first(v, "chapter_verses_list");
   let book_code = list_find_property_get(
     books_upper,
     "text",
