@@ -1,8 +1,8 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
 export function bible_glyph_gate_run_referents_table(roots, known) {
@@ -27,8 +27,7 @@ export function bible_glyph_gate_run_referents_table(roots, known) {
           " or fix the spelling",
         ]),
       });
-      let taken = property_exists(seated, word.strong);
-      let b2 = not(taken);
+      let b2 = property_exists_not(seated, word.strong);
       let value = property_get_or_null(seated, word.strong);
       assert_json(b2, {
         strong: word.strong,
