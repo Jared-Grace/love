@@ -31,11 +31,11 @@ export function youtube_browse_lockups(answer) {
     let shorts = node.shortsLockupViewModel;
     if (shorts) {
       let reel = shorts?.onTap?.innertubeCommand?.reelWatchEndpoint?.videoId;
-      let watch = shorts?.onTap?.innertubeCommand?.watchEndpoint?.videoId;
+      let watch_id = shorts?.onTap?.innertubeCommand?.watchEndpoint?.videoId;
       let spoken = shorts?.accessibilityText || "";
       let title = spoken.replace(/, [\d,.KM]+ views? - play Short$/, "");
       items.push({
-        content_id: reel || watch || "",
+        content_id: reel || watch_id || "",
         title: title,
       });
     }
