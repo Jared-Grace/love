@@ -1,3 +1,4 @@
+import { js_function_lift_stub_swap } from "./js_function_lift_stub_swap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,8 +15,6 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_function_block_statements_prepend } from "./js_function_block_statements_prepend.mjs";
 import { js_function_arguments_assert_add } from "./js_function_arguments_assert_add.mjs";
 import { js_code_handback_stub_inside } from "./js_code_handback_stub_inside.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_add } from "./list_add.mjs";
 export async function js_selects_function_lift_handback(
   ast,
   selects,
@@ -63,15 +62,5 @@ export async function js_selects_function_lift_handback(
     passed,
     written_closed,
   );
-  let stub_code = js_code_function_declaration_args(
-    async_is,
-    name_old,
-    param_names,
-    inside,
-  );
-  let stub = js_parse_statement(stub_code);
-  let stub_block = property_get(stub, "body");
-  property_set(declaration, "body", stub_block);
-  let body = property_get(ast, "body");
-  list_add(body, moved);
+  js_function_lift_stub_swap(ast, declaration, name_old, inside, moved);
 }
