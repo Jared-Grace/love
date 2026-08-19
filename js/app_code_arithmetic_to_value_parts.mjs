@@ -13,33 +13,37 @@ export function app_code_arithmetic_to_value_parts(value) {
     "the value split into two addends, both at least 1";
     let left = integer_random_below(value);
     let right = subtract(value, left);
-    let parts = [left, "+", right];
+    let parts = {
+      left,
+      symbol: "+",
+      right,
+    };
     return parts;
   }
   function form_subtract() {
     "a larger number minus a small one, landing on the value";
     let right = integer_random(1, 4);
     let left = add(value, right);
-    let parts = [left, "-", right];
+    let parts = {
+      left,
+      symbol: "-",
+      right,
+    };
     return parts;
   }
   function form_divide() {
     "a multiple of a small divisor, divided back down to the value";
     let right = integer_random(2, 4);
     let left = multiply(value, right);
-    let parts = [left, "/", right];
+    let parts = {
+      left,
+      symbol: "/",
+      right,
+    };
     return parts;
   }
   let forms = [form_add, form_subtract, form_divide];
   let chosen = list_random_item(forms);
-  let parts = chosen();
-  let left = parts[0];
-  let symbol = parts[1];
-  let right = parts[2];
-  let built = {
-    left,
-    symbol,
-    right,
-  };
+  let built = chosen();
   return built;
 }
