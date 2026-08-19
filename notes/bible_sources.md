@@ -71,25 +71,53 @@ renderer for it holds notes apart from the words.
 
 ### What accepting ND actually changes
 
-`ebible_languages_licences_commercial_not_bible_folders` answers **six** today.
-Measured 2026-08-18, with the licence each page states:
+`ebible_languages_licences_commercial_not_bible_folders` answers **three** today.
+It answered six when this was first measured on 2026-08-18; here is the whole six,
+with the licence each page states and what became of it:
 
-| folder | language | licence as read | freed by accepting ND? |
-| --- | --- | --- | --- |
-| `turytc` | Turkish | `cc_by_nd` | **yes** |
-| `zlmKSZI` | Malay | `cc_by_nd` | **yes** |
-| `polubg` | Polish (Updated Gdańsk) | `cc_by_nd` | **yes** |
-| `thaKJV` | Thai | `cc_by_nc_nd` | no — non-commercial |
-| `wolmbs` | Wolof | `cc_by_nc_nd` | no — non-commercial |
-| `amh` | Amharic | `unknown` | no — prose terms, no readable grant |
+| folder | language | licence as read | freed by accepting ND? | now |
+| --- | --- | --- | --- | --- |
+| `turytc` | Turkish | `cc_by_nd` | **yes** | still shipped, still refused |
+| `zlmKSZI` | Malay | `cc_by_nd` | **yes** | still shipped, still refused |
+| `polubg` | Polish (Updated Gdańsk) | `cc_by_nd` | **yes** | still shipped, still refused |
+| `thaKJV` | Thai | `cc_by_nc_nd` | no — non-commercial | **dropped** 2026-08-19 |
+| `wolmbs` | Wolof | `cc_by_nc_nd` | no — non-commercial | **dropped** 2026-08-19 |
+| `amh` | Amharic | `unknown` | no — prose terms, no readable grant | **replaced** by `am_ulb` |
 
-So accepting ND takes the offenders from six to three, and the three that remain
-are refused for reasons the ND ruling does not touch. Amharic's page states its
-terms in prose the mark-reader cannot classify, which counts as refused: an unread
-page has granted nothing that can be pointed at.
+So the three that remain are all freed by accepting ND, and nothing else stands in
+their way. Amharic's page stated its terms in prose the mark-reader cannot
+classify, which counts as refused: an unread page has granted nothing that can be
+pointed at. It was replaced rather than dropped, because Door43 carries the same
+language under CC BY-SA — see below.
 
-Thai and Wolof therefore need a source that is not eBible, or they come out of the
-shipped list. Amharic has one: see below.
+### Why Thai and Wolof were dropped rather than replaced
+
+Both were searched for before being dropped, and the search is recorded here so
+nobody has to repeat it.
+
+**Wolof: nothing exists.** eBible carries exactly two Wolof texts and both are the
+same publisher on the same terms — `wol2010` (New Testament, © 2010) and `wolmbs`
+(whole Bible, © 2025), La Mission Baptiste du Sénégal, CC BY-NC-ND. Door43's
+catalogue returns an empty list for `wo`. Nothing on open.bible or in the
+open-bibles index. The only route to a Wolof Bible here is asking that publisher
+for terms.
+
+**Thai: two candidates, neither shippable today.**
+
+- **TNBT, the Thai New Buddhist Translation** (Banpote Wetchgama, 2022) is
+  **CC BY-SA 4.0** — a licence this repo may ship on, and the author expressly
+  permits modification. It is at `github.com/pepa65/TNBT`, as HTML, PDF, EPUB and a
+  custom `.tx` format; not usfm, so it would need its own reader. Two things make
+  it a judgement rather than a job: it is **New Testament only**, and it is worded
+  to reach Buddhist readers, which is exactly the true-to-the-text question the
+  choosing rule asks. Read it before carrying it.
+- **`thafb`, eBible's "Freedom Bible"** (พระคัมภีร์แห่งเสรีภาพ) is stated
+  **public domain**, which would settle the licence question outright. It is one
+  chapter and 45 verses as of 2026-08-19 — a translation that has just begun.
+  Worth asking about again later; there is nothing to carry now.
+- The **Thai Bible of 1940** is not free. Its copyright may have lapsed in Thailand
+  after fifty years, but in the United States a 1940 work is protected until about
+  2036, so it cannot be treated as public domain here.
 
 ### The unit that has to exist before ND is switched on
 

@@ -1,4 +1,3 @@
-import { ebible_folder_thai } from "./ebible_folder_thai.mjs";
 import { ebible_folder_tagalog } from "./ebible_folder_tagalog.mjs";
 import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
@@ -103,11 +102,6 @@ export function ebible_languages_curated() {
       language_code: "pt",
     },
     {
-      name: "Wolof",
-      bible_folder: "wolmbs",
-      language_code: "wo",
-    },
-    {
       name: "Gujarati",
       bible_folder: "guj2017",
       language_code: "gu",
@@ -171,11 +165,6 @@ export function ebible_languages_curated() {
       name: "chiShona",
       bible_folder: "sna",
       language_code: "sna",
-    },
-    {
-      name: "Thai",
-      bible_folder: ebible_folder_thai(),
-      language_code: "tha",
     },
     {
       name: "Polish",
