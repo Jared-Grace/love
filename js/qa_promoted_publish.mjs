@@ -1,8 +1,6 @@
 import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
-import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
-import { fn_name } from "./fn_name.mjs";
+import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { lock_error } from "./lock_error.mjs";
 import { qa_promoted_unjudged } from "./qa_promoted_unjudged.mjs";
 export async function qa_promoted_publish() {
   "Sends out everything waiting in the folder the sending reads from, once every app standing there has been accounted for";
@@ -13,13 +11,9 @@ export async function qa_promoted_publish() {
   "It belongs to this way of sending and not to the one that gates the whole tree first. That one has already asked whether everything standing in the folder is sound, which is a different warrant for the same conclusion - and asking this of it as well would refuse a build it had every right to send";
   let unaccounted = await qa_promoted_unjudged();
   list_empty_is_assert_json(unaccounted, unaccounted);
-  let message = firebase_deploy_locked_message();
-  let lock_name = fn_name("firebase_deploy");
-  let published = await lock_error(
-    lock_name,
+  let published = await firebase_deploy_locked_generic(
     firebase_apps_frozen_unchanged_assert_deploy,
     qa_promoted_publish.name,
-    message,
   );
   return published;
 }
