@@ -1,18 +1,24 @@
 import { permission_grant_words_scripture } from "./permission_grant_words_scripture.mjs";
-import { text_includes } from "./text_includes.mjs";
+import { text_split_multiple } from "./text_split_multiple.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 export function permission_grant_param_scripture_code_is(p_name) {
   "whether a parameter name says the code it carries is a place in the Bible - a book, a chapter or a verse - rather than something a function could be made to run";
   "this is the one shape read off a parameter name that is allowed to clear a refusal instead of raising one, and it is narrow on purpose. Every other reading here treats a word in a name as a reason to say no, which is safe to get wrong; this one says yes, so getting it wrong hands out a rule nobody weighed";
   "the whole repository was read before this was written and there is no counterexample: three hundred and eighty-one functions carry a name containing chapter_code and ninety-one carry book_code, and every single one of them means a place in scripture. That is the evidence for saying yes here, and it is the thing to re-measure before widening the word list";
   "only the code refusal is lifted, never the parameter. A name that also reads as a path or a file keeps that refusal, because a Bible chapter identifier is ordinary data and a place to write is not, and a name can carry both";
-  let coded = text_includes(p_name, "code");
+  "a whole part of the name has to be the word, never a run of letters found somewhere inside it. A name is read as the parts it is written in, cut at each underscore and at the marker a lifted lambda carries, so codebook is one part that is neither word and clears nothing. Containment was the first reading and it agreed with this one on all forty-three code-carrying parameter names in the repo, so nothing here changes an answer already being given - it narrows what a name yet to be written can claim";
+  let parts = text_split_multiple(p_name, ["_", "$"]);
+  let coded = list_includes(parts, "code");
+  let coded_many = list_includes(parts, "codes");
   if (not(coded)) {
-    return false;
+    if (not(coded_many)) {
+      return false;
+    }
   }
   let scripture = false;
   for (let word of permission_grant_words_scripture()) {
-    let matches = text_includes(p_name, word);
+    let matches = list_includes(parts, word);
     if (matches) {
       scripture = true;
     }
