@@ -9,7 +9,8 @@ import { property_equals } from "./property_equals.mjs";
 import { list_add } from "./list_add.mjs";
 import { hash_object_transform_names } from "./hash_object_transform_names.mjs";
 import { property_in_list } from "./property_in_list.mjs";
-export function js_hash_object_names_handled(v, names, handed) {
+export function js_hash_object_names_handled(v, outgoing, handed) {
+  ("Two very different things are collected here and they go into two different lists. An object turned into a link is an address built to hand to ANOTHER page, so its name goes to the outgoing list; an object handed to a function to be changed is this page's own, and only the name it is passed under is noted, for the reading of that function to pick up.");
   arguments_assert(arguments, 3);
   let node = property_get(v, "node");
   let callee = property_get(node, "callee");
@@ -31,7 +32,7 @@ export function js_hash_object_names_handled(v, names, handed) {
   let property_value = hash_object_made_name();
   let made = property_equals(callee, "name", property_value);
   if (made) {
-    list_add(names, word);
+    list_add(outgoing, word);
     return;
   }
   let transforms = hash_object_transform_names();
