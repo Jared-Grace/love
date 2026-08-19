@@ -1,3 +1,4 @@
+import { app_g_verify_home_chapter } from "./app_g_verify_home_chapter.mjs";
 import { app_g_verify_home_poll_timer } from "./app_g_verify_home_poll_timer.mjs";
 import { app_g_verify_home_status } from "./app_g_verify_home_status.mjs";
 import { app_g_verify_home_chapter_codes } from "./app_g_verify_home_chapter_codes.mjs";
@@ -38,19 +39,19 @@ export async function app_g_verify_home(context) {
   let r3 = app_g_verify_home_chapter_codes();
   let r4 = app_g_verify_home_status(r3);
   let r5 = app_g_verify_home_poll_timer(r4);
-  let poll_timer = property_get(r5, "poll_timer");
-  let chapter_codes = property_get(r5, "chapter_codes");
-  let r32 = property_get(r5, "r32");
-  let chapter_code2 = property_get(r5, "chapter_code2");
-  let storage_key = property_get(r5, "storage_key");
-  let chapter3 = property_get(r5, "chapter3");
-  let shown_json = property_get(r5, "shown_json");
-  let chapter_advance_armed = property_get(r5, "chapter_advance_armed");
-  let advanced_for = property_get(r5, "advanced_for");
-  let selected_key = property_get(r5, "selected_key");
-  let view = property_get(r5, "view");
-  let status = property_get(r5, "status");
-  let chapter = chapter3;
+  let r6 = app_g_verify_home_chapter(r5);
+  let chapter = property_get(r6, "chapter");
+  let status = property_get(r6, "status");
+  let view = property_get(r6, "view");
+  let selected_key = property_get(r6, "selected_key");
+  let advanced_for = property_get(r6, "advanced_for");
+  let chapter_advance_armed = property_get(r6, "chapter_advance_armed");
+  let shown_json = property_get(r6, "shown_json");
+  let storage_key = property_get(r6, "storage_key");
+  let chapter_code2 = property_get(r6, "chapter_code2");
+  let r32 = property_get(r6, "r32");
+  let chapter_codes = property_get(r6, "chapter_codes");
+  let poll_timer = property_get(r6, "poll_timer");
   let chapter_state = property_get(r32, "chapter_state");
   async function initial_load() {
     let f_name = fn_name("g_sermon_write_read");
