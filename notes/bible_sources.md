@@ -144,13 +144,24 @@ for terms.
 
 **Thai: two candidates, neither shippable today.**
 
-- **TNBT, the Thai New Buddhist Translation** (Banpote Wetchgama, 2022) is
+- **TNBT, the Thai New Buddhist Translation** (Banpote Wetchgama, © 2014–2022) is
   **CC BY-SA 4.0** — a licence this repo may ship on, and the author expressly
-  permits modification. It is at `github.com/pepa65/TNBT`, as HTML, PDF, EPUB and a
-  custom `.tx` format; not usfm, so it would need its own reader. Two things make
-  it a judgement rather than a job: it is **New Testament only**, and it is worded
-  to reach Buddhist readers, which is exactly the true-to-the-text question the
-  choosing rule asks. Read it before carrying it.
+  permits modification provided the result is shared on the same terms. It is at
+  `github.com/pepa65/TNBT`, as HTML, PDF, EPUB, the author's original `.doc`, and a
+  custom `.tx` text format; not usfm, so it would need its own reader. It is
+  **New Testament only**.
+
+  **Read on 2026-08-19, and the licence is not what decides it.** The licence is
+  clean and the format cost is real but ordinary. What decides it is the
+  translation's own aim, and that is a judgement for the human rather than for a
+  gate. Banpote translated deliberately for Thai Buddhist readers, and the approach
+  reaches into the theological vocabulary itself — the words carrying Spirit,
+  angel, baptism and Sabbath are chosen to land inside a Buddhist frame rather than
+  to match what earlier Thai versions used. That is precisely the true-to-the-text
+  question the choosing rule asks, and it cannot be settled by reading the terms.
+  The repository documents its build process and states no translation philosophy,
+  so the only way to settle it is somebody who reads Thai comparing passages.
+  Nothing here should carry it until that has happened.
 - **`thafb`, eBible's "Freedom Bible"** (พระคัมภีร์แห่งเสรีภาพ) is stated
   **public domain**, which would settle the licence question outright. It is one
   chapter and 45 verses as of 2026-08-19 — a translation that has just begun.
