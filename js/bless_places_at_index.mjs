@@ -19,12 +19,14 @@ export function bless_places_at_index(index) {
   ("else is on that block, and here that is a question about arithmetic rather than a");
   ("search of the map - which matters, because a person walks and the ground they are");
   ("standing on changes while the block they live on does not.");
-  ("The lowest rung is skipped because a person contains nobody, so there is no number of");
-  ("them that fits inside anything - they ARE the number being divided.");
+  ("The lowest rung is never divided, because a person contains nobody - they ARE the number");
+  ("being divided. It is written down all the same, so that every rung has an answer of the");
+  ("same shape and nothing reading an address ever has to special-case the bottom.");
   let rungs = bless_rungs();
   let sizes = bless_place_sizes();
   let places = {};
   let within = index;
+  property_set(places, "person", within);
   function rung_place(rung) {
     let size = property_get_or_null(sizes, rung);
     let bottom = not(size);

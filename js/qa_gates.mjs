@@ -1,3 +1,4 @@
+import { permission_grant_param_scripture_code_gate_run } from "./permission_grant_param_scripture_code_gate_run.mjs";
 import { bible_glyph_artwork_gate_run } from "./bible_glyph_artwork_gate_run.mjs";
 import { js_repack_only_is_cases_gate_run } from "./js_repack_only_is_cases_gate_run.mjs";
 import { functions_repack_only_gate_run } from "./functions_repack_only_gate_run.mjs";
@@ -567,6 +568,7 @@ export function qa_gates() {
     bundles_names_missing_gate_run,
     gloss_punctuation_words_gate_run,
     js_repack_only_is_cases_gate_run,
+    permission_grant_param_scripture_code_gate_run,
   ];
   return gates;
 }
