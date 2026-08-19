@@ -1,3 +1,4 @@
+import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -38,13 +39,13 @@ export async function app_code_reload_persists_test_on_page(
       combined,
     ]);
     await page.goto(url);
-    await page.waitForTimeout(180);
+    await page.waitForTimeout(page_capture_settle_ms());
     let first = await app_code_screen_capture(page);
     let text = property_get(first, "text");
     let kind0 = app_code_screen_text_normalize(text);
     let script = app_code_screen_next_click_script();
     await page.evaluate(script);
-    await page.waitForTimeout(180);
+    await page.waitForTimeout(page_capture_settle_ms());
     let second = await app_code_screen_capture(page);
     let text2 = property_get(second, "text");
     let kind = app_code_screen_text_normalize(text2);
@@ -52,7 +53,7 @@ export async function app_code_reload_persists_test_on_page(
     ("reload the way F5 does - re-load the CURRENT address including the hash that Next updated. page.reload() can re-load the originally committed url (quiz=0) instead of the SPA-updated hash, which would falsely look like a reset");
     let current = page.url();
     await page.goto(current);
-    await page.waitForTimeout(180);
+    await page.waitForTimeout(page_capture_settle_ms());
     let reloaded = await app_code_screen_capture(page);
     let text3 = property_get(reloaded, "text");
     let after = app_code_screen_text_normalize(text3);
