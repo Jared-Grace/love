@@ -1,3 +1,5 @@
+import { subtract } from "./subtract.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { ebible_verses_storage_browser } from "./ebible_verses_storage_browser.mjs";
@@ -9,17 +11,19 @@ export async function psalms_chapter_description(chapter_number) {
   arguments_assert(arguments, 1);
   let chapter_code = ebible_chapter_code_pad("PSA", chapter_number);
   let verses = await ebible_verses_storage_browser("engbsb", chapter_code);
-  let verse_last = verses[verses.length - 1].verse_number;
+  let verse_last = verses[subtract(verses.length, 1)].verse_number;
   let opening = "Psalm " + chapter_number + " - Berean Standard Bible";
-  let closing = "Psalm " + chapter_number + " runs to verse " + verse_last + ".";
+  let closing =
+    "Psalm " + chapter_number + " runs to verse " + verse_last + ".";
   let letters_most = youtube_description_letters_most();
-  let room = letters_most - closing.length - 2;
+  let left = subtract(letters_most, closing.length);
+  let room = subtract(left, 2);
   let lines = [opening];
   let letters = opening.length;
   let cut = false;
   for (let verse of verses) {
     let line = verse.verse_number + " " + verse.text;
-    if (letters + line.length + 1 > room) {
+    if (greater_than(letters + line.length + 1, room)) {
       cut = true;
       break;
     }
