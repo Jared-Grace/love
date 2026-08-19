@@ -5,7 +5,7 @@ export async function app_g_verify_home_document(
   chapter,
   status,
   chapter_state,
-  view,
+  view_get,
   poll,
   refresh,
 ) {
@@ -15,7 +15,7 @@ export async function app_g_verify_home_document(
     chapter,
     status,
     chapter_state,
-    view,
+    view_get,
     poll,
     refresh,
   );
