@@ -87,6 +87,15 @@ export function bless_marks_climbed_cases() {
       },
       why: "a stride of nearly half the crowd walks the block end to end and back, which is the least orderly way in that still reaches everybody",
     },
+    {
+      count: 120,
+      stride: 7,
+      climbed: {
+        rung: "block",
+        dark: 0,
+      },
+      why: "two whole blocks, which is what the world actually holds - the second is covered without ever being finished person by person, and a neighbourhood still wants ten more",
+    },
   ];
   return cases;
 }

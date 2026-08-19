@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
@@ -12,6 +13,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 export function app_code_lesson_statement_name_sum_above(root) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: two numbers added by writing the numbers themselves, and then the same two numbers added by writing the names they were given");
   ("Two things a learner already has, put next to each other, and nothing else. A sum inside console.log was the arithmetic lessons; a name holding a value was the five screens just before this one. Neither is taught again here - what is new is only that the second may stand inside the first.");
