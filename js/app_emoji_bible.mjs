@@ -1,3 +1,4 @@
+import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { app_emoji_bible_key_shown_get } from "./app_emoji_bible_key_shown_get.mjs";
 import { app_emoji_bible_key_shown_toggle } from "./app_emoji_bible_key_shown_toggle.mjs";
 import { app_emoji_bible_key_shown_button_text } from "./app_emoji_bible_key_shown_button_text.mjs";
@@ -10,8 +11,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
-import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { bible_glyph_chapter_draw_html } from "./bible_glyph_chapter_draw_html.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";

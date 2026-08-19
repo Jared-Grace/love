@@ -1,6 +1,5 @@
-import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
+import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_shared_bar_content_root_sticky } from "./app_shared_bar_content_root_sticky.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_button_back_to_reader } from "./app_shared_bible_button_back_to_reader.mjs";
 export async function app_shared_bible_screen_content(context) {
