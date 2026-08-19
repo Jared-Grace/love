@@ -11,7 +11,12 @@ import { app_g_bless_people_place } from "./app_g_bless_people_place.mjs";
 import { app_g_bless_person_new } from "./app_g_bless_person_new.mjs";
 import { bless_homes_ensure } from "./bless_homes_ensure.mjs";
 import { bless_places_ensure } from "./bless_places_ensure.mjs";
-export function app_g_bless_people(player_img, coordinates_land, blocks, player) {
+export function app_g_bless_people(
+  player_img,
+  coordinates_land,
+  blocks,
+  player,
+) {
   arguments_assert(arguments, 4);
   ("Everybody in the world, made in one line and then given, in order, an address, a home,");
   ("and somewhere to stand.");
