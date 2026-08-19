@@ -13,6 +13,9 @@ import { each } from "./each.mjs";
 export function js_calls_to_each_apply(ast, names) {
   "Puts a single walk in the place of every run of side by side calls, everywhere in this tree that statements stand one after another - the top of the module and the inside of every pair of braces.";
   "The lists are gathered first and rewritten afterwards, because the gathering is a walk over the very lists being changed, and changing one part way through would leave the walk reading a list that no longer holds what it was counting on.";
+  "A name this tree binds for itself is dropped before anything is rewritten, whatever was said about a function of that name. The call lands on the local one - a function written inside the file, a variable, a parameter - and what a repo function of the same name hands back says nothing about what that one hands back. An import is not such a binding: an import of the repo function is exactly the case a caller means when it hands the name in.";
+  let bound = js_binding_names(ast);
+  let free = list_difference(names, bound);
   let bodies = [];
   function body_gather(v) {
     let body = property_path_get_2(v, "node", "body");
@@ -33,7 +36,7 @@ export function js_calls_to_each_apply(ast, names) {
     }
   }
   function body_rewrite(body) {
-    js_statements_calls_to_each(body, names);
+    js_statements_calls_to_each(body, free);
   }
   each(bodies, body_rewrite);
 }
