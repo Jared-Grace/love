@@ -50,5 +50,5 @@ export async function app_a_identifier_generic_choices_get_lambda15(
     );
     return r2;
   }
-  let component = app_a_button_wide(overlay_change, text, on_enter);
+  app_a_button_wide(overlay_change, text, on_enter);
 }
