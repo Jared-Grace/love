@@ -11,10 +11,11 @@ export function app_g_bless_person_step_boxed(world, person) {
   let tiles = property_get(r, "tiles");
   let way = list_get_or_null(ways_open, 0);
   let boxed = not(way);
-  return {
+  let r2 = {
     heading,
     tiles,
     way,
     boxed,
   };
+  return r2;
 }
