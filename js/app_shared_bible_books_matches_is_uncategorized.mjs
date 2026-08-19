@@ -5,6 +5,6 @@ export function app_shared_bible_books_matches_is_uncategorized(
   known_codes,
 ) {
   arguments_assert(arguments, 2);
-  let unknown = property_in_list_not("book_code", book, known_codes);
+  let unknown = property_in_list_not(book, "book_code", known_codes);
   return unknown;
 }

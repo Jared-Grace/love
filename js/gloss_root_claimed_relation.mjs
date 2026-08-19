@@ -14,19 +14,24 @@ export function gloss_root_claimed_relation(root, claimed) {
   let claimed_bare = gloss_word_bare(claimed);
   let nothing = text_empty_is(claimed_bare);
   if (nothing) {
-    return "apart";
+    let r = "apart";
+    return r;
   }
   let same = equal(root_bare, claimed_bare);
   if (same) {
-    return "same";
+    let r2 = "same";
+    return r2;
   }
   let deeper = text_includes(root_bare, claimed_bare);
   if (deeper) {
-    return "deeper";
+    let r3 = "deeper";
+    return r3;
   }
   let shallower = text_includes(claimed_bare, root_bare);
   if (shallower) {
-    return "shallower";
+    let r4 = "shallower";
+    return r4;
   }
-  return "apart";
+  let r5 = "apart";
+  return r5;
 }

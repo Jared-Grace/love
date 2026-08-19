@@ -5,8 +5,8 @@ import { property_get } from "./property_get.mjs";
 export function app_g_bless_overlay_player(container_map) {
   arguments_assert(arguments, 1);
   let r4 = app_g_bless_overlay_blessings(container_map);
-  let blessings2 = property_get(r4, "blessings");
-  let unlocked2 = property_get(r4, "unlocked");
+  let blessed2 = property_get(r4, "blessed");
+  let rung2 = property_get(r4, "rung");
   let told2 = property_get(r4, "told");
   let bar2 = property_get(r4, "bar");
   let glows2 = property_get(r4, "glows");
@@ -19,8 +19,9 @@ export function app_g_bless_overlay_player(container_map) {
   let world = property_get(r4, "world");
   let walking = false;
   let r22 = {
-    blessings: blessings2,
-    unlocked: unlocked2,
+    container_map,
+    blessed: blessed2,
+    rung: rung2,
     told: told2,
     bar: bar2,
     glows: glows2,
@@ -36,8 +37,8 @@ export function app_g_bless_overlay_player(container_map) {
   let r = r22;
   let r2 = app_g_bless_overlay_cone_get(r);
   let cone_get = property_get(r2, "cone_get");
-  let blessings = property_get(r2, "blessings");
-  let unlocked = property_get(r2, "unlocked");
+  let blessed = property_get(r2, "blessed");
+  let rung = property_get(r2, "rung");
   let told = property_get(r2, "told");
   let bar = property_get(r2, "bar");
   let glows = property_get(r2, "glows");
@@ -49,9 +50,10 @@ export function app_g_bless_overlay_player(container_map) {
   let player = property_get(r2, "player");
   let r3 = {
     r2,
+    container_map,
     cone_get,
-    blessings,
-    unlocked,
+    blessed,
+    rung,
     told,
     bar,
     glows,
