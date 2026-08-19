@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { integer_random } from "./integer_random.mjs";
+import { range_from } from "./range_from.mjs";
+import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { equal } from "./equal.mjs";
 export function app_code_comparison_operands_wanted(symbol, want_true) {
   arguments_assert(arguments, 2);
   ("two numbers to stand either side of a given comparison so that the comparison comes out true, or comes out false, whichever was asked for: >= with false asked for gives back a smaller number and a larger one");
