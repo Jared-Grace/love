@@ -1,3 +1,4 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { binisaya_affixes_plain_kinds } from "./binisaya_affixes_plain_kinds.mjs";
 import { each } from "./each.mjs";
@@ -8,7 +9,6 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 export function gloss_entries_affix_kinds_wrong(entries, known) {
   "The explanations in one passage that call a piece of their word by a name the dictionary gives no piece of.";
   "A word that opens its sentence is asked for under both spellings, because the dictionary is keyed by the spelling each word wore where it was gathered. Asked under one spelling only, this check simply never looked at the words a sentence begins with.";

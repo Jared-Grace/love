@@ -1,3 +1,4 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { binisaya_affixes_plain_phrase } from "./binisaya_affixes_plain_phrase.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { each } from "./each.mjs";
@@ -8,7 +9,6 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";

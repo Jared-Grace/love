@@ -1,3 +1,4 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { list_map } from "./list_map.mjs";
@@ -9,7 +10,6 @@ import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
