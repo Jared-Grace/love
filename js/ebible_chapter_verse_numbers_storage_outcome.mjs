@@ -3,8 +3,7 @@ import { catch_message_async } from "./catch_message_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { http_error_message_status_or_null } from "./http_error_message_status_or_null.mjs";
-import { equal } from "./equal.mjs";
+import { http_error_message_absent_is } from "./http_error_message_absent_is.mjs";
 import { not } from "./not.mjs";
 export async function ebible_chapter_verse_numbers_storage_outcome(
   bible_folder,
@@ -38,8 +37,7 @@ export async function ebible_chapter_verse_numbers_storage_outcome(
     return held;
   }
   let message = property_get(caught, "message");
-  let status = http_error_message_status_or_null(message);
-  let absent = equal(status, 404);
+  let absent = http_error_message_absent_is(message);
   let unreachable = not(absent);
   let refused = {
     verse_numbers: [],
