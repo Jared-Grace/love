@@ -2,7 +2,7 @@ import { worker_results_read } from "./worker_results_read.mjs";
 import { worker_exited } from "./worker_exited.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
-export async function worker_child_start(worker) {
+export async function function_worker_child_start(worker) {
   let r3 = await import("child_process");
   let spawn = property_get(r3, "spawn");
   ("fd 3 = jobs in, fd 4 = results out. stdout/stderr stay inherited so a called");
