@@ -1,3 +1,5 @@
+import { gloss_findings_edits_tally } from "./gloss_findings_edits_tally.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_root_claimed_nearest } from "./gloss_root_claimed_nearest.mjs";
@@ -8,7 +10,6 @@ import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_tally } from "./list_tally.mjs";
 export function gloss_roots_disagreeing_classes_apart(findings, offenders) {
   arguments_assert(arguments, 2);
@@ -43,17 +44,8 @@ export function gloss_roots_disagreeing_classes_apart(findings, offenders) {
   }
   let claiming = list_filter(findings, claimed_is);
   let claimed_total = list_size(claiming);
-  function edits_read(finding) {
-    let edits = property_get(finding, "edits");
-    return edits;
-  }
-  let list = list_map(claiming, edits_read);
-  let by_edits = list_tally(list);
-  function relation_read(finding) {
-    let relation = property_get(finding, "relation");
-    return relation;
-  }
-  let relations = list_map(claiming, relation_read);
+  let by_edits = gloss_findings_edits_tally(claiming);
+  let relations = list_map_property(claiming, "relation");
   let by_relation = list_tally(relations);
   function apart_is(finding) {
     let standing_apart = property_equals(finding, "relation", "apart");
@@ -64,7 +56,6 @@ export function gloss_roots_disagreeing_classes_apart(findings, offenders) {
     total,
     claiming,
     claimed_total,
-    edits_read,
     by_edits,
     by_relation,
     apart,
