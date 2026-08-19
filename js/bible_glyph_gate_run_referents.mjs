@@ -1,6 +1,5 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { property_set } from "./property_set.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
@@ -15,8 +14,7 @@ export function bible_glyph_gate_run_referents(characters) {
   arguments_assert(arguments, 1);
   let known = {};
   for (let character of characters) {
-    let repeated = property_exists(known, character.name);
-    let b = not(repeated);
+    let b = property_exists_not(known, character.name);
     assert_json(b, {
       name: character.name,
       hint: "two glyphs share one name, so the later one silently wins - rename one of them",
