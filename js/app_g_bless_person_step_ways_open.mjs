@@ -25,9 +25,10 @@ export function app_g_bless_person_step_ways_open(world, person) {
     return is;
   }
   let ways_open = list_filter(ways, way_open_is);
-  return {
+  let r2 = {
     tiles,
     heading,
     ways_open,
   };
+  return r2;
 }
