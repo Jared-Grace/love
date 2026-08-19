@@ -1,3 +1,4 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
@@ -53,8 +54,7 @@ export function app_g_bless_blocks(rows) {
   let gap = bless_blocks_gap();
   let stride = add(depth, gap);
   let left3 = subtract(count, 1);
-  let spans = multiply(left3, stride);
-  let column = add(spans, depth);
+  let column = multiply_add(left3, stride, depth);
   let row_first = list_first(rows);
   let world_width = list_size(row_first);
   let world_depth = list_size(rows);
