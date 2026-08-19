@@ -1,9 +1,8 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_loops_all } from "./js_node_loops_all.mjs";
 import { js_loop_outer_rebound_names } from "./js_loop_outer_rebound_names.mjs";
 import { js_node_statements_work_size } from "./js_node_statements_work_size.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_max_by } from "./list_max_by.mjs";
 export function js_node_loop_walking_largest_or_null(node) {
@@ -13,8 +12,7 @@ export function js_node_loop_walking_largest_or_null(node) {
   let loops = js_node_loops_all(node);
   function walking_is(loop) {
     let outer = js_loop_outer_rebound_names(loop);
-    let none_is = list_empty_is(outer);
-    let walking = not(none_is);
+    let walking = list_empty_not_is(outer);
     return walking;
   }
   let found = list_filter(loops, walking_is);
