@@ -39,7 +39,7 @@ export async function psalms_playlists_plan(channel_id) {
         holds.push(video.video_id);
       }
     }
-    let add = [];
+    let songs_to_add = [];
     let order_wanted = [];
     for (let song of songs) {
       order_wanted.push(song.video_id);
