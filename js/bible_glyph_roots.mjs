@@ -9,6 +9,9 @@ export function bible_glyph_roots() {
   "THE EQUALS SIGN IS SYMMETRIC WHERE THE SENTENCE IS NOT. It is the one relation a reader already knows before they open this Bible, and they know it from arithmetic, where a equals b and b equals a are the same statement. God is love does not run backwards. Love is God is a different claim and it is not the one the letter makes - so the single mark the reader was surest of is the one that misleads them hardest, and it misleads them in the direction of a religion the letter was written against.";
   "AND THE HARDEST VERSE IS THE ONE THE MARK GETS EXACTLY BACKWARDS. John wrote the Word was God with the article left OFF God, and had he put it on, the sentence would have said the Word is the Father - which the rest of his gospel spends twenty chapters denying. That missing article carries the whole doctrinal weight of the verse. An equals sign puts it back.";
   "The rule this leaves behind is A MARK MUST NOT CLAIM MORE THAN THE WORD CLAIMS, and it outranks frequency. A word appearing two thousand times looks like the best investment in the table right up to the moment the only available mark overstates it, and then those two thousand places are wrong rather than blank - which is strictly worse, because a blank asks the reader a question and a wrong mark answers it.";
+  "THE LIGHT, THE DARKNESS AND THE WITNESS WERE FOUND BY DRAWING A PAGE and not by reading the frequency table, the same way the not was. The prologue of John says light five times, darkness twice and witness five times in eighteen verses, and every one of them stood in English inside a sentence made of pictures - which reads as a page somebody gave up on rather than as a page still being written.";
+  "GINOMAI IS STILL BLANK AND IT WAS THE FOURTH WORD ON THAT LIST, so this says what stopped it rather than leaving the next author to work the same ground again. The word is come to be, and one mark WOULD be right for all of it - the Greek reader met one word where English needs became, was made, was born and there came, and splitting it by which English word the interlinear reached for is the thing this table refuses to do everywhere else.";
+  "WHAT IS MISSING IS THE PICTURE AND NOT THE DECISION. An arrow was tried and taken back: an arrow claims two sides, and there came a man sent from God has only one, so the arrow overstates exactly the verse the prologue opens its narrative with. The sprout would be right and is already spent on life, and moving it is a change to a chapter that has been read. So this is a picture to find, and until it is found the word stands in English on the page, which is the honest state rather than a decision that has been made.";
   "HOTI KEEPS ONE GLYPH THOUGH IT GLOSSES TWO WAYS, and the survey will report the spread, so this is the answer to that report rather than an oversight. The word is that five hundred times and because a hundred and eighty, and Greek marked no difference between the two - one word did both jobs and a Greek reader met the same word each time. Splitting it by which English word the interlinear reached for would draw a distinction the writer never drew, which is the rule the referent table already states: SPLIT ON A DIFFERENT REFERENT, NEVER ON A DIFFERENT WORDING.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
@@ -717,6 +720,52 @@ export function bible_glyph_roots() {
         {
           strong: "281",
           glyph: "hands_praying",
+        },
+      ],
+    },
+    {
+      root: "phos",
+      gloss: "light",
+      words: [
+        {
+          strong: "5457",
+          glyph: "light",
+        },
+        {
+          strong: "5461",
+          glyph: "light",
+        },
+      ],
+    },
+    {
+      root: "skotia",
+      gloss: "darkness",
+      words: [
+        {
+          strong: "4653",
+          glyph: "darkness",
+        },
+        {
+          strong: "4655",
+          glyph: "darkness",
+        },
+      ],
+    },
+    {
+      root: "martus",
+      gloss: "witness, testify, testimony",
+      words: [
+        {
+          strong: "3144",
+          glyph: "witness",
+        },
+        {
+          strong: "3140",
+          glyph: "witness",
+        },
+        {
+          strong: "3141",
+          glyph: "witness",
         },
       ],
     },
