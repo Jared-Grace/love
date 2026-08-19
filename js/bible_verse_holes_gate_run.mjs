@@ -1,3 +1,5 @@
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
@@ -50,15 +52,6 @@ export async function bible_verse_holes_gate_run() {
     return any;
   }
   let unreachable = list_filter(bibles, lambda3);
-  let f_name6 = fn_name("bible_verse_holes_write");
-  list_empty_is_assert_json(unreachable, {
-    hint: text_combine_multiple([
-      "these bibles were asked and the far end never answered, so the record says nothing about the chapters named - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
-      f_name6,
-      ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
-    ]),
-    unreachable,
-  });
   let f_name = fn_name("bible_verse_holes_write");
   list_empty_is_assert_json(unmeasured, {
     hint: text_combine_multiple([
@@ -87,6 +80,16 @@ export async function bible_verse_holes_gate_run() {
       f_name4,
     ]),
     unasked,
+  });
+  ("The transient finding is refused after the standing ones on purpose. A bible that is shipped and never measured, or measured and no longer shipped, is true until somebody changes the roster; a chapter that would not answer this afternoon may answer this evening. Reporting the passing thing first would bury the lasting one under it.");
+  let f_name6 = fn_name("bible_verse_holes_write");
+  list_empty_is_assert_json(unreachable, {
+    hint: text_combine_multiple([
+      "these bibles were asked and the far end never answered, so the record says nothing about the chapters named - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
+      f_name6,
+      ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
+    ]),
+    unreachable,
   });
   let f_name5 = fn_name("ebible_languages");
   list_empty_is_assert_json(empty, {
