@@ -1,3 +1,4 @@
+import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_screen_capture } from "./app_code_screen_capture.mjs";
 import { list_add } from "./list_add.mjs";
@@ -14,7 +15,7 @@ export async function app_code_screen_capture_record(
   "The wait is why this cannot be a matter of taste. A capture taken before the drawing has settled comes back holding the screen before it, which reads as a page that renders the wrong thing rather than as a measurement taken too early.";
   arguments_assert(arguments, 6);
   await page.goto(url);
-  await page.waitForTimeout(180);
+  await page.waitForTimeout(page_capture_settle_ms());
   let record = await app_code_screen_capture(page);
   record.id = id;
   record.screen = screen;
