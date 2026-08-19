@@ -58,6 +58,7 @@ export function song_image_candidate_column(parent, state, on_change) {
         candidate.licence +
         "</span>",
     );
+    song_image_luma_badge(row, src);
     function lambda2() {
       if (equal(map[state.couplet], index)) {
         delete map[state.couplet];
