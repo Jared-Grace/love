@@ -36,8 +36,8 @@ export function app_g_bless_people_place(people, coordinates_land, taken) {
     let roam = property_get(person, "roam");
     let free = list_filter(coordinates_land, free_is);
     function near_is(tile) {
-      let near = bless_home_reaches(home, roam, tile);
-      return near;
+      let close = bless_home_reaches(home, roam, tile);
+      return close;
     }
     let near = list_filter(free, near_is);
     let nowhere = list_empty_is(near);
