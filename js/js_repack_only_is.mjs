@@ -1,3 +1,4 @@
+import { js_repack_only_is_silent_is } from "./js_repack_only_is_silent_is.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { js_repack_only_is_unfound_is } from "./js_repack_only_is_unfound_is.mjs";
 import { js_repack_only_is_few_is } from "./js_repack_only_is_few_is.mjs";
@@ -6,7 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { js_repack_only_is_busy_is } from "./js_repack_only_is_busy_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_find_return_try } from "./js_find_return_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_name_set_from_node_try } from "./js_name_set_from_node_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -24,8 +24,9 @@ export function js_repack_only_is(declaration) {
   "At most one other thing done, matching that one entry, so that a function which really does something and happens to hand back some of what it was given is left alone. Nought means the thing was taken apart and put back with nothing done to it at all; one means a single piece of work with lifting and putting back on either side of it, which is the shape a cut leaves behind.";
   "A thing done is looked for in two shapes, because a body works in two. A line binding a plain name to a plain call is one. A line doing something and binding no name at all is the other - painting a screen, walking a list, asking a question about what was handed in. Reading only the first called a page painter and a list walker pure repacks, which is the opposite of what this is for. Lifting a name out, and the one line handing the record back, are the product rather than work, so neither is counted.";
   arguments_assert(arguments, 1);
-  let node = js_find_return_try(declaration);
-  let silent_is = null_is(node);
+  let r4 = js_repack_only_is_silent_is(declaration);
+  let silent_is = property_get(r4, "silent_is");
+  let node = property_get(r4, "node");
   if (silent_is) {
     return false;
   }
