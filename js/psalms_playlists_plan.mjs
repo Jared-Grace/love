@@ -1,3 +1,7 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { subtract } from "./subtract.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { psalms_chapters_video_order } from "./psalms_chapters_video_order.mjs";
@@ -16,17 +20,20 @@ export async function psalms_playlists_plan(channel_id) {
   let playlists = await youtube_channel_playlists(channel_id);
   let chapter_ids = psalms_playlist_chapter_ids(playlists);
   let chapters = [];
-  for (let named of Object.keys(wanted)) {
-    chapters.push(Number(named));
+  for (let named of object_property_names(wanted)) {
+    let v = Number(named);
+    chapters.push(v);
   }
-  chapters.sort(function lambda(one, other) {
-    return one - other;
-  });
+  function lambda(one, other) {
+    let difference = subtract(one, other);
+    return difference;
+  }
+  chapters.sort(lambda);
   async function lambda_chapter(chapter) {
     let playlist_id = chapter_ids[chapter] || null;
     let songs = wanted[chapter];
     let holds = [];
-    if (playlist_id !== null) {
+    if (not_equal(playlist_id, null)) {
       let inside = await youtube_playlist_videos(playlist_id);
       for (let video of inside) {
         holds.push(video.video_id);
@@ -36,7 +43,8 @@ export async function psalms_playlists_plan(channel_id) {
     let order_wanted = [];
     for (let song of songs) {
       order_wanted.push(song.video_id);
-      if (!holds.includes(song.video_id)) {
+      let b = holds.includes(song.video_id);
+      if (not(b)) {
         add.push({
           video_id: song.video_id,
           title: song.title,
@@ -55,14 +63,16 @@ export async function psalms_playlists_plan(channel_id) {
         ordered.push(video_id);
       }
     }
-    let out_of_order = kept.join(",") !== ordered.join(",");
+    let left = kept.join(",");
+    let right = ordered.join(",");
+    let out_of_order = not_equal(left, right);
     let r = {
       chapter: chapter,
       playlist_id: playlist_id,
       songs_wanted: order_wanted,
       songs_held: holds.length,
       add: add,
-      strangers: holds.length - kept.length,
+      strangers: subtract(holds.length, kept.length),
       out_of_order: out_of_order,
     };
     return r;
