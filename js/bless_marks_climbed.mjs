@@ -14,8 +14,7 @@ import { bless_places_at_index } from "./bless_places_at_index.mjs";
 import { bless_person_blessed_is } from "./bless_person_blessed_is.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { bless_blessed_add } from "./bless_blessed_add.mjs";
-import { bless_rung_earned_is } from "./bless_rung_earned_is.mjs";
-import { bless_rung_after } from "./bless_rung_after.mjs";
+import { bless_rung_climbed } from "./bless_rung_climbed.mjs";
 export function bless_marks_climbed(count, stride) {
   arguments_assert(arguments, 2);
   ("Plays a whole crowd the way the game asks the player to play it - pray for every dark");
@@ -54,10 +53,7 @@ export function bless_marks_climbed(count, stride) {
       let place = bless_person_place(person, rung);
       bless_blessed_add(blessed, rung, place);
       prayers = add(prayers, 1);
-      let earned = bless_rung_earned_is(blessed, person, rung);
-      if (earned) {
-        rung = bless_rung_after(rung);
-      }
+      rung = bless_rung_climbed(blessed, person, rung);
     }
   }
   function dark_is(person) {
