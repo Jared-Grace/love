@@ -6,7 +6,6 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
-
 export async function function_plumbing_collapse(f_name) {
   arguments_assert(arguments, 1);
   ("Take out of one function every line that only carries a value from one name to another, whether by gathering names into a record and reading them straight back out or by giving a name a second name, and answer with the names that went.");
@@ -26,6 +25,9 @@ export async function function_plumbing_collapse(f_name) {
     }
   }
   await function_transform(f_name, lambda);
-  let r = { f_name, collapsed };
+  let r = {
+    f_name,
+    collapsed,
+  };
   return r;
 }
