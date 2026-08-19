@@ -25,15 +25,15 @@ export async function app_a_function_parsed_bar_content(context) {
     return r5;
   }
   if (false) {
-    let a2 = emoji_arrow_up();
-    app_a_button(content, a2, upload);
+    let a = emoji_arrow_up();
+    app_a_button(content, a, upload);
     let text = emoji_arrow_down();
     app_a_button(content, text, download);
   }
   let bc = html_bar_content(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
-  return {
+  let r2 = {
     f_name,
     parsed,
     ast,
@@ -43,4 +43,5 @@ export async function app_a_function_parsed_bar_content(context) {
     content,
     bar,
   };
+  return r2;
 }
