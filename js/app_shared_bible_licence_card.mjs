@@ -1,5 +1,5 @@
+import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { each } from "./each.mjs";
 import { ebible_licence_words } from "./ebible_licence_words.mjs";
 import { html_a_href_text } from "./html_a_href_text.mjs";
