@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
