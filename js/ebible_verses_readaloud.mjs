@@ -1,7 +1,6 @@
+import { equal_not } from "./equal_not.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { ebible_chapter_verse_numbers_with_words } from "./ebible_chapter_verse_numbers_with_words.mjs";
 import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
@@ -36,8 +35,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   ("Measured here rather than looked up in a list, so it cannot go stale: the counts are already in hand at this point, and a chapter that gets put right starts being answered for again with nothing else edited. What the record and its gate are for is knowing how many there are and watching that number only fall.");
   let marks = list_size(verse_numbers);
   let lines = list_size(filtered);
-  let paired = equal(marks, lines);
-  let unpaired = not(paired);
+  let unpaired = equal_not(marks, lines);
   if (unpaired) {
     return null;
   }
