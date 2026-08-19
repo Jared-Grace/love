@@ -31,10 +31,10 @@ export async function app_shared_bible_reference_book_english(ref_line) {
   function upper_of(book) {
     let s = property_get(book, "text");
     let text = text_upper_to(s);
-    let book_code = property_get(book, "book_code");
+    let code = property_get(book, "book_code");
     let uppered = {
       text,
-      book_code,
+      book_code: code,
     };
     return uppered;
   }
