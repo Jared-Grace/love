@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_lesson_expression_choose_order_and_before_or_expression_parts } from "./app_code_lesson_expression_choose_order_and_before_or_expression_parts.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_expression(
   want_true,
 ) {
@@ -19,13 +19,12 @@ export function app_code_lesson_expression_choose_order_and_before_or_expression
   let inner = app_code_operator_truths_wanted(and_symbol, and_value);
   let left_truth = list_get(inner, 0);
   let middle_truth = list_get(inner, 1);
-  let tree =
-    app_code_lesson_expression_choose_order_and_before_or_expression_parts(
-      left_truth,
-      and_symbol,
-      middle_truth,
-      or_symbol,
-      right_truth,
-    );
+  let tree = app_code_expression_node_left_operator_first(
+    left_truth,
+    and_symbol,
+    middle_truth,
+    or_symbol,
+    right_truth,
+  );
   return tree;
 }
