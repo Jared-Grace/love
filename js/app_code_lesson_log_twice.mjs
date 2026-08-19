@@ -24,6 +24,9 @@ export function app_code_lesson_log_twice() {
   (
     "The program is not unscrambled. The tokens a program is taken apart into carry no line breaks, so a two-line program handed to that quiz would be built back as one line - and one line against two is the single thing this screen exists to tell apart."
   );
+  (
+    "Both quizzes are given the same tailored wrong answer: the right answer with its two lines the other way round. Without it the four programs differ on their first line and so do the four answers, so either direction could be settled by reading one line - and the screen would accept an answer from a learner who had not read that the order is the order the lines are written, which is half of what it exists to say."
+  );
   let name_id = app_code_lesson_log_twice_title_name_id();
   let batch = app_code_batch_question_answer_fns(
     app_code_lesson_log_twice_batch,
