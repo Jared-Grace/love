@@ -103,6 +103,7 @@
   "expressions_swapping_equal",
   "expressions_solving_both_sides_of_and",
   "expressions_solving_both_sides_of_or",
+  "expressions_and_before_or",
   "expressions_comparison_inside_and",
   "expressions_in_between",
   "expressions_which_part_is_solved_first",
