@@ -102,6 +102,7 @@
   "expressions_parentheses_both_sides",
   "expressions_swapping_equal",
   "expressions_solving_both_sides_of_and",
+  "expressions_solving_both_sides_of_or",
   "expressions_comparison_inside_and",
   "expressions_in_between",
   "expressions_which_part_is_solved_first",
@@ -119,6 +120,7 @@
   "statements_giving_a_name_one_more_than_it_holds",
   "statements_changing_a_name_after_another_was_given_what_it_held",
   "statements_comparing_what_two_names_hold",
-  "statements_writing_a_note_in_the_code"
+  "statements_writing_a_note_in_the_code",
+  "statements_writing_out_two_things"
  ]
 }
