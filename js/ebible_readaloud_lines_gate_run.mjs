@@ -66,7 +66,8 @@ export async function ebible_readaloud_lines_gate_run() {
     "a bible is shipped that this record says nothing about, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
     f_name3,
   ]);
-  ebible_bibles_answered_assert(answered, f_name3, unasked_hint);
+  let expected = ebible_readaloud_bible_folders();
+  ebible_bibles_answered_assert(expected, answered, f_name3, unasked_hint);
   function lambda2(measured) {
     let chapters = property_get(measured, "same");
     return chapters;

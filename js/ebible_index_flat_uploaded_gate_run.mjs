@@ -24,7 +24,14 @@ export async function ebible_index_flat_uploaded_gate_run() {
     f_name,
     ", which rewrites the record",
   ]);
-  let asked = ebible_bibles_answered_assert(answered, f_name, unasked_hint);
+  ("Every bible this repo ships is expected here, whichever catalogue it came from. A flat index is about how a bible numbers its own verses, which every bible does, so nothing about where it was fetched from puts it outside the question.");
+  let expected = ebible_bible_folders_sorted();
+  let asked = ebible_bibles_answered_assert(
+    expected,
+    answered,
+    f_name,
+    unasked_hint,
+  );
   let unasked = property_get(asked, "unasked");
   let departed = property_get(asked, "departed");
   let r = {
