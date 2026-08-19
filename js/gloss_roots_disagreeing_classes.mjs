@@ -1,3 +1,4 @@
+import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { each } from "./each.mjs";
 import { gloss_root_claimed_nearest } from "./gloss_root_claimed_nearest.mjs";

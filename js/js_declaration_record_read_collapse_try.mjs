@@ -14,7 +14,6 @@ import { list_remove } from "./list_remove.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function js_declaration_record_read_collapse_try(ast, rebound, row) {
   arguments_assert(arguments, 3);
   ("Take away one line that gathers names into a record when nothing ever wants the record, only the names back out of it, and answer whether it went.");
