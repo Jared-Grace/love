@@ -19,11 +19,10 @@ export function app_shared_bible_offline_body(container, languages) {
     card,
     "Which languages do you want to keep on this device?",
   );
-  let explain = html_div_text(
+  app_shared_text_quiet(
     card,
     "A saved language opens with no internet, and it opens faster",
   );
-  app_shared_text_deemphasized(explain);
   let listed = app_shared_bible_offline_languages(languages);
   function on_change() {
     "a save or a freeing changes what every other button here should say, so the whole list is drawn again";
