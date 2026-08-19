@@ -1,5 +1,4 @@
-import { round } from "./round.mjs";
-import { divide } from "./divide.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { multiply } from "./multiply.mjs";
 import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { list_tally_ranked_top } from "./list_tally_ranked_top.mjs";
@@ -40,8 +39,7 @@ export async function bible_glyph_chapter_draft_coverage(
     }
   }
   let top = multiply(drawn, 100);
-  let n = divide(top, words);
-  let share = round(n);
+  let share = divide_round(top, words);
   let undrawn_commonest = list_tally_ranked_top(undrawn, count);
   let r = {
     chapter_code,
