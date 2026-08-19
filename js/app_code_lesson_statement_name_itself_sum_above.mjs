@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,6 +12,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: a name being given a new value, a sum of two names, and then the two of them in one line - the sum given back to a name the sum was read from");
   ("The two reminders are the two lessons this line is made of, and neither of them is new. What is new is only that they may happen in the same line, which is why the third box is the only one that says anything a learner has not been told.");
