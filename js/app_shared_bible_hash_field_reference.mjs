@@ -67,6 +67,7 @@ export function app_shared_bible_hash_field_reference(books_en) {
     valid_is,
     suggestions,
     label: app_shared_bible_reference_spaced,
+    said: app_shared_bible_reference_spaced,
   };
   return field;
 }
