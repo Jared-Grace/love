@@ -109,10 +109,29 @@ reaching a path that rewrites words.
 
 - **Door43 / unfoldingWord** — catalog API at `https://git.door43.org/api/v1/catalog`.
   Each resource carries an explicit SPDX-style licence field, and the unfoldingWord
-  literal translations are CC BY-SA 4.0. Text ships as **USFM**, which nothing in
-  this repo reads yet — that parser is the whole cost of using this source.
+  literal translations are CC BY-SA 4.0. Text ships as **USFM**, read by
+  `usfm_chapters_verses` and gated by `usfm_chapters_verses_cases_gate_run`.
   `am_ulb` (Amharic, CC BY-SA 4.0, 66 books, v7.2 dated 2022-04-21, attribution
-  "Original work available at https://door43.org/") is the replacement for `amh`.
+  "Original work available at https://door43.org/") replaced `amh`, which was
+  CC BY-NC-ND and one of the six licence offenders.
+
+  **How a second source is wired in.** Nothing outside these files knows there are
+  two sources: `door43_versions` is the hand-written catalogue, pinned to a release
+  tag, and `door43_version_or_null` is the one question that tells the sources
+  apart. Five functions ask it and hand off — `ebible_version_chapters`,
+  `ebible_chapter_codes`, `ebible_version_books`, `ebible_version_credit`,
+  `ebible_verses_upload`. Everything downstream still knows only a folder name.
+
+  **What a Door43 bible does not have, and what stands in for it:** no book index
+  page (the books are files; the list is gathered from them, each book named from
+  its own `\h` running header, so a reader sees the book's name in their own
+  language), no copyright page (the credit is copied from the release's manifest
+  and `LICENSE.md` into `door43_versions`, and a pinned release cannot change under
+  it), and no read-aloud edition (there is nothing to cross-check, because usfm
+  marks every verse exactly once — see the note below on why eBible needs two
+  readings).
+
+  Adding a second Door43 bible is one entry in `door43_versions`. Nothing else.
 - **open.bible (Biblica)** — per-translation licence pages, usually CC BY-SA or
   CC BY-NC-ND. Stated clearly, but read the page: Biblica varies it by language.
 - **seven1m/open-bibles** — an index rather than a source. Useful for finding a

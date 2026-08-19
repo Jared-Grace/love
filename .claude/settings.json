@@ -1665,6 +1665,7 @@
       "Bash(node scripts/ai.mjs bible_glyph_artwork_asset_files:*)",
       "Bash(node scripts/ai.mjs git_commit_files:*)",
       "Bash(node scripts/ai.mjs git_commit_file_text:*)",
+      "Bash(node scripts/ai.mjs permission_replay_reading_checked:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3239,6 +3240,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_artwork_asset_files:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args git_commit_files:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args git_commit_file_text:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_replay_reading_checked:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -4812,6 +4814,7 @@
       "Bash(node scripts/aig.mjs bible_glyph_artwork_asset_files:*)",
       "Bash(node scripts/aig.mjs git_commit_files:*)",
       "Bash(node scripts/aig.mjs git_commit_file_text:*)",
+      "Bash(node scripts/aig.mjs permission_replay_reading_checked:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -6385,7 +6388,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_artwork_names_unknown:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_artwork_asset_files:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args git_commit_files:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args git_commit_file_text:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args git_commit_file_text:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_replay_reading_checked:*)"
     ],
     "defaultMode": "acceptEdits"
   },
