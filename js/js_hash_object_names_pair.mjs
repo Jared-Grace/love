@@ -3,7 +3,6 @@ import { js_hash_object_names_handled } from "./js_hash_object_names_handled.mjs
 import { js_hash_object_names_declared } from "./js_hash_object_names_declared.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-
 export function js_hash_object_names_pair(ast) {
   "The names this file gives to the object a page's address is read into, said as {own, outgoing} - the addresses that are this page's own, and the ones being built to hand to another page.";
   "One walk and two answers, because the two are told apart by nothing a later reading could recover. An address built for another tab starts life as an empty object and becomes an address only at the line that turns it into a link; separated afterwards, the separating would have to guess.";

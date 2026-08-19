@@ -1,7 +1,7 @@
 import { property_in_list } from "./property_in_list.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
-import { hash_key_getters_all } from "./hash_key_getters_all.mjs";
+import { hash_key_getters_own_all } from "./hash_key_getters_own_all.mjs";
 import { hash_fields_keys } from "./hash_fields_keys.mjs";
 import { hash_fields_guard_names } from "./hash_fields_guard_names.mjs";
 import { function_run } from "./function_run.mjs";
@@ -15,8 +15,9 @@ export async function apps_hash_keys_unchecked() {
   "Two ways to be unanswered, and the word is unanswered either way. No field describes it, so nothing could tell a reader it is wrong however the page asked; or a field does describe it and the app never asks, so the checking exists and this page walks past it.";
   "It is the word and not the page because a page that guards one word looks guarded from the outside forever after. The next word added to it would arrive unchecked under a green gate, which is the failure this shape exists to keep from happening quietly.";
   "The words are read by running the small functions that hand them back rather than by reading their source, because the word is what a link is actually spelled with and a getter is free to build it however it likes.";
+  "Only the words of an app's OWN address are asked about. A page that builds a link to another page names that page's words on the way out and never reads one of them, so counting those would be a complaint no honest repair answers: the page cannot make sense of an address it never opens, and saying it can would leave it looking answered for ever after. Freezing still watches them, from the wider reading, which is the question those words actually raise.";
   let mains = apps_all_main_fns();
-  let pairs = await hash_key_getters_all();
+  let pairs = await hash_key_getters_own_all();
   let checked = hash_fields_keys();
   let guards = hash_fields_guard_names();
   let unchecked = [];
