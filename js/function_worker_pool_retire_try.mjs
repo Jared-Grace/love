@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { function_worker_generation_holder } from "./function_worker_generation_holder.mjs";
 import { function_worker_pool_holder } from "./function_worker_pool_holder.mjs";
 import { function_worker_pool_run } from "./function_worker_pool_run.mjs";
-import { identity } from "./identity.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { log } from "./log.mjs";
@@ -14,7 +14,7 @@ export async function function_worker_pool_retire_try() {
   "The count is raised by hand here rather than by saving a file. What saves a file is a watcher, and this is not a test of the watcher: the wiring from a save to the count was left alone, and the wiring from the count to a fresh pool is what moved. Touching a file would also make every other watcher in the repo retire its own workers, for a question that can be asked without troubling them.";
   "The pool being replaced is held onto before the count is raised, because the point is that the thing handed back afterwards is a different one. Asked only afterwards there would be nothing to compare it against, and a pool that was never replaced would look exactly like a pool that was.";
   "Draining rather than killing is checked through the workers of the old pool, each of which should have been told it is retired. A worker still carrying a job keeps its own process alive until it has answered; the mark is what tells it to leave once it has.";
-  let f_name = identity.name;
+  let f_name = fn_name("identity");
   let first = await function_worker_pool_run(f_name, [1]);
   let held = function_worker_pool_holder();
   let before = property_get(held, "current");
