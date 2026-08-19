@@ -1,11 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { multiply } from "./multiply.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { random } from "./random.mjs";
 import { app_g_npc_move } from "./app_g_npc_move.mjs";
@@ -37,8 +36,7 @@ export function app_g_bless_people_step(world) {
     function open_is(neighbor) {
       let tile = property_get(neighbor, "neighbor");
       let key = g_coordinates_key(tile);
-      let occupied = equal(key, taken);
-      let free = not(occupied);
+      let free = equal_not(key, taken);
       return free;
     }
     let open = list_filter(neighbors, open_is);
