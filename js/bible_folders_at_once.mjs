@@ -1,4 +1,4 @@
-export function bible_verse_holes_bibles_at_once() {
+export function bible_folders_at_once() {
   "How many bibles the hole measurement asks about at the same time.";
   "IT IS A CEILING ON WHAT ONE SWEEP MAY ASK OF SOMEBODY ELSE'S SERVER, not a speed setting, and the number is small because the sweep is nested. Each bible on it starts an ask for every chapter of the book at once, so the count in flight is this number multiplied by the chapters in the book - two dozen of them - and the number that matters is the product rather than either half.";
   "THE UNBOUNDED VERSION WAS MEASURED FAILING. Asking every bible at once meant two hundred and fifty six of them times twenty four chapters, which is six thousand asks arriving together, and roughly four in five of them never came back. Every one that did not came back was written into the record as a bible missing a chapter it in fact holds. Eight bibles is under two hundred asks in flight, which is thirty times smaller than the number that broke.";
