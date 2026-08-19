@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_total_above(root) {
   ("Naming rather than adding, which is what the reminder used to show. Adding two names was the whole of the screen before this one, so a learner arriving here has just done it; what they have not done is give a name to something that has to be worked out first, and a reminder pointing at the addition would be pointing away from the new thing.");
   ("The same two numbers on every box of the screen. The screen before this one could show its reminder with a different pair because the reminder was arithmetic on its own; here the reminder is the lesson's own two names, and a second pair would read as those names being given new values, which is a different lesson.");
   ("A third name rather than writing the total back into one of the two. Writing it into the first name would empty a cup the sum was just read from, and a learner would be left working out which value the line used - a question this screen is not asking.");
-  ("The last box puts the total in where the sum was, which is the whole inference done where a learner can watch it. A learner told only that the third name holds the total has to take it; shown the line with the sum already worked out, they can check that the two lines say the same thing.");
+  ("The last box sets the two lines side by side - the one written earlier, and the one that could have been written instead - which is the whole inference done where a learner can watch it. A learner told only that a sum may be swapped for its value has to take it on trust; shown both lines with the reason underneath, they can check that the two say the same thing.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let name_total = app_code_lesson_statement_name_third();
@@ -44,17 +44,33 @@ export function app_code_lesson_statement_name_total_above(root) {
   ]);
   let code_total = js_code_let_statement(name_total, names_sum);
   html_div_code(box_named, code_total);
-  html_div_cycle_code(box_named, ["Now we can write that name on its own"]);
+  html_div_cycle_code(box_named, ["Then we can write that name on its own"]);
   let logged = js_code_console_log_statement(name_total);
   app_code_code_lines_writes_out(box_named, [logged], total);
-  ("the total is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
-  let comes_to = list_join_empty([
-    " comes to ",
+  ("Then rather than now, because the two lines happen one after the other and that order is the whole of what a program is. Now says only that the second line is available; then says it comes after.");
+  ("The total is a code chip wherever it stands, here and in the line that follows. A number written in a program is code, and it is drawn as code everywhere else on this screen, so a total set in plain writing would be the one number on the screen dressed as prose.");
+  ("The reason under the two lines is written as code a learner can already read, not as a claim about the code. A sum standing equal to its value is what the equals lesson of the Operators course taught, so nothing new has to be introduced to justify the swap.");
+  let equality = js_code_binary_spaced_nb(
+    names_sum,
+    js_operator_triple_equal_symbol(),
     total,
-    ", so this is the same line",
-  ]);
+  );
   let box_same = app_code_container_light_blue(root);
-  html_div_cycle_code(box_same, ["", names_sum, comes_to]);
+  html_div_cycle_code(box_same, [
+    "When we solve ",
+    names_sum,
+    ", its value is ",
+    total,
+  ]);
+  html_div_cycle_code(box_same, ["Earlier we wrote:"]);
+  html_div_code(box_same, code_total);
+  html_div_cycle_code(box_same, ["Instead we could have written:"]);
   let code_same = js_code_let_statement(name_total, total);
   html_div_code(box_same, code_same);
+  html_div_cycle_code(box_same, [
+    "And ",
+    name_total,
+    " would be the same either way because ",
+    equality,
+  ]);
 }
