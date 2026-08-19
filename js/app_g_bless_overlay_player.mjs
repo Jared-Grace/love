@@ -1,10 +1,10 @@
-import { app_g_bless_overlay_blessings } from "./app_g_bless_overlay_blessings.mjs";
+import { app_g_bless_overlay_blessed } from "./app_g_bless_overlay_blessed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_overlay_cone_get } from "./app_g_bless_overlay_cone_get.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_bless_overlay_player(container_map) {
   arguments_assert(arguments, 1);
-  let r4 = app_g_bless_overlay_blessings(container_map);
+  let r4 = app_g_bless_overlay_blessed(container_map);
   let blessed2 = property_get(r4, "blessed");
   let rung2 = property_get(r4, "rung");
   let told2 = property_get(r4, "told");
