@@ -176,6 +176,11 @@ export function ebible_languages_curated() {
       bible_folder: "zlmKSZI",
       language_code: "zlm",
     },
+    {
+      name: "Amharic",
+      bible_folder: "am_ulb",
+      language_code: "amh",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
