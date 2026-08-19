@@ -1,6 +1,5 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
-import { property_get } from "./property_get.mjs";
 import { g_tiles_unwalkable } from "./g_tiles_unwalkable.mjs";
 export function g_coordinates_land(coordinates) {
   "The tiles of a world somebody could stand on - everything that is not one of the solids.";
@@ -9,8 +8,7 @@ export function g_coordinates_land(coordinates) {
   "as it always did.";
   let unwalkable = g_tiles_unwalkable();
   function land_is(coordinate) {
-    let item = property_get(coordinate, "item");
-    let standable = list_includes_not(unwalkable, item);
+    let standable = property_in_list_not(coordinate, "item", unwalkable);
     return standable;
   }
   let coordinates_land = list_filter(coordinates, land_is);
