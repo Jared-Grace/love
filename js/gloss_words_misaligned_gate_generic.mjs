@@ -6,9 +6,10 @@ import { json_format_to } from "./json_format_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function gloss_words_misaligned_gate_generic(
   fn,
-  store_said,
+  a_name,
   words_read,
 ) {
+  "$plain a_name";
   "Gate over one gloss store: no authored chapter may carry a passage whose word explanations have stopped lining up with the passage itself. Throws so the dispatcher seam exits nonzero.";
   "The page paints the explanations under the passage in order and nothing on it repeats which word each one is about, so the reader takes the third explanation to be about the third word. One word skipped therefore does not read as a gap - it reads as every later word being explained wrongly, and it reads that way to somebody studying scripture, which is the whole reason this is worth a gate rather than a note.";
   "It starts at nothing and there is no baseline beside it, because a list to add offenders to would turn a red light into a place to write things down. A store that is not clean today therefore stays out of the whole-repo list until it is, named in the exempt list with what is wrong, rather than having its faults written down as expected.";
