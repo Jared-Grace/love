@@ -36,7 +36,7 @@ export async function app_a_function_upload() {
   if (ne) {
     ("The server runs this one, so its name crosses the wire rather than the function itself.");
     ("Importing it to read a name told the import graph a page could reach git and the shell.");
-    let r = await app_shared_api({
+    await app_shared_api({
       f_name: fn_name("app_a_upload"),
       args: [deltas],
     });
