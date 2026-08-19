@@ -91,6 +91,8 @@ export function app_code_lesson_code_generic(params) {
     "backwards_answer_label",
     null,
   );
+  ("the backwards quiz has its own tailored wrong answers, because its answers are code rather than values and a decoy that tempts in one direction says nothing in the other; absent, it offers only the other questions' code, which is what every lesson before this one did");
+  let backwards_decoys = property_get_or(params, "backwards_decoys", null);
   let backwards_question_label_final = value_or_if_null(
     backwards_question_label_override,
     backwards_question_label,
@@ -105,6 +107,7 @@ export function app_code_lesson_code_generic(params) {
     answer_label: backwards_answer_label_final,
     answer_on_button: on_question,
     answer_count_override: quiz_backwards_answer_count_override,
+    decoys: backwards_decoys,
   };
   ("the unscramble (build-from-tokens) answer prompt is set inside the quizzes builder; a lesson may override it too");
   let unscramble_label = property_get_or(params, "unscramble_label", null);
