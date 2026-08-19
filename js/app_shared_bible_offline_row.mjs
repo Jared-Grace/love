@@ -1,8 +1,8 @@
+import { ebible_language_bible_folder } from "./ebible_language_bible_folder.mjs";
 import { app_shared_bible_offline_download_progress } from "./app_shared_bible_offline_download_progress.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_offline_folder_delete } from "./ebible_offline_folder_delete.mjs";
 import { ebible_offline_folder_downloaded_is } from "./ebible_offline_folder_downloaded_is.mjs";
 import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
@@ -19,8 +19,8 @@ export function app_shared_bible_offline_row(parent, language, on_change) {
   arguments_assert(arguments, 3);
   let row = html_div(parent);
   let name = property_get(language, "name");
-  let property_name = bible_folder_key();
-  let bible_folder = property_get(language, property_name);
+  ("which folder a language is read from is asked of the one place that answers it, the same place the reading itself asks, so this row cannot come to a different answer than the page it is offering to save");
+  let bible_folder = ebible_language_bible_folder(language);
   render();
   function render() {
     html_clear(row);
