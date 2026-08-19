@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { js_two_operator_line_parts } from "./js_two_operator_line_parts.mjs";
 export function app_code_lesson_expression_choose_order_tree_of_code_generic(
   code,
-  expression_parts,
+  node_from_parts,
 ) {
   "the shape behind a line one of these lessons printed, worked out again from the line itself, hung together the way the lesson that printed it hangs its lines together.";
   "THE LINE IS READ BACK RATHER THAN REMEMBERED. The quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.";
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_choose_order_tree_of_code_generic(
   list_size_assert(words, 5);
   let word_true = js_keyword_true();
   let parts = js_two_operator_line_parts(words, truth_of);
-  let tree = expression_parts(
+  let tree = node_from_parts(
     parts.left,
     parts.first_operator,
     parts.middle,
