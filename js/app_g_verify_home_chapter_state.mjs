@@ -11,8 +11,8 @@ export function app_g_verify_home_chapter_state() {
   let usable = property_get(r2, "usable");
   let asked = property_get(r2, "asked");
   let opened = usable ? asked : null;
-  let v7 = g_verify_chapter_storage_key();
-  let chapter_code = opened || localStorage.getItem(v7) || "1JN01";
+  let v = g_verify_chapter_storage_key();
+  let chapter_code = opened || localStorage.getItem(v) || "1JN01";
   let book_code = chapter_code.slice(0, 3);
   let v2 = chapter_code.slice(3);
   let v3 = Number(v2);
