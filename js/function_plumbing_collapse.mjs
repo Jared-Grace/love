@@ -1,5 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { function_auto_checked } from "./function_auto_checked.mjs";
 import { function_transform } from "./function_transform.mjs";
+import { property_get } from "./property_get.mjs";
 import { js_declarations_name_only_collapse } from "./js_declarations_name_only_collapse.mjs";
 import { js_declarations_record_read_collapse } from "./js_declarations_record_read_collapse.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -12,6 +14,7 @@ export async function function_plumbing_collapse(f_name) {
   ("This is the undoing of a fold. A piece of work moved out of a body and later put back leaves its own way of handing values over standing in the middle of the body it came from - the parcel it packed, the unpacking on the other side, and a line giving each unpacked name the name the body already used. None of it is work. It is the shape of a doorway that is no longer between anything.");
   ("The two ways of carrying are run one after the other and then run again, because each one clears the way for the other. Taking a record apart leaves plain second names behind; taking a second name away removes the mention that was making a record look wanted. Neither on its own reaches the end of a chain of them; the pair, run until a whole round moves nothing, does.");
   ("Nothing is judged about what is left. A body this makes shorter may still be too long, and a body it does not touch was never carrying anything - both are answers, and which of them happened is readable from the names handed back.");
+  ("The file is put back in order afterwards rather than left for whoever called. Taking a two-step reading down to one step changes which verb the line calls, and the verb it now calls may be one the file had no reason to bring in before - so a file that loaded before this ran can be one that does not load after, and the tidying is what closes that gap rather than a courtesy. Whether it came out sound is handed back with the rest.");
   let collapsed = [];
   function lambda(ast) {
     let going = true;
@@ -25,9 +28,12 @@ export async function function_plumbing_collapse(f_name) {
     }
   }
   await function_transform(f_name, lambda);
+  let checked = await function_auto_checked(f_name);
+  let ok = property_get(checked, "ok");
   let r = {
     f_name,
     collapsed,
+    ok,
   };
   return r;
 }
