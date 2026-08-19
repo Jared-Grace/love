@@ -8,8 +8,7 @@ import { null_is } from "./null_is.mjs";
 export async function app_shared_bible_licences_fill(container) {
   "fetches the credits and fills a waiting area with them, saying it is on its way while it goes and saying so kindly if it cannot get there";
   "held apart from the two things that open it, because a screen and an in-place panel differ only in how they are framed and how they are left. Everything between those two moments is the same, and a second copy of it would be the one that quietly stops matching the first.";
-  let waiting = html_div_text(container, "Fetching the credits");
-  app_shared_text_deemphasized(waiting);
+  app_shared_text_quiet(container, "Fetching the credits");
   let credits = await catch_null_async(ebible_credits_browser);
   let unreachable = null_is(credits);
   if (unreachable) {
