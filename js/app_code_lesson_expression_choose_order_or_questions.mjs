@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_both_sides_tree_of_code } from "./app_code_lesson_expression_choose_order_both_sides_tree_of_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
@@ -8,6 +9,7 @@ export function app_code_lesson_expression_choose_order_or_questions() {
   ("Reading a line back works unchanged because an || line is written the same seven words as a line with a comparison in the middle: a number, an operator, a number, the middle operator, and the same three again. Nothing is bracketed either way, because || is weaker than every comparison and so each side gathers itself.");
   let bank = app_code_lesson_expression_choose_order_questions_generic(
     app_code_lesson_expression_choose_order_or_expression,
+    app_code_lesson_expression_choose_order_both_sides_tree_of_code,
   );
   return bank;
 }

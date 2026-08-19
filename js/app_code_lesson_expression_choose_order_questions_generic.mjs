@@ -1,19 +1,20 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_tree_of_code } from "./app_code_lesson_expression_choose_order_both_sides_tree_of_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { not } from "./not.mjs";
 export function app_code_lesson_expression_choose_order_questions_generic(
   expression,
+  tree_of_code,
 ) {
-  arguments_assert(arguments, 1);
-  ("the question bank a press-both-sides lesson draws on: lines built as shapes by the maker handed in, given out one a screen, and worked out again from the writing they were printed as");
-  ("The maker is handed in because two lessons ask the same question about two families of line - one with === in the middle and one with any other comparison - and everything about the asking is the same. Written twice, the turn-taking and the reading-back would be two copies to keep in step for the sake of one word each.");
+  arguments_assert(arguments, 2);
+  ("the question bank a press-at-a-time lesson draws on: lines built as shapes by the maker handed in, given out one a screen, and worked out again from the writing they were printed as by the reader handed in");
+  ("The maker is handed in because several lessons ask the same question about different families of line - one with === in the middle, one with any other comparison, one with && - and everything about the asking is the same. Written out once a lesson, the turn-taking and the reading-back would be that many copies to keep in step for the sake of one word each.");
+  ("The reader comes in beside the maker because the two are one decision. A line is written out by the maker and read back by the reader, and a reader that could not take apart what its own maker builds would throw where a learner was owed a question - so a lesson that changes the shape of its lines changes both together or neither.");
   ("The first line a learner meets is a true one, because a true line is the one that has something to say: two sides that look nothing alike and land where the comparison wanted them. A false line met first would be read as the ordinary case and the true one as the surprise, which is the wrong way round for what the lesson is about.");
   ("After that true and false take turns rather than being drawn by chance. Chance would run three or four true lines together often enough for a learner to settle into answering true without solving, and turns cost nothing to arrange.");
-  ("One shape and no turning of it, because both sides of this line are ready from the start - either may be solved first, and there is no leftmost-is-right habit for a second shape to break. That is what the two-comparisons lesson exists to say, and it says it about brackets; here it is simply true of the line.");
+  ("One shape a lesson and no turning of it. Which operator may go first is already the maker's own decision - it is what the shape it builds says - so a second shape mirrored from the first would either ask the same question twice or ask a different lesson's question inside this one.");
   let want_true = true;
   function tree_new() {
     "the next line: the other answer from last time";
@@ -40,8 +41,7 @@ export function app_code_lesson_expression_choose_order_questions_generic(
   }
   function tree_for(question) {
     "the shape behind a line, worked out again from the writing it was printed as";
-    let tree =
-      app_code_lesson_expression_choose_order_both_sides_tree_of_code(question);
+    let tree = tree_of_code(question);
     return tree;
   }
   function tree_of(qa, info) {
