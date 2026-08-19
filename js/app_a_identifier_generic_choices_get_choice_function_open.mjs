@@ -40,7 +40,7 @@ export function app_a_identifier_generic_choices_get_choice_function_open(
           await app_a_function_select(context, f_name);
         }
         overlay_close();
-        let r = app_a_functions_overlay_generic(a, properties, lambda3);
+        app_a_functions_overlay_generic(a, properties, lambda3);
       },
     };
     list_add(choices, references);
