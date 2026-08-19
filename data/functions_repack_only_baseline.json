@@ -84,7 +84,6 @@
   "js_fold_block_start",
   "js_fold_block_x_name",
   "js_function_forwarding_removed_callee",
-  "js_function_forwarding_removed_callee_is",
   "js_function_forwarding_removed_holder",
   "js_function_forwarding_removed_mentions",
   "js_function_forwarding_removed_name",
