@@ -1,17 +1,10 @@
+import { ebible_readaloud_lines_record_assert } from "./ebible_readaloud_lines_record_assert.mjs";
 import { ebible_readaloud_lines_offered_unchecked_names } from "./ebible_readaloud_lines_offered_unchecked_names.mjs";
 import { ebible_readaloud_lines_offered_unchecked_baseline_path } from "./ebible_readaloud_lines_offered_unchecked_baseline_path.mjs";
-import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
-import { ebible_readaloud_lines_differ_names } from "./ebible_readaloud_lines_differ_names.mjs";
-import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
-import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { ebible_bibles_answered_assert } from "./ebible_bibles_answered_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_readaloud_lines_path } from "./ebible_readaloud_lines_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { lists_combine } from "./lists_combine.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { list_map } from "./list_map.mjs";
@@ -49,50 +42,15 @@ export async function ebible_readaloud_lines_gate_run() {
     "ebible_readaloud_lines_offered_unchecked_baseline_write",
   );
   let f_name_download = fn_name("ebible_languages_readaloud_download");
-  let unchecked_hint = text_combine_multiple([
-    "a bible a reader can choose has no chapter of it read, so nothing here has compared a single one of them and the answer below passes over it in silence - fetch what is missing for it with ",
+  let differ = await ebible_readaloud_lines_record_assert(
     f_name_download,
-    ", then measure again with ",
     f_name,
-  ]);
-  await baseline_names_gate_generic(
     unchecked_names,
     unchecked_path,
-    unchecked_hint,
     unchecked_write,
+    bibles,
+    unmeasured,
   );
-  function lambda(measured) {
-    let uneven = property_get(measured, "differ");
-    let bible_folder = property_get(measured, "bible_folder");
-    function lambda_bible_folder_name(counts) {
-      let counts_named = object_merge_set(counts, {
-        bible_folder,
-      });
-      return counts_named;
-    }
-    let named = list_map(uneven, lambda_bible_folder_name);
-    return named;
-  }
-  let differ_each = list_map(bibles, lambda);
-  let differ = lists_combine(differ_each);
-  let f_name2 = fn_name("ebible_readaloud_lines_write");
-  let names = await ebible_readaloud_lines_differ_names();
-  let baseline_path = ebible_readaloud_lines_baseline_path();
-  let name_write = fn_name("ebible_readaloud_lines_baseline_write");
-  let hint2 = text_combine_multiple([
-    "a chapter is written for reading aloud in a different number of lines from the number of verses its page marks, so its verses cannot be laid against their numbers and nobody is shown that chapter at all. Look at the chapter itself; when it is put right, measure again with ",
-    f_name2,
-  ]);
-  await baseline_names_gate_generic(names, baseline_path, hint2, name_write);
-  let measured_names = list_map_property(bibles, "bible_folder");
-  let answered = lists_combine([measured_names, unmeasured]);
-  let f_name3 = fn_name("ebible_readaloud_lines_write");
-  let unasked_hint = text_combine_multiple([
-    "a bible is shipped that this record says nothing about, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
-    f_name3,
-  ]);
-  let expected = ebible_readaloud_bible_folders();
-  ebible_bibles_answered_assert(expected, answered, f_name3, unasked_hint);
   function lambda2(measured) {
     let chapters = property_get(measured, "same");
     return chapters;
