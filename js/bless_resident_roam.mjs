@@ -11,6 +11,6 @@ export function bless_resident_roam() {
   "anywhere - which was the point of them staying home.";
   "Measured to the DOOR rather than to wherever they were set down, so a resident always";
   "drifts back to their own house instead of wandering away from it a tile at a time.";
-  let roam = 4;
+  let roam = 6;
   return roam;
 }
