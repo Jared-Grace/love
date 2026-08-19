@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { function_worker_child_ensure } from "./function_worker_child_ensure.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { json_to } from "./json_to.mjs";
-export async function worker_job_run(worker, f_name, args) {
+export async function function_worker_job_run(worker, f_name, args) {
   let id = property_get(worker, "next_id");
   worker.next_id = id + 1;
   ("Register BEFORE awaiting the spawn. A retiring pool decides a worker is");
