@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { literals_frozen_gate_run_lambda2 } from "./literals_frozen_gate_run_lambda2.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +18,7 @@ export function literals_frozen_gate_run_r(
 ) {
   arguments_assert(arguments, 6);
   function lambda2(f_name) {
-    let r2 = literals_frozen_gate_run_lambda2(f_name, recorded, arrived);
+    let r2 = property_in_list_not(f_name, recorded, arrived);
     return r2;
   }
   let orphaned = list_filter(gone, lambda2);
