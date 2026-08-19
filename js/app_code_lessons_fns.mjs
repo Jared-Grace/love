@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_and } from "./app_code_lesson_expression_choose_order_and.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
 import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
 import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
