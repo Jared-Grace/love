@@ -1,4 +1,4 @@
-import { text_lower_to } from "./text_lower_to.mjs";
+import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { text_replace } from "./text_replace.mjs";
 export function binisaya_affix_letters(piece) {
   "The letters of one piece of a word's construction, with the marks that say where it sits taken off.";
@@ -6,8 +6,7 @@ export function binisaya_affix_letters(piece) {
   "Where the piece sits is not lost by this, it is asked elsewhere: the kind is read off the marks before they are taken off, and the letters and the kind are then compared one at a time.";
   "$plain piece";
   "it names a piece of shorthand or a piece quoted out of prose, never anything that runs.";
-  let lower = text_lower_to(piece);
-  let undashed = text_replace(lower, "-", "");
+  let undashed = gloss_word_bare(piece);
   let r = text_replace(undashed, "^", "");
   return r;
 }
