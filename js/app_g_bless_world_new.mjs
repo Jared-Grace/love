@@ -34,9 +34,9 @@ export function app_g_bless_world_new() {
   ("the pavement being built around wherever they landed. Being made first is what takes");
   ("their own picture out of the crowd's; being moved after is what puts the game's first");
   ("act - look at a person, pray for them - in front of them the moment it opens.");
-  ("The pavement is handed to the world as the one place named so far. The ground knows a");
-  ("pavement is paved; only the world knows which tiles that pavement IS, and that is what a");
-  ("rung is asked against.");
+  ("The whole block is handed to the world as the one place named so far. The ground knows a");
+  ("pavement is paved; only the world knows which tiles that pavement IS and which doorstep");
+  ("belongs to which building, and that is what a rung is asked against.");
   let rows = app_g_map_generate();
   let block = app_g_bless_block(rows);
   let walls = property_get(block, "walls");
@@ -51,6 +51,6 @@ export function app_g_bless_world_new() {
   let player = g_player_initialize(player_img, coordinates_land);
   app_g_bless_player_place(player, block);
   let npcs = app_g_bless_people(player_img, coordinates_land, block, player);
-  let world = app_g_bless_world(rows, coordinates, player, npcs, sidewalk);
+  let world = app_g_bless_world(rows, coordinates, player, npcs, block);
   return world;
 }

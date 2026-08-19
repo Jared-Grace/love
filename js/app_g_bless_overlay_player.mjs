@@ -13,7 +13,7 @@ export function app_g_bless_overlay_player(container_map) {
   let player_img_c2 = property_get(r4, "player_img_c");
   let wash2 = property_get(r4, "wash");
   let div_map2 = property_get(r4, "div_map");
-  let street2 = property_get(r4, "street");
+  let block2 = property_get(r4, "block");
   let npcs2 = property_get(r4, "npcs");
   let player2 = property_get(r4, "player");
   let world = property_get(r4, "world");
@@ -28,7 +28,7 @@ export function app_g_bless_overlay_player(container_map) {
     player_img_c: player_img_c2,
     wash: wash2,
     div_map: div_map2,
-    street: street2,
+    block: block2,
     npcs: npcs2,
     player: player2,
     world,
@@ -45,7 +45,7 @@ export function app_g_bless_overlay_player(container_map) {
   let player_img_c = property_get(r2, "player_img_c");
   let wash = property_get(r2, "wash");
   let div_map = property_get(r2, "div_map");
-  let street = property_get(r2, "street");
+  let block = property_get(r2, "block");
   let npcs = property_get(r2, "npcs");
   let player = property_get(r2, "player");
   let r3 = {
@@ -60,7 +60,7 @@ export function app_g_bless_overlay_player(container_map) {
     player_img_c,
     wash,
     div_map,
-    street,
+    block,
     npcs,
     player,
   };
