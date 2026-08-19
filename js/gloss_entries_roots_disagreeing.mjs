@@ -39,8 +39,9 @@ export function gloss_entries_roots_disagreeing(entries, known) {
     let root_lower = text_lower_to(root);
     let claimed = gloss_explain_roots_claimed(explain_lower);
     let claimed_any = list_empty_not_is(claimed);
+    let claimed_bare = list_map(claimed, gloss_word_bare);
     let agreed = claimed_any
-      ? list_includes(claimed, root_lower)
+      ? list_includes(claimed_bare, gloss_word_bare(root))
       : text_includes(explain_lower, root_lower);
     if (agreed) {
       return;
