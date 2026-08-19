@@ -226,6 +226,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_choose_order_and,
     app_code_lesson_expression_choose_order_or,
+    app_code_lesson_expression_choose_order_and_before_or,
     app_code_lesson_expression_comparison_and,
     app_code_lesson_expression_in_between,
     app_code_lesson_expression_which_part_first,
