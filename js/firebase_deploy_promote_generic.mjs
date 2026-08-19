@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { qa_gate_run } from "./qa_gate_run.mjs";
+import { apps_frozen_names } from "./apps_frozen_names.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { firebase_prod_app_unchanged_assert } from "./firebase_prod_app_unchanged_assert.mjs";
+import { firebase_deploy_bypass_unchaged_assert_confirm } from "./firebase_deploy_bypass_unchaged_assert_confirm.mjs";
+import { firebase_deploy_bypass_unchanged } from "./firebase_deploy_bypass_unchanged.mjs";
+import { firebase_deploy_locked_message } from "./firebase_deploy_locked_message.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { lock_error } from "./lock_error.mjs";
 export async function firebase_deploy_promote_generic(promote) {
   "Puts this repo's pages live, putting one more build into the folder that is sent along the way - but only after the whole check passes, and only one such sending on this machine at a time. What was put there and what came back from the sending are both handed over, because either can fail on its own.";
   "Asking first and putting in place afterwards is the whole of why this exists. Done the other way round, a run whose check refused it had already overwritten the folder that gets sent, so being told no still changed what would go out the next time somebody was told yes - and the refused build sat there, matching nothing anybody had judged, holding every other app's sending until somebody noticed. Twenty seven apps were found waiting in that state at once.";
