@@ -1,3 +1,4 @@
+import { app_replace_rule_set_goals } from "./app_replace_rule_set_goals.mjs";
 import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
 import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
 import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
@@ -64,12 +65,8 @@ export async function app_replace_rule_set(context) {
   let rule_set_name = property_get(r4, "rule_set_name");
   let rules_used = property_get(r4, "rules_used");
   let start_over = property_get(r4, "start_over");
-  let index_selected = property_get(r4, "index_selected");
-  let rules_parsed = property_get(r4, "rules_parsed");
-  let goal = property_get(r4, "goal");
-  let goal_index = property_get(r4, "goal_index");
-  let goals_count = property_get(r4, "goals_count");
-  let goals = property_get(r4, "goals");
+  let { index_selected, rules_parsed, goal, goal_index, goals_count, goals } =
+    app_replace_rule_set_goals(r4);
   async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
