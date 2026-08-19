@@ -14,7 +14,7 @@ export async function app_code_screen_capture_record(
   "The wait is why this cannot be a matter of taste. A capture taken before the drawing has settled comes back holding the screen before it, which reads as a page that renders the wrong thing rather than as a measurement taken too early.";
   arguments_assert(arguments, 6);
   await page.goto(url);
-  await app_code_screen_settle_wait(page);
+  await page.waitForTimeout(180);
   let record = await app_code_screen_capture(page);
   record.id = id;
   record.screen = screen;

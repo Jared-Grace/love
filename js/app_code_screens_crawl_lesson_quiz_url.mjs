@@ -28,13 +28,14 @@ export async function app_code_screens_crawl_lesson_quiz_url(
     id,
     combined,
   ]);
-  await page.goto(examples_url);
-  await page.waitForTimeout(180);
-  let examples = await app_code_screen_capture(page);
-  examples.id = id;
-  examples.screen = "examples";
-  examples.kind = 0;
-  list_add(records, examples);
+  await app_code_screen_capture_record(
+    page,
+    examples_url,
+    id,
+    "examples",
+    0,
+    records,
+  );
   let v3 = app_code_screen_hash_key();
   let f_name2 = fn_name("app_code_quiz");
   let v4 = app_code_quiz_hash_key();
