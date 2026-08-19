@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_jhn01 } from "./bible_glyph_chapter_jhn01.mjs";
 import { bible_glyph_chapter_1jn04 } from "./bible_glyph_chapter_1jn04.mjs";
 export function bible_glyph_chapters() {
   "Every picture Bible chapter written so far, given as its chapter code and its shorthand.";
