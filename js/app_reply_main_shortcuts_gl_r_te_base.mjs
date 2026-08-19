@@ -10,21 +10,21 @@ export function app_reply_main_shortcuts_gl_r_te_base(
   arguments_assert(arguments, 2);
   let r2 = app_reply_main_shortcuts_r_ke_(root, languages_chosen_default);
   let r3 = app_reply_main_shortcuts_r_default(r2, languages_chosen_default);
-  let r_default3 = property_get(r3, "r_default");
-  let r_ke_403 = property_get(r3, "r_ke_40");
-  let r_ug_403 = property_get(r3, "r_ug_40");
+  let r_default = property_get(r3, "r_default");
+  let r_ke_ = property_get(r3, "r_ke_40");
+  let r_ug_ = property_get(r3, "r_ug_40");
   let r_ug_3 = property_get(r3, "r_ug_");
-  let gl4 = property_get(r3, "gl");
+  let gl = property_get(r3, "gl");
   let te = property_get(r3, "te");
-  let r_pk_4 = property_get(r3, "r_pk_");
+  let r_pk_ = property_get(r3, "r_pk_");
   let r_pk_104 = property_get(r3, "r_pk_10");
-  let r_pk_10_g4 = property_get(r3, "r_pk_10_g");
-  let r_pk_10_gh4 = property_get(r3, "r_pk_10_gh");
-  let r_pk_10_h4 = property_get(r3, "r_pk_10_h");
-  let r_pk_1_c4 = property_get(r3, "r_pk_1_c");
-  let r_pk_1_m4 = property_get(r3, "r_pk_1_m");
-  let r_pk_1_w4 = property_get(r3, "r_pk_1_w");
-  let r_pk_10_glory4 = property_get(r3, "r_pk_10_glory");
+  let r_pk_10_g = property_get(r3, "r_pk_10_g");
+  let r_pk_10_gh = property_get(r3, "r_pk_10_gh");
+  let r_pk_10_h = property_get(r3, "r_pk_10_h");
+  let r_pk_1_c = property_get(r3, "r_pk_1_c");
+  let r_pk_1_m = property_get(r3, "r_pk_1_m");
+  let r_pk_1_w = property_get(r3, "r_pk_1_w");
+  let r_pk_10_glory = property_get(r3, "r_pk_10_glory");
   let r_pk_204 = property_get(r3, "r_pk_20");
   let r_pk_404 = property_get(r3, "r_pk_40");
   let r_ke_4 = property_get(r3, "r_ke_");
@@ -37,24 +37,25 @@ export function app_reply_main_shortcuts_gl_r_te_base(
     count: 0,
     responses: [],
   };
-  return {
-    r_default3,
-    r_ke_403,
-    r_ug_403,
+  let r = {
+    r_default3: r_default,
+    r_ke_403: r_ke_,
+    r_ug_403: r_ug_,
     r_ug_3,
-    gl4,
-    r_pk_4,
+    gl4: gl,
+    r_pk_4: r_pk_,
     r_pk_104,
-    r_pk_10_g4,
-    r_pk_10_gh4,
-    r_pk_10_h4,
-    r_pk_1_c4,
-    r_pk_1_m4,
-    r_pk_1_w4,
-    r_pk_10_glory4,
+    r_pk_10_g4: r_pk_10_g,
+    r_pk_10_gh4: r_pk_10_gh,
+    r_pk_10_h4: r_pk_10_h,
+    r_pk_1_c4: r_pk_1_c,
+    r_pk_1_m4: r_pk_1_m,
+    r_pk_1_w4: r_pk_1_w,
+    r_pk_10_glory4: r_pk_10_glory,
     r_pk_204,
     r_pk_404,
     r_ke_4,
     r_te_base,
   };
+  return r;
 }
