@@ -1,3 +1,4 @@
+import { worker_child_start } from "./worker_child_start.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 export function worker_child_ensure(worker) {
