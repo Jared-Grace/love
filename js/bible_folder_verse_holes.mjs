@@ -2,7 +2,7 @@ import { property_list_size } from "./property_list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_chapter_verse_numbers_storage_try } from "./ebible_chapter_verse_numbers_storage_try.mjs";
+import { ebible_chapter_verse_numbers_storage_outcome } from "./ebible_chapter_verse_numbers_storage_outcome.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { ebible_chapter_verse_code } from "./ebible_chapter_verse_code.mjs";
@@ -21,7 +21,7 @@ export async function bible_folder_verse_holes(bible_folder, chapters) {
   async function lambda(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
     let wanted = property_get(chapter, "verse_numbers");
-    let held = await ebible_chapter_verse_numbers_storage_try(
+    let held = await ebible_chapter_verse_numbers_storage_outcome(
       bible_folder,
       chapter_code,
     );
