@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
+import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_recall(
   root,
 ) {
