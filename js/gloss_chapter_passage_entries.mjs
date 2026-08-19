@@ -1,13 +1,11 @@
+import { gloss_chapter_read } from "./gloss_chapter_read.mjs";
+import { null_is } from "./null_is.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
-import { local_function_path_json } from "./local_function_path_json.mjs";
 import { equal } from "./equal.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_single } from "./list_single.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function gloss_chapter_passage_entries(
   chapter_code,
@@ -21,13 +19,12 @@ export async function gloss_chapter_passage_entries(
   "$plain chapter_code";
   "$plain verse_key";
   "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
-  let path = local_function_path_json(chapter_code, fn);
-  let exists = await file_exists(path);
-  if (not(exists)) {
-    let unwritten = null;
-    return unwritten;
+  "Opening the chapter is asked of the chapter reader next door rather than done again here, so there is one place that knows where an authored chapter sits and what an unauthored one answers with.";
+  let chapter = await gloss_chapter_read(chapter_code, fn);
+  let unwritten = null_is(chapter);
+  if (unwritten) {
+    return null;
   }
-  let chapter = await file_read_json(path);
   let passages = property_get(chapter, "passages");
   function matches(candidate) {
     let left = g_sermon_passage_verses_key(candidate);

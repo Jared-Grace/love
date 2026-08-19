@@ -1,3 +1,4 @@
+import { app_shared_bible_offline_save_all } from "./app_shared_bible_offline_save_all.mjs";
 import { app_shared_bible_offline_languages } from "./app_shared_bible_offline_languages.mjs";
 import { app_shared_bible_offline_row } from "./app_shared_bible_offline_row.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -24,10 +25,15 @@ export function app_shared_bible_offline_body(container, languages) {
   );
   app_shared_text_deemphasized(explain);
   let listed = app_shared_bible_offline_languages(languages);
+  function on_change() {
+    "a save or a freeing changes what every other button here should say, so the whole list is drawn again";
+    app_shared_bible_offline_body(container, languages);
+  }
   function lambda(language) {
-    app_shared_bible_offline_row(card, language);
+    app_shared_bible_offline_row(card, language, on_change);
   }
   each(listed, lambda);
+  app_shared_bible_offline_save_all(card, listed, on_change);
   let folders = ebible_offline_folders_get();
   let any = list_empty_not_is(folders);
   if (any) {
@@ -35,6 +41,6 @@ export function app_shared_bible_offline_body(container, languages) {
       await ebible_offline_delete_all();
       app_shared_bible_offline_body(container, languages);
     }
-    app_shared_button(container, "Free the space these use", on_delete);
+    app_shared_button(container, "Free the space all of them use", on_delete);
   }
 }
