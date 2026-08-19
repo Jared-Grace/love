@@ -5,7 +5,6 @@ import { property_get } from "./property_get.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_statement_name_one_more_above_box_twice(
@@ -23,8 +22,8 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
   ]);
   ("lines with nothing said between them are handed over together, because they are one program - the shape the quiz and the worked example of this same lesson have always drawn a program in.");
   let held = js_code_let_statement(name, start);
-  let code6 = js_code_assign_statement(name, more);
-  html_div_code_lines(box_one, [held, code6]);
+  let code = js_code_assign_statement(name, more);
+  html_div_code_lines(box_one, [held, code]);
   ("the answer is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so an answer set in plain writing would be the one number here dressed as prose.");
   html_div_cycle_code(box_one, [
     "",
@@ -40,7 +39,7 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
   let r2 = {
     start,
     name,
-    code6,
+    code6: code,
     box_twice,
   };
   return r2;

@@ -1,10 +1,6 @@
+import { app_code_lesson_statement_names_binary_title_name_id } from "./app_code_lesson_statement_names_binary_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
-import { js_code_binary } from "./js_code_binary.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 export function app_code_lesson_statement_name_compare_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: comparing what two names hold, the eleventh Statements lesson, followed by the line that does it");
