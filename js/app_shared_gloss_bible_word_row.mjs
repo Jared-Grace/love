@@ -1,7 +1,4 @@
-import { text_rtl_is } from "./text_rtl_is.mjs";
-import { ternary } from "./ternary.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_text_align } from "./html_text_align.mjs";
+import { html_text_direction_set } from "./html_text_direction_set.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";

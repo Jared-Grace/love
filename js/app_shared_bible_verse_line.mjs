@@ -1,17 +1,14 @@
-import { html_text_align } from "./html_text_align.mjs";
-import { ternary } from "./ternary.mjs";
+import { html_text_direction_set } from "./html_text_direction_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_font_color_set_or_remove } from "./html_font_color_set_or_remove.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_shared_bible_on_click_google_define } from "./app_shared_bible_on_click_google_define.mjs";
-import { text_rtl_is } from "./text_rtl_is.mjs";
 export function app_shared_bible_verse_line(parent, name, text, color) {
   let line = html_div(parent);
   ("a null colour means read in the page's default text colour, so leave the property alone rather than writing one in");
