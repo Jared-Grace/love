@@ -1,5 +1,4 @@
-import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
+import { multiply_add } from "./multiply_add.mjs";
 import { bless_depth_start } from "./bless_depth_start.mjs";
 export function app_g_bless_street_length() {
   "How many tiles long the first street is - exactly as wide as the cone is at its far edge.";
@@ -12,7 +11,6 @@ export function app_g_bless_street_length() {
   "straight ahead - so at its furthest it spans the depth to the left, the depth to the";
   "right, and the tile straight in front.";
   let depth = bless_depth_start();
-  let sides = multiply(depth, 2);
-  let length = add(sides, 1);
+  let length = multiply_add(depth, 2, 1);
   return length;
 }
