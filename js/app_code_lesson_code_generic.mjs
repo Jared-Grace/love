@@ -1,3 +1,4 @@
+import { app_code_button_value_lines } from "./app_code_button_value_lines.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -71,9 +72,7 @@ export function app_code_lesson_code_generic(params) {
     forwards_answer_label_override,
     example_answer_label_default,
   );
-  (
-    "the buttons of the forwards quiz carry values rather than code, and they are told to keep the lines their value was written on - a program with two lines that write out has an answer of two lines, and a button that folded them together would offer something the card above never showed. For a value standing on one line, which is every value in the app so far, it draws exactly what a button left alone drew."
-  );
+  ("the buttons of the forwards quiz carry values rather than code, and they are told to keep the lines their value was written on - a program with two lines that write out has an answer of two lines, and a button that folded them together would offer something the card above never showed. For a value standing on one line, which is every value in the app so far, it draws exactly what a button left alone drew.");
   let forwards = {
     question_label: forwards_question_label,
     on_question,
