@@ -1,4 +1,4 @@
-import { bless_building } from "./bless_building.mjs";
+import { bless_block_gaps } from "./bless_block_gaps.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { list_flat } from "./list_flat.mjs";
@@ -7,8 +7,6 @@ import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
 import { range } from "./range.mjs";
 import { subtract } from "./subtract.mjs";
-import { bless_building_shape } from "./bless_building_shape.mjs";
-import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { bless_sidewalk_depth } from "./bless_sidewalk_depth.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 export function bless_block(x, y) {
@@ -41,32 +39,16 @@ export function bless_block(x, y) {
   ("the street would open every few games with water standing between the houses. They are");
   ("also the only way through the row, so paving them is what keeps the ground north of the");
   ("block reachable from the pavement in front of it.");
-  let shape = bless_building_shape();
-  let width = property_get(shape, "width");
-  let depth = property_get(shape, "depth");
-  let gap = property_get(shape, "gap");
-  let sizes = bless_place_sizes();
-  let count = property_get(sizes, "block");
-  let stride = add(width, gap);
-  let indexes = range(count);
-  function building_x(index) {
-    let across = multiply(index, stride);
-    let at = add(x, across);
-    return at;
-  }
-  function building_at(index) {
-    let at = building_x(index);
-    let building = bless_building(at, y);
-    return building;
-  }
-  let buildings = list_map(indexes, building_at);
-  function building_tiles(building) {
-    let tiles = property_get(building, "tiles");
-    return tiles;
-  }
-  let tiles_each = list_map(buildings, building_tiles);
-  let walls = list_flat(tiles_each);
-  let gaps = subtract(count, 1);
+  let r = bless_block_gaps(x, y);
+  let gaps = property_get(r, "gaps");
+  let walls = property_get(r, "walls");
+  let buildings = property_get(r, "buildings");
+  let building_x = property_get(r, "building_x");
+  let stride = property_get(r, "stride");
+  let count = property_get(r, "count");
+  let gap = property_get(r, "gap");
+  let depth = property_get(r, "depth");
+  let width = property_get(r, "width");
   let indexes_gap = range(gaps);
   function alley_tiles(index) {
     let at = building_x(index);
