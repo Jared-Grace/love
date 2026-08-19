@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_node_reread_same_is } from "./js_node_reread_same_is.mjs";
 import { js_expression_statement_is } from "./js_expression_statement_is.mjs";
 import { not } from "./not.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
@@ -13,7 +15,9 @@ export function js_statement_call_single_argument(statement) {
   "The one call this statement amounts to when the whole statement is a call to a plain name given exactly one argument, as that name, that argument, and whether the call is waited for. Nothing, when the statement is anything else.";
   "Several of these standing side by side, all naming the same function, are what a single walk over a list of their arguments can take the place of.";
   "A call reached through a property is left out, because there is no plain name to hand to the walk.";
-  "The statement itself is handed back along with its parts, so a caller gathering these can put one back where it stood when the gathering comes to nothing.";
+  "An argument that could give something different when it is read at a different moment is left out too. A walk reads every argument into a list before the function is called even once, where the run of calls read each one only when its own turn came - so a second argument that is itself a call, or a field read out of an object the first call writes to, would be read before that first call rather than after it, and the walk would hand over what it said beforehand. Which readings are settled enough to move is asked in ";
+  (fn_name("js_node_reread_same_is"), ".");
+  ("The statement itself is handed back along with its parts, so a caller gathering these can put one back where it stood when the gathering comes to nothing.");
   let statement_is = js_expression_statement_is(statement);
   if (not(statement_is)) {
     return null;
@@ -31,6 +35,10 @@ export function js_statement_call_single_argument(statement) {
     return null;
   }
   let argument = list_first(args);
+  let same_is = js_node_reread_same_is(argument);
+  if (not(same_is)) {
+    return null;
+  }
   let waited_is = property_get(unwrapped, "async_is");
   let r = {
     name,

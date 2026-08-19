@@ -81,10 +81,22 @@ export function js_calls_to_each_cases() {
       after: text_frozen("each([1, 2], log);\n"),
     },
     {
-      name: "an argument that is itself a call is carried over whole",
+      name: "an argument that is itself a call is left alone",
       code: text_frozen("function f() {\n  log(g(1));\n  log(g(2));\n}"),
       names: ["log"],
-      after: text_frozen("function f() {\n  each([g(1), g(2)], log);\n}\n"),
+      after: text_frozen("function f() {\n  log(g(1));\n  log(g(2));\n}\n"),
+    },
+    {
+      name: "an argument read out of an object is left alone",
+      code: text_frozen("function f() {\n  log(a.b);\n  log(a.c);\n}"),
+      names: ["log"],
+      after: text_frozen("function f() {\n  log(a.b);\n  log(a.c);\n}\n"),
+    },
+    {
+      name: "a written out list of plain names is carried over whole",
+      code: text_frozen("function f() {\n  log([1, x]);\n  log([2, y]);\n}"),
+      names: ["log"],
+      after: text_frozen("function f() {\n  each([[1, x], [2, y]], log);\n}\n"),
     },
     {
       name: "a function of that name written in the file is left alone",
