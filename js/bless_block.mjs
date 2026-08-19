@@ -1,6 +1,6 @@
+import { bless_building } from "./bless_building.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
-import { divide_floor } from "./divide_floor.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_map } from "./list_map.mjs";
 import { multiply } from "./multiply.mjs";
@@ -80,7 +80,12 @@ export function bless_block(x, y) {
   let fronts = multiply(count, stride);
   let block_width = subtract(fronts, gap);
   let sidewalk_depth = bless_sidewalk_depth();
-  let sidewalk = bless_tiles_rectangle(x, sidewalk_y, block_width, sidewalk_depth);
+  let sidewalk = bless_tiles_rectangle(
+    x,
+    sidewalk_y,
+    block_width,
+    sidewalk_depth,
+  );
   function door_at(building) {
     let doorway = property_get(building, "doorway");
     let at = property_get(doorway, "x");
