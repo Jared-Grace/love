@@ -69,7 +69,8 @@ export async function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let assignment = js_assign_default();
-    let e = js_code_call_parse_expression(fn_name("ternary"));
+    let f_name = fn_name("ternary");
+    let e = js_code_call_parse_expression(f_name);
     let rights = list_map_property(ess, "right");
     let test_node = js_statement_if_test_get(node);
     js_call_argument_add(e, test_node);
