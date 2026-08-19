@@ -10,15 +10,17 @@ export function app_code_lesson_expression_choose_order_expression_digits(
 ) {
   "three given digits and two operators built into the shape a press-the-operators lesson asks about: 1 + 2 * 3, or 1 * 2 + 3, with strong_right saying which side the multiplication lands on";
   "the digits are given here rather than drawn, because the same three digits are arrived at two ways: drawn fresh for a new question, and read back off a line that was printed earlier. Both want the same shape built the same way, and a builder that drew its own numbers could only serve the first";
+  "The two operators are the only thing this settles that the shape next door does not, and it settles them the same way for every question this lesson asks: multiplication is the strong one and addition the weak one. Everything after that is the same nesting, so it is asked for rather than written out again.";
   arguments_assert(arguments, 4);
   let times = js_operator_asterisk_symbol();
   let plus = js_operator_plus_symbol();
-  if (strong_right) {
-    let inner_right = app_code_expression_node(middle, times, right);
-    let tree_right = app_code_expression_node(left, plus, inner_right);
-    return tree_right;
-  }
-  let inner_left = app_code_expression_node(left, times, middle);
-  let tree_left = app_code_expression_node(inner_left, plus, right);
-  return tree_left;
+  let tree = app_code_lesson_expression_choose_order_operators_expression_parts(
+    left,
+    middle,
+    right,
+    plus,
+    times,
+    strong_right,
+  );
+  return tree;
 }

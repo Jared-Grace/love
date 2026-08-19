@@ -47,16 +47,18 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   ]);
   let given_sum = js_code_assign_statement(name_first, names_sum);
   html_div_code(box_itself, given_sum);
-  ("the total is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and here only the names are code.");
-  let comes_to = list_join_empty([
+  ("the total is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so a total set in plain writing would be the one number here dressed as prose.");
+  ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is one line, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
+  html_div_cycle_code(box_itself, [
+    "",
+    names_sum,
     " comes to ",
     total,
     ", so this is the same line",
   ]);
-  html_div_cycle_code(box_itself, ["", names_sum, comes_to]);
   let given_total = js_code_assign_statement(name_first, total);
   html_div_code(box_itself, given_total);
-  html_div_cycle_code(box_itself, ["Now we can write that name on its own"]);
+  html_div_cycle_code(box_itself, ["Then we can write that name on its own"]);
   let logged_total = js_code_console_log_statement(name_first);
   app_code_code_lines_writes_out(box_itself, [logged_total], total);
 }
