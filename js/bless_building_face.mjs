@@ -1,7 +1,6 @@
+import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { mod } from "./mod.mjs";
 import { g_tiles_wall_faces } from "./g_tiles_wall_faces.mjs";
 export function bless_building_face(index) {
   arguments_assert(arguments, 1);
@@ -14,8 +13,7 @@ export function bless_building_face(index) {
   ("Counted round rather than run off the end, so a block may grow to any number of");
   ("buildings and this still answers.");
   let faces = g_tiles_wall_faces();
-  let count = list_size(faces);
-  let turn = mod(index, count);
+  let turn = list_get_wrap_index(faces, index);
   let face = list_get(faces, turn);
   return face;
 }
