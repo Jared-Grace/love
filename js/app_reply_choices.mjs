@@ -456,7 +456,7 @@ export function app_reply_choices() {
     {
       text: "Song",
       response: text_combine_multiple([
-        "https://youtu.be/rNhSoUKPgMQ",
+        "https://youtu.be/b_j9ZsNhpEY",
         newline_2(),
         " Jesus gave me the grace to write this song",
       ]),
