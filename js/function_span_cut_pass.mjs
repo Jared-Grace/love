@@ -28,7 +28,6 @@ export async function function_span_cut_pass(f_name) {
     let candidates = await function_span_candidates(f_name);
     for (let row of candidates) {
       let address_to = property_get(row, "address_to");
-      let stepped = list_map_property(skipped, "address_to");
       let over_is = list_includes(stepped, address_to);
       if (over_is) {
         continue;
@@ -42,6 +41,11 @@ export async function function_span_cut_pass(f_name) {
       let stepped_over_is = null_not_is(skip);
       if (stepped_over_is) {
         list_add(skipped, skip);
+        let about = property_get(skip, "about");
+        let start_is = equal(about, "start");
+        if (not(start_is)) {
+          list_add(stepped, address_to);
+        }
         continue;
       }
       let f_name_new = function_part_name_or_null(f_name, address_to);
