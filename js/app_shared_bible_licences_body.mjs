@@ -9,11 +9,10 @@ export function app_shared_bible_licences_body(container, credits) {
   "Every one of these was given away by somebody, and several were given on terms that ask to be credited by name. This page is that credit. It is here whether or not anybody opens it, because what is owed is owed either way.";
   html_clear(container);
   html_div_text_bold(container, "The bibles in this app, and who gave them");
-  let explain = html_div_text(
+  app_shared_text_quiet(
     container,
     "Every bible here was given away by the people who made it. Some asked to be named in return. Here they are, with the terms each one was given on",
   );
-  app_shared_text_deemphasized(explain);
   function lambda(credit) {
     app_shared_bible_licence_card(container, credit);
   }
