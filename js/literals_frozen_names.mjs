@@ -69,6 +69,11 @@ export function literals_frozen_names() {
   ("A seventh word a bible link stands on, and the mate of the sixth. How many verses a reader wants each message to hold and how many are on the screen right now were one word until they were split, so this one is published from the day it is written and the one beside it keeps the meaning it always had.");
   ("It is an ordinary English word like its mate, and frozen for the same reason: the day anything here is named shown, the canonicalizing pass would read the value as a reference to that function and every link already sent would start following a rename.");
   let spelled42 = fn_name("app_shared_bible_verses_shown_hash_key");
+  ("A third gloss folder on the shared bucket, beside the two above it. The English words of a chapter explained in Urdu are uploaded under it and a shipped page builds the same address to read them back, so it escaped the moment the first chapter went up.");
+  ("The two above it were called the completion of that set, and they were - of the folders that existed then. This one is what a new store looks like arriving afterwards: written correctly, frozen at its own site, and unwatched until it is named here. So the completeness of this list is a thing that has to be re-earned rather than reached, and the gate that asks is what says when.");
+  let spelled43 = fn_name(
+    "app_en_learn_bible_gloss_urdu_generate_upload_namespace",
+  );
   let names = [
     spelled,
     spelled2,
@@ -111,6 +116,7 @@ export function literals_frozen_names() {
     spelled40,
     spelled41,
     spelled42,
+    spelled43,
   ];
   return names;
 }
