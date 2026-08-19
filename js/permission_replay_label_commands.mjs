@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { claude_transcript_paths_recent } from "./claude_transcript_paths_recent.mjs";
 import { permission_prompt_events_paths } from "./permission_prompt_events_paths.mjs";
@@ -5,7 +6,6 @@ import { permission_replay_events_keyed } from "./permission_replay_events_keyed
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 export async function permission_replay_label_commands(label, days) {
   "Every different command one row of the prompt record stands for, counted, commonest first.";
   "The ranked record says a shape interrupted the human fifty four times and shows one command as a sample, which is enough to work on a row that a single rule could answer and not nearly enough for one that no rule can. A row keyed by a bare shell word is fifty four different lines wearing one label, and the only way to see what they were all doing - and so what named command is missing - is to ask for them.";
@@ -16,8 +16,7 @@ export async function permission_replay_label_commands(label, days) {
   let keyed = permission_replay_events_keyed(events);
   let under = [];
   for (let event of keyed) {
-    let key = property_get(event, "replay_key");
-    let same = equal(key, label);
+    let same = property_equals(event, "replay_key", label);
     if (same) {
       list_add(under, event);
     }
