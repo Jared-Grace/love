@@ -84,9 +84,9 @@ with the licence each page states and what became of it:
 
 | folder | language | licence as read | freed by accepting ND? | now |
 | --- | --- | --- | --- | --- |
-| `turytc` | Turkish | `cc_by_nd` | **yes** | still shipped, still refused |
-| `zlmKSZI` | Malay | `cc_by_nd` | **yes** | still shipped, still refused |
-| `polubg` | Polish (Updated Gdańsk) | `cc_by_nd` | **yes** | still shipped, still refused |
+| `turytc` | Turkish | `cc_by_nd` | **yes** | **allowed** 2026-08-19, words frozen |
+| `zlmKSZI` | Malay | `cc_by_nd` | **yes** | **allowed** 2026-08-19, words frozen |
+| `polubg` | Polish (Updated Gdańsk) | `cc_by_nd` | **yes** | **allowed** 2026-08-19, words frozen |
 | `thaKJV` | Thai | `cc_by_nc_nd` | no — non-commercial | **dropped** 2026-08-19 |
 | `wolmbs` | Wolof | `cc_by_nc_nd` | no — non-commercial | **dropped** 2026-08-19 |
 | `amh` | Amharic | `unknown` | no — prose terms, no readable grant | **replaced** by `am_ulb` |
