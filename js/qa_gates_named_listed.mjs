@@ -1,3 +1,5 @@
+import { qa_gate_said_accused_or_null } from "./qa_gate_said_accused_or_null.mjs";
+import { not } from "./not.mjs";
 import { qa_gate_said_listed } from "./qa_gate_said_listed.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,6 +29,22 @@ export function qa_gates_named_listed(named, spoke) {
   }
   for (let gate of object_property_names(spoke)) {
     let said = property_get(spoke, gate);
+    ("A gate that wrote down who is at fault has already answered this, and where");
+    ("it did, what it wrote stands alone and neither reader is asked. Both readers");
+    ("are guesses from a shape - one scrapes function names out of a sentence, the");
+    ("other takes every word an offender is written under - and a guess must not be");
+    ("added to a statement. The gate that does this writes the app at fault beside");
+    ("the function it wrongly reached, so both readers hand back the function too,");
+    ("and every other app whose bundle merely carries that function is held out of");
+    ("a deployment by a fault in somebody else's app that it cannot see or repair.");
+    let accused = qa_gate_said_accused_or_null(said);
+    let said_who = null_is(accused);
+    if (not(said_who)) {
+      let only = [];
+      list_add_multiple(only, accused);
+      property_set(gathered, gate, only);
+      continue;
+    }
     let listed = qa_gate_said_listed(said);
     let held = property_get_or_null(gathered, gate);
     if (null_is(held)) {
