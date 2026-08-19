@@ -42,6 +42,20 @@ export function js_statements_grouping_worthless_cases() {
       code: text_frozen("function f() {\n  let a = one();\n  let b = two();\n}"),
       worthless: true,
     },
+    {
+      name: "a run that is nothing but one thing being taken apart has nothing to collapse onto",
+      code: text_frozen(
+        'function f() {\n  let a = property_get(r, "a");\n  let b = property_get(r, "b");\n}',
+      ),
+      worthless: true,
+    },
+    {
+      name: "pieces lifted out of two different things are two readings spelt alike",
+      code: text_frozen(
+        'function f() {\n  let a = property_get(r, "a");\n  let b = property_get(s, "b");\n}',
+      ),
+      worthless: false,
+    },
   ];
   return cases;
 }
