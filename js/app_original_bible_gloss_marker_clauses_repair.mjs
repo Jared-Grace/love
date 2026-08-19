@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { app_original_bible_gloss_explains_write } from "./app_original_bible_gloss_explains_write.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { each_async } from "./each_async.mjs";
@@ -11,7 +12,6 @@ import { gloss_explain_marker_clauses_stripped } from "./gloss_explain_marker_cl
 import { gloss_placeholder_glosses } from "./gloss_placeholder_glosses.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,8 +31,7 @@ export async function app_original_bible_gloss_marker_clauses_repair() {
     function passage_read(entries, verses) {
       let mends = {};
       function entry_read(entry, index) {
-        let gloss = property_get(entry, gloss_key);
-        let marked = list_includes(markers, gloss);
+        let marked = property_in_list(entry, gloss_key, markers);
         if (marked) {
           return;
         }
