@@ -1,0 +1,38 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { add } from "./add.mjs";
+import { divide_floor } from "./divide_floor.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { subtract } from "./subtract.mjs";
+import { bless_sidewalk_depth } from "./bless_sidewalk_depth.mjs";
+export function app_g_bless_player_place(player, block) {
+  arguments_assert(arguments, 2);
+  ("Stands the player on the pavement outside the middle building, looking at it.");
+  ("The game opens on a street with people on it, rather than on a field with a street");
+  ("somewhere in it. Set down at random the player's first minute would be spent walking to");
+  ("find anybody, and the first thing this game asks of them - look at a person and pray for");
+  ("them - would not be possible from where they were standing.");
+  ("The MIDDLE building, so the block runs away in both directions and the player can see it");
+  ("is a row rather than an end. At either end half the world would be behind them.");
+  ("On the far edge of the pavement rather than at the door itself, so the doorstep in front");
+  ("of them is somebody else's to stand on and the whole width of the street is in view");
+  ("ahead. Standing on the door tile would put the player inside the crowd they came to look");
+  ("at.");
+  ("Facing north, which is the way the fronts look. Everything the game is about - the");
+  ("doors, the people outside them, and the people walking past - is then in front of them");
+  ("the moment the world appears, and none of it has to be explained.");
+  let doors = property_get(block, "doors");
+  let count = list_size(doors);
+  let middle = divide_floor(count, 2);
+  let door = list_get(doors, middle);
+  let depth = bless_sidewalk_depth();
+  let back = subtract(depth, 1);
+  let x = property_get(door, "x");
+  let door_y = property_get(door, "y");
+  let y = add(door_y, back);
+  property_set(player, "x", x);
+  property_set(player, "y", y);
+  property_set(player, "direction", "north");
+}
