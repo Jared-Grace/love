@@ -19,17 +19,17 @@ export async function bible_verse_holes_empty_storage_report() {
     return listed;
   }
   let at_once = bible_folders_at_once();
-  let each = await list_map_limited_async(folders, lambda, at_once);
+  let listings = await list_map_limited_async(folders, lambda, at_once);
   function lambda2(listed) {
     let none = property_equals(listed, "files", 0);
     return none;
   }
-  let nothing_uploaded = list_filter(each, lambda2);
+  let nothing_uploaded = list_filter(listings, lambda2);
   function lambda3(listed) {
     let some = property_equals_not(listed, "files", 0);
     return some;
   }
-  let holds_books = list_filter(each, lambda3);
+  let holds_books = list_filter(listings, lambda3);
   let r = {
     asked: list_size(folders),
     nothing_uploaded,
