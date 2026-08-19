@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { js_function_declaration_statements_deep } from "./js_function_declaration_statements_deep.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
@@ -15,8 +16,6 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function js_function_handback_refusals(ast, declaration) {
   arguments_assert(arguments, 2);
   ("Every reason there is not to move this function's body out and have it hand its writes back, leaving the name behind on a few lines that call it and put what comes back where the writes used to go. Empty means there is none.");
@@ -27,8 +26,7 @@ export async function js_function_handback_refusals(ast, declaration) {
   let refusals = await js_function_lift_wrapper_refusals(ast, declaration);
   function written_closed_not_is(refusal) {
     let reason = property_get(refusal, "reason");
-    let write_is = equal(reason, "written_closed");
-    let other_is = not(write_is);
+    let other_is = equal_not(reason, "written_closed");
     return other_is;
   }
   let kept = list_filter(refusals, written_closed_not_is);
