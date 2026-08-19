@@ -1,5 +1,5 @@
+import { property_equals } from "./property_equals.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_root_claimed_nearest } from "./gloss_root_claimed_nearest.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -46,8 +46,7 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   each(offenders, chapter_read);
   let total = list_size(findings);
   function claimed_is(finding) {
-    let kind = property_get(finding, "kind");
-    let names_a_root = equal(kind, "claimed");
+    let names_a_root = property_equals(finding, "kind", "claimed");
     return names_a_root;
   }
   let claiming = list_filter(findings, claimed_is);
