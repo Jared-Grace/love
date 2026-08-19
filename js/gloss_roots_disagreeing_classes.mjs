@@ -1,13 +1,11 @@
-import { gloss_roots_disagreeing_classes_apart } from "./gloss_roots_disagreeing_classes_apart.mjs";
+import { gloss_roots_disagreeing_classes_grouped } from "./gloss_roots_disagreeing_classes_grouped.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_spread_take } from "./list_spread_take.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_tally } from "./list_tally.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
 export function gloss_roots_disagreeing_classes(offenders, sample_size) {
@@ -19,22 +17,18 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
   "How many classes to show is said as text as readily as as a number, because this is reached for from the command line, where every argument arrives as text and a count read straight would take none of them.";
   "Only findings that name a root are gathered. An explanation saying nothing about where its word comes from has no claim to be grouped by, so those are counted apart and left to the weaker test that found them.";
   let findings = [];
-  let r3 = gloss_roots_disagreeing_classes_apart(findings, offenders);
-  let apart = property_get(r3, "apart");
-  let by_relation = property_get(r3, "by_relation");
-  let by_edits = property_get(r3, "by_edits");
-  let edits_read = property_get(r3, "edits_read");
-  let claimed_total = property_get(r3, "claimed_total");
-  let claiming = property_get(r3, "claiming");
+  let r3 = gloss_roots_disagreeing_classes_grouped(findings, offenders);
+  let grouped = property_get(r3, "grouped");
+  let apart_by_edits = property_get(r3, "apart_by_edits");
   let total = property_get(r3, "total");
-  let list = list_map(apart, edits_read);
-  let apart_by_edits = list_tally(list);
-  let grouped = list_group_by_property(claiming, "pair");
+  let claimed_total = property_get(r3, "claimed_total");
+  let by_edits = property_get(r3, "by_edits");
+  let by_relation = property_get(r3, "by_relation");
   function group_read(group) {
     let items = property_get(group, "items");
     let first = list_get(items, 0);
     let words = list_map_property_unique(items, "word");
-    let list2 = list_map_property_unique(items, "chapter_code");
+    let list = list_map_property_unique(items, "chapter_code");
     let r2 = {
       root: property_get(first, "root"),
       claimed: property_get(first, "claimed_nearest"),
@@ -42,7 +36,7 @@ export function gloss_roots_disagreeing_classes(offenders, sample_size) {
       relation: property_get(first, "relation"),
       count: list_size(items),
       words: list_spread_take(words, 5),
-      chapters: list_spread_take(list2, 3),
+      chapters: list_spread_take(list, 3),
     };
     return r2;
   }
