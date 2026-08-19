@@ -1,6 +1,5 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { bible_verse_holes_entry_empty_is } from "./bible_verse_holes_entry_empty_is.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -42,8 +41,7 @@ export async function bible_verse_holes_gate_run() {
   ("It is refused rather than reported because the alternative was tried by accident and is what this whole check now exists to prevent. An ask that failed used to be recorded as a chapter the bible does not hold, which is a wrong fact in the shape of a right one - believed for as long as nobody happens to check an entry by hand.");
   function lambda3(entry) {
     let named = property_get(entry, "chapters_unreachable");
-    let none = list_empty_is(named);
-    let any = not(none);
+    let any = list_empty_not_is(named);
     return any;
   }
   let unreachable = list_filter(bibles, lambda3);
