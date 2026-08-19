@@ -31,8 +31,13 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
     let nothing = "";
     return nothing;
   }
-  let personal = js_function_declaration_personal_names(declaration);
   let run = fn_take(working, size);
+  let worthless = js_statements_grouping_worthless_is(run);
+  if (worthless) {
+    let none = "";
+    return none;
+  }
+  let personal = js_function_declaration_personal_names(declaration);
   let shape = js_statements_shape(run, personal);
   return shape;
 }
