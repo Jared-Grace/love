@@ -1,3 +1,4 @@
+import { app_shared_bible_reference_hash_english } from "./app_shared_bible_reference_hash_english.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
 import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
@@ -6,7 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
 import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
 import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
-import { app_shared_bible_reference_spaced } from "./app_shared_bible_reference_spaced.mjs";
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -55,7 +55,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let b = app_shared_bible_book_hash_get(hash);
   let key = app_shared_bible_reference_hash_key();
   let ref = property_get_or(hash, key, "");
-  let ref_line = app_shared_bible_reference_spaced(ref);
+  ("A reference is understood in whatever language its book was written in, and is English from here on down - the checking of it, the reading of it, the link the reader copies. One place knows the reader's spelling; nothing after this has to.");
+  let ref_line = await app_shared_bible_reference_hash_english(hash, ref);
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let language = list_last(languages_chosen);
