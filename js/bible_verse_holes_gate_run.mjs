@@ -35,7 +35,8 @@ export async function bible_verse_holes_gate_run() {
     return none;
   }
   let unasked = list_filter(bibles, lambda);
-  ("A bible that answered nothing anywhere is a different thing again from one with holes in it. Every verse of a whole book missing is a folder named wrongly or a bible that was never uploaded, not a bible that counts its verses differently, and it would leave a reader who chose it reading apologies.");
+  ("A bible with none of the measured book is counted apart from one with holes in it, and reported rather than refused. It was refused once, on the reading that a whole book missing meant a folder named wrongly or a bible never uploaded. That reading was measured and it was wrong: of the forty-one bibles this found, thirty-eight hold other books and simply do not include this one - a gospel published on its own, a New Testament on its own, a Hebrew Old Testament. Refusing those refused a fact about a translation, which nobody can repair.");
+  ("The fault it was reaching for is real and is checked by its own gate now, against a record of what storage actually holds. That record can tell an empty folder from a partial bible; this one is reading a single book and never could.");
   let empty = list_filter(bibles, bible_verse_holes_entry_empty_is);
   ("A chapter nobody could get an answer about is refused outright, and it is the only one of these that says nothing at all about a bible. The other findings are facts somebody has to read and decide about; this one is the measuring itself being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
   ("It is refused rather than reported because the alternative was tried by accident and is what this whole check now exists to prevent. An ask that failed used to be recorded as a chapter the bible does not hold, which is a wrong fact in the shape of a right one - believed for as long as nobody happens to check an entry by hand.");
@@ -84,14 +85,6 @@ export async function bible_verse_holes_gate_run() {
       ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
     ]),
     unreachable,
-  });
-  let f_name5 = fn_name("ebible_languages");
-  list_empty_is_assert_json(empty, {
-    hint: text_combine_multiple([
-      "this bible answered with nothing for every verse of the measured book, so a reader who chose it would get a line saying so in place of every verse - that is a folder named wrongly or a bible never uploaded rather than one that numbers its verses differently, so check its folder against ",
-      f_name5,
-    ]),
-    empty,
   });
   let r = {
     checked: list_size(shipped),

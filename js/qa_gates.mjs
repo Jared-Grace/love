@@ -1,3 +1,4 @@
+import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs";
 import { usfm_chapters_verses_cases_gate_run } from "./usfm_chapters_verses_cases_gate_run.mjs";
 import { permission_rule_path_allowed_gate_run } from "./permission_rule_path_allowed_gate_run.mjs";
 import { permission_file_hook_registered_gate_run } from "./permission_file_hook_registered_gate_run.mjs";
@@ -581,6 +582,7 @@ export function qa_gates() {
     permission_rule_path_allowed_gate_run,
     permission_file_hook_registered_gate_run,
     permission_file_hook_live_gate_run,
+    bible_storage_empty_gate_run,
   ];
   return gates;
 }
