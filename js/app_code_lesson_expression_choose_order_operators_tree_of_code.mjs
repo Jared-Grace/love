@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression_parts } from "./app_code_lesson_expression_choose_order_operators_expression_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -12,6 +13,7 @@ import { text_split_space } from "./text_split_space.mjs";
 export function app_code_lesson_expression_choose_order_operators_tree_of_code(
   code,
 ) {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("the shape behind a line this lesson printed, worked out again from the line itself: 8 - 2 * 3 gives back the shape whose stronger operator is on the right, and 6 / 3 + 4 the one whose stronger operator is on the left");
   ("The quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.");
