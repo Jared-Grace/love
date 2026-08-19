@@ -1,5 +1,5 @@
 import { catch_null } from "./catch_null.mjs";
-import { json_from_try } from "./json_from_try.mjs";
+import { json_from } from "./json_from.mjs";
 import { object_is } from "./object_is.mjs";
 import { list_is } from "./list_is.mjs";
 import { null_is } from "./null_is.mjs";
@@ -16,8 +16,9 @@ export function qa_gate_said_listed(said) {
   "The tokens are taken exactly rather than matched against the words, because several of them are ordinary English. Two translations here are called hat and fin. Looking for those in a sentence would accuse every app carrying them of whatever the sentence happened to mention, which is the fault that once made every gate name something every app ships.";
   "An offender written as a record rather than as a word carries its name under name, which is what a gate measuring sizes says instead of a bare list.";
   "Saying nothing parseable is an ordinary answer and never an error. A gate is free to complain in English, and where it does, this hands back nothing and the sentence reader is the one with the answer.";
+  "The whole of what was said is parsed, rather than a record being hunted for inside it. Its neighbour that goes hunting is built for pulling a record out of a larger piece of writing, and it finds the end of one by counting from the front - which stops early on the nested record every one of these gates throws, so all twelve of them read as having said nothing parseable at all.";
   function said_parsed() {
-    let result = json_from_try(said);
+    let result = json_from(said);
     return result;
   }
   let parsed = catch_null(said_parsed);
