@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
@@ -7,7 +8,6 @@ import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
   "Every file under one folder of the artwork set's listing, named by the path that reaches it from wherever the walk started.";
@@ -29,8 +29,7 @@ export async function bible_glyph_artwork_tree_paths(tree_url, prefix) {
     let name = property_get(entry, "path");
     let walked = text_combine(prefix, "/");
     let joined = text_combine(walked, name);
-    let type = property_get(entry, "type");
-    let folder = equal(type, "tree");
+    let folder = property_equals(entry, "type", "tree");
     if (folder) {
       let url = property_get(entry, "url");
       let deeper = await bible_glyph_artwork_tree_paths(url, joined);
