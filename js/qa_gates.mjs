@@ -187,6 +187,7 @@ import { query_key_getters_frozen_gate_run } from "./query_key_getters_frozen_ga
 import { js_address_fused_words_cases_gate_run } from "./js_address_fused_words_cases_gate_run.mjs";
 import { literals_frozen_fused_gate_run } from "./literals_frozen_fused_gate_run.mjs";
 import { js_hash_key_getters_cases_gate_run } from "./js_hash_key_getters_cases_gate_run.mjs";
+import { js_hash_key_getters_own_cases_gate_run } from "./js_hash_key_getters_own_cases_gate_run.mjs";
 import { hash_key_getters_frozen_gate_run } from "./hash_key_getters_frozen_gate_run.mjs";
 import { js_hash_key_literals_cases_gate_run } from "./js_hash_key_literals_cases_gate_run.mjs";
 import { hash_key_literals_gate_run } from "./hash_key_literals_gate_run.mjs";
