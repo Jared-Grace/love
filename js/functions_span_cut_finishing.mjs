@@ -6,7 +6,6 @@ import { functions_span_candidates } from "./functions_span_candidates.mjs";
 import { functions_work_size_ceiling } from "./functions_work_size_ceiling.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_span_cut_finishing() {
