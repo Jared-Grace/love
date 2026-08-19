@@ -8,7 +8,6 @@ import { list_unique_is } from "./list_unique_is.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-
 export function bless_block_materials_gate_run() {
   "QA gate: one street of the prayer game can still be told from the next one by looking at it.";
   "The player earns the reach to bless a whole block, and the only way to spend it is to walk to another block and find somebody standing there. That walk is the price of the rung, so it has to be visibly a walk to SOMEWHERE - a second street built out of the first street's materials is the same street twice, and the player who paid for the journey is handed back what they already had.";
