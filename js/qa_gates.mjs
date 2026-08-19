@@ -161,6 +161,7 @@ import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate
 import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
 import { folders_function_named_orphaned_gate_run } from "./folders_function_named_orphaned_gate_run.mjs";
 import { js_code_getter_literal_cases_gate_run } from "./js_code_getter_literal_cases_gate_run.mjs";
+import { js_code_getter_number_cases_gate_run } from "./js_code_getter_number_cases_gate_run.mjs";
 import { functions_gate_run_unwired_gate_run } from "./functions_gate_run_unwired_gate_run.mjs";
 import { js_code_literal_site_none_cases_gate_run } from "./js_code_literal_site_none_cases_gate_run.mjs";
 import { functions_app_specific_imports_gate_run } from "./functions_app_specific_imports_gate_run.mjs";
@@ -365,6 +366,7 @@ export function qa_gates() {
     js_code_literal_key_only_cases_gate_run,
     js_code_literal_site_none_cases_gate_run,
     js_code_getter_literal_cases_gate_run,
+    js_code_getter_number_cases_gate_run,
     js_condition_bodies_empty_cases_gate_run,
     functions_condition_bodies_empty_gate_run,
     js_hash_key_literals_cases_gate_run,
