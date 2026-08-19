@@ -1,7 +1,6 @@
-import { bless_block_door_at } from "./bless_block_door_at.mjs";
+import { bless_block_doors } from "./bless_block_doors.mjs";
 import { bless_block_walls } from "./bless_block_walls.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function bless_block(x, y) {
   arguments_assert(arguments, 2);
@@ -35,12 +34,11 @@ export function bless_block(x, y) {
   ("block reachable from the pavement in front of it.");
   let r = bless_block_walls(x, y);
   let walls = property_get(r, "walls");
-  let buildings = property_get(r, "buildings");
-  let r2 = bless_block_door_at(r, x);
-  let door_at = property_get(r2, "door_at");
-  let sidewalk = property_get(r2, "sidewalk");
+  let r2 = bless_block_doors(r, x);
+  let doors = property_get(r2, "doors");
   let alleys = property_get(r2, "alleys");
-  let doors = list_map(buildings, door_at);
+  let sidewalk = property_get(r2, "sidewalk");
+  let buildings = property_get(r2, "buildings");
   let block = {
     buildings: buildings,
     walls: walls,
