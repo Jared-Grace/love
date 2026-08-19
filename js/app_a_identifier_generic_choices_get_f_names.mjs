@@ -83,7 +83,7 @@ export async function app_a_identifier_generic_choices_get_f_names(
           );
           return r4;
         }
-        let component = app_a_button_wide(overlay_delete, "Delete", lambda23);
+        app_a_button_wide(overlay_delete, "Delete", lambda23);
       },
     },
     {
