@@ -25,9 +25,19 @@ export function ebible_languages_more() {
       language_code: "idc",
     },
     {
+      name: "Akukem",
+      bible_folder: "spm",
+      language_code: "spm",
+    },
+    {
       name: "Alaba-K’abeena (Alaba-K'abeena)",
       bible_folder: "alw",
       language_code: "alw",
+    },
+    {
+      name: "Amarasi",
+      bible_folder: "aaz",
+      language_code: "aaz",
     },
     {
       name: "Ambala Ayta (Ayta, Ambala)",
@@ -55,6 +65,11 @@ export function ebible_languages_more() {
       language_code: "rup",
     },
     {
+      name: "Arosi",
+      bible_folder: "aia",
+      language_code: "aia",
+    },
+    {
       name: "Aruamu",
       bible_folder: "msy2020",
       language_code: "msy",
@@ -75,6 +90,11 @@ export function ebible_languages_more() {
       language_code: "awk",
     },
     {
+      name: "Baegu (Baeggu)",
+      bible_folder: "bvd",
+      language_code: "bvd",
+    },
+    {
       name: "Baga Sitemu",
       bible_folder: "bsp",
       language_code: "bsp",
@@ -85,6 +105,16 @@ export function ebible_languages_more() {
       language_code: "ind",
     },
     {
+      name: "Baikeno",
+      bible_folder: "bkx",
+      language_code: "bkx",
+    },
+    {
+      name: "Bambam",
+      bible_folder: "ptu",
+      language_code: "ptu",
+    },
+    {
       name: "Bangunji (Bangwinji)",
       bible_folder: "bsj",
       language_code: "bsj",
@@ -93,11 +123,6 @@ export function ebible_languages_more() {
       name: "Basa-Gurmana",
       bible_folder: "buj",
       language_code: "buj",
-    },
-    {
-      name: "Bau",
-      bible_folder: "bbd",
-      language_code: "bbd",
     },
     {
       name: "Bayso (Baiso)",
@@ -125,6 +150,11 @@ export function ebible_languages_more() {
       language_code: "bhu",
     },
     {
+      name: "Bimin",
+      bible_folder: "bhl",
+      language_code: "bhl",
+    },
+    {
       name: "Boga",
       bible_folder: "bvw",
       language_code: "bvw",
@@ -133,6 +163,11 @@ export function ebible_languages_more() {
       name: "Bondei",
       bible_folder: "bou",
       language_code: "bou",
+    },
+    {
+      name: "Borei",
+      bible_folder: "gai",
+      language_code: "gai",
     },
     {
       name: "Borni (Borna)",
@@ -148,6 +183,11 @@ export function ebible_languages_more() {
       name: "Bu (Bauchi State)",
       bible_folder: "zbu",
       language_code: "zbu",
+    },
+    {
+      name: "Bughotu",
+      bible_folder: "bgt",
+      language_code: "bgt",
     },
     {
       name: "Bwile",
@@ -200,6 +240,11 @@ export function ebible_languages_more() {
       language_code: "cug",
     },
     {
+      name: "Chuukese",
+      bible_folder: "chk",
+      language_code: "chk",
+    },
+    {
       name: "Cishingini",
       bible_folder: "asg",
       language_code: "asg",
@@ -215,9 +260,19 @@ export function ebible_languages_more() {
       language_code: "dao",
     },
     {
+      name: "Dadibi",
+      bible_folder: "mps",
+      language_code: "mps",
+    },
+    {
       name: "Dane Zaa (Beaver)",
       bible_folder: "bea",
       language_code: "bea",
+    },
+    {
+      name: "Dano",
+      bible_folder: "aso",
+      language_code: "aso",
     },
     {
       name: "Danu",
@@ -240,6 +295,11 @@ export function ebible_languages_more() {
       language_code: "dhn",
     },
     {
+      name: "Dhao",
+      bible_folder: "nfa",
+      language_code: "nfa",
+    },
+    {
       name: "Didayi (Gata')",
       bible_folder: "gaq",
       language_code: "gaq",
@@ -258,6 +318,11 @@ export function ebible_languages_more() {
       name: "Dongxiang",
       bible_folder: "sce",
       language_code: "sce",
+    },
+    {
+      name: "Doromu-Koki",
+      bible_folder: "kqc",
+      language_code: "kqc",
     },
     {
       name: "Duya",
@@ -290,9 +355,14 @@ export function ebible_languages_more() {
       language_code: "cfm",
     },
     {
-      name: "Gamilaraay",
-      bible_folder: "kld",
-      language_code: "kld",
+      name: "Fataleka",
+      bible_folder: "far",
+      language_code: "far",
+    },
+    {
+      name: "Folopa",
+      bible_folder: "ppo",
+      language_code: "ppo",
     },
     {
       name: "Gamit",
@@ -303,6 +373,11 @@ export function ebible_languages_more() {
       name: "Gamotso (Gamo)",
       bible_folder: "gmve",
       language_code: "gmv",
+    },
+    {
+      name: "Gapapaiwa",
+      bible_folder: "pwg",
+      language_code: "pwg",
     },
     {
       name: "Gayil",
@@ -318,6 +393,11 @@ export function ebible_languages_more() {
       name: "Ghanongga",
       bible_folder: "ghn",
       language_code: "ghn",
+    },
+    {
+      name: "Gilaki",
+      bible_folder: "glk",
+      language_code: "glk",
     },
     {
       name: "Glavda",
@@ -360,9 +440,19 @@ export function ebible_languages_more() {
       language_code: "kky",
     },
     {
+      name: "Guguminjen (Kunjen)",
+      bible_folder: "kjn",
+      language_code: "kjn",
+    },
+    {
       name: "gujii",
       bible_folder: "gax",
       language_code: "gax",
+    },
+    {
+      name: "Gwahatike",
+      bible_folder: "dah",
+      language_code: "dah",
     },
     {
       name: "Halbi",
@@ -383,6 +473,16 @@ export function ebible_languages_more() {
       name: "Havu",
       bible_folder: "hav",
       language_code: "hav",
+    },
+    {
+      name: "Hawu",
+      bible_folder: "hvn",
+      language_code: "hvn",
+    },
+    {
+      name: "Helong",
+      bible_folder: "hegNTpo",
+      language_code: "heg",
     },
     {
       name: "Hona (Hwana)",
@@ -460,9 +560,24 @@ export function ebible_languages_more() {
       language_code: "tbx",
     },
     {
+      name: "Kapingamarangi",
+      bible_folder: "kpg",
+      language_code: "kpg",
+    },
+    {
+      name: "Karo (Rawa) (Rawa)",
+      bible_folder: "rwo-karo",
+      language_code: "rwo",
+    },
+    {
       name: "Kese (Kisi)",
       bible_folder: "kiz",
       language_code: "kiz",
+    },
+    {
+      name: "Kharam (Naga, Kharam)",
+      bible_folder: "kfw",
+      language_code: "kfw",
     },
     {
       name: "Kho (Bugun)",
@@ -550,13 +665,23 @@ export function ebible_languages_more() {
       language_code: "hat",
     },
     {
+      name: "Kupang Malay",
+      bible_folder: "mkn",
+      language_code: "mkn",
+    },
+    {
       name: "Kurama",
       bible_folder: "krh",
       language_code: "krh",
     },
     {
+      name: "Kurti",
+      bible_folder: "ktm",
+      language_code: "ktm",
+    },
+    {
       name: "Kutu",
-      bible_folder: "kdc2014",
+      bible_folder: "kdc",
       language_code: "kdc",
     },
     {
@@ -568,6 +693,11 @@ export function ebible_languages_more() {
       name: "Kuuk Thayorre (Thayore)",
       bible_folder: "thd",
       language_code: "thd",
+    },
+    {
+      name: "Kwara'ae",
+      bible_folder: "kwf",
+      language_code: "kwf",
     },
     {
       name: "Latine (Latin)",
@@ -645,6 +775,11 @@ export function ebible_languages_more() {
       language_code: "mgv",
     },
     {
+      name: "Matumbi",
+      bible_folder: "mgw",
+      language_code: "mgw",
+    },
+    {
       name: "Matupi Chin (Chin, Matu)",
       bible_folder: "hlt",
       language_code: "hlt",
@@ -675,6 +810,11 @@ export function ebible_languages_more() {
       language_code: "mzq",
     },
     {
+      name: "Morokodo",
+      bible_folder: "mgc",
+      language_code: "mgc",
+    },
+    {
       name: "Mpoto",
       bible_folder: "mpa",
       language_code: "mpa",
@@ -688,6 +828,11 @@ export function ebible_languages_more() {
       name: "Mupun (Mwaghavul)",
       bible_folder: "sur",
       language_code: "sur",
+    },
+    {
+      name: "Murrinhpatha (Murrinh-Patha)",
+      bible_folder: "mwf2018",
+      language_code: "mwf",
     },
     {
       name: "Mwera",
@@ -705,9 +850,24 @@ export function ebible_languages_more() {
       language_code: "nag",
     },
     {
+      name: "Nali",
+      bible_folder: "nss",
+      language_code: "nss",
+    },
+    {
+      name: "Natqgu (Natügu)",
+      bible_folder: "ntu",
+      language_code: "ntu",
+    },
+    {
       name: "Nchane (Ncane)",
       bible_folder: "ncr",
       language_code: "ncr",
+    },
+    {
+      name: "Ndamba",
+      bible_folder: "ndj",
+      language_code: "ndj",
     },
     {
       name: "Ndendeule",
@@ -735,6 +895,21 @@ export function ebible_languages_more() {
       language_code: "nay",
     },
     {
+      name: "Ngindo",
+      bible_folder: "nnq",
+      language_code: "nnq",
+    },
+    {
+      name: "Nguu",
+      bible_folder: "ngp",
+      language_code: "ngp",
+    },
+    {
+      name: "Nii",
+      bible_folder: "nii",
+      language_code: "nii",
+    },
+    {
       name: "Nkangala",
       bible_folder: "nkn",
       language_code: "nkn",
@@ -745,9 +920,24 @@ export function ebible_languages_more() {
       language_code: "nob",
     },
     {
+      name: "Nukna",
+      bible_folder: "klt",
+      language_code: "klt",
+    },
+    {
+      name: "Ogea",
+      bible_folder: "eri",
+      language_code: "eri",
+    },
+    {
       name: "Oyda",
       bible_folder: "oyde",
       language_code: "oyd",
+    },
+    {
+      name: "Paama",
+      bible_folder: "pma",
+      language_code: "pma",
     },
     {
       name: "Padoe",
@@ -758,6 +948,11 @@ export function ebible_languages_more() {
       name: "Pali (Bareli, Palya)",
       bible_folder: "bpx",
       language_code: "bpx",
+    },
+    {
+      name: "Patep",
+      bible_folder: "ptp",
+      language_code: "ptp",
     },
     {
       name: "Pengu (Pengo)",
@@ -785,6 +980,16 @@ export function ebible_languages_more() {
       language_code: "pwr",
     },
     {
+      name: "Pular",
+      bible_folder: "fuf",
+      language_code: "fuf",
+    },
+    {
+      name: "Pura (Blagar)",
+      bible_folder: "beu",
+      language_code: "beu",
+    },
+    {
       name: "Purum",
       bible_folder: "pub",
       language_code: "pub",
@@ -793,6 +998,16 @@ export function ebible_languages_more() {
       name: "Qach’abel (K'iche')",
       bible_folder: "quctt",
       language_code: "quc",
+    },
+    {
+      name: "Qaqet",
+      bible_folder: "byx",
+      language_code: "byx",
+    },
+    {
+      name: "Ramoaaina",
+      bible_folder: "rai",
+      language_code: "rai",
     },
     {
       name: "Rana Tharu (Tharu, Rana)",
@@ -820,6 +1035,11 @@ export function ebible_languages_more() {
       language_code: "ron",
     },
     {
+      name: "Romanes (Romani, Carpathian)",
+      bible_folder: "rmc",
+      language_code: "rmc",
+    },
+    {
       name: "Romani",
       bible_folder: "rmna",
       language_code: "rmn",
@@ -830,14 +1050,54 @@ export function ebible_languages_more() {
       language_code: "row",
     },
     {
+      name: "Rote Lole (Lole)",
+      bible_folder: "llg",
+      language_code: "llg",
+    },
+    {
+      name: "Rote Rikou (Rikou)",
+      bible_folder: "rgu",
+      language_code: "rgu",
+    },
+    {
+      name: "Rote Tii (Tii)",
+      bible_folder: "txq",
+      language_code: "txq",
+    },
+    {
+      name: "Rotokas",
+      bible_folder: "roo",
+      language_code: "roo",
+    },
+    {
+      name: "Roviana",
+      bible_folder: "rug",
+      language_code: "rug",
+    },
+    {
+      name: "Sa'a",
+      bible_folder: "apb",
+      language_code: "apb",
+    },
+    {
       name: "Saafi-Saafi",
       bible_folder: "sav",
       language_code: "sav",
     },
     {
+      name: "Saisai (Nimoa)",
+      bible_folder: "nmws",
+      language_code: "nmw",
+    },
+    {
       name: "Sakechep (Sakachep)",
       bible_folder: "sch",
       language_code: "sch",
+    },
+    {
+      name: "Saliba",
+      bible_folder: "sbe",
+      language_code: "sbe",
     },
     {
       name: "Sanga",
@@ -865,6 +1125,21 @@ export function ebible_languages_more() {
       language_code: "stw",
     },
     {
+      name: "Saveeng (Mutu)",
+      bible_folder: "tuc-t",
+      language_code: "tuc",
+    },
+    {
+      name: "Sena",
+      bible_folder: "seh",
+      language_code: "seh",
+    },
+    {
+      name: "Shatt",
+      bible_folder: "shj",
+      language_code: "shj",
+    },
+    {
       name: "Sholaga",
       bible_folder: "sle",
       language_code: "sle",
@@ -890,9 +1165,19 @@ export function ebible_languages_more() {
       language_code: "slk",
     },
     {
+      name: "Sob Dora (Sop)",
+      bible_folder: "urw",
+      language_code: "urw",
+    },
+    {
       name: "Somau Karia",
       bible_folder: "six",
       language_code: "six",
+    },
+    {
+      name: "Southeast Ambrym (Ambrym, Southeast)",
+      bible_folder: "tvk",
+      language_code: "tvk",
     },
     {
       name: "Southeastern Kolami (Kolami, Southeastern)",
@@ -903,6 +1188,11 @@ export function ebible_languages_more() {
       name: "Sudanese Creole Arabic (Arabic, Sudanese Creole)",
       bible_folder: "pga",
       language_code: "pga",
+    },
+    {
+      name: "Sudest",
+      bible_folder: "tgo",
+      language_code: "tgo",
     },
     {
       name: "Suomi (Finnish)",
@@ -920,6 +1210,16 @@ export function ebible_languages_more() {
       language_code: "tgj",
     },
     {
+      name: "Takuu",
+      bible_folder: "nho",
+      language_code: "nho",
+    },
+    {
+      name: "Takwane",
+      bible_folder: "tke",
+      language_code: "tke",
+    },
+    {
       name: "Tandroy (Malagasy, Tandroy-Mahafaly)",
       bible_folder: "tdx",
       language_code: "tdx",
@@ -928,6 +1228,11 @@ export function ebible_languages_more() {
       name: "Tarok",
       bible_folder: "yer",
       language_code: "yer",
+    },
+    {
+      name: "Taupota",
+      bible_folder: "tpa",
+      language_code: "tpa",
     },
     {
       name: "Tavoyan",
@@ -943,6 +1248,11 @@ export function ebible_languages_more() {
       name: "Teke-Tyee",
       bible_folder: "tyx",
       language_code: "tyx",
+    },
+    {
+      name: "Tetun Dili",
+      bible_folder: "tdt",
+      language_code: "tdt",
     },
     {
       name: "Thai Phum (Chin, Thaiphum)",
@@ -965,6 +1275,11 @@ export function ebible_languages_more() {
       language_code: "vie",
     },
     {
+      name: "Tifal",
+      bible_folder: "tif",
+      language_code: "tif",
+    },
+    {
       name: "Timap (Amo)",
       bible_folder: "amo",
       language_code: "amo",
@@ -985,6 +1300,11 @@ export function ebible_languages_more() {
       language_code: "tvt",
     },
     {
+      name: "Ts‘əxna miz (Tsakhur)",
+      bible_folder: "tkr",
+      language_code: "tkr",
+    },
+    {
       name: "Tsishingini",
       bible_folder: "tsw",
       language_code: "tsw",
@@ -993,6 +1313,21 @@ export function ebible_languages_more() {
       name: "Tswana (Setswana)",
       bible_folder: "tsn",
       language_code: "tsn",
+    },
+    {
+      name: "Tuma-Irumu",
+      bible_folder: "iou",
+      language_code: "iou",
+    },
+    {
+      name: "Tutun Belu (Tetun)",
+      bible_folder: "tet",
+      language_code: "tet",
+    },
+    {
+      name: "Urat",
+      bible_folder: "urt",
+      language_code: "urt",
     },
     {
       name: "ut-Ma'in",
@@ -1020,9 +1355,24 @@ export function ebible_languages_more() {
       language_code: "wbq",
     },
     {
+      name: "Waima",
+      bible_folder: "rro",
+      language_code: "rro",
+    },
+    {
       name: "Waja",
       bible_folder: "wja",
       language_code: "wja",
+    },
+    {
+      name: "Wala",
+      bible_folder: "lgl",
+      language_code: "lgl",
+    },
+    {
+      name: "Waskia",
+      bible_folder: "wsk",
+      language_code: "wsk",
     },
     {
       name: "Wolio",
@@ -1055,6 +1405,16 @@ export function ebible_languages_more() {
       language_code: "yns",
     },
     {
+      name: "Yapese",
+      bible_folder: "yap",
+      language_code: "yap",
+    },
+    {
+      name: "Yau",
+      bible_folder: "yuw",
+      language_code: "yuw",
+    },
+    {
       name: "Yemsa",
       bible_folder: "jnje",
       language_code: "jnj",
@@ -1073,6 +1433,16 @@ export function ebible_languages_more() {
       name: "Zanaki",
       bible_folder: "zak",
       language_code: "zak",
+    },
+    {
+      name: "Zia",
+      bible_folder: "zia",
+      language_code: "zia",
+    },
+    {
+      name: "Zigua",
+      bible_folder: "ziw",
+      language_code: "ziw",
     },
     {
       name: "Zinza",
