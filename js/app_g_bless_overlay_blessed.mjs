@@ -8,7 +8,7 @@ import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { bless_told_tap } from "./bless_told_tap.mjs";
 import { bless_blessed_new } from "./bless_blessed_new.mjs";
-export function app_g_bless_overlay_blessings(container_map) {
+export function app_g_bless_overlay_blessed(container_map) {
   arguments_assert(arguments, 1);
   let world = app_g_bless_world_new();
   let player = property_get(world, "player");
