@@ -4,7 +4,7 @@ import { function_functionize } from "./function_functionize.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_repack_only_is } from "./js_repack_only_is.mjs";
-import { not } from "./not.mjs";
+import { null_is } from "./null_is.mjs";
 import { function_source_overwrite } from "./function_source_overwrite.mjs";
 import { function_delete } from "./function_delete.mjs";
 export async function function_span_cut_or_undo(
@@ -29,7 +29,20 @@ export async function function_span_cut_or_undo(
   let parsed = await function_parse_declaration(f_name_new);
   let declaration = property_get(parsed, "declaration");
   let repack_is = js_repack_only_is(declaration);
-  if (not(repack_is)) {
+  let parsed_holder = await function_parse_declaration(f_name);
+  let declaration_holder = property_get(parsed_holder, "declaration");
+  let repack_holder_is = js_repack_only_is(declaration_holder);
+  let why = null;
+  if (repack_holder_is) {
+    why =
+      "the run was the whole of what its holder still did, so what stands there now is the call to the piece and the names it hands back - a label on another function rather than work of its own. The lines moved and nothing got shorter, and the name grew a word that narrows nothing. Would you like to cut a smaller run, and leave the holder something of its own to do?";
+  }
+  if (repack_is) {
+    why =
+      "everything the run does is lift a name out of a record and hand it on, so the piece that came out held no work at all - each of its lines carried one name from one side of it to the other, and whoever called it could have read those names where they already were. Would you like to look at what the run is actually for, and cut a smaller one that does it?";
+  }
+  let taken_is = null_is(why);
+  if (taken_is) {
     let made = {
       address_to,
       f_name_new,
@@ -43,7 +56,7 @@ export async function function_span_cut_or_undo(
     address_to,
     f_name_new,
     cut_is: false,
-    why: "everything the run does is lift a name out of a record and hand it on, so the piece that came out held no work at all - each of its lines carried one name from one side of it to the other, and whoever called it could have read those names where they already were. Would you like to look at what the run is actually for, and cut a smaller one that does it?",
+    why,
   };
   return undone;
 }
