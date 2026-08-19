@@ -17,7 +17,7 @@ export function gloss_entries_affix_kinds_wrong(entries, known) {
   let wrong = [];
   function entry_read(entry) {
     let word = property_get(entry, word_key);
-    let held = property_get_or_null(known, word);
+    let held = binisaya_words_known_get(known, word);
     if (null_is(held)) {
       return;
     }
