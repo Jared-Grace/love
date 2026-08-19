@@ -1,7 +1,7 @@
+import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { binisaya_affixes_plain_kinds } from "./binisaya_affixes_plain_kinds.mjs";
@@ -24,7 +24,7 @@ export function gloss_entries_affix_letters_wrong_entry_read(word_key, known) {
   let wrong = [];
   function entry_read(entry) {
     let word = property_get(entry, word_key);
-    let held = property_get_or_null(known, word);
+    let held = binisaya_words_known_get(known, word);
     if (null_is(held)) {
       return;
     }
