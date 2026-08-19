@@ -4,7 +4,8 @@ import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_pass
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { window_reload } from "./window_reload.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
+import { app_shared_bible_languages_offered } from "./app_shared_bible_languages_offered.mjs";
+import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 import { app_shared_bible_offline_panel } from "./app_shared_bible_offline_panel.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
@@ -23,7 +24,7 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
   ("the sub-panels return to this hub rather than to a reading, so they have no passage to name and say a plain Back");
   let unnamed = "";
   function on_languages() {
-    let languages = ebible_languages();
+    let languages = app_shared_bible_languages_offered(context);
     let languages_chosen = app_shared_bible_language_codes_chosen();
     app_shared_bible_languages_choose(
       content,
@@ -32,6 +33,12 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
       back,
       unnamed,
     );
+  }
+  ("an app with one language to offer has no choice to show, so the entry is left out here the same way the screen reader leaves it out");
+  let choosable = app_shared_bible_languages_choosable_is(context);
+  let open_languages = null;
+  if (choosable) {
+    open_languages = on_languages;
   }
   function on_offline() {
     let languages = app_shared_bible_languages_chosen_get();
@@ -42,7 +49,7 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
   }
   app_shared_bible_settings_render(
     content,
-    on_languages,
+    open_languages,
     on_offline,
     on_about,
     context,
