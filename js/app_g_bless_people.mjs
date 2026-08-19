@@ -47,5 +47,10 @@ export function app_g_bless_people(player_img, coordinates_land) {
   ("becomes the id, which is why this is asked here and not later: once they start walking,");
   ("where they are standing is no longer where they began.");
   g_npcs_ids_ensure(people);
+  ("They are also given somewhere to belong, and for the same reason it is done HERE: an");
+  ("address is worked out from a person's place in this line, so it has to be asked while");
+  ("this is still the line the world was made from. It is what every rung above the lowest");
+  ("is prayed over.");
+  bless_places_ensure(people);
   return people;
 }
