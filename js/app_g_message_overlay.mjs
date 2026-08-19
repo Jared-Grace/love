@@ -1,15 +1,11 @@
+import { app_g_overlay_cover_emoji_card } from "./app_g_overlay_cover_emoji_card.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_reflow_opacity_full } from "./html_reflow_opacity_full.mjs";
-import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
-import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
-import { html_body_div } from "./html_body_div.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
-import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
-import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
 export function app_g_message_overlay(
   emoji_text,
   message,

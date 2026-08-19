@@ -1,16 +1,12 @@
+import { app_g_overlay_cover_emoji_card } from "./app_g_overlay_cover_emoji_card.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_reflow_opacity_full } from "./html_reflow_opacity_full.mjs";
 import { app_g_overlay_verse_add } from "./app_g_overlay_verse_add.mjs";
-import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
-import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
-import { html_body_div } from "./html_body_div.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
 import { g_verse_waiting_next } from "./g_verse_waiting_next.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
-import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
 export function app_g_prayer_overlay() {
   ("full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered. font sizes from ",
     app_g_overlay_fonts.name,
