@@ -14,6 +14,10 @@ export function app_shared_descriptions() {
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
     en_learn_bible:
       "Read a verse of the Bible in your own language and then in English, with every English word explained in your language. The Bible teaches you English as you read it.",
+    emoji_bible:
+      "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
+    g_bless:
+      "A game where you walk a street, turn to look at the people around you, and pray a blessing over everyone you can see.",
   };
   return r;
 }
