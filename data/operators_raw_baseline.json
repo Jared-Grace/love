@@ -1,13 +1,5 @@
 {
  "known": [
-  "function_worker_pool_run",
-  "app_replace_tests_proof_state",
-  "g_day_clock",
-  "app_g_hour_choices",
-  "messenger_reply_messages",
-  "app_replace_tests_proof_present_wait",
-  "puppeteer_matches",
-  "app_replace_tests_proof_rule_click",
-  "app_g_dev_index_tree"
+  "function_worker_pool_run"
  ]
 }
