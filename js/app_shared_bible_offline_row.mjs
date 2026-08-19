@@ -33,8 +33,7 @@ export function app_shared_bible_offline_row(parent, language, on_change) {
         name,
         " is saved on this device",
       ]);
-      let div = html_div_text(row, saved);
-      app_shared_text_deemphasized(div);
+      app_shared_text_quiet(row, saved);
       let free = text_combine_multiple(["Free the space ", name, " uses"]);
       app_shared_button(row, free, on_free);
       return;
@@ -46,15 +45,13 @@ export function app_shared_bible_offline_row(parent, language, on_change) {
   async function on_free() {
     html_clear(row);
     let going = text_combine_multiple(["Freeing the space ", name, " uses"]);
-    let status = html_div_text(row, going);
-    app_shared_text_deemphasized(status);
+    app_shared_text_quiet(row, going);
     await ebible_offline_folder_delete(bible_folder);
     await on_change();
   }
   async function on_save() {
     html_clear(row);
-    let status = html_div_text(row, "Starting the download");
-    app_shared_text_deemphasized(status);
+    let status = app_shared_text_quiet(row, "Starting the download");
     let finished = await app_shared_bible_offline_download_progress(
       status,
       language,
@@ -66,8 +63,7 @@ export function app_shared_bible_offline_row(parent, language, on_change) {
         name,
         " again?",
       ]);
-      let div2 = html_div_text(row, sorry);
-      app_shared_text_deemphasized(div2);
+      app_shared_text_quiet(row, sorry);
       let e3 = emoji_arrow_down();
       let again = text_combine_multiple([e3, " Try again"]);
       app_shared_button(row, again, on_save);
