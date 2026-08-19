@@ -4,7 +4,7 @@ export function youtube_innertube_context() {
   let context = {
     client: {
       clientName: "WEB",
-      clientVersion: "2.20240101.00.00",
+      clientVersion: "2.20260817.01.00",
     },
   };
   return context;
