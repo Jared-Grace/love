@@ -1,9 +1,9 @@
+import { js_function_lift_stub_swap } from "./js_function_lift_stub_swap.mjs";
 import { property_list_map } from "./property_list_map.mjs";
 import { js_selects_function_lift_reading } from "./js_selects_function_lift_reading.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { js_function_lift_wrapper_refusals } from "./js_function_lift_wrapper_refusals.mjs";
@@ -52,15 +52,5 @@ export async function js_selects_function_lift_wrapper(
   js_function_arguments_assert_add(moved);
   let call_code = js_code_call_args(f_name_new, passed);
   let inside = js_code_return(call_code);
-  let stub_code = js_code_function_declaration_args(
-    async_is,
-    name_old,
-    param_names,
-    inside,
-  );
-  let stub = js_parse_statement(stub_code);
-  let stub_block = property_get(stub, "body");
-  property_set(declaration, "body", stub_block);
-  let body = property_get(ast, "body");
-  list_add(body, moved);
+  js_function_lift_stub_swap(ast, declaration, name_old, inside, moved);
 }
