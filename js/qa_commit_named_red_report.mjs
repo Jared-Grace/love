@@ -1,10 +1,8 @@
+import { qa_commit_named_report_newest } from "./qa_commit_named_report_newest.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
-import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_get_or_null } from "./list_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 export async function qa_commit_named_red_report() {
   "Which gates are red as of the last commit anybody judged - the commit itself, how far behind the folder it has fallen, and the gates it named. Asks no gates, so it costs about a second.";
   "It is the question a reader actually has, and until now the only way to answer it was to run every gate again and wait a quarter of an hour. Measured 2026-08-16: a red gate was found by trying to ship, which is the most expensive way there is to be told.";
@@ -14,12 +12,11 @@ export async function qa_commit_named_red_report() {
   "The reds come back as one flat list, and that list hides the difference that matters: measured 2026-08-17, three of thirty-three had just broken and the other thirty had been red for about five hundred commits. Read flat, the thirty look like today's problem and bury the three that are, so the name of the reading that ages them travels out beside them.";
   let hint = fn_name("qa_commit_named_red_since");
   let report = await qa_commit_named_report();
-  let head = property_get(report, "head");
-  let looked = property_get(report, "looked");
-  let placed = qa_commit_looked_nearest_first(looked);
-  let newest = list_get_or_null(placed, 0);
+  let opened = qa_commit_named_report_newest(report);
+  let head = property_get(opened, "head");
+  let newest = property_get(opened, "newest");
   ("A record holding nothing about any commit this folder still has answers with the folder's own commit and no judgement, rather than throwing. Having judged nothing yet is the ordinary state of a thing that has just begun, and it is also what a reader sees on a machine where the record was cleared.");
-  let nothing = null_is(newest);
+  let nothing = property_get(opened, "nothing");
   if (nothing) {
     let empty = {
       head,
