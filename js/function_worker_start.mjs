@@ -1,4 +1,4 @@
-export function worker_start(owner) {
+export function function_worker_start(owner) {
   let worker = {
     child: null,
     child_starting: null,
