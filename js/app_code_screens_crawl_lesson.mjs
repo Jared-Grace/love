@@ -1,3 +1,4 @@
+import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_capture_record } from "./app_code_screen_capture_record.mjs";
 import { app_code_screens_crawl_lesson_quiz_url } from "./app_code_screens_crawl_lesson_quiz_url.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
@@ -40,7 +41,7 @@ export async function app_code_screens_crawl_lesson(
     if (not(clicked)) {
       break;
     }
-    await page.waitForTimeout(180);
+    await page.waitForTimeout(page_capture_settle_ms());
     ("detect leaving the lesson by the url, not the title: the title collapses to just the category (Operators) which is shared, so it can never mark a boundary. Next writes the new lesson and screen into the hash, so if the hash no longer names this lesson's quiz we have walked out of it - into the next lesson or a review - and stop before capturing that as a kind of this lesson");
     let url = page.url();
     let still = text_includes(url, quiz_marker);
