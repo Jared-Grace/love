@@ -24,10 +24,10 @@ export async function functions_plumbing_collapse_all() {
   let unsound = [];
   for (let f_name of named) {
     async function lambda() {
-      let one = await function_call_commit(function_plumbing_collapse, [
+      let committed = await function_call_commit(function_plumbing_collapse, [
         f_name,
       ]);
-      return one;
+      return committed;
     }
     let one = await catch_null_async(lambda);
     let missing = null_is(one);

@@ -1,22 +1,26 @@
-import { bible_folder_key } from "./bible_folder_key.mjs";
+import { app_shared_bible_offline_download_progress } from "./app_shared_bible_offline_download_progress.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
-import { ebible_offline_download } from "./ebible_offline_download.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_folder_key } from "./bible_folder_key.mjs";
+import { ebible_offline_folder_delete } from "./ebible_offline_folder_delete.mjs";
 import { ebible_offline_folder_downloaded_is } from "./ebible_offline_folder_downloaded_is.mjs";
 import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_shared_bible_offline_row(parent, language) {
+export function app_shared_bible_offline_row(parent, language, on_change) {
+  "one language: saved and offering to give its space back, or not saved and offering to fetch it";
+  "a save that finished and a space that was freed both change what every other button on the screen should say - whether saving all of them is still on offer, whether there is any space left to free at all - so the whole list is drawn again rather than this one row, and the caller is the one who knows how to draw it";
+  arguments_assert(arguments, 3);
   let row = html_div(parent);
   let name = property_get(language, "name");
-  let bible_folder = property_get(language, bible_folder_key());
+  let property_name = bible_folder_key();
+  let bible_folder = property_get(language, property_name);
   render();
   function render() {
     html_clear(row);
@@ -31,33 +35,30 @@ export function app_shared_bible_offline_row(parent, language) {
       ]);
       let div = html_div_text(row, saved);
       app_shared_text_deemphasized(div);
+      let free = text_combine_multiple(["Free the space ", name, " uses"]);
+      app_shared_button(row, free, on_free);
       return;
     }
     let e2 = emoji_arrow_down();
     let save = text_combine_multiple([e2, " Save ", name]);
     app_shared_button(row, save, on_save);
   }
+  async function on_free() {
+    html_clear(row);
+    let going = text_combine_multiple(["Freeing the space ", name, " uses"]);
+    let status = html_div_text(row, going);
+    app_shared_text_deemphasized(status);
+    await ebible_offline_folder_delete(bible_folder);
+    await on_change();
+  }
   async function on_save() {
     html_clear(row);
     let status = html_div_text(row, "Starting the download");
     app_shared_text_deemphasized(status);
-    function on_progress(done, total) {
-      let text = text_combine_multiple([
-        "Saving ",
-        name,
-        ": ",
-        done,
-        " of ",
-        total,
-        " chapters",
-      ]);
-      html_text_set(status, text);
-    }
-    async function download() {
-      await ebible_offline_download(bible_folder, on_progress);
-      return true;
-    }
-    let finished = await catch_null_async(download);
+    let finished = await app_shared_bible_offline_download_progress(
+      status,
+      language,
+    );
     if (null_is(finished)) {
       html_clear(row);
       let sorry = text_combine_multiple([
@@ -72,6 +73,6 @@ export function app_shared_bible_offline_row(parent, language) {
       app_shared_button(row, again, on_save);
       return;
     }
-    render();
+    await on_change();
   }
 }
