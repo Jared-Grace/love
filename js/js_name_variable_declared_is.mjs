@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,8 +9,7 @@ export function js_name_variable_declared_is(ast, name) {
   "Whatever moves a use of a name to somewhere earlier asks this first, and leaves the code alone when the answer is yes.";
   let declarators = js_list_type(ast, "VariableDeclarator");
   for (let v of declarators) {
-    let node = property_get(v, "node");
-    let id = property_get(node, "id");
+    let id = property_path_get_2(v, "node", "id");
     let id_is = js_node_type_is(id, "Identifier");
     if (id_is) {
       let declared = property_get(id, "name");
