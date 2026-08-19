@@ -1,3 +1,4 @@
+import { js_statements_grouping_worthless_cases_gate_run } from "./js_statements_grouping_worthless_cases_gate_run.mjs";
 import { app_shared_gloss_bible_derivatives_gate_run } from "./app_shared_gloss_bible_derivatives_gate_run.mjs";
 import { bless_marks_climbed_cases_gate_run } from "./bless_marks_climbed_cases_gate_run.mjs";
 import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs";
@@ -588,6 +589,7 @@ export function qa_gates() {
     bundles_names_missing_gate_run,
     gloss_punctuation_words_gate_run,
     js_repack_only_is_cases_gate_run,
+    js_statements_grouping_worthless_cases_gate_run,
     permission_grant_param_scripture_code_gate_run,
     permission_rule_path_allowed_gate_run,
     permission_file_hook_registered_gate_run,

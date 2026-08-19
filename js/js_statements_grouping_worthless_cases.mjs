@@ -39,7 +39,9 @@ export function js_statements_grouping_worthless_cases() {
     },
     {
       name: "a run that is nothing but constants fetched by name is already shared",
-      code: text_frozen("function f() {\n  let a = one();\n  let b = two();\n}"),
+      code: text_frozen(
+        "function f() {\n  let a = one();\n  let b = two();\n}",
+      ),
       worthless: true,
     },
     {
