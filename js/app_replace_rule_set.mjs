@@ -1,3 +1,4 @@
+import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
 import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
 import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
 import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
@@ -14,7 +15,6 @@ import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_ver
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
-import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
@@ -22,8 +22,6 @@ import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_ve
 import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
 import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
-import { app_replace_rule_sets_data_initialize } from "./app_replace_rule_sets_data_initialize.mjs";
-import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
@@ -31,23 +29,18 @@ import { list_take } from "./list_take.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_to_indices } from "./list_to_indices.mjs";
 import { equal } from "./equal.mjs";
-import { app_replace_rule_set_rules_get } from "./app_replace_rule_set_rules_get.mjs";
-import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
 import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
-import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { html_div } from "./html_div.mjs";
-import { list_size } from "./list_size.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { not } from "./not.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
@@ -59,43 +52,25 @@ import { property_get } from "./property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
-  app_replace_rule_set_nav(context, root);
-  let rs = app_replace_rule_set_get(context);
-  let goals = property_get(rs, "goals");
-  let goals_count = list_size(goals);
-  let goal_index = storage_session_get_context(context, "goal_index");
-  let goal = list_get(goals, goal_index);
-  let rules_parsed = app_replace_rule_set_rules_get(rs);
-  let index_selected = null;
-  let start_over = null;
-  let rules_used = null;
-  let rule_set_name = property_get(rs, "name");
-  let start_end = app_replace_start_end_get(goal);
-  let end = property_get(start_end, "end");
-  let data = app_replace_rule_sets_data_initialize(context);
-  let g_saved = app_replace_rule_sets_data_goal(data, rule_set_name, goal);
-  let history_saved = property_get_or_null(g_saved, "history");
-  let resumed = false;
-  if (null_not_is(history_saved)) {
-    ("only resume history saved in the current {state, rule, index} shape; an older saved shape (no index) is ignored so a format change never crashes an existing player - the goal reopens unsolved and re-saves on the next solve");
-    let object = list_get(history_saved, 0);
-    resumed = property_exists(object, "index");
-  }
-  ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
-  let on_false = property_get(start_end, "start");
-  let start = ternary(resumed, end, on_false);
-  let history = ternary(resumed, history_saved, [
-    {
-      state: start,
-      rule: null,
-      index: null,
-    },
-  ]);
-  let div_proof = null;
-  let start_indices = list_to_indices(start);
+  let {
+    goals,
+    goals_count,
+    goal_index,
+    goal,
+    rules_parsed,
+    index_selected,
+    start_over,
+    rules_used,
+    rule_set_name,
+    end,
+    resumed,
+    start,
+    history,
+    div_proof,
+    start_indices,
+  } = app_replace_rule_set_start_indices(context, root);
   async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
