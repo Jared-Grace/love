@@ -63,10 +63,13 @@ export async function function_worker_pool_run(f_name, args) {
 async function watching_ensure() {
   "Memoize the PROMISE, not the result: concurrent first requests must share";
   "one watcher rather than each racing to build their own.";
-  if (watching === null) {
-    watching = watching_start();
+  let held = function_worker_watching_holder();
+  let promise = property_get(held, "promise");
+  if (promise === null) {
+    promise = watching_start();
+    held.promise = promise;
   }
-  let r = await watching;
+  let r = await promise;
   return r;
 }
 async function watching_start() {
@@ -84,32 +87,45 @@ async function watching_start() {
     }
     function lambda2() {
       quiet = null;
-      generation = generation + 1;
+      let held = function_worker_generation_holder();
+      let count = property_get(held, "count");
+      let raised = count + 1;
+      held.count = raised;
       log(fn_name("function_worker_pool_run"), {
         retired_for: path,
-        generation,
+        generation: raised,
       });
     }
-    quiet = setTimeout(lambda2, QUIET_MILLISECONDS);
+    let milliseconds = function_worker_pool_quiet_milliseconds();
+    quiet = setTimeout(lambda2, milliseconds);
   }
   watcher.on("change", lambda).on("add", lambda).on("unlink", lambda);
   return watcher;
 }
 function pool_ready() {
-  let stale = pool === null || property_get(pool, "generation") !== generation;
+  let held = function_worker_pool_holder();
+  let current = property_get(held, "current");
+  let count = property_get(function_worker_generation_holder(), "count");
+  let stale =
+    current === null || property_get(current, "generation") !== count;
   if (stale) {
+    ("Retired before the new one is put in place, because retiring reads which");
+    ("pool is current and it is the OLD one that has to be drained.");
     pool_retire();
-    pool = pool_start();
+    current = pool_start();
+    held.current = current;
   }
-  return pool;
+  return current;
 }
 function pool_retire() {
-  if (pool === null) {
+  let held = function_worker_pool_holder();
+  let current = property_get(held, "current");
+  if (current === null) {
     return;
   }
   ("Drain, do not kill: in-flight jobs keep their worker alive and finish");
   ("normally. Closing the job stream is what tells a worker to exit once idle.");
-  let workers = property_get(pool, "workers");
+  let workers = property_get(current, "workers");
   workers.forEach(function lambda(worker) {
     worker.retired = true;
     worker_exit_if_idle(worker);
@@ -117,6 +133,7 @@ function pool_retire() {
 }
 function pool_start() {
   let workers = [];
+  let generation = property_get(function_worker_generation_holder(), "count");
   let started = {
     generation,
     workers,
@@ -124,7 +141,8 @@ function pool_start() {
     broken: null,
   };
   let index = 0;
-  while (index < WORKERS_WANTED) {
+  let wanted = function_worker_pool_workers_wanted();
+  while (index < wanted) {
     workers.push(worker_start(started));
     index = index + 1;
   }
@@ -224,8 +242,10 @@ function worker_exited(worker, code) {
   ("generation broken rather than respawning per request, which would hot-loop");
   ("node boots for as long as the file stays broken. The next save moves the");
   ("generation forward and clears this by itself.");
+  let held = function_worker_pool_holder();
+  let current = property_get(held, "current");
   let booted_empty = ids.length === 0 && not(retired);
-  if (booted_empty && owner === pool) {
+  if (booted_empty && owner === current) {
     owner.broken = message;
   }
 }
