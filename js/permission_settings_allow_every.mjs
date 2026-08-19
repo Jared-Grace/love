@@ -11,8 +11,8 @@ export async function permission_settings_allow_every() {
   let rules = [];
   for (let path of paths) {
     async function read_take() {
-      let allow = await permission_settings_allow_read(path);
-      return allow;
+      let path_rules = await permission_settings_allow_read(path);
+      return path_rules;
     }
     let allow = await catch_null_async(read_take);
     let there = list_is(allow);
