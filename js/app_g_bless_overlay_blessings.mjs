@@ -27,7 +27,8 @@ export function app_g_bless_overlay_blessings(container_map) {
   let glows = html_div(div_map);
   let bar = app_g_bless_bar(container_map);
   let told = html_div(bar);
-  app_g_p_text(told, bless_told_tap());
+  let name = bless_told_tap();
+  app_g_p_text(told, name);
   ("the ladder starts at one person, and every rung above it is earned rather than begun");
   ("with - so the first prayer of a new game reaches exactly the person it is said over");
   let rung = "person";

@@ -22,16 +22,15 @@ export function app_code_review_present(r, home_button, context) {
     skip_button: skip_button22,
     go_next: go_next22,
   };
-  let r22 = r32;
-  let go_next5 = property_get(r22, "go_next");
-  let skip_button5 = property_get(r22, "skip_button");
-  let has_next3 = property_get(r22, "has_next");
-  let back_button3 = property_get(r22, "back_button");
-  let success_container32 = property_get(r22, "success_container");
-  let c3 = property_get(r22, "c");
-  let key3 = property_get(r22, "key");
+  let go_next5 = property_get(r32, "go_next");
+  let skip_button5 = property_get(r32, "skip_button");
+  let has_next3 = property_get(r32, "has_next");
+  let back_button3 = property_get(r32, "back_button");
+  let success_container32 = property_get(r32, "success_container");
+  let c3 = property_get(r32, "c");
+  let key3 = property_get(r32, "key");
   let r52 = {
-    r2: r22,
+    r2: r32,
     go_next: go_next5,
     skip_button: skip_button5,
     has_next: has_next3,
@@ -40,115 +39,37 @@ export function app_code_review_present(r, home_button, context) {
     c: c3,
     key: key3,
   };
-  let r33 = r52;
-  let key4 = property_get(r33, "key");
-  let c4 = property_get(r33, "c");
-  let success_container4 = property_get(r33, "success_container");
-  let back_button4 = property_get(r33, "back_button");
-  let has_next4 = property_get(r33, "has_next");
-  let skip_button3 = property_get(r33, "skip_button");
-  let go_next3 = property_get(r33, "go_next");
-  let progress22 = property_path_get_2(r33, "r2", "progress");
-  let r62 = {
+  let key4 = property_get(r52, "key");
+  let c4 = property_get(r52, "c");
+  let success_container4 = property_get(r52, "success_container");
+  let back_button4 = property_get(r52, "back_button");
+  let has_next4 = property_get(r52, "has_next");
+  let skip_button3 = property_get(r52, "skip_button");
+  let go_next3 = property_get(r52, "go_next");
+  let progress22 = property_path_get_2(r52, "r2", "progress");
+  let queue22 = property_get(r, "queue");
+  let passed = property_get(r, "passed");
+  let restart_button2 = property_get(r, "restart_button");
+  let r6 = {
+    passed: passed,
+    progress: progress22,
+    go_next: go_next3,
+    skip_button: skip_button3,
+    queue: queue22,
     key: key4,
     c: c4,
     success_container: success_container4,
-    back_button: back_button4,
-    has_next: has_next4,
-    skip_button: skip_button3,
-    go_next: go_next3,
-    progress: progress22,
-  };
-  let r24 = r62;
-  let progress3 = property_get(r24, "progress");
-  let go_next4 = property_get(r24, "go_next");
-  let skip_button4 = property_get(r24, "skip_button");
-  let has_next5 = property_get(r24, "has_next");
-  let back_button5 = property_get(r24, "back_button");
-  let success_container5 = property_get(r24, "success_container");
-  let c5 = property_get(r24, "c");
-  let key5 = property_get(r24, "key");
-  let queue22 = property_get(r, "queue");
-  let r7 = {
-    progress: progress3,
-    go_next: go_next4,
-    skip_button: skip_button4,
-    has_next: has_next5,
-    back_button: back_button5,
-    success_container: success_container5,
-    c: c5,
-    key: key5,
-    queue: queue22,
-  };
-  let r43 = r7;
-  let queue3 = property_get(r43, "queue");
-  let key6 = property_get(r43, "key");
-  let c6 = property_get(r43, "c");
-  let success_container6 = property_get(r43, "success_container");
-  let back_button6 = property_get(r43, "back_button");
-  let has_next6 = property_get(r43, "has_next");
-  let r8 = {
-    r4: r43,
-    queue: queue3,
-    key: key6,
-    c: c6,
-    success_container: success_container6,
-    back_button: back_button6,
-    has_next: has_next6,
-  };
-  let r2 = r8;
-  let has_next = property_get(r2, "has_next");
-  let back_button = property_get(r2, "back_button");
-  let success_container2 = property_get(r2, "success_container");
-  let c = property_get(r2, "c");
-  let key = property_get(r2, "key");
-  let queue = property_get(r2, "queue");
-  let r42 = property_get(r2, "r4");
-  let skip_button = property_get(r42, "skip_button");
-  let go_next = property_get(r42, "go_next");
-  let progress = property_get(r42, "progress");
-  let passed = property_get(r, "passed");
-  let r5 = {
-    success_container: success_container2,
-    c,
-    key,
-    queue,
-    skip_button,
-    go_next,
-    progress,
-    passed,
-  };
-  let r3 = r5;
-  let passed2 = property_get(r3, "passed");
-  let progress2 = property_get(r3, "progress");
-  let go_next2 = property_get(r3, "go_next");
-  let skip_button2 = property_get(r3, "skip_button");
-  let queue2 = property_get(r3, "queue");
-  let key2 = property_get(r3, "key");
-  let c2 = property_get(r3, "c");
-  let success_container3 = property_get(r3, "success_container");
-  let restart_button2 = property_get(r, "restart_button");
-  let r6 = {
-    passed: passed2,
-    progress: progress2,
-    go_next: go_next2,
-    skip_button: skip_button2,
-    queue: queue2,
-    key: key2,
-    c: c2,
-    success_container: success_container3,
     restart_button: restart_button2,
   };
-  let r4 = r6;
-  let restart_button = property_get(r4, "restart_button");
-  let success_container = property_get(r4, "success_container");
+  let restart_button = property_get(r6, "restart_button");
+  let success_container = property_get(r6, "success_container");
   let present = app_code_review_present_present(
-    r4,
+    r6,
     home_button,
     success_container,
-    back_button,
+    back_button4,
     restart_button,
-    has_next,
+    has_next4,
     context,
   );
   return present;

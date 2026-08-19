@@ -29,8 +29,8 @@ export function app_g_bless_overlay_render(r, npcs) {
   let world = property_get(r2, "world");
   let walking = property_get(r2, "walking");
   function view_now() {
-    ("who the player can see AT THIS MOMENT, asked again rather than remembered, because the");
-    ("crowd walks between one question and the next");
+    "who the player can see AT THIS MOMENT, asked again rather than remembered, because the";
+    "crowd walks between one question and the next";
     let cone = cone_get();
     let view = bless_cone_view(cone, npcs);
     return view;
@@ -46,7 +46,7 @@ export function app_g_bless_overlay_render(r, npcs) {
     app_g_bless_wash(wash, cone);
   }
   function tap_prayed(target) {
-    ("Whether the tap landed on somebody, and so became a prayer instead of a walk.");
+    "Whether the tap landed on somebody, and so became a prayer instead of a walk.";
     let x = property_get(target, "x");
     let y = property_get(target, "y");
     let view = view_now();
