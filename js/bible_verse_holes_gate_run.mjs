@@ -41,6 +41,24 @@ export async function bible_verse_holes_gate_run() {
     return all;
   }
   let empty = list_filter(bibles, lambda2);
+  ("A chapter nobody could get an answer about is refused outright, and it is the only one of these that says nothing at all about a bible. The other findings are facts somebody has to read and decide about; this one is the measuring itself being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
+  ("It is refused rather than reported because the alternative was tried by accident and is what this whole check now exists to prevent. An ask that failed used to be recorded as a chapter the bible does not hold, which is a wrong fact in the shape of a right one - believed for as long as nobody happens to check an entry by hand.");
+  function lambda3(entry) {
+    let named = property_get(entry, "chapters_unreachable");
+    let none = list_empty_is(named);
+    let any = not(none);
+    return any;
+  }
+  let unreachable = list_filter(bibles, lambda3);
+  let f_name6 = fn_name("bible_verse_holes_write");
+  list_empty_is_assert_json(unreachable, {
+    hint: text_combine_multiple([
+      "these bibles were asked and the far end never answered, so the record says nothing about the chapters named - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
+      f_name6,
+      ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
+    ]),
+    unreachable,
+  });
   let f_name = fn_name("bible_verse_holes_write");
   list_empty_is_assert_json(unmeasured, {
     hint: text_combine_multiple([
@@ -84,6 +102,7 @@ export async function bible_verse_holes_gate_run() {
     departed,
     unasked,
     empty,
+    unreachable,
   };
   return r;
 }
