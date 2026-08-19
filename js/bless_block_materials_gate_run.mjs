@@ -55,4 +55,12 @@ export function bless_block_materials_gate_run() {
     paved_fronts,
     hint: "a front made of what the street is paved with disappears into the ground it stands on",
   });
+  ("How much was reached goes back with the verdict. Every check above passes by finding nothing wrong, and finding nothing wrong is also what happens when the lists it asks for come back empty - a materials list renamed, or moved somewhere this no longer looks. The word said is the same one either way, and these three numbers are the only part of the answer that falls on the day the reading breaks.");
+  ("Counted from what was walked rather than from what was wrong. A count of faults is nought on every run that passes, so an answer holding only that has nothing in it that could ever drop.");
+  let walked = {
+    groups: groups_count,
+    faces: list_size(faces),
+    pavements: pavements_count,
+  };
+  return walked;
 }
