@@ -10,6 +10,7 @@ export function app_g_bless_overlay_turned(container_map) {
   let npcs = property_get(r, "npcs");
   let r2 = app_g_bless_overlay_render(r, npcs);
   let render = property_get(r2, "render");
+  let tap_prayed = property_get(r2, "tap_prayed");
   let walking = property_get(r2, "walking");
   let world = property_get(r2, "world");
   let bar = property_get(r2, "bar");
@@ -22,6 +23,7 @@ export function app_g_bless_overlay_turned(container_map) {
   let r3 = {
     player,
     render,
+    tap_prayed,
     walking,
     world,
     bar,
