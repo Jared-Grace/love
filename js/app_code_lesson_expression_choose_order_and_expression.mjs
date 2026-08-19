@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_comparison_and_and_operands_false } from "./app_code_lesson_expression_comparison_and_and_operands_false.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_code_lesson_expression_choose_order_and_side } from "./app_code_lesson_expression_choose_order_and_side.mjs";
+import { app_code_lesson_expression_choose_order_comparison_side } from "./app_code_lesson_expression_choose_order_comparison_side.mjs";
 import { app_code_expression_parts_code } from "./app_code_expression_parts_code.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_parts } from "./app_code_lesson_expression_choose_order_both_sides_expression_parts.mjs";
@@ -16,12 +16,18 @@ export function app_code_lesson_expression_choose_order_and_expression(
   ("A side is drawn again while the two sides come out written the same way. Written the same, the line answers itself: a learner who has seen that both sides say 3 < 5 knows the second the moment they have solved the first, and half the lesson has asked them nothing.");
   let on_false = app_code_lesson_expression_comparison_and_and_operands_false();
   let truths = ternary(want_true, [true, true], on_false);
-  let left_parts = app_code_lesson_expression_choose_order_and_side(truths[0]);
+  let left_parts = app_code_lesson_expression_choose_order_comparison_side(
+    truths[0],
+  );
   let left_code = app_code_expression_parts_code(left_parts);
-  let right_parts = app_code_lesson_expression_choose_order_and_side(truths[1]);
+  let right_parts = app_code_lesson_expression_choose_order_comparison_side(
+    truths[1],
+  );
   let right_code = app_code_expression_parts_code(right_parts);
   while (equal(left_code, right_code)) {
-    right_parts = app_code_lesson_expression_choose_order_and_side(truths[1]);
+    right_parts = app_code_lesson_expression_choose_order_comparison_side(
+      truths[1],
+    );
     right_code = app_code_expression_parts_code(right_parts);
   }
   let outer_symbol = js_operator_and_symbol();
