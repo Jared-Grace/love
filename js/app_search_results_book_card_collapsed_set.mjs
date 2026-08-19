@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -21,8 +22,7 @@ export function app_search_results_book_card_collapsed_set(
     html_style_margin_x(div_book, value3);
     html_style_margin_bottom(header, "0");
   } else {
-    html_display_block(div_body);
-    html_display_block(div_book);
+    each([div_body, div_book], html_display_block);
     html_style_margin_x(div_book, "0");
     html_style_margin_bottom(header, "0.3em");
   }
