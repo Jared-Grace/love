@@ -18,6 +18,24 @@ export function js_code_getter_literal(code, f_name) {
     return r;
   }
   let body = code.slice(start).split("\n}")[0];
+  ("A body that hands something back in more than one place is not a getter at all,");
+  ("and is refused before any of the four readings below is asked. Without this it");
+  ("answered with whichever return came first, so a function giving up with one word");
+  ("part-way through and choosing its real word below was reported as the word it");
+  ("gives up with - and every site in the repo spelling that word would have been");
+  ("offered a call to a function that mostly hands back something else. A return");
+  ("counted here is one standing at the start of its own line, which is every real");
+  ("one and no word inside a written-out sentence.");
+  let returns = body.match(/^\s*return\b/gm);
+  if (null_is(returns)) {
+    let r6 = "";
+    return r6;
+  }
+  let one_return_only = equal(returns.length, 1);
+  if (not(one_return_only)) {
+    let r7 = "";
+    return r7;
+  }
   ("A word wrapped in the do-not-change marker is the value when the function goes");
   ("on to return it. That wrapper is never incidental - it is written by somebody");
   ("saying this exact text must stay - so unlike a bare string it cannot be a");
