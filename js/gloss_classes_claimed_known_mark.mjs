@@ -1,6 +1,8 @@
-import { binisaya_words_known_analysed_is } from "./binisaya_words_known_analysed_is.mjs";
+import { binisaya_words_known_broken_down_is } from "./binisaya_words_known_broken_down_is.mjs";
 import { list_map } from "./list_map.mjs";
+import { not } from "./not.mjs";
 import { object_merge } from "./object_merge.mjs";
+import { property_null_is } from "./property_null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export function gloss_classes_claimed_known_mark(classes, known) {
   "Classes of disagreeing roots with a mark on each saying whether the root the explanation named is a word the dictionary knows at all.";
@@ -11,7 +13,7 @@ export function gloss_classes_claimed_known_mark(classes, known) {
   "A word the dictionary does not know is not thereby proved to be nonsense. The dictionary is a dictionary and not the language, so this marks where to look rather than what is wrong.";
   function class_mark(one_class) {
     let claimed = property_get(one_class, "claimed");
-    let claimed_known = binisaya_words_known_analysed_is(known, claimed);
+    let claimed_known = binisaya_words_known_broken_down_is(known, claimed);
     object_merge(one_class, {
       claimed_known,
     });
