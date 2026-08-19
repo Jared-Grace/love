@@ -3,6 +3,7 @@ import { function_read } from "./function_read.mjs";
 import { function_functionize } from "./function_functionize.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
+import { js_relabel_only_is } from "./js_relabel_only_is.mjs";
 import { js_repack_only_is } from "./js_repack_only_is.mjs";
 import { null_is } from "./null_is.mjs";
 import { function_source_overwrite } from "./function_source_overwrite.mjs";
@@ -32,7 +33,13 @@ export async function function_span_cut_or_undo(
   let parsed_holder = await function_parse_declaration(f_name);
   let declaration_holder = property_get(parsed_holder, "declaration");
   let repack_holder_is = js_repack_only_is(declaration_holder);
+  ("A holder handing back one thing rather than a record escapes that reading entirely, because it wants a record written out and there is none. So the same question is asked a second way, and the two together cover both kinds of product a holder can have.");
+  let relabel_holder_is = js_relabel_only_is(declaration_holder);
   let why = null;
+  if (relabel_holder_is) {
+    why =
+      "the run was the whole of what its holder still did, so what stands there now is the call to the piece and the one thing it hands back - a second name for that piece rather than work of its own. The lines moved and nothing got shorter. Would you like to cut a smaller run, and leave the holder something of its own to do?";
+  }
   if (repack_holder_is) {
     why =
       "the run was the whole of what its holder still did, so what stands there now is the call to the piece and the names it hands back - a label on another function rather than work of its own. The lines moved and nothing got shorter, and the name grew a word that narrows nothing. Would you like to cut a smaller run, and leave the holder something of its own to do?";
