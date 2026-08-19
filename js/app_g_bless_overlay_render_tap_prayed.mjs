@@ -7,8 +7,7 @@ import { bless_view_person_at } from "./bless_view_person_at.mjs";
 import { not } from "./not.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { bless_blessed_add } from "./bless_blessed_add.mjs";
-import { bless_rung_earned_is } from "./bless_rung_earned_is.mjs";
-import { bless_rung_after } from "./bless_rung_after.mjs";
+import { bless_rung_climbed } from "./bless_rung_climbed.mjs";
 import { app_g_bless_pray_overlay } from "./app_g_bless_pray_overlay.mjs";
 export function app_g_bless_overlay_render_tap_prayed(
   r2,
