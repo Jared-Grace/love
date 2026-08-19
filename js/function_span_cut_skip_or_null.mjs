@@ -1,8 +1,7 @@
+import { text_numbered_is } from "./text_numbered_is.mjs";
 import { text_size_1 } from "./text_size_1.mjs";
 import { function_name_word_repeated_is } from "./function_name_word_repeated_is.mjs";
 import { function_span_opening_is } from "./function_span_opening_is.mjs";
-import { text_digits_only } from "./text_digits_only.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
 import { function_part_name_or_null } from "./function_part_name_or_null.mjs";
@@ -42,8 +41,7 @@ export async function function_span_cut_skip_or_null(
     };
     return unnamed;
   }
-  let counted = text_digits_only(address_to);
-  let counted_is = text_empty_not_is(counted);
+  let counted_is = text_numbered_is(address_to);
   if (counted_is) {
     let serial = {
       address_to,
