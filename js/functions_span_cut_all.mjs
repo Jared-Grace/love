@@ -1,3 +1,4 @@
+import { functions_span_cut_report } from "./functions_span_cut_report.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_span_candidates } from "./functions_span_candidates.mjs";
@@ -40,12 +41,6 @@ export async function functions_span_cut_all() {
     }
     list_add_multiple(skipped, pass_skipped);
   }
-  let left = await functions_span_candidates();
-  let remaining = list_size(left);
-  let r = {
-    cut,
-    skipped,
-    remaining,
-  };
+  let r = await functions_span_cut_report(cut, skipped);
   return r;
 }
