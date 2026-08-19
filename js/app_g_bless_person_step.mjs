@@ -65,8 +65,8 @@ export function app_g_bless_person_step(world, person) {
   let roam = property_get(person, "roam");
   function home_is(neighbor) {
     let tile = property_get(neighbor, "neighbor");
-    let near = bless_home_reaches(home, roam, tile);
-    return near;
+    let close = bless_home_reaches(home, roam, tile);
+    return close;
   }
   let near = list_filter(open, home_is);
   let nowhere = list_empty_is(near);
