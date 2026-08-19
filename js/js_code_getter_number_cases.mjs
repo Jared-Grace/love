@@ -13,7 +13,9 @@ export function js_code_getter_number_cases() {
       why: "handed straight back, which is the plainest getter there is",
     },
     {
-      code: text_frozen("export function f() {\n  let v = 180;\n  return v;\n}\n"),
+      code: text_frozen(
+        "export function f() {\n  let v = 180;\n  return v;\n}\n",
+      ),
       f_name: text_frozen("f"),
       number: 180,
       why: "given a name and then handed back, which is what the canonicalizing pass writes and so what nearly every getter in the repo looks like",
@@ -33,7 +35,9 @@ export function js_code_getter_number_cases() {
       why: "a number below nought is still a number somebody chose",
     },
     {
-      code: text_frozen("export function f() {\n  let v = 0.5;\n  return v;\n}\n"),
+      code: text_frozen(
+        "export function f() {\n  let v = 0.5;\n  return v;\n}\n",
+      ),
       f_name: text_frozen("f"),
       number: 0.5,
       why: "a part of one is written with a dot and is read the same way",
