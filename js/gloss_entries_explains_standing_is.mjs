@@ -1,10 +1,10 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_explains_placed } from "./gloss_explains_placed.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_all_is } from "./list_all_is.mjs";
-import { list_get } from "./list_get.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
@@ -30,8 +30,7 @@ export function gloss_entries_explains_standing_is(entries, explains) {
     if (not(within)) {
       return false;
     }
-    let entry = list_get(entries, index);
-    let held = property_get(entry, key);
+    let held = list_get_property(entries, index, key);
     let explain = property_get(placed, "explain");
     let same = equal(held, explain);
     return same;
