@@ -1,9 +1,8 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { ebible_languages_codes_offered } from "./ebible_languages_codes_offered.mjs";
 import { ebible_versions_licences_unknown } from "./ebible_versions_licences_unknown.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function ebible_versions_licences_unknown_language_new() {
   "The unread licence pages worth reading first - the downloaded translations whose terms no machine here could classify, in languages this app offers a reader nothing in.";
@@ -14,8 +13,7 @@ export async function ebible_versions_licences_unknown_language_new() {
   let property_name = language_code_key();
   function language_new_is(record) {
     let language_code = property_get(record, property_name);
-    let carried = list_includes(offered, language_code);
-    let missing = not(carried);
+    let missing = list_includes_not(offered, language_code);
     return missing;
   }
   let found = list_filter(records, language_new_is);
