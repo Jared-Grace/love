@@ -1,3 +1,4 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest_crowd.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
@@ -33,7 +34,8 @@ export async function app_g_bless_walk(
   ("up on arrival would spend the whole walk lying.");
   let player = property_get(world, "player");
   let path = g_coordinates_path_shortest_crowd(world, player, target);
-  if (not(path)) {
+  let nowhere = list_empty_is(path);
+  if (nowhere) {
     return;
   }
   let steps = g_path_steps(path);
