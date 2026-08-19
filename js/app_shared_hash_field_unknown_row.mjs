@@ -1,3 +1,4 @@
+import { app_shared_hash_field_value_said } from "./app_shared_hash_field_value_said.mjs";
 import { not } from "./not.mjs";
 import { app_shared_hash_field_drop_button } from "./app_shared_hash_field_drop_button.mjs";
 import { app_shared_hash_field_suggestion_button } from "./app_shared_hash_field_suggestion_button.mjs";
@@ -12,16 +13,17 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_shared_hash_field_unknown_row(parent, field, value) {
   "One word in a link that nothing answers to, said back to the reader with everything they can do about it.";
-  "The word is quoted rather than described, because it is what they can see in their own address bar - a reader matching the page against the link needs the same letters in both places. The field is named alongside it, so a link with two different things wrong says which is which instead of showing two rows that read the same.";
+  "The word is quoted rather than described, because a reader matching the page against the link they followed needs to see the thing itself. It is quoted as the field words it rather than as the address carries it, so the plus a reference travels with is not offered to the reader as one more thing that might be wrong. The field is named alongside it, so a link with two different things wrong says which is which instead of showing two rows that read the same.";
   let row = html_div(parent);
   let gap = app_shared_spaced_tiny_gap();
   html_style_margin_y(row, gap);
   let name = property_get(field, "name");
+  let value_said = app_shared_hash_field_value_said(field, value);
   let said = text_combine_multiple([
     "The ",
     name,
     ' in the link says "',
-    value,
+    value_said,
     '"',
   ]);
   html_div_text_bold(row, said);

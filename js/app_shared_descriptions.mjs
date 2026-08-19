@@ -12,6 +12,8 @@ export function app_shared_descriptions() {
     code: "Learn to program in JavaScript one small step at a time, by working on real code rather than reading about it.",
     replace:
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
+    en_learn_bible:
+      "Read a verse of the Bible in your own language and then in English, with every English word explained in your language. The Bible teaches you English as you read it.",
   };
   return r;
 }
