@@ -1,11 +1,10 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_statement_call_alone } from "./js_statement_call_alone.mjs";
-import { less_than } from "./less_than.mjs";
 import { list_all_is } from "./list_all_is.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { null_is } from "./null_is.mjs";
@@ -21,8 +20,7 @@ export function js_delegate_only_is(declaration) {
     js_function_declaration_statements_working_without_arguments_assert(
       declaration,
     );
-  let count = list_size(working);
-  let short_is = less_than(count, 2);
+  let short_is = list_size_less_than_value(working, 2);
   if (short_is) {
     return false;
   }
