@@ -25,7 +25,7 @@ export function app_g_bless_world(rows, coordinates, player, npcs, blocks) {
     coordinates: coordinates,
     player: player,
     npcs: npcs,
-    block: block,
+    blocks: blocks,
   };
   return world;
 }
