@@ -15,26 +15,12 @@ export async function ebible_languages_curated_codes() {
   "A folder with no eBible page is asked of the other catalogue before being given up on. Left out, it would say a language is uncovered while a reader is already being offered it, and the generated list beside this one would then add that language a second time from a different translation. So the fallback is not politeness towards a second source - it is what keeps this answer from being wrong the moment one exists.";
   let copyrights = await ebible_versions_copyrights();
   let curated = ebible_languages_curated();
-  let folder_key = bible_folder_key();
-  let code_key = language_code_key();
   function code_or_null(language) {
     let bible_folder = ebible_language_bible_folder(language);
-    let found = list_find_property_or_null(
+    let language_code = ebible_bible_folder_language_code_or_null(
       copyrights,
-      folder_key,
       bible_folder,
     );
-    let missing = null_is(found);
-    if (missing) {
-      let carried = door43_version_or_null(bible_folder);
-      let unknown = null_is(carried);
-      if (unknown) {
-        return null;
-      }
-      let code = property_get(carried, code_key);
-      return code;
-    }
-    let language_code = property_get(found, code_key);
     return language_code;
   }
   let covered = list_map_filter_null_not_is(curated, code_or_null);
