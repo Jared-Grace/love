@@ -9,7 +9,9 @@ export function bible_glyph_chapter_jhn01() {
   ("The seating was read word by word from ",
     fn_name("bible_glyph_chapter_draft_words"),
     " rather than counted off a line of pictures, because counting seats a glyph on the wrong word and nothing anywhere catches it.");
-  ("A WORD DOING GRAMMATICAL WORK IS LEFT IN ENGLISH even when a picture is seated on it. Verse nine says was coming, where the was is the same Greek word that is drawn as equals everywhere else - but here it is carrying the tense of the verb next to it rather than saying anything is anything, and drawing it would teach a reader that the equals sign means was coming. The picture belongs to the word when the word is doing its own work.");
+  ("A WORD DOING GRAMMATICAL WORK IS LEFT IN ENGLISH even when a picture is seated on it. Verse nine says was coming, where the was is carrying the tense of the verb beside it rather than saying that anything is anything. The picture belongs to the word when the word is doing its own work.");
+  ("EVERY IS IN THIS CHAPTER IS ENGLISH, and it did not start that way. This chapter was first drawn with an equals sign on the verb to be, because the seed table seated one there and the table is meant to be obeyed rather than argued with inside a verse. Verse one is what settled it: the same word appears three times in one sentence and does three different jobs - the Word EXISTED, the Word stood in a relation to God, the Word WAS God - and only the third is anything an equals sign was drawn for.");
+  ("The mark was withdrawn from the seed table rather than avoided here, because a wrong mark that an author quietly steps around is a wrong mark waiting for the next author.");
   ("Verse eighteen reads the one and only God rather than the one and only Son, because that is what the Greek in the interlinear says, and a picture Bible that quietly moved to the easier reading would be hiding the one place the prologue is hardest.");
   let chapter = {
     chapter_code: "JHN01",
@@ -21,33 +23,25 @@ export function bible_glyph_chapter_jhn01() {
           "$tray_in",
           "the",
           "beginning",
-          "$equals",
+          "was",
           "the",
           "$speech,",
           "$plus",
           "the",
           "$speech",
-          "$equals",
+          "was",
           "with",
           "$fire,",
           "$plus",
           "the",
           "$speech",
-          "$equals",
+          "was",
           "$fire.",
         ],
       },
       {
         verse_number: 2,
-        words: [
-          "He",
-          "$equals",
-          "$tray_in",
-          "the",
-          "beginning",
-          "with",
-          "$fire.",
-        ],
+        words: ["He", "was", "$tray_in", "the", "beginning", "with", "$fire."],
       },
       {
         verse_number: 3,
@@ -75,12 +69,12 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$tray_in",
           "$pointing_back",
-          "$equals",
+          "was",
           "$sprout,",
           "$plus",
           "that",
           "$sprout",
-          "$equals",
+          "was",
           "the",
           "light",
           "of",
@@ -149,7 +143,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "He",
           "himself",
-          "$equals",
+          "was",
           "$no_entry",
           "the",
           "light,",
@@ -186,7 +180,7 @@ export function bible_glyph_chapter_jhn01() {
         verse_number: 10,
         words: [
           "He",
-          "$equals",
+          "was",
           "$tray_in",
           "the",
           "$globe,",
@@ -326,7 +320,7 @@ export function bible_glyph_chapter_jhn01() {
           "out,",
           "$speech,",
           "“This",
-          "$equals",
+          "was",
           "He",
           "of",
           "whom",
@@ -342,7 +336,7 @@ export function bible_glyph_chapter_jhn01() {
           "me,",
           "$pointing",
           "He",
-          "$equals",
+          "was",
           "before",
           "me.’”",
         ],
@@ -396,7 +390,7 @@ export function bible_glyph_chapter_jhn01() {
           "only",
           "$fire,",
           "who",
-          "$equals",
+          "is",
           "at",
           "the",
           "$father’s",
