@@ -26,8 +26,7 @@ export function app_g_toast(text, dismiss_ms) {
   html_style_assign(p, {
     margin: "0",
   });
-  html_reflow_force(div);
-  html_style_opacity(div, "1");
+  html_reflow_opacity_full(div);
   function fade_out() {
     html_style_opacity(div, "0");
     function remove() {
