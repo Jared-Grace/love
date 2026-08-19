@@ -1,3 +1,4 @@
+import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -13,6 +14,18 @@ export function app_code_expression_nodes_ready(item) {
   if (not(node_is)) {
     let none = [];
     return none;
+  }
+  let before_is = app_code_expression_node_before_is(item);
+  if (before_is) {
+    ("a one-sided operator has only the one side to wait on, so it is ready as soon as that side is a value");
+    let acted_on = property_get(item, "right");
+    let acted_on_is = app_code_expression_node_is(acted_on);
+    if (not(acted_on_is)) {
+      let alone = [item];
+      return alone;
+    }
+    let inside = app_code_expression_nodes_ready(acted_on);
+    return inside;
   }
   let left = property_get(item, "left");
   let right = property_get(item, "right");
