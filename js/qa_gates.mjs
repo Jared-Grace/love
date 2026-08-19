@@ -1,3 +1,4 @@
+import { usfm_chapters_verses_cases_gate_run } from "./usfm_chapters_verses_cases_gate_run.mjs";
 import { permission_rule_path_allowed_gate_run } from "./permission_rule_path_allowed_gate_run.mjs";
 import { permission_file_hook_registered_gate_run } from "./permission_file_hook_registered_gate_run.mjs";
 import { permission_file_hook_live_gate_run } from "./permission_file_hook_live_gate_run.mjs";
