@@ -15,15 +15,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 export async function bible_storage_empty_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: every bible this repo offers a reader has something uploaded for it.");
-  (
-    "A reader picks a language and the page asks storage for each verse of it. A bible with nothing there answers nothing for every verse of every book, so the whole reading is apologies - and the offer of that language is what led them there."
-  );
-  (
-    "It refuses only an empty folder, and never a bible that holds some books and not others. Bibles published in parts are ordinary and there are hundreds of them here: a single gospel, a New Testament alone, an Old Testament alone. A gate that refused those would be refusing a fact about a translation, which is nothing anybody can repair."
-  );
-  (
-    "This reads only the file. The asking reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run."
-  );
+  ("A reader picks a language and the page asks storage for each verse of it. A bible with nothing there answers nothing for every verse of every book, so the whole reading is apologies - and the offer of that language is what led them there.");
+  ("It refuses only an empty folder, and never a bible that holds some books and not others. Bibles published in parts are ordinary and there are hundreds of them here: a single gospel, a New Testament alone, an Old Testament alone. A gate that refused those would be refusing a fact about a translation, which is nothing anybody can repair.");
+  ("This reads only the file. The asking reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run.");
   let path = bible_storage_books_path();
   let recorded = await file_read_json(path);
   let bibles = property_get(recorded, "bibles");

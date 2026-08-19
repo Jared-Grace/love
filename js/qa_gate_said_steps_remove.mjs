@@ -1,3 +1,6 @@
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 export function qa_gate_said_steps_remove(said) {
   "Everything a gate said with the chains it printed taken out, so that what is read back is WHO is at fault rather than everything the fault was found through.";
   "A gate that follows a path to a fault writes the whole path down, because a reader given only the two ends cannot tell how one gets to the other. The path is evidence. Every name on it except the one at the near end is innocent, and most of them are shared code that half the repo ships.";
@@ -12,15 +15,16 @@ export function qa_gate_said_steps_remove(said) {
   let more = true;
   while (more) {
     let at = rest.indexOf(field);
-    if (at < 0) {
+    if (less_than(at, 0)) {
       pieces.push(rest);
       more = false;
       continue;
     }
-    pieces.push(rest.slice(0, at));
+    let v = rest.slice(0, at);
+    pieces.push(v);
     let after = rest.slice(at + field.length);
     let opened = after.indexOf(open);
-    if (opened < 0) {
+    if (less_than(opened, 0)) {
       pieces.push(after);
       more = false;
       continue;
@@ -28,14 +32,14 @@ export function qa_gate_said_steps_remove(said) {
     let depth = 0;
     let index = opened;
     let end = -1;
-    while (index < after.length) {
+    while (less_than(index, after.length)) {
       let letter = after[index];
-      if (letter === open) {
+      if (equal(letter, open)) {
         depth = depth + 1;
       }
-      if (letter === close) {
-        depth = depth - 1;
-        if (depth === 0) {
+      if (equal(letter, close)) {
+        depth = subtract(depth, 1);
+        if (equal(depth, 0)) {
           end = index;
           index = after.length;
           continue;
@@ -43,7 +47,7 @@ export function qa_gate_said_steps_remove(said) {
       }
       index = index + 1;
     }
-    if (end < 0) {
+    if (less_than(end, 0)) {
       pieces.push(after);
       more = false;
       continue;
