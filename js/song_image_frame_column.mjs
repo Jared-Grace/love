@@ -30,7 +30,8 @@ export function song_image_frame_column(parent, state, on_change) {
   if (not_equal(candidate, undefined)) {
     song_image_frame_picture(frame, state, candidate);
   }
-  if (not(equal(state.placement, "raw"))) {
+  let b = equal(state.placement, "raw");
+  if (not(b)) {
     song_image_frame_words(frame, state, couplet);
   }
   let caption = html_div(column);
