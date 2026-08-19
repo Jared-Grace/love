@@ -7,6 +7,7 @@ import { span_row_better } from "./span_row_better.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_cuttable_is } from "./js_statements_span_cuttable_is.mjs";
+import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_slice_include } from "./list_slice_include.mjs";
@@ -45,7 +46,10 @@ export function js_statements_span_candidate_best(statements, addresses, from) {
     }
     let list2 = js_statements_work_deep(span);
     let size = list_size(list2);
-    let worst = span_worst_piece(count, size);
+    ("What the run would have to hand back is counted as well as what it would take away, because both land in the piece left behind - the names come home in one record and are lifted out of it a line at a time.");
+    let outputs = js_statements_span_outputs(span, tail);
+    let handed_back = list_size(outputs);
+    let worst = span_worst_piece(count, size, handed_back);
     let offered = {
       from,
       to,

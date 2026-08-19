@@ -1,3 +1,5 @@
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
@@ -10,7 +12,7 @@ export async function bfl_draw_wait(polling_url, tries) {
   "running out of tries is told apart from being refused. Both stop the wait, but one means ask again later and the other means this picture will never come, and a caller that cannot tell them apart will either give up on work that was nearly done or retry forever on work that was already lost.";
   let options = await bfl_http_options();
   let i = 0;
-  while (i < tries) {
+  while (less_than(i, tries)) {
     i = i + 1;
     let buffer = await http_generic(polling_url, options);
     let answer = buffer_to_json(buffer);
@@ -20,7 +22,8 @@ export async function bfl_draw_wait(polling_url, tries) {
       return sample;
     }
     let refused = equal(status, "Error") || equal(status, "Failed");
-    assert_json(!refused, {
+    let b = not(refused);
+    assert_json(b, {
       polling_url,
       status,
       answer,

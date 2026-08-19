@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_comparison_equal_generic_examples } from "./app_code_lesson_expression_comparison_equal_generic_examples.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
-import { js_operator_or } from "./js_operator_or.mjs";
+import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_comparison_equal_generic(words) {
   let opposite_symbol = property_get(opposite_operator, "operator");
   let object = js_operator_triple_equal();
   let equal_symbol = property_get(object, "operator");
-  let or_symbol = js_operator_or();
+  let or_symbol = js_operator_or_symbol();
   let t = js_keyword_true();
   let t2 = js_keyword_true();
   let t3 = js_keyword_true();

@@ -1,3 +1,4 @@
+import { song_image_prompt } from "./song_image_prompt.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_button } from "./html_button.mjs";
@@ -47,4 +48,15 @@ export function song_image_nav_column(parent, state, on_change) {
   html_style_set(reference, "font-size", "13px");
   html_style_set(reference, "color", "#676767");
   html_text_set(reference, current.ref);
+  let prompt = html_div(column);
+  html_style_set(prompt, "margin-top", "16px");
+  html_style_set(prompt, "padding", "8px");
+  html_style_set(prompt, "font-size", "11px");
+  html_style_set(prompt, "line-height", "1.45");
+  html_style_set(prompt, "color", "#7ec97e");
+  html_style_set(prompt, "border", "1px solid #222222");
+  html_style_set(prompt, "border-radius", "6px");
+  html_style_set(prompt, "user-select", "all");
+  let text = song_image_prompt(current);
+  html_text_set(prompt, text);
 }
