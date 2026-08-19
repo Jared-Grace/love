@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_choose_order_and_title_name_id } from "./app_code_lesson_expression_choose_order_and_title_name_id.mjs";
+import { app_code_lesson_expression_choose_order_and_questions } from "./app_code_lesson_expression_choose_order_and_questions.mjs";
+import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
+import { app_code_lesson_expression_choose_order_and_above } from "./app_code_lesson_expression_choose_order_and_above.mjs";
 export function app_code_lesson_expression_choose_order_and() {
   arguments_assert(arguments, 0);
   ("a comparison either side of &&, taken a press at a time: 3 < 5 && 2 < 4, choose either comparison, choose what it comes to, choose the other, choose what it comes to, then choose the && between them");
