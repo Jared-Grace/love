@@ -7,8 +7,8 @@ export async function folder_exists(path_folder) {
   "A FILE SITTING AT THAT PLACE IS NOT A FOLDER. Answering yes for one would send a reader on to list it, which throws in a different way and further from here, so the kind is checked rather than only the presence.";
   let fs = await import("fs");
   async function lambda() {
-    let stat = await fs.promises.stat(path_folder);
-    return stat;
+    let stat_read = await fs.promises.stat(path_folder);
+    return stat_read;
   }
   let stat = await catch_null_async(lambda);
   let nothing = null_is(stat);
