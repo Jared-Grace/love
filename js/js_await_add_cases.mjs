@@ -77,6 +77,44 @@ export function js_await_add_cases() {
         'async function f() {\n  let r = await file_read("a");\n}\n',
       ),
     },
+    {
+      name: "a parameter of that name is left alone",
+      code: text_frozen('async function f(file_read) {\n  file_read("a");\n}'),
+      functions: {
+        file_read: {
+          async: true,
+        },
+      },
+      after: text_frozen('async function f(file_read) {\n  file_read("a");\n}\n'),
+    },
+    {
+      name: "a variable of that name is left alone",
+      code: text_frozen(
+        'async function f() {\n  let file_read = pick();\n  file_read("a");\n}',
+      ),
+      functions: {
+        file_read: {
+          async: true,
+        },
+      },
+      after: text_frozen(
+        'async function f() {\n  let file_read = pick();\n  file_read("a");\n}\n',
+      ),
+    },
+    {
+      name: "a function of that name written in the file is left alone",
+      code: text_frozen(
+        'async function f() {\n  function file_read(x) {\n    return x;\n  }\n  file_read("a");\n}',
+      ),
+      functions: {
+        file_read: {
+          async: true,
+        },
+      },
+      after: text_frozen(
+        'async function f() {\n  function file_read(x) {\n    return x;\n  }\n  file_read("a");\n}\n',
+      ),
+    },
   ];
   return cases;
 }
