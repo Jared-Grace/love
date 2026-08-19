@@ -34,8 +34,7 @@ export function app_shared_bible_offline_save_all(parent, listed, on_done) {
   app_shared_button(row, save, on_save);
   async function on_save() {
     html_clear(row);
-    let status = html_div_text(row, "Starting the downloads");
-    app_shared_text_deemphasized(status);
+    let status = app_shared_text_quiet(row, "Starting the downloads");
     ("asked again here, so pressing try again after a half-finished run fetches only what is still missing");
     let waiting = app_shared_bible_offline_pending(listed);
     let unfinished = [];
@@ -59,8 +58,7 @@ export function app_shared_bible_offline_save_all(parent, listed, on_done) {
         names,
         ". Would you like to check your connection and try them again?",
       ]);
-      let div = html_div_text(row, sorry);
-      app_shared_text_deemphasized(div);
+      app_shared_text_quiet(row, sorry);
       let e2 = emoji_arrow_down();
       let again = text_combine_multiple([e2, " Try again"]);
       app_shared_button(row, again, on_save);
