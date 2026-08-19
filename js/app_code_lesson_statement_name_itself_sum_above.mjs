@@ -10,7 +10,6 @@ import { html_div_code } from "./html_div_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: a name being given a new value, a sum of two names, and then the two of them in one line - the sum given back to a name the sum was read from");

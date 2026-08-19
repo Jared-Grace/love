@@ -1,10 +1,10 @@
+import { text_split_search_terms } from "./text_split_search_terms.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { text_split_comma_dot } from "./text_split_comma_dot.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
 import { list_all } from "./list_all.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function search_generic(search, list, value_get, include) {
-  let terms = text_split_comma_dot(search);
+  let terms = text_split_search_terms(search);
   function filter(item) {
     function lambda(term) {
       let v = include(item, term);
