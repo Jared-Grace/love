@@ -1,5 +1,5 @@
+import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
 import { js_function_declaration_personal_names } from "./js_function_declaration_personal_names.mjs";
-import { js_function_declaration_statements_working } from "./js_function_declaration_statements_working.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -13,13 +13,19 @@ export async function function_run_shape_generic(f_name, size, fn_take) {
   ("answers with nothing rather than with all of itself - a short function is not a");
   ("shared run, and letting it count as one would group every two-line function in");
   ("the repo together.");
+  ("The line counting the arguments is not part of a run, because the pass wrote");
+  ("it and every function of the same arity carries the same one - counting it");
+  ("would let three lines of real agreement be reported as four.");
   ("Which end the run is taken from is the only difference between asking about a");
   ("shared ending and asking about a shared opening, so it is the only thing a");
   ("caller passes - everything else here would otherwise have been written twice,");
   ("which the gate over shared openings would have caught in its own author.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
-  let working = js_function_declaration_statements_working(declaration);
+  let working =
+    js_function_declaration_statements_working_without_arguments_assert(
+      declaration,
+    );
   let short_is = list_size_less_than_value(working, size);
   if (short_is) {
     let nothing = "";
