@@ -62,6 +62,10 @@ export function examples_notes() {
       "the guard inside the move, asked on its own — reordering is the edit that breaks a function without changing a line",
     example_functionize_refused_outer_assign:
       "the second guard inside the cut — a run that moves a mark bound above it cannot leave, and asking only what the run brings into being never sees that",
+    example_functionize_refused_read_above:
+      "the third guard inside the cut, and the only one that looks ahead of the run — a function is made before the first line of a body runs, so a line above may call one written below, and a cut turns that into a binding starting where it is written",
+    example_functionize_refused_made_below:
+      "the mirror of the guard on writing backwards — a run may not reach forwards to read either, because a read waiting inside a handler becomes a read taken at once as soon as the name is handed over at the call site",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
@@ -226,6 +230,8 @@ export function examples_notes() {
       "the operator pass one step further out - a method after a dot is the language saying what the repo says with a name",
     example_functionize_inside_a_loop:
       "the same cut addressed by the line a word is really written on - on a function whose size is all inside a loop, climbing to the top of the body first can only ever move the loop",
+    example_functionize_rest_returning:
+      "the cut the plain cutter refuses — a run carrying a return is exact only when it reaches the last line of the body, because then there is no next line for the caller to carry quietly on to",
     example_functionize_loop_name_stays_put:
       "what a cut really hands back - only the names the span binds at its own level escape it, and a loop head opened inside it binds none of them, however alike the word below looks",
     example_function_lift_out_of_closure:
