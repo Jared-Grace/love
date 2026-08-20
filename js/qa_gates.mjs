@@ -223,6 +223,8 @@ import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_
 import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
 import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate_run.mjs";
 import { js_function_params_all_cases_gate_run } from "./js_function_params_all_cases_gate_run.mjs";
+import { js_caught_names_cases_gate_run } from "./js_caught_names_cases_gate_run.mjs";
+import { js_function_expressions_own_names_cases_gate_run } from "./js_function_expressions_own_names_cases_gate_run.mjs";
 import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
@@ -373,6 +375,8 @@ export function qa_gates() {
     js_free_names_cases_gate_run,
     js_declared_names_cases_gate_run,
     js_function_params_all_cases_gate_run,
+    js_caught_names_cases_gate_run,
+    js_function_expressions_own_names_cases_gate_run,
     js_binding_names_cases_gate_run,
     js_scope_binding_names_cases_gate_run,
     js_shadowing_names_cases_gate_run,
