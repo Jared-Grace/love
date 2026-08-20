@@ -1,3 +1,5 @@
+import { text_empty_is } from "./text_empty_is.mjs";
+import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split } from "./text_split.mjs";
