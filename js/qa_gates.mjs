@@ -375,6 +375,7 @@ export function qa_gates() {
     js_scope_binds_is_cases_gate_run,
     js_scopes_binding_cases_gate_run,
     js_visit_cases_gate_run,
+    visit_unique_async_cases_gate_run,
     js_name_taken_is_cases_gate_run,
     js_imports_local_names_cases_gate_run,
     js_identifiers_referenced_names_cases_gate_run,
