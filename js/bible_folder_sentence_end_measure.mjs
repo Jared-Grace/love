@@ -1,3 +1,5 @@
+import { bible_folder_sentence_end_sample_chapter } from "./bible_folder_sentence_end_sample_chapter.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
 import { bible_folder_chapter_verses_outcome } from "./bible_folder_chapter_verses_outcome.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
@@ -22,7 +24,7 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
     await bible_folder_sentence_end_sample_chapter(bible_folder);
   let unstored = text_empty_is(chapter_code);
   if (unstored) {
-    "A BIBLE STORAGE HOLDS NOTHING FOR IS NOT ASKED, and says so by naming no chapter. Asking would spend a fetch to be told what the record already knows, and the answer would come back looking exactly like a bible that holds the chapter and could not be reached this afternoon.";
+    ("A BIBLE STORAGE HOLDS NOTHING FOR IS NOT ASKED, and says so by naming no chapter. Asking would spend a fetch to be told what the record already knows, and the answer would come back looking exactly like a bible that holds the chapter and could not be reached this afternoon.");
     let nothing = {
       bible_folder,
       chapter_code,
