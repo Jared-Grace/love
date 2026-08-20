@@ -5,6 +5,8 @@ import { text_combine } from "./text_combine.mjs";
 import { node_run } from "./node_run.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
+import { qa_gate_told_answered_is } from "./qa_gate_told_answered_is.mjs";
+import { property_set } from "./property_set.mjs";
 export async function qa_snapshot_shard_told(folder, index, count) {
   "Asks the frozen copy one share of its questions and brings back what it said";
   "The run is asked for from inside the copy, so every path it follows to find a function stays inside the copy";
@@ -27,6 +29,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
       printed: said,
       share: index,
       milliseconds: date_milliseconds_since(began),
+      answered: true,
     };
     return r;
   } catch (complaint) {
@@ -39,6 +42,8 @@ export async function qa_snapshot_shard_told(folder, index, count) {
       share: index,
       milliseconds: date_milliseconds_since(began),
     };
+    let answered = qa_gate_told_answered_is(r2);
+    property_set(r2, "answered", answered);
     return r2;
   }
 }

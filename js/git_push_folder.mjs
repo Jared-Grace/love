@@ -21,8 +21,8 @@ export async function git_push_folder(folder) {
     let now_iso = date_iso_to(now);
     let left = fn_name("git_push");
     let property_name = function_name_combine(left, "when");
-    let d_path = user_data_path();
-    let joined = path_join([folder, d_path]);
+    ("This asked for the place spelled from the root and then put the folder in front of it. That path used to be a bare name, so putting the folder in front of it was the whole of how one repo's record was told apart from another's; when it was spelled from the root instead, the two together came out as a folder inside the folder, four deep, naming the whole of one repo's address inside every other one. It wrote, and read back what it had written, so the five minutes it is here to keep were kept and nothing went wrong that anybody could see - what it left behind was a tree of them, in four repos, one of which was the repo whose address they all spelled.");
+    let joined = user_data_path_folder(folder);
     let before_iso = await data_property_get_generic(joined, property_name);
     let before = date_to(before_iso);
     let mins = date_diff_mins(now, before);
