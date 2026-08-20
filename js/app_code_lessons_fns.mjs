@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_not_pair } from "./app_code_lesson_expression_choose_order_not_pair.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
 import { app_code_lesson_expression_choose_order_brackets } from "./app_code_lesson_expression_choose_order_brackets.mjs";
 import { app_code_lesson_expression_choose_order_not } from "./app_code_lesson_expression_choose_order_not.mjs";
@@ -239,6 +240,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_not_comparison,
     app_code_lesson_expression_not_equal_same,
+    app_code_lesson_expression_choose_order_not_pair,
     app_code_lesson_statement_name_value,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,

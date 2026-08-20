@@ -25,10 +25,12 @@ export function app_code_lesson_expression_choose_order_not_pair_tree_of_code(
   let inner = text_wrapped_inner(code, opening, closing);
   let words = text_split_space(inner);
   list_size_assert(words, 3);
+  let word = list_get(words, 0);
+  let word2 = list_get(words, 2);
   let parts = {
-    left: js_keyword_truth_of(list_get(words, 0)),
+    left: js_keyword_truth_of(word),
     symbol: list_get(words, 1),
-    right: js_keyword_truth_of(list_get(words, 2)),
+    right: js_keyword_truth_of(word2),
   };
   let tree = app_code_expression_node_not_of_parts(parts);
   return tree;
