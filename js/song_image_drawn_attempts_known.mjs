@@ -26,6 +26,9 @@ export function song_image_drawn_attempts_known() {
  ],
  "19": [
   1
+ ],
+ "35": [
+  1
  ]
 };
   return known;
