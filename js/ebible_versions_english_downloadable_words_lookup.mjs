@@ -1,56 +1,44 @@
-import { verse_number_key } from "./verse_number_key.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { each_async } from "./each_async.mjs";
-import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
-import { each } from "./each.mjs";
-import { property_initialize_list } from "./property_initialize_list.mjs";
-import { property_initialize_empty } from "./property_initialize_empty.mjs";
-import { equal_not } from "./equal_not.mjs";
-import { text_transform_lookup } from "./text_transform_lookup.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { text_split_space } from "./text_split_space.mjs";
-import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { text_only_or_space } from "./text_only_or_space.mjs";
-import { property_get } from "./property_get.mjs";
+import { bible_search_symbols_plain } from "./bible_search_symbols_plain.mjs";
 import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
+import { ebible_version_chapters_numbering_matching } from "./ebible_version_chapters_numbering_matching.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { property_get } from "./property_get.mjs";
+import { verse_number_key } from "./verse_number_key.mjs";
+import { bible_search_words } from "./bible_search_words.mjs";
+import { text_transform_lookup } from "./text_transform_lookup.mjs";
+import { equal_not } from "./equal_not.mjs";
+import { property_initialize_empty } from "./property_initialize_empty.mjs";
+import { property_initialize_list } from "./property_initialize_list.mjs";
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { each } from "./each.mjs";
+import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
+import { each_async } from "./each_async.mjs";
+import { not } from "./not.mjs";
 export async function ebible_versions_english_downloadable_words_lookup() {
-  let symbols_allowed =
-    "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
-  let normalize = {
-    ﬁ: "fi",
-    ﬂ: "fl",
-    æ: "ae",
-    Æ: "AE",
-    é: "e",
-    è: "e",
-    ë: "e",
-    ï: "i",
-    ö: "o",
-    ü: "u",
-    ʋ: "v",
-    Α: "A",
-    Ω: "O",
-    "½": "1/2",
-    "¼": "1/4",
-    "¾": "3/4",
-  };
+  "Every word of every English bible this repo can download, under the chapter and verse it stands in, and under which bibles spell it there.";
+  "A verse is only taken from a bible that numbers that chapter the way the bible the reader is shown does. An address read out of a differently numbered bible names somebody else's verse - the Douay-Rheims Psalm ten is the Psalm eleven a reader is looking at - so the words it promised are not in what comes up, and one such bible spoils the search for every reader of the others.";
+  let plain = bible_search_symbols_plain();
   let bible_folders = await ebible_versions_english_downloadable_cache();
   let result = {};
   async function lambda2(bible_folder) {
+    let numbered_alike =
+      await ebible_version_chapters_numbering_matching(bible_folder);
     async function lambda(chapter_code, verses) {
+      let same_numbering = list_includes(numbered_alike, chapter_code);
+      if (not(same_numbering)) {
+        return;
+      }
       function lambda4(verse) {
         let text = property_get(verse, "text");
         let property_name = verse_number_key();
         let verse_number = property_get(verse, property_name);
-        let replaced = text_only_or_space(text, symbols_allowed);
-        let n = whitespace_normalize(replaced);
-        let split = text_split_space(n);
-        function lambda5(s) {
-          let lower = text_lower_to(s);
+        let split = bible_search_words(text);
+        function lambda5(lower) {
           word_add(lower);
-          let t = text_transform_lookup(lower, normalize);
+          ("a name written Æneas is filed under aeneas as well, so the reader who has no key for it still reaches the verse");
+          let t = text_transform_lookup(lower, plain);
           if (equal_not(t, lower)) {
-            word_add(lower);
+            word_add(t);
           }
           function word_add(lower_word) {
             let word = property_initialize_empty(result, lower_word);
