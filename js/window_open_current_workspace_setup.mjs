@@ -11,11 +11,10 @@ export async function window_open_current_workspace_setup() {
   "It governs new windows only. An application that reuses the window it already has opens nothing, so for that one the desktop's own setting still decides.";
   let home = folder_home();
   let folder = folder_repo_love();
+  let machine = data_given_machine_folder();
   let script_source = path_join([
     folder,
-    "data",
-    "given",
-    "machine",
+    machine,
     "window_open_current_workspace.sh",
   ]);
   let script_text = await file_read(script_source);
