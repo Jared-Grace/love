@@ -17,7 +17,9 @@ export function app_g_bless_arrow(direction) {
   ("The drawing takes the button's own letter colour, because it fills with currentColor -");
   ("so it behaves like the text it replaces while looking like a control.");
   ("Down is south, because the grid's y grows the way the rows are drawn - the same");
-  ("agreement ", fn_name("g_direction_step"), " is written to. The turns follow from that:");
+  ("agreement ",
+    fn_name("g_direction_step"),
+    " is written to. The turns follow from that:");
   ("the drawing points right to begin with, so east is no turn at all.");
   if (equal(direction, "north")) {
     let up = app_shared_arrow_svg(270);
