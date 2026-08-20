@@ -34,7 +34,14 @@ export function app_code_lesson_expression_not_comparison_intro(root) {
   let not_false = js_code_not(false_word);
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["A ", symbol, " applies only to what's right after it"],
-    ["For example, for ", bare, ", the ", symbol, " only applies to the ", three],
+    [
+      "For example, for ",
+      bare,
+      ", the ",
+      symbol,
+      " only applies to the ",
+      three,
+    ],
     [
       "To apply the ",
       symbol,
