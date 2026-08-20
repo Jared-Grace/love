@@ -12,7 +12,11 @@ export function psalms_second_take_pair_row(root, pair) {
   arguments_assert(arguments, 2);
   let row = html_div(root);
   html_style_padding(row, "12px 0");
-  html_style_set(row, "border-bottom", "1px solid #333333");
+  html_style_set(
+    row,
+    "border-bottom",
+    "1px solid " + app_shared_color_gray_dark(),
+  );
   let name = html_p_text(row, pair.passage);
   html_style_margin(name, "0 0 8px 0");
   html_bold_semi(name);
