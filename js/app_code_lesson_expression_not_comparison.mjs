@@ -14,7 +14,7 @@ import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_not_comparison() {
   "the step from ! on another ! (already learned) to ! on a whole comparison: !(3 === 5). One new idea, and it is the brackets - a ! applies only to what is next to it, so the comparison has to be gathered into one thing before the ! can apply to all of it.";
-  "That the thing under a ! can be something which works out to true or false is NOT new here; the lesson before this put a ! under a ! and made exactly that point. Splitting the two is what leaves this lesson with a single idea in it.";
+  "That the thing under a ! can be something which works out to true or false is NOT new here; the lesson two before this put a ! under a ! and made exactly that point. Splitting the two is what leaves this lesson with a single idea in it.";
   "The intro says what the ! would apply to without the brackets and stops there. It does not say what !3 works out to, because that answer needs a number counted as true or false, which no lesson has taught and this one is not the place to teach. Naming what the ! applies to is enough to motivate the brackets, and it is true.";
   "The comparisons vary over < > === !== - every comparison the learner already owns - so the only thing being learned is the bracket. One screen shows an inner comparison that is true and one that is false, so neither the inner nor the outer value can be guessed from habit.";
   function wrapped_wanted(want) {
