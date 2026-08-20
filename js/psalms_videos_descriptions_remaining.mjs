@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { psalms_videos_descriptions_payload_path } from "./psalms_videos_descriptions_payload_path.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { youtube_video_description } from "./youtube_video_description.mjs";
+import { list_map_limited_async } from "./list_map_limited_async.mjs";
+import { equal } from "./equal.mjs";
 export async function psalms_videos_descriptions_remaining() {
   "Asks youtube itself which songs are still not carrying the words worked out for them, and hands back those songs and no others.";
   "THIS IS WHAT MAKES TWO PEOPLE DOING THIS WORK AT ONCE SAFE. Nothing in this folder records which songs have been done, on purpose: a record kept here would be one more thing to be wrong, and it would be wrong exactly when two runs happened without each other's knowledge. Youtube already knows, so it is asked, and everybody who asks gets the same answer whoever did the writing.";
@@ -9,11 +15,11 @@ export async function psalms_videos_descriptions_remaining() {
   let paired = await file_read_json(path);
   async function lambda$item(one) {
     let live = await youtube_video_description(one.video_id);
-    let r2 = {
+    let r = {
       one: one,
       live: live,
     };
-    return r2;
+    return r;
   }
   let read = await list_map_limited_async(paired, lambda$item, 8);
   let remaining = [];
