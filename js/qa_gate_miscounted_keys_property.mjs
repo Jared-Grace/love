@@ -1,3 +1,4 @@
+import { qa_gate_miscounted_keys_name_add } from "./qa_gate_miscounted_keys_name_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
@@ -43,8 +44,7 @@ export async function qa_gate_miscounted_keys_property(
       let spelled = js_literal_value_get(value);
       let counted_is = number_is(spelled);
       if (counted_is) {
-        let pair = text_combine_multiple([f_name, " ", key]);
-        list_add(names, pair);
+        qa_gate_miscounted_keys_name_add(names, f_name, key);
       }
       continue;
     }
@@ -53,8 +53,7 @@ export async function qa_gate_miscounted_keys_property(
     if (field_named_is) {
       let refused_is = list_includes(asserted, field);
       if (refused_is) {
-        let pair = text_combine_multiple([f_name, " ", key]);
-        list_add(names, pair);
+        qa_gate_miscounted_keys_name_add(names, f_name, key);
         continue;
       }
       value = js_ast_declarator_init_named(ast, field);
