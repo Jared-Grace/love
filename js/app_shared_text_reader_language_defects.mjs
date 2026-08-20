@@ -1,3 +1,9 @@
+import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
+import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
+import { list_without } from "./list_without.mjs";
+import { app_shared_text_reader_language_drifted } from "./app_shared_text_reader_language_drifted.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { app_shared_text_reader_language_pickers } from "./app_shared_text_reader_language_pickers.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_file_name } from "./js_file_name.mjs";
@@ -98,39 +104,20 @@ export async function app_shared_text_reader_language_defects() {
       });
       continue;
     }
-    let codes = [];
-    let readable = true;
-    for (let property of site.object.properties) {
-      let plain = equal(property.type, "Property");
-      if (not(plain)) {
-        readable = false;
-        continue;
-      }
-      if (property.computed) {
-        readable = false;
-        continue;
-      }
-      let key = property.key;
-      let identifier = equal(key.type, "Identifier");
-      if (identifier) {
-        list_add(codes, key.name);
-        continue;
-      }
-      let literal = equal(key.type, "Literal");
-      if (literal) {
-        list_add(codes, key.value);
-        continue;
-      }
-      readable = false;
-    }
-    if (not(readable)) {
+    ("the whole saying is read and not only which languages it names, because what each language actually says is now part of what is being checked - a translation records the english it was made from, and that record can only be laid beside the english by somebody holding both");
+    let saying = js_literal_value_deep_try(site.object);
+    let unreadable = null_is(saying);
+    if (unreadable) {
       list_add(defects, {
         file: site.file,
         reason:
-          "a language here is named by something worked out rather than written, so which languages the saying has cannot be read off the page",
+          "some of this saying is worked out rather than written, so neither the languages it has nor what it says in them can be read off the page",
       });
       continue;
     }
+    let named = object_property_names(saying);
+    let from_key = app_shared_text_reader_language_from_key();
+    let codes = list_without(named, from_key);
     let en = ebible_language_en_code();
     let english = list_includes(codes, en);
     if (not(english)) {
@@ -150,8 +137,11 @@ export async function app_shared_text_reader_language_defects() {
     list_add(counted, {
       file: site.file,
       codes,
+      saying,
     });
   }
+  let drifted = app_shared_text_reader_language_drifted(counted);
+  list_add_multiple(defects, drifted);
   for (let site of counted) {
     for (let code of languages) {
       let has = list_includes(site.codes, code);
