@@ -26,6 +26,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   ("An answer already written down is handed straight back, and one of us paying the couple of minutes is all of us knowing - but only when it was worked out beside the very same neighbours, which is a question with its own name and its own corpus.");
   let matching = qa_commit_entry_beside_matching_is(remembered, heads);
   if (matching) {
+    ("An answer read back out of the record is in the record, so this way out says so too. Every way out of here now answers the same question - is this judging written down where the next asker will find it - and an asker that has to tell which way out it came from before it knows what it was told is an asker that will one day get it wrong.");
     let r = {
       commit: named,
       remembered: true,
