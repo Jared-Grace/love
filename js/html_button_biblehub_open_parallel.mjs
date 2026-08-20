@@ -11,6 +11,9 @@ export function html_button_biblehub_open_parallel(
   let texts = {
     en: "Parallel",
     ur: "متوازی تراجم",
+    translated_from: {
+      ur: "Parallel",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   html_button_biblehub_open(
