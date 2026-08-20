@@ -53,7 +53,7 @@ export async function app_emoji_bible(context) {
   for (let chapter of chapters) {
     html_div_text_bold(content, chapter.reference);
     if (key_shown) {
-      let rows = await bible_glyph_chapter_rosetta_verses(
+      let rows = bible_glyph_chapter_rosetta_verses(
         chapter.chapter_code,
         traditions,
       );
