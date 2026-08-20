@@ -28,6 +28,32 @@ export function app_shared_text_reader_seats() {
     fn: html_div_text_centered.name,
     at: 1,
   };
-  let seats = [button, text_set, div_text, div_bold, div_centered];
+  let p_text = {
+    fn: html_p_text.name,
+    at: 1,
+  };
+  let placeholder = {
+    fn: html_placeholder.name,
+    at: 1,
+  };
+  let biblehub = {
+    fn: html_button_biblehub_open.name,
+    at: 4,
+  };
+  let subset_screen = {
+    fn: app_shared_bible_subset_screen_generic.name,
+    at: 6,
+  };
+  let seats = [
+    button,
+    text_set,
+    div_text,
+    div_bold,
+    div_centered,
+    p_text,
+    placeholder,
+    biblehub,
+    subset_screen,
+  ];
   return seats;
 }
