@@ -1,3 +1,4 @@
+import { js_identifier_named_try } from "./js_identifier_named_try.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { function_ast } from "./function_ast.mjs";
@@ -20,8 +21,7 @@ export async function qa_gate_count_fixed_is(ast, node) {
     return false;
   }
   let property = property_get(node, "property");
-  let asked = js_identifier_name_try(property);
-  let length_is = equal(asked, "length");
+  let length_is = js_identifier_named_try(property, "length");
   if (not(length_is)) {
     return false;
   }
