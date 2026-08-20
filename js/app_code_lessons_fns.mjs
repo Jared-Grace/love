@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_brackets_moved } from "./app_code_lesson_expression_choose_order_brackets_moved.mjs";
 import { app_code_lesson_expression_comparison_or } from "./app_code_lesson_expression_comparison_or.mjs";
 import { app_code_lesson_expression_and_before_or } from "./app_code_lesson_expression_and_before_or.mjs";
 import { app_code_lesson_expression_brackets_or } from "./app_code_lesson_expression_brackets_or.mjs";
@@ -243,6 +244,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_and_before_or,
     app_code_lesson_expression_choose_order_brackets,
     app_code_lesson_expression_brackets_or,
+    app_code_lesson_expression_choose_order_brackets_moved,
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_choose_order_not,
     app_code_lesson_expression_not_comparison,
