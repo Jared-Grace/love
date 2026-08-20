@@ -160,8 +160,7 @@ export function song_image_couplets() {
       verse: 2,
       first: "HE paid the price",
       second: "with HIS own blood",
-      symbol:
-        "A lamb standing as though it had been slain, with seven horns and seven eyes",
+      symbol: "A lamb standing, with seven horns and seven eyes",
       ref: "Exodus 12, John 1:29",
       same_as: 0,
     },
@@ -170,8 +169,7 @@ export function song_image_couplets() {
       verse: 2,
       first: "HE paid the price",
       second: "with HIS own blood",
-      symbol:
-        "A lamb standing as though it had been slain, with seven horns and seven eyes",
+      symbol: "A lamb standing, with seven horns and seven eyes",
       ref: "Exodus 12, John 1:29",
       same_as: 17,
     },
