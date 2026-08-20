@@ -10,6 +10,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
   ("what stands above the card on the and-before-or lesson: what the two operators come to, then one such line taken all the way down, then the sentences saying what is new");
   ("The line run through is one of the few where the order changes the answer. Taken the way the lesson teaches it comes to true; taken the other way round it comes to false.");
   ("The parts are hung together by letting the operators decide, which is what this lesson is about - the and reaches for its two neighbours before the or does. The brackets lesson next door hands in a different way of hanging them and everything else on the screen is the same, so everything else is said once, next door.");
+  ("The and is asked for leftmost every time, and there is nowhere else it can go. Letting the operators decide is the whole lesson, and an or standing leftmost could only keep its two neighbours by having brackets round it - which is the next lesson, not this one.");
   app_code_lesson_expression_choose_order_sides_settled_above_generic(
     root,
     app_code_lesson_expression_choose_order_and_before_or_recall,
