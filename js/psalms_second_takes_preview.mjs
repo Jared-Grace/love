@@ -1,3 +1,4 @@
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
