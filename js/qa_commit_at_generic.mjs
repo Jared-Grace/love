@@ -7,6 +7,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { qa_snapshot_ensure } from "./qa_snapshot_ensure.mjs";
 import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
+import { not } from "./not.mjs";
 export async function qa_commit_at_generic(commit, known, path, judge) {
   "$plain commit";
   "$plain known";
@@ -35,6 +36,19 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   let folder = await qa_snapshot_ensure(named);
   let told = await qa_snapshot_gate_told(folder);
   let kept = await judge(told);
+  ("A run in which a share of the gates stopped without ever complaining about a gate is handed back and not written down. The share stopped for a reason no gate mentioned - a neighbour part way through saving a file, a module that will not load, a machine with no room left - so most of the questions it was given were never asked, and what the other shares found is a report on part of the repo wearing the name of the whole of it.");
+  ("Kept, it would look judged, and a commit that looks judged is never judged again. Whoever asked for this is still handed everything it found, so nothing is hidden from the person at the keyboard; what does not happen is it being left behind for everybody else as though the questions had all been put.");
+  let answered = property_get(told, "answered");
+  if (not(answered)) {
+    let r3 = {
+      commit: named,
+      remembered: false,
+      filed: false,
+      silent: property_get(beside, "silent"),
+      kept,
+    };
+    return r3;
+  }
   ("The writing itself lives one name along, because the whole-repo run somebody types before committing freezes the same copy and asks it the same questions, and the part that must not be written twice is the deciding whether an answer may be filed at all. The reading and the writing back are one named step down there too, because that step is where the shortness of the gap between them lives.");
   let stamped = await qa_commit_kept_file(named, kept, path, heads);
   let filed = property_get(stamped, "filed");
