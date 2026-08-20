@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 import { emoji_information } from "./emoji_information.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_shared_about_text() {
