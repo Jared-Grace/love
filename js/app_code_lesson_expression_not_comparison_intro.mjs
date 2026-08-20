@@ -1,8 +1,7 @@
 import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -33,41 +32,26 @@ export function app_code_lesson_expression_not_comparison_intro(root) {
   let not_three = js_code_not(three);
   let bare = text_combine_multiple([not_three, " ", equal_symbol, " ", five]);
   let not_false = js_code_not(false_word);
-  let reach = app_code_container_light_blue(root);
-  html_div_cycle_code(reach, [
-    "A ",
-    symbol,
-    " applies only to what's right after it",
+  app_code_container_light_blue_cycle_code_multiple(root, [
+    ["A ", symbol, " applies only to what's right after it"],
+    ["For example, for ", bare, ", the ", symbol, " only applies to the ", three],
+    [
+      "To apply the ",
+      symbol,
+      " to ",
+      comparison,
+      ", first we put ",
+      open,
+      " and ",
+      close,
+      " around ",
+      comparison,
+      " to get ",
+      bracketed,
+    ],
+    ["Then we put the ", symbol, " in front of the ", bracketed],
+    ["And then we have: ", whole],
   ]);
-  html_div_cycle_code(reach, [
-    "For example, for ",
-    bare,
-    ", the ",
-    symbol,
-    " only applies to the ",
-    three,
-  ]);
-  html_div_cycle_code(reach, [
-    "To apply the ",
-    symbol,
-    " to ",
-    comparison,
-    ", first we put ",
-    open,
-    " and ",
-    close,
-    " around ",
-    comparison,
-    " to get ",
-    bracketed,
-  ]);
-  html_div_cycle_code(reach, [
-    "Then we put the ",
-    symbol,
-    " in front of the ",
-    bracketed,
-  ]);
-  html_div_cycle_code(reach, ["And then we have: ", whole]);
   app_code_lesson_expression_worked_card_not(
     root,
     whole,
