@@ -271,7 +271,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "all glory to",
       second: "the risen CHRIST",
-      symbol: "Light breaking outward",
+      symbol:
+        "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
       ref: "",
       same_as: 0,
     },
@@ -280,7 +281,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "all glory to",
       second: "the risen CHRIST",
-      symbol: "Light breaking outward",
+      symbol:
+        "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
       ref: "",
       same_as: 26,
     },
