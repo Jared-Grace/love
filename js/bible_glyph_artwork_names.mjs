@@ -319,6 +319,10 @@ export function bible_glyph_artwork_names() {
       glyph: "water",
       asset: "Droplet",
     },
+    {
+      glyph: "child",
+      asset: "Child",
+    },
   ];
   return names;
 }
