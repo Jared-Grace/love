@@ -1,3 +1,4 @@
+import { bible_glyph_roots_characters_gate_run } from "./bible_glyph_roots_characters_gate_run.mjs";
 import { app_code_lessons_prod_last_gate_run } from "./app_code_lessons_prod_last_gate_run.mjs";
 import { qa_gate_count_fixed_is_cases_gate_run } from "./qa_gate_count_fixed_is_cases_gate_run.mjs";
 import { qa_gates_miscounted_gate_run } from "./qa_gates_miscounted_gate_run.mjs";
