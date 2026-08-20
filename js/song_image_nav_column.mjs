@@ -1,3 +1,4 @@
+import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -21,7 +22,7 @@ export function song_image_nav_column(parent, state, on_change) {
   let reference = html_div(column);
   html_style_margin_top(reference, "6px");
   html_style_font_size(reference, "13px");
-  html_style_set(reference, "color", "#676767");
+  html_style_set(reference, "color", song_image_color_text_quiet());
   html_text_set(reference, current.ref);
   let prompt = html_div(column);
   html_style_margin_top(prompt, "16px");
