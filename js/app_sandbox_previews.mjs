@@ -2,6 +2,7 @@ import { app_sandbox_spinner_preview } from "./app_sandbox_spinner_preview.mjs";
 import { week_calendar_preview } from "./week_calendar_preview.mjs";
 import { availability_editor_preview } from "./availability_editor_preview.mjs";
 import { song_image_choose_preview } from "./song_image_choose_preview.mjs";
+import { psalms_second_takes_preview } from "./psalms_second_takes_preview.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
   let previews = {
@@ -9,6 +10,7 @@ export function app_sandbox_previews() {
     week_calendar: week_calendar_preview,
     availability_editor: availability_editor_preview,
     song_image_choose: song_image_choose_preview,
+    second_takes: psalms_second_takes_preview,
   };
   return previews;
 }

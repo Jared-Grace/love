@@ -66,7 +66,7 @@ Thumbs.db
 #
 # Only the small one. Its neighbour is 401 KB, and see below for why that
 # matters more than its size.
-/findings/git_history_folder_bytes.json
+/data/found/findings/git_history_folder_bytes.json
 
 # NOT ignored yet, on purpose, and this is the trap to know about before adding
 # any large generated folder to this file.
