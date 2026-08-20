@@ -6,6 +6,9 @@ export function app_shared_button_back_text() {
   let texts = {
     en: " Back",
     ur: " واپس",
+    translated_from: {
+      ur: " Back",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let facing = app_shared_button_back_arrow();
