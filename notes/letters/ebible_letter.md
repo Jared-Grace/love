@@ -1,7 +1,7 @@
-# Letter to eBible.org — three published files with faults
+# Letter to eBible.org — four faults in published files
 
-Written 2026-08-19. Not sent yet. Send it as one letter; all three findings are
-small and none needs a reply.
+Written 2026-08-19, a fourth finding added 2026-08-20. Not sent yet. Send it as one
+letter; all four findings are small and none needs a reply.
 
 The facts below were each checked against the files on disk before writing. If you
 send this after a fresh download, check them again first — a corrected file would
