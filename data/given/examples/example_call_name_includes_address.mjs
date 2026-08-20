@@ -1,6 +1,6 @@
-import { js_call_argument_named_identifier_set } from "../../js/js_call_argument_named_identifier_set.mjs";
-import { js_find_call_name_includes } from "../../js/js_find_call_name_includes.mjs";
-import { js_call_named_find } from "../../js/js_call_named_find.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
+import { js_find_call_name_includes } from "../../../js/js_find_call_name_includes.mjs";
+import { js_call_named_find } from "../../../js/js_call_named_find.mjs";
 export const example = {
   fn: js_call_argument_named_identifier_set.name,
   select: js_find_call_name_includes.name,

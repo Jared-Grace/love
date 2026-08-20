@@ -1,6 +1,6 @@
-import { js_object_property_getter_set } from "../../js/js_object_property_getter_set.mjs";
-import { js_find_object_containing_text } from "../../js/js_find_object_containing_text.mjs";
-import { js_call_argument_named_getter_set } from "../../js/js_call_argument_named_getter_set.mjs";
+import { js_object_property_getter_set } from "../../../js/js_object_property_getter_set.mjs";
+import { js_find_object_containing_text } from "../../../js/js_find_object_containing_text.mjs";
+import { js_call_argument_named_getter_set } from "../../../js/js_call_argument_named_getter_set.mjs";
 export const example = {
   fn: js_object_property_getter_set.name,
   select: js_find_object_containing_text.name,

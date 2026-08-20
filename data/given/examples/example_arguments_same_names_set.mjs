@@ -1,7 +1,7 @@
-import { js_call_arguments_same_names_set } from "../../js/js_call_arguments_same_names_set.mjs";
-import { js_call_named_find } from "../../js/js_call_named_find.mjs";
-import { js_call_argument_named_identifier_set } from "../../js/js_call_argument_named_identifier_set.mjs";
-import { js_block_call_add } from "../../js/js_block_call_add.mjs";
+import { js_call_arguments_same_names_set } from "../../../js/js_call_arguments_same_names_set.mjs";
+import { js_call_named_find } from "../../../js/js_call_named_find.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
+import { js_block_call_add } from "../../../js/js_block_call_add.mjs";
 export const example = {
   fn: js_call_arguments_same_names_set.name,
   select: js_call_named_find.name,

@@ -1,5 +1,5 @@
-import { js_selects_unwrap } from "../../js/js_selects_unwrap.mjs";
-import { js_find_statement_index } from "../../js/js_find_statement_index.mjs";
+import { js_selects_unwrap } from "../../../js/js_selects_unwrap.mjs";
+import { js_find_statement_index } from "../../../js/js_find_statement_index.mjs";
 export const example = {
   fn: js_selects_unwrap.name,
   select: js_find_statement_index.name,

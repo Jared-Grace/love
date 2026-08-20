@@ -1,4 +1,4 @@
-import { functions_rename_if_starts_with } from "../../js/functions_rename_if_starts_with.mjs";
+import { functions_rename_if_starts_with } from "../../../js/functions_rename_if_starts_with.mjs";
 export const example = {
   fn: functions_rename_if_starts_with.name,
   args: ["list_", "array_"],

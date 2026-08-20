@@ -1,5 +1,5 @@
-import { js_selects_span_move_after } from "../../js/js_selects_span_move_after.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
+import { js_selects_span_move_after } from "../../../js/js_selects_span_move_after.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_selects_span_move_after.name,
   select: js_find_declaration_named.name,

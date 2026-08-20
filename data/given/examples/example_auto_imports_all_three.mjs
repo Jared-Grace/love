@@ -1,7 +1,7 @@
-import { js_imports_auto_relative } from "../../js/js_imports_auto_relative.mjs";
-import { list_last } from "../../js/list_last.mjs";
-import { list_first } from "../../js/list_first.mjs";
-import { list_size } from "../../js/list_size.mjs";
+import { js_imports_auto_relative } from "../../../js/js_imports_auto_relative.mjs";
+import { list_last } from "../../../js/list_last.mjs";
+import { list_first } from "../../../js/list_first.mjs";
+import { list_size } from "../../../js/list_size.mjs";
 export const example = {
   fn: js_imports_auto_relative.name,
   args: ["js/mixed_imports.mjs"],
@@ -16,13 +16,13 @@ export const example = {
     " (imported, unused) is removed, ",
     { fn: list_size.name },
     " (wrong ",
-    { code: "../../js/" },
+    { code: "../../../js/" },
     " path) is canonicalized to ",
     { code: "./" },
     ". Provably auto-safe: idempotent, total, state-independent.",
   ],
   before: `import { list_first } from "./list_first.mjs";
-import { list_size } from "../../js/list_size.mjs";
+import { list_size } from "../../../js/list_size.mjs";
 export function alpha(x) {
   return list_size(x);
 }

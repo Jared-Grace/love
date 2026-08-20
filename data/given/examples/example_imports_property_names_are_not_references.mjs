@@ -1,6 +1,6 @@
-import { js_imports_auto_relative } from "../../js/js_imports_auto_relative.mjs";
-import { list_size } from "../../js/list_size.mjs";
-import { log } from "../../js/log.mjs";
+import { js_imports_auto_relative } from "../../../js/js_imports_auto_relative.mjs";
+import { list_size } from "../../../js/list_size.mjs";
+import { log } from "../../../js/log.mjs";
 export const example = {
   fn: js_imports_auto_relative.name,
   args: ["js/property_names.mjs"],

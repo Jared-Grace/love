@@ -1,4 +1,4 @@
-import { function_params_delete } from "../../js/function_params_delete.mjs";
+import { function_params_delete } from "../../../js/function_params_delete.mjs";
 export const example = {
   fn: function_params_delete.name,
   args: ["list_size", "factor"],

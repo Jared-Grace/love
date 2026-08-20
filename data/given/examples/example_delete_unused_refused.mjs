@@ -1,4 +1,4 @@
-import { function_delete_unused } from "../../js/function_delete_unused.mjs";
+import { function_delete_unused } from "../../../js/function_delete_unused.mjs";
 export const example = {
   fn: function_delete_unused.name,
   args: ["list_size"],

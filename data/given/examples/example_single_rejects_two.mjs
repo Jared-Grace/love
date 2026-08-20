@@ -1,6 +1,6 @@
-import { list_single } from "../../js/list_single.mjs";
-import { list_size_1_assert } from "../../js/list_size_1_assert.mjs";
-import { js_flo } from "../../js/js_flo.mjs";
+import { list_single } from "../../../js/list_single.mjs";
+import { list_size_1_assert } from "../../../js/list_size_1_assert.mjs";
+import { js_flo } from "../../../js/js_flo.mjs";
 export const example = {
   kind: "rejection",
   title: "A single-item helper refuses a two-item list",

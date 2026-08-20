@@ -1,5 +1,5 @@
-import { js_return_argument_set } from "../../js/js_return_argument_set.mjs";
-import { function_arguments_assert_each_add } from "../../js/function_arguments_assert_each_add.mjs";
+import { js_return_argument_set } from "../../../js/js_return_argument_set.mjs";
+import { function_arguments_assert_each_add } from "../../../js/function_arguments_assert_each_add.mjs";
 export const example = {
   fn: js_return_argument_set.name,
   args: ["b"],

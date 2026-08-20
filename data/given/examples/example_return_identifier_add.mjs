@@ -1,5 +1,5 @@
-import { js_block_return_identifier_add } from "../../js/js_block_return_identifier_add.mjs";
-import { js_find_body_block } from "../../js/js_find_body_block.mjs";
+import { js_block_return_identifier_add } from "../../../js/js_block_return_identifier_add.mjs";
+import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
 export const example = {
   fn: js_block_return_identifier_add.name,
   select: js_find_body_block.name,

@@ -1,5 +1,5 @@
-import { js_statement_return_argument_set } from "../../js/js_statement_return_argument_set.mjs";
-import { js_find_return } from "../../js/js_find_return.mjs";
+import { js_statement_return_argument_set } from "../../../js/js_statement_return_argument_set.mjs";
+import { js_find_return } from "../../../js/js_find_return.mjs";
 export const example = {
   fn: js_statement_return_argument_set.name,
   select: js_find_return.name,
