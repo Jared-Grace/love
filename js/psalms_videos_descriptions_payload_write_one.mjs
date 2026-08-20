@@ -8,6 +8,9 @@ import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { ebible_verses_storage_browser } from "./ebible_verses_storage_browser.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 export async function psalms_videos_descriptions_payload_write_one(channel_id) {
+  "$plain channel_id";
+  "Everything about the channel that has to be fetched before any song can be paired with its words: what the channel has uploaded, which passage each title names, and the verses of every chapter those titles reach.";
+  "The chapters are fetched once each and only then, because thirteen hundred songs share a hundred and fifty chapters and fetching per song asks for the same chapter nine times over. Which chapters are wanted is not known until every title has been read, so the reading of titles and the fetching of chapters are one stretch of work and cannot be separated further.";
   arguments_assert(arguments, 1);
   let uploads_playlist = youtube_channel_uploads_playlist(channel_id);
   let uploads = await youtube_playlist_videos(uploads_playlist);
