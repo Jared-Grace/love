@@ -29,6 +29,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
     let r = {
       commit: named,
       remembered: true,
+      filed: true,
       kept: remembered,
     };
     return r;
