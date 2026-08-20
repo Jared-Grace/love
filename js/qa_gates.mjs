@@ -1,3 +1,4 @@
+import { functions_prose_silent_oversize_gate_run } from "./functions_prose_silent_oversize_gate_run.mjs";
 import { bible_glyph_roots_characters_gate_run } from "./bible_glyph_roots_characters_gate_run.mjs";
 import { app_code_lessons_prod_last_gate_run } from "./app_code_lessons_prod_last_gate_run.mjs";
 import { qa_gate_count_fixed_is_cases_gate_run } from "./qa_gate_count_fixed_is_cases_gate_run.mjs";
@@ -617,6 +618,7 @@ export function qa_gates() {
     functions_work_size_gate_run,
     js_function_declaration_unused_remove_cases_gate_run,
     functions_granted_silent_gate_run,
+    functions_prose_silent_oversize_gate_run,
     baselines_prefix_split_gate_run,
     number_to_words_cases_gate_run,
     functions_unreachable_statements_gate_run,
