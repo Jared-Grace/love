@@ -1,3 +1,4 @@
+import { qa_gate_count_fixed_is } from "./qa_gate_count_fixed_is.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
 import { number_is } from "./number_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,6 +23,7 @@ export async function qa_gate_miscounted_keys(f_name) {
   "Worth catching separately because of who it fools. A gate that says nothing at all invites a reader to go and look. A gate that says checked and means found does not - it hands back a word that answers the question, so nobody asks it again, and the answer has been nothing all along.";
   "A number written straight into the answer counts as one of these when the word promises the looking. A nought spelled out is true of the gate and says nothing about what it reached, which is exactly what the word denies.";
   "A yes or no written there does not count, and the difference is what the word is answering rather than how it is spelled. A number under one of these words claims an amount was reached; a yes or no under the same word claims the reading happened at all, and a gate that steps out early because there was nothing to compare against is saying so truthfully. One in this repo does exactly that, and calling it a liar was the first thing this sweep did.";
+  "A count can be dead while being nobody's offenders, and that is asked separately. The size of a list spelled out in the source is the same number whether the sweep read the whole repo or none of it - one gate here said it had checked sixteen, and sixteen was how many names the auto pass writes.";
   "A name bound outside anything this can read is let through. It came in as something asked for or out of something imported, and there is no following it either way from here - so it is called honest, which lets somebody past rather than accusing them.";
   arguments_assert(arguments, 1);
   let ast = await function_ast(f_name);
@@ -78,6 +80,12 @@ export async function qa_gate_miscounted_keys(f_name) {
       if (outside_is) {
         continue;
       }
+    }
+    let fixed_is = await qa_gate_count_fixed_is(ast, value);
+    if (fixed_is) {
+      let pair = text_combine_multiple([f_name, " ", key]);
+      list_add(names, pair);
+      continue;
     }
     let hollow_is = qa_gate_count_hollow_is(value, asserted);
     if (hollow_is) {
