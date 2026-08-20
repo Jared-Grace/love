@@ -11,6 +11,7 @@ import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 export async function image_generate(text, path_output) {
+  "Writes one tall picture - a phone screen's worth, white words on black - of a piece of text, centred, at the largest size that still lets the whole of it stand inside the margins.";
   let v2 = await import_install("canvas");
   property_get(v2, "registerFont");
   let createCanvas = property_get(v2, "createCanvas");
