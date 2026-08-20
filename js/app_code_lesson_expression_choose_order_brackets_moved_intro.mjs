@@ -11,7 +11,6 @@ export function app_code_lesson_expression_choose_order_brackets_moved_intro(
   ("Three sentences and no more: the pair may go round either half of the line, whatever they go round is solved first, and round the && they change nothing. The third is the new one - the first two the learner already has - and it is the only place in the run where a pair of brackets is allowed to be worth nothing.");
   ("Nothing here says the answer changes when they move. The two runs above show it changing, on the same three words, and a sentence saying so as well would be asking the learner to check the words against what they have just watched.");
   let and_symbol = js_operator_and_symbol();
-  let or_symbol = js_operator_or_symbol();
   let left_bracket = js_code_parenthesis_left();
   let right_bracket = js_code_parenthesis_right();
   html_div_cycle_code(parent, [
