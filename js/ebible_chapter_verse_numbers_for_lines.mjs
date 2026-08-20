@@ -21,7 +21,8 @@ export async function ebible_chapter_verse_numbers_for_lines(
     bible_folder,
     chapter_code,
   );
-  let words_agree = equal(list_size(words), lines);
+  let left = list_size(words);
+  let words_agree = equal(left, lines);
   if (words_agree) {
     return words;
   }
@@ -29,7 +30,8 @@ export async function ebible_chapter_verse_numbers_for_lines(
     bible_folder,
     chapter_code,
   );
-  let marked_agree = equal(list_size(marked), lines);
+  let left2 = list_size(marked);
+  let marked_agree = equal(left2, lines);
   if (marked_agree) {
     return marked;
   }
