@@ -1,3 +1,4 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { function_run } from "./function_run.mjs";
@@ -16,13 +17,14 @@ import { text_replace } from "./text_replace.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { function_auto_checked } from "./function_auto_checked.mjs";
-import { equal_assert_json } from "./equal_assert_json.mjs";
 import { file_move } from "./file_move.mjs";
 import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
 export async function data_file_room_move(path_fn_name, room) {
   "Move one file the data folder holds loose into a named room of the given half, and repoint the one function that says where it lives.";
   "Where the file is now is asked of the function rather than handed in, because the function is the one place the address is decided and anything else is a second copy of it. A caller that had to spell the old path could spell one the function does not agree with, and the file would then be moved out from under every reader while the function went on naming where it used to be.";
-  "The proof that the repointing worked is that the function is called again afterwards and made to say the new address. Editing the letters of a path is not evidence the path came out right - only asking is. The file is moved last, so a repointing that did not take leaves the file exactly where every reader still expects to find it.";
+  "The proof runs on what the one asking already established. The function is asked once, before anything is touched, so the address in hand is the one it truly hands out; that address is then required to appear in the source as one whole word, which is what makes the address it returns a literal sitting in the file rather than something assembled. Replacing every occurrence of that literal therefore changes what it returns, and the checks afterwards are that the old word is gone from the source and the new one is in it.";
+  "Asking it a second time would prove nothing here and was tried. A function is read off disk once per run and kept, so a second ask after the rewrite hands back the copy held from before it - the reply says the old address no matter how well the rewrite went, and the move fails on a file that was repointed correctly.";
+  "The file is moved last either way, so a repointing that did not take leaves the file exactly where every reader still expects to find it.";
   "Only a whole path written out as one word is handled. A function that builds its address out of parts stops here rather than being guessed at, because a shape this does not recognise is a shape it would move the file out from under.";
   arguments_assert(arguments, 2);
   let repo = folder_repo_love();
@@ -61,10 +63,18 @@ export async function data_file_room_move(path_fn_name, room) {
   await folder_exists_ensure(to_folder);
   await file_overwrite_uncached(fn_path, written);
   await function_auto_checked(path_fn_name);
-  let said = await function_run(path_fn_name, []);
-  equal_assert_json(said, to_spelled, {
-    hint: "the repointed function does not say the file is in the room, so the file has been left where it was",
+  let after = await file_read_try(fn_path);
+  let old_gone = text_includes_not(after, from_spelled);
+  assert_json(old_gone, {
+    hint: "the old address is still spelled in this function after the repointing, so it would go on naming where the file used to be",
     path_fn_name,
+    from_spelled,
+  });
+  let arrived = text_includes(after, to_spelled);
+  assert_json(arrived, {
+    hint: "the new address is not spelled in this function after the repointing, so the file has been left where it was",
+    path_fn_name,
+    to_spelled,
   });
   await file_move(from, to);
   await file_to_commit_add_try(from);
