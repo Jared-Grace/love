@@ -7,6 +7,9 @@ export function app_shared_bible_chapter_whole_text_get() {
   let texts = {
     en: "Whole chapter",
     ur: "پورا باب",
+    translated_from: {
+      ur: "Whole chapter",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let book = emoji_book_open();
