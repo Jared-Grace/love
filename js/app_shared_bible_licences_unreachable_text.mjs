@@ -5,6 +5,9 @@ export function app_shared_bible_licences_unreachable_text() {
   let texts = {
     en: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
     ur: "دینے والوں کی فہرست ابھی نہیں لائی جا سکی۔ اس کے لیے انٹرنیٹ چاہیے، اور جب انٹرنیٹ واپس آئے گا تو یہ یہاں ہوگی",
+    translated_from: {
+      ur: "The credits could not be fetched just now. They need the internet, and they will be here when it is back",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
