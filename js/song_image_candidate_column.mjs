@@ -1,3 +1,4 @@
+import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
@@ -88,7 +89,7 @@ export function song_image_candidate_column(parent, state, on_change) {
   if (equal(candidates.length, 0)) {
     let empty = html_div(column);
     html_style_font_size(empty, "13px");
-    html_style_set(empty, "color", "#676767");
+    html_style_set(empty, "color", song_image_color_text_quiet());
     html_text_set(empty, "Nobody has searched for this symbol yet.");
   }
 }
