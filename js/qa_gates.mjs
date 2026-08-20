@@ -235,6 +235,8 @@ import { js_call_callee_name_try_cases_gate_run } from "./js_call_callee_name_tr
 import { js_flo_body_cases_gate_run } from "./js_flo_body_cases_gate_run.mjs";
 import { js_literal_value_get_cases_gate_run } from "./js_literal_value_get_cases_gate_run.mjs";
 import { js_visit_type_cases_gate_run } from "./js_visit_type_cases_gate_run.mjs";
+import { js_visit_types_cases_gate_run } from "./js_visit_types_cases_gate_run.mjs";
+import { js_block_body_get_cases_gate_run } from "./js_block_body_get_cases_gate_run.mjs";
 import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
@@ -394,6 +396,8 @@ export function qa_gates() {
     js_flo_body_cases_gate_run,
     js_literal_value_get_cases_gate_run,
     js_visit_type_cases_gate_run,
+    js_visit_types_cases_gate_run,
+    js_block_body_get_cases_gate_run,
     js_binding_names_cases_gate_run,
     js_scope_binding_names_cases_gate_run,
     js_shadowing_names_cases_gate_run,
