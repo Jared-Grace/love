@@ -1,4 +1,4 @@
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_version_verse_numbers_english } from "./ebible_version_verse_numbers_english.mjs";
 import { ebible_version_verse_numbers } from "./ebible_version_verse_numbers.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_intersect } from "./list_intersect.mjs";
@@ -13,9 +13,8 @@ export async function ebible_version_chapters_numbering(bible_folder) {
   "A chapter matches when the two name exactly the same verse numbers in it, in the same order. That is asked chapter by chapter rather than of a whole bible, because the disagreement is never a whole bible: the Douay-Rheims numbers a hundred and thirty-nine of the Psalms differently and the other eleven the same way, and those eleven are the ones both begin without a title.";
   "What this cannot see is a chapter that is renumbered and happens to end up with the same count of verses. Measured against the Douay-Rheims, the worst case there is, it saw every one: the eleven Psalms it let through are the eleven that genuinely line up.";
   "Chapters only one of the two carries say nothing either way, so they are left out of both answers - the search already drops a result whose book the reader's bible has not got.";
-  let english = ebible_folder_english();
   let mine = await ebible_version_verse_numbers(bible_folder);
-  let reference = await ebible_version_verse_numbers(english);
+  let reference = await ebible_version_verse_numbers_english();
   let mine_codes = properties_get(mine);
   let reference_codes = properties_get(reference);
   let shared = list_intersect(mine_codes, reference_codes);
