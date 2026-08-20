@@ -1,3 +1,4 @@
+import { html_flex_basis_0_multiple } from "./html_flex_basis_0_multiple.mjs";
 import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
 import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,6 +24,9 @@ export function app_shared_arrows_wide(
   html_direction_rtl_set(row, rtl);
   let l = app_shared_button_arrow_previous(row, text_previous, on_previous);
   let r = app_shared_button_arrow_next(row, text_next, on_next);
-  html_flex_grow_1_multiple([l, r]);
+  let buttons = [l, r];
+  html_flex_grow_1_multiple(buttons);
+  ("the two come out the same width rather than each taking what it says plus an equal share of the rest. A row divides only what is left over, so buttons sharing it equally still differ by however much their words differ - and once the words are a translation, one of them is routinely half again as long as the other, which reads as one button being the important one.");
+  html_flex_basis_0_multiple(buttons);
   return row;
 }
