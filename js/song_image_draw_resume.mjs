@@ -1,3 +1,4 @@
+import { song_image_draw_attempt_next } from "./song_image_draw_attempt_next.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_prompt } from "./song_image_prompt.mjs";
