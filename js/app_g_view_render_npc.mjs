@@ -17,6 +17,9 @@ import { app_g_believe } from "./app_g_believe.mjs";
 import { app_g_disciple } from "./app_g_disciple.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
+  "Reopens the conversation the player was in when the game was last closed, by asking what stage it had got to and putting that stage's screen back up.";
+  "The stages are asked about one after another rather than looked up in a table, and each question names the function that draws it, so the whole of what a saved conversation can be is readable straight down the page.";
+  "A stage nobody here recognises raises an error rather than quietly dropping the player back on the map. A saved conversation naming a stage this code does not know is a game that has been changed underneath somebody who was in the middle of talking, and losing it silently would look to them like the person on the map had simply forgotten them.";
   let view = await app_g_view_get();
   let r = await app_g_view_render_npc_right(view, div_map);
   let right = property_get(r, "right");

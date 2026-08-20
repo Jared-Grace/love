@@ -4,6 +4,8 @@ import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_reply_main_shortcuts_gl(root, languages_chosen_default) {
+  "One step in building the reply screen's shortcuts: it takes the bag the step before it made, sets the Telugu shortcut to ten verses and adds the Bengali language beside it, and hands the whole lot on.";
+  "Almost every line of it is one name being lifted out of a bag and put back into another. That is what is left when a long function is cut into pieces by machine: the cut has to carry every name the later pieces will want, and it carries them by writing each one twice. Nothing here decides anything, so the shape is harmless - but this is what a function of this length with nothing in it looks like.";
   arguments_assert(arguments, 2);
   let r2 = app_reply_main_shortcuts_gl_r_te_base(
     root,
