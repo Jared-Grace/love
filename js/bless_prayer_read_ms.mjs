@@ -21,11 +21,18 @@ export function bless_prayer_read_ms(prayer) {
   ("fastest way through it is to pray; put idle seconds on top of the praying and the");
   ("fastest way through is to pray and then wait, which makes the prayer the thing standing");
   ("between the player and the game rather than the game itself.");
-  ("Three hundred milliseconds a word is a brisk reading of a sentence somebody means. It");
-  ("is faster than saying it out loud, and that is deliberate: reading aloud is what the");
-  ("prayer is FOR, and anybody doing it will still be speaking when the button arrives.");
+  ("Two hundred milliseconds a word is about three hundred words a minute, which is a quick");
+  ("silent reader going at their own pace. It is faster than saying it out loud, and that is");
+  ("deliberate: reading aloud is what the prayer is FOR, and anybody doing it will still be");
+  ("speaking when the button arrives.");
+  ("The number came down twice, and the second time is the one worth writing down. The");
+  ("longest prayer here is the one at the door, and it is the prayer a player meets before");
+  ("they have any reason to trust the game - so it is the worst possible place to be made to");
+  ("wait, and the place a floor set for the average reader shows up as several seconds of");
+  ("apparently nothing happening. A floor is only honest at the speed of the fastest reader");
+  ("it could bind, and the fastest reader is quicker than a first guess allows for.");
   let words = text_words(prayer);
   let count = list_size(words);
-  let ms = multiply(count, 300);
+  let ms = multiply(count, 200);
   return ms;
 }

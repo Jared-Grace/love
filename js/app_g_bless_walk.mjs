@@ -1,3 +1,4 @@
+import { app_g_player_npc_swap_if } from "./app_g_player_npc_swap_if.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
 import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -67,6 +68,19 @@ export async function app_g_bless_walk(
     let to = property_get(step, "to");
     let direction = g_direction(from, to);
     app_g_character_face(player, player_img_c, direction);
+    ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
+    ("player goes on, and that person steps back into the tile being left. The gospel game's");
+    ("own trade, called and not copied, at the same moment in the step that it makes it.");
+    ("Parting the crowd is asked first and answers almost every walk, but it is allowed to");
+    ("fail - somebody hemmed in by water, by the edge of the street, or simply by a crowd");
+    ("deeper than there is room to open has nowhere to shuffle to, and is left standing on");
+    ("the way. Without a trade the player then slides straight through them, which is what a");
+    ("person who never moved looks like being walked through.");
+    ("Trading is the one way past a person that cannot fail, because it needs no free tile at");
+    ("all: each of the two wants exactly the tile the other is giving up. So the parting");
+    ("handles the crowd and this handles whoever the parting could not, and between them no");
+    ("walk ever passes through anybody.");
+    app_g_player_npc_swap_if(world, from, to);
     ("the player is written down on the tile they reached, the same way the gospel game writes it: everything the tile knows is copied onto them. Writing only the two numbers would be the smaller change and it is the wrong one - the tile carries what it is made of, and the player standing on it is standing on that.");
     ("It is written as the step BEGINS and not when the picture arrives. The crowd reads the");
     ("player's tile to know the one square nobody may step onto, so while a slide is playing");
