@@ -17,8 +17,8 @@ export async function folder_root_move_spellings_repoint(before, after) {
   let to = text_combine(after, "/");
   let paths = await git_files_tracked_folder(repo);
   let changed = [];
-  for (let path_relative of paths) {
-    let f_path = path_join([repo, path_relative]);
+  for (let tracked_path of paths) {
+    let f_path = path_join([repo, tracked_path]);
     let text = await file_read_try(f_path);
     if (not(text)) {
       continue;
@@ -33,7 +33,7 @@ export async function folder_root_move_spellings_repoint(before, after) {
     }
     let written = text_replace(text, from, to);
     await file_overwrite_uncached(f_path, written);
-    changed.push(path_relative);
+    changed.push(tracked_path);
   }
   return changed;
 }
