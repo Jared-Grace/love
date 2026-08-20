@@ -63,7 +63,7 @@ export async function bible_glyph_chapter_rosetta_lines_write(chapter_code) {
       '  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";\n' +
       '  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the interlinear own word-for-word column rather than a published translation.";\n';
     let body = "  let chapter = " + chapter_json + ";\n  return chapter;\n}\n";
-    let source = head + body;
-    return source;
+    let file_text = head + body;
+    return file_text;
   }
 }
