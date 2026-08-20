@@ -18,10 +18,12 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   "This is the half the count of translated sayings cannot see. That one walks the sayings that already go through the picking, and a word that never went near it is not a saying it counts short - it is a saying it never met, so the count comes out whole while a whole screen stays in english.";
   "It is asked of one app rather than of the folder, because whether a word should be turned into another language is a promise that particular app made and not a rule of the repo. An app that only ever speaks english is not in breach for speaking it.";
   "Words with no letters in them are passed over. An arrow, a space, a gap between two things reads the same in every language there is, and naming those would bury the ones that matter under the ones that never could.";
+  "It says alongside what it found how many doors it went and stood at, one line per door, because a small answer here has two readings and they are opposite. Two words left in english is a good day; two doors watched out of ten is a page nobody looked at, reported as a good day.";
   arguments_assert(arguments, 1);
   let seats = app_shared_text_reader_seats();
   let f_names = await function_reachable_names(f_name_app);
   let found = [];
+  let looked = {};
   for (let f_name of f_names) {
     let ast = await function_ast(f_name);
     let calls = js_list_type_nodes(ast, "CallExpression");
@@ -37,6 +39,7 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
         if (not(ours)) {
           continue;
         }
+        property_count_add(looked, door, 1);
         let at = property_get(seat, "at");
         let argument = call.arguments[at];
         let absent = null_is(argument);
@@ -61,5 +64,11 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
       }
     }
   }
-  return found;
+  let reachable = list_size(f_names);
+  let r = {
+    found,
+    looked,
+    reachable,
+  };
+  return r;
 }
