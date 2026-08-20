@@ -1,3 +1,4 @@
+import { list_first_is } from "./list_first_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +12,6 @@ import { path_join } from "./path_join.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { data_file_room_move } from "./data_file_room_move.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function data_loose_room_moved() {
   "Move each file still loose in the data folder into the room it belongs to, one commit each, and name the ones nobody has said a room for.";
@@ -50,8 +50,7 @@ export async function data_loose_room_moved() {
     }
     let room = "";
     for (let entry of rooms) {
-      let named = list_first(entry);
-      let same = equal(named, path_fn_name);
+      let same = list_first_is(entry, path_fn_name);
       if (same) {
         room = list_last(entry);
       }
