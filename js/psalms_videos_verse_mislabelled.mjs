@@ -10,37 +10,43 @@ export function psalms_videos_verse_mislabelled() {
       video_id: "nx1IFXVWt9c",
       titled: "Psalms 28:4",
       sung: "Psalms 29:4",
-      heard: "The voice of the Lord is powerful. The voice of the Lord is majesty.",
+      heard:
+        "The voice of the Lord is powerful. The voice of the Lord is majesty.",
     },
     {
       video_id: "qOvf88H8h0Q",
       titled: "Psalms 28:5",
       sung: "Psalms 30:5",
-      heard: "For his anger is fleeting, but his favor lasts a lifetime. Weeping may stay the night, but joy comes in the morning.",
+      heard:
+        "For his anger is fleeting, but his favor lasts a lifetime. Weeping may stay the night, but joy comes in the morning.",
     },
     {
       video_id: "7OQ5MVEPgf8",
       titled: "Psalms 28:8",
       sung: "Psalms 29:8",
-      heard: "The voice of the Lord shakes the wilderness. The Lord shakes the wilderness of Kadesh.",
+      heard:
+        "The voice of the Lord shakes the wilderness. The Lord shakes the wilderness of Kadesh.",
     },
     {
       video_id: "tCfnTcS9nTo",
       titled: "Psalms 40:16",
       sung: "Psalms 40:17",
-      heard: "But I am poor and needy. May the Lord think of me. You are my helper and deliverer. O my God, do not delay.",
+      heard:
+        "But I am poor and needy. May the Lord think of me. You are my helper and deliverer. O my God, do not delay.",
     },
     {
       video_id: "Wl5ubCyrfxA",
       titled: "Psalms 63:4",
       sung: "Psalms 63:5",
-      heard: "My soul is satisfied as with the richest of foods. With joyful lips my mouth will praise you.",
+      heard:
+        "My soul is satisfied as with the richest of foods. With joyful lips my mouth will praise you.",
     },
     {
       video_id: "Rlf9zwBnO64",
       titled: "Psalms 88:16",
       sung: "Psalms 88:15",
-      heard: "From my youth I was afflicted and near death. I have borne your terrors. I am in despair.",
+      heard:
+        "From my youth I was afflicted and near death. I have borne your terrors. I am in despair.",
     },
   ];
   return mislabelled;
