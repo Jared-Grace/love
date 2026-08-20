@@ -14,6 +14,12 @@ export function app_shared_bible_offline_save_all_text(size) {
       before: " سبھی ",
       after: " محفوظ کریں",
     },
+    translated_from: {
+      ur: {
+        before: " Save all ",
+        after: " of them",
+      },
+    },
   };
   let words = app_shared_text_reader_language_around(parts, size);
   let text = app_shared_bible_offline_arrow_text(words);
