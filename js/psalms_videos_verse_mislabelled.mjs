@@ -2,7 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 export function psalms_videos_verse_mislabelled() {
   "The songs whose title names a verse other than the one they sing, each as the watch code, the verse the title claims, and the verse the words actually are.";
   "Every one of these was heard rather than worked out. Youtube writes down what it hears in a video, and the words of a psalm are distinctive enough that one line of them settles the question - the voice of the Lord is powerful is Psalm 29 verse 4 and can be nothing else, whatever the title over it says.";
-  "They were all found the same way, and the way is the reason there are only six: a title that repeats is visible, so a wrong title collides with the right one and stands out. A wrong title nobody else claimed is invisible, and there is no reason to think this is all of them - only that these are the ones a repeated title gave away.";
+  "The first six were found by a repeated title: a wrong title lands on top of the right one and the collision is visible. That way finds nothing where a wrong title collides with nobody, so a second way was needed, and it is the hole. A song under the wrong title leaves the verse it really sings looking unsung, so every verse of a chapter the channel has otherwise sung through is a place to listen, and the songs on either side of it are the ones to listen to. That is how the seventh was found.";
+  "Neither way is finished, so this is not all of them. The hole says where to listen; it does not say what is there until somebody listens.";
   "The title is what everything downstream believes. A chapter's reading order is read out of it, the verse text written under the video is looked up from it, and the playlist a song is put in is chosen by it - so one wrong title is a song filed in the wrong chapter, described with somebody else's words, and missing from the chapter it belongs to. That is why this is worth writing down rather than fixing quietly: until the titles are changed, this is the list of what the titles are lying about.";
   arguments_assert(arguments, 0);
   let mislabelled = [
@@ -47,6 +48,13 @@ export function psalms_videos_verse_mislabelled() {
       sung: "Psalms 88:15",
       heard:
         "From my youth I was afflicted and near death. I have borne your terrors. I am in despair.",
+    },
+    {
+      video_id: "-q_m_OBao0s",
+      titled: "Psalms 80:7",
+      sung: "Psalms 80:8",
+      heard:
+        "You uprooted a vine from Egypt. You drove out the nations and transplanted it.",
     },
   ];
   return mislabelled;
