@@ -1,3 +1,4 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_sentence_end_marks_findings_sorted } from "./bible_sentence_end_marks_findings_sorted.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { bible_folders_sentence_end_unmarked } from "./bible_folders_sentence_en
 import { list_difference } from "./list_difference.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { not } from "./not.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 export function bible_sentence_end_marks_findings_named(
   recorded,
@@ -40,8 +40,7 @@ export function bible_sentence_end_marks_findings_named(
     let some = not(none);
     return some;
   }
-  let ended_some = list_filter(stored, lambda7);
-  let findable = list_map_property(ended_some, property_name);
+  let findable = list_filter_map_property(stored, lambda7, property_name);
   let named_wrongly = list_intersection(named, findable);
   let r2 = {
     ended_none,
