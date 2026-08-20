@@ -1,6 +1,6 @@
-import { js_object_property_text_add_before } from "../../js/js_object_property_text_add_before.mjs";
-import { js_find_object_containing_text } from "../../js/js_find_object_containing_text.mjs";
-import { js_object_property_text_add_after } from "../../js/js_object_property_text_add_after.mjs";
+import { js_object_property_text_add_before } from "../../../js/js_object_property_text_add_before.mjs";
+import { js_find_object_containing_text } from "../../../js/js_find_object_containing_text.mjs";
+import { js_object_property_text_add_after } from "../../../js/js_object_property_text_add_after.mjs";
 export const example = {
   fn: js_object_property_text_add_before.name,
   select: js_find_object_containing_text.name,

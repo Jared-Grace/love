@@ -1,6 +1,6 @@
-import { js_call_argument_named_call_set } from "../../js/js_call_argument_named_call_set.mjs";
-import { js_call_argument_named_identifier_set } from "../../js/js_call_argument_named_identifier_set.mjs";
-import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
+import { js_call_argument_named_call_set } from "../../../js/js_call_argument_named_call_set.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
+import { js_statement_find_call_named } from "../../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_call_argument_named_call_set.name,
   select: js_statement_find_call_named.name,

@@ -1,6 +1,6 @@
-import { js_selects_function_lift } from "../../js/js_selects_function_lift.mjs";
-import { js_function_nested_find_named } from "../../js/js_function_nested_find_named.mjs";
-import { js_selects_functionize_local } from "../../js/js_selects_functionize_local.mjs";
+import { js_selects_function_lift } from "../../../js/js_selects_function_lift.mjs";
+import { js_function_nested_find_named } from "../../../js/js_function_nested_find_named.mjs";
+import { js_selects_functionize_local } from "../../../js/js_selects_functionize_local.mjs";
 export const example = {
   fn: js_selects_function_lift.name,
   select: js_function_nested_find_named.name,

@@ -1,5 +1,5 @@
-import { js_expand_selects } from "../../js/js_expand_selects.mjs";
-import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
+import { js_expand_selects } from "../../../js/js_expand_selects.mjs";
+import { js_statement_find_call_named } from "../../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_expand_selects.name,
   select: js_statement_find_call_named.name,

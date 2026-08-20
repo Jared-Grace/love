@@ -1,6 +1,6 @@
-import { js_fn_name_references_to_calls } from "../../js/js_fn_name_references_to_calls.mjs";
-import { fn_name } from "../../js/fn_name.mjs";
-import { list_size } from "../../js/list_size.mjs";
+import { js_fn_name_references_to_calls } from "../../../js/js_fn_name_references_to_calls.mjs";
+import { fn_name } from "../../../js/fn_name.mjs";
+import { list_size } from "../../../js/list_size.mjs";
 export const example = {
   fn: js_fn_name_references_to_calls.name,
   args: [],

@@ -1,6 +1,6 @@
-import { js_block_call_add } from "../../js/js_block_call_add.mjs";
-import { js_find_body_block } from "../../js/js_find_body_block.mjs";
-import { js_call_argument_named_identifier_set } from "../../js/js_call_argument_named_identifier_set.mjs";
+import { js_block_call_add } from "../../../js/js_block_call_add.mjs";
+import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
 export const example = {
   fn: js_block_call_add.name,
   select: js_find_body_block.name,

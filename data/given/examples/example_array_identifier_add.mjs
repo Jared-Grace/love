@@ -1,6 +1,6 @@
-import { js_array_identifier_add } from "../../js/js_array_identifier_add.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
-import { js_array_text_add } from "../../js/js_array_text_add.mjs";
+import { js_array_identifier_add } from "../../../js/js_array_identifier_add.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
+import { js_array_text_add } from "../../../js/js_array_text_add.mjs";
 export const example = {
   fn: js_array_identifier_add.name,
   select: js_find_declaration_named.name,

@@ -1,5 +1,5 @@
-import { js_selects_call_add_before } from "../../js/js_selects_call_add_before.mjs";
-import { js_find_statement_last } from "../../js/js_find_statement_last.mjs";
+import { js_selects_call_add_before } from "../../../js/js_selects_call_add_before.mjs";
+import { js_find_statement_last } from "../../../js/js_find_statement_last.mjs";
 export const example = {
   fn: js_selects_call_add_before.name,
   select: js_find_statement_last.name,

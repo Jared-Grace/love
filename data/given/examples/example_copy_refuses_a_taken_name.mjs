@@ -1,4 +1,4 @@
-import { function_copy } from "../../js/function_copy.mjs";
+import { function_copy } from "../../../js/function_copy.mjs";
 export const example = {
   fn: function_copy.name,
   args: ["list_size", "list_first"],

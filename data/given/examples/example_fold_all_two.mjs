@@ -1,5 +1,5 @@
-import { js_fold_all } from "../../js/js_fold_all.mjs";
-import { list_get_wrap_index } from "../../js/list_get_wrap_index.mjs";
+import { js_fold_all } from "../../../js/js_fold_all.mjs";
+import { list_get_wrap_index } from "../../../js/list_get_wrap_index.mjs";
 export const example = {
   fn: js_fold_all.name,
   args: [list_get_wrap_index.name],

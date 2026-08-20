@@ -1,7 +1,7 @@
-import { js_block_local_number_add } from "../../js/js_block_local_number_add.mjs";
-import { js_find_body_block } from "../../js/js_find_body_block.mjs";
-import { js_block_local_add_generic } from "../../js/js_block_local_add_generic.mjs";
-import { function_select_apply_code } from "../../js/function_select_apply_code.mjs";
+import { js_block_local_number_add } from "../../../js/js_block_local_number_add.mjs";
+import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
+import { js_block_local_add_generic } from "../../../js/js_block_local_add_generic.mjs";
+import { function_select_apply_code } from "../../../js/function_select_apply_code.mjs";
 export const example = {
   fn: js_block_local_number_add.name,
   select: js_find_body_block.name,

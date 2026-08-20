@@ -1,4 +1,4 @@
-import { js_declarations_name_only_collapse } from "../../js/js_declarations_name_only_collapse.mjs";
+import { js_declarations_name_only_collapse } from "../../../js/js_declarations_name_only_collapse.mjs";
 export const example = {
   fn: js_declarations_name_only_collapse.name,
   args: [],

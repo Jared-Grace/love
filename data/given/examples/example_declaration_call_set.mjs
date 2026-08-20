@@ -1,6 +1,6 @@
-import { js_call_argument_named_call_set } from "../../js/js_call_argument_named_call_set.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
-import { js_declaration_call_set } from "../../js/js_declaration_call_set.mjs";
+import { js_call_argument_named_call_set } from "../../../js/js_call_argument_named_call_set.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
+import { js_declaration_call_set } from "../../../js/js_declaration_call_set.mjs";
 export const example = {
   fn: js_declaration_call_set.name,
   select: js_find_declaration_named.name,

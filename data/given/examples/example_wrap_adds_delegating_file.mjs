@@ -1,4 +1,4 @@
-import { function_wrap } from "../../js/function_wrap.mjs";
+import { function_wrap } from "../../../js/function_wrap.mjs";
 export const example = {
   fn: function_wrap.name,
   args: ["list_size", "list_count"],

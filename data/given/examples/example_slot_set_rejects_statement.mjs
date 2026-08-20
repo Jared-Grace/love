@@ -1,5 +1,5 @@
-import { js_statement_if_test_set } from "../../js/js_statement_if_test_set.mjs";
-import { js_expression_node_is } from "../../js/js_expression_node_is.mjs";
+import { js_statement_if_test_set } from "../../../js/js_statement_if_test_set.mjs";
+import { js_expression_node_is } from "../../../js/js_expression_node_is.mjs";
 export const example = {
   kind: "rejection",
   title: "A slot setter refuses a statement in an expression slot",

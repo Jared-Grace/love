@@ -10,7 +10,7 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_shared_text_reader_language_ast_objects(ast) {
+export function app_shared_text_reader_language_ast_picked(ast) {
   "Every place a saying is picked in this piece of writing, each one saying which way of picking it went through and carrying the record of sayings handed to it, with nothing in the place of any that is worked out rather than written out.";
   "The way of picking is carried out rather than dropped once it has served its purpose here. There is more than one way, and a count that cannot say how many sayings came through each of them cannot tell a way nobody uses from a way it failed to recognise - the two look alike from outside and only one of them is fine.";
   "Nothing rather than leaving the place out, because a saying that cannot be read off the page is the thing worth knowing about and would otherwise be the one thing invisible here.";

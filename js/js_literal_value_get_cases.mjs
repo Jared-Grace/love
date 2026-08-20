@@ -9,37 +9,51 @@ export function js_literal_value_get_cases() {
     {
       name: "a written number, which comes back a number and not the text of one",
       code: text_frozen("1"),
-      told: { value: 1 },
+      told: {
+        value: 1,
+      },
     },
     {
       name: "a written piece of text, which comes back text",
       code: text_frozen('"hello"'),
-      told: { value: "hello" },
+      told: {
+        value: "hello",
+      },
     },
     {
       name: "the word for yes",
       code: text_frozen("true"),
-      told: { value: true },
+      told: {
+        value: true,
+      },
     },
     {
       name: "the word for no, which is a value and not an absence",
       code: text_frozen("false"),
-      told: { value: false },
+      told: {
+        value: false,
+      },
     },
     {
       name: "the word for nothing, which is written down as a value rather than as a stop",
       code: text_frozen("null"),
-      told: { value: null },
+      told: {
+        value: null,
+      },
     },
     {
       name: "a name, which is parsed code holding no value",
       code: text_frozen("a"),
-      told: { refused: true },
+      told: {
+        refused: true,
+      },
     },
     {
       name: "a sum, which is parsed code holding two values and not one",
       code: text_frozen("1 + 1"),
-      told: { refused: true },
+      told: {
+        refused: true,
+      },
     },
   ];
   return cases;

@@ -1,4 +1,4 @@
-import { app_shared_text_reader_language_ast_objects } from "./app_shared_text_reader_language_ast_objects.mjs";
+import { app_shared_text_reader_language_ast_picked } from "./app_shared_text_reader_language_ast_picked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
@@ -16,7 +16,7 @@ export async function app_shared_text_reader_language_sayings_change(
   "A saying that cannot be read off the page is passed over rather than complained about. What to do about one is a question for the count that walks the whole folder, and answering it twice in two places is how the two come to disagree.";
   arguments_assert(arguments, 2);
   async function lambda(ast) {
-    let picked = app_shared_text_reader_language_ast_objects(ast);
+    let picked = app_shared_text_reader_language_ast_picked(ast);
     for (let one of picked) {
       let object = property_get(one, "object");
       let unwritten = null_is(object);

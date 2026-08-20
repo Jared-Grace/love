@@ -1,6 +1,6 @@
-import { js_block_local_record_add } from "../../js/js_block_local_record_add.mjs";
-import { js_find_body_block } from "../../js/js_find_body_block.mjs";
-import { js_block_local_list_add } from "../../js/js_block_local_list_add.mjs";
+import { js_block_local_record_add } from "../../../js/js_block_local_record_add.mjs";
+import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
+import { js_block_local_list_add } from "../../../js/js_block_local_list_add.mjs";
 export const example = {
   fn: js_block_local_record_add.name,
   select: js_find_body_block.name,

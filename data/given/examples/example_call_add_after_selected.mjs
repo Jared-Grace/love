@@ -1,5 +1,5 @@
-import { js_selects_call_add_after } from "../../js/js_selects_call_add_after.mjs";
-import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
+import { js_selects_call_add_after } from "../../../js/js_selects_call_add_after.mjs";
+import { js_statement_find_call_named } from "../../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_selects_call_add_after.name,
   select: js_statement_find_call_named.name,

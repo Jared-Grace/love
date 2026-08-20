@@ -1,5 +1,5 @@
-import { js_selects_call_add_after } from "../../js/js_selects_call_add_after.mjs";
-import { js_find_string_starting_with } from "../../js/js_find_string_starting_with.mjs";
+import { js_selects_call_add_after } from "../../../js/js_selects_call_add_after.mjs";
+import { js_find_string_starting_with } from "../../../js/js_find_string_starting_with.mjs";
 export const example = {
   fn: js_selects_call_add_after.name,
   select: js_find_string_starting_with.name,

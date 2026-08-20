@@ -1,4 +1,4 @@
-import { js_statements_span_read_above_assert } from "../../js/js_statements_span_read_above_assert.mjs";
+import { js_statements_span_read_above_assert } from "../../../js/js_statements_span_read_above_assert.mjs";
 export const example = {
   kind: "rejection",
   title: "Refuse to cut out a run holding a function the lines above it call",

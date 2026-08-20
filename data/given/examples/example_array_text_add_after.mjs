@@ -1,7 +1,7 @@
-import { js_array_text_add_after } from "../../js/js_array_text_add_after.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
-import { js_array_text_add } from "../../js/js_array_text_add.mjs";
-import { js_find_statement_after } from "../../js/js_find_statement_after.mjs";
+import { js_array_text_add_after } from "../../../js/js_array_text_add_after.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
+import { js_array_text_add } from "../../../js/js_array_text_add.mjs";
+import { js_find_statement_after } from "../../../js/js_find_statement_after.mjs";
 export const example = {
   fn: js_array_text_add_after.name,
   select: js_find_declaration_named.name,

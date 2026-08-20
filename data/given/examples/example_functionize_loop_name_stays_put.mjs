@@ -1,5 +1,5 @@
-import { js_selects_functionize_local } from "../../js/js_selects_functionize_local.mjs";
-import { js_statement_find_name_body } from "../../js/js_statement_find_name_body.mjs";
+import { js_selects_functionize_local } from "../../../js/js_selects_functionize_local.mjs";
+import { js_statement_find_name_body } from "../../../js/js_statement_find_name_body.mjs";
 export const example = {
   fn: js_selects_functionize_local.name,
   select: js_statement_find_name_body.name,

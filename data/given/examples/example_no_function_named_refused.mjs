@@ -1,7 +1,7 @@
-import { function_name_full_assert } from "../../js/function_name_full_assert.mjs";
-import { ai_log_entries } from "../../js/ai_log_entries.mjs";
-import { js_code_call_args } from "../../js/js_code_call_args.mjs";
-import { json_to } from "../../js/json_to.mjs";
+import { function_name_full_assert } from "../../../js/function_name_full_assert.mjs";
+import { ai_log_entries } from "../../../js/ai_log_entries.mjs";
+import { js_code_call_args } from "../../../js/js_code_call_args.mjs";
+import { json_to } from "../../../js/json_to.mjs";
 export const example = {
   kind: "rejection",
   title: "The seam refuses a command that names no function",

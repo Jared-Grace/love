@@ -1,5 +1,5 @@
-import { js_statement_duplicate } from "../../js/js_statement_duplicate.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
+import { js_statement_duplicate } from "../../../js/js_statement_duplicate.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_statement_duplicate.name,
   select: js_find_declaration_named.name,
