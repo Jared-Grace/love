@@ -10,6 +10,9 @@ export async function psalms_playlists_chapters() {
   let playlists = await youtube_channel_playlists(channel_id);
   let chapter_ids = psalms_playlist_chapter_ids(playlists);
   let chapters = object_property_names_numbers_sorted(chapter_ids);
-  let r = { chapter_ids: chapter_ids, chapters: chapters };
+  let r = {
+    chapter_ids: chapter_ids,
+    chapters: chapters,
+  };
   return r;
 }
