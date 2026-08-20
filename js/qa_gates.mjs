@@ -226,6 +226,7 @@ import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_ga
 import { js_scopes_shadowing_cases_gate_run } from "./js_scopes_shadowing_cases_gate_run.mjs";
 import { js_scope_binds_is_cases_gate_run } from "./js_scope_binds_is_cases_gate_run.mjs";
 import { js_scopes_binding_cases_gate_run } from "./js_scopes_binding_cases_gate_run.mjs";
+import { js_visit_cases_gate_run } from "./js_visit_cases_gate_run.mjs";
 import { js_name_taken_is_cases_gate_run } from "./js_name_taken_is_cases_gate_run.mjs";
 import { js_code_comments_migrated_cases_gate_run } from "./js_code_comments_migrated_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
@@ -372,6 +373,7 @@ export function qa_gates() {
     js_scopes_shadowing_cases_gate_run,
     js_scope_binds_is_cases_gate_run,
     js_scopes_binding_cases_gate_run,
+    js_visit_cases_gate_run,
     js_name_taken_is_cases_gate_run,
     js_imports_local_names_cases_gate_run,
     js_identifiers_referenced_names_cases_gate_run,
