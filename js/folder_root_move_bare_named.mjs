@@ -15,8 +15,8 @@ export async function folder_root_move_bare_named(before) {
   let as_path = text_combine(before, "/");
   let paths = await git_files_tracked_folder(repo);
   let named = [];
-  for (let path_relative of paths) {
-    let f_path = path_join([repo, path_relative]);
+  for (let tracked_path of paths) {
+    let f_path = path_join([repo, tracked_path]);
     let text = await file_read_try(f_path);
     if (not(text)) {
       continue;
@@ -33,7 +33,7 @@ export async function folder_root_move_bare_named(before) {
     if (dealt) {
       continue;
     }
-    named.push(path_relative);
+    named.push(tracked_path);
   }
   return named;
 }
