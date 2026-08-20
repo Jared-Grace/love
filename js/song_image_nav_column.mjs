@@ -1,3 +1,4 @@
+import { song_image_color_border_resting } from "./song_image_color_border_resting.mjs";
 import { song_image_color_text } from "./song_image_color_text.mjs";
 import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
