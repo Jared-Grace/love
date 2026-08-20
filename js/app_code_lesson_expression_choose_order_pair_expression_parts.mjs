@@ -1,4 +1,4 @@
-import { app_code_expression_node } from "./app_code_expression_node.mjs";
+import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
 import { app_code_expression_node_bracketed } from "./app_code_expression_node_bracketed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_choose_order_pair_expression_parts(
@@ -20,11 +20,12 @@ export function app_code_lesson_expression_choose_order_pair_expression_parts(
     left_symbol,
     second_number,
   );
-  let right = app_code_expression_node_bracketed(
+  let tree = app_code_expression_node_right_operator_first_bracketed(
+    left,
+    outer_symbol,
     third_number,
     right_symbol,
     fourth_number,
   );
-  let tree = app_code_expression_node(left, outer_symbol, right);
   return tree;
 }
