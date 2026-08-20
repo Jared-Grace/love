@@ -31,7 +31,11 @@ export function song_image_nav_column(parent, state, on_change) {
   html_style_font_size(prompt, "11px");
   html_style_line_height(prompt, "1.45");
   html_style_set(prompt, "color", "#7ec97e");
-  html_style_set(prompt, "border", "1px solid #222222");
+  html_style_set(
+    prompt,
+    "border",
+    "1px solid " + song_image_color_border_resting(),
+  );
   html_border_radius(prompt, "6px");
   html_style_set(prompt, "user-select", "all");
   let text = song_image_prompt(current);

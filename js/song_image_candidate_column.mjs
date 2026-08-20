@@ -43,7 +43,10 @@ export function song_image_candidate_column(parent, state, on_change) {
     html_style_set(
       row,
       "border",
-      equal(index, looking) ? "1px solid #ffe994" : "1px solid #222222",
+      "1px solid " +
+        (equal(index, looking)
+          ? app_shared_color_gold_text_light()
+          : song_image_color_border_resting()),
     );
     function lambda() {
       state.looking[state.couplet] = index;
@@ -66,7 +69,9 @@ export function song_image_candidate_column(parent, state, on_change) {
     html_text_set(
       text,
       candidate.title +
-        '<br><span style="color:#676767">' +
+        '<br><span style="color:' +
+        song_image_color_text_quiet() +
+        '">' +
         candidate.licence +
         "</span>",
     );
