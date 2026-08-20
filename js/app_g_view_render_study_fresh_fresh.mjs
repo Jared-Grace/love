@@ -27,6 +27,10 @@ export function app_g_view_render_study_fresh_fresh(
   overlay,
   words,
 ) {
+  "The screen for learning a passage a word at a time: every word of it a button, tapped in order from where the reader left off, with a bar above showing how far through they are.";
+  "Only the word that comes next does anything when it is tapped. A tap anywhere else is ignored rather than corrected, because the point is to say the passage rather than to find words in it, and a screen that scolded would be teaching a different thing.";
+  "How far they got is written down a moment and a half after the last tap rather than on each one. Somebody working through a passage taps steadily, and a write per word would be a write per second all the way through; waiting also means that leaving the screen part-way through a word saves the same thing as leaving it between words. A tap while a write is still waiting cancels that write and starts the wait again, so what is finally stored is where they actually stopped.";
+  "Three things go back to the caller: the place to draw into, the way to draw the words again, and whether this reader has tapped nothing yet. That last one is what lets the caller tell somebody starting a passage from somebody returning to one, which is a difference the screen itself has no reason to know about.";
   arguments_assert(arguments, 4);
   let current = word_index;
   let save_pending = null;
