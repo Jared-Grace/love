@@ -4848,6 +4848,16 @@ def main():
             "uses a verb already in permissions.allow."
         ))
 
+    # A dispatcher call caught in a file the caller made for it, when the
+    # command had already written that file itself. Unlike the floors above
+    # this one sits after the allow decision, which is what keeps it honest:
+    # the redirect targets that are already approved - the session scratchpad,
+    # scripts/temp - returned allow a few lines up and never arrive here, so
+    # this can only convert a prompt into a redirect Claude can act on.
+    redirect_target = ai_output_redirect_target(command)
+    if redirect_target is not None:
+        return decide("deny", ai_output_redirect_deny_reason(redirect_target))
+
     stripped = time_subshell_stripped(command, safe_verbs, safe_exact_commands)
     if stripped is not None:
         return decide("deny", (
