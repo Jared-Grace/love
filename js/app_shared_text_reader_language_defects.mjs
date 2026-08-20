@@ -1,24 +1,14 @@
+import { app_shared_text_reader_language_sites } from "./app_shared_text_reader_language_sites.mjs";
 import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { list_without } from "./list_without.mjs";
 import { app_shared_text_reader_language_drifted } from "./app_shared_text_reader_language_drifted.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { app_shared_text_reader_language_pickers } from "./app_shared_text_reader_language_pickers.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_file_name } from "./js_file_name.mjs";
-import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { js_files_texts } from "./js_files_texts.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { property_set } from "./property_set.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function app_shared_text_reader_language_defects() {
   "Every place a button's saying is handed to the reader in one language and not in the others, and every place the sayings are not written out where they can be counted.";
