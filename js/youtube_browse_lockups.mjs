@@ -43,14 +43,14 @@ export function youtube_browse_lockups(answer) {
     if (next) {
       let token =
         next?.continuationCommand?.innertubeCommand?.continuationCommand?.token;
-      if (token && continuation === null) {
+      if (token && equal(continuation, null)) {
         continuation = token;
       }
     }
     let older = node.continuationItemRenderer;
     if (older) {
       let token = older?.continuationEndpoint?.continuationCommand?.token;
-      if (token && continuation === null) {
+      if (token && equal(continuation, null)) {
         continuation = token;
       }
     }
