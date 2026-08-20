@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_privacy_policy_paragraphs() {
+export function app_shared_privacy_policy_paragraphs() {
   "What the privacy policy page says, in the order a person reads it.";
   "Every sentence here is a claim about what the code does, so the words are kept apart from the painting of them - somebody checking whether the policy is still true has one short file to read, and does not have to walk past the styling to find the promises.";
   "It is written for a stranger rather than for a lawyer. Somebody deciding whether to type a message on a contact screen wants to know what happens to it, and that answer should be the first thing they can find rather than the thing under six headings of definitions.";
