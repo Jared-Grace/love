@@ -12,6 +12,9 @@ import { list_map } from "./list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { ebible_readaloud_heading_only_names } from "./ebible_readaloud_heading_only_names.mjs";
+import { ebible_readaloud_heading_only_baseline_path } from "./ebible_readaloud_heading_only_baseline_path.mjs";
+import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function ebible_readaloud_lines_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no bible has a chapter written for reading aloud in a different number of lines from the number of verses its own pages mark.");
@@ -49,6 +52,24 @@ export async function ebible_readaloud_lines_gate_run() {
     bibles,
     unmeasured,
   );
+  ("A chapter published as a heading and nothing else is watched here rather than next door, because the two lists are told apart by what anybody can do about them. Next door names what a fetch would put right; this names what a fetch would not, and it is a separate record so that neither one can hide inside the other.");
+  let heading_only_names = await ebible_readaloud_heading_only_names();
+  let heading_only_path = ebible_readaloud_heading_only_baseline_path();
+  let heading_only_write = fn_name(
+    "ebible_readaloud_heading_only_baseline_write",
+  );
+  let heading_only_hint = text_combine_multiple([
+    "this chapter's reading-aloud edition names its book and its number and then stops, so nobody is shown it, and it was not like that before. That is either a chapter its publishers never published or a download that was cut short, and the two look identical from here. Delete that bible's cached copy and fetch it again with ",
+    f_name_download,
+    ": if words come back, the earlier fetch was the fault; if the same two lines come back, the words are not there to be had and this is one to record with ",
+    heading_only_write,
+  ]);
+  await baseline_names_gate_generic(
+    heading_only_names,
+    heading_only_path,
+    heading_only_hint,
+    heading_only_write,
+  );
   function lambda2(measured) {
     let chapters = property_get(measured, "same");
     return chapters;
@@ -63,6 +84,7 @@ export async function ebible_readaloud_lines_gate_run() {
     bibles: list_size(bibles),
     chapters: list_sum(same_each),
     unread: list_sum(unread_each),
+    heading_only: list_size(heading_only_names),
     unmeasured: list_size(unmeasured),
     differ,
   };

@@ -35,7 +35,8 @@ export function song_image_drawn_attempts_known() {
   1
  ],
  "21": [
-  1
+  1,
+  2
  ],
  "22": [
   1,
