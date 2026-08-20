@@ -16,7 +16,10 @@ export async function bible_search_words_stale_remove() {
   let words = properties_get(result);
   let wanted = list_map(words, bible_search_word_path);
   let folder = bible_search_folder();
-  let held = await firebase_storage_list_jg(folder);
+  ("storage is asked for a prefix and not for a folder, so the slash has to be spelled out here - without it the bucket answers four hundred rather than listing anything");
+  let slash = text_slash_forward();
+  let prefix = list_join_empty([folder, slash]);
+  let held = await firebase_storage_list_jg(prefix);
   let stale = list_difference(held, wanted);
   await each_async(stale, firebase_storage_delete);
   let r = {
