@@ -27,7 +27,7 @@ export function app_code_lesson_log_twice() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
-    decoys: app_code_lesson_decoy_lines_reversed,
+    decoys: app_code_lesson_decoy_lines_reversed_and_each,
     backwards_decoys: app_code_lesson_decoy_lines_reversed,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
