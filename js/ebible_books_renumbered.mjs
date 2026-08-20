@@ -1,8 +1,8 @@
+import { ebible_verse_numbers_compatible_is } from "./ebible_verse_numbers_compatible_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_neighbours } from "./ebible_chapter_code_neighbours.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal_by_json_lambda } from "./equal_by_json_lambda.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
@@ -26,8 +26,7 @@ export function ebible_books_renumbered(
       if (absent) {
         return false;
       }
-      let same_is = equal_by_json_lambda(theirs);
-      let same = same_is(ours);
+      let same = ebible_verse_numbers_compatible_is(ours, theirs);
       return same;
     }
     let moved_is = list_any(neighbours, neighbour_same_is);
