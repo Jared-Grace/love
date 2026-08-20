@@ -1,4 +1,4 @@
-import { bible_folder_sentence_end_sample_chapter } from "./bible_folder_sentence_end_sample_chapter.mjs";
+import { bible_folder_sentence_end_fallback_chapter } from "./bible_folder_sentence_end_fallback_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { bible_folder_chapter_verses_outcome } from "./bible_folder_chapter_verses_outcome.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -21,7 +21,7 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
   "Measured 2026-08-20, which is what this line is for. A hundred bibles stood in the record as having no readable verse here; twenty eight of them read in full when asked again the same morning, and the record had been written four hours earlier. The count alone could never have said which twenty eight.";
   "THE CHAPTER IS CHOSEN PER BIBLE AND NOT ONCE FOR ALL OF THEM, which is the correction this line exists to record. One chapter read everywhere wrote seventy one bibles down as unreadable, and forty of those hold books they were never asked for - a bible published as a gospel and four letters has no Luke and is not thereby a language without sentences.";
   let chapter_code =
-    await bible_folder_sentence_end_sample_chapter(bible_folder);
+    await bible_folder_sentence_end_fallback_chapter(bible_folder);
   let unstored = text_empty_is(chapter_code);
   if (unstored) {
     ("A BIBLE STORAGE HOLDS NOTHING FOR IS NOT ASKED, and says so by naming no chapter. Asking would spend a fetch to be told what the record already knows, and the answer would come back looking exactly like a bible that holds the chapter and could not be reached this afternoon.");

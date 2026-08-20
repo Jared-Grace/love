@@ -1,13 +1,9 @@
-import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
+import { app_code_lesson_expression_brackets_worked_card } from "./app_code_lesson_expression_brackets_worked_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 export function app_code_lesson_expression_brackets_or_intro(root) {
@@ -22,14 +18,6 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
   let or_symbol = js_operator_or_symbol();
   let left_bracket = js_code_parenthesis_left();
   let right_bracket = js_code_parenthesis_right();
-  let true_word = js_keyword_true();
-  let false_word = js_keyword_false();
-  let pair = app_code_operator_code(true_word, or_symbol, true_word);
-  let bracketed = js_code_wrap_parenthesis(pair);
-  let whole_right = app_code_operator_code(false_word, and_symbol, bracketed);
-  let rest_right = app_code_operator_code(false_word, and_symbol, true_word);
-  let whole_left = app_code_operator_code(bracketed, and_symbol, false_word);
-  let rest_left = app_code_operator_code(true_word, and_symbol, false_word);
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_brackets_either_side();
@@ -43,22 +31,22 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
     " is solved before the ",
     and_symbol,
   ]);
-  app_code_lesson_expression_worked_card_two_operators(
+  app_code_lesson_expression_brackets_worked_card(
     root,
     heading_none,
-    whole_right,
-    pair,
-    true_word,
-    rest_right,
-    false_word,
+    false,
+    true,
+    true,
+    false,
+    true,
   );
-  app_code_lesson_expression_worked_card_two_operators(
+  app_code_lesson_expression_brackets_worked_card(
     root,
     heading_either,
-    whole_left,
-    pair,
-    true_word,
-    rest_left,
-    false_word,
+    true,
+    true,
+    false,
+    true,
+    true,
   );
 }
