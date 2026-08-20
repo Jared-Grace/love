@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_choose_order_comparison_side } from "./app_code_lesson_expression_choose_order_comparison_side.mjs";
-import { app_code_lesson_expression_choose_order_not_expression_parts } from "./app_code_lesson_expression_choose_order_not_expression_parts.mjs";
+import { app_code_expression_node_not_of_parts } from "./app_code_expression_node_not_of_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 export function app_code_lesson_expression_choose_order_not_expression(
@@ -12,7 +12,6 @@ export function app_code_lesson_expression_choose_order_not_expression(
   let inner_true = not(want_true);
   let parts =
     app_code_lesson_expression_choose_order_comparison_side(inner_true);
-  let tree =
-    app_code_lesson_expression_choose_order_not_expression_parts(parts);
+  let tree = app_code_expression_node_not_of_parts(parts);
   return tree;
 }
