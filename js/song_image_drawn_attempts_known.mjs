@@ -4,7 +4,8 @@ export function song_image_drawn_attempts_known() {
   "it is generated rather than kept by hand for the usual reason - a hand-kept list disagrees with the folder silently, and the disagreement shows up as a picture that will not load rather than as an error";
   let known = {
  "1": [
-  1
+  1,
+  2
  ],
  "3": [
   1,
