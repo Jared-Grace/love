@@ -1,9 +1,9 @@
+import { app_shared_app_specific_imports_walked } from "./app_shared_app_specific_imports_walked.mjs";
+import { property_get } from "./property_get.mjs";
+import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_app_specific_imports } from "./app_shared_app_specific_imports.mjs";
 import { app_shared_imports_baseline_path } from "./app_shared_imports_baseline_path.mjs";
-import { list_size } from "./list_size.mjs";
 export async function app_shared_imports_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: shared code depends on no single app.");
