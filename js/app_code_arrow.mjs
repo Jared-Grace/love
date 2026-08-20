@@ -9,7 +9,7 @@ import { app_shared_arrow_svg } from "./app_shared_arrow_svg.mjs";
 export function app_code_arrow(parent) {
   "a prominent rightwards arrow for derivation steps - a big triangular head on a short line. Drawn rather than typed, so it centres exactly (a text arrow's ink sits low in its line box) and occupies only its own width (no glyph side bearings to cancel out). One place to change the derivation-arrow look";
   let arrow = html_div(parent);
-  let text = app_shared_arrow_svg();
+  let text = app_shared_arrow_svg(0);
   html_text_set(arrow, text);
   ("the svg fills with currentColor, so this colours it - a theme blue instead of hard black, softer than the code chips while still clear on the light-blue container");
   let color = app_shared_color_blue_dark();
