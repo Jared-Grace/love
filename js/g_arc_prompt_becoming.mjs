@@ -14,6 +14,9 @@ export function g_arc_prompt_becoming(leader) {
     " meets a person at most once a day and lays their conversations into whatever a day has room for, so the gap between one persons consecutive conversations falls out of the fitting rather than being chosen - measured over three seeded plants it ran from one day to twelve, commonest at one or two. The prompt can say the gap varies and is unknown because it does and it is.");
   ("A GLOBAL DAY MULTIPLIER was drafted for this and is not wanted. Striding the calendar several days at a time buys the same room, but it fixes one number for the whole game and so quietly settles how big a game may be - whether a playthrough could hold the whole Bible. A varying gap needs no such number, so that question stays open.");
   ("Titus 1 verse 5 and Acts 14 verse 23 still stand behind it - elders were appointed in towns months old - but they are the second answer rather than the first.");
+  ("WHAT THE MANY CONVERSATIONS ARE FOR is no longer said here. It was a leader-only line, and it is not a leader-only fact: every arc is grouped into conversations and every one of them is a discipling spread over days rather than one sitting. It sits beside the catch_up lines in ",
+    fn_name("g_arc_prompt"),
+    " now, where every person is told it.");
   ("The reasoning stays HERE and only the instruction goes out. A prompt that argued its own case would be handing the writing call the judgment of where a requirement stops applying, and that judgment is not the writing call's to make.");
   let belief = [
     "Every person begins not yet believing, and eventually believes. So the arc runs unbeliever first, then disciple (although if the turn count is low enough, they could have just 1 conversation as an unbeliever and no conversations with player as a believer).",
@@ -27,10 +30,10 @@ export function g_arc_prompt_becoming(leader) {
   let elder = [
     "",
     "THIS PERSON IS THE LEADER.",
-    "The player is planting a house church. The player will leave the plant. Then this person will be the leader of the plant. This is the person the others are left with, so the arc goes further than belief: past being a disciple to somebody who can teach the rest and hold them together.",
-    "That is what turns in multiple conversations are for. It is a discipling over many days, not one long conversation.",
-    "Early on they ask about their own trouble. Later they ask how to answer somebody else's, what to do when one of them falls away, and how to keep going once the player is gone. So the later conversations turn outward.",
-    "They still need answering from these passages. Do not write them as somebody who has outgrown Scripture.",
+    "The player is planting a house church. The player will leave the plant. Then this person will be the leader of the plant. This is the leader of the others who assemble at the plant, so the arc goes further than believing in and following Jesus to somebody who can teach the rest and hold them together.",
+    "",
+    "Early on they ask about their own trouble. Later they ask how to answer somebody else's, what to do if one of them falls away as Scripture talks about, and how to keep going once the player is gone. So the later conversations turn outward.",
+    "They still need answering from these passages. Do not write them as somebody who has outgrown Scripture - for we live by every word that proceeds out of the mouth of God every day of our lives.",
     "",
     requirements,
   ];
