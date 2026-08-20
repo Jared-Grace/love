@@ -30,8 +30,8 @@ export function ebible_books_renumbered(
       let same = same_is(ours);
       return same;
     }
-    let moved = list_any(neighbours, neighbour_same_is);
-    return moved;
+    let moved_is = list_any(neighbours, neighbour_same_is);
+    return moved_is;
   }
   let moved = list_filter(chapter_codes, chapter_moved_is);
   let books = list_map(moved, ebible_chapter_code_to_book);
