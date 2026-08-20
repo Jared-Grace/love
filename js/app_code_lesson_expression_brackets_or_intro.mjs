@@ -1,9 +1,8 @@
 import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
 import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
@@ -34,8 +33,7 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_brackets_either_side();
-  let rule = app_code_container_light_blue(root);
-  html_div_cycle_code(rule, [
+  app_code_container_light_blue_cycle_code(root, [
     "The ",
     or_symbol,
     " inside ",
