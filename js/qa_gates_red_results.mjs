@@ -1,5 +1,4 @@
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_commit_named_red_report } from "./qa_commit_named_red_report.mjs";
 import { qa_gates_named } from "./qa_gates_named.mjs";
@@ -48,8 +47,7 @@ export async function qa_gates_red_results() {
     let is = property_get(result, "red");
     return is;
   }
-  let reds = list_filter(results, red_is);
-  let still_red = list_map_property(reds, "name");
+  let still_red = list_filter_map_property(results, red_is, "name");
   let r = {
     commit,
     behind,
