@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
-import { app_privacy_policy_paragraphs } from "./app_privacy_policy_paragraphs.mjs";
+import { app_shared_privacy_policy_paragraphs } from "./app_shared_privacy_policy_paragraphs.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 export function app_privacy_policy(context) {
@@ -11,7 +11,7 @@ export function app_privacy_policy(context) {
   let content = app_shared_reading_column(context);
   let heading = html_p_text(content, "Privacy policy");
   html_bold(heading);
-  for (let paragraph of app_privacy_policy_paragraphs()) {
+  for (let paragraph of app_shared_privacy_policy_paragraphs()) {
     html_p_text(content, paragraph);
   }
 }
