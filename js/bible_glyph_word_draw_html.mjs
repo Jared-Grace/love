@@ -1,4 +1,3 @@
-import { html_style_padding } from "./html_style_padding.mjs";
 import { bible_glyph_image_draw } from "./bible_glyph_image_draw.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
