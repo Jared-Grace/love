@@ -1,10 +1,10 @@
+import { list_difference } from "./list_difference.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { bible_search_word_path } from "./bible_search_word_path.mjs";
 import { bible_search_folder } from "./bible_search_folder.mjs";
 import { firebase_storage_list_jg } from "./firebase_storage_list_jg.mjs";
-import { list_filter_includes_not } from "./list_filter_includes_not.mjs";
 import { each_async } from "./each_async.mjs";
 import { firebase_storage_delete } from "./firebase_storage_delete.mjs";
 import { list_size } from "./list_size.mjs";
@@ -17,7 +17,7 @@ export async function bible_search_words_stale_remove() {
   let wanted = list_map(words, bible_search_word_path);
   let folder = bible_search_folder();
   let held = await firebase_storage_list_jg(folder);
-  let stale = list_filter_includes_not(held, wanted);
+  let stale = list_difference(held, wanted);
   await each_async(stale, firebase_storage_delete);
   let r = {
     held: list_size(held),

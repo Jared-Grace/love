@@ -89,7 +89,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "my debt HE paid",
       second: "through suffering",
-      symbol: "Document nailed into wood",
+      symbol:
+        "A parchment with nothing written on it, blank and unmarked, nailed into wood by an iron nail",
       ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -98,7 +99,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "my debt HE paid",
       second: "through suffering",
-      symbol: "Document nailed into wood",
+      symbol:
+        "A parchment with nothing written on it, blank and unmarked, nailed into wood by an iron nail",
       ref: "Colossians 2:14",
       same_as: 8,
     },
@@ -172,8 +174,8 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "A lamb standing, three horns on each side of its head and one upright between them, and a row of seven eyes across its brow",
-      ref: "Exodus 12, John 1:29",
+        "A doorway, its two upright posts and the beam across the top struck with deep red blood",
+      ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
     {
@@ -182,8 +184,8 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "A lamb standing, three horns on each side of its head and one upright between them, and a row of seven eyes across its brow",
-      ref: "Exodus 12, John 1:29",
+        "A doorway, its two upright posts and the beam across the top struck with deep red blood",
+      ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
     {
