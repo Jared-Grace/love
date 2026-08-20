@@ -1,10 +1,8 @@
-import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
+import { ternary } from "./ternary.mjs";
+import { app_code_expression_node_truths_wanted } from "./app_code_expression_node_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { list_get } from "./list_get.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_brackets_expression(
   want_true,
   brackets_left,
@@ -16,44 +14,18 @@ export function app_code_lesson_expression_choose_order_brackets_expression(
   ("Which side the brackets fall on is handed in rather than settled here, and it has to move from line to line however it is settled. Left always on the same side, the answer would be at a fixed place on the line and a learner could press it right every time by position - which is exactly the reading this lesson exists to replace.");
   ("It is handed in because the two lessons drawing on this maker cannot move it the same way. One asks which operator goes first, and the answer to that is the bracketed one whatever the line comes to, so the side may simply take turns. The other asks what the line comes to, so a side taking turns beside an answer taking turns would hand a learner a rule pairing the two, and it draws instead.");
   ("The line prints with brackets in it and nothing here writes them: || is weaker than && , so a || standing beside an && can only mean what it says with brackets round it, and the helper that prints the line reads that off the shape. Written by hand they could disagree with the shape, and the line a learner presses would be a different line from the one being solved.");
+  ("The || is always the gathered one and the && always the one left standing alone, so the side the brackets fall on is the only thing that moves - and what it moves is which of the two is read first. Bracketed on the left the || is read first and what it comes to is what the && finds on its left; bracketed on the right the && is read first and the || comes after it.");
+  ("The brackets are not written here. They are left to the printer, which writes a pair only where it changes something - and on this lesson's line it always does, because a || standing beside an && could not otherwise mean what it says.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  if (brackets_left) {
-    ("the || gathers first and stands leftmost, so what it comes to is what the && finds on its left");
-    let truths = app_code_operator_truths_wanted_nested(
-      and_symbol,
-      or_symbol,
-      want_true,
-      brackets_left,
-    );
-    let first_truth = list_get(truths, 0);
-    let second_truth = list_get(truths, 1);
-    let alone_truth = list_get(truths, 2);
-    let tree_left = app_code_expression_node_left_operator_first(
-      first_truth,
-      or_symbol,
-      second_truth,
-      and_symbol,
-      alone_truth,
-    );
-    return tree_left;
-  }
-  ("the || gathers first and stands rightmost, so what it comes to is what the && finds on its right");
-  let truths_right = app_code_operator_truths_wanted_nested(
-    and_symbol,
-    or_symbol,
+  let first_symbol = ternary(brackets_left, or_symbol, and_symbol);
+  let second_symbol = ternary(brackets_left, and_symbol, or_symbol);
+  let tree = app_code_expression_node_truths_wanted(
+    first_symbol,
+    second_symbol,
     want_true,
     brackets_left,
+    false,
   );
-  let alone_truth_right = list_get(truths_right, 0);
-  let first_truth_right = list_get(truths_right, 1);
-  let second_truth_right = list_get(truths_right, 2);
-  let tree_right = app_code_expression_node_right_operator_first(
-    alone_truth_right,
-    and_symbol,
-    first_truth_right,
-    or_symbol,
-    second_truth_right,
-  );
-  return tree_right;
+  return tree;
 }
