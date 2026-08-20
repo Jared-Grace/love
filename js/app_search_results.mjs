@@ -15,13 +15,13 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { text_to_words } from "./text_to_words.mjs";
+import { bible_search_words } from "./bible_search_words.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let books = await ebible_version_books_browser(en);
   let query = property_get(context, "query");
-  let words = text_to_words(query);
+  let words = bible_search_words(query);
   let r = await app_search_chapter_verses_matching(words);
   let dictionary = property_get(r, "dictionary");
   let words_missing = property_get(r, "words_missing");
