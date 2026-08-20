@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { app_shared_text_reader_language_sayings_change } from "./app_shared_text_reader_language_sayings_change.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -40,8 +41,7 @@ export async function app_shared_text_reader_language_from_write(f_name) {
     }
     let filled = false;
     for (let code of translations) {
-      let held = property_get_or_null(record, code);
-      let absent = null_is(held);
+      let absent = property_null_is(record, code);
       if (absent) {
         property_set(record, code, words);
         filled = true;
