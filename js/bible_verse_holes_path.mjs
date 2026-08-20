@@ -1,3 +1,5 @@
+import { findings_folder } from "./findings_folder.mjs";
+import { path_join } from "./path_join.mjs";
 export function bible_verse_holes_path() {
   "Where the record of which verses each bible has nothing to answer with is kept.";
   "One place, named once, so the command that writes it and the gate that reads it cannot drift apart by one of them being edited.";
