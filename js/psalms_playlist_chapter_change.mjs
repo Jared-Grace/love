@@ -18,10 +18,13 @@ export function psalms_playlist_chapter_change(
     order_wanted.push(song.video_id);
     let held_is = holds.includes(song.video_id);
     if (not(held_is)) {
-      songs_to_add.push({ video_id: song.video_id, title: song.title });
+      songs_to_add.push({
+        video_id: song.video_id,
+        title: song.title,
+      });
     }
   }
-  "Two readings of the same songs, one in the order the playlist has them and one in the order the Psalm wants them, with everything that belongs to neither dropped from both. They can only differ by order, so comparing them says whether the order is wrong without saying anything about what is missing.";
+  ("Two readings of the same songs, one in the order the playlist has them and one in the order the Psalm wants them, with everything that belongs to neither dropped from both. They can only differ by order, so comparing them says whether the order is wrong without saying anything about what is missing.");
   let kept = [];
   for (let video_id of holds) {
     if (order_wanted.includes(video_id)) {
@@ -34,7 +37,9 @@ export function psalms_playlist_chapter_change(
       ordered.push(video_id);
     }
   }
-  let out_of_order = not_equal(kept.join(","), ordered.join(","));
+  let left = kept.join(",");
+  let right = ordered.join(",");
+  let out_of_order = not_equal(left, right);
   let r = {
     chapter: chapter,
     playlist_id: playlist_id,

@@ -1,7 +1,6 @@
 import { object_property_names_numbers_sorted } from "./object_property_names_numbers_sorted.mjs";
-import { subtract } from "./subtract.mjs";
+import { psalms_playlist_chapter_change } from "./psalms_playlist_chapter_change.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { psalms_chapters_video_order } from "./psalms_chapters_video_order.mjs";
@@ -30,12 +29,7 @@ export async function psalms_playlists_plan(channel_id) {
         holds.push(video.video_id);
       }
     }
-    let r = psalms_playlist_chapter_change(
-      chapter,
-      playlist_id,
-      holds,
-      songs,
-    );
+    let r = psalms_playlist_chapter_change(chapter, playlist_id, holds, songs);
     return r;
   }
   let plan = await list_map_limited_async(chapters, lambda_chapter, 8);
