@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ai_git_noted } from "./ai_git_noted.mjs";
+import { baseline_paths_names } from "./baseline_paths_names.mjs";
+import { data_given_folder } from "./data_given_folder.mjs";
+import { path_join } from "./path_join.mjs";
+import { function_run } from "./function_run.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { data_file_room_move } from "./data_file_room_move.mjs";
 export async function baselines_room_moved() {
   "Move every ratchet record the data folder holds loose into the baselines room, one commit each, and say which ones moved and which were already there.";
   "Which files these are is worked out rather than written down. Every ratchet already names where it is kept in a function called after itself, and the sweep that gathers those names is the same one the writers sweep uses - so a ratchet added tomorrow is carried along by this without anybody remembering to add it, and a list typed here could disagree with the repo the day it was typed.";
