@@ -1,3 +1,4 @@
+import { qa_gates_miscounted_gate_run } from "./qa_gates_miscounted_gate_run.mjs";
 import { data_rooms_gate_run } from "./data_rooms_gate_run.mjs";
 import { command_grantable_run_name_cases_gate_run } from "./command_grantable_run_name_cases_gate_run.mjs";
 import { app_shared_text_reader_untranslated_gate_run } from "./app_shared_text_reader_untranslated_gate_run.mjs";
@@ -679,6 +680,7 @@ export function qa_gates() {
     app_code_quiz_unscramble_own_wording_gate_run,
     app_code_quiz_choice_pool_gate_run,
     qa_gates_countless_gate_run,
+    qa_gates_miscounted_gate_run,
     bundles_names_missing_gate_run,
     gloss_punctuation_words_gate_run,
     js_repack_only_is_cases_gate_run,
