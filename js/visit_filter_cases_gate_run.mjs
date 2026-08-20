@@ -33,7 +33,8 @@ export function visit_filter_cases_gate_run() {
     try {
       visit(from, children_get, on_each);
     } catch (e) {
-      return e.message;
+      let r2 = e.message;
+      return r2;
     }
     let made = list_join_space(visited);
     return made;
