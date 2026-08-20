@@ -2,14 +2,14 @@ import { list_order_moves_to_end } from "./list_order_moves_to_end.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { subtract } from "./subtract.mjs";
 export function psalms_playlist_chapter_change(
   chapter,
   playlist_id,
   holds,
   songs,
 ) {
-  "What one chapter's playlist would have to change to hold every sung passage of that chapter in the order of the Psalm: which songs belong in it, how many it already holds, which of them are still missing, how many strangers are sitting in it, whether the ones already there stand in the wrong order, and which songs would then have to be sent to the end to set that order right.";
+  "What one chapter's playlist would have to change to hold every sung passage of that chapter in the order of the Psalm: which songs belong in it, how many it already holds, which of them are still missing, which strangers are sitting in it, whether the ones already there stand in the wrong order, and which songs would then have to be sent to the end to set that order right.";
+  "The strangers are named rather than counted. A count says a playlist is wrong and leaves the next person to find out how; the names are what somebody would have to take out, and they are also the first place to look for a song whose title says the wrong verse - being in the wrong chapter's playlist is what a wrong title does.";
   "The songs already in the playlist are handed in rather than asked for here, because asking the channel is the one slow part of the judgement and every chapter is asked at the same time. What is left is a comparison of two lists, which needs nothing outside itself and can be checked by reading it.";
   "A chapter with no playlist at all is handed an empty list of songs held, so it comes out asking for every song to be added rather than needing a case of its own.";
   arguments_assert(arguments, 4);
@@ -27,9 +27,14 @@ export function psalms_playlist_chapter_change(
   }
   ("Two readings of the same songs, one in the order the playlist has them and one in the order the Psalm wants them, with everything that belongs to neither dropped from both. They can only differ by order, so comparing them says whether the order is wrong without saying anything about what is missing.");
   let kept = [];
+  let strangers = [];
   for (let video_id of holds) {
-    if (order_wanted.includes(video_id)) {
+    let wanted_is = order_wanted.includes(video_id);
+    if (wanted_is) {
       kept.push(video_id);
+    }
+    if (not(wanted_is)) {
+      strangers.push(video_id);
     }
   }
   let ordered = [];
@@ -54,7 +59,7 @@ export function psalms_playlist_chapter_change(
     songs_wanted: order_wanted,
     songs_held: holds.length,
     add: songs_to_add,
-    strangers: subtract(holds.length, kept.length),
+    strangers: strangers,
     out_of_order: out_of_order,
     move_to_end: move_to_end,
   };

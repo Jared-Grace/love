@@ -1,3 +1,5 @@
+import { js_block_local_boolean_add } from "./js_block_local_boolean_add.mjs";
+import { js_call_argument_named_boolean_set } from "./js_call_argument_named_boolean_set.mjs";
 import { js_object_key_rename } from "./js_object_key_rename.mjs";
 import { js_selects_functionize_rest_returning_local } from "./js_selects_functionize_rest_returning_local.mjs";
 import { js_selects_function_lift } from "./js_selects_function_lift.mjs";
@@ -113,6 +115,8 @@ export function example_transforms() {
     js_shadowing_rename_in,
     js_selects_function_lift,
     js_object_key_rename,
+    js_call_argument_named_boolean_set,
+    js_block_local_boolean_add,
   };
   return transforms;
 }

@@ -11,11 +11,15 @@ export function song_image_drawn_attempts_known() {
  ],
  "12": [
   1,
-  2
+  2,
+  3
  ],
  "17": [
   1,
   2
+ ],
+ "19": [
+  1
  ]
 };
   return known;
