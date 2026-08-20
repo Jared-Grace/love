@@ -592,6 +592,30 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "artos",
+      gloss: "bread, loaf",
+      words: [
+        {
+          strong: "740",
+          glyph: "bread",
+        },
+      ],
+    },
+    {
+      root: "machaira",
+      gloss: "sword",
+      words: [
+        {
+          strong: "3162",
+          glyph: "sword",
+        },
+        {
+          strong: "4501",
+          glyph: "sword",
+        },
+      ],
+    },
+    {
       root: "phone",
       gloss: "voice, sound",
       words: [
