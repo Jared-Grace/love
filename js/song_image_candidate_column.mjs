@@ -23,12 +23,12 @@ export function song_image_candidate_column(parent, state, on_change) {
     let index = number;
     number = number + 1;
     let row = html_div(column);
-    html_style_set(row, "display", "flex");
-    html_style_set(row, "gap", "8px");
-    html_style_set(row, "align-items", "center");
-    html_style_set(row, "margin-bottom", "6px");
-    html_style_set(row, "padding", "4px");
-    html_style_set(row, "border-radius", "6px");
+    html_display_flex(row);
+    html_style_gap(row, "8px");
+    html_align_items_center(row);
+    html_style_margin_bottom(row, "6px");
+    html_style_padding(row, "4px");
+    html_border_radius(row, "6px");
     html_style_set(
       row,
       "border",
@@ -41,17 +41,17 @@ export function song_image_candidate_column(parent, state, on_change) {
     let text2 = String(index + 1);
     let pick = html_button(row, text2, lambda);
     html_style_set(pick, "width", "28px");
-    html_style_set(pick, "cursor", "pointer");
+    html_cursor_pointer(pick);
     let src = song_image_candidate_src(candidate, 120);
     let thumbnail = html_img(row, src);
     html_style_set(thumbnail, "width", "54px");
     html_style_set(thumbnail, "height", "54px");
     html_style_set(thumbnail, "object-fit", "cover");
-    html_style_set(thumbnail, "cursor", "pointer");
+    html_cursor_pointer(thumbnail);
     let text = html_div(row);
-    html_style_set(text, "font-size", "11px");
+    html_style_font_size(text, "11px");
     html_style_set(text, "color", "#bebebe");
-    html_style_set(text, "flex", "1");
+    html_style_flex(text, "1");
     html_text_set(
       text,
       candidate.title +
@@ -73,12 +73,12 @@ export function song_image_candidate_column(parent, state, on_change) {
       equal(chosen, index) ? "✓" : "choose",
       lambda2,
     );
-    html_style_set(decide, "font-size", "11px");
-    html_style_set(decide, "cursor", "pointer");
+    html_style_font_size(decide, "11px");
+    html_cursor_pointer(decide);
   }
   if (equal(candidates.length, 0)) {
     let empty = html_div(column);
-    html_style_set(empty, "font-size", "13px");
+    html_style_font_size(empty, "13px");
     html_style_set(empty, "color", "#676767");
     html_text_set(empty, "Nobody has searched for this symbol yet.");
   }
