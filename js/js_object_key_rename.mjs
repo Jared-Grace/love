@@ -4,6 +4,8 @@ import { list_matching_single } from "./list_matching_single.mjs";
 import { js_property_key_named_is_curried_right } from "./js_property_key_named_is_curried_right.mjs";
 import { js_selects_object_properties } from "./js_selects_object_properties.mjs";
 export function js_object_key_rename(ast, selects, key_before, key_after) {
+  "Give one entry of a record a different name, leaving the value it holds exactly where it is.";
+  "The name a report hands a number under is half of what the number says, and until now it was the half no command could change. A gate answering how much it had checked, where the number is really how much was wrong, had to be corrected by hand every time - and correcting a returned record by hand is the shape that quietly replaces the entries it did not mention.";
   let properties = js_selects_object_properties(ast, selects);
   let named_is = js_property_key_named_is_curried_right(key_before);
   let hint =

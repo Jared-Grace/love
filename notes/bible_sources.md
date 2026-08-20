@@ -16,7 +16,7 @@ Almost everything shipped today comes from here. The downloader puts each
 translation in its own folder:
 
 ```
-/media/j/JPM/a/user/storage/function/ebible_version_download/<bible_folder>/
+/home/j/a/user/storage/function/ebible_version_download/<bible_folder>/
 ```
 
 The terms are in `copr.htm` in that folder — the same page eBible shows a reader.
