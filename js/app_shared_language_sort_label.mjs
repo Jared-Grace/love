@@ -10,6 +10,9 @@ export function app_shared_language_sort_label(mode) {
     let alphabetical = {
       en: "Sorted A to Z",
       ur: "حروفِ تہجی کے مطابق ترتیب",
+      translated_from: {
+        ur: "Sorted A to Z",
+      },
     };
     let a = app_shared_text_reader_language(alphabetical);
     return a;
@@ -17,6 +20,9 @@ export function app_shared_language_sort_label(mode) {
   let spoken = {
     en: "Sorted by most speakers",
     ur: "سب سے زیادہ بولنے والوں کے مطابق ترتیب",
+    translated_from: {
+      ur: "Sorted by most speakers",
+    },
   };
   let s = app_shared_text_reader_language(spoken);
   return s;
