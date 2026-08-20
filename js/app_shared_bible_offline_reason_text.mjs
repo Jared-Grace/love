@@ -4,6 +4,9 @@ export function app_shared_bible_offline_reason_text() {
   let texts = {
     en: "A saved language opens with no internet, and it opens faster",
     ur: "محفوظ کی گئی زبان انٹرنیٹ کے بغیر کھلتی ہے، اور جلدی کھلتی ہے",
+    translated_from: {
+      ur: "A saved language opens with no internet, and it opens faster",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
