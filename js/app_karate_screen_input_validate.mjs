@@ -47,7 +47,6 @@ export function app_karate_screen_input_validate(
     validate_input(input);
   }
   function validate_all() {
-    each(inputs, validate_input);
     let mapped = list_map(inputs, validate_input);
     let valid_all = list_all(mapped, true_is);
     app_shared_validate_style_assign(valid_all, [div], null, button_below);
