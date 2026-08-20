@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { http } from "./http.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { buffer_text_to } from "./buffer_text_to.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function youtube_video_page(video_id) {
   "$plain video_id";
   "The page of one video, as text, fetched from whichever of youtube's two addresses for a video will actually answer.";
