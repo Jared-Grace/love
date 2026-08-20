@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { cases_answers_gate_run_generic } from "./cases_answers_gate_run_generic.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -15,7 +16,7 @@ export async function visit_unique_async_cases_gate_run() {
     async function children_get(node_asked) {
       for (let edge of edges) {
         let node = property_get(edge, "node");
-        if (node === node_asked) {
+        if (equal(node, node_asked)) {
           let reaches = property_get(edge, "reaches");
           return reaches;
         }

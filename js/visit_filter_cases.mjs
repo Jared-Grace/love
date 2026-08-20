@@ -6,12 +6,26 @@ export function visit_filter_cases() {
   "So the diamond is the case that costs something to keep right, and it is written down with the node appearing twice on purpose. Being inside a node is the only question asked; having met one before is not asked at all, and the walk that does ask it is a different function with its own corpus.";
   "The refusal is spelled by calling for the sentence rather than copying it, so rewording the complaint stays a rewording. What the case fixes is WHICH refusal, not which words: any other failure would answer with something else and fail here.";
   let refused = visit_filter_recursive_cycle_message();
+  let t = text_frozen("b");
+  let t2 = text_frozen("b");
+  let t3 = text_frozen("c");
+  let t4 = text_frozen("d");
+  let t5 = text_frozen("d");
+  let t6 = text_frozen("b");
+  let t7 = text_frozen("a");
+  let t8 = text_frozen("a");
   let cases = [
     {
       name: "a node is handed over after the one it reaches",
       edges: [
-        { node: text_frozen("a"), reaches: [text_frozen("b")] },
-        { node: text_frozen("b"), reaches: [] },
+        {
+          node: text_frozen("a"),
+          reaches: [t],
+        },
+        {
+          node: text_frozen("b"),
+          reaches: [],
+        },
       ],
       from: text_frozen("a"),
       made: text_frozen("b a"),
@@ -21,11 +35,20 @@ export function visit_filter_cases() {
       edges: [
         {
           node: text_frozen("a"),
-          reaches: [text_frozen("b"), text_frozen("c")],
+          reaches: [t2, t3],
         },
-        { node: text_frozen("b"), reaches: [text_frozen("d")] },
-        { node: text_frozen("c"), reaches: [text_frozen("d")] },
-        { node: text_frozen("d"), reaches: [] },
+        {
+          node: text_frozen("b"),
+          reaches: [t4],
+        },
+        {
+          node: text_frozen("c"),
+          reaches: [t5],
+        },
+        {
+          node: text_frozen("d"),
+          reaches: [],
+        },
       ],
       from: text_frozen("a"),
       made: text_frozen("d b d c a"),
@@ -33,15 +56,26 @@ export function visit_filter_cases() {
     {
       name: "a ring back to where the walk started is refused",
       edges: [
-        { node: text_frozen("a"), reaches: [text_frozen("b")] },
-        { node: text_frozen("b"), reaches: [text_frozen("a")] },
+        {
+          node: text_frozen("a"),
+          reaches: [t6],
+        },
+        {
+          node: text_frozen("b"),
+          reaches: [t7],
+        },
       ],
       from: text_frozen("a"),
       made: refused,
     },
     {
       name: "a node that reaches itself is refused",
-      edges: [{ node: text_frozen("a"), reaches: [text_frozen("a")] }],
+      edges: [
+        {
+          node: text_frozen("a"),
+          reaches: [t8],
+        },
+      ],
       from: text_frozen("a"),
       made: refused,
     },
