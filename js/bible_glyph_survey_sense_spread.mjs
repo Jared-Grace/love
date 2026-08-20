@@ -1,11 +1,8 @@
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { property_set } from "./property_set.mjs";
-import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,6 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function bible_glyph_survey_sense_spread(testament_name) {
+  "Gathers everything about one testament that has to be in hand before its words can be counted: the glosses recorded against each Strong's number, the roots the picture alphabet is built on, and which picture each word has been given.";
   arguments_assert(arguments, 1);
   let glosses = await bible_strong_glosses(testament_name);
   let characters = bible_glyph_characters();
