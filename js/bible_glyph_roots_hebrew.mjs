@@ -6,6 +6,11 @@ export function bible_glyph_roots_hebrew() {
   "THREE ROOTS WERE ADDED ON 2026-08-20 AND ONLY ONE OF THEM COST A PICTURE. The hundred and thirty sixth psalm was surveyed and authored that day, and what it asked for was the giving of thanks four times over - the word that opens the psalm three times and closes it once. That one bought a new picture. The water and the light were already drawn for the Greek and were simply not seated here yet, so they cost nothing at all and were taken because they were in front of us rather than because this psalm needed them badly - one occurrence each.";
   "THE THANKS AND THE KNOWING ARE ONE LETTER APART AND ARE NOT RELATED. Yada is to know and is drawn as the lightbulb; yadah is to throw out the hand, and so to confess and to give thanks, and is drawn as the raised hands. They are separate entries under separate numbers and the near-spelling is a trap for a reader of this table rather than a fact about the words. Anyone merging them would silently redraw every act of praise in the psalter as an act of knowing.";
   "AND THE RAISED HANDS WERE CHOSEN FOR THE BODY AND NOT FOR THE FEELING. What yadah names first is a hand thrown out; the thanks is what that gesture means. So the picture is the gesture, which claims exactly as much as the word does, where a smiling face or a heart would have claimed the feeling the word only implies. The praying hands were already seated on amen and would in any case have said prayer rather than thanks.";
+  "EIGHT ROOTS WERE ADDED ON 2026-08-21 AND NONE OF THEM COST A PICTURE. Ten chapters had been authored and three of them were psalms, which was a fact about this table rather than a taste: the survey ranks by what can be drawn, and what had been seated here was covenant vocabulary, which is what a psalm is made of. So the table was asked a different question - not what the next chapter needs, but which pictures the Greek table already draws that this one had never seated. There were nineteen, and eight of them turned out to mean in Hebrew exactly what they mean in Greek.";
+  "THEY WERE TAKEN BECAUSE THE MEANINGS MATCHED AND FOR NO OTHER REASON. The blood is haima and is dam; the darkness is skotia and is choshek; the witness is martus and is ed; the child is teknon and is yeled; the two negatives are ou and me and are lo and al; the out-of is ek and is min; the world is kosmos and is tebel. Each of those is one word meaning one thing in both testaments, so seating it here is the shared vocabulary of pictures doing the exact job it was built for, and a reader who learned the mark in a letter of John meets the same claim in Genesis.";
+  "AND THE ONES THAT DID NOT MATCH WERE REFUSED, which is the half of this worth writing down. The handshake is seated on koinonia, fellowship, and the obvious Hebrew word wanting a handshake is berith, covenant - and a covenant is not a fellowship, so berith is still undrawn and will have to buy its own picture rather than borrow one that would quietly say something else in the other testament. The multitude was refused for a different reason: the interlinear glosses hamon as army more often than as anything else, and a crowd drawn on an army is a wrong mark.";
+  "THE STAFF WAS REFUSED BY MEASUREMENT AND THAT IS THE POINT OF MEASURING. Tent, altar, bread, sword and staff were named up front as the concrete nouns narrative and law are made of, and four of those five hold up. Matteh, the staff, does not: the interlinear glosses it of the tribe thirty six times against the staff far fewer, because the rod and the tribe it stands for are one word in Hebrew. A staff drawn there would be a wrong mark on most of its occurrences. The other four are real and still unbought, because each of them needs a picture that does not exist yet.";
+  "THE TWO NEGATIVES ARE HERE ON PURPOSE AND ARE NOT AN OVERSTEP. Drawing grammar was settled by the second chapter, which draws the grammar words where the first does not, and lo is met more often in the Old Testament than any word seated in this table before today. A reader who cannot see the not cannot read a commandment, and the commandments are most of what law is.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -675,6 +680,98 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "216",
           glyph: "light",
+        },
+      ],
+    },
+    {
+      root: "dam",
+      gloss: "blood",
+      words: [
+        {
+          strong: "1818",
+          glyph: "blood",
+        },
+      ],
+    },
+    {
+      root: "choshek",
+      gloss: "darkness",
+      words: [
+        {
+          strong: "2822",
+          glyph: "darkness",
+        },
+      ],
+    },
+    {
+      root: "ed",
+      gloss: "witness, testimony",
+      words: [
+        {
+          strong: "5707",
+          glyph: "witness",
+        },
+        {
+          strong: "5715",
+          glyph: "witness",
+        },
+        {
+          strong: "5749",
+          glyph: "witness",
+        },
+      ],
+    },
+    {
+      root: "yeled",
+      gloss: "child, boy",
+      words: [
+        {
+          strong: "3206",
+          glyph: "child",
+        },
+        {
+          strong: "3207",
+          glyph: "child",
+        },
+      ],
+    },
+    {
+      root: "lo",
+      gloss: "not, no",
+      words: [
+        {
+          strong: "3808",
+          glyph: "no_entry",
+        },
+      ],
+    },
+    {
+      root: "al",
+      gloss: "not, do not",
+      words: [
+        {
+          strong: "408",
+          glyph: "no_entry",
+        },
+      ],
+    },
+    {
+      root: "min",
+      gloss: "from, out of",
+      words: [
+        {
+          strong: "4480",
+          glyph: "tray_out",
+        },
+      ],
+    },
+    {
+      root: "tebel",
+      gloss: "world",
+      words: [
+        {
+          strong: "8398",
+          glyph: "globe",
         },
       ],
     },
