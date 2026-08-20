@@ -10,7 +10,6 @@ import { html_text_set } from "./html_text_set.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_value_set } from "./html_value_set.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
@@ -31,7 +30,7 @@ export function app_karate_screen_input_validate(
   "Puts live checking on the boxes of one screen: as a person types, every box is measured against the screen's checks and told underneath it what is still wrong, and the button below only comes alive once all of them pass.";
   "The complaints stand in a list under the box they belong to rather than gathered into one message elsewhere, so a person with three things wrong can see all three and which box each of them is about.";
   "Any keystroke in any box checks every box over again. What the button below waits on is all of them being right at the same moment, so the keystroke that puts the last one right has to be able to reach that decision.";
-  "WHAT IS TYPED IS TRIMMED AND PUT BACK IN THE BOX ON EVERY KEYSTROKE, WHICH MAKES A TRAILING SPACE UNTYPEABLE. The message screen hands its message box to this: somebody writing a sentence there presses space, the space is taken off before the next letter arrives, and the words run into each other. Checking the trimmed value is right - writing the trimmed value back into a box somebody is still typing in is the part that does the harm.";
+  "The checks are asked about the trimmed value, and the trimmed value is never put back into the box. It used to be, and that made a trailing space untypeable: the message screen hands its message box to this, so somebody writing a sentence pressed space, the space was taken off before the next letter arrived, and their words ran into each other. Trimming before checking is right; trimming what somebody is still typing is not, and the difference is only one line.";
   list_is_assert_json(inputs, {
     hint: "the screen inputs should be a list to validate",
   });
@@ -55,7 +54,6 @@ export function app_karate_screen_input_validate(
   function validate_input(input) {
     let value = html_value_get(input);
     let trimmed = text_trim(value);
-    html_value_set(input, trimmed);
     let ul = property_get(input, "ul");
     html_clear(ul);
     let valid = true;
