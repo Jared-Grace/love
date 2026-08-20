@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { app_shared_text_reader_apps } from "./app_shared_text_reader_apps.mjs";
 import { app_shared_text_reader_untranslated } from "./app_shared_text_reader_untranslated.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -14,7 +15,7 @@ export async function app_shared_text_reader_untranslated_gate_run() {
     let found = property_get(scan, "found");
     let looked = property_get(scan, "looked");
     list_add_multiple(untranslated, found);
-    console.log("app  " + f_name_app + "  doors watched  " + JSON.stringify(looked));
+    console.log("app  " + f_name_app + "  doors watched  " + json_to(looked));
     for (let one of found) {
       let f_name = property_get(one, "f_name");
       let door = property_get(one, "door");
@@ -22,7 +23,9 @@ export async function app_shared_text_reader_untranslated_gate_run() {
       console.log("english  " + f_name + "  " + door + "  " + words);
     }
   }
-  console.log("apps: " + apps.length + "  untranslated: " + untranslated.length);
+  console.log(
+    "apps: " + apps.length + "  untranslated: " + untranslated.length,
+  );
   if (list_empty_not_is(untranslated)) {
     throw new Error(
       "reader untranslated gate: " +
