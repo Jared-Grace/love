@@ -1,5 +1,7 @@
 export function youtube_signed_in_script() {
-  "The small piece of javascript that, pasted into a youtube page somebody is already signed in on, gives that page the five things a playlist change needs: proof of who is asking, a way to name a playlist, a way to write words under one, a way to put a song into one, and a way to send a song already in one to the end.";
+  "The small piece of javascript that, pasted into a youtube page somebody is already signed in on, gives that page the six things a playlist change needs: proof of who is asking, a way to name a playlist, a way to write words under one, a way to put a song into one, a way to take a song out of one, and a way to send a song already in one to the end.";
+  "Taking a song out is its own named thing rather than a step hidden inside sending one to the end, because it is asked for on its own: a playlist can hold a song that no longer belongs in it, and putting that right is a removal and nothing else. Sending to the end is then what it always was - a removal followed by a putting back - and says so by being written that way.";
+  "Nothing here takes a video down. A song taken out of a playlist is still on the channel and still reachable by anyone holding its link; only the reading order it sat in has changed.";
   "Putting songs in and setting the order right are done together, chapter by chapter, because a song put in lands at the end and so is itself what puts the order wrong. Split apart they would need two visits, and the second would be working from a reading taken before the first one happened.";
   "The signing-in is the part no reader here can do, and it is deliberately left where it already is rather than copied into this repo. Nothing about anybody's account is written down; the page proves who it is from the cookie it already has.";
   "It is kept as words rather than as a file to be loaded because the page refuses to fetch anything from elsewhere, so the only way in is to be pasted, and a paste that has to be typed out fresh each time is a paste that drifts.";
@@ -40,8 +42,12 @@ export function youtube_signed_in_script() {
     "  const actions = video_ids.map(id => ({ action: 'ACTION_ADD_VIDEO', addedVideoId: id }));",
     "  return await window.playlist_edit(playlist_id, actions);",
     "};",
+    "window.playlist_videos_remove = async function (playlist_id, video_ids) {",
+    "  const actions = video_ids.map(id => ({ action: 'ACTION_REMOVE_VIDEO_BY_VIDEO_ID', removedVideoId: id }));",
+    "  return await window.playlist_edit(playlist_id, actions);",
+    "};",
     "window.playlist_video_move_to_end = async function (playlist_id, video_id) {",
-    "  const gone = await window.playlist_edit(playlist_id, [{ action: 'ACTION_REMOVE_VIDEO_BY_VIDEO_ID', removedVideoId: video_id }]);",
+    "  const gone = await window.playlist_videos_remove(playlist_id, [video_id]);",
     "  if (gone !== 'STATUS_SUCCEEDED') { return 'left where it was: ' + gone; }",
     "  const back = await window.playlist_videos_add(playlist_id, [video_id]);",
     "  if (back !== 'STATUS_SUCCEEDED') { return 'TAKEN OUT AND NOT PUT BACK, ' + video_id + ': ' + back; }",
