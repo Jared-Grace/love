@@ -19,6 +19,7 @@ import { property_get } from "./property_get.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
 export async function js_destructure_functionize(ast) {
+  "Writes out the shorthand that takes several names out of one object in a single line, as the plain reading it stands for: the object under a name of its own, then one line for each name asking that object for that property.";
   let variable_name = js_return_identifier_name();
   function lambda(v) {
     let properties = property_path_get_2(v, "node", "properties");
@@ -45,7 +46,7 @@ export async function js_destructure_functionize(ast) {
       let on_false = js_identifier_unique_ast(ast, variable_name);
       result = on_false;
     }
-    let name4 = result;
+    let name = result;
     let block_body = list_get_end(stack, 4);
     list_is_assert_json(block_body, {
       hint: "the function block body should be a list of statements",
@@ -58,7 +59,7 @@ export async function js_destructure_functionize(ast) {
       let name2 = js_identifier_name(value);
       js_assign_object_property_get(
         name3,
-        name4,
+        name,
         block_body,
         block_body_item,
         name2,
@@ -68,7 +69,7 @@ export async function js_destructure_functionize(ast) {
     if (ii) {
       list_remove(block_body, block_body_item);
     } else {
-      let expression = js_parse_expression(name4);
+      let expression = js_parse_expression(name);
       property_set(e, "id", expression);
     }
   }
