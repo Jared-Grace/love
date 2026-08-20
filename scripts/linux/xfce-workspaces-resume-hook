@@ -10,7 +10,7 @@
 #
 # Install (root; the activation lives outside git by necessity -- systemd only
 # runs hooks owned by root under /usr/lib/systemd/system-sleep/):
-#   sudo ln -sfn /home/j/a/repos/love/linux/xfce-workspaces-resume-hook \
+#   sudo ln -sfn /home/j/a/repos/love/scripts/linux/xfce-workspaces-resume-hook \
 #        /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
 # Uninstall:
 #   sudo rm /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
@@ -32,7 +32,7 @@ graphical_user() {
 run_in_user_session() {  # <username>
   local user=$1 uid setup
   uid=$(id -u "$user") || return 0
-  setup="/home/${user}/repos/love/linux/xfce-workspace-shortcuts"
+  setup="/home/${user}/a/repos/love/scripts/linux/xfce-workspace-shortcuts"
   [ -x "$setup" ] || return 0
   runuser -u "$user" -- env \
     DISPLAY=:0 \
