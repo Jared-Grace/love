@@ -3615,12 +3615,29 @@ def argumentless_dispatcher_deny_reason(name, count):
 def alias_full_name(name):
     """The full function name an alias key points at, or None. ai.mjs refuses
     shorthand, so an alias arriving at this seam is a dead name whose fix is
-    exact - name the function the alias currently points at."""
-    try:
-        with open(os.path.join(REPO_ROOT, "data", "aliases.json")) as handle:
-            aliases = json.load(handle).get("aliases") or {}
-    except (OSError, ValueError, AttributeError):
-        return None
+    exact - name the function the alias currently points at.
+
+    Both spellings of the store are tried because the file has moved once
+    already, from data/ into data/given/settings/, and nothing said so: this
+    reads only to word the denial, so a stale path fails open and the alias
+    gets the generic dead-name advice instead - which tells the agent to run
+    `function_new ao`, creating a function that squats an alias key. The
+    verdict is a deny either way, so the damage was to the correction and not
+    to the decision. `guard_gate_run` carries a case for it, which is what
+    turned a silent wrong message into a red gate."""
+    for parts in (("data", "given", "settings", "aliases.json"), ("data", "aliases.json")):
+        try:
+            with open(os.path.join(REPO_ROOT, *parts)) as handle:
+                aliases = json.load(handle).get("aliases") or {}
+        except (OSError, ValueError, AttributeError):
+            continue
+        full = aliases.get(name)
+        if isinstance(full, str) and full:
+            return full
+    return None
+
+
+def alias_full_name_unused(name, aliases):
     full = aliases.get(name)
     if isinstance(full, str) and full:
         return full
