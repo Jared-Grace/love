@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { bible_sentence_end_marks_findings_named_wrongly } from "./bible_sentence_end_marks_findings_named_wrongly.mjs";
+import { bible_sentence_end_marks_findings_named } from "./bible_sentence_end_marks_findings_named.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -17,7 +17,7 @@ export async function bible_sentence_end_marks_findings() {
   let languages = ebible_languages();
   let property_name = bible_folder_key();
   let shipped = list_map_property(languages, property_name);
-  let r = bible_sentence_end_marks_findings_named_wrongly(
+  let r = bible_sentence_end_marks_findings_named(
     recorded,
     property_name,
     shipped,

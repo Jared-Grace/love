@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_psa136 } from "./bible_glyph_chapter_psa136.mjs";
 import { bible_glyph_chapter_1jn03 } from "./bible_glyph_chapter_1jn03.mjs";
 import { bible_glyph_chapter_1jn05 } from "./bible_glyph_chapter_1jn05.mjs";
 import { bible_glyph_chapter_1jn01 } from "./bible_glyph_chapter_1jn01.mjs";
@@ -14,7 +15,9 @@ export function bible_glyph_chapters() {
   "AND IT COST ONE NEW PICTURE, against three for the chapter before it. That is the table starting to pay back: the words this chapter needed were mostly bought by the five chapters ahead of it, so the sixth was cheaper to draw than the fifth despite being twice as long. A later chapter costing less than an earlier one is the whole argument for a table keyed by root, arriving as a measurement rather than as a claim.";
   "THE SEVENTH WAS MEASURED AGAINST ALL OF THEM, which ends the widening the fifth one's note started. Five candidates chose the fourth, twelve the fifth, thirty the sixth, and every unwritten chapter of the testament chose this one - two hundred and fifty four of them, in two and a half seconds, because the reading was taught to find its own set instead of being handed a list somebody typed. There is no longer a step between one chapter and all of them.";
   "AND THIS LIST IS WHAT MAKES THAT ANSWER USEFUL. A survey of every chapter would otherwise put the six already written at the top of itself forever, since coming top is why they were written; the survey reads this list and leaves them out. A list kept so that nothing has to guess what exists turns out to be the thing that keeps the survey honest as well.";
-  "Seven chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE EIGHTH IS THE FIRST FROM THE OTHER TESTAMENT, and it is the only entry on this list whose point is not its share. Seven chapters of Greek were written before a word of Hebrew was, so the Hebrew root table was a promise nobody had cashed: the same pictures over a second set of numbers, so that a reader who learned them in a letter of John can open a psalm and read. The hundred and thirty sixth psalm is that promise cashed, and until it existed the claim was only ever an argument.";
+  "AND THE MEASURING CROSSED THE TESTAMENT WITH IT. The seventh was chosen out of every unwritten chapter of the New Testament, two hundred and fifty four of them; the eighth was chosen out of every chapter of the Old, nine hundred and twenty nine. The survey needed nothing added to do it - it takes the testament's name and reads that testament's table - so the widening that ran out of room in the New found a canon three and a half times the size waiting next to it.";
+  "Eight chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -25,6 +28,7 @@ export function bible_glyph_chapters() {
   let fifth = bible_glyph_chapter_1jn01();
   let sixth = bible_glyph_chapter_1jn05();
   let seventh = bible_glyph_chapter_1jn03();
-  let chapters = [first, second, third, fourth, fifth, sixth, seventh];
+  let eighth = bible_glyph_chapter_psa136();
+  let chapters = [first, second, third, fourth, fifth, sixth, seventh, eighth];
   return chapters;
 }
