@@ -6,7 +6,7 @@ import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-export function g_arc_answer_chapter_code(passages, book_chapter_written) {
+export function g_arc_answer_passage(passages, book_chapter_written) {
   ("The chapter code a written answer meant, read back out of the chapter it wrote. The prompt shows a chapter the way everyone spells one, 1 John 1, and this is the step that turns what came back into the ",
     fn_name("ebible_chapter_code_label"),
     " code the game stores.");
