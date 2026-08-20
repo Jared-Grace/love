@@ -7,6 +7,9 @@ export function app_shared_font_size_larger_text() {
   let texts = {
     en: " Font size larger",
     ur: " لکھائی بڑی کریں",
+    translated_from: {
+      ur: " Font size larger",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_font_larger();
