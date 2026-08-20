@@ -37,7 +37,7 @@ export function g_arc_answer_fields() {
       {
         name: "opener",
         description:
-          "which opener the player chose to reach this turn, copied exactly as it is written on its own line in the opener lines above.",
+          "which opener the player chose this turn, written exactly as it is written on its own line in the opener lines above.",
         examples: ["", ""],
       },
       {
@@ -48,13 +48,13 @@ export function g_arc_answer_fields() {
       {
         name: "reference",
         description:
-          "the passage that answers the before, copied exactly as it stands inside that passage's square brackets above - the book, the chapter, the colon and the verse numbers all together, and without the brackets themselves.",
+          "the reference for the passage that answers the before, copied exactly as it is written inside that passage's square brackets above - the book, the chapter, the colon and the verse numbers all together, and without the brackets themselves.",
         examples: ["", ""],
       },
       {
         name: "after",
         description:
-          "what the person says after the player chooses the correct passage. Leave it empty when the person carries straight on to what they say next, because then their next before is their answer to the passage and an after in front of it would only delay them. Write one when the passage changed something for them: they soften, they grant a point, or they are given something to think about. Never let them grant more than the passage earned.",
+          "what the person says after the player chooses the correct passage. Leave it empty when the person carries straight on to what they say next, because then their next before is their answer to the passage and an after in front of it would only delay them. Write one when the passage changed something for them: they soften, they grant a point, or they are given something to think about. The grant should follow from God changing their heart.",
         examples: ["", ""],
       },
     ],
