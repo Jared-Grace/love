@@ -1,8 +1,7 @@
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
-import { equal } from "./equal.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
+import { js_node_name_try } from "./js_node_name_try.mjs";
 import { js_node_type } from "./js_node_type.mjs";
+import { null_is } from "./null_is.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit_type_cases } from "./js_visit_type_cases.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,16 +15,11 @@ export function js_visit_type_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_visit_type_cases();
   function named_get(node) {
-    let named = js_identifier_name_try(node);
-    let unnamed = equal(named, null);
+    let named = js_node_name_try(node);
+    let unnamed = null_is(named);
     if (unnamed) {
-      let called = js_call_callee_name_try(node);
-      let uncalled = equal(called, null);
-      if (uncalled) {
-        let kind = js_node_type(node);
-        return kind;
-      }
-      return called;
+      let kind = js_node_type(node);
+      return kind;
     }
     return named;
   }
