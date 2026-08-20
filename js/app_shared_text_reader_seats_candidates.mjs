@@ -3,15 +3,13 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { function_reachable_names } from "./function_reachable_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
+import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_map } from "./list_map.mjs";
 import { not } from "./not.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { text_is } from "./text_is.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { equal } from "./equal.mjs";
 export async function app_shared_text_reader_seats_candidates(f_name_app) {
   "$plain f_name_app";
@@ -42,14 +40,9 @@ export async function app_shared_text_reader_seats_candidates(f_name_app) {
         continue;
       }
       for (let argument of call.arguments) {
-        let words = js_literal_value_deep_try(argument);
-        let written = text_is(words);
-        if (not(written)) {
-          continue;
-        }
-        let letters = text_letters_only(words);
-        let anything = text_empty_not_is(letters);
-        if (not(anything)) {
+        let words = js_literal_text_letters_try(argument);
+        let unwritten = null_is(words);
+        if (unwritten) {
           continue;
         }
         property_count_add(candidates, callee.name, 1);
