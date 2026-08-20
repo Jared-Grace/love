@@ -1,8 +1,13 @@
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_style_gap } from "./html_style_gap.mjs";
+import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_button } from "./html_button.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 export function song_image_frame_controls(column, state, on_change) {
   "the buttons above the preview frame: which cut, where the picture sits, and which half it takes; placement cycles behind - half - raw so both readings of the free space can be compared rather than one of them being decided in advance";
   let controls = html_div(column);
