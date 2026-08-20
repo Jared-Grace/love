@@ -185,6 +185,10 @@ export function bible_glyph_characters() {
       character: "🥩",
     },
     {
+      name: "blood",
+      character: "🩸",
+    },
+    {
       name: "skull",
       character: "💀",
     },
