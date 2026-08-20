@@ -1,5 +1,5 @@
+import { functions_app_specific_imports_generic_walked } from "./functions_app_specific_imports_generic_walked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_app_specific_imports_generic } from "./functions_app_specific_imports_generic.mjs";
 import { not_equal } from "./not_equal.mjs";
 export async function app_shared_app_specific_imports_walked() {
   arguments_assert(arguments, 0);

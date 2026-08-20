@@ -1,8 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_verse_numbers_to_pair } from "./ebible_chapter_verse_numbers_to_pair.mjs";
 import { ebible_chapter_verse_numbers_marked } from "./ebible_chapter_verse_numbers_marked.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 export async function ebible_chapter_verse_numbers_for_lines(
   bible_folder,
   chapter_code,
@@ -21,8 +20,7 @@ export async function ebible_chapter_verse_numbers_for_lines(
     bible_folder,
     chapter_code,
   );
-  let left = list_size(words);
-  let words_agree = equal(left, lines);
+  let words_agree = list_size_equal(words, lines);
   if (words_agree) {
     return words;
   }
@@ -30,8 +28,7 @@ export async function ebible_chapter_verse_numbers_for_lines(
     bible_folder,
     chapter_code,
   );
-  let left2 = list_size(marked);
-  let marked_agree = equal(left2, lines);
+  let marked_agree = list_size_equal(marked, lines);
   if (marked_agree) {
     return marked;
   }
