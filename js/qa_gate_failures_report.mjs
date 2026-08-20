@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { qa_gate_failed_prefix } from "./qa_gate_failed_prefix.mjs";
 import { null_is } from "./null_is.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -6,7 +7,6 @@ import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 export async function qa_gate_failures_report(results, gates) {
   "Asks each complaining gate again, on its own, so its output belongs to it and";
@@ -24,8 +24,7 @@ export async function qa_gate_failures_report(results, gates) {
   let size = list_size(results);
   for (let index = 0; less_than(index, size); index++) {
     let result = list_get(results, index);
-    let complained = property_get(result, "red");
-    let quiet = not(complained);
+    let quiet = property_not(result, "red");
     if (quiet) {
       continue;
     }
