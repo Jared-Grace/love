@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { bible_folders_sentence_end_unmarked } from "./bible_folders_sentence_end_unmarked.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
@@ -36,7 +37,8 @@ export async function bible_sentence_end_marks_findings() {
   let unstored = list_filter(recorded, lambda5);
   function lambda6(entry) {
     let nothing = property_equals(entry, "chapter_code", "");
-    return not(nothing);
+    let n = not(nothing);
+    return n;
   }
   let stored = list_filter(recorded, lambda6);
   ("A chapter the far end never answered about is taken out of the reading below rather than counted in it, because the two say opposite things and only one of them is about a bible. Nothing read because there is nothing there is a fact somebody has to decide about; nothing read because the ask failed is this run being unfinished, and the remedy is to measure again rather than to go and look at a bible.");

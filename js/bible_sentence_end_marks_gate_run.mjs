@@ -21,6 +21,8 @@ export async function bible_sentence_end_marks_gate_run() {
   let unnamed = property_get(findings, "unnamed");
   let named_wrongly = property_get(findings, "named_wrongly");
   let unreached = property_get(findings, "unreached");
+  ("A BIBLE STORAGE HOLDS NOTHING FOR IS COUNTED AND NOT REFUSED, which is the one finding here that passes on purpose. It is a real fault and it is not this one: nothing was uploaded, so there was no chapter to read, and every hint below would send its reader to a list of languages or to a set of marks where there is nothing to correct. The gate that names those bibles is the one that can be acted on, and a fault refused in two places is a fault repaired in neither.");
+  let unstored = property_get(findings, "unstored");
   let f_name = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unmeasured, {
     hint: text_combine_multiple([
@@ -83,6 +85,7 @@ export async function bible_sentence_end_marks_gate_run() {
   });
   let r = {
     checked: list_size(shipped),
+    unstored: list_size(unstored),
     unmeasured,
     departed,
     unread,

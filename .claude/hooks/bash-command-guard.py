@@ -4549,6 +4549,74 @@ def task_output_poll_loop_deny_reason(path):
     )
 
 
+# A dispatcher call whose own output is sent to a file. The middle of the
+# pattern deliberately excludes the operators that end a statement, so the
+# redirect has to belong to the SAME statement as the ai.mjs call - otherwise
+# `node scripts/ai.mjs x | tail -5; grep foo > f` would read as one.
+AI_REDIRECT_RE = re.compile(
+    r"scripts/ai\.mjs\s+[a-z0-9_]+[^|;&\n<>]*?>>?\s*([^\s|;&<>]+)"
+)
+
+# `2>&1` is a fd-dup, not a file, and it is written on most of these lines. It
+# is taken off first so the `&` in it cannot be mistaken for backgrounding and
+# the `>` in it cannot be mistaken for the redirect being looked for.
+STDERR_DUP_RE = re.compile(r"\d?>&\d")
+
+
+def ai_output_redirect_target(command):
+    """If `command` sends a `node scripts/ai.mjs <fn>` call's own output to a
+    file, return that file; else None.
+
+    The redirect is redundant. A short answer prints whole, and a long one
+    prints both ends and is filed under gitignore/ai_result_<pid>.json with the
+    path on the last line - so the file the caller is making by hand already
+    exists, written by the command itself. What the redirect adds is a write to
+    a path nothing has approved, which is a human prompt for something the run
+    never needed.
+
+    Sits AFTER the allow decision in main() on purpose. That placement is what
+    makes it safe rather than an argument that it is: a redirect into the
+    session scratchpad or into scripts/temp is already auto-approved and has
+    returned before this is reached, so this can only ever turn a prompt into a
+    self-correction, never an approval into a refusal. Measured over the seven
+    days to 2026-08-20: of 182 proved waits on a redirected dispatcher call,
+    168 went to the scratchpad and were the ungranted FUNCTION asking, not the
+    redirect - the shape is worth about nine waits a week, and reading it as
+    182 is the mistake this comment exists to stop somebody repeating.
+
+    Narrow in the two ways the other text-matched floors are narrow. A `$`
+    anywhere means one part of the line is reading what another part set, which
+    is where a guess must fail closed; a `&` that is not a fd-dup means the
+    command backgrounds, which is a second thing to advise about and not this
+    one. /dev/null is not a file anybody reads back, so discarding output keeps
+    the answer it had."""
+    text = STDERR_DUP_RE.sub("", command)
+    if "$" in text or "`" in text or "&" in text:
+        return None
+    match = AI_REDIRECT_RE.search(text)
+    if match is None:
+        return None
+    target = match.group(1)
+    if target.endswith("/dev/null") or target == "/dev/null":
+        return None
+    return target
+
+
+def ai_output_redirect_deny_reason(target):
+    return (
+        f"Drop the `> {target}` and run the command on its own - the file you "
+        "are making by hand is one the command already writes.\n"
+        "  - a short answer prints whole, so there is nothing to catch\n"
+        "  - a long one prints both ends and files the whole thing under "
+        "`gitignore/ai_result_<pid>.json`, naming that path on its last line - "
+        "read that file\n"
+        "What the redirect adds is a write to a path nothing has approved, "
+        "which is why it reaches the human at all. If you genuinely need a "
+        "file of your own, the session scratchpad is already approved to "
+        "redirect into and needs no permission."
+    )
+
+
 def decide(decision, reason):
     """Emit one verdict and hand back None, so a caller writes
     `return decide("deny", why)` where it used to spell the whole envelope
