@@ -35,7 +35,7 @@ export function youtube_studio_signed_in_script() {
     "window.video_description_set = async function (video_id, description) {",
     "  const json = await window.studio_ask('video_manager/metadata_update', {",
     "    externalVideoId: video_id,",
-    "    description: { newDescription: description, newDescriptionMetadata: { categoryId: 0 } },",
+    "    description: { newDescription: description },",
     "  });",
     "  if (json.error) { return 'refused: ' + json.error.message; }",
     "  if (json.overallResult && json.overallResult.status !== 'STATUS_SUCCEEDED') { return 'refused: ' + JSON.stringify(json.overallResult); }",
