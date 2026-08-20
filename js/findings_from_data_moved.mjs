@@ -1,3 +1,16 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ai_git_noted } from "./ai_git_noted.mjs";
+import { findings_from_data_named } from "./findings_from_data_named.mjs";
+import { folder_repo_love } from "./folder_repo_love.mjs";
+import { data_folder } from "./data_folder.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_last } from "./list_last.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_exists } from "./file_exists.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { finding_from_data_move } from "./finding_from_data_move.mjs";
+import { not } from "./not.mjs";
 export async function findings_from_data_moved() {
   "Move every file named as a finding out of the data folder, one commit each, and say which ones moved and which were already there.";
   "Each file is its own change and so gets its own commit, named after the mover and the two words it was given. Many hands edit this one folder at once, and a run that committed once at the end would hand the whole batch to whichever sweep reached it first, under a bare word that says nothing about what happened.";
