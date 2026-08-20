@@ -1,3 +1,5 @@
+import { js_literal_value_get } from "./js_literal_value_get.mjs";
+import { number_is } from "./number_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { function_ast } from "./function_ast.mjs";
