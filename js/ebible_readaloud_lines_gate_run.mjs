@@ -59,14 +59,11 @@ export async function ebible_readaloud_lines_gate_run() {
   ("A chapter published as a heading and nothing else is watched here rather than next door, because the two lists are told apart by what anybody can do about them. Next door names what a fetch would put right; this names what a fetch would not, and it is a separate record so that neither one can hide inside the other.");
   let heading_only_names = await ebible_readaloud_heading_only_names();
   let heading_only_path = ebible_readaloud_heading_only_baseline_path();
-  let heading_only_write = fn_name(
-    "ebible_readaloud_heading_only_baseline_write",
-  );
+  let heading_only_write = fn_name("ebible_readaloud_heading_only_record");
   let heading_only_hint = text_combine_multiple([
-    "this chapter's reading-aloud edition names its book and its number and then stops, so nobody is shown it, and it was not like that before. That is either a chapter its publishers never published or a download that was cut short, and the two look identical from here. Delete that bible's cached copy and fetch it again with ",
-    f_name_download,
-    ": if words come back, the earlier fetch was the fault; if the same two lines come back, the words are not there to be had and this is one to record with ",
+    "this chapter's reading-aloud edition names its book and its number and then stops, so nobody is shown it, and it was not like that before. That is either a chapter its publishers never published or a download that was cut short, and the two look identical from here. Only fetching that bible again separates them, so hand it to ",
     heading_only_write,
+    ", which does the fetching and then records whatever still comes back as two lines. If words come back instead, the earlier fetch was the fault and the chapter leaves by itself",
   ]);
   await baseline_names_gate_generic(
     heading_only_names,
