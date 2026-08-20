@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
@@ -5,7 +6,6 @@ import { function_reachable_names } from "./function_reachable_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
 import { text_is } from "./text_is.mjs";
 import { equal } from "./equal.mjs";
@@ -49,7 +49,7 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
           continue;
         }
         let letters = text_letters_only(words);
-        let anything = list_empty_not_is(letters);
+        let anything = text_empty_not_is(letters);
         if (not(anything)) {
           continue;
         }
