@@ -34,7 +34,7 @@ list of allowed folder names by hand — it goes stale the next time eBible
 regenerates a page.
 
 Two of their published translations are missing text, and a letter telling them so
-is drafted and **not yet sent**: `letters/ebible_letter.md`. Read it before writing
+is drafted and **not yet sent**: `notes/letters/ebible_letter.md`. Read it before writing
 to them about anything else, so they get one letter rather than two. It lives outside
 `notes/` because it is a thing to send, not an instruction to follow — `notes/` holds
 only what a Claude reads before acting, and `instructions_notes_gate_run` enforces
@@ -131,7 +131,7 @@ So no language is unlocked by the unread set today. Two follow-ups came out of i
   re-litigate `dan1931`, and refuse the next royalty page on this line.
 - **`apyNT`'s copyright page carries the wrong translation's notice.** The title is
   Aparai (Brazil); the body is the Khmer Standard Version's. That is a third defect
-  to tell eBible about — add it to `letters/ebible_letter.md` before sending.
+  to tell eBible about — add it to `notes/letters/ebible_letter.md` before sending.
 
 ### Why Thai and Wolof were dropped rather than replaced
 
