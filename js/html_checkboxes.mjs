@@ -33,6 +33,10 @@ export function html_checkboxes(
   button_next,
   valid_get,
 ) {
+  "A whole screen of tick boxes: a line of words at the top, one big box per choice with its title and the sentence under it, a way back, and a way on that only works once what is ticked is allowed.";
+  "Everything about the screen that is not the choices is handed in as something to call rather than written here - where the main part of the page goes, how the back button is drawn, how the on button is drawn, what counts as allowed. That is what lets one screen serve every place in every app that asks a person to tick something, without any of them agreeing about how their pages look.";
+  "The whole box is what takes the tap, not the little square inside it. A square is a hard thing to hit with a thumb, and a row that only responds in one corner reads as a screen that is not listening.";
+  "Whatever was ticked last time is put back by running that box's own tap, once the boxes all exist. Ticking it directly would set the square and leave everything the tap also does undone - the styling of the box, and the deciding of whether the on button is allowed yet - so the screen would come up looking untouched and refusing to go on.";
   let root = html_clear_context(context);
   let container_main = container_main_get(root);
   button_back(context, container_main);

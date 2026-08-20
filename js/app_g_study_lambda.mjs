@@ -19,6 +19,10 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 export async function app_g_study_lambda(overlay, player, review, close) {
+  "The study quiz for one thing the player has been given to learn: its parts come one at a time as two buttons, the part that really comes next and one that does not, and the player taps the one that belongs.";
+  "The wrong button is drawn from the same passage written wrongly, so the two choices are always a real one and a plausible one. Which side each lands on is decided fresh every time, because a player who learns that the answer is on the left has learned nothing about the passage.";
+  "A wrong tap costs nothing at the time - the button says so and the question stays - but it is remembered, and having got to the end with any wrong tap sends the player back to the beginning of the same passage. That is the whole of the marking: the passage is finished when it has been gone through once with nothing wrong in it, which is what knowing it means.";
+  "Finishing takes it out of the list still to review, marks the player as having studied, saves that, and closes the screen. Saving before closing rather than after is what makes it safe to close the app at that moment.";
   arguments_assert(arguments, 4);
   let r3 = await app_g_study_lambda_property(overlay, player, review);
   let r4 = app_g_study_lambda_sermon_correct_list(r3);
