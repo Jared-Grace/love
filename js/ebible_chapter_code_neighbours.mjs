@@ -12,8 +12,8 @@ export function ebible_chapter_code_neighbours(chapter_code) {
   "One of the two can name a chapter no book has - the code before the first, or the code after the last. Nothing is trimmed here, because whoever asks is looking a chapter up and an absent one simply answers with nothing.";
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let count = ebible_book_code_size();
-  let digits = text_skip(chapter_code, count);
-  let number = Number(digits);
+  let number_text = text_skip(chapter_code, count);
+  let number = Number(number_text);
   let number_before = subtract(number, 1);
   let number_after = add(number, 1);
   let digits_before = number_pad(number_before, count);
