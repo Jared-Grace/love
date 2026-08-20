@@ -4,7 +4,6 @@ import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_last } from "./text_last.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
 import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -18,7 +17,23 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
   "A verse that cannot be fetched is counted as not read rather than as not marked, so a bible missing part of a chapter says so instead of being mistaken for one that writes no marks.";
   "WHY THE CHAPTER GAVE NOTHING IS WRITTEN DOWN BESIDE THE COUNT, because reading nothing has two causes that look identical and only one of them is a fact about a bible. A bible that does not hold this chapter has told us something true; a chapter that would not answer this afternoon has told us how the run went, and recorded as the first it becomes a wrong fact in the shape of a right one - believed until somebody happens to ask that bible again by hand.";
   "Measured 2026-08-20, which is what this line is for. A hundred bibles stood in the record as having no readable verse here; twenty eight of them read in full when asked again the same morning, and the record had been written four hours earlier. The count alone could never have said which twenty eight.";
-  let chapter_code = bible_sentence_end_sample_chapter();
+  "THE CHAPTER IS CHOSEN PER BIBLE AND NOT ONCE FOR ALL OF THEM, which is the correction this line exists to record. One chapter read everywhere wrote seventy one bibles down as unreadable, and forty of those hold books they were never asked for - a bible published as a gospel and four letters has no Luke and is not thereby a language without sentences.";
+  let chapter_code =
+    await bible_folder_sentence_end_sample_chapter(bible_folder);
+  let unstored = text_empty_is(chapter_code);
+  if (unstored) {
+    "A BIBLE STORAGE HOLDS NOTHING FOR IS NOT ASKED, and says so by naming no chapter. Asking would spend a fetch to be told what the record already knows, and the answer would come back looking exactly like a bible that holds the chapter and could not be reached this afternoon.";
+    let nothing = {
+      bible_folder,
+      chapter_code,
+      read: 0,
+      ended: 0,
+      absent: true,
+      unreachable: false,
+      unrecognised: [],
+    };
+    return nothing;
+  }
   let count = bible_sentence_end_sample_count();
   let outcome = await bible_folder_chapter_verses_outcome(
     bible_folder,
