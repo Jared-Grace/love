@@ -12,6 +12,7 @@ export function js_call_named_first_argument_names(ast, f_name) {
   let calls = js_list_calls_named_nodes(ast, f_name);
   let firsts = list_map(calls, js_call_first_argument_try);
   let given = list_filter_null_not_is(firsts);
-  function lambda(item) {}
   let names = list_map(given, js_identifier_name_try);
+  let present = list_filter_null_not_is(names);
+  return present;
 }
