@@ -1,3 +1,4 @@
+import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
 import { song_image_draw_attempt_next } from "./song_image_draw_attempt_next.mjs";
 import { song_image_draw_finish } from "./song_image_draw_finish.mjs";
 import { number_from_text } from "./number_from_text.mjs";
@@ -11,17 +12,19 @@ export async function song_image_draw(number_text) {
   "it is square because the video's background is black and a picture drawn on black has no edge: there is no rectangle to fit into either cut, so one size serves the tall one and the wide one alike";
   "square is also the best shape there is for this, rather than merely a shape that gets away with it, and the reason is worth keeping because it looks like an oversight otherwise. The picture is placed in the half of the frame the words are not in, so what it has to fit is half a cut and not a whole one. Halving the long side of the wide cut leaves a space very slightly taller than it is wide, and halving the long side of the tall cut leaves one very slightly wider than it is tall - and those two are each other's reciprocals, because the cuts themselves are. Two targets either side of square, the same distance out. So a square picture is fitted with about a ninth of the space left over in both, while a picture cut to match either one exactly would leave a fifth over in the other. One picture has to serve both, and this is the shape that serves them equally.";
   "nothing already drawn is written over. Every draw is saved as the next numbered attempt in that couplet's own folder, with the wording that made it written down beside it, because the way a symbol is settled is by drawing it several ways and looking at them together - and while each draw replaced the last there was never anything to look at together. What was lost that way is not recoverable: the wording is in the history, but the picture it made is gone.";
+  "a couplet that repeats another one is drawn into the folder of the couplet it repeats, because that is the folder the picker reads. Asked for a repeated couplet by its own number, this used to draw into a folder of that number, report the path it had written, and be right about every word of that - and no reader ever opens it, so three attempts were bought and shown to nobody. The address is now worked out by one name that both sides call.";
   "the square is what is asked for and not what is kept. It is the canvas the drawing is composed on, and the black left over around the drawing is cut off before this returns - so the shape that reaches the cut is whatever shape the drawing turned out to be, and it is as large in the frame as fitting can make it.";
   let number = number_from_text(number_text);
-  let couplet = song_image_couplet_get(number);
+  let key = song_image_couplet_key(number);
+  let couplet = song_image_couplet_get(key);
   let prompt = song_image_prompt(couplet);
   let model = "flux-2-pro-preview";
   let size = 1024;
-  let attempt = await song_image_draw_attempt_next(number);
-  let path = song_image_drawn_path(number, attempt);
+  let attempt = await song_image_draw_attempt_next(key);
+  let path = song_image_drawn_path(key, attempt);
   await bfl_draw_write(model, prompt, size, size, path);
   let drawn = await song_image_draw_finish(
-    number,
+    key,
     couplet.symbol,
     prompt,
     attempt,
