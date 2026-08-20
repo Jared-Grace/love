@@ -1,3 +1,5 @@
+import { html_style_margin } from "./html_style_margin.mjs";
+import { html_bold_semi } from "./html_bold_semi.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -12,8 +14,8 @@ export function psalms_second_take_pair_row(root, pair) {
   html_style_padding(row, "12px 0");
   html_style_set(row, "border-bottom", "1px solid #333333");
   let name = html_p_text(row, pair.passage);
-  html_style_set(name, "margin", "0 0 8px 0");
-  html_style_set(name, "font-weight", "600");
+  html_style_margin(name, "0 0 8px 0");
+  html_bold_semi(name);
   psalms_second_take_link(row, pair.first, "first singing");
   psalms_second_take_link(row, pair.second, "second singing");
 }

@@ -1,3 +1,5 @@
+import { html_style_margin } from "./html_style_margin.mjs";
+import { html_bold_semi } from "./html_bold_semi.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -12,10 +14,10 @@ export function psalms_verse_mislabelled_row(root, entry) {
   html_style_padding(row, "12px 0");
   html_style_set(row, "border-bottom", "1px solid #333333");
   let said = html_p_text(row, entry.titled + " is really " + entry.sung);
-  html_style_set(said, "margin", "0 0 4px 0");
-  html_style_set(said, "font-weight", "600");
+  html_style_margin(said, "0 0 4px 0");
+  html_bold_semi(said);
   let heard = html_p_text(row, entry.heard);
-  html_style_set(heard, "margin", "0 0 4px 0");
+  html_style_margin(heard, "0 0 4px 0");
   html_style_set(heard, "color", "#aaaaaa");
   psalms_second_take_link(row, entry.video_id, "hear it");
 }
