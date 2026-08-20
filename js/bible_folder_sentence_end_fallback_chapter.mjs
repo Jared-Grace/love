@@ -7,7 +7,7 @@ import { ebible_book_code_size } from "./ebible_book_code_size.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine } from "./text_combine.mjs";
-export async function bible_folder_sentence_end_sample_chapter(bible_folder) {
+export async function bible_folder_sentence_end_fallback_chapter(bible_folder) {
   "$plain bible_folder";
   "The chapter to read in one bible when asking whether that bible marks where its sentences end - chosen from the chapters that bible actually holds.";
   "ONE CHAPTER FOR EVERY BIBLE WAS THE MISTAKE THIS REPLACES. Luke one was read in all of them, and seventy one answered with nothing - not because their languages write no marks but because they do not hold Luke. Forty of those seventy one hold other books and were being written down as unreadable while sitting there readable; a bible published as Mark and four letters is an ordinary thing and there are hundreds of them here.";
