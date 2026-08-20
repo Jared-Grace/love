@@ -67,15 +67,18 @@ export async function bible_sentence_end_marks_gate_run() {
     ended_none,
   });
   ("A NAME LEFT BEHIND BY A BIBLE THAT WENT AWAY IS REFUSED BEFORE THE ONE BESIDE IT, and the two are worth keeping apart even though both are about the same list. This one is certain - the name is in no roster and no reading of it exists anywhere - so there is nothing to measure again and nothing to look at by hand. The one below rests on a reading, and a reading can be redone.");
+  ("THE FIRST TIME THIS FIRED IT WAS ANSWERED BY READING AND NOT BY ASKING, and the hint used to say the opposite. Thai was refused here, the hint said a person had to decide whether the bible was meant to go, and the repo had already decided: one commit had taken it out of the languages, out of the licence baseline and into the sources note, all on its terms, a day earlier. So the hint now sends its reader to look before it tells them to choose. A bible is let go of for its licence far more often than for anything else, and that is written down every time.");
   let f_name9 = fn_name("bible_folders_sentence_end_unmarked");
   let f_name10 = fn_name("ebible_languages");
   list_empty_is_assert_json(named_unshipped, {
     hint: text_combine_multiple([
-      "this name is in the list of bibles whose sentences cannot be found, and this repo ships no bible by that name - so it says nothing about anybody's reading and is only a word left behind. Either the bible went away and the name should go with it, out of ",
-      f_name9,
-      ", or it went away by accident and belongs back in ",
+      "this name is in the list of bibles whose sentences cannot be found, and this repo ships no bible by that name - so it says nothing about anybody's reading and is only a word left behind. Look before deciding: search the history of ",
       f_name10,
-      ". Which of those it is cannot be read off the code, so it is a person's to answer",
+      " for the name, and read notes/bible_sources.md, because a translation is dropped for its licence more often than for anything else and that is always written up. If the bible was let go of on purpose, the name goes with it, out of ",
+      f_name9,
+      ". If nothing anywhere says it was meant to go, it went by accident and belongs back in ",
+      f_name10,
+      ", and that second case is the only one a person has to answer",
     ]),
     named_unshipped,
   });
