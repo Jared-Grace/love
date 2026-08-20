@@ -11,15 +11,11 @@ export function js_scopes_shadowing_cases_gate_run() {
   "A scope carries no name of its own, so a case could not point at one without saying what it is made of - and saying what it is made of is worth more than a count anyway, because the mistake this reading can make is handing back the OUTER scope of a hiding rather than the inner one. Both halves bind the name, so a check that only counted them would pass while a rename moved the binding the rest of the code was written against.";
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_scopes_shadowing_cases();
-  function scope_shown(scope) {
-    let shown = js_scope_label(scope);
-    return shown;
-  }
   function answer(c) {
     let ast = property_js_parse(c, "code");
     let asked = property_get(c, "asked");
     let scopes = js_scopes_shadowing(ast, asked);
-    let shown = list_map(scopes, scope_shown);
+    let shown = list_map(scopes, js_scope_label);
     let sorted = list_sort_text(shown);
     return sorted;
   }
