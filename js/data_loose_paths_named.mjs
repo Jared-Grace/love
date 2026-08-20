@@ -1,3 +1,4 @@
+import { list_first_is } from "./list_first_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { list_filter_ends_with } from "./list_filter_ends_with.mjs";
@@ -5,7 +6,6 @@ import { data_folder } from "./data_folder.mjs";
 import { function_run } from "./function_run.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { text_split } from "./text_split.mjs";
-import { list_first } from "./list_first.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -36,8 +36,7 @@ export async function data_loose_paths_named() {
     if (not(two)) {
       continue;
     }
-    let first = list_first(parts);
-    let inside = equal(first, data);
+    let inside = list_first_is(parts, data);
     if (not(inside)) {
       continue;
     }
