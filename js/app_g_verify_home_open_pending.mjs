@@ -15,7 +15,7 @@ export function app_g_verify_home_open_pending(
 ) {
   arguments_assert(arguments, 5);
   selected_key = verse;
-  sessionStorage.setItem(storage_key, verse);
+  storage_session_specify_set(storage_key, verse);
   app_g_verify_home_highlight_selected(selected_key, verse_buttons);
   html_clear(view);
   let msg = html_p_text(view, "Claude is writing v" + verse + "…");
