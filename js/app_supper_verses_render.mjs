@@ -1,5 +1,5 @@
-import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
-import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
+import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arrow_previous_notext.mjs";
+import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
 import { subtract } from "./subtract.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { html_div } from "./html_div.mjs";
@@ -65,7 +65,7 @@ export async function app_supper_verses_render(root, folders, previous, next) {
     let r3 = list_get_wrap_index(passages, index + 1);
     go(r3);
   }
-  app_shared_button_arrow_left(previous, go_left);
-  app_shared_button_arrow_right(next, go_right);
+  app_shared_button_arrow_previous_notext(previous, go_left);
+  app_shared_button_arrow_next_notext(next, go_right);
   show();
 }

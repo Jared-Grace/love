@@ -1,4 +1,4 @@
-import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
+import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arrow_previous_notext.mjs";
 import { app_shared_bible_chapter_previous } from "./app_shared_bible_chapter_previous.mjs";
 export function app_shared_bible_button_chapter_previous(
   bar,
@@ -9,5 +9,5 @@ export function app_shared_bible_button_chapter_previous(
   async function chapter_previous() {
     await app_shared_bible_chapter_previous(context, chapter_code);
   }
-  app_shared_button_arrow_left(bar, chapter_previous);
+  app_shared_button_arrow_previous_notext(bar, chapter_previous);
 }
