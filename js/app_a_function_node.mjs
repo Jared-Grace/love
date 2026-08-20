@@ -52,6 +52,11 @@ import { html_span_text } from "./html_span_text.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_a_function_node(a) {
+  "Draw one piece of parsed code into the page, picking how to draw it from what kind of piece it is - an import, a call, a name, a written-out value, one side of a comparison.";
+  "It is a list of kinds rather than a run of questions, so every kind is written in one place and reads beside its neighbours. What each entry holds is only what that kind is spelled with: the word in front of it, where the brackets go, which of its parts get drawn next and in what order. Anything longer than that has a function of its own and the entry calls it, which is why entries for a name, a declaration and an if statement are one line each.";
+  "The parts inside a piece are drawn by handing them back to this same function, so nothing here has to know how deep it is or what it is inside. That is what lets an entry for a call say draw the callee, then the brackets, then the arguments, and be finished.";
+  "A kind nobody has written an entry for is not quietly skipped. It is kept in the log with the piece itself, and the person looking at the page is told the kind and that it is still to do - the alternative is a page that silently loses a line of somebody's code, which reads as the code being wrong rather than this being unfinished.";
+  "Several entries refuse rather than draw: a getter, a computed key, optional chaining, an export written as a list of names. Each of those is a shape this repo does not write, so an entry drawing it would be guessing at how it should look from a case that has never occurred.";
   let node = property_get(a, "node");
   let parent = property_get(a, "parent");
   let type = property_get(node, "type");

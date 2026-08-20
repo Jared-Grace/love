@@ -12,6 +12,11 @@ import { subtract } from "./subtract.mjs";
 export async function bible_glyph_survey_occurrences_descending(
   testament_name,
 ) {
+  "$plain testament_name";
+  "Every original word in one testament counted up: how often it occurs, how many different meanings it has been given in English, and whether a picture has been chosen to stand for it - the words with a picture in one list and the words without in another, ready to be read worst first.";
+  "It is the reading the picture Bible is planned from. A word occurring four thousand times with one settled meaning is worth a picture and a word occurring twice is not, so the two numbers have to sit beside each other before anything is drawn.";
+  "Two things are dropped before a meaning is counted. A gloss that says nothing yet is not a meaning, and two glosses differing only in how they are written are one meaning rather than two - counting either would say a word is more scattered than it is, which is the opposite of what the number is read for.";
+  "The way to sort by occurrences is handed back rather than applied, because the caller has two lists to put in that order and one of them it builds itself.";
   arguments_assert(arguments, 1);
   let r = await bible_glyph_survey_sense_spread(testament_name);
   let sense_spread = property_get(r, "sense_spread");
