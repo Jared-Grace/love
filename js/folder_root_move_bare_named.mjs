@@ -1,10 +1,6 @@
-import { folder_repo_love } from "./folder_repo_love.mjs";
-import { git_files_tracked_folder } from "./git_files_tracked_folder.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_read_try } from "./file_read_try.mjs";
-import { text_binary_is } from "./text_binary_is.mjs";
-import { text_includes } from "./text_includes.mjs";
+import { folder_root_move_files_each } from "./folder_root_move_files_each.mjs";
 import { text_quote_double } from "./text_quote_double.mjs";
+import { text_includes } from "./text_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { not } from "./not.mjs";
 export async function folder_root_move_bare_named(before) {
@@ -12,30 +8,21 @@ export async function folder_root_move_bare_named(before) {
   "Reported rather than rewritten, because which of the two a name is takes a reading, and a reading is the one thing a sweep cannot do. A wrong guess here writes a path that nobody ever notices is wrong.";
   "Asked of the name in quotation marks rather than of the name loose in the writing. Loose, an ordinary word answers everywhere: `letters` came back from two hundred and twenty seven files, which is not a report anybody reads - and the one shape actually worth a reading, a folder named as a piece of writing on its way into a path, was in there somewhere among them.";
   "A file that already spells the folder as the start of a path is left off, because that spelling has been dealt with and saying so again only buries the ones that have not.";
-  let repo = folder_repo_love();
+  "This is the only net under the half of a rename that cannot be done by machine, so its length is the whole of whether anybody reads it. Which files it looks at is decided in one place shared with the rewriting half: moving `linux` used to answer with twenty-odd built bundles holding that word inside a browser's description of itself, and the one file worth reading was somewhere among them.";
   let quoted = text_quote_double(before);
   let as_path = text_combine(before, "/");
-  let paths = await git_files_tracked_folder(repo);
   let named = [];
-  for (let tracked_path of paths) {
-    let f_path = path_join([repo, tracked_path]);
-    let text = await file_read_try(f_path);
-    if (not(text)) {
-      continue;
-    }
-    let binary = text_binary_is(text);
-    if (binary) {
-      continue;
-    }
+  async function handle(tracked_path, f_path, text) {
     let spelled = text_includes(text, quoted);
     if (not(spelled)) {
-      continue;
+      return;
     }
     let dealt = text_includes(text, as_path);
     if (dealt) {
-      continue;
+      return;
     }
     named.push(tracked_path);
   }
+  await folder_root_move_files_each(handle);
   return named;
 }
