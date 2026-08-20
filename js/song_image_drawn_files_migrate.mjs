@@ -3,6 +3,7 @@ import { list_map } from "./list_map.mjs";
 import { path_join } from "./path_join.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { file_move } from "./file_move.mjs";
+import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { song_image_drawn_path } from "./song_image_drawn_path.mjs";
@@ -25,6 +26,7 @@ export async function song_image_drawn_files_migrate() {
     let number = Number(digits);
     let path_from = path_join([folder, name]);
     let path_to = song_image_drawn_path(number, 1);
+    await file_parent_exists_ensure(path_to);
     await file_move(path_from, path_to);
     moved.push({
       number,
