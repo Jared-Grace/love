@@ -1,6 +1,6 @@
 import { qa_commit_named_stale_repair_names_now } from "./qa_commit_named_stale_repair_names_now.mjs";
 import { qa_commit_named_entry_stale_is } from "./qa_commit_named_entry_stale_is.mjs";
-import { qa_commit_named } from "./qa_commit_named.mjs";
+import { qa_commit_named_all } from "./qa_commit_named_all.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -17,7 +17,8 @@ export async function qa_commit_named_stale_repair() {
   "A commit whose saying was never kept cannot be helped here and is left exactly as it is, for its neighbour to forget. Nothing is guessed at from a reading alone";
   "Safe to run unasked in both directions. Where it changes a record it replaces a reading with the one the current reader gives, which is by definition the reading a fresh judging would have produced; where it cannot, it changes nothing at all";
   "What the gates FOUND is never touched - green and failed are the frozen commit's own answer and no reader has any business revising them. Only the names read out of the saying are written again";
-  let remembered = await qa_commit_named();
+  "The file is read whole here, and not through the reading everybody else uses. That one leaves out the judgings that no longer stand, which are precisely the ones this exists to put right - and worse, the file is written back from what was read, so a filtered reading would quietly delete every entry it was never even shown. A repair that deletes is not a repair.";
+  let remembered = await qa_commit_named_all();
   let known = await functions_names();
   let repaired = [];
   let unhelpable = [];
