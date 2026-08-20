@@ -33,7 +33,11 @@ export function song_image_nav_column_grid_words(column, state, on_change) {
     html_style_font_size(button, "11px");
     html_cursor_pointer(button);
     html_border_radius(button, "4px");
-    html_style_set(button, "border", "1px solid #3a3a3a");
+    html_style_set(
+      button,
+      "border",
+      "1px solid " + app_shared_color_gray_dark(),
+    );
     let open = equal(couplet.n, state.couplet);
     html_style_background(button, open ? "#ffe994" : "#1a1a1a");
     html_style_set(button, "color", open ? "#000000" : "#bebebe");
