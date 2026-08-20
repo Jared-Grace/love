@@ -6,7 +6,7 @@ import { folder_vscode } from "./folder_vscode.mjs";
 export function love_repo_initialize_paths() {
   let vc = folder_vscode();
   let f_path = file_name_json_folder(vc, "tasks");
-  let d_path = data_folder();
+  let d_path = data_given_machine_folder();
   let file_path_old = path_join([d_path, f_path]);
   let previous = folder_previous();
   let file_path_new = path_join([previous, f_path]);
