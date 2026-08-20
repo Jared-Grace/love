@@ -13,6 +13,12 @@ export function app_shared_bible_offline_save_text(name) {
       before: " ",
       after: " محفوظ کریں",
     },
+    translated_from: {
+      ur: {
+        before: " Save ",
+        after: "",
+      },
+    },
   };
   let words = app_shared_text_reader_language_around(parts, name);
   let text = app_shared_bible_offline_arrow_text(words);
