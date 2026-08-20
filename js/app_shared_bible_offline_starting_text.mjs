@@ -4,6 +4,9 @@ export function app_shared_bible_offline_starting_text() {
   let texts = {
     en: "Starting the download",
     ur: "ڈاؤن لوڈ شروع ہو رہا ہے",
+    translated_from: {
+      ur: "Starting the download",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
