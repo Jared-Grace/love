@@ -1,3 +1,4 @@
+import { app_code_lessons_prod_last_gate_run } from "./app_code_lessons_prod_last_gate_run.mjs";
 import { qa_gate_count_fixed_is_cases_gate_run } from "./qa_gate_count_fixed_is_cases_gate_run.mjs";
 import { qa_gates_miscounted_gate_run } from "./qa_gates_miscounted_gate_run.mjs";
 import { data_rooms_gate_run } from "./data_rooms_gate_run.mjs";
@@ -693,6 +694,7 @@ export function qa_gates() {
     permission_file_hook_live_gate_run,
     bible_storage_empty_gate_run,
     app_code_quiz_leniency_gate_run,
+    app_code_lessons_prod_last_gate_run,
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,
   ];
