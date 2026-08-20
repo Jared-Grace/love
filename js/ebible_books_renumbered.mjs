@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_verse_numbers_compatible_is } from "./ebible_verse_numbers_compatible_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_neighbours } from "./ebible_chapter_code_neighbours.mjs";
@@ -5,9 +6,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function ebible_books_renumbered(
   numbers,
   numbers_reference,
@@ -33,7 +32,6 @@ export function ebible_books_renumbered(
     return moved_is;
   }
   let moved = list_filter(chapter_codes, chapter_moved_is);
-  let books = list_map(moved, ebible_chapter_code_to_book);
-  let renumbered = list_unique(books);
+  let renumbered = list_map_unique(moved, ebible_chapter_code_to_book);
   return renumbered;
 }
