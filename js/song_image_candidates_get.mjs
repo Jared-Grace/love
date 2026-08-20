@@ -1,3 +1,4 @@
+import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
 import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
