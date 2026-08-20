@@ -1,3 +1,5 @@
+import { list_random_item } from "./list_random_item.mjs";
+import { not } from "./not.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -13,20 +15,27 @@ export function app_code_lesson_expression_brackets_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: false && (true || true) asked for its value, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the one the run was missing. A learner who can press the bracketed || first has still never been asked to hold both steps at once, which is the thing they will need in front of real code.");
-  ("The lines are drawn by the very same maker the pressing lesson draws its lines with, so a learner meets one family of lines twice rather than two families that merely look alike. That maker puts the brackets on either side from line to line, so the answer cannot be read off a place on the line here any more than it could there.");
+  ("The lines are drawn by the very same maker the pressing lesson draws its lines with, so a learner meets one family of lines twice rather than two families that merely look alike. Which end the brackets stand at is said here rather than there, because the two lessons need it moved differently.");
   ("A screen holds one line that comes to true and one that comes to false, so neither answer can be reached by habit.");
+  ("It also holds one line with the brackets at each end, which is what the two worked cards above it promise. Drawn a line at a time, the two would fall on the same end about half the visits, and half of those a learner would be shown a sentence saying the marks may move beside two lines that never moved them.");
+  ("Which of the two gets the left end is drawn, and only then does the other take what is left. Settled instead, the end would move in step with the answer and a learner could read what the line comes to off where the brackets sit, without solving anything.");
   ("The wrong answer offered is the opposite word, which is the only other thing a line like this can come to.");
-  function code_wanted(want_true) {
-    "one line of this lesson's family, drawn to come out to want_true, handed over as the text of it";
-    let tree =
-      app_code_lesson_expression_choose_order_brackets_expression(want_true);
+  function code_wanted(want_true, brackets_left) {
+    "one line of this lesson's family, drawn to come out to want_true with the brackets at the end asked for, handed over as the text of it";
+    let tree = app_code_lesson_expression_choose_order_brackets_expression(
+      want_true,
+      brackets_left,
+    );
     let code = app_code_expression_code(tree);
     return code;
   }
   function refill() {
-    "two questions a screen, one line coming to true and one coming to false";
-    let v = code_wanted(true);
-    let v2 = code_wanted(false);
+    "two questions a screen: one line coming to true and one coming to false, one with the brackets at the left end and one at the right";
+    let sides = [true, false];
+    let brackets_left = list_random_item(sides);
+    let v = code_wanted(true, brackets_left);
+    let n = not(brackets_left);
+    let v2 = code_wanted(false, n);
     let list = [v, v2];
     return list;
   }

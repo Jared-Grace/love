@@ -1,8 +1,11 @@
-import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { app_shared_text_reader_language_pickers } from "./app_shared_text_reader_language_pickers.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_file_name } from "./js_file_name.mjs";
+import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -16,13 +19,20 @@ export async function app_shared_text_reader_language_defects() {
   "The set of languages is not written down anywhere and is not asked for. It is whatever the sayings between them already offer, so the first button to gain a language asks every other button for it, and nobody has to remember to widen a list that would otherwise be the one thing left behind.";
   "The whole folder is read rather than an index of who calls what. An index is built at some moment and answers for that moment; a button added since would be missing from it, and a gate that cannot see the newest thing is red exactly when it does not matter and green exactly when it does.";
   "The saying has to stand written out at the place it is used, as words and nothing else. Worked out at the time it is wanted it could still be right, and no reading of the files could show that it was - so what cannot be counted without running the app is a defect here even when the app is fine.";
-  let picker = app_shared_text_reader_language.name;
+  "There is more than one way a saying gets picked, and every one of them is asked about. A saying with a name dropped into the middle of it goes through the one that wraps the language's words around the name, and counting only the plainer way would walk past a whole screen of buttons while reporting a number that looked like all of them.";
+  "The ways of picking are the only files whose own calls do not count. Each of them hands on what it was given rather than saying anything, so a saying written out at neither end is the mechanism working and not a page half turned.";
+  let pickers = app_shared_text_reader_language_pickers();
+  let picker_files = list_map(pickers, js_file_name);
   let records = await js_files_texts();
   let sites = [];
   for (let record of records) {
     let text = record.text;
-    let mentions = text_includes(text, picker);
+    let mentions = text_includes_multiple_is(text, pickers);
     if (not(mentions)) {
+      continue;
+    }
+    let mechanism = list_includes(picker_files, record.file);
+    if (mechanism) {
       continue;
     }
     let ast = js_parse(text);
@@ -51,7 +61,7 @@ export async function app_shared_text_reader_language_defects() {
       if (not(named)) {
         continue;
       }
-      let ours = equal(callee.name, picker);
+      let ours = list_includes(pickers, callee.name);
       if (not(ours)) {
         continue;
       }
@@ -59,8 +69,9 @@ export async function app_shared_text_reader_language_defects() {
         file: record.file,
         object: null,
       };
-      let one = equal(call.arguments.length, 1);
-      if (one) {
+      ("the languages are always the first thing handed over, whichever way the saying is picked, so the rest of what a call takes is no business of this count");
+      let anything = list_empty_not_is(call.arguments);
+      if (anything) {
         let argument = call.arguments[0];
         let object_expression_is = equal(argument.type, "ObjectExpression");
         if (object_expression_is) {
