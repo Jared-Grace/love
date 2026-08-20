@@ -56,10 +56,20 @@ export async function app_g_bless_walk(
     let to = property_get(step, "to");
     let direction = g_direction(from, to);
     app_g_character_face(player, player_img_c, direction);
+    ("the player is written down on the tile they reached, the same way the gospel game writes it: everything the tile knows is copied onto them. Writing only the two numbers would be the smaller change and it is the wrong one - the tile carries what it is made of, and the player standing on it is standing on that.");
+    ("It is written as the step BEGINS and not when the picture arrives. The crowd reads the");
+    ("player's tile to know the one square nobody may step onto, so while a slide is playing");
+    ("a record written at the end still says the player is on the tile behind them - which");
+    ("leaves the tile they are sliding into reading as free. Somebody walks into it and gets");
+    ("there as the player does, and the two are left standing in the same square.");
+    ("The record therefore runs a little ahead of the picture, and that is the right way");
+    ("round of the two. Ahead, it turns somebody away from a tile that is about to be taken;");
+    ("behind, it invites them into one. It is the same rule the crowd's own parting already");
+    ("keeps, where everybody is written onto their new tile the moment they are sent rather");
+    ("than when their slide catches up.");
+    object_assign(player, to);
     await app_g_player_move_animate(to, player_img_c);
     app_g_player_center(to, player_img_c, div_map);
-    ("the player is written down on the tile they reached, the same way the gospel game writes it: everything the tile knows is copied onto them. Writing only the two numbers would be the smaller change and it is the wrong one - the tile carries what it is made of, and the player standing on it is standing on that.");
-    object_assign(player, to);
     on_arrive();
   }
 }
