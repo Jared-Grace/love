@@ -6,6 +6,9 @@ export function app_shared_bible_licences_text() {
   let texts = {
     en: " The bibles here, and who gave them",
     ur: " یہاں کی بائبلیں، اور کن لوگوں نے دیں",
+    translated_from: {
+      ur: " The bibles here, and who gave them",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_books();
