@@ -10,7 +10,7 @@ export function song_image_style() {
   "legibility no longer rides on the colour, which is what makes dropping the gold affordable. It rides on heavy leading, on a dozen large panes and on a shape that fills its square - all three now asked for above - so a deep blue emblem carries as far across a room as a pale gold one did.";
   "the detail inside the shape is asked for as heavy black leading rather than as fine drawing, and that is a decision about the far end rather than about taste. Fine line work is the first thing a small screen eats; leading is thick by its nature, so in this one medium the interior detail is the part that survives being shrunk instead of the part that disappears.";
   "how many panes there are is said as well as how thick the leading is, because asking only for thick leading does not get it. Three crosses and a lamb were drawn from the same sentence and came back with lead lines of completely different weights - the crosses heavy, the lamb hairline. The subject decided it: a fleece invites fifty small divisions and a cross invites a dozen large ones, and the leading then thins to fit however many were drawn. Thickness is what comes out of the pane count rather than something that can be asked for beside it, so the count is the thing to say.";
-  "flat and one tone is said twice over, because a drawing came back with a gradient washed across the gold after being told not to shade. A refusal is obeyed unevenly from one drawing to the next, so the ones that have already been broken once are worth saying positively as well as negatively.";
+  "flat is said twice over, because a drawing came back with a gradient washed across it after being told not to shade, and another grew a pair of brown hooves after being told every pane was one colour. A refusal is obeyed unevenly from one drawing to the next, so the ones that have already been broken once are worth saying positively as well as negatively.";
   "centred and large because the far end of this is a phone held at arm's length, sometimes behind a cracked protector, sometimes by eyes that no longer see small things. A shape that fills its square survives all three; a small shape in a wide margin survives none of them.";
   let style = [
     "as one simple emblem and nothing else",
@@ -18,7 +18,9 @@ export function song_image_style() {
     "flat panes of glass held in heavy black lead lines, the leading thick and bold and drawn inside the shape as well as around it",
     "divided into about a dozen large panes and never more, each pane broad enough to hold its own, so that no lead line is ever thin",
     "drawn flat and frontal with no perspective, no shading and no gradient",
-    "one single flat warm pale gold near #ffe994 for every pane, on a pure black ground",
+    "the panes in the colours of lit church glass - deep cobalt blue, ruby red, emerald green, violet - each pane one flat saturated colour, luminous as glass with daylight behind it",
+    "on a pure black ground",
+    "no gold, no amber and no yellow anywhere in the picture",
     "the shape centred and reaching almost to all four edges of the square, bold enough to read on a phone",
     "reverent and still, not a cartoon, not a modern logo, not a photograph",
     "no background, no scenery, no border and no frame",
