@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_deu30 } from "./bible_glyph_chapter_deu30.mjs";
 import { bible_glyph_chapter_psa138 } from "./bible_glyph_chapter_psa138.mjs";
 import { bible_glyph_chapter_psa029 } from "./bible_glyph_chapter_psa029.mjs";
 import { bible_glyph_chapter_psa136 } from "./bible_glyph_chapter_psa136.mjs";
@@ -39,6 +40,7 @@ export function bible_glyph_chapters() {
   let eighth = bible_glyph_chapter_psa136();
   let ninth = bible_glyph_chapter_psa029();
   let tenth = bible_glyph_chapter_psa138();
+  let eleventh = bible_glyph_chapter_deu30();
   let chapters = [
     first,
     second,
@@ -50,6 +52,7 @@ export function bible_glyph_chapters() {
     eighth,
     ninth,
     tenth,
+    eleventh,
   ];
   return chapters;
 }
