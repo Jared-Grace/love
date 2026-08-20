@@ -13,7 +13,10 @@ export async function app_shared_text_reader_language_from_repair() {
   let written = [];
   for (let f_name of f_names) {
     let args = [f_name];
-    await function_call_commit(app_shared_text_reader_language_from_write, args);
+    await function_call_commit(
+      app_shared_text_reader_language_from_write,
+      args,
+    );
     list_add(written, f_name);
   }
   let remaining = await app_shared_text_reader_language_from_missing();
