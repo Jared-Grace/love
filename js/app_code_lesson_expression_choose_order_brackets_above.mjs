@@ -1,3 +1,5 @@
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_above_generic } from "./app_code_lesson_expression_choose_order_sides_settled_above_generic.mjs";
