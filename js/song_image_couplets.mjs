@@ -7,6 +7,8 @@ export function song_image_couplets() {
   "the burning bush stays and no Trinity symbol joins it, and the reason is what the couplet actually claims. The great I AM, the FATHER's SON says that this one, the SON, is that One who spoke from the bush - an identity, not an arithmetic. A Trinity symbol says GOD is three in one, which is true and is not what these two lines say, and putting it here would generalise away the very claim the hymn has been building towards since its title.";
   "the bush also comes off better than any of the Trinity symbols on the rules already in force. The shield of faith is made of lettering - take the words off and it is three circles and a triangle saying nothing. The triangle with an eye in it now reads to most people as a banknote. Three angels at a table is the Eastern answer and it is three faces. The triquetra alone survives, and it is a fine shape that has nothing to do with Exodus 3.";
   "and the bush is the nearest thing to a picture of the Trinity that these constraints permit anyway. It is a theophany read as GOD present and not consuming, in the East and the West alike; it is where I AM comes from; it is flame, which is already how the SPIRIT is drawn. One shape, no faces, no lettering, nothing counted. If a Trinity symbol is wanted in this film it wants a couplet that claims three in one, and there may not be one.";
+  "the ram stands where Abraham and the angel stood, and it is one thing rather than a scene of four. The oldest way the church drew Genesis 22 is Abraham, Isaac bound on the wood, the ram, and a hand reaching from a cloud - which is also two faces and more panes than the window has. The ram alone keeps the substitution, keeps the covenant that GOD provides, and needs nobody drawn.";
+  "the thorns are why the ram wins rather than merely why it is acceptable. A ram held by its horns in thorns rhymes with the crown of thorns four couplets earlier, so a viewer who has never read Genesis 22 still sees a creature caught in thorns in somebody's place - most of the meaning, from a shape the film has already taught. The cost is honest: a ram needs the chapter in a way a crown does not. Every emblem for this couplet does, since the chapter is the whole point, and this is the only one that leaves a reader without it something rather than nothing.";
   "a symbol may not point at another couplet either. The same scales was written for a human reader who has just seen the first pair; whatever draws this sees one line and has no memory of any other, so the same names nothing and the word is simply lost.";
   let couplets = [
     {
@@ -104,7 +106,7 @@ export function song_image_couplets() {
       verse: 2,
       first: "the FATHER gave",
       second: "HIS only SON",
-      symbol: "Abraham, the angel staying his hand",
+      symbol: "A ram caught by its horns in a thicket of thorns",
       ref: "Genesis 22",
       same_as: 0,
     },
