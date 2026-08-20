@@ -22,8 +22,8 @@ export async function song_image_drawn_files_migrate() {
   let moved = [];
   for (let name of old) {
     let difference = subtract(name.length, ".png".length);
-    let digits = name.slice("couplet_".length, difference);
-    let number = Number(digits);
+    let number_text = name.slice("couplet_".length, difference);
+    let number = Number(number_text);
     let path_from = path_join([folder, name]);
     let path_to = song_image_drawn_path(number, 1);
     await file_parent_exists_ensure(path_to);
