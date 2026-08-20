@@ -17,6 +17,12 @@ export function js_binding_names_cases_gate_run() {
     let sorted = list_sort_text(names);
     return sorted;
   }
-  let r = cases_gate_run_generic(cases, answer, "bound", "name", "binding names");
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "bound",
+    "name",
+    "binding names",
+  );
   return r;
 }

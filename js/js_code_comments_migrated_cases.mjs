@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function js_code_comments_migrated_cases() {
   "Written-out modules carrying a comment, each with the function names the sweep is willing to reference and the code the comment becomes.";
@@ -6,8 +7,10 @@ export function js_code_comments_migrated_cases() {
   let cases = [
     {
       name: "a comment naming nothing known becomes a plain string",
-      code: text_frozen("function f() {\n  // it holds what went wrong\n  h();\n}"),
-      f_names: ["list_add"],
+      code: text_frozen(
+        "function f() {\n  // it holds what went wrong\n  h();\n}",
+      ),
+      f_names: [fn_name("list_add")],
       migrated: text_frozen(
         'function f() {\n  "it holds what went wrong";\n  h();\n}',
       ),
@@ -17,7 +20,7 @@ export function js_code_comments_migrated_cases() {
       code: text_frozen(
         "function f() {\n  // list_add holds what went wrong\n  h(list_add);\n}",
       ),
-      f_names: ["list_add"],
+      f_names: [fn_name("list_add")],
       migrated: text_frozen(
         'function f() {\n  `${fn_name("list_add")} holds what went wrong`;\n  h(list_add);\n}',
       ),
@@ -27,7 +30,7 @@ export function js_code_comments_migrated_cases() {
       code: text_frozen(
         "function f() {\n  try {\n    g();\n  } catch (list_add) {\n    // list_add holds what went wrong\n    h(list_add);\n  }\n}",
       ),
-      f_names: ["list_add"],
+      f_names: [fn_name("list_add")],
       migrated: text_frozen(
         'function f() {\n  try {\n    g();\n  } catch (list_add) {\n    "list_add holds what went wrong";\n    h(list_add);\n  }\n}',
       ),

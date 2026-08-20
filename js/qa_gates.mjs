@@ -216,6 +216,9 @@ import { js_identifiers_rename_unused_number_suffixes_cases_gate_run } from "./j
 import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
 import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
 import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate_run.mjs";
+import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
+import { js_name_taken_is_cases_gate_run } from "./js_name_taken_is_cases_gate_run.mjs";
+import { js_code_comments_migrated_cases_gate_run } from "./js_code_comments_migrated_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
 import { js_free_names_cases_gate_run } from "./js_free_names_cases_gate_run.mjs";
 import { memory_wikilink_tokens_gate_run } from "./memory_wikilink_tokens_gate_run.mjs";
@@ -353,6 +356,8 @@ export function qa_gates() {
     cases_checked_gate_run_generic_gate_run,
     js_free_names_cases_gate_run,
     js_declared_names_cases_gate_run,
+    js_binding_names_cases_gate_run,
+    js_name_taken_is_cases_gate_run,
     js_imports_local_names_cases_gate_run,
     js_identifiers_referenced_names_cases_gate_run,
     js_identifiers_rename_unused_number_suffixes_cases_gate_run,
@@ -366,6 +371,7 @@ export function qa_gates() {
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
     js_comment_migratable_cases_gate_run,
+    js_code_comments_migrated_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
     js_code_literal_site_none_cases_gate_run,
     js_code_getter_literal_cases_gate_run,
