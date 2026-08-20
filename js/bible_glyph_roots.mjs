@@ -19,6 +19,12 @@ export function bible_glyph_roots() {
   "JOY JOINED THE GRACE ROOT RATHER THAN STARTING ONE OF ITS OWN, and it is drawn differently from its own relatives - which is the case the rule about words naming their own glyph was written for, met for the first time here. Grace, joy and rejoice grow off one stem, and a reader seeing the kinship has been told something true; a gift and a smile are still not the same picture, and drawing joy as a gift to make the family tidy would lose the word. The family is the root and the picture is the word, and this is what it looks like when those two answers differ.";
   "OUDEIS WAS REFUSED AND THE REASON IS WORTH KEEPING, because the picture for it looks obvious and is wrong. The set draws a person struck through, which reads as no one exactly, and it would be built out of two glyphs the reader already has - the prohibition and the standing person. But one Strong's number carries both no one and nothing: the Greek is one word inflected, and apart from Me you can do nothing is the same number as no one has seen God. A struck-through person is right for half of its uses and says the wrong noun in the other half, and this table would rather leave a word in English than answer the reader's question wrongly.";
   "A ZERO WAS THE OTHER CANDIDATE AND FALLS TO THE ARGUMENT ETERNAL ALREADY FELL TO. Not even one is what the word is built from, so the mark fits the sense - but a zero is arithmetic rather than a thing anybody can point at, and pointing is the whole method here. The same objection that turned down the infinity sign turns this down, and a rule that only holds when it is convenient is not one.";
+  "BLOOD, FELLOWSHIP AND WALKING WERE ADDED FOR THE FIRST LETTER OF JOHN on 2026-08-20, and they were found the cheap way rather than the dear one. The chapter was measured before a word of it was written, its commonest undrawn words were read off, and the grammar and the pronouns were skipped past exactly as they were for John three and John fifteen. That is now the third time the measurement has answered before the drawing did, and it is the method to reach for first.";
+  "THE HANDSHAKE IS THE HALF OF FELLOWSHIP A READER CAN POINT AT. Koinonia is having something in common - it is not the greeting and it is not the agreement - so the mark understates the word, and understating it is allowed where overstating it is not. Two hands joined says these two are together in something, and what they are together in is the sentence's own business; a blank there would have asked the reader the whole question, and this asks them only the second half of it.";
+  "PERIPATEO TAKES THE WALKING GLYPH THAT POREUOMAI ALREADY HAS, and the survey will report that as two roots wanting one picture, so this is the answer to that report rather than an oversight. They are two roots and one action: one is to go somewhere and the other is to walk about, and a reader who sees a person walking in both places has been told something true both times. The rule this table refuses to break is splitting one word across two pictures, and nothing forbids two words sharing one.";
+  "AND WALK IN THE LIGHT IS A FIGURE THE WRITER MADE, not one the mark adds. A person walking is what the Greek word says, plainly, and John is the one who put it beside the light; the reader meets the same figure the first readers met and does the same work with it. That is the whole difference between this and the equals sign, which put a claim into a sentence that its writer had deliberately kept out.";
+  "FOUR WORDS OF THAT CHAPTER WERE REFUSED and the reasons are close relatives of each other. Confess is saying the same thing as - a mouth would draw speaking and lose the agreeing, which is the entire word. Liar and deceive both need a mark for a thing said that is not so, and every candidate the set offers draws the PERSON as false rather than the saying, which convicts where the sentence is diagnosing. Unrighteousness is a negation of a word this table has not drawn yet, and a negation cannot be drawn before what it negates.";
+  "CLEANSE WAS THE CLOSE ONE AND IT IS LEFT IN ENGLISH FOR NOW. Water would be right for washing and this verse is not washing - the blood is what cleanses, so a mark showing water beside a mark showing blood puts two liquids in one sentence and lets the reader pick the wrong one as the agent. It is a picture to find rather than a decision that has been made, which is the same state ginomai is in and is written the same way here.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -860,6 +866,36 @@ export function bible_glyph_roots() {
         {
           strong: "240",
           glyph: "arrow_both_ways",
+        },
+      ],
+    },
+    {
+      root: "haima",
+      gloss: "blood",
+      words: [
+        {
+          strong: "129",
+          glyph: "blood",
+        },
+      ],
+    },
+    {
+      root: "koinonia",
+      gloss: "fellowship, sharing in common",
+      words: [
+        {
+          strong: "2842",
+          glyph: "handshake",
+        },
+      ],
+    },
+    {
+      root: "peripateo",
+      gloss: "walk, walk about",
+      words: [
+        {
+          strong: "4043",
+          glyph: "walking",
         },
       ],
     },
