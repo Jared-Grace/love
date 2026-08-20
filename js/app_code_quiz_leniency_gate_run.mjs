@@ -25,7 +25,7 @@ export async function app_code_quiz_leniency_gate_run() {
     fn_name("app_code_quiz_leniency_baseline_write"),
   );
   let r = {
-    checked: list_size(offenders),
+    offenders: list_size(offenders),
   };
   return r;
 }
