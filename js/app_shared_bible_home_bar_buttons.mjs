@@ -1,3 +1,5 @@
+import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
+import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_bible_button_chapter_next } from "./app_shared_bible_button_chapter_next.mjs";
 import { app_shared_bible_verses } from "./app_shared_bible_verses.mjs";

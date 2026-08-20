@@ -6,6 +6,7 @@ export function qa_gate_told_answered_cases() {
   "The third is the one this exists for. A share of the gates stopped without complaining about a single gate, which is what a neighbour saving a file part way through leaves behind, and it was written into the shared record twice before anything told it apart from a verdict. While one of those sat at the front of the record, every cheap reading of what is red answered that nothing is - and the deployment it was holding out was the one thing that reading is for.";
   "The fourth has no list of gates at all rather than an empty one. The record is a file written over months by readers that have been replaced since, so an entry missing the field outright is a shape that reaches this, and it must land where an empty list lands - anything else would treat the oldest entries as though they had answered.";
   arguments_assert(arguments, 0);
+  let f_name = fn_name("bundle_size_gate_run");
   let cases = [
     {
       told: {
@@ -18,7 +19,7 @@ export function qa_gate_told_answered_cases() {
     {
       told: {
         green: false,
-        failed: [fn_name("bundle_size_gate_run")],
+        failed: [f_name],
       },
       answer: true,
       why: "a gate complained and can be named, so somebody can go and look at what it complained about - red is an answer",

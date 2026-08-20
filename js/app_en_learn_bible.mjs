@@ -1,3 +1,6 @@
+import { language_code_key } from "./language_code_key.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_language_code_reader_set } from "./app_shared_language_code_reader_set.mjs";
 import { app_en_learn_bible_home } from "./app_en_learn_bible_home.mjs";
 import { app_en_learn_bible_screens } from "./app_en_learn_bible_screens.mjs";
 import { app_shared_bible_initialize } from "./app_shared_bible_initialize.mjs";
@@ -11,7 +14,11 @@ export async function app_en_learn_bible(context) {
   "The app is named for the language being learned rather than for the language being read from, so a reader of another language is served by this same app choosing another store of explanations, not by an app of their own.";
   "Urdu is the one language explained so far, so it is what this opens in. Every other bible app here opens in english, which is the one thing a reader learning english cannot read - they would arrive at a verse in the language they came here not knowing, twice over, and nothing they could read at all until they found the settings.";
   "It offers only the languages it can explain a word in, so the settings show no chooser while that is one language. Every other bible reader here says nothing on the matter and is handed all of them, which is what they have always done.";
+  "It is the one app here that speaks to its reader in something other than english, and it says so once, at the start. Everything that has to know - which end a row of buttons begins at, and in time what is written on them - asks that one answer rather than guessing from whatever text happens to be on the screen, which here is english on purpose.";
   let language = ebible_language_urdu();
+  let property_name = language_code_key();
+  let language_code = property_get(language, property_name);
+  app_shared_language_code_reader_set(language_code);
   app_shared_bible_languages_chosen_default_ensure(language);
   let languages_offered = app_en_learn_bible_languages_offered();
   let key = app_shared_bible_languages_offered_key();
