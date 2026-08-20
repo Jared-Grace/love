@@ -34,14 +34,6 @@ export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
     "these explanations name a word built out of the root as though it were the root, which hands a learner a word nobody speaks - write the root the dictionary gives, or say plainly that the word named is a further layer built on it",
     name_write,
   );
-  let chapter_codes = await gloss_chapters_stored(app_ceb_bible_gloss_generate);
-  let chapters = list_size(chapter_codes);
-  let added = property_get(told, "added");
-  let stale = property_get(told, "stale");
-  let r = {
-    chapters,
-    added,
-    stale,
-  };
+  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
   return r;
 }

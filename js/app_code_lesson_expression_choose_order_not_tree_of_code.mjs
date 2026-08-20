@@ -1,5 +1,5 @@
 import { text_wrapped_inner } from "./text_wrapped_inner.mjs";
-import { app_code_lesson_expression_choose_order_not_expression_parts } from "./app_code_lesson_expression_choose_order_not_expression_parts.mjs";
+import { app_code_expression_node_not_of_parts } from "./app_code_expression_node_not_of_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -28,7 +28,6 @@ export function app_code_lesson_expression_choose_order_not_tree_of_code(code) {
     right: list_get(numbers, 1),
     symbol: list_get(words, 1),
   };
-  let tree =
-    app_code_lesson_expression_choose_order_not_expression_parts(parts);
+  let tree = app_code_expression_node_not_of_parts(parts);
   return tree;
 }
