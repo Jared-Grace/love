@@ -1,12 +1,11 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-import { not } from "./not.mjs";
 import { text_prefix_without_try } from "./text_prefix_without_try.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 export function app_code_lesson_decoy_comment_ignored(question, answer) {
@@ -28,8 +27,7 @@ export function app_code_lesson_decoy_comment_ignored(question, answer) {
   let answer_lines = text_split_newline(answer);
   function answer_lacks(line) {
     "true of a line the right answer does not have";
-    let had = list_includes(answer_lines, line);
-    let lacks = not(had);
+    let lacks = list_includes_not(answer_lines, line);
     return lacks;
   }
   let ignored_lines = text_split_newline(ignored);
