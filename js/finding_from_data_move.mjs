@@ -21,7 +21,9 @@ export async function finding_from_data_move(name, path_fn_name) {
     hint: "the findings folder already holds a file of this name",
     to_spelled,
   });
-  let fn_path = function_path(path_fn_name);
+  let code = folder_js();
+  let leaf2 = text_combine(path_fn_name, ".mjs");
+  let fn_path = path_join([repo, code, leaf2]);
   let text = await file_read_try(fn_path);
   assert_json(text, {
     hint: "no function of this name to repoint",
@@ -50,7 +52,7 @@ export async function finding_from_data_move(name, path_fn_name) {
   await file_overwrite_uncached(fn_path, written);
   await function_auto_checked(path_fn_name);
   let said = await function_run(path_fn_name, []);
-  assert_equal_json(said, to_spelled, {
+  equal_assert_json(said, to_spelled, {
     hint: "the repointed function does not say the file is in the findings folder, so the file has been left where it was",
     path_fn_name,
   });
