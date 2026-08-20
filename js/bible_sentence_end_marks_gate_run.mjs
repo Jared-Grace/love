@@ -18,39 +18,16 @@ export async function bible_sentence_end_marks_gate_run() {
   ("A page that carries a reading on to the end of a sentence asks every language the reader chose whether this verse finished one. A bible that writes its full stop in a mark nobody here has met answers no every time, so that page reaches for one more verse over and over until whatever bound it holds runs out - and what the reader gets is twenty-five verses where they asked for one, with nothing anywhere saying why.");
   ("Nothing about adding a bible asks that question. So the answer is measured for every bible on the list and kept in a file, and this refuses a bible that is on the list and not in the file. A new language then arrives loud instead of arriving as a page that quietly gives too much.");
   ("This reads only the file. The measuring reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run.");
-  let path = bible_sentence_end_marks_path();
-  let recorded = await file_read_json(path);
-  let languages = ebible_languages();
-  let property_name = bible_folder_key();
-  let shipped = list_map_property(languages, property_name);
-  let measured = list_map_property(recorded, property_name);
-  let unmeasured = list_difference(shipped, measured);
-  let departed = list_difference(measured, shipped);
-  ("A bible nothing could be read from is told apart from one read and found to write no marks, because only the second is a fact about a language. The first is an errand that failed - a folder named wrongly, or a chapter that is not there - and reading it as a language without sentences is exactly the mistake the first hand measurement made with Urdu.");
-  function lambda4(entry) {
-    let never = property_equals(entry, "unreachable", true);
-    return never;
-  }
-  let unreached = list_filter(recorded, lambda4);
-  ("A chapter the far end never answered about is taken out of the reading below rather than counted in it, because the two say opposite things and only one of them is about a bible. Nothing read because there is nothing there is a fact somebody has to decide about; nothing read because the ask failed is this run being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
-  function lambda(entry) {
-    let never = property_equals(entry, "unreachable", true);
-    if (never) {
-      return false;
-    }
-    let none = property_equals(entry, "read", 0);
-    return none;
-  }
-  let unread = list_filter(recorded, lambda);
-  function lambda2(entry) {
-    let none = property_equals(entry, "ended", 0);
-    return none;
-  }
-  let ended_none = list_filter(recorded, lambda2);
-  let unfindable = list_map_property(ended_none, property_name);
-  let named = bible_folders_sentence_end_unmarked();
-  let unnamed = list_difference(unfindable, named);
-  let named_wrongly = list_difference(named, unfindable);
+  ("What is wrong is read out next door and only refused here. Six things can be wrong and each of them has several lines to say to whoever reads it, so with the reading above them as well neither half could be seen whole.");
+  let findings = await bible_sentence_end_marks_findings();
+  let shipped = property_get(findings, "shipped");
+  let unmeasured = property_get(findings, "unmeasured");
+  let departed = property_get(findings, "departed");
+  let unread = property_get(findings, "unread");
+  let ended_none = property_get(findings, "ended_none");
+  let unnamed = property_get(findings, "unnamed");
+  let named_wrongly = property_get(findings, "named_wrongly");
+  let unreached = property_get(findings, "unreached");
   let f_name = fn_name("bible_sentence_end_marks_write");
   list_empty_is_assert_json(unmeasured, {
     hint: text_combine_multiple([
