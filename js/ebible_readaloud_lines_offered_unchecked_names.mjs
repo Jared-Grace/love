@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { ebible_readaloud_lines_path } from "./ebible_readaloud_lines_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -6,7 +7,6 @@ import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_readaloud_heading_only_chapters } from "./ebible_readaloud_heading_only_chapters.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 export async function ebible_readaloud_lines_offered_unchecked_names() {
   "Every bible a reader can choose that the record names with chapters of it unread, each named by its folder alone.";
   "One flat name apiece, because what watches this list only ever asks whether a name is in it. How many chapters went unread and whether the bible was measured at all are worth knowing and are next door; a ratchet needs neither, and putting them in a name would make the same bible a different name every time a download half finished.";
@@ -24,8 +24,11 @@ export async function ebible_readaloud_lines_offered_unchecked_names() {
   function fetchable_is(counts) {
     let measured = property_get(counts, "measured");
     if (measured) {
-      let item = property_get(counts, property_name);
-      let anything_to_fetch = list_includes(unfetched_folders, item);
+      let anything_to_fetch = property_in_list(
+        counts,
+        property_name,
+        unfetched_folders,
+      );
       return anything_to_fetch;
     }
     ("A bible the measuring never reached has no chapters in the split at all, because the split reads what was measured. Nothing of it has been looked at, so everything of it is still to fetch.");
