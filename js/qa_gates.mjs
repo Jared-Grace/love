@@ -223,6 +223,8 @@ import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_r
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
 import { js_scopes_shadowing_cases_gate_run } from "./js_scopes_shadowing_cases_gate_run.mjs";
+import { js_scope_binds_is_cases_gate_run } from "./js_scope_binds_is_cases_gate_run.mjs";
+import { js_scopes_binding_cases_gate_run } from "./js_scopes_binding_cases_gate_run.mjs";
 import { js_name_taken_is_cases_gate_run } from "./js_name_taken_is_cases_gate_run.mjs";
 import { js_code_comments_migrated_cases_gate_run } from "./js_code_comments_migrated_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
