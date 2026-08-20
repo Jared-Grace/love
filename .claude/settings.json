@@ -1885,6 +1885,7 @@
       "Bash(node scripts/ai.mjs js_scope_binding_names_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs js_function_names_return_own_not:*)",
       "Bash(node scripts/ai.mjs functions_calls_to_each_candidates:*)",
+      "Bash(node scripts/ai.mjs permission_replay_domains:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3672,6 +3673,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args js_scope_binding_names_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args js_function_names_return_own_not:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args functions_calls_to_each_candidates:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_replay_domains:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5458,6 +5460,7 @@
       "Bash(node scripts/aig.mjs js_scope_binding_names_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs js_function_names_return_own_not:*)",
       "Bash(node scripts/aig.mjs functions_calls_to_each_candidates:*)",
+      "Bash(node scripts/aig.mjs permission_replay_domains:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -7244,7 +7247,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args js_shadowing_names_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_scope_binding_names_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_function_names_return_own_not:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args functions_calls_to_each_candidates:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args functions_calls_to_each_candidates:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_replay_domains:*)"
     ],
     "defaultMode": "acceptEdits"
   },
