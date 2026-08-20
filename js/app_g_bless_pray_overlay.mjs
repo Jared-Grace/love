@@ -1,13 +1,10 @@
+import { app_g_bless_amen } from "./app_g_bless_amen.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { emoji_pray } from "./emoji_pray.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { bless_prayer_rung } from "./bless_prayer_rung.mjs";
-import { bless_prayer_read_ms } from "./bless_prayer_read_ms.mjs";
 export function app_g_bless_pray_overlay(container_map, rung, on_amen) {
   arguments_assert(arguments, 3);
   ("The prayer itself, held up over the world while the player reads it aloud.");
