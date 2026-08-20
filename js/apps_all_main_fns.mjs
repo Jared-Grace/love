@@ -23,6 +23,7 @@ export function apps_all_main_fns() {
     fn_name("app_message"),
     fn_name("app_next"),
     fn_name("app_original_bible"),
+    fn_name("app_privacy_policy"),
     fn_name("app_replace"),
     fn_name("app_reply"),
     fn_name("app_reply_local"),

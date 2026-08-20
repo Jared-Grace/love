@@ -71,7 +71,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A wide shallow washing basin of plain grey stone, sitting straight on the ground with its flat underside resting on the ground along its whole width, brimful of clear blue water that is spilling over its rim and running down its outside",
+        "A wide shallow washing basin of plain grey stone resting flat on the ground, brimful of clear blue water spilling over its rim and running down its outside",
       ref: "Matthew 27:24",
       same_as: 0,
     },
