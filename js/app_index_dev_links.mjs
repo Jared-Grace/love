@@ -9,7 +9,7 @@ export function app_index_dev_links() {
       app_fn: fn_name("app_g_bless"),
       hash: {},
       label: "Praying game",
-      text: "The praying game's first screen - look a way, see who is standing in front of you, and pray for them. Nothing is saved and there is nowhere to walk yet",
+      text: "Two streets of people standing at their doors. Pray for anybody you can see, or tap the ground to walk down to the other street. Nothing is saved, so every visit is a street nobody has prayed for yet",
     },
     {
       app_fn: fn_name("app_ceb_bible"),
