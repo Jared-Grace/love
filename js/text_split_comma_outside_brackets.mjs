@@ -27,7 +27,8 @@ export function text_split_comma_outside_brackets(t) {
     if (closes) {
       depth = subtract(depth, 1);
       let unopened = less_than(depth, 0);
-      assert_json(not(unopened), {
+      let b = not(unopened);
+      assert_json(b, {
         hint: "this list closes a bracket that was never opened — would you like to check the brackets in it match up?",
         t,
       });
