@@ -1,9 +1,9 @@
 import { text_frozen } from "./text_frozen.mjs";
 export function text_split_comma_outside_brackets_cases() {
-  ("Lists written the way a command line receives them, each one saying what cutting it at its own commas should give back, and a refusal written as nothing at all.");
-  ("The plain cases are here because every one of them worked before this existed and has to keep working unchanged. A word with no bracket in it is what every transform in the repo already hands over, and if one of those ever came back different the cost would land on calls nobody was thinking about.");
-  ("The refusals carry the rule that a mismatched bracket is not quietly absorbed. What they guard is somebody meeting one of them, reading it as a bug, and taking it out - after which a list written one bracket short comes back one part short and says nothing.");
-  ("Each list is held as fixed text, because the pass that canonicalizes this file would otherwise read a name inside one as a reference and change what the case says.");
+  "Lists written the way a command line receives them, each one saying what cutting it at its own commas should give back, and a refusal written as nothing at all.";
+  "The plain cases are here because every one of them worked before this existed and has to keep working unchanged. A word with no bracket in it is what every transform in the repo already hands over, and if one of those ever came back different the cost would land on calls nobody was thinking about.";
+  "The refusals carry the rule that a mismatched bracket is not quietly absorbed. What they guard is somebody meeting one of them, reading it as a bug, and taking it out - after which a list written one bracket short comes back one part short and says nothing.";
+  "Each list is held as fixed text, because the pass that canonicalizes this file would otherwise read a name inside one as a reference and change what the case says.";
   let cases = [
     {
       written: text_frozen("a"),
