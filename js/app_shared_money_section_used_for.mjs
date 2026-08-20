@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_money_section_used_for() {
   "The part of what this app does with money that answers where a gift actually goes.";
   let texts = {

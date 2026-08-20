@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_money_section_tithe() {
   "The part of what this app does with money that answers whether a gift here counts as a reader's tithe.";
   "It says what is done with the tithe once it arrives as well as whether it may be given, because a reader handing over a tenth is entitled to know it is treated the way a tenth is meant to be.";
