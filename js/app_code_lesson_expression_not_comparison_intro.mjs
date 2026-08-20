@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
@@ -67,32 +68,12 @@ export function app_code_lesson_expression_not_comparison_intro(root) {
     bracketed,
   ]);
   html_div_cycle_code(reach, ["And then we have: ", whole]);
-  let worked = app_code_container_light_blue(root);
-  html_div_cycle_code(worked, [
-    "For ",
+  app_code_lesson_expression_worked_card_not(
+    root,
     whole,
-    ", we do ",
     comparison,
-    " first",
-  ]);
-  html_div_cycle_code(worked, [
-    "",
-    comparison,
-    " is ",
     false_word,
-    ", so ",
-    whole,
-    " is ",
     not_false,
-  ]);
-  html_div_cycle_code(worked, [
-    "",
-    not_false,
-    " is ",
     true_word,
-    ", so ",
-    whole,
-    " is ",
-    true_word,
-  ]);
+  );
 }
