@@ -1,10 +1,7 @@
-import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
+import { app_code_expression_node_truths_wanted } from "./app_code_expression_node_truths_wanted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { list_get } from "./list_get.mjs";
-import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
-import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
 export function app_code_lesson_expression_choose_order_brackets_moved_expression(
   want_true,
   brackets_left,
@@ -15,44 +12,15 @@ export function app_code_lesson_expression_choose_order_brackets_moved_expressio
   ("Round the last two the brackets turn the order over, and round the first two they change nothing, because the && was going to gather its sides first anyway. Both are printed, and the second is the point as much as the first - a learner meeting only brackets that change something would go on to read every pair as a warning.");
   ("The trues and falses are chosen from the outside in, the same way the rest of this run chooses them. What the whole line has to come to says what the outer operator needs on each side of it, and what it needs on the gathered side says what the inner one has to come to. So neither operator is asked what it means - each is asked which pairs reach the answer wanted.");
   ("Where the brackets go is handed in rather than settled here, so the lesson drawing on this maker decides how it moves them. It has to move, however it is decided: left always at one end, the answer would sit at a fixed place on the line and a learner could press it right every time without reading a mark.");
+  ("Nothing here branches on where the brackets fall, because on this lesson's line nothing else moves with them: the && is read first and the || second at both ends, and the side is the only thing handed on. Round the first two the brackets gather the && , which the line would have done on its own; round the last two they gather the || , which the line would otherwise have left until last.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  if (brackets_left) {
-    ("the brackets gather the && , which is what the line would have done on its own, so the || is left holding what that comes to");
-    let truths = app_code_operator_truths_wanted_nested(
-      or_symbol,
-      and_symbol,
-      want_true,
-      brackets_left,
-    );
-    let first_truth = list_get(truths, 0);
-    let second_truth = list_get(truths, 1);
-    let last_truth = list_get(truths, 2);
-    let tree_left = app_code_expression_node_left_operator_first_bracketed(
-      first_truth,
-      and_symbol,
-      second_truth,
-      or_symbol,
-      last_truth,
-    );
-    return tree_left;
-  }
-  ("the brackets gather the || , which the line would have left until last, so the && is left holding what that comes to");
-  let truths_right = app_code_operator_truths_wanted_nested(
+  let tree = app_code_expression_node_truths_wanted(
     and_symbol,
     or_symbol,
     want_true,
     brackets_left,
+    true,
   );
-  let first_truth_right = list_get(truths_right, 0);
-  let second_truth_right = list_get(truths_right, 1);
-  let last_truth_right = list_get(truths_right, 2);
-  let tree_right = app_code_expression_node_right_operator_first_bracketed(
-    first_truth_right,
-    and_symbol,
-    second_truth_right,
-    or_symbol,
-    last_truth_right,
-  );
-  return tree_right;
+  return tree;
 }
