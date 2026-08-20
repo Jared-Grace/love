@@ -372,6 +372,7 @@ export function qa_gates() {
     cases_checked_gate_run_generic_gate_run,
     js_free_names_cases_gate_run,
     js_declared_names_cases_gate_run,
+    js_function_params_all_cases_gate_run,
     js_binding_names_cases_gate_run,
     js_scope_binding_names_cases_gate_run,
     js_shadowing_names_cases_gate_run,
