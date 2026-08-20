@@ -1,9 +1,8 @@
+import { text_split_last } from "./text_split_last.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { function_run } from "./function_run.mjs";
-import { text_split } from "./text_split.mjs";
-import { list_last } from "./list_last.mjs";
 import { data_given_folder } from "./data_given_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists_assert_json } from "./file_exists_assert_json.mjs";
@@ -29,8 +28,7 @@ export async function data_file_room_move(path_fn_name, room) {
   arguments_assert(arguments, 2);
   let repo = folder_repo_love();
   let from_spelled = await function_run(path_fn_name, []);
-  let parts = text_split(from_spelled, "/");
-  let leaf = list_last(parts);
+  let leaf = text_split_last(from_spelled, "/");
   let given = data_given_folder();
   let to_spelled = path_join([given, room, leaf]);
   let from = path_join([repo, from_spelled]);
