@@ -3,6 +3,7 @@ export function psalms_videos_verse_mislabelled() {
   "The songs whose title names a verse other than the one they sing, each as the watch code, the verse the title claims, and the verse the words actually are.";
   "Every one of these was heard rather than worked out. Youtube writes down what it hears in a video, and the words of a psalm are distinctive enough that one line of them settles the question - the voice of the Lord is powerful is Psalm 29 verse 4 and can be nothing else, whatever the title over it says.";
   "The first six were found by a repeated title: a wrong title lands on top of the right one and the collision is visible. That way finds nothing where a wrong title collides with nobody, so a second way was needed, and it is the hole. A song under the wrong title leaves the verse it really sings looking unsung, so every verse of a chapter the channel has otherwise sung through is a place to listen, and the songs on either side of it are the ones to listen to. That is how the seventh was found.";
+  "There turned out to be two kinds of wrong title and the second kind is quieter. The first kind names the wrong verse outright, and often the wrong psalm with it. The second kind is right about where the song ends and starts a verse too late - a song that sings verse five and verse six is titled just verse six - so the title is not false about anything it says, only silent about the verse the song opens with. Five of these were found in one afternoon of listening and none of them would ever collide with another title, because the title they wear is a verse they really do sing.";
   "Neither way is finished, so this is not all of them. The hole says where to listen; it does not say what is there until somebody listens.";
   "The title is what everything downstream believes. A chapter's reading order is read out of it, the verse text written under the video is looked up from it, and the playlist a song is put in is chosen by it - so one wrong title is a song filed in the wrong chapter, described with somebody else's words, and missing from the chapter it belongs to. That is why this is worth writing down rather than fixing quietly: until the titles are changed, this is the list of what the titles are lying about.";
   arguments_assert(arguments, 0);
@@ -55,6 +56,38 @@ export function psalms_videos_verse_mislabelled() {
       sung: "Psalms 80:8",
       heard:
         "You uprooted a vine from Egypt. You drove out the nations and transplanted it.",
+    },
+    {
+      video_id: "qt59-eBpA5s",
+      titled: "Psalms 8:6-9",
+      sung: "Psalms 8:5-9",
+      heard:
+        "You have made him a little lower than the angels. You crowned him with glory and honor.",
+    },
+    {
+      video_id: "lKlj9ar7-6o",
+      titled: "Psalms 36:6",
+      sung: "Psalms 36:5-6",
+      heard:
+        "Your loving devotion, oh Lord, reaches to the heavens. Your faithfulness to the clouds.",
+    },
+    {
+      video_id: "kqE7or0Vk-w",
+      titled: "Psalms 55:21",
+      sung: "Psalms 55:20-21",
+      heard: "My companion attacks his friends. He violates his covenant.",
+    },
+    {
+      video_id: "yU_PhLJhqzE",
+      titled: "Psalms 66:12",
+      sung: "Psalms 66:11-12",
+      heard: "You led us into the net. You laid burdens on our backs.",
+    },
+    {
+      video_id: "4HHj_bPu_Ks",
+      titled: "Psalms 67:7",
+      sung: "Psalms 67:6-7",
+      heard: "The earth has yielded its harvest. God our God blesses us.",
     },
   ];
   return mislabelled;

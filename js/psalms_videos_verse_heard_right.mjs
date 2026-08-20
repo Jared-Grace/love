@@ -97,6 +97,58 @@ export function psalms_videos_verse_heard_right() {
       video_id: "Bkp05AUuXyw",
       titled: "Psalms 91:7",
     },
+    {
+      video_id: "4pMOxb23_z0",
+      titled: "Psalms 27:6",
+    },
+    {
+      video_id: "trnNjlzxdlY",
+      titled: "Psalms 31:12-13",
+    },
+    {
+      video_id: "-u-Rhu69MIE",
+      titled: "Psalms 32:4",
+    },
+    {
+      video_id: "VHkdBTMFE_U",
+      titled: "Psalms 32:8",
+    },
+    {
+      video_id: "vv9ikC_bQSY",
+      titled: "Psalms 33:16-17",
+    },
+    {
+      video_id: "LYyvn90niIg",
+      titled: "Psalms 35:13-14",
+    },
+    {
+      video_id: "gJGVP-muHHg",
+      titled: "Psalms 48:9",
+    },
+    {
+      video_id: "Eo8HTvx6GOI",
+      titled: "Psalms 52:8",
+    },
+    {
+      video_id: "K-rQyk8nOcI",
+      titled: "Psalms 60:11",
+    },
+    {
+      video_id: "wYovGKFqKkU",
+      titled: "Psalms 73:23",
+    },
+    {
+      video_id: "5qAKhjELsi4",
+      titled: "Psalms 83:13",
+    },
+    {
+      video_id: "T9r3UFyv738",
+      titled: "Psalms 85:7",
+    },
+    {
+      video_id: "iMRU8Ag6JWg",
+      titled: "Psalms 91:9-10",
+    },
   ];
   return heard_right;
 }
