@@ -11,6 +11,9 @@ export function html_button_biblehub_open_interlinear(
   let texts = {
     en: "Interlinear",
     ur: "لفظ بہ لفظ",
+    translated_from: {
+      ur: "Interlinear",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   html_button_biblehub_open(
