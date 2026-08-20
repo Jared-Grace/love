@@ -146,7 +146,8 @@ export function song_image_couplets() {
       verse: 2,
       first: "HE breathed HIS last",
       second: "and then HE died",
-      symbol: "The temple veil torn in two",
+      symbol:
+        "The temple veil torn in two from top to bottom, the tear beginning at the very top and running all the way down",
       ref: "Matthew 27:51",
       same_as: 0,
     },
@@ -211,8 +212,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "a stone was rolled",
       second: "to seal the grave",
-      symbol: "The rolling stone, closed",
-      ref: "",
+      symbol: "A very great round rolling stone, standing closed",
+      ref: "Mark 16:4",
       same_as: 0,
     },
     {
@@ -220,7 +221,7 @@ export function song_image_couplets() {
       verse: 3,
       first: "then pilate put",
       second: "the guard in place",
-      symbol: "A wax seal and a Roman helmet",
+      symbol: "A Roman soldier's helmet in grey iron, empty and set down",
       ref: "Matthew 27:66",
       same_as: 0,
     },
@@ -337,8 +338,9 @@ export function song_image_couplets() {
       verse: 4,
       first: "the great I AM",
       second: "the FATHER's SON",
-      symbol: "The burning bush, flame not consuming",
-      ref: "Exodus 3:14",
+      symbol:
+        "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
+      ref: "Exodus 3:2, Exodus 3:14",
       same_as: 0,
     },
     {
@@ -346,8 +348,9 @@ export function song_image_couplets() {
       verse: 4,
       first: "the great I AM",
       second: "the FATHER's SON",
-      symbol: "The burning bush, flame not consuming",
-      ref: "Exodus 3:14",
+      symbol:
+        "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
+      ref: "Exodus 3:2, Exodus 3:14",
       same_as: 35,
     },
   ];
