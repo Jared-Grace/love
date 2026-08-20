@@ -27,7 +27,17 @@ export async function bible_sentence_end_marks_gate_run() {
   let unmeasured = list_difference(shipped, measured);
   let departed = list_difference(measured, shipped);
   ("A bible nothing could be read from is told apart from one read and found to write no marks, because only the second is a fact about a language. The first is an errand that failed - a folder named wrongly, or a chapter that is not there - and reading it as a language without sentences is exactly the mistake the first hand measurement made with Urdu.");
+  function lambda4(entry) {
+    let never = property_equals(entry, "unreachable", true);
+    return never;
+  }
+  let unreached = list_filter(recorded, lambda4);
+  ("A chapter the far end never answered about is taken out of the reading below rather than counted in it, because the two say opposite things and only one of them is about a bible. Nothing read because there is nothing there is a fact somebody has to decide about; nothing read because the ask failed is this run being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
   function lambda(entry) {
+    let never = property_equals(entry, "unreachable", true);
+    if (never) {
+      return false;
+    }
     let none = property_equals(entry, "read", 0);
     return none;
   }
@@ -91,6 +101,16 @@ export async function bible_sentence_end_marks_gate_run() {
     ]),
     named_wrongly,
   });
+  ("The passing finding is refused after the standing ones on purpose. A bible read and found to write no marks is true until somebody changes the bible; a chapter that would not answer this afternoon may answer this evening. Reporting the passing thing first would bury the lasting one under it.");
+  let f_name8 = fn_name("bible_sentence_end_marks_write");
+  list_empty_is_assert_json(unreached, {
+    hint: text_combine_multiple([
+      "these bibles were asked and the far end never answered, so nothing is known about how they end a sentence - that is this run having failed rather than anything being wrong with the bible, so measure again with ",
+      f_name8,
+      ", and if the same bibles come back unreached twice then the far end really is refusing them and it is worth looking at by hand",
+    ]),
+    unreached,
+  });
   let r = {
     checked: list_size(shipped),
     unmeasured,
@@ -98,6 +118,7 @@ export async function bible_sentence_end_marks_gate_run() {
     unread,
     unnamed,
     named_wrongly,
+    unreached,
   };
   return r;
 }
