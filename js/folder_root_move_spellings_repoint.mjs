@@ -1,3 +1,7 @@
+import { findings_folder } from "./findings_folder.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { text_replace_path_start } from "./text_replace_path_start.mjs";
+import { equal } from "./equal.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_files_tracked_folder } from "./git_files_tracked_folder.mjs";
 import { path_join } from "./path_join.mjs";
@@ -6,7 +10,6 @@ import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { text_binary_is } from "./text_binary_is.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_replace } from "./text_replace.mjs";
 import { not } from "./not.mjs";
 export async function folder_root_move_spellings_repoint(before, after) {
   "Every place in the repo that spells one folder as the start of a path, written again with the folder's new name. Answers the files it changed.";
@@ -21,6 +24,10 @@ export async function folder_root_move_spellings_repoint(before, after) {
   let paths = await git_files_tracked_folder(repo);
   let changed = [];
   for (let tracked_path of paths) {
+    let recorded = text_starts_with(tracked_path, records);
+    if (recorded) {
+      continue;
+    }
     let f_path = path_join([repo, tracked_path]);
     let text = await file_read_try(f_path);
     if (not(text)) {
@@ -34,7 +41,11 @@ export async function folder_root_move_spellings_repoint(before, after) {
     if (not(spelled)) {
       continue;
     }
-    let written = text_replace(text, from, to);
+    let written = text_replace_path_start(text, before, after);
+    let same = equal(written, text);
+    if (same) {
+      continue;
+    }
     await file_overwrite_uncached(f_path, written);
     changed.push(tracked_path);
   }

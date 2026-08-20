@@ -1,3 +1,4 @@
+import { text_replace_path_start_cases_gate_run } from "./text_replace_path_start_cases_gate_run.mjs";
 import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
 import { js_delegate_only_cases_gate_run } from "./js_delegate_only_cases_gate_run.mjs";
 import { ebible_languages_curated_codes_gate_run } from "./ebible_languages_curated_codes_gate_run.mjs";
@@ -578,6 +579,7 @@ export function qa_gates() {
     commands_only_write_denied_cases_gate_run,
     text_lines_search_cases_gate_run,
     text_replace_once_cases_gate_run,
+    text_replace_path_start_cases_gate_run,
     word_root_cases_gate_run,
     firebase_storage_list_url_cases_gate_run,
     http_error_message_absent_is_cases_gate_run,
