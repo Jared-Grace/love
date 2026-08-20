@@ -32,6 +32,11 @@ import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 let a = 3;
 export async function js_ternary_replace(ast) {
+  "Meant to rewrite an if and its else, where both branches do nothing but give one and the same name a value, as that name being given the answer of the choosing function - and then to add whatever import the new call needs.";
+  "NOTHING CALLS IT AND IT DOES NOT WORK. It is written down here rather than left to be found again, because the shape it is reaching for is a good one and somebody will read this file meaning to use it.";
+  "The first fault stops it on the first if it meets. The two branches are fetched by handing a pair of readers the same node, through a helper that walks a list of functions and calls each one - and that helper hands nothing back, so what the walk is given to look at is nothing at all rather than a pair of branches.";
+  "The second fault would survive the first being fixed. The pair is built else-branch first, and the arguments are appended in that order after the test, while the function being called reads its second argument as the value for a true test. So every rewrite it managed would swap the two branches over, which is the one kind of wrong that still runs.";
+  "Both are worth knowing before the shape is reached for again: the first is loud and would be found in a minute, and the second is silent and would be found by whatever broke afterwards.";
   let replaced = null;
   async function lambda(v) {
     let node = property_get(v, "node");
