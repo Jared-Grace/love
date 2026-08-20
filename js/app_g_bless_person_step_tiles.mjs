@@ -1,6 +1,6 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
@@ -38,8 +38,7 @@ export function app_g_bless_person_step_tiles(world, person) {
     let tile = property_get(neighbor, "neighbor");
     let key = g_coordinates_key(tile);
     let free = equal_not(key, taken);
-    let walked = property_exists(held, key);
-    let right = not(walked);
+    let right = property_exists_not(held, key);
     let clear = and(free, right);
     return clear;
   }
