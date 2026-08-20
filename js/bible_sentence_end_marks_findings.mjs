@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { bible_sentence_end_marks_findings_ended_none } from "./bible_sentence_end_marks_findings_ended_none.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 import { not } from "./not.mjs";
 import { property_equals } from "./property_equals.mjs";
@@ -21,42 +23,18 @@ export async function bible_sentence_end_marks_findings() {
   let languages = ebible_languages();
   let property_name = bible_folder_key();
   let shipped = list_map_property(languages, property_name);
-  let measured = list_map_property(recorded, property_name);
-  let unmeasured = list_difference(shipped, measured);
-  let departed = list_difference(measured, shipped);
-  ("A bible nothing could be read from is told apart from one read and found to write no marks, because only the second is a fact about a language. The first is an errand that failed - a folder named wrongly, or a chapter that is not there - and reading it as a language without sentences is exactly the mistake the first hand measurement made with Urdu.");
-  function lambda4(entry) {
-    let never = property_equals(entry, "unreachable", true);
-    return never;
-  }
-  let unreached = list_filter(recorded, lambda4);
-  ("A BIBLE STORAGE HOLDS NOTHING FOR IS TAKEN OUT OF EVERY READING BELOW and named on its own, because it is one fault and it already has a gate. Its measurement names no chapter, since there was no chapter of it to name. Left in, it would read as a language that writes no marks and get itself refused a second time here - in a place whose only advice is about a list of languages, where the repair is an upload that never ran.");
-  function lambda5(entry) {
-    let nothing = property_equals(entry, "chapter_code", "");
-    return nothing;
-  }
-  let unstored = list_filter(recorded, lambda5);
-  function lambda6(entry) {
-    let nothing = property_equals(entry, "chapter_code", "");
-    let n = not(nothing);
-    return n;
-  }
-  let stored = list_filter(recorded, lambda6);
-  ("A chapter the far end never answered about is taken out of the reading below rather than counted in it, because the two say opposite things and only one of them is about a bible. Nothing read because there is nothing there is a fact somebody has to decide about; nothing read because the ask failed is this run being unfinished, and the remedy is to measure again rather than to go and look at a bible.");
-  function lambda(entry) {
-    let never = property_equals(entry, "unreachable", true);
-    if (never) {
-      return false;
-    }
-    let none = property_equals(entry, "read", 0);
-    return none;
-  }
-  let unread = list_filter(stored, lambda);
-  function lambda2(entry) {
-    let none = property_equals(entry, "ended", 0);
-    return none;
-  }
-  let ended_none = list_filter(stored, lambda2);
+  let r = bible_sentence_end_marks_findings_ended_none(
+    recorded,
+    property_name,
+    shipped,
+  );
+  let ended_none = property_get(r, "ended_none");
+  let unread = property_get(r, "unread");
+  let stored = property_get(r, "stored");
+  let unstored = property_get(r, "unstored");
+  let unreached = property_get(r, "unreached");
+  let departed = property_get(r, "departed");
+  let unmeasured = property_get(r, "unmeasured");
   let unfindable = list_map_property(ended_none, property_name);
   let named = bible_folders_sentence_end_unmarked();
   let unnamed = list_difference(unfindable, named);
