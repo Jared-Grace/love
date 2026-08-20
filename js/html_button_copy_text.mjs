@@ -6,6 +6,9 @@ export function html_button_copy_text() {
   let texts = {
     en: " Copy",
     ur: " کاپی کریں",
+    translated_from: {
+      ur: " Copy",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_copy();
