@@ -1,4 +1,4 @@
-import { object_property_names } from "./object_property_names.mjs";
+import { object_property_names_numbers_sorted } from "./object_property_names_numbers_sorted.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -19,16 +19,7 @@ export async function psalms_playlists_plan(channel_id) {
   let wanted = psalms_chapters_video_order(uploads);
   let playlists = await youtube_channel_playlists(channel_id);
   let chapter_ids = psalms_playlist_chapter_ids(playlists);
-  let chapters = [];
-  for (let named of object_property_names(wanted)) {
-    let v = Number(named);
-    chapters.push(v);
-  }
-  function lambda(one, other) {
-    let difference = subtract(one, other);
-    return difference;
-  }
-  chapters.sort(lambda);
+  let chapters = object_property_names_numbers_sorted(wanted);
   async function lambda_chapter(chapter) {
     let playlist_id = chapter_ids[chapter] || null;
     let songs = wanted[chapter];
