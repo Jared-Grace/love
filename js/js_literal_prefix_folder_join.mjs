@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
@@ -51,7 +52,7 @@ export async function js_literal_prefix_folder_join(
     let quoted = text_quote_double(rest);
     let joined = js_code_join_comma_space([getter_code, quoted]);
     let listed = js_code_wrap_brackets(joined);
-    let code = js_code_call_args("path_join", [listed]);
+    let code = js_code_call_args(fn_name("path_join"), [listed]);
     js_parse_expression_replace(code, node);
     changed = add(changed, 1);
     return true;
