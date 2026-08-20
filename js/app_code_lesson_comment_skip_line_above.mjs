@@ -17,17 +17,17 @@ export function app_code_lesson_comment_skip_line_above(root) {
   ("The third box is the whole point of the second. An answer disappearing once could have meant a program only ever writes out its first line, and the only way to rule that out is to put the slashes on the other line and show the other answer going instead. Said in a sentence it would have to be believed; shown, it is read off the card.");
   ("The numbers are in none of the programs the questions ask about - neither as something written nor as something worked out - so no number a learner meets here turns up later as something to recognise rather than to read.");
   let lines = app_code_lesson_sum_lines();
-  let first_line = property_get(lines, "first_line");
-  let last_line = property_get(lines, "last_line");
-  let first_total = property_get(lines, "first_total");
-  let last_total = property_get(lines, "last_total");
   let prefix = js_code_comment_prefix();
+  let first_line = property_get(lines, "first_line");
   let first_noted = text_combine(prefix, first_line);
+  let last_line = property_get(lines, "last_line");
   let last_noted = text_combine(prefix, last_line);
   let box_both = app_code_container_light_blue(root);
   html_div_cycle_code(box_both, [
     "Remember, two lines that write out give two answers",
   ]);
+  let first_total = property_get(lines, "first_total");
+  let last_total = property_get(lines, "last_total");
   let both = list_join_newline([first_total, last_total]);
   app_code_code_lines_writes_out(box_both, [first_line, last_line], both);
   let slashes = js_comment_start();
