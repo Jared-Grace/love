@@ -36,7 +36,7 @@ export async function examples_corpus_read() {
   let extra = list_filter(mjs, not_ordered);
   let ordered = list_concat(present, extra);
   async function to_example(name) {
-    let module_read = await import("../data/examples/" + name);
+    let module_read = await import("../data/given/examples/" + name);
     let example = property_get(module_read, "example");
     return example;
   }
