@@ -15,6 +15,9 @@ import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_is } from "./list_first_is.mjs";
 export function app_a_body_inner(parent, body, a, indent) {
+  "Draws the statements of one function's body as lines down the page, with the run of import lines at the top folded away behind a button.";
+  "Nearly every file here opens with more import lines than code, because the canonicalizing pass writes one for every name used, so they start closed. There is a button above them and a second one at their foot saying the same thing, so whichever end of them you arrived at you can shut them from there.";
+  "An indented line is built as a row of two: a leading space that never shrinks, and beside it a span that wraps. A long line wrapping inside that span comes back round under its own first word rather than under the margin, which is the difference between reading a nested call and hunting for where it began.";
   let parent_new = parent;
   let imports = false;
   function lambda(b) {
