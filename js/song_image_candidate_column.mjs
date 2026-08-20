@@ -1,3 +1,5 @@
+import { app_shared_color_gold_text_light } from "./app_shared_color_gold_text_light.mjs";
+import { song_image_color_border_resting } from "./song_image_color_border_resting.mjs";
 import { song_image_color_text } from "./song_image_color_text.mjs";
 import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
