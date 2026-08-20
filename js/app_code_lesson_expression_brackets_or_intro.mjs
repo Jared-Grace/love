@@ -1,5 +1,5 @@
-import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
+import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,11 +13,12 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 export function app_code_lesson_expression_brackets_or_intro(root) {
   arguments_assert(arguments, 1);
-  ("the two cards above the brackets around || lesson: the rule in one sentence, then one line carried all the way to its value");
+  ("the three cards above the brackets around || lesson: the rule in one sentence, then the same line carried all the way to its value with the brackets at one end and then the other");
   ("Only the rule is said again, and it is said in the words the pressing lesson said it in, with the brackets named rather than pointed at. That the marks may go there at all was the news there; here it is something the learner has already pressed their way through.");
-  ("The worked line is one the brackets change. Without them the same three words come to true, and with them they come to false, so a learner who reads past the marks gets the card wrong in front of themselves. A line that came to the same thing either way would be a card that never had to be read.");
-  ("Which side the brackets fall on is drawn, because the questions draw it too and a card fixed on one side would be teaching a shape half of them never take. It is the same draw the pressing lesson's card makes, so a learner meeting this pair of lessons sees the marks move on both of them rather than on one.");
-  ("The three words inside and beside the brackets stay put while the side moves, so the two cards are one card seen from either end. What is being shown is the brackets doing their work, and a line that also changed its truths from visit to visit would be asking the reader to find the difference before they could see it.");
+  ("Each worked line is one the brackets change. Without them the same three words come to true, and with them they come to false, so a learner who reads past the marks gets the card wrong in front of themselves. A line that came to the same thing either way would be a card that never had to be read.");
+  ("Both sides are worked rather than one of them being drawn, which is what the two lessons that taught brackets do: each says the marks may stand at either end and then works a line with them at the other end, in the same card. Drawn instead, half the visits would show the sentence with nothing beside it that moves - and half the questions ask for the side that visit never showed.");
+  ("The second working is the first one turned round: the same three words, in the other order, with the brackets at the other end. Different words would leave a reader finding which of two things had changed before they could see that only one had.");
+  ("The sentence between them is asked for from the pressing lesson rather than written again here, because a learner reads the two screens one after the other and a near-copy is a thing to be compared where the same words are a thing already known.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let left_bracket = js_code_parenthesis_left();
@@ -26,32 +27,13 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
   let false_word = js_keyword_false();
   let pair = app_code_operator_code(true_word, or_symbol, true_word);
   let bracketed = js_code_wrap_parenthesis(pair);
-  let sides = [true, false];
-  let brackets_left = list_random_item(sides);
-  function whole_made() {
-    "the whole line, with the bracketed || on the side drawn";
-    if (brackets_left) {
-      let whole_left = app_code_operator_code(
-        bracketed,
-        and_symbol,
-        false_word,
-      );
-      return whole_left;
-    }
-    let whole_right = app_code_operator_code(false_word, and_symbol, bracketed);
-    return whole_right;
-  }
-  function rest_made() {
-    "what the line comes down to once the bracketed || is solved, on that same side";
-    if (brackets_left) {
-      let rest_left = app_code_operator_code(true_word, and_symbol, false_word);
-      return rest_left;
-    }
-    let rest_right = app_code_operator_code(false_word, and_symbol, true_word);
-    return rest_right;
-  }
-  let whole = whole_made();
-  let rest = rest_made();
+  let whole_right = app_code_operator_code(false_word, and_symbol, bracketed);
+  let rest_right = app_code_operator_code(false_word, and_symbol, true_word);
+  let whole_left = app_code_operator_code(bracketed, and_symbol, false_word);
+  let rest_left = app_code_operator_code(true_word, and_symbol, false_word);
+  let heading_none = [];
+  let heading_either =
+    app_code_lesson_expression_choose_order_brackets_either_side();
   let rule = app_code_container_light_blue(root);
   html_div_cycle_code(rule, [
     "The ",
@@ -65,10 +47,20 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
   ]);
   app_code_lesson_expression_worked_card_two_operators(
     root,
-    whole,
+    heading_none,
+    whole_right,
     pair,
     true_word,
-    rest,
+    rest_right,
+    false_word,
+  );
+  app_code_lesson_expression_worked_card_two_operators(
+    root,
+    heading_either,
+    whole_left,
+    pair,
+    true_word,
+    rest_left,
     false_word,
   );
 }
