@@ -14,6 +14,7 @@ export async function window_open_current_workspace_setup() {
   let script_source = path_join([
     folder,
     "data",
+    "given",
     "machine",
     "window_open_current_workspace.sh",
   ]);
