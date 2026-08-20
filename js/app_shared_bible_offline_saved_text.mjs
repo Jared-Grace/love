@@ -15,6 +15,12 @@ export function app_shared_bible_offline_saved_text(name) {
       before: " ",
       after: " اس آلے پر محفوظ ہے",
     },
+    translated_from: {
+      ur: {
+        before: " ",
+        after: " is saved on this device",
+      },
+    },
   };
   let words = app_shared_text_reader_language_around(parts, name);
   let tick = emoji_check();
