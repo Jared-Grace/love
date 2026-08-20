@@ -17,14 +17,13 @@ export function app_code_lesson_expression_comparison_or() {
   ("A screen holds one line that comes to true and one that comes to false. That matters more here than under an &&, because a true || may hold a false side and a learner who has only ever seen agreeing sides has a habit that answers three lines in four.");
   ("The wrong answer offered is the opposite word, which is the only other thing a line like this can come to.");
   function code_wanted(want_true) {
-    ("one line of this lesson's family, drawn to come out to want_true, handed over as the text of it");
-    let tree =
-      app_code_lesson_expression_choose_order_or_expression(want_true);
+    "one line of this lesson's family, drawn to come out to want_true, handed over as the text of it";
+    let tree = app_code_lesson_expression_choose_order_or_expression(want_true);
     let code = app_code_expression_code(tree);
     return code;
   }
   function refill() {
-    ("two questions a screen, one line coming to true and one coming to false");
+    "two questions a screen, one line coming to true and one coming to false";
     let v = code_wanted(true);
     let v2 = code_wanted(false);
     let list = [v, v2];
