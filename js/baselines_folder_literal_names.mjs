@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { data_given_baselines_folder } from "./data_given_baselines_folder.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
 import { list_add } from "./list_add.mjs";
-import { path_leaf_without_extension } from "./path_leaf_without_extension.mjs";
+import { path_without_extension } from "./path_without_extension.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -20,7 +20,7 @@ export async function baselines_folder_literal_names() {
     let spells = text_includes(text, inside);
     if (spells) {
       let file = property_get(record, "file");
-      let f_name = path_leaf_without_extension(file);
+      let f_name = path_without_extension(file);
       list_add(f_names, f_name);
     }
   }
