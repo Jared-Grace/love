@@ -1,6 +1,10 @@
+import { path_join } from "./path_join.mjs";
+import { data_given_baselines_folder } from "./data_given_baselines_folder.mjs";
 export function app_replace_abbreviations_unspelled_baseline_path() {
   "Where the record of explanations whose bold letters spell something other than the abbreviation is kept.";
-  let p =
-    "data/given/baselines/app_replace_abbreviations_unspelled_baseline.json";
+  let p = path_join([
+    data_given_baselines_folder(),
+    "app_replace_abbreviations_unspelled_baseline.json",
+  ]);
   return p;
 }
