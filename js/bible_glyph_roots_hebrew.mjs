@@ -3,6 +3,9 @@ export function bible_glyph_roots_hebrew() {
   "It is a SEPARATE table from the Greek one and not an extension of it, because a Strong's number belongs to a testament. Hebrew 3068 is the LORD's own name and Greek 3068 is a word for washing, and nothing about the number says which is meant - so a single table would silently draw one testament with the other's pictures.";
   "The GLYPHS are deliberately the same ones. Two tables of numbers, one vocabulary of pictures: the Hebrew word for God and the Greek word for God are both drawn as the fire, so a reader who learned the pictures in first John can open Genesis and read. That is the whole reason the pictures were keyed to roots rather than to a translation, and it is the one thing the Old Testament table must not get wrong.";
   "Where the two testaments genuinely differ, the picture differs with them. The covenant name is not the Greek word for God with Hebrew letters, so it is not drawn as the fire - it gets its own glyph, because a reader meeting it should see that they have met something the New Testament does not say in the same way.";
+  "THREE ROOTS WERE ADDED ON 2026-08-20 AND ONLY ONE OF THEM COST A PICTURE. The hundred and thirty sixth psalm was surveyed and authored that day, and what it asked for was the giving of thanks four times over - the word that opens the psalm three times and closes it once. That one bought a new picture. The water and the light were already drawn for the Greek and were simply not seated here yet, so they cost nothing at all and were taken because they were in front of us rather than because this psalm needed them badly - one occurrence each.";
+  "THE THANKS AND THE KNOWING ARE ONE LETTER APART AND ARE NOT RELATED. Yada is to know and is drawn as the lightbulb; yadah is to throw out the hand, and so to confess and to give thanks, and is drawn as the raised hands. They are separate entries under separate numbers and the near-spelling is a trap for a reader of this table rather than a fact about the words. Anyone merging them would silently redraw every act of praise in the psalter as an act of knowing.";
+  "AND THE RAISED HANDS WERE CHOSEN FOR THE BODY AND NOT FOR THE FEELING. What yadah names first is a hand thrown out; the thanks is what that gesture means. So the picture is the gesture, which claims exactly as much as the word does, where a smiling face or a heart would have claimed the feeling the word only implies. The praying hands were already seated on amen and would in any case have said prayer rather than thanks.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -642,6 +645,36 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4886",
           glyph: "oil",
+        },
+      ],
+    },
+    {
+      root: "yadah",
+      gloss: "give thanks, praise, confess",
+      words: [
+        {
+          strong: "3034",
+          glyph: "hands_raised",
+        },
+      ],
+    },
+    {
+      root: "mayim",
+      gloss: "water, waters",
+      words: [
+        {
+          strong: "4325",
+          glyph: "water",
+        },
+      ],
+    },
+    {
+      root: "or",
+      gloss: "light",
+      words: [
+        {
+          strong: "216",
+          glyph: "light",
         },
       ],
     },
