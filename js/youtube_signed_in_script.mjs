@@ -1,5 +1,5 @@
 export function youtube_signed_in_script() {
-  "The small piece of javascript that, pasted into a youtube page somebody is already signed in on, gives that page the three things a playlist change needs: proof of who is asking, a way to write words under a playlist, and a way to put a song into one.";
+  "The small piece of javascript that, pasted into a youtube page somebody is already signed in on, gives that page the four things a playlist change needs: proof of who is asking, a way to write words under a playlist, a way to put a song into one, and a way to send a song already in one to the end.";
   "The signing-in is the part no reader here can do, and it is deliberately left where it already is rather than copied into this repo. Nothing about anybody's account is written down; the page proves who it is from the cookie it already has.";
   "It is kept as words rather than as a file to be loaded because the page refuses to fetch anything from elsewhere, so the only way in is to be pasted, and a paste that has to be typed out fresh each time is a paste that drifts.";
   let lines = [
@@ -35,6 +35,24 @@ export function youtube_signed_in_script() {
     "window.playlist_videos_add = async function (playlist_id, video_ids) {",
     "  const actions = video_ids.map(id => ({ action: 'ACTION_ADD_VIDEO', addedVideoId: id }));",
     "  return await window.playlist_edit(playlist_id, actions);",
+    "};",
+    "window.playlist_video_move_to_end = async function (playlist_id, video_id) {",
+    "  const gone = await window.playlist_edit(playlist_id, [{ action: 'ACTION_REMOVE_VIDEO_BY_VIDEO_ID', removedVideoId: video_id }]);",
+    "  if (gone !== 'STATUS_SUCCEEDED') { return 'left where it was: ' + gone; }",
+    "  const back = await window.playlist_videos_add(playlist_id, [video_id]);",
+    "  if (back !== 'STATUS_SUCCEEDED') { return 'TAKEN OUT AND NOT PUT BACK, ' + video_id + ': ' + back; }",
+    "  return 'moved';",
+    "};",
+    "window.psalm_order_apply = async function () {",
+    "  const out = {};",
+    "  for (const item of window.psalm_order) {",
+    "    const answers = [];",
+    "    for (const video_id of item.move_to_end) {",
+    "      answers.push(await window.playlist_video_move_to_end(item.playlist_id, video_id));",
+    "    }",
+    "    out[item.chapter] = answers.join(' ');",
+    "  }",
+    "  return JSON.stringify(out);",
     "};",
     "window.psalm_descriptions_apply = async function () {",
     "  const out = {};",
