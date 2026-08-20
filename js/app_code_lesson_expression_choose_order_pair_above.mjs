@@ -54,14 +54,14 @@ export function app_code_lesson_expression_choose_order_pair_above(root) {
   ("and the answer is given as a REASON before it is given as a permission: solving a part always comes to the same value, so nothing the first part does can change what the second one comes to");
   ("Told only that either order works, a learner takes it on trust and cannot tell whether it goes on being true of the next line they meet. Told why, they can work it out for themselves every time after this.");
   html_div_cycle_code(run, [
-    "Numbers and comparisons come to the same value every time you solve them",
+    "Numbers and comparisons solve to the same value every time",
   ]);
   html_div_cycle_code(run, [
     "So ",
     left_code,
     " and ",
     right_code,
-    " come to the same values whichever one we solve first",
+    " solve to the same values whichever one we solve first",
   ]);
   html_div_cycle_code(run, ["It does not matter which one we solve first"]);
   ("both are then simply shown coming to their values, one line each, with nothing said about order - the order question is already answered above and saying it again here would make it sound unsettled");
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_choose_order_pair_above(root) {
   let right_solved = app_code_expression_equals_text(right_code, right_text);
   html_div_cycle_code(run, ["", right_solved]);
   html_div_cycle_code(run, [
-    "Then we replace them, and the line is ",
+    "Then we replace them to get ",
     both_code,
     ", which is ",
     final_text,

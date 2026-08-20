@@ -13,6 +13,6 @@ export function app_code_lesson_expression_choose_order_both_sides_above_arithme
     tree,
     intro,
     " are arithmetic, so they go before the ",
-    "Numbers and arithmetic come to the same value every time you solve them",
+    "Numbers and arithmetic solve to the same value every time",
   );
 }

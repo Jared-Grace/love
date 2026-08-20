@@ -26,30 +26,10 @@ export async function qa_gate_counted_is(f_name, depth) {
     return false;
   }
   let ast = await function_ast(f_name);
-  let returns = js_list_type_nodes(ast, "ReturnStatement");
-  let silent_is = list_empty_is(returns);
-  if (silent_is) {
+  let answer = qa_gate_answer_node_try(ast);
+  let unreadable_is = equal(answer, null);
+  if (unreadable_is) {
     return false;
-  }
-  let statement = list_last(returns);
-  let answer = js_return_argument_get(statement);
-  let empty_is = equal(answer, null);
-  if (empty_is) {
-    return false;
-  }
-  ("What the answer is called is the commoner shape by far, so the step from a name back to what fills it is taken first and everything after it reads the value itself.");
-  let named = js_identifier_name_try(answer);
-  let bound_is = null_not_is(named);
-  if (bound_is) {
-    answer = js_ast_declarator_init_named(ast, named);
-    let unfound_is = equal(answer, null);
-    if (unfound_is) {
-      return false;
-    }
-  }
-  let waited_is = js_node_type_is(answer, "AwaitExpression");
-  if (waited_is) {
-    answer = property_get(answer, "argument");
   }
   let handed_is = js_node_type_is(answer, "CallExpression");
   if (handed_is) {
