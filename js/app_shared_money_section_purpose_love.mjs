@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_money_section_purpose_love() {
   "The part of what this app does with money that names what the work is for, rather than what the money is for.";
   let texts = {

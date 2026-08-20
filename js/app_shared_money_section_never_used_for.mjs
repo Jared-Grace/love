@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_money_section_never_used_for() {
   "The part of what this app does with money that answers what a gift will never go to, and what happens if more arrives than the work needs.";
   "The answer to too much is written down here rather than left to be decided when it happens, because that is the moment a promise is worth least if it was never made.";
