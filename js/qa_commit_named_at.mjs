@@ -17,9 +17,11 @@ export async function qa_commit_named_at(commit) {
     path,
     qa_commit_told_judged,
   );
+  ("Whether the judging was written down is carried out with it, because it is not the same question as whether the gates were green. A run whose gate shares did not all come back, and a run worked out beside neighbours that moved underneath it, are both handed back in full and both left out of the record on purpose - so an answer can say every gate was green while nothing about it was kept, and an asker that acts on the first half without the second acts on a verdict nobody can look up afterwards.");
   let r = {
     commit,
     remembered: property_get(memo, "remembered"),
+    filed: property_get(memo, "filed"),
     judged: property_get(memo, "kept"),
   };
   return r;

@@ -13,6 +13,7 @@ export async function qa_app_commit_gate_run_at(search, commit) {
   let at = await qa_commit_named_at(commit);
   let judged = property_get(at, "judged");
   let remembered = property_get(at, "remembered");
+  ("Whether the judging was written down is carried through rather than dropped here, because being sound and being on record are two different things and only one of them is asked about below. Sending reads the record, not this answer, so a caller handed soundness alone can build out of a commit and put the pieces where the sending reads from, and the sending will then refuse pieces this very run found sound - and refuse every other app's with them, because they all go out in one act.");
   let green = property_get(judged, "green");
   let failed = property_get(judged, "failed");
   let named = property_get(judged, "named");
@@ -29,6 +30,7 @@ export async function qa_app_commit_gate_run_at(search, commit) {
     app: search,
     commit,
     remembered,
+    filed: property_get(at, "filed"),
     reach: reach.length,
     deployable: clear,
     blocking,
