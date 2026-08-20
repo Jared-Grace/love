@@ -15,6 +15,9 @@ export function app_shared_bible_hash_unknown_gate_run_check(
   fields,
   defects,
 ) {
+  "Checks one case of the gate that watches what an app does with a word in its address it does not recognise: it asks the reading what that address gets wrong, and holds the answer against what the case said should be found.";
+  "Four things are held against the case in turn and each stops at the first disagreement: how many things came out wrong, which field each of them was about, what the offending word was, and what was offered in its place.";
+  "A case that wants no suggestion is checked the other way about - that nothing at all was offered. A word close enough to a real one gets a correction offered back, so a case saying this word is like nothing we have is only held honest by failing when something is offered anyway.";
   arguments_assert(arguments, 3);
   let hash = property_get(one, "hash");
   let wanted = property_get(one, "findings");
