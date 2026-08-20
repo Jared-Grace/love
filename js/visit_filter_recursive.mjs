@@ -15,6 +15,8 @@ export function visit_filter_recursive(
   on_each,
   stack,
 ) {
+  "Walks down through a node, handing each one over AFTER everything below it. That way anything gathered on the way down is complete by the time the node holding it arrives - which is what a walk over a file is wanted for.";
+  "The awaiting twin hands a node over before asking what it reaches instead, and says at its own head why it has to. The two orders are deliberate and different; making them agree would break whichever one was moved.";
   let a = filter(node);
   if (not(a)) {
     return;

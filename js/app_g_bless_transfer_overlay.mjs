@@ -1,3 +1,4 @@
+import { bless_prayer_read_ms } from "./bless_prayer_read_ms.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -40,9 +41,22 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   html_flex_column_stretch(overlay);
   let container = app_g_container_player(overlay);
   html_style_margin_y(container, "auto");
+  ("The amen is not there when the door opens and arrives a moment later, timed from the");
+  ("length of the words - the same rule every prayer in this game is under, met here first");
+  ("because this is the screen that teaches it. A door that opens the instant it is touched");
+  ("teaches that amen is the way in, and the waiting on every prayer after it then reads as");
+  ("the game being slow. Learned here, the waiting is simply how praying works, and nothing");
+  ("later has to argue for it.");
+  ("It is also the prayer that most deserves it. Everything prayed in this game is real to");
+  ("real people only because this one was said, so it is the single worst prayer to let a");
+  ("player click past without reading.");
   let prayer = bless_prayer_transfer();
   app_g_p_text(container, prayer);
-  let praying = emoji_pray();
-  let label = text_combine(praying, " Amen");
-  app_g_button_green(container, label, on_amen);
+  function offer() {
+    let praying = emoji_pray();
+    let label = text_combine(praying, " Amen");
+    app_g_button_green(container, label, on_amen);
+  }
+  let least = bless_prayer_read_ms(prayer);
+  setTimeout(offer, least);
 }

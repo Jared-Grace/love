@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 import { emoji_globe_americas } from "./emoji_globe_americas.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_languages_text() {

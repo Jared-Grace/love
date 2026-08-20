@@ -1,3 +1,4 @@
+import { app_shared_search_by_name_text } from "./app_shared_search_by_name_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_filter_property_text_includes } from "./list_filter_property_text_includes.mjs";
 import { app_shared_search_render } from "./app_shared_search_render.mjs";
@@ -37,5 +38,6 @@ export function app_shared_bible_subset_sorted_choose(
       choices_label,
     );
   }
-  app_shared_search_render(container, "Search by name", on_query);
+  let search_text = app_shared_search_by_name_text();
+  app_shared_search_render(container, search_text, on_query);
 }
