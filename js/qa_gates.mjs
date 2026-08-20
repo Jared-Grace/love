@@ -655,6 +655,7 @@ export function qa_gates() {
     bible_storage_empty_gate_run,
     app_code_quiz_leniency_gate_run,
     app_shared_text_reader_language_gate_run,
+    app_shared_text_reader_untranslated_gate_run,
   ];
   return gates;
 }
