@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { data_folder } from "./data_folder.mjs";
@@ -18,8 +19,6 @@ import { function_run } from "./function_run.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { file_move } from "./file_move.mjs";
 import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function finding_from_data_move(name, path_fn_name) {
   "Move one file out of the data folder into the findings folder, and repoint the single function that says where it lives.";
   "A file in the data folder is read as a record of the present. The two commands that ask whether a name is still spoken for - one before a delete, one during a rename - read every file in there, so a function named anywhere in the data folder is answered still in use and a rename rewrites what a past run actually said. A file that is a record of what a check found out belongs on the other side of that line, and this is how one gets there.";
@@ -69,8 +68,7 @@ export async function finding_from_data_move(name, path_fn_name) {
     let to2 = fn_name("findings_folder");
     written = text_replace(written, from2, to2);
   }
-  let b = equal(written, text);
-  let moved_spelling = not(b);
+  let moved_spelling = equal_not(written, text);
   assert_json(moved_spelling, {
     hint: "the address in this function is written in a shape this does not recognise - repoint it by hand rather than letting a guess move the file",
     path_fn_name,
