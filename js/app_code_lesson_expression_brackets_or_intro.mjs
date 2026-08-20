@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -36,24 +37,12 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
     " is solved before the ",
     and_symbol,
   ]);
-  let worked = app_code_container_light_blue(root);
-  html_div_cycle_code(worked, ["For ", whole, ", we do ", pair, " first"]);
-  html_div_cycle_code(worked, [
-    "",
-    pair,
-    " is ",
-    true_word,
-    ", so we have ",
-    rest,
-  ]);
-  html_div_cycle_code(worked, [
-    "",
-    rest,
-    " is ",
-    false_word,
-    ", so ",
+  app_code_lesson_expression_worked_card_two_operators(
+    root,
     whole,
-    " is ",
+    pair,
+    true_word,
+    rest,
     false_word,
-  ]);
+  );
 }
