@@ -13,11 +13,11 @@ export function app_code_lesson_expression_comparison_or_intro(root) {
   ("The worked line has one side that comes out false and still comes to true, which is the whole of what || adds and the one thing an && learner will get wrong. A line with two true sides would be answered right by the habit they already have.");
   ("Both comparisons are less-than ones so that the reading of them is not what the card is about. Two different comparisons would ask a learner to hold two things at once on a card that is showing them one.");
   let symbol = js_operator_or_symbol();
-  let less_than = js_operator_less_than_symbol();
+  let less_than_symbol = js_operator_less_than_symbol();
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
-  let left_side = app_code_operator_code("3", less_than, "5");
-  let right_side = app_code_operator_code("8", less_than, "2");
+  let left_side = app_code_operator_code("3", less_than_symbol, "5");
+  let right_side = app_code_operator_code("8", less_than_symbol, "2");
   let whole = app_code_operator_code(left_side, symbol, right_side);
   let values = app_code_operator_code(true_word, symbol, false_word);
   let what_is_new = app_code_container_light_blue(root);
