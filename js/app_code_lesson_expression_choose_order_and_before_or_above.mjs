@@ -14,6 +14,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
     root,
     app_code_lesson_expression_choose_order_and_before_or_recall,
     app_code_expression_node_left_operator_first,
+    false,
     app_code_lesson_expression_choose_order_and_before_or_intro,
   );
 }
