@@ -1,4 +1,4 @@
-import { image_black_trim } from "./image_black_trim.mjs";
+import { song_image_draw_finish } from "./song_image_draw_finish.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_prompt } from "./song_image_prompt.mjs";
@@ -17,13 +17,11 @@ export async function song_image_draw(number_text) {
   let size = 1024;
   let path = song_image_drawn_path(number);
   await bfl_draw_write(model, prompt, size, size, path);
-  let trimmed = await image_black_trim(path);
-  let drawn = {
+  let drawn = await song_image_draw_finish(
     number,
-    symbol: couplet.symbol,
+    couplet.symbol,
     prompt,
     path,
-    box: trimmed.box,
-  };
+  );
   return drawn;
 }

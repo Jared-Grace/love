@@ -23,45 +23,40 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   "It says alongside what it found how many doors it went and stood at, one line per door, because a small answer here has two readings and they are opposite. Two words left in english is a good day; two doors watched out of ten is a page nobody looked at, reported as a good day.";
   arguments_assert(arguments, 1);
   let seats = app_shared_text_reader_seats();
-  let f_names = await function_reachable_names(f_name_app);
+  let walked = await function_reachable_calls_named(f_name_app);
+  let calls = property_get(walked, "calls");
   let found = [];
   let looked = {};
-  for (let f_name of f_names) {
-    let ast = await function_ast(f_name);
-    let calls = js_list_type_nodes(ast, "CallExpression");
-    for (let call of calls) {
-      let callee_name = js_call_callee_name_try(call);
-      let unnamed = null_is(callee_name);
-      if (unnamed) {
+  for (let one of calls) {
+    let f_name = property_get(one, "f_name");
+    let callee_name = property_get(one, "callee_name");
+    let call = property_get(one, "call");
+    for (let seat of seats) {
+      let door = property_get(seat, "fn");
+      let ours = equal(callee_name, door);
+      if (not(ours)) {
         continue;
       }
-      for (let seat of seats) {
-        let door = property_get(seat, "fn");
-        let ours = equal(callee_name, door);
-        if (not(ours)) {
-          continue;
-        }
-        property_count_add(looked, door, 1);
-        let at = property_get(seat, "at");
-        let argument = call.arguments[at];
-        let absent = null_is(argument);
-        if (absent) {
-          continue;
-        }
-        let words = js_literal_text_letters_try(argument);
-        let unwritten = null_is(words);
-        if (unwritten) {
-          continue;
-        }
-        list_add(found, {
-          f_name,
-          door,
-          words,
-        });
+      property_count_add(looked, door, 1);
+      let at = property_get(seat, "at");
+      let argument = call.arguments[at];
+      let absent = null_is(argument);
+      if (absent) {
+        continue;
       }
+      let words = js_literal_text_letters_try(argument);
+      let unwritten = null_is(words);
+      if (unwritten) {
+        continue;
+      }
+      list_add(found, {
+        f_name,
+        door,
+        words,
+      });
     }
   }
-  let reachable = list_size(f_names);
+  let reachable = property_get(walked, "reachable");
   let r = {
     found,
     looked,
