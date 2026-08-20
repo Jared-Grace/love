@@ -1,3 +1,4 @@
+import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_a_href_text } from "./html_a_href_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -10,7 +11,7 @@ export function psalms_second_take_link(root, video_id, label) {
     "https://www.youtube.com/watch?v=" + video_id,
     label,
   );
-  html_style_set(a, "display", "inline-block");
+  html_display_inline_block(a);
   html_style_set(a, "color", "#8ab4f8");
   html_style_set(a, "margin-right", "16px");
   html_style_padding(a, "10px 0");

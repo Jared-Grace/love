@@ -1,3 +1,5 @@
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_margin } from "./html_style_margin.mjs";
 import { psalms_videos_verse_mislabelled } from "./psalms_videos_verse_mislabelled.mjs";
 import { psalms_verse_mislabelled_row } from "./psalms_verse_mislabelled_row.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,8 +23,8 @@ export function psalms_second_takes_preview() {
   html_style_set(root, "min-height", "100vh");
   html_style_padding(root, "16px");
   let heading = html_p_text(root, "sung twice");
-  html_style_set(heading, "font-size", "20px");
-  html_style_set(heading, "margin", "0");
+  html_style_font_size(heading, "20px");
+  html_style_margin(heading, "0");
   let said = html_p_text(
     root,
     "two separate recordings of the same verses - hear both, and keep the one you want the chapter to carry",
@@ -32,8 +34,8 @@ export function psalms_second_takes_preview() {
     psalms_second_take_pair_row(root, pair);
   }
   let wrong = html_p_text(root, "titled wrong");
-  html_style_set(wrong, "font-size", "20px");
-  html_style_set(wrong, "margin", "32px 0 0 0");
+  html_style_font_size(wrong, "20px");
+  html_style_margin(wrong, "32px 0 0 0");
   let told = html_p_text(
     root,
     "these looked sung twice, but each one is a different verse wearing somebody else's title - the words underneath are what youtube heard in it",
