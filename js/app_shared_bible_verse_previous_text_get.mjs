@@ -6,6 +6,9 @@ export function app_shared_bible_verse_previous_text_get() {
   let texts = {
     en: "Previous verse",
     ur: "پچھلی آیت",
+    translated_from: {
+      ur: "Previous verse",
+    },
   };
   let v = app_shared_text_reader_language(texts);
   return v;
