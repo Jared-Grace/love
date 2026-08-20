@@ -222,6 +222,7 @@ import { js_identifiers_rename_unused_number_suffixes_cases_gate_run } from "./j
 import { js_imports_local_names_cases_gate_run } from "./js_imports_local_names_cases_gate_run.mjs";
 import { functions_names_in_text_gate_run } from "./functions_names_in_text_gate_run.mjs";
 import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate_run.mjs";
+import { js_function_params_all_cases_gate_run } from "./js_function_params_all_cases_gate_run.mjs";
 import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
