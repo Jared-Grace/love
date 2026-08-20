@@ -1,6 +1,6 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -51,8 +51,7 @@ export function app_shared_text_reader_language_drifted(counted) {
         });
         continue;
       }
-      let was = property_get(record, code);
-      let same = json_equal(was, english);
+      let same = property_equals_json(record, code, english);
       if (not(same)) {
         list_add(defects, {
           file,
