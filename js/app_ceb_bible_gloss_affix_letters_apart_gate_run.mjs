@@ -1,3 +1,4 @@
+import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
