@@ -45,8 +45,7 @@ export async function bible_glyph_chapter_rosetta_lines_write(chapter_code) {
     verses: lines,
   };
   let written_json = json_to(written);
-  let code_lower = text_lower_to(chapter_code);
-  let f_name = "bible_glyph_chapter_rosetta_lines_" + code_lower;
+  let f_name = bible_glyph_chapter_rosetta_lines_name(chapter_code);
   let source = bible_glyph_chapter_rosetta_lines_source(f_name, written_json);
   await function_source_new(f_name, source);
   return f_name;
