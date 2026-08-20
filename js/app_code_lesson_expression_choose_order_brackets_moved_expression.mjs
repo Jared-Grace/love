@@ -1,7 +1,7 @@
+import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
 import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
@@ -19,12 +19,15 @@ export function app_code_lesson_expression_choose_order_brackets_moved_expressio
   let or_symbol = js_operator_or_symbol();
   if (brackets_left) {
     ("the brackets gather the && , which is what the line would have done on its own, so the || is left holding what that comes to");
-    let outer = app_code_operator_truths_wanted(or_symbol, want_true);
-    let and_value = list_get(outer, 0);
-    let last_truth = list_get(outer, 1);
-    let inner = app_code_operator_truths_wanted(and_symbol, and_value);
-    let first_truth = list_get(inner, 0);
-    let second_truth = list_get(inner, 1);
+    let truths = app_code_operator_truths_wanted_nested(
+      or_symbol,
+      and_symbol,
+      want_true,
+      brackets_left,
+    );
+    let first_truth = list_get(truths, 0);
+    let second_truth = list_get(truths, 1);
+    let last_truth = list_get(truths, 2);
     let tree_left = app_code_expression_node_left_operator_first_bracketed(
       first_truth,
       and_symbol,
@@ -35,12 +38,15 @@ export function app_code_lesson_expression_choose_order_brackets_moved_expressio
     return tree_left;
   }
   ("the brackets gather the || , which the line would have left until last, so the && is left holding what that comes to");
-  let outer_right = app_code_operator_truths_wanted(and_symbol, want_true);
-  let first_truth_right = list_get(outer_right, 0);
-  let or_value = list_get(outer_right, 1);
-  let inner_right = app_code_operator_truths_wanted(or_symbol, or_value);
-  let second_truth_right = list_get(inner_right, 0);
-  let last_truth_right = list_get(inner_right, 1);
+  let truths_right = app_code_operator_truths_wanted_nested(
+    and_symbol,
+    or_symbol,
+    want_true,
+    brackets_left,
+  );
+  let first_truth_right = list_get(truths_right, 0);
+  let second_truth_right = list_get(truths_right, 1);
+  let last_truth_right = list_get(truths_right, 2);
   let tree_right = app_code_expression_node_right_operator_first_bracketed(
     first_truth_right,
     and_symbol,
