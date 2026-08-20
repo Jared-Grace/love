@@ -1,7 +1,6 @@
-import { equal_not } from "./equal_not.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_size } from "./list_size.mjs";
-import { ebible_chapter_verse_numbers_to_pair } from "./ebible_chapter_verse_numbers_to_pair.mjs";
+import { ebible_chapter_verse_numbers_for_lines } from "./ebible_chapter_verse_numbers_for_lines.mjs";
 import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_map_pairs } from "./list_map_pairs.mjs";
