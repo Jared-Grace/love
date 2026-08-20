@@ -1,3 +1,5 @@
+import { app_shared_bible_licences_fetching_text } from "./app_shared_bible_licences_fetching_text.mjs";
+import { app_shared_bible_licences_unreachable_text } from "./app_shared_bible_licences_unreachable_text.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_shared_bible_licences_body } from "./app_shared_bible_licences_body.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";

@@ -1,3 +1,6 @@
+import { app_shared_bible_offline_prompt_text } from "./app_shared_bible_offline_prompt_text.mjs";
+import { app_shared_bible_offline_reason_text } from "./app_shared_bible_offline_reason_text.mjs";
+import { app_shared_bible_offline_free_all_text } from "./app_shared_bible_offline_free_all_text.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_shared_bible_offline_save_all } from "./app_shared_bible_offline_save_all.mjs";
 import { app_shared_bible_offline_languages } from "./app_shared_bible_offline_languages.mjs";
