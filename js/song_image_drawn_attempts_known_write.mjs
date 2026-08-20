@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { path_join } from "./path_join.mjs";
-import { file_write } from "./file_write.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
@@ -46,6 +46,6 @@ export async function song_image_drawn_attempts_known_write() {
     "js",
     text_combine_multiple([fn_name("song_image_drawn_attempts_known"), ".mjs"]),
   ]);
-  await file_write(path, source);
+  await file_overwrite(path, source);
   return known;
 }
