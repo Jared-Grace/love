@@ -1,3 +1,7 @@
+import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
+import { html_style_background } from "./html_style_background.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -23,8 +27,8 @@ export function song_image_frame_column(parent, state, on_change) {
   let width = wide ? "560px" : "293px";
   let frame = html_div(column);
   html_style_set(frame, "position", "relative");
-  html_style_set(frame, "overflow", "hidden");
-  html_style_set(frame, "background", "#000000");
+  html_style_overflow_hidden(frame);
+  html_style_background(frame, "#000000");
   html_style_set(frame, "width", width);
   html_style_set(frame, "height", wide ? "315px" : "520px");
   if (not_equal(candidate, undefined)) {
@@ -35,9 +39,9 @@ export function song_image_frame_column(parent, state, on_change) {
     song_image_frame_words(frame, state, couplet);
   }
   let caption = html_div(column);
-  html_style_set(caption, "margin-top", "10px");
+  html_style_margin_top(caption, "10px");
   html_style_set(caption, "width", width);
-  html_style_set(caption, "font-size", "12px");
+  html_style_font_size(caption, "12px");
   html_style_set(caption, "color", "#999999");
   html_text_set(
     caption,
