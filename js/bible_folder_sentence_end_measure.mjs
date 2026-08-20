@@ -1,33 +1,33 @@
+import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
+import { bible_folder_chapter_sentence_end_measure } from "./bible_folder_chapter_sentence_end_measure.mjs";
 import { bible_folder_sentence_end_fallback_chapter } from "./bible_folder_sentence_end_fallback_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { bible_folder_chapter_verses_outcome } from "./bible_folder_chapter_verses_outcome.mjs";
-import { list_map_unique } from "./list_map_unique.mjs";
-import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
-import { text_last } from "./text_last.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
-import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
-import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
+import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_folder_sentence_end_measure(bible_folder) {
-  "Reads the opening of one bible and counts how many of its verses finish on a mark this repo knows a sentence to end on.";
-  "This is the measurement everything about waiting for the end of a sentence rests on. A bible that marks its sentences can be asked whether this verse finished one; a bible that does not can only ever answer no, and anything waiting for it would wait until whatever bound it holds ran out.";
-  "It reads what a reader reads - the verses as they were uploaded - rather than the text they were cut from, because a mark lost on the way up would be lost to the reader too and this would say nothing about it.";
-  "A verse that cannot be fetched is counted as not read rather than as not marked, so a bible missing part of a chapter says so instead of being mistaken for one that writes no marks.";
-  "WHY THE CHAPTER GAVE NOTHING IS WRITTEN DOWN BESIDE THE COUNT, because reading nothing has two causes that look identical and only one of them is a fact about a bible. A bible that does not hold this chapter has told us something true; a chapter that would not answer this afternoon has told us how the run went, and recorded as the first it becomes a wrong fact in the shape of a right one - believed until somebody happens to ask that bible again by hand.";
+  "$plain bible_folder";
+  "Reads one bible and counts how many of its verses finish on a mark this repo knows a sentence to end on, asking it for a chapter it actually holds.";
   "Measured 2026-08-20, which is what this line is for. A hundred bibles stood in the record as having no readable verse here; twenty eight of them read in full when asked again the same morning, and the record had been written four hours earlier. The count alone could never have said which twenty eight.";
-  "THE CHAPTER IS CHOSEN PER BIBLE AND NOT ONCE FOR ALL OF THEM, which is the correction this line exists to record. One chapter read everywhere wrote seventy one bibles down as unreadable, and forty of those hold books they were never asked for - a bible published as a gospel and four letters has no Luke and is not thereby a language without sentences.";
-  let chapter_code =
-    await bible_folder_sentence_end_fallback_chapter(bible_folder);
-  let unstored = text_empty_is(chapter_code);
+  "ONE CHAPTER READ IN EVERY BIBLE WAS THE MISTAKE THIS CORRECTS. Luke one was asked of all of them and seventy one answered with nothing, and forty of those hold books they were never asked for - a bible published as a gospel and four letters has no Luke and is not thereby a language without sentences. They stood in the record as unreadable while sitting there readable.";
+  "LUKE IS STILL ASKED FOR FIRST, IN EVERY BIBLE, and a second ask only happens when it is not there. Its opening dedication runs across several verses, so a bible that ends a sentence only at the end of a verse and a bible that ends one mid-chapter are told apart there rather than looking alike. Choosing a chapter per bible up front would have thrown that away in the two hundred and seventy odd bibles that do hold Luke, to save one fetch in the seventy that do not.";
+  "AND IT HAS TO BE ASKED FOR RATHER THAN LOOKED UP, because the record of what storage holds cannot say. Its list of books is the first page of a listing and stops early - the English bible names two books there and has sixty six - so a bible not naming Luke may hold it all the same. A book the record does name is really there, which is enough for a fallback and not enough for a decision.";
+  "A CHAPTER THAT WAS NEVER ANSWERED FOR IS NOT ASKED AROUND, because it is absent that says a bible does not hold something and unreachable that says this run failed. Falling back on a failed ask would quietly turn a bad afternoon into a bible measured somewhere else, and the second reading would be filed as though the first had told us something.";
+  let preferred = bible_sentence_end_sample_chapter();
+  let measured = await bible_folder_chapter_sentence_end_measure(
+    bible_folder,
+    preferred,
+  );
+  let absent = property_get(measured, "absent");
+  if (not(absent)) {
+    return measured;
+  }
+  let fallback = await bible_folder_sentence_end_fallback_chapter(bible_folder);
+  let unstored = text_empty_is(fallback);
   if (unstored) {
-    ("A BIBLE STORAGE HOLDS NOTHING FOR IS NOT ASKED, and says so by naming no chapter. Asking would spend a fetch to be told what the record already knows, and the answer would come back looking exactly like a bible that holds the chapter and could not be reached this afternoon.");
+    ("A BIBLE STORAGE HOLDS NOTHING FOR NAMES NO CHAPTER, which is how everything downstream tells it apart from a bible that holds chapters and gave none of them. There was no chapter of it to read, so none is written down. That is an upload that never ran rather than a fact about a language, and the gate naming those bibles is the one that can be acted on.");
     let nothing = {
       bible_folder,
-      chapter_code,
+      chapter_code: fallback,
       read: 0,
       ended: 0,
       absent: true,
@@ -36,40 +36,9 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
     };
     return nothing;
   }
-  let count = bible_sentence_end_sample_count();
-  let outcome = await bible_folder_chapter_verses_outcome(
+  let second = await bible_folder_chapter_sentence_end_measure(
     bible_folder,
-    chapter_code,
-    count,
+    fallback,
   );
-  let verses = property_get(outcome, "verses");
-  let absent = property_get(outcome, "absent");
-  let unreachable = property_get(outcome, "unreachable");
-  let read = list_filter(verses, null_not_is);
-  function lambda2(verse) {
-    let text = property_get(verse, "text");
-    let ended = bible_verse_end_is(text);
-    return ended;
-  }
-  let ended_each = list_filter(read, lambda2);
-  ("What the verses this did not recognise end on is written down beside the count, because a bible reading zero has two quite different causes and the count alone cannot tell them apart. One writes no mark at all; the other writes a mark nobody here had met - and only the second is repaired by widening the set. The first time this ran it found Urdu at zero, and this line is what said the reason was a full stop shaped differently rather than a language without sentences.");
-  function lambda3(verse) {
-    let text = property_get(verse, "text");
-    let trimmed = bible_verse_trim_right(text);
-    let last = text_last(trimmed);
-    return last;
-  }
-  let unended = list_difference(read, ended_each);
-  let unrecognised = list_map_unique(unended, lambda3);
-  list_sort_text(unrecognised);
-  let measured = {
-    bible_folder,
-    chapter_code,
-    read: list_size(read),
-    ended: list_size(ended_each),
-    absent,
-    unreachable,
-    unrecognised,
-  };
-  return measured;
+  return second;
 }
