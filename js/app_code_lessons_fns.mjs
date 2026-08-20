@@ -1,3 +1,6 @@
+import { app_code_lesson_expression_comparison_or } from "./app_code_lesson_expression_comparison_or.mjs";
+import { app_code_lesson_expression_and_before_or } from "./app_code_lesson_expression_and_before_or.mjs";
+import { app_code_lesson_expression_brackets_or } from "./app_code_lesson_expression_brackets_or.mjs";
 import { app_code_lesson_expression_not_pair } from "./app_code_lesson_expression_not_pair.mjs";
 import { app_code_lesson_expression_choose_order_not_pair } from "./app_code_lesson_expression_choose_order_not_pair.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
