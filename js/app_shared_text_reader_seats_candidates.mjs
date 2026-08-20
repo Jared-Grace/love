@@ -3,6 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { function_reachable_names } from "./function_reachable_names.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_map } from "./list_map.mjs";
@@ -30,12 +31,12 @@ export async function app_shared_text_reader_seats_candidates(f_name_app) {
     let ast = await function_ast(f_name);
     let calls = js_list_type_nodes(ast, "CallExpression");
     for (let call of calls) {
-      let callee = property_get(call, "callee");
-      let named = equal(callee.type, "Identifier");
-      if (not(named)) {
+      let callee_name = js_call_callee_name_try(call);
+      let unnamed = null_is(callee_name);
+      if (unnamed) {
         continue;
       }
-      let watched = list_includes(doors, callee.name);
+      let watched = list_includes(doors, callee_name);
       if (watched) {
         continue;
       }
@@ -45,7 +46,7 @@ export async function app_shared_text_reader_seats_candidates(f_name_app) {
         if (unwritten) {
           continue;
         }
-        property_count_add(candidates, callee.name, 1);
+        property_count_add(candidates, callee_name, 1);
       }
     }
   }
