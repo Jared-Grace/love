@@ -27,8 +27,10 @@ export function app_code_lesson_expression_and_before_or_intro(root) {
     " is solved before the ",
     or_symbol,
   ]);
+  let heading_none = [];
   app_code_lesson_expression_worked_card_two_operators(
     root,
+    heading_none,
     whole,
     pair,
     false_word,
