@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { psalms_playlists_plan } from "./psalms_playlists_plan.mjs";
 import { psalms_playlists_plan_payload_path } from "./psalms_playlists_plan_payload_path.mjs";
@@ -13,9 +15,9 @@ export async function psalms_playlists_plan_payload_write() {
     for (let song of one.add) {
       video_ids.push(song.video_id);
     }
-    let nothing_to_add = video_ids.length === 0;
-    let has_playlist = one.playlist_id !== null;
-    if (nothing_to_add && has_playlist && one.out_of_order === false) {
+    let nothing_to_add = equal(video_ids.length, 0);
+    let has_playlist = not_equal(one.playlist_id, null);
+    if (nothing_to_add && has_playlist && equal(one.out_of_order, false)) {
       continue;
     }
     pending.push({
