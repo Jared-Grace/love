@@ -1,3 +1,4 @@
+import { app_shared_color_gold_text_light } from "./app_shared_color_gold_text_light.mjs";
 import { song_image_color_text } from "./song_image_color_text.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
@@ -41,7 +42,10 @@ export function song_image_nav_column_grid_words(column, state, on_change) {
       "1px solid " + app_shared_color_gray_dark(),
     );
     let open = equal(couplet.n, state.couplet);
-    html_style_background(button, open ? "#ffe994" : "#1a1a1a");
+    html_style_background(
+      button,
+      open ? app_shared_color_gold_text_light() : "#1a1a1a",
+    );
     html_style_set(button, "color", open ? "#000000" : song_image_color_text());
   }
   let current = song_image_couplet_get(state.couplet);
@@ -49,7 +53,7 @@ export function song_image_nav_column_grid_words(column, state, on_change) {
   html_style_margin_top(words, "18px");
   html_style_font_size(words, "22px");
   html_style_line_height(words, "1.35");
-  html_style_set(words, "color", "#ffe994");
+  html_style_set(words, "color", app_shared_color_gold_text_light());
   html_text_set(words, current.first + "<br>" + current.second);
   return current;
 }

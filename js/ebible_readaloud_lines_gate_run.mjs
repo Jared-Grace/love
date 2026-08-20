@@ -44,7 +44,7 @@ export async function ebible_readaloud_lines_gate_run() {
   let unchecked_names = await ebible_readaloud_lines_offered_to_fetch_names();
   let unchecked_path = ebible_readaloud_lines_offered_to_fetch_baseline_path();
   let unchecked_write = fn_name(
-    "ebible_readaloud_lines_offered_unchecked_baseline_write",
+    "ebible_readaloud_lines_offered_to_fetch_baseline_write",
   );
   let f_name_download = fn_name("ebible_languages_readaloud_download");
   let differ = await ebible_readaloud_lines_record_assert(

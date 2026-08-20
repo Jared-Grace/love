@@ -1757,7 +1757,7 @@ export function permission_grant_names() {
   let spelled1692 = fn_name("functions_imports_dangling");
   let spelled1693 = fn_name("ebible_readaloud_lines_baseline_path");
   let spelled1694 = fn_name(
-    "ebible_readaloud_lines_offered_unchecked_baseline_write",
+    "ebible_readaloud_lines_offered_to_fetch_baseline_write",
   );
   let spelled1695 = fn_name("ebible_chapter_readaloud_file_or_null");
   let spelled1696 = fn_name("text_replace_path_start_cases_gate_run");
