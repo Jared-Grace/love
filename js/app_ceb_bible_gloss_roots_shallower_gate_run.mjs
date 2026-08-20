@@ -1,7 +1,5 @@
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
+import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { list_size } from "./list_size.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_roots_shallower } from "./app_ceb_bible_gloss_roots_shallower.mjs";
 import { app_ceb_bible_gloss_roots_shallower_baseline_path } from "./app_ceb_bible_gloss_roots_shallower_baseline_path.mjs";
 import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
