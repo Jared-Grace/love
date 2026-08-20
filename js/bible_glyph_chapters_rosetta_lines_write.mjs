@@ -14,7 +14,8 @@ export async function bible_glyph_chapters_rosetta_lines_write() {
   let written = [];
   for (let chapter of chapters) {
     let f_name = bible_glyph_chapter_rosetta_lines_name(chapter.chapter_code);
-    let exists = await function_exists(f_name);
+    let found = await function_exists(f_name);
+    let exists = property_get(found, "exists");
     if (exists) {
       continue;
     }
