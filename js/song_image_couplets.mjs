@@ -44,6 +44,9 @@ export function song_image_couplets() {
   "the spices carry the burial rather than the tomb, because the tomb is spoken for three times over within six couplets - a rock-cut mouth, a stone closed against it, and the same stone rolled away. A fourth tomb would be the same shape four times in the stretch of film where the story is actually moving fastest, and the couplet that has to give way is this one, since the three others each name the tomb in their own lines and this one names the body.";
   "the spices are also what the accounts themselves dwell on. John gives myrrh and aloes by weight and says it was the burial custom; Luke has the women prepare spices and ointments and rest before bringing them. The burial is told through what was brought to it.";
   "the linen came off this symbol rather than the spices, and the reason is that folded linen is not a burial image at all. Cloths lying folded in an empty tomb is what Peter stoops and sees in John 20 - it is the sign that HE is risen, and it is the one detail in the whole account that only makes sense after the resurrection. At the burial the linen is wound about the body. So the folded cloths were drawing a later couplet's moment here, and drawing it four couplets before the stone is even rolled away.";
+  "the jar became a flask, because squat and round-bellied and stoppered is the description of a funerary urn and nothing else. That was chosen to keep it away from the cup and it succeeded, at the price of saying cremation - which is the opposite of what this couplet says, since the whole point of the account is a body laid whole in a tomb and found whole three days later. An alabaster flask is tall and narrow instead of round, it says anointing rather than ashes, and it is what Scripture actually describes being brought.";
+  "the flask is still kept apart from the cup by being shut rather than by being squat. A cup is open at the top - that is what makes it a cup - so a stoppered vessel is a different object however tall it is, and the height that removes the urn no longer costs anything.";
+  "burial cloth was the other candidate and it is ruled out by a collision rather than by argument. The temple veil five couplets earlier is a large white cloth, and a white linen burial cloth is near enough the same object that the two would read as one repeated picture. This table has already had a ram and a lamb come back as each other, so the risk is measured rather than imagined.";
   "the jar is asked for stoppered and round-bellied so that it cannot be read as the cup six couplets earlier. A vessel is a vessel to whatever draws it, and two couplets that come back with the same object are worth less than either would be alone - which is not a guess, since a ram and a lamb have already come back as each other in this same table.";
   "a symbol may not point at another couplet either. The same scales was written for a human reader who has just seen the first pair; whatever draws this sees one line and has no memory of any other, so the same names nothing and the word is simply lost.";
   let couplets = [
@@ -147,7 +150,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A whole ram all of one white glass from nose to hoof, horns white too and no part of it any other colour, standing side-on in strict profile on all four legs, never a head on its own and never seen from the front, its horns held fast in three or four stout brown thorn branches",
+        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, its head caught fast and held in three or four stout brown thorn branches",
       ref: "Genesis 22",
       same_as: 0,
     },
@@ -222,7 +225,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "HIS body laid",
       second: "inside a tomb",
-      symbol: "A stoppered jar of burial spices, squat and round-bellied",
+      symbol:
+        "An alabaster flask of burial ointment, white and tall and narrow with a slender neck, stoppered shut, standing upright on a small flat foot",
       ref: "John 19:39-40, Luke 23:56",
       same_as: 0,
     },
