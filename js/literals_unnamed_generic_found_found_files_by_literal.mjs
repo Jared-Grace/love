@@ -17,6 +17,8 @@ export function literals_unnamed_generic_found_found_files_by_literal(
   named,
   files_by_literal,
 ) {
+  "Walks the code of every function and adds into one shared table, for each piece of plain text that no function yet stands for, the files that spell it out. It is the reading that says which words are worth a name.";
+  "Four things are stepped over before a spelling is noted. The path in an import line names a file rather than a value. A name written as a name through the marker is already the name of something. Text that some function already answers to needs no second one. And text too plain to tell one place from another would gather half the repo under a single short word.";
   arguments_assert(arguments, 3);
   for (let f_name of object_property_names(codes)) {
     let ast = property_js_parse(codes, f_name);
