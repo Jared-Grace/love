@@ -18,7 +18,7 @@ export async function qa_gates_here_failed(names_comma) {
   for (let result of results) {
     let name = property_get(result, "name");
     let error_message = property_get(result, "error_message");
-    let complained = text_and_empty_not_is(error_message);
+    let complained = property_get(result, "red");
     if (complained) {
       console.log("STILL RED HERE  " + name + ": " + error_message);
       list_add(failed, name);

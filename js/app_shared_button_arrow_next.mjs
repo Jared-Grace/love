@@ -11,7 +11,8 @@ export function app_shared_button_arrow_next(parent, text, lambda) {
   let component = app_shared_button_notext(parent, lambda);
   html_flex_row_center(component);
   html_style_gap_em(component, "0.3");
-  let arrow = emoji_arrow_right();
+  let arrow_ltr = emoji_arrow_right();
+  let arrow = app_shared_emoji_mirror_if_rtl(arrow_ltr);
   html_span_text(component, text);
   html_span_text(component, arrow);
   return component;
