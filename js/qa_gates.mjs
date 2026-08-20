@@ -1,3 +1,4 @@
+import { command_grantable_run_name_cases_gate_run } from "./command_grantable_run_name_cases_gate_run.mjs";
 import { app_shared_text_reader_untranslated_gate_run } from "./app_shared_text_reader_untranslated_gate_run.mjs";
 import { folders_waiting_to_be_deleted_gate_run } from "./folders_waiting_to_be_deleted_gate_run.mjs";
 import { folders_root_gate_run } from "./folders_root_gate_run.mjs";
@@ -604,6 +605,7 @@ export function qa_gates() {
     text_split_comma_nested_cases_gate_run,
     text_split_comma_outside_brackets_cases_gate_run,
     text_split_outside_quotes_cases_gate_run,
+    command_grantable_run_name_cases_gate_run,
     text_lines_ends_kept_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
