@@ -14,6 +14,6 @@ export function app_code_lesson_expression_choose_order_and_above(root) {
     tree,
     app_code_lesson_expression_choose_order_and_intro,
     " are comparisons, so they go before the ",
-    "A comparison comes to the same value every time you solve it",
+    "A comparison solves to the same value every time",
   );
 }
