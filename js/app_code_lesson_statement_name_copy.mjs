@@ -1,3 +1,4 @@
+import { app_code_lesson_decoy_code_words } from "./app_code_lesson_decoy_code_words.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_copy_above } from "./app_code_lesson_statement_name_copy_above.mjs";
@@ -27,6 +28,7 @@ export function app_code_lesson_statement_name_copy() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
+    decoys: app_code_lesson_decoy_code_words,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

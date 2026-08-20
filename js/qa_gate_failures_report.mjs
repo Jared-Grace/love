@@ -25,8 +25,7 @@ export async function qa_gate_failures_report(results, gates) {
   let size = list_size(results);
   for (let index = 0; less_than(index, size); index++) {
     let result = list_get(results, index);
-    let error_message = property_get(result, "error_message");
-    let complained = text_and_empty_not_is(error_message);
+    let complained = property_get(result, "red");
     let quiet = not(complained);
     if (quiet) {
       continue;
