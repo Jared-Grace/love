@@ -1,3 +1,4 @@
+import { js_block_local_call_add } from "./js_block_local_call_add.mjs";
 import { js_block_local_boolean_add } from "./js_block_local_boolean_add.mjs";
 import { js_call_argument_named_boolean_set } from "./js_call_argument_named_boolean_set.mjs";
 import { js_object_key_rename } from "./js_object_key_rename.mjs";
@@ -117,6 +118,7 @@ export function example_transforms() {
     js_object_key_rename,
     js_call_argument_named_boolean_set,
     js_block_local_boolean_add,
+    js_block_local_call_add,
   };
   return transforms;
 }
