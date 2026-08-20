@@ -1,3 +1,4 @@
+import { song_image_color_text } from "./song_image_color_text.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -41,7 +42,7 @@ export function song_image_nav_column_grid_words(column, state, on_change) {
     );
     let open = equal(couplet.n, state.couplet);
     html_style_background(button, open ? "#ffe994" : "#1a1a1a");
-    html_style_set(button, "color", open ? "#000000" : "#bebebe");
+    html_style_set(button, "color", open ? "#000000" : song_image_color_text());
   }
   let current = song_image_couplet_get(state.couplet);
   let words = html_div(column);
