@@ -1,12 +1,7 @@
-import { js_strings_add_reference_skip_nodes } from "./js_strings_add_reference_skip_nodes.mjs";
-import { js_statement_expression_nodes } from "./js_statement_expression_nodes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_code_call_args } from "./js_code_call_args.mjs";
-import { js_parse_expression_replace } from "./js_parse_expression_replace.mjs";
-import { js_strings_replace_generic } from "./js_strings_replace_generic.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
+import { js_code_call_args } from "./js_code_call_args.mjs";
+import { js_strings_code_replace_generic } from "./js_strings_code_replace_generic.mjs";
 import { not } from "./not.mjs";
 export async function js_literal_calls_set(ast, literal, f_name) {
   arguments_assert(arguments, 3);
@@ -23,32 +18,19 @@ export async function js_literal_calls_set(ast, literal, f_name) {
   ("it gets a second function holding it, and the sites move over one at a time, so");
   ("a word routed here on a reading that turns out wrong costs one move to undo and");
   ("nothing at all in the meantime.");
-  ("Prose is left alone. A word standing on its own as a statement is something the");
-  ("file says rather than something it uses, and a call put in its place would read");
-  ("as a line that runs - which it would, doing nothing, forever.");
-  ("The words a rename must not follow are left alone too, and not by anything");
-  ("written here: the skip already used by the pass that promotes names covers the");
-  ("argument of the frozen-word marker, the naming of a field, and the source of an");
-  ("import. So a value already sitting in somebody's browser cannot be routed onto a");
-  ("function by this, which is the one mistake it could make that no later edit here");
-  ("could reach.");
-  let changed = 0;
-  let skip = js_strings_add_reference_skip_nodes(ast);
-  let prose_nodes = js_statement_expression_nodes(ast);
+  ("Prose, and the places a rename must never follow, are left alone by the sweep");
+  ("underneath rather than by anything written here. It answers for the sibling");
+  ("that joins an address onto a folder's function too, so what is left in each is");
+  ("only the reading: which words are to be written over, and what is to stand in");
+  ("their place.");
   let call_code = js_code_call_args(f_name, []);
-  function replace_try(value, node) {
+  function call_code_or_null(value) {
     let same = equal(value, literal);
     if (not(same)) {
-      return false;
+      return null;
     }
-    let prose = list_includes(prose_nodes, node);
-    if (prose) {
-      return false;
-    }
-    js_parse_expression_replace(call_code, node);
-    changed = add(changed, 1);
-    return true;
+    return call_code;
   }
-  await js_strings_replace_generic(ast, skip, replace_try);
+  let changed = await js_strings_code_replace_generic(ast, call_code_or_null);
   return changed;
 }
