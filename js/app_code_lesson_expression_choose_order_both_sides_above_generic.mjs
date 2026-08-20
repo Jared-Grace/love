@@ -64,7 +64,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
     left_code,
     " and ",
     right_code,
-    " come to the same values whichever one we solve first",
+    " solve to the same values whichever one we solve first",
   ]);
   html_div_cycle_code(run, ["It does not matter which one we solve first"]);
   ("both are then simply shown coming to their values, one line each, with nothing said about order - the order question is already answered above and saying it again here would make it sound unsettled");
@@ -73,7 +73,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   let right_solved = app_code_expression_equals_text(right_code, right_text);
   html_div_cycle_code(run, ["", right_solved]);
   html_div_cycle_code(run, [
-    "Then we replace them, and the line is ",
+    "Then we replace them to get ",
     both_code,
     ", which is ",
     final_text,
