@@ -246,6 +246,8 @@ export function examples_notes() {
       "the one thing on this climb that cannot be made again - every other transform can be run a second time, so this is where refusing rather than overwriting is the whole answer",
     example_snapshot_refuses_a_split_build:
       "a refusal about what the copy could not follow rather than about what it was asked for - the failure it prevents is a page that loads and shows something else",
+    example_object_key_rename:
+      "changing the name a record hands a value under - the half of an entry that had no verb",
   };
   return notes;
 }

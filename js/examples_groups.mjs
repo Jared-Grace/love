@@ -42,6 +42,7 @@ export function examples_groups() {
         "example_return_identifier_add",
         "example_object_shorthand_add",
         "example_object_shorthand_remove",
+        "example_object_key_rename",
         "example_array_text_add",
         "example_array_identifier_add",
         "example_array_identifier_remove",
