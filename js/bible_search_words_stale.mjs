@@ -1,3 +1,13 @@
+import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { bible_search_word_path } from "./bible_search_word_path.mjs";
+import { bible_search_folder } from "./bible_search_folder.mjs";
+import { text_slash_forward } from "./text_slash_forward.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { firebase_storage_list_jg } from "./firebase_storage_list_jg.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { list_size } from "./list_size.mjs";
 export async function bible_search_words_stale() {
   "The words storage still holds that the search index no longer knows.";
   "Split out from the taking down of them so the set can be read before it is acted on. A sweep of this shape has one way to go badly wrong: if the two sides spell a word differently - one encoding a letter the other leaves alone - then every word looks unknown and the whole index is deleted. Counting first catches that, because the words just put up must all be found again, so the number left over has to be exactly what storage holds less what the index knows.";
