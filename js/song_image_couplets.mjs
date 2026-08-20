@@ -1,6 +1,7 @@
 export function song_image_couplets() {
   "the 36 couplets of the hymn 'the FATHER's SON' in order, each with the symbol chosen for it; four verses of nine, and every ninth couplet repeats the eighth, so same_as points a repeat at the couplet whose image it shares";
   "a symbol says what the thing is and never where it is, because the picture already has a where. The window supplies a field above and a field below; a symbol that also names a hill or a horizon or a stretch of ground is asking for the same thing twice, and what came back was three overlapping hills in three colours - which is also depth, the one thing the look forbids outright. Three crosses on a hill, distant became three crosses, and the distant went with it: a symbol asked to be far away cannot also be large enough to read on a phone.";
+  "the tilt is described as where each pan ends up rather than named as a state, because one pan forced down came back perfectly level. Forced down is a thing that happened to the scales and not a thing about how they look now, and only how they look now can be drawn; a drawing has no before to compare against. Saying the beam is steeply slanted, the left pan almost at the foot of the stand and the right pan high near the top, is the same fact as a shape. This also matters more here than it would elsewhere, because a later couplet asks for these same scales upright and level - so a level pair at couplet one is not merely wrong, it is the other couplet's picture arriving first and spending it.";
   "a symbol names one thing and never a choice between two. Scales with the beam broken or one pan forced down reads as a menu and gets picked from afresh every time, so the same couplet came back as two different objects; and here the table settles it without anyone having to have a preference, because a later couplet asks for those same scales upright and level, and scales that survive to be levelled are scales whose beam was never broken. The serpent went the same way - the verse behind it is about the serpent's head, so the broken chains beside it were never a real alternative.";
   "a symbol names the thing and never the material it is made of, because the look already decides every material and one of them is spoken for. A royal crown of gold asked for the one colour the whole film keeps back for the word of GOD; a royal crown asks for a crown, and the look gives it glass. Nothing was lost - a crown is a crown to anybody alive whether it is gold or ruby, which is most of why the crown is a good symbol in the first place.";
   "the lamb is the one Revelation describes, seven horns and seven eyes, and it is asked for that way because Scripture's own account of how CHRIST looks outranks anything chosen for style. What that costs was guessed at first and has now been measured, twice, so the guess is worth replacing with the measurement.";
@@ -57,7 +58,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "falsely accused",
       second: "unjustly tried",
-      symbol: "Scales with one pan forced down",
+      symbol:
+        "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam",
       ref: "",
       same_as: 0,
     },
