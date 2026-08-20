@@ -1,3 +1,4 @@
+import { app_code_lesson_decoy_lines_reversed_and_each } from "./app_code_lesson_decoy_lines_reversed_and_each.mjs";
 import { app_code_lesson_decoy_lines_reversed } from "./app_code_lesson_decoy_lines_reversed.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -14,7 +15,9 @@ export function app_code_lesson_log_twice() {
   ("It is taught on the plainest line there is, twice, rather than on anything the recent screens have been building. What is new is the second line existing at all, and a second line doing something the learner has not met would hide that behind the newer thing.");
   ("The answer is the text a person would see, one line for each writing-out, rather than the list of what each one was given. A list drawn on a screen arrives as its commas, and a learner would be shown a comma the machine never wrote.");
   ("The program is not unscrambled. The tokens a program is taken apart into carry no line breaks, so a two-line program handed to that quiz would be built back as one line - and one line against two is the single thing this screen exists to tell apart.");
-  ("Both quizzes are given the same tailored wrong answer: the right answer with its two lines the other way round. Without it the four programs differ on their first line and so do the four answers, so either direction could be settled by reading one line - and the screen would accept an answer from a learner who had not read that the order is the order the lines are written, which is half of what it exists to say.");
+  ("Both quizzes are given a tailored wrong answer: the right answer with its two lines the other way round. Without it the four programs differ on their first line and so do the four answers, so either direction could be settled by reading one line - and the screen would accept an answer from a learner who had not read that the order is the order the lines are written, which is half of what it exists to say.");
+  ("Reading forwards that is not enough on its own, and each of the two lines alone is offered as well. Reversed is the only other option there, and its first line is the right answer's second, so a learner could work out the first sum, look for the option beginning with it, and never work out the second. The single lines share a first line with the right answer, so the second one has to be worked out too - and each is the natural mistake of stopping after one line on the screen that has just said two lines write out two things. Three wrong answers, and all three are tailored: nothing is left for the draw to fill.");
+  ("Reading backwards the reversed one still stands alone, because the answers there are code rather than what came out, and the two mistakes the single lines catch are mistakes about working a program out.");
   let name_id = app_code_lesson_log_twice_title_name_id();
   let batch = app_code_batch_question_answer_fns(
     app_code_lesson_log_twice_batch,
