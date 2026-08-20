@@ -1,9 +1,9 @@
+import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_not } from "./js_code_not.mjs";
-import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -22,8 +22,7 @@ export function app_code_lesson_expression_not_pair_intro(root) {
   let true_word = js_keyword_true();
   let false_word = js_keyword_false();
   let pair = app_code_operator_code(true_word, and_symbol, false_word);
-  let bracketed = js_code_wrap_parenthesis(pair);
-  let whole = js_code_not(bracketed);
+  let whole = js_code_not_parenthesis_wrapped(pair);
   let not_false = js_code_not(false_word);
   let what_is_new = app_code_container_light_blue(root);
   html_div_cycle_code(what_is_new, [
