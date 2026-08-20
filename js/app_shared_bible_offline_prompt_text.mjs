@@ -4,6 +4,9 @@ export function app_shared_bible_offline_prompt_text() {
   let texts = {
     en: "Which languages do you want to keep on this device?",
     ur: "آپ اس آلے پر کون سی زبانیں رکھنا چاہتے ہیں؟",
+    translated_from: {
+      ur: "Which languages do you want to keep on this device?",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
