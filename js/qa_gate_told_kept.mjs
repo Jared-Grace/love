@@ -19,12 +19,14 @@ export function qa_gate_told_kept(kept) {
       said,
     });
   }
+  ("An answer read back out of the record answered, always, and it is said here rather than left off. Only an answer may be filed, so anything in the record is one - but the two shapes have to agree field for field, and a field present on one of them and missing on the other is exactly the difference everything downstream is promised it cannot see.");
   let r = {
     green,
     failed,
     printed:
       "=== the frozen copy was not asked: this commit is already judged in the shared record ===",
     sections,
+    answered: true,
   };
   return r;
 }

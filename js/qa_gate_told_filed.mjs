@@ -5,6 +5,8 @@ import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_commit_kept_file } from "./qa_commit_kept_file.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
+import { qa_gate_told_answered_is } from "./qa_gate_told_answered_is.mjs";
+import { not } from "./not.mjs";
 export async function qa_gate_told_filed(commit, told, before) {
   "$plain commit";
   "$plain told";
@@ -16,6 +18,18 @@ export async function qa_gate_told_filed(commit, told, before) {
   ("Whether it was written is printed rather than left silent. An answer that quietly is not being kept looks exactly like one that is, and the reason it was not - a neighbour with work in flight, or one that moved while the gates were being asked - is the sort of thing somebody can put right in a minute if they are told.");
   let nameless = null_is(commit);
   if (nameless) {
+    return false;
+  }
+  ("Nothing is written when a share of the gates stopped without complaining about any gate either. Such a run found nothing out: it is not green, and it cannot say what is wrong, so every question a later reader puts to it comes back empty - which is what a commit already answers before anybody judges it.");
+  ("Written down all the same, it is worse than useless. It looks judged, so it is never judged again; and the cheap reading of what is red hands back an empty list off the front of the record, which anybody reading it takes for nothing is red. That is the reading a deployment is meant to lean on, and it once said the repo was clean while five and twenty gates were complaining.");
+  ("Declining costs a quarter of an hour to somebody who asks about this commit later, and that is the right way round to be wrong. Having no answer keeps the deployment waiting; having a false one lets it through.");
+  let answered = qa_gate_told_answered_is(told);
+  if (not(answered)) {
+    console.log(
+      "\nnot kept for commit " +
+        commit +
+        ": a share of the gates stopped without complaining about any gate, so this run found nothing out and there is nothing worth writing down. Whatever stopped it is printed above. Running it again once that is put right is the whole of the fix",
+    );
     return false;
   }
   let kept = await qa_commit_told_judged(told);
