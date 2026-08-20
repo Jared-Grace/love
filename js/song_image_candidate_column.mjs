@@ -1,3 +1,4 @@
+import { song_image_color_text } from "./song_image_color_text.mjs";
 import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -60,7 +61,7 @@ export function song_image_candidate_column(parent, state, on_change) {
     html_cursor_pointer(thumbnail);
     let text = html_div(row);
     html_style_font_size(text, "11px");
-    html_style_set(text, "color", "#bebebe");
+    html_style_set(text, "color", song_image_color_text());
     html_style_flex(text, "1");
     html_text_set(
       text,
