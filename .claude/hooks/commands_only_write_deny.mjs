@@ -45,7 +45,7 @@ import { fileURLToPath } from "node:url";
 
 const hooks_folder = dirname(fileURLToPath(import.meta.url));
 const repo_root = dirname(dirname(hooks_folder));
-const switch_path = `${repo_root}/data/commands_only.json`;
+const switch_path = `${repo_root}/data/given/settings/commands_only.json`;
 const tools_writing = new Set(["Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
 function level_read() {
