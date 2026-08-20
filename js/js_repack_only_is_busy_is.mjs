@@ -6,6 +6,7 @@ import { add } from "./add.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_statement_arguments_assert_is } from "./js_statement_arguments_assert_is.mjs";
 import { js_statement_work_is } from "./js_statement_work_is.mjs";
+import { js_statement_await_own_is } from "./js_statement_await_own_is.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function js_repack_only_is_busy_is(declaration, getter) {
@@ -22,8 +23,13 @@ export function js_repack_only_is_busy_is(declaration, getter) {
   }
   let statements = property_get(block, "body");
   for (let statement of statements) {
+    ("A line that binds a name is counted by the run of callee names above rather than here, and that run reads a plain call and cannot see one that is waited on - the value it binds is a wait rather than a call. So a bind that waits is counted here instead, and only there, which is why it is added rather than the line being handed on. Waiting is the shape most of this repo's real work arrives in, and a reading blind to it called a function that opens a store and counts what is in it a repack that does nothing.");
     let bind_is = js_node_type_is(statement, "VariableDeclaration");
     if (bind_is) {
+      let waits_is = js_statement_await_own_is(statement);
+      if (waits_is) {
+        others = add(others, 1);
+      }
       continue;
     }
     let hand_back_is = js_node_type_is(statement, "ReturnStatement");
