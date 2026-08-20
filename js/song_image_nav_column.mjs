@@ -1,3 +1,4 @@
+import { song_image_color_text } from "./song_image_color_text.mjs";
 import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
@@ -17,7 +18,7 @@ export function song_image_nav_column(parent, state, on_change) {
   let symbol = html_div(column);
   html_style_margin_top(symbol, "14px");
   html_style_font_size(symbol, "14px");
-  html_style_set(symbol, "color", "#bebebe");
+  html_style_set(symbol, "color", song_image_color_text());
   html_text_set(symbol, current.symbol);
   let reference = html_div(column);
   html_style_margin_top(reference, "6px");
