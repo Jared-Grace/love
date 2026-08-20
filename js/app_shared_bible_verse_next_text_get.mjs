@@ -5,6 +5,9 @@ export function app_shared_bible_verse_next_text_get() {
   let texts = {
     en: "Next verse",
     ur: "اگلی آیت",
+    translated_from: {
+      ur: "Next verse",
+    },
   };
   let v = app_shared_text_reader_language(texts);
   return v;
