@@ -1,12 +1,5 @@
-import { property_equals } from "./property_equals.mjs";
-import { bible_folders_sentence_end_unmarked } from "./bible_folders_sentence_end_unmarked.mjs";
-import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { file_read_json } from "./file_read_json.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { bible_sentence_end_marks_findings } from "./bible_sentence_end_marks_findings.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
