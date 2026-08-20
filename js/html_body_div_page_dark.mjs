@@ -1,3 +1,4 @@
+import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_background } from "./html_style_background.mjs";
@@ -12,7 +13,7 @@ export function html_body_div_page_dark() {
   html_style_background(root, "#0b0b0b");
   html_style_set(root, "color", "#ffffff");
   html_font_set(root, "system-ui, sans-serif");
-  html_style_set(root, "min-height", "100vh");
+  html_style_set(root, "min-height", html_viewport_height_full());
   html_style_padding(root, "16px");
   return root;
 }
