@@ -30,42 +30,12 @@ export async function psalms_playlists_plan(channel_id) {
         holds.push(video.video_id);
       }
     }
-    let songs_to_add = [];
-    let order_wanted = [];
-    for (let song of songs) {
-      order_wanted.push(song.video_id);
-      let b = holds.includes(song.video_id);
-      if (not(b)) {
-        songs_to_add.push({
-          video_id: song.video_id,
-          title: song.title,
-        });
-      }
-    }
-    let kept = [];
-    for (let video_id of holds) {
-      if (order_wanted.includes(video_id)) {
-        kept.push(video_id);
-      }
-    }
-    let ordered = [];
-    for (let video_id of order_wanted) {
-      if (holds.includes(video_id)) {
-        ordered.push(video_id);
-      }
-    }
-    let left = kept.join(",");
-    let right = ordered.join(",");
-    let out_of_order = not_equal(left, right);
-    let r = {
-      chapter: chapter,
-      playlist_id: playlist_id,
-      songs_wanted: order_wanted,
-      songs_held: holds.length,
-      add: songs_to_add,
-      strangers: subtract(holds.length, kept.length),
-      out_of_order: out_of_order,
-    };
+    let r = psalms_playlist_chapter_change(
+      chapter,
+      playlist_id,
+      holds,
+      songs,
+    );
     return r;
   }
   let plan = await list_map_limited_async(chapters, lambda_chapter, 8);
