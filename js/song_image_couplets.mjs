@@ -14,6 +14,11 @@ export function song_image_couplets() {
   "and the bush is the nearest thing to a picture of the Trinity that these constraints permit anyway. It is a theophany read as GOD present and not consuming, in the East and the West alike; it is where I AM comes from; it is flame, which is already how the SPIRIT is drawn. One shape, no faces, no lettering, nothing counted. If a Trinity symbol is wanted in this film it wants a couplet that claims three in one, and there may not be one.";
   "the ram stands where Abraham and the angel stood, and it is one thing rather than a scene of four. The oldest way the church drew Genesis 22 is Abraham, Isaac bound on the wood, the ram, and a hand reaching from a cloud - which is also two faces and more panes than the window has. The ram alone keeps the substitution, keeps the covenant that GOD provides, and needs nobody drawn.";
   "the thorns are why the ram wins rather than merely why it is acceptable. A ram held by its horns in thorns rhymes with the crown of thorns four couplets earlier, so a viewer who has never read Genesis 22 still sees a creature caught in thorns in somebody's place - most of the meaning, from a shape the film has already taught. The cost is honest: a ram needs the chapter in a way a crown does not. Every emblem for this couplet does, since the chapter is the whole point, and this is the only one that leaves a reader without it something rather than nothing.";
+  "the thicket became a few stout boughs, and that is the pane count reaching the symbol rather than a change of mind about Genesis 22. A thicket is a mesh by definition - it is the word for many thin things crossing - so asking for one asks for fifty small panes and hairline leading in the same breath as asking for a dozen large panes and heavy lead, and the symbol wins that argument every time because it is the part that was chosen deliberately. Three or four thick branches are still thorns holding a ram, which is the whole of what the couplet needs, and they are drawable at the weight everything else here is drawn at.";
+  "the spices carry the burial rather than the tomb, because the tomb is spoken for three times over within six couplets - a rock-cut mouth, a stone closed against it, and the same stone rolled away. A fourth tomb would be the same shape four times in the stretch of film where the story is actually moving fastest, and the couplet that has to give way is this one, since the three others each name the tomb in their own lines and this one names the body.";
+  "the spices are also what the accounts themselves dwell on. John gives myrrh and aloes by weight and says it was the burial custom; Luke has the women prepare spices and ointments and rest before bringing them. The burial is told through what was brought to it.";
+  "the linen came off this symbol rather than the spices, and the reason is that folded linen is not a burial image at all. Cloths lying folded in an empty tomb is what Peter stoops and sees in John 20 - it is the sign that HE is risen, and it is the one detail in the whole account that only makes sense after the resurrection. At the burial the linen is wound about the body. So the folded cloths were drawing a later couplet's moment here, and drawing it four couplets before the stone is even rolled away.";
+  "the jar is asked for stoppered and round-bellied so that it cannot be read as the cup six couplets earlier. A vessel is a vessel to whatever draws it, and two couplets that come back with the same object are worth less than either would be alone - which is not a guess, since a ram and a lamb have already come back as each other in this same table.";
   "a symbol may not point at another couplet either. The same scales was written for a human reader who has just seen the first pair; whatever draws this sees one line and has no memory of any other, so the same names nothing and the word is simply lost.";
   let couplets = [
     {
@@ -111,7 +116,8 @@ export function song_image_couplets() {
       verse: 2,
       first: "the FATHER gave",
       second: "HIS only SON",
-      symbol: "A ram caught by its horns in a thicket of thorns",
+      symbol:
+        "A ram caught by its horns in a few thick bare thorn branches, three or four stout boughs and no more",
       ref: "Genesis 22",
       same_as: 0,
     },
@@ -185,8 +191,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "HIS body laid",
       second: "inside a tomb",
-      symbol: "Folded linen cloths with spice jars",
-      ref: "John 19:39-40",
+      symbol: "A stoppered jar of burial spices, squat and round-bellied",
+      ref: "John 19:39-40, Luke 23:56",
       same_as: 0,
     },
     {
