@@ -631,6 +631,7 @@ export function qa_gates() {
     permission_file_hook_live_gate_run,
     bible_storage_empty_gate_run,
     app_code_quiz_leniency_gate_run,
+    app_shared_text_reader_language_gate_run,
   ];
   return gates;
 }
