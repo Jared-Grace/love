@@ -6,6 +6,9 @@ export function app_shared_gear_settings_text() {
   let texts = {
     en: " Settings",
     ur: " ترتیبات",
+    translated_from: {
+      ur: " Settings",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let text = app_shared_gear_text(label);
