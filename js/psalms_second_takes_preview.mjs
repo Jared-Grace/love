@@ -21,7 +21,7 @@ export function psalms_second_takes_preview() {
     root,
     "two separate recordings of the same verses - hear both, and keep the one you want the chapter to carry",
   );
-  html_style_set(said, "color", "#aaaaaa");
+  html_style_set(said, "color", app_shared_color_gray());
   for (let pair of psalms_videos_same_passage_pairs()) {
     psalms_second_take_pair_row(root, pair);
   }
@@ -32,7 +32,7 @@ export function psalms_second_takes_preview() {
     root,
     "these looked sung twice, but each one is a different verse wearing somebody else's title - the words underneath are what youtube heard in it",
   );
-  html_style_set(told, "color", "#aaaaaa");
+  html_style_set(told, "color", app_shared_color_gray());
   for (let entry of psalms_videos_verse_mislabelled()) {
     psalms_verse_mislabelled_row(root, entry);
   }

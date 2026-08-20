@@ -28,7 +28,7 @@ export function app_g_typing_dots(container) {
       width: "0.6em",
       height: "0.6em",
       "border-radius": "50%",
-      background: "#3a3a3a",
+      background: app_shared_color_gray_dark(),
       animation,
     });
   }
