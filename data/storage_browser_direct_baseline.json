@@ -1,6 +1,5 @@
 {
  "known": [
-  "app_g_verify_home -> localStorage",
   "app_g_verify_home -> sessionStorage"
  ]
 }
