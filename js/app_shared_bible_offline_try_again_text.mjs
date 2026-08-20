@@ -6,6 +6,9 @@ export function app_shared_bible_offline_try_again_text() {
   let texts = {
     en: " Try again",
     ur: " دوبارہ کوشش کریں",
+    translated_from: {
+      ur: " Try again",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let text = app_shared_bible_offline_arrow_text(label);
