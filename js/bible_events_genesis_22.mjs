@@ -7,6 +7,7 @@ export function bible_events_genesis_22() {
   let events = [
     {
       title: "Abraham told to offer Isaac",
+      who: ["Abraham"],
       passages: [
         {
           chapter_code: "GEN22",
