@@ -16,6 +16,8 @@ export function app_shared_text_reader_language_defects_site(
   languages,
   counted,
 ) {
+  "Walk every place a button's saying is used, note which way of picking found it, and set down either what is the matter with the saying or the saying itself for the comparisons that come after.";
+  "The four things it fills are handed in rather than made and returned, because a place with something the matter with it is dropped from the counted set and a place counted is dropped from the faults - so the two lists are written in one walk, and a walk that made them separately would have to say twice which places it had already decided about.";
   arguments_assert(arguments, 5);
   for (let site of sites) {
     property_count_add(picked, site.picker, 1);
