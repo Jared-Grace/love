@@ -1,3 +1,4 @@
+import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
 import { js_delegate_only_cases_gate_run } from "./js_delegate_only_cases_gate_run.mjs";
 import { ebible_languages_curated_codes_gate_run } from "./ebible_languages_curated_codes_gate_run.mjs";
 import { js_statements_grouping_worthless_cases_gate_run } from "./js_statements_grouping_worthless_cases_gate_run.mjs";
