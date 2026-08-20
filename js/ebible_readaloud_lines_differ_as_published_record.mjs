@@ -32,18 +32,13 @@ export async function ebible_readaloud_lines_differ_as_published_record(
   }
   let names = list_map(differ, chapter_named);
   let path = ebible_readaloud_lines_differ_as_published_path();
-  let recorded = await baseline_known_read(path);
-  let added = list_difference(names, recorded);
-  let prefix = text_combine_multiple([bible_folder, " "]);
-  let others = list_filter_starts_with_not(recorded, prefix);
-  let combined = lists_combine([others, names]);
-  let gone = list_difference(recorded, combined);
-  let count = await baseline_known_write(combined, path);
-  let r = {
+  let changed = await baseline_known_bible_names_replace(
     bible_folder,
-    added,
-    gone,
-    recorded: count,
-  };
+    names,
+    path,
+  );
+  let r = object_merge_set(changed, {
+    bible_folder,
+  });
   return r;
 }
