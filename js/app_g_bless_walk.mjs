@@ -1,7 +1,7 @@
+import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest_crowd.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { not } from "./not.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_character_face } from "./app_g_character_face.mjs";
@@ -38,6 +38,18 @@ export async function app_g_bless_walk(
   if (nowhere) {
     return;
   }
+  ("The way opens before it is walked: anybody standing on it steps aside first, a crowd");
+  ("several deep parting into a lane, and the few too hemmed in to have anywhere to go are");
+  ("passed one at a time by trading places as the walk reaches them.");
+  ("This is the gospel game's own parting, called and not copied, for the same reason every");
+  ("other rule in here is. Both games put a player on a street among people who are");
+  ("standing about, and making room is one act - written twice it would be two crowds that");
+  ("part differently, and the second one would learn none of what the first already knows");
+  ("about waves, corners and two people being sent to one tile.");
+  ("Nobody is held still, because in this game a tap on a person is a prayer and never a");
+  ("walk. The one who must not be shuffled out of reach is whoever was tapped, and here");
+  ("that is nobody - the walk is always to open ground.");
+  app_g_crowd_part(world, path, null);
   let steps = g_path_steps(path);
   for (let step of steps) {
     let from = property_get(step, "from");
