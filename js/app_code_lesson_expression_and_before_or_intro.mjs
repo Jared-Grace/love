@@ -1,8 +1,7 @@
 import { app_code_lesson_expression_worked_card_two_operators } from "./app_code_lesson_expression_worked_card_two_operators.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
@@ -20,8 +19,7 @@ export function app_code_lesson_expression_and_before_or_intro(root) {
   let pair = app_code_operator_code(false_word, and_symbol, true_word);
   let whole = app_code_operator_code(pair, or_symbol, true_word);
   let rest = app_code_operator_code(false_word, or_symbol, true_word);
-  let rule = app_code_container_light_blue(root);
-  html_div_cycle_code(rule, [
+  app_code_container_light_blue_cycle_code(root, [
     "The ",
     and_symbol,
     " is solved before the ",
