@@ -11,6 +11,8 @@ export function song_image_style() {
   "the detail inside the shape is asked for as heavy black leading rather than as fine drawing, and that is a decision about the far end rather than about taste. Fine line work is the first thing a small screen eats; leading is thick by its nature, so in this one medium the interior detail is the part that survives being shrunk instead of the part that disappears.";
   "how many panes there are is said as well as how thick the leading is, because asking only for thick leading does not get it. Three crosses and a lamb were drawn from the same sentence and came back with lead lines of completely different weights - the crosses heavy, the lamb hairline. The subject decided it: a fleece invites fifty small divisions and a cross invites a dozen large ones, and the leading then thins to fit however many were drawn. Thickness is what comes out of the pane count rather than something that can be asked for beside it, so the count is the thing to say.";
   "flat is said twice over, because a drawing came back with a gradient washed across it after being told not to shade, and another grew a pair of brown hooves after being told every pane was one colour. A refusal is obeyed unevenly from one drawing to the next, so the ones that have already been broken once are worth saying positively as well as negatively.";
+  "colour is said to follow the thing rather than the pane, and that sentence is here because leaving it out produced the worst picture of the lot. Asking for a dozen panes each one flat colour reads as an instruction to vary the colour pane by pane. A subject that already has parts survives that by luck - three crosses on a hill have a sky, a slope and the crosses themselves, so the panes fall on boundaries that mean something. A lamb has no parts. Its panes are arbitrary cuts across one animal, and colouring each of them separately produced a harlequin: a magenta head, a blue shoulder, a red flank, a purple leg. In a real window the lamb is white glass and the sky behind it is blue, because colour belongs to the thing depicted and the leading is only where two things meet.";
+  "an arch and a field of glass behind the symbol, which reverses what this used to ask for. It used to forbid a background outright, and that was right while the picture was one shape floating on black. A window is not one shape floating on black - it is a subject set in a field, held in a frame - and the drawing that discovered this was the best of the set precisely because it broke the old rule and supplied all three unasked. The field is also what gives the symbol something to be a different colour from, so forbidding it and asking colour to follow the thing cannot both be had.";
   "centred and large because the far end of this is a phone held at arm's length, sometimes behind a cracked protector, sometimes by eyes that no longer see small things. A shape that fills its square survives all three; a small shape in a wide margin survives none of them.";
   let style = [
     "as one simple emblem and nothing else",
@@ -18,12 +20,13 @@ export function song_image_style() {
     "flat panes of glass held in heavy black lead lines, the leading thick and bold and drawn inside the shape as well as around it",
     "divided into about a dozen large panes and never more, each pane broad enough to hold its own, so that no lead line is ever thin",
     "drawn flat and frontal with no perspective, no shading and no gradient",
-    "the panes in the colours of lit church glass - deep cobalt blue, ruby red, emerald green, violet - each pane one flat saturated colour, luminous as glass with daylight behind it",
-    "on a pure black ground",
+    "the whole picture shaped as one tall arched church window, standing alone on a pure black ground",
+    "the colours of lit church glass - deep cobalt blue, ruby red, emerald green, violet - each one flat and saturated, luminous as glass with daylight behind it",
+    "colour follows the thing and never the pane - every pane belonging to one thing is that thing's one colour, and the thing stands in a colour clearly apart from the field of glass behind it",
     "no gold, no amber and no yellow anywhere in the picture",
-    "the shape centred and reaching almost to all four edges of the square, bold enough to read on a phone",
+    "the arch centred and reaching almost to all four edges of the square, the symbol large inside it, bold enough to read on a phone",
     "reverent and still, not a cartoon, not a modern logo, not a photograph",
-    "no background, no scenery, no border and no frame",
+    "nothing at all outside the arch - no border drawn around it, no ornament, no second frame",
     "no people and no faces",
     "no text and no lettering",
   ];
