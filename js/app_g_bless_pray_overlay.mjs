@@ -20,9 +20,8 @@ export function app_g_bless_pray_overlay(container_map, rung, on_amen) {
   ("showing through is what says the game is still there. The one solid panel in this game");
   ("is the prayer at the door, which is not an interruption but the door itself.");
   ("The amen is not there when the panel opens and arrives a moment later, timed from the");
-  ("length of the words. There is nothing to press until the prayer has been said, so the");
-  ("fastest possible way through this game is to pray - which is the only shape that makes");
-  ("a speedrun and a devotion the same run.");
+  ("length of the words - the one amen of this game, put up the same way it is put up at");
+  ("the door.");
   let overlay = app_g_overlay_container(container_map);
   let container = app_g_container_player(overlay);
   let prayer = bless_prayer_rung(rung);
@@ -31,12 +30,6 @@ export function app_g_bless_pray_overlay(container_map, rung, on_amen) {
     html_remove(overlay);
     on_amen();
   }
-  function offer() {
-    let praying = emoji_pray();
-    let label = text_combine(praying, " Amen");
-    app_g_button_green(container, label, amen);
-  }
-  let least = bless_prayer_read_ms(prayer);
-  setTimeout(offer, least);
+  app_g_bless_amen(container, prayer, amen);
   return overlay;
 }
