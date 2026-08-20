@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_event_fields } from "./bible_event_fields.mjs";
 import { bible_gathered_event_function_names } from "./bible_gathered_event_function_names.mjs";
 import { function_run } from "./function_run.mjs";
@@ -57,7 +59,11 @@ export async function bible_event_fields_gate_run() {
   }
   each_pair_min(events_lists, f_names, each_gathered);
   list_empty_is_assert_json(wrong, {
-    hint: "a gathered Bible event carries fields the record does not declare, or is missing one it does; the record is deliberately small, so widen it in bible_event_fields on purpose or take the extra field back out",
+    hint: text_combine_multiple([
+      "a gathered Bible event carries fields the record does not declare, or is missing one it does; the record is deliberately small, so widen it in ",
+      fn_name("bible_event_fields"),
+      " on purpose or take the extra field back out",
+    ]),
     declared,
   });
   let gathered_count = list_size(f_names);
