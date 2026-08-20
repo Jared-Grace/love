@@ -1,7 +1,7 @@
+import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
@@ -18,14 +18,17 @@ export function app_code_lesson_expression_choose_order_brackets_expression(
   ("The line prints with brackets in it and nothing here writes them: || is weaker than && , so a || standing beside an && can only mean what it says with brackets round it, and the helper that prints the line reads that off the shape. Written by hand they could disagree with the shape, and the line a learner presses would be a different line from the one being solved.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  let outer = app_code_operator_truths_wanted(and_symbol, want_true);
   if (brackets_left) {
     ("the || gathers first and stands leftmost, so what it comes to is what the && finds on its left");
-    let or_value = list_get(outer, 0);
-    let alone_truth = list_get(outer, 1);
-    let inner = app_code_operator_truths_wanted(or_symbol, or_value);
-    let first_truth = list_get(inner, 0);
-    let second_truth = list_get(inner, 1);
+    let truths = app_code_operator_truths_wanted_nested(
+      and_symbol,
+      or_symbol,
+      want_true,
+      brackets_left,
+    );
+    let first_truth = list_get(truths, 0);
+    let second_truth = list_get(truths, 1);
+    let alone_truth = list_get(truths, 2);
     let tree_left = app_code_expression_node_left_operator_first(
       first_truth,
       or_symbol,
@@ -36,11 +39,15 @@ export function app_code_lesson_expression_choose_order_brackets_expression(
     return tree_left;
   }
   ("the || gathers first and stands rightmost, so what it comes to is what the && finds on its right");
-  let alone_truth_right = list_get(outer, 0);
-  let or_value_right = list_get(outer, 1);
-  let inner_right = app_code_operator_truths_wanted(or_symbol, or_value_right);
-  let first_truth_right = list_get(inner_right, 0);
-  let second_truth_right = list_get(inner_right, 1);
+  let truths_right = app_code_operator_truths_wanted_nested(
+    and_symbol,
+    or_symbol,
+    want_true,
+    brackets_left,
+  );
+  let alone_truth_right = list_get(truths_right, 0);
+  let first_truth_right = list_get(truths_right, 1);
+  let second_truth_right = list_get(truths_right, 2);
   let tree_right = app_code_expression_node_right_operator_first(
     alone_truth_right,
     and_symbol,
