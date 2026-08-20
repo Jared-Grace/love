@@ -3,8 +3,8 @@ import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_ke
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_read_view_whole_chapter } from "./app_shared_bible_read_view_whole_chapter.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
-import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
+import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arrow_previous_notext.mjs";
+import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
@@ -51,9 +51,9 @@ export async function app_shared_bible_read_verse_here_is(
     }
     app_shared_button(bar, "View whole chapter", view_whole_chapter);
   } else {
-    app_shared_button_arrow_left(bar, chapter_previous);
+    app_shared_button_arrow_previous_notext(bar, chapter_previous);
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
-    app_shared_button_arrow_right(bar, chapter_next);
+    app_shared_button_arrow_next_notext(bar, chapter_next);
   }
   app_shared_bible_settings_gear(bar, content, context, count_status);
   async function fetch_language(lc) {
