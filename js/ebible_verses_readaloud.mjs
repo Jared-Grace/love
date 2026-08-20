@@ -16,11 +16,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   ("The numbers are taken from the marks the source page puts at the start of each verse, rather than from cutting the chapter into verses and asking what survived. Both readings begin at the same page and one of them is exact: the marks are written down, while the cutting hunts for each number as a word among the words and can take a number belonging to the text for the mark of a verse.");
   ("Cebuano 2 Kings 25 is where that showed. Verse 17 opens on the words eighteen cubits, so the cutting took that eighteen for the start of verse 18, left 17 with nothing in it, and dropped it as a verse the translation has no words for. Twenty-nine numbers were then laid against thirty lines and the reading fell off the end - the whole bible lost its index over one verse that begins with a number.");
   ("The two counts were measured against each other across every chapter of three bibles - three and a half thousand chapters - and they agreed in all of them. So a line read aloud is a verse, and what reading aloud lacks is only the number, which the page has.");
-  ("Only the verses that have words are counted, not every verse the page marks. Luke 17 verse 36 and its fellows are marked in many translations and carry a footnote alone; once the footnote is cleared away nothing is left, and nothing is read aloud for them either. Counting the bare mark would push every verse after it along by one, quietly, with no error raised anywhere - which is how it was found, by a gate rather than by anything going wrong.");
-  let verse_numbers = await ebible_chapter_verse_numbers_to_pair(
-    bible_folder,
-    chapter_code,
-  );
+  ("Which of the page's marks to count is asked of the reading that chooses between them rather than settled here, because the reading that counts how many chapters cannot be paired has to choose the same way or the record and the app disagree about the same chapter.");
   let filtered = await ebible_chapter_readaloud_lines(
     bible_folder,
     chapter_code,
@@ -30,11 +26,15 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   if (unread) {
     return null;
   }
-  ("Nothing at all is answered for a chapter whose two counts disagree, because there is no honest way to lay one against the other there and both of the dishonest ways are worse than saying nothing. Laying them against each other from the front gives every verse after the disagreement somebody else's words, and the reader has no way of telling - it reads as scripture. Stopping instead loses the whole bible over one chapter, which is what used to happen.");
-  ("Measured here rather than looked up in a list, so it cannot go stale: the counts are already in hand at this point, and a chapter that gets put right starts being answered for again with nothing else edited. What the record and its gate are for is knowing how many there are and watching that number only fall.");
-  let marks = list_size(verse_numbers);
+  ("Nothing at all is answered for a chapter no reading of the marks can be laid against, because both of the ways of going on anyway are worse than saying nothing. Laying them against each other from the front gives every verse after the disagreement somebody else's words, and the reader has no way of telling - it reads as scripture. Stopping instead loses the whole bible over one chapter, which is what used to happen.");
+  ("Measured here rather than looked up in a list, so it cannot go stale: the lines are already in hand at this point, and a chapter that gets put right starts being answered for again with nothing else edited. What the record and its gate are for is knowing how many there are and watching that number only fall.");
   let lines = list_size(filtered);
-  let unpaired = equal_not(marks, lines);
+  let verse_numbers = await ebible_chapter_verse_numbers_for_lines(
+    bible_folder,
+    chapter_code,
+    lines,
+  );
+  let unpaired = null_is(verse_numbers);
   if (unpaired) {
     return null;
   }
