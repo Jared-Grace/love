@@ -1,5 +1,6 @@
 import { property_count_add } from "./property_count_add.mjs";
 import { list_size } from "./list_size.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -27,14 +28,14 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
     let ast = await function_ast(f_name);
     let calls = js_list_type_nodes(ast, "CallExpression");
     for (let call of calls) {
-      let callee = property_get(call, "callee");
-      let named = equal(callee.type, "Identifier");
-      if (not(named)) {
+      let callee_name = js_call_callee_name_try(call);
+      let unnamed = null_is(callee_name);
+      if (unnamed) {
         continue;
       }
       for (let seat of seats) {
         let door = property_get(seat, "fn");
-        let ours = equal(callee.name, door);
+        let ours = equal(callee_name, door);
         if (not(ours)) {
           continue;
         }
