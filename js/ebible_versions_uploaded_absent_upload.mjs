@@ -13,7 +13,13 @@ export async function ebible_versions_uploaded_absent_upload() {
   let before = await ebible_versions_uploaded_absent();
   let failed = [];
   async function lambda(bible_folder) {
-    await catch_error_text_collect_async(failed, { bible_folder }, lambda2);
+    await catch_error_text_collect_async(
+      failed,
+      {
+        bible_folder,
+      },
+      lambda2,
+    );
     async function lambda2() {
       await ebible_chapters_upload(bible_folder);
     }
@@ -22,7 +28,11 @@ export async function ebible_versions_uploaded_absent_upload() {
   let after = await ebible_versions_uploaded_absent();
   let any = list_empty_not_is(failed);
   if (any) {
-    error_json({ failed, before: list_size(before), still_absent: after });
+    error_json({
+      failed,
+      before: list_size(before),
+      still_absent: after,
+    });
   }
   let r = {
     before: list_size(before),
