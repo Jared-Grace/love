@@ -1,3 +1,4 @@
+import { js_object_key_rename } from "./js_object_key_rename.mjs";
 import { js_selects_functionize_rest_returning_local } from "./js_selects_functionize_rest_returning_local.mjs";
 import { js_selects_function_lift } from "./js_selects_function_lift.mjs";
 import { js_shadowing_rename_in } from "./js_shadowing_rename_in.mjs";
@@ -111,6 +112,7 @@ export function example_transforms() {
     js_call_arguments_same_names_set,
     js_shadowing_rename_in,
     js_selects_function_lift,
+    js_object_key_rename,
   };
   return transforms;
 }
