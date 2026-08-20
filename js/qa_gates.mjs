@@ -54,6 +54,7 @@ import { daemons_stale_gate_run } from "./daemons_stale_gate_run.mjs";
 import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
 import { gloss_back_references_gate_run } from "./gloss_back_references_gate_run.mjs";
 import { text_split_comma_nested_cases_gate_run } from "./text_split_comma_nested_cases_gate_run.mjs";
+import { text_split_comma_outside_brackets_cases_gate_run } from "./text_split_comma_outside_brackets_cases_gate_run.mjs";
 import { app_replace_abbreviations_unspelled_gate_run } from "./app_replace_abbreviations_unspelled_gate_run.mjs";
 import { app_replace_abbreviations_gate_run } from "./app_replace_abbreviations_gate_run.mjs";
 import { git_push_urls_gate_run } from "./git_push_urls_gate_run.mjs";
@@ -221,6 +222,7 @@ import { js_declared_names_cases_gate_run } from "./js_declared_names_cases_gate
 import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
+import { js_scopes_shadowing_cases_gate_run } from "./js_scopes_shadowing_cases_gate_run.mjs";
 import { js_name_taken_is_cases_gate_run } from "./js_name_taken_is_cases_gate_run.mjs";
 import { js_code_comments_migrated_cases_gate_run } from "./js_code_comments_migrated_cases_gate_run.mjs";
 import { cases_gate_run_generic_gate_run } from "./cases_gate_run_generic_gate_run.mjs";
