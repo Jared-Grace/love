@@ -1,8 +1,8 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join } from "./list_join.mjs";
-import { not } from "./not.mjs";
 import { permission_grant_add_multiple } from "./permission_grant_add_multiple.mjs";
 import { permission_replay_reading } from "./permission_replay_reading.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,8 +16,7 @@ export async function permission_replay_grants_add() {
   ("Nothing is judged here. The batch adder checks every name before it writes anything, and one name that must never hold a standing approval stops the whole batch - so this can hand over the whole set without deciding which of them deserves it.");
   ("It is deliberately left asking. A command that writes allow rules is the one command the human has to see, and finding its own set is what makes that single approval worth their while rather than a formality.");
   let reading = await permission_replay_reading();
-  let written = property_get(reading, "written");
-  let missing = not(written);
+  let missing = property_not(reading, "written");
   if (missing) {
     return reading;
   }
