@@ -14,14 +14,10 @@ export function app_shared_bible_offline_body(container, languages) {
   "the offline choices without any framing, so both the chapter reader's in-place panel and the verse reader's settings screen can host them, each supplying its own way back";
   html_clear(container);
   let card = app_shared_container_blue(container);
-  html_div_text_bold(
-    card,
-    "Which languages do you want to keep on this device?",
-  );
-  app_shared_text_quiet(
-    card,
-    "A saved language opens with no internet, and it opens faster",
-  );
+  let prompt = app_shared_bible_offline_prompt_text();
+  html_div_text_bold(card, prompt);
+  let reason = app_shared_bible_offline_reason_text();
+  app_shared_text_quiet(card, reason);
   let listed = app_shared_bible_offline_languages(languages);
   function on_change() {
     "a save or a freeing changes what every other button here should say, so the whole list is drawn again";
@@ -39,6 +35,7 @@ export function app_shared_bible_offline_body(container, languages) {
       await ebible_offline_delete_all();
       app_shared_bible_offline_body(container, languages);
     }
-    app_shared_button(container, "Free the space all of them use", on_delete);
+    let free_all = app_shared_bible_offline_free_all_text();
+    app_shared_button(container, free_all, on_delete);
   }
 }
