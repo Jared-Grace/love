@@ -1,3 +1,5 @@
+import { door43_version_or_null } from "./door43_version_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 export function ebible_readaloud_published_is(bible_folder) {
   "$plain bible_folder";
   "Whether eBible publishes a read-aloud edition of this bible at all - which is what every read-aloud question is really asking before it asks anything else.";

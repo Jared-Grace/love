@@ -1,3 +1,7 @@
+import { html_text_align } from "./html_text_align.mjs";
+import { html_style_line_height } from "./html_style_line_height.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
@@ -8,12 +12,12 @@ export function song_image_frame_words(frame, state, couplet) {
   let words = html_div(frame);
   let wide = equal(state.vertical, false);
   html_style_set(words, "position", "absolute");
-  html_style_set(words, "text-align", "center");
+  html_text_align(words, "center");
   html_style_set(words, "color", "#ffffff");
   html_style_set(words, "font-weight", "700");
-  html_style_set(words, "line-height", "1.3");
-  html_style_set(words, "font-size", wide ? "32px" : "29px");
-  html_style_set(words, "padding", "0 5%");
+  html_style_line_height(words, "1.3");
+  html_style_font_size(words, wide ? "32px" : "29px");
+  html_style_padding(words, "0 5%");
   html_style_set(words, "box-sizing", "border-box");
   html_style_set(words, "transform", "translateY(-50%)");
   let half_is = equal(state.placement, "half");

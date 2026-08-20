@@ -1,3 +1,5 @@
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_text_align } from "./html_text_align.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
@@ -12,9 +14,9 @@ export function song_image_luma_badge(parent, candidate) {
   "this hands the badge back at once and measures later, rather than being an async function, so that a column of ten candidates fetches all ten at the same time instead of queueing behind each other";
   "a drawn one is measured straight off its own address. It is served from the same place as this page, so the browser lets the pixels be read back without being asked; a found one comes from somewhere else and has to be asked for by an interface that grants that permission, which is the extra journey the other half makes.";
   let badge = html_div(parent);
-  html_style_set(badge, "font-size", "10px");
+  html_style_font_size(badge, "10px");
   html_style_set(badge, "width", "48px");
-  html_style_set(badge, "text-align", "center");
+  html_text_align(badge, "center");
   html_style_set(badge, "color", "#676767");
   html_text_set(badge, "…");
   function lambda(luma) {
