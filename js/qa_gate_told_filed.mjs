@@ -5,7 +5,6 @@ import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_commit_kept_file } from "./qa_commit_kept_file.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
-import { qa_gate_told_answered_is } from "./qa_gate_told_answered_is.mjs";
 import { not } from "./not.mjs";
 export async function qa_gate_told_filed(commit, told, before) {
   "$plain commit";
