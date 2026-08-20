@@ -248,6 +248,10 @@ export function examples_notes() {
       "a refusal about what the copy could not follow rather than about what it was asked for - the failure it prevents is a page that loads and shows something else",
     example_object_key_rename:
       "changing the name a record hands a value under - the half of an entry that had no verb",
+    example_argument_boolean_set:
+      "the one shape the setter family could not reach - and the one that stopped a whole transform being written from commands alone",
+    example_block_local_boolean_add:
+      "the fifth starting value - a flag set one way here and turned the other by whichever step below finds the reason",
   };
   return notes;
 }
