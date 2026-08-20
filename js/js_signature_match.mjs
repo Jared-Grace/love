@@ -14,6 +14,7 @@ import { js_fold_unify_use } from "./js_fold_unify_use.mjs";
 export function js_signature_match(pattern, target, params, binding) {
   "Decides whether one line of a candidate body says the same thing as one line of the pattern being looked for, and hands back what the two now agree the pattern's names stand for.";
   "The function being called has to be the same function in both, and the count of arguments the same, before any name is looked at. Those two are what the line does; only the things it does it to are open to standing for something else.";
+  "The arguments are agreed one at a time, each able to add to the agreement the one before it left, so a name met twice in the pattern must be the same name both times in the candidate. The name the line puts its own result into is agreed last, after the arguments have been - until they have, there is nothing yet saying these are the same line.";
   arguments_assert(arguments, 4);
   let pattern_callee = property_get(pattern, "callee");
   let missing_callee = null_is(pattern_callee);
