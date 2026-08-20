@@ -22,15 +22,13 @@ export async function song_image_drawn_attempts_known_write() {
     }
   }
   let json = json_format_to(known);
+  let f_name = fn_name("song_image_drawn_attempts_known");
+  let f_name2 = fn_name("song_image_drawn_attempts_known_write");
   let source =
-    text_combine_multiple([
-      "export function ",
-      fn_name("song_image_drawn_attempts_known"),
-      "() {\n",
-    ]) +
+    text_combine_multiple(["export function ", f_name, "() {\n"]) +
     text_combine_multiple([
       '  "which attempts exist for each couplet, as a plain table written out by ',
-      fn_name("song_image_drawn_attempts_known_write"),
+      f_name2,
       ' and never edited by hand";\n',
     ]) +
     '  "the folder is the truth about what has been drawn, and this is a copy of it for the one reader that cannot count files: the picker runs in a browser, and every part of it decides what to draw in a single pass with nothing to wait for. A page that had to ask the disk mid-render would have to become asynchronous all the way up for a fact that only changes when somebody runs a draw.";\n' +
@@ -41,11 +39,9 @@ export async function song_image_drawn_attempts_known_write() {
     "  return known;\n" +
     "}\n";
   let folder = folder_repo_love();
-  let path = path_join([
-    folder,
-    "js",
-    text_combine_multiple([fn_name("song_image_drawn_attempts_known"), ".mjs"]),
-  ]);
+  let f_name3 = fn_name("song_image_drawn_attempts_known");
+  let combined = text_combine_multiple([f_name3, ".mjs"]);
+  let path = path_join([folder, "js", combined]);
   await file_overwrite(path, source);
   return known;
 }
