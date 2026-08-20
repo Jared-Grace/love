@@ -16,8 +16,11 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
   ("It is the twin of ",
     fn_name("bible_glyph_word_draw"),
     ", which draws the same stored word as plain text, and the two are deliberately kept side by side rather than one replacing the other. Plain text is what a terminal, a log and a test can read, and a page is where the pictures belong. Neither one stores anything, so a verse is written once and both draw it.");
-  ("THE GROUPING RING IS DRAWN HERE, and it is the one thing the plain text twin says outright that it cannot do. Several glyphs standing together are ONE word - the burning heart with the cross and the dove is a single word of the Bible and not three - and in plain text a reader has only the spacing to infer that from. A ring around the group says it.");
-  ("A RING IS DRAWN ONLY WHERE THERE IS SOMETHING TO GROUP. One picture standing alone is already one word, so a ring around it would say nothing and would only teach the reader that the ring means nothing.");
+  ("A GROUP IS HELD TOGETHER BY BEING CLOSE AND BY NOTHING ELSE, which is a change: a ring used to be drawn round it. Several glyphs standing together are ONE word - the burning heart with the cross and the dove is a single word of the Bible and not three - and what says so is that they touch while the gap to the next word is wider, set by ",
+    fn_name("bible_glyph_word_gap_extra"),
+    ". The ring was a mark that had to be taught before the first verse; a gap is one every reader was taught by their own language.");
+  ("THE ONE THING THE RING DID THAT THE GAP CANNOT IS SURVIVE A LINE BREAK, so a group is still forbidden to break across lines - and that rule stopped being tidiness the moment the ring went. A group split over two lines loses the near gap the reader would have compared the far one against, and what is left on the page is glyphs at a line end and glyphs at a line start, which is exactly how two separate words look.");
+  ("A GROUP OF ONE IS STILL A GROUP AND STILL GETS NOTHING DRAWN. One picture standing alone is already one word, so there is nothing to hold together and no gap inside it to be narrow.");
   ("A glyph the lookup does not carry is drawn as its NAME rather than as a blank, for the same reason the plain text twin does it: a blank hides the fault at the moment a reader meets it, and a reader who can see the name can report what is missing. It is drawn as text that is never read as markup, because a name arriving with an angle bracket in it would otherwise vanish into the page and leave the sentence looking complete.");
   let plain = equal(typeof word, "string");
   if (plain) {
@@ -34,9 +37,6 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
     let group = parent;
     if (several) {
       group = html_span(parent);
-      html_style_set(group, "border", "0.06em solid currentColor");
-      html_style_set(group, "borderRadius", "0.5em");
-      html_style_padding(group, "0 0.12em");
       html_style_set(group, "whiteSpace", "nowrap");
     }
     for (let name of part) {
