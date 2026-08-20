@@ -55,7 +55,10 @@ export function js_scopes_shadowing_cases() {
         "let name = 1;\nfunction g() {\n  let name = 2;\n  let one = 1;\n}\nfunction h() {\n  let name = 3;\n  let two = 2;\n}",
       ),
       asked: "name",
-      scopes: ["BlockStatement binds name, one", "BlockStatement binds name, two"],
+      scopes: [
+        "BlockStatement binds name, one",
+        "BlockStatement binds name, two",
+      ],
     },
     {
       name: "a hiding inside a hiding gives both scopes and not only the outer one",
@@ -63,7 +66,10 @@ export function js_scopes_shadowing_cases() {
         "let name = 1;\nfunction g() {\n  let name = 2;\n  {\n    let name = 3;\n    let deeper = 4;\n  }\n}",
       ),
       asked: "name",
-      scopes: ["BlockStatement binds deeper, name", "BlockStatement binds name"],
+      scopes: [
+        "BlockStatement binds deeper, name",
+        "BlockStatement binds name",
+      ],
     },
     {
       name: "two scopes side by side reusing a name hide nothing",
