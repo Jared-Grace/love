@@ -11,7 +11,7 @@ export async function bible_sentence_end_marks_gate_run() {
   ("A page that carries a reading on to the end of a sentence asks every language the reader chose whether this verse finished one. A bible that writes its full stop in a mark nobody here has met answers no every time, so that page reaches for one more verse over and over until whatever bound it holds runs out - and what the reader gets is twenty-five verses where they asked for one, with nothing anywhere saying why.");
   ("Nothing about adding a bible asks that question. So the answer is measured for every bible on the list and kept in a file, and this refuses a bible that is on the list and not in the file. A new language then arrives loud instead of arriving as a page that quietly gives too much.");
   ("This reads only the file. The measuring reaches the network and is a command somebody runs; the checking has to run wherever the rest of the gates run.");
-  ("What is wrong is read out next door and only refused here. Six things can be wrong and each of them has several lines to say to whoever reads it, so with the reading above them as well neither half could be seen whole.");
+  ("What is wrong is read out next door and only refused here. Seven things can be wrong and each of them has several lines to say to whoever reads it, so with the reading above them as well neither half could be seen whole.");
   let findings = await bible_sentence_end_marks_findings();
   let shipped = property_get(findings, "shipped");
   let unmeasured = property_get(findings, "unmeasured");
@@ -19,6 +19,7 @@ export async function bible_sentence_end_marks_gate_run() {
   let unread = property_get(findings, "unread");
   let ended_none = property_get(findings, "ended_none");
   let unnamed = property_get(findings, "unnamed");
+  let named_unshipped = property_get(findings, "named_unshipped");
   let named_wrongly = property_get(findings, "named_wrongly");
   let unreached = property_get(findings, "unreached");
   ("A BIBLE STORAGE HOLDS NOTHING FOR IS COUNTED AND NOT REFUSED, which is the one finding here that passes on purpose. It is a real fault and it is not this one: nothing was uploaded, so there was no chapter to read, and every hint below would send its reader to a list of languages or to a set of marks where there is nothing to correct. The gate that names those bibles is the one that can be acted on, and a fault refused in two places is a fault repaired in neither.");
@@ -65,6 +66,19 @@ export async function bible_sentence_end_marks_gate_run() {
     unnamed,
     ended_none,
   });
+  ("A NAME LEFT BEHIND BY A BIBLE THAT WENT AWAY IS REFUSED BEFORE THE ONE BESIDE IT, and the two are worth keeping apart even though both are about the same list. This one is certain - the name is in no roster and no reading of it exists anywhere - so there is nothing to measure again and nothing to look at by hand. The one below rests on a reading, and a reading can be redone.");
+  let f_name9 = fn_name("bible_folders_sentence_end_unmarked");
+  let f_name10 = fn_name("ebible_languages");
+  list_empty_is_assert_json(named_unshipped, {
+    hint: text_combine_multiple([
+      "this name is in the list of bibles whose sentences cannot be found, and this repo ships no bible by that name - so it says nothing about anybody's reading and is only a word left behind. Either the bible went away and the name should go with it, out of ",
+      f_name9,
+      ", or it went away by accident and belongs back in ",
+      f_name10,
+      ". Which of those it is cannot be read off the code, so it is a person's to answer",
+    ]),
+    named_unshipped,
+  });
   let f_name7 = fn_name("bible_folders_sentence_end_unmarked");
   list_empty_is_assert_json(named_wrongly, {
     hint: text_combine_multiple([
@@ -90,6 +104,7 @@ export async function bible_sentence_end_marks_gate_run() {
     departed,
     unread,
     unnamed,
+    named_unshipped,
     named_wrongly,
     unreached,
   };

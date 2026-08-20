@@ -1,3 +1,4 @@
+import { list_intersection } from "./list_intersection.mjs";
 import { not } from "./not.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { bible_folders_sentence_end_unmarked } from "./bible_folders_sentence_end_unmarked.mjs";
@@ -12,7 +13,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 export async function bible_sentence_end_marks_findings() {
   arguments_assert(arguments, 0);
   ("Everything the record of how bibles end their sentences can be faulted for, read out of the record in one go and handed over without a word about what any of it means.");
-  ("The reading and the refusing are two jobs and this is the first of them. Whoever refuses has to say six different things to a person, each of them several lines long, and with the reading sitting above them the one function was long enough that neither half could be seen whole.");
+  ("The reading and the refusing are two jobs and this is the first of them. Whoever refuses has to say seven different things to a person, each of them several lines long, and with the reading sitting above them the one function was long enough that neither half could be seen whole.");
   ("Every finding is worked out here whether or not anybody goes on to complain about it, because they are read out of one another - what is shipped and never measured, and what is measured and no longer shipped, are the same two lists compared each way round.");
   ("Nothing here reaches the network. The measuring is a command somebody runs; this only reads the file it left behind, which is what lets the checking run wherever the rest of the gates run.");
   let path = bible_sentence_end_marks_path();
