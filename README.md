@@ -150,30 +150,30 @@ Screenshots:
 
 IDE:
 
-![App screenshot](readme/ide.png)
+![App screenshot](notes/images/ide.png)
 
 Choosing an identifier in the IDE:
 
-![App screenshot](readme/ide_identifier_rename.png)
+![App screenshot](notes/images/ide_identifier_rename.png)
 
 Previewing an app from the IDE
 
-![App screenshot](readme/ide_preview.png)
+![App screenshot](notes/images/ide_preview.png)
 
 Reply to messages:
 
 https://jared-grace.web.app/reply.html
 
-![App screenshot](readme/reply.png)
+![App screenshot](notes/images/reply.png)
 
 Bible reading:
 
 https://jared-grace.web.app/bible.html#c=JHN01
 
-![App screenshot](readme/bible.png)
+![App screenshot](notes/images/bible.png)
 
 Bible searching:
 
 https://jared-grace.web.app/search.html
 
-![App screenshot](readme/search.png)
+![App screenshot](notes/images/search.png)
