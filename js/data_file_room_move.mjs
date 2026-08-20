@@ -42,14 +42,9 @@ export async function data_file_room_move(path_fn_name, room) {
     hint: "the room already holds a file of this name",
     to_spelled,
   });
-  let code = folder_js();
-  let leaf2 = text_combine(path_fn_name, ".mjs");
-  let fn_path = path_join([repo, code, leaf2]);
-  let text = await file_read_try(fn_path);
-  assert_json(text, {
-    hint: "no function of this name to repoint",
-    path_fn_name,
-  });
+  let source = await function_source_to_repoint(path_fn_name);
+  let fn_path = property_get(source, "fn_path");
+  let text = property_get(source, "text");
   let whole = text_includes(text, from_spelled);
   assert_json(whole, {
     hint: "this function does not spell its address as one whole word, so it builds it out of parts - repoint it by hand rather than letting a guess move the file",
