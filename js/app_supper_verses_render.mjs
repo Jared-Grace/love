@@ -24,6 +24,9 @@ import { null_is } from "./null_is.mjs";
 import { list_map } from "./list_map.mjs";
 export async function app_supper_verses_render(root, folders, previous, next) {
   "Shows the passages the Lord's Supper is kept by, one at a time on a card, with an arrow each way that carries on round rather than stopping at either end, and the prayers underneath.";
+  "Whichever passage was open last time opens again, moving to another writes that down, and the page goes back to its top so the new one starts where the eye already is. Somebody at a table is not browsing for pleasure; coming back to this page has to come back to where they were.";
+  "Where the passages fall is worked out from the first of the chosen translations alone and the rest ride alongside it. A passage is a place in the Bible and every translation has the same places in it, so working it out a second time could only produce a disagreement somebody then has to settle.";
+  "A translation is named by finding its folder among the ones on offer, and where that fails the folder's own word stands in. A name that cannot be found means a translation somebody chose and which has since left the list of choices - and its folder is then the only thing left that still tells the reader which Bible they are looking at.";
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
   let choices = await ebible_choices();
   function folder_name(folder) {
