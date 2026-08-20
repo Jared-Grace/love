@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -28,8 +29,7 @@ export async function permission_replay_domains() {
     return none;
   }
   let record = await file_read_json(path);
-  let confirmed = property_get(record, "confirmed");
-  let rows = property_get(confirmed, "rows");
+  let rows = property_path_get_2(record, "confirmed", "rows");
   let allow = await permission_settings_allow_every();
   let granted = [];
   let open = [];
