@@ -123,6 +123,7 @@ import { function_aliases_dead_gate_run } from "./function_aliases_dead_gate_run
 import { memory_index_head_separated_cases_gate_run } from "./memory_index_head_separated_cases_gate_run.mjs";
 import { permission_writers_gate_run } from "./permission_writers_gate_run.mjs";
 import { qa_commit_named_entry_stale_gate_run } from "./qa_commit_named_entry_stale_gate_run.mjs";
+import { qa_gate_told_answered_cases_gate_run } from "./qa_gate_told_answered_cases_gate_run.mjs";
 import { error_where_cases_gate_run } from "./error_where_cases_gate_run.mjs";
 import { processes_sleep_loop_stopped_gate_run } from "./processes_sleep_loop_stopped_gate_run.mjs";
 import { firebase_folder_gate_run } from "./firebase_folder_gate_run.mjs";
@@ -475,6 +476,7 @@ export function qa_gates() {
     qa_gate_run_start_wanted_gate_run,
     qa_gate_run_start_wanted_stale_gate_run,
     qa_commit_named_entry_stale_gate_run,
+    qa_gate_told_answered_cases_gate_run,
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
