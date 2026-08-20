@@ -100,7 +100,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "HIS hands HIS feet",
       second: "nailed to the tree",
-      symbol: "Three iron nails",
+      symbol:
+        "Three long iron nails, every one of the three the same plain grey iron from its head to its point, laid crossing one another",
       ref: "",
       same_as: 0,
     },
