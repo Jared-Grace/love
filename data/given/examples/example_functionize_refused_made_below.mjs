@@ -1,4 +1,4 @@
-import { js_statements_span_made_below_assert } from "../../js/js_statements_span_made_below_assert.mjs";
+import { js_statements_span_made_below_assert } from "../../../js/js_statements_span_made_below_assert.mjs";
 export const example = {
   kind: "rejection",
   title: "Refuse to cut out a run that reads a name the lines below it make",

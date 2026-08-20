@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { examples_folder } from "./examples_folder.mjs";
 import { text_split } from "./text_split.mjs";
@@ -15,7 +16,7 @@ export function examples_import_prefixes() {
   let quote = String.fromCharCode(34);
   function start_at(steps) {
     let climbed = "";
-    for (let step = 0; step < steps; step++) {
+    for (let step = 0; less_than(step, steps); step++) {
       climbed = text_combine(climbed, "../");
     }
     let reached = text_combine(climbed, "js/");
@@ -24,7 +25,7 @@ export function examples_import_prefixes() {
   }
   let right = start_at(depth);
   let wrong = [];
-  for (let steps = 1; steps < 9; steps++) {
+  for (let steps = 1; less_than(steps, 9); steps++) {
     let other = start_at(steps);
     let differs = equal_not(other, right);
     if (differs) {

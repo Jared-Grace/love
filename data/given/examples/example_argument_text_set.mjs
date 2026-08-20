@@ -1,6 +1,6 @@
-import { js_call_argument_named_text_set } from "../../js/js_call_argument_named_text_set.mjs";
-import { js_call_named_find } from "../../js/js_call_named_find.mjs";
-import { js_call_argument_named_identifier_set } from "../../js/js_call_argument_named_identifier_set.mjs";
+import { js_call_argument_named_text_set } from "../../../js/js_call_argument_named_text_set.mjs";
+import { js_call_named_find } from "../../../js/js_call_named_find.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
 export const example = {
   fn: js_call_argument_named_text_set.name,
   select: js_call_named_find.name,

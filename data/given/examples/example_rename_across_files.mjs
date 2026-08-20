@@ -1,4 +1,4 @@
-import { function_rename } from "../../js/function_rename.mjs";
+import { function_rename } from "../../../js/function_rename.mjs";
 export const example = {
   fn: function_rename.name,
   args: ["list_size", "list_length"],

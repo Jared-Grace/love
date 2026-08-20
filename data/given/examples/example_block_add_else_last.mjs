@@ -1,4 +1,4 @@
-import { js_block_body_add_code } from "../../js/js_block_body_add_code.mjs";
+import { js_block_body_add_code } from "../../../js/js_block_body_add_code.mjs";
 export const example = {
   fn: js_block_body_add_code.name,
   args: ["ready_is", "alternate", "log_missing()"],

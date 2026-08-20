@@ -1,4 +1,4 @@
-import { js_let_add } from "../../js/js_let_add.mjs";
+import { js_let_add } from "../../../js/js_let_add.mjs";
 export const example = {
   fn: js_let_add.name,
   args: [],

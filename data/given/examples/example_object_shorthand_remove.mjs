@@ -1,6 +1,6 @@
-import { js_object_shorthand_remove } from "../../js/js_object_shorthand_remove.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
-import { js_object_shorthand_add } from "../../js/js_object_shorthand_add.mjs";
+import { js_object_shorthand_remove } from "../../../js/js_object_shorthand_remove.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
+import { js_object_shorthand_add } from "../../../js/js_object_shorthand_add.mjs";
 export const example = {
   fn: js_object_shorthand_remove.name,
   select: js_find_declaration_named.name,

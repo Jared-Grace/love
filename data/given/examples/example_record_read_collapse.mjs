@@ -1,4 +1,4 @@
-import { js_declarations_record_read_collapse } from "../../js/js_declarations_record_read_collapse.mjs";
+import { js_declarations_record_read_collapse } from "../../../js/js_declarations_record_read_collapse.mjs";
 export const example = {
   fn: js_declarations_record_read_collapse.name,
   args: [],

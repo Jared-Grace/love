@@ -1,4 +1,4 @@
-import { app_shared_prod_snapshot } from "../../js/app_shared_prod_snapshot.mjs";
+import { app_shared_prod_snapshot } from "../../../js/app_shared_prod_snapshot.mjs";
 export const example = {
   fn: app_shared_prod_snapshot.name,
   args: ["replace", "2026_05_03"],

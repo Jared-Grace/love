@@ -1,5 +1,5 @@
-import { js_object_property_text_add } from "../../js/js_object_property_text_add.mjs";
-import { js_find_object_containing_text } from "../../js/js_find_object_containing_text.mjs";
+import { js_object_property_text_add } from "../../../js/js_object_property_text_add.mjs";
+import { js_find_object_containing_text } from "../../../js/js_find_object_containing_text.mjs";
 export const example = {
   fn: js_object_property_text_add.name,
   select: js_find_object_containing_text.name,
