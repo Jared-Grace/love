@@ -113,6 +113,7 @@
   "expressions_not_around_a_comparison",
   "expressions_not_equal_written_with_not",
   "expressions_solving_inside_not_brackets",
+  "expressions_not_around_and_or",
   "statements_giving_a_value_a_name",
   "statements_any_identifier_as_a_name",
   "statements_two_names_at_once",

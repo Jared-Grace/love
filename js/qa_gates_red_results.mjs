@@ -1,3 +1,5 @@
+import { list_filter } from "./list_filter.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_commit_named_red_report } from "./qa_commit_named_red_report.mjs";
 import { qa_gates_named } from "./qa_gates_named.mjs";
@@ -24,6 +26,7 @@ export async function qa_gates_red_results() {
       commit,
       behind,
       asked: [],
+      still_red: [],
       results: [],
     };
     return unjudged;
@@ -34,16 +37,24 @@ export async function qa_gates_red_results() {
       commit,
       behind,
       asked: [],
+      still_red: [],
       results: [],
     };
     return clean;
   }
   let gates = qa_gates_named(red);
   let results = await list_map_unordered_async(gates, qa_gate_result);
+  function red_is(result) {
+    let is = property_get(result, "red");
+    return is;
+  }
+  let reds = list_filter(results, red_is);
+  let still_red = list_map_property(reds, "name");
   let r = {
     commit,
     behind,
     asked: red,
+    still_red,
     results,
   };
   return r;
