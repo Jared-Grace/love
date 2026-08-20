@@ -44,8 +44,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "reviled and mocked",
       second: "beaten and scorned",
-      symbol: "The whip",
-      ref: "",
+      symbol: "A whip with three thick heavy thongs and no more",
+      ref: "John 19:1, Isaiah 53:5",
       same_as: 0,
     },
     {
@@ -53,8 +53,9 @@ export function song_image_couplets() {
       verse: 1,
       first: "the KING of kings",
       second: "was crowned with thorns",
-      symbol: "Crown of thorns",
-      ref: "",
+      symbol:
+        "A crown of thorns, a few thick woody thorn branches twisted into one ring",
+      ref: "Matthew 27:29",
       same_as: 0,
     },
     {
@@ -119,7 +120,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A ram caught by its horns in a few thick bare thorn branches, three or four stout boughs and no more",
+        "A ram with white horns, caught by those horns in a few thick bare thorn branches, three or four stout boughs and no more",
       ref: "Genesis 22",
       same_as: 0,
     },
@@ -230,8 +231,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "but on the third",
       second: "near dawn's first light",
-      symbol: "First light on the horizon",
-      ref: "",
+      symbol: "The bright morning star, a single star alone",
+      ref: "Revelation 22:16, 2 Peter 1:19",
       same_as: 0,
     },
     {
