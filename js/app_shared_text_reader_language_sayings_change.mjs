@@ -4,6 +4,7 @@ import { function_transform } from "./function_transform.mjs";
 import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
 import { js_object_expression_value_set } from "./js_object_expression_value_set.mjs";
 import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
 export async function app_shared_text_reader_language_sayings_change(
   f_name,
   lambda$saying,
@@ -15,8 +16,9 @@ export async function app_shared_text_reader_language_sayings_change(
   "A saying that cannot be read off the page is passed over rather than complained about. What to do about one is a question for the count that walks the whole folder, and answering it twice in two places is how the two come to disagree.";
   arguments_assert(arguments, 2);
   async function lambda(ast) {
-    let objects = app_shared_text_reader_language_ast_objects(ast);
-    for (let object of objects) {
+    let picked = app_shared_text_reader_language_ast_objects(ast);
+    for (let one of picked) {
+      let object = property_get(one, "object");
       let unwritten = null_is(object);
       if (unwritten) {
         continue;
