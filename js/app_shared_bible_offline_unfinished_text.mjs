@@ -14,6 +14,13 @@ export function app_shared_bible_offline_unfinished_text(name) {
       before: "وہ ڈاؤن لوڈ مکمل نہیں ہوا۔ کیا آپ اپنا کنکشن دیکھ کر ",
       after: " دوبارہ آزمانا چاہیں گے؟",
     },
+    translated_from: {
+      ur: {
+        before:
+          "That download did not finish. Would you like to check your connection and try ",
+        after: " again?",
+      },
+    },
   };
   let text = app_shared_text_reader_language_around(parts, name);
   return text;
