@@ -160,6 +160,28 @@ export function js_repack_only_is_cases() {
       repack_is: true,
       why: "the line counting the arguments is not a thing done. It stands in every function here because the canonical pass writes it, so spending the allowance on it would spend the same allowance in every body alike and hide every repack that does its one thing besides",
     },
+    {
+      code: text_combine_multiple([
+        "async function a(r) { let x = ",
+        getter,
+        '(r, "x"); let y = ',
+        getter,
+        '(r, "y"); let z = await made_here(); return { x, y, z }; }',
+      ]),
+      repack_is: true,
+      why: "the first allowance once more, with its one thing done waited on rather than called straight. Waiting changes nothing about how much was done, so this must answer the same as the plain version further up - and it is written out because the reading counts a waited line somewhere else entirely from a plain one, which is exactly where two answers can drift apart without either looking wrong",
+    },
+    {
+      code: text_combine_multiple([
+        "async function a(r) { let x = ",
+        getter,
+        '(r, "x"); let y = ',
+        getter,
+        '(r, "y"); let c = await made_here(); let z = counted(c); return { x, y, z }; }',
+      ]),
+      repack_is: false,
+      why: "two things done, the first of them waited on. A line that waits binds its name to a wait rather than to a call, so the run of callee names cannot see it: this read as a single piece of work, and a function that opens a store and counts what is in it was named a repack that does nothing. Almost every real piece of work in this repo is waited on, so the miss was the ordinary case rather than a corner of it",
+    },
   ];
   return cases;
 }
