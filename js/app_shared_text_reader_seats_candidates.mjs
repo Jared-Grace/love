@@ -1,9 +1,6 @@
 import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_ast } from "./function_ast.mjs";
-import { function_reachable_names } from "./function_reachable_names.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { function_reachable_calls_named } from "./function_reachable_calls_named.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_map } from "./list_map.mjs";
@@ -23,29 +20,23 @@ export async function app_shared_text_reader_seats_candidates(f_name_app) {
     return fn;
   }
   let doors = list_map(seats, lambda$seat);
-  let f_names = await function_reachable_names(f_name_app);
+  let walked = await function_reachable_calls_named(f_name_app);
+  let calls = property_get(walked, "calls");
   let candidates = {};
-  for (let f_name of f_names) {
-    let ast = await function_ast(f_name);
-    let calls = js_list_type_nodes(ast, "CallExpression");
-    for (let call of calls) {
-      let callee_name = js_call_callee_name_try(call);
-      let unnamed = null_is(callee_name);
-      if (unnamed) {
+  for (let one of calls) {
+    let callee_name = property_get(one, "callee_name");
+    let call = property_get(one, "call");
+    let watched = list_includes(doors, callee_name);
+    if (watched) {
+      continue;
+    }
+    for (let argument of call.arguments) {
+      let words = js_literal_text_letters_try(argument);
+      let unwritten = null_is(words);
+      if (unwritten) {
         continue;
       }
-      let watched = list_includes(doors, callee_name);
-      if (watched) {
-        continue;
-      }
-      for (let argument of call.arguments) {
-        let words = js_literal_text_letters_try(argument);
-        let unwritten = null_is(words);
-        if (unwritten) {
-          continue;
-        }
-        property_count_add(candidates, callee_name, 1);
-      }
+      property_count_add(candidates, callee_name, 1);
     }
   }
   return candidates;
