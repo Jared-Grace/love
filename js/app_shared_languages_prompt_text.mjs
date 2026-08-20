@@ -4,6 +4,9 @@ export function app_shared_languages_prompt_text() {
   let texts = {
     en: "What language or languages you want the Bible verses to be translated into?",
     ur: "آپ بائبل کی آیات کا ترجمہ کن زبان یا زبانوں میں چاہتے ہیں؟",
+    translated_from: {
+      ur: "What language or languages you want the Bible verses to be translated into?",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
