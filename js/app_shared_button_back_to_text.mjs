@@ -19,10 +19,8 @@ export function app_shared_button_back_to_text(destination) {
       after: " پر واپس",
     },
   };
-  let part = app_shared_text_reader_language(parts);
-  let before = property_get(part, "before");
-  let after = property_get(part, "after");
+  let words = app_shared_text_reader_language_around(parts, destination);
   let arrow = app_shared_button_back_arrow();
-  let text = text_combine_multiple([arrow, before, destination, after]);
+  let text = text_combine(arrow, words);
   return text;
 }
