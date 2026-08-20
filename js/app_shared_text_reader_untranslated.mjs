@@ -1,12 +1,8 @@
 import { property_count_add } from "./property_count_add.mjs";
-import { list_size } from "./list_size.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_ast } from "./function_ast.mjs";
-import { function_reachable_names } from "./function_reachable_names.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { function_reachable_calls_named } from "./function_reachable_calls_named.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
