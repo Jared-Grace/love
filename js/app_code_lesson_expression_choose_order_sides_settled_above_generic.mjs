@@ -7,18 +7,41 @@ export function app_code_lesson_expression_choose_order_sides_settled_above_gene
   root,
   recall,
   expression_parts,
+  or_leftmost,
   intro,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("what stands above the card on a lesson that shows an and and an or falling out two different ways: the thing to remember first, then one such line taken all the way down, then the sentences saying what is new");
-  ("The line is built with a false on the left of the and and a true on the right of the or, and those two are settled here rather than drawn because they are exactly the two places that decide whether the two readings part. Drawn, they would land on a line where both readings agree most times a learner arrived - and a run on such a line shows the rule being followed and never shows what it is for.");
+  ("The line is built with a false on the far side of the and and a true on the far side of the or, and those two are settled here rather than drawn because they are exactly the two places that decide whether the two readings part. Drawn, they would land on a line where both readings agree most times a learner arrived - and a run on such a line shows the rule being followed and never shows what it is for.");
+  ("The two settled ends are named by the operator each one stands beside, not by which end of the line it lands on. So a line with the or leftmost is settled by the same sentence read the same way, and a caller asking for one does not have to know which end its true belongs at.");
   ("The one in the middle is drawn, because it changes nothing about that and a screen that reads the same on every visit reads as a picture rather than as a line being worked out.");
-  ("How the parts are hung together is handed in, because that is the only thing the two lessons using this differ by: one lets the operators decide the shape and the other puts brackets round the far side. Everything else - which two ends are settled, which one is drawn, and the three-part screen it all goes onto - was written twice and said the same thing twice.");
+  ("How the parts are hung together is handed in, and so is which of the two operators stands leftmost, because those are the only things the lessons using this differ by: one lets the operators decide the shape, and the other puts brackets round the or and shows it on either side of the and. Everything else - which two ends are settled, which one is drawn, and the three-part screen it all goes onto - was written twice and said the same thing twice.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let both = [true, false];
   let middle_truth = list_random_item(both);
-  let tree = expression_parts(false, and_symbol, middle_truth, or_symbol, true);
+  function tree_made() {
+    "the three truths hung together, with each settled end put beside the operator that asks for it";
+    if (or_leftmost) {
+      let tree_or_first = expression_parts(
+        true,
+        or_symbol,
+        middle_truth,
+        and_symbol,
+        false,
+      );
+      return tree_or_first;
+    }
+    let tree_and_first = expression_parts(
+      false,
+      and_symbol,
+      middle_truth,
+      or_symbol,
+      true,
+    );
+    return tree_and_first;
+  }
+  let tree = tree_made();
   app_code_lesson_expression_choose_order_steps_above_generic(
     root,
     recall,
