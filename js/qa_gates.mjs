@@ -1,3 +1,4 @@
+import { folders_waiting_to_be_deleted_gate_run } from "./folders_waiting_to_be_deleted_gate_run.mjs";
 import { folders_root_gate_run } from "./folders_root_gate_run.mjs";
 import { text_replace_path_start_cases_gate_run } from "./text_replace_path_start_cases_gate_run.mjs";
 import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
@@ -539,6 +540,7 @@ export function qa_gates() {
     functions_app_specific_imports_gate_run,
     functions_cross_app_imports_gate_run,
     folders_function_named_orphaned_gate_run,
+    folders_waiting_to_be_deleted_gate_run,
     claude_md_size_gate_run,
     instructions_notes_gate_run,
     instructions_commands_gate_run,
