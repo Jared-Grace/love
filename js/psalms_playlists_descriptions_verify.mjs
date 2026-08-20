@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
@@ -26,7 +27,7 @@ export async function psalms_playlists_descriptions_verify() {
     let wanted = await psalms_chapter_description(chapter);
     let playlist_id = chapter_ids[chapter];
     let held = await youtube_playlist_description(playlist_id);
-    let same = held === wanted;
+    let same = equal(held, wanted);
     let one = {
       chapter: chapter,
       playlist_id: playlist_id,
@@ -39,7 +40,7 @@ export async function psalms_playlists_descriptions_verify() {
   let read = await list_map_limited_async(chapters, lambda_chapter, 8);
   let wrong = [];
   for (let one of read) {
-    if (one.same === false) {
+    if (equal(one.same, false)) {
       wrong.push(one);
     }
   }
