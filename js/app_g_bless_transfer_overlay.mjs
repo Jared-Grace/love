@@ -59,11 +59,5 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("player click past without reading.");
   let prayer = bless_prayer_transfer();
   app_g_p_text(container, prayer);
-  function offer() {
-    let praying = emoji_pray();
-    let label = text_combine(praying, " Amen");
-    app_g_button_green(container, label, on_amen);
-  }
-  let least = bless_prayer_read_ms(prayer);
-  setTimeout(offer, least);
+  app_g_bless_amen(container, prayer, on_amen);
 }
