@@ -16,6 +16,12 @@ export function app_shared_button_back_to_text(destination) {
       before: " ",
       after: " پر واپس",
     },
+    translated_from: {
+      ur: {
+        before: " Back to ",
+        after: "",
+      },
+    },
   };
   let words = app_shared_text_reader_language_around(parts, destination);
   let arrow = app_shared_button_back_arrow();
