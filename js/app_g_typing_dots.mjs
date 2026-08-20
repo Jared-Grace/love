@@ -1,3 +1,4 @@
+import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { html_div } from "./html_div.mjs";
