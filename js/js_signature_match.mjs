@@ -12,6 +12,8 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_fold_unify_use } from "./js_fold_unify_use.mjs";
 export function js_signature_match(pattern, target, params, binding) {
+  "Decides whether one line of a candidate body says the same thing as one line of the pattern being looked for, and hands back what the two now agree the pattern's names stand for.";
+  "The function being called has to be the same function in both, and the count of arguments the same, before any name is looked at. Those two are what the line does; only the things it does it to are open to standing for something else.";
   arguments_assert(arguments, 4);
   let pattern_callee = property_get(pattern, "callee");
   let missing_callee = null_is(pattern_callee);
