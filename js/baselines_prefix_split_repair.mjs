@@ -18,6 +18,7 @@ export async function baselines_prefix_split_repair() {
   "Where more than one rewriter would answer to the name, it renames nothing and says which ones. A family word that reads as another family's - the plain one beside the head, inside and tail ones - is a name somebody has to choose while reading, and choosing it here would be silent.";
   "Each rename is committed as it lands, under its own name and its own two words. A run that renamed eight and committed once would lose all eight to whichever sweep reached the folder first, and would then have to claim a single command it never ran.";
   "It rewrites the record at the end, because a repaired offender left standing in the record fails the gate a second way - the ratchet refuses a name it holds that no longer offends just as firmly as one it does not hold.";
+  "On the run that repairs the last one, that rewrite is refused rather than written: a record going from names to none in one write is the shape a reading that reached nothing arrives in, and nothing downstream can tell the two apart. The renames are already committed one by one above, so nothing is lost - what is being asked for is that somebody says the clearing was real, by name, and the refusal hands back the path to say it about.";
   arguments_assert(arguments, 0);
   await ai_git_noted();
   let suffix = "_baseline_path";
