@@ -31,6 +31,11 @@ export function bible_glyph_roots() {
   "WATER WAS ADDED ON 2026-08-20 AND IT IS THE ONE PICTURE THE FIFTH LETTER-CHAPTER COST. Thirty chapters were measured at once and the fifth of this letter came back highest; its undrawn words were then read off, and nearly all of them were the article, the pronouns and the connectives, with born and eternal already refused above. One content word was left and it was this one. A chapter that adds a single mark to the table is the cheapest chapter this Bible has bought.";
   "THE REFUSAL OF CLEANSE IS WHAT MAKES THE DROPLET SAFE, which is the opposite of how it reads. That refusal turned water down as a mark for washing precisely so the picture would not be spent on a figure; because it was not spent, the droplet now arrives meaning water and meaning nothing else. A mark held back is a mark still available, and this is the first time that has paid.";
   "TWO DROPS STANDING TOGETHER IS THE WRITER'S OWN PAIRING AND NOT THIS TABLE'S ACCIDENT. The sunrise was turned down for the company it would keep, so a second drop beside the drop of blood has to answer the same objection. It answers it from the text: the sixth verse says not by water only but by water and blood, and the eighth counts them as two of three that testify. They are coordinate there, neither one acting on the other, and a reader who sees two drops of different colours side by side has been shown the shape of the sentence rather than a muddle in it.";
+  "THE CHILD WAS ADDED ON 2026-08-20 AND IT IS THE ONE PICTURE THE THIRD LETTER-CHAPTER COST. Two hundred and fifty four chapters were measured at once this time rather than thirty, and the third of this letter came back highest of all of them. Its undrawn words were read off the same way, and the content words that repeated were the devil, the children, abiding and righteousness. Three of those four were turned down, just below, and the child was what was left.";
+  "AND THE CHILD IS NOT THE SON, which is the whole of why it is a second picture rather than a use of one already here. The son is one word about one person and this Bible spends it on Him. The children are the many, and the letter's argument turns on the two being said in one breath - see what love the Father has given us, that we should be called children of God. A reader shown one face for both would be shown that sentence collapsed into a repetition.";
+  "THE DEVIL WAS REFUSED AND IT IS THE MOST WANTED REFUSAL SO FAR. The chapter names him four times and the middle of it is his works being destroyed, so a mark would have carried more weight here than any other addition on offer. The set draws him as a horned face, and horns are not in the text: nothing in scripture describes him that way, so the mark would hand the reader an iconography the writer never wrote. A mark must not claim more than the word claims, and inventing a body for a spirit is the largest claim a picture can make.";
+  "AND THE SERPENT WAS NOT TAKEN INSTEAD, though it is the one picture here that is scriptural. It is scriptural because it is a DIFFERENT WORD - the serpent is a word this Bible will have to draw in its own right, in the garden and again at the end - so spending it on the devil here would take it away from the verses that actually say it. That is the argument the sun and the moon were kept back by, made about a word rather than about a thing.";
+  "ABIDE AND RIGHTEOUS WERE LEFT IN ENGLISH TOO and neither one is close. Abiding is a relation rather than a thing, and the relations in this Bible are drawn as diagrams that teach in pairs, each one learnable only because its opposite stands beside it; abiding has no opposite to stand against, so the mark would arrive as a picture nobody could learn. Righteousness has a mark the set offers and it is the balance scale, which draws weighing - and weighing is what the righteous one is subjected to rather than what he is.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -912,6 +917,16 @@ export function bible_glyph_roots() {
         {
           strong: "5204",
           glyph: "water",
+        },
+      ],
+    },
+    {
+      root: "teknon",
+      gloss: "child",
+      words: [
+        {
+          strong: "5043",
+          glyph: "child",
         },
       ],
     },

@@ -16,6 +16,7 @@ export function bible_glyph_characters() {
   "THE BOTH-WAYS ARROW SAYS THE ONE THING THE EQUALS SIGN WAS TAKEN BACK FOR SAYING, and it is right here for exactly the reason the equals sign was wrong there. A symmetric mark misleads on God is love, because that sentence does not run backwards. One another is symmetric in the word itself - to love one another IS for each to love the other - so here the symmetry is the word's own claim rather than something the mark adds to it.";
   "THE BLOOD AND THE JOINED HANDS CAME THE SAME WAY, one chapter later, which is now the settled way of finding a glyph rather than a second success. The first letter of John was measured before it was authored and those two were what its blanks came down to once the grammar was skipped past. Each was checked against the artwork set BEFORE being written here - the set draws a drop of blood and it draws a handshake - because a glyph written down without an artwork decision turns a gate red, and checking first costs one call while checking after costs a retraction.";
   "THE DROP OF WATER IS THE THIRD FOUND THAT WAY AND IT WAS THE ONLY ONE A WHOLE CHAPTER NEEDED. The fifth chapter of the same letter was measured before it was authored, its blanks came down to the grammar plus two words the root table had already refused, and water was what was left over. It sits one line away from the drop of blood on purpose: the two are different characters in different colours, and the verses that use them are the ones that name them together.";
+  "THE CHILD IS THE FOURTH FOUND THAT WAY AND IT SITS DELIBERATELY APART FROM THE BOY. The son is a boy's face and the child is a face of no stated sex, which is the difference the two Greek words carry and the reason the plainer character was chosen over the nearer one. A pair that reads apart in a font can be drawn almost the same by a set, so this one was checked as a drawing too: the set draws the child with a level fringe and the boy with a parted one, and the two survive being set side by side.";
   "Single characters are preferred over joined sequences. A joined sequence such as the burning heart is several characters held together by a joiner, and a terminal that does not join them shows the parts instead, which is how a reader ends up seeing a heart and a fire where one glyph was meant.";
   let characters = [
     {
@@ -337,6 +338,10 @@ export function bible_glyph_characters() {
     {
       name: "water",
       character: "💧",
+    },
+    {
+      name: "child",
+      character: "🧒",
     },
   ];
   return characters;
