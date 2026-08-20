@@ -1,4 +1,4 @@
-import { qa_commit_named } from "./qa_commit_named.mjs";
+import { qa_commit_named_all } from "./qa_commit_named_all.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -11,7 +11,8 @@ export async function qa_commit_named_forget(lambda$entry) {
   "The whole entry goes rather than the offending part of it. The gates of one judging ran together at one moment, so an entry with a piece cut out of it looks judged while no longer being a judgement of anything.";
   "Being unsure is the safe answer, which is what makes any of these safe to run: a commit this forgets reads as never judged, and never judged already means the deployment waits. It can cost time and it cannot let anything out.";
   "Nothing is written when the question says yes to nothing, so asking is free and can be repeated.";
-  let remembered = await qa_commit_named();
+  "The file is read whole here, and not through the reading everybody else uses. That one already leaves out the judgings that no longer stand, which would make this forget nothing while reporting nothing to forget - and then write the file back without the very entries it could not see. What is filtered on the way to a reader has to be present on the way to a writer.";
+  let remembered = await qa_commit_named_all();
   let forgotten = [];
   let kept = {};
   for (let commit of object_property_names(remembered)) {
@@ -35,7 +36,8 @@ export async function qa_commit_named_forget(lambda$entry) {
   let path = qa_commit_named_path();
   await file_overwrite_json(path, kept);
   ("Asked again off the record just written, so what comes back is what the next deployment will read rather than what this meant to leave. An empty remaining is the proof");
-  let after = await qa_commit_named();
+  ("Whole again, for the same reason. A proof that reads through a filter which drops exactly what it is looking for passes without looking at anything.");
+  let after = await qa_commit_named_all();
   let remaining = [];
   for (let commit of object_property_names(after)) {
     let entry2 = property_get(after, commit);
